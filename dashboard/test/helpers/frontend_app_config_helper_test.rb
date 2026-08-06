@@ -31,7 +31,7 @@ class FrontendAppConfigHelperTest < ActionView::TestCase
           'analytics' => {
             'provider' => 'statsig',
             'enabled' => true,
-            'statsig' => {'clientKey' => 'client-test-key'},
+            'statsig' => {'clientKey' => 'client-test-key', 'autoCapture' => false},
           },
         }
       )

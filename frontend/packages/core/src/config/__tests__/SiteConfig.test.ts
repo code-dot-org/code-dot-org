@@ -163,6 +163,29 @@ describe('SiteConfig analytics (parseRuntimeConfig)', () => {
     expect(config.analytics.enabled).toBeUndefined();
   });
 
+  it('carries the autocapture flag through from the meta tag', () => {
+    setMetaConfig(
+      JSON.stringify({
+        analytics: {
+          provider: 'statsig',
+          statsig: {clientKey: 'client-abc', autoCapture: true},
+        },
+      }),
+    );
+    const config = new SiteConfig();
+    expect(config.analytics.statsig?.autoCapture).toBe(true);
+  });
+
+  it('leaves autocapture undefined when the meta tag omits it', () => {
+    setMetaConfig(
+      JSON.stringify({
+        analytics: {provider: 'statsig', statsig: {clientKey: 'client-abc'}},
+      }),
+    );
+    const config = new SiteConfig();
+    expect(config.analytics.statsig?.autoCapture).toBeUndefined();
+  });
+
   it('carries a server-seeded user through from the meta tag', () => {
     setMetaConfig(
       JSON.stringify({

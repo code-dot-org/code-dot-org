@@ -41,8 +41,28 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
     it 'reports the client key when one is provisioned' do
       CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
       _(analytics_config).must_equal(
-        {provider: 'statsig', enabled: true, statsig: {clientKey: 'client-test-key'}}
+        {
+          provider: 'statsig',
+          enabled: true,
+          statsig: {clientKey: 'client-test-key', autoCapture: false},
+        }
       )
+    end
+
+    # The frontend runs autocapture exactly where the legacy bundle loads, so
+    # this reads the same path gate rather than a list of its own.
+    it 'turns autocapture on for a path the gate matches' do
+      CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
+      request.path = StatsigAnalyticsHelper::TARGET_PATHS.first
+
+      _(analytics_config[:statsig][:autoCapture]).must_equal true
+    end
+
+    it 'leaves autocapture off for a path the gate does not match' do
+      CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
+      request.path = '/home'
+
+      _(analytics_config[:statsig][:autoCapture]).must_equal false
     end
 
     it 'reports provider none when the client key is missing' do
@@ -55,7 +75,11 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
       CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
       DCDO.stubs(:get).with('statsig-enabled', true).returns(false)
       _(analytics_config).must_equal(
-        {provider: 'statsig', enabled: false, statsig: {clientKey: 'client-test-key'}}
+        {
+          provider: 'statsig',
+          enabled: false,
+          statsig: {clientKey: 'client-test-key', autoCapture: false},
+        }
       )
     end
 
@@ -74,7 +98,7 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
           {
             provider: 'statsig',
             enabled: true,
-            statsig: {clientKey: 'client-test-key'},
+            statsig: {clientKey: 'client-test-key', autoCapture: false},
             user: {userId: '42', userType: 'teacher'},
           }
         )
@@ -87,7 +111,7 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
           {
             provider: 'statsig',
             enabled: false,
-            statsig: {clientKey: 'client-test-key'},
+            statsig: {clientKey: 'client-test-key', autoCapture: false},
             user: {userId: '42', userType: 'teacher'},
           }
         )

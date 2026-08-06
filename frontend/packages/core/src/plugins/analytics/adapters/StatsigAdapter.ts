@@ -10,6 +10,16 @@ import type {
 } from '../types';
 
 /**
+ * The two of the SDK's eleven `auto_capture::*` events we drop. The remaining
+ * nine ship. Console capture (`statsig::log_line`) is off by default and is
+ * left off.
+ */
+const EXCLUDED_AUTO_CAPTURE_EVENTS: readonly string[] = [
+  'auto_capture::performance',
+  'auto_capture::page_view_end',
+];
+
+/**
  * Production pads to five digits; every other environment prefixes its tier so
  * non-production ids never collide with production ones.
  */
@@ -47,7 +57,37 @@ export class StatsigAdapter implements AnalyticsClient {
     this.client = new StatsigClient(config.statsig.clientKey, user, {
       environment: {tier: CodeStudioConfig.environment},
     });
+
+    // Started before init rather than after it, as legacy does; the client
+    // queues whatever autocapture emits before it is ready.
+    if (config.statsig.autoCapture) {
+      // A chunk that fails to load costs autocapture, not the rest of analytics.
+      void this.startAutoCapture(this.client).catch(error =>
+        console.warn('[analytics] autocapture failed to start:', error),
+      );
+    }
+
     void this.client.initializeAsync();
+  }
+
+  /**
+   * Binds the provider's web-analytics autocapture to this adapter's client.
+   *
+   * The import stays dynamic and inside the caller's conditional so the package
+   * lands in a chunk of its own: a page without autocapture never fetches it.
+   *
+   * One deliberate divergence from the legacy reporter, which builds a second
+   * StatsigClient on the same SDK key for this. Two clients sharing a key
+   * collide in the SDK's client registry and its shared failed-logs store, and
+   * the SDK warns about it. Binding to the client we already have emits the
+   * same events without the collision.
+   */
+  private async startAutoCapture(client: StatsigClient): Promise<void> {
+    const {runStatsigAutoCapture} = await import('@statsig/web-analytics');
+    runStatsigAutoCapture(client, {
+      eventFilterFunc: event =>
+        !EXCLUDED_AUTO_CAPTURE_EVENTS.includes(event.eventName),
+    });
   }
 
   sendEvent(name: string, payload?: Record<string, unknown>): void {

@@ -32,7 +32,9 @@ vi.mock('@statsig/js-client', () => ({
     user: unknown,
     options: unknown,
   ) {
-    const instance = {
+    // The constructed object itself is recorded, not a copy of its fields, so
+    // tests can assert what the adapter handed on by identity.
+    Object.assign(this, {
       key,
       user,
       options,
@@ -40,10 +42,23 @@ vi.mock('@statsig/js-client', () => ({
       updateUserAsync: vi.fn().mockResolvedValue(undefined),
       initializeAsync: vi.fn().mockResolvedValue(undefined),
       shutdown: vi.fn().mockResolvedValue(undefined),
-    };
-    statsigInstances.push(instance as MockStatsigClient);
-    Object.assign(this, instance);
+    });
+    statsigInstances.push(this as unknown as MockStatsigClient);
   }),
+}));
+
+interface AutoCaptureOptions {
+  eventFilterFunc?: (event: {eventName: string}) => boolean;
+  consoleLogAutoCaptureSettings?: unknown;
+}
+
+const autoCaptureCalls: Array<{client: unknown; options: AutoCaptureOptions}> =
+  [];
+
+vi.mock('@statsig/web-analytics', () => ({
+  runStatsigAutoCapture: vi.fn((client: unknown, options: AutoCaptureOptions) =>
+    autoCaptureCalls.push({client, options}),
+  ),
 }));
 
 import type {SiteConfig, SiteConfigExtensions} from '../../../config';
@@ -130,6 +145,7 @@ let warn: ReturnType<typeof vi.spyOn>;
 
 beforeEach(() => {
   statsigInstances.length = 0;
+  autoCaptureCalls.length = 0;
   clearStableId();
   localStorage.clear();
   log = vi.spyOn(console, 'log').mockImplementation(() => {});
@@ -491,6 +507,121 @@ describe('analytics session dimensions', () => {
     await drain();
 
     expect(latestStatsig().options).toEqual({environment: {tier: 'test'}});
+  });
+});
+
+describe('analytics autocapture', () => {
+  const AUTO_CAPTURE_CONFIG: AnalyticsConfig = {
+    ...STATSIG_CONFIG,
+    statsig: {clientKey: 'client-test-key', autoCapture: true},
+  };
+
+  /**
+   * The SDK's eleven `auto_capture::*` events, split the way legacy splits
+   * them. Spelled out rather than imported: the point is to pin the wire names
+   * the dashboards read, independently of the SDK's own constants.
+   */
+  const CAPTURED = [
+    'auto_capture::click',
+    'auto_capture::copy',
+    'auto_capture::dead_click',
+    'auto_capture::error',
+    'auto_capture::form_submit',
+    'auto_capture::page_view',
+    'auto_capture::rage_click',
+    'auto_capture::session_start',
+    'auto_capture::web_vitals',
+  ];
+  const EXCLUDED = ['auto_capture::page_view_end', 'auto_capture::performance'];
+
+  /** Waits for the dynamic import behind autocapture to resolve. */
+  async function drainAutoCapture() {
+    await vi.waitFor(() => expect(autoCaptureCalls).toHaveLength(1));
+    return autoCaptureCalls[0];
+  }
+
+  /** Lets every pending microtask run, so "never called" means never. */
+  async function settle() {
+    await new Promise(resolve => setTimeout(resolve, 0));
+  }
+
+  it('binds autocapture to the client the adapter already built', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(AUTO_CAPTURE_CONFIG);
+    await drain();
+
+    // One client, not the second one legacy builds on the same SDK key.
+    expect((await drainAutoCapture()).client).toBe(latestStatsig());
+    expect(statsigInstances).toHaveLength(1);
+  });
+
+  it('admits the nine kept events and rejects the two legacy drops', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(AUTO_CAPTURE_CONFIG);
+    await drain();
+    const filter = (await drainAutoCapture()).options.eventFilterFunc;
+
+    expect(CAPTURED.map(eventName => filter?.({eventName}))).toEqual(
+      CAPTURED.map(() => true),
+    );
+    expect(EXCLUDED.map(eventName => filter?.({eventName}))).toEqual(
+      EXCLUDED.map(() => false),
+    );
+  });
+
+  it('leaves console capture off', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(AUTO_CAPTURE_CONFIG);
+    await drain();
+
+    expect(
+      (await drainAutoCapture()).options.consoleLogAutoCaptureSettings,
+    ).toBeUndefined();
+  });
+
+  it('stays off when the config omits the flag', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    await drain();
+    await settle();
+
+    expect(autoCaptureCalls).toHaveLength(0);
+  });
+
+  it('stays off when the flag is false', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady({
+      ...STATSIG_CONFIG,
+      statsig: {clientKey: 'client-test-key', autoCapture: false},
+    });
+    await drain();
+    await settle();
+
+    expect(autoCaptureCalls).toHaveLength(0);
+  });
+
+  it('stays off when the switch is off, because no client is built', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady({...AUTO_CAPTURE_CONFIG, enabled: false});
+    await settle();
+
+    expect(statsigInstances).toHaveLength(0);
+    expect(autoCaptureCalls).toHaveLength(0);
+  });
+
+  it('stays off while consent has not settled, because no client is built', async () => {
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(AUTO_CAPTURE_CONFIG);
+    await settle();
+
+    expect(statsigInstances).toHaveLength(0);
+    expect(autoCaptureCalls).toHaveLength(0);
   });
 });
 
