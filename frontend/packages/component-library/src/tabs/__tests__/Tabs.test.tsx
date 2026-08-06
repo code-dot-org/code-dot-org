@@ -5,6 +5,8 @@ import {vi} from 'vitest';
 
 import Tabs, {TabsProps} from '../index';
 
+import moduleStyles from '../tabs.module.scss';
+
 describe('Design System - Tabs', () => {
   const valuesMap: Record<string, string> = {};
   const onSelectedTabChange = (name: string, value: string): void => {
@@ -184,5 +186,46 @@ describe('Design System - Tabs', () => {
     expect(tab2).toBeInTheDocument();
     expect(screen.queryByText('tab1 content')).not.toBeInTheDocument();
     expect(screen.queryByText('tab2 content')).not.toBeInTheDocument();
+  });
+
+  describe('scrollable', () => {
+    const scrollableTabs = (count: number) =>
+      Array.from({length: count}, (_, index) => ({
+        text: `tab${index + 1}`,
+        value: `tab${index + 1}`,
+        tabContent: <div>{`tab${index + 1} content`}</div>,
+      }));
+
+    // The affordance itself is pure CSS (a scroll-driven mask), invisible to
+    // jsdom; only the class contract is assertable here.
+    it('leaves the tab strip untouched when scrollable is unset', () => {
+      renderTabs({
+        defaultSelectedTabValue: 'tab1',
+        tabs: scrollableTabs(6),
+        onChange: () => {},
+        name: 'not-scrollable',
+      });
+
+      const container = screen.getByRole('tablist')
+        .parentElement as HTMLElement;
+
+      expect(container).not.toHaveClass(moduleStyles.scroller);
+    });
+
+    it('marks the tabs container as the scroller when scrollable is true', () => {
+      renderTabs({
+        defaultSelectedTabValue: 'tab1',
+        tabs: scrollableTabs(6),
+        onChange: () => {},
+        name: 'scrollable',
+        scrollable: true,
+      });
+
+      const container = screen.getByRole('tablist')
+        .parentElement as HTMLElement;
+
+      expect(container).toHaveClass(moduleStyles.scroller);
+      expect(container).toHaveClass(moduleStyles.tabs);
+    });
   });
 });
