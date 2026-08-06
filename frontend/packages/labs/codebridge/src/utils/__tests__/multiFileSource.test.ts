@@ -12,6 +12,7 @@ import {
   deleteFolder,
   getActiveFileForSource,
   getNextFileId,
+  getNextFolderId,
   getOpenFileIds,
   renameFile,
   saveFileContents,
@@ -40,6 +41,51 @@ const source = (): MultiFileSource => ({
     },
   },
   openFiles: ['1', '2'],
+});
+
+describe('getNextFileId', () => {
+  const file = (id: string) => ({
+    id,
+    name: `${id}.py`,
+    language: 'python',
+    contents: '',
+    folderId: '0',
+  });
+
+  it('is one past the highest id', () => {
+    expect(getNextFileId([file('1'), file('7'), file('3')])).toBe('8');
+  });
+
+  it('is 1 for an empty project', () => {
+    expect(getNextFileId([])).toBe('1');
+  });
+
+  // A project whose ids are words is off contract, but the old behavior —
+  // `Math.max` propagating the `NaN` from `Number('main')` — handed back the
+  // string "NaN" every time, so two files written in a row both landed on it
+  // and the second silently replaced the first.
+  it('ignores ids that are not integers', () => {
+    expect(getNextFileId([file('main'), file('sprite-coin')])).toBe('1');
+    expect(getNextFileId([file('main'), file('4')])).toBe('5');
+  });
+
+  it('never returns an id the project already holds', () => {
+    let files = [file('main'), file('2')];
+    for (let n = 0; n < 3; n++) {
+      const id = getNextFileId(files);
+      expect(files.some(f => f.id === id)).toBe(false);
+      files = [...files, file(id)];
+    }
+  });
+});
+
+describe('getNextFolderId', () => {
+  const folder = (id: string) => ({id, name: id, parentId: '0'});
+
+  it('ignores ids that are not integers', () => {
+    expect(getNextFolderId([folder('sprites'), folder('rules')])).toBe('1');
+    expect(getNextFolderId([folder('sprites'), folder('2')])).toBe('3');
+  });
 });
 
 describe('getActiveFileForSource', () => {

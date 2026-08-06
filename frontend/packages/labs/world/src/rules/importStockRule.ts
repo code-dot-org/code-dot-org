@@ -136,14 +136,7 @@ function writeRule(
   stem: string,
   rule: StockRule,
 ): MultiFileSource {
-  // `getNextFileId` is max-numeric-id + 1, which is NaN when a project holds an
-  // id that is not a number — and NaN twice running means the second file
-  // silently replaces the first. An import writes several files at once, so it
-  // is the first caller for which that matters.
-  let fileId = getNextFileId(Object.values(source.files));
-  for (let n = 1; !fileId || fileId === 'NaN' || source.files[fileId]; n++) {
-    fileId = `rule-${stem}-${n}`;
-  }
+  const fileId = getNextFileId(Object.values(source.files));
   return {
     ...source,
     files: {

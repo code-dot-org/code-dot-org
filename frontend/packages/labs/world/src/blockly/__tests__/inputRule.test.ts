@@ -8,7 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {DEFAULT_PROJECT} from '../../constants';
+import {starterFile} from '../../constants';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
 import {registerDefaultProjectRules} from './defaultProjectRules';
@@ -17,13 +17,13 @@ import {registerDefaultProjectRules} from './defaultProjectRules';
 // before a module can be generated from it — the same call the editor makes.
 registerDefaultProjectRules();
 
-const source = DEFAULT_PROJECT.source.files.inputRule.contents;
+const source = starterFile('inputRule').contents;
 const meta = parseRuleMeta('rules/input', source)!;
 const module_ = ruleMetaToModule(meta);
 
 describe('rules/input.rule', () => {
   it('ships as a .rule, not a shim', () => {
-    expect(DEFAULT_PROJECT.source.files.inputRule.name).toBe('input.rule');
+    expect(starterFile('inputRule').name).toBe('input.rule');
     expect(source).not.toContain('world-lab');
   });
 

@@ -1,4 +1,9 @@
-import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
+import {DEFAULT_FOLDER_ID} from '@code-dot-org/codebridge';
+import type {
+  MultiFileSource,
+  ProjectFile,
+  ProjectSources,
+} from '@code-dot-org/core/api';
 
 import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
 import {
@@ -351,6 +356,89 @@ const GAME_ANIMATIONS = JSON.stringify(
 );
 
 /**
+ * A starter file as written below: no id, and naming its folder rather than
+ * pointing at one. {@link numbered} supplies both.
+ */
+type StarterFile = Omit<ProjectFile, 'id'>;
+
+/** What the starter is written as, before it has any ids. */
+interface StarterSpec {
+  /** Folder names, all at the project root. */
+  folders: readonly string[];
+  /** Files by a readable key, each naming its folder in `folderId`. */
+  files: Record<string, StarterFile>;
+  /** Which files start open, by key. The first is the active tab. */
+  open: readonly string[];
+}
+
+/**
+ * The starter project, numbered.
+ *
+ * Ids in a Codebridge project are stringified integers: `getNextFileId` and
+ * `getNextFolderId` are max-plus-one arithmetic over them, and an id that is
+ * not an integer makes every id they hand out afterwards `"NaN"` — so two
+ * files written in a row both land on `"NaN"` and the second replaces the
+ * first. (The helpers now skip non-integers rather than choking on them, but a
+ * project that keeps to the contract is the point; this is where world's ids
+ * come from.)
+ *
+ * Numbers are also unreadable, and the starter is a document people edit. So
+ * it is written by name — `main`, `sprite-coin`, `rules` — and numbered here on
+ * the way out, with the names resolved to the ids they were given. Nothing
+ * outside this file should ever name a starter file by id; tests use
+ * {@link starterFile}.
+ */
+function numbered(spec: StarterSpec): {
+  source: MultiFileSource;
+  /** The id each file was given, by the key it is written under. */
+  ids: ReadonlyMap<string, string>;
+} {
+  const folderIds = new Map(
+    spec.folders.map((name, index) => [name, String(index + 1)]),
+  );
+  const fileIds = new Map(
+    Object.keys(spec.files).map((key, index) => [key, String(index + 1)]),
+  );
+
+  const folders: MultiFileSource['folders'] = {};
+  for (const [name, id] of folderIds) {
+    folders[id] = {id, name, parentId: DEFAULT_FOLDER_ID};
+  }
+
+  const files: MultiFileSource['files'] = {};
+  for (const [key, file] of Object.entries(spec.files)) {
+    const folderId = folderIds.get(file.folderId);
+    if (!folderId) {
+      throw new Error(
+        `starter file “${key}” is in “${file.folderId}”, which is not a starter folder`,
+      );
+    }
+    files[fileIds.get(key) as string] = {
+      ...file,
+      id: fileIds.get(key) as string,
+      folderId,
+    };
+  }
+
+  return {
+    source: {
+      files,
+      folders,
+      openFiles: spec.open.map(key => {
+        const id = fileIds.get(key);
+        if (!id) {
+          throw new Error(
+            `starter opens “${key}”, which is not a starter file`,
+          );
+        }
+        return id;
+      }),
+    },
+    ids: fileIds,
+  };
+}
+
+/**
  * The stock images the starter project ships copies of, as project files.
  *
  * Written here rather than pasted as base64: they are the same bytes the import
@@ -358,14 +446,13 @@ const GAME_ANIMATIONS = JSON.stringify(
  * from what a learner would get by importing one.
  */
 function starterSprites(ids: readonly string[]) {
-  const files: MultiFileSource['files'] = {};
+  const files: Record<string, StarterFile> = {};
   for (const id of ids) {
     const sprite = STOCK_SPRITES.find(entry => entry.id === id);
     if (!sprite) {
       continue;
     }
     files[`sprite-${id}`] = {
-      id: `sprite-${id}`,
       name: spriteFileName(id),
       language: 'png',
       contents: '',
@@ -379,7 +466,6 @@ function starterSprites(ids: readonly string[]) {
     if (sprite.sheet) {
       const name = sheetFileName(spriteFileName(id));
       files[`sheet-${id}`] = {
-        id: `sheet-${id}`,
         name,
         language: 'json',
         contents: serializeSheetFile(sprite.sheet),
@@ -391,14 +477,13 @@ function starterSprites(ids: readonly string[]) {
 }
 
 /** A stock animation shipped as a project file, exactly as an import leaves it. */
-function starterAnimation(id: string) {
+function starterAnimation(id: string): Record<string, StarterFile> {
   const animation = STOCK_ANIMATIONS.find(entry => entry.id === id);
   if (!animation) {
     return {};
   }
   return {
     [`anim-${id}`]: {
-      id: `anim-${id}`,
       name: `${id}.anim`,
       language: 'anim',
       contents: `${JSON.stringify(animation.document, null, 2)}\n`,
@@ -407,147 +492,151 @@ function starterAnimation(id: string) {
   };
 }
 
-export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
-  source: {
-    files: {
-      main: {
-        id: 'main',
-        name: 'main.world',
-        language: 'world',
-        contents: MAIN_WORLD,
-        folderId: 'worlds',
-        active: true,
-        open: true,
-      },
-      player: {
-        id: 'player',
-        name: 'player.actor',
-        language: 'actor',
-        contents: PLAYER_ACTOR,
-        folderId: 'actors',
-      },
-      ground: {
-        id: 'ground',
-        name: 'ground.js',
-        language: 'javascript',
-        contents: GROUND_ACTOR,
-        folderId: 'actors',
-      },
-      coin: {
-        id: 'coin',
-        name: 'coin.js',
-        language: 'javascript',
-        contents: COIN_ACTOR,
-        folderId: 'actors',
-      },
-      ball: {
-        id: 'ball',
-        name: 'ball.js',
-        language: 'javascript',
-        contents: BALL_ACTOR,
-        folderId: 'actors',
-      },
-      gameAnimations: {
-        id: 'gameAnimations',
-        name: 'game.anim',
-        language: 'anim',
-        contents: GAME_ANIMATIONS,
-        folderId: 'animations',
-      },
-      level1: {
-        id: 'level1',
-        name: 'level1.map',
-        language: 'map',
-        contents: LEVEL1_MAP,
-        folderId: 'maps',
-      },
-      gravityRule: {
-        id: 'gravityRule',
-        name: 'gravity.rule',
-        language: 'rule',
-        contents: gravityRule,
-        folderId: 'rules',
-      },
-      arrowsRule: {
-        id: 'arrowsRule',
-        name: 'arrows.rule',
-        language: 'rule',
-        contents: arrowsRule,
-        folderId: 'rules',
-      },
-      inputRule: {
-        id: 'inputRule',
-        name: 'input.rule',
-        language: 'rule',
-        contents: inputRule,
-        folderId: 'rules',
-      },
-      motionRule: {
-        id: 'motionRule',
-        name: 'motion.rule',
-        language: 'rule',
-        contents: motionRule,
-        folderId: 'rules',
-      },
-      collisionsRule: {
-        id: 'collisionsRule',
-        name: 'collisions.rule',
-        language: 'rule',
-        contents: collisionsRule,
-        folderId: 'rules',
-      },
-      solidRule: {
-        id: 'solidRule',
-        name: 'solid.rule',
-        language: 'rule',
-        contents: solidRule,
-        folderId: 'rules',
-      },
-      animationRule: {
-        id: 'animationRule',
-        name: 'animation.js',
-        language: 'javascript',
-        contents: ruleShim('AnimationRule'),
-        folderId: 'rules',
-      },
-      // A starter shader graph, so `effects/` is not an empty folder and the
-      // effect editor opens on something worth reading. Deliberately not
-      // applied to anything: the tutorial is about gravity and input, and a
-      // permanently rippling player would be a distraction from it. Dragging
-      // Dragging `add effect` under an actor is how a learner tries it.
-      rippleEffect: {
-        id: 'rippleEffect',
-        name: 'ripple.effect',
-        language: 'effect',
-        contents: serializeEffectDocument(rippleEffect),
-        folderId: 'effects',
-      },
-      // The images. A project draws only what it holds, so the four the starter
-      // level uses are files in it — copies of the stock drawings, exactly as
-      // importing them would leave them, and editable from here on.
-      ...starterSprites(['player', 'ground', 'coin', 'ball', 'coinSpin']),
-      // …and one animation copied in whole, frames and image both: the coin's
-      // spin, which reads six squares out of one strip. The other two
-      // animations here scale a single image instead — between them they show
-      // the two ways an animation is made.
-      ...starterAnimation('coinSpin'),
+const STARTER = numbered({
+  folders: [
+    'rules',
+    'worlds',
+    'actors',
+    'animations',
+    'sprites',
+    // Empty until something is imported into it, and present anyway: the
+    // folder is what makes an image a backdrop (BACKGROUNDS.md §5), so a
+    // learner who uploads a sky needs somewhere to put it that means that.
+    'backgrounds',
+    'maps',
+    'effects',
+  ],
+  files: {
+    main: {
+      name: 'main.world',
+      language: 'world',
+      contents: MAIN_WORLD,
+      folderId: 'worlds',
+      active: true,
+      open: true,
     },
-    folders: {
-      rules: {id: 'rules', name: 'rules', parentId: '0'},
-      worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
-      actors: {id: 'actors', name: 'actors', parentId: '0'},
-      animations: {id: 'animations', name: 'animations', parentId: '0'},
-      sprites: {id: 'sprites', name: 'sprites', parentId: '0'},
-      // Empty until something is imported into it, and present anyway: the
-      // folder is what makes an image a backdrop (BACKGROUNDS.md §5), so a
-      // learner who uploads a sky needs somewhere to put it that means that.
-      backgrounds: {id: 'backgrounds', name: 'backgrounds', parentId: '0'},
-      maps: {id: 'maps', name: 'maps', parentId: '0'},
-      effects: {id: 'effects', name: 'effects', parentId: '0'},
+    player: {
+      name: 'player.actor',
+      language: 'actor',
+      contents: PLAYER_ACTOR,
+      folderId: 'actors',
     },
-    openFiles: ['main'],
+    ground: {
+      name: 'ground.js',
+      language: 'javascript',
+      contents: GROUND_ACTOR,
+      folderId: 'actors',
+    },
+    coin: {
+      name: 'coin.js',
+      language: 'javascript',
+      contents: COIN_ACTOR,
+      folderId: 'actors',
+    },
+    ball: {
+      name: 'ball.js',
+      language: 'javascript',
+      contents: BALL_ACTOR,
+      folderId: 'actors',
+    },
+    gameAnimations: {
+      name: 'game.anim',
+      language: 'anim',
+      contents: GAME_ANIMATIONS,
+      folderId: 'animations',
+    },
+    level1: {
+      name: 'level1.map',
+      language: 'map',
+      contents: LEVEL1_MAP,
+      folderId: 'maps',
+    },
+    gravityRule: {
+      name: 'gravity.rule',
+      language: 'rule',
+      contents: gravityRule,
+      folderId: 'rules',
+    },
+    arrowsRule: {
+      name: 'arrows.rule',
+      language: 'rule',
+      contents: arrowsRule,
+      folderId: 'rules',
+    },
+    inputRule: {
+      name: 'input.rule',
+      language: 'rule',
+      contents: inputRule,
+      folderId: 'rules',
+    },
+    motionRule: {
+      name: 'motion.rule',
+      language: 'rule',
+      contents: motionRule,
+      folderId: 'rules',
+    },
+    collisionsRule: {
+      name: 'collisions.rule',
+      language: 'rule',
+      contents: collisionsRule,
+      folderId: 'rules',
+    },
+    solidRule: {
+      name: 'solid.rule',
+      language: 'rule',
+      contents: solidRule,
+      folderId: 'rules',
+    },
+    animationRule: {
+      name: 'animation.js',
+      language: 'javascript',
+      contents: ruleShim('AnimationRule'),
+      folderId: 'rules',
+    },
+    // A starter shader graph, so `effects/` is not an empty folder and the
+    // effect editor opens on something worth reading. Deliberately not
+    // applied to anything: the tutorial is about gravity and input, and a
+    // permanently rippling player would be a distraction from it. Dragging
+    // Dragging `add effect` under an actor is how a learner tries it.
+    rippleEffect: {
+      name: 'ripple.effect',
+      language: 'effect',
+      contents: serializeEffectDocument(rippleEffect),
+      folderId: 'effects',
+    },
+    // The images. A project draws only what it holds, so the four the starter
+    // level uses are files in it — copies of the stock drawings, exactly as
+    // importing them would leave them, and editable from here on.
+    ...starterSprites(['player', 'ground', 'coin', 'ball', 'coinSpin']),
+    // …and one animation copied in whole, frames and image both: the coin's
+    // spin, which reads six squares out of one strip. The other two
+    // animations here scale a single image instead — between them they show
+    // the two ways an animation is made.
+    ...starterAnimation('coinSpin'),
   },
+  open: ['main'],
+});
+
+export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
+  source: STARTER.source,
 };
+
+/**
+ * A starter file by the name it is written under in {@link numbered}.
+ *
+ * The project's ids are numbers, so a caller that wants `gravity.rule` cannot
+ * reasonably ask for it by id. Throws rather than returning undefined: every
+ * caller is asserting something about a file it believes is there, and a typo
+ * should say so rather than read as an empty file.
+ */
+export function starterFile(key: string): ProjectFile {
+  const id = STARTER.ids.get(key);
+  const file = id === undefined ? undefined : STARTER.source.files[id];
+  if (!file) {
+    throw new Error(`no starter file called “${key}”`);
+  }
+  return file;
+}
 
 /**
  * Which of the workspace's two panes are showing. Mirrors web-lab's `ViewMode`;

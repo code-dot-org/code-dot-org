@@ -8,7 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {DEFAULT_PROJECT} from '../../constants';
+import {DEFAULT_PROJECT, starterFile} from '../../constants';
 import {projectFiles} from '../../runtime/projectFiles';
 import {projectRuleMetas} from '../projectModules';
 import {
@@ -144,7 +144,8 @@ describe('renameRuleInSource', () => {
     // The file did not move, so that import is as true after the rename as
     // before; a rename that touched it would be a rename of the wrong thing.
     const next = renameRuleInSource(source, 'Gravity', 'Moon Gravity');
-    expect(next.files.ground.contents).toBe(source.files.ground.contents);
+    const ground = starterFile('ground').id;
+    expect(next.files[ground].contents).toBe(source.files[ground].contents);
   });
 
   it('leaves the project resolvable — the rule answers to its new name', () => {
@@ -155,12 +156,12 @@ describe('renameRuleInSource', () => {
     // And what named it now names it by the new name, at the same module.
     const gravity = parseRuleMeta(
       'rules/gravity',
-      next.files.gravityRule.contents,
+      next.files[starterFile('gravityRule').id].contents,
     )!;
     expect(gravity.modulePath).toBe('rules/gravity');
     const arrows = parseRuleMeta(
       'rules/arrows',
-      next.files.arrowsRule.contents,
+      next.files[starterFile('arrowsRule').id].contents,
     )!;
     expect(arrows.requires).not.toContain('Gravity');
   });
@@ -241,10 +242,9 @@ describe('renameMemberReferences', () => {
       'StartsFallingEvent',
       'BeginsFallingEvent',
     );
-    expect(next.files.player.contents).toContain(
-      'world_on_Gravity_BeginsFallingEvent',
-    );
-    expect(next.files.player.contents).not.toContain('StartsFallingEvent');
+    const player = next.files[starterFile('player').id];
+    expect(player.contents).toContain('world_on_Gravity_BeginsFallingEvent');
+    expect(player.contents).not.toContain('StartsFallingEvent');
   });
 });
 
@@ -291,7 +291,7 @@ describe('what changed between two states of a rule', () => {
   it('reads a rule’s members as the keys they are referred to by', () => {
     const meta = parseRuleMeta(
       'rules/gravity',
-      DEFAULT_PROJECT.source.files.gravityRule.contents,
+      starterFile('gravityRule').contents,
     )!;
     const keys = memberKeys(meta);
     expect(keys).toContainEqual(key('AffectedByGravityTrait', 'trait'));

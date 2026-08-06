@@ -171,12 +171,7 @@ export function setImageSheet(
     files[existing.id] = {...existing, contents: contents as string};
     return {...source, files};
   }
-  // `getNextFileId` is max-numeric-id + 1, which is NaN when a project holds a
-  // non-numeric id; fall back to a count, as the stock import does.
-  const numeric = getNextFileId(Object.values(source.files));
-  const id = Number.isNaN(Number(numeric))
-    ? String(Object.keys(source.files).length + 1)
-    : numeric;
+  const id = getNextFileId(Object.values(source.files));
   files[id] = {
     id,
     name,

@@ -9,22 +9,20 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {DEFAULT_PROJECT} from '../../constants';
+import {starterFile} from '../../constants';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
 import {registerDefaultProjectRules} from './defaultProjectRules';
 
 registerDefaultProjectRules();
 
-const source = DEFAULT_PROJECT.source.files.collisionsRule.contents;
+const source = starterFile('collisionsRule').contents;
 const meta = parseRuleMeta('rules/collisions', source)!;
 const module_ = ruleMetaToModule(meta);
 
 describe('rules/collisions.rule', () => {
   it('ships as a .rule, not a shim', () => {
-    expect(DEFAULT_PROJECT.source.files.collisionsRule.name).toBe(
-      'collisions.rule',
-    );
+    expect(starterFile('collisionsRule').name).toBe('collisions.rule');
     expect(source).not.toContain('world-lab');
   });
 

@@ -9,7 +9,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {DEFAULT_PROJECT} from '../../constants';
+import {starterFile} from '../../constants';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
 import {registerDefaultProjectRules} from './defaultProjectRules';
@@ -18,13 +18,13 @@ import {registerDefaultProjectRules} from './defaultProjectRules';
 // before a module can be generated from it — the same call the editor makes.
 registerDefaultProjectRules();
 
-const source = DEFAULT_PROJECT.source.files.motionRule.contents;
+const source = starterFile('motionRule').contents;
 const meta = parseRuleMeta('rules/motion', source)!;
 const module_ = ruleMetaToModule(meta);
 
 describe('rules/motion.rule', () => {
   it('ships as a .rule, not a shim', () => {
-    expect(DEFAULT_PROJECT.source.files.motionRule.name).toBe('motion.rule');
+    expect(starterFile('motionRule').name).toBe('motion.rule');
     expect(source).not.toContain('world-lab');
   });
 
