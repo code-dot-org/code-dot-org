@@ -24,7 +24,13 @@ import {projectFiles} from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import styles from './mapEditor.module.css';
-import {parseMap, type MapDoc} from './mapModel';
+import {
+  clampTiles,
+  MAX_MAP_TILES,
+  MIN_MAP_TILES,
+  parseMap,
+  type MapDoc,
+} from './mapModel';
 import {MapStage} from './MapStage';
 
 export const MapEditor = ({
@@ -96,9 +102,51 @@ export const MapEditor = ({
     onChange(JSON.stringify(next, null, 2));
   };
 
+  /**
+   * Resize the map, in tiles.
+   *
+   * Placements are left exactly where they are, including any that the new size
+   * leaves outside. Shrinking a map is how an author trims it, and deleting
+   * their work to do it — silently, on a keystroke, while the number is still
+   * being typed — would be the worse mistake by far. An actor outside the
+   * border is visible as such and can be dragged back in or removed.
+   */
+  const resize = (axis: 'width' | 'height', value: string) => {
+    const tiles = clampTiles(value);
+    if (tiles === undefined) {
+      return; // mid-edit: an emptied field is not a size
+    }
+    commit({...map, size: {...map.size, [axis]: tiles}});
+  };
+
   return (
     <div className={styles.editor}>
       <div className={styles.picker}>
+        <label className={styles.sizeField}>
+          <span className={styles.sizeLabel}>Width</span>
+          <input
+            type="number"
+            min={MIN_MAP_TILES}
+            max={MAX_MAP_TILES}
+            step={1}
+            value={map.size.width}
+            disabled={isReadOnly}
+            onChange={event => resize('width', event.target.value)}
+          />
+        </label>
+        <label className={styles.sizeField}>
+          <span className={styles.sizeLabel}>Height</span>
+          <input
+            type="number"
+            min={MIN_MAP_TILES}
+            max={MAX_MAP_TILES}
+            step={1}
+            value={map.size.height}
+            disabled={isReadOnly}
+            onChange={event => resize('height', event.target.value)}
+          />
+        </label>
+        <span className={styles.sizeUnit}>tiles</span>
         {actorOptions.map(([name, path]) => (
           <button
             key={path}

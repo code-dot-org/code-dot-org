@@ -16,6 +16,43 @@
   border-bottom: var(--lab-border-default);
 }
 
+/* How big the map is, in tiles — at the head of the palette strip, since it is
+   a fact about the whole map rather than about what is being placed in it. */
+.sizeField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  color: var(--text-neutral-primary);
+}
+
+.sizeField input {
+  width: 4.5rem;
+  box-sizing: border-box;
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
+  border: var(--lab-border-default);
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.sizeLabel {
+  white-space: nowrap;
+}
+
+.sizeUnit {
+  align-self: flex-end;
+  padding-bottom: 0.35rem;
+  margin-right: 0.25rem;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  color: var(--text-neutral-secondary, var(--text-neutral-primary));
+  border-right: var(--lab-border-default);
+  padding-right: 0.75rem;
+}
+
 .actor {
   display: flex;
   flex-direction: column;

@@ -10,10 +10,44 @@
 // synthesized from a block's own placements (MAPS.md §2). Both need these types
 // and these accessors; neither should own them.
 
-import {TILE_SIZE} from '../runtime/viewport';
+import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
 
 /** The grid a placement snaps to, in world pixels. */
 export const DEFAULT_TILE = TILE_SIZE;
+
+/**
+ * How big a map is, in TILES — the region the editor draws and fits to.
+ *
+ * Distinct from {@link Tile}, which is how big ONE tile is in world pixels.
+ * The two multiply to the map's extent ({@link extentOf}).
+ *
+ * A map used to be exactly the viewport, ten tiles each way, because that was
+ * the only size anything had (runtime/viewport). A map may now be any size the
+ * author says — but the GAME still runs at the fixed viewport, so a map bigger
+ * than it has actors the player will not see. That is the editor's business to
+ * make visible, not this file's.
+ */
+export interface MapSize {
+  width: number;
+  height: number;
+}
+
+/** What a map is when it does not say — the viewport, as every map was. */
+export const DEFAULT_MAP_SIZE: MapSize = {
+  width: VIEWPORT_TILES,
+  height: VIEWPORT_TILES,
+};
+
+/**
+ * Bounds on a map's dimensions, in tiles.
+ *
+ * One tile is the smallest thing that is still a map. The upper bound is not a
+ * limit anyone should reach — it is there because the grid is drawn a line per
+ * tile, and a map sized from a typo (a pasted `100000`) would hang the canvas
+ * rather than look wrong.
+ */
+export const MIN_MAP_TILES = 1;
+export const MAX_MAP_TILES = 200;
 
 export interface Tile {
   width: number;
@@ -39,6 +73,8 @@ export interface Transform {
 }
 export interface MapDoc {
   type: 'map';
+  /** How many tiles across and down (see {@link MapSize}). */
+  size: MapSize;
   tile: Tile;
   actors: Placement[];
 }
@@ -53,9 +89,32 @@ export interface Size {
   h: number;
 }
 
+/**
+ * A tile count that can be drawn: a whole number within the bounds.
+ *
+ * Applied on the way IN rather than trusted, because the value has been through
+ * a text file — a hand-edited `.map`, a half-typed number in the editor's own
+ * field. `NaN` reaches this from `Number('')`, and `NaN` tiles is a grid loop
+ * that never terminates.
+ */
+export const clampTiles = (value: unknown): number | undefined => {
+  // Ahead of `Number`, which answers 0 for all three of these — so a field the
+  // author has just cleared to type into would read as a size, and the map
+  // would collapse to one tile between two keystrokes.
+  if (value === null || (typeof value === 'string' && value.trim() === '')) {
+    return undefined;
+  }
+  const n = Math.floor(Number(value));
+  if (!Number.isFinite(n)) {
+    return undefined;
+  }
+  return Math.max(MIN_MAP_TILES, Math.min(MAX_MAP_TILES, n));
+};
+
 export function parseMap(contents: string): MapDoc {
   const empty: MapDoc = {
     type: 'map',
+    size: {...DEFAULT_MAP_SIZE},
     tile: {width: DEFAULT_TILE, height: DEFAULT_TILE},
     actors: [],
   };
@@ -66,6 +125,11 @@ export function parseMap(contents: string): MapDoc {
     const raw = JSON.parse(contents) as Partial<MapDoc>;
     return {
       type: 'map',
+      // A map written before maps had a size is the size every map was.
+      size: {
+        width: clampTiles(raw.size?.width) ?? DEFAULT_MAP_SIZE.width,
+        height: clampTiles(raw.size?.height) ?? DEFAULT_MAP_SIZE.height,
+      },
       tile: {
         width: raw.tile?.width ?? DEFAULT_TILE,
         height: raw.tile?.height ?? DEFAULT_TILE,
@@ -76,6 +140,12 @@ export function parseMap(contents: string): MapDoc {
     return empty;
   }
 }
+
+/** A map's extent in world pixels — its tile counts times its tile size. */
+export const extentOf = (map: MapDoc): Size => ({
+  w: map.size.width * map.tile.width,
+  h: map.size.height * map.tile.height,
+});
 
 // Overrides arrive as `unknown` (the generic property bag); coerce to what the
 // canvas needs, falling back when a value is absent or malformed.

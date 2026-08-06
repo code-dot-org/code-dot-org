@@ -32,6 +32,7 @@ import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 import styles from './mapEditor.module.css';
 import {
   asVec,
+  extentOf,
   positionOf,
   propValue,
   transformOf,
@@ -44,8 +45,6 @@ import {
   type View,
 } from './mapModel';
 
-const GAME_WIDTH = VIEWPORT_WIDTH;
-const GAME_HEIGHT = VIEWPORT_HEIGHT;
 const DRAW_SIZE = 32;
 
 // Camera limits. `FIT_PADDING` leaves a margin so the bordered map doesn't touch
@@ -58,22 +57,30 @@ const OUTSIDE_BG = '#0b0b12'; // the space beyond the map
 const MAP_BG = '#151521'; // the map region itself
 const GRID = 'rgba(255, 255, 255, 0.07)';
 const BORDER = 'rgba(255, 255, 255, 0.6)'; // outlines the placeable map space
+// Dashed: the part of a bigger map the game's fixed viewport actually shows.
+const VIEWPORT_EDGE = 'rgba(255, 214, 102, 0.75)';
 const SELECT = '#4d9fff'; // highlights the selected placed actor
 const HOVER = 'rgba(77, 159, 255, 0.45)'; // lighter outline for the hovered actor
 const DEG2RAD = Math.PI / 180;
 
 const clamp = (n: number, lo: number, hi: number) =>
   Math.max(lo, Math.min(hi, n));
-function fitView(w: number, h: number): View {
+/**
+ * The camera that fits a map of `extent` into a `w`×`h` pane, centred.
+ *
+ * Takes the extent rather than reading the viewport constant: a map is whatever
+ * size it says it is now, so "fit the map" is a question about the document.
+ */
+function fitView(w: number, h: number, extent: Size): View {
   const scale = clamp(
-    Math.min(w / GAME_WIDTH, h / GAME_HEIGHT) * FIT_PADDING,
+    Math.min(w / extent.w, h / extent.h) * FIT_PADDING,
     MIN_SCALE,
     MAX_SCALE,
   );
   return {
     scale,
-    x: (w - GAME_WIDTH * scale) / 2,
-    y: (h - GAME_HEIGHT * scale) / 2,
+    x: (w - extent.w * scale) / 2,
+    y: (h - extent.h * scale) / 2,
   };
 }
 
@@ -113,6 +120,9 @@ export const MapStage = ({
   // caller's follows; a document arriving from outside replaces it.
   const [map, setMap] = useState(doc);
   useEffect(() => setMap(doc), [doc]);
+  // The map's extent in world pixels — what the camera fits and the canvas
+  // draws. Read from the document, so resizing the map moves the border.
+  const extent = extentOf(map);
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
   // The template to PLACE is the caller's (`placing`); when it is null we are in
   // select mode, where `selectedId` is the placed instance under edit.
@@ -193,9 +203,15 @@ export const MapStage = ({
   }, []);
 
   // Initialise the camera to the fit view once the pane has a size.
+  //
+  // `extent` is read but not depended on: resizing the map must NOT move a
+  // camera the author has panned or zoomed — they resized the map, not the
+  // view. `Fit` is how they ask for the new extent to be framed.
+  const extentRef = useRef(extent);
+  extentRef.current = extent;
   useEffect(() => {
     if (size.w > 0 && size.h > 0 && !view) {
-      setView(fitView(size.w, size.h));
+      setView(fitView(size.w, size.h, extentRef.current));
     }
   }, [size, view]);
 
@@ -742,7 +758,7 @@ export const MapStage = ({
 
   const resetView = () => {
     if (size.w > 0 && size.h > 0) {
-      setView(fitView(size.w, size.h));
+      setView(fitView(size.w, size.h, extent));
     }
   };
 
@@ -776,24 +792,37 @@ export const MapStage = ({
     ctx.setTransform(s, 0, 0, s, view.x * dpr, view.y * dpr);
 
     ctx.fillStyle = MAP_BG;
-    ctx.fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+    ctx.fillRect(0, 0, extent.w, extent.h);
 
     ctx.strokeStyle = GRID;
     ctx.lineWidth = 1 / view.scale; // ~1 CSS px regardless of zoom
     ctx.beginPath();
-    for (let x = 0; x <= GAME_WIDTH; x += map.tile.width) {
+    for (let x = 0; x <= extent.w; x += map.tile.width) {
       ctx.moveTo(x, 0);
-      ctx.lineTo(x, GAME_HEIGHT);
+      ctx.lineTo(x, extent.h);
     }
-    for (let y = 0; y <= GAME_HEIGHT; y += map.tile.height) {
+    for (let y = 0; y <= extent.h; y += map.tile.height) {
       ctx.moveTo(0, y);
-      ctx.lineTo(GAME_WIDTH, y);
+      ctx.lineTo(extent.w, y);
     }
     ctx.stroke();
 
     ctx.strokeStyle = BORDER;
     ctx.lineWidth = 2 / view.scale;
-    ctx.strokeRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+    ctx.strokeRect(0, 0, extent.w, extent.h);
+
+    // What the player will actually see: the game runs at the fixed viewport
+    // (runtime/viewport), so a map bigger than it has actors off screen. Drawn
+    // only when the two differ, because on a viewport-sized map this line would
+    // sit exactly under the border and mean nothing.
+    if (extent.w !== VIEWPORT_WIDTH || extent.h !== VIEWPORT_HEIGHT) {
+      ctx.save();
+      ctx.strokeStyle = VIEWPORT_EDGE;
+      ctx.lineWidth = 2 / view.scale;
+      ctx.setLineDash([6 / view.scale, 4 / view.scale]);
+      ctx.strokeRect(0, 0, VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
+      ctx.restore();
+    }
 
     // Draw a sprite through its transform (translate → skew → rotate → scale),
     // centred on its position, so the editor shows the actor as the game will.
