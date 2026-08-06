@@ -14,6 +14,12 @@
 // anything not listed must exist on both. The default is therefore the safe
 // one: a new method is assumed to need both sides until someone writes down why
 // it does not.
+//
+// Since the builder became a call log the compiler catches most of this — a
+// deferred method names a `keyof World`, so it cannot forward to something that
+// is not there. What the compiler cannot see is a method MISSING from the
+// builder entirely, because the call sites are generated strings. That is this
+// file's remaining job, and it is the one that actually bit.
 
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
@@ -26,7 +32,7 @@ import {World, WorldBuilder} from '../index';
  * Builder-only, because the live World cannot answer them after the fact.
  *
  * Their blocks carry `builderWorldExtension`, or throw through
- * `requireUnbuilt`. The guard warns; it does not prevent, so a learner who
+ * `requireNoActors`. The guard warns; it does not prevent, so a learner who
  * ignores it still reaches the missing method — which is why these are written
  * down rather than merely tolerated.
  */
@@ -87,8 +93,20 @@ const called = (): string[] => {
   return [...names].sort();
 };
 
-const has = (target: object, name: string): boolean =>
-  typeof (target as unknown as Record<string, unknown>)[name] === 'function';
+/**
+ * Whether `name` is a member of `target`, WITHOUT reading it.
+ *
+ * Descriptors rather than a property access, because some members are getters
+ * (`WorldBuilder.actors`) and reading one off the prototype would run it with
+ * `this` bound to the prototype — a test that asks "does this exist" would
+ * build a world to find out, and throw.
+ */
+const has = (target: object, name: string): boolean => {
+  const descriptor = Object.getOwnPropertyDescriptor(target, name);
+  return Boolean(
+    descriptor && (typeof descriptor.value === 'function' || descriptor.get),
+  );
+};
 
 describe('the `world` surface the blocks generate against', () => {
   it('finds the call sites at all', () => {

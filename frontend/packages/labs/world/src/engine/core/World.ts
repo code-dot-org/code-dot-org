@@ -224,22 +224,8 @@ export interface WorldInit {
   name: string;
   /** Explicitly-used rules; their dependencies are pulled in implicitly. */
   rules: Rule[];
-  /** Initial world-property values overriding rule defaults. */
-  overrides: Array<[Property, unknown]>;
   /** Animations to register beyond the active rules' stock, by id. */
   animations?: Array<[string, AnimationDef]>;
-  /** Effects played across the whole viewport. */
-  effects?: AppliedEffectSpec[];
-  /** The one colour behind everything, before any image is drawn. */
-  clearColor?: Rgba;
-  /** Backgrounds by layer id — what each layer draws behind its actors. */
-  backgrounds?: Record<string, BackdropState>;
-  /** Foregrounds by layer id — what each layer draws in front of them. */
-  foregrounds?: Record<string, BackdropState>;
-  /** Effects on the layers themselves, by layer id. */
-  layerEffects?: Record<string, AppliedEffectSpec[]>;
-  /** The cameras this world can draw through (core/Camera). */
-  cameras?: CameraInit[];
   /**
    * The layers actors are drawn in, back to front (core/Layer).
    *
@@ -380,15 +366,13 @@ export class World {
     }
     const rules = this.membership.items();
 
-    // Seed world-scoped properties from every present rule's defaults, then
-    // apply overrides.
+    // Seed world-scoped properties from every present rule's defaults. A world
+    // that wants other values is TOLD them, by the same `set` an event handler
+    // calls — see WorldBuilder's note on the call log.
     for (const rule of rules) {
       for (const property of Object.values(rule.properties)) {
         this.store.set(property, coerce(property, property.default));
       }
-    }
-    for (const [property, value] of init.overrides) {
-      this.store.set(property, coerce(property, value));
     }
 
     // Seed the animation registry from every active rule's stock animations,
@@ -402,14 +386,8 @@ export class World {
       this.animationDefs.set(id, def);
     }
 
-    this.appliedEffects = init.effects ? [...init.effects] : [];
-
-    // Copied, not adopted: the builder may instantiate more than one world from
-    // the same description (`instantiate`), and two worlds sharing a backdrop
-    // would share every later change to it.
-    this.clearColor = init.clearColor
-      ? ([...init.clearColor] as Rgba)
-      : rgba(DEFAULT_BACKDROP_COLOR);
+    this.appliedEffects = [];
+    this.clearColor = rgba(DEFAULT_BACKDROP_COLOR);
 
     // Layers, back to front, with the default guaranteed. A world told nothing
     // has exactly one, which is every world today — so an actor always has
@@ -421,36 +399,11 @@ export class World {
     this.layerList.forEach((layer, index) =>
       this.layerIndex.set(layer.id, index),
     );
-    // Backgrounds described before the world existed, copied onto the layers
-    // they name. Copied, not adopted, for the reason the effects are: a builder
-    // may instantiate more than one world from one description.
-    this.cameraList = (init.cameras ?? []).map(makeCamera);
-    if (!this.cameraList.some(camera => camera.id === DEFAULT_CAMERA_ID)) {
-      this.cameraList.unshift(makeCamera({id: DEFAULT_CAMERA_ID}));
-    }
+    // Every world has the default camera; the rest are declared into it.
+    this.cameraList = [makeCamera({id: DEFAULT_CAMERA_ID})];
     this.cameraCollection = new CameraCollection(this.cameraList);
     for (const camera of this.cameraList) {
       camera.world = this;
-    }
-
-    for (const [id, effects] of Object.entries(init.layerEffects ?? {})) {
-      const layer = this.layer(id);
-      if (layer) {
-        layer.effects.push(...effects);
-      }
-    }
-    for (const which of ['background', 'foreground'] as const) {
-      const described =
-        which === 'background' ? init.backgrounds : init.foregrounds;
-      for (const [id, slot] of Object.entries(described ?? {})) {
-        const layer = this.layer(id);
-        if (layer) {
-          layer[which].sprite = slot.sprite;
-          layer[which].effects = [...slot.effects];
-          layer[which].offset = new Vector(slot.offset.x, slot.offset.y);
-          layer[which].repeat = slot.repeat;
-        }
-      }
     }
 
     // The per-tick order is fixed by the active rules' steps.
@@ -661,6 +614,17 @@ export class World {
   /** Whether an actor with `id` is already in this world. */
   hasActor(id: string): boolean {
     return this.actorList.some(actor => actor.id === id);
+  }
+
+  /**
+   * How many actors are in the world.
+   *
+   * Asked by `WorldBuilder.requireNoActors` to tell "the world exists" from
+   * "the world has been populated" — only the second makes a late declaration
+   * (a rule, an animation, a layer) impossible to honour.
+   */
+  actorCount(): number {
+    return this.actorList.length;
   }
 
   /** Raise an event for `actor`; dispatched after the current tick's steps. */

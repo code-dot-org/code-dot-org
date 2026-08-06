@@ -21,7 +21,7 @@ const doc = (nodeId: string): EffectDocument => ({
   functions: [],
 });
 
-const world = () => new World({id: 'w', name: 'W', rules: [], overrides: []});
+const world = () => new World({id: 'w', name: 'W', rules: []});
 
 describe('a world backdrop', () => {
   it('has one, in the default colour, before anyone says anything', () => {
