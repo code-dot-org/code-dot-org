@@ -411,6 +411,45 @@ describe('domain block generators', () => {
     );
   });
 
+  it('world_define_camera collects the traits in its body', () => {
+    // An actor's `use trait` calls a builder method; a camera is made in one
+    // call and has no half-built form to add to. So the declaration gathers
+    // its body rather than each block emitting for itself.
+    const use = (trait: string) => ({
+      type: 'world_use_trait',
+      getFieldValue: () => trait,
+      getNextBlock: () => null,
+    });
+    const code = generatorFor('world_define_camera')(
+      {
+        id: 'cam1',
+        getFieldValue: (name: string) => (name === 'NAME' ? 'Chase' : null),
+        getInputTargetBlock: () => use('Gravity#AffectedByGravityTrait'),
+      } as never,
+      {definitions_: {}} as never,
+      {} as never,
+    ) as string;
+
+    expect(code).toContain('world.defineCamera({id: "camera_cam1"');
+    expect(code).toContain('traits: [');
+  });
+
+  it('world_define_camera says nothing about traits when it has none', () => {
+    const code = generatorFor('world_define_camera')(
+      {
+        id: 'cam1',
+        getFieldValue: (name: string) => (name === 'NAME' ? 'Chase' : null),
+        getInputTargetBlock: () => null,
+      } as never,
+      {definitions_: {}} as never,
+      {} as never,
+    ) as string;
+
+    expect(code).toBe(
+      'world.defineCamera({id: "camera_cam1", name: "Chase"});\n',
+    );
+  });
+
   it('world_use_camera cuts the view to another camera', () => {
     // Which camera draws is a value, not structure: it moves a transform and
     // rebuilds nothing, so a game may cut mid-play without a restart.
@@ -427,7 +466,11 @@ describe('domain block generators', () => {
     // By block id, like a layer and a world's own actors — renaming the camera
     // then breaks nothing that names it.
     const code = generatorFor('world_define_camera')(
-      {id: 'cam1', getFieldValue: () => 'Overview'} as never,
+      {
+        id: 'cam1',
+        getFieldValue: () => 'Overview',
+        getInputTargetBlock: () => null,
+      } as never,
       {} as never,
       {} as never,
     ) as string;

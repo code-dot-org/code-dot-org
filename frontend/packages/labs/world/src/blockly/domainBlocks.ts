@@ -136,6 +136,7 @@ import {
   stepOptionsExtension,
   traitOptions,
   traitOptionsExtension,
+  traitSubjectFor,
 } from './traitOptions';
 import {
   ActorVariable,
@@ -351,6 +352,12 @@ const worldUseTrait = defineBlock({
   tooltip: 'Give the actor a trait (its properties and behavior).',
   generator: {
     javascript(block, generator) {
+      // Inside `define camera` the declaration collects these and passes them
+      // to `defineCamera` in one call, so there is nothing to emit here: a
+      // camera is made complete, and has no builder to add a trait to.
+      if (traitSubjectFor({getSourceBlock: () => block}) === 'camera') {
+        return '';
+      }
       const ref = refFromValue(block.getFieldValue('TRAIT'));
       return `actor.useTraits([${refCode(ref, generator)}]);\n`;
     },
@@ -3512,18 +3519,45 @@ const worldDefineCamera = defineBlock({
   type: 'world_define_camera',
   message0: 'define camera %1',
   args0: [{type: 'field_input', name: 'NAME', text: 'Camera'}],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
   extensions: [worldContextExtension],
   style: 'setup_blocks',
   tooltip:
-    'A place to look from. Every world has one already; define another to cut ' +
-    'between views.',
+    'A place to look from, and how it behaves. Every world has one already; ' +
+    'define another to cut between views. Give it traits to make it follow ' +
+    'something.',
   generator: {
-    javascript(block) {
-      return `world.defineCamera({id: ${str(cameraId(block.id))}, name: ${str(
-        String(block.getFieldValue('NAME') ?? 'Camera'),
-      )}});\n`;
+    javascript(block, generator) {
+      // The traits are COLLECTED here rather than emitted by the `use trait`
+      // blocks themselves. An actor's `use trait` calls a builder method, but a
+      // camera is made in one call — `defineCamera({…, traits})` — and there is
+      // no half-built camera to add to. So the declaration gathers its body,
+      // and `use trait` inside a camera generates nothing (see its generator).
+      const traits: string[] = [];
+      for (
+        let member = block.getInputTargetBlock?.('DO') ?? null;
+        member;
+        member = member.getNextBlock?.() ?? null
+      ) {
+        if (member.type !== 'world_use_trait') {
+          continue;
+        }
+        const ref = refFromValue(String(member.getFieldValue('TRAIT') ?? ''));
+        if (ref) {
+          traits.push(refCode(ref, generator));
+        }
+      }
+      const settings = [
+        `id: ${str(cameraId(block.id))}`,
+        `name: ${str(String(block.getFieldValue('NAME') ?? 'Camera'))}`,
+      ];
+      if (traits.length) {
+        settings.push(`traits: [${traits.join(', ')}]`);
+      }
+      return `world.defineCamera({${settings.join(', ')}});\n`;
     },
   },
 });

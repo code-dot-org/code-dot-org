@@ -5,6 +5,8 @@
 // the same set later), so this reads metadata rather than the engine's rule
 // objects directly — the seam that lets project rules contribute traits.
 
+import type {Blockly} from '@code-dot-org/blockly';
+
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {liveDropdown} from './moduleOptions';
 import type {RuleMeta, StepMeta} from './ruleMeta';
@@ -84,12 +86,64 @@ function rulesInPlay(refs: string[]): Set<RuleMeta> {
  * labelled by its display name, valued by its `world-lab` export (what the
  * generator writes). Deduped by export, sorted by label for a stable dropdown.
  */
-export function traitOptions(): Array<[string, string]> {
+/**
+ * What the thing electing a trait here IS — an actor, or a camera.
+ *
+ * A trait belongs to whatever takes it (`TraitMeta.subject`), so the dropdown
+ * has to know where it is being asked from: inside `define camera` only camera
+ * traits make sense, and inside `define actor` only an actor's. Offering both
+ * everywhere would put "Affected by Gravity" on a camera, which is the
+ * meaningless-trait problem this project has already avoided twice.
+ *
+ * Inside `define trait`, the answer is that TRAIT's own subject: a camera
+ * trait's dependencies are camera traits.
+ */
+export function traitSubjectFor(field?: {
+  getSourceBlock(): unknown;
+}): 'actor' | 'camera' {
+  const block = field?.getSourceBlock() as
+    | {
+        getSurroundParent?(): unknown;
+        getParent?(): unknown;
+      }
+    | null
+    | undefined;
+  for (
+    let parent = block?.getParent?.() as
+      | {
+          type?: string;
+          getParent?(): unknown;
+          getFieldValue?(n: string): string;
+        }
+      | null
+      | undefined;
+    parent;
+    parent = parent.getParent?.() as typeof parent
+  ) {
+    if (parent.type === 'world_define_camera') {
+      return 'camera';
+    }
+    if (parent.type === 'world_actor') {
+      return 'actor';
+    }
+    if (parent.type === 'world_rule_trait') {
+      return parent.getFieldValue?.('SUBJECT') === 'camera'
+        ? 'camera'
+        : 'actor';
+    }
+  }
+  return 'actor';
+}
+
+export function traitOptions(
+  field?: Blockly.FieldDropdown,
+): Array<[string, string]> {
+  const wanted = traitSubjectFor(field);
   const seen = new Set<string>();
   const options: Array<[string, string]> = [];
   for (const rule of rulesInPlay(projectRuleRefs)) {
     for (const trait of rule.traits) {
-      if (!trait.ref.exportName) {
+      if (!trait.ref.exportName || (trait.subject ?? 'actor') !== wanted) {
         continue;
       }
       const value = memberValue(trait.ref);
