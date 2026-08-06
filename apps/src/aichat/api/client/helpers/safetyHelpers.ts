@@ -60,7 +60,7 @@ export function isOutputImageLlmSafetyJudgeEnabled(): boolean {
  */
 export async function isTextSafe(
   text: string,
-  phase?: 'input_filter' | 'output_filter' | 'llm_safety_judge',
+  phase?: 'input_filter' | 'output_filter',
   customSafetyConfig?: Partial<SafetyConfig>
 ): Promise<boolean> {
   const safetyConfig = {
