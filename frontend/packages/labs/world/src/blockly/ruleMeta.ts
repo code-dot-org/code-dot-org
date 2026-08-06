@@ -392,7 +392,8 @@ export const designedName = (
 const slug = (text: string): string => text.replaceAll(/[^A-Za-z0-9_]/g, '_');
 
 /** PascalCase an id for a generated export name (`gravity scale` → `GravityScale`). */
-const pascal = (id: string): string =>
+/** `actor to follow` → `ActorToFollow`; how a member's export name is built. */
+export const pascal = (id: string): string =>
   id
     .split(/[^A-Za-z0-9]+/)
     .filter(Boolean)
@@ -1202,7 +1203,7 @@ export function ruleMetaToModule(
     scope: MemberScope;
     ownerTraitId?: string;
   }): string =>
-    (member.scope === 'actor' && member.ownerTraitId
+    (member.scope !== 'world' && member.ownerTraitId
       ? traitExportById.get(member.ownerTraitId)
       : undefined) ?? 'rule';
   const subject = (member: {scope: MemberScope}): string =>

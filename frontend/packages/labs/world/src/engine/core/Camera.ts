@@ -21,6 +21,7 @@
 // — so the distinction is carried in the model and is invisible until zoom
 // arrives. Adding it here later changes no authoring.
 
+import {SPATIAL} from './spatialKeys';
 import type {Trait} from './Trait';
 import {Traited} from './Traited';
 import type {Property} from './types';
@@ -47,6 +48,22 @@ export interface CameraInit {
   /** Initial values for the properties those traits declare. */
   overrides?: Array<[Property, unknown]>;
 }
+
+/**
+ * Whether this is Spatial's `position` — recognised by KEY, not by import.
+ *
+ * `core` must not import `rules`, which is why `spatialKeys` exists: plain
+ * constants both sides read, so core can speak the rule's vocabulary without
+ * depending on it (`renderSnapshot` reads an actor's transform the same way).
+ *
+ * This is what makes `set position of ⟨camera⟩` work. The positional blocks
+ * generate `subject.set(WorldLab.PositionProperty, …)`, and a camera answers
+ * that call with its own pose rather than with a slot no trait gave it — which
+ * is the concrete meaning of "a camera is the actor foundation minus
+ * appearance".
+ */
+const isPosition = (property: Property): boolean =>
+  property.ownerId === SPATIAL.trait && property.id === SPATIAL.position;
 
 /**
  * A camera, as the world holds it.
@@ -103,18 +120,29 @@ export class Camera {
   }
 
   get<T>(property: Property<T>): T {
+    if (isPosition(property)) {
+      return this.position as unknown as T;
+    }
     return this.traited.get(property);
   }
 
   /** Set a property; returns `this` so setup can chain, as an actor's does. */
   set<T>(property: Property<T>, value: T): this {
+    if (isPosition(property)) {
+      // Copied, like every other write of a pose: a step that follows the
+      // player writes this every tick, and adopting the caller's Vector would
+      // let a later mutation move the view with no call at all.
+      const to = value as unknown as {x: number; y: number};
+      this.position = new Vector(to.x, to.y);
+      return this;
+    }
     this.traited.set(property, value);
     return this;
   }
 
   /** Whether the slot exists at all — distinct from what is in it. */
   hasProperty(property: Property): boolean {
-    return this.traited.hasProperty(property);
+    return isPosition(property) || this.traited.hasProperty(property);
   }
 }
 

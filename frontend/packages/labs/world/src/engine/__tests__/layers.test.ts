@@ -472,6 +472,25 @@ describe('the camera', () => {
     expect(built.cameraSnapshot().find(c => c.active)?.id).toBe('overview');
   });
 
+  it('lets a world wire up a camera trait’s property after placing actors', () => {
+    // The whole point of a camera holding traits, exercised the way a world
+    // does it: place the level, then tell the camera what to follow.
+    //
+    //   load map ⟨Level 1⟩
+    //   set actor to follow of ⟨camera ⟨Chase⟩⟩ to ⟨first actor … ⟨Player⟩⟩
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    builder.defineCamera({id: 'chase', traits: [AffectedByGravityTrait]});
+    const player = actor('player');
+    builder.getWorld().addActor(player);
+
+    // Through the builder, which is what `world` is inside `define world`.
+    builder.camera('chase').set(GravityScaleProperty, 7);
+
+    expect(builder.getWorld().camera('chase').get(GravityScaleProperty)).toBe(
+      7,
+    );
+  });
+
   it('ignores a cut to a camera that is not there', () => {
     // Leaving the view where it is beats blacking it out: the id comes from
     // generated code naming a block that may have been deleted.
@@ -504,6 +523,31 @@ describe('the camera', () => {
     ]);
     expect(built.camera('follower').has(AffectedByGravityTrait)).toBe(true);
     expect(built.camera('static').has(AffectedByGravityTrait)).toBe(false);
+  });
+
+  it('answers the position property with its own pose', () => {
+    // What makes `set position of ⟨camera⟩` work. The positional blocks emit
+    // `subject.set(WorldLab.PositionProperty, …)`, and a camera answers with
+    // its pose rather than a slot no trait gave it — "the actor foundation
+    // minus appearance", as an implementation rather than a phrase.
+    const built = world();
+    const camera = built.camera();
+
+    expect(camera.hasProperty(PositionProperty)).toBe(true);
+    camera.set(PositionProperty, new Vector(64, -32));
+
+    expect(camera.get(PositionProperty)).toEqual(new Vector(64, -32));
+    // And it is the same pose the driver reads, not a second one beside it.
+    expect(camera.position).toEqual(new Vector(64, -32));
+  });
+
+  it('copies a pose written through the property, like every other write', () => {
+    const built = world();
+    const at = new Vector(1, 0);
+    built.camera().set(PositionProperty, at);
+    (at as {x: number}).x = 99;
+
+    expect(built.camera().position.x).toBe(1);
   });
 
   it('carries the properties its traits declare', () => {
