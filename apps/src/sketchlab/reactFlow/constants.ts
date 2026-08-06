@@ -32,6 +32,11 @@ export const LINE_DEFAULT_LENGTH_PX = 220;
 // endpoint to a node handle. Applies to mouse drags.
 export const LINE_RECONNECT_SNAP_RADIUS_PX = 40;
 
+// Width of the invisible band along an edge that accepts clicks and drags.
+// Wider than React Flow's 20px default so a line is easy to grab; the
+// selected/focused state paints this band so the grab area is visible.
+export const LINE_INTERACTION_WIDTH_PX = 40;
+
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
 

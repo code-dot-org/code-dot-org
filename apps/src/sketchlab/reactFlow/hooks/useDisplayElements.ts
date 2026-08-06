@@ -6,6 +6,7 @@ import type {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
+import {LINE_INTERACTION_WIDTH_PX} from '../constants';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
 import {getEdgeLabel} from '../utils/elementLabel';
 import {isGroupedChildNode} from '../utils/grouping';
@@ -159,6 +160,7 @@ export function useDisplayElements({
         return {
           ...edge,
           selected,
+          interactionWidth: LINE_INTERACTION_WIDTH_PX,
           deletable: !locked && !readOnly && !grabMode,
           ariaLabel: getEdgeLabel(
             edge,
