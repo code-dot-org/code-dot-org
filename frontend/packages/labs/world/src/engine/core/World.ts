@@ -63,11 +63,13 @@ export interface WorldSnapshot {
    *
    * Structural, and ORDERED rather than sorted: a layer cannot be spliced into
    * a live scene graph, and reordering two of them changes what is drawn on top
-   * of what — both are reloads, not patches. Each entry carries the layer's
-   * settings as well as its id, because changing a parallax factor changes the
-   * scene graph the driver built just as surely as adding a layer does.
+   * of what — both are reloads, not patches. Only the IDS, though: how a layer
+   * responds to the camera is read every frame and builds nothing, so it is a
+   * value ({@link layerMotion}) and a rule may turn it mid-game.
    */
   layers: string[];
+  /** How each layer responds to the camera. A value, patched like a property. */
+  layerMotion: Record<string, {parallax: {x: number; y: number}; fit: boolean}>;
   /**
    * Which cameras exist, in declaration order.
    *
@@ -502,6 +504,25 @@ export class World {
    */
   setCameraPosition(position: Vector, id: string = DEFAULT_CAMERA_ID): this {
     this.camera(id).position = new Vector(position.x, position.y);
+    return this;
+  }
+
+  /**
+   * How much of the camera's motion a layer takes, per axis.
+   *
+   * Copied rather than adopted, like a camera's position and a slot's offset:
+   * a rule turning this every tick would otherwise share one Vector with the
+   * world.
+   */
+  setLayerParallax(parallax: Vector, layer = DEFAULT_LAYER_ID): this {
+    const found = this.layer(layer) ?? this.layerList[0];
+    found.parallax = new Vector(parallax.x, parallax.y);
+    return this;
+  }
+
+  /** Whether a layer ignores the camera entirely — what a HUD is. */
+  setLayerFit(fit: boolean, layer = DEFAULT_LAYER_ID): this {
+    (this.layer(layer) ?? this.layerList[0]).fit = fit;
     return this;
   }
 
@@ -1294,9 +1315,15 @@ export class World {
           {x: camera.position.x, y: camera.position.y},
         ]),
       ),
-      layers: this.layerList.map(
-        layer =>
-          `${layer.id}:${layer.parallax.x},${layer.parallax.y}:${layer.fit}`,
+      layers: this.layerList.map(layer => layer.id),
+      layerMotion: Object.fromEntries(
+        this.layerList.map(layer => [
+          layer.id,
+          {
+            parallax: {x: layer.parallax.x, y: layer.parallax.y},
+            fit: layer.fit,
+          },
+        ]),
       ),
       // By actor id so the list is stable, but NOT sorted within an actor:
       // handlers for one event run in registration order, so a reorder is a

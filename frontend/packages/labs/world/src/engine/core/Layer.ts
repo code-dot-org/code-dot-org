@@ -106,8 +106,16 @@ export interface LayerInit {
 export interface Layer {
   readonly id: string;
   readonly name: string;
-  readonly parallax: Vector;
-  readonly fit: boolean;
+  /**
+   * How much of the camera's motion this layer takes, per axis.
+   *
+   * Mutable, and set by a block rather than declared: it is read every frame
+   * and changes nothing about the scene graph, so it is a VALUE — a rule may
+   * turn it while the game runs, and doing so must not restart anything.
+   */
+  parallax: Vector;
+  /** Whether it ignores the camera entirely. A value too, for the same reason. */
+  fit: boolean;
   /** Drawn behind this layer's actors. Mutable: a handler may change it. */
   readonly background: LayerSlot;
   /**

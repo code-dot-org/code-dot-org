@@ -79,7 +79,8 @@ import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {FOUNDATIONAL_STOCK_RULES} from './foundation';
 import {
-  LAYER_DEPTH_OPTIONS,
+  DEFAULT_PARALLAX,
+  LAYER_MOTION_OPTIONS,
   layerIdFromValue,
   layerOf,
   layerOptions,
@@ -2675,11 +2676,8 @@ const worldRemoveActor = defineBlock({
  */
 const worldDefineLayer = defineBlock({
   type: 'world_define_layer',
-  message0: 'define layer %1 %2',
-  args0: [
-    {type: 'field_input', name: 'NAME', text: 'Layer'},
-    {type: 'field_dropdown', name: 'DEPTH', options: LAYER_DEPTH_OPTIONS},
-  ],
+  message0: 'define layer %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'Layer'}],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
@@ -2688,8 +2686,8 @@ const worldDefineLayer = defineBlock({
   style: 'setup_blocks',
   tooltip:
     'A group of actors drawn together. Layers draw in the order you define ' +
-    'them, so the first one is furthest back, and each one chooses how much ' +
-    'it moves when the camera does.',
+    'them, so the first one is furthest back. A new layer moves with the ' +
+    'camera like the game does; put “this layer …” inside it to change that.',
   generator: {
     javascript(block, generator) {
       return generator.statementToCode(block, 'DO');
@@ -2707,6 +2705,58 @@ const worldDefineLayer = defineBlock({
  * It declares nothing, so it does not appear in `layerPlan`: naming a layer is
  * not defining one.
  */
+/**
+ * How this layer responds to the camera — the opt-in to parallax.
+ *
+ * Deliberately NOT part of `define layer`. A new layer moves with the camera
+ * like the game does, which is what a learner adding their first one means, and
+ * a declaration carrying two settings nobody needs yet is two settings to read
+ * past. Parallax is a thing you go and ask for.
+ *
+ * It names no layer: it sets the one it is written in, like `set background`
+ * and every other slot block (blockly/layers).
+ *
+ * The vector is how much of the camera's motion the layer takes, per axis.
+ * `1, 1` is the game itself. `0.2, 0` is a sky that shifts as the player walks
+ * and stays put when they jump — horizontal only, because a sky that bobs on
+ * every jump reads as broken. `0, 0.5` is the same idea in a climbing game,
+ * which is the case a fixed list of presets could not have said and the reason
+ * this is a vector at all.
+ *
+ * `is fixed to the screen` is a WORD and never the vector `0, 0`. The two look
+ * identical until a camera has a zoom — a layer at zero still zooms, a fixed
+ * one does not — so a HUD must not be expressible by typing two zeros.
+ */
+const worldLayerMotion = defineBlock({
+  type: 'world_layer_motion',
+  message0: 'this layer %1 %2',
+  args0: [
+    {type: 'field_dropdown', name: 'MOTION', options: LAYER_MOTION_OPTIONS},
+    fieldVectorArg('PARALLAX', DEFAULT_PARALLAX),
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'How much of the camera’s motion this layer takes, across and down. 1 and ' +
+    '1 moves with the game; smaller drifts behind; larger runs ahead. Fixed to ' +
+    'the screen ignores the camera altogether, which is what a HUD wants.',
+  generator: {
+    javascript(block) {
+      const layer = str(layerOf(block));
+      if (block.getFieldValue('MOTION') === 'fixed') {
+        return `world.setLayerFit(true, ${layer});\n`;
+      }
+      const value = (block.getFieldValue('PARALLAX') ?? {
+        x: 1,
+        y: 1,
+      }) as VectorValue;
+      return `world.setLayerParallax(new WorldLab.Vector(${Number(value.x)}, ${Number(value.y)}), ${layer});\n`;
+    },
+  },
+});
+
 const worldWithinLayer = defineBlock({
   type: 'world_within_layer',
   message0: 'within layer %1',
@@ -2934,18 +2984,7 @@ const worldWorld = defineBlock({
       const plan = layerPlan(block);
       const layers = plan.some(entry => entry.id !== DEFAULT_LAYER_ID)
         ? plan
-            .map(entry => {
-              const settings = [`id: ${str(entry.id)}`];
-              if (entry.parallax) {
-                settings.push(
-                  `parallax: new WorldLab.Vector(${entry.parallax.x}, ${entry.parallax.y})`,
-                );
-              }
-              if (entry.fit) {
-                settings.push('fit: true');
-              }
-              return `world.defineLayer({${settings.join(', ')}});\n`;
-            })
+            .map(entry => `world.defineLayer({id: ${str(entry.id)}});\n`)
             .join('')
         : '';
       return (
@@ -4100,6 +4139,7 @@ export const DOMAIN_BLOCKS = [
   worldFirstWhere,
   worldIsA,
   worldDefineLayer,
+  worldLayerMotion,
   worldWithinLayer,
   worldMoveCamera,
   worldAddActor,
@@ -4204,6 +4244,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_add_actor',
       // Grouping what is placed, and what draws in front of what.
       'world_define_layer',
+      // The opt-in to parallax; a layer moves with the camera without it.
+      'world_layer_motion',
       'world_within_layer',
       // Where the view is taken from; layers respond by their own depth.
       'world_move_camera',
