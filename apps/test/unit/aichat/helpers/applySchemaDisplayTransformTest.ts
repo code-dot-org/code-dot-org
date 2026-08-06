@@ -3,8 +3,8 @@ import {ChatEvent} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-// Stands in for a level's jsonSchemaResponseCallback: pulls one field out of
-// the parsed response, as the weblab2/pythonlab AI Tutor callbacks do.
+// Stands in for a lab's formatForDisplay: pulls one field out of the parsed
+// response, as the weblab2/pythonlab AI Tutor formatters do.
 const callback = (response: unknown) =>
   `ANSWER: ${(response as {answer: string}).answer}`;
 

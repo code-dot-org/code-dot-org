@@ -56,10 +56,8 @@ const renderSettings = (isWidgetView?: boolean) =>
 describe('useAiTutorResponseSchemaSettings (weblab2)', () => {
   beforeEach(() => jest.clearAllMocks());
 
-  // The reason display and effect are separate functions. formatForDisplay runs
-  // over every message in the transcript on every render, so if it carried the
-  // project-loading side effects, reopening a level would replay every past
-  // response into the student's code.
+  // formatForDisplay runs over every message in the transcript on every render,
+  // so it has to be safe to call any number of times, for any reader.
   it('formatForDisplay dispatches nothing and reports no analytics', () => {
     const {formatForDisplay} = renderSettings();
 
