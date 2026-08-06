@@ -1,4 +1,5 @@
-import {Typography} from '@mui/material';
+import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -42,14 +43,9 @@ export default function Congrats(props) {
     }
     return (
       <div className={style.extraLinkContainer}>
-        <a
-          href={extraLinkUrl}
-          target={'_blank'}
-          className={style.extraLink}
-          rel="noreferrer"
-        >
+        <Link href={extraLinkUrl} openInNewTab size="s">
           {extraLinkText}
-        </a>
+        </Link>
       </div>
     );
   };
@@ -310,7 +306,7 @@ export default function Congrats(props) {
                   <div className={style.contentWrapper}>
                     <Typography
                       className={style.overline}
-                      variant="body2"
+                      variant="overline2"
                       gutterBottom
                     >
                       {item.grade}
@@ -324,9 +320,14 @@ export default function Congrats(props) {
                     </Typography>
                   </div>
                   <div className={style.contentFooter}>
-                    <a className={style.linkButton} href={item.link}>
+                    <MuiButton
+                      className={style.linkButton}
+                      variant="contained"
+                      color="primary"
+                      href={item.link}
+                    >
                       {item.buttonText}
-                    </a>
+                    </MuiButton>
                   </div>
                 </div>
               ))}
@@ -347,29 +348,35 @@ export default function Congrats(props) {
               </div>
               {userType === 'student' ? (
                 <div className={style.studentButtonsContainer}>
-                  <a
+                  <MuiButton
                     className={`${style.linkButton} ${style.catalogButton}`}
+                    variant="contained"
+                    color="primary"
                     href={'https://code.org/student/elementary'}
                   >
                     {i18n.learningForAgesRange({
                       youngestAge: '5',
                       oldestAge: '11',
                     })}
-                  </a>
-                  <a
+                  </MuiButton>
+                  <MuiButton
                     className={`${style.linkButton} ${style.catalogButton}`}
+                    variant="contained"
+                    color="primary"
                     href={'https://code.org/student/middle-high'}
                   >
                     {i18n.learningForAgesPlus({age: '11'})}
-                  </a>
+                  </MuiButton>
                 </div>
               ) : (
-                <a
+                <MuiButton
                   className={`${style.linkButton} ${style.catalogButton}`}
+                  variant="contained"
+                  color="primary"
                   href={'/catalog'}
                 >
                   {i18n.viewCurriculumCatalog()}
-                </a>
+                </MuiButton>
               )}
             </div>
           </div>
@@ -397,9 +404,14 @@ export default function Congrats(props) {
                       </Typography>
                     </div>
                     <div className={style.contentFooter}>
-                      <a className={style.linkButton} href={item.link}>
+                      <MuiButton
+                        className={style.linkButton}
+                        variant="contained"
+                        color="primary"
+                        href={item.link}
+                      >
                         {item.buttonText}
-                      </a>
+                      </MuiButton>
                     </div>
                   </div>
                 ))}
@@ -433,9 +445,14 @@ export default function Congrats(props) {
                   </Typography>
                 </div>
                 <div className={style.contentFooter}>
-                  <a className={style.linkButton} href={item.link}>
+                  <MuiButton
+                    className={style.linkButton}
+                    variant="contained"
+                    color="primary"
+                    href={item.link}
+                  >
                     {item.buttonText}
-                  </a>
+                  </MuiButton>
                 </div>
               </div>
             ))}

@@ -149,7 +149,8 @@ describe('Certificate', () => {
     expect(wrapper.find('swiper-container').exists()).to.be.true;
     expect(wrapper.find('swiper-slide').length).to.equal(2);
 
-    expect(wrapper.find('LargeChevronLink').props().link).to.equal(
+    // The breadcrumb's first crumb links back to the course.
+    expect(wrapper.find('nav a').first().props().href).to.equal(
       '/courses/csd-2023/units/1'
     );
   });

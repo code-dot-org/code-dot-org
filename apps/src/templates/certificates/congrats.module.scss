@@ -4,9 +4,9 @@
 @import '@code-dot-org/component-library-styles/typography.module';
 
 :root {
-  --swiper-pagination-color: #{$light_primary_500};
+  --swiper-pagination-color: var(--background-brand-purple-primary);
   --swiper-pagination-bullet-size: 1rem;
-  --swiper-pagination-bullet-inactive-color: #{$light_primary_100};
+  --swiper-pagination-bullet-inactive-color: var(--background-brand-purple-light);
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-bullet-horizontal-gap: 0.5rem;
 }
@@ -16,11 +16,16 @@
 }
 
 h1.header {
-  color: $neutral_dark;
+  color: var(--text-neutral-primary);
+}
+
+.breadcrumbs {
+  margin-block: 10px;
+  width: 100%;
 }
 
 .inputContainer {
-  background-color: $neutral_light;
+  background-color: var(--background-neutral-secondary);
   padding: 15px;
   border-radius: 5px;
 }
@@ -82,19 +87,13 @@ h1.mobileHeading {
   float: left;
 }
 
-.nameInput {
-  height: 36px !important;
-  border: 1px solid $neutral_dark !important;
+// Use a high-specificity selector to take priority over bootstrap's .form-control
+input.nameInput {
+  height: 36px;
   flex: 2;
-}
-
-.submit {
-  background: $light_secondary_500;
-  color: $neutral_white;
-  font-size: 16px;
-  padding: 8px 20px;
-  margin: 0 5px;
-  height: 38px;
+  border: 1px solid var(--borders-neutral-strong);
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
 }
 
 .confetti {
@@ -107,6 +106,8 @@ p.enterName {
 
 .inputButtonContainer {
   display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
 }
 
 .swiperContainer {
