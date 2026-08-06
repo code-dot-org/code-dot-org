@@ -53,14 +53,12 @@ const ACTOR_SIZE = 24;
 const GAME_WIDTH = VIEWPORT_WIDTH;
 const GAME_HEIGHT = VIEWPORT_HEIGHT;
 const DEGREES_TO_RADIANS = Math.PI / 180;
-// Depths, per layer. A layer occupies a span so its background can sit behind
-// its own actors without reaching the layer below: background at the base,
-// actors one above, and the foreground slot (not built yet) one above that.
-// Spelled out here rather than imported, like everything else in the driver.
-const LAYER_SPAN = 10;
-const backgroundDepth = (layer: number) => layer * LAYER_SPAN;
-const actorDepth = (layer: number) => layer * LAYER_SPAN + 1;
-const foregroundDepth = (layer: number) => layer * LAYER_SPAN + 2;
+// Depths WITHIN one layer's container. The container itself carries the layer's
+// place in the stack, so these three are all the ordering a layer needs: its
+// background behind its actors, its foreground in front of them.
+const BACKGROUND_DEPTH = 0;
+const ACTOR_DEPTH = 1;
+const FOREGROUND_DEPTH = 2;
 
 /**
  * The name of a texture frame for `cell`, registering it on first use.
@@ -170,6 +168,30 @@ export class PhaserBinding {
     const objects = new Map<Actor, GameObject>();
     // The backdrop layers' images, by layer index — created on demand, because
     // a world may be told about its background mid-game.
+    /**
+     * One Phaser Layer per engine layer, in stack order.
+     *
+     * A container rather than a depth range, because a layer is a thing effects
+     * attach TO — `blur the game and leave the HUD sharp` has nothing to filter
+     * unless the game's drawing is one object. Phaser's Layer takes filters
+     * (it has `enableFilters`, like every Game Object) and draws its children
+     * in their own depth order, so the container carries the layer's place in
+     * the stack and its children carry only their place within it.
+     */
+    const containers: Array<Phaser.GameObjects.Layer | undefined> = [];
+    const containerFor = (
+      scene: Phaser.Scene,
+      index: number,
+    ): Phaser.GameObjects.Layer => {
+      let container = containers[index];
+      if (!container) {
+        container = scene.add.layer();
+        container.setDepth(index);
+        containers[index] = container;
+      }
+      return container;
+    };
+
     const backdrops: Array<SlotObject | undefined> = [];
     // The foregrounds' own images. A separate cache because they are separate
     // objects at separate depths; nothing either holds concerns the other.
@@ -301,7 +323,7 @@ export class PhaserBinding {
       scene: Phaser.Scene,
       slots: readonly BackdropState[],
       images: Array<SlotObject | undefined>,
-      depthOf: (layer: number) => number,
+      depth: number,
     ) => {
       slots.forEach((slot, index) => {
         let image = images[index];
@@ -329,7 +351,8 @@ export class PhaserBinding {
                 sprite,
               )
             : scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite);
-          image.setDepth(depthOf(index));
+          image.setDepth(depth);
+          containerFor(scene, index).add(image);
           images[index] = image;
         }
         image.setTexture(sprite);
@@ -375,14 +398,37 @@ export class PhaserBinding {
         scene,
         world.backdropSnapshot() as BackdropState[],
         backdrops,
-        backgroundDepth,
+        BACKGROUND_DEPTH,
       );
       syncSlots(
         scene,
         world.foregroundSnapshot() as BackdropState[],
         foregrounds,
-        foregroundDepth,
+        FOREGROUND_DEPTH,
       );
+
+      // The layers themselves. Their containers are made on demand by whatever
+      // first draws into them, so this both creates any that are empty (a layer
+      // with an effect and nothing in it yet is still a layer) and brings each
+      // one's filters in line.
+      const layers = world.layerSnapshot();
+      layers.forEach((layer, index) => {
+        effectRegistry.reconcile(
+          scene,
+          containerFor(scene, index) as never,
+          layer.effects,
+        );
+      });
+      // Layers the world dropped take their container — and every child still
+      // in it — with them.
+      for (let index = layers.length; index < containers.length; index++) {
+        const container = containers[index];
+        if (container) {
+          effectRegistry.release(container);
+          container.destroy(true);
+          containers[index] = undefined;
+        }
+      }
     };
 
     const sync = (scene: Phaser.Scene) => {
@@ -418,14 +464,11 @@ export class PhaserBinding {
         let object = objects.get(state.actor);
         if (!object) {
           object = create(scene, state);
+          // Into its layer's container, at the actors' depth within it.
+          object.setDepth(ACTOR_DEPTH);
+          containerFor(scene, state.layer).add(object);
           objects.set(state.actor, object);
         }
-        // Which layer draws it, as its depth (`RenderState.layer`). Every frame
-        // rather than at creation: an actor cannot change layer today, but the
-        // display list is rebuilt on every reload and a depth set once would
-        // survive only until the first restart. Backdrops sit below all of
-        // these at BACKDROP_DEPTH, which is why layer depths start at 0.
-        object.setDepth(actorDepth(state.layer));
         // Effects are reconciled every frame, not applied once at creation: an
         // event handler can add or remove one while the game runs, and the
         // engine's list is re-read here each tick. `reconcile` attaches only

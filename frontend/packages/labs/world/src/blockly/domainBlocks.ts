@@ -3323,6 +3323,15 @@ const EFFECT_OWNER_BLOCKS = [
     filters: 'the whole view',
   }),
   defineEffectBlocks({
+    infix: 'layer',
+    noun: 'this layer',
+    method: 'Layer',
+    layered: true,
+    filters:
+      'everything this layer draws — its actors and its images together, ' +
+      'leaving the other layers alone',
+  }),
+  defineEffectBlocks({
     infix: 'background',
     noun: 'the background',
     method: 'Background',
@@ -4164,6 +4173,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_remove_background_effect',
       'world_add_foreground_effect',
       'world_remove_foreground_effect',
+      // The scope between a slot's and the world's: blur the game, leave the
+      // score sharp (specs/VIEWPORT.md).
+      'world_add_layer_effect',
+      'world_remove_layer_effect',
     ],
   },
   {

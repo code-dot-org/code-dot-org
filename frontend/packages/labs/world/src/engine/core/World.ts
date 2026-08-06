@@ -215,6 +215,8 @@ export interface WorldInit {
   backgrounds?: Record<string, BackdropState>;
   /** Foregrounds by layer id — what each layer draws in front of them. */
   foregrounds?: Record<string, BackdropState>;
+  /** Effects on the layers themselves, by layer id. */
+  layerEffects?: Record<string, AppliedEffectSpec[]>;
   /**
    * The layers actors are drawn in, back to front (core/Layer).
    *
@@ -365,6 +367,12 @@ export class World {
     // Backgrounds described before the world existed, copied onto the layers
     // they name. Copied, not adopted, for the reason the effects are: a builder
     // may instantiate more than one world from one description.
+    for (const [id, effects] of Object.entries(init.layerEffects ?? {})) {
+      const layer = this.layer(id);
+      if (layer) {
+        layer.effects.push(...effects);
+      }
+    }
     for (const which of ['background', 'foreground'] as const) {
       const described =
         which === 'background' ? init.backgrounds : init.foregrounds;
@@ -754,6 +762,58 @@ export class World {
     return this;
   }
 
+  /**
+   * Play an effect on a LAYER — its actors and both its images together.
+   *
+   * The scope between a slot's and the world's: a slot effect filters one
+   * image, a world effect filters the whole screen after everything is
+   * composited, and this filters one layer's worth of it. Blurring the game
+   * while the score stays sharp is the case it exists for, and neither of the
+   * other two can say it.
+   */
+  addLayerEffect(
+    path: string,
+    document: AppliedEffectSpec['document'],
+    values?: AppliedEffectSpec['values'],
+    layer = DEFAULT_LAYER_ID,
+  ): this {
+    const spec = values ? {path, document, values} : {path, document};
+    const effects = (this.layer(layer) ?? this.layerList[0]).effects;
+    const index = effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      effects[index] = spec;
+      return this;
+    }
+    effects.push(spec);
+    return this;
+  }
+
+  /** Stop an effect on a layer. Removing one not playing is a no-op. */
+  removeLayerEffect(path: string, layer = DEFAULT_LAYER_ID): this {
+    const effects = (this.layer(layer) ?? this.layerList[0]).effects;
+    const index = effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      effects.splice(index, 1);
+    }
+    return this;
+  }
+
+  /**
+   * Each layer's id and its own effects, in stack order.
+   *
+   * What the driver needs to build one filterable container per layer; the
+   * slots' images and the actors are read separately, as they always were.
+   */
+  layerSnapshot(): ReadonlyArray<{
+    id: string;
+    effects: readonly AppliedEffectSpec[];
+  }> {
+    return this.layerList.map(layer => ({
+      id: layer.id,
+      effects: layer.effects,
+    }));
+  }
+
   /** Play an effect on a layer's FOREGROUND. See {@link addBackgroundEffect}. */
   addForegroundEffect(
     path: string,
@@ -803,6 +863,7 @@ export class World {
     return [
       ...this.appliedEffects,
       ...this.layerList.flatMap(layer => [
+        ...layer.effects,
         ...layer.background.effects,
         ...layer.foreground.effects,
       ]),
@@ -824,6 +885,10 @@ export class World {
         effect => ['world', effect] as [string, AppliedEffectSpec],
       ),
       ...this.layerList.flatMap(layer => [
+        ...layer.effects.map(
+          effect =>
+            [`layer:${layer.id}`, effect] as [string, AppliedEffectSpec],
+        ),
         ...layer.background.effects.map(
           effect =>
             [`backdrop:${layer.id}`, effect] as [string, AppliedEffectSpec],
@@ -908,6 +973,7 @@ export class World {
     };
     patch(this.appliedEffects);
     for (const layer of this.layerList) {
+      patch(layer.effects);
       patch(layer.background.effects);
       patch(layer.foreground.effects);
     }

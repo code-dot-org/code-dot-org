@@ -26,6 +26,13 @@ interface FakeImage {
   tileY?: number;
 }
 let images: FakeImage[] = [];
+/** One per engine layer — the container its drawing is parented into. */
+interface FakeLayer {
+  depth: number;
+  children: Array<FakeImage | undefined>;
+  destroyed: boolean;
+}
+let layers: FakeLayer[] = [];
 /** The most recent game's scene, so a test can run frames against it. */
 let lastScene: {
   config: {scene: {update(time: number, delta: number): void}};
@@ -111,6 +118,24 @@ vi.mock('phaser', () => {
         images.push(record);
         return new TileSprite(record);
       },
+      /** The per-layer container everything is parented into. */
+      layer() {
+        const record: FakeLayer = {depth: 0, children: [], destroyed: false};
+        layers.push(record);
+        return {
+          setDepth(depth: number) {
+            record.depth = depth;
+            return this;
+          },
+          add(child: {record?: FakeImage}) {
+            record.children.push(child.record);
+            return this;
+          },
+          destroy() {
+            record.destroyed = true;
+          },
+        };
+      },
       rectangle: () => ({setDepth: () => {}}),
     },
   };
@@ -183,6 +208,11 @@ const world = (
       backdrops.map(() => ({effects: [], offset: {x: 0, y: 0}, repeat: false})),
     // One sky, the world's — not the bottom layer's (BACKGROUNDS.md).
     backdropColor: () => clearColor,
+    layerSnapshot: () =>
+      backdrops.map((_, index) => ({
+        id: index === 0 ? 'main' : `layer${index}`,
+        effects: [],
+      })),
     snapshot: () => ({world: {}}),
   }) as never;
 
@@ -195,6 +225,7 @@ const pane = (): HTMLElement => {
 describe('drawing the backdrop', () => {
   beforeEach(() => {
     images = [];
+    layers = [];
     cameraColor = 0;
     textures = new Set(['cave.png', 'trees.png']);
     document.body.innerHTML = '';
@@ -216,17 +247,22 @@ describe('drawing the backdrop', () => {
     });
   });
 
-  it('puts each background below its own layer, and the layers in order', () => {
+  it('parents each background into its own layer, and stacks the layers', () => {
     new PhaserBinding(
       world([{sprite: 'cave.png'}, {sprite: 'trees.png'}]),
       pane(),
     );
 
-    // Each background sits at the base of its own layer's depth span, so it is
-    // below that layer's actors and above everything in the layer beneath.
-    // Explicit depths rather than creation order: a background set mid-game is
-    // made after the actors and would otherwise cover them.
-    expect(images.map(image => image.depth)).toEqual([0, 10]);
+    // Depth is now split in two. Each layer's CONTAINER carries its place in
+    // the stack, so the containers ascend; each background sits at depth 0
+    // INSIDE its own container, below that layer's actors and above everything
+    // in the layer beneath. Explicit depths rather than creation order: a
+    // background set mid-game is made after the actors and would otherwise
+    // cover them.
+    expect(layers.map(layer => layer.depth)).toEqual([0, 1]);
+    expect(images.map(image => image.depth)).toEqual([0, 0]);
+    // And each went into its own layer, not into one shared display list.
+    expect(layers.map(layer => layer.children.length)).toEqual([1, 1]);
   });
 
   it('slides a stretched slot bodily, which is where the gap comes from', () => {
@@ -261,6 +297,15 @@ describe('drawing the backdrop', () => {
       tileX: -8,
       tileY: -0,
     });
+  });
+
+  it('makes a container per layer even when it draws no image', () => {
+    // A layer with an effect and nothing in it yet is still a layer, and the
+    // effect has to have something to attach to.
+    new PhaserBinding(world([{}, {}]), pane());
+
+    expect(layers).toHaveLength(2);
+    expect(layers.map(layer => layer.depth)).toEqual([0, 1]);
   });
 
   it('draws nothing for a layer with no image, or an image the project lost', () => {
