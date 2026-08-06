@@ -56,11 +56,14 @@ class HeaderTest < ActionDispatch::IntegrationTest
         must_select '#header_create_menu[role="button"]', /New project/ do
           {
             'Sprite Lab'        => 'https://test-studio.code.org/projects/spritelab/new',
-            'Artist'            => 'https://test-studio.code.org/projects/artist/new',
             'App Lab'           => 'https://test-studio.code.org/projects/applab/new',
             'Game Lab'          => 'https://test-studio.code.org/projects/gamelab/new',
             'Music Lab'         => '//test.code.org/music',
             'Dance Party'       => 'https://test-studio.code.org/projects/dance/new',
+            'Sketch Lab'        => 'https://test-studio.code.org/projects/sketchlab/new',
+            'Python Lab'        => 'https://test-studio.code.org/projects/pythonlab/new',
+            'Web Lab (new)'     => 'https://test-studio.code.org/projects/weblab2/new',
+            'Mix & Move with AI' => '//test.code.org/mix-move-ai',
             /View all projects/ => 'https://test-studio.code.org/projects'
           }.each do |text, href|
             must_select 'a[href=?]', href, text
