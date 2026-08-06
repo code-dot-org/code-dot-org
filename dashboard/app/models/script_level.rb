@@ -72,6 +72,7 @@ class ScriptLevel < ApplicationRecord
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
   validate :validate_activity_section_position
+  validate :ui_test_levels_only_in_ui_test_scripts
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -91,6 +92,39 @@ class ScriptLevel < ApplicationRecord
     if activity_section && !activity_section_position
       errors.add(:script_level, 'activity_section_position is required when activity_section is present')
     end
+  end
+
+  # "UI Test " levels may only be referenced by ui-test-* units, or the
+  # production seed fails with "No level found"; see
+  # dashboard/test/ui/config/README.md. Checked against the serialized
+  # level_keys property because ScriptSeed's import! runs validations before
+  # the HABTM join rows are imported. The levelbuilder attach path
+  # (update_levels) writes those rows without validating, so it applies the
+  # same rule itself through cross_partition_level_names.
+  def ui_test_levels_only_in_ui_test_scripts
+    offending = cross_partition_level_names(level_keys || [])
+    return if offending.empty?
+    errors.add(:script_level, cross_partition_levels_message(offending))
+  end
+
+  # Of the given level keys or names, those on the wrong side of the
+  # "UI Test " partition for this script_level's unit. Ignores nil entries.
+  def cross_partition_level_names(level_names)
+    # Select on the names before consulting the unit: the names are in memory,
+    # while ui_test_script? may load the unit, and the validation above runs
+    # for every script_level of every seed.
+    offending = level_names.compact.select {|level_name| Level.ui_test_name?(level_name)}
+    return [] if offending.empty? || ui_test_script?
+    offending
+  end
+
+  def cross_partition_levels_message(offending_level_names)
+    "UI Test levels may only be used in ui-test-* scripts, " \
+      "but \"#{script&.name}\" references: #{offending_level_names.join(', ')}"
+  end
+
+  def ui_test_script?
+    script&.name&.start_with?('ui-test-')
   end
 
   serialized_attrs %w(
@@ -732,6 +766,11 @@ class ScriptLevel < ApplicationRecord
       Level.find(level_data['id'])
     end
 
+    # This path writes the levels HABTM rows without running model
+    # validations, so apply the UI Test partition rule here as well.
+    offending = cross_partition_level_names(levels.map(&:name))
+    raise cross_partition_levels_message(offending) if offending.any?
+
     # Unit levels containing anonymous levels must be assessments.
     if levels.any? {|l| l.properties["anonymous"] == "true"}
       self.assessment = true
@@ -747,13 +786,19 @@ class ScriptLevel < ApplicationRecord
     raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
     existing_level = levels.first
 
-    levels << new_level
-    update!(
-      level_keys: levels.map(&:key),
-      variants: {
-        existing_level.name => {"active" => false}
-      }
-    )
+    # Use a transaction so that the database is not modified if any validations
+    # fail: the append writes the join row immediately, before update! runs
+    # them. requires_new is necessary to ensure that the database is restored to
+    # its original state when running inside of another transaction.
+    transaction(requires_new: true) do
+      levels << new_level
+      update!(
+        level_keys: levels.map(&:key),
+        variants: {
+          existing_level.name => {"active" => false}
+        }
+      )
+    end
     if Rails.application.config.levelbuilder_mode
       script.write_script_json
     end

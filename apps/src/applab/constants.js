@@ -219,3 +219,9 @@ if (fontFamilyOptions.length !== fontFamilyStyles.length) {
     'fontFamilyOptions length must equal fontFamilyStyles length'
   );
 }
+
+export const FLAGGED_IMAGE_URL_MESSAGE =
+  'This image URL cannot be used because it may contain inappropriate content.';
+
+export const IMAGE_MODERATION_ERROR_MESSAGE =
+  "We couldn't check this image link right now. Try a different image link or upload an image file instead.";
