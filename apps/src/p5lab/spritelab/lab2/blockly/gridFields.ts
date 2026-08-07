@@ -21,10 +21,32 @@ const GRID_CONFIG = {
 // constructor's TS type doesn't admit null but the plugin handles it.
 const EMPTY_GRID = null as unknown as number[][];
 
-// Single-select: one position, so a new mark replaces the old one.
-function singleCellValidator(newValue: number[][]): number[][] {
-  let marks = 0;
-  return newValue.map(row => row.map(cell => (cell && ++marks === 1 ? 1 : 0)));
+// Single-select: one position, so a new mark replaces the old one. Keep the
+// mark this edit ADDED (the editor's intermediate value briefly holds the
+// old mark and the clicked cell together; keeping the first in scan order
+// instead made cells below the selection unselectable). Validators run with
+// the field as `this`.
+export function singleCellValidator(
+  this: BlocklyCore.Field | void,
+  newValue: number[][]
+): number[][] {
+  const prev = (this?.getValue?.() ?? null) as number[][] | null;
+  let keep: [number, number] | null = null;
+  let first: [number, number] | null = null;
+  for (let r = 0; r < newValue.length; r++) {
+    for (let c = 0; c < newValue[r].length; c++) {
+      if (newValue[r][c]) {
+        first = first || [r, c];
+        if (!prev?.[r]?.[c]) {
+          keep = keep || [r, c];
+        }
+      }
+    }
+  }
+  const mark = keep || first;
+  return newValue.map((row, r) =>
+    row.map((_, c) => (mark && mark[0] === r && mark[1] === c ? 1 : 0))
+  );
 }
 
 export class GridField extends CdoFieldBitmap {
