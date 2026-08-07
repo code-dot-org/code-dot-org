@@ -120,6 +120,7 @@ export default function EdgeSelectionOutlines({
           }}
           className={styles.edgeSelectionOutline}
           style={{display: 'none'}}
+          aria-hidden="true"
         />
       ))}
     </ViewportPortal>
