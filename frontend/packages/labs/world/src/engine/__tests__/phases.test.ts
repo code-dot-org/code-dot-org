@@ -154,6 +154,7 @@ describe('which moments a subject takes part in', () => {
     expect(phasesFor('camera').map(phase => phase.id)).toEqual([
       'choose',
       'aim',
+      'steady',
       'smooth',
       'confine',
       'view',

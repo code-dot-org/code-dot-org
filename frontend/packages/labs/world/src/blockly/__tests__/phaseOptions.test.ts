@@ -81,7 +81,7 @@ describe('what the dropdown offers', () => {
           }),
         ),
       ),
-    ).toEqual(['choose', 'aim', 'smooth', 'confine', 'view']);
+    ).toEqual(['choose', 'aim', 'steady', 'smooth', 'confine', 'view']);
   });
 
   it('gives an actor trait only the actor’s', () => {

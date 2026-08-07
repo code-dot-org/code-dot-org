@@ -18,8 +18,10 @@ import {
   ruleBodyKey,
   ruleMetaToModule,
 } from '../../blockly/ruleMeta';
+import {PHASES} from '../../engine/core/phases';
 import {cameraRule} from '../stock/camera';
 import {cameraConfinedRule} from '../stock/cameraConfined';
+import {cameraDeadzoneRule} from '../stock/cameraDeadzone';
 import {cameraEaseRule} from '../stock/cameraEase';
 import {cameraFollowRule} from '../stock/cameraFollow';
 
@@ -57,6 +59,8 @@ const follow = () => parseRuleMeta('rules/cameraFollow', cameraFollowRule)!;
 const ease = () => parseRuleMeta('rules/cameraEase', cameraEaseRule)!;
 const confined = () =>
   parseRuleMeta('rules/cameraConfined', cameraConfinedRule)!;
+const deadzone = () =>
+  parseRuleMeta('rules/cameraDeadzone', cameraDeadzoneRule)!;
 
 describe('Camera — the base every camera rule builds on', () => {
   it('declares a camera trait carrying the goal', () => {
@@ -130,7 +134,7 @@ describe('every block these rules name', () => {
   // named from its rule and its export (`world_get_Camera_GoalProperty`), so
   // renaming the rule or the property renames them too.
   const palette = new Set(
-    buildDomainPalette([camera(), follow(), ease(), confined()], {
+    buildDomainPalette([camera(), follow(), ease(), confined(), deadzone()], {
       allRuleModules: true,
     }).blocks.map(block => block.type),
   );
@@ -142,6 +146,7 @@ describe('every block these rules name', () => {
       ['cameraFollow', cameraFollowRule],
       ['cameraEase', cameraEaseRule],
       ['cameraConfined', cameraConfinedRule],
+      ['cameraDeadzone', cameraDeadzoneRule],
     ] as const) {
       for (const type of typesIn(source)) {
         // Ours, or Blockly's own, which importing blockly registers.
@@ -378,5 +383,65 @@ describe('a camera that has elected Follows but been given nothing', () => {
       find(inputs.IF0, 'world_get_Space_PositionProperty'),
     ).toBeUndefined();
     expect(find(inputs.DO0, 'world_get_Space_PositionProperty')).toBeDefined();
+  });
+});
+
+describe('Camera Deadzone — the camera ignores small movements', () => {
+  it('adjusts the aim in its own moment, before easing', () => {
+    // `steady` exists because of this rule. A deadzone measures how far the aim
+    // has moved from where the camera IS, so an easing step running first
+    // shrinks that gap and the deadzone barely ever fires — they wanted the
+    // same moment and do not commute.
+    expect(deadzone().steps).toEqual([
+      expect.objectContaining({
+        id: 'ignore_small_movements',
+        scope: 'camera',
+        ownerTraitId: 'Has_a_Deadzone',
+        order: {kind: 'phase', phase: 'steady'},
+      }),
+    ]);
+  });
+
+  it('runs before Ease, and Ease before Confined', () => {
+    // The whole pipeline, ordered by the list rather than by any rule naming
+    // another. Read off the phases the four rules actually declare.
+    const order = PHASES.map(phase => phase.id);
+    const at = (meta: ReturnType<typeof camera>) =>
+      order.indexOf(meta.steps[0].order.phase!);
+
+    expect(at(follow())).toBeLessThan(at(deadzone()));
+    expect(at(deadzone())).toBeLessThan(at(ease()));
+    expect(at(ease())).toBeLessThan(at(confined()));
+    expect(at(confined())).toBeLessThan(at(camera()));
+  });
+
+  it('gives the box a width and a height, not one number', () => {
+    // A platform camera wants more slack sideways than vertically — the player
+    // walks about far more than they change height.
+    const meta = deadzone();
+
+    expect(meta.properties).toEqual([
+      expect.objectContaining({id: 'slack', type: 'point'}),
+    ]);
+    expect(meta.traits[0].requires).toEqual(['Camera#AimedTrait']);
+  });
+
+  it('trails the target by the slack rather than snapping to it', () => {
+    // What the block it adds computes, as arithmetic. Once the subject leaves
+    // the box the camera sits exactly `slack` behind it, so the subject rests
+    // on the edge it left and the next frame starts from there.
+    const drag = (target: number, slack: number, here: number) =>
+      target > here + slack
+        ? target - slack
+        : target < here - slack
+          ? target + slack
+          : here;
+
+    expect(drag(100, 16, 0)).toBe(84); // left the box: 16 behind the target
+    expect(drag(10, 16, 0)).toBe(0); // inside it: unmoved
+    expect(drag(-100, 16, 0)).toBe(-84); // and the same the other way
+    // Having moved, the subject is exactly the slack away — so a subject that
+    // stops immediately does not drift any further.
+    expect(drag(100, 16, 84)).toBe(84);
   });
 });

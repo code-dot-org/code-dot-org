@@ -262,12 +262,12 @@ ordered list of named moments (`engine/core/phases`), and the camera occupies
 the last five of them:
 
 ```
-sense  decide  push  move  adjust  touch  settle  react | choose  aim  smooth  confine  view
+sense  decide  push  move  adjust  touch  settle  react | choose  aim  steady  smooth  confine  view
 ```
 
 `choose` picks which camera the view is taken through; `aim` decides where it
-wants to look; `smooth` softens that decision; `confine` keeps it somewhere
-legal; `view` commits it. The camera's moments come after every actor moment
+wants to look; `steady` adjusts that decision; `smooth` decides how fast to get
+there; `confine` keeps it somewhere legal; `view` commits it. The camera's moments come after every actor moment
 because a camera following the player must read where the player ENDED the tick,
 not where they were before collision moved them.
 
@@ -275,6 +275,14 @@ Two steps in one moment are unordered, which is correct: two things confining
 the same camera commute. If two do not commute, that is evidence the list is
 missing a moment rather than evidence a step needs a finer way to say when it
 runs.
+
+`steady` is that having happened, and is the worked example. A deadzone and an
+easing rule both wanted `smooth`, and they do not commute: a deadzone measures
+how far the aim has moved from where the camera IS, so easing first shrinks that
+gap and the deadzone barely ever fires. The answer was not a finer ordering
+between them — it was noticing there are two acts here. Adjusting WHERE the
+camera is looking is not the same as deciding HOW FAST to follow it, and each is
+now a moment.
 
 #### What was tried instead
 
@@ -305,20 +313,31 @@ looks reasonable until you try it:
 
 #### The rules this gives
 
-Four, none of which names another's step:
+Five, none of which names another's step:
 
-| rule (trait)                              | moment    | what it does                                       |
-| ----------------------------------------- | --------- | -------------------------------------------------- |
-| `Camera` (`Aimed`)                        | `view`    | moves the camera to its goal                       |
-| `Camera Follow` (`Follows`)               | `aim`     | puts the goal where an actor is                    |
-| `Camera Ease` (`Eases`)                   | `smooth`  | `goal = position + (goal - position) x smoothness` |
-| `Camera Confined` (`Confined to the Map`) | `confine` | clamps the goal so the view stays in the map       |
+| rule (trait)                              | moment    | what it does                                             |
+| ----------------------------------------- | --------- | -------------------------------------------------------- |
+| `Camera` (`Aimed`)                        | `view`    | moves the camera to its goal                             |
+| `Camera Follow` (`Follows`)               | `aim`     | puts the goal where an actor is                          |
+| `Camera Deadzone` (`Has a Deadzone`)      | `steady`  | holds the goal still while the target moves inside a box |
+| `Camera Ease` (`Eases`)                   | `smooth`  | travels part of the way to the goal, per frame time      |
+| `Camera Confined` (`Confined to the Map`) | `confine` | clamps the goal so the view stays in the map             |
 
 `Camera Follow` guards its read: an `actors` property starts EMPTY, and a value
 read of several takes the first, so a camera that has elected the trait and not
 yet been given an actor would read a position off nothing. Doing nothing is the
 right answer rather than aiming somewhere by default — the goal persists, so an
 unaimed camera holds the view where it is.
+
+`Camera Deadzone` trails its target by the slack once the target leaves the box,
+rather than snapping to it — so the subject comes to rest on the edge it left,
+and the next frame's decision starts from there instead of recentring.
+
+`Camera Ease` travels a fraction that depends on the FRAME TIME:
+`1 - (1 - smoothness) ^ (seconds x 60)`. Moving `smoothness` of the way each
+frame is the obvious form and eases twice as fast at 120fps as at 60. A power
+rather than a multiply because easing compounds — two frames at 120 have to land
+where one at 60 does.
 
 `Camera Confined` reads the bounds rather than restating them (`map size`,
 `view size`). A camera's position is the middle of the view, so keeping it half
