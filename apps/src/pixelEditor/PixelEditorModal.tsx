@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
@@ -40,10 +41,14 @@ const MAX_CSS_WIDTH_PX = 900;
 
 // Transparency checkerboard: cell size in display px outside pixel mode, the
 // smallest legible cell in pixel mode (art-pixel cells are grouped up to it),
-// and the tint drawn over the white base.
+// and per-theme base/tint pairs (a white base reads best on a light panel, a
+// panel-colored base on a dark one — the image dialog uses the same pairs).
 const CHECKER_CELL_PX = 16;
 const MIN_CHECKER_CELL_PX = 4;
-const CHECKER_COLOR = 'rgb(128 128 128 / 16%)';
+const CHECKER_COLORS = {
+  light: {base: '#ffffff', tint: 'rgb(128 128 128 / 16%)'},
+  dark: {base: '#333a47', tint: 'rgb(128 128 128 / 22%)'},
+};
 
 // Dark navy ink.
 const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
@@ -102,6 +107,10 @@ interface PixelEditorModalProps {
   knownPixelGrid?: number;
   // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
   initialRecentColors?: RGBA[];
+  // Fires when the editor first renders content (the image loaded or
+  // failed). Until then the modal renders nothing; a caller swapping
+  // another dialog for this one can wait for it to avoid a scrim gap.
+  onReady?: () => void;
   onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
   onCancel: () => void;
 }
@@ -120,9 +129,16 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   imageUrl,
   knownPixelGrid,
   initialRecentColors,
+  onReady,
   onSave,
   onCancel,
 }) => {
+  const {theme} = useTheme();
+  const themeMode = theme === 'Dark' ? 'dark' : 'light';
+  // A ref so repaint (a stable callback) always draws the current theme's
+  // checkerboard.
+  const themeModeRef = useRef<'light' | 'dark'>(themeMode);
+  themeModeRef.current = themeMode;
   const [tool, setTool] = useState<PixelTool>('pen');
   // The last non-eyedropper tool, so the eyedropper returns you to what you
   // were using rather than always the pen. Tracked during render: whenever
@@ -135,6 +151,14 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   const [color, setColor] = useState<RGBA>(DEFAULT_COLOR);
   const [loaded, setLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
+  // See the onReady prop; by ref so a changing identity can't re-fire it.
+  const onReadyRef = useRef(onReady);
+  onReadyRef.current = onReady;
+  useEffect(() => {
+    if (loaded || loadError) {
+      onReadyRef.current?.();
+    }
+  }, [loaded, loadError]);
   // Editing at the image's logical resolution (see knownPixelGrid).
   const [pixelMode, setPixelMode] = useState(false);
   // Mirror for the stable repaint callback (which runs on every stroke).
@@ -283,13 +307,14 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       return;
     }
     ctx.imageSmoothingEnabled = false;
-    ctx.fillStyle = '#ffffff';
+    const checker = CHECKER_COLORS[themeModeRef.current];
+    ctx.fillStyle = checker.base;
     ctx.fillRect(0, 0, display.width, display.height);
     const scale = scaleRef.current;
     const cell = pixelModeRef.current
       ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
       : CHECKER_CELL_PX;
-    ctx.fillStyle = CHECKER_COLOR;
+    ctx.fillStyle = checker.tint;
     for (let y = 0; y * cell < display.height; y++) {
       for (let x = y % 2; x * cell < display.width; x += 2) {
         ctx.fillRect(x * cell, y * cell, cell, cell);
@@ -300,6 +325,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
     }
   }, []);
+
+  // The checkerboard is baked into the canvas; redraw it if the page theme
+  // flips while the editor is open.
+  useEffect(() => {
+    repaint();
+  }, [repaint, themeMode]);
 
   // Abandon any in-progress stroke or shape drag. Losing the window
   // mid-press swallows the pointerup (and pointercancel isn't reliably
@@ -1213,11 +1244,11 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   return (
     // display: contents host, so the editor's panel styles win over
     // CustomDialog's via parent-selector specificity (never load order).
-    <div className={moduleStyles.dialogHost}>
+    <div className={moduleStyles.dialogHost} data-theme={themeMode}>
       <CustomDialog
         aria-label={title}
         onClose={onCancel}
-        mode="dark"
+        mode={themeMode}
         className={moduleStyles.modal}
       >
         <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
