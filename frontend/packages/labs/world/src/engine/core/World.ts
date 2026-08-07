@@ -329,8 +329,16 @@ export class World {
    * subject, and every `.actor` that cared had to register on itself.
    */
   private readonly worldHandlers = new Map<GameEvent, WorldEventHandler[]>();
-  /** How big the world is; see `mapBounds`. One screen until a map is loaded. */
-  private bounds = {width: VIEWPORT_WIDTH, height: VIEWPORT_HEIGHT};
+  /**
+   * How big the world is; see `mapBounds`. One screen until a map is loaded.
+   *
+   * A VECTOR, not a `{width, height}`. The blocks that report it are typed
+   * `Vector`, and every block that takes one apart reads `.x`/`.y` — so a pair
+   * named the other way is a value whose own type is a lie about it, and the
+   * failure is silent: `x of ⟨map size⟩` is `undefined`, the arithmetic around
+   * it is NaN, and nothing throws.
+   */
+  private bounds = new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
   // Animations known to this world, by id — seeded from the active rules' stock
   // animations. The Animation rule's step and renderSnapshot resolve ids here.
   private readonly animationDefs = new Map<string, AnimationDef>();
@@ -688,9 +696,11 @@ export class World {
    *
    * The viewport's own size until a map says otherwise, so a world with no map
    * is one screen big rather than zero.
+   *
+   * Safe to hand out directly: a Vector is immutable.
    */
-  mapBounds(): {width: number; height: number} {
-    return {...this.bounds};
+  mapBounds(): Vector {
+    return this.bounds;
   }
 
   /**
@@ -700,8 +710,8 @@ export class World {
    * reads it the way it reads everything else about the world, and so making it
    * settable later changes nothing that asks.
    */
-  viewSize(): {width: number; height: number} {
-    return {width: VIEWPORT_WIDTH, height: VIEWPORT_HEIGHT};
+  viewSize(): Vector {
+    return new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
   }
 
   /**
@@ -715,10 +725,10 @@ export class World {
     if (!map.size || !map.tile) {
       return; // a synthesised map has no size; the world keeps the one it had
     }
-    this.bounds = {
-      width: Math.max(this.bounds.width, map.size.width * map.tile.width),
-      height: Math.max(this.bounds.height, map.size.height * map.tile.height),
-    };
+    this.bounds = new Vector(
+      Math.max(this.bounds.x, map.size.width * map.tile.width),
+      Math.max(this.bounds.y, map.size.height * map.tile.height),
+    );
   }
 
   /** Replace the pressed-key set (driver calls this each frame before `tick`). */
