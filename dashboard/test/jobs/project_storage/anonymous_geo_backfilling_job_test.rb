@@ -168,7 +168,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       let(:job_args) {{limit: 2}}
 
       it 'does not query for another batch' do
-        assert_queries 3, capture_filters: [/missing_project_storage_geos/] do
+        assert_queries 2, capture_filters: [/missing_project_storage_geos/] do
           perform_job
         end
       end

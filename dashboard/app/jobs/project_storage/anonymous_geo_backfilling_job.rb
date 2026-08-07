@@ -79,20 +79,9 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
     )
   end
 
-  private def unlocated_storages
-    ActiveRecord::Base.connected_to(role: :reporting) do
-      ProjectStorage.
-        where(user_id: nil).
-        # LEFT OUTER JOIN project_storage_geos geo ON geo.storage_id = user_project_storage_ids.id WHERE geo.id IS NULL
-        where.missing(:geo).
-        # WHERE EXISTS (SELECT projects.* FROM projects WHERE projects.storage_id = user_project_storage_ids.id)
-        where(Project.where(Project.arel_table[:storage_id].eq(ProjectStorage.arel_table[:id])).arel.exists)
-    end
-  end
-
   private def missing_project_storage_geos(from_storage_id: nil, limit: BATCH_SIZE)
     ActiveRecord::Base.connected_to(role: :reporting) do
-      unlocated_storages_batch = unlocated_storages.order(:id).limit(limit)
+      unlocated_storages_batch = ProjectStorage.anonymous.without_geo.with_projects.order(:id).limit(limit)
 
       if from_storage_id
         unlocated_storages_batch = unlocated_storages_batch.
