@@ -1,6 +1,7 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
 import {DemoSectionCardComponent} from '../../components/demo-section-card';
+import {LogoTransitionComponent} from '../../components/logo-transition';
 import {BasePage} from '../base-page';
 
 /** Page object for the teacher dashboard home (/teacher_dashboard/home). */
@@ -14,11 +15,15 @@ export class TeacherDashboardPage extends BasePage {
   /** Practice-section card; only rendered for teachers with zero sections. */
   readonly demoSectionCard: DemoSectionCardComponent;
 
+  /** First-run logo animation; owns the header logo until it settles. */
+  readonly logoTransition: LogoTransitionComponent;
+
   constructor(page: Page) {
     super(page);
     this.homeHeader = page.locator('#teacher-home-header');
     this.promotionsPanel = page.locator('#ui-test-teacher-promotions');
     this.demoSectionCard = new DemoSectionCardComponent(page);
+    this.logoTransition = new LogoTransitionComponent(page);
   }
 
   /** Navigate to /teacher_dashboard/home, optionally enabling an experiment. */
