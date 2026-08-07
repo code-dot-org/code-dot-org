@@ -289,44 +289,6 @@
             "dragging": false
           },
           {
-            "id": "2736cb15-e01f-4f36-a8da-a29b6215b5bf",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/f6c4073b-e30b-4b68-bfb0-3c4e86404b1b.png",
-              "altText": "project-icon-1"
-            },
-            "position": {
-              "x": -1021.9176641992466,
-              "y": -721.7338277796623
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "d1566e32-013b-4f73-81ac-2a5dcc1d787b",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/c17b4c9d-8de2-4a20-a1a2-72f6cce54829.png",
-              "altText": "project-icon-2"
-            },
-            "position": {
-              "x": -866.5682848941434,
-              "y": -588.0856182680749
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
             "id": "2fe2a0bb-af46-426d-8d67-7c77dc32a31b",
             "type": "image",
             "data": {
@@ -335,89 +297,8 @@
               "locked": false
             },
             "position": {
-              "x": -917.2445423217378,
-              "y": -721.9647690317029
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "a7cc6ee2-d287-43aa-9a8f-a6ed7707e6f4",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/b78712a4-8bf6-4eed-a876-a413eccc4f21.png",
-              "altText": "project-icon-4"
-            },
-            "position": {
-              "x": -974.9130111919826,
-              "y": -586.7534993116196
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "ce7aba7d-224f-4ce6-86b9-c8059e05cc76",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#fcfcfc",
-              "locked": true,
-              "strokeColor": "var(--sketchlab-stroke-yellow)",
-              "rotation": 0
-            },
-            "position": {
-              "x": -1008.0542136784932,
-              "y": -738.7720005390897
-            },
-            "width": 383.1308203129962,
-            "height": 295.5843756485265,
-            "measured": {
-              "width": 383,
-              "height": 296
-            },
-            "dragging": false,
-            "zIndex": -5
-          },
-          {
-            "id": "5b334a5a-00d6-4b53-b88a-4f5d6233eede",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/ea8297f9-33e2-40c5-abdd-8ba07a7bf9f4.png",
-              "altText": "project-icon-5"
-            },
-            "position": {
-              "x": -763.0385642548509,
-              "y": -586.1949651471451
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "a0dd5512-77c0-4e60-9d71-6943392b3f6f",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/1e009a9e-e9d9-4b00-af17-fa90554eb895.png",
-              "altText": "project-icon-6"
-            },
-            "position": {
-              "x": -811.0780666885905,
-              "y": -725.0548325504022
+              "x": -1167.951045368587,
+              "y": -386.8097596953884
             },
             "width": 160,
             "height": 120,
@@ -475,11 +356,12 @@
             "id": "bc722380-3868-456f-9c43-5bc5d83a9e70",
             "type": "text",
             "data": {
-              "text": "Invent a product that addresses a challenge within an activity you already participate in. Build a chatbot capable of answering questions about your product, then launch it with a social media post.\n\nYour chatbot may only reference information that you provide to it. If it cannot locate an answer within your materials, it must decline to respond.\n\nChoose one of the pointer icons above and move it along the board as you build out your project",
+              "text": "Invent a product that addresses a challenge within an activity you already participate in. Build a chatbot capable of answering questions about your product, then launch it with a social media post.\n\nUse the accompanying Activity Guide to walk you through the steps of the process.\n\nAs you make progress, move the pointer icon along the board to serve as a digital bookmark of where your team is in the process.",
               "strokeColor": "transparent",
               "fontFamily": "sans",
               "fontSize": "extra-large",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": -550.4561886859427,
@@ -3176,14 +3058,14 @@
           }
         ],
         "viewport": {
-          "x": 966.4942975262729,
-          "y": 319.5760447937026,
-          "zoom": 0.12500000000000014
+          "x": 526.7545952694984,
+          "y": 543.0484601868433,
+          "zoom": 0.3789291416276003
         }
       }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28T19:02:19.373+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-07-28 19:02:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:18:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:43:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:56:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:13:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:42:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:15:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:29:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:34:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:38:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:53:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:57:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:18:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:46:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:47:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:48:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:50:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:01:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:10:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:30:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 20:14:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:33:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:54:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:45:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 20:55:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 21:31:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28T19:02:19.373+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-07-28 19:02:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:18:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:43:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:56:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:13:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:42:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:15:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:29:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:34:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:38:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:53:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:57:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:18:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:46:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:47:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:48:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:50:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:01:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:10:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:30:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 20:14:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:33:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:54:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:45:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 20:55:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 21:31:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:35:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:38:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:39:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:40:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
