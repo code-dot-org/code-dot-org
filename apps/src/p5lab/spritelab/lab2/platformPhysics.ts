@@ -76,6 +76,23 @@ function wallHalf(wall: PhysicsBox): number {
   return (Math.max(wall.width, wall.height) * wall.scale) / 2;
 }
 
+// The feet-anchored solid body of a player sprite (see PLAYER_BODY_SCALE):
+// `drop` is the body center's offset below the image center.
+function playerBody(sprite: PhysicsSprite) {
+  const imgHalfW = (sprite.width * sprite.scale) / 2;
+  const imgHalfH = (sprite.height * sprite.scale) / 2;
+  const halfW = imgHalfW * PLAYER_BODY_SCALE;
+  const halfH = imgHalfH * PLAYER_BODY_SCALE;
+  return {imgHalfW, halfW, halfH, drop: imgHalfH - halfH};
+}
+
+function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {
+  return walls.map(wall => ({
+    ...wall,
+    position: {x: wall.position.x, y: view.height - wall.position.y},
+  }));
+}
+
 // Flip a sprite's vertical state across the view's horizontal midline (see
 // the negative-gravity branch below).
 function flipSpriteY(sprite: PhysicsSprite, view: View): void {
@@ -102,11 +119,7 @@ export function resolvePlatformPhysics(
       flipSpriteY(m.sprite, view);
       m.y = view.height - m.y;
     });
-    const flippedWalls = walls.map(wall => ({
-      ...wall,
-      position: {x: wall.position.x, y: view.height - wall.position.y},
-    }));
-    resolvePlatformPhysics(moved, flippedWalls, view, -gravity);
+    resolvePlatformPhysics(moved, flipWallsY(walls, view), view, -gravity);
     moved.forEach(m => {
       flipSpriteY(m.sprite, view);
       m.y = view.height - m.y;
@@ -120,13 +133,9 @@ export function resolvePlatformPhysics(
     halfH: wallHalf(wall),
   }));
   moved.forEach(({sprite, x: curX, y: curY}) => {
-    const imgHalfW = (sprite.width * sprite.scale) / 2;
-    const imgHalfH = (sprite.height * sprite.scale) / 2;
-    const halfW = imgHalfW * PLAYER_BODY_SCALE;
-    const halfH = imgHalfH * PLAYER_BODY_SCALE;
     // Resolution runs on the feet-anchored body box: y below is the BODY
     // center, `drop` below the sprite's image center.
-    const drop = imgHalfH - halfH;
+    const {imgHalfW, halfW, halfH, drop} = playerBody(sprite);
     const stored = sprite.__slab2Prev || {x: curX, y: curY};
     const prev = {x: stored.x, y: stored.y + drop};
     const dx = curX - prev.x;
@@ -286,17 +295,10 @@ export function isSupported(
       position: {x: sprite.position.x, y: view.height - sprite.position.y},
       velocity: {x: sprite.velocity.x, y: -sprite.velocity.y},
     };
-    const flippedWalls = walls.map(wall => ({
-      ...wall,
-      position: {x: wall.position.x, y: view.height - wall.position.y},
-    }));
-    return isSupported(flipped, flippedWalls, view, -gravity);
+    return isSupported(flipped, flipWallsY(walls, view), view, -gravity);
   }
-  const imgHalfW = (sprite.width * sprite.scale) / 2;
-  const imgHalfH = (sprite.height * sprite.scale) / 2;
-  const halfW = imgHalfW * PLAYER_BODY_SCALE;
-  const halfH = imgHalfH * PLAYER_BODY_SCALE;
-  const feet = sprite.position.y + (imgHalfH - halfH) + halfH;
+  const {halfW, halfH, drop} = playerBody(sprite);
+  const feet = sprite.position.y + drop + halfH;
   if (feet >= view.height - CONTACT_EPSILON) {
     return true;
   }

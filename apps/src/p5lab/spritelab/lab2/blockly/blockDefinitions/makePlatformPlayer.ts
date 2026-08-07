@@ -30,10 +30,11 @@ const generator: GeneratorFunction = block =>
 // its physics. Movement reads the sprite's own speed so "set speed" still
 // applies; the jump goes through platformJump, which checks footing and
 // jumps against gravity whichever way it points.
+const JUMP_SPEED = 10;
+
 const helperCode = [
   // Shared by every block that produces a platform player; guarded so
-  // several such blocks in one program don't stack duplicate handlers
-  // (which doubled movement per key).
+  // several such blocks in one program don't stack duplicate handlers.
   'var platformControlsWired = false;',
   'function wirePlatformControls() {',
   '  if (platformControlsWired) {',
@@ -47,7 +48,7 @@ const helperCode = [
   "    moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'East');",
   '  });',
   "  keyPressed('when', 'space', function () {",
-  '    platformJump(10);',
+  `    platformJump(${JUMP_SPEED});`,
   '  });',
   '}',
   'function makePlatformPlayer(animation, layout) {',

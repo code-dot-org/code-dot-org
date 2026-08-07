@@ -21,11 +21,12 @@ const GRID_CONFIG = {
 // constructor's TS type doesn't admit null but the plugin handles it.
 const EMPTY_GRID = null as unknown as number[][];
 
-// Single-select: one position, so a new mark replaces the old one. Keep the
-// mark this edit ADDED (the editor's intermediate value briefly holds the
-// old mark and the clicked cell together; keeping the first in scan order
-// instead made cells below the selection unselectable). Validators run with
-// the field as `this`.
+/**
+ * Single-select: one position, so a new mark replaces the old one. The
+ * editor's intermediate value briefly holds the old mark and the clicked
+ * cell together, so keep the mark this edit added — comparing against the
+ * previous value (validators run with the field as `this`).
+ */
 export function singleCellValidator(
   this: BlocklyCore.Field | void,
   newValue: number[][]
