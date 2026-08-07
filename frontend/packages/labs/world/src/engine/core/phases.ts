@@ -25,6 +25,12 @@
 // moment is better than leaving a gap for it. A named moment is in the dropdown
 // where a learner finds it; a gap is invisible until you already know you need
 // it. So when something does not fit, the answer is another entry here.
+//
+// `steady` is that having happened. A deadzone and an easing rule both wanted
+// `smooth`, and they do not commute: a deadzone reads how far the aim has moved
+// from where the camera IS, so easing first shrinks that gap and the deadzone
+// almost never fires. Two moments, because there were two — adjusting the aim
+// is not the same act as deciding how fast to follow it.
 
 /**
  * Which subject a phase is about, and so which steps may name it.
@@ -118,10 +124,18 @@ export const PHASES: readonly PhaseDef[] = [
     summary: 'Choose where the camera wants to look.',
   },
   {
+    id: 'steady',
+    name: 'steady the aim',
+    subject: 'camera',
+    summary:
+      'Adjust WHERE it is looking before deciding how fast to get there — a ' +
+      'deadzone the subject may move inside, or leading where it is going.',
+  },
+  {
     id: 'smooth',
     name: 'smooth',
     subject: 'camera',
-    summary: 'Soften that choice — easing, a deadzone, looking ahead.',
+    summary: 'Soften the approach — how much of the way to travel this frame.',
   },
   {
     id: 'confine',

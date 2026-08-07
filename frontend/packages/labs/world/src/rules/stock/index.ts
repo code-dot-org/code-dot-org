@@ -13,6 +13,7 @@
 import {arrowsRule} from './arrows';
 import {cameraRule} from './camera';
 import {cameraConfinedRule} from './cameraConfined';
+import {cameraDeadzoneRule} from './cameraDeadzone';
 import {cameraEaseRule} from './cameraEase';
 import {cameraFollowRule} from './cameraFollow';
 import {collisionsRule} from './collisions';
@@ -152,6 +153,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: cameraEaseRule,
   },
   {
+    id: 'cameraDeadzone',
+    name: 'Camera Deadzone',
+    ability: 'Ignores Small Movements',
+    description:
+      'Holds a camera still while what it follows moves about inside a box, so the view only travels when the player really goes somewhere. Needs Camera.',
+    provides: ['Has a Deadzone'],
+    contents: cameraDeadzoneRule,
+  },
+  {
     id: 'cameraConfined',
     name: 'Camera Confined',
     ability: 'Keeps the View in the Map',
@@ -184,4 +194,5 @@ export {
   cameraFollowRule,
   cameraEaseRule,
   cameraConfinedRule,
+  cameraDeadzoneRule,
 };
