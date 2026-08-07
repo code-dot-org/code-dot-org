@@ -15,15 +15,25 @@ import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AbuseConstants,
+  SafeAndSupportedImageTypes,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
+import {
+  clearFlaggedFilename,
+  getFlaggedFilename,
+  setFlaggedFilename,
+} from '../assets/flaggedAssetMetadata';
 
 import AddAssetButtonRow from './AddAssetButtonRow';
 import AssetRow from './AssetRow';
 import AudioRecorder from './AudioRecorder';
 import {RecordingFileType} from './recorders';
+
+const ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 export const AudioErrorType = {
   NONE: 'none',
@@ -91,6 +101,9 @@ export default class AssetManager extends React.Component {
       showFlaggedModal: false,
       flaggedModalError: null,
       uploadsEnabled: props.uploadsEnabled,
+      // True while an accepted flagged upload is in flight; onUploadDone writes
+      // the stored filename to assets metadata.
+      pendingFlaggedUpload: false,
     };
   }
 
@@ -217,12 +230,19 @@ export default class AssetManager extends React.Component {
       {'Content-Type': 'application/json; charset=UTF-8'}
     )
       .then(response => response.json())
-      .then(() => {
+      .then(responseData => {
+        if (
+          typeof responseData?.abuse_score === 'number' &&
+          dashboard.project?.setAbuseScore
+        ) {
+          dashboard.project.setAbuseScore(responseData.abuse_score);
+        }
         this.setState({
           showFlaggedModal: false,
           pendingUploadData: null,
           flaggedModalError: null,
           uploadsEnabled: false,
+          pendingFlaggedUpload: true,
           statusMessage: 'Uploading...',
         });
         pendingUploadData.submit();
@@ -267,6 +287,15 @@ export default class AssetManager extends React.Component {
       newState.assets = assetListStore.list(this.props.allowedExtensions);
     }
 
+    if (this.state.pendingFlaggedUpload) {
+      newState.pendingFlaggedUpload = false;
+      setFlaggedFilename(this.props.projectId, result.filename).catch(err => {
+        MetricsReporter.logError(
+          'Error writing flagged asset metadata: ' + err
+        );
+      });
+    }
+
     this.setState(newState);
   };
 
@@ -280,7 +309,7 @@ export default class AssetManager extends React.Component {
     this.setState({recordingAudio: true});
   };
 
-  deleteAssetRow = name => {
+  deleteAssetRow = async name => {
     assetListStore.remove(name);
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
@@ -290,6 +319,45 @@ export default class AssetManager extends React.Component {
       assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: `File "${name}" successfully deleted!`,
     });
+
+    await this.unblockIfFlaggedAssetDeleted(name);
+  };
+
+  unblockIfFlaggedAssetDeleted = async name => {
+    const channelId = this.props.projectId;
+    if (!channelId) {
+      return;
+    }
+
+    try {
+      const flaggedFilename = await getFlaggedFilename(channelId);
+      if (flaggedFilename !== name) {
+        return;
+      }
+
+      await clearFlaggedFilename(channelId);
+      const response = await HttpClient.post(
+        `/v3/channels/${channelId}/abuse/image`,
+        JSON.stringify({type: 'unflag'}),
+        true,
+        {'Content-Type': 'application/json; charset=UTF-8'}
+      );
+      const responseData = await response.json();
+      const abuseScore = responseData?.abuse_score;
+      if (typeof abuseScore === 'number' && dashboard.project?.setAbuseScore) {
+        dashboard.project.setAbuseScore(abuseScore);
+      }
+      if (typeof abuseScore === 'number' && abuseScore < ABUSE_THRESHOLD) {
+        this.setState({
+          uploadsEnabled: true,
+          statusMessage: `File "${name}" successfully deleted!`,
+        });
+      }
+    } catch (err) {
+      MetricsReporter.logError(
+        'Error unflagging project after deleting flagged asset: ' + err
+      );
+    }
   };
 
   deleteStarterAssetRow = name => {
