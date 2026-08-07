@@ -310,3 +310,29 @@ describe('platformPhysics with undersized block art', () => {
     expect(feet(player)).toBeCloseTo(250, 6);
   });
 });
+
+// The production warp: real sprites carry trimmed art dimensions and
+// fractional scales (a 288x376 costume at scale 50/376, 455x450 blocks at
+// 50/455), whose flush-contact arithmetic leaves ±1e-14 residues. The
+// push-out's zero test read those as overlap and corner-pushed a centered
+// landing sideways (175 -> 184.68 via a two-wall ping-pong).
+describe('platformPhysics with trimmed-art dimensions', () => {
+  it('lands a centered drop without sideways displacement', () => {
+    const walls: PhysicsBox[] = [2, 3, 4, 5].map(col => ({
+      position: {x: col * 50 + 25, y: 275},
+      width: 455,
+      height: 450,
+      scale: 0.5 * (100 / 455),
+    }));
+    const player: PhysicsSprite = {
+      position: {x: 175, y: 75},
+      velocity: {x: 0, y: 0},
+      width: 288,
+      height: 376,
+      scale: 0.5 * (100 / 376),
+    };
+    const xs = new Set<number>();
+    run(player, walls, 40, 0, s => xs.add(s.position.x));
+    expect([...xs]).toEqual([175]);
+  });
+});
