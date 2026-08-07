@@ -187,11 +187,23 @@ describe('how big the world is', () => {
     expect(builder().mapBounds()).toEqual(builder().viewSize());
   });
 
+  it('is a VECTOR, because that is what its block reports', () => {
+    // `map size` and `view size` are typed `Vector`, and every block that takes
+    // one apart reads `.x`/`.y`. Reporting `{width, height}` made `x of ⟨map
+    // size⟩` undefined and everything downstream NaN, with nothing thrown —
+    // which is how the camera's clamp broke.
+    const bounds = builder().mapBounds();
+
+    expect(bounds).toBeInstanceOf(Vector);
+    expect(bounds.x).toBe(builder().viewSize().x);
+    expect((bounds as unknown as {width?: number}).width).toBeUndefined();
+  });
+
   it('is the map’s once one is', () => {
     const made = builder();
     made.loadMap(map(30));
 
-    expect(made.mapBounds()).toEqual({width: 960, height: 960});
+    expect(made.mapBounds()).toEqual(new Vector(960, 960));
   });
 
   it('is the LARGEST map, not the last', () => {
@@ -202,7 +214,7 @@ describe('how big the world is', () => {
     made.loadMap(map(30));
     made.loadMap(map(10));
 
-    expect(made.mapBounds()).toEqual({width: 960, height: 960});
+    expect(made.mapBounds()).toEqual(new Vector(960, 960));
   });
 
   it('ignores a map that carries no size', () => {
@@ -212,6 +224,6 @@ describe('how big the world is', () => {
     made.loadMap(map(30));
     made.loadMap({actors: []});
 
-    expect(made.mapBounds()).toEqual({width: 960, height: 960});
+    expect(made.mapBounds()).toEqual(new Vector(960, 960));
   });
 });

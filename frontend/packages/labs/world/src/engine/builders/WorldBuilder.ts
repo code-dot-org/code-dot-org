@@ -416,12 +416,12 @@ export class WorldBuilder {
    * before any map is loaded it is one screen, which is the truth about a world
    * with nothing placed in it.
    */
-  mapBounds(): {width: number; height: number} {
+  mapBounds(): Vector {
     return this.getWorld().mapBounds();
   }
 
   /** How big the view is. See {@link World.viewSize}. */
-  viewSize(): {width: number; height: number} {
+  viewSize(): Vector {
     return this.getWorld().viewSize();
   }
 
