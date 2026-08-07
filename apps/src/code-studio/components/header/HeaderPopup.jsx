@@ -23,6 +23,10 @@ export default class HeaderPopup extends Component {
     open: false,
   };
 
+  moreButtonRef = React.createRef();
+
+  lessButtonRef = React.createRef();
+
   shouldComponentUpdate(nextProps, nextState) {
     return (
       this.props.windowHeight !== nextProps.windowHeight ||
@@ -33,7 +37,9 @@ export default class HeaderPopup extends Component {
 
   handleClickOpen = e => {
     e.stopPropagation();
-    this.setState({open: true});
+    this.setState({open: true}, () => {
+      this.lessButtonRef.current?.focus();
+    });
 
     progress.retrieveProgress(
       this.props.scriptName,
@@ -44,8 +50,12 @@ export default class HeaderPopup extends Component {
     $(document).on('click', this.handleClickDocument);
   };
 
-  handleClickClose = () => {
-    this.setState({open: false});
+  handleClickClose = restoreFocus => {
+    this.setState({open: false}, () => {
+      if (restoreFocus) {
+        this.moreButtonRef.current?.focus();
+      }
+    });
 
     $(document).off('click', this.handleClickDocument);
   };
@@ -74,8 +84,12 @@ export default class HeaderPopup extends Component {
             color="tertiary"
             size="small"
             aria-label={i18n.moreAllCaps()}
+            ref={this.moreButtonRef}
           >
-            <FontAwesomeV6Icon iconName="down-from-dotted-line" />
+            <FontAwesomeV6Icon
+              iconName="down-from-dotted-line"
+              aria-hidden="true"
+            />
           </MuiIconButton>
         )}
 
@@ -84,13 +98,17 @@ export default class HeaderPopup extends Component {
             <MuiIconButton
               type="button"
               className={`no-mc ${styles.headerItem}`}
-              onClick={this.handleClickClose}
+              onClick={() => this.handleClickClose(true)}
               variant="outlined"
               color="tertiary"
               size="small"
               aria-label={i18n.lessAllCaps()}
+              ref={this.lessButtonRef}
             >
-              <FontAwesomeV6Icon iconName="up-from-dotted-line" />
+              <FontAwesomeV6Icon
+                iconName="up-from-dotted-line"
+                aria-hidden="true"
+              />
             </MuiIconButton>
 
             <div className="header_popup" ref="headerPopup">
