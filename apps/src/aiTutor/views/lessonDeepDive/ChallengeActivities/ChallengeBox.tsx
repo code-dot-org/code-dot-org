@@ -110,6 +110,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
             submitted={submitted}
             submitCallback={handleSubmittedChange}
             challenge={challenge}
+            lessonId={lessonId}
           />
         )}
         {showConfirmation && (
