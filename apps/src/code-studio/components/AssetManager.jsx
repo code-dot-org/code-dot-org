@@ -102,8 +102,8 @@ export default class AssetManager extends React.Component {
       flaggedModalError: null,
       uploadsEnabled: props.uploadsEnabled,
     };
-    // Synced flag (not React state): set before submit() so a fast onUploadDone
-    // still sees it and writes metadata. setState would race.
+    // Synced flag: set before submit() so a fast onUploadDone
+    // still sees it and writes metadata.
     this.pendingFlaggedUpload = false;
   }
 
