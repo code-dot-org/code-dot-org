@@ -21,6 +21,9 @@
     "start_sources": {
       "animations": {
         "orderedKeys": [
+          "30bb9920-47ac-460e-9f4f-86dfccc8a732",
+          "c170e851-0dae-4c93-8e85-e43bd2959bae",
+          "8ad098d9-08cb-4695-84e4-540af4ee8c08",
           "58d09234-52ad-4168-ace1-b0c534e672d9",
           "2cab230d-56c7-427d-b0b0-99e9bcf1764f",
           "2ee0fe12-cef2-41f8-b4f6-9678a6116383",
@@ -29,6 +32,54 @@
           "d83b0121-f869-43e5-8fd9-177b88425c6c"
         ],
         "propsByKey": {
+          "30bb9920-47ac-460e-9f4f-86dfccc8a732": {
+            "name": "prowling_cat",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-2/uuid/27a77f51-14cb-480e-be93-a5e7e80ce223.png",
+            "frameSize": {
+              "x": 510,
+              "y": 512
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+
+            ],
+            "pixelGridSize": 2
+          },
+          "c170e851-0dae-4c93-8e85-e43bd2959bae": {
+            "name": "sky",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-2/uuid/f9bdc01f-bd46-4fec-979a-d59134d9b1af.png",
+            "frameSize": {
+              "x": 512,
+              "y": 520
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+              "backgrounds"
+            ],
+            "pixelGridSize": 8
+          },
+          "8ad098d9-08cb-4695-84e4-540af4ee8c08": {
+            "name": "hero_dog",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-2/uuid/81705438-5e1f-4b6c-b6ed-c5319a40aa2d.png",
+            "frameSize": {
+              "x": 508,
+              "y": 508
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+
+            ],
+            "pixelGridSize": 2,
+            "recentColors": [
+
+            ]
+          },
           "58d09234-52ad-4168-ace1-b0c534e672d9": {
             "name": "platform",
             "sourceUrl": "/level_starter_assets/HoAI-tl-test-2/uuid/51e4c1e7-8110-4230-8107-dffe87012442.png",
@@ -133,6 +184,12 @@
           "id": "scene-1",
           "name": "Scene 1",
           "source": {
+            "variables": [
+              {
+                "name": "counter",
+                "id": "$tDQf~y{*96/e+F@=m!S"
+              }
+            ],
             "blocks": {
               "languageVersion": 0,
               "blocks": [
@@ -144,20 +201,147 @@
                   "deletable": false,
                   "movable": false,
                   "extraState": {
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackgroundImageAs",
+                      "id": "rFmi7b|(1agg0B_xq,7p",
+                      "fields": {
+                        "IMG": "<field name=\"IMG\">\"sky\"</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "gamelab_showVariable",
+                          "id": ":V9OJY9*#_#{xw=SCNHZ",
+                          "fields": {
+                            "VAR": {
+                              "id": "$tDQf~y{*96/e+F@=m!S"
+                            }
+                          },
+                          "inputs": {
+                            "LOCATION": {
+                              "block": {
+                                "type": "gamelab_location_picker",
+                                "id": "xIwQFfUlUIY68!MS9/Sr",
+                                "fields": {
+                                  "LOCATION": "{\"x\":13,\"y\":14}"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "spritelab2_makePlatformPlayer",
+                              "id": "toolbox_makePlatformPlayer",
+                              "fields": {
+                                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"hero_dog\"</field>",
+                                "GRID": "<field name=\"GRID\">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "gamelab_makeNewSpriteAnon",
+                                  "id": "szn(fkTvbZ6MISe3_T]0",
+                                  "fields": {
+                                    "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"key\"</field>"
+                                  },
+                                  "inputs": {
+                                    "LOCATION": {
+                                      "block": {
+                                        "type": "gamelab_location_picker",
+                                        "id": "2+k[f^8!viskKHu1Tr:k",
+                                        "fields": {
+                                          "LOCATION": "{\"x\":200,\"y\":200}"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "gamelab_addBehaviorSimple",
+                                      "id": "Q#;cR(giaJy=R!{]Q]N.",
+                                      "inputs": {
+                                        "SPRITE": {
+                                          "shadow": {
+                                            "type": "gamelab_allSpritesWithAnimation",
+                                            "id": "HEHm:z4nRw(7u)q}/cK!",
+                                            "fields": {
+                                              "ANIMATION": "<field name=\"ANIMATION\">\"key\"</field>"
+                                            }
+                                          }
+                                        },
+                                        "BEHAVIOR": {
+                                          "block": {
+                                            "type": "spritelab2_patrollingLeftRight",
+                                            "id": "|H/iY#r`6dSpOpLpT2Ib"
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "gamelab_makeNewSpriteAnon",
+                                          "id": "oKtiW_H]bx|)LL6:LE0i",
+                                          "fields": {
+                                            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"prowling_cat\"</field>"
+                                          },
+                                          "inputs": {
+                                            "LOCATION": {
+                                              "block": {
+                                                "type": "gamelab_location_picker",
+                                                "id": ")dk^wCik!WotIM:9^Q+H",
+                                                "fields": {
+                                                  "LOCATION": "{\"x\":360,\"y\":382}"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "gamelab_addBehaviorSimple",
+                                              "id": "fNS@Ic=%CD0WiwRjxB0W",
+                                              "inputs": {
+                                                "SPRITE": {
+                                                  "shadow": {
+                                                    "type": "gamelab_allSpritesWithAnimation",
+                                                    "id": "=Bx25~uc$fou-QlF8$gR",
+                                                    "fields": {
+                                                      "ANIMATION": "<field name=\"ANIMATION\">\"prowling_cat\"</field>"
+                                                    }
+                                                  }
+                                                },
+                                                "BEHAVIOR": {
+                                                  "block": {
+                                                    "type": "spritelab2_patrollingLeftRight",
+                                                    "id": "6.JS^PdmolFHJ|O|I5H7"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 },
                 {
                   "type": "gamelab_whenTouching",
                   "id": "block-4",
-                  "x": 20,
-                  "y": 331,
+                  "x": 44,
+                  "y": 577,
                   "inputs": {
                     "SPRITE1": {
                       "block": {
                         "type": "gamelab_allSpritesWithAnimation",
                         "id": "block-5",
                         "fields": {
-                          "ANIMATION": "<field name=\"ANIMATION\">\"Cat\"</field>"
+                          "ANIMATION": "<field name=\"ANIMATION\">\"hero_dog\"</field>"
                         }
                       }
                     },
@@ -170,7 +354,102 @@
                         }
                       }
                     }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "math_change",
+                      "id": "}{5BPKuqkbt:I-A]f6*7",
+                      "fields": {
+                        "VAR": {
+                          "id": "$tDQf~y{*96/e+F@=m!S"
+                        }
+                      },
+                      "inputs": {
+                        "DELTA": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "?[F](,1aHNlAk5]^uVGx",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
+                },
+                {
+                  "type": "gamelab_checkTouching",
+                  "id": "jj_x%;i5|@C]n4vK,.aC",
+                  "x": 49,
+                  "y": 729,
+                  "extraState": {
+                    "useDefaultIcon": true
+                  },
+                  "fields": {
+                    "button_gamelab_checkTouching": "",
+                    "CONDITION": "<field name=\"CONDITION\">\"when\"</field>"
+                  },
+                  "inputs": {
+                    "SPRITE1": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation",
+                        "id": "d0tJrq@$+2=,:I|+%NY4",
+                        "fields": {
+                          "ANIMATION": "<field name=\"ANIMATION\">\"hero_dog\"</field>"
+                        }
+                      }
+                    },
+                    "SPRITE2": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation",
+                        "id": "!aGtH%Phosp/.pL^zpiZ",
+                        "fields": {
+                          "ANIMATION": "<field name=\"ANIMATION\">\"prowling_cat\"</field>"
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "math_change",
+                      "id": "^nkHb3E-1sF,SXY}v[v-",
+                      "fields": {
+                        "VAR": {
+                          "id": "$tDQf~y{*96/e+F@=m!S"
+                        }
+                      },
+                      "inputs": {
+                        "DELTA": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "re`0d/`m}ci-NuRX+qP5",
+                            "fields": {
+                              "NUM": -1
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenKey",
+                  "id": "toolbox_gamelab_whenKey",
+                  "x": 430,
+                  "y": 47,
+                  "fields": {
+                    "KEY": "<field name=\"KEY\">\"space\"</field>"
+                  }
+                },
+                {
+                  "type": "gamelab_isTouchingEdges",
+                  "id": "jU[b^7z!Ox7q3qGz-1y7",
+                  "x": 126,
+                  "y": 507,
+                  "disabledReasons": [
+                    "ORPHANED"
+                  ]
                 }
               ]
             }
@@ -204,7 +483,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-05T20:39:41.803+00:00\",\"changed\":[\"cloned from \\\"HoAI26-sandbox-2\\\"\"],\"cloned_from\":\"HoAI26-sandbox-2\"},{\"changed_at\":\"2026-08-05 20:56:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-08-05 21:04:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-08-05 21:04:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-05T20:39:41.803+00:00\",\"changed\":[\"cloned from \\\"HoAI26-sandbox-2\\\"\"],\"cloned_from\":\"HoAI26-sandbox-2\"},{\"changed_at\":\"2026-08-05 20:56:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-08-05 21:04:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-08-05 21:04:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-08-06 16:13:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 16:21:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 16:31:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>

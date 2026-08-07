@@ -133,6 +133,12 @@
           "id": "scene-1",
           "name": "Scene 1",
           "source": {
+            "variables": [
+              {
+                "name": "???",
+                "id": "1*o3l{+}R}iNSYVARcd?"
+              }
+            ],
             "blocks": {
               "languageVersion": 0,
               "blocks": [
@@ -144,29 +150,195 @@
                   "deletable": false,
                   "movable": false,
                   "extraState": {
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackgroundImageAs",
+                      "id": "block-1",
+                      "fields": {
+                        "IMG": "<field name=\"IMG\">\"House\"</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_makePlatformBlocks",
+                          "id": "block-2",
+                          "fields": {
+                            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"platform\"</field>",
+                            "GRID": "<field name=\"GRID\">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,1,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,0,0,0,0,0],[0,0,0,0,0,0,1,1],[1,1,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "gamelab_makeNewSpriteAnon",
+                              "id": "szn(fkTvbZ6MISe3_T]0",
+                              "fields": {
+                                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"key\"</field>"
+                              },
+                              "inputs": {
+                                "LOCATION": {
+                                  "block": {
+                                    "type": "gamelab_location_picker",
+                                    "id": "2+k[f^8!viskKHu1Tr:k",
+                                    "fields": {
+                                      "LOCATION": "{\"x\":366,\"y\":320}"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "gamelab_makeSpritesGrid",
+                                  "id": "ogNf@/Yr1l$zMi~oa|=1",
+                                  "fields": {
+                                    "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"key\"</field>",
+                                    "GRID": "<field name=\"GRID\">[[0,0,0,0,0,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "spritelab2_makePlatformPlayer",
+                                      "id": "block-3",
+                                      "fields": {
+                                        "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Cat\"</field>",
+                                        "GRID": "<field name=\"GRID\">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 },
                 {
-                  "type": "gamelab_whenTouching",
+                  "type": "gamelab_atTime",
                   "id": "block-4",
-                  "x": 20,
-                  "y": 331,
+                  "x": 313,
+                  "y": 46,
+                  "fields": {
+                    "UNIT": "<field name=\"UNIT\">\"seconds\"</field>"
+                  },
+                  "inputs": {
+                    "N": {
+                      "block": {
+                        "type": "math_number",
+                        "id": "block-5",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_spriteSay",
+                      "id": "block-6",
+                      "fields": {
+                        "SPEECH": "Time to navigate this dangerous city street!"
+                      },
+                      "inputs": {
+                        "SPRITE": {
+                          "block": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "block-7",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"Cat\"</field>"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_atTime",
+                  "id": "block-8",
+                  "x": 347,
+                  "y": 193,
+                  "fields": {
+                    "UNIT": "<field name=\"UNIT\">\"seconds\"</field>"
+                  },
+                  "inputs": {
+                    "N": {
+                      "block": {
+                        "type": "math_number",
+                        "id": "block-9",
+                        "fields": {
+                          "NUM": 5
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_spriteSay",
+                      "id": "block-10",
+                      "fields": {
+                        "SPEECH": "I must find the key to Kitty McD's!"
+                      },
+                      "inputs": {
+                        "SPRITE": {
+                          "block": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "block-11",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"Cat\"</field>"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_checkTouching",
+                  "id": "jj_x%;i5|@C]n4vK,.aC",
+                  "x": 326,
+                  "y": 350,
+                  "extraState": {
+                    "useDefaultIcon": true
+                  },
+                  "fields": {
+                    "button_gamelab_checkTouching": "",
+                    "CONDITION": "<field name=\"CONDITION\">\"when\"</field>"
+                  },
                   "inputs": {
                     "SPRITE1": {
-                      "block": {
+                      "shadow": {
                         "type": "gamelab_allSpritesWithAnimation",
-                        "id": "block-5",
+                        "id": "d0tJrq@$+2=,:I|+%NY4",
                         "fields": {
                           "ANIMATION": "<field name=\"ANIMATION\">\"Cat\"</field>"
                         }
                       }
                     },
                     "SPRITE2": {
-                      "block": {
+                      "shadow": {
                         "type": "gamelab_allSpritesWithAnimation",
-                        "id": "block-6",
+                        "id": "!aGtH%Phosp/.pL^zpiZ",
                         "fields": {
                           "ANIMATION": "<field name=\"ANIMATION\">\"key\"</field>"
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_spriteSay",
+                      "id": "#|lU[6cq?dIkyI:5,2|T",
+                      "fields": {
+                        "SPEECH": "AH ha!  Kitty McD's will bow before my insatiable hunger for tuna!"
+                      },
+                      "inputs": {
+                        "SPRITE": {
+                          "block": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "kIOifzZxR8jwI-~]]ip0",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"Cat\"</field>"
+                            }
+                          }
                         }
                       }
                     }
@@ -204,7 +376,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-05T21:32:08.732+00:00\",\"changed\":[\"cloned from \\\"HoAI-tl-test-2\\\"\"],\"cloned_from\":\"HoAI-tl-test-2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-05T21:32:08.732+00:00\",\"changed\":[\"cloned from \\\"HoAI-tl-test-2\\\"\"],\"cloned_from\":\"HoAI-tl-test-2\"},{\"changed_at\":\"2026-08-06 16:08:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 16:10:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 16:11:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 16:13:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 16:15:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 16:15:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 16:19:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>

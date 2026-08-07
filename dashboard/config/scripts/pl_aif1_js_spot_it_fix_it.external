@@ -1,0 +1,14 @@
+name 'pl-aif1-js-spot-it-fix-it'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Spot It, Fix It</h1>
+
+<p>Time to put POUR to work on a real page. Below is a mock umbrella shop with four accessibility issues built in, one for each POUR principle. Match each issue to the principle it violates, then practice writing the piece of a prompt that would actually fix it.</p>
+
+---
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/spot-it-fix-it.html" width="100%" height="1100" style="border:none;" title="Spot It, Fix It: match accessibility issues to POUR and write the fix"></iframe>
+</div>
+MARKDOWN

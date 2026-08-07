@@ -25,14 +25,14 @@ That's the shift worth naming for your students. Moving from a cluttered, text-h
 
 <h2>💼 Career Connection: UX Designer</h2>
 
-<div style="display: flex; align-items: flex-start; gap: 20px; margin: 16px 0;">
+<div style="display: flex; align-items: center; gap: 20px; margin: 16px 0;">
   <img src="https://images.code.org/9627ad323ccfe8be5ca9fcebe95e0aba-lesson6-panel4.png" alt="A UX designer's process, showing wireframe sketches and a user flow diagram" style="width: 30%; max-width: 220px; border-radius: 10px;">
   
   <p style="flex: 1;">A User Experience (UX) Designer focuses on making digital products easy, enjoyable, and meaningful to use. They research what users actually need, test early drafts, and shape layouts that improve how people interact with a site or app before a single line of code gets written.</p>
 </div>
 
-<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
-<strong>💡 Teacher tip:</strong> you'll see career connections like this throughout the unit. Use them to help students see how the skills they're learning, problem-solving, design thinking, and eventually coding, connect to real jobs in tech.
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;"><p>
+<strong>💡 Teacher tip:</strong> you'll see career connections like this throughout the unit. Use them to help students see how the skills they're learning, problem-solving, design thinking, and eventually coding, connect to real jobs in tech.</p>
 </div>
 
 
