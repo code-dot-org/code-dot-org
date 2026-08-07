@@ -20,7 +20,15 @@ class ProjectRemix extends React.Component {
     inRestrictedShareMode: PropTypes.bool,
   };
 
+  remixBlocked = () =>
+    this.props.inRestrictedShareMode ||
+    (typeof dashboard !== 'undefined' &&
+      dashboard.project?.exceedsAbuseThreshold?.());
+
   remixProject = () => {
+    if (this.remixBlocked()) {
+      return;
+    }
     if (Lab2Registry.hasEnabledProjects()) {
       this.remixLab2Project();
     } else {
@@ -64,12 +72,12 @@ class ProjectRemix extends React.Component {
   };
 
   render() {
-    const {lightStyle, inRestrictedShareMode} = this.props;
+    const {lightStyle} = this.props;
     let className = 'project_remix header_button no-mc';
     if (lightStyle) {
       className += ' header_button_light';
     }
-    return !inRestrictedShareMode ? (
+    return !this.remixBlocked() ? (
       <button
         type="button"
         className={classNames(styles.buttonSpacing, className)}
