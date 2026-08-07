@@ -1,0 +1,43 @@
+name 'pl-aif1-js-what-is-a-wireframe'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Wireframes</h1>
+
+<h2>What is a Wireframe?</h2>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Wireframe</b> is a low-fidelity, structural layout showing content and functionality, without visual design.</p>
+</div>
+
+<div style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 14px 18px; margin: 20px 0; text-align: center;">
+<p>Just like an architect sketches a blueprint before building, designers use wireframes to plan a website's structure before coding.</p>
+</div>
+
+<p>Wireframe sketches are intentionally simple so it's easy to change ideas and adjust layouts without worrying about colors, images, or detailed design.</p>
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/1f42cada9ca13c98b7dd4d67ba13d231-image-1761150656423.png" alt="Three hand-drawn wireframe sketches side by side. The first shows a logo placeholder, a horizontal navigation bar, an envelope icon with text lines, and two square image placeholders below. The second shows a circular logo, a wavy line graphic, several lines of text, a grid of six square placeholders, and more text lines below. The third shows a wavy header graphic, a square icon, lines of text, two people icons, and a row of square placeholders at the bottom." style="max-width: 850px; width: 100%;">
+</div>
+
+<p style="font-size: 12px; color: #888888;">Image source: <a href="https://www.springboard.com/blog/design/how-to-create-a-wireframe/" target="_blank" style="color: #4C42CF;">Springboard – How to Create a Wireframe</a></p>
+
+<p>At this stage, the focus is on what goes where, like where a button, heading, or image might appear, rather than how it looks. Keeping things low-fidelity encourages feedback and quick revisions before time is spent on visuals or code.</p>
+
+<h2>Sketch Lab Sample</h2>
+
+<p>Check out this example made in Sketch Lab, our built-in visual design tool. Like Canva or Figma, it allows students to create their designs right on the platform, no extra tools needed.</p>
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/1b6a1bddacdac195f7cc1b67c16ef8e6-image-1786037817939.png" alt="A Sketch Lab wireframe example showing two connected page mockups on a dark background. Page 1 shows a Pete's Pizza layout with a navigation bar, a Monthly Special section with an image placeholder, and the start of an About Us section. An arrow points from the Monthly Special section to Page 2, which shows a Menu layout with a navigation bar and a grid of six image placeholders, each with a text label below." style="max-width: 650px; width: 100%; border-radius: 12px;">
+</div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> a wireframe is really the visual version of what prompt.md does in words, both are ways of planning structure and intent before anything gets built. Students who can sketch a rough layout tend to write stronger prompts too, they're practicing the same kind of thinking twice.</p>
+</div>
+
+## Next Up
+
+Take a quick tour of skech lab and then try creating a wireframe. 
+MARKDOWN
