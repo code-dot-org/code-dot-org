@@ -749,12 +749,14 @@ describe('domain block generators', () => {
     //    shares and renders it as a fixed label beside the field. Defined before
     //    a project loads, every event read "Has Appearance ▸ animation …", so
     //    that prefix was stamped onto `emit` for good; every step anchor read
-    //    "Has …", so `before`/`after` grew a stray "Has".
+    //    "Has …", so the retired `before`/`after` grew a stray "Has".
+    //
+    // The phase list is FIXED, so it is not here — it is the same twelve words
+    // whatever the project holds, and trimming a shared prefix it does not have
+    // costs nothing.
     const live = [
       ['world_use_trait', 'TRAIT'],
       ['world_use_rule', 'RULE'],
-      ['world_rule_step_before', 'STEP'],
-      ['world_rule_step_after', 'STEP'],
       ['world_add_actor', 'ACTOR'],
       ['world_load_map', 'MAP'],
     ] as const;
@@ -2405,22 +2407,6 @@ describe('builder-context warnings', () => {
       DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>
     ).find(c => c.name === 'Actor')?.blocks;
     expect(actor).toContain('variables_get_Actor');
-  });
-
-  it('keeps the retired step anchors loadable but unoffered', () => {
-    // `before ⟨Rule ▸ Step⟩` was how a rule said when it ran, and it made every
-    // such rule name another one. Phases say it without the reference, so these
-    // two are gone from the palette — but still DEFINED, because a saved
-    // workspace may hold one and an unknown block type is a project that will
-    // not open. Deleting them needs a workspace migration that does not exist.
-    const rule = (
-      DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>
-    ).find(c => c.name === 'Rule')?.blocks;
-
-    for (const type of ['world_rule_step_before', 'world_rule_step_after']) {
-      expect(rule, type).not.toContain(type);
-      expect(extensionsOf(type), type).toBeDefined();
-    }
   });
 
   it('guards `use trait`, whose `useTraits` is builder-only', () => {

@@ -1172,68 +1172,6 @@ export function ruleMetaToModule(
   // either its name or its id — `pascal` collapses the slug's `_` the same way.
   const stepExport = (nameOrId: string): string => `${pascal(nameOrId)}Step`;
 
-  // Whether an anchor refers to a step in THIS rule — by name, since that is
-  // what the anchor stores and what this file declares itself to be.
-  const isSelfAnchor = (anchor: StepAnchor): boolean =>
-    anchor.ownerRef.ruleName === meta.name;
-
-  // A step-ordering ANCHOR → the code that names that step. A step in THIS rule is
-  // the local `export const` (self-importing the module's default would read
-  // `.steps` before `build()` runs — undefined). A built-in's is
-  // `WorldLab.<Rule>.steps[<id>]`; another project rule's default-imports the
-  // module and reads `<Rule>.steps[<id>]`. (The anchored rule must be in play —
-  // the learner's `use rule` ensures it — for the constraint to take effect.)
-  const stepAnchorRef = (anchor: StepAnchor): string => {
-    if (isSelfAnchor(anchor)) {
-      return stepExport(anchor.stepId);
-    }
-    const owner = anchor.ownerRef;
-    const at = `.steps[${q(anchor.stepId)}]`;
-    const located = owner.ruleName ? ruleLocation(owner.ruleName) : undefined;
-    const modulePath =
-      located?.source === 'project' ? located.modulePath : refModule(owner);
-    if (modulePath) {
-      const varName = moduleVar(modulePath);
-      addProjectImport(
-        `default:${modulePath}`,
-        `import ${varName} from ${q(modulePath)};`,
-      );
-      return `${varName}${at}`;
-    }
-    // A built-in rule's step: `WorldLab.<RuleExport>.steps[<id>]`.
-    const exportName =
-      located?.source === 'builtin' ? located.exportName : owner.exportName;
-    return `WorldLab.${exportName}${at}`;
-  };
-
-  // Emit steps so a self-anchor's target is declared before the step that names
-  // it (its local `const` must already exist). A simple worklist: repeatedly take
-  // any step whose self-anchor is already emitted; anything left (a cycle, or an
-  // anchor to a missing step — both authoring errors the scheduler also rejects)
-  // trails in declaration order.
-  const orderedSteps = (): readonly StepMeta[] => {
-    const done = new Set<string>();
-    const ordered: StepMeta[] = [];
-    const pending = [...meta.steps];
-    for (let progress = true; progress && pending.length > 0; ) {
-      progress = false;
-      for (let i = 0; i < pending.length; ) {
-        const anchor = pending[i].order.anchor;
-        const waitsFor =
-          anchor && isSelfAnchor(anchor) ? anchor.stepId : undefined;
-        if (!waitsFor || done.has(waitsFor)) {
-          done.add(pending[i].id);
-          ordered.push(pending[i]);
-          pending.splice(i, 1);
-          progress = true;
-        } else {
-          i++;
-        }
-      }
-    }
-    return [...ordered, ...pending];
-  };
-
   // Resolve dependency refs first, so the imports above are populated.
   const ruleRequires = meta.requires.map(ruleDepRef);
   const traitRequires = meta.traits.map(trait =>
@@ -1335,7 +1273,7 @@ export function ruleMetaToModule(
   // ordering picks the builder method (free / in a phase / before / after an
   // anchor step).
   // Emitted in self-anchor dependency order so a local anchor const exists first.
-  for (const step of orderedSteps()) {
+  for (const step of meta.steps) {
     const code = bodies.get(
       ruleBodyKey('step', step.scope, step.ownerTraitId, step.id),
     );
@@ -1354,7 +1292,7 @@ export function ruleMetaToModule(
         }.with(${traitExport})) {\n${inner}}\n`
       : inner;
     const closure = `(world, delta) => {\n${run}}`;
-    const {kind, anchor, phase} = step.order;
+    const {kind, phase} = step.order;
     const inPhase =
       step.order.when === 'before'
         ? 'BeforePhase'
@@ -1364,9 +1302,7 @@ export function ruleMetaToModule(
     const call =
       kind === 'phase' && phase
         ? `rule.addStep${inPhase}(${q(step.id)}, ${q(phase)}, ${closure})`
-        : (kind === 'before' || kind === 'after') && anchor
-          ? `rule.addStep${kind === 'before' ? 'Before' : 'After'}(${q(step.id)}, ${stepAnchorRef(anchor)}, ${closure})`
-          : `rule.addStep(${q(step.id)}, ${closure})`;
+        : `rule.addStep(${q(step.id)}, ${closure})`;
     body.push(`export const ${stepExport(step.name)} = ${call};`);
   }
 
