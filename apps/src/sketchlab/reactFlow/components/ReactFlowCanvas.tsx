@@ -114,7 +114,7 @@ const GROUP_MODE_HINT =
   'Tab to move — Enter to select/deselect — G to group — Esc to cancel';
 
 const HAND_MODE_HINT =
-  'Hand tool — use the arrow keys to pan — Esc or S to return to select';
+  'Hand tool — use the arrow keys to pan — S to return to select';
 const HAND_MODE_HINT_READ_ONLY = 'Hand tool — use the arrow keys to pan';
 
 // Fallbacks for edges that don't specify type/style, kept in sync with the
@@ -410,20 +410,11 @@ export default function ReactFlowCanvas({
   }, [clearSelection]);
 
   // The workspace wrapper is the single tab stop for the canvas in hand mode.
-  // While it holds focus, arrow keys pan the viewport and Esc returns to the select tool.
+  // While it holds focus, arrow keys pan the viewport. "S" returns to the
+  // select tool, handled with the rest of the tool shortcuts.
   const handleWorkspaceKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
       if (event.target !== event.currentTarget) return;
-
-      // Leave read-only viewers in pan mode on Escape rather than stranding them,
-      // as the only tool available in read only is the hand tool.
-      if (event.key === 'Escape') {
-        if (readOnly) return;
-        event.preventDefault();
-        setCanvasTool('cursor');
-        canvasContainerRef.current?.focus();
-        return;
-      }
 
       let deltaX = 0;
       let deltaY = 0;
@@ -451,7 +442,7 @@ export default function ReactFlowCanvas({
         y: current.y + deltaY,
       });
     },
-    [readOnly, getViewport, setReactFlowViewport]
+    [getViewport, setReactFlowViewport]
   );
 
   const handleWorkspaceFocus = useCallback((event: React.FocusEvent) => {
@@ -1081,12 +1072,12 @@ export default function ReactFlowCanvas({
                     aria-label={
                       readOnly
                         ? 'Canvas workspace. Use the arrow keys to pan.'
-                        : 'Canvas workspace. Use the arrow keys to pan. Press Escape to return to the select tool.'
+                        : 'Canvas workspace. Use the arrow keys to pan. Press S to return to the select tool.'
                     }
                     aria-keyshortcuts={
                       readOnly
                         ? 'ArrowUp ArrowDown ArrowLeft ArrowRight'
-                        : 'ArrowUp ArrowDown ArrowLeft ArrowRight Escape'
+                        : 'ArrowUp ArrowDown ArrowLeft ArrowRight S'
                     }
                     onFocus={handleWorkspaceFocus}
                     onBlur={handleWorkspaceBlur}
