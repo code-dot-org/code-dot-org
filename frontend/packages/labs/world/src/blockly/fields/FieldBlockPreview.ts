@@ -253,10 +253,14 @@ export class FieldBlockPreview extends Blockly.Field<string> {
           ? []
           : this.parts.filter(part => part.kind === 'param');
       // The subject's socket, wherever it landed: filled with `this actor`, the
-      // shadow the real call site is seeded with. A hat's leads, always.
+      // shadow the real call site is seeded with. A hat's leads, when it has
+      // one — an event declared on the RULE is about the world, and its hat
+      // takes no actor at all (`EventMeta.scope`).
       const subjectSocket =
         this.kind === 'event'
-          ? 0
+          ? this.subject
+            ? 0
+            : -1
           : this.subject
             ? this.subject && this.returns && this.returns !== 'none'
               ? 0
@@ -348,13 +352,21 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     const reportsSomething = this.returns && this.returns !== 'none';
 
     if (this.kind === 'event') {
-      // The HAT this event makes. The subject leads, because that is what the
-      // real hat asks first — whose handler this is — and a parameter is drawn
-      // as the dropdown it will be, carrying that enum's choices with `(any)`
-      // at the front. What is designed here and what turns up in the toolbox
-      // are then the same block, down to the words in the menu.
+      // The HAT this event makes. The subject leads WHEN THERE IS ONE, because
+      // that is what the real hat asks first — whose handler this is — and a
+      // parameter is drawn as the dropdown it will be, carrying that enum's
+      // choices with `(any)` at the front. What is designed here and what turns
+      // up in the toolbox are then the same block, down to the words in the
+      // menu.
+      //
+      // Declared on the rule rather than under a trait, the event is about the
+      // WORLD: it is raised once, handled on the world, and handed no actor. So
+      // the hat opens `when ⟨space⟩ is pressed` with nothing before the choice,
+      // and drawing `this actor` there would be a lie about the block.
       push('when');
-      actorSocket();
+      if (this.subject) {
+        actorSocket();
+      }
       for (const part of this.parts) {
         if (part.kind === 'label') {
           if (part.text) {

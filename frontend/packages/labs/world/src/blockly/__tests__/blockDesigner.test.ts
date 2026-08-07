@@ -289,6 +289,26 @@ describe('a designed block', () => {
     ).toBe(false);
   });
 
+  it('answers for an event too, which decides its hat’s shape', () => {
+    // It used to return false for `define event` unconditionally, on the
+    // grounds that a hat's subject is the hat's rather than part of the
+    // phrasing. The preview then drew `when ⟨this actor⟩ …` for every event —
+    // including one declared on the RULE, whose hat takes no actor at all
+    // because the event is about the world (`EventMeta.scope`).
+    expect(
+      isActorScoped({
+        type: 'world_rule_event',
+        getRootBlock: () => ({type: 'world_rule_trait'}),
+      }),
+    ).toBe(true);
+    expect(
+      isActorScoped({
+        type: 'world_rule_event',
+        getRootBlock: () => ({type: 'world_rule'}),
+      }),
+    ).toBe(false);
+  });
+
   it('offers a flyout of blocks that are actually registered', () => {
     // Blockly builds the mutator bubble's flyout by TYPE NAME, and throws on one
     // it cannot find — at the moment the ⚙ is clicked, not at startup. This is
