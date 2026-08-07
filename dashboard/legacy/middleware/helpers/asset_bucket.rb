@@ -21,7 +21,7 @@ class AssetBucket < BucketHelper
   # Hide assets-bucket metadata (e.g. image-moderation bookkeeping) from the
   # AssetManager file list so it is not shown as a user asset.
   def list(encrypted_channel_id)
-    super.reject {|file| file[:filename]&.start_with?('.metadata/')}
+    super.reject {|file| file[:filename]&.start_with?('metadata/')}
   end
 
   def try_resize_file(body, extension)

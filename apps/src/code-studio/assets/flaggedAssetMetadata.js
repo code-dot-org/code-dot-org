@@ -1,11 +1,11 @@
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
-// Fixed bookkeeping resource under .metadata/. The flagged *asset* name is in
+// Fixed bookkeeping resource under metadata/. The flagged *asset* name is in
 // the JSON body ({"filename":"..."}), not in this path.
 const FLAGGED_ASSET_METADATA = 'image_moderation_flagged';
 
 const metadataUrl = channelId =>
-  `/v3/assets/${channelId}/.metadata/${FLAGGED_ASSET_METADATA}`;
+  `/v3/assets/${channelId}/metadata/${FLAGGED_ASSET_METADATA}`;
 
 /**
  * Filename of the AssetManager upload accepted after a flagged moderation
