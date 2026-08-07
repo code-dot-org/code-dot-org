@@ -4,8 +4,13 @@ import {SignInPage} from '../pages/sign-in';
 import {createUser, resetSession} from '../shared/auth';
 import {analyze} from '../shared/axe';
 
-/** MC level URL with login_required param. After sign-in the server strips the param. */
-const LEVEL_PATH = '/courses/mc/units/1/lessons/1/levels/1';
+/**
+ * Cached-unit level URL with login_required param. After sign-in the server
+ * strips the param. ui-test-oceans is a UI-test-only course listed in
+ * CACHED_UNITS_MAP (lib/cdo/http_cache.rb), so this exercises the cached-unit
+ * redirect branch without depending on production curriculum.
+ */
+const LEVEL_PATH = '/courses/ui-test-oceans/units/1/lessons/1/levels/1';
 const LEVEL_WITH_LOGIN_REQUIRED = `${LEVEL_PATH}?login_required=true`;
 
 test.describe('Navigating to a level page with login required', () => {
