@@ -280,3 +280,33 @@ describe('platformPhysics with custom gravity', () => {
     expect(isSupported(nearBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(false);
   });
 });
+
+// Generated block art rarely crops perfectly square (a real example: a
+// 455x450 block image, so a 50 x 49.45 sprite in its 50px cell). Collision
+// treats such walls as full cells.
+describe('platformPhysics with undersized block art', () => {
+  const shortWall = (col: number): PhysicsBox => ({
+    position: {x: col * 50 + 25, y: 5 * 50 + 25},
+    width: 50,
+    height: (450 / 455) * 50,
+    scale: 1,
+  });
+
+  it('lands on the cell top, not the art top, and walks flush', () => {
+    const walls = [shortWall(2), shortWall(3), shortWall(4), shortWall(5)];
+    // The reporting scene's player: 520x512 art at cell size.
+    const player = makeSprite(175, 75, 50, (512 / 520) * 50);
+    run(player, walls, 30);
+    // Feet on the cell top (y=250), centered landing without drift.
+    expect(feet(player)).toBeCloseTo(250, 6);
+    expect(player.position.x).toBe(175);
+    // Walking right across all three seams stays flush and monotonic.
+    const positions: number[] = [];
+    run(player, walls, 30, 3, s => positions.push(s.position.x));
+    positions.reduce((a, b) => {
+      expect(b).toBeGreaterThanOrEqual(a);
+      return b;
+    });
+    expect(feet(player)).toBeCloseTo(250, 6);
+  });
+});

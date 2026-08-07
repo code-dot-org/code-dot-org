@@ -67,6 +67,15 @@ interface View {
   height: number;
 }
 
+// Generated block art is keyed and cropped, so a tile's image can come up
+// a few pixels short of square. Collision treats every wall as covering
+// its full cell — a square on the image's longest side — so rows stay
+// flush and seams stay closed no matter how the art cropped. Only
+// collision squares up; the drawn sprite keeps the art's real aspect.
+function wallHalf(wall: PhysicsBox): number {
+  return (Math.max(wall.width, wall.height) * wall.scale) / 2;
+}
+
 // Flip a sprite's vertical state across the view's horizontal midline (see
 // the negative-gravity branch below).
 function flipSpriteY(sprite: PhysicsSprite, view: View): void {
@@ -107,8 +116,8 @@ export function resolvePlatformPhysics(
   const boxes = walls.map(wall => ({
     x: wall.position.x,
     y: wall.position.y,
-    halfW: (wall.width * wall.scale) / 2,
-    halfH: (wall.height * wall.scale) / 2,
+    halfW: wallHalf(wall),
+    halfH: wallHalf(wall),
   }));
   moved.forEach(({sprite, x: curX, y: curY}) => {
     const imgHalfW = (sprite.width * sprite.scale) / 2;
@@ -206,7 +215,12 @@ export function resolvePlatformPhysics(
     boxes.forEach(wall => {
       const penX = halfW + wall.halfW - Math.abs(x - wall.x);
       const penY = halfH + wall.halfH - Math.abs(y - wall.y);
-      if (penX <= 0 || penY <= 0) {
+      // Contact-slack tolerance, not zero: resting feet recompute the
+      // resting overlap through different roundings, and fractional sprite
+      // sizes (real art is rarely a binary-exact height) leave a ±1e-14
+      // residue that a zero test reads as overlap — firing corner pushes
+      // off contact that is actually flush.
+      if (penX <= CONTACT_EPSILON || penY <= CONTACT_EPSILON) {
         return;
       }
       const crossed =
@@ -287,11 +301,10 @@ export function isSupported(
     return true;
   }
   return walls.some(wall => {
-    const top = wall.position.y - (wall.height * wall.scale) / 2;
+    const top = wall.position.y - wallHalf(wall);
     return (
       Math.abs(feet - top) <= CONTACT_EPSILON &&
-      Math.abs(sprite.position.x - wall.position.x) <
-        halfW + (wall.width * wall.scale) / 2
+      Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalf(wall)
     );
   });
 }
