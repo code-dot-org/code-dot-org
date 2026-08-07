@@ -24,6 +24,8 @@ module ChallengeEvaluationPromptHelper
 
       Evaluate the response against each criterion of the rubric below. For each criterion, choose the scale level that best matches the student's work, and explain your reasoning with specific evidence from the response. Judge only what the student actually communicated; do not give credit for ideas that are not present. Use language appropriate for a teacher reviewing the evaluation.
 
+      Separately, write feedback addressed directly to the student: first describe what they did well, then what they could do to improve, grounded in the rubric criteria. This feedback goes to the student, so never mention scores, levels, grades, or the rubric itself in it, and use encouraging language a K-12 student can understand.
+
       Challenge question:
       #{challenge.question}
 
@@ -47,7 +49,8 @@ module ChallengeEvaluationPromptHelper
     challenge_response.challenge_response_assets.select(&:asset_whiteboard_image?).each do |asset|
       next unless asset.uploaded?
       bytes = asset.download_bytes
-      data_uri = "data:#{image_content_type(bytes)};base64,#{Base64.strict_encode64(bytes)}"
+      # Whiteboard images are always PNG (enforced at upload time).
+      data_uri = "data:image/png;base64,#{Base64.strict_encode64(bytes)}"
       content << {type: 'image_url', image_url: {url: data_uri}}
     end
     content
@@ -81,9 +84,9 @@ module ChallengeEvaluationPromptHelper
                 additionalProperties: false,
               },
             },
-            overall_feedback: {type: 'string'},
+            student_feedback: {type: 'string'},
           },
-          required: %w[evaluations overall_feedback],
+          required: %w[evaluations student_feedback],
           additionalProperties: false,
         },
       },
@@ -103,12 +106,5 @@ module ChallengeEvaluationPromptHelper
       end
       lines.join("\n")
     end.join("\n")
-  end
-
-  # Whiteboard images are PNG or JPEG (enforced at upload time), so the
-  # content type is recoverable from the magic bytes; S3 object metadata is
-  # not consulted.
-  def self.image_content_type(bytes)
-    bytes.start_with?("\x89PNG".b) ? 'image/png' : 'image/jpeg'
   end
 end

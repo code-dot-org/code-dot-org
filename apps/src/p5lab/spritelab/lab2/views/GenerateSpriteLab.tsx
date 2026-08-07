@@ -7,12 +7,9 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import askSpriteLabAi from '../ai/askSpriteLabAi';
-import {UploadImageFunction} from '../ai/items/itemGeneration';
 import {generateBlocklyJson} from '../blockly/generateBlocklyJson';
 import {selectAvailableImageNames, selectSceneNames} from '../redux/selectors';
 import {setAiGenerateState} from '../redux/spriteLab2Redux';
-
-import GenerateImageForm from './GenerateImageForm';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -30,25 +27,22 @@ function getSceneIdByName(): {[lowerCaseName: string]: string} {
 }
 
 interface GenerateSpriteLabProps {
-  guideMode: 'instructions' | 'aiCodeGenerate' | 'aiImageGenerate';
+  guideMode: 'instructions' | 'aiCodeGenerate';
   instructions?: string;
   /** Load AI-generated blocks into the Code workspace. */
   onCodeGenerated: (source: WorkspaceSerialization) => void;
-  /** Upload a generated image; undefined when there is nowhere to save it. */
-  uploadImage?: UploadImageFunction;
 }
 
 /**
  * The Lab2 Guide overlay, modeled on Music Lab's guideMode. 'instructions'
  * shows the level's instructions; 'aiCodeGenerate' adds the AI prompt that
- * generates blocks (pseudocode -> generateBlocklyJson) into the Code tab;
- * 'aiImageGenerate' hosts the Images tab's generation form instead.
+ * generates blocks (pseudocode -> generateBlocklyJson) into the Code tab.
+ * (Image generation lives in the Images tab's image dialog.)
  */
 const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   guideMode,
   instructions,
   onCodeGenerated,
-  uploadImage,
 }) => {
   const dispatch = useAppDispatch();
   const [prompt, setPrompt] = useState('');
@@ -142,16 +136,6 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
           {guideMode === 'instructions' ? (
             instructionsBlock ||
             'Build a program in the Code tab, then press Run.'
-          ) : guideMode === 'aiImageGenerate' ? (
-            <>
-              {instructionsBlock && (
-                <>
-                  {instructionsBlock}
-                  <hr className={moduleStyles.guideDivider} />
-                </>
-              )}
-              <GenerateImageForm uploadImage={uploadImage} />
-            </>
           ) : (
             <>
               {instructionsBlock && (
