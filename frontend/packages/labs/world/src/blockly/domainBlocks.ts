@@ -2325,6 +2325,51 @@ const worldCameraValue = defineBlock({
 });
 
 /**
+ * How big the world is, in world pixels — the largest map loaded into it.
+ *
+ * A Vector, so `x of ⟨map size⟩` reads its width, and the block that keeps a
+ * camera inside the level can be written without a learner retyping numbers the
+ * map already knows. The map editor's Width/Height decide it (`World.mapBounds`).
+ */
+const worldMapSize = defineBlock({
+  type: 'world_map_size',
+  message0: 'map size',
+  output: 'Vector',
+  extensions: [worldContextExtension],
+  style: 'location_blocks',
+  tooltip:
+    'How big the world is, in pixels — as big as the biggest map loaded into ' +
+    'it. One screen if no map has been.',
+  generator: {
+    javascript() {
+      return ['world.mapBounds()', Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+/**
+ * How big the VIEW is, in world pixels — the window onto the world.
+ *
+ * Fixed (runtime/viewport), and a block rather than a number a learner types
+ * because the one thing that needs it needs half of it: a camera's position is
+ * the middle of the view, so keeping the view inside the map means keeping the
+ * position half a screen in from each edge.
+ */
+const worldViewSize = defineBlock({
+  type: 'world_view_size',
+  message0: 'view size',
+  output: 'Vector',
+  extensions: [worldContextExtension],
+  style: 'location_blocks',
+  tooltip: 'How big the window onto the world is, in pixels.',
+  generator: {
+    javascript() {
+      return ['world.viewSize()', Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+/**
  * Every camera in the world, as an actor value.
  *
  * Actor-typed on purpose, so the whole existing vocabulary reaches a camera:
@@ -3690,7 +3735,25 @@ const worldDefineCamera = defineBlock({
       if (traits.length) {
         settings.push(`traits: [${traits.join(', ')}]`);
       }
-      return `world.defineCamera({${settings.join(', ')}});\n`;
+      const define = `world.defineCamera({${settings.join(', ')}});\n`;
+      // Everything in the mouth that is NOT a `use trait` — `set actor to
+      // follow …`, a `log`, anything. The walk above reads the declarations and
+      // used to drop the rest on the floor: the blocks sat there looking right
+      // and generated nothing at all, which is the worst way for a mouth to
+      // fail. (`use trait` emits nothing here itself, so this is only the rest.)
+      //
+      // Made AFTER the camera, and with it bound, so `this camera` means the one
+      // being defined — writing `set … of ⟨camera ⟨Chase⟩⟩` inside the
+      // definition of Chase is a name a learner should not have to repeat.
+      const setup = generator.statementToCode(block, 'DO');
+      if (!setup.trim()) {
+        return define;
+      }
+      return (
+        `${define}{\n` +
+        `const camera = world.camera(${str(cameraId(block.id))});\n` +
+        `${setup}}\n`
+      );
     },
   },
 });
@@ -4467,6 +4530,8 @@ export const DOMAIN_BLOCKS = [
   worldCameraValue,
   worldAllCameras,
   worldThisCamera,
+  worldMapSize,
+  worldViewSize,
   worldPushActor,
   worldClearActors,
   worldCountActors,
@@ -4603,6 +4668,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // The one a camera-scoped step is running for — `this actor`'s
       // counterpart, and the only way such a step names its own subject.
       'world_this_camera',
+      // How big the level is, for anything that keeps a view inside it.
+      'world_map_size',
+      'world_view_size',
       // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',
       'world_clear_world',
