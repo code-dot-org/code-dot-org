@@ -902,7 +902,7 @@ describe('a step that names the moment it runs in', () => {
       expect.objectContaining({
         id: 'gust',
         scope: 'world',
-        order: {kind: 'phase', phase: 'push', when: 'during'},
+        order: {kind: 'phase', phase: 'push'},
       }),
     ]);
   });
@@ -951,13 +951,13 @@ describe('a step declared under a trait', () => {
         id: 'aim_at_it',
         scope: 'camera',
         ownerTraitId: 'Follows',
-        order: {kind: 'phase', phase: 'aim', when: 'during'},
+        order: {kind: 'phase', phase: 'aim'},
       }),
       expect.objectContaining({
         id: 'fall',
         scope: 'actor',
         ownerTraitId: 'Heavy',
-        order: {kind: 'phase', phase: 'push', when: 'during'},
+        order: {kind: 'phase', phase: 'push'},
       }),
     ]);
   });

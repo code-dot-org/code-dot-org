@@ -13,12 +13,18 @@
 // `reposition` before `find` before `resolve` before `handleCollisions` is the
 // order those rules already produce. It is the same pipeline, sayable.
 //
-// A phase is not a subdivision of anything. There are no sub-phases: the camera
-// moments sit in the one list beside the physical ones, because a frame is one
-// sequence and the camera occupies four of its moments the way physics occupies
-// four of them. Ordering among rules the engine has never heard of — a project's
-// own pipeline — is not this list's business; those rules anchor to each other,
-// which is what `before`/`after` is for.
+// A phase is not a subdivision of anything. There are no sub-phases, and no
+// gaps between: the camera moments sit in the one list beside the physical
+// ones, because a frame is one sequence and the camera occupies five of its
+// moments the way physics occupies five of them.
+//
+// A step names a moment and nothing else. There was briefly a way to sit in the
+// gap either side of one — for work the list had not anticipated, of which
+// `adjust` was the motivating example: wrapping at the screen edge has to
+// happen after positions integrate and before contacts are found. Naming that
+// moment is better than leaving a gap for it. A named moment is in the dropdown
+// where a learner finds it; a gap is invisible until you already know you need
+// it. So when something does not fit, the answer is another entry here.
 
 /**
  * Which subject a phase is about, and so which steps may name it.
@@ -70,6 +76,14 @@ export const PHASES: readonly PhaseDef[] = [
     name: 'move',
     subject: 'actor',
     summary: 'Turn velocity into position.',
+  },
+  {
+    id: 'adjust',
+    name: 'adjust',
+    subject: 'actor',
+    summary:
+      'Correct a position after moving — wrap at the edges, clamp to the ' +
+      'map, snap to a grid.',
   },
   {
     id: 'touch',

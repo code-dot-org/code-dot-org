@@ -160,24 +160,7 @@ export class RuleBuilder {
    * runs in `push`, and it need not know that Physics exists to say so.
    */
   addStepIn(id: string, phase: string, run: StepFn): Step {
-    return this.registerStep(id, run, {kind: 'phase', phase, when: 'during'});
-  }
-
-  /**
-   * Add a per-tick step that runs in the gap just before a named moment —
-   * after everything in the moment before it, before anything in this one.
-   *
-   * For a step that has to bracket a whole moment without knowing who is in
-   * it, and for the one case a phase alone cannot order: two steps that belong
-   * in the same moment but do not commute.
-   */
-  addStepBeforePhase(id: string, phase: string, run: StepFn): Step {
-    return this.registerStep(id, run, {kind: 'phase', phase, when: 'before'});
-  }
-
-  /** The mirror: in the gap just after a named moment. */
-  addStepAfterPhase(id: string, phase: string, run: StepFn): Step {
-    return this.registerStep(id, run, {kind: 'phase', phase, when: 'after'});
+    return this.registerStep(id, run, {kind: 'phase', phase});
   }
 
   private registerStep(id: string, run: StepFn, order: Step['order']): Step {

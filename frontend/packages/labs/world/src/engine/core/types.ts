@@ -201,22 +201,7 @@ export type StepOrder =
    * two had to, and naming Physics to say you are gravity is the wrong
    * dependency for a learner to have to discover.
    */
-  | {
-      readonly kind: 'phase';
-      readonly phase: string;
-      /**
-       * Where in that moment — inside it, or in the gap on either side.
-       *
-       * `during` is the ordinary answer and the default. The other two are for
-       * a step that has to bracket a whole moment without knowing who is in
-       * it: "after everything has decided, before anything pushes" is
-       * `after ⟨decide⟩`, and no rule is named. It also recovers ordering
-       * BETWEEN two steps that would otherwise share a moment — an easing
-       * camera step and a deadzone one both belong in `smooth`, and the one
-       * that must run last says `before ⟨confine⟩` instead.
-       */
-      readonly when?: 'before' | 'during' | 'after';
-    };
+  | {readonly kind: 'phase'; readonly phase: string};
 
 export type StepFn = (world: World, delta: number) => void;
 

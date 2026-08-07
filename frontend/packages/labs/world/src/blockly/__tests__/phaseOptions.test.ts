@@ -15,6 +15,7 @@ import {describe, expect, it} from 'vitest';
 import type {Blockly} from '@code-dot-org/blockly';
 
 import {PHASES} from '../../engine/core/phases';
+import {DOMAIN_BLOCKS} from '../domainBlocks';
 import {phaseOptions, phaseSubjectFor} from '../phaseOptions';
 
 /** A `PHASE` field on `type`, under the given chain of parents, innermost first. */
@@ -93,7 +94,7 @@ describe('what the dropdown offers', () => {
           }),
         ),
       ),
-    ).toEqual(['decide', 'push', 'move', 'touch', 'settle', 'react']);
+    ).toEqual(['decide', 'push', 'move', 'adjust', 'touch', 'settle', 'react']);
   });
 
   it('gives a rule-level step all of them', () => {
@@ -116,5 +117,29 @@ describe('what the dropdown offers', () => {
   it('answers for a field with no block at all', () => {
     // The flyout renders a block with no parent, and asks it what to show.
     expect(phaseOptions(undefined)).toHaveLength(PHASES.length);
+  });
+});
+
+describe('what a step block asks for', () => {
+  // One dropdown. There was briefly a second, choosing whether the step ran in
+  // the moment or in the gap either side of it — nothing ever used a gap, and
+  // the case that argued for them (wrapping at the screen edge, after positions
+  // integrate and before contacts are found) is now the `adjust` moment. A
+  // named moment is in this dropdown where a learner finds it; a gap was
+  // invisible until you already knew you needed it.
+  const fieldsOf = (type: string): string[] =>
+    (
+      (
+        DOMAIN_BLOCKS.find(block => block.type === type) as {
+          args0?: Array<{name?: string; type?: string}>;
+        }
+      ).args0 ?? []
+    )
+      .filter(arg => arg.type?.startsWith('field_'))
+      .map(arg => arg.name ?? '');
+
+  it('is a phase and a name, and nothing else', () => {
+    expect(fieldsOf('world_rule_step_in')).toEqual(['PHASE', 'NAME']);
+    expect(fieldsOf('world_trait_step')).toEqual(['PHASE', 'NAME']);
   });
 });
