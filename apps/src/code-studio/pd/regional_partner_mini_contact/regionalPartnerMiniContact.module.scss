@@ -62,6 +62,10 @@ input, span {
     margin-top: 0.75rem;
   }
 
+  :global(.checkbox) {
+    padding-left: 0;
+  }
+
   .roleSelect {
     max-width: 13.75rem;
   }
