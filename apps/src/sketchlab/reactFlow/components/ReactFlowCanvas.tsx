@@ -132,6 +132,11 @@ function stripDisplayFields<T extends object>(item: T): T {
   delete result.draggable;
   delete result.connectable;
   delete result.deletable;
+  // The clickable band an edge gets while rendered; not part of the drawing.
+  delete result.interactionWidth;
+  // Recomputed from the drawing on every render, so saving it only preserves a
+  // label that will be wrong the next time the line moves.
+  delete result.ariaLabel;
   return result as T;
 }
 

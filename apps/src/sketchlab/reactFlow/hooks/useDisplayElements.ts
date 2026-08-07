@@ -167,10 +167,7 @@ export function useDisplayElements({
             nodeMap,
             floatingLineIndex.get(edge.id)
           ),
-          className: classNames(
-            styles.lineEdge,
-            isStandaloneLine && styles.standaloneLineEdge
-          ),
+          className: classNames(isStandaloneLine && styles.standaloneLineEdge),
           domAttributes: {
             ...domAttributes,
             ...(!readOnly && !locked

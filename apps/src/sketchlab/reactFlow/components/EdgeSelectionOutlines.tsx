@@ -2,7 +2,10 @@ import {ViewportPortal} from '@xyflow/react';
 import React, {useLayoutEffect, useRef} from 'react';
 
 import {LINE_INTERACTION_WIDTH_PX} from '../constants';
-import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
+import {
+  REACT_FLOW_SELECTOR,
+  reactFlowEdgePathSelector,
+} from '../reactFlowSelectors';
 import {
   computeEdgeSelectionBox,
   type EdgeSelectionBox,
@@ -52,14 +55,20 @@ export default function EdgeSelectionOutlines({
       lastBoxes.current.clear();
       return;
     }
+    // Our own rings hang off this flow's viewport, so start from one of them
+    // rather than a document-wide query that could find another flow.
+    const viewport = outlineRefs.current
+      .values()
+      .next()
+      .value?.closest(REACT_FLOW_SELECTOR.viewport);
+    if (!viewport) return;
+
     const positionOutlines = () => {
       edgeIdsRef.current.forEach(edgeId => {
         const outline = outlineRefs.current.get(edgeId);
         if (!outline) return;
-        const path = document.querySelector<SVGPathElement>(
-          `.react-flow__edge[data-id="${CSS.escape(
-            edgeId
-          )}"] .react-flow__edge-path`
+        const path = viewport.querySelector<SVGPathElement>(
+          reactFlowEdgePathSelector(edgeId)
         );
         const box = path
           ? computeEdgeSelectionBox(path, LINE_INTERACTION_WIDTH_PX)
@@ -82,8 +91,6 @@ export default function EdgeSelectionOutlines({
     // Position once before the first paint so no ring flashes at the origin.
     positionOutlines();
 
-    const viewport = document.querySelector(REACT_FLOW_SELECTOR.viewport);
-    if (!viewport) return;
     // React Flow rewrites an edge's `d` whenever the line moves, so watching for
     // those writes repositions the rings only when something actually changed,
     // and still before the next paint. Repositioning writes styles and adds no
