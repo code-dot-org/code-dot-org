@@ -79,7 +79,7 @@ describe('Camera — the base every camera rule builds on', () => {
         id: 'take_the_view',
         scope: 'camera',
         ownerTraitId: 'Aimed',
-        order: {kind: 'phase', phase: 'view', when: 'during'},
+        order: {kind: 'phase', phase: 'view'},
       }),
     ]);
   });
@@ -109,7 +109,7 @@ describe('Camera Follow — the first rule built on it', () => {
         id: 'aim_at_the_actor',
         scope: 'camera',
         ownerTraitId: 'Follows',
-        order: {kind: 'phase', phase: 'aim', when: 'during'},
+        order: {kind: 'phase', phase: 'aim'},
       }),
     ]);
   });

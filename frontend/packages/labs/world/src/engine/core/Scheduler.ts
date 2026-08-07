@@ -66,11 +66,6 @@ function topologicalOrder(steps: readonly Step[]): Step[] {
   // anything in them. Edges only between CONSECUTIVE populated groups —
   // transitivity does the rest, so this is linear rather than every-pair.
   const byPhase = new Map<number, Step[]>();
-  // Three slots per moment — before it, in it, after it — so a step can bracket
-  // a whole phase without naming anyone in it. Scaled rather than nested so the
-  // slots are just points on one line, and `after ⟨decide⟩` lands between
-  // `decide` and `before ⟨push⟩` by arithmetic rather than by a special case.
-  const NEARBY = {before: -1, during: 0, after: 1} as const;
   for (const step of steps) {
     if (step.order.kind !== 'phase') {
       continue;
@@ -79,9 +74,8 @@ function topologicalOrder(steps: readonly Step[]): Step[] {
     if (at === undefined) {
       continue; // names nothing; unordered, like a `free` step
     }
-    const slot = at * 3 + NEARBY[step.order.when ?? 'during'];
-    const group = byPhase.get(slot) ?? [];
-    byPhase.set(slot, group);
+    const group = byPhase.get(at) ?? [];
+    byPhase.set(at, group);
     group.push(step);
   }
   const populated = [...byPhase.keys()].sort((a, b) => a - b);
