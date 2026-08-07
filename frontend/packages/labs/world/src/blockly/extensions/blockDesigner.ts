@@ -137,13 +137,7 @@ export const defaultParts = (): BlockPart[] => [
 export const isActorScoped = (block: {
   type?: string;
   getRootBlock?: () => {type?: string} | null;
-}): boolean =>
-  // An event is never drawn with a subject socket. Its hat has one — whose
-  // handler this is — but that is the hat's, not part of the phrasing being
-  // designed here, and a preview showing two subjects would be a lie about the
-  // block it makes.
-  block.type !== 'world_rule_event' &&
-  block.getRootBlock?.()?.type === 'world_rule_trait';
+}): boolean => block.getRootBlock?.()?.type === 'world_rule_trait';
 
 /** The wording a signature reads as, for a name (labels joined). */
 export const partsName = (parts: readonly BlockPart[]): string =>
