@@ -51,11 +51,17 @@ const drag = rule.block({
   body: ({target, slack, here}) => [
     when([
       // Further ahead than the slack: sit exactly that far behind it.
-      [moreThan(target, add(here, slack)), [give(minus(target, slack))]],
-      [lessThan(target, minus(here, slack)), [give(add(target, slack))]],
+      [
+        moreThan(target.get(), add(here.get(), slack.get())),
+        [give(minus(target.get(), slack.get()))],
+      ],
+      [
+        lessThan(target.get(), minus(here.get(), slack.get())),
+        [give(add(target.get(), slack.get()))],
+      ],
     ]),
     // Inside the slack: do not move at all.
-    give(here),
+    give(here.get()),
   ],
 });
 

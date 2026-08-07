@@ -165,7 +165,10 @@ describe('rules/solid.rule', () => {
     // wall still travels one frame's worth every frame. Undoing that frame's
     // slide is what makes "grippier than gravity" mean stuck.
     expect(source).toContain('logic_ternary');
-    expect(source.match(/colWas2/g)?.length).toBeGreaterThan(2);
+    // By the variable's NAME, not its id. An id is internal — Blockly resolves
+    // by it and which string it is means nothing — and this rule is generated
+    // from `scripts/rules/solid.mjs`, which derives its own.
+    expect(source.match(/"name": "was"/g)?.length).toBeGreaterThan(2);
   });
 
   it('reads them off the solid it is pushing out of, never off the body', () => {

@@ -48,10 +48,10 @@ const kept = rule.block({
   say: [param('value'), 'kept between', param('low'), 'and', param('high')],
   body: ({value, low, high}) => [
     when([
-      [lessThan(value, low), [give(low)]],
-      [moreThan(value, high), [give(high)]],
+      [lessThan(value.get(), low.get()), [give(low.get())]],
+      [moreThan(value.get(), high.get()), [give(high.get())]],
     ]),
-    give(value),
+    give(value.get()),
   ],
 });
 
