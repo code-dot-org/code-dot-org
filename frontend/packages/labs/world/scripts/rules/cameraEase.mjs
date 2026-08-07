@@ -46,7 +46,12 @@ const caughtUp = rule.block({
   // 1 - (1 - smoothness) ^ (seconds x 60): what is LEFT of the gap after this
   // frame, taken away from all of it.
   body: ({smoothness, seconds}) => [
-    give(minus(n(1), power(minus(n(1), smoothness), times(seconds, n(60))))),
+    give(
+      minus(
+        n(1),
+        power(minus(n(1), smoothness.get()), times(seconds.get(), n(60))),
+      ),
+    ),
   ],
 });
 

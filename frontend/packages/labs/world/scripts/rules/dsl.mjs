@@ -27,7 +27,46 @@ const SLUG = text => text.replaceAll(/[^A-Za-z0-9_]/g, '_');
 /** How a block type names the rule it belongs to: nothing but alphanumerics. */
 const RULE_SLUG = name => name.replace(/[^A-Za-z0-9]/g, '');
 
-const value = block => ({block});
+/**
+ * A socket's contents.
+ *
+ * A SHADOW is the greyed-in default a block is seeded with — deleting whatever
+ * is plugged in reveals it again — where a plain block is something an author
+ * put there. The two serialize differently and Blockly treats them differently,
+ * so `shadow()` marks one rather than leaving it to guesswork.
+ */
+const value = block =>
+  block && block[SHADOW] ? {shadow: bare(block)} : {block};
+
+/** The marker itself, so it cannot collide with a block's own keys. */
+const SHADOW = Symbol('shadow');
+
+/** The block without its marker — a Symbol key is not serialized anyway, but
+ *  dropping it keeps what is written and what is held the same shape. */
+const bare = block => {
+  const rest = {...block};
+  delete rest[SHADOW];
+  return rest;
+};
+
+/** Mark a value as the socket's default rather than something put there. */
+export const shadow = block => ({...block, [SHADOW]: true});
+
+/** A block, with `inputs` left off entirely when it has none — as Blockly writes it. */
+const withInputs = (block, inputs) =>
+  Object.keys(inputs).length ? {...block, inputs} : block;
+
+/** The variable type a parameter of this kind binds to in the workspace. */
+const VARIABLE_TYPE = type =>
+  type.startsWith('enum:') || type === 'string'
+    ? 'String'
+    : type === 'actor'
+      ? 'Actor'
+      : type === 'vector' || type === 'point'
+        ? 'Vector'
+        : type === 'boolean'
+          ? 'Boolean'
+          : 'Number';
 
 // ── Expressions ──────────────────────────────────────────────────────────────
 
@@ -73,6 +112,83 @@ export const give = v => ({type: 'world_return', inputs: {VALUE: value(v)}});
 
 export const note = text => ({type: 'world_comment', fields: {TEXT: text}});
 
+export const yes = () => ({type: 'logic_boolean', fields: {BOOL: 'TRUE'}});
+export const no = () => ({type: 'logic_boolean', fields: {BOOL: 'FALSE'}});
+export const not = a => ({type: 'logic_negate', inputs: {BOOL: value(a)}});
+const logic = (op, a, b) => ({
+  type: 'logic_operation',
+  fields: {OP: op},
+  inputs: {A: value(a), B: value(b)},
+});
+export const both = (a, b) => logic('AND', a, b);
+export const either = (a, b) => logic('OR', a, b);
+export const equals = (a, b) => compare('EQ', a, b);
+export const atLeast = (a, b) => compare('GTE', a, b);
+export const atMost = (a, b) => compare('LTE', a, b);
+
+/** `<test> ? <then> : <otherwise>` — a value, where `when` is a statement. */
+export const pick = (test, then, otherwise) => ({
+  type: 'logic_ternary',
+  inputs: {IF: value(test), THEN: value(then), ELSE: value(otherwise)},
+});
+
+const single = (op, a) => ({
+  type: 'math_single',
+  fields: {OP: op},
+  inputs: {NUM: value(a)},
+});
+export const absolute = a => single('ABS', a);
+export const negated = a => single('NEG', a);
+export const root = a => single('ROOT', a);
+
+/** `<a> <plus|minus|toward…> <b>` on whole vectors. */
+const vectorOp = (method, a, b) => ({
+  type: 'world_vector_math',
+  fields: {OP: method},
+  inputs: {A: value(a), B: value(b)},
+});
+export const vectorPlus = (a, b) => vectorOp('ADD', a, b);
+export const vectorMinus = (a, b) => vectorOp('SUBTRACT', a, b);
+export const vectorTimes = (a, b) => vectorOp('MULTIPLY', a, b);
+export const vectorOver = (a, b) => vectorOp('DIVIDE', a, b);
+
+export const rotated = (v, degrees) => ({
+  type: 'world_vector_rotate',
+  inputs: {VECTOR: value(v), DEGREES: value(degrees)},
+});
+
+export const vector = (x, y) => ({
+  type: 'world_vector_of',
+  inputs: {X: value(x), Y: value(y)},
+});
+
+export const keyDown = key => ({
+  type: 'world_is_key_down',
+  fields: {KEY: key},
+});
+
+export const pixelsPerUnit = () => ({type: 'world_pixels_per_unit'});
+
+/** `<subject> has trait <Rule#Trait>`. */
+/** `add <actor> to <list>` — the list is a VARIABLE, named in a field. */
+export const pushActor = (list, actor) => ({
+  type: 'world_push_actor',
+  fields: {LIST: {...list.field, type: list.type}},
+  inputs: {ACTOR: value(actor)},
+});
+
+/** `empty <list>`. */
+export const clearActors = list => ({
+  type: 'world_clear_actors',
+  fields: {LIST: {...list.field, type: list.type}},
+});
+
+export const hasTrait = (subject, traitRef) => ({
+  type: 'world_has_trait',
+  fields: {TRAIT: traitRef},
+  inputs: {ACTOR: value(subject)},
+});
+
 /** Chain statements through `next`, the way a body hangs together. */
 const chain = blocks =>
   blocks
@@ -98,12 +214,14 @@ export const when = (branches, otherwise) => {
   if (otherwise) {
     inputs.ELSE = value(chain(otherwise));
   }
+  // Blockly's own shape for this mutator: how many extra tests, and whether
+  // there is an else. Both are written when there is an else, even a zero.
   const extra = {};
-  if (branches.length > 1) {
+  if (branches.length > 1 || otherwise) {
     extra.elseIfCount = branches.length - 1;
   }
   if (otherwise) {
-    extra.elseCount = 1;
+    extra.hasElse = true;
   }
   return {
     type: 'controls_if',
@@ -111,6 +229,51 @@ export const when = (branches, otherwise) => {
     inputs,
   };
 };
+
+/**
+ * A local variable: the getter, the setter, and the field a loop binds it in.
+ *
+ * Made through `rule.local` rather than on its own, because a workspace has to
+ * DECLARE its variables as well as use them — a block referring to one that is
+ * not in the map loads with an empty field.
+ *
+ * Blockly resolves a variable by ID and treats the name on a block as a hint,
+ * so both live here — the committed `cameraConfined` had the two disagreeing,
+ * which showed up nowhere because the map won.
+ */
+function makeLocal(id, name, type) {
+  const field = {id, name};
+  return {
+    id,
+    name,
+    type,
+    field,
+    get: () => ({type: `variables_get_${type}`, fields: {VAR: field}}),
+    set: v => ({
+      type: `variables_set_${type}`,
+      fields: {VAR: field},
+      inputs: {VALUE: value(v)},
+    }),
+  };
+}
+
+/** `for each actor <var> in <list> where <test> do <…>`. */
+export const forEach = (variable, {where, from, body}) => ({
+  type: 'world_for_each',
+  fields: {VAR: variable.field},
+  inputs: {
+    ...(from ? {SOURCE: value(from)} : {}),
+    WHERE: value(where),
+    DO: value(chain(body)),
+  },
+});
+
+/** `for each newly <pressed|released> key <var> do <…>`. */
+export const forEachKey = (edge, variable, body) => ({
+  type: 'world_for_each_key',
+  fields: {EDGE: edge, VAR: variable.field},
+  inputs: {DO: value(chain(body))},
+});
 
 // ── Members ──────────────────────────────────────────────────────────────────
 
@@ -123,9 +286,13 @@ export const param = (name, type = 'number') => ({kind: 'param', name, type});
  * `point` is two axes: its getter picks one with a dropdown and its setter takes
  * both. Everything else is a single value.
  */
-function property(ruleName, traitId, {name, type, value: initial}) {
+function property(ruleName, traitId, {name, type, value: initial, readonly}) {
   const exportName = `${PASCAL(name)}Property`;
   const key = `${RULE_SLUG(ruleName)}_${exportName}`;
+  // A world property belongs to the rule and has nobody to name, so its blocks
+  // take no subject socket; everything else says whose it is.
+  const scoped = traitId !== undefined;
+  const subject = who => (scoped ? {ACTOR: value(who)} : {});
   const self = {
     name,
     type,
@@ -134,40 +301,136 @@ function property(ruleName, traitId, {name, type, value: initial}) {
       type: 'world_rule_property',
       fields: {
         TYPE: type,
-        ACCESS: 'writable',
+        ACCESS: readonly ? 'readonly' : 'writable',
         NAME: name,
         DEFAULT:
-          type === 'point'
+          type === 'point' || type === 'vector'
             ? `${initial?.x ?? 0},${initial?.y ?? 0}`
             : String(initial ?? ''),
       },
     },
     /** `get <name> of <subject>` — for everything but a point. */
-    of: subject => ({
-      type: `world_get_${key}`,
-      inputs: {ACTOR: value(subject)},
-    }),
+    of: who => withInputs({type: `world_get_${key}`}, {...subject(who)}),
     /** `get <name> <x|y> of <subject>` — a point reports one axis. */
-    axis: (which, subject) => ({
-      type: `world_get_${key}`,
-      fields: {COMPONENT: which},
-      inputs: {ACTOR: value(subject)},
-    }),
-    set: (subject, ...values) => ({
-      type: `world_set_${key}`,
-      inputs:
-        type === 'point'
-          ? {
-              ACTOR: value(subject),
-              X: value(values[0]),
-              Y: value(values[1]),
-            }
-          : {ACTOR: value(subject), VALUE: value(values[0])},
-    }),
+    axis: (which, who) =>
+      withInputs(
+        {type: `world_get_${key}`, fields: {COMPONENT: which}},
+        {...subject(who)},
+      ),
+    set: (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return {
+        type: `world_set_${key}`,
+        inputs:
+          type === 'point'
+            ? {...subject(who), X: value(args[0]), Y: value(args[1])}
+            : {...subject(who), VALUE: value(args[0])},
+      };
+    },
   };
-  self.x = subject => self.axis('x', subject);
-  self.y = subject => self.axis('y', subject);
+  self.x = who => self.axis('x', who);
+  self.y = who => self.axis('y', who);
   return self;
+}
+
+/**
+ * Declare a designed block, and hand back the call that uses it.
+ *
+ * Reporting something makes it a QUERY and reporting nothing makes it an
+ * ACTION, which is the same distinction `world_rule_block`'s RETURNS field
+ * makes — and it decides the call block's type, so it is read here rather than
+ * written down twice.
+ */
+function declareBlock(ruleSlug, into, variables, spec, scoped) {
+  const {returns = 'number', description, say, body} = spec;
+  const params = say.filter(part => typeof part !== 'string');
+  const refs = {};
+  params.forEach(part => {
+    const id = `${ruleSlug}_${SLUG(part.name)}`;
+    const type = VARIABLE_TYPE(part.type);
+    if (!variables.some(v => v.id === id)) {
+      variables.push({id, name: part.name, type});
+    }
+    refs[part.name] = makeLocal(id, part.name, type);
+  });
+  const wording = say
+    .filter(part => typeof part === 'string')
+    .join(' ')
+    .trim();
+  const reports = returns && returns !== 'none';
+  const exportName = `${PASCAL(wording)}${reports ? 'Query' : 'Action'}`;
+
+  into.push({
+    type: 'world_rule_block',
+    fields: {RETURNS: returns, DESCRIPTION: description},
+    extraState: {
+      parts: say.map(part =>
+        typeof part === 'string'
+          ? {kind: 'label', text: part}
+          : {
+              kind: 'param',
+              type: part.type,
+              var: `${ruleSlug}_${SLUG(part.name)}`,
+              name: part.name,
+            },
+      ),
+    },
+    inputs: {DO: value(chain(body(refs)))},
+  });
+
+  /** Calling it: sockets are named from the parameters, uppercased. */
+  const kind = reports ? 'query' : 'do';
+  return (args = {}, subject) => ({
+    type: `world_${kind}_${ruleSlug}_${exportName}`,
+    inputs: {
+      ...Object.fromEntries(
+        params.map(part => [part.name.toUpperCase(), value(args[part.name])]),
+      ),
+      ...(scoped && subject !== undefined ? {ACTOR: value(subject)} : {}),
+    },
+  });
+}
+
+/**
+ * Declare an event and hand back the block that raises it.
+ *
+ * The emit's type is built from the event's wording, exactly as the hat's is —
+ * one declaration, so raising an event a rule declares needs no string.
+ */
+function declareEvent(rule, ruleSlug, into, say, scope, variables) {
+  const parts = say.map(part => {
+    if (typeof part === 'string') {
+      return {kind: 'label', text: part};
+    }
+    // Its parameter is a workspace variable like any other, and two events
+    // naming the same one share it — which is what `rules/input` does, its
+    // trait's events carrying the same key as the world's.
+    const id = `${ruleSlug}_${SLUG(part.name)}`;
+    if (!variables.some(v => v.id === id)) {
+      variables.push({id, name: part.name, type: VARIABLE_TYPE(part.type)});
+    }
+    return {kind: 'param', type: part.type, var: id};
+  });
+  into.push({type: 'world_rule_event', extraState: {parts}});
+  const wording = say
+    .filter(part => typeof part === 'string')
+    .join(' ')
+    .trim();
+  const exportName = `${PASCAL(wording)}Event`;
+  const params = say.filter(part => typeof part !== 'string');
+  /** `emit <…>` — `for <subject>` only when the event has one. */
+  return (carried = {}, subject) => ({
+    type: `world_emit_${ruleSlug}_${exportName}`,
+    inputs: {
+      ...Object.fromEntries(
+        params.map(part => [
+          params.length > 1 ? part.name.toUpperCase() : 'VALUE',
+          value(carried[part.name]),
+        ]),
+      ),
+      ...(scope === 'world' ? {} : {ACTOR: value(subject)}),
+    },
+  });
 }
 
 // ── The rule ─────────────────────────────────────────────────────────────────
@@ -175,6 +438,7 @@ function property(ruleName, traitId, {name, type, value: initial}) {
 export function defineRule({name, ability, header}) {
   const ruleSlug = RULE_SLUG(name);
   const chainMembers = [];
+  const steps = [];
   const traits = [];
   const variables = [];
 
@@ -182,6 +446,24 @@ export function defineRule({name, ability, header}) {
     name,
     ability,
     header,
+
+    /**
+     * A variable this rule's bodies use — a loop's subject, a working value.
+     *
+     * Declared here so it reaches the workspace's variable map. Blockly resolves
+     * one by ID and treats the name on a block as a hint, so a variable used
+     * without being declared loads with nothing in its field.
+     */
+    local(varName, type = 'Actor') {
+      const id = `${ruleSlug}_${SLUG(varName)}`;
+      // Deduped: a working variable and a designed block's parameter may share
+      // a name, and they are then the same variable — which is what the
+      // workspace means by one ID.
+      if (!variables.some(v => v.id === id)) {
+        variables.push({id, name: varName, type});
+      }
+      return makeLocal(id, varName, type);
+    },
 
     /** `use rule <other>` — by NAME, which is how every reference works. */
     uses(other) {
@@ -197,47 +479,61 @@ export function defineRule({name, ability, header}) {
      * block's type is built from — so declaring it here is what makes calling
      * it possible without writing that string down twice.
      */
-    block({returns = 'number', description, say, body}) {
-      const params = say.filter(part => typeof part !== 'string');
-      const refs = {};
-      params.forEach(part => {
-        const id = `${ruleSlug}_${SLUG(part.name)}`;
-        variables.push({id, name: part.name, type: 'Number'});
-        refs[part.name] = {
-          type: 'variables_get_Number',
-          fields: {VAR: {id, name: part.name}},
-        };
-      });
-      const wording = say
-        .filter(part => typeof part === 'string')
-        .join(' ')
-        .trim();
-      const exportName = `${PASCAL(wording)}Query`;
+    block: spec => declareBlock(ruleSlug, chainMembers, variables, spec, false),
 
-      chainMembers.push({
-        type: 'world_rule_block',
-        fields: {RETURNS: returns, DESCRIPTION: description},
-        extraState: {
-          parts: say.map(part =>
-            typeof part === 'string'
-              ? {kind: 'label', text: part}
-              : {
-                  kind: 'param',
-                  type: part.type,
-                  var: `${ruleSlug}_${SLUG(part.name)}`,
-                },
-          ),
-        },
-        inputs: {DO: value(chain(body(refs)))},
-      });
+    /**
+     * An event, and the block that raises it.
+     *
+     * Declared on the RULE it is the world's — raised once, handled with no
+     * actor. Declared under a trait it is that subject's. Where it is chained
+     * decides which, so `event` here and `trait.event` are different members.
+     */
+    event(say) {
+      return declareEvent(
+        rule,
+        ruleSlug,
+        chainMembers,
+        say,
+        'world',
+        variables,
+      );
+    },
 
-      /** Calling it: sockets are named from the parameters, uppercased. */
-      return args => ({
-        type: `world_query_${ruleSlug}_${exportName}`,
-        inputs: Object.fromEntries(
-          params.map(part => [part.name.toUpperCase(), value(args[part.name])]),
-        ),
+    /**
+     * A property of the RULE — the world's, not any subject's.
+     *
+     * Its blocks take no `of <…>` socket: there is nobody to name, which is
+     * what world-scoped means. Gravity's direction and strength are these.
+     */
+    property(spec) {
+      const made = property(name, undefined, spec);
+      chainMembers.push(made.declaration);
+      return made;
+    },
+    number: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'number', value: initial, ...opts}),
+    point: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'point', value: initial, ...opts}),
+    vector: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'vector', value: initial, ...opts}),
+    boolean: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'boolean', value: initial, ...opts}),
+
+    /**
+     * A per-tick step of the RULE's own — a top block beside it, not chained
+     * inside, and run once with `(world, delta)` rather than per subject.
+     *
+     * Where work goes that fits no single actor: reading the keyboard, walking
+     * every pair of bodies. A step that IS about one subject belongs under the
+     * trait that elects it (`trait.step`), which walks them for you.
+     */
+    step(stepName, phase, body) {
+      steps.push({
+        type: 'world_rule_step_in',
+        fields: {NAME: stepName, PHASE: phase},
+        ...(body.length ? {next: {block: chain(body)}} : {}),
       });
+      return rule;
     },
 
     /** A trait, and the members that belong to whatever elects it. */
@@ -255,13 +551,43 @@ export function defineRule({name, ability, header}) {
           members.push(made.declaration);
           return made;
         },
-        number: (propName, initial) =>
-          self.property({name: propName, type: 'number', value: initial}),
-        point: (propName, initial) =>
-          self.property({name: propName, type: 'point', value: initial}),
-        actors: propName =>
-          self.property({name: propName, type: 'actors', value: ''}),
+        number: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'number',
+            value: initial,
+            ...opts,
+          }),
+        point: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'point',
+            value: initial,
+            ...opts,
+          }),
+        vector: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'vector',
+            value: initial,
+            ...opts,
+          }),
+        boolean: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'boolean',
+            value: initial,
+            ...opts,
+          }),
+        actors: (propName, opts) =>
+          self.property({name: propName, type: 'actors', value: '', ...opts}),
         /** Runs once a frame for each subject that has this trait. */
+        /** A block this trait adds, asked OF whatever elected it. */
+        block: spec => declareBlock(ruleSlug, members, variables, spec, true),
+        /** An event about whatever elected this trait. */
+        event(say) {
+          return declareEvent(rule, ruleSlug, members, say, 'actor', variables);
+        },
         step(stepName, phase, body) {
           members.push({
             type: 'world_trait_step',
@@ -296,9 +622,13 @@ export function defineRule({name, ability, header}) {
           ...(chainMembers.length ? {next: {block: chain(chainMembers)}} : {}),
         },
         ...traits.map(trait => trait.root()),
+        ...steps,
       ];
       return {
-        blocks: {blocks: layout(roots)},
+        // What Blockly itself writes at the top of a serialized workspace. It
+        // reads it back and a file without one still loads, but a generated
+        // workspace should be the shape the editor would have saved.
+        blocks: {languageVersion: 0, blocks: layout(roots)},
         ...(variables.length ? {variables} : {}),
       };
     },

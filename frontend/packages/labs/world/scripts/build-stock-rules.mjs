@@ -16,6 +16,12 @@ const here = dirname(fileURLToPath(import.meta.url));
 const out = join(here, '..', 'src', 'rules', 'stock');
 
 const RULES = [
+  'input',
+  'arrows',
+  'motion',
+  'collisions',
+  'gravity',
+  'solid',
   'camera',
   'cameraFollow',
   'cameraEase',
