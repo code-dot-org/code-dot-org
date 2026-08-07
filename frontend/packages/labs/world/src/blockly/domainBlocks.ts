@@ -692,6 +692,16 @@ const onHandler = (target: string, eventRef: string, body: string): string =>
   `${body}});\n`;
 
 /**
+ * The same for an event that is about the WORLD.
+ *
+ * Registered on `world` and handed no actor, because there is none — the event
+ * happened to the world. `world` is bound at module scope in a `.world` file
+ * (it is the builder), which is where such a handler belongs.
+ */
+const onWorldHandler = (eventRef: string, body: string): string =>
+  `world.on(${eventRef}, (world, eventValue) => {\n${body}});\n`;
+
+/**
  * The generated code of the blocks chained below `block` — its handler body.
  * The top-level generation pass (BlocklyGenerator) generates these roots with
  * `thisOnly`, so the block owns its next chain here rather than having it
@@ -722,12 +732,16 @@ const ANY_CHOICE: [string, string] = ['(any)', ''];
  * block with a different word in it (specs/ENUMS.md).
  */
 const defineEventBlock = (event: EventMeta) => {
-  const args0: BlockArgDefinition[] = [
-    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-  ];
-  const extensions: Extension[] = [actorSubjectExtension];
-  // `%1` is the actor; the phrasing follows it.
-  let message0 = 'when %1';
+  // A world event has no subject to socket: it happened to the world, not to
+  // anybody in it. So the hat reads `when ⟨space⟩ is pressed` rather than
+  // `when ⟨actor⟩ …`, and registers on the world.
+  const forActor = event.scope !== 'world';
+  const args0: BlockArgDefinition[] = forActor
+    ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}]
+    : [];
+  const extensions: Extension[] = forActor ? [actorSubjectExtension] : [];
+  // `%1` is the actor, when there is one; the phrasing follows it.
+  let message0 = forActor ? 'when %1' : 'when';
   const filters: Array<{field: string; ref: string}> = [];
   for (const part of event.parts ?? [{kind: 'label', text: event.name}]) {
     if (part.kind === 'label') {
@@ -762,10 +776,12 @@ const defineEventBlock = (event: EventMeta) => {
     inputsInline: true,
     extensions,
     style: 'event_blocks',
-    tooltip: `Run the blocks below when this actor ${event.name}.`,
+    tooltip: forActor
+      ? `Run the blocks below when this actor ${event.name}.`
+      : `Run the blocks below when ${event.name}. It is about the world, so ` +
+        `there is no actor it happened to.`,
     generator: {
       javascript(block, generator) {
-        const target = actorTarget(block, generator, Order.MEMBER);
         // The guard a learner would otherwise write themselves: compare the
         // event's value against the choice and leave if it is not the one.
         const guards = filters
@@ -773,11 +789,12 @@ const defineEventBlock = (event: EventMeta) => {
           .filter(value => value)
           .map(value => `  if (eventValue !== ${str(value)}) return;\n`)
           .join('');
-        return onHandler(
-          target.code,
-          refCode(event.ref, generator),
-          guards + nextChainCode(block, generator),
-        );
+        const body = guards + nextChainCode(block, generator);
+        if (!forActor) {
+          return onWorldHandler(refCode(event.ref, generator), body);
+        }
+        const target = actorTarget(block, generator, Order.MEMBER);
+        return onHandler(target.code, refCode(event.ref, generator), body);
       },
     },
   });
@@ -830,9 +847,14 @@ const defineEmitBlock = (event: EventMeta) => {
     shadows.push(...built.shadows);
     message0 += ` ${built.message}`;
   }
-  // The subject last, as `emit … for …` always read.
-  args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
-  message0 += ` for %${args0.length}`;
+  // The subject last, as `emit … for …` always read — and only when there is
+  // one. A world event happened to the world, so there is nobody to raise it
+  // for, and saying `for ⟨some actor⟩` would be inventing a subject.
+  const forActor = event.scope !== 'world';
+  if (forActor) {
+    args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
+    message0 += ` for %${args0.length}`;
+  }
 
   const type = emitBlockType(event);
   if (shadows.length) {
@@ -846,15 +868,17 @@ const defineEmitBlock = (event: EventMeta) => {
     previousStatement: true,
     nextStatement: true,
     extensions: [
-      actorInputExtension,
+      ...(forActor ? [actorInputExtension] : []),
       worldContextExtension,
       ...(shadows.length ? [valueShadowExtension] : []),
     ],
     style: 'event_blocks',
-    tooltip: `Raise "${event.name}" for an actor — every “when …” handler listening for it runs.`,
+    tooltip: forActor
+      ? `Raise "${event.name}" for an actor — every “when …” handler listening for it runs.`
+      : `Raise "${event.name}" — every “when …” handler listening for it runs. ` +
+        `It is about the world, so it is raised once rather than per actor.`,
     generator: {
       javascript(block, generator) {
-        const target = actorTarget(block, generator);
         const carried = names
           .slice(0, paramIndex)
           .map(name => generator.valueToCode(block, name.value, Order.NONE))
@@ -864,6 +888,11 @@ const defineEmitBlock = (event: EventMeta) => {
         // being written), and imports it otherwise.
         const event_ = refCode(event.ref, generator);
         const values = carried.map(code => `, ${code}`).join('');
+        if (!forActor) {
+          // Once, however many actors are in the world.
+          return `world.emitToWorld(${event_}${values});\n`;
+        }
+        const target = actorTarget(block, generator);
         return forEachActor(
           target,
           actor => `world.emit(${event_}, ${actor}${values})`,

@@ -39,7 +39,13 @@ import type {AnimationDef} from '../core/animationTypes';
 import type {Camera, CameraInit} from '../core/Camera';
 import type {ColorValue} from '../core/color';
 import {DEFAULT_LAYER_ID, type LayerInit} from '../core/Layer';
-import type {AppliedEffectSpec, Property, Rule} from '../core/types';
+import type {
+  AppliedEffectSpec,
+  GameEvent,
+  Property,
+  Rule,
+  WorldEventHandler,
+} from '../core/types';
 import type {Vector} from '../core/Vector';
 import {World} from '../core/World';
 import {AnimationRule} from '../rules/animation';
@@ -223,6 +229,17 @@ export class WorldBuilder {
   // The rest is the World's surface, deferred. Each is one line on purpose:
   // the doc comment says what the block means here, `World`'s says what the
   // call does, and there is no third thing to keep in step.
+
+  /**
+   * Handle a world event. See {@link World.on}.
+   *
+   * Deferred like everything else, so a `when ⟨space⟩ is pressed` hat at module
+   * scope in a `.world` file registers on the world this describes — `world` is
+   * this builder there, and the same call has to be right in a handler too.
+   */
+  on(event: GameEvent, handler: WorldEventHandler): this {
+    return this.defer('on', event, handler);
+  }
 
   /** Set a world-scoped property. See {@link World.set}. */
   set<T>(property: Property<T>, value: T): this {

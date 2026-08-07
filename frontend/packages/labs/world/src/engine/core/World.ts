@@ -35,6 +35,7 @@ import type {
   Rule,
   Step,
   WorldAction,
+  WorldEventHandler,
   WorldQuery,
 } from './types';
 import {Vector} from './Vector';
@@ -319,6 +320,14 @@ export class World {
   private readonly actorList: Actor[] = [];
   private readonly scheduler: Scheduler;
   private readonly events = new EventQueue();
+  /**
+   * Handlers for the world's own events, by event.
+   *
+   * On the World rather than on some actor standing in for it. `rules/input`
+   * used to raise its key events once per actor per frame purely to have a
+   * subject, and every `.actor` that cared had to register on itself.
+   */
+  private readonly worldHandlers = new Map<GameEvent, WorldEventHandler[]>();
   // Animations known to this world, by id — seeded from the active rules' stock
   // animations. The Animation rule's step and renderSnapshot resolve ids here.
   private readonly animationDefs = new Map<string, AnimationDef>();
@@ -630,6 +639,40 @@ export class World {
   /** Raise an event for `actor`; dispatched after the current tick's steps. */
   emit(event: GameEvent, actor: Actor, detail?: unknown): void {
     this.events.enqueue(event, actor, detail);
+  }
+
+  /**
+   * Raise an event that is about the WORLD — a key went down, a level was
+   * cleared — with no actor it happened to.
+   *
+   * A separate method rather than an optional argument, because the two say
+   * different things and `emit(event, detail)` would read as an actor with the
+   * detail in its place. Which of the two a rule uses is decided by where it
+   * declared the event: under a trait it is an actor's, on the rule it is the
+   * world's.
+   *
+   * Dispatched with the actor ones, after this tick's steps.
+   */
+  emitToWorld(event: GameEvent, detail?: unknown): void {
+    this.events.enqueue(event, undefined, detail);
+  }
+
+  /**
+   * Handle a world event. The counterpart of `Actor.on`, and the reason a world
+   * event needs no actor to be raised for: the world holds the handlers.
+   */
+  on(event: GameEvent, handler: WorldEventHandler): void {
+    const list = this.worldHandlers.get(event);
+    if (list) {
+      list.push(handler);
+    } else {
+      this.worldHandlers.set(event, [handler]);
+    }
+  }
+
+  /** Handlers registered for a world event; used by the EventQueue on flush. */
+  handlersFor(event: GameEvent): readonly WorldEventHandler[] {
+    return this.worldHandlers.get(event) ?? [];
   }
 
   /** Replace the pressed-key set (driver calls this each frame before `tick`). */

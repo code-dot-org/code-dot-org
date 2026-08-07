@@ -185,6 +185,17 @@ export type EventHandler = (
 ) => void;
 
 /**
+ * A handler for an event that is about the WORLD rather than about an actor.
+ *
+ * An event belongs to whatever it is about, the way a property does: declared
+ * under a trait it is an actor's ("this actor started falling"), declared on
+ * the rule it is the world's ("a key went down"). The second has no actor to
+ * hand a handler, and pretending otherwise is what made `rules/input` raise its
+ * key events once per actor per frame just to have somebody to raise them for.
+ */
+export type WorldEventHandler = (world: World, detail?: unknown) => void;
+
+/**
  * Where a Step sits in the per-tick order. `before`/`after` anchor to another
  * rule's Step; `first`/`last` pin to the ends; `free` is unordered. The
  * Scheduler turns these constraints into a total order (and rejects cycles).

@@ -417,6 +417,11 @@ describe('parseRuleMeta', () => {
       {
         id: 'gusted',
         name: 'gusted',
+        // Chained under a trait, so it is about an ACTOR — a handler gets one.
+        // Declared on the rule instead it would be the world's, with no actor
+        // to hand over (`EventMeta.scope`).
+        scope: 'actor',
+        ownerTraitId: 'Windblown',
         // Its designed phrasing: one label, and no choice to filter on.
         parts: [{kind: 'label', text: 'gusted'}],
         ref: {
