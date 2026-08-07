@@ -42,7 +42,7 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
       current_batch_size = [BATCH_SIZE, limit - processed_count].min
       break unless current_batch_size.positive?
 
-      from_storage_id = last_storage_id.to_i.next
+      from_storage_id = last_storage_id&.next
       missing_project_storage_geos_batch = missing_project_storage_geos(from_storage_id:, limit: current_batch_size)
       break if missing_project_storage_geos_batch.empty?
 
@@ -82,7 +82,6 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
   private def unlocated_storages
     ActiveRecord::Base.connected_to(role: :reporting) do
       ProjectStorage.
-        optimizer_hints("INDEX(#{ProjectStorage.table_name} PRIMARY)").
         where(user_id: nil).
         # LEFT OUTER JOIN project_storage_geos geo ON geo.storage_id = user_project_storage_ids.id WHERE geo.id IS NULL
         where.missing(:geo).
@@ -91,9 +90,17 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
     end
   end
 
-  private def missing_project_storage_geos(from_storage_id: 1, limit: BATCH_SIZE)
+  private def missing_project_storage_geos(from_storage_id: nil, limit: BATCH_SIZE)
     ActiveRecord::Base.connected_to(role: :reporting) do
-      unlocated_storage_ids_batch = unlocated_storages.where(id: from_storage_id..).order(:id).limit(limit).pluck(:id)
+      unlocated_storages_batch = unlocated_storages.order(:id).limit(limit)
+
+      if from_storage_id
+        unlocated_storages_batch = unlocated_storages_batch.
+          optimizer_hints("INDEX(#{ProjectStorage.table_name} PRIMARY)").
+          where(id: from_storage_id..)
+      end
+
+      unlocated_storage_ids_batch = unlocated_storages_batch.pluck(:id)
       return [] if unlocated_storage_ids_batch.empty?
 
       unlocated_storage_numbered_projects = Project.
