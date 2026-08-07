@@ -2350,8 +2350,6 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_step_tick',
       'world_rule_step_in',
       'world_trait_step',
-      'world_rule_step_before',
-      'world_rule_step_after',
       'world_step_delta',
       // Reading and writing a variable is its own category (below): a rule's
       // parameters are variables like any other.
@@ -2407,6 +2405,22 @@ describe('builder-context warnings', () => {
       DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>
     ).find(c => c.name === 'Actor')?.blocks;
     expect(actor).toContain('variables_get_Actor');
+  });
+
+  it('keeps the retired step anchors loadable but unoffered', () => {
+    // `before ⟨Rule ▸ Step⟩` was how a rule said when it ran, and it made every
+    // such rule name another one. Phases say it without the reference, so these
+    // two are gone from the palette — but still DEFINED, because a saved
+    // workspace may hold one and an unknown block type is a project that will
+    // not open. Deleting them needs a workspace migration that does not exist.
+    const rule = (
+      DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>
+    ).find(c => c.name === 'Rule')?.blocks;
+
+    for (const type of ['world_rule_step_before', 'world_rule_step_after']) {
+      expect(rule, type).not.toContain(type);
+      expect(extensionsOf(type), type).toBeDefined();
+    }
   });
 
   it('guards `use trait`, whose `useTraits` is builder-only', () => {

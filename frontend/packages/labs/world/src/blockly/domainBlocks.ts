@@ -4138,6 +4138,18 @@ const anchorArg: BlockArgDefinition = {
   options: stepOptions,
 };
 
+// Retired from the palette, kept in the registry (see the Rule category).
+//
+// "Before Motion moves things" was the only way to place a step, and it made
+// every rule that had an opinion about when it ran name another rule to say so.
+// A phase says the same thing without the reference. These two stay defined
+// because a saved workspace may still hold one, and a block type that vanishes
+// is a project that will not open — there is no load-time migration for
+// workspaces, only the user-driven renames in `rewriteWorkspaces`.
+//
+// Deleting them is a separate job that needs that migration first: an anchor
+// can be mapped to a phase only by looking up what phase the anchored step now
+// runs in, which is cross-file knowledge the rewriter does not have today.
 const worldRuleStepBefore = stepBlock(
   'world_rule_step_before',
   'before %1 do %2',
@@ -4647,8 +4659,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_step_tick',
       'world_rule_step_in',
       'world_trait_step',
-      'world_rule_step_before',
-      'world_rule_step_after',
+      // NOT `world_rule_step_before` / `world_rule_step_after`. They are still
+      // DEFINED (see DOMAIN_BLOCKS) so a workspace holding one still opens —
+      // an unknown block type is a project that will not load — but they are
+      // no longer offered, because naming another rule's step is the thing
+      // phases replaced. Nothing shipped uses them any more.
       'world_step_delta', // the frame time, inside a step
       // Reading and writing a variable lives in Variables (below), not here: a
       // rule's parameters are variables like any other, and a body wanting a
