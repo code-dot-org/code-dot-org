@@ -1,4 +1,5 @@
-import classNames from 'classnames';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -65,34 +66,32 @@ export default class HeaderPopup extends Component {
     return (
       <div>
         {!this.state.open && (
-          <button
+          <MuiIconButton
             type="button"
-            className={classNames(
-              'no-mc',
-              'header_popup_link',
-              styles.headerItem
-            )}
+            className={`no-mc header_popup_link ${styles.headerItem}`}
             onClick={this.handleClickOpen}
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            aria-label={i18n.moreAllCaps()}
           >
-            <i className={classNames('fa-solid fa-caret-down', styles.caret)} />
-            <div className={styles.more}>{i18n.moreAllCaps()}</div>
-          </button>
+            <FontAwesomeV6Icon iconName="down-from-dotted-line" />
+          </MuiIconButton>
         )}
 
         {this.state.open && (
           <div>
-            <button
+            <MuiIconButton
               type="button"
-              className={classNames(
-                'no-mc',
-                styles.headerItem,
-                styles.headerItemLess
-              )}
+              className={`no-mc ${styles.headerItem}`}
               onClick={this.handleClickClose}
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              aria-label={i18n.lessAllCaps()}
             >
-              <i className={classNames('fa-solid fa-caret-up', styles.caret)} />
-              <div className={styles.more}>{i18n.lessAllCaps()}</div>
-            </button>
+              <FontAwesomeV6Icon iconName="up-from-dotted-line" />
+            </MuiIconButton>
 
             <div className="header_popup" ref="headerPopup">
               <div
