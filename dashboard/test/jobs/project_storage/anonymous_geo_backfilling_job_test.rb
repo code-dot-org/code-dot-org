@@ -74,6 +74,23 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
         end
       end
     end
+
+    context 'when backfill exceeds maximum run time' do
+      let(:max_run_time) {0.001}
+
+      around do |test|
+        described_class.stub_const(:MAX_RUN_TIME, max_run_time) {test.call}
+      end
+
+      before do
+        described_instance.stubs(:perform).with {sleep(max_run_time * 2) && true}
+      end
+
+      it 'terminates job' do
+        Observability::Errors.expects(:capture_exception).with(instance_of(Timeout::Error)).once
+        perform_now
+      end
+    end
   end
 
   describe '#perform' do
