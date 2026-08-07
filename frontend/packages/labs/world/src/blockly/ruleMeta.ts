@@ -189,6 +189,8 @@ export interface StepOrderMeta {
    * changed still parses; the Scheduler leaves an unknown one unordered.
    */
   readonly phase?: string;
+  /** Inside that moment, or in the gap on either side. Absent reads as `during`. */
+  readonly when?: 'before' | 'during' | 'after';
 }
 
 /**
@@ -704,6 +706,17 @@ export function parseRuleMeta(
    * A step root → a StepMeta. Its ordering is the BLOCK TYPE, not a field:
    * `when tick` is unordered, `before`/`after` carry the anchor dropdown.
    */
+  /**
+   * Where a phased step sits relative to its moment.
+   *
+   * Absent reads as `during`, which is what a block saved before the field
+   * existed meant and what an unset dropdown means.
+   */
+  const stepWhen = (block: RuleBlock): 'before' | 'during' | 'after' => {
+    const when = field(block, 'WHEN');
+    return when === 'before' || when === 'after' ? when : 'during';
+  };
+
   const STEP_KIND: Record<string, StepOrderMeta['kind']> = {
     world_rule_step_tick: 'free',
     world_rule_step_before: 'before',
@@ -723,7 +736,7 @@ export function parseRuleMeta(
         name,
         ownerRef: selfRef,
         scope: 'world',
-        order: phase ? {kind, phase} : {kind: 'free'},
+        order: phase ? {kind, phase, when: stepWhen(block)} : {kind: 'free'},
       });
       return;
     }
@@ -763,7 +776,9 @@ export function parseRuleMeta(
       ownerRef: selfRef,
       scope: ownerSubject,
       ownerTraitId,
-      order: phase ? {kind: 'phase', phase} : {kind: 'free'},
+      order: phase
+        ? {kind: 'phase', phase, when: stepWhen(block)}
+        : {kind: 'free'},
     });
   };
 
@@ -1340,9 +1355,15 @@ export function ruleMetaToModule(
       : inner;
     const closure = `(world, delta) => {\n${run}}`;
     const {kind, anchor, phase} = step.order;
+    const inPhase =
+      step.order.when === 'before'
+        ? 'BeforePhase'
+        : step.order.when === 'after'
+          ? 'AfterPhase'
+          : 'In';
     const call =
       kind === 'phase' && phase
-        ? `rule.addStepIn(${q(step.id)}, ${q(phase)}, ${closure})`
+        ? `rule.addStep${inPhase}(${q(step.id)}, ${q(phase)}, ${closure})`
         : (kind === 'before' || kind === 'after') && anchor
           ? `rule.addStep${kind === 'before' ? 'Before' : 'After'}(${q(step.id)}, ${stepAnchorRef(anchor)}, ${closure})`
           : `rule.addStep(${q(step.id)}, ${closure})`;

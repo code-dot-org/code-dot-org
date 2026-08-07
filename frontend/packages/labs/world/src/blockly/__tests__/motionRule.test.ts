@@ -61,13 +61,16 @@ describe('rules/motion.rule', () => {
     expect(before?.params.map(p => p.type)).toEqual(['actor', 'number']);
   });
 
-  it('runs a step called `reposition`, which everything else anchors to', () => {
-    // Gravity runs before it, collision after it, arrows before it. The NAME is
-    // load-bearing: an anchor is `<RuleName>#<stepId>`.
+  it('is the moment velocity becomes position, and nothing anchors to it', () => {
+    // Four rules used to name this step to place themselves around it, so its
+    // NAME was load-bearing — an anchor is `<RuleName>#<stepId>`, and renaming
+    // it broke them. They each name a phase now, and this one names `move`, so
+    // the name is a label again.
     const [step] = meta.steps;
     expect(step.id).toBe('reposition');
-    expect(step.order.kind).toBe('free');
-    expect(module_).toContain('rule.addStep("reposition"');
+    expect(step.order.kind).toBe('phase');
+    expect(step.order.phase).toBe('move');
+    expect(module_).toContain('rule.addStepIn("reposition", "move"');
   });
 
   it('explains each block it defines', () => {

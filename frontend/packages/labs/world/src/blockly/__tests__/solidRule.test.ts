@@ -208,8 +208,7 @@ describe('rules/solid.rule', () => {
     // stops the two from being unordered relative to each other.
     const [step] = meta.steps;
     expect(step.id).toBe('resolve');
-    expect(step.order.kind).toBe('after');
-    expect(step.order.anchor?.ownerRef.ruleName).toBe('Collisions');
-    expect(step.order.anchor?.stepId).toBe('find');
+    expect(step.order.kind).toBe('phase');
+    expect(step.order.phase).toBe('settle');
   });
 });

@@ -4156,16 +4156,40 @@ const worldRuleStepAfter = stepBlock(
   [stepOptionsExtension],
 );
 
+/**
+ * Where a step sits relative to the moment it names.
+ *
+ * `in` is the ordinary answer. The other two are for a step that has to
+ * bracket a whole moment without knowing who is in it — and for the one thing
+ * a phase alone cannot say, which is the order of two steps that belong in the
+ * same moment and do not commute. The later one says `just before` the NEXT
+ * moment instead, and still names no rule.
+ */
+const STEP_WHEN_OPTIONS: Array<[string, string]> = [
+  ['in', 'during'],
+  ['just before', 'before'],
+  ['just after', 'after'],
+];
+
 // Naming the MOMENT rather than a neighbour. What the other three cannot say:
 // gravity is a force, and saying so should not require knowing that Physics
 // exists (engine/core/phases). Rule-level, so it is offered every moment —
 // the work that fits no single actor lives here.
 const worldRuleStepIn = stepBlock(
   'world_rule_step_in',
-  'in %1 do %2',
-  [{type: 'field_dropdown', name: 'PHASE', options: phaseOptions}, nameArg],
+  '%1 %2 do %3',
+  [
+    // A FIELD here where the other orderings are block types, and the reason
+    // the earlier argument does not apply: `in`/`just before`/`just after` all
+    // take a phase, so neither dropdown can make the other meaningless. What
+    // made `when tick` a separate block was that it has no anchor at all.
+    {type: 'field_dropdown', name: 'WHEN', options: STEP_WHEN_OPTIONS},
+    {type: 'field_dropdown', name: 'PHASE', options: phaseOptions},
+    nameArg,
+  ],
   'Run this every tick, in a named part of the frame — “this is a force”, ' +
-    'rather than “this runs before that other rule’s step”.',
+    'rather than “this runs before that other rule’s step”. Use “just before” ' +
+    'or “just after” to sit in the gap around a whole part.',
   [phaseOptionsExtension],
 );
 
@@ -4183,8 +4207,9 @@ const worldRuleStepIn = stepBlock(
 // the same shape for the same reason.
 const worldTraitStep = defineBlock({
   type: 'world_trait_step',
-  message0: 'each frame in %1 do %2',
+  message0: 'each frame %1 %2 do %3',
   args0: [
+    {type: 'field_dropdown', name: 'WHEN', options: STEP_WHEN_OPTIONS},
     {type: 'field_dropdown', name: 'PHASE', options: phaseOptions},
     {type: 'field_input', name: 'NAME', text: 'do something'},
   ],

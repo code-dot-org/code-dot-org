@@ -55,10 +55,15 @@ describe('rules/input.rule', () => {
     });
   });
 
-  it('runs every tick, unordered — it reports, it does not act', () => {
+  it('senses, before anything decides on what it found', () => {
+    // It reports and does not act, which used to be said by leaving it
+    // unordered — and left it unordered against everything that READS the keys,
+    // working only because this rule happened to load first. `sense` is the
+    // first moment of the frame, so now it is said rather than relied upon.
     const [step] = meta.steps;
     expect(meta.steps).toHaveLength(1);
-    expect(step.order.kind).toBe('free');
+    expect(step.order.kind).toBe('phase');
+    expect(step.order.phase).toBe('sense');
   });
 });
 

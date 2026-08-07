@@ -101,16 +101,17 @@ describe('rules/gravity.rule', () => {
     expect(module_).toContain('readonly: true');
   });
 
-  it('orders its step before Motion integrates', () => {
-    // The reason step anchors exist: gravity must add to the velocity before
-    // Motion turns velocity into position, or it lags a frame behind.
+  it('says it is a force, and names no other rule', () => {
+    // It used to say `before Physics ▸ reposition`, which is TRUE and is not
+    // what it means: gravity must add to velocity before velocity becomes
+    // position, and that is what `push` is (engine/core/phases). Saying it the
+    // old way meant a learner writing a second force had to discover Physics
+    // first, and pick the right one of its steps.
     const [step] = meta.steps;
-    expect(step.order.kind).toBe('before');
-    expect(step.order.anchor?.ownerRef.ruleName).toBe('Physics');
-    expect(step.order.anchor?.stepId).toBe('reposition');
-    expect(module_).toContain(
-      'rule.addStepBefore("applyVelocity", Motion.steps["reposition"]',
-    );
+    expect(step.order.kind).toBe('phase');
+    expect(step.order.phase).toBe('push');
+    expect(module_).toContain('rule.addStepIn("applyVelocity", "push"');
+    expect(module_).not.toContain('Motion.steps');
   });
 
   it('names its members where the rest of the project reaches for them', () => {
@@ -152,14 +153,14 @@ describe('rules/gravity.rule', () => {
     expect(module_).not.toContain("from 'rules/gravity'");
   });
 
-  it('declares the landing step, anchored after collision resolves', () => {
-    // The step that lands actors and raises the falling transitions. It runs
-    // after Collision has pushed things out of solids, so what it sees is where
-    // they ended up. The anchor names that rule, wherever its file is.
+  it('declares the landing step as a consequence', () => {
+    // The step that lands actors and raises the falling transitions. It sees
+    // where things ENDED — after they moved and after they were pushed out of
+    // solids — which is what `react` is. One rule, two steps, two moments:
+    // the reason a phase belongs to a step and not to a rule.
     const step = meta.steps.find(s => s.id === 'handleCollisions');
-    expect(step?.order.kind).toBe('after');
-    expect(step?.order.anchor?.ownerRef.ruleName).toBe('Solid Bodies');
-    expect(step?.order.anchor?.stepId).toBe('resolve');
+    expect(step?.order.kind).toBe('phase');
+    expect(step?.order.phase).toBe('react');
   });
 
   it('puts its looping members at rule scope, where a world exists', () => {
@@ -238,15 +239,15 @@ describe('rules/gravity.rule', () => {
       'world_rule',
       'world_rule_trait',
       'world_rule_trait',
-      'world_rule_step_before',
-      'world_rule_step_after',
+      'world_rule_step_in',
+      'world_rule_step_in',
     ]);
   });
 
   it('carries a step’s ordering in its block type, not a field', () => {
-    // `before Motion ▸ reposition` and `when tick` are different KINDS of step,
-    // not one block with a setting — which is why the anchor dropdown no longer
-    // has to be hidden when it would be meaningless.
+    // `in ⟨push⟩` and `when tick` are different KINDS of step, not one block
+    // with a setting — which is why no dropdown has to be hidden when it would
+    // be meaningless. The PHASE field is the phase itself, not a mode switch.
     const tops = (
       JSON.parse(source) as {
         blocks: {
@@ -254,9 +255,10 @@ describe('rules/gravity.rule', () => {
         };
       }
     ).blocks.blocks;
-    const before = tops.find(b => b.type === 'world_rule_step_before')!;
-    expect(before.fields?.STEP).toBe('Physics#reposition');
-    expect(before.fields?.ORDER).toBeUndefined();
+    const steps = tops.filter(b => b.type === 'world_rule_step_in');
+    expect(steps.map(b => b.fields?.PHASE)).toEqual(['push', 'react']);
+    expect(steps[0].fields?.STEP).toBeUndefined();
+    expect(steps[0].fields?.ORDER).toBeUndefined();
   });
 
   it('chains a trait’s members below it, not inside a `do`', () => {

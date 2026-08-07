@@ -66,9 +66,8 @@ describe('rules/collisions.rule', () => {
 
     expect(meta.steps).toHaveLength(1);
     expect(step.id).toBe('find');
-    expect(step.order.kind).toBe('after');
-    expect(step.order.anchor?.ownerRef.ruleName).toBe('Physics');
-    expect(step.order.anchor?.stepId).toBe('reposition');
+    expect(step.order.kind).toBe('phase');
+    expect(step.order.phase).toBe('touch');
   });
 
   it('pushes nothing and changes no velocity', () => {

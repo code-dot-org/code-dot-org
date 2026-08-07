@@ -56,11 +56,13 @@ describe('rules/arrows.rule', () => {
     expect(speed?.scope).toBe('actor');
   });
 
-  it('runs before Motion integrates, so a held key moves this frame', () => {
+  it('decides, which is what a held key means', () => {
+    // It turns intent into velocity, and that is a phase: `decide` runs before
+    // `push` and `move`, so a key held this frame moves this frame. It used to
+    // say `before Physics ▸ reposition` — true, and about the wrong rule.
     const [step] = meta.steps;
-    expect(step.order.kind).toBe('before');
-    expect(step.order.anchor?.ownerRef.ruleName).toBe('Physics');
-    expect(step.order.anchor?.stepId).toBe('reposition');
+    expect(step.order.kind).toBe('phase');
+    expect(step.order.phase).toBe('decide');
   });
 
   it('declares the members the project references', () => {
