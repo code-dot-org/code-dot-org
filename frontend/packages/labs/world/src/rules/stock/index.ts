@@ -11,6 +11,8 @@
 // default project is a project that imported it.
 
 import {arrowsRule} from './arrows';
+import {cameraRule} from './camera';
+import {cameraFollowRule} from './cameraFollow';
 import {collisionsRule} from './collisions';
 import {gravityRule} from './gravity';
 import {inputRule} from './input';
@@ -120,6 +122,24 @@ export const STOCK_RULES: readonly StockRule[] = [
     provides: ['Affected by Gravity', 'Acts as Ground'],
     contents: gravityRule,
   },
+  {
+    id: 'camera',
+    name: 'Camera',
+    ability: 'Has a Camera',
+    description:
+      'Gives a camera somewhere it wants to look, and moves it there at the end of each frame. On its own it holds the view still; other camera rules decide where to look.',
+    provides: ['Aimed'],
+    contents: cameraRule,
+  },
+  {
+    id: 'cameraFollow',
+    name: 'Camera Follow',
+    ability: 'Follows an Actor',
+    description:
+      'Points a camera at an actor, so the view keeps up as it moves. Needs Camera, which is what actually moves the view.',
+    provides: ['Follows'],
+    contents: cameraFollowRule,
+  },
 ];
 
 /** Look one up by its file stem. */
@@ -140,4 +160,6 @@ export {
   gravityRule,
   inputRule,
   motionRule,
+  cameraRule,
+  cameraFollowRule,
 };
