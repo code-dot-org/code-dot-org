@@ -7,9 +7,13 @@
 
 import type {Blockly} from '@code-dot-org/blockly';
 
-import {BUILTIN_RULE_META} from './builtinMeta';
+// For the side effect: importing it is what registers the built-in rules, and
+// `ruleByName` below resolves nothing without them. It used to come in with
+// `BUILTIN_RULE_META`, which the step-anchor dropdown read; that dropdown is
+// gone and the registration still has to happen.
+import './builtinMeta';
 import {liveDropdown} from './moduleOptions';
-import {pascal, type RuleMeta, type StepMeta} from './ruleMeta';
+import {pascal, type RuleMeta} from './ruleMeta';
 import {memberValue, ruleByName} from './ruleRegistry';
 
 // The project's declarative `.rule` rules, indexed by module path (what a world's
@@ -258,43 +262,6 @@ export const anyTraitOptionsExtension = liveDropdown(
   'world_any_trait_options',
   'TRAIT',
   anyTraitOptions,
-);
-
-// ── Step anchors (for `define step`'s before/after ordering) ─────────────────
-// A step's `STEP` dropdown lists steps other rules provide — a project step may
-// run before/after one of them (gravity before Physics's `reposition`). The
-// value is the same shape as every other reference: `<RuleName>#<stepId>`, the
-// step being named within the rule that runs it (as `stepAnchorRef` decodes).
-const stepValue = (step: StepMeta, rule: RuleMeta): string =>
-  `${step.ownerRef.ruleName || rule.name}#${step.id}`;
-
-/**
- * `[label, value]` options for the step anchor dropdown: every built-in step
- * (always an available anchor) plus the project's own `.rule` steps, labelled
- * `<Rule> ▸ <step>`. Deduped, sorted by label.
- */
-export function stepOptions(): Array<[string, string]> {
-  const seen = new Set<string>();
-  const options: Array<[string, string]> = [];
-  const rules = [...BUILTIN_RULE_META, ...projectByModule.values()];
-  for (const rule of rules) {
-    for (const step of rule.steps) {
-      const value = stepValue(step, rule);
-      if (!seen.has(value)) {
-        seen.add(value);
-        options.push([`${rule.name} ▸ ${step.name}`, value]);
-      }
-    }
-  }
-  options.sort((a, b) => a[0].localeCompare(b[0]));
-  return options.length ? options : [['(none)', '']];
-}
-
-/** Make a block's `STEP` dropdown reflect the steps available to anchor to. */
-export const stepOptionsExtension = liveDropdown(
-  'world_step_options',
-  'STEP',
-  stepOptions,
 );
 
 // ── Events (for `emit`) ─────────────────────────────────────────────────────

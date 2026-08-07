@@ -264,16 +264,6 @@ const query = (type: string, name: string): object => designed(name, type);
 // `define step`: an event hat per ordering kind. Its NAME names the step; the
 // anchor dropdown is only on the ordered two. Lifted to its own top block by
 // `ruleFile`, like a trait — its body is the chain below it.
-const step = (name: string, order = 'free', anchor = ''): object => ({
-  __root:
-    order === 'free'
-      ? {type: 'world_rule_step_tick', fields: {NAME: name}}
-      : {
-          type: `world_rule_step_${order}`,
-          fields: {NAME: name, STEP: anchor},
-        },
-});
-
 describe('a trait for a camera', () => {
   // The engine's `Trait` knows nothing of this. A trait is a trait; the subject
   // decides what a generated body calls its argument, and which dropdown offers
@@ -859,121 +849,6 @@ describe('steps (per-tick behavior + ordering)', () => {
       exportName: 'MotionRule',
       ruleName: 'Has Physics',
     });
-  });
-
-  it('parses steps and their ordering (free, before, after)', () => {
-    const meta = parseRuleMeta(
-      'rules/wind',
-      ruleFile(
-        'Has Wind',
-        step('gust', 'before', 'Has Physics#reposition'), // anchor a built-in
-        step('land', 'after', 'Other#resolve'), // anchor a project rule
-        step('settle'), // unordered
-      ),
-    )!;
-    expect(meta.steps).toEqual([
-      {
-        id: 'gust',
-        name: 'gust',
-        // Declared beside the rule rather than under a trait, so it runs once
-        // a tick with `(world, delta)` — the step as it always was.
-        scope: 'world',
-        ownerRef: {
-          source: 'project',
-          exportName: 'HasWindRule',
-          ruleName: 'Has Wind',
-          modulePath: 'rules/wind',
-        },
-        order: {
-          kind: 'before',
-          anchor: {
-            ownerRef: {
-              source: 'builtin',
-              exportName: 'MotionRule',
-              ruleName: 'Has Physics',
-              modulePath: undefined,
-            },
-            stepId: 'reposition',
-          },
-        },
-      },
-      expect.objectContaining({
-        id: 'land',
-        order: {
-          kind: 'after',
-          anchor: {
-            ownerRef: {
-              source: 'project',
-              exportName: 'OtherRule',
-              ruleName: 'Other',
-              modulePath: 'rules/other',
-            },
-            stepId: 'resolve',
-          },
-        },
-      }),
-      expect.objectContaining({id: 'settle', order: {kind: 'free'}}),
-    ]);
-  });
-
-  it('emits addStep / addStepBefore with anchor refs and (world, delta)', () => {
-    const meta = parseRuleMeta(
-      'rules/wind',
-      ruleFile(
-        'Has Wind',
-        step('gust', 'before', 'Has Physics#reposition'),
-        step('land', 'after', 'Other#resolve'),
-        step('settle'),
-      ),
-    )!;
-    const bodies = new Map([
-      [
-        ruleBodyKey('step', 'world', undefined, 'gust'),
-        {params: [], body: 'world.set(WorldLab.DirectionProperty, 1);\n'},
-      ],
-    ]);
-    const code = ruleMetaToModule(meta, bodies);
-    // A step's body references `WorldLab.*`, so the namespace import is present.
-    expect(code).toContain(`import * as WorldLab from 'world-lab';`);
-    // Before a built-in step → `WorldLab.<Rule>.steps[<id>]`, closure (world, delta).
-    expect(code).toContain(
-      `export const GustStep = rule.addStepBefore("gust", WorldLab.MotionRule.steps["reposition"], (world, delta) => {\nworld.set(WorldLab.DirectionProperty, 1);\n});`,
-    );
-    // After a project step → default-import the module, read its `.steps[...]`.
-    expect(code).toContain(`import Other from "rules/other";`);
-    expect(code).toContain(
-      `export const LandStep = rule.addStepAfter("land", Other.steps["resolve"], (world, delta) => {\n});`,
-    );
-    // Unordered → plain addStep.
-    expect(code).toContain(
-      `export const SettleStep = rule.addStep("settle", (world, delta) => {\n});`,
-    );
-  });
-
-  it('anchors a step to another step in the SAME rule via the local const', () => {
-    // `finish` runs AFTER this rule's own `start` step. The anchor is the local
-    // export const, not a self-import (which would read `.steps` pre-build), and
-    // the target is emitted first even though it is declared second.
-    const meta = parseRuleMeta(
-      'rules/wind',
-      ruleFile(
-        'Has Wind',
-        step('finish', 'after', 'Has Wind#start'), // self-anchor, declared first
-        step('start'), // the anchor target, declared second
-      ),
-    )!;
-    const code = ruleMetaToModule(meta);
-    // No self-import of `rules/wind`.
-    expect(code).not.toContain(`from "rules/wind"`);
-    // The anchor target is emitted before the step that names it.
-    const startAt = code.indexOf('export const StartStep');
-    const finishAt = code.indexOf('export const FinishStep');
-    expect(startAt).toBeGreaterThanOrEqual(0);
-    expect(startAt).toBeLessThan(finishAt);
-    // The anchor is the local const, not `Wind.steps[...]`.
-    expect(code).toContain(
-      `export const FinishStep = rule.addStepAfter("finish", StartStep, (world, delta) => {\n});`,
-    );
   });
 });
 

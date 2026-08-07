@@ -132,8 +132,6 @@ import {refFromValue, refModule, ruleLocation, ruleSlug} from './ruleRegistry';
 import {parseSpriteRef, spriteCell} from './spriteCells';
 import {
   projectRuleIdentities,
-  stepOptions,
-  stepOptionsExtension,
   anyTraitOptions,
   anyTraitOptionsExtension,
   traitOptions,
@@ -908,8 +906,6 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   // rule rather than inside it. So is each step: its body chains below it.
   'world_rule_trait',
   'world_rule_step_tick',
-  'world_rule_step_before',
-  'world_rule_step_after',
   'world_rule_step_in',
   // …and a set of choices, whose options chain below it.
   'world_rule_enum',
@@ -4132,42 +4128,6 @@ const nameArg: BlockArgDefinition = {
   name: 'NAME',
   text: 'each tick',
 };
-const anchorArg: BlockArgDefinition = {
-  type: 'field_dropdown',
-  name: 'STEP',
-  options: stepOptions,
-};
-
-// Retired from the palette, kept in the registry (see the Rule category).
-//
-// "Before Motion moves things" was the only way to place a step, and it made
-// every rule that had an opinion about when it ran name another rule to say so.
-// A phase says the same thing without the reference. These two stay defined
-// because a saved workspace may still hold one, and a block type that vanishes
-// is a project that will not open — there is no load-time migration for
-// workspaces, only the user-driven renames in `rewriteWorkspaces`.
-//
-// Deleting them is a separate job that needs that migration first: an anchor
-// can be mapped to a phase only by looking up what phase the anchored step now
-// runs in, which is cross-file knowledge the rewriter does not have today.
-const worldRuleStepBefore = stepBlock(
-  'world_rule_step_before',
-  'before %1 do %2',
-  [anchorArg, nameArg],
-  'Run this every tick, before another rule’s step — gravity adds to velocity ' +
-    'before Motion turns velocity into movement.',
-  [stepOptionsExtension],
-);
-
-const worldRuleStepAfter = stepBlock(
-  'world_rule_step_after',
-  'after %1 do %2',
-  [anchorArg, nameArg],
-  'Run this every tick, after another rule’s step — landing happens after ' +
-    'Collision has pushed things out of walls.',
-  [stepOptionsExtension],
-);
-
 /**
  * Where a step sits relative to the moment it names.
  *
@@ -4510,8 +4470,6 @@ export const DOMAIN_BLOCKS = [
   ...signatureItems,
   signatureChoice,
   worldReturn,
-  worldRuleStepBefore,
-  worldRuleStepAfter,
   worldRuleStepIn,
   worldTraitStep,
   worldRuleStepTick,
@@ -4659,11 +4617,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_step_tick',
       'world_rule_step_in',
       'world_trait_step',
-      // NOT `world_rule_step_before` / `world_rule_step_after`. They are still
-      // DEFINED (see DOMAIN_BLOCKS) so a workspace holding one still opens —
-      // an unknown block type is a project that will not load — but they are
-      // no longer offered, because naming another rule's step is the thing
-      // phases replaced. Nothing shipped uses them any more.
       'world_step_delta', // the frame time, inside a step
       // Reading and writing a variable lives in Variables (below), not here: a
       // rule's parameters are variables like any other, and a body wanting a
