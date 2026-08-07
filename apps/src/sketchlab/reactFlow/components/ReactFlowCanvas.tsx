@@ -57,6 +57,10 @@ import {
 } from '../context';
 import CornerToolbarPanel from '../elementToolbars/components/CornerToolbarPanel';
 import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
+import {
+  MIDDLE_MOUSE_BUTTON,
+  useCanvasToolSwitching,
+} from '../hooks/useCanvasToolSwitching';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useDisplayElements} from '../hooks/useDisplayElements';
 import {useDragSelection} from '../hooks/useDragSelection';
@@ -266,6 +270,7 @@ export default function ReactFlowCanvas({
     setViewport: setReactFlowViewport,
   } = useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const canvasContainerRef = useRef<HTMLDivElement>(null);
+  const workspaceRef = useRef<HTMLDivElement>(null);
 
   const {
     isDirectAnchorDragging,
@@ -665,6 +670,24 @@ export default function ReactFlowCanvas({
       onCannotGroup: handleCannotGroup,
     });
 
+  const {middleButtonHeld, handleMouseDownCapture, handleToolKeyDown} =
+    useCanvasToolSwitching({
+      setCanvasTool,
+      readOnly,
+      connecting: !!connectingFrom,
+      isGroupMode,
+      canvasContainerRef,
+      workspaceRef,
+    });
+
+  const handleCanvasKeyDown = useCallback(
+    (event: React.KeyboardEvent) => {
+      if (handleToolKeyDown(event)) return;
+      handleKeyDown(event);
+    },
+    [handleToolKeyDown, handleKeyDown]
+  );
+
   const {handleEdgeMouseDown, isLineDragging} = useLineEdgeDrag({
     readOnly,
     setNodes,
@@ -976,7 +999,9 @@ export default function ReactFlowCanvas({
   // All ReactFlow props that differ between cursor and grab mode, collected in
   // one place so the grab mode contract is visible at a glance.
   const grabModeProps = {
-    panOnDrag: isGrabMode,
+    // Left button pans only in hand mode; the middle button pans in either,
+    // which is how the select tool gets a momentary hand tool.
+    panOnDrag: isGrabMode ? [0, MIDDLE_MOUSE_BUTTON] : [MIDDLE_MOUSE_BUTTON],
     nodesDraggable: !readOnly && !isGrabMode,
     nodesConnectable: !readOnly && !isGrabMode,
     elementsSelectable: !readOnly && !isGrabMode,
@@ -1008,14 +1033,18 @@ export default function ReactFlowCanvas({
                     styles.canvasContainer,
                     {
                       [styles.connectMode]: !!connectingFrom,
-                      [styles.grabMode]: isGrabMode,
+                      [styles.grabMode]: isGrabMode || middleButtonHeld,
+                      [styles.grabbing]: middleButtonHeld,
                     },
                     SKETCHLAB_CONTAINER_CLASS
                   )}
                   tabIndex={-1}
-                  onKeyDownCapture={handleKeyDown}
+                  onKeyDownCapture={handleCanvasKeyDown}
                   onFocusCapture={handleFocusCapture}
                   onBlur={handleContainerBlur}
+                  // React Flow stops propagation of the mousedown that starts a
+                  // pan, so the middle button has to be seen on the way down.
+                  onMouseDownCapture={handleMouseDownCapture}
                   onMouseDown={dragSelectMouseDown}
                   onMouseMove={handleMouseMove}
                   onMouseUp={dragSelectMouseUp}
@@ -1041,6 +1070,7 @@ export default function ReactFlowCanvas({
                   {/* In hand mode this is the single keyboard tab stop for
                       the canvas, so users can use arrow keys to pan */}
                   <div
+                    ref={workspaceRef}
                     className={styles.workspace}
                     // Only claim the application role while the workspace is the
                     // grab-mode pan target. In cursor mode it's a passive wrapper,

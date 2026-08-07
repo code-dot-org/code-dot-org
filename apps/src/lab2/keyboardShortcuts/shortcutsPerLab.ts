@@ -31,6 +31,10 @@ export const ShortcutsPerLab: Partial<
         explanation: 'Move focus between elements (backward)',
       },
     ],
+    'Canvas tools': [
+      {shortcut: 'P', explanation: 'Switch to the select tool'},
+      {shortcut: 'H', explanation: 'Switch to the hand tool'},
+    ],
     Editing: [
       {shortcut: 'Enter', explanation: 'Edit the focused element'},
       {shortcut: 'E', explanation: 'Open the element toolbar'},
