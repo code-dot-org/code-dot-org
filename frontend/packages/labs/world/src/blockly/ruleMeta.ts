@@ -167,6 +167,21 @@ export interface EventMeta {
    * plain `when ⟨actor⟩ <name>` hat, which is every event written before this.
    */
   readonly parts?: readonly MemberPart[];
+  /**
+   * What the event is ABOUT — and so what a handler is handed.
+   *
+   * Declared under a trait it is an actor's ("this actor started falling"), and
+   * a handler gets `(world, actor, eventValue)`. Declared on the rule it is the
+   * world's ("a key went down"), and there is no actor to hand over: the
+   * handler gets `(world, eventValue)` and registers on the world.
+   *
+   * From the declaration site, like every other member's scope — the rule's own
+   * chain or a trait's. `rules/input` declares its key events on the rule and
+   * used to raise them once per actor per frame purely to have a subject.
+   */
+  readonly scope: MemberScope;
+  /** The trait that owns an actor-scoped event (absent for world-scoped). */
+  readonly ownerTraitId?: string;
 }
 
 /** A reference to another Step, for ordering — its owning rule and its id, so
@@ -349,8 +364,16 @@ export function builtinRuleMeta(
         queries.push(query(q, 'actor', trait.id));
       }
     }
+    // A built-in rule's events are an actor's: the engine's `GameEvent` carries
+    // no scope, and every one it ships is raised for an actor. An authored rule
+    // says which it is by where it declares it (`EventMeta.scope`).
     const events: EventMeta[] = Object.values(rule.events).map(
-      (e: GameEvent) => ({id: e.id, name: e.name ?? e.id, ref: ref(e)}),
+      (e: GameEvent) => ({
+        id: e.id,
+        name: e.name ?? e.id,
+        ref: ref(e),
+        scope: 'actor' as const,
+      }),
     );
     // Steps are surfaced only as ordering anchors — a project step may run
     // before/after a built-in one (gravity before Motion's reposition). Their own
@@ -593,7 +616,11 @@ export function parseRuleMeta(
    * Designed like a block (`extraState.parts`), and named by its labels joined,
    * so "%1 is pressed" is the event `is pressed` with one choice to filter on.
    */
-  const addEvent = (block: RuleBlock): void => {
+  const addEvent = (
+    block: RuleBlock,
+    ownerTraitId?: string,
+    ownerSubject: 'actor' | 'camera' = 'actor',
+  ): void => {
     const raw = block.extraState?.parts ?? [];
     const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
       if (part.kind === 'param') {
@@ -615,6 +642,8 @@ export function parseRuleMeta(
       id: slug(name),
       name,
       ref: ref(`${pascal(name)}Event`),
+      scope: ownerTraitId ? ownerSubject : 'world',
+      ...(ownerTraitId ? {ownerTraitId} : {}),
       ...(parts.length > 0 ? {parts} : {}),
     });
   };
@@ -784,10 +813,10 @@ export function parseRuleMeta(
     } else if (block.type === 'world_rule_block') {
       addDesignedBlock(block);
     } else if (block.type === 'world_rule_event') {
-      // A rule may declare an event with no trait to hang it on — the keyboard
-      // rule's key events belong to the WORLD, not to a kind of actor. Events
-      // are rule-level either way (`rule.addEvent`); chaining one under a trait
-      // says which actors it is about, not who owns it.
+      // Declared on the rule, so it is the WORLD's: the keyboard rule's key
+      // events are about the world, not about a kind of actor. Every event is
+      // registered the same way (`rule.addEvent`) — where it is chained decides
+      // what it is about, and so what a handler is handed.
       addEvent(block);
     }
   }
@@ -854,7 +883,7 @@ export function parseRuleMeta(
       } else if (member.type === 'world_trait_step') {
         addTraitStep(member, traitId, subject);
       } else if (member.type === 'world_rule_event') {
-        addEvent(member);
+        addEvent(member, traitId, subject);
       }
     }
     traits.push({

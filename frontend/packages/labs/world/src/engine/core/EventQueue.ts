@@ -9,14 +9,15 @@ import type {World} from './World';
 
 interface QueuedEvent {
   event: GameEvent;
-  actor: Actor;
+  /** Absent for a world event — there is nobody it happened to. */
+  actor?: Actor;
   detail?: unknown;
 }
 
 export class EventQueue {
   private pending: QueuedEvent[] = [];
 
-  enqueue(event: GameEvent, actor: Actor, detail?: unknown): void {
+  enqueue(event: GameEvent, actor: Actor | undefined, detail?: unknown): void {
     this.pending.push({event, actor, detail});
   }
 
@@ -25,7 +26,8 @@ export class EventQueue {
   }
 
   /**
-   * Dispatch every queued event to the actors that elected to handle it. The
+   * Dispatch every queued event to whatever elected to handle it — the actor
+   * it happened to, or the world when it happened to nobody in particular. The
    * queue is snapshotted and cleared first, so an event a handler raises lands
    * in the now-empty queue and is dispatched on the next tick — bounding a tick
    * to one round of handlers and avoiding an in-tick feedback loop.
@@ -34,6 +36,14 @@ export class EventQueue {
     const batch = this.pending;
     this.pending = [];
     for (const {event, actor, detail} of batch) {
+      if (!actor) {
+        // A world event: the world holds the handlers, and there is no subject
+        // to pass. One dispatch, however many actors are in the world.
+        for (const handler of world.handlersFor(event)) {
+          handler(world, detail);
+        }
+        continue;
+      }
       for (const handler of actor.handlersFor(event)) {
         handler(world, actor, detail);
       }

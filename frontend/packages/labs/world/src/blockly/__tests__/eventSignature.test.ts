@@ -112,17 +112,19 @@ describe('an event with a designed phrasing', () => {
   });
 
   it('puts the choices on the hat, with `(any)` first', () => {
+    // Declared on the RULE, so it is the world's: no actor socket, and the
+    // filter is the first argument rather than the second.
     const hat = hatFor(ruleWithEvent(PRESSED, KEY_VAR));
 
-    expect(hat.message0).toBe('when %1 %2 is pressed');
-    expect(hat.args0[1]).toMatchObject({
+    expect(hat.message0).toBe('when %1 is pressed');
+    expect(hat.args0[0]).toMatchObject({
       type: 'field_dropdown',
       name: 'FILTER0',
     });
     // `(any)` leads, because "fires for every key" has to be sayable — and as
     // an emptied socket it would be a thing a learner found by deleting a block.
-    expect(hat.args0[1].options?.[0]).toEqual(['(any)', '']);
-    expect(hat.args0[1].options).toContainEqual(['space', 'space']);
+    expect(hat.args0[0].options?.[0]).toEqual(['(any)', '']);
+    expect(hat.args0[0].options).toContainEqual(['space', 'space']);
   });
 
   it('generates the guard the learner would have written', () => {
@@ -146,7 +148,18 @@ describe('an event with a designed phrasing', () => {
     // and `event value` reads it. What `(any)` drops is the guard.
     const code = codeFor(hat, '');
     expect(code).not.toContain('eventValue !==');
-    expect(code).toContain('(world, actor, eventValue)');
+    expect(code).toContain('(world, eventValue)');
+  });
+
+  it('registers a world event on the world, with no actor', () => {
+    // The whole of what an event's scope decides. This one is declared on the
+    // rule, so it is about the WORLD — there is nobody it happened to, and a
+    // handler is handed nobody. `rules/input` used to raise its key events once
+    // per actor per frame purely to have a subject to raise them for.
+    const code = codeFor(hatFor(ruleWithEvent(PRESSED, KEY_VAR)), '');
+
+    expect(code).toContain('world.on(IsPressedEvent, (world, eventValue)');
+    expect(code).not.toContain('actor');
   });
 });
 
@@ -158,7 +171,9 @@ describe('raising an event that carries a choice', () => {
     // is looping over, so a dropdown has to be droppable-over here.
     const emit = emitFor(ruleWithEvent(PRESSED, KEY_VAR));
 
-    expect(emit.message0).toBe('emit %1 is pressed for %2');
+    // No `for ⟨actor⟩`: a world event happened to the world, and naming a
+    // subject would be inventing one.
+    expect(emit.message0).toBe('emit %1 is pressed');
     expect(emit.args0[0]).toMatchObject({
       type: 'input_value',
       name: 'VALUE',
@@ -182,6 +197,7 @@ describe('raising an event that carries a choice', () => {
       {} as never,
     ) as string;
 
-    expect(code).toBe('world.emit(IsPressedEvent, each, key);\n');
+    // Once, however many actors are in the world.
+    expect(code).toBe('world.emitToWorld(IsPressedEvent, key);\n');
   });
 });

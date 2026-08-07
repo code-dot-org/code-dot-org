@@ -255,6 +255,14 @@ const PLAYER_ACTOR = JSON.stringify(
                 type: 'world_use_trait',
                 fields: {TRAIT: 'Arrow Keys#ControlledByArrowKeysTrait'},
               },
+              // Hearing the keyboard is something an actor ELECTS. The world's
+              // own key events are raised once a frame whatever is in it; this
+              // trait is what makes `rules/input` also tell THIS actor, and it
+              // is why that broadcast walks one player rather than every coin.
+              {
+                type: 'world_use_trait',
+                fields: {TRAIT: 'Input#TakesKeyboardInputTrait'},
+              },
               // Plays a learner-authored animation (game.anim) — its id is in
               // the dropdown because the lab feeds the project's animations to
               // the block (Phase D). Position is set by the map when the world
@@ -272,12 +280,17 @@ const PLAYER_ACTOR = JSON.stringify(
           },
         },
         // Space to jump. WHICH key is on the hat — `rules/input` declares its
-        // events as "⟨a key⟩ is pressed", so the handler is registered for the
-        // space bar and never runs for anything else (specs/ENUMS.md). What is
-        // left inside is the one condition a filter cannot express: gravity's
-        // own query, keeping the jump honest — no second jump in mid-air.
+        // trait's events as "presses ⟨a key⟩", so the handler is registered for
+        // the space bar and never runs for anything else (specs/ENUMS.md). What
+        // is left inside is the one condition a filter cannot express:
+        // gravity's own query, keeping the jump honest — no second jump in
+        // mid-air.
+        //
+        // The TRAIT's event, not the world's. A world event is handed no actor
+        // and registers on the world, which an `.actor` module has no binding
+        // for — "this actor presses space" is the statement an actor can make.
         {
-          type: 'world_on_Input_IsPressedEvent',
+          type: 'world_on_Input_PressesEvent',
           fields: {FILTER0: 'space'},
           x: 20,
           y: 440,

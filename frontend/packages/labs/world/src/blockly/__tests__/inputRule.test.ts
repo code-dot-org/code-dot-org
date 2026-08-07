@@ -27,18 +27,43 @@ describe('rules/input.rule', () => {
     expect(source).not.toContain('world-lab');
   });
 
-  it('declares the key events at rule level, with no trait to elect', () => {
-    // A key press belongs to nobody. Every actor can hear these, which is why
-    // they hang off the rule rather than off a trait — and why the parser has
-    // to read a `define event` chained under the rule root at all.
+  it('declares the key events at rule level, so they are the world’s', () => {
+    // A key press belongs to nobody, which is why these hang off the rule
+    // rather than off a trait — and that is now what DECIDES they are the
+    // world's: raised once a frame, and handled with no actor handed over.
+    //
+    // They used to be raised for every actor in the world, every frame a key
+    // changed, purely so there was somebody to raise them for.
     expect(meta.name).toBe('Input');
     expect(meta.ability).toBe('Responds to Input');
-    expect(meta.traits).toEqual([]);
-    expect(meta.events.map(event => event.ref.exportName)).toEqual([
+    const worldEvents = meta.events.filter(event => event.scope === 'world');
+    expect(worldEvents.map(event => event.ref.exportName)).toEqual([
       'IsPressedEvent',
       'IsReleasedEvent',
     ]);
     expect(module_).toContain('export const IsPressedEvent = rule.addEvent(');
+  });
+
+  it('offers a trait for an actor that wants to hear them too', () => {
+    // The other half. An actor still wants to know — a player jumps on space —
+    // but that is a different statement, and one an actor ELECTS. Only the
+    // actors that elected it are walked, which is one player rather than every
+    // coin in the level.
+    expect(meta.traits.map(trait => trait.name)).toEqual([
+      'Takes Keyboard Input',
+    ]);
+    const own = meta.events.filter(event => event.scope === 'actor');
+    // The name is the LABELS of its designed phrasing; the key is a parameter,
+    // so the hat reads `when ⟨actor⟩ presses ⟨space⟩`.
+    expect(own.map(event => event.name)).toEqual(['presses', 'releases']);
+    expect(own[0].parts).toEqual([
+      {kind: 'label', text: 'presses'},
+      {kind: 'param', name: 'pressed key', type: 'enum:Engine#Key'},
+    ]);
+    expect(own.map(event => event.ownerTraitId)).toEqual([
+      'Takes_Keyboard_Input',
+      'Takes_Keyboard_Input',
+    ]);
   });
 
   it('signs its events with the key, so a handler filters on one', () => {
