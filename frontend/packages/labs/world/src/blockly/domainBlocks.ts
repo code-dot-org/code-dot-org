@@ -2115,6 +2115,33 @@ const worldThisActor = defineBlock({
 });
 
 /**
+ * The camera a camera-scoped step is running for.
+ *
+ * `this actor`'s counterpart, and needed for the same reason: a step declared
+ * under a trait runs once per subject with that subject BOUND, so the body has
+ * to be able to name it. An actor-scoped step binds `actor`, which `this actor`
+ * emits; a camera-scoped one binds `camera`, and nothing emitted that.
+ *
+ * Actor-typed, like `all cameras` and for the same reason: it makes the whole
+ * existing vocabulary reach a camera. `set position of ⟨this camera⟩` is the
+ * ordinary set-position block, and a camera answers it with its own pose
+ * (core/Camera).
+ */
+const worldThisCamera = defineBlock({
+  type: 'world_this_camera',
+  message0: 'this camera',
+  output: 'Actor',
+  // Camera values read as actor values — the colour that groups the actors.
+  style: 'sprite_blocks',
+  tooltip: 'This camera — the one these blocks are running for.',
+  generator: {
+    javascript() {
+      return ['camera', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
+/**
  * A KIND of actor: every one of them, and every one there will be.
  *
  * The counterpart to `this actor`, and the one a `.world` file needs. In an
@@ -4435,6 +4462,7 @@ export const DOMAIN_BLOCKS = [
   worldAllActors,
   worldCameraValue,
   worldAllCameras,
+  worldThisCamera,
   worldPushActor,
   worldClearActors,
   worldCountActors,
@@ -4568,6 +4596,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // "whichever cameras have this trait".
       'world_camera',
       'world_all_cameras',
+      // The one a camera-scoped step is running for — `this actor`'s
+      // counterpart, and the only way such a step names its own subject.
+      'world_this_camera',
       // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',
       'world_clear_world',

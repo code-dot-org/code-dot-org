@@ -1,0 +1,17 @@
+// "Has a Camera", the base every camera rule builds on.
+//
+// It owns two things and nothing else: a GOAL — where the camera wants to look
+// — and the one step that acts on it, which moves the camera there. Everything
+// that decides where to look writes the goal and never touches the position,
+// so any number of such rules compose without knowing about each other.
+//
+// The goal PERSISTS, which is what makes this safe on its own: a camera nothing
+// aims keeps last frame's goal, which is where it already is, and "take the
+// view" moves it nowhere. There is nothing to initialise.
+//
+// Stored as the workspace JSON a `.rule` file holds, because that IS the
+// format: importing it copies these bytes into `rules/camera.rule`.
+
+/** The `rules/camera.rule` workspace, as the Blockly editor saves it. */
+export const cameraRule =
+  '{\n  "blocks": {\n    "blocks": [\n      {\n        "type": "world_rule",\n        "fields": {\n          "NAME": "Camera",\n          "ABILITY": "Has a Camera"\n        },\n        "x": 20,\n        "y": 20\n      },\n      {\n        "type": "world_rule_trait",\n        "fields": {\n          "NAME": "Aimed",\n          "SUBJECT": "camera"\n        },\n        "x": 20,\n        "y": 220,\n        "next": {\n          "block": {\n            "type": "world_rule_property",\n            "fields": {\n              "TYPE": "point",\n              "ACCESS": "writable",\n              "NAME": "goal",\n              "DEFAULT": "0,0"\n            },\n            "next": {\n              "block": {\n                "type": "world_trait_step",\n                "fields": {\n                  "WHEN": "during",\n                  "PHASE": "view",\n                  "NAME": "take the view"\n                },\n                "inputs": {\n                  "DO": {\n                    "block": {\n                      "type": "world_set_position",\n                      "inputs": {\n                        "ACTOR": {\n                          "block": {\n                            "type": "world_this_camera"\n                          }\n                        },\n                        "X": {\n                          "block": {\n                            "type": "world_get_Camera_GoalProperty",\n                            "fields": {\n                              "COMPONENT": "x"\n                            },\n                            "inputs": {\n                              "ACTOR": {\n                                "block": {\n                                  "type": "world_this_camera"\n                                }\n                              }\n                            }\n                          }\n                        },\n                        "Y": {\n                          "block": {\n                            "type": "world_get_Camera_GoalProperty",\n                            "fields": {\n                              "COMPONENT": "y"\n                            },\n                            "inputs": {\n                              "ACTOR": {\n                                "block": {\n                                  "type": "world_this_camera"\n                                }\n                              }\n                            }\n                          }\n                        }\n                      }\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    ]\n  }\n}\n';

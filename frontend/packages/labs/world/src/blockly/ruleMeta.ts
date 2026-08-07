@@ -1002,6 +1002,14 @@ export function extractRuleBodies(
           block,
           slug(designedName(block.saveExtraState?.()?.parts)),
         );
+      } else if (block.type === 'world_trait_step') {
+        // A step declared under a trait, so it carries the trait's scope and
+        // owner — that is what the generator keys the body by, and what tells
+        // it whether the loop it wraps the body in walks actors or cameras.
+        //
+        // Its body is a `DO` mouth, not the chain below it: a trait's members
+        // chain through `next`, so a hat's shape was not available here.
+        record('step', scope, ownerTraitId, block);
       }
     }
   };

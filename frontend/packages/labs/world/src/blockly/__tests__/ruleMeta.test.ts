@@ -709,6 +709,41 @@ describe('extractRuleBodies', () => {
     saveExtraState: () =>
       opts.name ? {parts: [{kind: 'label', text: opts.name}]} : undefined,
   });
+  it('generates a trait step’s body, keyed by that trait’s subject', () => {
+    // The gap this test exists for: `visit` only knew `world_rule_block`, so a
+    // step declared under a trait was walked past. Everything else about the
+    // rule was right — it parsed, the module generated, the step was there —
+    // and its closure was empty. A camera that never moved.
+    //
+    // The body is the `DO` mouth, not the chain below: a trait's members chain
+    // through `next`, which is why a trait step is not shaped like a hat.
+    const traitRoot = live(
+      'world_rule_trait',
+      {NAME: 'Follows', SUBJECT: 'camera'},
+      {
+        next: live(
+          'world_trait_step',
+          {NAME: 'aim at the actor', PHASE: 'aim'},
+          {do: live('world_set_position', {})},
+        ),
+      },
+    );
+
+    const bodies = extractRuleBodies([traitRoot] as never, {
+      body: () => 'AIMED\n',
+      chainBody: () => 'CHAIN\n',
+      signature: () => [],
+    });
+
+    expect(
+      bodies.get(ruleBodyKey('step', 'camera', 'Follows', 'aim_at_the_actor')),
+    ).toEqual({
+      // A step takes no user params — its closure is the subject and `delta`.
+      params: [],
+      body: 'AIMED\n',
+    });
+  });
+
   it('generates each action/query body + signature, keyed by scope/owner/id', () => {
     // Two TOP blocks: the rule (chaining action Nudge) and the trait Windblown
     // (chaining query Is Gusting) beside it.
