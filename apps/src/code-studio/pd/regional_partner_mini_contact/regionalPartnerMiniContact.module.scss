@@ -47,12 +47,21 @@ input, span {
     margin-top: 0.75rem;
   }
 
-  .roleSelect {
-    max-width: 13.75rem;
-  }
-
   textarea {
     width: 50%;
+  }
+}
+
+.optionFieldGroup {
+  margin-left: 15px;
+
+  .controlLabel, label[for="grade_levels"] {
+    font-weight: 600;
+    margin-top: 0.75rem;
+  }
+
+  .roleSelect {
+    max-width: 13.75rem;
   }
 }
 
