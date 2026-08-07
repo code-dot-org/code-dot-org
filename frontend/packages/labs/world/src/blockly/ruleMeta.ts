@@ -179,8 +179,16 @@ export interface StepAnchor {
 /** Where a step sits in the per-tick order (the authorable subset of the
  * engine's `StepOrder`): unordered, or before/after another step. */
 export interface StepOrderMeta {
-  readonly kind: 'free' | 'before' | 'after';
+  readonly kind: 'free' | 'before' | 'after' | 'phase';
   readonly anchor?: StepAnchor;
+  /**
+   * The named moment of the frame this runs in — `phase` only (core/phases).
+   *
+   * What a rule says instead of naming a neighbour. Held as a plain id rather
+   * than a `PhaseId` so a `.rule` written against a phase list that has since
+   * changed still parses; the Scheduler leaves an unknown one unordered.
+   */
+  readonly phase?: string;
 }
 
 /**
@@ -195,6 +203,18 @@ export interface StepMeta {
   readonly name: string;
   readonly ownerRef: MemberRef;
   readonly order: StepOrderMeta;
+  /**
+   * What the body runs for, and how often.
+   *
+   * `world` is the step as it always was: one run per tick, `(world, delta)`.
+   * An actor- or camera-scoped step is declared UNDER A TRAIT and runs once per
+   * subject that has it, with that subject bound — which is what four of the
+   * seven stock steps open by doing for themselves, in a `for each … where has
+   * trait ⟨my own trait⟩` that says nothing the declaration site does not.
+   */
+  readonly scope: MemberScope;
+  /** The trait that owns a subject-scoped step (absent for world-scoped). */
+  readonly ownerTraitId?: string;
 }
 
 /**
@@ -340,6 +360,7 @@ export function builtinRuleMeta(
       id: s.id,
       name: s.id,
       ownerRef,
+      scope: 'world' as const,
       order: {kind: 'free' as const},
     }));
     return {
@@ -683,10 +704,11 @@ export function parseRuleMeta(
    * A step root → a StepMeta. Its ordering is the BLOCK TYPE, not a field:
    * `when tick` is unordered, `before`/`after` carry the anchor dropdown.
    */
-  const STEP_KIND: Record<string, 'free' | 'before' | 'after'> = {
+  const STEP_KIND: Record<string, StepOrderMeta['kind']> = {
     world_rule_step_tick: 'free',
     world_rule_step_before: 'before',
     world_rule_step_after: 'after',
+    world_rule_step_in: 'phase',
   };
   const addStep = (block: RuleBlock): void => {
     const name = field(block, 'NAME');
@@ -694,10 +716,55 @@ export function parseRuleMeta(
     if (!name || !kind) {
       return;
     }
+    if (kind === 'phase') {
+      const phase = field(block, 'PHASE');
+      steps.push({
+        id: slug(name),
+        name,
+        ownerRef: selfRef,
+        scope: 'world',
+        order: phase ? {kind, phase} : {kind: 'free'},
+      });
+      return;
+    }
     const anchor =
       kind === 'free' ? undefined : stepAnchor(field(block, 'STEP'));
     const order: StepOrderMeta = anchor ? {kind, anchor} : {kind: 'free'};
-    steps.push({id: slug(name), name, ownerRef: selfRef, order});
+    steps.push({
+      id: slug(name),
+      name,
+      ownerRef: selfRef,
+      scope: 'world',
+      order,
+    });
+  };
+
+  /**
+   * A step declared under a trait: it runs for each subject that has it.
+   *
+   * Always phased. A trait's step is saying what KIND of work it does — a
+   * camera trait that clamps the view runs in `confine` — and the phases it is
+   * offered are the ones its subject takes part in, so there is no neighbour
+   * for it to name and no dropdown of every step in the project to pick from.
+   */
+  const addTraitStep = (
+    block: RuleBlock,
+    ownerTraitId: string,
+    ownerSubject: 'actor' | 'camera',
+  ): void => {
+    const name = field(block, 'NAME');
+    if (!name) {
+      return;
+    }
+    const phase = field(block, 'PHASE');
+    steps.push({
+      id: slug(name),
+      name,
+      ownerRef: selfRef,
+      scope: ownerSubject,
+      ownerTraitId,
+      order: phase ? {kind: 'phase', phase} : {kind: 'free'},
+    });
   };
 
   // The rule's own chain: `use rule` dependencies and its world-scoped members.
@@ -784,6 +851,8 @@ export function parseRuleMeta(
         addProperty(member, traitId, subject);
       } else if (member.type === 'world_rule_block') {
         addDesignedBlock(member, traitId, subject);
+      } else if (member.type === 'world_trait_step') {
+        addTraitStep(member, traitId, subject);
       } else if (member.type === 'world_rule_event') {
         addEvent(member);
       }
@@ -1248,16 +1317,35 @@ export function ruleMetaToModule(
   }
 
   // Steps — the rule's per-tick behavior. Each runs with `(world, delta)` bound;
-  // ordering picks the builder method (free / before / after an anchor step).
+  // ordering picks the builder method (free / in a phase / before / after an
+  // anchor step).
   // Emitted in self-anchor dependency order so a local anchor const exists first.
   for (const step of orderedSteps()) {
-    const code = bodies.get(ruleBodyKey('step', 'world', undefined, step.id));
-    const closure = `(world, delta) => {\n${code?.body ?? ''}}`;
-    const {kind, anchor} = step.order;
+    const code = bodies.get(
+      ruleBodyKey('step', step.scope, step.ownerTraitId, step.id),
+    );
+    // A subject-scoped step runs once per thing that has the trait, with that
+    // thing bound — the `for each … where has trait ⟨mine⟩` four of the seven
+    // stock steps open by writing out, supplied here instead. No `const world`
+    // preamble: unlike an action's, a step's closure already has one.
+    const traitExport = step.ownerTraitId
+      ? traitExportById.get(step.ownerTraitId)
+      : undefined;
+    const scoped = step.scope !== 'world' && traitExport;
+    const inner = code?.body ?? '';
+    const run = scoped
+      ? `for (const ${step.scope} of world.${
+          step.scope === 'camera' ? 'cameras' : 'actors'
+        }.with(${traitExport})) {\n${inner}}\n`
+      : inner;
+    const closure = `(world, delta) => {\n${run}}`;
+    const {kind, anchor, phase} = step.order;
     const call =
-      (kind === 'before' || kind === 'after') && anchor
-        ? `rule.addStep${kind === 'before' ? 'Before' : 'After'}(${q(step.id)}, ${stepAnchorRef(anchor)}, ${closure})`
-        : `rule.addStep(${q(step.id)}, ${closure})`;
+      kind === 'phase' && phase
+        ? `rule.addStepIn(${q(step.id)}, ${q(phase)}, ${closure})`
+        : (kind === 'before' || kind === 'after') && anchor
+          ? `rule.addStep${kind === 'before' ? 'Before' : 'After'}(${q(step.id)}, ${stepAnchorRef(anchor)}, ${closure})`
+          : `rule.addStep(${q(step.id)}, ${closure})`;
     body.push(`export const ${stepExport(step.name)} = ${call};`);
   }
 

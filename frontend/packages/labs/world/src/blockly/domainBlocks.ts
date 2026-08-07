@@ -118,6 +118,7 @@ import {
   backgroundImportOptions,
   spriteOptions,
 } from './moduleOptions';
+import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
 import type {
   ActionMeta,
@@ -909,6 +910,7 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_rule_step_tick',
   'world_rule_step_before',
   'world_rule_step_after',
+  'world_rule_step_in',
   // …and a set of choices, whose options chain below it.
   'world_rule_enum',
 ]);
@@ -4154,6 +4156,50 @@ const worldRuleStepAfter = stepBlock(
   [stepOptionsExtension],
 );
 
+// Naming the MOMENT rather than a neighbour. What the other three cannot say:
+// gravity is a force, and saying so should not require knowing that Physics
+// exists (engine/core/phases). Rule-level, so it is offered every moment —
+// the work that fits no single actor lives here.
+const worldRuleStepIn = stepBlock(
+  'world_rule_step_in',
+  'in %1 do %2',
+  [{type: 'field_dropdown', name: 'PHASE', options: phaseOptions}, nameArg],
+  'Run this every tick, in a named part of the frame — “this is a force”, ' +
+    'rather than “this runs before that other rule’s step”.',
+  [phaseOptionsExtension],
+);
+
+// A step that belongs to a TRAIT, chained under `define trait` beside the
+// properties, because that is where every other member of a trait is declared.
+//
+// Two things follow from the position, and neither has to be typed. The body
+// runs once per subject that HAS the trait, with that subject bound — the
+// `for each … where has trait ⟨mine⟩` that four of the seven stock steps open
+// by writing out. And the subject narrows the phase list, so a camera trait is
+// offered the camera's moments and an actor trait the actor's.
+//
+// A mouth rather than a chained body, unlike the hats: a trait's members chain
+// through `next`, so the body needs somewhere else to be. `define block` has
+// the same shape for the same reason.
+const worldTraitStep = defineBlock({
+  type: 'world_trait_step',
+  message0: 'each frame in %1 do %2',
+  args0: [
+    {type: 'field_dropdown', name: 'PHASE', options: phaseOptions},
+    {type: 'field_input', name: 'NAME', text: 'do something'},
+  ],
+  message1: '%1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [phaseOptionsExtension],
+  style: 'event_blocks',
+  tooltip:
+    'Run this every tick for each thing that has this trait, in a named part ' +
+    'of the frame. The thing itself is what the blocks inside act on.',
+  generator: noGenerator,
+});
+
 const worldRuleStepTick = stepBlock(
   'world_rule_step_tick',
   'when tick do %1',
@@ -4429,6 +4475,8 @@ export const DOMAIN_BLOCKS = [
   worldReturn,
   worldRuleStepBefore,
   worldRuleStepAfter,
+  worldRuleStepIn,
+  worldTraitStep,
   worldRuleStepTick,
   worldKey,
   worldForEachKey,
@@ -4572,6 +4620,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_return', // ends a query's body
       // Per-tick behaviour, one block per kind of ordering.
       'world_rule_step_tick',
+      'world_rule_step_in',
+      'world_trait_step',
       'world_rule_step_before',
       'world_rule_step_after',
       'world_step_delta', // the frame time, inside a step

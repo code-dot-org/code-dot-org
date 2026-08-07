@@ -152,6 +152,17 @@ export class RuleBuilder {
     return this.registerStep(id, run, {kind: 'after', anchor});
   }
 
+  /**
+   * Add a per-tick step that runs in a named moment of the frame
+   * (core/phases).
+   *
+   * What a rule says instead of naming a neighbour: gravity is a force, so it
+   * runs in `push`, and it need not know that Physics exists to say so.
+   */
+  addStepIn(id: string, phase: string, run: StepFn): Step {
+    return this.registerStep(id, run, {kind: 'phase', phase});
+  }
+
   private registerStep(id: string, run: StepFn, order: Step['order']): Step {
     this.assertMutable();
     const step: Step = {id, ownerId: this.id, order, run};
