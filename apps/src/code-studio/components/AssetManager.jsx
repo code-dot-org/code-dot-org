@@ -101,10 +101,10 @@ export default class AssetManager extends React.Component {
       showFlaggedModal: false,
       flaggedModalError: null,
       uploadsEnabled: props.uploadsEnabled,
-      // True while an accepted flagged upload is in flight; onUploadDone writes
-      // the stored filename to assets metadata.
-      pendingFlaggedUpload: false,
     };
+    // Synced flag (not React state): set before submit() so a fast onUploadDone
+    // still sees it and writes metadata. setState would race.
+    this.pendingFlaggedUpload = false;
   }
 
   componentDidMount() {
@@ -237,12 +237,12 @@ export default class AssetManager extends React.Component {
         ) {
           dashboard.project.setAbuseScore(responseData.abuse_score);
         }
+        this.pendingFlaggedUpload = true;
         this.setState({
           showFlaggedModal: false,
           pendingUploadData: null,
           flaggedModalError: null,
           uploadsEnabled: false,
-          pendingFlaggedUpload: true,
           statusMessage: 'Uploading...',
         });
         pendingUploadData.submit();
@@ -287,8 +287,8 @@ export default class AssetManager extends React.Component {
       newState.assets = assetListStore.list(this.props.allowedExtensions);
     }
 
-    if (this.state.pendingFlaggedUpload) {
-      newState.pendingFlaggedUpload = false;
+    if (this.pendingFlaggedUpload) {
+      this.pendingFlaggedUpload = false;
       setFlaggedFilename(this.props.projectId, result.filename).catch(err => {
         MetricsReporter.logError(
           'Error writing flagged asset metadata: ' + err
@@ -300,6 +300,7 @@ export default class AssetManager extends React.Component {
   };
 
   onUploadError = status => {
+    this.pendingFlaggedUpload = false;
     this.setState({
       statusMessage: 'Error uploading file: ' + getErrorMessage(status),
     });
