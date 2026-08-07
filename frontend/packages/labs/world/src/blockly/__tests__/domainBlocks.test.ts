@@ -425,7 +425,7 @@ describe('domain block generators', () => {
         getFieldValue: (name: string) => (name === 'NAME' ? 'Chase' : null),
         getInputTargetBlock: () => use('Gravity#AffectedByGravityTrait'),
       } as never,
-      {definitions_: {}} as never,
+      {definitions_: {}, statementToCode: () => ''} as never,
       {} as never,
     ) as string;
 
@@ -440,7 +440,7 @@ describe('domain block generators', () => {
         getFieldValue: (name: string) => (name === 'NAME' ? 'Chase' : null),
         getInputTargetBlock: () => null,
       } as never,
-      {definitions_: {}} as never,
+      {definitions_: {}, statementToCode: () => ''} as never,
       {} as never,
     ) as string;
 
@@ -470,12 +470,43 @@ describe('domain block generators', () => {
         getFieldValue: () => 'Overview',
         getInputTargetBlock: () => null,
       } as never,
-      {} as never,
+      {statementToCode: () => ''} as never,
       {} as never,
     ) as string;
 
     expect(code).toBe(
       'world.defineCamera({id: "camera_cam1", name: "Overview"});\n',
+    );
+  });
+
+  it('world_define_camera makes what else is in its body, with it bound', () => {
+    // The mouth used to keep the `use trait` rows and drop everything else on
+    // the floor — `set actor to follow …`, a `log`, anything — so the blocks
+    // sat there looking right and generated nothing at all.
+    //
+    // Made AFTER the camera and with it bound, so `this camera` inside the
+    // definition means the one being defined rather than making a learner
+    // repeat its name.
+    const code = generatorFor('world_define_camera')(
+      {
+        id: 'cam1',
+        getFieldValue: (name: string) => (name === 'NAME' ? 'Chase' : null),
+        getInputTargetBlock: () => null,
+      } as never,
+      {
+        definitions_: {},
+        statementToCode: () =>
+          'camera.set(WorldLab.ActorToFollowProperty, world.actors.ofType("actors/player"));\n',
+      } as never,
+      {} as never,
+    ) as string;
+
+    expect(code).toContain('world.defineCamera({id: "camera_cam1"');
+    expect(code).toContain('const camera = world.camera("camera_cam1");');
+    expect(code).toContain('camera.set(WorldLab.ActorToFollowProperty');
+    // The camera exists before anything is set on it.
+    expect(code.indexOf('defineCamera')).toBeLessThan(
+      code.indexOf('world.camera('),
     );
   });
 

@@ -92,7 +92,7 @@ export const BlocklyGenerator = forwardRef<
         // world, an event's value). Reserve them so a Blockly variable
         // (e.g. a `for each` loop's actor variable) is never named to collide —
         // it gets a numbered suffix instead of shadowing the identifier.
-        generator.addReservedWords('actor,world,eventValue,delta');
+        generator.addReservedWords('actor,camera,world,eventValue,delta');
         generator.init(workspace);
 
         // A `.rule` file: the declarative scaffolding comes from its metadata

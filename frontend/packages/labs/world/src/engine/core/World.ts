@@ -39,6 +39,7 @@ import type {
   WorldQuery,
 } from './types';
 import {Vector} from './Vector';
+import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from './viewport';
 
 /**
  * A pristine, comparable view of a built world — its structure and every
@@ -328,6 +329,8 @@ export class World {
    * subject, and every `.actor` that cared had to register on itself.
    */
   private readonly worldHandlers = new Map<GameEvent, WorldEventHandler[]>();
+  /** How big the world is; see `mapBounds`. One screen until a map is loaded. */
+  private bounds = {width: VIEWPORT_WIDTH, height: VIEWPORT_HEIGHT};
   // Animations known to this world, by id — seeded from the active rules' stock
   // animations. The Animation rule's step and renderSnapshot resolve ids here.
   private readonly animationDefs = new Map<string, AnimationDef>();
@@ -673,6 +676,49 @@ export class World {
   /** Handlers registered for a world event; used by the EventQueue on flush. */
   handlersFor(event: GameEvent): readonly WorldEventHandler[] {
     return this.worldHandlers.get(event) ?? [];
+  }
+
+  /**
+   * How big the world is, in world pixels — the largest map loaded into it.
+   *
+   * The LARGEST rather than the first or the last, because a world may load
+   * several (a level and a HUD) and the honest answer to "how big is this
+   * world" is as big as the biggest thing in it. A HUD the size of the viewport
+   * must not shrink the level.
+   *
+   * The viewport's own size until a map says otherwise, so a world with no map
+   * is one screen big rather than zero.
+   */
+  mapBounds(): {width: number; height: number} {
+    return {...this.bounds};
+  }
+
+  /**
+   * How big the window onto the world is, in world pixels.
+   *
+   * Fixed today (core/viewport). A method rather than the constant so a rule
+   * reads it the way it reads everything else about the world, and so making it
+   * settable later changes nothing that asks.
+   */
+  viewSize(): {width: number; height: number} {
+    return {width: VIEWPORT_WIDTH, height: VIEWPORT_HEIGHT};
+  }
+
+  /**
+   * Take a map's size into account. Called by `loadMap`, which is the only
+   * thing that knows a map was loaded.
+   */
+  growToFit(map: {
+    size?: {width: number; height: number};
+    tile?: {width: number; height: number};
+  }): void {
+    if (!map.size || !map.tile) {
+      return; // a synthesised map has no size; the world keeps the one it had
+    }
+    this.bounds = {
+      width: Math.max(this.bounds.width, map.size.width * map.tile.width),
+      height: Math.max(this.bounds.height, map.size.height * map.tile.height),
+    };
   }
 
   /** Replace the pressed-key set (driver calls this each frame before `tick`). */

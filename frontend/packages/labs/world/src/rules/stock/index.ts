@@ -12,6 +12,8 @@
 
 import {arrowsRule} from './arrows';
 import {cameraRule} from './camera';
+import {cameraConfinedRule} from './cameraConfined';
+import {cameraEaseRule} from './cameraEase';
 import {cameraFollowRule} from './cameraFollow';
 import {collisionsRule} from './collisions';
 import {gravityRule} from './gravity';
@@ -140,6 +142,24 @@ export const STOCK_RULES: readonly StockRule[] = [
     provides: ['Follows'],
     contents: cameraFollowRule,
   },
+  {
+    id: 'cameraEase',
+    name: 'Camera Ease',
+    ability: 'Eases the Camera',
+    description:
+      'Lets a camera catch up to what it is aiming at over a few frames instead of snapping to it. Needs Camera.',
+    provides: ['Eases'],
+    contents: cameraEaseRule,
+  },
+  {
+    id: 'cameraConfined',
+    name: 'Camera Confined',
+    ability: 'Keeps the View in the Map',
+    description:
+      'Stops a camera at the edge of the map, so the view never shows past the level. Needs Camera.',
+    provides: ['Confined to the Map'],
+    contents: cameraConfinedRule,
+  },
 ];
 
 /** Look one up by its file stem. */
@@ -162,4 +182,6 @@ export {
   motionRule,
   cameraRule,
   cameraFollowRule,
+  cameraEaseRule,
+  cameraConfinedRule,
 };

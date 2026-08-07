@@ -68,6 +68,19 @@ const FOUNDATION_RULES: readonly Rule[] = [SpatialRule, AnimationRule];
  * a HUD. A world may load several.
  */
 export interface WorldMap {
+  /**
+   * How big the map is, in tiles, and how big one tile is.
+   *
+   * Already in every `.map` file the editor writes — it is what the map
+   * editor's Width/Height set — and it used to stop there: `loadMap` took the
+   * whole object and read only `actors`, so nothing downstream could ask how
+   * big the level was. A camera that keeps the view inside the level is the
+   * first thing that needs to (`World.mapBounds`).
+   *
+   * Optional, because a map block synthesises its placements without one.
+   */
+  size?: {width: number; height: number};
+  tile?: {width: number; height: number};
   actors: Array<{
     type: string;
     /** Stable instance id; a random unique one is assigned when omitted. */
@@ -396,6 +409,23 @@ export class WorldBuilder {
   }
 
   /**
+   * How big the world is. See {@link World.mapBounds}.
+   *
+   * Builds the world, because it hands back a value out of it rather than
+   * telling it something — the same family as `camera` and `actors`. Read
+   * before any map is loaded it is one screen, which is the truth about a world
+   * with nothing placed in it.
+   */
+  mapBounds(): {width: number; height: number} {
+    return this.getWorld().mapBounds();
+  }
+
+  /** How big the view is. See {@link World.viewSize}. */
+  viewSize(): {width: number; height: number} {
+    return this.getWorld().viewSize();
+  }
+
+  /**
    * The actors in the world, as it stands. See {@link World.actors}.
    *
    * Builds the world for the reason `camera` does. Read before anything is
@@ -478,6 +508,7 @@ export class WorldBuilder {
    */
   loadMap(map: WorldMap, layer?: string): Actor[] {
     const world = this.getWorld();
+    world.growToFit(map);
     const lookup = this.propertyLookup(world);
     const added: Actor[] = [];
     for (const entry of map.actors) {

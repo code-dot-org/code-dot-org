@@ -170,3 +170,48 @@ describe('reading the world from its own description', () => {
     expect([...actors]).toHaveLength(1);
   });
 });
+
+describe('how big the world is', () => {
+  // A camera that keeps the view inside the level has to ask. The size was in
+  // every `.map` file the editor writes — it is what the map editor's
+  // Width/Height set — and it stopped there: `loadMap` took the whole object
+  // and read only `actors`.
+  const map = (tiles: number) => ({
+    size: {width: tiles, height: tiles},
+    tile: {width: 32, height: 32},
+    actors: [],
+  });
+
+  it('is one screen before any map is loaded', () => {
+    // Not zero. A world with nothing placed in it is still somewhere.
+    expect(builder().mapBounds()).toEqual(builder().viewSize());
+  });
+
+  it('is the map’s once one is', () => {
+    const made = builder();
+    made.loadMap(map(30));
+
+    expect(made.mapBounds()).toEqual({width: 960, height: 960});
+  });
+
+  it('is the LARGEST map, not the last', () => {
+    // A world may load several — a level and a HUD. The honest answer to how
+    // big it is is as big as the biggest thing in it, so a HUD the size of the
+    // viewport must not shrink the level.
+    const made = builder();
+    made.loadMap(map(30));
+    made.loadMap(map(10));
+
+    expect(made.mapBounds()).toEqual({width: 960, height: 960});
+  });
+
+  it('ignores a map that carries no size', () => {
+    // A map block synthesises its placements without one; the world keeps
+    // whatever it had rather than collapsing to nothing.
+    const made = builder();
+    made.loadMap(map(30));
+    made.loadMap({actors: []});
+
+    expect(made.mapBounds()).toEqual({width: 960, height: 960});
+  });
+});

@@ -19,6 +19,8 @@ import {
   ruleMetaToModule,
 } from '../../blockly/ruleMeta';
 import {cameraRule} from '../stock/camera';
+import {cameraConfinedRule} from '../stock/cameraConfined';
+import {cameraEaseRule} from '../stock/cameraEase';
 import {cameraFollowRule} from '../stock/cameraFollow';
 
 /** A saved block, as much of one as this needs to walk it. */
@@ -52,6 +54,9 @@ function typesIn(contents: string): string[] {
 
 const camera = () => parseRuleMeta('rules/camera', cameraRule)!;
 const follow = () => parseRuleMeta('rules/cameraFollow', cameraFollowRule)!;
+const ease = () => parseRuleMeta('rules/cameraEase', cameraEaseRule)!;
+const confined = () =>
+  parseRuleMeta('rules/cameraConfined', cameraConfinedRule)!;
 
 describe('Camera — the base every camera rule builds on', () => {
   it('declares a camera trait carrying the goal', () => {
@@ -125,9 +130,9 @@ describe('every block these rules name', () => {
   // named from its rule and its export (`world_get_Camera_GoalProperty`), so
   // renaming the rule or the property renames them too.
   const palette = new Set(
-    buildDomainPalette([camera(), follow()], {allRuleModules: true}).blocks.map(
-      block => block.type,
-    ),
+    buildDomainPalette([camera(), follow(), ease(), confined()], {
+      allRuleModules: true,
+    }).blocks.map(block => block.type),
   );
 
   it('exists', () => {
@@ -135,6 +140,8 @@ describe('every block these rules name', () => {
     for (const [name, source] of [
       ['camera', cameraRule],
       ['cameraFollow', cameraFollowRule],
+      ['cameraEase', cameraEaseRule],
+      ['cameraConfined', cameraConfinedRule],
     ] as const) {
       for (const type of typesIn(source)) {
         // Ours, or Blockly's own, which importing blockly registers.
@@ -209,5 +216,123 @@ describe('the module a camera rule generates', () => {
       'for (const camera of world.cameras.with(FollowsTrait))',
     );
     expect(code).not.toContain('.steps[');
+  });
+});
+
+describe('Camera Ease — shaping the goal, not setting it', () => {
+  it('runs in the moment between aiming and confining', () => {
+    expect(ease().steps).toEqual([
+      expect.objectContaining({
+        id: 'ease_toward_the_goal',
+        scope: 'camera',
+        ownerTraitId: 'Eases',
+        order: {kind: 'phase', phase: 'smooth'},
+      }),
+    ]);
+  });
+
+  it('elects the base trait and adds one number', () => {
+    const meta = ease();
+
+    expect(meta.requires).toContain('Camera');
+    expect(meta.traits[0].requires).toEqual(['Camera#AimedTrait']);
+    expect(meta.properties).toEqual([
+      expect.objectContaining({id: 'smoothness', type: 'number', default: 0.2}),
+    ]);
+  });
+});
+
+describe('Camera Confined — the view stops at the edge of the map', () => {
+  it('runs after anything that shaped the goal', () => {
+    expect(confined().steps).toEqual([
+      expect.objectContaining({
+        id: 'keep_the_view_inside',
+        scope: 'camera',
+        ownerTraitId: 'Confined_to_the_Map',
+        order: {kind: 'phase', phase: 'confine'},
+      }),
+    ]);
+  });
+
+  it('adds the clamp as a block of its own, as rules/solid does', () => {
+    // Written out twice inline it is a nest of comparisons; named once it is a
+    // sentence. Its two uses are the x and y axes.
+    const meta = confined();
+
+    expect(meta.queries.map(query => query.name)).toEqual(['kept between and']);
+    expect(meta.queries[0].returns).toBe('number');
+    expect(meta.queries[0].params.map(param => param.name)).toEqual([
+      'value',
+      'low',
+      'high',
+    ]);
+  });
+
+  it('reads the bounds rather than restating them', () => {
+    // The map editor already knows how big the level is. A rule that made a
+    // learner retype it would be wrong the moment they resized the map.
+    const named = new Set(typesIn(cameraConfinedRule));
+
+    expect(named).toContain('world_map_size');
+    expect(named).toContain('world_view_size');
+  });
+});
+
+describe('a camera that has elected Follows but been given nothing', () => {
+  // The state EVERY such camera is in for at least one frame — `define camera`
+  // with `use trait ⟨Follows⟩`, before anything sets `actor to follow`. It used
+  // to throw `Cannot read properties of undefined (reading 'get')` every tick:
+  // an `actors` property starts empty, a value read of several takes the first
+  // (`WorldLab.one`), and the first of none is undefined.
+  //
+  // Doing nothing is the right answer rather than aiming somewhere by default.
+  // The goal persists, so an unaimed camera holds the view where it is.
+
+  it('guards the read rather than trusting the list', () => {
+    const named = new Set(typesIn(cameraFollowRule));
+
+    expect(named).toContain('world_any_actors');
+    expect(named).toContain('controls_if');
+  });
+
+  it('asks before it reads, not after', () => {
+    // The order matters and a set of block types cannot see it: the check has
+    // to be the `if`'s condition, with the read inside its body.
+    const parsed = JSON.parse(cameraFollowRule) as {
+      blocks: {blocks: Array<Record<string, unknown>>};
+    };
+    const find = (
+      node: unknown,
+      type: string,
+    ): Record<string, unknown> | undefined => {
+      if (!node || typeof node !== 'object') {
+        return undefined;
+      }
+      const here = node as Record<string, unknown>;
+      if (here.type === type) {
+        return here;
+      }
+      for (const [key, child] of Object.entries(here)) {
+        if (key === 'fields' || key === 'extraState') {
+          continue;
+        }
+        const found = find((child as {block?: unknown})?.block ?? child, type);
+        if (found) {
+          return found;
+        }
+      }
+      return undefined;
+    };
+
+    const guard = find(parsed.blocks.blocks, 'controls_if')!;
+    const inputs = guard.inputs as Record<string, {block?: {type?: string}}>;
+
+    expect(inputs.IF0?.block?.type).toBe('world_any_actors');
+    expect(find(inputs.DO0, 'world_set_Camera_GoalProperty')).toBeDefined();
+    // …and the position read is inside the guarded body, not beside it.
+    expect(
+      find(inputs.IF0, 'world_get_Space_PositionProperty'),
+    ).toBeUndefined();
+    expect(find(inputs.DO0, 'world_get_Space_PositionProperty')).toBeDefined();
   });
 });
