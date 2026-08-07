@@ -67,11 +67,43 @@ interface View {
   height: number;
 }
 
+// Flip a sprite's vertical state across the view's horizontal midline (see
+// the negative-gravity branch below).
+function flipSpriteY(sprite: PhysicsSprite, view: View): void {
+  sprite.position.y = view.height - sprite.position.y;
+  sprite.velocity.y = -sprite.velocity.y;
+  if (sprite.__slab2Prev) {
+    sprite.__slab2Prev.y = view.height - sprite.__slab2Prev.y;
+  }
+}
+
 export function resolvePlatformPhysics(
   moved: MovedPlayer[],
   walls: PhysicsBox[],
-  view: View
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
 ) {
+  // Negative gravity (the "set gravity" block flipping the world): mirror
+  // everything vertically, resolve with the ordinary downward rules, and
+  // mirror back. Landing on block tops becomes landing on their undersides,
+  // and the floor rest becomes a ceiling rest, without a second copy of the
+  // resolution rules.
+  if (gravity < 0) {
+    moved.forEach(m => {
+      flipSpriteY(m.sprite, view);
+      m.y = view.height - m.y;
+    });
+    const flippedWalls = walls.map(wall => ({
+      ...wall,
+      position: {x: wall.position.x, y: view.height - wall.position.y},
+    }));
+    resolvePlatformPhysics(moved, flippedWalls, view, -gravity);
+    moved.forEach(m => {
+      flipSpriteY(m.sprite, view);
+      m.y = view.height - m.y;
+    });
+    return;
+  }
   const boxes = walls.map(wall => ({
     x: wall.position.x,
     y: wall.position.y,
@@ -215,9 +247,51 @@ export function resolvePlatformPhysics(
     if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
       sprite.velocity.y = TERMINAL_FALL_SPEED;
     }
-    sprite.velocity.y += PLATFORM_GRAVITY;
+    sprite.velocity.y += gravity;
     sprite.position.x = x;
     sprite.position.y = y - drop;
     sprite.__slab2Prev = {x, y: y - drop};
+  });
+}
+
+/**
+ * Whether a player is standing on support in the gravity direction: a wall
+ * face within contact slack of the body's feet (or its head, under flipped
+ * gravity), or the view's floor (ceiling). Mirrors the resolver's footing
+ * geometry; the jump command asks this.
+ */
+export function isSupported(
+  sprite: PhysicsSprite,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  if (gravity < 0) {
+    const flipped: PhysicsSprite = {
+      ...sprite,
+      position: {x: sprite.position.x, y: view.height - sprite.position.y},
+      velocity: {x: sprite.velocity.x, y: -sprite.velocity.y},
+    };
+    const flippedWalls = walls.map(wall => ({
+      ...wall,
+      position: {x: wall.position.x, y: view.height - wall.position.y},
+    }));
+    return isSupported(flipped, flippedWalls, view, -gravity);
+  }
+  const imgHalfW = (sprite.width * sprite.scale) / 2;
+  const imgHalfH = (sprite.height * sprite.scale) / 2;
+  const halfW = imgHalfW * PLAYER_BODY_SCALE;
+  const halfH = imgHalfH * PLAYER_BODY_SCALE;
+  const feet = sprite.position.y + (imgHalfH - halfH) + halfH;
+  if (feet >= view.height - CONTACT_EPSILON) {
+    return true;
+  }
+  return walls.some(wall => {
+    const top = wall.position.y - (wall.height * wall.scale) / 2;
+    return (
+      Math.abs(feet - top) <= CONTACT_EPSILON &&
+      Math.abs(sprite.position.x - wall.position.x) <
+        halfW + (wall.width * wall.scale) / 2
+    );
   });
 }

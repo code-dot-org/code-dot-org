@@ -1,4 +1,5 @@
 import {
+  isSupported,
   resolvePlatformPhysics,
   PhysicsBox,
   PhysicsSprite,
@@ -213,5 +214,69 @@ describe('platformPhysics', () => {
     step(flyer, []);
     step(flyer, []);
     expect(flyer.position.y).toBeLessThan(0);
+  });
+});
+
+// The set-gravity block's resolver seam: a custom magnitude, and a negative
+// value flipping the world vertically.
+describe('platformPhysics with custom gravity', () => {
+  const stepWith = (
+    sprite: PhysicsSprite,
+    walls: PhysicsBox[],
+    gravity: number,
+    vx = 0
+  ) => {
+    sprite.position.y += sprite.velocity.y;
+    sprite.position.x += vx;
+    resolvePlatformPhysics(
+      [{sprite, x: sprite.position.x, y: sprite.position.y}],
+      walls,
+      VIEW,
+      gravity
+    );
+  };
+
+  it('accrues the given magnitude instead of the default', () => {
+    const player = makeSprite(200, 100);
+    stepWith(player, [], 2);
+    expect(player.velocity.y).toBe(2);
+  });
+
+  it('negative gravity falls up and rests the art on the view top', () => {
+    const player = makeSprite(200, 300);
+    for (let i = 0; i < 60; i++) {
+      stepWith(player, [], -PLATFORM_GRAVITY);
+    }
+    // Image top at 0 — the flipped analogue of feet on the floor line.
+    expect(player.position.y - 25).toBe(0);
+  });
+
+  it('negative gravity lands on a block underside and stays', () => {
+    // Wall cell (col 1, row 1): center (75, 75), underside at y=100.
+    const walls = [wallAt(1, 1)];
+    const player = makeSprite(75, 300);
+    for (let i = 0; i < 60; i++) {
+      stepWith(player, walls, -PLATFORM_GRAVITY);
+    }
+    // Body top (feet-anchor flipped to a head anchor) on the underside:
+    // body center 120, image center 5 below it.
+    expect(player.position.y).toBe(125);
+  });
+
+  it('isSupported sees floor, block tops, and flipped undersides', () => {
+    const walls = [wallAt(1, 6)];
+    const onFloor = makeSprite(300, 375);
+    expect(isSupported(onFloor, walls, VIEW)).toBe(true);
+    const onBlock = makeSprite(75, 275);
+    expect(isSupported(onBlock, walls, VIEW)).toBe(true);
+    const hovering = makeSprite(75, 200);
+    expect(isSupported(hovering, walls, VIEW)).toBe(false);
+    // Under flipped gravity the head-anchored body rests against block
+    // undersides: image top on the underside (cell row 6: y=350) counts,
+    // a gap below it doesn't.
+    const underBlock = makeSprite(75, 375);
+    expect(isSupported(underBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(true);
+    const nearBlock = makeSprite(75, 360);
+    expect(isSupported(nearBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(false);
   });
 });
