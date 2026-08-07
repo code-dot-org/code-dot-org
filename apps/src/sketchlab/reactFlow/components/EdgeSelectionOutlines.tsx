@@ -2,6 +2,7 @@ import {ViewportPortal} from '@xyflow/react';
 import React, {useLayoutEffect, useRef} from 'react';
 
 import {LINE_INTERACTION_WIDTH_PX} from '../constants';
+import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 import {
   computeEdgeSelectionBox,
   type EdgeSelectionBox,
@@ -29,15 +30,8 @@ function sameBox(
 
 /**
  * Draws the selection ring for each selected or focused edge: a node-style ring
- * around the band that accepts clicks, rotated onto the line rather than boxing
- * its endpoints.
- *
- * The ring is measured off the rendered path so it fits every line shape. React
- * Flow renders that path from its own store, which syncs a commit behind the
- * node state that moved it, so measuring during our own commit would leave the
- * ring a step behind throughout a drag. Measuring on an animation frame instead
- * reads whatever the path currently is, and writing straight to the ring's
- * style keeps that off React's render path.
+ * around the band that accepts clicks, rotated onto the line.
+ * The ring is measured off the rendered path so it fits every line shape.
  */
 export default function EdgeSelectionOutlines({
   edgeIds,
@@ -45,17 +39,19 @@ export default function EdgeSelectionOutlines({
   const outlineRefs = useRef(new Map<string, HTMLDivElement>());
   const lastBoxes = useRef(new Map<string, EdgeSelectionBox>());
 
-  // The frame loop reads this rather than closing over a stale prop.
+  // The observer callback reads this rather than closing over a stale prop.
   const edgeIdsRef = useRef(edgeIds);
   edgeIdsRef.current = edgeIds;
 
-  const active = edgeIds.length > 0;
+  // Restarts the effect when the outlined set changes, without depending on the
+  // identity of an array the parent rebuilds on most renders.
+  const edgeIdsKey = edgeIds.join('\n');
+
   useLayoutEffect(() => {
-    if (!active) {
+    if (edgeIdsRef.current.length === 0) {
       lastBoxes.current.clear();
       return;
     }
-    let frame = 0;
     const positionOutlines = () => {
       edgeIdsRef.current.forEach(edgeId => {
         const outline = outlineRefs.current.get(edgeId);
@@ -82,12 +78,25 @@ export default function EdgeSelectionOutlines({
         outline.style.height = `${box.height}px`;
         outline.style.transform = `translate(-50%, -50%) rotate(${box.angleDegrees}deg)`;
       });
-      frame = requestAnimationFrame(positionOutlines);
     };
     // Position once before the first paint so no ring flashes at the origin.
     positionOutlines();
-    return () => cancelAnimationFrame(frame);
-  }, [active]);
+
+    const viewport = document.querySelector(REACT_FLOW_SELECTOR.viewport);
+    if (!viewport) return;
+    // React Flow rewrites an edge's `d` whenever the line moves, so watching for
+    // those writes repositions the rings only when something actually changed,
+    // and still before the next paint. Repositioning writes styles and adds no
+    // elements, so it cannot retrigger the observer.
+    const observer = new MutationObserver(positionOutlines);
+    observer.observe(viewport, {
+      subtree: true,
+      // Catches an edge whose path element mounts or gets replaced later.
+      childList: true,
+      attributeFilter: ['d'],
+    });
+    return () => observer.disconnect();
+  }, [edgeIdsKey]);
 
   return (
     <ViewportPortal>
