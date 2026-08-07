@@ -614,6 +614,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.stubs(:get_storage_id).returns(123)
     Projects.stubs(:new).with(123).returns(mock_projects)
     Projects.stubs(:in_restricted_share_mode).returns(false)
+    Projects.stubs(:get_abuse).returns(0)
 
     # Stub remix_project to return predictable channel IDs.
     @controller.stubs(:remix_project).with(channel_id, project_type).returns(new_channel_id)
@@ -650,6 +651,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.stubs(:get_storage_id).returns(123)
     Projects.stubs(:new).with(123).returns(mock_projects)
     Projects.stubs(:in_restricted_share_mode).returns(false)
+    Projects.stubs(:get_abuse).returns(0)
     @controller.stubs(:remix_project).with(channel_id, project_type).returns(new_channel_id)
 
     get :remix, params: {key: project_type, channel_id: channel_id}
@@ -657,6 +659,19 @@ class ProjectsControllerTest < ActionController::TestCase
 
     refute_nil updated_value, 'Expected project.update to be called'
     assert_nil updated_value['subprojects'], 'Expected subprojects to be removed'
+  end
+
+  test 'remix is forbidden when project abuse score meets threshold' do
+    sign_in_with_request @project_owner
+    channel_id = '123456'
+    project_type = 'applab'
+
+    Projects.stubs(:in_restricted_share_mode).returns(false)
+    Projects.stubs(:get_abuse).with(channel_id).returns(SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD)
+    @controller.expects(:remix_project).never
+
+    get :remix, params: {key: project_type, channel_id: channel_id}
+    assert_response :forbidden
   end
 
   describe 'GET #create_new' do

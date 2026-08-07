@@ -524,6 +524,7 @@ class ProjectsController < ApplicationController
     src_channel_id = params[:channel_id]
     project_type = params[:key]
     return head :forbidden if Projects.in_restricted_share_mode(src_channel_id, project_type)
+    return head :forbidden if abuse_score_blocks_remix?(src_channel_id)
 
     new_channel_id = remix_project(src_channel_id, project_type)
 
@@ -540,6 +541,7 @@ class ProjectsController < ApplicationController
           subproject = project.get(subproject_src_channel_id)
           subproject_type = subproject["projectType"]
           return head :forbidden if Projects.in_restricted_share_mode(subproject_src_channel_id, subproject_type)
+          return head :forbidden if abuse_score_blocks_remix?(subproject_src_channel_id)
           new_subproject_channel_id = remix_project(subproject_src_channel_id, subproject_type, is_subproject: true)
           {level_id: entry['level_id'], channel_id: new_subproject_channel_id}
         end
@@ -767,6 +769,12 @@ class ProjectsController < ApplicationController
   # For certain actions, check a special permission before proceeding.
   private def authorize_load_project!
     authorize! :load_project, params[:key]
+  end
+
+  # Image-moderation (and other) flags raise abuse_score to the threshold;
+  # do not allow remixing those projects, including by the owner.
+  private def abuse_score_blocks_remix?(channel_id)
+    Projects.get_abuse(channel_id).to_i >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD
   end
 
   # Redirect to the correct view/edit page for Lab2 projects. If a project owner is on a /view
