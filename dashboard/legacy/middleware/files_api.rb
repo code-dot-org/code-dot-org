@@ -1003,6 +1003,55 @@ class FilesApi < Sinatra::Base
   THUMBNAIL_FILENAME = 'thumbnail.png'
   METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
 
+  # Assets-bucket metadata: which AssetManager upload was accepted after a
+  # flagged moderation verdict (at most one; further uploads are disabled).
+  # The flagged *asset* name is in the JSON body, not the URL.
+  ASSETS_METADATA_FLAGGED = 'image_moderation_flagged'.freeze
+  ASSETS_METADATA_FLAGGED_ROUTE =
+    %r{/v3/assets/([^/]+)/\.metadata/#{ASSETS_METADATA_FLAGGED}$}
+
+  def assets_metadata_flagged_path
+    "#{METADATA_PATH}/#{ASSETS_METADATA_FLAGGED}"
+  end
+
+  #
+  # PUT /v3/assets/<channel-id>/.metadata/image_moderation_flagged
+  # Body: {"filename":"<asset-name>"}
+  #
+  put ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    content_type :json
+    body = request.body.read
+
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    path = assets_metadata_flagged_path
+    AssetBucket.new.create_or_replace(encrypted_channel_id, path, body)
+    {filename: path}.to_json
+  end
+
+  #
+  # GET /v3/assets/<channel-id>/.metadata/image_moderation_flagged
+  #
+  get ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    result = AssetBucket.new.get(encrypted_channel_id, assets_metadata_flagged_path)
+    not_found if result[:status] == 'NOT_FOUND'
+    content_type :json
+    result[:body]
+  end
+
+  #
+  # DELETE /v3/assets/<channel-id>/.metadata/image_moderation_flagged
+  #
+  delete ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    AssetBucket.new.delete(encrypted_channel_id, assets_metadata_flagged_path)
+    no_content
+  end
+
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
   #
