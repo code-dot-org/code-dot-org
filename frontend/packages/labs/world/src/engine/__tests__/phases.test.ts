@@ -25,7 +25,10 @@ const step = (id: string, order: StepOrder): Step => ({
 });
 
 const inPhase = (id: string, phase: string): Step =>
-  step(id, {kind: 'phase', phase});
+  step(id, {kind: 'phase', phase, when: 'during'});
+
+const near = (id: string, when: 'before' | 'after', phase: string): Step =>
+  step(id, {kind: 'phase', phase, when});
 
 /** Every ordering of `items` — the orders the rules might have loaded in. */
 const permutations = <T>(items: readonly T[]): T[][] =>
@@ -188,5 +191,74 @@ describe('which moments a subject takes part in', () => {
     );
 
     expect(lastActor).toBeLessThan(firstCamera);
+  });
+});
+
+describe('the gaps around a moment', () => {
+  // `during` places a step among peers; the gaps place it around all of them.
+  // Both without naming a rule, which is the whole point.
+
+  it('brackets a whole moment without naming anyone in it', () => {
+    const run = new Scheduler([
+      inPhase('gravity', 'push'),
+      near('afterForces', 'after', 'push'),
+      near('beforeForces', 'before', 'push'),
+      inPhase('wind', 'push'),
+    ])
+      .order()
+      .map(s => s.id);
+
+    expect(run[0]).toBe('beforeForces');
+    expect(run.slice(1, 3).sort()).toEqual(['gravity', 'wind']);
+    expect(run[3]).toBe('afterForces');
+  });
+
+  it('orders two steps that belong in one moment and do not commute', () => {
+    // The one thing a phase alone cannot say. An easing camera step and a
+    // deadzone one both belong in `smooth` and give different answers in
+    // different orders; the one that must run last says `just before` the next
+    // moment, and still names no rule.
+    const run = new Scheduler([
+      near('ease', 'before', 'confine'),
+      inPhase('deadzone', 'smooth'),
+      inPhase('clampToMap', 'confine'),
+    ])
+      .order()
+      .map(s => s.id);
+
+    expect(run).toEqual(['deadzone', 'ease', 'clampToMap']);
+  });
+
+  it('puts the gap between the moments it separates', () => {
+    // `after ⟨decide⟩` and `before ⟨push⟩` name the same gap from either side,
+    // so both land there — after everything that decided, before anything that
+    // pushes. They are unordered with each other, which is honest: nothing was
+    // said about which comes first.
+    const run = new Scheduler([
+      inPhase('pushing', 'push'),
+      near('afterDecide', 'after', 'decide'),
+      near('beforePush', 'before', 'push'),
+      inPhase('deciding', 'decide'),
+    ])
+      .order()
+      .map(s => s.id);
+
+    expect(run[0]).toBe('deciding');
+    expect(run.slice(1, 3).sort()).toEqual(['afterDecide', 'beforePush']);
+    expect(run[3]).toBe('pushing');
+  });
+
+  it('reads a step with no relation as being in the moment', () => {
+    // What `{kind: "phase", phase}` meant before the relation existed, and
+    // what an unset dropdown means.
+    const run = new Scheduler([
+      step('bare', {kind: 'phase', phase: 'push'}),
+      near('after', 'after', 'push'),
+      near('before', 'before', 'push'),
+    ])
+      .order()
+      .map(s => s.id);
+
+    expect(run).toEqual(['before', 'bare', 'after']);
   });
 });
