@@ -22,20 +22,23 @@ export function computeEdgeSelectionBox(
   path: SVGPathElement,
   bandWidth: number
 ): EdgeSelectionBox | null {
-  const length = path.getTotalLength();
-  if (!length) return null;
+  // React Flow always renders path data. Without it there is nothing to
+  // measure, and getPointAtLength is not safe to call.
+  if (!path.getAttribute('d')) return null;
 
+  const length = path.getTotalLength();
   const start = path.getPointAtLength(0);
   const end = path.getPointAtLength(length);
   const spanX = end.x - start.x;
   const spanY = end.y - start.y;
   const span = Math.hypot(spanX, spanY);
-  // Both endpoints in the same place leaves the rectangle's angle undefined.
-  if (!span) return null;
 
   // Unit vector along the endpoint-to-endpoint line, and its 90° rotation.
-  const alongX = spanX / span;
-  const alongY = spanY / span;
+  // A line dragged down onto itself has both endpoints in the same place, which
+  // leaves that direction undefined; fall back to the x axis so the rectangle
+  // still covers the band and the selection stays visible.
+  const alongX = span ? spanX / span : 1;
+  const alongY = span ? spanY / span : 0;
   const acrossX = -alongY;
   const acrossY = alongX;
 
