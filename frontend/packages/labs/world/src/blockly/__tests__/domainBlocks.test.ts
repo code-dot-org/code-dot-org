@@ -2348,6 +2348,8 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_block',
       'world_return',
       'world_rule_step_tick',
+      'world_rule_step_in',
+      'world_trait_step',
       'world_rule_step_before',
       'world_rule_step_after',
       'world_step_delta',

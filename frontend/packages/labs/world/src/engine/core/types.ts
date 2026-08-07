@@ -191,7 +191,17 @@ export type EventHandler = (
  */
 export type StepOrder =
   | {readonly kind: 'first' | 'last' | 'free'}
-  | {readonly kind: 'before' | 'after'; readonly anchor: Step};
+  | {readonly kind: 'before' | 'after'; readonly anchor: Step}
+  /**
+   * In a named moment of the frame (core/phases).
+   *
+   * What a rule says when it knows what KIND of work it does — "this is a
+   * force" — rather than who it runs next to. `before`/`after` name a
+   * neighbour, which a rule can only do if it knows one; every stock rule but
+   * two had to, and naming Physics to say you are gravity is the wrong
+   * dependency for a learner to have to discover.
+   */
+  | {readonly kind: 'phase'; readonly phase: string};
 
 export type StepFn = (world: World, delta: number) => void;
 

@@ -210,6 +210,21 @@ const trait = (name: string, ...body: object[]): object =>
   subjectTrait(name, 'actor', ...body);
 
 /** A trait declaring what elects it — an actor, or a camera. */
+/** `in ⟨phase⟩ do ⟨name⟩` beside the rule — no subject, every moment offered. */
+const stepIn = (name: string, phase: string): object => ({
+  __root: {
+    type: 'world_rule_step_in',
+    fields: {NAME: name, PHASE: phase},
+  },
+});
+
+/** `each frame in ⟨phase⟩ do ⟨name⟩`, chained under a `define trait`. */
+const traitStep = (name: string, phase: string): object => ({
+  type: 'world_trait_step',
+  fields: {NAME: name, PHASE: phase},
+});
+
+/** A trait declaring what elects it — an actor, or a camera. */
 const subjectTrait = (
   name: string,
   subject: 'actor' | 'camera',
@@ -860,6 +875,9 @@ describe('steps (per-tick behavior + ordering)', () => {
       {
         id: 'gust',
         name: 'gust',
+        // Declared beside the rule rather than under a trait, so it runs once
+        // a tick with `(world, delta)` — the step as it always was.
+        scope: 'world',
         ownerRef: {
           source: 'project',
           exportName: 'HasWindRule',
@@ -955,6 +973,118 @@ describe('steps (per-tick behavior + ordering)', () => {
     // The anchor is the local const, not `Wind.steps[...]`.
     expect(code).toContain(
       `export const FinishStep = rule.addStepAfter("finish", StartStep, (world, delta) => {\n});`,
+    );
+  });
+});
+
+describe('a step that names the moment it runs in', () => {
+  // What five of the seven stock steps could not say. Gravity means "this is a
+  // force" and had to write `before Physics ▸ reposition`, so a learner adding
+  // a second force had to discover Physics first (engine/core/phases).
+
+  it('parses the phase off the block', () => {
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile('Has Wind', stepIn('gust', 'push')),
+    )!;
+
+    expect(meta.steps).toEqual([
+      expect.objectContaining({
+        id: 'gust',
+        scope: 'world',
+        order: {kind: 'phase', phase: 'push'},
+      }),
+    ]);
+  });
+
+  it('emits addStepIn, naming no other rule', () => {
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile('Has Wind', stepIn('gust', 'push')),
+    )!;
+    const code = ruleMetaToModule(meta, new Map());
+
+    expect(code).toContain(
+      `export const GustStep = rule.addStepIn("gust", "push", (world, delta) => {\n});`,
+    );
+    expect(code).not.toContain('MotionRule');
+  });
+
+  it('falls back to unordered when no phase is chosen', () => {
+    // A dropdown never opened, or a phase since renamed. Unordered is the
+    // weaker claim; guessing a moment would be a stronger one, and wrong.
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile('Has Wind', stepIn('gust', '')),
+    )!;
+
+    expect(meta.steps[0].order).toEqual({kind: 'free'});
+  });
+});
+
+describe('a step declared under a trait', () => {
+  // Position says two things so the author does not have to: what the body runs
+  // for, and which moments it may name.
+
+  it('takes its subject from the trait it is under', () => {
+    const meta = parseRuleMeta(
+      'rules/follow',
+      ruleFile(
+        'Camera Follow',
+        subjectTrait('Follows', 'camera', traitStep('aim at it', 'aim')),
+        trait('Heavy', traitStep('fall', 'push')),
+      ),
+    )!;
+
+    expect(meta.steps).toEqual([
+      expect.objectContaining({
+        id: 'aim_at_it',
+        scope: 'camera',
+        ownerTraitId: 'Follows',
+        order: {kind: 'phase', phase: 'aim'},
+      }),
+      expect.objectContaining({
+        id: 'fall',
+        scope: 'actor',
+        ownerTraitId: 'Heavy',
+        order: {kind: 'phase', phase: 'push'},
+      }),
+    ]);
+  });
+
+  it('generates the loop the author no longer writes', () => {
+    // `for each camera in all cameras where has trait ⟨Follows⟩` was the first
+    // thing every trait step had to say and the least interesting. It is the
+    // declaration site's job now.
+    const meta = parseRuleMeta(
+      'rules/follow',
+      ruleFile(
+        'Camera Follow',
+        subjectTrait('Follows', 'camera', traitStep('aim at it', 'aim')),
+      ),
+    )!;
+    const bodies = new Map([
+      [
+        ruleBodyKey('step', 'camera', 'Follows', 'aim_at_it'),
+        {params: [], body: 'camera.set(WorldLab.PositionProperty, here);\n'},
+      ],
+    ]);
+
+    expect(ruleMetaToModule(meta, bodies)).toContain(
+      `rule.addStepIn("aim_at_it", "aim", (world, delta) => {\n` +
+        `for (const camera of world.cameras.with(FollowsTrait)) {\n` +
+        `camera.set(WorldLab.PositionProperty, here);\n}\n});`,
+    );
+  });
+
+  it('walks the actors for an actor trait', () => {
+    const meta = parseRuleMeta(
+      'rules/heavy',
+      ruleFile('Heavy', trait('Falls', traitStep('fall', 'push'))),
+    )!;
+
+    expect(ruleMetaToModule(meta, new Map())).toContain(
+      `for (const actor of world.actors.with(FallsTrait)) {`,
     );
   });
 });

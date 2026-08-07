@@ -1,9 +1,16 @@
 // Orders the Steps a World's active Rules contribute into a single per-tick
-// sequence, honoring each Step's `before`/`after`/`first`/`last` constraint
-// (DESIGN.md: "It does it as a 'Before Motion do:' block"). The order is
-// computed once at construction (a topological sort) and reused every tick; a
-// cycle is a construction-time error, never a silent misorder at tick time.
+// sequence, honoring each Step's `phase`/`before`/`after`/`first`/`last`
+// constraint (DESIGN.md: "It does it as a 'Before Motion do:' block"). The
+// order is computed once at construction (a topological sort) and reused every
+// tick; a cycle is a construction-time error, never a silent misorder at tick
+// time.
+//
+// A PHASE is a name for a moment of the frame (core/phases), and it becomes
+// ordinary edges here — every step in one populated phase precedes every step
+// in the next. So a phased step, an anchored step and an unordered one all live
+// in the same graph, and a phase that nothing names costs nothing.
 
+import {phaseIndex} from './phases';
 import type {Step, StepFn} from './types';
 import type {World} from './World';
 
@@ -54,6 +61,31 @@ function topologicalOrder(steps: readonly Step[]): Step[] {
       indegree.set(to, (indegree.get(to) ?? 0) + 1);
     }
   };
+
+  // Phases: group by the moment each named, then chain the groups that have
+  // anything in them. Edges only between CONSECUTIVE populated groups —
+  // transitivity does the rest, so this is linear rather than every-pair.
+  const byPhase = new Map<number, Step[]>();
+  for (const step of steps) {
+    if (step.order.kind !== 'phase') {
+      continue;
+    }
+    const at = phaseIndex(step.order.phase);
+    if (at === undefined) {
+      continue; // names nothing; unordered, like a `free` step
+    }
+    const group = byPhase.get(at) ?? [];
+    byPhase.set(at, group);
+    group.push(step);
+  }
+  const populated = [...byPhase.keys()].sort((a, b) => a - b);
+  for (let i = 1; i < populated.length; i++) {
+    for (const earlier of byPhase.get(populated[i - 1]) ?? []) {
+      for (const later of byPhase.get(populated[i]) ?? []) {
+        addEdge(earlier, later);
+      }
+    }
+  }
 
   const firsts = steps.filter(s => s.order.kind === 'first');
   const lasts = steps.filter(s => s.order.kind === 'last');
