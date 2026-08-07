@@ -1,3 +1,5 @@
+@use 'sass:math';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/variables';
 @import 'color';
 
 .modalHeader {
@@ -53,9 +55,9 @@ input, span {
 }
 
 .optionFieldGroup {
-  margin-left: 15px;
+  margin-inline-start: math.div($grid-gutter-width, 2);
 
-  .controlLabel, label[for="grade_levels"] {
+  :global(.control-label) {
     font-weight: 600;
     margin-top: 0.75rem;
   }

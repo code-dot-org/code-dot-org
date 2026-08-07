@@ -219,9 +219,7 @@ export class RegionalPartnerMiniContact extends React.Component {
             />
           </div>
           <FormGroup className={style.optionFieldGroup}>
-            <ControlLabel className={style.controlLabel}>
-              Your role
-            </ControlLabel>
+            <ControlLabel>Your role</ControlLabel>
             <div className={style.roleSelect}>
               <Select
                 id="role"
