@@ -231,6 +231,50 @@ describe('Camera Ease — shaping the goal, not setting it', () => {
     ]);
   });
 
+  it('travels a fraction that depends on the frame time', () => {
+    // It used to move `smoothness` of the way EVERY FRAME, which eases twice as
+    // fast at 120fps as at 60 and lags on a slow frame. Nothing in the rule
+    // referred to the frame time at all — which is exactly what this checks,
+    // because the arithmetic around it looked perfectly reasonable.
+    const named = new Set(typesIn(cameraEaseRule));
+
+    expect(named).toContain('world_step_delta');
+    expect(named).toContain('world_query_CameraEase_CaughtUpOverSecondsQuery');
+  });
+
+  it('names the correction, rather than writing it out per axis', () => {
+    // Used once per axis, so it is a block for the reason rules/solid's clamp
+    // is: written out twice it is a pile of arithmetic, named once it says what
+    // it is for.
+    const meta = ease();
+
+    expect(meta.queries.map(query => query.name)).toEqual([
+      'caught up over seconds',
+    ]);
+    expect(meta.queries[0].params.map(param => param.name)).toEqual([
+      'smoothness',
+      'seconds',
+    ]);
+  });
+
+  it('compounds, so a frame rate change lands in the same place', () => {
+    // The property the correction exists for, as arithmetic: easing at 120fps
+    // for two frames must leave the same gap as one frame at 60. A multiply
+    // (`smoothness x seconds x 60`) is the usual approximation and does not —
+    // it overshoots, because easing compounds.
+    const caughtUp = (smoothness: number, seconds: number) =>
+      1 - (1 - smoothness) ** (seconds * 60);
+    const remaining = (gap: number, factor: number) => gap * (1 - factor);
+
+    const slow = remaining(1, caughtUp(0.2, 1 / 60));
+    const fast = remaining(
+      remaining(1, caughtUp(0.2, 1 / 120)),
+      caughtUp(0.2, 1 / 120),
+    );
+
+    expect(fast).toBeCloseTo(slow, 12);
+  });
+
   it('elects the base trait and adds one number', () => {
     const meta = ease();
 
