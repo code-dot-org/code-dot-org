@@ -33,12 +33,12 @@ class StringTest < Minitest::Test
     iso_8859_string = "ISO-8859 test \xE0" # Includes an à in ISO-8859-1
     assert_raises ArgumentError do
       # .gsub on an ISO-8859-1 encoded string throws an error
-      iso_8859_string.gsub(/test regex/, 'replacement')
+      iso_8859_string.gsub("test regex", 'replacement')
     end
 
     forced_string = iso_8859_string.force_8859_to_utf8
     assert_equal('ISO-8859 test à', forced_string)
-    assert_equal('ISO-8859 replacement à', forced_string.gsub(/test/, 'replacement'))
+    assert_equal('ISO-8859 replacement à', forced_string.gsub("test", 'replacement'))
     assert_equal('normal string', 'normal string'.force_8859_to_utf8)
     assert_equal('UTF-8sπ´å™£¢∞¡™£', 'UTF-8sπ´å™£¢∞¡™£'.force_8859_to_utf8)
   end
