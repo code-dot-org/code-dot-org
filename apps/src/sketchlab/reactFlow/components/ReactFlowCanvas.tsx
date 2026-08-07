@@ -1077,7 +1077,7 @@ export default function ReactFlowCanvas({
                     aria-keyshortcuts={
                       readOnly
                         ? 'ArrowUp ArrowDown ArrowLeft ArrowRight'
-                        : 'ArrowUp ArrowDown ArrowLeft ArrowRight S'
+                        : 'ArrowUp ArrowDown ArrowLeft ArrowRight s'
                     }
                     onFocus={handleWorkspaceFocus}
                     onBlur={handleWorkspaceBlur}
