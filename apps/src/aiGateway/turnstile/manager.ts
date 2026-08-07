@@ -135,9 +135,9 @@ export class TurnstileManager {
 
     // The mode is decided synchronously, before the challenge is awaited, so it
     // can be attached to the span at creation.
-    const {mode, token: pendingToken} = this.getToken();
+    const {mode, token: pendingToken} = this.startTokenAcquisition();
 
-    const execute = async (): Promise<string> => {
+    const awaitTokenDelivery = async (): Promise<string> => {
       try {
         const token = await pendingToken;
         console.log(
@@ -148,9 +148,9 @@ export class TurnstileManager {
         return token;
       } catch (err) {
         console.error(
-          `${LOG} getToken() failed after ${(performance.now() - start).toFixed(
-            0
-          )}ms:`,
+          `${LOG} Token acquisition failed after ${(
+            performance.now() - start
+          ).toFixed(0)}ms:`,
           err
         );
         throw err;
@@ -163,11 +163,13 @@ export class TurnstileManager {
         op: 'ai.turnstile',
         attributes: {'turnstile.mode': mode, feature: 'ai-gateway'},
       },
-      execute
+      awaitTokenDelivery
     );
   }
 
-  private getToken(): TokenAcquisition {
+  // Starts (or claims) a challenge and reports where the token came from. The
+  // returned token is still pending — callers must await it.
+  private startTokenAcquisition(): TokenAcquisition {
     if (this.nextTokenPromise) {
       const age =
         this.nextTokenResolvedAt !== null

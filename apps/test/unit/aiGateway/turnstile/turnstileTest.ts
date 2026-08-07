@@ -71,7 +71,10 @@ describe('fetchTurnstileTokenIfEnabled', () => {
 type TurnstileManagerPrivates = {
   nextTokenPromise: Promise<string> | null;
   nextTokenResolvedAt: number | null;
-  getToken: () => {mode: 'pre-fetch' | 'on-demand'; token: Promise<string>};
+  startTokenAcquisition: () => {
+    mode: 'pre-fetch' | 'on-demand';
+    token: Promise<string>;
+  };
   runSerializedChallenge: () => Promise<string>;
 };
 
@@ -97,7 +100,7 @@ describe('TurnstileManager stale pre-fetch', () => {
     m.nextTokenPromise = Promise.resolve('stale-token');
     m.nextTokenResolvedAt = Date.now() - TOKEN_MAX_AGE_MS - 1000;
 
-    const {mode, token} = m.getToken();
+    const {mode, token} = m.startTokenAcquisition();
 
     expect(await token).toBe(freshToken);
     expect(mode).toBe('on-demand');
@@ -116,7 +119,7 @@ describe('TurnstileManager stale pre-fetch', () => {
     m.nextTokenPromise = Promise.resolve(validToken);
     m.nextTokenResolvedAt = Date.now() - 60_000; // 1 minute old — well within limit
 
-    const {mode, token} = m.getToken();
+    const {mode, token} = m.startTokenAcquisition();
 
     expect(await token).toBe(validToken);
     expect(mode).toBe('pre-fetch');
