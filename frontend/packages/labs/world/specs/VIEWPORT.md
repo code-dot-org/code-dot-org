@@ -124,12 +124,14 @@ alone, applying to that one region even when it shares a Camera with another.
 It is a coherent thing to want (a scanlined monitor, a bordered picture-in-
 picture) and it is additive whenever it is wanted. It is not part of this plan.
 
-Cameras will have convenience methods in order to move them and oriented them
-relative to other Actors. For one, the Camera can be set to 'follow' an Actor.
-When that actor moves, the Camera moves to center that Actor in the view while
-confined by the map. So, if the Actor moves to the left-most part of the map,
-the Camera will orient itself such that it renders the left part of the map and
-is locked at that edge until the Actor moves sufficiently to the right.
+Cameras are moved and oriented relative to other Actors by TRAITS, not by
+convenience methods on the Camera — see "How camera traits compose" below, which
+is what this section describes wanting and that section describes getting. For
+one, the Camera can be set to 'follow' an Actor. When that actor moves, the
+Camera moves to center that Actor in the view while confined by the map. So, if
+the Actor moves to the left-most part of the map, the Camera will orient itself
+such that it renders the left part of the map and is locked at that edge until
+the Actor moves sufficiently to the right.
 
 More interesting patterns are possible by taking further control over the
 Camera. You can allow the player to "look" up or down by handling key events
@@ -234,6 +236,95 @@ later, and there is no telling yet what other subjects may want one.
 actor-collection filter (`world.actors.with(t)`) does not see Cameras, by the
 same rule as every other actor filter; `world.cameras` is where a camera query
 starts.
+
+### How camera traits compose: the goal, and the moments
+
+A camera's traits contend in a way an actor's do not. An actor's traits write
+different things — velocity, sprite, health — and mostly ignore each other. Every
+camera trait wants to write the same one thing: where the view is taken from. So
+"a camera has more than one trait" is the normal case, not the exotic one, and
+the arrangement that makes it work is the whole of this section.
+
+**One trait owns a goal, and the single step that acts on it.** The `Camera`
+rule's trait `Aimed` declares `goal` — where the camera WANTS to look — and one
+step, in the last moment of the frame, that moves the camera there. Everything else writes the
+goal and never touches the position. Any number of such rules then stack without
+knowing about each other: what one hands on is a goal, and what it was handed
+can be anything.
+
+The goal PERSISTS, which is what makes `Camera` safe on its own. A camera
+nothing aims keeps last frame's goal, which is where it already is, so taking
+the view moves it nowhere. There is nothing to initialise, and no seed step
+racing the traits that aim.
+
+**A step says WHEN it runs by naming a moment of the frame.** The frame is one
+ordered list of named moments (`engine/core/phases`), and the camera occupies
+the last five of them:
+
+```
+sense  decide  push  move  adjust  touch  settle  react | choose  aim  smooth  confine  view
+```
+
+`choose` picks which camera the view is taken through; `aim` decides where it
+wants to look; `smooth` softens that decision; `confine` keeps it somewhere
+legal; `view` commits it. The camera's moments come after every actor moment
+because a camera following the player must read where the player ENDED the tick,
+not where they were before collision moved them.
+
+Two steps in one moment are unordered, which is correct: two things confining
+the same camera commute. If two do not commute, that is evidence the list is
+missing a moment rather than evidence a step needs a finer way to say when it
+runs.
+
+#### What was tried instead
+
+A step used to say when it ran by naming another rule's STEP — `before Physics >
+reposition`. That is the right thing to say when a rule genuinely knows its
+neighbour, and the wrong thing for a pipeline: gravity said it to mean "this is
+a force", so a learner writing a second force had to discover Physics existed
+and pick the right one of its steps. Five of the seven steps the stock rules
+shipped carried such an anchor. They name a moment now and no rule names
+another.
+
+Three things were built and removed on the way, and are recorded because each
+looks reasonable until you try it:
+
+- **Empty steps as boundaries, with `before`/`after` attaching to them.** The
+  boundary only separates if a step is pinned on BOTH sides — pinned on one, it
+  sorts past the boundary meant to close its interval. Measured: one load order
+  in six came out right, and that was the one already right.
+- **`between <x> and <y>`,** which fixes that by pinning both sides. It works,
+  and the camera was its only motivating case; naming the moments removes the
+  need for it entirely.
+- **A gap either side of each moment** (`just before <push>`), for work the list
+  had not anticipated. Nothing ever used one. The case that argued for them was
+  real — wrapping at the screen edge must happen after positions integrate and
+  before contacts are found — and naming that moment (`adjust`) is the better
+  answer: a named moment is in the dropdown where a learner finds it, where a
+  gap is invisible until you already know you need it.
+
+#### The rules this gives
+
+Four, none of which names another's step:
+
+| rule (trait)                              | moment    | what it does                                       |
+| ----------------------------------------- | --------- | -------------------------------------------------- |
+| `Camera` (`Aimed`)                        | `view`    | moves the camera to its goal                       |
+| `Camera Follow` (`Follows`)               | `aim`     | puts the goal where an actor is                    |
+| `Camera Ease` (`Eases`)                   | `smooth`  | `goal = position + (goal - position) x smoothness` |
+| `Camera Confined` (`Confined to the Map`) | `confine` | clamps the goal so the view stays in the map       |
+
+`Camera Follow` guards its read: an `actors` property starts EMPTY, and a value
+read of several takes the first, so a camera that has elected the trait and not
+yet been given an actor would read a position off nothing. Doing nothing is the
+right answer rather than aiming somewhere by default — the goal persists, so an
+unaimed camera holds the view where it is.
+
+`Camera Confined` reads the bounds rather than restating them (`map size`,
+`view size`). A camera's position is the middle of the view, so keeping it half
+a screen inside the map is what stops the view's EDGE at the map's edge. A rule
+that made a learner type the level's size would be wrong the moment they resized
+the map.
 
 ## Layers
 
