@@ -21,68 +21,23 @@
     "start_sources": {
       "animations": {
         "orderedKeys": [
-          "58d09234-52ad-4168-ace1-b0c534e672d9",
-          "2cab230d-56c7-427d-b0b0-99e9bcf1764f",
-          "2ee0fe12-cef2-41f8-b4f6-9678a6116383",
-          "e7d8643f-604a-4b40-a2cc-ff945281d9f0",
+          "8ef97a09-ee4b-41e3-b5f7-aa108a99e497",
           "ce20f0cf-5f26-435d-8fe1-1d554778ac5c",
           "d83b0121-f869-43e5-8fd9-177b88425c6c"
         ],
         "propsByKey": {
-          "58d09234-52ad-4168-ace1-b0c534e672d9": {
-            "name": "platform",
-            "sourceUrl": "/level_starter_assets/HoAI-tl-test-2/uuid/51e4c1e7-8110-4230-8107-dffe87012442.png",
+          "8ef97a09-ee4b-41e3-b5f7-aa108a99e497": {
+            "name": "Platform Coral",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-10/uuid/d29fa080-28cb-41ec-94c8-12314444cfea.png",
             "frameSize": {
-              "x": 565,
-              "y": 565
+              "x": 784,
+              "y": 737
             },
             "frameCount": 1,
             "looping": true,
             "frameDelay": 2,
             "categories": [
               "blocks"
-            ]
-          },
-          "2cab230d-56c7-427d-b0b0-99e9bcf1764f": {
-            "name": "Cat",
-            "sourceUrl": "/level_starter_assets/HoAI-tl-test-2/uuid/99e7ff49-4ca6-4c01-9504-3ff82cbdda34.png",
-            "frameSize": {
-              "x": 1024,
-              "y": 1024
-            },
-            "frameCount": 1,
-            "looping": true,
-            "frameDelay": 2,
-            "categories": [
-
-            ]
-          },
-          "2ee0fe12-cef2-41f8-b4f6-9678a6116383": {
-            "name": "House",
-            "sourceUrl": "/level_starter_assets/HoAI-tl-test-2/uuid/7416ee2c-2188-4a11-bdef-a7ec8221e4eb.png",
-            "frameSize": {
-              "x": 1024,
-              "y": 1024
-            },
-            "frameCount": 1,
-            "looping": true,
-            "frameDelay": 2,
-            "categories": [
-              "backgrounds"
-            ]
-          },
-          "e7d8643f-604a-4b40-a2cc-ff945281d9f0": {
-            "name": "key",
-            "sourceUrl": "/level_starter_assets/HoAI-tl-test-2/uuid/7bff57da-39e4-40e8-b470-01de8fdc010e.png",
-            "frameSize": {
-              "x": 1024,
-              "y": 1024
-            },
-            "frameCount": 1,
-            "looping": true,
-            "frameDelay": 2,
-            "categories": [
-
             ]
           },
           "ce20f0cf-5f26-435d-8fe1-1d554778ac5c": {
@@ -144,30 +99,13 @@
                   "deletable": false,
                   "movable": false,
                   "extraState": {
-                  }
-                },
-                {
-                  "type": "gamelab_whenTouching",
-                  "id": "block-4",
-                  "x": 20,
-                  "y": 331,
-                  "inputs": {
-                    "SPRITE1": {
-                      "block": {
-                        "type": "gamelab_allSpritesWithAnimation",
-                        "id": "block-5",
-                        "fields": {
-                          "ANIMATION": "<field name=\"ANIMATION\">\"Cat\"</field>"
-                        }
-                      }
-                    },
-                    "SPRITE2": {
-                      "block": {
-                        "type": "gamelab_allSpritesWithAnimation",
-                        "id": "block-6",
-                        "fields": {
-                          "ANIMATION": "<field name=\"ANIMATION\">\"key\"</field>"
-                        }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackgroundImageAs",
+                      "id": "block-1",
+                      "fields": {
+                        "IMG": "<field name=\"IMG\">\"ocean\"</field>"
                       }
                     }
                   }
@@ -204,7 +142,9 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-05T21:32:19.911+00:00\",\"changed\":[\"cloned from \\\"HoAI-tl-test-2\\\"\"],\"cloned_from\":\"HoAI-tl-test-2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-05T21:32:19.911+00:00\",\"changed\":[\"cloned from \\\"HoAI-tl-test-2\\\"\"],\"cloned_from\":\"HoAI-tl-test-2\"},{\"changed_at\":\"2026-08-06 17:13:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-08-06 17:15:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-08-06 17:18:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,0 +1,10 @@
+name 'problem-solving-with-ai-lesson1-choice'
+display_name 'AI-enhanced generative platforms'
+description 'level description here'
+
+sublevels
+level 'problem-solving-with-ai-lesson1-aichat'
+level 'problem-solving-with-ai-project-lesson1-imagegen'
+level 'problem-solving-with-ai-lesson1-weblab2'
+
+uses_lab2
