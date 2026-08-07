@@ -96,7 +96,7 @@ export default function Toolbar({
         <Tooltip title="Select" placement="right">
           <IconButton
             aria-label="Select tool"
-            aria-keyshortcuts="P"
+            aria-keyshortcuts="S"
             aria-pressed={canvasTool === 'cursor'}
             onClick={() => onSetCanvasTool('cursor')}
             size="small"

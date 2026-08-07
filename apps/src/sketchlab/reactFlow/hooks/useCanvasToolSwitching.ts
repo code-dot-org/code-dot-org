@@ -6,7 +6,7 @@ import {CanvasTool} from '../types';
 
 export const MIDDLE_MOUSE_BUTTON = 1;
 
-const SELECT_TOOL_KEY = 'p';
+const SELECT_TOOL_KEY = 's';
 const HAND_TOOL_KEY = 'h';
 
 interface UseCanvasToolSwitchingOptions {
@@ -24,7 +24,7 @@ interface UseCanvasToolSwitchingOptions {
 
 /**
  * Two ways to reach the hand tool without going to the toolbar: "h" for hand
- * and "p" for pointer, plus a held middle mouse button for a momentary pan.
+ * and "s" for select, plus a held middle mouse button for a momentary pan.
  *
  * The middle button pans through React Flow's own `panOnDrag` button list
  * rather than by switching `canvasTool`, because the gesture has to start on

@@ -46,13 +46,13 @@ describe('useCanvasToolSwitching', () => {
     jest.clearAllMocks();
   });
 
-  it('selects the hand tool on "h" and the select tool on "p"', () => {
+  it('selects the hand tool on "h" and the select tool on "s"', () => {
     const {result} = renderHook(() => useCanvasToolSwitching(defaultOptions));
 
     expect(result.current.handleToolKeyDown(makeKeyEvent('h'))).toBe(true);
     expect(setCanvasTool).toHaveBeenLastCalledWith('grab');
 
-    expect(result.current.handleToolKeyDown(makeKeyEvent('p'))).toBe(true);
+    expect(result.current.handleToolKeyDown(makeKeyEvent('s'))).toBe(true);
     expect(setCanvasTool).toHaveBeenLastCalledWith('cursor');
   });
 
@@ -61,7 +61,7 @@ describe('useCanvasToolSwitching', () => {
 
     const ignored = [
       makeKeyEvent('g'),
-      makeKeyEvent('p', {metaKey: true}),
+      makeKeyEvent('s', {metaKey: true}),
       makeKeyEvent('h', {ctrlKey: true}),
       makeKeyEvent('h', {target: document.createElement('input')}),
     ];

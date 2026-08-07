@@ -32,7 +32,7 @@ export const ShortcutsPerLab: Partial<
       },
     ],
     'Canvas tools': [
-      {shortcut: 'P', explanation: 'Switch to the select tool'},
+      {shortcut: 'S', explanation: 'Switch to the select tool'},
       {shortcut: 'H', explanation: 'Switch to the hand tool'},
     ],
     Editing: [

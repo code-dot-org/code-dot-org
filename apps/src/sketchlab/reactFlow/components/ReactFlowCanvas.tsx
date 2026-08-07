@@ -114,7 +114,7 @@ const GROUP_MODE_HINT =
   'Tab to move — Enter to select/deselect — G to group — Esc to cancel';
 
 const HAND_MODE_HINT =
-  'Hand tool — use the arrow keys to pan — Esc to return to select';
+  'Hand tool — use the arrow keys to pan — Esc or S to return to select';
 const HAND_MODE_HINT_READ_ONLY = 'Hand tool — use the arrow keys to pan';
 
 // Fallbacks for edges that don't specify type/style, kept in sync with the
