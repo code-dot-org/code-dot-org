@@ -90,8 +90,13 @@ describe('every stock effect', () => {
 });
 
 describe('the library as a whole', () => {
-  it('has unique file stems', () => {
-    const ids = STOCK_EFFECTS.map(effect => effect.id);
+  it('has unique file stems, ignoring case', () => {
+    // Compared LOWERCASED, and that is the point rather than tidiness. Each
+    // stem becomes `effects/<id>.effect`, and macOS and Windows treat file
+    // names case-insensitively — so `Ripple` and `ripple` are two distinct
+    // strings that are one file for half the people who would open this
+    // project. Comparing them exactly would let that through.
+    const ids = STOCK_EFFECTS.map(effect => effect.id.toLowerCase());
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -101,8 +106,18 @@ describe('the library as a whole', () => {
   });
 
   it('uses file-safe stems, since each becomes effects/<id>.effect', () => {
+    // Letters and digits, starting with a letter — camelCase included, which
+    // is how the stock sprites and backdrops beside this already read
+    // (`coinSpin.png`, `sunAndRainbow.png`, through the same `${id}.png`).
+    // This used to bar capitals as "file-safe", which they are not: camelCase
+    // is a perfectly good file name, and the rule made effects stricter than
+    // the two libraries next to them for no reason anybody wrote down.
+    //
+    // What lowercase-only really bought was immunity to case-insensitive
+    // filesystems, and that hazard is now caught by name in the test above
+    // rather than by a proxy that also forbade a legal spelling.
     for (const {id} of STOCK_EFFECTS) {
-      expect(id).toMatch(/^[a-z][a-z0-9-]*$/);
+      expect(id).toMatch(/^[a-zA-Z][a-zA-Z0-9-]*$/);
     }
   });
 
@@ -116,7 +131,7 @@ describe('the library as a whole', () => {
     //   pulse     the clock, and turning it into a back-and-forth
     //   pixelate  change WHERE you read, not what you do with it
     //   ripple    all of the above at once
-    //   radial-ripple  the same wave, driven by distance from a point
+    //   radialRipple   the same wave, driven by distance from a point
     //
     // Pinned rather than derived, because the obvious proxy is wrong: by node
     // count Grayscale (8) would follow Pulse (6), yet split-and-recombine is a
@@ -131,7 +146,7 @@ describe('the library as a whole', () => {
       'pulse',
       'pixelate',
       'ripple',
-      'radial-ripple',
+      'radialRipple',
     ]);
   });
 

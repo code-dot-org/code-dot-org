@@ -71,7 +71,7 @@ export const STOCK_EFFECTS: readonly StockEffect[] = [
   {id: 'pulse', document: pulseEffect},
   {id: 'pixelate', document: pixelateEffect},
   {id: 'ripple', document: rippleEffect},
-  {id: 'radial-ripple', document: radialRippleEffect},
+  {id: 'radialRipple', document: radialRippleEffect},
 ];
 
 /** Look one up by its file stem. */
