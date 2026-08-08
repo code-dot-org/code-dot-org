@@ -12,6 +12,10 @@
 import * as Blockly from 'blockly';
 import {describe, expect, it} from 'vitest';
 
+import {
+  ACTOR_INPUT_EXTENSION,
+  CAMERA_INPUT_EXTENSION,
+} from '../../blockly/actorInput';
 import {buildDomainPalette} from '../../blockly/domainBlocks';
 import {
   parseRuleMeta,
@@ -24,6 +28,8 @@ import {cameraConfinedRule} from '../stock/cameraConfined';
 import {cameraDeadzoneRule} from '../stock/cameraDeadzone';
 import {cameraEaseRule} from '../stock/cameraEase';
 import {cameraFollowRule} from '../stock/cameraFollow';
+import {gravityRule} from '../stock/gravity';
+import {inputRule} from '../stock/input';
 
 /** A saved block, as much of one as this needs to walk it. */
 interface SavedBlock {
@@ -466,5 +472,92 @@ describe('Camera Deadzone — the camera ignores small movements', () => {
     // Having moved, the subject is exactly the slack away — so a subject that
     // stops immediately does not drift any further.
     expect(drag(100, 16, 84)).toBe(84);
+  });
+});
+
+describe('the subject socket a camera member offers', () => {
+  // A member declared on a trait a CAMERA elects belongs to a camera, so the
+  // socket asking "whose?" has to be seeded with `this camera`. Seeded with
+  // `this actor` it read as a sentence about an actor AND generated `actor`,
+  // which a `define camera` body does not bind — so every one of these blocks
+  // had to have its shadow thrown away and replaced by hand.
+  const blockOf = (type: string) =>
+    buildDomainPalette([camera(), follow(), ease(), confined(), deadzone()], {
+      allRuleModules: true,
+    }).blocks.find(block => block.type === type) as
+      | {extensions?: Array<{name: string} | string>}
+      | undefined;
+
+  /** An extension is an object carrying its registered name. */
+  const extensionsOf = (type: string) =>
+    (blockOf(type)?.extensions ?? []).map(e =>
+      typeof e === 'string' ? e : e.name,
+    );
+
+  it('is a camera, on a camera trait’s property', () => {
+    // `set look offset of ⟨this camera⟩ to …`, and the getter beside it.
+    expect(extensionsOf('world_set_CameraFollow_LookOffsetProperty')).toContain(
+      CAMERA_INPUT_EXTENSION,
+    );
+    expect(extensionsOf('world_get_CameraFollow_LookOffsetProperty')).toContain(
+      CAMERA_INPUT_EXTENSION,
+    );
+  });
+
+  it('is a camera on the base trait’s property too', () => {
+    // `goal` is Camera's own, and every camera rule writes it.
+    expect(extensionsOf('world_set_Camera_GoalProperty')).toContain(
+      CAMERA_INPUT_EXTENSION,
+    );
+  });
+
+  it('is never both', () => {
+    // Two seeds on one socket is a coin toss over which shadow lands.
+    const both = extensionsOf('world_set_Camera_GoalProperty');
+
+    expect(both).not.toContain(ACTOR_INPUT_EXTENSION);
+  });
+
+  it('is still an actor for an actor trait’s property', () => {
+    // The regression that would matter most: every actor member goes through
+    // the same chooser now, and they must be unchanged.
+    const palette = buildDomainPalette(
+      [parseRuleMeta('rules/gravity', gravityRule)!],
+      {allRuleModules: true},
+    );
+    const named = palette.blocks.filter(block =>
+      /^world_(get|set)_Gravity_/.test(block.type),
+    ) as Array<{type: string; extensions?: Array<{name: string} | string>}>;
+    const names = named.flatMap(block =>
+      (block.extensions ?? []).map(e => (typeof e === 'string' ? e : e.name)),
+    );
+
+    expect(named.length).toBeGreaterThan(0);
+    expect(names).toContain(ACTOR_INPUT_EXTENSION);
+    expect(names).not.toContain(CAMERA_INPUT_EXTENSION);
+  });
+
+  it('is an actor for an actor event’s emit, and absent for a world’s', () => {
+    // `emit … for ⟨…⟩` goes through the same chooser. A world event has no
+    // subject at all, so there is no socket to seed.
+    const palette = buildDomainPalette(
+      [parseRuleMeta('rules/input', inputRule)!],
+      {allRuleModules: true},
+    );
+    const named = (type: string) =>
+      (
+        (
+          palette.blocks.find(block => block.type === type) as
+            | {extensions?: Array<{name: string} | string>}
+            | undefined
+        )?.extensions ?? []
+      ).map(e => (typeof e === 'string' ? e : e.name));
+
+    expect(named('world_emit_Input_PressesEvent')).toContain(
+      ACTOR_INPUT_EXTENSION,
+    );
+    expect(named('world_emit_Input_IsPressedEvent')).not.toContain(
+      ACTOR_INPUT_EXTENSION,
+    );
   });
 });

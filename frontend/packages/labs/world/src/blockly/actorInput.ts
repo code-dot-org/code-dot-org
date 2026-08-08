@@ -4,13 +4,16 @@
 // Attached as a block extension because the simplified toolbox lists blocks by
 // type only and can't carry per-input shadow specs.
 //
-// Two of them, because a socket asking WHOSE HANDLER THIS IS is a different
-// question from one asking WHICH ACTOR TO ACT ON:
+// Three of them, because a socket asking WHOSE HANDLER THIS IS is a different
+// question from one asking WHICH ACTOR TO ACT ON, and a camera's members are
+// asking about neither:
 //
 //   - `actorInputExtension` — the ordinary one. Actions, queries, properties:
 //     each operates on one live actor, and inside a handler that is the
 //     instance the event was delivered to. `this actor` is the answer in every
 //     file.
+//   - `cameraInputExtension` — the same socket on a member a CAMERA elects,
+//     where the only sensible answer is `this camera`.
 //   - `actorSubjectExtension` — an event hat's socket, and only that. A
 //     `.world` file has no principal actor (`actor` is not bound at its top
 //     level at all), so a hat there defaults to `any <kind>`: registering on
@@ -31,6 +34,7 @@ import {definesWorld} from './localActors';
 
 export const ACTOR_INPUT_EXTENSION = 'world_actor_input';
 export const ACTOR_SUBJECT_EXTENSION = 'world_actor_subject_input';
+export const CAMERA_INPUT_EXTENSION = 'world_camera_input';
 
 /** Seed an empty `ACTOR` input with the shadow `choose` names. */
 const seedShadow = (
@@ -71,6 +75,30 @@ export const actorSubjectExtension: Extension = defineExtension(
       seedShadow(this, workspace =>
         definesWorld(workspace) ? 'world_actor_kind' : 'world_this_actor',
       );
+    },
+  },
+);
+
+/**
+ * The same for a member declared on a trait a CAMERA elects.
+ *
+ * `set look offset of ⟨…⟩` belongs to a camera, so the answer to "whose?" is
+ * `this camera` and never `this actor`. Seeded with the wrong one it read as a
+ * sentence about an actor and generated `actor`, which a `define camera` body
+ * does not bind — so it had to be thrown away and replaced by hand every time.
+ *
+ * Chosen from the member's SCOPE, which is a fact about where it was declared
+ * (`MemberScope`) and so is known when the block is defined. Being inside a
+ * `define camera` is not: an extension runs as the block is created, and a
+ * block in a flyout has not landed anywhere yet. That is why the ordinary
+ * engine blocks — `set position of ⟨this actor⟩` and the rest — still seed an
+ * actor wherever they are dragged.
+ */
+export const cameraInputExtension: Extension = defineExtension(
+  CAMERA_INPUT_EXTENSION,
+  {
+    extension() {
+      seedShadow(this, () => 'world_this_camera');
     },
   },
 );

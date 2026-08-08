@@ -28,7 +28,11 @@ import {
 import {DEFAULT_BACKDROP_COLOR, type PropertyType} from '../engine';
 import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
 
-import {actorInputExtension, actorSubjectExtension} from './actorInput';
+import {
+  actorInputExtension,
+  actorSubjectExtension,
+  cameraInputExtension,
+} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {
@@ -125,6 +129,7 @@ import type {
   ActionMeta,
   EventMeta,
   MemberRef,
+  MemberScope,
   PropertyMeta,
   QueryMeta,
   RuleMeta,
@@ -699,6 +704,17 @@ const onHandler = (target: string, eventRef: string, body: string): string =>
  * happened to the world. `world` is bound at module scope in a `.world` file
  * (it is the builder), which is where such a handler belongs.
  */
+/**
+ * Which shadow a MEMBER's subject socket is seeded with.
+ *
+ * The scope is where the member was declared: a trait a camera elects gives
+ * `camera`, and the only sensible subject then is `this camera` — an actor one
+ * is not merely odd, it generates `actor`, which a `define camera` body does
+ * not bind. Said once here because four block factories ask it.
+ */
+const subjectInputExtension = (scope: MemberScope) =>
+  scope === 'camera' ? cameraInputExtension : actorInputExtension;
+
 const onWorldHandler = (eventRef: string, body: string): string =>
   `world.on(${eventRef}, (world, eventValue) => {\n${body}});\n`;
 
@@ -869,7 +885,7 @@ const defineEmitBlock = (event: EventMeta) => {
     previousStatement: true,
     nextStatement: true,
     extensions: [
-      ...(forActor ? [actorInputExtension] : []),
+      ...(forActor ? [subjectInputExtension(event.scope)] : []),
       worldContextExtension,
       ...(shadows.length ? [valueShadowExtension] : []),
     ],
@@ -1366,7 +1382,7 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
     nextStatement: true,
     // A world property sets on `world`; warn if placed where `world` is unbound.
     extensions: subjectScoped
-      ? [actorInputExtension, valueShadowExtension]
+      ? [subjectInputExtension(property.scope), valueShadowExtension]
       : [valueShadowExtension, worldContextExtension],
     style: 'default',
     tooltip: subjectScoped
@@ -1446,7 +1462,9 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     inputsInline: true,
     output: outputForType(property.type),
     // A world property reads from `world`; warn if placed where it is unbound.
-    extensions: subjectScoped ? [actorInputExtension] : [worldContextExtension],
+    extensions: subjectScoped
+      ? [subjectInputExtension(property.scope)]
+      : [worldContextExtension],
     // Style by the value it reports: a boolean reads as logic, a whole vector as
     // a location, a number/point axis as math.
     style: valueStyle(property.type),
@@ -1593,7 +1611,9 @@ const defineActionBlock = (action: ActionMeta) => {
     nextStatement: true,
     // A world action runs on `world`; warn if placed where `world` is unbound.
     extensions: [
-      ...(subjectScoped ? [actorInputExtension] : [worldContextExtension]),
+      ...(subjectScoped
+        ? [subjectInputExtension(action.scope)]
+        : [worldContextExtension]),
       ...(shadows.length ? [valueShadowExtension] : []),
       ...slotExtensions,
     ],
@@ -1739,7 +1759,9 @@ const defineQueryBlock = (query: QueryMeta) => {
     inputsInline: true,
     output: outputForType(returns),
     extensions: [
-      ...(subjectScoped ? [actorInputExtension] : [worldContextExtension]),
+      ...(subjectScoped
+        ? [subjectInputExtension(query.scope)]
+        : [worldContextExtension]),
       ...(shadows.length ? [valueShadowExtension] : []),
       ...slotExtensions,
     ],
