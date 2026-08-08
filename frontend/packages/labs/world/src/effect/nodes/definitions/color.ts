@@ -54,6 +54,60 @@ export const colorNodes: readonly EffectNodeDefinition[] = [
   }),
 
   defineNode({
+    type: 'ramp',
+    label: 'Ramp',
+    category: 'color',
+    description:
+      'Turns one number into a color, along a gradient of three: 0 gives Low, 1 gives High, and Midpoint says where Mid sits between them.',
+    inputs: [
+      floatInput('t', 'T', 0),
+      {
+        id: 'low',
+        label: 'Low',
+        type: 'vec4',
+        defaultValue: [0, 0, 0, 1],
+        description: 'The color at 0.',
+      },
+      {
+        id: 'mid',
+        label: 'Mid',
+        type: 'vec4',
+        defaultValue: [0.5, 0.5, 0.5, 1],
+        description: 'The color partway along.',
+      },
+      {
+        id: 'high',
+        label: 'High',
+        type: 'vec4',
+        defaultValue: [1, 1, 1, 1],
+        description: 'The color at 1.',
+      },
+      floatInput('midpoint', 'Midpoint', 0.5),
+    ],
+    outputs: [port('out', 'Color', 'vec4')],
+    emit: context => {
+      const name = 'effectRamp';
+      context.helper(
+        name,
+        [
+          `vec4 ${name}(float t, vec4 low, vec4 mid, vec4 high, float midpoint)`,
+          '{',
+          '    // Two blends rather than a branch: below the midpoint the second',
+          '    // one is 0 and leaves the first alone, above it the first has',
+          '    // already reached Mid. Same answer, no divergence.',
+          '    float lower = clamp(t / max(midpoint, 0.0001), 0.0, 1.0);',
+          '    float upper = clamp(',
+          '        (t - midpoint) / max(1.0 - midpoint, 0.0001), 0.0, 1.0);',
+          '    return mix(mix(low, mid, lower), high, upper);',
+          '}',
+        ].join('\n'),
+      );
+      const {t, low, mid, high, midpoint} = context.inputs;
+      return {out: `${name}(${t}, ${low}, ${mid}, ${high}, ${midpoint})`};
+    },
+  }),
+
+  defineNode({
     type: 'colorHsla',
     label: 'Color (HSLA)',
     category: 'color',
