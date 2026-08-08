@@ -8,7 +8,7 @@
 //   yarn build:rules          write them
 //   yarn build:rules --check  fail if any is out of date (CI, pre-commit)
 
-import {readFileSync, writeFileSync} from 'node:fs';
+import {existsSync, readFileSync, writeFileSync} from 'node:fs';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -22,6 +22,7 @@ const RULES = [
   'collisions',
   'gravity',
   'solid',
+  'wrap',
   'camera',
   'cameraFollow',
   'cameraEase',
@@ -36,7 +37,10 @@ for (const name of RULES) {
   const {default: build} = await import(join(here, 'rules', `${name}.mjs`));
   const generated = build();
   const path = join(out, `${name}.ts`);
-  const current = readFileSync(path, 'utf8');
+  // A rule added to the list above has no file yet, and that is not an error —
+  // it is the first build of a new rule. `--check` then reports it stale, which
+  // is the right answer: the tree does not have what the sources describe.
+  const current = existsSync(path) ? readFileSync(path, 'utf8') : null;
   if (current === generated) {
     continue;
   }

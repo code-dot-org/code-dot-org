@@ -21,6 +21,7 @@ import {gravityRule} from './gravity';
 import {inputRule} from './input';
 import {motionRule} from './motion';
 import {solidRule} from './solid';
+import {wrapRule} from './wrap';
 
 /** One entry in the library. */
 export interface StockRule {
@@ -126,6 +127,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: gravityRule,
   },
   {
+    id: 'wrap',
+    name: 'Screen Wrap',
+    ability: 'Wraps at the Edges',
+    description:
+      'Brings an actor back on the opposite side of the map when it walks off an edge. Two abilities, so you can wrap across, down, or both.',
+    provides: ['Wraps Across', 'Wraps Down'],
+    contents: wrapRule,
+  },
+  {
     id: 'camera',
     name: 'Camera',
     ability: 'Has a Camera',
@@ -186,6 +196,7 @@ export function stockRuleByName(name: string): StockRule | undefined {
 export {
   arrowsRule,
   solidRule,
+  wrapRule,
   collisionsRule,
   gravityRule,
   inputRule,
