@@ -132,6 +132,7 @@ describe('the library as a whole', () => {
     //   pixelate  change WHERE you read, not what you do with it
     //   ripple    all of the above at once
     //   radialRipple   the same wave, driven by distance from a point
+    //   clouds         noise: a node that MAKES a picture, and octaves
     //
     // Pinned rather than derived, because the obvious proxy is wrong: by node
     // count Grayscale (8) would follow Pulse (6), yet split-and-recombine is a
@@ -147,6 +148,7 @@ describe('the library as a whole', () => {
       'pixelate',
       'ripple',
       'radialRipple',
+      'clouds',
     ]);
   });
 

@@ -8,10 +8,14 @@
 //
 // Every row shows its shader's first frame, rendered on one shared sample image
 // at the effect's own declared defaults — so what is shown is what importing
-// gives rather than a flattering demo. The first cell is that sample UNTOUCHED,
-// because an effect is only legible against the thing it changed: grayscale on
-// a grey-ish sample is indistinguishable from nothing happening until there is
-// something to compare it to.
+// gives rather than a flattering demo — and each on the sample IT declares
+// (`testTexture`), which is the author's answer to what shows it best: a
+// stand-in actor for the color effects, a checkerboard for the ones that warp.
+//
+// There is no untouched reference beside them, and there was: it made sense
+// only while every row was forced onto one shared sample, where grayscale on a
+// grey-ish checkerboard was indistinguishable from nothing happening. Shown on
+// the sample it was written for, each effect is legible on its own.
 //
 // The rows are PICTURES, and only the one under the pointer or the keyboard
 // runs. Two of the six effects are motion and nothing else, so a still is not
@@ -61,10 +65,7 @@ export const ImportEffectDialog = ({
     [],
   );
   const ids = useMemo(() => STOCK_EFFECTS.map(effect => effect.id), []);
-  const {previews, texture, sampleStill, canAnimate} = useEffectPreviews(
-    documents,
-    ids,
-  );
+  const {previews, texture, canAnimate} = useEffectPreviews(documents, ids);
   // Which row is being LOOKED at — hovered, or focused by the keyboard. The one
   // that animates, and only while that is true.
   const [active, setActive] = useState<number | null>(null);
@@ -187,22 +188,6 @@ export const ImportEffectDialog = ({
         /* In the library's order, which is the order they teach in: the first
            is the one to read if you have never seen a shader. */
         <ul className={styles.list} ref={listRef}>
-          {showPreviews && (
-            // The untouched sample, once, at the top: the reference every row
-            // below is read against. Not a row — there is nothing to choose
-            // here — so it is not in the list's tab order.
-            <li className={styles.reference} aria-hidden="true">
-              <img
-                className={styles.square}
-                src={sampleStill ?? undefined}
-                alt=""
-                style={{width: PREVIEW_SIZE, height: PREVIEW_SIZE}}
-              />
-              <Typography component="span" variant="body4">
-                {translate('No effect — what each one below starts from.')}
-              </Typography>
-            </li>
-          )}
           {STOCK_EFFECTS.map((effect, index) => (
             <li key={effect.id}>
               <Button

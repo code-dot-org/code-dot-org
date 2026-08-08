@@ -24,7 +24,7 @@ import {compileEffect} from './compiler/compileEffect';
 import type {EffectDocument} from './model/types';
 import type {ShaderPreviewParameterValue} from './preview/ShaderPreview';
 import {findTestTexture, renderTestTexture} from './preview/testTextures';
-import {EFFECT_SAMPLE_STILL, EFFECT_STILLS} from './stock/stills';
+import {EFFECT_STILLS} from './stock/stills';
 
 /**
  * The sample the effects are shown on, and the size the LIVE canvas runs it at.
@@ -53,8 +53,6 @@ export interface EffectPreviews {
   previews: readonly EffectPreview[];
   /** The sample image, for the live canvas to run its shader over. */
   texture: TexImageSource | null;
-  /** The sample as a PNG — the untouched reference the column is read against. */
-  sampleStill: string;
   /** Whether a row may animate at all — a reader's setting, and WebGL's. */
   canAnimate: boolean;
 }
@@ -122,7 +120,6 @@ export function useEffectPreviews(
   return {
     previews,
     texture,
-    sampleStill: EFFECT_SAMPLE_STILL,
     canAnimate: canAnimate && !reduced,
   };
 }
