@@ -9,6 +9,17 @@ export interface PreviewCanvasProps {
   /** Edge length in CSS pixels. Previews are square, matching the spec's boxes. */
   size?: number;
   paused?: boolean;
+  /** Called once the canvas has drawn — see `useShaderPreview`. */
+  onFirstFrame?: () => void;
+  /**
+   * Filled with a function returning the current frame as a PNG.
+   *
+   * For a caller that replaces this canvas with a picture and wants the seam to
+   * be invisible: the picture it leaves behind can be the frame that was there.
+   */
+  snapshotRef?: React.MutableRefObject<
+    ((target: HTMLCanvasElement) => boolean) | null
+  >;
   /** Describes what is being previewed, for screen readers. */
   label: string;
   className?: string;
@@ -27,15 +38,21 @@ export function PreviewCanvas({
   parameters,
   size = 128,
   paused,
+  onFirstFrame,
+  snapshotRef,
   label,
   className,
 }: PreviewCanvasProps) {
-  const {canvasRef, error} = useShaderPreview({
+  const {canvasRef, error, snapshotInto} = useShaderPreview({
     fragmentSource,
     texture,
     parameters,
     paused,
+    onFirstFrame,
   });
+  if (snapshotRef) {
+    snapshotRef.current = snapshotInto;
+  }
 
   return (
     <div
