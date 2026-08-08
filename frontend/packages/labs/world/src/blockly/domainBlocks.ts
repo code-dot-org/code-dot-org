@@ -4850,6 +4850,23 @@ function generateRulePalette(
    * project down rather than the one block.
    */
   offerEmits = false,
+  /**
+   * Whether to LIST the hats of WORLD events — the ones with no actor.
+   *
+   * Such a hat generates `world.on(…)` at the top of the module it is in, and
+   * only a `.world` binds `world` there (it is the builder). An `.actor`
+   * module is `const actor = …` and nothing else, so the same hat is a
+   * ReferenceError the moment the file is imported — the whole project stops
+   * running, over one block a learner dragged out of a category that offered
+   * it.
+   *
+   * An event declared under a TRAIT is unaffected: its hat takes an actor
+   * socket and registers on that, which is exactly what an `.actor` can do.
+   *
+   * Only about the TOOLBOX, like `offerEmits`. The blocks stay defined, so a
+   * file that already holds one still loads and still generates.
+   */
+  offerWorldEvents = true,
 ): {
   blocks: DomainBlock[];
   categories: ToolboxCategory[];
@@ -4912,7 +4929,11 @@ function generateRulePalette(
     for (const event of rule.events) {
       const block = defineEventBlock(event);
       blocks.push(block);
-      ruleEventTypes.push(block.type);
+      if (offerWorldEvents || event.scope !== 'world') {
+        ruleEventTypes.push(block.type);
+      }
+      // A root either way: `rootTypes` is about how a block GENERATES, and one
+      // already in a file generates the same wherever the palette offered it.
       eventTypes.push(block.type);
       // The block that raises it, next to the one that hears it — but only in
       // the palette of a `.rule`. Defined either way: an `.actor` that already
@@ -4977,6 +4998,16 @@ export function buildDomainPalette(
      * world_set_…FallingProperty"), and the whole project stops compiling.
      */
     allRuleModules?: boolean;
+    /**
+     * What kind of file is being edited, where that changes what may be placed.
+     *
+     * Only `actor` means anything today: a world event's hat cannot go in one
+     * (see `offerWorldEvents`). Absent — the headless generator, which has no
+     * one file — offers everything, which is the safe direction: its palette is
+     * never shown, and a block it fails to define is a project that will not
+     * compile.
+     */
+    fileKind?: 'actor' | 'world' | 'rule';
   } = {},
 ): {
   blocks: DomainBlock[];
@@ -5002,6 +5033,7 @@ export function buildDomainPalette(
     // `emit` is offered while writing a rule, and to the headless generator,
     // whose palette is never shown and is deliberately everything.
     editingRule || Boolean(options.allRuleModules),
+    options.fileKind !== 'actor',
   );
   const toolbox: ToolboxCategory[] = [
     ...TOOLBOX_HEAD,
