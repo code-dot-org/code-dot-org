@@ -116,6 +116,7 @@ describe('the library as a whole', () => {
     //   pulse     the clock, and turning it into a back-and-forth
     //   pixelate  change WHERE you read, not what you do with it
     //   ripple    all of the above at once
+    //   radial-ripple  the same wave, driven by distance from a point
     //
     // Pinned rather than derived, because the obvious proxy is wrong: by node
     // count Grayscale (8) would follow Pulse (6), yet split-and-recombine is a
@@ -130,6 +131,7 @@ describe('the library as a whole', () => {
       'pulse',
       'pixelate',
       'ripple',
+      'radial-ripple',
     ]);
   });
 
