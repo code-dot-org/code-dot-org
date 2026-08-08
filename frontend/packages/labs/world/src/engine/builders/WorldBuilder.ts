@@ -462,13 +462,9 @@ export class WorldBuilder {
     type?: string,
     layer?: string,
   ): Actor {
-    const world = this.getWorld();
-    const actor = builder.instantiate(
-      this.resolveInstanceId(world, builder, id),
-      type,
-    );
-    world.addActor(actor, layer);
-    return actor;
+    // Straight through: the live World does the whole job, so one block gets
+    // the same behaviour whichever it lands on (see `World.addActor`).
+    return this.getWorld().addActor(builder, id, type, layer);
   }
 
   /**

@@ -2484,19 +2484,29 @@ describe('builder-context warnings', () => {
     );
   });
 
-  it('guards the three blocks that place actors, which need the builder', () => {
-    // `add actor` generates `world.addActor(Template, id, type)` —
-    // `WorldBuilder`'s three-argument form. The live `World.addActor` takes an
-    // already-made Actor, and has no `define` or `loadMap` at all. Unguarded,
-    // one of these in a handler pushes an `ActorBuilder` into the actor list
-    // and throws nothing: the game just has a thing in it that is not an actor.
-    for (const type of [
-      'world_add_actor',
-      'world_load_map',
-      'world_create_in_map',
-    ]) {
+  it('guards the two blocks that load a map, which need the builder', () => {
+    // Neither has a live equivalent: `loadMap` instantiates templates against a
+    // type registry the builder owns, and a World has no `define` at all
+    // (`builderSurface.test`). Unguarded, one of these in a handler calls a
+    // method that is not there.
+    for (const type of ['world_load_map', 'world_create_in_map']) {
       expect(extensionsOf(type), type).toContain(BUILDER_WORLD_EXTENSION);
     }
+  });
+
+  it('does NOT guard `add actor`, which now spawns at runtime too', () => {
+    // It used to be guarded for a good reason: it generates
+    // `world.addActor(Template, id, type)` and the live World took an
+    // already-made Actor, so in a handler it pushed an ActorBuilder into the
+    // actor list and threw nothing — the game just had a thing in it that was
+    // not an actor.
+    //
+    // The World takes the template form now and instantiates it, which is what
+    // firing a bullet or splitting an asteroid needs. The guard would only warn
+    // a learner off something that works.
+    expect(extensionsOf('world_add_actor')).not.toContain(
+      BUILDER_WORLD_EXTENSION,
+    );
   });
 
   it('does not double-warn on `create ⟨x⟩ in map`', () => {

@@ -2788,9 +2788,11 @@ const worldAddActor = defineBlock({
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
-  // Builder-only: `world.addActor(Template, id, type)` is `WorldBuilder`'s, and
-  // the live `World.addActor` takes an already-made Actor (see the extension).
-  extensions: [actorOptionsExtension, builderWorldExtension],
+  // Placed while describing a world, and SPAWNED while one runs: a bullet, a
+  // split asteroid, an enemy on a timer. Both, because the live World takes the
+  // same arguments the builder does (`World.addActor`) — so no context guard,
+  // and the block reads the same wherever it sits.
+  extensions: [actorOptionsExtension],
   style: 'behavior_blocks',
   tooltip: 'Place an instance of an actor and set its per-instance properties.',
   generator: {
@@ -2815,7 +2817,10 @@ const worldAddActor = defineBlock({
       const body = generator.statementToCode(block, 'DO');
       // Block scope: each add's `actor` binding is independent, so several adds
       // in one world don't collide, and the DO body's `actor.set(...)` blocks
-      // (e.g. set position) target it. The block id is the stable instance id;
+      // (e.g. set position) target it. The block id is the stable instance id
+      // — unique per WORLD, which is what a placement needs, and not unique per
+      // CALL, so a spawn running every frame gets an ordinal after the first
+      // (`World.resolveInstanceId`). The block id is
       // the module path is the actor's kind (its `type`), so "for each … I'm
       // touching" matches it regardless of the template's authored name.
       // Which layer it lands in — its nearest layer ancestor, or the default

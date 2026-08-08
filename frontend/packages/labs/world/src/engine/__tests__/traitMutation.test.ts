@@ -253,3 +253,54 @@ describe('a trait that does not exist', () => {
     expect(said.some(m => m.includes('remove trait'))).toBe(true);
   });
 });
+
+describe('placing an actor while the game runs', () => {
+  // What firing a bullet needs. `add actor` generates one call, and it used to
+  // reach `WorldBuilder` only — in a handler it handed the live World a
+  // TEMPLATE where it wanted an actor, and the world quietly gained something
+  // that was not one.
+  const template = () => new ActorBuilder({id: 'bullet', name: 'Bullet'});
+
+  it('makes one from a template, the way the builder does', () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+
+    const actor = world.addActor(template(), 'b1', 'actors/bullet');
+
+    expect(world.actorCount()).toBe(1);
+    expect(actor.id).toBe('b1');
+    // The back-reference an actor-scoped action reads to find its world.
+    expect(actor.world).toBe(world);
+  });
+
+  it('still takes an already-made actor', () => {
+    // The other half of the overload, and what the preview surface calls.
+    const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+    const made = template().instantiate('b1');
+
+    expect(world.addActor(made)).toBe(made);
+    expect(world.actorCount()).toBe(1);
+  });
+
+  it('gives every spawn its own id, however often the block fires', () => {
+    // A block id is unique per WORLD, which is what a placement needs, and not
+    // per CALL — a spawn in a step runs every frame. Colliding ids would make
+    // `remove actor` ambiguous and two bullets one bullet.
+    const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+    for (let shot = 0; shot < 4; shot += 1) {
+      world.addActor(template(), 'from-one-block', 'actors/bullet');
+    }
+    const ids = [...world.actors].map(actor => actor.id);
+
+    expect(new Set(ids).size).toBe(4);
+    expect(ids[0]).toBe('from-one-block');
+  });
+
+  it('frees an id again once that actor is gone', () => {
+    // Otherwise a game that fires and clears forever climbs through ordinals.
+    const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+    const first = world.addActor(template(), 'shot', 'actors/bullet');
+    world.removeActor(first);
+
+    expect(world.addActor(template(), 'shot', 'actors/bullet').id).toBe('shot');
+  });
+});

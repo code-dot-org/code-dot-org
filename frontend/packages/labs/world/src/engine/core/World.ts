@@ -42,6 +42,17 @@ import {Vector} from './Vector';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from './viewport';
 
 /**
+ * The part of an `ActorBuilder` that placing one needs.
+ *
+ * Structural rather than the class itself: `ActorBuilder` imports the engine
+ * core, so naming it here would close a cycle for the sake of one type.
+ */
+export interface ActorTemplate {
+  readonly id: string;
+  instantiate(id?: string, type?: string): Actor;
+}
+
+/**
  * A pristine, comparable view of a built world — its structure and every
  * property value, keyed by `${owner}.${id}` path. The driver diffs two of these
  * across a rebuild to decide hot-reload strategy (PLAN §9): if only `world`
@@ -474,13 +485,78 @@ export class World {
    * rather than take the world down. The same reasoning as a `use rule` naming
    * a rule that has gone.
    */
-  addActor(actor: Actor, layer: string = DEFAULT_LAYER_ID): void {
+  addActor(actor: Actor, layer?: string): Actor;
+  addActor(
+    template: ActorTemplate,
+    id?: string,
+    type?: string,
+    layer?: string,
+  ): Actor;
+  /**
+   * Place an actor, or make one from a template and place that.
+   *
+   * TWO shapes because one BLOCK reaches both. `add actor` generates
+   * `world.addActor(Template, id, type, layer)`, and under `define world` that
+   * lands on `WorldBuilder`; in a rule step or an event handler — spawning a
+   * bullet, splitting an asteroid — it lands here. A method that existed on one
+   * of them only is a crash carrying the block's own name at the moment a
+   * learner runs their game (`builderSurface.test`), so the two agree.
+   *
+   * The template form is told apart by duck-typing rather than by importing
+   * `ActorBuilder` for an `instanceof`: that import would be a cycle, and the
+   * same trade is already made in `Traited`'s coercion.
+   */
+  addActor(
+    subject: Actor | ActorTemplate,
+    idOrLayer?: string,
+    type?: string,
+    layer?: string,
+  ): Actor {
+    if (typeof (subject as ActorTemplate).instantiate !== 'function') {
+      return this.place(subject as Actor, idOrLayer);
+    }
+    const template = subject as ActorTemplate;
+    return this.place(
+      template.instantiate(this.resolveInstanceId(template, idOrLayer), type),
+      layer,
+    );
+  }
+
+  /**
+   * A free id for a new instance.
+   *
+   * A block's id is stable and unique in a WORLD, which is what makes it the
+   * right name for something placed once while describing one. It is neither
+   * once the same block runs again — a spawn in a step fires every frame — so a
+   * taken id gains an ordinal. An id nobody asked for gets a random one, since
+   * there is no name to keep.
+   */
+  private resolveInstanceId(
+    template: ActorTemplate,
+    explicitId?: string,
+  ): string {
+    const base = explicitId ?? template.id;
+    if (!this.hasActor(base)) {
+      return base;
+    }
+    if (explicitId === undefined) {
+      return `${template.id}-${crypto.randomUUID()}`;
+    }
+    let ordinal = 2;
+    while (this.hasActor(`${base}#${ordinal}`)) {
+      ordinal += 1;
+    }
+    return `${base}#${ordinal}`;
+  }
+
+  private place(actor: Actor, layer: string = DEFAULT_LAYER_ID): Actor {
     // The back-reference an actor-scoped action or query reads to reach the
     // world (see `Actor.world`). Set here because placement is what makes it
     // true, and cleared by `clearActors` for the same reason.
     actor.world = this;
     actor.layer = this.layerIndex.has(layer) ? layer : DEFAULT_LAYER_ID;
     this.actorList.push(actor);
+    return actor;
   }
 
   /** The cameras this world holds. Never empty; the default is among them. */
