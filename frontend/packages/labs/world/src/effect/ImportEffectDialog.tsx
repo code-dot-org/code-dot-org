@@ -65,7 +65,7 @@ export const ImportEffectDialog = ({
     [],
   );
   const ids = useMemo(() => STOCK_EFFECTS.map(effect => effect.id), []);
-  const {previews, texture, canAnimate} = useEffectPreviews(documents, ids);
+  const {previews, textures, canAnimate} = useEffectPreviews(documents, ids);
   // Which row is being LOOKED at — hovered, or focused by the keyboard. The one
   // that animates, and only while that is true.
   const [active, setActive] = useState<number | null>(null);
@@ -285,7 +285,9 @@ export const ImportEffectDialog = ({
                     ? null
                     : (previews[active]?.fragmentSource ?? null)
                 }
-                texture={texture}
+                // The active row's OWN sample, so promoting a row changes what
+                // moves and not what it is a picture of.
+                texture={active === null ? null : (textures[active] ?? null)}
                 parameters={
                   active === null ? undefined : previews[active]?.parameters
                 }

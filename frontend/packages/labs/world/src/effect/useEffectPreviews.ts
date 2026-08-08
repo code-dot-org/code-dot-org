@@ -27,14 +27,20 @@ import {findTestTexture, renderTestTexture} from './preview/testTextures';
 import {EFFECT_STILLS} from './stock/stills';
 
 /**
- * The sample the effects are shown on, and the size the LIVE canvas runs it at.
+ * The sample each effect's LIVE canvas runs its shader over.
  *
- * Must be the one the stills were rendered over, or hovering a row would swap
- * the picture for a different picture. `build-effect-stills.mjs` names the same
- * texture; this is the pair to keep in step.
+ * Per effect, from its own `testTexture`, and the same one its still was
+ * rendered on — otherwise hovering a row swaps the picture for a different
+ * picture, which is exactly what a shared sample did: five effects declare
+ * `sprite` and every hover put a checkerboard in its place.
+ *
+ * The SIZE has to agree too. A 144px sample minified into a 72px canvas is
+ * filtered differently from a 72px one drawn at its own size, and that shows as
+ * a change in sharpness at the moment a row is promoted.
  */
-const SAMPLE_TEXTURE = 'checker';
-const SAMPLE_SIZE = 144;
+const FALLBACK_TEXTURE = 'checker';
+/** The size the stills were rendered at (`build-effect-stills.mjs`). */
+const SAMPLE_SIZE = 72;
 
 export interface EffectPreview {
   /** The first frame, as a PNG. Null when the graph would not compile. */
@@ -51,8 +57,8 @@ export interface EffectPreview {
 export interface EffectPreviews {
   /** One per document, in the order given. Empty until the stills are drawn. */
   previews: readonly EffectPreview[];
-  /** The sample image, for the live canvas to run its shader over. */
-  texture: TexImageSource | null;
+  /** One sample per effect, in the order given — see the note above. */
+  textures: readonly (TexImageSource | null)[];
   /** Whether a row may animate at all — a reader's setting, and WebGL's. */
   canAnimate: boolean;
 }
@@ -96,7 +102,9 @@ export function useEffectPreviews(
     [documents],
   );
 
-  const [texture, setTexture] = useState<TexImageSource | null>(null);
+  const [textures, setTextures] = useState<readonly (TexImageSource | null)[]>(
+    [],
+  );
   const [canAnimate, setCanAnimate] = useState(false);
   const reduced = useReducedMotion();
 
@@ -104,9 +112,21 @@ export function useEffectPreviews(
   // whether it can run one at all. Both only matter for the hovered row, so
   // neither is on the path to showing the dialog.
   useEffect(() => {
-    setTexture(renderTestTexture(findTestTexture(SAMPLE_TEXTURE), SAMPLE_SIZE));
+    // Drawn once per distinct sample, not once per effect: there are four in
+    // the library and eight effects, and rasterising the same grid twice is
+    // work nobody sees.
+    const drawn = new Map<string, TexImageSource | null>();
+    setTextures(
+      documents.map(document => {
+        const id = document.testTexture ?? FALLBACK_TEXTURE;
+        if (!drawn.has(id)) {
+          drawn.set(id, renderTestTexture(findTestTexture(id), SAMPLE_SIZE));
+        }
+        return drawn.get(id) ?? null;
+      }),
+    );
     setCanAnimate(hasWebGL());
-  }, []);
+  }, [documents]);
 
   const previews = useMemo(
     () =>
@@ -119,7 +139,7 @@ export function useEffectPreviews(
 
   return {
     previews,
-    texture,
+    textures,
     canAnimate: canAnimate && !reduced,
   };
 }
