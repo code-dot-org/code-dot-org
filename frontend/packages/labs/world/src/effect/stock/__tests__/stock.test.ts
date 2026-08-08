@@ -133,6 +133,7 @@ describe('the library as a whole', () => {
     //   ripple    all of the above at once
     //   radialRipple   the same wave, driven by distance from a point
     //   clouds         noise: a node that MAKES a picture, and octaves
+    //   fire           time moves WHERE you read; a coordinate as a mask; a ramp
     //
     // Pinned rather than derived, because the obvious proxy is wrong: by node
     // count Grayscale (8) would follow Pulse (6), yet split-and-recombine is a
@@ -149,6 +150,7 @@ describe('the library as a whole', () => {
       'ripple',
       'radialRipple',
       'clouds',
+      'fire',
     ]);
   });
 

@@ -24,13 +24,15 @@
 // read; Ripple uses all of it at once; Radial Ripple turns Ripple a quarter
 // turn, driving the same wave from distance-to-a-point rather than one axis;
 // Clouds adds a node that GENERATES a picture instead of reading one, and shows
-// what octaves are. Anything added here should say where it belongs in that
-// progression.
+// what octaves are; Fire moves WHERE the noise is read, masks by a coordinate,
+// and turns a number into a color through a ramp. Anything added here should
+// say where it belongs in that progression.
 
 import type {EffectDocument} from '../model/types';
 
 import {cloudsEffect} from './clouds';
 import {fadeEffect} from './fade';
+import {fireEffect} from './fire';
 import {grayscaleEffect} from './grayscale';
 import {pixelateEffect} from './pixelate';
 import {pulseEffect} from './pulse';
@@ -41,6 +43,7 @@ import {tintEffect} from './tint';
 export {
   cloudsEffect,
   fadeEffect,
+  fireEffect,
   grayscaleEffect,
   pixelateEffect,
   pulseEffect,
@@ -77,6 +80,7 @@ export const STOCK_EFFECTS: readonly StockEffect[] = [
   {id: 'ripple', document: rippleEffect},
   {id: 'radialRipple', document: radialRippleEffect},
   {id: 'clouds', document: cloudsEffect},
+  {id: 'fire', document: fireEffect},
 ];
 
 /** Look one up by its file stem. */
