@@ -82,6 +82,7 @@ import {worldContextExtension} from './extensions/worldContext';
 import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
+import {ROOT_HOMES, type FileKind} from './fileKind';
 import {FOUNDATIONAL_STOCK_RULES} from './foundation';
 import {
   DEFAULT_PARALLAX,
@@ -4809,6 +4810,48 @@ const withEngine = (categories: ToolboxCategory[]): ToolboxCategory[] => [
   ENGINE_CATEGORY,
 ];
 
+/**
+ * The structural categories as one kind of file sees them.
+ *
+ * The whole `Rule` category goes when the file is not a `.rule`: every block in
+ * it declares part of a rule, and the two it shares with elsewhere
+ * (`use rule`, `use trait`) are listed in World and Actor as well, so dropping
+ * it costs nothing. That the Engine category was already gated this way and
+ * Rule was not is the inconsistency being closed.
+ *
+ * No file kind — the headless generator, which has no one file — sees all of
+ * it, the same direction taken everywhere else here: its palette is never
+ * shown, and what it fails to offer it may still have to define.
+ */
+const structuralCategories = (fileKind?: FileKind): ToolboxCategory[] => {
+  if (!fileKind) {
+    return TOOLBOX_HEAD;
+  }
+  const kept: ToolboxCategory[] = [];
+  for (const category of TOOLBOX_HEAD) {
+    if (category.name === 'Rule' && fileKind !== 'rule') {
+      continue;
+    }
+    // An entry is usually a block type, but the type allows a whole flyout item
+    // (a labelled button, a preset block with fields); those name no type and
+    // are never a definition root, so they pass through.
+    const blocks = category.blocks ?? [];
+    const filtered = blocks.filter(
+      item =>
+        typeof item !== 'string' ||
+        (ROOT_HOMES.get(item)?.has(fileKind) ?? true),
+    );
+    // Identity when nothing was dropped, so the common case does not hand the
+    // toolbox a fresh object every time it is rebuilt.
+    kept.push(
+      filtered.length === blocks.length
+        ? category
+        : {...category, blocks: filtered},
+    );
+  }
+  return kept;
+};
+
 const DOMAIN_CATEGORIES: ToolboxCategory[] = [
   ...TOOLBOX_HEAD,
   ...BUILTIN_RULE_CATEGORIES,
@@ -5008,12 +5051,14 @@ export function buildDomainPalette(
     /**
      * What kind of file is being edited, where that changes what may be placed.
      *
-     * What it decides today is which event hats are offered (see `eventHats`).
-     * Absent — the headless generator, which has no one file — offers
-     * everything, which is the safe direction: its palette is never shown, and
-     * a block it fails to define is a project that will not compile.
+     * It decides which event hats are offered (`eventHats`) and which
+     * definition roots and structural categories are (`ROOT_HOMES`,
+     * `structuralCategories`). Absent — the headless generator, which has no
+     * one file — offers everything, which is the safe direction: its palette is
+     * never shown, and a block it fails to define is a project that will not
+     * compile.
      */
-    fileKind?: 'actor' | 'world' | 'rule';
+    fileKind?: FileKind;
   } = {},
 ): {
   blocks: DomainBlock[];
@@ -5026,10 +5071,17 @@ export function buildDomainPalette(
   // runs once per editor mount, before the palette reaches a workspace.
   installColorMessages();
   const editingRule = options.ownRuleModule !== undefined;
+  const structural = structuralCategories(options.fileKind);
   if (projectRules.length === 0) {
+    // `DOMAIN_CATEGORIES` when nothing was filtered, so the no-file-kind case
+    // keeps handing back the one shared constant rather than a copy of it.
+    const categories =
+      structural === TOOLBOX_HEAD
+        ? DOMAIN_CATEGORIES
+        : [...structural, ...BUILTIN_RULE_CATEGORIES, ...TOOLBOX_TAIL];
     return {
       blocks: DOMAIN_BLOCKS,
-      toolbox: editingRule ? withEngine(DOMAIN_CATEGORIES) : DOMAIN_TOOLBOX,
+      toolbox: editingRule ? withEngine(categories) : categories,
       rootTypes: ROOT_BLOCK_TYPES,
     };
   }
@@ -5046,7 +5098,7 @@ export function buildDomainPalette(
         : 'all',
   );
   const toolbox: ToolboxCategory[] = [
-    ...TOOLBOX_HEAD,
+    ...structural,
     ...BUILTIN_RULE_CATEGORIES,
     ...palette.categories,
     ...TOOLBOX_TAIL,

@@ -25,6 +25,7 @@ import {
   BlocklyGenerator,
   type BlocklyGeneratorHandle,
 } from '../blockly/BlocklyGenerator';
+import {fileKindOf} from '../blockly/fileKind';
 import {refreshProjectDropdowns} from '../blockly/projectDropdowns';
 import {projectRuleMetas} from '../blockly/projectModules';
 import {ENTRY_FILE} from '../constants';
@@ -43,9 +44,14 @@ import {
 import {thumbnailManifest} from './thumbnailManifest';
 import {getAssetBaseUrl, getSandboxUrl} from './worldConfig';
 
-/** A Blockly-authored file (.rule/.actor/.world) needs generation. */
-const isBlocklyPath = (path: string): boolean =>
-  /\.(rule|actor|world)$/.test(path);
+/**
+ * A Blockly-authored file (.rule/.actor/.world) needs generation.
+ *
+ * Asked through `fileKindOf` so this list cannot drift from the one the
+ * generator routes on: a file sent for generation whose kind that cannot name
+ * would be compiled by the fallback, as whatever its blocks looked like.
+ */
+const isBlocklyPath = (path: string): boolean => fileKindOf(path) !== undefined;
 
 export interface ConsoleLine {
   level: string;
@@ -367,7 +373,16 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     if (!pair || actorPaths.length === 0) {
       return {thumbnails: {}, schemas: {}};
     }
-    const files = generateBlocklyFiles(projectFiles(currentSources.source));
+    // Thumbnails are decoration, and generation can now refuse a file outright
+    // (a `define world` in an `.actor`). The compile path reports that properly;
+    // throwing here would only add an unhandled rejection, since both callers
+    // are a bare `void getActorInfo(…).then(…)`.
+    let files: Record<string, string>;
+    try {
+      files = generateBlocklyFiles(projectFiles(currentSources.source));
+    } catch {
+      return {thumbnails: {}, schemas: {}};
+    }
     const entry = '__thumbnails__.js';
     const moduleUrl = await pair.compile.compile(
       {...files, [entry]: thumbnailManifest(actorPaths, worldPath)},

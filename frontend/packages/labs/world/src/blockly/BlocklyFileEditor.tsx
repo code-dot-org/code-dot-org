@@ -66,6 +66,7 @@ import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingRule} from './editingRule';
 import {setEffectImportHandler} from './effectImport';
+import {fileKindOf} from './fileKind';
 import {setModuleOpener, setModuleOpeningOffered} from './openModule';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {
@@ -582,18 +583,13 @@ export const BlocklyFileEditor = ({
     return path?.endsWith('.rule') ? path.replace(/\.rule$/, '') : undefined;
   }, [currentSources.source, fileId]);
 
-  // What kind of file this is, where that decides what may be placed in it —
-  // a world event's hat needs a `world` at module scope, and only a `.world`
-  // has one (see `offerWorldEvents`).
+  // What kind of file this is, where that decides what may be placed in it — a
+  // world event's hat needs a `world` at module scope and only a `.world` has
+  // one, and a definition root decides what the file COMPILES to (`eventHats`,
+  // `ROOT_HOMES`). Read through the same `fileKindOf` the generator routes on,
+  // so the palette and the compiler cannot disagree about what a file is.
   const fileKind = useMemo(() => {
-    const path = filePath(currentSources.source, fileId) ?? '';
-    if (path.endsWith('.actor')) {
-      return 'actor' as const;
-    }
-    if (path.endsWith('.world')) {
-      return 'world' as const;
-    }
-    return path.endsWith('.rule') ? ('rule' as const) : undefined;
+    return fileKindOf(filePath(currentSources.source, fileId));
   }, [currentSources.source, fileId]);
 
   // The level may leave categories out of the toolbox. Only the toolbox: the
