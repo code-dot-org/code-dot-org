@@ -17,6 +17,7 @@ import {
 import {assembleActorModule, assembleWorldModule} from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {buildDomainPalette} from './domainBlocks';
+import {moduleShape} from './fileKind';
 import {
   extractRuleBodies,
   parseRuleMeta,
@@ -120,8 +121,14 @@ export const BlocklyGenerator = forwardRef<
         // Every top block: the rule root, and each `define trait` root beside
         // it (a trait's members chain below it, not inside the rule).
         const topBlocks = workspace.getTopBlocks(true);
-        const ruleRoot = topBlocks.find(block => block.type === 'world_rule');
-        if (ruleRoot) {
+        // What this file compiles to, decided by its NAME — a file's kind is a
+        // property of the file, and no block may change it. Throws if one that
+        // would is present (`fileKind`).
+        const shape = moduleShape(
+          path,
+          topBlocks.map(block => block.type),
+        );
+        if (shape === 'rule') {
           const modulePath = (path ?? '').replace(/\.rule$/, '');
           const meta = parseRuleMeta(modulePath, contents);
           if (!meta) {
@@ -183,10 +190,8 @@ export const BlocklyGenerator = forwardRef<
             generator.blockToCode(block, rootTypesRef.current.has(block.type)),
           ),
         }));
-        // Route by the root block: `world_world` → world, otherwise an actor.
-        const assemble = generated.some(b => b.type === 'world_world')
-          ? assembleWorldModule
-          : assembleActorModule;
+        const assemble =
+          shape === 'world' ? assembleWorldModule : assembleActorModule;
         return generator.finish(assemble(generated));
       },
     }),
