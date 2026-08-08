@@ -218,6 +218,8 @@ const world = (
   },
   parallaxes: Array<{x: number; y: number}> = [],
   fits: boolean[] = [],
+  /** How big the level is. One viewport, as a world with no map really is. */
+  map: {x: number; y: number} = {x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT},
 ) =>
   ({
     setInput: () => {},
@@ -235,6 +237,8 @@ const world = (
       backdrops.map(() => ({effects: [], offset: {x: 0, y: 0}, repeat: false})),
     // One sky, the world's — not the bottom layer's (BACKGROUNDS.md).
     backdropColor: () => clearColor,
+    // What a stretched slot covers: the level, not the window onto it.
+    mapBounds: () => map,
     layerSnapshot: () =>
       backdrops.map((_, index) => ({
         id: index === 0 ? 'main' : `layer${index}`,
@@ -356,9 +360,47 @@ describe('drawing the backdrop', () => {
     expect(images[0]).toMatchObject({tiled: true, tileX: 80, tileY: 0});
   });
 
-  it('still slides a STRETCHED slot away with the camera', () => {
-    // Not given the same treatment, and this says so rather than leaving it to
-    // be inferred: one picture that rides along is what stretched means.
+  it('stretches a slot over the MAP, not over the window onto it', () => {
+    // A background belongs to the level. Sized to the viewport it covered
+    // exactly one camera position, and a world three screens wide showed bare
+    // clear-colour for the other two.
+    const map = {x: VIEWPORT_WIDTH * 3, y: VIEWPORT_HEIGHT};
+    new PhaserBinding(
+      world([{sprite: 'cave.png'}], [0, 0, 0, 1], undefined, [], [], map),
+      pane(),
+    );
+
+    expect(images[0]).toMatchObject({
+      width: map.x,
+      height: map.y,
+      x: map.x / 2,
+      y: map.y / 2,
+    });
+  });
+
+  it('covers the window with that slot from the far end of the map', () => {
+    // The point of the sizing, asserted where it is visible: container plus
+    // image, against the window.
+    const map = {x: VIEWPORT_WIDTH * 3, y: VIEWPORT_HEIGHT};
+    // As far right as a camera confined to the map can look.
+    const far = {x: map.x - VIEWPORT_WIDTH / 2, y: VIEWPORT_HEIGHT / 2};
+    new PhaserBinding(
+      world([{sprite: 'cave.png'}], [0, 0, 0, 1], far, [], [], map),
+      pane(),
+    );
+
+    const left = layers[0].x + images[0].x - images[0].width / 2;
+
+    expect(left).toBeLessThanOrEqual(0);
+    expect(left + images[0].width).toBeGreaterThanOrEqual(VIEWPORT_WIDTH);
+  });
+
+  it('lets a camera pushed past the world take a stretched slot away', () => {
+    // The limit that remains, stated rather than left to be discovered. A
+    // stretched slot is one picture sized to the map, so it covers every
+    // camera position INSIDE the map and none beyond it — the world below is
+    // one screen, and the camera is looking a quarter-screen past its edge.
+    // The tiled kind has no edge to reach and does not care.
     const east = {x: VIEWPORT_WIDTH / 2 + 80, y: VIEWPORT_HEIGHT / 2};
     new PhaserBinding(
       world([{sprite: 'cave.png'}], [0, 0, 0, 1], east),

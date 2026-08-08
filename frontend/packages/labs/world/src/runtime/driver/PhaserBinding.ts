@@ -43,6 +43,7 @@ import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
 
 import {
   layerShift,
+  placementParallax,
   stretchedPlacement,
   tiledPlacement,
 } from './backdropPlacement';
@@ -371,6 +372,10 @@ export class PhaserBinding {
       depth: number,
       /** How far the camera has slid this slot's layer — see `layerShift`. */
       shiftOf: (index: number) => {x: number; y: number},
+      /** That layer's factor, zero when it is fixed — `placementParallax`. */
+      parallaxOf: (index: number) => {x: number; y: number},
+      /** How big the level is, which is what a stretched slot covers. */
+      mapSize: {x: number; y: number},
     ) => {
       slots.forEach((slot, index) => {
         let image = images[index];
@@ -424,8 +429,12 @@ export class PhaserBinding {
           // A stretched slot moves bodily, which is why an offset on one leaves
           // a gap at the edge — legal, and almost always a sign that `repeat`
           // was wanted.
-          const position = stretchedPlacement(slot.offset);
-          image.setDisplaySize(GAME_WIDTH, GAME_HEIGHT);
+          const {position, size} = stretchedPlacement(
+            slot.offset,
+            mapSize,
+            parallaxOf(index),
+          );
+          image.setDisplaySize(size.x, size.y);
           image.setPosition(position.x, position.y);
         }
         // A slot's effects filter its own pixels — unlike a world effect,
@@ -469,6 +478,9 @@ export class PhaserBinding {
        * would look like a background that lags the world it belongs to.
        */
       const shiftOfLayer = (index: number) => layerShift(layers[index], offset);
+      const parallaxOfLayer = (index: number) =>
+        placementParallax(layers[index]);
+      const mapSize = world.mapBounds();
 
       syncSlots(
         scene,
@@ -476,6 +488,8 @@ export class PhaserBinding {
         backdrops,
         BACKGROUND_DEPTH,
         shiftOfLayer,
+        parallaxOfLayer,
+        mapSize,
       );
       syncSlots(
         scene,
@@ -483,6 +497,8 @@ export class PhaserBinding {
         foregrounds,
         FOREGROUND_DEPTH,
         shiftOfLayer,
+        parallaxOfLayer,
+        mapSize,
       );
 
       layers.forEach((layer, index) => {

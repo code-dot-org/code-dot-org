@@ -70,13 +70,82 @@ export const tiledPlacement = (
 });
 
 /**
- * Where a STRETCHED slot's image sits.
+ * How far the camera can travel, per axis — the map less one viewport.
  *
- * One picture, and it moves bodily with its layer — which is why an offset on
- * one can leave a gap at the edge. That is legal, and almost always a sign that
- * `tiled` was wanted; the block's own tooltip says so.
+ * Zero for a world no bigger than its window, which is a world with no map: the
+ * camera has nowhere to go, and every span below collapses to the viewport.
  */
-export const stretchedPlacement = (offset: Shift): Shift => ({
-  x: VIEWPORT_WIDTH / 2 + offset.x,
-  y: VIEWPORT_HEIGHT / 2 + offset.y,
+const panRange = (mapSize: Shift): Shift => ({
+  x: Math.max(0, mapSize.x - VIEWPORT_WIDTH),
+  y: Math.max(0, mapSize.y - VIEWPORT_HEIGHT),
 });
+
+/**
+ * Where a STRETCHED slot's image sits, and how big it is drawn.
+ *
+ * One picture rather than a repeating surface, so covering the view is a
+ * question of being BIG enough and in the right place — there is no third
+ * option, the way tiling is for the repeating kind.
+ *
+ * It was drawn one viewport big at the viewport's centre, which covers exactly
+ * one camera position: its own layer's container slides under the camera, so
+ * the picture rode away and bare clear-colour followed it in. Sizing it to the
+ * MAP is the fix for the ordinary case, and it is what a learner means — the
+ * sky belongs to the level, not to the window onto it.
+ *
+ * Parallax is the part with no obvious answer, until the requirement is written
+ * down. The image must contain `[0, viewport]` on screen for every position the
+ * container takes, and the container takes `-parallax * off` for `off` across
+ * the pan range. Both ends of that give:
+ *
+ *     size     = viewport + |parallax| * range
+ *     position = (viewport + parallax * range) / 2
+ *
+ * which is the smallest picture that always covers. Every case falls out of it
+ * rather than being special-cased:
+ *
+ *   - `1` is map-sized and centred on the map — glued to the level, as asked.
+ *   - `0.2` is a sky stretched a fifth as far, drifting slowly across. Less
+ *     distortion than a map-sized one, which is what a parallax sky wants.
+ *   - `0`, and `fit` (which is parallax 0 here, since its container never
+ *     moves), is one viewport at the viewport's centre — exactly what this drew
+ *     before, so screen furniture is untouched.
+ *   - above `1`, which the block offers as "runs ahead of it", grows PAST the
+ *     map, because a layer that outruns the world needs more picture than the
+ *     world has. Map-sizing alone would have gapped here.
+ *   - below `0` reverses which side the slack goes on, which the `parallax *
+ *     range` in the position handles and the `|parallax|` in the size does not
+ *     care about.
+ *
+ * The author's own `slide background` offset moves it on top of all that, and
+ * can still walk it off the edge. That is what an offset on a stretched slot
+ * means, and the block's tooltip says tiled is what wanting otherwise looks
+ * like.
+ */
+export const stretchedPlacement = (
+  offset: Shift,
+  mapSize: Shift,
+  parallax: Shift,
+): {position: Shift; size: Shift} => {
+  const range = panRange(mapSize);
+  return {
+    size: {
+      x: VIEWPORT_WIDTH + Math.abs(parallax.x) * range.x,
+      y: VIEWPORT_HEIGHT + Math.abs(parallax.y) * range.y,
+    },
+    position: {
+      x: (VIEWPORT_WIDTH + parallax.x * range.x) / 2 + offset.x,
+      y: (VIEWPORT_HEIGHT + parallax.y * range.y) / 2 + offset.y,
+    },
+  };
+};
+
+/**
+ * What a layer's parallax is FOR PLACEMENT: zero when it is fixed.
+ *
+ * A `fit` layer's container never moves, and that is the same arithmetic as a
+ * factor of zero — so saying it once here keeps {@link stretchedPlacement} from
+ * having to know what `fit` is.
+ */
+export const placementParallax = (layer: LayerMotion | undefined): Shift =>
+  !layer || layer.fit ? {x: 0, y: 0} : layer.parallax;
