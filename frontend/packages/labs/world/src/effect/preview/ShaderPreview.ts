@@ -166,6 +166,45 @@ export class ShaderPreview {
     gl.drawArrays(gl.TRIANGLES, 0, 3);
   }
 
+  /**
+   * The frame currently in the drawing buffer, as a PNG data URL.
+   *
+   * Read with `readPixels` rather than `canvas.toDataURL`, and that is not a
+   * preference: the context is created without `preserveDrawingBuffer`, so by
+   * the time the canvas could be asked the buffer has been presented and
+   * cleared, and `toDataURL` hands back a blank square. `readPixels` must
+   * therefore run in the same task as the `render` it captures.
+   *
+   * GL reports rows bottom-up, so they are flipped on the way into the 2D
+   * canvas that encodes them.
+   */
+  snapshot(): string | null {
+    const {gl} = this;
+    if (this.disposed || !this.program) {
+      return null;
+    }
+    const canvas = gl.canvas as HTMLCanvasElement;
+    const {width, height} = canvas;
+    const pixels = new Uint8ClampedArray(width * height * 4);
+    gl.readPixels(0, 0, width, height, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+
+    const flat = document.createElement('canvas');
+    flat.width = width;
+    flat.height = height;
+    const context = flat.getContext('2d');
+    if (!context) {
+      return null;
+    }
+    const image = context.createImageData(width, height);
+    const stride = width * 4;
+    for (let row = 0; row < height; row += 1) {
+      const from = (height - row - 1) * stride;
+      image.data.set(pixels.subarray(from, from + stride), row * stride);
+    }
+    context.putImageData(image, 0, 0);
+    return flat.toDataURL();
+  }
+
   dispose(): void {
     const {gl} = this;
     if (this.disposed) {
@@ -183,6 +222,13 @@ export class ShaderPreview {
     }
     gl.deleteBuffer(this.quadBuffer);
     this.uniformCache.clear();
+
+    // Hand the CONTEXT back, not just the objects in it. A browser keeps a
+    // small pool — around 8 to 16 — and drops the oldest to serve a new one, so
+    // a caller that makes and disposes previews in a loop (a picker following
+    // the pointer down a list) would blank the ones it made earlier. Deleting
+    // the buffers does not release the context; only this does.
+    gl.getExtension('WEBGL_lose_context')?.loseContext();
   }
 
   // --- internals ---

@@ -19,13 +19,73 @@
 /* One row per effect: a whole-row button, so the target is the size of the
    thing being chosen rather than a word inside it. Layout only — the colors,
    the border, the hover and the focus ring are the design system's, because a
-   row here should read as the same kind of thing as a button anywhere else. */
+   row here should read as the same kind of thing as a button anywhere else.
+   A picture and its words, side by side: the picture is a fixed square so
+   every row lines up and the eye can compare straight down the column. */
 .effect {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  align-items: flex-start;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+
+  /* A button centres its content; the old column layout never showed it,
+     because the column was already stretched. In a row it leaves a gutter and,
+     worse, the squares stop lining up with the reference one above them —
+     which is the comparison the whole arrangement exists to make. */
+  justify-content: flex-start;
   padding: 10px 12px;
   text-align: start;
   text-transform: none;
+}
+
+/* Never let the flex row squeeze the canvas: it is a square of a known size,
+   and a squashed preview is a lie about what the effect does. */
+.preview {
+  display: flex;
+  flex: none;
+}
+
+.words {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+}
+
+/* The untouched sample above the list. Deliberately NOT a button — there is
+   nothing to choose — so it carries none of the row styling, only the same
+   left-hand alignment so its square sits under the ones below it. */
+.reference {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  opacity: 0.75;
+}
+
+/* The still and the live canvas occupy the same box, so promoting a row to a
+   running shader shifts nothing. A square, because the sample is one and a
+   stretched preview is a lie about what the effect does. */
+.square {
+  display: block;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* The live canvas, made to occupy EXACTLY the box the still does.
+   `PreviewCanvas` is dressed for the effect editor: a 1px border and a dark
+   transparency checkerboard, against a dark panel. Both are wrong here, and
+   the border is wrong twice — it sits outside the declared size, so promoting
+   a row on hover grew the picture by two pixels and nudged the words. Dropping
+   the backdrop matters as much: `fade` is transparency, and it would have read
+   against dark grey while hovered and against the dialog everywhere else.
+
+   Written as a descendant so it BEATS the wrapper's own rule. One class against
+   one class is a tie, and a tie is settled by which stylesheet the bundler put
+   last — which is not a thing to depend on. */
+.effect .live {
+  border: none;
+  background: none;
+  border-radius: 4px;
 }
