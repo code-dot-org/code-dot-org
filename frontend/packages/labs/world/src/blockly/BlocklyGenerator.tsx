@@ -70,7 +70,7 @@ export const BlocklyGenerator = forwardRef<
   // The palette + root-block types for this project: the built-ins extended with
   // the project's own `.rule` rules. Setting `blocks` re-registers on the live
   // workspace (Driver.blocks), so the generator knows a project rule's blocks.
-  const {blocks, rootTypes} = useMemo(
+  const {blocks, rootTypes, worldEventTypes} = useMemo(
     // Every rule's own read-only setters: this palette generates ALL of the
     // project's Blockly files, so it cannot be scoped to one `.rule` the way the
     // editor's is. It is never shown, so the extra blocks cost nothing.
@@ -80,6 +80,10 @@ export const BlocklyGenerator = forwardRef<
   // `generate` is a stable closure; read the current root types through a ref.
   const rootTypesRef = useRef(rootTypes);
   rootTypesRef.current = rootTypes;
+  // Which hats register on the world rather than on an actor — the two go on
+  // opposite sides of the world block (`assembleWorldModule`).
+  const worldEventsRef = useRef(worldEventTypes);
+  worldEventsRef.current = worldEventTypes;
 
   useImperativeHandle(
     ref,
@@ -190,9 +194,11 @@ export const BlocklyGenerator = forwardRef<
             generator.blockToCode(block, rootTypesRef.current.has(block.type)),
           ),
         }));
-        const assemble =
-          shape === 'world' ? assembleWorldModule : assembleActorModule;
-        return generator.finish(assemble(generated));
+        return generator.finish(
+          shape === 'world'
+            ? assembleWorldModule(generated, worldEventsRef.current)
+            : assembleActorModule(generated),
+        );
       },
     }),
     [],

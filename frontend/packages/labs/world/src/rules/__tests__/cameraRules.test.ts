@@ -106,7 +106,30 @@ describe('Camera Follow — the first rule built on it', () => {
         requires: ['Camera#AimedTrait'],
       }),
     ]);
-    expect(meta.properties.map(p => p.id)).toEqual(['actor_to_follow']);
+    // Its OWN properties, and `goal` is deliberately not among them — that is
+    // the base trait's, and redeclaring it is how two camera rules would end up
+    // aiming at two different things.
+    expect(meta.properties.map(p => p.id)).toEqual([
+      'actor_to_follow',
+      'look_offset',
+    ]);
+  });
+
+  it('aims at the actor plus the look offset, not at the actor', () => {
+    // What lets a camera look UP the level (negative y) to show what a player
+    // is about to jump onto. Folded into the GOAL rather than added to the
+    // position at the end, so everything downstream reads the point actually
+    // being framed: a deadzone measures its slack against that point, and
+    // `confine` keeps THAT inside the map rather than the actor.
+    // Read off the shipped workspace rather than the parsed metadata, which
+    // carries declarations and not bodies: what has to be true is that the aim
+    // step reads the property, and the serialized blocks are where that is.
+    expect(cameraFollowRule).toContain(
+      'world_get_CameraFollow_LookOffsetProperty',
+    );
+    // …and into the goal, which is the base trait's, not straight to a
+    // position. Everything between `aim` and `view` then sees the framed point.
+    expect(cameraFollowRule).toContain('world_set_Camera_GoalProperty');
   });
 
   it('aims, and leaves moving the camera to Camera', () => {

@@ -4918,10 +4918,15 @@ function generateRulePalette(
   blocks: DomainBlock[];
   categories: ToolboxCategory[];
   eventTypes: string[];
+  worldEventTypes: string[];
 } {
   const blocks: DomainBlock[] = [];
   const categories: ToolboxCategory[] = [];
   const eventTypes: string[] = [];
+  // The hats of events with no actor. `assembleWorldModule` needs them apart
+  // from the rest: a world handler registers on the `world` binding and so must
+  // be emitted after it, where an actor's must come before (see that file).
+  const worldEventTypes: string[] = [];
   // Chips already built, by reference. Two `define choices` naming one set
   // produce one reference and would produce one block type twice — and
   // registering a type twice does not fail, it silently replaces
@@ -4985,6 +4990,9 @@ function generateRulePalette(
       // A root either way: `rootTypes` is about how a block GENERATES, and one
       // already in a file generates the same wherever the palette offered it.
       eventTypes.push(block.type);
+      if (event.scope === 'world') {
+        worldEventTypes.push(block.type);
+      }
       // The block that raises it, next to the one that hears it — but only in
       // the palette of a `.rule`. Defined either way: an `.actor` that already
       // has one still has to load and generate.
@@ -5020,7 +5028,7 @@ function generateRulePalette(
       categories.push({name: rule.name, blocks: categoryBlocks});
     }
   }
-  return {blocks, categories, eventTypes};
+  return {blocks, categories, eventTypes, worldEventTypes};
 }
 
 /**
@@ -5064,6 +5072,8 @@ export function buildDomainPalette(
   blocks: DomainBlock[];
   toolbox: Toolbox;
   rootTypes: ReadonlySet<string>;
+  /** Hats of events with no actor — `assembleWorldModule` orders by this. */
+  worldEventTypes: ReadonlySet<string>;
 } {
   // Here rather than at module scope: `Blockly.Msg` is not safe to write until
   // Blockly's own locale has loaded, and touching it during module evaluation
@@ -5083,6 +5093,8 @@ export function buildDomainPalette(
       blocks: DOMAIN_BLOCKS,
       toolbox: editingRule ? withEngine(categories) : categories,
       rootTypes: ROOT_BLOCK_TYPES,
+      // The built-in rules declare no events, so there are none to order.
+      worldEventTypes: new Set<string>(),
     };
   }
   const palette = generateRulePalette(
@@ -5107,5 +5119,6 @@ export function buildDomainPalette(
     blocks: [...DOMAIN_BLOCKS, ...palette.blocks],
     toolbox: editingRule ? withEngine(toolbox) : toolbox,
     rootTypes: new Set([...ROOT_BLOCK_TYPES, ...palette.eventTypes]),
+    worldEventTypes: new Set(palette.worldEventTypes),
   };
 }

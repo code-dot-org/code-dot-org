@@ -38,23 +38,46 @@ export function assembleActorModule(blocks: GeneratedBlock[]): string {
  * a definition sits on the canvas is not something a learner should have to
  * think about.
  */
-export function assembleWorldModule(blocks: GeneratedBlock[]): string {
+export function assembleWorldModule(
+  blocks: GeneratedBlock[],
+  /**
+   * Which hat types belong to a WORLD event — see the two constraints below.
+   *
+   * Passed in rather than worked out here: whether an event has an actor is a
+   * fact about the rule that declared it (`RuleMeta.events[].scope`), and this
+   * file knows about code, not rules. An absent or unlisted type is treated as
+   * an actor's, which is where every hat went before the split.
+   */
+  worldEventTypes: ReadonlySet<string> = new Set(),
+): string {
   const world = blocks.find(block => block.type === 'world_world');
   const actors = blocks.filter(block => block.type === 'world_actor');
-  // Event handlers are REGISTRATIONS on an actor, and a template copies its
-  // handlers into each instance as it makes one (`ActorBuilder.instantiate`).
-  // So a hat below the world block would register onto a template every actor
-  // had already been made from: the handler would compile, run, and never fire.
+  // Event handlers are REGISTRATIONS, and the two kinds have OPPOSITE
+  // constraints — which is why they are split rather than kept together.
+  //
+  // An actor's must come BEFORE the world block. A template copies its handlers
+  // into each instance as it makes one (`ActorBuilder.instantiate`), so a hat
+  // below the world block would register onto a template every actor had
+  // already been made from: it would compile, run, and never fire.
+  //
+  // A world's must come AFTER it. It generates `world.on(…)`, and `world` is
+  // what the world block binds. Above it, the module threw as it was imported
+  // and the whole project stopped — and because esbuild rewrites the `const`,
+  // it threw as "Cannot read properties of undefined (reading 'on')" rather
+  // than as the use-before-declaration it actually is.
   const handlers = blocks.filter(block => block.type.startsWith('world_on_'));
+  const onActors = handlers.filter(block => !worldEventTypes.has(block.type));
+  const onWorld = handlers.filter(block => worldEventTypes.has(block.type));
   const rest = blocks.filter(
     block =>
       block !== world && !actors.includes(block) && !handlers.includes(block),
   );
   const actorsCode = actors
     .map(block => block.code)
-    .concat(handlers.map(block => block.code))
+    .concat(onActors.map(block => block.code))
     .join('');
-  const worldCode = world ? world.code : '';
+  const worldCode =
+    (world ? world.code : '') + onWorld.map(block => block.code).join('');
   const restCode = rest.map(block => block.code).join('');
   // `localActors` is declared and exported by every world, defined actors or
   // not: a module that only sometimes has an export is a module its importers
