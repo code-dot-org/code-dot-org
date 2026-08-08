@@ -4851,22 +4851,26 @@ function generateRulePalette(
    */
   offerEmits = false,
   /**
-   * Whether to LIST the hats of WORLD events — the ones with no actor.
+   * Which event hats to LIST, which is a question about what the file the
+   * palette is for BINDS at the top of the module it generates.
    *
-   * Such a hat generates `world.on(…)` at the top of the module it is in, and
-   * only a `.world` binds `world` there (it is the builder). An `.actor`
-   * module is `const actor = …` and nothing else, so the same hat is a
-   * ReferenceError the moment the file is imported — the whole project stops
-   * running, over one block a learner dragged out of a category that offered
-   * it.
-   *
-   * An event declared under a TRAIT is unaffected: its hat takes an actor
-   * socket and registers on that, which is exactly what an `.actor` can do.
+   * - `all`: a `.world`. It binds `world` (it is the builder) and can reach any
+   *   actor through it, so both kinds of hat run.
+   * - `actorOnly`: an `.actor`. The module is `const actor = …` and nothing
+   *   else, so a WORLD event's hat — which generates `world.on(…)` — is a
+   *   ReferenceError the moment the file is imported, and the whole project
+   *   stops running over one block a learner dragged out of a category that
+   *   offered it. A hat declared under a TRAIT is fine: it takes an actor
+   *   socket and registers on that, which is exactly what an `.actor` can do.
+   * - `none`: a `.rule`. It binds neither — a rule module is
+   *   `const rule = new RuleBuilder(…)` — and `extractRuleBodies` matches a hat
+   *   against none of its three roots, so the hat and everything under it is
+   *   dropped without a word. A rule says when it acts with `during <phase>`.
    *
    * Only about the TOOLBOX, like `offerEmits`. The blocks stay defined, so a
    * file that already holds one still loads and still generates.
    */
-  offerWorldEvents = true,
+  eventHats: 'all' | 'actorOnly' | 'none' = 'all',
 ): {
   blocks: DomainBlock[];
   categories: ToolboxCategory[];
@@ -4929,7 +4933,10 @@ function generateRulePalette(
     for (const event of rule.events) {
       const block = defineEventBlock(event);
       blocks.push(block);
-      if (offerWorldEvents || event.scope !== 'world') {
+      if (
+        eventHats === 'all' ||
+        (eventHats === 'actorOnly' && event.scope !== 'world')
+      ) {
         ruleEventTypes.push(block.type);
       }
       // A root either way: `rootTypes` is about how a block GENERATES, and one
@@ -5001,11 +5008,10 @@ export function buildDomainPalette(
     /**
      * What kind of file is being edited, where that changes what may be placed.
      *
-     * Only `actor` means anything today: a world event's hat cannot go in one
-     * (see `offerWorldEvents`). Absent — the headless generator, which has no
-     * one file — offers everything, which is the safe direction: its palette is
-     * never shown, and a block it fails to define is a project that will not
-     * compile.
+     * What it decides today is which event hats are offered (see `eventHats`).
+     * Absent — the headless generator, which has no one file — offers
+     * everything, which is the safe direction: its palette is never shown, and
+     * a block it fails to define is a project that will not compile.
      */
     fileKind?: 'actor' | 'world' | 'rule';
   } = {},
@@ -5033,7 +5039,11 @@ export function buildDomainPalette(
     // `emit` is offered while writing a rule, and to the headless generator,
     // whose palette is never shown and is deliberately everything.
     editingRule || Boolean(options.allRuleModules),
-    options.fileKind !== 'actor',
+    options.fileKind === 'actor'
+      ? 'actorOnly'
+      : options.fileKind === 'rule'
+        ? 'none'
+        : 'all',
   );
   const toolbox: ToolboxCategory[] = [
     ...TOOLBOX_HEAD,
