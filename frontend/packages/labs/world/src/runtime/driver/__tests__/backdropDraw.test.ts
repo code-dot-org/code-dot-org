@@ -330,8 +330,42 @@ describe('drawing the backdrop', () => {
       // Negated, so a rising offset moves the picture the way a rising
       // position moves an actor.
       tileX: -8,
-      tileY: -0,
+      tileY: 0,
     });
+  });
+
+  it('keeps a tiled slot over the viewport when the camera moves', () => {
+    // THE regression, and the reason a tiled slot is placed in two steps. It is
+    // a child of its layer's container, and the camera slides that container —
+    // so a finite rectangle of one viewport used to ride along and run out. A
+    // quarter-viewport pan put a quarter-viewport band of bare clear-colour on
+    // screen, which is the exact opposite of what "tiled" promises.
+    //
+    // Asserted as the container and the sprite TOGETHER, because either alone
+    // is meaningless: what has to be true is where the two put it.
+    const east = {x: VIEWPORT_WIDTH / 2 + 80, y: VIEWPORT_HEIGHT / 2};
+    new PhaserBinding(
+      world([{sprite: 'cave.png', repeat: true}], [0, 0, 0, 1], east),
+      pane(),
+    );
+
+    expect(layers[0].x + images[0].x).toBe(VIEWPORT_WIDTH / 2);
+    expect(layers[0].y + images[0].y).toBe(VIEWPORT_HEIGHT / 2);
+    // …and the picture still tracks the world, out of a surface with no edge:
+    // staying put would otherwise nail the background to the screen.
+    expect(images[0]).toMatchObject({tiled: true, tileX: 80, tileY: 0});
+  });
+
+  it('still slides a STRETCHED slot away with the camera', () => {
+    // Not given the same treatment, and this says so rather than leaving it to
+    // be inferred: one picture that rides along is what stretched means.
+    const east = {x: VIEWPORT_WIDTH / 2 + 80, y: VIEWPORT_HEIGHT / 2};
+    new PhaserBinding(
+      world([{sprite: 'cave.png'}], [0, 0, 0, 1], east),
+      pane(),
+    );
+
+    expect(layers[0].x + images[0].x).toBe(VIEWPORT_WIDTH / 2 - 80);
   });
 
   it('makes a container per layer even when it draws no image', () => {
@@ -394,7 +428,7 @@ describe('drawing the backdrop', () => {
       pane(),
     );
 
-    expect(layers[1]).toMatchObject({x: 0, y: 0});
+    expect(layers[1]).toMatchObject({x: -0, y: -0});
   });
 
   it('draws nothing for a layer with no image, or an image the project lost', () => {
