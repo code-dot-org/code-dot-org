@@ -22,11 +22,14 @@
 // introduces taking a color apart; Grayscale introduces mixing; Pulse
 // introduces the clock; Pixelate introduces changing *where* the picture is
 // read; Ripple uses all of it at once; Radial Ripple turns Ripple a quarter
-// turn, driving the same wave from distance-to-a-point rather than one axis.
-// Anything added here should say where it belongs in that progression.
+// turn, driving the same wave from distance-to-a-point rather than one axis;
+// Clouds adds a node that GENERATES a picture instead of reading one, and shows
+// what octaves are. Anything added here should say where it belongs in that
+// progression.
 
 import type {EffectDocument} from '../model/types';
 
+import {cloudsEffect} from './clouds';
 import {fadeEffect} from './fade';
 import {grayscaleEffect} from './grayscale';
 import {pixelateEffect} from './pixelate';
@@ -36,6 +39,7 @@ import {rippleEffect} from './ripple';
 import {tintEffect} from './tint';
 
 export {
+  cloudsEffect,
   fadeEffect,
   grayscaleEffect,
   pixelateEffect,
@@ -72,6 +76,7 @@ export const STOCK_EFFECTS: readonly StockEffect[] = [
   {id: 'pixelate', document: pixelateEffect},
   {id: 'ripple', document: rippleEffect},
   {id: 'radialRipple', document: radialRippleEffect},
+  {id: 'clouds', document: cloudsEffect},
 ];
 
 /** Look one up by its file stem. */

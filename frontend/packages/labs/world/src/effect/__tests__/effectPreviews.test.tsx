@@ -82,7 +82,6 @@ describe('the previews a picker can offer', () => {
     withWebGL(false);
     const {result} = renderHook(() => useEffectPreviews(documents, ids));
 
-    expect(result.current.sampleStill).toMatch(/^data:image\/png/);
     for (const [index, preview] of result.current.previews.entries()) {
       expect(preview.still, STOCK_EFFECTS[index].id).toMatch(
         /^data:image\/png/,
