@@ -83,13 +83,34 @@ describe('ActorBuilder.addEffect', () => {
     // lands on the builder in a template body and on the live actor inside an
     // event handler. A difference here would be a difference the learner sees
     // only after moving a block.
+    //
+    // And they did differ. The builder kept the FIRST spec at a path where the
+    // live actor replaces it, so a retune was dropped under `define actor` and
+    // honoured in a handler — under a comment on both sides claiming they
+    // agreed. The live actor's behaviour is the right one: see "retunes an
+    // effect it already has" below for why keeping the first is wrong.
     const actor = positional('fish')
       .addEffect('effects/ripple', doc('Ripple'))
       .addEffect('effects/ripple', doc('Ripple'), {strength: 0.9})
       .instantiate();
 
     expect(actor.effects()).toHaveLength(1);
-    expect(actor.effects()[0]).not.toHaveProperty('values');
+    expect(actor.effects()[0].values).toEqual({strength: 0.9});
+  });
+
+  it('keeps a retuned effect where it was in the order', () => {
+    // In place, not moved to the end: effects apply in order, so retuning one
+    // must not reorder what it is layered with.
+    const actor = positional('fish')
+      .addEffect('effects/ripple', doc('Ripple'))
+      .addEffect('effects/glow', doc('Glow'))
+      .addEffect('effects/ripple', doc('Ripple'), {strength: 0.9})
+      .instantiate();
+
+    expect(actor.effects().map(effect => effect.path)).toEqual([
+      'effects/ripple',
+      'effects/glow',
+    ]);
   });
 
   it('gives an actor with no effects an empty list, not undefined', () => {

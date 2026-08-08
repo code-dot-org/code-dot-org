@@ -93,13 +93,25 @@ export class ActorBuilder {
     document: EffectDocument,
     values?: Readonly<Record<string, number | number[] | boolean>>,
   ): this {
-    // Idempotent by path, as on the live actor: an actor either wears an effect
-    // or it does not. A builder is described once so it can hardly matter here,
-    // but the two must not disagree — one block calls whichever it lands on.
-    if (this.effects.some(effect => effect.path === path)) {
+    // One per path, as on the live actor: an actor either wears an effect or it
+    // does not. And RETUNING one retunes it — the second call wins — because
+    // the alternative is that `add effect ⟨Ripple⟩ with ⟨strength⟩` means
+    // something different under `define actor` than it does in a handler, and
+    // one Blockly block emits both.
+    //
+    // The builder used to keep the FIRST spec while `Actor.addEffect` replaced
+    // it, under a comment claiming the two agreed. They did not: a retune was
+    // silently dropped in a template body and honoured a moment later at
+    // runtime. `World`/`WorldBuilder` had the same split and the same comment.
+    const spec = values ? {path, document, values} : {path, document};
+    const at = this.effects.findIndex(effect => effect.path === path);
+    if (at >= 0) {
+      // In place, so the effect keeps its position in the application order —
+      // retuning one should not move it above or below the others.
+      this.effects[at] = spec;
       return this;
     }
-    this.effects.push(values ? {path, document, values} : {path, document});
+    this.effects.push(spec);
     return this;
   }
 
