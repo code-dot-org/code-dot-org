@@ -13,18 +13,25 @@
 // compile, and nothing to go wrong; WebGL is then needed only to ANIMATE the
 // one row being looked at, which is an enhancement rather than the feature.
 //
+// WHAT IT WRITES, precisely: not image files. `src/effect/stock/stills.ts`, a
+// generated TypeScript module holding each PNG base64'd into a `data:` URL —
+// seven of them, about 15KB in total. There is nothing in `public/` to serve
+// and nothing to fetch; a row's picture is a string the bundle already has.
+//
+// A module rather than files because there is then no asset pipeline to agree
+// with. This package is built by Vite here and has been ported into the webpack
+// build next door, and a `.png` import needs both to say yes; a string needs
+// neither.
+//
 // WHY COMMITTED, against the convention next door. `public/` is generated and
 // gitignored here (`setup-world-assets.mjs`), and these could have gone the
 // same way. They are committed instead because the alternative is a browser in
 // the build path: this script drives Playwright, and `yarn setup:world` runs
-// wherever the package is built. Six small PNGs in git buy that back, and a
-// changed picture shows up in review — which is the right place to notice that
-// an edit to a stock effect changed how it looks.
-//
-// WHY A TS MODULE of data URLs rather than files in `public/`. No asset
-// pipeline to agree with: this package is consumed by Vite here and has been
-// ported into the webpack build next door, and a `.png` import means two build
-// systems have to say yes. A string always works.
+// wherever the package is built. 15KB in git buys that back, and a changed
+// picture shows up in review — which is the right place to notice that an edit
+// to a stock effect changed how it looks. It shows up as a changed base64
+// blob, which says THAT it changed and not how; the reviewer's recourse is to
+// open the picker.
 
 import * as esbuild from 'esbuild';
 import {execFileSync} from 'node:child_process';
@@ -37,10 +44,16 @@ const pkgRoot = join(here, '..');
 const outFile = join(pkgRoot, 'src/effect/stock/stills.ts');
 
 /**
- * Rendered at 2× the 72px the picker draws them at, so they stay sharp on a
- * dense screen without paying for a size nothing displays.
+ * The size the picker DRAWS them at, and deliberately not larger.
+ *
+ * A bigger still downscaled by the browser is a different picture from the same
+ * shader rendered natively at 72 — softer, and the difference shows the instant
+ * a row hands over to its live canvas, on static effects as much as animated
+ * ones. `PreviewCanvas` sizes its backing store to its CSS size, so 72 is what
+ * the live one will be; matching it is worth more here than sharpness on a
+ * dense screen, because a mismatch is visible on every screen.
  */
-const SIZE = 144;
+const SIZE = 72;
 /** The sample every effect is shown on — warping reads clearly on a grid. */
 const TEXTURE = 'checker';
 

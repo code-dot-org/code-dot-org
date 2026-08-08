@@ -5,6 +5,7 @@
    other button. */
 
 .list {
+  position: relative;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -38,11 +39,20 @@
   text-transform: none;
 }
 
-/* Never let the flex row squeeze the canvas: it is a square of a known size,
-   and a squashed preview is a lie about what the effect does. */
+/* Never let the flex row squeeze the picture: it is a square of a known size,
+   and a squashed preview is a lie about what the effect does.
+   A one-cell grid, because the still and the live canvas are stacked in it —
+   both in row 1 / column 1, the still painted over the canvas until the canvas
+   has drawn. Grid rather than absolute positioning so the cell is still sized
+   by its contents. */
 .preview {
-  display: flex;
+  display: grid;
   flex: none;
+  grid-template: 1fr / 1fr;
+}
+
+.preview > * {
+  grid-area: 1 / 1;
 }
 
 .words {
@@ -71,6 +81,11 @@
   display: block;
   border-radius: 4px;
   object-fit: cover;
+
+  /* NO transition. Both handovers are exact — the still is the same size the
+     canvas renders at, and leaving puts back the very frame that was on screen
+     — so a fade has nothing to hide and everything to expose: it would show the
+     picture arriving out of nothing in the frames before the bitmap decodes. */
 }
 
 /* The live canvas, made to occupy EXACTLY the box the still does.
@@ -83,9 +98,22 @@
 
    Written as a descendant so it BEATS the wrapper's own rule. One class against
    one class is a tie, and a tie is settled by which stylesheet the bundler put
-   last — which is not a thing to depend on. */
-.effect .live {
+   last — which is not a thing to depend on. Scoped to `.parked`, which is where
+   the live canvas lives now: left scoped to the row it used to sit in, the
+   border came back and sat the picture one pixel off the one it covers. */
+.parked .live {
   border: none;
   background: none;
   border-radius: 4px;
+}
+
+/* The one live canvas, parked over a row. Absolute inside the scrolling list,
+   so it travels with the content; `translate` and `opacity` only, because both
+   are compositor properties — moving it neither relayouts the list nor rebuilds
+   the layer, which is the flicker this replaced. */
+.parked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }

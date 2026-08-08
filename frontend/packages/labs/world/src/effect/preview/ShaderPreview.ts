@@ -179,22 +179,38 @@ export class ShaderPreview {
    * canvas that encodes them.
    */
   snapshot(): string | null {
+    const flat = document.createElement('canvas');
+    return this.snapshotInto(flat) ? flat.toDataURL() : null;
+  }
+
+  /**
+   * The same frame, drawn straight into a 2D canvas.
+   *
+   * For a caller that will SHOW it rather than store it. A data URL has to be
+   * encoded and then decoded again, and the decode is asynchronous — so
+   * swapping one in as a canvas is taken away is a race the caller can narrow
+   * but not win. Putting the pixels into a canvas already on screen is
+   * synchronous, and there is no frame in between to get wrong.
+   *
+   * `target` is resized to match. Returns false when there is nothing to read.
+   */
+  snapshotInto(target: HTMLCanvasElement): boolean {
     const {gl} = this;
     if (this.disposed || !this.program) {
-      return null;
+      return false;
     }
     const canvas = gl.canvas as HTMLCanvasElement;
     const {width, height} = canvas;
     const pixels = new Uint8ClampedArray(width * height * 4);
     gl.readPixels(0, 0, width, height, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
 
-    const flat = document.createElement('canvas');
-    flat.width = width;
-    flat.height = height;
-    const context = flat.getContext('2d');
+    target.width = width;
+    target.height = height;
+    const context = target.getContext('2d');
     if (!context) {
-      return null;
+      return false;
     }
+    // GL reports rows bottom-up; flip them on the way in.
     const image = context.createImageData(width, height);
     const stride = width * 4;
     for (let row = 0; row < height; row += 1) {
@@ -202,7 +218,7 @@ export class ShaderPreview {
       image.data.set(pixels.subarray(from, from + stride), row * stride);
     }
     context.putImageData(image, 0, 0);
-    return flat.toDataURL();
+    return true;
   }
 
   dispose(): void {
