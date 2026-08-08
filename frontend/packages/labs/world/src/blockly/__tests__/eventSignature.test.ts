@@ -253,6 +253,18 @@ describe('where a world event\u2019s hat may be placed', () => {
       'world_on_Keys_IsPressedEvent',
     );
   });
+
+  it('is not a rule file, which binds neither world nor actor', () => {
+    // A rule module is `const rule = new RuleBuilder(…)`, and
+    // `extractRuleBodies` matches a hat against none of its three roots — so a
+    // hat there, and everything a learner chained under it, is dropped without
+    // a word. A rule says when it acts with `during <phase>`.
+    const meta = ruleWithEvent(PRESSED, KEY_VAR);
+    const hat = 'world_on_Keys_IsPressedEvent';
+
+    expect(offered(meta, 'rule')).not.toContain(hat);
+    expect(defined(meta, 'rule')).toContain(hat);
+  });
 });
 
 describe('an actor event\u2019s hat, in the same rule', () => {
@@ -262,8 +274,11 @@ describe('an actor event\u2019s hat, in the same rule', () => {
   // the second kind, so getting this wrong takes the jump out of the palette.
   const input = parseRuleMeta('rules/input', inputRule)!;
 
-  const offered = (fileKind?: 'actor' | 'world' | 'rule') => {
-    const {toolbox} = buildDomainPalette([input], {fileKind});
+  const offered = (
+    fileKind?: 'actor' | 'world' | 'rule',
+    ownRuleModule?: string,
+  ) => {
+    const {toolbox} = buildDomainPalette([input], {fileKind, ownRuleModule});
     const category = (toolbox as Array<{name: string; blocks?: string[]}>).find(
       entry => entry.name === 'Input',
     );
@@ -284,5 +299,18 @@ describe('an actor event\u2019s hat, in the same rule', () => {
 
     expect(inWorld).toContain('world_on_Input_PressesEvent');
     expect(inWorld).toContain('world_on_Input_IsPressedEvent');
+  });
+
+  it('and a rule file gets neither, but keeps the blocks that RAISE them', () => {
+    // The category is not simply empty here — `emit` is offered while a rule is
+    // being written, and declaring an event is a rule-authoring act. So the
+    // hats are absent from a category that has plenty in it, which is the
+    // distinction worth pinning: a rule says what happened, not what to do.
+    const inRule = offered('rule', 'rules/input');
+
+    expect(inRule).not.toContain('world_on_Input_PressesEvent');
+    expect(inRule).not.toContain('world_on_Input_IsPressedEvent');
+    expect(inRule).toContain('world_emit_Input_PressesEvent');
+    expect(inRule).toContain('world_emit_Input_IsPressedEvent');
   });
 });
