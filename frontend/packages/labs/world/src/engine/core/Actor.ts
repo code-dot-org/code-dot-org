@@ -101,6 +101,22 @@ export class Actor {
     return this.traited.has(trait);
   }
 
+  /**
+   * Elect a trait while the game runs, or drop one — see `core/Traited`, which
+   * owns both and explains why a dropped trait leaves its properties behind.
+   *
+   * Returns `this` so a step can chain, matching `set` and `addEffect`.
+   */
+  addTrait(trait: Trait): this {
+    this.traited.addTrait(trait);
+    return this;
+  }
+
+  removeTrait(trait: Trait): this {
+    this.traited.removeTrait(trait);
+    return this;
+  }
+
   query<T>(query: Query<T>, ...args: unknown[]): T {
     return query.evaluate(this, ...args);
   }

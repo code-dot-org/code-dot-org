@@ -4520,9 +4520,74 @@ const worldHasTrait = defineBlock({
   },
 });
 
+// `add trait <trait> to <actor>` / `remove trait <trait> from <actor>` — the
+// runtime pair beside `has trait`, which is how you ask.
+//
+// `use trait` is the declaration and takes no subject: it says what an actor IS
+// as it is built. These say what it is doing NOW — stop this camera following,
+// give the player a shield for ten seconds — so they take a subject, exactly as
+// `add effect` and `remove effect` do.
+//
+// A dropped trait keeps the properties it declared (core/Traited), so putting
+// it back resumes rather than resets. Removing a trait the subject only holds
+// because something else requires it does nothing at all, and says nothing:
+// the reference count is what decides, and it is no more an error than removing
+// a trait that was never there.
+const traitMutation = (opts: {
+  type: string;
+  message0: string;
+  method: 'addTrait' | 'removeTrait';
+  tooltip: string;
+}) =>
+  defineBlock({
+    type: opts.type,
+    message0: opts.message0,
+    args0: [
+      // EVERY trait, for the reason `has trait` gives: what is plugged into the
+      // socket decides the subject, and a camera's value is Actor-typed.
+      {type: 'field_dropdown', name: 'TRAIT', options: anyTraitOptions},
+      {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    ],
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    extensions: [actorInputExtension, anyTraitOptionsExtension],
+    style: 'setup_blocks',
+    tooltip: opts.tooltip,
+    generator: {
+      javascript(block, generator) {
+        const target = actorTarget(block, generator, Order.MEMBER);
+        const ref = refFromValue(block.getFieldValue('TRAIT'));
+        return `${oneActor(target)}.${opts.method}(${refCode(ref, generator)});\n`;
+      },
+    },
+  });
+
+const worldAddTrait = traitMutation({
+  type: 'world_add_trait',
+  message0: 'add trait %1 to %2',
+  method: 'addTrait',
+  tooltip:
+    'Give an actor — or a camera — a trait while the game runs. Its steps ' +
+    'start on the next frame, and a trait it had before keeps the values it ' +
+    'had then.',
+});
+
+const worldRemoveTrait = traitMutation({
+  type: 'world_remove_trait',
+  message0: 'remove trait %1 from %2',
+  method: 'removeTrait',
+  tooltip:
+    'Take a trait away while the game runs, so its steps stop. What it ' +
+    'remembers is kept, so adding it back picks up where it left off. A trait ' +
+    'that is only there because another trait needs it stays.',
+});
+
 export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
+  worldAddTrait,
+  worldRemoveTrait,
   worldAddEffect,
   worldRemoveEffect,
   ...EFFECT_OWNER_BLOCKS,
@@ -4643,6 +4708,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     blocks: [
       'world_actor',
       'world_use_trait',
+      // …and the runtime pair beside it: what an actor IS as it is built,
+      // against what it is doing now. `has trait` asks, and sits with Logic.
+      'world_add_trait',
+      'world_remove_trait',
       // One block plays an effect on an actor, in a template or at runtime;
       // `remove` is runtime-only (there is nothing to un-declare).
       'world_add_effect',

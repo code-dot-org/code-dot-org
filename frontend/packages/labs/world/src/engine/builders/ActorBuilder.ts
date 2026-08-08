@@ -56,6 +56,28 @@ export class ActorBuilder {
     return this;
   }
 
+  /**
+   * Named to match `Actor.addTrait` / `Actor.removeTrait`, and for the reason
+   * `addEffect` gives: ONE Blockly block serves a template body and an event
+   * handler, both bind the identifier `actor`, and the block emits
+   * `actor.addTrait(…)` either way. Without these, dragging the block above the
+   * handlers rather than inside one is `actor.addTrait is not a function`.
+   *
+   * On a template they describe what every instance is MADE with, so removing
+   * one it never elected does nothing — the same silence the live actor gives.
+   */
+  addTrait(trait: Trait): this {
+    return this.useTraits([trait]);
+  }
+
+  removeTrait(trait: Trait): this {
+    // Every election of it, not just the last: `useTraits` appends, so a
+    // template that elected a trait twice has it twice, and taking it away
+    // once and leaving a copy is not a thing a learner can see or reason about.
+    this.traits = this.traits.filter(held => held.id !== trait.id);
+    return this;
+  }
+
   /** Override a trait property's initial value for this actor. */
   set<T>(property: Property<T>, value: T): this {
     this.overrides.push([property, value]);
