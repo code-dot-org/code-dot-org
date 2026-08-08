@@ -13,6 +13,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {inputRule} from '../../rules/stock/input';
 import {buildDomainPalette} from '../domainBlocks';
 import {parseRuleMeta} from '../ruleMeta';
 import {shadowsFor} from '../valueShadow';
@@ -199,5 +200,89 @@ describe('raising an event that carries a choice', () => {
 
     // Once, however many actors are in the world.
     expect(code).toBe('world.emitToWorld(IsPressedEvent, key);\n');
+  });
+});
+
+describe('where a world event\u2019s hat may be placed', () => {
+  // It generates `world.on(…)` at the top of the module it sits in, and only a
+  // `.world` binds `world` there — it is the builder. An `.actor` module is
+  // `const actor = …` and nothing else, so the same hat is a ReferenceError as
+  // soon as the file is imported: the whole project stops running, over one
+  // block dragged out of a category that offered it.
+
+  /** The blocks a rule's own toolbox category lists, for a given file kind. */
+  const offered = (
+    meta: ReturnType<typeof ruleWithEvent>,
+    fileKind?: 'actor' | 'world' | 'rule',
+  ): string[] => {
+    const {toolbox} = buildDomainPalette([meta], {fileKind});
+    const category = (toolbox as Array<{name: string; blocks?: string[]}>).find(
+      entry => entry.name === meta.name,
+    );
+    return category?.blocks ?? [];
+  };
+
+  /** Every block the palette DEFINES, offered or not. */
+  const defined = (
+    meta: ReturnType<typeof ruleWithEvent>,
+    fileKind?: 'actor' | 'world' | 'rule',
+  ): string[] =>
+    buildDomainPalette([meta], {fileKind}).blocks.map(block => block.type);
+
+  it('is not an actor file, for an event the rule declares', () => {
+    // `ruleWithEvent` hangs its event off the rule root, so it is the world's.
+    const meta = ruleWithEvent(PRESSED, KEY_VAR);
+    const hat = 'world_on_Keys_IsPressedEvent';
+
+    expect(offered(meta, 'world')).toContain(hat);
+    expect(offered(meta, 'actor')).not.toContain(hat);
+  });
+
+  it('is still DEFINED in an actor file, so one already there loads', () => {
+    // The same arrangement `emit` has. Withholding the definition would turn a
+    // file that already holds the block from wrong into unopenable.
+    const meta = ruleWithEvent(PRESSED, KEY_VAR);
+
+    expect(defined(meta, 'actor')).toContain('world_on_Keys_IsPressedEvent');
+  });
+
+  it('offers everything when no file kind is given', () => {
+    // The headless generator has no one file, and a block it fails to define
+    // is a project that will not compile — so absent means offer.
+    expect(offered(ruleWithEvent(PRESSED, KEY_VAR))).toContain(
+      'world_on_Keys_IsPressedEvent',
+    );
+  });
+});
+
+describe('an actor event\u2019s hat, in the same rule', () => {
+  // `rules/input` declares its key events TWICE — on the rule, where they are
+  // the world's, and under a trait, where they are an actor's. Only the first
+  // kind is withheld from an `.actor`, and the starter player's jump handler is
+  // the second kind, so getting this wrong takes the jump out of the palette.
+  const input = parseRuleMeta('rules/input', inputRule)!;
+
+  const offered = (fileKind?: 'actor' | 'world' | 'rule') => {
+    const {toolbox} = buildDomainPalette([input], {fileKind});
+    const category = (toolbox as Array<{name: string; blocks?: string[]}>).find(
+      entry => entry.name === 'Input',
+    );
+    return category?.blocks ?? [];
+  };
+
+  it('is offered in an actor file, where the world\u2019s is not', () => {
+    const inActor = offered('actor');
+
+    expect(inActor).toContain('world_on_Input_PressesEvent');
+    expect(inActor).toContain('world_on_Input_ReleasesEvent');
+    expect(inActor).not.toContain('world_on_Input_IsPressedEvent');
+    expect(inActor).not.toContain('world_on_Input_IsReleasedEvent');
+  });
+
+  it('and a world file gets both', () => {
+    const inWorld = offered('world');
+
+    expect(inWorld).toContain('world_on_Input_PressesEvent');
+    expect(inWorld).toContain('world_on_Input_IsPressedEvent');
   });
 });

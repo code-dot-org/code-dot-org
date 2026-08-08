@@ -582,18 +582,33 @@ export const BlocklyFileEditor = ({
     return path?.endsWith('.rule') ? path.replace(/\.rule$/, '') : undefined;
   }, [currentSources.source, fileId]);
 
+  // What kind of file this is, where that decides what may be placed in it —
+  // a world event's hat needs a `world` at module scope, and only a `.world`
+  // has one (see `offerWorldEvents`).
+  const fileKind = useMemo(() => {
+    const path = filePath(currentSources.source, fileId) ?? '';
+    if (path.endsWith('.actor')) {
+      return 'actor' as const;
+    }
+    if (path.endsWith('.world')) {
+      return 'world' as const;
+    }
+    return path.endsWith('.rule') ? ('rule' as const) : undefined;
+  }, [currentSources.source, fileId]);
+
   // The level may leave categories out of the toolbox. Only the toolbox: the
   // blocks stay defined, so a workspace that already holds one still renders.
   const hiddenCategories = hiddenToolboxCategories(levelProperties);
   const {blocks, toolbox} = useMemo(() => {
     const palette = buildDomainPalette(projectRuleMetas(files), {
       ownRuleModule,
+      fileKind,
     });
     return {
       blocks: palette.blocks,
       toolbox: withoutCategories(palette.toolbox, hiddenCategories),
     };
-  }, [files, ownRuleModule, hiddenCategories]);
+  }, [files, ownRuleModule, fileKind, hiddenCategories]);
 
   // Parsed once: Codebridge keys this component by file id, so it remounts (and
   // re-reads `initialContents`) when the active file changes.
