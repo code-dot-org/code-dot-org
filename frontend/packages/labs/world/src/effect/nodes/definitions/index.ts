@@ -4,6 +4,7 @@ import type {EffectNodeDefinition} from '../types';
 import {annotationNodes} from './annotation';
 import {colorNodes} from './color';
 import {mathNodes} from './math';
+import {noiseNodes} from './noise';
 import {textureNodes} from './texture';
 import {vectorNodes} from './vector';
 
@@ -11,6 +12,7 @@ export * from './helpers';
 export {annotationNodes} from './annotation';
 export {colorNodes} from './color';
 export {mathNodes} from './math';
+export {noiseNodes} from './noise';
 export {textureNodes} from './texture';
 export {vectorNodes} from './vector';
 
@@ -22,6 +24,7 @@ export {vectorNodes} from './vector';
  */
 export const stockNodeDefinitions: readonly EffectNodeDefinition[] = [
   ...mathNodes,
+  ...noiseNodes,
   ...vectorNodes,
   ...textureNodes,
   ...colorNodes,
