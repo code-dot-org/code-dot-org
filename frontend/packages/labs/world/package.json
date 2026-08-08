@@ -34,6 +34,7 @@
   "scripts": {
     "build": "vite build",
     "build:demo": "yarn setup:world && vite build --mode demo",
+    "build:effect-stills": "node scripts/build-effect-stills.mjs",
     "build:pages": "WORLD_DEMO_BASE=/world-lab/ WORLD_DEMO_ICONS=free VITE_WORLD_SANDBOX=same-origin yarn build:demo",
     "build:rules": "node scripts/build-stock-rules.mjs",
     "dev": "yarn setup:world && vite --port 5139 --strictPort",

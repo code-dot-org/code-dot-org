@@ -49,8 +49,11 @@ describe('ImportEffectDialog', () => {
   it('lists them in the library’s teaching order', () => {
     const {container} = open();
 
+    // The name is the first line of a row's words. Reached through the words
+    // wrapper rather than off the button, because a row may lead with a
+    // preview canvas and the name is not then the button's first child.
     const names = [
-      ...container.querySelectorAll('li button > span:first-child'),
+      ...container.querySelectorAll('li button span > span:first-child'),
     ].map(node => node.textContent);
     expect(names).toEqual(STOCK_EFFECTS.map(effect => effect.document.name));
   });
