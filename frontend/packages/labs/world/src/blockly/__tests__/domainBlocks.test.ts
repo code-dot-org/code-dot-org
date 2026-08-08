@@ -899,6 +899,24 @@ describe('domain block generators', () => {
     );
   });
 
+  it('world_add_trait / world_remove_trait mutate the subject', () => {
+    // The runtime pair beside `has trait`, and the same shape: the trait comes
+    // from the dropdown, the subject from the socket, and an empty socket is
+    // the principal `actor`. One block serves a template body and a handler,
+    // which is why the method names match on ActorBuilder and Actor alike.
+    expect(
+      emit(
+        'world_add_trait',
+        {TRAIT: 'AffectedByGravityTrait'},
+        {},
+        {ACTOR: 'each'},
+      ),
+    ).toBe('each.addTrait(WorldLab.AffectedByGravityTrait);\n');
+    expect(emit('world_remove_trait', {TRAIT: 'GroundTrait'})).toBe(
+      'actor.removeTrait(WorldLab.GroundTrait);\n',
+    );
+  });
+
   it('world_event_value yields the handler event value as an expression', () => {
     const result = generatorFor('world_event_value')(
       {} as never,
