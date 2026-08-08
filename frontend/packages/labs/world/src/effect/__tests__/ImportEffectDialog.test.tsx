@@ -23,7 +23,12 @@ describe('ImportEffectDialog', () => {
 
     for (const effect of STOCK_EFFECTS) {
       expect(
-        screen.getByRole('button', {name: new RegExp(effect.document.name)}),
+        // Anchored: "Ripple" is a prefix of "Radial Ripple" is not the
+        // relationship here, but it IS a substring of it, and an unanchored
+        // match finds both and fails on the ambiguity.
+        screen.getByRole('button', {
+          name: new RegExp(`^${effect.document.name}`),
+        }),
       ).toBeInTheDocument();
     }
   });

@@ -21,8 +21,9 @@
 // other deliberately: Tint introduces sampling and multiplying a color; Fade
 // introduces taking a color apart; Grayscale introduces mixing; Pulse
 // introduces the clock; Pixelate introduces changing *where* the picture is
-// read; Ripple uses all of it at once. Anything added here should say where it
-// belongs in that progression.
+// read; Ripple uses all of it at once; Radial Ripple turns Ripple a quarter
+// turn, driving the same wave from distance-to-a-point rather than one axis.
+// Anything added here should say where it belongs in that progression.
 
 import type {EffectDocument} from '../model/types';
 
@@ -30,6 +31,7 @@ import {fadeEffect} from './fade';
 import {grayscaleEffect} from './grayscale';
 import {pixelateEffect} from './pixelate';
 import {pulseEffect} from './pulse';
+import {radialRippleEffect} from './radialRipple';
 import {rippleEffect} from './ripple';
 import {tintEffect} from './tint';
 
@@ -38,6 +40,7 @@ export {
   grayscaleEffect,
   pixelateEffect,
   pulseEffect,
+  radialRippleEffect,
   rippleEffect,
   tintEffect,
 };
@@ -68,6 +71,7 @@ export const STOCK_EFFECTS: readonly StockEffect[] = [
   {id: 'pulse', document: pulseEffect},
   {id: 'pixelate', document: pixelateEffect},
   {id: 'ripple', document: rippleEffect},
+  {id: 'radial-ripple', document: radialRippleEffect},
 ];
 
 /** Look one up by its file stem. */
