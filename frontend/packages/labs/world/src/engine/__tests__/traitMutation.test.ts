@@ -7,9 +7,11 @@
 // dependency does not go, and steps notice on the next frame without anything
 // telling them to.
 
-import {describe, expect, it} from 'vitest';
+import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
 
 import {ActorBuilder, RuleBuilder, WorldBuilder} from '..';
+import type {Actor} from '../core/Actor';
+import {resetTraitWarnings} from '../core/Traited';
 
 /** A rule with two traits, the second requiring the first. */
 const twoTraits = () => {
@@ -159,5 +161,95 @@ describe('a template', () => {
       .instantiate();
 
     expect(dropped.has(base)).toBe(false);
+  });
+});
+
+describe('a trait that does not exist', () => {
+  // What a saved workspace naming a since-deleted rule generates: the block
+  // still holds the field value, the module still names the export, and the
+  // export is gone — so the engine is handed `undefined`. It used to reach
+  // `DependencySet`, which keys traits by `id`, and stop the game with "Cannot
+  // read properties of undefined (reading 'id')", naming nothing a learner
+  // wrote. One broken reference is not a reason for a game to stop.
+  const missing = undefined as unknown as Parameters<Actor['has']>[0];
+
+  beforeEach(() => {
+    resetTraitWarnings();
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+  });
+  afterEach(() => vi.restoreAllMocks());
+
+  it('is not had, rather than fatal', () => {
+    const actor = new ActorBuilder({id: 'a', name: 'A'}).instantiate();
+
+    expect(actor.has(missing)).toBe(false);
+  });
+
+  it('is skipped by both halves of the pair', () => {
+    const actor = new ActorBuilder({id: 'a', name: 'A'}).instantiate();
+
+    expect(() => actor.addTrait(missing)).not.toThrow();
+    expect(() => actor.removeTrait(missing)).not.toThrow();
+  });
+
+  it('does not stop a camera either — the same store answers both', () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+    const camera = world.camera();
+
+    expect(camera?.has(missing)).toBe(false);
+    expect(() => camera?.removeTrait(missing)).not.toThrow();
+  });
+
+  it('does not stop a template from being built', () => {
+    // The builder fails EARLIER than the live actor — at `instantiate`, before
+    // anything has run — so an actor file with one stale `use trait` row would
+    // otherwise take the whole project down.
+    const actor = new ActorBuilder({id: 'a', name: 'A'})
+      .useTraits([missing])
+      .instantiate();
+
+    expect(actor.traits().length).toBe(2); // the two foundation traits
+  });
+
+  it('is survivable through the builder’s own pair', () => {
+    expect(() =>
+      new ActorBuilder({id: 'a', name: 'A'})
+        .addTrait(missing)
+        .removeTrait(missing)
+        .instantiate(),
+    ).not.toThrow();
+  });
+
+  it('says so once, however many actors ask', () => {
+    // A `for each actor where ⟨has trait …⟩` asks the same broken question of
+    // every actor sixty times a second. One line is the diagnostic; a hundred
+    // identical ones are noise that buries it.
+    const actors = ['a', 'b', 'c'].map(id =>
+      new ActorBuilder({id, name: id}).instantiate(),
+    );
+    for (let frame = 0; frame < 5; frame++) {
+      for (const actor of actors) {
+        actor.has(missing);
+      }
+    }
+
+    expect(console.warn).toHaveBeenCalledTimes(1);
+    expect(vi.mocked(console.warn).mock.calls[0][0]).toMatch(
+      /trait that does not exist/,
+    );
+  });
+
+  it('says which operation it skipped', () => {
+    const actor = new ActorBuilder({id: 'a', name: 'A'}).instantiate();
+    actor.has(missing);
+    actor.addTrait(missing);
+    actor.removeTrait(missing);
+
+    // Three operations, three distinct messages, each said once.
+    expect(console.warn).toHaveBeenCalledTimes(3);
+    const said = vi.mocked(console.warn).mock.calls.map(c => String(c[0]));
+    expect(said.some(m => m.includes('has trait'))).toBe(true);
+    expect(said.some(m => m.includes('add trait'))).toBe(true);
+    expect(said.some(m => m.includes('remove trait'))).toBe(true);
   });
 });

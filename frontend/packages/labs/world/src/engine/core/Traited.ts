@@ -39,6 +39,50 @@ const coerce = <T>(property: Property<T>, value: unknown): T => {
   return value as T;
 };
 
+/**
+ * Messages already said once, so a per-frame step cannot flood the console.
+ *
+ * Keyed by the message and not by the holder: `for each actor where ⟨has trait
+ * …⟩` asks the same broken question of every actor sixty times a second, and a
+ * hundred identical lines is a worse diagnostic than one.
+ */
+const warned = new Set<string>();
+
+/**
+ * Whether this is a trait at all, complaining once if it is not.
+ *
+ * A block names a trait through its module — `WorldLab.CanCollideTrait`, or an
+ * import from the rule that declared it — and that name can come up empty: a
+ * saved workspace naming a rule since deleted or renamed still holds the field
+ * value, and generation cannot tell, because whether an engine export exists is
+ * not a fact the palette has.
+ *
+ * What it used to do was reach `DependencySet`, which keys traits by `id`, and
+ * stop the game with "Cannot read properties of undefined (reading 'id')" —
+ * a message naming nothing a learner wrote. A missing trait is a broken
+ * reference in one block, not a reason for the game to stop, so the operation
+ * is skipped and the console says so. Skipping it silently would be worse than
+ * either: a `remove trait` that does nothing, forever, with no way to find out
+ * why.
+ */
+const isTrait = (trait: Trait | undefined, doing: string): trait is Trait => {
+  if (trait) {
+    return true;
+  }
+  const message =
+    `world-lab: ignored “${doing}” for a trait that does not exist. ` +
+    'The rule that declared it may have been deleted or renamed — open the ' +
+    'block and pick the trait again.';
+  if (!warned.has(message)) {
+    warned.add(message);
+    console.warn(message);
+  }
+  return false;
+};
+
+/** For tests: forget what has been said, so each can assert on its own. */
+export const resetTraitWarnings = (): void => warned.clear();
+
 /** A set of traits, and a slot for every property they declare. */
 export class Traited {
   private readonly membership = new DependencySet<Trait>(
@@ -56,7 +100,11 @@ export class Traited {
   ) {
     this.describe = describe;
     for (const trait of traits) {
-      this.membership.add(trait);
+      // A template can carry one too: `use trait` stores the same field value,
+      // and an actor built from it would otherwise fail to instantiate at all.
+      if (isTrait(trait, 'use trait')) {
+        this.membership.add(trait);
+      }
     }
     // Seed from every present trait's defaults, then apply the overrides on
     // top: a trait pulled in as a dependency brings its slots too.
@@ -91,7 +139,10 @@ export class Traited {
 
   /** Whether this holds the trait, directly or by dependency. */
   has(trait: Trait): boolean {
-    return this.membership.has(trait);
+    // Not a trait, so nothing has it — which is also the answer that keeps a
+    // `for each actor where ⟨has trait …⟩` selecting nothing rather than
+    // stopping.
+    return isTrait(trait, 'has trait') && this.membership.has(trait);
   }
 
   /**
@@ -105,6 +156,9 @@ export class Traited {
    * to apply them to a second time.
    */
   addTrait(trait: Trait): void {
+    if (!isTrait(trait, 'add trait')) {
+      return;
+    }
     this.membership.add(trait);
     for (const present of this.membership.items()) {
       for (const property of Object.values(present.properties) as Property[]) {
@@ -133,6 +187,9 @@ export class Traited {
    * game over.
    */
   removeTrait(trait: Trait): void {
+    if (!isTrait(trait, 'remove trait')) {
+      return;
+    }
     this.membership.remove(trait);
   }
 

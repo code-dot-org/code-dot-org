@@ -71,10 +71,16 @@ export class ActorBuilder {
   }
 
   removeTrait(trait: Trait): this {
+    // A trait that does not exist matches nothing and removes nothing. Reading
+    // `.id` off it here would stop the game the way it used to (`core/Traited`
+    // explains); the complaint comes from there, when the template is built.
+    if (!trait) {
+      return this;
+    }
     // Every election of it, not just the last: `useTraits` appends, so a
     // template that elected a trait twice has it twice, and taking it away
     // once and leaving a copy is not a thing a learner can see or reason about.
-    this.traits = this.traits.filter(held => held.id !== trait.id);
+    this.traits = this.traits.filter(held => held?.id !== trait.id);
     return this;
   }
 
