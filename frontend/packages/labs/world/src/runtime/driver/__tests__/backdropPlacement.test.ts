@@ -16,9 +16,11 @@ import {describe, expect, it} from 'vitest';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../../viewport';
 import {
   layerShift,
+  placementParallax,
   stretchedPlacement,
   tiledPlacement,
   type LayerMotion,
+  type Shift,
 } from '../backdropPlacement';
 
 const MOVES_WITH_VIEW: LayerMotion = {parallax: {x: 1, y: 1}, fit: false};
@@ -119,14 +121,97 @@ describe('a tiled slot', () => {
 });
 
 describe('a stretched slot', () => {
-  it('still moves bodily with its layer', () => {
-    // Deliberately NOT given the tiled treatment. One picture that rides along
-    // is what stretched means; the gap it can leave at the edge is the sign
-    // that tiled was wanted, and the block's tooltip says so.
-    expect(stretchedPlacement(NO_OFFSET)).toEqual(CENTRE);
-    expect(stretchedPlacement({x: 30, y: 10})).toEqual({
-      x: CENTRE.x + 30,
-      y: CENTRE.y + 10,
-    });
+  const MAP = {x: VIEWPORT_WIDTH * 3, y: VIEWPORT_HEIGHT * 2};
+
+  /**
+   * Whether the picture covers the window at one camera position.
+   *
+   * Its layer's container sits at the negative of the shift, so the image's
+   * screen span is its local span translated by that — and what has to be true
+   * is that the span contains `[0, viewport]` on both axes.
+   */
+  const covers = (parallax: {x: number; y: number}, camera: Shift) => {
+    const {position, size} = stretchedPlacement(NO_OFFSET, MAP, parallax);
+    const shift = layerShift({parallax, fit: false}, camera);
+    const left = -shift.x + position.x - size.x / 2;
+    const top = -shift.y + position.y - size.y / 2;
+    return (
+      left <= 0 &&
+      left + size.x >= VIEWPORT_WIDTH &&
+      top <= 0 &&
+      top + size.y >= VIEWPORT_HEIGHT
+    );
+  };
+
+  /** Every camera position inside the map, at both extremes and between. */
+  const acrossTheMap = (parallax: {x: number; y: number}) => {
+    const span = {x: MAP.x - VIEWPORT_WIDTH, y: MAP.y - VIEWPORT_HEIGHT};
+    const uncovered: string[] = [];
+    for (let step = 0; step <= 20; step++) {
+      const camera = {x: (span.x * step) / 20, y: (span.y * step) / 20};
+      if (!covers(parallax, camera)) {
+        uncovered.push(`${camera.x},${camera.y}`);
+      }
+    }
+    return uncovered;
+  };
+
+  it('stretches over the MAP, centred on it, at the usual factor', () => {
+    // What a learner means by a background: it belongs to the level, not to the
+    // window onto the level. One viewport at the viewport's centre covered
+    // exactly one camera position and rode away from every other.
+    const {position, size} = stretchedPlacement(NO_OFFSET, MAP, {x: 1, y: 1});
+
+    expect(size).toEqual(MAP);
+    expect(position).toEqual({x: MAP.x / 2, y: MAP.y / 2});
+  });
+
+  it('covers the window from every camera position, at every factor', () => {
+    // The requirement the formula is derived from, checked rather than
+    // restated. Includes above 1 — the block offers "runs ahead of it", and a
+    // layer that outruns the world needs more picture than the world has, so
+    // map-sizing alone would gap at the far end.
+    for (const factor of [0, 0.2, 0.5, 1, 1.5, 2]) {
+      expect(acrossTheMap({x: factor, y: factor})).toEqual([]);
+    }
+  });
+
+  it('covers it with the factor reversed, too', () => {
+    // Negative runs backwards, which moves the slack to the other side.
+    expect(acrossTheMap({x: -0.5, y: -0.5})).toEqual([]);
+  });
+
+  it('is one viewport at rest for a fixed layer, exactly as before', () => {
+    // `fit` is parallax zero here — its container never moves — so screen
+    // furniture is untouched by any of this.
+    const fixed = placementParallax(INTERFACE);
+    const {position, size} = stretchedPlacement(NO_OFFSET, MAP, fixed);
+
+    expect(fixed).toEqual({x: 0, y: 0});
+    expect(size).toEqual({x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT});
+    expect(position).toEqual(CENTRE);
+  });
+
+  it('is one viewport in a world with no map', () => {
+    // `mapBounds` is the viewport until a map says otherwise, so the pan range
+    // is zero and every factor collapses to what this drew before.
+    for (const factor of [0, 0.5, 1, 2]) {
+      const {position, size} = stretchedPlacement(
+        NO_OFFSET,
+        {x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT},
+        {x: factor, y: factor},
+      );
+
+      expect(size).toEqual({x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT});
+      expect(position).toEqual(CENTRE);
+    }
+  });
+
+  it('still lets the author slide it off the edge', () => {
+    // An offset on a stretched slot moves the picture bodily, gap and all —
+    // that is what it means, and the tooltip points at tiled for the rest.
+    const {position} = stretchedPlacement({x: 30, y: 10}, MAP, {x: 1, y: 1});
+
+    expect(position).toEqual({x: MAP.x / 2 + 30, y: MAP.y / 2 + 10});
   });
 });
