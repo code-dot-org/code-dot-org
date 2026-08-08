@@ -41,6 +41,11 @@ import type {Actor, BackdropState, RenderState, World} from 'world-lab';
 import {keyName} from '../../engine/core/keys';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
 
+import {
+  layerShift,
+  stretchedPlacement,
+  tiledPlacement,
+} from './backdropPlacement';
 import {EffectRegistry, type EffectErrorReporter} from './effects';
 import {installSkewHook, type RenderStepInternals} from './skew';
 
@@ -364,6 +369,8 @@ export class PhaserBinding {
       slots: readonly BackdropState[],
       images: Array<SlotObject | undefined>,
       depth: number,
+      /** How far the camera has slid this slot's layer — see `layerShift`. */
+      shiftOf: (index: number) => {x: number; y: number},
     ) => {
       slots.forEach((slot, index) => {
         let image = images[index];
@@ -397,21 +404,29 @@ export class PhaserBinding {
         }
         image.setTexture(sprite);
         if (image instanceof Phaser.GameObjects.TileSprite) {
-          // A tiled slot stays put and scrolls its texture under itself, so it
-          // covers the surface at every offset. Negated so a rising offset
-          // moves the picture the way a rising position moves an actor.
+          // A tiled slot stays put over the VIEWPORT and scrolls its texture
+          // under itself, so it covers the surface at every offset. That is the
+          // whole promise of tiling, and the reason it takes two steps rather
+          // than one: the slot is a child of its layer's container, and the
+          // camera slides that container (see `layerShift`). Left alone, a
+          // finite rectangle of `GAME_WIDTH` by `GAME_HEIGHT` rides along with
+          // it and runs out — a quarter-viewport pan puts a quarter-viewport
+          // band of bare clear-colour on screen.
+          //
+          // So the shift is cancelled on the way in and re-applied to the
+          // TEXTURE. The picture ends up exactly where riding along would have
+          // put it, out of a surface with no edge to reach.
+          const {position, tile} = tiledPlacement(shiftOf(index), slot.offset);
           image.setSize(GAME_WIDTH, GAME_HEIGHT);
-          image.setPosition(GAME_WIDTH / 2, GAME_HEIGHT / 2);
-          image.setTilePosition(-slot.offset.x, -slot.offset.y);
+          image.setPosition(position.x, position.y);
+          image.setTilePosition(tile.x, tile.y);
         } else {
           // A stretched slot moves bodily, which is why an offset on one leaves
           // a gap at the edge — legal, and almost always a sign that `repeat`
           // was wanted.
+          const position = stretchedPlacement(slot.offset);
           image.setDisplaySize(GAME_WIDTH, GAME_HEIGHT);
-          image.setPosition(
-            GAME_WIDTH / 2 + slot.offset.x,
-            GAME_HEIGHT / 2 + slot.offset.y,
-          );
+          image.setPosition(position.x, position.y);
         }
         // A slot's effects filter its own pixels — unlike a world effect,
         // which filters the camera and so covers the actors too.
@@ -434,19 +449,6 @@ export class PhaserBinding {
         Phaser.Display.Color.GetColor32(byte(r), byte(g), byte(b), byte(a)),
       );
 
-      syncSlots(
-        scene,
-        world.backdropSnapshot() as BackdropState[],
-        backdrops,
-        BACKGROUND_DEPTH,
-      );
-      syncSlots(
-        scene,
-        world.foregroundSnapshot() as BackdropState[],
-        foregrounds,
-        FOREGROUND_DEPTH,
-      );
-
       // The layers themselves. Their containers are made on demand by whatever
       // first draws into them, so this both creates any that are empty (a layer
       // with an effect and nothing in it yet is still a layer) and brings each
@@ -457,6 +459,32 @@ export class PhaserBinding {
       // is a value change rather than a reload, so this is read every frame.
       const cameras = world.cameraSnapshot();
       const view = cameras.find(camera => camera.active) ?? cameras[0];
+      const offset = cameraOffset(view);
+      /**
+       * How far the camera has slid one layer's container, in screen pixels.
+       *
+       * The single statement of it, read twice: the loop below MOVES each
+       * container by it, and a tiled slot inside one has to undo exactly that
+       * to stay over the viewport. Two spellings would drift, and the drift
+       * would look like a background that lags the world it belongs to.
+       */
+      const shiftOfLayer = (index: number) => layerShift(layers[index], offset);
+
+      syncSlots(
+        scene,
+        world.backdropSnapshot() as BackdropState[],
+        backdrops,
+        BACKGROUND_DEPTH,
+        shiftOfLayer,
+      );
+      syncSlots(
+        scene,
+        world.foregroundSnapshot() as BackdropState[],
+        foregrounds,
+        FOREGROUND_DEPTH,
+        shiftOfLayer,
+      );
+
       layers.forEach((layer, index) => {
         const container = containerFor(scene, index);
         effectRegistry.reconcile(scene, container as never, layer.effects);
@@ -473,11 +501,8 @@ export class PhaserBinding {
         // a layer at factor 0 gets a translation of exactly 0 whatever the
         // camera does, so the slot images stay centred in the viewport where
         // they are placed, and a resting camera moves nothing at all.
-        const offset = cameraOffset(view);
-        container.setPosition(
-          layer.fit ? 0 : -(offset.x * layer.parallax.x),
-          layer.fit ? 0 : -(offset.y * layer.parallax.y),
-        );
+        const shift = shiftOfLayer(index);
+        container.setPosition(-shift.x, -shift.y);
         if (unsorted.has(container)) {
           container.sort('depth');
           unsorted.delete(container);
