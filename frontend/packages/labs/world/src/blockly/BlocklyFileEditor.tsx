@@ -554,23 +554,34 @@ export const BlocklyFileEditor = ({
    * and a `create actor in map` grid with plain markers instead of actors is
    * usable but not much fun.
    */
+  // A fresh closure on every render, held in a ref so this effect does not
+  // re-run for every one — the same guard MapEditor's fetch already uses.
+  //
+  // Without it a single engine error during the manifest run became a hang: the
+  // error is reported by pushing a console line, that is state, the render it
+  // causes makes a new `getActorInfo`, the dependency changes, the effect fires
+  // and errors again. A stack thousands of frames deep, all of it one bug.
+  const infoFn = useRef(getActorInfo);
+  infoFn.current = getActorInfo;
   useEffect(() => {
     if (!hasCompiled || !worldPath) {
       return;
     }
     let alive = true;
-    void getActorInfo(
-      projectActorOptions(files).map(([, path]) => path),
-      worldPath,
-    ).then(info => {
-      if (alive) {
-        addActorThumbnails(info.thumbnails);
-      }
-    });
+    void infoFn
+      .current(
+        projectActorOptions(files).map(([, path]) => path),
+        worldPath,
+      )
+      .then(info => {
+        if (alive) {
+          addActorThumbnails(info.thumbnails);
+        }
+      });
     return () => {
       alive = false;
     };
-  }, [hasCompiled, worldPath, files, getActorInfo]);
+  }, [hasCompiled, worldPath, files]);
 
   // The block palette + toolbox for this project: the built-ins, extended with
   // the project's own declarative `.rule` rules (their blocks and categories).
