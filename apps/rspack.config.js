@@ -136,6 +136,17 @@ function createRspackConfig({
           .filter(Boolean)
       : null;
   const scopeRegexFor = name => new RegExp(`src[\\\\/]${name}[\\\\/.]`);
+  // RSPACK-DIFF: the dev default is eval — no source maps — where
+  // webpack defaults to eval-cheap-module-source-map.  rspack's
+  // whole-app -module map modes exceed 22GB at our module count, which
+  // kills the process outright on smaller machines (the compilation
+  // state lives in Rust, beyond Node heap caps).  An explicit
+  // APPS_DEVTOOL or APPS_DEVTOOL_SCOPE overrides.
+  const rspackDevtool = devtoolScope
+    ? false
+    : minify
+    ? devtool({minify})
+    : envConstants.APPS_DEVTOOL || 'eval';
   // Say which source-map mode is active up front; waiting to notice what
   // symbols look like in DevTools is a bad way to find out.
   if (!minify) {
@@ -145,10 +156,11 @@ function createRspackConfig({
           '(match report follows the first compile)'
       );
     } else {
-      const active = devtool({minify});
       console.log(
-        `[rspack] source maps: ${active === 'eval' ? 'none (eval)' : active}` +
-          (active !== 'eval' && /-module/.test(String(active))
+        `[rspack] source maps: ${
+          rspackDevtool === 'eval' ? 'none (eval, the rspack default)' : rspackDevtool
+        }` +
+          (/-module/.test(String(rspackDevtool))
             ? ' — WARNING: whole-app -module maps exceed 22GB under rspack;' +
               ' prefer APPS_DEVTOOL_SCOPE (see README)'
             : '')
@@ -166,7 +178,7 @@ function createRspackConfig({
       filename: `[name]${minify ? 'wp[contenthash].min.js' : '.js'}`,
     },
     stats: envConstants.DEV ? 'normal' : 'errors-only',
-    devtool: devtoolScope ? false : devtool({minify}),
+    devtool: rspackDevtool,
     entry: {
       ...addPolyfillsToEntryPoints(
         {

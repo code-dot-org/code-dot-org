@@ -380,14 +380,25 @@ module.exports = function (grunt) {
   };
 
   config.exec = {
-    // APPS_BUNDLER=rspack swaps only the JS bundling step of `grunt
-    // build`; every other task (sass, locales, copies, karma) is
-    // bundler-independent and runs unchanged.  RSPACK_SWC defaults to
-    // the full-swc mode here because this path exists to prove the
-    // production story; see rspack.config.js.
+    // `--rspack` (or APPS_BUNDLER=rspack) swaps only the JS bundling
+    // step of `grunt build`; every other task (sass, locales, copies,
+    // karma) is bundler-independent and runs unchanged.  RSPACK_SWC
+    // defaults to the full-swc mode here because this path exists to
+    // prove the production story; see rspack.config.js.  NODE_ENV is
+    // pinned because the rspack CLI defaults --mode to production,
+    // silently minifying dev builds otherwise.
     rspackBuild:
+      `NODE_ENV=${process.env.NODE_ENV || 'development'} ` +
       (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
       'node node_modules/.bin/rspack build --config rspack.config.js',
+    // The dev server; `rspack serve` defaults to development mode.  The
+    // output directory is cleared first: a populated directory costs
+    // rspack ~18s of startup in writeToDisk compares.
+    rspackServe:
+      'rm -rf build/package/js && ' +
+      (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=ts ') +
+      'NODE_OPTIONS=--max-old-space-size=4096 ' +
+      'node node_modules/.bin/rspack serve --config rspack.config.js',
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
@@ -512,6 +523,12 @@ module.exports = function (grunt) {
         logConcurrentOutput: true,
       },
     },
+    watchRspack: {
+      tasks: ['watch', 'exec:rspackServe'],
+      options: {
+        logConcurrentOutput: true,
+      },
+    },
   };
 
   grunt.initConfig(config);
@@ -628,26 +645,42 @@ module.exports = function (grunt) {
 
   grunt.registerTask('postbuild', ['newer:copy:static', 'newer:sass']);
 
-  // TEMPORARY: default to rspack so drone builds this branch's optimized
-  // assets with it and runs UI tests against them — the migration
-  // evidence discussed in the PR.  Revert to 'webpack' before merge.
-  const APPS_BUNDLER = process.env.APPS_BUNDLER || 'rspack';
+  // `yarn start --rspack` / `yarn build --rspack` / `yarn build:dist
+  // --rspack` opt into the rspack bundler for one run; APPS_BUNDLER is
+  // the env-var form CI uses.
+  // TEMPORARY: the fallback is rspack so drone builds this branch's
+  // optimized assets with it and runs UI tests against them — the
+  // migration evidence discussed in the PR.  Revert to 'webpack' before
+  // merge.
+  const APPS_BUNDLER = grunt.option('rspack')
+    ? 'rspack'
+    : process.env.APPS_BUNDLER || 'rspack';
+  const rspackNotice = () => {
+    if (APPS_BUNDLER === 'rspack') {
+      grunt.log.writeln(
+        '[rspack] Bundling with rspack (opt-in). swc and babel can transpile edge cases differently, so check your change under the default webpack build before shipping.'
+      );
+    }
+  };
 
-  grunt.registerTask('build', [
-    'prebuild',
-    // For any minifiable libs, generate minified sources if they do not already
-    // exist in our repo. Skip minification in development environment.
-    envConstants.DEV ? 'noop' : 'uglify:lib',
-    // rspack.config.js selects minify from NODE_ENV, which build:dist
-    // sets, so one exec target covers both dev and production builds.
-    APPS_BUNDLER === 'rspack'
-      ? 'exec:rspackBuild'
-      : envConstants.DEV
-      ? 'webpack:build'
-      : 'webpack:uglify',
-    'postbuild',
-    envConstants.DEV ? 'noop' : 'newer:copy:unhash',
-  ]);
+  grunt.registerTask('build', function () {
+    rspackNotice();
+    grunt.task.run([
+      'prebuild',
+      // For any minifiable libs, generate minified sources if they do not already
+      // exist in our repo. Skip minification in development environment.
+      envConstants.DEV ? 'noop' : 'uglify:lib',
+      // rspack.config.js selects minify from NODE_ENV, which build:dist
+      // sets, so one exec target covers both dev and production builds.
+      APPS_BUNDLER === 'rspack'
+        ? 'exec:rspackBuild'
+        : envConstants.DEV
+        ? 'webpack:build'
+        : 'webpack:uglify',
+      'postbuild',
+      envConstants.DEV ? 'noop' : 'newer:copy:unhash',
+    ]);
+  });
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
@@ -655,7 +688,13 @@ module.exports = function (grunt) {
     // Unless explicitly overridden, set HOT=1 and DEV=1 when running `grunt dev`
     process.env.HOT ||= 1;
     process.env.DEV ||= 1;
-    grunt.task.run(['prebuild', 'newer:sass', 'concurrent:watch', 'postbuild']);
+    rspackNotice();
+    grunt.task.run([
+      'prebuild',
+      'newer:sass',
+      APPS_BUNDLER === 'rspack' ? 'concurrent:watchRspack' : 'concurrent:watch',
+      'postbuild',
+    ]);
   });
 
   grunt.registerTask('default', ['rebuild', 'test']);

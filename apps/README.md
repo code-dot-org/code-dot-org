@@ -90,17 +90,25 @@ Two shortcuts combine these levers:
 - `yarn start:cheapest` — `APPS_DEVTOOL=eval` plus `SKIP_TYPECHECK=1`, for the
   lowest-memory dev server.
 
-### Scoped source maps under rspack
+### Source maps under rspack (`yarn start --rspack`)
 
-The rspack dev server adds a third option between "no maps" and "all maps":
+The rspack dev server defaults to `eval` — no source maps — because rspack's
+whole-app `-module` map modes are currently unusable at our module count
+(>22GB, and beyond the reach of Node heap caps; upstream issue pending). The
+server prints its active mode at startup. Three ways to get original-source
+stepping back:
+
+- stay on webpack `yarn start` (unchanged);
+- `APPS_DEVTOOL=eval-cheap-module-source-map yarn start --rspack` — full maps,
+  at the measured memory cost (big-RAM machines only);
+- `APPS_DEVTOOL_SCOPE` — scoped maps, below.
+
 `APPS_DEVTOOL_SCOPE` maps only the parts of `src/` you are working on back to
 original TS/JSX, and leaves everything else unmapped. This costs *less* memory
-than `APPS_DEVTOOL=eval` (unmapped modules skip eval wrapping entirely), while
-rspack's whole-app `-module` map modes are currently unusable at our module
-count (>22GB; upstream issue pending).
+than `APPS_DEVTOOL=eval` (unmapped modules skip eval wrapping entirely).
 
 ```
-APPS_DEVTOOL_SCOPE=music,lab2 yarn start:rspack
+APPS_DEVTOOL_SCOPE=music,lab2 yarn start --rspack
 ```
 
 Names are `src/`-relative path prefixes, and may be a directory or a single

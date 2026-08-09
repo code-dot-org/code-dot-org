@@ -24,5 +24,6 @@ echo "  Workers: ${APPS_BUILD_WORKERS}"
 echo "  Max Memory: ${APPS_BUILD_MAX_MEMORY}MB"
 echo
 
-# Set Node.js memory and run the build
-NODE_OPTIONS="--max-old-space-size=${APPS_BUILD_MAX_MEMORY}" npx grunt build
+# Set Node.js memory and run the build; extra flags (e.g. --rspack)
+# pass through to grunt.
+NODE_OPTIONS="--max-old-space-size=${APPS_BUILD_MAX_MEMORY}" npx grunt build "$@"
