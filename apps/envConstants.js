@@ -40,9 +40,8 @@ module.exports = {
   // a single module like `code-studio/header`) that get original-source
   // eval maps while every other module stays unmapped.  Recipes for common
   // working sets are in the README.  Costs less memory than even
-  // APPS_DEVTOOL=eval, where the blanket -module map modes are unusable at
-  // our scale (>22GB); see the memory table in the rspack PR.  Takes
-  // precedence over APPS_DEVTOOL.
+  // APPS_DEVTOOL=eval, while rspack's whole-app -module map modes exceed
+  // 22GB at our module count.  Takes precedence over APPS_DEVTOOL.
   APPS_DEVTOOL_SCOPE: process.env.APPS_DEVTOOL_SCOPE,
   // If set, skips the parallel ForkTsCheckerWebpackPlugin type check, freeing
   // ~2GB of memory during `yarn start`. Your editor and CI still type-check.
