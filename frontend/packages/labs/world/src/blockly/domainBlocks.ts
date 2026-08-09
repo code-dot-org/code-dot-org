@@ -2418,6 +2418,68 @@ const worldRandomPlace = defineBlock({
   },
 });
 
+/**
+ * The world's clock, in seconds — what "two seconds later" is measured against.
+ *
+ * A plain number rather than any kind of timer block, because a timer is three
+ * decisions (when it starts, what it does, whether it repeats) and a clock is
+ * none. `time − when it started > 2` says the same thing out of parts a learner
+ * already has, and it composes: a fire-rate cooldown, a respawn delay and an
+ * invulnerability window are all that comparison with different numbers.
+ *
+ * See {@link World.time} for why it counts ticks rather than reading a clock.
+ * The short version is that a paused game does not age and that this agrees
+ * exactly with anything integrated from `delta`.
+ */
+const worldTime = defineBlock({
+  type: 'world_time',
+  message0: 'time',
+  output: 'Number',
+  extensions: [worldContextExtension],
+  // With `delta`, which is the other ambient reading of the clock and the block
+  // a learner will have met first.
+  style: 'variable_blocks',
+  tooltip:
+    'Seconds since the game started. Every block in one frame sees the same ' +
+    'value, and it stops counting while the game is paused.',
+  generator: {
+    javascript() {
+      return ['world.time()', Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+/**
+ * How long an actor has been in the world.
+ *
+ * The half of time that a spawned thing needs about ITSELF. A bullet cannot ask
+ * the world's clock what to compare against without also being told when it was
+ * fired, which means somewhere to keep that — a property, on a trait, on a rule.
+ * Its own age needs none of that: `remove actor ⟨this actor⟩ if age of ⟨this
+ * actor⟩ > 2` is the whole of a bullet's lifetime.
+ *
+ * Read from the world's clock rather than counted up in a step, so it costs
+ * nothing per frame and is right for an actor with no steps at all.
+ */
+const worldActorAge = defineBlock({
+  type: 'world_actor_age',
+  message0: 'age of %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  inputsInline: true,
+  output: 'Number',
+  extensions: [subjectInputExtension('actor')],
+  style: valueStyle('number'),
+  tooltip:
+    'Seconds since this actor was added to the world. Zero for one that is ' +
+    'not in a world.',
+  generator: {
+    javascript(block, generator) {
+      const subject = oneActor(actorTarget(block, generator, Order.MEMBER));
+      return [`${subject}.age()`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+
 const worldViewSize = defineBlock({
   type: 'world_view_size',
   message0: 'view size',
@@ -4664,7 +4726,9 @@ export const DOMAIN_BLOCKS = [
   worldAllCameras,
   worldThisCamera,
   worldMapSize,
+  worldActorAge,
   worldRandomPlace,
+  worldTime,
   worldViewSize,
   worldPushActor,
   worldClearActors,
@@ -4777,6 +4841,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_is_in_layer',
       ActorVariable.getterType,
       'world_is_a',
+      // How long it has been here — what a bullet, a spark or a lapsing shield
+      // compares against to know it is done.
+      'world_actor_age',
     ],
   },
   {
@@ -4809,6 +4876,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // How big the level is, for anything that keeps a view inside it.
       'world_map_size',
       'world_view_size',
+      // …and how long it has been going, which is what every delay, cooldown
+      // and lifetime is measured against.
+      'world_time',
       // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',
       'world_clear_world',

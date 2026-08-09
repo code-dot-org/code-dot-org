@@ -350,6 +350,9 @@ export class World {
    * it is NaN, and nothing throws.
    */
   private bounds = new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
+  // Game seconds since the first tick — see `time`. Advanced by `tick` and by
+  // nothing else, so a world nobody ticks stays at zero however long it exists.
+  private elapsed = 0;
   // Animations known to this world, by id — seeded from the active rules' stock
   // animations. The Animation rule's step and renderSnapshot resolve ids here.
   private readonly animationDefs = new Map<string, AnimationDef>();
@@ -554,6 +557,9 @@ export class World {
     // world (see `Actor.world`). Set here because placement is what makes it
     // true, and cleared by `clearActors` for the same reason.
     actor.world = this;
+    // The zero its age counts from. Placement is what starts the clock, so a
+    // template instantiated and placed twice gives two actors of different ages.
+    actor.bornAt = this.elapsed;
     actor.layer = this.layerIndex.has(layer) ? layer : DEFAULT_LAYER_ID;
     this.actorList.push(actor);
     return actor;
@@ -797,6 +803,30 @@ export class World {
   }
 
   /**
+   * Seconds the world has been running.
+   *
+   * The sum of every `delta` it has been ticked by, NOT a reading of the wall
+   * clock. Three things follow, and all three are the point:
+   *
+   * A world that is not ticking does not age. Pause the game and time stops
+   * with it, which is what a learner means by "two seconds later" — two seconds
+   * of game, not two seconds of sitting in a paused tab.
+   *
+   * It agrees exactly with anything integrated from `delta`. A bullet that has
+   * travelled `speed × 2` has an age of exactly 2, because the same numbers
+   * added up both times. Sampling a clock here would let the two disagree by
+   * however long the frame took to draw.
+   *
+   * And it is stamped ONCE per frame, before any step runs, so every step in a
+   * frame reads the same value. That is what lets steps sharing a moment
+   * commute: two steps that both ask the time get the same answer whichever
+   * order the scheduler happens to run them in (core/phases).
+   */
+  time(): number {
+    return this.elapsed;
+  }
+
+  /**
    * How big the window onto the world is, in world pixels.
    *
    * Fixed today (core/viewport). A method rather than the constant so a rule
@@ -857,6 +887,9 @@ export class World {
   /** Advance the simulation by `delta` seconds. */
   tick(delta: number): void {
     this.ticking = true;
+    // Before the steps, so every step in this frame reads one value, and that
+    // value is the time the positions they compute belong to (see `time`).
+    this.elapsed += delta;
     try {
       this.scheduler.run(this, delta);
       // Handlers run here, and a handler is where "remove that coin" comes

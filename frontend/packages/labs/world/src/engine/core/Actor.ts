@@ -59,6 +59,17 @@ export class Actor {
    */
   layer: string | undefined;
 
+  /**
+   * The world's clock when this actor was placed — the zero its age counts from.
+   *
+   * Set by the same call as {@link world} and {@link layer}, for the same
+   * reason. Zero rather than undefined before placement, so an actor described
+   * in a `.world` file (placed before the first tick) is as old as the game
+   * is — which is the answer a learner expects for something that has been
+   * there the whole time.
+   */
+  bornAt = 0;
+
   readonly id: string;
   /** The template (ActorBuilder id) this instance came from — a type tag. */
   readonly type: string;
@@ -99,6 +110,23 @@ export class Actor {
   /** Whether this actor has the given trait (directly or by dependency). */
   has(trait: Trait): boolean {
     return this.traited.has(trait);
+  }
+
+  /**
+   * How many game seconds this actor has existed for.
+   *
+   * The question a spawned thing has to be able to answer about itself: a
+   * bullet that removes itself after two seconds, a spark that fades, a shield
+   * that lapses. Written from the world's clock rather than counted up in a
+   * step, so it costs nothing per frame and is right for an actor whose rules
+   * do not include a step at all.
+   *
+   * Zero for an actor no world holds — one made but never placed, or one
+   * already removed. Not an error: asking a thing that is not in the world how
+   * long it has been in the world has a true answer, and it is none.
+   */
+  age(): number {
+    return this.world ? this.world.time() - this.bornAt : 0;
   }
 
   /**

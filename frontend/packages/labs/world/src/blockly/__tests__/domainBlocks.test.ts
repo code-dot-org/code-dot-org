@@ -3,6 +3,7 @@ import {afterEach, describe, expect, it} from 'vitest';
 
 import {Blockly} from '@code-dot-org/blockly';
 
+import {ACTOR_INPUT_EXTENSION} from '../actorInput';
 import {COLOUR_CHECK} from '../colorCheck';
 import {installColorMessages} from '../colorMessages';
 import {
@@ -1243,6 +1244,74 @@ describe('domain block generators', () => {
       // collision's went with collision. Every query a rule offers is now a
       // rule's own, and a project rule's blocks live in its own category.
     ]);
+  });
+});
+
+describe('the two time blocks', () => {
+  const inCategory = (name: string, type: string) =>
+    (
+      DOMAIN_TOOLBOX as Array<{
+        name: string;
+        blocks: Array<string | {type?: string}>;
+      }>
+    )
+      .find(category => category.name === name)
+      ?.blocks.some(
+        item => (typeof item === 'string' ? item : item.type) === type,
+      ) ?? false;
+
+  it('asks the world for the time rather than reading a clock', () => {
+    // `world.time()` is the sum of the deltas the world was ticked by, so it
+    // agrees exactly with anything integrated from `delta` and stops while the
+    // game is paused. A `Date.now()` here would do neither.
+    const code = generatorFor('world_time')(
+      {} as never,
+      {} as never,
+      {} as never,
+    ) as [string, number];
+
+    expect(code[0]).toBe('world.time()');
+  });
+
+  it('asks the actor its own age', () => {
+    // Not `world.time() - something the learner stored`: an age needs no
+    // property to keep a birthday in, which is the whole reason a bullet can
+    // expire without a trait of its own.
+    const block = DOMAIN_BLOCKS.find(b => b.type === 'world_actor_age');
+
+    expect(block?.output).toBe('Number');
+    expect(block?.args0).toContainEqual(
+      expect.objectContaining({name: 'ACTOR', check: 'Actor'}),
+    );
+  });
+
+  it('defaults the age block to the actor asking', () => {
+    // `age of ⟨this actor⟩` is the form a bullet's own step uses, so it is what
+    // the block arrives holding — the same shadow every actor-scoped reporter
+    // carries.
+    const names = (
+      DOMAIN_BLOCKS.find(b => b.type === 'world_actor_age')?.extensions ?? []
+    ).map(extension =>
+      typeof extension === 'string' ? extension : extension.name,
+    );
+
+    expect(names).toContain(ACTOR_INPUT_EXTENSION);
+  });
+
+  it('files each where its subject is', () => {
+    // The clock is a fact about the world; an age is a fact about an actor.
+    // Filing the age under World would put it beside `map size`, which is the
+    // one place a learner is not looking for something about a bullet.
+    expect(inCategory('World', 'world_time')).toBe(true);
+    expect(inCategory('Actor', 'world_actor_age')).toBe(true);
+  });
+
+  it('keeps `delta` where it was, in Rule', () => {
+    // Time and delta are different questions: `delta` is only meaningful inside
+    // a step and generates a bare parameter name, where `time` is a call on the
+    // world and works in an event handler or a query.
+    expect(inCategory('Rule', 'world_step_delta')).toBe(true);
+    expect(inCategory('World', 'world_step_delta')).toBe(false);
   });
 });
 
