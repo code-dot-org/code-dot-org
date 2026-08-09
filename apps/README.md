@@ -90,6 +90,36 @@ Two shortcuts combine these levers:
 - `yarn start:cheapest` — `APPS_DEVTOOL=eval` plus `SKIP_TYPECHECK=1`, for the
   lowest-memory dev server.
 
+### Scoped source maps under rspack
+
+The rspack dev server adds a third option between "no maps" and "all maps":
+`APPS_DEVTOOL_SCOPE` maps only the parts of `src/` you are working on back to
+original TS/JSX, and leaves everything else unmapped. This costs *less* memory
+than `APPS_DEVTOOL=eval` (unmapped modules skip eval wrapping entirely), while
+rspack's whole-app `-module` map modes are currently unusable at our module
+count (>22GB; upstream issue pending).
+
+```
+APPS_DEVTOOL_SCOPE=music,lab2 yarn start:rspack
+```
+
+Names are `src/`-relative path prefixes, and may be a directory or a single
+module (`code-studio/header` matches `header.js`). Recipes for common working
+sets:
+
+| Working on...            | Scope                                                       |
+| ------------------------ | ----------------------------------------------------------- |
+| any lab2 lab             | `<lab>,lab2` (e.g. `music,lab2`, `weblab2,lab2`)            |
+| Sprite Lab or Game Lab   | `p5lab` (shared engine; add `blocks` for block definitions) |
+| App Lab                  | `applab` (add `storage` for data blocks)                    |
+| the code-studio header   | `code-studio/header,code-studio/components/header,lab2/header` |
+| teacher dashboard        | `templates/teacherDashboard,templates/studioHomepages`      |
+
+Scope controls where you *step*, not what runs: out-of-scope code executes
+normally and shows transpiled if you step into it. A missed guess fails soft —
+append another name and restart, which costs ~15 seconds under rspack. Known
+rough edge: unmapped modules show numeric internal names in DevTools.
+
 ## Testing
 
 Apps unit tests are run using [jest](https://jestjs.io/) and integration tests are run in a browser using [Karma](https://karma-runner.github.io/). By default they run inside a [headless chrome browser](https://developer.chrome.com/blog/headless-karma-mocha-chai/) but they can also be run in the browser of your choice. See below for information on [writing new tests](#writing-tests).

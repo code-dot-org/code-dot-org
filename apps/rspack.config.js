@@ -120,18 +120,41 @@ function createRspackConfig({
   piskelDevMode = false,
 } = {}) {
   // RSPACK-DIFF: APPS_DEVTOOL_SCOPE=music,lab2 maps only the named src/
-  // subtrees back to original source (module-level eval maps, no columns
-  // — the fidelity of eval-cheap-module-source-map) and leaves every
-  // other module unmapped.  rspack's blanket -module map modes exceed
-  // 22GB at our module count while this costs less than APPS_DEVTOOL=eval,
-  // because unmapped modules skip eval wrapping entirely.  Known rough
-  // edge: unmapped modules show numeric internal names in DevTools.
+  // path prefixes back to original source (module-level eval maps, no
+  // columns — the fidelity of eval-cheap-module-source-map) and leaves
+  // every other module unmapped.  A name may be a directory
+  // (`p5lab/spritelab`) or a single module (`code-studio/header`, which
+  // matches header.js).  Recipes for common working sets are in the
+  // README.  rspack's blanket -module map modes exceed 22GB at our
+  // module count while this costs less than APPS_DEVTOOL=eval, because
+  // unmapped modules skip eval wrapping entirely.  Known rough edge:
+  // unmapped modules show numeric internal names in DevTools.
   const devtoolScope =
     !minify && envConstants.APPS_DEVTOOL_SCOPE
       ? envConstants.APPS_DEVTOOL_SCOPE.split(',')
           .map(s => s.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
           .filter(Boolean)
       : null;
+  const scopeRegexFor = name => new RegExp(`src[\\\\/]${name}[\\\\/.]`);
+  // Say which source-map mode is active up front; waiting to notice what
+  // symbols look like in DevTools is a bad way to find out.
+  if (!minify) {
+    if (devtoolScope) {
+      console.log(
+        `[rspack] source maps: scoped to ${devtoolScope.join(', ')} ` +
+          '(match report follows the first compile)'
+      );
+    } else {
+      const active = devtool({minify});
+      console.log(
+        `[rspack] source maps: ${active === 'eval' ? 'none (eval)' : active}` +
+          (active !== 'eval' && /-module/.test(String(active))
+            ? ' — WARNING: whole-app -module maps exceed 22GB under rspack;' +
+              ' prefer APPS_DEVTOOL_SCOPE (see README)'
+            : '')
+      );
+    }
+  }
   return {
     output: {
       path: p('build/package/js'),
@@ -630,10 +653,58 @@ function createRspackConfig({
             new rspack.EvalSourceMapDevToolPlugin({
               module: true,
               columns: false,
+              // Names end at a `/` (directory) or `.` (single module,
+              // e.g. code-studio/header matching header.js).
               test: new RegExp(
-                `src[\\\\/](?:${devtoolScope.join('|')})[\\\\/]`
+                `src[\\\\/](?:${devtoolScope.join('|')})[\\\\/.]`
               ),
             }),
+            // Report which scope names actually matched modules, once
+            // after the first compile.  A misspelled name otherwise
+            // fails silently, and only per-rebuild tallies would cost
+            // anything (this walks the module list a single time).
+            {
+              apply(compiler) {
+                let reported = false;
+                compiler.hooks.done.tap('DevtoolScopeReport', stats => {
+                  if (reported) return;
+                  reported = true;
+                  const counts = new Map(devtoolScope.map(n => [n, 0]));
+                  for (const m of stats.compilation.modules) {
+                    const r =
+                      m.resource ||
+                      (m.nameForCondition && m.nameForCondition());
+                    if (!r) continue;
+                    for (const n of devtoolScope) {
+                      if (scopeRegexFor(n).test(r)) {
+                        counts.set(n, counts.get(n) + 1);
+                      }
+                    }
+                  }
+                  const parts = [];
+                  for (const [n, c] of counts) {
+                    parts.push(
+                      `${n.replace(/\\\\/g, '')}: ${c} module${
+                        c === 1 ? '' : 's'
+                      }`
+                    );
+                    if (c === 0) {
+                      console.warn(
+                        `[rspack] APPS_DEVTOOL_SCOPE name "${n.replace(
+                          /\\\\/g,
+                          ''
+                        )}" ` +
+                          'matched nothing — check it against src/ (recipes in the README)'
+                      );
+                    }
+                  }
+                  console.log(
+                    `[rspack] scoped source maps: ${parts.join(', ')}; ` +
+                      'everything else is unmapped'
+                  );
+                });
+              },
+            },
           ]
         : []),
       new rspack.DefinePlugin({
