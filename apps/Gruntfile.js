@@ -665,11 +665,13 @@ module.exports = function (grunt) {
 
   // The two bundlers share build/package/js.  Leftovers from the other
   // one are never *referenced* (each build rewrites everything a page
-  // loads), but they accumulate gigabytes over weeks and cost rspack
-  // ~18s of startup in writeToDisk compares — so a marker file records
-  // who wrote the directory, and switching cleans it.  rspack cleans on
-  // every start for the same startup reason.  Runs before prebuild so
-  // the copied static assets (ace, droplet, blockly media) survive.
+  // loads), but they accumulate gigabytes over weeks — so a marker file
+  // records who wrote the directory, and switching cleans it.  rspack
+  // additionally cleans on every start, switch or not: its writeToDisk
+  // step compares against every existing file, and starting over a
+  // populated directory costs ~18s versus rebuilding into an empty one.
+  // Runs before prebuild so the copied static assets (ace, droplet,
+  // blockly media) survive.
   const prepareBundlerOutputDir = () => {
     const dir = path.resolve(__dirname, 'build/package/js');
     const marker = path.join(dir, '.bundler');
