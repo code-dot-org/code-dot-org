@@ -18,6 +18,7 @@ const out = join(here, '..', 'src', 'rules', 'stock');
 const RULES = [
   'input',
   'arrows',
+  'drive',
   'motion',
   'collisions',
   'gravity',
