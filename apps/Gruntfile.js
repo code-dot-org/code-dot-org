@@ -392,11 +392,14 @@ module.exports = function (grunt) {
       (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
       'node node_modules/.bin/rspack build --config rspack.config.js',
     // The dev server; `rspack serve` defaults to development mode.
-    // prepareBundlerOutputDir cleans the output directory beforehand
-    // (a populated one costs rspack ~18s of startup), and doing it
-    // there rather than here keeps prebuild's copied assets.
+    // Full-swc here too: it is the mode every browser and drone
+    // verification ran in, and the hybrid RSPACK_SWC=ts fallback
+    // starts several times slower.  prepareBundlerOutputDir cleans the
+    // output directory beforehand (a populated one costs rspack ~18s
+    // of startup), and doing it there rather than here keeps
+    // prebuild's copied assets.
     rspackServe:
-      (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=ts ') +
+      (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
       'NODE_OPTIONS=--max-old-space-size=4096 ' +
       'node node_modules/.bin/rspack serve --config rspack.config.js',
     convertScssVars: './script/convert-scss-variables.js',
