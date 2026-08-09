@@ -17,6 +17,7 @@ import {cameraDeadzoneRule} from './cameraDeadzone';
 import {cameraEaseRule} from './cameraEase';
 import {cameraFollowRule} from './cameraFollow';
 import {collisionsRule} from './collisions';
+import {driveRule} from './drive';
 import {gravityRule} from './gravity';
 import {inputRule} from './input';
 import {motionRule} from './motion';
@@ -127,6 +128,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: gravityRule,
   },
   {
+    id: 'drive',
+    name: 'Arrow Drive',
+    ability: 'Drives with Arrow Keys',
+    description:
+      'Left and right TURN an actor, up thrusts the way it faces, and letting go leaves it coasting. The other reading of the arrow keys — elect this or "Moves with Arrow Keys", not both.',
+    provides: ['Driven by Arrow Keys'],
+    contents: driveRule,
+  },
+  {
     id: 'wrap',
     name: 'Screen Wrap',
     ability: 'Wraps at the Edges',
@@ -195,6 +205,7 @@ export function stockRuleByName(name: string): StockRule | undefined {
 
 export {
   arrowsRule,
+  driveRule,
   solidRule,
   wrapRule,
   collisionsRule,

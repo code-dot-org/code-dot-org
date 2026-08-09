@@ -36,6 +36,21 @@ export const velocity = {
   }),
 };
 
+/**
+ * Which way an actor is turned, in degrees — the foundation's own, beside
+ * position and scale. Zero is however the drawing was drawn.
+ */
+export const rotation = {
+  of: subject => ({
+    type: 'world_get_Space_RotationProperty',
+    inputs: {ACTOR: value(subject)},
+  }),
+  set: (subject, degrees) => ({
+    type: 'world_set_Space_RotationProperty',
+    inputs: {ACTOR: value(subject), VALUE: value(degrees)},
+  }),
+};
+
 /** What a `use trait` names, for the foundation's own. */
 export const CanMove = 'Physics#CanMoveTrait';
 
