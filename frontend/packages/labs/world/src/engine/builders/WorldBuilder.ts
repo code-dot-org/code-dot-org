@@ -425,6 +425,18 @@ export class WorldBuilder {
     return this.getWorld().randomPlace();
   }
 
+  /**
+   * Game seconds so far. See {@link World.time}.
+   *
+   * Zero while a world is being described, and honestly so: nothing has ticked
+   * yet. Present rather than builder-forbidden because the block is a plain
+   * reporter a learner may reasonably drop into a `.world` file, and answering
+   * "no time has passed" is better than a method that is not there.
+   */
+  time(): number {
+    return this.getWorld().time();
+  }
+
   /** How big the view is. See {@link World.viewSize}. */
   viewSize(): Vector {
     return this.getWorld().viewSize();
