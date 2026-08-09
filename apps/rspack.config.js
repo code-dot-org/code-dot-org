@@ -1,14 +1,15 @@
 /* eslint-disable import/order */
-// Rspack translation of webpack.config.js.  PROTOTYPE: measures whether
-// rspack can build apps/ unchanged and how fast; not yet wired into grunt,
-// karma, or CI.
+// Rspack build for apps/, opt-in via `yarn start --rspack` (and the
+// grunt --rspack flag / APPS_BUNDLER=rspack that CI uses).
 //
-// Rspack implements the webpack 5 config surface, so entries, aliases,
-// resolve fallbacks, loaders (including our custom EJS loader), externals,
-// the named webpack-runtime chunk, and the splitChunks cacheGroups carry
-// over verbatim from webpack.config.js.  Webpack-only plugins are swapped
-// for rspack builtins or their rspack forks.  Every deliberate divergence
-// is marked RSPACK-DIFF with rationale.
+// Rspack implements the webpack 5 config surface.  The bundler-agnostic
+// build facts — entries, aliases, resolve fallbacks, externals, node
+// polyfills, and the splitChunks cacheGroups — live in bundlerBase.js,
+// shared with webpack.config.js so the two cannot drift.  This file
+// holds what is genuinely rspack's: the swc loader chain and its babel
+// parity shims, and rspack builtins or forks in place of webpack-only
+// plugins.  Every deliberate divergence is marked RSPACK-DIFF with
+// rationale.
 //
 // Known output differences vs the webpack build: fonts referenced by
 // root-relative url('/fonts/...') in CSS are skipped by the css-loader
@@ -33,11 +34,17 @@ const ReactRefreshTypeScript = require('react-refresh-typescript');
 
 const envConstants = require('./envConstants');
 const {
+  DEV_SERVER_PORT,
   devtool,
   APPLICATION_ALIASES,
   LOCALE_ALIASES,
   nodeModulesToTranspile,
-} = require('./webpack.config');
+  NODE_POLYFILL_PROVIDE,
+  NODE_POLYFILL_FALLBACK,
+  BUNDLE_EXTERNALS,
+  addPolyfillsToEntryPoints,
+  makeSplitChunks,
+} = require('./bundlerBase');
 const {
   ALL_APPS,
   appsEntriesFor,
@@ -48,8 +55,6 @@ const {
   OTHER_ENTRIES,
   LOCALIZATION_ENTRIES,
 } = require('./webpackEntryPoints');
-
-const DEV_SERVER_PORT = 9000;
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
@@ -158,7 +163,9 @@ function createRspackConfig({
     } else {
       console.log(
         `[rspack] source maps: ${
-          rspackDevtool === 'eval' ? 'none (eval, the rspack default)' : rspackDevtool
+          rspackDevtool === 'eval'
+            ? 'none (eval, the rspack default)'
+            : rspackDevtool
         }` +
           (/-module/.test(String(rspackDevtool))
             ? ' — WARNING: whole-app -module maps exceed 22GB under rspack;' +
@@ -193,26 +200,10 @@ function createRspackConfig({
       ),
       ...LOCALIZATION_ENTRIES,
     },
-    externals: [
-      {
-        // jQuery and qtip2 are provided globally by dashboard's
-        // application.js; see webpack.config.js for the full story.
-        jquery: 'var $',
-        qtip2: 'var $',
-      },
-    ],
+    externals: BUNDLE_EXTERNALS,
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      fallback: {
-        buffer: require.resolve('buffer/'),
-        events: require.resolve('events/'),
-        path: require.resolve('path-browserify'),
-        'process/browser': require.resolve('process/browser'),
-        stream: require.resolve('stream-browserify'),
-        timers: require.resolve('timers-browserify'),
-        crypto: false,
-        vm: require.resolve('vm-browserify'),
-      },
+      fallback: {...NODE_POLYFILL_FALLBACK},
       alias: {
         ...APPLICATION_ALIASES,
         ...LOCALE_ALIASES,
@@ -552,90 +543,17 @@ function createRspackConfig({
       runtimeChunk: {
         name: 'webpack-runtime',
       },
-      // RSPACK-DIFF: the `chunks` callbacks are hot — rspack invokes them
-      // from rust far more often than webpack does, and profiling showed
-      // Object.keys(...).includes(...) per call dominating the whole
-      // production build.  Hoist each group's name set and test with
-      // Set.has.
-      splitChunks: process.env.DEV
-        ? undefined
-        : (() => {
-            const appsEntryNames = new Set(Object.keys(appsEntries));
-            const p5EntryNames = new Set(['spritelab', 'gamelab', 'dance']);
-            const codeStudioNames = new Set(Object.keys(CODE_STUDIO_ENTRIES));
-            const codeStudioAndApps = new Set([
-              ...codeStudioNames,
-              ...appsEntryNames,
-            ]);
-            const vendorLibRegexes = [
-              '@babel/polyfill/noConflict',
-              '@mui',
-              'immutable',
-              'lodash',
-              'moment',
-              'radium',
-              'react',
-              'react-dom',
-              'wgxpath',
-            ].map(libName => new RegExp(`/apps/node_modules/${libName}/`));
-            const vendorEntryNames = new Set([
-              ...appsEntryNames,
-              ...codeStudioNames,
-              ...Object.keys(INTERNAL_ENTRIES),
-              ...Object.keys(PROFESSIONAL_DEVELOPMENT_ENTRIES),
-              ...Object.keys(SHARED_ENTRIES),
-            ]);
-            return {
-              maxInitialRequests: 100,
-              cacheGroups: {
-                common: {
-                  name: 'common',
-                  minChunks: 2,
-                  chunks: chunk => appsEntryNames.has(chunk.name),
-                },
-                'code-studio-common': {
-                  name: 'code-studio-common',
-                  minChunks: 2,
-                  chunks: chunk => codeStudioNames.has(chunk.name),
-                  priority: 10,
-                },
-                'code-studio-multi': {
-                  name: 'code-studio-common',
-                  minChunks: appsEntryNames.size + 1,
-                  chunks: chunk => codeStudioAndApps.has(chunk.name),
-                  priority: 20,
-                },
-                vendors: {
-                  name: 'vendors',
-                  priority: 30,
-                  chunks: chunk => vendorEntryNames.has(chunk.name),
-                  test: module =>
-                    vendorLibRegexes.some(r => r.test(module.resource)),
-                },
-                p5lab: {
-                  name: 'p5-dependencies',
-                  priority: 10,
-                  minChunks: 2,
-                  chunks: chunk => p5EntryNames.has(chunk.name),
-                  test: module => /p5/.test(module.resource),
-                },
-              },
-            };
-          })(),
+      // Both configs skip splitChunks in dev (2x-10x slower
+      // rebuild+reload) and share the hoisted cacheGroups via
+      // bundlerBase.makeSplitChunks.
+      splitChunks: process.env.DEV ? undefined : makeSplitChunks(appsEntries),
     },
     mode: minify ? 'production' : 'development',
     infrastructureLogging: {
       level: envConstants.PROFILE_APPS_BUILD ? 'warn' : 'info',
     },
     plugins: [
-      new rspack.ProvidePlugin({
-        Buffer: ['buffer', 'Buffer'],
-        events: 'events',
-        stream: 'stream-browserify',
-        path: 'path-browserify',
-        process: 'process/browser',
-        timers: 'timers-browserify',
-      }),
+      new rspack.ProvidePlugin(NODE_POLYFILL_PROVIDE),
       // RSPACK-DIFF: circular-dependency-plugin is a JS plugin driven by
       // per-module hooks; rspack's rust-side CircularDependencyRspackPlugin
       // replaces it.  Wiring circular_dependencies.json's allowlist protocol
@@ -863,14 +781,6 @@ function createRspackConfig({
 /**
  * Same helper as webpack.config.js (spelled correctly this time).
  */
-function addPolyfillsToEntryPoints(entries, polyfills) {
-  return Object.fromEntries(
-    Object.entries(entries).map(([entryName, paths]) => [
-      entryName,
-      [].concat(polyfills).concat(paths),
-    ])
-  );
-}
 
 module.exports = createRspackConfig({
   minify: process.env.NODE_ENV === 'production',
