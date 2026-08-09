@@ -5,7 +5,7 @@ require 'cdo/geocoder'
 class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
   DEFAULT_LIMIT = 100_000
   BATCH_SIZE = 1000
-  QUERY_TIMEOUT_MS = 60_000
+  MAX_RUN_TIME = [Delayed::Worker.max_run_time, 30.minutes].min.to_i
 
   queue_as CDO.active_job_queues[:low_priority]
 
@@ -19,7 +19,8 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
       next unless connection.get_advisory_lock(job.class.name)
 
       begin
-        block.call
+        # Prevents a stuck or slow job run from occupying a worker for too long.
+        Timeout.timeout(MAX_RUN_TIME, &block)
       ensure
         connection.release_advisory_lock(job.class.name)
       end
@@ -83,9 +84,6 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
   private def missing_project_storage_geos(from_storage_id: nil, limit: BATCH_SIZE)
     ActiveRecord::Base.connected_to(role: :reporting) do
       unlocated_storages_batch = ProjectStorage.anonymous.without_geo.with_projects.order(:id).limit(limit)
-
-      # Prevents the query from running longer than needed.
-      unlocated_storages_batch = unlocated_storages_batch.optimizer_hints("MAX_EXECUTION_TIME(#{QUERY_TIMEOUT_MS})")
 
       if from_storage_id
         unlocated_storages_batch = unlocated_storages_batch.
