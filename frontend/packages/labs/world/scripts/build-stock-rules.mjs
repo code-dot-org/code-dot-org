@@ -19,6 +19,7 @@ const RULES = [
   'input',
   'arrows',
   'drive',
+  'drag',
   'motion',
   'collisions',
   'gravity',

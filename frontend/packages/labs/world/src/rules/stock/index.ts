@@ -17,6 +17,7 @@ import {cameraDeadzoneRule} from './cameraDeadzone';
 import {cameraEaseRule} from './cameraEase';
 import {cameraFollowRule} from './cameraFollow';
 import {collisionsRule} from './collisions';
+import {dragRule} from './drag';
 import {driveRule} from './drive';
 import {gravityRule} from './gravity';
 import {inputRule} from './input';
@@ -137,6 +138,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: driveRule,
   },
   {
+    id: 'drag',
+    name: 'Drag',
+    ability: 'Slows Down',
+    description:
+      'Bleeds off an actor\u2019s speed while nothing is pushing it, so it coasts to a stop instead of drifting forever. Elect it beside anything that moves \u2014 it is what makes a car a car rather than a spaceship, and it gives a top speed for free.',
+    provides: ['Slows Down'],
+    contents: dragRule,
+  },
+  {
     id: 'wrap',
     name: 'Screen Wrap',
     ability: 'Wraps at the Edges',
@@ -205,6 +215,7 @@ export function stockRuleByName(name: string): StockRule | undefined {
 
 export {
   arrowsRule,
+  dragRule,
   driveRule,
   solidRule,
   wrapRule,
