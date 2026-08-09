@@ -57,6 +57,38 @@ describe('rules/drive.rule', () => {
     expect(driveRule).toContain('world_step_delta');
   });
 
+  it('offers grip, and leaves it off', () => {
+    // The other half of the car/ship difference, and a knob here rather than a
+    // rule of its own because it is about how facing relates to travel, which
+    // is this rule's whole subject.
+    //
+    // Zero by default is load-bearing, not a taste: this rule shipped as the
+    // ship, and a saved project that never heard of grip has to drive exactly
+    // as it did.
+    const grip = meta.properties.find(property => property.id === 'grip');
+
+    expect(grip).toBeDefined();
+    expect(grip!.default).toBe(0);
+  });
+
+  it('measures travel along the nose with a sign, so reverse survives', () => {
+    // A plain speed has no sign to say it was going backwards, so grip built on
+    // one would snap a reversing car round to face its direction of travel.
+    // Projecting velocity onto the facing direction keeps the sign — and
+    // reports zero for a pure sideways slide, which is the part grip eats.
+    const said = meta.queries.map(query => query.name).join(' ');
+
+    expect(said).toMatch(/going forward/i);
+  });
+
+  it('caps the grip pull at the whole slide', () => {
+    // Per second, like everything else here — but a grip strong enough to take
+    // more than all of the sideways motion in one frame would overshoot and
+    // swing back the other way, every frame, forever.
+    expect(driveRule).toContain('logic_ternary');
+    expect(driveRule).toContain('"OP": "GT"');
+  });
+
   it('exposes "the way … is facing", which a bullet needs too', () => {
     // On the rule rather than buried in the step: spawning something in front
     // of a ship is the next thing anyone asks for.
