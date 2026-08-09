@@ -927,9 +927,12 @@ describe('domain block generators', () => {
   });
 
   it('offers the standard logic/math/text blocks in the toolbox', () => {
-    const toolboxTypes = (DOMAIN_TOOLBOX as Array<{blocks: string[]}>).flatMap(
-      c => c.blocks,
-    );
+    const toolboxTypes = (
+      DOMAIN_TOOLBOX as Array<{blocks: Array<string | {type?: string}>}>
+    )
+      .flatMap(c => c.blocks)
+      // A spelled-out flyout item names its type in a field, not as the entry.
+      .map(item => (typeof item === 'string' ? item : (item.type ?? '')));
     for (const t of ['controls_if', 'logic_compare', 'math_number', 'text']) {
       expect(toolboxTypes).toContain(t);
     }
@@ -1117,9 +1120,12 @@ describe('domain block generators', () => {
     // The rule categories reference generated event types (`world_on_<id>`); this
     // catches any drift between what the toolbox lists and what is registered.
     const registered = new Set(DOMAIN_BLOCKS.map(b => b.type));
-    const toolboxTypes = (DOMAIN_TOOLBOX as Array<{blocks: string[]}>).flatMap(
-      c => c.blocks,
-    );
+    const toolboxTypes = (
+      DOMAIN_TOOLBOX as Array<{blocks: Array<string | {type?: string}>}>
+    )
+      .flatMap(c => c.blocks)
+      // A spelled-out flyout item names its type in a field, not as the entry.
+      .map(item => (typeof item === 'string' ? item : (item.type ?? '')));
     for (const t of toolboxTypes.filter(t => t.startsWith('world_'))) {
       expect(registered).toContain(t);
     }
@@ -1225,14 +1231,88 @@ describe('domain block generators', () => {
     );
     void category;
     expect(
-      (DOMAIN_TOOLBOX as Array<{blocks: string[]}>)
+      (DOMAIN_TOOLBOX as Array<{blocks: Array<string | {type?: string}>}>)
         .flatMap(c => c.blocks)
+        // An entry may be a whole flyout item rather than a bare type — the
+        // random block spells out the shadows in its sockets — so read the
+        // type off either shape.
+        .map(item => (typeof item === 'string' ? item : (item.type ?? '')))
         .filter(t => t.startsWith('world_query_')),
     ).toEqual([
       // None left built in: motion's "position before" went with motion, as
       // collision's went with collision. Every query a rule offers is now a
       // rule's own, and a project rule's blocks live in its own category.
     ]);
+  });
+});
+
+describe('the two random blocks', () => {
+  const mathCategory = () =>
+    (
+      DOMAIN_TOOLBOX as Array<{
+        name: string;
+        blocks: Array<string | {type?: string; inputs?: unknown}>;
+      }>
+    ).find(category => category.name === 'Math')?.blocks ?? [];
+
+  const entry = (type: string) =>
+    mathCategory().find(
+      item => (typeof item === 'string' ? item : item.type) === type,
+    );
+
+  it('both live under Math, where a learner looks for a random', () => {
+    expect(entry('math_random_int')).toBeDefined();
+    expect(entry('world_random_place')).toBeDefined();
+  });
+
+  it('gives the core random block filled sockets', () => {
+    // Blockly's stock toolbox seeds these in XML we do not use, and our own
+    // `valueShadowExtension` never runs on a block we did not define. Without
+    // them the block reads `random integer from ⟨⟩ to ⟨⟩` and generates
+    // `mathRandomInt(0, 0)` — always 0, and nothing says so.
+    expect(entry('math_random_int')).toEqual({
+      kind: 'block',
+      type: 'math_random_int',
+      inputs: {
+        FROM: {shadow: {type: 'math_number', fields: {NUM: 1}}},
+        TO: {shadow: {type: 'math_number', fields: {NUM: 100}}},
+      },
+    });
+  });
+
+  it('asks the world for a place rather than doing the arithmetic here', () => {
+    // So the same question has one answer: `world.randomPlace()` reads the
+    // map's own size, and a project that resizes its map scatters over the new
+    // one without touching a block.
+    const code = generatorFor('world_random_place')(
+      {} as never,
+      {} as never,
+      {} as never,
+    ) as [string, number];
+
+    expect(code[0]).toBe('world.randomPlace()');
+  });
+
+  it('reports a Vector, so `x of`/`y of` can take it apart', () => {
+    // `set position` wants an x and a y, so this is how it gets there.
+    const block = DOMAIN_BLOCKS.find(b => b.type === 'world_random_place');
+
+    expect(block?.output).toBe('Vector');
+    expect(
+      DOMAIN_BLOCKS.find(b => b.type === 'world_vector_component')?.args0,
+    ).toContainEqual(expect.objectContaining({name: 'VEC', check: 'Vector'}));
+  });
+
+  it('warns when there is no world to ask, like the other world questions', () => {
+    // `map size` and `view size` carry the same extension: dragged somewhere
+    // with no `world` in scope they say so rather than generating a reference
+    // to an undefined name.
+    const block = DOMAIN_BLOCKS.find(b => b.type === 'world_random_place');
+    const names = (block?.extensions ?? []).map(extension =>
+      typeof extension === 'string' ? extension : extension.name,
+    );
+
+    expect(names).toContain(WORLD_CONTEXT_EXTENSION);
   });
 });
 
