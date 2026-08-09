@@ -420,6 +420,11 @@ export class WorldBuilder {
     return this.getWorld().mapBounds();
   }
 
+  /** Somewhere in the map, at random. See {@link World.randomPlace}. */
+  randomPlace(): Vector {
+    return this.getWorld().randomPlace();
+  }
+
   /** How big the view is. See {@link World.viewSize}. */
   viewSize(): Vector {
     return this.getWorld().viewSize();

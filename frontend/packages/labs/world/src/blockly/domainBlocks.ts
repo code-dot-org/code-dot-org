@@ -2378,6 +2378,46 @@ const worldMapSize = defineBlock({
  * the middle of the view, so keeping the view inside the map means keeping the
  * position half a screen in from each edge.
  */
+/**
+ * Somewhere in the map, at random — a whole location in one block.
+ *
+ * Shorthand for what a learner would otherwise assemble from two randoms, a
+ * `map size`, two components, two multiplies and a `vector of`: about eight
+ * blocks to say "anywhere". Scattering things about is common enough — an
+ * asteroid field, a coin drop, a spawn point — to be worth a word of its own.
+ *
+ * It reads the map's size itself, which is the part worth having. A learner
+ * building this by hand has to know that "the map" is a thing you can ask
+ * about, and has to keep the numbers honest when the map is later resized.
+ *
+ * `world.randomPlace()` rather than the arithmetic inlined here, so the
+ * builder answers it too: scattering asteroids while describing a world reads
+ * the same as spawning one mid-game.
+ *
+ * Feeding `set position`, which takes an x and a y rather than a vector, means
+ * two of these under two `x of`/`y of` — two draws, not one. That is still a
+ * uniformly random point (the axes are independent), just more arithmetic than
+ * it looks like; nothing is subtly wrong with the result.
+ */
+const worldRandomPlace = defineBlock({
+  type: 'world_random_place',
+  message0: 'a random place in the map',
+  output: 'Vector',
+  extensions: [worldContextExtension],
+  // Location-coloured, like `map size` and `vector of`. It is listed under
+  // Math beside the random number so the two are found together, but it is a
+  // place, and looking like one matters more than matching its category.
+  style: 'location_blocks',
+  tooltip:
+    'A random spot somewhere in the map — anywhere from one corner to the ' +
+    'other. Different every time it runs.',
+  generator: {
+    javascript() {
+      return ['world.randomPlace()', Order.MEMBER] as [string, number];
+    },
+  },
+});
+
 const worldViewSize = defineBlock({
   type: 'world_view_size',
   message0: 'view size',
@@ -4624,6 +4664,7 @@ export const DOMAIN_BLOCKS = [
   worldAllCameras,
   worldThisCamera,
   worldMapSize,
+  worldRandomPlace,
   worldViewSize,
   worldPushActor,
   worldClearActors,
@@ -4876,6 +4917,25 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'math_modulo',
       // Absolute value and friends — `abs` is what a distance test needs.
       'math_single',
+      // Blockly's own random, rather than one of ours: it is a block a learner
+      // may already have met, and its generator ships with the JavaScript one.
+      //
+      // Spelled out as a flyout item rather than a bare type so its sockets
+      // arrive filled, as they do in Blockly's stock toolbox. Our own blocks
+      // get their shadows from `valueShadowExtension`, which a core block does
+      // not carry — and an empty `random integer from ⟨⟩ to ⟨⟩` generates
+      // `mathRandomInt(0, 0)`, which is a block that silently always answers 0.
+      {
+        kind: 'block',
+        type: 'math_random_int',
+        inputs: {
+          FROM: {shadow: {type: 'math_number', fields: {NUM: 1}}},
+          TO: {shadow: {type: 'math_number', fields: {NUM: 100}}},
+        },
+      },
+      // …and the whole-location shorthand, which is the form a game actually
+      // wants — scatter an asteroid, drop a coin.
+      'world_random_place',
       'world_vector',
       'world_vector_of',
       'world_vector_math',

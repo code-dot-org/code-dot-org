@@ -780,6 +780,23 @@ export class World {
   }
 
   /**
+   * Somewhere in the map, picked at random — uniform over the whole rectangle.
+   *
+   * Here rather than in the block that offers it, because "the map" is the
+   * world's own idea and the block would otherwise have to ask for the bounds
+   * and then do arithmetic on them in generated code. It also means the builder
+   * can answer it (`WorldBuilder.randomPlace`), so scattering asteroids while
+   * describing a world reads the same as spawning one mid-game.
+   *
+   * NOT seeded, so two runs differ. That is what a learner means by random, and
+   * a repeatable game is a bigger idea than this block should smuggle in.
+   */
+  randomPlace(): Vector {
+    const bounds = this.mapBounds();
+    return new Vector(Math.random() * bounds.x, Math.random() * bounds.y);
+  }
+
+  /**
    * How big the window onto the world is, in world pixels.
    *
    * Fixed today (core/viewport). A method rather than the constant so a rule

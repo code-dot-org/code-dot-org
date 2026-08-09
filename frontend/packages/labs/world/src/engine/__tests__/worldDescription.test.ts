@@ -227,3 +227,55 @@ describe('how big the world is', () => {
     expect(made.mapBounds()).toEqual(new Vector(960, 960));
   });
 });
+
+describe('somewhere in it, at random', () => {
+  const map = (tiles: number) => ({
+    size: {width: tiles, height: tiles},
+    tile: {width: 32, height: 32},
+    actors: [],
+  });
+
+  it('lands inside the map, both axes, every time', () => {
+    const made = builder();
+    made.loadMap(map(30));
+
+    for (let attempt = 0; attempt < 200; attempt += 1) {
+      const place = made.randomPlace();
+
+      expect(place.x).toBeGreaterThanOrEqual(0);
+      expect(place.x).toBeLessThan(960);
+      expect(place.y).toBeGreaterThanOrEqual(0);
+      expect(place.y).toBeLessThan(960);
+    }
+  });
+
+  it('draws each axis separately', () => {
+    // One random number used for both axes scatters everything down a
+    // diagonal, which looks deliberate enough to ship by accident. Two hundred
+    // points landing exactly on x === y is not luck.
+    const made = builder();
+    made.loadMap(map(30));
+
+    const places = Array.from({length: 200}, () => made.randomPlace());
+
+    expect(places.every(place => place.x === place.y)).toBe(false);
+  });
+
+  it('is a Vector, like every other place', () => {
+    // Same reason `map size` is one: everything downstream reads `.x`/`.y`.
+    expect(builder().randomPlace()).toBeInstanceOf(Vector);
+  });
+
+  it('follows the map when it grows', () => {
+    // The point of asking the world rather than doing the arithmetic by hand:
+    // a bigger map scatters over the bigger area with nothing else changed.
+    const made = builder();
+    made.loadMap(map(60));
+
+    const widest = Math.max(
+      ...Array.from({length: 500}, () => made.randomPlace().x),
+    );
+
+    expect(widest).toBeGreaterThan(960);
+  });
+});
