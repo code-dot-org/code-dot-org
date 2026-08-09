@@ -391,11 +391,11 @@ module.exports = function (grunt) {
       `NODE_ENV=${process.env.NODE_ENV || 'development'} ` +
       (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
       'node node_modules/.bin/rspack build --config rspack.config.js',
-    // The dev server; `rspack serve` defaults to development mode.  The
-    // output directory is cleared first: a populated directory costs
-    // rspack ~18s of startup in writeToDisk compares.
+    // The dev server; `rspack serve` defaults to development mode.
+    // prepareBundlerOutputDir cleans the output directory beforehand
+    // (a populated one costs rspack ~18s of startup), and doing it
+    // there rather than here keeps prebuild's copied assets.
     rspackServe:
-      'rm -rf build/package/js && ' +
       (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=ts ') +
       'NODE_OPTIONS=--max-old-space-size=4096 ' +
       'node node_modules/.bin/rspack serve --config rspack.config.js',
@@ -663,8 +663,40 @@ module.exports = function (grunt) {
     }
   };
 
+  // The two bundlers share build/package/js.  Leftovers from the other
+  // one are never *referenced* (each build rewrites everything a page
+  // loads), but they accumulate gigabytes over weeks and cost rspack
+  // ~18s of startup in writeToDisk compares — so a marker file records
+  // who wrote the directory, and switching cleans it.  rspack cleans on
+  // every start for the same startup reason.  Runs before prebuild so
+  // the copied static assets (ace, droplet, blockly media) survive.
+  const prepareBundlerOutputDir = () => {
+    const dir = path.resolve(__dirname, 'build/package/js');
+    const marker = path.join(dir, '.bundler');
+    // Output that predates the marker is grandfathered as webpack's:
+    // that is what it was in practice, and it keeps rollout quiet for
+    // developers who never opt into rspack.
+    const prev = fs.existsSync(marker)
+      ? fs.readFileSync(marker, 'utf8').trim()
+      : fs.existsSync(dir) && fs.readdirSync(dir).length > 0
+      ? 'webpack'
+      : null;
+    if (prev && prev !== APPS_BUNDLER) {
+      grunt.log.writeln(
+        `[build] switching ${prev} -> ${APPS_BUNDLER}: cleaning build/package/js of the previous output`
+      );
+      fs.rmSync(dir, {recursive: true, force: true});
+    } else if (APPS_BUNDLER === 'rspack' && prev) {
+      // A populated directory slows rspack startup by ~18s.
+      fs.rmSync(dir, {recursive: true, force: true});
+    }
+    fs.mkdirSync(dir, {recursive: true});
+    fs.writeFileSync(marker, APPS_BUNDLER + '\n');
+  };
+
   grunt.registerTask('build', function () {
     rspackNotice();
+    prepareBundlerOutputDir();
     grunt.task.run([
       'prebuild',
       // For any minifiable libs, generate minified sources if they do not already
@@ -689,6 +721,7 @@ module.exports = function (grunt) {
     process.env.HOT ||= 1;
     process.env.DEV ||= 1;
     rspackNotice();
+    prepareBundlerOutputDir();
     grunt.task.run([
       'prebuild',
       'newer:sass',
