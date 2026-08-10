@@ -379,15 +379,25 @@ module.exports = function (grunt) {
     },
   };
 
-  // One source for the Node heap given to rspack: APPS_BUILD_MAX_MEMORY
-  // (build-in-parallel.sh's knob, default 4096MB here), unless the
-  // caller already set NODE_OPTIONS.
-  const rspackNodeOptions = () =>
-    process.env.NODE_OPTIONS
-      ? ''
-      : `NODE_OPTIONS=--max-old-space-size=${
-          process.env.APPS_BUILD_MAX_MEMORY || 4096
-        } `;
+  // One source for the Node heap given to rspack: APPS_BUILD_MAX_MEMORY,
+  // the same knob build-in-parallel.sh uses (it exports the value).
+  // Always set explicitly — every documented entry point reaches here
+  // with NODE_OPTIONS already in the environment (the yarn `grunt`
+  // script sets 4096MB), and that value is sized for grunt itself, not
+  // for a full rspack build.
+  const rspackNodeOptions = `NODE_OPTIONS=--max-old-space-size=${
+    process.env.APPS_BUILD_MAX_MEMORY || 8192
+  } `;
+
+  // The rspack build runs in a child process, so grunt options the
+  // webpack path consumes in-process must cross as environment
+  // variables: --app as APP (rspack.config.js's entry default) and
+  // --piskel-dev as PISKEL_DEV.
+  const rspackEnv =
+    (SINGLE_APP ? `APP=${SINGLE_APP} ` : '') +
+    (PISKEL_DEVELOPMENT_MODE ? 'PISKEL_DEV=1 ' : '') +
+    (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
+    rspackNodeOptions;
 
   config.exec = {
     // `--rspack` (or APPS_BUNDLER=rspack) swaps only the JS bundling
@@ -396,13 +406,10 @@ module.exports = function (grunt) {
     // defaults to the full-swc mode here because this path exists to
     // prove the production story; see rspack.config.js.  NODE_ENV is
     // pinned because the rspack CLI defaults --mode to production,
-    // silently minifying dev builds otherwise.  Node heap comes from
-    // the same APPS_BUILD_MAX_MEMORY knob build-in-parallel.sh uses,
-    // and an already-set NODE_OPTIONS (e.g. from that script) wins.
+    // silently minifying dev builds otherwise.
     rspackBuild:
       `NODE_ENV=${process.env.NODE_ENV || 'development'} ` +
-      (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
-      rspackNodeOptions() +
+      rspackEnv +
       'node node_modules/.bin/rspack build --config rspack.config.js',
     // The dev server; `rspack serve` defaults to development mode.
     // Full-swc here too: it is the mode every browser and drone
@@ -412,9 +419,7 @@ module.exports = function (grunt) {
     // of startup), and doing it there rather than here keeps
     // prebuild's copied assets.
     rspackServe:
-      (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
-      rspackNodeOptions() +
-      'node node_modules/.bin/rspack serve --config rspack.config.js',
+      rspackEnv + 'node node_modules/.bin/rspack serve --config rspack.config.js',
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
