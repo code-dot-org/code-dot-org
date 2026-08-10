@@ -1,22 +1,45 @@
-// Generates World Lab's built-in appearance assets under public/vendor/sprites/,
-// so the preview surface loads them as self-hosted files (no CDN, no runtime
-// network — like the other vendor assets). Two kinds:
+// Draws World Lab's built-in appearance assets. Two kinds:
 //   - static sprites: one `${name}.png` image;
 //   - animations: a horizontal spritesheet `${name}.png` of N frames.
 // Pure Node: a minimal RGBA PNG encoder over `node:zlib`, no image dependency.
+//
+// The BYTES reach the lab through `write-stock-assets.mjs`, which bakes them
+// into `src/appearance/stockImages.ts` as data URLs — a project owns every image
+// it draws, so an import copies one in rather than pointing at a file the
+// runtime serves. Nothing loads these over the network.
+//
+// `generateSprites(dir)` writes the PNGs out as files, which nothing in the lab
+// needs. It is kept because it is how you LOOK at a drawing: render to a
+// scratch directory and open them, rather than editing arithmetic blind.
+//
 // SPRITE_NAMES / ANIMATION_SPECS / SPRITE_SIZE are the source of truth the
-// driver mirrors in src/sprites.ts (a test keeps them in sync).
+// library mirrors in src/appearance/stock.ts (a test keeps them in sync).
 
 import {mkdirSync, writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {deflateSync} from 'node:zlib';
 
 export const SPRITE_SIZE = 32;
-export const SPRITE_NAMES = ['player', 'ground', 'coin', 'box', 'ball'];
+export const SPRITE_NAMES = [
+  'player',
+  'ground',
+  'coin',
+  'box',
+  'ball',
+  // An asteroids-shaped set: something to fly, something to break, something to
+  // break it with. All three point UP unrotated, because `facing` is (0,-1)
+  // turned by the actor's rotation — a drawing that pointed right would fly
+  // sideways the moment anything used it (rules/drive).
+  'ship',
+  'asteroid',
+  'shot',
+];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
   playerWalk: {frames: 4, frameRate: 8},
   switch: {frames: 6, frameRate: 12},
+  shipThrust: {frames: 4, frameRate: 12},
+  asteroidSpin: {frames: 8, frameRate: 10},
 };
 
 // ── A tiny RGBA canvas (w × h, h defaults to w) ──────────────────────────────
@@ -53,7 +76,40 @@ function canvas(w, h = w) {
     }
   };
   const rect = (x0, y0, rw, rh, color) => roundRect(x0, y0, rw, rh, 0, color);
-  return {data, w, h, put, disc, ellipse, roundRect, rect};
+  /**
+   * Fill a polygon, even-odd, so a concave outline works.
+   *
+   * The ship needs it: its tail is a notch, which is the one thing discs and
+   * rectangles cannot say. Tested at pixel CENTRES, matching how `ellipse`
+   * decides, so a shape drawn both ways lines up.
+   */
+  const polygon = (points, color) => {
+    let minY = h;
+    let maxY = 0;
+    for (const [, py] of points) {
+      minY = Math.min(minY, Math.floor(py));
+      maxY = Math.max(maxY, Math.ceil(py));
+    }
+    for (let y = Math.max(0, minY); y <= Math.min(h - 1, maxY); y++) {
+      for (let x = 0; x < w; x++) {
+        const px = x + 0.5;
+        const py = y + 0.5;
+        let inside = false;
+        for (let i = 0, j = points.length - 1; i < points.length; j = i++) {
+          const [xi, yi] = points[i];
+          const [xj, yj] = points[j];
+          if (
+            yi > py !== yj > py &&
+            px < ((xj - xi) * (py - yi)) / (yj - yi) + xi
+          ) {
+            inside = !inside;
+          }
+        }
+        if (inside) put(x, y, color);
+      }
+    }
+  };
+  return {data, w, h, put, disc, ellipse, roundRect, rect, polygon};
 }
 
 /** Copy a frame canvas into a sheet canvas at column `dx`. */
@@ -74,6 +130,91 @@ function playerBody(c) {
   c.disc(20, 13, 2.6, [255, 255, 255]);
   c.disc(12, 13, 1.2, [20, 30, 50]);
   c.disc(20, 13, 1.2, [20, 30, 50]);
+}
+
+// ── The asteroids set ────────────────────────────────────────────────────────
+// Shared so the still and its animation cannot drift: `ship` and `shipThrust`
+// draw the same hull, `asteroid` and `asteroidSpin` the same rock.
+
+const HULL = [
+  [16, 3],
+  [26, 26],
+  [16, 20],
+  [6, 26],
+];
+const HULL_EDGE = [64, 74, 96];
+const HULL_FILL = [214, 222, 235];
+
+/** Shrink a ring of points toward a centre — an outline is the shape, twice. */
+const shrink = (points, cx, cy, by) =>
+  points.map(([x, y]) => [cx + (x - cx) * by, cy + (y - cy) * by]);
+
+function shipHull(c) {
+  c.polygon(HULL, HULL_EDGE);
+  c.polygon(shrink(HULL, 16, 18, 0.62), HULL_FILL);
+  c.disc(16, 13, 2.2, [70, 130, 200]); // the cockpit, so the nose is readable
+}
+
+/**
+ * The flame, pointing back out of the notch.
+ *
+ * Drawn from the tail rather than from the centre so it reads as coming OUT of
+ * the ship; `length` is what flickers.
+ */
+function shipFlame(c, length) {
+  c.polygon(
+    [
+      [11, 20],
+      [21, 20],
+      [16, 20 + length],
+    ],
+    [244, 132, 42],
+  );
+  c.polygon(
+    [
+      [13, 20],
+      [19, 20],
+      [16, 20 + length * 0.62],
+    ],
+    [255, 214, 120],
+  );
+}
+
+// NINE radii turned by eighths of a circle: nine never maps onto itself at 45
+// degrees, so every frame is a real rotation rather than the same silhouette
+// relabelled, and eight of them come back round to the start.
+//
+// Nine rather than seven, and 12–15 rather than 11–15: seven wide-swinging
+// vertices made a wedge with a bite out of it, which reads as a broken pie
+// chart. A rock wants many small facets, not few deep ones.
+const ROCK_RADII = [13.2, 14.6, 12.4, 15, 13.8, 12.2, 14.4, 12.8, 13.6];
+const ROCK_PITS = [
+  [6, 40, 2.6],
+  [7.5, 170, 2.0],
+  [5, 275, 1.6],
+];
+
+const rockPoints = turn =>
+  ROCK_RADII.map((r, i) => {
+    const a = turn + (i * 2 * Math.PI) / ROCK_RADII.length;
+    return [16 + r * Math.cos(a), 16 + r * Math.sin(a)];
+  });
+
+function rock(c, turn) {
+  const points = rockPoints(turn);
+  c.polygon(points, [92, 94, 106]);
+  c.polygon(shrink(points, 16, 16, 0.82), [143, 146, 158]);
+  // Craters carried round with the rock, so it reads as turning rather than as
+  // an outline wobbling in place.
+  for (const [dist, deg, size] of ROCK_PITS) {
+    const a = turn + (deg * Math.PI) / 180;
+    c.disc(
+      16 + dist * Math.cos(a),
+      16 + dist * Math.sin(a),
+      size,
+      [110, 112, 124],
+    );
+  }
 }
 
 const STATIC = {
@@ -102,6 +243,14 @@ const STATIC = {
     c.disc(16, 16, 13, [224, 72, 62]);
     c.disc(12, 12, 4, [255, 170, 165]);
   },
+  ship: c => shipHull(c),
+  asteroid: c => rock(c, 0),
+  shot(c) {
+    // A short bolt rather than a dot, so it reads as travelling — and vertical,
+    // so it still points the way it was fired once rotation is applied.
+    c.roundRect(14, 10, 5, 13, 2.5, [255, 196, 84]);
+    c.roundRect(15, 12, 3, 9, 1.5, [255, 248, 214]);
+  },
 };
 
 // Each animation draws frame `t` (0..frames-1) into a SPRITE_SIZE canvas.
@@ -129,6 +278,19 @@ const ANIMATION_FRAME = {
   // A tile-mounted switch: a lever on a base that sweeps from one side (frame 0)
   // to the other (last frame). The engine plays it non-looping, so it flips once
   // and holds; the knob shifts red (off) -> green (on) as it crosses.
+  // The ship under power: the same hull, with a flame that flickers rather than
+  // pulsing evenly — a smooth in-and-out reads as breathing, not burning.
+  shipThrust(c, t) {
+    // Long enough that the SHORT frames still clear the hull: the tail sits at
+    // y=26, so a plume under about six pixels is drawn entirely underneath the
+    // ship and the flicker reads as the flame cutting out.
+    shipFlame(c, [11, 8, 10, 9][t]);
+    shipHull(c);
+  },
+  // The rock turning. An eighth of a circle per frame, seven sides.
+  asteroidSpin(c, t, frames) {
+    rock(c, (t * 2 * Math.PI) / frames);
+  },
   switch(c, t, frames) {
     c.roundRect(6, 21, 20, 9, 3, [78, 84, 94]); // housing on the tile
     c.roundRect(6, 21, 20, 3, 3, [120, 128, 140]); // top highlight

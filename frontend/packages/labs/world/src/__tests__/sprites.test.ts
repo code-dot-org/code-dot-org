@@ -40,6 +40,33 @@ describe('the stock appearance library', () => {
     }
   });
 
+  it('carries bytes the right shape for what was drawn', () => {
+    // The check that catches a STALE bake. The prefix test above only says a
+    // data URL is there; it would pass happily if a drawing's frame count had
+    // changed and `write-stock-assets.mjs` had not been re-run, and the picker
+    // would then import a strip whose last cells are empty.
+    //
+    // A PNG's IHDR is at a fixed offset, so the width and height are the first
+    // sixteen bytes after the signature — no decoder needed.
+    const sizeOf = (dataUrl: string): {width: number; height: number} => {
+      const bytes = Buffer.from(dataUrl.split(',')[1], 'base64');
+      return {
+        width: bytes.readUInt32BE(16),
+        height: bytes.readUInt32BE(20),
+      };
+    };
+
+    for (const sprite of STOCK_SPRITES) {
+      const spec = generator.ANIMATION_SPECS[sprite.id];
+      const frames = spec ? spec.frames : 1;
+
+      expect(sizeOf(sprite.dataUrl), sprite.id).toEqual({
+        width: STOCK_CELL * frames,
+        height: STOCK_CELL,
+      });
+    }
+  });
+
   it('marks the grids as grids, and nothing else', () => {
     // A drawing is a grid exactly when the generator drew it as a strip of
     // frames; that is what its `.sheet` says on import (appearance/sheetFile),
