@@ -111,7 +111,7 @@ The `colors.css` file defines semantic colors as CSS variables, which adapt to d
 Semantic colors map to underlying **primitive colors** and are intended to remain consistent across the design system.
 To view the latest color variables, refer to our [DSCO Variables Figma page](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-33933&m=dev).
 
-**Important:** `colors.css` depends on `primitiveColors.css`, so make sure to import `primitiveColors.css` before `colors.css` in your application root.
+`colors.css` is itself two files: `colors_cads.css` (the pristine design export) and `colorsLegacyAliases.css` (hand-maintained aliases for token names from before the CADS schema, kept for the call sites that still reference them). Import `colors.css`, not the two files it wraps.
 
 #### ✅ Example:
 
@@ -210,7 +210,7 @@ Primitive colors are meant to be used as the foundation for building semantic co
 To view the latest primitive color variables, refer to our [DSCO Variables Figma page](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-10156&m=dev).
 palette and ensure a unified visual language across all Code.org components.
 
-**Important:** `primitiveColors.css` should be imported before `colors.css` in your application root, as semantic colors depend on primitive colors.
+Both files can be imported in either order: they're plain CSS custom properties, and `var()` resolution happens when a property is used, not at parse time.
 
 #### ✅ Example:
 
@@ -683,7 +683,6 @@ They allow you to define a set of styles that can be reused throughout your proj
 
 - ✅ Use **semantic colors** from `colors.css`, unless it's necessary to use `primitiveColors.css`
   or any other colors.
-- ✅ Import `primitiveColors.css` before `colors.css` in your application root to ensure proper variable resolution.
 - ✅ Keep typography and spacing consistent with design tokens.
 - ⛔️ Avoid defining hard-coded colors — rely on CSS variables.
 

@@ -24,7 +24,7 @@ module Cdo
     #                    'default-brand' DCDO key or per-user override.
     # BRAND_CODEAI_NEXT  Current default branding, via the 'default-brand'
     #                    DCDO key (which itself defaults to this). Carries the
-    #                    CADS color ramp (component-library-styles/brandCodeAiNext.css).
+    #                    CADS color ramp (component-library-styles/colors_cads.css).
     # BRAND_CODEAI_AUDIT Visual auditing tool: every DSCO semantic token
     #                    renders pink (brandCodeAiAudit.css) so surfaces that
     #                    bypass the token system stand out. Never a default.

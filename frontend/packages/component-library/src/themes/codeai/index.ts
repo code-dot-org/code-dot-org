@@ -4,7 +4,7 @@ import {createBrandTheme} from '../createBrandTheme';
  * CodeAI MUI theme.
  *
  * Palette values come from the CADS brand-purple ramp
- * (component-library-styles/primitiveColors_codeAi.css): main is
+ * (component-library-styles/primitiveColors.css): main is
  * purple-50, light purple-30, dark purple-70. Keep in sync with that
  * file when design re-exports it.
  *

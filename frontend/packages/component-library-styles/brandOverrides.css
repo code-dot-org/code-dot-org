@@ -1,22 +1,10 @@
-/* Brand override layers. Import once, immediately after colors.css.
+/* Brand override layer. Import once, immediately after colors.css.
  *
- * Layering (see frontend/packages/component-library/src/themes/README.md):
- *   primitiveColors.css + colors.css   legacy tokens, :root — the pre-cutover default
- *   brandLegacyShim.css                CADS token names mapped onto legacy values,
- *                                      so migrated code renders under legacy brands
- *   brandCodeAiNext.css                canonical CADS tokens scoped to
- *                                      [data-brand='codeai-next'] (generated —
- *                                      see scripts/generateBrandCodeAiNext.mjs)
- *   brandCodeAiNextAliases.css         legacy token names mapped onto CADS values,
- *                                      so unmigrated code renders under codeai-next
- *   brandCodeAiAudit.css               all-pink values for [data-brand='codeai-audit']
- *                                      (DSCO-coverage auditing)
- *
- * At brand cutover (default-brand -> codeai-next) this whole layer stays
- * as-is; at cleanup, the canonical files move to :root and everything
- * here except the audit brand is deleted.
+ * codeai-next is the sitewide default brand, so its tokens live at :root
+ * in colors_cads.css / colorsLegacyAliases.css, not here. What's left in
+ * this layer is brandCodeAiAudit.css: an all-pink ramp scoped to
+ * [data-brand='codeai-audit'], for finding UI surfaces that don't
+ * resolve through DSCO tokens. Activate it by navigating with
+ * ?brand=codeai-audit (see Cdo::Brand).
  */
-@import './brandLegacyShim.css';
-@import './brandCodeAiNext.css';
-@import './brandCodeAiNextAliases.css';
 @import './brandCodeAiAudit.css';
