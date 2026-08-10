@@ -1,6 +1,5 @@
 @import 'color.scss';
 @import 'font';
-@import 'brand-selectors';
 
 @mixin button-with-color($color) {
   background-color: $color;
@@ -26,19 +25,17 @@
 .primary {
   @include button-with-color($orange);
 
-  // codeai-next drops the orange for the CADS brand primary, matching the
-  // MUI contained/primary button on /users/sign_in (--brand-purple-50).
-  // Legacy brands keep the orange above.
-  @include codeai-brand($ancestor: true) {
-    background-color: var(--background-brand-purple-primary);
-    border-color: var(--borders-brand-purple-primary);
+  // Overrides button-with-color($orange) above with the CADS brand primary,
+  // matching the MUI contained/primary button on /users/sign_in
+  // (--brand-purple-50).
+  background-color: var(--background-brand-purple-primary);
+  border-color: var(--borders-brand-purple-primary);
 
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--background-brand-purple-strong);
-      border-color: var(--borders-brand-purple-strong);
-    }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
   }
 }
 .primary:hover {

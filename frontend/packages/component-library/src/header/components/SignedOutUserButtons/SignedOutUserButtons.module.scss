@@ -16,7 +16,7 @@
 }
 
 // Shared pill metrics for both auth buttons (match prod). Header-button pill
-// geometry matches the Rails header's `.header_button` under codeai-brand.
+// geometry matches the Rails header's `.header_button`.
 // Hover/press background is per-button below -- Create account's white fill is
 // unconditional, so only Sign in picks up the alpha-overlay hover/press.
 %pill {

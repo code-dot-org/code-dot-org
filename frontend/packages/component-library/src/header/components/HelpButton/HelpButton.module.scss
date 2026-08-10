@@ -7,8 +7,8 @@
 // Help-menu trigger. Authored default-visible + hidden below the desktop-nav
 // breakpoint via a max-width query, so the button is present in jsdom (which
 // ignores @media) where the unit tests drive it.
-// The Rails header's help_button box under codeai-brand keeps its
-// 38px/transparent box unchanged (it never carries `.header_button`, so it
+// The Rails header's help_button box keeps its 38px/transparent box
+// unchanged (it never carries `.header_button`, so it
 // never picks up that pill's 32px/hover treatment) — only the "?" glyph itself
 // grows, to 24px. Mirror that visual result rather than the other triggers'
 // full pill geometry.
