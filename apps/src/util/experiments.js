@@ -78,6 +78,10 @@ experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
 // subdomain (see apps/src/pythonlab/README.md), isolated from studio.code.org's
 // cookies/session, instead of directly on studio.code.org.
 experiments.PYTHONLAB_SEPARATE_DOMAIN = 'pythonlab-separate-domain';
+// Per-session opt-in to the codeaiprojects.org sandboxed-preview domain ahead
+// of the global 'sandboxed-preview-domain' DCDO flag, for production bug
+// bashes. See getPreviewDomain() in apps/src/util/codeprojectsPreviewOrigin.ts.
+experiments.NEW_PREVIEW_DOMAIN = 'new-preview-domain';
 // Student scrapbook entrypoint + "My scrapbook" dropdown link.
 // Enable with ?student-scrapbook=true or ?enableExperiments=student-scrapbook.
 experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';

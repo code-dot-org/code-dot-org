@@ -5,8 +5,8 @@ require 'test_helper'
 # Rails route: every other path and method must 404 before any
 # host-unconstrained dashboard route can match. (Rack middleware mounted ahead
 # of routing — FilesApi and friends, /v3/... — is out of scope here; route
-# order cannot constrain it.) Both the codeaiprojects.org (default) and
-# codeprojects.org (pre-migration) origins are served; the
+# order cannot constrain it.) Both the codeaiprojects.org (migration target)
+# and codeprojects.org (pre-migration, current default) origins are served; the
 # 'sandboxed-preview-domain' DCDO flag picks which one clients embed. See the
 # preview host constraints at the top of config/routes.rb and
 # docs/weblab-preview-domain-migration.md.

@@ -23,12 +23,17 @@ share page embeds moves.
 The server serves the preview endpoints on **both** domains
 (`CDO.preview_codeaiprojects_hostname` and the pre-migration
 `CDO.preview_codeprojects_hostname`, `lib/cdo.rb`); the client decides which
-one to embed via the **`sandboxed-preview-domain` DCDO flag**, exposed to the
-frontend through `frontend_config` (`lib/dynamic_config/dcdo.rb`) and read by
-`getPreviewDomain()` (`apps/src/util/codeprojectsPreviewOrigin.ts`). The flag
-defaults to `codeaiprojects.org`; setting it to `codeprojects.org` reverts the
-cutover without a deploy. Values outside those two domains fall back to the
-default.
+one to embed via `getPreviewDomain()`
+(`apps/src/util/codeprojectsPreviewOrigin.ts`), with this precedence:
+
+1. **`new-preview-domain` experiment** — per-session opt-in to the new domain
+   (`?enableExperiments=new-preview-domain`), for production bug bashes.
+2. **`sandboxed-preview-domain` DCDO flag** — per-environment rollout and
+   rollback, no deploy needed in either direction. Exposed to the frontend
+   through `frontend_config` (`lib/dynamic_config/dcdo.rb`). Values outside
+   the two known domains fall back to the default.
+3. **Default: `codeprojects.org`** (pre-migration) until the new domain has
+   been bug bashed; the code default flips in Part 3.
 
 Dual-domain (accept either, no flag needed — pages derive their outer origin
 from their own hostname):
@@ -54,20 +59,29 @@ Flag-driven (pick the domain to embed):
 
 - Preview URL builders — `apps/src/weblab2/htmlPreview/HTMLPreview.tsx`,
   `apps/src/pythonlab/pyodideSandboxManager.ts`, both via `getPreviewDomain()`
+- Experiment constant — `apps/src/util/experiments.js`
+  (`NEW_PREVIEW_DOMAIN = 'new-preview-domain'`)
 
-Because the old domain keeps serving previews, clients running a stale bundle
-(open tabs, CDN-cached JS) keep working across the deploy.
+Because both domains keep serving previews, clients running a stale bundle
+(open tabs, CDN-cached JS) keep working across the deploy and across flag
+flips.
+
+Note Python Lab's sandbox is itself still gated by the separate
+`pythonlab-separate-domain` experiment (whether the sandboxed iframe is used
+at all); `getPreviewDomain()` only matters inside that gate.
 
 The Rails controller/route/view keep the `codeprojects_preview` name (internal
 only, no functional coupling to the domain) to limit churn.
 
-## ⚠️ Ordering — infra MUST land before the app cutover
+## ⚠️ Ordering — infra MUST land before the flag flip
 
-`staging` auto-deploys. If the app change deploys before
-`*.preview.codeaiprojects.org` resolves and serves a valid cert, **all Web Lab 2
-and Python Lab previews break** (until the `sandboxed-preview-domain` DCDO flag
-is set to `codeprojects.org`, which is the escape hatch, not the plan). Do the
-infra steps first, per environment, then merge/deploy the app change.
+`staging` auto-deploys, but with the default on `codeprojects.org` the app
+change is safe to deploy independently — nothing points at the new domain
+until the `new-preview-domain` experiment or the `sandboxed-preview-domain`
+flag does. The hard requirement moves to the flag flip: do not point an
+environment at `codeaiprojects.org` before that environment's
+`*.preview.codeaiprojects.org` resolves and serves a valid cert, or its
+previews break until the flag is reverted.
 
 The two changes are therefore split into separate PRs (see below): the
 infrastructure lands and finishes propagating first, then the application cutover
@@ -101,23 +115,25 @@ Per environment (production uses the bare apex; test/staging/adhoc use
      `Content-Security-Policy` header.
    - `curl -sSI https://<uuid>.preview.codeaiprojects.org/weblab2_project_service_worker.js`
      returns `application/javascript`.
-5. **Merge + deploy the app cutover** (Part 2). Load a Web Lab 2 share and a
-   Python Lab level; confirm the preview iframe now points at
-   `*.preview.codeaiprojects.org` and renders.
+5. **Merge + deploy Part 2**, then roll out per environment:
+   - Bug bash on the new domain with `?enableExperiments=new-preview-domain`
+     (per-session, nobody else affected). Load a Web Lab 2 share and a Python
+     Lab level; confirm the preview iframe points at
+     `*.preview.codeaiprojects.org` and renders.
+   - Set `DCDO.set('sandboxed-preview-domain', 'codeaiprojects.org')` in the
+     environment to move everyone.
 
 ## Local development
 
-Local previews use `*.preview.localhost.codeaiprojects.org`. Two options:
+Local previews use `*.preview.localhost.codeprojects.org` by default, or
+`*.preview.localhost.codeaiprojects.org` with the flag/experiment. Both
+resolve to `127.0.0.1` via staging-managed Route 53 records (the legacy
+component and `LocalhostCodeaiprojectsRecord` /
+`LocalhostPreviewCodeaiprojectsRecord` in `codeaiprojects_resources.yml.erb`);
+`/etc/hosts` entries work if you'd rather not rely on public DNS.
 
-- Rely on the staging-managed Route 53 records
-  (`LocalhostCodeaiprojectsRecord`, `LocalhostPreviewCodeaiprojectsRecord` in
-  `codeaiprojects_resources.yml.erb`) that resolve to `127.0.0.1`, or
-- Add `/etc/hosts` entries mapping `localhost.codeaiprojects.org` and a test
-  preview label (e.g. `localtesting.preview.localhost.codeaiprojects.org`) to
-  `127.0.0.1`.
-
-Then update the Chrome insecure-origin flag per `apps/src/weblab2/README.md`
-(the four URLs now use `codeaiprojects.org`).
+Set the Chrome insecure-origin flag per `apps/src/weblab2/README.md` (the
+recommended value covers both domains, so it survives flag flips).
 
 ## Pull requests
 
@@ -162,10 +178,11 @@ been stable there, then delete the infrastructure first, then the code paths.**
      `dashboard/config/routes.rb` (`preview_host_pattern`), the preview CSP
      (`codeprojects_preview_controller.rb`), and the starter-asset CORS
      pattern (`level_starter_assets_controller.rb`)
-   - `'codeprojects.org'` in `PREVIEW_DOMAINS`
-     (`apps/src/util/codeprojectsPreviewOrigin.ts`) — at which point
-     `getPreviewDomain()` and the `sandboxed-preview-domain` flag entry in
-     `lib/dynamic_config/dcdo.rb` can go too, if the switch is no longer wanted
+   - `LEGACY_PREVIEW_DOMAIN` in `apps/src/util/codeprojectsPreviewOrigin.ts`
+     (hardcode `codeaiprojects.org`) — at which point `getPreviewDomain()`,
+     the `sandboxed-preview-domain` flag entry in `lib/dynamic_config/dcdo.rb`
+     and `experiments.NEW_PREVIEW_DOMAIN` (`apps/src/util/experiments.js`)
+     can go too
    - the `code(?:ai)?projects` regex alternations in
      `codeprojectsPreviewOrigin.ts`, `weblab2_project_service_worker.js` and
      `useProjectServiceWorker.ts`
@@ -203,11 +220,11 @@ Legacy Web Lab's serving path is not part of this migration. Do **not** remove:
 
 ## Rollback
 
-Set the `sandboxed-preview-domain` DCDO flag to `codeprojects.org`. No deploy is
-required: the old domain's routes, CORS and CSP stay live throughout Part 2, so
-new page loads embed the old preview origin as soon as the flag propagates
-(pages already open pick it up on reload). Reverting the Part 2 code is also
-safe but should not be necessary.
+Unset the `sandboxed-preview-domain` DCDO flag (or set it to
+`codeprojects.org`). No deploy is required: both domains' routes, CORS and CSP
+stay live throughout Part 2, so new page loads embed the old preview origin as
+soon as the flag propagates (pages already open pick it up on reload).
+Reverting the Part 2 code is also safe but should not be necessary.
 
 This is only true while Part 3 is outstanding. Once Part 3 has removed the
 `*.preview.codeprojects.org` certificate SAN, DNS record and CloudFront alias,

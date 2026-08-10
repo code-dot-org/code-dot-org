@@ -129,10 +129,11 @@ module Cdo
       "preview.#{codeaiprojects_hostname}"
     end
 
-    # The pre-migration sandboxed-preview origin. Still served (routes, CORS,
-    # CSP) so the 'sandboxed-preview-domain' DCDO flag can point clients back
-    # here without a deploy. Remove once the migration is complete, together
-    # with the preview DNS record, certificate SAN and CloudFront alias in
+    # The pre-migration sandboxed-preview origin, and the default until the
+    # 'sandboxed-preview-domain' DCDO flag moves clients to codeaiprojects.org
+    # (no deploy needed, either direction). Remove once the migration is
+    # complete, together with the preview DNS record, certificate SAN and
+    # CloudFront alias in
     # aws/cloudformation/components/codeprojects_resources.yml.erb.
     def preview_codeprojects_hostname
       "preview.#{codeprojects_hostname}"

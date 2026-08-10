@@ -1,17 +1,27 @@
 import DCDO from '@cdo/apps/dcdo';
+import experiments from '@cdo/apps/util/experiments';
 
-// Apex domains that may host the sandboxed preview origin. codeaiprojects.org
-// is the default; codeprojects.org is the pre-migration domain, kept servable
-// so the DCDO flag below can revert the cutover without a deploy. See
-// docs/weblab-preview-domain-migration.md.
-const PREVIEW_DOMAINS = ['codeaiprojects.org', 'codeprojects.org'];
-const DEFAULT_PREVIEW_DOMAIN = PREVIEW_DOMAINS[0];
+// Apex domains that may host the sandboxed preview origin. The server serves
+// both; codeaiprojects.org is the migration target, codeprojects.org the
+// pre-migration domain and the default until the new domain has been bug
+// bashed in production. See docs/weblab-preview-domain-migration.md.
+const NEW_PREVIEW_DOMAIN = 'codeaiprojects.org';
+const LEGACY_PREVIEW_DOMAIN = 'codeprojects.org';
+const PREVIEW_DOMAINS = [NEW_PREVIEW_DOMAIN, LEGACY_PREVIEW_DOMAIN];
+const DEFAULT_PREVIEW_DOMAIN = LEGACY_PREVIEW_DOMAIN;
 
-// The apex domain to build preview origins on, switchable at runtime via the
-// 'sandboxed-preview-domain' DCDO flag. Values outside PREVIEW_DOMAINS fall
-// back to the default, so a bad flag value can't point previews at an
-// arbitrary domain.
+// The apex domain to build preview origins on. Precedence: the
+// 'new-preview-domain' experiment (per-session opt-in for bug bashes, e.g.
+// ?enableExperiments=new-preview-domain), then the 'sandboxed-preview-domain'
+// DCDO flag (per-environment rollout and rollback, no deploy needed), then the
+// default. Flag values outside PREVIEW_DOMAINS fall back to the default, so a
+// bad flag value can't point previews at an arbitrary domain.
 export function getPreviewDomain(): string {
+  if (
+    experiments.isEnabledAllowingQueryString(experiments.NEW_PREVIEW_DOMAIN)
+  ) {
+    return NEW_PREVIEW_DOMAIN;
+  }
   const domain = DCDO.get('sandboxed-preview-domain', DEFAULT_PREVIEW_DOMAIN);
   return typeof domain === 'string' && PREVIEW_DOMAINS.includes(domain)
     ? domain

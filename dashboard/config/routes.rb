@@ -7,10 +7,10 @@ Dashboard::Application.routes.draw do
   # host-unconstrained routes below (draw :api, draw :marketing, /cable, ...)
   # are consulted. Rack middleware mounted ahead of routing (FilesApi and
   # friends, /v3/... — see config/application.rb) is not host-constrained and
-  # still answers on these hosts. Both the codeaiprojects.org (default) and
-  # codeprojects.org (pre-migration) origins are served; clients pick which one
-  # to embed via the 'sandboxed-preview-domain' DCDO flag. See
-  # docs/weblab-preview-domain-migration.md.
+  # still answers on these hosts. Both the codeaiprojects.org (migration
+  # target) and codeprojects.org (pre-migration, current default) origins are
+  # served; clients pick which one to embed via the 'sandboxed-preview-domain'
+  # DCDO flag. See docs/weblab-preview-domain-migration.md.
   preview_host_pattern = [
     CDO.preview_codeaiprojects_hostname,
     CDO.preview_codeprojects_hostname,
