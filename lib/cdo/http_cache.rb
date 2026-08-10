@@ -69,12 +69,10 @@ class HttpCache
 
   # A map from script name to script level URL pattern.
   #
-  # ui-test-oceans is not production curriculum. It is seeded only for UI tests
-  # (dashboard/test/ui/config) and is listed here so that
-  # dashboard/test/ui/features/platform/login_redirect.feature can exercise the
-  # cached-unit login_required redirect (ScriptLevelsController#show) without
-  # depending on a production course. Its behavior is inert in production,
-  # where no such course is seeded.
+  # ui-test-oceans is not production curriculum. It is only seeded for UI tests
+  # so that they can validate behavior of cached units (such as login_redirect)
+  # without depending on a production course. Its behavior is inert in
+  # production, where no such course is seeded.
   CACHED_UNITS_MAP = %w(
     aquatic
     dance-ai-2023
