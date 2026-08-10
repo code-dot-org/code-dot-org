@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-06-26T19:32:46.000Z",
   "level_num": "custom",
@@ -46,16 +47,17 @@
     "thumbnail_url": "https://images.code.org/dca308b4a4d495bdaead8407e90f083d-Urban Planning Icon.png",
     "starter_assets": {
       "City Zoning Guide.pdf": "ccee3f41-6c06-4ff0-9c1a-4fb1dd3651c2.pdf",
-      "City Transit Report.pdf": "349dee69-fd6f-4915-a9e6-0123d4a32fdc.pdf",
-      "City Urban Development.pdf": "9f1eb592-70e6-40a6-8a59-96bfeb647cc9.pdf",
       "image1.jpg": "067e6e17-6d86-44df-9e2e-3b27617cec22.jpg",
       "image3.jpg": "0d9870c0-0c25-4643-ad0c-b4e68b1b9762.jpg",
-      "image4.jpg": "5f1dcc70-9aa2-42c0-9eed-9d0d07574e1a.jpg"
+      "image4.jpg": "5f1dcc70-9aa2-42c0-9eed-9d0d07574e1a.jpg",
+      "City_Transit_Report.pdf": "ac10eae0-cd26-4419-adb4-f8421f2a4954.pdf",
+      "City_Urban_Development.pdf": "70c6195e-5d36-4b7c-9738-692709952803.pdf"
     },
     "name_suffix": "_india-2025",
-    "submittable": "false"
+    "submittable": "false",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-26T19:32:46.903+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice1_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice1_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:32:46.903+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice1_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice1_2025\"},{\"changed_at\":\"2026-08-07 02:40:51 +0000\",\"changed\":[],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

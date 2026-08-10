@@ -21,10 +21,65 @@
     "start_sources": {
       "animations": {
         "orderedKeys": [
+          "edad5820-6e4b-4e26-b127-35fb217eddb8",
+          "0c7b0ae4-f9c0-42e9-b683-e72e5fedaf0b",
+          "47b73abe-f3e7-4797-a067-5c272d8bfa4a",
           "ce20f0cf-5f26-435d-8fe1-1d554778ac5c",
           "d83b0121-f869-43e5-8fd9-177b88425c6c"
         ],
         "propsByKey": {
+          "edad5820-6e4b-4e26-b127-35fb217eddb8": {
+            "name": "Ball",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-4/uuid/7b5e891c-6814-4ec9-9c44-6718a46aa1a5.png",
+            "frameSize": {
+              "x": 352,
+              "y": 352
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+
+            ],
+            "pixelGridSize": 8
+          },
+          "0c7b0ae4-f9c0-42e9-b683-e72e5fedaf0b": {
+            "name": "Paddle",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-4/uuid/6aa9b0e2-4309-466a-8f40-858184f6f9b3.png",
+            "frameSize": {
+              "x": 552,
+              "y": 552
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+
+            ],
+            "pixelGridSize": 8,
+            "recentColors": [
+              [
+                31,
+                41,
+                71,
+                255
+              ]
+            ]
+          },
+          "47b73abe-f3e7-4797-a067-5c272d8bfa4a": {
+            "name": "Roads",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-4/uuid/6010df0e-11a6-40fe-9e46-a308e40f4cb8.png",
+            "frameSize": {
+              "x": 1024,
+              "y": 1024
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+              "backgrounds"
+            ]
+          },
           "ce20f0cf-5f26-435d-8fe1-1d554778ac5c": {
             "name": "ocean",
             "sourceUrl": "/level_starter_assets/Sprite%20Lab%20in%20Lab2%20showcase%200/uuid/418e6b16-a9d9-4ccf-b979-8f429cd62808.png",
@@ -73,6 +128,24 @@
           "id": "scene-1",
           "name": "Scene 1",
           "source": {
+            "variables": [
+              {
+                "name": "counter",
+                "id": ";nShTXkz,~sNReOtKGk."
+              },
+              {
+                "name": "x",
+                "id": "qN}cyK6=/$6,w;@O3Q7C"
+              },
+              {
+                "name": "dx",
+                "id": "RRR.HH^=_P#L@M3#7ZEQ"
+              },
+              {
+                "name": "dy",
+                "id": "6iU(yDZ9IV_J`%Vsm.3+"
+              }
+            ],
             "blocks": {
               "languageVersion": 0,
               "blocks": [
@@ -84,6 +157,280 @@
                   "deletable": false,
                   "movable": false,
                   "extraState": {
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_makeNewSpriteAnon",
+                      "id": "szn(fkTvbZ6MISe3_T]0",
+                      "fields": {
+                        "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Ball\"</field>"
+                      },
+                      "inputs": {
+                        "LOCATION": {
+                          "block": {
+                            "type": "gamelab_location_picker",
+                            "id": "2+k[f^8!viskKHu1Tr:k",
+                            "fields": {
+                              "LOCATION": "{\"x\":200,\"y\":200}"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "gamelab_makeNewSpriteAnon",
+                          "id": ".j$%g`_!s0k*0wOk`1]K",
+                          "fields": {
+                            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Paddle\"</field>"
+                          },
+                          "inputs": {
+                            "LOCATION": {
+                              "block": {
+                                "type": "gamelab_location_picker",
+                                "id": "iSD,4Uvz^oyH-s1K4+WP",
+                                "fields": {
+                                  "LOCATION": "{\"x\":91,\"y\":140}"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "variables_set",
+                              "id": "n!um`ArSZ_BN_;]--;Tr",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "RRR.HH^=_P#L@M3#7ZEQ"
+                                }
+                              },
+                              "inputs": {
+                                "VALUE": {
+                                  "block": {
+                                    "type": "math_number",
+                                    "id": "{xJV`DDz0bUvc,o!k1Ad",
+                                    "fields": {
+                                      "NUM": 5
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "variables_set",
+                                  "id": "F0;@X5vaTK58V}n.*fFQ",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "6iU(yDZ9IV_J`%Vsm.3+"
+                                    }
+                                  },
+                                  "inputs": {
+                                    "VALUE": {
+                                      "block": {
+                                        "type": "math_number",
+                                        "id": "(%,e()mWE|:ryn+(RUr/",
+                                        "fields": {
+                                          "NUM": -5
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whileKey",
+                  "id": "toolbox_gamelab_whileKey",
+                  "x": 566,
+                  "y": 111,
+                  "fields": {
+                    "KEY": "<field name=\"KEY\">\"left\"</field>"
+                  },
+                  "inputs": {
+                    "DO": {
+                      "block": {
+                        "type": "gamelab_moveBackward",
+                        "id": "N=s5L(AS6p1%$FBJiwA(",
+                        "inputs": {
+                          "SPRITE": {
+                            "shadow": {
+                              "type": "gamelab_allSpritesWithAnimation",
+                              "id": "5(#w0a`2P,`hA.bF^kcg",
+                              "fields": {
+                                "ANIMATION": "<field name=\"ANIMATION\">\"Paddle\"</field>"
+                              }
+                            }
+                          },
+                          "DISTANCE": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "P^F5J4uv])FHPVUZRr19",
+                              "fields": {
+                                "NUM": 10
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whileKey",
+                  "id": "=*S~^n9;yt[za:;n3r-*",
+                  "x": 519,
+                  "y": 333,
+                  "fields": {
+                    "KEY": "<field name=\"KEY\">\"right\"</field>"
+                  },
+                  "inputs": {
+                    "DO": {
+                      "block": {
+                        "type": "gamelab_moveForward",
+                        "id": ".IkHrPnb%$[%v.H*h:dg",
+                        "inputs": {
+                          "SPRITE": {
+                            "shadow": {
+                              "type": "gamelab_allSpritesWithAnimation",
+                              "id": "OyNFpofc=?zcFQUZhUpx",
+                              "fields": {
+                                "ANIMATION": "<field name=\"ANIMATION\">\"Paddle\"</field>"
+                              }
+                            }
+                          },
+                          "DISTANCE": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "z!)6FL9mlp.ts@?t.Aa=",
+                              "fields": {
+                                "NUM": 10
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_addBehaviorSimple",
+                  "id": "oCP42Vt;+]QqQ(!g%o/v",
+                  "x": 130,
+                  "y": 383,
+                  "disabledReasons": [
+                    "ORPHANED"
+                  ],
+                  "inputs": {
+                    "SPRITE": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation",
+                        "id": "HEHm:z4nRw(7u)q}/cK!",
+                        "fields": {
+                          "ANIMATION": "<field name=\"ANIMATION\">\"Ball\"</field>"
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_changePropBy",
+                      "id": "hCel}n`vc4NdF5Hg2cg?",
+                      "disabledReasons": [
+                        "ORPHANED"
+                      ],
+                      "fields": {
+                        "PROPERTY": "<field name=\"PROPERTY\">\"x\"</field>"
+                      },
+                      "inputs": {
+                        "SPRITE": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "HsaTmF(O+nAa7GU/2^]9",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"Ball\"</field>"
+                            }
+                          }
+                        },
+                        "VAL": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "Y4)4D0Vwd#eFdVs[phtp",
+                            "fields": {
+                              "NUM": 10
+                            }
+                          },
+                          "block": {
+                            "type": "variables_get",
+                            "id": "G6g.4aU^OW5+#?R5-L*E",
+                            "disabledReasons": [
+                              "ORPHANED"
+                            ],
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "RRR.HH^=_P#L@M3#7ZEQ"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "gamelab_changePropBy",
+                          "id": "+Td6%m9U$myv0I=MY([y",
+                          "disabledReasons": [
+                            "ORPHANED"
+                          ],
+                          "fields": {
+                            "PROPERTY": "<field name=\"PROPERTY\">\"y\"</field>"
+                          },
+                          "inputs": {
+                            "SPRITE": {
+                              "shadow": {
+                                "type": "gamelab_allSpritesWithAnimation",
+                                "id": "-RKp-ck+p*b{Na:(}CbR",
+                                "fields": {
+                                  "ANIMATION": "<field name=\"ANIMATION\">\"Ball\"</field>"
+                                }
+                              }
+                            },
+                            "VAL": {
+                              "shadow": {
+                                "type": "math_number",
+                                "id": "Y4)4D0Vwd#eFdVs[phtp",
+                                "fields": {
+                                  "NUM": 10
+                                }
+                              },
+                              "block": {
+                                "type": "variables_get",
+                                "id": "p39WO-*BxPq(L:N68+i#",
+                                "disabledReasons": [
+                                  "ORPHANED"
+                                ],
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": "6iU(yDZ9IV_J`%Vsm.3+"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               ]
@@ -118,7 +465,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-05T20:58:49.996+00:00\",\"changed\":[\"cloned from \\\"HoAI-tl-test-2\\\"\"],\"cloned_from\":\"HoAI-tl-test-2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-05T20:58:49.996+00:00\",\"changed\":[\"cloned from \\\"HoAI-tl-test-2\\\"\"],\"cloned_from\":\"HoAI-tl-test-2\"},{\"changed_at\":\"2026-08-06 16:13:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-06 16:19:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-06 16:23:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
   <blocks>
     <start_blocks>

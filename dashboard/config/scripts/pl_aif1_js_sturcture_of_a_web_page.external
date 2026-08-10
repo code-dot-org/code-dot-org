@@ -43,7 +43,7 @@ That's the whole relationship:
 
 When AI generates code with your students, this is the split they'll see, and it's the reason changing a color or font never touches the actual words on the page.
 
-<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
-<strong>💡 Teacher tip:</strong> it's easy to feel like you need to become fluent in HTML and CSS tags to teach this unit well. You don't. This is a JavaScript course, and this early look at structure is just building intuition, not a coding requirement. Your students will design pages by prompting AI, not by hand-writing markup, the next level walks through exactly how that works. Your role here is helping them recognize structure and judge whether AI's output matches what they asked for, not becoming an HTML instructor overnight.
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;"><p>
+<strong>💡 Teacher tip:</strong> it's easy to feel like you need to become fluent in HTML and CSS tags to teach this unit well. You don't. This is a JavaScript course, and this early look at structure is just building intuition, not a coding requirement. Your students will design pages by prompting AI, not by hand-writing markup, the next level walks through exactly how that works. Your role here is helping them recognize structure and judge whether AI's output matches what they asked for, not becoming an HTML instructor overnight.</p>
 </div>
 MARKDOWN

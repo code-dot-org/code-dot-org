@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-06-26T19:33:08.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## AI as a College Admissions Officer\r\n\r\nUse AI Chat to choose which two students to admit. \r\n\r\n### Do This:\r\n\r\n1. **Add the PDF** with the six student profiles into AI Chat.\r\n2. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response.\r\n\r\n>You are a college admissions officer. Read these six student profiles and choose which two should be admitted to your university. Explain why you selected these two students.\r\n\r\n3. Find the section in your Activity Guide called \"AI’s Selections\" and answer the questions.\r\n4. Revise your prompt to AI Chat and have it prioritize the same things you did.\r\n\r\n**Try it out!**",
+    "long_instructions": "## AI as a College Admissions Officer\r\n\r\nUse AI Chat to choose which two students to admit. \r\n\r\n### Do This:\r\n\r\n1. **Add the PDF** with the six student profiles into AI Chat.\r\n2. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response.\r\n\r\n>You are a college admissions officer. Read these six student profiles and choose which two should be admitted to your college. Explain why you selected these two students.\r\n\r\n3. Find the section in your Activity Guide called \"AI’s Selections\" and answer the questions.\r\n4. Revise your prompt to AI Chat and have it prioritize the same things you did.\r\n\r\n**Try it out!**",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -45,11 +46,13 @@
     "display_name": "College Admissions Officer",
     "thumbnail_url": "https://images.code.org/c04758a4c88fce95b8fbbfe53ac7f45d-personal-statement.png",
     "name_suffix": "_india-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "starter_assets": {
-      "College Applicants.pdf": "5a6f58aa-a450-4ec6-8482-a2c3ce435399.pdf"
+      "College Applicants.pdf": "6d683c6c-4711-4cd7-8b7f-355197c7ab2e.pdf"
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:08.983+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4b_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4b_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:08.983+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4b_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4b_2025\"},{\"changed_at\":\"2026-08-07 02:10:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"},{\"changed_at\":\"2026-08-07 02:13:18 +0000\",\"changed\":[],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>
