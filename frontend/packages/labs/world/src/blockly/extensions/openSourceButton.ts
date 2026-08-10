@@ -55,64 +55,6 @@ export function moduleNamedBy(block: Block): string | undefined {
     : undefined;
 }
 
-/**
- * A `FieldButton` that is only its icon.
- *
- * `FieldButton` prints its value beside the icon, and for an empty value prints
- * a non-breaking space instead — which is text, and takes text's width: the eye
- * ended up a space-width right of the middle of its own button. There is nothing
- * to say here that the icon does not, so it says nothing.
- */
-class IconButton extends FieldButton {
-  override getDisplayText_(): string {
-    return '';
-  }
-
-  /**
-   * Size the button to the icon it actually draws.
-   *
-   * Blockly measures a field's text with the BLOCK's font (a canvas
-   * measurement, for speed), and the icon is a FontAwesome character in a
-   * `<tspan>` — a character the block's font does not have. The guess came back
-   * narrower than the glyph, so the button was drawn too small for its own icon
-   * and the eye hung over the right edge. `getComputedTextLength` asks the
-   * rendered text how wide it is instead; the rest mirrors Blockly's own
-   * `updateSize_` exactly.
-   */
-  override updateSize_(margin?: number): void {
-    const constants = this.getConstants();
-    const pad =
-      margin ??
-      (this.borderRect_ ? (constants?.FIELD_BORDER_RECT_X_PADDING ?? 0) : 0);
-    const width = this.textElement_?.getComputedTextLength() ?? 0;
-    const height = this.borderRect_
-      ? Math.max(
-          constants?.FIELD_TEXT_HEIGHT ?? 0,
-          constants?.FIELD_BORDER_RECT_HEIGHT ?? 0,
-        )
-      : (constants?.FIELD_TEXT_HEIGHT ?? 0);
-    this.size_ = new Blockly.utils.Size(pad * 2 + width, height);
-    this.positionTextElement_(pad, width);
-    this.positionBorderRect_();
-  }
-
-  /**
-   * Measure again once the icon font has arrived.
-   *
-   * A first render can happen before FontAwesome has loaded, and then the
-   * measurement above is of the fallback glyph — a button sized for a character
-   * that is about to be replaced by a different one.
-   */
-  override initView(): void {
-    super.initView();
-    void document.fonts?.ready.then(() => {
-      if (this.getSourceBlock()) {
-        this.forceRerender();
-      }
-    });
-  }
-}
-
 /** The eye glyph, as the `<tspan>` `FieldButton` draws inside itself. */
 function eyeIcon(): SVGElement {
   const icon = document.createElementNS(
@@ -144,7 +86,7 @@ function syncButton(block: Block): void {
   }
   if (wanted) {
     input.appendField(
-      new IconButton({
+      new FieldButton({
         value: '',
         onClick: () => {
           const modulePath = moduleNamedBy(block);

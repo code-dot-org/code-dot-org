@@ -83,6 +83,7 @@ import {
   paramSockets,
   type EffectParamState,
 } from './extensions/effectParamsMutator';
+import {eventActorToolboxExtension} from './extensions/eventActorToolbox';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
 import {ruleImportFieldExtension} from './extensions/ruleImportField';
@@ -796,6 +797,9 @@ const defineEventBlock = (event: EventMeta) => {
       );
       kinds.push(field);
       message0 += ` %${args0.length}`;
+      // The hat carries an actor, so offer the block that names it — a flyout
+      // inside the block, opened by a `+` (extensions/eventActorToolbox).
+      extensions.push(eventActorToolboxExtension);
       continue;
     }
     const field = filterFieldName(filters.length);

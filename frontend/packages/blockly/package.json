@@ -127,6 +127,11 @@
       "import": "./dist/fields/fieldButton/index.mjs",
       "require": "./dist/fields/fieldButton/index.cjs"
     },
+    "./fields/miniToolbox": {
+      "types": "./dist/fields/miniToolbox/index.d.ts",
+      "import": "./dist/fields/miniToolbox/index.mjs",
+      "require": "./dist/fields/miniToolbox/index.cjs"
+    },
     "./fields/fieldColour": {
       "types": "./dist/fields/fieldColour/index.d.ts",
       "import": "./dist/fields/fieldColour/index.mjs",
