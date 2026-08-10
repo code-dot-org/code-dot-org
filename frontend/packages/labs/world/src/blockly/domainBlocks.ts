@@ -33,6 +33,7 @@ import {
   actorSubjectExtension,
   cameraInputExtension,
 } from './actorInput';
+import type {ActorOwnMeta} from './actorMeta';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {
@@ -4844,6 +4845,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // How long it has been here — what a bullet, a spark or a lapsing shield
       // compares against to know it is done.
       'world_actor_age',
+      // Declaring state this KIND of actor carries. The same block a rule and a
+      // trait declare with: it already takes its meaning from where it sits, so
+      // a third site is what it was built for, and a separate near-identical
+      // block would invite trying the familiar one here and finding it inert.
+      'world_rule_property',
     ],
   },
   {
@@ -5293,6 +5299,21 @@ export function buildDomainPalette(
      * compile.
      */
     fileKind?: FileKind;
+    /**
+     * Actors whose own declared properties need blocks.
+     *
+     * The editor passes ONE — the `.actor` being edited — because that is the
+     * whole of their scope (see `actorMeta`): nothing imports them and no other
+     * file's palette offers them.
+     *
+     * The headless generator passes EVERY actor, for the reason
+     * `allRuleModules` exists. It turns all of a project's files into code with
+     * one palette and cannot scope per file, its palette is never shown so a
+     * spare block costs nothing, and the absence of one is fatal: a `.actor`
+     * reading a property it legitimately declared fails with "Invalid block
+     * definition for type: world_get_…" and the whole project stops compiling.
+     */
+    actorOwnProperties?: readonly ActorOwnMeta[];
   } = {},
 ): {
   blocks: DomainBlock[];
@@ -5308,6 +5329,38 @@ export function buildDomainPalette(
   installColorMessages();
   const editingRule = options.ownRuleModule !== undefined;
   const structural = structuralCategories(options.fileKind);
+
+  // An actor's own properties: a getter always, and a setter unless it was
+  // declared read-only. Read-only means something here that it cannot mean for
+  // a rule's property — an actor's declaring scope is a DECLARATION, with no
+  // body to run a `set` in — so it is a per-kind constant and gets no setter
+  // anywhere, rather than one confined to its own file.
+  const ownProperties = (options.actorOwnProperties ?? []).flatMap(
+    actor => actor.properties,
+  );
+  const ownBlocks: DomainBlock[] = [];
+  const ownTypes: string[] = [];
+  for (const property of ownProperties) {
+    if (!property.readonly) {
+      const setBlock = defineSetPropertyBlock(property);
+      ownBlocks.push(setBlock);
+      ownTypes.push(setBlock.type);
+    }
+    const getBlock = defineGetPropertyBlock(property);
+    ownBlocks.push(getBlock);
+    ownTypes.push(getBlock.type);
+  }
+  /** File them under Actor, beside the questions about an actor they are. */
+  const withOwnProperties = (
+    categories: ToolboxCategory[],
+  ): ToolboxCategory[] =>
+    ownTypes.length === 0
+      ? categories
+      : categories.map(category =>
+          category.name === 'Actor'
+            ? {...category, blocks: [...(category.blocks ?? []), ...ownTypes]}
+            : category,
+        );
   if (projectRules.length === 0) {
     // `DOMAIN_CATEGORIES` when nothing was filtered, so the no-file-kind case
     // keeps handing back the one shared constant rather than a copy of it.
@@ -5315,9 +5368,16 @@ export function buildDomainPalette(
       structural === TOOLBOX_HEAD
         ? DOMAIN_CATEGORIES
         : [...structural, ...BUILTIN_RULE_CATEGORIES, ...TOOLBOX_TAIL];
+    const shown = withOwnProperties(categories);
     return {
-      blocks: DOMAIN_BLOCKS,
-      toolbox: editingRule ? withEngine(categories) : categories,
+      // The shared constant itself when this actor declares nothing, keeping
+      // the identity the no-project-rules path has always handed back rather
+      // than a fresh copy per rebuild.
+      blocks:
+        ownBlocks.length === 0
+          ? DOMAIN_BLOCKS
+          : [...DOMAIN_BLOCKS, ...ownBlocks],
+      toolbox: editingRule ? withEngine(shown) : shown,
       rootTypes: ROOT_BLOCK_TYPES,
       // The built-in rules declare no events, so there are none to order.
       worldEventTypes: new Set<string>(),
@@ -5335,14 +5395,14 @@ export function buildDomainPalette(
         ? 'none'
         : 'all',
   );
-  const toolbox: ToolboxCategory[] = [
+  const toolbox: ToolboxCategory[] = withOwnProperties([
     ...structural,
     ...BUILTIN_RULE_CATEGORIES,
     ...palette.categories,
     ...TOOLBOX_TAIL,
-  ];
+  ]);
   return {
-    blocks: [...DOMAIN_BLOCKS, ...palette.blocks],
+    blocks: [...DOMAIN_BLOCKS, ...palette.blocks, ...ownBlocks],
     toolbox: editingRule ? withEngine(toolbox) : toolbox,
     rootTypes: new Set([...ROOT_BLOCK_TYPES, ...palette.eventTypes]),
     worldEventTypes: new Set(palette.worldEventTypes),

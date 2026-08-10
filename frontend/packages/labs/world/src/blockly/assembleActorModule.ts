@@ -15,13 +15,23 @@ export interface GeneratedBlock {
   code: string;
 }
 
-/** Order the generated blocks into a valid world-lab actor module. */
-export function assembleActorModule(blocks: GeneratedBlock[]): string {
+/**
+ * Order the generated blocks into a valid world-lab actor module.
+ *
+ * `declarations` are the actor's own properties (`actorMeta`), and they go
+ * between the actor and its handlers for the reason the actor goes first: they
+ * are `actor.defineProperty(…)` calls, so they need `const actor` to exist, and
+ * the handlers that read them need the consts they bind.
+ */
+export function assembleActorModule(
+  blocks: GeneratedBlock[],
+  declarations = '',
+): string {
   const actor = blocks.find(block => block.type === 'world_actor');
   const events = blocks.filter(block => block !== actor);
   const actorCode = actor ? actor.code : '';
   const eventsCode = events.map(block => block.code).join('');
-  return `${actorCode}${eventsCode}export default actor;\n`;
+  return `${actorCode}${declarations}${eventsCode}export default actor;\n`;
 }
 
 /**

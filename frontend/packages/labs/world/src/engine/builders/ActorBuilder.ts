@@ -11,6 +11,7 @@ import type {
   EventHandler,
   GameEvent,
   Property,
+  PropertyType,
 } from '../core/types';
 import {AppearanceTrait} from '../rules/animation';
 import {PositionalTrait} from '../rules/spatial';
@@ -88,6 +89,49 @@ export class ActorBuilder {
   set<T>(property: Property<T>, value: T): this {
     this.overrides.push([property, value]);
     return this;
+  }
+
+  /**
+   * Declare a property this KIND of actor carries, owned by no trait.
+   *
+   * The shorthand for state that needs no mechanic around it — when a Player
+   * last fired, how much ammo it has — where declaring a trait would mean
+   * declaring a rule in a file of its own. `Traited` already takes slots from
+   * two places, a trait's defaults and the overrides, so this is the second of
+   * those and not a third way for a slot to exist: the property is made here
+   * and immediately overridden with its own default, which is what puts the
+   * slot on every instance.
+   *
+   * NOT a synthesized trait, though that would also have worked. A trait is
+   * something elected, that several kinds of actor may share and that
+   * `has trait` can ask about — none of which is true here. Inventing one to
+   * satisfy a factory signature would put a trait the learner never wrote into
+   * `traits()` and into anything that introspects membership.
+   *
+   * Returns the property so the caller can read and write it; generated actor
+   * modules bind it to a const and their handlers close over it.
+   */
+  defineProperty<T>(
+    id: string,
+    type: PropertyType,
+    defaultValue: T,
+    opts: {readonly?: boolean; name?: string} = {},
+  ): Property<T> {
+    const property: Property<T> = {
+      id,
+      type,
+      default: defaultValue,
+      readonly: opts.readonly ?? false,
+      name: opts.name,
+      scope: 'actor',
+      // The actor kind that declared it, which is what an error about a missing
+      // slot needs to name. There is no trait to point at, and `ownerKind` is
+      // what says so rather than leaving a reader to infer it from the id.
+      ownerId: this.id,
+      ownerKind: 'actor',
+    };
+    this.overrides.push([property, defaultValue]);
+    return property;
   }
 
   /** Respond to an event raised for this actor. */

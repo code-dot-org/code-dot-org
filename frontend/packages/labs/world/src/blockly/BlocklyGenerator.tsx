@@ -14,6 +14,11 @@ import {
   BlocklyWorkspace,
 } from '@code-dot-org/blockly';
 
+import {
+  ownPropertyDeclarations,
+  parseActorOwnMeta,
+  type ActorOwnMeta,
+} from './actorMeta';
 import {assembleActorModule, assembleWorldModule} from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {buildDomainPalette} from './domainBlocks';
@@ -53,8 +58,12 @@ export interface BlocklyGeneratorHandle {
 
 export const BlocklyGenerator = forwardRef<
   BlocklyGeneratorHandle,
-  {onReady?: () => void; projectRules?: readonly RuleMeta[]}
->(function BlocklyGenerator({onReady, projectRules}, ref) {
+  {
+    onReady?: () => void;
+    projectRules?: readonly RuleMeta[];
+    actorOwnProperties?: readonly ActorOwnMeta[];
+  }
+>(function BlocklyGenerator({onReady, projectRules, actorOwnProperties}, ref) {
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
   const generatorRef: MutableRefObject<JavascriptGenerator | null> =
     useRef(null);
@@ -74,8 +83,12 @@ export const BlocklyGenerator = forwardRef<
     // Every rule's own read-only setters: this palette generates ALL of the
     // project's Blockly files, so it cannot be scoped to one `.rule` the way the
     // editor's is. It is never shown, so the extra blocks cost nothing.
-    () => buildDomainPalette(projectRules ?? [], {allRuleModules: true}),
-    [projectRules],
+    () =>
+      buildDomainPalette(projectRules ?? [], {
+        allRuleModules: true,
+        actorOwnProperties: actorOwnProperties ?? [],
+      }),
+    [projectRules, actorOwnProperties],
   );
   // `generate` is a stable closure; read the current root types through a ref.
   const rootTypesRef = useRef(rootTypes);
@@ -188,6 +201,20 @@ export const BlocklyGenerator = forwardRef<
         // owns the blocks chained below it as its body and generates that chain
         // itself — so generate it `thisOnly` to stop `scrub_` from also appending
         // the chain after it.
+        // An `.actor` file's own properties. `__ruleModule` marks this module
+        // for `refCode` the same way a `.rule`'s does: a get/set block here
+        // names the local const rather than importing the module into itself,
+        // which is the only sensible reading when the property's whole scope is
+        // this file.
+        const ownActor =
+          shape === 'actor' && path
+            ? parseActorOwnMeta(path.replace(/\.actor$/, ''), contents)
+            : undefined;
+        if (ownActor) {
+          (generator as {__ruleModule?: string}).__ruleModule =
+            ownActor.modulePath;
+        }
+
         const generated = workspace.getTopBlocks(true).map(block => ({
           type: block.type,
           code: asString(
@@ -197,7 +224,10 @@ export const BlocklyGenerator = forwardRef<
         return generator.finish(
           shape === 'world'
             ? assembleWorldModule(generated, worldEventsRef.current)
-            : assembleActorModule(generated),
+            : assembleActorModule(
+                generated,
+                ownActor ? ownPropertyDeclarations(ownActor) : '',
+              ),
         );
       },
     }),

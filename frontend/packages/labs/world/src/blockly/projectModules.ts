@@ -9,6 +9,7 @@
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import type {EffectParameter} from '../effect/model/types';
 
+import {parseActorOwnMeta, type ActorOwnMeta} from './actorMeta';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {FOUNDATION_RULE_NAMES} from './foundation';
 import {label} from './label';
@@ -257,6 +258,30 @@ function resolveRuleRef(
 }
 
 /** Parse the project's declarative `.rule` files (under `rules/`) into RuleMeta. */
+/**
+ * Every actor's own declared properties, by file.
+ *
+ * The counterpart to {@link projectRuleMetas}, and it exists for the headless
+ * generator rather than for any editor: one palette compiles every file, so a
+ * property declared in `player.actor` must have its blocks DEFINED even while
+ * `coin.actor` is being generated. An editor asks for one actor instead —
+ * their scope is the declaring file (see `actorMeta`).
+ */
+export function projectActorOwnMetas(
+  files: Record<string, string>,
+): ActorOwnMeta[] {
+  const metas: ActorOwnMeta[] = [];
+  for (const [path, contents] of Object.entries(files)) {
+    if (path.startsWith('actors/') && path.endsWith('.actor')) {
+      const meta = parseActorOwnMeta(path.replace(/\.actor$/, ''), contents);
+      if (meta) {
+        metas.push(meta);
+      }
+    }
+  }
+  return metas;
+}
+
 export function projectRuleMetas(files: Record<string, string>): RuleMeta[] {
   const metas: RuleMeta[] = [];
   for (const [path, contents] of Object.entries(files)) {
