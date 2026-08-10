@@ -3,16 +3,17 @@ Feature: Certificate page features
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
-  @contentful_key
+  # api/hour routes hit a stub implementation of contentful for ui-test-
+  # tutorials, so that they can run in CI without contentful access tokens.
+  # See dashboard/engines/hoc_legacy/lib/hoc_legacy/tutorials.rb
   Scenario: share page preserves certificate when redirecting
   # Reset lesson data (otherwise it will pull a cached certificate from
   # other tests)
-    Given I am on "http://studio.code.org/courses/mc/units/1/reset"
+    Given I am on "http://studio.code.org/courses/ui-test-artist/units/1/reset"
     And I wait for the lab page to fully load
-    Then I wait until the Minecraft game is loaded
 
   # Set up a customized certificate
-    Given I am on "http://studio.code.org/api/hour/finish/mc"
+    Given I am on "http://studio.code.org/api/hour/finish/ui-test-artist"
     And I wait until current URL contains "/congrats"
     And I wait to see element with ID "uitest-certificate"
     And I type "Robo Coder" into "#name"
@@ -24,7 +25,7 @@ Feature: Certificate page features
     When I navigate to the certificate share page
     And I wait until current URL contains "http://studio.code.org/certificates"
     And I wait to see an image "/certificate_images/"
-    And I see custom certificate image with name "Robo Coder" and course "mc"
+    And I see custom certificate image with name "Robo Coder" and course "ui-test-artist"
 
   @no_mobile
   Scenario: certificate page with no course name
