@@ -1729,6 +1729,9 @@ describe('actor-placing block generators', () => {
         definitions_: definitions,
         statementToCode: () => body,
         blockToCode: (b: unknown) => (b === nextBlock ? body : ''),
+        // Blockly maps a variable id to a safe identifier; the id here stands
+        // in for one the workspace made.
+        getVariableName: () => 'placed',
       } as never,
       {} as never,
     ) as string;
@@ -1747,6 +1750,35 @@ describe('actor-placing block generators', () => {
         'actor.set(X);\n}\n',
     );
     expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
+  });
+
+  it('binds `actor` when no name was chosen, as every saved block expects', () => {
+    // The compatibility case. A block saved before the field existed has no
+    // NAMED value, and its body says `this actor` MEANING the new actor — so
+    // the absence of state has to keep binding `actor`.
+    const code = run(
+      'world_add_actor',
+      {ACTOR: 'actors/coin', id: 'add-coin'},
+      {},
+      '',
+    );
+
+    expect(code).toContain('const actor = world.addActor(');
+  });
+
+  it('binds the variable instead when one is named', () => {
+    // Which is the whole point: `actor` is left alone, so the body's
+    // `this actor` goes on meaning whatever encloses the block — the player
+    // doing the placing, rather than the bullet being placed.
+    const code = run(
+      'world_add_actor',
+      {ACTOR: 'actors/coin', id: 'add-coin', NAMED: 'named', VAR: 'v1'},
+      {},
+      '',
+    );
+
+    expect(code).toContain('const placed = world.addActor(');
+    expect(code).not.toContain('const actor = world.addActor(');
   });
 });
 
