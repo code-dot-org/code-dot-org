@@ -351,8 +351,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // in the deps. On a project with no scenes yet the pinned scene becomes
   // the first scene outright; materializing the synthesized default too
   // would leave an untouched "Scene 1" in every level sharing the project.
-  // A scene-less project WITH saved code predates the scenes UI, so that
-  // code is preserved as the default scene, pin appended after.
+  // The exception is a scene-less project whose top-level source holds real
+  // code (it predates the scenes UI — a fresh project's source is just the
+  // default workspace): that code is preserved as the default scene, pin
+  // appended after.
   const pinnedSceneId = levelProperties.fixedSceneId;
   useEffect(() => {
     if (!pinnedSceneId) {
@@ -367,11 +369,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         name: levelProperties.fixedSceneName || 'Scene',
         source: DEFAULT_SCENE_SOURCE,
       };
-      const existing = prev.scenes?.length
-        ? prev.scenes
-        : prev.source
-        ? getScenes(prev)
-        : [];
+      const existing =
+        prev.scenes?.length ||
+        (prev.source && !isEqual(prev.source, DEFAULT_SCENE_SOURCE))
+          ? getScenes(prev)
+          : [];
       return {...prev, scenes: [...existing, pinned]};
     });
   }, [
