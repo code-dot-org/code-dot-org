@@ -22,10 +22,12 @@ describe('SeeMoreCourses', () => {
     expect(wrapper.find(MuiButton).exists()).toBe(false);
     const courseCards = wrapper.find(CourseCard);
     expect(courseCards).toHaveLength(courses.length);
-    expect(courseCards.at(0).props()).toMatchObject({
-      title: courses[0].title,
-      description: courses[0].description,
-      link: courses[0].link,
+    courses.forEach((course, index) => {
+      expect(courseCards.at(index).props()).toMatchObject({
+        title: course.title,
+        description: course.description,
+        link: course.link,
+      });
     });
   });
 
@@ -38,11 +40,13 @@ describe('SeeMoreCourses', () => {
     expect(wrapper.find(MuiButton).exists()).toBe(false);
     const courseCards = wrapper.find(CourseCard);
     expect(courseCards).toHaveLength(courses.length);
-    expect(courseCards.at(0).props()).toMatchObject({
-      title: courses[0].title,
-      description: courses[0].description,
-      link: courses[0].link,
-      isProfessionalLearningCourse: true,
+    courses.forEach((course, index) => {
+      expect(courseCards.at(index).props()).toMatchObject({
+        title: course.title,
+        description: course.description,
+        link: course.link,
+        isProfessionalLearningCourse: true,
+      });
     });
   });
 });
