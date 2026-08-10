@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-06 17:50:43 UTC",
+    "serialized_at": "2026-08-07 18:50:24 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -76,6 +76,21 @@
         "lesson_group.key": "",
         "script.name": "pl-aif-intro-programming-js"
       }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Interactivity in Web Apps",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js"
+      }
     }
   ],
   "lesson_activities": [
@@ -111,6 +126,18 @@
       "seeding_key": {
         "lesson_activity.key": "a86e7808-a323-434a-8cc9-111cc8b6e066",
         "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js"
+      }
+    },
+    {
+      "key": "40573891-8f3f-47c6-bb97-ced11fcb0ecb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40573891-8f3f-47c6-bb97-ced11fcb0ecb",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "pl-aif-intro-programming-js"
       }
@@ -192,6 +219,17 @@
       "seeding_key": {
         "activity_section.key": "37896d12-c969-4f62-9abf-11a2da8bd7d9",
         "lesson_activity.key": "a86e7808-a323-434a-8cc9-111cc8b6e066"
+      }
+    },
+    {
+      "key": "3f5fadca-9211-4c6e-979c-36a376d68e5a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Interactivity in Web Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a",
+        "lesson_activity.key": "40573891-8f3f-47c6-bb97-ced11fcb0ecb"
       }
     }
   ],
@@ -833,6 +871,116 @@
       "level_keys": [
         "fpl-aif2-js-wireframe-sketchlab"
       ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Interactivity in Web Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-interactivity-in-web-apps"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
+      },
+      "level_keys": [
+        "pl-aif1-js-interactivity-in-web-apps"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Interactivity in Web Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-what-is-dom"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
+      },
+      "level_keys": [
+        "pl-aif1-js-what-is-dom"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Interactivity in Web Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-how-change-happens"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
+      },
+      "level_keys": [
+        "pl-aif1-js-how-change-happens"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Interactivity in Web Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-action-parts-of-a-page"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
+      },
+      "level_keys": [
+        "pl-aif1-js-action-parts-of-a-page"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Interactivity in Web Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-interactivity-weblab"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
+      },
+      "level_keys": [
+        "pl-aif1-js-interactivity-weblab"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1182,6 +1330,66 @@
         "lesson_group.key": "",
         "script.name": "pl-aif-intro-programming-js",
         "activity_section.key": "37896d12-c969-4f62-9abf-11a2da8bd7d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-interactivity-in-web-apps",
+        "script_level.level_keys": [
+          "pl-aif1-js-interactivity-in-web-apps"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-what-is-dom",
+        "script_level.level_keys": [
+          "pl-aif1-js-what-is-dom"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-how-change-happens",
+        "script_level.level_keys": [
+          "pl-aif1-js-how-change-happens"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-action-parts-of-a-page",
+        "script_level.level_keys": [
+          "pl-aif1-js-action-parts-of-a-page"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-interactivity-weblab",
+        "script_level.level_keys": [
+          "pl-aif1-js-interactivity-weblab"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "3f5fadca-9211-4c6e-979c-36a376d68e5a"
       }
     }
   ],
