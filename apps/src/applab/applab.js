@@ -12,7 +12,6 @@ import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
 import autogenerateML from '@cdo/apps/applab/ai';
-import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import localization from '@cdo/apps/localization';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
@@ -703,13 +702,6 @@ Applab.init = function (config) {
   });
 
   config.dropletConfig = {...dropletConfig};
-
-  if (config.level.aiEnabled) {
-    config.dropletConfig = utils.deepMergeConcatArrays(
-      config.dropletConfig,
-      aiConfig
-    );
-  }
 
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
