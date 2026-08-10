@@ -62,6 +62,11 @@ import {
   traitContextExtension,
 } from './extensions/actorContext';
 import {
+  addActorNameExtension,
+  addActorNameMutator,
+  namesPlacedActor,
+} from './extensions/addActorName';
+import {
   animationImportFieldExtension,
   backgroundImportFieldExtension,
   spriteImportFieldExtension,
@@ -2886,6 +2891,9 @@ const addImport = (generator: unknown, key: string, code: string): void => {
 const worldAddActor = defineBlock({
   type: 'world_add_actor',
   message0: 'add actor %1',
+  // No `as …` in the JSON: the choice is built only where there is another
+  // actor to shadow, so a world placing its level reads `add actor ⟨Coin⟩` and
+  // nothing more (extensions/addActorName).
   args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions}],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
@@ -2895,9 +2903,15 @@ const worldAddActor = defineBlock({
   // split asteroid, an enemy on a timer. Both, because the live World takes the
   // same arguments the builder does (`World.addActor`) — so no context guard,
   // and the block reads the same wherever it sits.
-  extensions: [actorOptionsExtension],
+  extensions: [actorOptionsExtension, addActorNameExtension],
+  // Optional `as ⟨…⟩`, which is what lets a body reach the actor that DID the
+  // placing: unticked the new actor is `this actor` as it always was, ticked it
+  // is a variable and `this actor` keeps meaning the enclosing one.
+  mutator: addActorNameMutator,
   style: 'behavior_blocks',
-  tooltip: 'Place an instance of an actor and set its per-instance properties.',
+  tooltip:
+    'Place an instance of an actor and set its per-instance properties. ' +
+    'Tick “as” to name it, so “this actor” still means the actor placing it.',
   generator: {
     javascript(block, generator) {
       const actor = block.getFieldValue('ACTOR');
@@ -2929,8 +2943,15 @@ const worldAddActor = defineBlock({
       // Which layer it lands in — its nearest layer ancestor, or the default
       // (blockly/layers). Resolved lexically, so no layer context exists at
       // runtime and nothing has to track one.
+      // Named, so the placed actor is a variable and `actor` is left alone —
+      // the body's `this actor` goes on meaning whatever encloses this block.
+      // Unnamed, `const actor` shadows as it always has, which is the reading
+      // a `.world` file needs and every saved project already relies on.
+      const binding = namesPlacedActor(block)
+        ? generator.getVariableName(block.getFieldValue('VAR'))
+        : 'actor';
       return (
-        `{\nconst actor = world.addActor(${template}, ${str(
+        `{\nconst ${binding} = world.addActor(${template}, ${str(
           block.id,
         )}, ${str(type)}, ${str(layerOf(block))});\n` + `${body}}\n`
       );
