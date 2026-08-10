@@ -21,6 +21,10 @@ describe('imageUrlModeration', () => {
     mockModerateImageUrl.mockResolvedValue('safe');
   });
 
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   describe('isAbsoluteImageUrl', () => {
     it('matches ABSOLUTE_REGEXP', () => {
       expect(isAbsoluteImageUrl('https://example.com/a.png')).toBe(
@@ -122,7 +126,6 @@ describe('imageUrlModeration', () => {
         normalizedUrl: url,
       });
       expect(mockModerateImageUrl).toHaveBeenCalledTimes(2);
-      jest.useRealTimers();
     });
   });
 });
