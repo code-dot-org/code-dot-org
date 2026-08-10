@@ -56,8 +56,8 @@ export default function EdgeSelectionOutlines({
       lastBoxes.current.clear();
       return;
     }
-    // Our own rings hang off this flow's viewport, so start from one of them
-    // rather than a document-wide query that could find another flow.
+    // ViewportPortal mounts the borders inside the viewport, so climbing up from
+    // one of them reaches it without searching the page for it.
     const viewport = outlineRefs.current
       .values()
       .next()
