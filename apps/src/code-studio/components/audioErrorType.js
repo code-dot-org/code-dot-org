@@ -1,6 +1,6 @@
-// Lives in its own module so AudioRecorder can consume it without
-// importing AssetManager, which imports AudioRecorder back — the last
-// real cycle between the two.
+// Do not fold these into AssetManager: modules that AssetManager
+// imports need these constants, and importing AssetManager back to get
+// them creates an import cycle.
 export const AudioErrorType = {
   NONE: 'none',
   INITIALIZE: 'initialize',
