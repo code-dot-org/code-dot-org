@@ -66,6 +66,10 @@ class DCDOBase < DynamicConfigBase
       'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-proper0ties-by-lesson-id', true),
       'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
+      # Apex domain for the Web Lab 2 / Python Lab sandboxed preview origin.
+      # Set to 'codeprojects.org' to revert to the pre-migration domain; see
+      # docs/weblab-preview-domain-migration.md.
+      'sandboxed-preview-domain': DCDO.get('sandboxed-preview-domain', 'codeaiprojects.org'),
       'brand-router-enabled': DCDO.get('brand-router-enabled', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
       # Controls whether the output image goes through the additional LLM-as-judge safety layer.

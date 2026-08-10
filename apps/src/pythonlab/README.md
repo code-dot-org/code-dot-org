@@ -7,12 +7,14 @@ Python Lab runs student Python code in the browser using
 
 The pyodide web worker (`pyodideWebWorker.ts`) and the service worker that
 makes blocking `input()` calls work (`inputServiceWorker.js`) both run
-inside a hidden iframe on a dedicated `pyodide-sandbox.preview.codeprojects.org`
-subdomain, not on `studio.code.org`. `codeprojects.org` is a wholly
+inside a hidden iframe on a dedicated `pyodide-sandbox.preview.codeaiprojects.org`
+subdomain, not on `studio.code.org`. `codeaiprojects.org` is a wholly
 separate domain from `code.org`, so student Python execution
 never has access to studio.code.org's cookies or session -- the same
 isolation goal Web Lab 2 already solves for student HTML/JS (see
-`apps/src/weblab2/README.md`).
+`apps/src/weblab2/README.md`). The apex domain is switchable via the
+`sandboxed-preview-domain` DCDO flag (see
+`docs/weblab-preview-domain-migration.md`).
 
 - `pyodideSandboxManager.ts` (runs on `studio.code.org`) creates the
   hidden iframe and exposes `asyncRun`/`restartPyodideIfProgramIsRunning`/
@@ -48,7 +50,7 @@ in Chrome to load the flag settings). Recommended value, so it works on
 either port:
 
 ```
-http://localhost-studio.code.org:9000,http://localhost-studio.code.org:3000,http://pyodide-sandbox.preview.localhost.codeprojects.org:9000,http://pyodide-sandbox.preview.localhost.codeprojects.org:3000
+http://localhost-studio.code.org:9000,http://localhost-studio.code.org:3000,http://pyodide-sandbox.preview.localhost.codeaiprojects.org:9000,http://pyodide-sandbox.preview.localhost.codeaiprojects.org:3000
 ```
 
 Unlike Web Lab 2's preview (which uses a per-project channel id in its
@@ -56,7 +58,7 @@ subdomain, requiring a flag exception per project tested), the pyodide
 sandbox always uses the same fixed subdomain -- nothing here is
 per-project state, so one flag entry covers every Python Lab level.
 
-`*.preview.localhost.codeprojects.org` already resolves to `127.0.0.1`
+`*.preview.localhost.codeaiprojects.org` already resolves to `127.0.0.1`
 and `apps/webpack.config.js`'s devServer `allowedHosts` already covers it
 via its existing wildcard entry, so no other local configuration is
 needed.

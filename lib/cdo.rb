@@ -106,12 +106,34 @@ module Cdo
       canonical_hostname('hourofcode.com')
     end
 
+    # Legacy Web Lab (project_type: weblab) shares raw student HTML as a
+    # top-level document on the bare codeprojects.org apex. Kept on this domain.
     def codeprojects_hostname
       return 'codeprojects.org' if rack_env?(:production)
       return "localhost.codeprojects.org" if rack_env?(:development) || ci_webserver?
       return "#{stack_name}.codeprojects.org"
     end
 
+    # Web Lab 2 (project_type: weblab2) and Python Lab's pyodide sandbox render
+    # student code inside sandboxed iframes on a dedicated domain, so the
+    # sandboxed-preview architecture does not share reputation with legacy
+    # codeprojects.org content. See docs/weblab-preview-domain-migration.md.
+    def codeaiprojects_hostname
+      return 'codeaiprojects.org' if rack_env?(:production)
+      return "localhost.codeaiprojects.org" if rack_env?(:development) || ci_webserver?
+      return "#{stack_name}.codeaiprojects.org"
+    end
+
+    # Wildcard preview origin: <project>.preview.<codeaiprojects_hostname>.
+    def preview_codeaiprojects_hostname
+      "preview.#{codeaiprojects_hostname}"
+    end
+
+    # The pre-migration sandboxed-preview origin. Still served (routes, CORS,
+    # CSP) so the 'sandboxed-preview-domain' DCDO flag can point clients back
+    # here without a deploy. Remove once the migration is complete, together
+    # with the preview DNS record, certificate SAN and CloudFront alias in
+    # aws/cloudformation/components/codeprojects_resources.yml.erb.
     def preview_codeprojects_hostname
       "preview.#{codeprojects_hostname}"
     end

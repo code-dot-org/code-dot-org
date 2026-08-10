@@ -74,9 +74,9 @@ experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
 experiments.USE_AI_GATEWAY = 'useAiGateway';
 // Enable speech-to-text input in AI chat lab and AI tutor for all models
 experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
-// Run the pyodide worker in a hidden iframe on a separate codeprojects.org
-// subdomain, isolated from studio.code.org's cookies/session, instead of directly
-// on studio.code.org.
+// Run the pyodide worker in a hidden iframe on a separate sandboxed-preview
+// subdomain (see apps/src/pythonlab/README.md), isolated from studio.code.org's
+// cookies/session, instead of directly on studio.code.org.
 experiments.PYTHONLAB_SEPARATE_DOMAIN = 'pythonlab-separate-domain';
 // Student scrapbook entrypoint + "My scrapbook" dropdown link.
 // Enable with ?student-scrapbook=true or ?enableExperiments=student-scrapbook.

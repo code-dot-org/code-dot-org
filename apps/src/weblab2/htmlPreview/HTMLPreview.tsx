@@ -21,7 +21,10 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
+import {
+  getInnerEnvironment,
+  getPreviewDomain,
+} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
@@ -92,7 +95,9 @@ export const HTMLPreview: React.FC = () => {
       }
     }
 
-    return `${location.protocol}//${prefix}.preview.${subdomain}codeprojects.org${port}`;
+    return `${
+      location.protocol
+    }//${prefix}.preview.${subdomain}${getPreviewDomain()}${port}`;
   }, [
     isEditingExemplar,
     isStartMode,
@@ -522,7 +527,7 @@ export const HTMLPreview: React.FC = () => {
         ) : isLevelLoading ? (
           <CodebridgeEmptyState title="Loading..." />
         ) : (
-          /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
+          /* This iframe points to the environment-specific preview origin (see previewUrl above). That url will eventually
             route to InnerHTMLPreview. */
           <div
             ref={previewContainerRef}

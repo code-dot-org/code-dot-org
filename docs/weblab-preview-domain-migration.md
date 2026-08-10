@@ -20,20 +20,43 @@ share page embeds moves.
 
 ## Scope of the application cutover (Part 2)
 
-Single source of truth is `CDO.preview_codeaiprojects_hostname`
-(`lib/cdo.rb`), built from a new `CDO.codeaiprojects_hostname`. This is a **hard
-cutover**: once merged and deployed, previews point at
-`*.preview.codeaiprojects.org`. Callers updated:
+The server serves the preview endpoints on **both** domains
+(`CDO.preview_codeaiprojects_hostname` and the pre-migration
+`CDO.preview_codeprojects_hostname`, `lib/cdo.rb`); the client decides which
+one to embed via the **`sandboxed-preview-domain` DCDO flag**, exposed to the
+frontend through `frontend_config` (`lib/dynamic_config/dcdo.rb`) and read by
+`getPreviewDomain()` (`apps/src/util/codeprojectsPreviewOrigin.ts`). The flag
+defaults to `codeaiprojects.org`; setting it to `codeprojects.org` reverts the
+cutover without a deploy. Values outside those two domains fall back to the
+default.
 
-- Routing / host constraints — `dashboard/config/routes.rb`
-- Preview CSP `frame-ancestors` — `dashboard/app/controllers/codeprojects_preview_controller.rb`
+Dual-domain (accept either, no flag needed — pages derive their outer origin
+from their own hostname):
+
+- Routing / host constraints — `dashboard/config/routes.rb`. The preview
+  constraint blocks sit at the very top of the route table so that a preview
+  host can reach no other *Rails route*: a `match '*path' ... via: :all`
+  catch-all 404s everything else before the host-unconstrained routes
+  (`draw :api`, `draw :marketing`, `/cable`, ...) are consulted.
+  `dashboard/test/integration/preview_hosts_test.rb` pins this containment.
+  Caveat: Rack middleware mounted ahead of routing (`FilesApi` and friends,
+  `/v3/...` — see `dashboard/config/application.rb`) has no host constraint
+  and still answers on the preview hosts; route order cannot change that.
+- Preview CSP (`frame-ancestors`, dev websocket `connect-src`) —
+  `dashboard/app/controllers/codeprojects_preview_controller.rb`
 - Level-starter-asset CORS — `dashboard/app/controllers/level_starter_assets_controller.rb`
 - Session-cookie domain scoping — `lib/cdo/rack/request.rb`
 - Dev host allowlists — `dashboard/config/environments/development.rb`, `apps/webpack.config.js`
-- Preview URL builders — `apps/src/weblab2/htmlPreview/HTMLPreview.tsx`, `apps/src/pythonlab/pyodideSandboxManager.ts`
 - Origin-parsing helpers — `apps/src/util/codeprojectsPreviewOrigin.ts`, `apps/src/weblab2/htmlPreview/weblab2_project_service_worker.js`
-- Dev SW fallback + docs — `apps/src/weblab2/htmlPreview/useProjectServiceWorker.ts`, `apps/src/weblab2/README.md`
-- IaC — `aws/cloudformation/components/codeaiprojects_resources.yml.erb` (new), `aws/cloudformation/cloud_formation_stack.yml.erb`
+- Dev SW fallback — `apps/src/weblab2/htmlPreview/useProjectServiceWorker.ts`
+
+Flag-driven (pick the domain to embed):
+
+- Preview URL builders — `apps/src/weblab2/htmlPreview/HTMLPreview.tsx`,
+  `apps/src/pythonlab/pyodideSandboxManager.ts`, both via `getPreviewDomain()`
+
+Because the old domain keeps serving previews, clients running a stale bundle
+(open tabs, CDN-cached JS) keep working across the deploy.
 
 The Rails controller/route/view keep the `codeprojects_preview` name (internal
 only, no functional coupling to the domain) to limit churn.
@@ -42,8 +65,9 @@ only, no functional coupling to the domain) to limit churn.
 
 `staging` auto-deploys. If the app change deploys before
 `*.preview.codeaiprojects.org` resolves and serves a valid cert, **all Web Lab 2
-and Python Lab previews break**. Do the infra steps first, per environment, then
-merge/deploy the app change.
+and Python Lab previews break** (until the `sandboxed-preview-domain` DCDO flag
+is set to `codeprojects.org`, which is the escape hatch, not the plan). Do the
+infra steps first, per environment, then merge/deploy the app change.
 
 The two changes are therefore split into separate PRs (see below): the
 infrastructure lands and finishes propagating first, then the application cutover
@@ -112,13 +136,10 @@ Do this only after Part 2 has deployed and been verified in **every**
 environment. None of it is user-facing; it removes infrastructure and code that
 no longer serves traffic.
 
-Part 2 leaves `*.preview.codeprojects.org` resolving (the legacy component still
-provisions it) but matching no preview route. A transitional guard in
-`dashboard/config/routes.rb` — the `retired_preview_host` local excluded from the
-dashboard block — makes those hostnames 404 rather than fall through to the full
-dashboard route table. Part 3 removes both the guard and the DNS that makes it
-necessary, in that order of dependency: **delete the infrastructure first, then
-the guard.**
+Part 2 leaves `*.preview.codeprojects.org` fully serving previews so the
+`sandboxed-preview-domain` DCDO flag can revert to it. Part 3 retires that:
+**confirm the flag is unset (or set to `codeaiprojects.org`) everywhere and has
+been stable there, then delete the infrastructure first, then the code paths.**
 
 1. **Remove the preview resources from
    `aws/cloudformation/components/codeprojects_resources.yml.erb`** (the legacy
@@ -135,10 +156,21 @@ the guard.**
    Schedule this deliberately rather than bundling it with unrelated stack
    changes.
 
-2. **Remove the transitional route guard** in `dashboard/config/routes.rb`: the
-   `retired_preview_host` local and its alternative in the negative-lookahead
-   host constraint. Safe once step 1 has deployed, because the hostnames no
-   longer resolve.
+2. **Remove the dual-domain code paths.** Safe once step 1 has deployed,
+   because the old hostnames no longer resolve:
+   - `CDO.preview_codeprojects_hostname` (`lib/cdo.rb`) and its uses in
+     `dashboard/config/routes.rb` (`preview_host_pattern`), the preview CSP
+     (`codeprojects_preview_controller.rb`), and the starter-asset CORS
+     pattern (`level_starter_assets_controller.rb`)
+   - `'codeprojects.org'` in `PREVIEW_DOMAINS`
+     (`apps/src/util/codeprojectsPreviewOrigin.ts`) — at which point
+     `getPreviewDomain()` and the `sandboxed-preview-domain` flag entry in
+     `lib/dynamic_config/dcdo.rb` can go too, if the switch is no longer wanted
+   - the `code(?:ai)?projects` regex alternations in
+     `codeprojectsPreviewOrigin.ts`, `weblab2_project_service_worker.js` and
+     `useProjectServiceWorker.ts`
+   - the codeprojects cases in `dashboard/test/integration/preview_hosts_test.rb`
+     and `dashboard/test/controllers/level_starter_assets_controller_test.rb`
 
 3. **Remove the dead development host entries** for the old preview origin:
    - `dashboard/config/environments/development.rb` — the
@@ -171,17 +203,16 @@ Legacy Web Lab's serving path is not part of this migration. Do **not** remove:
 
 ## Rollback
 
-Revert **Part 2**. Because the legacy `codeprojects.org` resources are untouched
-and the codeaiprojects CloudFront distribution and certificate are separate
-resources, reverting the application cutover restores
-`*.preview.codeprojects.org` previews immediately. The codeaiprojects
-infrastructure from Part 1 can be left in place (idle) or torn down separately.
+Set the `sandboxed-preview-domain` DCDO flag to `codeprojects.org`. No deploy is
+required: the old domain's routes, CORS and CSP stay live throughout Part 2, so
+new page loads embed the old preview origin as soon as the flag propagates
+(pages already open pick it up on reload). Reverting the Part 2 code is also
+safe but should not be necessary.
 
 This is only true while Part 3 is outstanding. Once Part 3 has removed the
 `*.preview.codeprojects.org` certificate SAN, DNS record and CloudFront alias,
-reverting Part 2 alone no longer restores previews — the old hostnames will not
-resolve. After that point, roll back by reverting Part 3 as well, or by fixing
-forward.
+the flag has nothing to point back to — the old hostnames will not resolve.
+After that point, roll back by reverting Part 3 as well, or by fixing forward.
 
 ## Notes / open items
 

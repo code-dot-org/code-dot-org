@@ -1,6 +1,34 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # Sandboxed preview hosts (Web Lab 2's HTML preview, Python Lab's pyodide
+  # sandbox). Declared before everything else so these hosts can reach no other
+  # Rails route: the catch-all 404s any other path before the
+  # host-unconstrained routes below (draw :api, draw :marketing, /cable, ...)
+  # are consulted. Rack middleware mounted ahead of routing (FilesApi and
+  # friends, /v3/... — see config/application.rb) is not host-constrained and
+  # still answers on these hosts. Both the codeaiprojects.org (default) and
+  # codeprojects.org (pre-migration) origins are served; clients pick which one
+  # to embed via the 'sandboxed-preview-domain' DCDO flag. See
+  # docs/weblab-preview-domain-migration.md.
+  preview_host_pattern = [
+    CDO.preview_codeaiprojects_hostname,
+    CDO.preview_codeprojects_hostname,
+  ].map {|host| Regexp.escape(host)}.join('|')
+
+  constraints host: /^pyodide-sandbox\.(?:#{preview_host_pattern})$/ do
+    get '/', to: 'pyodide_sandbox#show'
+  end
+
+  constraints host: /^[^.]+\.(?:#{preview_host_pattern})$/ do
+    get '/', to: 'codeprojects_preview#show'
+    # Must be served from / on the preview host to control the root scope:
+    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
+    # Custom 404 page for anything else, GET or not, so no other route can
+    # match on a preview host.
+    match '*path', to: 'codeprojects_preview#not_found', via: :all
+  end
+
   mount ActionCable.server => '/cable'
   get 'chatter/index'
 
@@ -31,20 +59,10 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: "pyodide-sandbox.#{CDO.preview_codeprojects_hostname}" do
-    get '/', to: 'pyodide_sandbox#show'
-  end
-
-  constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
-    get '/', to: 'codeprojects_preview#show'
-    # Must be served from / on preview.codeprojects.org to control the root scope:
-    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
-    # Custom 404 page for codeprojects preview
-    get '*path', to: 'codeprojects_preview#not_found'
-  end
-
-  # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname}|[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)})/ do
+  # This matches any host that is neither the codeprojects apex nor a sandboxed
+  # preview host. The preview hosts are already fully handled by the constraint
+  # blocks at the top of this file; excluding them here is defense in depth.
+  constraints host: /^(?!#{Regexp.escape(CDO.codeprojects_hostname)}|[^.]+\.(?:#{preview_host_pattern}))/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show

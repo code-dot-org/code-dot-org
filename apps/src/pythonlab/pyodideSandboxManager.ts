@@ -18,7 +18,10 @@ import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
-import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
+import {
+  getInnerEnvironment,
+  getPreviewDomain,
+} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -81,17 +84,23 @@ let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
   false
 );
 
-// The pyodide worker runs inside a hidden iframe on a dedicated codeprojects.org
-// subdomain (a wholly separate registrable domain from code.org), so student Python
-// execution never has access to studio.code.org's cookies/session. See
+// The pyodide worker runs inside a hidden iframe on a dedicated subdomain of
+// getPreviewDomain() (a wholly separate registrable domain from code.org), so
+// student Python execution never has access to studio.code.org's cookies/session. See
 // apps/src/pythonlab/sandbox/pyodideSandboxWorkerManager.ts, which owns the actual worker, and
 // apps/src/pythonlab/README.md for the full architecture.
 const getSandboxOrigin = () => {
   const {subdomain, port} = getInnerEnvironment();
-  return `${location.protocol}//pyodide-sandbox.preview.${subdomain}codeprojects.org${port}`;
+  return `${
+    location.protocol
+  }//pyodide-sandbox.preview.${subdomain}${getPreviewDomain()}${port}`;
 };
 
-const sandboxOrigin = getSandboxOrigin();
+// Resolved on first use rather than at module load, then pinned so the iframe
+// src and the postMessage origin checks can't diverge if the DCDO-driven
+// preview domain changes mid-session.
+let cachedSandboxOrigin: string | undefined;
+const sandboxOrigin = () => (cachedSandboxOrigin ??= getSandboxOrigin());
 
 const handlePyodideMessage = (data: PyodideMessage) => {
   const {type, id, message} = data;
@@ -214,7 +223,7 @@ const setUpPyodideSandbox = () => {
   const readyPromise = new Promise<void>(resolve => {
     window.addEventListener('message', event => {
       // The sandbox iframe is the only origin we should ever trust messages from.
-      if (event.origin !== sandboxOrigin) {
+      if (event.origin !== sandboxOrigin()) {
         return;
       }
       switch (event.data?.type) {
@@ -247,7 +256,7 @@ const setUpPyodideSandbox = () => {
 
   const iframe = document.createElement('iframe');
   iframe.style.display = 'none';
-  iframe.src = sandboxOrigin;
+  iframe.src = sandboxOrigin();
   document.body.appendChild(iframe);
 
   return {iframe, readyPromise};
@@ -295,7 +304,7 @@ const asyncRun = (() => {
           source,
           validationFile,
         },
-        sandboxOrigin
+        sandboxOrigin()
       );
     });
   };
@@ -319,7 +328,7 @@ const restartPyodideIfProgramIsRunning = () => {
     callbacks = {};
     pyodideSandboxIframe.contentWindow?.postMessage(
       {type: ToPyodideSandboxMessage.RESTART_WEB_WORKER},
-      sandboxOrigin
+      sandboxOrigin()
     );
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -344,7 +353,7 @@ const sendInput = (value: string): void => {
       value,
       id: lastInputId,
     },
-    sandboxOrigin
+    sandboxOrigin()
   );
   lastInputId = '';
 };
