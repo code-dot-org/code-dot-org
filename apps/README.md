@@ -64,6 +64,8 @@ yarn build
 - `yarn build:dist` builds a minified version suitable for production
 - `yarn clean` will clean the build/ directory
 
+See also: [Full build with blockly changes](#full-build-with-blockly-changes)
+
 ### Building with rspack (opt-in)
 
 Appending `--rspack` to `yarn start`, `yarn build`, or `yarn build:dist`
@@ -76,8 +78,6 @@ command prints a reminder. Switching between bundlers cleans
 `build/package/js` automatically. Source maps work differently under
 rspack; see
 [Source maps under rspack](#source-maps-under-rspack-yarn-start---rspack).
-
-See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
 ## Dev server source maps and memory usage
 
