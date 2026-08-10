@@ -52,7 +52,7 @@ describe('StudioFooter', () => {
     await act(async () => {
       render(<StudioFooter />);
     });
-    expect(screen.getAllByText(/Code\.org/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/CodeAI/).length).toBeGreaterThan(0);
     expect(
       screen.getAllByText(new RegExp(String(new Date().getFullYear()))).length,
     ).toBeGreaterThan(0);

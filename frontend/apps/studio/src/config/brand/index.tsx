@@ -25,7 +25,7 @@ export interface BrandConfig {
 
 /**
  * Return display content for the given brand.
- * The `default:` clause renders Code.org content so future Brand union
+ * The `default:` clause renders CodeAI content so future Brand union
  * additions don't break until this switch is updated.
  *
  * @param brand - The active brand from SiteConfig.
@@ -50,12 +50,13 @@ export function getBrandConfig(brand: Brand): BrandConfig {
     default: {
       const trademark = (
         <>
-          © Code.org, {CURRENT_YEAR}. Code.org®, the CODE logo, Hour of Code®
-          and CS Discoveries® are trademarks of Code.org.
+          © CodeAI, {CURRENT_YEAR}. CodeAI, the CodeAI logo, Hour of AI, and CS
+          Discoveries are trademarks of CodeAI. "Code.org" is a former trademark
+          of CodeAI.
         </>
       );
       return {
-        copyright: <>© Code.org, {CURRENT_YEAR}</>,
+        copyright: <>© CodeAI, {CURRENT_YEAR}</>,
         trademark,
         fineprint: buildFineprint(trademark),
       };
