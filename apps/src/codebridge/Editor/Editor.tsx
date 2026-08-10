@@ -66,10 +66,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     [dispatch, activeFile?.id]
   );
 
-  // Show unified diff view whenever we are in AI tutor mode and have
-  // the version of the file before the AI tutor changes as well as an active file.
-  //
-  // Also used in key so we remount CodeEditor when this becomes true.
+  // Show unified diff view whenever we are in AI tutor mode and
+  // have the version of the file before the AI tutor changes as well as an active file.
   const hasUnifiedDiffView = useMemo(() => {
     return !!(
       !allowSplitDiffView &&
@@ -210,6 +208,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     );
   }
 
+  // We use the diff view toggle in the CodeEditor key so that we remount
+  // when we switch in and out of viewing diffs from AI Tutor.
   return (
     <div className={moduleStyles.editorContainer}>
       {activeFile ? (
