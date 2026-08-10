@@ -1,7 +1,10 @@
-import React, {FC, useCallback, useState} from 'react';
+import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
+import {getClientApi} from '@cdo/apps/aichat/api/client';
 import WaitingAnimation from '@cdo/apps/aichat/views/WaitingAnimation';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   Challenge,
@@ -19,45 +22,66 @@ interface VideoChallengeProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
   challenge: Challenge | null;
+  lessonId: number;
 }
 
 const VideoChallenge: FC<VideoChallengeProps> = ({
   submitted,
   submitCallback,
+  lessonId,
   challenge = null,
 }) => {
   const [hasRecording, setHasRecording] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
   const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
+  const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout>();
 
   const [isUploading, setIsUploading] = useState(false);
   const canSubmit = !submitted && !isUploading && hasRecording && !isRecording;
+  const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
 
-  const createChallengeResponse = useCallback(() => {
-    if (!challenge) {
-      return;
-    }
-    const body = JSON.stringify({
-      challenge_id: challenge.id,
-      is_final: true,
-      assets: [{asset_type: 'video'}],
+  // Initialize the ChatEventLogger with the current context, whenever it updates.
+  useEffect(() => {
+    AichatContextManager.setContext({
+      clientType,
+      currentLevelId: null,
+      scriptId: null,
+      channelId: undefined,
+      lessonId,
     });
-    return HttpClient.post('/challenge_responses', body, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => response.json())
-      .then((json): ChallengeResponse => challengeResponseValidator(json))
-      .catch(error => {
-        console.log(error);
-        return undefined;
+  }, [clientType, lessonId]);
+
+  const createChallengeResponse = useCallback(
+    (text: string | null) => {
+      if (!challenge) {
+        return;
+      }
+      const body = JSON.stringify({
+        transcript: text,
+        challenge_id: challenge.id,
+        is_final: true,
+        assets: [{asset_type: 'video'}],
       });
-  }, [challenge]);
+      return HttpClient.post('/challenge_responses', body, true, {
+        'Content-Type': 'application/json',
+      })
+        .then(response => response.json())
+        .then((json): ChallengeResponse => challengeResponseValidator(json))
+        .catch(error => {
+          console.log(error);
+          return undefined;
+        });
+    },
+    [challenge]
+  );
 
   const handleSubmit = async () => {
     if (!recordedUrl) return;
     setIsUploading(true);
     try {
-      const challengeResponse = await createChallengeResponse();
+      const text = await transcribeAudio();
+      const challengeResponse = await createChallengeResponse(text);
       if (!challengeResponse) {
         throw new Error('The server did not create a challenge response.');
       }
@@ -87,6 +111,24 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     }
   };
 
+  const transcribeAudio = async (timedOut = false) => {
+    if (!recordedAudioUrl) return null;
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    try {
+      const audio = await fetch(recordedAudioUrl).then(r => r.blob());
+
+      const aichatClientApi = await getClientApi();
+      const text = await aichatClientApi.transcribeAudio(audio);
+      return text;
+      // setTranscribedText(text);
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  };
+
   return (
     <div>
       <div className={styles.questionText}>
@@ -98,6 +140,8 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         disabled={submitted || isUploading}
         recordedUrl={recordedUrl}
         setRecordedUrl={setRecordedUrl}
+        recordedAudioUrl={recordedAudioUrl}
+        setRecordedAudioUrl={setRecordedAudioUrl}
       />
       {isUploading && <WaitingAnimation shouldDisplay={isUploading} />}
       {!submitted && (

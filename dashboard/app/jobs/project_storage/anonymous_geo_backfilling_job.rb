@@ -5,6 +5,7 @@ require 'cdo/geocoder'
 class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
   DEFAULT_LIMIT = 100_000
   BATCH_SIZE = 1000
+  QUERY_TIMEOUT_MS = 60_000
 
   queue_as CDO.active_job_queues[:low_priority]
 
@@ -42,7 +43,7 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
       current_batch_size = [BATCH_SIZE, limit - processed_count].min
       break unless current_batch_size.positive?
 
-      from_storage_id = last_storage_id.to_i.next
+      from_storage_id = last_storage_id&.next
       missing_project_storage_geos_batch = missing_project_storage_geos(from_storage_id:, limit: current_batch_size)
       break if missing_project_storage_geos_batch.empty?
 
@@ -79,21 +80,20 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
     )
   end
 
-  private def unlocated_storages
+  private def missing_project_storage_geos(from_storage_id: nil, limit: BATCH_SIZE)
     ActiveRecord::Base.connected_to(role: :reporting) do
-      ProjectStorage.
-        optimizer_hints("INDEX(#{ProjectStorage.table_name} PRIMARY)").
-        where(user_id: nil).
-        # LEFT OUTER JOIN project_storage_geos geo ON geo.storage_id = user_project_storage_ids.id WHERE geo.id IS NULL
-        where.missing(:geo).
-        # WHERE EXISTS (SELECT projects.* FROM projects WHERE projects.storage_id = user_project_storage_ids.id)
-        where(Project.where(Project.arel_table[:storage_id].eq(ProjectStorage.arel_table[:id])).arel.exists)
-    end
-  end
+      unlocated_storages_batch = ProjectStorage.anonymous.without_geo.with_projects.order(:id).limit(limit)
 
-  private def missing_project_storage_geos(from_storage_id: 1, limit: BATCH_SIZE)
-    ActiveRecord::Base.connected_to(role: :reporting) do
-      unlocated_storage_ids_batch = unlocated_storages.where(id: from_storage_id..).order(:id).limit(limit).pluck(:id)
+      # Prevents the query from running longer than needed.
+      unlocated_storages_batch = unlocated_storages_batch.optimizer_hints("MAX_EXECUTION_TIME(#{QUERY_TIMEOUT_MS})")
+
+      if from_storage_id
+        unlocated_storages_batch = unlocated_storages_batch.
+          optimizer_hints("INDEX(#{ProjectStorage.table_name} PRIMARY)").
+          where(id: from_storage_id..)
+      end
+
+      unlocated_storage_ids_batch = unlocated_storages_batch.pluck(:id)
       return [] if unlocated_storage_ids_batch.empty?
 
       unlocated_storage_numbered_projects = Project.
