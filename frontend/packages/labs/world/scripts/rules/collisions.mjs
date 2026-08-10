@@ -9,7 +9,9 @@ import {
   equals,
   forEach,
   give,
+  anyOf,
   hasTrait,
+  isIn,
   lessThan,
   minus,
   moduleFor,
@@ -20,6 +22,7 @@ import {
   over,
   param,
   pushActor,
+  thisActor,
   vector,
   vectorTimes,
   when,
@@ -164,6 +167,87 @@ rule.step('find', 'touch', [
       contacts.set(body.get(), found.get()),
     ],
   }),
+]);
+
+/**
+ * What was touching this actor at the END of the last tick.
+ *
+ * The one thing a contact set cannot answer about itself: `contacts` says who
+ * is touching now, and "now" is true every frame an overlap lasts. Comparing
+ * the two is what turns a state into the moments it begins and ends.
+ *
+ * Read-only, and written by the step below rather than by `find`: it has to be
+ * updated AFTER the comparison, so a rule that wrote it where the contacts are
+ * worked out would erase the very thing being compared against.
+ */
+const contactsBefore = canCollide.actors('contacts before', {readonly: true});
+
+/**
+ * Contact as MOMENTS, not as a state — and the sets those moments are about.
+ *
+ * `is touching` and `contacts` are both polls: true for every frame an overlap
+ * lasts. That is the honest answer to the question they ask, and it is the
+ * wrong shape for almost everything a game does about a collision — a brick
+ * that scores while it is being touched scores sixty times, and a bounce
+ * applied every frame of an overlap is not a bounce.
+ *
+ * So: the same edge pair as everywhere else here. `rules/input` turns held keys
+ * into `presses`/`releases`, Gravity turns falling into `starts`/`stops
+ * falling`, and this turns an overlap into its two ends.
+ *
+ * THE EVENT CARRIES NOTHING, and the set beside it says who. An event can only
+ * carry a value drawn from a named set of choices — `defineEmitBlock` skips any
+ * other kind, and a hat can only filter on the same — so "starts touching
+ * ⟨that actor⟩" is not a sentence this event system can say. Rather than bend
+ * it, the pair is split: the event is the moment, and `newly touching` is the
+ * list of who arrived in it. A handler reads one to answer the other.
+ *
+ * The lists are worth having on their own, too. They are pollable from a step
+ * like `contacts` is, and they are the only place the difference between this
+ * frame and the last is written down.
+ */
+const newlyTouching = canCollide.actors('newly touching', {readonly: true});
+const noLongerTouching = canCollide.actors('no longer touching', {
+  readonly: true,
+});
+
+export const startsTouching = canCollide.event(['starts touching something']);
+export const stopsTouching = canCollide.event(['stops touching something']);
+
+const met = rule.local('met', 'Actor');
+const gone = rule.local('gone', 'Actor');
+const arrived = rule.local('arrived', 'Actor');
+const left = rule.local('left', 'Actor');
+
+// In `react`, after `touch` has worked out the contacts and `settle` has pushed
+// bodies apart. Both halves of that matter. Running before `touch` would compare
+// against contacts nobody had computed yet; running before `settle` would raise
+// the event while the actors were still overlapping, so a handler setting a
+// velocity would have it overwritten by the push-out a moment later — which is
+// exactly what steering a ball off a paddle has to survive.
+canCollide.step('notice contacts', 'react', [
+  note('Touching now and not before: those arrived this frame.'),
+  clearActors(arrived),
+  forEach(met, {
+    from: contacts.of(thisActor()),
+    where: not(isIn(met.get(), contactsBefore.of(thisActor()))),
+    body: [pushActor(arrived, met.get())],
+  }),
+  note('Touching before and not now: those left.'),
+  clearActors(left),
+  forEach(gone, {
+    from: contactsBefore.of(thisActor()),
+    where: not(isIn(gone.get(), contacts.of(thisActor()))),
+    body: [pushActor(left, gone.get())],
+  }),
+  note('Write the lists down BEFORE raising anything: a handler reads them.'),
+  newlyTouching.set(thisActor(), arrived.get()),
+  noLongerTouching.set(thisActor(), left.get()),
+  note('And only raise an event when there is something in the list.'),
+  when([[anyOf(arrived.get()), [startsTouching({}, thisActor())]]]),
+  when([[anyOf(left.get()), [stopsTouching({}, thisActor())]]]),
+  note('Last of all, move the goalposts for the next comparison.'),
+  contactsBefore.set(thisActor(), contacts.of(thisActor())),
 ]);
 
 export default () => moduleFor(rule, 'collisions');
