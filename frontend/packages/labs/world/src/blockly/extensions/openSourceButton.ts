@@ -37,7 +37,8 @@ const EYE = '';
  * `use rule` holds a rule's NAME, which the registry resolves to the module the
  * rule currently lives in — or, for a hand-written `.js` rule, the module path
  * itself, since a `.js` rule declares no name to be looked up by. `use trait`
- * holds `<RuleName>#<Export>`, which resolves the same way.
+ * holds `<RuleName>#<Export>`, which resolves the same way. `load map` holds
+ * the path itself.
  */
 export function moduleNamedBy(block: Block): string | undefined {
   const rule = block.getFieldValue('RULE');
@@ -50,9 +51,13 @@ export function moduleNamedBy(block: Block): string | undefined {
     return rule.includes('/') ? rule : undefined;
   }
   const trait = block.getFieldValue('TRAIT');
-  return typeof trait === 'string' && trait
-    ? refModule(refFromValue(trait))
-    : undefined;
+  if (typeof trait === 'string' && trait) {
+    return refModule(refFromValue(trait));
+  }
+  // A map names its file directly — there is no rule registry in between,
+  // because a map is not a module and declares nothing to be looked up by.
+  const map = block.getFieldValue('MAP');
+  return typeof map === 'string' && map ? map : undefined;
 }
 
 /** The eye glyph, as the `<tspan>` `FieldButton` draws inside itself. */

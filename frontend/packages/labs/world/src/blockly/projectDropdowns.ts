@@ -39,7 +39,10 @@ import {setProjectGrids} from './spriteCells';
 import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 
 /** Extensions a module path can resolve to — what a block may open. */
-const MODULE_FILE = /\.(rule|js|ts)$/;
+// What the eye can open. A `.map` is not a module the compiler resolves — a
+// world names one in a dropdown and `loadMap` reads it as data — but it IS a
+// file with an editor, which is the only thing the button needs.
+const MODULE_FILE = /\.(rule|js|ts|map)$/;
 
 export function refreshProjectDropdowns(
   files: Record<string, string>,

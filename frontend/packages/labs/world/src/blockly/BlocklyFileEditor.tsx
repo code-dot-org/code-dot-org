@@ -210,12 +210,16 @@ function initialMemberKeys(
  * A module path has no extension, which is what makes it a module path: the
  * compiler's own resolution tries `.rule`, then `.js`, then `.ts`, and this
  * follows it so the file a block opens is the file the project would compile.
+ *
+ * `.map` is tried last and is not part of that resolution — a map is data a
+ * world names, not a module anything imports. It is here because the eye opens
+ * FILES, and a map has an editor like the rest.
  */
 function fileIdForModule(
   source: MultiFileSource,
   modulePath: string,
 ): string | undefined {
-  for (const extension of ['.rule', '.js', '.ts']) {
+  for (const extension of ['.rule', '.js', '.ts', '.map']) {
     const wanted = `${modulePath}${extension}`;
     const found = Object.keys(source.files).find(
       id => filePath(source, id) === wanted,

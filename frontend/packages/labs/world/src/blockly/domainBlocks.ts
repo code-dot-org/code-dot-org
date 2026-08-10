@@ -3321,7 +3321,11 @@ const worldLoadMap = defineBlock({
   nextStatement: true,
   // Builder-only for the same reason as its siblings: `define` and `loadMap`
   // are `WorldBuilder`'s and the live `World` has neither.
-  extensions: [mapOptionsExtension, builderWorldExtension],
+  extensions: [
+    mapOptionsExtension,
+    builderWorldExtension,
+    openSourceButtonExtension,
+  ],
   style: 'setup_blocks',
   tooltip: 'Place all the actors a map file describes into the world.',
   generator: {
