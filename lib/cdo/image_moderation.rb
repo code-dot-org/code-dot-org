@@ -35,8 +35,6 @@ module ImageModeration
     ).moderate_image(moderation_io)
   rescue AzureAiContentSafety::UnsupportedContentType
     raise # This is a client error, not a service failure — let callers map to 400.
-  rescue AzureAiContentSafety::RateLimited
-    nil
   rescue AzureAiContentSafety::AzureError => exception
     Honeybadger.notify(exception, context: {reported_content_type: content_type, actual_content_type: moderation_type})
     nil
