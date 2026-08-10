@@ -4,8 +4,8 @@
 // derive from HEADER_BREAKPOINTS). The Menu paper reuses the shared
 // `.menuPaper` from headerMenu.module.scss in CreateMenu.tsx.
 
-// "New project" trigger: transparent outline pill on the teal bar. Header-button
-// pill geometry matches the Rails header's `.header_button` under codeai-brand.
+// "New project" trigger: transparent outline pill on the teal bar.
+// Matches `.header_button` in the Rails header.
 .createTrigger {
   display: inline-flex;
   min-width: 0;

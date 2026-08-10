@@ -90,9 +90,6 @@ class HeaderTest < ActionDispatch::IntegrationTest
           end
         end
 
-        # The signed-out hamburger mirrors the marketing nav as flat links —
-        # under this brand there are no Teach or About submenus to descend into,
-        # only the Privacy & Legal one below.
         it 'renders links' do
           {
             'Teachers'         => '//test.code.org/teachers',
