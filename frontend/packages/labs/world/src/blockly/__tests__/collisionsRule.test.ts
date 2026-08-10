@@ -93,20 +93,37 @@ describe('rules/collisions.rule', () => {
     expect(meta.events.every(event => event.scope === 'actor')).toBe(true);
   });
 
-  it('carries nothing, and says who in a list instead', () => {
-    // An event can only carry a value drawn from a named set of choices —
-    // `defineEmitBlock` skips any other kind, and a hat can only filter on the
-    // same. So "starts touching ⟨that actor⟩" is not a sentence this event
-    // system can say, and pretending otherwise generated an emit block with no
-    // socket: the whole project stopped compiling.
+  it('carries the actor it is about', () => {
+    // Read in a handler with `event value`, which is untyped precisely so it
+    // can hold whatever an event carries and still plug into an actor socket.
     for (const event of meta.events) {
+      const carried = (event.parts ?? []).filter(part => part.kind === 'param');
       expect(
-        (event.parts ?? []).filter(part => part.kind === 'param'),
+        carried.map(part => part.type),
         event.id,
-      ).toEqual([]);
+      ).toEqual(['actor']);
     }
-    // The moment is the event; who arrived in it is the list beside it.
+  });
+
+  it('raises one event per contact, not one per frame', () => {
+    // The distinction that makes "starts touching" mean what it says. An
+    // earlier draft raised one event per FRAME in which anything new arrived,
+    // so a ball clipping two bricks at once started touching twice and was
+    // told once. Emitting inside the loop is what fixes it — the same shape
+    // `rules/input` uses to raise its key event once per key.
+    const emits = source.split('world_emit_').length - 1;
+    const loops = source.split('world_for_each').length - 1;
+
+    expect(emits).toBe(2);
+    // Four loops: two to work out the sets, two to announce them one at a time.
+    expect(loops).toBeGreaterThanOrEqual(4);
+  });
+
+  it('keeps the lists, which answer what the events cannot', () => {
+    // An event is a moment, gone by the time anything else looks. The lists say
+    // what is true NOW, pollable from a step the way `contacts` is.
     const ids = meta.properties.map(property => property.id);
+
     expect(ids).toContain('newly_touching');
     expect(ids).toContain('no_longer_touching');
   });
