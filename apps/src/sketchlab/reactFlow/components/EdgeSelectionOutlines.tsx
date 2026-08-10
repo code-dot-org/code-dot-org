@@ -32,9 +32,10 @@ function sameBox(
 }
 
 /**
- * Draws the selection ring for each selected or focused edge: a node-style ring
- * around the band that accepts clicks, rotated onto the line.
- * The ring is measured off the rendered path so it fits every line shape.
+ * Draws the selection border for each selected or focused edge. The border is
+ * positioned around the invisible band around the edge that accepts clicks, and
+ * is rotated as needed if the edge is rotated.
+ * The border is measured off the rendered path so it fits every line shape.
  */
 export default function EdgeSelectionOutlines({
   edgeIds,
@@ -88,11 +89,11 @@ export default function EdgeSelectionOutlines({
         outline.style.transform = `translate(-50%, -50%) rotate(${box.angleDegrees}deg)`;
       });
     };
-    // Position once before the first paint so no ring flashes at the origin.
+    // Position once before the first paint so no border flashes at the origin.
     positionOutlines();
 
-    // React Flow rewrites an edge's `d` whenever the line moves, so watching for
-    // those writes repositions the rings only when something actually changed,
+    // React Flow rewrites an edge's path (`d` attribute) whenever the line moves, so watching for
+    // those writes repositions the borders only when something actually changed,
     // and still before the next paint. Repositioning writes styles and adds no
     // elements, so it cannot retrigger the observer.
     const observer = new MutationObserver(positionOutlines);
