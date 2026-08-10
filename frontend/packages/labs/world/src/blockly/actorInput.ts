@@ -30,6 +30,7 @@ import type {Block, WorkspaceSvg} from 'blockly';
 
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import {addOnChange, isStructuralChange} from './extensions/onChange';
 import {definesWorld} from './localActors';
 
 export const ACTOR_INPUT_EXTENSION = 'world_actor_input';
@@ -54,12 +55,84 @@ const seedShadow = (
   connection.setShadowState({type: choose(target)});
 };
 
-/** Give this block's `ACTOR` value input a default `world_this_actor` shadow. */
+/**
+ * Whether this block sits inside a `define camera` body.
+ *
+ * `getSurroundParent`, because `define camera` HAS a `do` mouth — the reason
+ * `layerOf` gives for the same choice. A block merely chained below the camera
+ * is beside it, not in it.
+ *
+ * A handler ends the walk: it rebinds the subject, so a block inside one is not
+ * the camera's however far up the camera is.
+ */
+export const inCameraBody = (block: Block): boolean => {
+  for (
+    let parent = block.getSurroundParent?.() ?? null;
+    parent;
+    parent = parent.getSurroundParent?.() ?? null
+  ) {
+    if (parent.type === 'world_define_camera') {
+      return true;
+    }
+    if (parent.type.startsWith('world_on_')) {
+      return false;
+    }
+  }
+  return false;
+};
+
+/**
+ * The subject a block in this position is about.
+ *
+ * Inside `define camera` that is the camera — `this camera` outputs `Actor`, so
+ * it fits the same socket, and a camera has the foundation's traits (a position,
+ * a rotation) that these blocks read. Everywhere else it is the actor.
+ */
+export const subjectShadow = (block: Block): string =>
+  inCameraBody(block) ? 'world_this_camera' : 'world_this_actor';
+
+/**
+ * Replace the shadow when the block's surroundings change its subject.
+ *
+ * Seeding at creation was not enough, and the gap was visible: a block dragged
+ * INTO a `define camera` kept the `this actor` it was made with, so it read as
+ * being about an actor that is not there, and a learner had to know to swap in
+ * `this camera` by hand. Dragging back out has the same problem in reverse.
+ *
+ * ONLY A SHADOW IS OURS TO CHANGE. A block the learner dropped into the socket
+ * is an answer they gave; replacing it because they moved the whole thing would
+ * be editing their program. `isShadow` is the whole test — a real block sits in
+ * front of the shadow, and finding one means the question was already answered.
+ */
+const reseedShadow = (block: Block): void => {
+  const connection = block.getInput('ACTOR')?.connection;
+  if (!connection) {
+    return;
+  }
+  const current = connection.targetBlock();
+  if (current && !current.isShadow()) {
+    return;
+  }
+  const wanted = subjectShadow(block);
+  // Already right: setting it again would discard a shadow's own state (an
+  // `any ⟨kind⟩` shadow remembers which kind) for no change.
+  if (current?.type === wanted) {
+    return;
+  }
+  connection.setShadowState({type: wanted});
+};
+
+/** Give this block's `ACTOR` value input a default subject shadow. */
 export const actorInputExtension: Extension = defineExtension(
   ACTOR_INPUT_EXTENSION,
   {
     extension() {
-      seedShadow(this, () => 'world_this_actor');
+      seedShadow(this, () => subjectShadow(this));
+      addOnChange(this, function (this: Block, event) {
+        if (isStructuralChange(this, event)) {
+          reseedShadow(this);
+        }
+      });
     },
   },
 );
