@@ -9,9 +9,6 @@ import {PyodideMessage} from './types';
 // only the selected implementation's module-scope startup work -- creating a real
 // Worker, or creating the sandbox iframe -- ever runs; statically importing both would
 // run both unconditionally regardless of the experiment.
-// 'new-preview-domain' only selects which domain previews are served from, so it also
-// turns the sandbox on here; otherwise it would be a no-op in Python Lab and testing
-// the new domain would take two flags.
 const usePyodideSandbox =
   experiments.isEnabledAllowingQueryString(
     experiments.PYTHONLAB_SEPARATE_DOMAIN
