@@ -94,6 +94,8 @@ export const moreThan = (a, b) => compare('GT', a, b);
 export const thisCamera = () => ({type: 'world_this_camera'});
 export const thisActor = () => ({type: 'world_this_actor'});
 export const frameTime = () => ({type: 'world_step_delta'});
+/** The world's clock in seconds — what a delay or a cooldown measures against. */
+export const time = () => ({type: 'world_time'});
 export const mapSize = () => ({type: 'world_map_size'});
 export const viewSize = () => ({type: 'world_view_size'});
 
@@ -175,6 +177,18 @@ export const pushActor = (list, actor) => ({
   type: 'world_push_actor',
   fields: {LIST: {...list.field, type: list.type}},
   inputs: {ACTOR: value(actor)},
+});
+
+/** `age of <subject>` — seconds since it was placed in the world. */
+export const age = subject => ({
+  type: 'world_actor_age',
+  inputs: {ACTOR: value(subject)},
+});
+
+/** `remove actor <subject>` — gone at the end of this tick, not mid-frame. */
+export const removeActor = subject => ({
+  type: 'world_remove_actor',
+  inputs: {ACTOR: value(subject)},
 });
 
 /** `empty <list>`. */
