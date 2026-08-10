@@ -93,10 +93,6 @@ h1.mobileHeading {
   float: left;
 }
 
-// DSCO TextField. FormFieldWrapper is a column flex with
-// align-items: flex-start, so the input needs an explicit width to span the
-// field. min-width overrides the wrapper's 18.75rem floor so the field can
-// still shrink alongside the button on narrow screens.
 .nameInput {
   flex: 2;
   min-width: 0;
@@ -110,8 +106,6 @@ h1.mobileHeading {
   top: 100px;
 }
 
-// TextField stacks its label above the input, so bottom-align the row to put
-// the Submit button level with the input rather than with the label.
 .inputButtonContainer {
   display: flex;
   gap: 0.5rem;
