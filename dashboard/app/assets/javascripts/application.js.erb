@@ -12,10 +12,7 @@
 // about supported directives.
 
 // Gem assets
-// The asset pipeline no longer runs a JS compressor (no execjs/mini_racer in
-// production), so the large libraries are required as pre-minified builds.
-// The small vendor files below ship unminified — measured at ~8KB gzipped
-// over the fully-minified bundle and accepted.
+// Nothing minifies this bundle; require pre-minified builds.
 //= require jquery.min
 //= require jquery_ujs
 //= require jquery-ui.min
