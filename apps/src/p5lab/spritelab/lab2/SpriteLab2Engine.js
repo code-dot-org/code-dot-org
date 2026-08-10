@@ -95,6 +95,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       // legacy library's one load-bearing line).
       library.defaultSpriteSize = 50;
     }
+    if (this.defaultSpriteSize_) {
+      // A level's explicit default_sprite_size wins (e.g. story scenes want
+      // characters far larger than a platformer's one-cell sprites).
+      library.defaultSpriteSize = this.defaultSpriteSize_;
+    }
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
@@ -172,6 +177,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // The zGameDev name is only the level's opt-in to platformer physics,
     // which is engine-owned (platformPhysics.ts); no library loads for it.
     this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
+    this.defaultSpriteSize_ = levelProperties.defaultSpriteSize;
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],

@@ -240,7 +240,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 {generation && (
                   <dl className={moduleStyles.metadata}>
                     <dt>Prompt</dt>
-                    <dd>{generation.prompt}</dd>
+                    {/* Italic: the one field here the user wrote themselves. */}
+                    <dd className={moduleStyles.promptValue}>
+                      {generation.prompt}
+                    </dd>
                     <dt>Type</dt>
                     <dd>{ITEM_TYPE_LABELS[generation.itemType]}</dd>
                     <dt>Style</dt>

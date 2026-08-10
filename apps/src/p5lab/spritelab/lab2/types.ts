@@ -171,6 +171,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // Display name given to the fixed scene when it is created; consulted
   // only at creation.
   fixedSceneName?: string;
+  // Default size (logical px) for sprites the program creates, overriding
+  // the engine's default (100, or one 50px grid cell on platformer levels).
+  defaultSpriteSize?: number;
   // XML string representation of toolbox blocks.
   // TODO: deprecate in favor of the JSON toolbox definition.
   toolboxBlocks?: string;

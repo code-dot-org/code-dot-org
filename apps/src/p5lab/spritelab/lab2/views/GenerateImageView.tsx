@@ -53,9 +53,14 @@ const PIXEL_BOT_ROWS = 28;
 /**
  * The temperature bot, rendered through a coarse pixel grid: the image is
  * downsampled onto a small canvas and the canvas is CSS-upscaled with
- * image-rendering: pixelated.
+ * image-rendering: pixelated. Kept mounted (hidden) alongside the plain
+ * bot so style switches show it already drawn instead of flickering
+ * through an image load.
  */
-const PixelatedBot: React.FunctionComponent<{src: string}> = ({src}) => {
+const PixelatedBot: React.FunctionComponent<{src: string; hidden: boolean}> = ({
+  src,
+  hidden,
+}) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -85,7 +90,11 @@ const PixelatedBot: React.FunctionComponent<{src: string}> = ({src}) => {
   return (
     <canvas
       ref={canvasRef}
-      className={classNames(moduleStyles.bot, moduleStyles.botPixelated)}
+      className={classNames(
+        moduleStyles.bot,
+        moduleStyles.botPixelated,
+        hidden && moduleStyles.botHidden
+      )}
       aria-hidden
     />
   );
@@ -358,17 +367,18 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
               disabled={generating}
             >
               <legend id="temperature-label">Temperature</legend>
-              {/* A wink: choosing pixel-art style pixelates the bot too. */}
-              {style === 'pixel' ? (
-                <PixelatedBot src={botImage} />
-              ) : (
-                <img
-                  src={botImage}
-                  className={moduleStyles.bot}
-                  alt=""
-                  draggable={false}
-                />
-              )}
+              {/* A wink: choosing pixel-art style pixelates the bot too.
+                  Both variants stay mounted; CSS picks one. */}
+              <PixelatedBot src={botImage} hidden={style !== 'pixel'} />
+              <img
+                src={botImage}
+                className={classNames(
+                  moduleStyles.bot,
+                  style === 'pixel' && moduleStyles.botHidden
+                )}
+                alt=""
+                draggable={false}
+              />
               <Slider
                 name="temperature-slider"
                 aria-labelledby="temperature-label"

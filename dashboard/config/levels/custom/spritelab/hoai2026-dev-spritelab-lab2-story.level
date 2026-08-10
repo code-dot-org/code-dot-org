@@ -27,6 +27,7 @@
     ],
     "fixed_scene_id": "story-scene",
     "fixed_scene_name": "Story",
+    "default_sprite_size": 300,
     "guide_mode": "instructions",
     "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview."
   }
@@ -42,18 +43,12 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setProp"/>
-        <block type="gamelab_spriteSay"/>
-        <block type="gamelab_spriteSayTime"/>
-        <block type="gamelab_spriteClicked">
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">Hello!</field>
           <value name="SPRITE">
             <shadow type="gamelab_allSpritesWithAnimation"/>
           </value>
         </block>
-        <block type="gamelab_atTime"/>
-        <block type="gamelab_addBehaviorSimple"/>
-        <block type="spritelab2_movingLeft"/>
-        <block type="spritelab2_patrollingLeftRight"/>
       </xml>
     </toolbox_blocks>
   </blocks>

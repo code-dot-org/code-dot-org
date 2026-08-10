@@ -47,6 +47,7 @@ class GamelabJr < Gamelab
     fixed_scene_id
     fixed_scene_name
     guide_steps
+    default_sprite_size
   )
 
   def shared_blocks

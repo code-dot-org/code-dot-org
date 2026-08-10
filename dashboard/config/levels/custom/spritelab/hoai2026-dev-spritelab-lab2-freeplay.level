@@ -50,9 +50,27 @@
               <shadow type="gamelab_allSpritesWithAnimation"/>
             </value>
           </block>
-          <block type="gamelab_checkTouching"/>
-          <block type="gamelab_atTime"/>
-          <block type="gamelab_spriteSay"/>
+          <block type="gamelab_checkTouching">
+            <value name="SPRITE1">
+              <shadow type="gamelab_allSpritesWithAnimation"/>
+            </value>
+            <value name="SPRITE2">
+              <shadow type="gamelab_allSpritesWithAnimation"/>
+            </value>
+          </block>
+          <block type="gamelab_atTime">
+            <value name="N">
+              <shadow type="math_number">
+                <field name="NUM">3</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="gamelab_spriteSay">
+            <field name="SPEECH">Hello!</field>
+            <value name="SPRITE">
+              <shadow type="gamelab_allSpritesWithAnimation"/>
+            </value>
+          </block>
           <!-- TODO(spritelab-lab2-platform-updates): add the set-gravity and
                set-as-platform-player blocks here once that branch merges. -->
         </category>
@@ -65,16 +83,57 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_setProp"/>
-          <block type="gamelab_spriteSay"/>
-          <block type="gamelab_spriteSayTime"/>
+          <block type="gamelab_setProp">
+            <value name="SPRITE">
+              <shadow type="gamelab_allSpritesWithAnimation"/>
+            </value>
+            <value name="VAL">
+              <shadow type="math_number">
+                <field name="NUM">100</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="gamelab_spriteSay">
+            <field name="SPEECH">Hello!</field>
+            <value name="SPRITE">
+              <shadow type="gamelab_allSpritesWithAnimation"/>
+            </value>
+          </block>
+          <block type="gamelab_spriteSayTime">
+            <value name="SPRITE">
+              <shadow type="gamelab_allSpritesWithAnimation"/>
+            </value>
+            <value name="TEXT1">
+              <shadow type="text">
+                <field name="TEXT">Hello!</field>
+              </shadow>
+            </value>
+            <value name="NUM">
+              <shadow type="math_number">
+                <field name="NUM">4</field>
+              </shadow>
+            </value>
+          </block>
           <block type="gamelab_spriteClicked">
             <value name="SPRITE">
               <shadow type="gamelab_allSpritesWithAnimation"/>
             </value>
           </block>
-          <block type="gamelab_atTime"/>
-          <block type="gamelab_addBehaviorSimple"/>
+          <block type="gamelab_atTime">
+            <value name="N">
+              <shadow type="math_number">
+                <field name="NUM">3</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="gamelab_addBehaviorSimple">
+            <value name="SPRITE">
+              <shadow type="gamelab_allSpritesWithAnimation"/>
+            </value>
+            <value name="BEHAVIOR">
+              <shadow type="spritelab2_movingLeft"/>
+            </value>
+          </block>
           <block type="spritelab2_movingLeft"/>
           <block type="spritelab2_patrollingLeftRight"/>
         </category>

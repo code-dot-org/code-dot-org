@@ -41,7 +41,7 @@
         }
       },
       {
-        "text": "**Make your player move.** Use the blocks to control your character - make them run and jump, then press the preview to try it.",
+        "text": "**Bring it to life.** Set a background and establish your player, then click **Play** to try it.",
         "after": {
           "tab": "Code"
         }
@@ -57,20 +57,6 @@
         <block type="spritelab2_makePlatformPlayer">
           <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
         </block>
-        <block type="spritelab2_makePlatformBlocks">
-          <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>
-        </block>
-        <block type="spritelab2_makeSpriteAtGrid">
-          <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <value name="SPRITE">
-            <shadow type="gamelab_allSpritesWithAnimation"/>
-          </value>
-        </block>
-        <block type="gamelab_checkTouching"/>
-        <block type="gamelab_atTime"/>
-        <block type="gamelab_spriteSay"/>
         <!-- TODO(spritelab-lab2-platform-updates): add the set-gravity and
              set-as-platform-player blocks here once that branch merges. -->
       </xml>

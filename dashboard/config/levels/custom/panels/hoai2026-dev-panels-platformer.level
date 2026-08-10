@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##What is a platformer?\nA platformer is a game where a character runs and jumps across platforms - like the classic games you may know.\n\nThe player falls unless they land on something!",
+        "text": "##What is a platformer?\nA platformer is a game where a character runs and jumps across platforms - like the classic games you may know.\n\nThe player falls until they land on something!",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-platformer-133b13bb-27cd-485c-9905-941bb6ffb678"
       },
