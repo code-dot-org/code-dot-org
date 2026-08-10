@@ -1,5 +1,4 @@
 import {
-  CdoTheme,
   CodeaiTheme,
   CodeaiAuditTheme,
 } from '@code-dot-org/component-library/themes';
@@ -16,11 +15,6 @@ describe('brand utilities', () => {
       expect(getCurrentBrand()).toBe('codeai-next');
     });
 
-    it('returns "codeai" when data-brand is "codeai"', () => {
-      document.documentElement.dataset.brand = 'codeai';
-      expect(getCurrentBrand()).toBe('codeai');
-    });
-
     it('returns "codeai-next" when data-brand is "codeai-next"', () => {
       document.documentElement.dataset.brand = 'codeai-next';
       expect(getCurrentBrand()).toBe('codeai-next');
@@ -35,22 +29,9 @@ describe('brand utilities', () => {
       document.documentElement.dataset.brand = 'unknown';
       expect(getCurrentBrand()).toBe('codeai-next');
     });
-
-    it('returns "code" when data-brand is "code"', () => {
-      document.documentElement.dataset.brand = 'code';
-      expect(getCurrentBrand()).toBe('code');
-    });
   });
 
   describe('getMuiThemeForBrand', () => {
-    it('returns CdoTheme for "code" brand', () => {
-      expect(getMuiThemeForBrand('code')).toBe(CdoTheme);
-    });
-
-    it('returns CdoTheme for "codeai" brand', () => {
-      expect(getMuiThemeForBrand('codeai')).toBe(CdoTheme);
-    });
-
     it('returns CodeaiTheme for "codeai-next" brand', () => {
       expect(getMuiThemeForBrand('codeai-next')).toBe(CodeaiTheme);
     });

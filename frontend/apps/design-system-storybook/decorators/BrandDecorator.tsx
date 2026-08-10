@@ -8,7 +8,6 @@ import {Decorator, StoryContext} from '@storybook/react-vite';
 import {useEffect} from 'react';
 
 import {
-  CdoTheme,
   CodeaiTheme,
   CodeaiAuditTheme,
 } from '@code-dot-org/component-library/themes';
@@ -22,17 +21,14 @@ export const DEFAULT_BRAND = 'codeai-next';
 /**
  * MUI theme for a brand code, so palette-driven MUI components stay in step
  * with the CSS token brand set by data-brand. Mirrors getMuiThemeForBrand in
- * apps/src/util/brand.ts: only codeai-next / codeai-audit carry their own
- * theme; every other brand uses the legacy CdoTheme.
+ * apps/src/util/brand.ts: codeai-audit carries its own theme, everything else
+ * (including an unrecognised value) falls back to the default CodeaiTheme.
  */
 function muiThemeForBrand(brand: string) {
-  if (brand === 'codeai-next') {
-    return CodeaiTheme;
-  }
   if (brand === 'codeai-audit') {
     return CodeaiAuditTheme;
   }
-  return CdoTheme;
+  return CodeaiTheme;
 }
 
 // Mirror the studio app: MUI's emotion styles go in an @layer so unlayered CSS
@@ -47,9 +43,7 @@ const cssLayerOrder = (
  *
  *  - writes data-brand onto the preview <html>, the element that
  *    component-library-styles/brandOverrides.css scopes its token blocks
- *    against ([data-brand='codeai-next'] / [data-brand='codeai-audit']);
- *    'code'/'codeai' have no scoped block and fall through to the :root
- *    legacy defaults.
+ *    against ([data-brand='codeai-audit']; codeai-next is the :root default).
  *  - provides the matching MUI theme so palette-driven MUI components follow.
  *
  * The attribute is set in an effect that runs inside the story's own frame

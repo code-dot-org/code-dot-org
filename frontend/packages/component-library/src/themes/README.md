@@ -15,7 +15,7 @@ These two dimensions are orthogonal: any brand can be combined with any mode.
 │                                                             │
 │  1. Reads brand from <html data-brand>, set server-side      │
 │     by application.html.haml via Cdo::Brand  ──→  brand.ts   │
-│  2. Selects MUI theme  ──→  CdoTheme or CodeaiTheme          │
+│  2. Selects MUI theme  ──→  CodeaiTheme or CodeaiAuditTheme  │
 │  3. Wraps component tree:                                   │
 │                                                             │
 │     <SiteConfigProvider config={{brand}}>                   │
@@ -44,67 +44,44 @@ primitiveColors.css          Fixed base palette (theme-independent)
     colors.css               Semantic tokens that change per mode and brand
 ```
 
-Until the CodeAI brand cutover, a brand override layer sits on top
-(imported via `brandOverrides.css`, see the header comment there for the
-full picture):
+`codeai-next` is the sitewide default brand. Its CADS tokens currently
+still ship as a brand-scoped override layer on top of the legacy ramp —
+`brandOverrides.css` (imported once, right after `colors.css`) layers:
 
 ```
 brandLegacyShim.css          CADS token names, mapped to legacy values
-                             (so migrated code renders under legacy brands)
 brandCodeAiNext.css          CADS primitives + semantic tokens, scoped to
                              [data-brand='codeai-next'] (generated from
-                             primitiveColors_codeAi.css + colors_codeAi.css)
+                             colors_codeAi.css by
+                             scripts/generateBrandCodeAiNext.mjs)
 brandCodeAiNextAliases.css   Legacy token names, mapped to CADS values
-                             (so unmigrated code renders under codeai-next)
 brandCodeAiAudit.css         All-pink tokens for [data-brand='codeai-audit']
 ```
 
+A follow-up change collapses this bridge: the CADS files move to `:root`
+and the brand-scoped layers are deleted (see the `brandOverrides.css`
+header for the plan).
+
 ### Selectors
 
-| Selector                                                                           | When active                    |
-| ---------------------------------------------------------------------------------- | ------------------------------ |
-| `:root, [data-theme='Light']`                                                      | Light mode (default)           |
-| `[data-theme='Dark']`                                                              | Dark mode                      |
-| `[data-brand='codeai-next']:root, [data-brand='codeai-next'] [data-theme='Light']` | CodeAI (CADS) ramp, light mode |
-| `[data-brand='codeai-next'] [data-theme='Dark']`                                   | CodeAI (CADS) ramp, dark mode  |
-| `[data-brand='codeai-audit']:root, …`                                              | Pink audit ramp                |
+| Selector                              | When active               |
+| ------------------------------------- | ------------------------- |
+| `:root, [data-theme='Light']`         | Light mode (default)      |
+| `[data-theme='Dark']`                 | Dark mode                 |
+| `[data-brand='codeai-next']:root, …`  | CADS ramp (default brand) |
+| `[data-brand='codeai-audit']:root, …` | Pink audit ramp           |
 
-Components should use **semantic** variables (e.g. `var(--background-neutral-primary)`) instead of primitive ones. The correct value is resolved automatically based on the active `data-theme` and `data-brand` attributes. Note that the `code` and `codeai` brands both resolve to the legacy (colors.css) ramp; only `codeai-next` carries the CADS ramp until cutover.
+Components should use **semantic** variables (e.g. `var(--background-neutral-primary)`) instead of primitive ones. The correct value is resolved automatically based on the active `data-theme` and `data-brand` attributes.
 
 ### Component-level brand overrides
 
-The token bridge substitutes values token-for-token, so a component whose
-legacy tokens map cleanly onto CADS ones needs no changes. When the CADS
-design for a component diverges structurally — different shape, border,
-typography treatment, or a different token than the bridge's global mapping
-picks — add a brand-scoped block at the bottom of the component's SCSS
-module (see `tags/tags.module.scss` for the reference example):
-
-```scss
-[data-brand='codeai-next'] {
-  .myComponent {
-    background: var(--background-brand-light);
-    border: 1px solid var(--border-brand-mid);
-  }
-}
-```
-
-Rules for these blocks:
-
-- Scope on `[data-brand='codeai-next']` so every legacy brand renders
-  byte-identically until cutover. At cutover the selector is deleted, not
-  the declarations.
-- Reference **CADS semantic tokens** only (the names in
-  `colors_codeAi.css`). They are theme-aware under `codeai-next`, so Dark
-  mode needs no extra rules; do not hardcode hex values or reach for
-  primitives.
-- `[data-brand]` sits on `<html>`, above any CSS module, so the attribute
-  selector composes with local class names without `:global`.
-- The CADS shape (`--shape-*`) and spacing (`--spacing-p-*`) ramps are the
-  exception to brand scoping: they are brand- and mode-invariant, defined
-  at `:root` in `component-library-styles/shapeAndSpacingVariables.css`.
-  Reference them with a fallback (e.g. `var(--shape-sm, 0.375rem)`) for
-  surfaces that don't load the token entry points.
+Components write base styles against semantic tokens directly — there is
+no per-brand fork to maintain. Earlier in the rebrand, components whose
+CADS design diverged structurally from the legacy one carried a
+`[data-brand='codeai-next']`-scoped SCSS block alongside their base
+styles; those blocks are unwrapped into the base rules now that
+codeai-next is the sitewide default. New work should not reintroduce the
+pattern.
 
 ---
 
@@ -113,24 +90,23 @@ Rules for these blocks:
 ### How brand is determined
 
 Brand resolution happens server-side, in `Cdo::Brand.current_brand_code`
-(`lib/cdo/brand.rb`): DCDO `default-brand` (falling back to `codeai-next`)
-unless `brand-router-enabled` is on, in which case a `?brand=` URL param or
-the `brand` cookie can override it per request. The result is written to
-`data-brand` on `<html>` by `application.html.haml`.
+(`lib/cdo/brand.rb`): the constant `codeai-next` unless
+`brand-router-enabled` is on, in which case a `?brand=codeai-audit` URL
+param or the `brand` cookie can override it per request. The result is
+written to `data-brand` on `<html>` by `application.html.haml`.
 
 `apps/src/util/brand.ts`'s `getCurrentBrand()` just reads that attribute
-client-side, returning one of `'code' | 'codeai' | 'codeai-next' |
-'codeai-audit'`, defaulting to `'codeai-next'` if the attribute is absent or
-unrecognized.
+client-side, returning one of `'codeai-next' | 'codeai-audit'`, defaulting
+to `'codeai-next'` if the attribute is absent or unrecognized.
 
-The brand cookie is set by navigating with `?brand=codeai` and cleared with `?brand-reset=1`.
+The brand cookie is set by navigating with `?brand=codeai-audit` and cleared with `?brand-reset=1`.
 
 ### How brand affects rendering
 
 | Mechanism                | What it does                                                           |
 | ------------------------ | ---------------------------------------------------------------------- |
 | `data-brand` on `<html>` | Activates the CSS variable overrides in the `brandOverrides.css` layer |
-| `MuiThemeProvider`       | Swaps between `CdoTheme`, `CodeaiTheme`, and `CodeaiAuditTheme`        |
+| `MuiThemeProvider`       | Swaps between `CodeaiTheme` and `CodeaiAuditTheme`                     |
 | `SiteConfigProvider`     | Exposes brand to React components via `useBrand()` hook                |
 
 ### Accessing brand in components
@@ -139,7 +115,7 @@ The brand cookie is set by navigating with `?brand=codeai` and cleared with `?br
 import {useBrand} from '@cdo/apps/util/SiteConfigContext';
 
 const MyComponent = () => {
-  const brand = useBrand(); // 'code' | 'codeai' | 'codeai-next' | 'codeai-audit'
+  const brand = useBrand(); // 'codeai-next' | 'codeai-audit'
   // ...
 };
 ```
@@ -147,18 +123,17 @@ const MyComponent = () => {
 For non-React code, the brand can be read from the DOM:
 
 ```ts
-document.documentElement.dataset.brand; // 'code' | 'codeai' | 'codeai-next' | 'codeai-audit' | undefined
+document.documentElement.dataset.brand; // 'codeai-next' | 'codeai-audit' | undefined
 ```
 
 ### MUI Themes
 
-| Theme              | File                      | Description                                           |
-| ------------------ | ------------------------- | ----------------------------------------------------- |
-| `CdoTheme`         | `./code.org/index.ts`     | Default Code.org theme                                |
-| `CodeaiTheme`      | `./codeai/index.ts`       | CADS brand-purple palette (used for `codeai-next`)    |
-| `CodeaiAuditTheme` | `./codeai-audit/index.ts` | Hot-pink palette pairing with the pink audit CSS ramp |
+| Theme              | File                      | Description                                                                               |
+| ------------------ | ------------------------- | ----------------------------------------------------------------------------------------- |
+| `CodeaiTheme`      | `./codeai/index.ts`       | Default theme, CADS brand-purple palette. Also exported as `CdoTheme` (deprecated alias). |
+| `CodeaiAuditTheme` | `./codeai-audit/index.ts` | Hot-pink palette pairing with the pink audit CSS ramp                                     |
 
-`CodeaiTheme` and `CodeaiAuditTheme` inherit all typography and component style overrides from `CdoTheme` via `createTheme(CdoTheme, { palette: ... })`. Only the palette differs.
+`CodeaiAuditTheme` inherits all typography and component style overrides from `CodeaiTheme` via `createTheme(CodeaiTheme, { palette: ... })`. Only the palette differs.
 
 Entry points under `frontend/` (which cannot import `apps/src/util/brand.ts`) select the MUI theme with `getMuiThemeForBrand(document.documentElement.dataset.brand)`, exported from this package. Every entry point that loads `brandOverrides.css` should also call this, so CSS tokens and MUI palette-driven components stay in sync under the same brand — see `frontend/apps/studio/src/routes/__root.tsx` and `frontend/packages/markdown/demo/main.tsx`.
 

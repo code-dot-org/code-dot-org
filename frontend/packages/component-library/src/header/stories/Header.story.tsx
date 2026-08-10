@@ -219,8 +219,9 @@ export const StudentSignedIn: Story = {
 //    grows to 24px while its own box keeps the Rails header's 38px invisible
 //    hit target (it never carries `.header_button`).
 //  - hover colors: hovered New project + Account stay brand-white (label, icon,
-//    border) — CdoTheme has no palette, so a regression resolved hover to MUI's
-//    default primary purple. The white outline comes from var() in sx, not styled.
+//    border) — the white comes from var() in sx, not styled, so a regression
+//    that fell through to the theme's palette would resolve hover to
+//    CodeaiTheme's purple instead.
 //  - focus-visible (F-5): keyboard-tabbing to the Account button engages
 //    :focus-visible (programmatic .focus() does not, in Chromium).
 export const TeacherSignedIn: Story = {

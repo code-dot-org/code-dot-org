@@ -24,7 +24,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
  * ###  Status: ```DEPRECATED```
  *
  * @deprecated Use MUI `Button` from `@mui/material` instead.
- * Style overrides are in `src/themes/code.org/styleOverrides/button.tsx`.
+ * Style overrides are in `src/themes/codeai/styleOverrides/button.tsx`.
  * See `src/button/BUTTON_MIGRATION_TO_MUI.md` for migration guide.
  * Codemod available: `yarn codemod:buttons`.
  */

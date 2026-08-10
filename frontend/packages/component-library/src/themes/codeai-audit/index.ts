@@ -6,8 +6,8 @@ import {createBrandTheme} from '../createBrandTheme';
  * renders hot pink so it is trivially easy to spot which surfaces flow
  * through the theme/token system and which do not.
  *
- * Typography and component-level style overrides are inherited from the
- * Code.org theme via deep merge; only the palette differs.
+ * Typography and component-level style overrides are inherited from
+ * CodeaiTheme via deep merge; only the palette differs.
  */
 const theme = createBrandTheme({
   main: '#FF69B4', // hot pink

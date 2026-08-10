@@ -1,4 +1,4 @@
-import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {CodeaiTheme} from '@code-dot-org/component-library/themes';
 import {ThemeProvider} from '@mui/material/styles';
 import type {Meta, StoryObj} from '@storybook/react';
 import React from 'react';
@@ -78,7 +78,7 @@ Example grid setup (used in storybook):
           </div>
         );
 
-      return <ThemeProvider theme={CdoTheme}>{content}</ThemeProvider>;
+      return <ThemeProvider theme={CodeaiTheme}>{content}</ThemeProvider>;
     },
   ],
   argTypes: {

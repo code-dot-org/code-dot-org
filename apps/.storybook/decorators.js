@@ -1,4 +1,4 @@
-import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {CodeaiTheme} from '@code-dot-org/component-library/themes';
 import {ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {merge} from 'lodash';
 import {Provider} from 'react-redux';
@@ -27,7 +27,7 @@ export const reduxStoreDecorator = function (Story, context) {
 
 export const MuiDecorator = Story => {
   return MuiThemeProvider({
-    theme: CdoTheme,
+    theme: CodeaiTheme,
     children: Story(),
   });
 };

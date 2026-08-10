@@ -21,12 +21,12 @@ describe('SiteConfigContext', () => {
   describe('useSiteConfig', () => {
     it('returns the config from SiteConfigProvider', () => {
       render(
-        <SiteConfigProvider config={{brand: 'codeai'}}>
+        <SiteConfigProvider config={{brand: 'codeai-next'}}>
           <SiteConfigDisplay />
         </SiteConfigProvider>
       );
 
-      expect(screen.getByRole('status').textContent).toBe('codeai');
+      expect(screen.getByRole('status').textContent).toBe('codeai-next');
     });
 
     it('throws when used outside SiteConfigProvider', () => {
@@ -45,22 +45,22 @@ describe('SiteConfigContext', () => {
   describe('useBrand', () => {
     it('returns the brand from SiteConfigProvider', () => {
       render(
-        <SiteConfigProvider config={{brand: 'codeai'}}>
+        <SiteConfigProvider config={{brand: 'codeai-next'}}>
           <BrandDisplay />
         </SiteConfigProvider>
       );
 
-      expect(screen.getByRole('status').textContent).toBe('codeai');
+      expect(screen.getByRole('status').textContent).toBe('codeai-next');
     });
 
     it('returns default brand from SiteConfigProvider', () => {
       render(
-        <SiteConfigProvider config={{brand: 'code'}}>
+        <SiteConfigProvider config={{brand: 'codeai-audit'}}>
           <BrandDisplay />
         </SiteConfigProvider>
       );
 
-      expect(screen.getByRole('status').textContent).toBe('code');
+      expect(screen.getByRole('status').textContent).toBe('codeai-audit');
     });
   });
 });
