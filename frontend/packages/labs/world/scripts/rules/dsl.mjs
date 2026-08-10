@@ -197,6 +197,12 @@ export const clearActors = list => ({
   fields: {LIST: {...list.field, type: list.type}},
 });
 
+/** `<actor> is in <list>` — membership in a set of actors. */
+export const isIn = (actor, list) => ({
+  type: 'world_is_in_actors',
+  inputs: {ACTOR: value(actor), LIST: value(list)},
+});
+
 export const hasTrait = (subject, traitRef) => ({
   type: 'world_has_trait',
   fields: {TRAIT: traitRef},

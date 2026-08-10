@@ -66,17 +66,44 @@ describe('the pipeline the stock rules describe', () => {
       'find', // touch   — who is against what
       'resolve', // settle  — push solids apart
       'handleCollisions', // react   — land, and raise the falling events
+      'notice_contacts', // react   — turn the contact set into its edges
     ]);
   });
 
-  it('holds that order however the rules were loaded', () => {
-    // What the anchors could not promise for two steps in the same moment, and
-    // what phases promise for every pair in different ones. Reversed here
-    // because load order is dependency order, and this is the awkward one.
+  it('holds every step in its phase however the rules were loaded', () => {
+    // What phases promise, and the whole of it: a step runs in its moment, and
+    // the moments run in order. WITHIN a moment nothing is promised — steps
+    // there are unordered by design and must commute (engine/core/phases).
+    //
+    // This test used to compare the flat list, which was a stronger claim than
+    // the model makes. It held only while every phase had at most one step; the
+    // moment `react` gained a second, reversing the load order swapped the two,
+    // because a phase keeps the order its steps arrived in. The flat list was
+    // never the guarantee — it was a coincidence that read like one.
+    const phaseOf = (steps: Step[]) =>
+      new Scheduler(steps)
+        .order()
+        .map(step => (step.order.kind === 'phase' ? step.order.phase : 'free'));
+
     const reversed = [...stockSteps()].reverse();
 
-    expect(new Scheduler(reversed).order().map(step => step.id)).toEqual(
-      new Scheduler(stockSteps()).order().map(step => step.id),
-    );
+    expect(phaseOf(reversed)).toEqual(phaseOf(stockSteps()));
+  });
+
+  it('puts both `react` steps after everything that moves anything', () => {
+    // The pair in one moment has to commute, and does: NEITHER writes what the
+    // other reads. Gravity lands actors and sets `falling`; the contact edges
+    // compare `contacts` (written back in `touch`) against `contacts before`.
+    // Beyond that each only QUEUES an event, and `World.tick` flushes the queue
+    // after every step, so no handler's effects land between them.
+    //
+    // What their order does decide is which of two unrelated events a project
+    // hears first — and that is genuinely undecided. A game must not depend on
+    // it, which is what being in one moment means.
+    const order = new Scheduler(stockSteps()).order().map(step => step.id);
+
+    for (const id of ['handleCollisions', 'notice_contacts']) {
+      expect(order.indexOf(id), id).toBeGreaterThan(order.indexOf('resolve'));
+    }
   });
 });
