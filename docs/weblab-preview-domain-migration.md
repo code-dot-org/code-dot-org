@@ -24,10 +24,11 @@ The server serves the preview endpoints on **both** domains
 (`CDO.preview_codeaiprojects_hostname` and the pre-migration
 `CDO.preview_codeprojects_hostname`, `lib/cdo.rb`); the client decides which
 one to embed via `getPreviewDomain()`
-(`apps/src/util/codeprojectsPreviewOrigin.ts`), with this precedence:
+(`apps/src/util/sandboxedPreviewDomain.ts`), with this precedence:
 
 1. **`new-preview-domain` experiment** — per-session opt-in to the new domain
-   (`?enableExperiments=new-preview-domain`), for production bug bashes.
+   (`?enableExperiments=new-preview-domain`), for production bug bashes. It
+   also turns on Python Lab's sandbox iframe (see below).
 2. **`sandboxed-preview-domain` DCDO flag** — per-environment rollout and
    rollback, no deploy needed in either direction. Exposed to the frontend
    through `frontend_config` (`lib/dynamic_config/dcdo.rb`). Values outside
@@ -57,6 +58,10 @@ from their own hostname):
 
 Flag-driven (pick the domain to embed):
 
+- Domain selection — `apps/src/util/sandboxedPreviewDomain.ts`. Kept apart from
+  `codeprojectsPreviewOrigin.ts` because the preview pages import that module
+  and their bundles have none of studio.code.org's page globals — notably the
+  `$` that `experiments.js` transitively needs.
 - Preview URL builders — `apps/src/weblab2/htmlPreview/HTMLPreview.tsx`,
   `apps/src/pythonlab/pyodideSandboxManager.ts`, both via `getPreviewDomain()`
 - Experiment constant — `apps/src/util/experiments.js`
@@ -66,9 +71,11 @@ Because both domains keep serving previews, clients running a stale bundle
 (open tabs, CDN-cached JS) keep working across the deploy and across flag
 flips.
 
-Note Python Lab's sandbox is itself still gated by the separate
-`pythonlab-separate-domain` experiment (whether the sandboxed iframe is used
-at all); `getPreviewDomain()` only matters inside that gate.
+Note Python Lab's sandbox is itself gated: the iframe is used only when
+`pythonlab-separate-domain` or `new-preview-domain` is on
+(`apps/src/pythonlab/pyodideManager.ts`). `getPreviewDomain()` only matters
+inside that gate. Web Lab 2 has no such gate — its preview is always an iframe
+on a preview subdomain.
 
 The Rails controller/route/view keep the `codeprojects_preview` name (internal
 only, no functional coupling to the domain) to limit churn.
@@ -178,11 +185,11 @@ been stable there, then delete the infrastructure first, then the code paths.**
      `dashboard/config/routes.rb` (`preview_host_pattern`), the preview CSP
      (`codeprojects_preview_controller.rb`), and the starter-asset CORS
      pattern (`level_starter_assets_controller.rb`)
-   - `LEGACY_PREVIEW_DOMAIN` in `apps/src/util/codeprojectsPreviewOrigin.ts`
-     (hardcode `codeaiprojects.org`) — at which point `getPreviewDomain()`,
-     the `sandboxed-preview-domain` flag entry in `lib/dynamic_config/dcdo.rb`
-     and `experiments.NEW_PREVIEW_DOMAIN` (`apps/src/util/experiments.js`)
-     can go too
+   - `apps/src/util/sandboxedPreviewDomain.ts` in its entirety (callers
+     hardcode `codeaiprojects.org`), along with the `sandboxed-preview-domain`
+     flag entry in `lib/dynamic_config/dcdo.rb`, `experiments.NEW_PREVIEW_DOMAIN`
+     (`apps/src/util/experiments.js`) and its use in
+     `apps/src/pythonlab/pyodideManager.ts`
    - the `code(?:ai)?projects` regex alternations in
      `codeprojectsPreviewOrigin.ts`, `weblab2_project_service_worker.js` and
      `useProjectServiceWorker.ts`

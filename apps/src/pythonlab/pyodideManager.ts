@@ -9,9 +9,13 @@ import {PyodideMessage} from './types';
 // only the selected implementation's module-scope startup work -- creating a real
 // Worker, or creating the sandbox iframe -- ever runs; statically importing both would
 // run both unconditionally regardless of the experiment.
-const usePyodideSandbox = experiments.isEnabledAllowingQueryString(
-  experiments.PYTHONLAB_SEPARATE_DOMAIN
-);
+// 'new-preview-domain' only selects which domain previews are served from, so it also
+// turns the sandbox on here; otherwise it would be a no-op in Python Lab and testing
+// the new domain would take two flags.
+const usePyodideSandbox =
+  experiments.isEnabledAllowingQueryString(
+    experiments.PYTHONLAB_SEPARATE_DOMAIN
+  ) || experiments.isEnabledAllowingQueryString(experiments.NEW_PREVIEW_DOMAIN);
 // TS wants an explicit extension on dynamic imports under our node16
 // moduleResolution, but these are .ts files, not .js -- webpack resolves the
 // extensionless specifier directly, so we suppress the checker here instead.

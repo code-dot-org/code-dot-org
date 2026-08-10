@@ -43,6 +43,11 @@ to whatever page creates it
 
 ## How to run locally
 
+The sandbox is off by default. Turn it on for a session with
+`?pythonlab-separate-domain=1` on the level URL, or with
+`?new-preview-domain=1`, which turns it on *and* points it at
+`codeaiprojects.org`.
+
 Like Web Lab 2, the sandbox iframe needs a service worker, which
 requires a secure origin. Local dev is plain HTTP, so add the sandbox's
 local hostname to Chrome's insecure-origin allowlist:
