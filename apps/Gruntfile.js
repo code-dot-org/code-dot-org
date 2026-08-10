@@ -379,6 +379,16 @@ module.exports = function (grunt) {
     },
   };
 
+  // One source for the Node heap given to rspack: APPS_BUILD_MAX_MEMORY
+  // (build-in-parallel.sh's knob, default 4096MB here), unless the
+  // caller already set NODE_OPTIONS.
+  const rspackNodeOptions = () =>
+    process.env.NODE_OPTIONS
+      ? ''
+      : `NODE_OPTIONS=--max-old-space-size=${
+          process.env.APPS_BUILD_MAX_MEMORY || 4096
+        } `;
+
   config.exec = {
     // `--rspack` (or APPS_BUNDLER=rspack) swaps only the JS bundling
     // step of `grunt build`; every other task (sass, locales, copies,
@@ -386,10 +396,13 @@ module.exports = function (grunt) {
     // defaults to the full-swc mode here because this path exists to
     // prove the production story; see rspack.config.js.  NODE_ENV is
     // pinned because the rspack CLI defaults --mode to production,
-    // silently minifying dev builds otherwise.
+    // silently minifying dev builds otherwise.  Node heap comes from
+    // the same APPS_BUILD_MAX_MEMORY knob build-in-parallel.sh uses,
+    // and an already-set NODE_OPTIONS (e.g. from that script) wins.
     rspackBuild:
       `NODE_ENV=${process.env.NODE_ENV || 'development'} ` +
       (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
+      rspackNodeOptions() +
       'node node_modules/.bin/rspack build --config rspack.config.js',
     // The dev server; `rspack serve` defaults to development mode.
     // Full-swc here too: it is the mode every browser and drone
@@ -400,7 +413,7 @@ module.exports = function (grunt) {
     // prebuild's copied assets.
     rspackServe:
       (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
-      'NODE_OPTIONS=--max-old-space-size=4096 ' +
+      rspackNodeOptions() +
       'node node_modules/.bin/rspack serve --config rspack.config.js',
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
