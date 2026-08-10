@@ -28,6 +28,7 @@ const rspack = require('@rspack/core');
 const {PyodidePlugin} = require('@pyodide/webpack-plugin');
 const {RspackManifestPlugin} = require('rspack-manifest-plugin');
 const {StatsWriterPlugin} = require('webpack-stats-plugin');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const {TsCheckerRspackPlugin} = require('ts-checker-rspack-plugin');
 const {ReactRefreshRspackPlugin} = require('@rspack/plugin-react-refresh');
 const ReactRefreshTypeScript = require('react-refresh-typescript');
@@ -58,6 +59,19 @@ const {
 } = require('./webpackEntryPoints');
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
+
+// The CLI does not expose which command is running; the argv is the
+// reliable signal for gating serve-only behavior.
+const IS_SERVE = process.argv.includes('serve');
+
+// RSPACK-DIFF: rspack resolves css-loader's `new URL(...)` output for
+// server-relative urls (e.g. url(/fonts/...)) as modules, where
+// webpack leaves them to the browser.  Skip them explicitly — dashboard
+// serves those paths — in every rule that runs css-loader, so the .css
+// and .scss rules cannot drift apart.
+const CSS_URL_FILTER = {
+  filter: url => !url.startsWith('/'),
+};
 
 // RSPACK-DIFF: this dev server injects its logger into any proxy entry
 // that lacks one, and its bundled http-proxy-middleware v3 then logs
@@ -147,12 +161,15 @@ function createRspackConfig({
   // module count while this costs less than APPS_DEVTOOL=eval, because
   // unmapped modules skip eval wrapping entirely.  Known rough edge:
   // unmapped modules show numeric internal names in DevTools.
-  const devtoolScope =
+  const scopeNames =
     !minify && envConstants.APPS_DEVTOOL_SCOPE
       ? envConstants.APPS_DEVTOOL_SCOPE.split(',')
           .map(s => s.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
           .filter(Boolean)
-      : null;
+      : [];
+  // An empty array is truthy; a value of only separators must fall back
+  // to the normal devtool instead of silently disabling source maps.
+  const devtoolScope = scopeNames.length ? scopeNames : null;
   const scopeRegexFor = name => new RegExp(`src[\\\\/]${name}[\\\\/.]`);
   // RSPACK-DIFF: the dev default is eval — no source maps — where
   // webpack defaults to eval-cheap-module-source-map.  rspack's
@@ -248,7 +265,10 @@ function createRspackConfig({
         },
         {
           test: /\.css$/,
-          use: [{loader: 'style-loader'}, {loader: 'css-loader'}],
+          use: [
+            {loader: 'style-loader'},
+            {loader: 'css-loader', options: {url: CSS_URL_FILTER}},
+          ],
         },
         {
           test: /\.scss$/,
@@ -257,13 +277,7 @@ function createRspackConfig({
             {
               loader: 'css-loader',
               options: {
-                // RSPACK-DIFF: rspack resolves css-loader's `new URL(...)`
-                // output for server-relative urls (e.g. url(/fonts/...))
-                // as modules, where webpack leaves them to the browser.
-                // Skip them explicitly; dashboard serves those paths.
-                url: {
-                  filter: url => !url.startsWith('/'),
-                },
+                url: CSS_URL_FILTER,
                 modules: {
                   auto: true,
                   localIdentName: process.env.DEV
@@ -582,6 +596,9 @@ function createRspackConfig({
         exclude: /node_modules|build/,
         onDetected({paths, compilation}) {
           const cycle = paths.map(s => s.replace(/^\.\//, ''));
+          // TODO(rspack-default): webpack fails the build on a new
+          // cycle; this warns.  Promote to compilation.errors before
+          // rspack becomes the default bundler.
           if (!isKnownCycle(cycle)) {
             compilation.warnings.push(
               new Error(
@@ -674,6 +691,17 @@ function createRspackConfig({
           envConstants.STATSIG_LOCAL_MODE_OFF ?? ''
         ),
       }),
+      // webpack-bundle-analyzer reads compilation stats, which rspack
+      // produces in the same shape; `yarn build:analyze --rspack` works
+      // like the webpack version.
+      ...(process.env.ANALYZE_BUNDLE
+        ? [
+            new BundleAnalyzerPlugin({
+              analyzerMode: 'static',
+              excludeAssets: [...Object.keys(INTERNAL_ENTRIES)],
+            }),
+          ]
+        : []),
       new rspack.CopyRspackPlugin({
         patterns: [
           {
@@ -698,10 +726,8 @@ function createRspackConfig({
           ...pyodideCopyPatterns,
         ].filter(entry => !!entry),
       }),
-      // RSPACK-DIFF: UnminifiedWebpackPlugin (unminified copies of
-      // webpack-runtime/applab-api/gamelab-api for unit tests) is webpack 4
-      // era and incompatible; minified builds are out of scope for the
-      // prototype.  TODO before any real switch.
+      // Unminified copies of the chunks the exporters and unit tests
+      // read; see UnminifiedCopiesPlugin above.
       ...(minify
         ? [
             new UnminifiedCopiesPlugin([
@@ -732,7 +758,7 @@ function createRspackConfig({
         map: file => {
           if (minify) {
             file.name = file.name
-              .replace(/wp[a-f0-9]{32}\./, '.')
+              .replace(/wp[a-f0-9]{16,32}\./, '.')
               .replace(/\.min/, '');
           }
           return file;
@@ -740,24 +766,30 @@ function createRspackConfig({
       }),
       ...(envConstants.HOT ? [new ReactRefreshRspackPlugin()] : []),
     ],
-    // RSPACK-DIFF: @rspack/cli defaults this on for web targets under
-    // `serve`; set it explicitly so build and serve agree.  Deferring
-    // dynamic imports until a page requests them is a small startup
-    // win; the /_rspack/lazy trigger endpoint must be excluded from the
-    // catch-all proxy below or React.lazy chunks 404 and Suspense
-    // boundaries crash.  Entries stay eager: the lazy entry stub is
-    // hot-patched in after load, and Rails inline scripts synchronously
-    // expect entry globals, so RSPACK_LAZY_ENTRIES=1 is usable only if
-    // the middleware learns to stall entry requests until compiled.
-    lazyCompilation: {
-      imports: !process.env.RSPACK_NO_LAZY,
-      entries: !!process.env.RSPACK_LAZY_ENTRIES,
-    },
+    // RSPACK-DIFF: lazy compilation is for `serve` only — a one-shot
+    // build must emit real modules, since lazy stubs phone the dev
+    // server's trigger endpoint and are dead files when served from
+    // disk.  Under serve, deferring dynamic imports until a page
+    // requests them is a small startup win; the /_rspack/lazy trigger
+    // endpoint must be excluded from the catch-all proxy below or
+    // React.lazy chunks 404 and Suspense boundaries crash.  Entries
+    // stay eager: the lazy entry stub is hot-patched in after load,
+    // and Rails inline scripts synchronously expect entry globals, so
+    // RSPACK_LAZY_ENTRIES=1 is usable only if the middleware learns to
+    // stall entry requests until compiled.
+    ...(IS_SERVE
+      ? {
+          lazyCompilation: {
+            imports: !process.env.RSPACK_NO_LAZY,
+            entries: !!process.env.RSPACK_LAZY_ENTRIES,
+          },
+        }
+      : {}),
     // Serving over a populated build/package/js makes writeToDisk read
     // and compare the previous output before writing, which dominates
-    // startup.  start:rspack removes the js output dir first; the dev
-    // server serves from memory, so nothing reads those files before
-    // the first compile.
+    // startup.  prepareBundlerOutputDir in the Gruntfile empties the
+    // output dir before serve starts; the dev server serves from
+    // memory, so nothing reads those files before the first compile.
     devServer: envConstants.DEV
       ? {
           allowedHosts: [
@@ -803,10 +835,9 @@ function createRspackConfig({
   };
 }
 
-/**
- * Same helper as webpack.config.js (spelled correctly this time).
- */
-
 module.exports = createRspackConfig({
   minify: process.env.NODE_ENV === 'production',
+  // The Gruntfile forwards its --piskel-dev option as PISKEL_DEV, since
+  // this config is loaded in a child process and cannot see grunt options.
+  piskelDevMode: !!process.env.PISKEL_DEV,
 });
