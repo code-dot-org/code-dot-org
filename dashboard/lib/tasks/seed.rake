@@ -595,7 +595,15 @@ namespace :seed do
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
-  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
+  # Development seeds the UI test tree on top of production content, so that a
+  # development machine can run UI tests without a separate manual seed.
+  DEFAULT_SEED_TASKS =
+    case rack_env
+    when :test then UI_TEST_SEED_TASKS
+    when :adhoc then ADHOC_SEED_TASKS
+    when :development then FULL_SEED_TASKS + UI_TEST_SEED_TASKS
+    else FULL_SEED_TASKS
+    end
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
