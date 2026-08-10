@@ -18,10 +18,8 @@ import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
-import {
-  getInnerEnvironment,
-  getPreviewDomain,
-} from '@cdo/apps/util/codeprojectsPreviewOrigin';
+import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
+import {getPreviewDomain} from '@cdo/apps/util/sandboxedPreviewDomain';
 import {createUuid} from '@cdo/apps/utils';
 
 import {

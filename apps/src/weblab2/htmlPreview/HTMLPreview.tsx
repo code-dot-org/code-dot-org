@@ -21,12 +21,10 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {
-  getInnerEnvironment,
-  getPreviewDomain,
-} from '@cdo/apps/util/codeprojectsPreviewOrigin';
+import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {getPreviewDomain} from '@cdo/apps/util/sandboxedPreviewDomain';
 import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
 import {
   addConsoleLog,

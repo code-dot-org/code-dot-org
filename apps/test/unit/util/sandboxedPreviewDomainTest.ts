@@ -1,6 +1,6 @@
 import DCDO from '@cdo/apps/dcdo';
-import {getPreviewDomain} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 import experiments from '@cdo/apps/util/experiments';
+import {getPreviewDomain} from '@cdo/apps/util/sandboxedPreviewDomain';
 
 describe('getPreviewDomain', () => {
   afterEach(() => {

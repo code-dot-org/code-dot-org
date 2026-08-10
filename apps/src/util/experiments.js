@@ -80,7 +80,9 @@ experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
 experiments.PYTHONLAB_SEPARATE_DOMAIN = 'pythonlab-separate-domain';
 // Per-session opt-in to the codeaiprojects.org sandboxed-preview domain ahead
 // of the global 'sandboxed-preview-domain' DCDO flag, for production bug
-// bashes. See getPreviewDomain() in apps/src/util/codeprojectsPreviewOrigin.ts.
+// bashes. See getPreviewDomain() in apps/src/util/sandboxedPreviewDomain.ts.
+// Also turns on Python Lab's sandbox iframe, so testing the new domain there
+// doesn't take a second flag.
 experiments.NEW_PREVIEW_DOMAIN = 'new-preview-domain';
 // Student scrapbook entrypoint + "My scrapbook" dropdown link.
 // Enable with ?student-scrapbook=true or ?enableExperiments=student-scrapbook.
