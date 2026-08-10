@@ -12,7 +12,7 @@ const statusCache = new Map();
 const inflightRequests = new Map();
 
 // After a failed check, skip re-asking Azure for this URL for 10 seconds.
-const ERROR_CACHE_DURATION_MS = 10 * 1000;
+export const ERROR_CACHE_DURATION_MS = 10 * 1000;
 
 export function isAbsoluteImageUrl(imageUrl) {
   return ABSOLUTE_REGEXP.test(imageUrl);

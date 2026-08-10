@@ -1,5 +1,6 @@
 import {
   clearImageUrlModerationCache,
+  ERROR_CACHE_DURATION_MS,
   isAbsoluteImageUrl,
   moderateApplabImageUrl,
 } from '@cdo/apps/applab/imageUrlModeration';
@@ -119,7 +120,7 @@ describe('imageUrlModeration', () => {
       expect(mockModerateImageUrl).toHaveBeenCalledTimes(1);
 
       mockModerateImageUrl.mockResolvedValue('safe');
-      jest.advanceTimersByTime(60 * 1000 + 1);
+      jest.advanceTimersByTime(ERROR_CACHE_DURATION_MS + 1);
 
       await expect(moderateApplabImageUrl(url)).resolves.toEqual({
         status: 'safe',
