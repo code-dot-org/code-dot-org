@@ -19,9 +19,11 @@ import {cameraFollowRule} from './cameraFollow';
 import {collisionsRule} from './collisions';
 import {dragRule} from './drag';
 import {driveRule} from './drive';
+import {expiresRule} from './expires';
 import {gravityRule} from './gravity';
 import {inputRule} from './input';
 import {motionRule} from './motion';
+import {shootsRule} from './shoots';
 import {solidRule} from './solid';
 import {wrapRule} from './wrap';
 
@@ -147,6 +149,24 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: dragRule,
   },
   {
+    id: 'shoots',
+    name: 'Shooting',
+    ability: 'Shoots',
+    description:
+      'Limits how often an actor may fire and raises "fires" when a shot happens \u2014 your handler decides what a shot IS, so it can spawn any kind of bullet. Pair "make \u2026 fire" on a key press with a "fires" handler.',
+    provides: ['Shoots'],
+    contents: shootsRule,
+  },
+  {
+    id: 'expires',
+    name: 'Expiry',
+    ability: 'Expires',
+    description:
+      'Takes an actor out of the world once it is older than its lifetime \u2014 the other half of spawning. Without it, bullets and sparks pile up forever and the game slowly grinds down.',
+    provides: ['Expires'],
+    contents: expiresRule,
+  },
+  {
     id: 'wrap',
     name: 'Screen Wrap',
     ability: 'Wraps at the Edges',
@@ -217,6 +237,8 @@ export {
   arrowsRule,
   dragRule,
   driveRule,
+  expiresRule,
+  shootsRule,
   solidRule,
   wrapRule,
   collisionsRule,
