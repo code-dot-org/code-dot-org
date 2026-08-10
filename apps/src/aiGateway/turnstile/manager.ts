@@ -1,3 +1,5 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
 import {
   CHALLENGE_TIMEOUT_MS,
   CONTAINER_ID,
@@ -8,6 +10,18 @@ import {
 import {debuggerWillPauseInAnonymousScope} from './debuggerProbe';
 import {loadTurnstileScript} from './loadScript';
 import {TurnstileDevToolsError} from './types';
+
+/**
+ * Where the delivered token came from: 'pre-fetch' when a challenge started in
+ * the background after the previous delivery had already produced it,
+ * 'on-demand' when the caller had to wait for a challenge started for it.
+ */
+type TokenAcquisitionMode = 'pre-fetch' | 'on-demand';
+
+interface TokenAcquisition {
+  mode: TokenAcquisitionMode;
+  token: Promise<string>;
+}
 
 /**
  * Manages Turnstile widget lifecycle with three goals:
@@ -119,26 +133,43 @@ export class TurnstileManager {
       throw new TurnstileDevToolsError();
     }
 
-    try {
-      const token = await this.getToken();
-      console.log(
-        `${LOG} Token delivered successfully (len=${token.length}) in ${(
-          performance.now() - start
-        ).toFixed(0)}ms`
-      );
-      return token;
-    } catch (err) {
-      console.error(
-        `${LOG} getToken() failed after ${(performance.now() - start).toFixed(
-          0
-        )}ms:`,
-        err
-      );
-      throw err;
-    }
+    // The mode is decided synchronously, before the challenge is awaited, so it
+    // can be attached to the span at creation.
+    const {mode, token: pendingToken} = this.startTokenAcquisition();
+
+    const awaitTokenDelivery = async (): Promise<string> => {
+      try {
+        const token = await pendingToken;
+        console.log(
+          `${LOG} Token delivered successfully (len=${token.length}) in ${(
+            performance.now() - start
+          ).toFixed(0)}ms`
+        );
+        return token;
+      } catch (err) {
+        console.error(
+          `${LOG} Token acquisition failed after ${(
+            performance.now() - start
+          ).toFixed(0)}ms:`,
+          err
+        );
+        throw err;
+      }
+    };
+
+    return Observability.startSpan(
+      {
+        name: 'ai-gateway.turnstile',
+        op: 'ai.turnstile',
+        attributes: {'turnstile.mode': mode, feature: 'ai-gateway'},
+      },
+      awaitTokenDelivery
+    );
   }
 
-  private getToken(): Promise<string> {
+  // Starts (or claims) a challenge and reports where the token came from. The
+  // returned token is still pending — callers must await it.
+  private startTokenAcquisition(): TokenAcquisition {
     if (this.nextTokenPromise) {
       const age =
         this.nextTokenResolvedAt !== null
@@ -162,7 +193,7 @@ export class TurnstileManager {
         this.nextTokenPromise = null;
         this.nextTokenResolvedAt = null;
         this.schedulePrefetch();
-        return p;
+        return {mode: 'pre-fetch', token: p};
       }
     }
 
@@ -172,7 +203,7 @@ export class TurnstileManager {
       () => this.schedulePrefetch(),
       () => {}
     );
-    return result;
+    return {mode: 'on-demand', token: result};
   }
 
   private schedulePrefetch(): void {

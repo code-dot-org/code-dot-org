@@ -37,6 +37,10 @@ export const LINE_RECONNECT_SNAP_RADIUS_PX = 40;
 // selected/focused state paints this band so the grab area is visible.
 export const LINE_INTERACTION_WIDTH_PX = 40;
 
+// How far (in screen pixels) the pointer must travel before a mousedown counts
+// as a drag rather than a click, so hand jitter doesn't move or select anything.
+export const DRAG_THRESHOLD_PX = 4;
+
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
 

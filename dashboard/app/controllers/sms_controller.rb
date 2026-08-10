@@ -44,7 +44,7 @@ class SmsController < ApplicationController
     when /The message From\/To pair violates a blacklist rule./
       # recipient unsubscribed from twilio, pretend it succeeded
       head :ok
-    when /The \'To\' number .* is not a valid phone number\./
+    when /The 'To' number .* is not a valid phone number\./
       head :bad_request
     else
       raise
