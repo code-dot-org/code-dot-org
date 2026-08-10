@@ -661,15 +661,19 @@ export default function ReactFlowCanvas({
       onCannotGroup: handleCannotGroup,
     });
 
-  const {middleButtonHeld, handleMouseDownCapture, handleToolKeyDown} =
-    useCanvasToolSwitching({
-      setCanvasTool,
-      readOnly,
-      connecting: !!connectingFrom,
-      isGroupMode,
-      canvasContainerRef,
-      workspaceRef,
-    });
+  const {
+    middleButtonHeld,
+    spaceHeld,
+    handleMouseDownCapture,
+    handleToolKeyDown,
+  } = useCanvasToolSwitching({
+    setCanvasTool,
+    readOnly,
+    connecting: !!connectingFrom,
+    isGroupMode,
+    canvasContainerRef,
+    workspaceRef,
+  });
 
   const handleCanvasKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
@@ -990,10 +994,16 @@ export default function ReactFlowCanvas({
   // All ReactFlow props that differ between cursor and grab mode, collected in
   // one place so the grab mode contract is visible at a glance.
   const grabModeProps = {
-    // Left button pans only in hand mode; the middle button pans in either,
-    // which is how the select tool gets a momentary hand tool.
-    panOnDrag: isGrabMode ? [0, MIDDLE_MOUSE_BUTTON] : [MIDDLE_MOUSE_BUTTON],
-    nodesDraggable: !readOnly && !isGrabMode,
+    // Left button pans in hand mode, or in any mode while space is held; the
+    // middle button pans in every mode. The latter two are how the select tool
+    // gets a momentary hand tool. Nodes must give up dragging for the space
+    // gesture, since React Flow only lets a drag on a node reach the pan
+    // handler when the node isn't draggable.
+    panOnDrag:
+      isGrabMode || spaceHeld
+        ? [0, MIDDLE_MOUSE_BUTTON]
+        : [MIDDLE_MOUSE_BUTTON],
+    nodesDraggable: !readOnly && !isGrabMode && !spaceHeld,
     nodesConnectable: !readOnly && !isGrabMode,
     elementsSelectable: !readOnly && !isGrabMode,
     nodesFocusable: !isGrabMode,
@@ -1024,7 +1034,8 @@ export default function ReactFlowCanvas({
                     styles.canvasContainer,
                     {
                       [styles.connectMode]: !!connectingFrom,
-                      [styles.grabMode]: isGrabMode || middleButtonHeld,
+                      [styles.grabMode]:
+                        isGrabMode || middleButtonHeld || spaceHeld,
                       [styles.grabbing]: middleButtonHeld,
                     },
                     SKETCHLAB_CONTAINER_CLASS
@@ -1110,6 +1121,11 @@ export default function ReactFlowCanvas({
                       // drag-to-select; disable React Flow's built-in versions.
                       multiSelectionKeyCode={null}
                       selectionKeyCode={null}
+                      // Space-to-pan is ours too (see useCanvasToolSwitching);
+                      // React Flow's version pans on any mouse button, gives no
+                      // cursor feedback, and arms itself even when focus is
+                      // outside the canvas.
+                      panActivationKeyCode={null}
                       proOptions={{hideAttribution: true}}
                       // Even though we manage tab order, we keep React Flow's keyboard A11y on because
                       // it manages things like moving nodes with arrow keys.

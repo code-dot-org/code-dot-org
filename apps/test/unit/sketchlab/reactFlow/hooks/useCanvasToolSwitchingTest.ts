@@ -112,4 +112,81 @@ describe('useCanvasToolSwitching', () => {
     });
     expect(result.current.middleButtonHeld).toBe(false);
   });
+
+  it('reports the spacebar as held until it is released', () => {
+    const {result} = renderHook(() => useCanvasToolSwitching(defaultOptions));
+
+    let consumed = false;
+    const event = makeKeyEvent(' ');
+    act(() => {
+      consumed = result.current.handleToolKeyDown(event);
+    });
+    expect(consumed).toBe(true);
+    // Space would otherwise scroll the page.
+    expect(event.preventDefault).toHaveBeenCalled();
+    expect(result.current.spaceHeld).toBe(true);
+
+    // The release can land anywhere, so it is tracked on the window.
+    act(() => {
+      window.dispatchEvent(new KeyboardEvent('keyup', {key: ' '}));
+    });
+    expect(result.current.spaceHeld).toBe(false);
+  });
+
+  it('holds the spacebar pan in read-only, connect, and group modes', () => {
+    const modes = [
+      {readOnly: true},
+      {connecting: true},
+      {isGroupMode: true},
+    ] as const;
+
+    modes.forEach(mode => {
+      const {result} = renderHook(() =>
+        useCanvasToolSwitching({...defaultOptions, ...mode})
+      );
+      act(() => {
+        expect(result.current.handleToolKeyDown(makeKeyEvent(' '))).toBe(true);
+      });
+      expect(result.current.spaceHeld).toBe(true);
+    });
+  });
+
+  it('leaves the spacebar to elements it natively activates', () => {
+    const {result} = renderHook(() => useCanvasToolSwitching(defaultOptions));
+
+    const roleButton = document.createElement('div');
+    roleButton.setAttribute('role', 'button');
+    const activatable: HTMLElement[] = [
+      document.createElement('button'),
+      document.createElement('a'),
+      document.createElement('input'),
+      roleButton,
+    ];
+
+    activatable.forEach(target => {
+      const event = makeKeyEvent(' ', {target});
+      expect(result.current.handleToolKeyDown(event)).toBe(false);
+      expect(event.preventDefault).not.toHaveBeenCalled();
+    });
+    expect(result.current.spaceHeld).toBe(false);
+  });
+
+  it('releases both momentary pans when the window loses focus', () => {
+    const {result} = renderHook(() => useCanvasToolSwitching(defaultOptions));
+
+    act(() => {
+      result.current.handleMouseDownCapture(
+        makeMouseEvent(MIDDLE_MOUSE_BUTTON)
+      );
+      result.current.handleToolKeyDown(makeKeyEvent(' '));
+    });
+    expect(result.current.middleButtonHeld).toBe(true);
+    expect(result.current.spaceHeld).toBe(true);
+
+    act(() => {
+      window.dispatchEvent(new Event('blur'));
+    });
+    expect(result.current.middleButtonHeld).toBe(false);
+    expect(result.current.spaceHeld).toBe(false);
+  });
 });

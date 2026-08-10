@@ -72,8 +72,9 @@ $handle-grab-buffer: 10px;
     cursor: grab;
   }
 
-  // A held middle mouse button pans without leaving the select tool, so the
-  // cursor shows the grab state even though .grabMode isn't the active tool.
+  // A held middle mouse button or spacebar pans without leaving the select
+  // tool, so the cursor shows the grab state even though .grabMode isn't the
+  // active tool.
   &.grabMode:active *,
   &.grabbing * {
     cursor: grabbing;
