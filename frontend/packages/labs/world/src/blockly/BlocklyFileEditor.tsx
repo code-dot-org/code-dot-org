@@ -68,6 +68,7 @@ import {buildDomainPalette} from './domainBlocks';
 import {setEditingRule} from './editingRule';
 import {setEffectImportHandler} from './effectImport';
 import {fileKindOf} from './fileKind';
+import {redrawLiveDropdowns} from './moduleOptions';
 import {setModuleOpener, setModuleOpeningOffered} from './openModule';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {
@@ -577,6 +578,11 @@ export const BlocklyFileEditor = ({
       .then(info => {
         if (alive) {
           addActorThumbnails(info.thumbnails);
+          // The pictures have only just arrived, and the dropdowns that show
+          // them were drawn before they did (moduleOptions.redrawLiveDropdowns).
+          if (workspaceRef.current) {
+            redrawLiveDropdowns(workspaceRef.current);
+          }
         }
       });
     return () => {

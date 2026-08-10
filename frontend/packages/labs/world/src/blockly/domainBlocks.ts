@@ -115,6 +115,7 @@ import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {instanceId, type MapPlacement} from './mapPlacements';
 import {
   actorFieldOptions,
+  type DropdownOptions,
   actorOptionsExtension,
   actorTypeOptionsExtension,
   animationFileOptions,
@@ -787,7 +788,9 @@ const defineEventBlock = (event: EventMeta) => {
         continue; // nothing else has a set of choices to wait for
       }
       const field = filterFieldName(filters.length + kinds.length);
-      const options = (): Array<[string, string]> => [
+      // Pictures where the project has them, names where it does not — and
+      // `(any)` is always a word, since "no filter" has nothing to draw.
+      const options = (): DropdownOptions => [
         ANY_CHOICE,
         ...actorFieldOptions(),
       ];

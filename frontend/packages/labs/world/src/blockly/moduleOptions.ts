@@ -11,6 +11,7 @@ import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
 import type {EffectParameter} from '../effect/model/types';
 
+import {actorThumbnail} from './actorThumbnails';
 import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
 import {localActorOptions} from './localActors';
@@ -178,6 +179,55 @@ export const liveDropdownFieldNames = (): ReadonlyMap<string, string> =>
   liveDropdownFields;
 
 /**
+ * Redraw every live dropdown on a workspace.
+ *
+ * A live dropdown regenerates its options when the menu opens, so what it
+ * OFFERS is always current. What it DRAWS is not: the field was painted once
+ * and only repaints when something asks. That gap is invisible for a list of
+ * names, which does not change under a rendered block — and visible the moment
+ * an option becomes a picture, because actor thumbnails are rendered by the
+ * sandbox and arrive after the editor has drawn. Without this, a block sits
+ * there showing a name until the next unrelated edit repaints it.
+ */
+export function redrawLiveDropdowns(workspace: Blockly.WorkspaceSvg): void {
+  const names = new Set(liveDropdownFields.values());
+  for (const block of workspace.getAllBlocks(false)) {
+    for (const input of block.inputList) {
+      for (const field of input.fieldRow) {
+        if (field.name && names.has(field.name)) {
+          reselect(field as Blockly.FieldDropdown);
+          field.forceRerender();
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Point a dropdown at its option again, from the live list.
+ *
+ * `forceRerender` alone is not enough, and the reason is easy to miss:
+ * `selectedOption` is CACHED, set when the value was last written, and it is
+ * what decides whether the field draws text or an image. Redrawing without
+ * refreshing it faithfully redraws the stale answer — the name the option was
+ * when the block was built, forever, however many pictures have arrived since.
+ *
+ * The value is untouched; only the option explaining it is looked up again.
+ */
+function reselect(field: Blockly.FieldDropdown): void {
+  const dropdown = field as unknown as {
+    selectedOption?: [unknown, string];
+    getOptions?: (useCache?: boolean) => Array<[unknown, string]>;
+  };
+  const chosen = dropdown
+    .getOptions?.(false)
+    ?.find(([, value]) => value === field.getValue());
+  if (chosen) {
+    dropdown.selectedOption = chosen;
+  }
+}
+
+/**
  * Point one dropdown field at a live option list — its menu AND its label.
  *
  * Blockly keeps the two apart, and both need saying:
@@ -205,11 +255,11 @@ export const liveDropdownFieldNames = (): ReadonlyMap<string, string> =>
  */
 export function bindLiveOptions(
   field: Blockly.FieldDropdown,
-  options: (field?: Blockly.FieldDropdown) => Array<[string, string]>,
+  options: (field?: Blockly.FieldDropdown) => DropdownOptions,
 ): void {
   const dropdown = field as unknown as {
-    menuGenerator_: () => Array<[string, string]>;
-    getOptions: (useCache?: boolean) => Array<[string, string]>;
+    menuGenerator_: () => DropdownOptions;
+    getOptions: (useCache?: boolean) => DropdownOptions;
     getText_: () => string | null;
     doClassValidation_?: (value?: string) => string | null;
   };
@@ -221,8 +271,30 @@ export function bindLiveOptions(
   dropdown.getText_ = () => {
     const value = field.getValue();
     const chosen = options(field).find(([, option]) => option === value);
-    return chosen ? String(chosen[0]) : staleLabel();
+    if (!chosen) {
+      return staleLabel();
+    }
+    // An option may be a picture, and a picture's text is its `alt` — which is
+    // what Blockly's own `getText` reports, and what a screen reader reads.
+    // `String()` on one of those says "[object Object]".
+    const [label] = chosen;
+    return typeof label === 'string' ? label : label.alt;
   };
+
+  // A picture cannot say its own name, so the field says it on hover. Only for
+  // a picture: a text option already reads as its name, and overriding the
+  // tooltip there would replace something the block meant to say.
+  field.setTooltip(() => {
+    const chosen = options(field).find(
+      ([, option]) => option === field.getValue(),
+    );
+    const label = chosen?.[0];
+    if (label && typeof label !== 'string') {
+      return label.alt;
+    }
+    const block = field.getSourceBlock();
+    return typeof block?.tooltip === 'string' ? block.tooltip : '';
+  });
 
   // A dropdown normally refuses a value that is not one of its options, and
   // that is wrong for a LIVE one: the options are the project as the editor
@@ -252,7 +324,7 @@ export function liveDropdown(
   // The field is passed so an option list can depend on where the block is —
   // `use rule` leaves out the rule whose own workspace it is in (editingRule).
   // Most lists are the same everywhere and ignore it.
-  options: (field?: Blockly.FieldDropdown) => Array<[string, string]>,
+  options: (field?: Blockly.FieldDropdown) => DropdownOptions,
 ): Extension {
   liveDropdownFields.set(extensionName, fieldName);
   return defineExtension(extensionName, {
@@ -288,10 +360,53 @@ export function liveDropdown(
  */
 export function actorFieldOptions(
   field?: Blockly.FieldDropdown,
-): Array<[string, string]> {
+): DropdownOptions {
   const local = localActorOptions(field);
-  return local.length ? [...local, ...projectActors] : orNone(projectActors);
+  const named = local.length
+    ? [...local, ...projectActors]
+    : orNone(projectActors);
+  return named.map(([label, value]) => pictured(label, value));
 }
+
+/**
+ * An actor option as its PICTURE, where we have one.
+ *
+ * A kind of actor is a thing you can see, and a row of names is a worse way to
+ * pick one than a row of pictures — which is what Sprite Lab has always done,
+ * and what `CdoFieldImageDropdown` does for animations. Blockly's dropdown
+ * takes an option that is either text or an image, never both, so this is a
+ * choice rather than an addition.
+ *
+ * THE NAME IS NOT LOST. It rides along as `alt`, which is what
+ * `FieldDropdown.getText` reports for an image option — so a screen reader
+ * hears it, and `actorNameFor` reads it back for the tooltip that says which
+ * actor a picture is.
+ *
+ * A thumbnail is rendered by the sandbox and arrives after the editor has
+ * drawn, and a world's own inline `define actor` may never get one at all. So
+ * the fallback is not an edge case: no picture yet means the name, which is
+ * exactly what the dropdown said before this.
+ */
+function pictured(label: string, value: string): DropdownOptions[number] {
+  const src = actorThumbnail(value);
+  return src
+    ? [{src, width: ACTOR_ICON, height: ACTOR_ICON, alt: label}, value]
+    : [label, value];
+}
+
+/** How big an actor's picture is drawn in a dropdown, square. */
+const ACTOR_ICON = 24;
+
+/**
+ * What a dropdown may offer: a label, or a picture with the label as its `alt`.
+ *
+ * Blockly's own `MenuOption` is wider than this (it admits an `HTMLElement` and
+ * a third element), and the block definition types are narrower. This is the
+ * overlap, which is what both ends actually accept.
+ */
+export type DropdownOptions = Array<
+  [string | {src: string; alt: string; width?: number; height?: number}, string]
+>;
 
 export const actorOptionsExtension = liveDropdown(
   'world_actor_options',
