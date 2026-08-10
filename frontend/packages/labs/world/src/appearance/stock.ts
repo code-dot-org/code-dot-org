@@ -149,6 +149,24 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('ball'),
   },
   {
+    id: 'ship',
+    name: 'Ship',
+    description: 'A dart-shaped ship, pointing up — for something you steer.',
+    dataUrl: image('ship'),
+  },
+  {
+    id: 'asteroid',
+    name: 'Asteroid',
+    description: 'A chunky grey rock, for something to dodge or break apart.',
+    dataUrl: image('asteroid'),
+  },
+  {
+    id: 'shot',
+    name: 'Shot',
+    description: 'A small bright bolt, pointing up — for something fired.',
+    dataUrl: image('shot'),
+  },
+  {
     id: 'playerWalk',
     name: 'Player Walking',
     description: 'Four frames of the player mid-stride, side by side.',
@@ -167,6 +185,20 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     name: 'Switch',
     description: 'Six frames of a switch flipping over, side by side.',
     dataUrl: image('switch'),
+    sheet: SQUARE_CELLS,
+  },
+  {
+    id: 'shipThrust',
+    name: 'Ship Thrusting',
+    description: 'Four frames of the ship with its engine lit, side by side.',
+    dataUrl: image('shipThrust'),
+    sheet: SQUARE_CELLS,
+  },
+  {
+    id: 'asteroidSpin',
+    name: 'Asteroid Tumbling',
+    description: 'Eight frames of a rock turning end over end, side by side.',
+    dataUrl: image('asteroidSpin'),
     sheet: SQUARE_CELLS,
   },
 ];
@@ -202,6 +234,27 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     document: {
       type: 'animation',
       animations: {switchFlip: strip('switch', 6, 12, false)},
+    },
+  },
+  {
+    id: 'shipThrust',
+    name: 'Ship Thrust',
+    description:
+      'A ship with its engine burning, for while the throttle is on.',
+    sprites: ['shipThrust'],
+    document: {
+      type: 'animation',
+      animations: {shipThrust: strip('shipThrust', 4, 12)},
+    },
+  },
+  {
+    id: 'asteroidSpin',
+    name: 'Asteroid Tumble',
+    description: 'A rock turning end over end, over and over.',
+    sprites: ['asteroidSpin'],
+    document: {
+      type: 'animation',
+      animations: {asteroidSpin: strip('asteroidSpin', 8, 10)},
     },
   },
   {

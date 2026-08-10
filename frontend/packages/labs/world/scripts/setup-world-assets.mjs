@@ -199,7 +199,10 @@ if (process.env.WORLD_DEMO_ICONS !== 'free') {
   );
 }
 
-// Generate the built-in sprite + animation images the preview loads as
-// self-hosted assets.
+// The sprite drawings used to be written out here as files. They are not any
+// more: `write-stock-assets.mjs` bakes them into the source as data URLs, which
+// is what the library hands out at import time, and nothing fetches them. Any
+// PNGs still under public/vendor/sprites on a long-lived checkout are leftovers
+// from before that, and are ignored by git and by the lab alike.
 
 console.log('world assets: ready in public/vendor/');
