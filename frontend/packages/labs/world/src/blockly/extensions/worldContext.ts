@@ -13,6 +13,8 @@ import type {Block} from 'blockly';
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import {addOnChange} from './onChange';
+
 export const WORLD_CONTEXT_EXTENSION = 'world_needs_world_context';
 
 const WARNING_TEXT =
@@ -47,7 +49,7 @@ export const worldContextExtension: Extension = defineExtension(
   WORLD_CONTEXT_EXTENSION,
   {
     extension() {
-      this.setOnChange(function (this: Block, event: Blockly.Events.Abstract) {
+      addOnChange(this, function (this: Block, event: Blockly.Events.Abstract) {
         // Re-check when the block's place in the tree could have changed; skip
         // flyout blocks, pure UI events, and transient mid-drag states.
         const workspace = this.workspace as Blockly.WorkspaceSvg;

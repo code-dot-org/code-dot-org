@@ -31,6 +31,8 @@ import type {Block} from 'blockly';
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import {addOnChange} from './onChange';
+
 /**
  * Whether `block` sits somewhere the builder is what its code will call.
  *
@@ -61,7 +63,7 @@ function builderContextExtension(
 ): Extension {
   return defineExtension(name, {
     extension() {
-      this.setOnChange(function (this: Block, event: Blockly.Events.Abstract) {
+      addOnChange(this, function (this: Block, event: Blockly.Events.Abstract) {
         // Re-check when the block's place in the tree could have changed; skip
         // flyout blocks, pure UI events, and transient mid-drag states.
         const workspace = this.workspace as Blockly.WorkspaceSvg;
@@ -92,7 +94,7 @@ function runtimeContextExtension(
 ): Extension {
   return defineExtension(name, {
     extension() {
-      this.setOnChange(function (this: Block, event: Blockly.Events.Abstract) {
+      addOnChange(this, function (this: Block, event: Blockly.Events.Abstract) {
         const workspace = this.workspace as Blockly.WorkspaceSvg;
         if (this.isInFlyout || event.isUiEvent || workspace?.isDragging?.()) {
           return;

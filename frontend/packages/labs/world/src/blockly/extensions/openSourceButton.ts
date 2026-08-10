@@ -21,6 +21,8 @@ import {translate} from '../../effect/localization';
 import {canOpenModule, openModule} from '../openModule';
 import {refFromValue, refModule, ruleLocation} from '../ruleRegistry';
 
+import {addOnChange} from './onChange';
+
 export const OPEN_SOURCE_BUTTON_EXTENSION = 'world_open_source_button';
 
 /** The field's name on the block — how it is found again to remove it. */
@@ -164,6 +166,23 @@ function syncButton(block: Block): void {
     );
     const field = block.getField(FIELD_NAME);
     field?.setTooltip(translate('Open the file this comes from'));
+    // NOT saved. `FieldButton` sets `SERIALIZABLE = true`, so the eye was
+    // written into every file that had one — and read back into blocks that do
+    // not, since the button is added and removed by context rather than being
+    // part of the block. Blockly then said so, once per block, on every load:
+    //   Ignoring non-existant field OPEN_SOURCE in block world_use_rule
+    //
+    // BOTH flags. Blockly serializes an EDITABLE field whether or not it is
+    // marked serializable, warning as it goes ("Detected an editable field that
+    // was not serializable … Proceeding with serialization anyway") — so
+    // clearing one flag alone trades one warning for another and still writes
+    // the field. A button is not editable in the sense the flag means: it has
+    // no value a learner sets. Its click runs through `onMouseDown_` and
+    // `allowReadOnlyClick`, neither of which consults `EDITABLE`.
+    if (field) {
+      field.SERIALIZABLE = false;
+      field.EDITABLE = false;
+    }
   } else {
     input.removeField(FIELD_NAME);
   }
@@ -182,7 +201,7 @@ export const openSourceButtonExtension: Extension = defineExtension(
     extension() {
       const block = this as unknown as Block;
       syncButton(block);
-      block.setOnChange(event => {
+      addOnChange(block, event => {
         // The value changing is the obvious one; FINISHED_LOADING is the other:
         // a block deserialized before the project's registries were filled asks
         // again once they are.
