@@ -19,7 +19,6 @@
  *   exports.default` to any module whose ONLY export is default.
  *   The footer reproduces that at the same position (end of module).
  */
-'use strict';
 
 const fs = require('fs');
 

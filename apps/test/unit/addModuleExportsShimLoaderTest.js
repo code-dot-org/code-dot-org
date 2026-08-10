@@ -4,7 +4,7 @@ import path from 'path';
 
 import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
-const shim = require('../../lib/add-module-exports-shim-loader');
+const shim = require('../../shims/add-module-exports-shim-loader');
 
 // Run the loader on `source`, then execute the result as a CommonJS
 // module and return its final module.exports.  `resourcePath` stands in

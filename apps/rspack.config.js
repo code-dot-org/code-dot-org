@@ -362,7 +362,7 @@ function createRspackConfig({
                   // Post-processes swc output (loaders run bottom-up);
                   // replicates babel-plugin-add-module-exports, which
                   // require() sites across src/ depend on.
-                  {loader: p('lib/add-module-exports-shim-loader')},
+                  {loader: p('shims/add-module-exports-shim-loader')},
                   {
                     loader: 'builtin:swc-loader',
                     options: {
