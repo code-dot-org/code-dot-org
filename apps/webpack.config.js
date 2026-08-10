@@ -323,12 +323,6 @@ const WEBPACK_BASE_CONFIG = {
 };
 
 /**
- * Adds pollyfills to each entrypoint (before the existing path(s))
- *
- * @param {Object[]} entries - same format as the webpack config `entry` property
- * @param {String[]} pollyfills - prepends the pollyfills to each entrypoint (before the existing paths)
- */
-/**
  * Generate the primary webpack config for building `apps/`.
  * Extends `WEBPACK_BASE_CONFIG` from above.
  *

@@ -161,6 +161,13 @@ const BUNDLE_EXTERNALS = [
   },
 ];
 
+/**
+ * Prepends the polyfills to each entry point, before its existing paths.
+ *
+ * @param {Object} entries - same shape as the bundler `entry` property
+ * @param {String[]} polyfills - module requests to prepend
+ * @returns {Object} a new entries object
+ */
 function addPolyfillsToEntryPoints(entries, polyfills) {
   return Object.fromEntries(
     Object.entries(entries).map(([entryName, paths]) => [
@@ -306,6 +313,10 @@ const KNOWN_CYCLES = new Set(
 // cycles, so exact matching is not enough: a cycle whose members are
 // all already known-cyclic is the same debt in a different slicing,
 // while a cycle touching any fresh module is genuinely new.
+// TODO(rspack-default): this accepts a genuinely new cycle whose
+// members all already cycle elsewhere.  Tighten to a real
+// strongly-connected-component check before rspack becomes the
+// default bundler.
 const KNOWN_CYCLIC_MODULES = new Set(
   circularDependencies.flatMap(entry => entry.split(' -> '))
 );
