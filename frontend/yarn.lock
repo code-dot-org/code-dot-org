@@ -2023,6 +2023,7 @@ __metadata:
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
+    "@testing-library/jest-dom": "catalog:"
     "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
     "@types/react": "catalog:"
@@ -2041,9 +2042,11 @@ __metadata:
     vite: "catalog:"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "catalog:"
     vitest: "catalog:"
     zod: "catalog:"
   peerDependencies:
+    "@code-dot-org/component-library": "*"
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft
