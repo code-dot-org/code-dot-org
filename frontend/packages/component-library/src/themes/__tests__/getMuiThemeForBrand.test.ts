@@ -1,4 +1,3 @@
-import CdoTheme from '../code.org';
 import CodeaiTheme from '../codeai';
 import CodeaiAuditTheme from '../codeai-audit';
 import {getMuiThemeForBrand} from '../getMuiThemeForBrand';
@@ -12,10 +11,7 @@ describe('getMuiThemeForBrand', () => {
     expect(getMuiThemeForBrand('codeai-audit')).toBe(CodeaiAuditTheme);
   });
 
-  it.each(['code', 'codeai', 'unknown-brand', undefined])(
-    'returns CdoTheme for %s',
-    brand => {
-      expect(getMuiThemeForBrand(brand)).toBe(CdoTheme);
-    },
-  );
+  it.each(['unknown-brand', undefined])('returns CodeaiTheme for %s', brand => {
+    expect(getMuiThemeForBrand(brand)).toBe(CodeaiTheme);
+  });
 });

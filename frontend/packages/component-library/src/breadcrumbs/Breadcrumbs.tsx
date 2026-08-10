@@ -33,7 +33,7 @@ export interface BreadcrumbsProps {
  * ### Status: ```DEPRECATED```
  *
  * @deprecated Use MUI `Breadcrumbs` from `@mui/material` instead.
- * Style overrides are in `src/themes/code.org/styleOverrides/breadcrumbs.ts`.
+ * Style overrides are in `src/themes/codeai/styleOverrides/breadcrumbs.ts`.
  * Custom size prop augmented (`xs`, `s`, `m`, `l`).
  */
 const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
