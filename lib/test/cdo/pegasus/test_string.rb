@@ -33,7 +33,7 @@ class StringTest < Minitest::Test
     iso_8859_string = "ISO-8859 test \xE0" # Includes an à in ISO-8859-1
     assert_raises ArgumentError do
       # .gsub on an ISO-8859-1 encoded string throws an error
-      iso_8859_string.gsub("test regex", 'replacement')
+      iso_8859_string.gsub(/test|regex/, 'replacement')
     end
 
     forced_string = iso_8859_string.force_8859_to_utf8
