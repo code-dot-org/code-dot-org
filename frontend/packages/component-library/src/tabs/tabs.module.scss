@@ -51,6 +51,74 @@
   }
 }
 
+// Registering the fade-zone widths is what lets the animations below
+// interpolate them. The 0 initial values are also the terminal state where
+// scroll timelines are unsupported (Chrome <115): a scrollable strip with no
+// edge cue.
+@property --tabs-fade-left {
+  syntax: '<length>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --tabs-fade-right {
+  syntax: '<length>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.scroller {
+  overflow-x: auto;
+  // A scrollport clips at its padding edge, so 3px on every side keeps a tab's
+  // 2px focus ring visible, including on the first and last tab. The negative
+  // inline margin gives that padding back to the page grid.
+  padding: 3px;
+  margin-inline: -3px;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black var(--tabs-fade-left),
+    black calc(100% - var(--tabs-fade-right)),
+    transparent 100%
+  );
+  // fill-mode both: before its range an animation holds its `from` value, so at
+  // scrollLeft 0 the right fade is already fully on. With no overflow the
+  // timelines are inactive and the initial 0 values keep the mask opaque.
+  animation:
+    tabs-fade-left linear both,
+    tabs-fade-right linear both;
+  animation-timeline: scroll(self inline), scroll(self inline);
+  animation-range:
+    0 2rem,
+    calc(100% - 2rem) 100%;
+}
+
+@keyframes tabs-fade-left {
+  from {
+    --tabs-fade-left: 0rem;
+  }
+
+  to {
+    --tabs-fade-left: 2rem;
+  }
+}
+
+@keyframes tabs-fade-right {
+  from {
+    --tabs-fade-right: 2rem;
+  }
+
+  to {
+    --tabs-fade-right: 0rem;
+  }
+}
+
 // Tabs Colors
 .tabs-primary {
   li button[role='tab'] {

@@ -47,7 +47,9 @@ const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => {
               })}
             >
               <div>
-                <SafeMarkdown markdown={optionText} unwrapped />
+                <Typography variant="body4">
+                  <SafeMarkdown markdown={optionText} unwrapped />
+                </Typography>
               </div>
               {isCorrect && (
                 <FontAwesomeV6Icon
@@ -84,10 +86,12 @@ const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => {
             )}
 
             <div className={styles.matchingAnswerOptionContainer}>
-              <SafeMarkdown
-                markdown={answer ? answer.text : flatAnswers[index].text}
-                unwrapped
-              />
+              <Typography variant="body4">
+                <SafeMarkdown
+                  markdown={answer ? answer.text : flatAnswers[index].text}
+                  unwrapped
+                />
+              </Typography>
             </div>
           </div>
         );

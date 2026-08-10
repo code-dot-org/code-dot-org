@@ -88,6 +88,13 @@ const MultipleTemplate: StoryFn<{
   );
 };
 
+// The affordance only appears when the strip is wider than its box.
+const ScrollableTemplate: StoryFn<TabsProps> = args => (
+  <div style={{maxWidth: '20rem'}}>
+    <Tabs {...args} />
+  </div>
+);
+
 export const DefaultTabs = SingleTemplate.bind({});
 DefaultTabs.args = {
   name: 'default_tabs',
@@ -121,6 +128,33 @@ DefaultTabsOverflownLabel.args = {
       value: 'tab2',
       text: 'Tab 2 with very long label name',
       tabContent: <div>Tab 2 Content</div>,
+    },
+  ],
+  defaultSelectedTabValue: 'tab1',
+  onChange: () => null,
+};
+
+export const ScrollableTabs = ScrollableTemplate.bind({});
+ScrollableTabs.args = {
+  name: 'scrollable_tabs',
+  scrollable: true,
+  tabs: [
+    {value: 'tab1', text: 'Account', tabContent: <div>Tab 1 Content</div>},
+    {
+      value: 'tab2',
+      text: 'Educator Profile',
+      tabContent: <div>Tab 2 Content</div>,
+    },
+    {
+      value: 'tab3',
+      text: 'Communications',
+      tabContent: <div>Tab 3 Content</div>,
+    },
+    {value: 'tab4', text: 'Integrations', tabContent: <div>Tab 4 Content</div>},
+    {
+      value: 'tab5',
+      text: 'Linked Accounts',
+      tabContent: <div>Tab 5 Content</div>,
     },
   ],
   defaultSelectedTabValue: 'tab1',

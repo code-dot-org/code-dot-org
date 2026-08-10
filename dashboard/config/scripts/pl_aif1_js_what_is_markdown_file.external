@@ -1,0 +1,41 @@
+name 'pl-aif1-js-what-is-markdown-file'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>The Markdown File: Where Thinking Becomes Visible</h1>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Markdown (.md)</b> is a plain text file used to plan and document, not to run code. In Web Lab, students use one to think through a page before AI generates it.</p>
+</div>
+
+<br>
+
+<p>Here's what a student sees when they open prompt.md in Web Lab, three questions waiting to be answered: what is the goal, what are the constraints, what are the edge cases.</p>
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/8dc32707d3cc574f60ce991efdcbf367-image-1785951078033.png" alt="Web Lab file panel showing prompt.md open, with three blank markdown headers: What is the goal, What are the constraints, and What are the edge cases" style="max-width: 500px; width: 100%; border-radius: 10px; border: 1px solid #E4E2F8;">
+</div>
+
+## Evidence of Thinking
+
+<p>Before AI could generate a working page in seconds, watching a student write code was itself evidence they understood what they were building. Now that AI does the writing, that evidence has to live somewhere else. This file is where it lives. A vague or empty prompt.md is a much stronger signal of a gap in understanding than a messy first draft of code ever was.</p>
+
+Here's what that reasoning might look like once it's filled in:
+
+<div style="background-color: #2B2745; border-radius: 10px; padding: 20px 24px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8; line-height: 1.7; margin: 20px 0;">
+<b>Goal:</b> Make it feel welcoming and modern, warm colors, easy to read font.<br><br>
+<b>Constraints:</b> Keep the structure, must be readable on mobile, no dark background.<br><br>
+<b>Edge cases:</b> Long page titles might overflow; small screens should still look clean; links need to be visible against the background.
+</div>
+
+<p>Notice that none of this is code. It's reasoning, about audience, about limits, about what could go wrong, written in plain language before a single line of HTML or CSS exists.</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;"><p>
+<strong>💡 Teacher tip:</strong> when you're checking student work, read the markdown file as closely as the finished page, maybe closer. A strong page built from a one-word prompt.md still points to a gap. A thoughtful prompt.md paired with a rough page is often the stronger sign of learning.</p>
+</div>
+
+## Next up
+
+Practice writing a markdown prompt yourself, then bring it to life in Web Lab with a real stylesheet.
+MARKDOWN

@@ -1,0 +1,15 @@
+name 'pl-aif1-js-what-is-dom'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Actions vs. Parts of the Page</h1>
+
+<p>Before you can understand what makes a page interactive, it helps to separate two things that are easy to blur together: what a user does, and what's actually on the page. Sort the terms below into the category they belong to.</p>
+
+---
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/actions-vs-parts.html" width="100%" height="620" style="border:none;" title="Sort: Actions or Parts of the Page?"></iframe>
+</div>
+MARKDOWN

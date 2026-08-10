@@ -174,5 +174,7 @@ Run **eyes tests** on one feature in one saucelabs browser against your local ma
 
 ## See Also
 
+- [UI Test Curriculum Content](config/README.md) — the courses, units and
+  levels which exist only for these tests
 - [Adding an Eyes Test](../../../docs/testing-with-applitools-eyes.md)
 - [General Testing Instructions](../../../TESTING.md)

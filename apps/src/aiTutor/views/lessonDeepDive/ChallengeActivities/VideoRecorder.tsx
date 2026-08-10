@@ -65,11 +65,21 @@ const CountdownRing: FC<CountdownRingProps> = ({
   );
 };
 
+// Prefer opus in a webm container; fall back to whatever the browser
+// defaults to if that combination isn't supported.
+function pickAudioMimeType(): string {
+  return MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
+    ? 'audio/webm;codecs=opus'
+    : 'audio/webm';
+}
+
 interface VideoRecorderProps {
   onRecordingChange: (hasRecording: boolean) => void;
   onIsRecordingChange?: (isRecording: boolean) => void;
   recordedUrl: string | null;
   setRecordedUrl: React.Dispatch<React.SetStateAction<string | null>>;
+  recordedAudioUrl: string | null;
+  setRecordedAudioUrl: React.Dispatch<React.SetStateAction<string | null>>;
   timeLimitSeconds?: number;
   disabled?: boolean;
 }
@@ -79,6 +89,8 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
   onIsRecordingChange,
   recordedUrl,
   setRecordedUrl,
+  recordedAudioUrl,
+  setRecordedAudioUrl,
   timeLimitSeconds = 30,
   disabled = false,
 }) => {
@@ -90,6 +102,8 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
   const streamRef = useRef<MediaStream | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
+  const audioRecorderRef = useRef<MediaRecorder | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const clearTimer = () => {
@@ -134,16 +148,23 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Revoke the object URL whenever it changes or on unmount.
+  // Revoke the object URLs whenever they change or on unmount.
   useEffect(() => {
     return () => {
       if (recordedUrl) URL.revokeObjectURL(recordedUrl);
     };
   }, [recordedUrl]);
 
+  useEffect(() => {
+    return () => {
+      if (recordedAudioUrl) URL.revokeObjectURL(recordedAudioUrl);
+    };
+  }, [recordedAudioUrl]);
+
   const stopRecording = useCallback(() => {
     clearTimer();
     recorderRef.current?.stop();
+    audioRecorderRef.current?.stop();
     streamRef.current?.getTracks().forEach(t => t.stop());
     setRecordingState('recorded');
   }, []);
@@ -158,6 +179,7 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
   const startRecording = () => {
     if (!streamRef.current) return;
     chunksRef.current = [];
+    audioChunksRef.current = [];
     setTimeRemaining(timeLimitSeconds);
 
     const recorder = new MediaRecorder(streamRef.current);
@@ -171,7 +193,25 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
       onIsRecordingChange?.(false);
     };
     recorderRef.current = recorder;
+
+    // A second recorder on an audio-only view of the same stream, so we end
+    // up with an audio/webm blob alongside the video/webm one, without
+    // having to demux the video afterwards.
+    const audioStream = new MediaStream(streamRef.current.getAudioTracks());
+    const audioRecorder = new MediaRecorder(audioStream, {
+      mimeType: pickAudioMimeType(),
+    });
+    audioRecorder.ondataavailable = e => {
+      if (e.data.size > 0) audioChunksRef.current.push(e.data);
+    };
+    audioRecorder.onstop = () => {
+      const blob = new Blob(audioChunksRef.current, {type: 'audio/webm'});
+      setRecordedAudioUrl(URL.createObjectURL(blob));
+    };
+    audioRecorderRef.current = audioRecorder;
+
     recorder.start();
+    audioRecorder.start();
     onIsRecordingChange?.(true);
     setRecordingState('recording');
 
@@ -182,6 +222,7 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
 
   const reRecord = async () => {
     setRecordedUrl(null);
+    setRecordedAudioUrl(null);
     setTimeRemaining(timeLimitSeconds);
     onRecordingChange(false);
     setRecordingState('idle');

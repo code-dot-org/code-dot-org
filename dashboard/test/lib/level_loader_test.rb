@@ -86,4 +86,31 @@ class LevelLoaderTest < ActiveSupport::TestCase
     refute_nil level.ideal_level_source
     assert_equal level.solution_blocks, level.ideal_level_source.data
   end
+
+  test 'import_levels refuses level files misfiled across the UI Test partition' do
+    fixture = Rails.root.join('test/fixtures/levels/Bee Fixture.level')
+    prod_name_in_ui_test_tree = Rails.root.join('test/ui/config/levels/custom/LevelLoader misfiled probe.level')
+    ui_test_name_in_prod_tree = Rails.root.join('config/levels/custom/UI Test LevelLoader misfiled probe.level')
+
+    [prod_name_in_ui_test_tree, ui_test_name_in_prod_tree].each do |path|
+      FileUtils.mkdir_p(File.dirname(path))
+      FileUtils.cp(fixture, path)
+
+      e = assert_raises do
+        LevelLoader.import_levels path.relative_path_from(Rails.root).to_s
+      end
+      assert_includes e.message, 'misfiled'
+    end
+  ensure
+    FileUtils.rm_f(prod_name_in_ui_test_tree)
+    FileUtils.rm_f(ui_test_name_in_prod_tree)
+  end
+
+  test 'import_levels with an empty glob no-ops, unless a level was requested by name' do
+    LevelLoader.import_levels 'test/fixtures/levels/no_such_directory/**/*.level'
+
+    assert_raises do
+      LevelLoader.import_levels 'test/fixtures/levels/No Such Level.level', level_name: 'No Such Level'
+    end
+  end
 end

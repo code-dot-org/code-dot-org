@@ -110,6 +110,17 @@ describe('UsersActions manage other sessions', () => {
             headers: {'content-type': 'text/html'},
           }),
       ),
+      // signOutOtherSessions refreshes the CSRF token afterwards. Unhandled,
+      // that GET only settles after ky's retry backoff (~1s), racing the
+      // waitFor timeout below.
+      http.get(
+        '*/get_token',
+        () =>
+          new HttpResponse(null, {
+            status: 200,
+            headers: {'csrf-token': 'mock-csrf-token'},
+          }),
+      ),
     );
     renderSection({});
     fireEvent.click(sessionsButton());
