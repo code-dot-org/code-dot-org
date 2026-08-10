@@ -64,6 +64,19 @@ yarn build
 - `yarn build:dist` builds a minified version suitable for production
 - `yarn clean` will clean the build/ directory
 
+### Building with rspack (opt-in)
+
+Appending `--rspack` to `yarn start`, `yarn build`, or `yarn build:dist`
+routes the JS bundling step through [rspack](https://rspack.rs), a Rust
+implementation of webpack that is much faster on developer machines
+(seconds instead of minutes for dev-server startup). It is opt-in while
+we evaluate it: swc and babel can transpile edge cases differently, so
+check your change under the default webpack build before shipping — the
+command prints a reminder. Switching between bundlers cleans
+`build/package/js` automatically. Source maps work differently under
+rspack; see
+[Source maps under rspack](#source-maps-under-rspack-yarn-start---rspack).
+
 See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
 ## Dev server source maps and memory usage
@@ -125,7 +138,7 @@ sets:
 
 Scope controls where you *step*, not what runs: out-of-scope code executes
 normally and shows transpiled if you step into it. A missed guess fails soft —
-append another name and restart, which costs ~15 seconds under rspack. Known
+append another name and restart; rspack server restarts are fast. Known
 rough edge: unmapped modules show numeric internal names in DevTools.
 
 ## Testing
