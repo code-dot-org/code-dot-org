@@ -81,7 +81,51 @@ export class FieldButton extends Blockly.Field {
       // Make the icon centered on Safari.
       this.icon.setAttribute('dominant-baseline', 'central');
       this.textElement_?.appendChild(this.icon);
+
+      // Measure again once the icon font has arrived. A first render can happen
+      // before FontAwesome has loaded, and `updateSize_` would then have
+      // measured the FALLBACK glyph — a button sized for a character that is
+      // about to be replaced by a different one.
+      void document.fonts?.ready.then(() => {
+        if (this.getSourceBlock()) {
+          this.forceRerender();
+        }
+      });
     }
+  }
+
+  /**
+   * Size an icon button to the icon it actually draws.
+   *
+   * Blockly measures a field's text with the BLOCK's font, as a canvas
+   * measurement, for speed. An icon is a FontAwesome character in a `<tspan>`,
+   * and the block's font does not have it — so the guess comes back narrower
+   * than the glyph, and the button is drawn too small for its own icon and the
+   * icon sits off its centre. `getComputedTextLength` asks what was actually
+   * rendered, and then equal padding either side is what centres it.
+   *
+   * Only for icon buttons: a text button's text IS in the block's font, where
+   * Blockly's own measurement is both right and faster.
+   */
+  protected override updateSize_(margin?: number): void {
+    if (!this.icon) {
+      super.updateSize_(margin);
+      return;
+    }
+    const constants = this.getConstants();
+    const pad =
+      margin ??
+      (this.borderRect_ ? (constants?.FIELD_BORDER_RECT_X_PADDING ?? 0) : 0);
+    const width = this.textElement_?.getComputedTextLength() ?? 0;
+    const height = this.borderRect_
+      ? Math.max(
+          constants?.FIELD_TEXT_HEIGHT ?? 0,
+          constants?.FIELD_BORDER_RECT_HEIGHT ?? 0,
+        )
+      : (constants?.FIELD_TEXT_HEIGHT ?? 0);
+    this.size_ = new Blockly.utils.Size(pad * 2 + width, height);
+    this.positionTextElement_(pad, width);
+    this.positionBorderRect_();
   }
 
   /**
@@ -92,7 +136,12 @@ export class FieldButton extends Blockly.Field {
   getDisplayText_() {
     const text = this.getText();
     if (!text) {
-      return Blockly.Field.NBSP;
+      // An ICON-only button says nothing, and should take no room saying it.
+      // Blockly's own `Field` substitutes a non-breaking space for an empty
+      // value so that a text field still has something to click; a button that
+      // draws an icon already has that, and the space became padding — the
+      // glyph sat a space-width right of the middle of its own button.
+      return this.icon ? '' : Blockly.Field.NBSP;
     }
     // The transformText function customizes the text for display.
     if (this.transformText) {
