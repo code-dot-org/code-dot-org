@@ -178,6 +178,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         unifiedMergeView({
           original: activeOriginalFileContents,
           mergeControls: false,
+          collapseUnchanged: {margin: 3, minSize: 4},
         })
       );
       // For new files (empty original), hide deletion markers so only green additions show.
