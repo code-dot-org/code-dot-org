@@ -58,6 +58,7 @@ import spriteLab2Reducer, {
   setActiveTab,
   setExternalScenes,
   setScenes,
+  SPRITE_LAB2_TABS,
   SpriteLab2Tab,
 } from '../redux/spriteLab2Redux';
 import {
@@ -200,11 +201,37 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
   const worldTabParams = useMemo(getWorldTabParams, []);
+  // A level can name its exact tab set (visible_tabs); unknown names are
+  // dropped, and a list that names none falls back to the defaults. Listing
+  // 'World' turns the world tab on; the URL flag and showWorldTab still
+  // work for levels without the property.
+  const tabs = useMemo(() => {
+    const requested = levelProperties.visibleTabs?.filter(
+      (tab): tab is SpriteLab2Tab =>
+        (SPRITE_LAB2_TABS as readonly string[]).includes(tab)
+    );
+    if (requested?.length) {
+      return requested;
+    }
+    return worldTabParams.enabled || levelProperties.showWorldTab
+      ? WORLD_TABS
+      : ENABLED_TABS;
+  }, [
+    levelProperties.visibleTabs,
+    levelProperties.showWorldTab,
+    worldTabParams.enabled,
+  ]);
   const worldTab = {
-    enabled: worldTabParams.enabled || !!levelProperties.showWorldTab,
+    enabled: tabs.includes('World'),
     large: worldTabParams.large || !!levelProperties.showLargeWorld,
   };
-  const tabs = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
+  // The slice's initial tab is 'Code'; a level hiding Code (an images-only
+  // level, say) needs the selection steered onto a tab that exists.
+  useEffect(() => {
+    if (!tabs.includes(activeTab)) {
+      dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
+    }
+  }, [tabs, activeTab, dispatch]);
   // The Images tab mounts once (idle pre-mount after seeding, or first
   // visit) and stays mounted clipped, so no visit pays the mount cost.
   const [imagesMounted, setImagesMounted] = useState(false);
@@ -318,17 +345,70 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => scenes.map(s => ({id: s.id, name: s.name})),
     [scenes]
   );
+
+  // A pinned-scene level (fixed_scene_id) edits exactly one scene, created
+  // here on first load — and again after Start Over, hence the reinit count
+  // in the deps. On a project with no scenes yet the pinned scene becomes
+  // the first scene outright; materializing the synthesized default too
+  // would leave an untouched "Scene 1" in every level sharing the project.
+  // A scene-less project WITH saved code predates the scenes UI, so that
+  // code is preserved as the default scene, pin appended after.
+  const pinnedSceneId = levelProperties.fixedSceneId;
+  useEffect(() => {
+    if (!pinnedSceneId) {
+      return;
+    }
+    updateSources(prev => {
+      if (prev.scenes?.some(s => s.id === pinnedSceneId)) {
+        return prev;
+      }
+      const pinned: SpriteLab2Scene = {
+        id: pinnedSceneId,
+        name: levelProperties.fixedSceneName || 'Scene',
+        source: DEFAULT_SCENE_SOURCE,
+      };
+      const existing = prev.scenes?.length
+        ? prev.scenes
+        : prev.source
+        ? getScenes(prev)
+        : [];
+      return {...prev, scenes: [...existing, pinned]};
+    });
+  }, [
+    pinnedSceneId,
+    levelProperties.fixedSceneName,
+    updateSources,
+    sourcesReinitializedCount,
+  ]);
+
   const [activeSceneId, setActiveSceneId] = useState<string | null>(
-    () => scenes[0].id
+    () => pinnedSceneId ?? scenes[0].id
   );
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
 
-  // Reset activeSceneId if it doesn't point to an existing scene (e.g. code cleared via start over).
+  // Keep activeSceneId pointing at a real scene: locked to the pin once the
+  // ensure effect lands it (until then, leave the selection alone rather
+  // than bouncing through the first scene), and reset to the first scene
+  // when the active one disappears (e.g. code cleared via start over).
   useEffect(() => {
+    if (pinnedSceneId) {
+      if (
+        activeSceneId !== pinnedSceneId &&
+        scenes.some(s => s.id === pinnedSceneId)
+      ) {
+        setActiveSceneId(pinnedSceneId);
+      }
+      return;
+    }
     if (!scenes.some(s => s.id === activeSceneId)) {
       setActiveSceneId(scenes[0].id);
     }
-  }, [scenes, activeSceneId]);
+  }, [scenes, activeSceneId, pinnedSceneId]);
+
+  // Where Play begins with no explicit start scene: the pinned scene on a
+  // pinned-scene level (the first scene may belong to another level sharing
+  // the project), otherwise the first scene.
+  const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
@@ -884,7 +964,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     if (activeTab === 'Play') {
-      runScene(playStartSceneId ?? scenes[0]?.id ?? null);
+      runScene(playStartSceneId ?? defaultPlaySceneId);
     } else if (activeTab === 'Code') {
       runScene(activeSceneId);
     }
@@ -895,7 +975,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     engineReady,
     runScene,
     activeSceneId,
-    scenes,
+    defaultPlaySceneId,
     playStartSceneId,
   ]);
 
@@ -1063,31 +1143,31 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const handleRestartGame = useCallback(() => {
     setPlayStartSceneId(null);
-    runScene(scenes[0]?.id ?? null);
-  }, [runScene, scenes]);
+    runScene(defaultPlaySceneId);
+  }, [runScene, defaultPlaySceneId]);
 
   // Re-run whatever scene is on stage right now (through any jumps).
   const handleRestartScene = useCallback(() => {
     const current = currentPlayingRef.current;
     if (!current) {
-      runScene(scenes[0]?.id ?? null);
+      runScene(defaultPlaySceneId);
     } else if (current.kind === 'local') {
       // Re-resolve by id: the scene's code may have been edited since.
       runScene(current.scene.id);
     } else {
       runExternalProjectScene(current.project, current.sceneId);
     }
-  }, [runScene, scenes, runExternalProjectScene]);
+  }, [runScene, defaultPlaySceneId, runExternalProjectScene]);
   restartSceneRef.current = handleRestartScene;
 
   // Clicking the live preview opens Play on the scene being previewed.
   // Previewing the first scene IS the beginning; keep the quiet default state.
   const handlePreviewClick = useCallback(() => {
     setPlayStartSceneId(
-      activeSceneId === (scenes[0]?.id ?? null) ? null : activeSceneId
+      activeSceneId === defaultPlaySceneId ? null : activeSceneId
     );
     dispatch(setActiveTab('Play'));
-  }, [dispatch, activeSceneId, scenes]);
+  }, [dispatch, activeSceneId, defaultPlaySceneId]);
 
   // World and Code are the scene-editing tabs: they share the corner
   // preview and the scene selector.
@@ -1139,6 +1219,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               scenes={sceneMetadata}
               activeSceneId={activeSceneId}
               disabled={!onSceneTab}
+              locked={!!pinnedSceneId}
               onSelectScene={handleSelectScene}
               onCreateScene={handleCreateScene}
             />
@@ -1147,16 +1228,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         playTabExtra={
           playspaceMode === 'play' ? (
             <>
-              <button
-                type="button"
-                className={moduleStyles.startOver}
-                onClick={event => {
-                  handOffRestartFocus(event);
-                  handleRestartGame();
-                }}
-              >
-                Restart game
-              </button>
+              {/* On a pinned-scene level the game IS the one scene; a
+                  separate whole-game restart would only confuse. */}
+              {!pinnedSceneId && (
+                <button
+                  type="button"
+                  className={moduleStyles.startOver}
+                  onClick={event => {
+                    handOffRestartFocus(event);
+                    handleRestartGame();
+                  }}
+                >
+                  Restart game
+                </button>
+              )}
               <button
                 type="button"
                 className={moduleStyles.startOver}
@@ -1202,6 +1287,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <GenerateImagePane
                 uploadImage={uploadImage}
                 onRenameImage={handleRenameImage}
+                fixedImageType={levelProperties.fixedImageType}
               />
             </div>
           </div>

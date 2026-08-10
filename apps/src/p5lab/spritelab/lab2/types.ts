@@ -128,6 +128,24 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // World-tab experiment: the tab edits the whole world, not just the
   // scene-sized corner (equivalent to the world=large URL parameter).
   showLargeWorld?: boolean;
+  // The exact tab set for this level, values from SPRITE_LAB2_TABS
+  // ('Images' | 'World' | 'Code' | 'Play'). Unknown names are ignored;
+  // absent or empty means the default tab set. Listing 'World' turns the
+  // world tab on without needing showWorldTab.
+  visibleTabs?: string[];
+  // Locks the new-image dialog's Type choice (existing images already keep
+  // their recorded type).
+  fixedImageType?: SpriteLab2ItemType;
+  // This level edits exactly one scene, with this id: created in the
+  // project sources on first load if absent, scene selection is locked to
+  // it, and Play starts from it. Levels sharing a project via
+  // projectTemplateLevelName use distinct ids so each level keeps its own
+  // scene. Must not be 'scene-1' (the id synthesized for sources saved
+  // before scenes existed).
+  fixedSceneId?: string;
+  // Display name given to the fixed scene when it is created; consulted
+  // only at creation.
+  fixedSceneName?: string;
   // XML string representation of toolbox blocks.
   // TODO: deprecate in favor of the JSON toolbox definition.
   toolboxBlocks?: string;

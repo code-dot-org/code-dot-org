@@ -179,6 +179,26 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// Pinned-scene levels show the scene's name where the picker would be: the
+// select's geometry without the chevron or the affordances.
+.sceneName {
+  display: inline-flex;
+  align-items: center;
+  height: $tab-segment-height;
+  max-width: 160px;
+  padding: 0 10px;
+  overflow: hidden;
+  border-left: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+// Matches the select's :disabled dimming when off the scene tabs.
+.sceneNameDim {
+  opacity: 0.4;
+}
+
 .tabContent {
   position: relative;
   flex: 1 1 auto;
@@ -644,7 +664,8 @@ $tab-segment-height: $tab-item-height - 2px;
     border-left: 1px solid var(--borders-neutral-primary);
   }
 
-  .sceneSelect {
+  .sceneSelect,
+  .sceneName {
     border-left: none;
     border-radius: 0;
   }

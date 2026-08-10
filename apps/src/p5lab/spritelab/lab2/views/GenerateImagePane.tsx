@@ -94,7 +94,9 @@ const GenerateImagePane: React.FunctionComponent<{
   uploadImage?: UploadImageFunction;
   /** Rename an image and every reference to it; error message or null. */
   onRenameImage: (oldName: string, newName: string) => string | null;
-}> = ({uploadImage, onRenameImage}) => {
+  /** Level-imposed type for new images (the fixed_image_type property). */
+  fixedImageType?: SpriteLab2ItemType;
+}> = ({uploadImage, onRenameImage, fixedImageType}) => {
   const dispatch = useAppDispatch();
 
   // The project's images live in the animation list (AI-generated images are
@@ -444,6 +446,7 @@ const GenerateImagePane: React.FunctionComponent<{
           onRename={handleRename}
           onDelete={handleDelete}
           itemType={itemTypeFromCategories(targetProps?.categories)}
+          fixedItemType={fixedImageType}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onAcceptGenerated={handleAcceptGenerated}

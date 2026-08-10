@@ -42,6 +42,10 @@ class GamelabJr < Gamelab
     guide_mode
     show_world_tab
     show_large_world
+    visible_tabs
+    fixed_image_type
+    fixed_scene_id
+    fixed_scene_name
   )
 
   def shared_blocks

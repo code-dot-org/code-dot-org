@@ -65,6 +65,8 @@ interface GenerateImageViewProps {
     /** Whether another image already uses this name. */
     isNameTaken: (name: string) => boolean;
   };
+  /** Level-imposed type for new images; the Type choice is locked to it. */
+  fixedItemType?: SpriteLab2ItemType;
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
@@ -89,6 +91,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
   thumb,
   create,
+  fixedItemType,
   onAccept,
   onCancel,
   onDelete,
@@ -97,7 +100,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
   const [name, setName] = useState('');
   const [itemType, setItemType] = useState<SpriteLab2ItemType>(
-    existing?.itemType || 'sprite'
+    existing?.itemType || fixedItemType || 'sprite'
   );
   const [style, setStyle] = useState<SpriteLab2ItemStyle>(
     existing?.generation?.style || 'smooth'
@@ -230,10 +233,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </label>
             <div className={moduleStyles.formStack}>
               {/* An existing image's type is locked: regenerating can't
-                  change what kind of image it is. */}
+                  change what kind of image it is. A level can lock new
+                  images to one type the same way (fixedItemType). */}
               <fieldset
                 className={moduleStyles.radioGroup}
-                disabled={generating || !!existing}
+                disabled={generating || !!existing || !!fixedItemType}
               >
                 <legend>Type</legend>
                 {(['sprite', 'background', 'block'] as const).map(type => (

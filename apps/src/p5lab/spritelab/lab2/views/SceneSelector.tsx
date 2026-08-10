@@ -1,5 +1,6 @@
 import Dialog from '@code-dot-org/component-library/dialog';
 import TextField from '@code-dot-org/component-library/textField';
+import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
 import {SceneMetadata} from '../redux/spriteLab2Redux';
@@ -15,6 +16,9 @@ interface SceneSelectorProps {
   activeSceneId: string | null;
   // Disabled off the Code tab, where switching has no effect.
   disabled?: boolean;
+  // Pinned-scene levels (fixed_scene_id) edit one scene only: show its name
+  // without the picker or the new-scene option.
+  locked?: boolean;
   onSelectScene: (sceneId: string) => void;
   onCreateScene: (name: string) => void;
 }
@@ -29,6 +33,7 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   scenes,
   activeSceneId,
   disabled,
+  locked,
   onSelectScene,
   onCreateScene,
 }) => {
@@ -60,6 +65,19 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
     }
     closeDialog();
   }, [newName, onCreateScene, closeDialog]);
+
+  if (locked) {
+    return (
+      <span
+        className={classNames(
+          moduleStyles.sceneName,
+          disabled && moduleStyles.sceneNameDim
+        )}
+      >
+        {scenes.find(scene => scene.id === activeSceneId)?.name ?? ''}
+      </span>
+    );
+  }
 
   return (
     <>

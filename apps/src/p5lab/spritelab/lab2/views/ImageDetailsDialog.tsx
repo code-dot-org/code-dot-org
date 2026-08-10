@@ -34,6 +34,8 @@ interface ImageDetailsDialogProps {
   onDelete: () => void;
   /** The image's kind; locked while regenerating an existing image. */
   itemType?: SpriteLab2ItemType;
+  /** Level-imposed type for new images (the fixed_image_type property). */
+  fixedItemType?: SpriteLab2ItemType;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -62,6 +64,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onRename,
   onDelete,
   itemType,
+  fixedItemType,
   getDataURI,
   isNameTaken,
   onAcceptGenerated,
@@ -202,6 +205,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             }
             thumb={isNew ? undefined : thumb}
             create={isNew ? {isNameTaken} : undefined}
+            fixedItemType={fixedItemType}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
               setView('details');

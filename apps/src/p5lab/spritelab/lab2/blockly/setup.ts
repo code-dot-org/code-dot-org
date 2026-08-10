@@ -150,6 +150,12 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
 // toolbox. The levelbuilder owns whatever they author: a category with this
 // name is used as written, an EMPTY one suppresses the category, and the
 // default lineup appears only when the level doesn't mention the name.
+//
+// Levels may instead author a FLAT toolbox — blocks directly under <xml>,
+// no categories. Every injector here keys off a named category (Sprites,
+// Game Design, Behaviors), so a flat toolbox passes through exactly as
+// written; one that wants scene jumps or behaviors must list those block
+// types itself.
 const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   {
     // The platformer composites plus the core event blocks.
