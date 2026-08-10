@@ -10,6 +10,7 @@
  */
 const path = require('path');
 
+const circularDependencies = require('./circular_dependencies.json');
 const {
   CODE_STUDIO_ENTRIES,
   INTERNAL_ENTRIES,
@@ -270,6 +271,59 @@ function makeSplitChunks(appsEntries) {
   };
 }
 
+/**
+ * Canonical form of a cycle path list: drop the repeated endpoint,
+ * rotate the lexicographically smallest module to the front, and
+ * re-close the loop.  webpack's checker enumerates a cycle once per
+ * member module (every rotation) while rspack's reports one arbitrary
+ * rotation, so membership in the allowlist must not depend on where
+ * the cycle string happens to start.
+ *
+ * @param {string[]} paths - module paths, first repeated as last
+ * @returns {string} the canonical `a -> b -> a` form
+ */
+function canonicalCycle(paths) {
+  const ring = paths.slice(0, -1);
+  let start = 0;
+  for (let i = 1; i < ring.length; i++) {
+    if (ring[i] < ring[start]) {
+      start = i;
+    }
+  }
+  const rotated = ring.slice(start).concat(ring.slice(0, start));
+  rotated.push(rotated[0]);
+  return rotated.join(' -> ');
+}
+
+// circular_dependencies.json in canonical form, for rotation-insensitive
+// membership checks.
+const KNOWN_CYCLES = new Set(
+  circularDependencies.map(entry => canonicalCycle(entry.split(' -> ')))
+);
+
+// Every module implicated in an allowlisted cycle.  Different detectors
+// decompose the same strongly-connected tangle into different simple
+// cycles, so exact matching is not enough: a cycle whose members are
+// all already known-cyclic is the same debt in a different slicing,
+// while a cycle touching any fresh module is genuinely new.
+const KNOWN_CYCLIC_MODULES = new Set(
+  circularDependencies.flatMap(entry => entry.split(' -> '))
+);
+
+/**
+ * Whether a detected cycle is covered by circular_dependencies.json,
+ * regardless of which rotation or decomposition the detector chose.
+ *
+ * @param {string[]} paths - module paths, first repeated as last
+ * @returns {boolean}
+ */
+function isKnownCycle(paths) {
+  return (
+    KNOWN_CYCLES.has(canonicalCycle(paths)) ||
+    paths.every(m => KNOWN_CYCLIC_MODULES.has(m))
+  );
+}
+
 module.exports = {
   DEV_SERVER_PORT,
   nodeModulesToTranspile,
@@ -283,4 +337,6 @@ module.exports = {
   BUNDLE_EXTERNALS,
   addPolyfillsToEntryPoints,
   makeSplitChunks,
+  canonicalCycle,
+  isKnownCycle,
 };

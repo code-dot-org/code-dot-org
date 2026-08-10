@@ -44,6 +44,7 @@ const {
   BUNDLE_EXTERNALS,
   addPolyfillsToEntryPoints,
   makeSplitChunks,
+  isKnownCycle,
 } = require('./bundlerBase');
 const {
   ALL_APPS,
@@ -555,19 +556,31 @@ function createRspackConfig({
     plugins: [
       new rspack.ProvidePlugin(NODE_POLYFILL_PROVIDE),
       // RSPACK-DIFF: circular-dependency-plugin is a JS plugin driven by
-      // per-module hooks; rspack's rust-side CircularDependencyRspackPlugin
-      // replaces it.  Wiring circular_dependencies.json's allowlist protocol
-      // into it needs a pass of its own, so the prototype detects but does
-      // not fail; the webpack build remains the enforcement point.
-      ...(rspack.CircularDependencyRspackPlugin
-        ? [
-            new rspack.CircularDependencyRspackPlugin({
-              exclude: /node_modules|build/,
-              failOnError: false,
-              allowAsyncCycles: false,
-            }),
-          ]
-        : []),
+      // per-module hooks; rspack's rust-side CircularCheckRspackPlugin
+      // replaces it, honoring circular_dependencies.json the same way
+      // webpack's wrapper does — known cycles stay silent, new ones
+      // warn.  Membership is checked by isKnownCycle, which tolerates a
+      // different rotation or decomposition of an allowlisted tangle —
+      // detectors slice the same strongly-connected modules into
+      // different simple cycles.  Differences that remain
+      // webpack's job: erroring the build on new cycles, and the
+      // stale-entry report (this detector sees fewer enumerations, so
+      // absence here does not mean an entry is removable).
+      new rspack.CircularCheckRspackPlugin({
+        exclude: /node_modules|build/,
+        onDetected({paths, compilation}) {
+          const cycle = paths.map(s => s.replace(/^\.\//, ''));
+          if (!isKnownCycle(cycle)) {
+            compilation.warnings.push(
+              new Error(
+                'Circular Dependency Checker : A new Circular Dependency found.\n' +
+                  "Known circular dependencies can be found in 'apps/circular_dependencies.json'\n" +
+                  ` Circular dependency: ${cycle.join(' -> ')}`
+              )
+            );
+          }
+        },
+      }),
       ...(envConstants.SKIP_TYPECHECK
         ? []
         : [
