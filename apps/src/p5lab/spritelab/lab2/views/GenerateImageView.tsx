@@ -3,7 +3,7 @@ import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
@@ -45,6 +45,51 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
+
+// Art rows in the pixelated bot: coarse enough to read as pixel art at the
+// bot's 64px display height, fine enough to keep its face.
+const PIXEL_BOT_ROWS = 28;
+
+/**
+ * The temperature bot, rendered through a coarse pixel grid: the image is
+ * downsampled onto a small canvas and the canvas is CSS-upscaled with
+ * image-rendering: pixelated.
+ */
+const PixelatedBot: React.FunctionComponent<{src: string}> = ({src}) => {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext('2d');
+    if (!canvas || !ctx) {
+      return;
+    }
+    let cancelled = false;
+    const image = new Image();
+    image.onload = () => {
+      if (cancelled) {
+        return;
+      }
+      canvas.height = PIXEL_BOT_ROWS;
+      canvas.width = Math.max(
+        1,
+        Math.round((PIXEL_BOT_ROWS * image.width) / image.height)
+      );
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    };
+    image.src = src;
+    return () => {
+      cancelled = true;
+    };
+  }, [src]);
+  return (
+    <canvas
+      ref={canvasRef}
+      className={classNames(moduleStyles.bot, moduleStyles.botPixelated)}
+      aria-hidden
+    />
+  );
+};
 
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
@@ -313,12 +358,17 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
               disabled={generating}
             >
               <legend id="temperature-label">Temperature</legend>
-              <img
-                src={botImage}
-                className={moduleStyles.bot}
-                alt=""
-                draggable={false}
-              />
+              {/* A wink: choosing pixel-art style pixelates the bot too. */}
+              {style === 'pixel' ? (
+                <PixelatedBot src={botImage} />
+              ) : (
+                <img
+                  src={botImage}
+                  className={moduleStyles.bot}
+                  alt=""
+                  draggable={false}
+                />
+              )}
               <Slider
                 name="temperature-slider"
                 aria-labelledby="temperature-label"

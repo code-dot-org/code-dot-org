@@ -285,6 +285,15 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     super.onP5Setup();
+    // The canvas is 400 logical px and the Playspace transform-scales it up
+    // to ~900 CSS px on the Play tab, so at the stock density (the device
+    // ratio) every canvas pixel paints as a ~2x2 block on screen. Double the
+    // density to cover the CSS upscale too; coordinates stay 400-based.
+    const p5 = this.p5Wrapper.p5;
+    const density = Math.ceil(2 * (window.devicePixelRatio || 1));
+    if (p5 && p5._renderer && p5.pixelDensity() !== density) {
+      p5.pixelDensity(density);
+    }
     this.executeInFlight_ = false;
     if (this.rerunAfterExecute_) {
       this.rerunAfterExecute_ = false;

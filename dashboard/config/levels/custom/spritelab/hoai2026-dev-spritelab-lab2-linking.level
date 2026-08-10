@@ -25,6 +25,7 @@
       "Code",
       "Play"
     ],
+    "guide_mode": "instructions",
     "long_instructions": "# Link your scenes\nUse the new **go to scene** block to jump from one scene to another - for example, when your character is clicked."
   }
 }]]></config>
@@ -33,11 +34,21 @@
       <xml>
         <block type="gamelab_setBackgroundImageAs"/>
         <block type="spritelab2_goToScene"/>
-        <block type="gamelab_makeNewSpriteAnon"/>
+        <block type="gamelab_makeNewSpriteAnon">
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
         <block type="gamelab_setProp"/>
         <block type="gamelab_spriteSay"/>
         <block type="gamelab_spriteSayTime"/>
-        <block type="gamelab_spriteClicked"/>
+        <block type="gamelab_spriteClicked">
+          <value name="SPRITE">
+            <shadow type="gamelab_allSpritesWithAnimation"/>
+          </value>
+        </block>
         <block type="gamelab_atTime"/>
         <block type="gamelab_addBehaviorSimple"/>
         <block type="spritelab2_movingLeft"/>

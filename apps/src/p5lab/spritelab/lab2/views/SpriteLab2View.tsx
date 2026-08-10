@@ -225,6 +225,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: tabs.includes('World'),
     large: worldTabParams.large || !!levelProperties.showLargeWorld,
   };
+  // A level with visible_tabs opens on the list's first entry (the display
+  // order is fixed by TabShell, so authored order carries the start tab).
+  // Once per level: the slice resets to 'Code' between levels.
+  const hasVisibleTabsProperty = !!levelProperties.visibleTabs?.length;
+  useEffect(() => {
+    if (hasVisibleTabsProperty) {
+      dispatch(setActiveTab(tabs[0]));
+    }
+    // Only the level identity should re-trigger the start tab.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [levelProperties.id, dispatch]);
   // The slice's initial tab is 'Code'; a level hiding Code (an images-only
   // level, say) needs the selection steered onto a tab that exists.
   useEffect(() => {
@@ -411,6 +422,51 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // pinned-scene level (the first scene may belong to another level sharing
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
+
+  // Staged guide instructions (guide_steps): the guide shows one step and
+  // advances - never retreats, so undoing work doesn't yank instructions
+  // back - when the NEXT step's `after` condition holds. Conditions are
+  // judged against the active scene's World grid and the current tab.
+  const guideSteps = levelProperties.guideSteps;
+  const worldGrid = activeScene?.world?.grid;
+  const worldCounts = useMemo(() => {
+    let blocks = 0;
+    let sprites = 0;
+    worldGrid?.forEach(row =>
+      row?.forEach(cell => {
+        if (cell?.kind === 'block') {
+          blocks++;
+        } else if (cell?.kind === 'sprite') {
+          sprites++;
+        }
+      })
+    );
+    return {blocks, sprites};
+  }, [worldGrid]);
+  const [guideStepIndex, setGuideStepIndex] = useState(0);
+  useEffect(() => {
+    const next = guideSteps?.[guideStepIndex + 1]?.after;
+    if (!next) {
+      return;
+    }
+    const satisfied =
+      (next.worldBlocks === undefined ||
+        worldCounts.blocks >= next.worldBlocks) &&
+      (!next.worldSprite || worldCounts.sprites > 0) &&
+      (next.tab === undefined || activeTab === next.tab);
+    if (satisfied) {
+      setGuideStepIndex(guideStepIndex + 1);
+    }
+  }, [guideSteps, guideStepIndex, worldCounts, activeTab]);
+  const guideInstructions = guideSteps?.length
+    ? guideSteps[Math.min(guideStepIndex, guideSteps.length - 1)].text
+    : levelProperties.longInstructions;
+
+  // The World palette selection lives here so it survives leaving the tab
+  // (WorldTab unmounts when hidden).
+  const [worldPaletteSelection, setWorldPaletteSelection] = useState<
+    WorldCell | 'erase' | null
+  >(null);
 
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
@@ -1301,6 +1357,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               world={activeScene?.world}
               displaySize={worldTab.large ? WORLD_GRID_SIZE : SCENE_GRID_SIZE}
               onPaintCell={handlePaintWorldCell}
+              selected={worldPaletteSelection}
+              onSelect={setWorldPaletteSelection}
             />
           </div>
         )}
@@ -1317,15 +1375,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           onPreviewClick={handlePreviewClick}
         />
 
-        {/* Codegen guide, when the level asks for it. (Image generation
-          lives in the Images tab's image dialog.) */}
-        {activeTab === 'Code' && !!levelProperties.guideMode && (
-          <GenerateSpriteLab
-            guideMode={levelProperties.guideMode}
-            instructions={levelProperties.longInstructions}
-            onCodeGenerated={handleCodeGenerated}
-          />
-        )}
+        {/* Floating guide, when the level asks for it. Plain instructions
+          follow the student across every tab; the AI-codegen variant only
+          makes sense over the Code workspace. (Image generation lives in
+          the Images tab's image dialog.) */}
+        {!!levelProperties.guideMode &&
+          (levelProperties.guideMode === 'instructions' ||
+            activeTab === 'Code') && (
+            <GenerateSpriteLab
+              guideMode={levelProperties.guideMode}
+              instructions={guideInstructions}
+              onCodeGenerated={handleCodeGenerated}
+            />
+          )}
       </TabShell>
     </div>
   );

@@ -22,12 +22,13 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "visible_tabs": [
+      "Code",
       "Images",
       "World",
-      "Code",
       "Play"
     ],
-    "long_instructions": "# Free play\nEverything is unlocked: all tabs, all scenes, and the full toolbox. Finish your game!"
+    "guide_mode": "instructions",
+    "long_instructions": "# Free play\nEverything is unlocked: all of your images, all of your scenes, and the full set of blocks. Finish your game!"
   }
 }]]></config>
   <blocks>
@@ -44,28 +45,42 @@
           <block type="spritelab2_makeSpriteAtGrid">
             <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
           </block>
-          <block type="gamelab_spriteClicked"/>
+          <block type="gamelab_spriteClicked">
+            <value name="SPRITE">
+              <shadow type="gamelab_allSpritesWithAnimation"/>
+            </value>
+          </block>
           <block type="gamelab_checkTouching"/>
           <block type="gamelab_atTime"/>
           <block type="gamelab_spriteSay"/>
-          <block type="spritelab2_goToScene"/>
-          <block type="spritelab2_goToExternalScene"/>
           <!-- TODO(spritelab-lab2-platform-updates): add the set-gravity and
                set-as-platform-player blocks here once that branch merges. -->
         </category>
         <category name="Story">
           <block type="gamelab_setBackgroundImageAs"/>
-          <block type="gamelab_makeNewSpriteAnon"/>
+          <block type="gamelab_makeNewSpriteAnon">
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <field name="LOCATION">{"x":200,"y":200}</field>
+              </block>
+            </value>
+          </block>
           <block type="gamelab_setProp"/>
           <block type="gamelab_spriteSay"/>
           <block type="gamelab_spriteSayTime"/>
-          <block type="gamelab_spriteClicked"/>
+          <block type="gamelab_spriteClicked">
+            <value name="SPRITE">
+              <shadow type="gamelab_allSpritesWithAnimation"/>
+            </value>
+          </block>
           <block type="gamelab_atTime"/>
-          <block type="spritelab2_goToScene"/>
-          <block type="spritelab2_goToExternalScene"/>
           <block type="gamelab_addBehaviorSimple"/>
           <block type="spritelab2_movingLeft"/>
           <block type="spritelab2_patrollingLeftRight"/>
+        </category>
+        <category name="Link">
+          <block type="spritelab2_goToScene"/>
+          <block type="spritelab2_goToExternalScene"/>
         </category>
       </xml>
     </toolbox_blocks>

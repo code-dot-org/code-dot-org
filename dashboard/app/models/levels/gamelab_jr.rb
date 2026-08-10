@@ -46,6 +46,7 @@ class GamelabJr < Gamelab
     fixed_image_type
     fixed_scene_id
     fixed_scene_name
+    guide_steps
   )
 
   def shared_blocks

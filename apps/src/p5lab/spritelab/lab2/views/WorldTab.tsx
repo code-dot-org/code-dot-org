@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useMemo, useRef, useState} from 'react';
+import React, {useMemo, useRef} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -31,6 +31,10 @@ interface WorldTabProps {
   displaySize: number;
   // Cell-level so the owner can apply it atomically against saved sources.
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
+  // Palette selection, owned by the view so it survives tab switches (this
+  // component unmounts when the tab is hidden).
+  selected: WorldCell | 'erase' | null;
+  onSelect: (selection: WorldCell | 'erase') => void;
 }
 
 /**
@@ -42,6 +46,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   world,
   displaySize,
   onPaintCell,
+  selected,
+  onSelect,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   const palette: PaletteItem[] = useMemo(
@@ -62,8 +68,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     () => new Map(palette.map(item => [item.image, item.thumb])),
     [palette]
   );
-
-  const [selected, setSelected] = useState<PaletteItem | 'erase' | null>(null);
 
   const grid = world?.grid ?? createEmptyWorld().grid;
   const paintCell = (row: number, col: number, erase: boolean) => {
@@ -106,7 +110,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                 selected?.image === item.image &&
                 moduleStyles.worldPaletteSelected
             )}
-            onClick={() => setSelected(item)}
+            onClick={() => onSelect({image: item.image, kind: item.kind})}
           >
             {item.thumb && <img src={item.thumb} alt={item.image} />}
           </button>
@@ -118,7 +122,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             moduleStyles.worldPaletteErase,
             selected === 'erase' && moduleStyles.worldPaletteSelected
           )}
-          onClick={() => setSelected('erase')}
+          onClick={() => onSelect('erase')}
         >
           Erase
         </button>

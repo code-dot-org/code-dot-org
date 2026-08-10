@@ -292,6 +292,13 @@
   object-fit: contain;
 }
 
+// The pixelated variant is a canvas whose bitmap IS the coarse art grid;
+// sized to the bitmap's aspect so the upscale stays square-pixeled.
+.botPixelated {
+  width: auto;
+  image-rendering: pixelated;
+}
+
 .reviewHint {
   margin: 0;
   font-size: 14px;

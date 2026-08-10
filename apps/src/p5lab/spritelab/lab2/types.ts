@@ -118,6 +118,25 @@ export interface SpriteLab2Source extends ProjectSources {
   items?: SpriteLab2ItemEntry[];
 }
 
+/**
+ * One stage of a level's floating-guide instructions (the guide_steps level
+ * property). `text` is markdown. `after` is the condition for reaching this
+ * step from the one before it (the first step needs none): every listed
+ * clause must hold, judged against the active scene's World grid and the
+ * current tab.
+ */
+export interface SpriteLab2GuideStep {
+  text: string;
+  after?: {
+    /** At least this many block-kind cells placed in the World. */
+    worldBlocks?: number;
+    /** At least one sprite-kind cell (the character) placed in the World. */
+    worldSprite?: boolean;
+    /** This tab is active. */
+    tab?: string;
+  };
+}
+
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideMode?: 'instructions' | 'aiCodeGenerate';
   aiCodeGenerateAdlib?: string;
@@ -131,8 +150,14 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // The exact tab set for this level, values from SPRITE_LAB2_TABS
   // ('Images' | 'World' | 'Code' | 'Play'). Unknown names are ignored;
   // absent or empty means the default tab set. Listing 'World' turns the
-  // world tab on without needing showWorldTab.
+  // world tab on without needing showWorldTab. The FIRST entry is the tab
+  // the level opens on (display order is fixed, so authored order is free
+  // to carry that).
   visibleTabs?: string[];
+  // Staged instructions for the floating guide (requires guideMode).
+  // The guide shows one step at a time and advances - never retreats -
+  // when the next step's `after` condition is met. See SpriteLab2GuideStep.
+  guideSteps?: SpriteLab2GuideStep[];
   // Locks the new-image dialog's Type choice (existing images already keep
   // their recorded type).
   fixedImageType?: SpriteLab2ItemType;

@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##Two scenes, one game\nYou've built a story scene and a platformer scene. Right now they are separate.\n\nGames connect scenes: a title screen leads to a level, a level leads to the next.",
+        "text": "##Connect your scenes\nYou've built a story scene and a platformer scene. Right now they are separate.\n\nGames link scenes together: a title screen leads to a level, a level leads to the next.",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-linking-f341481b-ad5e-4c33-a87a-9b4581b23bde"
       },

@@ -25,6 +25,7 @@
       "Images"
     ],
     "fixed_image_type": "block",
+    "guide_mode": "instructions",
     "long_instructions": "# Make a platform block\nPlatformers are built from blocks. Create a square tile the player can stand on - grass, brick, ice, anything."
   }
 }]]></config>
