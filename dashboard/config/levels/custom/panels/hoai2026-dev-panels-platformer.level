@@ -1,0 +1,27 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-10T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##What is a platformer?\nA platformer is a game where a character runs and jumps across platforms - like the classic games you may know.\n\nThe player falls unless something holds them up!",
+        "imageUrl": "",
+        "key": "hoai2026-dev-panels-platformer-133b13bb-27cd-485c-9905-941bb6ffb678"
+      },
+      {
+        "text": "##Build your own\nNext, you'll place platform blocks on a grid and add a player that can run and jump on them. You'll use the block image you just created.",
+        "imageUrl": "",
+        "key": "hoai2026-dev-panels-platformer-59c242fb-42d3-4e05-bbb7-ab05cebb1220",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "use_links": "false"
+  }
+}]]></config>
+</Panels>

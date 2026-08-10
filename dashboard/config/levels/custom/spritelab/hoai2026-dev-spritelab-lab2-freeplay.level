@@ -1,0 +1,73 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-10T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "Images",
+      "World",
+      "Code",
+      "Play"
+    ],
+    "long_instructions": "# Free play\nEverything is unlocked: all tabs, all scenes, and the full toolbox. Finish your game!"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Platform">
+          <block type="gamelab_setBackgroundImageAs"/>
+          <block type="spritelab2_makePlatformPlayer">
+            <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+          </block>
+          <block type="spritelab2_makePlatformBlocks">
+            <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>
+          </block>
+          <block type="spritelab2_makeSpriteAtGrid">
+            <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+          </block>
+          <block type="gamelab_spriteClicked"/>
+          <block type="gamelab_checkTouching"/>
+          <block type="gamelab_atTime"/>
+          <block type="gamelab_spriteSay"/>
+          <block type="spritelab2_goToScene"/>
+          <block type="spritelab2_goToExternalScene"/>
+          <!-- TODO(spritelab-lab2-platform-updates): add the set-gravity and
+               set-as-platform-player blocks here once that branch merges. -->
+        </category>
+        <category name="Story">
+          <block type="gamelab_setBackgroundImageAs"/>
+          <block type="gamelab_makeNewSpriteAnon"/>
+          <block type="gamelab_setProp"/>
+          <block type="gamelab_spriteSay"/>
+          <block type="gamelab_spriteSayTime"/>
+          <block type="gamelab_spriteClicked"/>
+          <block type="gamelab_atTime"/>
+          <block type="spritelab2_goToScene"/>
+          <block type="spritelab2_goToExternalScene"/>
+          <block type="gamelab_addBehaviorSimple"/>
+          <block type="spritelab2_movingLeft"/>
+          <block type="spritelab2_patrollingLeftRight"/>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

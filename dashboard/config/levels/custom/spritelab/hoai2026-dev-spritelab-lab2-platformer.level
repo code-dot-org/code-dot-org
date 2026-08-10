@@ -1,0 +1,56 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-10T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "World",
+      "Code",
+      "Play"
+    ],
+    "fixed_scene_id": "platform-scene",
+    "fixed_scene_name": "Platformer",
+    "long_instructions": "# Build your platformer\nPlace platform blocks on the grid in the World tab and add a player. Press **Run**, then use the arrow keys to run and jump."
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_setBackgroundImageAs"/>
+        <block type="spritelab2_makePlatformPlayer">
+          <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+        </block>
+        <block type="spritelab2_makePlatformBlocks">
+          <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>
+        </block>
+        <block type="spritelab2_makeSpriteAtGrid">
+          <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+        </block>
+        <block type="gamelab_spriteClicked"/>
+        <block type="gamelab_checkTouching"/>
+        <block type="gamelab_atTime"/>
+        <block type="gamelab_spriteSay"/>
+        <!-- TODO(spritelab-lab2-platform-updates): add the set-gravity and
+             set-as-platform-player blocks here once that branch merges. -->
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

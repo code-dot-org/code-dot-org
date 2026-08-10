@@ -1,0 +1,27 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-10T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Two scenes, one game\nYou've built a story scene and a platformer scene. Right now they are separate.\n\nGames connect scenes: a title screen leads to a level, a level leads to the next.",
+        "imageUrl": "",
+        "key": "hoai2026-dev-panels-linking-f341481b-ad5e-4c33-a87a-9b4581b23bde"
+      },
+      {
+        "text": "##Link them\nNext you'll get a new block: **go to scene**. Use it to jump from your story scene into your platformer - for example, when a sprite is clicked.",
+        "imageUrl": "",
+        "key": "hoai2026-dev-panels-linking-d9b50c4a-c7c2-48c1-b059-c48fda7c443d",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "use_links": "false"
+  }
+}]]></config>
+</Panels>
