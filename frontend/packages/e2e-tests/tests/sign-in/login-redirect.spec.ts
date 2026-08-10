@@ -7,8 +7,9 @@ import {analyze} from '../shared/axe';
 /**
  * Cached-unit level URL with login_required param. After sign-in the server
  * strips the param. ui-test-oceans is a UI-test-only course listed in
- * CACHED_UNITS_MAP (lib/cdo/http_cache.rb), so this exercises the cached-unit
- * redirect branch without depending on production curriculum.
+ * UI_TEST_CACHED_UNITS_MAP (lib/cdo/http_cache.rb) and seeded by
+ * `rake seed:ui_test`, so this exercises the cached-unit redirect branch
+ * without depending on production curriculum.
  */
 const LEVEL_PATH = '/courses/ui-test-oceans/units/1/lessons/1/levels/1';
 const LEVEL_WITH_LOGIN_REQUIRED = `${LEVEL_PATH}?login_required=true`;

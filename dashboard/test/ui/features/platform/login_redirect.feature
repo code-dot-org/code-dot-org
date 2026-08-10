@@ -1,9 +1,10 @@
 @playwright
 Feature: Navigating to a level page with login required
 
-# The 'ui-test-oceans' level is specifically chosen because it is a level that
-# is seeded in the test environment (see list in dashboard/lib/tasks/seed.rake)
-# and is a cached unit. (see lib/cdo/http_cache.rb for that fixed listing)
+# The 'ui-test-oceans' level is specifically chosen because it is a cached unit
+# (see UI_TEST_CACHED_UNITS_MAP in lib/cdo/http_cache.rb) which lives in the
+# UI-test curriculum partition, seeded by `rake seed:ui_test` (see
+# dashboard/test/ui/config/README.md).
 #
 # These tests are meant to track regressions on redirect-after-login.
 # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
