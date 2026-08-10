@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-06 20:38:47 UTC",
+    "serialized_at": "2026-08-09 21:47:44 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -141,9 +141,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do AI models learn?**\n\nIn this lesson, students uncover how large language models (LLMs) are trained, how they use neural networks to predict text, and how context shapes AI responses. Through an unplugged neural network activity, students simulate how AI generates predictions with and without context. They explore how LLMs rely on pattern recognition, probability, and human feedback to improve over time. Finally, students experiment with zero-shot, one-shot, and multi-shot prompting to see how different levels of input impact AI’s output.",
-        "preparation": "- Print copies of the Unplugged Neural Networks Activity Guide (one for each student)",
-        "student_overview": "**How do AI models learn?**\n\nIn this lesson, explore how AI learns to predict responses and how context shapes its answers. Try real-world prompts and see how giving more detail helps AI respond more clearly."
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do AI models learn?**\n\nIn this lesson, students act as neurons in an unplugged neural network, building sentences one word at a time to experience how an AI predicts text from limited and full context. They then train their own AI model to recognize objects in the ocean and discover that the training data they provide determines what their AI can and cannot recognize — especially when they train it on a word that has no single right answer. The lesson closes by connecting that hands-on experience to the large language models behind the chatbots students already use.",
+        "preparation": "- Print copies of the Unplugged Neural Networks Activity Guide (one for each group of 3 to 5 students)",
+        "student_overview": "**How do AI models learn?**\n\nIn this lesson, you act as a neuron in a neural network, then train your own AI to recognize what belongs in the ocean. Along the way, you find out that what an AI learns depends entirely on what you teach it."
       },
       "seeding_key": {
         "lesson.key": "Lesson 3: The AI's Brain",
@@ -475,7 +475,7 @@
       "key": "10aa64ae-9998-49a4-8d2d-4455c43334eb",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -489,7 +489,7 @@
       "key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1699,7 +1699,7 @@
       "key": "c283fac6-347b-4ab3-8fcf-307880153c72",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To help students understand how patterns emerge from large sets of data and how those patterns influence predictions, similar to how neural networks function."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**To help students notice how patterns emerge from large sets of data and how those patterns make prediction possible — the foundation for how AI models learn from training data.\n"
       },
       "seeding_key": {
         "activity_section.key": "c283fac6-347b-4ab3-8fcf-307880153c72",
@@ -1710,7 +1710,7 @@
       "key": "6ee212f4-1fa6-4419-903c-f66b83c19187",
       "position": 2,
       "properties": {
-        "description": "Imagine being in the world’s biggest group chat. If you had access to every message ever sent, what might you notice? What would happen if you read them all?",
+        "description": "Imagine being in the world’s biggest group chat. If you had access to every message ever sent, what might you notice? Think about common phrases, emojis, or inside jokes you might notice.",
         "remarks": true
       },
       "seeding_key": {
@@ -1722,7 +1722,7 @@
       "key": "57028683-01b0-45bc-bf42-2dc5e8883488",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What would happen if you read every message ever sent in a giant group chat?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that they would start noticing patterns, commonly used emojis, inside jokes, tone, and conversational flow. This sets up the idea that prediction is based on what comes before—just like how AI models work.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What patterns might you pick up over time?*\n- *Could you start predicting what people might say next? How?*\n- *How might your responses be shaped by what you’ve read, rather than your own original thoughts?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize how behavior can become patterned by what they've read—just like AI does. Reinforce that:\n  - AI models also read (or are trained on) millions of examples.\n  - AI doesn't \"think,\" it predicts based on pattern recognition.\n  - The more data it has, the better it becomes at mimicking human-like responses."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n* *What would happen if you read every message ever sent in a giant group chat?*\n* *Could you start predicting what people might say next? How?*\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that they would start noticing patterns — commonly used emojis, inside jokes, tone, and conversational flow — and that those patterns would let them predict what comes next. Reinforce that:\n* AI models learn the same way — by processing millions of examples.\n* AI doesn't \"think.\" It predicts based on patterns in what it has already seen.\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "57028683-01b0-45bc-bf42-2dc5e8883488",
@@ -1730,20 +1730,8 @@
       }
     },
     {
-      "key": "3121514b-ec83-4fed-aff5-c01a42f56c84",
-      "position": 4,
-      "properties": {
-        "description": "Now that we've seen how AI can predict responses based on patterns in a group chat, let's take that concept further and explore how AI models, like neural networks, make predictions with limited context and how providing more context can help improve the accuracy of those predictions.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "3121514b-ec83-4fed-aff5-c01a42f56c84",
-        "lesson_activity.key": "10aa64ae-9998-49a4-8d2d-4455c43334eb"
-      }
-    },
-    {
       "key": "dccd6133-c6f7-46e8-8134-54e0b60a1e68",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -1756,8 +1744,8 @@
       "key": "7edcc412-b134-489b-97b4-d5dcc7308fac",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To demonstrate how neural networks predict text based on limited context and show how increasing context improves the accuracy of predictions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of three to five.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group one copy of the Unplugged Neural Networks activity guide, placed face down. Let students know they'll flip it over when instructed.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Introduce the activity. Make sure students understand that the purpose is to simulate how an AI model makes predictions with limited and full context.",
-        "duration": "10",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To demonstrate how neural networks predict text based on limited context and show how increasing context improves the accuracy of predictions. This activity also sets up the question the next activity answers: where do the AI's patterns come from?\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of three to five.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group one copy of the Unplugged Neural Networks activity guide, placed face down. Let students know to keep it face down until instructed to flip it over.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Introduce the activity. Make sure students understand that the purpose is to simulate how an AI model makes predictions with limited and full context.",
+        "duration": "15",
         "name": "Unplugged Neural Network"
       },
       "seeding_key": {
@@ -1769,7 +1757,7 @@
       "key": "f3b30810-cbbd-4cb3-acb5-35718afb7a0a",
       "position": 2,
       "properties": {
-        "description": "In this activity, your group will simulate how an AI model predicts words. In Round 1, you’ll only get to see the last three words of a sentence before predicting the next word. That's how older models worked—with very limited memory. In Round 2, you'll get to see the entire previous sentence before making your prediction—like modern transformer models, which work with much more context. Let's see how that changes your predictions.",
+        "description": "In this activity, your group simulates how an AI model predicts words. In Round 1, you only get to see the last three words of a sentence before predicting the next word. That's how older AI models worked — with very limited memory. In Round 2, you get to see the entire previous sentence before making your prediction — like modern AI models, which work with much more context. Let's see how that changes your predictions.",
         "remarks": true
       },
       "seeding_key": {
@@ -1781,7 +1769,7 @@
       "key": "3e1798d5-37c2-4c93-9b1b-00f8defb2f30",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Round 1 in their activity guide. Use the steps on the slide to explain the activity procedure and answer any questions. When everyone has added a word, instruct student to unfold the paper and read the full sentence aloud as a group. Have groups to compare their sentences in order to see how similar or different they were. For example, students' sentences could end up like this:\n- Space travel is \n- exciting \n- and \n- dangerous\n- animals \n- live.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Circulate to ensure students aren't peeking back at earlier words or the full sentence.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Round 2 in their activity guide. Use the steps on the slide to explain the activity procedure and answer any questions. When everyone has contributed, read the full sentence aloud as a group. Direct groups to compare their sentences to Round 1—how did having more context change the predictions? \n\nExample:\n- The exhausted student left school to go home to . . .*rest before starting homework*.\n- The exhausted student left school to go home to . . .*eat dinner with the family*.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students read full sentences, listen for students noticing how more words made it easier to choose a logical next word. If students aren’t making the connection, ask: \"What helped you decide which word to add this time?\" and \"Was it easier or harder than the first round?\"",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Round 1 in their activity guide. Use the steps on the slide to explain the activity procedure and answer any questions. When everyone has added a word, instruct students to unfold the paper and read the full sentence aloud as a group. Have groups to compare their sentences to see how similar or different they were. For example, students' sentences could end up like this:\n- Space travel is \n- exciting \n- and \n- dangerous\n- animals \n- live.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Circulate to ensure students aren't peeking back at earlier words or the full sentence.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Round 2 in their activity guide. Use the steps on the slide to explain the activity procedure and answer any questions. When everyone has contributed, have each group read their full sentence aloud. Direct groups to compare their sentences to Round 1—how did having more context change the predictions? \n\nExample:\n- The exhausted student left school to go home to . . .*rest before starting homework*.\n- The exhausted student left school to go home to . . .*eat dinner with the family*.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students read full sentences, listen for students noticing how more words made it easier to choose a logical next word. If students aren’t making the connection, ask: \"What helped you decide which word to add this time?\" and \"Was it easier or harder than the first round?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1798,7 +1786,7 @@
       "key": "ac6518b9-69fc-424a-96f3-b4a06c031e71",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How did having limited context affect predictions?*\n- *What changed when you had access to the entire starting sentence and all words that were added before you?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that limited context leads to less accurate and more random predictions, while access to more context helps predictions become more logical and connected to previous content. This mirrors how modern AI, like transformers, improves its output by analyzing longer sequences of data.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *In the neural network activity, predictions improved when more context was provided. How do you think this applies to AI prompts?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that just like their own predictions, AI performs better when it has more context. The more details and structure we give in a prompt, the more accurate, relevant, and helpful the AI's response becomes. Encourage students to connect this back to their experience seeing the full sentence in Round 2."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How did having limited context affect predictions?*\n- *What changed when you had access to the entire starting sentence and all words that were added before you?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**Students recognize that limited context leads to less accurate and more random predictions, while access to more context helps predictions become more logical and connected to previous content. This mirrors how modern AI models improve their output by analyzing longer sequences of data.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ac6518b9-69fc-424a-96f3-b4a06c031e71",
@@ -1809,7 +1797,7 @@
       "key": "44eaf5c5-b68e-41d5-91b2-5e2e9a387699",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at this slide. Explain that generative AI uses probabilities to predict what word should come next in a sentence. In this example, AI is most likely to predict the word “presents” or “eyes” next. AI is extremely unlikely to choose the word “clouds”, which is why the percentage is so small. Since this model has limited context, i.e. it only sees the words “opened their”, sometimes its predictions don’t make sense in the context of what came before it. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at this slide. Explain that generative AI uses probabilities to predict what word should come next in a sentence. In this example, AI is most likely to predict the word \"presents\" or \"eyes\" next. AI is extremely unlikely to choose the word \"clouds,\" which is why the percentage is so small. Since this model has limited context — it only sees the words \"opened their\" — sometimes its predictions don't make sense in the context of what came before it. Connect this to Round 1, where students could only see the last three words before adding their word.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1826,7 +1814,13 @@
       "key": "93be5c10-736e-41a3-bb42-46b437ce0bf0",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at the Improved AI Predictions slide and note the differences between this slide and the previous slide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why did AI’s predictions change? How does this relate to the neuron activity? \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that increased context allows AI to make more appropriate predictions. Here, the inclusion of the words “The students” led the AI to make next word predictions related to a school setting.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *neural network*."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at the Improved AI Predictions slide and note the differences between this slide and the previous slide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why did AI’s predictions change? How does this relate to the neuron activity? \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that increased context allows AI to make more appropriate predictions. Here, the inclusion of the words \"The students\" led the AI to make next-word predictions related to a school setting — just like Round 2, where seeing the full sentence made students' own predictions more logical.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *neural network*. Connect the term to the activity: each student acted as a neuron, and passing the paper mirrored how information flows through the network.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Vocabulary in this unit can be supported in whichever way works best for your classroom: have students record the definition in their Vocab Guide, add the term to your class word wall, or simply hold a quick discussion of the term as it comes up on the slide. Use the same routine you chose in Lesson 1 so students know what to expect.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "93be5c10-736e-41a3-bb42-46b437ce0bf0",
@@ -1834,40 +1828,38 @@
       }
     },
     {
-      "key": "55bc5420-7882-4131-b751-7ea46bff4657",
+      "key": "7a359156-aed4-40b0-8cb4-f413ac99373b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To help students understand how large language models (LLMs) like ChatGPT learn from data, recognize patterns, and refine responses through human feedback.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Chatbots and Large Language Models\" video (0:00-1:20).\n\n**Questions to consider with the video:**\n- What is the difference between LLMs and typical neural networks?\n\n**Discussion Goal:** Students recognize that typical neural networks perform specific tasks, while LLMs process vast text data to generate responses. LLMs predict words using probabilities, making them more flexible and capable of producing human-like text.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *large language model*.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Chatbots and Large Language Models\" video (1:20-1:51).\n\n**Questions to consider with the video:**\n\n- Why is it important for the AI to look at longer sequences such as sentences or paragraphs? \n- How does this relate to the context we provide in our prompts?\n\n**Discussion Goal:** Students recognize that longer sequences provide more context, leading to more accurate predictions. They connect this to AI prompting, understanding that detailed prompts help AI generate more relevant and coherent responses.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Chatbots and Large Language Models\" video (1:51-2:30).\n\n**Questions to consider with the video:**\n\n- How does human feedback improve AI responses? \n- Why is it still important to be cautious when using AI, even with fine-tuning?\n\n**Discussion Goal:** Students recognize that human feedback helps AI refine responses by correcting errors and reducing biases. They also understand that, despite fine-tuning, AI can still produce inaccurate or biased outputs, requiring users to think critically about its responses.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *training data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *training*.",
-        "duration": "10",
-        "name": "How LLMs Learn"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To give students hands-on experience training an AI model with labeled data. Students label images to teach an AI to recognize fish, then run the AI and see how the quality of their training determines what it can and can't do.",
+        "duration": "15",
+        "name": "Train an AI"
       },
       "seeding_key": {
-        "activity_section.key": "55bc5420-7882-4131-b751-7ea46bff4657",
+        "activity_section.key": "7a359156-aed4-40b0-8cb4-f413ac99373b",
         "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
       }
     },
     {
-      "key": "4ca683ea-8843-4147-af73-dd87bb949ef6",
+      "key": "5f9cdf25-c130-4bb7-8e1b-a8cc6e41763a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To give students hands-on practice with AI prompting, focusing on how context, examples, and structured inputs improve AI-generated responses. Students will explore real-world career scenarios and experiment with zero-shot, one-shot, and multi-shot prompting to refine AI responses.",
-        "duration": "10",
-        "name": "Prompting Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "4ca683ea-8843-4147-af73-dd87bb949ef6",
-        "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
-      }
-    },
-    {
-      "key": "f35a27c6-8b67-412b-b3c0-d4ff74f4a612",
-      "position": 9,
-      "properties": {
-        "description": "You've seen how AI predictions get better when given more context. Now, you're going to test that idea by giving the AI different types of prompts—starting with no example, then adding one, and finally, adding multiple examples. Try to notice how the responses change at each level.",
+        "description": "You just acted as a trained neural network. But where did your \"training\" come from? You've read thousands of sentences. How did the AI learn its patterns? Let's find out — by training an AI ourselves.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "f35a27c6-8b67-412b-b3c0-d4ff74f4a612",
+        "activity_section.key": "5f9cdf25-c130-4bb7-8e1b-a8cc6e41763a",
+        "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
+      }
+    },
+    {
+      "key": "28f1371b-c5e9-4900-a678-7bcb1ca4507a",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair students up. Each student trains their own AI. Before each Run, partners predict what their AIs do, then compare their results.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "28f1371b-c5e9-4900-a678-7bcb1ca4507a",
         "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
       }
     },
@@ -1875,7 +1867,14 @@
       "key": "847bfea2-7a4e-401a-a7a3-48df0c056177",
       "position": 10,
       "properties": {
-        "progression_name": "AI for Oceans"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 through 3 of the Train an AI activity.\n* **Level 1:** Students train the AI to identify fish by labeling images as \"fish\" or \"not fish,\" then run the AI to see how their training performs.\n* **Level 2:** Students see how their trained AI responds to sea creatures that belong in the water but aren't fish.\n* **Level 3:** Students train the AI to identify which objects belong in the water, then run it.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for partners predicting before each Run and comparing results after — the prediction and comparison are where the thinking happens. If pairs are racing through labels, ask: \"What do you predict your AI does with this one? Why?\" When the two AIs disagree or one makes a mistake, ask: \"Why might your AIs have learned differently? Whose fault is a wrong answer — the AI's or the trainer's?\"\n",
+        "progression_name": "Train an AI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students finish early, encourage them to select Train More and add more training data, then run the AI again to see whether more examples change its accuracy.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "847bfea2-7a4e-401a-a7a3-48df0c056177",
@@ -1883,49 +1882,81 @@
       }
     },
     {
-      "key": "03ad8740-2999-43ef-adbe-553233b9b8ad",
+      "key": "9fa95e81-eacf-40b6-b64b-4d7181ac9929",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair students up.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 on Code Studio to complete Levels 1 through 3 of the Prompting Challenges activity. For each level, students will choose one of three options based on a real-world career path:\n- **Level 1:** Students provide a basic, unstructured prompt for their chosen career path.\n- **Level 2:** Students add one example to guide the AI's response.\n- **Level 3:** Students refine the prompt with multiple details and structure to improve accuracy.",
-        "progression_name": "Prompting Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "03ad8740-2999-43ef-adbe-553233b9b8ad",
-        "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
-      }
-    },
-    {
-      "key": "7bf83013-5305-4b41-a4c3-d350c870ce5e",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are working collaboratively with their partners and completing the Prompting Challenges section of their Unit Guide after each level, noting how the AI's responses changed and what role context played in improving them.  Listen for how they describe the differences between each AI response as they add more context. Encourage students to be specific in their reflections. If students are unsure what to write, ask:\n- What changed in the AI’s response when you gave an example?\n- Did the response get more accurate, creative, or specific? How do you know?\n- What kind of details made the biggest difference?",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did your AI learn? What did it get wrong?*\n* *Whose fault was that?*\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect the AI's behavior directly to the training they provided. The AI only learns what it is taught — if it flags a whale, that's because whales were never in its training examples, not because the AI \"glitched.\" Listen for students shifting blame from the AI (\"it made a mistake\") to the training (\"we never showed it one of those\"). This discussion sets up the definition of training on the next slide.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Each level includes multiple career path options. If time allows, encourage students to try more than one scenario to see how prompting techniques apply across different contexts. Ask them whether their observations about AI responses stay consistent across tasks or change depending on the topic."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use student reflections in the Unit Guide to assess how well students understand the role of context and structure in AI responses. Look at their answers to the reflection questions after each level (zero-shot, one-shot, and multi-shot). Based on their responses, determine next steps:\n\n- **If students give vague answers or say AI's response didn't change much across levels:**\n   - Reteach the importance of context by reviewing the neural network activity analogy. Remind students that AI improves with more context and clearer instructions.\n   - Prompt with a discussion question: \"Why would AI struggle to give useful results if your prompt is too short or too open-ended?\"\n   - Small group discussion: Have students compare responses at different levels and identify specific changes in tone, structure, or accuracy.\n- **If students show misunderstanding (e.g., they say multi-shot was worse or don't reference how examples helped):**\n   - Review sample prompt chains together as a class. Ask: \"What kind of details helped this version get better?\"\n   - Have students rewrite one of their weaker prompts from earlier levels using stronger structure or clarity and re-try it with the AI.\n- **If students clearly articulate how adding structure and examples improved the AI's response:**\n   - Move on without reteaching. These students demonstrate understanding of prompt engineering basics.\n   - Optional Challenge: Encourage them to try a second career scenario and see if their insights apply across contexts."
+            "markdown": "Different students' AIs make different mistakes depending on how they trained. Treat those differences as evidence, not errors — ask pairs whose AIs disagreed: \"Why might your two AIs have learned differently?\" This plants the idea the class digs into during the Train a New Word activity.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "7bf83013-5305-4b41-a4c3-d350c870ce5e",
+        "activity_section.key": "9fa95e81-eacf-40b6-b64b-4d7181ac9929",
+        "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
+      }
+    },
+    {
+      "key": "cb99f7bc-ba1e-4e38-806e-182ed40fce8e",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *training*. Connect the term to what students just did: labeling images to teach the AI was training — the same process real AI models go through, except with millions of examples instead of a few dozen."
+      },
+      "seeding_key": {
+        "activity_section.key": "cb99f7bc-ba1e-4e38-806e-182ed40fce8e",
+        "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
+      }
+    },
+    {
+      "key": "55bc5420-7882-4131-b751-7ea46bff4657",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Training Data and Bias\" video.\n\n\n**Questions to consider with the video:**\n- How can the training data an AI learns from cause it to make mistakes — or be unfair?\n\n**Discussion Goal:** Students recognize that an AI's predictions are only as good as its training data. Incomplete or unrepresentative training data leads to mistakes and unfair outcomes — the AI has no way to know about anything it was never shown. Encourage students to connect this to their own AIs from the last activity: the mistakes their AIs made trace back to the training data they provided. This sets up the next activity, where students train the AI on a word that has no single right answer.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *training data*. Connect the term to the activity: the images students labeled as \"fish\" or \"not fish\" were the training data for their AI. Point out that the definition mentions text, images, and code — students used images, but an AI can be trained on any of these.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "55bc5420-7882-4131-b751-7ea46bff4657",
+        "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
+      }
+    },
+    {
+      "key": "fbe99160-7709-4d48-8442-8ceeb9a130f9",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fbe99160-7709-4d48-8442-8ceeb9a130f9",
+        "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
+      }
+    },
+    {
+      "key": "4b81e6d1-8b4b-4725-a372-0abaa83da637",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have partners agree on the same new word before they begin so they can compare results.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 4 to complete Levels 4 through 6.\n* **Level 4:** Students choose a new word describing a color or shape and train the AI to recognize it.\n* **Level 5:** Students choose a word that describes an opinion, like \"fierce,\" and train the AI to recognize it.\n* **Level 6:** Students respond to the Check Your Understanding question.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 4, listen for students noticing that the AI learns a color or shape reliably. On Level 5, listen for hesitation — students often pause over whether a fish is \"fierce.\" Name that hesitation as important: \"You had to decide. What did you base it on?\" If partners' results differ, ask: \"You picked the same word. Why did your AIs learn it differently?\"",
+        "progression_name": "Train a New Word",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Level 5 is the heart of this activity. Words like \"fierce\" have no single right answer, so each student's training reflects their own judgment. Expect partners' AIs to disagree — that disagreement is the point, not a mistake, and it leads directly into the next discussion.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 6 can be used as a formative assessment to check student understanding of the lesson objectives. Students explain why an AI trained to find trash flagged a whale, using the terms training and training data. Here are things to look for and actions you can take:\n* If students say the AI \"made a mistake\" or \"glitched\" without referencing its training, ask: \"Could the AI have recognized the whale? What would it have needed?\" Revisit the training data definition and the whale moment from the levels.\n* If students use the vocabulary but describe training as the AI \"looking things up\" or \"searching the internet,\" clarify that the AI only learns from the examples it was given during training — connect back to how their own AI only knew the fish they labeled.\n* If students correctly explain that the whale was missing from the training data, move on. For an extension, ask: \"What would you add to the training data to fix this — and could that create new problems?\"\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4b81e6d1-8b4b-4725-a372-0abaa83da637",
         "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
       }
     },
     {
       "key": "fdeeb103-0ec4-4966-a8d6-9b536d16009c",
-      "position": 13,
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What’s a creative use of this prompting technique? \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share creative ways one-shot and multi-shot prompting could be used, giving a quick snapshot of how students envision AI supporting creativity or problem-solving.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Keep it brief with popcorn-style sharing (3–4 ideas max) and note emerging themes to revisit later when discussing real-world or ethical uses of AI."
-          }
-        ]
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** You and your partner trained your AIs on the same word. Did your AIs learn it the same way? Why or why not?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that their AIs learned differently because they made different decisions while labeling. When the word described a color or shape, partners' AIs likely agreed. When the word described an opinion, like \"fierce,\" partners had to decide for themselves which fish counted — and their AIs learned whatever each of them decided. Listen for students articulating that the training data carries the opinions of the person who made it. Push further with: \"If you and your partner disagree about one word in one classroom, what happens when an AI is trained by people whose opinions differ from the people using it?\"\n"
       },
       "seeding_key": {
         "activity_section.key": "fdeeb103-0ec4-4966-a8d6-9b536d16009c",
@@ -1933,14 +1964,54 @@
       }
     },
     {
+      "key": "b34249bf-f5da-422d-9fc7-b6ab6b0504aa",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Chatbots and Large Language Models\" video.\n\n\n**Questions to consider with the video:**\n- How is a large language model different from the AI you just trained?\n- You trained your AI on a few dozen fish. What is a chatbot trained on — and who decides what it learns?\n\n\n**Discussion Goal:** Students recognize that the AI they trained was built for one specific task — telling fish from trash — while a large language model is trained on an enormous body of text gathered from across the internet and can generate all kinds of new writing. Both learn the same way, from training data. The difference is scale and range. Students should also recognize that people shape what a chatbot learns: the text it trains on is collected by people, and people tune the model afterward to keep it from producing biased or harmful content. Listen for students connecting this back to their own experience — they decided what counted as \"fierce,\" and that decision shaped what their AI learned. The same kinds of human decisions are being made about chatbots, at a much larger scale.\n\n",
+        "duration": "5",
+        "name": "LLM Synthesis"
+      },
+      "seeding_key": {
+        "activity_section.key": "b34249bf-f5da-422d-9fc7-b6ab6b0504aa",
+        "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
+      }
+    },
+    {
+      "key": "1e44638d-861a-4b06-8b90-a0b1d702bdce",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *large language model*. Connect the term to the video and to students' own experience: the AI Chat they used in Lesson 1 is a large language model. The AI they trained today learned from a few dozen images they labeled; an LLM learns from an enormous amount of text."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e44638d-861a-4b06-8b90-a0b1d702bdce",
+        "lesson_activity.key": "dcbcdd1d-1f55-4fb1-8639-d93ac9326a94"
+      }
+    },
+    {
       "key": "7d808a81-de39-4a51-998c-4546ee74158a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today. Let students know that they will be answering the question a little differently today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to create a short comic strip in their Unit Guide that illustrates something they learned about how AI learns, predicts, or responds to prompts, encouraging humor or creativity. Let students know that this is a creative way to synthesize the lesson. They can be funny, serious, or weird—as long as it's related to how AI works.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who incorporate ideas like limited context, prediction, pattern recognition, or prompting. If students are stuck, suggest they focus on one concept (e.g., how AI uses training data, how it predicts the next word, or how adding more context makes its output better).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n",
-        "name": "Question of the Day Comic Strip"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today. Let students know that they will be answering the question a little differently today.\n\n**Distribute:** Give each student an index card or a half sheet of scrap paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to create a three-panel comic strip that answers the Question of the Day. Let students know this is a creative way to synthesize the lesson — comics can be funny, serious, or weird, as long as they show something true about how AI learns.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students incorporating ideas from today — training data, what an AI can and can't recognize, or where its mistakes come from. If students are stuck, suggest they draw one moment from the lesson: an AI mislabeling a whale, two partners' AIs disagreeing about which fish is \"fierce,\" or their group's folded-paper sentence.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Three panels keeps this to about three minutes. Collect the cards on the way out as an exit ticket, or post a few on the class word wall alongside the vocabulary from this lesson.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7d808a81-de39-4a51-998c-4546ee74158a",
+        "lesson_activity.key": "a891591d-2b5f-48a5-a6ea-4a1df6c7d190"
+      }
+    },
+    {
+      "key": "de1c8417-ecf6-439c-a6c3-f191b591e3b9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "de1c8417-ecf6-439c-a6c3-f191b591e3b9",
         "lesson_activity.key": "a891591d-2b5f-48a5-a6ea-4a1df6c7d190"
       }
     },
@@ -4899,29 +4970,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-ml-video_2026"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "847bfea2-7a4e-401a-a7a3-48df0c056177"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson2-ml-video_2026"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "AI for Oceans"
+        "progression": "Train an AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -4938,12 +4987,12 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans"
+        "progression": "Train an AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -4960,12 +5009,12 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans"
+        "progression": "Train an AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -4982,34 +5031,12 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-ml-Video_Training_Data_2026"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "847bfea2-7a4e-401a-a7a3-48df0c056177"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson2-ml-Video_Training_Data_2026"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "progression": "AI for Oceans"
+        "progression": "Train a New Word"
       },
       "bonus": false,
       "seeding_key": {
@@ -5019,19 +5046,19 @@
         "lesson.key": "Lesson 3: The AI's Brain",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "847bfea2-7a4e-401a-a7a3-48df0c056177"
+        "activity_section.key": "4b81e6d1-8b4b-4725-a372-0abaa83da637"
       },
       "level_keys": [
         "problem-solving-with-ai-lesson2-ml-Short_2026"
       ]
     },
     {
-      "chapter": 20,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans"
+        "progression": "Train a New Word"
       },
       "bonus": false,
       "seeding_key": {
@@ -5041,102 +5068,36 @@
         "lesson.key": "Lesson 3: The AI's Brain",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "847bfea2-7a4e-401a-a7a3-48df0c056177"
+        "activity_section.key": "4b81e6d1-8b4b-4725-a372-0abaa83da637"
       },
       "level_keys": [
         "problem-solving-with-ai-lesson2-ml-Long_2026"
       ]
     },
     {
-      "chapter": 21,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Prompting Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson3-level1_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "03ad8740-2999-43ef-adbe-553233b9b8ad"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson3-level1_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 9,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Prompting Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson3-level2_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "03ad8740-2999-43ef-adbe-553233b9b8ad"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson3-level2_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 10,
+      "chapter": 19,
+      "position": 6,
       "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Prompting Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson3-level3_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "03ad8740-2999-43ef-adbe-553233b9b8ad"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson3-level3_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 11,
-      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Prompting Challenges"
+        "progression": "Train a New Word"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson3-level4_2024-pilot_v2_2026_dev"
+          "problem-solving-with-ai-lesson2-cfu_2026"
         ],
         "lesson.key": "Lesson 3: The AI's Brain",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "03ad8740-2999-43ef-adbe-553233b9b8ad"
+        "activity_section.key": "4b81e6d1-8b4b-4725-a372-0abaa83da637"
       },
       "level_keys": [
-        "problem-solving-with-ai-lesson3-level4_2024-pilot_v2_2026_dev"
+        "problem-solving-with-ai-lesson2-cfu_2026"
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5158,7 +5119,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5180,7 +5141,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -5202,7 +5163,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5224,7 +5185,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5246,7 +5207,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5268,7 +5229,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5290,7 +5251,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5312,7 +5273,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -5334,7 +5295,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 29,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5356,7 +5317,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 30,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -5378,7 +5339,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5400,7 +5361,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5422,7 +5383,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5444,7 +5405,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5466,7 +5427,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5488,7 +5449,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5510,7 +5471,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
@@ -5532,7 +5493,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5554,7 +5515,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5576,7 +5537,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5598,7 +5559,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5620,7 +5581,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5642,7 +5603,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5664,7 +5625,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5686,7 +5647,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
@@ -5708,7 +5669,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5730,7 +5691,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5752,7 +5713,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 3,
       "assessment": true,
@@ -5774,7 +5735,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5796,7 +5757,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5818,7 +5779,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5840,7 +5801,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5862,7 +5823,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
@@ -5884,7 +5845,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5906,7 +5867,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5928,7 +5889,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5950,7 +5911,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5972,7 +5933,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -5994,7 +5955,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6016,7 +5977,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6038,7 +5999,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6060,7 +6021,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6082,7 +6043,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6104,7 +6065,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6126,7 +6087,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6148,7 +6109,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6170,7 +6131,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6192,7 +6153,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 68,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6214,7 +6175,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 69,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6236,7 +6197,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 70,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6258,7 +6219,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6280,7 +6241,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6461,18 +6422,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson2-ml-video_2026",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-ml-video_2026"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "847bfea2-7a4e-401a-a7a3-48df0c056177"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "problem-solving-with-ai-lesson2-ml-FishVTrash_2026",
         "script_level.level_keys": [
           "problem-solving-with-ai-lesson2-ml-FishVTrash_2026"
@@ -6509,18 +6458,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson2-ml-Video_Training_Data_2026",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-ml-Video_Training_Data_2026"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "847bfea2-7a4e-401a-a7a3-48df0c056177"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "problem-solving-with-ai-lesson2-ml-Short_2026",
         "script_level.level_keys": [
           "problem-solving-with-ai-lesson2-ml-Short_2026"
@@ -6528,7 +6465,7 @@
         "lesson.key": "Lesson 3: The AI's Brain",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "847bfea2-7a4e-401a-a7a3-48df0c056177"
+        "activity_section.key": "4b81e6d1-8b4b-4725-a372-0abaa83da637"
       }
     },
     {
@@ -6540,55 +6477,19 @@
         "lesson.key": "Lesson 3: The AI's Brain",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "847bfea2-7a4e-401a-a7a3-48df0c056177"
+        "activity_section.key": "4b81e6d1-8b4b-4725-a372-0abaa83da637"
       }
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson3-level1_v2_2026_dev",
+        "level.key": "problem-solving-with-ai-lesson2-cfu_2026",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson3-level1_v2_2026_dev"
+          "problem-solving-with-ai-lesson2-cfu_2026"
         ],
         "lesson.key": "Lesson 3: The AI's Brain",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "03ad8740-2999-43ef-adbe-553233b9b8ad"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson3-level2_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson3-level2_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "03ad8740-2999-43ef-adbe-553233b9b8ad"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson3-level3_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson3-level3_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "03ad8740-2999-43ef-adbe-553233b9b8ad"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson3-level4_2024-pilot_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson3-level4_2024-pilot_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "03ad8740-2999-43ef-adbe-553233b9b8ad"
+        "activity_section.key": "4b81e6d1-8b4b-4725-a372-0abaa83da637"
       }
     },
     {
@@ -7574,10 +7475,11 @@
     },
     {
       "name": "How Chatbots and Large Language Models Work",
-      "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+      "url": "https://drive.google.com/file/d/1qso4YToQrOAL8LJdUgShlPUes5F53QyN/view?usp=sharing",
       "key": "how_chatbots_and_large_language_models_work",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Video"
       },
       "seeding_key": {
@@ -7729,7 +7631,7 @@
     },
     {
       "name": "The AI's Brain",
-      "url": "https://docs.google.com/presentation/d/1EPF_2RbK2-Xu3Wm0AtonWjlt5egSrmiVQm1XlkQ18KE/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1lPQXtFPbPUnRqSGc75J_Ac75wDbrN50OsVNtfUh1AXo/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "the_ai_s_brain",
       "properties": {
         "audience": "Verified Teacher",
@@ -7738,6 +7640,20 @@
       },
       "seeding_key": {
         "resource.key": "the_ai_s_brain"
+      }
+    },
+    {
+      "name": "Training Data and Bias",
+      "url": "https://www.youtube.com/watch?v=x2mRoFNm22g&t=1s",
+      "key": "training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "training_data_and_bias"
       }
     },
     {
@@ -7992,25 +7908,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 3: The AI's Brain",
-        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: The AI's Brain",
         "resource.key": "how_chatbots_and_large_language_models_work"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 3: The AI's Brain",
-        "resource.key": "problem_solving_with_ai_unit_guide"
+        "resource.key": "the_ai_s_brain"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 3: The AI's Brain",
-        "resource.key": "the_ai_s_brain"
+        "resource.key": "training_data_and_bias"
       }
     },
     {
@@ -8720,16 +8630,6 @@
       }
     },
     {
-      "key": "97e5701a-d5e3-4b5f-8459-cf7c0024d932",
-      "properties": {
-        "description": "Evaluate how AI’s learning affects accuracy and reliability."
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "objective.key": "97e5701a-d5e3-4b5f-8459-cf7c0024d932"
-      }
-    },
-    {
       "key": "9acf493f-079c-4226-88b5-da90d08479d3",
       "properties": {
         "description": "Analyze the role of human creativity in AI-assisted content generation."
@@ -8747,6 +8647,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 1: Talking to Machines",
         "objective.key": "a380cede-2b3f-4669-b443-369b69a144bb"
+      }
+    },
+    {
+      "key": "a58bdb37-1a28-4c6f-af13-fcdeabe1db99",
+      "properties": {
+        "description": "Train an AI model using labeled training data."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The AI's Brain",
+        "objective.key": "a58bdb37-1a28-4c6f-af13-fcdeabe1db99"
       }
     },
     {
@@ -8847,16 +8757,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 4: Smart or Just Predictable?",
         "objective.key": "c270bb86-dd43-47c6-aa2b-d582344567a2"
-      }
-    },
-    {
-      "key": "c9506b99-1f54-43bc-a83e-efe039b0c738",
-      "properties": {
-        "description": "Experiment with AI responses to identify learning patterns."
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 3: The AI's Brain",
-        "objective.key": "c9506b99-1f54-43bc-a83e-efe039b0c738"
       }
     },
     {
