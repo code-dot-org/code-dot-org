@@ -308,8 +308,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     updateUnreadNotificationCount();
   };
 
-  const brand = document.documentElement.dataset.brand;
-
   return (
     <div id="fab-contained">
       {(!chatIsOpen || !drawerIsEnabled) && (
@@ -370,12 +368,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
                   unreadNotificationCount > 0
                     ? 'var(--background-error-primary)'
                     : 'var(--background-brand-aqua-primary)',
-                color:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0 ||
-                  brand === 'codeai-next'
-                    ? 'var(--text-neutral-white-fixed)'
-                    : 'var(--text-neutral-black-fixed)',
+                color: 'var(--text-neutral-white-fixed)',
                 top: '5%',
                 right: '5%',
               },

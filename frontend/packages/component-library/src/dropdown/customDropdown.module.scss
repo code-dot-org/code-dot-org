@@ -148,12 +148,22 @@
                 background-color: var(--background-error-primary);
                 color: var(--text-neutral-white-fixed);
               }
+
+              span {
+                color: var(--text-neutral-white-fixed);
+              }
+            }
+
+            &:focus-visible {
+              outline-color: var(--border-error-primary);
+              background-color: var(--background-neutral-primary);
             }
           }
 
           &:focus-visible {
-            outline: 2px solid var(--borders-brand-teal-primary);
+            outline: 2px solid;
             outline-offset: -2px;
+            outline-color: var(--border-focused-primary);
           }
 
           i {
@@ -171,30 +181,99 @@
           background-color: var(--background-neutral-tertiary);
         }
 
-        &:active,
-        &:has(input[type='checkbox']:checked),
-        &:has(.selectedDropdownMenuItem) {
-          background-color: var(--background-brand-teal-primary);
+        // Pressed.
+        &:active {
+          background-color: var(--background-neutral-tertiary);
 
           i::before {
-            background-color: var(--background-neutral-primary);
-            color: var(--text-brand-teal-primary);
+            background-color: var(--background-brand-light);
+            color: var(--text-neutral-primary);
           }
 
           span {
-            color: var(--text-neutral-white-fixed);
+            color: var(--text-neutral-primary);
           }
 
           .dropdownMenuItem {
             i::before {
-              background-color: var(--background-brand-teal-primary);
-              color: var(--text-neutral-white-fixed);
+              background-color: unset;
+              color: var(--text-neutral-primary);
             }
 
             span {
-              color: var(--text-neutral-white-fixed);
+              color: var(--text-neutral-primary);
             }
           }
+        }
+
+        // Selected.
+        &:has(input[type='checkbox']:checked),
+        &:has(.selectedDropdownMenuItem) {
+          background-color: var(--background-selected-primary);
+
+          i::before {
+            background-color: var(--background-selected-primary-inverse);
+            color: var(--text-selected-primary-inverse);
+            border-color: var(--background-selected-primary-inverse);
+          }
+
+          span {
+            color: var(--text-selected-primary);
+          }
+
+          .dropdownMenuItem {
+            i::before {
+              background-color: var(--background-selected-primary);
+              color: var(--text-selected-primary);
+            }
+
+            span {
+              color: var(--text-selected-primary);
+            }
+          }
+
+          .dropdownMenuItem:focus-visible {
+            outline-color: var(--border-focused-inverse);
+          }
+
+          // Checkbox items focus the hidden input and the Checkbox
+          // component draws the ring on the glyph — flip that ring
+          // to the inverse as well.
+          input[type='checkbox']:focus-visible + i::before {
+            outline-color: var(--border-focused-inverse);
+          }
+        }
+
+        // Selected + hover / pressed.
+        &:hover:has(input[type='checkbox']:checked),
+        &:hover:has(.selectedDropdownMenuItem),
+        &:active:has(input[type='checkbox']:checked),
+        &:active:has(.selectedDropdownMenuItem) {
+          background-color: var(--background-selected-strong);
+
+          .dropdownMenuItem i::before {
+            background-color: var(--background-selected-strong);
+          }
+        }
+
+        &:not(
+            :has(input[type='checkbox']:checked),
+            :has(.selectedDropdownMenuItem)
+          ) {
+          .dropdownMenuItem:focus-visible {
+            background-color: var(--background-brand-light);
+          }
+        }
+
+        // Checkbox items focus the hidden input, not a
+        // .dropdownMenuItem, so the row focus fill comes via :has();
+        // the ring itself is drawn by the Checkbox component on the
+        // glyph (the bridge resolves it to the same indigo as
+        // focused/primary).
+        &:has(input[type='checkbox']:focus-visible):not(
+            :has(input[type='checkbox']:checked)
+          ) {
+          background-color: var(--background-brand-light);
         }
 
         &:has(input[type='checkbox']:disabled),
@@ -215,6 +294,28 @@
           span,
           .dropdownMenuItem span {
             color: var(--text-neutral-disabled);
+          }
+        }
+
+        // Disabled + selected. More specific than every other state
+        // above, so it wins regardless of order.
+        &:has(input[type='checkbox']:disabled:checked),
+        &:has(.selectedDropdownMenuItem.disabledDropdownMenuItem) {
+          background-color: var(--background-disabled-neutral);
+
+          i::before {
+            background-color: unset;
+            color: var(--text-disabled-neutral-inverse);
+          }
+
+          span,
+          .dropdownMenuItem span {
+            color: var(--text-disabled-neutral-inverse);
+          }
+
+          .dropdownMenuItem i::before {
+            background-color: unset;
+            color: var(--text-disabled-neutral-inverse);
           }
         }
       }
@@ -720,176 +821,6 @@
             @include typography.body-four;
             color: inherit;
             margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-// CodeAI (CADS) brand overrides — see themes/README.md
-[data-brand='codeai-next'] {
-  .dropdownContainer {
-    .dropdownMenuContainer {
-      ul {
-        li {
-          // Pressed.
-          &:active {
-            background-color: var(--background-neutral-tertiary);
-
-            i::before {
-              background-color: var(--background-brand-light);
-              color: var(--text-neutral-primary);
-            }
-
-            span {
-              color: var(--text-neutral-primary);
-            }
-
-            .dropdownMenuItem {
-              i::before {
-                background-color: unset;
-                color: var(--text-neutral-primary);
-              }
-
-              span {
-                color: var(--text-neutral-primary);
-              }
-            }
-          }
-
-          // Selected.
-          &:has(input[type='checkbox']:checked),
-          &:has(.selectedDropdownMenuItem) {
-            background-color: var(--background-selected-primary);
-
-            i::before {
-              background-color: var(--background-selected-primary-inverse);
-              color: var(--text-selected-primary-inverse);
-              border-color: var(--background-selected-primary-inverse);
-            }
-
-            span {
-              color: var(--text-selected-primary);
-            }
-
-            .dropdownMenuItem {
-              i::before {
-                background-color: var(--background-selected-primary);
-                color: var(--text-selected-primary);
-              }
-
-              span {
-                color: var(--text-selected-primary);
-              }
-            }
-
-            .dropdownMenuItem:focus-visible {
-              outline-color: var(--border-focused-inverse);
-            }
-
-            // Checkbox items focus the hidden input and the Checkbox
-            // component draws the ring on the glyph — flip that ring
-            // to the inverse as well.
-            input[type='checkbox']:focus-visible + i::before {
-              outline-color: var(--border-focused-inverse);
-            }
-          }
-
-          // Selected + hover / pressed.
-          &:hover:has(input[type='checkbox']:checked),
-          &:hover:has(.selectedDropdownMenuItem),
-          &:active:has(input[type='checkbox']:checked),
-          &:active:has(.selectedDropdownMenuItem) {
-            background-color: var(--background-selected-strong);
-
-            .dropdownMenuItem i::before {
-              background-color: var(--background-selected-strong);
-            }
-          }
-
-          .dropdownMenuItem:focus-visible {
-            outline-color: var(--border-focused-primary);
-          }
-
-          &:not(
-              :has(input[type='checkbox']:checked),
-              :has(.selectedDropdownMenuItem)
-            ) {
-            .dropdownMenuItem:focus-visible {
-              background-color: var(--background-brand-light);
-            }
-          }
-
-          // Checkbox items focus the hidden input, not a
-          // .dropdownMenuItem, so the row focus fill comes via :has();
-          // the ring itself is drawn by the Checkbox component on the
-          // glyph (the bridge resolves it to the same indigo as
-          // focused/primary).
-          &:has(input[type='checkbox']:focus-visible):not(
-              :has(input[type='checkbox']:checked)
-            ) {
-            background-color: var(--background-brand-light);
-          }
-
-          // Destructive item.
-          .dropdownMenuItem.destructiveDropdownMenuItem {
-            &:focus-visible {
-              outline-color: var(--border-error-primary);
-              background-color: var(--background-neutral-primary);
-            }
-
-            &:active {
-              i::before {
-                background-color: var(--background-error-primary);
-                color: var(--text-neutral-white-fixed);
-              }
-
-              span {
-                color: var(--text-neutral-white-fixed);
-              }
-            }
-          }
-
-          &:has(input[type='checkbox']:disabled),
-          &:has(.disabledDropdownMenuItem) {
-            background-color: unset;
-
-            i::before {
-              background-color: unset;
-              color: var(--text-neutral-disabled);
-            }
-
-            span,
-            .dropdownMenuItem span {
-              color: var(--text-neutral-disabled);
-            }
-
-            .dropdownMenuItem i::before {
-              background-color: unset;
-              color: var(--text-neutral-disabled);
-            }
-          }
-
-          // Disabled + selected. Last so it outranks every state above.
-          &:has(input[type='checkbox']:disabled:checked),
-          &:has(.selectedDropdownMenuItem.disabledDropdownMenuItem) {
-            background-color: var(--background-disabled-neutral);
-
-            i::before {
-              background-color: unset;
-              color: var(--text-disabled-neutral-inverse);
-            }
-
-            span,
-            .dropdownMenuItem span {
-              color: var(--text-disabled-neutral-inverse);
-            }
-
-            .dropdownMenuItem i::before {
-              background-color: unset;
-              color: var(--text-disabled-neutral-inverse);
-            }
           }
         }
       }

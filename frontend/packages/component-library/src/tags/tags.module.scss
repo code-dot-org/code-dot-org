@@ -10,10 +10,11 @@
     display: flex;
     align-items: baseline;
     gap: 2px;
-    color: var(--text-neutral-primary);
     padding: 2px 12px;
-    background: var(--background-brand-teal-light);
-    border-radius: 6.25rem;
+    background: var(--background-brand-light);
+    border: 1px solid var(--border-brand-mid);
+    border-radius: var(--shape-sm, 0.375rem);
+    color: var(--text-brand-secondary);
     max-width: 15em;
 
     span {
@@ -45,6 +46,10 @@
       @include typography.overline-one;
       line-height: 1.5;
       margin-bottom: 0;
+      // Tags use the Label style, not an overline.
+      text-transform: none;
+      letter-spacing: normal;
+      color: var(--text-brand-secondary);
     }
 
     i {
@@ -62,6 +67,10 @@
       @include typography.overline-two;
       line-height: 1.54;
       margin-bottom: 0;
+      // Tags use the Label style, not an overline.
+      text-transform: none;
+      letter-spacing: normal;
+      color: var(--text-brand-secondary);
     }
 
     i {
@@ -80,6 +89,10 @@
       @include typography.overline-three;
       line-height: 1.8;
       margin-bottom: 0;
+      // Tags use the Label style, not an overline.
+      text-transform: none;
+      letter-spacing: normal;
+      color: var(--text-brand-secondary);
     }
 
     i {
@@ -87,25 +100,6 @@
       line-height: 1.25;
       width: 1rem;
       height: 0.8125rem;
-    }
-  }
-}
-
-// CodeAI (CADS) brand overrides.
-[data-brand='codeai-next'] {
-  .tags {
-    .tag {
-      background: var(--background-brand-light);
-      border: 1px solid var(--border-brand-mid);
-      border-radius: var(--shape-sm, 0.375rem);
-      color: var(--text-brand-secondary);
-
-      span {
-        // CADS tags use the Label style, not an overline.
-        text-transform: none;
-        letter-spacing: normal;
-        color: var(--text-brand-secondary);
-      }
     }
   }
 }

@@ -41,19 +41,22 @@
       }
     }
 
+    // Checked/indeterminate use the dedicated mode-inverted selected
+    // tokens (brand box + seafoam check in light, seafoam box + navy
+    // check in dark); the box border always matches the fill.
     &:checked + i::before {
       content: '\f00c';
-      color: var(--text-neutral-white-fixed);
-      background: var(--background-brand-teal-primary);
-      border: 2px solid var(--borders-brand-teal-primary);
+      color: var(--text-selected-primary);
+      background: var(--background-selected-primary);
+      border: 2px solid var(--border-selected-primary);
       border-radius: 4px;
     }
 
     &:indeterminate + i::before {
       content: '\e404';
-      color: var(--text-neutral-white-fixed);
-      background: var(--background-brand-teal-primary);
-      border: 2px solid var(--borders-brand-teal-primary);
+      color: var(--text-selected-primary);
+      background: var(--background-selected-primary);
+      border: 2px solid var(--border-selected-primary);
       border-radius: 4px;
     }
 
@@ -63,11 +66,6 @@
         outline: 2px solid var(--borders-brand-teal-primary);
         outline-offset: 2px;
         border-radius: 4px;
-      }
-      &:indeterminate + i::before {
-        color: var(--text-neutral-white-fixed);
-        background: var(--background-brand-teal-primary);
-        border: 2px solid var(--borders-brand-teal-primary);
       }
     }
   }
@@ -85,9 +83,9 @@
 
       &:checked + i::before,
       &:indeterminate + i::before {
-        color: var(--text-neutral-white-fixed);
-        background: var(--background-brand-teal-strong);
-        border-color: var(--borders-brand-teal-strong);
+        color: var(--text-selected-primary);
+        background: var(--background-selected-strong);
+        border-color: var(--border-selected-strong);
       }
     }
   }
@@ -104,9 +102,9 @@
 
       &:checked + i::before,
       &:indeterminate + i::before {
-        color: var(--text-neutral-white-fixed);
-        background: var(--background-brand-teal-strong);
-        border-color: var(--borders-brand-teal-primary);
+        color: var(--text-selected-primary);
+        background: var(--background-selected-strong);
+        border-color: var(--border-selected-strong);
       }
     }
   }
@@ -248,46 +246,5 @@
   .checkboxLabel-thin {
     @include typography.body-four;
     margin-bottom: 0;
-  }
-}
-
-// CodeAI (CADS) brand overrides — see themes/README.md ("Component-level
-// brand overrides"); tags/tags.module.scss is the reference example.
-// Only the checked/indeterminate fills diverge from what the token
-// bridge gives: CADS uses the dedicated mode-inverted selected tokens
-// (brand box + seafoam check in light, seafoam box + navy check in
-// dark) where the bridge maps the legacy teal onto the brand ramp, and
-// hover/pressed go to Figma's selected/strong, which the export carries
-// as --background-selected-strong. The box border always matches the
-// fill. Everything else — unselected hover/pressed (brand-light inner,
-// indigo pressed border), the focus ring, and the disabled grays —
-// resolves correctly through the bridge, and the legacy disabled rules
-// outrank these overrides, so disabled needs no re-assert.
-// CheckboxDropdown menus render this component for their items; the
-// dropdown menu's own brand block layers row-context glyph inversions
-// on top at higher specificity.
-// The hover/pressed override also covers the legacy hover/pressed
-// rules, which tie with the checked override below and would otherwise
-// lose to it on source order.
-[data-brand='codeai-next'] {
-  .label {
-    input[type='checkbox'] {
-      &:checked + i::before,
-      &:indeterminate + i::before {
-        color: var(--text-selected-primary);
-        background: var(--background-selected-primary);
-        border-color: var(--border-selected-primary);
-      }
-    }
-
-    &:hover input[type='checkbox'],
-    &:active input[type='checkbox'] {
-      &:checked + i::before,
-      &:indeterminate + i::before {
-        color: var(--text-selected-primary);
-        background: var(--background-selected-strong);
-        border-color: var(--border-selected-strong);
-      }
-    }
   }
 }
