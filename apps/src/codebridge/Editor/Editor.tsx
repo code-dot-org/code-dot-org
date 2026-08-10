@@ -51,10 +51,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     state => state.lab2Project.projectSourceBeforeAiTutorVersion
   );
 
-  const allowUnifiedDiffView = experiments.isEnabledAllowingQueryString(
-    experiments.ACCEPT_REJECT_UNIFIED_DIFF
-  );
-
   const allowSplitDiffView = experiments.isEnabledAllowingQueryString(
     experiments.ACCEPT_REJECT_SPLIT_DIFF
   );
@@ -70,19 +66,18 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     [dispatch, activeFile?.id]
   );
 
-  // Only show unified diff view when experiment flag is turned on, we are in AI tutor mode,
-  // and have projectSourceBeforeAiTutorVersion along with an active file.
-  // Used in key so we remount CodeEditor when this becomes true.
+  // Show unified diff view whenever we are in AI tutor mode and have
+  // the version of the file before the AI tutor changes as well as an active file.
+  //
+  // Also used in key so we remount CodeEditor when this becomes true.
   const hasUnifiedDiffView = useMemo(() => {
     return !!(
-      allowUnifiedDiffView &&
       !allowSplitDiffView &&
       isAiTutorVersion &&
       projectSourceBeforeAiTutorVersion &&
       activeFile?.name
     );
   }, [
-    allowUnifiedDiffView,
     allowSplitDiffView,
     isAiTutorVersion,
     projectSourceBeforeAiTutorVersion,
