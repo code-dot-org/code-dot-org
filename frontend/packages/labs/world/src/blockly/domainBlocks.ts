@@ -766,6 +766,15 @@ const defineEventBlock = (event: EventMeta) => {
   // `%1` is the actor, when there is one; the phrasing follows it.
   let message0 = forActor ? 'when %1' : 'when';
   const filters: Array<{field: string; ref: string}> = [];
+  // An ACTOR parameter filters by KIND. "Starts touching a brick" is what a
+  // game means almost every time, and a kind is a set of named choices like an
+  // enum is — just a live one, since it is the project's own actors.
+  //
+  // The value itself is not offered as a name here. An earlier version bound it
+  // to a variable field, which listed every other Actor variable in the file as
+  // though picking one were a choice; the handler reaches it with `event actor`
+  // instead. So a hat filters, and never binds.
+  const kinds: string[] = [];
   for (const part of event.parts ?? [{kind: 'label', text: event.name}]) {
     if (part.kind === 'label') {
       message0 += ` ${part.text}`;
@@ -773,7 +782,21 @@ const defineEventBlock = (event: EventMeta) => {
     }
     const choice = enumRefOfParamType(part.type);
     if (!choice) {
-      continue; // only a set of choices can be filtered on
+      if (part.type !== 'actor') {
+        continue; // nothing else has a set of choices to wait for
+      }
+      const field = filterFieldName(filters.length + kinds.length);
+      const options = (): Array<[string, string]> => [
+        ANY_CHOICE,
+        ...actorFieldOptions(),
+      ];
+      args0.push({type: 'field_dropdown', name: field, options: options()});
+      extensions.push(
+        liveDropdown(`world_event_kind_${field}`, field, options),
+      );
+      kinds.push(field);
+      message0 += ` %${args0.length}`;
+      continue;
     }
     const field = filterFieldName(filters.length);
     const options = (): Array<[string, string]> => [
@@ -812,7 +835,17 @@ const defineEventBlock = (event: EventMeta) => {
           .filter(value => value)
           .map(value => `  if (eventValue !== ${str(value)}) return;\n`)
           .join('');
-        const body = guards + nextChainCode(block, generator);
+        // A kind filter tests what the carried actor IS, where an enum filter
+        // tests what the carried value equals — the same guard shape over the
+        // same `.type` that `is a` compares (blockly/localActors stamps a
+        // world's own actors with their id rather than a module path).
+        const kindGuards = kinds
+          .map(field => block.getFieldValue(field))
+          .filter(chosen => chosen)
+          .map(chosen => localActorFor(block, chosen)?.type ?? chosen)
+          .map(type => `  if (eventValue?.type !== ${str(type)}) return;\n`)
+          .join('');
+        const body = guards + kindGuards + nextChainCode(block, generator);
         if (!forActor) {
           return onWorldHandler(refCode(event.ref, generator), body);
         }
@@ -857,11 +890,16 @@ const defineEmitBlock = (event: EventMeta) => {
       message0 += ` ${part.text}`;
       continue;
     }
-    // Only a set of choices can be carried, as only a set of choices can be
-    // filtered on — the two sides of one event agree about that.
-    if (!enumRefOfParamType(part.type)) {
-      continue;
-    }
+    // ANY type, not only an enum. The two sides of an event do not have to
+    // agree about this, and making them agree cost more than it bought: an
+    // event that carries an actor — "started touching THAT one" — was not
+    // sayable at all, and the param vanished from both sides rather than
+    // falling back to a treatment that works.
+    //
+    // The hat still filters only on enums, because a filter is a dropdown of
+    // named choices and a kind of actor is not one. It simply offers no filter
+    // for the rest; the handler reads what came through with `event value`,
+    // which is untyped for exactly this reason.
     const built = typedValueInputs(part, args0.length + 1, names[paramIndex], {
       enumAsSocket: true,
     });
@@ -1869,6 +1907,40 @@ const worldEventValue = defineBlock({
   tooltip:
     'The value of the current event — the key that was pressed, the animation ' +
     'frame, whatever the event carries.',
+  generator: {
+    javascript() {
+      return ['eventValue', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
+/**
+ * The actor an event was about — the one just touched, the one just hit.
+ *
+ * `event value` says the same thing untyped, and would do: this is that block
+ * with a name and a type. Both matter here. The name, because "the actor this
+ * event is about" is what a learner is looking for and "event value" is not
+ * what they would search for; and the type, because an untyped block plugs
+ * anywhere, including sockets where it means nothing.
+ *
+ * A BLOCK rather than a variable the hat binds, which is what this replaces.
+ * A variable field on the hat offered every other Actor variable in the file —
+ * a loop's `other`, a parameter — as though picking one were a meaningful
+ * choice, when the hat has exactly one thing to hand over. There was nothing to
+ * choose, so there should not have been a chooser.
+ *
+ * Only meaningful inside a handler for an event that carries an actor, and
+ * unguarded for the reason `event value` is: what an event carries depends on
+ * the event, and a block cannot know which handler it will end up in.
+ */
+const worldEventActor = defineBlock({
+  type: 'world_event_actor',
+  message0: 'event actor',
+  output: 'Actor',
+  style: 'sprite_blocks',
+  tooltip:
+    'The actor this event is about — the one that was just touched. Only ' +
+    'meaningful inside a “when” block for an event that carries an actor.',
   generator: {
     javascript() {
       return ['eventValue', Order.ATOMIC] as [string, number];
@@ -4732,6 +4804,7 @@ export const DOMAIN_BLOCKS = [
   ...EMIT_BLOCKS,
   worldLog,
   worldPrint,
+  worldEventActor,
   worldEventValue,
   worldVector,
   worldVectorMath,
@@ -4866,6 +4939,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // How long it has been here — what a bullet, a spark or a lapsing shield
       // compares against to know it is done.
       'world_actor_age',
+      // The actor an event was about, inside a handler for one that carries it.
+      'world_event_actor',
       // Declaring state this KIND of actor carries. The same block a rule and a
       // trait declare with: it already takes its meaning from where it sits, so
       // a third site is what it was built for, and a separate near-identical

@@ -9,7 +9,6 @@ import {
   equals,
   forEach,
   give,
-  anyOf,
   hasTrait,
   isIn,
   lessThan,
@@ -25,6 +24,7 @@ import {
   thisActor,
   vector,
   vectorTimes,
+  yes,
   when,
 } from './dsl.mjs';
 
@@ -195,29 +195,42 @@ const contactsBefore = canCollide.actors('contacts before', {readonly: true});
  * into `presses`/`releases`, Gravity turns falling into `starts`/`stops
  * falling`, and this turns an overlap into its two ends.
  *
- * THE EVENT CARRIES NOTHING, and the set beside it says who. An event can only
- * carry a value drawn from a named set of choices — `defineEmitBlock` skips any
- * other kind, and a hat can only filter on the same — so "starts touching
- * ⟨that actor⟩" is not a sentence this event system can say. Rather than bend
- * it, the pair is split: the event is the moment, and `newly touching` is the
- * list of who arrived in it. A handler reads one to answer the other.
+ * ONE EVENT PER CONTACT, carrying the actor — the same shape `rules/input` uses
+ * when it raises its key event once per key it is looping over. A first draft
+ * raised one event per FRAME in which anything new arrived, which is a
+ * different thing wearing the same name: a ball clipping two bricks in one
+ * frame started touching twice and would have been told once.
  *
- * The lists are worth having on their own, too. They are pollable from a step
- * like `contacts` is, and they are the only place the difference between this
- * frame and the last is written down.
+ * The handler reads what arrived with `event value`, which is untyped for
+ * exactly this reason and so plugs into any actor socket:
+ *
+ *     when ⟨this actor⟩ starts touching
+ *       if ⟨event value⟩ is a ⟨Brick⟩ → remove actor ⟨event value⟩
+ *
+ * The lists stay, because they answer a question the events cannot: what is
+ * true NOW, pollable from a step the way `contacts` is. An event is a moment
+ * that has passed by the time anything else looks.
  */
 const newlyTouching = canCollide.actors('newly touching', {readonly: true});
 const noLongerTouching = canCollide.actors('no longer touching', {
   readonly: true,
 });
 
-export const startsTouching = canCollide.event(['starts touching something']);
-export const stopsTouching = canCollide.event(['stops touching something']);
+export const startsTouching = canCollide.event([
+  'starts touching',
+  param('other', 'actor'),
+]);
+export const stopsTouching = canCollide.event([
+  'stops touching',
+  param('other', 'actor'),
+]);
 
 const met = rule.local('met', 'Actor');
 const gone = rule.local('gone', 'Actor');
 const arrived = rule.local('arrived', 'Actor');
 const left = rule.local('left', 'Actor');
+const told = rule.local('told', 'Actor');
+const untold = rule.local('untold', 'Actor');
 
 // In `react`, after `touch` has worked out the contacts and `settle` has pushed
 // bodies apart. Both halves of that matter. Running before `touch` would compare
@@ -240,12 +253,22 @@ canCollide.step('notice contacts', 'react', [
     where: not(isIn(gone.get(), contacts.of(thisActor()))),
     body: [pushActor(left, gone.get())],
   }),
-  note('Write the lists down BEFORE raising anything: a handler reads them.'),
+  note(
+    'Write the lists down BEFORE raising anything: a handler may read them.',
+  ),
   newlyTouching.set(thisActor(), arrived.get()),
   noLongerTouching.set(thisActor(), left.get()),
-  note('And only raise an event when there is something in the list.'),
-  when([[anyOf(arrived.get()), [startsTouching({}, thisActor())]]]),
-  when([[anyOf(left.get()), [stopsTouching({}, thisActor())]]]),
+  note('One event per contact, carrying the actor it is about.'),
+  forEach(told, {
+    from: arrived.get(),
+    where: yes(),
+    body: [startsTouching({other: told.get()}, thisActor())],
+  }),
+  forEach(untold, {
+    from: left.get(),
+    where: yes(),
+    body: [stopsTouching({other: untold.get()}, thisActor())],
+  }),
   note('Last of all, move the goalposts for the next comparison.'),
   contactsBefore.set(thisActor(), contacts.of(thisActor())),
 ]);
