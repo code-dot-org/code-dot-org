@@ -104,18 +104,27 @@ AssessmentBadge.propTypes = {
 };
 
 const styles = {
+  // fa-stack defaults to a 2.5em-wide box (25px at this font size); pin it
+  // to 20x20 so the container matches the 2em circle drawn inside it.
   container: {
     fontSize: 10,
+    width: 20,
+    height: 20,
   },
+  // The badge overhangs its bubble into the neighboring cell, where the gray
+  // connector bar (ProgressBubbleSet) would otherwise paint over it in DOM
+  // order; z-index lifts the badge above the z-auto bars.
   bubblePosition: {
     position: 'absolute',
     top: -4,
     right: -10,
+    zIndex: 1,
   },
   diamondBubblePosition: {
     position: 'absolute',
     top: -10,
     right: -20,
+    zIndex: 1,
   },
   badgeBackground: {
     color: 'var(--background-neutral-primary)',
