@@ -59,6 +59,18 @@ const {
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
+// RSPACK-DIFF: this dev server injects its logger into any proxy entry
+// that lacks one, and its bundled http-proxy-middleware v3 then logs
+// every proxied request at info — hundreds of lines per page load.
+// Keep warnings and errors; drop the per-request narration.  (The
+// legacy logLevel option in webpack.config.js is inert there —
+// webpack-dev-server's older middleware does not log requests.)
+const quietProxyLogger = {
+  info: () => {},
+  warn: (...args) => console.warn(...args),
+  error: (...args) => console.error(...args),
+};
+
 // RSPACK-DIFF: @pyodide/webpack-plugin subclasses copy-webpack-plugin and
 // injects a loader on pyodide.m?js through
 // NormalModule.getCompilationHooks().beforeLoaders, a JS compilation hook
@@ -762,8 +774,8 @@ function createRspackConfig({
               context: ['/cable'],
               target: 'ws://localhost-studio.code.org:3000',
               changeOrigin: false,
-              logLevel: 'debug',
               ws: true,
+              logger: quietProxyLogger,
             },
             {
               // Everything except rspack's own lazy-compilation trigger
@@ -771,7 +783,7 @@ function createRspackConfig({
               context: ['**', '!/_rspack/**'],
               target: 'http://localhost-studio.code.org:3000',
               changeOrigin: false,
-              logLevel: 'debug',
+              logger: quietProxyLogger,
             },
           ],
           host: '0.0.0.0',
