@@ -433,7 +433,8 @@ export const designedName = (
     .join(' ');
 
 /** An identifier from an authored name/id: non-alphanumerics become `_`. */
-const slug = (text: string): string => text.replaceAll(/[^A-Za-z0-9_]/g, '_');
+export const slug = (text: string): string =>
+  text.replaceAll(/[^A-Za-z0-9_]/g, '_');
 
 /** PascalCase an id for a generated export name (`gravity scale` → `GravityScale`). */
 /** `actor to follow` → `ActorToFollow`; how a member's export name is built. */
@@ -444,7 +445,7 @@ export const pascal = (id: string): string =>
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join('');
 
-const PROPERTY_TYPES: ReadonlySet<string> = new Set([
+export const PROPERTY_TYPES: ReadonlySet<string> = new Set([
   'number',
   'boolean',
   'string',
@@ -467,7 +468,7 @@ const QUERY_RETURN_TYPES: ReadonlySet<string> = new Set([
 ]);
 
 /** Parse an authored default (a text field) into a value of the property's type. */
-const parseDefault = (text: string, type: PropertyType): unknown => {
+export const parseDefault = (text: string, type: PropertyType): unknown => {
   switch (type) {
     // No actors. There is no other sensible starting value for a set a rule
     // works out each tick, and no text a learner could type that would be one.

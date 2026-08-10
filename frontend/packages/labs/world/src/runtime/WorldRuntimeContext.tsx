@@ -27,7 +27,10 @@ import {
 } from '../blockly/BlocklyGenerator';
 import {fileKindOf} from '../blockly/fileKind';
 import {refreshProjectDropdowns} from '../blockly/projectDropdowns';
-import {projectRuleMetas} from '../blockly/projectModules';
+import {
+  projectActorOwnMetas,
+  projectRuleMetas,
+} from '../blockly/projectModules';
 import {ENTRY_FILE} from '../constants';
 
 import {createGeneratedFileCache} from './generatedFiles';
@@ -94,6 +97,13 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   // blocks (an actor using a project rule's set/get block then compiles).
   const projectRules = useMemo(
     () => projectRuleMetas(projectFiles(currentSources.source)),
+    [currentSources],
+  );
+  // Every actor's own properties, not just one file's: the generator compiles
+  // the whole project with a single palette, and a block it fails to define is
+  // a project that will not compile at all.
+  const actorOwnProperties = useMemo(
+    () => projectActorOwnMetas(projectFiles(currentSources.source)),
     [currentSources],
   );
 
@@ -414,6 +424,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
           ref={blocklyGenerator}
           onReady={() => setGeneratorReady(true)}
           projectRules={projectRules}
+          actorOwnProperties={actorOwnProperties}
         />
       )}
       {children}

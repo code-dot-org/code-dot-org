@@ -120,9 +120,16 @@ export class Traited {
 
   get<T>(property: Property<T>): T {
     if (!this.store.has(property)) {
+      // A property an actor KIND declares for itself belongs to no trait
+      // (`ActorBuilder.defineProperty`), so "is the trait applied?" would send
+      // a reader looking for a `use trait` row that was never the point. Its
+      // slot comes from the override every instance is made with, so reaching
+      // here at all means the property outlived the template that declared it.
       throw new Error(
         `${this.describe} has no property '${property.id}' ` +
-          `(is trait '${property.ownerId}' applied?)`,
+          (property.ownerKind === 'actor'
+            ? `(declared by the actor '${property.ownerId}' — is this one of those?)`
+            : `(is trait '${property.ownerId}' applied?)`),
       );
     }
     return this.store.get(property) as T;

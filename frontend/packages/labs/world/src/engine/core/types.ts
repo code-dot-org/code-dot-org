@@ -92,8 +92,21 @@ export interface Property<T = unknown> {
   /** Localizable label for the Blockly surface; falls back to `id`. */
   readonly name?: string;
   readonly scope: 'world' | 'actor';
-  /** Rule id (world-scoped) or Trait id (actor-scoped) that declared it. */
+  /**
+   * Rule id (world-scoped), Trait id (actor-scoped), or the id of the actor
+   * KIND that declared it for itself (`ActorBuilder.defineProperty`).
+   */
   readonly ownerId: string;
+  /**
+   * What kind of thing `ownerId` names, when it is not a rule or a trait.
+   *
+   * Absent for everything declared the ordinary way, which is why it reads as
+   * "owned by a rule or trait" — the shape every property had before an actor
+   * could declare one. Present only so an error about a missing slot can say
+   * something true instead of asking whether a trait that does not exist has
+   * been applied.
+   */
+  readonly ownerKind?: 'actor';
 }
 
 /**

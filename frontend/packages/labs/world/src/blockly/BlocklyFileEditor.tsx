@@ -61,6 +61,7 @@ import {
 } from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
+import {parseActorOwnMeta} from './actorMeta';
 import {addActorThumbnails} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
@@ -594,6 +595,21 @@ export const BlocklyFileEditor = ({
     return path?.endsWith('.rule') ? path.replace(/\.rule$/, '') : undefined;
   }, [currentSources.source, fileId]);
 
+  // The properties this actor declares for itself, if it is one. Parsed from
+  // the file as saved rather than from the live workspace: the palette is
+  // rebuilt when the sources change, which is exactly when a declaration was
+  // added or renamed. A file mid-edit parses to undefined and leaves the blocks
+  // it already had alone, rather than dropping them while a name is half typed.
+  const ownActorProperties = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    if (!path?.endsWith('.actor')) {
+      return undefined;
+    }
+    // `files` is keyed by the path WITH its extension; the module path is that
+    // path without one, which is what a ref names.
+    return parseActorOwnMeta(path.replace(/\.actor$/, ''), files[path] ?? '');
+  }, [currentSources.source, fileId, files]);
+
   // What kind of file this is, where that decides what may be placed in it — a
   // world event's hat needs a `world` at module scope and only a `.world` has
   // one, and a definition root decides what the file COMPILES to (`eventHats`,
@@ -610,12 +626,13 @@ export const BlocklyFileEditor = ({
     const palette = buildDomainPalette(projectRuleMetas(files), {
       ownRuleModule,
       fileKind,
+      actorOwnProperties: ownActorProperties ? [ownActorProperties] : [],
     });
     return {
       blocks: palette.blocks,
       toolbox: withoutCategories(palette.toolbox, hiddenCategories),
     };
-  }, [files, ownRuleModule, fileKind, hiddenCategories]);
+  }, [files, ownRuleModule, fileKind, hiddenCategories, ownActorProperties]);
 
   // Parsed once: Codebridge keys this component by file id, so it remounts (and
   // re-reads `initialContents`) when the active file changes.
