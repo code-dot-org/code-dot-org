@@ -88,7 +88,7 @@ Then /^I add the bear animal head animation from the library$/ do
 end
 
 Then /^I append gamelab code to draw a ninja$/ do
-  code = <<~CODE.gsub(/\n/, '\\n')
+  code = <<~CODE.gsub("\n", '\\n')
     function draw() {
       noStroke();
 

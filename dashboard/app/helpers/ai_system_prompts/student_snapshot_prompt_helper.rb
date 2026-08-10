@@ -111,7 +111,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
 
   def self.get_snapshot_prompt_variables(lesson_id, unit_id, student_id, teacher_id, section_id)
     unit = Unit.find(unit_id)
-    unit_description = unit&.localized_description ? Services::MarkdownPreprocessor.process(unit.localized_description)&.gsub(/\n/, '. ')&.strip : nil
+    unit_description = unit&.localized_description ? Services::MarkdownPreprocessor.process(unit.localized_description)&.gsub("\n", '. ')&.strip : nil
 
     lesson = Lesson.find(lesson_id)
     objectives = lesson.objectives.sort_by(&:description).map(&:description).to_json
@@ -124,7 +124,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
 
     {
       lesson_name: lesson.name,
-      lesson_overview: lesson.render_property(:overview)&.gsub(/\n/, '. ')&.strip,
+      lesson_overview: lesson.render_property(:overview)&.gsub("\n", '. ')&.strip,
       learning_objectives: objectives,
       standards: lesson.standards.map(&:summarize_for_lesson_show).to_json,
       unit_name: unit.title_for_display,

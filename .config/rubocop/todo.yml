@@ -353,16 +353,6 @@ Style/RedundantDoubleSplatHashBraces:
 Style/RedundantParentheses:
   Enabled: false
 
-# Offense count: 16
-# This cop supports safe autocorrection (--autocorrect).
-Style/RedundantRegexpArgument:
-  Enabled: false
-
-# Offense count: 26
-# This cop supports safe autocorrection (--autocorrect).
-Style/RedundantRegexpEscape:
-  Enabled: false
-
 # Offense count: 5
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/RedundantSelfAssignment:
