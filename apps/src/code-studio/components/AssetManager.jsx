@@ -15,11 +15,9 @@ import assetListStore from '../assets/assetListStore';
 
 import AddAssetButtonRow from './AddAssetButtonRow';
 import AssetRow from './AssetRow';
-import {AudioErrorType} from './audioErrorType';
-import AudioRecorder from './AudioRecorder';
+import AudioRecorder, {AudioErrorType} from './AudioRecorder';
 import {RecordingFileType} from './recorders';
 
-export {AudioErrorType} from './audioErrorType';
 export const ImageMode = {
   FILE: 'file',
   ICON: 'icon',
