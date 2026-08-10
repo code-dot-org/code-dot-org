@@ -220,7 +220,7 @@ module Dashboard
     # Rails.cache is a local file system store shared by all Puma worker
     # processes on a given web application server, which persists for the
     # lifetime of the server.
-    config.cache_store = :file_store, '/tmp/rails-cache'
+    config.cache_store = :file_store, Rails.root.join('tmp', 'cache')
 
     # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
     config.assets.cache_limit = 1.gigabyte
