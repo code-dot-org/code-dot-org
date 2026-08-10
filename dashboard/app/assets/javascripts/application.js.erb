@@ -12,11 +12,15 @@
 // about supported directives.
 
 // Gem assets
-//= require jquery
+// The asset pipeline no longer runs a JS compressor (no execjs/mini_racer in
+// production), so the large libraries are required as pre-minified builds.
+// The small vendor files below ship unminified — measured at ~8KB gzipped
+// over the fully-minified bundle and accepted.
+//= require jquery.min
 //= require jquery_ujs
-//= require jquery-ui
+//= require jquery-ui.min
 // (Former location of video.js; reference while converting to code-studio.js)
-//= require bootstrap
+//= require bootstrap.min
 
 // Vendor assets
 //= require add2home
@@ -24,7 +28,7 @@
 //= require jquery.placeholder
 //= require jquery.qtip.min
 //= require jquery.simulate
-//= require jquery.ui.touch-punch
+//= require jquery.ui.touch-punch.min
 //= require jquery.overlaps
 
 // window.dashboard is used to communicate between dashboard/apps in a variety
