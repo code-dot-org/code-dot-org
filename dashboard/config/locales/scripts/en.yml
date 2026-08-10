@@ -10568,6 +10568,8 @@ en:
               name: AID Playground
             lesson-19:
               name: HoAI26 Sandbox
+            lesson-20:
+              name: HoAI26 Testing w T&L
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -29711,6 +29713,8 @@ en:
               name: Intro to Teaching Programming with AI [JavaScript]
             lesson-3:
               name: Design Foundations
+            lesson-4:
+              name: Interactivity in Web Apps
           lesson_groups: {}
           name: pl-aif-intro-programming-js
           title: Teaching Introduction to Programming [JavaScript]

@@ -257,6 +257,10 @@ class ContactRollupsPardotMemory < ApplicationRecord
           OR (pardot.pardot_id_updated_at > pardot.data_synced_at)
         )
         AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT}')
+        AND (
+          NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_INVALID_PROSPECT_ID}')
+          OR (pardot.pardot_id_updated_at > pardot.data_rejected_at)
+        )
         AND pardot.marked_for_deletion_at IS NULL
     SQL
   end
