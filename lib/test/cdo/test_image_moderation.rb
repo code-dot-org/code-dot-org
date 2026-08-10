@@ -124,6 +124,14 @@ class ImageModerationTest < Minitest::Test
     assert_nil ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
   end
 
+  def test_returns_nil_without_honeybadger_when_rate_limited
+    blob = tiny_png_blob(100, 100)
+    test_err = AzureAiContentSafety::RateLimited.new('429')
+    AzureAiContentSafety.any_instance.expects(:moderate_image).raises(test_err)
+    Honeybadger.expects(:notify).never
+    assert_nil ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
+  end
+
   def test_raises_for_unrecognized_image_format
     AzureAiContentSafety.expects(:new).never
     assert_raises AzureAiContentSafety::UnsupportedContentType do

@@ -10,6 +10,7 @@ require 'base64'
 class AzureAiContentSafety
   class AzureError < StandardError; end
   class RequestFailed < AzureError; end
+  class RateLimited < RequestFailed; end
   class UnsupportedContentType < AzureError; end
 
   API_PATH = '/contentsafety/image:analyze?api-version=2024-09-01'
@@ -45,7 +46,11 @@ class AzureAiContentSafety
       http.request(request)
     end
 
-    raise RequestFailed.new(error_details(response)) unless response.is_a?(Net::HTTPSuccess)
+    unless response.is_a?(Net::HTTPSuccess)
+      details = error_details(response)
+      raise RateLimited.new(details) if response.code == '429'
+      raise RequestFailed.new(details)
+    end
 
     JSON.parse(response.body)
   end

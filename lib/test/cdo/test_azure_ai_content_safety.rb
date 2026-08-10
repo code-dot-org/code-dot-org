@@ -48,6 +48,13 @@ class AzureAiContentSafetyTest < Minitest::Test
     end
   end
 
+  def test_raises_rate_limited_on_429
+    stub_azure_error_response(429, '{"error":{"code":"RateLimitExceeded","message":"Too many requests"}}')
+    assert_raises AzureAiContentSafety::RateLimited do
+      @ai_content_safety.moderate_image(@image_data)
+    end
+  end
+
   # --- request format ---
 
   def test_sends_base64_encoded_image_in_json_body
