@@ -27,14 +27,14 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       overflow: auto;
     }
     .blocklyFlyoutButton {
-      fill: ${color.brand_secondary_default};
+      fill: var(--background-brand-purple-primary);
       cursor: pointer;
     }
     .blocklyFlyoutButtonShadow {
       fill: none;
     }
     .blocklyFlyoutButton:hover {
-      fill: ${color.brand_secondary_dark};
+      fill: var(--background-brand-purple-strong);
     }
     /* Change look of the editor in angle fields */
     .blocklyAngleCircle {
