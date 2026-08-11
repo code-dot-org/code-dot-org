@@ -2,7 +2,7 @@
   "script": {
     "name": "hoai2026-dev",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "is_migrated": true
     },
