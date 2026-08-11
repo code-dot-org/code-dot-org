@@ -1,0 +1,18 @@
+name 'pl-aif1-js-notice-the-barriers'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Notice the Barriers</h1>
+
+You've already practiced noticing what makes a page hard to use, back in Lesson 2, stepping through decades of cluttered design. This time, the lens is narrower and more specific: accessibility. Not "does this look outdated," but "could every user actually get through this."
+
+<p>Below, you'll compare a confusing version of a pizza ordering site against an improved one. Notice what's actually blocking someone from ordering, not just what looks unpolished.</p>
+
+---
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/notice-the-barriers-v2.html" width="100%" height="1500" style="border:none;" title="Notice the Barriers: identify real accessibility issues on two pizza sites"></iframe>
+</div>
+
+MARKDOWN

@@ -30,16 +30,11 @@ import {
 
 import AddAssetButtonRow from './AddAssetButtonRow';
 import AssetRow from './AssetRow';
-import AudioRecorder from './AudioRecorder';
+import AudioRecorder, {AudioErrorType} from './AudioRecorder';
 import {RecordingFileType} from './recorders';
 
 const ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
-export const AudioErrorType = {
-  NONE: 'none',
-  INITIALIZE: 'initialize',
-  SAVE: 'save',
-};
 export const ImageMode = {
   FILE: 'file',
   ICON: 'icon',

@@ -24,7 +24,7 @@ import {
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {getNodeLabel} from '../utils/elementLabel';
-import {isGroupedChildNode} from '../utils/grouping';
+import {getSelectionMoveIds, isGroupedChildNode} from '../utils/grouping';
 import {
   endpointPatch,
   findNearestHandleInRadius,
@@ -100,6 +100,15 @@ function getArrowDelta(key: string) {
   }
 }
 
+/**
+ * The subset of a keydown event the move helpers need, so they accept both
+ * React synthetic events and the native ones from the window-level fallback.
+ */
+type ArrowMoveEvent = Pick<
+  KeyboardEvent,
+  'repeat' | 'preventDefault' | 'stopPropagation'
+>;
+
 interface UseKeyboardNavigationOptions {
   nodes: SketchlabReactFlowNode[];
   tabOrder: TabOrderEntry[];
@@ -124,6 +133,9 @@ interface UseKeyboardNavigationOptions {
   // Called with the anchor id or edge id when a line/line anchor is
   // translated by an arrow key.
   onLineKeyboardMove: (elementId: string) => void;
+  // Arrow keys translate this whole selection when the focused element is a
+  // member of it.
+  multiSelectedNodeIds: ReadonlySet<string>;
   isGroupMode: boolean;
   canGroup: boolean;
   canEnterGroupMode: boolean;
@@ -176,6 +188,7 @@ export function useKeyboardNavigation({
   pushSnapshot,
   lastFocusedEntry,
   onLineKeyboardMove,
+  multiSelectedNodeIds,
   isGroupMode,
   canGroup,
   canEnterGroupMode,
@@ -189,6 +202,7 @@ export function useKeyboardNavigation({
     getEdge,
     getEdges,
     getNode,
+    getNodes,
     getZoom,
     screenToFlowPosition,
     flowToScreenPosition,
@@ -455,6 +469,29 @@ export function useKeyboardNavigation({
     [getEdges, getNode, getZoom, flowToScreenPosition, setEdges, focusEntry]
   );
 
+  const moveSelectionByDelta = useCallback(
+    (event: ArrowMoveEvent, deltaX: number, deltaY: number): boolean => {
+      const idsToMove = getSelectionMoveIds(
+        multiSelectedNodeIds,
+        getNodes(),
+        getEdges()
+      );
+      if (idsToMove.length === 0) return false;
+      event.preventDefault();
+      event.stopPropagation();
+      // Snapshot and announce once per press, not once per auto-repeat tick.
+      if (!event.repeat) {
+        pushSnapshot();
+        announce('Selection moved.');
+      }
+      setNodes(currentNodes =>
+        moveNodesByDelta(currentNodes, idsToMove, deltaX, deltaY)
+      );
+      return true;
+    },
+    [multiSelectedNodeIds, getNodes, getEdges, pushSnapshot, setNodes, announce]
+  );
+
   const handleMoveNode = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event, focusedNodeId} = keyContext;
@@ -465,6 +502,12 @@ export function useKeyboardNavigation({
       if (focusedNode && isGroupedChildNode(focusedNode)) {
         event.preventDefault();
         event.stopPropagation();
+        return true;
+      }
+      if (
+        multiSelectedNodeIds.has(focusedNodeId) &&
+        moveSelectionByDelta(event, deltaX, deltaY)
+      ) {
         return true;
       }
       event.preventDefault();
@@ -487,6 +530,8 @@ export function useKeyboardNavigation({
       setNodes,
       snapAnchorIfNearHandle,
       onLineKeyboardMove,
+      multiSelectedNodeIds,
+      moveSelectionByDelta,
     ]
   );
 
@@ -597,20 +642,59 @@ export function useKeyboardNavigation({
     ]
   );
 
+  const moveEdge = useCallback(
+    (
+      edgeId: string,
+      deltaX: number,
+      deltaY: number,
+      event: ArrowMoveEvent
+    ): boolean => {
+      const focusedEdge = getEdge(edgeId);
+      const anchorIds = focusedEdge
+        ? getStandaloneLineAnchorIds(focusedEdge, getNode)
+        : null;
+      // The line belongs to the multi-selection, so move the whole selection.
+      // A selection of just this line yields no ids and falls through to the
+      // single-line move below.
+      if (
+        anchorIds?.every(id => multiSelectedNodeIds.has(id)) &&
+        moveSelectionByDelta(event, deltaX, deltaY)
+      ) {
+        // Moving the anchors can drop focus from the edge wrapper, so keep the
+        // window fallback pointed at this line and put focus back on it.
+        keyboardMovingEdgeRef.current = edgeId;
+        setTimeout(() => focusEntry({type: 'edge', id: edgeId}), 0);
+        return true;
+      }
+
+      if (!moveEdgeByDelta(edgeId, deltaX, deltaY)) return false;
+      if (!event.repeat) pushSnapshot();
+      onLineKeyboardMove(edgeId);
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [
+      pushSnapshot,
+      moveEdgeByDelta,
+      onLineKeyboardMove,
+      getEdge,
+      getNode,
+      focusEntry,
+      multiSelectedNodeIds,
+      moveSelectionByDelta,
+    ]
+  );
+
   const handleMoveEdge = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event, focusedEdgeId} = keyContext;
       if (!focusedEdgeId) return false;
       const {deltaX, deltaY} = getArrowDelta(event.key);
       if (!deltaX && !deltaY) return false;
-      if (!moveEdgeByDelta(focusedEdgeId, deltaX, deltaY)) return false;
-      if (!event.repeat) pushSnapshot();
-      onLineKeyboardMove(focusedEdgeId);
-      event.preventDefault();
-      event.stopPropagation();
-      return true;
+      return moveEdge(focusedEdgeId, deltaX, deltaY, event);
     },
-    [pushSnapshot, moveEdgeByDelta, onLineKeyboardMove]
+    [moveEdge]
   );
 
   /**
@@ -838,14 +922,12 @@ export function useKeyboardNavigation({
     ]
   );
 
-  // When DOM focus moves off the edge (which can occur during an edge mutation),
-  // keydown events fire on `body` and never traverse the canvas div,
-  // so the `onKeyDownCapture` handler doesn't run.
-  // While we're tracking a recently-moved edge, listen at
-  // the window level so arrow keys still move the same edge. The
-  // canvas's `onKeyDownCapture` calls stopPropagation for events it
-  // handles, so this listener only fires for events whose
-  // path doesn't go through the canvas.
+  // When DOM focus moves off the edge (which can occur during an edge
+  // mutation), keydown fires on `body` and never traverses the canvas div, so
+  // `onKeyDownCapture` doesn't run. While tracking a recently-moved edge,
+  // listen at the window level so arrow keys keep moving it (or the selection
+  // it belongs to). `onKeyDownCapture` stops propagation for events it handles,
+  // so this listener only sees events that bypass the canvas.
   useEffect(() => {
     const handler = (nativeEvent: KeyboardEvent) => {
       const edgeId = keyboardMovingEdgeRef.current;
@@ -859,15 +941,11 @@ export function useKeyboardNavigation({
       }
       const target = nativeEvent.target as HTMLElement;
       if (isTargetEditable(target)) return;
-      if (!nativeEvent.repeat) pushSnapshot();
-      if (moveEdgeByDelta(edgeId, deltaX, deltaY)) {
-        onLineKeyboardMove(edgeId);
-        nativeEvent.preventDefault();
-      }
+      moveEdge(edgeId, deltaX, deltaY, nativeEvent);
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [moveEdgeByDelta, pushSnapshot, onLineKeyboardMove]);
+  }, [moveEdge]);
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};
 }

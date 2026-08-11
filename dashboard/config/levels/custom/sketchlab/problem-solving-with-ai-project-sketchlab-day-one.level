@@ -1,0 +1,17 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-08-06T15:31:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Project Launch, Day One\r\n\r\nWork through the following sections in your Product Launch Activity Guide:\r\n* Define\r\n* Build: Spec Sheet\r\n* Build: Draft your System Prompt\r\n\r\nFill in the associated sections in the Sketch Lab template provided here. The work that you start today will carry forward into upcoming project days.\r\n\r\n\r\n\r\n",
+    "require_edit_to_continue": "true",
+    "project_template_level_name": "problem-solving-with-ai-project-prototype-2-template",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-06T15:31:07.560+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-08-06 15:34:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

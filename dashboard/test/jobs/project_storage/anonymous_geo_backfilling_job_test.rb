@@ -33,6 +33,12 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       end
 
       it 'aborts before performing backfill' do
+        CDO.log.expects(:info).never.with do |log_json|
+          log_data = JSON.parse(log_json)
+          _(log_data['namespace']).must_equal 'project_storage_geos'
+          _(log_data['event']).must_equal 'backfill'
+        end
+
         assert_queries 0 do
           perform_now
         end
@@ -53,6 +59,12 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       end
 
       it 'does not perform backfill' do
+        CDO.log.expects(:info).never.with do |log_json|
+          log_data = JSON.parse(log_json)
+          _(log_data['namespace']).must_equal 'project_storage_geos'
+          _(log_data['event']).must_equal 'backfill'
+        end
+
         assert_queries 1 do
           perform_now
         end
@@ -63,14 +75,56 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       let(:error) {StandardError.new('expected error')}
 
       before do
-        described_instance.stubs(:perform).raises(error)
+        described_instance.stubs(:missing_project_storage_geos).raises(error)
       end
 
       it 'captures error without reraising' do
         Observability::Errors.expects(:capture_exception).with(error).once
 
-        assert_queries 2 do
-          perform_now
+        CDO.log.expects(:info).once.with do |log_json|
+          log_data = JSON.parse(log_json)
+          _(log_data['namespace']).must_equal 'project_storage_geos'
+          _(log_data['event']).must_equal 'backfill'
+          _(log_data['success']).must_equal false
+          _(log_data['limit']).must_equal 100_000
+          _(log_data['processed_count']).must_equal 0
+          _(log_data['first_storage_id']).must_be_nil
+          _(log_data['last_storage_id']).must_be_nil
+        end
+
+        assert_queries 0, capture_filters: [/perform/] do
+          _perform_now.must_equal error
+        end
+      end
+    end
+
+    context 'when backfill exceeds maximum run time' do
+      let(:max_run_time) {0.001}
+
+      around do |test|
+        described_class.stub_const(:MAX_RUN_TIME, max_run_time) {test.call}
+      end
+
+      before do
+        described_instance.stubs(:missing_project_storage_geos).with {sleep(max_run_time * 2) && true}
+      end
+
+      it 'terminates job' do
+        Observability::Errors.expects(:capture_exception).with(instance_of(Timeout::Error)).once
+
+        CDO.log.expects(:info).once.with do |log_json|
+          log_data = JSON.parse(log_json)
+          _(log_data['namespace']).must_equal 'project_storage_geos'
+          _(log_data['event']).must_equal 'backfill'
+          _(log_data['success']).must_equal false
+          _(log_data['limit']).must_equal 100_000
+          _(log_data['processed_count']).must_equal 0
+          _(log_data['first_storage_id']).must_be_nil
+          _(log_data['last_storage_id']).must_be_nil
+        end
+
+        assert_queries 0, capture_filters: [/perform/] do
+          _perform_now.must_be_instance_of Timeout::Error
         end
       end
     end
@@ -168,7 +222,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       let(:job_args) {{limit: 2}}
 
       it 'does not query for another batch' do
-        assert_queries 3, capture_filters: [/missing_project_storage_geos/] do
+        assert_queries 2, capture_filters: [/missing_project_storage_geos/] do
           perform_job
         end
       end

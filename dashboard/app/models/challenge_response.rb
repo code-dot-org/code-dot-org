@@ -26,10 +26,7 @@ class ChallengeResponse < ApplicationRecord
   has_many :challenge_response_assets, dependent: :destroy
 
   # Lifecycle of the AI evaluation of this response. NULL means no evaluation
-  # has been requested. The gap before FAILURE leaves room for more terminal
-  # states and mirrors SharedConstants::RUBRIC_AI_EVALUATION_STATUS. The
-  # violation states mean the student's text tripped the PII or profanity
-  # filter, so no request was sent to the LLM.
+  # has been requested.
   enum evaluation_status: {
     queued: 0,
     running: 1,
@@ -52,10 +49,9 @@ class ChallengeResponse < ApplicationRecord
   #   assets carry no download URL since their bytes are not uploaded yet; the
   #   client PUTs them to /challenge_response_assets/:id/upload. Otherwise
   #   each asset carries a presigned download URL.
-  # @param include_evaluation [Boolean] when true, includes the AI evaluation
-  #   fields. Students do not see their evaluation until a teacher has
-  #   reviewed it, so this is false for the response's owner and true for
-  #   teachers.
+  # @param include_evaluation [Boolean] when true, includes the scored rubric
+  #   evaluation. Scores are teacher-only; students get the constructive
+  #   feedback in student_feedback, which is always included.
   def summarize(assets_for_upload: false, include_evaluation: false)
     summary = {
       id: id,
@@ -63,14 +59,14 @@ class ChallengeResponse < ApplicationRecord
       user_id: user_id,
       student_text: student_text,
       transcript: transcript,
+      student_feedback: student_feedback,
+      evaluation_status: evaluation_status,
       is_final: is_final,
       created_at: created_at,
       assets: challenge_response_assets.map {|asset| asset.summarize(upload: assets_for_upload)},
     }
     if include_evaluation
-      summary[:student_feedback] = student_feedback
       summary[:evaluation_result] = evaluation_result
-      summary[:evaluation_status] = evaluation_status
       summary[:evaluated_at] = evaluated_at
     end
     summary
