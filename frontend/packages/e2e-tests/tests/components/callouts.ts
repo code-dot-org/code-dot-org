@@ -40,6 +40,20 @@ export class CalloutsComponent {
   }
 
   /**
+   * A callout looked up by its rendered text, rather than by index. qTip2
+   * puts role="alert" on the `.cdo-qtips` container itself (not a
+   * descendant), and `alert` has no name-from-content in the accname spec —
+   * its accessible name is always empty, so a role+name lookup can never
+   * match. Filter the role locator by rendered text instead.
+   */
+  calloutWithText(text: string | RegExp): Locator {
+    return this.page
+      .getByRole('alert')
+      .filter({hasText: text})
+      .and(this.containers);
+  }
+
+  /**
    * Dismiss the nth callout via its x-close button. Cucumber: "I close callout N".
    * Settles the button first: qTip repositions the callout as it lays out, and
    * webkit drops a click whose target moves between the actionability check and

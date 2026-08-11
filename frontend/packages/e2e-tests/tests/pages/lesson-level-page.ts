@@ -91,4 +91,12 @@ export class LessonLevelPage extends BasePage {
       state: 'not_tried',
     });
   }
+
+  /** Whether the level's header bubble shows 'attempted' (see progress.rb verify_progress). */
+  async isProgressBubbleAttempted(levelNum: number): Promise<boolean> {
+    return progressBubbleShows({
+      bubble: this.headerProgressBubble(levelNum),
+      state: 'attempted',
+    });
+  }
 }

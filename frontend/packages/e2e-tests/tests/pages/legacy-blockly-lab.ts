@@ -2,6 +2,7 @@ import {expect, type Locator, type Page} from '@playwright/test';
 
 import {AuthoredHintsComponent} from '../components/authored-hints';
 import {CalloutsComponent} from '../components/callouts';
+import {VideoModalComponent} from '../components/video-modal';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 import {waitUntilStable} from '../shared/stability';
 
@@ -27,6 +28,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Callouts (qTip tooltips) the code-studio level chrome renders over the lab. */
   readonly callouts: CalloutsComponent;
 
+  /** Level-video modal (autoplay, or manually reopened via the reference area). */
+  readonly videoModal: VideoModalComponent;
+
   /** Run button; id is the stable test handle rendered by the lab chrome. */
   readonly runButton: Locator;
 
@@ -46,11 +50,29 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    */
   readonly showCodeModalOverlay: Locator;
 
+  /** Inline feedback panel selector; a11y scans scope here. */
+  readonly inlineFeedbackSelector = '.uitest-topInstructions-inline-feedback';
+
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
+  /** Congratulations/feedback dialog selector; a11y scans scope here. */
+  readonly congratsModalSelector = '.modal';
+
   /** Congratulations overlay shown on puzzle completion. */
   readonly congratsMessage: Locator;
+
+  /**
+   * Last link in the level's "Need help? See these videos and hints"
+   * reference area (dashboard/app/views/levels/_reference_area.html.haml).
+   * Its accessible name is the related video's localized title
+   * (data_t('video.name', ...)), curriculum content that varies per level and
+   * locale, so a role+name lookup would be as fragile as hardcoding that
+   * title; `.last()` targets it positionally instead — the one link an
+   * anonymous session can reach after the teacher-solution link, which
+   * `can_view_solution?` hides for it.
+   */
+  readonly referenceAreaLastLink: Locator;
 
   /**
    * The maze/game visualization surface (#visualization, see
@@ -78,6 +100,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.instructionsToggleButton = page.locator('#toggleButton');
     this.hints = new AuthoredHintsComponent(page);
     this.callouts = new CalloutsComponent(page);
+    this.videoModal = new VideoModalComponent(page);
     this.runButton = page.locator('#runButton');
     this.loadingSpinner = page.locator('#codeApp .loading');
     this.resetButton = page.locator('#resetButton');
@@ -85,10 +108,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.showCodeModalOverlay = page.locator(
       '#showCodeModal [role="presentation"]',
     );
-    this.inlineFeedback = page.locator(
-      '.uitest-topInstructions-inline-feedback',
-    );
+    this.inlineFeedback = page.locator(this.inlineFeedbackSelector);
     this.congratsMessage = page.locator('.congrats');
+    this.referenceAreaLastLink = page.locator('.reference_area a').last();
     this.visualization = page.locator('#visualization');
     this.continueButton = page.locator('#continue-button');
     this.embeddedInstructionBlocks = page.locator(
@@ -227,6 +249,11 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** A block's rendered SVG group, keyed by its Blockly block id. */
   blockLocator(blockId: string): Locator {
     return this.page.locator(`.blocklySvg [data-id="${blockId}"]`);
+  }
+
+  /** A block's rendered SVG group, scoped to where it is nested under a given parent block's group. */
+  blockChild(childId: string, parentId: string): Locator {
+    return this.blockLocator(parentId).locator(`[data-id="${childId}"]`);
   }
 
   /**

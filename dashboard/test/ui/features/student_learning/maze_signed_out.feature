@@ -1,3 +1,4 @@
+@playwright
 Feature: Maze level tests for users that are signed out
 
 Background:

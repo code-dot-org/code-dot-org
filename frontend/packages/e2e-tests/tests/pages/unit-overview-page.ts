@@ -66,4 +66,12 @@ export class UnitOverviewPage extends BasePage {
       state: 'not_tried',
     });
   }
+
+  /** Whether the given lesson/level summary bubble shows 'attempted' (see progress.rb verify_progress). */
+  async isProgressBubbleAttempted(ref: LessonLevelRef): Promise<boolean> {
+    return progressBubbleShows({
+      bubble: this.summaryProgressBubble(ref),
+      state: 'attempted',
+    });
+  }
 }
