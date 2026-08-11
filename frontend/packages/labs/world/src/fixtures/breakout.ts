@@ -50,7 +50,7 @@ import {
 import {TILE_SIZE} from '../runtime/viewport';
 
 /** The middle of tile `index` — where a placed actor's position points. */
-const at = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;
+export const at = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;
 
 const place = (type: string, id: string, column: number, row: number) => ({
   type,
@@ -73,8 +73,10 @@ const place = (type: string, id: string, column: number, row: number) => ({
 //
 // Two rows of bricks rather than five, so the whole board is on screen at the
 // starter's tile size and a game is over in under a minute.
-const COLUMNS = [1, 2, 3, 4, 5, 6, 7, 8];
-const SIDE_ROWS = [1, 2, 3, 4, 5, 6, 7, 8];
+export const BRICK_COLUMNS = [1, 2, 3, 4, 5, 6, 7, 8];
+export const BRICK_ROWS = [1, 2];
+export const SIDE_ROWS = [1, 2, 3, 4, 5, 6, 7, 8];
+export const ALL_COLUMNS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const BREAKOUT_MAP = JSON.stringify(
   {
@@ -83,13 +85,13 @@ const BREAKOUT_MAP = JSON.stringify(
     tile: {width: TILE_SIZE, height: TILE_SIZE},
     actors: [
       // The room: a roof and two sides, and nothing along the bottom.
-      ...[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(column =>
+      ...ALL_COLUMNS.map(column =>
         place('actors/wall', `Roof${column}`, column, 0),
       ),
       ...SIDE_ROWS.map(row => place('actors/wall', `Left${row}`, 0, row)),
       ...SIDE_ROWS.map(row => place('actors/wall', `Right${row}`, 9, row)),
-      ...[1, 2].flatMap(row =>
-        COLUMNS.map(column =>
+      ...BRICK_ROWS.flatMap(row =>
+        BRICK_COLUMNS.map(column =>
           place('actors/brick', `Brick${row}_${column}`, column, row),
         ),
       ),
@@ -102,7 +104,7 @@ const BREAKOUT_MAP = JSON.stringify(
 );
 
 /** `set ⟨property⟩ of ⟨this actor⟩ to ⟨number⟩`, for the ball's two dials. */
-const setNumber = (type: string, value: number) => ({
+export const setNumber = (type: string, value: number) => ({
   type,
   inputs: {
     ACTOR: {block: {type: 'world_this_actor'}},
@@ -111,7 +113,7 @@ const setNumber = (type: string, value: number) => ({
 });
 
 /** `use trait ⟨Rule#Trait⟩`, the row that gives an actor a share of a rule. */
-const useTrait = (trait: string) => ({
+export const useTrait = (trait: string) => ({
   type: 'world_use_trait',
   fields: {TRAIT: trait},
 });
@@ -312,6 +314,60 @@ const BREAKOUT_WORLD = JSON.stringify({
   },
 });
 
+/**
+ * The rules breakout names, the ones those pull in, and the pictures it draws
+ * with. Shared with the single-world telling of the same game, which differs in
+ * how it SAYS the game and not in what the game is made of.
+ */
+export const BREAKOUT_SUPPORT_FILES: ProjectSpec['files'] = {
+  // The rules it names, and the ones those pull in. A project holds its own
+  // copies (the starter's header explains why), so a learner can open one and
+  // read what a bounce or a boundary actually is.
+  inputRuleFile: {
+    name: 'input.rule',
+    language: 'rule',
+    contents: inputRule,
+    folderId: 'rules',
+  },
+  arrowsRuleFile: {
+    name: 'arrows.rule',
+    language: 'rule',
+    contents: arrowsRule,
+    folderId: 'rules',
+  },
+  motionRuleFile: {
+    name: 'motion.rule',
+    language: 'rule',
+    contents: motionRule,
+    folderId: 'rules',
+  },
+  collisionsRuleFile: {
+    name: 'collisions.rule',
+    language: 'rule',
+    contents: collisionsRule,
+    folderId: 'rules',
+  },
+  solidRuleFile: {
+    name: 'solid.rule',
+    language: 'rule',
+    contents: solidRule,
+    folderId: 'rules',
+  },
+  collectRuleFile: {
+    name: 'collect.rule',
+    language: 'rule',
+    contents: collectRule,
+    folderId: 'rules',
+  },
+  animationRuleFile: {
+    name: 'animation.js',
+    language: 'javascript',
+    contents: ruleShim('AnimationRule'),
+    folderId: 'rules',
+  },
+  ...starterSprites(['ground', 'ball', 'box']),
+};
+
 export const BREAKOUT_SPEC: ProjectSpec = {
   folders: [
     'rules',
@@ -362,52 +418,7 @@ export const BREAKOUT_SPEC: ProjectSpec = {
       contents: BREAKOUT_MAP,
       folderId: 'maps',
     },
-    // The rules it names, and the ones those pull in. A project holds its own
-    // copies (the starter's header explains why), so a learner can open one and
-    // read what a bounce or a boundary actually is.
-    inputRuleFile: {
-      name: 'input.rule',
-      language: 'rule',
-      contents: inputRule,
-      folderId: 'rules',
-    },
-    arrowsRuleFile: {
-      name: 'arrows.rule',
-      language: 'rule',
-      contents: arrowsRule,
-      folderId: 'rules',
-    },
-    motionRuleFile: {
-      name: 'motion.rule',
-      language: 'rule',
-      contents: motionRule,
-      folderId: 'rules',
-    },
-    collisionsRuleFile: {
-      name: 'collisions.rule',
-      language: 'rule',
-      contents: collisionsRule,
-      folderId: 'rules',
-    },
-    solidRuleFile: {
-      name: 'solid.rule',
-      language: 'rule',
-      contents: solidRule,
-      folderId: 'rules',
-    },
-    collectRuleFile: {
-      name: 'collect.rule',
-      language: 'rule',
-      contents: collectRule,
-      folderId: 'rules',
-    },
-    animationRuleFile: {
-      name: 'animation.js',
-      language: 'javascript',
-      contents: ruleShim('AnimationRule'),
-      folderId: 'rules',
-    },
-    ...starterSprites(['ground', 'ball', 'box']),
+    ...BREAKOUT_SUPPORT_FILES,
   },
   open: ['main'],
 };

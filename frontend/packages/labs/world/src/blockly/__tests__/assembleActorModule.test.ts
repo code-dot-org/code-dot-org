@@ -56,6 +56,29 @@ describe('assembleWorldModule', () => {
     );
   });
 
+  it('puts a world\u2019s own actors before it, however they are laid out', () => {
+    // A `define actor` in a world file generates a `const`, and `create in map`
+    // and `add actor` name that const — so the definitions have to precede the
+    // world block that places them.
+    //
+    // Here rather than in the layout, which is the point: the blocks arrive in
+    // the order they sit on the canvas, and a learner drags them wherever they
+    // like. Requiring the world to sit below its actors would be a rule nobody
+    // is told and the editor does nothing to keep, and the world block belongs
+    // at the top left where a reader starts.
+    const code = assembleWorldModule([
+      {type: 'world_world', code: 'const world = mk();\nplace(Brick);\n'},
+      {type: 'world_actor', code: 'const Brick = actor();\n'},
+    ]);
+
+    expect(code).toBe(
+      'const localActors = {};\n' +
+        'const Brick = actor();\n' +
+        'const world = mk();\nplace(Brick);\n' +
+        'export default world;\nexport {localActors};\n',
+    );
+  });
+
   it('puts a WORLD event\u2019s handler after the world exists', () => {
     // `world.on(...)` needs the binding the world block makes. Hoisted above it
     // with the actor handlers, the module threw the moment it was imported —

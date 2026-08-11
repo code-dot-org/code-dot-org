@@ -27,6 +27,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {buildProject, DEFAULT_PROJECT, type ProjectSpec} from '../constants';
 
 import {BREAKOUT_SPEC} from './breakout';
+import {BREAKOUT_SINGLE_SPEC} from './breakoutSingle';
 
 /**
  * Every scenario's tag, in the order the switcher offers them.
@@ -34,7 +35,12 @@ import {BREAKOUT_SPEC} from './breakout';
  * The tag is also the channel id the studio route carries
  * (`/projects/world/<tag>/edit`), so it is url-shaped: lower case, hyphens.
  */
-export const WORLD_SCENARIO_TAGS = ['simple', 'breakout', 'empty'] as const;
+export const WORLD_SCENARIO_TAGS = [
+  'simple',
+  'breakout',
+  'breakout-single',
+  'empty',
+] as const;
 
 export type WorldScenarioTag = (typeof WORLD_SCENARIO_TAGS)[number];
 
@@ -120,6 +126,21 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- The room is open at the bottom: `when ⟨Ball⟩ leaves the map` is how ' +
       'it notices\n' +
       '- Try a bouncier ball, a wider paddle, or a third row of bricks',
+  },
+  'breakout-single': {
+    name: 'Breakout (single world)',
+    description:
+      'The same game with nothing outside main.world: the actors are defined ' +
+      'in it and the board is `create in map`. What a file buys, as a diff.',
+    source: buildProject(BREAKOUT_SINGLE_SPEC).source,
+    instructions:
+      '## Breakout, in one file\n\nThe same game as **Breakout**, said ' +
+      'entirely in `main.world`.\n\n' +
+      '- The four actors are `define actor` blocks in the world — no files, ' +
+      'no imports, and nothing else can reach them\n' +
+      '- The board is `create ⟨kind⟩ in map`: click the arrangement to edit it\n' +
+      '- The ball\u2019s handlers are hats here, on `any ⟨Ball⟩`\n' +
+      '- Compare it with **Breakout** to see what moving a thing into a file buys',
   },
   empty: {
     name: 'Empty',
