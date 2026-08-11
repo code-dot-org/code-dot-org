@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-11T06:03:17.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Alan Turing\n\n### Foundational Questions\n\n*Image attribution: [Alan Turing (1951)](https://commons.wikimedia.org/wiki/File:Alan_Turing_(1951)_(crop).jpg) by Elliott & Fry, via Wikimedia Commons. Public domain.*",
+        "imageUrl": "https://images.code.org/86b9e1fbb4bd20d9788b467c08510486-turing.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-37f6d857-ab3b-4e1e-b18d-ce3bfaa38a45",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### What He Contributed\n\nTuring was a mathematician and computer scientist who helped give machine intelligence one of its earliest and most important questions: *Can machines think?* In a 1950 paper, he proposed the imitation game — now called the Turing Test — as a way to evaluate whether a machine could produce responses indistinguishable from a human.<sup>1</sup>\n\n*Image attribution: [A Turing Bombe, Bletchley Park](https://commons.wikimedia.org/wiki/File:A_Turing_Bombe,_Bletchley_Park_-_geograph.org.uk_-_1590989.jpg) by Ian Petticrew, via Wikimedia Commons. CC BY-SA 2.0.*",
+        "imageUrl": "https://images.code.org/979d2ae32c3ce8a919542800f171049e-turing_bombe.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-1eab77e5-f2ef-4fdf-b059-19dd3b604abd",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "### Connection to AI History\n\nTuring's ideas belong to the earliest stage of AI history, before the field even had a name. He connected mathematics, computing, and philosophy of mind in ways that gave future researchers a framework for thinking about machine intelligence.<sup>1</sup>\n\n*Image attribution: [Williams-Kilburn Tube, Manchester Mark I](https://commons.wikimedia.org/wiki/File:Williams-Kliburn_Tube,_Manchester_Mark_I.agr.jpg) by ArnoldReinhold, via Wikimedia Commons.*",
+        "imageUrl": "https://images.code.org/19324d81abd33ad08e024a8e7e742240-manchester.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-0c7ff7a4-4735-4c26-84d0-b8872e1b2b50"
+      },
+      {
+        "text": "### Why It Matters\n\nBy asking a practical question instead of a purely philosophical one, Turing made the study of machine intelligence something researchers could actually investigate. The Turing Test is still debated today as AI systems become capable of generating increasingly fluent, human-like responses.<sup>1, 2</sup>\n\n*Image attribution: [Photo](https://unsplash.com/photos/a-persons-head-with-a-circuit-board-in-front-of-it-WhAQMsdRKMI) by [Steve A Johnson](https://unsplash.com/@steve_j) on Unsplash.*\n\n**Sources**\n\n1. [Britannica — Alan Turing](https://www.britannica.com/biography/Alan-Turing)\n2. [HISTORY — Alan Turing](https://www.history.com/articles/alan-turing)",
+        "imageUrl": "https://images.code.org/5da2e009f8e8a4c52571e2e94a0fc0e8-human_ai.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-87ad2c1f-b495-4264-a7c0-51cce6ca9fff"
+      }
+    ],
+    "name_suffix": "_2026-dev",
+    "display_name": "Alan Turing",
+    "bubble_choice_description": "Choose Alan Turing to explore how his questions about machine intelligence helped lay the foundation for AI and continue to shape the field today.",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-11T06:03:17.852+00:00\",\"changed\":[\"cloned from \\\"ai-history-lesson2-level1-v3-2026\\\"\"],\"cloned_from\":\"ai-history-lesson2-level1-v3-2026\"},{\"changed_at\":\"2026-08-11 07:25:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-11 07:26:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Panels>
