@@ -82,11 +82,11 @@ let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
   false
 );
 
-// The pyodide worker runs inside a hidden iframe on a dedicated subdomain of
-// getPreviewDomain() (a wholly separate registrable domain from code.org), so
-// student Python execution never has access to studio.code.org's cookies/session. See
-// apps/src/pythonlab/sandbox/pyodideSandboxWorkerManager.ts, which owns the actual worker, and
-// apps/src/pythonlab/README.md for the full architecture.
+// The pyodide worker runs inside a hidden iframe on our dedicated "preview"
+// subdomain, shared with Web Lab. This is a separate base domain to ensure
+// the worker never has access to the user's `studio.code.org` cookies/session.
+// See "apps/src/pythonlab/sandbox/pyodideSandboxWorkerManager.ts"
+// and "apps/src/pythonlab/README.md" for the full architecture.
 const getSandboxOrigin = () => {
   const {subdomain, port} = getInnerEnvironment();
   return `${
