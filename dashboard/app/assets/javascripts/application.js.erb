@@ -11,21 +11,25 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 
-// Gem assets
 // Important: Use minified versions of dependencies. No minifier is in use today.
+// jquery-ui.min is the official 1.12.1 full build from
+// https://code.jquery.com/ui/1.12.1/jquery-ui.min.js; ApplicationJsBundleTest
+// pins its sha256 and caps this bundle's compiled size.
 //= require jquery.min
-//= require jquery_ujs
 //= require jquery-ui.min
 // (Former location of video.js; reference while converting to code-studio.js)
 //= require bootstrap.min
-
-// Vendor assets
-//= require add2home
 //= require jquery.mask.min
-//= require jquery.placeholder
 //= require jquery.qtip.min
-//= require jquery.simulate
 //= require jquery.ui.touch-punch.min
+
+// Small unminified glue, ~50KB raw in total. This list is frozen: changes are
+// limited to security updates of what is already here. New frontend code
+// belongs in apps/ or frontend/, not in this bundle.
+//= require jquery_ujs
+//= require add2home
+//= require jquery.placeholder
+//= require jquery.simulate
 //= require jquery.overlaps
 
 // window.dashboard is used to communicate between dashboard/apps in a variety
