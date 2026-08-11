@@ -751,6 +751,16 @@ export class World {
   }
 
   /**
+   * Whether `event` is already queued for `actor` — see `EventQueue.isPending`.
+   *
+   * For a raiser that must not raise twice in one tick, and would otherwise
+   * have to keep a per-actor flag and clear it at some moment of its own.
+   */
+  hasPendingEvent(event: GameEvent, actor: Actor): boolean {
+    return this.events.isPending(event, actor);
+  }
+
+  /**
    * Raise an event that is about the WORLD — a key went down, a level was
    * cleared — with no actor it happened to.
    *

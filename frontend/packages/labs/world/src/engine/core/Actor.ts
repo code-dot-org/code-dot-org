@@ -101,9 +101,29 @@ export class Actor {
     return this.traited.get(property);
   }
 
-  /** Set a property's value; returns `this` so instance setup can chain. */
+  /**
+   * Set a property's value; returns `this` so instance setup can chain.
+   *
+   * A watched property (`watchProperty`) is read back after the write and the
+   * watchers told what changed. Read BACK rather than passing `value` on,
+   * because `Traited.set` coerces and a watcher comparing the two must be
+   * comparing stored values or it will see changes that did not happen.
+   *
+   * Unwatched — which is every property but one, and the case this is on the
+   * hot path for — costs one field read.
+   */
   set<T>(property: Property<T>, value: T): this {
+    const watchers = property.watch;
+    if (!watchers) {
+      this.traited.set(property, value);
+      return this;
+    }
+    const previous = this.traited.get(property);
     this.traited.set(property, value);
+    const next = this.traited.get(property);
+    for (const watcher of watchers) {
+      watcher(this, previous, next);
+    }
     return this;
   }
 
