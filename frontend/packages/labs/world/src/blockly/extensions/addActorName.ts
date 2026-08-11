@@ -64,23 +64,38 @@ export function namesPlacedActor(block: Blockly.Block): boolean {
  * documents in reverse: `define actor` has no `do` mouth, so being chained
  * below it IS being inside it.
  *
+ * Which makes CHAINED and CONTAINED two different things, and `add actor` is
+ * where the difference bites: its body is a `do` mouth, so a block inside it
+ * shadows, and a block merely chained after it does not. Two `add actor`s in a
+ * row are siblings — neither is in the other, and neither has anything to
+ * shadow — but `getParent` on the second returns the first, so a walk that did
+ * not ask HOW it got there offered a choice that could not mean anything.
+ * `getInputWithBlock` is the question: it names the input holding a block, and
+ * answers null for one that arrived through `next`.
+ *
  * The walk STOPS at the first thing that binds a subject rather than looking
  * only for the ones that bind an actor. A handler rebinds the name, so a block
  * inside one is not in the context of whatever encloses the hat, however far
  * up that goes.
  */
 export function hasEnclosingActor(block: Blockly.Block): boolean {
-  for (let parent = block.getParent(); parent; parent = parent.getParent()) {
+  let child = block;
+  for (
+    let parent = block.getParent();
+    parent;
+    child = parent, parent = parent.getParent()
+  ) {
     // `define actor` binds `actor` for its whole chain, and a trait's members
     // are the subject's — both give a body an actor of its own.
     if (parent.type === 'world_actor' || parent.type === 'world_rule_trait') {
       return true;
     }
-    // An unnamed spawn binds `actor` for its own body, so a spawn inside a
-    // spawn has one to shadow. A named one binds a variable and leaves the
-    // question to whatever encloses IT.
+    // An unnamed spawn binds `actor` for what it CONTAINS, so a spawn inside a
+    // spawn has one to shadow. Chained after it is not inside it. A named one
+    // binds a variable and leaves the question to whatever encloses IT.
     if (parent.type === 'world_add_actor') {
-      if (!namesPlacedActor(parent)) {
+      const inside = parent.getInputWithBlock?.(child) != null;
+      if (inside && !namesPlacedActor(parent)) {
         return true;
       }
       continue;
