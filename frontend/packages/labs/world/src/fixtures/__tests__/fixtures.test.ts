@@ -142,6 +142,82 @@ describe('the scenario catalogue', () => {
     expect(main).not.toContain('"RULE":"rules/');
   });
 
+  it('says the single-world breakout without leaving main.world', () => {
+    // The whole claim of that scenario. An actor file or a map file sneaking
+    // back in would make the pair stop being a diff about one thing.
+    const files = Object.values(
+      WORLD_SCENARIOS['breakout-single'].source.files,
+    );
+    const worlds = files.filter(file => file.name.endsWith('.world'));
+
+    expect(worlds).toHaveLength(1);
+    expect(files.some(file => file.name.endsWith('.actor'))).toBe(false);
+    expect(files.some(file => file.name.endsWith('.map'))).toBe(false);
+
+    const main = worlds[0].contents;
+    expect(main).toContain('world_actor');
+    expect(main).toContain('world_create_in_map');
+    expect(main).not.toContain('world_load_map');
+  });
+
+  it('points every local reference at an actor that is defined', () => {
+    // A world-local actor is named by its DEFINING BLOCK'S id, so a mistyped
+    // one is not an error — `create in map` generates nothing at all, and the
+    // board comes up missing a third of itself with the console silent.
+    const main = Object.values(
+      WORLD_SCENARIOS['breakout-single'].source.files,
+    ).find(file => file.name === 'main.world')!.contents;
+    const workspace = JSON.parse(main) as {
+      blocks: {blocks: Array<{type: string; id?: string}>};
+    };
+
+    const defined = new Set(
+      workspace.blocks.blocks
+        .filter(block => block.type === 'world_actor')
+        .map(block => block.id),
+    );
+    expect(defined.size).toBe(4);
+
+    for (const [, id] of main.matchAll(/"local:([^"]+)"/g)) {
+      expect(defined).toContain(id);
+    }
+  });
+
+  it('opens on the world block, not on an actor', () => {
+    // Where a reader starts. The emitted module still puts the actor `const`s
+    // first — the assembler hoists them (assembleActorModule), which is what
+    // frees the canvas to be laid out for reading rather than for the compiler.
+    const main = Object.values(
+      WORLD_SCENARIOS['breakout-single'].source.files,
+    ).find(file => file.name === 'main.world')!.contents;
+    const workspace = JSON.parse(main) as {
+      blocks: {blocks: Array<{type: string; x: number; y: number}>};
+    };
+    const world = workspace.blocks.blocks.find(
+      block => block.type === 'world_world',
+    )!;
+
+    for (const block of workspace.blocks.blocks) {
+      if (block === world) {
+        continue;
+      }
+      expect(block.y).toBeGreaterThanOrEqual(world.y);
+    }
+    expect(world.x).toBe(20);
+  });
+
+  it('is the same game as the other breakout', () => {
+    // The two differ in how the game is SAID, not in what it is made of. Rules
+    // or pictures drifting apart would make the diff between them noise.
+    const named = (tag: 'breakout' | 'breakout-single') =>
+      Object.values(WORLD_SCENARIOS[tag].source.files)
+        .map(file => file.name)
+        .filter(name => name.endsWith('.rule') || name.endsWith('.png'))
+        .sort();
+
+    expect(named('breakout-single')).toEqual(named('breakout'));
+  });
+
   it('writes the level properties once, for all of them', () => {
     // Only the instructions differ. A scenario that had to restate
     // `usesProjects` would be a second place for it to be wrong.
