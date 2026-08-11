@@ -4,15 +4,19 @@ The `neighborhood` package gives Python Lab student code a `Painter` that walks 
 square grid and colors squares. It is a port of javalab's
 [`org.code.neighborhood`](https://github.com/code-dot-org/javabuilder/tree/main/org-code-javabuilder/neighborhood/src/main/java/org/code/neighborhood).
 
-Student code imports one name:
+Student code works with painters two ways. The object form constructs them:
 
 ```python
 from neighborhood import Painter
 ```
 
+The function form skips the constructor and acts on one implicit painter — see
+[The default painter](#the-default-painter).
+
 Everything else the package exports (`World`, `NeighborhoodTracker`,
 `NeighborhoodLog`, ...) exists for the harness that runs and validates student
-code, not for students.
+code, not for students. `from neighborhood import *` brings in only the
+student-facing names.
 
 ## The grid
 
@@ -71,6 +75,42 @@ Painter(x=0, y=0, direction='east', paint=None)
 An unrecognized `direction` raises `INVALID_DIRECTION`. The constructor does
 **not** check that `(x, y)` is on the grid or passable; a painter placed off-grid
 fails later, on the first call that touches its square.
+
+## The default painter
+
+Every method documented below is also available as a plain function acting on
+one implicit painter. Three import forms reach the same functions:
+
+```python
+from neighborhood import painter
+painter.move()
+
+from neighborhood import move, turn_left, paint
+move()
+
+from neighborhood import *
+move()
+```
+
+The implicit painter starts at `(0, 0)` facing east and is created the first
+time one of the functions is called, not when the module is imported. That
+matters because `NeighborhoodLog` lists painters in construction order and
+validation code indexes into that list: a program that never calls one of these
+functions has no default painter, so `painter_logs[0]` means what it always did.
+
+The painter is discarded and rebuilt whenever the grid or the run context
+changes, which is how each run of a program — and each pass validation makes
+over `main.py` — starts with it back at `(0, 0)`.
+
+Unlike a `Painter()` built with no arguments, the default painter always has
+paint, whatever the grid size. Two consequences follow from how infinite paint
+is implemented (see [Paint accounting](#paint-accounting)): `has_paint()` always
+returns `True`, and `set_paint()` does nothing. A level that teaches collecting
+paint from buckets wants `Painter` objects, not these functions.
+
+Both styles work in one program. The implicit painter takes its place in
+`painter_logs` at the point it is created — so a bare `move()` before an
+explicit `Painter()` puts the implicit one first.
 
 ## Movement
 

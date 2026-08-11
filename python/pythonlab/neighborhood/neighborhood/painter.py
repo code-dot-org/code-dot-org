@@ -289,3 +289,208 @@ class Painter:
     else:
       # Invalid movement
       return False
+
+
+# The functions below let student code skip constructing a Painter:
+#
+#   from neighborhood import painter   ->  painter.move()
+#   from neighborhood import move      ->  move()
+#
+# They all act on one implicit painter, which starts at (0, 0) facing east.
+
+_default_painter = None
+# The world the cached painter was built against, as (generation, grid).
+_default_painter_world = None
+
+def _current_world_key(world):
+  # The grid is part of the key as a backstop: a future path that swaps the grid
+  # without going through World's setters still invalidates the painter.
+  return (world.generation, world.grid)
+
+def _get_default_painter():
+  """
+  Returns the implicit painter the functions below act on, creating it if there
+  isn't a usable one yet.
+
+  Creation is deferred until the first call rather than done at import, because
+  NeighborhoodLog lists painters in the order they were constructed and
+  validation code indexes into that list. A painter built at import time would
+  take the first slot in every program that imports this package.
+
+  The painter is rebuilt whenever the world's grid or context type changes,
+  since either means we are in a new program. A stale painter would hold
+  coordinates from a grid that no longer exists, and would emit no
+  INITIALIZE_PAINTER signal for the tracker watching the new one, so every
+  signal it sent would be discarded.
+  """
+  global _default_painter, _default_painter_world
+  world = World()
+  if _default_painter is None or _default_painter_world != _current_world_key(world):
+    _default_painter = Painter()
+    # A no-argument Painter only gets paint on grids 20x20 and larger, which
+    # almost no level uses. There is no constructor call here to pass an amount
+    # to, so give the implicit painter paint unconditionally.
+    _default_painter.has_infinite_paint = True
+    # Painter() loads the grid if the world had none, so read the key back
+    # after constructing rather than before.
+    _default_painter_world = _current_world_key(world)
+  return _default_painter
+
+def move():
+  """
+  Move one square forward in the direction the painter is facing.
+  """
+  _get_default_painter().move()
+
+def turn_left():
+  """
+  Turn one compass direction left (i.e. North -> West).
+  """
+  _get_default_painter().turn_left()
+
+def paint(color):
+  """
+  Paint the current square with the given color.
+
+  Args:
+    color (str): The color to paint the square.
+  """
+  _get_default_painter().paint(color)
+
+def scrape_paint():
+  """
+  Remove all the paint from the current square.
+  """
+  _get_default_painter().scrape_paint()
+
+def take_paint():
+  """
+  Add a single unit of paint from the current square's bucket to the painter's
+  personal bucket.
+  """
+  _get_default_painter().take_paint()
+
+def set_paint(paint):
+  """
+  Set the amount of paint in the painter's bucket. Does nothing if paint is negative.
+
+  Args:
+    paint (int): The amount of paint that should be in the painter's bucket.
+  """
+  _get_default_painter().set_paint(paint)
+
+def get_my_paint():
+  """
+  Returns the amount of paint the painter has.
+  """
+  return _get_default_painter().get_my_paint()
+
+def has_paint():
+  """
+  Returns:
+    True if the painter has any paint in their personal bucket
+  """
+  return _get_default_painter().has_paint()
+
+def can_move(direction=None):
+  """
+  Returns:
+    True if the painter can move in the given direction
+  Args:
+    direction (str): The direction of movement that is being checked
+  """
+  return _get_default_painter().can_move(direction)
+
+def is_on_paint():
+  """
+  Returns:
+    True if there is paint in the square where the painter is standing
+  """
+  return _get_default_painter().is_on_paint()
+
+def is_on_bucket():
+  """
+  Returns:
+    True if there is a paint bucket in the square where the painter is standing
+  """
+  return _get_default_painter().is_on_bucket()
+
+def get_color():
+  """
+  Returns:
+    The color of the square where the painter is standing
+  """
+  return _get_default_painter().get_color()
+
+def is_facing_north():
+  """
+  Returns:
+    True if the painter is facing North
+  """
+  return _get_default_painter().is_facing_north()
+
+def is_facing_east():
+  """
+  Returns:
+    True if the painter is facing East
+  """
+  return _get_default_painter().is_facing_east()
+
+def is_facing_south():
+  """
+  Returns:
+    True if the painter is facing South
+  """
+  return _get_default_painter().is_facing_south()
+
+def is_facing_west():
+  """
+  Returns:
+    True if the painter is facing West
+  """
+  return _get_default_painter().is_facing_west()
+
+def get_x():
+  """
+  Returns:
+    The x-coordinate of the painter's current position
+  """
+  return _get_default_painter().get_x()
+
+def get_y():
+  """
+  Returns:
+    The y-coordinate of the painter's current position
+  """
+  return _get_default_painter().get_y()
+
+def get_direction():
+  """
+  Returns:
+    The direction the painter is facing
+  """
+  return _get_default_painter().get_direction()
+
+def hide_painter():
+  """
+  Hides the painter on the screen.
+  """
+  _get_default_painter().hide_painter()
+
+def show_painter():
+  """
+  Shows the painter on the screen.
+  """
+  _get_default_painter().show_painter()
+
+def hide_buckets():
+  """
+  Hide all the paint buckets on the screen.
+  """
+  _get_default_painter().hide_buckets()
+
+def show_buckets():
+  """
+  Show all the paint buckets on the screen.
+  """
+  _get_default_painter().show_buckets()

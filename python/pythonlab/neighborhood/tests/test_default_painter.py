@@ -1,0 +1,187 @@
+import sys
+
+import neighborhood
+from neighborhood import painter
+from neighborhood.painter import Painter
+from neighborhood.support.world import World
+from neighborhood.support.neighborhood_context_type import NeighborhoodContextType
+from neighborhood.support.neighborhood_tracker import NeighborhoodTracker
+from support.constants import SAMPLE_MAZE, ALL_PASSABLE_MAZE, BUCKET_MAZE
+
+def set_up_world(maze, context_type=NeighborhoodContextType.RUN):
+  world = World()
+  # Set up the world from a string rather than trying to load a file.
+  world.set_grid_from_string(maze)
+  world.set_context_type(context_type)
+  return world
+
+def test_painter_is_created_on_first_call_not_on_import(capsys):
+  set_up_world(ALL_PASSABLE_MAZE)
+  # Setting up a world does not bring a painter with it. Nothing exists, and so
+  # nothing announces itself, until one of the functions is called.
+  assert capsys.readouterr().out == ''
+  painter.move()
+  printed = capsys.readouterr().out
+  assert 'INITIALIZE_PAINTER' in printed
+  assert 'MOVE' in printed
+
+def test_repeated_calls_reuse_one_painter():
+  set_up_world(ALL_PASSABLE_MAZE)
+  painter.move()
+  first = painter._get_default_painter()
+  painter.turn_left()
+  assert painter._get_default_painter() is first
+  assert painter._get_default_painter().id == first.id
+
+def test_movement_and_direction_functions():
+  set_up_world(ALL_PASSABLE_MAZE)
+  assert painter.get_x() == 0
+  assert painter.get_y() == 0
+  assert painter.get_direction() == 'east'
+  assert painter.is_facing_east() is True
+  painter.move()
+  assert painter.get_x() == 1
+  assert painter.get_y() == 0
+  painter.turn_left()
+  assert painter.get_direction() == 'north'
+  assert painter.is_facing_north() is True
+  assert painter.is_facing_east() is False
+  assert painter.is_facing_south() is False
+  assert painter.is_facing_west() is False
+
+def test_paint_functions():
+  set_up_world(ALL_PASSABLE_MAZE)
+  assert painter.is_on_paint() is False
+  assert painter.get_color() is None
+  painter.paint('red')
+  assert painter.is_on_paint() is True
+  assert painter.get_color() == 'red'
+  painter.scrape_paint()
+  assert painter.is_on_paint() is False
+  assert painter.get_color() is None
+
+def test_bucket_functions():
+  # Square 0,0 is a bucket with paint_count = 3.
+  set_up_world(BUCKET_MAZE)
+  assert painter.is_on_bucket() is True
+  painter.take_paint()
+  painter.take_paint()
+  assert painter.is_on_bucket() is True
+  painter.take_paint()
+  assert painter.is_on_bucket() is False
+
+def test_can_move():
+  # The painter starts at 0,0 in a 2x2 grid whose only wall is at 0,1.
+  set_up_world(SAMPLE_MAZE)
+  assert painter.can_move('north') is False
+  assert painter.can_move('south') is False
+  assert painter.can_move('east') is True
+  assert painter.can_move('west') is False
+  # Without a parameter, can_move checks the direction the painter is facing.
+  assert painter.can_move() is True
+  painter.move()
+  assert painter.can_move('east') is False
+  assert painter.can_move('south') is True
+
+def test_default_painter_always_has_paint():
+  set_up_world(SAMPLE_MAZE)
+  # A Painter constructed with no arguments has nothing to paint with on a grid
+  # this small. The default painter is not held to that rule.
+  assert Painter().has_infinite_paint is False
+  assert painter.has_paint() is True
+  painter.paint('red')
+  assert painter.is_on_paint() is True
+  assert painter.has_paint() is True
+
+def test_swapping_the_grid_starts_a_new_painter():
+  set_up_world(ALL_PASSABLE_MAZE)
+  painter.move()
+  assert painter.get_x() == 1
+  first = painter._get_default_painter()
+
+  set_up_world(ALL_PASSABLE_MAZE)
+  assert painter._get_default_painter() is not first
+  assert painter.get_x() == 0
+
+def test_removing_the_grid_starts_a_new_painter():
+  world = set_up_world(ALL_PASSABLE_MAZE)
+  painter.move()
+  assert painter.get_x() == 1
+  # Teardown clears the grid between runs, so the next run must not resume the
+  # previous run's painter.
+  world.remove_grid()
+  world.set_grid_from_string(ALL_PASSABLE_MAZE)
+  assert painter.get_x() == 0
+
+def test_changing_the_context_type_starts_a_new_painter():
+  world = set_up_world(ALL_PASSABLE_MAZE)
+  painter.move()
+  first = painter._get_default_painter()
+
+  world.set_context_type(NeighborhoodContextType.VALIDATE)
+  second = painter._get_default_painter()
+  assert second is not first
+  assert second.get_x() == 0
+
+  NeighborhoodTracker(world).reset()
+  world.set_context_type(NeighborhoodContextType.RUN)
+
+def test_validation_sees_the_painter_on_every_pass():
+  # ValidationProtocol brackets each exec of main.py with VALIDATE ... RUN and
+  # can exec it more than once. A painter carried over from an earlier pass
+  # would emit no INITIALIZE_PAINTER, so the tracker would discard all of its
+  # signals and the log would come back empty.
+  world = set_up_world(ALL_PASSABLE_MAZE, NeighborhoodContextType.VALIDATE)
+  tracker = NeighborhoodTracker(world)
+  tracker.reset()
+
+  def student_program():
+    # Square 1,0 holds a bucket, which cannot be painted, so paint first.
+    painter.paint('red')
+    painter.move()
+
+  student_program()
+  first_log = tracker.get_neighborhood_log()
+  assert len(first_log.painter_logs) == 1
+  assert first_log.painter_logs[0].ending_position.x == 1
+
+  tracker.reset()
+  world.set_context_type(NeighborhoodContextType.RUN)
+  world.set_context_type(NeighborhoodContextType.VALIDATE)
+
+  student_program()
+  second_log = tracker.get_neighborhood_log()
+  assert len(second_log.painter_logs) == 1
+  assert second_log.painter_logs[0].starting_position.x == 0
+  assert second_log.painter_logs[0].ending_position.x == 1
+
+  tracker.reset()
+  world.set_context_type(NeighborhoodContextType.RUN)
+
+def test_explicit_painters_keep_their_place_in_the_log():
+  # Validation code indexes painter_logs by position, so a painter the student
+  # constructed must stay where it was.
+  world = set_up_world(ALL_PASSABLE_MAZE, NeighborhoodContextType.VALIDATE)
+  tracker = NeighborhoodTracker(world)
+  tracker.reset()
+
+  explicit_painter = Painter()
+  painter.move()
+
+  log = tracker.get_neighborhood_log()
+  assert len(log.painter_logs) == 2
+  assert log.painter_logs[0].painter_id == explicit_painter.id
+  assert log.painter_logs[1].painter_id == painter._get_default_painter().id
+
+  tracker.reset()
+  world.set_context_type(NeighborhoodContextType.RUN)
+
+def test_painter_name_refers_to_the_submodule():
+  # `from neighborhood import painter` must keep resolving to the module, so
+  # painter.move() and neighborhood.painter.move() are the same function.
+  assert painter is sys.modules['neighborhood.painter']
+  assert neighborhood.painter is sys.modules['neighborhood.painter']
+
+def test_star_import_names_all_exist():
+  for name in neighborhood.__all__:
+    assert hasattr(neighborhood, name)
