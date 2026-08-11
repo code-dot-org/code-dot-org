@@ -21,6 +21,19 @@ export class EventQueue {
     this.pending.push({event, actor, detail});
   }
 
+  /**
+   * Whether this exact event is already queued for this actor.
+   *
+   * So a caller can raise something AT MOST ONCE a tick without keeping a flag
+   * of its own: the queue is cleared on flush, so "already pending" and "already
+   * raised this tick" are the same question.
+   */
+  isPending(event: GameEvent, actor: Actor): boolean {
+    return this.pending.some(
+      queued => queued.event === event && queued.actor === actor,
+    );
+  }
+
   size(): number {
     return this.pending.length;
   }

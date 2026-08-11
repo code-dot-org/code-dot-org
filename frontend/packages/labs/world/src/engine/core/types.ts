@@ -107,7 +107,40 @@ export interface Property<T = unknown> {
    * been applied.
    */
   readonly ownerKind?: 'actor';
+  /**
+   * Called after this property is set on an actor, with the value before and
+   * the value after — see {@link watchProperty}, which is how one is added.
+   *
+   * Mutable, alone among a property's fields, because a watcher is registered
+   * rather than declared: the thing that wants to watch `position` is the code
+   * that knows what leaving the map means, and it reads far better beside that
+   * than buried in the declaration of the property at the top of the file.
+   *
+   * Not `PropertyWatcher<T>`: a watcher takes its values as arguments, so a
+   * generic one here would make `Property<T>` invariant in T and every place
+   * that holds a `Property<unknown>` — which is most of the engine — would stop
+   * accepting a `Property<Vector>`. `watchProperty` is where the typing is.
+   */
+  watch?: PropertyWatcher[];
 }
+
+/**
+ * Notified when a property changes on an actor: the actor, what the property
+ * held, and what it holds now (both after coercion, so both are the real
+ * stored values rather than whatever was handed to `set`).
+ *
+ * The reason this exists rather than a step that checks every frame: some
+ * questions can only change answer when a particular value changes, and asking
+ * them at the moment it does is both exact and free. "Has this actor left the
+ * map" is one — an actor leaves by MOVING, and a watcher sees the crossing
+ * itself (the before and the after) where a step can only see the after and has
+ * to remember the before for every actor in the world.
+ */
+export type PropertyWatcher<T = unknown> = (
+  actor: Actor,
+  previous: T,
+  next: T,
+) => void;
 
 /**
  * One argument an Action takes, described so the Blockly surface can generate a

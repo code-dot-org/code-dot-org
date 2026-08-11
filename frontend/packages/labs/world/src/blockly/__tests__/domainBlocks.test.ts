@@ -1267,10 +1267,70 @@ describe('domain block generators', () => {
         .map(item => (typeof item === 'string' ? item : (item.type ?? '')))
         .filter(t => t.startsWith('world_query_')),
     ).toEqual([
-      // None left built in: motion's "position before" went with motion, as
-      // collision's went with collision. Every query a rule offers is now a
-      // rule's own, and a project rule's blocks live in its own category.
+      // Motion's "position before" went with motion, as collision's went with
+      // collision — a query a rule offers belongs in that rule's category.
+      //
+      // Space's is the one that stayed, because Space is the foundation and no
+      // world elects it: the map's edges are not something an actor opts into
+      // having a relationship with. `is outside the map` is the ask-anytime
+      // half of the pair; `when ⟨actor⟩ leaves the map` is the other.
+      'world_query_Space_OutsideMapQuery',
     ]);
+  });
+});
+
+describe('the map edges', () => {
+  const spaceBlocks = () =>
+    (
+      DOMAIN_TOOLBOX as Array<{
+        name: string;
+        blocks: Array<string | {type?: string}>;
+      }>
+    )
+      .find(category => category.name === 'Space')
+      ?.blocks.map(item =>
+        typeof item === 'string' ? item : (item.type ?? ''),
+      ) ?? [];
+
+  it('offers both ways of asking, in the foundation', () => {
+    // One question, asked two ways because a game asks it two ways: a brick
+    // game wants the moment the ball goes past the paddle, a shooter wants to
+    // sweep its bullets and drop the ones that are gone. In Space rather than a
+    // rule of their own — the map's edges are not something an actor elects to
+    // have a relationship with.
+    expect(spaceBlocks()).toContain('world_query_Space_OutsideMapQuery');
+    expect(spaceBlocks()).toContain('world_on_Space_LeftMapEvent');
+  });
+
+  it('registers the hat on the actor it is about', () => {
+    // The runtime half: `X.on(event, handler)`, the same shape every actor hat
+    // uses. Nothing else in the suite exercises Space's, and an event that is
+    // raised into a registration that never happened looks exactly like an
+    // event that is never raised.
+    expect(
+      emit('world_on_Space_LeftMapEvent', {}, {}, {ACTOR: 'target'}, 'body;\n'),
+    ).toContain('.on(WorldLab.LeftMapEvent');
+  });
+
+  it('asks the actor, not the world', () => {
+    // A trait's query is asked OF a subject: `⟨this actor⟩ is outside the map`.
+    expect(
+      emitValue('world_query_Space_OutsideMapQuery', {}, {ACTOR: 'who'})[0],
+    ).toContain('.query(WorldLab.OutsideMapQuery)');
+  });
+
+  it('reads as a sentence either way', () => {
+    const message = (type: string) =>
+      (DOMAIN_BLOCKS as Array<{type: string; message0?: string}>).find(
+        block => block.type === type,
+      )?.message0;
+
+    expect(message('world_query_Space_OutsideMapQuery')).toBe(
+      '%1 is outside the map',
+    );
+    expect(message('world_on_Space_LeftMapEvent')).toBe(
+      'when %1 leaves the map',
+    );
   });
 });
 
