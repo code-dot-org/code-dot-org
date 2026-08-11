@@ -2,7 +2,7 @@
 //
 // A lab is only as demonstrable as the projects it can be pointed at, and until
 // now it could be pointed at one: the starter. Everything else — a breakout
-// board, an asteroids field, whatever the next rule needs to prove itself —
+// board, a meteor field, whatever the next rule needs to prove itself —
 // lived as a temporary edit to `constants.ts` that had to be reverted before
 // committing. Which means it was written once, verified once, and thrown away,
 // and the next person to touch that rule wrote it again.
@@ -28,6 +28,8 @@ import {buildProject, DEFAULT_PROJECT, type ProjectSpec} from '../constants';
 
 import {BREAKOUT_SPEC} from './breakout';
 import {BREAKOUT_SINGLE_SPEC} from './breakoutSingle';
+import {METEORS_SPEC} from './meteors';
+import {METEORS_SINGLE_SPEC} from './meteorsSingle';
 
 /**
  * Every scenario's tag, in the order the switcher offers them.
@@ -39,6 +41,8 @@ export const WORLD_SCENARIO_TAGS = [
   'simple',
   'breakout',
   'breakout-single',
+  'meteors',
+  'meteors-single',
   'empty',
 ] as const;
 
@@ -141,6 +145,38 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- The board is `create ⟨kind⟩ in map`: click the arrangement to edit it\n' +
       '- The ball\u2019s handlers are hats here, on `any ⟨Ball⟩`\n' +
       '- Compare it with **Breakout** to see what moving a thing into a file buys',
+  },
+  meteors: {
+    name: 'Meteors',
+    description:
+      'A ship that turns and thrusts, rocks that drift and wrap, and a gun ' +
+      'with a reload. Arrow Drive, Screen Wrap, Shooting and Expiry.',
+    source: buildProject(METEORS_SPEC).source,
+    instructions:
+      '## Meteors\n\nTurn, thrust, and shoot the rocks.\n\n' +
+      '- Click the preview, then left and right to TURN and up to thrust — ' +
+      'there is no friction, so you drift\n' +
+      '- Space fires. `make ⟨this actor⟩ fire` asks; the reload time answers\n' +
+      '- A shot is whatever the `fires` handler makes it — look in ' +
+      '`ship.actor`\n' +
+      '- Everything wraps at the edges, which is what makes a small map a ' +
+      'whole world',
+  },
+  'meteors-single': {
+    name: 'Meteors (single world)',
+    description:
+      'The same game with nothing outside main.world — including the handler ' +
+      'that spawns a shot, which is what breakout has no equivalent of.',
+    source: buildProject(METEORS_SINGLE_SPEC).source,
+    instructions:
+      '## Meteors, in one file\n\nThe same game as **Meteors**, said ' +
+      'entirely in `main.world`.\n\n' +
+      '- The three actors are `define actor` blocks in the world\n' +
+      '- The rocks are `create ⟨Meteor⟩ in map`, and each one\u2019s heading ' +
+      'is written into the arrangement rather than rolled\n' +
+      '- The ship\u2019s handlers are hats on `any ⟨Ship⟩` — including the ' +
+      'one that spawns a shot\n' +
+      '- Compare it with **Meteors** to see what moving a thing into a file buys',
   },
   empty: {
     name: 'Empty',
