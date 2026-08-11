@@ -448,7 +448,20 @@ module.exports = function (grunt) {
     // there rather than here keeps prebuild's copied assets.
     rspackServe: {
       command: 'node node_modules/.bin/rspack serve --config rspack.config.js',
-      options: {env: {...rspackEnv, NODE_ENV: 'development'}},
+      // HOT and DEV are set here rather than inherited: the `dev` task
+      // sets them after this config is built, and rspack.config.js
+      // gives a DEV-less run no devServer block at all — no port, no
+      // proxy, no writeToDisk — which reads as a mysteriously broken
+      // `yarn start --rspack` rather than an error.  Mirrors the `||=`
+      // the dev task uses, so an explicit HOT=0 still wins.
+      options: {
+        env: {
+          ...rspackEnv,
+          HOT: process.env.HOT || '1',
+          DEV: process.env.DEV || '1',
+          NODE_ENV: 'development',
+        },
+      },
     },
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
