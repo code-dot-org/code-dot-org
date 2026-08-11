@@ -21,7 +21,7 @@ import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
   darkMode as darkModeTheme,
-  lab2EditorCanvasTheme,
+  lab2EditorBackgroundTheme,
   lightMode as lightModeTheme,
 } from './editorThemes';
 
@@ -226,8 +226,12 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       } else {
         editorExtensions.push(themeCompartment.of(lightModeTheme));
       }
-      // After darkMode/lightMode so semantic canvas overrides shared hardcoded colors.
-      editorExtensions.push(lab2EditorCanvasTheme);
+
+      // lab2EditorBackgroundTheme's selectors carry extra specificity (see
+      // editorThemes.ts) so this override wins over darkMode/lightMode's
+      // shared hardcoded colors.
+      editorExtensions.push(lab2EditorBackgroundTheme);
+
       if (!hasSplitDiffView) {
         setEditorView(
           new EditorView({

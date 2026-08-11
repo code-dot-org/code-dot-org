@@ -25,14 +25,14 @@ const chalky = '#e5c07b',
   hotPink = '#FF69B4';
 
 /**
- * Lab 2 only: canvas + gutters use semantic tokens under ThemeProvider data-theme.
+ * Lab 2 only: editor + gutters use semantic tokens under ThemeProvider data-theme.
  * Do not use in legacy labs (e.g. Java Lab) that lack that context.
  */
-export const lab2EditorCanvasTheme = EditorView.theme({
-  '&': {
+export const lab2EditorBackgroundTheme = EditorView.theme({
+  '&.cm-editor': {
     backgroundColor: 'var(--background-neutral-primary)',
   },
-  '.cm-gutters': {
+  '&.cm-editor .cm-gutters': {
     backgroundColor: 'var(--background-neutral-primary)',
   },
 });
