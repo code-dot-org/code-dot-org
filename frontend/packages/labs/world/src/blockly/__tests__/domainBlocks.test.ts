@@ -1279,6 +1279,62 @@ describe('domain block generators', () => {
   });
 });
 
+describe('how many of a kind', () => {
+  it('counts one kind in a list of actors', () => {
+    // The question a game asks — how many coins the player has, how many bricks
+    // are left — where `how many actors in ⟨…⟩` only answers "how many of
+    // anything". The general form would be a filter block and a bound variable
+    // to ask one short question.
+    expect(
+      emitValue(
+        'world_count_of_kind',
+        {TYPE: 'actors/coin'},
+        {LIST: 'held'},
+      )[0],
+    ).toBe(
+      'WorldLab.all(held).filter(each => each.type === "actors/coin").length',
+    );
+  });
+
+  it('compares kinds the way `is a` does', () => {
+    // Both resolve the dropdown to a module path and compare it to `.type`. Two
+    // notions of what a kind is would mean `how many ⟨Coin⟩` and `is a ⟨Coin⟩`
+    // disagreeing about the same coin.
+    const counted = emitValue(
+      'world_count_of_kind',
+      {TYPE: 'actors/coin'},
+      {LIST: 'held'},
+    )[0];
+    const tested = emitValue(
+      'world_is_a',
+      {TYPE: 'actors/coin'},
+      {ACTOR: 'who'},
+    )[0];
+
+    expect(counted).toContain('.type === "actors/coin"');
+    expect(tested).toContain('.type === "actors/coin"');
+  });
+
+  it('is offered beside the count it narrows', () => {
+    const actors =
+      (
+        DOMAIN_TOOLBOX as Array<{
+          name: string;
+          blocks: Array<string | {type?: string}>;
+        }>
+      )
+        .find(category => category.name === 'Actor')
+        ?.blocks.map(item =>
+          typeof item === 'string' ? item : (item.type ?? ''),
+        ) ?? [];
+
+    expect(actors).toContain('world_count_of_kind');
+    expect(actors.indexOf('world_count_of_kind')).toBe(
+      actors.indexOf('world_count_actors') + 1,
+    );
+  });
+});
+
 describe('the map edges', () => {
   const spaceBlocks = () =>
     (

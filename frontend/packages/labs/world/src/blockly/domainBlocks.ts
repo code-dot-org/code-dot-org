@@ -2731,6 +2731,58 @@ const worldCountActors = defineBlock({
 });
 
 /**
+ * How many of one KIND a value holds — `how many ⟨Coin⟩ in ⟨…⟩`.
+ *
+ * `how many actors in ⟨…⟩` counts everything, and the question a game asks is
+ * almost never that: it is how many coins the player has, how many bricks are
+ * left, how many lives. The general form of the narrowing is a filter block
+ * that does not exist yet, and it would read
+ *
+ *     how many actors in ⟨every actor ⟨it⟩ in ⟨…⟩ where ⟨⟨it⟩ is a ⟨Coin⟩⟩⟩
+ *
+ * which is four blocks and a bound variable to ask one short question. So the
+ * short question gets a block. `is a` is where the kind dropdown comes from and
+ * what the generated code compares, so the two cannot disagree about what a
+ * kind is.
+ *
+ * The socket is a LIST — it seeds `all actors`, not `this actor`, since `how
+ * many ⟨Coin⟩ in ⟨this actor⟩` is a sentence with one possible answer.
+ */
+const worldCountOfKind = defineBlock({
+  type: 'world_count_of_kind',
+  message0: 'how many %1 in %2',
+  args0: [
+    {type: 'field_dropdown', name: 'TYPE', options: actorFieldOptions},
+    {type: 'input_value', name: 'LIST', check: 'Actor'},
+  ],
+  inputsInline: true,
+  output: 'Number',
+  extensions: [actorTypeOptionsExtension, valueShadowExtension],
+  style: 'math_blocks',
+  tooltip:
+    'How many actors of one kind a value holds — the collected things, the ' +
+    'actors touching, whatever list it is asked of.',
+  generator: {
+    javascript(block, generator) {
+      const list = actorTarget(block, generator, Order.NONE, 'LIST');
+      const chosen = block.getFieldValue('TYPE');
+      // The same resolution `world_is_a` does: a world's own `define actor` is
+      // stamped with its id, a project template with its module path.
+      const modulePath = localActorFor(block, chosen)?.type ?? chosen;
+      return [
+        `WorldLab.all(${list.code}).filter(each => each.type === ${str(
+          modulePath,
+        )}).length`,
+        Order.MEMBER,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_count_of_kind', [
+  {name: 'LIST', shadow: {type: 'world_all_actors'}},
+]);
+
+/**
  * Whether a value holds any actor at all.
  *
  * The question `first actor … where …` created the need for. A search that
@@ -4861,6 +4913,7 @@ export const DOMAIN_BLOCKS = [
   worldPushActor,
   worldClearActors,
   worldCountActors,
+  worldCountOfKind,
   worldAnyActors,
   worldAllActorsInLayer,
   worldIsInLayer,
@@ -4962,6 +5015,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_push_actor',
       'world_clear_actors',
       'world_count_actors',
+      // The same count, narrowed to a kind — how many coins, how many bricks.
+      'world_count_of_kind',
       'world_any_actors',
       'world_is_in_actors',
       // Narrowing to a layer: the list, and the question (specs/VIEWPORT.md).
