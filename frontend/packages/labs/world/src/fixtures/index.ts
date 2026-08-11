@@ -38,6 +38,12 @@ export const WORLD_LAB_KEY = 'world';
  *
  * The sources double as the version panel's "Initial version": it restores what
  * was first loaded, which is this.
+ *
+ * `levelData` is the one place a scenario may differ in something other than
+ * its project, and it is spread in only when the scenario asked for it — an
+ * explicit `levelData: undefined` is not the same as an absent key to a schema
+ * that validates on the way in, and the difference is a level that looks edited
+ * when it is not.
  */
 function fixtureFor(scenario: WorldScenario): LabFixture {
   return {
@@ -54,6 +60,7 @@ function fixtureFor(scenario: WorldScenario): LabFixture {
         showExemplarLink: false,
         exemplarSources: null,
         longInstructions: scenario.instructions,
+        ...(scenario.levelData ? {levelData: scenario.levelData} : {}),
       }),
     },
     theme: {},
