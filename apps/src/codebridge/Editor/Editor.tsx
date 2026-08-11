@@ -35,14 +35,9 @@ import moduleStyles from './styles/editor.module.scss';
 interface EditorProps {
   langMapping: {[key: string]: LanguageSupport};
   editableFileTypes: string[];
-  wrapLines?: boolean;
 }
 
-export const Editor = ({
-  langMapping,
-  editableFileTypes,
-  wrapLines,
-}: EditorProps) => {
+export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   const {levelProperties, aiTutorDisabled, enableUserAddedSelectionContext} =
     useCodebridgeContext();
   const activeFile = useAppSelector(state => {
@@ -171,9 +166,6 @@ export const Editor = ({
         );
       }
     }
-    if (wrapLines || fileExt === 'md' || fileExt === 'txt') {
-      extensions.push(EditorView.lineWrapping);
-    }
     if (hasUnifiedDiffView) {
       // For new files that don't exist in the original version, we still want
       // to show diff highlighting so will assign an empty string to the original contents.
@@ -204,7 +196,6 @@ export const Editor = ({
     codeBeforeAiTutorVersion,
     aiTutorDisabled,
     enableUserAddedSelectionContext,
-    wrapLines,
   ]);
 
   const activeFileExt = activeFile?.name

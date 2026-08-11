@@ -212,6 +212,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
         onEditorUpdate,
         autocompletion(),
+        EditorView.lineWrapping,
         ...editorConfigExtensions,
       ];
 

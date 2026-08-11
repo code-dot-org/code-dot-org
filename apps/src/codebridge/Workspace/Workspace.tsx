@@ -118,7 +118,6 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
             <Editor
               langMapping={config.languageMapping}
               editableFileTypes={config.editableFileTypes}
-              wrapLines={config.wrapLines}
             />
           </div>
           <div className={moduleStyles.workspaceWarningArea}>

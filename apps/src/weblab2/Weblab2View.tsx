@@ -61,7 +61,6 @@ const defaultConfig: ConfigType = {
   editableFileTypes: WEBLAB2_EDITABLE_FILE_TYPES,
   supportedFileTypes: WEBLAB2_SUPPORTED_FILE_TYPES,
   activeLayout: 'vertical',
-  wrapLines: true,
   layoutComponents: {
     vertical: VerticalLayout,
     widget: VerticalLayout,

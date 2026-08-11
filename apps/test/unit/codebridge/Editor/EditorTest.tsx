@@ -1,5 +1,4 @@
 import {Editor} from '@codebridge/Editor/Editor';
-import {EditorView} from '@codemirror/view';
 import {render} from '@testing-library/react';
 import React from 'react';
 
@@ -126,14 +125,5 @@ describe('Editor AI tutor affordance', () => {
 
     const props = (CodeEditor as jest.Mock).mock.calls[0][0];
     expect(props.editorConfigExtensions).toHaveLength(0);
-  });
-
-  it('wraps lines when wrapLines is set', () => {
-    render(
-      <Editor langMapping={{}} editableFileTypes={['html']} wrapLines={true} />
-    );
-
-    const props = (CodeEditor as jest.Mock).mock.calls[0][0];
-    expect(props.editorConfigExtensions).toContain(EditorView.lineWrapping);
   });
 });
