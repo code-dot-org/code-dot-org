@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -76,7 +77,13 @@ export default class HeaderPopup extends Component {
     const toggleLabel = this.state.open ? i18n.less() : i18n.more();
     return (
       <div>
-        <Tooltip title={toggleLabel}>
+        <WithTooltip
+          tooltipProps={{
+            text: toggleLabel,
+            tooltipId: 'header-popup-toggle-tooltip',
+            size: 's',
+          }}
+        >
           <MuiIconButton
             type="button"
             className={classNames(
@@ -97,7 +104,7 @@ export default class HeaderPopup extends Component {
               aria-hidden="true"
             />
           </MuiIconButton>
-        </Tooltip>
+        </WithTooltip>
 
         {this.state.open && (
           <div>
