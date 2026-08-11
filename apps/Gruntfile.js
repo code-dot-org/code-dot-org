@@ -446,6 +446,8 @@ module.exports = function (grunt) {
       'bundle exec ./script/generateRegionConfigurations.rb',
     generateStudioRoutes: 'bundle exec ./script/generateStudioRoutes.rb',
     buildFrontendDependencies: './script/build-frontend-dependencies.sh',
+    watchFrontendDependencies:
+      './script/build-frontend-dependencies.sh --watch',
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
@@ -557,9 +559,9 @@ module.exports = function (grunt) {
   };
 
   config.concurrent = {
-    // run our two watch tasks concurrently so that they dont block each other
+    // run our watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: ['watch', 'webpack-dev-server'],
+      tasks: ['watch', 'webpack-dev-server', 'exec:watchFrontendDependencies'],
       options: {
         logConcurrentOutput: true,
       },
