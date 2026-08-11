@@ -27,6 +27,7 @@ import {
 } from '../appearance/appearanceImport';
 import {DEFAULT_BACKDROP_COLOR, type PropertyType} from '../engine';
 import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
+import {VIEWPORT_TILES} from '../runtime/viewport';
 
 import {
   actorInputExtension,
@@ -2601,6 +2602,61 @@ const worldMapSize = defineBlock({
 });
 
 /**
+ * Say how big the world is, in world pixels — the setter to `map size`.
+ *
+ * A world built from a `.map` file learns its size from the document. A world
+ * that arranges its own actors (`create ⟨kind⟩ in map`) has no document, so
+ * nothing ever tells it that the level is four screens wide — and every rule
+ * that asks goes on answering "one screen" without complaining. That is a
+ * camera that will not scroll, a "Stays in the Map" that clamps to the wrong
+ * rectangle, and a `random place` that only ever picks the first screen; all
+ * three fail by doing nothing, which is the worst way for a size to be wrong.
+ *
+ * TILES, and the block says so, although `map size` answers in pixels. A map
+ * is AUTHORED in tiles — it is what the map editor's Width and Height are, and
+ * what a `.map` file's `size` holds — while everything that READS a size is
+ * doing arithmetic against positions, which are pixels. Each end speaks the
+ * unit its own side works in, and the block is labelled rather than leaving a
+ * reader to find out which.
+ *
+ * The placement grid reads it, so widening the map widens the editor the
+ * arrangement is drawn on (fields/mapGridSize).
+ */
+const worldSetMapSize = defineBlock({
+  type: 'world_set_map_size',
+  message0: 'set size of map to x %1  y %2  tiles',
+  args0: [
+    {type: 'input_value', name: 'X', check: 'Number'},
+    {type: 'input_value', name: 'Y', check: 'Number'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  // `worldContext`, not `builderWorld`: the live World answers this too, so
+  // saying it mid-game is a legitimate thing to write rather than a mistake to
+  // warn about.
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'How big this world is, in tiles — the same Width and Height a map file ' +
+    'carries. Bigger than the view means the camera has somewhere to go. A ' +
+    'map loaded afterwards may still make it bigger.',
+  generator: {
+    javascript(block, generator) {
+      const x =
+        generator.valueToCode(block, 'X', Order.NONE) || String(VIEWPORT_TILES);
+      const y =
+        generator.valueToCode(block, 'Y', Order.NONE) || String(VIEWPORT_TILES);
+      return `world.setMapSize(${x}, ${y});\n`;
+    },
+  },
+});
+registerValueShadows('world_set_map_size', [
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: VIEWPORT_TILES}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: VIEWPORT_TILES}}},
+]);
+
+/**
  * How big the VIEW is, in world pixels — the window onto the world.
  *
  * Fixed (runtime/viewport), and a block rather than a number a learner types
@@ -5054,6 +5110,7 @@ export const DOMAIN_BLOCKS = [
   worldAllCameras,
   worldThisCamera,
   worldMapSize,
+  worldSetMapSize,
   worldActorAge,
   worldRandomPlace,
   worldTime,
@@ -5211,7 +5268,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // The one a camera-scoped step is running for — `this actor`'s
       // counterpart, and the only way such a step names its own subject.
       'world_this_camera',
-      // How big the level is, for anything that keeps a view inside it.
+      // How big the level is, for anything that keeps a view inside it — and
+      // how a world without a `.map` file says so in the first place.
+      'world_set_map_size',
       'world_map_size',
       'world_view_size',
       // …and how long it has been going, which is what every delay, cooldown

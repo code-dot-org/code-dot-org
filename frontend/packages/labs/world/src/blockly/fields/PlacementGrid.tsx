@@ -15,7 +15,7 @@ import {useMemo} from 'react';
 
 import type {Blockly} from '@code-dot-org/blockly';
 
-import {VIEWPORT_TILES, TILE_SIZE} from '../../runtime/viewport';
+import {TILE_SIZE} from '../../runtime/viewport';
 import {actorThumbnail} from '../actorThumbnails';
 import {localActorFor} from '../localActors';
 import {
@@ -26,6 +26,7 @@ import {
   type MapPlacement,
 } from '../mapPlacements';
 
+import {mapGridSize} from './mapGridSize';
 import styles from './placementGrid.module.css';
 
 export interface PlacementGridProps {
@@ -95,8 +96,14 @@ export const PlacementGrid = ({
     return cells;
   }, [sourceBlock, value, ownType, tile]);
 
-  const rows = Array.from({length: VIEWPORT_TILES}, (_, row) => row);
-  const columns = Array.from({length: VIEWPORT_TILES}, (_, column) => column);
+  // As big as the world says it is (./mapGridSize), which for a world that
+  // says nothing is one screen — the size this grid always used to be.
+  const grid = mapGridSize(sourceBlock);
+  // Cells shrink to fit a wide map, down to a floor a finger can still hit;
+  // past that the strip scrolls (placementGrid.module.css).
+  const cellSize = Math.max(12, Math.min(22, Math.floor(560 / grid.columns)));
+  const rows = Array.from({length: grid.rows}, (_, row) => row);
+  const columns = Array.from({length: grid.columns}, (_, column) => column);
 
   return (
     <div>
@@ -104,54 +111,59 @@ export const PlacementGrid = ({
         <span>Click to place, click again to remove</span>
         <span className={styles.count}>{value.length}</span>
       </div>
-      <div
-        className={styles.grid}
-        style={{gridTemplateColumns: `repeat(${VIEWPORT_TILES}, auto)`}}
-        role="grid"
-        aria-label="Map placements"
-      >
-        {rows.map(row =>
-          columns.map(column => {
-            const cell = {column, row};
-            const occupant = occupied.get(key(cell));
-            const thumbnail = occupant && actorThumbnail(occupant.type);
-            const mine = Boolean(placementAt(value, cell, tile));
-            return (
-              <button
-                key={key(cell)}
-                type="button"
-                className={styles.cell}
-                // Column and row, so the announcement is a place on the map;
-                // `aria-pressed` says whether this block has one there, which is
-                // exactly what the click toggles.
-                aria-label={`Column ${column + 1}, row ${row + 1}`}
-                aria-pressed={mine}
-                onClick={() => onChange(toggleCell(value, cell, tile))}
-              >
-                {occupant &&
-                  (thumbnail ? (
-                    <img
-                      className={
-                        occupant.mine
-                          ? styles.mine
-                          : `${styles.mine} ${styles.other}`
-                      }
-                      src={thumbnail}
-                      alt=""
-                    />
-                  ) : (
-                    <span
-                      className={
-                        occupant.mine
-                          ? styles.marker
-                          : `${styles.marker} ${styles.other}`
-                      }
-                    />
-                  ))}
-              </button>
-            );
-          }),
-        )}
+      <div className={styles.scroller}>
+        <div
+          className={styles.grid}
+          style={{
+            gridTemplateColumns: `repeat(${grid.columns}, auto)`,
+            ['--placement-cell' as string]: `${cellSize}px`,
+          }}
+          role="grid"
+          aria-label="Map placements"
+        >
+          {rows.map(row =>
+            columns.map(column => {
+              const cell = {column, row};
+              const occupant = occupied.get(key(cell));
+              const thumbnail = occupant && actorThumbnail(occupant.type);
+              const mine = Boolean(placementAt(value, cell, tile));
+              return (
+                <button
+                  key={key(cell)}
+                  type="button"
+                  className={styles.cell}
+                  // Column and row, so the announcement is a place on the map;
+                  // `aria-pressed` says whether this block has one there, which is
+                  // exactly what the click toggles.
+                  aria-label={`Column ${column + 1}, row ${row + 1}`}
+                  aria-pressed={mine}
+                  onClick={() => onChange(toggleCell(value, cell, tile))}
+                >
+                  {occupant &&
+                    (thumbnail ? (
+                      <img
+                        className={
+                          occupant.mine
+                            ? styles.mine
+                            : `${styles.mine} ${styles.other}`
+                        }
+                        src={thumbnail}
+                        alt=""
+                      />
+                    ) : (
+                      <span
+                        className={
+                          occupant.mine
+                            ? styles.marker
+                            : `${styles.marker} ${styles.other}`
+                        }
+                      />
+                    ))}
+                </button>
+              );
+            }),
+          )}
+        </div>
       </div>
     </div>
   );

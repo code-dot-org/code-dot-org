@@ -39,7 +39,7 @@ import type {
   WorldQuery,
 } from './types';
 import {Vector} from './Vector';
-import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from './viewport';
+import {TILE_SIZE, VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from './viewport';
 
 /**
  * The part of an `ActorBuilder` that placing one needs.
@@ -861,6 +861,38 @@ export class World {
    */
   viewSize(): Vector {
     return new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
+  }
+
+  /**
+   * Say how big the world is, in TILES.
+   *
+   * The other way bounds are decided, and the only one a world without a
+   * `.map` file has: `growToFit` learns the size from a document, and this is
+   * a world stating it. A world that places its actors with `create in map`
+   * arranges them in the block rather than in a document, so nothing would
+   * otherwise ever tell it that the level is four screens wide — and every
+   * rule that asks (`Camera Confined`, "Stays in the Map", `random place`)
+   * would go on answering "one screen" without complaining.
+   *
+   * TILES, although `mapBounds` answers in pixels, and the asymmetry is the
+   * right way round. A map is AUTHORED in tiles — it is what the map editor's
+   * Width and Height are, and what a `.map` file's `size` holds — while
+   * everything that reads a size is doing arithmetic against positions, which
+   * are pixels. So the unit each end uses is the unit its own side works in,
+   * and the conversion happens once, here.
+   *
+   * Against the engine's `TILE_SIZE`, since a world stating its own size has
+   * no document to carry a tile size of its own.
+   *
+   * SET rather than grow, unlike `growToFit`. This is a world saying what it
+   * is, so it wins over the default; a map loaded afterwards may still grow it
+   * past this, which keeps "as big as the biggest thing in it" true.
+   */
+  setMapSize(columns: number, rows: number): void {
+    this.bounds = new Vector(
+      Math.max(0, Math.round(columns)) * TILE_SIZE || VIEWPORT_WIDTH,
+      Math.max(0, Math.round(rows)) * TILE_SIZE || VIEWPORT_HEIGHT,
+    );
   }
 
   /**

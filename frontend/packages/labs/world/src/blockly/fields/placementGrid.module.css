@@ -1,7 +1,21 @@
 /* The map field's popup: a grid you click. Small on purpose — it is a field
    editor, not a window. */
 
+/* A wide map does not fit in a field editor and should not try to. The grid
+   shrinks its cells to a floor and then scrolls, so a 48-tile level is a strip
+   you pan rather than a popup the size of the screen. */
+.scroller {
+  max-width: 560px;
+  max-height: 60vh;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
 .grid {
+  /* Set per-instance from the number of columns; the fallback is the size the
+     grid was when every map was ten tiles across. */
+  --placement-cell: 22px;
+  width: max-content;
   display: grid;
   gap: 1px;
   background: rgb(255 255 255 / 0.12);
@@ -14,8 +28,8 @@
 .cell {
   position: relative;
   display: block;
-  width: 22px;
-  height: 22px;
+  width: var(--placement-cell);
+  height: var(--placement-cell);
   padding: 0;
   border: 0;
   background: #151521;

@@ -69,9 +69,9 @@ import {TILE_SIZE} from '../runtime/viewport';
 const at = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;
 
 /** How many tiles across the level is — four and a bit screens. */
-const MAP_COLUMNS = 48;
+export const MAP_COLUMNS = 48;
 /** …and how many down, which is exactly one screen. See the header. */
-const MAP_ROWS = 10;
+export const MAP_ROWS = 10;
 
 const place = (type: string, id: string, column: number, row: number) => ({
   type,
@@ -111,6 +111,24 @@ const pipe = (column: number, gapTop: number) => {
   );
 };
 
+/**
+ * Everything the level places, in the order the map lists it.
+ *
+ * Exported because the level is told twice, as `./platformerSingle` tells the
+ * starter's twice: as this `.map` file, and as `create ⟨kind⟩ in map`
+ * arrangements grouped by kind. A second hand-written board would be a second
+ * board, and the pair is only worth having if the board in it is the same one.
+ */
+export const FLAPPY_ACTORS = [
+  place('actors/bird', 'Bird', 2, 5),
+  ...PIPES.flatMap(([column, gapTop]) => pipe(column, gapTop)),
+  // A coin in the middle of each gap: the reward for going through rather
+  // than over, and the only score this game has.
+  ...PIPES.map(([column, gapTop], index) =>
+    place('actors/coin', `Coin${index}`, column, gapTop + 1),
+  ),
+];
+
 const FLAPPY_MAP = JSON.stringify(
   {
     type: 'map',
@@ -118,30 +136,25 @@ const FLAPPY_MAP = JSON.stringify(
     // is what "Confined to the Map" stops the view against.
     size: {width: MAP_COLUMNS, height: MAP_ROWS},
     tile: {width: TILE_SIZE, height: TILE_SIZE},
-    actors: [
-      place('actors/bird', 'Bird', 2, 5),
-      ...PIPES.flatMap(([column, gapTop]) => pipe(column, gapTop)),
-      // A coin in the middle of each gap: the reward for going through rather
-      // than over, and the only score this game has.
-      ...PIPES.map(([column, gapTop], index) =>
-        place('actors/coin', `Coin${index}`, column, gapTop + 1),
-      ),
-    ],
+    actors: FLAPPY_ACTORS,
   },
   null,
   2,
 );
 
 /** `⟨this actor⟩`. */
-const me = () => ({block: {type: 'world_this_actor'}});
+export const me = () => ({block: {type: 'world_this_actor'}});
 
-const number = (value: number) => ({
+export const number = (value: number) => ({
   block: {type: 'math_number', fields: {NUM: value}},
 });
 
-const vector = (x: number, y: number) => ({
+export const vector = (x: number, y: number) => ({
   block: {type: 'world_vector', fields: {VECTOR: {x, y}}},
 });
+
+/** What the world sets `amount of gravity` to. See {@link FLAP}. */
+export const GRAVITY = 9;
 
 /**
  * How fast the bird goes forward, and how hard a flap throws it up.
@@ -150,7 +163,7 @@ const vector = (x: number, y: number) => ({
  * (`WorldLab.PIXELS_PER_UNIT`) — Physics integrates `velocity x frameTime x
  * pixelsPerUnit`, so nothing here is per-frame and none of it changes if the
  * frame rate does. The world's `amount of gravity` is in the same units per
- * second SQUARED, which is why it reads as 18 rather than as something small.
+ * second SQUARED, which is why it reads as 9 rather than as something small.
  *
  * Worth writing down because getting it wrong is not subtle, and it was got
  * wrong twice: at 3 the first press sends the bird off the top of the level
@@ -172,8 +185,8 @@ const vector = (x: number, y: number) => ({
  * and the whole of it takes half again as long. That is the difference between
  * "too fast to react to" and this.
  */
-const FORWARD = 1.0;
-const FLAP = -2.8;
+export const FORWARD = 1.0;
+export const FLAP = -2.8;
 
 const BIRD_ACTOR = JSON.stringify({
   blocks: {
@@ -368,7 +381,7 @@ const FLAPPY_WORLD = JSON.stringify({
             // instructions point at it.
             {
               type: 'world_set_Gravity_AmountOfGravityProperty',
-              inputs: {VALUE: number(9)},
+              inputs: {VALUE: number(GRAVITY)},
             },
             {type: 'world_load_map', fields: {MAP: 'maps/flappy'}},
             // AFTER the map, and this is the one ordering that matters here.
@@ -411,6 +424,81 @@ const FLAPPY_WORLD = JSON.stringify({
     ],
   },
 });
+
+/**
+ * The rules and pictures, which are the same in both tellings.
+ *
+ * Neither is an actor and neither is the map, so neither moves into the
+ * world when the actors do — `./flappySingle` takes this list whole. A copy
+ * would be a copy that could go stale.
+ */
+export const FLAPPY_SUPPORT_FILES: ProjectSpec['files'] = {
+  motionRuleFile: {
+    name: 'motion.rule',
+    language: 'rule',
+    contents: motionRule,
+    folderId: 'rules',
+  },
+  collisionsRuleFile: {
+    name: 'collisions.rule',
+    language: 'rule',
+    contents: collisionsRule,
+    folderId: 'rules',
+  },
+  // Gravity requires it — landing is worked out against solid ground, and a
+  // project that names Gravity and does not hold this fails to COMPILE with
+  // "cannot resolve 'Solid Bodies'". Nothing here is solid; the rule is a
+  // dependency, not a mechanic this game chose.
+  solidRuleFile: {
+    name: 'solid.rule',
+    language: 'rule',
+    contents: solidRule,
+    folderId: 'rules',
+  },
+  gravityRuleFile: {
+    name: 'gravity.rule',
+    language: 'rule',
+    contents: gravityRule,
+    folderId: 'rules',
+  },
+  inputRuleFile: {
+    name: 'input.rule',
+    language: 'rule',
+    contents: inputRule,
+    folderId: 'rules',
+  },
+  collectRuleFile: {
+    name: 'collect.rule',
+    language: 'rule',
+    contents: collectRule,
+    folderId: 'rules',
+  },
+  cameraRuleFile: {
+    name: 'camera.rule',
+    language: 'rule',
+    contents: cameraRule,
+    folderId: 'rules',
+  },
+  cameraFollowRuleFile: {
+    name: 'cameraFollow.rule',
+    language: 'rule',
+    contents: cameraFollowRule,
+    folderId: 'rules',
+  },
+  cameraConfinedRuleFile: {
+    name: 'cameraConfined.rule',
+    language: 'rule',
+    contents: cameraConfinedRule,
+    folderId: 'rules',
+  },
+  animationRuleFile: {
+    name: 'animation.js',
+    language: 'javascript',
+    contents: ruleShim('AnimationRule'),
+    folderId: 'rules',
+  },
+  ...starterSprites(['ship', 'ground', 'coin']),
+};
 
 export const FLAPPY_SPEC: ProjectSpec = {
   folders: [
@@ -456,71 +544,7 @@ export const FLAPPY_SPEC: ProjectSpec = {
       contents: FLAPPY_MAP,
       folderId: 'maps',
     },
-    motionRuleFile: {
-      name: 'motion.rule',
-      language: 'rule',
-      contents: motionRule,
-      folderId: 'rules',
-    },
-    collisionsRuleFile: {
-      name: 'collisions.rule',
-      language: 'rule',
-      contents: collisionsRule,
-      folderId: 'rules',
-    },
-    // Gravity requires it — landing is worked out against solid ground, and a
-    // project that names Gravity and does not hold this fails to COMPILE with
-    // "cannot resolve 'Solid Bodies'". Nothing here is solid; the rule is a
-    // dependency, not a mechanic this game chose.
-    solidRuleFile: {
-      name: 'solid.rule',
-      language: 'rule',
-      contents: solidRule,
-      folderId: 'rules',
-    },
-    gravityRuleFile: {
-      name: 'gravity.rule',
-      language: 'rule',
-      contents: gravityRule,
-      folderId: 'rules',
-    },
-    inputRuleFile: {
-      name: 'input.rule',
-      language: 'rule',
-      contents: inputRule,
-      folderId: 'rules',
-    },
-    collectRuleFile: {
-      name: 'collect.rule',
-      language: 'rule',
-      contents: collectRule,
-      folderId: 'rules',
-    },
-    cameraRuleFile: {
-      name: 'camera.rule',
-      language: 'rule',
-      contents: cameraRule,
-      folderId: 'rules',
-    },
-    cameraFollowRuleFile: {
-      name: 'cameraFollow.rule',
-      language: 'rule',
-      contents: cameraFollowRule,
-      folderId: 'rules',
-    },
-    cameraConfinedRuleFile: {
-      name: 'cameraConfined.rule',
-      language: 'rule',
-      contents: cameraConfinedRule,
-      folderId: 'rules',
-    },
-    animationRuleFile: {
-      name: 'animation.js',
-      language: 'javascript',
-      contents: ruleShim('AnimationRule'),
-      folderId: 'rules',
-    },
-    ...starterSprites(['ship', 'ground', 'coin']),
+    ...FLAPPY_SUPPORT_FILES,
   },
   open: ['main'],
 };
