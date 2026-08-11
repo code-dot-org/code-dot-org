@@ -2,6 +2,7 @@ import {expect, type Locator, type Page} from '@playwright/test';
 
 import {AuthoredHintsComponent} from '../components/authored-hints';
 import {CalloutsComponent} from '../components/callouts';
+import {FeedbackDialogComponent} from '../components/feedback-dialog';
 import {VideoModalComponent} from '../components/video-modal';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 import {waitUntilStable} from '../shared/stability';
@@ -56,11 +57,8 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
-  /** Congratulations/feedback dialog selector; a11y scans scope here. */
-  readonly congratsModalSelector = '.modal';
-
-  /** Congratulations overlay shown on puzzle completion. */
-  readonly congratsMessage: Locator;
+  /** Run-feedback dialog shown after a program runs (congrats, or the failure message). */
+  readonly feedbackDialog: FeedbackDialogComponent;
 
   /**
    * Last link in the level's "Need help? See these videos and hints"
@@ -109,7 +107,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       '#showCodeModal [role="presentation"]',
     );
     this.inlineFeedback = page.locator(this.inlineFeedbackSelector);
-    this.congratsMessage = page.locator('.congrats');
+    this.feedbackDialog = new FeedbackDialogComponent(page);
     this.referenceAreaLastLink = page.locator('.reference_area a').last();
     this.visualization = page.locator('#visualization');
     this.continueButton = page.locator('#continue-button');
@@ -252,8 +250,8 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   }
 
   /** A block's rendered SVG group, scoped to where it is nested under a given parent block's group. */
-  blockChild(childId: string, parentId: string): Locator {
-    return this.blockLocator(parentId).locator(`[data-id="${childId}"]`);
+  blockChild({child, parent}: {child: string; parent: string}): Locator {
+    return this.blockLocator(parent).locator(`[data-id="${child}"]`);
   }
 
   /**

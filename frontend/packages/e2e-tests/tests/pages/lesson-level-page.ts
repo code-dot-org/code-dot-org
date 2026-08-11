@@ -1,7 +1,7 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
 import {IntroVideoModalComponent} from '../components/intro-video-modal';
-import {progressBubbleShows} from '../shared/progress';
+import {ProgressBubble} from '../components/progress-bubble';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 
 import {BasePage} from './base-page';
@@ -69,34 +69,12 @@ export class LessonLevelPage extends BasePage {
   }
 
   /** Progress bubble for a 1-based level number (see progress.rb header_bubble_selector). */
-  headerProgressBubble(levelNum: number): Locator {
-    return this.lessonProgress
-      .locator('a')
-      .nth(levelNum - 1)
-      .locator('.progress-bubble');
-  }
-
-  /** Whether the level's header bubble shows 'perfect' (see progress.rb verify_progress). */
-  async isProgressBubblePerfect(levelNum: number): Promise<boolean> {
-    return progressBubbleShows({
-      bubble: this.headerProgressBubble(levelNum),
-      state: 'perfect',
-    });
-  }
-
-  /** Whether the level's header bubble shows 'not_tried' (see progress.rb verify_progress). */
-  async isProgressBubbleNotTried(levelNum: number): Promise<boolean> {
-    return progressBubbleShows({
-      bubble: this.headerProgressBubble(levelNum),
-      state: 'not_tried',
-    });
-  }
-
-  /** Whether the level's header bubble shows 'attempted' (see progress.rb verify_progress). */
-  async isProgressBubbleAttempted(levelNum: number): Promise<boolean> {
-    return progressBubbleShows({
-      bubble: this.headerProgressBubble(levelNum),
-      state: 'attempted',
-    });
+  headerProgressBubble(levelNum: number): ProgressBubble {
+    return new ProgressBubble(
+      this.lessonProgress
+        .locator('a')
+        .nth(levelNum - 1)
+        .locator('.progress-bubble'),
+    );
   }
 }

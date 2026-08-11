@@ -84,8 +84,10 @@ test.describe('Playing multi levels 3', () => {
     // --- it is marked complete and the answers lock in-session ---
     await expect(level.modalTitle).toContainText('Incorrect answer');
     // 'perfect' = submitted: a no-retry level completes on any answer.
-    await expect(level.headerProgressBubble(5)).toBeVisible();
-    await expect.poll(() => level.isProgressBubblePerfect(5)).toBe(true);
+    await expect(level.headerProgressBubble(5).locator).toBeVisible();
+    await expect
+      .poll(() => level.headerProgressBubble(5).shows('perfect'))
+      .toBe(true);
 
     await level.dismissModal();
 

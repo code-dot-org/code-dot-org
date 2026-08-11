@@ -56,7 +56,7 @@ test.describe('Playing the Artist Game', () => {
     await artist.run();
 
     await expect(artist.resetButton).toBeVisible();
-    await expect(artist.congratsMessage).toBeVisible();
+    await expect(artist.feedbackDialog.congratsMessage).toBeVisible();
 
     await artist.continue();
     await expect(page).toHaveURL(

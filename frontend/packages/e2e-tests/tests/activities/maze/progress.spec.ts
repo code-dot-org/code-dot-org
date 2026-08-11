@@ -47,11 +47,13 @@ test.describe('Level Progress', () => {
 
       const maze = new LegacyBlocklyLab(page);
       await solveLevelOne(maze);
-      await expect(maze.congratsMessage).toBeVisible(poll);
+      await expect(maze.feedbackDialog.congratsMessage).toBeVisible(poll);
 
-      await expect.poll(() => maze.isProgressBubblePerfect(1), poll).toBe(true);
       await expect
-        .poll(() => maze.isProgressBubbleNotTried(2), poll)
+        .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
+        .toBe(true);
+      await expect
+        .poll(() => maze.headerProgressBubble(2).shows('not_tried'), poll)
         .toBe(true);
 
       expect(
@@ -63,9 +65,11 @@ test.describe('Level Progress', () => {
 
       await maze.gotoLevel({lesson: 2, level: 2});
 
-      await expect.poll(() => maze.isProgressBubblePerfect(1), poll).toBe(true);
       await expect
-        .poll(() => maze.isProgressBubbleNotTried(2), poll)
+        .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
+        .toBe(true);
+      await expect
+        .poll(() => maze.headerProgressBubble(2).shows('not_tried'), poll)
         .toBe(true);
 
       const unitOverview = new UnitOverviewPage(page);
@@ -74,13 +78,19 @@ test.describe('Level Progress', () => {
 
       await expect
         .poll(
-          () => unitOverview.isProgressBubblePerfect({lesson: 2, level: 1}),
+          () =>
+            unitOverview
+              .summaryProgressBubble({lesson: 2, level: 1})
+              .shows('perfect'),
           poll,
         )
         .toBe(true);
       await expect
         .poll(
-          () => unitOverview.isProgressBubbleNotTried({lesson: 2, level: 2}),
+          () =>
+            unitOverview
+              .summaryProgressBubble({lesson: 2, level: 2})
+              .shows('not_tried'),
           poll,
         )
         .toBe(true);
@@ -111,19 +121,23 @@ test.describe('Level Progress', () => {
       // level page instead, where that widget renders normally.
       const maze = new LegacyBlocklyLab(page);
       await solveLevelOne(maze);
-      await expect(maze.congratsMessage).toBeVisible(poll);
+      await expect(maze.feedbackDialog.congratsMessage).toBeVisible(poll);
       await maze.header.waitForSignedOut();
 
-      await expect.poll(() => maze.isProgressBubblePerfect(1), poll).toBe(true);
       await expect
-        .poll(() => maze.isProgressBubbleNotTried(2), poll)
+        .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
+        .toBe(true);
+      await expect
+        .poll(() => maze.headerProgressBubble(2).shows('not_tried'), poll)
         .toBe(true);
 
       await maze.gotoLevel({lesson: 2, level: 2});
 
-      await expect.poll(() => maze.isProgressBubblePerfect(1), poll).toBe(true);
       await expect
-        .poll(() => maze.isProgressBubbleNotTried(2), poll)
+        .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
+        .toBe(true);
+      await expect
+        .poll(() => maze.headerProgressBubble(2).shows('not_tried'), poll)
         .toBe(true);
 
       const unitOverview = new UnitOverviewPage(page);
@@ -132,13 +146,19 @@ test.describe('Level Progress', () => {
 
       await expect
         .poll(
-          () => unitOverview.isProgressBubblePerfect({lesson: 2, level: 1}),
+          () =>
+            unitOverview
+              .summaryProgressBubble({lesson: 2, level: 1})
+              .shows('perfect'),
           poll,
         )
         .toBe(true);
       await expect
         .poll(
-          () => unitOverview.isProgressBubbleNotTried({lesson: 2, level: 2}),
+          () =>
+            unitOverview
+              .summaryProgressBubble({lesson: 2, level: 2})
+              .shows('not_tried'),
           poll,
         )
         .toBe(true);

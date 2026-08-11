@@ -1,5 +1,10 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {LegacyDialogComponent} from './legacy-dialog';
+
+/** Root selector; a11y scans scope here. */
+export const VIDEO_MODAL_SELECTOR = '.video-modal';
+
 /**
  * The level-video modal (apps/src/code-studio/videos.js): autoplays once per
  * browser session for a level with an autoplaying video, or reopens on demand
@@ -10,19 +15,16 @@ import {expect, type Locator, type Page} from '@playwright/test';
  * suppresses only the automatic autoplay trigger, not manual reopening, and
  * scopes to the browser context, not the account.
  */
-export class VideoModalComponent {
+export class VideoModalComponent extends LegacyDialogComponent {
   /** Root selector; a11y scans scope here. */
-  readonly rootSelector = '.video-modal';
-
-  /** The modal container (a fixed, full-viewport overlay). */
-  readonly root: Locator;
+  readonly rootSelector = VIDEO_MODAL_SELECTOR;
 
   /** The embedded (cross-origin) YouTube player iframe. */
   readonly videoFrame: Locator;
 
   constructor(page: Page) {
-    this.root = page.locator(this.rootSelector);
-    this.videoFrame = this.root.locator('iframe#video');
+    super(page.locator(VIDEO_MODAL_SELECTOR));
+    this.videoFrame = this.container.locator('iframe#video');
   }
 
   /**

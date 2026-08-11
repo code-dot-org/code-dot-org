@@ -3,7 +3,6 @@ import {LegacyBlocklyLab} from '../../pages/legacy-blockly-lab';
 import {UnitOverviewPage} from '../../pages/unit-overview-page';
 import {resetSession} from '../../shared/auth';
 import {analyze, WCAG_AA_TAGS} from '../../shared/axe';
-import {closeDialog} from '../../shared/dialog';
 import {labLevelUrl, unitResetUrl} from '../../shared/routes';
 
 import {TWO_MOVE_FORWARD_BLOCKS} from './blocks';
@@ -107,46 +106,57 @@ test.describe('Maze level tests for users that are signed out', () => {
     await maze.loadBlocks(TWO_MOVE_FORWARD_BLOCKS);
     await maze.run();
 
-    await expect(maze.congratsMessage).toBeVisible();
-    await expect(maze.congratsMessage).toContainText('You completed Puzzle 1.');
+    await expect(maze.feedbackDialog.congratsMessage).toBeVisible();
+    await expect(maze.feedbackDialog.congratsMessage).toContainText(
+      'You completed Puzzle 1.',
+    );
 
     expect(
       await analyze(page, {
-        include: maze.congratsModalSelector,
+        include: maze.feedbackDialog.rootSelector,
         tags: WCAG_AA_TAGS,
       }),
     ).toEqual(EXPECTED_VIOLATIONS.congratsDialog);
 
-    await closeDialog(page);
-    await expect(maze.congratsMessage).toBeHidden();
+    await maze.feedbackDialog.close();
+    await expect(maze.feedbackDialog.congratsMessage).toBeHidden();
     // Closing the dialog doesn't redirect to the next level.
     await expect(page).toHaveURL(levelOneUrl);
 
     await maze.gotoLevel({course: MAZE_COURSE, lesson: 1, level: 2});
-    await expect.poll(() => maze.isProgressBubblePerfect(1), poll).toBe(true);
+    await expect
+      .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
+      .toBe(true);
 
     const unitOverview = new UnitOverviewPage(page);
     await unitOverview.gotoOverview({course: MAZE_COURSE});
     await expect
       .poll(
-        () => unitOverview.isProgressBubblePerfect({lesson: 1, level: 1}),
+        () =>
+          unitOverview
+            .summaryProgressBubble({lesson: 1, level: 1})
+            .shows('perfect'),
         poll,
       )
       .toBe(true);
 
     // A different course's own progress is unaffected.
     await maze.gotoLevel({course: ARTIST_COURSE, lesson: 1, level: 2});
-    await expect.poll(() => maze.isProgressBubbleNotTried(1), poll).toBe(true);
+    await expect
+      .poll(() => maze.headerProgressBubble(1).shows('not_tried'), poll)
+      .toBe(true);
 
     // The solved level source (the two chained blocks) is saved...
     await maze.gotoLevel({course: MAZE_COURSE, lesson: 1, level: 1});
-    await expect(maze.blockChild('moveForward', 'startBlock')).toBeAttached();
+    await expect(
+      maze.blockChild({child: 'moveForward', parent: 'startBlock'}),
+    ).toBeAttached();
 
     // ...and reset clears it.
     await page.goto(unitResetUrl({course: MAZE_COURSE}));
     await maze.gotoLevel({course: MAZE_COURSE, lesson: 1, level: 1});
     await expect(
-      maze.blockChild('moveForward', 'startBlock'),
+      maze.blockChild({child: 'moveForward', parent: 'startBlock'}),
     ).not.toBeAttached();
   });
 
@@ -174,13 +184,18 @@ test.describe('Maze level tests for users that are signed out', () => {
     await page.reload();
     await maze.waitForReady();
 
-    await expect.poll(() => maze.isProgressBubbleAttempted(1), poll).toBe(true);
+    await expect
+      .poll(() => maze.headerProgressBubble(1).shows('attempted'), poll)
+      .toBe(true);
 
     const unitOverview = new UnitOverviewPage(page);
     await unitOverview.gotoOverview({course: MAZE_COURSE});
     await expect
       .poll(
-        () => unitOverview.isProgressBubbleAttempted({lesson: 1, level: 1}),
+        () =>
+          unitOverview
+            .summaryProgressBubble({lesson: 1, level: 1})
+            .shows('attempted'),
         poll,
       )
       .toBe(true);
@@ -205,7 +220,7 @@ test.describe('Maze level tests for users that are signed out', () => {
           noautoplay: false,
         }),
       );
-      await expect(maze.videoModal.root).toBeVisible();
+      await expect(maze.videoModal.container).toBeVisible();
       await maze.videoModal.waitForVideoLoaded();
 
       expect(
@@ -215,7 +230,7 @@ test.describe('Maze level tests for users that are signed out', () => {
         }),
       ).toEqual(expectedVideoModalViolations(browserName));
 
-      await closeDialog(page);
+      await maze.videoModal.close();
 
       await maze.gotoLevel({
         course: MAZE_COURSE,
