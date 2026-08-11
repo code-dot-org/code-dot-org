@@ -386,6 +386,19 @@ $tab-segment-height: $tab-item-height - 2px;
     }
   }
 
+  // A leading heading sits flush with the panel's own padding; one that
+  // follows other content keeps a little separation.
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0 0 6px;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
   a {
     color: #8ab4f8;
   }

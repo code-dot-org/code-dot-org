@@ -104,14 +104,12 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
-    // Density-aware background rendering, scoped to Lab2. The shared
-    // CoreLibrary path resizes every background to 400px — the canvas's
-    // logical size, not its physical one — and re-runs the (destructive,
-    // double-copy) resize every frame; on this lab's denser canvas the
-    // background is the one soft thing on the stage. Here: resize once to
-    // the physical resolution, then one blit per frame into the 400px
-    // logical box. The same fix is proposed for classic Sprite Lab in its
-    // own PR; when that lands, delete this override.
+    // Density-aware background rendering, scoped to Lab2 — the only lab
+    // whose backgrounds outresolve the canvas (1024px generated images;
+    // classic's library backgrounds are authored at ~400px, so the shared
+    // CoreLibrary path rightly keeps its 400px target). Resize once to the
+    // canvas's physical resolution, then one blit per frame into the 400px
+    // logical box.
     library.drawBackground = function () {
       if (typeof this.background === 'string') {
         this.p5.background(this.background);
