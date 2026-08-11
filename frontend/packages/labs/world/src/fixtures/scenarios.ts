@@ -25,6 +25,7 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {buildProject, DEFAULT_PROJECT, type ProjectSpec} from '../constants';
+import type {WorldLevelData} from '../levelData';
 
 import {BREAKOUT_SPEC} from './breakout';
 import {BREAKOUT_SINGLE_SPEC} from './breakoutSingle';
@@ -66,7 +67,28 @@ export interface WorldScenario {
   source: MultiFileSource;
   /** The level's instructions panel, as markdown. */
   instructions: string;
+  /**
+   * What this level says about the editor, if anything (../levelData).
+   *
+   * Everything in it is a teaching decision rather than a preference, which is
+   * why it is a level's to make and not the lab's. Omitted by a scenario that
+   * wants the editor's defaults, which is most of them.
+   */
+  levelData?: WorldLevelData;
 }
+
+/**
+ * What a single-world scenario says: there is one file, so there is no file
+ * browser.
+ *
+ * The claim those scenarios make is that the game is said entirely in
+ * `main.world`, and a sidebar listing eleven other files argues with it — the
+ * first thing it invites is the click that leaves the one file the scenario is
+ * about. The files are still THERE and still compiled; what is gone is the
+ * list. A rule is still reachable from the block that names it, which is the
+ * way in that belongs to the lesson rather than beside it.
+ */
+const ONE_FILE: WorldLevelData = {showFileBrowser: false};
 
 /**
  * An empty project: the folders and one world that does nothing.
@@ -133,6 +155,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'defined in it, the board is `create in map`, and the player’s five ' +
       'handlers are hats.',
     source: buildProject(PLATFORMER_SINGLE_SPEC).source,
+    levelData: ONE_FILE,
     instructions:
       '## The starter, in one file\n\nThe same game as **Platformer**, said ' +
       'entirely in `main.world`.\n\n' +
@@ -143,8 +166,9 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- The player’s handlers are hats on `any ⟨Player⟩`, so they belong to ' +
       'every player there will be — add a second one to the arrangement and ' +
       'it jumps too\n' +
-      '- The rules, the animations and the pictures are files in both: they ' +
-      'were never actors, so there was nothing to move',
+      '- The rules, the animations and the pictures are still files — they ' +
+      'were never actors, so there was nothing to move. There is no file ' +
+      'list here, so open a rule from the ⟨eye⟩ on the block that names it',
   },
   breakout: {
     name: 'Breakout',
@@ -167,6 +191,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'The same game with nothing outside main.world: the actors are defined ' +
       'in it and the board is `create in map`. What a file buys, as a diff.',
     source: buildProject(BREAKOUT_SINGLE_SPEC).source,
+    levelData: ONE_FILE,
     instructions:
       '## Breakout, in one file\n\nThe same game as **Breakout**, said ' +
       'entirely in `main.world`.\n\n' +
@@ -198,6 +223,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'The same game with nothing outside main.world — including the handler ' +
       'that spawns a shot, which is what breakout has no equivalent of.',
     source: buildProject(METEORS_SINGLE_SPEC).source,
+    levelData: ONE_FILE,
     instructions:
       '## Meteors, in one file\n\nThe same game as **Meteors**, said ' +
       'entirely in `main.world`.\n\n' +

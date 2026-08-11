@@ -13,6 +13,7 @@ import {
   WorldFixtures,
   DEFAULT_SCENARIO_TAG,
   isScenarioTag,
+  type WorldScenarioTag,
 } from '../index';
 
 describe('the scenario catalogue', () => {
@@ -404,6 +405,38 @@ describe('the scenario catalogue', () => {
         .sort();
 
     expect(named('meteors-single')).toEqual(named('meteors'));
+  });
+
+  it('leaves the file list out of the scenarios with one file', () => {
+    // A sidebar listing eleven files argues with a scenario whose whole claim
+    // is that the game is said in `main.world` — and the first thing it
+    // invites is the click that leaves it. Paired with the assertion that the
+    // others keep it, because "hide the browser" applied to the starter would
+    // be a project whose actors cannot be opened at all.
+    const hides = (tag: WorldScenarioTag) =>
+      WORLD_SCENARIOS[tag].levelData?.showFileBrowser === false;
+
+    const single = WORLD_SCENARIO_TAGS.filter(tag => tag.endsWith('-single'));
+    expect(single.length).toBe(3);
+    for (const tag of single) {
+      expect(hides(tag)).toBe(true);
+    }
+    for (const tag of WORLD_SCENARIO_TAGS.filter(t => !t.endsWith('-single'))) {
+      expect(hides(tag)).toBe(false);
+    }
+  });
+
+  it('carries a scenario’s levelData into what the host is served', () => {
+    // The level properties are written once for all of them, so this is the
+    // one field that has to be threaded through rather than stated — and a
+    // scenario that set it and did not get it would look exactly like a
+    // scenario that did not set it.
+    for (const tag of WORLD_SCENARIO_TAGS) {
+      const level = WorldFixtures[tag].levelProperties?.['1'] as {
+        levelData?: object;
+      };
+      expect(level.levelData).toEqual(WORLD_SCENARIOS[tag].levelData);
+    }
   });
 
   it('writes the level properties once, for all of them', () => {
