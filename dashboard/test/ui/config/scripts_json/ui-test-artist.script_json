@@ -61,7 +61,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-11 04:18:39 UTC",
+    "serialized_at": "2026-08-11 16:55:56 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -275,13 +275,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Standalone_Artist_1"
+          "UI Test Standalone_Artist_1"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Standalone_Artist_1"
+          "UI Test Standalone_Artist_1"
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
@@ -289,7 +289,7 @@
         "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
       },
       "level_keys": [
-        "Standalone_Artist_1"
+        "UI Test Standalone_Artist_1"
       ]
     },
     {
@@ -299,13 +299,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Standalone_Artist_2"
+          "UI Test Standalone_Artist_2"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Standalone_Artist_2"
+          "UI Test Standalone_Artist_2"
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
@@ -313,7 +313,7 @@
         "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
       },
       "level_keys": [
-        "Standalone_Artist_2"
+        "UI Test Standalone_Artist_2"
       ]
     },
     {
@@ -323,13 +323,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Standalone_Artist_9"
+          "UI Test Standalone_Artist_9"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Standalone_Artist_9"
+          "UI Test Standalone_Artist_9"
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
@@ -337,16 +337,16 @@
         "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
       },
       "level_keys": [
-        "Standalone_Artist_9"
+        "UI Test Standalone_Artist_9"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "Standalone_Artist_1",
+        "level.key": "UI Test Standalone_Artist_1",
         "script_level.level_keys": [
-          "Standalone_Artist_1"
+          "UI Test Standalone_Artist_1"
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
@@ -356,9 +356,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Standalone_Artist_2",
+        "level.key": "UI Test Standalone_Artist_2",
         "script_level.level_keys": [
-          "Standalone_Artist_2"
+          "UI Test Standalone_Artist_2"
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
@@ -368,9 +368,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Standalone_Artist_9",
+        "level.key": "UI Test Standalone_Artist_9",
         "script_level.level_keys": [
-          "Standalone_Artist_9"
+          "UI Test Standalone_Artist_9"
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
