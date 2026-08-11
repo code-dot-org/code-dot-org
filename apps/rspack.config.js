@@ -80,7 +80,7 @@ let RSPACK_SWC = 'all';
 if (rawSwc !== undefined) {
   if (SWC_OFF.includes(rawSwc)) {
     RSPACK_SWC = '';
-  } else if (SWC_MODES[rawSwc]) {
+  } else if (Object.hasOwn(SWC_MODES, rawSwc)) {
     RSPACK_SWC = SWC_MODES[rawSwc];
   } else {
     console.warn(
@@ -688,6 +688,7 @@ function createRspackConfig({
             {
               apply(compiler) {
                 const matched = new Set();
+                let warnedEmptyKey = null;
                 compiler.hooks.done.tap('DevtoolScopeReport', stats => {
                   if (matched.size === scopeRegexes.length) {
                     return;
@@ -724,7 +725,13 @@ function createRspackConfig({
                         'everything else is unmapped'
                     );
                   }
-                  if (empty.length) {
+                  // Only when the unmatched set changes: `done` fires per
+                  // incremental compile, and a genuinely misspelled name
+                  // stays unmatched forever, so warning every time would
+                  // put a line on every save.
+                  const emptyKey = empty.join(',');
+                  if (empty.length && emptyKey !== warnedEmptyKey) {
+                    warnedEmptyKey = emptyKey;
                     console.warn(
                       `[rspack] APPS_DEVTOOL_SCOPE ${
                         empty.length === 1 ? 'name' : 'names'

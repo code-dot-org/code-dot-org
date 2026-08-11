@@ -29,7 +29,7 @@ const fs = require('fs');
 // would not have given it.
 const GAP = String.raw`(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\n]*\n)*`;
 const MARKER = new RegExp(
-  String.raw`Object\.defineProperty\(exports,${GAP}["']__esModule["'],${GAP}\{${GAP}value:${GAP}true,?${GAP}\}${GAP}\);?`
+  String.raw`Object\.defineProperty\(${GAP}exports,${GAP}["']__esModule["'],${GAP}\{${GAP}value:${GAP}true,?${GAP}\}${GAP}\);?`
 );
 // swc declares exports through its _export helper when there are
 // several, through a bare defineProperty for a single one, and through

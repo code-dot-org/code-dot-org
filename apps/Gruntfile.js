@@ -399,19 +399,24 @@ module.exports = function (grunt) {
       `APPS_BUILD_MAX_MEMORY=${process.env.APPS_BUILD_MAX_MEMORY} is not a number of megabytes; using ${buildMaxMemory}.`
     );
   }
-  const rspackNodeOptions = `NODE_OPTIONS="${
-    process.env.NODE_OPTIONS ? process.env.NODE_OPTIONS + ' ' : ''
-  }--max-old-space-size=${buildMaxMemory}" `;
-
   // The rspack build runs in a child process, so grunt options the
   // webpack path consumes in-process must cross as environment
   // variables: --app as APP (rspack.config.js's entry default) and
-  // --piskel-dev as PISKEL_DEV.
-  const rspackEnv =
-    (SINGLE_APP ? `APP="${SINGLE_APP}" ` : '') +
-    (PISKEL_DEVELOPMENT_MODE ? 'PISKEL_DEV=1 ' : '') +
-    ('RSPACK_SWC' in process.env ? '' : 'RSPACK_SWC=all ') +
-    rspackNodeOptions;
+  // --piskel-dev as PISKEL_DEV.  These go through grunt-exec's `options`
+  // rather than a prefix on the command string, so no value needs shell
+  // quoting — an app name with a space, or a NODE_OPTIONS carrying
+  // `--require "/path with spaces/x.js"`, would otherwise garble the
+  // command.  child_process.exec replaces the environment wholesale when
+  // given one, hence the spread.
+  const rspackEnv = {
+    ...process.env,
+    ...(SINGLE_APP ? {APP: SINGLE_APP} : {}),
+    ...(PISKEL_DEVELOPMENT_MODE ? {PISKEL_DEV: '1'} : {}),
+    ...('RSPACK_SWC' in process.env ? {} : {RSPACK_SWC: 'all'}),
+    NODE_OPTIONS: `${
+      process.env.NODE_OPTIONS ? process.env.NODE_OPTIONS + ' ' : ''
+    }--max-old-space-size=${buildMaxMemory}`,
+  };
 
   config.exec = {
     // `--rspack` (or APPS_BUNDLER=rspack) swaps only the JS bundling
@@ -424,10 +429,15 @@ module.exports = function (grunt) {
     // task — so the child's minify decision cannot disagree with the
     // grunt steps around it.  (Left to the rspack CLI, NODE_ENV would
     // default to production and silently minify dev builds.)
-    rspackBuild:
-      `NODE_ENV=${envConstants.DEV ? 'development' : 'production'} ` +
-      rspackEnv +
-      'node node_modules/.bin/rspack build --config rspack.config.js',
+    rspackBuild: {
+      command: 'node node_modules/.bin/rspack build --config rspack.config.js',
+      options: {
+        env: {
+          ...rspackEnv,
+          NODE_ENV: envConstants.DEV ? 'development' : 'production',
+        },
+      },
+    },
     // The dev server is development by definition, so NODE_ENV is
     // pinned outright (an exported NODE_ENV=production in the calling
     // shell would otherwise serve minified).  Full-swc here too: it is
@@ -436,10 +446,10 @@ module.exports = function (grunt) {
     // prepareBundlerOutputDir cleans the output directory beforehand
     // (a populated one costs rspack ~18s of startup), and doing it
     // there rather than here keeps prebuild's copied assets.
-    rspackServe:
-      'NODE_ENV=development ' +
-      rspackEnv +
-      'node node_modules/.bin/rspack serve --config rspack.config.js',
+    rspackServe: {
+      command: 'node node_modules/.bin/rspack serve --config rspack.config.js',
+      options: {env: {...rspackEnv, NODE_ENV: 'development'}},
+    },
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
