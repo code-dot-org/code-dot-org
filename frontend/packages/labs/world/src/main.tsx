@@ -35,6 +35,14 @@ import {LabHost} from '@code-dot-org/lab/host';
 
 import App from './App';
 import {mountBootBadge} from './demoBootBadge';
+import {
+  DEFAULT_SCENARIO_TAG,
+  isScenarioTag,
+  WORLD_LAB_KEY,
+  WORLD_SCENARIOS,
+  WORLD_SCENARIO_TAGS,
+  type WorldScenarioTag,
+} from './fixtures';
 import {freeIconShimCss, reportMissingIcons} from './freeIconShims';
 import {
   getSandboxUrl,
@@ -125,13 +133,30 @@ if (!getSandboxUrl()) {
   }
 }
 
-// The lab loads a project by channel id from the URL; default to the `simple`
-// fixture scenario so the harness works at the root path (the channel id doubles
-// as the fixture scenario tag, matching the studio convention).
-const channelId =
-  window.location.pathname.match(
-    /^\/frontend-studio\/projects\/world\/([^/]+)\/edit$/,
-  )?.[1] ?? 'simple';
+// WHICH PROJECT the demo opens (src/fixtures/scenarios).
+//
+// Three ways to say it, in the order they win:
+//
+//   ?scenario=empty    the switcher below, and the one to reach for in a test
+//                      or a shared link — it survives any base path
+//   the channel id     `/frontend-studio/projects/world/<tag>/edit`, the studio
+//                      route, which is where the tag comes from in production
+//   nothing            the starter
+//
+// The query wins because it is the thing a person just clicked. A tag that
+// names no scenario falls through rather than loading an empty mock: a typo in
+// a URL should show the starter, not a lab with no project in it.
+const scenarioFromPath = window.location.pathname.match(
+  /^\/frontend-studio\/projects\/world\/([^/]+)\/edit$/,
+)?.[1];
+const scenarioFromQuery = new URLSearchParams(window.location.search).get(
+  'scenario',
+);
+const channelId = isScenarioTag(scenarioFromQuery)
+  ? scenarioFromQuery
+  : isScenarioTag(scenarioFromPath ?? null)
+    ? (scenarioFromPath as WorldScenarioTag)
+    : DEFAULT_SCENARIO_TAG;
 
 // Start the mock API and register World Lab's fixtures before rendering, so the
 // host's level_properties / app_options / channel / sources requests are served.
@@ -145,8 +170,8 @@ async function enableMocks() {
   const {WorldFixtures} = await import('./fixtures');
 
   maybeResetFromUrl();
-  registerLabFixtures('world', WorldFixtures);
-  setActiveScenario({labKey: 'world', tag: channelId});
+  registerLabFixtures(WORLD_LAB_KEY, WorldFixtures);
+  setActiveScenario({labKey: WORLD_LAB_KEY, tag: channelId});
 
   // The worker script is served from this build's base, like everything else it
   // owns; its default is the origin root, which a `/world/` deployment has no
@@ -181,6 +206,63 @@ const fullHeight = (
   />
 );
 
+/**
+ * Which project the demo is showing, and a way to change it.
+ *
+ * Bottom left, above the boot badge, which is the corner this harness already
+ * uses for things the lab itself does not have — a lab with a dev control in
+ * its own chrome would be a lab that ships one. `?devChrome=off` takes it away
+ * for screenshots and visual tests, the same opt-out `packages/users` uses.
+ *
+ * A full reload rather than a re-render: the scenario decides what the mock API
+ * serves, and the API is chosen before the first fetch. Swapping it live would
+ * mean tearing down a loaded project mid-edit, which is a bigger promise than a
+ * dev switch should make.
+ */
+function ScenarioSwitcher({value}: {value: WorldScenarioTag}) {
+  if (new URLSearchParams(window.location.search).get('devChrome') === 'off') {
+    return null;
+  }
+  return (
+    <label
+      style={{
+        position: 'fixed',
+        bottom: 72,
+        left: 8,
+        zIndex: 99999,
+        maxWidth: 260,
+        background: 'rgba(0,0,0,0.78)',
+        color: '#eaeaea',
+        borderRadius: 6,
+        padding: '6px 9px',
+        font: '12px/1.4 ui-monospace, monospace',
+      }}
+    >
+      project{' '}
+      <select
+        value={value}
+        onChange={event => {
+          const params = new URLSearchParams(window.location.search);
+          params.set('scenario', event.target.value);
+          // The store is written through and survives a reload, so a project
+          // edited under one scenario would otherwise follow you to the next.
+          params.set('cdoMockReset', '1');
+          window.location.search = params.toString();
+        }}
+      >
+        {WORLD_SCENARIO_TAGS.map(tag => (
+          <option key={tag} value={tag}>
+            {WORLD_SCENARIOS[tag].name}
+          </option>
+        ))}
+      </select>
+      <div style={{marginTop: 4, opacity: 0.75}}>
+        {WORLD_SCENARIOS[value].description}
+      </div>
+    </label>
+  );
+}
+
 const rootElement = document.getElementById('root');
 if (rootElement) {
   // No <StrictMode>: it double-invokes effects in dev, which races xterm's
@@ -193,6 +275,7 @@ if (rootElement) {
         <RootStateProvider>
           <QueryClientProvider>
             <ApiClientProvider client={DashboardApiClient}>
+              <ScenarioSwitcher value={channelId} />
               <div style={{height: '100vh'}}>
                 <LabHost
                   LabEntrypoint={App}
