@@ -7,6 +7,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {VIEWPORT_TILES} from '../../runtime/viewport';
 import {
   WORLD_SCENARIOS,
   WORLD_SCENARIO_TAGS,
@@ -405,6 +406,80 @@ describe('the scenario catalogue', () => {
         .sort();
 
     expect(named('meteors-single')).toEqual(named('meteors'));
+  });
+
+  it('gives flappy a map bigger than the screen, and a camera to see it', () => {
+    // The reason this scenario exists. A map ten tiles wide would make the
+    // camera rules compile, run, and do nothing visible — which is the failure
+    // that reads as "cameras work".
+    const files = Object.values(WORLD_SCENARIOS.flappy.source.files);
+    const contents = (name: string) =>
+      files.find(file => file.name === name)?.contents ?? '';
+
+    const map = JSON.parse(contents('flappy.map')) as {
+      size: {width: number; height: number};
+    };
+    expect(map.size.width).toBeGreaterThan(VIEWPORT_TILES);
+    // …and exactly one screen tall, which is why the header rules out the two
+    // camera rules that only have something to say about y.
+    expect(map.size.height).toBe(VIEWPORT_TILES);
+
+    const main = contents('main.world');
+    expect(main).toContain('world_define_camera');
+    expect(main).toContain('Camera Follow#FollowsTrait');
+    expect(main).toContain('Camera Confined#ConfinedToTheMapTrait');
+    // The camera is wired up AFTER the map is loaded. Before it, `any ⟨Bird⟩`
+    // is an empty list and the camera follows nothing for the whole game —
+    // with nothing in the console to say so.
+    expect(main.indexOf('world_load_map')).toBeLessThan(
+      main.indexOf('world_define_camera'),
+    );
+    // And the world looks through the one it defined, not the one every world
+    // has: the traits are on the new camera, so the default one would follow
+    // nothing.
+    expect(main).toContain('world_use_camera');
+  });
+
+  it('holds every rule flappy needs, including the ones it did not choose', () => {
+    // Gravity requires Solid Bodies, and a project that names Gravity without
+    // holding it does not run at all — "cannot resolve 'Solid Bodies'", which
+    // is how this scenario first failed. Nothing in flappy is solid; the rule
+    // is a dependency rather than a mechanic.
+    const named = Object.values(WORLD_SCENARIOS.flappy.source.files).map(
+      file => file.name,
+    );
+    for (const rule of [
+      'gravity.rule',
+      'solid.rule',
+      'motion.rule',
+      'collisions.rule',
+      'input.rule',
+      'collect.rule',
+      'camera.rule',
+      'cameraFollow.rule',
+      'cameraConfined.rule',
+    ]) {
+      expect(named).toContain(rule);
+    }
+  });
+
+  it('ends flappy rather than narrating it', () => {
+    // Both ways to lose take the bird OUT. Logging alone left it flying
+    // through the pipe with "Crashed!" once a frame, and stopping it instead
+    // would be undone by the next flap — nothing here remembers that the game
+    // is over.
+    const bird = Object.values(WORLD_SCENARIOS.flappy.source.files).find(
+      file => file.name === 'bird.actor',
+    )!.contents;
+
+    expect(bird).toContain('world_on_Collisions_StartsTouchingEvent');
+    expect(bird).toContain('world_on_Space_LeftMapEvent');
+    expect(
+      [...bird.matchAll(/world_remove_actor/g)].length,
+    ).toBeGreaterThanOrEqual(2);
+    // And it does not start until asked: a world runs the moment it compiles,
+    // so a bird that falls from frame one is gone before anyone has looked.
+    expect(bird).toContain('world_set_Gravity_GravityScaleProperty');
   });
 
   it('leaves the file list out of the scenarios with one file', () => {
