@@ -82,6 +82,7 @@ export default class HeaderPopup extends Component {
             text: toggleLabel,
             tooltipId: 'header-popup-toggle-tooltip',
             size: 's',
+            direction: 'onRight',
           }}
         >
           <MuiIconButton
