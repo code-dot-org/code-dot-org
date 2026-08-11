@@ -1,6 +1,10 @@
 import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
-const {canonicalCycle, isKnownCycle} = require('../../bundlerBase');
+const {
+  canonicalCycle,
+  isKnownCycle,
+  resolveBundler,
+} = require('../../bundlerBase');
 
 describe('bundlerBase', function () {
   describe('canonicalCycle', function () {
@@ -69,6 +73,34 @@ describe('bundlerBase', function () {
           'src/util/definitely-not-in-any-cycle.js',
           'src/applab/designMode.js',
         ])
+      );
+    });
+  });
+  describe('resolveBundler', function () {
+    it('defaults to webpack', function () {
+      // rspack is opt-in.  The default was flipped to rspack during
+      // development so CI would build the branch's assets with it;
+      // shipping that flip would put swc-built code into production
+      // silently, so it fails here instead of in a release.
+      assert.equal(resolveBundler({env: {}}), 'webpack');
+    });
+
+    it('opts in through the --rspack flag', function () {
+      assert.equal(resolveBundler({rspackFlag: true, env: {}}), 'rspack');
+    });
+
+    it('opts in through APPS_BUNDLER, the form CI and scripts use', function () {
+      assert.equal(resolveBundler({env: {APPS_BUNDLER: 'rspack'}}), 'rspack');
+    });
+
+    it('falls back to the default on an unrecognized value', function () {
+      assert.equal(resolveBundler({env: {APPS_BUNDLER: 'Rspack'}}), 'webpack');
+    });
+
+    it('lets the flag win over the environment', function () {
+      assert.equal(
+        resolveBundler({rspackFlag: true, env: {APPS_BUNDLER: 'webpack'}}),
+        'rspack'
       );
     });
   });

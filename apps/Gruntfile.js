@@ -9,6 +9,7 @@ var sass = require('sass');
 var envConstants = require('./envConstants');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 var checkEntryPoints = require('./script/checkEntryPoints');
+const {BUNDLERS, resolveBundler} = require('./bundlerBase');
 const {createWebpackConfig} = require('./webpack.config');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 
@@ -687,20 +688,12 @@ module.exports = function (grunt) {
 
   // `yarn start --rspack` / `yarn build --rspack` / `yarn build:dist
   // --rspack` opt into the rspack bundler for one run; APPS_BUNDLER is
-  // the env-var form for CI and scripts.
-  // TEMPORARY: the fallback is rspack so drone builds this branch's
-  // optimized assets with it and runs UI tests against them — the
-  // migration evidence discussed in the PR.  Before merge this becomes
-  // bundlerBase's resolveBundler(), whose default is webpack and which a
-  // test covers.
-  const APPS_BUNDLER = grunt.option('rspack')
-    ? 'rspack'
-    : ['webpack', 'rspack'].includes(process.env.APPS_BUNDLER)
-    ? process.env.APPS_BUNDLER
-    : 'rspack';
+  // the env-var form for CI and scripts.  bundlerBase owns the default,
+  // where a test guards it.
+  const APPS_BUNDLER = resolveBundler({rspackFlag: !!grunt.option('rspack')});
   if (
     process.env.APPS_BUNDLER &&
-    !['webpack', 'rspack'].includes(process.env.APPS_BUNDLER)
+    !BUNDLERS.includes(process.env.APPS_BUNDLER)
   ) {
     grunt.log.warn(
       `Unrecognized APPS_BUNDLER value ${process.env.APPS_BUNDLER}; building with ${APPS_BUNDLER}.`

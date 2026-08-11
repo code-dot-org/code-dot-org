@@ -22,6 +22,33 @@ const p = (...paths) => path.resolve(__dirname, ...paths);
 
 const DEV_SERVER_PORT = 9000;
 
+// webpack bundles apps/ unless a run opts into rspack.  Kept here, with
+// a test on the default, because a one-token change to it silently
+// swaps which bundler builds production assets.
+const DEFAULT_BUNDLER = 'webpack';
+const BUNDLERS = ['webpack', 'rspack'];
+
+/**
+ * Which bundler a run should use: the `--rspack` grunt flag wins, then
+ * the APPS_BUNDLER environment variable, then the default.
+ *
+ * @param {Object} options
+ * @param {boolean} options.rspackFlag - whether --rspack was passed
+ * @param {Object} options.env - environment to read APPS_BUNDLER from
+ * @returns {String} 'webpack' or 'rspack'; an unrecognized APPS_BUNDLER
+ *   value falls back to the default, since building with the wrong
+ *   bundler is worse than ignoring a typo
+ */
+function resolveBundler({rspackFlag = false, env = process.env} = {}) {
+  if (rspackFlag) {
+    return 'rspack';
+  }
+  if (env.APPS_BUNDLER && BUNDLERS.includes(env.APPS_BUNDLER)) {
+    return env.APPS_BUNDLER;
+  }
+  return DEFAULT_BUNDLER;
+}
+
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
 const nodeModulesToTranspile = [
   // All of our @cdo- and @dsco_-aliased files should get transpiled as they are our own
@@ -336,6 +363,9 @@ function isKnownCycle(paths) {
 
 module.exports = {
   DEV_SERVER_PORT,
+  DEFAULT_BUNDLER,
+  BUNDLERS,
+  resolveBundler,
   nodeModulesToTranspile,
   NODE_POLYFILL_PROVIDE,
   NODE_POLYFILL_FALLBACK,
