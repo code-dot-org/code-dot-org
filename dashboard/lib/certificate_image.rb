@@ -136,13 +136,13 @@ class CertificateImage
     # string behavior: '\\\\' results in a string with two backslashes. See the
     # String.gsub docs for more details.  This is for the sake of readable code.
     # literal \ replaced with literal \\
-    string = string.gsub(/\\/) {'\\\\'}
+    string = string.gsub("\\") {'\\\\'}
     # @ at the front of the string replaced with literal \@
     string = string.gsub(/^@/) {'\\@'}
     # % replaced with literal \%
-    string = string.gsub(/%/) {'\\%'}
+    string = string.gsub("%") {'\\%'}
     # new-line character replaced with literal \\n
-    string = string.gsub(/\n/) {'\\\\n'}
+    string = string.gsub("\n") {'\\\\n'}
     string.strip
   end
 

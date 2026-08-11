@@ -1,5 +1,6 @@
 import {Box, Button, Typography} from '@mui/material';
 import {visuallyHidden} from '@mui/utils';
+import {Link} from '@tanstack/react-router';
 
 interface LevelRef {
   position: number;
@@ -34,11 +35,7 @@ export default function LevelNavigation({
       }}
     >
       {prev ? (
-        <Button
-          component="a"
-          href={`/frontend-studio${prev.path}`}
-          size="small"
-        >
+        <Button component={Link} to={prev.path} size="small">
           Previous level
         </Button>
       ) : (
@@ -57,11 +54,7 @@ export default function LevelNavigation({
       </Typography>
 
       {next ? (
-        <Button
-          component="a"
-          href={`/frontend-studio${next.path}`}
-          size="small"
-        >
+        <Button component={Link} to={next.path} size="small">
           Next level
         </Button>
       ) : (

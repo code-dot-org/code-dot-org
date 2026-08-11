@@ -260,6 +260,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
             doc: initialCode,
             extensions: [...editorExtensions, splitDiffTheme],
           },
+          collapseUnchanged: {margin: 3, minSize: 4},
           parent: editorRef.current,
         });
         setEditorView(newEditor);
