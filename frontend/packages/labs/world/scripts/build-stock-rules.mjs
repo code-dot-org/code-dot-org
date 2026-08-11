@@ -27,6 +27,7 @@ const RULES = [
   'gravity',
   'solid',
   'wrap',
+  'bounds',
   'camera',
   'cameraFollow',
   'cameraEase',
