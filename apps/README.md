@@ -75,9 +75,26 @@ implementation of webpack that is much faster on developer machines
 we evaluate it: swc and babel can transpile edge cases differently, so
 check your change under the default webpack build before shipping — the
 command prints a reminder. Switching between bundlers cleans
-`build/package/js` automatically. Source maps work differently under
-rspack; see
+`build/package/js` automatically, and `yarn start --rspack` cleans it on
+every start (serving over a populated directory costs rspack about 18
+seconds), so the first compile after starting re-copies ace, piskel and
+the pyodide wheels. Source maps work differently under rspack; see
 [Source maps under rspack](#source-maps-under-rspack-yarn-start---rspack).
+
+Two other levers:
+
+- `RSPACK_NO_WRITE=1 yarn start --rspack` skips the dev server's copy of
+  its output to disk. Rebuilds are bounded by writing, not compiling, so
+  this is the big one for iterating on a widely-imported file — a shared
+  edit reaches the browser in about 8 seconds instead of 23 — at the cost
+  of roughly 1.8GB more resident memory, since the output stays in the
+  server's in-memory filesystem. Anything reading `build/package`
+  directly (a page served straight from Rails, say) needs the files, so
+  it is off by default.
+- `RSPACK_SWC=off yarn start --rspack` (also `0` or `babel`) puts
+  babel-loader and ts-loader back, keeping rspack as the bundler. That
+  isolates the transpiler when you suspect swc is behind a difference,
+  which is faster than rebuilding under webpack to find out.
 
 ## Dev server source maps and memory usage
 
@@ -140,6 +157,20 @@ Scope controls where you *step*, not what runs: out-of-scope code executes
 normally and shows transpiled if you step into it. A missed guess fails soft —
 append another name and restart; rspack server restarts are fast. Known
 rough edge: unmapped modules show numeric internal names in DevTools.
+
+As each name first matches, the server says how many modules it covered, so a
+typo does not pass silently:
+
+```
+[rspack] scoped source maps: music: 84 modules, lab2: 203 modules; everything
+else is unmapped
+```
+
+A name that has matched nothing yet is called out separately, and it is worth
+reading literally: dynamic imports compile only once a page requests them, so
+a name covering only lazily-loaded code starts empty and reports itself when
+those modules arrive. If it stays empty after you have loaded the page you
+care about, it is a typo.
 
 ## Testing
 
