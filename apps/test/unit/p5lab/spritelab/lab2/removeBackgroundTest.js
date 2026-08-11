@@ -49,6 +49,15 @@ describe('SpriteLab2 keyOutBackground', () => {
     expect(data[1 * 4 + 1]).toBe(0);
   });
 
+  it('soft matte cuts near-invisible ramp output to fully transparent', () => {
+    // green | faint veil (chroma distance just past the low threshold) | subject
+    const data = rgba([GREEN, [0, 215, 0], [10, 20, 200]]);
+    keyOutBackground(data, 3, 1, {soft: true});
+    // The ramp would give ~43 alpha — background noise, not an edge.
+    expect(alpha(data, 1)).toBe(0);
+    expect(alpha(data, 2)).toBe(255);
+  });
+
   it('keys any corner-sampled color, not just green', () => {
     // blue | blue | yellow(subject) — the key is whatever the corner holds.
     const BLUE = [0, 0, 255];

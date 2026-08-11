@@ -4,12 +4,10 @@
 
 import {BACKGROUNDS_CATEGORY, RuntimeAnimationList} from './types';
 
-// Alpha above which a pixel counts as content. The soft matte around
-// generated sprites leaves a near-invisible fringe (alpha up to ~10) that
-// can extend well past the visible art; a platformer body sized to bounds
-// that include it stands the player on the fringe, feet floating above the
-// ground. High enough to shed that fringe, low enough to keep real
-// soft-edged content.
+// Alpha above which a pixel counts as content: high enough to shed the soft
+// matte's near-invisible fringe (which otherwise stretches sprite bounds
+// past the visible art — platformer feet float on it), low enough to keep
+// real soft edges.
 const ALPHA_THRESHOLD = 32;
 
 /**

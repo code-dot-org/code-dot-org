@@ -357,15 +357,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [scenes]
   );
 
-  // A pinned-scene level (fixed_scene_id) edits exactly one scene, created
-  // here on first load — and again after Start Over, hence the reinit count
-  // in the deps. On a project with no scenes yet the pinned scene becomes
-  // the first scene outright; materializing the synthesized default too
-  // would leave an untouched "Scene 1" in every level sharing the project.
-  // The exception is a scene-less project whose top-level source holds real
-  // code (it predates the scenes UI — a fresh project's source is just the
-  // default workspace): that code is preserved as the default scene, pin
-  // appended after.
+  // Create the pinned scene (fixed_scene_id) on first load, and again after
+  // Start Over (the reinit count in the deps). On a scene-less project the
+  // pin becomes the first scene — materializing the synthesized default too
+  // would leave a stray "Scene 1" in every level sharing the project — but
+  // real top-level code (a pre-scenes project) is still kept as a scene.
   const pinnedSceneId = levelProperties.fixedSceneId;
   useEffect(() => {
     if (!pinnedSceneId) {

@@ -22,12 +22,10 @@ export interface MatteOptions {
 }
 
 // Soft matte: ramp output below this becomes fully transparent. A "flat"
-// generated background is never perfectly flat, so without a floor the ramp
-// paints the whole background region with a near-invisible alpha veil — it
-// reads as a faint box around the subject, and the veil's extent (not the
-// art's) becomes the image's content bounds everywhere those are used
-// (trims, platformer footing). Real soft edges ramp steeply through this
-// range, so they lose at most a hairline.
+// generated background is never perfectly flat, so without a floor the whole
+// background region keeps a near-invisible veil that becomes the image's
+// content bounds (trims, platformer footing). Real edges ramp steeply
+// through this range.
 const SOFT_ALPHA_FLOOR = 48;
 
 // Max per-channel difference from the reference color. Cheap and good enough

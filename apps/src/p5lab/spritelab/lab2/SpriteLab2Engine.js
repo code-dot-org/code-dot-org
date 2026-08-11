@@ -2,6 +2,7 @@ import * as BlocklyCore from 'blockly/core';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -10,13 +11,13 @@ import SpriteLab from '../SpriteLab';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {trimAnimationListImages} from './imageTrim';
 import {resolvePlatformPhysics} from './platformPhysics';
+import {CELL_SIZE} from './world';
 
 const NOOP = () => {};
 
-// Default sprite sizes by scene kind (platform-pool levels): a platformer
-// sprite fills one grid cell; a story character fills a good part of the
-// stage. A later World-tab UI may let the user pick these per scene.
-const PLATFORM_SCENE_SPRITE_SIZE = 50;
+// Default sprite size for non-platformer scenes on platform-pool levels;
+// platformer scenes use CELL_SIZE (one grid cell). A later World-tab UI may
+// let the user pick these per scene.
 const STORY_SCENE_SPRITE_SIZE = 300;
 
 // Markers in a scene's compiled program that make it a platformer: the
@@ -104,12 +105,9 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
-    // Density-aware background rendering, scoped to Lab2 — the only lab
-    // whose backgrounds outresolve the canvas (1024px generated images;
-    // classic's library backgrounds are authored at ~400px, so the shared
-    // CoreLibrary path rightly keeps its 400px target). Resize once to the
-    // canvas's physical resolution, then one blit per frame into the 400px
-    // logical box.
+    // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
+    // classic's ~400px library art: resize once to the canvas's physical
+    // resolution instead of CoreLibrary's logical 400.
     library.drawBackground = function () {
       if (typeof this.background === 'string') {
         this.p5.background(this.background);
@@ -117,22 +115,18 @@ export default class SpriteLab2Engine extends SpriteLab {
         this.p5.background('white');
       }
       if (typeof this.background === 'object') {
-        const size = 400 * (this.p5._pixelDensity || 1);
+        const size = APP_WIDTH * (this.p5._pixelDensity || 1);
         if (this.background.width !== size || this.background.height !== size) {
           this.background.resize(size, size);
         }
-        this.p5.image(this.background, 0, 0, 400, 400);
+        this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
       }
     };
     if (this.usesPlatformPhysics_) {
-      // The sizing default is per SCENE, not per level: one project holds
-      // both a platformer scene (one-cell sprites) and a story scene (large
-      // characters). A scene declares itself a platformer by its code —
-      // world-block placements compile into the scene's program, so both
-      // signals live there. A world scene's compiled prelude re-asserts the
-      // cell size explicitly either way.
+      // Sized per SCENE, not per level: one project holds both a platformer
+      // scene (one-cell sprites) and a story scene (large characters).
       library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
-        ? PLATFORM_SCENE_SPRITE_SIZE
+        ? CELL_SIZE
         : STORY_SCENE_SPRITE_SIZE;
     }
     library.commands.goToScene = sceneId => {
@@ -257,7 +251,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.userCode = code || '';
   }
 
-  // See createLibrary: decides the run's default sprite size.
   sceneLooksLikePlatformer_() {
     const code = this.userCode || '';
     return PLATFORM_SCENE_MARKERS.some(marker => code.includes(marker));
