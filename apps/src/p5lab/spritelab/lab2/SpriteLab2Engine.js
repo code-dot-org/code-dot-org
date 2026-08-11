@@ -13,6 +13,20 @@ import {resolvePlatformPhysics} from './platformPhysics';
 
 const NOOP = () => {};
 
+// Default sprite sizes by scene kind (platform-pool levels): a platformer
+// sprite fills one grid cell; a story character fills a good part of the
+// stage. A later World-tab UI may let the user pick these per scene.
+const PLATFORM_SCENE_SPRITE_SIZE = 50;
+const STORY_SCENE_SPRITE_SIZE = 300;
+
+// Markers in a scene's compiled program that make it a platformer: the
+// platform composites from the toolbox, or the world prelude's wall spawns.
+const PLATFORM_SCENE_MARKERS = [
+  'makePlatformPlayer(',
+  'makePlatformBlocks(',
+  "'walls'",
+];
+
 /**
  * Stand-in for the StudioApp singleton: exactly the members the classic
  * engine touches (see P5Lab execute()/initInterpreter()). getCode is the
@@ -91,14 +105,15 @@ export default class SpriteLab2Engine extends SpriteLab {
   createLibrary(args) {
     const library = super.createLibrary(args);
     if (this.usesPlatformPhysics_) {
-      // Platformer levels size sprites to one grid cell by default (the
-      // legacy library's one load-bearing line).
-      library.defaultSpriteSize = 50;
-    }
-    if (this.defaultSpriteSize_) {
-      // A level's explicit default_sprite_size wins (e.g. story scenes want
-      // characters far larger than a platformer's one-cell sprites).
-      library.defaultSpriteSize = this.defaultSpriteSize_;
+      // The sizing default is per SCENE, not per level: one project holds
+      // both a platformer scene (one-cell sprites) and a story scene (large
+      // characters). A scene declares itself a platformer by its code —
+      // world-block placements compile into the scene's program, so both
+      // signals live there. A world scene's compiled prelude re-asserts the
+      // cell size explicitly either way.
+      library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
+        ? PLATFORM_SCENE_SPRITE_SIZE
+        : STORY_SCENE_SPRITE_SIZE;
     }
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
@@ -177,7 +192,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     // The zGameDev name is only the level's opt-in to platformer physics,
     // which is engine-owned (platformPhysics.ts); no library loads for it.
     this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
-    this.defaultSpriteSize_ = levelProperties.defaultSpriteSize;
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
@@ -221,6 +235,12 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   setCode(code) {
     this.userCode = code || '';
+  }
+
+  // See createLibrary: decides the run's default sprite size.
+  sceneLooksLikePlatformer_() {
+    const code = this.userCode || '';
+    return PLATFORM_SCENE_MARKERS.some(marker => code.includes(marker));
   }
 
   /** Run the given compiled JS program from scratch (creates/recreates p5). */
