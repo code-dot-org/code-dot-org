@@ -21,7 +21,7 @@ student-facing names.
 ## The grid
 
 The grid is always square. `(0, 0)` is the top-left (north-west) corner. `x`
-grows east, `y` grows **south** — moving north decreases `y`.
+grows east, `y` grows south. Moving north decreases `y`.
 
 ```
       x: 0   1   2
@@ -35,7 +35,7 @@ grows east, `y` grows **south** — moving north decreases `y`.
 ```
 
 A square is passable if its tile type is open, start, finish, or start-and-finish.
-Walls and obstacles are not. Off-grid coordinates count as not passable, so the
+Walls and obstacles are not passable. Off-grid coordinates count as not passable, so the
 grid edge and a wall behave identically.
 
 Squares carry two independent things:
@@ -43,21 +43,14 @@ Squares carry two independent things:
 - a **color**, set by `paint()` and cleared by `scrape_paint()`, and
 - a **paint bucket** holding some number of units, drawn down by `take_paint()`.
 
-A square can never hold both at once — see `paint()` below.
+A square can never hold both at once, see `paint()` below.
 
 ## The world is a singleton
 
 All `Painter` instances share one `World`, and therefore one grid. Two painters
-on the same grid see each other's paint. The first `Painter` constructed loads
-the grid from `serialized_maze.txt` in the working directory if the harness has
-not already set one.
-
-The unit tests set the grid explicitly instead:
-
-```python
-from neighborhood.support.world import World
-World().set_grid_from_string(maze_json)
-```
+on the same grid see the same grid state (bucket contents, painted squares).
+The first `Painter` constructed loads the grid from `serialized_maze.txt` in the
+working directory if the harness has not already set one.
 
 ## Constructing a Painter
 
@@ -102,11 +95,8 @@ The painter is discarded and rebuilt whenever the grid or the run context
 changes, which is how each run of a program — and each pass validation makes
 over `main.py` — starts with it back at `(0, 0)`.
 
-Unlike a `Painter()` built with no arguments, the default painter always has
-paint, whatever the grid size. Two consequences follow from how infinite paint
-is implemented (see [Paint accounting](#paint-accounting)): `has_paint()` always
-returns `True`, and `set_paint()` does nothing. A level that teaches collecting
-paint from buckets wants `Painter` objects, not these functions.
+Paint works exactly as it does for a `Painter()` built with no arguments — see
+[Paint accounting](#paint-accounting).
 
 Both styles work in one program. The implicit painter takes its place in
 `painter_logs` at the point it is created — so a bare `move()` before an
@@ -138,7 +128,7 @@ raises `INVALID_COLOR`.
 Two ways this does not paint:
 
 - The painter has no paint. It prints `There is no more paint in the painter's
-  bucket.` and returns. No exception, no state change.
+  bucket.` and returns. It does not throw an exception.
 - The current square holds a paint bucket with units remaining. It raises
   `INVALID_PAINT_LOCATION`. The painter's paint is *not* spent, because the
   square rejects the color before the counter is decremented.
@@ -162,7 +152,7 @@ no paint to collect here.` and changes nothing.
 always returns `True` and `paint()` never runs out. On a smaller grid, `None`
 means zero units.
 
-Passing `paint` explicitly always yields a finite painter, whatever the grid size.
+Passing `paint` explicitly always yields a finite amount of paint, whatever the grid size.
 
 Two consequences of how infinite paint is implemented, both worth knowing before
 you write a test that asserts on paint counts:
@@ -209,16 +199,15 @@ that it was called.
 
 ### `is_facing_north() -> bool`, `is_facing_east()`, `is_facing_south()`, `is_facing_west()`
 
-Direction predicates.
+Check which direction the painter is facing.
 
 ### `get_x() -> int`, `get_y() -> int`
 
-Current coordinates.
+Get the painter's current coordinates.
 
 ### `get_direction() -> str`
 
 Direction faced, always lowercase: `"north"`, `"east"`, `"south"`, or `"west"`.
-Note that this is lowercase even if the constructor was given `"South"`.
 
 ## Display
 
@@ -242,7 +231,7 @@ front end maps to a student-facing message.
 | `INVALID_DIRECTION` | A direction string is not one of the four compass names. |
 | `INVALID_MOVE` | `move()` is called into a wall or off the grid. |
 | `INVALID_COLOR` | `paint()` is given something that is neither a CSS color name nor a hex value. |
-| `INVALID_PAINT_LOCATION` | `paint()` is called on a square holding a paint bucket. |
+| `INVALID_PAINT_LOCATION` | `paint()` is called on a square holding a paint bucket with paint remaining. |
 | `GET_SQUARE_FAILED` | A painter's own coordinates are off-grid or impassable. Reachable only from a bad constructor call, since `move()` refuses to enter such a square. |
 | `INVALID_GRID` | The grid file or string is missing, malformed, empty, or not square. |
 

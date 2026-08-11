@@ -6,7 +6,7 @@ from neighborhood.painter import Painter
 from neighborhood.support.world import World
 from neighborhood.support.neighborhood_context_type import NeighborhoodContextType
 from neighborhood.support.neighborhood_tracker import NeighborhoodTracker
-from support.constants import SAMPLE_MAZE, ALL_PASSABLE_MAZE, BUCKET_MAZE
+from support.constants import SAMPLE_MAZE, ALL_PASSABLE_MAZE, BUCKET_MAZE, LARGE_MAZE
 
 def set_up_world(maze, context_type=NeighborhoodContextType.RUN):
   world = World()
@@ -51,11 +51,13 @@ def test_movement_and_direction_functions():
 
 def test_paint_functions():
   set_up_world(ALL_PASSABLE_MAZE)
+  painter.set_paint(3)
   assert painter.is_on_paint() is False
   assert painter.get_color() is None
   painter.paint('red')
   assert painter.is_on_paint() is True
   assert painter.get_color() == 'red'
+  assert painter.get_my_paint() == 2
   painter.scrape_paint()
   assert painter.is_on_paint() is False
   assert painter.get_color() is None
@@ -83,14 +85,21 @@ def test_can_move():
   assert painter.can_move('east') is False
   assert painter.can_move('south') is True
 
-def test_default_painter_always_has_paint():
+def test_paint_supply_matches_a_plain_painter():
+  # The default painter is built like Painter() with no arguments, so it starts
+  # with nothing on a grid this small and has to be given paint.
   set_up_world(SAMPLE_MAZE)
-  # A Painter constructed with no arguments has nothing to paint with on a grid
-  # this small. The default painter is not held to that rule.
   assert Painter().has_infinite_paint is False
+  assert painter.has_paint() is False
+  painter.set_paint(2)
+  assert painter.has_paint() is True
+  assert painter.get_my_paint() == 2
+
+  # On a grid this large it gets infinite paint, again like Painter().
+  set_up_world(LARGE_MAZE)
   assert painter.has_paint() is True
   painter.paint('red')
-  assert painter.is_on_paint() is True
+  painter.paint('blue')
   assert painter.has_paint() is True
 
 def test_swapping_the_grid_starts_a_new_painter():
@@ -136,6 +145,7 @@ def test_validation_sees_the_painter_on_every_pass():
   tracker.reset()
 
   def student_program():
+    painter.set_paint(1)
     # Square 1,0 holds a bucket, which cannot be painted, so paint first.
     painter.paint('red')
     painter.move()
@@ -144,16 +154,20 @@ def test_validation_sees_the_painter_on_every_pass():
   first_log = tracker.get_neighborhood_log()
   assert len(first_log.painter_logs) == 1
   assert first_log.painter_logs[0].ending_position.x == 1
+  assert first_log.painter_logs[0].action_count('PAINT') == 1
 
   tracker.reset()
   world.set_context_type(NeighborhoodContextType.RUN)
   world.set_context_type(NeighborhoodContextType.VALIDATE)
 
+  # A painter carried over from the first pass would arrive with its paint
+  # already spent and its position already advanced.
   student_program()
   second_log = tracker.get_neighborhood_log()
   assert len(second_log.painter_logs) == 1
   assert second_log.painter_logs[0].starting_position.x == 0
   assert second_log.painter_logs[0].ending_position.x == 1
+  assert second_log.painter_logs[0].action_count('PAINT') == 1
 
   tracker.reset()
   world.set_context_type(NeighborhoodContextType.RUN)

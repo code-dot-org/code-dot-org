@@ -327,10 +327,6 @@ def _get_default_painter():
   world = World()
   if _default_painter is None or _default_painter_world != _current_world_key(world):
     _default_painter = Painter()
-    # A no-argument Painter only gets paint on grids 20x20 and larger, which
-    # almost no level uses. There is no constructor call here to pass an amount
-    # to, so give the implicit painter paint unconditionally.
-    _default_painter.has_infinite_paint = True
     # Painter() loads the grid if the world had none, so read the key back
     # after constructing rather than before.
     _default_painter_world = _current_world_key(world)
