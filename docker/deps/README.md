@@ -58,7 +58,7 @@ stages fails the build rather than the first boot.
 ```
 
 It asserts the bundle resolves and activates, that the native extensions built
-in `cdo-build` load against `cdo-base`'s libraries (mysql2, rmagick, mini_racer,
+in `cdo-build` load against `cdo-base`'s libraries (mysql2, rmagick,
 nokogiri), that the venv imports offline, that no compiler or Node came along,
 and that the environment below is exported. The `cdo-base` contract itself is
 covered by `docker/base/smoke-test.sh`; see
@@ -167,16 +167,6 @@ layer rebuilds on the base that just shipped and a failed base rebuilds
 nothing.
 
 ## Things that will bite
-
-**mini_racer aborts at process teardown.** `cdo-base` preloads jemalloc via
-`LD_PRELOAD`, and V8 aborts during teardown under it — after the JavaScript has
-run and returned its result. The base has always had this property, and so has
-production. Running mini_racer directly from this image needs `LD_PRELOAD=`
-cleared for that process:
-
-```
-docker run --rm cdo-deps:test sh -c 'LD_PRELOAD= bundle exec ruby -e "..."'
-```
 
 **The Ruby ABI path is hardcoded.** The `bundle install` cache mount targets
 `/usr/local/bundle/ruby/3.2.0/cache` literally, because buildah at the

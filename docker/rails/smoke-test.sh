@@ -27,8 +27,9 @@ run "cdo/pycall initializes libpython" "pycall-ok" -- \
 run "venv imports pycdo without syncing" "pycdo-ok" -- \
   uv run --no-sync python -c 'import pycdo; print("pycdo-ok")'
 
-# verify.sh boots adhoc, whose groups exclude mini_racer; only here does the
-# shipped gem set load. The preamble mirrors application.rb's require order.
+# The database-free load of the shipped gem set: verify.sh boots adhoc too, but
+# only with MySQL and Redis up. The preamble mirrors application.rb's require
+# order.
 run "staging gem set loads" "staging-gems-ok" -- \
   bundle exec ruby -e 'require "./deployment"; require "rails/all"; Bundler.require(:default, :staging); puts "staging-gems-ok"'
 
