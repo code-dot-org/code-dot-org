@@ -179,13 +179,16 @@ function createRspackConfig({
   const scopeNames =
     !minify && envConstants.APPS_DEVTOOL_SCOPE
       ? envConstants.APPS_DEVTOOL_SCOPE.split(',')
-          .map(s => s.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+          .map(s => s.trim())
           .filter(Boolean)
       : [];
   // An empty array is truthy; a value of only separators must fall back
   // to the normal devtool instead of silently disabling source maps.
   const devtoolScope = scopeNames.length ? scopeNames : null;
-  const scopeRegexFor = name => new RegExp(`src[\\\\/]${name}[\\\\/.]`);
+  // Names are held unescaped so the match report can print them as the
+  // developer typed them; escaping happens here, at the one use.
+  const scopeRegexFor = name =>
+    new RegExp(`src[\\\\/]${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\\\/.]`);
   // RSPACK-DIFF: the dev default is eval — no source maps — where
   // webpack defaults to eval-cheap-module-source-map.  rspack's
   // whole-app -module map modes exceed 22GB at our module count, which
@@ -670,17 +673,10 @@ function createRspackConfig({
                   }
                   const parts = [];
                   for (const [n, c] of counts) {
-                    parts.push(
-                      `${n.replace(/\\\\/g, '')}: ${c} module${
-                        c === 1 ? '' : 's'
-                      }`
-                    );
+                    parts.push(`${n}: ${c} module${c === 1 ? '' : 's'}`);
                     if (c === 0) {
                       console.warn(
-                        `[rspack] APPS_DEVTOOL_SCOPE name "${n.replace(
-                          /\\\\/g,
-                          ''
-                        )}" ` +
+                        `[rspack] APPS_DEVTOOL_SCOPE name "${n}" ` +
                           'matched nothing — check it against src/ (recipes in the README)'
                       );
                     }
@@ -780,7 +776,9 @@ function createRspackConfig({
     // disk.  Under serve, deferring dynamic imports until a page
     // requests them is a small startup win; the /_rspack/lazy trigger
     // endpoint must be excluded from the catch-all proxy below or
-    // React.lazy chunks 404 and Suspense boundaries crash.  Entries
+    // React.lazy chunks 404 and Suspense boundaries crash, and for the
+    // same reason the stubs written to disk only work while requests
+    // reach this server (see writeToDisk below).  Entries
     // stay eager: the lazy entry stub is hot-patched in after load,
     // and Rails inline scripts synchronously expect entry globals, so
     // RSPACK_LAZY_ENTRIES=1 is usable only if the middleware learns to
@@ -833,9 +831,13 @@ function createRspackConfig({
             // Incremental rebuilds are dominated by rewriting the
             // entry bundles a change invalidates; pages served through
             // this dev server load JS from memory, so RSPACK_NO_WRITE=1
-            // skips the disk copy.  On by default for parity: direct
-            // :3000 access and anything else reading build/package
-            // still needs files.
+            // skips the disk copy.  On by default because anything else
+            // reading build/package still needs files.  Note the
+            // written output is only as complete as lazy compilation
+            // allows: dynamic-import chunks land as stubs that fetch
+            // /_rspack/lazy from this server, so loading a page
+            // straight from Rails on :3000 while the rspack dev server
+            // owns the directory needs RSPACK_NO_LAZY=1.
             writeToDisk: !process.env.RSPACK_NO_WRITE,
           },
         }

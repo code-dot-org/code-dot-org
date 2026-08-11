@@ -78,8 +78,9 @@ Rerun `assets:precompile` to regenerate new assets and try again."
   Sprockets::Manifest.prepend UnDigestManifest
 
   # The bundler hash is a 16- to 32-character hexadecimal string: webpack
-  # emits 20 or 32, rspack 16 (chunk filenames) or 20 (asset/resource
-  # files).  Search `apps/webpack*.js` and
+  # emits 20 or 32, rspack always 16 (its xxhash64 digest is 16 hex, so
+  # even an explicit [contenthash:20] comes out 16).  Search
+  # `apps/webpack*.js` and
   # `apps/rspack.config.js` for [hash] and [contenthash] to see when each
   # length is generated.
   WP_REGEX = /wp\h{16,32}/

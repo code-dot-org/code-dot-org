@@ -705,8 +705,10 @@ module.exports = function (grunt) {
   // additionally cleans on every start, switch or not: its writeToDisk
   // step compares against every existing file, and starting over a
   // populated directory costs ~18s versus rebuilding into an empty one.
-  // Runs before prebuild so the static assets copied into
-  // build/package/js (ace, piskel, p5play, the pyodide wheels) survive.
+  // Runs before prebuild, so the static assets prebuild copies into
+  // build/package/js (ace, piskel, p5play, the pyodide wheels) are put
+  // back after the clean rather than wiped by it — grunt-newer recopies
+  // them because their destinations are gone.
   const prepareBundlerOutputDir = () => {
     const dir = path.resolve(__dirname, 'build/package/js');
     const marker = path.join(dir, '.bundler');
