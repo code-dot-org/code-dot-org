@@ -134,12 +134,14 @@ image. That is the intended failure: the layer is published on the staging
 push that changes a lockfile, so a consumer branch must be rebased onto that
 push rather than silently landing on stale bytes.
 
-To see which key a checkout implies — normally only when working out why a
-keyed tag did not resolve — reproduce it in a shell:
+To see which key a checkout implies — to pull the matching layer, or to work
+out why a keyed tag did not resolve — reproduce it in a shell:
 
 ```
-cat .ruby-version Gemfile Gemfile.lock .python-version pyproject.toml \
-  uv.lock docker/build/Dockerfile docker/deps/Dockerfile | sha256sum
+key="bundle-$(cat .ruby-version Gemfile Gemfile.lock .python-version \
+  pyproject.toml uv.lock docker/build/Dockerfile docker/deps/Dockerfile \
+  | sha256sum | cut -d' ' -f1)"
+echo "$key"
 ```
 
 ## Published image

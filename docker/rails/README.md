@@ -44,12 +44,32 @@ so an English-only check will not catch it — the smoke test parses `ar-SA.yml`
 for exactly this reason. Locales are the only LFS-tracked path inside the
 slice, which is why the pull is by pattern rather than wholesale.
 
-`DEPS_IMAGE` names the dependency layer to build on. Building by hand, either
-build one (see [docker/deps/README.md](../deps/README.md#build)) or pull
-`ghcr.io/code-dot-org/cdo-deps:latest`. What matters is that its lockfile
-inputs match this checkout; a mismatch surfaces as an unresolvable bundle. CI
-picks the parent by digest instead, off a content key, and needs no tag —
-see [Published image](#published-image).
+`DEPS_IMAGE` is the dependency layer this image stacks on. Its lockfile inputs
+must match this checkout: the build is only a `COPY`, so a mismatched parent
+builds clean and then fails on the first `bundle exec` in frozen mode — which is
+what the smoke test's `bundle check` catches.
+
+Build the parent yourself, which is what the example above assumes and matches
+by construction:
+
+```
+docker build -t cdo-build:local docker/build/
+docker build -f docker/deps/Dockerfile \
+  --build-arg BUILD_IMAGE=cdo-build:local \
+  -t cdo-deps:local .
+```
+
+Or use a published one. Its tag is the content key this checkout implies;
+compute `key` as shown in
+[docker/deps/README.md](../deps/README.md#the-content-key), then:
+
+```
+docker pull "ghcr.io/code-dot-org/cdo-deps:$key"
+```
+
+CI does neither by hand: it resolves that key to a digest and pins the parent to
+it, so a source image is never built on a dependency layer its own lockfiles do
+not imply.
 
 Podman builds the same command line. The dual-engine constraints described in
 [docker/base/README.md](../base/README.md) apply here too.
