@@ -13,18 +13,29 @@ import {describe, expect, it} from 'vitest';
 
 import {hasEnclosingActor} from '../extensions/addActorName';
 
-/** A stand-in for the parent chain the predicate walks. */
+/**
+ * A stand-in for the parent chain the predicate walks.
+ *
+ * `chained` is the distinction the real bug turned on: a block CHAINED below
+ * another is still its child in Blockly, and `getInputWithBlock` is what tells
+ * that apart from being CONTAINED in one of its inputs.
+ */
 interface FakeBlock {
   type: string;
   fields?: Record<string, string>;
   inputs?: string[];
   parent?: FakeBlock;
+  /** True when this block sits BELOW its parent rather than inside it. */
+  chained?: boolean;
 }
 
 const chain = (...types: Array<string | FakeBlock>): FakeBlock => {
   const blocks = types.map(t => (typeof t === 'string' ? {type: t} : t));
   blocks.forEach((block, index) => {
     block.parent = blocks[index + 1];
+    if (blocks[index + 1]) {
+      children.set(blocks[index + 1], block);
+    }
   });
   return blocks[0];
 };
@@ -38,10 +49,25 @@ const asBlock = (block: FakeBlock): never =>
     getParent: () => (block.parent ? asBlock(block.parent) : null),
     getFieldValue: (name: string) => block.fields?.[name] ?? null,
     getInput: (name: string) => (block.inputs?.includes(name) ? {} : null),
+    // Which of MY inputs holds `child` — null when it arrived through `next`.
+    getInputWithBlock: (child: {type: string}) => {
+      const held = children.get(block);
+      return held && held.type === child.type && !held.chained ? {} : null;
+    },
   }) as never;
 
+/** Parent → the block directly under it in the fake chain. */
+const children = new WeakMap<FakeBlock, FakeBlock>();
+
+/** The block under test, CONTAINED in whatever is listed after it. */
 const enclosed = (...types: Array<string | FakeBlock>): boolean =>
   hasEnclosingActor(asBlock(chain('world_add_actor', ...types)));
+
+/** The same, but CHAINED below the first thing listed rather than inside it. */
+const chainedAfter = (...types: Array<string | FakeBlock>): boolean =>
+  hasEnclosingActor(
+    asBlock(chain({type: 'world_add_actor', chained: true}, ...types)),
+  );
 
 describe('where naming the placed actor is offered', () => {
   it('is not, in a world describing its level', () => {
@@ -88,9 +114,37 @@ describe('where naming the placed actor is offered', () => {
   });
 
   it('is, inside an unnamed spawn — a spawn within a spawn', () => {
-    // An unnamed `add actor` binds `actor` for its body, so a nested one has
+    // An unnamed `add actor` binds `actor` for its BODY, so a nested one has
     // something to shadow in turn.
     expect(enclosed({type: 'world_add_actor'}, 'world_world')).toBe(true);
+  });
+
+  it('is not, merely chained after another spawn', () => {
+    // The case that shipped wrong. Two `add actor`s in a row are siblings —
+    // neither is in the other, and neither has anything to shadow — but in
+    // Blockly the second's parent IS the first, so a walk that did not ask how
+    // it got there offered a choice that could not mean anything.
+    expect(chainedAfter({type: 'world_add_actor'}, {type: 'world_world'})).toBe(
+      false,
+    );
+  });
+
+  it('is not, chained after a spawn that is itself inside a world', () => {
+    // Three in a row is the same answer, and the walk has to keep going past
+    // the sibling rather than stopping at it.
+    expect(
+      chainedAfter(
+        {type: 'world_add_actor', chained: true},
+        {type: 'world_world'},
+      ),
+    ).toBe(false);
+  });
+
+  it('is, chained after a spawn but inside a define actor', () => {
+    // Passing a sibling must not lose the context that IS there.
+    expect(chainedAfter({type: 'world_add_actor'}, {type: 'world_actor'})).toBe(
+      true,
+    );
   });
 
   it('is not, inside a NAMED spawn in a world', () => {
