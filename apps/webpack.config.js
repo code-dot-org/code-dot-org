@@ -15,7 +15,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
-const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const circularDependencies = require('./circular_dependencies.json');
 const envConstants = require('./envConstants');
@@ -328,7 +327,7 @@ const WEBPACK_BASE_CONFIG = {
  *
  * Invoked by `Gruntfile.js` for `yarn start`, `yarn build`, etc
  *
- * @param {Object} appEntries - defaults to building all apps, to build only one app pass in e.g. `appEntriesFor('maze')`
+ * @param {Object} appsEntries - defaults to building all apps, to build only one app pass in e.g. `appsEntriesFor(['maze'])`
  * @param {boolean} minify - whether to minify the output
  * @param {boolean} piskelDevMode - whether to use the piskel dev mode
  * @returns {Object} A webpack config object for building `apps/`
@@ -414,11 +413,9 @@ function createWebpackConfig({
         name: 'webpack-runtime',
       },
 
-      // Using splitChunks and/or StatsWriterPlugin in dev mode increases rebuild+reload time
-      // by 2x-10x. See: https://github.com/code-dot-org/code-dot-org/pull/55707
-      // Both configs skip splitChunks in dev (2x-10x slower
-      // rebuild+reload; see PR #55707) and share the cacheGroups via
-      // bundlerBase.makeSplitChunks.
+      // Using splitChunks in dev mode increases rebuild+reload time by
+      // 2x-10x. See: https://github.com/code-dot-org/code-dot-org/pull/55707
+      // Both configs share the cacheGroups via bundlerBase.makeSplitChunks.
       splitChunks: process.env.DEV ? undefined : makeSplitChunks(appsEntries),
     },
     mode: minify ? 'production' : 'development',
@@ -517,15 +514,6 @@ function createWebpackConfig({
           }
           return file;
         },
-        ...(process.env.DEV
-          ? []
-          : [
-              // Using splitChunks and/or StatsWriterPlugin in dev mode increases rebuild+reload time
-              // by 2x-10x. See: https://github.com/code-dot-org/code-dot-org/pull/55707
-              new StatsWriterPlugin({
-                fields: ['assetsByChunkName', 'assets'],
-              }),
-            ]),
       }),
       new PyodidePlugin({
         outDirectory: `pyodide/${pyodide.version}`,

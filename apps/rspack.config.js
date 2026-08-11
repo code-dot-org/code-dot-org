@@ -1,11 +1,13 @@
 /* eslint-disable import/order */
 // Rspack build for apps/, opt-in via `yarn start --rspack` (and the
-// grunt --rspack flag / APPS_BUNDLER=rspack that CI uses).
+// grunt --rspack flag; APPS_BUNDLER=rspack is the env-var form for CI
+// and scripts).
 //
 // Rspack implements the webpack 5 config surface.  The bundler-agnostic
-// build facts — entries, aliases, resolve fallbacks, externals, node
-// polyfills, and the splitChunks cacheGroups — live in bundlerBase.js,
-// shared with webpack.config.js so the two cannot drift.  This file
+// build facts — aliases, resolve fallbacks, externals, node polyfills,
+// and the splitChunks cacheGroups — live in bundlerBase.js, shared with
+// webpack.config.js so the two cannot drift; entry definitions are
+// likewise shared, from webpackEntryPoints.js.  This file
 // holds what is genuinely rspack's: the swc loader chain and its babel
 // parity shims, and rspack builtins or forks in place of webpack-only
 // plugins.  Every deliberate divergence is marked RSPACK-DIFF with
@@ -18,7 +20,8 @@
 // webpack 'total-size').
 //
 // Usage:
-//   DEV=1 npx rspack build --config rspack.config.js
+//   NODE_ENV=development DEV=1 npx rspack build --config rspack.config.js
+//   (the rspack CLI defaults NODE_ENV to production, which minifies)
 //   DEV=1 HOT=1 npx rspack serve --config rspack.config.js
 const path = require('path');
 const pyodide = require('pyodide');
@@ -27,7 +30,6 @@ const rspack = require('@rspack/core');
 
 const {PyodidePlugin} = require('@pyodide/webpack-plugin');
 const {RspackManifestPlugin} = require('rspack-manifest-plugin');
-const {StatsWriterPlugin} = require('webpack-stats-plugin');
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const {TsCheckerRspackPlugin} = require('ts-checker-rspack-plugin');
 const {ReactRefreshRspackPlugin} = require('@rspack/plugin-react-refresh');
@@ -63,6 +65,19 @@ const p = (...paths) => path.resolve(__dirname, ...paths);
 // The CLI does not expose which command is running; the argv is the
 // reliable signal for gating serve-only behavior.
 const IS_SERVE = process.argv.includes('serve');
+
+// RSPACK_SWC selects the transpiler chain: 'all' (the grunt default)
+// replaces both babel-loader and ts-loader with builtin swc, 'ts'
+// replaces only ts-loader, and off-values fall back to the full
+// babel-loader + ts-loader chain — the comparison run rspackNotice
+// invites when bisecting a suspected transpile difference.  Off-values
+// are normalized here because the two reads below would otherwise
+// disagree (a bare truthy check would take RSPACK_SWC=0 as swc-for-TS).
+const RSPACK_SWC = ['0', 'false', 'off', 'none', 'babel'].includes(
+  process.env.RSPACK_SWC
+)
+  ? ''
+  : process.env.RSPACK_SWC;
 
 // RSPACK-DIFF: rspack resolves css-loader's `new URL(...)` output for
 // server-relative urls (e.g. url(/fonts/...)) as modules, where
@@ -211,7 +226,7 @@ function createRspackConfig({
       // rspack contenthashes are 16 hex (hashDigestLength is not honored
       // for chunk filenames in 2.1.5, and explicit [contenthash:20]
       // panics); the wp-hash consumers — sprockets' WP_REGEX in
-      // asset_sync.rake and grunt copy:unhash — accept 16-32 hex.
+      // asset_sync.rake and grunt copy:unhash — both accept 16 hex.
       filename: `[name]${minify ? 'wp[contenthash].min.js' : '.js'}`,
     },
     stats: envConstants.DEV ? 'normal' : 'errors-only',
@@ -340,7 +355,7 @@ function createRspackConfig({
         // add-module-exports shim loader, sourceType-unambiguous module
         // detection (isModule 'unknown'), and loose classes without
         // loose spread (jsc.assumptions).
-        ...(process.env.RSPACK_SWC === 'all' || process.env.RSPACK_SWC === '1'
+        ...(RSPACK_SWC === 'all' || RSPACK_SWC === '1'
           ? [
               // The blockly fork cannot take loose class semantics: its
               // accessor setters use `super`, which loose lowering turns
@@ -450,7 +465,7 @@ function createRspackConfig({
                 ],
               },
             ]),
-        ...(process.env.RSPACK_SWC
+        ...(RSPACK_SWC
           ? [
               {
                 test: /\.tsx?$/,
@@ -737,13 +752,6 @@ function createRspackConfig({
             ]),
           ]
         : []),
-      ...(process.env.DEV
-        ? []
-        : [
-            new StatsWriterPlugin({
-              fields: ['assetsByChunkName', 'assets'],
-            }),
-          ]),
       new RspackManifestPlugin({
         basePath: 'js/',
         // The unminified copies emitted by UnminifiedCopiesPlugin collide

@@ -385,16 +385,16 @@ module.exports = function (grunt) {
   // with NODE_OPTIONS already in the environment (the yarn `grunt`
   // script sets 4096MB), and that value is sized for grunt itself, not
   // for a full rspack build.
-  const rspackNodeOptions = `NODE_OPTIONS=--max-old-space-size=${
+  const rspackNodeOptions = `NODE_OPTIONS="--max-old-space-size=${
     process.env.APPS_BUILD_MAX_MEMORY || 8192
-  } `;
+  }" `;
 
   // The rspack build runs in a child process, so grunt options the
   // webpack path consumes in-process must cross as environment
   // variables: --app as APP (rspack.config.js's entry default) and
   // --piskel-dev as PISKEL_DEV.
   const rspackEnv =
-    (SINGLE_APP ? `APP=${SINGLE_APP} ` : '') +
+    (SINGLE_APP ? `APP="${SINGLE_APP}" ` : '') +
     (PISKEL_DEVELOPMENT_MODE ? 'PISKEL_DEV=1 ' : '') +
     (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
     rspackNodeOptions;
@@ -405,21 +405,27 @@ module.exports = function (grunt) {
     // karma) is bundler-independent and runs unchanged.  RSPACK_SWC
     // defaults to the full-swc mode here because this path exists to
     // prove the production story; see rspack.config.js.  NODE_ENV is
-    // pinned because the rspack CLI defaults --mode to production,
-    // silently minifying dev builds otherwise.
+    // pinned from DEV — the same switch that selects webpack:build vs
+    // webpack:uglify and gates uglify:lib and copy:unhash in the build
+    // task — so the child's minify decision cannot disagree with the
+    // grunt steps around it.  (Left to the rspack CLI, NODE_ENV would
+    // default to production and silently minify dev builds.)
     rspackBuild:
-      `NODE_ENV=${process.env.NODE_ENV || 'development'} ` +
+      `NODE_ENV=${envConstants.DEV ? 'development' : 'production'} ` +
       rspackEnv +
       'node node_modules/.bin/rspack build --config rspack.config.js',
-    // The dev server; `rspack serve` defaults to development mode.
-    // Full-swc here too: it is the mode every browser and drone
-    // verification ran in, and the hybrid RSPACK_SWC=ts fallback
-    // starts several times slower.  prepareBundlerOutputDir cleans the
-    // output directory beforehand (a populated one costs rspack ~18s
-    // of startup), and doing it there rather than here keeps
-    // prebuild's copied assets.
+    // The dev server is development by definition, so NODE_ENV is
+    // pinned outright (an exported NODE_ENV=production in the calling
+    // shell would otherwise serve minified).  Full-swc here too: it is
+    // the mode every browser and drone verification ran in, and the
+    // hybrid RSPACK_SWC=ts fallback starts several times slower.
+    // prepareBundlerOutputDir cleans the output directory beforehand
+    // (a populated one costs rspack ~18s of startup), and doing it
+    // there rather than here keeps prebuild's copied assets.
     rspackServe:
-      rspackEnv + 'node node_modules/.bin/rspack serve --config rspack.config.js',
+      'NODE_ENV=development ' +
+      rspackEnv +
+      'node node_modules/.bin/rspack serve --config rspack.config.js',
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
@@ -668,7 +674,7 @@ module.exports = function (grunt) {
 
   // `yarn start --rspack` / `yarn build --rspack` / `yarn build:dist
   // --rspack` opt into the rspack bundler for one run; APPS_BUNDLER is
-  // the env-var form CI uses.
+  // the env-var form for CI and scripts.
   // TEMPORARY: the fallback is rspack so drone builds this branch's
   // optimized assets with it and runs UI tests against them — the
   // migration evidence discussed in the PR.  Revert to 'webpack' before
@@ -676,6 +682,14 @@ module.exports = function (grunt) {
   const APPS_BUNDLER = grunt.option('rspack')
     ? 'rspack'
     : process.env.APPS_BUNDLER || 'rspack';
+  if (
+    process.env.APPS_BUNDLER &&
+    !['rspack', 'webpack'].includes(process.env.APPS_BUNDLER)
+  ) {
+    grunt.log.warn(
+      `Unrecognized APPS_BUNDLER value ${process.env.APPS_BUNDLER}; expected rspack or webpack.`
+    );
+  }
   const rspackNotice = () => {
     if (APPS_BUNDLER === 'rspack') {
       grunt.log.writeln(
@@ -691,8 +705,8 @@ module.exports = function (grunt) {
   // additionally cleans on every start, switch or not: its writeToDisk
   // step compares against every existing file, and starting over a
   // populated directory costs ~18s versus rebuilding into an empty one.
-  // Runs before prebuild so the copied static assets (ace, droplet,
-  // blockly media) survive.
+  // Runs before prebuild so the static assets copied into
+  // build/package/js (ace, piskel, p5play, the pyodide wheels) survive.
   const prepareBundlerOutputDir = () => {
     const dir = path.resolve(__dirname, 'build/package/js');
     const marker = path.join(dir, '.bundler');
@@ -725,8 +739,10 @@ module.exports = function (grunt) {
       // For any minifiable libs, generate minified sources if they do not already
       // exist in our repo. Skip minification in development environment.
       envConstants.DEV ? 'noop' : 'uglify:lib',
-      // rspack.config.js selects minify from NODE_ENV, which build:dist
-      // sets, so one exec target covers both dev and production builds.
+      // exec:rspackBuild pins NODE_ENV from the same DEV switch used
+      // above and below, so one exec target covers both dev and
+      // production builds without disagreeing with uglify:lib or
+      // copy:unhash.
       APPS_BUNDLER === 'rspack'
         ? 'exec:rspackBuild'
         : envConstants.DEV

@@ -131,7 +131,7 @@ sets:
 | Working on...            | Scope                                                       |
 | ------------------------ | ----------------------------------------------------------- |
 | any lab2 lab             | `<lab>,lab2` (e.g. `music,lab2`, `weblab2,lab2`)            |
-| Sprite Lab or Game Lab   | `p5lab` (they share the engine), or `p5lab,blocks` when editing block definitions |
+| Sprite Lab or Game Lab   | `p5lab` (they share the engine, block definitions included)  |
 | App Lab                  | `applab`, or `applab,storage` when editing data blocks      |
 | the code-studio header   | `code-studio/header,code-studio/components/header,lab2/header` |
 | teacher dashboard        | `templates/teacherDashboard,templates/studioHomepages`      |
