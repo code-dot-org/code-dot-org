@@ -28,6 +28,7 @@ const RULES = [
   'solid',
   'wrap',
   'bounds',
+  'collect',
   'camera',
   'cameraFollow',
   'cameraEase',

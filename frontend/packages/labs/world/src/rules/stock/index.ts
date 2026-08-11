@@ -17,6 +17,7 @@ import {cameraConfinedRule} from './cameraConfined';
 import {cameraDeadzoneRule} from './cameraDeadzone';
 import {cameraEaseRule} from './cameraEase';
 import {cameraFollowRule} from './cameraFollow';
+import {collectRule} from './collect';
 import {collisionsRule} from './collisions';
 import {dragRule} from './drag';
 import {driveRule} from './drive';
@@ -102,6 +103,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Stops moving actors passing through solid ones, pushing them out at the face they entered.',
     provides: ['Solid'],
     contents: solidRule,
+  },
+  {
+    id: 'collect',
+    name: 'Collection',
+    ability: 'Collects Things',
+    description:
+      'Lets an actor pick up the things it walks into, and says which kinds can be picked up. It keeps what each collector has taken, so a game can ask how many of a kind somebody holds, and raises an event on both sides of the moment.',
+    provides: ['Collects', 'Can Be Collected'],
+    contents: collectRule,
   },
   {
     id: 'input',
@@ -246,6 +256,7 @@ export function stockRuleByName(name: string): StockRule | undefined {
 export {
   arrowsRule,
   boundsRule,
+  collectRule,
   dragRule,
   driveRule,
   expiresRule,
