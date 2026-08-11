@@ -187,6 +187,29 @@ const WALL_ROWS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 // Two of them are on the walking path, so the first thing a learner does also
 // shows them the mechanic; the third asks for the jump they have just been told
 // about.
+/**
+ * What the starter level places, in the order the map lists it.
+ *
+ * Exported because the level is told twice — as a `.map` file here, and as
+ * `create ⟨kind⟩ in map` arrangements in the single-world telling
+ * (fixtures/platformerSingle), which groups these by type. Two hand-written
+ * copies of a board is two boards, and the pair is only worth having if the
+ * board in it is the same one.
+ */
+export const LEVEL1_ACTORS = [
+  place('actors/player', 'Player', tileCenter(2), tileCenter(4)),
+  ...ground('Floor', 9, ALL_COLUMNS),
+  ...wall('WallLeft', 0, WALL_ROWS),
+  ...wall('WallRight', 9, WALL_ROWS),
+  ...ground('Platform', 6, [5, 6, 7]),
+  // Three coins, in the order a learner will meet them: two on the floor
+  // that walking right takes, and one that has to be jumped for.
+  place('actors/coin', 'Coin1', tileCenter(4), tileCenter(8)),
+  place('actors/coin', 'Coin2', tileCenter(8), tileCenter(8)),
+  place('actors/coin', 'Coin3', tileCenter(6), tileCenter(3)),
+  place('actors/ball', 'Ball', tileCenter(3), tileCenter(2)),
+];
+
 const LEVEL1_MAP = JSON.stringify(
   {
     type: 'map',
@@ -195,19 +218,7 @@ const LEVEL1_MAP = JSON.stringify(
     // editor's Width/Height), against `tile`, which is how big ONE is.
     size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
     tile: {width: TILE_SIZE, height: TILE_SIZE},
-    actors: [
-      place('actors/player', 'Player', tileCenter(2), tileCenter(4)),
-      ...ground('Floor', 9, ALL_COLUMNS),
-      ...wall('WallLeft', 0, WALL_ROWS),
-      ...wall('WallRight', 9, WALL_ROWS),
-      ...ground('Platform', 6, [5, 6, 7]),
-      // Three coins, in the order a learner will meet them: two on the floor
-      // that walking right takes, and one that has to be jumped for.
-      place('actors/coin', 'Coin1', tileCenter(4), tileCenter(8)),
-      place('actors/coin', 'Coin2', tileCenter(8), tileCenter(8)),
-      place('actors/coin', 'Coin3', tileCenter(6), tileCenter(3)),
-      place('actors/ball', 'Ball', tileCenter(3), tileCenter(2)),
-    ],
+    actors: LEVEL1_ACTORS,
   },
   null,
   2,
@@ -620,7 +631,17 @@ function starterAnimation(id: string): Record<string, StarterFile> {
   };
 }
 
-const STARTER = buildProject({
+/**
+ * The starter, written out.
+ *
+ * Exported because it is now told twice: once as it stands, and once with the
+ * actors and the map moved into `main.world` (fixtures/platformerSingle). The
+ * second one is the first one minus five files, so it takes this rather than
+ * restating the rules, the pictures and the animations — a copy of that list
+ * would be a copy that could go stale, and the whole point of the pair is that
+ * only the TELLING differs.
+ */
+export const STARTER_SPEC: ProjectSpec = {
   folders: [
     'rules',
     'worlds',
@@ -749,7 +770,9 @@ const STARTER = buildProject({
     ...starterAnimation('coinSpin'),
   },
   open: ['main'],
-});
+};
+
+const STARTER = buildProject(STARTER_SPEC);
 
 export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
   source: STARTER.source,

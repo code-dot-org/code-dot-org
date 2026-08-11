@@ -79,6 +79,92 @@ describe('the scenario catalogue', () => {
     }
   });
 
+  it('says the single-world platformer without leaving main.world', () => {
+    const files = Object.values(
+      WORLD_SCENARIOS['platformer-single'].source.files,
+    );
+    const worlds = files.filter(file => file.name.endsWith('.world'));
+
+    expect(worlds).toHaveLength(1);
+    expect(files.some(file => file.name.endsWith('.actor'))).toBe(false);
+    expect(files.some(file => file.name.endsWith('.map'))).toBe(false);
+
+    const main = worlds[0].contents;
+    expect(main).toContain('world_create_in_map');
+    expect(main).not.toContain('world_load_map');
+    // All five of the player's handlers, which is what makes this pair the
+    // fullest of the three: a jump, two things it says about falling, and the
+    // count. A hat left behind in the move would be a game that runs and is
+    // quietly missing a mechanic.
+    for (const hat of [
+      'world_on_Input_PressesEvent',
+      'world_on_Gravity_StartsFallingEvent',
+      'world_on_Gravity_StopsFallingEvent',
+      'world_on_Collection_CollectsEvent',
+    ]) {
+      expect(main).toContain(hat);
+    }
+  });
+
+  it('is the starter minus the files that moved into the world', () => {
+    // Written as a subtraction (STARTER_SPEC), so what is checked is that the
+    // subtraction took the right five and nothing else: a rule or a picture
+    // dropped here would be a `use rule` pointing at nothing, and the dropdown
+    // resolves that to another rule rather than saying so.
+    const named = (tag: 'simple' | 'platformer-single') =>
+      new Set(
+        Object.values(WORLD_SCENARIOS[tag].source.files).map(file => file.name),
+      );
+    const starter = named('simple');
+    const single = named('platformer-single');
+
+    const missing = [...starter].filter(name => !single.has(name));
+    expect(new Set(missing)).toEqual(
+      new Set([
+        'player.actor',
+        'ground.actor',
+        'coin.actor',
+        'ball.actor',
+        'level1.map',
+      ]),
+    );
+    expect([...single].filter(name => !starter.has(name))).toEqual([]);
+  });
+
+  it('places the same board as the map it was made from', () => {
+    // The two boards are one board (`LEVEL1_ACTORS`), grouped by kind on this
+    // side because an arrangement belongs to the kind it places. Checked by
+    // position rather than by count: a board with the right number of tiles in
+    // the wrong places is the failure worth catching.
+    const map = JSON.parse(
+      Object.values(WORLD_SCENARIOS.simple.source.files).find(
+        file => file.name === 'level1.map',
+      )!.contents,
+    ) as {actors: Array<{id: string; properties: object}>};
+
+    const main = Object.values(
+      WORLD_SCENARIOS['platformer-single'].source.files,
+    ).find(file => file.name === 'main.world')!.contents;
+
+    // Every arrangement entry across the four `create in map` blocks, as
+    // `<id> <serialized overrides>` — which is the whole of what a placement
+    // says, and comparable with what the map file says.
+    const said = (entry: {id: string; properties: object}) =>
+      `${entry.id} ${JSON.stringify(entry.properties)}`;
+    const placed = new Set(
+      [...main.matchAll(/"PLACEMENTS":(\[.*?\}\])(?=,"|\})/g)].flatMap(match =>
+        (JSON.parse(match[1]) as Array<{id: string; properties: object}>).map(
+          said,
+        ),
+      ),
+    );
+
+    expect(placed.size).toBe(map.actors.length);
+    for (const actor of map.actors) {
+      expect(placed).toContain(said(actor));
+    }
+  });
+
   it('gives breakout everything it names', () => {
     // A scenario naming a rule the project does not hold is a world that loads
     // with a `use rule` pointing at nothing — and the dropdown quietly falls

@@ -128,13 +128,13 @@ const SINGLE_WORLD = JSON.stringify({
         setNumber('world_set_SolidBodies_BouncinessProperty', 1),
         {type: 'world_set_sprite', fields: {SPRITE: 'ground.png'}},
       ]),
-      defineActor(BRICK, 'Brick', 320, [
+      defineActor(BRICK, 'Brick', 370, [
         useTrait('Solid Bodies#SolidTrait'),
         useTrait('Collection#CanBeCollectedTrait'),
         setNumber('world_set_SolidBodies_BouncinessProperty', 1),
         {type: 'world_set_sprite', fields: {SPRITE: 'box.png'}},
       ]),
-      defineActor(PADDLE, 'Paddle', 620, [
+      defineActor(PADDLE, 'Paddle', 720, [
         useTrait('Arrow Keys#ControlledByArrowKeysTrait'),
         useTrait('Input#TakesKeyboardInputTrait'),
         useTrait('Solid Bodies#SolidTrait'),
@@ -149,7 +149,7 @@ const SINGLE_WORLD = JSON.stringify({
           },
         },
       ]),
-      defineActor(BALL, 'Ball', 920, [
+      defineActor(BALL, 'Ball', 1110, [
         useTrait('Physics#CanMoveTrait'),
         useTrait('Collection#CollectsTrait'),
         {type: 'world_set_sprite', fields: {SPRITE: 'ball.png'}},
