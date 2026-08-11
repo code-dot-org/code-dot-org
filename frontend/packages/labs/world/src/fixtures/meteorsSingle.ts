@@ -237,7 +237,7 @@ const SINGLE_WORLD = JSON.stringify({
       {
         type: 'world_on_Collisions_StartsTouchingEvent',
         fields: {FILTER0: local(SHOT)},
-        x: 620,
+        x: 900,
         y: 820,
         inputs: {ACTOR: kind(METEOR)},
         next: {
@@ -255,7 +255,7 @@ const SINGLE_WORLD = JSON.stringify({
       {
         type: 'world_on_Collisions_StartsTouchingEvent',
         fields: {FILTER0: local(METEOR)},
-        x: 620,
+        x: 900,
         y: 1060,
         inputs: {ACTOR: kind(SHIP)},
         next: {block: {type: 'world_log', fields: {TEXT: 'Ship destroyed!'}}},

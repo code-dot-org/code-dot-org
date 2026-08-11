@@ -30,6 +30,7 @@ import {BREAKOUT_SPEC} from './breakout';
 import {BREAKOUT_SINGLE_SPEC} from './breakoutSingle';
 import {METEORS_SPEC} from './meteors';
 import {METEORS_SINGLE_SPEC} from './meteorsSingle';
+import {PLATFORMER_SINGLE_SPEC} from './platformerSingle';
 
 /**
  * Every scenario's tag, in the order the switcher offers them.
@@ -38,7 +39,12 @@ import {METEORS_SINGLE_SPEC} from './meteorsSingle';
  * (`/projects/world/<tag>/edit`), so it is url-shaped: lower case, hyphens.
  */
 export const WORLD_SCENARIO_TAGS = [
+  // `simple` rather than `platformer`, which is what the switcher calls it.
+  // The tag is the channel id a studio route carries, and this one has been
+  // that since before the catalogue existed; renaming it would break the links
+  // people already have for the sake of a tidier list.
   'simple',
+  'platformer-single',
   'breakout',
   'breakout-single',
   'meteors',
@@ -119,6 +125,26 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- `console.log` output appears in the Console\n' +
       '- Try changing the player’s start position, gravity, or move speed — or ' +
       'make the ball collectible too, which is one row in `ball.actor`',
+  },
+  'platformer-single': {
+    name: 'Platformer (single world)',
+    description:
+      'The starter with nothing outside main.world: the four actors are ' +
+      'defined in it, the board is `create in map`, and the player’s five ' +
+      'handlers are hats.',
+    source: buildProject(PLATFORMER_SINGLE_SPEC).source,
+    instructions:
+      '## The starter, in one file\n\nThe same game as **Platformer**, said ' +
+      'entirely in `main.world`.\n\n' +
+      '- The four actors are `define actor` blocks in the world — no files, ' +
+      'no imports, and nothing else can reach them\n' +
+      '- The board is `create ⟨kind⟩ in map`, one block per kind: click the ' +
+      'arrangement to edit it\n' +
+      '- The player’s handlers are hats on `any ⟨Player⟩`, so they belong to ' +
+      'every player there will be — add a second one to the arrangement and ' +
+      'it jumps too\n' +
+      '- The rules, the animations and the pictures are files in both: they ' +
+      'were never actors, so there was nothing to move',
   },
   breakout: {
     name: 'Breakout',
