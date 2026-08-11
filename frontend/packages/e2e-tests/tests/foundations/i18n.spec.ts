@@ -368,7 +368,13 @@ test.describe('Maze, Frozen, and Minecraft:Agent tutorials in various languages'
    */
   test('Pixelation Widget long and short instructions in Spanish', async ({
     page,
+    browserName,
   }) => {
+    // WebKit/Safari crashes on Ubuntu 20.04 resolving our 22-family Noto font
+    // fallback chain. Fixed in Ubuntu 24.04 — remove when Drone is upgraded.
+    // https://github.com/code-dot-org/code-dot-org/issues/73740
+    test.fixme(browserName === 'webkit');
+
     const level = new PixelationLevel(page);
     await level.gotoLevel({lesson: 17, level: 2, lang: 'es-MX'});
 
