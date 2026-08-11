@@ -197,7 +197,7 @@ module Slack
       gsub(/<\/?b>/, '*').
       gsub(/<\/?pre>/, '```').
       gsub(/<a href=['"]([^'"]+)['"]>/, '<\1|').
-      gsub(/<\/a>/, '>').
+      gsub("</a>", '>').
       gsub(/<br\/?>/, "\n")
   end
 

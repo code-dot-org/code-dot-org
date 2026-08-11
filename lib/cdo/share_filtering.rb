@@ -299,11 +299,11 @@ module ShareFiltering
     remaining.scan(string_pattern) do |str|
       content = str[1..-2]
       unescaped = content.
-        gsub(/\\n/, ' ').
-        gsub(/\\t/, ' ').
-        gsub(/\\'/, "'").
-        gsub(/\\"/, '"').
-        gsub(/\\\\/, '')
+        gsub("\\n", ' ').
+        gsub("\\t", ' ').
+        gsub("\\'", "'").
+        gsub('\\"', '"').
+        gsub("\\\\", '')
       cleaned = unescaped.gsub(/[(){}\[\];,.<>:]/, ' ')
       text_parts << cleaned unless cleaned.strip.empty?
     end
