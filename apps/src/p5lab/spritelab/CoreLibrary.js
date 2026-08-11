@@ -95,15 +95,8 @@ export default class CoreLibrary {
       this.p5.background('white');
     }
     if (typeof this.background === 'object') {
-      // Match the canvas's physical resolution, not its 400px logical size:
-      // resizing to 400 throws away pixels a denser canvas can show, and
-      // the image ends up the only soft thing on the stage. Guarded so the
-      // (destructive) resize runs once, not every frame.
-      const size = 400 * (this.p5._pixelDensity || 1);
-      if (this.background.width !== size || this.background.height !== size) {
-        this.background.resize(size, size);
-      }
-      this.p5.image(this.background, 0, 0, 400, 400);
+      this.background.resize(400, 400);
+      this.p5.image(this.background);
     }
   }
 

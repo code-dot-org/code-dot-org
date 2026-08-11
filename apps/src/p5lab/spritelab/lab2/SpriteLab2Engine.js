@@ -104,6 +104,28 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
+    // Density-aware background rendering, scoped to Lab2. The shared
+    // CoreLibrary path resizes every background to 400px — the canvas's
+    // logical size, not its physical one — and re-runs the (destructive,
+    // double-copy) resize every frame; on this lab's denser canvas the
+    // background is the one soft thing on the stage. Here: resize once to
+    // the physical resolution, then one blit per frame into the 400px
+    // logical box. The same fix is proposed for classic Sprite Lab in its
+    // own PR; when that lands, delete this override.
+    library.drawBackground = function () {
+      if (typeof this.background === 'string') {
+        this.p5.background(this.background);
+      } else {
+        this.p5.background('white');
+      }
+      if (typeof this.background === 'object') {
+        const size = 400 * (this.p5._pixelDensity || 1);
+        if (this.background.width !== size || this.background.height !== size) {
+          this.background.resize(size, size);
+        }
+        this.p5.image(this.background, 0, 0, 400, 400);
+      }
+    };
     if (this.usesPlatformPhysics_) {
       // The sizing default is per SCENE, not per level: one project holds
       // both a platformer scene (one-cell sprites) and a story scene (large
