@@ -566,8 +566,10 @@ module.exports = function (grunt) {
         logConcurrentOutput: true,
       },
     },
+    // Same set as `watch` above, with the rspack dev server in place of
+    // webpack's: both need the frontend/ package rebuilds.
     watchRspack: {
-      tasks: ['watch', 'exec:rspackServe'],
+      tasks: ['watch', 'exec:rspackServe', 'exec:watchFrontendDependencies'],
       options: {
         logConcurrentOutput: true,
       },
