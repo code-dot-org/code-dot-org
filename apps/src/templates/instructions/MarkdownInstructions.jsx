@@ -36,6 +36,9 @@ class MarkdownInstructions extends React.Component {
     // its processor.
     this.blocklyExtensions = [
       extensions.expandableImages({onExpand: props.openImageDialog}),
+      extensions.lenientHeadings,
+      extensions.visualCodeBlock,
+      extensions.inlineStyles,
       extensions.details,
     ];
 

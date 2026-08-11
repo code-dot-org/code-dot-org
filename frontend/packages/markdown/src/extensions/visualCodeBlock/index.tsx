@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import type {Components} from 'hast-util-to-jsx-runtime';
-import type {ReactNode} from 'react';
+import type {CSSProperties, ReactNode} from 'react';
 
 import type {MarkdownExtension} from '../../extension';
 
@@ -54,22 +54,35 @@ const visualCodeBlockSyntax = () => (tree: MdastNode) => {
 interface CodeProps {
   children?: ReactNode;
   className?: string;
+  style?: CSSProperties;
   'data-visual-code-block'?: string;
 }
 
+/*
+ * `style` is forwarded, not ignored: taking over the `code` mapping means this
+ * component renders every inline code element, including the raw
+ * `<code style="background-color:...">` that legacy curriculum uses to color a
+ * block. Dropping it would make enabling this extension silently *remove*
+ * coloring the inlineStyles extension had allowed through. The validated color
+ * from the `(#rrggbb)` syntax still wins for the property it sets.
+ */
 const VisualCode = (props: CodeProps) => {
-  const {children, className} = props;
+  const {children, className, style} = props;
   const color = props['data-visual-code-block'];
 
   // Plain inline code (no color marker) renders as ordinary <code>.
   if (!color) {
-    return <code className={className}>{children}</code>;
+    return (
+      <code className={className} style={style}>
+        {children}
+      </code>
+    );
   }
 
   return (
     <code
       className={classNames(moduleStyles.visualBlock, className)}
-      style={{backgroundColor: color}}
+      style={{...style, backgroundColor: color}}
     >
       {children}
     </code>

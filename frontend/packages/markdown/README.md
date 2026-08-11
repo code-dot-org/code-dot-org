@@ -25,6 +25,11 @@ body-two `Typography`), and the localization wrappers (`data-isolate` on
 paragraphs, `data-lz-url`/`data-localize` on links). Everything else is opt-in
 via `extensions`.
 
+Because that type scale and those wrappers ride on the paragraph, a list item
+that has none gets one: a tight list (`- one`, no blank line between items) and
+a raw HTML `<li>` both hold their text directly, so
+`rehypeListItemParagraphs` wraps it, leaving them equivalent to a loose item.
+
 ## The pipeline
 
 ```
@@ -33,6 +38,7 @@ remark-gfm              GFM syntax
 <extension remark plugins>             ← new markdown SYNTAX
 remark-rehype           mdast          → hast        (allowDangerousHtml)
 rehype-raw              reparse raw HTML in the source
+rehypeListItemParagraphs  give every <li> a paragraph
 <extension rehype plugins>             ← transform the HTML TREE
 rehypeLocalize          translate block text         ← when localization is active
 rehype-sanitize         enforce the allowlist        ← SECURITY BOUNDARY

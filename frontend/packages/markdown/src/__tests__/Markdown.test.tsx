@@ -75,6 +75,46 @@ describe('Markdown', () => {
     expect(html).toMatch(/<hr[^>]*class="[^"]*divider/);
   });
 
+  /*
+   * A tight list (`- one`, no blank line between items) and a raw HTML `<li>`
+   * both hold their text directly, with no paragraph of their own. The
+   * paragraph is what carries the body type scale and the translation
+   * isolation, so the pipeline inserts one; see rehypeListItemParagraphs.
+   */
+  describe('list items', () => {
+    it('wraps tight list item text in a body paragraph', () => {
+      const html = render('- one\n- two');
+      expect(html.match(/<p[^>]*MuiTypography-body2/g)).toHaveLength(2);
+    });
+
+    it('wraps raw HTML list item text in a body paragraph', () => {
+      const html = render('<ul>\n<li>an item</li>\n</ul>');
+      expect(html).toMatch(
+        /<li><p[^>]*MuiTypography-body2[^>]*>an item<\/p><\/li>/,
+      );
+    });
+
+    it('leaves a loose list item with the one paragraph it already had', () => {
+      const html = render('- one\n\n- two');
+      expect(html.match(/<p[^>]*MuiTypography-body2/g)).toHaveLength(2);
+    });
+
+    it('keeps a nested list beside the paragraph, not inside it', () => {
+      const {container} = renderDom(
+        <Markdown content={'- outer\n  - inner'} />,
+      );
+      expect(container.querySelectorAll('li > p')).toHaveLength(2);
+      expect(container.querySelector('li > ul')).not.toBeNull();
+      expect(container.querySelector('p ul')).toBeNull();
+    });
+
+    it('does not wrap block content in a list item', () => {
+      const html = render('- ### a heading');
+      expect(html).toContain('<h3');
+      expect(html).not.toMatch(/<p[^>]*>\s*<h3/);
+    });
+  });
+
   describe('localization wrappers', () => {
     it('isolates paragraphs for translation', () => {
       const html = render('a paragraph');
@@ -177,6 +217,24 @@ describe('Markdown', () => {
       const md = '<span style="color:red">x</span>';
       expect(render(md)).not.toContain('color');
       expect(render(md, [inlineStyles])).toContain('color:red');
+    });
+
+    /*
+     * A mapped element keeps only the props its component forwards, so an
+     * allowed `style` reaches the page only if the mapping passes it on. One
+     * case per element the base mappings claim.
+     */
+    it.each([
+      ['p', '<p style="color:red">x</p>', 'color:red'],
+      ['strong', '<strong style="color:red">x</strong>', 'color:red'],
+      ['em', '<em style="color:red">x</em>', 'color:red'],
+      ['h2', '<h2 style="color:red">x</h2>', 'color:red'],
+      ['a', '<a style="color:red" href="https://code.org">x</a>', 'color:red'],
+      // `clear:both` after a floated image is the overwhelmingly common
+      // styled <hr> in our curriculum.
+      ['hr', '<hr style="clear:both">', 'clear:both'],
+    ])('inlineStyles survives the %s mapping', (_tag, md, expected) => {
+      expect(render(md, [inlineStyles])).toContain(expected);
     });
 
     describe('inlineStyles restricts which properties survive', () => {
@@ -487,6 +545,19 @@ describe('Markdown', () => {
       expect(html).toContain('<code');
       expect(html).not.toContain('background-color');
     });
+
+    /*
+     * Legacy curriculum colors a code block with a raw inline style rather than
+     * the (#rrggbb) syntax. This extension owns the `code` mapping, so it renders
+     * those too; enabling it must not strip what inlineStyles allowed through.
+     */
+    it('keeps an inline style on raw <code> when inlineStyles is enabled', () => {
+      const html = render(
+        'Press <code style="background-color:#6af36c">up</code> now',
+        [inlineStyles, visualCodeBlock],
+      );
+      expect(html).toContain('background-color:#6af36c');
+    });
   });
 
   describe('vocabularyDefinition', () => {
@@ -607,6 +678,14 @@ describe('Markdown', () => {
       expect(html).toContain('HELLO WORLD');
       expect(html).toContain('data-notranslate="true"');
       expect(html).not.toContain('data-isolate');
+    });
+
+    it('translates a tight list item', () => {
+      // Only the inserted paragraph makes the item a block rehypeLocalize
+      // recognizes; without it the item text is never handed to the translator.
+      activateLocalization();
+      const html = render('- an item');
+      expect(html).toContain('AN ITEM');
     });
 
     it('hides a non-phrasing element from the translator and restores it', () => {
