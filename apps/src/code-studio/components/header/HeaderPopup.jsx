@@ -87,6 +87,7 @@ export default class HeaderPopup extends Component {
         >
           <MuiIconButton
             type="button"
+            data-theme="Dark"
             className={classNames(
               'no-mc',
               'header_popup_link',
@@ -95,7 +96,7 @@ export default class HeaderPopup extends Component {
             )}
             onClick={this.handleClickToggle}
             variant="text"
-            color="white"
+            color="primary"
             size="small"
             aria-label={toggleLabel}
             aria-pressed={this.state.open}

@@ -1,11 +1,12 @@
 .headerItem {
   &:global(.MuiIconButton-root) {
     margin-left: 0.5rem;
+    color: var(--text-brand-primary, #FFF);
   }
 
   &:global(.MuiIconButton-root):hover {
-    background-color: var(--background-brand-purple-strong);
-    color: var(--text-neutral-white-fixed);
+    background: var(--background-brand-light, #1F1976);
+    color: var(--text-brand-primary, #FFF);
   }
 
   &:global(.MuiIconButton-root):focus-visible {
@@ -15,7 +16,7 @@
 
 .headerItemPressed {
   &:global(.MuiIconButton-root) {
-    background-color: var(--background-brand-purple-strong);
-    color: var(--text-neutral-white-fixed);
+    background: var(--background-brand-light, #1F1976);
+    color: var(--text-brand-secondary, #E4E2F8);
   }
 }
