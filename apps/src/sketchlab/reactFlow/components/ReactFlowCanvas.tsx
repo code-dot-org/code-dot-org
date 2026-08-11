@@ -98,6 +98,7 @@ import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 import CanvasControls from './CanvasControls';
 import ConnectionLine from './ConnectionLine';
+import EdgeSelectionOutlines from './EdgeSelectionOutlines';
 import Toolbar from './Toolbar';
 
 import styles from './react-flow-canvas.module.scss';
@@ -137,6 +138,11 @@ function stripDisplayFields<T extends object>(item: T): T {
   delete result.draggable;
   delete result.connectable;
   delete result.deletable;
+  // The clickable band an edge gets while rendered; not part of the drawing.
+  delete result.interactionWidth;
+  // Recomputed from the drawing on every render, so saving it only preserves a
+  // label that will be wrong the next time the line moves.
+  delete result.ariaLabel;
   return result as T;
 }
 
@@ -847,6 +853,21 @@ export default function ReactFlowCanvas({
       : multiSelectedNodeIds,
   });
 
+  // Edges that show a selection ring: those React Flow marks selected, plus the
+  // edge holding DOM focus. Read-only mode never marks an edge selected, so the
+  // focused edge would otherwise have no visible indicator.
+  const outlinedEdgeIds = useMemo(() => {
+    const ids = displayEdges.filter(edge => edge.selected).map(edge => edge.id);
+    const focusedEdgeId =
+      nodeOrEdgeFocused && lastFocusedEntry?.type === 'edge'
+        ? lastFocusedEntry.id
+        : null;
+    if (focusedEdgeId && !ids.includes(focusedEdgeId)) {
+      ids.push(focusedEdgeId);
+    }
+    return ids;
+  }, [displayEdges, nodeOrEdgeFocused, lastFocusedEntry]);
+
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
@@ -1217,6 +1238,7 @@ export default function ReactFlowCanvas({
                         </Panel>
                       )}
                       <Background />
+                      <EdgeSelectionOutlines edgeIds={outlinedEdgeIds} />
                       <CanvasControls
                         onUndo={handleUndo}
                         onRedo={handleRedo}
