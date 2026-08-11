@@ -95,7 +95,13 @@ export default class CoreLibrary {
       this.p5.background('white');
     }
     if (typeof this.background === 'object') {
-      this.background.resize(400, 400);
+      // p5.Image.resize has no same-size early-out - every call copies the
+      // image to a temp canvas and back - and this ran on every frame.
+      // Library backgrounds are authored at ~400px, so 400 stays the right
+      // target; just don't redo the resize once it's done.
+      if (this.background.width !== 400 || this.background.height !== 400) {
+        this.background.resize(400, 400);
+      }
       this.p5.image(this.background);
     }
   }
