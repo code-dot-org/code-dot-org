@@ -772,19 +772,20 @@ function createRspackConfig({
       }),
       ...(envConstants.HOT ? [new ReactRefreshRspackPlugin()] : []),
     ],
-    // RSPACK-DIFF: lazy compilation is for `serve` only — a one-shot
-    // build must emit real modules, since lazy stubs phone the dev
-    // server's trigger endpoint and are dead files when served from
-    // disk.  Under serve, deferring dynamic imports until a page
-    // requests them is a small startup win; the /_rspack/lazy trigger
-    // endpoint must be excluded from the catch-all proxy below or
-    // React.lazy chunks 404 and Suspense boundaries crash, and for the
-    // same reason the stubs written to disk only work while requests
-    // reach this server (see writeToDisk below).  Entries
-    // stay eager: the lazy entry stub is hot-patched in after load,
-    // and Rails inline scripts synchronously expect entry globals, so
-    // RSPACK_LAZY_ENTRIES=1 is usable only if the middleware learns to
-    // stall entry requests until compiled.
+    // RSPACK-DIFF: lazy compilation is declared for `serve` only, which
+    // is the only command that honors it — a one-shot build ignores the
+    // option and emits real modules either way (measured: identical
+    // wall and CPU time with and without it, and no stubs in the
+    // output).  The gate is so the config claims only what it does; a
+    // deferred import needs the dev server's /_rspack/lazy endpoint to
+    // answer, which nothing does in a build.  Under serve, deferring
+    // dynamic imports until a page requests them is a small startup
+    // win, and that endpoint must be excluded from the catch-all proxy
+    // below or React.lazy chunks 404 and Suspense boundaries crash.
+    // Entries stay eager: the lazy entry stub is hot-patched in after
+    // load, and Rails inline scripts synchronously expect entry
+    // globals, so RSPACK_LAZY_ENTRIES=1 is usable only if the
+    // middleware learns to stall entry requests until compiled.
     ...(IS_SERVE
       ? {
           lazyCompilation: {
@@ -834,12 +835,12 @@ function createRspackConfig({
             // entry bundles a change invalidates; pages served through
             // this dev server load JS from memory, so RSPACK_NO_WRITE=1
             // skips the disk copy.  On by default because anything else
-            // reading build/package still needs files.  Note the
-            // written output is only as complete as lazy compilation
-            // allows: dynamic-import chunks land as stubs that fetch
-            // /_rspack/lazy from this server, so loading a page
-            // straight from Rails on :3000 while the rspack dev server
-            // owns the directory needs RSPACK_NO_LAZY=1.
+            // reading build/package still needs files.  What lands there
+            // is what this compilation produced, so with lazy
+            // compilation on, a dynamic-import chunk nobody has
+            // requested yet has nothing to write: use RSPACK_NO_LAZY=1
+            // if pages will be loaded straight from Rails on :3000 while
+            // this server owns the output directory.
             writeToDisk: !process.env.RSPACK_NO_WRITE,
           },
         }
