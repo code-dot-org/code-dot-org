@@ -6,10 +6,10 @@ var path = require('path');
 var pyodide = require('pyodide');
 var sass = require('sass');
 
+const {BUNDLERS, resolveBundler} = require('./bundlerBase');
 var envConstants = require('./envConstants');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 var checkEntryPoints = require('./script/checkEntryPoints');
-const {BUNDLERS, resolveBundler} = require('./bundlerBase');
 const {createWebpackConfig} = require('./webpack.config');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 
