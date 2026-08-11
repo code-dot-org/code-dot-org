@@ -11,6 +11,7 @@
 // default project is a project that imported it.
 
 import {arrowsRule} from './arrows';
+import {boundsRule} from './bounds';
 import {cameraRule} from './camera';
 import {cameraConfinedRule} from './cameraConfined';
 import {cameraDeadzoneRule} from './cameraDeadzone';
@@ -167,6 +168,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: expiresRule,
   },
   {
+    id: 'bounds',
+    name: 'Boundaries',
+    ability: 'Stays in the Map',
+    description:
+      'Stops an actor at the edge of the map instead of letting it leave \u2014 the whole actor, not its middle. Two abilities, so a paddle can stay across without hovering, and a platformer can stay down without sticking to the sides.',
+    provides: ['Stays Across', 'Stays Down'],
+    contents: boundsRule,
+  },
+  {
     id: 'wrap',
     name: 'Screen Wrap',
     ability: 'Wraps at the Edges',
@@ -235,6 +245,7 @@ export function stockRuleByName(name: string): StockRule | undefined {
 
 export {
   arrowsRule,
+  boundsRule,
   dragRule,
   driveRule,
   expiresRule,
