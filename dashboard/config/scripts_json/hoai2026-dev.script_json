@@ -2,7 +2,7 @@
   "script": {
     "name": "hoai2026-dev",
     "wrapup_video_id": null,
-    "login_required": true,
+    "login_required": false,
     "properties": {
       "is_migrated": true
     },
@@ -23,8 +23,7 @@
       "key": "",
       "user_facing": false,
       "position": 1,
-      "properties": {
-      },
+      "properties": {},
       "seeding_key": {
         "lesson_group.key": "",
         "script.name": "hoai2026-dev"
@@ -39,8 +38,7 @@
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
-      "properties": {
-      },
+      "properties": {},
       "seeding_key": {
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -52,8 +50,7 @@
     {
       "key": "8c1f4123-86ce-4f40-b10c-1f3c851207f6",
       "position": 1,
-      "properties": {
-      },
+      "properties": {},
       "seeding_key": {
         "lesson_activity.key": "8c1f4123-86ce-4f40-b10c-1f3c851207f6",
         "lesson.key": "lesson-1",
@@ -66,8 +63,7 @@
     {
       "key": "5f274703-fce0-44f3-ac27-9df0a8406534",
       "position": 1,
-      "properties": {
-      },
+      "properties": {},
       "seeding_key": {
         "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534",
         "lesson_activity.key": "8c1f4123-86ce-4f40-b10c-1f3c851207f6"
@@ -474,46 +470,18 @@
       }
     }
   ],
-  "resources": [
-
-  ],
-  "lessons_resources": [
-
-  ],
-  "scripts_resources": [
-
-  ],
-  "scripts_student_resources": [
-
-  ],
-  "vocabularies": [
-
-  ],
-  "lessons_vocabularies": [
-
-  ],
-  "lessons_programming_expressions": [
-
-  ],
-  "objectives": [
-
-  ],
-  "lessons_standards": [
-
-  ],
-  "lessons_opportunity_standards": [
-
-  ],
-  "jit_pl_concepts_lessons": [
-
-  ],
-  "rubrics": [
-
-  ],
-  "learning_goals": [
-
-  ],
-  "learning_goal_evidence_levels": [
-
-  ]
+  "resources": [],
+  "lessons_resources": [],
+  "scripts_resources": [],
+  "scripts_student_resources": [],
+  "vocabularies": [],
+  "lessons_vocabularies": [],
+  "lessons_programming_expressions": [],
+  "objectives": [],
+  "lessons_standards": [],
+  "lessons_opportunity_standards": [],
+  "jit_pl_concepts_lessons": [],
+  "rubrics": [],
+  "learning_goals": [],
+  "learning_goal_evidence_levels": []
 }
