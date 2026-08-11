@@ -30,16 +30,19 @@
 // make every wrapping world a colliding one; that is true of the collision BOX
 // and not of the drawing, which the foundation gives every actor.
 //
-// But `intrinsic size` is only WRITTEN for a spritesheet: the Animation rule
-// publishes the largest cell, and leaves it at zero for a single image, which
-// is most actors. Taken at face value that is a half-width of zero — the middle
-// stopping at the edge, half the actor hanging outside, which is the bug this
-// rule exists to prevent, and it showed up on everything that was not animated.
+// `intrinsic size` is zero until something measures the picture, and zero
+// taken at face value is a half-width of zero: the middle stopping at the edge,
+// half the actor hanging outside, which is the bug this rule exists to prevent.
+// It shipped with exactly that, because at the time only a SPRITESHEET was ever
+// measured — its cells state their own size — and most actors draw one image.
+// They are measured now (the project states every image's size and Animation
+// publishes it), so the fallback is the narrow case it should always have been:
+// a picture that has not been measured YET, or one drawn from somewhere the
+// project cannot see.
 //
-// So the same three answers Collisions gives, minus the one that is its own:
-// the picture if it has been measured, and failing that a 32 by 32 square.
-// Matching `collision size of` deliberately — one notion of how big an actor
-// is, so a better answer later improves both rather than splitting them.
+// For that case, a 32 by 32 square. Matching `collision size of` deliberately —
+// one notion of how big an actor is, so a better answer later improves both
+// rather than splitting them.
 
 /** The `rules/bounds.rule` workspace. GENERATED — edit scripts/rules/bounds.mjs. */
 export const boundsRule =

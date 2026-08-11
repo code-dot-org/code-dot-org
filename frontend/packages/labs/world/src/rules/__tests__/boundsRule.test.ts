@@ -58,11 +58,15 @@ describe('rules/bounds.rule', () => {
   });
 
   it('assumes a square when the picture was never measured', () => {
-    // The bug this shipped with. `intrinsic size` is only written for a
-    // SPRITESHEET — the Animation rule publishes the largest cell and leaves it
-    // at zero for a single image, which is most actors. Taken at face value
-    // that is a half-width of zero: the middle stopping at the edge, half the
-    // actor outside, which is the one thing this rule exists to prevent.
+    // The bug this shipped with, since narrowed. `intrinsic size` was only ever
+    // written for a SPRITESHEET, whose cells state their own size, and left at
+    // zero for a single image — most actors. Taken at face value that is a
+    // half-width of zero: the middle stopping at the edge, half the actor
+    // outside, which is the one thing this rule exists to prevent.
+    //
+    // Single images are measured now (the project states every size it holds),
+    // so what is left is a picture not measured YET or one from outside the
+    // project. Still a case, so still a fallback.
     //
     // `collision size of` fills the same gap the same way, deliberately: one
     // notion of how big an actor is, so a better answer later improves both.

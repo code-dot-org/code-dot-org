@@ -356,6 +356,22 @@ export class World {
   // Animations known to this world, by id — seeded from the active rules' stock
   // animations. The Animation rule's step and renderSnapshot resolve ids here.
   private readonly animationDefs = new Map<string, AnimationDef>();
+  /**
+   * How big each of the project's images is, by file name.
+   *
+   * A fact about a file, not about any actor — which is why the world holds it
+   * rather than an actor doing: two actors wearing one picture are the same
+   * size, and neither of them is where that is written down.
+   *
+   * Here so a SINGLE-IMAGE actor can have an intrinsic size at all. The
+   * Animation rule publishes one from a spritesheet's cells, and a plain
+   * picture has no cells — so before this, everything not animated measured
+   * zero, and every rule that asks how big an actor is fell back to a guess.
+   */
+  private readonly imageSizes = new Map<
+    string,
+    {width: number; height: number}
+  >();
   // Effects played across the whole viewport, not on any one actor. Mutable for
   // the same reason an actor's list is: the driver re-reads it every frame.
   private readonly appliedEffects: AppliedEffectSpec[];
@@ -875,6 +891,18 @@ export class World {
   }
 
   /** The definition of a known animation, or undefined. */
+  /** How big an image is, if the project measured it. */
+  imageSize(name: string): {width: number; height: number} | undefined {
+    return this.imageSizes.get(name);
+  }
+
+  /** Record what the project's images measure — see {@link imageSize}. */
+  useImageSizes(sizes: Record<string, {width: number; height: number}>): void {
+    for (const [name, size] of Object.entries(sizes)) {
+      this.imageSizes.set(name, size);
+    }
+  }
+
   animation(id: string): AnimationDef | undefined {
     return this.animationDefs.get(id);
   }

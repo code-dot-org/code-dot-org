@@ -49,10 +49,13 @@ export const SkewProperty = PositionalTrait.addProperty(
  * "fits", before scale. Lives on the positional trait so both the Animation
  * rule (which writes it) and the Collision rule (which reads it as the default
  * collision box) can reach it without depending on each other; the Animation
- * rule owns the writes, publishing the current animation's frame-cell extent
- * (rules/animation.ts). A degenerate `(0, 0)` means "unknown" — no appearance,
- * or a single image whose pixel size the engine cannot know (the engine never
- * interprets pixels) — and Collision falls back to its own default box.
+ * rule owns the writes (rules/animation.ts), and has two sources: a cell states
+ * its own size, and a whole image's is whatever the project measured and stated
+ * (`World.imageSize`). The engine still never interprets pixels — it is told.
+ *
+ * A degenerate `(0, 0)` means "unknown": no appearance, or a picture nobody has
+ * measured. Collision falls back to its own default box, and so does "Stays in
+ * the Map".
  */
 export const IntrinsicSizeProperty = PositionalTrait.addProperty(
   SPATIAL.intrinsicSize,

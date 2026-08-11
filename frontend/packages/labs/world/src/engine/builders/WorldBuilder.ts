@@ -215,6 +215,26 @@ export class WorldBuilder {
   }
 
   /**
+   * Record how big the project's images are, by file name.
+   *
+   * No block says this, for the reason no block registers an animation file:
+   * how big a picture is is not something a world opts into, it is a fact about
+   * a file the project holds. The generated world states them all.
+   *
+   * Not guarded by `requireNoActors`: this is a measurement, not a law. An
+   * actor placed before it hears about a size the moment one arrives, because
+   * the size is looked up when asked rather than copied at placement.
+   *
+   * Deferred like everything else that is not a construction-time decision, so
+   * it is replayed into any world rebuilt from this description — a size read
+   * once and then lost on the next rebuild would be a rule that worked until
+   * something unrelated touched the world.
+   */
+  useImageSizes(sizes: Record<string, {width: number; height: number}>): this {
+    return this.defer('useImageSizes', sizes);
+  }
+
+  /**
    * Declare a layer, at the back of the stack as it stands.
    *
    * Declaration order IS draw order (core/Layer), so this is one of the calls

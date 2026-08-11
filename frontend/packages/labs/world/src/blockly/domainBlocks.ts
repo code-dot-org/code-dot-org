@@ -143,7 +143,7 @@ import type {
   RuleMeta,
 } from './ruleMeta';
 import {refFromValue, refModule, ruleLocation, ruleSlug} from './ruleRegistry';
-import {parseSpriteRef, spriteCell} from './spriteCells';
+import {measuredImages, parseSpriteRef, spriteCell} from './spriteCells';
 import {
   projectRuleIdentities,
   anyTraitOptions,
@@ -3429,6 +3429,27 @@ const worldWorld = defineBlock({
       // Emitted only when the world declares one: a world with no layers says
       // nothing about layers, and the engine supplies the default.
       const plan = layerPlan(block);
+      // How big each of the project's images is, stated for the same reason
+      // the animations above are and by the same argument: a picture's size is
+      // not something a world opts into, it is a fact about what the project
+      // holds. The engine cannot measure a PNG — no decoder, no browser — but
+      // the editor already has, so it simply says.
+      //
+      // What reads it: `intrinsic size`, and through it `collision size of`.
+      // Without it those were only ever written for a SPRITESHEET, whose cells
+      // state their own size, so every actor drawing one whole image was a 32
+      // by 32 square to anything that asked — a paddle collided as a cube.
+      //
+      // Keys sorted so the same project compiles to the same text.
+      const measured = measuredImages();
+      const sizes = Object.fromEntries(
+        Object.keys(measured)
+          .sort()
+          .map(name => [name, measured[name]]),
+      );
+      const imageSizes = Object.keys(sizes).length
+        ? `world.useImageSizes(${JSON.stringify(sizes)});\n`
+        : '';
       const layers = plan.some(entry => entry.id !== DEFAULT_LAYER_ID)
         ? plan
             .map(entry => `world.defineLayer({id: ${str(entry.id)}});\n`)
@@ -3440,6 +3461,7 @@ const worldWorld = defineBlock({
         )}});\n` +
         foundation +
         animations +
+        imageSizes +
         layers +
         body
       );
