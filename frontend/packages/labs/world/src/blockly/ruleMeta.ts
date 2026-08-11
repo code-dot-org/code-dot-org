@@ -455,6 +455,9 @@ export const PROPERTY_TYPES: ReadonlySet<string> = new Set([
   // as a query's return type below: a query reports a single value, and this is
   // one or many.
   'actors',
+  // The same value, said to be ONE — a camera's actor to follow, not a contact
+  // set. What it changes is the blocks generated around it (domainBlocks).
+  'actor',
 ]);
 
 // The types an authored query may return (its `TYPE` dropdown → the reporter's
@@ -473,6 +476,9 @@ export const parseDefault = (text: string, type: PropertyType): unknown => {
     // No actors. There is no other sensible starting value for a set a rule
     // works out each tick, and no text a learner could type that would be one.
     case 'actors':
+      return [];
+    // No actor — an empty list, because that is how one is stored too.
+    case 'actor':
       return [];
     case 'boolean':
       return text.trim().toLowerCase() === 'true';
@@ -1071,6 +1077,9 @@ const defaultLiteral = (property: PropertyMeta): string => {
     // No actors — and a fresh array per declaration, not one shared by every
     // actor that has the property.
     case 'actors':
+      return '[]';
+    // No actor, held the same way no actors is.
+    case 'actor':
       return '[]';
     case 'boolean':
       return value ? 'true' : 'false';

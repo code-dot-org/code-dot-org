@@ -66,7 +66,25 @@ export type PropertyType =
    *   - it defaults to none, because "no actors yet" is the only sensible
    *     starting value for one.
    */
-  | 'actors';
+  | 'actors'
+  /**
+   * ONE actor, or none.
+   *
+   * Stored exactly as `'actors'` is, a list, and different only in what it SAYS
+   * — which is what the blocks around it are generated from. A contact set is a
+   * list and gets `add … to` / `remove … from`; a camera's actor to follow is
+   * not, and those blocks around it would offer a learner a second actor to
+   * follow that nothing would ever read.
+   *
+   * Narrowed on the way in (`Traited.set`) rather than trusted: nothing stops
+   * `set actor to follow to ⟨any Player⟩`, and in a game with one player that
+   * is a reasonable thing to write, so taking one of them is the reasonable
+   * answer. Readers still go through `WorldLab.one` for the paths that do not
+   * come through the store.
+   *
+   * Never snapshotted, for `'actors'` reasons: an actor reaches the world.
+   */
+  | 'actor';
 
 /**
  * The kinds an Action parameter or query argument can take. A superset of

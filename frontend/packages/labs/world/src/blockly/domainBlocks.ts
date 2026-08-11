@@ -1059,6 +1059,21 @@ const isSettable = (property: PropertyMeta): boolean =>
  * query; and `position` had no getter at all, because a bespoke `set position`
  * block suppressed the generated pair wholesale.
  */
+/**
+ * Whether a property gets `add … to` / `remove … from` blocks.
+ *
+ * A LIST of actors, and only a list: `actor` says one, and list blocks around
+ * one actor would let a learner name a second that nothing reads. That
+ * distinction is the whole reason the two types are told apart.
+ *
+ * Written where a set block would be — a push IS a write, and a read-only
+ * property is one its own rule writes, so the same rule applies: outside the
+ * declaring `.rule` there is no way to change a contact set, and inside it
+ * there is.
+ */
+const isList = (property: PropertyMeta): boolean =>
+  property.type === 'actors' && isGettable(property);
+
 const isGettable = (property: PropertyMeta): boolean =>
   property.ref.exportName !== '' &&
   !HIDDEN_PROPERTY_EXPORTS.has(property.ref.exportName);
@@ -1361,11 +1376,35 @@ const typedValueInputs = (
   }
 };
 
+/**
+ * A property as a plain typed value, for the two functions that build its
+ * socket and read it back.
+ *
+ * `actor` becomes `actors` on the way in, and it has to: those switches speak
+ * ARGUMENT types, where `actor` is a parameter that defaults to `this actor` —
+ * right for `collision size of ⟨⟩`, and wrong for `set actor to follow to ⟨⟩`,
+ * which would then set the camera to follow whatever `actor` happened to name,
+ * in a file that may not bind one at all.
+ *
+ * Which is the honest mapping anyway. A singular property IS a list — narrowed
+ * on the way into the store (Traited) — so its socket is a list's socket, its
+ * empty value is a list's empty value, and the one thing that differs is that
+ * no `add … to` is generated for it.
+ */
+const asTypedValue = (property: PropertyMeta): TypedValue => ({
+  ...property,
+  type: property.type === 'actor' ? 'actors' : property.type,
+});
+
 /** The registry/toolbox types for the blocks that set / get `property`. */
 const setPropertyBlockType = (exportName: string): string =>
   `world_set_${exportName}`;
 const getPropertyBlockType = (exportName: string): string =>
   `world_get_${exportName}`;
+const pushPropertyBlockType = (exportName: string): string =>
+  `world_push_${exportName}`;
+const dropPropertyBlockType = (exportName: string): string =>
+  `world_drop_${exportName}`;
 
 // The `output` check for a value kind. A `vector` reports a whole `Vector`; a
 // `point` getter reports one axis (a Number, chosen by a dropdown).
@@ -1378,7 +1417,7 @@ const outputForType = (type: PropertyType): string =>
         ? 'Vector'
         : // An actors property reports an ACTOR value, so it plugs into a loop's
           // source, `is in`, `how many actors in` — every actor socket there is.
-          type === 'actors'
+          type === 'actors' || type === 'actor'
           ? 'Actor'
           : 'Number';
 
@@ -1389,7 +1428,7 @@ const valueStyle = (type: PropertyType): string =>
     ? 'logic_blocks'
     : type === 'vector'
       ? 'location_blocks'
-      : type === 'actors'
+      : type === 'actors' || type === 'actor'
         ? 'sprite_blocks' // the colour that groups the actors
         : 'math_blocks';
 
@@ -1408,7 +1447,7 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
   // never had (`MemberScope`).
   const subjectScoped = property.scope !== 'world';
   // The value inputs start at %2 after the ACTOR input (%1), else at %1.
-  const value = typedValueInputs(property, subjectScoped ? 2 : 1);
+  const value = typedValueInputs(asTypedValue(property), subjectScoped ? 2 : 1);
   // No `world` in front of a world property: the name is the whole label. What
   // tells the two apart is the subject — an actor property says whose it is
   // (`set health of ⟨this actor⟩`) and a world property has nobody to name, so
@@ -1441,7 +1480,7 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
       : `Set the world's ${name}.`,
     generator: {
       javascript(block, generator) {
-        const value = typedValueCode(property, block, generator);
+        const value = typedValueCode(asTypedValue(property), block, generator);
         const set = (subject: string) =>
           `${subject}.set(${refCode(property.ref, generator)}, ${value})`;
         return subjectScoped
@@ -1450,6 +1489,100 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
       },
     },
   });
+};
+
+/**
+ * Adding to and taking from a property that holds a LIST of actors.
+ *
+ * Only for `actors`, never for `actor` — which is the whole reason the two
+ * types are told apart. A camera's actor to follow is one actor, and offering
+ * `push ⟨…⟩ to actor to follow` would let a learner name a second one that
+ * nothing will ever read: a block that works, does something, and means
+ * nothing.
+ *
+ * `set` can already say both of these — read the list out, change it, write it
+ * back — and that is exactly the problem. It is three blocks and a variable to
+ * say "and this one too", and the Collection rule had to spell it out in its
+ * own step before these existed.
+ *
+ * Whole-list semantics on the way in: pushing a value that holds several adds
+ * all of them, dropping one removes every one it names. That falls out of
+ * `ActorValue` being one-or-many everywhere else, and the alternative — taking
+ * the first and silently dropping the rest — would be the surprise.
+ */
+const defineListPropertyBlocks = (property: PropertyMeta) => {
+  const name = property.name;
+  const subjectScoped = property.scope !== 'world';
+  const owner = (label: string) =>
+    subjectScoped ? `${label} of %2` : `${label}`;
+  const args = (): BlockArgDefinition[] => [
+    {type: 'input_value', name: 'ITEM', check: 'Actor'},
+    ...(subjectScoped
+      ? [
+          {
+            type: 'input_value',
+            name: 'ACTOR',
+            check: 'Actor',
+          } as BlockArgDefinition,
+        ]
+      : []),
+  ];
+  // The list is read off ONE owner and written back to it. `forEachActor` would
+  // be wrong here in a way it is not for `set`: pushing to "every coin's" list
+  // is a sentence, but the value being pushed is read once and the list is
+  // read-modify-written, so the broadcast has to wrap the whole operation.
+  const change = (verb: 'push' | 'drop') => (subject: string) => {
+    const ref = 'REF';
+    return verb === 'push'
+      ? `${subject}.set(${ref}, [...WorldLab.all(${subject}.get(${ref})), ...WorldLab.all(ITEM)])`
+      : `${subject}.set(${ref}, WorldLab.all(${subject}.get(${ref})).filter(each => !WorldLab.all(ITEM).includes(each)))`;
+  };
+  const build = (verb: 'push' | 'drop', message0: string, tooltip: string) => {
+    const type =
+      verb === 'push'
+        ? pushPropertyBlockType(memberKey(property.ref))
+        : dropPropertyBlockType(memberKey(property.ref));
+    return defineBlock({
+      type,
+      message0,
+      args0: args(),
+      inputsInline: true,
+      previousStatement: true,
+      nextStatement: true,
+      extensions: subjectScoped
+        ? [subjectInputExtension(property.scope), valueShadowExtension]
+        : [valueShadowExtension, worldContextExtension],
+      style: 'default',
+      tooltip,
+      generator: {
+        javascript(block, generator) {
+          const item = generator.valueToCode(block, 'ITEM', Order.NONE) || '[]';
+          const ref = refCode(property.ref, generator);
+          const write = (subject: string) =>
+            change(verb)(subject)
+              .replace(/REF/g, ref)
+              .replace(/ITEM/g, `(${item})`);
+          return subjectScoped
+            ? forEachActor(actorTarget(block, generator, Order.MEMBER), write)
+            : `${write('world')};\n`;
+        },
+      },
+    });
+  };
+  return [
+    build(
+      'push',
+      `add %1 to ${owner(name)}`,
+      `Add an actor to ${subjectScoped ? "an actor's" : "the world's"} ${name}.`,
+    ),
+    build(
+      'drop',
+      `remove %1 from ${owner(name)}`,
+      `Take an actor out of ${
+        subjectScoped ? "an actor's" : "the world's"
+      } ${name}.`,
+    ),
+  ];
 };
 
 /**
@@ -1500,9 +1633,15 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
       : `get ${name}`;
 
   const type = getPropertyBlockType(memberKey(property.ref));
-  if (property.type === 'actors') {
+  if (property.type === 'actors' || property.type === 'actor') {
     // It reports a LIST, always — see `registerManyActorBlock`. A socket that
     // reads one actor has to know, or it reads the property off the array.
+    //
+    // Including `actor`, which says one and is stored as one, because SAYING
+    // one is not the same as being handed one: nothing stops `set actor to
+    // follow to ⟨any Player⟩`, and that is a reasonable thing to write. The
+    // store narrows it (Traited), and this is what covers every path that does
+    // not go through the store.
     registerManyActorBlock(type);
   }
 
@@ -1556,6 +1695,12 @@ for (const rule of AUTHORING_RULES) {
       const setBlock = defineSetPropertyBlock(property);
       PROPERTY_BLOCKS.push(setBlock);
       types.push(setBlock.type);
+    }
+    if (isList(property) && isSettable(property)) {
+      for (const block of defineListPropertyBlocks(property)) {
+        PROPERTY_BLOCKS.push(block);
+        types.push(block.type);
+      }
     }
     if (isGettable(property)) {
       const getBlock = defineGetPropertyBlock(property);
@@ -4168,6 +4313,9 @@ const PROPERTY_TYPE_OPTIONS: Array<[string, string]> = [
   // Actors — what a rule works out about who is where: a contact set, a group.
   // Read-only in practice (the rule that fills it owns it) and never carried
   // across a hot reload (specs/COLLISION.md).
+  // ONE actor: a camera's actor to follow. Before the list, because it is the
+  // simpler thing and the one a learner reaches for more often.
+  ['actor', 'actor'],
   ['actors', 'actors'],
 ];
 
@@ -5364,13 +5512,19 @@ function generateRulePalette(
         ownRuleModule === ALL_RULE_MODULES ||
         (ownRuleModule !== undefined &&
           refModule(property.ref) === ownRuleModule);
-      if (
+      const writable =
         isSettable(property) ||
-        (ownProperty && !isSettable(property) && property.readonly)
-      ) {
+        (ownProperty && !isSettable(property) && property.readonly);
+      if (writable) {
         const setBlock = defineSetPropertyBlock(property);
         blocks.push(setBlock);
         propTypes.push(setBlock.type);
+      }
+      if (writable && isList(property)) {
+        for (const block of defineListPropertyBlocks(property)) {
+          blocks.push(block);
+          propTypes.push(block.type);
+        }
       }
       if (isGettable(property)) {
         const getBlock = defineGetPropertyBlock(property);
