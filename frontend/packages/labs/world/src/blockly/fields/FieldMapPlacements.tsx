@@ -15,9 +15,10 @@ import {createReactField} from '@code-dot-org/blockly';
 import type {ReactFieldPreviewContext} from '@code-dot-org/blockly';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
-import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
+import {TILE_SIZE} from '../../runtime/viewport';
 import {cellOf, type MapPlacement} from '../mapPlacements';
 
+import {mapGridSize} from './mapGridSize';
 import {PlacementGrid} from './PlacementGrid';
 
 /** The field type name (the `type` a block arg resolves to). */
@@ -52,18 +53,28 @@ const renderPreview = ({
   element,
   width,
   height,
+  sourceBlock,
 }: ReactFieldPreviewContext<MapPlacement[]>) => {
+  // The world's shape, not the field's: a level four screens wide should look
+  // like a strip on the block. Letterboxed inside the same square box the
+  // preview always occupied, because the field's own size cannot vary with it
+  // (`getSize` is not handed the block).
+  const grid = mapGridSize(sourceBlock);
+  const scale = MAP_SIZE / Math.max(grid.columns, grid.rows);
+  const boxWidth = grid.columns * scale;
+  const boxHeight = grid.rows * scale;
+
   // Centred in the field, both ways. The gap between this and the word before
   // it is Blockly's own field spacing; padding drawn inside the field would
   // only move the box off its own middle.
-  const left = (width - MAP_SIZE) / 2;
-  const top = (height - MAP_SIZE) / 2;
+  const left = (width - boxWidth) / 2;
+  const top = (height - boxHeight) / 2;
 
   const box = document.createElementNS(SVG_NS, 'rect');
   box.setAttribute('x', String(left));
   box.setAttribute('y', String(top));
-  box.setAttribute('width', String(MAP_SIZE));
-  box.setAttribute('height', String(MAP_SIZE));
+  box.setAttribute('width', String(boxWidth));
+  box.setAttribute('height', String(boxHeight));
   box.setAttribute('rx', '2');
   box.setAttribute('fill', '#f7f9fb');
   box.setAttribute('stroke', 'rgba(0, 0, 0, 0.35)');
@@ -72,7 +83,7 @@ const renderPreview = ({
 
   // One mark per placement, at its cell. Only the occupied cells are drawn —
   // a hundred rects for an empty map would be a hundred rects saying nothing.
-  const cellSize = MAP_SIZE / VIEWPORT_TILES;
+  const cellSize = scale;
   for (const placement of value) {
     const cell = cellOf(placement, TILE_SIZE);
     if (!cell) {

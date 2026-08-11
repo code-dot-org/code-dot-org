@@ -482,6 +482,78 @@ describe('the scenario catalogue', () => {
     expect(bird).toContain('world_set_Gravity_GravityScaleProperty');
   });
 
+  it('says the single-world flappy without leaving main.world', () => {
+    const files = Object.values(WORLD_SCENARIOS['flappy-single'].source.files);
+    const worlds = files.filter(file => file.name.endsWith('.world'));
+
+    expect(worlds).toHaveLength(1);
+    expect(files.some(file => file.name.endsWith('.actor'))).toBe(false);
+    expect(files.some(file => file.name.endsWith('.map'))).toBe(false);
+
+    const main = worlds[0].contents;
+    expect(main).toContain('world_create_in_map');
+    expect(main).not.toContain('world_load_map');
+    // The camera is handed a WORLD-LOCAL bird here, which is the one block
+    // that reads the same as the file telling and means something narrower.
+    expect(main).toContain('world_set_CameraFollow_ActorToFollowProperty');
+    expect(main).toContain('"ACTOR":"local:flappyBirdDef"');
+  });
+
+  it('places flappy’s bird before the camera that follows it', () => {
+    // The trap this telling makes sharper: `any ⟨Bird⟩` is READ when the
+    // camera is wired, and an empty list is not an error. Wire it first and
+    // the game runs, the bird flies, and the view never moves — with nothing
+    // in the console to say why.
+    const main = Object.values(
+      WORLD_SCENARIOS['flappy-single'].source.files,
+    ).find(file => file.name === 'main.world')!.contents;
+
+    expect(main.indexOf('"id":"placeBird"')).toBeGreaterThan(-1);
+    expect(main.indexOf('"id":"placeBird"')).toBeLessThan(
+      main.indexOf('world_define_camera'),
+    );
+    // …and looking through it comes last of the three.
+    expect(main.indexOf('world_define_camera')).toBeLessThan(
+      main.indexOf('world_use_camera'),
+    );
+  });
+
+  it('is the same game as the other flappy', () => {
+    // The two differ in how the game is SAID, not in what it is made of.
+    const named = (tag: 'flappy' | 'flappy-single') =>
+      Object.values(WORLD_SCENARIOS[tag].source.files)
+        .map(file => file.name)
+        .filter(name => name.endsWith('.rule') || name.endsWith('.png'))
+        .sort();
+
+    expect(named('flappy-single')).toEqual(named('flappy'));
+
+    // …including the board, which is one board (FLAPPY_ACTORS) told twice.
+    const map = JSON.parse(
+      Object.values(WORLD_SCENARIOS.flappy.source.files).find(
+        file => file.name === 'flappy.map',
+      )!.contents,
+    ) as {actors: Array<{id: string; properties: object}>};
+
+    const main = Object.values(
+      WORLD_SCENARIOS['flappy-single'].source.files,
+    ).find(file => file.name === 'main.world')!.contents;
+    const said = (entry: {id: string; properties: object}) =>
+      `${entry.id} ${JSON.stringify(entry.properties)}`;
+    const placed = new Set(
+      [...main.matchAll(/"PLACEMENTS":(\[.*?\}\])(?=,"|\})/g)].flatMap(match =>
+        (JSON.parse(match[1]) as Array<{id: string; properties: object}>).map(
+          said,
+        ),
+      ),
+    );
+
+    expect(placed.size).toBe(map.actors.length);
+    for (const actor of map.actors) {
+      expect(placed).toContain(said(actor));
+    }
+  });
+
   it('leaves the file list out of the scenarios with one file', () => {
     // A sidebar listing eleven files argues with a scenario whose whole claim
     // is that the game is said in `main.world` — and the first thing it
@@ -492,7 +564,7 @@ describe('the scenario catalogue', () => {
       WORLD_SCENARIOS[tag].levelData?.showFileBrowser === false;
 
     const single = WORLD_SCENARIO_TAGS.filter(tag => tag.endsWith('-single'));
-    expect(single.length).toBe(3);
+    expect(single.length).toBe(4);
     for (const tag of single) {
       expect(hides(tag)).toBe(true);
     }

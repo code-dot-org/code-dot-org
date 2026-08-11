@@ -440,6 +440,24 @@ export class WorldBuilder {
     return this.getWorld().mapBounds();
   }
 
+  /**
+   * Say how big the world is, in tiles. See {@link World.setMapSize}.
+   *
+   * The SAME NAME the live World uses, deliberately: a world's size is as
+   * answerable while it runs as while it is described, so `set size of map`
+   * generates one call that works either side of the seam. A builder-only name
+   * would have made the block throw the moment it appeared anywhere but a
+   * `define world` body.
+   *
+   * Deferred, like every other statement about the world rather than about its
+   * construction, so it replays into a world rebuilt from this description.
+   * A size declared once and then lost on the next rebuild would be a camera
+   * that stopped moving for no reason a learner could see.
+   */
+  setMapSize(columns: number, rows: number): this {
+    return this.defer('setMapSize', columns, rows);
+  }
+
   /** Somewhere in the map, at random. See {@link World.randomPlace}. */
   randomPlace(): Vector {
     return this.getWorld().randomPlace();

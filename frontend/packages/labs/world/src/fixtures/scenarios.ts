@@ -30,6 +30,7 @@ import type {WorldLevelData} from '../levelData';
 import {BREAKOUT_SPEC} from './breakout';
 import {BREAKOUT_SINGLE_SPEC} from './breakoutSingle';
 import {FLAPPY_SPEC} from './flappy';
+import {FLAPPY_SINGLE_SPEC} from './flappySingle';
 import {METEORS_SPEC} from './meteors';
 import {METEORS_SINGLE_SPEC} from './meteorsSingle';
 import {PLATFORMER_SINGLE_SPEC} from './platformerSingle';
@@ -52,6 +53,7 @@ export const WORLD_SCENARIO_TAGS = [
   'meteors',
   'meteors-single',
   'flappy',
+  'flappy-single',
   'empty',
 ] as const;
 
@@ -256,6 +258,24 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'you fly on — there is no restart yet\n' +
       '- Try a wider gap, a heavier bird (`amount of gravity`), or a look ' +
       'offset on the camera so it shows more of what is coming',
+  },
+  'flappy-single': {
+    name: 'Flappy (single world)',
+    description:
+      'The same game with nothing outside main.world — including the camera, ' +
+      'which here is handed a bird no other file could name.',
+    source: buildProject(FLAPPY_SINGLE_SPEC).source,
+    levelData: ONE_FILE,
+    instructions:
+      '## Flappy, in one file\n\nThe same game as **Flappy**, said entirely ' +
+      'in `main.world`.\n\n' +
+      '- The three actors are `define actor` blocks in the world, and the ' +
+      'board is `create ⟨kind⟩ in map`, one block per kind\n' +
+      '- The camera is the interesting one: `set actor to follow` is handed a ' +
+      'WORLD-LOCAL bird, which nothing outside this file can name\n' +
+      '- It is wired **after** the bird is placed. Before it, `any ⟨Bird⟩` is ' +
+      'an empty list and the view never moves — and nothing says so\n' +
+      '- Compare it with **Flappy** to see what moving a thing into a file buys',
   },
   empty: {
     name: 'Empty',
