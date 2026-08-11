@@ -12,10 +12,14 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 10px;
 
     .dropdown {
       width: 48%;
       font-size: 12px;
+      // Bootstrap v3 makes select inherit the panel's white text.
+      background-color: var(--background-neutral-primary);
+      color: var(--text-neutral-primary);
 
       // Stand-in for :disabled — see the instrument select in ChordPanel.tsx.
       &[data-loading='true'] {

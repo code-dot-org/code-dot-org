@@ -110,9 +110,10 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyScrollbarHandle {
       fill: var(--background-neutral-quinary) !important;
     }
+    /* Not !important: fields override this inline to stay legible. */
     .blocklyDropDownDiv {
-      background-color: var(--background-neutral-primary) !important;
-      border-color: var(--borders-neutral-primary) !important;
+      background-color: var(--background-neutral-primary);
+      border-color: var(--borders-neutral-primary);
     }
     /* Text token must follow the background token above, or dark-themed
        labs get Blockly's default black text on a black background. */
