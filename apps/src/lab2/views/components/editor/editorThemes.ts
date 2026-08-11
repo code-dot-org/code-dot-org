@@ -38,15 +38,10 @@ export const lab2EditorBackgroundTheme = EditorView.theme({
 });
 
 /**
- * Lab 2 only: recolors @codemirror/merge's diff highlighting (used by both
- * CodeEditor's split MergeView and codebridge's unifiedMergeView) with
- * semantic tokens instead of its hardcoded GitHub-ish defaults, so diff
- * colors track light/dark mode. Selectors mirror @codemirror/merge's own
- * baseTheme (see node_modules/@codemirror/merge/dist/index.js) class-for-
- * class; a plain EditorView.theme() (default precedence) reliably overrides
- * its EditorView.baseTheme() rules (Prec.lowest) for the same selectors.
+ * Theme to use brand colors when displaying diffs in the Codebridge editor.
+ * This is used in the AI Tutor accept/reject flow to highlight lines that have been added or removed.
  */
-export const diffTheme = EditorView.theme({
+export const lab2DiffViewerTheme = EditorView.theme({
   '&.cm-merge-a .cm-changedLine, .cm-deletedChunk': {
     backgroundColor: 'var(--background-error-light)',
   },
