@@ -1012,9 +1012,41 @@ class FilesApi < Sinatra::Base
   ASSETS_METADATA_FLAGGED = 'image_moderation_flagged'.freeze
   ASSETS_METADATA_FLAGGED_ROUTE =
     %r{/v3/assets/([^/]+)/#{ASSETS_METADATA_PATH}/#{ASSETS_METADATA_FLAGGED}$}
+  # {"filename":"<asset>"} is tiny; reject anything larger as abuse.
+  ASSETS_METADATA_FLAGGED_MAX_BYTES = 1024
 
   def assets_metadata_flagged_path
     "#{ASSETS_METADATA_PATH}/#{ASSETS_METADATA_FLAGGED}"
+  end
+
+  # Returns a normalized JSON string {"filename":"..."}.
+  # Raises ArgumentError if the body is invalid.
+  def parse_assets_metadata_flagged_body(body)
+    if body.nil? || body.bytesize > ASSETS_METADATA_FLAGGED_MAX_BYTES
+      raise ArgumentError, 'body too large or missing'
+    end
+
+    begin
+      data = JSON.parse(body)
+    rescue JSON::ParserError
+      raise ArgumentError, 'invalid JSON'
+    end
+
+    raise ArgumentError, 'expected object' unless data.is_a?(Hash)
+    filename = data['filename']
+    raise ArgumentError, 'filename required' unless filename.is_a?(String) && !filename.empty?
+    if filename.length > FileBucket::MAXIMUM_FILENAME_LENGTH
+      raise ArgumentError, 'filename too long'
+    end
+    if filename.include?('/') || filename.include?('\\')
+      raise ArgumentError, 'filename must not contain path separators'
+    end
+    # Same character set as AssetManager uploads (BucketHelper.replace_unsafe_chars).
+    if filename != BucketHelper.replace_unsafe_chars(filename)
+      raise ArgumentError, 'filename contains unsafe characters'
+    end
+
+    {filename: filename}.to_json
   end
 
   #
@@ -1028,8 +1060,13 @@ class FilesApi < Sinatra::Base
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
+    begin
+      normalized = parse_assets_metadata_flagged_body(body)
+    rescue ArgumentError
+      bad_request
+    end
     path = assets_metadata_flagged_path
-    AssetBucket.new.create_or_replace(encrypted_channel_id, path, body)
+    AssetBucket.new.create_or_replace(encrypted_channel_id, path, normalized)
     {filename: path}.to_json
   end
 
@@ -1038,6 +1075,7 @@ class FilesApi < Sinatra::Base
   #
   get ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
     dont_cache
+    not_authorized unless can_view_flagged_assets?(encrypted_channel_id)
     result = AssetBucket.new.get(encrypted_channel_id, assets_metadata_flagged_path)
     not_found if result[:status] == 'NOT_FOUND'
     content_type :json
