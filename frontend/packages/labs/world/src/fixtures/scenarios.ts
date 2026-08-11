@@ -29,6 +29,7 @@ import type {WorldLevelData} from '../levelData';
 
 import {BREAKOUT_SPEC} from './breakout';
 import {BREAKOUT_SINGLE_SPEC} from './breakoutSingle';
+import {FLAPPY_SPEC} from './flappy';
 import {METEORS_SPEC} from './meteors';
 import {METEORS_SINGLE_SPEC} from './meteorsSingle';
 import {PLATFORMER_SINGLE_SPEC} from './platformerSingle';
@@ -50,6 +51,7 @@ export const WORLD_SCENARIO_TAGS = [
   'breakout-single',
   'meteors',
   'meteors-single',
+  'flappy',
   'empty',
 ] as const;
 
@@ -233,6 +235,27 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- The ship\u2019s handlers are hats on `any ⟨Ship⟩` — including the ' +
       'one that spawns a shot\n' +
       '- Compare it with **Meteors** to see what moving a thing into a file buys',
+  },
+  flappy: {
+    name: 'Flappy',
+    description:
+      'A bird that only falls, a key that un-falls it, and a level 48 tiles ' +
+      'wide — the first scenario whose map is bigger than the screen, so the ' +
+      'camera has something to do.',
+    source: buildProject(FLAPPY_SPEC).source,
+    instructions:
+      '## Flappy\n\nFly through the gaps. The up arrow is the only control.\n\n' +
+      '- Click the preview, then press up to flap — the bird is always ' +
+      'falling and always moving right\n' +
+      '- The level is **48 tiles wide** and the screen is ten, so most of it ' +
+      'is off to the right. `Camera Follow` brings it to you and ' +
+      '`Camera Confined` stops the view at the ends\n' +
+      '- The flap **sets** the speed rather than pushing: a push would add up, ' +
+      'and every flap should be the same height\n' +
+      '- A coin in each gap is the score. Touching a pipe says so and lets ' +
+      'you fly on — there is no restart yet\n' +
+      '- Try a wider gap, a heavier bird (`amount of gravity`), or a look ' +
+      'offset on the camera so it shows more of what is coming',
   },
   empty: {
     name: 'Empty',
