@@ -102,11 +102,7 @@ const localeDoNotImport = (cdo, dir = 'src') => [
   p(cdo.replace(/^@cdo/, dir).replace(/locale$/, 'locale-do-not-import.js')),
 ];
 // alias '@cdo/gamelab/locale' => 'src/p5lab/gamelab/locale-do-not-import.js'
-// The p5lab labs keep their locale stubs one level deeper, which is what
-// localeDoNotImport's second parameter is for.  Passing the nested call
-// as the value instead produced an alias whose target was a two-element
-// array, which resolvers read as a candidate list: the real stub was
-// only reached after the bare request failed to resolve.
+// The p5lab labs keep their locale stubs one directory deeper.
 const localeDoNotImportP5Lab = (cdo, dir = 'src') =>
   localeDoNotImport(cdo, `${dir}/p5lab`);
 

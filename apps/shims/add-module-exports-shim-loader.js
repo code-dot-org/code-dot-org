@@ -22,13 +22,11 @@
 
 const fs = require('fs');
 
-// builtin swc hoists a file's leading comments BETWEEN the arguments of
-// the first statement it emits, which is usually this marker, so every
-// gap in the pattern has to tolerate a comment as well as whitespace.
-// Matching only whitespace leaves the marker in place, which then reads
-// as an export declaration below: a default-only module keeps its
-// marker, never gets the footer, and `require()` returns the namespace
-// object instead of the default — a silent undefined at the call site.
+// Every gap tolerates comments as well as whitespace: builtin swc hoists
+// a file's leading comments between the arguments of the first statement
+// it emits, which is usually this marker.  A marker left unmatched reads
+// as an export declaration below, and the module keeps a stamp babel
+// would not have given it.
 const GAP = String.raw`(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\n]*\n)*`;
 const MARKER = new RegExp(
   String.raw`Object\.defineProperty\(exports,${GAP}["']__esModule["'],${GAP}\{${GAP}value:${GAP}true,?${GAP}\}${GAP}\);?`

@@ -70,11 +70,9 @@ const IS_SERVE = process.argv.includes('serve');
 // replaces both babel-loader and ts-loader with builtin swc, 'ts'
 // replaces only ts-loader, and the off-values fall back to the full
 // babel-loader + ts-loader chain — the comparison run rspackNotice
-// invites when bisecting a suspected transpile difference.  The value is
-// normalized to one of those three before use: the two reads below
-// would otherwise disagree about anything else, giving babel for JS and
-// swc for TS, an unadvertised hybrid in exactly the setting a parity
-// bisect is trying to control.
+// invites.  Anything else is normalized to one of those three, so the
+// two reads below cannot disagree and hand out babel for JS with swc
+// for TS.
 const SWC_MODES = {all: 'all', 1: 'all', ts: 'ts'};
 const SWC_OFF = ['0', 'false', 'off', 'none', 'babel', ''];
 const rawSwc = process.env.RSPACK_SWC;
@@ -392,13 +390,11 @@ function createRspackConfig({
                 enforce: 'pre',
                 include: [p('node_modules/blockly')],
                 use: [
-                  // babel applies add-module-exports to blockly too — its
-                  // override there changes only class looseness — so the
-                  // shim runs here as well, or the two bundlers would
-                  // disagree the moment a blockly file arrives with ESM
-                  // syntax.  Today they do not: the package resolves to
-                  // script-classified *_compressed.js, where the shim
-                  // returns the source untouched.
+                  // babel applies add-module-exports to blockly too (its
+                  // override there changes only class looseness), so the
+                  // shim runs here as well.  It is a no-op while the
+                  // package resolves to script-classified
+                  // *_compressed.js, and parity the moment one does not.
                   {loader: p('shims/add-module-exports-shim-loader')},
                   {
                     loader: 'builtin:swc-loader',
@@ -684,14 +680,11 @@ function createRspackConfig({
               ),
             }),
             // Report how many modules each scope name matched, so a
-            // misspelled name does not fail silently.  Under serve the
-            // first compile is not the whole story: lazyCompilation
-            // defers dynamic imports, so a name covering only
-            // lazily-reached code (music's view, say) legitimately
-            // matches nothing until a page asks for it.  Names are
-            // therefore reported as they first match, and a name that
-            // has matched nothing yet is described that way rather than
-            // called a mistake.
+            // misspelled name does not fail silently.  Names are
+            // reported as they first match rather than once: under
+            // serve, lazyCompilation defers dynamic imports, so a name
+            // covering only lazily-reached code matches nothing until a
+            // page asks for it.
             {
               apply(compiler) {
                 const matched = new Set();
@@ -826,13 +819,11 @@ function createRspackConfig({
       }),
       ...(envConstants.HOT ? [new ReactRefreshRspackPlugin()] : []),
     ],
-    // RSPACK-DIFF: lazy compilation is declared for `serve` only, which
-    // is the only command that honors it — a one-shot build ignores the
-    // option and emits real modules either way (measured: identical
-    // wall and CPU time with and without it, and no stubs in the
-    // output).  The gate is so the config claims only what it does; a
-    // deferred import needs the dev server's /_rspack/lazy endpoint to
-    // answer, which nothing does in a build.  Under serve, deferring
+    // RSPACK-DIFF: lazy compilation is declared for `serve` only,
+    // because that is the only command that honors it — a one-shot build
+    // ignores the option and emits real modules either way, measured as
+    // identical wall and CPU time with it and without.  Under serve,
+    // deferring
     // dynamic imports until a page requests them is a small startup
     // win, and that endpoint must be excluded from the catch-all proxy
     // below or React.lazy chunks 404 and Suspense boundaries crash.
