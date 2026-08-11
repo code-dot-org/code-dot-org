@@ -16,6 +16,7 @@ import {type AnimationDef, frameDelay} from '../core/animationTypes';
 import {APPEARANCE} from '../core/spatialKeys';
 import type {Property} from '../core/types';
 import {Vector} from '../core/Vector';
+import type {World} from '../core/World';
 
 import {IntrinsicSizeProperty, PositionalTrait, SpatialRule} from './spatial';
 
@@ -131,10 +132,41 @@ export const FrameChangedEvent = rule.addEvent('frameChanged', {
 });
 
 /**
+ * Set the actor's `IntrinsicSizeProperty` from the picture it is drawing.
+ *
+ * Two answers, and neither needs an animation. A cell says its own size, so a
+ * spritesheet frame is measured for free. A whole image does not, so the world
+ * is asked — the project measures every image it holds and states them all
+ * (`World.imageSize`).
+ *
+ * Before this, only the spritesheet path below published anything, and its own
+ * comment said the engine could not know a single image's pixel size. That was
+ * true and is not any more, and it mattered more than it sounds: intrinsic size
+ * is what `collision size of` falls back to, so EVERY actor drawing one picture
+ * collided as a 32 by 32 square whatever shape it really was.
+ */
+function publishPictureSize(world: World, actor: Actor): void {
+  const cell = actor.get(SpriteCellSizeProperty);
+  if (cell.x > 0 && cell.y > 0) {
+    actor.set(IntrinsicSizeProperty, new Vector(cell.x, cell.y));
+    return;
+  }
+  const sprite = actor.get(SpriteProperty);
+  const measured = sprite ? world.imageSize(sprite) : undefined;
+  if (measured) {
+    actor.set(
+      IntrinsicSizeProperty,
+      new Vector(measured.width, measured.height),
+    );
+  }
+}
+
+/**
  * Set the actor's `IntrinsicSizeProperty` to the largest cell in `def` — a
- * stable, frame-independent box. Leaves it untouched when no frame carries a
- * cell (a single image), so it stays `(0, 0)` = "unknown" and Collision falls
- * back to its default box.
+ * stable, frame-independent box, so it does not pulse with the animation.
+ *
+ * Runs after {@link publishPictureSize} and overrides it for an animated actor,
+ * which is the right way round: that one reports the cell being drawn NOW.
  */
 function publishIntrinsicSize(actor: Actor, def: AnimationDef): void {
   let width = 0;
@@ -154,6 +186,9 @@ export const AdvanceAnimationStep = rule.addStep(
   'advanceAnimation',
   (world, delta) => {
     for (const actor of world.actors.with(AppearanceTrait)) {
+      // Every actor that is drawn at all, before the animation guards below
+      // send a picture-only one away — it has a size too.
+      publishPictureSize(world, actor);
       const id = actor.get(AnimationProperty);
       const def = id ? world.animation(id) : undefined;
       // A replay was requested via `playAnimation` (consume it either way).

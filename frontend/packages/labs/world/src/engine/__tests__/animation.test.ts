@@ -60,6 +60,24 @@ function makeWorld(animation = '') {
   return {world, actor};
 }
 
+/**
+ * A world holding one actor that draws `paddle.png` and nothing else — no
+ * animation, which is the case the rule used to walk straight past.
+ */
+function paintedWorld(sizes: Record<string, {width: number; height: number}>) {
+  const builder = new WorldBuilder({id: 'ww', name: 'WW'})
+    .useRules([AnimationRule])
+    .useImageSizes(sizes);
+  const world = builder.getWorld();
+  const actor = builder.addActor(
+    new ActorBuilder({id: 'aw', name: 'AW'})
+      .useTraits([AppearanceTrait])
+      .set(PositionProperty, new Vector(0, 0))
+      .set(SpriteProperty, 'paddle.png'),
+  );
+  return {world, actor};
+}
+
 describe('the Animation rule', () => {
   it('advances the frame by each frame delay, looping', () => {
     // Stock "coinSpin": 6 frames at 12 fps → 1000/12 ≈ 83.33 ms per frame.
@@ -87,24 +105,40 @@ describe('the Animation rule', () => {
     expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 32})).toBe(true);
   });
 
-  it('leaves the intrinsic size unknown for a whole-image sprite (no cell)', () => {
-    // A frame without a `position` cell carries no pixel dimensions the engine
-    // can know, so the intrinsic size stays (0, 0) and Collision falls back.
-    const wholeImage: AnimationDef = {
-      frames: [{sprite: 's', delay: 100}],
-    };
-    const builder = new WorldBuilder({id: 'ww', name: 'WW'})
-      .useRules([AnimationRule])
-      .useAnimations({wholeImage});
-    const world = builder.getWorld();
-    const actor = builder.addActor(
-      new ActorBuilder({id: 'aw', name: 'AW'})
-        .useTraits([AppearanceTrait])
-        .set(PositionProperty, new Vector(0, 0))
-        .set(AnimationProperty, 'wholeImage'),
-    );
+  it('measures a whole-image sprite from what the project stated', () => {
+    // A whole image states no size the way a cell does, and the engine cannot
+    // read a PNG. The project can, and says so up front (`useImageSizes`), so
+    // an actor that draws one picture and has no animation at all still knows
+    // how big it is. Before this it did not, and since intrinsic size is what
+    // `collision size of` falls back to, every such actor — most of them —
+    // collided as a 32 by 32 square whatever shape it was.
+    const {world, actor} = paintedWorld({
+      'paddle.png': {width: 64, height: 16},
+    });
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 0, y: 0})).toBe(true);
+    world.tick(0.01);
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 64, y: 16})).toBe(true);
+  });
+
+  it('leaves the intrinsic size unknown for a picture nobody measured', () => {
+    // Unknown means UNMEASURED, not "has no size" — an image from outside the
+    // project is the case that stays. Zero is the honest answer, and what the
+    // rules that read it treat as "assume something".
+    const {world, actor} = paintedWorld({'other.png': {width: 64, height: 16}});
     world.tick(0.01);
     expect(actor.get(IntrinsicSizeProperty).equals({x: 0, y: 0})).toBe(true);
+  });
+
+  it('takes a cell over the whole image it is cut from', () => {
+    // An actor showing one cell of a strip, with no animation running: the
+    // measurement says 192 wide (the strip) and the cell says 32 (the coin).
+    // The coin is the answer — the strip is not what is on screen.
+    const {world, actor} = paintedWorld({
+      'paddle.png': {width: 192, height: 32},
+    });
+    actor.set(SpriteCellSizeProperty, new Vector(32, 32));
+    world.tick(0.01);
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 32})).toBe(true);
   });
 
   it('holds the last frame and emits AnimationEnded once when a non-looping animation finishes', () => {

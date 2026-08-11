@@ -23,7 +23,7 @@ import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
 import {setProjectAnimationFiles, setProjectMaps} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
-import {setProjectGrids} from '../spriteCells';
+import {forgetImageSizes, setProjectGrids} from '../spriteCells';
 import {shadowsFor, VALUE_SHADOW_EXTENSION} from '../valueShadow';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
@@ -711,7 +711,34 @@ describe('domain block generators', () => {
     expect(emit('world_set_sprite', {SPRITE: 'coinSpin.png#99'})).toContain(
       'SpriteCellSizeProperty, new WorldLab.Vector(0, 0)',
     );
+    // Both halves: grids are replaced, sizes are MERGED (a measurement arrives
+    // late and must not drop the others), so clearing them takes two calls.
+    // `world_world` states every measured size, and would state this one.
     setProjectGrids({}, {});
+    forgetImageSizes();
+  });
+
+  it('world_world states every image the editor measured', () => {
+    // No block says this, the same way no block says which animation files
+    // exist: how big a picture is is a fact about the project, not a decision
+    // a world makes. The engine cannot read a PNG and the editor already has.
+    //
+    // What needs it: `intrinsic size`, and through it `collision size of` and
+    // "Stays in the Map". Without it those only ever had an answer for a
+    // SPRITESHEET, whose cells state their own size.
+    setProjectGrids({}, {'b.png': {width: 8, height: 8}});
+    setProjectGrids({}, {'a.png': {width: 64, height: 16}});
+
+    // Sorted, so the same project compiles to the same text — the order two
+    // measurements happened to arrive in is not part of the program.
+    expect(emit('world_world', {NAME: 'W'})).toContain(
+      'world.useImageSizes({"a.png":{"width":64,"height":16},' +
+        '"b.png":{"width":8,"height":8}});\n',
+    );
+
+    // Nothing measured, nothing said.
+    forgetImageSizes();
+    expect(emit('world_world', {NAME: 'W'})).not.toContain('useImageSizes');
   });
 
   it('world_play_animation plays the animation on the ACTOR value (restarting it)', () => {

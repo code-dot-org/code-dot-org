@@ -43,6 +43,18 @@ export function setProjectGrids(
   sizes = {...sizes, ...nextSizes};
 }
 
+/**
+ * Every measurement the editor holds, by the same name a sprite field stores.
+ *
+ * The world is told all of them (`useImageSizes`) rather than only the ones
+ * something draws today, because what an actor draws is a runtime decision and
+ * the answer has to be ready before it is asked. A name nothing ever draws
+ * costs a map entry and is never looked up.
+ */
+export function measuredImages(): Readonly<Record<string, ImageSize>> {
+  return sizes;
+}
+
 /** Forget every measurement — for tests, which must not leak into each other. */
 export function forgetImageSizes(): void {
   sizes = {};
