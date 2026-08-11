@@ -6,6 +6,7 @@ import {
   FLAGGED_IMAGE_URL_MESSAGE,
   IMAGE_MODERATION_ERROR_MESSAGE,
 } from '@cdo/apps/applab/constants';
+import {clearImageUrlModerationCache} from '@cdo/apps/applab/imageUrlModeration';
 import ImageURLInput from '@cdo/apps/code-studio/components/ImageURLInput';
 import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
 
@@ -28,6 +29,7 @@ describe('ImageURLInput', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    clearImageUrlModerationCache();
     mockModerateImageUrl.mockResolvedValue('safe');
     assetChosen = jest.fn();
   });
