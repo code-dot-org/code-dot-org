@@ -15,6 +15,7 @@ import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
 import {
   arrowsRule,
+  collectRule,
   solidRule,
   collisionsRule,
   gravityRule,
@@ -38,42 +39,19 @@ export const ENTRY_FILE = 'worlds/main.world';
  */
 // The actors are TEMPLATES — a set of traits and appearance, but no position:
 // the world (main.world, authored in Blockly) places each instance and sets its
-// per-instance position. `ground` is a JS template, `player` a Blockly `.actor`;
-// the world adds all of them the same way. (The player is arrow-key controlled,
-// so it also carries the input trait — authored in its `.actor` file.)
+// per-instance position. All four are `.actor` files, which is to say Blockly
+// workspaces: a learner who wants to know what a ground tile IS opens it and
+// reads three rows, rather than reading JavaScript they have not been taught.
+//
+// They were JS `ActorBuilder` modules until the blocks could say everything the
+// builders said. A project can still hold one — `rules/animation.js` is a JS
+// module and the compiler treats every module alike — but nothing in the
+// starter needs to be one to work, and a starter is read before it is
+// understood.
 //
 // What none of them elects is being POSITIONED or having an APPEARANCE: every
 // actor has those (`ActorBuilder`'s foundation), so what a template lists is
 // what makes it that kind of actor and nothing else.
-
-const GROUND_ACTOR = `import {ActorBuilder, SpriteProperty} from 'world-lab';
-import {SolidTrait} from 'rules/solid';
-import {ActsAsGroundTrait} from 'rules/gravity';
-
-// A ground tile: landable (ActsAsGroundTrait, from the project's own gravity
-// rule) and a wall (SolidTrait, from the engine's collision rule), drawn with
-// the project's own "ground.png". A normal tile is both. Being somewhere and
-// having a picture are not among the traits it elects — every actor has those.
-export default new ActorBuilder({id: 'ground', name: 'Ground'})
-  .useTraits([ActsAsGroundTrait, SolidTrait])
-  .set(SpriteProperty, 'ground.png');
-`;
-
-const COIN_ACTOR = `import {ActorBuilder, AnimationProperty} from 'world-lab';
-
-// A coin playing "coinSpin" — the animation in animations/coinSpin.anim. It
-// elects no traits at all: an actor can be somewhere and be drawn without
-// asking, so playing an animation is the whole of what makes this a coin.
-export default new ActorBuilder({id: 'coin', name: 'Coin'})
-  .set(AnimationProperty, 'coinSpin');
-`;
-
-const BALL_ACTOR = `import {ActorBuilder, AnimationProperty} from 'world-lab';
-
-// A ball playing "pulse" — the animation in animations/game.anim.
-export default new ActorBuilder({id: 'ball', name: 'Ball'})
-  .set(AnimationProperty, 'pulse');
-`;
 
 // Blockly workspace helpers. A `.actor` / `.world` file is a Blockly
 // workspace stored as serialized JSON (INTERFACE.md); the lab generates
@@ -93,6 +71,46 @@ const nextBlock = (block: object, next?: object) =>
  */
 export const stack = (blocks: object[]): object =>
   blocks.reduceRight((next, block) => nextBlock(block, next));
+
+/**
+ * `use trait ⟨Rule#Trait⟩` — the row that gives an actor a share of a rule.
+ *
+ * The dropdown stores a trait as its rule's NAME and the export name its own
+ * name derives (`traitOptions`), so "Acts as Ground" declared by the rule named
+ * "Gravity" is `Gravity#ActsAsGroundTrait`. Not a module path: the rule is
+ * found by name wherever its file sits, and a value that names nothing falls
+ * back to the first option rather than failing.
+ */
+export const useTrait = (trait: string) => ({
+  type: 'world_use_trait',
+  fields: {TRAIT: trait},
+});
+
+/**
+ * A one-block `.actor` file: a `define actor` root and the body under it.
+ *
+ * Three of the starter's four are exactly this. The player is not, because it
+ * also has event handlers, and a handler is its own top-level block rather than
+ * something chained inside the definition.
+ */
+const actorFile = (name: string, rows: object[]) =>
+  JSON.stringify(
+    {
+      blocks: {
+        blocks: [
+          {
+            type: 'world_actor',
+            x: 20,
+            y: 20,
+            fields: {NAME: name},
+            next: {block: stack(rows)},
+          },
+        ],
+      },
+    },
+    null,
+    2,
+  );
 
 // Each event has its own cap-hat block (`world_on_<event>`); the handler body
 // attaches below it as the next statement, not nested in a `do` input.
@@ -149,19 +167,26 @@ const WALL_ROWS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 //   # . . . . . . . . #   0   #  wall
 //   # . . . . . . . . #   1
 //   # . . B . . . . . #   2   B  ball, floating
-//   # . . . . . . C . #   3   C  coin, over the platform
+//   # . . . . . . C . #   3   C  a coin, over the platform
 //   # . P . . . . . . #   4   P  player, which falls to the floor
 //   # . . . . . . . . #   5
 //   # . . . . = = = . #   6   =  a platform, three tiles, one jump up
 //   # . . . . . . . . #   7
-//   # . . . . . . . . #   8
+//   # . . . C . . . C #   8      …and two on the floor, where walking finds them
 //   # # # # # # # # # #   9   #  the floor
 //
 // A room, on purpose. A jump clears about four tiles, so the platform is
-// comfortably reachable from the floor and the coin sits over it; the walls mean
-// the first thing a learner does — hold an arrow key — bumps into something
-// rather than walking out of the world, which in ten columns takes a second and
-// a half. Leaving the world is a thing to build deliberately.
+// comfortably reachable from the floor and the third coin sits over it; the
+// walls mean the first thing a learner does — hold an arrow key — bumps into
+// something rather than walking out of the world, which in ten columns takes a
+// second and a half. Leaving the world is a thing to build deliberately.
+//
+// THREE coins rather than one, because the console prints how many have been
+// taken: with a single coin that number is only ever 1, and a count that cannot
+// count reads as a decoration on the block rather than as the question it is.
+// Two of them are on the walking path, so the first thing a learner does also
+// shows them the mechanic; the third asks for the jump they have just been told
+// about.
 const LEVEL1_MAP = JSON.stringify(
   {
     type: 'map',
@@ -176,7 +201,11 @@ const LEVEL1_MAP = JSON.stringify(
       ...wall('WallLeft', 0, WALL_ROWS),
       ...wall('WallRight', 9, WALL_ROWS),
       ...ground('Platform', 6, [5, 6, 7]),
-      place('actors/coin', 'Coin', tileCenter(6), tileCenter(3)),
+      // Three coins, in the order a learner will meet them: two on the floor
+      // that walking right takes, and one that has to be jumped for.
+      place('actors/coin', 'Coin1', tileCenter(4), tileCenter(8)),
+      place('actors/coin', 'Coin2', tileCenter(8), tileCenter(8)),
+      place('actors/coin', 'Coin3', tileCenter(6), tileCenter(3)),
       place('actors/ball', 'Ball', tileCenter(3), tileCenter(2)),
     ],
   },
@@ -198,9 +227,10 @@ export const ruleShim = (exportName: string): string =>
 // The world, authored in Blockly (`main.world`): a `world_world` root with the
 // rules in play and the map whose actors it places.
 //
-// TWO rows, and both are choices. "Has Gravity" pulls in motion and collision
-// through its own `requires`, and "Moves with Arrow Keys" pulls in motion the
-// same way; a world could sensibly have neither. What is NOT here is the
+// THREE rows, and all three are choices. "Has Gravity" pulls in motion and
+// collision through its own `requires`, "Moves with Arrow Keys" pulls in motion
+// the same way, and "Collects Things" pulls in collision; a world could
+// sensibly have none of them. What is NOT here is the
 // foundation — Space and Appearance, which the engine seeds into every world,
 // and Input, which the project runs by holding `rules/input.rule`
 // (blockly/foundation). Those were four more rows saying what no game can be
@@ -225,6 +255,7 @@ const MAIN_WORLD = JSON.stringify(
             block: stack([
               {type: 'world_use_rule', fields: {RULE: 'Gravity'}},
               {type: 'world_use_rule', fields: {RULE: 'Arrow Keys'}},
+              {type: 'world_use_rule', fields: {RULE: 'Collection'}},
               {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
             ]),
           },
@@ -247,22 +278,19 @@ const PLAYER_ACTOR = JSON.stringify(
           fields: {NAME: 'Player'},
           next: {
             block: stack([
-              {
-                type: 'world_use_trait',
-                fields: {TRAIT: 'Gravity#AffectedByGravityTrait'},
-              },
-              {
-                type: 'world_use_trait',
-                fields: {TRAIT: 'Arrow Keys#ControlledByArrowKeysTrait'},
-              },
+              useTrait('Gravity#AffectedByGravityTrait'),
+              useTrait('Arrow Keys#ControlledByArrowKeysTrait'),
               // Hearing the keyboard is something an actor ELECTS. The world's
               // own key events are raised once a frame whatever is in it; this
               // trait is what makes `rules/input` also tell THIS actor, and it
               // is why that broadcast walks one player rather than every coin.
-              {
-                type: 'world_use_trait',
-                fields: {TRAIT: 'Input#TakesKeyboardInputTrait'},
-              },
+              useTrait('Input#TakesKeyboardInputTrait'),
+              // The other side of the coin's "Can Be Collected": what makes
+              // walking into one take it. The player names no kind here — the
+              // rule takes whatever it touches that says it can be taken, so
+              // making a second kind of thing collectible is an edit to that
+              // thing and not to this file.
+              useTrait('Collection#CollectsTrait'),
               // Plays a learner-authored animation (game.anim) — its id is in
               // the dropdown because the lab feeds the project's animations to
               // the block (Phase D). Position is set by the map when the world
@@ -270,8 +298,8 @@ const PLAYER_ACTOR = JSON.stringify(
               //
               // No `use trait Has Appearance` above it any more: every actor
               // has that, and being positioned, without electing either
-              // (ActorBuilder's foundation). What is left are the two traits
-              // that make this actor a PLAYER rather than a coin.
+              // (ActorBuilder's foundation). What is left are the traits that
+              // make this actor a PLAYER rather than a coin.
               {
                 type: 'world_play_animation',
                 fields: {ANIMATION: 'playerBob'},
@@ -329,12 +357,86 @@ const PLAYER_ACTOR = JSON.stringify(
           'Player started falling',
         ),
         onEvent('Gravity_StopsFallingEvent', 20, 320, 'Player landed!'),
+        // The score, such as it is. Taking the coin is the RULE's business —
+        // this handler is only told that it happened, which is why the coin is
+        // already out of the world by the time anything reads the count.
+        //
+        // `collected` is a list of what was taken rather than a tally, so "how
+        // many coins" is a question asked of it rather than a second number
+        // kept alongside it. Which is the answer to "and how many of the other
+        // thing", too, without a second counter and without remembering to
+        // increment it.
+        {
+          type: 'world_on_Collection_CollectsEvent',
+          x: 20,
+          y: 620,
+          next: {
+            block: {
+              type: 'world_print',
+              inputs: {
+                VALUE: {
+                  block: {
+                    type: 'world_count_of_kind',
+                    fields: {TYPE: 'actors/coin'},
+                    inputs: {
+                      LIST: {
+                        block: {
+                          type: 'world_get_Collection_CollectedProperty',
+                          inputs: {
+                            ACTOR: {block: {type: 'world_this_actor'}},
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
       ],
     },
   },
   null,
   2,
 );
+
+// A ground tile: landable ("Acts as Ground", from the project's own gravity
+// rule) and a wall ("Solid", from its own solid-bodies rule), drawn with the
+// project's own "ground.png". A normal tile is both.
+//
+// Both traits come from rules the project HOLDS, and that is the whole of what
+// this file has to get right: gravity's ground loop matches its own trait, so a
+// tile electing some other rule's would compile, run, and hold nothing up.
+// Naming a trait by rule name rather than by module is what makes that hard to
+// get wrong — there is only one "Gravity" in play.
+const GROUND_ACTOR = actorFile('Ground', [
+  useTrait('Gravity#ActsAsGroundTrait'),
+  useTrait('Solid Bodies#SolidTrait'),
+  {type: 'world_set_sprite', fields: {SPRITE: 'ground.png'}},
+]);
+
+// A coin playing "coinSpin" — the animation in animations/coinSpin.anim — and
+// electing to be takeable.
+//
+// "Can Be Collected" is the whole of the coin's side of collecting: it does not
+// know what a player is, and the player does not know what a coin is. That is
+// the point of the rule having two traits rather than one — a game says which
+// kinds of thing can be picked up, and which kinds pick things up, and the two
+// lists have nothing to do with each other.
+//
+// Being touchable is not among the rows, because "Can Be Collected" requires
+// "Can Collide" and a trait brings its own dependencies. A coin that could be
+// taken but could not be touched would be a rule that silently does nothing.
+const COIN_ACTOR = actorFile('Coin', [
+  {type: 'world_play_animation', fields: {ANIMATION: 'coinSpin'}},
+  useTrait('Collection#CanBeCollectedTrait'),
+]);
+
+// A ball playing "pulse" — the animation in animations/game.anim.
+const BALL_ACTOR = actorFile('Ball', [
+  {type: 'world_play_animation', fields: {ANIMATION: 'pulse'}},
+]);
 
 // Learner-authored animations — a `.anim` file (JSON on disk), discriminated by
 // `type: 'animation'` (INTERFACE.md §Animations). Every `.anim` in the project is
@@ -548,20 +650,20 @@ const STARTER = buildProject({
       folderId: 'actors',
     },
     ground: {
-      name: 'ground.js',
-      language: 'javascript',
+      name: 'ground.actor',
+      language: 'actor',
       contents: GROUND_ACTOR,
       folderId: 'actors',
     },
     coin: {
-      name: 'coin.js',
-      language: 'javascript',
+      name: 'coin.actor',
+      language: 'actor',
       contents: COIN_ACTOR,
       folderId: 'actors',
     },
     ball: {
-      name: 'ball.js',
-      language: 'javascript',
+      name: 'ball.actor',
+      language: 'actor',
       contents: BALL_ACTOR,
       folderId: 'actors',
     },
@@ -611,6 +713,12 @@ const STARTER = buildProject({
       name: 'solid.rule',
       language: 'rule',
       contents: solidRule,
+      folderId: 'rules',
+    },
+    collectRule: {
+      name: 'collect.rule',
+      language: 'rule',
+      contents: collectRule,
       folderId: 'rules',
     },
     animationRule: {

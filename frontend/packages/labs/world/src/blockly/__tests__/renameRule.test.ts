@@ -132,20 +132,35 @@ describe('renameRuleInSource', () => {
     const touched = Object.keys(next.files).filter(
       id => next.files[id].contents !== source.files[id].contents,
     );
-    // The world attaches it, the player elects its trait and handles its events,
-    // and the rule file itself is full of its own members.
+    // The world attaches it, the player elects its trait and handles its
+    // events, the ground elects the trait that makes it landable, and the rule
+    // file itself is full of its own members.
     expect(new Set(touched.map(id => next.files[id].name))).toEqual(
-      new Set(['main.world', 'player.actor', 'gravity.rule']),
+      new Set(['main.world', 'player.actor', 'ground.actor', 'gravity.rule']),
     );
   });
 
   it('leaves a `.js` file alone — it imports a module, not a name', () => {
-    // `actors/ground.js` reads `import {ActsAsGroundTrait} from 'rules/gravity'`.
-    // The file did not move, so that import is as true after the rename as
-    // before; a rename that touched it would be a rename of the wrong thing.
-    const next = renameRuleInSource(source, 'Gravity', 'Moon Gravity');
-    const ground = starterFile('ground').id;
-    expect(next.files[ground].contents).toBe(source.files[ground].contents);
+    // A JS module names a rule by its MODULE PATH, and the file did not move,
+    // so its import is as true after the rename as before; a rename that
+    // touched it would be a rename of the wrong thing. Nothing in the starter
+    // is written this way any more, so the file under test is written here —
+    // the project can still hold one, and the compiler treats it alike.
+    const js = {
+      id: 'js',
+      name: 'rock.js',
+      language: 'javascript',
+      folderId: source.files[starterFile('ground').id].folderId,
+      contents:
+        `import {ActorBuilder} from 'world-lab';\n` +
+        `import {ActsAsGroundTrait} from 'rules/gravity';\n` +
+        `export default new ActorBuilder({id: 'rock', name: 'Rock'})\n` +
+        `  .useTraits([ActsAsGroundTrait]);\n`,
+    };
+    const withJs = {...source, files: {...source.files, js}};
+
+    const next = renameRuleInSource(withJs, 'Gravity', 'Moon Gravity');
+    expect(next.files.js.contents).toBe(js.contents);
   });
 
   it('leaves the project resolvable — the rule answers to its new name', () => {

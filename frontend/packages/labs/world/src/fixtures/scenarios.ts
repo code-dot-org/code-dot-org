@@ -105,16 +105,20 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
   simple: {
     name: 'Platformer',
     description:
-      'The starter project: gravity, arrow keys, a map with ground and a coin.',
+      'The starter project: gravity, arrow keys, and a room with coins to ' +
+      'collect — two on the floor and one that has to be jumped for.',
     source: DEFAULT_PROJECT.source,
     instructions:
       '## World Lab\n\nBuild a game world in code. Edit the world and ' +
       'actors under `worlds/` and `actors/`.\n\n' +
       '- The preview runs your game as you edit\n' +
       '- Click the preview, then use the arrow keys to move the player, and space to jump\n' +
+      '- Walk into a coin to take it: the coin is `Can Be Collected` and the ' +
+      'player `Collects`, and the Console counts what it has\n' +
       '- Animations are files under `animations/`: open one to edit its frames\n' +
       '- `console.log` output appears in the Console\n' +
-      '- Try changing the player’s start position, gravity, or move speed',
+      '- Try changing the player’s start position, gravity, or move speed — or ' +
+      'make the ball collectible too, which is one row in `ball.actor`',
   },
   breakout: {
     name: 'Breakout',
