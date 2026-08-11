@@ -91,7 +91,7 @@ const nextBlock = (block: object, next?: object) =>
  * everything below it — silently, since the file still parses and the world
  * still loads, just without those rules. This takes the list.
  */
-const stack = (blocks: object[]): object =>
+export const stack = (blocks: object[]): object =>
   blocks.reduceRight((next, block) => nextBlock(block, next));
 
 // Each event has its own cap-hat block (`world_on_<event>`); the handler body
@@ -192,7 +192,7 @@ const LEVEL1_MAP = JSON.stringify(
 // to a full `RuleBuilder` source to modify a mechanic. (Only the rules the world
 // names need a shim; their dependencies are pulled in transitively.)
 // Gravity, authored in Blockly rather than shimmed from the engine.
-const ruleShim = (exportName: string): string =>
+export const ruleShim = (exportName: string): string =>
   `export {${exportName} as default} from 'world-lab';\n`;
 
 // The world, authored in Blockly (`main.world`): a `world_world` root with the
@@ -471,7 +471,7 @@ export function buildProject(spec: ProjectSpec): {
  * dialog hands out (`appearance/stock`), so the starter project cannot drift
  * from what a learner would get by importing one.
  */
-function starterSprites(ids: readonly string[]) {
+export function starterSprites(ids: readonly string[]) {
   const files: Record<string, StarterFile> = {};
   for (const id of ids) {
     const sprite = STOCK_SPRITES.find(entry => entry.id === id);

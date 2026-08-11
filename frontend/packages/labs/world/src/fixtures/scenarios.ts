@@ -26,13 +26,15 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {buildProject, DEFAULT_PROJECT, type ProjectSpec} from '../constants';
 
+import {BREAKOUT_SPEC} from './breakout';
+
 /**
  * Every scenario's tag, in the order the switcher offers them.
  *
  * The tag is also the channel id the studio route carries
  * (`/projects/world/<tag>/edit`), so it is url-shaped: lower case, hyphens.
  */
-export const WORLD_SCENARIO_TAGS = ['simple', 'empty'] as const;
+export const WORLD_SCENARIO_TAGS = ['simple', 'breakout', 'empty'] as const;
 
 export type WorldScenarioTag = (typeof WORLD_SCENARIO_TAGS)[number];
 
@@ -103,6 +105,21 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- Animations are files under `animations/`: open one to edit its frames\n' +
       '- `console.log` output appears in the Console\n' +
       '- Try changing the player’s start position, gravity, or move speed',
+  },
+  breakout: {
+    name: 'Breakout',
+    description:
+      'A paddle, a bouncing ball, and two rows of bricks to clear. Every ' +
+      'mechanic in it is a stock rule.',
+    source: buildProject(BREAKOUT_SPEC).source,
+    instructions:
+      '## Breakout\n\nClear the bricks without losing the ball.\n\n' +
+      '- Click the preview, then use the left and right arrow keys\n' +
+      '- The bricks are `Can Be Collected` and the ball `Collects` them — the ' +
+      'Console counts what it has taken\n' +
+      '- The room is open at the bottom: `when ⟨Ball⟩ leaves the map` is how ' +
+      'it notices\n' +
+      '- Try a bouncier ball, a wider paddle, or a third row of bricks',
   },
   empty: {
     name: 'Empty',

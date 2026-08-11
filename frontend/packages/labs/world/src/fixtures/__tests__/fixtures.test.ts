@@ -34,7 +34,7 @@ describe('the scenario catalogue', () => {
   it('rejects a tag that names nothing', () => {
     // What keeps a typo in a URL showing the starter rather than a lab with no
     // project in it.
-    expect(isScenarioTag('breakout')).toBe(false);
+    expect(isScenarioTag('platformer')).toBe(false);
     expect(isScenarioTag(null)).toBe(false);
   });
 
@@ -77,6 +77,69 @@ describe('the scenario catalogue', () => {
         Object.values(files).some(file => file.name.endsWith('.world')),
       ).toBe(true);
     }
+  });
+
+  it('gives breakout everything it names', () => {
+    // A scenario naming a rule the project does not hold is a world that loads
+    // with a `use rule` pointing at nothing — and the dropdown quietly falls
+    // back to the first rule in the list rather than saying so, which is how
+    // this one shipped four rows of `use rule ⟨Has Space⟩` the first time.
+    const files = Object.values(WORLD_SCENARIOS.breakout.source.files);
+    const named = (name: string) => files.some(file => file.name === name);
+
+    for (const rule of [
+      'arrows.rule',
+      'input.rule',
+      'motion.rule',
+      'collisions.rule',
+      'solid.rule',
+      'collect.rule',
+    ]) {
+      expect(named(rule)).toBe(true);
+    }
+    // All four in blocks: every actor in this project can be opened and read
+    // in the editor, which is most of what a demo project is for.
+    for (const actor of [
+      'paddle.actor',
+      'ball.actor',
+      'brick.actor',
+      'wall.actor',
+    ]) {
+      expect(named(actor)).toBe(true);
+    }
+    // The images it draws with. A project draws only what it holds.
+    for (const sprite of ['ground.png', 'ball.png', 'box.png']) {
+      expect(named(sprite)).toBe(true);
+    }
+  });
+
+  it('bounces off the surfaces, not off the ball', () => {
+    // The one that cost a debugging round: `bounciness` is read off the SOLID
+    // body in a contact, not off the thing that hit it (rules/solid). A ball
+    // with the dial and walls without it stops dead on first contact.
+    const files = Object.values(WORLD_SCENARIOS.breakout.source.files);
+    const contents = (name: string) =>
+      files.find(file => file.name === name)?.contents ?? '';
+
+    expect(contents('wall.actor')).toContain('BouncinessProperty');
+    expect(contents('brick.actor')).toContain('BouncinessProperty');
+    expect(contents('paddle.actor')).toContain('BouncinessProperty');
+    expect(contents('ball.actor')).not.toContain('BouncinessProperty');
+  });
+
+  it('names its rules the way the dropdown stores them', () => {
+    // A parsed `.rule` is referred to by its NAME from then on, wherever its
+    // file sits (useRuleOptions). A module path is what an UNPARSEABLE one
+    // falls back to, so `use rule ⟨rules/solid⟩` reads as a rule that could not
+    // be read — and silently resolves to something else.
+    const main = Object.values(WORLD_SCENARIOS.breakout.source.files).find(
+      file => file.name === 'main.world',
+    )!.contents;
+
+    for (const name of ['Arrow Keys', 'Solid Bodies', 'Collection']) {
+      expect(main).toContain(`"RULE":"${name}"`);
+    }
+    expect(main).not.toContain('"RULE":"rules/');
   });
 
   it('writes the level properties once, for all of them', () => {
