@@ -3,7 +3,19 @@
     margin-left: 0.5rem;
   }
 
+  &:global(.MuiIconButton-root):hover {
+    background-color: var(--background-brand-purple-strong);
+    color: var(--text-neutral-white-fixed);
+  }
+
   &:global(.MuiIconButton-root):focus-visible {
     outline-color: var(--borders-neutral-white-fixed);
+  }
+}
+
+.headerItemPressed {
+  &:global(.MuiIconButton-root) {
+    background-color: var(--background-brand-purple-strong);
+    color: var(--text-neutral-white-fixed);
   }
 }

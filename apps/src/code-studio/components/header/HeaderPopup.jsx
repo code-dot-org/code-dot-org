@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -23,10 +24,6 @@ export default class HeaderPopup extends Component {
     open: false,
   };
 
-  moreButtonRef = React.createRef();
-
-  lessButtonRef = React.createRef();
-
   shouldComponentUpdate(nextProps, nextState) {
     return (
       this.props.windowHeight !== nextProps.windowHeight ||
@@ -37,9 +34,7 @@ export default class HeaderPopup extends Component {
 
   handleClickOpen = e => {
     e.stopPropagation();
-    this.setState({open: true}, () => {
-      this.lessButtonRef.current?.focus();
-    });
+    this.setState({open: true});
 
     progress.retrieveProgress(
       this.props.scriptName,
@@ -50,14 +45,19 @@ export default class HeaderPopup extends Component {
     $(document).on('click', this.handleClickDocument);
   };
 
-  handleClickClose = restoreFocus => {
-    this.setState({open: false}, () => {
-      if (restoreFocus) {
-        this.moreButtonRef.current?.focus();
-      }
-    });
+  handleClickClose = () => {
+    this.setState({open: false});
 
     $(document).off('click', this.handleClickDocument);
+  };
+
+  handleClickToggle = event => {
+    if (this.state.open) {
+      event.stopPropagation();
+      this.handleClickClose();
+    } else {
+      this.handleClickOpen(event);
+    }
   };
 
   handleClickDocument = event => {
@@ -73,44 +73,34 @@ export default class HeaderPopup extends Component {
     const scriptData = this.props.scriptData;
     const courseName = scriptData?.course_name;
     const unitPosition = scriptData?.unit_position;
+    const toggleLabel = this.state.open ? i18n.less() : i18n.more();
     return (
       <div>
-        {!this.state.open && (
+        <Tooltip title={toggleLabel}>
           <MuiIconButton
             type="button"
-            className={`no-mc header_popup_link ${styles.headerItem}`}
-            onClick={this.handleClickOpen}
-            variant="outlined"
-            color="tertiary"
+            className={classNames(
+              'no-mc',
+              'header_popup_link',
+              styles.headerItem,
+              this.state.open && styles.headerItemPressed
+            )}
+            onClick={this.handleClickToggle}
+            variant="text"
+            color="white"
             size="small"
-            aria-label={i18n.moreAllCaps()}
-            ref={this.moreButtonRef}
+            aria-label={toggleLabel}
+            aria-pressed={this.state.open}
           >
             <FontAwesomeV6Icon
               iconName="down-from-dotted-line"
               aria-hidden="true"
             />
           </MuiIconButton>
-        )}
+        </Tooltip>
 
         {this.state.open && (
           <div>
-            <MuiIconButton
-              type="button"
-              className={`no-mc ${styles.headerItem}`}
-              onClick={() => this.handleClickClose(true)}
-              variant="outlined"
-              color="tertiary"
-              size="small"
-              aria-label={i18n.lessAllCaps()}
-              ref={this.lessButtonRef}
-            >
-              <FontAwesomeV6Icon
-                iconName="up-from-dotted-line"
-                aria-hidden="true"
-              />
-            </MuiIconButton>
-
             <div className="header_popup" ref="headerPopup">
               <div
                 className="header_popup_scrollable"
