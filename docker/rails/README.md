@@ -36,10 +36,11 @@ docker build -f docker/rails/Dockerfile \
   -t cdo-rails:test .
 ```
 
-The LFS step is not optional. `dashboard/config/locales/**` is git-LFS tracked
-and neither a plain clone nor `actions/checkout` fetches LFS objects, so
-without it the image bakes pointer files and Rails dies at boot on the first
-non-English locale. `.gitattributes` exempts `*en.yml` and `*en.json` from LFS,
+`dashboard/config/locales/**` is git-LFS tracked. A checkout made without the
+git-lfs hooks — `actions/checkout`, or a clone before `git lfs install` — holds
+pointer files instead of content, and the image bakes them: Rails dies at boot
+on the first non-English locale. On a development checkout with the hooks
+installed the pull is a no-op. `.gitattributes` exempts `*en.yml` and `*en.json` from LFS,
 so an English-only check will not catch it — the smoke test parses `ar-SA.yml`
 for exactly this reason. Locales are the only LFS-tracked path inside the
 slice, which is why the pull is by pattern rather than wholesale.

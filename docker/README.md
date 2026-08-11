@@ -4,6 +4,38 @@
 
 This directory contains Docker Compose files for running the code.org website locally for development and CI purposes.
 
+# Quick start
+
+Build the image family and boot the Rails API against local MySQL and Redis.
+All builds run from the repo root; `podman` works everywhere `docker` appears.
+
+```sh
+# Build the toolchain and dependency layers
+docker build -t cdo-build:local docker/build/
+docker build -f docker/deps/Dockerfile \
+  --build-arg BUILD_IMAGE=cdo-build:local \
+  -t cdo-deps:local .
+
+# Build the Rails image
+docker build -f docker/rails/Dockerfile \
+  --build-arg DEPS_IMAGE=cdo-deps:local \
+  -t cdo-rails:local .
+
+# Run
+export IMAGE=cdo-rails:local
+cd docker/rails
+docker compose up -d --wait mysql redis
+docker compose exec mysql mysql -uroot \
+  -e 'CREATE DATABASE dashboard_adhoc; CREATE DATABASE pegasus_adhoc;'
+docker compose run --rm --no-deps web bundle exec rails db:schema:load
+docker compose up -d --wait web
+docker compose port web 3000    # prints the host address serving the API
+```
+
+Each step is documented in [build/](build/README.md), [deps/](deps/README.md),
+and [rails/](rails/README.md). To check an image, run its `smoke-test.sh`; to
+exercise the full stack, run [rails/verify.sh](rails/README.md#test).
+
 # The image family
 
 A layered set of container images: one shared base, with each image stacked on
