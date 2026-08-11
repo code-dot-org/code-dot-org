@@ -14,11 +14,8 @@ on both docker and podman from the same Dockerfile.
 |---|---|---|---|
 | cdo-base | [base/](base/README.md) | Ruby on slim Debian, mysql client, ImageMagick, jemalloc, locales, the uid-1000 `cdo` user | `ghcr.io/code-dot-org/cdo-base` |
 | cdo-build | [build/](build/README.md) | the compile toolchain, Node, and uv; builds the dependency layer and is then discarded | not published |
-| cdo-deps | [deps/](deps/README.md) | the production gem bundle and the python venv, named by a content key over its inputs | `ghcr.io/code-dot-org/cdo-gems` |
-| cdo-rails | [dashboard/](dashboard/README.md) | the Rails source slice; runs as api or worker | `ghcr.io/code-dot-org/cdo-rails` |
-
-The dependency layer is published under the older `cdo-gems` package name; the
-directory, build args, and workflows all say `deps`.
+| cdo-deps | [deps/](deps/README.md) | the production gem bundle and the python venv, named by a content key over its inputs | `ghcr.io/code-dot-org/cdo-deps` |
+| cdo-rails | [rails/](rails/README.md) | the Rails source slice; runs as api or worker | `ghcr.io/code-dot-org/cdo-rails` |
 
 Each build takes its parent as a build argument, so a caller can pin the parent
 by digest. `cdo-deps` is resolved by content key rather than by tag — see

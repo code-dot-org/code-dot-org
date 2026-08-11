@@ -1,6 +1,4 @@
-# Builds cdo-deps (published, for now, under the legacy cdo-gems package and
-# bundle- key — renaming a published identity is its own change), smoke-tests
-# it on docker and podman, and publishes it from
+# Builds cdo-deps, smoke-tests it on docker and podman, and publishes it from
 # staging. This also gates docker/build, since every job here builds cdo-build
 # anyway: it is unpublished, so there is nothing to pull. amd64 only.
 # See docker/deps/README.md and docker/build/README.md.
@@ -48,9 +46,7 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
-  # The published identity keeps the legacy name until the package rename;
-  # everything that resolves it does so through the cdo-deps-key action.
-  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-gems
+  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-deps
 
 jobs:
   # Resolve the base once and give the same digest to every build. Resolved
@@ -225,7 +221,7 @@ jobs:
 
       # Not build-push-action with push: true — that publishes in the step that
       # builds, before the smoke suites can fail the job.
-      - name: Push cdo-deps (as the cdo-gems package)
+      - name: Push cdo-deps
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |

@@ -4,7 +4,7 @@
 # Context is the repo root, not this directory:
 #   docker build -f docker/rails/Dockerfile --build-arg DEPS_IMAGE=... .
 
-ARG DEPS_IMAGE=ghcr.io/code-dot-org/cdo-gems:latest
+ARG DEPS_IMAGE=ghcr.io/code-dot-org/cdo-deps:latest
 
 FROM ${DEPS_IMAGE}
 

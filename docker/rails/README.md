@@ -32,7 +32,7 @@ The build context is the repo root; the Dockerfile is selected with `-f`.
 ```
 git lfs pull --include='dashboard/config/locales/**'
 docker build -f docker/rails/Dockerfile \
-  --build-arg DEPS_IMAGE=ghcr.io/code-dot-org/cdo-gems:<bundle-key> \
+  --build-arg DEPS_IMAGE=cdo-deps:local \
   -t cdo-rails:test .
 ```
 
@@ -44,9 +44,12 @@ so an English-only check will not catch it — the smoke test parses `ar-SA.yml`
 for exactly this reason. Locales are the only LFS-tracked path inside the
 slice, which is why the pull is by pattern rather than wholesale.
 
-`DEPS_IMAGE` must name a `cdo-deps` build whose lockfile inputs match this
-checkout. Resolve it with the content key rather than guessing; see
-[docker/deps/README.md](../deps/README.md#the-content-key).
+`DEPS_IMAGE` names the dependency layer to build on. Building by hand, either
+build one (see [docker/deps/README.md](../deps/README.md#build)) or pull
+`ghcr.io/code-dot-org/cdo-deps:latest`. What matters is that its lockfile
+inputs match this checkout; a mismatch surfaces as an unresolvable bundle. CI
+picks the parent by digest instead, off a content key, and needs no tag —
+see [Published image](#published-image).
 
 Podman builds the same command line. The dual-engine constraints described in
 [docker/base/README.md](../base/README.md) apply here too.

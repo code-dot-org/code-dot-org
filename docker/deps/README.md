@@ -122,7 +122,7 @@ than recomputing the list:
 ```yaml
 - id: key
   uses: ./.github/actions/cdo-deps-key
-- run: docker pull ghcr.io/code-dot-org/cdo-gems:${{ steps.key.outputs.key }}
+- run: docker pull ghcr.io/code-dot-org/cdo-deps:${{ steps.key.outputs.key }}
 ```
 
 The action fails, naming the file, if any input is missing from the checkout —
@@ -134,12 +134,17 @@ image. That is the intended failure: the layer is published on the staging
 push that changes a lockfile, so a consumer branch must be rebased onto that
 push rather than silently landing on stale bytes.
 
+To see which key a checkout implies — normally only when working out why a
+keyed tag did not resolve — reproduce it in a shell:
+
+```
+cat .ruby-version Gemfile Gemfile.lock .python-version pyproject.toml \
+  uv.lock docker/build/Dockerfile docker/deps/Dockerfile | sha256sum
+```
+
 ## Published image
 
-Published as `ghcr.io/code-dot-org/cdo-gems`. The package name predates the
-rename of this directory and its image to `cdo-deps`; everything internal (the
-build arg, the workflow, the key action) says `deps`, and the registry path
-says `gems`.
+Published as `ghcr.io/code-dot-org/cdo-deps`.
 
 | tag | published from | meaning |
 |---|---|---|

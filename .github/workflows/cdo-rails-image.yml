@@ -17,7 +17,7 @@ on:
       - 'docker/rails/**'
       - '.github/actions/cdo-deps-key/**'
       - '.github/workflows/cdo-rails-image.yml'
-  # Chained off cdo-deps rather than scheduled, so the dashboard layer
+  # Chained off cdo-deps rather than scheduled, so the source layer
   # rebuilds on the dependency layer that just shipped, a failed deps publish
   # rebuilds nothing, and the weekly cadence is inherited from cdo-base's
   # cron through the chain rather than restated as a timer here.
@@ -78,7 +78,7 @@ jobs:
       - name: Resolve the keyed dependency layer to a digest
         id: deps
         env:
-          REF: ghcr.io/code-dot-org/cdo-gems:${{ steps.key.outputs.key }}
+          REF: ghcr.io/code-dot-org/cdo-deps:${{ steps.key.outputs.key }}
         run: |
           set -euxo pipefail
           digest="$(docker buildx imagetools inspect "$REF" \
@@ -101,7 +101,7 @@ jobs:
       contents: read
       packages: read
     env:
-      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-gems@${{ needs.resolve-deps.outputs.digest }}
+      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-deps@${{ needs.resolve-deps.outputs.digest }}
     steps:
       # The full tree: this image bakes the source slice.
       - name: Checkout
@@ -146,7 +146,7 @@ jobs:
       contents: read
       packages: read
     env:
-      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-gems@${{ needs.resolve-deps.outputs.digest }}
+      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-deps@${{ needs.resolve-deps.outputs.digest }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -192,7 +192,7 @@ jobs:
       contents: read
       packages: write
     env:
-      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-gems@${{ needs.resolve-deps.outputs.digest }}
+      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-deps@${{ needs.resolve-deps.outputs.digest }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
