@@ -218,6 +218,108 @@ describe('the scenario catalogue', () => {
     expect(named('breakout-single')).toEqual(named('breakout'));
   });
 
+  it('gives meteors the rules that make it a different game', () => {
+    // The point of a third scenario: it is the one that exercises Arrow Drive,
+    // Screen Wrap, Shooting and Expiry, none of which breakout uses. A rule it
+    // names but does not hold is a `use rule` that silently resolves to
+    // something else.
+    const files = Object.values(WORLD_SCENARIOS.meteors.source.files);
+    const named = (name: string) => files.some(file => file.name === name);
+
+    for (const rule of [
+      'drive.rule',
+      'wrap.rule',
+      'shoots.rule',
+      'expires.rule',
+      'collisions.rule',
+      'input.rule',
+      'motion.rule',
+    ]) {
+      expect(named(rule)).toBe(true);
+    }
+    for (const actor of ['ship.actor', 'shot.actor', 'meteor.actor']) {
+      expect(named(actor)).toBe(true);
+    }
+  });
+
+  it('asks to fire in one place and says what a shot is in another', () => {
+    // The Shooting rule's whole design: pressing a key ASKS and the cooldown
+    // answers, so a held key is not a wall of bullets. Spawning the bullet
+    // straight from the key press would be a gun with no rate limit — it would
+    // look identical until someone held the key down.
+    const ship = Object.values(WORLD_SCENARIOS.meteors.source.files).find(
+      file => file.name === 'ship.actor',
+    )!.contents;
+
+    expect(ship).toContain('world_do_Shooting_MakeFireAction');
+    expect(ship).toContain('world_on_Shooting_FiresEvent');
+    // And the shot is spawned NAMED, because inside `add actor` the words
+    // `this actor` mean the new one — a bullet put where the ship is cannot be
+    // written otherwise without silently reading the bullet's own position.
+    expect(ship).toContain('"NAMED":"named"');
+    expect(ship).toContain('world_vector_rotate');
+  });
+
+  it('takes its shots away again', () => {
+    // The other half of spawning. Without Expiry a game slowly fills with
+    // bullets and grinds down, which presents as "it gets slower the longer
+    // you play" and is very hard to see in a short demo.
+    const shot = Object.values(WORLD_SCENARIOS.meteors.source.files).find(
+      file => file.name === 'shot.actor',
+    )!.contents;
+
+    expect(shot).toContain('Expiry#ExpiresTrait');
+    expect(shot).toContain('world_set_Expiry_LifetimeProperty');
+  });
+
+  it('says the single-world meteors without leaving main.world', () => {
+    const files = Object.values(WORLD_SCENARIOS['meteors-single'].source.files);
+    const worlds = files.filter(file => file.name.endsWith('.world'));
+
+    expect(worlds).toHaveLength(1);
+    expect(files.some(file => file.name.endsWith('.actor'))).toBe(false);
+
+    const main = worlds[0].contents;
+    // Including the handler that SPAWNS, which is what makes this pair worth
+    // having on top of the breakout one: a hat on `any ⟨Ship⟩` that adds a
+    // world-local actor and names it, because inside `add actor` the words
+    // `this actor` mean the new one.
+    expect(main).toContain('world_on_Shooting_FiresEvent');
+    expect(main).toContain('"NAMED":"named"');
+    expect(main).toContain('world_create_in_map');
+  });
+
+  it('writes each rock a heading, since an arrangement cannot roll one', () => {
+    // The honest cost of the shape, and the one real difference between the two
+    // tellings. `create in map` is DATA — positions and per-instance property
+    // overrides — so a heading is written down; the file version places each
+    // rock with `add actor` and a body, which is somewhere code can run, and
+    // rolls one instead.
+    const main = Object.values(
+      WORLD_SCENARIOS['meteors-single'].source.files,
+    ).find(file => file.name === 'main.world')!.contents;
+    const rolled = Object.values(WORLD_SCENARIOS.meteors.source.files).find(
+      file => file.name === 'main.world',
+    )!.contents;
+
+    // The trait and property ids Physics declares, which is how an override
+    // names what it is overriding.
+    expect(main).toContain('Can_Move');
+    expect(main).toContain('velocity');
+    expect(main).not.toContain('math_random_int');
+    expect(rolled).toContain('math_random_int');
+  });
+
+  it('is the same game as the other meteors', () => {
+    const named = (tag: 'meteors' | 'meteors-single') =>
+      Object.values(WORLD_SCENARIOS[tag].source.files)
+        .map(file => file.name)
+        .filter(name => name.endsWith('.rule') || name.endsWith('.png'))
+        .sort();
+
+    expect(named('meteors-single')).toEqual(named('meteors'));
+  });
+
   it('writes the level properties once, for all of them', () => {
     // Only the instructions differ. A scenario that had to restate
     // `usesProjects` would be a second place for it to be wrong.
