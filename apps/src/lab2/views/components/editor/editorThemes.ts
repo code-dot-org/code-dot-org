@@ -38,6 +38,45 @@ export const lab2EditorBackgroundTheme = EditorView.theme({
 });
 
 /**
+ * Lab 2 only: recolors @codemirror/merge's diff highlighting (used by both
+ * CodeEditor's split MergeView and codebridge's unifiedMergeView) with
+ * semantic tokens instead of its hardcoded GitHub-ish defaults, so diff
+ * colors track light/dark mode. Selectors mirror @codemirror/merge's own
+ * baseTheme (see node_modules/@codemirror/merge/dist/index.js) class-for-
+ * class; a plain EditorView.theme() (default precedence) reliably overrides
+ * its EditorView.baseTheme() rules (Prec.lowest) for the same selectors.
+ */
+export const diffTheme = EditorView.theme({
+  '&.cm-merge-a .cm-changedLine, .cm-deletedChunk': {
+    backgroundColor: 'var(--background-error-light)',
+  },
+  '&.cm-merge-b .cm-changedLine, .cm-inlineChangedLine': {
+    backgroundColor: 'var(--background-success-light)',
+  },
+  '&.cm-merge-a .cm-changedLineGutter, .cm-deletedLineGutter': {
+    backgroundColor: 'var(--border-error-primary)',
+  },
+  '&.cm-merge-b .cm-changedLineGutter, .cm-inlineChangedLineGutter': {
+    backgroundColor: 'var(--border-success-primary)',
+  },
+  '&.cm-merge-a .cm-changedText, .cm-deletedChunk .cm-deletedText': {
+    background:
+      'linear-gradient(var(--border-error-primary), var(--border-error-primary)) bottom/100% 2px no-repeat',
+  },
+  '&.cm-merge-b .cm-changedText': {
+    background:
+      'linear-gradient(var(--border-success-primary), var(--border-success-primary)) bottom/100% 2px no-repeat',
+  },
+  '&.cm-merge-b .cm-deletedText': {
+    backgroundColor: 'var(--background-error-light)',
+  },
+  '.cm-collapsedLines': {
+    background:
+      'linear-gradient(to bottom, transparent 0, var(--background-neutral-secondary) 30%, var(--background-neutral-secondary) 70%, transparent 100%)',
+  },
+});
+
+/**
 The editor theme styles for dark mode.
 */
 export const darkTheme = EditorView.theme(
