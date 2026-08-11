@@ -1,19 +1,14 @@
 require 'test_helper'
 
-# application.js is a frozen legacy bundle. No minifier runs in the asset
-# pipeline (uglifier/execjs/mini_racer were removed in PR #74525), so it is
-# assembled from pre-minified sources plus a few small unminified glue files.
-# The bundle is frozen: changes are limited to security updates of what is
-# already in it, and new frontend code belongs in apps/ or frontend/. The
-# size cap catches accidental growth at PR time; the digest pins the
-# vendored jquery-ui build to the official upstream artifact.
+# application.js is a frozen legacy bundle: no minifier runs in the asset
+# pipeline, so it ships pre-minified sources plus small unminified glue.
+# Changes are limited to security updates; new frontend code belongs in
+# apps/ or frontend/.
 class ApplicationJsBundleTest < ActiveSupport::TestCase
-  # Compiled size is ~494KB today; headroom covers patch-level drift in the
-  # pinned gems, not new dependencies.
+  # ~494KB today; headroom is for patch-level gem drift, not new dependencies.
   MAX_COMPILED_BYTES = 510_000
 
-  # sha256 of https://code.jquery.com/ui/1.12.1/jquery-ui.min.js (official
-  # jQuery UI 1.12.1 full build, verbatim).
+  # sha256 of https://code.jquery.com/ui/1.12.1/jquery-ui.min.js, verbatim.
   JQUERY_UI_SHA256 = '55accff7b642c2d7a402cbe03c1494c0f14a76bc03dee9d47d219562b6a152a5'.freeze
 
   def test_bundle_does_not_grow
