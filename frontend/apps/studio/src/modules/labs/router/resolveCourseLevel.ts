@@ -20,6 +20,7 @@ export interface ResolvedCourseLevel {
   position: number;
   totalLevels: number;
   scriptName: string;
+  scriptTitle: string;
   finishLink?: string;
   properties: LevelPropertiesBase;
   levels: LevelEntry[];
@@ -66,6 +67,7 @@ export function resolveCourseLevel(
     position: levelPosition,
     totalLevels: lesson.levels.length,
     scriptName: lesson.script_name,
+    scriptTitle: (structure as {title?: string}).title ?? structure.name,
     finishLink: lesson.finishLink,
     properties,
     levels,

@@ -44,12 +44,12 @@ class HtmlParsingTest < Minitest::Test
     get '/'
     # Note: this assertion should not imply that this particular behavior is desired,
     # only that the behavior is identical over HTTP and HTTPS.
-    assert_match(/\<body\>/, last_response.body)
+    assert_match(/<body>/, last_response.body)
     assert_match(/src="http:\/\/google.com"/, last_response.body)
 
     header 'X-Forwarded-Proto', 'https'
     get '/'
-    assert_match(/\<body\>/, last_response.body)
+    assert_match(/<body>/, last_response.body)
     assert_match(/src="\/\/google.com"/, last_response.body)
   end
 end
