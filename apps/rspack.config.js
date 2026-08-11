@@ -134,10 +134,11 @@ class UnminifiedCopiesPlugin {
             if (!this.chunkNames.has(chunk.name)) {
               continue;
             }
-            for (const file of chunk.files) {
-              if (!file.endsWith('.js')) {
-                continue;
-              }
+            // One copy per chunk: emitAsset throws on a name it has
+            // already seen, so take the first .js file and stop rather
+            // than failing the build if a chunk ever has two.
+            const file = [...chunk.files].find(f => f.endsWith('.js'));
+            if (file) {
               compilation.emitAsset(
                 `${chunk.name}.js`,
                 compilation.getAsset(file).source
@@ -645,10 +646,12 @@ function createRspackConfig({
             new rspack.EvalSourceMapDevToolPlugin({
               module: true,
               columns: false,
-              // Names end at a `/` (directory) or `.` (single module,
-              // e.g. code-studio/header matching header.js).
+              // Built from the same per-name patterns the match report
+              // uses, so the two cannot disagree about which modules a
+              // name covers — and so a name containing regex syntax is
+              // escaped here too rather than corrupting the alternation.
               test: new RegExp(
-                `src[\\\\/](?:${devtoolScope.join('|')})[\\\\/.]`
+                devtoolScope.map(n => scopeRegexFor(n).source).join('|')
               ),
             }),
             // Report which scope names actually matched modules, once

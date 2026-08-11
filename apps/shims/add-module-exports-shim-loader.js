@@ -22,8 +22,17 @@
 
 const fs = require('fs');
 
-const MARKER =
-  /Object\.defineProperty\(exports,\s*["']__esModule["'],\s*\{\s*value:\s*true,?\s*\}\s*\);?/;
+// builtin swc hoists a file's leading comments BETWEEN the arguments of
+// the first statement it emits, which is usually this marker, so every
+// gap in the pattern has to tolerate a comment as well as whitespace.
+// Matching only whitespace leaves the marker in place, which then reads
+// as an export declaration below: a default-only module keeps its
+// marker, never gets the footer, and `require()` returns the namespace
+// object instead of the default — a silent undefined at the call site.
+const GAP = String.raw`(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\n]*\n)*`;
+const MARKER = new RegExp(
+  String.raw`Object\.defineProperty\(exports,${GAP}["']__esModule["'],${GAP}\{${GAP}value:${GAP}true,?${GAP}\}${GAP}\);?`
+);
 // swc declares exports through its _export helper when there are
 // several, through a bare defineProperty for a single one, and through
 // _export_star for `export * from` re-exports (whose defineProperty

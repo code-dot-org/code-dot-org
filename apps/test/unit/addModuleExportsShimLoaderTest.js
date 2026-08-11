@@ -56,6 +56,26 @@ Object.defineProperty(exports, /** hoisted
     assert.isUndefined(exported.__esModule);
   });
 
+  it('unwraps a default-only module whose marker holds a hoisted comment', function () {
+    // builtin swc hoists a file's leading comments between the
+    // arguments of the first statement it emits — usually the
+    // __esModule marker itself.  A whitespace-only gap in the marker
+    // pattern leaves the statement in place, which then reads as an
+    // export declaration: no footer, and require() hands back the
+    // namespace object, so callers see undefined instead of the export.
+    const exported = runShimmed(`
+Object.defineProperty(exports, /** @file leading comment blob
+ * spanning lines
+ */ "__esModule", { value: true });
+var _default = { create: function () { return 'made'; } };
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function () { return _default; },
+});`);
+    assert.equal(exported.create(), 'made');
+    assert.isUndefined(exported.__esModule);
+  });
+
   it('strips the marker from import-only modules with manual exports', function () {
     // Mixed legacy style: `import` (which makes swc stamp __esModule)
     // plus bare `exports.foo =` assignments and no ESM exports.

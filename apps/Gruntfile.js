@@ -384,10 +384,23 @@ module.exports = function (grunt) {
   // Always set explicitly — every documented entry point reaches here
   // with NODE_OPTIONS already in the environment (the yarn `grunt`
   // script sets 4096MB), and that value is sized for grunt itself, not
-  // for a full rspack build.
-  const rspackNodeOptions = `NODE_OPTIONS="--max-old-space-size=${
-    process.env.APPS_BUILD_MAX_MEMORY || 8192
-  }" `;
+  // for a full rspack build.  Appending rather than replacing keeps any
+  // other flags the caller passed (--inspect, say); node takes the last
+  // --max-old-space-size, so ours is the one that applies.
+  const buildMaxMemory = /^\d+$/.test(process.env.APPS_BUILD_MAX_MEMORY || '')
+    ? process.env.APPS_BUILD_MAX_MEMORY
+    : 8192;
+  if (
+    process.env.APPS_BUILD_MAX_MEMORY &&
+    !/^\d+$/.test(process.env.APPS_BUILD_MAX_MEMORY)
+  ) {
+    grunt.log.warn(
+      `APPS_BUILD_MAX_MEMORY=${process.env.APPS_BUILD_MAX_MEMORY} is not a number of megabytes; using ${buildMaxMemory}.`
+    );
+  }
+  const rspackNodeOptions = `NODE_OPTIONS="${
+    process.env.NODE_OPTIONS ? process.env.NODE_OPTIONS + ' ' : ''
+  }--max-old-space-size=${buildMaxMemory}" `;
 
   // The rspack build runs in a child process, so grunt options the
   // webpack path consumes in-process must cross as environment
@@ -701,17 +714,23 @@ module.exports = function (grunt) {
   // The two bundlers share build/package/js.  Leftovers from the other
   // one are never *referenced* (each build rewrites everything a page
   // loads), but they accumulate gigabytes over weeks — so a marker file
-  // records who wrote the directory, and switching cleans it.  rspack
-  // additionally cleans on every start, switch or not: its writeToDisk
-  // step compares against every existing file, and starting over a
-  // populated directory costs ~18s versus rebuilding into an empty one.
+  // records who wrote the directory, and switching cleans it.  Under
+  // `serve`, rspack additionally cleans every start, switch or not: its
+  // writeToDisk step compares against every existing file, and starting
+  // over a populated directory costs ~18s.  A one-shot build pays no
+  // such penalty and keeps its predecessor's output.
+  //
+  // The marker lives beside the packaged directory rather than inside
+  // it: deployment tars build/package wholesale, excluding only
+  // *.cache.json, so a marker under js/ would ship to the servers.
+  //
   // Runs before prebuild, so the static assets prebuild copies into
   // build/package/js (ace, piskel, p5play, the pyodide wheels) are put
   // back after the clean rather than wiped by it — grunt-newer recopies
   // them because their destinations are gone.
-  const prepareBundlerOutputDir = () => {
+  const prepareBundlerOutputDir = ({serve = false} = {}) => {
     const dir = path.resolve(__dirname, 'build/package/js');
-    const marker = path.join(dir, '.bundler');
+    const marker = path.resolve(__dirname, 'build/.bundler');
     // Output that predates the marker is grandfathered as webpack's:
     // that is what it was in practice, and it keeps rollout quiet for
     // developers who never opt into rspack.
@@ -725,11 +744,11 @@ module.exports = function (grunt) {
         `[build] switching ${prev} -> ${APPS_BUNDLER}: cleaning build/package/js of the previous output`
       );
       fs.rmSync(dir, {recursive: true, force: true});
-    } else if (APPS_BUNDLER === 'rspack' && prev) {
-      // A populated directory slows rspack startup by ~18s.
+    } else if (serve && APPS_BUNDLER === 'rspack' && prev) {
       fs.rmSync(dir, {recursive: true, force: true});
     }
     fs.mkdirSync(dir, {recursive: true});
+    fs.mkdirSync(path.dirname(marker), {recursive: true});
     fs.writeFileSync(marker, APPS_BUNDLER + '\n');
   };
 
@@ -762,7 +781,7 @@ module.exports = function (grunt) {
     process.env.HOT ||= 1;
     process.env.DEV ||= 1;
     rspackNotice();
-    prepareBundlerOutputDir();
+    prepareBundlerOutputDir({serve: true});
     grunt.task.run([
       'prebuild',
       'newer:sass',
