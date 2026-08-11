@@ -26,15 +26,30 @@ const coerce = <T>(property: Property<T>, value: unknown): T => {
   if (property.type === 'vector' || property.type === 'point') {
     return Vector.from(value as Vector) as unknown as T;
   }
-  if (property.type === 'actors') {
+  if (property.type === 'actors' || property.type === 'actor') {
+    // An Actor without importing one: a circular import for a type guard would
+    // be a poor trade, and nothing else in the engine has `traits`.
+    const isActor = (candidate: unknown): boolean =>
+      typeof candidate === 'object' &&
+      candidate !== null &&
+      'traits' in candidate;
+    // ONE actor keeps the first of whatever it is handed and drops the rest —
+    // `set actor to follow to ⟨any Player⟩` is a reasonable thing to write in a
+    // game with one player, and taking one of them is the reasonable answer.
+    //
+    // Still stored as a LIST. The two types are the same value and differ only
+    // in the blocks generated around them (domainBlocks): a bare Actor here
+    // would mean `WorldLab.all` seeing `undefined` for an empty one and handing
+    // back `[undefined]` — one actor that is not an actor, which reads as a
+    // camera that has a target when it has none.
+    if (property.type === 'actor') {
+      const one = Array.isArray(value) ? value[0] : value;
+      return (isActor(one) ? [one] : []) as unknown as T;
+    }
     if (Array.isArray(value)) {
       return [...value] as unknown as T;
     }
-    // An Actor without importing one: a circular import for a type guard would
-    // be a poor trade, and nothing else in the engine has `traits`.
-    const isActor =
-      typeof value === 'object' && value !== null && 'traits' in value;
-    return (isActor ? [value] : []) as unknown as T;
+    return (isActor(value) ? [value] : []) as unknown as T;
   }
   return value as T;
 };

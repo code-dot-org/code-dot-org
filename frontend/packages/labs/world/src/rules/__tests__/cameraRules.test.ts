@@ -561,3 +561,33 @@ describe('the subject socket a camera member offers', () => {
     );
   });
 });
+
+describe('what a camera follows is ONE actor', () => {
+  const types = () => buildDomainPalette([follow()]).blocks.map(b => b.type);
+
+  it('says so in the property type', () => {
+    // It was `actors`, because a list was the only actor-shaped property there
+    // was. Nothing about how it is HELD changed — still a list, still read
+    // through `WorldLab.one`, because `set actor to follow to ⟨any Player⟩` is
+    // a reasonable thing to write and has to do something reasonable.
+    const target = follow().properties.find(
+      property => property.name === 'actor to follow',
+    );
+
+    expect(target?.type).toBe('actor');
+  });
+
+  it('gets no list blocks, which is the whole point of saying so', () => {
+    // `add ⟨…⟩ to actor to follow` would be a block that works, does something,
+    // and means nothing: a second actor to follow that nothing ever reads.
+    // Collection's `collected` IS a list and gets both (collectRule.test).
+    expect(types()).toContain('world_set_CameraFollow_ActorToFollowProperty');
+    expect(types()).toContain('world_get_CameraFollow_ActorToFollowProperty');
+    expect(types()).not.toContain(
+      'world_push_CameraFollow_ActorToFollowProperty',
+    );
+    expect(types()).not.toContain(
+      'world_drop_CameraFollow_ActorToFollowProperty',
+    );
+  });
+});

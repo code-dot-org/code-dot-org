@@ -7,6 +7,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {buildDomainPalette} from '../../blockly/domainBlocks';
 import {parseRuleMeta} from '../../blockly/ruleMeta';
 import {STOCK_RULES} from '../stock';
 import {collectRule} from '../stock/collect';
@@ -97,6 +98,33 @@ describe('rules/collect.rule', () => {
     expect(removeAt).toBeGreaterThan(-1);
     expect(collectsAt).toBeGreaterThan(-1);
     expect(collectsAt).toBeLessThan(removeAt);
+  });
+
+  it('offers add and remove for the list it keeps', () => {
+    // What the `actors` type buys over `actor`. Before these existed the step
+    // read the whole list out, appended, and wrote it back every frame; a
+    // camera's `actor to follow` is `actor` and gets neither, because a second
+    // actor to follow is a block that works and means nothing.
+    const types = buildDomainPalette([meta], {
+      ownRuleModule: 'rules/collect',
+    }).blocks.map(block => block.type);
+
+    expect(types).toContain('world_push_Collection_CollectedProperty');
+    expect(types).toContain('world_drop_Collection_CollectedProperty');
+    // `taken` is a boolean and gets no list blocks at all.
+    expect(types).not.toContain('world_push_Collection_TakenProperty');
+  });
+
+  it('keeps them out of the hands of everyone but its own rule', () => {
+    // A push is a write, and `collected` is read-only — which means the rule
+    // that declares it owns the value. A `.world` that could add to somebody's
+    // inventory would make the rule's own account of it a guess.
+    const types = buildDomainPalette([meta]).blocks.map(block => block.type);
+
+    expect(types).not.toContain('world_push_Collection_CollectedProperty');
+    expect(types).not.toContain('world_drop_Collection_CollectedProperty');
+    // The read stays, everywhere: asking is not changing.
+    expect(types).toContain('world_get_Collection_CollectedProperty');
   });
 
   it('is offered beside the rule it is built on', () => {

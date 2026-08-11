@@ -78,6 +78,7 @@ function describeActor(
           // are what a rule works out at runtime (specs/COLLISION.md), and
           // there is no field that would edit one.
           property.type !== 'actors' &&
+          property.type !== 'actor' &&
           !DEFERRED_PROPS.has(`${property.ownerId}.${property.id}`),
       )
       .map(property => {

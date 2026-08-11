@@ -8,6 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {cameraFollowRule} from '../../rules/stock';
 import {buildDomainPalette, DOMAIN_BLOCKS} from '../domainBlocks';
 import {parseRuleMeta} from '../ruleMeta';
 
@@ -114,6 +115,30 @@ describe('a statement over an actor value', () => {
     expect(one).toBe('world.removeActor(actor);\n');
     expect(every).toContain('WorldLab.each(');
     expect(every).toContain('world.removeActor(actor)');
+  });
+});
+
+describe('a property that says ONE actor', () => {
+  // Saying one is not the same as being handed one. `set actor to follow of
+  // ⟨camera⟩ to ⟨any Player⟩` is a reasonable thing to write in a game with one
+  // player, and nothing stops it in a game with three. The store narrows it
+  // (Traited), and this is what covers the paths that do not go through the
+  // store — which is why an `actor` property is still registered as a value
+  // that could hold several, exactly like an `actors` one.
+  const FOLLOWS = 'world_get_CameraFollow_ActorToFollowProperty';
+
+  it('is still read through `one`', () => {
+    // Building the palette is what registers the block; the registry is by
+    // type, so anything plugging it into an actor socket sees the same answer.
+    buildDomainPalette([
+      parseRuleMeta('rules/cameraFollow', cameraFollowRule)!,
+    ]);
+
+    const code = emit('world_is_a', {TYPE: 'actors/player'}, FOLLOWS, {
+      ACTOR: 'target',
+    })[0] as unknown as string;
+
+    expect(code).toContain('WorldLab.one(target).type');
   });
 });
 

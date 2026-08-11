@@ -1,7 +1,6 @@
 import {CanCollide, contacts} from './collisions.mjs';
 import {
   both,
-  clearActors,
   defineRule,
   forEach,
   hasTrait,
@@ -9,7 +8,6 @@ import {
   not,
   note,
   param,
-  pushActor,
   removeActor,
   thisActor,
   yes,
@@ -50,10 +48,11 @@ const rule = defineRule({
 // that have left the world, which is what an inventory IS: a record of what was
 // picked up, not of what is still standing there.
 //
-// The cost of that shape is here in the open: the list is copied out and
-// written back each frame, because a property list is set whole and there is no
-// "add to it in place". That is the size of an inventory per collector per
-// frame — small, and the same order as the contact walk above it.`,
+// \`collected\` is an ACTORS property and so has \`add … to\` and \`remove …
+// from\` generated for it, which is what this step uses. It was written before
+// those existed and had to read the list out, append, and write the whole thing
+// back every frame — an inventory-sized copy per collector per frame to say
+// "and this one too".`,
 });
 rule.uses('Collisions');
 
@@ -95,17 +94,8 @@ export const isCollected = collectible.event([
 ]);
 
 const item = rule.local('item', 'Actor');
-const had = rule.local('had', 'Actor');
-const bag = rule.local('bag', 'Actor');
 
 collects.step('pick things up', 'react', [
-  note('What this actor is already carrying, copied so it can be added to.'),
-  clearActors(bag),
-  forEach(had, {
-    from: collected.of(thisActor()),
-    where: yes(),
-    body: [pushActor(bag, had.get())],
-  }),
   note('Anything it is touching that can be taken and has not been.'),
   forEach(item, {
     from: contacts.of(thisActor()),
@@ -116,7 +106,7 @@ collects.step('pick things up', 'react', [
     body: [
       note('Claim it first: nobody else may take this one now.'),
       taken.set(item.get(), yes()),
-      pushActor(bag, item.get()),
+      collected.push(thisActor(), item.get()),
       note('The thing taken is told first, while it is still in the world.'),
       isCollected({collector: thisActor()}, item.get()),
       collectsItem({item: item.get()}, thisActor()),
@@ -124,7 +114,6 @@ collects.step('pick things up', 'react', [
       removeActor(item.get()),
     ],
   }),
-  collected.set(thisActor(), bag.get()),
 ]);
 
 export default () => moduleFor(rule, 'collect');

@@ -37,7 +37,17 @@ rule.uses('Camera');
 
 const follows = rule.trait('Follows', 'camera');
 follows.uses(Aimed);
-const target = follows.actors('actor to follow');
+/**
+ * ONE actor, and the type says so.
+ *
+ * It was `actors`, because a list was the only actor-shaped property there was.
+ * Saying `actor` changes nothing about how it is held — still a list, still
+ * read through `WorldLab.one`, since `set actor to follow to ⟨any Player⟩` is a
+ * reasonable thing to write and has to do something reasonable. What it changes
+ * is that `add ⟨…⟩ to actor to follow` is no longer generated: a block that
+ * works, does something, and means nothing.
+ */
+const target = follows.actor('actor to follow');
 /** Where to look RELATIVE to the actor: up the level is negative y. */
 const look = follows.point('look offset', {x: 0, y: 0});
 

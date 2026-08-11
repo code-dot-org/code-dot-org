@@ -350,6 +350,24 @@ function property(ruleName, traitId, {name, type, value: initial, readonly}) {
   };
   self.x = who => self.axis('x', who);
   self.y = who => self.axis('y', who);
+  if (type === 'actors') {
+    /** `add <actor> to <name> of <subject>` — only a LIST has these. */
+    self.push = (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return {
+        type: `world_push_${key}`,
+        inputs: {...subject(who), ITEM: value(args[0])},
+      };
+    };
+    /** `remove <actor> from <name> of <subject>`. */
+    self.drop = (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return {
+        type: `world_drop_${key}`,
+        inputs: {...subject(who), ITEM: value(args[0])},
+      };
+    };
+  }
   return self;
 }
 
@@ -618,6 +636,14 @@ export function defineRule({name, ability, header}) {
           }),
         actors: (propName, opts) =>
           self.property({name: propName, type: 'actors', value: '', ...opts}),
+        /**
+         * ONE actor, not a list — a camera's actor to follow. The difference
+         * is what gets generated around it: a list also has `add`/`remove`,
+         * and offering those for one actor would let a learner name a second
+         * that nothing reads.
+         */
+        actor: (propName, opts) =>
+          self.property({name: propName, type: 'actor', value: '', ...opts}),
         /** Runs once a frame for each subject that has this trait. */
         /** A block this trait adds, asked OF whatever elected it. */
         block: spec => declareBlock(ruleSlug, members, variables, spec, true),
