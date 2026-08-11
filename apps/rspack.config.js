@@ -68,16 +68,29 @@ const IS_SERVE = process.argv.includes('serve');
 
 // RSPACK_SWC selects the transpiler chain: 'all' (the grunt default)
 // replaces both babel-loader and ts-loader with builtin swc, 'ts'
-// replaces only ts-loader, and off-values fall back to the full
+// replaces only ts-loader, and the off-values fall back to the full
 // babel-loader + ts-loader chain — the comparison run rspackNotice
-// invites when bisecting a suspected transpile difference.  Off-values
-// are normalized here because the two reads below would otherwise
-// disagree (a bare truthy check would take RSPACK_SWC=0 as swc-for-TS).
-const RSPACK_SWC = ['0', 'false', 'off', 'none', 'babel'].includes(
-  process.env.RSPACK_SWC
-)
-  ? ''
-  : process.env.RSPACK_SWC;
+// invites when bisecting a suspected transpile difference.  The value is
+// normalized to one of those three before use: the two reads below
+// would otherwise disagree about anything else, giving babel for JS and
+// swc for TS, an unadvertised hybrid in exactly the setting a parity
+// bisect is trying to control.
+const SWC_MODES = {all: 'all', 1: 'all', ts: 'ts'};
+const SWC_OFF = ['0', 'false', 'off', 'none', 'babel', ''];
+const rawSwc = process.env.RSPACK_SWC;
+let RSPACK_SWC = 'all';
+if (rawSwc !== undefined) {
+  if (SWC_OFF.includes(rawSwc)) {
+    RSPACK_SWC = '';
+  } else if (SWC_MODES[rawSwc]) {
+    RSPACK_SWC = SWC_MODES[rawSwc];
+  } else {
+    console.warn(
+      `[rspack] RSPACK_SWC=${rawSwc} is not one of all, ts, or an off-value ` +
+        `(${SWC_OFF.filter(Boolean).join(', ')}); using all.`
+    );
+  }
+}
 
 // RSPACK-DIFF: rspack resolves css-loader's `new URL(...)` output for
 // server-relative urls (e.g. url(/fonts/...)) as modules, where
@@ -135,14 +148,14 @@ class UnminifiedCopiesPlugin {
               continue;
             }
             // One copy per chunk: emitAsset throws on a name it has
-            // already seen, so take the first .js file and stop rather
-            // than failing the build if a chunk ever has two.
+            // already seen, so take the first .js file rather than
+            // failing the build if a chunk ever has two.  chunk.files
+            // can also name an asset an earlier processAssets hook
+            // removed, so the lookup is checked before it is read.
             const file = [...chunk.files].find(f => f.endsWith('.js'));
-            if (file) {
-              compilation.emitAsset(
-                `${chunk.name}.js`,
-                compilation.getAsset(file).source
-              );
+            const asset = file && compilation.getAsset(file);
+            if (asset) {
+              compilation.emitAsset(`${chunk.name}.js`, asset.source);
             }
           }
         }
@@ -186,12 +199,16 @@ function createRspackConfig({
   // An empty array is truthy; a value of only separators must fall back
   // to the normal devtool instead of silently disabling source maps.
   const devtoolScope = scopeNames.length ? scopeNames : null;
-  // Names are held unescaped so the match report can print them as the
-  // developer typed them; escaping happens here, at the one use.
+  // Names stay unescaped in the report so it prints them as the
+  // developer typed them; the pattern for each is compiled once here and
+  // shared by the plugin and the report, which both need every name.
   const scopeRegexFor = name =>
     new RegExp(
       `src[\\\\/]${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\\\/.]`
     );
+  const scopeRegexes = devtoolScope
+    ? devtoolScope.map(name => [name, scopeRegexFor(name)])
+    : [];
   // RSPACK-DIFF: the dev default is eval — no source maps — where
   // webpack defaults to eval-cheap-module-source-map.  rspack's
   // whole-app -module map modes exceed 22GB at our module count, which
@@ -361,7 +378,7 @@ function createRspackConfig({
         // add-module-exports shim loader, sourceType-unambiguous module
         // detection (isModule 'unknown'), and loose classes without
         // loose spread (jsc.assumptions).
-        ...(RSPACK_SWC === 'all' || RSPACK_SWC === '1'
+        ...(RSPACK_SWC === 'all'
           ? [
               // The blockly fork cannot take loose class semantics: its
               // accessor setters use `super`, which loose lowering turns
@@ -374,19 +391,31 @@ function createRspackConfig({
                 test: /\.jsx?$/,
                 enforce: 'pre',
                 include: [p('node_modules/blockly')],
-                loader: 'builtin:swc-loader',
-                options: {
-                  isModule: 'unknown',
-                  jsc: {
-                    parser: {syntax: 'ecmascript', jsx: true},
-                    target: 'es5',
+                use: [
+                  // babel applies add-module-exports to blockly too — its
+                  // override there changes only class looseness — so the
+                  // shim runs here as well, or the two bundlers would
+                  // disagree the moment a blockly file arrives with ESM
+                  // syntax.  Today they do not: the package resolves to
+                  // script-classified *_compressed.js, where the shim
+                  // returns the source untouched.
+                  {loader: p('shims/add-module-exports-shim-loader')},
+                  {
+                    loader: 'builtin:swc-loader',
+                    options: {
+                      isModule: 'unknown',
+                      jsc: {
+                        parser: {syntax: 'ecmascript', jsx: true},
+                        target: 'es5',
+                      },
+                      module: {
+                        type: 'commonjs',
+                        ignoreDynamic: true,
+                        preserveImportMeta: true,
+                      },
+                    },
                   },
-                  module: {
-                    type: 'commonjs',
-                    ignoreDynamic: true,
-                    preserveImportMeta: true,
-                  },
-                },
+                ],
               },
               {
                 test: /\.jsx?$/,
@@ -646,50 +675,72 @@ function createRspackConfig({
             new rspack.EvalSourceMapDevToolPlugin({
               module: true,
               columns: false,
-              // Built from the same per-name patterns the match report
-              // uses, so the two cannot disagree about which modules a
-              // name covers — and so a name containing regex syntax is
-              // escaped here too rather than corrupting the alternation.
+              // The same compiled patterns the report uses, so the two
+              // cannot disagree about which modules a name covers — and
+              // so a name containing regex syntax is escaped here too
+              // rather than corrupting the alternation.
               test: new RegExp(
-                devtoolScope.map(n => scopeRegexFor(n).source).join('|')
+                scopeRegexes.map(([, re]) => re.source).join('|')
               ),
             }),
-            // Report which scope names actually matched modules, once
-            // after the first compile.  A misspelled name otherwise
-            // fails silently, and only per-rebuild tallies would cost
-            // anything (this walks the module list a single time).
+            // Report how many modules each scope name matched, so a
+            // misspelled name does not fail silently.  Under serve the
+            // first compile is not the whole story: lazyCompilation
+            // defers dynamic imports, so a name covering only
+            // lazily-reached code (music's view, say) legitimately
+            // matches nothing until a page asks for it.  Names are
+            // therefore reported as they first match, and a name that
+            // has matched nothing yet is described that way rather than
+            // called a mistake.
             {
               apply(compiler) {
-                let reported = false;
+                const matched = new Set();
                 compiler.hooks.done.tap('DevtoolScopeReport', stats => {
-                  if (reported) return;
-                  reported = true;
-                  const counts = new Map(devtoolScope.map(n => [n, 0]));
+                  if (matched.size === scopeRegexes.length) {
+                    return;
+                  }
+                  const counts = new Map(
+                    scopeRegexes
+                      .filter(([n]) => !matched.has(n))
+                      .map(([n]) => [n, 0])
+                  );
                   for (const m of stats.compilation.modules) {
                     const r =
                       m.resource ||
                       (m.nameForCondition && m.nameForCondition());
                     if (!r) continue;
-                    for (const n of devtoolScope) {
-                      if (scopeRegexFor(n).test(r)) {
+                    for (const [n, re] of scopeRegexes) {
+                      if (counts.has(n) && re.test(r)) {
                         counts.set(n, counts.get(n) + 1);
                       }
                     }
                   }
-                  const parts = [];
+                  const found = [];
+                  const empty = [];
                   for (const [n, c] of counts) {
-                    parts.push(`${n}: ${c} module${c === 1 ? '' : 's'}`);
-                    if (c === 0) {
-                      console.warn(
-                        `[rspack] APPS_DEVTOOL_SCOPE name "${n}" ` +
-                          'matched nothing — check it against src/ (recipes in the README)'
-                      );
+                    if (c > 0) {
+                      matched.add(n);
+                      found.push(`${n}: ${c} module${c === 1 ? '' : 's'}`);
+                    } else {
+                      empty.push(n);
                     }
                   }
-                  console.log(
-                    `[rspack] scoped source maps: ${parts.join(', ')}; ` +
-                      'everything else is unmapped'
-                  );
+                  if (found.length) {
+                    console.log(
+                      `[rspack] scoped source maps: ${found.join(', ')}; ` +
+                        'everything else is unmapped'
+                    );
+                  }
+                  if (empty.length) {
+                    console.warn(
+                      `[rspack] APPS_DEVTOOL_SCOPE ${
+                        empty.length === 1 ? 'name' : 'names'
+                      } ${empty.map(n => `"${n}"`).join(', ')} ` +
+                        'matched nothing yet; lazily-loaded code counts once a ' +
+                        'page requests it, otherwise check the name against ' +
+                        'src/ (recipes in the README)'
+                    );
+                  }
                 });
               },
             },

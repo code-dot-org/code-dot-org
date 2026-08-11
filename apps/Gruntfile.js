@@ -409,7 +409,7 @@ module.exports = function (grunt) {
   const rspackEnv =
     (SINGLE_APP ? `APP="${SINGLE_APP}" ` : '') +
     (PISKEL_DEVELOPMENT_MODE ? 'PISKEL_DEV=1 ' : '') +
-    (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
+    ('RSPACK_SWC' in process.env ? '' : 'RSPACK_SWC=all ') +
     rspackNodeOptions;
 
   config.exec = {
@@ -690,17 +690,20 @@ module.exports = function (grunt) {
   // the env-var form for CI and scripts.
   // TEMPORARY: the fallback is rspack so drone builds this branch's
   // optimized assets with it and runs UI tests against them — the
-  // migration evidence discussed in the PR.  Revert to 'webpack' before
-  // merge.
+  // migration evidence discussed in the PR.  Before merge this becomes
+  // bundlerBase's resolveBundler(), whose default is webpack and which a
+  // test covers.
   const APPS_BUNDLER = grunt.option('rspack')
     ? 'rspack'
-    : process.env.APPS_BUNDLER || 'rspack';
+    : ['webpack', 'rspack'].includes(process.env.APPS_BUNDLER)
+    ? process.env.APPS_BUNDLER
+    : 'rspack';
   if (
     process.env.APPS_BUNDLER &&
-    !['rspack', 'webpack'].includes(process.env.APPS_BUNDLER)
+    !['webpack', 'rspack'].includes(process.env.APPS_BUNDLER)
   ) {
     grunt.log.warn(
-      `Unrecognized APPS_BUNDLER value ${process.env.APPS_BUNDLER}; expected rspack or webpack.`
+      `Unrecognized APPS_BUNDLER value ${process.env.APPS_BUNDLER}; building with ${APPS_BUNDLER}.`
     );
   }
   const rspackNotice = () => {
