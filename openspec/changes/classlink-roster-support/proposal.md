@@ -7,7 +7,7 @@ ClassLink SSO launched in early 2026, but teachers in ClassLink districts cannot
 - New `ClasslinkSection` model (STI subclass of `OmniAuthSection`) for storing and syncing ClassLink-rostered sections
 - New `Clients::ClasslinkOneRoster` REST client for the One Roster proxy API
 - New backend endpoints for listing available ClassLink classes and importing/syncing a class as a section, with server-side authorization: because ClassLink uses a central partner credential (not user-scoped tokens like Clever/Google), the endpoints must themselves verify the requester teaches a class (via One Roster) or is an instructor of the section before any import or sync
-- Updated OmniAuth callback to create ClassLink `AuthenticationOption` records with `authentication_id = <TenantId>|<SourceId>` and `version = 'v2'` (currently stores only `UserId`, unversioned)
+- Updated OmniAuth callback to create ClassLink `AuthenticationOption` records with `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'` (currently stores only `UserId`, unversioned)
 - Migration of the 14,392 existing ClassLink users by creating v2 auth options alongside their untouched legacy records (login-time creation plus an optional bulk script), mirroring the Clever v2→v3 API migration; rollback is deleting the v2 records
 - Frontend additions to expose ClassLink as a roster provider in the teacher section import UI
 - ClassLink login gains a legacy-`UserId` fallback lookup during the migration window, removed at cleanup
@@ -16,7 +16,7 @@ ClassLink SSO launched in early 2026, but teachers in ClassLink districts cannot
 
 ### New Capabilities
 
-- `classlink-id-migration`: Create versioned v2 ClassLink auth options (`<TenantId>|<SourceId>`, `version = 'v2'`) alongside legacy `UserId` records, with dual-match login during the transition window and rollback by deleting v2 records
+- `classlink-id-migration`: Create versioned v2 ClassLink auth options (`<TenantId>|<SourcedId>`, `version = 'v2'`) alongside legacy `UserId` records, with dual-match login during the transition window and rollback by deleting v2 records
 - `classlink-rostering`: Teacher-triggered import and sync of ClassLink classes as code.org sections via the One Roster API
 
 ### Modified Capabilities
