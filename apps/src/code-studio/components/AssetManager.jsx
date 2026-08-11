@@ -331,7 +331,8 @@ export default class AssetManager extends React.Component {
         return;
       }
 
-      await clearFlaggedFilename(channelId);
+      // Unflag before clearing metadata so a failed unflag leaves the
+      // bookkeeping intact for a later retry.
       const response = await HttpClient.post(
         `/v3/channels/${channelId}/abuse/image`,
         JSON.stringify({type: 'unflag'}),
@@ -339,6 +340,7 @@ export default class AssetManager extends React.Component {
         {'Content-Type': 'application/json; charset=UTF-8'}
       );
       const responseData = await response.json();
+      await clearFlaggedFilename(channelId);
       const abuseScore = responseData?.abuse_score;
       if (typeof abuseScore === 'number' && dashboard.project?.setAbuseScore) {
         dashboard.project.setAbuseScore(abuseScore);

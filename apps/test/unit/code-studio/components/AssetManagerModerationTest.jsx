@@ -339,18 +339,51 @@ describe('AssetManager image moderation', () => {
     await user.click(screen.getByRole('button', {name: /delete file/i}));
 
     await waitFor(() =>
-      expect(clearFlaggedFilename).toHaveBeenCalledWith('channel-1')
+      expect(HttpClient.post).toHaveBeenCalledWith(
+        '/v3/channels/channel-1/abuse/image',
+        JSON.stringify({type: 'unflag'}),
+        true,
+        {'Content-Type': 'application/json; charset=UTF-8'}
+      )
     );
-    expect(HttpClient.post).toHaveBeenCalledWith(
-      '/v3/channels/channel-1/abuse/image',
-      JSON.stringify({type: 'unflag'}),
-      true,
-      {'Content-Type': 'application/json; charset=UTF-8'}
-    );
+    expect(clearFlaggedFilename).toHaveBeenCalledWith('channel-1');
     expect(setAbuseScore).toHaveBeenCalledWith(0);
     await waitFor(() =>
       expect(screen.getByRole('button', {name: /upload file/i})).toBeEnabled()
     );
+  });
+
+  it('keeps metadata when unflag fails so unblock can be retried', async () => {
+    moderateImage.mockResolvedValue('flagged');
+    getFlaggedFilename.mockResolvedValue('bad.png');
+    HttpClient.post
+      .mockResolvedValueOnce({
+        json: () => Promise.resolve({abuse_score: 15}),
+      })
+      .mockRejectedValueOnce(new Error('network'));
+
+    render(<AssetManager {...DEFAULT_PROPS} />);
+    await uploadFile(user, makeImageFile('bad.png'));
+    await user.click(await screen.findByRole('button', {name: /^accept$/i}));
+
+    await waitFor(() =>
+      expect(setFlaggedFilename).toHaveBeenCalledWith('channel-1', 'bad.png')
+    );
+    expect(await screen.findByText('bad.png')).toBeInTheDocument();
+
+    await user.click(screen.getByLabelText('Delete file'));
+    await user.click(screen.getByRole('button', {name: /delete file/i}));
+
+    await waitFor(() =>
+      expect(HttpClient.post).toHaveBeenCalledWith(
+        '/v3/channels/channel-1/abuse/image',
+        JSON.stringify({type: 'unflag'}),
+        true,
+        {'Content-Type': 'application/json; charset=UTF-8'}
+      )
+    );
+    expect(clearFlaggedFilename).not.toHaveBeenCalled();
+    expect(screen.getByRole('button', {name: /upload file/i})).toBeDisabled();
   });
 
   it('deleting a non-flagged file does not unblock', async () => {
