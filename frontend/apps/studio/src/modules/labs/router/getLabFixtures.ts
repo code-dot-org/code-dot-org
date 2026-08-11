@@ -5,10 +5,11 @@ import {isLab, type Lab} from '@/modules/labs/types/lab';
 // Lazy import of each lab's `./mocks` subpath. Mirrors `getLabEntrypoint`'s
 // per-lab map. `Partial` — labs without fixtures are simply absent; the
 // MSW handlers fall back to defaults for unmapped lab keys.
-type LabFixturesLoader = () => Promise<{
-  default?: LabFixtures;
-  [key: string]: LabFixtures | undefined;
-}>;
+//
+// A `./mocks` module is free to export more than its fixtures — World Lab's
+// also exports its scenario catalogue — so the module shape is unknown here
+// and `getLabFixtures` narrows the one export it wants.
+type LabFixturesLoader = () => Promise<Record<string, unknown>>;
 
 const LabFixturesLoaders: Partial<Record<Lab, LabFixturesLoader>> = {
   music: () => import('@code-dot-org/music-lab/mocks'),
