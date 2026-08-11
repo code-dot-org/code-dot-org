@@ -61,6 +61,63 @@ describe('the starter project', () => {
     expect(source.openFiles).toContain(active[0].id);
     expect(active[0].name).toBe('main.world');
   });
+
+  it('says every actor in blocks, so every actor can be opened', () => {
+    // The starter is read before it is understood, and a `.js` actor is a file
+    // a learner cannot edit with the only editor they have been shown. The
+    // project can still hold a JS module — `rules/animation.js` is one — but
+    // nothing that is an ACTOR is written that way.
+    const actorFolder = folders.find(folder => folder.name === 'actors')!.id;
+    const actors = files.filter(file => file.folderId === actorFolder);
+
+    expect(actors.length).toBeGreaterThan(0);
+    for (const actor of actors) {
+      expect(actor.name).toMatch(/\.actor$/);
+      expect(actor.language).toBe('actor');
+      // …and each is a workspace with a `define actor` in it, rather than an
+      // empty file that merely has the right extension.
+      expect(actor.contents).toContain('world_actor');
+    }
+  });
+
+  it('grounds the tile on both of the rules it needs', () => {
+    // Landable and a wall. Either one alone is a bug that reads as physics
+    // being broken: no "Acts as Ground" and the player falls through the floor
+    // forever, no "Solid" and it is held up by nothing.
+    const ground = starterFile('ground').contents;
+    expect(ground).toContain('Gravity#ActsAsGroundTrait');
+    expect(ground).toContain('Solid Bodies#SolidTrait');
+  });
+
+  it('wires collecting across all four of the places it takes', () => {
+    // Collecting is the starter's only mechanic that no single file states.
+    // Four things have to agree, and three of the four failures are SILENT —
+    // the game runs and coins simply do not disappear, with nothing in the
+    // console to say why. So they are checked together.
+    expect(starterFile('main').contents).toContain('"Collection"');
+    expect(starterFile('collectRule').name).toBe('collect.rule');
+    expect(starterFile('coin').contents).toContain(
+      'Collection#CanBeCollectedTrait',
+    );
+    expect(starterFile('player').contents).toContain(
+      'Collection#CollectsTrait',
+    );
+  });
+
+  it('gives the count something to count', () => {
+    // The player prints how many coins it has taken. With one coin in the map
+    // that number is only ever 1, which makes `how many ⟨Coin⟩ in ⟨collected⟩`
+    // look like decoration rather than a question — so the map ships three.
+    const map = JSON.parse(starterFile('level1').contents) as {
+      actors: Array<{type: string}>;
+    };
+    const coins = map.actors.filter(actor => actor.type === 'actors/coin');
+    expect(coins.length).toBeGreaterThan(1);
+
+    // And what it counts is the kind, by the module path a placed actor
+    // carries — the same string the map places them under.
+    expect(starterFile('player').contents).toContain('"TYPE": "actors/coin"');
+  });
 });
 
 describe('starterFile', () => {

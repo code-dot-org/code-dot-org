@@ -23,9 +23,8 @@
 // the game the same every run, which is what a fixture usually wants and what a
 // game usually does not.
 
-import {stack, type ProjectSpec} from '../constants';
+import {stack, useTrait, type ProjectSpec} from '../constants';
 
-import {useTrait} from './breakout';
 import {at, me, METEORS_SUPPORT_FILES, number, RING, SHOT_VAR} from './meteors';
 
 // A local actor is named by its DEFINING BLOCK'S id, so the ids are written

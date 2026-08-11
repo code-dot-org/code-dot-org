@@ -33,7 +33,7 @@
 // sit under it in the order the game reads: the room, the bricks, the paddle,
 // the ball.
 
-import {stack, type ProjectSpec} from '../constants';
+import {stack, useTrait, type ProjectSpec} from '../constants';
 
 import {
   ALL_COLUMNS,
@@ -43,7 +43,6 @@ import {
   BREAKOUT_SUPPORT_FILES,
   setNumber,
   SIDE_ROWS,
-  useTrait,
 } from './breakout';
 
 // The blocks a dropdown has to be able to name, so their ids are written down

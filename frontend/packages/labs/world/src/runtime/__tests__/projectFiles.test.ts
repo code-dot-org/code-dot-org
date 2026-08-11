@@ -9,9 +9,9 @@ describe('projectFiles', () => {
   it('flattens the default project to folder-prefixed paths', () => {
     const files = projectFiles(DEFAULT_PROJECT.source);
     expect(Object.keys(files).sort()).toEqual([
-      'actors/ball.js',
-      'actors/coin.js',
-      'actors/ground.js',
+      'actors/ball.actor',
+      'actors/coin.actor',
+      'actors/ground.actor',
       'actors/player.actor',
       'animations/coinSpin.anim',
       'animations/game.anim',
@@ -19,6 +19,7 @@ describe('projectFiles', () => {
       'maps/level1.map',
       'rules/animation.js',
       'rules/arrows.rule',
+      'rules/collect.rule',
       'rules/collisions.rule',
       'rules/gravity.rule',
       'rules/input.rule',

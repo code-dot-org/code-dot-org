@@ -38,7 +38,13 @@
 // is a thing the lab cannot say yet or can only say awkwardly, which is the
 // other reason this scenario is worth keeping — it is the list.
 
-import {ruleShim, stack, starterSprites, type ProjectSpec} from '../constants';
+import {
+  ruleShim,
+  stack,
+  starterSprites,
+  useTrait,
+  type ProjectSpec,
+} from '../constants';
 import {
   arrowsRule,
   collectRule,
@@ -110,12 +116,6 @@ export const setNumber = (type: string, value: number) => ({
     ACTOR: {block: {type: 'world_this_actor'}},
     VALUE: {block: {type: 'math_number', fields: {NUM: value}}},
   },
-});
-
-/** `use trait ⟨Rule#Trait⟩`, the row that gives an actor a share of a rule. */
-export const useTrait = (trait: string) => ({
-  type: 'world_use_trait',
-  fields: {TRAIT: trait},
 });
 
 // The room. Solid and nothing else: it does not move, it is not collectible,

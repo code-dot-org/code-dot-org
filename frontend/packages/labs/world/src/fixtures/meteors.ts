@@ -33,7 +33,13 @@
 // velocity turned two ways, which is sayable now. It is left out so the file
 // stays readable, not because it cannot be said.
 
-import {ruleShim, stack, starterSprites, type ProjectSpec} from '../constants';
+import {
+  ruleShim,
+  stack,
+  starterSprites,
+  useTrait,
+  type ProjectSpec,
+} from '../constants';
 import {
   collisionsRule,
   driveRule,
@@ -45,7 +51,7 @@ import {
 } from '../rules/stock';
 import {TILE_SIZE} from '../runtime/viewport';
 
-import {setNumber, useTrait} from './breakout';
+import {setNumber} from './breakout';
 
 /** The middle of tile `index`, the same grid the other scenarios use. */
 export const at = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;

@@ -200,18 +200,18 @@ describe('rules/gravity.rule', () => {
   });
 
   it('grounds the ground actor on ITS OWN trait, not the engine’s', () => {
-    // `actors/ground.js` kept importing the built-in `GroundTrait` after the
-    // rule moved into the project, so the authored rule's ground loop matched
+    // `actors/ground` kept electing the built-in `GroundTrait` after the rule
+    // moved into the project, so the authored rule's ground loop matched
     // nothing: the player fell, was held up by collision, and never landed.
+    //
+    // Harder to get wrong now that the file is blocks — a trait is named by
+    // its RULE's name (`traitOptions`), and there is one "Gravity" in play, so
+    // the dropdown cannot offer the engine's copy. Still checked, because what
+    // it is checking is a fact about the project rather than about the file:
+    // the trait the tile elects is the one this rule loops over.
     const ground = starterFile('ground').contents;
-    expect(ground).toContain("from 'rules/gravity'");
-    expect(ground).toContain('ActsAsGroundTrait');
-    // …and its `world-lab` import no longer names a ground trait, which would
-    // be the ENGINE's — a different object, matching nothing the rule loops for.
-    const worldLabImport = ground
-      .split('\n')
-      .find(line => line.includes("from 'world-lab'"));
-    expect(worldLabImport).not.toContain('Ground');
+    expect(ground).toContain('Gravity#ActsAsGroundTrait');
+    expect(meta.traits.map(trait => trait.name)).toContain('Acts as Ground');
   });
 
   it('holds the resting answer in a variable rather than asking twice', () => {
