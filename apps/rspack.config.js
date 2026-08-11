@@ -188,7 +188,9 @@ function createRspackConfig({
   // Names are held unescaped so the match report can print them as the
   // developer typed them; escaping happens here, at the one use.
   const scopeRegexFor = name =>
-    new RegExp(`src[\\\\/]${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\\\/.]`);
+    new RegExp(
+      `src[\\\\/]${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\\\/.]`
+    );
   // RSPACK-DIFF: the dev default is eval — no source maps — where
   // webpack defaults to eval-cheap-module-source-map.  rspack's
   // whole-app -module map modes exceed 22GB at our module count, which
