@@ -35,9 +35,14 @@ import moduleStyles from './styles/editor.module.scss';
 interface EditorProps {
   langMapping: {[key: string]: LanguageSupport};
   editableFileTypes: string[];
+  wrapLines?: boolean;
 }
 
-export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
+export const Editor = ({
+  langMapping,
+  editableFileTypes,
+  wrapLines,
+}: EditorProps) => {
   const {levelProperties, aiTutorDisabled, enableUserAddedSelectionContext} =
     useCodebridgeContext();
   const activeFile = useAppSelector(state => {
@@ -166,8 +171,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         );
       }
     }
-    if (fileExt === 'md' || fileExt === 'txt') {
-      // Wrap lines for markdown and plain text files.
+    if (wrapLines || fileExt === 'md' || fileExt === 'txt') {
       extensions.push(EditorView.lineWrapping);
     }
     if (hasUnifiedDiffView) {
@@ -200,6 +204,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     codeBeforeAiTutorVersion,
     aiTutorDisabled,
     enableUserAddedSelectionContext,
+    wrapLines,
   ]);
 
   const activeFileExt = activeFile?.name

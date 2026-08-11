@@ -40,6 +40,7 @@ export type ConfigType = {
   activeLayout?: LayoutKey;
   validMimeTypes?: string[];
   hideNewFolderButton?: boolean;
+  wrapLines?: boolean;
   layoutComponents: LayoutComponents;
 };
 
