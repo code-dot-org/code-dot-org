@@ -102,6 +102,31 @@ export default class AssetManager extends React.Component {
     this.pendingFlaggedUpload = false;
   }
 
+  /**
+   * Uploads require local enablement and must not override if a project is flagged for abuse.
+   * Prefer 'live' abuse score (updated on flag/unflag) over the initial prop so
+   * deleting the flagged asset can re-enable without remounting the dialog.
+   */
+  areUploadsEnabled = () => {
+    if (!this.state.uploadsEnabled) {
+      return false;
+    }
+    if (
+      typeof dashboard !== 'undefined' &&
+      dashboard.project?.exceedsAbuseThreshold
+    ) {
+      return !dashboard.project.exceedsAbuseThreshold();
+    }
+    return this.props.uploadsEnabled;
+  };
+
+  componentDidUpdate(prevProps) {
+    // If the parent turns uploads off, force local state to match.
+    if (!this.props.uploadsEnabled && prevProps.uploadsEnabled) {
+      this.setState({uploadsEnabled: false});
+    }
+  }
+
   componentDidMount() {
     if (this.props.levelName) {
       starterAssetsApi.getStarterAssets(
@@ -225,12 +250,9 @@ export default class AssetManager extends React.Component {
       {'Content-Type': 'application/json; charset=UTF-8'}
     )
       .then(response => response.json())
-      .then(responseData => {
-        if (
-          typeof responseData?.abuse_score === 'number' &&
-          dashboard.project?.setAbuseScore
-        ) {
-          dashboard.project.setAbuseScore(responseData.abuse_score);
+      .then(async () => {
+        if (dashboard.project?.fetchAbuseScore) {
+          await dashboard.project.fetchAbuseScore();
         }
         this.pendingFlaggedUpload = true;
         this.setState({
@@ -341,10 +363,10 @@ export default class AssetManager extends React.Component {
       );
       const responseData = await response.json();
       await clearFlaggedFilename(channelId);
-      const abuseScore = responseData?.abuse_score;
-      if (typeof abuseScore === 'number' && dashboard.project?.setAbuseScore) {
-        dashboard.project.setAbuseScore(abuseScore);
+      if (dashboard.project?.fetchAbuseScore) {
+        await dashboard.project.fetchAbuseScore();
       }
+      const abuseScore = responseData?.abuse_score;
       if (typeof abuseScore === 'number' && abuseScore < ABUSE_THRESHOLD) {
         this.setState({
           uploadsEnabled: true,
@@ -471,7 +493,7 @@ export default class AssetManager extends React.Component {
           />
         )}
         <AddAssetButtonRow
-          uploadsEnabled={this.state.uploadsEnabled}
+          uploadsEnabled={this.areUploadsEnabled()}
           allowedExtensions={this.props.allowedExtensions}
           api={this.uploadApi()}
           onUploadStart={this.onUploadStart}

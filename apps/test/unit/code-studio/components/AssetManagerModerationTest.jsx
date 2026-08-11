@@ -145,16 +145,23 @@ async function uploadFile(user, file) {
 
 describe('AssetManager image moderation', () => {
   let user;
-  let setAbuseScore;
+  let fetchAbuseScore;
+  let abuseScore;
 
   beforeEach(() => {
     user = userEvent.setup();
     jest.clearAllMocks();
     mockSubmit.mockClear();
-    setAbuseScore = jest.fn();
+    abuseScore = 0;
+    fetchAbuseScore = jest.fn().mockImplementation(() => {
+      // Simulate channels /abuse refetch after flag/unflag.
+      abuseScore = abuseScore >= 15 ? 0 : 15;
+      return Promise.resolve();
+    });
     global.dashboard = {
       project: {
-        setAbuseScore,
+        fetchAbuseScore,
+        exceedsAbuseThreshold: () => abuseScore >= 15,
       },
     };
     moderateImage.mockResolvedValue('safe');
@@ -252,7 +259,7 @@ describe('AssetManager image moderation', () => {
     await waitFor(() =>
       expect(setFlaggedFilename).toHaveBeenCalledWith('channel-1', 'bad.png')
     );
-    expect(setAbuseScore).toHaveBeenCalledWith(15);
+    expect(fetchAbuseScore).toHaveBeenCalled();
     expect(
       screen.queryByText('Warning: Inappropriate Image')
     ).not.toBeInTheDocument();
@@ -347,7 +354,7 @@ describe('AssetManager image moderation', () => {
       )
     );
     expect(clearFlaggedFilename).toHaveBeenCalledWith('channel-1');
-    expect(setAbuseScore).toHaveBeenCalledWith(0);
+    expect(fetchAbuseScore).toHaveBeenCalled();
     await waitFor(() =>
       expect(screen.getByRole('button', {name: /upload file/i})).toBeEnabled()
     );
