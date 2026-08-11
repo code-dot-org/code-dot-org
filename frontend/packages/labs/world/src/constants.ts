@@ -374,12 +374,21 @@ const GAME_ANIMATIONS = JSON.stringify(
 
 /**
  * A starter file as written below: no id, and naming its folder rather than
- * pointing at one. {@link numbered} supplies both.
+ * pointing at one. {@link buildProject} supplies both.
  */
 type StarterFile = Omit<ProjectFile, 'id'>;
 
 /** What the starter is written as, before it has any ids. */
-interface StarterSpec {
+/**
+ * A project written the way a person would describe one: folders by name, files
+ * by a readable key, and which of them start open.
+ *
+ * Exported because the starter is no longer the only project the demo can load
+ * — the fixture catalogue (src/fixtures) describes one per game it shows off,
+ * and each of them wants to be written like this rather than as a table of
+ * numeric ids.
+ */
+export interface ProjectSpec {
   /** Folder names, all at the project root. */
   folders: readonly string[];
   /** Files by a readable key, each naming its folder in `folderId`. */
@@ -405,7 +414,7 @@ interface StarterSpec {
  * outside this file should ever name a starter file by id; tests use
  * {@link starterFile}.
  */
-function numbered(spec: StarterSpec): {
+export function buildProject(spec: ProjectSpec): {
   source: MultiFileSource;
   /** The id each file was given, by the key it is written under. */
   ids: ReadonlyMap<string, string>;
@@ -509,7 +518,7 @@ function starterAnimation(id: string): Record<string, StarterFile> {
   };
 }
 
-const STARTER = numbered({
+const STARTER = buildProject({
   folders: [
     'rules',
     'worlds',
@@ -639,7 +648,7 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
 };
 
 /**
- * A starter file by the name it is written under in {@link numbered}.
+ * A starter file by the name it is written under in {@link buildProject}.
  *
  * The project's ids are numbers, so a caller that wants `gravity.rule` cannot
  * reasonably ask for it by id. Throws rather than returning undefined: every
