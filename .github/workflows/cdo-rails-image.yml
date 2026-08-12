@@ -231,20 +231,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # git-<sha> names the source a publish built, but publishes happen on
-      # image-definition changes and on the deps chain — not per staging
-      # commit — so most shas never get a tag. A per-commit contract belongs
-      # to a deploy pipeline, not to this bootstrap automation.
-      - name: Compute tags
-        id: meta
-        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
-        with:
-          images: ${{ env.IMAGE }}
-          tags: |
-            type=sha,prefix=git-,format=long,enable={{is_default_branch}}
-            type=raw,value=latest,enable={{is_default_branch}}
-            type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
-
       - name: Build cdo-rails
         run: |
           docker build \
@@ -262,17 +248,17 @@ jobs:
 
       # Not build-push-action with push: true — that publishes in the step
       # that builds, before the smoke suite can fail the job.
-      - name: Push cdo-rails (per-arch tags)
-        env:
-          TAGS: ${{ steps.meta.outputs.tags }}
+      #
+      # One tag, keyed by commit and architecture, and nothing a consumer
+      # resolves. Every consumer-facing name is created by the stitch job from
+      # this immutable pair, so two publishes racing cannot produce a manifest
+      # mixing their runs, and a suffixed tag left behind by a failed run
+      # cannot be picked up by the next one.
+      - name: Push cdo-rails (per-arch tag)
         run: |
           set -euxo pipefail
-          # An empty list would make this step a green no-op.
-          test -n "$TAGS"
-          for ref in $TAGS; do
-            docker tag cdo-rails:publish "$ref-${{ matrix.arch }}"
-            docker push "$ref-${{ matrix.arch }}"
-          done
+          docker tag cdo-rails:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
+          docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
   # The consumer-facing tags are multi-platform manifests over the per-arch
   # pushes. Until this job runs, only the -amd64/-arm64 suffixed tags exist,
@@ -310,15 +296,21 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
-      - name: Stitch each tag from its per-arch pair
+      # One call, every consumer-facing tag, both sources named by commit. The
+      # per-arch pair is all that exists until now, so no moving tag appears
+      # anywhere in the input.
+      - name: Stitch every tag from the sha-keyed per-arch pair
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |
           set -euxo pipefail
+          # An empty list would make this step a green no-op.
           test -n "$TAGS"
-          for ref in $TAGS; do
-            docker buildx imagetools create -t "$ref" "$ref-amd64" "$ref-arm64"
-          done
+          args=()
+          for ref in $TAGS; do args+=(-t "$ref"); done
+          docker buildx imagetools create "${args[@]}" \
+            "$IMAGE:git-${{ github.sha }}-amd64" \
+            "$IMAGE:git-${{ github.sha }}-arm64"
 
       - name: Inspect a published manifest
         env:
