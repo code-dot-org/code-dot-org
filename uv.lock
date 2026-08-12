@@ -527,7 +527,7 @@ wheels = [
 
 [[package]]
 name = "neighborhood"
-version = "0.4.0"
+version = "0.5.0"
 source = { editable = "python/pythonlab/neighborhood" }
 
 [package.dev-dependencies]
@@ -841,7 +841,7 @@ wheels = [
 
 [[package]]
 name = "pythonlab-setup"
-version = "0.2.0"
+version = "0.3.0"
 source = { editable = "python/pythonlab/pythonlab_setup" }
 dependencies = [
     { name = "matplotlib" },
