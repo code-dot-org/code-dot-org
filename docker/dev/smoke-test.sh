@@ -6,8 +6,8 @@
 #   ./smoke-test.sh cdo-dev:test docker
 #   ./smoke-test.sh cdo-dev:test podman
 #
-# The dependency contract is covered by docker/deps/smoke-test.sh; this
-# asserts what the dev image adds and that it lost nothing it inherited.
+# docker/deps/smoke-test.sh covers the dependency contract. This script
+# asserts what the dev image adds, and that it lost nothing it inherited.
 
 # shellcheck disable=SC1091
 . "$(dirname "$0")/../smoke-harness.sh"
@@ -21,7 +21,7 @@ run "BUNDLE_DEPLOYMENT is empty" "deployment=[]" -- \
   sh -c 'echo "deployment=[$BUNDLE_DEPLOYMENT]"'
 
 # web-console pairs with docker/deps/smoke-test.sh, which asserts it
-# absent — proving the boundary sits between the two images.
+# absent. That proves the boundary sits between the two images.
 run "minitest loads" "minitest-ok" -- \
   bundle exec ruby -e 'require "minitest"; puts "minitest-ok"'
 run "cucumber available" "" -- bundle exec cucumber --version
@@ -64,19 +64,20 @@ run "CHROME_BIN set" "/usr/local/bin/chromium" -- sh -c 'echo "$CHROME_BIN"'
 # shellcheck disable=SC2016
 run "chromium runs" "" -- sh -c '"$CHROME_BIN" --version'
 
-# Repo volume trust: the clone runs as root, the container as cdo, so git
-# refuses the tree without this.
+# This is a repo volume trust check. The clone runs as root, but the
+# container runs as cdo. git refuses the tree without this.
 run "git safe.directory configured" "/code-dot-org" -- \
   git config --global --get-all safe.directory
 
 # A commit here needs the clean filter, or it stores bytes where a pointer
-# belongs. Debian's git-lfs package configures the filter in /etc/gitconfig
-# — assert the resolved value, so a packaging change fails here.
+# belongs. Debian's git-lfs package configures the filter in /etc/gitconfig.
+# This asserts the resolved value, so a packaging change fails here.
 run "git-lfs filters configured" "git-lfs" -- \
   git config --get filter.lfs.smudge
 
 run "runs as non-root cdo" "cdo" -- id -un
-# The image has no ENTRYPOINT; the devcontainer lifecycle calls this directly.
+# The image has no ENTRYPOINT. The devcontainer lifecycle calls this
+# directly.
 run "dev-bootstrap installed" "" -- test -x /usr/local/bin/dev-bootstrap
 run "dev-bootstrap rejects a bad subcommand" "usage: dev-bootstrap" -- \
   sh -c '/usr/local/bin/dev-bootstrap nonsense 2>&1 || true'

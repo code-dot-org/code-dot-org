@@ -5,21 +5,19 @@
   "workspaceFolder": "/code-dot-org",
   "remoteUser": "cdo",
 
-  // Runs once per container; a Codespaces prebuild caches the result.
-  // apps/ is deliberately not built here — downloading the prebuilt
-  // package beats building, and only a commit that changes apps/ and has
-  // never been through CI needs a manual `yarn build`.
+  // This runs once per container. A Codespaces prebuild caches the
+  // result. apps/ is deliberately not built here. Downloading the
+  // prebuilt package beats building. Only a commit that changes apps/,
+  // and has never been through CI, needs a manual `yarn build`.
   "onCreateCommand": "cd /code-dot-org/apps && yarn install && cd /code-dot-org/frontend && yarn install && dev-bootstrap create",
 
-  // Runs on every start, including a bare `docker compose start`. Fails
-  // rather than handing over a half-migrated schema.
+  // This runs on every start, including a bare `docker compose start`.
+  // It fails rather than handing over a half-migrated schema.
   "postStartCommand": "dev-bootstrap start",
 
-  // Sized from measurements, not guesses. The apps webpack dev server
-  // alone uses 6.5 to 14 GB; add Rails, MySQL, and a jest worker and a
-  // full day crosses 16 GB. Storage: node_modules is 4.1 GB, the images
-  // 7 GB, plus the prebuilt and locally built apps packages. CPUs: yarn
-  // install parallelizes 90 s of CPU into 22 s of wall clock.
+  // Memory and storage cover the apps webpack dev server, Rails, MySQL,
+  // and a jest worker running at once, plus node_modules and the built
+  // apps packages. More CPUs make yarn install faster.
   "hostRequirements": {
     "cpus": 8,
     "memory": "32gb",

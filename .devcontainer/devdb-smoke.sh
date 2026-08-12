@@ -1,7 +1,8 @@
 #!/bin/bash
-# Proves a cdo-devdb image is a database, not just a tarball that unpacked:
-# checks every migration is applied, the seed's curriculum and clock, and
-# that the test database arrived seeded, not merely present.
+# This proves a cdo-devdb image is a database, not just a tarball that
+# unpacked. It checks every migration is applied, the seed's curriculum
+# and clock, and that the test database arrived seeded, not merely
+# present.
 #
 #   .devcontainer/devdb-smoke.sh cdo-devdb:local
 set -euo pipefail
@@ -34,8 +35,9 @@ test "$levels" -gt 50000 \
 test "$(q "SELECT COUNT(*) FROM dashboard_development.scripts WHERE name = 'hourofcode'")" = 1 \
   || { echo "the hourofcode script is missing" >&2; exit 1; }
 
-# Must arrive seeded, not merely present: same schema, plus something only
-# seed:test puts there. Saves ~77 s on a fresh container's first testunit run.
+# This must arrive seeded, not merely present. It needs the same schema,
+# plus something only seed:test puts there. That saves time on a fresh
+# container's first testunit run.
 test_applied="$(q 'SELECT COUNT(*) FROM dashboard_test.schema_migrations')"
 test "$test_applied" = "$applied" \
   || { echo "test database: $test_applied migrations against the dev database's $applied" >&2; exit 1; }

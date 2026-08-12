@@ -1,7 +1,8 @@
 #!/bin/bash
-# Pre-seeds a MySQL datadir for the cdo-devdb image: runs SETUP.md's setup
-# against mysql:8.0, the version Dockerfile.db builds on (InnoDB refuses a
-# datadir a newer server wrote), stops it cleanly, and tars the datadir.
+# This pre-seeds a MySQL datadir for the cdo-devdb image. It runs
+# SETUP.md's setup against mysql:8.0, the version Dockerfile.db builds on.
+# InnoDB refuses a datadir a newer server wrote. The script stops mysqld
+# cleanly, then tars the datadir.
 #
 #   .devcontainer/preseed-db.sh
 #   docker build -f .devcontainer/Dockerfile.db -t cdo-devdb:local .devcontainer
@@ -28,7 +29,7 @@ info "creating network..."
 docker network create "$NETWORK"
 
 info "starting mysql:8.0 sidecar..."
-# --skip-log-bin: the seed writes about a gigabyte of binary log. The image
+# --skip-log-bin avoids a large binary log the seed writes. The image
 # would carry that log forever, and no devcontainer reads it.
 docker run -d --name "$DB_CONTAINER" --network "$NETWORK" --network-alias db \
   -e MYSQL_ROOT_PASSWORD=not-a-secret-password \
@@ -48,9 +49,9 @@ done
 info "mysql ready"
 
 info "creating databases..."
-# Only dashboard_test: db:setup_or_migrate's exists? check uses SHOW
-# TABLES, so an empty dashboard_development reads as "exists" and takes
-# the slow db:migrate path instead of db:create.
+# This creates only dashboard_test. db:setup_or_migrate's exists? check
+# uses SHOW TABLES, so an empty dashboard_development reads as "exists".
+# That takes the slow db:migrate path instead of db:create.
 docker exec "$DB_CONTAINER" mysql -uroot -pnot-a-secret-password -e \
   "CREATE DATABASE IF NOT EXISTS dashboard_test;"
 
@@ -62,20 +63,22 @@ docker run --rm --name "$APP_CONTAINER" --network "$NETWORK" \
   "${CDO_DEV_IMAGE:-ghcr.io/code-dot-org/cdo-dev:latest}" -c "
     set -euo pipefail
     cd /code-dot-org/dashboard
-    # SETUP.md's two commands for a new developer; see dashboard/Rakefile.
+    # These are SETUP.md's two commands for a new developer. See
+    # dashboard/Rakefile.
     echo 'preseed: running dashboard:setup_db...'
     bundle exec rake dashboard:setup_db
-    # db:test:prepare, not db:migrate: dashboard/lib/tasks/seed_in_test.rake
-    # makes this seed, not just shape, the test database — saving ~77 s on
-    # a fresh container's first testunit run.
+    # This runs db:test:prepare, not db:migrate.
+    # dashboard/lib/tasks/seed_in_test.rake makes this seed, not just
+    # shape, the test database. That saves time on a fresh container's
+    # first testunit run.
     echo 'preseed: preparing and seeding the test database...'
     RAILS_ENV=test bundle exec rake db:test:prepare
     echo 'preseed: seeding complete'
   "
 
-# SIGTERM, then wait: mysqld flushes InnoDB and exits 0. The generous
-# timeout avoids docker's 10 s default SIGKILL mid-flush, which would need
-# crash recovery on the next start.
+# This sends SIGTERM, then waits. mysqld flushes InnoDB and exits 0. The
+# generous timeout avoids docker's 10 s default SIGKILL mid-flush, which
+# would need crash recovery on the next start.
 info "stopping mysql..."
 docker stop --timeout 120 "$DB_CONTAINER" >/dev/null
 
@@ -86,7 +89,7 @@ oom_killed="$(docker inspect -f '{{.State.OOMKilled}}' "$DB_CONTAINER")"
 info "mysqld exited 0"
 
 info "exporting datadir to ${OUTPUT}..."
-# docker cp wraps the tar in a mysql/ directory; re-tar from the root so
+# docker cp wraps the tar in a mysql/ directory. Re-tar from the root, so
 # ADD unpacks files where Dockerfile.db expects them.
 EXPORT_DIR=$(mktemp -d)
 docker cp "$DB_CONTAINER":${DATADIR}/. "$EXPORT_DIR"/

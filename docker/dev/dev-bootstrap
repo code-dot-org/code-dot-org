@@ -1,5 +1,5 @@
 #!/bin/bash
-# Split the way the devcontainer lifecycle splits it:
+# This splits the way the devcontainer lifecycle splits it:
 #
 #   dev-bootstrap create   once per container   (onCreateCommand)
 #   dev-bootstrap start    on every start       (postStartCommand)
@@ -18,9 +18,9 @@ install_hooks() {
   local hooks_dir="/code-dot-org/.git/hooks"
   local tools_dir="/code-dot-org/tools/hooks"
   if [ -d "$tools_dir" ] && [ -d "$hooks_dir" ]; then
-    # Only where nothing exists yet: git-lfs writes real hook files for
-    # post-checkout and post-merge on clone, and overwriting one breaks
-    # `git lfs post-checkout`.
+    # This links only where nothing exists yet. git-lfs writes real hook
+    # files for post-checkout and post-merge on clone. Overwriting one
+    # breaks `git lfs post-checkout`.
     for hook in pre-commit post-checkout post-merge; do
       if [ -f "$tools_dir/$hook" ] && [ ! -e "$hooks_dir/$hook" ]; then
         ln -sf "../../tools/hooks/$hook" "$hooks_dir/$hook"
@@ -30,16 +30,17 @@ install_hooks() {
 }
 
 bootstrap_apps() {
-  # Level pages need /blockly/* assets. The package is public-read on S3 and
-  # keyed by the content of apps/, so this is a download, not a build.
+  # Level pages need /blockly/* assets. The package is public-read on S3.
+  # It is keyed by the content of apps/, so this is a download, not a
+  # build.
   local blockly_target="/code-dot-org/dashboard/public/blockly"
   if [ -L "$blockly_target" ] && [ -d "$(readlink -f "$blockly_target")" ]; then
     return
   fi
 
-  # An absolute symlink from a native build won't resolve here. Repointing
-  # it fixes this container but breaks the host's, so say so instead of
-  # doing it quietly.
+  # An absolute symlink from a native build will not resolve here.
+  # Repointing it fixes this container. It also breaks the host's own
+  # symlink. The messages below say so, instead of repointing quietly.
   if [ -L "$blockly_target" ]; then
     echo "dev-bootstrap: $blockly_target points at $(readlink "$blockly_target"), which does not exist in this container."
     echo "dev-bootstrap: repointing it. On the host, 'bundle exec rake package:apps:symlink' puts it back."
@@ -47,8 +48,8 @@ bootstrap_apps() {
 
   if command -v bundle >/dev/null 2>&1 && [ -f /code-dot-org/Rakefile ] && \
      git -C /code-dot-org rev-parse HEAD >/dev/null 2>&1; then
-    # About two gigabytes replaced; log before and after for a checkout
-    # shared with a native setup.
+    # This replaces a large package. The commands below log it before and
+    # after, for a checkout shared with a native setup.
     local package_dir=/code-dot-org/dashboard/public/apps-package
     if [ -d "$package_dir" ]; then
       echo "dev-bootstrap: overwriting the apps package in $package_dir (commit_hash $(cat "$package_dir/commit_hash" 2>/dev/null || echo unknown))"
@@ -84,8 +85,9 @@ migration_versions_on_disk() {
 }
 
 versions_missing_from_db() {
-  # Sets, not counts: an orphaned schema_migrations row (a migration deleted
-  # after it ran) must not force a full db:migrate on every container start.
+  # These are sets, not counts. An orphaned schema_migrations row, from a
+  # migration deleted after it ran, must not force a full db:migrate on
+  # every container start.
   comm -23 <(printf '%s\n' "$1" | sed '/^$/d' | sort -u) \
            <(printf '%s\n' "$2" | sed '/^$/d' | sort -u)
 }
@@ -97,8 +99,7 @@ migrate_or_die() {
 }
 
 auto_migrate() {
-  # Compares version sets with one query instead of booting Rails: saves
-  # about 60 seconds.
+  # This compares version sets with one query, instead of booting Rails.
   [ -f /code-dot-org/dashboard/Rakefile ] || return 0
   command -v mysql >/dev/null 2>&1 || return 0
 
@@ -109,9 +110,9 @@ auto_migrate() {
   [ -n "$disk" ] || return 0
 
   if ! db=$(db_query "SELECT version FROM dashboard_development.schema_migrations" 2>/dev/null); then
-    # Usually locals.yml points at a database this container cannot reach
-    # — Rails would otherwise surface this later as a confusing socket
-    # error. rake reads locals.yml, not DB_USER, so it may succeed here.
+    # Usually locals.yml points at a database this container cannot reach.
+    # Rails would otherwise surface this later as a confusing socket error.
+    # rake reads locals.yml, not DB_USER, so it may succeed here.
     echo "dev-bootstrap: cannot read schema_migrations as '${DB_USER:-root}'@'${DB_HOST:-db}'." >&2
     echo "dev-bootstrap: check /code-dot-org/locals.yml — the devcontainer mounts its own there, and CDO_LOCALS chooses which. Running db:migrate to be sure." >&2
     db=""
@@ -120,8 +121,8 @@ auto_migrate() {
   pending=$(versions_missing_from_db "$disk" "$db")
   [ -n "$pending" ] || return 0
 
-  # Fatal: a half-migrated database is not a working container, and a
-  # warning here just defers the failure to later.
+  # This is fatal. A half-migrated database is not a working container. A
+  # warning here would only defer the failure to later.
   echo "dev-bootstrap: $(printf '%s\n' "$pending" | wc -l) pending migration(s), oldest $(printf '%s\n' "$pending" | head -1); running db:migrate..."
   migrate_or_die development
   migrate_or_die test

@@ -1,8 +1,9 @@
-# Builds cdo-rails, smoke-tests it on docker and podman on amd64 and arm64,
-# boots Rails from it against MySQL and Redis on both architectures, and
-# publishes it from staging as a multi-platform manifest (per-arch native
-# builds, stitched — the cdo-base pattern). Not triggered by source PRs —
-# the slice is validated at publish time. See docker/rails/README.md.
+# This builds cdo-rails, smoke-tests it on docker and podman on amd64 and
+# arm64, and boots Rails from it against MySQL and Redis on both
+# architectures. It publishes cdo-rails from staging as a multi-platform
+# manifest. Per-arch native builds get stitched together, the same as the
+# cdo-base pattern. This is not triggered by source PRs. The slice is
+# validated at publish time instead. See docker/rails/README.md.
 
 name: cdo-rails-image
 
@@ -187,8 +188,8 @@ jobs:
       - name: Verify the image end to end
         run: ./docker/rails/verify.sh cdo-rails:boot docker
 
-  # One job per architecture, natively — no qemu. Each pushes an
-  # arch-suffixed tag; stitch merges them into the consumer-facing ones.
+  # One job runs per architecture, natively, with no qemu. Each pushes an
+  # arch-suffixed tag. stitch merges them into the consumer-facing ones.
   build-push:
     name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
@@ -201,9 +202,9 @@ jobs:
     runs-on: ${{ matrix.runs-on }}
     # Inert until its deployment-branch policy is set; see docker/deps/README.md.
     environment: ghcr-publish
-    # Per-arch group: the two arch legs of one run must not share a group,
-    # or they would cancel each other. Safe to cancel — nothing resolves
-    # `latest` programmatically.
+    # This groups per architecture. The two arch legs of one run must not
+    # share a group, or they would cancel each other. This is safe to
+    # cancel. Nothing resolves `latest` programmatically.
     concurrency:
       group: cdo-rails-publish-${{ matrix.arch }}
       cancel-in-progress: true
@@ -249,19 +250,19 @@ jobs:
       # Not build-push-action with push: true — that publishes in the step
       # that builds, before the smoke suite can fail the job.
       #
-      # Keyed by commit and architecture, and nothing a consumer resolves:
-      # the stitch job builds every consumer-facing tag from this immutable
-      # pair, so a racing publish or a failed run's leftover tag cannot
-      # leak into it.
+      # The tag is keyed by commit and architecture. No consumer resolves
+      # it. The stitch job builds every consumer-facing tag from this
+      # immutable pair. A racing publish or a leftover tag from a failed
+      # run cannot leak in.
       - name: Push cdo-rails (per-arch tag)
         run: |
           set -euxo pipefail
           docker tag cdo-rails:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
           docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
-  # Until this runs, only the arch-suffixed tags exist, so a half-published
-  # state is visible as such instead of resolving to one arch under the
-  # final name.
+  # Until this runs, only the arch-suffixed tags exist. A half-published
+  # state is therefore visible as such, instead of resolving to one arch
+  # under the final name.
   stitch:
     name: stitch multi-platform manifest
     if: github.event_name != 'pull_request'
@@ -281,8 +282,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # No checkout: this tag contract has no content key, so
-      # metadata-action needs only the event context.
+      # This step needs no checkout. This tag contract has no content
+      # key, so metadata-action needs only the event context.
       - name: Compute tags
         id: meta
         uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0

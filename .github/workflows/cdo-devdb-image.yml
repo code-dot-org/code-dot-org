@@ -1,15 +1,16 @@
-# Builds cdo-devdb, the pre-seeded MySQL sidecar the devcontainer starts
-# against, and publishes it from staging. See .devcontainer/README.md.
+# This builds cdo-devdb, the pre-seeded MySQL sidecar the devcontainer
+# starts against. It publishes cdo-devdb from staging. See
+# .devcontainer/README.md.
 #
-# The only image in the set a Dockerfile alone cannot build: its content is
-# a seeded database. Seeding takes about 20 minutes, mostly curriculum from
-# dashboard/config, plus a further minute and a quarter for the test
-# database. CI pays that cost so a developer does not have to.
+# This is the only image in the set a Dockerfile alone cannot build. Its
+# content is a seeded database. Seeding pulls mostly curriculum from
+# dashboard/config, plus a further pass for the test database. CI pays
+# that cost so a developer does not have to.
 #
-# Multi-arch from one pre-seed run: an InnoDB datadir is
+# This gets multi-arch from one pre-seed run. An InnoDB datadir is
 # architecture-portable, and Dockerfile.db has no RUN steps, so this
 # workflow needs no qemu. The smoke matrix runs the SQL natively on each
-# architecture — the part that must be real — before stitch creates the
+# architecture, the part that must be real, before stitch creates the
 # tags a consumer resolves.
 
 name: cdo-devdb-image
@@ -51,16 +52,17 @@ jobs:
       contents: read
       packages: write
     steps:
-      # A full checkout: the seed reads thousands of curriculum files under
-      # dashboard/config, and db:setup_or_migrate reads dashboard/db.
+      # This needs a full checkout. The seed reads thousands of curriculum
+      # files under dashboard/config, and db:setup_or_migrate reads
+      # dashboard/db.
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Hands the checkout to uid 1000 (the container's user) so the seed
-      # can write dashboard/db/schema.rb, log, and tmp. .devcontainer stays
-      # at the runner's uid: preseed-db.sh writes mysql-data.tar there from
-      # the host at the end, and chowning it too would EACCES that write
-      # after twenty minutes of seeding.
+      # This hands the checkout to uid 1000, the container's user, so the
+      # seed can write dashboard/db/schema.rb, log, and tmp. .devcontainer
+      # stays at the runner's uid. preseed-db.sh writes mysql-data.tar
+      # there from the host at the end. Chowning it too would EACCES that
+      # write, after seeding finishes.
       - name: Give the checkout to the container user, keeping this directory
         run: |
           sudo chown -R 1000:1000 .
@@ -73,13 +75,14 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # ~20 minutes; the same script a developer runs locally.
+      # The same script a developer runs locally.
       - name: Pre-seed the datadir
         run: .devcontainer/preseed-db.sh
 
-      # Twice, once per architecture, both from the pre-seed's tar. Nothing
-      # runs at build time — the Dockerfile is an ADD and a CMD — so arm64
-      # builds on this amd64 runner without emulation.
+      # This builds twice, once per architecture, both from the
+      # pre-seed's tar. Nothing runs at build time. The Dockerfile is an
+      # ADD and a CMD, so arm64 builds on this amd64 runner without
+      # emulation.
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3.11.1
 
@@ -96,8 +99,8 @@ jobs:
               --push .devcontainer
           done
 
-      # Nothing is pushed on a pull request, so smoke it here instead: one
-      # architecture, loaded locally.
+      # Nothing is pushed on a pull request, so this smokes it here
+      # instead. It uses one architecture, loaded locally.
       - name: Build and smoke-test locally (pull requests)
         if: github.event_name == 'pull_request'
         run: |
@@ -106,8 +109,8 @@ jobs:
             -f .devcontainer/Dockerfile.db -t cdo-devdb:smoke .devcontainer
           .devcontainer/devdb-smoke.sh cdo-devdb:smoke
 
-  # Natively, against the image actually pushed: an arm64 mysqld on arm64
-  # hardware, not qemu.
+  # This runs natively, against the image actually pushed. An arm64
+  # mysqld runs on arm64 hardware, not qemu.
   smoke:
     name: smoke-test (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
@@ -142,9 +145,9 @@ jobs:
       - name: Smoke test
         run: .devcontainer/devdb-smoke.sh "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
-  # Built from the immutable per-arch pair once both are smoke-tested.
-  # Until this runs, only the suffixed tags exist, so a half-published
-  # state is visible as such.
+  # This is built from the immutable per-arch pair once both are
+  # smoke-tested. Until this runs, only the suffixed tags exist, so a
+  # half-published state is visible as such.
   stitch:
     name: stitch multi-platform manifest
     if: github.event_name != 'pull_request'

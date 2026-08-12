@@ -1,9 +1,9 @@
-# cdo-dev: the development image, layered on cdo-deps rather than cdo-base
-# so the dev and test gems install as a delta over a warm tree, not a full
-# reinstall.
+# cdo-dev is the development image. It layers on cdo-deps rather than
+# cdo-base. That way the dev and test gems install as a delta over a warm
+# tree, not a full reinstall.
 #
 # The build context is this directory only. Lockfiles, gemspecs, and python
-# project files arrive already baked into cdo-deps; the source itself
+# project files arrive already baked into cdo-deps. The source itself
 # arrives at runtime as a mounted volume.
 #
 #   docker build -t cdo-dev:local docker/dev/
@@ -24,13 +24,15 @@ ARG \
 
 USER root
 
-# No heredoc, no SHELL: podman 4.9 / buildah 1.33 cannot parse `RUN <<EOF`,
-# and OCI drops SHELL, so `set -eux` replaces `-e`. See docker/base/README.md.
+# This Dockerfile avoids heredoc and SHELL. podman 4.9 and buildah 1.33
+# cannot parse `RUN <<EOF`. OCI also drops SHELL, so `set -eux` replaces
+# `-e`. See docker/base/README.md.
 #
-# Toolchain packages duplicate cdo-build's: this image sits above the gem
+# Toolchain packages duplicate cdo-build's. This image sits above the gem
 # layer, not below it, to inherit the warm tree.
 #
-# Beyond the toolchain, only what a developer cannot work without:
+# Beyond the toolchain, this installs only what a developer cannot work
+# without:
 #   git-lfs      the repo uses LFS
 #   redis-tools  redis-cli against the sidecar
 #   sudo         installing things in your own sandbox
@@ -57,9 +59,9 @@ RUN set -eux \
        > /dev/null \
   && rm -rf /var/lib/apt/lists/*
 
-# Installed from the official nodejs.org tarball, GPG-verified, rather than
-# a third-party apt repo — same recipe as docker/build/Dockerfile; bump
-# NODE_VERSION in both.
+# This installs Node from the official nodejs.org tarball, GPG-verified,
+# rather than a third-party apt repo. docker/build/Dockerfile uses the same
+# recipe. Bump NODE_VERSION in both files.
 #
 # corepack prepares yarn here so the first yarn call in a fresh container
 # does not reach the network. COREPACK_HOME sits outside $HOME so root can
@@ -90,19 +92,22 @@ RUN set -eux \
   && echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${USERNAME}" \
   && chmod 0440 "/etc/sudoers.d/${USERNAME}"
 
-# /opt/venv, not /code-dot-org/.venv: the repo volume shadows /code-dot-org
-# at runtime, so anything this image contributes must live outside it.
+# This uses /opt/venv, not /code-dot-org/.venv. The repo volume shadows
+# /code-dot-org at runtime, so anything this image contributes must live
+# outside it.
 RUN set -eux \
   && mkdir -p /opt/venv \
   && chown "${UID}:${GID}" /opt/venv
 
 USER ${USERNAME}
 
-# Adds the dev and test gems as a delta: clearing BUNDLE_WITHOUT and
-# BUNDLE_DEPLOYMENT (empty means unset, to Bundler) lifts frozen mode so
-# `bundle add` works. No COPY needed — cdo-deps already ships the Gemfile,
-# lockfile, and gemspecs. Cache mount path is hardcoded for the same
-# buildah reason as docker/deps/Dockerfile.
+# This adds the dev and test gems as a delta over the inherited tree.
+# Clearing BUNDLE_WITHOUT and BUNDLE_DEPLOYMENT lifts frozen mode, so
+# `bundle add` works. To Bundler, an empty value means unset.
+#
+# No COPY is needed. cdo-deps already ships the Gemfile, lockfile, and
+# gemspecs. The cache mount path is hardcoded for the same buildah reason as
+# docker/deps/Dockerfile.
 ENV \
   BUNDLE_DEPLOYMENT= \
   BUNDLE_WITHOUT=
@@ -113,12 +118,13 @@ RUN --mount=type=cache,id=cdo-dev-bundle-cache,sharing=locked,uid=1000,gid=1000,
   && bundle check \
   && rm -rf ~/.bundle "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
 
-# Same delta shape, into /opt/venv (outside the repo mount's shadow).
-# Workspace members stay editable against /code-dot-org/python, the live
-# mounted tree.
+# This installs the same delta shape into /opt/venv, outside the repo
+# mount's shadow. Workspace members stay editable against
+# /code-dot-org/python, the live mounted tree.
 #
-# UV_NO_SYNC=0 must be 0, not empty: uv rejects empty as "not a boolean".
-# The bare `uv run` below (no --no-sync) proves the value parses.
+# UV_NO_SYNC=0 must be 0, not empty. uv rejects an empty value as "not a
+# boolean". The bare `uv run` below, with no --no-sync, proves the value
+# parses.
 ENV \
   UV_NO_SYNC=0 \
   UV_PROJECT_ENVIRONMENT=/opt/venv
@@ -126,12 +132,12 @@ RUN set -eux \
   && uv sync --frozen --quiet \
   && uv run python -c 'import pycdo'
 
-# OS deps need root; the browser installs under the build user's cache so
-# it stays readable without a chown pass.
+# OS deps need root. The browser installs under the build user's cache
+# instead, so it stays readable without a chown pass.
 #
-# HOME is forced to /root for the OS-deps install: cdo-base exports
-# HOME=/home/cdo even for root, which would make npx create a root-owned
-# ~cdo/.npm and EACCES the cdo install that runs right after.
+# HOME is forced to /root for the OS-deps install. cdo-base exports
+# HOME=/home/cdo even for root. Without this override, npx would create a
+# root-owned ~cdo/.npm and EACCES the cdo install that runs right after.
 USER root
 RUN set -eux \
   && HOME=/root npx --yes "playwright@${PLAYWRIGHT_VERSION}" install-deps chromium \
@@ -149,13 +155,13 @@ RUN set -eux \
   && ln -sf "$chrome" /usr/local/bin/chromium
 ENV CHROME_BIN=/usr/local/bin/chromium
 
-# No ENTRYPOINT: devcontainer.json calls dev-bootstrap's `create` and
-# `start` directly.
+# This image sets no ENTRYPOINT. devcontainer.json calls dev-bootstrap's
+# `create` and `start` directly.
 COPY --chown=root:root --chmod=755 dev-bootstrap /usr/local/bin/dev-bootstrap
 
 USER ${USERNAME}
 
-# git needs telling: the repo volume is cloned by root, the container runs
+# git needs telling. The repo volume is cloned by root. The container runs
 # as cdo.
 #
 # ~/.yarn exists ahead of the mount so the named volume arrives owned by

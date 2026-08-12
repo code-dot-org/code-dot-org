@@ -1,10 +1,11 @@
-# Builds cdo-dev, smoke-tests it on docker and podman on amd64 and arm64,
-# and publishes it from staging as a multi-platform manifest (per-arch
-# native builds, stitched — the cdo-base pattern). See docker/dev/README.md.
+# This builds cdo-dev, smoke-tests it on docker and podman on amd64 and
+# arm64, and publishes it from staging as a multi-platform manifest.
+# Per-arch native builds get stitched together, the same as the cdo-base
+# pattern. See docker/dev/README.md.
 #
-# Not triggered by lockfile changes: those are cdo-deps-image's gate. This
-# workflow chains off that image's publish instead, so it rebuilds on the
-# cdo-deps that just shipped.
+# This is not triggered by lockfile changes. Those are cdo-deps-image's
+# gate. This workflow chains off that image's publish instead, so it
+# rebuilds on the cdo-deps that just shipped.
 
 name: cdo-dev-image
 
@@ -27,17 +28,17 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  # Publishes are not governed here; build-push has its own group.
+  # Publishes are not governed here. build-push has its own group.
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
   IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-dev
 
 jobs:
-  # Resolves the dependency layer once, by content key, so every build gets
-  # the same digest; see docker/deps/README.md#the-content-key. Also
-  # filters the workflow_run chain, which fires for failed runs and other
-  # branches too.
+  # This resolves the dependency layer once, by content key, so every
+  # build gets the same digest. See docker/deps/README.md#the-content-key.
+  # It also filters the workflow_run chain, which fires for failed runs
+  # and other branches too.
   resolve-deps:
     name: resolve cdo-deps digest
     runs-on: ubuntu-24.04
@@ -117,8 +118,8 @@ jobs:
       - name: Smoke test
         run: ./docker/dev/smoke-test.sh cdo-dev:smoke ${{ matrix.engine }}
 
-  # One job per architecture, natively — no qemu. Each pushes an
-  # arch-suffixed tag; stitch merges them into the consumer-facing ones.
+  # One job runs per architecture, natively, with no qemu. Each pushes an
+  # arch-suffixed tag. stitch merges them into the consumer-facing ones.
   build-push:
     name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
@@ -129,11 +130,12 @@ jobs:
           - { arch: amd64, runs-on: ubuntu-24.04 }
           - { arch: arm64, runs-on: ubuntu-24.04-arm }
     runs-on: ${{ matrix.runs-on }}
-    # Inert until its deployment-branch policy is set; see docker/deps/README.md.
+    # This is inert until its deployment-branch policy is set. See
+    # docker/deps/README.md.
     environment: ghcr-publish
-    # Per-arch group: the two arch legs of one run must not share a group,
-    # or they would cancel each other. Safe to cancel — nothing resolves
-    # `latest` programmatically.
+    # This groups per architecture. The two arch legs of one run must not
+    # share a group, or they would cancel each other. This is safe to
+    # cancel. Nothing resolves `latest` programmatically.
     concurrency:
       group: cdo-dev-publish-${{ matrix.arch }}
       cancel-in-progress: true
@@ -162,26 +164,28 @@ jobs:
             --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
             -t cdo-dev:publish docker/dev/
 
-      # Tests the image actually being published, not the matrix's copies.
+      # This tests the image actually being published, not the matrix's
+      # copies.
       - name: Smoke test
         run: ./docker/dev/smoke-test.sh cdo-dev:publish docker
 
-      # Not build-push-action with push: true — that publishes in the step
-      # that builds, before the smoke suite can fail the job.
+      # This does not use build-push-action with push: true. That would
+      # publish in the step that builds, before the smoke suite can fail
+      # the job.
       #
-      # Keyed by commit and architecture, and nothing a consumer resolves:
-      # the stitch job builds every consumer-facing tag from this immutable
-      # pair, so a racing publish or a failed run's leftover tag cannot
-      # leak into it.
+      # The tag is keyed by commit and architecture. No consumer resolves
+      # it. The stitch job builds every consumer-facing tag from this
+      # immutable pair. A racing publish or a leftover tag from a failed
+      # run cannot leak in.
       - name: Push cdo-dev (per-arch tag)
         run: |
           set -euxo pipefail
           docker tag cdo-dev:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
           docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
-  # Until this runs, only the arch-suffixed tags exist, so a half-published
-  # state is visible as such instead of resolving to one arch under the
-  # final name.
+  # Until this runs, only the arch-suffixed tags exist. A half-published
+  # state is therefore visible as such, instead of resolving to one arch
+  # under the final name.
   stitch:
     name: stitch multi-platform manifest
     if: github.event_name != 'pull_request'
@@ -201,8 +205,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # No checkout: this tag contract has no content key, so
-      # metadata-action needs only the event context.
+      # This step needs no checkout. This tag contract has no content
+      # key, so metadata-action needs only the event context.
       - name: Compute tags
         id: meta
         uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0

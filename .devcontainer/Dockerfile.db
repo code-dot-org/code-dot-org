@@ -1,11 +1,11 @@
-# cdo-devdb: mysql:8.0 carrying a pre-seeded dashboard datadir, so a
-# devcontainer starts against a populated database instead of running a
-# two-hour dashboard:setup_db.
+# cdo-devdb is mysql:8.0 carrying a pre-seeded dashboard datadir. A
+# devcontainer starts against a populated database this way, instead of
+# running a long dashboard:setup_db.
 #
-# The datadir sits at /opt/mysql-data, not /var/lib/mysql: the official
-# image declares that path VOLUME, and docker copies several gigabytes into
-# a fresh anonymous volume on every start. A path with no VOLUME is read in
-# place instead, so the database is scratch space — `docker compose down`
+# The datadir sits at /opt/mysql-data, not /var/lib/mysql. The official
+# image declares that path VOLUME, and docker copies it into a fresh
+# anonymous volume on every start. A path with no VOLUME is read in place
+# instead. That makes the database scratch space. `docker compose down`
 # discards writes, and the next container starts from this datadir again.
 #
 #   .devcontainer/preseed-db.sh
@@ -16,11 +16,12 @@ FROM mysql:8.0
 # mysql:8.0 runs as uid:gid 999:999.
 ADD --chown=999:999 mysql-data.tar /opt/mysql-data/
 
-# CMD's flags reach mysqld directly; the base image's entrypoint passes
+# CMD's flags reach mysqld directly. The base image's entrypoint passes
 # unrecognized args through as server arguments.
 #
 # --default-time-zone stands in for SETUP.md's `SET PERSIST time_zone =
-# '+00:00'`, which a container can't inherit — SET PERSIST writes into the
-# datadir, and this one starts fresh each time. Stating it on the command
-# line makes it a property of the image, independent of the host's clock.
+# '+00:00'`. A container cannot inherit that setting. SET PERSIST writes
+# into the datadir, and this one starts fresh each time. Stating it on the
+# command line makes it a property of the image, independent of the host's
+# clock.
 CMD ["--datadir=/opt/mysql-data", "--default-time-zone=+00:00"]
