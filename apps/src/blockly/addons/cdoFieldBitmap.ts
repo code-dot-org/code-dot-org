@@ -47,7 +47,11 @@ export class CdoFieldBitmap extends FieldBitmap {
         this.fromXml(BlocklyCore.utils.xml.textToDom(text));
         return;
       }
-      this.setValue(JSON.parse(text));
+      try {
+        this.setValue(JSON.parse(text));
+      } catch (e) {
+        console.warn("Invalid state; can't parse JSON:", text, e);
+      }
       return;
     }
     this.setValue(state);

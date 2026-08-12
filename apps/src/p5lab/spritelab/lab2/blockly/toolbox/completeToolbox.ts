@@ -27,7 +27,6 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
 
 // Blocks registered outside the DB block pool (Blockly core, blocksCommon,
 // plugins), which installCustomBlocks doesn't report in its category map.
-// Mirrors GamelabJr#common_blocks.
 const COMMON_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
   Math: [
     'math_number',

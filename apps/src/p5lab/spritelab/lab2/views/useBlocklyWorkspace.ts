@@ -23,10 +23,9 @@ import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
 
-// In toolbox edit mode the toolbox holds every available block and the
-// workspace holds the level's toolbox definition as blocks. Start mode also
-// gets the complete toolbox, so start code isn't limited to the student
-// toolbox.
+// In toolbox edit mode the roles swap: the toolbox offers every available block
+// (so any of them can be added to the level's toolbox), and the workspace holds
+// the level's toolbox definition itself, laid out as category blocks to edit and save.
 const editBlocksMode = getAppOptionsEditBlocks();
 const isToolboxMode = editBlocksMode === TOOLBOX_BLOCKS;
 const isStartMode = editBlocksMode === START_SOURCES;
