@@ -7,7 +7,7 @@ import {forwardRef} from 'react';
 import {Theme} from '@/common/contexts';
 import {ComponentSizeXSToL} from '@/common/types';
 
-/** `TooltipProps` is taken by the legacy tooltip. */
+/** MUI's tooltip props plus ours; the legacy tooltip still owns `TooltipProps`. */
 export interface CdoTooltipProps extends MuiTooltipProps {
   /** Defaults to 'm'. */
   size?: ComponentSizeXSToL;
@@ -33,6 +33,12 @@ export interface CdoTooltipProps extends MuiTooltipProps {
  * gates focus-opening on `:focus-visible`. `arrow` and `describeChild` default
  * on via the theme, unlike MUI.
  */
+/** MUI already gates focus-opening on `:focus-visible`, so this is the lot. */
+const KEYBOARD_ONLY_PROPS = {
+  disableHoverListener: true,
+  disableTouchListener: true,
+};
+
 // forwardRef, or React drops the ref before it reaches the trigger.
 const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
   {
@@ -45,27 +51,27 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
   },
   ref,
 ) {
-  // Attributes, not props: MUI forwards props it doesn't know to the child.
-  const ours = {'data-size': size, ...(dataTheme && {'data-theme': dataTheme})};
-  const theirs = slotProps?.tooltip;
+  const callerTooltipProps = slotProps?.tooltip;
 
   return (
     <MuiTooltip
       ref={ref}
       slotProps={{
         ...slotProps,
-        // Always a function, so the caller's own form needs no branch here.
+        // Returning a function leaves the caller's own form as the only shape
+        // to unwrap. Size and theme go on as attributes rather than props,
+        // because MUI forwards props it doesn't recognize to the child.
         tooltip: ownerState => ({
-          ...(typeof theirs === 'function' ? theirs(ownerState) : theirs),
-          ...ours,
+          ...(typeof callerTooltipProps === 'function'
+            ? callerTooltipProps(ownerState)
+            : callerTooltipProps),
+          'data-size': size,
+          ...(dataTheme && {'data-theme': dataTheme}),
         }),
       }}
       {...muiTooltipProps}
       // After the spread, so keyboardOnly beats an explicit disable*Listener.
-      {...(keyboardOnly && {
-        disableHoverListener: true,
-        disableTouchListener: true,
-      })}
+      {...(keyboardOnly && KEYBOARD_ONLY_PROPS)}
     >
       {children}
     </MuiTooltip>

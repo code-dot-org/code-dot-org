@@ -17,6 +17,11 @@ import {Tooltip, CdoTooltipProps} from './../index';
  * styled bubble is `.MuiTooltip-tooltip` inside it, and carries our attributes.
  */
 describe('Design System - Tooltip (MUI)', () => {
+  let user: ReturnType<typeof userEvent.setup>;
+  beforeEach(() => {
+    user = userEvent.setup();
+  });
+
   // Plain <button>: an MUI one injects the MuiButton overrides, whose
   // `:not(:has(...))` selectors crash jsdom on getComputedStyle.
   const renderTooltip = (props: Partial<CdoTooltipProps> = {}) =>
@@ -41,7 +46,6 @@ describe('Design System - Tooltip (MUI)', () => {
 
   describe('default behavior, without keyboardOnly', () => {
     it('opens on hover', async () => {
-      const user = userEvent.setup();
       renderTooltip();
 
       await user.hover(screen.getByRole('button'));
@@ -52,7 +56,6 @@ describe('Design System - Tooltip (MUI)', () => {
     });
 
     it('still opens on keyboard focus', async () => {
-      const user = userEvent.setup();
       renderTooltip();
 
       await user.tab();
@@ -71,7 +74,6 @@ describe('Design System - Tooltip (MUI)', () => {
     });
 
     it('shows a tail by default, unlike MUI', async () => {
-      const user = userEvent.setup();
       renderTooltip();
 
       await user.hover(screen.getByRole('button'));
@@ -81,7 +83,6 @@ describe('Design System - Tooltip (MUI)', () => {
     });
 
     it('drops the tail when arrow is false', async () => {
-      const user = userEvent.setup();
       renderTooltip({arrow: false});
 
       await user.hover(screen.getByRole('button'));
@@ -100,7 +101,6 @@ describe('Design System - Tooltip (MUI)', () => {
     });
 
     it('lets keyboardOnly win over an explicit disableHoverListener', async () => {
-      const user = userEvent.setup();
       renderTooltip({keyboardOnly: true, disableHoverListener: false});
 
       await user.hover(screen.getByRole('button'));
@@ -110,7 +110,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('opens on keyboard focus', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly();
 
     expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
@@ -122,7 +121,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('stays closed on hover', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly();
 
     await user.hover(screen.getByRole('button'));
@@ -159,7 +157,6 @@ describe('Design System - Tooltip (MUI)', () => {
       });
 
     try {
-      const user = userEvent.setup();
       renderKeyboardOnly();
 
       await user.tab();
@@ -172,7 +169,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('closes on blur', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly();
 
     await user.tab();
@@ -186,7 +182,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('closes on Escape while the trigger keeps focus', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly();
 
     await user.tab();
@@ -201,7 +196,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('describes the trigger instead of renaming it, and adds no title attribute', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly();
 
     const trigger = screen.getByRole('button', {name: 'trigger'});
@@ -218,7 +212,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('renames the trigger when describeChild is false', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly({describeChild: false});
 
     await user.tab();
@@ -233,7 +226,6 @@ describe('Design System - Tooltip (MUI)', () => {
   it.each(['xs', 's', 'm', 'l'] as const)(
     'passes size "%s" to the tooltip slot',
     async size => {
-      const user = userEvent.setup();
       renderKeyboardOnly({size});
 
       await user.tab();
@@ -243,7 +235,6 @@ describe('Design System - Tooltip (MUI)', () => {
   );
 
   it('defaults to size "m"', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly();
 
     await user.tab();
@@ -252,7 +243,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('puts data-theme on the tooltip, not on the trigger', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly({'data-theme': 'Dark'});
 
     expect(screen.getByRole('button')).not.toHaveAttribute('data-theme');
@@ -263,7 +253,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('keeps caller tooltip slotProps given as an object', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly({
       'data-theme': 'Dark',
       slotProps: {tooltip: {className: 'callerClass'}},
@@ -278,7 +267,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('keeps caller tooltip slotProps given as a function', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly({
       'data-theme': 'Dark',
       slotProps: {
@@ -296,7 +284,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('keeps the caller className passed via classes.tooltip', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly({size: 's', classes: {tooltip: 'callerClass'}});
 
     await user.tab();
@@ -309,8 +296,6 @@ describe('Design System - Tooltip (MUI)', () => {
   it("does not swallow the child's own focus and blur handlers", async () => {
     const onFocus = vi.fn();
     const onBlur = vi.fn();
-    const user = userEvent.setup();
-
     render(
       <Tooltip title="tooltipText">
         <button type="button" onFocus={onFocus} onBlur={onBlur}>
@@ -327,7 +312,6 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('renders nothing for an empty title', async () => {
-    const user = userEvent.setup();
     renderKeyboardOnly({title: ''});
 
     await user.tab();
@@ -337,7 +321,6 @@ describe('Design System - Tooltip (MUI)', () => {
 
   describe('themed styles', () => {
     it('styles the tooltip with our color and shape tokens', async () => {
-      const user = userEvent.setup();
       renderTooltip();
 
       await user.tab();
@@ -365,7 +348,6 @@ describe('Design System - Tooltip (MUI)', () => {
     ] as const)(
       'gives size "%s" its own text and arrow metrics',
       async (size, fontSize, lineHeight, arrowFontSize) => {
-        const user = userEvent.setup();
         renderTooltip({size});
 
         await user.tab();

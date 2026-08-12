@@ -53,12 +53,10 @@ export const TOOLTIP_OVERRIDES: Components<Theme>['MuiTooltip'] = {
       textAlign: 'center',
       fontWeight: 400,
       ...SIZES.m, // a bare MUI <Tooltip> sets no data-size
-      ...Object.fromEntries(
-        Object.entries(SIZES).map(([size, style]) => [
-          `&[data-size="${size}"]`,
-          style,
-        ]),
-      ),
+      '&[data-size="xs"]': SIZES.xs,
+      '&[data-size="s"]': SIZES.s,
+      '&[data-size="m"]': SIZES.m,
+      '&[data-size="l"]': SIZES.l,
     },
     arrow: {color: BACKGROUND}, // MUI fills the arrow from currentColor
   },
