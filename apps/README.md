@@ -97,7 +97,7 @@ Two other levers:
   which is faster than rebuilding under webpack to find out.
 - `RSPACK_NO_LAZY=1 yarn start --rspack` compiles dynamic imports up
   front instead of when a page first requests them. The lazy default is
-  part of the fast startup, but the deferred chunks exist only inside
+  a small startup win, but the deferred chunks exist only inside
   the dev server: a page loaded straight from Rails on :3000 while the
   rspack server owns `build/package/js` hits stubs whose requests
   nothing answers. Set this if that is your workflow.
