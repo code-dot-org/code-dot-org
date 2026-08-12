@@ -33,6 +33,25 @@ describe('the use-rule dropdown', () => {
     expect(rows.length).toBeGreaterThan(1);
   });
 
+  it('does not offer the rules every world already has', () => {
+    // Space and Appearance are seeded into every world (WorldBuilder.rulesInPlay
+    // and blockly/foundation), so offering them asks a learner to affirm a
+    // tautology — and one of the two was the row a `use rule` block defaulted
+    // to, which is how an unfinished block used to read "use rule Has Space".
+    const labels = options().map(([label]) => label);
+    expect(labels).not.toContain('Has Space');
+    expect(labels).not.toContain('Has Appearance');
+  });
+
+  it('never offers import as the only row', () => {
+    // With no rules registered — a project holding none, which is now possible
+    // for the whole list — a fresh block takes the first option as its value,
+    // and a block whose value is the import sentinel generates an import of
+    // `__import_rule__`.
+    const rows = options();
+    expect(rows[0]).toEqual(['(none)', '']);
+  });
+
   it('is how gravity reaches a project at all', () => {
     // Gravity is no longer a built-in, so the list must not claim it — the only
     // route is the import row.

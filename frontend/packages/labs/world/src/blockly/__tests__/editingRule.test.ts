@@ -59,8 +59,14 @@ describe('the `use rule` dropdown', () => {
     const own = {};
     setEditingRule(own as never, 'rules/wind');
     expect(useRuleOptions(own).map(([, value]) => value)).not.toContain('Wind');
-    // The built-ins are still there — a rule may use those.
-    expect(useRuleOptions(own).map(([, value]) => value)).toContain('Space');
+    // And with the project's only other rule being itself, what is left is the
+    // empty row and the import — not the built-ins, which are in play for every
+    // world without being named (blockly/foundation), and not `(import…)` on
+    // its own, which a fresh block would have taken as its value.
+    expect(useRuleOptions(own)).toEqual([
+      ['(none)', ''],
+      ['(import…)', '__import_rule__'],
+    ]);
   });
 
   it('asks the workspace a flyout block would be dragged into', () => {
