@@ -93,10 +93,10 @@ class HttpCache
     CACHED_UNITS + UI_TEST_CACHED_UNITS
   end
 
-  # Maps each cached unit to the URL pattern covering its script levels. Assume
-  # all cached units are in single unit courses.
-  def self.cached_units_map(env = rack_env)
-    cached_units(env).to_h {|unit_name| [unit_name, "/courses/#{unit_name}/units/1/lessons/*"]}
+  # The URL pattern covering each cached unit's script levels. Assume all cached
+  # units are in single unit courses.
+  def self.cached_unit_path_patterns(env = rack_env)
+    cached_units(env).map {|unit_name| "/courses/#{unit_name}/units/1/lessons/*"}
   end
 
   # Same list under the older "script" name, which ScriptConfig still speaks.
@@ -302,7 +302,7 @@ class HttpCache
             cookies: allowlisted_cookies
           },
           {
-            path: cached_units_map(env).values,
+            path: cached_unit_path_patterns(env),
             headers: ALLOWLISTED_HEADERS,
             cookies: default_cookies
           },
