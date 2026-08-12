@@ -90,6 +90,7 @@ assert_db_config() {
   # to surface later as a socket error against /run/mysqld/mysqld.sock.
   local locals=/code-dot-org/locals.yml
   local host="${DB_HOST:-db}"
+  [ "${CDO_SKIP_DB_ASSERT:-}" = "1" ] && return 0
   [ -f "$locals" ] || return 0
   grep -qE "^db_writer:.*@${host}[:/]" "$locals" && return 0
 
@@ -98,29 +99,62 @@ assert_db_config() {
   exit 1
 }
 
+db_query() {
+  # One place that knows how to reach the sidecar. Credentials come from the
+  # environment so a compose file or a CDO_LOCALS with its own can say so;
+  # an empty DB_PASSWORD means "no -p at all", which is not the same as -p''.
+  local pw_arg=()
+  [ -n "${DB_PASSWORD-password}" ] && pw_arg=(-p"${DB_PASSWORD-password}")
+  mysql -h "${DB_HOST:-db}" -u "${DB_USER:-root}" "${pw_arg[@]}" -N -e "$1"
+}
+
+migration_versions_on_disk() {
+  # 20260805182458_drop_contact_rollups_final.rb -> 20260805182458
+  basename -a "${1:-db/migrate}"/*.rb 2>/dev/null |
+    sed -n 's/^\([0-9][0-9]*\)_.*\.rb$/\1/p' | sort -u
+}
+
+versions_missing_from_db() {
+  # $1 and $2 are newline-separated version lists. Prints the versions on disk
+  # that the database has not applied.
+  #
+  # Sets, not counts. A rebase that drops one migration and adds another
+  # leaves the counts equal while a version is genuinely pending, and one
+  # orphaned schema_migrations row — a migration deleted after it ran — leaves
+  # them unequal forever, so every container start paid a full dev+test
+  # db:migrate. Extra rows in the database are not our business: they are what
+  # a rolled-back branch looks like, and rake cannot act on them either.
+  comm -23 <(printf '%s\n' "$1" | sed '/^$/d' | sort -u) \
+           <(printf '%s\n' "$2" | sed '/^$/d' | sort -u)
+}
+
 auto_migrate() {
   # Auto-apply pending migrations if Rails and a DB are available.
-  # Uses a lightweight MySQL query instead of booting Rails (saves ~60s).
+  # Compares version sets with one query instead of booting Rails (saves ~60s).
   [ -f /code-dot-org/dashboard/Rakefile ] || return 0
   command -v mysql >/dev/null 2>&1 || return 0
 
   cd /code-dot-org/dashboard
 
-  # Count migration files vs schema_migrations rows without booting Rails.
-  local file_count dir_count
-  # shellcheck disable=SC2012 # migration filenames are ls-safe by convention
-  file_count=$(ls db/migrate/*.rb 2>/dev/null | wc -l)
-  dir_count=$(mysql -h "${DB_HOST:-db}" -u root -ppassword -N -e \
-    "SELECT COUNT(*) FROM dashboard_development.schema_migrations" 2>/dev/null || echo 0)
+  local disk db pending
+  disk=$(migration_versions_on_disk db/migrate)
+  [ -n "$disk" ] || return 0
 
-  if [ "$file_count" = "$dir_count" ] 2>/dev/null; then
-    return 0
+  if ! db=$(db_query "SELECT version FROM dashboard_development.schema_migrations" 2>/dev/null); then
+    # Our probe failed, but rake reads locals.yml rather than DB_USER, so it
+    # may well succeed. Say so and let it decide, rather than skipping
+    # migrations on the strength of a query we could not run.
+    echo "entrypoint: cannot read schema_migrations as '${DB_USER:-root}'@'${DB_HOST:-db}'; running db:migrate to be sure."
+    db=""
   fi
+
+  pending=$(versions_missing_from_db "$disk" "$db")
+  [ -n "$pending" ] || return 0
 
   # Failures here are fatal. A half-migrated database is not a working
   # container, and reporting it as "may be non-fatal" only moves the error to
   # whatever the developer tries first.
-  echo "entrypoint: pending migrations detected ($file_count files vs $dir_count applied), running db:migrate..."
+  echo "entrypoint: $(printf '%s\n' "$pending" | wc -l) pending migration(s), oldest $(printf '%s\n' "$pending" | head -1); running db:migrate..."
   migrate_or_die development
   migrate_or_die test
   echo "entrypoint: migrations complete"

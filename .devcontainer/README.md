@@ -79,6 +79,7 @@ Everything compose reads, in one place — all of it optional, all of it from
 | `CDO_DEV_DB_IMAGE` | `ghcr.io/code-dot-org/cdo-devdb:latest` | the seeded database |
 | `CDO_DEV_MINIO_IMAGE` | `minio/minio:latest` | S3 emulation, and the `init` job that creates its buckets |
 | `CDO_LOCALS` | `./locals.yml.sample` | the file mounted at `/code-dot-org/locals.yml` |
+| `CDO_SKIP_DB_ASSERT` | unset | set to `1` to skip the entrypoint's check that `locals.yml` names the `db` service — for a config that legitimately points somewhere else |
 | `CDO_RAILS_PORT` | `3000` | |
 | `CDO_APPS_PORT` | `9000` | |
 | `CDO_FRONTEND_PORT` | `3036` | the one most likely to collide, if you also run `yarn dev` natively |

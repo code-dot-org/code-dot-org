@@ -123,6 +123,12 @@ services:
       - "localhost-studio.code.org:127.0.0.1"
     environment:
       - RAILS_ENV=development
+      # What the entrypoint's pending-migration probe connects as. It reads
+      # schema_migrations directly rather than booting Rails, so it needs the
+      # credentials spelled out; rake still takes them from locals.yml.
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=password
       # Fetch the prebuilt apps package on first start, so level pages render
       # without a local webpack build. See the README to develop in apps/.
       - DEVCONTAINER_BOOTSTRAP_APPS=true
