@@ -32,7 +32,7 @@ class Image:
     elif len(args) == 1 and isinstance(args[0], PILImage.Image):
       self._pil = args[0].convert("RGBA")
     elif len(args) == 2:
-      width, height = int(args[0]), int(args[1])
+      width, height = int(round(args[0])), int(round(args[1]))
       self._pil = PILImage.new("RGBA", (width, height), (0, 0, 0, 0))
     else:
       raise TypeError("Image expects a filename, an Image, or (width, height)")
@@ -44,10 +44,13 @@ class Image:
     return self._pil.height
 
   def get_pixel(self, x, y):
-    r, g, b, _a = self._pil.getpixel((x, y))
+    r, g, b, _a = self._pil.getpixel((int(round(x)), int(round(y))))
     return Pixel(Color(r, g, b))
 
   def set_pixel(self, x, y, color):
+    # putpixel rejects floats outright, and getpixel would truncate rather
+    # than round, so both ends agree on the pixel only if we round here.
+    x, y = int(round(x)), int(round(y))
     r, g, b = color.to_rgb_tuple()
     existing = self._pil.getpixel((x, y))
     alpha = existing[3] if len(existing) == 4 else 255
@@ -69,8 +72,8 @@ def _load_and_fit(filename):
     return pil
   if height >= width:
     target_height = MAX_HEIGHT
-    target_width = int(width / height * MAX_HEIGHT)
+    target_width = int(round(width / height * MAX_HEIGHT))
   else:
     target_width = MAX_WIDTH
-    target_height = int(height / width * MAX_WIDTH)
+    target_height = int(round(height / width * MAX_WIDTH))
   return pil.resize((target_width, target_height))

@@ -25,6 +25,10 @@ def test_rgb_channels_are_clamped():
   assert Color(300, -5, 40).to_rgb_tuple() == (255, 0, 40)
 
 
+def test_rgb_channels_round_rather_than_truncate():
+  assert Color(200 / 3, 10.4, 10.6).to_rgb_tuple() == (67, 10, 11)
+
+
 def test_copy_constructor():
   original = Color(1, 2, 3)
   assert Color(original).to_rgb_tuple() == (1, 2, 3)

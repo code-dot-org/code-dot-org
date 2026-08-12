@@ -36,7 +36,7 @@ def render(actions):
     elif kind is SceneActionType.PAUSE:
       seconds = max(action.seconds, MIN_PAUSE_SECONDS)
       frames.append(canvas.copy())
-      durations.append(int(seconds * 1000))
+      durations.append(int(round(seconds * 1000)))
     elif kind is SceneActionType.DRAW_IMAGE:
       _draw_image(canvas, action)
     elif kind is SceneActionType.DRAW_TEXT:
@@ -80,22 +80,25 @@ def _clear(canvas, color):
 
 def _draw_image(canvas, action):
   source = action.image.to_pil()
+  # resize and paste reject floats, so round here rather than in every caller.
+  x = int(round(action.x))
+  y = int(round(action.y))
   if action.size != UNSPECIFIED:
-    width = action.size
-    height = int(source.height * (width / source.width))
+    width = int(round(action.size))
+    height = int(round(source.height * (width / source.width)))
   else:
-    width = action.width
-    height = action.height
+    width = int(round(action.width))
+    height = int(round(action.height))
   scaled = source.resize((max(width, 1), max(height, 1)))
   if action.rotation:
     layer = PILImage.new("RGBA", (canvas.width, canvas.height), (0, 0, 0, 0))
-    layer.paste(scaled, (action.x, action.y), scaled)
+    layer.paste(scaled, (x, y), scaled)
     # Rotate clockwise about the image's top-left corner. Pillow rotates
     # counterclockwise, hence the negated angle.
-    layer = layer.rotate(-action.rotation, center=(action.x, action.y))
+    layer = layer.rotate(-action.rotation, center=(x, y))
     canvas.alpha_composite(layer)
   else:
-    canvas.paste(scaled, (action.x, action.y), scaled)
+    canvas.paste(scaled, (x, y), scaled)
 
 
 def _draw_text(canvas, action):
@@ -119,8 +122,8 @@ def _draw_regular_polygon(draw, action):
   theta = 2 * math.pi / action.sides
   points = []
   for i in range(action.sides):
-    px = int(math.cos(theta * i) * action.radius) + action.x
-    py = int(math.sin(theta * i) * action.radius) + action.y
+    px = int(round(math.cos(theta * i) * action.radius + action.x))
+    py = int(round(math.sin(theta * i) * action.radius + action.y))
     points.append((px, py))
   draw.polygon(
     points,

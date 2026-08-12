@@ -28,9 +28,9 @@ class Color:
     elif len(args) == 1 and isinstance(args[0], str):
       self.red, self.green, self.blue = _from_string(args[0])
     elif len(args) == 3:
-      self.red = _sanitize(int(args[0]))
-      self.green = _sanitize(int(args[1]))
-      self.blue = _sanitize(int(args[2]))
+      self.red = _sanitize(int(round(args[0])))
+      self.green = _sanitize(int(round(args[1])))
+      self.blue = _sanitize(int(round(args[2])))
     else:
       raise TypeError("Color expects (r, g, b), a Color, or a name/hex string")
 

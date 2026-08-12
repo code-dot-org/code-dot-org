@@ -3,7 +3,7 @@ import io
 from PIL import Image as PILImage
 
 import theater
-from theater import Scene
+from theater import Image, Scene
 from theater.support.constants import THEATER_HEIGHT, THEATER_WIDTH
 from theater.support.renderer import render
 
@@ -50,6 +50,29 @@ def test_draw_text_renders():
   scene.draw_text("Hi", 50, 50)
   gif_bytes = render(scene.get_actions())
   assert len(gif_bytes) > 0
+
+
+def test_draw_image_accepts_float_geometry():
+  # Ordinary student arithmetic like 400 / 2 yields floats, which Pillow's
+  # resize and paste reject outright.
+  image = Image(20, 20)
+  image.clear(theater.Color("red"))
+  scene = Scene()
+  scene.draw_image(image, 400 / 2, 100 / 2, size=60 / 2)
+  scene.draw_image(image, 10.5, 10.5, width=30.5, height=30.5)
+  scene.draw_image(image, 300 / 2, 50.5, size=40.5, rotation=45)
+  gif_bytes = render(scene.get_actions())
+  assert len(gif_bytes) > 0
+
+
+def test_draw_image_lands_at_rounded_position():
+  image = Image(10, 10)
+  image.clear(theater.Color("red"))
+  scene = Scene()
+  scene.draw_image(image, 20.6, 30.6, size=10)
+  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  assert frame.getpixel((21, 31)) == (255, 0, 0)
+  assert frame.getpixel((20, 30)) == (255, 255, 255)
 
 
 def test_play_scenes_renders_and_returns_bytes():
