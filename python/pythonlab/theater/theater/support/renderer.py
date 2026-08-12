@@ -6,8 +6,10 @@ from PIL import Image as PILImage
 from PIL import ImageDraw
 
 from .actions import UNSPECIFIED, SceneActionType
+from .audio import AudioWriter
 from .constants import MAX_FRAMES, MAX_GIF_BYTES, THEATER_HEIGHT, THEATER_WIDTH
 from .fonts import load_font
+from .instrument_samples import load_note_samples
 
 
 class GifTooLargeError(Exception):
@@ -23,16 +25,19 @@ class PauseTooLongError(Exception):
 
 
 def render(actions):
-  """Execute a scene's action list into gif bytes.
+  """Execute a scene's action list into (gif_bytes, wav_bytes).
 
-  Drawing accumulates on a single canvas and each pause snapshots a gif frame.
+  Drawing accumulates on a single canvas, each pause snapshots a gif frame, and
+  audio is blended onto one timeline. wav_bytes is None when the program
+  produced no audio.
   """
   durations = _frame_durations(actions)
   if len(durations) > MAX_FRAMES:
     raise TooManyFramesError(
       f"The animation has too many frames; the limit is {MAX_FRAMES}"
     )
-  return _encode_gif(_iter_frames(actions), durations)
+  gif_bytes = _encode_gif(_iter_frames(actions), durations)
+  return gif_bytes, _render_audio(actions)
 
 
 def _frame_durations(actions):
@@ -50,6 +55,26 @@ def _frame_durations(actions):
   # Final frame with no trailing delay.
   durations.append(0)
   return durations
+
+
+def _render_audio(actions):
+  """Blend the scene's audio onto one timeline; None when there is no audio.
+
+  Like the frame delays, this depends only on the audio and pause actions, so
+  it can be built without touching the canvas.
+  """
+  audio = AudioWriter()
+  for action in actions:
+    kind = action.type
+    if kind is SceneActionType.PLAY_SOUND:
+      audio.write_audio_samples(action.samples)
+    elif kind is SceneActionType.PLAY_NOTE:
+      samples = load_note_samples(action.instrument, action.note)
+      if samples is not None:
+        audio.write_audio_samples(samples, action.seconds)
+    elif kind is SceneActionType.PAUSE:
+      audio.add_delay(action.seconds)
+  return audio.to_wav_bytes()
 
 
 def _iter_frames(actions):

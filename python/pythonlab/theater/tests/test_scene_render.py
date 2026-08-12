@@ -1,18 +1,27 @@
 import io
+import wave
 
 import pytest
 from PIL import Image as PILImage
 
 import theater
-from theater import Image, Scene
+from theater import Image, Instrument, Scene
+from theater.support.audio import read_samples_from_wav_bytes
 from theater.support.constants import (
   MAX_FRAMES,
   MAX_PAUSE_SECONDS,
   MIN_PAUSE_SECONDS,
+  SAMPLE_RATE,
   THEATER_HEIGHT,
   THEATER_WIDTH,
 )
 from theater.support.renderer import PauseTooLongError, TooManyFramesError, render
+
+
+def _render_gif(actions):
+  """The gif half of render(), for the tests that ignore audio."""
+  gif_bytes, _wav = render(actions)
+  return gif_bytes
 
 
 def test_scene_records_actions():
@@ -35,8 +44,9 @@ def test_pause_produces_multiframe_gif():
   # A final draw with no trailing pause is captured by the closing frame.
   scene.set_fill_color("green")
   scene.draw_rectangle(100, 100, 50, 50)
-  gif_bytes = render(scene.get_actions())
+  gif_bytes, wav_bytes = render(scene.get_actions())
 
+  assert wav_bytes is None
   gif = PILImage.open(io.BytesIO(gif_bytes))
   assert gif.size == (THEATER_WIDTH, THEATER_HEIGHT)
   # Frame after each pause, plus the distinct closing frame.
@@ -46,16 +56,39 @@ def test_pause_produces_multiframe_gif():
 def test_gif_only_when_no_pause_is_single_frame():
   scene = Scene()
   scene.draw_ellipse(10, 10, 50, 50)
-  gif_bytes = render(scene.get_actions())
+  gif_bytes, wav_bytes = render(scene.get_actions())
   gif = PILImage.open(io.BytesIO(gif_bytes))
   assert gif.n_frames == 1
+  assert wav_bytes is None
+
+
+def test_play_note_produces_wav():
+  scene = Scene()
+  scene.play_note(60, 0.5, instrument=Instrument.PIANO)
+  gif_bytes, wav_bytes = render(scene.get_actions())
+  assert wav_bytes is not None
+  with wave.open(io.BytesIO(wav_bytes), "rb") as reader:
+    assert reader.getnchannels() == 1
+    assert reader.getframerate() == SAMPLE_RATE
+    assert reader.getsampwidth() == 2
+  samples = read_samples_from_wav_bytes(wav_bytes)
+  # Truncated to roughly the requested half second.
+  assert abs(len(samples) - SAMPLE_RATE * 0.5) < SAMPLE_RATE * 0.1
+
+
+def test_play_sound_samples():
+  scene = Scene()
+  scene.play_sound([0.1, 0.2, 0.3])
+  _gif, wav_bytes = render(scene.get_actions())
+  samples = read_samples_from_wav_bytes(wav_bytes)
+  assert len(samples) == 3
 
 
 def test_draw_text_renders():
   scene = Scene()
   scene.set_text_color("black")
   scene.draw_text("Hi", 50, 50)
-  gif_bytes = render(scene.get_actions())
+  gif_bytes, _wav = render(scene.get_actions())
   assert len(gif_bytes) > 0
 
 
@@ -74,7 +107,7 @@ def _paused_scene(pause_count):
 
 def test_frame_ceiling_allows_a_full_length_animation():
   # One pause short of the ceiling, since the closing frame occupies a slot.
-  gif = PILImage.open(io.BytesIO(render(_paused_scene(MAX_FRAMES - 1).get_actions())))
+  gif = PILImage.open(io.BytesIO(_render_gif(_paused_scene(MAX_FRAMES - 1).get_actions())))
   assert gif.n_frames == MAX_FRAMES
 
 
@@ -103,7 +136,7 @@ def test_removed_colors_draw_nothing():
   scene.draw_line(0, 10, THEATER_WIDTH, 10)
   scene.draw_rectangle(50, 50, 100, 100)
   scene.draw_ellipse(50, 200, 100, 100)
-  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  frame = PILImage.open(io.BytesIO(_render_gif(scene.get_actions()))).convert("RGB")
   # A point on the line, on the rectangle's edge, and inside the ellipse.
   assert frame.getpixel((100, 10)) == blue
   assert frame.getpixel((50, 50)) == blue
@@ -116,7 +149,7 @@ def test_stroke_only_shapes_keep_their_interior():
   scene.set_stroke_color("red")
   scene.remove_fill_color()
   scene.draw_rectangle(50, 50, 100, 100)
-  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  frame = PILImage.open(io.BytesIO(_render_gif(scene.get_actions()))).convert("RGB")
   assert frame.getpixel((50, 50)) == (255, 0, 0)
   assert frame.getpixel((100, 100)) == (0, 0, 255)
 
@@ -125,7 +158,7 @@ def _single_frame_scene(build_pauses):
   scene = Scene()
   scene.draw_rectangle(0, 0, 10, 10)
   build_pauses(scene)
-  return PILImage.open(io.BytesIO(render(scene.get_actions())))
+  return PILImage.open(io.BytesIO(_render_gif(scene.get_actions())))
 
 
 @pytest.mark.parametrize("seconds", [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000])
@@ -153,7 +186,7 @@ def test_long_animation_is_not_capped_by_total_duration():
     scene.set_fill_color(theater.Color(i * 20, 0, 0))
     scene.draw_rectangle(0, 0, 50, 50)
     scene.pause(MAX_PAUSE_SECONDS)
-  gif = PILImage.open(io.BytesIO(render(scene.get_actions())))
+  gif = PILImage.open(io.BytesIO(_render_gif(scene.get_actions())))
   assert gif.n_frames == 4
   assert gif.info["duration"] == int(MAX_PAUSE_SECONDS * 1000)
 
@@ -185,7 +218,7 @@ def test_draw_regular_polygon_accepts_float_sides():
   scene = Scene()
   scene.set_fill_color("red")
   scene.draw_regular_polygon(200, 200, 12 / 2, 50)
-  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  frame = PILImage.open(io.BytesIO(_render_gif(scene.get_actions()))).convert("RGB")
   assert frame.getpixel((200, 200)) == (255, 0, 0)
 
 
@@ -198,7 +231,7 @@ def test_draw_image_accepts_float_geometry():
   scene.draw_image(image, 400 / 2, 100 / 2, size=60 / 2)
   scene.draw_image(image, 10.5, 10.5, width=30.5, height=30.5)
   scene.draw_image(image, 300 / 2, 50.5, size=40.5, rotation=45)
-  gif_bytes = render(scene.get_actions())
+  gif_bytes = _render_gif(scene.get_actions())
   assert len(gif_bytes) > 0
 
 
@@ -207,7 +240,7 @@ def test_draw_image_lands_at_rounded_position():
   image.clear(theater.Color("red"))
   scene = Scene()
   scene.draw_image(image, 20.6, 30.6, size=10)
-  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  frame = PILImage.open(io.BytesIO(_render_gif(scene.get_actions()))).convert("RGB")
   assert frame.getpixel((21, 31)) == (255, 0, 0)
   assert frame.getpixel((20, 30)) == (255, 255, 255)
 
@@ -215,5 +248,6 @@ def test_draw_image_lands_at_rounded_position():
 def test_play_scenes_renders_and_returns_bytes():
   scene = Scene()
   scene.draw_rectangle(0, 0, 10, 10)
-  gif_bytes = theater.play_scenes(scene)
+  gif_bytes, wav_bytes = theater.play_scenes(scene)
   assert len(gif_bytes) > 0
+  assert wav_bytes is None

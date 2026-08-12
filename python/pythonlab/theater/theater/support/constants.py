@@ -2,6 +2,12 @@
 THEATER_WIDTH = 400
 THEATER_HEIGHT = 400
 
+# Audio format.
+SAMPLE_RATE = 44100
+BITS_PER_SAMPLE = 16
+CHANNELS = 1  # output is mono
+MAX_16_BIT_VALUE = 32768
+
 # Smallest pause/frame duration in seconds; pause() rejects anything shorter.
 MIN_PAUSE_SECONDS = 0.1
 

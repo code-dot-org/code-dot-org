@@ -12,7 +12,7 @@ def make_scene():
 
 def test_play_scenes_returns_gif_bytes_without_a_bridge():
   # No _theater_bridge is installed here, so publishing must be a silent no-op.
-  gif_bytes = play_scenes(make_scene())
+  gif_bytes, _wav = play_scenes(make_scene())
   assert gif_bytes.startswith(b"GIF")
 
 
@@ -22,7 +22,7 @@ def test_play_scenes_publishes_the_rendered_gif(monkeypatch):
   fake_bridge.publish = published.append
   monkeypatch.setitem(sys.modules, "_theater_bridge", fake_bridge)
 
-  gif_bytes = play_scenes(make_scene())
+  gif_bytes, _wav = play_scenes(make_scene())
 
   assert published == [gif_bytes]
 
