@@ -2239,16 +2239,6 @@
       }
     },
     {
-      "key": "338a571d-8f3a-4828-8d74-887af77eec21",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "338a571d-8f3a-4828-8d74-887af77eec21",
-        "lesson_activity.key": "5688685c-b8bf-4563-b285-04a9cce9bb6e"
-      }
-    },
-    {
       "key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa",
       "position": 1,
       "properties": {

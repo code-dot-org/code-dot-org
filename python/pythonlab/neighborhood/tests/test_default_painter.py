@@ -1,3 +1,4 @@
+import subprocess
 import sys
 
 import neighborhood
@@ -15,7 +16,29 @@ def set_up_world(maze, context_type=NeighborhoodContextType.RUN):
   world.set_context_type(context_type)
   return world
 
-def test_painter_is_created_on_first_call_not_on_import(capsys):
+def test_import_does_not_create_a_painter():
+  # A painter built at import time would take the first slot in every program's
+  # NeighborhoodLog, and validation code indexes into that list by position.
+  # This runs in a subprocess because this file imports the package before
+  # pytest starts capturing output, so nothing measured in-process can rule out
+  # a painter having been built at import.
+  program = '\n'.join([
+    'from neighborhood import painter',
+    'from neighborhood.support.world import World',
+    'from neighborhood.support.neighborhood_context_type import NeighborhoodContextType',
+    'world = World()',
+    'world.set_grid_from_string(%r)' % ALL_PASSABLE_MAZE,
+    'world.set_context_type(NeighborhoodContextType.RUN)',
+    'assert painter._default_painter is None',
+    'print("no painter")',
+  ])
+  result = subprocess.run(
+    [sys.executable, '-c', program], capture_output=True, text=True)
+  assert result.returncode == 0, result.stderr
+  # Any painter would have announced itself here with an INITIALIZE_PAINTER.
+  assert result.stdout == 'no painter\n'
+
+def test_painter_is_created_on_first_call(capsys):
   set_up_world(ALL_PASSABLE_MAZE)
   # Setting up a world does not bring a painter with it. Nothing exists, and so
   # nothing announces itself, until one of the functions is called.
