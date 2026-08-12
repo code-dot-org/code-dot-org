@@ -41,18 +41,34 @@ const initialState: LabProjectState = {
 
 // Store the project source in the redux store and tell the project manager
 // to save it.
+//
+// AWAITS THE SAVE, and hands the promise back, so `await dispatch(…)` means
+// what it says. It used to start the save and return, which made two things
+// wrong for every caller that awaited it — and both of them looked like bugs
+// somewhere else:
+//
+//   naming a version   `SaveVersionPanel` awaits this, then reads
+//                      `getCurrentVersionId()` to say which version the name
+//                      belongs to. Un-awaited, that id is still the PREVIOUS
+//                      one, so the comment landed on the version before the one
+//                      just written — and the first named save of a session,
+//                      where there is no previous version, lost its name.
+//   the list after it  the same panel then reloads the version list, which is
+//                      served from the query cache and invalidated by the save.
+//                      Un-awaited, the reload overtook the invalidation and the
+//                      panel redrew the list as it was BEFORE the save.
 export const setAndSaveProjectSources = (
   projectSources: ProjectSources,
   forceSave: boolean = false,
   forceNewVersion: boolean = false,
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return dispatch => {
+): ThunkAction<Promise<void>, RootState, undefined, AnyAction> => {
+  return async dispatch => {
     dispatch(projectSlice.actions.setProjectSource(projectSources));
     dispatch(
       projectSlice.actions.setLastSavedLabConfig(projectSources.labConfig),
     );
     if (LabRegistry.projectManager) {
-      LabRegistry.projectManager?.save(
+      await LabRegistry.projectManager.save(
         projectSources,
         forceSave,
         forceNewVersion,
