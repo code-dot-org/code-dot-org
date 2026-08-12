@@ -1,5 +1,6 @@
-# Allowlist. The context is the repo root (6.7 GB); this cuts it to 56 kB,
-# which is everything Bundler needs to resolve the bundle and nothing else.
+# Allowlist. The context is the repo root (6.7 GB); this cuts it to under a
+# megabyte: everything Bundler needs to resolve the bundle, everything uv
+# needs to sync the venv, and nothing else.
 #
 # A denylist was rejected: it makes every new large directory in the repo a
 # silent context regression, and the k8s/docker equivalent is 486 lines.
@@ -14,9 +15,13 @@
 # the build when an excluded path is COPYed. buildah names the file in the
 # error, which is how the negative test confirms it rather than guessing.
 *
+!.python-version
 !.ruby-version
 !Gemfile
 !Gemfile.lock
+!pyproject.toml
+!uv.lock
+!python
 !dashboard
 dashboard/*
 !dashboard/engines
@@ -25,3 +30,8 @@ dashboard/engines/*/*
 !dashboard/engines/*/lib
 dashboard/engines/*/lib/*
 !dashboard/engines/*/lib/*/version.rb
+
+# Local artifacts that would ride along with python/ from a developer
+# checkout; CI checkouts never contain them.
+**/.venv
+**/__pycache__
