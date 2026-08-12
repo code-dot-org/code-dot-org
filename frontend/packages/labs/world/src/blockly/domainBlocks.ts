@@ -374,7 +374,16 @@ const worldUseTrait = defineBlock({
       if (traitSubjectFor({getSourceBlock: () => block}) === 'camera') {
         return '';
       }
-      const ref = refFromValue(block.getFieldValue('TRAIT'));
+      const trait = block.getFieldValue('TRAIT');
+      // "(none)" — the rules in play offer nothing electable, which is the
+      // ordinary state of a project with no rules now that the two traits every
+      // actor already has are not offered. Same bargain `use rule` makes: an
+      // unfinished block emits nothing rather than `WorldLab.` with no name
+      // after it, which does not parse.
+      if (!trait) {
+        return '';
+      }
+      const ref = refFromValue(trait);
       return `actor.useTraits([${refCode(ref, generator)}]);\n`;
     },
   },
@@ -3727,13 +3736,26 @@ const worldWorld = defineBlock({
 // `rules/`), valued by module path — the generator branches on the `/` a path
 // carries, importing the module rather than reading `WorldLab`.
 //
-// THE ENGINE'S OWN RULES ARE NOT OFFERED. `WorldBuilder` seeds Space and
-// Appearance into every world it builds (`rulesInPlay`), so a row for either is
-// a row asking a learner to affirm a tautology before their game will run;
-// blockly/foundation says the rest of why. Naming one still MEANS what it says
-// — the generator resolves the name through the registry as it always did, and
-// a saved block holding it keeps its value, since a live dropdown keeps a value
-// its list has no option for (bindLiveOptions). Only the offer is gone.
+// WHAT A WORLD ALREADY HAS IS NOT OFFERED, which is the foundation in both its
+// halves (blockly/foundation):
+//
+//   - The ENGINE'S two. `WorldBuilder` seeds Space and Appearance into every
+//     world it builds (`rulesInPlay`).
+//   - A FOUNDATIONAL stock rule the project holds. Holding `rules/input.rule`
+//     is the opting-in — the world generator emits it, resolving the name to
+//     whichever module declares it — so the row beside it says nothing.
+//
+// Either way a row for one asks a learner to affirm a tautology before their
+// game will run. Naming one still MEANS what it says — the generator resolves
+// the name through the registry as it always did, and a saved block holding it
+// keeps its value, since a live dropdown keeps a value its list has no option
+// for (bindLiveOptions). Only the offer is gone.
+//
+// The asymmetry is deliberate, and it is the eject case that decides it: a
+// project rule declaring `Appearance` is offered, because a world naming it is
+// what makes `rulesInPlay` prefer the learner's version over the built-in one
+// it shadows — take the row away and the shadow can never come into play. A
+// project rule declaring `Input` is not, because holding it already did that.
 //
 // Labelled by the rule's ABILITY, not its name: this block says what the world
 // has, and "use rule Has Gravity" is the sentence. The category in the toolbox
@@ -3751,6 +3773,20 @@ const worldWorld = defineBlock({
  * as its value, and a block that silently became "open the import dialog" is
  * not a block.
  */
+/**
+ * The stock rules a project runs by holding, BY NAME — the half of the
+ * foundation the dropdown has to leave out.
+ *
+ * By name because that is how the world generator finds them: it asks the
+ * registry which module declares "Input" and emits that one, so a project that
+ * has written its own is covered by the same word. A `.js` rule declares no
+ * name at all and so is never one of these, which is right — the generator
+ * cannot find it either, and a file nothing puts in play has to stay pickable.
+ */
+const IMPLIED_RULE_NAMES = new Set(
+  FOUNDATIONAL_STOCK_RULES.map(rule => rule.name),
+);
+
 const useRuleOptions = (field?: FieldDropdown): Array<[string, string]> => {
   const identities = projectRuleIdentities();
   // Not the rule this workspace IS: a rule that uses itself generates a module
@@ -3770,7 +3806,10 @@ const useRuleOptions = (field?: FieldDropdown): Array<[string, string]> => {
           return identity
             ? [identity.ability, identity.name]
             : [fileLabel, modulePath];
-        }),
+        })
+        // After the mapping, because what makes a rule foundational is the name
+        // it declares, not the file it happens to sit in.
+        .filter(([, value]) => !IMPLIED_RULE_NAMES.has(value)),
     ),
     ['(import…)', IMPORT_RULE_VALUE],
   ];

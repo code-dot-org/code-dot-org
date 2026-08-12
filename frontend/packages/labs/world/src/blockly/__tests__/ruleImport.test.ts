@@ -7,13 +7,36 @@
 import {afterEach, describe, expect, it, vi} from 'vitest';
 
 import {DOMAIN_BLOCKS} from '../domainBlocks';
+import {setProjectRuleModules} from '../moduleOptions';
 import {
   IMPORT_RULE_VALUE,
   requestRuleImport,
   setRuleImportHandler,
 } from '../ruleImport';
+import {parseRuleMeta} from '../ruleMeta';
+import {registerProjectRules} from '../ruleRegistry';
+import {setProjectRuleMeta} from '../traitOptions';
 
-afterEach(() => setRuleImportHandler(null));
+afterEach(() => {
+  setRuleImportHandler(null);
+  setProjectRuleModules([]);
+  setProjectRuleMeta([]);
+});
+
+/** A project `.rule` at `rules/<file>` declaring `name`, as the project holds it. */
+const holds = (file: string, name: string, ability: string): void => {
+  const meta = parseRuleMeta(
+    `rules/${file}`,
+    JSON.stringify({
+      blocks: {
+        blocks: [{type: 'world_rule', fields: {NAME: name, ABILITY: ability}}],
+      },
+    }),
+  )!;
+  setProjectRuleModules([[file, `rules/${file}`]]);
+  setProjectRuleMeta([meta]);
+  registerProjectRules([meta]);
+};
 
 describe('the use-rule dropdown', () => {
   // The definition hands Blockly the GENERATOR, not a snapshot of it — a
@@ -41,6 +64,23 @@ describe('the use-rule dropdown', () => {
     const labels = options().map(([label]) => label);
     expect(labels).not.toContain('Has Space');
     expect(labels).not.toContain('Has Appearance');
+  });
+
+  it('does not offer a foundational rule the project holds', () => {
+    // Holding `rules/input.rule` is the opting-in — the world generator emits
+    // it whether or not a world names it — so the row beside it says nothing.
+    holds('input', 'Input', 'Responds to Input');
+    expect(options().map(([label]) => label)).not.toContain(
+      'Responds to Input',
+    );
+  });
+
+  it('offers a project rule that shadows one of the engine’s', () => {
+    // The other half of the foundation, and the opposite answer: nothing puts
+    // an ejected Appearance in play except a world naming it, so taking the
+    // row away would leave the built-in it shadows running forever.
+    holds('look', 'Appearance', 'Has Appearance');
+    expect(options().map(([label]) => label)).toContain('Has Appearance');
   });
 
   it('never offers import as the only row', () => {

@@ -241,6 +241,13 @@ describe('domain block generators', () => {
     );
   });
 
+  it('world_use_trait at "(none)" emits nothing', () => {
+    // Reachable in the ordinary way now: an actor in a project whose rules
+    // offer nothing electable, since the two traits every actor already has
+    // are no longer in the dropdown (blockly/foundation).
+    expect(emit('world_use_trait', {TRAIT: ''})).toBe('');
+  });
+
   it('world_use_trait imports a project trait from the rule it names', () => {
     const defs: Record<string, string> = {};
     const code = generatorFor('world_use_trait')(
