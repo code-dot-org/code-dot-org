@@ -30,6 +30,16 @@ class Callout < ApplicationRecord
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
+  # Replaces every callout with the contents of the TSV. A row whose script
+  # level is not in the database yet is skipped, so this must run after the
+  # units its rows name have been seeded.
+  def self.seed_all(filename = 'config/callouts.tsv')
+    transaction do
+      reset_db
+      find_or_create_all_from_tsv!(filename)
+    end
+  end
+
   def self.find_or_create_all_from_tsv!(filename)
     created = []
     CSV.read(filename, **CSV_IMPORT_OPTIONS).each do |row|
