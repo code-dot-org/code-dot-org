@@ -19,15 +19,16 @@
   // and fails the start rather than handing over a half-migrated schema.
   "postStartCommand": "dev-bootstrap start",
 
-  // Sized off measurements, not taste. Memory: the apps dev server alone runs
-  // with an 8 GB node heap, on top of Rails, MySQL and a browser. Storage:
-  // node_modules is 4.1 GB across the two workspaces, the prebuilt apps
-  // package 2.1 GB, a local apps build another 2 GB, the images 7 GB, the
-  // checkout and caches the rest. CPUs: yarn install spends 90s of CPU in 22s
-  // of wall clock, so the parallelism is real.
+  // Sized from measurements, not from taste. The apps webpack dev server
+  // alone uses 6.5 to 14 GB. Add Rails, MySQL, and a jest worker, and a
+  // normal fullstack day crosses 16 GB. Storage: node_modules is 4.1 GB
+  // across the two workspaces, the prebuilt apps package is 2.1 GB, a local
+  // apps build is another 2 GB, the images are 7 GB, and the checkout and
+  // the caches take the rest. CPUs: yarn install uses 90 s of CPU in 22 s of
+  // wall clock, so the parallelism is real.
   "hostRequirements": {
     "cpus": 8,
-    "memory": "16gb",
+    "memory": "32gb",
     "storage": "64gb"
   },
 

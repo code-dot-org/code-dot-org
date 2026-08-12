@@ -14,10 +14,11 @@ in the two halves the lifecycle calls, `create` once per container and
 ## Why it stacks on cdo-deps
 
 The dependency tree arrives warm. cdo-deps installs the production gem
-groups and the production venv; this image clears `BUNDLE_WITHOUT` and
-`BUNDLE_DEPLOYMENT` and installs the remaining development and test gems as
-a delta over the inherited tree, and re-syncs the venv with the dev group. A
-lockfile bump costs the delta, not a cold install of the 1.3 GB bundle.
+groups and the production venv. This image clears `BUNDLE_WITHOUT` and
+`BUNDLE_DEPLOYMENT`, then installs the remaining development and test gems
+as a delta over the inherited tree. It also re-syncs the venv with the dev
+group. A lockfile bump costs the delta, not a cold install of the 1.3 GB
+bundle.
 
 It also means dev and production resolve the same gem versions from the same
 layer. Whatever production loads, the devcontainer loaded first.
@@ -41,11 +42,12 @@ the mount:
 | browsers | `~/.cache/ms-playwright` | installed as the `cdo` user |
 
 The venv's workspace members stay editable and point at
-`/code-dot-org/python` — at runtime that is the mounted checkout's live
-tree, which is exactly what a dev venv should track. `UV_NO_SYNC=0` turns
-off the no-sync cdo-deps sets to keep an immutable image immutable, so a
-plain `uv run` keeps `/opt/venv` current with the mounted lockfile. (It is
-`0` rather than empty because uv, unlike bundler, rejects an empty boolean.)
+`/code-dot-org/python`. At runtime that path is the mounted checkout's live
+tree, which is what a dev venv must track. `UV_NO_SYNC=0` turns off the
+no-sync that cdo-deps sets to keep an immutable image immutable. A plain
+`uv run` therefore keeps `/opt/venv` current with the mounted lockfile. The
+value is `0` and not empty, because uv rejects an empty boolean where
+bundler accepts one.
 
 ## Build
 
@@ -76,8 +78,9 @@ An earlier devcontainer image pre-installed every workspace's node_modules
 so the first `yarn install` was local. That needs each workspace
 `package.json` in the build context, and it cannot be expressed portably:
 `frontend/` is 13 GB on disk against 24 MB tracked, so the context must be
-filtered — and every ignore-file shape that reaches nested files diverges
-between docker and podman, both builds succeeding with different file lists.
+filtered. Every ignore-file shape that reaches nested files behaves
+differently on docker and podman. Both builds then succeed with different
+file lists.
 Listing the files as explicit `COPY` lines is portable but rots.
 
 The cost is one network `yarn install` per repo volume, not per container
@@ -87,23 +90,23 @@ the warm cache is also what lets this build take no repo context at all.
 
 ## amd64 and arm64, natively
 
-`Gemfile.lock` names both `x86_64-linux` and `aarch64-linux`, so the whole
-chain under this image builds natively on both architectures and publishes
-as one multi-platform manifest — on Apple Silicon the devcontainer runs
-native arm64, no emulation. Three gems resolve to prebuilt `aarch64-gnu`
-variants (ffi, google-protobuf, nokogiri); everything else compiles from
-source in cdo-build on both architectures alike.
+`Gemfile.lock` names both `x86_64-linux` and `aarch64-linux`. The whole
+chain under this image therefore builds natively on both architectures, and
+publishes as one multi-platform manifest. On Apple Silicon the devcontainer
+runs native arm64, with no emulation. Three gems resolve to prebuilt
+`aarch64-gnu` variants: ffi, google-protobuf, and nokogiri. Everything else
+compiles from source in cdo-build, the same way on both architectures.
 
 ## Smoke test
 
     ./docker/dev/smoke-test.sh cdo-dev:test docker
     ./docker/dev/smoke-test.sh cdo-dev:test podman
 
-The checks are in two halves: that the delta installed (the dev/test groups
-resolve, the venv carries the dev group in `/opt/venv`) and that nothing
-inherited was lost (the compiled extensions still load after the delta
-install on top of them), plus that `dev-bootstrap` is installed and
-runnable.
+The checks are in three groups. First, that the delta installed: the
+dev/test groups resolve, and the venv carries the dev group in `/opt/venv`.
+Second, that nothing inherited was lost: the compiled extensions still load
+after the delta installed on top of them. Third, that `dev-bootstrap` is
+installed and runnable.
 
 ## Dual-engine policy
 

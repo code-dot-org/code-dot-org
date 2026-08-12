@@ -18,24 +18,24 @@ on, so what you load in development is what production resolved.
 
 ## In a codespace
 
-Create a codespace on your branch. If a prebuild is available it comes up in
-about a minute; otherwise the first start also pulls the images, runs both
-`yarn install`s, downloads the prebuilt apps package, and applies any
-migrations newer than the database image.
+Create a codespace on your branch. With a prebuild it starts in about a
+minute. Without one, the first start also pulls the images, runs both
+`yarn install`s, downloads the prebuilt apps package, and applies the
+migrations that are newer than the database image.
 
 ```shell
 bin/dashboard-server        # then open the forwarded port 3000
 ```
 
-That is the whole setup. The clone in a codespace exists for the container
-and nothing else, so there is nothing on the machine for it to collide with —
-no native MySQL on 3306, no `locals.yml` from a previous life, no half-built
+That is the whole setup. The clone in a codespace belongs to the container
+and to nothing else. Nothing on the machine can collide with it: no native
+MySQL on 3306, no `locals.yml` from an earlier install, no half-built
 `apps/`.
 
-Ports 3000, 9000 and 3036 are forwarded and labelled. The machine type comes
-from `hostRequirements` in `devcontainer.json`: 8 cores, 16 GB, 64 GB of
-storage, which is what the apps dev server and the two `node_modules` trees
-actually need.
+The forwarded ports are labelled. `hostRequirements` in
+`devcontainer.json` asks for 8 cores, 32 GB of memory, and 64 GB of storage.
+Those numbers come from measurement. The apps dev server alone uses 6.5 to
+14 GB, and Rails, MySQL, and a test worker run beside it.
 
 ## On your own machine
 
@@ -92,9 +92,9 @@ Everything compose reads, in one place — all of it optional, all of it from
 | `CDO_DS_STORYBOOK_PORT` | `6006` | taken already if you run the design-system Storybook natively |
 | `CDO_DB_PORT` | `13306` | MySQL, for GUI clients |
 
-To make the clone the container works in, cloning from a checkout you already
-have is much faster than cloning from GitHub — git hardlinks the objects, so
-it costs about 12 seconds and ~2 GB rather than a full fetch:
+The container needs a clone of its own. Clone from a checkout you already
+have, not from GitHub. Git hardlinks the objects, so the clone costs about
+12 seconds and 2 GB instead of a full fetch:
 
 ```shell
 git clone /path/to/your/checkout ~/src/cdo-devcontainer
@@ -110,10 +110,10 @@ where, before you decide it is fine.
 ## Config
 
 `locals.yml.sample` is mounted read-only over `/code-dot-org/locals.yml`, so
-configuration comes from this directory. A fresh clone has no `locals.yml` at
-all and needs none; a checkout that was also set up natively has one that
-names a database this container cannot reach, and it is simply not used.
-Nothing is copied and nothing is overwritten.
+the configuration comes from this directory. A fresh clone has no
+`locals.yml`, and needs none. A checkout that was also set up natively has
+one that names a database this container cannot reach; the container does not
+use it. Nothing is copied, and nothing is overwritten.
 
 To change any of it, keep your own copy and point compose at it:
 
@@ -227,12 +227,12 @@ serve to Rails, and reloads on save.
 Routines that work in here but are not set up for you. One caveat each,
 because each one has exactly one thing that bites.
 
-**Levelbuilder authoring.** Set `levelbuilder_mode: true` in your `CDO_LOCALS`
-copy (`dashboard/config/environments/development.rb:78`). Authoring writes
-`.level` and `.script` files into the mounted tree, so they show up in
-`git status` on the host like any other edit, and many of them are behind LFS
-— check `git check-attr filter -- <path>` before assuming a diff is text.
-Reload one script into the database with
+**Levelbuilder authoring.** Set `levelbuilder_mode: true` in your
+`CDO_LOCALS` copy. See `dashboard/config/environments/development.rb:78`.
+Authoring writes `.level` and `.script` files into the mounted tree. They
+appear in `git status` on the host like any other edit. Many of those paths
+are behind LFS, so run `git check-attr filter -- <path>` before you read a
+diff as text. To reload one script into the database, run
 `bundle exec rake seed:single_script SCRIPT_NAME=express-2019`.
 
 **Background jobs.** The development default is
@@ -249,10 +249,10 @@ compose bridge instead, so the REPL on the error page silently does not
 render. The stack trace still does. Widen the permitted IPs in a local
 initializer if you need the console.
 
-**Never `bundle exec rake install`.** The image is the install. That task
-writes `.bundle/config` into the mounted tree, which then follows the
-checkout onto the host and points its bundler at paths that exist only in
-here.
+**Do not run `bundle exec rake install`.** The image is the install. That
+task writes `.bundle/config` into the mounted tree. The file then follows the
+checkout onto the host, where it points bundler at paths that exist only in
+this container.
 
 **Playwright firefox and webkit** are not in the image — chromium only, which
 is what the suite runs by default. `yarn exec playwright install --with-deps
@@ -309,12 +309,12 @@ pre-seeded datadir, and `dev-bootstrap start` replays the missing migrations.
 That costs a couple of minutes, not a reseed. Pre-seed again when the replay
 stops being cheap.
 
-The datadir sits at a path with no `VOLUME` declaration, so those writes are
-in the container's own layer — but the `mysql:8.0` and `minio/minio` images
+The datadir sits at a path with no `VOLUME` declaration, so those writes stay
+in the container's own layer. The `mysql:8.0` and `minio/minio` images do
 declare `/var/lib/mysql` and `/data`, and docker gives each container a fresh
-anonymous volume for them. `docker compose down` leaves those behind; `down
--v` is what actually reclaims the space, and it is also what discards the
-objects you uploaded to the emulated S3.
+anonymous volume for them. `docker compose down` leaves those volumes behind.
+Use `down -v` to reclaim the space. That command also discards the objects
+you uploaded to the emulated S3.
 
 ### Caches
 

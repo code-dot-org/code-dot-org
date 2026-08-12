@@ -1,21 +1,21 @@
-# Builds cdo-devdb, the seeded MySQL sidecar the devcontainer starts against,
-# and publishes it from staging. See .devcontainer/README.md.
+# Builds cdo-devdb, the pre-seeded MySQL sidecar the devcontainer starts
+# against, and publishes it from staging. See .devcontainer/README.md.
 #
-# This is the one image in the set that cannot be built from a Dockerfile
-# alone: its content is a *seeded database*, produced by running
-# db:setup_or_migrate and seed:default against a real checkout — about 20
-# minutes, most of it loading curriculum out of dashboard/config, plus a
-# further minute and a quarter preparing and seeding the test database that
-# `RAILS_ENV=test` runs against. Baking that in CI is the entire point. A
-# codespace has no seeded MySQL and no tarball to make one from; it pulls
-# this.
+# This image is the one in the set that a Dockerfile alone cannot build. Its
+# content is a seeded database. To make it, run dashboard:setup_db and
+# db:test:prepare against a real checkout: about 20 minutes for the
+# development database, most of it curriculum out of dashboard/config, and a
+# further minute and a quarter for the test database that `RAILS_ENV=test`
+# runs against. CI does that work so a developer does not have to. A
+# codespace has no seeded MySQL and no tar file to make one from. It pulls
+# this image.
 #
-# Multi-arch from one pre-seed run. An InnoDB datadir is architecture-portable and
-# Dockerfile.db has no RUN steps, so both images come from the same tar with
-# nothing executed at build time — no qemu anywhere in this workflow. The
-# smoke matrix then runs the SQL natively on each architecture, which is the
-# part that has to be real, and only then does the stitch job create the tags
-# a consumer resolves.
+# Multi-arch from one pre-seed run. An InnoDB datadir is
+# architecture-portable, and Dockerfile.db has no RUN steps. Both images
+# therefore come from the same tar with nothing executed at build time, so
+# this workflow needs no qemu. The smoke matrix then runs the SQL natively on
+# each architecture, which is the part that must be real. Only after that
+# does the stitch job create the tags a consumer resolves.
 
 name: cdo-devdb-image
 
