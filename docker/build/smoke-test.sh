@@ -9,38 +9,12 @@
 # The base contract (ruby, jemalloc, mysql client, ImageMagick, uid) is
 # covered by docker/base/smoke-test.sh; this asserts what cdo-build adds.
 
-set -u
-
-IMAGE="${1:?usage: smoke-test.sh <image-ref> <engine>}"
-ENGINE="${2:?usage: smoke-test.sh <image-ref> <engine>}"
-
-fails=0
-
-# run <description> <expected-substring> -- <cmd...>
-#   asserts the command exits 0 AND its combined output contains the substring.
-run() {
-  desc="$1"
-  expect="$2"
-  shift 2
-  [ "$1" = "--" ] && shift
-
-  out="$("$ENGINE" run --rm "$IMAGE" "$@" 2>&1)"
-  rc=$?
-  if [ "$rc" -ne 0 ]; then
-    printf 'FAIL  %-40s (exit %d)\n%s\n' "$desc" "$rc" "$out"
-    fails=$((fails + 1))
-    return
-  fi
-  if [ -n "$expect" ] && ! printf '%s' "$out" | grep -qF -- "$expect"; then
-    printf 'FAIL  %-40s (missing %q)\n%s\n' "$desc" "$expect" "$out"
-    fails=$((fails + 1))
-    return
-  fi
-  printf 'ok    %s\n' "$desc"
-}
+# shellcheck disable=SC2016  # single-quoted $VARs expand inside the image
+# shellcheck disable=SC1091
+. "$(dirname "$0")/../smoke-harness.sh"
 
 # The compiler and make must be present; the real compile test is the next job,
-# which builds cdo-gems from this image and compiles every native extension.
+# which builds cdo-deps from this image and compiles every native extension.
 run "cc present" "" -- cc --version
 run "make present" "" -- make --version
 
@@ -94,7 +68,9 @@ run "gem tree writable by build user" "bundle-writable-ok" -- \
     && touch "$BUNDLE_PATH/ruby/$abi/bundler/gems/.smoke" \
     && rm -f "$BUNDLE_PATH/ruby/$abi/bundler/gems/.smoke" && echo bundle-writable-ok'
 
-# Identity env, for downstream COPY --chown=${UID}:${GID}.
+# Identity env, for scripts run inside the builder. Note COPY --chown cannot
+# read these (it expands only same-stage ARGs, never inherited ENV), which is
+# why downstream Dockerfiles write the uid-1000 family constant literally.
 run "UID/GID/SRC/USERNAME exported" "1000:1000:/code-dot-org:cdo" -- \
   sh -c 'echo "$UID:$GID:$SRC:$USERNAME"'
 
@@ -105,9 +81,4 @@ run "no bundle installed" "no-gems-ok" -- \
   sh -c 'abi=$(ruby -e '\''print RbConfig::CONFIG["ruby_version"]'\'') \
     && test -z "$(ls -A "$BUNDLE_PATH/ruby/$abi/gems" 2>/dev/null)" && echo no-gems-ok'
 
-echo "----"
-if [ "$fails" -ne 0 ]; then
-  echo "$fails check(s) failed on $ENGINE"
-  exit 1
-fi
-echo "all checks passed on $ENGINE"
+report
