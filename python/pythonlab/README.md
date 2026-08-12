@@ -22,7 +22,7 @@ This tests adds some customization to the output of unit tests, and has a functi
 (more customized) or student tests (less customized).
 
 ### theater
-This package contains the python theater package used in pythonlab. It is based on the javalab [`org.code.theater`](https://github.com/code-dot-org/javabuilder/tree/main/org-code-javabuilder/theater) package and includes the `Scene` class and `play_scenes` function. A scene records drawing and audio commands; `play_scenes` renders them into an animated gif (via Pillow) and a WAV audio track (via numpy and the stdlib `wave` module) and returns the raw bytes. Instrument note samples and the Liberation fonts used for text are bundled as package data and read via `importlib.resources`, since network fetch is unavailable under Pyodide's `jsglobals: {}`. (Delivering the rendered bytes to the host display is handled separately by the front-end bridge.)
+This package contains the python theater package used in pythonlab. It is based on the Java Lab [`org.code.theater`](https://github.com/code-dot-org/javabuilder/tree/main/org-code-javabuilder/theater) package and includes the `Scene` class and `play_scenes` function. A scene records drawing and audio commands; `play_scenes` renders them into an animated gif (via Pillow) and a WAV audio track (via numpy and the stdlib `wave` module) and returns the raw bytes. Instrument note samples and the Liberation fonts used for text are bundled as package data and read via `importlib.resources`, since network fetch is unavailable under Pyodide's `jsglobals: {}`.
 
 ## Building a package
 From the package folder containing `pyproject.toml`, run `uv build`. The generated `.whl` file will be in the `code-dot-org/dist` folder.
