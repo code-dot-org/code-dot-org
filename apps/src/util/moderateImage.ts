@@ -14,6 +14,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'sketchlab',
   'applab',
   'weblab',
+  'javalab',
 ];
 
 export type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
