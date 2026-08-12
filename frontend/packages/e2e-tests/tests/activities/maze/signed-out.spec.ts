@@ -31,7 +31,7 @@ const ARTIST_COURSE = 'ui-test-artist';
  *     role tablist allows), and nested-interactive x2 (the tab `<li>`s carry
  *     a tabindex an AT can still reach) are consistent on every engine, once
  *     the scan waits for the embedded YouTube iframe's own load event
- *     (VideoModalComponent.waitForVideoLoaded) rather than racing it —
+ *     (IntroVideoModalComponent.waitForVideoLoaded) rather than racing it —
  *     without that wait the count varies run to run on the SAME engine
  *     (confirmed on webkit) as YouTube's cross-origin DOM keeps mounting.
  *     aria-prohibited-attr (an aria-label on YouTube's own unroled
@@ -195,18 +195,21 @@ test.describe('Maze level tests for users that are signed out', () => {
           level: 3,
           noautoplay: false,
         }),
+        // The modal is this scenario's subject, so waitForReady must leave it
+        // standing rather than dismissing it as lab-blocking chrome.
+        {dismissIntroVideo: false},
       );
-      await expect(maze.videoModal.container).toBeVisible();
-      await maze.videoModal.waitForVideoLoaded();
+      await expect(maze.introVideoModal.container).toBeVisible();
+      await maze.introVideoModal.waitForVideoLoaded();
 
       expect(
         await analyze(page, {
-          include: maze.videoModal.rootSelector,
+          include: maze.introVideoModal.rootSelector,
           tags: WCAG_AA_TAGS,
         }),
       ).toEqual(expectedVideoModalViolations(browserName));
 
-      await maze.videoModal.close();
+      await maze.introVideoModal.close();
 
       await maze.gotoLevel({
         course: MAZE_COURSE,
