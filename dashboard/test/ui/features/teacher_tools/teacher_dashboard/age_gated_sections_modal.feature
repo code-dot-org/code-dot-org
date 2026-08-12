@@ -1,3 +1,4 @@
+@playwright
 Feature: Age Gated Sections Modal and Banner
 
   Scenario: Teacher viewing their section with no at risk age gated students should not see age gated sections banner
