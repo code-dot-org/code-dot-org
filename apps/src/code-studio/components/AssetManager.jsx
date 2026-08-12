@@ -15,25 +15,19 @@ import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
-import {
-  AbuseConstants,
-  SafeAndSupportedImageTypes,
-} from '@cdo/generated-scripts/sharedConstants';
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
 import {
-  clearFlaggedFilename,
-  getFlaggedFilename,
   setFlaggedFilename,
+  unblockIfFlaggedAssetDeleted,
 } from '../assets/flaggedAssetMetadata';
 
 import AddAssetButtonRow from './AddAssetButtonRow';
 import AssetRow from './AssetRow';
 import AudioRecorder, {AudioErrorType} from './AudioRecorder';
 import {RecordingFileType} from './recorders';
-
-const ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 export const ImageMode = {
   FILE: 'file',
@@ -304,13 +298,17 @@ export default class AssetManager extends React.Component {
       newState.assets = assetListStore.list(this.props.allowedExtensions);
     }
 
+    // Skip flagged-filename metadata when useFilesApi is true. Files are versioned,
+    // so delete-to-unblock is not offered.
     if (this.pendingFlaggedUpload) {
       this.pendingFlaggedUpload = false;
-      setFlaggedFilename(this.props.projectId, result.filename).catch(err => {
-        MetricsReporter.logError(
-          'Error writing flagged asset metadata: ' + err
-        );
-      });
+      if (!this.props.useFilesApi) {
+        setFlaggedFilename(this.props.projectId, result.filename).catch(err => {
+          MetricsReporter.logError(
+            'Error writing flagged asset metadata: ' + err
+          );
+        });
+      }
     }
 
     this.setState(newState);
@@ -338,45 +336,22 @@ export default class AssetManager extends React.Component {
       statusMessage: `File "${name}" successfully deleted!`,
     });
 
-    await this.unblockIfFlaggedAssetDeleted(name);
-  };
-
-  unblockIfFlaggedAssetDeleted = async name => {
-    const channelId = this.props.projectId;
-    if (!channelId) {
+    // Self-unblock only for unversioned asset stores. If lab uses Files API,
+    // then lab stays blocked after delete since a later version restore could
+    // bring the flagged file back.
+    if (this.props.useFilesApi || !this.props.projectId) {
       return;
     }
 
-    try {
-      const flaggedFilename = await getFlaggedFilename(channelId);
-      if (flaggedFilename !== name) {
-        return;
-      }
-
-      // Unflag before clearing metadata so a failed unflag leaves the
-      // bookkeeping intact for a later retry.
-      const response = await HttpClient.post(
-        `/v3/channels/${channelId}/abuse/image`,
-        JSON.stringify({type: 'unflag'}),
-        true,
-        {'Content-Type': 'application/json; charset=UTF-8'}
-      );
-      const responseData = await response.json();
-      await clearFlaggedFilename(channelId);
-      if (dashboard.project?.fetchAbuseScore) {
-        await dashboard.project.fetchAbuseScore();
-      }
-      const abuseScore = responseData?.abuse_score;
-      if (typeof abuseScore === 'number' && abuseScore < ABUSE_THRESHOLD) {
-        this.setState({
-          uploadsEnabled: true,
-          statusMessage: `File "${name}" successfully deleted!`,
-        });
-      }
-    } catch (err) {
-      MetricsReporter.logError(
-        'Error unflagging project after deleting flagged asset: ' + err
-      );
+    const {didUnblock} = await unblockIfFlaggedAssetDeleted(
+      this.props.projectId,
+      name
+    );
+    if (didUnblock) {
+      this.setState({
+        uploadsEnabled: true,
+        statusMessage: `File "${name}" successfully deleted!`,
+      });
     }
   };
 
