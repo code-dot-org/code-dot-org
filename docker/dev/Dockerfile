@@ -155,6 +155,10 @@ RUN set -eux \
   && ln -sf "$chrome" /usr/local/bin/chromium
 ENV CHROME_BIN=/usr/local/bin/chromium
 
+# This image sets no ENTRYPOINT. devcontainer.json calls dev-bootstrap's
+# `create` and `start` directly.
+COPY --chown=root:root --chmod=755 dev-bootstrap /usr/local/bin/dev-bootstrap
+
 USER ${USERNAME}
 
 # git needs telling. The repo volume is cloned by root. The container runs

@@ -76,4 +76,10 @@ run "git-lfs filters configured" "git-lfs" -- \
   git config --get filter.lfs.smudge
 
 run "runs as non-root cdo" "cdo" -- id -un
+# The image has no ENTRYPOINT. The devcontainer lifecycle calls this
+# directly.
+run "dev-bootstrap installed" "" -- test -x /usr/local/bin/dev-bootstrap
+run "dev-bootstrap rejects a bad subcommand" "usage: dev-bootstrap" -- \
+  sh -c '/usr/local/bin/dev-bootstrap nonsense 2>&1 || true'
+
 report

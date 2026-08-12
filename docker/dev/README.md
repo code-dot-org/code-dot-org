@@ -6,8 +6,11 @@ and the development and test gems. Disk is cheap on a laptop. "Works in the
 devcontainer" should mean one thing on every machine.
 
 `.devcontainer/` holds the wiring that runs it: `devcontainer.json`, the
-compose services, and the seeded database. This directory holds the image.
-The image has no ENTRYPOINT. It runs bash.
+compose services, and the seeded database. This directory holds the image
+and `dev-bootstrap`. `dev-bootstrap` does the work a devcontainer needs
+around the mounted source. It splits that work into two halves, the way the
+lifecycle calls it: `create` once per container, and `start` on every
+start. The image has no ENTRYPOINT. It runs bash.
 
 ## Why it stacks on cdo-deps
 
@@ -101,10 +104,11 @@ compiles from source in cdo-build, the same way on both architectures.
     ./docker/dev/smoke-test.sh cdo-dev:test docker
     ./docker/dev/smoke-test.sh cdo-dev:test podman
 
-The checks are in two groups. First, the delta installed. The dev/test
+The checks are in three groups. First, the delta installed. The dev/test
 groups resolve, and the venv carries the dev group in `/opt/venv`. Second,
 nothing inherited was lost. The compiled extensions still load after the
-delta installed on top of them.
+delta installed on top of them. Third, `dev-bootstrap` is installed and
+runnable.
 
 ## Dual-engine policy
 
