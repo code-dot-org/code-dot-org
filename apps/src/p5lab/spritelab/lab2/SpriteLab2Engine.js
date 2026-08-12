@@ -99,9 +99,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Platformer levels size sprites to one grid cell by default (the
       // legacy library's one load-bearing line).
       library.defaultSpriteSize = 50;
-      // The resolver's landings carry sub-pixel float noise, so the
-      // footing commands (hasSupportAt, isDirectlyAbove — the patrolling
-      // behaviors ask them) must not compare contact exactly.
+      // Landings carry sub-pixel float noise; footing checks must not
+      // compare contact exactly.
       library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
