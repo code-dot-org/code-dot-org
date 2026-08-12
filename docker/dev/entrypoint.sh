@@ -65,8 +65,17 @@ install_hooks() {
   local hooks_dir="/code-dot-org/.git/hooks"
   local tools_dir="/code-dot-org/tools/hooks"
   if [ -d "$tools_dir" ] && [ -d "$hooks_dir" ]; then
+    # Only where nothing is installed at all. `[ ! -L ]` meant "not one of
+    # mine", which is not the same thing: git-lfs writes real files at
+    # post-checkout, post-merge, post-commit and pre-push when it clones a
+    # repository, and this replaced two of them. Content survives that —
+    # smudge and clean are filters, configured system-wide, not hooks — but
+    # `git lfs post-checkout` is what repairs a working tree whose files were
+    # not smudged on the way in, and either way these hooks belong to git-lfs
+    # and not to us. The cost of deferring is the repo's own reminder that
+    # dependencies changed; that is the cheaper thing to lose.
     for hook in pre-commit post-checkout post-merge; do
-      if [ -f "$tools_dir/$hook" ] && [ ! -L "$hooks_dir/$hook" ]; then
+      if [ -f "$tools_dir/$hook" ] && [ ! -e "$hooks_dir/$hook" ]; then
         ln -sf "../../tools/hooks/$hook" "$hooks_dir/$hook"
       fi
     done

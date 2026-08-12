@@ -83,6 +83,15 @@ run "chromium runs" "" -- sh -c '"$CHROME_BIN" --version'
 run "git safe.directory configured" "/code-dot-org" -- \
   git config --global --get-all safe.directory
 
+# .gitattributes puts thirteen directory globs behind LFS, so a commit made
+# in here needs the clean filter or it stores the file's bytes where a pointer
+# belongs. Debian's git-lfs package writes these to /etc/gitconfig, which is
+# why the image needs no `git lfs install` — assert the resolved value, not
+# the global one, so the day that packaging changes fails here and not in
+# somebody's commit.
+run "git-lfs filters configured" "git-lfs" -- \
+  git config --get filter.lfs.smudge
+
 run "runs as non-root cdo" "cdo" -- id -un
 run "entrypoint installed" "" -- test -x /usr/local/bin/entrypoint.sh
 
