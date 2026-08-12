@@ -5,9 +5,9 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  const {lessonId, lessonName} = getScriptData('tutorGalleryData');
+  const tutorGalleryData = getScriptData('tutorGalleryData');
   createReactRoot(
-    <ChallengeGallery lessonId={lessonId} lessonName={lessonName} />,
+    <ChallengeGallery tutorGalleryData={tutorGalleryData} />,
     document.getElementById('tutor-gallery-container')
   );
 });

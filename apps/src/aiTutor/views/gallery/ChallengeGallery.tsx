@@ -3,56 +3,61 @@ import React, {FC, useEffect, useState} from 'react';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
-  Challenge,
   ChallengeResponse,
-  ChallengeResponseAsset,
   challengeResponseListValidator,
-  challengeValidator,
 } from '../lessonDeepDive/types';
+
+import GallerySidebar from './GallerySidebar';
+import ProjectCard, {ProjectVariant} from './ProjectCard';
+import {GallerySort, TutorGalleryData, unitCountsValidator} from './types';
 
 import styles from './challenge-gallery.module.scss';
 
 interface ChallengeGalleryProps {
-  lessonId: number;
-  lessonName: string;
+  tutorGalleryData: TutorGalleryData;
 }
 
-// Bare-bones gallery of the student's submitted challenge work for one
-// lesson: each final submission is shown with its assets (whiteboard image,
-// video, or audio), any text/transcript, and the AI feedback once evaluation
-// has completed. No design exists for this page yet; the layout here is a
-// placeholder so the data flow can be exercised end to end.
-const ChallengeGallery: FC<ChallengeGalleryProps> = ({
-  lessonId,
-  lessonName,
-}) => {
-  const [challenges, setChallenges] = useState<Challenge[]>([]);
+const hasVideoAsset = (response: ChallengeResponse) =>
+  response.assets.some(asset => asset.asset_type === 'video');
+
+// The Tutor+ project gallery: the class section's submitted challenge work,
+// browsable by section and unit, split into video and whiteboard project
+// grids. Without any class section, it falls back to the signed-in user's
+// own submissions.
+const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
+  const {units, sections, currentUnitId} = tutorGalleryData;
+
+  const [sectionId, setSectionId] = useState<number | null>(
+    sections[0]?.id ?? null
+  );
+  const [unitId, setUnitId] = useState(currentUnitId);
+  const [sort, setSort] = useState<GallerySort>('recent');
   const [responses, setResponses] = useState<ChallengeResponse[] | null>(null);
+  const [unitCounts, setUnitCounts] = useState<Record<string, number>>({});
   const [loadFailed, setLoadFailed] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    const query = new URLSearchParams({
-      lesson_id: lessonId.toString(),
-    }).toString();
-    Promise.all([
-      HttpClient.fetchJson<Challenge[]>(
-        `/challenges?${query}`,
-        {},
-        challengeValidator
-      ),
-      HttpClient.fetchJson<ChallengeResponse[]>(
-        `/challenge_responses?${query}`,
-        {},
-        challengeResponseListValidator
-      ),
-    ])
-      .then(([challengeResult, responseResult]) => {
-        if (cancelled) {
-          return;
+    setResponses(null);
+    setLoadFailed(false);
+    const params = new URLSearchParams({
+      unit_id: unitId.toString(),
+    });
+    if (sectionId !== null) {
+      params.append('section_id', sectionId.toString());
+    }
+    if (sort === 'oldest') {
+      params.append('sort', 'oldest');
+    }
+    HttpClient.fetchJson<ChallengeResponse[]>(
+      `/challenge_responses?${params.toString()}`,
+      {},
+      challengeResponseListValidator
+    )
+      .then(({value}) => {
+        if (!cancelled) {
+          setResponses(value || []);
         }
-        setChallenges(challengeResult.value || []);
-        setResponses(responseResult.value || []);
       })
       .catch(() => {
         if (!cancelled) {
@@ -62,114 +67,123 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [lessonId]);
+  }, [sectionId, unitId, sort]);
 
-  const questionFor = (challengeId: number) =>
-    challenges.find(c => c.id === challengeId)?.question || null;
+  useEffect(() => {
+    let cancelled = false;
+    const params = new URLSearchParams();
+    if (sectionId !== null) {
+      params.append('section_id', sectionId.toString());
+    }
+    HttpClient.fetchJson<Record<string, number>>(
+      `/challenge_responses/unit_counts?${params.toString()}`,
+      {},
+      unitCountsValidator
+    )
+      .then(({value}) => {
+        if (!cancelled) {
+          setUnitCounts(value || {});
+        }
+      })
+      .catch(() => {
+        // The sidebar counts are decorative; a failure leaves them at 0.
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [sectionId]);
 
-  const feedbackMessage = (response: ChallengeResponse) => {
-    if (response.student_feedback) {
-      return response.student_feedback;
-    }
-    if (
-      response.evaluation_status === 'queued' ||
-      response.evaluation_status === 'running'
-    ) {
-      return 'Feedback is on its way. Check back soon!';
-    }
-    return 'Feedback is not available for this submission.';
-  };
+  const unitPositionFor = (responseUnitId: number | null) =>
+    units.find(unit => unit.id === responseUnitId)?.position ?? null;
 
-  const renderAsset = (asset: ChallengeResponseAsset) => {
-    if (!asset.download_url) {
-      return null;
-    }
-    switch (asset.asset_type) {
-      case 'whiteboard_image':
-        return (
-          <img
-            key={asset.id}
-            className={styles.assetImage}
-            src={asset.download_url}
-            alt="Whiteboard submission"
+  const sectionName = sections.find(s => s.id === sectionId)?.name ?? null;
+
+  const renderProjectGroup = (
+    title: string,
+    variant: ProjectVariant,
+    groupResponses: ChallengeResponse[]
+  ) => (
+    <section className={styles.projectGroup}>
+      <div className={styles.groupHeader}>
+        <h2 className={styles.groupTitle}>{title}</h2>
+        <span className={styles.groupCount}>
+          {groupResponses.length}{' '}
+          {groupResponses.length === 1 ? 'project' : 'projects'}
+        </span>
+      </div>
+      <div
+        className={
+          variant === 'video' ? styles.videoGrid : styles.whiteboardGrid
+        }
+      >
+        {groupResponses.map(response => (
+          <ProjectCard
+            key={response.id}
+            response={response}
+            variant={variant}
+            unitPosition={unitPositionFor(response.unit_id)}
           />
-        );
-      case 'video':
-        return (
-          // eslint-disable-next-line jsx-a11y/media-has-caption -- student recordings have no caption track
-          <video
-            key={asset.id}
-            className={styles.assetVideo}
-            src={asset.download_url}
-            controls
-          />
-        );
-      case 'audio':
-        return (
-          // eslint-disable-next-line jsx-a11y/media-has-caption -- student recordings have no caption track
-          <audio key={asset.id} src={asset.download_url} controls />
-        );
-      default:
-        return null;
-    }
-  };
+        ))}
+      </div>
+    </section>
+  );
 
-  const renderBody = () => {
+  const renderContent = () => {
     if (loadFailed) {
       return (
         <p className={styles.statusText}>
-          We couldn&apos;t load your challenge submissions. Try refreshing the
-          page.
+          We couldn&apos;t load the gallery. Try refreshing the page.
         </p>
       );
     }
     if (responses === null) {
-      return <p className={styles.statusText}>Loading your submissions…</p>;
+      return <p className={styles.statusText}>Loading projects…</p>;
     }
     if (responses.length === 0) {
       return (
         <p className={styles.statusText}>
-          You haven&apos;t submitted any challenge responses for this lesson
-          yet.
+          No projects have been submitted for this unit yet.
         </p>
       );
     }
-    return responses.map(response => {
-      const question = questionFor(response.challenge_id);
-      return (
-        <section key={response.id} className={styles.responseCard}>
-          {question && <h2 className={styles.question}>{question}</h2>}
-          <p className={styles.submittedAt}>
-            Submitted {new Date(response.created_at).toLocaleString()}
-          </p>
-          <div className={styles.assets}>
-            {response.assets.map(renderAsset)}
-          </div>
-          {response.student_text && (
-            <div className={styles.textBlock}>
-              <h3 className={styles.blockHeading}>Your response</h3>
-              <p className={styles.blockText}>{response.student_text}</p>
-            </div>
+    const videoProjects = responses.filter(hasVideoAsset);
+    const whiteboardProjects = responses.filter(
+      response => !hasVideoAsset(response)
+    );
+    return (
+      <>
+        {videoProjects.length > 0 &&
+          renderProjectGroup('Video Projects', 'video', videoProjects)}
+        {whiteboardProjects.length > 0 &&
+          renderProjectGroup(
+            'Whiteboard Projects',
+            'whiteboard',
+            whiteboardProjects
           )}
-          {response.transcript && (
-            <div className={styles.textBlock}>
-              <h3 className={styles.blockHeading}>Transcript</h3>
-              <p className={styles.blockText}>{response.transcript}</p>
-            </div>
-          )}
-          <div className={styles.feedbackBlock}>
-            <h3 className={styles.blockHeading}>Feedback</h3>
-            <p className={styles.blockText}>{feedbackMessage(response)}</p>
-          </div>
-        </section>
-      );
-    });
+      </>
+    );
   };
 
   return (
-    <div className={styles.gallery}>
-      <h1 className={styles.pageHeading}>{lessonName}: Challenge Gallery</h1>
-      {renderBody()}
+    <div className={styles.page} data-theme="Dark">
+      <GallerySidebar
+        sections={sections}
+        selectedSectionId={sectionId}
+        onSectionChange={setSectionId}
+        units={units}
+        selectedUnitId={unitId}
+        onUnitChange={setUnitId}
+        unitCounts={unitCounts}
+        sort={sort}
+        onSortChange={setSort}
+      />
+      <main className={styles.main}>
+        <header className={styles.pageHeader}>
+          <p className={styles.pageOverline}>{sectionName || 'My Projects'}</p>
+          <h1 className={styles.pageTitle}>Extension Activities</h1>
+        </header>
+        {renderContent()}
+      </main>
     </div>
   );
 };

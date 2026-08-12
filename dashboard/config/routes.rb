@@ -1479,6 +1479,9 @@ Dashboard::Application.routes.draw do
 
     resources :challenges, only: [:index, :show]
     resources :challenge_responses, only: [:index, :create, :show] do
+      collection do
+        get :unit_counts
+      end
       member do
         post :evaluate
       end

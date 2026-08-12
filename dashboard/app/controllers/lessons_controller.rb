@@ -125,10 +125,10 @@ class LessonsController < ApplicationController
   # GET /s/:script_name_or_id/lessons/:lesson_position/tutor/gallery
   # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/tutor/gallery
   #
-  # Bare-bones gallery of the signed-in student's submitted challenge work
-  # for this lesson, shown alongside the AI feedback. The page only needs to
-  # know which lesson it is on; the submissions themselves come from
-  # GET /challenge_responses.
+  # The Tutor+ project gallery: the class section's submitted challenge work,
+  # browsable by section and unit. This action only bootstraps the page —
+  # the signed-in user's sections and the course's units; the submissions
+  # themselves come from GET /challenge_responses.
   def tutor_gallery
     view_options(full_width: true, no_padding_container: true, no_footer: true)
     unit_context = get_unit_context(params)
@@ -139,9 +139,16 @@ class LessonsController < ApplicationController
     end
     return render_404 unless @lesson&.lesson_tutor_available?
 
+    unit_group = unit_context[:unit_group] || script.original_unit_group
+    units = unit_group ? unit_group.default_units : [script]
+    sections = (current_user.sections_instructed + current_user.sections_as_student).uniq
+
     @tutor_gallery_data = {
-      lessonId: @lesson.id,
-      lessonName: @lesson.localized_name,
+      currentUnitId: script.id,
+      units: units.map.with_index(1) do |unit, position|
+        {id: unit.id, name: unit.localized_title, position: position}
+      end,
+      sections: sections.map {|section| {id: section.id, name: section.name}},
     }
   end
 

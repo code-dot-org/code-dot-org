@@ -80,6 +80,136 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json.first['student_feedback']).must_equal 'Nice work!'
         _(response_json.first).wont_include 'evaluation_result'
       end
+
+      it 'labels responses with the author and lesson unit' do
+        challenge_response = create(:challenge_response, challenge:, user: student, is_final: true)
+
+        get :index
+
+        assert_response :success
+        _(response_json.first['user_name']).must_equal student.name
+        _(response_json.first['unit_id']).must_equal challenge_response.challenge.lesson.script_id
+        _(response_json.first['lesson_position']).must_equal challenge_response.challenge.lesson.relative_position
+      end
+    end
+
+    context 'with a section_id' do
+      let(:section) {create(:section)}
+
+      before do
+        create(:follower, section:, student_user: student)
+        create(:follower, section:, student_user: other_student)
+        sign_in student
+      end
+
+      it "returns the whole section's final responses, without peers' feedback" do
+        mine = create(:challenge_response, challenge:, user: student, is_final: true, student_feedback: 'For you')
+        peers = create(:challenge_response, challenge:, user: other_student, is_final: true, student_feedback: 'Private')
+        create(:challenge_response, challenge:, user: other_student, is_final: false)
+        outsider = create(:student)
+        create(:challenge_response, challenge:, user: outsider, is_final: true)
+
+        get :index, params: {section_id: section.id}
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}.sort).must_equal [mine.id, peers.id].sort
+        by_id = response_json.index_by {|r| r['id']}
+        _(by_id[mine.id]['student_feedback']).must_equal 'For you'
+        _(by_id[peers.id]).wont_include 'student_feedback'
+      end
+
+      it 'filters by unit_id' do
+        in_unit = create(:challenge_response, challenge:, user: other_student, is_final: true)
+        create(:challenge_response, user: other_student, is_final: true) # different lesson/unit
+
+        get :index, params: {section_id: section.id, unit_id: challenge.lesson.script_id}
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}).must_equal [in_unit.id]
+      end
+
+      it "collapses to each student's most recent submission per challenge" do
+        create(:challenge_response, challenge:, user: student, is_final: true)
+        latest = create(:challenge_response, challenge:, user: student, is_final: true)
+        peers = create(:challenge_response, challenge:, user: other_student, is_final: true)
+
+        get :index, params: {section_id: section.id}
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}.sort).must_equal [latest.id, peers.id].sort
+      end
+
+      it 'does not collapse resubmissions in the own-work view' do
+        first = create(:challenge_response, challenge:, user: student, is_final: true)
+        second = create(:challenge_response, challenge:, user: student, is_final: true)
+
+        get :index
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}.sort).must_equal [first.id, second.id].sort
+      end
+
+      it 'sorts oldest-first on request' do
+        older = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 2.days.ago)
+        newer = create(:challenge_response, challenge:, user: other_student, is_final: true, created_at: 1.day.ago)
+
+        get :index, params: {section_id: section.id, sort: 'oldest'}
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}).must_equal [older.id, newer.id]
+      end
+
+      it 'is forbidden for a user outside the section' do
+        outsider = create(:student)
+        sign_in outsider
+
+        get :index, params: {section_id: section.id}
+
+        assert_response :forbidden
+      end
+
+      it "is allowed for the section's teacher" do
+        create(:challenge_response, challenge:, user: student, is_final: true)
+        sign_in section.teacher
+
+        get :index, params: {section_id: section.id}
+
+        assert_response :success
+        _(response_json.length).must_equal 1
+      end
+    end
+  end
+
+  describe 'GET #unit_counts' do
+    let(:section) {create(:section)}
+
+    before do
+      create(:follower, section:, student_user: student)
+      create(:follower, section:, student_user: other_student)
+      sign_in student
+    end
+
+    it 'returns final submission counts grouped by unit, one per student per challenge' do
+      create(:challenge_response, challenge:, user: student, is_final: true)
+      create(:challenge_response, challenge:, user: student, is_final: true) # resubmission, not double-counted
+      create(:challenge_response, challenge:, user: other_student, is_final: true)
+      create(:challenge_response, challenge:, user: other_student, is_final: false)
+      other_unit_challenge = create(:challenge)
+      create(:challenge_response, challenge: other_unit_challenge, user: student, is_final: true)
+
+      get :unit_counts, params: {section_id: section.id}
+
+      assert_response :success
+      _(response_json[challenge.lesson.script_id.to_s]).must_equal 2
+      _(response_json[other_unit_challenge.lesson.script_id.to_s]).must_equal 1
+    end
+
+    it 'is forbidden for a user outside the section' do
+      sign_in create(:student)
+
+      get :unit_counts, params: {section_id: section.id}
+
+      assert_response :forbidden
     end
   end
 
@@ -223,6 +353,32 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
       it 'is forbidden' do
         get :show, params: {id: challenge_response.id}
+        assert_response :forbidden
+      end
+    end
+
+    context 'when signed in as a section peer' do
+      before do
+        section = create(:section)
+        create(:follower, section:, student_user: student)
+        create(:follower, section:, student_user: other_student)
+        sign_in other_student
+      end
+
+      it 'can read a final response' do
+        challenge_response.update!(is_final: true)
+
+        get :show, params: {id: challenge_response.id}
+
+        assert_response :success
+        _(response_json['id']).must_equal challenge_response.id
+      end
+
+      it 'cannot read a non-final response' do
+        challenge_response.update!(is_final: false)
+
+        get :show, params: {id: challenge_response.id}
+
         assert_response :forbidden
       end
     end

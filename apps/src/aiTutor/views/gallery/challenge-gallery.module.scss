@@ -1,78 +1,84 @@
-.gallery {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 24px 16px;
+.page {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 50px);
+  background-color: var(--background-neutral-primary);
+  font-family: var(--font-family-main);
+  color: var(--text-neutral-primary);
 }
 
-.pageHeading {
-  margin: 0 0 16px;
-  font-size: 1.5rem;
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 20px 40px 40px;
+}
+
+.pageHeader {
+  margin-bottom: 24px;
+}
+
+.pageOverline {
+  margin: 0;
+  font-size: 14px;
   font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: var(--text-brand-primary-fixed);
+}
+
+.pageTitle {
+  margin: 4px 0 0;
+  font-family: var(--font-family-heading);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 52px;
+  color: var(--text-neutral-primary);
+}
+
+.projectGroup {
+  margin-bottom: 40px;
+}
+
+.groupHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.groupTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: var(--text-neutral-primary);
+}
+
+.groupCount {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-quaternary);
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 16px;
+}
+
+.whiteboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 16px;
 }
 
 .statusText {
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-// One card per submitted response: assets, text/transcript, and feedback.
-.responseCard {
-  margin-bottom: 24px;
-  padding: 16px;
-  border: 1px solid rgb(0 0 0 / 15%);
-  border-radius: 8px;
-}
-
-.question {
-  margin: 0 0 4px;
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.submittedAt {
-  margin: 0 0 12px;
-  font-size: 0.75rem;
-  color: rgb(0 0 0 / 60%);
-}
-
-.assets {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 12px;
-
-  &:empty {
-    display: none;
-  }
-}
-
-.assetImage,
-.assetVideo {
-  max-width: 100%;
-  border-radius: 4px;
-}
-
-.textBlock,
-.feedbackBlock {
-  margin-bottom: 12px;
-}
-
-.feedbackBlock {
-  margin-bottom: 0;
-  padding: 12px;
-  background-color: rgb(150 87 199 / 8%);
-  border-radius: 8px;
-}
-
-.blockHeading {
-  margin: 0 0 4px;
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-.blockText {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-primary);
 }
