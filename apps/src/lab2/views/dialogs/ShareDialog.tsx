@@ -7,6 +7,7 @@ import QRCode from 'qrcode.react';
 import React, {useCallback} from 'react';
 import FocusLock from 'react-focus-lock';
 
+import ProjectAbuseAlert from '@cdo/apps/code-studio/components/ProjectAbuseAlert';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -144,6 +145,7 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus: SubmissionStatusType | undefined;
   userSharingDisabled: boolean | undefined;
   shareFailure?: ShareFailure | null;
+  isAbusive?: boolean;
 }> = ({
   dialogId,
   shareUrl,
@@ -153,6 +155,7 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus,
   userSharingDisabled,
   shareFailure,
+  isAbusive = false,
 }) => {
   const dispatch = useAppDispatch();
   const sharingDisabled = () =>
@@ -236,6 +239,7 @@ const ShareDialog: React.FunctionComponent<{
               : i18n.shareTitle()}
           </Typography>
           <div>{dialogId === 'hoc2024' && i18n.congratsFinishedHoc()}</div>
+          {isAbusive && <ProjectAbuseAlert shareUrl={shareUrl} />}
           <div className={moduleStyles.columns}>
             <div className={moduleStyles.column}>
               <div className={moduleStyles.block}>
