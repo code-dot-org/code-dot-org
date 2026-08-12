@@ -4,9 +4,8 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import {
-  clearFlaggedFilename,
-  getFlaggedFilename,
   setFlaggedFilename,
+  unblockIfFlaggedAssetDeleted,
 } from '@cdo/apps/code-studio/assets/flaggedAssetMetadata';
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -28,9 +27,8 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 }));
 
 jest.mock('@cdo/apps/code-studio/assets/flaggedAssetMetadata', () => ({
-  getFlaggedFilename: jest.fn(),
   setFlaggedFilename: jest.fn(),
-  clearFlaggedFilename: jest.fn(),
+  unblockIfFlaggedAssetDeleted: jest.fn(),
 }));
 
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
@@ -169,8 +167,10 @@ describe('AssetManager image moderation', () => {
       json: () => Promise.resolve({abuse_score: 15}),
     });
     setFlaggedFilename.mockResolvedValue(undefined);
-    clearFlaggedFilename.mockResolvedValue(undefined);
-    getFlaggedFilename.mockResolvedValue(null);
+    unblockIfFlaggedAssetDeleted.mockResolvedValue({
+      didUnblock: false,
+      abuseScore: null,
+    });
   });
 
   afterEach(() => {
@@ -324,14 +324,14 @@ describe('AssetManager image moderation', () => {
 
   it('deleting the flagged file unblocks and re-enables uploads', async () => {
     moderateImage.mockResolvedValue('flagged');
-    getFlaggedFilename.mockResolvedValue('bad.png');
-    HttpClient.post
-      .mockResolvedValueOnce({
-        json: () => Promise.resolve({abuse_score: 15}),
-      })
-      .mockResolvedValueOnce({
-        json: () => Promise.resolve({abuse_score: 0}),
-      });
+    unblockIfFlaggedAssetDeleted.mockImplementation(async () => {
+      // Real helper refetches abuse score after unflag.
+      abuseScore = 0;
+      return {didUnblock: true, abuseScore: 0};
+    });
+    HttpClient.post.mockResolvedValueOnce({
+      json: () => Promise.resolve({abuse_score: 15}),
+    });
 
     render(<AssetManager {...DEFAULT_PROPS} />);
     await uploadFile(user, makeImageFile('bad.png'));
@@ -346,28 +346,25 @@ describe('AssetManager image moderation', () => {
     await user.click(screen.getByRole('button', {name: /delete file/i}));
 
     await waitFor(() =>
-      expect(HttpClient.post).toHaveBeenCalledWith(
-        '/v3/channels/channel-1/abuse/image',
-        JSON.stringify({type: 'unflag'}),
-        true,
-        {'Content-Type': 'application/json; charset=UTF-8'}
+      expect(unblockIfFlaggedAssetDeleted).toHaveBeenCalledWith(
+        'channel-1',
+        'bad.png'
       )
     );
-    expect(clearFlaggedFilename).toHaveBeenCalledWith('channel-1');
-    expect(fetchAbuseScore).toHaveBeenCalled();
     await waitFor(() =>
       expect(screen.getByRole('button', {name: /upload file/i})).toBeEnabled()
     );
   });
 
-  it('keeps metadata when unflag fails so unblock can be retried', async () => {
+  it('keeps uploads disabled when unblock helper does not unblock', async () => {
     moderateImage.mockResolvedValue('flagged');
-    getFlaggedFilename.mockResolvedValue('bad.png');
-    HttpClient.post
-      .mockResolvedValueOnce({
-        json: () => Promise.resolve({abuse_score: 15}),
-      })
-      .mockRejectedValueOnce(new Error('network'));
+    unblockIfFlaggedAssetDeleted.mockResolvedValue({
+      didUnblock: false,
+      abuseScore: 15,
+    });
+    HttpClient.post.mockResolvedValueOnce({
+      json: () => Promise.resolve({abuse_score: 15}),
+    });
 
     render(<AssetManager {...DEFAULT_PROPS} />);
     await uploadFile(user, makeImageFile('bad.png'));
@@ -382,20 +379,16 @@ describe('AssetManager image moderation', () => {
     await user.click(screen.getByRole('button', {name: /delete file/i}));
 
     await waitFor(() =>
-      expect(HttpClient.post).toHaveBeenCalledWith(
-        '/v3/channels/channel-1/abuse/image',
-        JSON.stringify({type: 'unflag'}),
-        true,
-        {'Content-Type': 'application/json; charset=UTF-8'}
+      expect(unblockIfFlaggedAssetDeleted).toHaveBeenCalledWith(
+        'channel-1',
+        'bad.png'
       )
     );
-    expect(clearFlaggedFilename).not.toHaveBeenCalled();
     expect(screen.getByRole('button', {name: /upload file/i})).toBeDisabled();
   });
 
-  it('deleting a non-flagged file does not unblock', async () => {
-    getFlaggedFilename.mockResolvedValue('flagged.png');
-    // Seed the list with a safe asset via a safe upload.
+  it('deleting a file still calls unblock helper for non-flagged names', async () => {
+    // Helper itself decides whether the name matches flagged metadata.
     render(<AssetManager {...DEFAULT_PROPS} />);
     await uploadFile(user, makeImageFile('safe.png'));
     await waitFor(() => expect(mockSubmit).toHaveBeenCalled());
@@ -404,13 +397,36 @@ describe('AssetManager image moderation', () => {
     await user.click(screen.getByLabelText('Delete file'));
     await user.click(screen.getByRole('button', {name: /delete file/i}));
 
-    await waitFor(() => expect(getFlaggedFilename).toHaveBeenCalled());
-    expect(clearFlaggedFilename).not.toHaveBeenCalled();
-    expect(HttpClient.post).not.toHaveBeenCalledWith(
-      '/v3/channels/channel-1/abuse/image',
-      JSON.stringify({type: 'unflag'}),
-      true,
-      {'Content-Type': 'application/json; charset=UTF-8'}
+    await waitFor(() =>
+      expect(unblockIfFlaggedAssetDeleted).toHaveBeenCalledWith(
+        'channel-1',
+        'safe.png'
+      )
     );
+  });
+
+  it('does not self-unblock when useFilesApi (Web Lab)', async () => {
+    moderateImage.mockResolvedValue('flagged');
+    HttpClient.post.mockResolvedValueOnce({
+      json: () => Promise.resolve({abuse_score: 15}),
+    });
+
+    render(<AssetManager {...DEFAULT_PROPS} useFilesApi />);
+    await uploadFile(user, makeImageFile('bad.png'));
+    await user.click(await screen.findByRole('button', {name: /^accept$/i}));
+
+    await waitFor(() => expect(mockSubmit).toHaveBeenCalled());
+    expect(setFlaggedFilename).not.toHaveBeenCalled();
+    expect(await screen.findByText('bad.png')).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: /upload file/i})).toBeDisabled();
+
+    await user.click(screen.getByLabelText('Delete file'));
+    await user.click(screen.getByRole('button', {name: /delete file/i}));
+
+    await waitFor(() =>
+      expect(screen.queryByText('bad.png')).not.toBeInTheDocument()
+    );
+    expect(unblockIfFlaggedAssetDeleted).not.toHaveBeenCalled();
+    expect(screen.getByRole('button', {name: /upload file/i})).toBeDisabled();
   });
 });
