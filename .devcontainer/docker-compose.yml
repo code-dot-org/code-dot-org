@@ -1,0 +1,117 @@
+# The devcontainer: cdo-dev with the state it cannot hold itself.
+#
+# Rails, the apps webpack dev server and the frontend Vite server all run in
+# the app container, by hand, in a terminal — this file starts nothing for
+# you. It gives them a database, a cache, and the checkout.
+
+services:
+  db:
+    image: ${CDO_DEV_DB_IMAGE:-cdo-dev-db:local}
+    healthcheck:
+      test: ["CMD", "mysqladmin", "-uroot", "-ppassword", "ping", "--silent"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+      start_period: 10s
+    ports:
+      # For a GUI client. Not 3306: that is usually a native MySQL already.
+      - "${CDO_DB_PORT:-13306}:3306"
+
+  redis:
+    image: redis:7-bookworm
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+
+  # S3, emulated. Not a nicety: rendering a level page reaches S3 to ask
+  # whether the lesson has a PDF, and with no credentials and no endpoint that
+  # is a 500, not a missing PDF.
+  #
+  # Its API port is 9000, the same number the apps dev server uses. It is
+  # deliberately not published — Rails reaches it as http://minio:9000 over
+  # the compose network, where nothing else is listening.
+  minio:
+    image: ${CDO_DEV_MINIO_IMAGE:-minio/minio:latest}
+    command: server /data --quiet
+    environment:
+      - MINIO_ROOT_USER=local-development
+      - MINIO_ROOT_PASSWORD=allstudents
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  # Buckets Rails expects to exist. Only reads lazily create anything
+  # (lib/cdo/local_development.rb), so without this the first save of a
+  # project or an animation fails with NoSuchBucket. The list is
+  # docker/developers/install-s3.sh's.
+  minio-init:
+    image: ${CDO_DEV_MINIO_IMAGE:-minio/minio:latest}
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint:
+      - sh
+      - -c
+      - |
+        mc alias set cdo http://minio:9000 local-development allstudents
+        for b in cdo-ai cdo-animation-library cdo-restricted cdo-sound-library \
+                 cdo-v3-animations cdo-v3-assets cdo-v3-files cdo-v3-libraries \
+                 cdo-v3-sources videos.code.org; do
+          mc mb --ignore-existing "cdo/$$b"
+        done
+
+  app:
+    image: ${CDO_DEV_IMAGE:-localhost/cdo-dev:local}
+    volumes:
+      # The checkout. Bind-mounted from the host by default, which is what a
+      # Linux host wants and what the devcontainer standard would do on its
+      # own. On macOS a bind mount is too slow to work in: set
+      # CDO_WORKSPACE_TYPE=volume and CDO_WORKSPACE_SOURCE=cdo-workspace to
+      # take the checkout from a named volume instead — see the README.
+      - type: ${CDO_WORKSPACE_TYPE:-bind}
+        source: ${CDO_WORKSPACE_SOURCE:-..}
+        target: /code-dot-org
+    working_dir: /code-dot-org
+    stdin_open: true
+    tty: true
+    init: true
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio-init:
+        condition: service_completed_successfully
+    extra_hosts:
+      # The hostname every dev URL uses. Rails, the webpack proxy and the
+      # Playwright suite all address the app as localhost-studio.code.org.
+      - "localhost-studio.code.org:127.0.0.1"
+    environment:
+      - RAILS_ENV=development
+      # Fetch the prebuilt apps package on first start, so level pages render
+      # without a local webpack build. See the README to develop in apps/.
+      - DEVCONTAINER_BOOTSTRAP_APPS=true
+      # The apps dev server is the memory hog here: eval source maps and no
+      # in-process type checking are what keep it inside a laptop. Both are
+      # documented in apps/README.md; your editor and CI still type-check.
+      - APPS_DEVTOOL=eval
+      - SKIP_TYPECHECK=1
+      - NODE_OPTIONS=--max-old-space-size=8192
+    ports:
+      - "${CDO_RAILS_PORT:-3000}:3000"
+      - "${CDO_APPS_PORT:-9000}:9000"
+      - "${CDO_FRONTEND_PORT:-3036}:3036"
+
+volumes:
+  # Only referenced when CDO_WORKSPACE_TYPE is "volume", where
+  # CDO_WORKSPACE_SOURCE is this key rather than a path. External because the
+  # clone into it is a deliberate act, not something a stray `up` should
+  # create empty. CDO_WORKSPACE_VOLUME renames the real volume, for a second
+  # checkout.
+  cdo-workspace:
+    external: true
+    name: ${CDO_WORKSPACE_VOLUME:-cdo-workspace}

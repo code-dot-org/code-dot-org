@@ -1,0 +1,26 @@
+# cdo-dev-db: mysql:8.0 with a seeded dashboard datadir baked in, so a
+# devcontainer starts against a populated database instead of a two-hour
+# db:setup_or_migrate.
+#
+# The datadir is baked at /opt/mysql-data, not at the default /var/lib/mysql.
+# The official image declares VOLUME /var/lib/mysql, and docker copies the
+# image's contents of a VOLUME path into a fresh anonymous volume every time a
+# container starts: several gigabytes of copying before mysqld accepts its
+# first connection. At a path with no VOLUME declaration the layer is read in
+# place and the container's copy-on-write layer holds only what it writes.
+#
+# That also means the database is scratch space. `docker compose down` discards
+# the layer and the next container starts from the bake again. Rebake to move
+# the starting point.
+#
+#   .devcontainer/bake-db.sh
+#   docker build -f .devcontainer/Dockerfile.db -t cdo-dev-db:local .devcontainer
+
+FROM mysql:8.0
+
+# mysql:8.0 runs as uid:gid 999:999.
+ADD --chown=999:999 mysql-data.tar /opt/mysql-data/
+
+# The image's entrypoint reads the datadir out of the server arguments, finds
+# it non-empty, and skips initialization entirely.
+CMD ["--datadir=/opt/mysql-data"]

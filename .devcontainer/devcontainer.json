@@ -1,0 +1,23 @@
+{
+  "name": "code-dot-org",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/code-dot-org",
+  "remoteUser": "cdo",
+  "overrideCommand": false,
+  "postCreateCommand": "cp -n .devcontainer/locals.yml.sample locals.yml",
+  "postStartCommand": "/usr/local/bin/entrypoint.sh true",
+  "forwardPorts": [3000, 9000, 3036],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}

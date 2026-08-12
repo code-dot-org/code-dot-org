@@ -1,0 +1,68 @@
+# Copy to the repo root as locals.yml — `cp -n .devcontainer/locals.yml.sample
+# locals.yml`, which is also what the devcontainer's postCreateCommand does.
+#
+# Everything here is either a compose service name or a stub. There are no
+# credentials, and nothing reaches AWS. Only keys config/*.yml.erb actually
+# defines will do: an unknown key is a boot-time error, not a warning.
+db_writer: 'mysql://root:password@db:3306/'
+db_endpoint_writer: 'db:3306'
+db_credential_admin:
+  username: root
+  password: password
+db_endpoint_proxy_reporting: 'db:3306'
+db_endpoint_proxy_reader: 'db:3306'
+db_credential_reader:
+  username: root
+  password: password
+db_endpoint_proxy_writer: 'db:3306'
+db_credential_writer:
+  username: root
+  password: password
+
+redis_url: 'redis://redis:6379/0'
+
+# The minio sidecar. Without an endpoint the S3 client has no credentials,
+# and a level page asking whether its lesson has a PDF becomes a 500.
+aws_s3_emulated: true
+aws_s3_endpoint: 'http://minio:9000'
+aws_s3_access_key_id: local-development
+aws_s3_secret_access_key: allstudents
+
+# Empty, not stubbed: 528 encrypted levels then render hollow, which is the
+# price of not holding the production key.
+properties_encryption_key: ''
+
+# config/development.yml.erb clears every globally-defined secret, then opts
+# a few back in below that line. Those are the ones a credential-less sandbox
+# has to answer for itself: without a value, any eager-loading task — most
+# visibly `rake db:migrate` — dies in Secrets Manager with "unable to sign
+# request without credentials set". This list is every `!Secret` in
+# config/development.yml.erb; keep it in step with that file.
+applications_gsheet_key: localoverride
+ai_gateway_auth_key: localoverride
+ai_gateway_auth_key_passphrase: localoverride
+ai_gateway_auth_public_key: localoverride
+azure_ai_content_safety_key: localoverride
+device_farm_mobile_project_arn: localoverride
+devinternal_db_writer: 'mysql://root:password@db:3306/'
+eir_teacher_enrollments_gsheet_key: localoverride
+elevenlabs_api_key: localoverride
+google_gemini_ai_chat_lab_api_key: localoverride
+google_gemini_ai_tutor_api_key: localoverride
+google_vertex_ai_chat_service_account_key: localoverride
+google_vertex_ai_tutor_service_account_key: localoverride
+javabuilder_key_password: localoverride
+javabuilder_private_key: localoverride
+openai_lesson_summaries_api_key: localoverride
+openai_measures_of_learning_api_key: localoverride
+openai_student_learning_api_key: localoverride
+pardot_private_key: localoverride
+slack_bot_token: localoverride
+ta_langfuse_public_key: localoverride
+ta_langfuse_secret_key: localoverride
+tutor_langfuse_public_key: localoverride
+tutor_langfuse_secret_key: localoverride
+
+# false serves the prebuilt apps package the entrypoint downloads from S3 —
+# public-read, no credentials. Set it to true to develop in apps/ (README).
+use_my_apps: false

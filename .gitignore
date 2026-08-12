@@ -120,3 +120,6 @@ CLAUDE.local.md
 # playwright-best-practices: managed by skills-lock.json, not vendored.
 # Restore with `npx skills experimental_install` (see e2e-tests/README.md).
 .agents/skills/playwright-best-practices/
+
+# bake-db.sh output: a multi-gigabyte seeded MySQL datadir, rebuilt on demand.
+.devcontainer/mysql-data.tar
