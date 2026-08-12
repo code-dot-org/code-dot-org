@@ -67,39 +67,41 @@ class HttpCache
     '/courses/dance-ai-2023/units/1/lessons/1/levels/10',
   ]
 
-  # Maps each script name to the URL pattern covering its script levels. Assume
-  # all cached units are in single unit courses.
-  def self.units_map(script_names)
-    script_names.to_h {|script_name| [script_name, "/courses/#{script_name}/units/1/lessons/*"]}.freeze
-  end
-
-  # A map from script name to script level URL pattern.
-  CACHED_UNITS_MAP = units_map %w(
+  # Units whose script levels may be publicly cached.
+  CACHED_UNITS = %w(
     aquatic
     dance-ai-2023
     oceans
     mc
     music-jam-2024
     mix-move-ai-2025
-  )
+  ).freeze
 
   # Cached units in the UI-test curriculum partition (dashboard/test/ui/config),
   # which exist so that UI tests can exercise cached-unit behavior without
   # depending on production curriculum.
-  UI_TEST_CACHED_UNITS_MAP = units_map %w(
+  UI_TEST_CACHED_UNITS = %w(
     ui-test-oceans
-  )
+  ).freeze
 
-  # The cached units in effect for `env`. Outside of development and test,
-  # nothing in UI_TEST_CACHED_UNITS_MAP has any effect: not in CloudFront
-  # cache behavior, and not in ScriptConfig.hoc_scripts.
-  def self.cached_units_map(env = rack_env)
-    return CACHED_UNITS_MAP unless [:development, :test].include?(env.to_sym)
-    CACHED_UNITS_MAP.merge(UI_TEST_CACHED_UNITS_MAP)
+  # The cached units in effect for `env`. The UI-test partition is seeded only in
+  # development and test, so outside those environments UI_TEST_CACHED_UNITS has
+  # no effect: neither on CloudFront cache behavior, nor on
+  # ScriptConfig.hoc_scripts.
+  def self.cached_units(env = rack_env)
+    return CACHED_UNITS unless [:development, :test].include?(env.to_sym)
+    CACHED_UNITS + UI_TEST_CACHED_UNITS
   end
 
+  # Maps each cached unit to the URL pattern covering its script levels. Assume
+  # all cached units are in single unit courses.
+  def self.cached_units_map(env = rack_env)
+    cached_units(env).to_h {|unit_name| [unit_name, "/courses/#{unit_name}/units/1/lessons/*"]}
+  end
+
+  # Same list under the older "script" name, which ScriptConfig still speaks.
   def self.cached_scripts
-    cached_units_map.keys
+    cached_units
   end
 
   ALLOWED_WEB_REQUEST_HEADERS = %w(
@@ -366,6 +368,6 @@ class HttpCache
 
   # Return true if the levels for the given script name can be publicly cached by proxies.
   def self.allows_public_caching_for_script(script_name)
-    cached_units_map.include?(script_name)
+    cached_units.include?(script_name)
   end
 end

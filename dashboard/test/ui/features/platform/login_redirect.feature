@@ -2,7 +2,7 @@
 Feature: Navigating to a level page with login required
 
 # The 'ui-test-oceans' level is specifically chosen because it is a cached unit
-# (see UI_TEST_CACHED_UNITS_MAP in lib/cdo/http_cache.rb) which lives in the
+# (see UI_TEST_CACHED_UNITS in lib/cdo/http_cache.rb) which lives in the
 # UI-test curriculum partition, seeded by `rake seed:ui_test` (see
 # dashboard/test/ui/config/README.md).
 #

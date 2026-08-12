@@ -3,8 +3,8 @@ require 'cdo/script_config'
 
 class ScriptConfigTest < ActiveSupport::TestCase
   test 'allows public caching for high scale levels' do
-    HttpCache::CACHED_UNITS_MAP.each do |script_name, _|
-      assert ScriptConfig.allows_public_caching_for_script script_name
+    HttpCache::CACHED_UNITS.each do |unit_name|
+      assert ScriptConfig.allows_public_caching_for_script unit_name
     end
   end
 
@@ -13,8 +13,8 @@ class ScriptConfigTest < ActiveSupport::TestCase
   end
 
   # UI tests need a cached unit which is not production curriculum. Without this
-  # unit test, dropping the entry from UI_TEST_CACHED_UNITS_MAP fails only in
-  # the UI test lane.
+  # unit test, dropping the entry from UI_TEST_CACHED_UNITS fails only in the UI
+  # test lane.
   test 'allows public caching for the UI-test cached unit' do
     assert ScriptConfig.allows_public_caching_for_script 'ui-test-oceans'
   end
@@ -23,7 +23,6 @@ class ScriptConfigTest < ActiveSupport::TestCase
   # none of it may reach a production cache configuration: no CloudFront cache
   # behavior, and no hoc_scripts entry. See dashboard/test/ui/config/README.md.
   test 'excludes UI-test cached units outside development and test' do
-    assert_empty HttpCache.cached_units_map(:production).keys &
-      HttpCache::UI_TEST_CACHED_UNITS_MAP.keys
+    assert_empty HttpCache.cached_units(:production) & HttpCache::UI_TEST_CACHED_UNITS
   end
 end
