@@ -56,14 +56,9 @@ RUN <<EOF
   rm -rf /var/lib/apt/lists/*
 EOF
 
-# execjs remains in the bundle as a transitive dependency (bootstrap-sass ->
-# autoprefixer-rails). Nothing requires it today, but it raises at require
-# time when no JS runtime exists, and this stage has no Node. Disabled keeps
-# an accidental require boot-safe; actual JS evaluation still fails loudly.
 ENV \
   BUNDLE_DEPLOYMENT=1 \
-  BUNDLE_WITHOUT=${BUNDLE_WITHOUT} \
-  EXECJS_RUNTIME=Disabled
+  BUNDLE_WITHOUT=${BUNDLE_WITHOUT}
 
 RUN <<EOF
   mkdir -p ${BUNDLE_PATH}/ruby/3.2.0/bundler/gems
