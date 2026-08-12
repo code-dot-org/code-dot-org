@@ -19,13 +19,13 @@ class ProjectRemix extends React.Component {
     refreshProjectName: PropTypes.func.isRequired,
     inRestrictedShareMode: PropTypes.bool,
     isBlockedAbuse: PropTypes.bool,
+    exceedsAbuseThreshold: PropTypes.bool,
   };
 
   remixBlocked = () =>
     this.props.inRestrictedShareMode ||
     this.props.isBlockedAbuse ||
-    (typeof dashboard !== 'undefined' &&
-      dashboard.project?.exceedsAbuseThreshold?.());
+    this.props.exceedsAbuseThreshold;
 
   remixProject = () => {
     if (this.remixBlocked()) {
@@ -102,6 +102,9 @@ export default connect(
     isSignedIn: state.pageConstants && state.pageConstants.isSignedIn,
     inRestrictedShareMode: state.project && state.project.inRestrictedShareMode,
     isBlockedAbuse: !!(state.lab && state.lab.isBlockedAbuse),
+    exceedsAbuseThreshold: !!(
+      state.project && state.project.exceedsAbuseThreshold
+    ),
   }),
   {refreshProjectName}
 )(ProjectRemix);

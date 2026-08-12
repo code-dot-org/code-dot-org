@@ -42,10 +42,10 @@ describe('ProjectRemix', () => {
   });
 
   it('does not render when project exceeds abuse threshold', () => {
-    sinon.stub(window.dashboard.project, 'exceedsAbuseThreshold').returns(true);
-    const wrapper = shallow(<ProjectRemix {...defaultProps} />);
+    const wrapper = shallow(
+      <ProjectRemix {...defaultProps} exceedsAbuseThreshold />
+    );
     expect(wrapper.isEmptyRender()).to.be.true;
-    window.dashboard.project.exceedsAbuseThreshold.restore();
   });
 
   it('does not render when lab2 project is blocked for abuse', () => {
