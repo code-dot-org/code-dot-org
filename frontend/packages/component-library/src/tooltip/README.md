@@ -31,10 +31,15 @@ const RunButton = () => (
 ```
 
 Props are MUI's [`TooltipProps`](https://mui.com/material-ui/api/tooltip/) —
-`title`, `placement`, `arrow`, `open`, and the rest — plus three of ours:
+`title`, `placement`, `arrow`, `open`, and the rest — plus a few of ours:
 
 - `size` (`'xs' | 's' | 'm' | 'l'`, default `'m'`) picks the design system size.
   MUI has no size prop of its own.
+- `hasCaret` (`boolean`) is our name for MUI's `arrow` — the pointing caret. It
+  defaults to `true` via the theme and, when set, wins over a caller's `arrow`.
+  Pass `hasCaret={false}` to drop the caret.
+- `iconName` (`string`) renders a leading Font Awesome icon before the text,
+  sized per `size` by the theme. Omit it when there's no icon.
 - `keyboardOnly` (default `false`) — see below.
 - `data-theme` — pass it when the trigger sits inside a `data-theme` subtree.
   MUI renders the tooltip in a portal on `document.body`, so it does not

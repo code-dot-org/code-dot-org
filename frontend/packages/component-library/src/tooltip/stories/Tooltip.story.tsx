@@ -55,6 +55,34 @@ export const Sizes: StoryFn = () => (
   </Row>
 );
 
+/** The caret is on by default; drop it with `hasCaret={false}`. */
+export const Caret: StoryFn = () => (
+  <Row>
+    <Tooltip title="With caret" hasCaret>
+      <Button variant="outlined">hasCaret</Button>
+    </Tooltip>
+    <Tooltip title="No caret" hasCaret={false}>
+      <Button variant="outlined">hasCaret false</Button>
+    </Tooltip>
+  </Row>
+);
+
+/** A leading Font Awesome icon, sized per `size`, sits before the text. */
+export const WithIcon: StoryFn = () => (
+  <Row>
+    {(['xs', 's', 'm', 'l'] as const).map(size => (
+      <Tooltip
+        key={size}
+        title={`Size ${size}`}
+        size={size}
+        iconName="circle-info"
+      >
+        <Button variant="outlined">{size}</Button>
+      </Tooltip>
+    ))}
+  </Row>
+);
+
 export const Placements: StoryFn = () => (
   <div style={{padding: '4rem 0'}}>
     <Row>

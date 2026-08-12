@@ -73,24 +73,19 @@ describe('Design System - Tooltip (MUI)', () => {
       );
     });
 
-    it('shows a tail by default, unlike MUI', async () => {
-      renderTooltip();
+    // The caret is on by default; hasCaret (our alias for `arrow`) toggles it.
+    it.each([
+      [true, {}],
+      [true, {hasCaret: true}],
+      [false, {hasCaret: false}],
+      [false, {arrow: false}],
+    ] as const)('caret present=%s for %o', async (shown, props) => {
+      renderTooltip(props);
 
       await user.hover(screen.getByRole('button'));
       await screen.findByRole('tooltip');
 
-      expect(document.querySelector('.MuiTooltip-arrow')).toBeInTheDocument();
-    });
-
-    it('drops the tail when arrow is false', async () => {
-      renderTooltip({arrow: false});
-
-      await user.hover(screen.getByRole('button'));
-      await screen.findByRole('tooltip');
-
-      expect(
-        document.querySelector('.MuiTooltip-arrow'),
-      ).not.toBeInTheDocument();
+      expect(!!document.querySelector('.MuiTooltip-arrow')).toBe(shown);
     });
 
     it('forwards a ref to the trigger, as MUI does', () => {
@@ -99,22 +94,21 @@ describe('Design System - Tooltip (MUI)', () => {
 
       expect(ref.current).toBe(screen.getByRole('button'));
     });
+  });
 
-    it('lets keyboardOnly win over every conflicting listener prop', async () => {
-      renderTooltip({
-        keyboardOnly: true,
-        disableHoverListener: false,
-        disableTouchListener: false,
-        disableFocusListener: true,
-      });
-
-      await user.hover(screen.getByRole('button'));
-      expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
-
-      // disableFocusListener would otherwise leave it unopenable.
-      await user.tab();
-      expect(await screen.findByRole('tooltip')).toBeInTheDocument();
+  it('lets keyboardOnly win over every conflicting listener prop', async () => {
+    renderKeyboardOnly({
+      disableHoverListener: false,
+      disableTouchListener: false,
+      disableFocusListener: true,
     });
+
+    await user.hover(screen.getByRole('button'));
+    expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
+
+    // disableFocusListener would otherwise leave it unopenable.
+    await user.tab();
+    expect(await screen.findByRole('tooltip')).toBeInTheDocument();
   });
 
   it('opens on keyboard focus', async () => {
@@ -325,6 +319,40 @@ describe('Design System - Tooltip (MUI)', () => {
     await user.tab();
 
     expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
+  });
+
+  describe('iconName', () => {
+    const findIcon = (bubble: HTMLElement) =>
+      bubble.querySelector('[data-testid="font-awesome-v6-icon"]');
+
+    it('renders a leading icon before the text when iconName is set', async () => {
+      renderTooltip({iconName: 'circle-info'});
+
+      await user.hover(screen.getByRole('button'));
+      const bubble = await findTooltipBubble();
+
+      const icon = findIcon(bubble);
+      expect(icon).toBeInTheDocument();
+      expect(icon).toHaveClass('fa-circle-info', 'fa-solid');
+      expect(bubble).toHaveTextContent('tooltipText');
+    });
+
+    it('renders no icon when iconName is unset', async () => {
+      renderTooltip();
+
+      await user.hover(screen.getByRole('button'));
+      const bubble = await findTooltipBubble();
+
+      expect(findIcon(bubble)).toBeNull();
+    });
+
+    it('still renders nothing for an empty title, even with an icon', async () => {
+      renderKeyboardOnly({title: '', iconName: 'circle-info'});
+
+      await user.tab();
+
+      expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
+    });
   });
 
   describe('themed styles', () => {
