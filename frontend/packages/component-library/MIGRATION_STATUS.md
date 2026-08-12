@@ -53,7 +53,7 @@ This document tracks the migration progress of DSCO (Design System Code.org) com
 | `tags`                | Not Started    | `Chip`                 | —                                       |                                                                                                                                                                                                                                                                     |
 | `textField`           | Not Started    | `TextField`            | —                                       |                                                                                                                                                                                                                                                                     |
 | `toggle`              | Not Started    | `Switch`               | —                                       |                                                                                                                                                                                                                                                                     |
-| `tooltip`             | Not Started    | `Tooltip`              | —                                       |                                                                                                                                                                                                                                                                     |
+| `tooltip`             | In Progress    | `Tooltip`              | `styleOverrides/tooltip.ts`             | `Tooltip` wraps MUI's, adding `size`, `keyboardOnly` and `data-theme`. Legacy DSCO one is exported as `LegacyTooltip`; `TooltipProps` still refers to it. `WithTooltip` unchanged. See `src/tooltip/README.md`.                                                     |
 | `video`               | N/A            | —                      | —                                       | No MUI equivalent.                                                                                                                                                                                                                                                  |
 
 ## Style Overrides Reference
@@ -68,6 +68,7 @@ export const STYLE_OVERRIDES: Components<Theme> = {
   MuiButtonBase: BUTTON_BASE_OVERRIDES,
   MuiButton: BUTTON_OVERRIDES,
   MuiIconButton: ICON_BUTTON_OVERRIDES,
+  MuiTooltip: TOOLTIP_OVERRIDES,
 };
 ```
 

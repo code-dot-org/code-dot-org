@@ -33,8 +33,13 @@ export interface CdoTooltipProps extends MuiTooltipProps {
  * gates focus-opening on `:focus-visible`. `arrow` and `describeChild` default
  * on via the theme, unlike MUI.
  */
-/** MUI already gates focus-opening on `:focus-visible`, so this is the lot. */
+/**
+ * MUI already gates focus-opening on `:focus-visible`, so this is the lot.
+ * Focus is forced back on: without it a caller could pass both `keyboardOnly`
+ * and `disableFocusListener` and get a tooltip that never opens at all.
+ */
 const KEYBOARD_ONLY_PROPS = {
+  disableFocusListener: false,
   disableHoverListener: true,
   disableTouchListener: true,
 };

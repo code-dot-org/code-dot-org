@@ -100,12 +100,20 @@ describe('Design System - Tooltip (MUI)', () => {
       expect(ref.current).toBe(screen.getByRole('button'));
     });
 
-    it('lets keyboardOnly win over an explicit disableHoverListener', async () => {
-      renderTooltip({keyboardOnly: true, disableHoverListener: false});
+    it('lets keyboardOnly win over every conflicting listener prop', async () => {
+      renderTooltip({
+        keyboardOnly: true,
+        disableHoverListener: false,
+        disableTouchListener: false,
+        disableFocusListener: true,
+      });
 
       await user.hover(screen.getByRole('button'));
-
       expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
+
+      // disableFocusListener would otherwise leave it unopenable.
+      await user.tab();
+      expect(await screen.findByRole('tooltip')).toBeInTheDocument();
     });
   });
 

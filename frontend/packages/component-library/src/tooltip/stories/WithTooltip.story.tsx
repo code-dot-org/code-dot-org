@@ -3,11 +3,16 @@ import {useRef} from 'react';
 
 import {Button} from '@/button';
 
-import Tooltip, {TooltipProps, WithTooltip, WithTooltipHandle} from '../index';
+import {
+  LegacyTooltip,
+  TooltipProps,
+  WithTooltip,
+  WithTooltipHandle,
+} from '../index';
 
 export default {
   title: 'DesignSystem/Tooltip',
-  component: Tooltip,
+  component: LegacyTooltip,
 } as Meta;
 
 //
