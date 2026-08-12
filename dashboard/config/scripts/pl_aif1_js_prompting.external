@@ -1,0 +1,23 @@
+name 'pl-aif1-js-prompting'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>The Four-Part Prompt Framework</h1>
+
+AI pays attention to four things in a prompt:
+- The Task (what to build)
+- The Context (who it's for or what it's about)
+- The Tone/Format (the style or feel)
+- The Details (specific content to include).
+
+A strong prompt hits all four. A generic-looking result is almost always missing one of them, not a sign the AI misunderstood or isn't capable.
+
+That reframe matters for how you coach students through the AI Design Challenges. When a page comes back bland, the fix usually isn't "try again," it's figuring out which of the four pieces to add.
+
+---
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/diagnose-the-prompt.html" width="100%" height="1000" style="border:none;" title="Diagnose the Prompt: identify the missing framework piece"></iframe>
+</div>
+MARKDOWN

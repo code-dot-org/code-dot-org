@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: cdo-dashboard-job-setup-db
+spec:
+  template:
+    spec:
+      containers:
+        - name: setup-db
+          args:
+            - cd dashboard && RAILS_ENV=adhoc RACK_ENV=adhoc bundle exec rake db:setup_or_migrate && echo 'setup-db-minimal COMPLETE'
+          env:
+            - name: AWS_EC2_METADATA_DISABLED
+              value: "true"
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0

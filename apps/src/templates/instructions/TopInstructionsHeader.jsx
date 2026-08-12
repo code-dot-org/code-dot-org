@@ -59,6 +59,8 @@ function TopInstructionsHeader(props) {
         backgroundColor:
           tabSelected === TabType.TEACHER_ONLY
             ? 'var(--background-info-primary)'
+            : isOldPurpleColor
+            ? '#7665a0'
             : undefined,
       }}
     >
@@ -87,6 +89,9 @@ function TopInstructionsHeader(props) {
       <div
         style={{
           ...styles.helpTabs,
+          ...(isOldPurpleColor
+            ? {color: 'var(--text-neutral-white-fixed)'}
+            : {}),
           ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr),
         }}
       >

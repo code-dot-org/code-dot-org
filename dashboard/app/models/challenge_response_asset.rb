@@ -29,13 +29,17 @@ class ChallengeResponseAsset < ApplicationRecord
 
   # The S3 object key in the user-content bucket. Derived from the record ids
   # (no key is stored), so the asset must be persisted for this to be stable.
+  # Whiteboard images are always PNG, so their keys carry a .png extension.
   def s3_key
-    "challenge_response_assets/#{challenge_response_id}/#{id}"
+    base = "challenge_response_assets/#{challenge_response_id}/#{id}"
+    asset_whiteboard_image? ? "#{base}.png" : base
   end
 
-  # Accepted upload content types per asset_type.
+  # Accepted upload content types per asset_type. Whiteboard snapshots are
+  # captured client-side as PNG, and the evaluation pipeline assumes PNG, so
+  # nothing else is accepted.
   CONTENT_TYPES = {
-    'whiteboard_image' => %w[image/png image/jpeg],
+    'whiteboard_image' => %w[image/png],
     'video' => %w[video/webm video/mp4],
     'audio' => %w[audio/webm audio/mpeg],
   }.freeze

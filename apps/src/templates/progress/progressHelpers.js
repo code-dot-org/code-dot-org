@@ -102,7 +102,7 @@ export function lessonLocked(levels) {
  */
 export function getIconForLevel(level, inProgressView = false) {
   if (inProgressView && isLevelAssessment(level)) {
-    return 'check-circle';
+    return 'star';
   }
 
   if (level.isUnplugged) {
@@ -138,6 +138,22 @@ export const defaultBubbleIcon = 'desktop';
  */
 export function isLevelAssessment(level) {
   return level.kind === 'assessment';
+}
+
+// Statuses that count as completed work, as opposed to merely attempted.
+const completedStatuses = [
+  LevelStatus.perfect,
+  LevelStatus.passed,
+  LevelStatus.submitted,
+  LevelStatus.free_play_complete,
+  LevelStatus.completed_assessment,
+];
+
+/**
+ * @returns Whether a level status represents completed work.
+ */
+export function isLevelStatusCompleted(status) {
+  return completedStatuses.includes(status);
 }
 
 /**
@@ -191,14 +207,6 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
   if (!filteredLevels.length) {
     return null;
   }
-
-  const completedStatuses = [
-    LevelStatus.perfect,
-    LevelStatus.passed,
-    LevelStatus.submitted,
-    LevelStatus.free_play_complete,
-    LevelStatus.completed_assessment,
-  ];
 
   let attempted = 0;
   let completed = 0;

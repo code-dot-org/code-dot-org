@@ -1,0 +1,30 @@
+name 'pl-aif1-js-action-parts-of-a-page'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>How Change Happens</h1>
+
+<p>JavaScript is the piece that makes a page do something instead of just display something. It's a programming language that tells a web page how to respond to user actions, the events you sorted into their own category a couple levels back.</p>
+
+<p>Examples:</p>
+<ul>
+<li>Clicking a button</li>
+<li>Typing in a text box</li>
+</ul>
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/0419ecc13c4903e2f6cfca5154f7a4e9-image-1786128123664.png" alt="A five-step diagram. Step one, Initial Page: a screen shows an orange Click button. Step two, User Action: a hand clicks the button. Step three, JavaScript Detects Event: an ear icon and a code bracket icon represent JavaScript noticing the click. Step four, JavaScript Updates DOM: a wrench and screwdriver icon changes a text box labeled text into one labeled Updated text. Step five, Browser Renders Update: the screen now shows a red button labeled Clicked, with a lightbulb above it." style="max-width: 800px; width: 100%; border-radius: 10px;">
+</div>
+
+<p>Every one of those five steps matters. A click by itself does nothing, it's only step two. JavaScript has to detect that event, update the DOM to reflect what should change, and only then does the browser actually render that update on screen. That's the connection between Elements, Events, and the DOM you've been building toward across the last few levels: this is the full loop, start to finish.</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> your students won't hand-write this sequence line by line, they'll prompt AI to add the interaction, and AI writes code that does exactly this: detect the event, update the DOM, render the change. Understanding the sequence yourself is what lets you judge whether AI's output actually does what your student asked for.</p>
+</div>
+
+<p>Next, you'll try this yourself in Web Lab, exploring a page and using AI to make one interaction actually work.</p>
+
+
+
+MARKDOWN

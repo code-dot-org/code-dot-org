@@ -1,10 +1,13 @@
-# Shared backend configuration used by Rails processes. The dashboard
-# component layers frontend-serving resources on top of this component.
+# Backend layer: everything a deployment needs to run background work
+# (ActiveJob worker) and backend Rails processes, without the dashboard
+# frontend. The dashboard component layers on top of this; see ../dashboard
+# and ../../base.
 apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
 resources:
   - locals.yml.yaml
   - cdo-local-secrets.yaml
+  - active-job-worker-deployment.yaml
 secretGenerator:
   - name: cdo-local-secrets
     behavior: merge

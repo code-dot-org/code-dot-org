@@ -1,0 +1,17 @@
+name 'pl-aif1-js-debugging-checklist'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>The Loop Debugging Checklist</h1>
+
+<p>Before fixing AI-generated code, QA teams test first. The checklist below isn't a fix-it list, it's a diagnostic tool: the goal is to identify exactly which check catches the problem before touching a single line of code.</p>
+
+<p>Below is a real prompt and the loop AI generated for it. Work through all five checks and find which one actually catches the bug.</p>
+
+---
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/loop-debugging-checklist.html" width="100%" height="900" style="border:none;" title="The Loop Debugging Checklist: diagnose a real off-by-one bug"></iframe>
+</div>
+MARKDOWN

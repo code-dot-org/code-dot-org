@@ -23,10 +23,7 @@ def color_strings(key)
     # --background-neutral-primary (white Light, neutral-base-black Dark)
     not_tried: ['rgb(255, 255, 255)', 'rgb(18, 18, 18)'],
     # --borders-neutral-primary
-    lighter_gray: ['rgb(211, 214, 218)', 'rgb(75, 82, 88)'],
-    # --background-brand-purple-primary / --borders-brand-purple-primary, which
-    # collapse to one value in both themes under this brand.
-    assessment: ['rgb(76, 66, 207)']
+    lighter_gray: ['rgb(211, 214, 218)', 'rgb(75, 82, 88)']
   }[key.to_sym]
 end
 
@@ -46,12 +43,20 @@ def verify_progress(selector, test_result)
   when 'not_tried'
     background_colors = color_strings('not_tried')
     border_colors = color_strings('lighter_gray')
+  # Assessment levels are no longer color-coded (they used to paint purple);
+  # they are denoted by a star instead, and take the same status colors as
+  # any other level.
   when 'perfect_assessment'
-    background_colors = color_strings('assessment')
-    border_colors = color_strings('assessment')
+    background_colors = color_strings('perfect')
+    border_colors = color_strings('perfect')
   when 'attempted_assessment'
     background_colors = color_strings('not_tried')
-    border_colors = color_strings('assessment')
+    border_colors = color_strings('perfect')
+  when 'attempted_assessment_dot'
+    # Small (dot) assessment bubbles drop status coloring until completed,
+    # so a started-but-not-completed one keeps the not_tried gray outline.
+    background_colors = color_strings('not_tried')
+    border_colors = color_strings('lighter_gray')
   end
 
   steps %{

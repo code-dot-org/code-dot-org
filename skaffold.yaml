@@ -5,11 +5,22 @@
 #
 # IF YOU MODIFY THIS FILE, also fix its sibling k8s/kustomize/skaffold.yaml in the same
 # way until we decide between Helm and Kustomize.
+#
+# Layering: the base config builds and deploys a BACKEND-ONLY stack (the
+# ActiveJob worker, no dashboard frontend, no frontend asset build). Every
+# additional layer is an explicit profile:
+#
+#   skaffold dev                  # backend only (the base config)
+#   skaffold dev -p dashboard     # full app, frontend build included
+#   skaffold build -p release     # full production-flavored image (CI)
 
 apiVersion: skaffold/v4beta13
 kind: Config
 build:
   artifacts:
+  # Backend-only runtime image: Rails without the frontend asset build.
+  # The dashboard/release profiles below retarget this artifact to the full
+  # `runtime` image and add the frontend artifact chain it requires.
   - image: code-dot-org
     sync:
       infer:
@@ -23,54 +34,24 @@ build:
         - '**/*.json'
     custom:
       buildCommand: |
-        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+        IMPORT_IMAGE_TO_K8S_NODE=true k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+          --target code-dot-org-activejob-only \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
-          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
-          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
-          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
+          --build-arg BUNDLE_WITHOUT=development:test:production:adhoc:staging:levelbuilder:integration
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org.dockerfile
     requires:
     - image: code-dot-org-core
       alias: CODE_DOT_ORG_CORE
-    - image: code-dot-org-db-seed
-      alias: CODE_DOT_ORG_DB_SEED
-    - image: code-dot-org-pegasus
-      alias: CODE_DOT_ORG_PEGASUS
-    - image: code-dot-org-static
-      alias: CODE_DOT_ORG_STATIC
   - image: code-dot-org-core
     custom:
-      # skaffold sync only works when the user is root 😤:
-      # https://github.com/GoogleContainerTools/skaffold/issues/2479
-      # If we find a solution, we can drop this override:
       buildCommand: |
         k8s/bin/docker-buildx -f k8s/docker/code-dot-org-core.dockerfile \
-          --build-arg USERNAME=root \
-          --build-arg UID=0 \
-          --build-arg GID=0
+          --target code-dot-org-core
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-core.dockerfile
-  - image: code-dot-org-pegasus
-    custom:
-      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-pegasus.dockerfile
-      dependencies:
-        dockerfile:
-          path: k8s/docker/code-dot-org-pegasus.dockerfile
-  - image: code-dot-org-static
-    custom:
-      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-static.dockerfile
-      dependencies:
-        dockerfile:
-          path: k8s/docker/code-dot-org-static.dockerfile
-  - image: code-dot-org-db-seed
-    custom:
-      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-db-seed.dockerfile
-      dependencies:
-        dockerfile:
-          path: k8s/docker/code-dot-org-db-seed.dockerfile
 
 deploy:
   helm:
@@ -92,17 +73,168 @@ deploy:
 
 profiles:
 
+# Layer the dashboard frontend on top of the backend-only base: build the
+# full `runtime` image (with the frontend artifact chain) and enable the
+# dashboard Deployment/Service/Ingress. Explicit opt-in:
+# `skaffold dev -p dashboard`.
+#
+# NOTE: the mimic profile patches build artifacts by index assuming this
+# profile's additions are in place, so keep it defined first and always
+# combine mimic with it (`-p dashboard,mimic`).
+- name: dashboard
+  patches:
+    # Development-flavored full image; see the `release` profile for the
+    # production-flavored equivalent.
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+          --target runtime \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
+          --build-arg BUNDLE_WITHOUT=test:production:staging:levelbuilder
+    # Keep the requires order (core, db-seed, pegasus, static) and the
+    # artifact order (pegasus, static, db-seed) stable: mimic patches both
+    # by index.
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-db-seed
+        alias: CODE_DOT_ORG_DB_SEED
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-pegasus
+        alias: CODE_DOT_ORG_PEGASUS
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-static
+        alias: CODE_DOT_ORG_STATIC
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-pegasus
+        custom:
+          buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-pegasus.dockerfile
+          dependencies:
+            dockerfile:
+              path: k8s/docker/code-dot-org-pegasus.dockerfile
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-static
+        custom:
+          buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-static.dockerfile
+          dependencies:
+            dockerfile:
+              path: k8s/docker/code-dot-org-static.dockerfile
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-db-seed
+        custom:
+          buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-db-seed.dockerfile
+          dependencies:
+            dockerfile:
+              path: k8s/docker/code-dot-org-db-seed.dockerfile
+    - op: add
+      path: /deploy/helm/releases/0/valuesFiles/-
+      value: k8s/helm/dashboard.values.yaml
+    - op: add
+      path: /portForward/-
+      value:
+        resourceType: Service
+        resourceName: cdo-dashboard
+        port: http
+        localPort: 13000
+    - op: add
+      path: /portForward/-
+      value:
+        resourceType: Service
+        resourceName: cdo-dashboard
+        port: http-hmr
+        localPort: 19000
+
+# Production-flavored full image build, used by CI to publish the deployable
+# image (see .github/workflows/k8s-skaffold-build.yml). Same layering as the
+# dashboard profile minus the development bundle groups. Do NOT combine with
+# the dashboard profile (both add the same artifacts).
+- name: release
+  patches:
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+          --target runtime \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-db-seed
+        alias: CODE_DOT_ORG_DB_SEED
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-pegasus
+        alias: CODE_DOT_ORG_PEGASUS
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-static
+        alias: CODE_DOT_ORG_STATIC
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-pegasus
+        custom:
+          buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-pegasus.dockerfile
+          dependencies:
+            dockerfile:
+              path: k8s/docker/code-dot-org-pegasus.dockerfile
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-static
+        custom:
+          buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-static.dockerfile
+          dependencies:
+            dockerfile:
+              path: k8s/docker/code-dot-org-static.dockerfile
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-db-seed
+        custom:
+          buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-db-seed.dockerfile
+          dependencies:
+            dockerfile:
+              path: k8s/docker/code-dot-org-db-seed.dockerfile
+    - op: add
+      path: /deploy/helm/releases/0/valuesFiles/-
+      value: k8s/helm/dashboard.values.yaml
+
 - name: development
   activation:
     - command: dev
     - command: debug
     - kubeContext: docker-desktop
   patches:
+    # Rails takes long enough to boot that the startup probe can fail transiently.
+    # Let Kubernetes enforce the probe threshold instead of failing on its first event.
+    - op: add
+      path: /deploy/tolerateFailuresUntilDeadline
+      value: true
     - op: add
       path: /deploy/helm/releases/0/valuesFiles/-
       value: k8s/helm/development.values.yaml
     # In development mode we auto-generate passwords for the cluster-local MySQL/Redis/MinIO
-    # 
+    #
     # Please note that to change these passwords you BOTH have to delete/edit cdo-local-secrets.env
     # AND you have to delete the persistent volume associated with that service, because
     # changing the password in helm after first create typically does not modify the
@@ -140,7 +272,8 @@ profiles:
             mountDotConfigGcloud: true
 
 # Populates Dashboard DB (rake dashboard:setup_db)
-# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
+# Needs the full image (seed data), so include the dashboard profile.
+# Run: skaffold dev --trigger=manual -p dashboard -p setup-db -p setup-s3
 - name: setup-db
   patches:
       - op: add
@@ -148,10 +281,21 @@ profiles:
         value:
           enabled: true
           name: setup-db
-          args: ["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
+          args: ["cd dashboard && bundle exec rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
+
+# Creates or migrates the Dashboard DB without seeding curriculum data.
+# Run: skaffold dev --trigger=manual -p setup-db-minimal
+- name: setup-db-minimal
+  patches:
+      - op: add
+        path: /deploy/helm/releases/0/setValueTemplates/dashboardJob
+        value:
+          enabled: true
+          name: setup-db-minimal
+          args: ["cd dashboard && RAILS_ENV=adhoc RACK_ENV=adhoc AWS_EC2_METADATA_DISABLED=true bundle exec rake db:setup_or_migrate && echo 'setup-db-minimal COMPLETE'"]
 
 # Create standard cdo-v3-* S3 buckets in minio.
-# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
+# Run: skaffold dev --trigger=manual -p dashboard -p setup-db -p setup-s3
 - name: setup-s3
   patches:
       - op: add
@@ -162,12 +306,26 @@ profiles:
 # fast iterative development of our k8s docker files and helm charts.
 #
 # To use:
-# 1. First-time: skaffold dev -p mimic --cache-artifacts=false
-# 2. Run: skaffold dev -p mimic
+# 1. First-time: skaffold dev -p dashboard,mimic --cache-artifacts=false
+# 2. Run: skaffold dev -p dashboard,mimic
+#
+# NOTE: mimic patches build artifacts by index and requires the dashboard
+# profile's artifact additions — always combine with -p dashboard (a bare
+# -p mimic fails on an invalid patch path).
 #
 # For details, see: ./k8s/mimic/README.md
 - name: mimic
   patches:
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+          --target runtime \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
+          --build-arg SKIP_FRONTEND_BUILD=1
     # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
     # mimic docker build. This is just a copy of k8s/mimic/code-dot-org, but symlinks
     # have been replaced by copies of the real files, because docker doesn't follow
@@ -191,28 +349,28 @@ profiles:
     - op: replace
       path: /build/artifacts/1/image
       value: mimic-core
-    # Artifact 2 (code-dot-org-pegasus)
+    # Artifact 2 (code-dot-org-pegasus, added by the dashboard profile)
     - op: add
       path: /build/artifacts/2/context
       value: k8s/mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/2/image
       value: mimic-pegasus
-    # Artifact 3 (code-dot-org-static)
+    # Artifact 3 (code-dot-org-static, added by the dashboard profile)
     - op: add
       path: /build/artifacts/3/context
       value: k8s/mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/3/image
       value: mimic-static
-    # Artifact 4 (code-dot-org-db-seed)
+    # Artifact 4 (code-dot-org-db-seed, added by the dashboard profile)
     - op: add
       path: /build/artifacts/4/context
       value: k8s/mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/4/image
       value: mimic-db-seed
-    # Update required images in artifact 0
+    # Update required images in artifact 0 (order: core, db-seed, pegasus, static)
     - op: replace
       path: /build/artifacts/0/requires/0/image
       value: mimic-core
@@ -231,14 +389,6 @@ profiles:
       value: "{{.IMAGE_FULLY_QUALIFIED_mimic}}"
 
 portForward:
-- resourceType: Service
-  resourceName: cdo-dashboard
-  port: http
-  localPort: 13000
-- resourceType: Service
-  resourceName: cdo-dashboard
-  port: http-hmr
-  localPort: 19000
 - resourceType: Service
   resourceName: cdo-mysql
   port: mysql

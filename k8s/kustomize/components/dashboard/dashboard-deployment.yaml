@@ -17,6 +17,7 @@ spec:
       containers:
         - name: dashboard
           image: code-dot-org:latest
+          imagePullPolicy: IfNotPresent
           command:
             - bin/dashboard-server
           args:

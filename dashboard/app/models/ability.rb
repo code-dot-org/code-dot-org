@@ -23,6 +23,7 @@ class Ability
       ReferenceGuide, # see override below
       Rubric,
       :reports,
+      :widget2, # levelbuilder only, see override below
       User,
       UserPermission,
       Follower,
@@ -346,6 +347,8 @@ class Ability
       can :read, ChallengeResponse do |challenge_response|
         challenge_response.user_id == user.id || user.students.exists?(id: challenge_response.user_id)
       end
+      # Only the response's owner triggers AI evaluation of it.
+      can :evaluate, ChallengeResponse, user_id: user.id
       can :read, ChallengeResponseAsset do |asset|
         response = asset.challenge_response
         response.user_id == user.id || user.students.exists?(id: response.user_id)
@@ -518,6 +521,8 @@ class Ability
       can [:upload, :upload_by_uuid, :destroy], :level_starter_asset
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
+
+      can :manage, :widget2
 
       can [:validate_form, :validate_library_question], :pd_foorm
     end

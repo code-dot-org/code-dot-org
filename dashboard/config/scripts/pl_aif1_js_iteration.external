@@ -1,0 +1,40 @@
+name 'pl-aif1-js-iteration'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Iteration and the For Loop</h1>
+
+<p>Imagine a user types the number 5 into an app and clicks Generate. The app shows five cat emojis in a row, one for each number they asked for. Behind the scenes, it's easy to imagine that just being five lines of code, each one adding a cat emoji, copied and pasted five times.</p>
+
+<p>That works, until the user types 50. Or until they type something unexpected. Copy-pasting only works when you already know exactly how many times to repeat something. The moment a user controls that number, the app needs a way to repeat an action automatically, however many times it's asked for.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Iteration</b> is doing the same set of steps over and over again, not just repeating one action once, but cycling through a complete set of steps multiple times.</p>
+</div>
+<br>
+
+<p>Think about doing laundry. Wash, dry, fold, put away, that's four steps, but doing all four once is one iteration. Three loads of laundry means going through that same complete cycle three times.</p>
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/a89b25a856e0af53da632aaac54cac5e-image-1786471003026.png" alt="An illustration of four laundry icons in sequence: a washing machine, a dryer, folded clothes, and a closet, representing wash, dry, fold, and put away as one complete iteration." style="max-width: 500px; width: 100%; border-radius: 10px;">
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>For Loop</b> repeats a set of steps a specific number of times. It's also called a count-controlled loop, since the number of repetitions is known or calculated before the loop finishes.</p>
+</div>
+<br>
+
+<p>Back to the cat generator: the user's number tells the app how many cat emojis to show. A for loop is what lets the app count up to that number and repeat the "add a cat emoji" step exactly that many times, no matter what number the user types.</p>
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/7dca0fce15a610bb833a958aae97b30d-image-1786471833819.5001229.gif" alt="A mock app interface labeled Cat Generator, with an input field asking how many cats, a Generate button, and a row of cat emojis displayed as output." style="max-width: 400px; width: 100%; border-radius: 10px;">
+</div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> if students struggle to name their own example of iteration, offer starting points like brushing teeth, making a sandwich, or running laps. The useful question isn't just "what do you repeat," it's "what counts as one complete cycle of steps." That's the piece that transfers directly to reading a for loop.</p>
+</div>
+
+<p>Next, you'll learn the three parts that control exactly how many times a for loop runs: the start value, the stop value, and the step.</p>
+
+MARKDOWN
