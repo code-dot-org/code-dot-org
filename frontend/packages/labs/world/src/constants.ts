@@ -235,24 +235,23 @@ const LEVEL1_MAP = JSON.stringify(
 export const ruleShim = (exportName: string): string =>
   `export {${exportName} as default} from 'world-lab';\n`;
 
-// The world, authored in Blockly (`main.world`): a `world_world` root with the
-// rules in play and the map whose actors it places.
+// The world, authored in Blockly (`main.world`): a `world_world` root and the
+// map whose actors it places.
 //
-// THREE rows, and all three are choices. "Has Gravity" pulls in motion and
-// collision through its own `requires`, "Moves with Arrow Keys" pulls in motion
-// the same way, and "Collects Things" pulls in collision; a world could
-// sensibly have none of them. What is NOT here is the
-// foundation — Space and Appearance, which the engine seeds into every world,
-// and Input, which the project runs by holding `rules/input.rule`
-// (blockly/foundation). Those were four more rows saying what no game can be
-// without, which is four rows of noise on the first thing a learner reads.
-// The rules named are project modules (`rules/*`), imported by the generated
-// world.
+// NO `use rule` ROWS, and this is where that reads loudest, since this is the
+// first thing a learner sees. The rules in play are the ones under `rules/` —
+// gravity, the arrow keys, collection, and the four those pull in through their
+// own `requires` — and the project holds them, which is the whole of saying so
+// (blockly/projectModules). It used to be three rows here and a standing
+// question about why Space, Appearance and Input were not among them.
 //
-// Rules and animations first, then the map: `load map` builds the world, and a
-// `use rule` below it would arrive too late to be part of it (WorldBuilder
-// throws rather than quietly dropping it). Only those two are ordered — `set`
-// and `add effect` forward to the live world, so they may sit anywhere.
+// Animations go the same way and always did, which is where the argument came
+// from: a file is not a thing a world opts into, it is a thing the project has.
+//
+// One ordering survives, and it is the generator's rather than the author's:
+// rules and animations are emitted before the map, because `load map` builds
+// the World and a rule arriving after it is too late (WorldBuilder throws
+// rather than quietly dropping it).
 const MAIN_WORLD = JSON.stringify(
   {
     blocks: {
@@ -264,9 +263,6 @@ const MAIN_WORLD = JSON.stringify(
           fields: {NAME: 'Platform World'},
           next: {
             block: stack([
-              {type: 'world_use_rule', fields: {RULE: 'Gravity'}},
-              {type: 'world_use_rule', fields: {RULE: 'Arrow Keys'}},
-              {type: 'world_use_rule', fields: {RULE: 'Collection'}},
               {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
             ]),
           },

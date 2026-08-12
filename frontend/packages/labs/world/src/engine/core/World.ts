@@ -38,7 +38,7 @@ import type {
   WorldEventHandler,
   WorldQuery,
 } from './types';
-import {Vector} from './Vector';
+import {Vector, type VectorLike} from './Vector';
 import {TILE_SIZE, VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from './viewport';
 
 /**
@@ -405,6 +405,16 @@ export class World {
   // edges (a key *just* pressed or released) rather than only the held state.
   // Advanced at the end of each `tick`.
   private previousKeys: ReadonlySet<string> = new Set();
+  // The mouse, on the same terms: held buttons, the previous tick's for edges,
+  // and where the pointer is. Buttons carry OUR names — 'left', 'middle',
+  // 'right' (core/pointer).
+  private buttons: ReadonlySet<string> = new Set();
+  private previousButtons: ReadonlySet<string> = new Set();
+  // IN VIEWPORT PIXELS, measured from the top left of the window onto the
+  // world — which is what the driver can actually report, since that is where
+  // the pointer is. Turning it into a place in the WORLD needs the camera, and
+  // the camera is here (`mousePosition`).
+  private pointer = new Vector(0, 0);
 
   constructor(init: WorldInit) {
     this.id = init.id;
@@ -932,6 +942,66 @@ export class World {
     return [...this.previousKeys].filter(key => !this.keys.has(key));
   }
 
+  /**
+   * Replace the mouse's state — where it is, and which buttons are held.
+   *
+   * One call rather than two because they arrive together and are read
+   * together: a click is a button and a place, and a frame that learned the
+   * button before the position would put the first click of a game wherever
+   * the pointer last was.
+   *
+   * `at` is in VIEWPORT pixels (see the field), and the driver calls this each
+   * frame before `tick`, as it does `setInput`.
+   */
+  setPointer(at: VectorLike, buttons: Iterable<string>): void {
+    this.pointer = new Vector(at.x, at.y);
+    this.buttons = new Set(buttons);
+  }
+
+  /** Whether `button` (a name from `core/pointer`) is currently held. */
+  isButtonDown(button: string): boolean {
+    return this.buttons.has(button);
+  }
+
+  /** Buttons pressed this tick that were not pressed last tick. */
+  newlyPressedButtons(): string[] {
+    return [...this.buttons].filter(
+      button => !this.previousButtons.has(button),
+    );
+  }
+
+  /** Buttons released this tick that were pressed last tick. */
+  newlyReleasedButtons(): string[] {
+    return [...this.previousButtons].filter(
+      button => !this.buttons.has(button),
+    );
+  }
+
+  /**
+   * Where the mouse is IN THE WORLD — the point it is over.
+   *
+   * Not where it is on the screen, which is what the driver reported and what
+   * this converts: a camera two screens along means the pointer at the middle
+   * of the window is over a place two screens along, and "is the mouse over
+   * this actor" is a question about that place. A camera's position is the
+   * point it shows at the MIDDLE of the view (core/Camera), so the window's
+   * top-left corner is half a view up and to the left of it.
+   *
+   * Measured against the ACTIVE camera, which is the view the learner is
+   * looking at. A layer with parallax of its own draws somewhere else and this
+   * does not know about it — the same thing `map size` and every other world
+   * coordinate already assume, and the answer a game wants for the layer its
+   * actors are on.
+   */
+  mousePosition(): Vector {
+    const view = this.viewSize();
+    const camera = this.activeCamera();
+    return new Vector(
+      camera.position.x - view.x / 2 + this.pointer.x,
+      camera.position.y - view.y / 2 + this.pointer.y,
+    );
+  }
+
   /** The definition of a known animation, or undefined. */
   /** How big an image is, if the project measured it. */
   imageSize(name: string): {width: number; height: number} | undefined {
@@ -973,8 +1043,10 @@ export class World {
       this.leaving.clear();
     }
     // The keys this tick become "previous" for the next, so edge detection
-    // (newlyPressed/Released) compares against exactly one frame back.
+    // (newlyPressed/Released) compares against exactly one frame back. The
+    // mouse's buttons are the same mechanism and advance in the same breath.
     this.previousKeys = this.keys;
+    this.previousButtons = this.buttons;
   }
 
   /** The resolved step order — for inspection and tests. */

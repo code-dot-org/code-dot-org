@@ -328,14 +328,6 @@ const METEORS_WORLD = JSON.stringify({
         fields: {NAME: 'Asteroids'},
         next: {
           block: stack([
-            {type: 'world_use_rule', fields: {RULE: 'Arrow Drive'}},
-            {type: 'world_use_rule', fields: {RULE: 'Screen Wrap'}},
-            {type: 'world_use_rule', fields: {RULE: 'Shooting'}},
-            {type: 'world_use_rule', fields: {RULE: 'Expiry'}},
-            // Nothing else here pulls contacts in: there is no Solid Bodies in
-            // this game, because nothing in it is solid — a rock is destroyed
-            // by a shot, not pushed by one.
-            {type: 'world_use_rule', fields: {RULE: 'Collisions'}},
             {
               type: 'world_add_actor',
               fields: {ACTOR: 'actors/ship'},
@@ -361,9 +353,18 @@ const METEORS_WORLD = JSON.stringify({
 });
 
 /**
- * The rules meteors names, the ones those pull in, and the pictures it draws
+ * The rules meteors runs on, the ones those pull in, and the pictures it draws
  * with — shared with the single-world telling, which differs in how the game is
  * SAID and not in what it is made of.
+ *
+ * THIS LIST IS NOW THE STATEMENT. Holding a rule is what puts it in play
+ * (blockly/projectModules), so what used to be five `use rule` rows in the
+ * world is these five entries, and there is one place to read the answer rather
+ * than two places to keep in step.
+ *
+ * What is worth noticing while reading it: there is no `solid.rule`. Nothing in
+ * this game is solid — a rock is destroyed by a shot, not pushed by one — so
+ * `collisions.rule` is here for the contacts alone.
  */
 export const METEORS_SUPPORT_FILES: ProjectSpec['files'] = {
   inputRuleFile: {

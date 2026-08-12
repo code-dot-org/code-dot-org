@@ -112,10 +112,6 @@ const SINGLE_WORLD = JSON.stringify({
         fields: {NAME: 'Flappy'},
         next: {
           block: stack([
-            {type: 'world_use_rule', fields: {RULE: 'Gravity'}},
-            {type: 'world_use_rule', fields: {RULE: 'Collection'}},
-            {type: 'world_use_rule', fields: {RULE: 'Camera Follow'}},
-            {type: 'world_use_rule', fields: {RULE: 'Camera Confined'}},
             {
               type: 'world_set_Gravity_AmountOfGravityProperty',
               inputs: {VALUE: number(GRAVITY)},

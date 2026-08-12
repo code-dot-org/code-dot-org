@@ -107,9 +107,6 @@ const SINGLE_WORLD = JSON.stringify({
         fields: {NAME: 'Platform World'},
         next: {
           block: stack([
-            {type: 'world_use_rule', fields: {RULE: 'Gravity'}},
-            {type: 'world_use_rule', fields: {RULE: 'Arrow Keys'}},
-            {type: 'world_use_rule', fields: {RULE: 'Collection'}},
             // One block per kind, which is what an arrangement is: the room is
             // 31 ground tiles and they are one field, because they are one
             // kind of thing placed in 31 spots.

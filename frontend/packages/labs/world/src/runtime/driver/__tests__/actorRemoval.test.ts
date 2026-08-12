@@ -19,6 +19,14 @@ let released = 0;
 let scene: {update(time: number, delta: number): void} | null = null;
 
 vi.mock('phaser', () => {
+  /** A pointer at rest with nothing held — the binding reads one every frame. */
+  const pointer = () => ({
+    x: 0,
+    y: 0,
+    leftButtonDown: () => false,
+    middleButtonDown: () => false,
+    rightButtonDown: () => false,
+  });
   class Image {
     record: FakeObject;
     constructor(record: FakeObject) {
@@ -49,6 +57,7 @@ vi.mock('phaser', () => {
   const fakeScene = {
     cameras: {main: {setBackgroundColor: () => {}}},
     textures: {exists: () => false},
+    input: {mouse: {disableContextMenu() {}}, activePointer: pointer()},
     add: {
       image: () => new Image({key: 'image', destroyed: false}),
       rectangle: (x: number, y: number) => {
@@ -116,6 +125,7 @@ const world = (actors: string[]) => {
   return {
     stub: {
       setInput: () => {},
+      setPointer: () => {},
       tick: () => {},
       effects: () => [],
       backdropSnapshot: () => [

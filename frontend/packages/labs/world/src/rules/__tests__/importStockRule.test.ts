@@ -211,9 +211,11 @@ describe('the stock rule library', () => {
   it('describes each rule well enough to choose from', () => {
     // The dialog shows a name, a sentence, and the traits it provides. A rule
     // reaches actors through its traits, so those are what a learner is usually
-    // picking — but not every rule has one: the keyboard rule contributes
-    // EVENTS, which every actor can hear without electing anything, and the
-    // dialog omits the line rather than showing an empty list.
+    // picking — but a rule need not have one, and the dialog omits the line
+    // rather than showing an empty list. (The keyboard rule was the example
+    // here, back when its events were raised on every actor; it grew a trait
+    // when that became one broadcast per coin per frame, and both input rules
+    // list theirs now.)
     for (const rule of STOCK_RULES) {
       expect(rule.name).toBeTruthy();
       // Two readings: what it is, and what a world that uses it has.

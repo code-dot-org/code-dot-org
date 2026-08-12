@@ -87,11 +87,6 @@ const SINGLE_WORLD = JSON.stringify({
         fields: {NAME: 'Meteors'},
         next: {
           block: stack([
-            {type: 'world_use_rule', fields: {RULE: 'Arrow Drive'}},
-            {type: 'world_use_rule', fields: {RULE: 'Screen Wrap'}},
-            {type: 'world_use_rule', fields: {RULE: 'Shooting'}},
-            {type: 'world_use_rule', fields: {RULE: 'Expiry'}},
-            {type: 'world_use_rule', fields: {RULE: 'Collisions'}},
             {
               type: 'world_create_in_map',
               id: 'placeShip',

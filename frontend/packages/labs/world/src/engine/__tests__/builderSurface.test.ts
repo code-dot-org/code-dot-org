@@ -57,6 +57,8 @@ const RUNTIME_ONLY: Record<string, string> = {
   emit: 'nothing can hear an event before a tick dispatches it',
   emitToWorld: 'the same, for an event that happened to nobody in particular',
   isKeyDown: 'there is no frame yet, so no key is down',
+  isButtonDown: 'the same, for the mouse',
+  mousePosition: 'the pointer is somewhere on a screen there is not one of yet',
   query: 'a query reads a running world',
 };
 

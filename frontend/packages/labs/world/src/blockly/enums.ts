@@ -17,6 +17,7 @@
 
 import type {ArgType} from '../engine';
 import {KEY_CHOICES} from '../engine/core/keys';
+import {BUTTON_CHOICES} from '../engine/core/pointer';
 
 /** A named set of string choices. */
 export interface EnumMeta {
@@ -66,8 +67,21 @@ export const KEY_ENUM: EnumMeta = {
   options: KEY_CHOICES.map(([label, value]) => [label, value] as const),
 };
 
+/**
+ * The mouse's buttons, as an enum.
+ *
+ * The keyboard's argument exactly (see above): the World owns the mouse, so
+ * naming its buttons is the engine's to state and `rules/mouse.rule` points at
+ * this rather than listing them again.
+ */
+export const BUTTON_ENUM: EnumMeta = {
+  owner: ENGINE_OWNER,
+  name: 'MouseButton',
+  options: BUTTON_CHOICES.map(([label, value]) => [label, value] as const),
+};
+
 /** The enums the engine provides. */
-export const ENGINE_ENUMS: readonly EnumMeta[] = [KEY_ENUM];
+export const ENGINE_ENUMS: readonly EnumMeta[] = [KEY_ENUM, BUTTON_ENUM];
 
 let projectEnums: readonly EnumMeta[] = [];
 

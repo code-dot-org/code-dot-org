@@ -295,6 +295,13 @@ export const forEachKey = (edge, variable, body) => ({
   inputs: {DO: value(chain(body))},
 });
 
+/** `for each newly <pressed|released> mouse button <var> do <…>`. */
+export const forEachButton = (edge, variable, body) => ({
+  type: 'world_for_each_button',
+  fields: {EDGE: edge, VAR: variable.field},
+  inputs: {DO: value(chain(body))},
+});
+
 // ── Members ──────────────────────────────────────────────────────────────────
 
 /** A parameter of a designed block: a socket, named from the parameter. */

@@ -61,6 +61,7 @@ import {PhaserBinding} from '../PhaserBinding';
 const world = () =>
   ({
     setInput: () => {},
+    setPointer: () => {},
     tick: () => {},
     effects: () => [],
     renderSnapshot: () => [],

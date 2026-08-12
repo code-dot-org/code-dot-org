@@ -69,12 +69,20 @@ describe('which definition roots a file may hold', () => {
     expect(categoryNames('world')).not.toContain('Rule');
   });
 
-  it('keeps `use rule` and `use trait` when the Rule category goes', () => {
-    // Both are listed in World and Actor as well, which is why dropping the
-    // whole category is safe. If that duplication ever went, this fails rather
-    // than a world quietly losing the block that gives it a rule.
-    expect(offeredTypes('world')).toContain('world_use_rule');
+  it('keeps `use trait` when the Rule category goes', () => {
+    // It is listed in Actor as well, which is why dropping the whole category
+    // is safe. If that duplication ever went, this fails rather than an actor
+    // quietly losing the block that gives it a trait.
     expect(offeredTypes('actor')).toContain('world_use_trait');
+  });
+
+  it('does not offer `use rule` to a world', () => {
+    // A world runs the rules the project holds (blockly/projectModules), so
+    // the block would be a row that does nothing. It is still OFFERED to a
+    // rule, where it declares a dependency and means something, and still
+    // REGISTERED everywhere so a project saved with one keeps loading.
+    expect(offeredTypes('world')).not.toContain('world_use_rule');
+    expect(offeredTypes('rule')).toContain('world_use_rule');
   });
 
   it('offers everything when the file kind is unknown', () => {

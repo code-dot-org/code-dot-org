@@ -94,7 +94,11 @@ describe('the starter project', () => {
     // Four things have to agree, and three of the four failures are SILENT —
     // the game runs and coins simply do not disappear, with nothing in the
     // console to say why. So they are checked together.
-    expect(starterFile('main').contents).toContain('"Collection"');
+    //
+    // The first of the four used to be a `use rule Collects Things` row in the
+    // world. It is the FILE now: holding it is what puts it in play
+    // (blockly/projectModules), so the rule being here is the whole of the
+    // world's half.
     expect(starterFile('collectRule').name).toBe('collect.rule');
     expect(starterFile('coin').contents).toContain(
       'Collection#CanBeCollectedTrait',

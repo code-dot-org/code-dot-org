@@ -9,6 +9,7 @@ import {afterEach, describe, expect, it, vi} from 'vitest';
 import {buildDomainPalette} from '../domainBlocks';
 import {
   allEnums,
+  BUTTON_ENUM,
   duplicateEnumNames,
   enumByRef,
   enumOptions,
@@ -47,7 +48,7 @@ describe('enum references', () => {
     registerProjectEnums([GUSTS]);
 
     expect(enumByRef('Wind#Gusts')).toBe(GUSTS);
-    expect(allEnums()).toEqual([KEY_ENUM, GUSTS]);
+    expect(allEnums()).toEqual([KEY_ENUM, BUTTON_ENUM, GUSTS]);
   });
 
   it('gives an unknown reference no options rather than throwing', () => {

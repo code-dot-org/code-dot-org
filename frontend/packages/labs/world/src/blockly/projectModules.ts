@@ -224,10 +224,10 @@ export function projectMapActorTypes(
   return maps;
 }
 
-// A world's `use rule` names a rule — except when it can't, because the rule is
-// a hand-written `.js` module that declares no name and is referred to by its
-// path. Everything downstream (which traits are in play, which categories the
-// toolbox shows) is keyed on names, so a path is resolved to one here:
+// A rule module is named by what it declares — except when it declares
+// nothing, because it is a hand-written `.js` module referred to by its path.
+// Everything downstream (which traits are in play, which categories the toolbox
+// shows) is keyed on names, so a path is resolved to one here:
 //   - a declarative `.rule` module → the name its `define rule` block carries;
 //   - a `.js`/`.ts` shim re-exporting a built-in → that built-in rule's name;
 //   - a genuinely project-defined `.js` rule → undefined (nothing static to
@@ -296,55 +296,36 @@ export function projectRuleMetas(files: Record<string, string>): RuleMeta[] {
 }
 
 /**
- * The built-in rule names every `.world` file puts in play — the `RULE` field of
- * each `world_use_rule` block, deduped across all worlds, resolved to `world-lab`
- * export names (a project rule that shims a built-in resolves through
- * {@link resolveRuleExport}). The trait dropdown resolves these against the
- * engine to list the traits in play.
+ * The rules in play — which is EVERY RULE THE PROJECT HOLDS, plus the engine's.
  *
- * The FOUNDATION is in the list whether a world names it or not, because it is
- * in play whether a world names it or not: the engine's own two rules
- * (`WorldBuilder.rulesInPlay`) and any foundational stock rule the project
- * holds (the world generator emits those). Leaving them out would offer a
- * learner fewer traits than their world actually supports — "Can Be Positioned"
- * would vanish from `use trait` the moment nobody wrote `use rule Has Space`.
+ * It used to be the `RULE` field of each `world_use_rule` block, deduped across
+ * every world, and that phrasing is the tell: the list was already project-wide
+ * rather than per-world, because the trait dropdown is one dropdown and cannot
+ * ask which world you might eventually be in. So a learner who imported Gravity
+ * and went straight to their actor found "Affected by Gravity" missing from
+ * `use trait` until they went back and told the WORLD as well. That was the
+ * language's worst half-hour, and it existed to maintain a distinction only the
+ * generated code made.
+ *
+ * Now holding the file is the whole of it, on the terms the `.anim` files have
+ * always had, and the world generator emits what this reports. It is safe
+ * because a rule with no elected trait does nothing — see the note on
+ * `world_world`'s generator.
+ *
+ * By NAME, which is what a reference resolves by, so a rule that moves between
+ * files is still the same rule. A `.js` rule declares no name and is known by
+ * its module, exactly as it is everywhere else.
+ *
+ * The ENGINE's own two are always in the list. They have no file to hold, and
+ * `WorldBuilder` seeds them into every world it builds.
  */
 export function projectWorldRules(files: Record<string, string>): string[] {
   const names = new Set<string>(FOUNDATION_RULE_NAMES);
-  interface Block {
-    type?: string;
-    fields?: {RULE?: string};
-    inputs?: Record<string, {block?: Block}>;
-    next?: {block?: Block};
-  }
-  const visit = (block: Block | undefined): void => {
-    if (!block) {
-      return;
-    }
-    if (block.type === 'world_use_rule' && block.fields?.RULE) {
-      const resolved = resolveRuleRef(block.fields.RULE, files);
-      if (resolved) {
-        names.add(resolved);
-      }
-    }
-    for (const input of Object.values(block.inputs ?? {})) {
-      visit(input?.block);
-    }
-    visit(block.next?.block);
-  };
-  for (const [path, contents] of Object.entries(files)) {
-    if (!path.endsWith('.world')) {
-      continue;
-    }
-    try {
-      const roots = (JSON.parse(contents) as {blocks?: {blocks?: Block[]}})
-        .blocks?.blocks;
-      for (const root of roots ?? []) {
-        visit(root);
-      }
-    } catch {
-      // Not valid JSON yet (mid-edit); skip this world.
-    }
+  for (const [, modulePath] of projectRuleOptions(files)) {
+    // A file answers to the name it declares (`resolveRuleRef`, which also
+    // reads a `.js` shim's built-in). One that declares nothing answers to its
+    // module, which is what every other reference to such a rule does.
+    names.add(resolveRuleRef(modulePath, files) ?? modulePath);
   }
   return [...names];
 }
