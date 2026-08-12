@@ -7,7 +7,7 @@ import {analyze} from '../shared/axe';
 /**
  * Cached-unit level URL with login_required param. After sign-in the server
  * strips the param. ui-test-oceans is a UI-test-only course listed in
- * UI_TEST_CACHED_UNITS (lib/cdo/http_cache.rb) and seeded by
+ * CACHED_UI_TEST_UNITS (lib/cdo/http_cache.rb) and seeded by
  * `rake seed:ui_test`, so this exercises the cached-unit redirect branch
  * without depending on production curriculum.
  */

@@ -80,17 +80,17 @@ class HttpCache
   # Cached units in the UI-test curriculum partition (dashboard/test/ui/config),
   # which exist so that UI tests can exercise cached-unit behavior without
   # depending on production curriculum.
-  UI_TEST_CACHED_UNITS = %w(
+  CACHED_UI_TEST_UNITS = %w(
     ui-test-oceans
   ).freeze
 
   # The cached units in effect for `env`. The UI-test partition is seeded only in
-  # development and test, so outside those environments UI_TEST_CACHED_UNITS has
+  # development and test, so outside those environments CACHED_UI_TEST_UNITS has
   # no effect: neither on CloudFront cache behavior, nor on
   # ScriptConfig.hoc_scripts.
   def self.cached_units(env = rack_env)
     return CACHED_UNITS unless [:development, :test].include?(env.to_sym)
-    CACHED_UNITS + UI_TEST_CACHED_UNITS
+    CACHED_UNITS + CACHED_UI_TEST_UNITS
   end
 
   # The URL pattern covering each cached unit's script levels. Assume all cached

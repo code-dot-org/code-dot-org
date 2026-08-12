@@ -59,7 +59,7 @@ not-yet-migrated `ui-test-` unit can still resolve production levels.
 ## Cached units
 
 A unit whose level pages should be publicly cacheable needs an entry in
-`UI_TEST_CACHED_UNITS` in `lib/cdo/http_cache.rb`, alongside the production
+`CACHED_UI_TEST_UNITS` in `lib/cdo/http_cache.rb`, alongside the production
 `CACHED_UNITS`.
 
 ## Adding content

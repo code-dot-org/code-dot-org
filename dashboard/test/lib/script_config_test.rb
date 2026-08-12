@@ -13,7 +13,7 @@ class ScriptConfigTest < ActiveSupport::TestCase
   end
 
   # UI tests need a cached unit which is not production curriculum. Without this
-  # unit test, dropping the entry from UI_TEST_CACHED_UNITS fails only in the UI
+  # unit test, dropping the entry from CACHED_UI_TEST_UNITS fails only in the UI
   # test lane.
   test 'allows public caching for the UI-test cached unit' do
     assert ScriptConfig.allows_public_caching_for_script 'ui-test-oceans'
@@ -23,6 +23,6 @@ class ScriptConfigTest < ActiveSupport::TestCase
   # none of it may reach a production cache configuration: no CloudFront cache
   # behavior, and no hoc_scripts entry. See dashboard/test/ui/config/README.md.
   test 'excludes UI-test cached units outside development and test' do
-    assert_empty HttpCache.cached_units(:production) & HttpCache::UI_TEST_CACHED_UNITS
+    assert_empty HttpCache.cached_units(:production) & HttpCache::CACHED_UI_TEST_UNITS
   end
 end
