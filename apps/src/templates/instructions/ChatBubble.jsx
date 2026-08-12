@@ -23,7 +23,8 @@ var audioStyle = {
   },
 };
 
-const MINECRAFT_VERY_DARK_GRAY_COLOR = '#3B3B3B';
+const MINECRAFT_VERY_DARK_GRAY_COLOR =
+  'var(--background-neutral-primary-inverse)';
 
 const ChatBubble = ({
   children,
