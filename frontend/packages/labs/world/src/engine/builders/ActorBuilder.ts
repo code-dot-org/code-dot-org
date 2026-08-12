@@ -38,6 +38,20 @@ import {PositionalTrait} from '../rules/spatial';
  */
 const FOUNDATION_TRAITS: readonly Trait[] = [PositionalTrait, AppearanceTrait];
 
+/**
+ * The same list as ids, for the editor.
+ *
+ * A dropdown cannot hold a `Trait` — it holds `<RuleName>#<exportName>`, which
+ * is a fact about the rule that declares the trait rather than about the trait
+ * object — so the editor matches on the id and builds its own values from the
+ * rule metadata (blockly/foundation). Exported from here so there is still ONE
+ * list: add a third foundation trait and the dropdown stops offering it in the
+ * same commit.
+ */
+export const FOUNDATION_TRAIT_IDS: readonly string[] = FOUNDATION_TRAITS.map(
+  trait => trait.id,
+);
+
 export class ActorBuilder {
   /** The template's id — the actor's type, and the default instance id. */
   readonly id: string;

@@ -23,9 +23,11 @@
 // This module is the list, so the generator, the trait dropdown, and anything
 // else that has to know cannot disagree about it.
 
+import {FOUNDATION_TRAIT_IDS} from '../engine';
 import {STOCK_RULES, type StockRule} from '../rules/stock';
 
 import {BUILTIN_RULE_META} from './builtinMeta';
+import {memberValue} from './ruleRegistry';
 
 /** Stock rules a project runs by holding them (`StockRule.foundational`). */
 export const FOUNDATIONAL_STOCK_RULES: readonly StockRule[] =
@@ -42,3 +44,29 @@ export const FOUNDATION_RULE_NAMES: readonly string[] = [
   ...BUILTIN_RULE_META.map(rule => rule.name),
   ...FOUNDATIONAL_STOCK_RULES.map(rule => rule.name),
 ];
+
+/**
+ * The traits every actor has already, as `use trait` DROPDOWN VALUES.
+ *
+ * The foundation one level down: a world runs Space and Appearance, and an
+ * actor carries their two traits whether it elects them or not
+ * (`ActorBuilder`'s FOUNDATION_TRAITS) — "Can Be Positioned" is what being in
+ * the world means, and "Has Appearance" is what `set sprite` writes to. So a
+ * `use trait` row for either is the same tautology `use rule Has Space` was.
+ *
+ * Built from the engine's ids rather than written out, because the two have to
+ * agree and a second spelling of the same list is a thing to forget. Values,
+ * not names: what a dropdown holds is `<RuleName>#<exportName>`, which is a
+ * fact about the rule that declares the trait.
+ *
+ * Only the ELECTING dropdown leaves these out. `has trait` is asking a question
+ * about a value, and "is this thing positioned" stays a question a learner may
+ * ask — of a camera, say, whose value is Actor-typed on purpose (traitOptions).
+ */
+export const FOUNDATION_TRAIT_VALUES: ReadonlySet<string> = new Set(
+  BUILTIN_RULE_META.flatMap(rule =>
+    rule.traits
+      .filter(trait => FOUNDATION_TRAIT_IDS.includes(trait.id))
+      .map(trait => memberValue(trait.ref)),
+  ),
+);

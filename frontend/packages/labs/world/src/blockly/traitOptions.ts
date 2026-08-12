@@ -12,7 +12,8 @@ import type {Blockly} from '@code-dot-org/blockly';
 // `BUILTIN_RULE_META`, which the step-anchor dropdown read; that dropdown is
 // gone and the registration still has to happen.
 import './builtinMeta';
-import {liveDropdown} from './moduleOptions';
+import {FOUNDATION_TRAIT_VALUES} from './foundation';
+import {liveDropdown, orNone} from './moduleOptions';
 import {pascal, type RuleMeta} from './ruleMeta';
 import {memberValue, ruleByName} from './ruleRegistry';
 
@@ -105,6 +106,26 @@ function rulesInPlay(refs: string[]): Set<RuleMeta> {
 export function traitSubjectFor(field?: {
   getSourceBlock(): unknown;
 }): 'actor' | 'camera' {
+  return traitSiteFor(field).subject;
+}
+
+/**
+ * Where a `use trait` block sits, which is two questions at once.
+ *
+ * `subject` is what would take the trait, and decides which traits make sense
+ * at all. `electing` is whether this row GIVES a thing a trait — `define actor`
+ * and `define camera` do, and generate `useTraits` — as against declaring one
+ * trait's dependency on another under `define trait`, which generates
+ * `requires` and is a statement about the trait rather than about anything
+ * holding it. The foundation traits are left out of the first and kept in the
+ * second: an actor has them already, but a trait saying it needs an actor to be
+ * positioned is saying something, and the stock rules that move an actor or
+ * bounce it off a wall all say it.
+ */
+function traitSiteFor(field?: {getSourceBlock(): unknown}): {
+  subject: 'actor' | 'camera';
+  electing: boolean;
+} {
   const block = field?.getSourceBlock() as
     | {
         getSurroundParent?(): unknown;
@@ -125,18 +146,22 @@ export function traitSubjectFor(field?: {
     parent = parent.getParent?.() as typeof parent
   ) {
     if (parent.type === 'world_define_camera') {
-      return 'camera';
+      return {subject: 'camera', electing: true};
     }
     if (parent.type === 'world_actor') {
-      return 'actor';
+      return {subject: 'actor', electing: true};
     }
     if (parent.type === 'world_rule_trait') {
-      return parent.getFieldValue?.('SUBJECT') === 'camera'
-        ? 'camera'
-        : 'actor';
+      return {
+        subject:
+          parent.getFieldValue?.('SUBJECT') === 'camera' ? 'camera' : 'actor',
+        electing: false,
+      };
     }
   }
-  return 'actor';
+  // No enclosing definition: a block in the flyout, or one dragged loose. It
+  // reads as an actor's, which is what it will be once it lands somewhere.
+  return {subject: 'actor', electing: true};
 }
 
 /**
@@ -233,14 +258,32 @@ function traitOptionsFor(
     }
   }
   options.sort((a, b) => a[0].localeCompare(b[0]));
-  return options.length ? options : [['(none)', '']];
+  return orNone(options);
 }
 
-/** For `use trait`: only what the thing electing here can actually take. */
+/**
+ * For `use trait`: only what the thing here can actually take, and — where the
+ * row would be GIVING it one — only what it does not have already.
+ *
+ * The second half is `FOUNDATION_TRAIT_VALUES`: every actor is positioned and
+ * has an appearance whether it says so or not (`ActorBuilder`), so those two
+ * rows ask a learner to affirm a tautology, exactly as `use rule Has Space`
+ * did. Electing one remains legal and remains a no-op, so a saved block keeps
+ * its value and its meaning; it is the offer that goes.
+ *
+ * Under `define trait` they stay, because there the block declares a
+ * dependency rather than electing anything — see `traitSiteFor`.
+ */
 export function traitOptions(
   field?: Blockly.FieldDropdown,
 ): Array<[string, string]> {
-  return traitOptionsFor(traitSubjectFor(field), field);
+  const site = traitSiteFor(field);
+  const offered = traitOptionsFor(site.subject, field);
+  return orNone(
+    site.electing
+      ? offered.filter(([, value]) => !FOUNDATION_TRAIT_VALUES.has(value))
+      : offered,
+  );
 }
 
 /** For `has trait`: every trait, because the subject is a value, not a place. */

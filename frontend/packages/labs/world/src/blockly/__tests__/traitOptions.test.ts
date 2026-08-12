@@ -3,6 +3,7 @@ import {afterEach, describe, expect, it} from 'vitest';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {
+  anyTraitOptions,
   setProjectRuleMeta,
   setProjectRules,
   traitOptions,
@@ -29,17 +30,55 @@ describe('traitOptions (traits from the rules in play)', () => {
     // traits in play — labelled by name, valued by the rule and export the
     // generator resolves. (Gravity, collision and motion used to be the examples
     // here; all three are stock `.rule` files now, not built-ins.)
+    //
+    // Asked of `has trait`, because these two are exactly the traits `use
+    // trait` no longer OFFERS — every actor has them (blockly/foundation). What
+    // is being tested is the closure, and the closure is the same one.
     setProjectRules(['Appearance']);
     const byValue = new Map(
-      traitOptions().map(([label, value]) => [value, label]),
+      anyTraitOptions().map(([label, value]) => [value, label]),
     );
     expect(byValue.get('Appearance#AppearanceTrait')).toBe('Has Appearance');
     expect(byValue.get('Space#PositionalTrait')).toBe('Can Be Positioned');
   });
 
+  it('does not offer electing a trait every actor has already', () => {
+    // The `use trait` half of the same answer `use rule` gives: an actor is
+    // positioned and has an appearance whether it says so or not
+    // (ActorBuilder's FOUNDATION_TRAITS), so a row for either is a tautology.
+    setProjectRules(['Space', 'Appearance']);
+    expect(traitOptions()).toEqual([['(none)', '']]);
+    // Still ASKABLE, which is the distinction between the two dropdowns: `has
+    // trait` interrogates a value rather than electing anything.
+    expect(anyTraitOptions().map(([, value]) => value)).toContain(
+      'Space#PositionalTrait',
+    );
+  });
+
+  it('still offers them as one trait’s dependency on another', () => {
+    // Under `define trait` the row generates `requires`, not `useTraits`: it is
+    // a statement about the trait, and "this only means anything on something
+    // positioned" is a thing four of the stock rules say (motion, collisions,
+    // bounds, wrap). Only a row that would GIVE an actor a trait it has is a
+    // tautology.
+    setProjectRules(['Space', 'Appearance']);
+    const inTrait = {
+      getSourceBlock: () => ({
+        getParent: () => ({
+          type: 'world_rule_trait',
+          getFieldValue: () => 'actor',
+          getParent: () => null,
+        }),
+      }),
+    };
+    expect(traitOptions(inTrait as never).map(([, value]) => value)).toContain(
+      'Space#PositionalTrait',
+    );
+  });
+
   it('unions the traits across every attached rule', () => {
     setProjectRules(['Space', 'Appearance']);
-    const values = traitOptions().map(([, value]) => value);
+    const values = anyTraitOptions().map(([, value]) => value);
     expect(values).toContain('Space#PositionalTrait');
     expect(values).toContain('Appearance#AppearanceTrait');
     expect(values).not.toContain('Collisions#CanCollideTrait'); // neither pulls it
@@ -72,8 +111,13 @@ describe('traitOptions (traits from the rules in play)', () => {
     );
     project(wind);
     setProjectRules(['Has Wind']);
-    const values = traitOptions().map(([, value]) => value);
-    expect(values).toContain('Has Wind#WindblownTrait'); // its own trait
+    // `has trait` again for the two the electing dropdown leaves out: the
+    // dependency being followed is the point, and both ends of it are traits
+    // every actor carries anyway.
+    expect(traitOptions().map(([, value]) => value)).toContain(
+      'Has Wind#WindblownTrait',
+    ); // its own trait
+    const values = anyTraitOptions().map(([, value]) => value);
     expect(values).toContain('Appearance#AppearanceTrait'); // via Animation
     expect(values).toContain('Space#PositionalTrait'); // Animation → Space
   });
@@ -98,13 +142,16 @@ describe('traitOptions (traits from the rules in play)', () => {
     );
     project(wind);
     setProjectRules(['Has Wind', 'Appearance']);
-    const byValue = new Map(
-      traitOptions().map(([label, value]) => [value, label]),
-    );
     // A trait's value names its RULE, which is what the generator resolves to a
-    // module — the project's own and the engine's, in the same form.
+    // module — the project's own and the engine's, in the same form. Read off
+    // `has trait`, which offers both, so the two forms can be compared.
+    const byValue = new Map(
+      anyTraitOptions().map(([label, value]) => [value, label]),
+    );
     expect(byValue.get('Has Wind#WindblownTrait')).toBe('Windblown');
     expect(byValue.get('Appearance#AppearanceTrait')).toBe('Has Appearance');
+    // And the project's own is what a learner may actually elect.
+    expect(traitOptions()).toEqual([['Windblown', 'Has Wind#WindblownTrait']]);
   });
 
   it('is sorted by label and falls back to (none) with no rules', () => {
