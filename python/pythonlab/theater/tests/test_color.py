@@ -1,0 +1,35 @@
+import pytest
+
+from theater.support.color import Color
+
+
+def test_named_color():
+  red = Color("red")
+  assert red.to_rgb_tuple() == (255, 0, 0)
+
+
+def test_named_color_is_case_insensitive():
+  assert Color("WhItE").to_rgb_tuple() == (255, 255, 255)
+
+
+def test_lime_palette_value():
+  assert Color("lime").to_rgb_tuple() == (0, 255, 0)
+
+
+def test_hex_long_and_short():
+  assert Color("#ff8800").to_rgb_tuple() == (255, 136, 0)
+  assert Color("#f80").to_rgb_tuple() == (255, 136, 0)
+
+
+def test_rgb_channels_are_clamped():
+  assert Color(300, -5, 40).to_rgb_tuple() == (255, 0, 40)
+
+
+def test_copy_constructor():
+  original = Color(1, 2, 3)
+  assert Color(original).to_rgb_tuple() == (1, 2, 3)
+
+
+def test_invalid_name_raises():
+  with pytest.raises(ValueError):
+    Color("notacolor")
