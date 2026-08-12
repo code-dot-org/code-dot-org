@@ -9,7 +9,7 @@ a codespace or on your own machine.
 | | |
 |---|---|
 | `app` | [cdo-dev](../docker/dev/README.md), the development member of the [image family](../docker/README.md). Nothing starts by itself — you run Rails and the dev servers in a terminal. |
-| `db` | [cdo-devdb](../.github/workflows/cdo-devdb-image.yml): `mysql:8.0` with a seeded dashboard datadir baked in, so you skip a two-hour `db:setup_or_migrate`. |
+| `db` | [cdo-devdb](../.github/workflows/cdo-devdb-image.yml): `mysql:8.0` with both dashboard databases baked in — development seeded with curriculum, test prepared and seeded — so you skip a two-hour `db:setup_or_migrate` and the test-seed on first use. |
 | `redis` | `redis:7`, stock. |
 | `minio` | S3, emulated. A level page asks S3 whether its lesson has a PDF; without an endpoint that question is a 500. A one-shot `init` service creates the buckets. |
 
@@ -143,6 +143,12 @@ cd frontend && yarn workspace @code-dot-org/e2e-tests test:ui:local
 ./tools/hooks/pre-commit
 ```
 
+The test database arrives prepared and seeded — schema loaded, fixtures in,
+`seed:test` already run — so a test command costs a Spring boot and nothing
+else: about 26 s the first time in a fresh container, 1.4 s after that.
+(Before the image carried a seeded test database, that first command paid
+1 m 20 s, three quarters of it seeding.)
+
 Three things to know before the first run:
 
 - Dashboard controller tests need precompiled test assets, and Spring caches
@@ -155,8 +161,10 @@ Three things to know before the first run:
 
   Skip the second and the tests still fail on assets "not present in the
   asset pipeline", against a manifest that is no longer on disk. This is not
-  automated in the entrypoint: it costs minutes, and it only matters if you
-  run dashboard controller tests.
+  automated in the entrypoint: it costs a minute and a half, and it only
+  matters if you run dashboard controller tests. Assets are workspace files,
+  not database rows, so unlike the test database they cannot be baked into
+  the image.
 - `yarn test:unit` needs `yarn build` to have run once — jest loads locale
   bundles out of `apps/build`.
 - `pre-commit` lints **staged files only**. With an empty index it does
@@ -217,6 +225,10 @@ and sockets. Run one or the other.
 ## Caches and teardown
 
 ### The database is scratch space
+
+The image carries both databases: `dashboard_development`, seeded with
+curriculum, and `dashboard_test`, prepared and seeded the way
+`RAILS_ENV=test` needs it. Neither is built at container start.
 
 The seeded datadir is baked into the `cdo-devdb` image, so each container
 writes to a copy-on-write layer. `docker compose stop` and `start` keep those

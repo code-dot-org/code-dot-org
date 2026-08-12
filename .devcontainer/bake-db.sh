@@ -74,8 +74,16 @@ docker run --rm --name "$APP_CONTAINER" --network "$NETWORK" \
     bundle exec rake db:setup_or_migrate
     echo 'bake: running seed:default...'
     bundle exec rake seed:default
-    echo 'bake: migrating test DB...'
-    RAILS_ENV=test bundle exec rake db:migrate
+    # db:test:prepare, not db:migrate: the test database has to arrive
+    # *seeded*, not merely shaped. dashboard enhances this task
+    # (dashboard/lib/tasks/seed_in_test.rake) to load fixtures and run
+    # seed:test after the schema load, which is the ~77 s a fresh container
+    # otherwise pays on its first testunit — seed:standards alone is 15 s of
+    # it. seed:test already contains the secret_words and secret_pictures
+    # steps TESTING.md tells you to run by hand, so there is nothing to add
+    # after this line.
+    echo 'bake: preparing and seeding the test DB...'
+    RAILS_ENV=test bundle exec rake db:test:prepare
     echo 'bake: complete'
   "
 
