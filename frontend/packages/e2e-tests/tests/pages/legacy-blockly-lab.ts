@@ -15,6 +15,12 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Outer instructions container; authored hint content is appended here. */
   readonly instructionsPanel: Locator;
 
+  /** Instructions paragraph text; localizes with the lab locale. */
+  readonly instructionsText: Locator;
+
+  /** CSF instructions More/Less toggle (apps/src/templates/instructions/CollapserButton.jsx). */
+  readonly instructionsToggleButton: Locator;
+
   /** Authored hints (lightbulb, count badge, "Yes" prompt) in the CSF instructions UI. */
   readonly hints: AuthoredHintsComponent;
 
@@ -68,6 +74,8 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
     this.instructionsPanel = page.locator('.csf-top-instructions');
+    this.instructionsText = page.locator('.csf-top-instructions p');
+    this.instructionsToggleButton = page.locator('#toggleButton');
     this.hints = new AuthoredHintsComponent(page);
     this.callouts = new CalloutsComponent(page);
     this.runButton = page.locator('#runButton');
@@ -122,6 +130,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     }
   }
 
+  /** Hook for lab-specific modals that must clear before the instructions overlay; see CraftLab. */
+  protected async dismissLabInterstitials(): Promise<void> {}
+
   /** Wait for the lab to be interactive: run button, header, overlay dismissed, header settled. */
   async waitForReady(): Promise<void> {
     // #runButton mounts on window 'load'; a cold or contended boot can exceed 15s.
@@ -133,6 +144,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     // State-agnostic: labs boot for anonymous sessions too, so wait for the
     // header user area in either auth state, not specifically signed-in.
     await this.header.waitForUserChrome();
+    // Both of these stack above the instructions overlay handled below, whose
+    // OK-dialog click they would otherwise intercept.
+    await this.introVideoModal.dismissIfShown();
+    await this.dismissLabInterstitials();
     // Dismiss the instructions overlay if shown (anonymous sessions). Its
     // backdrop (#overlay) fills the viewport and a plain .click() lands on
     // the default center point, which the instructions dialog itself can
@@ -212,6 +227,20 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** A block's rendered SVG group, keyed by its Blockly block id. */
   blockLocator(blockId: string): Locator {
     return this.page.locator(`.blocklySvg [data-id="${blockId}"]`);
+  }
+
+  /**
+   * A toolbox category's label, by 1-based position. Blockly exposes the
+   * toolbox as an ARIA tree, so by position rather than by name: the name is
+   * the locale-dependent text under test. The accessibility tree also omits
+   * the duplicate non-interactive toolbox some lessons render, which a
+   * `:visible` CSS filter would have had to exclude by hand.
+   */
+  toolboxCategoryLabel(index: number): Locator {
+    return this.mainContent
+      .getByRole('tree')
+      .getByRole('treeitem')
+      .nth(index - 1);
   }
 
   /**

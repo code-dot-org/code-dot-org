@@ -83,12 +83,6 @@ run "mysql2 loads" "mysql2-ok" -- \
   bundle exec ruby -e 'require "mysql2"; puts "mysql2-ok"'
 run "rmagick loads against libMagickWand" "rmagick-ok" -- \
   bundle exec ruby -e 'require "rmagick"; puts "rmagick-ok"'
-# LD_PRELOAD is cleared because V8 aborts at teardown under cdo-base's jemalloc
-# preload, after the JS has run — a base property production has always had.
-# See docker/gems/README.md. This asserts libv8 loads and evaluates.
-# shellcheck disable=SC2016
-run "mini_racer evaluates JS" "js-ok" -- \
-  sh -c 'LD_PRELOAD= bundle exec ruby -e '\''require "mini_racer"; abort unless MiniRacer::Context.new.eval("1+1") == 2; puts "js-ok"'\'''
 run "nokogiri loads" "nokogiri-ok" -- \
   bundle exec ruby -e 'require "nokogiri"; puts "nokogiri-ok"'
 

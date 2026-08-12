@@ -21,6 +21,7 @@ import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
   darkMode as darkModeTheme,
+  lab2EditorBackgroundTheme,
   lightMode as lightModeTheme,
 } from './editorThemes';
 
@@ -212,6 +213,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
         onEditorUpdate,
         autocompletion(),
+        EditorView.lineWrapping,
         ...editorConfigExtensions,
       ];
 
@@ -225,6 +227,12 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       } else {
         editorExtensions.push(themeCompartment.of(lightModeTheme));
       }
+
+      // lab2EditorBackgroundTheme's selectors carry extra specificity (see
+      // editorThemes.ts) so this override wins over darkMode/lightMode's
+      // shared hardcoded colors.
+      editorExtensions.push(lab2EditorBackgroundTheme);
+
       if (!hasSplitDiffView) {
         setEditorView(
           new EditorView({

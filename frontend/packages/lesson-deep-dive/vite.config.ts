@@ -5,6 +5,7 @@ import type {Alias} from 'vite';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 const repoRoot = path.resolve(__dirname, '../../..');
 const stubs = path.resolve(__dirname, 'src/dev/stubs');
@@ -42,10 +43,13 @@ const devHostAliases: Alias[] = [
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
+    // Set on both outputs but only meaningful for CJS, where a default import
+    // of an externalized compiled-ESM dep would otherwise resolve to its
+    // namespace object rather than the component. Remove once the CJS output
+    // goes away -- i.e. once `apps` resolves the ESM condition.
+    interop: 'auto',
     exports: 'auto',
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
-    preserveModules: true,
-    preserveModulesRoot: 'src',
   };
 }
 
@@ -60,6 +64,7 @@ export default defineConfig(({command}) => ({
       insertTypesEntry: false,
       exclude: ['**/__tests__/**', '**/*.test.tsx', 'src/dev/**'],
     }),
+    libInjectCss(),
     externalizeDeps(),
   ],
   resolve: {
@@ -94,7 +99,6 @@ export default defineConfig(({command}) => ({
   publicDir: command === 'serve' ? 'public' : false,
   build: {
     sourcemap: true,
-    cssCodeSplit: true,
     lib: {
       entry: ['src/index.ts'],
       name: 'lesson-deep-dive',

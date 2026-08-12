@@ -5,7 +5,8 @@
 // service worker, some pollyfill or somesuch was depending on interfaces (like document) existing that
 // aren't defined for service workers???
 //
-// This is served as preview.codeprojects.org/weblab2-project-service-worker.js by routes.rb and codeprojects_preview_controller.rb
+// This is served from / on both sandboxed-preview hosts (preview.codeaiprojects.org,
+// and the pre-migration preview.codeprojects.org) by routes.rb and codeprojects_preview_controller.rb
 
 // These constants are duplicated to constants.ts. Service workers cannot import modules.
 const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
@@ -143,9 +144,12 @@ function main() {
     return requestedFile;
   }
 
-  // CodeAI origin for this environment.
+  // CodeAI origin for this environment. Derived from our own hostname, which
+  // may be on either sandboxed-preview domain (codeaiprojects.org, or the
+  // pre-migration codeprojects.org). Mirrors getOuterOrigin() in
+  // apps/src/util/codeprojectsPreviewOrigin.ts.
   function getCodeDotOrgOrigin() {
-    const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
+    const regex = /[^.]+\.preview\.([^.]+)\.code(?:ai)?projects\.org/;
     const match = location.hostname.match(regex);
     const environment = match && match[1] ? `${match[1]}-` : '';
     const port =
