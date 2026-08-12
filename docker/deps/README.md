@@ -155,16 +155,21 @@ Published as `ghcr.io/code-dot-org/cdo-deps`.
 | `latest` | staging | most recent staging publish |
 | `dev-<sha>` | other branches | manual dispatch |
 
-amd64 only. Pin by digest: resolve the `bundle-<hash>` tag to a digest once and
-give the same digest to every build in a pipeline, so a builder stage and a
-final stage cannot land on different bytes.
+Each tag is a multi-platform manifest over amd64 and arm64: the lockfile
+names both `x86_64-linux` and `aarch64-linux`, each architecture builds
+natively in CI, and the per-arch pushes (`<tag>-amd64`, `<tag>-arm64`) are
+stitched under the final name — the cdo-base pattern. Pin by digest: resolve
+the `bundle-<hash>` tag to a digest once and give the same digest to every
+build in a pipeline, so a builder stage and a final stage cannot land on
+different bytes. (The manifest-list digest is the pin; each platform
+resolves its own image through it.)
 
 `.github/workflows/cdo-deps-image.yml` builds and smoke-tests on docker and
-podman for every PR touching the key inputs, and publishes from staging. It
-also gates `docker/build`, since every job there builds `cdo-build` anyway.
-The workflow is chained off `cdo-base-image` rather than scheduled, so this
-layer rebuilds on the base that just shipped and a failed base rebuilds
-nothing.
+podman, on amd64 and arm64, for every PR touching the key inputs, and
+publishes from staging. It also gates `docker/build`, since every job there
+builds `cdo-build` anyway. The workflow is chained off `cdo-base-image`
+rather than scheduled, so this layer rebuilds on the base that just shipped
+and a failed base rebuilds nothing.
 
 ## Things that will bite
 
@@ -186,3 +191,11 @@ That rules out heredoc `RUN`, reliance on `SHELL`, and BuildKit-only COPY
 flags. `COPY --chown` cannot read environment inherited from a parent image —
 it expands only same-stage ARGs — which is why the uid/gid 1000 pair is
 written literally.
+
+**Cross-building under qemu is unreliable.** Emulated `bundle install` fails
+in ways that move around — g++ segfaults compiling the large C++ extensions
+(libsass), dpkg maintainer-script failures — and whether it fails at all
+depends on which qemu build is registered in binfmt and on the engine driving
+it. This is why the workflow builds each architecture natively on its own
+runner. If you need a local arm64 image, prefer native hardware; treat any
+emulated build as best-effort.

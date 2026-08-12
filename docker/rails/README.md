@@ -193,7 +193,9 @@ when you add something the running app reads from disk.
 
 ## Published image
 
-`ghcr.io/code-dot-org/cdo-rails`, amd64 only.
+`ghcr.io/code-dot-org/cdo-rails`, a multi-platform manifest over amd64 and
+arm64 (per-arch native builds stitched under each tag — the cdo-base
+pattern; `<tag>-amd64` / `<tag>-arm64` are the publish plumbing).
 
 | tag | published from | meaning |
 |---|---|---|
