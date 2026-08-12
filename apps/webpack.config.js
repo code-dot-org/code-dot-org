@@ -600,12 +600,9 @@ module.exports = {
   default: createWebpackConfig(),
   // Returns the `WEBPACK_CONFIG` used by our primary build:
   createWebpackConfig,
-  devtool,
   localeDoNotImport,
   // Used as the basis for karma and storybook webpack configs:
   WEBPACK_BASE_CONFIG,
   APPLICATION_ALIASES,
   LOCALE_ALIASES,
-  // Shared with rspack.config.js so the transpile scope stays identical.
-  nodeModulesToTranspile,
 };
