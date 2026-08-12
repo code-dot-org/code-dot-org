@@ -13,6 +13,8 @@ const LABS_WITH_IMAGE_MODERATION = [
   'game_design',
   'sketchlab',
   'applab',
+  'weblab',
+  'javalab',
 ];
 
 export type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
@@ -65,6 +67,7 @@ interface AnalyticsData {
   uploaderType?:
     | 'Lab2FileUploader'
     | 'AnimationPicker'
+    | 'AssetManager'
     | 'SketchLab'
     | 'ImageURLInput'
     | 'n/a';
