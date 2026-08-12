@@ -118,7 +118,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
       it 'includes their feedback and status but not the scored evaluation' do
         challenge_response.update!(
-          evaluation_result: {'evaluations' => []},
+          evaluation_result: {'level' => 2},
           student_feedback: 'Nice work!',
           evaluation_status: :success
         )
@@ -141,13 +141,13 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'returns the response including the evaluation fields' do
-        challenge_response.update!(evaluation_result: {'evaluations' => []}, evaluation_status: :success)
+        challenge_response.update!(evaluation_result: {'level' => 2}, evaluation_status: :success)
 
         get :show, params: {id: challenge_response.id}
 
         assert_response :success
         _(response_json['id']).must_equal challenge_response.id
-        _(response_json['evaluation_result']).must_equal({'evaluations' => []})
+        _(response_json['evaluation_result']).must_equal({'level' => 2})
         _(response_json['evaluation_status']).must_equal 'success'
       end
     end
