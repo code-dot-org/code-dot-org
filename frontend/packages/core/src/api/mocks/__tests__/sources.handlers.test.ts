@@ -147,6 +147,28 @@ describe('the mocked sources endpoints', () => {
     expect(versions[1].comment).toBeUndefined();
   });
 
+  it('404s a version it never held, rather than inventing one', async () => {
+    // What a real store does, and the reason it matters: a forgiving fallback
+    // here answered every unknown id with the FIXTURE, so a client asking for
+    // the wrong thing was quietly handed the starting project and the editor
+    // rendered it as real. That is exactly how `resetToCurrentVersion` passing
+    // an app name where a version id belongs presented — as "restore gives you
+    // back the original board".
+    useScenario();
+    const res = await fetch(
+      `${HOST}/v3/sources/${CHANNEL}/main.json?version=not-a-version`,
+    );
+    expect(res.status).toBe(404);
+
+    const restored = await fetch(
+      `${HOST}/v3/sources/${CHANNEL}/restore?version=not-a-version`,
+      {method: 'PUT'},
+    );
+    expect(restored.status).toBe(404);
+    // …and the history is untouched by the attempt.
+    expect(await list()).toHaveLength(1);
+  });
+
   it('bounds the history, keeping the fixture and the newest', async () => {
     // A version costs a whole copy of the project, and the quota is not ours
     // to raise. What matters is that trimming takes the list and the sources
