@@ -1,5 +1,7 @@
+from .instrument import Instrument
 from .support import actions
 from .support.actions import UNSPECIFIED
+from .support.audio import read_samples_from_file
 from .support.color import Color, as_color
 from .support.constants import (
   MAX_PAUSE_SECONDS,
@@ -18,10 +20,10 @@ _MIN_POLYGON_SIDES = 3
 
 
 class Scene:
-  """A single scene of drawing commands.
+  """A single scene of drawing and audio commands.
 
   Method calls record actions; play_scenes(scene) later renders them to a gif
-  and displays it on the theater stage.
+  and audio track and plays them on the theater stage.
   """
 
   def __init__(self):
@@ -45,6 +47,21 @@ class Scene:
 
   def clear(self, color):
     self._actions.append(actions.ClearScene(as_color(color)))
+
+  def play_sound(self, sound):
+    """Play a list of normalized samples, or a WAV file by name."""
+    if isinstance(sound, str):
+      samples = read_samples_from_file(sound)
+    else:
+      samples = list(sound)
+    self._actions.append(actions.PlaySound(samples))
+
+  def play_note(self, note, seconds, instrument=Instrument.PIANO):
+    self._actions.append(actions.PlayNote(instrument, note, seconds))
+
+  def play_note_and_pause(self, note, seconds, instrument=Instrument.PIANO):
+    self.play_note(note, seconds, instrument)
+    self.pause(seconds)
 
   def pause(self, seconds):
     # Raise here rather than at render time so the traceback points at the

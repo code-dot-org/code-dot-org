@@ -1,3 +1,4 @@
+from .instrument import Instrument as Instrument
 from .play import play_scenes as play_scenes
 from .scene import Scene as Scene
 from .support.color import Color as Color

@@ -22,7 +22,7 @@ This tests adds some customization to the output of unit tests, and has a functi
 (more customized) or student tests (less customized).
 
 ### theater
-This package contains the python theater package used in pythonlab. It is based on the Java Lab [`org.code.theater`](https://github.com/code-dot-org/javabuilder/tree/main/org-code-javabuilder/theater) package and includes the `Scene` class and `play_scenes` function. A scene records drawing commands; `play_scenes` renders them into an animated gif (via Pillow) and returns the raw bytes. The Liberation fonts used for text are bundled as package data and read via `importlib.resources`, since network fetch is unavailable under Pyodide's `jsglobals: {}`.
+This package contains the python theater package used in pythonlab. It is based on the Java Lab [`org.code.theater`](https://github.com/code-dot-org/javabuilder/tree/main/org-code-javabuilder/theater) package and includes the `Scene` class and `play_scenes` function. A scene records drawing and audio commands; `play_scenes` renders them into an animated gif (via Pillow) and a WAV audio track (via numpy and the stdlib `wave` module) and returns the raw bytes. Instrument note samples and the Liberation fonts used for text are bundled as package data and read via `importlib.resources`, since network fetch is unavailable under Pyodide's `jsglobals: {}`.
 
 `play_scenes` also hands the gif to the host for display, through `theater/support/bridge.py`. That calls `_theater_bridge.publish(gif_bytes)`, a JS module the Pyodide web worker registers — the only route out of the interpreter under `jsglobals: {}`. In any other interpreter the module is absent and publishing is a no-op, which is what lets the tests render gifs without a browser.
 

@@ -2,24 +2,26 @@
 name = "theater"
 version = "0.1.0"
 requires-python = '>=3.12'
-# pillow is provided by the Pyodide worker at runtime (loadPackages), so it is
-# intentionally not declared as an install dependency here.
+# pillow and numpy are provided by the Pyodide worker at runtime (loadPackages),
+# so they are intentionally not declared as install dependencies here.
 dependencies = []
 
 [dependency-groups]
 dev = [
   'pytest >=8',
   'pillow >=10',
+  'numpy >=1.26',
 ]
 
 [tool.pytest.ini_options]
 testpaths = ['tests']
 
 [tool.hatch.build.targets.wheel]
-# Bundle the fonts as package data so they can be read via importlib.resources
-# inside Pyodide, where network fetch is unavailable.
+# Bundle the instrument samples and fonts as package data so they can be read
+# via importlib.resources inside Pyodide, where network fetch is unavailable.
 include = [
   'theater/**/*.py',
+  'theater/instruments/*.wav',
   'theater/fonts/*.ttf',
 ]
 
