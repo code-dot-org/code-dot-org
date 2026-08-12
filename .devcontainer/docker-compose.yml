@@ -44,28 +44,20 @@ services:
       timeout: 3s
       retries: 15
 
-  # Runs to completion before the app starts. Two jobs, both "make the empty
-  # thing usable":
-  #
-  #   - Create the buckets Rails expects to exist. Only reads lazily create
-  #     anything (lib/cdo/local_development.rb), so without this the first save
-  #     of a project or an animation fails with NoSuchBucket. The list is
-  #     docker/developers/install-s3.sh's.
-  #   - Give the cache volume to uid 1000. Docker creates the mount point for
-  #     a named volume as root when the path is absent from the image, and
-  #     yarn runs as cdo.
+  # Runs to completion before the app starts. Creates the buckets Rails
+  # expects to exist: only reads lazily create anything
+  # (lib/cdo/local_development.rb), so without this the first save of a
+  # project or an animation fails with NoSuchBucket. The list is
+  # docker/developers/install-s3.sh's.
   init:
     image: ${CDO_DEV_MINIO_IMAGE:-minio/minio:latest}
     depends_on:
       minio:
         condition: service_healthy
-    volumes:
-      - yarn-cache:/yarn-cache
     entrypoint:
       - sh
       - -c
       - |
-        chown 1000:1000 /yarn-cache
         mc alias set cdo http://minio:9000 local-development allstudents
         for b in cdo-ai cdo-animation-library cdo-restricted cdo-sound-library \
                  cdo-v3-animations cdo-v3-assets cdo-v3-files cdo-v3-libraries \
@@ -101,8 +93,8 @@ services:
       # the workspace — and without a volume the frontend workspaces refetch
       # 1.25 GiB every time the container is recreated. The mount is the whole
       # of ~/.yarn rather than its cache/ subdirectory because yarn writes
-      # index/ alongside cache/, and a volume mounted at the leaf leaves the
-      # parent owned by root.
+      # index/ alongside cache/. The image creates that directory, which is
+      # what makes a fresh volume here arrive owned by cdo.
       - type: volume
         source: yarn-cache
         target: /home/cdo/.yarn
@@ -129,9 +121,6 @@ services:
       - DB_HOST=db
       - DB_USER=root
       - DB_PASSWORD=password
-      # Fetch the prebuilt apps package on first start, so level pages render
-      # without a local webpack build. See the README to develop in apps/.
-      - DEVCONTAINER_BOOTSTRAP_APPS=true
       # The apps dev server is the memory hog here: eval source maps and no
       # in-process type checking are what keep it inside a laptop. Both are
       # documented in apps/README.md; your editor and CI still type-check.
@@ -142,11 +131,11 @@ services:
       - "${CDO_RAILS_PORT:-3000}:3000"
       - "${CDO_APPS_PORT:-9000}:9000"
       - "${CDO_FRONTEND_PORT:-3036}:3036"
-      # The two Storybooks. No override variables: they are occasional, and
-      # a collision here is a `docker compose` flag away rather than a
-      # standing configuration problem.
-      - "9001:9001"
-      - "6006:6006"
+      # The two Storybooks. Overridable like the rest: a developer running
+      # either one natively already holds the port, and without a variable
+      # that stops the whole container from starting.
+      - "${CDO_APPS_STORYBOOK_PORT:-9001}:9001"
+      - "${CDO_DS_STORYBOOK_PORT:-6006}:6006"
 
 volumes:
   # No `name:`. Compose then prefixes it with the project — cdo-fresh_yarn-cache

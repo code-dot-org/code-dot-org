@@ -5,19 +5,18 @@
   "workspaceFolder": "/code-dot-org",
   "remoteUser": "cdo",
 
-  // The image bakes an entrypoint that starts in-container services, applies
-  // migrations, and fetches the prebuilt apps package. Let it run, then run it
-  // again on every start.
-  "overrideCommand": false,
-  "postStartCommand": "/usr/local/bin/entrypoint.sh true",
-
   // Once per container, and the part a Codespaces prebuild bakes into the
-  // image. Both installs are network-bound and cost about 25s each warm;
-  // apps/ is deliberately not built here — the entrypoint downloads the
-  // prebuilt package from a public bucket in about 90s, which beats building
-  // it, and only a commit that changes apps/ and has never been through CI
-  // needs `yarn build` by hand.
-  "onCreateCommand": "cd /code-dot-org/apps && yarn install && cd /code-dot-org/frontend && yarn install",
+  // image. Both yarn installs are network-bound and cost about 25s each warm.
+  // `dev-bootstrap create` links the git hooks and fetches the prebuilt apps
+  // package from a public bucket, about 105s; apps/ is deliberately not built
+  // here, because downloading beats building and only a commit that changes
+  // apps/ and has never been through CI needs `yarn build` by hand.
+  "onCreateCommand": "cd /code-dot-org/apps && yarn install && cd /code-dot-org/frontend && yarn install && dev-bootstrap create",
+
+  // Every start, including a plain `docker compose start`. Applies whatever
+  // migrations the checkout has gained since the database image was baked,
+  // and fails the start rather than handing over a half-migrated schema.
+  "postStartCommand": "dev-bootstrap start",
 
   // Sized off measurements, not taste. Memory: the apps dev server alone runs
   // with an 8 GB node heap, on top of Rails, MySQL and a browser. Storage:

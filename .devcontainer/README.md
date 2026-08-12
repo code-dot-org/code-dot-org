@@ -19,9 +19,9 @@ on, so what you load in development is what production resolved.
 ## In a codespace
 
 Create a codespace on your branch. If a prebuild is available it comes up in
-about a minute; otherwise the first start also pulls the images, applies any
-migrations newer than the database image, downloads the prebuilt apps
-package, and runs both `yarn install`s.
+about a minute; otherwise the first start also pulls the images, runs both
+`yarn install`s, downloads the prebuilt apps package, and applies any
+migrations newer than the database image.
 
 ```shell
 bin/dashboard-server        # then open the forwarded port 3000
@@ -53,8 +53,14 @@ to reach for when you want the stack without the devcontainer tooling:
 
 ```shell
 docker compose -f .devcontainer/docker-compose.yml up -d
+docker compose -f .devcontainer/docker-compose.yml exec app dev-bootstrap start
 docker compose -f .devcontainer/docker-compose.yml exec app bash
 ```
+
+Plain compose starts the containers and nothing else — there are no lifecycle
+hooks to run the two halves for it. `dev-bootstrap start` is the one command
+you owe it, on every start; `dev-bootstrap create` too, the first time, if you
+want the git hooks and the apps package.
 
 The images come from ghcr by default. To run images you built yourself:
 
@@ -79,10 +85,11 @@ Everything compose reads, in one place — all of it optional, all of it from
 | `CDO_DEV_DB_IMAGE` | `ghcr.io/code-dot-org/cdo-devdb:latest` | the seeded database |
 | `CDO_DEV_MINIO_IMAGE` | `minio/minio:latest` | S3 emulation, and the `init` job that creates its buckets |
 | `CDO_LOCALS` | `./locals.yml.sample` | the file mounted at `/code-dot-org/locals.yml` |
-| `CDO_SKIP_DB_ASSERT` | unset | set to `1` to skip the entrypoint's check that `locals.yml` names the `db` service — for a config that legitimately points somewhere else |
 | `CDO_RAILS_PORT` | `3000` | |
 | `CDO_APPS_PORT` | `9000` | |
 | `CDO_FRONTEND_PORT` | `3036` | the one most likely to collide, if you also run `yarn dev` natively |
+| `CDO_APPS_STORYBOOK_PORT` | `9001` | |
+| `CDO_DS_STORYBOOK_PORT` | `6006` | taken already if you run the design-system Storybook natively |
 | `CDO_DB_PORT` | `13306` | MySQL, for GUI clients |
 
 To make the clone the container works in, cloning from a checkout you already
@@ -170,7 +177,7 @@ Three things to know before the first run:
 
   Skip the second and the tests still fail on assets "not present in the
   asset pipeline", against a manifest that is no longer on disk. This is not
-  automated in the entrypoint: it costs a minute and a half, and it only
+  automated in `dev-bootstrap`: it costs a minute and a half, and it only
   matters if you run dashboard controller tests. Assets are workspace files,
   not database rows, so unlike the test database they cannot be baked into
   the image.
@@ -188,7 +195,7 @@ not start at all.
 ### Developing in apps/
 
 The container starts with `use_my_apps: false`, serving the prebuilt package
-the entrypoint downloaded: level pages render, but nothing you edit under
+`dev-bootstrap create` downloaded: level pages render, but nothing you edit under
 `apps/src` reaches the browser. To change that, on the host, take your own
 config and flip the flag:
 
@@ -266,12 +273,12 @@ in it were written for one machine or the other:
 
 | path | what happens |
 |---|---|
-| `dashboard/public/blockly` | A native build leaves an absolute symlink to a host path, which does not exist in the container. The entrypoint says so and repoints it, which breaks it for the host; `bundle exec rake package:apps:symlink` on the host puts it back. Each side repoints it for the other, indefinitely. |
+| `dashboard/public/blockly` | A native build leaves an absolute symlink to a host path, which does not exist in the container. `dev-bootstrap create` says so and repoints it, which breaks it for the host; `bundle exec rake package:apps:symlink` on the host puts it back. Each side repoints it for the other, indefinitely. |
 | `locals.yml` | Not shared, and that is deliberate — see Config. |
 | `dashboard/public/assets` | Shared, and a native precompile's manifest does not match the container's. Symptom: controller tests erroring with an asset "is not present in the asset pipeline". Fix by precompiling in the container — `RAILS_ENV=test bundle exec rake assets:precompile` — which then makes the host's stale in the same way. |
-| `dashboard/public/apps-package` | The entrypoint downloads the prebuilt package over it, ~2 GB, whenever `blockly` does not resolve. It logs the commit_hash it replaced and the one it installed; the host's build is gone either way. |
+| `dashboard/public/apps-package` | `dev-bootstrap create` downloads the prebuilt package over it, ~2 GB, whenever `blockly` does not resolve. It logs the commit_hash it replaced and the one it installed; the host's build is gone either way. |
 | `apps/build` | Shared. Both sides write it; the last writer wins and neither notices. |
-| `.git/hooks` | The entrypoint symlinks the repo's hooks into place if they are not already links. Harmless unless you keep hooks of your own there. |
+| `.git/hooks` | `dev-bootstrap create` symlinks the repo's hooks into place where nothing is installed. Harmless unless you keep hooks of your own there. |
 | `apps/node_modules` | Shared. `yarn install` in the container rebuilds native packages against the container's toolchain, in the host's tree, without the lockfile changing. Reinstall natively after, or do not install on both sides. |
 
 `dashboard/tmp` and `dashboard/log` are shared too, so a Rails or webpack
@@ -293,7 +300,7 @@ The seeded datadir is baked into the `cdo-devdb` image, so each container
 writes to a copy-on-write layer. `docker compose stop` and `start` keep those
 writes. `down`, and rebuilding the container, throw them away: rows you
 inserted, migrations you applied, test-database seeds. You come back to the
-bake, and the entrypoint replays the missing migrations — a couple of
+bake, and `dev-bootstrap start` replays the missing migrations — a couple of
 minutes, not a reseed. Rebake when that replay stops being cheap.
 
 The datadir sits at a path with no `VOLUME` declaration, so those writes are
@@ -328,8 +335,10 @@ here deletes it along with the database and the emulated S3.
 | 6006 | 6006 | Design-system Storybook |
 | 13306 | 3306 | MySQL, for GUI clients |
 
-Each is overridable: `CDO_RAILS_PORT`, `CDO_APPS_PORT`, `CDO_FRONTEND_PORT`,
-`CDO_DB_PORT`.
+Each is overridable — `CDO_RAILS_PORT`, `CDO_APPS_PORT`, `CDO_FRONTEND_PORT`,
+`CDO_APPS_STORYBOOK_PORT`, `CDO_DS_STORYBOOK_PORT`, `CDO_DB_PORT` — which is
+what you need if you also run any of these natively. A port already bound on
+the host stops the container from starting at all, not just that one service.
 
 ## Known limitations
 
@@ -342,7 +351,7 @@ Each is overridable: `CDO_RAILS_PORT`, `CDO_APPS_PORT`, `CDO_FRONTEND_PORT`,
   one to watch for.
 - The first request after a code reload can 500 in the session store. The
   next one succeeds.
-- The apps package the entrypoint downloads is keyed on the content of
+- The apps package `dev-bootstrap create` downloads is keyed on the content of
   `apps/`. A branch that changes `apps/` and has never been through CI has no
   package to download, and level pages need a local `yarn build` (or the
   dev-server flow above) instead.
