@@ -70,9 +70,27 @@ CDO_DEV_IMAGE=cdo-dev:local
 CDO_DEV_DB_IMAGE=cdo-devdb:local
 ```
 
-The same file is where to move a port if 3000, 9000 or 3036 is taken on your
-machine — 3036 especially, if you also run `yarn dev` natively:
-`CDO_RAILS_PORT`, `CDO_APPS_PORT`, `CDO_FRONTEND_PORT`, `CDO_DB_PORT`.
+Everything compose reads, in one place — all of it optional, all of it from
+`.devcontainer/.env`:
+
+| variable | default | |
+|---|---|---|
+| `CDO_DEV_IMAGE` | `ghcr.io/code-dot-org/cdo-dev:latest` | the container you work in |
+| `CDO_DEV_DB_IMAGE` | `ghcr.io/code-dot-org/cdo-devdb:latest` | the seeded database |
+| `CDO_DEV_MINIO_IMAGE` | `minio/minio:latest` | S3 emulation, and the `init` job that creates its buckets |
+| `CDO_LOCALS` | `./locals.yml.sample` | the file mounted at `/code-dot-org/locals.yml` |
+| `CDO_RAILS_PORT` | `3000` | |
+| `CDO_APPS_PORT` | `9000` | |
+| `CDO_FRONTEND_PORT` | `3036` | the one most likely to collide, if you also run `yarn dev` natively |
+| `CDO_DB_PORT` | `13306` | MySQL, for GUI clients |
+
+To make the clone the container works in, cloning from a checkout you already
+have is much faster than cloning from GitHub — git hardlinks the objects, so
+it costs about 12 seconds and ~2 GB rather than a full fetch:
+
+```shell
+git clone /path/to/your/checkout ~/src/cdo-devcontainer
+```
 
 ### Using your everyday checkout instead, at your own risk
 
@@ -127,16 +145,28 @@ cd frontend && yarn workspace @code-dot-org/e2e-tests test:ui:local
 
 Three things to know before the first run:
 
-- Dashboard controller tests want precompiled test assets:
-  `RAILS_ENV=test bundle exec rake assets:precompile`. See the collision
-  table below first if this checkout is also used natively.
+- Dashboard controller tests need precompiled test assets, and Spring caches
+  the manifest it saw at boot. Both halves, in this order:
+
+  ```shell
+  RAILS_ENV=test bundle exec rake assets:precompile
+  bundle exec spring stop
+  ```
+
+  Skip the second and the tests still fail on assets "not present in the
+  asset pipeline", against a manifest that is no longer on disk. This is not
+  automated in the entrypoint: it costs minutes, and it only matters if you
+  run dashboard controller tests.
 - `yarn test:unit` needs `yarn build` to have run once — jest loads locale
   bundles out of `apps/build`.
 - `pre-commit` lints **staged files only**. With an empty index it does
   nothing and exits 0, which is not a passing lint run; `git add` first.
 
 The first `spring` command in a fresh container sometimes dies with a
-`mutex_m` default-gem conflict. `bundle exec spring stop`, then run it again.
+`mutex_m` default-gem conflict, and it can wall `bin/rails` too.
+`bundle exec spring stop` sometimes clears it; `DISABLE_SPRING=1` always
+does, and is the escape hatch to reach for when a Spring-backed command will
+not start at all.
 
 ### Developing in apps/
 
@@ -175,7 +205,9 @@ in it were written for one machine or the other:
 | `dashboard/public/blockly` | A native build leaves an absolute symlink to a host path, which does not exist in the container. The entrypoint says so and repoints it, which breaks it for the host; `bundle exec rake package:apps:symlink` on the host puts it back. Each side repoints it for the other, indefinitely. |
 | `locals.yml` | Not shared, and that is deliberate — see Config. |
 | `dashboard/public/assets` | Shared, and a native precompile's manifest does not match the container's. Symptom: controller tests erroring with an asset "is not present in the asset pipeline". Fix by precompiling in the container — `RAILS_ENV=test bundle exec rake assets:precompile` — which then makes the host's stale in the same way. |
+| `dashboard/public/apps-package` | The entrypoint downloads the prebuilt package over it, ~2 GB, whenever `blockly` does not resolve. It logs the commit_hash it replaced and the one it installed; the host's build is gone either way. |
 | `apps/build` | Shared. Both sides write it; the last writer wins and neither notices. |
+| `.git/hooks` | The entrypoint symlinks the repo's hooks into place if they are not already links. Harmless unless you keep hooks of your own there. |
 | `apps/node_modules` | Shared. `yarn install` in the container rebuilds native packages against the container's toolchain, in the host's tree, without the lockfile changing. Reinstall natively after, or do not install on both sides. |
 
 `dashboard/tmp` and `dashboard/log` are shared too, so a Rails or webpack
@@ -202,13 +234,17 @@ objects you uploaded to the emulated S3.
 
 ### Caches
 
-yarn's global cache is a named volume, `cdo-yarn-cache`, because it is the
-one cache that lives outside the checkout: without it the frontend workspaces
-refetch about 1.25 GiB every time the container is recreated. `apps/` keeps
-its cache in the workspace (`enableGlobalCache: false`) and turbo keeps its
-own under `frontend/.turbo`, so those two persist with the checkout and need
-nothing. Plain `down` keeps the yarn cache; `down -v` deletes it with
-everything else.
+yarn's global state is a named volume, because it is the one cache that
+lives outside the checkout: without it the frontend workspaces refetch about
+1.25 GiB every time the container is recreated. `apps/` keeps its cache in
+the workspace (`enableGlobalCache: false`) and turbo keeps its own under
+`frontend/.turbo`, so those two persist with the checkout and need nothing.
+
+The volume is named by compose, which prefixes it with the project — one
+cache per clone, not one per machine. That is deliberate: a machine-global
+name means `docker compose down -v` in any unrelated project deletes the
+cache this one just spent 1.25 GiB filling. Plain `down` keeps it; `down -v`
+here deletes it along with the database and the emulated S3.
 
 ## Ports
 

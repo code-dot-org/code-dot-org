@@ -138,5 +138,8 @@ services:
       - "${CDO_FRONTEND_PORT:-3036}:3036"
 
 volumes:
+  # No `name:`. Compose then prefixes it with the project — cdo-fresh_yarn-cache
+  # rather than a machine-global cdo-yarn-cache that any other project's
+  # `down -v` would delete. Two clones stop sharing a download cache, which is
+  # the price of each clone owning its own.
   yarn-cache:
-    name: ${CDO_YARN_CACHE_VOLUME:-cdo-yarn-cache}
