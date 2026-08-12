@@ -6,7 +6,10 @@ development and test gems. Disk is cheap on a laptop, and "works in the
 devcontainer" should mean one thing on every machine.
 
 `.devcontainer/` holds the wiring that runs it — `devcontainer.json`, compose
-services, the seeded database. This directory holds only the image.
+services, the seeded database. This directory holds the image, and
+`dev-bootstrap`: the work a devcontainer does around the source it mounts,
+in the two halves the lifecycle calls, `create` once per container and
+`start` on every start. The image has no ENTRYPOINT; it runs bash.
 
 ## Why it stacks on cdo-deps
 
@@ -99,9 +102,8 @@ source in cdo-build on both architectures alike.
 The checks are in two halves: that the delta installed (the dev/test groups
 resolve, the venv carries the dev group in `/opt/venv`) and that nothing
 inherited was lost (the compiled extensions still load after the delta
-install on top of them). Checks run through the image's entrypoint on
-purpose: with no repo volume mounted every entrypoint stage is guarded off,
-and the smoke test proves it degrades to a plain exec.
+install on top of them), plus that `dev-bootstrap` is installed and
+runnable.
 
 ## Dual-engine policy
 

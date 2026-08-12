@@ -9,10 +9,6 @@
 # The dependency contract is covered by docker/deps/smoke-test.sh; this
 # asserts what the dev image adds — the dev/test gem delta, the toolchain,
 # the browsers — and that it did not lose what it inherited.
-#
-# Checks run through the image's entrypoint on purpose: with no repo volume
-# mounted, every entrypoint stage is guarded off and it must degrade to a
-# plain exec. A check hanging here means a guard broke.
 
 # shellcheck disable=SC1091
 . "$(dirname "$0")/../smoke-harness.sh"
@@ -93,6 +89,10 @@ run "git-lfs filters configured" "git-lfs" -- \
   git config --get filter.lfs.smudge
 
 run "runs as non-root cdo" "cdo" -- id -un
-run "entrypoint installed" "" -- test -x /usr/local/bin/entrypoint.sh
+# The devcontainer lifecycle calls this; the image has no ENTRYPOINT of its
+# own. `create` and `start` are the two halves.
+run "dev-bootstrap installed" "" -- test -x /usr/local/bin/dev-bootstrap
+run "dev-bootstrap rejects a bad subcommand" "usage: dev-bootstrap" -- \
+  sh -c '/usr/local/bin/dev-bootstrap nonsense 2>&1 || true'
 
 report

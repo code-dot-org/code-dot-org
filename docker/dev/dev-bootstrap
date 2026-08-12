@@ -1,0 +1,170 @@
+#!/bin/bash
+# The work a devcontainer needs done around the source it mounts, split the
+# way the devcontainer lifecycle already splits it:
+#
+#   dev-bootstrap create   once per container   (onCreateCommand)
+#   dev-bootstrap start    on every start       (postStartCommand)
+#
+# This used to be an ENTRYPOINT that did both, which the devcontainer CLI then
+# also called as postStartCommand — the same script running twice over the same
+# directories, and a flock to make that safe. Naming the two halves and letting
+# the lifecycle call each one where it belongs deletes the collision instead of
+# guarding it. It also means failures land where a developer sees them: the CLI
+# reports a failing hook, and `up` does not return until `start` is done.
+#
+# Both subcommands are idempotent, so re-running either by hand is fine.
+set -euo pipefail
+
+usage() {
+  echo "usage: dev-bootstrap {create|start}" >&2
+  exit 64
+}
+
+# --- create -----------------------------------------------------------------
+
+install_hooks() {
+  local hooks_dir="/code-dot-org/.git/hooks"
+  local tools_dir="/code-dot-org/tools/hooks"
+  if [ -d "$tools_dir" ] && [ -d "$hooks_dir" ]; then
+    # Only where nothing is installed at all. `[ ! -L ]` meant "not one of
+    # mine", which is not the same thing: git-lfs writes real files at
+    # post-checkout, post-merge, post-commit and pre-push when it clones a
+    # repository, and this replaced two of them. Content survives that —
+    # smudge and clean are filters, configured system-wide, not hooks — but
+    # `git lfs post-checkout` is what repairs a working tree whose files were
+    # not smudged on the way in, and either way these hooks belong to git-lfs
+    # and not to us. The cost of deferring is the repo's own reminder that
+    # dependencies changed; that is the cheaper thing to lose.
+    for hook in pre-commit post-checkout post-merge; do
+      if [ -f "$tools_dir/$hook" ] && [ ! -e "$hooks_dir/$hook" ]; then
+        ln -sf "../../tools/hooks/$hook" "$hooks_dir/$hook"
+      fi
+    done
+  fi
+}
+
+bootstrap_apps() {
+  # Level pages need /blockly/* assets. The package is public-read on S3 and
+  # keyed by the content of apps/, so this is a download rather than a build.
+  local blockly_target="/code-dot-org/dashboard/public/blockly"
+  if [ -L "$blockly_target" ] && [ -d "$(readlink -f "$blockly_target")" ]; then
+    return
+  fi
+
+  # A checkout that was also built natively carries an absolute symlink to a
+  # host path, which does not exist here. Repointing it fixes this container
+  # and breaks the host's, so say so rather than doing it quietly.
+  if [ -L "$blockly_target" ]; then
+    echo "dev-bootstrap: $blockly_target points at $(readlink "$blockly_target"), which does not exist in this container."
+    echo "dev-bootstrap: repointing it. On the host, 'bundle exec rake package:apps:symlink' puts it back."
+  fi
+
+  if command -v bundle >/dev/null 2>&1 && [ -f /code-dot-org/Rakefile ] && \
+     git -C /code-dot-org rev-parse HEAD >/dev/null 2>&1; then
+    # Two gigabytes of somebody's build output is about to be replaced. Name
+    # it, and name what replaced it, so this is legible afterwards in a
+    # checkout that is shared with a native setup.
+    local package_dir=/code-dot-org/dashboard/public/apps-package
+    if [ -d "$package_dir" ]; then
+      echo "dev-bootstrap: overwriting the apps package in $package_dir (commit_hash $(cat "$package_dir/commit_hash" 2>/dev/null || echo unknown))"
+    fi
+    echo "dev-bootstrap: downloading apps package from S3..."
+    cd /code-dot-org
+    bundle exec rake package:apps:update 2>&1 || true
+    bundle exec rake package:apps:symlink 2>&1 || \
+      echo "dev-bootstrap: apps bootstrap skipped (S3 package not available for this commit)"
+    if [ -d "$package_dir" ]; then
+      echo "dev-bootstrap: apps package now at commit_hash $(cat "$package_dir/commit_hash" 2>/dev/null || echo unknown)"
+    fi
+    if [ -L "$blockly_target" ]; then
+      echo "dev-bootstrap: $blockly_target -> $(readlink "$blockly_target")"
+    fi
+  fi
+}
+
+# --- start ------------------------------------------------------------------
+
+db_query() {
+  # One place that knows how to reach the sidecar. Credentials come from the
+  # environment so a compose file or a CDO_LOCALS with its own can say so;
+  # an empty DB_PASSWORD means "no -p at all", which is not the same as -p''.
+  local pw_arg=()
+  [ -n "${DB_PASSWORD-password}" ] && pw_arg=(-p"${DB_PASSWORD-password}")
+  mysql -h "${DB_HOST:-db}" -u "${DB_USER:-root}" "${pw_arg[@]}" -N -e "$1"
+}
+
+migration_versions_on_disk() {
+  # 20260805182458_drop_contact_rollups_final.rb -> 20260805182458
+  basename -a "${1:-db/migrate}"/*.rb 2>/dev/null |
+    sed -n 's/^\([0-9][0-9]*\)_.*\.rb$/\1/p' | sort -u
+}
+
+versions_missing_from_db() {
+  # $1 and $2 are newline-separated version lists. Prints the versions on disk
+  # that the database has not applied.
+  #
+  # Sets, not counts. A rebase that drops one migration and adds another
+  # leaves the counts equal while a version is genuinely pending, and one
+  # orphaned schema_migrations row — a migration deleted after it ran — leaves
+  # them unequal forever, so every container start paid a full dev+test
+  # db:migrate. Extra rows in the database are not our business: they are what
+  # a rolled-back branch looks like, and rake cannot act on them either.
+  comm -23 <(printf '%s\n' "$1" | sed '/^$/d' | sort -u) \
+           <(printf '%s\n' "$2" | sed '/^$/d' | sort -u)
+}
+
+migrate_or_die() {
+  RAILS_ENV="$1" bundle exec rake db:migrate 2>&1 && return 0
+  echo "dev-bootstrap: db:migrate failed for the $1 database; refusing to start with a half-migrated schema." >&2
+  exit 1
+}
+
+auto_migrate() {
+  # Auto-apply pending migrations if Rails and a DB are available.
+  # Compares version sets with one query instead of booting Rails (saves ~60s).
+  [ -f /code-dot-org/dashboard/Rakefile ] || return 0
+  command -v mysql >/dev/null 2>&1 || return 0
+
+  cd /code-dot-org/dashboard
+
+  local disk db pending
+  disk=$(migration_versions_on_disk db/migrate)
+  [ -n "$disk" ] || return 0
+
+  if ! db=$(db_query "SELECT version FROM dashboard_development.schema_migrations" 2>/dev/null); then
+    # A probe that cannot read the table is usually a locals.yml pointing
+    # somewhere this container cannot reach — the failure Rails would
+    # otherwise show much later, as a socket error against a mysqld that was
+    # never in play. Name the file, then defer: rake reads locals.yml rather
+    # than DB_USER, so it may well succeed where this did not.
+    echo "dev-bootstrap: cannot read schema_migrations as '${DB_USER:-root}'@'${DB_HOST:-db}'." >&2
+    echo "dev-bootstrap: check /code-dot-org/locals.yml — the devcontainer mounts its own there, and CDO_LOCALS chooses which. Running db:migrate to be sure." >&2
+    db=""
+  fi
+
+  pending=$(versions_missing_from_db "$disk" "$db")
+  [ -n "$pending" ] || return 0
+
+  # Failures here are fatal. A half-migrated database is not a working
+  # container, and reporting it as "may be non-fatal" only moves the error to
+  # whatever the developer tries first.
+  echo "dev-bootstrap: $(printf '%s\n' "$pending" | wc -l) pending migration(s), oldest $(printf '%s\n' "$pending" | head -1); running db:migrate..."
+  migrate_or_die development
+  migrate_or_die test
+  echo "dev-bootstrap: migrations complete"
+}
+
+# --- dispatch ---------------------------------------------------------------
+
+case "${1:-}" in
+  create)
+    install_hooks
+    bootstrap_apps
+    ;;
+  start)
+    auto_migrate
+    ;;
+  *)
+    usage
+    ;;
+esac

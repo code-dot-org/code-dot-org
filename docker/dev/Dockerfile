@@ -168,20 +168,30 @@ RUN set -eux \
   && ln -sf "$chrome" /usr/local/bin/chromium
 ENV CHROME_BIN=/usr/local/bin/chromium
 
-COPY --chown=root:root --chmod=755 entrypoint.sh /usr/local/bin/entrypoint.sh
+# The work a devcontainer does around the source it mounts, in two halves the
+# lifecycle calls: `create` once per container, `start` on every start. There
+# is no ENTRYPOINT — the container runs bash, and the hooks in
+# .devcontainer/devcontainer.json say when each half happens.
+COPY --chown=root:root --chmod=755 dev-bootstrap /usr/local/bin/dev-bootstrap
 
 USER ${USERNAME}
 
 # The repo arrives as a volume cloned by root while the container runs as
 # cdo, so git needs to be told the ownership mismatch is expected.
+#
+# ~/.yarn exists so that a named volume mounted there arrives owned by cdo:
+# docker copies the image's ownership onto a fresh volume, and creates the
+# mount point as root when the path is absent. yarn's global cache is the one
+# cache that lives outside the workspace, so the devcontainer keeps it in a
+# volume.
 RUN set -eux \
-  && git config --global --add safe.directory /code-dot-org
+  && git config --global --add safe.directory /code-dot-org \
+  && mkdir -p /home/${USERNAME}/.yarn
 
 # Metadata lookups from a laptop just time out slowly.
 ENV AWS_EC2_METADATA_DISABLED=true
 
 WORKDIR /code-dot-org
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["bash"]
 
 LABEL org.opencontainers.image.source="https://github.com/code-dot-org/code-dot-org"
