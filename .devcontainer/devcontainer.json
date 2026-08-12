@@ -5,8 +5,8 @@
   "workspaceFolder": "/code-dot-org",
   "remoteUser": "cdo",
 
-  // Once per container, and the part a Codespaces prebuild bakes into the
-  // image. Both yarn installs are network-bound and cost about 25s each warm.
+  // Once per container. A Codespaces prebuild stores the result in the
+  // prebuild image. Both yarn installs are network-bound and cost about 25s each warm.
   // `dev-bootstrap create` links the git hooks and fetches the prebuilt apps
   // package from a public bucket, about 105s; apps/ is deliberately not built
   // here, because downloading beats building and only a commit that changes
@@ -14,7 +14,8 @@
   "onCreateCommand": "cd /code-dot-org/apps && yarn install && cd /code-dot-org/frontend && yarn install && dev-bootstrap create",
 
   // Every start, including a plain `docker compose start`. Applies whatever
-  // migrations the checkout has gained since the database image was baked,
+  // migrations that the checkout gained after the database image was
+  // pre-seeded,
   // and fails the start rather than handing over a half-migrated schema.
   "postStartCommand": "dev-bootstrap start",
 

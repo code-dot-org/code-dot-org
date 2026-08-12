@@ -9,7 +9,7 @@ a codespace or on your own machine.
 | | |
 |---|---|
 | `app` | [cdo-dev](../docker/dev/README.md), the development member of the [image family](../docker/README.md). Nothing starts by itself — you run Rails and the dev servers in a terminal. |
-| `db` | [cdo-devdb](../.github/workflows/cdo-devdb-image.yml): `mysql:8.0` with both dashboard databases baked in — development seeded with curriculum, test prepared and seeded — so you skip a two-hour `db:setup_or_migrate` and the test-seed on first use. |
+| `db` | [cdo-devdb](../.github/workflows/cdo-devdb-image.yml): `mysql:8.0` that carries both dashboard databases pre-seeded — development with curriculum, test prepared and seeded. You skip a two-hour `dashboard:setup_db`, and the test seed on first use. |
 | `redis` | `redis:7`, stock. |
 | `minio` | S3, emulated. A level page asks S3 whether its lesson has a PDF; without an endpoint that question is a 500. A one-shot `init` service creates the buckets. |
 
@@ -66,7 +66,7 @@ The images come from ghcr by default. To run images you built yourself:
 
 ```shell
 docker build -t cdo-dev:local docker/dev/            # see docker/README.md
-.devcontainer/bake-db.sh                             # ~20 min, seeds a database
+.devcontainer/preseed-db.sh                          # ~20 min, seeds a database
 docker build -f .devcontainer/Dockerfile.db -t cdo-devdb:local .devcontainer
 ```
 
@@ -179,8 +179,7 @@ Three things to know before the first run:
   asset pipeline", against a manifest that is no longer on disk. This is not
   automated in `dev-bootstrap`: it costs a minute and a half, and it only
   matters if you run dashboard controller tests. Assets are workspace files,
-  not database rows, so unlike the test database they cannot be baked into
-  the image.
+  not database rows. Unlike the test database, no image can carry them.
 - `yarn test:unit` needs `yarn build` to have run once — jest loads locale
   bundles out of `apps/build`.
 - `pre-commit` lints **staged files only**. With an empty index it does
@@ -296,12 +295,13 @@ runs with `--default-time-zone=+00:00`, which is SETUP.md's `SET PERSIST`
 step made a property of the image rather than of a datadir that `down`
 discards.
 
-The seeded datadir is baked into the `cdo-devdb` image, so each container
+The `cdo-devdb` image carries the pre-seeded datadir, so each container
 writes to a copy-on-write layer. `docker compose stop` and `start` keep those
 writes. `down`, and rebuilding the container, throw them away: rows you
 inserted, migrations you applied, test-database seeds. You come back to the
-bake, and `dev-bootstrap start` replays the missing migrations — a couple of
-minutes, not a reseed. Rebake when that replay stops being cheap.
+pre-seeded datadir, and `dev-bootstrap start` replays the missing migrations.
+That costs a couple of minutes, not a reseed. Pre-seed again when the replay
+stops being cheap.
 
 The datadir sits at a path with no `VOLUME` declaration, so those writes are
 in the container's own layer — but the `mysql:8.0` and `minio/minio` images
@@ -356,7 +356,7 @@ the host stops the container from starting at all, not just that one service.
   package to download, and level pages need a local `yarn build` (or the
   dev-server flow above) instead.
 - The database image is amd64 only, which is what Codespaces runs. On arm64,
-  `bake-db.sh` builds one natively.
+  `preseed-db.sh` builds one natively.
 
 ## Related docs
 

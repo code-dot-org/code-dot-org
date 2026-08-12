@@ -1,20 +1,20 @@
-# cdo-devdb: mysql:8.0 with a seeded dashboard datadir baked in, so a
-# devcontainer starts against a populated database instead of a two-hour
-# db:setup_or_migrate. Published by .github/workflows/cdo-devdb-image.yml,
-# which is the only way a codespace can have one — the VM has no tarball.
+# cdo-devdb: mysql:8.0 that carries a pre-seeded dashboard datadir. A
+# devcontainer starts against a populated database. It does not run a
+# two-hour dashboard:setup_db. .github/workflows/cdo-devdb-image.yml
+# publishes the image. A codespace has no tar file, so it must pull one.
 #
-# The datadir is baked at /opt/mysql-data, not at the default /var/lib/mysql.
+# The datadir sits at /opt/mysql-data, not at the default /var/lib/mysql.
 # The official image declares VOLUME /var/lib/mysql, and docker copies the
 # image's contents of a VOLUME path into a fresh anonymous volume every time a
 # container starts: several gigabytes of copying before mysqld accepts its
 # first connection. At a path with no VOLUME declaration the layer is read in
 # place and the container's copy-on-write layer holds only what it writes.
 #
-# That also means the database is scratch space. `docker compose down` discards
-# the layer and the next container starts from the bake again. Rebake to move
-# the starting point.
+# The database is therefore scratch space. `docker compose down` discards the
+# layer, and the next container starts from the pre-seeded datadir again. To
+# move that starting point, pre-seed again.
 #
-#   .devcontainer/bake-db.sh
+#   .devcontainer/preseed-db.sh
 #   docker build -f .devcontainer/Dockerfile.db -t cdo-devdb:local .devcontainer
 
 FROM mysql:8.0

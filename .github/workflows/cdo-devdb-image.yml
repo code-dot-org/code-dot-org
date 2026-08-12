@@ -10,7 +10,7 @@
 # codespace has no seeded MySQL and no tarball to make one from; it pulls
 # this.
 #
-# Multi-arch from one bake. An InnoDB datadir is architecture-portable and
+# Multi-arch from one pre-seed run. An InnoDB datadir is architecture-portable and
 # Dockerfile.db has no RUN steps, so both images come from the same tar with
 # nothing executed at build time — no qemu anywhere in this workflow. The
 # smoke matrix then runs the SQL natively on each architecture, which is the
@@ -23,13 +23,13 @@ on:
   pull_request:
     paths:
       - '.devcontainer/Dockerfile.db'
-      - '.devcontainer/bake-db.sh'
+      - '.devcontainer/preseed-db.sh'
       - '.github/workflows/cdo-devdb-image.yml'
   push:
     branches: [staging]
     paths:
       - '.devcontainer/Dockerfile.db'
-      - '.devcontainer/bake-db.sh'
+      - '.devcontainer/preseed-db.sh'
       - '.devcontainer/locals.yml.sample'
       - 'dashboard/db/schema.rb'
       - '.github/workflows/cdo-devdb-image.yml'
@@ -49,7 +49,7 @@ env:
 
 jobs:
   build:
-    name: bake the datadir and push per-arch images
+    name: pre-seed the datadir and push per-arch images
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     permissions:
@@ -61,7 +61,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # The bake runs the dev image as its own uid 1000 with the checkout
+      # The pre-seed runs the dev image as its own uid 1000 with the checkout
       # bind-mounted, and the seeding writes into it: dashboard/db/schema.rb
       # from the schema dump, dashboard/log and dashboard/tmp, and
       # dashboard/app/models if the annotations move. Hand it the tree.
@@ -71,7 +71,7 @@ jobs:
       # runner — after twenty minutes of seeding. Handing .devcontainer to 1000
       # too makes that final tar EACCES, and `set -euo pipefail` turns it into
       # a job that fails at the end having done all the work. Nothing in the
-      # bake writes here; locals.yml.sample goes in read-only.
+      # pre-seed writes here; locals.yml.sample goes in read-only.
       - name: Give the checkout to the container user, keeping this directory
         run: |
           sudo chown -R 1000:1000 .
@@ -86,11 +86,11 @@ jobs:
 
       # ~20 minutes: schema load, seed:default, then a clean shutdown and a
       # tar of the datadir. The same script a developer runs locally.
-      - name: Bake the datadir
-        run: .devcontainer/bake-db.sh
+      - name: Pre-seed the datadir
+        run: .devcontainer/preseed-db.sh
 
-      # Buildx, twice, once per architecture, both from the tar that bake
-      # just made. Nothing runs during these builds — the Dockerfile is an ADD
+      # Buildx, twice, once per architecture, both from the tar that the
+      # pre-seed step just made. Nothing runs during these builds — the Dockerfile is an ADD
       # and a CMD — so the arm64 image is produced on an amd64 runner without
       # emulation. The tags are immutable and named by commit; no consumer
       # resolves them, and the stitch job builds every consumer name from the
