@@ -147,6 +147,30 @@ describe('the mocked sources endpoints', () => {
     expect(versions[1].comment).toBeUndefined();
   });
 
+  it('bounds the history, keeping the fixture and the newest', async () => {
+    // A version costs a whole copy of the project, and the quota is not ours
+    // to raise. What matters is that trimming takes the list and the sources
+    // together: a row the panel offers must be a row it can restore, and the
+    // failure this replaced served the FIXTURE for a version saved minutes ago.
+    useScenario();
+    for (let i = 0; i < 10; i++) {
+      await save(`v${i}`, false);
+    }
+
+    const versions = await list();
+    expect(versions.length).toBeLessThanOrEqual(6);
+    // Newest kept…
+    expect(await read()).toEqual({source: 'v9'});
+    // …oldest kept, because it is the fixture every unknown id falls back to.
+    expect(await read(versions[versions.length - 1].versionId)).toEqual(
+      FIXTURE,
+    );
+    // …and every row still answers with its own content.
+    for (const v of versions) {
+      expect(await read(v.versionId)).toBeDefined();
+    }
+  });
+
   it('keeps scenarios apart', async () => {
     registerLabFixtures('demo', {
       a: {sources: {source: 'A'}},

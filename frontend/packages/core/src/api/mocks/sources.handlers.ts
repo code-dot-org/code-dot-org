@@ -27,6 +27,22 @@ import {readResource, writeResource} from './scenarioStore';
 /** The version a scenario starts at — the fixture, before anything is saved. */
 const INITIAL_VERSION = 'mock-v1';
 
+/**
+ * How many versions keep their sources.
+ *
+ * A version costs a whole copy of the project, and a project with pictures in
+ * it runs to hundreds of kilobytes — sessionStorage gives us about five
+ * megabytes, so an uncapped history fills it in half a dozen saves. What made
+ * that worth bounding rather than tolerating is HOW it failed: the write threw
+ * part-way, the version stayed in the list with no sources behind it, and
+ * `sourcesAt` fell back to the fixture — so restoring a version you saved five
+ * minutes ago silently gave you the starting project.
+ *
+ * The oldest are dropped first and the first is never dropped: it is the
+ * fixture, which is what "Initial version" and every unknown id resolve to.
+ */
+const MAX_STORED_VERSIONS = 6;
+
 /** One stored version. `isLatest` is computed on read, so it is not kept here. */
 interface StoredVersion {
   versionId: string;
@@ -92,22 +108,72 @@ function nextVersionId(): string {
   return `mock-v${n + 1}`;
 }
 
+/**
+ * Drop the oldest versions until the history is within {@link MAX_STORED_VERSIONS}.
+ *
+ * The list and the sources are trimmed TOGETHER, so the panel is never offered
+ * a version whose content is gone — a row that restores something other than
+ * what it says is worse than a row that is not there.
+ */
+function trim(
+  list: StoredVersion[],
+  byVersion: Record<string, ProjectSourcesAny>,
+): {list: StoredVersion[]; byVersion: Record<string, ProjectSourcesAny>} {
+  if (list.length <= MAX_STORED_VERSIONS) {
+    return {list, byVersion};
+  }
+  // Keep the first (the fixture) and the newest few; the middle is what goes.
+  const kept = [list[0], ...list.slice(-(MAX_STORED_VERSIONS - 1))];
+  const keptIds = new Set(kept.map(v => v.versionId));
+  const keptSources: Record<string, ProjectSourcesAny> = {};
+  for (const id of keptIds) {
+    if (byVersion[id]) {
+      keptSources[id] = byVersion[id];
+    }
+  }
+  return {list: kept, byVersion: keptSources};
+}
+
 /** Write `sources` as a new version, or over the newest one. */
 function record(
   sources: ProjectSourcesAny,
   {replace}: {replace: boolean},
 ): StoredVersion {
-  const list = versions();
-  const byVersion = sourcesByVersion();
   const lastModified = new Date().toISOString();
-
+  const list = versions();
   const entry: StoredVersion = replace
     ? {...list[list.length - 1], lastModified}
     : {versionId: nextVersionId(), lastModified};
 
-  const next = replace ? [...list.slice(0, -1), entry] : [...list, entry];
-  writeResource('versions', next);
-  writeResource('versionSources', {...byVersion, [entry.versionId]: sources});
+  let {list: kept, byVersion} = trim(
+    replace ? [...list.slice(0, -1), entry] : [...list, entry],
+    {...sourcesByVersion(), [entry.versionId]: sources},
+  );
+
+  // Storage can still refuse — one project is large and the quota is not ours
+  // to raise — so shed the oldest history and try again rather than let the
+  // write fail half-done, which is what leaves a listed version with nothing
+  // behind it. The newest content matters most; the fixture is free, since an
+  // unknown id resolves to it anyway.
+  for (;;) {
+    try {
+      writeResource('versionSources', byVersion);
+      writeResource('versions', kept);
+      break;
+    } catch {
+      if (kept.length <= 2) {
+        writeResource('versions', [entry]);
+        writeResource('versionSources', {[entry.versionId]: sources});
+        break;
+      }
+      const dropped = kept[1].versionId;
+      kept = [kept[0], ...kept.slice(2)];
+      byVersion = Object.fromEntries(
+        Object.entries(byVersion).filter(([id]) => id !== dropped),
+      );
+    }
+  }
+
   // Kept in step for anything still reading these directly.
   writeResource('sources', sources);
   writeResource('versionId', entry.versionId);
