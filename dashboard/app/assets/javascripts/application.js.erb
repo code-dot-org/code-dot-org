@@ -12,19 +12,26 @@
 // about supported directives.
 
 // Important: Use minified versions of dependencies. No minifier is in use today.
-// jquery-ui.min is the official 1.12.1 full build from
+//
+// Order matters: bootstrap.min must load after jquery-ui.min, because it
+// overwrites $.fn.button and $.fn.tooltip with its own implementations.
+//
+// jquery.min and bootstrap.min are gem-supplied, so `bundle update` can change
+// their size and trip the cap in test/lib/application_js_bundle_test.rb without
+// this file changing. The rest live in vendor/assets/javascripts and are
+// updated by hand; jquery-ui.min is the official 1.12.1 full build from
 // https://code.jquery.com/ui/1.12.1/jquery-ui.min.js.
 //= require jquery.min
 //= require jquery-ui.min
-// (Former location of video.js; reference while converting to code-studio.js)
 //= require bootstrap.min
 //= require jquery.mask.min
 //= require jquery.qtip.min
 //= require jquery.ui.touch-punch.min
 
-// Small unminified glue, ~50KB raw in total. This list is frozen: changes are
-// limited to security updates of what is already here. New frontend code
-// belongs in apps/ or frontend/, not in this bundle.
+// Small unminified glue, ~50KB raw in total. jquery_ujs is gem-supplied, the
+// rest are vendored. This list is frozen: changes are limited to security
+// updates of what is already here. New frontend code belongs in apps/ or
+// frontend/, not in this bundle.
 //= require jquery_ujs
 //= require add2home
 //= require jquery.placeholder
