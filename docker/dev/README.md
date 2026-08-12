@@ -82,14 +82,14 @@ start, since the volume persists. If that becomes painful, the fix is a prep
 step that assembles a small context, not a cleverer ignore file. Dropping
 the warm cache is also what lets this build take no repo context at all.
 
-## amd64 only
+## amd64 and arm64, natively
 
-Inherited from cdo-deps, which is amd64-only because `Gemfile.lock`'s
-`PLATFORMS` has no `aarch64-linux`. On Apple Silicon this image runs under
-`--platform linux/amd64` emulation: slower, but it works, so arm64 is a
-rollout improvement rather than a blocker. Making it native starts at
-`bundle lock --add-platform aarch64-linux` in the dependency layer, not
-here.
+`Gemfile.lock` names both `x86_64-linux` and `aarch64-linux`, so the whole
+chain under this image builds natively on both architectures and publishes
+as one multi-platform manifest — on Apple Silicon the devcontainer runs
+native arm64, no emulation. Three gems resolve to prebuilt `aarch64-gnu`
+variants (ffi, google-protobuf, nokogiri); everything else compiles from
+source in cdo-build on both architectures alike.
 
 ## Smoke test
 

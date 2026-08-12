@@ -1,5 +1,6 @@
-# Builds cdo-dev, smoke-tests it on docker and podman, and publishes it from
-# staging. amd64 only, inherited from cdo-deps. See docker/dev/README.md.
+# Builds cdo-dev, smoke-tests it on docker and podman on amd64 and arm64,
+# and publishes it from staging as a multi-platform manifest (per-arch
+# native builds, stitched — the cdo-base pattern). See docker/dev/README.md.
 #
 # Lockfile changes are deliberately not triggers here: a PR that moves a
 # lockfile is gated by cdo-deps-image, and its dependency layer is only
@@ -84,13 +85,17 @@ jobs:
           echo "digest=$digest" >> "$GITHUB_OUTPUT"
 
   smoke-test:
-    name: smoke-test (${{ matrix.engine }})
+    name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
     needs: resolve-deps
     strategy:
       fail-fast: false
       matrix:
-        engine: [docker, podman]
-    runs-on: ubuntu-24.04
+        include:
+          - { engine: docker, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: podman, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: docker, arch: arm64, runs-on: ubuntu-24.04-arm }
+          - { engine: podman, arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
     permissions:
       contents: read
       packages: read
@@ -121,17 +126,25 @@ jobs:
       - name: Smoke test
         run: ./docker/dev/smoke-test.sh cdo-dev:smoke ${{ matrix.engine }}
 
+  # One job per architecture, natively — no qemu. Each pushes the tag set
+  # suffixed with its arch; stitch merges them into the consumer-facing tags.
   build-push:
-    name: build and push
+    name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
     needs: [resolve-deps, smoke-test]
-    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        include:
+          - { arch: amd64, runs-on: ubuntu-24.04 }
+          - { arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
     # Inert until its deployment-branch policy is set; see docker/deps/README.md.
     environment: ghcr-publish
-    # Shared across refs so two publishes cannot interleave. Safe to cancel:
-    # nothing resolves `latest` programmatically.
+    # Per-arch group so two publishes cannot interleave on the same arch tag;
+    # the two arch legs of one run must NOT share a group or they would cancel
+    # each other. Safe to cancel: nothing resolves `latest` programmatically.
     concurrency:
-      group: cdo-dev-publish
+      group: cdo-dev-publish-${{ matrix.arch }}
       cancel-in-progress: true
     permissions:
       contents: read
@@ -178,7 +191,7 @@ jobs:
 
       # Not build-push-action with push: true — that publishes in the step
       # that builds, before the smoke suite can fail the job.
-      - name: Push cdo-dev
+      - name: Push cdo-dev (per-arch tags)
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |
@@ -186,6 +199,57 @@ jobs:
           # An empty list would make this step a green no-op.
           test -n "$TAGS"
           for ref in $TAGS; do
-            docker tag cdo-dev:publish "$ref"
-            docker push "$ref"
+            docker tag cdo-dev:publish "$ref-${{ matrix.arch }}"
+            docker push "$ref-${{ matrix.arch }}"
           done
+
+  # The consumer-facing tags are multi-platform manifests over the per-arch
+  # pushes. Until this job runs, only the -amd64/-arm64 suffixed tags exist,
+  # so a half-published state is visible as such rather than resolving to a
+  # single-arch image under the final name.
+  stitch:
+    name: stitch multi-platform manifest
+    if: github.event_name != 'pull_request'
+    needs: build-push
+    runs-on: ubuntu-24.04
+    environment: ghcr-publish
+    concurrency:
+      group: cdo-dev-publish
+      cancel-in-progress: true
+    permissions:
+      packages: write
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # The same tag set the build-push legs computed. No checkout: the dev
+      # tag contract has no content key, so metadata-action needs only the
+      # event context.
+      - name: Compute tags
+        id: meta
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=sha,prefix=git-,format=long,enable={{is_default_branch}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
+
+      - name: Stitch each tag from its per-arch pair
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          set -euxo pipefail
+          test -n "$TAGS"
+          for ref in $TAGS; do
+            docker buildx imagetools create -t "$ref" "$ref-amd64" "$ref-arm64"
+          done
+
+      - name: Inspect a published manifest
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: docker buildx imagetools inspect "$(echo "$TAGS" | head -1)"
