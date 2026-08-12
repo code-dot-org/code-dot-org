@@ -307,9 +307,13 @@ describe('rules/gravity.rule', () => {
     expect(sources.filter(s => s === '(all actors)')).toHaveLength(2);
   });
 
-  it('is what the world puts in play', () => {
-    // By name — the world says which rule, and the generator works out which
-    // file that is when it comes to write the import.
-    expect(starterFile('main').contents).toContain('"Gravity"');
+  it('is in play because the project holds it', () => {
+    // It used to be a `use rule Has Gravity` row in the world, resolved by
+    // name to whichever file declared it. The file IS the statement now, and
+    // the world says nothing about rules at all — so what makes the starter a
+    // game with gravity in it is this entry and nothing else
+    // (blockly/projectModules).
+    expect(starterFile('gravityRule').name).toBe('gravity.rule');
+    expect(starterFile('main').contents).not.toContain('world_use_rule');
   });
 });

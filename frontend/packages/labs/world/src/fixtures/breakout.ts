@@ -303,9 +303,6 @@ const BREAKOUT_WORLD = JSON.stringify({
             // then on, wherever its file sits (useRuleOptions). A module path
             // is what an unparseable one falls back to, and a name that names
             // nothing quietly picks the first rule in the list instead.
-            {type: 'world_use_rule', fields: {RULE: 'Arrow Keys'}},
-            {type: 'world_use_rule', fields: {RULE: 'Solid Bodies'}},
-            {type: 'world_use_rule', fields: {RULE: 'Collection'}},
             {type: 'world_load_map', fields: {MAP: 'maps/breakout'}},
           ]),
         },

@@ -48,6 +48,14 @@ let cameraColor = 0;
 let textures = new Set<string>();
 
 vi.mock('phaser', () => {
+  /** A pointer at rest with nothing held — the binding reads one every frame. */
+  const pointer = () => ({
+    x: 0,
+    y: 0,
+    leftButtonDown: () => false,
+    middleButtonDown: () => false,
+    rightButtonDown: () => false,
+  });
   class Image {
     record: FakeImage;
     constructor(record: FakeImage) {
@@ -93,6 +101,9 @@ vi.mock('phaser', () => {
       main: {setBackgroundColor: (color: number) => (cameraColor = color)},
     },
     textures: {exists: (key: string) => textures.has(key)},
+    // The mouse: `create` claims the right button and `update` reads the
+    // pointer, so a scene without one is not a scene the binding can run.
+    input: {mouse: {disableContextMenu() {}}, activePointer: pointer()},
     add: {
       image(x: number, y: number, key: string) {
         const record: FakeImage = {
@@ -223,6 +234,7 @@ const world = (
 ) =>
   ({
     setInput: () => {},
+    setPointer: () => {},
     tick: () => {},
     effects: () => [],
     renderSnapshot: () => [],

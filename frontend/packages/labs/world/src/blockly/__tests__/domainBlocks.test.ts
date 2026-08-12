@@ -20,7 +20,11 @@ import {
 import {paramSockets} from '../extensions/effectParamsMutator';
 import {RGBA_PREVIEW_EXTENSION} from '../extensions/rgbaPreview';
 import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
-import {setProjectAnimationFiles, setProjectMaps} from '../moduleOptions';
+import {
+  setProjectAnimationFiles,
+  setProjectMaps,
+  setProjectRuleModules,
+} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {forgetImageSizes, setProjectGrids} from '../spriteCells';
@@ -866,6 +870,42 @@ describe('domain block generators', () => {
     // ⟨space⟩`. This block is what keeps that from reading as `= " "`.
     expect(emitValue('world_key', {KEY: ' '})[0]).toBe('" "');
     expect(emitValue('world_key', {KEY: 'ArrowLeft'})[0]).toBe('"ArrowLeft"');
+  });
+
+  it('the mouse reads like the keyboard, one word along', () => {
+    // Every mouse block is a key block with the noun changed, which is the
+    // point: a learner who has read one has read both. Only the position has
+    // no counterpart — a pointer is somewhere and a key is not.
+    expect(emitValue('world_mouse_button', {BUTTON: 'right'})[0]).toBe(
+      '"right"',
+    );
+    expect(emitValue('world_is_button_down', {BUTTON: 'left'})[0]).toBe(
+      'world.isButtonDown("left")',
+    );
+    expect(emitValue('world_mouse_position')[0]).toBe('world.mousePosition()');
+  });
+
+  it('loops over the buttons that changed this frame', () => {
+    // The frame boundary, which is the one thing about the mouse a rule cannot
+    // work out for itself — the same reason the key loop exists.
+    const run = (edge: string) =>
+      generatorFor('world_for_each_button')(
+        {
+          getFieldValue: (name: string) => (name === 'EDGE' ? edge : 'vid'),
+        } as never,
+        {
+          getVariableName: () => 'button',
+          statementToCode: () => '  body;\n',
+        } as never,
+        {} as never,
+      ) as string;
+
+    expect(run('PRESSED')).toBe(
+      'for (const button of world.newlyPressedButtons()) {\n  body;\n}\n',
+    );
+    expect(run('RELEASED')).toBe(
+      'for (const button of world.newlyReleasedButtons()) {\n  body;\n}\n',
+    );
   });
 
   it('reports the scale between a speed and a distance', () => {
@@ -2470,37 +2510,32 @@ describe('world block generators', () => {
     setProjectAnimationFiles([]);
   });
 
-  it('puts the foundational rules the project holds in play, with no block for it', () => {
-    // Same argument as the animations above, one step further: noticing a
-    // keypress is not a mechanic a game opts into, so a project that HOLDS
-    // `rules/input.rule` runs it. `use rule` is left for the rules a world
-    // could sensibly be without.
-    const INPUT_RULE = parseRuleMeta(
-      'rules/input',
-      JSON.stringify({
-        blocks: {
-          blocks: [
-            {
-              type: 'world_rule',
-              fields: {NAME: 'Input', ABILITY: 'Responds to Input'},
-            },
-          ],
-        },
-      }),
-    )!;
-    registerProjectRules([PROJECT_RULE, INPUT_RULE]);
+  it('puts every rule the project holds in play, with no block for it', () => {
+    // Same argument as the animations above, and now made for rules too: a
+    // file is not a thing a world opts into, it is a thing the project HAS.
+    // What made it safe to say is that a rule with no elected trait does
+    // nothing, so gravity in a world with nothing falling costs a learner
+    // nothing but used to cost them a row.
+    setProjectRuleModules([
+      ['input', 'rules/input'],
+      ['gravity', 'rules/gravity'],
+    ]);
     const defs: Record<string, string> = {};
 
     const code = run('world_world', {NAME: 'Platform World'}, defs, '');
 
     expect(code).toContain('world.useRules([Input]);');
+    expect(code).toContain('world.useRules([Gravity]);');
     expect(defs['mod:rules/input']).toBe('import Input from "rules/input";');
-    registerProjectRules([PROJECT_RULE]);
+    expect(defs['mod:rules/gravity']).toBe(
+      'import Gravity from "rules/gravity";',
+    );
+    setProjectRuleModules([]);
   });
 
-  it('emits no foundational rule the project does not hold', () => {
-    // Delete `rules/input.rule` and nothing is emitted — the world generator
-    // never conjures a module the project has not got.
+  it('emits no rule the project does not hold', () => {
+    // Delete the file and nothing is emitted — the world generator never
+    // conjures a module the project has not got.
     const defs: Record<string, string> = {};
 
     const code = run('world_world', {NAME: 'Platform World'}, defs, '');

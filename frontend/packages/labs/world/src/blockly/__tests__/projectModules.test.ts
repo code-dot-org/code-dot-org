@@ -98,78 +98,83 @@ describe('projectMapActorTypes', () => {
 });
 
 describe('projectWorldRules', () => {
-  // A `.world` is a Blockly workspace: a `world_world` root that chains
-  // `world_use_rule` blocks (each with a RULE field) below it via `next`.
-  const worldFile = (...rules: string[]) => {
-    const chain = rules.reduceRight<object | undefined>(
-      (next, rule) => ({
-        type: 'world_use_rule',
-        fields: {RULE: rule},
-        ...(next ? {next: {block: next}} : {}),
-      }),
-      undefined,
-    );
-    return JSON.stringify({
-      blocks: {
-        blocks: [{type: 'world_world', next: {block: chain}}],
-      },
+  /** A `.rule` file, as the project holds it: a `define rule` naming itself. */
+  const ruleFile = (name: string) =>
+    JSON.stringify({
+      blocks: {blocks: [{type: 'world_rule', fields: {NAME: name}}]},
     });
-  };
 
-  it('collects the RULE of every use-rule block, deduped across worlds', () => {
+  it('is every rule the project holds, whatever any world says', () => {
+    // The change this is here to pin: it used to read the `use rule` blocks.
+    // A learner who imported Gravity and went straight to their actor found
+    // "Affected by Gravity" missing from `use trait` until they went back and
+    // told the world as well — a second place to say what holding the file
+    // already said.
     const rules = projectWorldRules({
-      'worlds/a.world': worldFile('Gravity', 'Input'),
-      'worlds/b.world': worldFile('Input', 'Appearance'), // Input deduped
-      'actors/player.actor': worldFile('Solid Bodies'), // not a .world — ignored
-      'worlds/broken.world': 'not json yet', // mid-edit — skipped
+      'rules/gravity.rule': ruleFile('Gravity'),
+      'rules/wind.rule': ruleFile('Wind'),
+      'worlds/a.world': JSON.stringify({
+        blocks: {blocks: [{type: 'world_world'}]}, // names nothing at all
+      }),
     });
-    // Gravity is the only one of these that is a CHOICE; Input and Appearance
-    // are in the list either way, being foundational.
+
     expect(new Set(rules)).toEqual(
-      new Set([...FOUNDATION_RULE_NAMES, 'Gravity']),
+      new Set([...FOUNDATION_RULE_NAMES, 'Gravity', 'Wind']),
     );
   });
 
-  it('lists the foundation even when no world names it', () => {
+  it('ignores a rule a world names but the project has not got', () => {
+    // The other direction, and the one that used to produce a trait dropdown
+    // offering things nothing could provide: a `use rule` block left behind by
+    // a deleted file is now a row about nothing, rather than a claim.
+    const rules = projectWorldRules({
+      'worlds/a.world': JSON.stringify({
+        blocks: {
+          blocks: [
+            {
+              type: 'world_world',
+              next: {block: {type: 'world_use_rule', fields: {RULE: 'Wind'}}},
+            },
+          ],
+        },
+      }),
+    });
+
+    expect(new Set(rules)).toEqual(new Set(FOUNDATION_RULE_NAMES));
+  });
+
+  it('lists the foundation, which has no file to hold', () => {
     // A world runs on Space and Appearance whether or not it says so
-    // (`WorldBuilder.rulesInPlay`), and on the foundational stock rules the
-    // project holds. The trait dropdown reads this list, so leaving them out
-    // would hide traits the learner's world actually supports.
-    expect(new Set(projectWorldRules({'worlds/a.world': worldFile()}))).toEqual(
+    // (`WorldBuilder.rulesInPlay`). The trait dropdown reads this list, so
+    // leaving them out would hide traits every actor actually has.
+    expect(new Set(projectWorldRules({}))).toEqual(
       new Set(FOUNDATION_RULE_NAMES),
     );
   });
 
-  it('resolves a rule referred to by module — a `.js` — to a NAME', () => {
+  it('names a `.js` rule by what it can be named by', () => {
     // Everything downstream keys on names, and a hand-written rule has none of
-    // its own. A shim re-exporting a built-in is that built-in, so it resolves
-    // to the built-in's name; a rule that is genuinely the project's resolves to
-    // nothing, having nothing static to read a name out of.
+    // its own. A shim re-exporting a built-in IS that built-in and resolves to
+    // its name; a rule genuinely the project's own has nothing static to read,
+    // so it answers to its module — which is what every other reference to one
+    // does, and what says truthfully that it is in play and cannot be read.
     const rules = projectWorldRules({
-      'worlds/a.world': worldFile('rules/animation', 'rules/mine', 'Space'),
       'rules/animation.js': `export {AnimationRule as default} from 'world-lab';\n`,
       'rules/mine.js': `const rule = new RuleBuilder({id: 'mine', name: 'Mine'});\nexport default rule.build();`,
     });
-    // The shim resolves to "Appearance" and the field "Space" is already one —
-    // both foundational, so what this pins down is the other half: a rule that
-    // is genuinely the project's own contributes NOTHING, having no name to
-    // read statically.
-    expect(new Set(rules)).toEqual(new Set(FOUNDATION_RULE_NAMES));
-    expect(rules).not.toContain('Mine');
+
+    expect(new Set(rules)).toEqual(
+      // The shim resolves to "Appearance", which is foundational anyway.
+      new Set([...FOUNDATION_RULE_NAMES, 'rules/mine']),
+    );
   });
 
-  it('resolves a `.rule` referred to by module to the name it declares', () => {
-    // Which is what a `use rule` field holds anyway; this is the path for one
-    // written before the file was parsed, or by something that only had a path.
-    const rules = projectWorldRules({
-      'worlds/a.world': worldFile('rules/wind'),
-      'rules/wind.rule': JSON.stringify({
-        blocks: {
-          blocks: [{type: 'world_rule', fields: {NAME: 'Wind'}}],
-        },
-      }),
-    });
-    expect(new Set(rules)).toEqual(new Set([...FOUNDATION_RULE_NAMES, 'Wind']));
+  it('names a `.rule` by the name it declares, not by its file', () => {
+    // Which is the whole reason a reference is a name: the file can be renamed
+    // or moved and the rule is still the same rule.
+    expect(
+      new Set(projectWorldRules({'rules/anything.rule': ruleFile('Wind')})),
+    ).toEqual(new Set([...FOUNDATION_RULE_NAMES, 'Wind']));
   });
 });
 

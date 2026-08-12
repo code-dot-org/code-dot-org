@@ -369,12 +369,6 @@ const FLAPPY_WORLD = JSON.stringify({
         fields: {NAME: 'Flappy'},
         next: {
           block: stack([
-            {type: 'world_use_rule', fields: {RULE: 'Gravity'}},
-            {type: 'world_use_rule', fields: {RULE: 'Collection'}},
-            // Both pull in "Camera", which is what actually moves the view;
-            // naming it too would be a row saying what these two already say.
-            {type: 'world_use_rule', fields: {RULE: 'Camera Follow'}},
-            {type: 'world_use_rule', fields: {RULE: 'Camera Confined'}},
             // Said out loud although it is also the rule's default, because it
             // is the one number that decides how this game feels and it should
             // be one click from the world a reader is already looking at. The
@@ -431,6 +425,12 @@ const FLAPPY_WORLD = JSON.stringify({
  * Neither is an actor and neither is the map, so neither moves into the
  * world when the actors do — `./flappySingle` takes this list whole. A copy
  * would be a copy that could go stale.
+ *
+ * THE RULES HERE ARE THE RULES IN PLAY: holding one is what puts it in play
+ * (blockly/projectModules), so this list is what the world used to say in four
+ * `use rule` rows. `camera.rule` is here because "Camera Follow" and "Camera
+ * Confined" both require it — it is what actually moves the view — and a
+ * project holds what it requires.
  */
 export const FLAPPY_SUPPORT_FILES: ProjectSpec['files'] = {
   motionRuleFile: {

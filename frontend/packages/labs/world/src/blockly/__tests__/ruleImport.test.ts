@@ -66,19 +66,21 @@ describe('the use-rule dropdown', () => {
     expect(labels).not.toContain('Has Appearance');
   });
 
-  it('does not offer a foundational rule the project holds', () => {
-    // Holding `rules/input.rule` is the opting-in — the world generator emits
-    // it whether or not a world names it — so the row beside it says nothing.
+  it('offers every rule the project holds, as one may require any of them', () => {
+    // This used to leave out the rules a project ran by merely holding, since
+    // a `use rule` naming one said nothing. Every rule is like that now, so
+    // the block's only remaining meaning is a RULE's dependency — and "Drives
+    // with Arrow Keys requires Responds to Input" is a true and useful thing
+    // to be able to say.
     holds('input', 'Input', 'Responds to Input');
-    expect(options().map(([label]) => label)).not.toContain(
-      'Responds to Input',
-    );
+    expect(options().map(([label]) => label)).toContain('Responds to Input');
   });
 
   it('offers a project rule that shadows one of the engine’s', () => {
-    // The other half of the foundation, and the opposite answer: nothing puts
-    // an ejected Appearance in play except a world naming it, so taking the
-    // row away would leave the built-in it shadows running forever.
+    // The engine's two are left out for the reason above; a project rule
+    // DECLARING one is not, and the eject case is why. Naming it is what makes
+    // `rulesInPlay` prefer the learner's version over the built-in it shadows,
+    // so taking the row away would leave the shadow unable to come into play.
     holds('look', 'Appearance', 'Has Appearance');
     expect(options().map(([label]) => label)).toContain('Has Appearance');
   });

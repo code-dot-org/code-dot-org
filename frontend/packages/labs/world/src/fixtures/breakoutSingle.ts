@@ -100,9 +100,6 @@ const SINGLE_WORLD = JSON.stringify({
         fields: {NAME: 'Breakout'},
         next: {
           block: stack([
-            {type: 'world_use_rule', fields: {RULE: 'Arrow Keys'}},
-            {type: 'world_use_rule', fields: {RULE: 'Solid Bodies'}},
-            {type: 'world_use_rule', fields: {RULE: 'Collection'}},
             createInMap('placeWalls', WALL, [
               ...ALL_COLUMNS.map(column => spot(`roof${column}`, column, 0)),
               ...SIDE_ROWS.map(row => spot(`left${row}`, 0, row)),

@@ -39,6 +39,7 @@ import type {Actor, BackdropState, RenderState, World} from 'world-lab';
 // LEARNER's name for the vendored engine bundle, and this is our own code.
 // `core/keys` imports nothing, so nothing of the engine comes with it.
 import {keyName} from '../../engine/core/keys';
+import {buttonName} from '../../engine/core/pointer';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
 
 import {
@@ -161,6 +162,29 @@ const SCROLL_KEYS = new Set([
   'ArrowRight',
   ' ',
 ]);
+
+/**
+ * The mouse buttons held right now, by OUR names (`engine/core/pointer`).
+ *
+ * Read off the pointer's state each frame rather than accumulated from events,
+ * which is the opposite of what the keyboard does — and the reason is that
+ * Phaser already keeps this for the mouse and does not for the keyboard (its
+ * own keyboard input is off, see the config). A held-state read also cannot
+ * leave a button stuck down after a release the page never saw.
+ */
+const buttonsDown = (pointer: Phaser.Input.Pointer): string[] => {
+  const held: string[] = [];
+  if (pointer.leftButtonDown()) {
+    held.push(buttonName(0));
+  }
+  if (pointer.middleButtonDown()) {
+    held.push(buttonName(1));
+  }
+  if (pointer.rightButtonDown()) {
+    held.push(buttonName(2));
+  }
+  return held;
+};
 
 export class PhaserBinding {
   private readonly game: Phaser.Game;
@@ -691,12 +715,25 @@ export class PhaserBinding {
           }
         },
         create(this: Phaser.Scene) {
+          // A game may want the right button, and the browser's answer to one
+          // is a context menu over the canvas. Turned off here rather than in
+          // the page, because it is the GAME's claim on the button.
+          this.input.mouse?.disableContextMenu();
           guard(() => sync(this));
         },
         update(this: Phaser.Scene, _time: number, delta: number) {
           guard(() => {
             // Feed this frame's held keys in before advancing the simulation.
             world.setInput(downKeys);
+            // And the mouse, which — unlike the keyboard — is read from Phaser
+            // rather than from listeners of our own. `pointer.x/y` are already
+            // in the game's coordinates: the canvas is FIT-scaled to whatever
+            // the preview pane allows, and undoing that transform by hand here
+            // would be reimplementing the Scale Manager against itself. The
+            // engine converts from there to a place in the world, because that
+            // needs the camera (`World.mousePosition`).
+            const pointer = this.input.activePointer;
+            world.setPointer(pointer, buttonsDown(pointer));
             // Phaser's delta is milliseconds; the engine ticks in seconds.
             world.tick(delta / 1000);
             sync(this);

@@ -132,11 +132,16 @@ describe('renameRuleInSource', () => {
     const touched = Object.keys(next.files).filter(
       id => next.files[id].contents !== source.files[id].contents,
     );
-    // The world attaches it, the player elects its trait and handles its
-    // events, the ground elects the trait that makes it landable, and the rule
-    // file itself is full of its own members.
+    // The player elects its trait and handles its events, the ground elects
+    // the trait that makes it landable, and the rule file itself is full of
+    // its own members.
+    //
+    // NOT the world, which is the change: a world names no rules now — holding
+    // the file is what puts one in play (blockly/projectModules) — so there is
+    // nothing in `main.world` for a rename to rewrite. A rename that touched
+    // it would be rewriting something that no longer says anything.
     expect(new Set(touched.map(id => next.files[id].name))).toEqual(
-      new Set(['main.world', 'player.actor', 'ground.actor', 'gravity.rule']),
+      new Set(['player.actor', 'ground.actor', 'gravity.rule']),
     );
   });
 

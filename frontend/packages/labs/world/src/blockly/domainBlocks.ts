@@ -48,6 +48,7 @@ import {installColorMessages} from './colorMessages';
 import {editingRuleFor} from './editingRule';
 import {
   allEnums,
+  BUTTON_ENUM,
   ENGINE_ENUMS,
   enumOptions,
   enumRef,
@@ -95,7 +96,6 @@ import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {ROOT_HOMES, type FileKind} from './fileKind';
-import {FOUNDATIONAL_STOCK_RULES} from './foundation';
 import {
   DEFAULT_PARALLAX,
   LAYER_FIXED_OPTIONS,
@@ -239,6 +239,10 @@ const memberKey = (ref: MemberRef): string =>
 // wants it points at the same enum (specs/ENUMS.md).
 const keyOptions = (): Array<[string, string]> =>
   enumOptions(enumRef(KEY_ENUM));
+
+/** The mouse's buttons, from `Engine#MouseButton` — the keyboard's argument. */
+const buttonOptions = (): Array<[string, string]> =>
+  enumOptions(enumRef(BUTTON_ENUM));
 
 /**
  * The value block for one enum: a bare dropdown of its choices, reporting the
@@ -3642,21 +3646,32 @@ const worldWorld = defineBlock({
         `import * as WorldLab from 'world-lab';`,
       );
       const body = nextChainCode(block, generator);
-      // The foundational rules the project HOLDS, in play without being named.
+      // EVERY `.rule` THE PROJECT HOLDS, in play. Exactly the argument the
+      // animations below have always made — a file is not a thing a world opts
+      // into, it is a thing the project HAS — and it took a while to see that
+      // rules are the same. This was the foundational ones only; the rest had
+      // to be named in a `use rule`.
       //
-      // The engine seeds its own two (Space and Appearance — `WorldBuilder`),
-      // but the keyboard's events are an authored rule now, and noticing a
-      // keypress is not a mechanic a game opts into. So a project holding
-      // `rules/input.rule` runs it, on the same terms as the `.anim` files
-      // below: holding the file is the opting-in. Delete the file and nothing
-      // is emitted; name it in a `use rule` as well and it is the same module,
-      // so the world has it once.
-      const foundation = FOUNDATIONAL_STOCK_RULES.map(rule =>
-        ruleLocation(rule.name),
-      )
-        .filter(located => located?.source === 'project')
-        .map(located => {
-          const modulePath = (located as {modulePath: string}).modulePath;
+      // What makes it safe is that a rule with no elected trait does nothing.
+      // Every one of them either steps per actor holding its trait or filters
+      // a rule step on `hasTrait`; the two input rules raise world events
+      // nobody is obliged to hear, and Shooting has no step at all. So gravity
+      // in a world with nothing falling is inert, and "which rules does this
+      // world run" stopped being a question worth making a learner answer.
+      //
+      // What it buys is the thing that confused everyone: a trait is offered
+      // when the rule providing it is in play, so importing Gravity and then
+      // failing to find "Affected by Gravity" in `use trait` — because the
+      // WORLD had not also been told — was the shape of the language's worst
+      // half-hour. Holding the file is now the whole of it.
+      //
+      // Delete the file and nothing is emitted. Name it in a `use rule` as
+      // well and it is the same module, so the world has it once — which is
+      // what keeps the rows in projects saved before this harmless.
+      const rules = ruleModuleOptions()
+        .map(([, modulePath]) => modulePath)
+        .filter(modulePath => modulePath)
+        .map(modulePath => {
           addImport(
             generator,
             `mod:${modulePath}`,
@@ -3722,7 +3737,7 @@ const worldWorld = defineBlock({
         `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
           name,
         )}});\n` +
-        foundation +
+        rules +
         animations +
         imageSizes +
         layers +
@@ -3736,32 +3751,24 @@ const worldWorld = defineBlock({
 // `rules/`), valued by module path — the generator branches on the `/` a path
 // carries, importing the module rather than reading `WorldLab`.
 //
-// WHAT A WORLD ALREADY HAS IS NOT OFFERED, which is the foundation in both its
-// halves (blockly/foundation):
+// WHAT THIS BLOCK IS FOR, now that a world runs every rule the project holds:
+// a RULE's dependency. "Drives with Arrow Keys" requires Physics, and that is a
+// statement about the rule, true wherever it is used and false to leave out. It
+// is offered under Rule and nowhere else; a world with one still loads and the
+// row still resolves to the same module, so the world has it once.
 //
-//   - The ENGINE'S two. `WorldBuilder` seeds Space and Appearance into every
-//     world it builds (`rulesInPlay`).
-//   - A FOUNDATIONAL stock rule the project holds. Holding `rules/input.rule`
-//     is the opting-in — the world generator emits it, resolving the name to
-//     whichever module declares it — so the row beside it says nothing.
+// THE ENGINE'S OWN TWO ARE NOT OFFERED. `WorldBuilder` seeds Space and
+// Appearance into every world it builds (`rulesInPlay`), so requiring either is
+// a tautology. A project rule DECLARING one is offered, and the eject case is
+// why: naming it is what makes `rulesInPlay` prefer the learner's version over
+// the built-in it shadows, so taking the row away would mean the shadow could
+// never come into play.
 //
-// Either way a row for one asks a learner to affirm a tautology before their
-// game will run. Naming one still MEANS what it says — the generator resolves
-// the name through the registry as it always did, and a saved block holding it
-// keeps its value, since a live dropdown keeps a value its list has no option
-// for (bindLiveOptions). Only the offer is gone.
-//
-// The asymmetry is deliberate, and it is the eject case that decides it: a
-// project rule declaring `Appearance` is offered, because a world naming it is
-// what makes `rulesInPlay` prefer the learner's version over the built-in one
-// it shadows — take the row away and the shadow can never come into play. A
-// project rule declaring `Input` is not, because holding it already did that.
-//
-// Labelled by the rule's ABILITY, not its name: this block says what the world
-// has, and "use rule Has Gravity" is the sentence. The category in the toolbox
-// says the other half — "Gravity", the thing you open and edit.
+// Labelled by the rule's ABILITY, not its name: "requires Has Gravity" is the
+// sentence. The category in the toolbox says the other half — "Gravity", the
+// thing you open and edit.
 /**
- * The rules a world (or another rule) may put in play, plus a way to get more.
+ * The rules this one may require, plus a way to get more.
  *
  * `(import…)` is listed last and copies a stock rule into the project — the
  * same affordance the effect dropdown has, and the only way to reach gravity
@@ -3773,20 +3780,6 @@ const worldWorld = defineBlock({
  * as its value, and a block that silently became "open the import dialog" is
  * not a block.
  */
-/**
- * The stock rules a project runs by holding, BY NAME — the half of the
- * foundation the dropdown has to leave out.
- *
- * By name because that is how the world generator finds them: it asks the
- * registry which module declares "Input" and emits that one, so a project that
- * has written its own is covered by the same word. A `.js` rule declares no
- * name at all and so is never one of these, which is right — the generator
- * cannot find it either, and a file nothing puts in play has to stay pickable.
- */
-const IMPLIED_RULE_NAMES = new Set(
-  FOUNDATIONAL_STOCK_RULES.map(rule => rule.name),
-);
-
 const useRuleOptions = (field?: FieldDropdown): Array<[string, string]> => {
   const identities = projectRuleIdentities();
   // Not the rule this workspace IS: a rule that uses itself generates a module
@@ -3806,10 +3799,7 @@ const useRuleOptions = (field?: FieldDropdown): Array<[string, string]> => {
           return identity
             ? [identity.ability, identity.name]
             : [fileLabel, modulePath];
-        })
-        // After the mapping, because what makes a rule foundational is the name
-        // it declares, not the file it happens to sit in.
-        .filter(([, value]) => !IMPLIED_RULE_NAMES.has(value)),
+        }),
     ),
     ['(import…)', IMPORT_RULE_VALUE],
   ];
@@ -3834,7 +3824,9 @@ const worldUseRule = defineBlock({
     openSourceButtonExtension,
   ],
   style: 'behavior_blocks',
-  tooltip: 'Put a rule (a game mechanic) in play for this world.',
+  tooltip:
+    'Say that this rule needs another one. A world does not need this: it ' +
+    'runs every rule the project holds.',
   generator: {
     javascript(block, generator) {
       const rule = block.getFieldValue('RULE');
@@ -4901,6 +4893,72 @@ const worldKey = defineBlock({
   },
 });
 
+// `mouse button <button>` — the same, for the mouse. A button's name as a
+// value, so a comparison against `event value` reads as a button.
+const worldMouseButton = defineBlock({
+  type: 'world_mouse_button',
+  message0: 'mouse button %1',
+  args0: [{type: 'field_dropdown', name: 'BUTTON', options: buttonOptions()}],
+  output: 'String',
+  style: 'text_blocks',
+  tooltip: 'The name of a mouse button.',
+  generator: {
+    javascript(block) {
+      return [str(block.getFieldValue('BUTTON')), Order.ATOMIC] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
+// `mouse position` — where the pointer is, as a place in the WORLD.
+//
+// A value block rather than an event's argument, because the mouse is somewhere
+// whether or not it has just moved: aiming at it, walking toward it and asking
+// whether it is over something all want the current answer, and a rule that had
+// to remember the last "moved" event would be storing what the World already
+// knows. The conversion from where it is on the SCREEN is the World's
+// (`mousePosition`), because it needs the camera.
+const worldMousePosition = defineBlock({
+  type: 'world_mouse_position',
+  message0: 'mouse position',
+  output: 'Vector',
+  extensions: [worldContextExtension],
+  style: 'location_blocks',
+  tooltip:
+    'Where the mouse is in the world, in pixels — the point it is over, ' +
+    'which moves with the camera.',
+  generator: {
+    javascript() {
+      return ['world.mousePosition()', Order.FUNCTION_CALL] as [string, number];
+    },
+  },
+});
+
+// `mouse button <button> is down` — the polling side, exactly as `key … is
+// down` is: "while held", which is what dragging and aiming are.
+const worldIsButtonDown = defineBlock({
+  type: 'world_is_button_down',
+  message0: 'mouse button %1 is down',
+  args0: [{type: 'field_dropdown', name: 'BUTTON', options: buttonOptions()}],
+  output: 'Boolean',
+  extensions: [worldContextExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'True while the button is held (and the game has focus). For a one-shot ' +
+    'reaction to a click, use the “presses mouse button” event instead.',
+  generator: {
+    javascript(block) {
+      const button = block.getFieldValue('BUTTON');
+      return [`world.isButtonDown(${str(button)})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
 // `for each newly pressed/released key <k> do …` — the frame boundary, which is
 // the one thing about the keyboard a rule cannot work out for itself: the World
 // knows which keys went down or came up SINCE THE LAST TICK, and a rule holding
@@ -4936,6 +4994,42 @@ const worldForEachKey = defineBlock({
     javascript(block, generator) {
       const variable = generator.getVariableName(block.getFieldValue('VAR'));
       const edge = KEY_EDGE_METHODS[block.getFieldValue('EDGE') ?? 'PRESSED'];
+      const body = generator.statementToCode(block, 'DO');
+      return `for (const ${variable} of world.${edge}()) {\n${body}}\n`;
+    },
+  },
+});
+
+// The same loop for the mouse's buttons. A block of its own rather than a
+// source dropdown on the key one: the two read as different sentences, the
+// variable each binds is a different KIND of name (a key against a button), and
+// a learner reaching for the mouse should not have to notice that the keyboard
+// block can be talked into it.
+const BUTTON_EDGE_METHODS: Record<string, string> = {
+  PRESSED: 'newlyPressedButtons',
+  RELEASED: 'newlyReleasedButtons',
+};
+const worldForEachButton = defineBlock({
+  type: 'world_for_each_button',
+  message0: 'for each %1 mouse button %2',
+  args0: [
+    {type: 'field_dropdown', name: 'EDGE', options: KEY_EDGES},
+    paramFlavour('string').field('VAR'),
+  ],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'loop_blocks',
+  tooltip:
+    'Run the blocks once for each mouse button that went down (or came up) ' +
+    'since the last frame. Bind the loop variable to read which button it was.',
+  generator: {
+    javascript(block, generator) {
+      const variable = generator.getVariableName(block.getFieldValue('VAR'));
+      const edge =
+        BUTTON_EDGE_METHODS[block.getFieldValue('EDGE') ?? 'PRESSED'];
       const body = generator.statementToCode(block, 'DO');
       return `for (const ${variable} of world.${edge}()) {\n${body}}\n`;
     },
@@ -5217,6 +5311,10 @@ export const DOMAIN_BLOCKS = [
   worldPixelsPerUnit,
   worldStepDelta,
   worldIsKeyDown,
+  worldMouseButton,
+  worldMousePosition,
+  worldIsButtonDown,
+  worldForEachButton,
   worldHasTrait,
   ...PARAM_GETTER_BLOCKS,
   ...PARAM_SETTER_BLOCKS,
@@ -5302,7 +5400,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     name: 'World',
     blocks: [
       'world_world',
-      'world_use_rule',
+      // NO `use rule`. A world runs the rules the project holds, so the block
+      // says nothing here (blockly/projectModules) — it stays registered so
+      // that projects saved with one keep loading and keep meaning what they
+      // meant, and stays offered under Rule, where it is a rule's `requires`
+      // and still a real statement. It goes entirely once nothing holds one.
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
       'world_add_actor',
@@ -5411,6 +5513,12 @@ const ENGINE_CATEGORY: ToolboxCategory = {
     'world_is_key_down', // the polling side: "while held"
     'world_for_each_key', // the edges: what went down or came up this frame
     'world_key', // a key's name, for comparing against an event's value
+    // The mouse, on the same three terms, plus the one the keyboard has no
+    // counterpart for: a pointer is somewhere, and a key is not.
+    'world_is_button_down',
+    'world_for_each_button',
+    'world_mouse_button',
+    'world_mouse_position',
     'world_pixels_per_unit', // the scale between a speed and a distance
   ],
 };

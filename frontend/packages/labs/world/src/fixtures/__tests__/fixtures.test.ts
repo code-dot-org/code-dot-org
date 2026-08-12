@@ -215,19 +215,24 @@ describe('the scenario catalogue', () => {
     expect(contents('ball.actor')).not.toContain('BouncinessProperty');
   });
 
-  it('names its rules the way the dropdown stores them', () => {
-    // A parsed `.rule` is referred to by its NAME from then on, wherever its
-    // file sits (useRuleOptions). A module path is what an UNPARSEABLE one
-    // falls back to, so `use rule ⟨rules/solid⟩` reads as a rule that could not
-    // be read — and silently resolves to something else.
-    const main = Object.values(WORLD_SCENARIOS.breakout.source.files).find(
-      file => file.name === 'main.world',
-    )!.contents;
-
-    for (const name of ['Arrow Keys', 'Solid Bodies', 'Collection']) {
-      expect(main).toContain(`"RULE":"${name}"`);
+  it('names no rules at all — the folder is the list', () => {
+    // These worlds used to carry a `use rule` row per mechanic, and the test
+    // here pinned the form those rows took (a NAME, never a module path, since
+    // a path reads as a rule that could not be parsed). Holding the file is
+    // the whole of putting a rule in play now (blockly/projectModules), so the
+    // rows are gone from every scenario rather than left as no-ops that a
+    // reader would take for the answer.
+    //
+    // Which rules each scenario HOLDS is checked per scenario below; this is
+    // the other half, and it is what keeps a copied fixture from reintroducing
+    // a second place to say it.
+    for (const [tag, scenario] of Object.entries(WORLD_SCENARIOS)) {
+      for (const file of Object.values(scenario.source.files)) {
+        if (file.name.endsWith('.world')) {
+          expect(`${tag}: ${file.contents}`).not.toContain('world_use_rule');
+        }
+      }
     }
-    expect(main).not.toContain('"RULE":"rules/');
   });
 
   it('says the single-world breakout without leaving main.world', () => {
