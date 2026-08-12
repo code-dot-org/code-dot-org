@@ -76,4 +76,4 @@ def _load_and_fit(filename):
   else:
     target_width = MAX_WIDTH
     target_height = int(round(height / width * MAX_WIDTH))
-  return pil.resize((target_width, target_height))
+  return pil.resize((target_width, target_height), PILImage.LANCZOS)

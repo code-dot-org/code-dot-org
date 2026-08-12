@@ -89,13 +89,14 @@ def _draw_image(canvas, action):
   else:
     width = int(round(action.width))
     height = int(round(action.height))
-  scaled = source.resize((max(width, 1), max(height, 1)))
+  scaled = source.resize((max(width, 1), max(height, 1)), PILImage.LANCZOS)
   if action.rotation:
     layer = PILImage.new("RGBA", (canvas.width, canvas.height), (0, 0, 0, 0))
     layer.paste(scaled, (x, y), scaled)
     # Rotate clockwise about the image's top-left corner. Pillow rotates
-    # counterclockwise, hence the negated angle.
-    layer = layer.rotate(-action.rotation, center=(x, y))
+    # counterclockwise, hence the negated angle. rotate rejects LANCZOS, so
+    # bicubic is the smoothest filter available here.
+    layer = layer.rotate(-action.rotation, center=(x, y), resample=PILImage.BICUBIC)
     canvas.alpha_composite(layer)
   else:
     canvas.paste(scaled, (x, y), scaled)
@@ -112,7 +113,9 @@ def _draw_text(canvas, action):
   layer = PILImage.new("RGBA", (canvas.width, canvas.height), (0, 0, 0, 0))
   layer_draw = ImageDraw.Draw(layer)
   layer_draw.text((action.x, action.y), action.text, fill=fill, font=font, anchor="ls")
-  layer = layer.rotate(-action.rotation, center=(action.x, action.y))
+  layer = layer.rotate(
+    -action.rotation, center=(action.x, action.y), resample=PILImage.BICUBIC
+  )
   canvas.alpha_composite(layer)
 
 
