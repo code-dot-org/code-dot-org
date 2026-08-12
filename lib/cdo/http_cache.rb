@@ -95,7 +95,7 @@ class HttpCache
 
   # The URL pattern covering each cached unit's script levels. Assume all cached
   # units are in single unit courses.
-  def self.cached_unit_path_patterns(env = rack_env)
+  def self.cached_unit_path_patterns(env)
     cached_units(env).map {|unit_name| "/courses/#{unit_name}/units/1/lessons/*"}
   end
 
