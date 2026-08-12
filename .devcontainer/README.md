@@ -123,6 +123,7 @@ Both are gitignored. Edit the file on the host and restart the container;
 bin/dashboard-server                         # Rails on 3000
 bundle exec rails console
 bundle exec rake db:migrate
+./bin/mysql-client-dashboard-writer "SELECT COUNT(*) FROM levels"
 mysql -h db -uroot -ppassword
 redis-cli -h redis ping
 
@@ -131,7 +132,14 @@ cd apps    && yarn install && yarn start     # webpack dev server on 9000
 ```
 
 With Rails up, the Vite app is reachable through it at
-`http://localhost-studio.code.org:3000/frontend-studio/`.
+`http://localhost-studio.code.org:3000/frontend-studio/`. Both Storybooks
+work and their ports are forwarded: `yarn storybook` in `apps/` on 9001, and
+in `frontend/apps/design-system-storybook/` on 6006.
+
+`bin/mysql-client-dashboard-{reader,writer}` work as they do natively — the
+mounted config gives them the `db` service and its credentials, and the mysql
+client comes from the base image. They take SQL as a positional argument, not
+behind `-e`.
 
 ### Tests and lint
 
@@ -200,6 +208,53 @@ cd apps && yarn start                        # writes as it compiles
 Then browse port 9000 rather than 3000. It proxies everything it does not
 serve to Rails, and reloads on save.
 
+
+## Paths less traveled
+
+Routines that work in here but are not set up for you. One caveat each,
+because each one has exactly one thing that bites.
+
+**Levelbuilder authoring.** Set `levelbuilder_mode: true` in your `CDO_LOCALS`
+copy (`dashboard/config/environments/development.rb:78`). Authoring writes
+`.level` and `.script` files into the mounted tree, so they show up in
+`git status` on the host like any other edit, and many of them are behind LFS
+— check `git check-attr filter -- <path>` before assuming a diff is text.
+Reload one script into the database with
+`bundle exec rake seed:single_script SCRIPT_NAME=express-2019`.
+
+**Background jobs.** The development default is
+`active_job_queue_adapter: :async` (`config/development.yml.erb:105`), which
+runs jobs in the Puma process. PyCall-backed jobs — AI chat, podcasts,
+rubrics — segfault under it. Set `active_job_queue_adapter: :delayed_job` in
+your locals copy and run `bin/restart-active-job-workers`. Its pid files live
+in `dashboard/tmp/pids` on the mount, so they outlive the container: after a
+restart the stale-pid check aborts, and deleting them is the fix.
+
+**The in-browser error console.** `better_errors` and `web-console` only
+answer requests from 127.0.0.1, and requests reach this container from the
+compose bridge instead, so the REPL on the error page silently does not
+render. The stack trace still does. Widen the permitted IPs in a local
+initializer if you need the console.
+
+**Never `bundle exec rake install`.** The image is the install. That task
+writes `.bundle/config` into the mounted tree, which then follows the
+checkout onto the host and points its bundler at paths that exist only in
+here.
+
+**Playwright firefox and webkit** are not in the image — chromium only, which
+is what the suite runs by default. `yarn exec playwright install --with-deps
+firefox webkit` installs them in a running container (sudo is available) when
+you are chasing an engine-specific failure. They do not survive a rebuild.
+
+**Not supported here**, each for one concrete reason:
+
+| | |
+|---|---|
+| Curriculum PDFs | `dashboard/lib/tasks/curriculum_pdfs.rake:27` wants a puppeteer install of its own. |
+| `rake pseudolocalize` | Writes `dashboard/config/locales/*`, which is LFS-tracked; expect large diffs. |
+| pegasus serving and tests | Deprecated, and needs `pdftk` and `enscript`, neither of which is in the image. |
+| Selenium UI tests, Karma | Out of scope for this container. |
+
 ## Sharing a checkout with a native setup
 
 Only if you took the at-your-own-risk option above. A codespace, a
@@ -228,7 +283,10 @@ and sockets. Run one or the other.
 
 The image carries both databases: `dashboard_development`, seeded with
 curriculum, and `dashboard_test`, prepared and seeded the way
-`RAILS_ENV=test` needs it. Neither is built at container start.
+`RAILS_ENV=test` needs it. Neither is built at container start. The server
+runs with `--default-time-zone=+00:00`, which is SETUP.md's `SET PERSIST`
+step made a property of the image rather than of a datadir that `down`
+discards.
 
 The seeded datadir is baked into the `cdo-devdb` image, so each container
 writes to a copy-on-write layer. `docker compose stop` and `start` keep those
@@ -265,6 +323,8 @@ here deletes it along with the database and the emulated S3.
 | 3000 | 3000 | Rails |
 | 9000 | 9000 | apps webpack dev server |
 | 3036 | 3036 | Vite |
+| 9001 | 9001 | apps Storybook |
+| 6006 | 6006 | Design-system Storybook |
 | 13306 | 3306 | MySQL, for GUI clients |
 
 Each is overridable: `CDO_RAILS_PORT`, `CDO_APPS_PORT`, `CDO_FRONTEND_PORT`,

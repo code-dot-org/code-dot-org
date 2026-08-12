@@ -9,17 +9,25 @@
 # Everything here is either a compose service name or a stub. There are no
 # credentials, and nothing reaches AWS. Only keys config/*.yml.erb actually
 # defines will do: an unknown key is a boot-time error, not a warning.
+# Host and port are separate keys, as in config/development.yml.erb. Folding
+# the port into the host works for anything that only reads db_writer, and
+# breaks anything that builds a URI from the pieces — bin/mysql-client-*
+# reports `Unknown server host '[db:3306]'`.
 db_writer: 'mysql://root:password@db:3306/'
-db_endpoint_writer: 'db:3306'
+db_endpoint_writer: db
+db_endpoint_writer_port: 3306
+db_endpoint_proxy_writer: db
+db_endpoint_proxy_writer_port: 3306
+db_endpoint_proxy_reader: db
+db_endpoint_proxy_reader_port: 3306
+db_endpoint_proxy_reporting: db
+db_endpoint_proxy_reporting_port: 3306
 db_credential_admin:
   username: root
   password: password
-db_endpoint_proxy_reporting: 'db:3306'
-db_endpoint_proxy_reader: 'db:3306'
 db_credential_reader:
   username: root
   password: password
-db_endpoint_proxy_writer: 'db:3306'
 db_credential_writer:
   username: root
   password: password

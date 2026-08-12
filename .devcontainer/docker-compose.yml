@@ -136,6 +136,11 @@ services:
       - "${CDO_RAILS_PORT:-3000}:3000"
       - "${CDO_APPS_PORT:-9000}:9000"
       - "${CDO_FRONTEND_PORT:-3036}:3036"
+      # The two Storybooks. No override variables: they are occasional, and
+      # a collision here is a `docker compose` flag away rather than a
+      # standing configuration problem.
+      - "9001:9001"
+      - "6006:6006"
 
 volumes:
   # No `name:`. Compose then prefixes it with the project — cdo-fresh_yarn-cache

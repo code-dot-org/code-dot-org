@@ -31,11 +31,13 @@
     "storage": "64gb"
   },
 
-  "forwardPorts": [3000, 9000, 3036],
+  "forwardPorts": [3000, 9000, 3036, 9001, 6006],
   "portsAttributes": {
     "3000": {"label": "Rails (dashboard)", "onAutoForward": "notify"},
     "9000": {"label": "apps dev server (webpack)", "onAutoForward": "silent"},
-    "3036": {"label": "Vite (frontend/studio)", "onAutoForward": "silent"}
+    "3036": {"label": "Vite (frontend/studio)", "onAutoForward": "silent"},
+    "9001": {"label": "apps Storybook", "onAutoForward": "silent"},
+    "6006": {"label": "Design-system Storybook", "onAutoForward": "silent"}
   },
 
   "customizations": {

@@ -133,7 +133,13 @@ jobs:
           test "$words" -gt 0 \
             || { echo "test database is unseeded: secret_words is empty" >&2; exit 1; }
 
-          echo "smoke: $applied migrations, $levels levels, test database seeded ($words secret words)"
+          # SETUP.md wants +00:00 globally. It comes from the image's CMD, so
+          # it survives a container recreate where SET PERSIST would not.
+          tz="$(q 'SELECT @@global.time_zone')"
+          test "$tz" = "+00:00" \
+            || { echo "global time_zone is $tz, not +00:00" >&2; exit 1; }
+
+          echo "smoke: $applied migrations, $levels levels, test database seeded ($words secret words), time_zone $tz"
           docker rm -f devdb-smoke
 
       - name: Compute tags

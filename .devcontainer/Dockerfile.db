@@ -24,4 +24,13 @@ ADD --chown=999:999 mysql-data.tar /opt/mysql-data/
 
 # The image's entrypoint reads the datadir out of the server arguments, finds
 # it non-empty, and skips initialization entirely.
-CMD ["--datadir=/opt/mysql-data"]
+#
+# --default-time-zone is SETUP.md's `SET PERSIST time_zone = '+00:00'`, which
+# a container cannot inherit: SET PERSIST writes mysqld-auto.cnf into the
+# datadir, this datadir has none, and a datadir is the wrong place for it
+# anyway — `docker compose down` would take it with the rest of the writes.
+# Stating it on the command line makes it a property of the image, true on
+# every start, and independent of whatever the host's clock is set to. Left
+# unset the server reports SYSTEM, which is UTC here only by accident of the
+# container's environment.
+CMD ["--datadir=/opt/mysql-data", "--default-time-zone=+00:00"]
