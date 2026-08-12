@@ -48,18 +48,25 @@ export class ProgressBubble {
   }
 
   /**
-   * Whether the bubble renders `state`, the way progress.rb verify_progress
-   * does (it keys off color): its background and top-border colors match the
-   * state's DSCO tokens.
+   * The state the bubble currently renders, or 'unknown' for a colour pair no
+   * state claims. Read the way progress.rb verify_progress reads it — off the
+   * background and top-border colours, since no DOM attribute carries it.
    */
-  async shows(state: ProgressBubbleState): Promise<boolean> {
-    const {background, border} = STATE_TOKENS[state];
-    return cssColorsMatchVars({
-      locator: this.locator,
-      matches: [
-        {property: 'background-color', cssVar: background},
-        {property: 'border-top-color', cssVar: border},
-      ],
-    });
+  async state(): Promise<ProgressBubbleState | 'unknown'> {
+    for (const [state, {background, border}] of Object.entries(
+      STATE_TOKENS,
+    ) as [ProgressBubbleState, (typeof STATE_TOKENS)[ProgressBubbleState]][]) {
+      const matches = await cssColorsMatchVars({
+        locator: this.locator,
+        matches: [
+          {property: 'background-color', cssVar: background},
+          {property: 'border-top-color', cssVar: border},
+        ],
+      });
+      if (matches) {
+        return state;
+      }
+    }
+    return 'unknown';
   }
 }

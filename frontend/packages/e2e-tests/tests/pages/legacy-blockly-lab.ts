@@ -61,14 +61,8 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   readonly feedbackDialog: FeedbackDialogComponent;
 
   /**
-   * Last link in the level's "Need help? See these videos and hints"
-   * reference area (dashboard/app/views/levels/_reference_area.html.haml).
-   * Its accessible name is the related video's localized title
-   * (data_t('video.name', ...)), curriculum content that varies per level and
-   * locale, so a role+name lookup would be as fragile as hardcoding that
-   * title; `.last()` targets it positionally instead — the one link an
-   * anonymous session can reach after the teacher-solution link, which
-   * `can_view_solution?` hides for it.
+   * Reopens the level video. Positional, not role+name: its accessible name is
+   * the video's localized title, which varies per level and locale.
    */
   readonly referenceAreaLastLink: Locator;
 

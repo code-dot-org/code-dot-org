@@ -7,12 +7,6 @@ import {labLevelUrl, unitResetUrl} from '../../shared/routes';
 
 import {TWO_MOVE_FORWARD_BLOCKS} from './blocks';
 
-// Progress repaints only after the milestone POST + re-fetch settle; match
-// progress.rb's 30s color poll (see progress.spec.ts) rather than the suite's
-// default 15s expect timeout.
-const PROGRESS_TIMEOUT_MS = 30_000;
-const poll = {timeout: PROGRESS_TIMEOUT_MS};
-
 const MAZE_COURSE = 'ui-test-maze';
 const ARTIST_COURSE = 'ui-test-artist';
 
@@ -124,27 +118,17 @@ test.describe('Maze level tests for users that are signed out', () => {
     await expect(page).toHaveURL(levelOneUrl);
 
     await maze.gotoLevel({course: MAZE_COURSE, lesson: 1, level: 2});
-    await expect
-      .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
-      .toBe(true);
+    await expect(maze.headerProgressBubble(1)).toShowProgress('perfect');
 
     const unitOverview = new UnitOverviewPage(page);
     await unitOverview.gotoOverview({course: MAZE_COURSE});
-    await expect
-      .poll(
-        () =>
-          unitOverview
-            .summaryProgressBubble({lesson: 1, level: 1})
-            .shows('perfect'),
-        poll,
-      )
-      .toBe(true);
+    await expect(
+      unitOverview.summaryProgressBubble({lesson: 1, level: 1}),
+    ).toShowProgress('perfect');
 
     // A different course's own progress is unaffected.
     await maze.gotoLevel({course: ARTIST_COURSE, lesson: 1, level: 2});
-    await expect
-      .poll(() => maze.headerProgressBubble(1).shows('not_tried'), poll)
-      .toBe(true);
+    await expect(maze.headerProgressBubble(1)).toShowProgress('not_tried');
 
     // The solved level source (the two chained blocks) is saved...
     await maze.gotoLevel({course: MAZE_COURSE, lesson: 1, level: 1});
@@ -184,21 +168,13 @@ test.describe('Maze level tests for users that are signed out', () => {
     await page.reload();
     await maze.waitForReady();
 
-    await expect
-      .poll(() => maze.headerProgressBubble(1).shows('attempted'), poll)
-      .toBe(true);
+    await expect(maze.headerProgressBubble(1)).toShowProgress('attempted');
 
     const unitOverview = new UnitOverviewPage(page);
     await unitOverview.gotoOverview({course: MAZE_COURSE});
-    await expect
-      .poll(
-        () =>
-          unitOverview
-            .summaryProgressBubble({lesson: 1, level: 1})
-            .shows('attempted'),
-        poll,
-      )
-      .toBe(true);
+    await expect(
+      unitOverview.summaryProgressBubble({lesson: 1, level: 1}),
+    ).toShowProgress('attempted');
   });
 
   /**

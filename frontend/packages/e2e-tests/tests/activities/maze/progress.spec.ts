@@ -49,12 +49,8 @@ test.describe('Level Progress', () => {
       await solveLevelOne(maze);
       await expect(maze.feedbackDialog.congratsMessage).toBeVisible(poll);
 
-      await expect
-        .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
-        .toBe(true);
-      await expect
-        .poll(() => maze.headerProgressBubble(2).shows('not_tried'), poll)
-        .toBe(true);
+      await expect(maze.headerProgressBubble(1)).toShowProgress('perfect');
+      await expect(maze.headerProgressBubble(2)).toShowProgress('not_tried');
 
       expect(
         await analyze(page, {
@@ -65,35 +61,19 @@ test.describe('Level Progress', () => {
 
       await maze.gotoLevel({lesson: 2, level: 2});
 
-      await expect
-        .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
-        .toBe(true);
-      await expect
-        .poll(() => maze.headerProgressBubble(2).shows('not_tried'), poll)
-        .toBe(true);
+      await expect(maze.headerProgressBubble(1)).toShowProgress('perfect');
+      await expect(maze.headerProgressBubble(2)).toShowProgress('not_tried');
 
       const unitOverview = new UnitOverviewPage(page);
       await unitOverview.gotoOverview();
       await expect(unitOverview.lessonCell(/Maze/)).toBeVisible();
 
-      await expect
-        .poll(
-          () =>
-            unitOverview
-              .summaryProgressBubble({lesson: 2, level: 1})
-              .shows('perfect'),
-          poll,
-        )
-        .toBe(true);
-      await expect
-        .poll(
-          () =>
-            unitOverview
-              .summaryProgressBubble({lesson: 2, level: 2})
-              .shows('not_tried'),
-          poll,
-        )
-        .toBe(true);
+      await expect(
+        unitOverview.summaryProgressBubble({lesson: 2, level: 1}),
+      ).toShowProgress('perfect');
+      await expect(
+        unitOverview.summaryProgressBubble({lesson: 2, level: 2}),
+      ).toShowProgress('not_tried');
 
       expect(
         await analyze(page, {
@@ -124,44 +104,24 @@ test.describe('Level Progress', () => {
       await expect(maze.feedbackDialog.congratsMessage).toBeVisible(poll);
       await maze.header.waitForSignedOut();
 
-      await expect
-        .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
-        .toBe(true);
-      await expect
-        .poll(() => maze.headerProgressBubble(2).shows('not_tried'), poll)
-        .toBe(true);
+      await expect(maze.headerProgressBubble(1)).toShowProgress('perfect');
+      await expect(maze.headerProgressBubble(2)).toShowProgress('not_tried');
 
       await maze.gotoLevel({lesson: 2, level: 2});
 
-      await expect
-        .poll(() => maze.headerProgressBubble(1).shows('perfect'), poll)
-        .toBe(true);
-      await expect
-        .poll(() => maze.headerProgressBubble(2).shows('not_tried'), poll)
-        .toBe(true);
+      await expect(maze.headerProgressBubble(1)).toShowProgress('perfect');
+      await expect(maze.headerProgressBubble(2)).toShowProgress('not_tried');
 
       const unitOverview = new UnitOverviewPage(page);
       await unitOverview.gotoOverview();
       await expect(unitOverview.lessonCell(/Maze/)).toBeVisible();
 
-      await expect
-        .poll(
-          () =>
-            unitOverview
-              .summaryProgressBubble({lesson: 2, level: 1})
-              .shows('perfect'),
-          poll,
-        )
-        .toBe(true);
-      await expect
-        .poll(
-          () =>
-            unitOverview
-              .summaryProgressBubble({lesson: 2, level: 2})
-              .shows('not_tried'),
-          poll,
-        )
-        .toBe(true);
+      await expect(
+        unitOverview.summaryProgressBubble({lesson: 2, level: 1}),
+      ).toShowProgress('perfect');
+      await expect(
+        unitOverview.summaryProgressBubble({lesson: 2, level: 2}),
+      ).toShowProgress('not_tried');
     },
   );
 });
