@@ -65,6 +65,7 @@ interface AnalyticsData {
   uploaderType?:
     | 'Lab2FileUploader'
     | 'AnimationPicker'
+    | 'AssetManager'
     | 'SketchLab'
     | 'ImageURLInput'
     | 'n/a';

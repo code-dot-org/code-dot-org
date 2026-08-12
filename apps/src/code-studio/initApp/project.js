@@ -330,6 +330,31 @@ var projects = (module.exports = {
     return currentAbuseScore;
   },
 
+  /**
+   * Fetch abuse score from the channels API and update the cached value.
+   * @returns {Promise<void>}
+   */
+  fetchAbuseScore() {
+    if (!current || !current.id) {
+      return Promise.resolve();
+    }
+    return new Promise(resolve => {
+      channels.fetch(current.id + '/abuse', function (err, data) {
+        // Accept only a real number (not null/undefined) so abuse_score 0
+        // (after unflag) is kept.
+        if (data && typeof data.abuse_score === 'number') {
+          currentAbuseScore = data.abuse_score;
+        }
+        resolve();
+        if (err) {
+          // Throw so browser observability sees this. This shouldn't affect
+          // anything else.
+          throw err;
+        }
+      });
+    });
+  },
+
   getSharingDisabled() {
     // Return false if current user is a project validator and pageAction is 'view'.
     if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
@@ -1986,18 +2011,6 @@ var projects = (module.exports = {
   },
 });
 
-function fetchAbuseScore(resolve) {
-  channels.fetch(current.id + '/abuse', function (err, data) {
-    currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
-    resolve();
-    if (err) {
-      // Throw an error so that browser observability sees this. This shouldn't
-      // affect anything else
-      throw err;
-    }
-  });
-}
-
 function fetchSharingDisabled(resolve) {
   channels.fetch(current.id + '/sharing_disabled', function (err, data) {
     sharingDisabled = (data && data.sharing_disabled) || sharingDisabled;
@@ -2066,7 +2079,7 @@ function fetchPrivacyProfanityViolations(resolve) {
  */
 function fetchAbuseScoreAndPrivacyViolations(project) {
   const promises = [
-    new Promise(fetchAbuseScore),
+    project.fetchAbuseScore(),
     new Promise(fetchShareFailure),
     new Promise(fetchIsTeacherOfProjectOwner),
   ];
