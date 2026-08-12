@@ -60,10 +60,20 @@ jobs:
         uses: actions/checkout@v4
 
       # The bake runs the dev image as its own uid 1000 with the checkout
-      # bind-mounted; the runner's files belong to someone else, and
-      # db:setup_or_migrate writes dashboard/db/schema.rb.
-      - name: Give the checkout to the container user
-        run: sudo chown -R 1000:1000 .
+      # bind-mounted, and the seeding writes into it: dashboard/db/schema.rb
+      # from the schema dump, dashboard/log and dashboard/tmp, and
+      # dashboard/app/models if the annotations move. Hand it the tree.
+      #
+      # Except this directory. The runner is uid 1001, and the last thing
+      # bake-db.sh does is write mysql-data.tar in here, from the host, as the
+      # runner — after twenty minutes of seeding. Handing .devcontainer to 1000
+      # too makes that final tar EACCES, and `set -euo pipefail` turns it into
+      # a job that fails at the end having done all the work. Nothing in the
+      # bake writes here; locals.yml.sample goes in read-only.
+      - name: Give the checkout to the container user, keeping this directory
+        run: |
+          sudo chown -R 1000:1000 .
+          sudo chown -R "$(id -u):$(id -g)" .devcontainer
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
