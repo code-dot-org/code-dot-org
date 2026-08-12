@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-16 20:33:02 UTC",
+    "serialized_at": "2026-08-11 19:49:24 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -61,6 +61,21 @@
         "lesson_group.key": "",
         "script.name": "joi-playground"
       }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Theater Playground",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -87,6 +102,18 @@
         "lesson_group.key": "",
         "script.name": "joi-playground"
       }
+    },
+    {
+      "key": "89081eb2-c3c3-45c1-a493-ee182e75181d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
     }
   ],
   "activity_sections": [
@@ -110,6 +137,39 @@
       "seeding_key": {
         "activity_section.key": "cabff993-9f23-4d17-951c-fc18b1a1c359",
         "lesson_activity.key": "256ff5f8-1cd5-49ad-925f-b38888d61af6"
+      }
+    },
+    {
+      "key": "7a2c4e02-7851-444a-bf44-9b66de5496f6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Angelina"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a2c4e02-7851-444a-bf44-9b66de5496f6",
+        "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d"
+      }
+    },
+    {
+      "key": "e65a825e-3bdd-4df2-9dac-466e0f749be1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Micah"
+      },
+      "seeding_key": {
+        "activity_section.key": "e65a825e-3bdd-4df2-9dac-466e0f749be1",
+        "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d"
+      }
+    },
+    {
+      "key": "232112f7-8da8-452b-a652-80b058207839",
+      "position": 3,
+      "properties": {
+        "progression_name": "Joi"
+      },
+      "seeding_key": {
+        "activity_section.key": "232112f7-8da8-452b-a652-80b058207839",
+        "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d"
       }
     }
   ],
@@ -255,6 +315,72 @@
       "level_keys": [
         "technical-interview-ide-seletion"
       ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Angelina"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-angelina-theater"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "7a2c4e02-7851-444a-bf44-9b66de5496f6"
+      },
+      "level_keys": [
+        "joi-sandbox-angelina-theater"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Micah"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-micah-theater"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "e65a825e-3bdd-4df2-9dac-466e0f749be1"
+      },
+      "level_keys": [
+        "joi-sandbox-micah-theater"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Joi"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-joi-theater"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "232112f7-8da8-452b-a652-80b058207839"
+      },
+      "level_keys": [
+        "joi-sandbox-joi-theater"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -328,6 +454,42 @@
         "lesson_group.key": "",
         "script.name": "joi-playground",
         "activity_section.key": "cabff993-9f23-4d17-951c-fc18b1a1c359"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-angelina-theater",
+        "script_level.level_keys": [
+          "joi-sandbox-angelina-theater"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "7a2c4e02-7851-444a-bf44-9b66de5496f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-micah-theater",
+        "script_level.level_keys": [
+          "joi-sandbox-micah-theater"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "e65a825e-3bdd-4df2-9dac-466e0f749be1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-joi-theater",
+        "script_level.level_keys": [
+          "joi-sandbox-joi-theater"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "232112f7-8da8-452b-a652-80b058207839"
       }
     }
   ],

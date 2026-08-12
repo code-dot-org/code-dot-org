@@ -66,8 +66,9 @@ function useProjectServiceWorker(
           setServiceWorkerRegistration(registration);
         });
     } else if (
-      window.location.hostname ===
-      'localtesting.preview.localhost.codeprojects.org'
+      /^localtesting\.preview\.localhost\.code(?:ai)?projects\.org$/.test(
+        window.location.hostname
+      )
     ) {
       console.error(
         `
@@ -79,8 +80,8 @@ chrome://flags/#unsafely-treat-insecure-origin-as-secure
 Once you're there, set the value to the following (copy all four lines):
 http://localhost-studio.code.org:9000,
 http://localhost-studio.code.org:3000,
-http://localtesting.preview.localhost.codeprojects.org:9000,
-http://localtesting.preview.localhost.codeprojects.org:3000
+http://${window.location.hostname}:9000,
+http://${window.location.hostname}:3000
 
 More information is available in the README in apps/src/weblab2 directory.
         `

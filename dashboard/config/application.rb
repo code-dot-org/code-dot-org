@@ -223,8 +223,9 @@ module Dashboard
     # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
     config.enable_dependency_loading = true
 
-    # Webpack handles js compression for us, so don't compress by default.
-    # config.assets.js_compressor = :uglifier
+    # Webpack minifies the apps bundles, and the legacy application.js is
+    # assembled from pre-minified sources (see application.js.erb), so no
+    # js_compressor is configured here.
     # config.assets.css_compressor = :sass
 
     # Version of your assets, change this if you want to expire all your assets.

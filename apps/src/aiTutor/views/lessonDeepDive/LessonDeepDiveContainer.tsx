@@ -1,3 +1,4 @@
+import {WelcomeBox} from '@code-dot-org/lesson-deep-dive';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import React, {FC, useCallback, useState} from 'react';
 
@@ -36,7 +37,6 @@ import TimeSpentBox from './StudentLessonStats/TimeSpentBox';
 import ValidatedLevelsBox from './StudentLessonStats/ValidatedLevelsBox';
 import TutorSummaryBox from './TutorSummaryBox';
 import {LessonDeepDiveData, ReflectionData, ReflectionValue} from './types';
-import WelcomeBox from './WelcomeBox';
 
 import styles from './lesson-deep-dive-container.module.scss';
 

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-10 20:58:51 UTC",
+    "serialized_at": "2026-08-11 20:00:45 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7267,6 +7267,35 @@
       }
     },
     {
+      "name": "[OPTIONAL] Problem Solving with AI Vocab Guide",
+      "url": "https://docs.google.com/document/d/1hUwMiVJ96oAt3kqs9zTSRu4bflNaO3nChSd9YFPj0qs/edit?tab=t.0#heading=h.9yddb8q06vj1",
+      "key": "_optional_problem_solving_with_ai_vocab_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide"
+      }
+    },
+    {
+      "name": "[OPTIONAL] Problem Solving with AI Vocab Guide Exemplar",
+      "url": "https://docs.google.com/document/d/1MwlTtIMD02F7dljZoL9Ai1fcCozDPyKKfJvAAHr9uOM/edit?tab=t.0#heading=h.9yddb8q06vj1",
+      "key": "_optional_problem_solving_with_ai_vocab_guide_exemplar",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide_exemplar"
+      }
+    },
+    {
       "name": "AI as a Co-Creator",
       "url": "https://docs.google.com/presentation/d/1MA0vjQjQ4Zt_d7guVgg7czccfiX8iuxVS6r-Qp0xVZE/edit?usp=drive_link",
       "key": "ai_as_a_co-creator",
@@ -7807,6 +7836,18 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: Ownership, Ethics, and Creativity",
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Ownership, Ethics, and Creativity",
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide_exemplar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Ownership, Ethics, and Creativity",
         "resource.key": "ownership_and_ai_stations"
       }
     },
@@ -7831,12 +7872,6 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
-        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 12: AI's Role in Society",
         "resource.key": "ai_in_grocery_stores_-_1"
       }
     },
@@ -7850,12 +7885,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
         "resource.key": "ai_s_role_in_society"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 12: AI's Role in Society",
-        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
@@ -7939,6 +7968,18 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 3: The AI's Brain",
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The AI's Brain",
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide_exemplar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The AI's Brain",
         "resource.key": "how_chatbots_and_large_language_models_work"
       }
     },
@@ -7958,6 +7999,18 @@
       "seeding_key": {
         "lesson.key": "Lesson 3: The AI's Brain",
         "resource.key": "unplugged_neural_networks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Smart or Just Predictable?",
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Smart or Just Predictable?",
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide_exemplar"
       }
     },
     {
@@ -8005,19 +8058,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Understanding Bias",
-        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide_exemplar"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Understanding Bias",
         "resource.key": "ai_audit"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Understanding Bias",
-        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
@@ -8030,12 +8083,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 7: AI's Wild Imagination",
         "resource.key": "_key_hallucination_case_studies"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: AI's Wild Imagination",
-        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -8058,14 +8105,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 7: AI's Wild Imagination",
-        "resource.key": "problem_solving_with_ai_unit_guide"
+        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
+        "resource.key": "_optional_problem_solving_with_ai_vocab_guide_exemplar"
       }
     },
     {
@@ -8078,12 +8125,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 8: Debugging and Refining Outputs",
         "resource.key": "debugging_and_refining_outputs"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
