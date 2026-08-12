@@ -20,10 +20,10 @@ interface ChallengeGalleryProps {
 const hasVideoAsset = (response: ChallengeResponse) =>
   response.assets.some(asset => asset.asset_type === 'video');
 
-// The Tutor+ project gallery: the class section's submitted challenge work,
-// browsable by section and unit, split into video and whiteboard project
-// grids. Without any class section, it falls back to the signed-in user's
-// own submissions.
+// The Tutor+ project gallery: submitted challenge work, browsable by class
+// section and unit, split into video and whiteboard project grids. Shows
+// the selected section's work, or the signed-in user's own submissions in
+// the "My projects" view.
 const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
   const {units, sections, currentUnitId} = tutorGalleryData;
 

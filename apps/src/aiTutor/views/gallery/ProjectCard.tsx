@@ -36,8 +36,8 @@ const assetWithUrl = (
   ) || null;
 
 // The modality tags on a card: video submissions carry the "Video Story"
-// label from the design; whiteboard submissions are tagged "Whiteboard"
-// plus one tag per extra artifact on the response.
+// label; whiteboard submissions are tagged "Whiteboard" plus one tag per
+// extra artifact on the response.
 const cardTags = (
   response: ChallengeResponse,
   variant: ProjectVariant
@@ -66,8 +66,7 @@ const TAG_COLOR_CLASSES: Record<CardTag['color'], string> = {
 };
 
 // One project in the gallery grid: the submission's media, its unit/lesson
-// label and modality tags, the author, and (once the backend exists) the
-// class's emoji reactions.
+// label and modality tags, the author, and the class's emoji reactions.
 const ProjectCard: FC<ProjectCardProps> = ({
   response,
   variant,

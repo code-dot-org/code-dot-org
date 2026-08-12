@@ -4,9 +4,7 @@ import {Reaction} from './types';
 
 import styles from './reaction-chips.module.scss';
 
-// Native glyphs stand in for the design's custom emoji SVGs until the
-// reactions backend exists (the Figma exports are hosted on expiring URLs,
-// so they cannot be committed by reference).
+// Reaction names mapped to native emoji glyphs.
 const EMOJI_GLYPHS: Record<string, string> = {
   clap: '👏',
   fire: '🔥',
@@ -21,7 +19,7 @@ interface ReactionChipsProps {
 }
 
 // The row of emoji reaction chips on a gallery card. Renders nothing when
-// there are no reactions — which, with no reactions backend yet, is always.
+// there are no reactions.
 const ReactionChips: FC<ReactionChipsProps> = ({reactions}) => {
   if (reactions.length === 0) {
     return null;

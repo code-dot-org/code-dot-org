@@ -20,8 +20,7 @@ export type TutorGalleryData = {
 
 export type GallerySort = 'recent' | 'oldest';
 
-// Emoji reactions are in the design but have no backend yet; cards render
-// chips only when reaction data exists, which today is never.
+// An emoji reaction on a project and how many classmates left it.
 export type Reaction = {
   emoji: string;
   count: number;

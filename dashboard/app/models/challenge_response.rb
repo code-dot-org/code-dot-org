@@ -44,18 +44,16 @@ class ChallengeResponse < ApplicationRecord
     is_final && challenge_response_assets.all?(&:uploaded?)
   end
 
-  # The frontend-facing shape of a response and its assets. Carries the
-  # author's display name and the lesson's unit/position so the gallery can
-  # label cards without extra requests.
+  # The frontend-facing shape of a response and its assets, including the
+  # author's display name and the lesson's unit and position.
   # @param assets_for_upload [Boolean] when true (used right after create),
   #   assets carry no download URL since their bytes are not uploaded yet; the
   #   client PUTs them to /challenge_response_assets/:id/upload. Otherwise
   #   each asset carries a presigned download URL.
   # @param include_evaluation [Boolean] when true, includes the scored rubric
   #   evaluation. Scores are teacher-only.
-  # @param include_feedback [Boolean] when false, omits student_feedback. The
-  #   AI feedback is private to the response's author (and their teachers);
-  #   section peers browsing the gallery get the work without it.
+  # @param include_feedback [Boolean] when false, omits student_feedback,
+  #   which is private to the response's author and their teachers.
   def summarize(assets_for_upload: false, include_evaluation: false, include_feedback: true)
     lesson = challenge.lesson
     summary = {

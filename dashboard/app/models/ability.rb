@@ -342,8 +342,8 @@ class Ability
       can [:index, :show], Challenge
 
       # Students create and read their own challenge responses; teachers read
-      # their students' responses (and assets). Final submissions are also
-      # readable by section peers — they populate the class Tutor+ gallery.
+      # their students' responses; section peers read each other's final
+      # submissions. Asset access mirrors response access.
       can :create, ChallengeResponse
       can :read, ChallengeResponse do |challenge_response|
         challenge_response.user_id == user.id ||
