@@ -121,7 +121,7 @@ CLAUDE.local.md
 # Restore with `npx skills experimental_install` (see e2e-tests/README.md).
 .agents/skills/playwright-best-practices/
 
-# bake-db.sh output: a multi-gigabyte seeded MySQL datadir, rebuilt on demand.
+# preseed-db.sh output: a multi-gigabyte seeded MySQL datadir, rebuilt on demand.
 .devcontainer/mysql-data.tar
 
 # A devcontainer's own config and compose overrides, per developer.
