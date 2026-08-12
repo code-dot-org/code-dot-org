@@ -1160,7 +1160,7 @@ class User < ApplicationRecord
   end
 
   def in_code_review_group_with?(other_user)
-    (code_review_groups & other_user.code_review_groups).any?
+    code_review_groups.intersect?(other_user.code_review_groups)
   end
 
   # Users who might otherwise have orphaned accounts should have the option
@@ -1314,7 +1314,7 @@ class User < ApplicationRecord
     # which a user saw it in
     hoc_level_ids = levels_in_script.map(&:host_level).map(&:id)
 
-    unless (channel_level_ids & hoc_level_ids).empty?
+    if channel_level_ids.intersect?(hoc_level_ids)
       unit = Unit.get_from_cache(script_name)
       User.track_script_progress(id, unit.id)
       unit_group = unit.get_original_unit_group

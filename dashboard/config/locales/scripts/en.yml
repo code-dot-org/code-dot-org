@@ -29713,6 +29713,8 @@ en:
               name: Intro to Teaching Programming with AI [JavaScript]
             lesson-3:
               name: Design Foundations
+            lesson-4:
+              name: Interactivity in Web Apps
           lesson_groups: {}
           name: pl-aif-intro-programming-js
           title: Teaching Introduction to Programming [JavaScript]

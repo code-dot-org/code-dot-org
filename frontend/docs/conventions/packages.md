@@ -45,6 +45,13 @@ has non-obvious data flow, stateful services, or significant constraints.
 - Use `vite-plugin-externalize-deps` to exclude all peer deps from the bundle
 - Set `preserveModules: true` for dual ESM+CJS output (tree-shakeable)
 - Labs use a standard app config (no `preserveModules`); libraries use library mode
+- `preserveModules` and CSS modules conflict: per-module output emits
+  `*.module.css`, which a consumer whose CSS-modules rule matches that glob
+  (Vite's default does) re-hashes, silently dropping the already-hashed class
+  names. A library with `.module.scss` files must either strip the `.module`
+  infix via `assetFileNames` (see `component-library`) or drop `preserveModules`
+  and emit one chunk plus one stylesheet (see `lesson-deep-dive`). Prefer the
+  latter when the package has a single entry that consumers import wholesale.
 
 ## TypeScript config
 

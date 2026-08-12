@@ -21,10 +21,61 @@
     "start_sources": {
       "animations": {
         "orderedKeys": [
+          "3bc62830-9341-4e84-b0ca-6d24ca2c38d9",
+          "2028b9a8-be08-4712-92bf-fe7b4b5b54ec",
+          "2a1920d3-6de8-4743-9b9e-684b6217fc39",
           "ce20f0cf-5f26-435d-8fe1-1d554778ac5c",
           "d83b0121-f869-43e5-8fd9-177b88425c6c"
         ],
         "propsByKey": {
+          "3bc62830-9341-4e84-b0ca-6d24ca2c38d9": {
+            "name": "enemy",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-3/uuid/3c3646ed-a5f3-41ad-b2a7-0029153589c8.png",
+            "frameSize": {
+              "x": 640,
+              "y": 640
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+
+            ],
+            "pixelGridSize": 5
+          },
+          "2028b9a8-be08-4712-92bf-fe7b4b5b54ec": {
+            "name": "forest",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-3/uuid/177fc578-b089-4c57-abdc-8844b14d0930.png",
+            "frameSize": {
+              "x": 510,
+              "y": 513
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+              "backgrounds"
+            ],
+            "pixelGridSize": 3,
+            "recentColors": [
+
+            ]
+          },
+          "2a1920d3-6de8-4743-9b9e-684b6217fc39": {
+            "name": "hero",
+            "sourceUrl": "/level_starter_assets/HoAI-tl-test-3/uuid/b6805244-72e6-4549-96c5-db1915040e25.png",
+            "frameSize": {
+              "x": 520,
+              "y": 520
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+
+            ],
+            "pixelGridSize": 8
+          },
           "ce20f0cf-5f26-435d-8fe1-1d554778ac5c": {
             "name": "ocean",
             "sourceUrl": "/level_starter_assets/Sprite%20Lab%20in%20Lab2%20showcase%200/uuid/418e6b16-a9d9-4ccf-b979-8f429cd62808.png",
@@ -78,12 +129,256 @@
               "blocks": [
                 {
                   "type": "when_run",
-                  "id": "when-run",
+                  "id": "block-0",
                   "x": 20,
                   "y": 20,
                   "deletable": false,
                   "movable": false,
                   "extraState": {
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackgroundImageAs",
+                      "id": "rFmi7b|(1agg0B_xq,7p",
+                      "fields": {
+                        "IMG": "<field name=\"IMG\">\"forest\"</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "gamelab_makeNewSpriteAnon",
+                          "id": "szn(fkTvbZ6MISe3_T]0",
+                          "fields": {
+                            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"hero\"</field>"
+                          },
+                          "inputs": {
+                            "LOCATION": {
+                              "block": {
+                                "type": "gamelab_location_picker",
+                                "id": "2+k[f^8!viskKHu1Tr:k",
+                                "fields": {
+                                  "LOCATION": "{\"x\":50,\"y\":339}"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "gamelab_setProp",
+                              "id": "]GdMNp2IdYY.)sK@#n.A",
+                              "fields": {
+                                "PROPERTY": "<field name=\"PROPERTY\">\"scale\"</field>"
+                              },
+                              "inputs": {
+                                "SPRITE": {
+                                  "shadow": {
+                                    "type": "gamelab_allSpritesWithAnimation",
+                                    "id": "5WE2fmQy;y8j+|!#^1Q3",
+                                    "fields": {
+                                      "ANIMATION": "<field name=\"ANIMATION\">\"hero\"</field>"
+                                    }
+                                  }
+                                },
+                                "VAL": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "/Po~.L2sMAi@]MF221.O",
+                                    "fields": {
+                                      "NUM": 50
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_keyPressed",
+                  "id": "Ffbo1e}1Mv5~wjU4;E~@",
+                  "x": 407,
+                  "y": 175,
+                  "fields": {
+                    "CONDITION": "<field name=\"CONDITION\">\"when\"</field>",
+                    "KEY": "<field name=\"KEY\">\"up\"</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_moveInDirection",
+                      "id": "zEvX)(It67tfg%#,2Z:f",
+                      "fields": {
+                        "DIRECTION": "<field name=\"DIRECTION\">\"North\"</field>"
+                      },
+                      "inputs": {
+                        "SPRITE": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "voaNkhNhn-Dn[+$PdioH",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"hero\"</field>"
+                            }
+                          }
+                        },
+                        "DISTANCE": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "z~!3C6Kr8iobn%#+*H~W",
+                            "fields": {
+                              "NUM": 10
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenKey",
+                  "id": "toolbox_gamelab_whenKey",
+                  "x": 441,
+                  "y": 324,
+                  "fields": {
+                    "KEY": "<field name=\"KEY\">\"down\"</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_moveInDirection",
+                      "id": "NyI3cS|[$6dx;NS%aYi$",
+                      "fields": {
+                        "DIRECTION": "<field name=\"DIRECTION\">\"South\"</field>"
+                      },
+                      "inputs": {
+                        "SPRITE": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "VPB73CL%B7Q`00yIbH;o",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"hero\"</field>"
+                            }
+                          }
+                        },
+                        "DISTANCE": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "5W}YN8%l[l}d?dilIH^-",
+                            "fields": {
+                              "NUM": 10
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenKey",
+                  "id": "QY+2vdh|Ifg3Io~ABvs(",
+                  "x": 494,
+                  "y": 480,
+                  "fields": {
+                    "KEY": "<field name=\"KEY\">\"right\"</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_moveInDirection",
+                      "id": "?Tzm@x)im]O~1NsWalQ$",
+                      "fields": {
+                        "DIRECTION": "<field name=\"DIRECTION\">\"East\"</field>"
+                      },
+                      "inputs": {
+                        "SPRITE": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "wB~*K!0,gkpG^3BQSXp.",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"hero\"</field>"
+                            }
+                          }
+                        },
+                        "DISTANCE": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "PYDFdl{[|x+z!!u|gwl+",
+                            "fields": {
+                              "NUM": 10
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenKey",
+                  "id": "36va0gr%6QQce9%d$XD)",
+                  "x": 859,
+                  "y": 237,
+                  "fields": {
+                    "KEY": "<field name=\"KEY\">\"left\"</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_moveInDirection",
+                      "id": "p-VoG,9k#$+AkF{$folH",
+                      "fields": {
+                        "DIRECTION": "<field name=\"DIRECTION\">\"West\"</field>"
+                      },
+                      "inputs": {
+                        "SPRITE": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": ",Y_Y4A=1^-OCV(?PTYAd",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"hero\"</field>"
+                            }
+                          }
+                        },
+                        "DISTANCE": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "D_48MlsBw7[M+I{u*[o}",
+                            "fields": {
+                              "NUM": 10
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_checkTouching",
+                  "id": "jj_x%;i5|@C]n4vK,.aC",
+                  "x": 42,
+                  "y": 357,
+                  "extraState": {
+                    "useDefaultIcon": true
+                  },
+                  "fields": {
+                    "button_gamelab_checkTouching": "",
+                    "CONDITION": "<field name=\"CONDITION\">\"when\"</field>"
+                  },
+                  "inputs": {
+                    "SPRITE1": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation",
+                        "id": "d0tJrq@$+2=,:I|+%NY4",
+                        "fields": {
+                          "ANIMATION": "<field name=\"ANIMATION\">\"hero\"</field>"
+                        }
+                      }
+                    },
+                    "SPRITE2": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation",
+                        "id": "!aGtH%Phosp/.pL^zpiZ",
+                        "fields": {
+                          "ANIMATION": "<field name=\"ANIMATION\">\"hero\"</field>"
+                        }
+                      }
+                    }
                   }
                 }
               ]
@@ -118,7 +413,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-05T20:58:45.622+00:00\",\"changed\":[\"cloned from \\\"HoAI-tl-test-2\\\"\"],\"cloned_from\":\"HoAI-tl-test-2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-05T20:58:45.622+00:00\",\"changed\":[\"cloned from \\\"HoAI-tl-test-2\\\"\"],\"cloned_from\":\"HoAI-tl-test-2\"},{\"changed_at\":\"2026-08-06 16:13:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-08-06 16:19:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>

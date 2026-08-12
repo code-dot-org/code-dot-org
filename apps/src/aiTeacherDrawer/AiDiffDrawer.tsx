@@ -116,7 +116,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     } else if (activeNav === 'Alerts') {
       content = <NotificationList aiPromptClick={onAlertPromptClick} />;
     } else if (activeNav === 'Prepare') {
-      content = <PrepareList />;
+      content = (
+        <PrepareList
+          onNavigateToChats={() => {
+            setActiveNav('Chats');
+            setShowChatList(false);
+          }}
+        />
+      );
     } else {
       content = (
         <AiDiffWorkSpace
