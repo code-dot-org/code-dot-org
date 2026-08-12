@@ -1,6 +1,86 @@
 # `componentLibrary/tooltip`
 
-## Consuming This Component
+## Which one to use
+
+| Component                          | Built on                        | Notes                                 |
+| ---------------------------------- | ------------------------------- | ------------------------------------- |
+| [`Tooltip`](./Tooltip.tsx)         | MUI `Tooltip` + `CdoTheme`      | Use this for new code.                |
+| [`WithTooltip`](./WithTooltip.tsx) | our own SCSS + positioning code | Still what most of the codebase uses. |
+
+`Tooltip` is the first step of the tooltip migration to MUI. It is not yet a
+drop-in replacement for `WithTooltip` — the spacing has not had a design pass
+(see below) — so existing `WithTooltip` callsites stay put for now.
+
+Two naming wrinkles while both exist:
+
+- `TooltipProps` still refers to the **legacy** component, because six files in
+  `apps/` import it. The new component's props are `CdoTooltipProps`. Both
+  become the obvious names once `WithTooltip` retires.
+- The legacy component is exported as `LegacyTooltip`. Nothing imported it under
+  its old name `Tooltip`, so the new component took it.
+
+## `Tooltip`
+
+```javascript
+import {Tooltip} from '@code-dot-org/component-library/tooltip';
+
+const RunButton = () => (
+  <Tooltip title="Runs your program" size="s">
+    <IconButton aria-label="Run" onClick={run}>
+      <FontAwesomeV6Icon iconName="play" iconStyle="solid" />
+    </IconButton>
+  </Tooltip>
+);
+```
+
+Props are MUI's [`TooltipProps`](https://mui.com/material-ui/api/tooltip/) —
+`title`, `placement`, `arrow`, `open`, and the rest — plus three of ours:
+
+- `size` (`'xs' | 's' | 'm' | 'l'`, default `'m'`) picks the design system size.
+  MUI has no size prop of its own.
+- `keyboardOnly` (default `false`) — see below.
+- `data-theme` — pass it when the trigger sits inside a `data-theme` subtree.
+  MUI renders the tooltip in a portal on `document.body`, so it does not
+  otherwise inherit the surrounding theme.
+
+Two MUI defaults are flipped to match `WithTooltip`:
+
+- `arrow` defaults to `true`. Design system tooltips have tails; MUI's do not.
+- `describeChild` defaults to `true`, so the text becomes `aria-describedby` on
+  the trigger rather than an `aria-label` replacing its accessible name.
+
+### `keyboardOnly`
+
+```javascript
+<Tooltip title="Delete this file" keyboardOnly>
+```
+
+The tooltip then appears only when the trigger is reached by keyboard. Hover and
+touch do nothing. Use it for hints that would be noise for a mouse user — an
+icon whose meaning is already clear in context — but are the only way a keyboard
+user learns what the control does.
+
+The implementation is two props, because MUI's `Tooltip` already checks
+`:focus-visible` before opening on focus. Switching off the hover and touch
+listeners is the whole behavior: a click that moves focus to the trigger leaves
+the tooltip shut, a Tab to it opens it. Escape closes it either way.
+
+`keyboardOnly` is applied after the caller's own props, so it beats an explicit
+`disableHoverListener={false}` rather than being silently overridden.
+
+### Styling
+
+Styling lives in the `MuiTooltip` theme override
+([src/themes/code.org/styleOverrides/tooltip.ts](../themes/code.org/styleOverrides/tooltip.ts)),
+so a plain MUI `<Tooltip>` gets our look too. Size arrives there as a `data-size`
+attribute on the tooltip slot rather than as a prop, because MUI forwards props
+it does not recognize onto the child element.
+
+Spacing between tooltip and trigger is left at MUI's defaults, which are a
+little looser than the SCSS tooltip's. Worth a design pass before this replaces
+`WithTooltip` outright.
+
+## `WithTooltip`
 
 This package exports following styled React
 components: [WithTooltip](./WithTooltip.tsx), [Tooltip](T_ooltip.tsx), [TooltipOverlay](Tooltip.tsx).
