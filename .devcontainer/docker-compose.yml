@@ -6,7 +6,7 @@
 
 services:
   db:
-    image: ${CDO_DEV_DB_IMAGE:-cdo-dev-db:local}
+    image: ${CDO_DEV_DB_IMAGE:-ghcr.io/code-dot-org/cdo-devdb:latest}
     healthcheck:
       test: ["CMD", "mysqladmin", "-uroot", "-ppassword", "ping", "--silent"]
       interval: 2s
@@ -44,19 +44,28 @@ services:
       timeout: 3s
       retries: 15
 
-  # Buckets Rails expects to exist. Only reads lazily create anything
-  # (lib/cdo/local_development.rb), so without this the first save of a
-  # project or an animation fails with NoSuchBucket. The list is
-  # docker/developers/install-s3.sh's.
-  minio-init:
+  # Runs to completion before the app starts. Two jobs, both "make the empty
+  # thing usable":
+  #
+  #   - Create the buckets Rails expects to exist. Only reads lazily create
+  #     anything (lib/cdo/local_development.rb), so without this the first save
+  #     of a project or an animation fails with NoSuchBucket. The list is
+  #     docker/developers/install-s3.sh's.
+  #   - Give the cache volume to uid 1000. Docker creates the mount point for
+  #     a named volume as root when the path is absent from the image, and
+  #     yarn runs as cdo.
+  init:
     image: ${CDO_DEV_MINIO_IMAGE:-minio/minio:latest}
     depends_on:
       minio:
         condition: service_healthy
+    volumes:
+      - yarn-cache:/yarn-cache
     entrypoint:
       - sh
       - -c
       - |
+        chown 1000:1000 /yarn-cache
         mc alias set cdo http://minio:9000 local-development allstudents
         for b in cdo-ai cdo-animation-library cdo-restricted cdo-sound-library \
                  cdo-v3-animations cdo-v3-assets cdo-v3-files cdo-v3-libraries \
@@ -65,16 +74,38 @@ services:
         done
 
   app:
-    image: ${CDO_DEV_IMAGE:-localhost/cdo-dev:local}
+    image: ${CDO_DEV_IMAGE:-ghcr.io/code-dot-org/cdo-dev:latest}
     volumes:
-      # The checkout. Bind-mounted from the host by default, which is what a
-      # Linux host wants and what the devcontainer standard would do on its
-      # own. On macOS a bind mount is too slow to work in: set
-      # CDO_WORKSPACE_TYPE=volume and CDO_WORKSPACE_SOURCE=cdo-workspace to
-      # take the checkout from a named volume instead — see the README.
-      - type: ${CDO_WORKSPACE_TYPE:-bind}
-        source: ${CDO_WORKSPACE_SOURCE:-..}
-        target: /code-dot-org
+      # The checkout, at the one path the image is built around: WORKDIR,
+      # git's safe.directory, and the venv's editable installs all say
+      # /code-dot-org. In a codespace, and under "Clone Repository in
+      # Container Volume", the host side of this is a clone made for the
+      # container and nothing else touches it. Point it at a checkout you also
+      # build natively and you own the consequences — see the README.
+      - ..:/code-dot-org:cached
+
+      # The container's config. A fresh clone has no locals.yml at all, and a
+      # checkout that was also set up natively has one written for a native
+      # install, naming a database this container cannot reach. Mounting
+      # settles both cases the same way and copies nothing. Point CDO_LOCALS
+      # at your own file to change any of it; editing the sample in place
+      # would dirty the working tree.
+      - type: bind
+        source: ${CDO_LOCALS:-./locals.yml.sample}
+        target: /code-dot-org/locals.yml
+        read_only: true
+
+      # yarn's global state: the download cache and the install index. It is
+      # the only cache outside the checkout — apps/ sets enableGlobalCache
+      # false and turbo's lives under frontend/, so both of those persist with
+      # the workspace — and without a volume the frontend workspaces refetch
+      # 1.25 GiB every time the container is recreated. The mount is the whole
+      # of ~/.yarn rather than its cache/ subdirectory because yarn writes
+      # index/ alongside cache/, and a volume mounted at the leaf leaves the
+      # parent owned by root.
+      - type: volume
+        source: yarn-cache
+        target: /home/cdo/.yarn
     working_dir: /code-dot-org
     stdin_open: true
     tty: true
@@ -84,7 +115,7 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
-      minio-init:
+      init:
         condition: service_completed_successfully
     extra_hosts:
       # The hostname every dev URL uses. Rails, the webpack proxy and the
@@ -107,11 +138,5 @@ services:
       - "${CDO_FRONTEND_PORT:-3036}:3036"
 
 volumes:
-  # Only referenced when CDO_WORKSPACE_TYPE is "volume", where
-  # CDO_WORKSPACE_SOURCE is this key rather than a path. External because the
-  # clone into it is a deliberate act, not something a stray `up` should
-  # create empty. CDO_WORKSPACE_VOLUME renames the real volume, for a second
-  # checkout.
-  cdo-workspace:
-    external: true
-    name: ${CDO_WORKSPACE_VOLUME:-cdo-workspace}
+  yarn-cache:
+    name: ${CDO_YARN_CACHE_VOLUME:-cdo-yarn-cache}

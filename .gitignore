@@ -123,3 +123,7 @@ CLAUDE.local.md
 
 # bake-db.sh output: a multi-gigabyte seeded MySQL datadir, rebuilt on demand.
 .devcontainer/mysql-data.tar
+
+# A devcontainer's own config and compose overrides, per developer.
+.devcontainer/locals.yml
+.devcontainer/.env

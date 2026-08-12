@@ -1,13 +1,16 @@
 #!/bin/bash
-# Bake a seeded MySQL datadir for the cdo-dev-db image: seed a real dashboard
+# Bake a seeded MySQL datadir for the cdo-devdb image: seed a real dashboard
 # under this exact server version, shut it down cleanly, and tar the datadir.
 #
 # The seeding server is mysql:8.0, the same image Dockerfile.db builds on, so
 # server and datadir versions match by construction — InnoDB refuses to open a
 # datadir from a newer server.
 #
+# CI runs this too — see .github/workflows/cdo-devdb-image.yml, which is where
+# the published image comes from. Run it by hand to get one of your own:
+#
 #   .devcontainer/bake-db.sh
-#   docker build -f .devcontainer/Dockerfile.db -t cdo-dev-db:local .devcontainer
+#   docker build -f .devcontainer/Dockerfile.db -t cdo-devdb:local .devcontainer
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -64,7 +67,7 @@ docker run --rm --name "$APP_CONTAINER" --network "$NETWORK" \
   -v "${HERE}/locals.yml.sample":/code-dot-org/locals.yml:ro \
   -e DEVCONTAINER_BOOTSTRAP_APPS=false \
   --entrypoint bash \
-  "${CDO_DEV_IMAGE:-localhost/cdo-dev:local}" -c "
+  "${CDO_DEV_IMAGE:-ghcr.io/code-dot-org/cdo-dev:latest}" -c "
     set -euo pipefail
     cd /code-dot-org/dashboard
     echo 'bake: running db:setup_or_migrate...'
@@ -73,8 +76,6 @@ docker run --rm --name "$APP_CONTAINER" --network "$NETWORK" \
     bundle exec rake seed:default
     echo 'bake: migrating test DB...'
     RAILS_ENV=test bundle exec rake db:migrate
-    echo 'bake: precompiling test assets...'
-    RAILS_ENV=test bundle exec rake assets:precompile
     echo 'bake: complete'
   "
 

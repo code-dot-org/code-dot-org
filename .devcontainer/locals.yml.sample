@@ -1,5 +1,10 @@
-# Copy to the repo root as locals.yml — `cp -n .devcontainer/locals.yml.sample
-# locals.yml`, which is also what the devcontainer's postCreateCommand does.
+# The devcontainer's configuration. docker-compose.yml mounts this file
+# read-only over /code-dot-org/locals.yml, so it wins over whatever the
+# checkout has there — a checkout set up natively already has a locals.yml,
+# and it names a database this container cannot reach.
+#
+# To change any of it, copy this file to .devcontainer/locals.yml and set
+# CDO_LOCALS=./locals.yml in .devcontainer/.env; both are gitignored.
 #
 # Everything here is either a compose service name or a stub. There are no
 # credentials, and nothing reaches AWS. Only keys config/*.yml.erb actually

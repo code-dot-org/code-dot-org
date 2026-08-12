@@ -4,10 +4,40 @@
   "service": "app",
   "workspaceFolder": "/code-dot-org",
   "remoteUser": "cdo",
+
+  // The image bakes an entrypoint that starts in-container services, applies
+  // migrations, and fetches the prebuilt apps package. Let it run, then run it
+  // again on every start.
   "overrideCommand": false,
-  "postCreateCommand": "cp -n .devcontainer/locals.yml.sample locals.yml",
   "postStartCommand": "/usr/local/bin/entrypoint.sh true",
+
+  // Once per container, and the part a Codespaces prebuild bakes into the
+  // image. Both installs are network-bound and cost about 25s each warm;
+  // apps/ is deliberately not built here — the entrypoint downloads the
+  // prebuilt package from a public bucket in about 90s, which beats building
+  // it, and only a commit that changes apps/ and has never been through CI
+  // needs `yarn build` by hand.
+  "onCreateCommand": "cd /code-dot-org/apps && yarn install && cd /code-dot-org/frontend && yarn install",
+
+  // Sized off measurements, not taste. Memory: the apps dev server alone runs
+  // with an 8 GB node heap, on top of Rails, MySQL and a browser. Storage:
+  // node_modules is 4.1 GB across the two workspaces, the prebuilt apps
+  // package 2.1 GB, a local apps build another 2 GB, the images 7 GB, the
+  // checkout and caches the rest. CPUs: yarn install spends 90s of CPU in 22s
+  // of wall clock, so the parallelism is real.
+  "hostRequirements": {
+    "cpus": 8,
+    "memory": "16gb",
+    "storage": "64gb"
+  },
+
   "forwardPorts": [3000, 9000, 3036],
+  "portsAttributes": {
+    "3000": {"label": "Rails (dashboard)", "onAutoForward": "notify"},
+    "9000": {"label": "apps dev server (webpack)", "onAutoForward": "silent"},
+    "3036": {"label": "Vite (frontend/studio)", "onAutoForward": "silent"}
+  },
+
   "customizations": {
     "vscode": {
       "settings": {

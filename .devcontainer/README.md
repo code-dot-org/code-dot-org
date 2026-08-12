@@ -1,144 +1,214 @@
 # Devcontainer
 
-A container you can develop in: Rails, the apps webpack dev server, the
-frontend Vite server, the test suites, the linters. Faster to reach than
-[SETUP.md](../SETUP.md), and the same on every machine.
-
-It is one configuration, not a menu. The container has the whole toolchain
-whether or not today's work needs all of it.
+A container you can develop this repo in: Rails, the apps webpack dev server,
+the frontend Vite server, the test suites, the linters. One configuration, in
+a codespace or on your own machine.
 
 ## What runs where
 
 | | |
 |---|---|
 | `app` | [cdo-dev](../docker/dev/README.md), the development member of the [image family](../docker/README.md). Nothing starts by itself — you run Rails and the dev servers in a terminal. |
-| `db` | `mysql:8.0` with a seeded dashboard datadir baked in. |
+| `db` | [cdo-devdb](../.github/workflows/cdo-devdb-image.yml): `mysql:8.0` with a seeded dashboard datadir baked in, so you skip a two-hour `db:setup_or_migrate`. |
 | `redis` | `redis:7`, stock. |
-| `minio` | S3, emulated. A level page asks S3 whether its lesson has a PDF; without an endpoint that question is a 500. A one-shot `minio-init` creates the buckets. |
+| `minio` | S3, emulated. A level page asks S3 whether its lesson has a PDF; without an endpoint that question is a 500. A one-shot `init` service creates the buckets. |
 
 The gems come from the same `cdo-deps` layer the production image is built
 on, so what you load in development is what production resolved.
 
-## Prerequisites
+## In a codespace
 
-- Docker Engine + Compose v2, or Docker Desktop
-- VS Code with the Dev Containers extension (optional — plain `docker compose`
-  works)
-
-Build the two images once:
-
-```shell
-# The application image. docker/README.md covers the layers below it.
-docker build -t localhost/cdo-dev:local docker/dev/
-
-# The database. ~40 min the first time: it seeds a real dashboard, then
-# exports the datadir. The tar it leaves behind is ~3 GB and gitignored.
-.devcontainer/bake-db.sh
-docker build -f .devcontainer/Dockerfile.db -t cdo-dev-db:local .devcontainer
-```
-
-Override either image with `CDO_DEV_IMAGE` / `CDO_DEV_DB_IMAGE` — that is the
-seam a published `ghcr.io/code-dot-org/cdo-dev` tag will use.
-
-## Start it
+Create a codespace on your branch. If a prebuild is available it comes up in
+about a minute; otherwise the first start also pulls the images, applies any
+migrations newer than the database image, downloads the prebuilt apps
+package, and runs both `yarn install`s.
 
 ```shell
-cp -n .devcontainer/locals.yml.sample locals.yml
+bin/dashboard-server        # then open the forwarded port 3000
 ```
 
-Then either open the folder in VS Code and run "Dev Containers: Reopen in
-Container", or:
+That is the whole setup. The clone in a codespace exists for the container
+and nothing else, so there is nothing on the machine for it to collide with —
+no native MySQL on 3306, no `locals.yml` from a previous life, no half-built
+`apps/`.
+
+Ports 3000, 9000 and 3036 are forwarded and labelled. The machine type comes
+from `hostRequirements` in `devcontainer.json`: 8 cores, 16 GB, 64 GB of
+storage, which is what the apps dev server and the two `node_modules` trees
+actually need.
+
+## On your own machine
+
+Same `devcontainer.json`, same compose file. Give the container a clone of
+its own — VS Code's "Dev Containers: Clone Repository in Container Volume",
+or a directory you use for nothing else — and open it:
+
+```shell
+devcontainer up --workspace-folder <clone>
+devcontainer exec --workspace-folder <clone> bash
+```
+
+or "Reopen in Container" from VS Code. Plain compose works too, and is what
+to reach for when you want the stack without the devcontainer tooling:
 
 ```shell
 docker compose -f .devcontainer/docker-compose.yml up -d
 docker compose -f .devcontainer/docker-compose.yml exec app bash
 ```
 
-First start takes a few minutes: the entrypoint applies whatever migrations
-the checkout has gained since the database was baked, and downloads the
-prebuilt apps package so level pages render. After that:
+The images come from ghcr by default. To run images you built yourself:
 
 ```shell
-bin/dashboard-server        # Rails, http://localhost-studio.code.org:3000
+docker build -t cdo-dev:local docker/dev/            # see docker/README.md
+.devcontainer/bake-db.sh                             # ~20 min, seeds a database
+docker build -f .devcontainer/Dockerfile.db -t cdo-devdb:local .devcontainer
 ```
 
-## macOS
+```
+# .devcontainer/.env — compose reads it automatically, and it is gitignored
+CDO_DEV_IMAGE=cdo-dev:local
+CDO_DEV_DB_IMAGE=cdo-devdb:local
+```
 
-The checkout is bind-mounted from the host, which is right on Linux and
-unusable on macOS — a bind mount there is slow enough that Rails boot and
-webpack builds stop being worth waiting for. Put the checkout in a named
-volume instead. Clone into the volume once:
+The same file is where to move a port if 3000, 9000 or 3036 is taken on your
+machine — 3036 especially, if you also run `yarn dev` natively:
+`CDO_RAILS_PORT`, `CDO_APPS_PORT`, `CDO_FRONTEND_PORT`, `CDO_DB_PORT`.
+
+### Using your everyday checkout instead, at your own risk
+
+Pointing the container at a checkout you also build natively works, and the
+two will fight over the build outputs they share. See [Sharing a checkout
+with a native setup](#sharing-a-checkout-with-a-native-setup) for exactly
+where, before you decide it is fine.
+
+## Config
+
+`locals.yml.sample` is mounted read-only over `/code-dot-org/locals.yml`, so
+configuration comes from this directory. A fresh clone has no `locals.yml` at
+all and needs none; a checkout that was also set up natively has one that
+names a database this container cannot reach, and it is simply not used.
+Nothing is copied and nothing is overwritten.
+
+To change any of it, keep your own copy and point compose at it:
 
 ```shell
-docker volume create cdo-workspace
-docker run --rm -v cdo-workspace:/w -v "$PWD":/src:ro alpine/git \
-  clone --no-hardlinks /src /w
+cp .devcontainer/locals.yml.sample .devcontainer/locals.yml
+echo 'CDO_LOCALS=./locals.yml' >> .devcontainer/.env
 ```
 
-and tell compose to use it, by writing `.devcontainer/.env`:
-
-```
-CDO_WORKSPACE_TYPE=volume
-CDO_WORKSPACE_SOURCE=cdo-workspace
-```
-
-Everything else is unchanged: same `docker-compose.yml`, same
-`devcontainer.json`, same "Reopen in Container". `node_modules`,
-`apps/.yarn/cache` and `apps/build` then live volume-side too, which is most
-of the point — they are the directories a bind mount is slowest at.
-
-The tradeoff is that the volume is a second clone. It has its own working
-tree and its own branch; `git remote set-url origin` it and push from inside
-the container. The image already marks `/code-dot-org` a safe directory, so
-git works there regardless of who owns the files.
-
-The image family is multi-arch, so Apple Silicon runs a native arm64
-container: pull the published image, or build the chain locally per
-[docker/README.md](../docker/README.md).
+Both are gitignored. Edit the file on the host and restart the container;
+`locals.yml` is read once, at boot.
 
 ## Daily work
 
 ```shell
 bin/dashboard-server                         # Rails on 3000
 bundle exec rails console
-bundle exec spring testunit test/models/concept_test.rb
 bundle exec rake db:migrate
 mysql -h db -uroot -ppassword
 redis-cli -h redis ping
 
 cd frontend && yarn install && yarn dev      # Vite on 3036
 cd apps    && yarn install && yarn start     # webpack dev server on 9000
-cd apps    && yarn test:unit test/unit/gridUtilsTest.js
-./tools/hooks/pre-commit                     # what the git hook runs
 ```
 
 With Rails up, the Vite app is reachable through it at
 `http://localhost-studio.code.org:3000/frontend-studio/`.
 
+### Tests and lint
+
+```shell
+bundle exec spring testunit test/models/concept_test.rb   # dashboard
+cd apps     && yarn test:unit test/unit/gridUtilsTest.js  # apps
+yarn workspace @code-dot-org/studio test src/routes/users # frontend, one path
+cd frontend && yarn workspace @code-dot-org/e2e-tests test:ui:local
+./tools/hooks/pre-commit
+```
+
+Three things to know before the first run:
+
+- Dashboard controller tests want precompiled test assets:
+  `RAILS_ENV=test bundle exec rake assets:precompile`. See the collision
+  table below first if this checkout is also used natively.
+- `yarn test:unit` needs `yarn build` to have run once — jest loads locale
+  bundles out of `apps/build`.
+- `pre-commit` lints **staged files only**. With an empty index it does
+  nothing and exits 0, which is not a passing lint run; `git add` first.
+
+The first `spring` command in a fresh container sometimes dies with a
+`mutex_m` default-gem conflict. `bundle exec spring stop`, then run it again.
+
 ### Developing in apps/
 
 The container starts with `use_my_apps: false`, serving the prebuilt package
 the entrypoint downloaded: level pages render, but nothing you edit under
-`apps/src` reaches the browser. To change that, once:
+`apps/src` reaches the browser. To change that, on the host, take your own
+config and flip the flag:
 
 ```shell
-sed -i 's/^use_my_apps: false/use_my_apps: true/' locals.yml
+cp .devcontainer/locals.yml.sample .devcontainer/locals.yml
+echo 'CDO_LOCALS=./locals.yml' >> .devcontainer/.env
+sed -i 's/^use_my_apps: false/use_my_apps: true/' .devcontainer/locals.yml
+```
+
+then restart the container, and inside it:
+
+```shell
 bundle exec rake package:apps:symlink        # -> apps/build/package
-# restart Rails; locals.yml is read at boot
+bin/dashboard-server
 cd apps && yarn start                        # writes as it compiles
 ```
 
 Then browse port 9000 rather than 3000. It proxies everything it does not
 serve to Rails, and reloads on save.
 
-## The database is scratch space
+## Sharing a checkout with a native setup
 
-The seeded datadir is baked into the `cdo-dev-db` image, so each container
+Only if you took the at-your-own-risk option above. A codespace, a
+clone-in-volume, or any clone the container has to itself has none of this.
+
+The container and the host are then the same directory, and the build outputs
+in it were written for one machine or the other:
+
+| path | what happens |
+|---|---|
+| `dashboard/public/blockly` | A native build leaves an absolute symlink to a host path, which does not exist in the container. The entrypoint says so and repoints it, which breaks it for the host; `bundle exec rake package:apps:symlink` on the host puts it back. Each side repoints it for the other, indefinitely. |
+| `locals.yml` | Not shared, and that is deliberate — see Config. |
+| `dashboard/public/assets` | Shared, and a native precompile's manifest does not match the container's. Symptom: controller tests erroring with an asset "is not present in the asset pipeline". Fix by precompiling in the container — `RAILS_ENV=test bundle exec rake assets:precompile` — which then makes the host's stale in the same way. |
+| `apps/build` | Shared. Both sides write it; the last writer wins and neither notices. |
+| `apps/node_modules` | Shared. `yarn install` in the container rebuilds native packages against the container's toolchain, in the host's tree, without the lockfile changing. Reinstall natively after, or do not install on both sides. |
+
+`dashboard/tmp` and `dashboard/log` are shared too, so a Rails or webpack
+process running natively at the same time fights the container over pidfiles
+and sockets. Run one or the other.
+
+## Caches and teardown
+
+### The database is scratch space
+
+The seeded datadir is baked into the `cdo-devdb` image, so each container
 writes to a copy-on-write layer. `docker compose stop` and `start` keep those
 writes. `down`, and rebuilding the container, throw them away: rows you
 inserted, migrations you applied, test-database seeds. You come back to the
 bake, and the entrypoint replays the missing migrations — a couple of
 minutes, not a reseed. Rebake when that replay stops being cheap.
+
+The datadir sits at a path with no `VOLUME` declaration, so those writes are
+in the container's own layer — but the `mysql:8.0` and `minio/minio` images
+declare `/var/lib/mysql` and `/data`, and docker gives each container a fresh
+anonymous volume for them. `docker compose down` leaves those behind; `down
+-v` is what actually reclaims the space, and it is also what discards the
+objects you uploaded to the emulated S3.
+
+### Caches
+
+yarn's global cache is a named volume, `cdo-yarn-cache`, because it is the
+one cache that lives outside the checkout: without it the frontend workspaces
+refetch about 1.25 GiB every time the container is recreated. `apps/` keeps
+its cache in the workspace (`enableGlobalCache: false`) and turbo keeps its
+own under `frontend/.turbo`, so those two persist with the checkout and need
+nothing. Plain `down` keeps the yarn cache; `down -v` deletes it with
+everything else.
 
 ## Ports
 
@@ -154,24 +224,21 @@ Each is overridable: `CDO_RAILS_PORT`, `CDO_APPS_PORT`, `CDO_FRONTEND_PORT`,
 
 ## Known limitations
 
-- Bind-mount mode shares `dashboard/tmp`, `dashboard/log` and the build
-  outputs with the host checkout. A Rails or webpack process running natively
-  on the host at the same time will fight the container over them — run one
-  or the other.
 - 528 encrypted levels render hollow: `properties_encryption_key` is empty.
 - The emulated S3 buckets start empty. Reads lazily populate a few of them
   (`lib/cdo/local_development/s3_emulation/`); everything else is missing
   rather than wrong.
-- `yarn test:unit` needs `yarn build` to have run once — jest loads the
-  locale bundles out of `apps/build`. Same as a native checkout.
 - A dev apps build emits `en_us` only, so anything driving a lab page in
   another language fails locally — `tests/foundations/i18n.spec.ts` is the
   one to watch for.
 - The first request after a code reload can 500 in the session store. The
   next one succeeds.
-- The first `spring` command in a fresh container can die with a `mutex_m`
-  default-gem conflict. `bundle exec spring stop` and run it again, or set
-  `DISABLE_SPRING=1`.
+- The apps package the entrypoint downloads is keyed on the content of
+  `apps/`. A branch that changes `apps/` and has never been through CI has no
+  package to download, and level pages need a local `yarn build` (or the
+  dev-server flow above) instead.
+- The database image is amd64 only, which is what Codespaces runs. On arm64,
+  `bake-db.sh` builds one natively.
 
 ## Related docs
 
@@ -179,3 +246,4 @@ Each is overridable: `CDO_RAILS_PORT`, `CDO_APPS_PORT`, `CDO_FRONTEND_PORT`,
 - [docker/README.md](../docker/README.md) — the image family
 - [docker/developers/README.md](../docker/developers/README.md) — sidecars only, no container to work in
 - [apps/README.md](../apps/README.md), [frontend/AGENTS.md](../frontend/AGENTS.md)
+- [frontend/packages/e2e-tests/README.md](../frontend/packages/e2e-tests/README.md) — the Playwright suite

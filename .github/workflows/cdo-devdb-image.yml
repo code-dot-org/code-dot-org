@@ -1,0 +1,152 @@
+# Builds cdo-devdb, the seeded MySQL sidecar the devcontainer starts against,
+# and publishes it from staging. See .devcontainer/README.md.
+#
+# This is the one image in the set that cannot be built from a Dockerfile
+# alone: its content is a *seeded database*, produced by running
+# db:setup_or_migrate and seed:default against a real checkout — about 20
+# minutes, most of it loading curriculum out of dashboard/config. Baking that
+# in CI is the entire point. A codespace has no seeded MySQL and no tarball to
+# make one from; it pulls this.
+#
+# amd64 only, for now. Codespaces is amd64, and the seed is expensive enough
+# that a second architecture should wait until someone is actually developing
+# on arm64 hardware — where `.devcontainer/bake-db.sh` builds the same image
+# locally, natively, from the same script this workflow runs.
+
+name: cdo-devdb-image
+
+on:
+  pull_request:
+    paths:
+      - '.devcontainer/Dockerfile.db'
+      - '.devcontainer/bake-db.sh'
+      - '.github/workflows/cdo-devdb-image.yml'
+  push:
+    branches: [staging]
+    paths:
+      - '.devcontainer/Dockerfile.db'
+      - '.devcontainer/bake-db.sh'
+      - '.devcontainer/locals.yml.sample'
+      - 'dashboard/db/schema.rb'
+      - '.github/workflows/cdo-devdb-image.yml'
+  # Curriculum is not in the content key (see below), so time is what bounds
+  # how stale a published image's seed data can get.
+  schedule:
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-devdb
+  CDO_DEV_IMAGE: ghcr.io/code-dot-org/cdo-dev:latest
+
+jobs:
+  build:
+    name: bake, smoke-test and publish
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      # A full checkout: the seed reads thousands of curriculum files under
+      # dashboard/config, and db:setup_or_migrate reads dashboard/db.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # The bake runs the dev image as its own uid 1000 with the checkout
+      # bind-mounted; the runner's files belong to someone else, and
+      # db:setup_or_migrate writes dashboard/db/schema.rb.
+      - name: Give the checkout to the container user
+        run: sudo chown -R 1000:1000 .
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # A content key over what determines the schema: the schema itself, and
+      # the gem set that migrates and seeds it. Deliberately coarse — it does
+      # NOT cover dashboard/config, whose thousands of curriculum files change
+      # daily and would make the key a per-commit value that never hits. So
+      # the key identifies the schema an image was built for, the weekly
+      # rebuild bounds curriculum drift, and a keyed tag is the newest bake
+      # for that schema rather than an immutable artifact. Pin by digest, or
+      # by the git-<sha> tag, when you need one that cannot move.
+      - name: Compute the content key
+        id: key
+        run: |
+          set -euo pipefail
+          key="$(cat dashboard/db/schema.rb Gemfile.lock | sha256sum | cut -c1-16)"
+          echo "key=$key" >> "$GITHUB_OUTPUT"
+
+      # ~20 minutes: schema load, seed:default, then a clean shutdown and a
+      # tar of the datadir. The same script a developer runs locally.
+      - name: Bake the datadir
+        run: .devcontainer/bake-db.sh
+
+      - name: Build cdo-devdb
+        run: docker build -f .devcontainer/Dockerfile.db -t cdo-devdb:smoke .devcontainer
+
+      # Prove the image is a database and not just a tarball that unpacked:
+      # it starts, every migration in the checkout is applied, and the
+      # curriculum the seed was run for is really in there.
+      - name: Smoke test
+        run: |
+          set -euo pipefail
+          docker run -d --name devdb-smoke cdo-devdb:smoke
+          for _ in $(seq 60); do
+            docker exec devdb-smoke mysqladmin -uroot -ppassword ping --silent 2>/dev/null && break
+            sleep 2
+          done
+          q() { docker exec devdb-smoke mysql -uroot -ppassword -N -e "$1" 2>/dev/null; }
+
+          applied="$(q 'SELECT COUNT(*) FROM dashboard_development.schema_migrations')"
+          # shellcheck disable=SC2012 # migration filenames are ls-safe by convention
+          expected="$(ls dashboard/db/migrate/*.rb | wc -l)"
+          test "$applied" = "$expected" \
+            || { echo "migrations: $applied applied, $expected in the checkout" >&2; exit 1; }
+
+          levels="$(q 'SELECT COUNT(*) FROM dashboard_development.levels')"
+          test "$levels" -gt 50000 \
+            || { echo "levels: only $levels seeded" >&2; exit 1; }
+
+          test "$(q "SELECT COUNT(*) FROM dashboard_development.scripts WHERE name = 'hourofcode'")" = 1 \
+            || { echo "the hourofcode script is missing" >&2; exit 1; }
+
+          test "$(q "SELECT COUNT(*) FROM information_schema.schemata WHERE schema_name = 'dashboard_test'")" = 1 \
+            || { echo "the test database is missing" >&2; exit 1; }
+
+          echo "smoke: $applied migrations, $levels levels"
+          docker rm -f devdb-smoke
+
+      - name: Compute tags
+        id: meta
+        if: github.event_name != 'pull_request'
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=sha,prefix=git-,format=long,enable={{is_default_branch}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=schema-${{ steps.key.outputs.key }},enable={{is_default_branch}}
+            type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
+
+      # Pushed only after the smoke test, and by a separate step from the
+      # build, so a bad bake never reaches a tag.
+      - name: Push cdo-devdb
+        if: github.event_name != 'pull_request'
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          set -euxo pipefail
+          test -n "$TAGS"
+          for ref in $TAGS; do
+            docker tag cdo-devdb:smoke "$ref"
+            docker push "$ref"
+          done
