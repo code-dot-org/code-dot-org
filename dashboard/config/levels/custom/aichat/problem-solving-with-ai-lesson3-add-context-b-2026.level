@@ -1,0 +1,62 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-07-29T22:01:15.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Build a Basketball Basics Bot\r\n\r\nThe Rec League coach set up this bot to help those who are new to basketball — but they weren't careful about what information they gave it.\r\n\r\nThis is supposed to help with topics like scoring, free throws, moving with the ball, fouls, out of bounds, and other basic rules.\r\n\r\n##### Do This:\r\n\r\n1. Start by asking your bot one big question — something like what a person new to this would want to know overall. Then ask a few follow-ups. Notice where it can't give you a straight answer.\r\n2. Open the Retrieval Contexts panel. That's everything your bot knows. Read through it.\r\n3. Fix the context. You can delete cards or edit them to fix them. Some cards are a judgement call - decide what you would trust.\r\n4. Click Update, then ask your questions again. Keep going until you would trust this bot for a family new to the game.\r\n5. Try asking something your bot has no information about. What does it say now?\r\n\r\n##### Talk with your partner:\r\nCompare bots — did you keep or edit the same things? Does having context mean the bot is always right?\r\n\r\n::: details [**Have Time To Make It Better?**]\r\nAdd any of these to your bot's context, then test whether it helps:\r\n\r\n- [Updated September 2026] A personal foul is called when a player makes illegal contact\r\nwith an opponent, such as pushing, holding, or hitting their arm during a shot.\r\n- [Updated September 2026] Each team has five players on the court at a time. Substitutes\r\ncan come in when play is stopped.\r\n- [Updated September 2026] After a team scores, the other team takes possession and play\r\ncontinues from the other end of the court.\r\n\r\n:::\r\n\r\n::: details [**Ready for a challenge?**]\r\nFind one more fact this bot should know. Write it as a new context entry — include the date and where you found it, just like the other cards do. Then test whether your bot uses it.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are a basketball helper built to explain the rules of the game. A rec league coach built you for families who are new to basketball and want to understand what they're watching.",
+        "retrievalContexts": [
+          "[Updated September 2026] A basket scored inside the three-point line is worth 2\npoints. A basket scored from behind the three-point line is worth 3 points.",
+          "[Updated September 2026] Traveling is moving your feet without dribbling the ball.\nWhen a player travels, the other team gets possession of the ball.",
+          "[Updated 2017] A double dribble is when a player dribbles, stops and holds the ball,\nthen starts dribbling again. Traveling is not a violation as long as the player is\nmoving toward the basket.",
+          "[Updated September 2026] The first professional basketball league in the United\nStates was founded in the 1940s, and the sport itself was invented in 1891.",
+          "The ball is out of bounds when it touches the floor outside the boundary lines, or\nwhen a player holding it steps on or over a line.",
+          "[Updated September 2026] Basketball has a number of rules about how players can move\nand handle the ball. Referees enforce these rules during the game.",
+          "[Updated 2014] A free throw is worth 2 points, the same as a basket scored during\nregular play.",
+          "[Updated September 2026] Each free throw that goes in is worth 1 point. Free throws\nare taken from the free throw line with no defenders allowed to interfere."
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful assistant chatbot with a specific purpose.\n\nANSWERING RULES — THESE ARE THE MOST IMPORTANT RULES:\n1. Answer using ONLY the information you have been given.\n2. If the information you have been given does not cover a question, say plainly that you do not have that information. Do NOT use general knowledge to fill the gap. Do NOT guess, invent, or estimate.\n3. If two pieces of the information you have been given conflict with each other, report both and say that they disagree. Do not quietly pick one. Do not say which one is newer, older, or more likely to be correct.\n4. Keep answers short — a few sentences.\n\nALWAYS:\n- Stay in your assigned role. If asked about something outside your purpose, say that is not what you are built for.\n- Stay on task. If the user goes off topic, gently redirect to the purpose outlined in the system prompt.\n- Be Succinct: Keep sentences short. If two sentences can be one short sentence, combine them. Avoid extra words. \n- Target the 950L Lexile Level: Use vocabulary that a typical 8th grader understands. Do not use complex \"college level\" words.\n- Avoid Jargon or Idioms unless necessary for the audience",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ]
+    },
+    "name_suffix": "_2026_dev",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "display_name": "Basketball Basics Bot",
+    "bubble_choice_description": "A rec league coordinator built this bot to explain basketball to new families — but some of its rules are wrong or out of date. Fix its information so the coach can trust it. ",
+    "thumbnail_url": "https://images.code.org/e81fbb09e6db231c227c4b4160e32b11-basketball.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29T22:01:15.653+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-add-context-a-2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-add-context-a-2026\"},{\"changed_at\":\"2026-07-29 22:01:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 00:55:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 02:35:36 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 02:56:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 03:02:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:47:14 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:55:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:09:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:22:20 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:55:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 17:01:36 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -16,7 +16,7 @@ Feature: Libraries
     And I wait for the lab page to fully load
     Then I open the library publish dialog
     And I click selector "#ui-test-unpublish-library" once I see it
-    And I wait until element "b:contains('Successfully unpublished your library')" is visible
+    And I wait until element "h4:contains('Successfully unpublished your library')" is visible
 
   Scenario: Adding and removing a library from a project
     # Student1 publishes a library
@@ -29,8 +29,8 @@ Feature: Libraries
     And I start a new Game Lab project
     And I wait for the lab page to fully load
     Then I open the Manage Libraries dialog
-    And I wait until element "h2:contains('Import library from ID')" is visible
-    And I type the saved channel id into element "#ui-test-import-library > input"
+    And I wait until element "#ui-test-import-library-header:contains('Import library from ID')" is visible
+    And I type the saved channel id into element "#ui-test-import-library input"
     And I click selector "#ui-test-import-library > button" to load a new page
 
     # Confirm Student1's library is in Student2's project
@@ -54,9 +54,9 @@ Feature: Libraries
     Then I open the library publish dialog
     And I click selector "#ui-test-manage-libraries" once I see it
     And I wait until element ".ui-test-sortable-table-select" is visible
-    When I select the "Untitled Project" option in dropdown named "selectOption"
+    When I select the "UntitledProject" option in dropdown named "selectOption"
     And I click selector ".ui-test-sortable-table-select table input:eq(0)"
-    And I click selector ".modal div:contains('Assign library'):last"
+    And I click selector "[role='dialog'] button:contains('Assign library'):last"
     And I wait until element "p:contains('This library is assigned to the following sections:')" is visible
     Then I sign out
 

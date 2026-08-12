@@ -1,0 +1,75 @@
+name 'pl-aif-module-overview-JS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/11d7634b4267f4aa8afc6a3caa340a9b-MS17.png" alt="Insert alt text here" style="width: 35%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+# Getting Ready for the Curriculum
+
+This professional learning module gives you a guided preview of the key concepts and instructional approaches used throughout the unit.
+
+Think of this module as a head start: a chance to build familiarity with the ideas your students will encounter, and to start thinking about how you'll teach them in your classroom.
+
+This module highlights important concepts and teaching strategies, but it doesn't replace reviewing individual lesson materials. Take time to review each lesson before teaching it with students.
+
+<div style="clear:both;"></div>
+
+---
+
+## This Module Covers 6 Lessons
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 25px auto;">
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 1 - Module Introduction</h3>
+    <div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-size: 11pt; font-weight: bold; padding: 4px 10px; border-radius: 10px; margin-bottom: 8px;">You are here</div>
+    <div>A short orientation to what this module covers and how to move through it.<br><br><em>5 minutes</em></div>
+  </div>
+
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 2 - Web Apps</h3>
+    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lessons 1-2</div>
+    <div>Here's the foundation you'll return to all unit: what makes something a web app, and how users actually interact with one. You'll build a shared vocabulary for the structural components you'll be teaching throughout the unit.<br><br><em>10 minutes</em></div>
+  </div>
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 3 - Design Foundations</h3>
+    <div style="font-size: 11pt; color: #555555; margin-bottom: 6px;">Aligns to curriculum lessons 3-5</div>
+    <div>Styling decisions are where accessibility either happens on purpose or gets missed entirely. This lesson covers CSS and how it shapes the user experience of a web app, along with the POUR accessibility principles and how to apply them when styling a page.<br><br><em>20 minutes</em></div>
+  </div>
+
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 4 - Interactivity in Web Apps</h3>
+    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lessons 6-8</div>
+    <div>Event listeners and handlers are the mechanism behind every button click and page update your students will build. This lesson introduces JavaScript as the language that makes a web app respond to users, and how the DOM updates a page in real time.<br><br><em>25 minutes</em></div>
+  </div>
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 5 - JS Functions, Conditionals, and Loops</h3>
+    <div style="font-size: 11pt; color: #555555; margin-bottom: 6px;">Aligns to curriculum lessons 9-11</div>
+    <div>Reusable functions, if/else conditionals, and loops: these three building blocks show up in nearly everything students write from here on. You'll see how these pieces let students build programs that make decisions and repeat actions.<br><br><em>25 minutes</em></div>
+  </div>
+
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 6 - Preparing for the Final Project</h3>
+    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lesson 12</div>
+    <div>Guiding students through a final project takes more than good code checks. This lesson focuses on key instructional strategies including collaboration methods, structured feedback, and time management planning.<br><br><em>10 minutes</em></div>
+  </div>
+
+</div>
+
+---
+
+## Engaging with This Module
+
+As you move through the module, focus on building confidence with the concepts, noticing instructional strategies, and making connections to how students may experience the learning in your classroom.
+
+Throughout these lessons, you'll also see how **AI-supported teaching strategies** connect to each concept along the way.
+
+
+
+
+
+
+MARKDOWN

@@ -105,6 +105,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
       <div className={moduleStyles.predictQuestionContainer}>
         {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
           <textarea
+            id="uitest-predict-response"
             value={predictResponse}
             placeholder={predictSettings.placeholderText}
             onChange={e => dispatch(setPredictResponse(e.target.value))}
@@ -113,7 +114,10 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
                 predictSettings.freeResponseHeight ||
                 PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT,
             }}
-            className={moduleStyles.freeResponseTextArea}
+            className={classNames(
+              moduleStyles.freeResponseTextArea,
+              'form-control'
+            )}
             readOnly={predictAnswerLocked}
           />
         ) : (

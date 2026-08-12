@@ -14,10 +14,6 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "supported_locales": [
-        "es-LA",
-        "es-MX"
-      ],
       "topic_tags": [
         "ai"
       ],
@@ -25,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-26 19:34:25 UTC",
+    "serialized_at": "2026-08-07 02:57:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -984,7 +980,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Whiskers.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\"\n"
+            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Luca.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that this year's Annual Day will be held in an auditorium.\"\n- \"Every desk in the classroom suddenly started playing music.\"\n"
           }
         ]
       },
@@ -1071,7 +1067,7 @@
       "key": "59ece2fc-14f2-4eba-83e5-405352464b6b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *artificial intelligence*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Predict the word that you think will probably come next in the following sentence: The dog barked at the...*\n- Ask students to predict the word that they think will probably come next (i.e. the most common word) and provide a reason for why they chose that word. Have all students raise their hand when they think of an answer. Start calling on students and have other students put down their hand if someone is called on who has the same answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will see that there are several common possibilities that are chosen. Common words might include squirrel, mailman, stranger, etc. However, there will also be outliers that might not be as common (e.g. my aunt Lucy). Having students recognize that there are more and less common responses is a first step towards understanding how probability works while making this sort of prediction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model the AI Chat in Lesson 1, Level 1 for students.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *artificial intelligence*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Predict the word that you think will probably come next in the following sentence: The dog barked as soon as it sees...*\n- Ask students to predict the word that they think will probably come next (i.e. the most common word) and provide a reason for why they chose that word. Have all students raise their hand when they think of an answer. Start calling on students and have other students put down their hand if someone is called on who has the same answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will see that there are several common possibilities that are chosen. Common words might include postman, stray dog, or delivery agent. However, there will also be outliers that might not be as common (e.g. Sharma uncle). Having students recognize that there are more and less common responses is a first step towards understanding how probability works while making this sort of prediction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model the AI Chat in Lesson 1, Level 1 for students.",
         "duration": "7",
         "name": "AI Predictions",
         "progression_name": "AI Predictions"
@@ -3283,7 +3279,7 @@
       "key": "9fd3b525-e061-4762-a677-86d3cb520870",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students summarize their learning about AI prompt refinement in a concise, creative, and engaging way.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to take a minute and answer the Question of the Day on a sticky note, providing a specific example of how one of the key element (Task, Context, Format, Reference, Tone) might be used to refine output.\n\nExample Student Responses:\n- **Format:** Write a poem, such as a haiku or limerick\n- **Tone:** Write in a professional tone, as if you are a college admissions counselor\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Prompt deeper thinking with a guiding question: \n- *What strategies did you use in the levels?* \n- *Give an example of how you added more context or chose a different tone.*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students add their sticky notes to the classroom anchor chart.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students summarize their learning about AI prompt refinement in a concise, creative, and engaging way.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to take a minute and answer the Question of the Day on a sticky note, providing a specific example of how one of the key element (Task, Context, Format, Reference, Tone) might be used to refine output.\n\nExample Student Responses:\n- **Format:** Write a 4-line poem with a rhyming pattern\n- **Tone:** Write in a professional tone, as if you are a college admissions counselor\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Prompt deeper thinking with a guiding question: \n- *What strategies did you use in the levels?* \n- *Give an example of how you added more context or chose a different tone.*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students add their sticky notes to the classroom anchor chart.\n",
         "name": "Key Elements Anchor Chart",
         "tips": [
           {

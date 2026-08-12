@@ -1,0 +1,61 @@
+name 'pl-aif-JS-getting-ready'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Getting Ready for the Curriculum
+
+<img src="https://images.code.org/11d7634b4267f4aa8afc6a3caa340a9b-MS17.png" alt="Insert alt text here" style="width: 35%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+This professional learning module is designed to give you a guided preview of the **key concepts and instructional approaches** used throughout the curriculum.
+
+Think of this module as a head start, an opportunity to build familiarity with the ideas students will encounter and to begin thinking about how you might teach them in your classroom.
+
+While this module highlights important concepts and teaching strategies, it is not intended to cover every lesson or every concept in depth. We still recommend **taking time to review individual lessons and lesson materials** before teaching them with students.
+
+<br>
+
+## This Module Covers:
+
+<div style="width: 100%; margin: 25px 0px;">
+<!-- Top Row -->
+  <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 15px;">
+    <div style="background-color: #FFFFFF; color: #000000; padding: 20px; border-radius: 10px; border: 1px solid #E4E2F8; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <div style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">Web Apps</div>
+      <div style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Learn how websites are structured and how users interact with them.
+      </div>
+    </div>
+    <div style="background-color: #FFFFFF; color: #000000; padding: 20px; border-radius: 10px; border: 1px solid #E4E2F8; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <div style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">CSS and Design</div>
+      <div style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Explore how style and layout choices shape the user experience.
+      </div>
+    </div>
+    <div style="background-color: #FFFFFF; color: #000000; padding: 20px; border-radius: 10px; border: 1px solid #E4E2F8; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <div style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">Interactivity with JavaScript</div>
+      <div style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        See how the DOM and event listeners let programs respond to user actions.
+      </div>
+    </div>
+  </div>
+  <!-- Bottom Row -->
+  <div style="display: flex; justify-content: center; gap: 15px;">
+    <div style="background-color: #FFFFFF; color: #000000; padding: 20px; border-radius: 10px; border: 1px solid #E4E2F8; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <div style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">JavaScript Concepts</div>
+      <div style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Build on functions, conditionals, and loops to create program logic.
+      </div>
+    </div>
+    <div style="background-color: #FFFFFF; color: #000000; padding: 20px; border-radius: 10px; border: 1px solid #E4E2F8; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <div style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">AI-Supported Pedagogy</div>
+      <div style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Teach JavaScript alongside responsible AI use.
+      </div>
+    </div>
+  </div>
+</div>
+
+--- 
+As you move through the module, focus on building confidence with the concepts, noticing instructional strategies, and making connections to how students may experience the learning in your classroom.
+MARKDOWN

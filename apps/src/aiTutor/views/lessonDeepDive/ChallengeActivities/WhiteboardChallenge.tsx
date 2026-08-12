@@ -11,6 +11,8 @@ import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {requestEvaluation} from './requestEvaluation';
+
 import videoChallengeStyles from './video-challenge.module.scss';
 import styles from './whiteboard-challenge.module.scss';
 
@@ -109,6 +111,10 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
         {'Content-Type': 'image/png'}
       );
 
+      // Fire-and-forget: the evaluation result goes to the teacher, not the
+      // student, so the submission flow does not wait on it.
+      requestEvaluation(created.id);
+
       submitCallback(true);
     } catch (error) {
       setSubmitError(
@@ -126,7 +132,6 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
       <div className={styles.whiteboardPane}>
         <ReactFlowCanvas
           updateSources={setSources}
-          levelName="aiTutorChallenge"
           initialNodes={[]}
           initialEdges={[]}
           initialViewport={undefined}

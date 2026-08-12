@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T16:16:32.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Simulating a New Business",
+    "long_instructions": "**Many new businesses wonder how fast they can grow.** \r\n\r\nWill they reach 1,000 customers, 10,000, or even 100,000? This kind of growth often happens through word of mouth. Happy customers tell their friends about a product, and those friends become customers too. This process can help a business grow quickly, much like a social media post going viral.\r\n\r\n**☑️ Do This:**\r\n- Update `simulate` so that it simulates how many months it will take a business to reach a target number of customers.\r\n- Ensure that, for each month, `simulate` prints a message in the format: `\"Month {month}: {customers} customers\"`.\r\n- Choose and experiment with different arguments to `simulate`. Pay attention to how they change your simulation’s outcome.\r\n\r\n**🖥️ Coding Tip:**\r\n\r\nRemember that Python’s `while` loop can repeat code while a condition is true. For example:\r\n\r\n```python\r\ni = 1\r\nwhile i < 5:\r\n    print(i)\r\n    i += 1\r\n```",
+    "bubble_choice_description": "Simulate a business reaching a target number of customers.",
+    "thumbnail_url": "https://images.code.org/be8e3bfaec5810dbf683eadd95b0b97d-new-business.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def simulate(customers, growth, target):\n    months = 0\n    print(f\"Month {months}: {customers} customers\")\n\n    customers += customers * growth\n    months += 1\n    print(f\"Month {months}: {customers} customers\")\n\n    customers += customers * growth\n    months += 1\n    print(f\"Month {months}: {customers} customers\")\n\n\nsimulate(50, 1, 1000000)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 16:46:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 16:48:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:01:35 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

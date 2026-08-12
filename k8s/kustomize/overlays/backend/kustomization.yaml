@@ -1,0 +1,29 @@
+# Backend-only local development: ActiveJob worker plus cluster-local
+# services (mysql/redis/minio), no dashboard frontend. This is what the
+# Skaffold config deploys by default (bare `skaffold dev`); ../development
+# composes this overlay and adds the dashboard layer on top
+# (`skaffold dev -p dashboard`).
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+components:
+  - ../../components/backend
+  - ../../components/redis
+  - ../../components/mysql
+  - ../../components/minio
+patches:
+  # Local-dev relaxations for the worker, mirroring the dashboard
+  # relaxations in ../development.
+  - path: active-job-worker.patch.yaml
+  - target:
+      kind: Deployment
+      name: cdo-active-job-worker
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/envFrom/1/secretRef/optional
+        value: true
+labels:
+  - pairs:
+      app.kubernetes.io/name: cdo
+      app.kubernetes.io/instance: cdo
+    includeSelectors: true
+    includeTemplates: true

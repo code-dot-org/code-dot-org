@@ -1,4 +1,5 @@
 require 'cdo/url_converter'
+require 'cdo/brand'
 
 DEFAULT_WAIT_TIMEOUT = 2.minutes
 SHORT_WAIT_TIMEOUT = 30.seconds
@@ -726,6 +727,10 @@ Then /^I should see title includes "([^"]*)"$/ do |title|
   expect(@browser.title).to include(title)
 end
 
+Then /^I should see branded title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include("#{title} - #{Cdo::Brand.legal_name}")
+end
+
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
@@ -775,7 +780,7 @@ end
 
 Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   # Add more unescaping rules here as needed.
-  expected_text.gsub!(/\\n/, "\n")
+  expected_text.gsub!("\\n", "\n")
   element_has_text(selector, expected_text)
 end
 
@@ -1398,7 +1403,7 @@ end
 def convert_keys(keys)
   return keys[1..].to_sym if keys.start_with?(':')
   keys.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
-  keys.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
+  keys.gsub!("\\\\n", "\\n") # Fix up escaped newline
   # Convert newlines to :enter keys.
   keys.chars.map {|k| k == "\n" ? :enter : k}
 end

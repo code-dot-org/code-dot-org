@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_07_22_124043) do
+ActiveRecord::Schema[7.0].define(version: 2026_08_05_182458) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -387,6 +387,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_07_22_124043) do
     t.datetime "evaluated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "evaluation_status"
     t.index ["challenge_id", "user_id", "created_at"], name: "index_challenge_responses_on_challenge_user_created"
     t.index ["user_id"], name: "index_challenge_responses_on_user_id"
   end
@@ -398,6 +399,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_07_22_124043) do
     t.text "whiteboard_starter_image_alt_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "rubric"
     t.index ["lesson_id"], name: "index_challenges_on_lesson_id"
   end
 
@@ -487,14 +489,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_07_22_124043) do
     t.integer "level_id"
     t.index ["concept_id"], name: "index_concepts_levels_on_concept_id"
     t.index ["level_id"], name: "index_concepts_levels_on_level_id"
-  end
-
-  create_table "contact_rollups_final", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.string "email", null: false
-    t.json "data", null: false
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.index ["email"], name: "index_contact_rollups_final_on_email", unique: true
   end
 
   create_table "contact_rollups_pardot_memory", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

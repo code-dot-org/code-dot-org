@@ -4,9 +4,11 @@ $thumbnail-padding: 2px;
 $thumbnail-root-padding: 10px;
 $hover-plus-size: 24px;
 $thumbnail-margin-height: 10px;
+$thumbnail-inset: 2 * ($thumbnail-border-width + $thumbnail-padding);
+$preview-size: $thumbnail-size - $thumbnail-root-padding - $thumbnail-inset;
 
 :export {
-  previewSize: $thumbnail-size - $thumbnail-root-padding - 2 * $thumbnail-border-width - 2 * $thumbnail-padding;
+  previewSize: $preview-size;
 }
 
 .root {
@@ -77,6 +79,8 @@ $thumbnail-margin-height: 10px;
 
 .categoryImage {
   border-radius: 10px;
+  // Keep taller-than-square images inside the tile.
+  max-height: $preview-size;
 }
 
 .multiSelectIcon {

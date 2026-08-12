@@ -62,8 +62,8 @@ describe('BubbleBadge', () => {
         bubbleSize={BubbleSize.full}
       />
     );
-    expect(wrapper.find('div').props().style.top).toBe(-7);
-    expect(wrapper.find('div').props().style.right).toBe(-7);
+    expect(wrapper.find('div').props().style.top).toBe(-4);
+    expect(wrapper.find('div').props().style.right).toBe(-10);
   });
 
   it('positions the element correctly is bubbleShape is a diamond for assessment badge', () => {
@@ -74,8 +74,8 @@ describe('BubbleBadge', () => {
         bubbleSize={BubbleSize.full}
       />
     );
-    expect(wrapper.find('div').props().style.top).toBe(-13);
-    expect(wrapper.find('div').props().style.right).toBe(-17);
+    expect(wrapper.find('div').props().style.top).toBe(-10);
+    expect(wrapper.find('div').props().style.right).toBe(-20);
   });
 
   describe('KeepWorkingBadge', () => {
@@ -88,7 +88,7 @@ describe('BubbleBadge', () => {
   });
 
   describe('AssessmentBadge', () => {
-    it('has a purple background', () => {
+    it('has a white background', () => {
       const wrapper = mount(<AssessmentBadge />);
       expect(
         wrapper
@@ -99,16 +99,16 @@ describe('BubbleBadge', () => {
               n.prop('iconStyle') !== 'regular'
           )
           .props().style.color
-      ).toBe('var(--text-brand-purple-primary)');
+      ).toBe('var(--background-neutral-primary)');
     });
 
-    it('has a check icon', () => {
+    it('has a black star icon', () => {
       const wrapper = mount(<AssessmentBadge />);
-      expect(
-        wrapper
-          .find(FontAwesomeV6Icon)
-          .filterWhere(n => n.prop('iconName') === 'check')
-      ).toHaveLength(1);
+      const star = wrapper
+        .find(FontAwesomeV6Icon)
+        .filterWhere(n => n.prop('iconName') === 'star');
+      expect(star).toHaveLength(1);
+      expect(star.props().style.color).toBe('var(--text-neutral-primary)');
     });
 
     describe('displays a white border when hasWhiteBorder is true', () => {

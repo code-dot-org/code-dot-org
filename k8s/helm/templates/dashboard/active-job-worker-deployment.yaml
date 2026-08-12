@@ -1,0 +1,28 @@
+{{- if .Values.activeJobWorker.enabled -}}
+# See _dashboard.yaml for shared Deployment details.
+#
+# The worker pins RAILS_ENV, extraEnv, resources, and local-dev mounts from
+# activeJobWorker values so its rendering does not vary with per-environment
+# values. This keeps it identical to the static manifest in
+# k8s/kustomize/components/backend/active-job-worker-deployment.yaml until
+# k8s-gitops configures the worker per environment.
+{{- include "dashboard"
+  (merge (dict
+    "apiVersion" "apps/v1"
+    "kind" "Deployment"
+    "name" (include "cdo.fullname" (merge (dict "component" "active-job-worker") .))
+    "shortName" "active-job-worker"
+    "labels" (include "cdo.labels" (merge (dict "component" "active-job-worker") .))
+    "selectorLabels" (include "cdo.selectorLabels" (merge (dict "component" "active-job-worker") .))
+    "replicas" .Values.activeJobWorker.replicas
+    "command" .Values.activeJobWorker.command
+    "args" .Values.activeJobWorker.args
+    "RAILS_ENV" .Values.activeJobWorker.RAILS_ENV
+    "extraEnv" .Values.activeJobWorker.extraEnv
+    "resources" .Values.activeJobWorker.resources
+    "localDevMountsEnabled" false
+    "healthChecksEnabled" false
+    "portsEnabled" false
+  ) .)
+}}
+{{- end }}

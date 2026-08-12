@@ -1,0 +1,9 @@
+# Dashboard layer: the frontend-serving Rails deployment, additive on top of
+# the backend component. Overlays that want the full app compose backend +
+# dashboard (see ../../base); backend-only overlays compose just ../backend.
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+resources:
+  - dashboard-deployment.yaml
+  - dashboard-ingress.yaml
+  - dashboard-service.yaml

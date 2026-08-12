@@ -507,6 +507,9 @@ const EVENTS = {
 
   // Just In Time PL - Onboarding
   ONBOARDING_TOUR_STARTED: 'Onboarding tour started',
+  ONBOARDING_STEP_VIEWED: 'Onboarding step viewed',
+  ONBOARDING_QUIZ_ANSWERED: 'Onboarding quiz answered',
+  ONBOARDING_NAVIGATION: 'Onboarding navigation',
   ONBOARDING_TOUR_COMPLETED: 'Onboarding tour completed',
   ONBOARDING_TOUR_ABANDONED: 'Onboarding tour abandoned',
 
@@ -715,9 +718,6 @@ const EVENTS = {
     'AI-generated feedback is successfully returned and displayed in the feedback text box',
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
-
-  LATAM_GE_REGION_NOTICE_CLICKED: 'LATAM GE region notice clicked',
-  LATAM_GE_REGION_NOTICE_CLOSED: 'LATAM GE region notice closed',
 
   // Pair programming
   PAIRING_ADD_PARTNER_BUTTON_CLICKED:

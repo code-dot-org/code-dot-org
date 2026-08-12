@@ -10,7 +10,10 @@ import {
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlocks';
-import {setThemeAndRenderBlocks} from '@cdo/apps/blockly/utils/workspace/themes';
+import {
+  getUserTheme,
+  setThemeAndRenderBlocks,
+} from '@cdo/apps/blockly/utils/workspace/themes';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
@@ -179,15 +182,18 @@ export default function useBlocklyWorkspace({
     };
   }, [enabled, sharedBlocks, toolboxDefinition]);
 
-  // Update workspace theme on theme change.
+  // Update workspace theme on display-theme change. Resolve through
+  // getUserTheme rather than applying cdoDark/cdoTheme directly: a user
+  // with a persisted accessibility theme (e.g. high contrast) must get
+  // that theme's dark/light variant, not the modern palette.
   useEffect(() => {
     const workspace = workspaceRef.current;
     if (workspace) {
-      setThemeAndRenderBlocks(
-        workspace,
-        theme === 'Dark' ? cdoDark : cdoTheme,
-        workspace.getTheme()
-      );
+      const previousTheme = workspace.getTheme();
+      Blockly.isDarkTheme = theme === 'Dark';
+      getUserTheme(theme === 'Dark' ? cdoDark : cdoTheme).then(userTheme => {
+        setThemeAndRenderBlocks(workspace, userTheme, previousTheme);
+      });
     }
   }, [theme]);
 

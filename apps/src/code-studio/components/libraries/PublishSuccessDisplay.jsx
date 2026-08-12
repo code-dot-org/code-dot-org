@@ -1,8 +1,7 @@
-import {Typography} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import LibraryIdCopier from './LibraryIdCopier';
@@ -18,20 +17,23 @@ export default class PublishSuccessDisplay extends React.Component {
     const {libraryName, channelId, onShareTeacherLibrary} = this.props;
     return (
       <div>
-        <Typography variant="h2" gutterBottom>
-          <b>{i18n.libraryPublishTitle()}</b>
-          {libraryName}
+        <Typography variant="h4" gutterBottom>
+          {i18n.libraryPublishTitle().trimEnd()} {libraryName}
         </Typography>
         <div>
-          <p>{i18n.libraryPublishExplanation()}</p>
+          <Typography variant="body2" gutterBottom>
+            {i18n.libraryPublishExplanation()}
+          </Typography>
           <div style={styles.centerContent}>
             <LibraryIdCopier channelId={channelId} />
             {onShareTeacherLibrary && (
               <Button
-                color={Button.ButtonColor.gray}
+                variant="outlined"
+                color="secondary"
                 onClick={onShareTeacherLibrary}
-                text={i18n.manageLibraries()}
-              />
+              >
+                {i18n.manageLibraries()}
+              </Button>
             )}
           </div>
         </div>

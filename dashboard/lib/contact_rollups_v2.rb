@@ -202,7 +202,6 @@ class ContactRollupsV2
     {
       RawRows: ContactRollupsRaw.count,
       ProcessedRows: ContactRollupsProcessed.count,
-      FinalRows: ContactRollupsProcessed.count,
       PardotMemoryRows: ContactRollupsPardotMemory.count
     }
   end
@@ -268,7 +267,7 @@ class ContactRollupsV2
       "*ContactRollupsV2* (#{CDO.rack_env}#{', dry-run' if @is_dry_run})",
       "Number of Pardot prospects created: #{@log_collector.metrics[:ProspectsCreated]}",
       "Number of Pardot prospects updated: #{@log_collector.metrics[:ProspectsUpdated]}",
-      "Number of contacts in ContactRollupsFinal: #{@log_collector.metrics[:FinalRows]}",
+      "Number of processed contacts: #{@log_collector.metrics[:ProcessedRows]}",
       ":clock10: #{formatted_duration} #{log_link} #{cloud_watch_link}"
     ].join("\n")
 

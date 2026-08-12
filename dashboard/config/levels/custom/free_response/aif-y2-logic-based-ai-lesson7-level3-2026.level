@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-07-28T15:41:52.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "When is it useful to use a `for` loop?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-28 15:42:36 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

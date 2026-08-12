@@ -25,10 +25,16 @@ import * as utils from '../utils';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
 import ChartApi from './ChartApi';
-import {ICON_PREFIX_REGEX} from './constants';
+import {
+  ICON_PREFIX_REGEX,
+  FLAGGED_IMAGE_URL_MESSAGE,
+  IMAGE_MODERATION_ERROR_MESSAGE,
+} from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
 import EventSandboxer from './EventSandboxer';
+import {moderateApplabImageUrl} from './imageUrlModeration';
+import {resolveAppLabImagePath} from './imageUrlUtils';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import sanitizeHtml from './sanitizeHtml';
 import * as setPropertyDropdown from './setPropertyDropdown';
@@ -53,6 +59,41 @@ var toBeCached = {};
  * @type {EventSandboxer}
  */
 var eventSandboxer = new EventSandboxer();
+
+function moderationWarningForStatus(status) {
+  return status === 'flagged'
+    ? FLAGGED_IMAGE_URL_MESSAGE
+    : IMAGE_MODERATION_ERROR_MESSAGE;
+}
+
+function captureAsyncWarningHandler() {
+  try {
+    return getAsyncOutputWarning();
+  } catch (exception) {
+    return () => {};
+  }
+}
+
+function moderateAbsoluteImageUrl(
+  imageUrl,
+  commandName,
+  onSafe,
+  onUnsafe,
+  warningHandler = () => {}
+) {
+  moderateApplabImageUrl(imageUrl, {allowTestOverride: true}).then(
+    ({status, normalizedUrl}) => {
+      if (status === 'safe') {
+        onSafe(normalizedUrl);
+        return;
+      }
+      warningHandler(`${commandName}(): ${moderationWarningForStatus(status)}`);
+      if (onUnsafe) {
+        onUnsafe();
+      }
+    }
+  );
+}
 
 function apiValidateActiveCanvas(opts, funcName) {
   var validatedActiveCanvasKey = 'validated_active_canvas';
@@ -216,10 +257,23 @@ applabCommands.image = function (opts) {
   if (ICON_PREFIX_REGEX.test(opts.src)) {
     newImage.src = assetPrefix.renderIconToString(opts.src, newImage);
     newImage.width = newImage.height = 200;
+    newImage.setAttribute('data-canonical-image-url', opts.src);
+  } else if (assetPrefix.ABSOLUTE_REGEXP.test(opts.src)) {
+    const warningHandler = captureAsyncWarningHandler();
+    moderateAbsoluteImageUrl(
+      opts.src,
+      'image',
+      normalizedSrc => {
+        newImage.src = resolveAppLabImagePath(normalizedSrc);
+        newImage.setAttribute('data-canonical-image-url', normalizedSrc);
+      },
+      undefined,
+      warningHandler
+    );
   } else {
-    newImage.src = assetPrefix.fixPath(opts.src);
+    newImage.src = resolveAppLabImagePath(opts.src);
+    newImage.setAttribute('data-canonical-image-url', opts.src);
   }
-  newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
   elementUtils.setDefaultBorderStyles(newImage, {forceDefaults: true});
@@ -792,50 +846,66 @@ applabCommands.drawImageURL = function (opts) {
     }
   };
 
-  var image = new Image();
-  image.src = assetPrefix.fixPath(opts.url);
-  image.onload = function () {
-    var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
-    if (!ctx) {
-      return;
-    }
-    var x = utils.valueOr(opts.x, 0);
-    var y = utils.valueOr(opts.y, 0);
-
-    // if given a width/height use that
-    var renderWidth = utils.valueOr(opts.width, image.width);
-    var renderHeight = utils.valueOr(opts.height, image.height);
-
-    // if undefined, extra width/height from image and potentially resize to
-    // fit
-    if (opts.width === undefined || opts.height === undefined) {
-      var aspectRatio = image.width / image.height;
-      if (aspectRatio > 1) {
-        renderWidth = Math.min(Applab.activeCanvas.width, image.width);
-        renderHeight = renderWidth / aspectRatio;
-      } else {
-        renderHeight = Math.min(Applab.activeCanvas.height, image.height);
-        renderWidth = renderHeight * aspectRatio;
+  var drawLoadedImage = function (url) {
+    var image = new Image();
+    image.src = resolveAppLabImagePath(url);
+    image.onload = function () {
+      var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
+      if (!ctx) {
+        return;
       }
-    }
+      var x = utils.valueOr(opts.x, 0);
+      var y = utils.valueOr(opts.y, 0);
 
-    ctx.save();
-    ctx.setTransform(
-      renderWidth / image.width,
-      0,
-      0,
-      renderHeight / image.height,
-      x,
-      y
+      // if given a width/height use that
+      var renderWidth = utils.valueOr(opts.width, image.width);
+      var renderHeight = utils.valueOr(opts.height, image.height);
+
+      // if undefined, extract width/height from image and potentially resize to fit.
+      if (opts.width === undefined || opts.height === undefined) {
+        var aspectRatio = image.width / image.height;
+        if (aspectRatio > 1) {
+          renderWidth = Math.min(Applab.activeCanvas.width, image.width);
+          renderHeight = renderWidth / aspectRatio;
+        } else {
+          renderHeight = Math.min(Applab.activeCanvas.height, image.height);
+          renderWidth = renderHeight * aspectRatio;
+        }
+      }
+
+      ctx.save();
+      ctx.setTransform(
+        renderWidth / image.width,
+        0,
+        0,
+        renderHeight / image.height,
+        x,
+        y
+      );
+      ctx.drawImage(image, 0, 0);
+      ctx.restore();
+
+      callback(true);
+    };
+    image.onerror = function () {
+      callback(false);
+    };
+  };
+
+  if (assetPrefix.ABSOLUTE_REGEXP.test(opts.url)) {
+    const warningHandler = captureAsyncWarningHandler();
+    moderateAbsoluteImageUrl(
+      opts.url,
+      'drawImageURL',
+      normalizedUrl => {
+        drawLoadedImage(normalizedUrl);
+      },
+      () => callback(false),
+      warningHandler
     );
-    ctx.drawImage(image, 0, 0);
-    ctx.restore();
-
-    callback(true);
-  };
-  image.onerror = function () {
-    callback(false);
-  };
+    return;
+  }
+  drawLoadedImage(opts.url);
 };
 
 applabCommands.getImageData = function (opts) {
@@ -1208,10 +1278,29 @@ applabCommands.setImageURL = function (opts) {
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     if (ICON_PREFIX_REGEX.test(opts.src)) {
       element.src = assetPrefix.renderIconToString(opts.src, element);
+      element.setAttribute('data-canonical-image-url', opts.src);
+    } else if (assetPrefix.ABSOLUTE_REGEXP.test(opts.src)) {
+      const warningHandler = captureAsyncWarningHandler();
+      moderateAbsoluteImageUrl(
+        opts.src,
+        'setImageURL',
+        normalizedSrc => {
+          element.src = resolveAppLabImagePath(normalizedSrc);
+          element.setAttribute('data-canonical-image-url', normalizedSrc);
+          if (!toBeCached[element.src]) {
+            var moderatedImage = new Image();
+            moderatedImage.src = element.src;
+            toBeCached[element.src] = true;
+          }
+        },
+        undefined,
+        warningHandler
+      );
+      return true;
     } else {
-      element.src = assetPrefix.fixPath(opts.src);
+      element.src = resolveAppLabImagePath(opts.src);
+      element.setAttribute('data-canonical-image-url', opts.src);
     }
-    element.setAttribute('data-canonical-image-url', opts.src);
 
     if (!toBeCached[element.src]) {
       var img = new Image();
@@ -1401,6 +1490,25 @@ applabCommands.setProperty = function (opts) {
     info.type
   );
   if (!valid) {
+    return;
+  }
+
+  var imageProperties = ['image', 'picture', 'screen-image'];
+  if (
+    imageProperties.includes(info.internalName) &&
+    typeof value === 'string' &&
+    assetPrefix.ABSOLUTE_REGEXP.test(value)
+  ) {
+    const warningHandler = captureAsyncWarningHandler();
+    moderateAbsoluteImageUrl(
+      value,
+      'setProperty',
+      normalizedValue => {
+        Applab.updateProperty(element, info.internalName, normalizedValue);
+      },
+      undefined,
+      warningHandler
+    );
     return;
   }
 

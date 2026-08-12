@@ -82,13 +82,15 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
         ) : (
           <>
             <div className={styles.cfuQuestionStudentAnswerQuestion}>
-              <Typography variant="body3">
+              <Typography variant="label3">
                 <strong>Question</strong>
               </Typography>
-              <SafeMarkdown markdown={questionText} />
+              <Typography variant="body4">
+                <SafeMarkdown unwrapped markdown={questionText} />
+              </Typography>
             </div>
             <div className={styles.cfuQuestionStudentAnswerContent}>
-              <Typography variant="body3">
+              <Typography variant="label3">
                 <strong>Student Answer</strong>
               </Typography>
               {renderStudentAnswerByType(level)}

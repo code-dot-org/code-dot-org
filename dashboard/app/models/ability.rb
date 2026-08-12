@@ -23,6 +23,7 @@ class Ability
       ReferenceGuide, # see override below
       Rubric,
       :reports,
+      :widget2, # levelbuilder only, see override below
       User,
       UserPermission,
       Follower,
@@ -346,6 +347,8 @@ class Ability
       can :read, ChallengeResponse do |challenge_response|
         challenge_response.user_id == user.id || user.students.exists?(id: challenge_response.user_id)
       end
+      # Only the response's owner triggers AI evaluation of it.
+      can :evaluate, ChallengeResponse, user_id: user.id
       can :read, ChallengeResponseAsset do |asset|
         response = asset.challenge_response
         response.user_id == user.id || user.students.exists?(id: response.user_id)
@@ -519,6 +522,8 @@ class Ability
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
 
+      can :manage, :widget2
+
       can [:validate_form, :validate_library_question], :pd_foorm
     end
 
@@ -576,13 +581,14 @@ class Ability
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
-      # Levelbuilders can access and update Java Lab validation code (using the
-      # access_token_with_override_validation endpoint).
+      # Levelbuilders can run unsaved Java Lab validation code, either against a
+      # channel's saved sources (access_token_with_override_validation) or
+      # alongside override sources (access_token_with_override_sources_and_validation).
       can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
         user.teacher? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can :access_token_with_override_validation, :javabuilder_session do
+      can [:access_token_with_override_validation, :access_token_with_override_sources_and_validation], :javabuilder_session do
         user.levelbuilder?
       end
 

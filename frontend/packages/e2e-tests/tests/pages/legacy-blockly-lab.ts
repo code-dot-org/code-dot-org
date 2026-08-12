@@ -15,6 +15,12 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Outer instructions container; authored hint content is appended here. */
   readonly instructionsPanel: Locator;
 
+  /** Instructions paragraph text; localizes with the lab locale. */
+  readonly instructionsText: Locator;
+
+  /** CSF instructions More/Less toggle (apps/src/templates/instructions/CollapserButton.jsx). */
+  readonly instructionsToggleButton: Locator;
+
   /** Authored hints (lightbulb, count badge, "Yes" prompt) in the CSF instructions UI. */
   readonly hints: AuthoredHintsComponent;
 
@@ -57,10 +63,19 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Continue button on the shared feedback/congrats dialog, rendered for all legacy Blockly labs. */
   readonly continueButton: Locator;
 
+  /**
+   * Read-only Blockly workspaces embedded inline in markdown instructions
+   * (see convertXmlToBlockly() in apps/src/templates/instructions/utils.js).
+   * Empty if this level's instructions have no embedded blocks.
+   */
+  readonly embeddedInstructionBlocks: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
     this.instructionsPanel = page.locator('.csf-top-instructions');
+    this.instructionsText = page.locator('.csf-top-instructions p');
+    this.instructionsToggleButton = page.locator('#toggleButton');
     this.hints = new AuthoredHintsComponent(page);
     this.callouts = new CalloutsComponent(page);
     this.runButton = page.locator('#runButton');
@@ -76,6 +91,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.congratsMessage = page.locator('.congrats');
     this.visualization = page.locator('#visualization');
     this.continueButton = page.locator('#continue-button');
+    this.embeddedInstructionBlocks = page.locator(
+      '.readonly-block-space-container',
+    );
   }
 
   /**
@@ -112,6 +130,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     }
   }
 
+  /** Hook for lab-specific modals that must clear before the instructions overlay; see CraftLab. */
+  protected async dismissLabInterstitials(): Promise<void> {}
+
   /** Wait for the lab to be interactive: run button, header, overlay dismissed, header settled. */
   async waitForReady(): Promise<void> {
     // #runButton mounts on window 'load'; a cold or contended boot can exceed 15s.
@@ -123,6 +144,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     // State-agnostic: labs boot for anonymous sessions too, so wait for the
     // header user area in either auth state, not specifically signed-in.
     await this.header.waitForUserChrome();
+    // Both of these stack above the instructions overlay handled below, whose
+    // OK-dialog click they would otherwise intercept.
+    await this.introVideoModal.dismissIfShown();
+    await this.dismissLabInterstitials();
     // Dismiss the instructions overlay if shown (anonymous sessions). Its
     // backdrop (#overlay) fills the viewport and a plain .click() lands on
     // the default center point, which the instructions dialog itself can
@@ -157,6 +182,30 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     );
   }
 
+  /**
+   * Wait for embedded Blockly workspaces in markdown instructions to render
+   * and settle. Creation is gated on a GET /user_preference/theme
+   * round-trip that MarkdownInstructions never awaits, so a container can
+   * still be 0x0 well after waitForReady()/waitForVisualStability resolve;
+   * a FieldImage inside (e.g. a K1 harvester block) can also resize again
+   * once its icon loads. No-op if this level's instructions have no
+   * embedded blocks.
+   */
+  async waitForEmbeddedInstructionsStable(): Promise<void> {
+    const count = await this.embeddedInstructionBlocks.count();
+    for (let i = 0; i < count; i++) {
+      const block = this.embeddedInstructionBlocks.nth(i);
+      await expect(async () => {
+        const box = await block.boundingBox();
+        expect(
+          box?.width,
+          'embedded Blockly workspace has not rendered yet',
+        ).toBeGreaterThan(0);
+      }).toPass({intervals: [120], timeout: 15_000});
+      await waitUntilStable(block);
+    }
+  }
+
   /** Clear the workspace, then arrange and load the given blocks XML via the lab's test-only interface. */
   async loadArrangedBlocksXml(blocksXml: string): Promise<void> {
     await expect
@@ -178,6 +227,20 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** A block's rendered SVG group, keyed by its Blockly block id. */
   blockLocator(blockId: string): Locator {
     return this.page.locator(`.blocklySvg [data-id="${blockId}"]`);
+  }
+
+  /**
+   * A toolbox category's label, by 1-based position. Blockly exposes the
+   * toolbox as an ARIA tree, so by position rather than by name: the name is
+   * the locale-dependent text under test. The accessibility tree also omits
+   * the duplicate non-interactive toolbox some lessons render, which a
+   * `:visible` CSS filter would have had to exclude by hand.
+   */
+  toolboxCategoryLabel(index: number): Locator {
+    return this.mainContent
+      .getByRole('tree')
+      .getByRole('treeitem')
+      .nth(index - 1);
   }
 
   /**

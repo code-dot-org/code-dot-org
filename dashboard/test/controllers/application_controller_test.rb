@@ -178,13 +178,13 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
     it 'does nothing when brand router is disabled' do
       DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
-      get root_path, params: {brand: 'codeai'}
+      get root_path, params: {brand: 'codeai-audit'}
       assert_nil cookies[cookie_key]
     end
 
     it 'sets brand cookie from URL param' do
-      get root_path, params: {brand: 'codeai'}
-      assert_equal 'codeai', response.cookies[cookie_key]
+      get root_path, params: {brand: 'codeai-audit'}
+      assert_equal 'codeai-audit', response.cookies[cookie_key]
     end
 
     it 'ignores unknown brand codes' do
@@ -193,7 +193,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
 
     it 'clears brand cookie on brand-reset' do
-      cookies[cookie_key] = 'codeai'
+      cookies[cookie_key] = 'codeai-audit'
       get root_path, params: {'brand-reset' => '1'}
       assert_nil response.cookies[cookie_key]
     end

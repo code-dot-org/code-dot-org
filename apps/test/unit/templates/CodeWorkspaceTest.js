@@ -1,3 +1,4 @@
+import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -8,6 +9,7 @@ import {
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
+import {getMuiThemeForBrand} from '@cdo/apps/util/brand';
 
 import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
@@ -46,20 +48,46 @@ describe('CodeWorkspace', () => {
     restoreStudioApp();
   });
 
+  // The counter renders as a MuiTypography, so the id selector matches the
+  // component, its inner Typography and the DOM element. Take the last, since
+  // the display style is set imperatively on the DOM node.
+  const blockCounter = () => workspace.find('#blockCounter').last();
+
   it('onToggleShowCode displays blocks for levels with enableShowBlockCount=true', () => {
     studioApp.enableShowBlockCount = true;
 
     workspace.find(ShowCodeToggle).simulate('click');
-    let counter = workspace.find('#blockCounter');
-    expect(counter).to.have.style('display', 'inline-block');
+    expect(blockCounter()).to.have.style('display', 'flex');
   });
 
   it('onToggleShowCode does not display blocks for levels with enableShowBlockCount=false', () => {
     studioApp.enableShowBlockCount = false;
 
     workspace.find(ShowCodeToggle).simulate('click');
-    let counter = workspace.find('#blockCounter');
-    expect(counter).to.have.style('display', 'none');
+    expect(blockCounter()).to.have.style('display', 'none');
+  });
+
+  // The app mounts through createReactRoot, which wraps everything in the brand
+  // MUI theme. That theme maps the body/overline variants onto block elements
+  // like <p>, so nesting mistakes only surface when the theme is present -
+  // unthemed mounts fall back to MUI's <span> default and stay quiet.
+  it('renders no invalid DOM nesting under the brand theme', () => {
+    const errors = [];
+    const consoleError = jest
+      .spyOn(console, 'error')
+      .mockImplementation(msg => errors.push(String(msg)));
+
+    try {
+      mount(
+        <MuiThemeProvider theme={getMuiThemeForBrand()}>
+          <CodeWorkspace {...MINIMUM_PROPS} />
+        </MuiThemeProvider>
+      );
+    } finally {
+      consoleError.mockRestore();
+    }
+
+    expect(errors.filter(e => e.includes('validateDOMNesting'))).to.be.empty;
   });
 
   it('displays old version warning when displayOldVersionBanner is true', () => {
