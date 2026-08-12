@@ -82,7 +82,10 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
   },
   ref,
 ) {
-  const callerTooltipProps = slotProps?.tooltip;
+  // Same order MUI uses. We always set slotProps.tooltip, so MUI would never
+  // reach a caller's deprecated componentsProps.tooltip on its own.
+  const callerTooltipProps =
+    slotProps?.tooltip ?? muiTooltipProps.componentsProps?.tooltip;
 
   // MUI mirrors placements for right-to-left, but only once the theme's
   // `direction` says so, and ours takes no direction. Read the document

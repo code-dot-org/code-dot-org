@@ -279,6 +279,34 @@ describe('Design System - Tooltip (MUI)', () => {
     expect(bubble).toHaveAttribute('data-theme', 'Dark');
   });
 
+  // MUI only falls back to the deprecated componentsProps when slotProps is
+  // absent, and we always set slotProps.tooltip, so we do the fallback here.
+  it('keeps caller tooltip props given the deprecated componentsProps', async () => {
+    renderKeyboardOnly({
+      size: 's',
+      componentsProps: {tooltip: {className: 'callerClass'}},
+    });
+
+    await user.tab();
+
+    const bubble = await findTooltipBubble();
+    expect(bubble).toHaveClass('callerClass');
+    expect(bubble).toHaveAttribute('data-size', 's');
+  });
+
+  it('prefers slotProps over componentsProps, as MUI does', async () => {
+    renderKeyboardOnly({
+      slotProps: {tooltip: {className: 'fromSlotProps'}},
+      componentsProps: {tooltip: {className: 'fromComponentsProps'}},
+    });
+
+    await user.tab();
+
+    const bubble = await findTooltipBubble();
+    expect(bubble).toHaveClass('fromSlotProps');
+    expect(bubble).not.toHaveClass('fromComponentsProps');
+  });
+
   it('keeps caller tooltip slotProps given as a function', async () => {
     renderKeyboardOnly({
       'data-theme': 'Dark',
