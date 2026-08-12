@@ -1,0 +1,38 @@
+name 'pl-aif1-js-abstractions-spec'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Abstraction and the SPEC Framework</h1>
+
+<p>The named function from the panel, <code>addNotification</code>, did something worth noticing: it let you call the behavior without re-reading what's inside it every time. That's abstraction.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Abstraction</b> is hiding complex details and showing only the essential features. A named function is one way code uses abstraction: you can call <code>addNotification()</code> without needing to see or think about what's inside it.</p>
+</div>
+<br>
+<p>Think of it the way you'd use an appliance. Calling <code>useApple()</code> tells you exactly what happens without needing to know anything about what's inside the code that makes it work. The name carries the meaning so the details don't have to.</p>
+
+<h2>Introducing SPEC</h2>
+
+<p>You've been doing this all unit without a name for it. Every time you planned a prompt before writing it, or judged whether AI's output actually matched what you asked, you were already practicing this. SPEC just names the habit:</p>
+
+<p style="margin: 0 0 8px 0;">• <b>Specify:</b> say what you want before you prompt</p>
+<p style="margin: 0 0 8px 0;">• <b>Predict:</b> say what you expect AI to do before it runs</p>
+<p style="margin: 0 0 8px 0;">• <b>Explain:</b> say why you accepted, adapted, or rejected AI's suggestion</p>
+<p style="margin: 0;">• <b>Claim:</b> say what you could rebuild without AI</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> Claim is doing something different from the other three. Specify, Predict, and Explain are all about prompting well. Claim is about ownership, whether a student actually understands the code well enough to rebuild it themselves, not just accept what AI handed them. That's worth calling out explicitly, it's the one part of SPEC that isn't really about AI at all.</p>
+</div>
+
+<p>SPEC isn't replacing the frameworks from earlier in this unit, Task/Context/Tone/Details, Goals/Constraints/Edge Cases. It's a layer on top of them, aimed specifically at code: not just did you write a good prompt, but do you actually understand and own what came back.</p>
+
+<p>Below, look at two functions that do the exact same thing, and notice how much abstraction, or the lack of it, changes how easy each one is to work with.</p>
+
+--- 
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/naming-and-abstraction.html" width="100%" height="480" style="border:none;" title="Naming and Abstraction: increaseVolume vs. doSomething"></iframe>
+</div>
+MARKDOWN

@@ -1,0 +1,63 @@
+name 'pl-aif1-js-functions-clean-code'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Why Does Code Need to Be Clean?</h1>
+
+Last lesson was about storing and updating values with variables. This lesson is about something different: how the code around those variables gets organized.
+
+Before diving into functions, it helps to see what "clean" actually means, since it's not just a matter of taste.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Clean Code</b> is code that's organized, consistently formatted, and easy for another person, or AI, to read and modify.</p>
+</div>
+<br>
+<p>Here's the same three lines of code written two ways:</p>
+
+<div style="display: flex; gap: 16px; flex-wrap: wrap; margin: 20px 0;">
+  <div style="flex: 1; min-width: 220px;">
+    <div style="font-size: 12px; font-weight: 700; color: #E0762A; margin-bottom: 8px;">NOT CLEAN</div>
+    <div style="background-color: #2B2745; border-radius: 8px; padding: 14px 16px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8; line-height: 1.8;">
+let n = 5;<br>let Score=n+10;<br>scoreDisplay.textContent=Score;
+    </div>
+  </div>
+  <div style="flex: 1; min-width: 220px;">
+    <div style="font-size: 12px; font-weight: 700; color: #1FA34D; margin-bottom: 8px;">CLEAN</div>
+    <div style="background-color: #2B2745; border-radius: 8px; padding: 14px 16px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8; line-height: 1.8;">
+let baseScore = 5;<br>let finalScore = baseScore + 10;<br>scoreDisplay.textContent = finalScore;
+    </div>
+  </div>
+</div>
+
+Both versions do exactly the same thing. The clean version just uses **names that describe** what each value actually is, and **formats consistently**, so anyone reading it, including AI, can follow along without guessing.
+
+<h2>Problems with Repeating Code</h2>
+
+But there's a problem neither version solves:<i> what happens when this same block of logic needs to run three or four times on the same page? </i>Even the clean version would mean copying and pasting the same three lines over and over.
+
+<div style="display: flex; gap: 20px; align-items: flex-start; margin: 16px 0;">
+  <div style="flex: 1;">
+    
+<p><b>That repetition is where clean code runs into a real limit:</b></p>
+
+
+  <p style="margin: 0 0 8px 0;">• It causes bugs, a mistake copied five times is five bugs, not one</p>
+    <p style="margin: 0 0 8px 0;">• It slows teams down, every change has to be made in multiple places</p>
+    <p style="margin: 0 0 8px 0;">• It leads to repeated work, solving the same problem again instead of reusing a solution</p>
+    <p style="margin: 0;">• It makes things harder for AI, messy, repeated code gives AI less to reliably pattern-match against</p>
+  </div>
+  <img src="https://images.code.org/fd0369371e00f1026e6e04c69ecfa396-image-1786458626446.png" alt="An illustration of four people connected to a central screen displaying a chart and code icon, representing developers and AI working on shared code." style="width: 35%; max-width: 200px; flex-shrink: 0;">
+</div>
+
+<h2>AI Considerations</h2>
+
+<p>That last point is worth sitting with. You've already seen how AI generates code by recognizing patterns, in the DOM lesson, in accessibility, in event handlers guessing at IDs that don't exist. Clean, organized code isn't just a courtesy to the next developer who reads it, it's also what makes AI's guesses more reliable. Developers and AI are working on the same shared code, and both work better when that code is easy to follow.</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> if students give a vague answer like "messy code is bad," push them to name a specific consequence, a bug, a slowdown, a moment AI misunderstood something. That specificity is exactly the skill they'll need next, when a single repeated behavior gets turned into something reusable: a function.</p>
+</div>
+
+<p>Next, you'll learn how functions can be used to reuse code.</p>
+
+MARKDOWN
