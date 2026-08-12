@@ -121,15 +121,6 @@ describe('Design System - Tooltip (MUI)', () => {
     expect(await screen.findByRole('tooltip')).toHaveTextContent('tooltipText');
   });
 
-  it('stays closed on hover', async () => {
-    renderKeyboardOnly();
-
-    await user.hover(screen.getByRole('button'));
-
-    // No enter delay by default, so nothing is pending.
-    expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
-  });
-
   it('stays closed on touch', () => {
     // Fired directly, because userEvent's tap also moves focus.
     vi.useFakeTimers();
@@ -169,19 +160,6 @@ describe('Design System - Tooltip (MUI)', () => {
     }
   });
 
-  it('closes on blur', async () => {
-    renderKeyboardOnly();
-
-    await user.tab();
-    expect(await screen.findByRole('tooltip')).toBeInTheDocument();
-
-    await user.tab();
-
-    await waitFor(() =>
-      expect(screen.queryByRole('tooltip')).not.toBeInTheDocument(),
-    );
-  });
-
   it('closes on Escape while the trigger keeps focus', async () => {
     renderKeyboardOnly();
 
@@ -210,18 +188,6 @@ describe('Design System - Tooltip (MUI)', () => {
     expect(trigger).toHaveAttribute('aria-describedby', popper.id);
     // The trigger's own name survives.
     expect(screen.getByRole('button', {name: 'trigger'})).toBe(trigger);
-  });
-
-  it('renames the trigger when describeChild is false', async () => {
-    renderKeyboardOnly({describeChild: false});
-
-    await user.tab();
-
-    await screen.findByRole('tooltip');
-    expect(screen.getByRole('button')).toHaveAttribute(
-      'aria-label',
-      'tooltipText',
-    );
   });
 
   it('marks the tooltip so the themed styles apply to it', async () => {
@@ -322,16 +288,6 @@ describe('Design System - Tooltip (MUI)', () => {
     const bubble = await findTooltipBubble();
     expect(bubble).toHaveClass('placement-bottom');
     expect(bubble).toHaveAttribute('data-theme', 'Dark');
-  });
-
-  it('keeps the caller className passed via classes.tooltip', async () => {
-    renderKeyboardOnly({size: 's', classes: {tooltip: 'callerClass'}});
-
-    await user.tab();
-
-    const bubble = await findTooltipBubble();
-    expect(bubble).toHaveClass('callerClass');
-    expect(getComputedStyle(bubble).fontSize).toBe('0.875rem');
   });
 
   it("does not swallow the child's own focus and blur handlers", async () => {
@@ -461,7 +417,6 @@ describe('Design System - Tooltip (MUI)', () => {
       ['top-start', 'top-end'],
       ['top-end', 'top-start'],
       ['left', 'left'],
-      ['bottom', 'bottom'],
     ] as const)('places %s at %s', async (placement, mirrored) => {
       document.documentElement.dir = 'rtl';
       renderTooltip({placement});

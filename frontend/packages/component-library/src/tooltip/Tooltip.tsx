@@ -63,6 +63,9 @@ const MIRRORED_PLACEMENTS = {
 const isRtlDocument = () =>
   typeof document !== 'undefined' && document.documentElement.dir === 'rtl';
 
+// MUI's own rule: a falsy title means no tooltip, except 0, which is a title.
+const hasTitle = (title: MuiTooltipProps['title']) => !!title || title === 0;
+
 // forwardRef, or React drops the ref before it reaches the trigger.
 const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
   {
@@ -98,7 +101,7 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
 
   // Only wrap when there's an icon and text both, so an empty title stays empty.
   const content =
-    iconName && title ? (
+    iconName && hasTitle(title) ? (
       <>
         <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
         {title}
