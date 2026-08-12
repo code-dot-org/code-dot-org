@@ -20,7 +20,7 @@ import {initAiLessonsGatewayContext} from './aiGatewaySetup';
 import {loggedGenerateText} from './aiLog';
 import {getCapabilitiesMarkdownFor, StepSurface} from './labCapabilities';
 import {StudentInputs} from './studentInputs';
-import {LessonPlan, Step} from './types';
+import {LessonPlan, Step, stepShowsChecklist} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
 
@@ -33,10 +33,19 @@ export interface TutorMessage {
 
 export type TutorAction = 'stay' | 'advance' | 'celebrate';
 
+export interface ChecklistVerdict {
+  id: string;
+  done: boolean;
+}
+
 export interface TutorReply {
   message: string;
   action: TutorAction;
   reasoning?: string;
+  // Per-item verdicts against the lesson checklist; present only when
+  // the prompt carried a PROJECT CHECKLIST section and the tutor
+  // evaluated work.
+  checklist?: ChecklistVerdict[];
 }
 
 const tutorReplySchema = Output.object({
@@ -51,6 +60,21 @@ const tutorReplySchema = Output.object({
       .string()
       .optional()
       .describe('One sentence on why you chose that action.'),
+    checklist: z
+      .array(
+        z.object({
+          id: z
+            .string()
+            .describe('Checklist item id, exactly as listed in the prompt.'),
+          done: z
+            .boolean()
+            .describe("Whether the student's work satisfies this item."),
+        })
+      )
+      .optional()
+      .describe(
+        'ONLY when a PROJECT CHECKLIST section appears in your instructions and you are looking at a student work snapshot: a verdict for EVERY listed item. Omit otherwise.'
+      ),
   }),
 });
 
@@ -156,10 +180,36 @@ ${lines.join('\n')}
 `;
 }
 
+// The lesson checklist with its current verdicts, plus the tutor's
+// standing orders about it.  Only emitted on steps where the checklist
+// applies (project-mode lab steps).
+function formatChecklist(
+  lesson: LessonPlan,
+  step: Step,
+  state: {[itemId: string]: boolean} | undefined
+): string {
+  if (!stepShowsChecklist(lesson, step)) return '';
+  const items = (lesson.checklist || [])
+    .map(
+      item => `  [${state?.[item.id] ? 'x' : ' '}] ${item.id}: ${item.label}`
+    )
+    .join('\n');
+  return `
+PROJECT CHECKLIST (the student's map of what "done" looks like; shown to
+them next to your chat)
+${items}
+- Every time you see a student work snapshot, judge EVERY item against
+  it and return the full list in the "checklist" output field.
+- When the student asks what to do next, point them at the first
+  unchecked item.
+`;
+}
+
 const SYSTEM_PROMPT_TEMPLATE = (
   lesson: LessonPlan,
   currentIndex: number,
-  studentInputs?: StudentInputs
+  studentInputs?: StudentInputs,
+  checklistState?: {[itemId: string]: boolean}
 ) => {
   const totalSteps = lesson.steps.length;
   const current = lesson.steps[currentIndex];
@@ -177,7 +227,11 @@ decide when the student is ready to move on.
 LESSON
   Title: ${lesson.title}
   Objective: ${lesson.objective}
-${formatStudentContext(studentInputs)}
+${formatStudentContext(studentInputs)}${formatChecklist(
+    lesson,
+    current,
+    checklistState
+  )}
 STEPS
 ${overview}
 
@@ -247,23 +301,38 @@ async function callTutorModel(
     raw.action === 'advance' || raw.action === 'celebrate'
       ? raw.action
       : 'stay';
+  const checklist = Array.isArray(raw.checklist)
+    ? raw.checklist
+        .filter(
+          (v: {id?: unknown; done?: unknown}) =>
+            typeof v?.id === 'string' && typeof v?.done === 'boolean'
+        )
+        .map((v: {id: string; done: boolean}) => ({id: v.id, done: v.done}))
+    : undefined;
   return {
     message: String(raw.message || '').trim(),
     action,
     reasoning: raw.reasoning ? String(raw.reasoning) : undefined,
+    checklist: checklist && checklist.length > 0 ? checklist : undefined,
   };
 }
 
 export async function generateTutorOpening(
   lesson: LessonPlan,
   currentIndex: number,
-  studentInputs?: StudentInputs
+  studentInputs?: StudentInputs,
+  checklistState?: {[itemId: string]: boolean}
 ): Promise<TutorOpening> {
   initAiLessonsGatewayContext();
   const isFirst = currentIndex === 0;
   const response = await loggedGenerateText('tutor opening', {
     model: getModel(MODEL_ID),
-    system: SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex, studentInputs),
+    system: SYSTEM_PROMPT_TEMPLATE(
+      lesson,
+      currentIndex,
+      studentInputs,
+      checklistState
+    ),
     prompt: `The student has just arrived at this checkpoint.  Return:
 
 welcome:  ONE friendly ${
@@ -295,11 +364,12 @@ export async function generateTutorReply(
   currentIndex: number,
   history: TutorMessage[],
   studentWork?: string,
-  studentInputs?: StudentInputs
+  studentInputs?: StudentInputs,
+  checklistState?: {[itemId: string]: boolean}
 ): Promise<TutorReply> {
   initAiLessonsGatewayContext();
   return callTutorModel(
-    SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex, studentInputs),
+    SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex, studentInputs, checklistState),
     formatTranscript(history, studentWork),
     0.4
   );

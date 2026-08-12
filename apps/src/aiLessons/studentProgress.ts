@@ -56,6 +56,8 @@ export interface ProgressSnapshot {
   // lastCompletedCheckpointIndex + 1.
   path?: string[];
   currentStepId?: string;
+  // Latest tutor verdict per lesson-checklist item id.
+  checklist?: {[itemId: string]: boolean};
 }
 
 const EMPTY_SUMMARY = 'No progress yet.';
@@ -182,6 +184,9 @@ interface RecordOptions {
   currentStepId?: string;
   // The branch option that produced this navigation, when there was one.
   branchOptionId?: string;
+  // Latest checklist verdicts, carried on every event so tutor updates
+  // between events aren't lost for long.
+  checklist?: {[itemId: string]: boolean};
 }
 
 export async function recordProgressEvent(
@@ -232,6 +237,7 @@ export async function recordProgressEvent(
     updatedAt: now,
     path: options.path ?? options.previous?.path,
     currentStepId: options.currentStepId ?? options.previous?.currentStepId,
+    checklist: options.checklist ?? options.previous?.checklist,
   };
 
   try {

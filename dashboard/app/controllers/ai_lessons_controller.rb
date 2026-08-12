@@ -272,6 +272,8 @@ class AiLessonsController < ApplicationController
       user = user_cache[user_id] ||= User.find_by(id: user_id)
       user_label = user ? (user.name.presence || user.username.presence || "Student ##{user_id}") : "Student ##{user_id}"
 
+      checklist_total = lesson['checklist']&.length || 0
+
       [{
         'user_id' => user_id,
         'user_label' => user_label,
@@ -283,6 +285,8 @@ class AiLessonsController < ApplicationController
         'last_completed_checkpoint_id' => parsed['lastCompletedCheckpointId'],
         'summary' => parsed['summary'] || '',
         'updated_at' => parsed['updatedAt'] || File.mtime(path).iso8601,
+        'checklist_total' => checklist_total,
+        'checklist_done' => checklist_total.positive? ? (parsed['checklist'] || {}).count {|_, done| done} : 0,
       }]
     end
   end

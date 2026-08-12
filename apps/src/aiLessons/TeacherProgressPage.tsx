@@ -26,6 +26,9 @@ interface TeacherProgressEntry {
   last_completed_checkpoint_id?: string;
   summary: string;
   updated_at: string;
+  // Present when the lesson defines a project checklist.
+  checklist_total?: number;
+  checklist_done?: number;
 }
 
 interface StudentGroup {
@@ -148,9 +151,13 @@ const TeacherProgressPage: React.FunctionComponent = () => {
                         <strong>{entry.lesson_title}</strong>
                       </Link>
                       <span className={styles.muted}>
-                        Checkpoint{' '}
+                        Step{' '}
                         {Math.max(0, entry.last_completed_checkpoint_index + 1)}{' '}
                         of {entry.total_checkpoints} ·{' '}
+                        {(entry.checklist_total ?? 0) > 0 &&
+                          `checklist ${entry.checklist_done ?? 0}/${
+                            entry.checklist_total
+                          } · `}
                         {formatRelative(entry.updated_at)}
                       </span>
                     </div>

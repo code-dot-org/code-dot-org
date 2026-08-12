@@ -202,6 +202,17 @@ export function isLabStep(step: Step): step is LabStep {
   return step.kind === 'lab';
 }
 
+// Whether the lesson checklist is shown (and tutor-evaluated) on this
+// step: project-mode lab steps only — sandboxes and question surfaces
+// aren't about the project, so the checklist would be noise there.
+export function stepShowsChecklist(lesson: LessonPlan, step: Step): boolean {
+  return (
+    (lesson.checklist || []).length > 0 &&
+    step.kind === 'lab' &&
+    step.sourceMode !== 'sandbox'
+  );
+}
+
 export function isQuestionsStep(step: Step): step is QuestionsStep {
   return step.kind === 'questions';
 }

@@ -26,6 +26,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {loadLesson} from './api';
 import BuildPartnerPanel from './BuildPartnerPanel';
+import ChecklistPanel from './ChecklistPanel';
 import EmbeddedLab from './EmbeddedLab';
 import {deterministicResolver, NavDecision} from './navigation';
 import QuestionFlow from './QuestionFlow';
@@ -48,7 +49,7 @@ import {
   TutorMessage,
   TutorOpening,
 } from './tutor';
-import {LessonPlan} from './types';
+import {LessonPlan, stepShowsChecklist} from './types';
 import {useStudentWork} from './useStudentWork';
 
 import styles from './aiLessons.module.scss';
@@ -161,6 +162,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // source; part of the EmbeddedLab key, so the lab remounts and loads
   // the new source through the normal path.
   const [sourcesEpoch, setSourcesEpoch] = useState(0);
+  // Latest tutor verdict per lesson-checklist item.  Ref mirrors state
+  // for the same reason as inputsRef: tutor calls and progress persists
+  // read the freshest map without joining effect dependencies.
+  const [checklistState, setChecklistState] = useState<{
+    [itemId: string]: boolean;
+  }>({});
+  const checklistRef = useRef<{[itemId: string]: boolean}>({});
   // `evaluating` is a sub-state of `busy`: true when the tutor is actively
   // grading the student's work (auto-check on run, or Check-my-work click).
   // Lets us show "Evaluating…" instead of the general "Tutor is thinking…".
@@ -206,6 +214,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       setInputs(savedInputs);
       inputsRef.current = savedInputs;
       progressRef.current = snapshot;
+      const savedChecklist = snapshot?.checklist || {};
+      setChecklistState(savedChecklist);
+      checklistRef.current = savedChecklist;
       const savedId = snapshot?.currentStepId;
       if (savedId && lesson.steps.some(s => s.id === savedId)) {
         setCurrentStepId(savedId);
@@ -249,6 +260,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           lesson,
           work,
           previous: progressRef.current,
+          // Ride the latest checklist verdicts on every event so tutor
+          // updates between events aren't lost for long.
+          checklist: checklistRef.current,
           ...position,
         });
         progressRef.current = snapshot;
@@ -278,7 +292,8 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         const reply = await generateTutorOpening(
           lesson,
           currentIndex,
-          inputsRef.current
+          inputsRef.current,
+          checklistRef.current
         );
         if (cancelled) return;
         setOpening(reply);
@@ -399,9 +414,19 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           currentIndex,
           nextHistory,
           liveWork,
-          inputsRef.current
+          inputsRef.current,
+          checklistRef.current
         );
         setHistory(h => [...h, {role: 'tutor' as const, text: reply.message}]);
+        // Merge any per-item checklist verdicts the tutor returned.
+        if (reply.checklist && reply.checklist.length > 0) {
+          const merged = {...checklistRef.current};
+          reply.checklist.forEach(v => {
+            merged[v.id] = v.done;
+          });
+          checklistRef.current = merged;
+          setChecklistState(merged);
+        }
         handleAdvance(reply.action);
       } catch (e) {
         setError((e as Error).message);
@@ -447,10 +472,16 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // Fire a check the moment the student hits Run/Play in the lab. The
   // lab view calls our `onRun` prop (an ExtraLabProps field) from its
   // Run/Play handler — no redux digging needed.  Unvalidated steps just
-  // log the run; there is nothing to evaluate.
+  // log the run — unless the project checklist applies, in which case
+  // the tutor still evaluates (it can't gate advancement here, but its
+  // verdicts keep the checklist live).
   const handleLabRun = useCallback(() => {
     if (busy || phase !== 'in-progress') return;
-    if (step.kind === 'lab' && step.validation === 'none') {
+    if (
+      step.kind === 'lab' &&
+      step.validation === 'none' &&
+      !stepShowsChecklist(lesson, step)
+    ) {
       persistProgressEvent('run', currentIndex, liveWork);
       return;
     }
@@ -459,6 +490,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     busy,
     phase,
     step,
+    lesson,
     currentIndex,
     liveWork,
     persistProgressEvent,
@@ -577,6 +609,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           {error && <div className={styles.error}>{error}</div>}
         </div>
 
+        {stepShowsChecklist(lesson, step) && (
+          <ChecklistPanel
+            items={lesson.checklist || []}
+            state={checklistState}
+          />
+        )}
+
         {step.kind === 'lab' &&
           step.aiPrompting &&
           step.aiPrompting !== 'off' && (
@@ -607,20 +646,36 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                 (step.validation === 'none' ? (
                   // Unvalidated step (explore / free play): no tutor
                   // gate — the student moves on whenever they're ready.
-                  <MuiButton
-                    variant="contained"
-                    color="primary"
-                    type="button"
-                    size="small"
-                    onClick={() => completeStep()}
-                    disabled={busy}
-                    className={styles.continueButton}
-                  >
-                    {currentIndex >= lesson.steps.length - 1 ||
-                    step.next === 'end'
-                      ? 'Finish lesson →'
-                      : 'Continue →'}
-                  </MuiButton>
+                  // When the project checklist applies, offer an
+                  // evaluation on demand too, since nothing gates here.
+                  <>
+                    {stepShowsChecklist(lesson, step) && (
+                      <MuiButton
+                        variant="outlined"
+                        color="primary"
+                        type="button"
+                        size="small"
+                        onClick={handleCheck}
+                        disabled={busy}
+                      >
+                        Check my work
+                      </MuiButton>
+                    )}
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      type="button"
+                      size="small"
+                      onClick={() => completeStep()}
+                      disabled={busy}
+                      className={styles.continueButton}
+                    >
+                      {currentIndex >= lesson.steps.length - 1 ||
+                      step.next === 'end'
+                        ? 'Finish lesson →'
+                        : 'Continue →'}
+                    </MuiButton>
+                  </>
                 ) : pendingAdvance ? (
                   <MuiButton
                     variant="contained"

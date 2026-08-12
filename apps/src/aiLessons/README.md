@@ -160,11 +160,22 @@ lesson project, or `sandbox-<segmentOrStepId>` for `sourceMode:
 'sandbox'` steps, so skill practice never dirties the student's project
 and a multi-step segment shares one throwaway workspace.
 
+### Project checklist
+
+A lesson-level `checklist` renders as an always-visible panel in the
+tutor sidebar on project-mode lab steps (`stepShowsChecklist`: lab
+kind, not sandboxed — skill practice and questions surfaces skip it).
+The tutor's system prompt carries the items with their current state
+and standing orders; every work evaluation returns per-item verdicts
+through the structured output, which check items off live.  Verdicts
+persist in the progress snapshot (riding every progress event), and
+the teacher roll-up shows "checklist n/m" per lesson.  Read-only for
+the student — the tutor is the only thing that checks a box.
+
 **Runtime support still behind the format:**
 
 - `validation: 'tutor'` on individual questions is recorded but not yet
   judged — the answer is accepted like a survey answer.
-- Checklists are format-only.
 - `starterPrompt` / `aiPrompting` are Web Lab 2 only; Music steps
   ignore them.
 

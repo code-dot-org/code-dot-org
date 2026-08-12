@@ -1161,3 +1161,48 @@ textarea {
   color: var(--text-neutral-white);
   white-space: nowrap;
 }
+
+// Project checklist in the tutor sidebar (ChecklistPanel).
+.checklistPanel {
+  border-top: 1px solid var(--borders-neutral-primary);
+  padding: 12px 16px;
+
+  ul {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-neutral-secondary);
+
+    > span {
+      color: var(--text-neutral-tertiary);
+    }
+  }
+}
+
+.checklistTitle {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-neutral-tertiary);
+}
+
+.checklistDone {
+  color: var(--text-neutral-tertiary) !important;
+  text-decoration: line-through;
+
+  > span {
+    color: var(--text-success, #2e7d32) !important;
+    text-decoration: none;
+  }
+}
