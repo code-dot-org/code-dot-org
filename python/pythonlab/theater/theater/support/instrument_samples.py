@@ -8,8 +8,8 @@ _MIN_NOTE = 48
 _MAX_NOTE = 84
 
 _FILE_PREFIX = {
-  Instrument.PIANO: "javalab-piano-",
-  Instrument.BASS: "javalab-bass-",
+  Instrument.PIANO: "piano-",
+  Instrument.BASS: "bass-",
 }
 
 
