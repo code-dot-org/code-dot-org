@@ -141,8 +141,6 @@ const styles = {
   },
   headerInner: {
     position: 'absolute',
-    top: 0,
-    bottom: 0,
     display: 'flex',
     alignItems: 'center',
   },
