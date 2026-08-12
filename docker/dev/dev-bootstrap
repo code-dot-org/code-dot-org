@@ -89,7 +89,7 @@ db_query() {
   # environment so a compose file or a CDO_LOCALS with its own can say so;
   # an empty DB_PASSWORD means "no -p at all", which is not the same as -p''.
   local pw_arg=()
-  [ -n "${DB_PASSWORD-password}" ] && pw_arg=(-p"${DB_PASSWORD-password}")
+  [ -n "${DB_PASSWORD-not-a-secret-password}" ] && pw_arg=(-p"${DB_PASSWORD-not-a-secret-password}")
   mysql -h "${DB_HOST:-db}" -u "${DB_USER:-root}" "${pw_arg[@]}" -N -e "$1"
 }
 

@@ -38,18 +38,18 @@ info "starting mysql:8.0 sidecar..."
 # --skip-log-bin: the seed writes about a gigabyte of binary log. The image
 # would carry that log forever, and no devcontainer reads it.
 docker run -d --name "$DB_CONTAINER" --network "$NETWORK" --network-alias db \
-  -e MYSQL_ROOT_PASSWORD=password \
+  -e MYSQL_ROOT_PASSWORD=not-a-secret-password \
   -e MYSQL_ROOT_HOST='%' \
   mysql:8.0 --skip-log-bin
 
 info "waiting for mysql..."
-until docker exec "$DB_CONTAINER" mysqladmin -uroot -ppassword ping --silent 2>/dev/null; do
+until docker exec "$DB_CONTAINER" mysqladmin -uroot -pnot-a-secret-password ping --silent 2>/dev/null; do
   sleep 0.5
 done
 # The bootstrap server answers a ping before the real server starts. Repeat
 # the first real query until it succeeds.
 info "waiting for mysql to accept queries..."
-until docker exec "$DB_CONTAINER" mysql -uroot -ppassword -e "SELECT 1" >/dev/null 2>&1; do
+until docker exec "$DB_CONTAINER" mysql -uroot -pnot-a-secret-password -e "SELECT 1" >/dev/null 2>&1; do
   sleep 1
 done
 info "mysql ready"
@@ -59,7 +59,7 @@ info "creating databases..."
 # uses SHOW TABLES, so it reads an empty dashboard_development as "exists" and
 # takes the db:migrate path. That path replays every migration from version 0.
 # Let db:create make the development database instead.
-docker exec "$DB_CONTAINER" mysql -uroot -ppassword -e \
+docker exec "$DB_CONTAINER" mysql -uroot -pnot-a-secret-password -e \
   "CREATE DATABASE IF NOT EXISTS dashboard_test;"
 
 info "seeding the databases..."

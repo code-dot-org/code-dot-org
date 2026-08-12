@@ -125,6 +125,12 @@ echo 'CDO_LOCALS=./locals.yml' >> .devcontainer/.env
 Both are gitignored. Edit the file on the host and restart the container;
 `locals.yml` is read once, at boot.
 
+The MySQL root password and the MinIO secret key are both
+`not-a-secret-password`. They protect a database of public curriculum on a
+loopback network, and the name says so, so nobody has to decide whether a
+value that looks like a credential is one. These values differ from
+`docker/developers/`, which is deliberate: this stack talks only to itself.
+
 ## Daily work
 
 ```shell
@@ -132,7 +138,7 @@ bin/dashboard-server                         # Rails on 3000
 bundle exec rails console
 bundle exec rake db:migrate
 ./bin/mysql-client-dashboard-writer "SELECT COUNT(*) FROM levels"
-mysql -h db -uroot -ppassword
+mysql -h db -uroot -pnot-a-secret-password
 redis-cli -h redis ping
 
 cd frontend && yarn install && yarn dev      # Vite on 3036

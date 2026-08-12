@@ -19,11 +19,11 @@ trap cleanup EXIT
 
 docker run -d --name "$CONTAINER" "$IMAGE" >/dev/null
 for _ in $(seq 60); do
-  docker exec "$CONTAINER" mysqladmin -uroot -ppassword ping --silent 2>/dev/null && break
+  docker exec "$CONTAINER" mysqladmin -uroot -pnot-a-secret-password ping --silent 2>/dev/null && break
   sleep 2
 done
 
-q() { docker exec "$CONTAINER" mysql -uroot -ppassword -N -e "$1" 2>/dev/null; }
+q() { docker exec "$CONTAINER" mysql -uroot -pnot-a-secret-password -N -e "$1" 2>/dev/null; }
 
 applied="$(q 'SELECT COUNT(*) FROM dashboard_development.schema_migrations')"
 # shellcheck disable=SC2012 # migration filenames are ls-safe by convention

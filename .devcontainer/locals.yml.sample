@@ -13,7 +13,7 @@
 # the port into the host works for anything that only reads db_writer, and
 # breaks anything that builds a URI from the pieces — bin/mysql-client-*
 # reports `Unknown server host '[db:3306]'`.
-db_writer: 'mysql://root:password@db:3306/'
+db_writer: 'mysql://root:not-a-secret-password@db:3306/'
 db_endpoint_writer: db
 db_endpoint_writer_port: 3306
 db_endpoint_proxy_writer: db
@@ -24,13 +24,13 @@ db_endpoint_proxy_reporting: db
 db_endpoint_proxy_reporting_port: 3306
 db_credential_admin:
   username: root
-  password: password
+  password: not-a-secret-password
 db_credential_reader:
   username: root
-  password: password
+  password: not-a-secret-password
 db_credential_writer:
   username: root
-  password: password
+  password: not-a-secret-password
 
 redis_url: 'redis://redis:6379/0'
 
@@ -39,7 +39,7 @@ redis_url: 'redis://redis:6379/0'
 aws_s3_emulated: true
 aws_s3_endpoint: 'http://minio:9000'
 aws_s3_access_key_id: local-development
-aws_s3_secret_access_key: allstudents
+aws_s3_secret_access_key: not-a-secret-password
 
 # Empty, not stubbed: 528 encrypted levels then render hollow, which is the
 # price of not holding the production key.
@@ -57,7 +57,7 @@ ai_gateway_auth_key_passphrase: localoverride
 ai_gateway_auth_public_key: localoverride
 azure_ai_content_safety_key: localoverride
 device_farm_mobile_project_arn: localoverride
-devinternal_db_writer: 'mysql://root:password@db:3306/'
+devinternal_db_writer: 'mysql://root:not-a-secret-password@db:3306/'
 eir_teacher_enrollments_gsheet_key: localoverride
 elevenlabs_api_key: localoverride
 google_gemini_ai_chat_lab_api_key: localoverride
