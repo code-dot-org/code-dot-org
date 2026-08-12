@@ -17,6 +17,72 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
     AWS::S3.stubs(:presigned_download_url).returns('https://s3.example/download')
   end
 
+  describe 'GET #index' do
+    context 'when not signed in' do
+      it 'redirects to sign in' do
+        get :index
+        assert_redirected_to_sign_in
+      end
+    end
+
+    context 'when signed in as a student' do
+      before {sign_in student}
+
+      it "returns only the current user's final responses, newest first" do
+        older = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 2.days.ago)
+        newer = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 1.day.ago)
+        create(:challenge_response, challenge:, user: student, is_final: false)
+        create(:challenge_response, challenge:, user: other_student, is_final: true)
+
+        get :index
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}).must_equal [newer.id, older.id]
+      end
+
+      it 'filters by lesson_id and includes asset download URLs' do
+        challenge_response = create(:challenge_response, challenge:, user: student, is_final: true)
+        create(:challenge_response_asset, challenge_response:)
+        other_lesson_challenge = create(:challenge)
+        create(:challenge_response, challenge: other_lesson_challenge, user: student, is_final: true)
+
+        get :index, params: {lesson_id: challenge.lesson_id}
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}).must_equal [challenge_response.id]
+        _(response_json.first['assets'].first['download_url']).must_equal 'https://s3.example/download'
+      end
+
+      it 'filters by challenge_id' do
+        challenge_response = create(:challenge_response, challenge:, user: student, is_final: true)
+        create(:challenge_response, user: student, is_final: true)
+
+        get :index, params: {challenge_id: challenge.id}
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}).must_equal [challenge_response.id]
+      end
+
+      it 'does not include the scored evaluation' do
+        create(
+          :challenge_response,
+          challenge:,
+          user: student,
+          is_final: true,
+          evaluation_result: {'level' => 2},
+          student_feedback: 'Nice work!',
+          evaluation_status: :success
+        )
+
+        get :index
+
+        assert_response :success
+        _(response_json.first['student_feedback']).must_equal 'Nice work!'
+        _(response_json.first).wont_include 'evaluation_result'
+      end
+    end
+  end
+
   describe 'POST #create' do
     context 'when not signed in' do
       it 'redirects to sign in' do
@@ -118,7 +184,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
       it 'includes their feedback and status but not the scored evaluation' do
         challenge_response.update!(
-          evaluation_result: {'evaluations' => []},
+          evaluation_result: {'level' => 2},
           student_feedback: 'Nice work!',
           evaluation_status: :success
         )
@@ -141,13 +207,13 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       end
 
       it 'returns the response including the evaluation fields' do
-        challenge_response.update!(evaluation_result: {'evaluations' => []}, evaluation_status: :success)
+        challenge_response.update!(evaluation_result: {'level' => 2}, evaluation_status: :success)
 
         get :show, params: {id: challenge_response.id}
 
         assert_response :success
         _(response_json['id']).must_equal challenge_response.id
-        _(response_json['evaluation_result']).must_equal({'evaluations' => []})
+        _(response_json['evaluation_result']).must_equal({'level' => 2})
         _(response_json['evaluation_status']).must_equal 'success'
       end
     end

@@ -501,6 +501,7 @@ Dashboard::Application.routes.draw do
         get 'slides/edit', to: 'lessons/slides#edit'
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
+        get 'tutor/gallery', to: 'lessons#tutor_gallery', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -1477,7 +1478,7 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :challenges, only: [:index, :show]
-    resources :challenge_responses, only: [:create, :show] do
+    resources :challenge_responses, only: [:index, :create, :show] do
       member do
         post :evaluate
       end

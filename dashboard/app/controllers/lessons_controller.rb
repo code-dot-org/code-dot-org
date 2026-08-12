@@ -3,8 +3,8 @@ class LessonsController < ApplicationController
 
   skip_authorize_resource only: :level_properties_by_id
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor]
-  before_action :authenticate_user!, only: [:tutor]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor, :tutor_gallery]
+  before_action :authenticate_user!, only: [:tutor, :tutor_gallery]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -119,6 +119,29 @@ class LessonsController < ApplicationController
       end,
       timeSpentSeconds: lesson_time_spent(@lesson.id, current_user&.id),
       unitLabel: unit_label
+    }
+  end
+
+  # GET /s/:script_name_or_id/lessons/:lesson_position/tutor/gallery
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/tutor/gallery
+  #
+  # Bare-bones gallery of the signed-in student's submitted challenge work
+  # for this lesson, shown alongside the AI feedback. The page only needs to
+  # know which lesson it is on; the submissions themselves come from
+  # GET /challenge_responses.
+  def tutor_gallery
+    view_options(full_width: true, no_padding_container: true, no_footer: true)
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    return render_404 unless @lesson&.lesson_tutor_available?
+
+    @tutor_gallery_data = {
+      lessonId: @lesson.id,
+      lessonName: @lesson.localized_name,
     }
   end
 

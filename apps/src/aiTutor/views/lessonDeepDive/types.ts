@@ -169,6 +169,17 @@ export const challengeResponseValidator: ResponseValidator<
   };
 };
 
+export const challengeResponseListValidator: ResponseValidator<
+  ChallengeResponse[]
+> = bodyJson => {
+  if (!Array.isArray(bodyJson)) {
+    throw new Error('Expected an array of challenge responses');
+  }
+  return (bodyJson as Record<string, unknown>[]).map(
+    challengeResponseValidator
+  );
+};
+
 export type Challenge = {
   id: number;
   lesson_id: number;

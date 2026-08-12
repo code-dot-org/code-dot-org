@@ -4,8 +4,31 @@ class ChallengeResponsesController < ApplicationController
   # CanCanCan's automatic resource loading for it (it would otherwise try to
   # build ChallengeResponse from `challenge_response_params`, which includes the
   # non-attribute `assets` key) and authorize the class directly instead.
-  load_and_authorize_resource except: :create
+  # `index` is skipped too: the :read ability is block-based, which
+  # accessible_by cannot translate into a query, so index scopes to the
+  # current user by hand.
+  load_and_authorize_resource except: [:create, :index]
   before_action :authorize_create!, only: :create
+
+  # GET /challenge_responses?lesson_id=:lesson_id
+  # GET /challenge_responses?challenge_id=:challenge_id
+  #
+  # The signed-in user's own final submissions, newest first, with presigned
+  # download URLs on each asset. This backs the student's gallery of completed
+  # challenge work; teachers view an individual student response via `show`.
+  def index
+    responses = ChallengeResponse.
+      where(user_id: current_user.id, is_final: true).
+      order(created_at: :desc).
+      includes(:challenge_response_assets)
+    if params[:lesson_id].present?
+      responses = responses.joins(:challenge).where(challenges: {lesson_id: params[:lesson_id]})
+    end
+    if params[:challenge_id].present?
+      responses = responses.where(challenge_id: params[:challenge_id])
+    end
+    render json: responses.map(&:summarize)
+  end
 
   # POST /challenge_responses
   #
