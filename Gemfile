@@ -173,9 +173,6 @@ gem 'sass-rails', '~> 6.0.0'
 # See https://github.com/sass/sassc-rails/pull/153 for context.
 gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 
-# Use Uglifier as compressor for JavaScript assets.
-gem 'uglifier', '>= 1.3.0'
-
 # Use jquery as the JavaScript library.
 gem 'jquery-rails'
 
@@ -230,16 +227,6 @@ gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 gem 'naturally' # for sorting string naturally
 
 gem 'retryable' # retry code blocks when they throw exceptions
-
-# Used by `uglifier` to minify JS assets in the Asset Pipeline.
-gem 'execjs'
-
-# JavaScript runtime used by ExecJS.
-# TODO: Either resume installing in all environments once Ubuntu and Mac OS
-# support the same version of mini_racer, or remove this dependency entirely
-# once node is installed in production. For more details, see
-# https://codedotorg.atlassian.net/browse/INF-708
-gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt', '~> 2.7.0'
 
@@ -371,7 +358,7 @@ install_if require_pg do
   gem 'pg', '~> 1.3.0', require: false
 end
 
-gem 'activerecord-import', '~> 1.3.0'
+gem 'activerecord-import', '~> 1.7.0'
 gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'

@@ -43,10 +43,10 @@ cdo-base also has consumers that must not carry gems:
 
 The bundle is the union of every non-development group —
 `BUNDLE_WITHOUT=development:test`, which keeps `staging`, `levelbuilder`,
-`adhoc`, and `production`. Workers could drop the `mini_racer`/`libv8` group
-(~200 MB), but a node running both web and worker pulls one shared 613 MB
-layer instead of two near-duplicate private ones, so the union wins even
-though each flavor carries some slack.
+`adhoc`, and `production`. Per-flavor bundles could each shed some gems, but
+a node running both web and worker pulls one shared gem layer instead of
+two near-duplicate private ones, so the union wins even though each flavor
+carries some slack.
 
 The `staging` and `levelbuilder` groups are folded into the union rather than
 given their own image: a staging-specific gem set would break artifact
@@ -94,32 +94,10 @@ avoids needing `git` at runtime — cdo-base does not ship it.
 The checks that matter are the seam between the two images: the native
 extensions were compiled in cdo-build against its dev headers, and nothing
 proves they still resolve until they are required against cdo-base's runtime
-libraries. So mysql2, rmagick, nokogiri, and mini_racer are each loaded for
-real. The toolchain checks are inverted — a passing `command -v cc` is a
+libraries. So mysql2, rmagick, and nokogiri are each loaded for real. The
+toolchain checks are inverted — a passing `command -v cc` is a
 failure, because it would mean the final stage accidentally stacked on the
 builder.
-
-## mini_racer aborts at teardown under jemalloc
-
-Creating any V8 context makes the process abort at interpreter teardown with
-`free(): invalid pointer` and exit 139. The JS evaluates correctly first; the
-abort is in teardown, and an explicit `MiniRacer::Context#dispose` does not
-avoid it, so it is not reachable from Ruby.
-
-The cause is the jemalloc `LD_PRELOAD` cdo-base ships interposing on V8's own
-allocator. This is not new to the image hierarchy: production has had the
-same combination all along, because `cookbooks/cdo-apps/recipes/jemalloc.rb`
-sets the same `LD_PRELOAD` for every app and `mini_racer` is in the
-`:production` group.
-
-It is worth deciding deliberately rather than inheriting, because in k8s the
-exit code is visible: a web pod that has evaluated any JS exits 139 on
-SIGTERM, which reads as a crash in pod status and deploy dashboards even
-though the work succeeded. Options are to scope the preload to processes that
-do not run JS, to set `MALLOC_CONF` so jemalloc does not interpose on V8, or
-to accept it as prod does today. The smoke test clears `LD_PRELOAD` for the
-mini_racer check only, and asserts what cdo-gems owns: that libv8 compiled,
-loads, and runs JS.
 
 ## Dual-engine policy
 
@@ -155,10 +133,9 @@ one, where the curriculum split must live in `.dockerignore` rather than in a
 cdo-base is multi-platform; this image is not, and the reason is the
 lockfile. `PLATFORMS` lists `arm64-darwin-25`, `ruby`, and `x86_64-linux` —
 no `aarch64-linux`. Bundler on arm64 Linux therefore resolves the generic
-`ruby` variant of every platform-specific gem, and for `libv8-node` the only
-non-Darwin candidates in the lockfile are `x86_64-linux` and `ruby`, so arm64
-would build V8 from source. That is a different artifact, not the same image
-for another architecture.
+`ruby` variant of every platform-specific gem and compiles its native
+extension from source. That is a different artifact, not the same image for
+another architecture.
 
 Adding arm64 means `bundle lock --add-platform aarch64-linux` plus
 confirming every platform-specific gem in the lockfile publishes an

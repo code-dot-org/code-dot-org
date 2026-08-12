@@ -16,6 +16,7 @@ import React from 'react';
 
 import {
   REACT_FLOW_CLASS,
+  reactFlowEdgePathSelector,
   reactFlowNodeTypeClass,
 } from '@cdo/apps/sketchlab/reactFlow/reactFlowSelectors';
 
@@ -30,19 +31,16 @@ import {
  * and toolbar positioning in production.
  *
  * jsdom can't run React Flow's measurement pipeline (no real layout), so an
- * individual `react-flow__edge` wrapper never mounts. We assert the edge layer
- * (`react-flow__edges`) instead, which carries the same prefix and `edge`
- * token. The singular wrapper class is not directly covered by any test today;
- * a rename of just that token (with `react-flow__edges` left intact) would slip
- * through here.
+ * edge only mounts once both its endpoints count as initialized. Declaring
+ * `handles` on the probe nodes satisfies that without any measuring, which is
+ * what lets this suite cover the per-edge classes too.
  *
  * The `nodrag` / `nopan` / `nowheel` interaction classes are inputs React Flow
  * reads off our elements rather than DOM it renders, so there is nothing to
  * assert for them here.
  */
 
-// The edge layer container; see the file comment for why we assert this rather
-// than the per-edge `react-flow__edge` wrapper.
+// The edge layer container, which holds the individual edge wrappers.
 const REACT_FLOW_EDGE_LAYER_CLASS = 'react-flow__edges';
 
 // A node that renders source and target handles, so the rendered DOM exercises
@@ -60,12 +58,35 @@ function ProbeNode(_props: NodeProps) {
 
 const NODE_TYPES = {[PROBE_NODE_TYPE]: ProbeNode};
 
-const NODES: Node[] = [
-  {id: 'a', type: PROBE_NODE_TYPE, position: {x: 0, y: 0}, data: {}},
-  {id: 'b', type: PROBE_NODE_TYPE, position: {x: 0, y: 200}, data: {}},
+// Handle geometry, node-relative, standing in for what React Flow would
+// otherwise measure off the DOM. Its exact values don't matter; declaring it is
+// what makes the nodes count as initialized so the edge between them renders.
+const PROBE_HANDLES = [
+  {type: 'source' as const, position: Position.Bottom, x: 50, y: 40},
+  {type: 'target' as const, position: Position.Top, x: 50, y: 0},
 ];
 
-const EDGES = [{id: 'a-b', source: 'a', target: 'b'}];
+const NODES: Node[] = [
+  {
+    id: 'a',
+    type: PROBE_NODE_TYPE,
+    position: {x: 0, y: 0},
+    data: {},
+    measured: {width: 100, height: 40},
+    handles: PROBE_HANDLES,
+  },
+  {
+    id: 'b',
+    type: PROBE_NODE_TYPE,
+    position: {x: 0, y: 200},
+    data: {},
+    measured: {width: 100, height: 40},
+    handles: PROBE_HANDLES,
+  },
+];
+
+const EDGE_ID = 'a-b';
+const EDGES = [{id: EDGE_ID, source: 'a', target: 'b'}];
 
 function renderProbeFlow() {
   return render(
@@ -93,12 +114,21 @@ describe('reactFlowSelectors', () => {
     expect(present(REACT_FLOW_CLASS.controlsButton)).not.toBeNull();
     expect(present(reactFlowNodeTypeClass(PROBE_NODE_TYPE))).not.toBeNull();
     expect(present(REACT_FLOW_EDGE_LAYER_CLASS)).not.toBeNull();
+    expect(present(REACT_FLOW_CLASS.edge)).not.toBeNull();
+    expect(present(REACT_FLOW_CLASS.edgePath)).not.toBeNull();
   });
 
   it('puts data-id on the node wrapper', () => {
     const {container} = renderProbeFlow();
     expect(
       container.querySelector(`.${REACT_FLOW_CLASS.node}[data-id="a"]`)
+    ).not.toBeNull();
+  });
+
+  it('finds an edge path by the edge id', () => {
+    const {container} = renderProbeFlow();
+    expect(
+      container.querySelector(reactFlowEdgePathSelector(EDGE_ID))
     ).not.toBeNull();
   });
 
