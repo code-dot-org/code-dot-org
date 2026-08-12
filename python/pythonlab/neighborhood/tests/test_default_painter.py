@@ -1,3 +1,4 @@
+import inspect
 import subprocess
 import sys
 
@@ -222,3 +223,16 @@ def test_painter_name_refers_to_the_submodule():
 def test_star_import_names_all_exist():
   for name in neighborhood.__all__:
     assert hasattr(neighborhood, name)
+
+def test_every_painter_method_has_a_function():
+  # Adding a method to Painter means adding a function for it and an __all__
+  # entry. Deriving __all__ from Painter instead would turn a forgotten function
+  # into an AttributeError on `from neighborhood import *`, which students would
+  # hit before we did.
+  methods = {name for name, value in vars(Painter).items()
+             if not name.startswith('_') and callable(value)}
+  functions = {name for name, value in vars(painter).items()
+               if inspect.isfunction(value) and not name.startswith('_')
+               and value.__module__ == painter.__name__}
+  assert methods == functions
+  assert set(neighborhood.__all__) == methods | {'Painter', 'painter'}
