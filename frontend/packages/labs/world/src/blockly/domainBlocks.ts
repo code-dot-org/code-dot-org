@@ -128,6 +128,7 @@ import {
   mapActorTypes,
   mapOptions,
   mapOptionsExtension,
+  orNone,
   ruleModuleOptions,
   backgroundImportOptions,
   spriteOptions,
@@ -3722,17 +3723,21 @@ const worldWorld = defineBlock({
   },
 });
 
-// The `use rule` dropdown offers the built-in rules AND the project's own rule
-// modules (under `rules/`). A built-in's value is its `world-lab` export name; a
-// project rule's is its module path — the generator branches on the `/` a path
+// The `use rule` dropdown offers the project's own rule modules (under
+// `rules/`), valued by module path — the generator branches on the `/` a path
 // carries, importing the module rather than reading `WorldLab`.
+//
+// THE ENGINE'S OWN RULES ARE NOT OFFERED. `WorldBuilder` seeds Space and
+// Appearance into every world it builds (`rulesInPlay`), so a row for either is
+// a row asking a learner to affirm a tautology before their game will run;
+// blockly/foundation says the rest of why. Naming one still MEANS what it says
+// — the generator resolves the name through the registry as it always did, and
+// a saved block holding it keeps its value, since a live dropdown keeps a value
+// its list has no option for (bindLiveOptions). Only the offer is gone.
 //
 // Labelled by the rule's ABILITY, not its name: this block says what the world
 // has, and "use rule Has Gravity" is the sentence. The category in the toolbox
 // says the other half — "Gravity", the thing you open and edit.
-const BUILTIN_RULE_OPTIONS: Array<[string, string]> = AUTHORING_RULES.map(
-  rule => [rule.ability, rule.name],
-);
 /**
  * The rules a world (or another rule) may put in play, plus a way to get more.
  *
@@ -3740,6 +3745,11 @@ const BUILTIN_RULE_OPTIONS: Array<[string, string]> = AUTHORING_RULES.map(
  * same affordance the effect dropdown has, and the only way to reach gravity
  * now that it is not built in. Offered even when the project already has rules:
  * wanting a second one is the normal case.
+ *
+ * And never as the ONLY row, which is what `orNone` is doing here: with the
+ * built-ins gone this list can be empty, a fresh block takes the first option
+ * as its value, and a block that silently became "open the import dialog" is
+ * not a block.
  */
 const useRuleOptions = (field?: FieldDropdown): Array<[string, string]> => {
   const identities = projectRuleIdentities();
@@ -3747,19 +3757,21 @@ const useRuleOptions = (field?: FieldDropdown): Array<[string, string]> => {
   // that imports its own default export, and the project stops before it starts.
   const own = editingRuleFor(field);
   return [
-    ...BUILTIN_RULE_OPTIONS,
-    ...ruleModuleOptions()
-      .filter(([, modulePath]) => modulePath !== own)
-      .map(([fileLabel, modulePath]): [string, string] => {
-        // A parsed `.rule` says what it is and what it gives, and is referred to
-        // by that name from then on, wherever its file ends up. A `.js` rule
-        // declares neither, so it is named by its module — as is a `.rule` the
-        // editor could not parse, which still has to be pickable mid-edit.
-        const identity = identities.get(modulePath);
-        return identity
-          ? [identity.ability, identity.name]
-          : [fileLabel, modulePath];
-      }),
+    ...orNone(
+      ruleModuleOptions()
+        .filter(([, modulePath]) => modulePath !== own)
+        .map(([fileLabel, modulePath]): [string, string] => {
+          // A parsed `.rule` says what it is and what it gives, and is referred
+          // to by that name from then on, wherever its file ends up. A `.js`
+          // rule declares neither, so it is named by its module — as is a
+          // `.rule` the editor could not parse, which still has to be pickable
+          // mid-edit.
+          const identity = identities.get(modulePath);
+          return identity
+            ? [identity.ability, identity.name]
+            : [fileLabel, modulePath];
+        }),
+    ),
     ['(import…)', IMPORT_RULE_VALUE],
   ];
 };
@@ -3787,6 +3799,12 @@ const worldUseRule = defineBlock({
   generator: {
     javascript(block, generator) {
       const rule = block.getFieldValue('RULE');
+      // "(none)" — a project with no rules yet. An unfinished block emits
+      // nothing, rather than the `WorldLab.` below with no name after it, which
+      // does not parse and would take the whole module down with it.
+      if (!rule) {
+        return '';
+      }
       // The field holds a rule's NAME. Where that rule lives is looked up here
       // and nowhere else: a built-in reads `WorldLab`, a project `.rule` is
       // imported from whatever module currently declares that name. A value the

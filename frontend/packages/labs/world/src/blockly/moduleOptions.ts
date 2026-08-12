@@ -97,7 +97,16 @@ export function mapActorTypes(path: string): string[] {
 /** What a dropdown holds before the project offers it anything real. */
 const NONE_VALUE = '';
 
-const orNone = (options: Array<[string, string]>): Array<[string, string]> =>
+/**
+ * A list, or the one row a dropdown shows when the project offers nothing.
+ *
+ * Exported because a list assembled elsewhere needs it too: `use rule` builds
+ * its options in `domainBlocks` (it labels a rule by the ability the parsed
+ * `.rule` declares), and it is precisely the list that may be empty.
+ */
+export const orNone = (
+  options: Array<[string, string]>,
+): Array<[string, string]> =>
   options.length ? options : [['(none)', NONE_VALUE]];
 
 /** Current ACTOR dropdown options (the project's actor templates). */

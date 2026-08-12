@@ -1974,9 +1974,19 @@ describe('world block generators', () => {
   });
 
   it('world_use_rule adds a built-in rule by name, as its world-lab export', () => {
+    // The dropdown no longer OFFERS the engine's two rules — every world has
+    // them already (blockly/foundation) — but a saved block naming one keeps
+    // its value, and still means exactly this.
     expect(run('world_use_rule', {RULE: 'Space'}, {}, '')).toBe(
       'world.useRules([WorldLab.SpatialRule]);\n',
     );
+  });
+
+  it('world_use_rule at "(none)" emits nothing', () => {
+    // A project holding no rules at all: the dropdown's only real row is
+    // "(none)", and the alternative here is `WorldLab.` with no name after it,
+    // which is a syntax error rather than a missing rule.
+    expect(run('world_use_rule', {RULE: ''}, {}, '')).toBe('');
   });
 
   it('world_use_rule imports a project rule from wherever its name lives', () => {
