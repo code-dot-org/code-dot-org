@@ -1,13 +1,9 @@
-import {useCallback, useEffect, useRef} from 'react';
+import {useEffect} from 'react';
 
 import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
-import {
-  LifecycleEvent,
-  useLifecycleNotifier,
-  useThemeSetting,
-} from '@code-dot-org/lab/hooks';
+import {useThemeSetting} from '@code-dot-org/lab/hooks';
 import {labProjectActions} from '@code-dot-org/lab/redux';
 import ResourcePanel, {type Setting} from '@code-dot-org/lab/resourcePanel';
 
@@ -58,27 +54,27 @@ export const InfoPanel = ({
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
   const hasRun = useAppSelector(state => state.labSystem.hasRun);
 
-  // The baseline the version panel restores as "Initial version": the project
-  // as the host loaded it. Captured from the level-load event rather than at
-  // first render — the lab mounts with its empty default project and the real
-  // sources arrive asynchronously, so a render-time snapshot would be the
-  // default. Later edits don't move it. A level's own start sources take
-  // precedence when it has them (see below).
+  // The project as the host loaded it: the baseline an edit is measured
+  // against, and the fallback "Initial version" restores. Not a render-time
+  // snapshot — the lab mounts with its empty default project and the real
+  // sources arrive asynchronously, so the first thing this sees is the default.
+  //
+  // READ FROM THE STORE, not from the `LevelLoadCompleted` event, and that is
+  // the whole of this. `LifecycleNotifier` is a plain fan-out with no replay,
+  // so a component that mounts after `loadLab` has finished never hears the
+  // event at all — and this panel is inside the resource panel, which mounts
+  // late. The listener that used to be here was simply never called: the
+  // baseline stayed undefined, `hasEdited` could never become true, and the
+  // "save a named version" box it gates could never appear.
+  //
+  // Not a demo-host quirk either. It is a race between the load finishing and
+  // this mounting, so on a slow enough network it would resolve the other way
+  // and the box would work — a bug that comes and goes is worse than one that
+  // does not. `onLevelChange` writes this one line before the notification
+  // fires, so the store has the same value with no timing to lose, and repoints
+  // it when the level changes.
   const {currentSources, previewSources} = useSources<MultiFileSource>();
-  const loadedSourcesRef = useRef<ProjectSources | undefined>(undefined);
-  useLifecycleNotifier(
-    LifecycleEvent.LevelLoadCompleted,
-    useCallback(
-      (
-        _levelProperties?: unknown,
-        _channel?: unknown,
-        initialSources?: ProjectSources,
-      ) => {
-        loadedSourcesRef.current = initialSources;
-      },
-      [],
-    ),
-  );
+  const loadedSources = useAppSelector(state => state.lab.initialSources);
   // Mirror the current sources into redux, and flag when they differ from the
   // project as loaded. Both feed the version panel's "save a named version"
   // flow: base `SaveVersionPanel` reads `labProject.projectSources` (legacy's
@@ -97,7 +93,7 @@ export const InfoPanel = ({
     // Compare against the loaded baseline rather than the previous value: the
     // sources arrive asynchronously after mount, and that first arrival is a
     // load, not an edit.
-    const baseline = loadedSourcesRef.current;
+    const baseline = loadedSources;
     if (
       baseline &&
       JSON.stringify(currentSources.source) !==
@@ -105,7 +101,7 @@ export const InfoPanel = ({
     ) {
       dispatch(labProjectActions.setHasEdited(true));
     }
-  }, [dispatch, currentSources]);
+  }, [dispatch, currentSources, loadedSources]);
 
   // Codebridge contributes the font-size settings — console font size only for
   // labs that render its console. Python Lab supports both themes, so it also
@@ -139,8 +135,7 @@ export const InfoPanel = ({
     ? 'source' in levelStartSources
       ? levelStartSources
       : {source: levelStartSources}
-    : (loadedSourcesRef.current ??
-      currentSources)) as unknown as ProjectSources;
+    : (loadedSources ?? currentSources)) as unknown as ProjectSources;
 
   return (
     <ResourcePanel
