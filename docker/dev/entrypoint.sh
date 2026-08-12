@@ -1,8 +1,9 @@
 #!/bin/bash
 # Sandbox entrypoint: start in-container services, bootstrap assets, exec CMD.
-# Invoked both by ENTRYPOINT (plain docker run) and by postStartCommand
-# (devcontainer path, where the CLI replaces ENTRYPOINT with keep-alive).
-# Pass "true" as $1 to run services then exit (postStartCommand mode).
+# Invoked as the image's ENTRYPOINT, and again as the devcontainer's
+# postStartCommand — the CLI leaves the entrypoint in place, so both happen on
+# the same container start. See bootstrap_once at the bottom, which is what
+# makes that safe. Pass "true" as $1 to bootstrap and exit rather than exec.
 set -euo pipefail
 
 start_services() {
@@ -39,11 +40,24 @@ bootstrap_apps() {
 
   if command -v bundle >/dev/null 2>&1 && [ -f /code-dot-org/Rakefile ] && \
      git -C /code-dot-org rev-parse HEAD >/dev/null 2>&1; then
+    # Two gigabytes of somebody's build output is about to be replaced. Name
+    # it, and name what replaced it, so this is legible afterwards in a
+    # checkout that is shared with a native setup.
+    local package_dir=/code-dot-org/dashboard/public/apps-package
+    if [ -d "$package_dir" ]; then
+      echo "entrypoint: overwriting the apps package in $package_dir (commit_hash $(cat "$package_dir/commit_hash" 2>/dev/null || echo unknown))"
+    fi
     echo "entrypoint: downloading apps package from S3..."
     cd /code-dot-org
     bundle exec rake package:apps:update 2>&1 || true
     bundle exec rake package:apps:symlink 2>&1 || \
       echo "entrypoint: apps bootstrap skipped (S3 package not available for this commit)"
+    if [ -d "$package_dir" ]; then
+      echo "entrypoint: apps package now at commit_hash $(cat "$package_dir/commit_hash" 2>/dev/null || echo unknown)"
+    fi
+    if [ -L "$blockly_target" ]; then
+      echo "entrypoint: $blockly_target -> $(readlink "$blockly_target")"
+    fi
   fi
 }
 
@@ -109,11 +123,46 @@ migrate_or_die() {
   exit 1
 }
 
-start_services
-install_hooks
-assert_db_config
-auto_migrate
-bootstrap_apps
+bootstrap() {
+  start_services
+  install_hooks
+  assert_db_config
+  auto_migrate
+  bootstrap_apps
+}
+
+# Exactly once per container start, whoever asks. Two things invoke this file
+# and neither knows about the other: the image's ENTRYPOINT, and — under the
+# devcontainer CLI, which does not replace the entrypoint — postStartCommand.
+# Unguarded, both copies run at once; the visible result is two
+# `rake package:apps:update` processes unpacking the same two gigabytes into
+# the same directory, one of them still going after the CLI reports success.
+#
+# The marker lives in /dev/shm, a tmpfs the runtime creates fresh for every
+# container start, so it means "this boot" and not "this image": a stop/start
+# still re-checks migrations. The lock is what makes the second caller wait
+# for the first rather than skip a bootstrap that has not finished yet, which
+# is also what makes `devcontainer up` return only when the work is done.
+#
+# Closing the descriptor matters: the ENTRYPOINT path ends in `exec "$@"`, and
+# an inherited lock would be held for the life of the container.
+bootstrap_once() {
+  if [ ! -w /dev/shm ]; then
+    bootstrap
+    return
+  fi
+  exec 9>/dev/shm/cdo-entrypoint.lock
+  flock 9
+  if [ -e /dev/shm/cdo-entrypoint.done ]; then
+    echo "entrypoint: bootstrap already ran for this container start"
+  else
+    bootstrap
+    : > /dev/shm/cdo-entrypoint.done
+  fi
+  exec 9>&-
+}
+
+bootstrap_once
 
 if [ "${1:-}" = "true" ]; then
   echo "entrypoint: services started (postStartCommand mode)"
