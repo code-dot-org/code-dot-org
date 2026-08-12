@@ -7,9 +7,6 @@
     background-color: var(--background-neutral-secondary);
 
     .title {
-        padding-block: 18px;
-        // padding-inline auto-flips for RTL (replaces the old isRtl prop).
-        padding-inline: 25px;
         margin: 0;
         color: var(--text-neutral-inverse);
         display: -webkit-box;
@@ -20,8 +17,12 @@
 }
 
 .header {
+    box-sizing: border-box;
     width: 100%;
     min-height: 100px;
+    padding-block: 18px;
+    // padding-inline auto-flips for RTL (replaces the old isRtl prop).
+    padding-inline: 25px;
     background-color: var(--background-brand-teal-primary);
 }
 
