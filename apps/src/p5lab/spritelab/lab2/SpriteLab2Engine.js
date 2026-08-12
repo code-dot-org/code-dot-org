@@ -10,6 +10,7 @@ import SpriteLab from '../SpriteLab';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {trimAnimationListImages} from './imageTrim';
 import {
+  CONTACT_EPSILON,
   isSupported,
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
@@ -98,6 +99,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Platformer levels size sprites to one grid cell by default (the
       // legacy library's one load-bearing line).
       library.defaultSpriteSize = 50;
+      // The resolver's landings carry sub-pixel float noise, so the
+      // footing commands (hasSupportAt, isDirectlyAbove — the patrolling
+      // behaviors ask them) must not compare contact exactly.
+      library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
     // set-gravity block says otherwise. Negative flips the world: players

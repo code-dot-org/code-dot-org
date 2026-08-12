@@ -317,6 +317,19 @@ describe('platformPhysics with undersized block art', () => {
 // push-out's zero test read those as overlap and corner-pushed a centered
 // landing sideways (175 -> 184.68 via a two-wall ping-pong).
 describe('platformPhysics with trimmed-art dimensions', () => {
+  it('keeps footing after landing art with non-round dims (jump gate)', () => {
+    // From a live report: trimmed generated art (raccoon, 814x729 at
+    // max-dim 50) lands with ~1e-14 float noise on its image bottom, so
+    // any exact-equality footing gate silently disables jumping for such
+    // costumes. isSupported, which the jump command asks, must hold.
+    const player = makeSprite(175, 225, 814, 729);
+    player.scale = 50 / 814;
+    const walls = [wallAt(0, 5), wallAt(1, 5), wallAt(2, 5), wallAt(3, 5)];
+    run(player, walls, 60);
+    expect(feet(player)).toBeCloseTo(250, 6);
+    expect(isSupported(player, walls, VIEW)).toBe(true);
+  });
+
   it('lands a centered drop without sideways displacement', () => {
     const walls: PhysicsBox[] = [2, 3, 4, 5].map(col => ({
       position: {x: col * 50 + 25, y: 275},

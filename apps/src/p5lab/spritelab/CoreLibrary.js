@@ -30,6 +30,10 @@ export default class CoreLibrary {
     this.numActivePrompts = 0;
     this.screenText = {};
     this.defaultSpriteSize = 100;
+    // Tolerance (px) for resting-contact comparisons in hasSupportAt /
+    // isDirectlyAbove. Zero keeps classic's exact equality; a lab whose
+    // physics leaves sub-pixel float noise on landings raises it.
+    this.contactEpsilon = 0;
     this.printLog = [];
     this.promptVars = {};
     this.eventLog = [];
