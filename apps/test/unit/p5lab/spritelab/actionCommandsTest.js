@@ -661,4 +661,62 @@ describe('Action Commands', () => {
       expect(sprites[1].y).to.equal(minY);
     });
   });
+
+  describe('footing contact tolerance', () => {
+    // A landing computed through the platformer's body math leaves ~1e-14
+    // float noise on the image bottom, so a bottom that PRINTS as the wall
+    // top can still fail exact equality. Classic keeps the exact compare
+    // (contactEpsilon 0); the Lab2 platformer raises the tolerance.
+    const FLOAT_NOISE = 2.8e-14;
+
+    function placeSpriteAndWall(spriteBottomY) {
+      coreLibrary.addSprite({name: 'player'});
+      coreLibrary.addSprite({name: 'wall'});
+      const player = coreLibrary.getSpriteArray({name: 'player'})[0];
+      const wall = coreLibrary.getSpriteArray({name: 'wall'})[0];
+      player.width = wall.width = 50;
+      player.height = wall.height = 50;
+      player.scale = wall.scale = 1;
+      player.x = wall.x = 125;
+      wall.y = 225; // wall top at 200
+      player.y = spriteBottomY - 25;
+      return {player, wall};
+    }
+
+    it('isDirectlyAbove compares exactly by default', () => {
+      placeSpriteAndWall(200 - FLOAT_NOISE);
+      const touching = commands.isDirectlyAbove.apply(coreLibrary, [
+        {name: 'player'},
+        {name: 'wall'},
+      ]);
+      expect(touching).to.be.false;
+    });
+
+    it('isDirectlyAbove tolerates landing noise within contactEpsilon', () => {
+      placeSpriteAndWall(200 - FLOAT_NOISE);
+      coreLibrary.contactEpsilon = 0.1;
+      const touching = commands.isDirectlyAbove.apply(coreLibrary, [
+        {name: 'player'},
+        {name: 'wall'},
+      ]);
+      expect(touching).to.be.true;
+    });
+
+    it('hasSupportAt tolerates landing noise within contactEpsilon', () => {
+      placeSpriteAndWall(200 - FLOAT_NOISE);
+      const exact = commands.hasSupportAt.apply(coreLibrary, [
+        {name: 'player'},
+        0,
+        {name: 'wall'},
+      ]);
+      expect(exact).to.be.false;
+      coreLibrary.contactEpsilon = 0.1;
+      const tolerant = commands.hasSupportAt.apply(coreLibrary, [
+        {name: 'player'},
+        0,
+        {name: 'wall'},
+      ]);
+      expect(tolerant).to.be.true;
+    });
+  });
 });
