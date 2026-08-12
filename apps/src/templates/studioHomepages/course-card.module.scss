@@ -7,19 +7,21 @@
     background-color: var(--background-neutral-secondary);
 
     .title {
-        padding-top: 25px;
-        padding-bottom: 5px;
+        padding-block: 18px;
         // padding-inline auto-flips for RTL (replaces the old isRtl prop).
-        padding-inline-start: 25px;
-        padding-inline-end: 10px;
+        padding-inline: 25px;
         margin: 0;
         color: var(--text-neutral-inverse);
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 }
 
 .header {
     width: 100%;
-    min-height: 130px;
+    min-height: 100px;
     background-color: var(--background-brand-teal-primary);
 }
 
