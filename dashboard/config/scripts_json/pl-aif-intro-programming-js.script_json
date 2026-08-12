@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-10 19:13:30 UTC",
+    "serialized_at": "2026-08-11 18:26:32 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -91,6 +91,21 @@
         "lesson_group.key": "",
         "script.name": "pl-aif-intro-programming-js"
       }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Functions, Conditionals, and Loops",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js"
+      }
     }
   ],
   "lesson_activities": [
@@ -138,6 +153,18 @@
       "seeding_key": {
         "lesson_activity.key": "40573891-8f3f-47c6-bb97-ced11fcb0ecb",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js"
+      }
+    },
+    {
+      "key": "44de9876-cba9-4bad-a076-4179f9bdd203",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "44de9876-cba9-4bad-a076-4179f9bdd203",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "pl-aif-intro-programming-js"
       }
@@ -252,6 +279,39 @@
       "seeding_key": {
         "activity_section.key": "36e1a1bc-8590-465a-a9bd-74306ca85938",
         "lesson_activity.key": "40573891-8f3f-47c6-bb97-ced11fcb0ecb"
+      }
+    },
+    {
+      "key": "225c26d2-f5e8-4500-a20b-548d880cbb19",
+      "position": 1,
+      "properties": {
+        "progression_name": "Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19",
+        "lesson_activity.key": "44de9876-cba9-4bad-a076-4179f9bdd203"
+      }
+    },
+    {
+      "key": "70fe28d8-5c2f-4635-be88-24a2086d5983",
+      "position": 2,
+      "properties": {
+        "progression_name": "Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983",
+        "lesson_activity.key": "44de9876-cba9-4bad-a076-4179f9bdd203"
+      }
+    },
+    {
+      "key": "6bad7e12-f755-4f92-8aff-225b717db700",
+      "position": 3,
+      "properties": {
+        "progression_name": "Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700",
+        "lesson_activity.key": "44de9876-cba9-4bad-a076-4179f9bdd203"
       }
     }
   ],
@@ -1201,6 +1261,358 @@
       "level_keys": [
         "pl-aif1-js-variables-weblab"
       ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-functions-clean-code"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      },
+      "level_keys": [
+        "pl-aif1-js-functions-clean-code"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-funcitons-panel"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      },
+      "level_keys": [
+        "pl-aif1-js-funcitons-panel"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-calling-functions"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      },
+      "level_keys": [
+        "pl-aif1-js-calling-functions"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-abstractions-spec"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      },
+      "level_keys": [
+        "pl-aif1-js-abstractions-spec"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-functions-notification-weblab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      },
+      "level_keys": [
+        "pl-aif1-js-functions-notification-weblab"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-flowcharts"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      },
+      "level_keys": [
+        "pl-aif1-js-flowcharts"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-conditionals-and-boolean"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      },
+      "level_keys": [
+        "pl-aif1-js-conditionals-and-boolean"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-flowchart-to-code"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      },
+      "level_keys": [
+        "pl-aif1-js-flowchart-to-code"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-heart-button-sketch-lab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      },
+      "level_keys": [
+        "pl-aif1-js-heart-button-sketch-lab"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-conditionals-video_2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      },
+      "level_keys": [
+        "pl-aif1-js-conditionals-video_2026"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 11,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-conditionals-weblab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      },
+      "level_keys": [
+        "pl-aif1-js-conditionals-weblab"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-iteration"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      },
+      "level_keys": [
+        "pl-aif1-js-iteration"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-start-stop-step"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      },
+      "level_keys": [
+        "pl-aif1-js-start-stop-step"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-debugging-checklist"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      },
+      "level_keys": [
+        "pl-aif1-js-debugging-checklist"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-debugging-for-loops-video"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      },
+      "level_keys": [
+        "pl-aif1-js-debugging-for-loops-video"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-loops-broken-password-weblab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      },
+      "level_keys": [
+        "pl-aif1-js-loops-broken-password-weblab"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1718,6 +2130,198 @@
         "lesson_group.key": "",
         "script.name": "pl-aif-intro-programming-js",
         "activity_section.key": "36e1a1bc-8590-465a-a9bd-74306ca85938"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-functions-clean-code",
+        "script_level.level_keys": [
+          "pl-aif1-js-functions-clean-code"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-funcitons-panel",
+        "script_level.level_keys": [
+          "pl-aif1-js-funcitons-panel"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-calling-functions",
+        "script_level.level_keys": [
+          "pl-aif1-js-calling-functions"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-abstractions-spec",
+        "script_level.level_keys": [
+          "pl-aif1-js-abstractions-spec"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-functions-notification-weblab",
+        "script_level.level_keys": [
+          "pl-aif1-js-functions-notification-weblab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-flowcharts",
+        "script_level.level_keys": [
+          "pl-aif1-js-flowcharts"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-conditionals-and-boolean",
+        "script_level.level_keys": [
+          "pl-aif1-js-conditionals-and-boolean"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-flowchart-to-code",
+        "script_level.level_keys": [
+          "pl-aif1-js-flowchart-to-code"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-heart-button-sketch-lab",
+        "script_level.level_keys": [
+          "pl-aif1-js-heart-button-sketch-lab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-conditionals-video_2026",
+        "script_level.level_keys": [
+          "pl-aif1-js-conditionals-video_2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-conditionals-weblab",
+        "script_level.level_keys": [
+          "pl-aif1-js-conditionals-weblab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "70fe28d8-5c2f-4635-be88-24a2086d5983"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-iteration",
+        "script_level.level_keys": [
+          "pl-aif1-js-iteration"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-start-stop-step",
+        "script_level.level_keys": [
+          "pl-aif1-js-start-stop-step"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-debugging-checklist",
+        "script_level.level_keys": [
+          "pl-aif1-js-debugging-checklist"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-debugging-for-loops-video",
+        "script_level.level_keys": [
+          "pl-aif1-js-debugging-for-loops-video"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-loops-broken-password-weblab",
+        "script_level.level_keys": [
+          "pl-aif1-js-loops-broken-password-weblab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
       }
     }
   ],

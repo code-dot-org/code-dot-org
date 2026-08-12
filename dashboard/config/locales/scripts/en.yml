@@ -10332,6 +10332,8 @@ en:
               name: Lesson 3 exploration
             lesson-27:
               name: Generate lesson with AI and project
+            lesson-28:
+              name: Unit 1
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -10355,6 +10357,8 @@ en:
               display_name: Web Lab 2
             lessonGroup-12:
               display_name: 'Levelbuilder: generate w/AI'
+            lessonGroup-13:
+              display_name: CSP Prototypes
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
@@ -25033,6 +25037,8 @@ en:
               name: App Lab Levels
             lesson-2:
               name: Other
+            lesson-3:
+              name: Theater Playground
           lesson_groups: {}
           name: joi-playground
           title: Joi's Playground Script
@@ -29715,6 +29721,8 @@ en:
               name: Design Foundations
             lesson-4:
               name: Interactivity in Web Apps
+            lesson-5:
+              name: Functions, Conditionals, and Loops
           lesson_groups: {}
           name: pl-aif-intro-programming-js
           title: Teaching Introduction to Programming [JavaScript]
@@ -30075,7 +30083,7 @@ en:
             lesson-2:
               name: Lesson 2
             lesson-3:
-              name: Lesson 2
+              name: 'Lesson 3:'
             lesson-4:
               name: Lesson 4
             lesson-5:
