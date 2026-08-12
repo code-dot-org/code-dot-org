@@ -10,10 +10,12 @@
 # codespace has no seeded MySQL and no tarball to make one from; it pulls
 # this.
 #
-# amd64 only, for now. Codespaces is amd64, and the seed is expensive enough
-# that a second architecture should wait until someone is actually developing
-# on arm64 hardware — where `.devcontainer/bake-db.sh` builds the same image
-# locally, natively, from the same script this workflow runs.
+# Multi-arch from one bake. An InnoDB datadir is architecture-portable and
+# Dockerfile.db has no RUN steps, so both images come from the same tar with
+# nothing executed at build time — no qemu anywhere in this workflow. The
+# smoke matrix then runs the SQL natively on each architecture, which is the
+# part that has to be real, and only then does the stitch job create the tags
+# a consumer resolves.
 
 name: cdo-devdb-image
 
@@ -47,7 +49,7 @@ env:
 
 jobs:
   build:
-    name: bake, smoke-test and publish
+    name: bake the datadir and push per-arch images
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     permissions:
@@ -82,98 +84,120 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # A content key over what determines the schema: the schema itself, and
-      # the gem set that migrates and seeds it. Deliberately coarse — it does
-      # NOT cover dashboard/config, whose thousands of curriculum files change
-      # daily and would make the key a per-commit value that never hits. So
-      # the key identifies the schema an image was built for, the weekly
-      # rebuild bounds curriculum drift, and a keyed tag is the newest bake
-      # for that schema rather than an immutable artifact. Pin by digest, or
-      # by the git-<sha> tag, when you need one that cannot move.
-      - name: Compute the content key
-        id: key
-        run: |
-          set -euo pipefail
-          key="$(cat dashboard/db/schema.rb Gemfile.lock | sha256sum | cut -c1-16)"
-          echo "key=$key" >> "$GITHUB_OUTPUT"
-
       # ~20 minutes: schema load, seed:default, then a clean shutdown and a
       # tar of the datadir. The same script a developer runs locally.
       - name: Bake the datadir
         run: .devcontainer/bake-db.sh
 
-      - name: Build cdo-devdb
-        run: docker build -f .devcontainer/Dockerfile.db -t cdo-devdb:smoke .devcontainer
+      # Buildx, twice, once per architecture, both from the tar that bake
+      # just made. Nothing runs during these builds — the Dockerfile is an ADD
+      # and a CMD — so the arm64 image is produced on an amd64 runner without
+      # emulation. The tags are immutable and named by commit; no consumer
+      # resolves them, and the stitch job builds every consumer name from the
+      # pair after the smoke matrix has run natively on both.
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3.11.1
 
-      # Prove the image is a database and not just a tarball that unpacked:
-      # it starts, every migration in the checkout is applied, and the
-      # curriculum the seed was run for is really in there.
-      - name: Smoke test
+      - name: Build and push cdo-devdb (per-arch tags)
+        if: github.event_name != 'pull_request'
         run: |
-          set -euo pipefail
-          docker run -d --name devdb-smoke cdo-devdb:smoke
-          for _ in $(seq 60); do
-            docker exec devdb-smoke mysqladmin -uroot -ppassword ping --silent 2>/dev/null && break
-            sleep 2
+          set -euxo pipefail
+          for arch in amd64 arm64; do
+            docker buildx build \
+              --platform "linux/$arch" \
+              --provenance false \
+              -f .devcontainer/Dockerfile.db \
+              -t "$IMAGE:git-${{ github.sha }}-$arch" \
+              --push .devcontainer
           done
-          q() { docker exec devdb-smoke mysql -uroot -ppassword -N -e "$1" 2>/dev/null; }
 
-          applied="$(q 'SELECT COUNT(*) FROM dashboard_development.schema_migrations')"
-          # shellcheck disable=SC2012 # migration filenames are ls-safe by convention
-          expected="$(ls dashboard/db/migrate/*.rb | wc -l)"
-          test "$applied" = "$expected" \
-            || { echo "migrations: $applied applied, $expected in the checkout" >&2; exit 1; }
+      # On a pull request nothing is pushed, so smoke it here instead: one
+      # architecture, loaded locally, which is what the runner can execute.
+      - name: Build and smoke-test locally (pull requests)
+        if: github.event_name == 'pull_request'
+        run: |
+          set -euxo pipefail
+          docker buildx build --platform linux/amd64 --load \
+            -f .devcontainer/Dockerfile.db -t cdo-devdb:smoke .devcontainer
+          .devcontainer/devdb-smoke.sh cdo-devdb:smoke
 
-          levels="$(q 'SELECT COUNT(*) FROM dashboard_development.levels')"
-          test "$levels" -gt 50000 \
-            || { echo "levels: only $levels seeded" >&2; exit 1; }
+  # Natively, on each architecture, against the image that was actually
+  # pushed. This is what a multi-arch claim has to be worth: an arm64 mysqld
+  # starting on arm64 hardware and answering the same questions.
+  smoke:
+    name: smoke-test (${{ matrix.arch }})
+    if: github.event_name != 'pull_request'
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { arch: amd64, runs-on: ubuntu-24.04 }
+          - { arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
+    permissions:
+      contents: read
+      packages: read
+    steps:
+      # The smoke script counts the checkout's migrations against the
+      # database's, so it needs db/migrate and nothing else.
+      - name: Checkout the migrations and the script
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .devcontainer
+            dashboard/db/migrate
 
-          test "$(q "SELECT COUNT(*) FROM dashboard_development.scripts WHERE name = 'hourofcode'")" = 1 \
-            || { echo "the hourofcode script is missing" >&2; exit 1; }
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-          # The test database has to arrive seeded, not merely present: same
-          # schema as the dev one, and something in it that only seed:test
-          # puts there. Without this a fresh container pays ~77 s on its
-          # first testunit run.
-          test_applied="$(q 'SELECT COUNT(*) FROM dashboard_test.schema_migrations')"
-          test "$test_applied" = "$applied" \
-            || { echo "test database: $test_applied migrations against the dev database's $applied" >&2; exit 1; }
+      - name: Smoke test
+        run: .devcontainer/devdb-smoke.sh "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
-          words="$(q 'SELECT COUNT(*) FROM dashboard_test.secret_words')"
-          test "$words" -gt 0 \
-            || { echo "test database is unseeded: secret_words is empty" >&2; exit 1; }
-
-          # SETUP.md wants +00:00 globally. It comes from the image's CMD, so
-          # it survives a container recreate where SET PERSIST would not.
-          tz="$(q 'SELECT @@global.time_zone')"
-          test "$tz" = "+00:00" \
-            || { echo "global time_zone is $tz, not +00:00" >&2; exit 1; }
-
-          echo "smoke: $applied migrations, $levels levels, test database seeded ($words secret words), time_zone $tz"
-          docker rm -f devdb-smoke
+  # The consumer-facing tags, created from the immutable per-arch pair once
+  # both have been smoke-tested. Until this runs, only the suffixed tags
+  # exist, so a half-published state is visible as such.
+  stitch:
+    name: stitch multi-platform manifest
+    if: github.event_name != 'pull_request'
+    needs: smoke
+    runs-on: ubuntu-24.04
+    permissions:
+      packages: write
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Compute tags
         id: meta
-        if: github.event_name != 'pull_request'
         uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
         with:
           images: ${{ env.IMAGE }}
           tags: |
             type=sha,prefix=git-,format=long,enable={{is_default_branch}}
             type=raw,value=latest,enable={{is_default_branch}}
-            type=raw,value=schema-${{ steps.key.outputs.key }},enable={{is_default_branch}}
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
-      # Pushed only after the smoke test, and by a separate step from the
-      # build, so a bad bake never reaches a tag.
-      - name: Push cdo-devdb
-        if: github.event_name != 'pull_request'
+      - name: Stitch every tag from the sha-keyed per-arch pair
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |
           set -euxo pipefail
+          # An empty list would make this step a green no-op.
           test -n "$TAGS"
-          for ref in $TAGS; do
-            docker tag cdo-devdb:smoke "$ref"
-            docker push "$ref"
-          done
+          args=()
+          for ref in $TAGS; do args+=(-t "$ref"); done
+          docker buildx imagetools create "${args[@]}" \
+            "$IMAGE:git-${{ github.sha }}-amd64" \
+            "$IMAGE:git-${{ github.sha }}-arm64"
+
+      - name: Inspect a published manifest
+        run: docker buildx imagetools inspect "$IMAGE:git-${{ github.sha }}"
