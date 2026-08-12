@@ -48,6 +48,11 @@ describe('ProjectRemix', () => {
     window.dashboard.project.exceedsAbuseThreshold.restore();
   });
 
+  it('does not render when lab2 project is blocked for abuse', () => {
+    const wrapper = shallow(<ProjectRemix {...defaultProps} isBlockedAbuse />);
+    expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
   it('will attempt serverside remix when possible', () => {
     sinon.stub(window.dashboard.project, 'getCurrentId').returns(true);
     sinon.stub(window.dashboard.project, 'canServerSideRemix').returns(true);
