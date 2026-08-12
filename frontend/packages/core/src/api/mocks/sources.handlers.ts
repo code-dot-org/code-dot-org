@@ -92,13 +92,9 @@ function activeVersion(): string {
   return list[list.length - 1]?.versionId ?? INITIAL_VERSION;
 }
 
-function sourcesAt(versionId: string): ProjectSourcesAny {
-  return (
-    sourcesByVersion()[versionId] ??
-    // A version nothing was stored for is the fixture: it is the only content
-    // that predates the store.
-    fixtureSources()
-  );
+/** A version's sources, or undefined if this store has never held them. */
+function sourcesAt(versionId: string): ProjectSourcesAny | undefined {
+  return sourcesByVersion()[versionId];
 }
 
 function nextVersionId(): string {
@@ -202,7 +198,11 @@ export const sourcesHandlers = [
     if (!wanted) {
       return HttpResponse.json({version_id: activeVersion()});
     }
-    const entry = record(sourcesAt(wanted), {replace: false});
+    const sources = sourcesAt(wanted);
+    if (!sources) {
+      return new HttpResponse(null, {status: 404});
+    }
+    const entry = record(sources, {replace: false});
     return HttpResponse.json({version_id: entry.versionId});
   }),
 
@@ -221,10 +221,20 @@ export const sourcesHandlers = [
   }),
 
   // GET /v3/sources/:channelId/:sourceFile[?version=:versionId]
+  // A version this store never held is a 404, as it would be from S3 — NOT
+  // the fixture, which is what this used to answer. A forgiving fallback here
+  // turns a client asking for the wrong thing into a client that is quietly
+  // handed the starting project, and the editor renders it as if it were real:
+  // that is how `resetToCurrentVersion` passing an app name where a version id
+  // belongs presented as "restore gives you back the original board".
   http.get('*/v3/sources/:channelId/:sourceFile', ({request}) => {
     const wanted = new URL(request.url).searchParams.get('version');
     const versionId = wanted ?? activeVersion();
-    return HttpResponse.json(sourcesAt(versionId), {
+    const sources = sourcesAt(versionId);
+    if (!sources) {
+      return new HttpResponse(null, {status: 404});
+    }
+    return HttpResponse.json(sources, {
       headers: {'S3-Version-Id': versionId},
     });
   }),

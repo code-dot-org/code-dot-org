@@ -155,7 +155,21 @@ export const resetToCurrentVersion = createAsyncThunk(
   ) => {
     const projectManager = LabRegistry.projectManager;
     if (projectManager) {
-      const sources = await projectManager.loadSources(LabRegistry.appName);
+      // NO ARGUMENT: `loadSources` takes a VERSION ID, and this used to hand it
+      // `LabRegistry.appName` — so "go back to the current version" asked the
+      // server for a version called "world" (or "music", or…). Two things went
+      // wrong with that and neither said so:
+      //
+      //   the sources   a store that does not have that version answers with
+      //                 whatever it does for an unknown one, and the editor
+      //                 showed it. Against the mock that is the starting
+      //                 project, so restoring a version put the FIXTURE on
+      //                 screen while the server held the right content.
+      //   the version   `SourcesStore.load` only records `currentVersionId`
+      //                 when asked for the latest — i.e. when no id is passed —
+      //                 so the id it tracks was left stale by the one call
+      //                 whose whole job is to return to the latest.
+      const sources = await projectManager.loadSources();
       thunkAPI.dispatch(setProjectSource(sources));
       thunkAPI.dispatch(setViewingOldVersion(false));
       if (sources && payload.onLoadVersion) payload.onLoadVersion(sources);
