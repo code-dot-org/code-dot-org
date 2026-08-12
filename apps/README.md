@@ -79,7 +79,7 @@ command prints a reminder. Switching between bundlers cleans
 every start (serving over a populated directory costs rspack about 18
 seconds), so the first compile after starting re-copies ace, piskel and
 the pyodide wheels. Source maps work differently under rspack; see
-[Source maps under rspack](#source-maps-under-rspack-yarn-start---rspack).
+[Source maps under rspack](#source-maps-under-rspack).
 
 Two other levers:
 
@@ -95,6 +95,12 @@ Two other levers:
   babel-loader and ts-loader back, keeping rspack as the bundler. That
   isolates the transpiler when you suspect swc is behind a difference,
   which is faster than rebuilding under webpack to find out.
+- `RSPACK_NO_LAZY=1 yarn start --rspack` compiles dynamic imports up
+  front instead of when a page first requests them. The lazy default is
+  part of the fast startup, but the deferred chunks exist only inside
+  the dev server: a page loaded straight from Rails on :3000 while the
+  rspack server owns `build/package/js` hits stubs whose requests
+  nothing answers. Set this if that is your workflow.
 
 ## Dev server source maps and memory usage
 
@@ -120,13 +126,16 @@ Two shortcuts combine these levers:
 - `yarn start:cheapest` — `APPS_DEVTOOL=eval` plus `SKIP_TYPECHECK=1`, for the
   lowest-memory dev server.
 
-### Source maps under rspack (`yarn start --rspack`)
+### Source maps under rspack
 
-The rspack dev server defaults to `eval` — no source maps — because rspack's
-whole-app `-module` map modes are currently unusable at our module count
-(>22GB, and beyond the reach of Node heap caps; upstream issue pending). The
-server prints its active mode at startup. Three ways to get original-source
-stepping back:
+Under `--rspack`, the dev server *and* one-shot dev builds default to `eval`
+— no source maps — because rspack's whole-app `-module` map modes are
+currently unusable at our module count (beyond the reach of Node heap caps;
+upstream issue pending). The dev server exceeds 22GB during rebuilds with
+them; a one-shot `yarn build --rspack` forced to full maps was OOM-killed on
+a 30GB machine, because a build compiles every dynamic import up front where
+the dev server defers them. The active mode is printed at startup. Three
+ways to get original-source stepping back:
 
 - stay on webpack `yarn start` (unchanged);
 - `APPS_DEVTOOL=eval-cheap-module-source-map yarn start --rspack` — full maps,
