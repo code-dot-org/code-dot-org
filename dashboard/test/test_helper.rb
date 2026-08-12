@@ -181,12 +181,6 @@ class ActiveSupport::TestCase
   include CaptureQueries
   include Curriculum::SharedCourseConstants
 
-  # Mocha will automatically enable stubbing as part of the `setup` callback,
-  # but our custom `setup_all` callbacks execute first. To support creating
-  # stubs in them, we manually enable stubbing here.
-  setup_all {Mocha::Mockery.setup}
-  teardown_all {Mocha::Mockery.teardown}
-
   # Create the hourofcode unit and levels from factories.
   #
   # The hourofcode unit has some special properties, such as special routes for
