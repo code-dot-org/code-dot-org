@@ -17,16 +17,15 @@ from .instrument_samples import load_note_samples
 
 
 class GifTooLargeError(Exception):
-  """Raised when the rendered gif exceeds the size ceiling (matches Java's cap)."""
+  """Raised when the rendered gif exceeds the size ceiling."""
 
 
 def render(actions):
   """Execute a scene's action list into (gif_bytes, wav_bytes).
 
-  Mirrors org.code.theater.support.ConcertCreator.publishConcert: drawing
-  accumulates on a single canvas, each pause snapshots a gif frame, and audio is
-  blended onto one timeline. wav_bytes is None when the program produced no
-  audio.
+  Drawing accumulates on a single canvas, each pause snapshots a gif frame, and
+  audio is blended onto one timeline. wav_bytes is None when the program
+  produced no audio.
   """
   canvas = PILImage.new("RGBA", (THEATER_WIDTH, THEATER_HEIGHT), (255, 255, 255, 255))
   draw = ImageDraw.Draw(canvas, "RGBA")
@@ -79,7 +78,7 @@ def render(actions):
         width=_stroke(action.stroke_width),
       )
 
-  # Final frame with no trailing delay, matching ConcertCreator's closing write.
+  # Final frame with no trailing delay.
   frames.append(canvas.copy())
   durations.append(0)
 
@@ -105,7 +104,7 @@ def _draw_image(canvas, action):
   if action.rotation:
     layer = PILImage.new("RGBA", (canvas.width, canvas.height), (0, 0, 0, 0))
     layer.paste(scaled, (action.x, action.y), scaled)
-    # Java rotates clockwise about the image's top-left corner; Pillow rotates
+    # Rotate clockwise about the image's top-left corner. Pillow rotates
     # counterclockwise, hence the negated angle.
     layer = layer.rotate(-action.rotation, center=(action.x, action.y))
     canvas.alpha_composite(layer)
@@ -118,7 +117,7 @@ def _draw_text(canvas, action):
   fill = _rgba(action.color)
   if not action.rotation:
     draw = ImageDraw.Draw(canvas, "RGBA")
-    # anchor 'ls' = left baseline, matching Java drawString's baseline origin.
+    # anchor 'ls' = left baseline, so (x, y) is the text's baseline origin.
     draw.text((action.x, action.y), action.text, fill=fill, font=font, anchor="ls")
     return
   layer = PILImage.new("RGBA", (canvas.width, canvas.height), (0, 0, 0, 0))

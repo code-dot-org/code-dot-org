@@ -22,8 +22,7 @@ class SceneActionType(Enum):
   DRAW_RECTANGLE = auto()
 
 
-# Sentinel for the "size not specified" branch in draw_image, matching Java's
-# DrawImageAction.UNSPECIFIED.
+# Sentinel for the "size not specified" branch in draw_image.
 UNSPECIFIED = -1
 
 

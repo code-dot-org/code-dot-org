@@ -7,14 +7,14 @@ _MIN_VALUE = 0
 
 
 def _sanitize(value):
-  """Clamp a channel value into the 0-255 range, matching Java's Color.sanitizeValue."""
+  """Clamp a channel value into the 0-255 range."""
   if value < _MIN_VALUE:
     return _MIN_VALUE
   return min(value, _MAX_VALUE)
 
 
 class Color:
-  """An RGB color, ported from org.code.media.Color.
+  """An RGB color.
 
   Construct from three channel values, a copy of another Color, or a name/hex
   string. Names come from the fixed palette below (case-insensitive); hex may be
@@ -72,8 +72,8 @@ def _from_string(color):
   raise ValueError(f"Invalid color {color}")
 
 
-# The fixed named palette from org.code.media.Color. Values are sanitized on the
-# way out (e.g. LIME's 256 clamps to 255), matching the Java constructor.
+# The fixed named palette. Values are sanitized on the way out (e.g. LIME's 256
+# clamps to 255).
 _RAW_NAMED_COLORS = {
   "WHITE": (255, 255, 255),
   "SILVER": (192, 192, 192),
@@ -109,6 +109,6 @@ _NAMED_COLORS = {
   for name, rgb in _RAW_NAMED_COLORS.items()
 }
 
-# Convenient module-level constants mirroring Java's static Color fields.
+# Convenient module-level color constants.
 WHITE = Color("white")
 BLACK = Color("black")

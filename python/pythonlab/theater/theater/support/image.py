@@ -2,14 +2,13 @@ from PIL import Image as PILImage
 
 from .color import Color
 
-# Loaded images larger than this are scaled down, preserving aspect ratio, to
-# match org.code.media.Image (MAX_WIDTH/MAX_HEIGHT = 400).
+# Loaded images larger than this are scaled down, preserving aspect ratio.
 MAX_WIDTH = 400
 MAX_HEIGHT = 400
 
 
 class Pixel:
-  """A single pixel's color, ported from org.code.media.Pixel (color only)."""
+  """A single pixel's color."""
 
   def __init__(self, color):
     self._color = color
@@ -19,7 +18,7 @@ class Pixel:
 
 
 class Image:
-  """A bitmap image, ported from org.code.media.Image.
+  """A bitmap image.
 
   Construct from a filename (read from the Pyodide filesystem), from another
   Image (copy), or from width/height (a blank transparent image).

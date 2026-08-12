@@ -9,7 +9,7 @@ from .constants import CHANNELS, MAX_16_BIT_VALUE, SAMPLE_RATE
 def read_samples_from_wav_bytes(wav_bytes):
   """Read a WAV file into normalized mono float samples in [-1.0, 1.0].
 
-  Stereo input is averaged to mono, matching org.code.media.util.AudioUtils.
+  Stereo input is averaged to mono.
   """
   with wave.open(io.BytesIO(wav_bytes), "rb") as reader:
     num_channels = reader.getnchannels()
@@ -41,8 +41,7 @@ def truncate_samples(samples, length_seconds):
 class AudioWriter:
   """Accumulates audio by additively blending sources onto a timeline.
 
-  Ported from org.code.media.support.AudioWriter + AudioUtils.blendSamples: new
-  samples are added at the current cursor and clamped to [-1.0, 1.0]; delays
+  New samples are added at the current cursor and clamped to [-1.0, 1.0]; delays
   advance the cursor over silence.
   """
 
@@ -83,7 +82,7 @@ class AudioWriter:
 
 
 def _to_int16(samples):
-  # Match AudioUtils.convertDoubleArrayToByteArray: 1.0 maps to Short.MAX_VALUE,
-  # everything else scales by 32768 and truncates toward zero.
+  # 1.0 maps to the maximum signed 16-bit value; everything else scales by
+  # 32768 and truncates toward zero.
   scaled = np.where(samples == 1.0, 32767.0, samples * MAX_16_BIT_VALUE)
   return scaled.astype(np.int16)

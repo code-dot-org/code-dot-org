@@ -2,21 +2,21 @@ from enum import Enum
 
 
 class Font(Enum):
-  """Font families available for drawn text (org.code.media.Font)."""
+  """Font families available for drawn text."""
   MONO = "MONO"
   SANS = "SANS"
   SERIF = "SERIF"
 
 
 class FontStyle(Enum):
-  """Text styles (org.code.media.FontStyle)."""
+  """Text styles."""
   NORMAL = "NORMAL"
   BOLD = "BOLD"
   ITALIC = "ITALIC"
   BOLD_ITALIC = "BOLD_ITALIC"
 
 
-# Mirrors org.code.media.support.FontHelper: (Font, FontStyle) -> TTF filename.
+# Maps (Font, FontStyle) -> bundled TTF filename.
 _FAMILY_PREFIX = {
   Font.MONO: "LiberationMono",
   Font.SANS: "LiberationSans",

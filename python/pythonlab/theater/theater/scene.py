@@ -19,7 +19,7 @@ def _as_color(color):
 
 
 class Scene:
-  """A single scene of drawing and audio commands, ported from Java's Scene.
+  """A single scene of drawing and audio commands.
 
   Method calls record actions; play_scenes(scene) later renders them to a gif
   and audio track and plays them on the theater stage.
