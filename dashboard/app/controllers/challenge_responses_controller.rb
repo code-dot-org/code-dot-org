@@ -46,25 +46,6 @@ class ChallengeResponsesController < ApplicationController
     render json: counts
   end
 
-  # The rows the gallery lists: the section's final submissions when
-  # section_id is given (authorized like other per-section listings, e.g.
-  # the projects gallery), otherwise the caller's own.
-  #
-  # The class gallery shows one card per student per challenge — their most
-  # recent submission; a resubmission replaces its predecessor. The caller's
-  # own "My projects" view is not collapsed: it lists every submission.
-  private def gallery_scope
-    scope = ChallengeResponse.where(is_final: true)
-    return scope.where(user_id: current_user.id) if params[:section_id].blank?
-
-    section = Section.find(params[:section_id])
-    authorize! :list_projects, section
-    section_scope = scope.where(user_id: section.students.select(:id))
-    # Final submissions are immutable, so the max id per (student, challenge)
-    # is the newest.
-    ChallengeResponse.where(id: section_scope.group(:challenge_id, :user_id).select('MAX(id)'))
-  end
-
   # POST /challenge_responses
   #
   # Atomically creates a response and one asset row per requested asset_type,
@@ -111,6 +92,25 @@ class ChallengeResponsesController < ApplicationController
     end
     EvaluateChallengeResponseJob.perform_later(challenge_response_id: @challenge_response.id)
     render json: @challenge_response.summarize, status: :accepted
+  end
+
+  # The rows the gallery lists: the section's final submissions when
+  # section_id is given (authorized like other per-section listings, e.g.
+  # the projects gallery), otherwise the caller's own.
+  #
+  # The class gallery shows one card per student per challenge — their most
+  # recent submission; a resubmission replaces its predecessor. The caller's
+  # own "My projects" view is not collapsed: it lists every submission.
+  private def gallery_scope
+    scope = ChallengeResponse.where(is_final: true)
+    return scope.where(user_id: current_user.id) if params[:section_id].blank?
+
+    section = Section.find(params[:section_id])
+    authorize! :list_projects, section
+    section_scope = scope.where(user_id: section.students.select(:id))
+    # Final submissions are immutable, so the max id per (student, challenge)
+    # is the newest.
+    ChallengeResponse.where(id: section_scope.group(:challenge_id, :user_id).select('MAX(id)'))
   end
 
   private def authorize_create!
