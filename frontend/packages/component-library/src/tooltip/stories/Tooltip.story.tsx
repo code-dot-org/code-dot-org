@@ -8,6 +8,9 @@ import {Tooltip} from '../index';
 export default {
   title: 'DesignSystem/Tooltip/Tooltip',
   component: Tooltip,
+  parameters: {
+    componentSubtitle: 'Built on MUI. Use this one for new code.',
+  },
 } as Meta;
 
 const KeyboardHint = () => (
@@ -100,7 +103,7 @@ export const Placements: StoryFn = () => (
 );
 
 /** The portal escapes `data-theme`, so the tooltip needs its own. */
-export const InsideAThemedSubtree: StoryFn = () => (
+export const InsideDarkTheme: StoryFn = () => (
   <div
     data-theme="Dark"
     style={{

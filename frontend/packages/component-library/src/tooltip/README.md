@@ -39,8 +39,7 @@ Props are MUI's [`TooltipProps`](https://mui.com/material-ui/api/tooltip/) —
 `title`, `placement`, `arrow`, `open`, and the rest — plus a few of ours:
 
 - `size` (`'xs' | 's' | 'm' | 'l'`, default `'m'`) picks the design system size.
-  MUI has no size prop of its own, so we augment one onto `TooltipProps` the way
-  `Breadcrumbs` does, and the theme reads it back from `ownerState`.
+  MUI has no size prop of its own.
 - `hasCaret` (`boolean`) is our name for MUI's `arrow` — the pointing caret. It
   defaults to `true` via the theme and, when set, wins over a caller's `arrow`.
   Pass `hasCaret={false}` to drop the caret.
@@ -90,6 +89,13 @@ tooltips, and a global override would restyle them; the earlier migrations had n
 such callsites to disturb, because nothing used MUI `Button` or `Breadcrumbs`
 before their overrides landed.
 
+`size` travels as a `data-size` attribute on the same element, rather than as a
+prop the theme reads off `ownerState` the way `breadcrumbs.ts` does. MUI's
+Tooltip copies props it doesn't recognise onto the trigger, so a `size` prop
+lands on the trigger too — and an MUI trigger such as `IconButton` has its own
+`size`, which ours would override and shrink. Breadcrumbs has no such trigger to
+clone onto.
+
 Both the mark and the flipped defaults are temporary. Once `WithTooltip` retires
 and every tooltip in the repo is this one, the override can go global and the
 attribute can go away.
@@ -97,6 +103,25 @@ attribute can go away.
 Spacing between tooltip and trigger is left at MUI's defaults, which are a
 little looser than the SCSS tooltip's. Worth a design pass before this replaces
 `WithTooltip` outright.
+
+### Right-to-left
+
+`placement="bottom-start"` opens from the right edge in a right-to-left locale,
+and the other three `-start`/`-end` placements mirror the same way. Plain `left`
+and `right` do not, matching MUI: physical placements stay physical. The SCSS
+tooltip mirrored its `onLeft`/`onRight` instead, so when moving a callsite over,
+pick `-start`/`-end` if the side was meant to follow the text.
+
+Nothing in the tooltip's own styles needs flipping. The padding is horizontally
+symmetric, and the leading icon is placed with flexbox, which already follows
+the text direction.
+
+The mirroring is done in `Tooltip.tsx`, off `<html dir>`, which the server sets
+from the locale. MUI can do this itself, but only from `theme.direction`, and
+`CdoTheme` sets no direction — giving it one would mirror every MUI popper in
+the app, which is a bigger change than this component wants to make. The
+tooltip checks `theme.direction` first and stops mirroring if it is ever set, so
+the two can't cancel out.
 
 ## `WithTooltip`
 
@@ -128,7 +153,7 @@ For guidelines on how to use these components and the features they
 offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
 (link to be updated once code-dot-org storybook will be public.).
 Or run storybook locally and go
-to [Design System / Tooltip Component](http://localhost:9001/?path=/story/designsystem-tooltip--default-tooltip).
+to [Design System / Tooltip / WithTooltip](http://localhost:6006/?path=/story/designsystem-tooltip-withtooltip--default-tooltip).
 
 ---
 

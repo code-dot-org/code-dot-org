@@ -6,6 +6,10 @@ import type {Components, Theme} from '@mui/material/styles';
  *
  * These only apply to tooltips marked `data-cdo-tooltip`, which our Tooltip
  * sets and plain MUI tooltips don't. Drop the mark once every tooltip is ours.
+ *
+ * Size arrives as `data-size` rather than a prop read off `ownerState`, the way
+ * breadcrumbs.ts does it. MUI's Tooltip copies props it doesn't recognise onto
+ * the trigger, so a `size` prop would land on the trigger and fight its own.
  */
 
 const BACKGROUND = 'var(--background-neutral-primary-inverse)';
@@ -46,24 +50,31 @@ const sizeStyles = (theme: Theme) => ({
 
 export const TOOLTIP_OVERRIDES: Components<Theme>['MuiTooltip'] = {
   styleOverrides: {
-    tooltip: ({theme, ownerState}) => ({
-      '&[data-cdo-tooltip]': {
-        backgroundColor: BACKGROUND,
-        color: 'var(--text-neutral-inverse)',
-        borderRadius: '0.25rem',
-        boxShadow:
-          '0 8px 12px 0 rgb(0 0 0 / 0.12), 0 0 12px 0 rgb(0 0 0 / 0.12)',
-        boxSizing: 'border-box',
-        // Centers the text and puts a leading icon beside it.
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minWidth: '4rem',
-        maxWidth: '16rem',
-        textAlign: 'center',
-        ...sizeStyles(theme)[ownerState.size ?? 'm'],
-      },
-    }),
+    tooltip: ({theme}) => {
+      const sizes = sizeStyles(theme);
+      return {
+        '&[data-cdo-tooltip]': {
+          backgroundColor: BACKGROUND,
+          color: 'var(--text-neutral-inverse)',
+          borderRadius: '0.25rem',
+          boxShadow:
+            '0 8px 12px 0 rgb(0 0 0 / 0.12), 0 0 12px 0 rgb(0 0 0 / 0.12)',
+          boxSizing: 'border-box',
+          // Centers the text and puts a leading icon beside it.
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minWidth: '4rem',
+          maxWidth: '16rem',
+          textAlign: 'center',
+          // Our Tooltip always sets a size, so there's no unsized default.
+          '&[data-size="xs"]': sizes.xs,
+          '&[data-size="s"]': sizes.s,
+          '&[data-size="m"]': sizes.m,
+          '&[data-size="l"]': sizes.l,
+        },
+      };
+    },
     // Set on the arrow itself. Styling it through the tooltip loses to MUI.
     arrow: {
       '[data-cdo-tooltip] &': {color: BACKGROUND}, // MUI fills it from currentColor

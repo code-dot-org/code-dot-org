@@ -11,8 +11,12 @@ import {
 } from '../index';
 
 export default {
-  title: 'DesignSystem/Tooltip',
+  title: 'DesignSystem/Tooltip/WithTooltip',
   component: LegacyTooltip,
+  parameters: {
+    componentSubtitle:
+      'The original SCSS tooltip. Still what most of the codebase uses.',
+  },
 } as Meta;
 
 //

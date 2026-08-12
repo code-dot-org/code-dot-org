@@ -1,6 +1,7 @@
 import {
   Tooltip as MuiTooltip,
   TooltipProps as MuiTooltipProps,
+  useTheme,
 } from '@mui/material';
 import {forwardRef} from 'react';
 
@@ -10,7 +11,7 @@ import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 /** MUI's tooltip props plus ours; the legacy tooltip still owns `TooltipProps`. */
 export interface CdoTooltipProps extends MuiTooltipProps {
-  /** Defaults to 'm'. Also augmented onto MUI's own `TooltipProps`. */
+  /** Defaults to 'm'. */
   size?: ComponentSizeXSToL;
   /** Show only on keyboard focus. Hover and touch do nothing. */
   keyboardOnly?: boolean;
@@ -50,6 +51,18 @@ const KEYBOARD_ONLY_PROPS = {
   disableTouchListener: true,
 };
 
+// Plain left and right are left alone, as MUI leaves them: physical sides stay
+// physical. Only the ones that mean "start" or "end" mirror.
+const MIRRORED_PLACEMENTS = {
+  'bottom-start': 'bottom-end',
+  'bottom-end': 'bottom-start',
+  'top-start': 'top-end',
+  'top-end': 'top-start',
+} as const;
+
+const isRtlDocument = () =>
+  typeof document !== 'undefined' && document.documentElement.dir === 'rtl';
+
 // forwardRef, or React drops the ref before it reaches the trigger.
 const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
   {
@@ -61,6 +74,7 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
     // Describe the trigger instead of renaming it. MUI defaults this off.
     describeChild = true,
     title,
+    placement,
     slotProps,
     'data-theme': dataTheme,
     children,
@@ -69,6 +83,15 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
   ref,
 ) {
   const callerTooltipProps = slotProps?.tooltip;
+
+  // MUI mirrors placements for right-to-left, but only once the theme's
+  // `direction` says so, and ours takes no direction. Read the document
+  // instead. Drops out on its own if the theme ever learns its direction.
+  const themeIsRtl = useTheme().direction === 'rtl';
+  const rtlPlacement =
+    !themeIsRtl && isRtlDocument()
+      ? MIRRORED_PLACEMENTS[placement as keyof typeof MIRRORED_PLACEMENTS]
+      : undefined;
 
   // Only wrap when there's an icon and text both, so an empty title stays empty.
   const content =
@@ -85,19 +108,21 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
     <MuiTooltip
       ref={ref}
       title={content}
-      size={size}
+      placement={rtlPlacement ?? placement}
       describeChild={describeChild}
       // hasCaret first, then arrow, then on: our tooltips have tails.
       arrow={hasCaret ?? arrow ?? true}
       slotProps={{
         ...slotProps,
-        // Drop data-cdo-tooltip and the tooltip loses its styling. data-theme
-        // has to sit on the bubble, which portals out of any theme above it.
+        // These ride as attributes because MUI copies any prop it doesn't know
+        // onto the trigger, and a `size` prop there fights the trigger's own.
+        // Drop data-cdo-tooltip and the tooltip loses its styling.
         tooltip: ownerState => ({
           ...(typeof callerTooltipProps === 'function'
             ? callerTooltipProps(ownerState)
             : callerTooltipProps),
           'data-cdo-tooltip': '',
+          'data-size': size,
           ...(dataTheme && {'data-theme': dataTheme}),
         }),
       }}

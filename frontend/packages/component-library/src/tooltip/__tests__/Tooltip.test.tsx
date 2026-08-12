@@ -1,4 +1,4 @@
-import {Tooltip as MuiTooltip, ThemeProvider} from '@mui/material';
+import {Tooltip as MuiTooltip, ThemeProvider, createTheme} from '@mui/material';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {createRef} from 'react';
@@ -224,14 +224,35 @@ describe('Design System - Tooltip (MUI)', () => {
     );
   });
 
-  // `size` reaches the styles as a real MUI prop, so what it does is checked
-  // under "themed styles" below rather than by looking for an attribute.
   it('marks the tooltip so the themed styles apply to it', async () => {
-    renderKeyboardOnly();
+    renderKeyboardOnly({size: 's'});
 
     await user.tab();
 
-    expect(await findTooltipBubble()).toHaveAttribute('data-cdo-tooltip');
+    const bubble = await findTooltipBubble();
+    expect(bubble).toHaveAttribute('data-cdo-tooltip');
+    expect(bubble).toHaveAttribute('data-size', 's');
+  });
+
+  // MUI copies props it doesn't recognise onto the trigger. A `size` prop would
+  // land on an MUI trigger and override its own, shrinking it to fit the icon.
+  it('keeps size off the trigger', async () => {
+    const seen: string[][] = [];
+    const Trigger = (props: Record<string, unknown>) => {
+      seen.push(Object.keys(props ?? {}));
+      return <button type="button">trigger</button>;
+    };
+
+    render(
+      <ThemeProvider theme={CdoTheme}>
+        <Tooltip title="tooltipText" size="s">
+          <Trigger />
+        </Tooltip>
+      </ThemeProvider>,
+    );
+
+    expect(seen).not.toHaveLength(0);
+    seen.forEach(keys => expect(keys).not.toContain('size'));
   });
 
   it('puts data-theme on the tooltip, not on the trigger', async () => {
@@ -392,6 +413,58 @@ describe('Design System - Tooltip (MUI)', () => {
         'var(--background-neutral-primary-inverse)',
       );
       expect(getComputedStyle(bubble).display).not.toBe('flex');
+    });
+  });
+
+  describe('right-to-left', () => {
+    const placementOf = async () =>
+      (await screen.findByRole('tooltip')).getAttribute(
+        'data-popper-placement',
+      );
+
+    afterEach(() => {
+      document.documentElement.dir = '';
+    });
+
+    // Plain left and right stay put, as they do in MUI: physical means physical.
+    it.each([
+      ['bottom-start', 'bottom-end'],
+      ['bottom-end', 'bottom-start'],
+      ['top-start', 'top-end'],
+      ['top-end', 'top-start'],
+      ['left', 'left'],
+      ['bottom', 'bottom'],
+    ] as const)('places %s at %s', async (placement, mirrored) => {
+      document.documentElement.dir = 'rtl';
+      renderTooltip({placement});
+
+      await user.hover(screen.getByRole('button'));
+
+      expect(await placementOf()).toBe(mirrored);
+    });
+
+    it('leaves placements alone in a left-to-right document', async () => {
+      renderTooltip({placement: 'bottom-start'});
+
+      await user.hover(screen.getByRole('button'));
+
+      expect(await placementOf()).toBe('bottom-start');
+    });
+
+    // Otherwise MUI would mirror it and so would we, cancelling out.
+    it('mirrors once, not twice, when the theme is right-to-left too', async () => {
+      document.documentElement.dir = 'rtl';
+      render(
+        <ThemeProvider theme={createTheme(CdoTheme, {direction: 'rtl'})}>
+          <Tooltip title="tooltipText" placement="bottom-start">
+            <button type="button">trigger</button>
+          </Tooltip>
+        </ThemeProvider>,
+      );
+
+      await user.hover(screen.getByRole('button'));
+
+      expect(await placementOf()).toBe('bottom-end');
     });
   });
 
