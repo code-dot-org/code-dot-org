@@ -142,6 +142,9 @@ const MINECRAFT_OUTLINED = {
     border: 'none',
     textShadow: '1px 2px rgba(33, 33, 33, 0.4)',
   },
+  '&& .MuiButton-icon': {
+    textShadow: 'none',
+  },
   '&&.MuiButton-sizeExtraSmall': {
     textShadow: 'none',
   },
