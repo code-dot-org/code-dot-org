@@ -99,11 +99,6 @@ class HttpCache
     cached_units(env).map {|unit_name| "/courses/#{unit_name}/units/1/lessons/*"}
   end
 
-  # Same list under the older "script" name, which ScriptConfig still speaks.
-  def self.cached_scripts
-    cached_units
-  end
-
   ALLOWED_WEB_REQUEST_HEADERS = %w(
     Authorization
   )
