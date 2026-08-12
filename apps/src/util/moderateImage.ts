@@ -17,6 +17,10 @@ const LABS_WITH_IMAGE_MODERATION = [
   'applab',
 ];
 
+const MODERATION_SPAN_OP = 'image.moderate';
+const FILE_MODERATION_SPAN_NAME = 'image-moderation.moderateImage';
+const URL_MODERATION_SPAN_NAME = 'image-moderation.moderateImageUrl';
+
 export type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
 export type SeverityThresholds = Partial<Record<CategoryName, number>>;
 export type CategoryAnalysis = {
@@ -160,7 +164,7 @@ const runModeration = async (
   return Observability.startSpan(
     {
       name: moderationConfig.span.name,
-      op: 'image.moderate',
+      op: MODERATION_SPAN_OP,
       attributes: {
         feature,
         'image.app_name': appName,
@@ -203,7 +207,7 @@ export const moderateImage = async (
       formatAssetUrl: url =>
         url ? `${window.location.origin}${url}` : undefined,
       span: {
-        name: 'image-moderation.moderateImage',
+        name: FILE_MODERATION_SPAN_NAME,
         attributes: {
           'image.source': 'file',
           'image.type': imageType,
@@ -243,7 +247,7 @@ export const moderateImageUrl = async (
         ),
       formatAssetUrl: url => url || undefined,
       span: {
-        name: 'image-moderation.moderateImageUrl',
+        name: URL_MODERATION_SPAN_NAME,
         attributes: {'image.source': 'url'},
       },
     }
