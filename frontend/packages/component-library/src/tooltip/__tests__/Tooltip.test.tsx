@@ -1,6 +1,7 @@
 import {ThemeProvider} from '@mui/material';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import {createRef} from 'react';
 import {vi} from 'vitest';
 
 import CdoTheme from '@/themes/code.org';
@@ -8,29 +9,27 @@ import CdoTheme from '@/themes/code.org';
 import {Tooltip, CdoTooltipProps} from './../index';
 
 /**
- * A note on `:focus-visible` coverage. jsdom implements the selector but
- * reports every focused element as focus-visible, mouse clicks included, so
- * "click the trigger and the tooltip stays shut" cannot be observed here
- * directly. The same goes for a tap on a touch device, which focuses the
- * trigger without making the focus visible. The test that stubs
- * `Element.matches` stands in for both: it checks that we leave MUI's
- * focus-visible gate in place rather than opening on any focus. Confirm the
- * real click and tap behavior in a browser.
+ * jsdom reports every focused element as focus-visible, clicks and taps
+ * included, so "a click leaves it shut" can only be tested by stubbing
+ * `Element.matches`. Confirm the real thing in a browser.
  *
- * On the DOM shape: `role="tooltip"` sits on MUI's Popper, which is also what
- * carries the id referenced by `aria-describedby`. The styled tooltip bubble is
- * the `.MuiTooltip-tooltip` element inside it, so that is where `data-size` and
- * `data-theme` land.
+ * `role="tooltip"` and the `aria-describedby` id sit on MUI's Popper; the
+ * styled bubble is `.MuiTooltip-tooltip` inside it, and carries our attributes.
  */
 describe('Design System - Tooltip (MUI)', () => {
-  // Most of what follows is about keyboardOnly, so the shared helper sets it.
-  // The "default behavior" block below renders without it.
+  // Plain <button>: an MUI one injects the MuiButton overrides, whose
+  // `:not(:has(...))` selectors crash jsdom on getComputedStyle.
   const renderTooltip = (props: Partial<CdoTooltipProps> = {}) =>
     render(
-      <Tooltip title="tooltipText" keyboardOnly {...props}>
-        <button type="button">trigger</button>
-      </Tooltip>,
+      <ThemeProvider theme={CdoTheme}>
+        <Tooltip title="tooltipText" {...props}>
+          <button type="button">trigger</button>
+        </Tooltip>
+      </ThemeProvider>,
     );
+
+  const renderKeyboardOnly = (props: Partial<CdoTooltipProps> = {}) =>
+    renderTooltip({keyboardOnly: true, ...props});
 
   /** The styled tooltip bubble, as opposed to the popper wrapping it. */
   const findTooltipBubble = async () => {
@@ -41,16 +40,9 @@ describe('Design System - Tooltip (MUI)', () => {
   };
 
   describe('default behavior, without keyboardOnly', () => {
-    const renderPlain = (props: Partial<CdoTooltipProps> = {}) =>
-      render(
-        <Tooltip title="tooltipText" {...props}>
-          <button type="button">trigger</button>
-        </Tooltip>,
-      );
-
     it('opens on hover', async () => {
       const user = userEvent.setup();
-      renderPlain();
+      renderTooltip();
 
       await user.hover(screen.getByRole('button'));
 
@@ -61,7 +53,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
     it('still opens on keyboard focus', async () => {
       const user = userEvent.setup();
-      renderPlain();
+      renderTooltip();
 
       await user.tab();
 
@@ -69,10 +61,8 @@ describe('Design System - Tooltip (MUI)', () => {
     });
 
     it('carries a native title attribute as a fallback', () => {
-      // MUI's describeChild behavior. It strips the attribute on mouseover
-      // before showing its own tooltip. keyboardOnly suppresses it entirely,
-      // which is what the "adds no title attribute" test below checks.
-      renderPlain();
+      // MUI's describeChild behavior; it strips the attribute on mouseover.
+      renderTooltip();
 
       expect(screen.getByRole('button')).toHaveAttribute(
         'title',
@@ -80,9 +70,38 @@ describe('Design System - Tooltip (MUI)', () => {
       );
     });
 
+    it('shows a tail by default, unlike MUI', async () => {
+      const user = userEvent.setup();
+      renderTooltip();
+
+      await user.hover(screen.getByRole('button'));
+      await screen.findByRole('tooltip');
+
+      expect(document.querySelector('.MuiTooltip-arrow')).toBeInTheDocument();
+    });
+
+    it('drops the tail when arrow is false', async () => {
+      const user = userEvent.setup();
+      renderTooltip({arrow: false});
+
+      await user.hover(screen.getByRole('button'));
+      await screen.findByRole('tooltip');
+
+      expect(
+        document.querySelector('.MuiTooltip-arrow'),
+      ).not.toBeInTheDocument();
+    });
+
+    it('forwards a ref to the trigger, as MUI does', () => {
+      const ref = createRef<HTMLButtonElement>();
+      renderTooltip({ref});
+
+      expect(ref.current).toBe(screen.getByRole('button'));
+    });
+
     it('lets keyboardOnly win over an explicit disableHoverListener', async () => {
       const user = userEvent.setup();
-      renderPlain({keyboardOnly: true, disableHoverListener: false});
+      renderTooltip({keyboardOnly: true, disableHoverListener: false});
 
       await user.hover(screen.getByRole('button'));
 
@@ -92,7 +111,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('opens on keyboard focus', async () => {
     const user = userEvent.setup();
-    renderTooltip();
+    renderKeyboardOnly();
 
     expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
 
@@ -104,23 +123,22 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('stays closed on hover', async () => {
     const user = userEvent.setup();
-    renderTooltip();
+    renderKeyboardOnly();
 
     await user.hover(screen.getByRole('button'));
 
-    // MUI's tooltip has no enter delay by default, so nothing is pending.
+    // No enter delay by default, so nothing is pending.
     expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
   });
 
   it('stays closed on touch', () => {
-    // Fire the touch events directly rather than through userEvent's tap, which
-    // also focuses the trigger and so runs into the jsdom caveat above.
+    // Fired directly; userEvent's tap also focuses, hitting the jsdom caveat.
     vi.useFakeTimers();
     try {
-      renderTooltip();
+      renderKeyboardOnly();
 
       fireEvent.touchStart(screen.getByRole('button'));
-      // MUI's touch path waits out enterTouchDelay (700ms) before opening.
+      // MUI's touch path waits out enterTouchDelay (700ms).
       act(() => vi.advanceTimersByTime(1000));
 
       expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
@@ -130,8 +148,7 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('stays closed when focus is not focus-visible', async () => {
-    // Stand-in for a mouse click: the platform reports the focus as not
-    // visible, and MUI's gate should keep the tooltip shut.
+    // Stand-in for a mouse click.
     const realMatches = Element.prototype.matches;
     const matches = vi
       .spyOn(Element.prototype, 'matches')
@@ -143,7 +160,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
     try {
       const user = userEvent.setup();
-      renderTooltip();
+      renderKeyboardOnly();
 
       await user.tab();
 
@@ -156,7 +173,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('closes on blur', async () => {
     const user = userEvent.setup();
-    renderTooltip();
+    renderKeyboardOnly();
 
     await user.tab();
     expect(await screen.findByRole('tooltip')).toBeInTheDocument();
@@ -170,7 +187,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('closes on Escape while the trigger keeps focus', async () => {
     const user = userEvent.setup();
-    renderTooltip();
+    renderKeyboardOnly();
 
     await user.tab();
     expect(await screen.findByRole('tooltip')).toBeInTheDocument();
@@ -185,11 +202,10 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('describes the trigger instead of renaming it, and adds no title attribute', async () => {
     const user = userEvent.setup();
-    renderTooltip();
+    renderKeyboardOnly();
 
     const trigger = screen.getByRole('button', {name: 'trigger'});
-    // A `title` attribute would give mouse users a native tooltip, defeating
-    // the point of this component.
+    // A `title` would give mouse users a native tooltip anyway.
     expect(trigger).not.toHaveAttribute('title');
     expect(trigger).not.toHaveAttribute('aria-label');
 
@@ -203,7 +219,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('renames the trigger when describeChild is false', async () => {
     const user = userEvent.setup();
-    renderTooltip({describeChild: false});
+    renderKeyboardOnly({describeChild: false});
 
     await user.tab();
 
@@ -218,7 +234,7 @@ describe('Design System - Tooltip (MUI)', () => {
     'passes size "%s" to the tooltip slot',
     async size => {
       const user = userEvent.setup();
-      renderTooltip({size});
+      renderKeyboardOnly({size});
 
       await user.tab();
 
@@ -228,7 +244,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('defaults to size "m"', async () => {
     const user = userEvent.setup();
-    renderTooltip();
+    renderKeyboardOnly();
 
     await user.tab();
 
@@ -237,7 +253,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('puts data-theme on the tooltip, not on the trigger', async () => {
     const user = userEvent.setup();
-    renderTooltip({'data-theme': 'Dark'});
+    renderKeyboardOnly({'data-theme': 'Dark'});
 
     expect(screen.getByRole('button')).not.toHaveAttribute('data-theme');
 
@@ -248,7 +264,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('keeps caller tooltip slotProps given as an object', async () => {
     const user = userEvent.setup();
-    renderTooltip({
+    renderKeyboardOnly({
       'data-theme': 'Dark',
       slotProps: {tooltip: {className: 'callerClass'}},
     });
@@ -263,7 +279,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('keeps caller tooltip slotProps given as a function', async () => {
     const user = userEvent.setup();
-    renderTooltip({
+    renderKeyboardOnly({
       'data-theme': 'Dark',
       slotProps: {
         tooltip: ownerState => ({
@@ -281,7 +297,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('keeps the caller className passed via classes.tooltip', async () => {
     const user = userEvent.setup();
-    renderTooltip({size: 's', classes: {tooltip: 'callerClass'}});
+    renderKeyboardOnly({size: 's', classes: {tooltip: 'callerClass'}});
 
     await user.tab();
 
@@ -312,32 +328,17 @@ describe('Design System - Tooltip (MUI)', () => {
 
   it('renders nothing for an empty title', async () => {
     const user = userEvent.setup();
-    renderTooltip({title: ''});
+    renderKeyboardOnly({title: ''});
 
     await user.tab();
 
     expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
   });
 
-  /**
-   * The trigger here is a plain <button> rather than an MUI one on purpose.
-   * Rendering an MUI Button injects the MuiButton overrides, whose
-   * `:not(:has(...))` selectors crash jsdom's selector engine as soon as
-   * anything calls getComputedStyle.
-   */
-  describe('under CdoTheme', () => {
-    const renderThemed = (props: Partial<CdoTooltipProps> = {}) =>
-      render(
-        <ThemeProvider theme={CdoTheme}>
-          <Tooltip title="tooltipText" {...props}>
-            <button type="button">trigger</button>
-          </Tooltip>
-        </ThemeProvider>,
-      );
-
+  describe('themed styles', () => {
     it('styles the tooltip with our color and shape tokens', async () => {
       const user = userEvent.setup();
-      renderThemed();
+      renderTooltip();
 
       await user.tab();
       const bubble = await findTooltipBubble();
@@ -350,8 +351,7 @@ describe('Design System - Tooltip (MUI)', () => {
         'var(--text-neutral-inverse)',
       );
       expect(getComputedStyle(bubble).borderRadius).toBe('0.25rem');
-      // MUI fills the arrow from currentColor, so this has to match the
-      // tooltip's background rather than its text color.
+      // MUI fills the arrow from currentColor, so this is the background.
       expect(getComputedStyle(arrow).color).toBe(
         'var(--background-neutral-primary-inverse)',
       );
@@ -366,7 +366,7 @@ describe('Design System - Tooltip (MUI)', () => {
       'gives size "%s" its own text and arrow metrics',
       async (size, fontSize, lineHeight, arrowFontSize) => {
         const user = userEvent.setup();
-        renderThemed({size});
+        renderTooltip({size});
 
         await user.tab();
         const bubble = await findTooltipBubble();

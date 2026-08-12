@@ -2,13 +2,14 @@ import {
   Tooltip as MuiTooltip,
   TooltipProps as MuiTooltipProps,
 } from '@mui/material';
+import {forwardRef} from 'react';
 
 import {Theme} from '@/common/contexts';
 import {ComponentSizeXSToL} from '@/common/types';
 
-/** Named for the legacy tooltip's sake, which still owns `TooltipProps`. */
+/** `TooltipProps` is taken by the legacy tooltip. */
 export interface CdoTooltipProps extends MuiTooltipProps {
-  /** Tooltip size. Defaults to 'm'. */
+  /** Defaults to 'm'. */
   size?: ComponentSizeXSToL;
   /** Show only on keyboard focus. Hover and touch do nothing. */
   keyboardOnly?: boolean;
@@ -28,39 +29,36 @@ export interface CdoTooltipProps extends MuiTooltipProps {
  *
  * Design System: Tooltip, built on MUI's.
  *
- * MUI already gates focus-opening on `:focus-visible`, so `keyboardOnly` is
- * only its hover and touch listeners switched off.
- *
- * Two MUI defaults are flipped to match `WithTooltip`: `arrow`, since our
- * tooltips have tails, and `describeChild`, so the text describes the trigger
- * instead of replacing its accessible name.
+ * `keyboardOnly` is MUI's hover and touch listeners switched off; MUI already
+ * gates focus-opening on `:focus-visible`. `arrow` and `describeChild` default
+ * on via the theme, unlike MUI.
  */
-const Tooltip: React.FunctionComponent<CdoTooltipProps> = ({
-  size = 'm',
-  keyboardOnly = false,
-  arrow = true,
-  describeChild = true,
-  slotProps,
-  'data-theme': dataTheme,
-  children,
-  ...muiTooltipProps
-}) => {
+// forwardRef, or React drops the ref before it reaches the trigger.
+const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
+  {
+    size = 'm',
+    keyboardOnly = false,
+    slotProps,
+    'data-theme': dataTheme,
+    children,
+    ...muiTooltipProps
+  },
+  ref,
+) {
   // Attributes, not props: MUI forwards props it doesn't know to the child.
-  // The MuiTooltip theme override styles them.
   const ours = {'data-size': size, ...(dataTheme && {'data-theme': dataTheme})};
   const theirs = slotProps?.tooltip;
 
   return (
     <MuiTooltip
-      arrow={arrow}
-      describeChild={describeChild}
+      ref={ref}
       slotProps={{
         ...slotProps,
-        // A slot's props may be an object or a function of ownerState.
-        tooltip:
-          typeof theirs === 'function'
-            ? ownerState => ({...theirs(ownerState), ...ours})
-            : {...theirs, ...ours},
+        // Always a function, so the caller's own form needs no branch here.
+        tooltip: ownerState => ({
+          ...(typeof theirs === 'function' ? theirs(ownerState) : theirs),
+          ...ours,
+        }),
       }}
       {...muiTooltipProps}
       // After the spread, so keyboardOnly beats an explicit disable*Listener.
@@ -72,6 +70,6 @@ const Tooltip: React.FunctionComponent<CdoTooltipProps> = ({
       {children}
     </MuiTooltip>
   );
-};
+});
 
 export default Tooltip;

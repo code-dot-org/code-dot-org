@@ -4,7 +4,7 @@ import {useRef} from 'react';
 
 import {WithTooltip, TooltipProps, WithTooltipHandle} from './../index';
 
-describe('Design System - Tooltip', () => {
+describe('Design System - WithTooltip', () => {
   const renderWithTooltip = (tooltipProps: Partial<TooltipProps>) => {
     const WithTooltipToRender: React.FC = () => (
       <WithTooltip

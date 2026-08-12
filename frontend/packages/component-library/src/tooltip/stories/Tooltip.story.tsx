@@ -35,12 +35,7 @@ export const Default: StoryFn = () => (
   </>
 );
 
-/**
- * The reason this component exists. `keyboardOnly` switches off the hover and
- * touch listeners, leaving MUI's `:focus-visible` gate as the only way in. Use
- * it for hints that would be noise for a mouse user but are the only way a
- * keyboard user learns what the control does.
- */
+/** For hints that are noise to a mouse user but a keyboard user's only cue. */
 export const KeyboardOnly: StoryFn = () => (
   <>
     <KeyboardHint />
@@ -76,12 +71,7 @@ export const Placements: StoryFn = () => (
   </div>
 );
 
-/**
- * The tooltip renders in a portal on document.body, so it does not inherit
- * `data-theme` from the trigger's ancestors. The first trigger below passes
- * `data-theme` and its tooltip matches the dark panel; the second does not and
- * its tooltip falls back to the page theme.
- */
+/** The portal escapes `data-theme`, so the tooltip needs its own. */
 export const InsideAThemedSubtree: StoryFn = () => (
   <div
     data-theme="Dark"
@@ -102,11 +92,7 @@ export const InsideAThemedSubtree: StoryFn = () => (
   </div>
 );
 
-/**
- * `keyboardOnly` in its natural habitat: icon-only controls whose purpose is
- * obvious to a sighted mouse user from the icon, but which a keyboard user
- * benefits from seeing spelled out on focus.
- */
+/** Icon-only controls: obvious to a mouse user, spelled out on focus. */
 export const KeyboardOnlyIconButtons: StoryFn = () => (
   <>
     <KeyboardHint />

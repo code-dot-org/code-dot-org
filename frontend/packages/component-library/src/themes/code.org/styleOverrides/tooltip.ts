@@ -2,14 +2,9 @@ import type {Components, Theme} from '@mui/material/styles';
 
 /**
  * MUI Tooltip overrides matching the design system tooltip. Values mirror
- * src/tooltip/tooltip.module.scss.
+ * src/tooltip/tooltip.module.scss; spacing to the trigger is left at MUI's.
  *
- * `Tooltip` passes its size as `data-size` rather than a prop, because MUI
- * forwards unrecognized props to the child element. Default is 'm'.
- *
- * Spacing between tooltip and trigger is left at MUI's defaults; our SCSS
- * positions with its own tail geometry, MUI with Popper, so the two are not
- * comparable and MUI's are the tested ones.
+ * Size arrives as `data-size`, since MUI forwards unknown props to the child.
  */
 
 const BACKGROUND = 'var(--background-neutral-primary-inverse)';
@@ -43,6 +38,9 @@ const SIZES = {
 };
 
 export const TOOLTIP_OVERRIDES: Components<Theme>['MuiTooltip'] = {
+  // Both differ from MUI: our tooltips have tails, and the text should describe
+  // the trigger rather than replace its accessible name.
+  defaultProps: {arrow: true, describeChild: true},
   styleOverrides: {
     tooltip: {
       backgroundColor: BACKGROUND,
@@ -54,7 +52,7 @@ export const TOOLTIP_OVERRIDES: Components<Theme>['MuiTooltip'] = {
       maxWidth: '16rem',
       textAlign: 'center',
       fontWeight: 400,
-      ...SIZES.m, // for a bare MUI <Tooltip>, which sets no data-size
+      ...SIZES.m, // a bare MUI <Tooltip> sets no data-size
       ...Object.fromEntries(
         Object.entries(SIZES).map(([size, style]) => [
           `&[data-size="${size}"]`,
@@ -62,7 +60,6 @@ export const TOOLTIP_OVERRIDES: Components<Theme>['MuiTooltip'] = {
         ]),
       ),
     },
-    // MUI fills the arrow from currentColor.
-    arrow: {color: BACKGROUND},
+    arrow: {color: BACKGROUND}, // MUI fills the arrow from currentColor
   },
 };

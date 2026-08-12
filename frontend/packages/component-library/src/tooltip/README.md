@@ -11,13 +11,10 @@
 drop-in replacement for `WithTooltip` — the spacing has not had a design pass
 (see below) — so existing `WithTooltip` callsites stay put for now.
 
-Two naming wrinkles while both exist:
-
-- `TooltipProps` still refers to the **legacy** component, because six files in
-  `apps/` import it. The new component's props are `CdoTooltipProps`. Both
-  become the obvious names once `WithTooltip` retires.
-- The legacy component is exported as `LegacyTooltip`. Nothing imported it under
-  its old name `Tooltip`, so the new component took it.
+Two naming wrinkles while both exist: `TooltipProps` refers to the **legacy**
+component, so the new one's props are `CdoTooltipProps`; the legacy component is
+exported as `LegacyTooltip`. Both become the obvious names once `WithTooltip`
+retires.
 
 ## `Tooltip`
 
@@ -43,11 +40,13 @@ Props are MUI's [`TooltipProps`](https://mui.com/material-ui/api/tooltip/) —
   MUI renders the tooltip in a portal on `document.body`, so it does not
   otherwise inherit the surrounding theme.
 
-Two MUI defaults are flipped to match `WithTooltip`:
+Two MUI defaults are flipped in the theme, so a bare MUI `<Tooltip>` gets them
+too:
 
 - `arrow` defaults to `true`. Design system tooltips have tails; MUI's do not.
 - `describeChild` defaults to `true`, so the text becomes `aria-describedby` on
-  the trigger rather than an `aria-label` replacing its accessible name.
+  the trigger rather than an `aria-label`. The trigger must carry its own
+  accessible name — the tooltip no longer supplies one.
 
 ### `keyboardOnly`
 
