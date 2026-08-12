@@ -1,8 +1,8 @@
 # The devcontainer: cdo-dev with the state it cannot hold itself.
 #
-# Rails, the apps webpack dev server and the frontend Vite server all run in
-# the app container, by hand, in a terminal — this file starts nothing for
-# you. It gives them a database, a cache, and the checkout.
+# Rails, the apps webpack dev server, and the frontend Vite server all run
+# in the app container, by hand, in a terminal. This file starts nothing
+# for you. It gives them a database, a cache, and the checkout.
 
 services:
   db:
@@ -25,13 +25,11 @@ services:
       timeout: 3s
       retries: 10
 
-  # S3, emulated. Not a nicety: rendering a level page reaches S3 to ask
-  # whether the lesson has a PDF, and with no credentials and no endpoint that
-  # is a 500, not a missing PDF.
+  # S3, emulated: without credentials or an endpoint, a level page asking
+  # for a lesson's PDF gets a 500, not a missing PDF.
   #
-  # Its API port is 9000, the same number the apps dev server uses. It is
-  # deliberately not published — Rails reaches it as http://minio:9000 over
-  # the compose network, where nothing else is listening.
+  # Port 9000 collides with the apps dev server, so it stays unpublished —
+  # Rails reaches it as http://minio:9000 on the compose network.
   minio:
     image: ${CDO_DEV_MINIO_IMAGE:-minio/minio:latest}
     command: server /data --quiet
@@ -44,11 +42,10 @@ services:
       timeout: 3s
       retries: 15
 
-  # Runs to completion before the app starts. Creates the buckets Rails
-  # expects to exist: only reads lazily create anything
-  # (lib/cdo/local_development.rb), so without this the first save of a
-  # project or an animation fails with NoSuchBucket. The list is
-  # docker/developers/install-s3.sh's.
+  # Runs to completion before the app starts: creates the buckets Rails
+  # expects, since only reads lazily create them
+  # (lib/cdo/local_development.rb). The list matches
+  # docker/developers/install-s3.sh.
   init:
     image: ${CDO_DEV_MINIO_IMAGE:-minio/minio:latest}
     depends_on:
@@ -68,33 +65,25 @@ services:
   app:
     image: ${CDO_DEV_IMAGE:-ghcr.io/code-dot-org/cdo-dev:latest}
     volumes:
-      # The checkout, at the one path the image is built around: WORKDIR,
-      # git's safe.directory, and the venv's editable installs all say
-      # /code-dot-org. In a codespace, and under "Clone Repository in
-      # Container Volume", the host side of this is a clone made for the
-      # container and nothing else touches it. Point it at a checkout you also
-      # build natively and you own the consequences — see the README.
+      # /code-dot-org is baked into the image: WORKDIR, git's
+      # safe.directory, and the venv's editable installs all assume it.
+      # Point this at a checkout you also build natively, and you own the
+      # consequences — see the README.
       - ..:/code-dot-org:cached
 
-      # The container's config. A fresh clone has no locals.yml at all, and a
-      # checkout that was also set up natively has one written for a native
-      # install, naming a database this container cannot reach. Mounting
-      # settles both cases the same way and copies nothing. Point CDO_LOCALS
-      # at your own file to change any of it; editing the sample in place
-      # would dirty the working tree.
+      # Overrides /code-dot-org/locals.yml: a fresh clone has none, and a
+      # natively set-up checkout has one naming a database this container
+      # cannot reach. Point CDO_LOCALS at your own file instead of editing
+      # the sample, which would dirty the working tree.
       - type: bind
         source: ${CDO_LOCALS:-./locals.yml.sample}
         target: /code-dot-org/locals.yml
         read_only: true
 
-      # yarn's global state: the download cache and the install index. It is
-      # the only cache outside the checkout — apps/ sets enableGlobalCache
-      # false and turbo's lives under frontend/, so both of those persist with
-      # the workspace — and without a volume the frontend workspaces refetch
-      # 1.25 GiB every time the container is recreated. The mount is the whole
-      # of ~/.yarn rather than its cache/ subdirectory because yarn writes
-      # index/ alongside cache/. The image creates that directory, which is
-      # what makes a fresh volume here arrive owned by cdo.
+      # yarn's only cache outside the checkout (apps/ and frontend/ keep
+      # theirs inside it). Without this volume, the frontend workspaces
+      # refetch 1.25 GiB on every container recreate. Mounts all of
+      # ~/.yarn, not just cache/, because yarn also writes index/ there.
       - type: volume
         source: yarn-cache
         target: /home/cdo/.yarn
@@ -110,20 +99,20 @@ services:
       init:
         condition: service_completed_successfully
     extra_hosts:
-      # The hostname every dev URL uses. Rails, the webpack proxy and the
-      # Playwright suite all address the app as localhost-studio.code.org.
+      # Rails, the webpack proxy, and Playwright all address the app as
+      # localhost-studio.code.org.
       - "localhost-studio.code.org:127.0.0.1"
     environment:
       - RAILS_ENV=development
-      # What the entrypoint's pending-migration probe connects as. It reads
-      # schema_migrations directly rather than booting Rails, so it needs the
-      # credentials spelled out; rake still takes them from locals.yml.
+      # dev-bootstrap's migration probe reads schema_migrations directly
+      # instead of booting Rails, so it needs explicit credentials; rake
+      # still reads locals.yml.
       - DB_HOST=db
       - DB_USER=root
       - DB_PASSWORD=not-a-secret-password
-      # The apps dev server is the memory hog here: eval source maps and no
-      # in-process type checking are what keep it inside a laptop. Both are
-      # documented in apps/README.md; your editor and CI still type-check.
+      # Eval source maps and no in-process type checking keep the apps dev
+      # server inside a laptop's memory (apps/README.md); the editor and
+      # CI still type-check.
       - APPS_DEVTOOL=eval
       - SKIP_TYPECHECK=1
       - NODE_OPTIONS=--max-old-space-size=8192
@@ -131,15 +120,12 @@ services:
       - "${CDO_RAILS_PORT:-3000}:3000"
       - "${CDO_APPS_PORT:-9000}:9000"
       - "${CDO_FRONTEND_PORT:-3036}:3036"
-      # The two Storybooks. Overridable like the rest: a developer running
-      # either one natively already holds the port, and without a variable
-      # that stops the whole container from starting.
+      # Overridable: a developer already running a Storybook natively
+      # holds the port, and a fixed one would block the whole container.
       - "${CDO_APPS_STORYBOOK_PORT:-9001}:9001"
       - "${CDO_DS_STORYBOOK_PORT:-6006}:6006"
 
 volumes:
-  # No `name:`. Compose then prefixes it with the project — cdo-fresh_yarn-cache
-  # rather than a machine-global cdo-yarn-cache that any other project's
-  # `down -v` would delete. Two clones stop sharing a download cache, which is
-  # the price of each clone owning its own.
+  # No `name:`, so compose prefixes it with the project instead of a
+  # machine-global name another project's `down -v` could delete.
   yarn-cache:

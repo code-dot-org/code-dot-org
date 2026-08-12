@@ -1,11 +1,7 @@
 #!/bin/bash
-# Prove a cdo-devdb image is a database and not just a tarball that unpacked:
-# it starts, every migration in this checkout is applied, the curriculum the
-# seed ran for is really in there, the test database arrived seeded rather
-# than merely present, and the clock is the one SETUP.md asks for.
-#
-# Takes an image reference. Two callers: the workflow's per-arch smoke matrix,
-# which runs it natively on each architecture, and anyone who just built one.
+# Proves a cdo-devdb image is a database, not just a tarball that unpacked:
+# checks every migration is applied, the seed's curriculum and clock, and
+# that the test database arrived seeded, not merely present.
 #
 #   .devcontainer/devdb-smoke.sh cdo-devdb:local
 set -euo pipefail
@@ -38,9 +34,8 @@ test "$levels" -gt 50000 \
 test "$(q "SELECT COUNT(*) FROM dashboard_development.scripts WHERE name = 'hourofcode'")" = 1 \
   || { echo "the hourofcode script is missing" >&2; exit 1; }
 
-# The test database has to arrive seeded, not merely present: same schema as
-# the dev one, and something in it that only seed:test puts there. Without
-# this a fresh container pays ~77 s on its first testunit run.
+# Must arrive seeded, not merely present: same schema, plus something only
+# seed:test puts there. Saves ~77 s on a fresh container's first testunit run.
 test_applied="$(q 'SELECT COUNT(*) FROM dashboard_test.schema_migrations')"
 test "$test_applied" = "$applied" \
   || { echo "test database: $test_applied migrations against the dev database's $applied" >&2; exit 1; }

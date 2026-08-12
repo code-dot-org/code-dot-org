@@ -1,13 +1,10 @@
-# cdo-dev: the development image. One image, all of it — build toolchain,
-# Node, Playwright, debuggers, the development and test gems. Disk is cheap
-# on a laptop and "works in the devcontainer" should mean one thing.
+# cdo-dev: the development image, layered on cdo-deps rather than cdo-base
+# so the dev and test gems install as a delta over a warm tree, not a full
+# reinstall.
 #
-# It stacks on cdo-deps rather than cdo-base so the dev/test gems install as
-# a delta over a warm tree: a lockfile bump costs the delta, not a cold
-# install of the whole bundle. The lockfiles, engine gemspecs, python project
-# files and uv itself all arrive from cdo-deps, so this build reads nothing
-# from the repo: the context is this directory, and the source arrives at
-# runtime as a volume.
+# The build context is this directory only. Lockfiles, gemspecs, and python
+# project files arrive already baked into cdo-deps; the source itself
+# arrives at runtime as a mounted volume.
 #
 #   docker build -t cdo-dev:local docker/dev/
 
@@ -27,13 +24,11 @@ ARG \
 
 USER root
 
-# No heredoc, no SHELL: the dual-engine floor (podman 4.9 / buildah 1.33)
-# cannot parse RUN <<EOF, and the OCI image format drops SHELL, so -e
-# semantics come from an explicit `set -eux`. See docker/base/README.md.
+# No heredoc, no SHELL: podman 4.9 / buildah 1.33 cannot parse `RUN <<EOF`,
+# and OCI drops SHELL, so `set -eux` replaces `-e`. See docker/base/README.md.
 #
-# The toolchain duplicates cdo-build's, which the hierarchy accepts:
-# cdo-build sits below the gem layer because it produces it, and this image
-# sits above it to inherit the warm gem tree, so neither can be the other.
+# Toolchain packages duplicate cdo-build's: this image sits above the gem
+# layer, not below it, to inherit the warm tree.
 #
 # Beyond the toolchain, only what a developer cannot work without:
 #   git-lfs      the repo uses LFS
@@ -62,15 +57,13 @@ RUN set -eux \
        > /dev/null \
   && rm -rf /var/lib/apt/lists/*
 
-# Node runs the frontend toolchain (apps/ webpack, frontend/ workspaces) and
-# is the ExecJS runtime. Same recipe as docker/build/Dockerfile: the official
-# nodejs.org tarball, GPG-verified, rather than a third-party apt repo. A
-# bump edits NODE_VERSION here and there together.
+# Installed from the official nodejs.org tarball, GPG-verified, rather than
+# a third-party apt repo — same recipe as docker/build/Dockerfile; bump
+# NODE_VERSION in both.
 #
-# corepack reads each project's yarn from its package.json "packageManager"
-# field at use time; preparing that version here means the first yarn call in
-# a fresh container does not reach the network. COREPACK_HOME lives outside
-# the repo mount and outside $HOME, prepared by root, readable by everyone.
+# corepack prepares yarn here so the first yarn call in a fresh container
+# does not reach the network. COREPACK_HOME sits outside $HOME so root can
+# prepare it and everyone can read it.
 ENV COREPACK_HOME=/opt/corepack
 RUN set -eux \
   && case "$(dpkg --print-architecture)" in \
@@ -97,26 +90,19 @@ RUN set -eux \
   && echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${USERNAME}" \
   && chmod 0440 "/etc/sudoers.d/${USERNAME}"
 
-# The dev venv target. cdo-deps bakes its venv at /code-dot-org/.venv, but
-# the repo volume shadows /code-dot-org entirely at runtime, so anything
-# this image contributes has to live outside it — which is also why the gems
-# (/usr/local/bundle), corepack (/opt/corepack), and browsers (~/.cache)
-# already do.
+# /opt/venv, not /code-dot-org/.venv: the repo volume shadows /code-dot-org
+# at runtime, so anything this image contributes must live outside it.
 RUN set -eux \
   && mkdir -p /opt/venv \
   && chown "${UID}:${GID}" /opt/venv
 
 USER ${USERNAME}
 
-# The dev/test gem delta. cdo-deps ships the production groups with
-# BUNDLE_WITHOUT=development:test and BUNDLE_DEPLOYMENT=1; clearing both
-# (empty means unset, to Bundler) adds the development and test gems on top
-# and lets a developer run `bundle add` without fighting frozen mode.
-#
-# The Gemfile, lockfile and engine gemspecs are already in the image from
-# cdo-deps, so this needs no COPY. The cache mount target is the hardcoded
-# ABI path for the same buildah reason as docker/deps/Dockerfile, with the
-# same guard.
+# Adds the dev and test gems as a delta: clearing BUNDLE_WITHOUT and
+# BUNDLE_DEPLOYMENT (empty means unset, to Bundler) lifts frozen mode so
+# `bundle add` works. No COPY needed — cdo-deps already ships the Gemfile,
+# lockfile, and gemspecs. Cache mount path is hardcoded for the same
+# buildah reason as docker/deps/Dockerfile.
 ENV \
   BUNDLE_DEPLOYMENT= \
   BUNDLE_WITHOUT=
@@ -127,15 +113,12 @@ RUN --mount=type=cache,id=cdo-dev-bundle-cache,sharing=locked,uid=1000,gid=1000,
   && bundle check \
   && rm -rf ~/.bundle "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
 
-# The python delta, same shape: sync the baked project files again, this time
-# with the dev group and into /opt/venv, where the repo mount cannot shadow
-# it. The workspace members stay editable — they point at /code-dot-org/python,
-# which at runtime is the mounted checkout's live tree, exactly what a dev
-# venv should track. UV_NO_SYNC=0 turns off the no-sync deps sets to keep an
-# immutable image immutable, so a plain `uv run` keeps the venv current with
-# the mounted lockfile. It has to be 0, not empty: bundler reads an empty
-# variable as unset, uv rejects it as "not a boolean". The import below runs
-# without --no-sync to prove the value parses.
+# Same delta shape, into /opt/venv (outside the repo mount's shadow).
+# Workspace members stay editable against /code-dot-org/python, the live
+# mounted tree.
+#
+# UV_NO_SYNC=0 must be 0, not empty: uv rejects empty as "not a boolean".
+# The bare `uv run` below (no --no-sync) proves the value parses.
 ENV \
   UV_NO_SYNC=0 \
   UV_PROJECT_ENVIRONMENT=/opt/venv
@@ -143,14 +126,12 @@ RUN set -eux \
   && uv sync --frozen --quiet \
   && uv run python -c 'import pycdo'
 
-# Playwright chromium, used by both the Playwright e2e suite and the Karma
-# integration tests. OS deps need root; the browser itself installs under the
-# build user's cache so it is readable at runtime without a chown pass.
+# OS deps need root; the browser installs under the build user's cache so
+# it stays readable without a chown pass.
 #
-# HOME is overridden for the root half. cdo-base exports HOME=/home/cdo
-# unconditionally, so anything run as root still resolves HOME to the cdo
-# user's home — npx would create a root-owned /home/cdo/.npm and the install
-# below, running as cdo, then fails EACCES on its own cache.
+# HOME is forced to /root for the OS-deps install: cdo-base exports
+# HOME=/home/cdo even for root, which would make npx create a root-owned
+# ~cdo/.npm and EACCES the cdo install that runs right after.
 USER root
 RUN set -eux \
   && HOME=/root npx --yes "playwright@${PLAYWRIGHT_VERSION}" install-deps chromium \
@@ -159,8 +140,8 @@ USER ${USERNAME}
 RUN set -eux \
   && npx --yes "playwright@${PLAYWRIGHT_VERSION}" install chromium
 
-# CHROME_BIN is what Karma looks for; the path under ms-playwright embeds a
-# build number, so resolve it once here rather than pinning it.
+# CHROME_BIN is what Karma looks for. The path under ms-playwright embeds a
+# build number, so resolve it once here instead of pinning it.
 USER root
 RUN set -eux \
   && chrome="$(find "/home/${USERNAME}/.cache/ms-playwright" -type f -path '*/chrome-linux*/chrome' | head -1)" \
@@ -168,27 +149,22 @@ RUN set -eux \
   && ln -sf "$chrome" /usr/local/bin/chromium
 ENV CHROME_BIN=/usr/local/bin/chromium
 
-# The work a devcontainer does around the source it mounts, in two halves the
-# lifecycle calls: `create` once per container, `start` on every start. There
-# is no ENTRYPOINT — the container runs bash, and the hooks in
-# .devcontainer/devcontainer.json say when each half happens.
+# No ENTRYPOINT: devcontainer.json calls dev-bootstrap's `create` and
+# `start` directly.
 COPY --chown=root:root --chmod=755 dev-bootstrap /usr/local/bin/dev-bootstrap
 
 USER ${USERNAME}
 
-# The repo arrives as a volume cloned by root while the container runs as
-# cdo, so git needs to be told the ownership mismatch is expected.
+# git needs telling: the repo volume is cloned by root, the container runs
+# as cdo.
 #
-# ~/.yarn exists so that a named volume mounted there arrives owned by cdo:
-# docker copies the image's ownership onto a fresh volume, and creates the
-# mount point as root when the path is absent. yarn's global cache is the one
-# cache that lives outside the workspace, so the devcontainer keeps it in a
-# volume.
+# ~/.yarn exists ahead of the mount so the named volume arrives owned by
+# cdo instead of root.
 RUN set -eux \
   && git config --global --add safe.directory /code-dot-org \
   && mkdir -p /home/${USERNAME}/.yarn
 
-# Metadata lookups from a laptop just time out slowly.
+# Metadata lookups from a laptop time out slowly.
 ENV AWS_EC2_METADATA_DISABLED=true
 
 WORKDIR /code-dot-org

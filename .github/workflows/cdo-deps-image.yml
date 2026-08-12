@@ -149,9 +149,9 @@ jobs:
   # cdo-build exists only in this job's local image store, which is why nothing
   # sets up a container builder: it would try to pull the tag from a registry.
   #
-  # One job per architecture, natively — no qemu; a cross-built bundle would
-  # compile its extensions at emulated speed and test nothing real. Each job
-  # pushes the tag set suffixed with its arch; stitch merges them.
+  # One job per architecture, natively — no qemu: a cross-built bundle
+  # compiles its extensions at emulated speed and tests nothing real. Each
+  # pushes an arch-suffixed tag; stitch merges them into the consumer-facing ones.
   build-push:
     name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
@@ -164,9 +164,9 @@ jobs:
     runs-on: ${{ matrix.runs-on }}
     # Inert until its deployment-branch policy is set; see docker/deps/README.md.
     environment: ghcr-publish
-    # Per-arch group so two publishes cannot interleave on the same arch tag;
-    # the two arch legs of one run must NOT share a group or they would cancel
-    # each other. Safe to cancel: nothing resolves `latest` programmatically.
+    # Per-arch group: the two arch legs of one run must not share a group,
+    # or they would cancel each other. Safe to cancel — nothing resolves
+    # `latest` programmatically.
     concurrency:
       group: cdo-deps-publish-${{ matrix.arch }}
       cancel-in-progress: true
@@ -224,21 +224,19 @@ jobs:
       # Not build-push-action with push: true — that publishes in the step that
       # builds, before the smoke suites can fail the job.
       #
-      # One tag, keyed by commit and architecture, and nothing a consumer
-      # resolves. Every consumer-facing name is created by the stitch job from
-      # this immutable pair, so two publishes racing cannot produce a manifest
-      # mixing their runs, and a suffixed tag left behind by a failed run
-      # cannot be picked up by the next one.
+      # Keyed by commit and architecture, and nothing a consumer resolves:
+      # the stitch job builds every consumer-facing tag from this immutable
+      # pair, so a racing publish or a failed run's leftover tag cannot
+      # leak into it.
       - name: Push cdo-deps (per-arch tag)
         run: |
           set -euxo pipefail
           docker tag cdo-deps:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
           docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
-  # The consumer-facing tags are multi-platform manifests over the per-arch
-  # pushes. Until this job runs, only the -amd64/-arm64 suffixed tags exist,
-  # so a half-published state is visible as such rather than resolving to a
-  # single-arch image under the final name.
+  # Until this runs, only the arch-suffixed tags exist, so a half-published
+  # state is visible as such instead of resolving to one arch under the
+  # final name.
   stitch:
     name: stitch multi-platform manifest
     if: github.event_name != 'pull_request'
@@ -252,9 +250,8 @@ jobs:
       contents: read
       packages: write
     steps:
-      # The same tag set the build-push legs computed: the key action needs
-      # the dependency inputs, which cone-mode sparse checkout brings along
-      # with the repo root.
+      # The key action hashes the dependency inputs, so the checkout must
+      # contain them.
       - name: Checkout key inputs only
         uses: actions/checkout@v4
         with:
@@ -287,9 +284,8 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
-      # One call, every consumer-facing tag, both sources named by commit. The
-      # per-arch pair is all that exists until now, so no moving tag appears
-      # anywhere in the input.
+      # Both source tags are commit-keyed, so no moving tag ever appears in
+      # the input.
       - name: Stitch every tag from the sha-keyed per-arch pair
         env:
           TAGS: ${{ steps.meta.outputs.tags }}

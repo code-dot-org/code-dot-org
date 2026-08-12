@@ -2,11 +2,9 @@
 # and publishes it from staging as a multi-platform manifest (per-arch
 # native builds, stitched — the cdo-base pattern). See docker/dev/README.md.
 #
-# Lockfile changes are deliberately not triggers here: a PR that moves a
-# lockfile is gated by cdo-deps-image, and its dependency layer is only
-# published on the staging push. This workflow instead chains off that
-# publish, so the dev image rebuilds on the cdo-deps that just shipped —
-# and, transitively, on the weekly cdo-base refresh.
+# Not triggered by lockfile changes: those are cdo-deps-image's gate. This
+# workflow chains off that image's publish instead, so it rebuilds on the
+# cdo-deps that just shipped.
 
 name: cdo-dev-image
 
@@ -36,14 +34,10 @@ env:
   IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-dev
 
 jobs:
-  # Resolve the dependency layer once, by the checkout's content key, and give
-  # the same digest to every build. A key that does not resolve means the
-  # dependency layer for this checkout's lockfiles has not been published yet;
-  # see docker/deps/README.md#the-content-key.
-  #
-  # This is also where the workflow_run chain is filtered. That event fires
-  # for failed runs and for other branches, and skipping this job skips the
-  # rest.
+  # Resolves the dependency layer once, by content key, so every build gets
+  # the same digest; see docker/deps/README.md#the-content-key. Also
+  # filters the workflow_run chain, which fires for failed runs and other
+  # branches too.
   resolve-deps:
     name: resolve cdo-deps digest
     runs-on: ubuntu-24.04
@@ -54,8 +48,6 @@ jobs:
     outputs:
       digest: ${{ steps.deps.outputs.digest }}
     steps:
-      # Cone mode also brings the repo root, where the key's lockfile inputs
-      # live.
       - name: Checkout key inputs only
         uses: actions/checkout@v4
         with:
@@ -70,7 +62,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # The one definition of the content key, shared with every consumer.
       - name: Compute the dependency-layer content key
         id: key
         uses: ./.github/actions/cdo-deps-key
@@ -126,8 +117,8 @@ jobs:
       - name: Smoke test
         run: ./docker/dev/smoke-test.sh cdo-dev:smoke ${{ matrix.engine }}
 
-  # One job per architecture, natively — no qemu. Each pushes the tag set
-  # suffixed with its arch; stitch merges them into the consumer-facing tags.
+  # One job per architecture, natively — no qemu. Each pushes an
+  # arch-suffixed tag; stitch merges them into the consumer-facing ones.
   build-push:
     name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
@@ -140,9 +131,9 @@ jobs:
     runs-on: ${{ matrix.runs-on }}
     # Inert until its deployment-branch policy is set; see docker/deps/README.md.
     environment: ghcr-publish
-    # Per-arch group so two publishes cannot interleave on the same arch tag;
-    # the two arch legs of one run must NOT share a group or they would cancel
-    # each other. Safe to cancel: nothing resolves `latest` programmatically.
+    # Per-arch group: the two arch legs of one run must not share a group,
+    # or they would cancel each other. Safe to cancel — nothing resolves
+    # `latest` programmatically.
     concurrency:
       group: cdo-dev-publish-${{ matrix.arch }}
       cancel-in-progress: true
@@ -171,29 +162,26 @@ jobs:
             --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
             -t cdo-dev:publish docker/dev/
 
-      # The matrix tested images built on other runners. This tests the one
-      # actually being published.
+      # Tests the image actually being published, not the matrix's copies.
       - name: Smoke test
         run: ./docker/dev/smoke-test.sh cdo-dev:publish docker
 
       # Not build-push-action with push: true — that publishes in the step
       # that builds, before the smoke suite can fail the job.
       #
-      # One tag, keyed by commit and architecture, and nothing a consumer
-      # resolves. Every consumer-facing name is created by the stitch job from
-      # this immutable pair, so two publishes racing cannot produce a manifest
-      # mixing their runs, and a suffixed tag left behind by a failed run
-      # cannot be picked up by the next one.
+      # Keyed by commit and architecture, and nothing a consumer resolves:
+      # the stitch job builds every consumer-facing tag from this immutable
+      # pair, so a racing publish or a failed run's leftover tag cannot
+      # leak into it.
       - name: Push cdo-dev (per-arch tag)
         run: |
           set -euxo pipefail
           docker tag cdo-dev:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
           docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
-  # The consumer-facing tags are multi-platform manifests over the per-arch
-  # pushes. Until this job runs, only the -amd64/-arm64 suffixed tags exist,
-  # so a half-published state is visible as such rather than resolving to a
-  # single-arch image under the final name.
+  # Until this runs, only the arch-suffixed tags exist, so a half-published
+  # state is visible as such instead of resolving to one arch under the
+  # final name.
   stitch:
     name: stitch multi-platform manifest
     if: github.event_name != 'pull_request'
@@ -213,9 +201,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # The same tag set the build-push legs computed. No checkout: the dev
-      # tag contract has no content key, so metadata-action needs only the
-      # event context.
+      # No checkout: this tag contract has no content key, so
+      # metadata-action needs only the event context.
       - name: Compute tags
         id: meta
         uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
@@ -226,9 +213,8 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
-      # One call, every consumer-facing tag, both sources named by commit. The
-      # per-arch pair is all that exists until now, so no moving tag appears
-      # anywhere in the input.
+      # Both source tags are commit-keyed, so no moving tag ever appears in
+      # the input.
       - name: Stitch every tag from the sha-keyed per-arch pair
         env:
           TAGS: ${{ steps.meta.outputs.tags }}

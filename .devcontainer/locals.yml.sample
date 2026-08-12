@@ -1,18 +1,12 @@
-# The devcontainer's configuration. docker-compose.yml mounts this file
-# read-only over /code-dot-org/locals.yml, so it wins over whatever the
-# checkout has there — a checkout set up natively already has a locals.yml,
-# and it names a database this container cannot reach.
+# Mounted read-only over /code-dot-org/locals.yml, so it wins over a
+# checkout's own — which, set up natively, names a database this container
+# cannot reach. To change it, copy to .devcontainer/locals.yml and set
+# CDO_LOCALS=./locals.yml (gitignored).
 #
-# To change any of it, copy this file to .devcontainer/locals.yml and set
-# CDO_LOCALS=./locals.yml in .devcontainer/.env; both are gitignored.
-#
-# Everything here is either a compose service name or a stub. There are no
-# credentials, and nothing reaches AWS. Only keys config/*.yml.erb actually
-# defines will do: an unknown key is a boot-time error, not a warning.
-# Host and port are separate keys, as in config/development.yml.erb. Folding
-# the port into the host works for anything that only reads db_writer, and
-# breaks anything that builds a URI from the pieces — bin/mysql-client-*
-# reports `Unknown server host '[db:3306]'`.
+# Only keys config/*.yml.erb defines will work: an unknown key is a
+# boot-time error. Host and port are separate keys, as in
+# config/development.yml.erb — folding them together breaks anything that
+# builds a URI from the pieces, bin/mysql-client-* included.
 db_writer: 'mysql://root:not-a-secret-password@db:3306/'
 db_endpoint_writer: db
 db_endpoint_writer_port: 3306
@@ -45,12 +39,10 @@ aws_s3_secret_access_key: not-a-secret-password
 # price of not holding the production key.
 properties_encryption_key: ''
 
-# config/development.yml.erb clears every globally-defined secret, then opts
-# a few back in below that line. Those are the ones a credential-less sandbox
-# has to answer for itself: without a value, any eager-loading task — most
-# visibly `rake db:migrate` — dies in Secrets Manager with "unable to sign
-# request without credentials set". This list is every `!Secret` in
-# config/development.yml.erb; keep it in step with that file.
+# config/development.yml.erb clears every global secret, then opts these
+# back in: without a value, any eager-loading task (`rake db:migrate`
+# especially) dies in Secrets Manager. Matches every `!Secret` there; keep
+# both files in step.
 applications_gsheet_key: localoverride
 ai_gateway_auth_key: localoverride
 ai_gateway_auth_key_passphrase: localoverride

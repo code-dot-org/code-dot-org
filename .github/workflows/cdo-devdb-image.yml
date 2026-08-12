@@ -1,21 +1,16 @@
 # Builds cdo-devdb, the pre-seeded MySQL sidecar the devcontainer starts
 # against, and publishes it from staging. See .devcontainer/README.md.
 #
-# This image is the one in the set that a Dockerfile alone cannot build. Its
-# content is a seeded database. To make it, run dashboard:setup_db and
-# db:test:prepare against a real checkout: about 20 minutes for the
-# development database, most of it curriculum out of dashboard/config, and a
-# further minute and a quarter for the test database that `RAILS_ENV=test`
-# runs against. CI does that work so a developer does not have to. A
-# codespace has no seeded MySQL and no tar file to make one from. It pulls
-# this image.
+# The only image in the set a Dockerfile alone cannot build: its content is
+# a seeded database. Seeding takes about 20 minutes, mostly curriculum from
+# dashboard/config, plus a further minute and a quarter for the test
+# database. CI pays that cost so a developer does not have to.
 #
-# Multi-arch from one pre-seed run. An InnoDB datadir is
-# architecture-portable, and Dockerfile.db has no RUN steps. Both images
-# therefore come from the same tar with nothing executed at build time, so
-# this workflow needs no qemu. The smoke matrix then runs the SQL natively on
-# each architecture, which is the part that must be real. Only after that
-# does the stitch job create the tags a consumer resolves.
+# Multi-arch from one pre-seed run: an InnoDB datadir is
+# architecture-portable, and Dockerfile.db has no RUN steps, so this
+# workflow needs no qemu. The smoke matrix runs the SQL natively on each
+# architecture — the part that must be real — before stitch creates the
+# tags a consumer resolves.
 
 name: cdo-devdb-image
 
@@ -61,17 +56,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # The pre-seed runs the dev image as its own uid 1000 with the checkout
-      # bind-mounted, and the seeding writes into it: dashboard/db/schema.rb
-      # from the schema dump, dashboard/log and dashboard/tmp, and
-      # dashboard/app/models if the annotations move. Hand it the tree.
-      #
-      # Except this directory. The runner is uid 1001, and the last thing
-      # bake-db.sh does is write mysql-data.tar in here, from the host, as the
-      # runner — after twenty minutes of seeding. Handing .devcontainer to 1000
-      # too makes that final tar EACCES, and `set -euo pipefail` turns it into
-      # a job that fails at the end having done all the work. Nothing in the
-      # pre-seed writes here; locals.yml.sample goes in read-only.
+      # Hands the checkout to uid 1000 (the container's user) so the seed
+      # can write dashboard/db/schema.rb, log, and tmp. .devcontainer stays
+      # at the runner's uid: preseed-db.sh writes mysql-data.tar there from
+      # the host at the end, and chowning it too would EACCES that write
+      # after twenty minutes of seeding.
       - name: Give the checkout to the container user, keeping this directory
         run: |
           sudo chown -R 1000:1000 .
@@ -84,17 +73,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # ~20 minutes: schema load, seed:default, then a clean shutdown and a
-      # tar of the datadir. The same script a developer runs locally.
+      # ~20 minutes; the same script a developer runs locally.
       - name: Pre-seed the datadir
         run: .devcontainer/preseed-db.sh
 
-      # Buildx, twice, once per architecture, both from the tar that the
-      # pre-seed step just made. Nothing runs during these builds — the Dockerfile is an ADD
-      # and a CMD — so the arm64 image is produced on an amd64 runner without
-      # emulation. The tags are immutable and named by commit; no consumer
-      # resolves them, and the stitch job builds every consumer name from the
-      # pair after the smoke matrix has run natively on both.
+      # Twice, once per architecture, both from the pre-seed's tar. Nothing
+      # runs at build time — the Dockerfile is an ADD and a CMD — so arm64
+      # builds on this amd64 runner without emulation.
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3.11.1
 
@@ -111,8 +96,8 @@ jobs:
               --push .devcontainer
           done
 
-      # On a pull request nothing is pushed, so smoke it here instead: one
-      # architecture, loaded locally, which is what the runner can execute.
+      # Nothing is pushed on a pull request, so smoke it here instead: one
+      # architecture, loaded locally.
       - name: Build and smoke-test locally (pull requests)
         if: github.event_name == 'pull_request'
         run: |
@@ -121,9 +106,8 @@ jobs:
             -f .devcontainer/Dockerfile.db -t cdo-devdb:smoke .devcontainer
           .devcontainer/devdb-smoke.sh cdo-devdb:smoke
 
-  # Natively, on each architecture, against the image that was actually
-  # pushed. This is what a multi-arch claim has to be worth: an arm64 mysqld
-  # starting on arm64 hardware and answering the same questions.
+  # Natively, against the image actually pushed: an arm64 mysqld on arm64
+  # hardware, not qemu.
   smoke:
     name: smoke-test (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
@@ -158,9 +142,9 @@ jobs:
       - name: Smoke test
         run: .devcontainer/devdb-smoke.sh "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
-  # The consumer-facing tags, created from the immutable per-arch pair once
-  # both have been smoke-tested. Until this runs, only the suffixed tags
-  # exist, so a half-published state is visible as such.
+  # Built from the immutable per-arch pair once both are smoke-tested.
+  # Until this runs, only the suffixed tags exist, so a half-published
+  # state is visible as such.
   stitch:
     name: stitch multi-platform manifest
     if: github.event_name != 'pull_request'

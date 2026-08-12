@@ -5,27 +5,21 @@
   "workspaceFolder": "/code-dot-org",
   "remoteUser": "cdo",
 
-  // Once per container. A Codespaces prebuild stores the result in the
-  // prebuild image. Both yarn installs are network-bound and cost about 25s each warm.
-  // `dev-bootstrap create` links the git hooks and fetches the prebuilt apps
-  // package from a public bucket, about 105s; apps/ is deliberately not built
-  // here, because downloading beats building and only a commit that changes
-  // apps/ and has never been through CI needs `yarn build` by hand.
+  // Runs once per container; a Codespaces prebuild caches the result.
+  // apps/ is deliberately not built here — downloading the prebuilt
+  // package beats building, and only a commit that changes apps/ and has
+  // never been through CI needs a manual `yarn build`.
   "onCreateCommand": "cd /code-dot-org/apps && yarn install && cd /code-dot-org/frontend && yarn install && dev-bootstrap create",
 
-  // Every start, including a plain `docker compose start`. Applies whatever
-  // migrations that the checkout gained after the database image was
-  // pre-seeded,
-  // and fails the start rather than handing over a half-migrated schema.
+  // Runs on every start, including a bare `docker compose start`. Fails
+  // rather than handing over a half-migrated schema.
   "postStartCommand": "dev-bootstrap start",
 
-  // Sized from measurements, not from taste. The apps webpack dev server
-  // alone uses 6.5 to 14 GB. Add Rails, MySQL, and a jest worker, and a
-  // normal fullstack day crosses 16 GB. Storage: node_modules is 4.1 GB
-  // across the two workspaces, the prebuilt apps package is 2.1 GB, a local
-  // apps build is another 2 GB, the images are 7 GB, and the checkout and
-  // the caches take the rest. CPUs: yarn install uses 90 s of CPU in 22 s of
-  // wall clock, so the parallelism is real.
+  // Sized from measurements, not guesses. The apps webpack dev server
+  // alone uses 6.5 to 14 GB; add Rails, MySQL, and a jest worker and a
+  // full day crosses 16 GB. Storage: node_modules is 4.1 GB, the images
+  // 7 GB, plus the prebuilt and locally built apps packages. CPUs: yarn
+  // install parallelizes 90 s of CPU into 22 s of wall clock.
   "hostRequirements": {
     "cpus": 8,
     "memory": "32gb",
