@@ -11,6 +11,11 @@
 drop-in replacement for `WithTooltip` — the spacing has not had a design pass
 (see below) — so existing `WithTooltip` callsites stay put for now.
 
+Earlier migrations (`Button`, `Breadcrumbs`, `Typography`) added theme overrides
+and left it at that, so callers import from `@mui/material` directly. This one
+also ships a small wrapper component, because `keyboardOnly` and `iconName` are
+behavior, and a theme override can only supply styles.
+
 Two naming wrinkles while both exist: `TooltipProps` refers to the **legacy**
 component, so the new one's props are `CdoTooltipProps`; the legacy component is
 exported as `LegacyTooltip`. Both become the obvious names once `WithTooltip`
@@ -34,7 +39,8 @@ Props are MUI's [`TooltipProps`](https://mui.com/material-ui/api/tooltip/) —
 `title`, `placement`, `arrow`, `open`, and the rest — plus a few of ours:
 
 - `size` (`'xs' | 's' | 'm' | 'l'`, default `'m'`) picks the design system size.
-  MUI has no size prop of its own.
+  MUI has no size prop of its own, so we augment one onto `TooltipProps` the way
+  `Breadcrumbs` does, and the theme reads it back from `ownerState`.
 - `hasCaret` (`boolean`) is our name for MUI's `arrow` — the pointing caret. It
   defaults to `true` via the theme and, when set, wins over a caller's `arrow`.
   Pass `hasCaret={false}` to drop the caret.
@@ -45,8 +51,7 @@ Props are MUI's [`TooltipProps`](https://mui.com/material-ui/api/tooltip/) —
   MUI renders the tooltip in a portal on `document.body`, so it does not
   otherwise inherit the surrounding theme.
 
-Two MUI defaults are flipped in the theme, so a bare MUI `<Tooltip>` gets them
-too:
+Two MUI defaults are flipped, on this component only:
 
 - `arrow` defaults to `true`. Design system tooltips have tails; MUI's do not.
 - `describeChild` defaults to `true`, so the text becomes `aria-describedby` on
@@ -76,9 +81,18 @@ the tooltip shut, a Tab to it opens it. Escape closes it either way.
 
 Styling lives in the `MuiTooltip` theme override
 ([src/themes/code.org/styleOverrides/tooltip.ts](../themes/code.org/styleOverrides/tooltip.ts)),
-so a plain MUI `<Tooltip>` gets our look too. Size arrives there as a `data-size`
-attribute on the tooltip slot rather than as a prop, because MUI forwards props
-it does not recognize onto the child element.
+as it does for every other component migrated to MUI. Text metrics come from the
+theme's `body1`–`body4` variants rather than being restated here.
+
+Unlike those other migrations, every rule is marked with a `data-cdo-tooltip`
+attribute that only this component sets. Sketch Lab already uses bare MUI
+tooltips, and a global override would restyle them; the earlier migrations had no
+such callsites to disturb, because nothing used MUI `Button` or `Breadcrumbs`
+before their overrides landed.
+
+Both the mark and the flipped defaults are temporary. Once `WithTooltip` retires
+and every tooltip in the repo is this one, the override can go global and the
+attribute can go away.
 
 Spacing between tooltip and trigger is left at MUI's defaults, which are a
 little looser than the SCSS tooltip's. Worth a design pass before this replaces
@@ -87,9 +101,9 @@ little looser than the SCSS tooltip's. Worth a design pass before this replaces
 ## `WithTooltip`
 
 This package exports following styled React
-components: [WithTooltip](./WithTooltip.tsx), [Tooltip](T_ooltip.tsx), [TooltipOverlay](Tooltip.tsx).
+components: [WithTooltip](./WithTooltip.tsx), [LegacyTooltip](./_Tooltip.tsx), [TooltipOverlay](./_Tooltip.tsx).
 
-`WithTooltip` is a recommended way to use a tooltip. It wraps `TooltipOverlay` and `Tooltip` components and provides a
+`WithTooltip` is a recommended way to use a tooltip. It wraps `TooltipOverlay` and `LegacyTooltip` components and provides a
 way to add tooltip to any element, handles all the logic behind showing and hiding, positioning and accessibility of the
 tooltip.
 
@@ -118,20 +132,23 @@ to [Design System / Tooltip Component](http://localhost:9001/?path=/story/design
 
 ---
 
-##### Custom usage of `Tooltip` and `TooltipOverlay` components is not recommended, but still possible.
+##### Custom usage of `LegacyTooltip` and `TooltipOverlay` components is not recommended, but still possible.
 
-If you'll need to use `Tooltip` and `TooltipOverlay` for some custom behavior, you can do it, just remember that you'll
+If you'll need to use `LegacyTooltip` and `TooltipOverlay` for some custom behavior, you can do it, just remember that you'll
 need to handle all the logic with showing and hiding, positioning and some accessibility aspects of the tooltip
 yourself.
 
-In order to add tooltip to some element, you need to wrap it with TooltipOverlay component and add Tooltip component
-inside it. You'll need to provide `id` prop to Tooltip component and `aria-describedby` prop to the element
+In order to add tooltip to some element, you need to wrap it with TooltipOverlay component and add LegacyTooltip component
+inside it. You'll need to provide `tooltipId` prop to LegacyTooltip component and `aria-describedby` prop to the element
 you want to add tooltip to.
 
 You can import it like this:
 
 ```javascript
-import Tooltip, {TooltipOverlay} from '@code-dot-org/component-library/tooltip';
+import {
+  LegacyTooltip,
+  TooltipOverlay,
+} from '@code-dot-org/component-library/tooltip';
 import moduleStyles from './styles.module.scss'; // some scss module with tooltip positioning styles
 
 const ComponentWithTooltip = () => {
@@ -139,8 +156,8 @@ const ComponentWithTooltip = () => {
   return (
     <TooltipOverlay>
       <button aria-describedby="tooltip1">Hover over me</button>
-      <Tooltip
-        id="tooltip1"
+      <LegacyTooltip
+        tooltipId="tooltip1"
         text="This is a tooltip"
         className={moduleStyles.customTooltipStyles}
       />

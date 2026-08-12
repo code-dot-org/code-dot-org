@@ -10,11 +10,11 @@ import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 /** MUI's tooltip props plus ours; the legacy tooltip still owns `TooltipProps`. */
 export interface CdoTooltipProps extends MuiTooltipProps {
-  /** Defaults to 'm'. */
+  /** Defaults to 'm'. Also augmented onto MUI's own `TooltipProps`. */
   size?: ComponentSizeXSToL;
   /** Show only on keyboard focus. Hover and touch do nothing. */
   keyboardOnly?: boolean;
-  /** Our name for MUI's `arrow`; defaults to `true` via the theme. */
+  /** Our name for MUI's `arrow`; defaults to `true`, unlike MUI. */
   hasCaret?: boolean;
   /** Leading Font Awesome icon shown before the text. */
   iconName?: string;
@@ -34,14 +34,16 @@ export interface CdoTooltipProps extends MuiTooltipProps {
  *
  * Design System: Tooltip, built on MUI's.
  *
- * `arrow` and `describeChild` default on via the theme, unlike MUI. `hasCaret`
- * is our name for `arrow`; `iconName` adds a leading icon; `keyboardOnly` shows
+ * Unlike MUI, `arrow` and `describeChild` are on by default. `hasCaret` is our
+ * name for `arrow`, `iconName` adds a leading icon, and `keyboardOnly` shows
  * the tooltip on keyboard focus only.
+ *
+ * Styles come from the theme, and only reach tooltips we render. Plain MUI
+ * tooltips elsewhere in the app are left alone.
  */
 
-// Hover and touch off; MUI already gates focus on `:focus-visible`. Focus is
-// forced back on so `keyboardOnly` plus `disableFocusListener` can't yield a
-// tooltip that never opens.
+// MUI only opens on focus when the browser says it's a keyboard focus, so
+// turning off hover and touch is enough. Focus stays on, or nothing opens it.
 const KEYBOARD_ONLY_PROPS = {
   disableFocusListener: false,
   disableHoverListener: true,
@@ -56,6 +58,8 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
     hasCaret,
     iconName,
     arrow,
+    // Describe the trigger instead of renaming it. MUI defaults this off.
+    describeChild = true,
     title,
     slotProps,
     'data-theme': dataTheme,
@@ -66,8 +70,7 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
 ) {
   const callerTooltipProps = slotProps?.tooltip;
 
-  // Leading icon, then text; the theme lays them out per `data-size`. Only wrap
-  // when both exist, so an empty title still renders nothing.
+  // Only wrap when there's an icon and text both, so an empty title stays empty.
   const content =
     iconName && title ? (
       <>
@@ -82,18 +85,19 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
     <MuiTooltip
       ref={ref}
       title={content}
-      // Our `hasCaret`, else a caller's `arrow`, else the theme default.
-      arrow={hasCaret ?? arrow}
+      size={size}
+      describeChild={describeChild}
+      // hasCaret first, then arrow, then on: our tooltips have tails.
+      arrow={hasCaret ?? arrow ?? true}
       slotProps={{
         ...slotProps,
-        // data-size and data-theme ride as attributes, since MUI forwards
-        // unknown props to the child. A function merges the caller's tooltip
-        // slotProps whether they passed an object or a function.
+        // Drop data-cdo-tooltip and the tooltip loses its styling. data-theme
+        // has to sit on the bubble, which portals out of any theme above it.
         tooltip: ownerState => ({
           ...(typeof callerTooltipProps === 'function'
             ? callerTooltipProps(ownerState)
             : callerTooltipProps),
-          'data-size': size,
+          'data-cdo-tooltip': '',
           ...(dataTheme && {'data-theme': dataTheme}),
         }),
       }}

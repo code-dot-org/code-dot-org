@@ -1,6 +1,6 @@
 /**
- * Design-system MUI module augmentations: Button, IconButton, and
- * Breadcrumbs custom sizes, colors, and variants; anchor attrs on
+ * Design-system MUI module augmentations: Button, IconButton, Breadcrumbs, and
+ * Tooltip custom sizes, colors, and variants; anchor attrs on
  * ButtonOwnProps; Typography variants matching the design-system type scale;
  * and the MuiFooter custom component slot declarations.
  */
@@ -8,6 +8,7 @@
 import '@mui/material/Button';
 import '@mui/material/IconButton';
 import '@mui/material/Breadcrumbs';
+import '@mui/material/Tooltip';
 
 declare module '@mui/material/Button' {
   interface ButtonPropsSizeOverrides {
@@ -59,6 +60,12 @@ declare module '@mui/material/IconButton' {
 
 declare module '@mui/material/Breadcrumbs' {
   interface BreadcrumbsOwnProps {
+    size?: 'xs' | 's' | 'm' | 'l';
+  }
+}
+
+declare module '@mui/material/Tooltip' {
+  interface TooltipProps {
     size?: 'xs' | 's' | 'm' | 'l';
   }
 }

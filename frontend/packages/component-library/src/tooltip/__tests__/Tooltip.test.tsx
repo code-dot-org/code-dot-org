@@ -1,4 +1,4 @@
-import {ThemeProvider} from '@mui/material';
+import {Tooltip as MuiTooltip, ThemeProvider} from '@mui/material';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {createRef} from 'react';
@@ -9,12 +9,12 @@ import CdoTheme from '@/themes/code.org';
 import {Tooltip, CdoTooltipProps} from './../index';
 
 /**
- * jsdom reports every focused element as focus-visible, clicks and taps
- * included, so "a click leaves it shut" can only be tested by stubbing
- * `Element.matches`. Confirm the real thing in a browser.
+ * jsdom treats every focus as a keyboard focus, clicks included, so testing
+ * "a click leaves it shut" means stubbing `Element.matches`. Check it for real
+ * in a browser too.
  *
- * `role="tooltip"` and the `aria-describedby` id sit on MUI's Popper; the
- * styled bubble is `.MuiTooltip-tooltip` inside it, and carries our attributes.
+ * `role="tooltip"` is on MUI's popper. The bubble we style is
+ * `.MuiTooltip-tooltip` inside it, and it carries our attributes.
  */
 describe('Design System - Tooltip (MUI)', () => {
   let user: ReturnType<typeof userEvent.setup>;
@@ -22,8 +22,7 @@ describe('Design System - Tooltip (MUI)', () => {
     user = userEvent.setup();
   });
 
-  // Plain <button>: an MUI one injects the MuiButton overrides, whose
-  // `:not(:has(...))` selectors crash jsdom on getComputedStyle.
+  // A plain <button>, because MUI's button styles crash getComputedStyle here.
   const renderTooltip = (props: Partial<CdoTooltipProps> = {}) =>
     render(
       <ThemeProvider theme={CdoTheme}>
@@ -64,7 +63,7 @@ describe('Design System - Tooltip (MUI)', () => {
     });
 
     it('carries a native title attribute as a fallback', () => {
-      // MUI's describeChild behavior; it strips the attribute on mouseover.
+      // describeChild adds this, and MUI removes it again on mouseover.
       renderTooltip();
 
       expect(screen.getByRole('button')).toHaveAttribute(
@@ -132,7 +131,7 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('stays closed on touch', () => {
-    // Fired directly; userEvent's tap also focuses, hitting the jsdom caveat.
+    // Fired directly, because userEvent's tap also moves focus.
     vi.useFakeTimers();
     try {
       renderKeyboardOnly();
@@ -225,23 +224,14 @@ describe('Design System - Tooltip (MUI)', () => {
     );
   });
 
-  it.each(['xs', 's', 'm', 'l'] as const)(
-    'passes size "%s" to the tooltip slot',
-    async size => {
-      renderKeyboardOnly({size});
-
-      await user.tab();
-
-      expect(await findTooltipBubble()).toHaveAttribute('data-size', size);
-    },
-  );
-
-  it('defaults to size "m"', async () => {
+  // `size` reaches the styles as a real MUI prop, so what it does is checked
+  // under "themed styles" below rather than by looking for an attribute.
+  it('marks the tooltip so the themed styles apply to it', async () => {
     renderKeyboardOnly();
 
     await user.tab();
 
-    expect(await findTooltipBubble()).toHaveAttribute('data-size', 'm');
+    expect(await findTooltipBubble()).toHaveAttribute('data-cdo-tooltip');
   });
 
   it('puts data-theme on the tooltip, not on the trigger', async () => {
@@ -264,7 +254,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
     const bubble = await findTooltipBubble();
     expect(bubble).toHaveClass('callerClass');
-    expect(bubble).toHaveAttribute('data-size', 'm');
+    expect(bubble).toHaveAttribute('data-cdo-tooltip');
     expect(bubble).toHaveAttribute('data-theme', 'Dark');
   });
 
@@ -292,7 +282,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
     const bubble = await findTooltipBubble();
     expect(bubble).toHaveClass('callerClass');
-    expect(bubble).toHaveAttribute('data-size', 's');
+    expect(getComputedStyle(bubble).fontSize).toBe('0.875rem');
   });
 
   it("does not swallow the child's own focus and blur handlers", async () => {
@@ -355,6 +345,56 @@ describe('Design System - Tooltip (MUI)', () => {
     });
   });
 
+  // Plain MUI tooltips elsewhere in the app must look and act as they did
+  // before. Delete this block once every tooltip is ours.
+  describe('leaves a bare MUI Tooltip alone', () => {
+    const renderBareMui = () =>
+      render(
+        <ThemeProvider theme={CdoTheme}>
+          <MuiTooltip title="tooltipText">
+            <button type="button">trigger</button>
+          </MuiTooltip>
+        </ThemeProvider>,
+      );
+
+    it('adds no caret', async () => {
+      renderBareMui();
+
+      await user.hover(screen.getByRole('button'));
+      await screen.findByRole('tooltip');
+
+      expect(document.querySelector('.MuiTooltip-arrow')).toBeNull();
+    });
+
+    it("keeps MUI's naming, renaming the trigger rather than describing it", async () => {
+      renderBareMui();
+
+      await user.hover(screen.getByRole('button'));
+      await screen.findByRole('tooltip');
+
+      expect(screen.getByRole('button')).toHaveAttribute(
+        'aria-label',
+        'tooltipText',
+      );
+      expect(screen.getByRole('button')).not.toHaveAttribute(
+        'aria-describedby',
+      );
+    });
+
+    it("keeps MUI's own styling", async () => {
+      renderBareMui();
+
+      await user.hover(screen.getByRole('button'));
+      const bubble = await findTooltipBubble();
+
+      expect(bubble).not.toHaveAttribute('data-cdo-tooltip');
+      expect(getComputedStyle(bubble).backgroundColor).not.toBe(
+        'var(--background-neutral-primary-inverse)',
+      );
+      expect(getComputedStyle(bubble).display).not.toBe('flex');
+    });
+  });
+
   describe('themed styles', () => {
     it('styles the tooltip with our color and shape tokens', async () => {
       renderTooltip();
@@ -376,11 +416,12 @@ describe('Design System - Tooltip (MUI)', () => {
       );
     });
 
+    // Text metrics are the theme's body4/body3/body2/body1, in that order.
     it.each([
-      ['xs', 'var(--font-size-body-xs)', '1.64', '0.5rem'],
-      ['s', 'var(--font-size-body-sm)', '1.54', '0.625rem'],
-      ['m', 'var(--font-size-body-md)', '1.48', '0.75rem'],
-      ['l', 'var(--font-size-body-lg)', '1.4', '1rem'],
+      ['xs', '0.813rem', '1.64', '0.5rem'],
+      ['s', '0.875rem', '1.54', '0.625rem'],
+      ['m', '1rem', '1.48', '0.75rem'],
+      ['l', '1.25rem', '1.4', '1rem'],
     ] as const)(
       'gives size "%s" its own text and arrow metrics',
       async (size, fontSize, lineHeight, arrowFontSize) => {
