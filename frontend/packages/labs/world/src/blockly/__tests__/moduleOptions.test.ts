@@ -2,7 +2,10 @@ import {afterEach, describe, expect, it} from 'vitest';
 
 import {Blockly} from '@code-dot-org/blockly';
 
+import {addActorThumbnails, setActorThumbnails} from '../actorThumbnails';
+import {localActorValue} from '../localActors';
 import {
+  actorFieldOptions,
   actorOptions,
   bindLiveOptions,
   setProjectActors,
@@ -11,7 +14,30 @@ import {
 // Registries are module state; reset between cases.
 afterEach(() => {
   setProjectActors([]);
+  setActorThumbnails({});
 });
+
+/** A field whose workspace holds one `define actor` named `name`. */
+const fieldInWorldWith = (blockId: string, name: string) => {
+  const blocks = [
+    {
+      id: blockId,
+      type: 'world_actor',
+      getFieldValue: (f: string) => (f === 'NAME' ? name : undefined),
+    },
+    {id: 'w', type: 'world_world', getFieldValue: () => undefined},
+  ];
+  return {
+    getSourceBlock: () => ({
+      workspace: {
+        getTopBlocks: () => blocks,
+        getBlockById: (id: string) => blocks.find(b => b.id === id) ?? null,
+      },
+    }),
+  } as never;
+};
+
+const PIXEL = 'data:image/png;base64,AAAA';
 
 describe('moduleOptions', () => {
   it('returns the actor options it was given', () => {
@@ -85,5 +111,41 @@ describe('a live dropdown', () => {
 
     expect(dropdown.getValue()).toBe('actors/player');
     expect(dropdown.getText()).toBe('Player');
+  });
+});
+
+describe('actorFieldOptions', () => {
+  it('draws a world’s own actor with its picture', () => {
+    // The thumbnail registry is keyed by the TYPE a placed actor carries, and
+    // the dropdown stores `local:<block id>` — two different strings on
+    // purpose, since the value has to survive a rename and the type has to
+    // match what the running world stamps. Looking one up by the other found
+    // nothing at all, so a single-world project got a list of names beside a
+    // project's list of pictures.
+    addActorThumbnails({Coin: PIXEL});
+    const [option] = actorFieldOptions(fieldInWorldWith('a1', 'Coin'));
+
+    expect(option).toEqual([
+      {src: PIXEL, width: 24, height: 24, alt: 'Coin'},
+      localActorValue('a1'),
+    ]);
+  });
+
+  it('falls back to the name while no picture has arrived', () => {
+    // Thumbnails are rendered by the sandbox and turn up after the editor has
+    // drawn, so "no picture yet" is the ordinary first state and not an error.
+    const [option] = actorFieldOptions(fieldInWorldWith('a1', 'Coin'));
+    expect(option).toEqual(['Coin', localActorValue('a1')]);
+  });
+
+  it('still keys a module actor by its path', () => {
+    setProjectActors([['Player', 'actors/player']]);
+    addActorThumbnails({'actors/player': PIXEL});
+    const [option] = actorFieldOptions(undefined);
+
+    expect(option).toEqual([
+      {src: PIXEL, width: 24, height: 24, alt: 'Player'},
+      'actors/player',
+    ]);
   });
 });

@@ -14,7 +14,7 @@ import type {EffectParameter} from '../effect/model/types';
 import {actorThumbnail} from './actorThumbnails';
 import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
-import {localActorOptions} from './localActors';
+import {actorIdFromName, localActorOptions} from './localActors';
 
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
 let projectActors: Array<[string, string]> = [];
@@ -362,10 +362,23 @@ export function actorFieldOptions(
   field?: Blockly.FieldDropdown,
 ): DropdownOptions {
   const local = localActorOptions(field);
-  const named = local.length
-    ? [...local, ...projectActors]
-    : orNone(projectActors);
-  return named.map(([label, value]) => pictured(label, value));
+  if (!local.length) {
+    return orNone(projectActors).map(([label, value]) =>
+      pictured(label, value),
+    );
+  }
+  return [
+    // A world's own are looked up by the TYPE a placed one carries, not by the
+    // `local:<block id>` the dropdown stores. The two differ — the value has to
+    // survive renaming the actor, the type has to be the same string the
+    // running world stamps on an instance — and looking one up by the other
+    // quietly found nothing, which is a dropdown of names beside a project's
+    // dropdown of pictures.
+    ...local.map(([label, value]) =>
+      pictured(label, value, actorIdFromName(label)),
+    ),
+    ...projectActors.map(([label, value]) => pictured(label, value)),
+  ];
 }
 
 /**
@@ -387,8 +400,12 @@ export function actorFieldOptions(
  * the fallback is not an edge case: no picture yet means the name, which is
  * exactly what the dropdown said before this.
  */
-function pictured(label: string, value: string): DropdownOptions[number] {
-  const src = actorThumbnail(value);
+function pictured(
+  label: string,
+  value: string,
+  thumbnailKey: string = value,
+): DropdownOptions[number] {
+  const src = actorThumbnail(thumbnailKey);
   return src
     ? [{src, width: ACTOR_ICON, height: ACTOR_ICON, alt: label}, value]
     : [label, value];

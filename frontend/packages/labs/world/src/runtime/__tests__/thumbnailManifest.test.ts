@@ -39,6 +39,12 @@ describe('thumbnailManifest', () => {
   it('is valid with no actor modules at all', () => {
     // A world whose only actors are its own. The list must not begin with a
     // stray comma, which is the way a template like this usually breaks.
+    //
+    // This case passed for months while single-world projects had no
+    // thumbnails at all, because `getActorInfo` returned early on an empty
+    // actor-path list and never built the manifest. A unit test proving the
+    // callee handles a case says nothing about whether the caller reaches it —
+    // see the guard in runtime/WorldRuntimeContext.
     const code = thumbnailManifest([], 'worlds/main');
 
     expect(code).not.toContain('[, ');
