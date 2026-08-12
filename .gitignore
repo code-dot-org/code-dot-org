@@ -123,3 +123,10 @@ CLAUDE.local.md
 
 # Local machine-specific compose additions (see docker/dev/README.md)
 docker/dev/compose.override.yaml
+
+# preseed-db.sh output: a multi-gigabyte seeded MySQL datadir, rebuilt on demand.
+.devcontainer/mysql-data.tar
+
+# A devcontainer's own config and compose overrides, per developer.
+.devcontainer/locals.yml
+.devcontainer/.env
