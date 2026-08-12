@@ -128,14 +128,19 @@ export const InfoPanel = ({
   // what makes "Initial version" restore a project-level's actual opening
   // sources rather than the lab's empty default project.
   //
-  // NOTE: level properties type these as a bare MultiFileSource, but the base
-  // `getInitialSources` consumes them as ProjectSources (i.e. `{source}`), so
-  // pass whichever shape they arrive in through unchanged.
+  // NOTE: the level-properties SCHEMA types these as a bare MultiFileSource,
+  // while every reader here wants `ProjectSources` (`{source}`) — `onLoadVersion`
+  // hands whatever this is straight to `previewSources`. Both shapes turn up in
+  // practice, so normalise rather than cast: a bare source previewed as if it
+  // were wrapped leaves the editor with no files and no error.
   const levelStartSources =
     levelProperties.templateSources || levelProperties.startSources;
-  const startSources = (levelStartSources ??
-    loadedSourcesRef.current ??
-    currentSources) as unknown as ProjectSources;
+  const startSources = (levelStartSources
+    ? 'source' in levelStartSources
+      ? levelStartSources
+      : {source: levelStartSources}
+    : (loadedSourcesRef.current ??
+      currentSources)) as unknown as ProjectSources;
 
   return (
     <ResourcePanel

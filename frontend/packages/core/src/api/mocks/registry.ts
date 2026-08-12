@@ -54,12 +54,53 @@ const LEVEL_PROPERTIES_PATHS = [
   '*/s/:scriptName/lessons/:lessonPosition/level_properties',
 ];
 
+/**
+ * The fixture's sources, reported as the level's `startSources`.
+ *
+ * A fixture IS a start state — it is the project as authored, before anyone
+ * touched it — and saying so is what makes "Initial version" and "Start over"
+ * mean it. Without this they fall back to the sources as first LOADED, which
+ * is the fixture only until the first save: reload after editing and the
+ * client's idea of "initial" is the last thing you saved, which is not a
+ * version history so much as a mirror.
+ *
+ * Only when the fixture has not said otherwise. A scenario that sets its own
+ * `startSources` (or `templateSources`) is making a point about a level whose
+ * start state differs from its saved state, and that is a thing to be able to
+ * mock.
+ *
+ * The wire shape is a BARE `MultiFileSource`, which is what the schema
+ * validates and so what this must send — the fixture's `sources` is the
+ * `{source}` wrapper around it, so the inner value is what goes here. Readers
+ * differ on which they expect; normalising is theirs to do (see codebridge's
+ * `InfoPanel`), and sending the other shape only fails validation on the way
+ * in, before any of them see it.
+ */
+function withStartSources(fixture: LabFixture): LevelPropertiesMap {
+  const properties = fixture.levelProperties ?? {};
+  if (!fixture.sources) {
+    return properties;
+  }
+  const withStart: LevelPropertiesMap = {};
+  for (const [id, level] of Object.entries(properties)) {
+    const source = (fixture.sources as {source?: unknown} | undefined)?.source;
+    withStart[id] =
+      level.startSources || level.templateSources || !source
+        ? level
+        : ({
+            ...level,
+            startSources: source,
+          } as unknown as (typeof properties)[string]);
+  }
+  return withStart;
+}
+
 /** Routes for the read-only slices of one scenario's fixture. */
 function readOnlyRoutes(fixture: LabFixture): MockRoute[] {
   const routes: MockRoute[] = [];
 
   if (fixture.levelProperties) {
-    const body = fixture.levelProperties;
+    const body = withStartSources(fixture);
     for (const path of LEVEL_PROPERTIES_PATHS) {
       routes.push({path, respond: body});
     }
