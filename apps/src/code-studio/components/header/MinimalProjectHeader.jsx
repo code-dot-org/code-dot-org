@@ -24,7 +24,11 @@ class MinimalProjectHeader extends React.Component {
     } = this.props;
     // Only one of legacyProjectName and lab2ProjectName will be defined.
     const projectName = legacyProjectName || lab2ProjectName;
-    const remixBlocked = inRestrictedShareMode || isBlockedAbuse;
+    const remixBlocked =
+      inRestrictedShareMode ||
+      isBlockedAbuse ||
+      (typeof dashboard !== 'undefined' &&
+        dashboard.project?.exceedsAbuseThreshold?.());
 
     return (
       <div style={{display: 'flex'}}>
