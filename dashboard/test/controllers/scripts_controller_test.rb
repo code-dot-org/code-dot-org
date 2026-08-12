@@ -1825,9 +1825,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "listing renders lessons and links to each level via /s/ URL" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    # Force the legacy code.org brand so the layout skips the codeai-branded
-    # favicon assets, which aren't compiled into the test asset pipeline.
-    Cdo::Brand.stubs(:current_brand_code).returns(Cdo::Brand::BRAND_CODE_ORG)
     sign_in create(:levelbuilder)
 
     unit = create(:script, :in_single_unit_course)
@@ -1846,7 +1843,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "listing works via /courses/ URL" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    Cdo::Brand.stubs(:current_brand_code).returns(Cdo::Brand::BRAND_CODE_ORG)
     sign_in create(:levelbuilder)
 
     course = @migrated_unit.original_unit_group
