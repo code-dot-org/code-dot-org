@@ -671,6 +671,14 @@ input[type="radio"] {
     padding: 0 5px;
     cursor: pointer;
     display: inline-block;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    appearance: none;
+
+    &:hover {
+      box-shadow: none;
+    }
 
     &#like {
       &:hover {

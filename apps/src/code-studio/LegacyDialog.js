@@ -5,7 +5,7 @@ function createOpenInNewTabButton(parentElement, link) {
   if (link) {
     parentElement.append(
       $(
-        `<div><a target="_blank" href="${link}" rel="noopener noreferrer"></a></div>`
+        `<div><a target="_blank" href="${link}" rel="noopener noreferrer" aria-label="Open in new tab"></a></div>`
       ).addClass('open-link')
     );
   }
@@ -73,7 +73,9 @@ var LegacyDialog = (module.exports = function (options) {
   )
     .addClass('x-close no-mc')
     .attr('data-dismiss', 'modal');
-  this.div = $('<div tabindex="-1"/>').addClass('modal');
+  this.div = $('<div tabindex="-1" role="dialog" aria-modal="true"/>').addClass(
+    'modal'
+  );
 
   this.div.addClass('dash_modal');
   if (options.id) {
