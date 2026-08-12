@@ -34,6 +34,22 @@ export function filePath(
   return file && `${folderPath(source, file.folderId)}${file.name}`;
 }
 
+/**
+ * The id of the file at a folder-prefixed path, if the project has one.
+ *
+ * The inverse of {@link filePath}, for a caller that knows the path a project
+ * always has — the entry world — and needs the id everything else is keyed by.
+ */
+export function fileIdAt(
+  source: MultiFileSource | undefined,
+  path: string,
+): string | undefined {
+  if (!source) {
+    return undefined;
+  }
+  return Object.keys(source.files).find(id => filePath(source, id) === path);
+}
+
 export function projectFiles(
   source: MultiFileSource | undefined,
 ): Record<string, string> {

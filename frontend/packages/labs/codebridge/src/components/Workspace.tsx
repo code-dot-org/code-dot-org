@@ -30,6 +30,15 @@ export interface WorkspaceProps {
    * lost in rather than a way around.
    */
   hideFileBrowser?: boolean;
+  /**
+   * A file whose tab has no close button. See {@link FileTabsProps.pinnedFileId}.
+   *
+   * Pass it with {@link hideFileBrowser}: together they are "this workspace is
+   * about one file, and that file stays". Hiding the browser without it leaves
+   * a one-way door — close the last tab and the editor is empty with no list to
+   * open anything from.
+   */
+  pinnedFileId?: string;
 }
 
 /**
@@ -42,7 +51,11 @@ export interface WorkspaceProps {
  * The host supplies the surrounding chrome (a PanelContainer, the console or
  * preview beneath it, and so on); this owns only the browser/editor split.
  */
-export const Workspace = ({children, hideFileBrowser}: WorkspaceProps) => {
+export const Workspace = ({
+  children,
+  hideFileBrowser,
+  pinnedFileId,
+}: WorkspaceProps) => {
   const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR.initial);
   // Legacy has no draggable file-browser divider, only a collapse toggle; we
   // keep both — resize when open, collapse to zero width via the button.
@@ -83,7 +96,7 @@ export const Workspace = ({children, hideFileBrowser}: WorkspaceProps) => {
             </span>
           )}
           <div className={styles.tabsFill}>
-            <FileTabs />
+            <FileTabs pinnedFileId={pinnedFileId} />
           </div>
         </div>
         {children}

@@ -3,7 +3,7 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {DEFAULT_PROJECT} from '../../constants';
-import {projectFiles} from '../projectFiles';
+import {fileIdAt, projectFiles} from '../projectFiles';
 
 describe('projectFiles', () => {
   it('flattens the default project to folder-prefixed paths', () => {
@@ -56,5 +56,25 @@ describe('projectFiles', () => {
 
   it('returns an empty map for undefined source', () => {
     expect(projectFiles(undefined)).toEqual({});
+  });
+});
+
+describe('fileIdAt', () => {
+  it('finds the entry world, which is the file that must stay open', () => {
+    // What pins the tab when a level hides the file browser (layout/
+    // WorldLayout): every other file is reachable from a block that names it,
+    // but the world is what those blocks are IN.
+    const id = fileIdAt(DEFAULT_PROJECT.source, 'worlds/main.world');
+    expect(id).toBeDefined();
+    expect(DEFAULT_PROJECT.source.files[id!].name).toBe('main.world');
+  });
+
+  it('is undefined for a path the project does not have', () => {
+    // The caller pins nothing rather than pinning the wrong thing — a project
+    // whose entry world has been renamed is not a project to guess about.
+    expect(
+      fileIdAt(DEFAULT_PROJECT.source, 'worlds/nope.world'),
+    ).toBeUndefined();
+    expect(fileIdAt(undefined, 'worlds/main.world')).toBeUndefined();
   });
 });

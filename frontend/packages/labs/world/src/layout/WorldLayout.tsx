@@ -2,20 +2,22 @@ import {useMemo, useState, type CSSProperties} from 'react';
 
 import {InfoPanel, Workspace} from '@code-dot-org/codebridge';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import type {MultiFileSource} from '@code-dot-org/core/api';
 import {
   PanelContainer,
   ResizeHandle,
   WorkspaceHeader,
 } from '@code-dot-org/lab/components';
-import {useMaybeLevelProperties} from '@code-dot-org/lab/contexts';
+import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {useAppSelector} from '@code-dot-org/lab/redux';
 import type {Setting} from '@code-dot-org/lab/resourcePanel';
 
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
-import {ViewMode, type ViewModeType} from '../constants';
+import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {showsFileBrowser, type WorldLevelProperties} from '../levelData';
 import {WorldPreview} from '../preview/WorldPreview';
+import {fileIdAt} from '../runtime/projectFiles';
 
 import styles from './worldLayout.module.css';
 
@@ -50,6 +52,19 @@ const PREVIEW = {initial: 460, min: 240, max: 900};
 const WorldLayout = () => {
   // A level about one file has nothing to browse (levelData).
   const level = useMaybeLevelProperties<WorldLevelProperties>();
+  const browsable = showsFileBrowser(level);
+
+  // …and with nothing to browse, closing a tab can be a one-way door. Every
+  // other file is reachable from a block that names it (blockly/openModule),
+  // but the world itself is what those blocks are IN — close it and there is
+  // no list to reopen it from and no block left to ask. So it is pinned, and
+  // only while the browser is hidden: with a browser, closing it is an
+  // ordinary thing to do and one click to undo.
+  const {currentSources} = useSources<MultiFileSource>();
+  const entryFileId = useMemo(
+    () => (browsable ? undefined : fileIdAt(currentSources.source, ENTRY_FILE)),
+    [browsable, currentSources],
+  );
   const [instructionsWidth, setInstructionsWidth] = useState(
     INSTRUCTIONS.initial,
   );
@@ -148,7 +163,10 @@ const WorldLayout = () => {
             {showEditor && (
               <div className={styles.editorPane}>
                 <div className={styles.editorMain}>
-                  <Workspace hideFileBrowser={!showsFileBrowser(level)} />
+                  <Workspace
+                    hideFileBrowser={!browsable}
+                    pinnedFileId={entryFileId}
+                  />
                 </div>
                 {/* Code-only view: the console falls back to under the editor. */}
                 {!showPreview && <ConsolePanel />}
