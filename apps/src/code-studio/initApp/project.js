@@ -23,6 +23,7 @@ import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
   refreshInRestrictedShareMode,
+  refreshExceedsAbuseThreshold,
   refreshHasPrivacyProfanityViolation,
   refreshTeacherHasConfirmedUploadWarning,
 } from '../projectRedux';
@@ -344,6 +345,7 @@ var projects = (module.exports = {
         // (after unflag) is kept.
         if (data && typeof data.abuse_score === 'number') {
           currentAbuseScore = data.abuse_score;
+          getStore().dispatch(refreshExceedsAbuseThreshold());
         }
         resolve();
         if (err) {
