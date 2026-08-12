@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 
 import {Reaction} from './types';
 
-import styles from './reaction-chips.module.scss';
+import styles from './challenge-gallery.module.scss';
 
 // Reaction names mapped to native emoji glyphs.
 const EMOJI_GLYPHS: Record<string, string> = {

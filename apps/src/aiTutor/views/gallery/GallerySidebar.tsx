@@ -4,7 +4,7 @@ import React, {FC} from 'react';
 
 import {GallerySection, GallerySort, GalleryUnit} from './types';
 
-import styles from './gallery-sidebar.module.scss';
+import styles from './challenge-gallery.module.scss';
 
 // The section dropdown's value for the caller's own-work view (no section).
 const MY_PROJECTS_VALUE = 'mine';

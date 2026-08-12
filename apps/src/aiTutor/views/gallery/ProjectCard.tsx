@@ -9,7 +9,7 @@ import {
 import ReactionChips from './ReactionChips';
 import {Reaction} from './types';
 
-import styles from './project-card.module.scss';
+import styles from './challenge-gallery.module.scss';
 
 export type ProjectVariant = 'video' | 'whiteboard';
 
