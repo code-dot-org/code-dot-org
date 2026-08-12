@@ -94,6 +94,29 @@ exports.self = exports;`)
     assert.strictEqual(exported.self, exported);
   });
 
+  it('detects export declarations through a hoisted comment', function () {
+    // The export-detection pattern must tolerate a comment in the same
+    // gaps the marker pattern does, or one source could strip its
+    // marker yet still read as export-free and gain the footer.
+    const exported = runShimmed(
+      swcModule(`
+function _export(target, all) {
+  for (var name in all) Object.defineProperty(target, name, {
+    enumerable: true,
+    get: all[name],
+  });
+}
+var foo = 1;
+_export(/** hoisted comment */ exports, {
+  foo: function () { return foo; },
+  default: function () { return 'dflt'; },
+});`)
+    );
+    assert.isTrue(exported.__esModule);
+    assert.equal(exported.foo, 1);
+    assert.equal(exported.default, 'dflt');
+  });
+
   it('leaves modules with named ESM exports alone', function () {
     const exported = runShimmed(
       swcModule(`

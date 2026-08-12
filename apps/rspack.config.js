@@ -510,6 +510,10 @@ function createRspackConfig({
                         runtime: 'classic',
                         refresh: !!envConstants.HOT,
                       },
+                      // Pin to keep output the same regardless of whether we are using swc
+                      // or tsc to transpile ts/tsx. swc defaults this to true; tsc infers false
+                      // from tsconfig.build.json's `target: es5`.
+                      useDefineForClassFields: false,
                     },
                     target: 'es5',
                     // Class methods must land on the prototype as plain

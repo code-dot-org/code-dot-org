@@ -38,9 +38,11 @@ const MARKER = new RegExp(
 // property name cannot be pattern-matched directly: builtin swc hoists
 // leading comments BETWEEN the defineProperty arguments.  Instead,
 // remove the marker statement and test whether any defineProperty on
-// exports remains.
-const HAS_ESM_EXPORTS =
-  /_export\(exports,|_export_star\(|Object\.defineProperty\(exports,/;
+// exports remains — tolerating a hoisted comment in the same gaps
+// MARKER does, so the two patterns cannot disagree about one source.
+const HAS_ESM_EXPORTS = new RegExp(
+  String.raw`_export\(${GAP}exports,|_export_star\(|Object\.defineProperty\(${GAP}exports,`
+);
 
 const FOOTER = `
 ;(function () {
