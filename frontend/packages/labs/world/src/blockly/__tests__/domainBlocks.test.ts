@@ -2822,6 +2822,9 @@ describe('rule authoring blocks (`.rule` files)', () => {
     // the imperative `define block` (+ its `return`).
     expect(cats.find(c => c.name === 'Rule')?.blocks).toEqual([
       'world_rule',
+      // …and the smaller thing a rule can be, offered beside it
+      // (specs/BEHAVIORS.md).
+      'world_behavior',
       'world_use_rule',
       'world_rule_trait',
       'world_use_trait',

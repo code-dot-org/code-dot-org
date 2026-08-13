@@ -548,6 +548,14 @@ export function parseRuleMeta(
     // Traits are top blocks beside the rule, not chained inside it — one `.rule`
     // declares one rule, so every trait in the file belongs to it.
     traitRoots = tops.filter(b => b?.type === 'world_rule_trait');
+    if (!root) {
+      // A BEHAVIOR is a rule with exactly one trait of the same name, and one
+      // block is both (specs/BEHAVIORS.md). So the same root is walked twice —
+      // once for what a rule declares, once for what a trait does — and the
+      // rule-level walk skips the members, or they arrive twice over.
+      root = tops.find(b => b?.type === 'world_behavior');
+      traitRoots = root ? [root] : [];
+    }
     stepRoots = tops.filter(b => b?.type?.startsWith('world_rule_step'));
     enumRoots = tops.filter(b => b?.type === 'world_rule_enum');
   } catch {
@@ -562,7 +570,8 @@ export function parseRuleMeta(
       ? (block.fields[name] as string)
       : '';
 
-  const ruleName = field(root, 'NAME') || 'Rule';
+  const isBehavior = root.type === 'world_behavior';
+  const ruleName = field(root, 'NAME') || (isBehavior ? 'Behavior' : 'Rule');
   // What using it gives a world. Absent on a rule authored before the field
   // existed, and on one whose two readings are the same word.
   const ability = field(root, 'ABILITY') || ruleName;
@@ -815,6 +824,11 @@ export function parseRuleMeta(
       if (dep) {
         requires.push(dep);
       }
+    } else if (isBehavior) {
+      // Everything else in a behavior's chain belongs to its TRAIT, and the
+      // trait walk below takes it. Declaring it here as well would give the
+      // behavior a world-scoped copy of every member it has.
+      continue;
     } else if (block.type === 'world_rule_property') {
       addProperty(block);
     } else if (block.type === 'world_rule_block') {
@@ -1047,7 +1061,13 @@ export function extractRuleBodies(
       }
     } else if (root.type === 'world_rule') {
       visit(root.getNextBlock(), 'world', undefined);
-    } else if (root.type === 'world_rule_trait') {
+    } else if (
+      root.type === 'world_rule_trait' ||
+      // A behavior's members are its one trait's, so its body is extracted the
+      // way a trait's is — and NOT the way a rule's own chain is, or every
+      // member would be keyed twice (specs/BEHAVIORS.md).
+      root.type === 'world_behavior'
+    ) {
       // A trait's members belong to whatever elects it — an actor, or a camera
       // (`TraitMeta.subject`). That decides what their bodies call the subject,
       // so it has to be known here as well as at parse time.

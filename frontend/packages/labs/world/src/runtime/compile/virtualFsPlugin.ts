@@ -20,6 +20,9 @@ const EXT_ORDER = [
   '.anim',
   '.effect',
   '.rule',
+  // A behavior is a rule with one trait, and by the time the compiler sees one
+  // the lab has generated its JavaScript too (specs/BEHAVIORS.md).
+  '.behavior',
   '.actor',
   '.world',
   '/index.ts',
