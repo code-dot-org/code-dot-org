@@ -26,6 +26,14 @@ require 'cdo/pycall'
 # vite_ruby knows where to find the frontend code.
 ENV["VITE_RUBY_ROOT"] = vite_dir
 
+# Outside development, /frontend-studio is served from the
+# dashboard/public/frontend-studio symlink (see package:studio rake tasks).
+# Read the Vite manifest from that same directory, so the asset tags we render
+# always match the files being served. Without this, vite_ruby reads the
+# manifest from the local dist directory, which is stale whenever the package
+# was downloaded from S3 instead of built on this machine.
+ENV["VITE_RUBY_PUBLIC_DIR"] = dashboard_dir('public') unless rack_env?(:development)
+
 # Our CI process runs a custom build step before assets:precompile, so we skip
 # Vite Ruby's automatic extension and install hooks to avoid redundant/conflicting builds.
 # These must be set before Bundler.require loads vite_ruby, which checks them at load time.

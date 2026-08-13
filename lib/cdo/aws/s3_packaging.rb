@@ -65,8 +65,8 @@ class S3Packaging
     @logger.info "Decompressing #{package.path}\nto #{@target_location}"
     FileUtils.mkdir_p(@target_location)
     Dir.chdir(@target_location) do
-      # Clear out existing package
-      FileUtils.rm_rf Dir.glob("#{@target_location}/*")
+      # Clear out existing package, dotfiles included
+      FileUtils.rm_rf(Dir.children(@target_location).map {|entry| File.join(@target_location, entry)})
       RakeUtils.system "tar -zxmf #{package.path}"
     end
     @logger.info "Decompressed"
@@ -77,8 +77,10 @@ class S3Packaging
   # @param expected_commit_hash [String] optional, when specified an error will be raised
   #        whenever the current commit hash doesn't match the expected one.
   #        Use this to detect file system changes during the build and fail package creation.
+  # @param extra_paths [Array<String>] paths to include beyond the shell glob '*',
+  #        which skips dotfiles. Allowlist specific dotfiles here (e.g. '.vite').
   # @return tempfile object of package
-  def create_package(sub_path, expected_commit_hash: nil)
+  def create_package(sub_path, expected_commit_hash: nil, extra_paths: [])
     # make sure commit hash is up to date
     regenerate_commit_hash
 
@@ -92,7 +94,8 @@ class S3Packaging
     Dir.chdir(@application_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
       File.write('commit_hash', @commit_hash)
-      RakeUtils.system "tar -cz --exclude='*.cache.json' --file #{package.path} *"
+      paths = ['*', *extra_paths].join(' ')
+      RakeUtils.system "tar -cz --exclude='*.cache.json' --file #{package.path} #{paths}"
     end
     @logger.info 'Created'
     package

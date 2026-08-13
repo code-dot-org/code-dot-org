@@ -56,6 +56,21 @@ See `frontend/docs/conventions/packages.md` (the `## Labs` section) for the full
 - `src/modules/labs/router/getLabEntrypoint.ts` — add the lazy import to `LabEntrypoints`
 - `src/modules/labs/router/getLabFixtures.ts` — _(optional, MSW mode)_ add a loader entry if the lab ships a `./mocks` subpath. Without an entry the lab still works against Rails and the MSW handlers' built-in defaults; the entry only matters if you want per-tag fixtures (`simple`, `complex`, …) at `/projects/<lab>/<tag>/edit`.
 
+## Deployment (staging/test)
+
+Deployed environments do not build Studio per machine. During `rake build`,
+`package:studio` (see `lib/rake/package.rake`) builds once via turbo, tars
+`dist/frontend-studio/` — including `.vite/`, so the manifest travels with
+the assets — and uploads it to S3 keyed by the turbo build hash. Each
+environment unpacks the tarball into `dashboard/public/studio-package` and
+serves it through the `dashboard/public/frontend-studio` symlink. Rails
+reads the Vite manifest from that same served directory
+(`VITE_RUBY_PUBLIC_DIR` in `dashboard/config/application.rb`), so the HTML
+it renders always references the assets that are actually on disk.
+
+Note: the S3 key only changes when this package's inputs change. A change
+to the packaging code alone reuses the existing tarball.
+
 ## Architecture
 
 See [docs/architecture.md](./docs/architecture.md) for the Rails integration chain, init ordering, and lab loading boundary.

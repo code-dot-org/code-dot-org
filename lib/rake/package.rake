@@ -108,8 +108,9 @@ namespace :package do
         ChatClient.wrap('Testing studio') {Rake::Task['test:studio'].invoke}
       end
 
-      # upload to s3
-      package = packager.create_package('/dist/frontend-studio', expected_commit_hash: expected_commit_hash)
+      # upload to s3: include .vite so the manifest travels with the assets,
+      # allowing the Rails server to render matching asset tags.
+      package = packager.create_package('/dist/frontend-studio', expected_commit_hash: expected_commit_hash, extra_paths: ['.vite'])
 
       unless rack_env?(:adhoc)
         packager.upload_package_to_s3(package)
