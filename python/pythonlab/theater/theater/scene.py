@@ -9,6 +9,7 @@ _DEFAULT_FONT = Font.SANS
 _DEFAULT_FONT_STYLE = FontStyle.NORMAL
 _DEFAULT_TEXT_HEIGHT = 20
 _DEFAULT_STROKE_WIDTH = 1.0
+_MIN_POLYGON_SIDES = 3
 
 
 class Scene:
@@ -85,6 +86,10 @@ class Scene:
     )
 
   def draw_regular_polygon(self, x, y, sides, radius):
+    if sides < _MIN_POLYGON_SIDES:
+      raise ValueError(
+        f"draw_regular_polygon needs at least {_MIN_POLYGON_SIDES} sides, got {sides}"
+      )
     self._actions.append(
       actions.DrawPolygon(
         x, y, sides, radius, self._stroke_color, self._fill_color, self._stroke_width

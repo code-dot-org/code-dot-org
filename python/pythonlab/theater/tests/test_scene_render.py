@@ -115,6 +115,23 @@ def test_stroke_only_shapes_keep_their_interior():
   assert frame.getpixel((100, 100)) == (0, 0, 255)
 
 
+@pytest.mark.parametrize("sides", [0, 1, 2, -3])
+def test_too_few_polygon_sides_raises_at_the_draw_call(sides):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_regular_polygon(200, 200, sides, 50)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+def test_draw_regular_polygon_accepts_float_sides():
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.draw_regular_polygon(200, 200, 12 / 2, 50)
+  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  assert frame.getpixel((200, 200)) == (255, 0, 0)
+
+
 def test_draw_image_accepts_float_geometry():
   # Ordinary student arithmetic like 400 / 2 yields floats, which Pillow's
   # resize and paste reject outright.

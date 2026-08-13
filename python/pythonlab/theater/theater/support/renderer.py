@@ -170,9 +170,11 @@ def _draw_rectangle(draw, action):
 def _draw_regular_polygon(draw, action):
   if action.stroke_color is None and action.fill_color is None:
     return
-  theta = 2 * math.pi / action.sides
+  # range rejects floats, and Scene has already rejected anything under 3.
+  sides = int(round(action.sides))
+  theta = 2 * math.pi / sides
   points = []
-  for i in range(action.sides):
+  for i in range(sides):
     px = int(round(math.cos(theta * i) * action.radius + action.x))
     py = int(round(math.sin(theta * i) * action.radius + action.y))
     points.append((px, py))
