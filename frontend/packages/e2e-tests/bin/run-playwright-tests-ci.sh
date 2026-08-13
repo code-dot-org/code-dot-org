@@ -1,39 +1,58 @@
 #!/usr/bin/env bash
 #
-# Run the e2e Playwright suite against $TARGET_URL. Shared by the Drone `ui`
-# pipeline (docker/ci/scripts/ui_tests.sh) and the DTT `test:playwright_ui` rake
-# task (lib/rake/test.rake) so the run and its messaging live in one place.
+#   run-playwright-tests-ci.sh functional   # all three browsers
+#   run-playwright-tests-ci.sh eyes         # the @visual tests only
 #
-# Browsers: baked into the Drone CI image (docker/ci/Dockerfile) so the install
-# below is skipped in CI; installed at runtime on the long-running DTT daemon.
-# Not provisioned via chef — Playwright and its browsers version together, so a
-# cookbook bump is impractical; longer term, Playwright-in-Docker would drop the
-# runtime install entirely.
+# Callers: lib/rake/ci.rake (Drone), lib/rake/test.rake (DTT).
 #
-# Reads the target deployment from $TARGET_URL (e.g.
-# http://localhost-studio.code.org:3000 for Drone, the test env for DTT) and
-# runs every browser engine in playwright.config.ts (chromium, firefox, webkit).
+# functional stops the build when it fails. eyes does not, because a person must
+# approve each new image. They run as two processes to get two exit codes.
 #
-# Non-blocking by contract: on failure it warns and exits non-zero, leaving each
-# caller to report it without treating it as fatal.
+# Chef does not install the browsers. Each Playwright version needs its own
+# browser version, and a cookbook change each time is too much work.
 set -euo pipefail
 
+suite="${1:?please choose a suite: functional or eyes}"
 : "${TARGET_URL:?TARGET_URL must be set (e.g. http://localhost-studio.code.org:3000)}"
 
-# Run from the package root (one level up from bin/) regardless of the caller's cwd.
+case "$suite" in
+  functional)
+    # Named, not default: the default set also has the visual-* projects.
+    suite_args=(--project=chromium --project=firefox --project=webkit)
+    suffix=''
+    ;;
+  eyes)
+    suite_args=(--grep @visual --project=visual-chromium)
+    suffix='-eyes'
+    ;;
+  *)
+    echo "usage: $(basename "$0") [functional|eyes]" >&2
+    # 64 is EX_USAGE from sysexits.h: the arguments were wrong.
+    exit 64
+    ;;
+esac
+
+# Both suites run here. Equal names would lose the first report.
+report_dir="playwright-report$suffix"
+results_dir="test-results$suffix"
+
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
-trap 'echo "WARNING: Playwright e2e tests failed (non-blocking)"' ERR
+trap 'echo "WARNING: the Playwright $suite tests failed"' ERR
 
-echo "--- running Playwright e2e tests against $TARGET_URL (non-blocking) ---"
+echo "--- running the Playwright $suite tests against $TARGET_URL ---"
 
-# Clear last run's artifacts so an aborted run can't be reported as this one's.
-rm -rf playwright-report test-results
+# So an aborted run cannot be reported as this one.
+rm -rf "$report_dir" "$results_dir"
 
 yarn install --immutable
-# Only the DTT installs browsers at runtime (GHA/Drone bake them). install-deps is
-# omitted — it hits apt every run; provision OS libs once on the daemon.
+# Only the DTT daemon needs this. The other images have the browsers.
+# install-deps is not here, because it reads apt each run.
 if [ "${PLAYWRIGHT_PROVIDER:-}" = dtt ]; then
   yarn exec playwright install chromium firefox webkit
 fi
-yarn run test:ui
+
+# These variables replace the paths in playwright.config.ts.
+PLAYWRIGHT_HTML_OUTPUT_DIR="$report_dir" \
+PLAYWRIGHT_JSON_OUTPUT_FILE="$results_dir/results.json" \
+  yarn run test:ui "${suite_args[@]}" --output="$results_dir"

@@ -170,10 +170,17 @@ namespace :ci do
     #   worker IP (see connect.rb).
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
 
-    # Runs here, before Cucumber, so its result doesn't depend on whether
-    # Cucumber goes on to pass or fail.
+    # Runs first, so Cucumber cannot change this result. The ensure block raises
+    # the failure later, after Cucumber also runs. One build then shows both.
     ENV['TARGET_URL'] = 'http://localhost-studio.code.org:3000'
-    Rake::Task['test:playwright_ui'].invoke
+    playwright_failure =
+      begin
+        Rake::Task['test:playwright_ui'].invoke
+        nil
+      rescue StandardError => exception
+        exception
+      end
+    Rake::Task['test:playwright_eyes'].invoke
 
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
@@ -220,12 +227,16 @@ namespace :ci do
     close_sauce_connect if needs_sauce_connect
     RakeUtils.system_stream_output 'sleep 10'
   ensure
-    # Both results together, Cucumber's output having scrolled Playwright's
-    # verdict away by now. $! names Cucumber's failure when that is what failed.
-    if PLAYWRIGHT_ROLLUP[:line]
+    # Cucumber's output hides the Playwright result. $! holds Cucumber's error.
+    playwright_lines = PLAYWRIGHT_ROLLUP.values_at(:functional, :eyes).compact
+    unless playwright_lines.empty?
       cucumber = $! ? "❌ Cucumber: #{$!.message}." : '✅ Cucumber: passed.'
-      ChatClient.log ['UI suites:', PLAYWRIGHT_ROLLUP[:line], cucumber].join("\n")
+      ChatClient.log ['UI suites:', *playwright_lines, cucumber].join("\n")
     end
+
+    # After the log reads $!, and only if nothing else failed. A raise here
+    # replaces the current error.
+    raise playwright_failure if playwright_failure && $!.nil?
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
