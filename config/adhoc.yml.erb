@@ -10,6 +10,13 @@ dashboard_secret_key_base: not a secret
 poste_secret: not a real secret
 channels_api_secret: not a real secret
 
+# A stub rather than !Secret: adhocs need a usable key so log tokens are minted
+# at all -- an unconfigured key sends a null user_log_token to the AI gateway,
+# collapsing every adhoc user into one rate-limit bucket -- but they have no
+# business minting tokens that resolve against a managed environment's data.
+# Quoted so YAML yields a String, matching what Secrets Manager returns.
+user_log_token_keys: '{"1": "bm90IGEgcmVhbCBrZXkgLS0gYWRob2MgcGxhY2Vob2xkZXI="}'
+
 
 # Engineers need to be able to see raw HTTP error pages so they can debug their feature branch on an adhoc.
 custom_error_response: false
