@@ -61,10 +61,16 @@ namespace :analytics_export do
   task :update_zero_etl_filter, [:integration_arn, :environment_type] => :environment do |_t, args|
     abort "Usage: rake analytics_export:update_zero_etl_filter[ARN,environment_type]" if args[:integration_arn].blank? || args[:environment_type].blank?
 
+    require 'cdo/aws/rds'
+
+    db_name = "dashboard_#{args[:environment_type]}"
     dry_run = ENV['DRY_RUN'].present?
-    result = AnalyticsExportable.update_zero_etl_integration!(
+    # AnalyticsExportable computes the desired filter from the schema; Cdo::RDS reads/reconciles/writes
+    # it against the live integration via the RDS API.
+    result = Cdo::RDS.update_zero_etl_integration!(
       integration_arn: args[:integration_arn],
-      db_name: "dashboard_#{args[:environment_type]}",
+      desired_data_filter: AnalyticsExportable.zero_etl_data_filter(db_name: db_name),
+      db_name: db_name,
       dry_run: dry_run
     )
 
