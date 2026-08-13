@@ -1,11 +1,12 @@
 import io
 
+import pytest
 from PIL import Image as PILImage
 
 import theater
 from theater import Image, Scene
-from theater.support.constants import THEATER_HEIGHT, THEATER_WIDTH
-from theater.support.renderer import render
+from theater.support.constants import MAX_FRAMES, THEATER_HEIGHT, THEATER_WIDTH
+from theater.support.renderer import TooManyFramesError, render
 
 
 def test_scene_records_actions():
@@ -50,6 +51,30 @@ def test_draw_text_renders():
   scene.draw_text("Hi", 50, 50)
   gif_bytes = render(scene.get_actions())
   assert len(gif_bytes) > 0
+
+
+def _paused_scene(pause_count):
+  # Each frame must differ; Pillow collapses runs of identical gif frames.
+  scene = Scene()
+  for i in range(pause_count):
+    scene.set_fill_color(theater.Color(i % 256, i // 256, 0))
+    scene.draw_rectangle(0, 0, 10, 10)
+    scene.pause(0.1)
+  # A distinct closing frame, which otherwise collapses into the last pause.
+  scene.set_fill_color("white")
+  scene.draw_rectangle(0, 0, 10, 10)
+  return scene
+
+
+def test_frame_ceiling_allows_a_full_length_animation():
+  # One pause short of the ceiling, since the closing frame occupies a slot.
+  gif = PILImage.open(io.BytesIO(render(_paused_scene(MAX_FRAMES - 1).get_actions())))
+  assert gif.n_frames == MAX_FRAMES
+
+
+def test_too_many_pauses_raises():
+  with pytest.raises(TooManyFramesError):
+    render(_paused_scene(MAX_FRAMES).get_actions())
 
 
 def test_draw_image_accepts_float_geometry():

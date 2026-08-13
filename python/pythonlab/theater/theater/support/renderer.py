@@ -6,6 +6,7 @@ from PIL import ImageDraw
 
 from .actions import UNSPECIFIED, SceneActionType
 from .constants import (
+  MAX_FRAMES,
   MAX_GIF_BYTES,
   MIN_PAUSE_SECONDS,
   THEATER_HEIGHT,
@@ -18,10 +19,17 @@ class GifTooLargeError(Exception):
   """Raised when the rendered gif exceeds the size ceiling."""
 
 
+class TooManyFramesError(Exception):
+  """Raised when a scene pauses more times than the frame ceiling allows."""
+
+
 def render(actions):
   """Execute a scene's action list into gif bytes.
 
   Drawing accumulates on a single canvas and each pause snapshots a gif frame.
+  Snapshots convert to RGB immediately: the canvas needs an alpha channel for
+  compositing, but the frames only have to survive until the gif is encoded,
+  and holding them as RGBA costs a third more memory per frame.
   """
   canvas = PILImage.new("RGBA", (THEATER_WIDTH, THEATER_HEIGHT), (255, 255, 255, 255))
   draw = ImageDraw.Draw(canvas, "RGBA")
@@ -34,8 +42,13 @@ def render(actions):
     if kind is SceneActionType.CLEAR_SCENE:
       _clear(canvas, action.color)
     elif kind is SceneActionType.PAUSE:
+      # Refuse before allocating, and leave room for the closing frame.
+      if len(frames) >= MAX_FRAMES - 1:
+        raise TooManyFramesError(
+          f"The animation has too many frames; the limit is {MAX_FRAMES}"
+        )
       seconds = max(action.seconds, MIN_PAUSE_SECONDS)
-      frames.append(canvas.copy())
+      frames.append(canvas.convert("RGB"))
       durations.append(int(round(seconds * 1000)))
     elif kind is SceneActionType.DRAW_IMAGE:
       _draw_image(canvas, action)
@@ -67,7 +80,7 @@ def render(actions):
       )
 
   # Final frame with no trailing delay.
-  frames.append(canvas.copy())
+  frames.append(canvas.convert("RGB"))
   durations.append(0)
 
   return _encode_gif(frames, durations)
@@ -155,13 +168,12 @@ def _draw_shape(draw, action):
 
 
 def _encode_gif(frames, durations):
-  rgb_frames = [frame.convert("RGB") for frame in frames]
   buffer = io.BytesIO()
-  rgb_frames[0].save(
+  frames[0].save(
     buffer,
     format="GIF",
     save_all=True,
-    append_images=rgb_frames[1:],
+    append_images=frames[1:],
     duration=durations,
     disposal=1,
   )
