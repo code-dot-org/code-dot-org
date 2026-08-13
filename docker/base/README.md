@@ -45,12 +45,13 @@ both):
 every PR touching this directory: a 2x2 matrix builds and runs
 smoke-test.sh with docker and podman on amd64 and arm64. On staging pushes
 touching this directory and a weekly cron (security refresh of ruby-slim +
-apt), it publishes a multi-platform image and deletes untagged package
-versions (superseded buildcache manifests):
+apt), each architecture builds natively, smoke-tests the bytes it pushes,
+and a merge job puts the pair under:
 
     ghcr.io/code-dot-org/cdo-base:latest
     ghcr.io/code-dot-org/cdo-base:git-<sha>
     ghcr.io/code-dot-org/cdo-base:<YYYY-MM-DD>
 
+`git-<sha>-<arch>` tags are the merge job's inputs, not a consumer contract.
 The date tag is the immutable name — the weekly cron rebuilds the same git
 sha with different bytes. Consumers should pin by digest.

@@ -6,14 +6,12 @@
 # docker/base/ and pushes nothing.
 #
 # Publish (staging pushes touching docker/base/, weekly cron, manual
-# dispatch): per-arch native builds pushed to GHCR, stitched into one
-# multi-platform manifest. The weekly cron picks up ruby-slim and apt
-# security updates; it produces different bytes for the same git sha,
-# hence the date tag.
-#
-# Cleanup: deletes untagged package versions (superseded buildcache
-# manifests). Safe because every manifest a live tag references is itself
-# tagged (git-<sha>-<arch>).
+# dispatch): each architecture builds natively, smoke-tests the exact bytes
+# it pushes as git-<sha>-<arch>, and a merge job puts the pair under the
+# final tags. The weekly cron picks up ruby-slim and apt security updates;
+# it produces different bytes for the same git sha, hence the date tag.
+# Publishes build without a registry cache on purpose: a cached apt layer
+# would serve last week's packages and silently defeat the cron.
 
 name: cdo-base-image
 
@@ -39,8 +37,12 @@ env:
   IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-base
 
 jobs:
+  # PRs only. Publish runs are gated by build-push itself, which runs the
+  # same suite against the bytes it pushes; running this matrix there too
+  # tested a separate build of the same input twice.
   smoke-test:
     name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
+    if: github.event_name == 'pull_request'
     strategy:
       fail-fast: false
       matrix:
@@ -74,9 +76,8 @@ jobs:
         run: ./docker/base/smoke-test.sh cdo-base:smoke ${{ matrix.engine }}
 
   build-push:
-    name: push (${{ matrix.arch }})
+    name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
-    needs: smoke-test
     strategy:
       matrix:
         include:
@@ -92,9 +93,6 @@ jobs:
         with:
           sparse-checkout: docker/base
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3.11.1
-
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
         with:
@@ -102,20 +100,29 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # provenance disabled: attestation manifests would be untagged (the
-      # cleanup job would delete them) and complicate the imagetools stitch.
-      - name: Build and push per-arch image
-        uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
-        with:
-          context: docker/base
-          push: true
-          provenance: false
-          tags: ${{ env.IMAGE }}:git-${{ github.sha }}-${{ matrix.arch }}
-          cache-from: type=registry,ref=${{ env.IMAGE }}:buildcache-${{ matrix.arch }}
-          cache-to: type=registry,ref=${{ env.IMAGE }}:buildcache-${{ matrix.arch }},mode=max
+      - name: Build cdo-base
+        run: docker build -t cdo-base:publish docker/base/
 
-  stitch:
-    name: stitch multi-platform manifest
+      # The quality gate for the bytes this job pushes.
+      - name: Smoke test
+        run: ./docker/base/smoke-test.sh cdo-base:publish docker
+
+      # The tag is keyed by commit and architecture, and no consumer
+      # resolves it. The merge job builds every consumer-facing tag from
+      # this immutable pair, so a racing publish or a tag left by a failed
+      # run cannot leak in.
+      - name: Push cdo-base (per-arch tag)
+        run: |
+          set -euxo pipefail
+          docker tag cdo-base:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
+          docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
+
+  # Until this runs, only the arch-suffixed tags exist, so an incomplete
+  # publish is visible as such instead of serving one architecture under
+  # the final name.
+  # See: https://docs.docker.com/build/ci/github-actions/multi-platform/#distribute-build-across-multiple-runners
+  merge:
+    name: merge per-arch images into one manifest
     if: github.event_name != 'pull_request'
     needs: build-push
     runs-on: ubuntu-24.04
@@ -129,7 +136,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Stitch and tag (latest, git sha, date)
+      - name: Merge the per-arch pair under every tag
         run: |
           docker buildx imagetools create \
             -t "$IMAGE:git-${{ github.sha }}" \
@@ -137,21 +144,3 @@ jobs:
             -t "$IMAGE:$(date -u +%Y-%m-%d)" \
             "$IMAGE:git-${{ github.sha }}-amd64" \
             "$IMAGE:git-${{ github.sha }}-arm64"
-
-      - name: Inspect published manifest
-        run: docker buildx imagetools inspect "$IMAGE:latest"
-
-  cleanup:
-    name: delete untagged package versions
-    if: github.event_name != 'pull_request'
-    needs: stitch
-    runs-on: ubuntu-24.04
-    permissions:
-      packages: write
-    steps:
-      - name: Delete untagged cdo-base versions
-        uses: actions/delete-package-versions@v5
-        with:
-          package-name: cdo-base
-          package-type: container
-          delete-only-untagged-versions: 'true'
