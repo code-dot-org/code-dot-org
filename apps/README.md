@@ -78,7 +78,7 @@ command prints a reminder. Switching between bundlers cleans
 `build/package/js` automatically, and `yarn start --rspack` cleans it on
 every start (serving over a populated directory costs rspack about 18
 seconds), so the first compile after starting re-copies ace, piskel and
-the pyodide wheels. Source maps work differently under rspack; see
+the pyodide wheels. Source maps default to covering `src/` only; see
 [Source maps under rspack](#source-maps-under-rspack).
 
 Two other levers:
@@ -128,23 +128,24 @@ Two shortcuts combine these levers:
 
 ### Source maps under rspack
 
-Under `--rspack`, the dev server *and* one-shot dev builds default to `eval`
-— no source maps — because rspack's whole-app `-module` map modes are
-currently unusable at our module count (beyond the reach of Node heap caps;
-upstream issue pending). The dev server exceeds 22GB during rebuilds with
-them; a one-shot `yarn build --rspack` forced to full maps was OOM-killed on
-a 30GB machine, because a build compiles every dynamic import up front where
-the dev server defers them. The active mode is printed at startup. Three
-ways to get original-source stepping back:
+Under `--rspack`, the default is source maps for everything in `src/` and
+nothing else: you step through your own TS/JSX in DevTools, and node_modules
+stays unmapped. That boundary is what keeps it affordable — node_modules
+holds over half the module graph, and mapping it is what makes rspack's
+whole-app `-module` modes unusable here (the dev server exceeds 22GB during
+rebuilds; a one-shot `yarn build --rspack` forced to full maps was OOM-killed
+on a 30GB machine, since a build compiles every dynamic import up front where
+the dev server defers them). Measured against no maps at all, the default
+costs about 2 seconds of startup and 2 seconds per shared-file rebuild, and
+*less* memory, because unmapped modules skip eval wrapping entirely.
 
-- stay on webpack `yarn start` (unchanged);
-- `APPS_DEVTOOL=eval-cheap-module-source-map yarn start --rspack` — full maps,
-  at the measured memory cost (big-RAM machines only);
-- `APPS_DEVTOOL_SCOPE` — scoped maps, below.
+Two levers adjust it, and the active mode is printed at startup:
 
-`APPS_DEVTOOL_SCOPE` maps only the parts of `src/` you are working on back to
-original TS/JSX, and leaves everything else unmapped. This costs *less* memory
-than `APPS_DEVTOOL=eval` (unmapped modules skip eval wrapping entirely).
+- `APPS_DEVTOOL=eval yarn start --rspack` — no maps anywhere;
+- `APPS_DEVTOOL_SCOPE` — narrow the maps to a named working set, below.
+
+`APPS_DEVTOOL_SCOPE` maps only the parts of `src/` you name and leaves
+everything else unmapped, which trims the map cost further:
 
 ```
 APPS_DEVTOOL_SCOPE=music,lab2 yarn start --rspack

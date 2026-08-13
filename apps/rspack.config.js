@@ -196,7 +196,24 @@ function createRspackConfig({
       : [];
   // An empty array is truthy; a value of only separators must fall back
   // to the normal devtool instead of silently disabling source maps.
-  const devtoolScope = scopeNames.length ? scopeNames : null;
+  //
+  // RSPACK-DIFF: with nothing set, the dev default is scoped maps over
+  // all of src/ — the economics above, applied at first-party scale.
+  // node_modules, over half the module graph, is never mapped; the
+  // whole-app modes differ from this default exactly by mapping it (a
+  // one-shot build forced to full maps was OOM-killed on a 30GB
+  // machine).  Measured against APPS_DEVTOOL=eval on the same box:
+  // lower steady and peak memory, ~2s more startup, ~2s more per
+  // shared-file rebuild, and a 30-edit soak oscillates rather than
+  // accumulates.  APPS_DEVTOOL (e.g. =eval) opts out;
+  // APPS_DEVTOOL_SCOPE narrows to a named working set.
+  const srcMapsDefault =
+    !minify && !scopeNames.length && !envConstants.APPS_DEVTOOL;
+  const devtoolScope = scopeNames.length
+    ? scopeNames
+    : srcMapsDefault
+    ? ['src']
+    : null;
   // Names stay unescaped in the report so it prints them as the
   // developer typed them; the pattern for each is compiled once here and
   // shared by the plugin and the report, which both need every name.
@@ -204,15 +221,17 @@ function createRspackConfig({
     new RegExp(
       `src[\\\\/]${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\\\/.]`
     );
-  const scopeRegexes = devtoolScope
-    ? devtoolScope.map(name => [name, scopeRegexFor(name)])
+  // The default scope anchors to this checkout's src/ absolutely, so
+  // node_modules packages that ship their own src/ directory stay
+  // unmapped.
+  const SRC_PREFIX_REGEX = new RegExp(
+    `^${p('src').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\\\/]`
+  );
+  const scopeRegexes = scopeNames.length
+    ? scopeNames.map(name => [name, scopeRegexFor(name)])
+    : srcMapsDefault
+    ? [['src', SRC_PREFIX_REGEX]]
     : [];
-  // RSPACK-DIFF: the dev default is eval — no source maps — where
-  // webpack defaults to eval-cheap-module-source-map.  rspack's
-  // whole-app -module map modes exceed 22GB at our module count, which
-  // kills the process outright on smaller machines (the compilation
-  // state lives in Rust, beyond Node heap caps).  An explicit
-  // APPS_DEVTOOL or APPS_DEVTOOL_SCOPE overrides.
   const rspackDevtool = devtoolScope
     ? false
     : minify
@@ -221,7 +240,13 @@ function createRspackConfig({
   // Say which source-map mode is active up front; waiting to notice what
   // symbols look like in DevTools is a bad way to find out.
   if (!minify) {
-    if (devtoolScope) {
+    if (srcMapsDefault) {
+      console.log(
+        '[rspack] source maps: src/ (the default) — original-source ' +
+          'stepping for first-party code.  APPS_DEVTOOL=eval turns maps ' +
+          'off; APPS_DEVTOOL_SCOPE narrows to a working set (see README).'
+      );
+    } else if (devtoolScope) {
       console.log(
         `[rspack] source maps: scoped to ${devtoolScope.join(', ')} ` +
           '(match report follows the first compile)'
@@ -229,9 +254,7 @@ function createRspackConfig({
     } else {
       console.log(
         `[rspack] source maps: ${
-          rspackDevtool === 'eval'
-            ? 'none (eval, the rspack default)'
-            : rspackDevtool
+          rspackDevtool === 'eval' ? 'none (eval)' : rspackDevtool
         }` +
           (/-module/.test(String(rspackDevtool))
             ? ' — WARNING: whole-app -module maps exceed 22GB under rspack;' +
