@@ -644,6 +644,15 @@ export function defineRule({name, ability, header}) {
             value: initial,
             ...opts,
           }),
+        /** Words — and a colour, which every block a learner touches spells
+         *  `#rrggbb` (engine/core/color). */
+        string: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'string',
+            value: initial,
+            ...opts,
+          }),
         actors: (propName, opts) =>
           self.property({name: propName, type: 'actors', value: '', ...opts}),
         /**

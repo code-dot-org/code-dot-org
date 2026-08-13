@@ -133,10 +133,28 @@ describe('the five things there are to draw', () => {
     // rasterized twice.
     expect(
       codeFor('world_draw_text', {
-        fields: {ANCHOR: 'bottom right'},
-        values: {TEXT: 'score', X: '10', Y: '5', SIZE: '12'},
+        values: {
+          TEXT: 'score',
+          X: '10',
+          Y: '5',
+          SIZE: '12',
+          ANCHOR: '"bottom right"',
+        },
       }),
     ).toBe('pen.text(String(score), 10, 5, 12, "bottom right");\n');
+  });
+
+  it('takes its anchor through a socket, so state can say which', () => {
+    // A FIELD would read the same in the common case and make a per-instance
+    // anchor unsayable — and a Label's anchor is state the map editor sets.
+    // A value block, so its generator hands back `[code, order]`.
+    expect(
+      codeFor('world_text_anchor', {fields: {ANCHOR: 'right'}}).split(',')[0],
+    ).toBe('"right"');
+    // …and an empty socket still draws, centred, rather than `undefined`.
+    expect(
+      codeFor('world_draw_text', {values: {TEXT: "'hi'", X: '0', Y: '0'}}),
+    ).toBe('pen.text(String(\'hi\'), 0, 0, 12, "centre");\n');
   });
 
   it('resolves a spritesheet cell where the `.sheet` files are known', () => {

@@ -28,6 +28,7 @@ import {motionRule} from './motion';
 import {mouseRule} from './mouse';
 import {shootsRule} from './shoots';
 import {solidRule} from './solid';
+import {textRule} from './text';
 import {wrapRule} from './wrap';
 
 /** One entry in the library. */
@@ -101,6 +102,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Lets an actor pick up the things it walks into, and says which kinds can be picked up. It keeps what each collector has taken, so a game can ask how many of a kind somebody holds, and raises an event on both sides of the moment.',
     provides: ['Collects', 'Can Be Collected'],
     contents: collectRule,
+  },
+  {
+    id: 'text',
+    name: 'Text',
+    ability: 'Shows Text',
+    description:
+      'Gives an actor words, a size, a color and an anchor — the state a drawn word is drawn from. It runs nothing: what an actor does with its words is its own “define drawing”, which is why the stock Label and Button are ordinary actors.',
+    provides: ['Shows Text'],
+    contents: textRule,
   },
   {
     id: 'input',

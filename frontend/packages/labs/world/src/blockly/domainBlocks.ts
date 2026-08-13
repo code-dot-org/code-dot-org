@@ -67,6 +67,7 @@ import {
   runtimeActorExtension,
   traitContextExtension,
 } from './extensions/actorContext';
+import {actorImportFieldExtension} from './extensions/actorImportField';
 import {
   addActorNameExtension,
   addActorNameMutator,
@@ -124,6 +125,7 @@ import {instanceId, type MapPlacement} from './mapPlacements';
 import {
   actorFieldOptions,
   type DropdownOptions,
+  actorImportOptionsExtension,
   actorOptionsExtension,
   actorTypeOptionsExtension,
   animationFileOptions,
@@ -3438,7 +3440,13 @@ const worldAddActor = defineBlock({
   // split asteroid, an enemy on a timer. Both, because the live World takes the
   // same arguments the builder does (`World.addActor`) — so no context guard,
   // and the block reads the same wherever it sits.
-  extensions: [actorOptionsExtension, addActorNameExtension],
+  extensions: [
+    actorImportOptionsExtension,
+    addActorNameExtension,
+    // After the options extension, so it wraps that validator rather than
+    // being wrapped by it (see `actorImportField`).
+    actorImportFieldExtension,
+  ],
   // Optional `as ⟨…⟩`, which is what lets a body reach the actor that DID the
   // placing: unticked the new actor is `this actor` as it always was, ticked it
   // is a variable and `this actor` keeps meaning the enclosing one.
@@ -3721,7 +3729,11 @@ const worldCreateInMap = defineBlock({
   // `world` is unbound this also warns, and it additionally catches `world`
   // being bound to the LIVE world, which has no `define` or `loadMap` at all.
   // Both would be two warnings saying one thing.
-  extensions: [actorOptionsExtension, builderWorldExtension],
+  extensions: [
+    actorImportOptionsExtension,
+    builderWorldExtension,
+    actorImportFieldExtension,
+  ],
   style: 'behavior_blocks',
   tooltip:
     'Place several actors of one kind, arranged on the map. Their positions ' +
@@ -5150,7 +5162,12 @@ const worldActorStep = traitStepDefinition(true);
 const paintArg = (name: string) => ({
   type: 'input_value' as const,
   name,
-  check: COLOUR_CHECK,
+  // A swatch OR a plain string. `core/color.ts` says every colour a learner
+  // touches is `#rrggbb`, so a rule's string property holding one is the same
+  // value the picker produces — and a Label whose colour is per-instance state
+  // has nothing else to be (specs/UI_ACTORS.md). The picker still fits, which
+  // is what a socket check being a list means.
+  check: [COLOUR_CHECK, 'String'],
 });
 
 const worldDefineDrawing = defineBlock({
@@ -5365,11 +5382,7 @@ const worldDrawText = defineBlock({
     numberArg('X'),
     numberArg('Y'),
     numberArg('SIZE'),
-    {
-      type: 'field_dropdown',
-      name: 'ANCHOR',
-      options: TEXT_ANCHORS.map(anchor => [anchor, anchor] as [string, string]),
-    },
+    {type: 'input_value', name: 'ANCHOR', check: 'String'},
   ],
   inputsInline: true,
   previousStatement: true,
@@ -5385,12 +5398,13 @@ const worldDrawText = defineBlock({
       const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
       const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
       const size = generator.valueToCode(block, 'SIZE', Order.NONE) || '12';
-      const anchor = block.getFieldValue('ANCHOR') || 'centre';
+      const anchor =
+        generator.valueToCode(block, 'ANCHOR', Order.NONE) || str('centre');
       // `String(…)` because the commonest thing to draw is a NUMBER — a score,
       // a countdown — and the socket takes any value. Coercing here means the
       // learner never meets the difference, and the command list stays a list
       // of strings so two equal scores hash the same.
-      return `pen.text(String(${text}), ${x}, ${y}, ${size}, ${str(anchor)});\n`;
+      return `pen.text(String(${text}), ${x}, ${y}, ${size}, ${anchor});\n`;
     },
   },
 });
@@ -5399,7 +5413,37 @@ registerValueShadows('world_draw_text', [
   {name: 'X', shadow: {type: 'math_number', fields: {NUM: 16}}},
   {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 16}}},
   {name: 'SIZE', shadow: {type: 'math_number', fields: {NUM: 12}}},
+  {name: 'ANCHOR', shadow: {type: 'world_text_anchor'}},
 ]);
+
+// `anchor ⟨centre⟩` — an anchor's name as a value, the same shape `key` and
+// `mouse button` have. A FIELD would have read the same in the common case and
+// made a per-instance anchor unsayable: a Label's anchor is state the map
+// editor sets, and state arrives through a socket (specs/UI_ACTORS.md).
+const worldTextAnchor = defineBlock({
+  type: 'world_text_anchor',
+  message0: 'anchor %1',
+  args0: [
+    {
+      type: 'field_dropdown',
+      name: 'ANCHOR',
+      options: TEXT_ANCHORS.map(anchor => [anchor, anchor] as [string, string]),
+    },
+  ],
+  output: 'String',
+  style: 'text_blocks',
+  tooltip:
+    'Which part of the text sits at the point it is drawn at — so a number ' +
+    'that grows can stay where it was put.',
+  generator: {
+    javascript(block) {
+      return [str(block.getFieldValue('ANCHOR')), Order.ATOMIC] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
 
 const worldDrawImage = defineBlock({
   type: 'world_draw_image',
@@ -5911,6 +5955,7 @@ export const DOMAIN_BLOCKS = [
   worldDrawCircle,
   worldDrawLine,
   worldDrawText,
+  worldTextAnchor,
   worldDrawImage,
   worldRuleStepTick,
   worldKey,
@@ -6028,6 +6073,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_draw_circle',
       'world_draw_line',
       'world_draw_text',
+      'world_text_anchor',
       'world_draw_image',
     ],
   },

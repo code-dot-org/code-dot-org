@@ -18,6 +18,10 @@ import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
+import {setActorImportHandler} from '../actors/actorImport';
+import {ImportActorDialog} from '../actors/ImportActorDialog';
+import {importStockActor} from '../actors/importStockActor';
+import type {StockActor} from '../actors/stock';
 import {
   SpritePickerDialog,
   type PickedSprite,
@@ -339,6 +343,10 @@ export const BlocklyFileEditor = ({
   // dropdowns want different dialogs; `importing` says which is open, so only
   // one can be at a time — which is what a modal means anyway.
   const [importingRule, setImportingRule] = useState(false);
+  // …and for actors. An interface element is an actor, so importing a Label is
+  // the same act as importing a mechanic (specs/UI_ACTORS.md) — which is why
+  // this is a third state rather than a third kind of thing.
+  const [importingActor, setImportingActor] = useState(false);
   // The rules panel is a third state rather than a third importer: it is not
   // choosing a value for anything, and it is what the stock picker returns TO
   // when the picker was opened from it (`addFromRulesPanel`).
@@ -364,6 +372,13 @@ export const BlocklyFileEditor = ({
           setImportingRule(true);
         }),
     );
+    setActorImportHandler(
+      () =>
+        new Promise<string | undefined>(resolve => {
+          resolveImport.current = resolve;
+          setImportingActor(true);
+        }),
+    );
     // The rules panel, from the world block. It resolves with nothing — what it
     // changes it changes in the project, and the block only wants to know when
     // it closed so it can count again (blockly/rulesConfig).
@@ -379,6 +394,7 @@ export const BlocklyFileEditor = ({
     return () => {
       setEffectImportHandler(null);
       setRuleImportHandler(null);
+      setActorImportHandler(null);
       setRulesConfigHandler(null);
     };
   }, []);
@@ -386,6 +402,7 @@ export const BlocklyFileEditor = ({
   const finishImport = useCallback((path: string | undefined) => {
     setImporting(false);
     setImportingRule(false);
+    setImportingActor(false);
     setImportingAppearance(null);
     resolveImport.current?.(path);
     resolveImport.current = null;
@@ -460,6 +477,26 @@ export const BlocklyFileEditor = ({
         projectImageSizes(source),
       );
       finishImport(name);
+    },
+    [updateSources, finishImport],
+  );
+
+  const handleActorImport = useCallback(
+    (actor: StockActor) => {
+      const sources = sourcesRef.current;
+      const {source, path} = importStockActor(sources.source, actor);
+      // In the project BEFORE the field takes its value, as the rule importer
+      // does: the dropdown rebuilds from the registry, and a value with no
+      // matching option is dropped by Blockly. The value is the MODULE PATH —
+      // an actor dropdown says which file, where a rule dropdown says which
+      // rule (`actorFieldOptions` against `useRuleOptions`).
+      updateSources({...sources, source});
+      refreshProjectDropdowns(
+        projectFiles(source),
+        projectImagePaths(source),
+        projectImageSizes(source),
+      );
+      finishImport(path);
     },
     [updateSources, finishImport],
   );
@@ -1070,6 +1107,12 @@ export const BlocklyFileEditor = ({
       {importingRule && (
         <ImportRuleDialog
           onImport={handleRuleImport}
+          onCancel={() => finishImport(undefined)}
+        />
+      )}
+      {importingActor && (
+        <ImportActorDialog
+          onImport={handleActorImport}
           onCancel={() => finishImport(undefined)}
         />
       )}
