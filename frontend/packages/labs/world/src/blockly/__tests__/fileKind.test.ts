@@ -85,6 +85,27 @@ describe('which definition roots a file may hold', () => {
     expect(offeredTypes('world')).not.toContain('world_trait_step');
   });
 
+  it('gives `each frame` no previous connection in an actor file', () => {
+    // The bug this pins, and it was invisible until somebody touched the
+    // workspace: `DisableOrphansPlugin` reads a TOP-LEVEL block with a previous
+    // connection as an orphan and disables it — and everything chained after
+    // it — so a standalone `each frame` sat greyed out and generated nothing.
+    // A root has no previous, which is why every event hat has none either.
+    const shapeIn = (fileKind: FileKind) => {
+      const matches = buildDomainPalette([], {fileKind}).blocks.filter(
+        block => block.type === 'world_trait_step',
+      ) as Array<{previousStatement?: boolean}>;
+      // Exactly one definition per type: two would leave which one lands on
+      // the workspace up to registration order.
+      expect(matches).toHaveLength(1);
+      return matches[0].previousStatement;
+    };
+
+    expect(shapeIn('actor')).toBeUndefined();
+    // …and it still chains where it is one of a trait's members.
+    expect(shapeIn('rule')).toBe(true);
+  });
+
   it('does not offer `use rule` to a world', () => {
     // A world runs the rules the project holds (blockly/projectModules), so
     // the block would be a row that does nothing. It is still OFFERED to a
