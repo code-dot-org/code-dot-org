@@ -171,6 +171,9 @@ export const keyDown = key => ({
 
 export const pixelsPerUnit = () => ({type: 'world_pixels_per_unit'});
 
+/** Where the pointer is, as a place in the world (`World.mousePosition`). */
+export const mousePosition = () => ({type: 'world_mouse_position'});
+
 /** `<subject> has trait <Rule#Trait>`. */
 /** `add <actor> to <list>` — the list is a VARIABLE, named in a field. */
 export const pushActor = (list, actor) => ({
