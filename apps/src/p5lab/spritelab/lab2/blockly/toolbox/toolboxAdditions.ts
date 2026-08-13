@@ -65,6 +65,8 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'gamelab_setBackgroundImageAs',
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
+      'spritelab2_setAsPlatformPlayer',
+      'spritelab2_setPlatformGravity',
       'spritelab2_makeSpriteAtGrid',
       'gamelab_spriteClicked',
       'gamelab_checkTouching',
