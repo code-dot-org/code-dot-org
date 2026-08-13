@@ -34,6 +34,7 @@ import {FLAPPY_SINGLE_SPEC} from './flappySingle';
 import {METEORS_SPEC} from './meteors';
 import {METEORS_SINGLE_SPEC} from './meteorsSingle';
 import {PLATFORMER_SINGLE_SPEC} from './platformerSingle';
+import {TAPPER_PROJECT} from './tapper';
 
 /**
  * Every scenario's tag, in the order the switcher offers them.
@@ -54,6 +55,7 @@ export const WORLD_SCENARIO_TAGS = [
   'meteors-single',
   'flappy',
   'flappy-single',
+  'tapper',
   'empty',
 ] as const;
 
@@ -276,6 +278,26 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- It is wired **after** the bird is placed. Before it, `any ⟨Bird⟩` is ' +
       'an empty list and the view never moves — and nothing says so\n' +
       '- Compare it with **Flappy** to see what moving a thing into a file buys',
+  },
+  tapper: {
+    name: 'Tapper',
+    description:
+      'Click the coins. The mouse is the only input that can say WHERE as ' +
+      'well as when, and this is the smallest game that needs the difference.',
+    source: TAPPER_PROJECT.source,
+    instructions:
+      '## Tapper\n\nClick the coins to take them.\n\n' +
+      '- Click the preview first, then click a coin — a mark is added at the ' +
+      'pointer, and what it lands on it collects\n' +
+      '- `when ⟨left⟩ is pressed` is the WORLD\u2019s event: a click happened ' +
+      'to nobody, so the handler decides who it was about\n' +
+      '- `mouse position` is where the pointer is IN THE WORLD, which is a ' +
+      'different number from where it is on the screen as soon as the camera moves\n' +
+      '- The scoreboard elects `Takes Mouse Input`, so it hears the clicks too ' +
+      'and prints which button it was — try the right one\n' +
+      '- There is no \u201cwas this actor clicked\u201d block, and this game ' +
+      'shows there does not have to be: a mark that collects is one made of ' +
+      'the rules already here',
   },
   empty: {
     name: 'Empty',

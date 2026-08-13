@@ -201,6 +201,35 @@ describe('the scenario catalogue', () => {
     }
   });
 
+  it('gives tapper the mouse, and the rules a click is made of', () => {
+    // The one scenario played with the pointer, and the only demonstration
+    // there is that the driver's half of the mouse works: a click has to reach
+    // the engine, become an event, and land a mark where the pointer was.
+    const files = Object.values(WORLD_SCENARIOS.tapper.source.files);
+    const named = (name: string) => files.some(file => file.name === name);
+    const main = files.find(file => file.name === 'main.world')!.contents;
+
+    // `mouse.rule` above all: holding it is what puts it in play, so a scenario
+    // about the mouse that forgot the file would be a scenario about nothing.
+    for (const rule of [
+      'mouse.rule',
+      'motion.rule',
+      'collisions.rule',
+      'collect.rule',
+      'expires.rule',
+    ]) {
+      expect(named(rule)).toBe(true);
+    }
+    // Both halves of the rule are shown, which is the point of the scenario:
+    // the WORLD's event (a click happened to nobody) and the ACTOR's (an actor
+    // that elected `Takes Mouse Input` and hears the ones it asked for).
+    expect(main).toContain('world_on_Mouse_IsPressedEvent');
+    expect(main).toContain('world_on_Mouse_PressesMouseButtonEvent');
+    expect(main).toContain('Mouse#TakesMouseInputTrait');
+    // …and the thing no keyboard can say: WHERE.
+    expect(main).toContain('world_mouse_position');
+  });
+
   it('bounces off the surfaces, not off the ball', () => {
     // The one that cost a debugging round: `bounciness` is read off the SOLID
     // body in a contact, not off the thing that hit it (rules/solid). A ball
