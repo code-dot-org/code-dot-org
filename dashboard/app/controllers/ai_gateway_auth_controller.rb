@@ -1,3 +1,4 @@
+require 'cdo/user_log_token'
 require 'jwt'
 require 'securerandom' unless defined?(SecureRandom)
 
@@ -21,7 +22,17 @@ class AiGatewayAuthController < ApplicationController
 
     token_id = SecureRandom.uuid
     hostname = CDO.dashboard_hostname
-    user_id = current_user.id
+    # Send the log token, not the raw id. The gateway keys its rate limiter and
+    # its upstream cost-attribution metadata on this, logs it on rate-limit
+    # rejections, and attaches it to its own Sentry events -- none of which
+    # needs a raw id.
+    #
+    # This is the same value the dashboard sends to Sentry, so one lookup finds
+    # a user across the whole observability stack. See Cdo::UserLogToken for why
+    # these share a destination.
+    user_log_token = Cdo::UserLogToken.derive(
+      current_user.id, destination: Cdo::UserLogToken::OBSERVABILITY
+    )
 
     # Set a little in the past to account for time drift
     issued_at_time = (Time.now - 5.seconds).to_i
@@ -34,7 +45,7 @@ class AiGatewayAuthController < ApplicationController
         expiration_time: expiration_time,
         token_id: token_id,
         hostname: hostname,
-        user_id: user_id,
+        user_log_token: user_log_token,
         aichat_client_type: aichat_context[:clientType],
         level_id: aichat_context[:currentLevelId],
         script_id: aichat_context[:scriptId],
