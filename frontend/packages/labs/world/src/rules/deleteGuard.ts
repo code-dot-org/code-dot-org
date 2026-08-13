@@ -19,8 +19,6 @@
 
 import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
-import {translate} from '../effect/localization';
-
 import {heldRules, rulesRequiring} from './removeRule';
 
 /**
@@ -42,10 +40,12 @@ export function whyKeepFile(
   // a sentence whose verb has to agree with it reads wrong half the time. It is
   // also word for word what the panel puts in the row, so the two routes give
   // one answer rather than two phrasings of it.
+  //
+  // Not translated here: it is handed to a dialog, so it becomes DOM text where
+  // LocalizeJS finds it. The rule names inside it cannot be masked the way the
+  // panel masks them (this is a string, not markup), which is the price of the
+  // file browser's alert taking a message rather than a node.
   return needed.length
-    ? translate(
-        'Required by {names}. Remove those first, or use the rules panel on the world block.',
-        {names: needed.join(', ')},
-      )
+    ? `Required by ${needed.join(', ')}. Remove those first, or use the rules panel on the world block.`
     : undefined;
 }

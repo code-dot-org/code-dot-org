@@ -27,6 +27,19 @@
 //     naming a rule the project has not got, which fails at COMPILE time with
 //     nothing on screen to connect it to this moment. Delete the dependent
 //     first and this one frees itself.
+//
+// NOTHING HERE IS TRANSLATED BY HAND. The words are written into the DOM as
+// they are, and LocalizeJS translates them where it finds them — which is what
+// it is for, and which keeps the English in the file readable as English. The
+// effect editor's `translate` is not the pattern to copy: it exists because
+// that editor sits inside a `data-notranslate` container (its React Flow canvas
+// would be mangled), so it has to do for itself what the page does for
+// everybody else.
+//
+// What IS marked is the dynamic half — a file name, a rule's name, a list of
+// them. Those are the learner's words and the project's, not phrases anybody
+// should be translating, so they wear `data-notranslate` where they interpolate
+// into a sentence that is.
 
 import {Button, Typography} from '@mui/material';
 import {useState} from 'react';
@@ -35,7 +48,6 @@ import {Dialog} from '@code-dot-org/component-library/dialog';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {BASE_RULES} from '../blockly/foundation';
-import {translate} from '../effect/localization';
 
 import {
   filesUsing,
@@ -82,19 +94,17 @@ export const RulesInPlayDialog = ({
       // announces something that needs answering now. The prop spread lands
       // after it, so this is the role that reaches the DOM.
       role="dialog"
-      title={translate('Rules in play')}
-      description={translate(
-        'Every rule in your project runs in every world. Add one to give your world a new mechanic; remove one to take it out.',
-      )}
+      title="Rules in play"
+      description="Every rule in your project runs in every world. Add one to give your world a new mechanic; remove one to take it out."
       onClose={onClose}
-      closeLabel={translate('Close')}
+      closeLabel="Close"
       primaryButtonProps={{
-        children: translate('Add a rule…'),
+        children: 'Add a rule…',
         disabled: !editable,
         onClick: onAdd,
       }}
       secondaryButtonProps={{
-        children: translate('Done'),
+        children: 'Done',
         onClick: onClose,
       }}
       customContent={
@@ -109,7 +119,7 @@ export const RulesInPlayDialog = ({
                   {rule.ability}
                 </Typography>
                 <Typography component="span" variant="body4">
-                  {translate('Built in — every world has it.')}
+                  Built in — every world has it.
                 </Typography>
               </span>
             </li>
@@ -121,9 +131,8 @@ export const RulesInPlayDialog = ({
                 variant="body2"
                 color="textSecondary"
               >
-                {translate(
-                  'Your project has no rules of its own yet, so nothing moves, falls or collides. Add one to get started.',
-                )}
+                Your project has no rules of its own yet, so nothing moves,
+                falls or collides. Add one to get started.
               </Typography>
             </li>
           )}
@@ -148,15 +157,16 @@ export const RulesInPlayDialog = ({
                     {rule.ability ?? rule.name}
                   </Typography>
                   <Typography component="span" variant="body4">
-                    {rule.fileName}
+                    {/* A file name is the learner's, not a phrase: masked so
+                        the DOM engine leaves it alone (see the module note). */}
+                    <span data-notranslate>{rule.fileName}</span>
                   </Typography>
                   {rule.provides.length > 0 && (
                     // The traits, named — a rule reaches actors through them,
                     // so this is what would stop being electable.
                     <Typography component="span" variant="body4">
-                      {translate('Gives actors: {names}', {
-                        names: rule.provides.join(', '),
-                      })}
+                      Gives actors:{' '}
+                      <span data-notranslate>{rule.provides.join(', ')}</span>
                     </Typography>
                   )}
                   {needed.length > 0 && (
@@ -169,9 +179,8 @@ export const RulesInPlayDialog = ({
                       variant="body4"
                       color="textSecondary"
                     >
-                      {translate('Required by {names}.', {
-                        names: needed.join(', '),
-                      })}
+                      Required by{' '}
+                      <span data-notranslate>{needed.join(', ')}</span>.
                     </Typography>
                   )}
                   {confirming === rule.path && used.length > 0 && (
@@ -191,10 +200,9 @@ export const RulesInPlayDialog = ({
                           file or five, and a sentence whose verb has to agree
                           with it is a sentence that will read wrong half the
                           time. */}
-                      {translate(
-                        'Used by {names}. Deleting it stops the project running until you edit those too.',
-                        {names: used.join(', ')},
-                      )}
+                      Used by <span data-notranslate>{used.join(', ')}</span>.
+                      Deleting it stops the project running until you edit those
+                      too.
                     </Typography>
                   )}
                 </span>
@@ -210,7 +218,7 @@ export const RulesInPlayDialog = ({
                           onRemove(rule);
                         }}
                       >
-                        {translate('Delete')}
+                        Delete
                       </Button>
                       <Button
                         variant="outlined"
@@ -218,7 +226,7 @@ export const RulesInPlayDialog = ({
                         size="small"
                         onClick={() => setConfirming(null)}
                       >
-                        {translate('Cancel')}
+                        Cancel
                       </Button>
                     </span>
                   ) : (
@@ -230,7 +238,7 @@ export const RulesInPlayDialog = ({
                         disabled={needed.length > 0}
                         onClick={() => setConfirming(rule.path)}
                       >
-                        {translate('Remove')}
+                        Remove
                       </Button>
                     </span>
                   ))}

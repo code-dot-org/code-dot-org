@@ -23,7 +23,6 @@ import * as Blockly from 'blockly/core';
 
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
-import {translate} from '../../effect/localization';
 import {
   missingRuleOfBlockType,
   refFromValue,
@@ -59,10 +58,7 @@ function syncWarning(block: Block): void {
   // warning `traitContext` puts on the same block for a different reason.
   block.setWarningText?.(
     missing
-      ? translate(
-          'Your project does not have “{rule}” any more, so this block does nothing. Add the rule back, or delete this block.',
-          {rule: missing},
-        )
+      ? `Your project does not have “${missing}” any more, so this block does nothing. Add the rule back, or delete this block.`
       : null,
     MISSING_RULE_EXTENSION,
   );
