@@ -12,7 +12,6 @@ import {Dialog} from '@code-dot-org/component-library/dialog';
 import {CellThumb} from '../animationEditor/CellThumb';
 import cellStyles from '../animationEditor/cellThumb.module.css';
 import type {CellRect} from '../animationEditor/sheetFrames';
-import {translate} from '../effect/localization';
 
 import styles from './pickCellDialog.module.css';
 
@@ -45,25 +44,23 @@ export const PickCellDialog = ({
 }: PickCellDialogProps) => (
   <Dialog
     role="dialog"
-    title={translate('Choose a cell')}
+    title="Choose a cell"
     description={
       description ??
-      translate(
-        'Only this cell is shown while you draw it. The rest of the sheet is untouched.',
-      )
+      'Only this cell is shown while you draw it. The rest of the sheet is untouched.'
     }
     onClose={onCancel}
-    closeLabel={translate('Close')}
+    closeLabel="Close"
     // A click on a cell is the choice — there is one thing being decided and it
     // is undone from the header — so the only footer button is the way out.
     primaryButtonProps={{
-      children: translate('Cancel'),
+      children: 'Cancel',
       onClick: onCancel,
     }}
     customContent={
       cells.length === 0 ? (
         <Typography variant="body2">
-          {translate('This sheet has no cells to choose.')}
+          This sheet has no cells to choose.
         </Typography>
       ) : (
         <ul className={styles.grid}>
@@ -81,7 +78,7 @@ export const PickCellDialog = ({
                       ? `${cellStyles.cellButton} ${cellStyles.cellChosen}`
                       : cellStyles.cellButton
                   }
-                  aria-label={translate('Cell {n}', {n: String(index + 1)})}
+                  aria-label={`Cell ${index + 1}`}
                   aria-current={chosen}
                   onClick={() => onPick(cell)}
                 >

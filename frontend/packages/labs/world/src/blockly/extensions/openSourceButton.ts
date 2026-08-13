@@ -17,7 +17,6 @@ import * as Blockly from 'blockly/core';
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 
-import {translate} from '../../effect/localization';
 import {canOpenModule, openModule} from '../openModule';
 import {refFromValue, refModule, ruleLocation} from '../ruleRegistry';
 
@@ -112,7 +111,7 @@ function syncButton(block: Block): void {
       FIELD_NAME,
     );
     const field = block.getField(FIELD_NAME);
-    field?.setTooltip(translate('Open the file this comes from'));
+    field?.setTooltip('Open the file this comes from');
     // NOT saved. `FieldButton` sets `SERIALIZABLE = true`, so the eye was
     // written into every file that had one — and read back into blocks that do
     // not, since the button is added and removed by context rather than being

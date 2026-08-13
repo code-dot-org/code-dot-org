@@ -20,8 +20,6 @@ import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
-import {translate} from '../effect/localization';
-
 import styles from './backgroundLibraryDialog.module.css';
 import {stockBackgrounds, type StockBackground} from './stock';
 
@@ -51,28 +49,24 @@ export const BackgroundLibraryDialog = ({
   return (
     <Dialog
       role="dialog"
-      title={translate('Choose a background')}
-      description={translate(
-        'A background is drawn behind everything, stretched to fill the view.',
-      )}
+      title="Choose a background"
+      description="A background is drawn behind everything, stretched to fill the view."
       onClose={onCancel}
-      closeLabel={translate('Close')}
+      closeLabel="Close"
       primaryButtonProps={{
-        children: busy
-          ? translate('Adding…')
-          : translate('Use this background'),
+        children: busy ? 'Adding…' : 'Use this background',
         disabled: !picked || busy,
         onClick: () => picked && onImport(picked),
       }}
       secondaryButtonProps={{
-        children: translate('Cancel'),
+        children: 'Cancel',
         onClick: onCancel,
       }}
       customContent={
         <div className={styles.body}>
           {backgrounds.length === 0 ? (
             <Typography variant="body2">
-              {translate('There are no backgrounds to choose from.')}
+              There are no backgrounds to choose from.
             </Typography>
           ) : (
             <ul className={styles.shelf}>

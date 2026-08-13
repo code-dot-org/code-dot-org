@@ -1,5 +1,11 @@
 // The stock-rule picker, opened by the `(import…)` row on a `use rule` dropdown.
 //
+// NOTHING IS MASKED HERE, where the rules panel masks half its rows: every word
+// on this dialog is the STOCK library's, which is product copy written in this
+// repository, and product copy is exactly what the page's translation is for.
+// The panel is about the learner's own project — their file names, their rules
+// — and those are theirs, so it fences them off (`data-notranslate`).
+//
 // The same shape as the effect picker, and what a learner needs to choose is
 // the same: a name, a sentence on what the rule does, and — the part specific
 // to rules — which traits it gives an actor. A rule's traits are how it reaches
@@ -10,8 +16,6 @@ import {Button, Typography} from '@mui/material';
 import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
-
-import {translate} from '../effect/localization';
 
 import styles from './importRuleDialog.module.css';
 import {stockRequirements} from './importStockRule';
@@ -39,19 +43,17 @@ export const ImportRuleDialog = ({
       // announces something that needs answering now. The prop spread lands
       // after it, so this is the role that reaches the DOM.
       role="dialog"
-      title={translate('Add a rule')}
-      description={translate(
-        'Pick one to copy into your project. You can open it afterwards and change anything you like.',
-      )}
+      title="Add a rule"
+      description="Pick one to copy into your project. You can open it afterwards and change anything you like."
       onClose={onCancel}
-      closeLabel={translate('Close')}
+      closeLabel="Close"
       primaryButtonProps={{
-        children: translate('Import'),
+        children: 'Import',
         disabled: chosen === null,
         onClick: () => chosen && onImport(chosen),
       }}
       secondaryButtonProps={{
-        children: translate('Cancel'),
+        children: 'Cancel',
         onClick: onCancel,
       }}
       customContent={
@@ -86,20 +88,17 @@ export const ImportRuleDialog = ({
                   // they come with it, so the dialog says so rather than leaving
                   // a learner to wonder where the extra files came from.
                   <Typography component="span" variant="body4" color="inherit">
-                    {translate('Also adds: {names}', {
-                      names: stockRequirements(rule)
-                        .map(dep => dep.ability)
-                        .join(', '),
-                    })}
+                    Also adds:{' '}
+                    {stockRequirements(rule)
+                      .map(dep => dep.ability)
+                      .join(', ')}
                   </Typography>
                 )}
                 {rule.provides.length > 0 && (
                   // The traits, named. A rule reaches actors through its traits,
                   // so this is what a learner will actually put on something.
                   <Typography component="span" variant="body4" color="inherit">
-                    {translate('Gives actors: {names}', {
-                      names: rule.provides.join(', '),
-                    })}
+                    Gives actors: {rule.provides.join(', ')}
                   </Typography>
                 )}
               </Button>

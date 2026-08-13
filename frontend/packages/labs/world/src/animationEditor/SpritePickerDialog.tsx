@@ -22,7 +22,6 @@ import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import type {SheetFile} from '../appearance/sheetFile';
-import {translate} from '../effect/localization';
 
 import {CellThumb} from './CellThumb';
 import {sheetCells, type CellRect} from './sheetFrames';
@@ -95,10 +94,10 @@ export const SpritePickerDialog = ({
       cells.forEach((rect, index) => {
         out.push({
           key: `${sprite}#${index}`,
-          label: translate('{sprite}, cell {n}', {
-            sprite,
-            n: String(index + 1),
-          }),
+          // An `aria-label`/`title`, so it is a string rather than markup:
+          // the sprite's file name cannot be fenced off the way it would be in
+          // a sentence made of nodes.
+          label: `${sprite}, cell ${index + 1}`,
           sprite,
           cell: index,
           rect,
@@ -132,24 +131,24 @@ export const SpritePickerDialog = ({
   return (
     <Dialog
       role="dialog"
-      title={translate('Choose a picture')}
-      description={translate('Everything we can draw!')}
+      title="Choose a picture"
+      description="Everything we can draw!"
       onClose={onCancel}
-      closeLabel={translate('Close')}
+      closeLabel="Close"
       primaryButtonProps={{
-        children: translate('Use this picture'),
+        children: 'Use this picture',
         disabled: !picked,
         onClick: () => picked && onPick(chose(picked)),
       }}
       secondaryButtonProps={{
-        children: translate('Cancel'),
+        children: 'Cancel',
         onClick: onCancel,
       }}
       customContent={
         <div className={styles.body}>
           {tiles.length === 0 ? (
             <Typography variant="body2">
-              {translate('This project has no pictures yet.')}
+              This project has no pictures yet.
             </Typography>
           ) : (
             <ul className={styles.palette}>
@@ -186,7 +185,7 @@ export const SpritePickerDialog = ({
             startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
             onClick={onImport}
           >
-            {translate('Import a picture')}
+            Import a picture
           </Button>
         </div>
       }

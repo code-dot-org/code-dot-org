@@ -16,7 +16,6 @@ import {useEffect, useMemo, useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
 import type {SheetFile} from '../appearance/sheetFile';
-import {translate} from '../effect/localization';
 
 import styles from './addFramesDialog.module.css';
 import {CellThumb} from './CellThumb';
@@ -78,17 +77,13 @@ export const AddFramesDialog = ({
   return (
     <Dialog
       role="dialog"
-      title={translate('Add frames from a spritesheet')}
-      description={translate(
-        'Each cell becomes a frame, in the order they are read: left to right, top to bottom.',
-      )}
+      title="Add frames from a spritesheet"
+      description="Each cell becomes a frame, in the order they are read: left to right, top to bottom."
       onClose={onCancel}
-      closeLabel={translate('Close')}
+      closeLabel="Close"
       primaryButtonProps={{
         children:
-          order.length === 1
-            ? translate('Add 1 frame')
-            : translate('Add {count} frames', {count: String(order.length)}),
+          order.length === 1 ? 'Add 1 frame' : `Add ${order.length} frames`,
         disabled: order.length === 0,
         onClick: () =>
           onAdd(
@@ -97,15 +92,14 @@ export const AddFramesDialog = ({
           ),
       }}
       secondaryButtonProps={{
-        children: translate('Cancel'),
+        children: 'Cancel',
         onClick: onCancel,
       }}
       customContent={
         names.length === 0 ? (
           <Typography variant="body2">
-            {translate(
-              'No spritesheets yet. A picture becomes one when it has a .sheet file beside it.',
-            )}
+            No spritesheets yet. A picture becomes one when it has a .sheet file
+            beside it.
           </Typography>
         ) : (
           <div className={styles.body}>
@@ -147,14 +141,14 @@ export const AddFramesDialog = ({
                   setChosen(new Set(cells.map((_cell, index) => index)))
                 }
               >
-                {translate('Select all')}
+                Select all
               </Button>
               <Button
                 variant="text"
                 size="extraSmall"
                 onClick={() => setChosen(new Set())}
               >
-                {translate('Clear')}
+                Clear
               </Button>
             </div>
 
@@ -178,13 +172,8 @@ export const AddFramesDialog = ({
                       aria-pressed={place >= 0}
                       aria-label={
                         place >= 0
-                          ? translate('Cell {n}, frame {place}', {
-                              n: String(index + 1),
-                              place: String(place + 1),
-                            })
-                          : translate('Cell {n}, not used', {
-                              n: String(index + 1),
-                            })
+                          ? `Cell ${index + 1}, frame ${place + 1}`
+                          : `Cell ${index + 1}, not used`
                       }
                       onClick={() => toggle(index)}
                     >

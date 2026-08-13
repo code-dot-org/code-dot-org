@@ -10,8 +10,6 @@ import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
-import {translate} from '../effect/localization';
-
 import type {AppearanceKind} from './appearanceImport';
 import styles from './importAppearanceDialog.module.css';
 import {sheetFileName} from './sheetFile';
@@ -80,29 +78,21 @@ export const ImportAppearanceDialog = ({
     <Dialog
       // A picker, not an alert.
       role="dialog"
-      title={
-        kind === 'sprite'
-          ? translate('Add a picture')
-          : translate('Add an animation')
-      }
+      title={kind === 'sprite' ? 'Add a picture' : 'Add an animation'}
       description={
         kind === 'sprite'
-          ? translate(
-              'Pick one to copy into your project. It becomes a file you can draw over.',
-            )
-          : translate(
-              'Pick one to copy into your project, with the picture it is made of.',
-            )
+          ? 'Pick one to copy into your project. It becomes a file you can draw over.'
+          : 'Pick one to copy into your project, with the picture it is made of.'
       }
       onClose={onCancel}
-      closeLabel={translate('Close')}
+      closeLabel="Close"
       primaryButtonProps={{
-        children: translate('Import'),
+        children: 'Import',
         disabled: chosen === null,
         onClick: () => chosen && onImport(chosen),
       }}
       secondaryButtonProps={{
-        children: translate('Cancel'),
+        children: 'Cancel',
         onClick: onCancel,
       }}
       customContent={
@@ -133,9 +123,10 @@ export const ImportAppearanceDialog = ({
                     {item.description}
                   </Typography>
                   <Typography component="span" variant="body4" color="inherit">
-                    {translate('Adds: {names}', {
-                      names: addedFiles(item).join(', '),
-                    })}
+                    {/* The FILE NAMES this import writes — the project's, not
+                        a phrase, so the page's translation leaves them be. */}
+                    Adds:{' '}
+                    <span data-notranslate>{addedFiles(item).join(', ')}</span>
                   </Typography>
                 </span>
               </Button>

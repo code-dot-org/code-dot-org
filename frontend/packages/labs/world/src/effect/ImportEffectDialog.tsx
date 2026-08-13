@@ -37,7 +37,6 @@ import {
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
 import styles from './importEffectDialog.module.css';
-import {translate} from './localization';
 import {PreviewCanvas} from './preview/PreviewCanvas';
 import {STOCK_EFFECTS, type StockEffect} from './stock';
 import {useEffectPreviews} from './useEffectPreviews';
@@ -169,19 +168,17 @@ export const ImportEffectDialog = ({
       // announces something that needs answering now. The prop spread lands
       // after it, so this is the role that reaches the DOM.
       role="dialog"
-      title={translate('Add an effect')}
-      description={translate(
-        'Pick one to copy into your project. You can open it afterwards and change anything you like.',
-      )}
+      title="Add an effect"
+      description="Pick one to copy into your project. You can open it afterwards and change anything you like."
       onClose={onCancel}
-      closeLabel={translate('Close')}
+      closeLabel="Close"
       primaryButtonProps={{
-        children: translate('Import'),
+        children: 'Import',
         disabled: chosen === null,
         onClick: () => chosen && onImport(chosen),
       }}
       secondaryButtonProps={{
-        children: translate('Cancel'),
+        children: 'Cancel',
         onClick: onCancel,
       }}
       customContent={
@@ -252,11 +249,10 @@ export const ImportEffectDialog = ({
                       variant="body4"
                       color="inherit"
                     >
-                      {translate('Knobs: {names}', {
-                        names: effect.document.parameters
-                          .map(parameter => parameter.name)
-                          .join(', '),
-                      })}
+                      Knobs:{' '}
+                      {effect.document.parameters
+                        .map(parameter => parameter.name)
+                        .join(', ')}
                     </Typography>
                   )}
                 </span>
