@@ -1,6 +1,6 @@
 from .support import actions
 from .support.actions import UNSPECIFIED
-from .support.color import Color
+from .support.color import Color, as_color
 from .support.constants import MIN_PAUSE_SECONDS, THEATER_HEIGHT, THEATER_WIDTH
 from .support.font import Font, FontStyle
 from .support.image import Image
@@ -9,11 +9,6 @@ _DEFAULT_FONT = Font.SANS
 _DEFAULT_FONT_STYLE = FontStyle.NORMAL
 _DEFAULT_TEXT_HEIGHT = 20
 _DEFAULT_STROKE_WIDTH = 1.0
-
-
-def _as_color(color):
-  """Accept a Color or a color name/hex string and return a Color."""
-  return color if isinstance(color, Color) else Color(color)
 
 
 class Scene:
@@ -43,7 +38,7 @@ class Scene:
     return THEATER_HEIGHT
 
   def clear(self, color):
-    self._actions.append(actions.ClearScene(_as_color(color)))
+    self._actions.append(actions.ClearScene(as_color(color)))
 
   def pause(self, seconds):
     self._actions.append(actions.Pause(max(seconds, MIN_PAUSE_SECONDS)))
@@ -74,7 +69,7 @@ class Scene:
     self._text_height = height
 
   def set_text_color(self, color):
-    self._text_color = _as_color(color)
+    self._text_color = as_color(color)
 
   def draw_text(self, text, x, y, rotation=0.0):
     self._actions.append(
@@ -121,10 +116,10 @@ class Scene:
     self._stroke_width = width
 
   def set_fill_color(self, color):
-    self._fill_color = _as_color(color)
+    self._fill_color = as_color(color)
 
   def set_stroke_color(self, color):
-    self._stroke_color = _as_color(color)
+    self._stroke_color = as_color(color)
 
   def remove_stroke_color(self):
     self._stroke_color = None

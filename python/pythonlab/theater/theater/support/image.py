@@ -1,6 +1,6 @@
 from PIL import Image as PILImage
 
-from .color import Color
+from .color import Color, as_color
 
 # Loaded images larger than this are scaled down, preserving aspect ratio.
 MAX_WIDTH = 400
@@ -51,13 +51,13 @@ class Image:
     # putpixel rejects floats outright, and getpixel would truncate rather
     # than round, so both ends agree on the pixel only if we round here.
     x, y = int(round(x)), int(round(y))
-    r, g, b = color.to_rgb_tuple()
+    r, g, b = as_color(color).to_rgb_tuple()
     existing = self._pil.getpixel((x, y))
     alpha = existing[3] if len(existing) == 4 else 255
     self._pil.putpixel((x, y), (r, g, b, alpha))
 
   def clear(self, color):
-    r, g, b = color.to_rgb_tuple()
+    r, g, b = as_color(color).to_rgb_tuple()
     self._pil.paste((r, g, b, 255), (0, 0, self._pil.width, self._pil.height))
 
   def to_pil(self):

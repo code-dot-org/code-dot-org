@@ -59,6 +59,11 @@ class Color:
     return f"Color({self.red}, {self.green}, {self.blue})"
 
 
+def as_color(color):
+  """Accept a Color or a color name/hex string and return a Color."""
+  return color if isinstance(color, Color) else Color(color)
+
+
 def _from_string(color):
   key = color.upper()
   if key in _NAMED_COLORS:
