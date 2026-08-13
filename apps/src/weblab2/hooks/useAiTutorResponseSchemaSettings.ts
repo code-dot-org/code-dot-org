@@ -79,16 +79,6 @@ export const useAiTutorResponseSchemaSettings = (
       sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {
         answerType: formatted.answerType,
       });
-      dispatch(setViewingAiTutorVersion(true));
-      // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
-      // Workspace will be read-only until user clicks "accept" or "reject".
-
-      // If user clicks "reject", go back to projectSourceBeforeAiTutorVersion.
-      // If user clicks "accept":
-      // - force save a version for projectSourceBeforeAiTutorVersion (if there were any updates since the last saved version).
-      // - force save an AI version for AI tutor version with commit message 'AI***SAVE' + required user description.
-      // - workspace is now editable.
-      // - sources are updated with the newer updated AI files, but AI flags removed.
       const aiTutorVersionFiles: ProjectFile[] = [];
       const mergedSourceVersion = getMergedAiTutorCodeWithSource(
         formatted.code,
@@ -99,6 +89,17 @@ export const useAiTutorResponseSchemaSettings = (
       if (aiTutorVersionFiles.length === 0) {
         return;
       }
+
+      // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
+      // Workspace will be read-only until user clicks "accept" or "reject".
+
+      // If user clicks "reject", go back to projectSourceBeforeAiTutorVersion.
+      // If user clicks "accept":
+      // - force save a version for projectSourceBeforeAiTutorVersion (if there were any updates since the last saved version).
+      // - force save an AI version for AI tutor version with commit message 'AI***SAVE' + required user description.
+      // - workspace is now editable.
+      // - sources are updated with the newer updated AI files, but AI flags removed.
+      dispatch(setViewingAiTutorVersion(true));
       dispatch(setAiTutorVersionFiles(aiTutorVersionFiles));
       dispatch(setProjectSourceBeforeAiTutorVersion(source));
       dispatch(setSource(mergedSourceVersion));

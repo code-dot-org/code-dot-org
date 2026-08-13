@@ -6,6 +6,7 @@
 # 2. **@code-dot-org/fonts**: Fonts
 # 3. **@code-dot-org/core**: Core utilities and components
 # 4. **@code-dot-org/ailab**: AI Lab (Engine)
+# 5. **@code-dot-org/lesson-deep-dive**: AI Tutor+ post-lesson review views
 
 set -x
 
@@ -14,6 +15,7 @@ APPS_DEPENDENCIES=(
   --filter @code-dot-org/fonts
   --filter @code-dot-org/core
   --filter @code-dot-org/ailab
+  --filter @code-dot-org/lesson-deep-dive
 )
 
 cd ../frontend || exit 1

@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q3-2026'
+
+right 'The algorithm has steps that are placed in the wrong order'
+wrong 'The algorithm is written in pseudocode instead of actual code'
+wrong 'The algorithm produces different answers for different inputs'
+wrong 'The algorithm requires many steps to solve a problem'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following might be a reason why an algorithm is incorrect?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Algorithms
+MARKDOWN

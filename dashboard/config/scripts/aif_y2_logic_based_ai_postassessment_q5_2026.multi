@@ -1,0 +1,20 @@
+name 'aif-y2-logic-based-ai-postassessment-q5-2026'
+
+wrong 'Welcome to {city}!'
+wrong 'Welcome to {London}!'
+right 'Welcome to London!'
+wrong 'Welcome to "London"!'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What will the following program print?
+```
+city = "London"
+print("Welcome to {city}!")
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Hello, AI
+MARKDOWN

@@ -1,6 +1,6 @@
 [project]
 name = 'pythonlab_setup'
-version = '0.2.0'
+version = '0.3.0'
 requires-python = '>=3.12'
 dependencies = [
   'matplotlib >=3',

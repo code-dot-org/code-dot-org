@@ -421,11 +421,19 @@ namespace :seed do
 
   # Seeds the data in callouts
   timed_task_with_logging callouts: :environment do
-    Callout.transaction do
-      Callout.reset_db
-      # preferably the id of the callout is not important ;)
-      Callout.find_or_create_all_from_tsv!('config/callouts.tsv')
-    end
+    Callout.seed_all
+  end
+
+  # Callout seeding replaces the whole table and skips rows whose script level
+  # is missing, and config/callouts.tsv has rows naming ui-test-only units. So
+  # the UI test seed needs its own callout pass, after those units exist.
+  #
+  # It is a separate task name rather than reusing :callouts because rake runs a
+  # task once per process, at the first position it appears in: when development
+  # seeds both lists, reusing :callouts here would deduplicate to its earlier
+  # FULL_SEED_TASKS position, ahead of the units.
+  timed_task_with_logging callouts_ui_tests: :environment do
+    Callout.seed_all
   end
 
   timed_task_with_logging course_offerings: :environment do
@@ -592,10 +600,21 @@ namespace :seed do
   end
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
-  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
+  # Development seeds the UI test tree on top of production content, so that a
+  # development machine can run UI tests without a separate manual seed. Rake
+  # runs each task once per process, so the two lists' shared tasks are seeded
+  # once and only the UI test tasks are added; see callouts_ui_tests for the one
+  # task that has to run in both lists.
+  DEFAULT_SEED_TASKS =
+    case rack_env
+    when :test then UI_TEST_SEED_TASKS
+    when :adhoc then ADHOC_SEED_TASKS
+    when :development then FULL_SEED_TASKS + UI_TEST_SEED_TASKS
+    else FULL_SEED_TASKS
+    end
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
