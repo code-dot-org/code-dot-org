@@ -28,27 +28,44 @@
     "fixed_scene_id": "story-scene",
     "fixed_scene_name": "Story",
     "guide_mode": "instructions",
-    "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview."
+    "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_makeNewSpriteAnon",
+          "inputs": {
+            "LOCATION": {
+              "block": {
+                "type": "gamelab_location_picker",
+                "fields": {
+                  "LOCATION": "{\"x\":200,\"y\":200}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Hello!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        }
+      ]
+    }
   }
 }]]></config>
-  <blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="gamelab_setBackgroundImageAs"/>
-        <block type="gamelab_makeNewSpriteAnon">
-          <value name="LOCATION">
-            <block type="gamelab_location_picker">
-              <field name="LOCATION">{"x":200,"y":200}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_spriteSay">
-          <field name="SPEECH">Hello!</field>
-          <value name="SPRITE">
-            <shadow type="gamelab_allSpritesWithAnimation"/>
-          </value>
-        </block>
-      </xml>
-    </toolbox_blocks>
-  </blocks>
 </GamelabJr>

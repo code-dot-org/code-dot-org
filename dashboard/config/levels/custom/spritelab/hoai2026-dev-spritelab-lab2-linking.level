@@ -26,19 +26,27 @@
       "Play"
     ],
     "guide_mode": "instructions",
-    "long_instructions": "# Link your scenes\nUse the new **go to scene** block to jump from one scene to another - for example, when your character is clicked."
+    "long_instructions": "# Link your scenes\nUse the new **go to scene** block to jump from one scene to another - for example, when your character is clicked.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_spriteClicked",
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_goToScene"
+        }
+      ]
+    }
   }
 }]]></config>
-  <blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="gamelab_spriteClicked">
-          <value name="SPRITE">
-            <shadow type="gamelab_allSpritesWithAnimation"/>
-          </value>
-        </block>
-        <block type="spritelab2_goToScene"/>
-      </xml>
-    </toolbox_blocks>
-  </blocks>
 </GamelabJr>

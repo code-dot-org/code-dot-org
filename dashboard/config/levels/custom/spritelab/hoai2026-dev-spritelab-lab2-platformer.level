@@ -47,15 +47,20 @@
         }
       }
     ],
-    "long_instructions": "# Build your platformer\nPlace platform blocks on the grid in the World tab and add a player. Press **Run**, then use the arrow keys to run and jump."
+    "long_instructions": "# Build your platformer\nPlace platform blocks on the grid in the World tab and add a player. Press **Run**, then use the arrow keys to run and jump.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer"
+        }
+      ]
+    }
   }
 }]]></config>
-  <blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="gamelab_setBackgroundImageAs"/>
-        <block type="spritelab2_setAsPlatformPlayer"/>
-      </xml>
-    </toolbox_blocks>
-  </blocks>
 </GamelabJr>

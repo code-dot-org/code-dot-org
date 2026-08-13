@@ -28,117 +28,408 @@
       "Play"
     ],
     "guide_mode": "instructions",
-    "long_instructions": "# Free play\nEverything is unlocked: all of your images, all of your scenes, and the full set of blocks. Finish your game!"
+    "long_instructions": "# Free play\nEverything is unlocked: all of your images, all of your scenes, and the full set of blocks. Finish your game!",
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "Platform",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makePlatformBlocks",
+              "fields": {
+                "GRID": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ]
+                ]
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeSpriteAtGrid",
+              "fields": {
+                "GRID": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                ]
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteClicked",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_checkTouching",
+              "inputs": {
+                "SPRITE1": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "SPRITE2": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_atTime",
+              "inputs": {
+                "N": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 3
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSay",
+              "fields": {
+                "SPEECH": "Hello!"
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setAsPlatformPlayer"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setPlatformGravity"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Story",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_makeNewSpriteAnon",
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":200}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setProp",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "VAL": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 100
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSay",
+              "fields": {
+                "SPEECH": "Hello!"
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSayTime",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "TEXT1": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "Hello!"
+                    }
+                  }
+                },
+                "NUM": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 4
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteClicked",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_atTime",
+              "inputs": {
+                "N": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 3
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_addBehaviorSimple",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "BEHAVIOR": {
+                  "shadow": {
+                    "type": "spritelab2_movingLeft"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_movingLeft"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_patrollingLeftRight"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Link",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_goToScene"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_goToExternalScene"
+            }
+          ]
+        }
+      ]
+    }
   }
 }]]></config>
-  <blocks>
-    <toolbox_blocks>
-      <xml>
-        <category name="Platform">
-          <block type="gamelab_setBackgroundImageAs"/>
-          <block type="spritelab2_makePlatformBlocks">
-            <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>
-          </block>
-          <block type="spritelab2_makeSpriteAtGrid">
-            <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
-          </block>
-          <block type="gamelab_spriteClicked">
-            <value name="SPRITE">
-              <shadow type="gamelab_allSpritesWithAnimation"/>
-            </value>
-          </block>
-          <block type="gamelab_checkTouching">
-            <value name="SPRITE1">
-              <shadow type="gamelab_allSpritesWithAnimation"/>
-            </value>
-            <value name="SPRITE2">
-              <shadow type="gamelab_allSpritesWithAnimation"/>
-            </value>
-          </block>
-          <block type="gamelab_atTime">
-            <value name="N">
-              <shadow type="math_number">
-                <field name="NUM">3</field>
-              </shadow>
-            </value>
-          </block>
-          <block type="gamelab_spriteSay">
-            <field name="SPEECH">Hello!</field>
-            <value name="SPRITE">
-              <shadow type="gamelab_allSpritesWithAnimation"/>
-            </value>
-          </block>
-          <block type="spritelab2_setAsPlatformPlayer"/>
-          <block type="spritelab2_setPlatformGravity"/>
-        </category>
-        <category name="Story">
-          <block type="gamelab_setBackgroundImageAs"/>
-          <block type="gamelab_makeNewSpriteAnon">
-            <value name="LOCATION">
-              <block type="gamelab_location_picker">
-                <field name="LOCATION">{"x":200,"y":200}</field>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_setProp">
-            <value name="SPRITE">
-              <shadow type="gamelab_allSpritesWithAnimation"/>
-            </value>
-            <value name="VAL">
-              <shadow type="math_number">
-                <field name="NUM">100</field>
-              </shadow>
-            </value>
-          </block>
-          <block type="gamelab_spriteSay">
-            <field name="SPEECH">Hello!</field>
-            <value name="SPRITE">
-              <shadow type="gamelab_allSpritesWithAnimation"/>
-            </value>
-          </block>
-          <block type="gamelab_spriteSayTime">
-            <value name="SPRITE">
-              <shadow type="gamelab_allSpritesWithAnimation"/>
-            </value>
-            <value name="TEXT1">
-              <shadow type="text">
-                <field name="TEXT">Hello!</field>
-              </shadow>
-            </value>
-            <value name="NUM">
-              <shadow type="math_number">
-                <field name="NUM">4</field>
-              </shadow>
-            </value>
-          </block>
-          <block type="gamelab_spriteClicked">
-            <value name="SPRITE">
-              <shadow type="gamelab_allSpritesWithAnimation"/>
-            </value>
-          </block>
-          <block type="gamelab_atTime">
-            <value name="N">
-              <shadow type="math_number">
-                <field name="NUM">3</field>
-              </shadow>
-            </value>
-          </block>
-          <block type="gamelab_addBehaviorSimple">
-            <value name="SPRITE">
-              <shadow type="gamelab_allSpritesWithAnimation"/>
-            </value>
-            <value name="BEHAVIOR">
-              <shadow type="spritelab2_movingLeft"/>
-            </value>
-          </block>
-          <block type="spritelab2_movingLeft"/>
-          <block type="spritelab2_patrollingLeftRight"/>
-        </category>
-        <category name="Link">
-          <block type="spritelab2_goToScene"/>
-          <block type="spritelab2_goToExternalScene"/>
-        </category>
-      </xml>
-    </toolbox_blocks>
-  </blocks>
 </GamelabJr>
