@@ -100,4 +100,17 @@ describe('ShareAllowedDialog', () => {
       ).not.toBeInTheDocument();
     });
   });
+
+  describe('abuse alert', () => {
+    it('does not show the abuse alert when isAbusive is false', () => {
+      renderAndOpen({isAbusive: false});
+      expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    });
+
+    it('shows the abuse alert and keeps the share panel when isAbusive is true', () => {
+      renderAndOpen({isAbusive: true});
+      expect(screen.getByRole('alert')).toBeInTheDocument();
+      expect(screen.getByText(/Copy Link to Project/i)).toBeInTheDocument();
+    });
+  });
 });
