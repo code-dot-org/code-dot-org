@@ -126,7 +126,7 @@ export const ImportAppearanceDialog = ({
                   aria-hidden="true"
                 />
                 <span className={styles.text}>
-                  <Typography component="span" variant="strong" color="inherit">
+                  <Typography component="span" variant="label2" color="inherit">
                     {item.name}
                   </Typography>
                   <Typography component="span" variant="body4" color="inherit">

@@ -1,8 +1,18 @@
 /* The rules panel's CONTENT. The dialog itself — surface, width, padding, the
    button row — is the design system's `Dialog`, so this stays out of its way
-   and shapes only the list inside it. Deliberately close to
-   `importRuleDialog.module.css`: the two are seen one after the other, and a
-   list that changed shape between them would read as a different place. */
+   and shapes only the list inside it.
+
+   Deliberately the same metrics as `importRuleDialog.module.css`: the two are
+   seen one after the other, and a list that changed shape between them would
+   read as a different place. That one's rows ARE design-system buttons, so it
+   gets its border and colours for free; these rows are not — nothing is being
+   chosen here, and a row that was a button would be a button with a button
+   inside it. So the frame is drawn here, from the same semantic colours the
+   system would have used (component-library-styles/colors.css), which is what
+   keeps it following the lab's Light/Dark setting.
+
+   Everything a learner READS is still a design-system `Typography`. Layout and
+   frame here; type and colour there. */
 
 .list {
   display: flex;
@@ -16,17 +26,24 @@
   list-style: none;
 }
 
-/* One row per rule. Not a button — nothing is being chosen here — so the row
-   draws its own frame, using the design system's border token so it still
-   reads as a sibling of the picker's rows. */
+/* One row per rule: what it is on the left, what you may do about it on the
+   right. The padding and radius are the picker's row exactly. */
 .rule {
   display: flex;
   gap: 12px;
   align-items: flex-start;
   justify-content: space-between;
   padding: 10px 12px;
-  border: 1px solid var(--brand-neutral-light, #ccc);
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
   border-radius: 4px;
+}
+
+/* The engine's own rules, which have no file and no button. Tinted rather than
+   outlined, because the row is a statement rather than a choice — and the
+   difference should be visible before reading a word of it. */
+.base {
+  border-color: transparent;
+  background-color: var(--background-neutral-secondary, #f0f2f5);
 }
 
 .what {
@@ -37,9 +54,8 @@
 }
 
 /* The confirm state replaces the row's buttons rather than opening a second
-   dialog over the first: a modal on a modal is a place with no way back that
-   is obvious, and the question here is small enough to ask in the row it is
-   about. */
+   dialog over the first: a modal on a modal is a place with no obvious way
+   back, and the question here is small enough to ask in the row it is about. */
 .decide {
   display: flex;
   flex: none;
@@ -53,9 +69,9 @@
 }
 
 /* Nothing held. The panel still opens — "which rules does this world run?" is
-   a question worth being able to ask and get "none" for — and the empty state
-   is where the answer goes. */
+   a question worth being able to ask and get "only the built-in ones" for —
+   and this is where that answer goes. */
 .empty {
-  padding: 12px;
+  padding: 12px 0;
   text-align: center;
 }

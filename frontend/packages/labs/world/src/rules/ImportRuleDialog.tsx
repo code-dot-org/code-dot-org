@@ -74,7 +74,7 @@ export const ImportRuleDialog = ({
                 {/* The ability leads: this dialog answers "what should this
                   world have?", and the rule's own name is what you will see on
                   its toolbox category once it is in. */}
-                <Typography component="span" variant="strong" color="inherit">
+                <Typography component="span" variant="label2" color="inherit">
                   {rule.ability}
                 </Typography>
                 <Typography component="span" variant="body4" color="inherit">
