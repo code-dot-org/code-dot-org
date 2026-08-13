@@ -11,6 +11,39 @@ class ContactRollupsV2
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  # A second connection pool to the database reader endpoint. The pipeline's
+  # large SELECT queries can run here instead of on the writer, which
+  # otherwise carries the entire nightly load. Routing is opt-in via the
+  # +USE_READER_DCDO_KEY+ flag. In environments where the reader and writer
+  # endpoints are the same (the config default outside production), this pool
+  # simply points at the writer.
+  DASHBOARD_DB_READER = Cdo::Sequel.database_connection_pool(
+    CDO.dashboard_db_reader,
+    CDO.dashboard_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
+
+  # DCDO flag that routes the pipeline's SELECT queries to the reader
+  # endpoint. Defaults to false: reads stay on the writer, the long-standing
+  # behavior. Can be flipped in production without a deploy.
+  USE_READER_DCDO_KEY = 'contact_rollups_use_reader'.freeze
+
+  # How long to wait for replicas to catch up before giving up and running
+  # a SELECT on the writer instead, and how often to re-check.
+  READER_CATCH_UP_TIMEOUT_SEC = 300
+  READER_CATCH_UP_POLL_INTERVAL_SEC = 5
+
+  # Aurora reports per-replica lag in this information_schema table, visible
+  # from any node in the cluster. The writer's own row is marked with
+  # session_id = 'MASTER_SESSION_ID'. Rows for stopped or replaced replicas
+  # can linger, so ignore ones that have not reported recently.
+  REPLICA_LAG_QUERY = <<~SQL.squish
+    SELECT MAX(replica_lag_in_milliseconds) AS max_lag_ms
+    FROM information_schema.replica_host_status
+    WHERE session_id != 'MASTER_SESSION_ID'
+      AND last_update_timestamp > NOW() - INTERVAL 5 MINUTE
+  SQL
+
   # Execute a SQL query in a transaction in the dashboard database.
   # Does not return query results.
   # The query uses a Sequel or ActiveRecord connection depends on the current Rails environment.
@@ -46,9 +79,53 @@ class ContactRollupsV2
     # why we have to use ActiveRecord connection in a test environment.
     if Rails.env.test?
       ActiveRecord::Base.connection.exec_query(query)
-    else
+    elsif use_reader_for_selects?
       # Sequel::Database#[] method returns a Sequel::Dataset, which fetch records only when needed.
+      DASHBOARD_DB_READER[query]
+    else
       DASHBOARD_DB_WRITER[query]
+    end
+  end
+
+  # Whether the next SELECT query should run on the reader endpoint.
+  # Requires the DCDO flag to be on AND replicas to have caught up with the
+  # writes this run has made so far. Falls back to the writer otherwise, so
+  # a lagging replica can delay the pipeline but never lose contacts.
+  def self.use_reader_for_selects?
+    return false unless DCDO.get(USE_READER_DCDO_KEY, false)
+    return true if wait_for_reader_catch_up
+
+    CDO.log.warn "ContactRollupsV2: replicas did not catch up within " \
+      "#{READER_CATCH_UP_TIMEOUT_SEC}s; running query on the writer instead."
+    false
+  end
+
+  # Waits until every replica's snapshot postdates the start of this barrier.
+  #
+  # The pipeline only ever reads tables whose writes have already finished:
+  # contact_rollups_raw is fully built before the aggregation query reads it,
+  # and writes to contact_rollups_processed and contact_rollups_pardot_memory
+  # stop before each sync SELECT starts. An Aurora replica is a consistent
+  # point-in-time snapshot of the writer, so once a replica's reported lag is
+  # smaller than the time elapsed since this barrier started, its snapshot
+  # includes every write made before the barrier — in particular, all writes
+  # to the tables the caller is about to read.
+  #
+  # @return [Boolean] true once replicas have caught up (immediately if the
+  #   cluster has none), false if they still lag after
+  #   +READER_CATCH_UP_TIMEOUT_SEC+.
+  def self.wait_for_reader_catch_up
+    barrier_start = Time.now
+    loop do
+      max_lag_ms = DASHBOARD_DB_WRITER[REPLICA_LAG_QUERY].first&.[](:max_lag_ms)
+
+      # NULL lag means no replicas are reporting: the reader endpoint is
+      # backed by the writer itself and there is nothing to wait for.
+      return true if max_lag_ms.nil?
+      return true if (max_lag_ms / 1000.0) < (Time.now - barrier_start)
+      return false if Time.now - barrier_start > READER_CATCH_UP_TIMEOUT_SEC
+
+      sleep READER_CATCH_UP_POLL_INTERVAL_SEC
     end
   end
 
@@ -60,6 +137,9 @@ class ContactRollupsV2
     #   ContactRollupsProcessed.get_data_aggregation_query
     #   https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len
     DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
+    # The aggregation query that relies on group_concat_max_len runs on the
+    # reader connection when the contact_rollups_use_reader flag is enabled.
+    DASHBOARD_DB_READER.run('SET SESSION group_concat_max_len = 65535')
   end
 
   attr_accessor :limit
