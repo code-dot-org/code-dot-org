@@ -34,4 +34,28 @@ class QuizQuestion < ApplicationRecord
   validates :question_key, presence: true
   validates :question_name, presence: true
   validates :question, presence: true
+
+  # Shared by subtypes whose `question` includes a "choices" array (currently
+  # MultipleChoiceQuestion and MultipleSelectQuestion). Returns the set of
+  # choice ids, or nil (after recording an error on `question`) if the shape
+  # is invalid.
+  protected def validate_choices(choices)
+    unless choices.is_a?(Array) && choices.length >= 2
+      errors.add(:question, 'must have at least 2 "choices"')
+      return nil
+    end
+
+    unless choices.all? {|c| c.is_a?(Hash) && c['id'].is_a?(String) && c['text'].is_a?(String)}
+      errors.add(:question, 'each choice must have a string "id" and "text"')
+      return nil
+    end
+
+    choice_ids = choices.map {|c| c['id']}
+    unless choice_ids.uniq.length == choice_ids.length
+      errors.add(:question, '"choices" ids must be unique')
+      return nil
+    end
+
+    choice_ids
+  end
 end
