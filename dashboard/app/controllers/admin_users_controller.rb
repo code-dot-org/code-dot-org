@@ -416,7 +416,6 @@ class AdminUsersController < ApplicationController
   # Deliberately checks only whether the user exists rather than loading the
   # record, so this page discloses nothing beyond its input.
   def log_token_form
-    @destinations = Cdo::UserLogToken::DESTINATIONS
     @input = params[:user_id].to_s.strip
     return if @input.blank?
 
@@ -427,7 +426,7 @@ class AdminUsersController < ApplicationController
 
     user_id = @input.to_i
     @user_exists = User.exists?(id: user_id)
-    @tokens = @destinations.index_with do |destination|
+    @tokens = Cdo::UserLogToken::DESTINATIONS.index_with do |destination|
       Cdo::UserLogToken.derive(user_id, destination: destination)
     end
     log_admin_action('log_token_lookup', user_id)
@@ -448,7 +447,6 @@ class AdminUsersController < ApplicationController
   # That is also why actor and reason are passed through rather than logged
   # locally.
   def resolve_log_token
-    @destinations = Cdo::UserLogToken::DESTINATIONS
     token = params[:token].to_s.strip
     reason = params[:reason].to_s.strip
 

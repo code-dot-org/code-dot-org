@@ -901,6 +901,15 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :log_token_form
 
+  test_user_gets_response_for(
+    :resolve_log_token,
+    method: :post,
+    user: :user,
+    params: {token: 'v1.unreadable', reason: 'authorization check'},
+    response: :forbidden
+  )
+  test_redirect_to_sign_in_for :resolve_log_token, method: :post
+
   test 'log_token_form renders without tokens when no user_id param given' do
     sign_in @admin
     get :log_token_form
@@ -951,7 +960,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'resolve_log_token identifies the user behind a token' do
     sign_in @admin
-    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::OBSERVABILITY)
+    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::SENTRY)
 
     post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
     assert_response :success
@@ -960,7 +969,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'resolve_log_token refuses without a reason' do
     sign_in @admin
-    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::OBSERVABILITY)
+    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::SENTRY)
 
     post :resolve_log_token, params: {token: token, reason: ''}
     assert_response :success
@@ -976,7 +985,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'resolve_log_token is throttled per admin' do
     sign_in @admin
-    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::OBSERVABILITY)
+    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::SENTRY)
     Cdo::Throttle.stubs(:throttle).returns(true)
 
     post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
@@ -987,12 +996,12 @@ class AdminUsersControllerTest < ActionController::TestCase
   # reaching the primitive from somewhere other than this controller.
   test 'resolve_log_token audits through the primitive with the acting admin and reason' do
     sign_in @admin
-    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::OBSERVABILITY)
+    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::SENTRY)
     Cdo::UserLogToken.expects(:resolve).with do |passed_token, options|
       passed_token == token &&
         options[:actor_id] == @admin.id &&
         options[:reason] == 'zendesk 4821'
-    end.returns({user_id: @not_admin.id, destination: Cdo::UserLogToken::OBSERVABILITY})
+    end.returns({user_id: @not_admin.id, destination: Cdo::UserLogToken::SENTRY})
 
     post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
   end
