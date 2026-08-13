@@ -2512,6 +2512,47 @@ FactoryBot.define do
     question {{stem: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
   end
 
+  factory :multiple_choice_question, class: MultipleChoiceQuestion do
+    sequence(:question_key) {SecureRandom.uuid}
+    sequence(:question_name) {|n| "Multiple choice question #{n}"}
+    question do
+      {
+        stem: 'What is 2 + 2?',
+        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}, {id: 'c', text: '5'}],
+        correct_choice_id: 'b'
+      }
+    end
+  end
+
+  factory :multiple_select_question, class: MultipleSelectQuestion do
+    sequence(:question_key) {SecureRandom.uuid}
+    sequence(:question_name) {|n| "Multiple select question #{n}"}
+    question do
+      {
+        stem: 'Select all even numbers.',
+        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}, {id: 'c', text: '3'}, {id: 'd', text: '4'}],
+        correct_choice_ids: ['b', 'd']
+      }
+    end
+  end
+
+  factory :match_question, class: MatchQuestion do
+    sequence(:question_key) {SecureRandom.uuid}
+    sequence(:question_name) {|n| "Match question #{n}"}
+    question do
+      {
+        stem: 'Match each animal to its sound.',
+        pairs: [{id: '1', prompt: 'Cat', answer: 'Meow'}, {id: '2', prompt: 'Dog', answer: 'Bark'}]
+      }
+    end
+  end
+
+  factory :free_response_question, class: FreeResponseQuestion do
+    sequence(:question_key) {SecureRandom.uuid}
+    sequence(:question_name) {|n| "Free response question #{n}"}
+    question {{stem: 'Describe your favorite algorithm.'}}
+  end
+
   factory :quiz_question_standard do
     quiz_question
     standard
