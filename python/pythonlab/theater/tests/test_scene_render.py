@@ -5,8 +5,14 @@ from PIL import Image as PILImage
 
 import theater
 from theater import Image, Scene
-from theater.support.constants import MAX_FRAMES, THEATER_HEIGHT, THEATER_WIDTH
-from theater.support.renderer import TooManyFramesError, render
+from theater.support.constants import (
+  MAX_FRAMES,
+  MAX_PAUSE_SECONDS,
+  MIN_PAUSE_SECONDS,
+  THEATER_HEIGHT,
+  THEATER_WIDTH,
+)
+from theater.support.renderer import PauseTooLongError, TooManyFramesError, render
 
 
 def test_scene_records_actions():
@@ -113,6 +119,57 @@ def test_stroke_only_shapes_keep_their_interior():
   frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
   assert frame.getpixel((50, 50)) == (255, 0, 0)
   assert frame.getpixel((100, 100)) == (0, 0, 255)
+
+
+def _single_frame_scene(build_pauses):
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+  build_pauses(scene)
+  return PILImage.open(io.BytesIO(render(scene.get_actions())))
+
+
+@pytest.mark.parametrize("seconds", [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000])
+def test_out_of_range_pause_raises_at_the_call(seconds):
+  # A gif delay is 16 bits of centiseconds, so a student who meant milliseconds
+  # would otherwise overflow that field inside Pillow.
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.pause(seconds)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+@pytest.mark.parametrize("seconds", [MIN_PAUSE_SECONDS, 1.5, MAX_PAUSE_SECONDS])
+def test_pause_accepts_the_whole_documented_range(seconds):
+  gif = _single_frame_scene(lambda scene: scene.pause(seconds))
+  assert gif.info["duration"] == int(round(seconds * 1000))
+
+
+def test_long_animation_is_not_capped_by_total_duration():
+  # Only a single frame's delay is bounded, never the animation's total, so
+  # frames that differ still encode however long they run.
+  scene = Scene()
+  for i in range(4):
+    scene.set_fill_color(theater.Color(i * 20, 0, 0))
+    scene.draw_rectangle(0, 0, 50, 50)
+    scene.pause(MAX_PAUSE_SECONDS)
+  gif = PILImage.open(io.BytesIO(render(scene.get_actions())))
+  assert gif.n_frames == 4
+  assert gif.info["duration"] == int(MAX_PAUSE_SECONDS * 1000)
+
+
+def test_pauses_accumulating_on_one_picture_raise():
+  # Pillow folds a frame identical to its predecessor into that earlier frame,
+  # summing the delays, so clamping each pause alone does not bound the field.
+  # Each pause is long enough to overflow well inside the frame ceiling, which
+  # would otherwise be the error that fires.
+  seconds_each = 2
+  pause_count = int(MAX_PAUSE_SECONDS / seconds_each) + 1
+  assert pause_count < MAX_FRAMES
+  with pytest.raises(PauseTooLongError):
+    _single_frame_scene(
+      lambda scene: [scene.pause(seconds_each) for _ in range(pause_count)]
+    )
 
 
 @pytest.mark.parametrize("sides", [0, 1, 2, -3])

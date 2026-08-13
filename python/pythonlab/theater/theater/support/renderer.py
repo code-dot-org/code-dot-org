@@ -1,17 +1,12 @@
 import io
 import math
+import struct
 
 from PIL import Image as PILImage
 from PIL import ImageDraw
 
 from .actions import UNSPECIFIED, SceneActionType
-from .constants import (
-  MAX_FRAMES,
-  MAX_GIF_BYTES,
-  MIN_PAUSE_SECONDS,
-  THEATER_HEIGHT,
-  THEATER_WIDTH,
-)
+from .constants import MAX_FRAMES, MAX_GIF_BYTES, THEATER_HEIGHT, THEATER_WIDTH
 from .fonts import load_font
 
 
@@ -21,6 +16,10 @@ class GifTooLargeError(Exception):
 
 class TooManyFramesError(Exception):
   """Raised when a scene pauses more times than the frame ceiling allows."""
+
+
+class PauseTooLongError(Exception):
+  """Raised when one picture is held longer than a gif delay can express."""
 
 
 def render(actions):
@@ -44,7 +43,7 @@ def _frame_durations(actions):
   before any drawing is done.
   """
   durations = [
-    int(round(max(action.seconds, MIN_PAUSE_SECONDS) * 1000))
+    int(round(action.seconds * 1000))
     for action in actions
     if action.type is SceneActionType.PAUSE
   ]
@@ -210,14 +209,23 @@ def _encode_gif(frames, durations):
   """
   first = next(frames)
   buffer = io.BytesIO()
-  first.save(
-    buffer,
-    format="GIF",
-    save_all=True,
-    append_images=frames,
-    duration=durations,
-    disposal=1,
-  )
+  try:
+    first.save(
+      buffer,
+      format="GIF",
+      save_all=True,
+      append_images=frames,
+      duration=durations,
+      disposal=1,
+    )
+  except struct.error as error:
+    # Pillow drops a frame identical to the one before it and adds its delay to
+    # that earlier frame instead. Individual pauses are clamped, but a long run
+    # of them with no drawing in between accumulates past the 16-bit delay field.
+    raise PauseTooLongError(
+      "The animation stays on one picture for too long; draw something between "
+      "the pauses, or make them shorter"
+    ) from error
   data = buffer.getvalue()
   if len(data) > MAX_GIF_BYTES:
     raise GifTooLargeError("The generated video is too large")

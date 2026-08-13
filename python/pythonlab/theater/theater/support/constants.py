@@ -2,8 +2,13 @@
 THEATER_WIDTH = 400
 THEATER_HEIGHT = 400
 
-# Smallest pause/frame duration in seconds; pause() clamps up to this.
+# Smallest pause/frame duration in seconds; pause() rejects anything shorter.
 MIN_PAUSE_SECONDS = 0.1
+
+# Largest pause/frame duration in seconds; pause() rejects anything longer. A
+# gif frame delay is an unsigned 16-bit count of centiseconds, so 65535
+# centiseconds is the longest delay the format can hold.
+MAX_PAUSE_SECONDS = 655.35
 
 # Gif stream size ceiling (30 MB).
 MAX_GIF_BYTES = 31457280

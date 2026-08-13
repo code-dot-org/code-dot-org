@@ -1,7 +1,12 @@
 from .support import actions
 from .support.actions import UNSPECIFIED
 from .support.color import Color, as_color
-from .support.constants import MIN_PAUSE_SECONDS, THEATER_HEIGHT, THEATER_WIDTH
+from .support.constants import (
+  MAX_PAUSE_SECONDS,
+  MIN_PAUSE_SECONDS,
+  THEATER_HEIGHT,
+  THEATER_WIDTH,
+)
 from .support.font import Font, FontStyle
 from .support.image import Image
 
@@ -42,7 +47,17 @@ class Scene:
     self._actions.append(actions.ClearScene(as_color(color)))
 
   def pause(self, seconds):
-    self._actions.append(actions.Pause(max(seconds, MIN_PAUSE_SECONDS)))
+    # Raise here rather than at render time so the traceback points at the
+    # student's own call. The upper bound is what a gif frame delay can hold.
+    if seconds < MIN_PAUSE_SECONDS:
+      raise ValueError(
+        f"pause needs at least {MIN_PAUSE_SECONDS} seconds, got {seconds}"
+      )
+    if seconds > MAX_PAUSE_SECONDS:
+      raise ValueError(
+        f"pause allows at most {MAX_PAUSE_SECONDS} seconds, got {seconds}"
+      )
+    self._actions.append(actions.Pause(seconds))
 
   def draw_image(self, image, x, y, size=None, width=None, height=None, rotation=0.0):
     """Draw an Image (or a file by name) at (x, y).
