@@ -1003,6 +1003,96 @@ class FilesApi < Sinatra::Base
   THUMBNAIL_FILENAME = 'thumbnail.png'
   METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
 
+  # Assets-bucket metadata: which AssetManager upload was accepted after a
+  # flagged moderation verdict (at most one; further uploads are disabled).
+  # Uses "metadata/" (no leading dot) — ".metadata/" is flaky through some
+  # local proxies; files-bucket thumbnails keep ".metadata/" separately.
+  # The flagged *asset* name is in the JSON body, not the URL.
+  ASSETS_METADATA_PATH = 'metadata'.freeze
+  ASSETS_METADATA_FLAGGED = 'image_moderation_flagged'.freeze
+  ASSETS_METADATA_FLAGGED_ROUTE =
+    %r{/v3/assets/([^/]+)/#{ASSETS_METADATA_PATH}/#{ASSETS_METADATA_FLAGGED}$}
+  # {"filename":"<asset>"} is tiny; reject anything larger as abuse.
+  ASSETS_METADATA_FLAGGED_MAX_BYTES = 1024
+
+  def assets_metadata_flagged_path
+    "#{ASSETS_METADATA_PATH}/#{ASSETS_METADATA_FLAGGED}"
+  end
+
+  # Returns a normalized JSON string {"filename":"..."}.
+  # Raises ArgumentError if the body is invalid.
+  def parse_assets_metadata_flagged_body(body)
+    if body.nil? || body.bytesize > ASSETS_METADATA_FLAGGED_MAX_BYTES
+      raise ArgumentError, 'body too large or missing'
+    end
+
+    begin
+      data = JSON.parse(body)
+    rescue JSON::ParserError
+      raise ArgumentError, 'invalid JSON'
+    end
+
+    raise ArgumentError, 'expected object' unless data.is_a?(Hash)
+    filename = data['filename']
+    raise ArgumentError, 'filename required' unless filename.is_a?(String) && !filename.empty?
+    if filename.length > FileBucket::MAXIMUM_FILENAME_LENGTH
+      raise ArgumentError, 'filename too long'
+    end
+    if filename.include?('/') || filename.include?('\\')
+      raise ArgumentError, 'filename must not contain path separators'
+    end
+    # Same character set as AssetManager uploads (BucketHelper.replace_unsafe_chars).
+    if filename != BucketHelper.replace_unsafe_chars(filename)
+      raise ArgumentError, 'filename contains unsafe characters'
+    end
+
+    {filename: filename}.to_json
+  end
+
+  #
+  # PUT /v3/assets/<channel-id>/metadata/image_moderation_flagged
+  # Body: {"filename":"<asset-name>"}
+  #
+  put ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    content_type :json
+    body = request.body.read
+
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    begin
+      normalized = parse_assets_metadata_flagged_body(body)
+    rescue ArgumentError
+      bad_request
+    end
+    path = assets_metadata_flagged_path
+    AssetBucket.new.create_or_replace(encrypted_channel_id, path, normalized)
+    {filename: path}.to_json
+  end
+
+  #
+  # GET /v3/assets/<channel-id>/metadata/image_moderation_flagged
+  #
+  get ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    not_authorized unless can_view_flagged_assets?(encrypted_channel_id)
+    result = AssetBucket.new.get(encrypted_channel_id, assets_metadata_flagged_path)
+    not_found if result[:status] == 'NOT_FOUND'
+    content_type :json
+    result[:body]
+  end
+
+  #
+  # DELETE /v3/assets/<channel-id>/metadata/image_moderation_flagged
+  #
+  delete ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    AssetBucket.new.delete(encrypted_channel_id, assets_metadata_flagged_path)
+    no_content
+  end
+
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
   #
