@@ -10,7 +10,7 @@
 #
 # Sources (frontend/packages/component-library-styles):
 #   brandCodeAiNext.css        canonical CADS tokens, [data-brand='codeai-next']
-#   brandCodeAiNextAliases.css legacy token names mapped onto CADS values
+#   brandLegacyAliases.css     legacy token names mapped onto CADS values
 def color_strings(key)
   {
     # --background-success-primary (sentiment-success-70 in both themes), which

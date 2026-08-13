@@ -143,14 +143,47 @@ function pinkValue(token) {
 
 /* Rewrite values in place: keeping the canonical file's declaration
  * order and comments makes a diff against brandCodeAiNext.css a
- * value-only diff. */
+ * value-only diff.
+ *
+ * The value half of the pattern is deliberately syntax-agnostic. Every
+ * CADS primitive is a hex literal today, but matching only hex would
+ * mean a re-export that moved a primitive to rgb() or oklch() left that
+ * row unrewritten and still showing its real color — the one failure
+ * this brand must not have, and a silent one. */
 const primitives = rescopePrimitives(
   read('primitiveColors_codeAi.css'),
   BRAND,
 ).replace(
-  /^(\s*)(--[a-z0-9-]+): *(#[0-9a-f]+);$/gim,
+  /^([^\S\n]*)(--[a-z0-9-]+):[^;{}]*;[^\S\n]*$/gim,
   (_line, indent, token) => `${indent}${token}: ${pinkValue(token)};`,
 );
+
+/* Post-condition. pinkValue() throws for a token name it does not know,
+ * but only for rows the pattern above matched; a declaration written in
+ * some shape the pattern misses entirely (a trailing comment, say) would
+ * pass through untouched. Check the result instead of trusting the
+ * pattern: every value left in the primitive block must be one this
+ * script put there. */
+const PINK = new Set(
+  [
+    ...Object.values(ACCENT),
+    ...Object.values(NEUTRAL),
+    ...Object.values(BASES),
+    ...Object.values(ALPHA).map(a => ALPHA_BASE + a),
+  ].map(v => v.toLowerCase()),
+);
+for (const [, token, value] of primitives.matchAll(
+  /^[^\S\n]*(--[a-z0-9-]+):[^\S\n]*([^;]+);/gm,
+)) {
+  if (!PINK.has(value.trim().toLowerCase())) {
+    throw new Error(
+      `primitiveColors_codeAi.css: ${token} kept a non-pink value ` +
+        `(${value.trim()}). Its declaration did not match the value ` +
+        'rewrite pattern in scripts/generateBrandCodeAiAudit.mjs — widen ' +
+        'the pattern to cover it.',
+    );
+  }
+}
 
 const semantics = rescopeSemantics(read('colors_codeAi.css'), BRAND);
 
