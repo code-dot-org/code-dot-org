@@ -55,6 +55,11 @@ class Color:
       and self.blue == other.blue
     )
 
+  def __hash__(self):
+    # Defining __eq__ alone would leave Color unhashable, which breaks tallying
+    # pixel colors in a set or dict.
+    return hash(self.to_rgb_tuple())
+
   def __repr__(self):
     return f"Color({self.red}, {self.green}, {self.blue})"
 

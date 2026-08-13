@@ -34,6 +34,11 @@ def test_copy_constructor():
   assert Color(original).to_rgb_tuple() == (1, 2, 3)
 
 
+def test_equal_colors_share_a_hash():
+  assert len({Color("red"), Color(255, 0, 0), Color("#f00")}) == 1
+  assert {Color("blue"): "cold"}[Color(0, 0, 255)] == "cold"
+
+
 def test_invalid_name_raises():
   with pytest.raises(ValueError):
     Color("notacolor")
