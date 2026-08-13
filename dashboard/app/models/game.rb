@@ -64,6 +64,7 @@ class Game < ApplicationRecord
   PANELS = 'panels'.freeze
   WEBLAB2 = 'weblab2'.freeze
   SKETCHLAB = 'sketchlab'.freeze
+  QUIZ = 'quiz'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -211,6 +212,10 @@ class Game < ApplicationRecord
 
   def self.bubble_choice
     @@game_bubble_choice ||= find_by_name("BubbleChoice")
+  end
+
+  def self.quiz
+    @@game_quiz ||= find_by_name("Quiz")
   end
 
   def unplugged?
@@ -371,6 +376,7 @@ class Game < ApplicationRecord
     Panels:panels
     Weblab2:weblab2
     Sketchlab:sketchlab
+    Quiz:quiz
   )
 
   def self.setup

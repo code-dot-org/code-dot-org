@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_08_05_182458) do
+ActiveRecord::Schema[7.0].define(version: 2026_08_13_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2058,6 +2058,70 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_05_182458) do
     t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true
   end
 
+  create_table "quiz_attempts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "level_id", null: false
+    t.integer "script_id", null: false
+    t.integer "attempt_number", null: false
+    t.datetime "started_at", null: false
+    t.datetime "submitted_at"
+    t.integer "score"
+    t.integer "max_score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level_id"], name: "index_quiz_attempts_on_level_id"
+    t.index ["script_id"], name: "index_quiz_attempts_on_script_id"
+    t.index ["user_id", "level_id", "script_id", "attempt_number"], name: "index_quiz_attempts_on_user_level_script_attempt", unique: true
+  end
+
+  create_table "quiz_level_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "level_id", null: false
+    t.bigint "quiz_question_id", null: false
+    t.integer "page", default: 1, null: false
+    t.integer "position", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level_id", "quiz_question_id"], name: "index_quiz_level_questions_on_level_and_question", unique: true
+    t.index ["quiz_question_id"], name: "index_quiz_level_questions_on_quiz_question_id"
+  end
+
+  create_table "quiz_question_responses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "quiz_attempt_id", null: false
+    t.bigint "quiz_question_id", null: false
+    t.json "response_data", null: false
+    t.integer "max_score"
+    t.integer "score"
+    t.string "grading_status", null: false
+    t.boolean "rubric_score"
+    t.integer "time_spent_seconds"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quiz_attempt_id", "quiz_question_id"], name: "index_quiz_question_responses_on_attempt_and_question", unique: true
+    t.index ["quiz_question_id"], name: "index_quiz_question_responses_on_quiz_question_id"
+  end
+
+  create_table "quiz_question_standards", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "quiz_question_id", null: false
+    t.integer "standard_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quiz_question_id", "standard_id"], name: "index_quiz_question_standards_on_quiz_question_and_standard", unique: true
+    t.index ["standard_id"], name: "index_quiz_question_standards_on_standard_id"
+  end
+
+  create_table "quiz_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "type", null: false
+    t.string "question_key", limit: 36, null: false
+    t.bigint "parent_id"
+    t.string "question_name", null: false
+    t.json "question", null: false
+    t.text "explanation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parent_id"], name: "index_quiz_questions_on_parent_id"
+    t.index ["question_key"], name: "index_quiz_questions_on_question_key"
+  end
+
   create_table "reference_guides", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.bigint "course_version_id", null: false
@@ -3017,6 +3081,16 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_05_182458) do
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "project_storage_geos", "user_project_storage_ids", column: "storage_id"
   add_foreign_key "queued_account_purges", "users"
+  add_foreign_key "quiz_attempts", "levels"
+  add_foreign_key "quiz_attempts", "scripts"
+  add_foreign_key "quiz_attempts", "users"
+  add_foreign_key "quiz_level_questions", "levels"
+  add_foreign_key "quiz_level_questions", "quiz_questions"
+  add_foreign_key "quiz_question_responses", "quiz_attempts"
+  add_foreign_key "quiz_question_responses", "quiz_questions"
+  add_foreign_key "quiz_question_standards", "quiz_questions"
+  add_foreign_key "quiz_question_standards", "standards"
+  add_foreign_key "quiz_questions", "quiz_questions", column: "parent_id"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
   add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"
