@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
+import {type FC, useEffect, useState} from 'react';
 
 import styles from './time-spent-box.module.scss';
 
