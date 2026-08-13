@@ -7,6 +7,7 @@ import QRCode from 'qrcode.react';
 import React, {useCallback} from 'react';
 import FocusLock from 'react-focus-lock';
 
+import ProjectAbuseAlert from '@cdo/apps/code-studio/components/ProjectAbuseAlert';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -144,6 +145,7 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus: SubmissionStatusType | undefined;
   userSharingDisabled: boolean | undefined;
   shareFailure?: ShareFailure | null;
+  isAbusive?: boolean;
 }> = ({
   dialogId,
   shareUrl,
@@ -153,6 +155,7 @@ const ShareDialog: React.FunctionComponent<{
   submissionStatus,
   userSharingDisabled,
   shareFailure,
+  isAbusive = false,
 }) => {
   const dispatch = useAppDispatch();
   const sharingDisabled = () =>
@@ -225,53 +228,56 @@ const ShareDialog: React.FunctionComponent<{
     <FocusLock>
       <div className={moduleStyles.dialogContainer} data-theme={theme}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
-          <Typography
-            className={moduleStyles.heading}
-            component="h1"
-            variant="h3"
-            gutterBottom
-          >
-            {dialogId === 'hoc2024'
-              ? i18n.congratulations()
-              : i18n.shareTitle()}
-          </Typography>
-          <div>{dialogId === 'hoc2024' && i18n.congratsFinishedHoc()}</div>
-          <div className={moduleStyles.columns}>
-            <div className={moduleStyles.column}>
-              <div className={moduleStyles.block}>
-                {dialogId === 'hoc2024' && (
-                  <Typography
-                    className={moduleStyles.heading}
-                    component="h2"
-                    variant="h4"
-                    gutterBottom
-                  >
-                    {i18n.shareTitle()}
-                  </Typography>
-                )}
-                <div
-                  className={moduleStyles.QRCodeContainer}
-                  id="share-qrcode-container"
-                >
-                  <div className={moduleStyles.QRCodeBorder}>
-                    <QRCode value={shareUrl + '?qr=true'} size={117} />
-                  </div>
-                </div>
-                <CopyToClipboardButton
-                  shareUrl={shareUrl}
-                  projectType={projectType}
-                />
-                <SubmitButtonInfo
-                  submissionStatus={submissionStatus}
-                  onSubmitClick={onSubmitClick}
-                />
-              </div>
-            </div>
-            {dialogId === 'hoc2024' && (
+          <div className={moduleStyles.shareDialogBody}>
+            <Typography
+              className={moduleStyles.heading}
+              component="h1"
+              variant="h3"
+              gutterBottom
+            >
+              {dialogId === 'hoc2024'
+                ? i18n.congratulations()
+                : i18n.shareTitle()}
+            </Typography>
+            {dialogId === 'hoc2024' && <div>{i18n.congratsFinishedHoc()}</div>}
+            {isAbusive && <ProjectAbuseAlert shareUrl={shareUrl} />}
+            <div className={moduleStyles.columns}>
               <div className={moduleStyles.column}>
-                <AfeCareerTourBlock />
+                <div className={moduleStyles.block}>
+                  {dialogId === 'hoc2024' && (
+                    <Typography
+                      className={moduleStyles.heading}
+                      component="h2"
+                      variant="h4"
+                      gutterBottom
+                    >
+                      {i18n.shareTitle()}
+                    </Typography>
+                  )}
+                  <div
+                    className={moduleStyles.QRCodeContainer}
+                    id="share-qrcode-container"
+                  >
+                    <div className={moduleStyles.QRCodeBorder}>
+                      <QRCode value={shareUrl + '?qr=true'} size={117} />
+                    </div>
+                  </div>
+                  <CopyToClipboardButton
+                    shareUrl={shareUrl}
+                    projectType={projectType}
+                  />
+                  <SubmitButtonInfo
+                    submissionStatus={submissionStatus}
+                    onSubmitClick={onSubmitClick}
+                  />
+                </div>
               </div>
-            )}
+              {dialogId === 'hoc2024' && (
+                <div className={moduleStyles.column}>
+                  <AfeCareerTourBlock />
+                </div>
+              )}
+            </div>
           </div>
           <div className={moduleStyles.bottom}>
             {feedbackLink && finishUrl && (

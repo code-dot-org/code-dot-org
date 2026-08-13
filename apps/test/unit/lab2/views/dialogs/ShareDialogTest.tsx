@@ -108,4 +108,17 @@ describe('Lab2 ShareDialog', () => {
     screen.getByRole('button', {name: /ok/i}).click();
     expect(mockDispatch).toHaveBeenCalledWith(hideShareDialog());
   });
+
+  it('does not show the abuse alert when the project is not flagged', () => {
+    renderShareDialog();
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+  });
+
+  it('shows the abuse alert when the project is flagged', () => {
+    renderShareDialog({isAbusive: true});
+    expect(screen.getByRole('alert')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Copy link to project'})
+    ).toBeInTheDocument();
+  });
 });
