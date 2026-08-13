@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 16px 0;
+  padding-left: 8px;
+  padding-right: 56px;
+}
+
+.indicatorWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.micIndicator {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: var(--surface-neutral-secondary, #f0f0f0);
+  color: var(--text-neutral-primary);
+  font-size: 2rem;
+}
+
+.listeningChip {
+  display: inline-flex;
+  min-width: 40px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background-color: var(--brand-purple-30);
+  color: var(--brand-purple-80);
+  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.30);
+
+  & strong {
+    color: var(--brand-purple-80);
+  }
+
+  & p {
+    color: var(--brand-purple-80);
+  }
+
+}
+
+.audio {
+  width: 100%;
+  display: block;
+}
+
+.countdownRing {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background: rgb(0 0 0 / 0.45);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgb(0 0 0 / 0.6);
+}
+
+.countdownRingSvg {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+}
+
+.countdownNumber {
+  grid-area: 1 / 1;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+
+.error {
+  color: var(--text-error-primary);
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
