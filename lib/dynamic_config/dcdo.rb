@@ -71,6 +71,10 @@ class DCDOBase < DynamicConfigBase
       # (or 'codeprojects.org') stays on the pre-migration domain. See
       # docs/weblab-preview-domain-migration.md.
       'sandboxed-preview-domain': DCDO.get('sandboxed-preview-domain', 'codeprojects.org'),
+      # Whether Python Lab runs pyodide in a hidden iframe on the sandboxed
+      # preview domain instead of directly on studio.code.org. See
+      # apps/src/pythonlab/README.md.
+      'use-pythonlab-separate-domain': DCDO.get('use-pythonlab-separate-domain', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
       # Controls whether the output image goes through the additional LLM-as-judge safety layer.
       # Azure image moderation still runs when this is false.
