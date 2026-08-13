@@ -7,11 +7,9 @@
 | MUI `Tooltip`                      | MUI `Tooltip` + `CdoTheme`      | Use this for new code.                |
 | [`WithTooltip`](./WithTooltip.tsx) | our own SCSS + positioning code | Still what most of the codebase uses. |
 
-The new tooltip is **theme-only**, like `Button`, `IconButton` and
-`Breadcrumbs`: there is no wrapper component. Import `Tooltip` straight from
-`@mui/material`, and the `MuiTooltip` entry in
-[`styleOverrides/tooltip.ts`](../themes/code.org/styleOverrides/tooltip.ts)
-(registered on `CdoTheme`) styles and configures it.
+Import `Tooltip` straight from `@mui/material`; the `MuiTooltip` entry in
+[`styleOverrides/tooltip.ts`](../themes/code.org/styleOverrides/tooltip.ts) (on
+`CdoTheme`) styles and configures it, the way `Button` and `Breadcrumbs` work.
 
 ```tsx
 import {Tooltip} from '@mui/material';
@@ -25,19 +23,19 @@ const RunButton = () => (
 );
 ```
 
-The override is **global** — it styles every MUI tooltip in the app, including
-the handful of Sketch Lab call sites already on bare MUI. This is the first step
-of the tooltip migration; `WithTooltip` and its callers are unchanged.
+The override is **global** — it styles every MUI tooltip in the app, the Sketch
+Lab ones included. This is the first step of the migration; `WithTooltip` and
+its callers are unchanged.
 
 ### What the theme sets
 
-Two MUI defaults are flipped for the design system, via `defaultProps`:
+The theme sets two defaults via `defaultProps`:
 
 - `arrow` defaults to `true` — design system tooltips have a tail. Pass
   `arrow={false}` to drop it.
 - `describeChild` defaults to `true`, so the text becomes `aria-describedby` on
   the trigger rather than an `aria-label`. **The trigger must carry its own
-  accessible name** — the tooltip no longer supplies one.
+  accessible name** — the tooltip doesn't supply one.
 
 The bubble is one fixed size (the CADS spec drops size options). Text metrics
 come from the theme's `body3` variant; the border-radius and shadow from the
@@ -59,8 +57,7 @@ for a hint a mouse user doesn't need but a keyboard user has no other way to get
 
 ### A leading icon
 
-There is no `iconName` prop; compose the icon into `title`, and the theme sizes
-it through its `& i` rule:
+Compose a leading icon into `title`; the theme sizes it:
 
 ```tsx
 <Tooltip

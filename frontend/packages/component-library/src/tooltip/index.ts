@@ -1,5 +1,4 @@
-// The new tooltip is theme-only: import {Tooltip} from '@mui/material' directly
-// and CdoTheme styles it, the way Button and Breadcrumbs work. This is the one
+// Import {Tooltip} from '@mui/material' and CdoTheme styles it. This is the one
 // extra it ships.
 export {keyboardOnlyTooltipProps} from './keyboardOnly';
 

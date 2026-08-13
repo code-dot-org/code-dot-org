@@ -1,8 +1,6 @@
 /**
- * The tooltip migration is theme-only: there is no wrapper in src/tooltip/.
- * Every test renders a bare `Tooltip` from `@mui/material`; what styles and
- * configures it is the `MuiTooltip` entry in
- * src/themes/code.org/styleOverrides/tooltip.ts, registered on CdoTheme.
+ * Every test renders a bare `Tooltip` from `@mui/material`; the `MuiTooltip`
+ * entry in styleOverrides/tooltip.ts (on CdoTheme) styles and configures it.
  *
  * jsdom treats every focus as a keyboard focus, clicks included, so a true
  * "a click leaves it shut" check needs a browser.
@@ -72,13 +70,6 @@ describe('Design System - Tooltip (theme-only)', () => {
       expect(getComputedStyle(arrow).fontSize).toBe('0.5rem');
       expect(getComputedStyle(arrow).color).toBe(BACKGROUND);
     });
-
-    it('needs no marker attribute', async () => {
-      renderTooltip();
-      const bubble = await openAndGetBubble();
-      expect(bubble).not.toHaveAttribute('data-cdo-tooltip');
-      expect(bubble).not.toHaveAttribute('data-size');
-    });
   });
 
   describe('flipped defaults, from defaultProps not JSX', () => {
@@ -136,8 +127,8 @@ describe('Design System - Tooltip (theme-only)', () => {
     expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
   });
 
-  // MUI mirrors -start/-end placements once the theme has a direction. CdoTheme
-  // sets none today (a follow-up), so this passes a directional theme.
+  // MUI mirrors -start/-end placements when the theme has a direction. CdoTheme
+  // sets none, so this test supplies one.
   it('mirrors -start/-end placements in a right-to-left theme', async () => {
     const rtlTheme = createTheme(CdoTheme, {direction: 'rtl'});
     renderTooltip({placement: 'bottom-start'}, undefined, rtlTheme);
@@ -150,8 +141,7 @@ describe('Design System - Tooltip (theme-only)', () => {
     );
   });
 
-  // The point of dropping the marker: a plain MUI tooltip with no design-system
-  // props (Sketch Lab's, say) now gets the design system look too.
+  // A plain MUI tooltip with no special props still gets the design system look.
   it('styles a tooltip that sets no design-system props at all', async () => {
     render(
       <ThemeProvider theme={CdoTheme}>

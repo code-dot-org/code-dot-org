@@ -6,9 +6,8 @@ import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {keyboardOnlyTooltipProps} from '../index';
 
 /**
- * The tooltip is theme-only. Every story imports `Tooltip` straight from
- * `@mui/material`; the look comes from the `MuiTooltip` theme entry, not a
- * wrapper component.
+ * Every story imports `Tooltip` straight from `@mui/material`; the look comes
+ * from the `MuiTooltip` theme entry.
  */
 export default {
   title: 'DesignSystem/Tooltip/Tooltip',
@@ -44,7 +43,7 @@ export const Default: StoryFn = () => (
   </>
 );
 
-/** MUI's own `arrow` prop, rather than a design-system alias for it. */
+/** MUI's `arrow` prop toggles the caret. */
 export const Caret: StoryFn = () => (
   <Row>
     <Tooltip title="With caret">
@@ -56,7 +55,7 @@ export const Caret: StoryFn = () => (
   </Row>
 );
 
-/** A leading icon goes in the title; the theme sizes it with its `& i` rule. */
+/** A leading icon goes in the title; the theme sizes it. */
 export const WithIcon: StoryFn = () => (
   <Tooltip
     title={
@@ -86,7 +85,7 @@ export const Placements: StoryFn = () => (
   </div>
 );
 
-/** Keyboard-only, via the exported props rather than a component. */
+/** Keyboard-only, via the exported props. */
 export const KeyboardOnly: StoryFn = () => (
   <>
     <KeyboardHint />
@@ -109,8 +108,8 @@ export const KeyboardOnly: StoryFn = () => (
 );
 
 /**
- * The portal escapes `data-theme`, so a tooltip inside a themed subtree needs
- * its own — passed through `slotProps` since there's no wrapper.
+ * The portal escapes `data-theme`, so a tooltip in a themed subtree needs its
+ * own, passed through `slotProps`.
  */
 export const InsideDarkTheme: StoryFn = () => (
   <div
