@@ -36,9 +36,22 @@ module Observability
       end
     end
 
-    # Sets the user_id in the Sentry context. Intended to be called from a Warden after_fetch hook.
-    def self.set_user_id(id)
-      ::Sentry.set_user(id:)
+    # Identifies the current user in the Sentry context by an opaque log token
+    # rather than a raw user id. Intended to be called from a Warden after_fetch
+    # hook. Per-user grouping and "users affected" counts still work, since the
+    # token is stable for a given user.
+    #
+    # Never pass a raw user id here. The token is derived by the caller via
+    # Cdo::UserLogToken, which keeps this engine a transport concern with no
+    # knowledge of the key -- and keeps its standalone test bundle free of a
+    # lib/cdo dependency.
+    #
+    # A nil token leaves the context untouched, so an unconfigured key degrades
+    # to anonymous events rather than falling back to the id.
+    def self.set_user_token(token)
+      return if token.nil? || token.to_s.empty?
+
+      ::Sentry.set_user(id: token)
     end
   end
 end
