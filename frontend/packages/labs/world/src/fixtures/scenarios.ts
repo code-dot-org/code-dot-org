@@ -295,6 +295,9 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'different number from where it is on the screen as soon as the camera moves\n' +
       '- The scoreboard elects `Takes Mouse Input`, so it hears the clicks too ' +
       'and prints which button it was — try the right one\n' +
+      '- `crosshair.actor` follows the pointer with `each frame`, which is work ' +
+      'a KIND of actor does without a rule to do it in — open it and change ' +
+      'which moment of the frame it runs in\n' +
       '- There is no \u201cwas this actor clicked\u201d block, and this game ' +
       'shows there does not have to be: a mark that collects is one made of ' +
       'the rules already here',

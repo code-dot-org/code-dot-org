@@ -87,6 +87,59 @@ const COINS: Array<[number, number]> = [
   [7, 7],
 ];
 
+/**
+ * The crosshair, in a file of its own — and it has to be a file.
+ *
+ * `each frame` compiles to `actor.defineStep(…)`, which needs the `const actor`
+ * an ACTOR module opens with. A world-local `define actor` is a differently
+ * named const in the world's module, so the block is not offered there
+ * (blockly/fileKind) — which is why this one thing lives outside `main.world`
+ * while the rest of the game is in it.
+ *
+ * It is also the whole reason the feature exists. Before `each frame`, "keep
+ * doing this" meant writing a `.rule` — a rule with one trait, elected by one
+ * actor, shared with nobody — for a crosshair that follows the pointer.
+ */
+const CROSSHAIR_ACTOR = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_actor',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'Crosshair'},
+        next: {
+          block: {
+            type: 'world_set_sprite',
+            fields: {SPRITE: 'switch.png#1'},
+          },
+        },
+      },
+      {
+        // In `sense`, the first moment of the frame: the crosshair is reading
+        // the world rather than deciding anything, and everything that runs
+        // afterwards sees it where the pointer is.
+        type: 'world_trait_step',
+        x: 20,
+        y: 200,
+        fields: {PHASE: 'sense', NAME: 'follow the pointer'},
+        inputs: {
+          DO: {
+            block: {
+              type: 'world_set_position',
+              inputs: {
+                ACTOR: me(),
+                X: mouseAxis('x'),
+                Y: mouseAxis('y'),
+              },
+            },
+          },
+        },
+      },
+    ],
+  },
+});
+
 const MAIN_WORLD = JSON.stringify({
   blocks: {
     blocks: [
@@ -114,6 +167,7 @@ const MAIN_WORLD = JSON.stringify({
               type: 'world_add_actor',
               fields: {ACTOR: local(SCOREBOARD)},
             },
+            {type: 'world_add_actor', fields: {ACTOR: 'actors/crosshair'}},
           ]),
         },
       },
@@ -211,7 +265,7 @@ const MAIN_WORLD = JSON.stringify({
 });
 
 export const TAPPER_SPEC: ProjectSpec = {
-  folders: ['rules', 'worlds', 'sprites'],
+  folders: ['actors', 'rules', 'worlds', 'sprites'],
   files: {
     main: {
       name: 'main.world',
@@ -220,6 +274,12 @@ export const TAPPER_SPEC: ProjectSpec = {
       folderId: 'worlds',
       active: true,
       open: true,
+    },
+    crosshair: {
+      name: 'crosshair.actor',
+      language: 'actor',
+      contents: CROSSHAIR_ACTOR,
+      folderId: 'actors',
     },
     // The mouse rule is the point of the scenario, so it is a file to open and
     // read rather than something that merely happens.

@@ -13,6 +13,7 @@ import type {
   Property,
   PropertyType,
 } from '../core/types';
+import type {ActorStep, World} from '../core/World';
 import {AppearanceTrait} from '../rules/animation';
 import {PositionalTrait} from '../rules/spatial';
 
@@ -60,6 +61,7 @@ export class ActorBuilder {
   private readonly overrides: Array<[Property, unknown]> = [];
   private readonly handlers: Array<[GameEvent, EventHandler]> = [];
   private readonly effects: AppliedEffectSpec[] = [];
+  private readonly steps: ActorStep[] = [];
 
   constructor(opts: {id: string; name: string}) {
     this.id = opts.id;
@@ -146,6 +148,38 @@ export class ActorBuilder {
     };
     this.overrides.push([property, defaultValue]);
     return property;
+  }
+
+  /**
+   * Declare something this KIND of actor does every frame.
+   *
+   * The behaviour half of `defineProperty`, and the same bargain: state a kind
+   * carries without a rule, and now work a kind does without one. A rule is
+   * still the answer when the behaviour is SHARED between kinds, elected, or
+   * answerable by `has trait` — this is for the case where it is none of those
+   * and a `.rule` file is more ceremony than the thing deserves.
+   *
+   * `run` is handed the actor, so a body written in an `.actor` file means what
+   * it says: `this actor` is this one, and the step runs once per actor of the
+   * kind rather than once for the kind.
+   *
+   * NOT A SYNTHESIZED TRAIT, for the reason `defineProperty` gives: a trait is
+   * elected and shareable and askable, and this is none of them. What carries
+   * it is the World, which folds a kind's steps into the tick order the first
+   * time one of its actors is placed (`World.useActorKind`).
+   */
+  defineStep(
+    id: string,
+    phase: string,
+    run: (actor: Actor, world: World, delta: number) => void,
+  ): this {
+    this.steps.push({id, phase, run});
+    return this;
+  }
+
+  /** The per-frame bodies this kind declared, for the World to schedule. */
+  get ownSteps(): readonly ActorStep[] {
+    return this.steps;
   }
 
   /** Respond to an event raised for this actor. */

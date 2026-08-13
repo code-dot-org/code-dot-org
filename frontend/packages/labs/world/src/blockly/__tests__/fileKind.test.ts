@@ -76,6 +76,15 @@ describe('which definition roots a file may hold', () => {
     expect(offeredTypes('actor')).toContain('world_use_trait');
   });
 
+  it('offers `each frame` where it means something', () => {
+    // Two real readings — a trait's member in a `.rule`, and a kind's own work
+    // in an `.actor` — and no third. In a `.world` it would generate nothing
+    // and say nothing about why, which is the trap this avoids.
+    expect(offeredTypes('actor')).toContain('world_trait_step');
+    expect(offeredTypes('rule')).toContain('world_trait_step');
+    expect(offeredTypes('world')).not.toContain('world_trait_step');
+  });
+
   it('does not offer `use rule` to a world', () => {
     // A world runs the rules the project holds (blockly/projectModules), so
     // the block would be a row that does nothing. It is still OFFERED to a

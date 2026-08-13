@@ -584,6 +584,10 @@ export class WorldBuilder {
           }
         }
       }
+      // The kind's own per-frame steps (`World.useActorKind`). Here rather
+      // than inside `addActor` because this path builds the actor itself, so
+      // the World never sees the template it came from.
+      world.useActorKind(entry.type, builder);
       world.addActor(actor, layer);
       added.push(actor);
     }

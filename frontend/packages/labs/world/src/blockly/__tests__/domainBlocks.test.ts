@@ -245,6 +245,41 @@ describe('domain block generators', () => {
     );
   });
 
+  it('an actor’s own `each frame` declares a step on the kind', () => {
+    // The behaviour half of an actor's own properties: work a KIND does every
+    // frame, with no rule to do it in (ActorBuilder.defineStep).
+    const code = generatorFor('world_trait_step')(
+      {
+        getParent: () => null,
+        getFieldValue: (name: string) =>
+          name === 'NAME' ? 'follow the mouse' : 'decide',
+      } as never,
+      {statementToCode: () => '  body;\n'} as never,
+      {} as never,
+    );
+
+    expect(code).toBe(
+      'actor.defineStep("follow_the_mouse", "decide", ' +
+        '(actor, world, delta) => {\n  body;\n});\n',
+    );
+  });
+
+  it('the same block under a trait declares nothing', () => {
+    // There it is one of the trait's members: the rule's module is assembled
+    // from metadata and the body is pulled out by a pass of its own, so
+    // generating here would write it twice.
+    const code = generatorFor('world_trait_step')(
+      {
+        getParent: () => ({type: 'world_rule_trait'}),
+        getFieldValue: () => 'x',
+      } as never,
+      {statementToCode: () => '  body;\n'} as never,
+      {} as never,
+    );
+
+    expect(code).toBe('');
+  });
+
   it('world_use_trait at "(none)" emits nothing', () => {
     // Reachable in the ordinary way now: an actor in a project whose rules
     // offer nothing electable, since the two traits every actor already has

@@ -228,6 +228,11 @@ describe('the scenario catalogue', () => {
     expect(main).toContain('Mouse#TakesMouseInputTrait');
     // …and the thing no keyboard can say: WHERE.
     expect(main).toContain('world_mouse_position');
+    // The crosshair is a FILE, and has to be: `each frame` compiles to
+    // `actor.defineStep`, which needs the const an actor module opens with.
+    const crosshair = files.find(file => file.name === 'crosshair.actor')!;
+    expect(crosshair.contents).toContain('world_trait_step');
+    expect(crosshair.contents).toContain('world_mouse_position');
   });
 
   it('bounces off the surfaces, not off the ball', () => {
