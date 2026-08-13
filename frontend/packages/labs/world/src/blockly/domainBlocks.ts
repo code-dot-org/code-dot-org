@@ -25,7 +25,11 @@ import {
   IMPORT_BACKGROUND_VALUE,
   IMPORT_SPRITE_VALUE,
 } from '../appearance/appearanceImport';
-import {DEFAULT_BACKDROP_COLOR, type PropertyType} from '../engine';
+import {
+  DEFAULT_BACKDROP_COLOR,
+  TEXT_ANCHORS,
+  type PropertyType,
+} from '../engine';
 import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
 import {VIEWPORT_TILES} from '../runtime/viewport';
 
@@ -78,6 +82,7 @@ import {
   blockDesignerMutator,
   eventDesignerMutator,
 } from './extensions/blockDesigner';
+import {drawingContextExtension} from './extensions/drawingContext';
 import {effectImportFieldExtension} from './extensions/effectImportField';
 import {
   effectParamsInitExtension,
@@ -1112,6 +1117,11 @@ const EMIT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
 export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   ...EVENT_BLOCKS.map(block => block.type),
   'world_actor',
+  // A kind's picture, described rather than referenced (specs/DRAWING.md). A
+  // root for the same reason `each frame` needed a root shape in an `.actor`
+  // file: a top-level block with a previous connection is disabled as an
+  // orphan, along with everything chained after it.
+  'world_define_drawing',
   'world_world',
   'world_rule',
   // A behavior is a rule root and its one trait root at once
@@ -2335,6 +2345,37 @@ const worldSlider = defineBlock({
  */
 const swatchArg = (name: string) =>
   ({type: fieldColourPlugin, name, colour: '#000000'}) as const;
+
+/** Whether `colour_picker` and friends have been registered yet. */
+let colorBlocksInstalled = false;
+
+/**
+ * Register Blockly's stock color blocks AND their JavaScript generators.
+ *
+ * These come from `@blockly/field-colour`, and until this existed they arrived
+ * only as a SIDE EFFECT of the field plugin initializing — which happens when
+ * the Driver registers a workspace's blocks, and therefore after anything that
+ * asks what is registered.
+ *
+ * `standInBlocks` is what asked. It mints a placeholder for every type a
+ * project's files hold that the palette does not define, and its generator
+ * returns `null` so a dead reference cannot stop a file compiling. Computed
+ * before the plugin had run, `colour_picker` looked dead — so a swatch in any
+ * project file generated the literal `null`, and `set background color`, an
+ * effect's color parameter and `set fill` all quietly drew nothing. Nothing
+ * caught it because no fixture held a swatch.
+ *
+ * Here, at the top of the one function that builds a palette, for the same
+ * reason `installColorMessages` is: it is the moment before anybody reads the
+ * registry, and it is not module scope, which `Blockly.Msg` is not safe at.
+ */
+function installColorBlocks(): void {
+  if (colorBlocksInstalled) {
+    return;
+  }
+  colorBlocksInstalled = true;
+  fieldColourPlugin.initialize?.();
+}
 
 // Each channel is seeded with a 0–1 slider, which is `world_slider`'s own
 // default range — so no per-socket bounds are needed here.
@@ -5099,6 +5140,315 @@ const worldTraitStep = traitStepDefinition(false);
 /** The root-shaped one, for an `.actor` file (see `traitStepDefinition`). */
 const worldActorStep = traitStepDefinition(true);
 
+// ── Drawing (specs/DRAWING.md) ───────────────────────────────────────────────
+// A kind that describes its own picture. `each frame`'s sibling and its
+// opposite: a step is handed the world and may change it, a drawing is handed a
+// pen and may not. That purity is what lets a picture be identified by what it
+// describes, which is what makes nine actors cost one texture.
+
+/** The colour a shape is painted, as a socket that takes any colour block. */
+const paintArg = (name: string) => ({
+  type: 'input_value' as const,
+  name,
+  check: COLOUR_CHECK,
+});
+
+const worldDefineDrawing = defineBlock({
+  type: 'world_define_drawing',
+  message0: 'define drawing %1 by %2',
+  args0: [
+    {type: 'field_number', name: 'WIDTH', value: 32, min: 1, max: 512},
+    {type: 'field_number', name: 'HEIGHT', value: 32, min: 1, max: 512},
+  ],
+  message1: '%1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  // A ROOT: no previous connection, because `DisableOrphansPlugin` disables a
+  // top-level block that has one along with everything chained after it — the
+  // bug `each frame` hit and the reason it needed two shapes. This one needs
+  // only the root shape, since a drawing is never a trait's member.
+  style: 'sprite_blocks',
+  tooltip:
+    'Describe what this kind of actor looks like. The size is the picture, ' +
+    'and it is also how big the actor is for clicks and collisions.',
+  generator: {
+    javascript(block, generator) {
+      const width = Number(block.getFieldValue('WIDTH')) || 1;
+      const height = Number(block.getFieldValue('HEIGHT')) || 1;
+      const body = generator.statementToCode(block, 'DO');
+      // `actor` SHADOWS the module's builder inside the closure, exactly as a
+      // step's body does, so `this actor` written here means this one. `pen` is
+      // bound only here — the one place `drawingContext` knows about.
+      return (
+        `actor.defineDrawing(${width}, ${height}, ` +
+        `(actor, pen) => {\n${body}});\n`
+      );
+    },
+  },
+});
+
+const worldPenFill = defineBlock({
+  type: 'world_pen_fill',
+  message0: 'set fill %1',
+  args0: [paintArg('COLOUR')],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip: 'Paint the inside of every shape drawn after this.',
+  generator: {
+    javascript(block, generator) {
+      const colour = generator.valueToCode(block, 'COLOUR', Order.NONE);
+      return colour ? `pen.fill(${colour});\n` : '';
+    },
+  },
+});
+registerValueShadows('world_pen_fill', [
+  {
+    name: 'COLOUR',
+    shadow: {type: 'colour_picker', fields: {COLOUR: '#ffffff'}},
+  },
+]);
+
+const worldPenOutline = defineBlock({
+  type: 'world_pen_outline',
+  message0: 'set outline %1 width %2',
+  args0: [
+    paintArg('COLOUR'),
+    {type: 'input_value', name: 'WIDTH', check: 'Number'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip: 'Draw an edge around every shape drawn after this.',
+  generator: {
+    javascript(block, generator) {
+      const colour = generator.valueToCode(block, 'COLOUR', Order.NONE);
+      const width = generator.valueToCode(block, 'WIDTH', Order.NONE) || '1';
+      return colour ? `pen.outline(${colour}, ${width});\n` : '';
+    },
+  },
+});
+registerValueShadows('world_pen_outline', [
+  {
+    name: 'COLOUR',
+    shadow: {type: 'colour_picker', fields: {COLOUR: '#000000'}},
+  },
+  {name: 'WIDTH', shadow: {type: 'math_number', fields: {NUM: 1}}},
+]);
+
+// The two absences. A socket left empty would say the same thing, and say it
+// invisibly — "no fill" is a sentence a learner writes and can read back.
+const worldPenNoFill = defineBlock({
+  type: 'world_pen_no_fill',
+  message0: 'no fill',
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension],
+  style: 'sprite_blocks',
+  tooltip: 'Stop painting the inside of shapes — draw only their edges.',
+  generator: {
+    javascript() {
+      return 'pen.noFill();\n';
+    },
+  },
+});
+
+const worldPenNoOutline = defineBlock({
+  type: 'world_pen_no_outline',
+  message0: 'no outline',
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension],
+  style: 'sprite_blocks',
+  tooltip: 'Stop drawing edges around shapes.',
+  generator: {
+    javascript() {
+      return 'pen.noOutline();\n';
+    },
+  },
+});
+
+/** A shape block: statement, drawing-only, and seeded with numbers. */
+const drawBlock = (
+  type: string,
+  message0: string,
+  args0: object[],
+  tooltip: string,
+  code: (read: (name: string) => string) => string,
+) =>
+  defineBlock({
+    type,
+    message0,
+    args0: args0 as never,
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    extensions: [drawingContextExtension, valueShadowExtension],
+    style: 'sprite_blocks',
+    tooltip,
+    generator: {
+      javascript(block, generator) {
+        return code(
+          name => generator.valueToCode(block, name, Order.NONE) || '0',
+        );
+      },
+    },
+  });
+
+const numberArg = (name: string) => ({
+  type: 'input_value' as const,
+  name,
+  check: 'Number',
+});
+
+const worldDrawRectangle = drawBlock(
+  'world_draw_rectangle',
+  'draw rectangle at x %1 y %2 size %3 by %4',
+  [numberArg('X'), numberArg('Y'), numberArg('WIDTH'), numberArg('HEIGHT')],
+  'Draw a rectangle. The corner is the point; x and y are measured from the ' +
+    'top-left of the picture.',
+  read =>
+    `pen.rectangle(${read('X')}, ${read('Y')}, ${read('WIDTH')}, ${read('HEIGHT')});\n`,
+);
+registerValueShadows(
+  'world_draw_rectangle',
+  ['X', 'Y', 'WIDTH', 'HEIGHT'].map(name => ({
+    name,
+    shadow: {
+      type: 'math_number',
+      fields: {NUM: name === 'WIDTH' || name === 'HEIGHT' ? 16 : 0},
+    },
+  })),
+);
+
+const worldDrawCircle = drawBlock(
+  'world_draw_circle',
+  'draw circle at x %1 y %2 radius %3',
+  [numberArg('X'), numberArg('Y'), numberArg('RADIUS')],
+  'Draw a circle around a point.',
+  read => `pen.circle(${read('X')}, ${read('Y')}, ${read('RADIUS')});\n`,
+);
+registerValueShadows('world_draw_circle', [
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 16}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 16}}},
+  {name: 'RADIUS', shadow: {type: 'math_number', fields: {NUM: 8}}},
+]);
+
+const worldDrawLine = drawBlock(
+  'world_draw_line',
+  'draw line from x %1 y %2 to x %3 y %4',
+  [numberArg('X1'), numberArg('Y1'), numberArg('X2'), numberArg('Y2')],
+  'Draw a line. It is drawn in the outline colour, or the fill colour when ' +
+    'there is no outline.',
+  read =>
+    `pen.line(${read('X1')}, ${read('Y1')}, ${read('X2')}, ${read('Y2')});\n`,
+);
+registerValueShadows(
+  'world_draw_line',
+  ['X1', 'Y1', 'X2', 'Y2'].map(name => ({
+    name,
+    shadow: {
+      type: 'math_number',
+      fields: {NUM: name.endsWith('2') ? 16 : 0},
+    },
+  })),
+);
+
+const worldDrawText = defineBlock({
+  type: 'world_draw_text',
+  message0: 'draw text %1 at x %2 y %3 size %4 anchored %5',
+  args0: [
+    {type: 'input_value', name: 'TEXT'},
+    numberArg('X'),
+    numberArg('Y'),
+    numberArg('SIZE'),
+    {
+      type: 'field_dropdown',
+      name: 'ANCHOR',
+      options: TEXT_ANCHORS.map(anchor => [anchor, anchor] as [string, string]),
+    },
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Draw a word. The anchor says which part of the text sits at the point, ' +
+    'so a number that grows can stay where it was put.',
+  generator: {
+    javascript(block, generator) {
+      const text = generator.valueToCode(block, 'TEXT', Order.NONE) || "''";
+      const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
+      const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
+      const size = generator.valueToCode(block, 'SIZE', Order.NONE) || '12';
+      const anchor = block.getFieldValue('ANCHOR') || 'centre';
+      // `String(…)` because the commonest thing to draw is a NUMBER — a score,
+      // a countdown — and the socket takes any value. Coercing here means the
+      // learner never meets the difference, and the command list stays a list
+      // of strings so two equal scores hash the same.
+      return `pen.text(String(${text}), ${x}, ${y}, ${size}, ${str(anchor)});\n`;
+    },
+  },
+});
+registerValueShadows('world_draw_text', [
+  {name: 'TEXT', shadow: {type: 'text', fields: {TEXT: 'hello'}}},
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 16}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 16}}},
+  {name: 'SIZE', shadow: {type: 'math_number', fields: {NUM: 12}}},
+]);
+
+const worldDrawImage = defineBlock({
+  type: 'world_draw_image',
+  message0: 'draw image %1 at x %2 y %3',
+  args0: [
+    {type: 'field_dropdown', name: 'SPRITE', options: spriteFieldOptions},
+    numberArg('X'),
+    numberArg('Y'),
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    drawingContextExtension,
+    spriteOptionsExtension,
+    spritePickExtension,
+    spriteImportFieldExtension,
+    valueShadowExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip:
+    'Draw one of the project’s pictures into this one — a button’s face, an ' +
+    'icon beside a word.',
+  generator: {
+    javascript(block, generator) {
+      const value = block.getFieldValue('SPRITE');
+      if (!value) {
+        return '';
+      }
+      // A cell is resolved HERE, where the project's `.sheet` files are known,
+      // exactly as `set sprite` resolves one — the engine is only ever told
+      // rectangles (spriteCells).
+      const {sprite} = parseSpriteRef(value);
+      const cell = spriteCell(value);
+      const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
+      const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
+      const rect = cell
+        ? `, {x: ${cell.x}, y: ${cell.y}, ` +
+          `width: ${cell.width}, height: ${cell.height}}`
+        : '';
+      return `pen.image(${str(sprite)}, ${x}, ${y}${rect});\n`;
+    },
+  },
+});
+registerValueShadows('world_draw_image', [
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 0}}},
+]);
+
 const worldRuleStepTick = stepBlock(
   'world_rule_step_tick',
   'when tick do %1',
@@ -5551,6 +5901,17 @@ export const DOMAIN_BLOCKS = [
   worldRuleStepIn,
   worldBehavior,
   worldTraitStep,
+  // Drawing: the root, the pen, and the five commands (specs/DRAWING.md).
+  worldDefineDrawing,
+  worldPenFill,
+  worldPenOutline,
+  worldPenNoFill,
+  worldPenNoOutline,
+  worldDrawRectangle,
+  worldDrawCircle,
+  worldDrawLine,
+  worldDrawText,
+  worldDrawImage,
   worldRuleStepTick,
   worldKey,
   worldForEachKey,
@@ -5646,6 +6007,28 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // kinds, elected, or answerable by `has trait`; this is for when it is
       // none of those (ActorBuilder.defineStep).
       'world_trait_step',
+    ],
+  },
+  // What this kind LOOKS LIKE, described rather than referenced
+  // (specs/DRAWING.md). `each frame`'s sibling and its opposite: that one is
+  // handed the world and may change it, this one is handed a pen and may not.
+  // Shown only in an `.actor` file — see `structuralCategories` — because a
+  // drawing belongs to a kind of actor and nothing else is one.
+  {
+    name: 'Drawing',
+    blocks: [
+      'world_define_drawing',
+      // The pen, which every shape after it is painted with.
+      'world_pen_fill',
+      'world_pen_outline',
+      'world_pen_no_fill',
+      'world_pen_no_outline',
+      // …and the five things there are to draw.
+      'world_draw_rectangle',
+      'world_draw_circle',
+      'world_draw_line',
+      'world_draw_text',
+      'world_draw_image',
     ],
   },
   {
@@ -5879,6 +6262,13 @@ const structuralCategories = (fileKind?: FileKind): ToolboxCategory[] => {
       fileKind !== 'rule' &&
       fileKind !== 'behavior'
     ) {
+      continue;
+    }
+    // Drawing is an `.actor`'s alone. Filtering by `ROOT_HOMES` would drop
+    // `define drawing` and leave the pen behind — ten blocks in a `.world`
+    // file that can only ever wear a warning saying there is nothing to draw
+    // on (specs/DRAWING.md, `extensions/drawingContext`).
+    if (category.name === 'Drawing' && fileKind !== 'actor') {
       continue;
     }
     // An entry is usually a block type, but the type allows a whole flyout item
@@ -6150,6 +6540,7 @@ export function buildDomainPalette(
   // takes the workspace down with "Cannot read properties of undefined". This
   // runs once per editor mount, before the palette reaches a workspace.
   installColorMessages();
+  installColorBlocks();
   const editingRule = options.ownRuleModule !== undefined;
   const structural = structuralCategories(options.fileKind);
 

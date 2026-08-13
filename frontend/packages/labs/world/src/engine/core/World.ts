@@ -13,6 +13,12 @@ import {
   type CameraInit,
 } from './Camera';
 import {rgba, type ColorValue, type Rgba} from './color';
+import {
+  CommandPen,
+  drawingKey,
+  type ActorDrawing,
+  type DrawCommand,
+} from './drawing';
 import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
 import {
@@ -57,6 +63,11 @@ export interface ActorTemplate {
    * no opinion about steps, and neither did any template before this existed.
    */
   readonly ownSteps?: readonly ActorStep[];
+  /**
+   * How this KIND draws itself — see `ActorBuilder.defineDrawing`. Optional for
+   * the same structural reason `ownSteps` is.
+   */
+  readonly ownDrawing?: ActorDrawing;
 }
 
 /** One per-frame body an actor kind declares, before it is bound to a kind. */
@@ -210,11 +221,29 @@ export interface RenderState {
   /** The current appearance frame to draw; absent means draw a plain rectangle. */
   frame?: FrameState;
   /**
+   * A picture the actor's kind describes for itself, which wins over `frame`
+   * when both are there (specs/DRAWING.md).
+   *
+   * `key` is the identity of the commands: the driver rasterizes on a key it
+   * has not seen and reuses the texture otherwise, which is why nine actors
+   * drawn the same way cost one texture and a drawing that never changes costs
+   * one rasterization.
+   */
+  drawing?: DrawingState;
+  /**
    * Which layer draws this actor, as its DEPTH — the layer's position in the
    * stack, not its id. The driver wants a number to sort by and nothing else,
    * and resolving the id here keeps the layer list an engine concern.
    */
   layer: number;
+}
+
+/** A described picture, and the identity that says whether it is a new one. */
+export interface DrawingState {
+  key: string;
+  width: number;
+  height: number;
+  commands: readonly DrawCommand[];
 }
 
 /**
@@ -354,6 +383,8 @@ export class World {
   // Which actor kinds have already contributed, by the TYPE they were placed
   // under: a kind contributes once however many of it there are.
   private readonly kindsWithSteps = new Set<string>();
+  /** How each kind that describes its own picture draws itself, by type. */
+  private readonly kindDrawings = new Map<string, ActorDrawing>();
   private readonly events = new EventQueue();
   /**
    * Handlers for the world's own events, by event.
@@ -632,6 +663,12 @@ export class World {
    * mid-frame joins the order on the next one.
    */
   useActorKind(type: string, template: ActorTemplate): void {
+    // A kind's picture, remembered against the same type its steps are bound
+    // to, and independently of them: a Label declares a drawing and no steps,
+    // which is the commonest shape an interface actor has (specs/UI_ACTORS.md).
+    if (template.ownDrawing && !this.kindDrawings.has(type)) {
+      this.kindDrawings.set(type, template.ownDrawing);
+    }
     const steps = template.ownSteps ?? [];
     if (!steps.length || this.kindsWithSteps.has(type)) {
       return;
@@ -652,6 +689,22 @@ export class World {
     this.scheduler = new Scheduler(this.stepList);
   }
 
+  /**
+   * The `intrinsic size` property, resolved through the membership rather than
+   * imported.
+   *
+   * `renderSnapshot` reaches Space's properties the same way and for the same
+   * reason: the World holds rules it was given, and importing one of them here
+   * would make the core depend on a rule it is supposed to merely run.
+   */
+  private intrinsicSizeProperty(): Property<Vector> | undefined {
+    const spatial = this.membership.items().find(r => r.id === SPATIAL.rule);
+    const positional: Trait | undefined = spatial?.traits[SPATIAL.trait];
+    return positional?.properties[SPATIAL.intrinsicSize] as
+      | Property<Vector>
+      | undefined;
+  }
+
   private place(actor: Actor, layer: string = DEFAULT_LAYER_ID): Actor {
     // The back-reference an actor-scoped action or query reads to reach the
     // world (see `Actor.world`). Set here because placement is what makes it
@@ -661,6 +714,18 @@ export class World {
     // template instantiated and placed twice gives two actors of different ages.
     actor.bornAt = this.elapsed;
     actor.layer = this.layerIndex.has(layer) ? layer : DEFAULT_LAYER_ID;
+    // A drawn actor's size is DECLARED, so it is known the moment the actor
+    // exists and never measured. Everything that asks how big an actor is
+    // reads `intrinsic size` — the click box (rules/mouse), the collision box,
+    // "Stays in the Map" — so a Button is the size of the picture it draws
+    // without anything looking at pixels (specs/DRAWING.md).
+    const drawing = this.kindDrawings.get(actor.type);
+    if (drawing) {
+      const property = this.intrinsicSizeProperty();
+      if (property) {
+        actor.set(property, new Vector(drawing.width, drawing.height));
+      }
+    }
     this.actorList.push(actor);
     return actor;
   }
@@ -1663,6 +1728,30 @@ export class World {
       return undefined;
     };
 
+    /**
+     * Run one actor's kind's drawing routine, if it has one.
+     *
+     * EVERY FRAME, on purpose: running it is a few array pushes, and what it
+     * costs to make a TEXTURE is paid by the driver only when the key changes
+     * (specs/DRAWING.md). Nothing here caches, because a cache keyed on
+     * anything but the commands themselves is a cache that has to be told when
+     * it is wrong.
+     */
+    const drawingFor = (actor: Actor): DrawingState | undefined => {
+      const drawing = this.kindDrawings.get(actor.type);
+      if (!drawing) {
+        return undefined;
+      }
+      const pen = new CommandPen();
+      drawing.run(actor, pen);
+      return {
+        key: drawingKey(drawing.width, drawing.height, pen.commands),
+        width: drawing.width,
+        height: drawing.height,
+        commands: pen.commands,
+      };
+    };
+
     const states: RenderState[] = [];
     for (const actor of this.actorList) {
       if (!actor.has(positional)) {
@@ -1679,6 +1768,7 @@ export class World {
         rotation: actor.get(rotationProp),
         skew: skewProp ? actor.get(skewProp) : 0,
         frame: frameFor(actor),
+        drawing: drawingFor(actor),
         effects: actor.effects(),
         layer: this.depthOf(actor.layer ?? DEFAULT_LAYER_ID),
       });

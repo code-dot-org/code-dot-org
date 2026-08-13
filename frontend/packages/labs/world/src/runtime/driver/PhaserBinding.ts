@@ -48,6 +48,7 @@ import {
   stretchedPlacement,
   tiledPlacement,
 } from './backdropPlacement';
+import {DrawingTextures} from './drawingTextures';
 import {EffectRegistry, type EffectErrorReporter} from './effects';
 import {installSkewHook, type RenderStepInternals} from './skew';
 
@@ -309,6 +310,11 @@ export class PhaserBinding {
     // the binding does: a restart builds a new renderer, and render nodes
     // registered with the old one mean nothing to it.
     const effectRegistry = new EffectRegistry(Phaser, onEffectError);
+    // The textures rasterized from kinds that describe their own picture. Lives
+    // as long as the binding does, for the same reason the effect registry
+    // does: its textures belong to this scene's texture manager, and a restart
+    // builds a new one.
+    const drawings = new DrawingTextures();
 
     const skewMatrices = new WeakMap<
       GameObject,
@@ -338,14 +344,19 @@ export class PhaserBinding {
       matrix.translate(-cx, -cy); // ·T(-center)
     };
 
-    // The engine resolves each actor's current appearance frame; the driver just
-    // draws it. An actor with a frame gets a textured Image; one without (no
-    // appearance) gets the fallback rectangle. The Image's texture/cell is
+    // The engine resolves each actor's current appearance; the driver just draws
+    // it. A kind that describes its own picture gets a texture rasterized from
+    // that description and wins (specs/DRAWING.md); otherwise an actor with a
+    // frame gets a textured Image, and one without gets the fallback rectangle. The Image's texture/cell is
     // refreshed every tick, so an animation's frames — same spritesheet, changing
     // cell — update in place.
     const create = (scene: Phaser.Scene, state: RenderState): GameObject => {
-      const object =
-        state.frame && scene.textures.exists(state.frame.sprite)
+      const drawn = state.drawing
+        ? drawings.acquire(scene, state.actor, state.drawing)
+        : undefined;
+      const object = drawn
+        ? scene.add.image(state.x, state.y, drawn)
+        : state.frame && scene.textures.exists(state.frame.sprite)
           ? scene.add.image(state.x, state.y, state.frame.sprite)
           : // The appearance-less fallback: a plain rectangle placeholder.
             scene.add.rectangle(
@@ -583,6 +594,10 @@ export class PhaserBinding {
         for (const [actor, object] of [...objects]) {
           if (!present.has(actor)) {
             effectRegistry.release(object);
+            // …and its share of whatever texture it was drawing. Without this
+            // a picture nothing draws any more stays in the texture manager
+            // for the life of the game.
+            drawings.release(scene, actor);
             object.destroy();
             objects.delete(actor);
           }
@@ -607,7 +622,18 @@ export class PhaserBinding {
         effectRegistry.reconcile(scene, object, state.effects);
 
         const frame = state.frame;
-        if (frame && object instanceof Phaser.GameObjects.Image) {
+        if (state.drawing && object instanceof Phaser.GameObjects.Image) {
+          // `acquire` is what notices a change: the key is computed from the
+          // commands, so this is a map lookup on every frame where the picture
+          // is the same, and a rasterization on exactly the frames it is not.
+          object.setTexture(
+            drawings.acquire(scene, state.actor, state.drawing),
+          );
+          object.setPosition(state.x, state.y);
+          object.setScale(state.scaleX, state.scaleY);
+          object.setRotation(state.rotation * DEGREES_TO_RADIANS);
+          applySkew(object, state.x, state.y, state.skew);
+        } else if (frame && object instanceof Phaser.GameObjects.Image) {
           // A cell is a source rectangle in the image, named and registered on
           // the texture the first time it is drawn (`cellFrame`); no cell ⇒ the
           // whole image. Every texture is loaded as a plain image, so a

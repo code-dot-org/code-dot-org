@@ -13,7 +13,7 @@ import type {
   WorldSnapshot,
 } from 'world-lab';
 
-import {frameThumbnail} from '../driver/frameThumbnail';
+import {drawingThumbnail, frameThumbnail} from '../driver/frameThumbnail';
 import {PhaserBinding} from '../driver/PhaserBinding';
 import {reconcile} from '../driver/reconcile';
 import {
@@ -210,6 +210,11 @@ export async function start(): Promise<void> {
         const typeOf = new Map<unknown, string>();
         for (const {type, builder} of manifest.actors) {
           const actor = builder.instantiate(`thumb:${type}`);
+          // Register the KIND before placing the instance: a drawing is a
+          // kind's, and `place` reads it to publish the declared size. Adding an
+          // already-instantiated actor does not do this itself — the template
+          // form of `addActor` is what normally would (specs/DRAWING.md).
+          world.useActorKind(actor.type, builder);
           world.addActor(actor);
           typeOf.set(actor, type);
           schemas[type] = describeActor(actor, animationIds, uploadedSprites);
@@ -217,12 +222,22 @@ export async function start(): Promise<void> {
         for (const state of world.renderSnapshot()) {
           const type = typeOf.get(state.actor);
           if (type) {
-            thumbnails[type] = await frameThumbnail(
-              state.frame,
-              assetBase,
-              lastAssets,
-              THUMBNAIL_SIZE,
-            );
+            // A described picture wins here for the same reason it wins in the
+            // driver: it is the more specific of two things said about one
+            // actor, and it is what the map will draw.
+            thumbnails[type] = state.drawing
+              ? await drawingThumbnail(
+                  state.drawing,
+                  assetBase,
+                  lastAssets,
+                  THUMBNAIL_SIZE,
+                )
+              : await frameThumbnail(
+                  state.frame,
+                  assetBase,
+                  lastAssets,
+                  THUMBNAIL_SIZE,
+                );
           }
         }
       }
