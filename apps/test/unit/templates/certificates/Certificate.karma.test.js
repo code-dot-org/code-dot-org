@@ -149,7 +149,8 @@ describe('Certificate', () => {
     expect(wrapper.find('swiper-container').exists()).to.be.true;
     expect(wrapper.find('swiper-slide').length).to.equal(2);
 
-    expect(wrapper.find('LargeChevronLink').props().link).to.equal(
+    // The breadcrumb's first crumb links back to the course.
+    expect(wrapper.find('nav a').first().props().href).to.equal(
       '/courses/csd-2023/units/1'
     );
   });
@@ -168,5 +169,35 @@ describe('Certificate', () => {
     expect(wrapper.find('swiper-container').exists()).to.be.false;
     expect(wrapper.find('#certificate-swiper-prev-el').exists()).to.be.false;
     expect(wrapper.find('#certificate-swiper-next-el').exists()).to.be.false;
+  });
+
+  // Outside an HoC tutorial the name comes straight off the input, unlike the
+  // HoC path above which takes it from the PATCH response. This covers the ref
+  // reaching the name field.
+  it('personalizes the certificate with the name typed into the field', () => {
+    wrapper = wrapperWithParams({
+      certificateData: [{courseName: 'dance'}],
+      isHocTutorial: false,
+    });
+
+    // The field is uncontrolled and read through a ref on submit, so set the
+    // DOM value rather than simulating a change event.
+    wrapper.find('input#name').getDOMNode().value = 'Robo Coder';
+    wrapper
+      .find('button')
+      .filterWhere(button => button.text() === 'Submit')
+      .simulate('click');
+    wrapper.update();
+
+    const encodedData = btoa(
+      JSON.stringify({name: 'Robo Coder', course: 'dance'})
+    );
+    const expectedFilename = encodedData
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/g, '');
+    expect(wrapper.find('#uitest-certificate img').prop('src')).to.equal(
+      `/certificate_images/${expectedFilename}.jpg`
+    );
   });
 });

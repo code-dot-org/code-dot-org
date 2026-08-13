@@ -71,7 +71,6 @@ class DCDOBase < DynamicConfigBase
       # (or 'codeprojects.org') stays on the pre-migration domain. See
       # docs/weblab-preview-domain-migration.md.
       'sandboxed-preview-domain': DCDO.get('sandboxed-preview-domain', 'codeprojects.org'),
-      'brand-router-enabled': DCDO.get('brand-router-enabled', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
       # Controls whether the output image goes through the additional LLM-as-judge safety layer.
       # Azure image moderation still runs when this is false.

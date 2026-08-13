@@ -17,6 +17,14 @@ const DISABLED_RULES = ['target-size'];
 interface ScanOptions {
   /** Scope to a selector; omit to scan the whole page. */
   include?: string;
+  /**
+   * Drop a subtree from the scan. A string[] is a frame-selector chain, where
+   * every entry but the last names a frame: ['#video', '*'] excludes what is
+   * inside the #video iframe while keeping the iframe element itself in scope.
+   * Use it to keep third-party frame content out of a baseline — we cannot fix
+   * those violations and their markup changes without notice.
+   */
+  exclude?: string | string[];
   /** Omit for axe defaults, which include best-practice rules. */
   tags?: string[];
 }
@@ -28,12 +36,15 @@ interface ScanOptions {
  */
 export async function analyze(
   page: Page,
-  {include, tags}: ScanOptions = {},
+  {include, exclude, tags}: ScanOptions = {},
 ): Promise<Record<string, number>> {
   await settle(page);
   let builder = new AxeBuilder({page}).disableRules(DISABLED_RULES);
   if (include) {
     builder = builder.include(include);
+  }
+  if (exclude) {
+    builder = builder.exclude(exclude);
   }
   if (tags) {
     builder = builder.withTags(tags);

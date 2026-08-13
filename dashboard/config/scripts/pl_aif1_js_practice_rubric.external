@@ -1,0 +1,60 @@
+name 'pl-aif1-js-practice-rubric'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>A Student Reactive Logic Project</h1>
+
+<p>Before practicing with the rubric, take a look at an actual student submission: a small app called Mood Playlist Picker. A user picks a mood, and the app shows a matching playlist and background color.</p>
+
+<div style="background-color: #FFF8EF; border: 1px solid #F0DCC4; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p style="font-weight: 700; color: #8A4B00; margin-bottom: 8px;">STUDENT'S PSEUDOCODE</p>
+<div style="font-family: 'Courier New', monospace; font-size: 14px; color: #5C3A00; line-height: 1.8;">
+START<br>
+Ask user to pick a mood (happy, chill, sad)<br>
+IF mood is happy<br>
+&nbsp;&nbsp;show upbeat playlist<br>
+IF mood is chill<br>
+&nbsp;&nbsp;show lofi playlist<br>
+END
+</div>
+</div>
+
+<div style="background-color: #2B2745; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p style="font-weight: 700; color: #ACA8EA; margin-bottom: 8px; font-family: system-ui;">STUDENT'S CODE (script.js)</p>
+<div style="font-family: 'Courier New', monospace; font-size: 13px; color: #E4E2F8; line-height: 1.8;">
+let mood = "";<br><br>
+function showPlaylist() {<br>
+&nbsp;&nbsp;if (mood === "happy") {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;playlistText.textContent = "Upbeat Anthems";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document.body.style.backgroundColor = "#FFE3CE";<br>
+&nbsp;&nbsp;} else if (mood === "chill") {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;playlistText.textContent = "Lo-Fi Focus";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document.body.style.backgroundColor = "#D5EFFF";<br>
+&nbsp;&nbsp;} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;playlistText.textContent = "Rainy Day Ballads";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document.body.style.backgroundColor = "#CBD6E3";<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+happyButton.addEventListener("click", () =&gt; { mood = "happy"; showPlaylist(); });<br>
+chillButton.addEventListener("click", () =&gt; { mood = "chill"; showPlaylist(); });<br>
+sadButton.addEventListener("click", () =&gt; { mood = "sad"; showPlaylist(); });
+</div>
+</div>
+
+<div style="background-color: #FFF8EF; border: 1px solid #F0DCC4; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p style="font-weight: 700; color: #8A4B00; margin-bottom: 8px;">STUDENT'S REFLECTION</p>
+<p style="color: #5C3A00; font-style: italic;">"For this project I used AI to help me write the if/else code because I wasn't sure how to make the background color change. It worked pretty well after I told it what colors I wanted. I think my app turned out okay."</p>
+</div>
+
+---
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/mood-playlist-picker.html" width="100%" height="820" style="border:none;" title="sample student project for a mood playlist picker"></iframe>
+</div>
+
+
+
+---
+
+<p>On the next level, you'll grade this exact project against all five rubric rows.</p>
+MARKDOWN
