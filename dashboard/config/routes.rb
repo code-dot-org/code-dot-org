@@ -1494,6 +1494,9 @@ Dashboard::Application.routes.draw do
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
     resources :practice_problems, only: [:index, :show]
 
+    resources :quiz_attempts, only: [:create, :update]
+    resources :quiz_question_responses, only: [:create]
+
     resources :challenges, only: [:index, :show]
     resources :challenge_responses, only: [:create, :show] do
       member do
