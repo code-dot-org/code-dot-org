@@ -77,6 +77,15 @@ def test_too_many_pauses_raises():
     render(_paused_scene(MAX_FRAMES).get_actions())
 
 
+def test_frame_ceiling_is_checked_before_drawing():
+  # A malformed shape raises from the drawing pass, so getting the frame-count
+  # error instead proves nothing was drawn first.
+  scene = _paused_scene(MAX_FRAMES)
+  scene.draw_shape([0, 0, 10], True)
+  with pytest.raises(TooManyFramesError):
+    render(scene.get_actions())
+
+
 def test_draw_image_accepts_float_geometry():
   # Ordinary student arithmetic like 400 / 2 yields floats, which Pillow's
   # resize and paste reject outright.

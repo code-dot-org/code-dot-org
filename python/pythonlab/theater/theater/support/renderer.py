@@ -27,29 +27,48 @@ def render(actions):
   """Execute a scene's action list into gif bytes.
 
   Drawing accumulates on a single canvas and each pause snapshots a gif frame.
-  Snapshots convert to RGB immediately: the canvas needs an alpha channel for
-  compositing, but the frames only have to survive until the gif is encoded,
-  and holding them as RGBA costs a third more memory per frame.
+  """
+  durations = _frame_durations(actions)
+  if len(durations) > MAX_FRAMES:
+    raise TooManyFramesError(
+      f"The animation has too many frames; the limit is {MAX_FRAMES}"
+    )
+  return _encode_gif(_iter_frames(actions), durations)
+
+
+def _frame_durations(actions):
+  """Frame delays in milliseconds, ending with the closing frame's zero.
+
+  Delays depend only on the pauses, never on the drawing, so the whole list
+  can be built up front. That is what lets the frame ceiling turn a scene away
+  before any drawing is done.
+  """
+  durations = [
+    int(round(max(action.seconds, MIN_PAUSE_SECONDS) * 1000))
+    for action in actions
+    if action.type is SceneActionType.PAUSE
+  ]
+  # Final frame with no trailing delay.
+  durations.append(0)
+  return durations
+
+
+def _iter_frames(actions):
+  """Yield each gif frame in turn, as RGB.
+
+  Yielding rather than collecting leaves one frame alive at a time on this
+  side; Pillow still holds a palette copy of every frame while it encodes.
+  The canvas itself stays RGBA, since compositing needs the alpha channel.
   """
   canvas = PILImage.new("RGBA", (THEATER_WIDTH, THEATER_HEIGHT), (255, 255, 255, 255))
   draw = ImageDraw.Draw(canvas, "RGBA")
-
-  frames = []
-  durations = []
 
   for action in actions:
     kind = action.type
     if kind is SceneActionType.CLEAR_SCENE:
       _clear(canvas, action.color)
     elif kind is SceneActionType.PAUSE:
-      # Refuse before allocating, and leave room for the closing frame.
-      if len(frames) >= MAX_FRAMES - 1:
-        raise TooManyFramesError(
-          f"The animation has too many frames; the limit is {MAX_FRAMES}"
-        )
-      seconds = max(action.seconds, MIN_PAUSE_SECONDS)
-      frames.append(canvas.convert("RGB"))
-      durations.append(int(round(seconds * 1000)))
+      yield canvas.convert("RGB")
     elif kind is SceneActionType.DRAW_IMAGE:
       _draw_image(canvas, action)
     elif kind is SceneActionType.DRAW_TEXT:
@@ -79,11 +98,7 @@ def render(actions):
         width=_stroke(action.stroke_width),
       )
 
-  # Final frame with no trailing delay.
-  frames.append(canvas.convert("RGB"))
-  durations.append(0)
-
-  return _encode_gif(frames, durations)
+  yield canvas.convert("RGB")
 
 
 def _clear(canvas, color):
@@ -168,12 +183,16 @@ def _draw_shape(draw, action):
 
 
 def _encode_gif(frames, durations):
+  """Encode an iterator of RGB frames. Pillow pulls from append_images lazily,
+  so the frames are drawn one at a time rather than all up front.
+  """
+  first = next(frames)
   buffer = io.BytesIO()
-  frames[0].save(
+  first.save(
     buffer,
     format="GIF",
     save_all=True,
-    append_images=frames[1:],
+    append_images=frames,
     duration=durations,
     disposal=1,
   )
