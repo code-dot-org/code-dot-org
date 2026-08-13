@@ -270,6 +270,7 @@ jobs:
   # Until this runs, only the arch-suffixed tags exist, so an incomplete
   # publish is visible as such instead of serving one architecture under
   # the final name.
+  # See: https://docs.docker.com/build/ci/github-actions/multi-platform/#distribute-build-across-multiple-runners
   merge:
     name: merge per-arch images into one manifest
     if: github.event_name != 'pull_request'

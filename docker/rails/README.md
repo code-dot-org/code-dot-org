@@ -194,9 +194,7 @@ when you add something the running app reads from disk.
 ## Published image
 
 `ghcr.io/code-dot-org/cdo-rails`, a multi-platform manifest over amd64 and
-arm64. Each architecture builds natively in CI, and a merge job puts the
-pair (`git-<sha>-amd64`, `git-<sha>-arm64`) under each tag — the cdo-base
-pattern.
+arm64, built natively per architecture and merged — the cdo-base pattern.
 
 | tag | published from | meaning |
 |---|---|---|
@@ -211,12 +209,10 @@ commit, so most shas never get a tag. Do not treat the tag set as a per-commit
 contract.
 
 `.github/workflows/cdo-rails-image.yml` runs the smoke matrix on docker and
-podman and boots the image through `verify.sh` on every PR that can change
-the image. It is not triggered by source changes — only by changes to this
-directory, to the key action, or to the workflow, plus the chain from
-`cdo-deps-image` and manual dispatch. On a publish run those jobs do not
-repeat: each per-arch publish job runs both suites against the bytes it
-pushes, which is the gate that counts.
+podman, boots the image through `verify.sh`, and publishes from staging. It
+is not triggered by source changes — only by changes to this directory, to
+the key action, or to the workflow, plus the chain from `cdo-deps-image` and
+manual dispatch.
 
 The workflow resolves `cdo-deps` by the content key its own checkout implies
 and fails, loudly, if no such layer has been published. Rebase onto the staging

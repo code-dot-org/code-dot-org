@@ -179,12 +179,6 @@ and every job in it builds cdo-build and runs this smoke test before building
 the gem layer, on both docker and podman. A separate workflow would build the
 same image twice per PR to assert the same contract.
 
-The consequence of not being published is that there is no publish leg to
-gate. The architecture coverage comes from the deps workflow instead: it
-builds this image natively on amd64 and arm64 runners (see
-[docker/deps/README.md](../deps/README.md)), so both architectures of
-cdo-build are proven in CI even though only its output ships.
-
 The deps workflow doubles as this image's canary. It is chained off
 `cdo-base-image` by `workflow_run`, so every successful base publish — including
 the weekly cron rebuild — rebuilds and smoke-tests this toolchain against the

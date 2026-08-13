@@ -156,23 +156,18 @@ Published as `ghcr.io/code-dot-org/cdo-deps`.
 | `dev-<sha>` | other branches | manual dispatch |
 | `git-<sha>-amd64`, `git-<sha>-arm64` | any publish run | per-arch inputs to the merge job; not for consumers |
 
-Each tag is a multi-platform manifest over amd64 and arm64: the lockfile
-names both `x86_64-linux` and `aarch64-linux`, each architecture builds
-natively in CI, and a merge job puts the per-arch pushes (`git-<sha>-amd64`,
-`git-<sha>-arm64`) under the final name — the cdo-base pattern. Pin by digest: resolve
+Each tag is a multi-platform manifest over amd64 and arm64, built natively
+per architecture and merged — the cdo-base pattern. Pin by digest: resolve
 the `bundle-<hash>` tag to a digest once and give the same digest to every
 build in a pipeline, so a builder stage and a final stage cannot land on
-different bytes. (The manifest-list digest is the pin; each platform
-resolves its own image through it.)
+different bytes. Each platform resolves its own image through that digest.
 
 `.github/workflows/cdo-deps-image.yml` builds and smoke-tests on docker and
-podman, on amd64 and arm64, for every PR touching the key inputs. It also
-gates `docker/build`, since every job there builds `cdo-build` anyway. On a
-publish run the smoke matrix does not repeat: each per-arch publish job runs
-the same suites against the bytes it pushes, which is the gate that counts.
-The workflow is chained off `cdo-base-image` rather than scheduled, so this
-layer rebuilds on the base that just shipped and a failed base rebuilds
-nothing.
+podman, on amd64 and arm64, for every PR touching the key inputs, and
+publishes from staging. It also gates `docker/build`, since every job there
+builds `cdo-build` anyway. The workflow is chained off `cdo-base-image`
+rather than scheduled, so this layer rebuilds on the base that just shipped
+and a failed base rebuilds nothing.
 
 ## Things that will bite
 
@@ -195,10 +190,7 @@ flags. `COPY --chown` cannot read environment inherited from a parent image —
 it expands only same-stage ARGs — which is why the uid/gid 1000 pair is
 written literally.
 
-**Cross-building under qemu is unreliable.** An emulated `bundle install`
-fails in ways that do not repeat — g++ segfaults on the large C++ extensions
-(libsass), dpkg maintainer-script errors — and whether it fails at all
-depends on the qemu build registered in binfmt and on the engine driving it.
-That is why the workflow builds each architecture on its own native runner.
-For a local arm64 image, prefer native hardware, and treat an emulated build
-as best-effort.
+**Cross-building under qemu is unreliable.** Emulated `bundle install`
+fails erratically (g++ segfaults on libsass, dpkg errors), varying with the
+binfmt qemu build and the engine. CI builds each architecture on a native
+runner; prefer native hardware locally too.
