@@ -74,29 +74,15 @@ def _iter_frames(actions):
     elif kind is SceneActionType.DRAW_TEXT:
       _draw_text(canvas, action)
     elif kind is SceneActionType.DRAW_LINE:
-      draw.line(
-        [action.start_x, action.start_y, action.end_x, action.end_y],
-        fill=_rgba(action.color),
-        width=_stroke(action.stroke_width),
-      )
+      _draw_line(draw, action)
     elif kind is SceneActionType.DRAW_POLYGON:
       _draw_regular_polygon(draw, action)
     elif kind is SceneActionType.DRAW_SHAPE:
       _draw_shape(draw, action)
     elif kind is SceneActionType.DRAW_ELLIPSE:
-      draw.ellipse(
-        [action.x, action.y, action.x + action.width, action.y + action.height],
-        fill=_rgba(action.fill_color),
-        outline=_rgba(action.stroke_color),
-        width=_stroke(action.stroke_width),
-      )
+      _draw_ellipse(draw, action)
     elif kind is SceneActionType.DRAW_RECTANGLE:
-      draw.rectangle(
-        [action.x, action.y, action.x + action.width, action.y + action.height],
-        fill=_rgba(action.fill_color),
-        outline=_rgba(action.stroke_color),
-        width=_stroke(action.stroke_width),
-      )
+      _draw_rectangle(draw, action)
 
   yield canvas.convert("RGB")
 
@@ -145,6 +131,40 @@ def _draw_text(canvas, action):
     -action.rotation, center=(action.x, action.y), resample=PILImage.BICUBIC
   )
   canvas.alpha_composite(layer)
+
+
+def _draw_line(draw, action):
+  # Pillow falls back to its default ink, opaque white, when it is handed no
+  # color at all, so a removed color has to skip the call rather than pass None.
+  if action.color is None:
+    return
+  draw.line(
+    [action.start_x, action.start_y, action.end_x, action.end_y],
+    fill=_rgba(action.color),
+    width=_stroke(action.stroke_width),
+  )
+
+
+def _draw_ellipse(draw, action):
+  if action.stroke_color is None and action.fill_color is None:
+    return
+  draw.ellipse(
+    [action.x, action.y, action.x + action.width, action.y + action.height],
+    fill=_rgba(action.fill_color),
+    outline=_rgba(action.stroke_color),
+    width=_stroke(action.stroke_width),
+  )
+
+
+def _draw_rectangle(draw, action):
+  if action.stroke_color is None and action.fill_color is None:
+    return
+  draw.rectangle(
+    [action.x, action.y, action.x + action.width, action.y + action.height],
+    fill=_rgba(action.fill_color),
+    outline=_rgba(action.stroke_color),
+    width=_stroke(action.stroke_width),
+  )
 
 
 def _draw_regular_polygon(draw, action):

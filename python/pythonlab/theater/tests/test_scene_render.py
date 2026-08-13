@@ -86,6 +86,35 @@ def test_frame_ceiling_is_checked_before_drawing():
     render(scene.get_actions())
 
 
+def test_removed_colors_draw_nothing():
+  # Pillow's default ink is opaque white, so handing it no color at all draws a
+  # white shape rather than nothing. Clearing to blue makes that visible.
+  blue = (0, 0, 255)
+  scene = Scene()
+  scene.clear("blue")
+  scene.remove_stroke_color()
+  scene.remove_fill_color()
+  scene.draw_line(0, 10, THEATER_WIDTH, 10)
+  scene.draw_rectangle(50, 50, 100, 100)
+  scene.draw_ellipse(50, 200, 100, 100)
+  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  # A point on the line, on the rectangle's edge, and inside the ellipse.
+  assert frame.getpixel((100, 10)) == blue
+  assert frame.getpixel((50, 50)) == blue
+  assert frame.getpixel((100, 250)) == blue
+
+
+def test_stroke_only_shapes_keep_their_interior():
+  scene = Scene()
+  scene.clear("blue")
+  scene.set_stroke_color("red")
+  scene.remove_fill_color()
+  scene.draw_rectangle(50, 50, 100, 100)
+  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  assert frame.getpixel((50, 50)) == (255, 0, 0)
+  assert frame.getpixel((100, 100)) == (0, 0, 255)
+
+
 def test_draw_image_accepts_float_geometry():
   # Ordinary student arithmetic like 400 / 2 yields floats, which Pillow's
   # resize and paste reject outright.
