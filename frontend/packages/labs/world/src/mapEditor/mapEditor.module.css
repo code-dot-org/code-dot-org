@@ -220,6 +220,37 @@
   gap: 0.5rem;
 }
 
+/* A colour property: the swatch, then the hex it wrote. The swatch is a fixed
+   square and the field takes the rest, so the row lines up with the labelled
+   fields above and below it whatever the panel's width. */
+.inspectorColor {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+/* The browser's own colour input, made to look like it belongs: the design
+   system has no colour component, so this borrows its border and radius rather
+   than inventing a second look for the same idea.
+   The swatch is a SQUARE, which is why `.inspector input` above excludes it —
+   that rule stretches every field to the panel, and a colour input stretched
+   to the panel is a stripe of paint where a swatch should be. */
+.swatch {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: none;
+  padding: 2px;
+  border: 1px solid var(--border-neutral, #ccc);
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+}
+
+.swatch:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
 /* One trait's property fields, inside its accordion panel. */
 .inspectorGroup {
   display: flex;
@@ -260,7 +291,7 @@
   min-width: 0;
 }
 
-.inspector input:not([type='checkbox']) {
+.inspector input:not([type='checkbox'], [type='color']) {
   box-sizing: border-box;
   width: 100%;
   min-width: 0;

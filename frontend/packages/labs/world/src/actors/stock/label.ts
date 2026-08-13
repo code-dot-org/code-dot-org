@@ -27,7 +27,7 @@ const HEIGHT = 24;
 export const labelActor = actorFile(
   'Label',
   [
-    useTrait('Text#ShowsTextTrait'),
+    useTrait('Writing#ShowsTextTrait'),
     // A default, so a Label dragged onto a map is visible before anybody has
     // typed anything into it — and so the picker has a picture to show.
     setText('TextProperty', words('Label')),

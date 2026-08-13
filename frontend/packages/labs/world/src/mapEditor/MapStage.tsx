@@ -482,7 +482,7 @@ export const MapStage = ({
   const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
   // Render one property's editor by type: number/string → a field, vector → an
-  // X/Y pair, boolean → a checkbox.
+  // X/Y pair, boolean → a checkbox, color → a swatch and a hex field.
   const renderProp = (actor: Placement, prop: PropertySchema) => {
     if (prop.type === 'boolean') {
       return (
@@ -516,6 +516,46 @@ export const MapStage = ({
             selectOption(prop, event.target.value)
           }
         />
+      );
+    }
+    if (prop.type === 'color') {
+      // NOT A DESIGN-SYSTEM COMPONENT, because there is not one: the library
+      // has no colour input, and `TextField`'s `inputType` does not admit
+      // `color`. So this is the browser's swatch beside an ordinary field —
+      // the swatch for picking, the field for pasting a hex somebody was
+      // given, and both writing the same `#rrggbb` the engine and every colour
+      // block already speak (engine/core/color).
+      const typed = draft[fieldKey(prop)] ?? '';
+      return (
+        <div key={fieldKey(prop)} className={styles.inspectorColor}>
+          <input
+            type="color"
+            className={styles.swatch}
+            name={`prop-${fieldKey(prop)}-swatch`}
+            aria-label={capitalize(prop.name)}
+            // The picker can only show a full six-digit hex. A value it cannot
+            // parse would silently become black, so it shows white and the
+            // field beside it still holds what is really stored.
+            value={/^#[0-9a-fA-F]{6}$/.test(typed) ? typed : '#ffffff'}
+            disabled={isReadOnly}
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              editScalar(prop, event.target.value)
+            }
+            onBlur={commitEdit}
+          />
+          <TextField
+            name={`prop-${fieldKey(prop)}`}
+            label={capitalize(prop.name)}
+            size="s"
+            value={typed}
+            disabled={isReadOnly}
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              editScalar(prop, event.target.value)
+            }
+            onBlur={commitEdit}
+            onKeyDown={blurOnEnter}
+          />
+        </div>
       );
     }
     if (prop.type === 'vector' || prop.type === 'point') {

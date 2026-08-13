@@ -1,9 +1,16 @@
 import {defineRule, moduleFor} from './dsl.mjs';
 
 const rule = defineRule({
-  name: 'Text',
+  name: 'Writing',
   ability: 'Shows Text',
   header: `// "Shows Text" — the state a drawn word is drawn from.
+//
+// NAMED "Writing" AND NOT "Text". A rule's name is its toolbox category, and
+// the toolbox already has a Text category — Blockly's, holding the string
+// literal and the note block. Two categories with one name is a toolbox a
+// learner has to read twice, so the rule takes the mechanic's name the way
+// Physics, Collection and Shooting do, and leaves the word "text" to the
+// property it is about.
 //
 // A RULE WITH NO STEPS, which nothing else here is. Nothing about text happens
 // over time: this declares what an actor's words are and leaves the drawing to
@@ -29,12 +36,14 @@ shows.string('text', '');
 // Pixels, like every other size in the lab (engine/core/units): positions and
 // sizes are pixels and only RATES are in units.
 shows.number('text size', 12);
-// `#rrggbb`, the spelling every colour block a learner meets produces
-// (engine/core/color), so a swatch and this fit the same socket.
-shows.string('text color', '#ffffff');
+// A COLOUR, not a string that happens to hold one. What the type buys is the
+// two places that ask what a property is: `get text color` reports `Colour`, so
+// it plugs into `set fill` and into an effect's parameter; and the map editor's
+// inspector draws a swatch rather than six characters to type by hand.
+shows.color('text color', '#ffffff');
 // Which part of the word sits where it is drawn. The one property here whose
 // absence reads as a bug: a score anchored left grows to the right and off the
 // screen, and the same score anchored right stays where it was put.
 shows.string('text anchor', 'centre');
 
-export default () => moduleFor(rule, 'text');
+export default () => moduleFor(rule, 'writing');

@@ -449,6 +449,10 @@ export const PROPERTY_TYPES: ReadonlySet<string> = new Set([
   'number',
   'boolean',
   'string',
+  // Held as a string (`#rrggbb`) and asked about as its own kind: a colour
+  // socket takes a swatch, and the map editor's inspector shows a picker
+  // (engine/core/types).
+  'color',
   'vector',
   'point',
   // What a rule works out about who is where (specs/COLLISION.md). Not offered
@@ -483,6 +487,7 @@ export const parseDefault = (text: string, type: PropertyType): unknown => {
     case 'boolean':
       return text.trim().toLowerCase() === 'true';
     case 'string':
+    case 'color':
       return text;
     case 'vector':
     case 'point': {
@@ -1158,6 +1163,7 @@ const defaultLiteral = (property: PropertyMeta): string => {
     case 'boolean':
       return value ? 'true' : 'false';
     case 'string':
+    case 'color':
       return JSON.stringify(String(value ?? ''));
     case 'vector':
     case 'point': {

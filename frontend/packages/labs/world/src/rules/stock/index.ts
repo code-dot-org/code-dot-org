@@ -28,8 +28,8 @@ import {motionRule} from './motion';
 import {mouseRule} from './mouse';
 import {shootsRule} from './shoots';
 import {solidRule} from './solid';
-import {textRule} from './text';
 import {wrapRule} from './wrap';
+import {writingRule} from './writing';
 
 /** One entry in the library. */
 export interface StockRule {
@@ -104,13 +104,13 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: collectRule,
   },
   {
-    id: 'text',
-    name: 'Text',
+    id: 'writing',
+    name: 'Writing',
     ability: 'Shows Text',
     description:
       'Gives an actor words, a size, a color and an anchor — the state a drawn word is drawn from. It runs nothing: what an actor does with its words is its own “define drawing”, which is why the stock Label and Button are ordinary actors.',
     provides: ['Shows Text'],
-    contents: textRule,
+    contents: writingRule,
   },
   {
     id: 'input',

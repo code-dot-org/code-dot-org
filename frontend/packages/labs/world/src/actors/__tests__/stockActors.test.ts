@@ -69,17 +69,17 @@ describe('Label', () => {
     // writable actor-scoped property a trait declares.
     const drawn = types(labelActor);
 
-    expect(drawn).toContain('world_get_Text_TextProperty');
-    expect(drawn).toContain('world_get_Text_TextSizeProperty');
-    expect(drawn).toContain('world_get_Text_TextColorProperty');
-    expect(drawn).toContain('world_get_Text_TextAnchorProperty');
+    expect(drawn).toContain('world_get_Writing_TextProperty');
+    expect(drawn).toContain('world_get_Writing_TextSizeProperty');
+    expect(drawn).toContain('world_get_Writing_TextColorProperty');
+    expect(drawn).toContain('world_get_Writing_TextAnchorProperty');
     expect(drawn.filter(type => type === 'world_draw_text')).toHaveLength(1);
   });
 
   it('arrives with something to show', () => {
     // A Label dragged onto a map is visible before anybody types into it — and
     // the picker has a picture rather than a blank.
-    expect(labelActor).toContain('world_set_Text_TextProperty');
+    expect(labelActor).toContain('world_set_Writing_TextProperty');
     expect(labelActor).toContain('"TEXT": "Label"');
   });
 });
@@ -89,7 +89,7 @@ describe('Button', () => {
     // The demonstration that an interface actor is an actor: the click, the
     // words and the picture are three things that already existed, and a button
     // is what happens when they are in one file.
-    expect(buttonActor).toContain('Text#ShowsTextTrait');
+    expect(buttonActor).toContain('Writing#ShowsTextTrait');
     expect(buttonActor).toContain('Mouse#CanBeClickedTrait');
     expect(types(buttonActor)).toContain('world_draw_text');
   });

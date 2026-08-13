@@ -57,9 +57,9 @@ describe('importStockActor', () => {
   it('brings the rules whose traits it elects', () => {
     const {source} = importStockActor(project(), button);
 
-    expect(named(source, 'text.rule')).toBeDefined();
+    expect(named(source, 'writing.rule')).toBeDefined();
     expect(named(source, 'mouse.rule')).toBeDefined();
-    expect(named(source, 'text.rule')?.folderId).toBe('rules');
+    expect(named(source, 'writing.rule')?.folderId).toBe('rules');
   });
 
   it('brings those rules’ own dependencies too', () => {
@@ -97,10 +97,10 @@ describe('importStockActor', () => {
   });
 
   it('leaves an already-imported rule alone as well', () => {
-    const mine = project({f1: {name: 'text.rule', folderId: 'rules'}});
+    const mine = project({f1: {name: 'writing.rule', folderId: 'rules'}});
     const {source} = importStockActor(mine, label);
 
-    expect(named(source, 'text.rule')?.contents).toBe('{}');
+    expect(named(source, 'writing.rule')?.contents).toBe('{}');
   });
 });
 

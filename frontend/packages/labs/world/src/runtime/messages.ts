@@ -200,7 +200,7 @@ export interface PropertySchema {
   propId: string;
   /** Localizable label. */
   name: string;
-  type: 'number' | 'boolean' | 'string' | 'vector' | 'point';
+  type: 'number' | 'boolean' | 'string' | 'color' | 'vector' | 'point';
   /** Default value; a vector/point is `{x, y}`. */
   default: unknown;
   /**
