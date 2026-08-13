@@ -1,6 +1,20 @@
 /**
  * Localization for the effect editor.
  *
+ * FOR THE EFFECT EDITOR, AND NOTHING ELSE. It is not the lab's way of
+ * translating things; it is the way ONE editor has to, and the difference is
+ * the container. The graph canvas carries `data-notranslate="true"` — React
+ * Flow measures and positions its own nodes, and a DOM engine rewriting their
+ * text underneath it moves the wires — so the page's translation is switched
+ * off in there and the editor does the job by hand instead.
+ *
+ * Everywhere else in the lab, English is written into the DOM as English and
+ * the page translates it where it finds it. A dialog that called this would be
+ * translating a string and then handing it to something that would have
+ * translated it anyway. What the rest of the lab marks instead is the dynamic
+ * half — a file name, a rule's name — with `data-notranslate` on the span it
+ * interpolates into, because those are the project's words and not phrases.
+ *
  * The whole editor calls `translate` from here rather than the mainline
  * singleton directly, because a translated template still has to have its
  * `{name}` placeholders filled in — and doing that *after* translation is what

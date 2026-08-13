@@ -18,8 +18,6 @@
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 import {addMiniToolbox} from '@code-dot-org/blockly/fields/miniToolbox';
 
-import {translate} from '../../effect/localization';
-
 export const EVENT_ACTOR_TOOLBOX_EXTENSION = 'world_event_actor_toolbox';
 
 export const eventActorToolboxExtension: Extension = defineExtension(
@@ -28,7 +26,7 @@ export const eventActorToolboxExtension: Extension = defineExtension(
     extension() {
       addMiniToolbox(this, {
         blocks: ['world_event_actor'],
-        tooltip: translate('The actor this event is about'),
+        tooltip: 'The actor this event is about',
       });
     },
   },
