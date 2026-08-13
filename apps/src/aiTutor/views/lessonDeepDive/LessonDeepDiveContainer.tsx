@@ -1,3 +1,10 @@
+import {
+  LevelsAttemptedBox,
+  PersonalizedWelcomeBox,
+  TimeSpentBox,
+  ValidatedLevelsBox,
+  WelcomeBox,
+} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
@@ -6,18 +13,13 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import FizzyButton from './FizzyButton';
-import PersonalizedWelcomeBox from './PersonalizedWelcomeBox';
 import PreReviewBox from './PreReviewBox';
 import PreSkillsCheck from './PreSkillsCheck';
 import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
-import LevelsAttemptedBox from './StudentLessonStats/LevelsAttemptedBox';
-import TimeSpentBox from './StudentLessonStats/TimeSpentBox';
-import ValidatedLevelsBox from './StudentLessonStats/ValidatedLevelsBox';
 import TutorSummaryBox from './TutorSummaryBox';
 import {LessonDeepDiveData, ReflectionData, ReflectionValue} from './types';
-import WelcomeBox from './WelcomeBox';
 
 import styles from './lesson-deep-dive-container.module.scss';
 

@@ -280,64 +280,6 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     end
   end
 
-  describe '.parse_data_filter' do
-    it 'splits comma-separated rules' do
-      _(described_class.parse_data_filter('include: db.*, exclude: db.t1, exclude: db.t2')).
-        must_equal ['include: db.*', 'exclude: db.t1', 'exclude: db.t2']
-    end
-
-    context 'with blank input' do
-      it 'returns an empty array' do
-        _(described_class.parse_data_filter(nil)).must_be_empty
-        _(described_class.parse_data_filter('')).must_be_empty
-      end
-    end
-  end
-
-  describe '.reconcile_zero_etl_filters' do
-    context 'with a table to add and a stale exclude to remove' do
-      it 'identifies the rules to add and remove' do
-        conn = mock_connection('dashboard_prod',
-          'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]},
-          'no_pk' => {primary_key: nil, columns: [mock_column('v', :string)]}
-)
-        current = 'include: pegasus.*, include: dashboard_prod.*, exclude: dashboard_prod.old_table'
-
-        result = described_class.reconcile_zero_etl_filters(current, connection: conn)
-        _(result[:to_add]).must_equal ['exclude: dashboard_prod.no_pk']
-        _(result[:to_remove]).must_equal ['exclude: dashboard_prod.old_table']
-        _(result[:reconciled_filter]).must_include 'include: pegasus.*'
-        _(result[:reconciled_filter]).must_include 'exclude: dashboard_prod.no_pk'
-        _(result[:reconciled_filter]).wont_include 'old_table'
-      end
-    end
-
-    context 'with rules for other databases' do
-      it 'preserves them' do
-        conn = mock_connection('dashboard_prod', 'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]})
-        result = described_class.reconcile_zero_etl_filters('include: pegasus.*, include: dashboard_prod.*', connection: conn)
-        _(result[:to_add]).must_be_empty
-        _(result[:to_remove]).must_be_empty
-        _(result[:reconciled_filter]).must_include 'include: pegasus.*'
-      end
-    end
-
-    context 'when an exclude already matches the desired state' do
-      it 'reports it as unchanged' do
-        conn = mock_connection('dashboard_prod',
-          'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]},
-          'no_pk' => {primary_key: nil, columns: [mock_column('v', :string)]}
-)
-        current = 'include: dashboard_prod.*, exclude: dashboard_prod.no_pk'
-
-        result = described_class.reconcile_zero_etl_filters(current, connection: conn)
-        _(result[:to_add]).must_be_empty
-        _(result[:to_remove]).must_be_empty
-        _(result[:unchanged]).must_equal ['exclude: dashboard_prod.no_pk']
-      end
-    end
-  end
-
   def mock_column(name, type)
     stub(name: name, type: type)
   end

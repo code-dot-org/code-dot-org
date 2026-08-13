@@ -284,8 +284,10 @@ FROM base AS code-dot-org-activejob-only
 
 ARG BUNDLE_WITHOUT=development:test
 
-# Rails loads uglifier/execjs on boot, but this target has no Node and may
-# exclude mini_racer via BUNDLE_WITHOUT. Assets are built before runtime.
+# execjs remains in the bundle as a transitive dependency (bootstrap-sass ->
+# autoprefixer-rails). Nothing requires it today, but it raises at require
+# time when no JS runtime exists, and this stage has no Node. Disabled keeps
+# an accidental require boot-safe; actual JS evaluation still fails loudly.
 ENV \
   BUNDLE_DEPLOYMENT=1 \
   BUNDLE_WITHOUT=${BUNDLE_WITHOUT} \
@@ -325,8 +327,10 @@ FROM base AS runtime
 
 ARG BUNDLE_WITHOUT=development:test
 
-# Rails loads uglifier/execjs on boot, but runtime has no Node and may exclude
-# mini_racer via BUNDLE_WITHOUT. Assets are built before runtime.
+# execjs remains in the bundle as a transitive dependency (bootstrap-sass ->
+# autoprefixer-rails). Nothing requires it today, but it raises at require
+# time when no JS runtime exists, and this stage has no Node. Disabled keeps
+# an accidental require boot-safe; actual JS evaluation still fails loudly.
 ENV \
   BUNDLE_DEPLOYMENT=1 \
   BUNDLE_WITHOUT=${BUNDLE_WITHOUT} \

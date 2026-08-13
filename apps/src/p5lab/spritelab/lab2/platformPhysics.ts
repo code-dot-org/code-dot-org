@@ -67,25 +67,75 @@ interface View {
   height: number;
 }
 
+// Generated block art is keyed and cropped, so a tile's image can come up
+// a few pixels short of square. Collision treats every wall as covering
+// its full cell — a square on the image's longest side — so rows stay
+// flush and seams stay closed no matter how the art cropped. Only
+// collision squares up; the drawn sprite keeps the art's real aspect.
+function wallHalf(wall: PhysicsBox): number {
+  return (Math.max(wall.width, wall.height) * wall.scale) / 2;
+}
+
+// The feet-anchored solid body of a player sprite (see PLAYER_BODY_SCALE):
+// `drop` is the body center's offset below the image center.
+function playerBody(sprite: PhysicsSprite) {
+  const imgHalfW = (sprite.width * sprite.scale) / 2;
+  const imgHalfH = (sprite.height * sprite.scale) / 2;
+  const halfW = imgHalfW * PLAYER_BODY_SCALE;
+  const halfH = imgHalfH * PLAYER_BODY_SCALE;
+  return {imgHalfW, halfW, halfH, drop: imgHalfH - halfH};
+}
+
+function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {
+  return walls.map(wall => ({
+    ...wall,
+    position: {x: wall.position.x, y: view.height - wall.position.y},
+  }));
+}
+
+// Flip a sprite's vertical state across the view's horizontal midline (see
+// the negative-gravity branch below).
+function flipSpriteY(sprite: PhysicsSprite, view: View): void {
+  sprite.position.y = view.height - sprite.position.y;
+  sprite.velocity.y = -sprite.velocity.y;
+  if (sprite.__slab2Prev) {
+    sprite.__slab2Prev.y = view.height - sprite.__slab2Prev.y;
+  }
+}
+
 export function resolvePlatformPhysics(
   moved: MovedPlayer[],
   walls: PhysicsBox[],
-  view: View
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
 ) {
+  // Negative gravity (the "set gravity" block flipping the world): mirror
+  // everything vertically, resolve with the ordinary downward rules, and
+  // mirror back. Landing on block tops becomes landing on their undersides,
+  // and the floor rest becomes a ceiling rest, without a second copy of the
+  // resolution rules.
+  if (gravity < 0) {
+    moved.forEach(m => {
+      flipSpriteY(m.sprite, view);
+      m.y = view.height - m.y;
+    });
+    resolvePlatformPhysics(moved, flipWallsY(walls, view), view, -gravity);
+    moved.forEach(m => {
+      flipSpriteY(m.sprite, view);
+      m.y = view.height - m.y;
+    });
+    return;
+  }
   const boxes = walls.map(wall => ({
     x: wall.position.x,
     y: wall.position.y,
-    halfW: (wall.width * wall.scale) / 2,
-    halfH: (wall.height * wall.scale) / 2,
+    halfW: wallHalf(wall),
+    halfH: wallHalf(wall),
   }));
   moved.forEach(({sprite, x: curX, y: curY}) => {
-    const imgHalfW = (sprite.width * sprite.scale) / 2;
-    const imgHalfH = (sprite.height * sprite.scale) / 2;
-    const halfW = imgHalfW * PLAYER_BODY_SCALE;
-    const halfH = imgHalfH * PLAYER_BODY_SCALE;
     // Resolution runs on the feet-anchored body box: y below is the BODY
     // center, `drop` below the sprite's image center.
-    const drop = imgHalfH - halfH;
+    const {imgHalfW, halfW, halfH, drop} = playerBody(sprite);
     const stored = sprite.__slab2Prev || {x: curX, y: curY};
     const prev = {x: stored.x, y: stored.y + drop};
     const dx = curX - prev.x;
@@ -174,7 +224,12 @@ export function resolvePlatformPhysics(
     boxes.forEach(wall => {
       const penX = halfW + wall.halfW - Math.abs(x - wall.x);
       const penY = halfH + wall.halfH - Math.abs(y - wall.y);
-      if (penX <= 0 || penY <= 0) {
+      // Contact-slack tolerance, not zero: resting feet recompute the
+      // resting overlap through different roundings, and fractional sprite
+      // sizes (real art is rarely a binary-exact height) leave a ±1e-14
+      // residue that a zero test reads as overlap — firing corner pushes
+      // off contact that is actually flush.
+      if (penX <= CONTACT_EPSILON || penY <= CONTACT_EPSILON) {
         return;
       }
       const crossed =
@@ -215,9 +270,43 @@ export function resolvePlatformPhysics(
     if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
       sprite.velocity.y = TERMINAL_FALL_SPEED;
     }
-    sprite.velocity.y += PLATFORM_GRAVITY;
+    sprite.velocity.y += gravity;
     sprite.position.x = x;
     sprite.position.y = y - drop;
     sprite.__slab2Prev = {x, y: y - drop};
+  });
+}
+
+/**
+ * Whether a player is standing on support in the gravity direction: a wall
+ * face within contact slack of the body's feet (or its head, under flipped
+ * gravity), or the view's floor (ceiling). Mirrors the resolver's footing
+ * geometry; the jump command asks this.
+ */
+export function isSupported(
+  sprite: PhysicsSprite,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  if (gravity < 0) {
+    const flipped: PhysicsSprite = {
+      ...sprite,
+      position: {x: sprite.position.x, y: view.height - sprite.position.y},
+      velocity: {x: sprite.velocity.x, y: -sprite.velocity.y},
+    };
+    return isSupported(flipped, flipWallsY(walls, view), view, -gravity);
+  }
+  const {halfW, halfH, drop} = playerBody(sprite);
+  const feet = sprite.position.y + drop + halfH;
+  if (feet >= view.height - CONTACT_EPSILON) {
+    return true;
+  }
+  return walls.some(wall => {
+    const top = wall.position.y - wallHalf(wall);
+    return (
+      Math.abs(feet - top) <= CONTACT_EPSILON &&
+      Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalf(wall)
+    );
   });
 }

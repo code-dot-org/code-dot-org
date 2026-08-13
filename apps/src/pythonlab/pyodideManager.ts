@@ -5,13 +5,14 @@ import {PyodideMessage} from './types';
 
 // Decides once, at load time, whether Python Lab runs the pyodide worker directly on
 // studio.code.org (today's default) or isolated in a hidden iframe on a separate
-// codeprojects.org subdomain (see apps/src/pythonlab/README.md). Loaded dynamically so
+// sandboxed-preview domain (see apps/src/pythonlab/README.md). Loaded dynamically so
 // only the selected implementation's module-scope startup work -- creating a real
 // Worker, or creating the sandbox iframe -- ever runs; statically importing both would
 // run both unconditionally regardless of the experiment.
-const usePyodideSandbox = experiments.isEnabledAllowingQueryString(
-  experiments.PYTHONLAB_SEPARATE_DOMAIN
-);
+const usePyodideSandbox =
+  experiments.isEnabledAllowingQueryString(
+    experiments.PYTHONLAB_SEPARATE_DOMAIN
+  ) || experiments.isEnabledAllowingQueryString(experiments.NEW_PREVIEW_DOMAIN);
 // TS wants an explicit extension on dynamic imports under our node16
 // moduleResolution, but these are .ts files, not .js -- webpack resolves the
 // extensionless specifier directly, so we suppress the checker here instead.
