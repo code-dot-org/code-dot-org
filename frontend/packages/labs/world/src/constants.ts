@@ -44,10 +44,10 @@ export const ENTRY_FILE = 'worlds/main.world';
 // reads three rows, rather than reading JavaScript they have not been taught.
 //
 // They were JS `ActorBuilder` modules until the blocks could say everything the
-// builders said. A project can still hold one — `rules/animation.js` is a JS
-// module and the compiler treats every module alike — but nothing in the
-// starter needs to be one to work, and a starter is read before it is
-// understood.
+// builders said. A project can still hold one — the compiler treats every
+// module alike, and `blockly/projectModules` scans `.js` and `.ts` beside the
+// block files — but nothing in the starter is one, and a starter is read before
+// it is understood.
 //
 // What none of them elects is being POSITIONED or having an APPEARANCE: every
 // actor has those (`ActorBuilder`'s foundation), so what a template lists is
@@ -223,17 +223,6 @@ const LEVEL1_MAP = JSON.stringify(
   null,
   2,
 );
-
-// The standard rules, shipped as project source under `rules/` rather than
-// referenced from the engine bundle. Each is a re-export shim of the built-in
-// rule — identical behavior and OBJECT IDENTITY (so an actor's `WorldLab.<Trait>`
-// still matches the rule the world runs), but authored in the project: the
-// world's `use rule` blocks import these, and a learner can later "eject" a shim
-// to a full `RuleBuilder` source to modify a mechanic. (Only the rules the world
-// names need a shim; their dependencies are pulled in transitively.)
-// Gravity, authored in Blockly rather than shimmed from the engine.
-export const ruleShim = (exportName: string): string =>
-  `export {${exportName} as default} from 'world-lab';\n`;
 
 // The world, authored in Blockly (`main.world`): a `world_world` root and the
 // map whose actors it places.
@@ -736,12 +725,6 @@ export const STARTER_SPEC: ProjectSpec = {
       name: 'collect.rule',
       language: 'rule',
       contents: collectRule,
-      folderId: 'rules',
-    },
-    animationRule: {
-      name: 'animation.js',
-      language: 'javascript',
-      contents: ruleShim('AnimationRule'),
       folderId: 'rules',
     },
     // A starter shader graph, so `effects/` is not an empty folder and the

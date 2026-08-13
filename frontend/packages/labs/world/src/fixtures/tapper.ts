@@ -32,7 +32,6 @@
 
 import {
   buildProject,
-  ruleShim,
   stack,
   starterSprites,
   useTrait,
@@ -358,12 +357,6 @@ export const TAPPER_SPEC: ProjectSpec = {
       name: 'mouse.rule',
       language: 'rule',
       contents: mouseRule,
-      folderId: 'rules',
-    },
-    animationRuleFile: {
-      name: 'animation.js',
-      language: 'javascript',
-      contents: ruleShim('AnimationRule'),
       folderId: 'rules',
     },
     ...starterSprites(['coin', 'switch']),

@@ -38,13 +38,7 @@
 // is a thing the lab cannot say yet or can only say awkwardly, which is the
 // other reason this scenario is worth keeping — it is the list.
 
-import {
-  ruleShim,
-  stack,
-  starterSprites,
-  useTrait,
-  type ProjectSpec,
-} from '../constants';
+import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
 import {
   arrowsRule,
   collectRule,
@@ -354,12 +348,6 @@ export const BREAKOUT_SUPPORT_FILES: ProjectSpec['files'] = {
     name: 'collect.rule',
     language: 'rule',
     contents: collectRule,
-    folderId: 'rules',
-  },
-  animationRuleFile: {
-    name: 'animation.js',
-    language: 'javascript',
-    contents: ruleShim('AnimationRule'),
     folderId: 'rules',
   },
   ...starterSprites(['ground', 'ball', 'box']),
