@@ -15,6 +15,11 @@ function readConfig(expression) {
   const out = execFileSync(process.execPath, ['-e', script], {
     cwd: path.resolve(__dirname, '../..'),
     encoding: 'utf8',
+    // Pin the configuration under test: the .tsx? swc rule exists only
+    // when RSPACK_SWC is truthy, so an ambient RSPACK_SWC=0 (set during
+    // exactly the bisects this variable is for) would otherwise turn
+    // the assertion into a TypeError on undefined.
+    env: {...process.env, RSPACK_SWC: 'all'},
   });
   return JSON.parse(out.match(/^RESULT=(.*)$/m)[1]);
 }
