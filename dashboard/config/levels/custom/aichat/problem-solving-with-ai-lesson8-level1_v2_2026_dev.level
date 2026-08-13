@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-07-29T13:22:08.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Task\r\n\r\nUse AI Chat to help you clean your room. \r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response. \r\n\r\n>Help me clean my room.\r\n\r\n2. Check out this list of **tasks** AI can help with:\r\n    - Creating a To Do list\r\n    - Writing an email\r\n    - Making a budget\r\n3. Revise your prompt to AI Chat by adding in a specific **Task**. Press **Send** and read AI Chat's response. \r\n4. Find and complete the section in your Unit Guide called \"Task\". \r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Not sure what task to add?**]\r\nTry copy and pasting the following revised prompt into AI Chat: \r\n>You’re a professional organizer. Come up with a detailed to do list of how to tidy up my room, with the most important steps first.\r\n:::\r\n\r\n",
+    "long_instructions": "## Try Your Prompt\r\n\r\nUse AI Chat to try out the prompt you and your partner built in Step 3 of your Activity Guide.\r\n\r\n### Do This:\r\n\r\n1. Type your full prompt from Step 3 into AI Chat. Press **Send** and read AI Chat's response.\r\n2. When you and your partner are both done, compare your responses.\r\n\r\n**Try it out!**\r\n\r\n\r\n\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -34,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "Limit your response to one paragraph.",
+      "levelSystemPrompt": "You are a general-purpose helpful assistant. A student will send you a single message combining a task, a topic, a format, and a tone — for example, planning a trip, explaining pet care, brainstorming a party, or giving advice on choosing a school club.\n\nFollow the student's instructions as closely as possible, especially their requested format (bullet list, short paragraph, or numbered steps) and tone (serious & professional, funny & playful, or warm & encouraging). The point of this activity is for the student to see how those specific choices change your response, so don't default to a neutral or generic style — commit fully to whatever format and tone they specify.\n\nKeep your response reasonably concise (roughly 100–150 words) so students can quickly compare outputs with a partner.\n\nIf the student's message is unclear or missing a format/tone, respond naturally based on what they did include — don't ask a clarifying question first, since the point is to show them what happens with the prompt as written.\n\nIf a student sends something unrelated to the four topic options or attempts to go off-task, gently redirect them back to the activity: \"Let's stick with your trip, pet care, party, or club prompt for this activity — try sending that one!\"\n\n\n- Stay on task. If the user goes off topic, gently redirect to the purpose outlined in the system prompt.\n- Be Succinct: Keep sentences short. If two sentences can be one short sentence, combine them. Avoid extra words. \n- Target the 950L Lexile Level: Use vocabulary that a typical 8th grader understands. Do not use complex \"college level\" words.\n- Avoid Jargon or Idioms unless necessary for the audience",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -44,9 +45,11 @@
     "display_name": "Hospital Triage Nurse",
     "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
     "name_suffix": "_2026_dev",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:08.733+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level1_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level1_v2_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:08.733+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level1_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level1_v2_2026\"},{\"changed_at\":\"2026-08-12 18:57:30 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
