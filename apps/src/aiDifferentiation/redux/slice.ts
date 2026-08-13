@@ -2,12 +2,12 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {registerReducers} from '@cdo/apps/redux';
 
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../../aiTeacherDrawer/predefinedPrompts';
 import {
   DEFAULT_THREAD_TITLE,
   ThreadTypeFields,
   THREAD_TYPES,
 } from '../constants';
-import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../../aiTeacherDrawer/predefinedPrompts';
 import {AiArtifact, ChatItem, ChatPrompt, ChatTextMessage} from '../types';
 
 import {AiDiffChatState} from './state';

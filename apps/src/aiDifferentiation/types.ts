@@ -7,8 +7,6 @@ import {
 
 import {ResponseValidator} from '../util/HttpClient';
 
-
-
 export type LessonHook = {
   comment: string;
   introduction: string;
