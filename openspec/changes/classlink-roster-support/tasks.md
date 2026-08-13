@@ -1,18 +1,17 @@
 # Implementation tasks
 
-Delivered as **four stacked PRs**. Task numbers are stable and referenced from `design.md`
-and `TODO.md`, so they are unchanged by this grouping.
+Delivered as **four stacked PRs**. Task numbers are stable and referenced from `design.md`, so they are unchanged by this grouping.
 
 Two axes are in play and they are not the same thing. **PRs** are units of review. **Phases**
 are units of deployment, defined in the design's Migration Plan. Phase 1 spans two PRs
 because the bulk script is separable review work that ships within the same deployment phase.
 
-| PR | Scope | Sections | Deployment phase | Depends on |
-| --- | --- | --- | --- | --- |
-| 1 | Sign-in and sign-up handle the v2 `authentication_id` format | 1 | Phase 1 | — |
-| 2 | One-time bulk migration script | 2 | Phase 1 | PR 1 |
-| 3 | Rostering: client, model, endpoints, frontend, integration tests | 3–7 | Phase 2 | PR 1 |
-| 4 | Migration cleanup | 8 | Phase 3 | PR 3, plus an observation window |
+| PR  | Scope                                                            | Sections | Deployment phase | Depends on                       |
+| --- | ---------------------------------------------------------------- | -------- | ---------------- | -------------------------------- |
+| 1   | Sign-in and sign-up handle the v2 `authentication_id` format     | 1        | Phase 1          | —                                |
+| 2   | One-time bulk migration script                                   | 2        | Phase 1          | PR 1                             |
+| 3   | Rostering: client, model, endpoints, frontend, integration tests | 3–7      | Phase 2          | PR 1                             |
+| 4   | Migration cleanup                                                | 8        | Phase 3          | PR 3, plus an observation window |
 
 PR 3 depends on PR 1, not on PR 2 — the script is an accelerator, not a prerequisite, since
 login-time migration converges every user on next sign-in (task 1.8). PR 2 is sequenced second
@@ -31,13 +30,13 @@ after this deploys — their v2 record is their only auth option. See the design
 
 ### 1. Phase 1 — ID Migration: Versioned Auth Options and Callback Updates
 
-- [x] 1.1 ~~Confirm the live `v2/my/info` payload shape~~ — done. Two live responses captured (2026-08-03 documented sample, 2026-08-10 real demo teacher), both PascalCase with `SourcedId`, `TenantId`, `UserId`, `Role`. This is the same endpoint the gem fetches for `raw_info`, so no separate callback dump is needed; a smoke check during implementation suffices
+- [x] 1.1 ~~Confirm the live `v2/my/info` payload shape~~ — done. Two live responses captured, plus a logged production auth hash confirming the gem exposes `info[:external_id]` and `info[:district_id]`
 - [ ] 1.2 Add `AuthenticationOption::Classlink::VERSION = {v2: 'v2'}.freeze` constant (mirrors `AuthenticationOption::Clever::VERSION`)
 - [ ] 1.3 Create `Services::Classlink::V2AuthOptionBuilder` (mirrors `Services::Clever::V3AuthOptionBuilder`): finds the v1 auth option, dups it, sets `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'`; returns nil if the v1 option is missing or a v2 option already exists
 - [ ] 1.3a Validate both components before constructing `authentication_id` (design Decision 1): each must be non-blank after `to_s` and contain no pipe; otherwise build nothing, log the `UserId`, and let login fall back to the v1 path. A blank `SourcedId` would otherwise produce `"<TenantId>|"` for every user in that tenant and collide them onto one auth option
 - [ ] 1.3b Normalize `TenantId` with `to_s` wherever it is compared or joined — `v2/my/info` returns it as an integer while `/applications` returns `tenant_id`; an unnormalized cache key or comparison misses across the two
 - [ ] 1.4 Write unit tests for the builder (created, idempotent-nil, missing-v1-nil cases) plus the 1.3a guards: blank `SourcedId` builds nothing, pipe-containing component builds nothing, integer `TenantId` normalizes to the same id as its string form
-- [ ] 1.5 Extract `TenantId` and `SourcedId` in the callback from the gem's `info[:district_id]` and `info[:external_id]` (derived from `raw_info['TenantId']`/`raw_info['SourcedId']` in `omniauth-classlink` 0.3.1). Do **not** add `raw_info` digs and do **not** route through `inject_classlink_data`: that method digs snake_case keys out of a PascalCase payload and yields nil for every field. Fixing it is deliberately **out of scope** for this change (see design Context) — this task routes around the defect rather than depending on it, which is why no fix is sequenced ahead of it
+- [ ] 1.5 Extract `TenantId` and `SourcedId` in the callback from the gem's `info[:district_id]` and `info[:external_id]` rather than digging `raw_info` (see design Context)
 - [ ] 1.6 Update the ClassLink sign-up path: new accounts get `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'`
 - [ ] 1.7 Add dual-match login logic: try lookup by v2-format `authentication_id` first, fall back to legacy `UserId` lookup
 - [ ] 1.8 When a user is found via the legacy fallback, create their v2 auth option via the builder (login-time migration; v1 record untouched)
@@ -72,7 +71,7 @@ their own terms rather than as part of a sweep:
   partner credential grants district-wide read access, so every authorization guarantee is
   ours to enforce. There is no upstream scoping to fall back on.
 - **The One Roster client** (section 3). Pagination termination, structural validation, the two
-  opposing path-escaping rules, and the roster-shrink guard all fail silently when wrong —
+  opposing path-escaping rules, and the completeness of each fetch all fail silently when wrong —
   and with no partner key in non-production, the stubbed-HTTP unit tests are the only place
   they get exercised before production (task 3.5b).
 
@@ -101,8 +100,6 @@ their own terms rather than as part of a sweep:
 - [ ] 3.6 Write unit tests for the One Roster client (stub HTTP calls), covering cache hit, cache miss, 401-with-stale-token retry, 401-with-matching-token error, retry-also-fails error, and 429 raising immediately without sleep or retry
 - [ ] 3.6a Write unit tests for application selection: missing or non-array `applications` key raises; well-formed empty array warns without raising; a `status` other than 1 is logged but does **not** change the outcome; `enabled: "false"` is rejected despite being a truthy string; `tenant_status` other than `Active` is rejected; a well-formed list not containing the tenant yields the rostering-unavailable path rather than an error; integer `tenant_id` matches a string-form lookup; the cached path segment is `oneroster_application_id` and never `id` or `application_id`
 - [ ] 3.7 Write unit tests for pagination: a 200 response whose collection key is missing or non-array raises (the success-shaped-failure case), single page (count below limit → one request), multi-page stitch (records combined across pages, offsets increment by limit), short final page ends the loop, **multi-page fetch with no count headers at all terminates correctly on the short page** (the `/applications` case), empty-page safety break despite `x-total-count` claiming more, exact-multiple-of-limit total makes one extra request returning zero and stops, `sort`/`orderBy` present and identical on every One Roster page request, and explicit `limit` present on `/applications`
-- [ ] 3.8 Implement the roster-shrink guard (Decision 3c) in the sync/import path, before `set_exact_student_list`: constants `SHRINK_GUARD_FLOOR = 5` and `SHRINK_GUARD_RATIO = 0.5`; when the section's current student count is at or above the floor and the incoming roster would remove more than the ratio, abort without touching the section, log section id with both counts, and raise an error the controller maps to a user-facing message (copy TBD)
-- [ ] 3.9 Write unit tests for the shrink guard: partial fetch aborts and soft-deletes nothing, ordinary shrinkage applies, section below the floor is exempt, and a new import with no prior roster is unaffected
 
 ### 4. Phase 2 — ClasslinkSection Model
 
@@ -149,18 +146,17 @@ their own terms rather than as part of a sweep:
 - [ ] 6.3a Teach both `courseId` derivations about the ClassLink section-code format. `apps/src/accounts/SyncOmniAuthSectionControl.jsx:89` and `apps/src/templates/teacherDashboard/SectionActionDropdown.jsx:119` both do `sectionCode.replace(/^[GC]-/, '')` on the assumption that a section code is a prefix plus a bare course id. Two things break for ClassLink:
   - `/^[GC]-/` **does not match `CL-`** — after `C` the pattern requires `-` but finds `L` — so nothing is stripped and the full code is sent as `courseId`.
   - Even with the prefix removed, `CL-<TenantId>|<classSourcedId>` is a compound, not a course id.
-  Send **only the portion after the `|`** (the class `sourcedId`). Do not send the tenant: the server derives it from `current_user` per invariant I1. Add a unit test per call site asserting a ClassLink code yields just the `sourcedId`
+    Send **only the portion after the `|`** (the class `sourcedId`). Do not send the tenant: the server derives it from `current_user` per invariant I1. Add a unit test per call site asserting a ClassLink code yields just the `sourcedId`
 - [ ] 6.3b Update the now-inaccurate comment above both derivations ("Section code is the course ID, without the G- or C- prefix") — it states an invariant ClassLink breaks, and leaving it is how the next provider inherits the same bug
 - [ ] 6.4 Add a "Import via ClassLink" trigger in the teacher section creation UI (matching Clever's entry point)
 - [ ] 6.5 Implement a shared frontend retry helper for ClassLink rostering requests: on a 429 response, retry with exponential backoff (3 attempts total, 1s then 2s waits ± jitter); apply it to both the class-list fetch and the import/sync request; surface the existing `rosterImportFailed` error only after all attempts fail
 - [ ] 6.6 Write frontend unit tests for the retry helper: success on second attempt shows no error, 3× 429 surfaces the failure path, non-429 errors fail immediately without retry
 - [ ] 6.6a Add a `case OAuthSectionTypes.classlink` branch to the title and login-type switch in `apps/src/templates/teacherDashboard/RosterDialog.jsx:263-272`. The switch has **no default branch**, so without this the dialog renders an empty `<h2>` — a silent failure that looks like a styling bug
-- [ ] 6.6b Add the i18n strings for the failure states (copy supplied 2026-08-10; see the spec requirement "Each rostering failure state has specific user-facing copy"):
+- [ ] 6.6b Add the i18n strings for the failure states (see the spec requirement "Each rostering failure state has specific user-facing copy"):
   - district not enabled / non-expiry 401 — "Your district hasn't enabled roster sync for CodeAI." **One key serves both states**; they are indistinguishable to the teacher and the distinction stays in the logs
   - teacher not yet migrated — "Please sign in again from ClassLink to proceed with roster sync."
   - 429 retries exhausted **and** any unexpected failure without its own copy — "We're having trouble getting roster information from ClassLink. Please try again later." Wire this as the fallback too, so no failure path renders an empty dialog
   - class with no students — "This section (%{section_name}) has no students." (needs an interpolation placeholder)
-  - roster-shrink guard — "Syncing would remove %{num_students} students from the section, abandoning sync." Placeholder holds the bare count; the plural needs no variant because the guard's floor of 5 and ratio of 0.5 make the smallest possible count 3
 - [ ] 6.7 Verify `RosterDialog` and `SectionActionDropdown` work correctly with the new provider (no structural changes expected)
 - [ ] 6.8 Run `yarn run typecheck` and `./tools/hooks/pre-commit` to confirm no type or lint errors
 

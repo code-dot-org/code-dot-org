@@ -18,31 +18,19 @@ ClassLink One Roster uses a **central partner credential model**: our server-sid
 - `TenantId: 123` — an **integer**. `/applications` also returns `tenant_id` as an integer, so the two sides agree in type. Normalize with `to_s` anyway at the comparison and wherever the value is joined into `authentication_id` or a cache key: the id crosses a JSON boundary, a cache key, and a string-joined identifier, and one leg being stringified while another is not is the kind of mismatch that fails silently.
 - `Role: "Student"` and `Role_Level: 4` are present, so teacher-vs-student is known at login without an extra call. This does **not** substitute for the `/classes/<classSourcedId>/teachers` check, which answers a different question (does this teacher teach _this_ class).
 
-The `omniauth-classlink` gem (0.3.1) already surfaces the two values we need in its `info` block: `info[:external_id]` from `raw_info['SourcedId']` and `info[:district_id]` from `raw_info['TenantId']`. Prefer those over adding new `raw_info` digs — see the pre-existing defect below.
+**Where the callback reads the two values it needs.** `omniauth-classlink` 0.3.1 exposes both in its `info` block — `info[:external_id]` from `SourcedId` and `info[:district_id]` from `TenantId` — confirmed populated in a logged production auth hash. Read those rather than digging `raw_info`: the gem has already done the extraction, and `raw_info` keys arrive snake_cased (`sourced_id`, `tenant_id`) because the gem parses the PascalCase payload into a `SnakyHash::StringKeyed`.
 
-**Pre-existing defect in `inject_classlink_data` — out of scope for this change.** `omniauth_callbacks_controller.rb:466` digs **snake_case** keys out of `raw_info` (`:email`, `:display_name`, `:first_name`, `:last_name`, `:role`, `:state_name`), but the payload is PascalCase. Verified two facts with `rails runner`: `OmniAuth::AuthHash#dig` is case-sensitive (`dig(:extra, :raw_info, :email)` returns nil against an `"Email"` key, `dig(..., :Email)` returns the value), and `info.merge!` of a nil value **overwrites** a populated one. So every dig returns nil and the subsequent `auth.info&.merge!` clobbers the `email` the gem's own `info` block had already set correctly.
-
-The payload is confirmed PascalCase by two live `v2/my/info` captures — the same endpoint the gem fetches for `raw_info`. Independently, the gem derives `uid` from `raw_info['UserId']` and ClassLink SSO issues working uids in production, which it could not if that read returned nil. The test fixture at `dashboard/test/integration/omniauth/classlink_test.rb:96` builds `raw_info` with snake_case keys, so the suite is self-consistent with the defect and cannot catch it.
-
-**Why it is descoped rather than fixed here.** Three reasons, in order of weight:
-
-1. **Nothing in this change depends on it.** The callback reads `TenantId` and `SourcedId` from the gem's `info[:district_id]` / `info[:external_id]`, which parse PascalCase correctly. We route around the defect instead of through it (task 1.5).
-2. **Fixing it is not behavior-neutral.** The nil-clobbering currently blanks `email`. Repair it and ClassLink users begin arriving at signup _with_ an email, which changes `allows_section_takeover` — that logic keys off blank email to decide whether silent account takeover is permitted. That is a change to account-linking behavior for ~14,392 existing users, and it deserves its own review rather than riding inside a rostering change.
-3. **The user-visible cost is bounded.** Missing `email`, `user_type`, and `state_name` mean the finish-signup step prompts for them, so the effect is extra typing at signup, not lost or wrong data. `state_name` is the one with a second consumer — `omniauth_callbacks_controller.rb:267` uses it to set `us_state`, but only for students — and the same finish-signup prompt covers it.
-
-**Follow-up owed: file this as its own bug.** Not a task in this change, and deliberately not sequenced ahead of anything here. What the bug needs to say, so it can be written without reconstructing the analysis: the defect is at `omniauth_callbacks_controller.rb:466`, live since ClassLink SSO shipped in early 2026; the fixture at `dashboard/test/integration/omniauth/classlink_test.rb:96` uses snake_case keys and certifies the bug, so rewriting it is part of the fix rather than an afterthought; and fixing it makes ClassLink users start arriving **with** an email, which changes `allows_section_takeover` — that logic keys off blank email to decide whether silent account takeover is permitted — for roughly 14,392 existing users. That last point is why it wants its own review rather than a quick patch.
-
-The analysis above is retained deliberately: the next person to read this code will find a broken method sitting beside new code that carefully avoids it, and should find the reason here rather than rediscovering it.
+The existing `inject_classlink_data` remains untouched by this change.
 
 **Confirmed against a live sandbox call:**
 
-- `oneroster_application_id` is used **verbatim** in the request path with percent-escapes intact (`/%1FKVa1gd75Gs%5D/ims/oneroster/v1p1/...`). It MUST NOT be re-encoded — an HTTP client that escapes path segments will double-encode it to and fail opaquely.
+- `oneroster_application_id` is used **verbatim** in the request path with percent-escapes intact (`/%2FgVa0ed75Gs%43/ims/oneroster/v1p1/...`). It MUST NOT be re-encoded — an HTTP client that escapes path segments will re-encode the leading `%2F` to `%252F` and fail opaquely.
 - The district `bearer` is a raw UUID sent as `Authorization: Bearer <uuid>`; it carries no embedded scheme prefix.
 - `cltraceid` may be sent empty and the request succeeds, so it is optional.
 - `orderBy=asc` is accepted without a paired `sort` parameter.
-- Teacher `sourcedId` observed as a plain integer (`12345`) — consistent with, though not proof of, the assumption that source ids contain no pipes or dashes.
+- Teacher `sourcedId` observed as a plain integer here. Not a general shape — a later capture shows an underscore-and-hyphen composite from another tenant, which is why Decision 1 assumes no format at all.
 - Pagination headers confirmed, lowercase and hyphenated: `x-count` (records in this page) and `x-total-count` (records in the collection).
-- `x-next-page-token` is also returned (empty on a single-page response), but ClassLink's data best-practices guide documents pagination **solely** in terms of `limit`/`offset` with `x-count`/`x-total-count`, and does not mention the token anywhere. An undocumented header carries no contract: there is no specified parameter to echo it back, and it may change or vanish without notice. Treat it as an observation, not a mechanism — Decision 3a stays on documented offset paging. Recorded here so a later reader does not mistake it for an unexplored option. **Consequence:** the skip-and-duplicate hazard of offset paging over an unstable ordering cannot be designed away with a cursor, so it must be contained instead — see Decision 3a's explicit sort and the truncation guard.
+- `x-next-page-token` is also returned (empty on a single-page response), but ClassLink's data best-practices guide documents pagination **solely** in terms of `limit`/`offset` with `x-count`/`x-total-count`, and does not mention the token anywhere. An undocumented header carries no contract: there is no specified parameter to echo it back, and it may change or vanish without notice. Treat it as an observation, not a mechanism — Decision 3a stays on documented offset paging. Recorded here so a later reader does not mistake it for an unexplored option. **Consequence:** the skip-and-duplicate hazard of offset paging over an unstable ordering cannot be designed away with a cursor, so it must be contained instead — see Decision 3a's explicit sort.
 - Also returned, semantics not yet established: `x-obfuscated` and `x-modified` (both empty in the observed response), `x-endpoint` (a route/version identifier, likely useful for support escalation), and `x-page-generation-time-ms`.
 - `x-page-generation-time-ms` was **365ms for a 2-record page**. Server-side generation is not trivially fast, so a multi-page fetch on the synchronous import path (which holds one of only five Puma threads per worker) may take seconds. This strengthens the case for escalating very large sections to the deferred background-job path (Decision 3b).
 
@@ -66,53 +54,174 @@ The documented example above is one tenant's shape. A real response from another
 - **A field absent from ClassLink's documentation appears here: `or_email`** (value equal to `Email`), presumably the One Roster email. Treat the documented field list as a lower bound, not a contract.
 - `TenantId: 2222` is an integer, consistent with `/applications`. `Role_Level: 3` for a teacher, versus `4` for the documented student.
 
-**On the differing `SourcedId` shapes.** The One Roster records we captured carry integer sourcedIds (`98765`, and the working path `/teachers/12345/classes`) against a tenant whose orgs are `2` and `7`, while this user sits in `TenantId 2222`, org `5678`. These are **different tenants**, which fully accounts for the difference — SIS id schemes are per-district, and nothing here bears on the `my/info`↔One Roster equality, which ClassLink has confirmed separately.
-
-**An optional way to observe that equality rather than rely on it.** `TenantId 2222` is one of the two rows in the `/applications` capture, so we hold that district's `bearer` and `oneroster_application_id` _and_ a real user's `SourcedId` from the same tenant. A single call — `GET /<oneroster_application_id>/ims/oneroster/v1p1/teachers/5678_T5678-0005/classes` — would confirm it with data for a real user. Not required, since the equality is already confirmed; recorded because the cost is one request and it is the only assumption in this design whose failure mode on the student side is silent.
+**On the differing `SourcedId` shapes.** The One Roster captures below carry plain integer sourcedIds, while this user's is an underscore-and-hyphen composite. They come from **different tenants**, which fully accounts for the difference — SIS id schemes are per-district. Nothing here bears on the `my/info`↔One Roster equality, which ClassLink has confirmed separately.
 
 **`/applications` body capture:**
 
+**Example Response**
+
+```json
+{
+  "status": 1,
+  "applications": [
+    {
+      "id": 12345,
+      "application_id": 67890,
+      "tenant_id": 2222,
+      "bearer": "<token>",
+      "tenant_name": "Example Tennant",
+      "enabled": "true",
+      "tenant_status": "Active",
+      "oneroster_application_id": "%2FgVa0ed75Gs%43",
+      "name": "CodeAI",
+      "version": ""
+    },
+    ...
+  ]
+}
+```
+
 - **What this endpoint is.** Global discovery, not a per-district lookup: it returns the set of tenants (districts/schools) that have enabled _our_ application. There is one call, made with the partner key, and we search its result for the requester's `tenant_id`. Everything below follows from that. A tenant's absence from the list is the legitimate "this district has not enabled ClassLink rostering" signal — which is precisely why any degraded response must be distinguishable from a short list, since both look like absence.
-- Envelope is `{"status": 1, "applications": [...]}`. Records live under `applications`.
-- **The top-level `status: 1` is an in-body result code**, distinct from the per-record `tenant_status`. Its presence is evidence that this proxy can signal outcomes in the response body, which matters for the 429/401 shape question on the One Roster endpoints. We do **not** gate on it — see Decision 3.
-- `enabled: "true"` — a **string**, as the `enabledUser` capture predicted. Compare against `'true'`.
-- **`tenant_status: "Active"` exists** as a separate capitalized string. Both observed records are `Active`, so the value space is unknown — we cannot tell whether ClassLink already excludes non-active tenants from this response or whether an `Inactive` tenant would appear here with `enabled: "true"`. Decision 3 gates on it (case-insensitively) on the conservative reading; see the open question on what other values occur.
-- **Three distinct id fields per record**, and only one is the path segment we need:
-  | Field | Observed | Meaning |
-  |---|---|---|
-  | `id` | `200000`, `100000` | the tenant↔application pairing row id |
-  | `application_id` | `15000` (constant) | our own registered application |
-  | `oneroster_application_id` | redacted, percent-escaped | **the value used verbatim in the One Roster path** |
-  Using `id` or `application_id` in a request path would fail opaquely. This is the same trap as `sourcedId` vs `identifier` on user records.
-- `application_id` and `name: "CodeAI"` are constant across rows — every row is our application — so selection is by `tenant_id` alone, as designed. No filtering on application name or id is needed.
-- Each row carries its own `bearer`, confirming the per-district credential model.
-- Both observed rows have distinct `tenant_id`s, so nothing here shows a tenant appearing twice. The "can one `tenant_id` return multiple rows" question is unresolved but now looks unlikely; handle it defensively rather than designing for it.
-- The body carries no total or pagination metadata, consistent with the absent count headers.
+- Objects in the `applications` array are called **records** throughout this document; they have no relationship to database rows.
+- **The top-level `status` is an in-body result code**, distinct from the per-record `tenant_status`. Its presence is evidence that this proxy can signal outcomes in the response body, which matters for the 429/401 shape question on the One Roster endpoints. We do **not** gate on it — see Decision 3.
+- **`enabled` is the string `"true"`, not a boolean** — and `"false"` is truthy in Ruby, so a bare `if record['enabled']` passes for a disabled district. Compare against `'true'` explicitly.
+- **`tenant_status` is a separate check from `enabled`.** Both observed records are `Active`, so the value space is unknown — we cannot tell whether ClassLink already excludes non-active tenants from this response or whether an `Inactive` tenant would appear with `enabled: "true"`. Decision 3 gates on both, on the conservative reading.
+- **Of the three id fields, only `oneroster_application_id` is the path segment.** `id` identifies the tenant↔application pairing and `application_id` identifies our registered application; either one in a request path fails opaquely. Same trap as `sourcedId` vs `identifier` on user records.
+- `application_id` and `name` are constant across records — every record is our application — so selection is by `tenant_id` alone. No filtering on application name or id is needed.
+- Both observed records have distinct `tenant_id`s, so nothing here shows a tenant appearing twice. The "can one `tenant_id` return multiple records" question is unresolved but now looks unlikely; handle it defensively rather than designing for it.
 
 **`/teachers/<SourcedId>/classes` capture:**
 
-- Envelope key is **`classes`**. Note the pattern: the key names the _resource type_ returned, not the endpoint — which is why `/classes/<id>/teachers` returns `users`, not `teachers`.
-- **`classCode` is empty (`""`)**, and `periods` is an empty array. Neither carries a human-meaningful period or section identifier, so the section-vs-enrollment-code question is settled: **the section name comes from `title`**, and there is nothing to map to an enrollment code.
-- `title` reads `"Sci5 (Sci5)"` — the SIS emits a redundant parenthetical. Display it verbatim; do not strip or normalize. Whatever the district put in their SIS is what their teachers will recognize, and a cleanup rule that guesses wrong makes classes harder to identify, not easier.
-- **Same-titled classes are indistinguishable in the picker.** With `classCode` and `periods` both empty, a teacher who teaches two sections of `Math5` sees two identical rows. `location` (`"201"`) and the `terms[]` reference are the only differentiators available. Not solved here — the class list matches Clever/Google parity, which has the same property — but worth knowing before the first support ticket.
-- `classType: "scheduled"` (One Roster's values are `homeroom` and `scheduled`). We do **not** filter on it: a homeroom is a legitimate class to import, and Clever/Google have no equivalent concept to match against.
-- **`sourcedId` values are not numeric.** `course.sourcedId` is `"7_1553"` (underscore) and `terms[].sourcedId` is `"FY"` (alphabetic). This confirms Decision 1's refusal to assume a format, and adds an implementation constraint — see below.
-- `grades` arrives multi-valued and unsorted (`["05","11","10","12"]` on a class titled `Sci5`). Unused, and not trustworthy as a signal.
-- `hrefs` in this capture point at `https://test.com/...`, another reminder that response hrefs are not our request path.
-- **Confirmed: the endpoint returns only current-term classes, not a teacher's history.** Everything returned is a class the teacher may import, so we do no client-side filtering on `terms[]` or `status` here. This also settles two smaller worries: the import picker stays short, and a teacher's current-term class count sits far below the 1000-class bound behind `PAGE_LIMIT`.
-- **This endpoint feeds the import modal only.** It is called to populate the list of classes a teacher may import; sync never uses it, reading `/classes/<classSourcedId>/students` directly from the stored `section.code`. So the term filter does not affect sync, and nothing here needs to change for sections imported in an earlier term. Unverified, and only relevant if it ever comes up: whether a class that has left the current term remains readable at `/classes/<classSourcedId>/students`. If it does, a stale-section sync simply returns the same roster. If it instead returns empty, Decision 3c refuses the sync rather than unenrolling the class.
+**Example Response**
 
-**Path segments: escape `sourcedId`, never escape `oneroster_application_id`.** These two rules point in opposite directions and both are load-bearing. `oneroster_application_id` arrives pre-percent-escaped and must be interpolated **verbatim** — re-encoding turns `%2F` into `%252F` and the request fails opaquely. Class and teacher `sourcedId` values, by contrast, are arbitrary district-supplied strings — `7_1553` and `FY` prove they are not restricted to digits — so any that contain URL-significant characters must be escaped when interpolated. A path builder that applies one policy uniformly is wrong in one direction or the other. Handle the application id as an opaque pre-escaped literal and escape every other interpolated segment.
+```json
+{
+  "classes": [
+    {
+      "sourcedId": "33333",
+      "status": "active",
+      "dateLastModified": "2025-11-24T19:35:01.000Z",
+      "title": "Sci5 (Sci5)",
+      "classCode": "",
+      "classType": "scheduled",
+      "location": "201",
+      "grades": [
+        "05",
+        "11",
+        "10",
+        "12"
+      ],
+      "subjects": [
+        "Science (grade 5)"
+      ],
+      "course": {
+        "href": "https://certs-nj-v2.rosterserver.com/ims/oneroster/v1p1/courses/7_1111",
+        "sourcedId": "7_1111",
+        "type": "course"
+      },
+      "school": {
+        "href": "https://certs-nj-v2.rosterserver.com/ims/oneroster/v1p1/orgs/7",
+        "sourcedId": "7",
+        "type": "org"
+      },
+      "terms": [
+        {
+          "href": "https://certs-nj-v2.rosterserver.com/ims/oneroster/v1p1/academicSessions/FY",
+          "sourcedId": "FY",
+          "type": "academicSession"
+        }
+      ],
+      "subjectCodes": [
+        "3235"
+      ],
+      "periods": [],
+      "resources": []
+    },
+    ...
+  ]
+}
+```
+
+- The envelope key names the _resource type_ returned, not the endpoint — which is why `/classes/<id>/teachers` returns `users`, not `teachers`. Do not key parsing off the endpoint name.
+- **`classCode` and `periods` are both empty**, so neither carries a human-meaningful period or section identifier. That settles the section-vs-enrollment-code question: **the section name comes from `title`**, and there is nothing to map to an enrollment code.
+- Titles arrive with SIS redundancy (`"Sci5 (Sci5)"`). Display verbatim; do not strip or normalize. Whatever the district put in their SIS is what their teachers will recognize, and a cleanup rule that guesses wrong makes classes harder to identify, not easier.
+- **Same-titled classes are indistinguishable in the picker.** With `classCode` and `periods` both empty, a teacher who teaches two sections of `Math5` sees two identical rows; `location` and the `terms[]` reference are the only differentiators available. Not solved here — the class list matches Clever/Google parity, which has the same property — but worth knowing before the first support ticket.
+- We do **not** filter on `classType` (One Roster's values are `homeroom` and `scheduled`): a homeroom is a legitimate class to import, and Clever/Google have no equivalent concept to match against.
+- **`sourcedId` values are not numeric** — note the underscore in `course.sourcedId` and the alphabetic `terms[].sourcedId`. This confirms Decision 1's refusal to assume a format, and adds an implementation constraint — see below.
+- `grades` arrives multi-valued and unsorted, on a class whose title names a single grade. Unused, and not trustworthy as a signal.
+- The `href` values point at a **different host than the proxy we authenticate against** — another reminder that response hrefs are not our request path.
+- **Confirmed: the endpoint returns only current-term classes, not a teacher's history.** Everything returned is a class the teacher may import, so we do no client-side filtering on `terms[]` or `status` here. This also settles two smaller worries: the import picker stays short, and a teacher's current-term class count sits far below the 1000-class bound behind `PAGE_LIMIT`.
+- **This endpoint feeds the import modal only.** It is called to populate the list of classes a teacher may import; sync never uses it, reading `/classes/<classSourcedId>/students` directly from the stored `section.code`. So the term filter does not affect sync, and nothing here needs to change for sections imported in an earlier term. Unverified, and only relevant if it ever comes up: whether a class that has left the current term remains readable at `/classes/<classSourcedId>/students`. If it does, a stale-section sync simply returns the same roster. If it instead returns empty, the sync applies that empty roster and unenrolls the class — recoverable by a later correct sync, since removal soft-deletes the `Follower` and leaves the `User` untouched.
+
+**Path segments: escape `sourcedId`, never escape `oneroster_application_id`.** These two rules point in opposite directions and both are load-bearing. `oneroster_application_id` arrives pre-percent-escaped and must be interpolated **verbatim** — re-encoding turns `%2F` into `%252F` and the request fails opaquely. Class and teacher `sourcedId` values, by contrast, are arbitrary district-supplied strings — `7_1111` and `FY` prove they are not restricted to digits — so any that contain URL-significant characters must be escaped when interpolated. A path builder that applies one policy uniformly is wrong in one direction or the other. Handle the application id as an opaque pre-escaped literal and escape every other interpolated segment.
 
 **`/classes/<classSourcedId>/students` capture:**
 
-- Same `{"users": [...]}` envelope, same record shape as the teachers endpoint, with `role: "student"` (lowercase) and `identifier` again distinct from `sourcedId` (`11111` vs `22222`).
-- **No `birthDate`, and no `metadata` block of any kind.** The no-date-of-birth premise is now confirmed rather than assumed, which makes the `defer_age` change mandatory rather than precautionary — without it, `initialize_new_oauth_user` leaves `age` nil and validation raises an unrescued `ActiveRecord::RecordInvalid` that aborts the whole section sync, not just the offending student.
-- **Students _do_ carry an `email`** (`REDACTED@classlink.k12.nj.us` — a district-issued address). We deliberately do not use it; see below.
-- `grades: ["11"]` is present. We have no use for it today; noted only so a future reader knows grade level is available without an extra call.
-- **`agents` is populated on student records** — two `type: "user"` hrefs each. In One Roster, a student's agents are their guardians. So the payload links to parent/guardian records. Combined with the `password`, `sms`, `phone`, and `middleName` fields, this settles the data-handling posture: extract only `sourcedId`, `givenName`, `familyName`, and `role`; never log raw payloads; never follow `agents[]` or `orgs[]` hrefs.
-- `status: "active"` on every observed record. `tobedeleted` remains unobserved, so the operational question about how districts use it stands.
-- The `orgs[].href` values point at `orgs/2` here versus `orgs/7` for the teacher record — students and their teacher can sit in different orgs. Irrelevant to this design, which never resolves orgs, but worth knowing before anyone assumes a single org per class.
+**Example Response**
+
+```json
+{
+  "users": [
+    {
+      "sourcedId": "12345",
+      "status": "active",
+      "dateLastModified": "2025-11-24T19:35:01.000Z",
+      "username": "foo.bar",
+      "userIds": [
+        {
+          "type": "Fed",
+          "identifier": "12345"
+        },
+        {
+          "type": "StateID",
+          "identifier": "12494640776"
+        }
+      ],
+      "enabledUser": "true",
+      "givenName": "foo",
+      "familyName": "bar",
+      "middleName": "middle",
+      "role": "student",
+      "identifier": "22222",
+      "email": "foo.bar@example.com",
+      "sms": "",
+      "phone": "",
+      "agents": [
+        {
+          "href": "https://certs-nj-v2.rosterserver.com/ims/oneroster/v1p1/users/G333333",
+          "sourcedId": "G333333",
+          "type": "user"
+        },
+        {
+          "href": "https://certs-nj-v2.rosterserver.com/ims/oneroster/v1p1/users/G44444",
+          "sourcedId": "G44444",
+          "type": "user"
+        }
+      ],
+      "orgs": [
+        {
+          "href": "https://certs-nj-v2.rosterserver.com/ims/oneroster/v1p1/orgs/2",
+          "sourcedId": "2",
+          "type": "org"
+        }
+      ],
+      "grades": [
+        "11"
+      ],
+      "password": ""
+    },
+    ...
+  ]
+}
+```
+
+- Same envelope and record shape as the teachers endpoint, with `role: "student"` lowercase and `identifier` again distinct from `sourcedId`.
+- **No `birthDate`, and no `metadata` block of any kind.** The no-date-of-birth premise is confirmed rather than assumed, which makes the `defer_age` change mandatory rather than precautionary — without it, `initialize_new_oauth_user` leaves `age` nil and validation raises an unrescued `ActiveRecord::RecordInvalid` that aborts the whole section sync, not just the offending student.
+- **Students _do_ carry an `email`**, a district-issued address. We deliberately do not use it; see below.
+- `grades` is present. We have no use for it today; noted only so a future reader knows grade level is available without an extra call.
+- **`agents` on a student record are their guardians** — that is what those `type: "user"` hrefs point to. Combined with `password`, `sms`, `phone`, and `middleName`, this settles the data-handling posture: extract only `sourcedId`, `givenName`, `familyName`, and `role`; never log raw payloads; never follow `agents[]` or `orgs[]` hrefs.
+- `status` is `active` on every observed record. `tobedeleted` remains unobserved, so the operational question about how districts use it stands.
+- Students and their teacher can sit in **different orgs** — compare the `orgs[].href` here against the teacher record below. Irrelevant to this design, which never resolves orgs, but worth knowing before anyone assumes a single org per class.
 
 **Decision: do not pass student email into the section import.** ClassLink supplies it, but both existing OAuth roster providers deliberately drop it. `CleverSection.from_service` builds each student's `AuthHash` with only `name`, `family_name`, and `dob` (`dashboard/app/models/sections/clever_section.rb`), and `GoogleClassroomSection.from_service` passes only `name` and `family_name` (`dashboard/app/models/sections/google_classroom_section.rb:50-57`) — despite both providers exposing student emails. ClassLink follows the same pattern: `sourcedId` becomes the `uid`, and `givenName`/`familyName` become the name fields. This is parity, not a new judgment call, and it keeps roster-imported students free of stored email addresses.
 
@@ -120,18 +229,59 @@ The documented example above is one tenant's shape. A real response from another
 
 **`/classes/<classSourcedId>/teachers` capture:**
 
+**Example Response**
+
+```json
+{
+  "users": [
+    {
+      "sourcedId": "11111",
+      "status": "active",
+      "dateLastModified": "2025-11-24T19:35:01.000Z",
+      "username": "bazbat",
+      "userIds": [
+        {
+          "type": "Fed",
+          "identifier": "11111"
+        },
+        {
+          "type": "StateID",
+          "identifier": "12345678987"
+        }
+      ],
+      "enabledUser": "true",
+      "givenName": "baz",
+      "familyName": "bat",
+      "middleName": "middle",
+      "role": "teacher",
+      "identifier": "32",
+      "email": "baz.bat@example.com",
+      "sms": "",
+      "phone": "",
+      "agents": [],
+      "orgs": [
+        {
+          "href": "https://certs-nj-v2.rosterserver.com/ims/oneroster/v1p1/orgs/7",
+          "sourcedId": "7",
+          "type": "org"
+        }
+      ],
+      "grades": [],
+      "password": ""
+    }
+  ]
+}
+```
+
 - **The endpoint exists and returns teacher records.** Invariants I1/I2 and the entire co-teacher flow (Decision 5a) are implementable as specified, rather than assumed from Clever symmetry.
-- The envelope key is **`users`**, not `teachers`: `{"users": [...]}`. The students endpoint is presumably `{"users": [...]}` as well — do not key parsing off the endpoint name.
 - **`sourcedId` is confirmed as the body field name**, settling what was previously an IMS-spec assumption never observed in a response.
-- `role` is **lowercase** (`"teacher"`), so the client-side `role == "student"` filter in Decision 5a is the right comparison.
+- `role` is lowercase here too, so the client-side `role == "student"` filter in Decision 5a is the right comparison.
 - **No primary-vs-co-teacher designation is returned.** This costs nothing: I2 and Decision 5a need only _membership_ — is the requester's `SourcedId` in this list — and section ownership is already determined by who imports first, matching Clever and Google Classroom. One consequence to accept knowingly: if the SIS teacher-of-record imports after a colleague, they join as co-teacher rather than owner. That is existing behavior for every OAuth roster provider, not a ClassLink-specific regression.
-- **`enabledUser` is the string `"true"`, not a boolean.** ClassLink serializes booleans as strings, which strongly indicates `/applications`' `enabled` is the same. This is a live bug hazard in Ruby: `"false"` is truthy, so `if user['enabledUser']` passes for a disabled user. Every such field must be compared explicitly against `'true'`.
-- `identifier: "32"` is a **separate field from `sourcedId`** (`"98765"`), as is the `userIds` array (`type: "Fed"` matching the `sourcedId`, plus a `type: "StateID"`). Teacher matching must use `sourcedId` and nothing else.
-- `status: "active"` and a per-record `dateLastModified` are both present — relevant to the `tobedeleted` decision and to any future delta-sync work.
-- `orgs[].href` points at `https://certs-nj-v2.rosterserver.com/ims/oneroster/v1p1/orgs/7` — **a different host than the proxy we authenticate against.** Never follow hrefs from response bodies; always construct URLs through the proxy with the district bearer. Following them would bypass our credential path entirely.
-- That host also reveals the sandbox is a **New Jersey certification tenant**. If SSO credentials exist for a user in it, the blocked identity-equality test may be runnable there against real One Roster records with no real student data involved.
-- The payload carries `password`, `sms`, `phone`, and `middleName` fields (all empty or redacted here). `password` being present at all means **raw One Roster user payloads must never be logged**, and only the fields we consume should be extracted or persisted.
-- No `birthDate` on this teacher record — consistent with the no-date-of-birth premise behind the age/`defer_age` decision, though student records still need their own confirmation.
+- **`identifier` is a separate field from `sourcedId`**, as is each entry in the `userIds` array (a `Fed` id matching the `sourcedId`, plus a `StateID`). Teacher matching must use `sourcedId` and nothing else — four id-shaped fields on one record, and only one is correct.
+- `enabledUser` is a string boolean, same hazard as `enabled` on `/applications`.
+- `dateLastModified` is present per record — relevant to the `tobedeleted` decision and to any future delta-sync work.
+- `orgs[].href` points at **a different host than the proxy we authenticate against.** Never follow hrefs from response bodies; always construct URLs through the proxy with the district bearer. Following them would bypass our credential path entirely.
+- The payload carries `password`, `sms`, `phone`, and `middleName`. `password` being present at all means **raw One Roster user payloads must never be logged**, and only the fields we consume should be extracted or persisted.
 
 ## Goals / Non-Goals
 
@@ -159,7 +309,7 @@ The documented example above is one tenant's shape. A real response from another
 
 **Both components are validated before the id is constructed.** `TenantId` and `SourcedId` must each be present and non-blank after `to_s`, and neither may contain a pipe. If either check fails, do not build an `authentication_id` — raise, log the `UserId`, and let the login fall back to the legacy v1 path.
 
-This is not defensive boilerplate, and it is not a hedge against ClassLink. ClassLink has confirmed `SourcedId` is never blank upstream. The guard exists because **our own extraction can produce a blank**, and demonstrably does: `inject_classlink_data` digs snake_case keys out of a PascalCase payload and yields nil for every field (see Context). A validation that assumes the payload is fine only holds if the code reading the payload is also fine, and that is exactly the assumption that already failed once here.
+ClassLink has confirmed `SourcedId` is never blank upstream, and no code path we know of produces a blank one. The guard is kept anyway, justified by cost against consequence rather than by any observed failure: it is two comparisons, and what it prevents is silent and severe. The value crosses a gem boundary, a JSON parse, and a string join before it becomes an identifier, and a nil anywhere in that chain produces a well-formed identifier rather than an error.
 
 The consequence of skipping it is severe enough to justify the two lines. Because `authentication_id` is what login looks users up _by_, a blank second component yields `"<TenantId>|"` for **every user in that tenant** — so the second such user to sign in matches the first user's auth option. That is cross-user account takeover within a district, produced silently by an empty string. A pipe inside either component is the same class of bug: `"2|a|b"` and `"2|a"` + `"b"` are indistinguishable after joining, so the parse can resolve to the wrong user. Neither failure announces itself.
 
@@ -238,13 +388,13 @@ Format is otherwise not validated. The documented student `SourcedId` is a 10-di
    - the page returned **no records** (safety break against miscounted headers — prevents an infinite loop);
    - `x-total-count` is present and the running total has reached it.
 
-**Structural validation is what lets us trust the documented error codes.** We accept ClassLink's documentation that rate limiting arrives as HTTP 429 and expired authorization as HTTP 401, rather than as HTTP 200 wrapping an in-body failure — a reasonable call, since their docs are the best evidence available and no capture contradicted it. What makes it safe rather than hopeful is that the structural check does not depend on it: a 200 carrying an error envelope (`imsx_codeMajor` or anything else) simply lacks the expected collection key and raises. We get protection against the failure mode without needing to know its format. Decision 3c is the second, independent backstop. If the documented behavior turns out to be wrong, the degradation is a loud error, not a silently truncated roster.
+**Structural validation is what lets us trust the documented error codes.** We accept ClassLink's documentation that rate limiting arrives as HTTP 429 and expired authorization as HTTP 401, rather than as HTTP 200 wrapping an in-body failure — a reasonable call, since their docs are the best evidence available and no capture contradicted it. What makes it safe rather than hopeful is that the structural check does not depend on it: a 200 carrying an error envelope (`imsx_codeMajor` or anything else) simply lacks the expected collection key and raises. We get protection against the failure mode without needing to know its format. If the documented behavior turns out to be wrong, the structural check is what converts it into a loud error rather than a silently truncated roster.
 
 **Why three stop conditions rather than one.** The short-page rule is the load-bearing one: it needs no headers, so it is the only condition that terminates correctly on `/applications`, which sends none. Where `x-total-count` _is_ sent, it is a redundant confirmation rather than a competing rule — both conditions fire on the same final page. Keeping all three means one code path serves both endpoint families, and a future ClassLink endpoint that omits the count headers does not silently inherit a truncation bug.
 
 The cost is one extra request whenever a collection's size is an exact multiple of `PAGE_LIMIT`, which returns zero records and stops. That is a rounding error — 9ms on `/applications`, and it cannot happen at all for the One Roster collections while their totals stay under 1000.
 
-The residual risk is a server that returns a short page that is _not_ the last page; we would stop early. Wherever `x-total-count` is sent, the third condition catches exactly that. On `/applications` there is nothing to catch it with, which is one more reason Decision 3c guards the outcome rather than the fetch.
+The residual risk is a server that returns a short page that is _not_ the last page; we would stop early. Wherever `x-total-count` is sent, the third condition catches exactly that. On `/applications` there is nothing to catch it with, so that endpoint relies on the short-page rule alone.
 
 `PAGE_LIMIT = 1000` as a single client constant for **all four endpoints**, confirmed accepted by the proxy. The bound is a domain argument: no real class has more than 1000 students, and no real teacher has more than 1000 importable classes. So the loop body typically runs once, and in the rare case it does run again it almost certainly terminates on the second page. That is the point of the large limit — it makes multi-page fetches rare and shallow — but the loop is still required, because "rare" is not "never" and a truncated roster is the one failure this integration cannot absorb.
 
@@ -264,7 +414,7 @@ Growth past 1000 needs no change: the loop simply runs twice, which is correct a
 
 Strictly, the reversal proves `orderBy` is honored, not that the `sort` field name is parsed — an ignored `sort` over a default field of `sourcedId` would be indistinguishable. That distinction has no operational consequence: we always send identical parameters, so we always receive the same order, and the effective ordering key is unique either way. Ties, which are what would make an ordering unstable, cannot arise.
 
-**Residual risk the loop does not close.** Three conditions make offset paging correct: a total order, determinism across requests, and a collection that does not change mid-fetch. The sort buys the first two; nothing buys the third under offset paging, since a student added or dropped between pages shifts every subsequent record and can skip one. Only keyset/cursor paging closes it, and ClassLink documents none. The large `PAGE_LIMIT` is what keeps this small — most fetches never make a second request, so there is no window at all — and Decision 3c catches the outcome if it does happen.
+**Residual risk the loop does not close.** Three conditions make offset paging correct: a total order, determinism across requests, and a collection that does not change mid-fetch. The sort buys the first two; nothing buys the third under offset paging, since a student added or dropped between pages shifts every subsequent record and can skip one. Only keyset/cursor paging closes it, and ClassLink documents none. The large `PAGE_LIMIT` is what keeps this small — most fetches never make a second request, so there is no window at all — so in practice the window rarely opens at all.
 
 **`/applications` is in scope for the same helper, and needs it most.** About 630 districts currently share data with us — already 6× the IMS default `limit` of 100. If that endpoint paginates and we send no explicit limit, we receive the first 100 districts and silently fail tenant lookup for every real district past them. The failure is indistinguishable from "ClassLink rostering is not enabled for your district," so it would be diagnosed as a ClassLink configuration problem rather than as our bug. Whether `/applications` honors `limit`/`offset` at all is an open question.
 
@@ -296,26 +446,6 @@ Strictly, the reversal proves `orderBy` is honored, not that the `sort` field na
 - Server-side sleep + retry: Correlated 429s exhaust the 5-thread-per-worker pool during bursts. Rejected.
 - Background job + polling (ActiveJob `retry_on`): Architecturally clean but changes the synchronous import contract, needs a status-polling endpoint, and exceeds Clever/Google parity. Deferred — the escalation path if 429s prove chronic.
 - Honoring `Retry-After` when present: ClassLink's behavior is unverified; fixed exponential backoff is predictable and sufficient. Not planned for.
-
-### 3c. A sync that would strip most of a section's roster is refused, not applied
-
-**Decision:** Before `set_exact_student_list` is called with a fetched roster, compare the incoming student count against the section's current student count. If the section currently has at least `SHRINK_GUARD_FLOOR = 5` students and the incoming roster would remove more than `SHRINK_GUARD_RATIO = 0.5` of them, abort the operation, leave the section untouched, log the section id and both counts, and surface a user-facing error. Do not apply a partial roster.
-
-**Rationale:** three independent unknowns converge on one indistinguishable outcome. If One Roster errors arrive as HTTP 200 wrapping an `imsx_codeMajor` envelope, _or_ `x-total-count` is absent so the loop stops after page one, _or_ offset paging is not stably ordered and pages skip records — in every case the client hands `set_exact_student_list` a partial roster, which reads the absences as departures and soft-deletes those `Follower` records. Different causes, identical silent damage.
-
-Note that the guard covers the outcome, not any specific cause, which is why it does not depend on knowing which of these actually occurs in practice. Any fetch that comes back materially smaller than the section — whatever the reason, including a class that has become unreadable — is refused rather than applied.
-
-The guard is deliberately not contingent on answers from ClassLink. Each of those three failure modes could also be introduced later by a proxy change on their side, and none of them is detectable from the response we get. A rail that assumes the fetch may be wrong is cheaper than three separate verifications that must each stay true forever. It also converts the worst failure mode — silent mass-unenrollment discovered weeks later by a teacher — into a visible, reversible error at import time.
-
-The floor exempts small classes, where a legitimate roster change easily exceeds half. Above it, a real end-of-term emptying is refused too — accepted, because a teacher hitting this can delete the section, and the alternative failure is unrecoverable without a database restore.
-
-**Follow-up (out of scope here):** an explicit "yes, really remove these students" confirmation would let the legitimate case through. That needs `RosterDialog` UX beyond Clever/Google parity, so it is deferred. This decision adds a sixth state to the error-copy list.
-
-**Alternatives considered:**
-
-- Validate the fetch instead of the outcome (require `x-total-count` present, reject `imsx` envelopes, verify no duplicate `sourcedId` across pages): Worth doing as well, and cheap — but each check only closes the failure mode it anticipates. The outcome check closes the class. Complementary, not a substitute.
-- Warn-and-apply: Preserves the silent-damage outcome, since nobody reads the log until a teacher complains. Rejected.
-- Never remove students automatically (additive sync only): Breaks parity — teachers rely on sync to reflect real departures. Rejected.
 
 ### 4. Central partner credential model (not per-user OAuth)
 
@@ -450,11 +580,10 @@ None outstanding.
 Each entry below records something deliberately _not_ built, so the reasoning survives the
 decision. Read this before proposing any of them.
 
-**User-facing copy for all six failure states.** Captured in the spec requirement "Each rostering failure state has specific user-facing copy" and wired by tasks 6.6a/6.6b. Three decisions travelled with it:
+**User-facing copy for the failure states.** Captured in the spec requirement "Each rostering failure state has specific user-facing copy" and wired by tasks 6.6a/6.6b. Three decisions travelled with it:
 
 - The district-not-enabled and non-expiry-401 states **share one string** — indistinguishable to the teacher, with the distinction preserved in logs for support.
 - The 429 string **doubles as the fallback** for any failure lacking its own copy (missing collection key, malformed body, unhandled error). Required, not tidy: `RosterDialog`'s title and login-type switches have no default branch, so an uncovered path renders an empty `<h2>` that reads as a styling bug rather than an error.
-- The shrink-guard message **states what was prevented rather than offering to proceed**, so Decision 3c stands unchanged and no confirmation UI enters this release. The reasoning is worth keeping: the guard exists because the fetched roster may be wrong, and a prompt would ask the teacher to ratify a number we have already decided not to trust. The confirmation path remains the deferred follow-up for letting a legitimately emptied class through.
 
 - **Two "ClassLink Account" rows during the migration window are correct — follow the Clever convention.** No UI work is required, and none should be added. `ManageLinkedAccounts.formatAuthOptions` groups auth options by `credentialType` and concatenates every option for each provider (`apps/src/accounts/ManageLinkedAccounts.jsx:182-200`), and `classlink` is already registered in `SingleSignOnProviders` (`apps/src/accounts/constants.js:14`). So a Clever teacher holding both a v2 and a v3 auth option already sees two "Clever Account" rows in production, and ClassLink inherits the identical behavior for free. The v2 row's Disconnect stays unblocked for the same reason: Clever does not block it, and diverging would mean writing ClassLink-specific UI logic to solve a problem the existing convention already accepts.
 - **Student `status: "tobedeleted"` is not acted on.** All users in the `/classes/<classSourcedId>/students` response with `role == "student"` are enrolled, regardless of `status`. This is coherent rather than merely simpler: a departure is signaled by the student dropping out of the class roster, which `set_exact_student_list` already handles, so `status` would be a second and redundant channel for the same event — one whose district-by-district semantics we could not verify. Ignoring it removes the risk that a district using `tobedeleted` for routine end-of-term SIS churn would have its students mass-unenrolled every term.
@@ -463,6 +592,7 @@ decision. Read this before proposing any of them.
 - **`SourcedId` is never blank**. Decision 1 keeps its presence validation regardless, now justified as a guard against our own extraction returning nil rather than against ClassLink's payload — see the rationale there.
 - Whether `x-next-page-token` offers cursor paging — ClassLink's best-practices guide documents only `limit`/`offset` with `x-count`/`x-total-count` and never mentions the token, so it is not a usable contract. See Context.
 - **No delta sync, and `x-modified` / `x-obfuscated` are ignored.** Both headers are undocumented and were empty in every observation, so neither carries a contract — the same reasoning that rules out `x-next-page-token`. Two consequences accepted deliberately. If `x-modified` supports "changed since timestamp X", we are declining a mechanism that would make re-syncs dramatically cheaper, so the rate-limit exposure stands exactly as the Risks section describes it. And `x-obfuscated` is a correctness question left open: if a district can have its roster data redacted, we would create student accounts with redacted names and not know why. Neither is worth building against an undocumented header, but the second leaves a breadcrumb worth recording — **if roster names ever arrive looking redacted, `x-obfuscated` is the first thing to check.**
-- **No `SourcedId` format validation.** Decision 1 requires only non-blank and pipe-free, so the question of whether the value can be UUID-format is moot rather than answered — observed ids include `1234567890`, `7_1553`, `FY`, and `5678_T5678-0005`, and any tighter rule would invent a constraint ClassLink does not state.
-- Whether rate limiting and expiry arrive as HTTP 429/401 rather than HTTP 200 with an in-body failure — trusted per ClassLink's documentation, with structural validation and Decision 3c as independent backstops. See Decision 3a.
+- **No `SourcedId` format validation.** Decision 1 requires only non-blank and pipe-free, so the question of whether the value can be UUID-format is moot rather than answered — observed ids include `1234567890`, `7_1111`, `FY`, and `5678_T5678-0005`, and any tighter rule would invent a constraint ClassLink does not state.
+- Whether rate limiting and expiry arrive as HTTP 429/401 rather than HTTP 200 with an in-body failure — trusted per ClassLink's documentation, with structural validation of the response envelope as the backstop. See Decision 3a.
+- **Removed: the roster-shrink guard.** An earlier draft refused any sync that would remove more than half of a section's students, on the argument that three unknowns — an error delivered as HTTP 200, a missing `x-total-count`, and unstable page ordering — all converge on the same silent partial roster. Each of those has since been addressed on its own terms: structural validation rejects a response whose collection key is absent or non-array, short-page termination needs no count headers, and `sort=sourcedId` is confirmed to produce a stable total order. What remained was a guard against ClassLink returning a genuinely smaller roster, which is ClassLink being the source of truth rather than a failure. The outcome is also recoverable: `set_exact_student_list` soft-deletes the `Follower` and leaves the `User` and its progress intact, so a later correct sync restores membership, and a class that drops to zero is immediately visible to its teacher. Treat mass removal as a bug to fix, not a state to defend against.
 - **Retired proposal: the zero-match import guard.** It was proposed to catch a wrong student identifier on the first import in a district — refuse rather than mass-create accounts when none of N fetched students match an existing ClassLink auth option. Its entire justification was that the `my/info`↔One Roster equality was unverified. With that confirmed, the remaining exposure is an implementation bug in our own extraction, which unit tests and the Decision 1 validation already cover, and which would surface in the first manual test rather than silently in production. Not worth the threshold-or-acknowledgement complexity it required. Can be added later without design change if duplicate-account reports appear.

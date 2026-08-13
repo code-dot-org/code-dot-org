@@ -145,25 +145,6 @@ The system SHALL paginate all ClassLink collection endpoints (`/applications`, `
 - **WHEN** the system fetches `/applications` to resolve district credentials
 - **THEN** the request carries the explicit limit rather than relying on a server default, since the number of sharing districts already exceeds the OneRoster default limit of 100 and a truncated list would make real districts appear to have ClassLink rostering disabled
 
-### Requirement: A roster fetch that would strip most of a section is refused
-Before applying a fetched roster to an existing section, the system SHALL compare the incoming student count to the section's current student count. When the section currently has 5 or more students and the incoming roster would remove more than half of them, the system SHALL abort without modifying the section, log the section id with both counts, and return a user-facing error. This guards against a partial fetch — caused by a miscounted or missing `x-total-count`, an error delivered as HTTP 200 with an `imsx_codeMajor` envelope, or a mid-fetch roster change shifting records across page boundaries — being applied as an authoritative roster and silently unenrolling students.
-
-#### Scenario: Fetch returns a partial roster
-- **WHEN** a sync fetches 3 students for a section that currently has 30
-- **THEN** the section's roster is unchanged, no `Follower` record is soft-deleted, the discrepancy is logged, and the teacher sees an error
-
-#### Scenario: Ordinary roster shrinkage is applied
-- **WHEN** a sync fetches 26 students for a section that currently has 30
-- **THEN** the removal is applied normally, since it does not exceed half the roster
-
-#### Scenario: Small sections are exempt from the guard
-- **WHEN** a sync fetches 1 student for a section that currently has 4
-- **THEN** the removal is applied normally, since the section is below the 5-student floor
-
-#### Scenario: Guard does not apply to a new import
-- **WHEN** a teacher imports a class that becomes a new section with no prior roster
-- **THEN** the guard does not engage, since there are no existing students to remove
-
 ### Requirement: One Roster 429 responses are propagated and retried from the browser
 When a One Roster API call fails with HTTP 429, the backend SHALL immediately return 429 to the browser without sleeping or retrying in-process. The frontend SHALL retry the request with automatic exponential backoff — 3 attempts total, with increasing waits between them — using a shared retry helper for both the class-list and import/sync requests, and SHALL surface an error to the user only after all attempts fail.
 
@@ -239,12 +220,6 @@ The system SHALL surface a distinct message for each ClassLink rostering failure
 #### Scenario: Imported class contains no students
 - **WHEN** a class is imported or synced and its roster contains no users with `role == "student"`
 - **THEN** the teacher sees "This section (<section_name>) has no students.", with the section name interpolated
-
-#### Scenario: Sync refused by the roster-shrink guard
-- **WHEN** a sync is refused because the incoming roster would remove more than half the students from a section holding at least five
-- **THEN** the teacher sees "Syncing would remove <num_students> students from the section, abandoning sync.", with the count of students that would have been removed interpolated
-- **AND** the message states what was prevented rather than offering to proceed, since the guard exists precisely because the fetched roster may be wrong; no confirmation path is offered in this release
-- **AND** no pluralization variant is required: the guard's five-student floor and one-half ratio make the smallest possible count three
 
 ### Requirement: ClassLink rostering UI matches Clever rostering UX
 The teacher-facing interface for importing and syncing ClassLink sections SHALL match the existing Clever rostering experience, using the same `RosterDialog` and section management components.
