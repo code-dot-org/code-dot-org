@@ -80,8 +80,9 @@ the tooltip shut, a Tab to it opens it. Escape closes it either way.
 Styling lives in the `MuiTooltip` theme override
 ([src/themes/code.org/styleOverrides/tooltip.ts](../themes/code.org/styleOverrides/tooltip.ts)),
 as it does for every other component migrated to MUI. Text metrics come from the
-theme's `body2` variant, and the border-radius and shadow from the CADS
-`--shape-sm` and `--shadow-md` tokens, rather than being restated here.
+theme's `body3` variant (the tooltip's one fixed size), and the border-radius
+and shadow from the CADS `--shape-sm` and `--shadow-md` tokens, rather than being
+restated here.
 
 Unlike those other migrations, every rule is marked with a `data-cdo-tooltip`
 attribute that only this component sets. Sketch Lab already uses bare MUI

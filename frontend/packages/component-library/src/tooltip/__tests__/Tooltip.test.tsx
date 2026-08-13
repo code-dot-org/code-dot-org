@@ -449,17 +449,17 @@ describe('Design System - Tooltip (MUI)', () => {
       );
     });
 
-    // One fixed size: the theme's body2 text and its arrow.
-    it('uses the body2 text and arrow metrics', async () => {
+    // One fixed size: the theme's body3 (small).
+    it('uses the body3 text and arrow metrics', async () => {
       renderTooltip();
 
       await user.tab();
       const bubble = await findTooltipBubble();
       const arrow = document.querySelector('.MuiTooltip-arrow') as HTMLElement;
 
-      expect(getComputedStyle(bubble).fontSize).toBe('1rem');
-      expect(getComputedStyle(bubble).lineHeight).toBe('1.48');
-      expect(getComputedStyle(arrow).fontSize).toBe('0.75rem');
+      expect(getComputedStyle(bubble).fontSize).toBe('0.875rem');
+      expect(getComputedStyle(bubble).lineHeight).toBe('1.54');
+      expect(getComputedStyle(arrow).fontSize).toBe('0.625rem');
     });
   });
 });

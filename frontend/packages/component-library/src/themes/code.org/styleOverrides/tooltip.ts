@@ -16,7 +16,7 @@ export const TOOLTIP_OVERRIDES: Components<Theme>['MuiTooltip'] = {
   styleOverrides: {
     tooltip: ({theme}) => ({
       '&[data-cdo-tooltip]': {
-        ...theme.typography.body2,
+        ...theme.typography.body3,
         backgroundColor: BACKGROUND,
         color: 'var(--text-neutral-inverse)',
         borderRadius: 'var(--shape-sm)',
@@ -26,15 +26,15 @@ export const TOOLTIP_OVERRIDES: Components<Theme>['MuiTooltip'] = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: '0.25rem',
+        gap: '0.3rem',
         minWidth: '4rem',
         maxWidth: '16rem',
         padding: '0.125rem 0.5rem',
         textAlign: 'center',
         // Arrow font-size sets its box, since MUI measures the arrow in em.
-        '& .MuiTooltip-arrow': {fontSize: '0.75rem'},
+        '& .MuiTooltip-arrow': {fontSize: '0.625rem'},
         // The icon rule only does anything when there's a leading icon.
-        '& i': {fontSize: '0.875rem', width: '1.125rem', lineHeight: 1},
+        '& i': {fontSize: '0.8125rem', width: '1rem', lineHeight: 1},
       },
     }),
     // Set on the arrow itself. Styling it through the tooltip loses to MUI.
