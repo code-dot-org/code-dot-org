@@ -103,9 +103,9 @@ export const RulesInPlayDialog = ({
               is built on, and a panel that started at "Has Gravity" would read
               as though being somewhere were a mechanic too. */}
           {BASE_RULES.map(rule => (
-            <li key={rule.name} className={styles.rule}>
+            <li key={rule.name} className={`${styles.rule} ${styles.base}`}>
               <span className={styles.what}>
-                <Typography component="span" variant="strong">
+                <Typography component="span" variant="label2">
                   {rule.ability}
                 </Typography>
                 <Typography component="span" variant="body4">
@@ -116,7 +116,11 @@ export const RulesInPlayDialog = ({
           ))}
           {rules.length === 0 && (
             <li>
-              <Typography className={styles.empty} variant="body2">
+              <Typography
+                className={styles.empty}
+                variant="body2"
+                color="textSecondary"
+              >
                 {translate(
                   'Your project has no rules of its own yet, so nothing moves, falls or collides. Add one to get started.',
                 )}
@@ -131,8 +135,16 @@ export const RulesInPlayDialog = ({
                 <span className={styles.what}>
                   {/* The ability leads, as it does in the picker: this panel
                       answers "what does this world have?", and the rule's own
-                      name is what its toolbox category says. */}
-                  <Typography component="span" variant="strong">
+                      name is what its toolbox category says.
+
+                      `label2` and not `strong`, which is what every one of
+                      these lists used to say. `strong` is a MODIFIER variant —
+                      it sets a weight and nothing else, no family and no size —
+                      so standalone it renders bold in whatever font it happens
+                      to inherit, which beside a Blockly workspace is not the
+                      design system's. `label2` is the 14px/600 step above the
+                      `body4` lines under it, and it is what a label is for. */}
+                  <Typography component="span" variant="label2">
                     {rule.ability ?? rule.name}
                   </Typography>
                   <Typography component="span" variant="body4">
@@ -155,6 +167,7 @@ export const RulesInPlayDialog = ({
                       className={styles.warning}
                       component="span"
                       variant="body4"
+                      color="textSecondary"
                     >
                       {translate('Required by {names}.', {
                         names: needed.join(', '),

@@ -3631,7 +3631,11 @@ const worldLoadMap = defineBlock({
 
 const worldWorld = defineBlock({
   type: 'world_world',
-  message0: 'define world named %1',
+  // The `with` is a word waiting for a field: the rules button is appended
+  // after it by the extension below, so the block reads `define world named
+  // ⟨Platform World⟩ with ⟨8 rules⟩`. A JSON `args0` entry could not do it —
+  // the button carries an `onClick`, which no block definition can express.
+  message0: 'define world named %1 with',
   args0: [{type: 'field_input', name: 'NAME', text: 'World'}],
   // A definition root: no previous connection, a NEXT connection — the body
   // (`load map`, `create in map`, the cameras) chains below it rather than

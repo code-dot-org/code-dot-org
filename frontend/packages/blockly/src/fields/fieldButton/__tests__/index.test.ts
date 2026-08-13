@@ -56,6 +56,53 @@ describe('FieldButton', () => {
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 
+  it('paints its background whether or not a colour was given', () => {
+    // The bug this pins. Blockly paints a field's background from a CLASS, and
+    // a button has neither of the two it hands out: callers clear `EDITABLE`
+    // (a button has no value a learner sets), which eventually earns the DARK
+    // one. Which class it had was an accident of when the flag was cleared, so
+    // the same button was pale in a workspace and black in a flyout — and went
+    // black in the workspace too as soon as its value changed.
+    //
+    // An inline `style` beats both classes. The colour is the theme's own
+    // field background, so this is not a new colour; it is the one a button
+    // was getting when it got lucky.
+    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    const field = new FieldButton({value: 'x', onClick: () => {}});
+    Object.assign(field as unknown as Record<string, unknown>, {
+      borderRect_: rect,
+      textElement_: text,
+      getConstants: () => ({FIELD_BORDER_RECT_COLOUR: '#fff'}),
+      getSourceBlock: () => ({style: {colourPrimary: '#b8791c'}}),
+    });
+
+    field.applyColour();
+
+    expect(rect.getAttribute('style')).toBe('fill: #fff');
+    // …and the words with it. The classes paint a non-editable field's text
+    // pale to sit on the dark background they were about to give it; state one
+    // without the other and a button reads white on white.
+    expect(text.getAttribute('style')).toBe('fill: #b8791c');
+  });
+
+  it('still prefers a colour the caller asked for', () => {
+    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    const field = new FieldButton({
+      value: 'x',
+      onClick: () => {},
+      colorOverrides: {button: 'rebeccapurple'},
+    });
+    Object.assign(field as unknown as Record<string, unknown>, {
+      borderRect_: rect,
+      getConstants: () => ({FIELD_BORDER_RECT_COLOUR: '#fff'}),
+    });
+
+    field.applyColour();
+
+    expect(rect.getAttribute('style')).toBe('fill: rebeccapurple');
+  });
+
   it('is exposed as a field plugin', () => {
     expect(plugin.type).toBe(PluginType.Field);
     expect(plugin.name).toBe('field_button');

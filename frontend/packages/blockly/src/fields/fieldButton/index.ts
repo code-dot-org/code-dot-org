@@ -174,12 +174,35 @@ export class FieldButton extends Blockly.Field {
   /**
    * Contrast background for button with source block
    * @override
+   *
+   * THE RECT IS PAINTED WHETHER OR NOT THERE IS AN OVERRIDE, and that is a fix
+   * rather than a tidy-up. Blockly paints a field's background from a CLASS —
+   * `blocklyEditableField` is the pale one every dropdown and text field wears,
+   * `blocklyNonEditableField` is dark — and a button is neither: it has no
+   * value a learner sets, so callers clear `EDITABLE` to stop Blockly
+   * serializing it and warning about it.
+   *
+   * Which class it ends up with was then an accident of timing. Clearing the
+   * flag AFTER appending leaves the pale class stamped and never re-stamped, so
+   * a button looked right in the workspace by luck. Put the same block in a
+   * FLYOUT — where every field is non-editable, because a block in the toolbox
+   * cannot be edited — and Blockly re-stamps it, and the same button comes back
+   * black. So did any button whose value changed, since writing one re-stamps
+   * too: the world block's rule count was black in the workspace for exactly
+   * that reason while the eye beside it was not.
+   *
+   * Saying the colour outright ends the argument: an inline `style` beats both
+   * classes, so a button looks the same everywhere. The default is the field
+   * background the theme already uses for every other field, so this is not a
+   * new colour — it is the colour a button was getting when it got lucky.
    */
   applyColour() {
     const sourceBlock = this.getSourceBlock() as Blockly.BlockSvg;
-    const buttonColor = this.colorOverrides?.button;
     const textColor = this.colorOverrides?.text;
     const iconColor = this.colorOverrides?.icon;
+    const buttonColor =
+      this.colorOverrides?.button ??
+      this.getConstants()?.FIELD_BORDER_RECT_COLOUR;
 
     if (this.icon) {
       this.icon.style.fill = iconColor || sourceBlock?.style.colourPrimary;
@@ -190,9 +213,18 @@ export class FieldButton extends Blockly.Field {
       borderRect.setAttribute('style', 'fill: ' + buttonColor);
     }
 
+    // The text goes the way the icon does, and for the same reason now that the
+    // background is stated: Blockly's classes paint a non-editable field's text
+    // PALE, to sit on the dark background it was about to give it. Take the
+    // dark background away and the words go white on white — which is what a
+    // button reading "8 rules" did the moment its rect was fixed. The block's
+    // own colour is what the eye's glyph already uses, so the two read alike.
     const textElement = this.textElement_;
-    if (textElement && textColor) {
-      textElement.setAttribute('style', 'fill: ' + textColor);
+    if (textElement) {
+      textElement.setAttribute(
+        'style',
+        'fill: ' + (textColor || sourceBlock?.style.colourPrimary),
+      );
     }
   }
 }

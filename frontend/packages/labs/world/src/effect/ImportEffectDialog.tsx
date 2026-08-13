@@ -238,7 +238,7 @@ export const ImportEffectDialog = ({
                   </span>
                 )}
                 <span className={styles.words}>
-                  <Typography component="span" variant="strong" color="inherit">
+                  <Typography component="span" variant="label2" color="inherit">
                     {effect.document.name}
                   </Typography>
                   <Typography component="span" variant="body4" color="inherit">
