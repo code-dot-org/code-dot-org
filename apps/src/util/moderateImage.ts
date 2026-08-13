@@ -18,8 +18,6 @@ const LABS_WITH_IMAGE_MODERATION = [
 ];
 
 const MODERATION_SPAN_OP = 'image.moderate';
-const FILE_MODERATION_SPAN_NAME = 'image-moderation.moderateImage';
-const URL_MODERATION_SPAN_NAME = 'image-moderation.moderateImageUrl';
 
 export type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
 export type SeverityThresholds = Partial<Record<CategoryName, number>>;
@@ -207,7 +205,7 @@ export const moderateImage = async (
       formatAssetUrl: url =>
         url ? `${window.location.origin}${url}` : undefined,
       span: {
-        name: FILE_MODERATION_SPAN_NAME,
+        name: `${MODERATION_SPAN_OP}.moderateImage`,
         attributes: {
           'image.source': 'file',
           'image.type': imageType,
@@ -247,7 +245,7 @@ export const moderateImageUrl = async (
         ),
       formatAssetUrl: url => url || undefined,
       span: {
-        name: URL_MODERATION_SPAN_NAME,
+        name: `${MODERATION_SPAN_OP}.moderateImageUrl`,
         attributes: {'image.source': 'url'},
       },
     }
