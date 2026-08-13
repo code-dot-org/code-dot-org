@@ -969,3 +969,35 @@ export const noRecommendedVersionsOfferings = {
     },
   },
 };
+
+/*
+The quick assign endpoint groups a featured course offering under a 'Recommended'
+header in place of the header the offering was assigned, and sorts 'Recommended'
+ahead of every other header including 'Favorites' and 'Year Long'. See
+QuickAssignHelper#compare_headers. The two fixtures below are the ones above with
+one offering featured, so the renderers get exercised with a 'Recommended' group
+without disturbing the header counts the other tests assert on.
+*/
+
+const [featuredHighSchoolCourse, ...remainingYearLongCourses] =
+  highSchoolCourseOfferings.high.Course['Year Long'];
+
+export const highSchoolCourseOfferingsWithRecommended = {
+  high: {
+    Course: {
+      Recommended: [featuredHighSchoolCourse],
+      'Year Long': remainingYearLongCourses,
+    },
+    'Standalone Unit': highSchoolCourseOfferings.high['Standalone Unit'],
+  },
+};
+
+const {Favorites: featuredHocCourses, ...remainingHocHeaders} =
+  hocCourseOfferings.hoc;
+
+export const hocCourseOfferingsWithRecommended = {
+  hoc: {
+    Recommended: featuredHocCourses,
+    ...remainingHocHeaders,
+  },
+};

@@ -214,11 +214,17 @@ export default function CourseOfferingEditor(props) {
         />
       </label>
       <label>
-        Featured In Category
+        Featured
         <HelpTip>
           <p>
-            Featured items will show up at the top of the category in the
-            assignment dropdown.
+            Featured course offerings are grouped under a "Recommended" header
+            at the top of curriculum quick assign, in place of the Header set
+            below, and are listed ahead of non-featured curricula in the
+            curriculum catalog.
+          </p>
+          <p>
+            A course offering still needs a Header to appear in quick assign at
+            all. Featuring one promotes it; it does not publish it.
           </p>
         </HelpTip>
         <input
