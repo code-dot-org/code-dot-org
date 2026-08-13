@@ -189,8 +189,3 @@ That rules out heredoc `RUN`, reliance on `SHELL`, and BuildKit-only COPY
 flags. `COPY --chown` cannot read environment inherited from a parent image —
 it expands only same-stage ARGs — which is why the uid/gid 1000 pair is
 written literally.
-
-**Cross-building under qemu is unreliable.** Emulated `bundle install`
-fails erratically (g++ segfaults on libsass, dpkg errors), varying with the
-binfmt qemu build and the engine. CI builds each architecture on a native
-runner; prefer native hardware locally too.

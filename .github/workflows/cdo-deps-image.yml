@@ -156,9 +156,9 @@ jobs:
   # sets up a container builder: it would try to pull the tag from a registry.
   #
   # Each architecture builds on its own native runner. qemu is not an
-  # option here: an emulated bundle install is slow and fails erratically
-  # (see docker/deps/README.md). Each leg pushes one arch-suffixed tag for
-  # the merge job to combine.
+  # option here: emulated bundle installs fail erratically (g++ segfaults
+  # on libsass, dpkg errors, varying with the binfmt qemu build). Each leg
+  # pushes one arch-suffixed tag for the merge job to combine.
   build-push:
     name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
