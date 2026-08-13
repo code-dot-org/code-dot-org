@@ -16,8 +16,27 @@ import {describe, expect, it} from 'vitest';
 import {inputRule} from '../../rules/stock/input';
 import {buildDomainPalette} from '../domainBlocks';
 import {parseRuleMeta} from '../ruleMeta';
+import {registerProjectRules} from '../ruleRegistry';
 import {shadowsFor} from '../valueShadow';
 
+/**
+ * Build the palette for a rule, and register it.
+ *
+ * The two go together and always did: `refreshProjectDropdowns` registers the
+ * project's rules and the palette is built from the same list, in the same
+ * breath. Saying so matters now, because a member block whose rule the registry
+ * cannot find generates NOTHING — that is how a deleted rule stops taking the
+ * whole project down with it (domainBlocks, `refResolves`) — and a test that
+ * built blocks without registering was asking for code from a rule it had
+ * declared does not exist.
+ */
+const paletteFor = (
+  metas: Parameters<typeof buildDomainPalette>[0],
+  options?: Parameters<typeof buildDomainPalette>[1],
+) => {
+  registerProjectRules([...metas]);
+  return buildDomainPalette(metas, options);
+};
 /** A `.rule` whose one event carries the given phrasing. */
 const ruleWithEvent = (
   event: {parts: unknown[]},
@@ -54,7 +73,7 @@ const KEY_VAR = [{id: 'k', name: 'key', type: 'String'}];
 
 /** The hat block this rule's event makes (the built-ins' hats are in there too). */
 const hatFor = (meta: ReturnType<typeof ruleWithEvent>) => {
-  const {blocks} = buildDomainPalette([meta]);
+  const {blocks} = paletteFor([meta]);
   return blocks.find(block => block.type.startsWith('world_on_Keys_')) as {
     type: string;
     message0: string;
@@ -90,7 +109,7 @@ const codeFor = (
 
 /** The block that RAISES this rule's event. */
 const emitFor = (meta: ReturnType<typeof ruleWithEvent>) => {
-  const {blocks} = buildDomainPalette([meta]);
+  const {blocks} = paletteFor([meta]);
   return blocks.find(block => block.type.startsWith('world_emit_Keys_')) as {
     type: string;
     message0: string;
@@ -215,7 +234,7 @@ describe('where a world event\u2019s hat may be placed', () => {
     meta: ReturnType<typeof ruleWithEvent>,
     fileKind?: 'actor' | 'world' | 'rule',
   ): string[] => {
-    const {toolbox} = buildDomainPalette([meta], {fileKind});
+    const {toolbox} = paletteFor([meta], {fileKind});
     const category = (toolbox as Array<{name: string; blocks?: string[]}>).find(
       entry => entry.name === meta.name,
     );
@@ -226,8 +245,7 @@ describe('where a world event\u2019s hat may be placed', () => {
   const defined = (
     meta: ReturnType<typeof ruleWithEvent>,
     fileKind?: 'actor' | 'world' | 'rule',
-  ): string[] =>
-    buildDomainPalette([meta], {fileKind}).blocks.map(block => block.type);
+  ): string[] => paletteFor([meta], {fileKind}).blocks.map(block => block.type);
 
   it('is not an actor file, for an event the rule declares', () => {
     // `ruleWithEvent` hangs its event off the rule root, so it is the world's.
@@ -278,7 +296,7 @@ describe('an actor event\u2019s hat, in the same rule', () => {
     fileKind?: 'actor' | 'world' | 'rule',
     ownRuleModule?: string,
   ) => {
-    const {toolbox} = buildDomainPalette([input], {fileKind, ownRuleModule});
+    const {toolbox} = paletteFor([input], {fileKind, ownRuleModule});
     const category = (toolbox as Array<{name: string; blocks?: string[]}>).find(
       entry => entry.name === 'Input',
     );

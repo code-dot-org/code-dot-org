@@ -143,6 +143,78 @@ export function refModule(ref: MemberRef): string | undefined {
 }
 
 /**
+ * Whether the rule a reference names is one the project still has.
+ *
+ * A DEAD REFERENCE is a thing a project can now hold, and holding one used to
+ * stop the whole thing running. Deleting `rules/gravity.rule` leaves every
+ * `use trait Affected by Gravity` in the project naming a rule nothing
+ * declares — and `refModule` answers with the path the reference was built
+ * with, so the generated module imported a file that is not there and the
+ * compile failed outright:
+ *
+ *   cannot resolve 'rules/gravity' from 'actors/player.actor'
+ *
+ * The project stopped at the door: not the actor that elected the trait, the
+ * whole project, with the message naming a file the learner may never have
+ * opened. So the emitting side asks this first and writes nothing at all,
+ * which leaves the actor without that trait and everything else running — and
+ * the block says so on its own face (extensions/missingRule).
+ *
+ * A reference with no rule name is the engine's own bare export and always
+ * resolves; it is compiled into the runtime rather than imported.
+ */
+export function refResolves(ref: MemberRef): boolean {
+  return !ref.ruleName || ruleByName(ref.ruleName) !== undefined;
+}
+
+// Which rule each MEMBER block belongs to, by block type.
+//
+// A `use trait` block names its trait in a field, so what it refers to can be
+// read off the block. Every other member block — a hat, a query, a getter, an
+// action — names its member in the block TYPE, and the reference itself lives
+// in the closure the definition was built with. Nothing on the block can be
+// asked about it.
+//
+// So the factories say, once, as they define each block. What reads it is the
+// warning (extensions/missingRule): a block whose rule the project no longer
+// has generates nothing, and a block that generates nothing has to say so.
+const ruleByBlockType = new Map<string, string>();
+
+/** Record that `blockType` is a member of `ruleName` (called at definition). */
+export function registerMemberBlockType(
+  blockType: string,
+  ruleName: string | undefined,
+): void {
+  if (ruleName) {
+    ruleByBlockType.set(blockType, ruleName);
+  }
+}
+
+// A stand-in's rule, which is known LESS precisely: it was read back out of
+// the block type, where the name has had its punctuation taken out and been
+// guessed at again (standInBlocks). Kept apart from the real map so that
+// registering the rule again overwrites the guess with the rule's own name,
+// rather than the guess shadowing it.
+const standInRuleByBlockType = new Map<string, string>();
+
+/** Record the rule a synthesised stand-in stands in for. */
+export function registerStandInRule(
+  blockType: string,
+  ruleName: string | undefined,
+): void {
+  if (ruleName) {
+    standInRuleByBlockType.set(blockType, ruleName);
+  }
+}
+
+/** The rule a member block belongs to, if it is one and the rule is missing. */
+export function missingRuleOfBlockType(blockType: string): string | undefined {
+  const ruleName =
+    ruleByBlockType.get(blockType) ?? standInRuleByBlockType.get(blockType);
+  return ruleName && !ruleByName(ruleName) ? ruleName : undefined;
+}
+
+/**
  * A rule name as an identifier fragment — for block TYPES, which are registry
  * keys and must not contain punctuation ("Arrow Keys" → `ArrowKeys`).
  */

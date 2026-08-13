@@ -86,6 +86,7 @@ import {
   type EffectParamState,
 } from './extensions/effectParamsMutator';
 import {eventActorToolboxExtension} from './extensions/eventActorToolbox';
+import {missingRuleExtension} from './extensions/missingRule';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
 import {ruleImportFieldExtension} from './extensions/ruleImportField';
@@ -145,7 +146,14 @@ import type {
   QueryMeta,
   RuleMeta,
 } from './ruleMeta';
-import {refFromValue, refModule, ruleLocation, ruleSlug} from './ruleRegistry';
+import {
+  refFromValue,
+  refModule,
+  registerMemberBlockType,
+  refResolves,
+  ruleLocation,
+  ruleSlug,
+} from './ruleRegistry';
 import {measuredImages, parseSpriteRef, spriteCell} from './spriteCells';
 import {
   projectRuleIdentities,
@@ -224,6 +232,71 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
     return ref.exportName;
   }
   return `WorldLab.${ref.exportName}`;
+};
+
+// ── A rule that is not there any more ────────────────────────────────────────
+// Removing a rule deletes its file (rules/removeRule), and a block that named
+// one of its members is left pointing at nothing. Blockly does not forget a
+// block DEFINITION — once registered it stays for the session — so those blocks
+// go on loading and go on generating, with a reference that was built when the
+// rule existed and still carries the path it lived at. The generated module
+// then imported a file that is not there, and the whole project stopped:
+//
+//   cannot resolve 'rules/gravity' from 'actors/player.actor'
+//
+// Over one row, in one actor, naming a file the learner may never have opened.
+//
+// So every generator that names a member asks first, and a dead one writes
+// NOTHING it can get away with writing nothing for: a handler for an event that
+// cannot happen is no handler, an action nobody can perform is no line. What is
+// left is the value blocks, which have to report SOMETHING because the block
+// they are plugged into is expecting a value — so they report the emptiest one
+// of the right shape, and `if ⟨is on the ground?⟩` on a game with no gravity
+// takes the branch it would take if the answer were simply no.
+//
+// The block says which rule went missing on its own face, so none of this is
+// silent (extensions/missingRule).
+
+/**
+ * A member block's extensions, plus the one that warns when its rule has gone.
+ *
+ * Last, so the warning it sets is the last word on a block that may already
+ * carry another (`addOnChange` composes them; the two are namespaced apart).
+ */
+const missingRuleAware = (extensions: Extension[]): Extension[] => [
+  ...extensions,
+  missingRuleExtension,
+];
+
+/** What a value block reports when the rule that gave it meaning has gone. */
+const deadValue = (
+  type: PropertyType,
+  generator?: JavascriptGenerator,
+): string => {
+  if (type === 'boolean') {
+    return 'false';
+  }
+  if (type === 'string') {
+    return "''";
+  }
+  if (type === 'vector') {
+    // The origin rather than `null`: a vector flows into arithmetic, and the
+    // next block along would read `.x` off whatever this is.
+    if (generator) {
+      addImport(
+        generator,
+        'world_lab',
+        `import * as WorldLab from 'world-lab';`,
+      );
+    }
+    return 'new WorldLab.Vector(0, 0)';
+  }
+  if (type === 'actor' || type === 'actors') {
+    // An empty list, because that is what every actor socket accepts and what
+    // a loop over it does nothing with (specs/ACTOR_LISTS.md).
+    return '[]';
+  }
+  return '0';
 };
 
 // A globally-unique key for a member's block TYPE (registry + toolbox name),
@@ -368,6 +441,9 @@ const worldUseTrait = defineBlock({
     traitOptionsExtension,
     traitContextExtension,
     openSourceButtonExtension,
+    // …and, when the rule that declares this trait has been deleted, a warning
+    // saying so — since the generator's answer to that is to write nothing.
+    missingRuleExtension,
   ],
   style: 'behavior_blocks',
   tooltip: 'Give the actor a trait (its properties and behavior).',
@@ -389,6 +465,15 @@ const worldUseTrait = defineBlock({
         return '';
       }
       const ref = refFromValue(trait);
+      // A trait whose RULE the project no longer has — deleted from the rules
+      // panel, or a file removed by hand. Emitting it would import a module
+      // that is not there and stop the whole project compiling, over one row
+      // in one actor; so nothing is written, the actor goes without that trait,
+      // and the block wears a warning saying which rule is missing
+      // (extensions/missingRule, ruleRegistry.refResolves).
+      if (!refResolves(ref)) {
+        return '';
+      }
       return `actor.useTraits([${refCode(ref, generator)}]);\n`;
     },
   },
@@ -837,13 +922,14 @@ const defineEventBlock = (event: EventMeta) => {
     filters.push({field, ref: choice});
     message0 += ` %${args0.length}`;
   }
+  registerMemberBlockType(eventBlockType(event), event.ref.ruleName);
   return defineBlock({
     type: eventBlockType(event),
     message0,
     args0,
     nextStatement: true,
     inputsInline: true,
-    extensions,
+    extensions: [...extensions, missingRuleExtension],
     style: 'event_blocks',
     tooltip: forActor
       ? `Run the blocks below when this actor ${event.name}.`
@@ -851,6 +937,11 @@ const defineEventBlock = (event: EventMeta) => {
         `there is no actor it happened to.`,
     generator: {
       javascript(block, generator) {
+        // The rule that raises this is gone, so nothing can raise it: the
+        // handler and its whole body are not written at all.
+        if (!refResolves(event.ref)) {
+          return '';
+        }
         // The guard a learner would otherwise write themselves: compare the
         // event's value against the choice and leave if it is not the one.
         const guards = filters
@@ -944,6 +1035,7 @@ const defineEmitBlock = (event: EventMeta) => {
   if (shadows.length) {
     registerValueShadows(type, shadows);
   }
+  registerMemberBlockType(type, event.ref.ruleName);
   return defineBlock({
     type,
     message0,
@@ -955,6 +1047,7 @@ const defineEmitBlock = (event: EventMeta) => {
       ...(forActor ? [subjectInputExtension(event.scope)] : []),
       worldContextExtension,
       ...(shadows.length ? [valueShadowExtension] : []),
+      missingRuleExtension,
     ],
     style: 'event_blocks',
     tooltip: forActor
@@ -963,6 +1056,11 @@ const defineEmitBlock = (event: EventMeta) => {
         `It is about the world, so it is raised once rather than per actor.`,
     generator: {
       javascript(block, generator) {
+        // Nothing listens for an event whose rule is gone, so raising it is a
+        // line with no reader.
+        if (!refResolves(event.ref)) {
+          return '';
+        }
         const carried = names
           .slice(0, paramIndex)
           .map(name => generator.valueToCode(block, name.value, Order.NONE))
@@ -1479,6 +1577,7 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
   const type = setPropertyBlockType(memberKey(property.ref));
   // Seed the value sockets with their default shadow blocks (attached on init).
   registerValueShadows(type, value.shadows);
+  registerMemberBlockType(type, property.ref.ruleName);
   return defineBlock({
     type,
     message0,
@@ -1487,15 +1586,22 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
     previousStatement: true,
     nextStatement: true,
     // A world property sets on `world`; warn if placed where `world` is unbound.
-    extensions: subjectScoped
-      ? [subjectInputExtension(property.scope), valueShadowExtension]
-      : [valueShadowExtension, worldContextExtension],
+    extensions: missingRuleAware(
+      subjectScoped
+        ? [subjectInputExtension(property.scope), valueShadowExtension]
+        : [valueShadowExtension, worldContextExtension],
+    ),
     style: 'default',
     tooltip: subjectScoped
       ? `Set an actor's ${name}.`
       : `Set the world's ${name}.`,
     generator: {
       javascript(block, generator) {
+        // Writing a property the project can no longer name: nothing to write
+        // it to, and nothing lost by not writing it.
+        if (!refResolves(property.ref)) {
+          return '';
+        }
         const value = typedValueCode(asTypedValue(property), block, generator);
         const set = (subject: string) =>
           `${subject}.set(${refCode(property.ref, generator)}, ${value})`;
@@ -1558,6 +1664,7 @@ const defineListPropertyBlocks = (property: PropertyMeta) => {
       verb === 'push'
         ? pushPropertyBlockType(memberKey(property.ref))
         : dropPropertyBlockType(memberKey(property.ref));
+    registerMemberBlockType(type, property.ref.ruleName);
     return defineBlock({
       type,
       message0,
@@ -1565,13 +1672,18 @@ const defineListPropertyBlocks = (property: PropertyMeta) => {
       inputsInline: true,
       previousStatement: true,
       nextStatement: true,
-      extensions: subjectScoped
-        ? [subjectInputExtension(property.scope), valueShadowExtension]
-        : [valueShadowExtension, worldContextExtension],
+      extensions: missingRuleAware(
+        subjectScoped
+          ? [subjectInputExtension(property.scope), valueShadowExtension]
+          : [valueShadowExtension, worldContextExtension],
+      ),
       style: 'default',
       tooltip,
       generator: {
         javascript(block, generator) {
+          if (!refResolves(property.ref)) {
+            return '';
+          }
           const item = generator.valueToCode(block, 'ITEM', Order.NONE) || '[]';
           const ref = refCode(property.ref, generator);
           const write = (subject: string) =>
@@ -1660,6 +1772,7 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     // not go through the store.
     registerManyActorBlock(type);
   }
+  registerMemberBlockType(type, property.ref.ruleName);
 
   return defineBlock({
     type,
@@ -1668,9 +1781,11 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     inputsInline: true,
     output: outputForType(property.type),
     // A world property reads from `world`; warn if placed where it is unbound.
-    extensions: subjectScoped
-      ? [subjectInputExtension(property.scope)]
-      : [worldContextExtension],
+    extensions: missingRuleAware(
+      subjectScoped
+        ? [subjectInputExtension(property.scope)]
+        : [worldContextExtension],
+    ),
     // Style by the value it reports: a boolean reads as logic, a whole vector as
     // a location, a number/point axis as math.
     style: valueStyle(property.type),
@@ -1679,6 +1794,14 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
       : `Get the world's ${name}.`,
     generator: {
       javascript(block, generator) {
+        // A value block, so it has to report SOMETHING: the emptiest value of
+        // the shape whatever it is plugged into is expecting.
+        if (!refResolves(property.ref)) {
+          return [deadValue(property.type, generator), Order.ATOMIC] as [
+            string,
+            number,
+          ];
+        }
         const subject = subjectScoped
           ? oneActor(actorTarget(block, generator, Order.MEMBER))
           : 'world';
@@ -1814,6 +1937,7 @@ const defineActionBlock = (action: ActionMeta) => {
   if (shadows.length) {
     registerValueShadows(type, shadows);
   }
+  registerMemberBlockType(type, action.ref.ruleName);
   return defineBlock({
     type,
     message0,
@@ -1822,19 +1946,23 @@ const defineActionBlock = (action: ActionMeta) => {
     previousStatement: true,
     nextStatement: true,
     // A world action runs on `world`; warn if placed where `world` is unbound.
-    extensions: [
+    extensions: missingRuleAware([
       ...(subjectScoped
         ? [subjectInputExtension(action.scope)]
         : [worldContextExtension]),
       ...(shadows.length ? [valueShadowExtension] : []),
       ...slotExtensions,
-    ],
+    ]),
     style: 'default',
     // The author's own sentence, when they wrote one.
     tooltip:
       action.description || (subjectScoped ? `${name} — for an actor.` : name),
     generator: {
       javascript(block, generator) {
+        // An action nobody can perform is no line at all.
+        if (!refResolves(action.ref)) {
+          return '';
+        }
         const argCode = params
           .map(
             (param, i) =>
@@ -1963,6 +2091,7 @@ const defineQueryBlock = (query: QueryMeta) => {
   if (shadows.length) {
     registerValueShadows(type, shadows);
   }
+  registerMemberBlockType(type, query.ref.ruleName);
 
   return defineBlock({
     type,
@@ -1970,19 +2099,28 @@ const defineQueryBlock = (query: QueryMeta) => {
     args0,
     inputsInline: true,
     output: outputForType(returns),
-    extensions: [
+    extensions: missingRuleAware([
       ...(subjectScoped
         ? [subjectInputExtension(query.scope)]
         : [worldContextExtension]),
       ...(shadows.length ? [valueShadowExtension] : []),
       ...slotExtensions,
-    ],
+    ]),
     style: valueStyle(returns),
     tooltip:
       query.description ||
       (subjectScoped ? `Whether an actor ${name}` : `The world's ${name}`),
     generator: {
       javascript(block, generator) {
+        // A value block: it reports the emptiest answer of the right shape, so
+        // `if ⟨is on the ground?⟩` in a game with no gravity takes the branch
+        // it would take if the answer were simply no.
+        if (!refResolves(query.ref)) {
+          return [deadValue(returns, generator), Order.ATOMIC] as [
+            string,
+            number,
+          ];
+        }
         const argCode = params
           .map(
             (param, i) =>

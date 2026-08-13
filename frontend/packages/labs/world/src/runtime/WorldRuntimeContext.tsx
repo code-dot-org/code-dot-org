@@ -435,6 +435,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
           onReady={() => setGeneratorReady(true)}
           projectRules={projectRules}
           actorOwnProperties={actorOwnProperties}
+          blocklyFiles={projectFiles(currentSources.source)}
         />
       )}
       {children}

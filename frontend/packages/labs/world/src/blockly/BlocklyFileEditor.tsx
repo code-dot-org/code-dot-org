@@ -69,6 +69,7 @@ import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingRule} from './editingRule';
 import {setEffectImportHandler} from './effectImport';
+import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
 import {redrawLiveDropdowns} from './moduleOptions';
 import {setModuleOpener, setModuleOpeningOffered} from './openModule';
@@ -94,6 +95,7 @@ import {ruleByName} from './ruleRegistry';
 import {setRulesConfigHandler} from './rulesConfig';
 import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
+import {standInBlocks} from './standInBlocks';
 import {withoutCategories} from './toolboxFilter';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
@@ -653,6 +655,14 @@ export const BlocklyFileEditor = ({
     };
   }, [hasCompiled, worldPath, files]);
 
+  // A block naming a rule the project no longer has says so on its own face
+  // (extensions/missingRule). Deleting a rule is not an event on THIS
+  // workspace — it happens in a dialog, to a file — so the blocks here would
+  // otherwise go on looking fine while quietly generating nothing.
+  useEffect(() => {
+    refreshMissingRuleWarnings(workspaceRef.current);
+  }, [files]);
+
   // The block palette + toolbox for this project: the built-ins, extended with
   // the project's own declarative `.rule` rules (their blocks and categories).
   // Keyed per file, so switching to this editor picks up rules edited elsewhere.
@@ -697,8 +707,16 @@ export const BlocklyFileEditor = ({
       fileKind,
       actorOwnProperties: ownActorProperties ? [ownActorProperties] : [],
     });
+    // …and a definition for every block type the project's files hold that
+    // this palette does not mint. That is what a deleted rule leaves behind,
+    // and without one Blockly refuses to deserialize the file at all — the
+    // editor throws and nothing renders (blockly/standInBlocks).
+    const known = new Set(palette.blocks.map(block => block.type));
     return {
-      blocks: palette.blocks,
+      blocks: [
+        ...palette.blocks,
+        ...standInBlocks(Object.values(files), known),
+      ],
       toolbox: withoutCategories(palette.toolbox, hiddenCategories),
     };
   }, [files, ownRuleModule, fileKind, hiddenCategories, ownActorProperties]);

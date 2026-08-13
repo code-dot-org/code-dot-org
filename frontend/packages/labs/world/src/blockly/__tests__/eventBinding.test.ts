@@ -16,9 +16,18 @@ import {collisionsRule} from '../../rules/stock/collisions';
 import {inputRule} from '../../rules/stock/input';
 import {buildDomainPalette} from '../domainBlocks';
 import {parseRuleMeta} from '../ruleMeta';
+import {registerProjectRules} from '../ruleRegistry';
 
-const paletteFor = (path: string, source: string) =>
-  buildDomainPalette([parseRuleMeta(path, source)!], {allRuleModules: true});
+// The palette and the registry go together and always did: the editor
+// registers the project's rules and builds the palette from the same list, in
+// the same breath. It has to be said now, because a member block whose rule the
+// registry cannot find generates NOTHING — that is how a deleted rule stops
+// taking the whole project down with it (domainBlocks, `refResolves`).
+const paletteFor = (path: string, source: string) => {
+  const meta = parseRuleMeta(path, source)!;
+  registerProjectRules([meta]);
+  return buildDomainPalette([meta], {allRuleModules: true});
+};
 
 const blockNamed = (path: string, source: string, type: string) =>
   paletteFor(path, source).blocks.find(
