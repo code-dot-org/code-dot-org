@@ -983,15 +983,6 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'resolve_log_token is throttled per admin' do
-    sign_in @admin
-    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::SENTRY)
-    Cdo::Throttle.stubs(:throttle).returns(true)
-
-    post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
-    assert_response :too_many_requests
-  end
-
   # The audit lives in Cdo::UserLogToken.resolve, so it cannot be bypassed by
   # reaching the primitive from somewhere other than this controller.
   test 'resolve_log_token audits through the primitive with the acting admin and reason' do

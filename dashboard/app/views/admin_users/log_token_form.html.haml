@@ -9,7 +9,7 @@
 %h2 Find a user's tokens
 
 %p.text-muted
-  Enter a user id to get that user's token for each destination, then search for it in the corresponding system. This direction reveals nothing you did not already know.
+  Enter a user id to get that user's token for each destination, then search for it in the corresponding system.
 
 = form_tag url_for(action: 'log_token_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
   = text_field_tag :user_id, params[:user_id], class: 'form-control', placeholder: 'numeric user id', size: 20
@@ -41,7 +41,7 @@
 %h2 Identify a user from a token
 
 %p.text-danger
-  This re-identifies a student. Every attempt is recorded with your name and the reason you give, whether or not it succeeds, and lookups are rate limited.
+  This re-identifies a student.
 
 = form_tag resolve_log_token_path, method: 'post', enforce_utf8: false do
   %div
