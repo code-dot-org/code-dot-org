@@ -30,7 +30,7 @@ const HEIGHT = 32;
 export const buttonActor = actorFile(
   'Button',
   [
-    useTrait('Text#ShowsTextTrait'),
+    useTrait('Writing#ShowsTextTrait'),
     // The whole of what makes it pressable. `is clicked with ⟨button⟩` is
     // raised on this actor alone, so a handler needs no hit test of its own.
     useTrait('Mouse#CanBeClickedTrait'),

@@ -1,5 +1,9 @@
 // "Shows Text" — a rule that declares state and runs nothing.
 //
+// Named `Writing` rather than `Text`, because a rule's name is its toolbox
+// category and the toolbox already has a Text one — Blockly's, with the string
+// literal in it.
+//
 // The first of those in the lab, and the thing worth pinning: a rule with no
 // steps parses, generates a module, and can be elected. Nothing forbade it and
 // nothing had done it, so the shape was unproven until the stock Label needed
@@ -7,18 +11,23 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {parseRuleMeta, ruleMetaToModule} from '../../blockly/ruleMeta';
+import {
+  parseDefault,
+  parseRuleMeta,
+  PROPERTY_TYPES,
+  ruleMetaToModule,
+} from '../../blockly/ruleMeta';
 import {STOCK_RULES} from '../stock';
-import {textRule} from '../stock/text';
+import {writingRule} from '../stock/writing';
 
-const meta = parseRuleMeta('rules/text', textRule)!;
+const meta = parseRuleMeta('rules/writing', writingRule)!;
 
-describe('rules/text.rule', () => {
+describe('rules/writing.rule', () => {
   it('runs nothing at all', () => {
     // Nothing about text happens over time. What an actor DOES with its words
     // is its own `define drawing`, which is why the Label and the Button are
     // ordinary actors rather than anything this rule knows about.
-    expect(meta.name).toBe('Text');
+    expect(meta.name).toBe('Writing');
     expect(meta.ability).toBe('Shows Text');
     expect(meta.steps).toEqual([]);
     expect(meta.events).toEqual([]);
@@ -29,13 +38,16 @@ describe('rules/text.rule', () => {
     // ACTOR-SCOPED, all four, which is what makes them per-instance: two
     // Labels of one kind can say different things, and the map editor's
     // inspector shows a field for each with no editor work (`describeActor`).
+    //
+    // The colour is its own TYPE rather than a string holding one, which is
+    // what makes its getter report `Colour` and its inspector field a swatch.
     expect(meta.traits.map(trait => trait.name)).toEqual(['Shows Text']);
     expect(
       meta.properties.map(property => [property.name, property.type]),
     ).toEqual([
       ['text', 'string'],
       ['text size', 'number'],
-      ['text color', 'string'],
+      ['text color', 'color'],
       ['text anchor', 'string'],
     ]);
     for (const property of meta.properties) {
@@ -71,8 +83,36 @@ describe('rules/text.rule', () => {
   });
 
   it('is in the library, and says what it gives', () => {
-    const stock = STOCK_RULES.find(rule => rule.id === 'text');
+    const stock = STOCK_RULES.find(rule => rule.id === 'writing');
 
     expect(stock?.provides).toEqual(['Shows Text']);
+  });
+});
+
+describe('the color property type', () => {
+  it('is a type, not a string that happens to hold one', () => {
+    // What the type buys is the two places that ask what a property IS. A
+    // block's socket takes a swatch and the getter reports `Colour`, so
+    // `text color` plugs straight into `set fill`; and the map editor draws a
+    // picker rather than six characters to type by hand.
+    const color = meta.properties.find(
+      property => property.name === 'text color',
+    )!;
+
+    expect(color.type).toBe('color');
+    expect(color.default).toBe('#ffffff');
+  });
+
+  it('is offered when a learner declares one', () => {
+    // A `define property` in any rule can be a colour, which is what makes this
+    // a type in the language rather than a special case for one stock rule.
+    expect(PROPERTY_TYPES.has('color')).toBe(true);
+  });
+
+  it('reads and writes it as the string it is', () => {
+    // The engine is never told about colours: `#rrggbb` is what every colour
+    // block produces and what `core/color` converts (engine/core/types).
+    expect(parseDefault('#ff8800', 'color')).toBe('#ff8800');
+    expect(ruleMetaToModule(meta)).toContain('"#ffffff"');
   });
 });

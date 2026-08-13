@@ -644,12 +644,21 @@ export function defineRule({name, ability, header}) {
             value: initial,
             ...opts,
           }),
-        /** Words — and a colour, which every block a learner touches spells
-         *  `#rrggbb` (engine/core/color). */
+        /** Words. */
         string: (propName, initial, opts) =>
           self.property({
             name: propName,
             type: 'string',
+            value: initial,
+            ...opts,
+          }),
+        /** A colour, `#rrggbb`. Held as a string and asked about as its own
+         *  kind: its socket takes a swatch and the map editor's inspector
+         *  shows a picker (engine/core/types). */
+        color: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'color',
             value: initial,
             ...opts,
           }),

@@ -52,16 +52,22 @@ offering, and for the reason given under Decisions.
 
 Three ordinary things, none of them privileged.
 
-### `rules/text.rule` — a stock rule with one trait and no steps
+### `rules/writing.rule` — a stock rule with one trait and no steps
 
 ```
-define rule ⟨Text⟩  ability ⟨Shows Text⟩
+define rule ⟨Writing⟩  ability ⟨Shows Text⟩
   trait ⟨Shows Text⟩
     define property ⟨string⟩ ⟨text⟩      = ⟨⟩
     define property ⟨number⟩ ⟨text size⟩ = ⟨12⟩
-    define property ⟨string⟩ ⟨text colour⟩ = ⟨#ffffff⟩
+    define property ⟨color⟩  ⟨text color⟩ = ⟨#ffffff⟩
     define property ⟨string⟩ ⟨text anchor⟩ = ⟨centre⟩
 ```
+
+NAMED FOR THE MECHANIC, not for the state. A rule's name is its toolbox
+category, and the toolbox already has a Text one — Blockly's, holding the string
+literal and the note block. Two categories sharing a name is a toolbox a learner
+has to read twice, so this sits beside `Physics`, `Collection` and `Shooting`,
+which are named the same way.
 
 No steps: nothing about text happens over time. This is a rule that exists
 entirely to declare state and to be elected, which is a shape the lab permits
@@ -130,8 +136,8 @@ What remains beyond it is one thing:
 stock backgrounds. It ships no actors and has no way to import one. Stock UI
 actors are ordinary `.actor` files, so what is needed is the dialog, shaped like
 `ImportRuleDialog` and answering the same question: what does the project hold,
-and what may it still take. Importing `Label` pulls `Text` the way importing a
-rule pulls its dependencies.
+and what may it still take. Importing `Label` pulls `Writing` the way importing
+a rule pulls its dependencies.
 
 The other five interface elements wait on nameable things:
 
@@ -211,15 +217,18 @@ belongs with world-scoped state rather than here.
 ## What it takes
 
 1. **`specs/DRAWING.md`**, in full. Everything below assumes it.
-2. **`rules/text.rule`** — a stock rule authored in `scripts/rules/text.mjs`
+2. **`rules/writing.rule`** — a stock rule authored in `scripts/rules/writing.mjs`
    like every other, with one trait, four properties and no steps.
 3. **`Label.actor` and `Button.actor`** as stock content, written in the drawing
    language.
 4. **The stock-actor import** — a dialog shaped like `ImportRuleDialog`, writing
    an `.actor` into `actors/` and pulling the rules it elects.
-5. **A colour type in the inspector.** `PropertySchema.type` is `number |
-boolean | string | vector | point`, so `text colour` renders as a hex text
-   field until it has a swatch. Small, separable, and not on the critical path.
+5. **A colour type**, which turned out to be a type rather than an inspector
+   tweak. `color` is a `PropertyType` of its own — held as `#rrggbb`, as a
+   string always was — and the two places that ask what a property IS both give
+   it a different answer: a block's socket takes a swatch and the getter reports
+   `Colour`, so `text color` plugs straight into `set fill`; and the map
+   editor draws a picker beside a hex field rather than six characters to type.
 6. **A scenario** — the smallest honest one is Tapper with a score, which is
    also the first time `Got one!` becomes something the player can see.
 

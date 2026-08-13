@@ -1336,6 +1336,7 @@ const typedValueCode = (
     case 'boolean':
       return read(names.value) || (d ? 'true' : 'false');
     case 'string':
+    case 'color':
       return read(names.value) || str(String(d ?? ''));
     case 'actors':
       return read(names.value) || '[]';
@@ -1493,6 +1494,23 @@ const typedValueInputs = (
           },
         ],
       };
+    case 'color':
+      // A SWATCH, not a text box. The value is the same `#rrggbb` a string
+      // property would hold, and the socket takes every colour block — the
+      // picker, `world_rgba`, a blend — because they all report `Colour`.
+      return {
+        message: `%${slot}`,
+        args: [{type: 'input_value', name: names.value, check: COLOUR_CHECK}],
+        shadows: [
+          {
+            name: names.value,
+            shadow: {
+              type: 'colour_picker',
+              fields: {COLOUR: String(d ?? '#ffffff')},
+            },
+          },
+        ],
+      };
     case 'actors':
       // An actor value, one or many — and no shadow: the empty socket means no
       // actors, which is the only default a set of them has.
@@ -1546,26 +1564,33 @@ const dropPropertyBlockType = (exportName: string): string =>
 const outputForType = (type: PropertyType): string =>
   type === 'boolean'
     ? 'Boolean'
-    : type === 'string'
-      ? 'String'
-      : type === 'vector'
-        ? 'Vector'
-        : // An actors property reports an ACTOR value, so it plugs into a loop's
-          // source, `is in`, `how many actors in` — every actor socket there is.
-          type === 'actors' || type === 'actor'
-          ? 'Actor'
-          : 'Number';
+    : // A colour reports what every colour block reports, so `get text color`
+      // plugs into `set fill` and into an effect's parameter with nothing
+      // widened to let it (`colorCheck`).
+      type === 'color'
+      ? COLOUR_CHECK
+      : type === 'string'
+        ? 'String'
+        : type === 'vector'
+          ? 'Vector'
+          : // An actors property reports an ACTOR value, so it plugs into a loop's
+            // source, `is in`, `how many actors in` — every actor socket there is.
+            type === 'actors' || type === 'actor'
+            ? 'Actor'
+            : 'Number';
 
 // A value block's style by the kind it reports: a boolean is logic, a whole
 // vector is a location, everything else (numbers, point axes) is math.
 const valueStyle = (type: PropertyType): string =>
-  type === 'boolean'
-    ? 'logic_blocks'
-    : type === 'vector'
-      ? 'location_blocks'
-      : type === 'actors' || type === 'actor'
-        ? 'sprite_blocks' // the colour that groups the actors
-        : 'math_blocks';
+  type === 'color'
+    ? 'text_blocks' // where the colour blocks themselves sit
+    : type === 'boolean'
+      ? 'logic_blocks'
+      : type === 'vector'
+        ? 'location_blocks'
+        : type === 'actors' || type === 'actor'
+          ? 'sprite_blocks' // the colour that groups the actors
+          : 'math_blocks';
 
 /**
  * A "set …" block for one settable property, generated from its definition. An
@@ -4624,6 +4649,7 @@ const PROPERTY_TYPE_OPTIONS: Array<[string, string]> = [
   ['number', 'number'],
   ['boolean', 'boolean'],
   ['string', 'string'],
+  ['color', 'color'],
   ['vector', 'vector'],
   ['point', 'point'],
   // Actors — what a rule works out about who is where: a contact set, a group.
@@ -5162,12 +5188,11 @@ const worldActorStep = traitStepDefinition(true);
 const paintArg = (name: string) => ({
   type: 'input_value' as const,
   name,
-  // A swatch OR a plain string. `core/color.ts` says every colour a learner
-  // touches is `#rrggbb`, so a rule's string property holding one is the same
-  // value the picker produces — and a Label whose colour is per-instance state
-  // has nothing else to be (specs/UI_ACTORS.md). The picker still fits, which
-  // is what a socket check being a list means.
-  check: [COLOUR_CHECK, 'String'],
+  // Every colour block reports `Colour` — the picker, `world_rgba`, a blend —
+  // and so now does a `color` property's getter, which is what a Label's
+  // per-instance colour is. This was briefly widened to admit a plain string,
+  // when a colour could only BE one; the type says it instead.
+  check: COLOUR_CHECK,
 });
 
 const worldDefineDrawing = defineBlock({

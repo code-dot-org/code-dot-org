@@ -26,9 +26,9 @@ export interface StockActor {
    * The stock RULES it elects traits from, by rule name.
    *
    * Read as names rather than derived from the workspace: a `use trait` field
-   * stores `Text#ShowsTextTrait`, and splitting that string to find "Text"
-   * would work until a trait reference changed shape. The names are short and
-   * the list is two long; saying them is cheaper than parsing them.
+   * stores `Writing#ShowsTextTrait`, and splitting that string to find
+   * "Writing" would work until a trait reference changed shape. The names are
+   * short and the list is two long; saying them is cheaper than parsing them.
    */
   requires: readonly string[];
   /** The `.actor` workspace JSON, copied verbatim on import. */
@@ -41,7 +41,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Label',
     description:
       'A word on the screen. Give it text, a size, a color and an anchor, and it draws them — the smallest way for a game to say anything to the player.',
-    requires: ['Text'],
+    requires: ['Writing'],
     contents: labelActor,
   },
   {
@@ -49,7 +49,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Button',
     description:
       'A label you can press. It raises “is clicked with” on itself, so a handler needs no hit test of its own.',
-    requires: ['Text', 'Mouse'],
+    requires: ['Writing', 'Mouse'],
     contents: buttonActor,
   },
 ];

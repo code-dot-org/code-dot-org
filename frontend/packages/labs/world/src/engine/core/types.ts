@@ -49,6 +49,17 @@ export type PropertyType =
   | 'number'
   | 'boolean'
   | 'string'
+  /**
+   * A colour, held as `#rrggbb`.
+   *
+   * A string as far as the engine is concerned — `core/color` converts, and
+   * every colour block a learner meets produces exactly this spelling. It is
+   * its own type anyway, because the two places that ask what a property IS
+   * both want a different answer for a colour than for words: a block's socket
+   * takes a swatch rather than a text box, and the map editor's inspector shows
+   * a picker rather than six characters to type by hand.
+   */
+  | 'color'
   | 'vector'
   | 'point'
   /**

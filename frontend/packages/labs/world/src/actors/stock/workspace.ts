@@ -37,14 +37,14 @@ export const words = (text: string) => ({
   shadow: {type: 'text', fields: {TEXT: text}},
 });
 
-/** `⟨name⟩ of this actor`, for a property the Text rule declares. */
+/** `⟨name⟩ of this actor`, for a property the Writing rule declares. */
 export const textOf = (exportName: string) => ({
-  block: {type: `world_get_Text_${exportName}`, inputs: {ACTOR: me()}},
+  block: {type: `world_get_Writing_${exportName}`, inputs: {ACTOR: me()}},
 });
 
-/** `set ⟨name⟩ of this actor to ⟨value⟩`, for one the Text rule declares. */
+/** `set ⟨name⟩ of this actor to ⟨value⟩`, for one the Writing rule declares. */
 export const setText = (exportName: string, value: object) => ({
-  type: `world_set_Text_${exportName}`,
+  type: `world_set_Writing_${exportName}`,
   inputs: {ACTOR: me(), VALUE: value},
 });
 
@@ -116,7 +116,7 @@ export const rectangle = (
 /**
  * `draw text …`, with every part of it read off the actor.
  *
- * All four come from the Text trait rather than being typed here, which is the
+ * All four come from the Writing rule's trait rather than being typed here, which is the
  * whole point of the trait: they are per-instance state, so two Labels of one
  * kind can say different things at different sizes, set from the map editor's
  * inspector with no editor work (specs/UI_ACTORS.md).
