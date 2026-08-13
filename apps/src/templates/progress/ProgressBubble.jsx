@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import i18n from '@cdo/locale';
 
@@ -15,7 +16,7 @@ import {
   getBubbleShape,
   getBubbleUrl,
 } from './BubbleFactory';
-import {isLevelAssessment} from './progressHelpers';
+import {isLevelAssessment, isLevelStatusCompleted} from './progressHelpers';
 import {levelProgressStyle} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
 
@@ -36,7 +37,7 @@ export default class ProgressBubble extends React.Component {
     ]),
     hideToolTips: PropTypes.bool,
     onClick: PropTypes.func,
-    // We have the ability to hide the assessment checkmark badge because
+    // We have the ability to hide the assessment star badge because
     // it's visually cluttering in places like the teacher panel and progress table
     hideAssessmentBadge: PropTypes.bool,
     lessonName: PropTypes.string,
@@ -88,16 +89,26 @@ export default class ProgressBubble extends React.Component {
   }
 
   createBubbleElement() {
-    const {level, smallBubble, hideToolTips} = this.props;
+    const {level, smallBubble, hideToolTips, hideAssessmentBadge} = this.props;
     const bubbleSize = smallBubble ? BubbleSize.dot : BubbleSize.full;
 
-    const content = getBubbleContent(
-      level.isLocked,
-      level.isUnplugged,
-      level.bonus,
-      level.paired,
-      level.bubbleText || level.letter || level.levelNumber,
-      bubbleSize
+    // Small bubbles are too small for a corner badge, so on assessment
+    // levels the whole bubble takes the badge's look instead: a black star
+    // in a white circle with a black outline.
+    const isAssessmentDot =
+      smallBubble && isLevelAssessment(level) && !hideAssessmentBadge;
+
+    const content = isAssessmentDot ? (
+      <FontAwesome icon="star" style={styles.assessmentDotStar} />
+    ) : (
+      getBubbleContent(
+        level.isLocked,
+        level.isUnplugged,
+        level.bonus,
+        level.paired,
+        level.bubbleText || level.letter || level.levelNumber,
+        bubbleSize
+      )
     );
 
     const bubbleShape = getBubbleShape(
@@ -110,7 +121,13 @@ export default class ProgressBubble extends React.Component {
       <BasicBubble
         shape={bubbleShape}
         size={bubbleSize}
-        progressStyle={levelProgressStyle(level.status, level.kind)}
+        progressStyle={
+          isAssessmentDot
+            ? isLevelStatusCompleted(level.status)
+              ? styles.assessmentDotCompleted
+              : styles.assessmentDot
+            : levelProgressStyle(level.status)
+        }
         classNames={getBubbleClassNames(this.isClickable())}
       >
         {content}
@@ -152,3 +169,27 @@ export default class ProgressBubble extends React.Component {
     }
   }
 }
+
+// A black star on a white fill, with the same gray outline as other
+// not-yet-completed small bubbles. Once the assessment is completed, the
+// dot fills green like other completed bubbles and the star flips to
+// white. The star inherits `color` from the dot.
+const styles = {
+  assessmentDot: {
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: 'var(--borders-neutral-primary)',
+    backgroundColor: 'var(--background-neutral-primary)',
+    color: 'var(--text-neutral-primary)',
+  },
+  assessmentDotCompleted: {
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: 'var(--background-success-primary)',
+    backgroundColor: 'var(--background-success-primary)',
+    color: 'var(--text-neutral-inverse)',
+  },
+  assessmentDotStar: {
+    fontSize: 7,
+  },
+};

@@ -18,6 +18,12 @@ class AssetBucket < BucketHelper
     %w(.jpg .jpeg .gif .png .mp3 .wav .pdf .doc .docx .webp)
   end
 
+  # Hide assets-bucket metadata (e.g. image-moderation bookkeeping) from the
+  # AssetManager file list so it is not shown as a user asset.
+  def list(encrypted_channel_id)
+    super.reject {|file| file[:filename]&.start_with?('metadata/')}
+  end
+
   def try_resize_file(body, extension)
     # Resizing takes a lot of compute power. If we're given an image higher than 20MB, don't attempt
     # to resize. (The upper limit we want to use may actually be much higher, but I was unable to

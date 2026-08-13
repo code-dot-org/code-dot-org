@@ -66,7 +66,11 @@ class DCDOBase < DynamicConfigBase
       'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-proper0ties-by-lesson-id', true),
       'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
-      'brand-router-enabled': DCDO.get('brand-router-enabled', false),
+      # Apex domain for the Web Lab 2 / Python Lab sandboxed preview origin.
+      # Set to 'codeaiprojects.org' to move previews to the new domain; unset
+      # (or 'codeprojects.org') stays on the pre-migration domain. See
+      # docs/weblab-preview-domain-migration.md.
+      'sandboxed-preview-domain': DCDO.get('sandboxed-preview-domain', 'codeprojects.org'),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
       # Controls whether the output image goes through the additional LLM-as-judge safety layer.
       # Azure image moderation still runs when this is false.
@@ -75,7 +79,6 @@ class DCDOBase < DynamicConfigBase
       'browser-events-enabled': DCDO.get('browser-events-enabled', true),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
-      'latam-ge-region-notice-enabled-until': DCDO.get('latam-ge-region-notice-enabled-until', nil),
       'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false)
     }
   end

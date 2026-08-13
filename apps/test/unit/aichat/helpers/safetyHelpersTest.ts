@@ -55,11 +55,24 @@ describe('safetyHelpers', () => {
           ),
           output: expect.anything(),
           model: expect.anything(),
-        })
+        }),
+        {phase: undefined}
       );
       expect(mockGetModel).toHaveBeenCalledWith(
         AiChatModelIds.GEMINI_2_5_FLASH
       );
+    });
+
+    it('forwards the given phase to the gateway', async () => {
+      mockClassification('OK');
+
+      await expect(isTextSafe('hello class', 'input_filter')).resolves.toBe(
+        true
+      );
+
+      expect(mockGenerateText).toHaveBeenCalledWith(expect.anything(), {
+        phase: 'input_filter',
+      });
     });
 
     it('returns false when the text is classified inappropriate', async () => {
@@ -111,7 +124,8 @@ describe('safetyHelpers', () => {
           ],
           output: expect.anything(),
           model: expect.anything(),
-        })
+        }),
+        {phase: 'llm_safety_judge'}
       );
       expect(mockGetModel).toHaveBeenCalledWith(
         AiChatModelIds.GEMINI_2_5_FLASH

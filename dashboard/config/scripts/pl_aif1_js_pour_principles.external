@@ -1,0 +1,43 @@
+name 'pl-aif1-js-pour-principles'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>The POUR Principles</h1>
+
+<p>Now that you can spot exclusion patterns, POUR gives you a framework for checking any page systematically instead of relying on a gut feeling. It stands for four things every accessible page needs to be: Perceivable, Operable, Understandable, and Robust.</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+
+  <div style="border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center;">
+    <h2>Perceivable</h2>
+    <img src="https://images.code.org/6ee78ea877656253bb5a161c089229fd-image-1786031491052.png" alt="A webpage mockup labeled Improved: Easy to see and understand, showing a photo placeholder captioned Photo of mountains, a heading reading Clear, readable text, an email input field, a Submit button, and an eye icon labeled Easy to see and understand." style="width: 100%; max-width: 220px; border-radius: 8px; margin: 10px auto; display: block;">
+    <p style="text-align: left;"><b>Perceivable</b> means users can see or hear the information on the page. <br><hr> Examples: text is readable in size and contrast, images have descriptions, and content isn't hidden or unclear.</p>
+  </div>
+
+  <div style="border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center;">
+    <h2>Operable</h2>
+    <img src="https://images.code.org/20be24fc5e651c2788b969e869e2ebe8-image-1786031589525.png" alt="A webpage mockup titled Empowering Your Vision with the tagline Streamlined solutions for modern businesses, a navigation bar with Home, About, Services, and Contact, an illustration of people climbing a rising arrow and bar chart, and two buttons: Start Now and Learn More." style="width: 100%; max-width: 220px; border-radius: 8px; margin: 10px auto; display: block;">
+    <p style="text-align: left;"><b>Operable</b> means users can interact with the page and its features. <br><hr> Examples: buttons are easy to click or tap, navigation works clearly, and the page can be used with a keyboard or touch.</p>
+  </div>
+
+  <div style="border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center;">
+    <h2>Understandable</h2>
+    <img src="https://images.code.org/ac262412b74ac97aa2d71a59906fb1b9-image-1786031642775.png" alt="A form mockup titled Select account level to activate your account, with three radio button options Basic, Standard, and Premium with Premium selected, a Username field, an optional Phone Number field, a Continue button, and an eye icon labeled Clear and easy to follow." style="width: 100%; max-width: 220px; border-radius: 8px; margin: 10px auto; display: block;">
+    <p style="text-align: left;"><b>Understandable</b> means users can figure out what to do and how to do it. <br><hr> Examples: instructions are clear, labels make sense, and the layout helps guide the user.</p>
+  </div>
+
+  <div style="border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center;">
+    <h2>Robust</h2>
+    <img src="https://images.code.org/3d9afba90cb9416cd8f560cc5e8eaee3-image-1786031702983.png" alt="A phone and a tablet shown side by side, each displaying the same layout: a photo placeholder, a Read More button, and two lines of text, illustrating that the design adapts consistently across different screen sizes." style="width: 350%; max-width: 250px; border-radius: 8px; margin: 10px auto; display: block;">
+    <p style="text-align: left;"><b>Robust</b> means it works in different situations and with different tools.<br><hr> Examples: it works on phones and computers and the layout adapts to different screen sizes.</p>
+  </div>
+
+</div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> you don't need to memorize POUR to use it well. When something feels off on an AI-generated page, ask which of the four it's failing: can't see it, can't operate it, can't understand it, or it breaks somewhere else. That question alone will get you most of the way to naming the actual issue.</p>
+</div>
+
+<p>Next, you'll put POUR to work: spot a violation on a mock site, then practice the prompt that would actually fix it.</p>
+MARKDOWN

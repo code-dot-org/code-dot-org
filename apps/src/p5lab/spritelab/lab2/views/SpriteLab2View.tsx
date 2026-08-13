@@ -21,7 +21,9 @@ import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 // pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {
+  isNameUnique,
   SET_INITIAL_ANIMATION_LIST,
+  setAnimationName,
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {cancelLocationSelection} from '@cdo/apps/p5lab/redux/locationPicker';
@@ -42,6 +44,10 @@ import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {compileWorkspaceSource} from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
+import {
+  renameImageReferences,
+  renameImageReferencesOnWorkspace,
+} from '../imageReferences';
 import {onTrimsUpdated} from '../imageTrim';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
@@ -198,6 +204,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: worldTabParams.enabled || !!levelProperties.showWorldTab,
     large: worldTabParams.large || !!levelProperties.showLargeWorld,
   };
+  // A world painted while the tab was enabled must not keep spawning
+  // sprites once the tab (URL param or level property) is gone — there
+  // would be no UI left to remove them.
+  const compileWorldIfEnabled = useCallback(
+    (world?: SpriteLab2World) =>
+      worldTab.enabled ? compileWorldPrelude(world) : '',
+    [worldTab.enabled]
+  );
   const tabs = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
   // The Images tab mounts once (idle pre-mount after seeding, or first
   // visit) and stays mounted clipped, so no visit pays the mount cost.
@@ -545,9 +559,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     dispatch(setIsRunning(true));
     engine.runProgram(
-      compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
+      compileWorldIfEnabled(activeWorldRef.current) + (getCode() ?? '')
     );
-  }, [dispatch, getCode]);
+  }, [dispatch, getCode, compileWorldIfEnabled]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -571,7 +585,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       currentExternalProjectRef.current = null;
       engine.preloadAnimationsOverride = null;
       currentPlayingRef.current = {kind: 'local', scene};
-      const prelude = compileWorldPrelude(scene.world);
+      const prelude = compileWorldIfEnabled(scene.world);
       let code = '';
       try {
         const live = scene.id === activeSceneId ? getCode() : null;
@@ -585,7 +599,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       engine.runProgram(prelude + code);
     },
-    [dispatch, activeSceneId, getCode]
+    [dispatch, activeSceneId, getCode, compileWorldIfEnabled]
   );
 
   const runScene = useCallback(
@@ -666,7 +680,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       currentExternalProjectRef.current = project;
       currentPlayingRef.current = {kind: 'external', project, sceneId};
-      const prelude = compileWorldPrelude(scene.world);
+      const prelude = compileWorldIfEnabled(scene.world);
       let code = '';
       try {
         code = compileExternalScene(scene, project);
@@ -688,7 +702,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       engine.runProgram(prelude + code);
     },
-    [dispatch, compileExternalScene]
+    [dispatch, compileExternalScene, compileWorldIfEnabled]
   );
 
   // Fetch the classmate's project fresh (their scenes may have changed);
@@ -922,6 +936,38 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       scheduleRun();
     },
     [updateSources, activeSceneId, scheduleRun]
+  );
+
+  // Rename an image and cascade through every reference — blocks in all
+  // scenes, World grids, and the live workspace — so tidying a name never
+  // breaks the project.
+  const handleRenameImage = useCallback(
+    (oldName: string, newName: string): string | null => {
+      if (!newName) {
+        return 'Enter a name.';
+      }
+      const list = getStore().getState().animationList;
+      if (!isNameUnique(newName, list.propsByKey)) {
+        return 'That name is already used.';
+      }
+      const key = list.orderedKeys.find(
+        (k: string) => list.propsByKey[k]?.name === oldName
+      );
+      if (!key) {
+        return 'Image not found.';
+      }
+      dispatch(setAnimationName(key, newName) as unknown as AnyAction);
+      updateSources(prev => renameImageReferences(prev, oldName, newName));
+      renameImageReferencesOnWorkspace(
+        Blockly.getMainWorkspace(),
+        oldName,
+        newName
+      );
+      refreshAnimationDropdownThumbnails();
+      scheduleRun();
+      return null;
+    },
+    [dispatch, updateSources, scheduleRun]
   );
 
   // A user edit: the workspace already displays this content; persist it
@@ -1161,7 +1207,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }}
           >
             <div className={moduleStyles.itemsTab}>
-              <GenerateImagePane uploadImage={uploadImage} />
+              <GenerateImagePane
+                uploadImage={uploadImage}
+                onRenameImage={handleRenameImage}
+              />
             </div>
           </div>
         )}
@@ -1188,19 +1237,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           onPreviewClick={handlePreviewClick}
         />
 
-        {/* The image form always shows on Images; codegen only when the
-          level asks for it. */}
-        {((activeTab === 'Code' && !!levelProperties.guideMode) ||
-          activeTab === 'Images') && (
+        {/* Codegen guide, when the level asks for it. (Image generation
+          lives in the Images tab's image dialog.) */}
+        {activeTab === 'Code' && !!levelProperties.guideMode && (
           <GenerateSpriteLab
-            guideMode={
-              activeTab === 'Images'
-                ? 'aiImageGenerate'
-                : levelProperties.guideMode!
-            }
+            guideMode={levelProperties.guideMode}
             instructions={levelProperties.longInstructions}
             onCodeGenerated={handleCodeGenerated}
-            uploadImage={uploadImage}
           />
         )}
       </TabShell>

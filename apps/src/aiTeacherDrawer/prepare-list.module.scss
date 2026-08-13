@@ -16,26 +16,6 @@
   margin-bottom: 16px;
 }
 
-.datePickerLabel {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.datePicker {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px;
-  border: 1px solid var(--borders-neutral-primary, #d4dae1);
-  border-radius: 8px;
-  background: var(--background-neutral-primary, #fff);
-  font-size: 1rem;
-  cursor: default;
-  user-select: none;
-}
-
 .sectionGroup {
   display: flex;
   flex-direction: column;
@@ -52,16 +32,33 @@
   border-radius: 8px;
   background: var(--background-neutral-primary, #fff);
   cursor: pointer;
+  // reset for when rendered as a <button>
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  text-align: left;
 
   &:hover {
     background: var(--background-neutral-secondary, #f8f9fa);
   }
 }
 
-.sectionName {
+.sectionInfo {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionName {
   font-weight: 700;
   font-size: 1rem;
+  line-height: 1.3;
+}
+
+.lessonName {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-neutral-secondary);
   line-height: 1.3;
 }
 

@@ -1,5 +1,6 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {IntroVideoModalComponent} from '../components/intro-video-modal';
 import {progressBubbleShows} from '../shared/progress';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 
@@ -44,8 +45,12 @@ export class LessonLevelPage extends BasePage {
    */
   readonly progressLessons: Locator;
 
+  /** Intro video-tutorial overlay — any level type can autoplay it on first load. */
+  readonly introVideoModal: IntroVideoModalComponent;
+
   constructor(page: Page) {
     super(page);
+    this.introVideoModal = new IntroVideoModalComponent(page);
     this.lessonProgress = page.locator(this.progressSelector);
     this.lessonHeaderInfo = page.locator('.header_level');
     this.headerPopupButton = page.locator('button.header_popup_link');

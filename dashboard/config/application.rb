@@ -41,15 +41,6 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 7.0
 
-    # Convert cookies from old (:marshall) to new (:json) default format
-    # TODO infra: remove this override after 40 days in production (as
-    # determined by CDO.dashboard_session_ttl_days)
-    config.action_dispatch.cookies_serializer = :hybrid
-
-    # Continue to use old, 6.1-only cache format version while we figure out
-    # some issues with 7.0
-    config.active_support.cache_format_version = 6.1
-
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins CDO.pegasus_site_host
@@ -232,8 +223,9 @@ module Dashboard
     # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
     config.enable_dependency_loading = true
 
-    # Webpack handles js compression for us, so don't compress by default.
-    # config.assets.js_compressor = :uglifier
+    # Webpack minifies the apps bundles, and the legacy application.js is
+    # assembled from pre-minified sources (see application.js.erb), so no
+    # js_compressor is configured here.
     # config.assets.css_compressor = :sass
 
     # Version of your assets, change this if you want to expire all your assets.

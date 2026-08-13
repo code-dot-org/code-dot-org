@@ -9,6 +9,8 @@ import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
+import setAsPlatformPlayer from './setAsPlatformPlayer';
+import setPlatformGravity from './setPlatformGravity';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
 // block whose runtime half is interpreted code exports it as helperCode.
@@ -26,6 +28,8 @@ const labBlockDefinitions: {
   makePlatformPlayer,
   makeSpriteAtGrid,
   makePlatformBlocks,
+  setPlatformGravity,
+  setAsPlatformPlayer,
 ];
 
 export default labBlockDefinitions;

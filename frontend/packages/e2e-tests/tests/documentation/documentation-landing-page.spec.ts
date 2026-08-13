@@ -12,14 +12,12 @@ import {DocumentationPage} from './documentation-page';
 // NOT scanned: its count flaps 224/225 across engines and would flake the gate,
 // so the stable .nav-bar sidebar stands in for that page.
 //
-// landingPage (#main_content) = 18 = two failures on each of the 9 IDE cards:
-//   - lab-name <h2> heading, teal #0093a4 on #fff, 3.67:1 (needs 4.5:1)   x9
-//   - "View Code Docs" pill, #fff on orange #ffa400, 1.98:1               x9
 // applabNavBar (.nav-bar) = 11 = the 11 block-category toggle titles (Canvas,
 //   Data, Turtle, Control, Math, Variables, Functions, Advanced, Maker, Circuit,
 //   micro:bit): grey #696969 on each category's pastel accent, 1.71:1-4.08:1.
+//   These are legacy Blockly category colors, untouched by the rebrand.
 const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
-  landingPage: {'color-contrast': 18},
+  landingPage: {},
   applabNavBar: {'color-contrast': 11},
 };
 

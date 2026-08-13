@@ -1,0 +1,86 @@
+# Allowlist: the Rails source tree and its runtime config, nothing else.
+# Rules match in order with last match winning, so the carve-outs must
+# follow the `!` includes they carve.
+#
+# Paths the deny-all `*` already covers are listed anyway, so the exclusion
+# groups read as a whole map.
+*
+!.python-version
+!.ruby-version
+!Gemfile
+!Gemfile.lock
+!config.yml.erb
+!deployment.rb
+!pyproject.toml
+!uv.lock
+!config
+!dashboard
+!lib
+!python
+!shared
+
+# Some of what those includes admit looks excludable and is not. Before
+# dropping any of it:
+#   dashboard/config/locales               all of it is on the i18n load path
+#   dashboard/config/international_opt_in  read per request, not at seed time
+#   dashboard/db/schema_cache.yml          read at every boot
+#   dashboard/db/schema.rb                 db:schema:load works from the image
+#   shared/css, shared/wasm                served live by SharedResources
+#   dashboard/scripts                      ga_client is required by
+#                                          AdminReportsController per request
+
+# Curriculum and seed input, read when a database is seeded. The running
+# app serves this content from the database, never from these files.
+dashboard/config/blocks
+dashboard/config/course_offerings
+dashboard/config/courses
+dashboard/config/datablock_storage
+dashboard/config/foorm
+dashboard/config/levels
+dashboard/config/programming_expressions
+dashboard/config/reference_guides
+dashboard/config/schools.tsv
+dashboard/config/scripts
+dashboard/config/scripts_json
+dashboard/db/migrate
+dashboard/db/seeds.rb
+
+# Frontend assets and the sprockets pipeline. The api and worker roles
+# serve neither.
+apps
+dashboard/app/assets
+dashboard/public
+frontend
+shared/fonts
+shared/images
+
+# Tests, test helpers, and build or deploy tooling whose loaders are
+# themselves excluded.
+aws
+cookbooks
+dashboard/test
+dashboard/vendor
+lib/rake
+lib/test
+pegasus
+shared/Rakefile
+shared/rake
+shared/test
+# log/ and tmp/ are excluded for their contents but recreated empty by the
+# Dockerfile, because Rails requires the directories at boot.
+dashboard/log
+dashboard/tmp
+
+# Secret material. config/ is admitted wholesale above, and docker does not
+# honour .gitignore, so a developer holding real values in config/secrets.yml
+# would otherwise bake them into a layer.
+**/secrets.yml
+config/secrets.yml
+
+# Local artifacts from a developer checkout; CI checkouts never have them.
+**/.bundle
+**/.sass-cache
+**/.venv
+**/__pycache__
+**/node_modules
+dashboard/coverage

@@ -3,7 +3,7 @@
   "display_name": "Career Journeys for Elementary ",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": "Module",
+  "curriculum_type": "Standalone Unit",
   "marketing_initiative": "CSF",
   "grade_levels": "3,4,5,6",
   "header": "csf",
@@ -17,5 +17,7 @@
   "published_date": "2025-05-23 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }
