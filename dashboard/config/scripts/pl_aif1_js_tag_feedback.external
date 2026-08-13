@@ -1,0 +1,36 @@
+name 'pl-aif1-js-tag-feedback'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Giving Feedback with TAG</h1>
+
+<p>Twice during this project, students pause building to give each other feedback, once with a partner on Day 3, and again in a whole-class Gallery Walk on Day 5. Both use the same simple structure: TAG.</p>
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+  <img src="https://images.code.org/4b38e3ffbc9cbdfd4fd35ed4818d6ef8-image-1786542511888.png" alt="An icon showing a checklist with a checkmark, next to three labeled boxes: T for Tell, A for Ask, and G for Give." style="width: 30%; max-width: 160px; border-radius: 10px; flex-shrink: 0;">
+  <div style="flex: 1;">
+    <p style="margin: 0 0 8px 0;">• <b>Tell</b> them something you like about their code.</p>
+    <p style="margin: 0 0 8px 0;">• <b>Ask</b> them something about the code.</p>
+    <p style="margin: 0;">• <b>Give</b> a suggestion for improvement.</p>
+  </div>
+</div>
+
+<p>That's the whole structure. It works because it forces something specific before anything critical, a real compliment, a real question, and only then a suggestion, rather than jumping straight to what's wrong.</p>
+
+<h2>Work Doesn't Need to Be Complete to Be Reviewed</h2>
+
+<p>Students will be at very different points when feedback time comes around, and that's fine. Feedback during the process is what actually helps the final product, waiting for something finished misses the point. Frame this explicitly for students: design and development are iterative, and a half-built app is a completely reasonable thing to get feedback on.</p>
+
+<h2>Day 5: The Gallery Walk</h2>
+
+<p>By the last day, TAG shows up again in a different format. Instead of a single partner, students open their projects on their own devices and move around the room, visiting classmates' work with sticky notes in hand, leaving kudos, questions, or observations directly at each project. It's the same Tell/Ask/Give instinct, just spread across the whole room instead of one pair.</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> frame the Gallery Walk as a celebration, not a critique. Encourage students to visit a range of projects, not just close friends, some of the most useful feedback (and inspiration) comes from seeing an approach they wouldn't have thought of themselves.</p>
+</div>
+
+<p>Next, you'll get to practice the other side of feedback: grading a project against the actual rubric.</p>
+
+
+MARKDOWN

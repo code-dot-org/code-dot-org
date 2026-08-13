@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q15-2026'
+
+wrong 'Knowing the rules of a complex game like chess'
+right 'Knowing whether a joke is funny or not'
+wrong 'Knowing how to optimize a value with a hill climbing algorithm'
+wrong 'Knowing how to autocomplete text with prefix matching'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following is an example of tacit knowledge that a logic-based AI system might struggle to understand?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Limits of Logic-Based AI
+MARKDOWN

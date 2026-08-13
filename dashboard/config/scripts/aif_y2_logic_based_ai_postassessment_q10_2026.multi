@@ -1,0 +1,22 @@
+name 'aif-y2-logic-based-ai-postassessment-q10-2026'
+
+wrong '1'
+wrong '2'
+right '3'
+wrong '4'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+How many times will this loop run?
+```
+count = 0
+while count < 3:
+    print(count)
+    count += 1
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Simulation (Part 2)
+MARKDOWN
