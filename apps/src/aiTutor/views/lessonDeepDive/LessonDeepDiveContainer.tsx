@@ -1,23 +1,4 @@
-import {createTheme, ThemeProvider} from '@mui/material/styles';
 import React, {FC, useCallback, useState} from 'react';
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    background: {
-      default: '#292f36',
-      paper: '#343b44',
-    },
-    text: {
-      primary: '#ffffff',
-      secondary: 'rgba(255,255,255,0.6)',
-    },
-    primary: {
-      main: '#a374d6',
-    },
-    divider: '#3a4048',
-  },
-});
 
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -234,89 +215,87 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   };
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <div className={styles.container} data-theme={'Dark'}>
-        <div className={styles.progressBar} aria-hidden="true">
-          <div
-            className={styles.progressFill}
-            style={{
-              width: `${(currentIndex / (BOX_IDS.length - 1)) * 100}%`,
-            }}
-          />
-        </div>
-        <div className={styles.topNav}>
-          <span className={styles.tutorWordmark}>Tutor+</span>
-          {!isFirst && (
-            <button
-              type="button"
-              className={styles.arrowButton}
-              onClick={goToPrev}
-              aria-label="Previous"
+    <div className={styles.container} data-theme={'Dark'}>
+      <div className={styles.progressBar} aria-hidden="true">
+        <div
+          className={styles.progressFill}
+          style={{
+            width: `${(currentIndex / (BOX_IDS.length - 1)) * 100}%`,
+          }}
+        />
+      </div>
+      <div className={styles.topNav}>
+        <span className={styles.tutorWordmark}>Tutor+</span>
+        {!isFirst && (
+          <button
+            type="button"
+            className={styles.arrowButton}
+            onClick={goToPrev}
+            aria-label="Previous"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
             >
+              <path
+                d="M7 14l5-5 5 5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        )}
+      </div>
+
+      <div className={styles.box}>
+        {renderBox()}
+        <div className={styles.dotsNav} aria-hidden="true">
+          {BOX_IDS.map((_, i) => (
+            <div
+              key={i}
+              className={`${styles.dot} ${
+                i === currentIndex ? styles.dotActive : ''
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {!isLast &&
+        BOX_IDS[currentIndex] !== 'intervention' &&
+        BOX_IDS[currentIndex] !== 'pre-skills-check' &&
+        BOX_IDS[currentIndex] !== 'skills-check' && (
+          <div className={styles.bottomNav}>
+            <FizzyButton
+              onClick={handleContinue}
+              ariaLabel="Next"
+              className={styles.scrollCue}
+            >
+              Continue
               <svg
-                width="20"
-                height="20"
+                width="14"
+                height="14"
                 viewBox="0 0 24 24"
                 fill="none"
                 aria-hidden="true"
               >
                 <path
-                  d="M7 14l5-5 5 5"
+                  d="M7 10l5 5 5-5"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
-          )}
-        </div>
-
-        <div className={styles.box}>
-          {renderBox()}
-          <div className={styles.dotsNav} aria-hidden="true">
-            {BOX_IDS.map((_, i) => (
-              <div
-                key={i}
-                className={`${styles.dot} ${
-                  i === currentIndex ? styles.dotActive : ''
-                }`}
-              />
-            ))}
+            </FizzyButton>
           </div>
-        </div>
-
-        {!isLast &&
-          BOX_IDS[currentIndex] !== 'intervention' &&
-          BOX_IDS[currentIndex] !== 'pre-skills-check' &&
-          BOX_IDS[currentIndex] !== 'skills-check' && (
-            <div className={styles.bottomNav}>
-              <FizzyButton
-                onClick={handleContinue}
-                ariaLabel="Next"
-                className={styles.scrollCue}
-              >
-                Continue
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M7 10l5 5 5-5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </FizzyButton>
-            </div>
-          )}
-      </div>
-    </ThemeProvider>
+        )}
+    </div>
   );
 };
 
