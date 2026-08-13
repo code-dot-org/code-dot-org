@@ -4613,11 +4613,16 @@ const worldBehavior = defineBlock({
   type: 'world_behavior',
   message0: 'define behavior named %1',
   args0: [{type: 'field_input', name: 'NAME', text: 'My Behavior'}],
+  // A definition root like every other `define`: no previous connection, and
+  // what it holds chains BELOW it rather than sitting in a mouth. That is also
+  // how a rule's own step roots read — a behavior is a hat, and what follows it
+  // is what runs (`extractRuleBodies`).
   nextStatement: true,
   style: 'setup_blocks',
   tooltip:
-    'Define a behavior: what an actor carrying it remembers, and what it does ' +
-    'every frame. Add it to an actor with “use trait”.',
+    'Define a behavior: what an actor carrying it does every frame. Put a ' +
+    '“define property” at the top for anything it needs to remember, and add ' +
+    'it to an actor with “use trait”.',
   generator: noGenerator,
 });
 

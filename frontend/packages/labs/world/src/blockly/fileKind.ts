@@ -65,7 +65,9 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // work that kind of actor does. Both are real; a `.world` is not — a world's
   // per-frame work belongs to a rule, and the block would generate nothing
   // there and say nothing about why.
-  ['world_trait_step', new Set<FileKind>(['actor', 'rule', 'behavior'])],
+  // NOT `behavior`: a behavior IS its step, so a second one inside it would be
+  // a step within a step, which nothing else in the lab has.
+  ['world_trait_step', new Set<FileKind>(['actor', 'rule'])],
 ]);
 
 /**

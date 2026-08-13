@@ -11,7 +11,7 @@ import {describe, expect, it} from 'vitest';
 
 import {parseRuleMeta} from '../ruleMeta';
 
-/** A `.behavior` file: the root, and the chain of what it holds. */
+/** A `.behavior` file: the hat, and the chain below that it runs. */
 const behavior = (members: object[]) =>
   JSON.stringify({
     blocks: {
@@ -49,7 +49,7 @@ describe('a `.behavior` file', () => {
     expect(meta.traits[0].ref.exportName).toBe('ChaseTrait');
   });
 
-  it('gives its state to the trait, and not to the world as well', () => {
+  it('lifts a `define property` out of the body it is written in', () => {
     // The double-walk trap. Declared twice, an actor would carry one copy and
     // the world another, and `set speed` would write to whichever the block
     // happened to name.
@@ -73,18 +73,14 @@ describe('a `.behavior` file', () => {
     expect(meta.properties).toHaveLength(1);
   });
 
-  it('carries its `each frame` as a trait step, so it runs per actor', () => {
-    const meta = parseRuleMeta(
-      'rules/chase',
-      behavior([
-        {
-          type: 'world_trait_step',
-          fields: {PHASE: 'decide', NAME: 'move'},
-        },
-      ]),
-    )!;
+  it('IS its step — one, per actor, in `decide`', () => {
+    // No `each frame` row inside it: the behavior is the step, so its body is
+    // the implementation and there is nothing between the two
+    // (specs/BEHAVIORS.md).
+    const meta = parseRuleMeta('rules/chase', behavior([SPEED]))!;
 
     expect(meta.steps).toHaveLength(1);
+    expect(meta.steps[0].name).toBe('Chase');
     expect(meta.steps[0].scope).toBe('actor');
     expect(meta.steps[0].ownerTraitId).toBe('Chase');
     expect(meta.steps[0].order).toEqual({kind: 'phase', phase: 'decide'});

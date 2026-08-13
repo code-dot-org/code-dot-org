@@ -25,17 +25,18 @@ So the space looks like this:
 | a rule's trait | a trait's property                  | a trait's `each frame`     | yes    |
 
 The gap is the third row: **shared, without being a rule**. Sprite Lab calls it
-a Behavior — a function you write once and add to as many actors as you like.
+a Behavior — a function you write once and add to as many actors as you like,
+which is exactly the shape this lands on.
 
 ## The construct
 
-A Behavior is a file, `rules/<name>.behavior`, whose root is:
+A Behavior is a file, `rules/<name>.behavior`, and it is a HAT — a definition
+root like every other `define`, with what it holds chained below it:
 
 ```
 define behavior named ⟨Chase⟩
-  state ⟨number⟩ ⟨speed⟩ = ⟨2⟩
-  each frame during ⟨decide⟩ do ⟨move toward the player⟩
-    …
+define property ⟨number⟩ ⟨speed⟩ = ⟨2⟩
+set position of ⟨this actor⟩ to …
 ```
 
 and an actor takes it the way it takes anything else:
@@ -52,6 +53,15 @@ dropdown, `has trait`, dependency order, phases, the rules panel, the rename
 machinery — so a Behavior that parses into a `RuleMeta` needs none of it
 rewritten. What the `.behavior` file removes is the _vocabulary_ and the two
 files' worth of ceremony, not the mechanism.
+
+**And the Behavior IS the step.** There is no `each frame` row inside it: what
+follows the hat is what runs, every frame, for each actor carrying it. That is
+the same reading a rule's own step roots have (`extractRuleBodies` calls it
+`chainBody` — "a step's body is the chain BELOW it… it is an event hat, so what
+follows it is what runs"), and it is the reading Sprite Lab's behaviours had,
+where a behaviour was a function and nothing else. A row between the definition
+and the implementation would be a step inside a step, which nothing else in the
+lab has.
 
 It also means outgrowing one has an answer already: a Behavior that wants a
 second trait, or a world-scoped property, or an event of its own, becomes a
@@ -73,23 +83,26 @@ One regex carries all of that: `CODE_EXT` in `blockly/projectModules.ts`.
 
 ## What is in one
 
-The two things an actor's own file can already declare, now shareable:
+Its body, and the two declarative rows that may be mixed into it.
 
-- **state** — `world_rule_property`, which under a trait is actor-scoped, so
-  each actor carrying the behavior gets its own copy. This is the answer to
-  "where does per-actor state live without polluting the actor": inside the
-  behavior that uses it, arriving and leaving with it.
-- **`each frame`** — `world_trait_step`, already the block for "every tick, for
-  each thing that has this".
+A `define property` is **a declaration and a default, not code**. It could sit
+anywhere; it is simply nicer at the top. So it is written in the same stack as
+the implementation and lifted out at parse time onto the behavior's trait —
+which costs nothing at generation, because `world_rule_property` already emits
+nothing wherever it lands. Under a trait a property is actor-scoped, so **each
+actor carrying the behavior gets its own copy**. That is the answer to "where
+does per-actor state live without polluting the actor": inside the behavior that
+uses it, arriving and leaving with it.
 
-And one thing that is about the behavior rather than in it:
+`use rule` is the other declarative row — a dependency, when the behavior is
+written against another rule's traits — and is lifted the same way.
 
-- **`use rule`** — a dependency, when the behavior is written against another
-  rule's traits.
+Everything else in the chain is the implementation.
 
-Deliberately NOT in the first cut: events, `define block`, camera subjects,
-world-scoped properties. Each of those is a reason to be a rule, and offering
-them here would make a Behavior a rule with a different hat on.
+Deliberately NOT in one: a second trait, an event, `define block`, a set of
+choices, a camera subject, a world-scoped property, and a second `each frame`.
+Each of those is a reason to BE a rule, so reaching for one is how you find out
+you want a `.rule` — which the file already knows how to become.
 
 ## Decisions
 
@@ -111,42 +124,47 @@ top-level block that has one, and everything chained after it — which is what
 made `each frame` in an actor file arrive greyed out and generating nothing.
 `world_behavior` is a root, so it takes a `next` and no `previous`.
 
-**Phases stay.** A behavior's step names a moment of the frame, like every other
-step. Sprite Lab orders behaviours by when they were added; this lab's steps
-within a phase are deliberately unordered and must commute, and one scheduling
-model is enough. Whether the dropdown is SHOWN to a beginner is a separate
-question — defaulting it and hiding it until asked is the obvious next move.
+**One phase, and it is not on the block.** A behavior runs in `decide` — where
+something works out what it is about to do, which is what a behavior IS. The
+phase model stays (this lab's steps within a phase are deliberately unordered
+and must commute, where Sprite Lab ordered behaviours by when they were added),
+but a behavior does not expose it: a body that wants `sense` or `push` is a body
+that wants to be a rule.
 
-## Plan
+## What it took
 
-1. **`world_behavior` block** — `define behavior named %1`, `nextStatement`, no
-   previous, `noGenerator`, root.
-2. **`parseRuleMeta`** — `root` falls back to `world_behavior`; when it is one,
-   `traitRoots` is `[root]`, and the rule's own chain loop keeps `use rule` but
-   skips property/block/event, which the trait walk will take. Without that they
-   are declared twice, once world-scoped and once actor-scoped.
-3. **`extractRuleBodies`** — add `world_behavior` to the TRAIT-root branch
-   (scope `actor`, `traitId = slug(NAME)`), not the `world_rule` branch. Same
-   double-walk trap from the other side.
-4. **`fileKind`** — `FileKind += 'behavior'`; `fileKindOf` reads the extension;
-   `ROOT_HOMES` gets `world_behavior → ['behavior']` and widens
-   `world_rule_property` / `world_trait_step`; `moduleShape` returns `'rule'`
-   for a `.behavior`, since a rule module is what it compiles to.
-5. **`CODE_EXT`** and `removeRule`'s `RULE_FILE` gain `behavior`.
-6. **`config.ts`** — `editableFileTypes`, `languageMapping`, an
-   `editorComponents` entry pointing at `BlocklyFileEditor`, a file icon.
-7. **Toolbox** — a behavior file offers the behavior root, `each frame`,
-   `world_rule_property`, `use rule`, and the value blocks; not `define rule`,
-   `define trait`, or the world/actor roots.
-8. **A demo** — two kinds of actor electing one behavior, each running it
-   against itself with its own state. That is the claim an actor's own step
-   cannot make, so it is the one worth showing.
+1. **`world_behavior`** — `define behavior named %1`, a root with a `next` and
+   no previous, `noGenerator`.
+2. **`parseRuleMeta`** — the root plays both parts. Its chain is walked twice:
+   once for the declarative rows (`use rule`, `define property`), once as the
+   trait's, and each walk takes its own half or every member arrives twice over,
+   world-scoped and actor-scoped. It contributes one step, named for itself.
+3. **`extractRuleBodies`** — the behavior root's body is `chainBody`, the same
+   call a rule's step roots make.
+4. **`fileKind`** — a new kind, and the two functions part company:
+   `fileKindOf` says what a file IS, `moduleShape` says what it BECOMES, which
+   is `'rule'`.
+5. **The scans** — `CODE_EXT`, `projectRuleMetas`, and `removeRule`'s regexes,
+   so the rules panel lists a behavior, the world block counts it, and the
+   dependency guard protects it.
+6. **`config.ts`** — an editable type, a language mapping, `BlocklyFileEditor`,
+   and a sticky note beside the rule's scroll.
+7. **The toolbox** — the Rule category minus everything `ROOT_HOMES` now marks
+   as a rule's alone.
+8. **Tapper's Spin**, carried by the coins and the crosshair, each coin's speed
+   written into its own placement.
+
+Two things only a real compile found, both about a behavior's module identity:
+the compiler's extension search did not know `.behavior`, and `__ruleModule`
+stripped only `.rule` — so a behavior reading its own state imported the module
+it was being written into, and esbuild refused the duplicate symbol.
 
 ## What to check when it is built
 
 - Two actors, one behavior, separate state.
 - Removing the behavior from the rules panel warns about the actors using it,
   the way removing a rule does.
-- A `.behavior` file's blocks survive a drag (the orphan trap).
+- A `.behavior` file's blocks survive a drag — the root has no previous
+  connection, or `DisableOrphansPlugin` greys it and everything below it.
 - `yarn setup:world` if anything in `src/engine` moves — the sandbox runs a
   prebuilt bundle, and it has caught this twice.
