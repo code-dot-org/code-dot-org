@@ -1,7 +1,12 @@
 import type {Extension} from '@codemirror/state';
 import type {ComponentType} from 'react';
 
-import type {FileId, FolderId, MultiFileSource} from '@code-dot-org/core/api';
+import type {
+  FileId,
+  FolderId,
+  MultiFileSource,
+  ProjectFile,
+} from '@code-dot-org/core/api';
 
 import type {FileIcon} from './utils/fileIcons';
 import {getFileExtension} from './utils/multiFileSource';
@@ -84,6 +89,25 @@ export interface CodebridgeConfig {
     next: MultiFileSource,
     previous: MultiFileSource,
   ) => MultiFileSource;
+
+  /**
+   * The lab's veto on deleting a file, and the reason.
+   *
+   * Return a sentence to refuse, or undefined to allow. The file browser shows
+   * the sentence instead of the delete confirmation, so the learner is told
+   * what is holding the file rather than finding out afterwards.
+   *
+   * The lab's business rather than this package's, because what makes a file
+   * undeletable is a fact about what the lab does with it: World runs every
+   * rule the project holds, and rules are written against each other, so
+   * deleting the one underneath leaves the one on top naming a rule the project
+   * has not got. The rules panel already refuses that; without this the tree
+   * beside it was a second, silent way to do the same thing.
+   */
+  blockFileDeletion?: (
+    file: ProjectFile,
+    source: MultiFileSource,
+  ) => string | undefined;
 
   /**
    * Extensions the file browser does not list (e.g. ['sheet']).

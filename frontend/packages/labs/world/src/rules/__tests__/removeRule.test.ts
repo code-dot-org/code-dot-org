@@ -9,6 +9,7 @@ import {describe, expect, it} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {whyKeepFile} from '../deleteGuard';
 import {filesUsing, heldRules, removeRule, rulesRequiring} from '../removeRule';
 
 /** A `.rule` workspace declaring a name, an ability, traits and dependencies. */
@@ -226,5 +227,47 @@ describe('removeRule', () => {
     removeRule(source, gravity);
 
     expect(Object.keys(source.files)).toHaveLength(1);
+  });
+});
+
+describe('whyKeepFile', () => {
+  // The file TREE's delete, asking what the rules panel asks. Two routes to the
+  // same act, and before this only one of them knew that deleting
+  // `rules/motion.rule` took Physics out from under four other rules.
+  const file = (name: string) => ({
+    id: 'x',
+    name,
+    language: 'rule',
+    contents: '',
+    folderId: 'r',
+  });
+
+  it('refuses a rule another rule requires, and says which', () => {
+    const source = project({
+      'motion.rule': ruleFile('Physics'),
+      'gravity.rule': ruleFile('Gravity', {requires: ['Physics']}),
+      'drive.rule': ruleFile('Arrow Drive', {requires: ['Physics']}),
+    });
+
+    expect(whyKeepFile(file('motion.rule'), source)).toContain(
+      'Arrow Drive, Gravity',
+    );
+  });
+
+  it('allows one nothing else needs', () => {
+    const source = project({
+      'motion.rule': ruleFile('Physics'),
+      'gravity.rule': ruleFile('Gravity', {requires: ['Physics']}),
+    });
+
+    expect(whyKeepFile(file('gravity.rule'), source)).toBeUndefined();
+  });
+
+  it('has nothing to say about a file that is not a rule', () => {
+    // Every delete in the tree comes through here, so the common answer has to
+    // be "not mine".
+    const source = project({'motion.rule': ruleFile('Physics')});
+
+    expect(whyKeepFile(file('player.actor'), source)).toBeUndefined();
   });
 });

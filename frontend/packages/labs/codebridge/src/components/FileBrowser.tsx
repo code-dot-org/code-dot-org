@@ -256,7 +256,7 @@ interface FileBrowserProps {
  */
 const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
   const ops = useFileOperations();
-  const {promptForName, confirm} = usePrompts();
+  const {promptForName, confirm, alert} = usePrompts();
   const config = useCodebridgeConfig();
   // In a read-only workspace — previewing an old version, a frozen or
   // submitted level, a project you don't own — the file-editing menus are
@@ -382,6 +382,14 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
 
   const deleteFile = useCallback(
     async (file: ProjectFile) => {
+      // The lab's veto first. Refusing here rather than repairing afterwards:
+      // some files hold others up, and which ones is the lab's to know
+      // (`blockFileDeletion`).
+      const refusal = config.blockFileDeletion?.(file, ops.source);
+      if (refusal) {
+        await alert({title: `Cannot delete ${file.name}`, message: refusal});
+        return;
+      }
       if (
         await confirm({
           title: 'Delete file',
@@ -391,7 +399,7 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
         ops.deleteFile(file.id);
       }
     },
-    [ops, confirm],
+    [ops, confirm, alert, config],
   );
 
   const deleteFolder = useCallback(

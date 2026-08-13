@@ -10,6 +10,7 @@ import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
 import {EffectFileEditor} from './effect/EffectFileEditor';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
+import {whyKeepFile} from './rules/deleteGuard';
 
 /**
  * World Lab's Codebridge configuration. A World project is the game defined by
@@ -61,6 +62,10 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   // A `.sheet` is hidden, so nothing can move, rename or delete it by hand: it
   // goes wherever its `.png` goes, in the same write (appearance/sheetCompanions).
   reconcileSource: followImages,
+  // The tree's delete asks what the rules panel asks: a rule another rule
+  // requires cannot go, and the refusal says which (rules/deleteGuard). Two
+  // routes to the same act, one answer.
+  blockFileDeletion: whyKeepFile,
   languageMapping: {
     js: 'javascript',
     ts: 'javascript',
