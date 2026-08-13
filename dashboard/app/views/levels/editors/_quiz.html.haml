@@ -1,0 +1,15 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#quiz_fields"}}
+  Quiz
+
+#quiz_fields.in.collapse
+  .field
+    = f.label :time_limit_minutes, 'Time limit (minutes)'
+    = f.number_field :time_limit_minutes, min: 0
+
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_correctness, description: "Show correctness (whether each answer was right or wrong)"}
+
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :reveal_answer_explanation, description: "Reveal answer explanations (requires Show correctness)"}
+
+  .field
+    = f.label :purpose, 'Purpose'
+    = f.select :purpose, options_for_select(Quiz::PURPOSES, @level.purpose), include_blank: true
