@@ -55,6 +55,21 @@ class Quiz < Level
     true
   end
 
+  # POC only: dumps quiz_questions into levelProperties so the frontend stub
+  # (apps/src/quiz/Quiz.tsx) has something to render. Not the real payload
+  # shape - question rendering/authoring UI is a later milestone.
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+    properties_camelized = super
+    properties_camelized[:quizQuestions] = quiz_questions.map do |question|
+      {
+        id: question.id,
+        questionName: question.question_name,
+        explanation: question.explanation,
+      }
+    end
+    properties_camelized
+  end
+
   private def reveal_answer_explanation_requires_show_correctness
     return unless reveal_answer_explanation? && !show_correctness?
     errors.add(:reveal_answer_explanation, 'cannot be true unless show_correctness is also true')
