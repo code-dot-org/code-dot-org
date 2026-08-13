@@ -12,4 +12,5 @@ MAX_GIF_BYTES = 31457280
 # every frame while encoding, ~160 KB each, so this bounds the worker's heap
 # far more tightly than MAX_GIF_BYTES does: simple frames compress to almost
 # nothing, and thousands of them fit under the byte ceiling.
+# TODO: determine if we can increase this limit.
 MAX_FRAMES = 600
