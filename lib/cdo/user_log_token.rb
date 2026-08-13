@@ -5,84 +5,47 @@ require 'json'
 require 'openssl'
 
 module Cdo
-  # Derives a stable, opaque pseudonym ("log token") for a user id, so that log
-  # and telemetry records can be correlated per-user without raw user ids
-  # reaching the logs themselves.
+  # This module makes a token from a user id that can be stored in logs.
   #
-  # Unlike a hash, this is reversible by someone holding the key -- see #resolve,
-  # which is deliberately awkward to call and always writes an audit record.
+  # A person who has the key can change a token back to a user id with #resolve.
+  # #resolve always writes an audit record.
   #
-  # == Per-destination tokens
+  # == Method
   #
-  # Every destination gets its own context string, and no two destinations ever
-  # share one. The same user produces a completely different token in Sentry than
-  # in the AI gateway, so a token obtained from one vendor's data cannot be
-  # matched against another's. This is the same reasoning behind OIDC pairwise
-  # subject identifiers.
+  # The module uses AES-256-GCM. It calculates the IV from the plaintext with
+  # HMAC. The same user always gets the same token for the same destination.
   #
-  # The cost is that cross-system correlation starting from an unknown token
-  # requires a #resolve, which is audited. Correlation starting from a *known*
-  # user is unaffected: derive that user's token for each destination and search
-  # for each.
+  # The module makes two subkeys from the configured key with HKDF. It does not
+  # use the configured key directly.
   #
-  # == Construction
+  # The module adds spaces to the plaintext to give all tokens the same length.
+  # Without this, the length of a token shows the number of digits in the user
+  # id. User ids increase in sequence, so this also shows the age of the account.
   #
-  # AES-256-GCM. The IV is derived deterministically by HMAC of the plaintext
-  # under a subkey separate from the encryption key, which is what makes the same
-  # user produce the same token. Both subkeys are HKDF-derived from the
-  # configured key, so the raw key is never used directly as a cipher key.
+  # == Keys
   #
-  # The plaintext is padded to a fixed width. Without that, GCM's ciphertext
-  # length would equal the plaintext length and the token length would reveal how
-  # many digits the user id has -- which, given sequential ids, is a proxy for
-  # account age.
-  #
-  # Determinism is required for correlation and necessarily leaks equality:
-  # anyone can see two records share a user, which is the point. It also makes
-  # frequency analysis possible in principle.
-  #
-  # == Keys and rotation
-  #
-  # CDO.user_log_token_keys holds a JSON object of version => key, each 32+
-  # random bytes, base64:
+  # CDO.user_log_token_keys contains a JSON object of version to key. Each key is
+  # 32 or more random bytes in base64:
   #
   #   {"1": "<base64>", "2": "<base64>"}
   #
-  # The highest version encrypts. Every version is retained for decryption, and a
-  # key must be kept at least as long as the longest retention window of any
-  # destination carrying its tokens -- unlike a hash, a key we no longer hold
-  # means data we can never read. Tokens carry their version as a "v<n>." prefix
-  # so #resolve knows which key to use.
+  # The module encrypts with the highest version. It keeps all versions to
+  # decrypt. Keep a key while its tokens stay in the logs. If you remove a key too
+  # soon, you cannot read its tokens again.
   #
-  # Generate a key with:
+  # To make a key:
   #
   #   ruby -rsecurerandom -rbase64 -e 'puts Base64.strict_encode64(SecureRandom.bytes(32))'
   #
   module UserLogToken
     class UnknownDestinationError < StandardError; end
 
-    # The rule for splitting destinations: separate them when a token appearing
-    # in one system's data would otherwise let it be joined against another's by
-    # a party who should not be able to make that link. Systems that are already
-    # correlatable by other means -- a shared trace id, a common request path,
-    # or simply being held by the same vendor -- may share one.
-    #
-    # Adding a destination: append a constant here, never reuse or rename an
-    # existing string. Renaming one silently invalidates every token already
-    # written for it. Names must fit DESTINATION_WIDTH.
+    # Two destinations make different tokens for the same user to preserve privacy across vendors.
+    # To add a destination, add a new constant. Do not rename or use again a name
+    # that tokens already contain: the old tokens then become unreadable. A name
+    # must not be longer than DESTINATION_WIDTH.
     DESTINATIONS = [
-      # Our vendor-hosted observability stack: both Sentry projects (dashboard
-      # and AI gateway) and Cloudflare AI Gateway metadata.
-      #
-      # These share one token deliberately. The two Sentry projects are held by
-      # one vendor, so splitting them protects against nothing Sentry could do.
-      # Cloudflare and the gateway's Sentry project are two views of the same
-      # request, already linkable by trace id. Sharing keeps a single user's
-      # records findable across the whole stack with one lookup.
-      #
-      # The accepted cost: a party holding data from both Sentry and Cloudflare
-      # could join them on this token.
-      OBSERVABILITY = 'observability',
+      SENTRY = 'sentry',
     ].freeze
 
     CIPHER = 'aes-256-gcm'
@@ -90,23 +53,25 @@ module Cdo
     TAG_BYTES = 16
     MIN_KEY_BYTES = 32
 
-    # Fixed-width plaintext, so every token is the same length regardless of
-    # destination or user id. users.id is a signed int, so ten digits is the
-    # maximum.
+    # All tokens have the same length. users.id is a signed integer, so a user id
+    # has 10 digits or fewer.
     DESTINATION_WIDTH = 20
     ID_WIDTH = 10
     PLAINTEXT_WIDTH = DESTINATION_WIDTH + ID_WIDTH
     PLAINTEXT_FORMAT = "%-#{DESTINATION_WIDTH}s%0#{ID_WIDTH}d"
 
     raise 'destination names must fit DESTINATION_WIDTH' if DESTINATIONS.any? {|d| d.length > DESTINATION_WIDTH}
+    # decrypt removes the added spaces to get the destination. A name with its own
+    # spaces would make tokens that never resolve.
+    raise 'destination names must not be surrounded by whitespace' if DESTINATIONS.any? {|d| d != d.strip}
 
     class << self
-      # The token to log for this user id at this destination, or nil if no key
-      # is configured or the id is absent or out of range.
+      # Makes the token for this user id at this destination. Returns nil if
+      # there is no key, or if the id is empty or too large.
       #
-      # Never raises on a missing key. This sits on a per-request hot path, so a
-      # misconfiguration must cost a debugging dimension rather than the site,
-      # and there is deliberately no raw-id fallback.
+      # This method must not raise an error. Rails calls it for each request. If
+      # the key is not correct, we lose the token but the site continues. Do not
+      # add a fallback to the user id.
       def derive(user_id, destination:)
         validate_destination!(destination)
         id = normalize(user_id)
@@ -129,23 +94,20 @@ module Cdo
         "v#{version}.#{encoded}"
       end
 
-      # Reverses a token to {user_id:, destination:}, or nil if it cannot be
-      # read. This is the governed direction.
+      # Changes a token back to {user_id:, destination:}. Returns nil if the
+      # module cannot read the token.
       #
-      # +actor_id+ and +reason+ are required rather than optional on purpose. The
-      # audit record is written here, in the primitive, rather than in the
-      # controller -- a controller-level audit is bypassed by anyone with a
-      # production console, whereas this cannot be called at all without stating
-      # who you are and why. Someone can still lie, but they cannot silently
-      # omit.
+      # You must give +actor_id+ and +reason+ for the audit record.
       #
-      # Failed attempts are audited too: a burst of them is a signal worth having.
+      # The method also writes a record when it cannot read the token. Many
+      # failures together are a signal.
       def resolve(token, actor_id:, reason:, request_id: nil)
-        raise ArgumentError, 'actor_id is required to resolve a user log token' if blank?(actor_id)
+        actor = normalize(actor_id)
+        raise ArgumentError, 'actor_id must be the user id of whoever is resolving' unless actor
         raise ArgumentError, 'reason is required to resolve a user log token' if blank?(reason)
 
         result = decrypt(token)
-        audit(result: result, actor_id: actor_id, reason: reason, request_id: request_id)
+        audit(result: result, actor_id: actor, reason: reason, request_id: request_id)
         result
       end
 
@@ -153,7 +115,7 @@ module Cdo
         !keys.empty?
       end
 
-      # Clears memoized key material. Tests only.
+      # Removes the keys from memory. For tests only.
       def reset!
         @keys = nil
         @subkeys = nil
@@ -167,9 +129,8 @@ module Cdo
           "unknown log token destination #{destination.inspect}; expected one of #{DESTINATIONS.join(', ')}"
       end
 
-      # Ids arrive as Integers from most callers and Strings from the admin form;
-      # both must produce the same token. Anything that will not fit the fixed
-      # width is rejected rather than silently truncated.
+      # Callers give an Integer or a String. Both must make the same token. The
+      # method refuses an id that is too large. It does not make the id shorter.
       private def normalize(user_id)
         return nil if user_id.nil?
 
@@ -209,7 +170,7 @@ module Cdo
 
         {user_id: id.to_i, destination: destination}
       rescue OpenSSL::Cipher::CipherError, ArgumentError
-        # Tampered, truncated, or encrypted under a key we no longer hold.
+        # A person changed the token, or it is too short, or we removed its key.
         nil
       end
 
@@ -220,15 +181,12 @@ module Cdo
         match ? [match[1].to_i, match[2]] : [nil, nil]
       end
 
-      # Deliberately records the resolved user id but NOT the token. The audit is
-      # readable by more people than the key is, and a log of token => user id
-      # pairs would be a lookup table for exactly the thing we are protecting.
       private def audit(result:, actor_id:, reason:, request_id:)
         payload = {
           event: 'resolve_user_log_token',
           namespace: 'admin',
           request_id: request_id,
-          authenticated_user_id: actor_id.to_i,
+          authenticated_user_id: actor_id,
           affected_user_id: result && result[:user_id],
           destination: result && result[:destination],
           outcome: result ? 'resolved' : 'not_resolved',
@@ -260,9 +218,6 @@ module Cdo
         raw = CDO.user_log_token_keys
         return disabled('is not configured') if raw.nil? || (raw.respond_to?(:strip) && raw.strip.empty?)
 
-        # Secrets Manager always hands back a String, but the development and
-        # test stubs are read straight from YAML, where an unquoted value parses
-        # as a Hash. Accept either rather than raising at boot.
         parsed = raw.is_a?(Hash) ? raw : JSON.parse(raw)
         return disabled('is not a JSON object of version => key') unless parsed.is_a?(Hash)
 
@@ -270,8 +225,8 @@ module Cdo
           next unless version.to_s.match?(/\A\d+\z/)
           next unless encoded.is_a?(String) && !encoded.strip.empty?
 
-          # Strict, so a mangled key is skipped rather than silently decoding to
-          # unintended bytes and becoming the version we encrypt under.
+          # Strict, so the module refuses a damaged key. A lenient decode could
+          # give unwanted bytes, and we could then encrypt with them.
           decoded = begin
             Base64.strict_decode64(encoded.strip)
           rescue ArgumentError
@@ -285,14 +240,14 @@ module Cdo
 
         usable
       rescue StandardError => exception
-        # Broad on purpose. CDO.user_log_token_keys is a lazily-resolved !Secret,
-        # so first access can raise from Secrets Manager as well as from JSON --
-        # and derive must not raise, whatever the cause.
+        # Broad on purpose. CDO.user_log_token_keys is a lazy !Secret. The first
+        # read can raise an error from Secrets Manager or from JSON. derive must
+        # not raise an error for any cause.
         disabled("could not be read: #{exception.class}: #{exception.message}")
       end
 
-      # Warn once rather than per request, so a misconfiguration is visible
-      # without flooding the logs.
+      # Writes the warning one time only. A wrong configuration stays visible,
+      # but the logs do not fill.
       private def disabled(problem)
         unless @warned
           @warned = true
