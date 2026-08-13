@@ -8,6 +8,7 @@
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import {IMPORT_ACTOR_VALUE} from '../actors/actorImport';
 import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
 import type {EffectParameter} from '../effect/model/types';
 
@@ -438,6 +439,27 @@ export const actorOptionsExtension = liveDropdown(
   'world_actor_options',
   'ACTOR',
   actorFieldOptions,
+);
+
+/**
+ * The same list plus an `(import…)` row, for the two blocks that PLACE an actor.
+ *
+ * Not on every actor dropdown. `any ⟨kind⟩` and `is a ⟨kind⟩` ASK about actors,
+ * and importing one to ask about it is not a thing anybody wants; more to the
+ * point, the row is a sentinel rather than a value, and only a field with the
+ * import validator on it can reject one. A dropdown offering the row without
+ * that validator would store the sentinel as if it named an actor.
+ */
+export function actorImportFieldOptions(
+  field?: Blockly.FieldDropdown,
+): DropdownOptions {
+  return [...actorFieldOptions(field), ['(import…)', IMPORT_ACTOR_VALUE]];
+}
+
+export const actorImportOptionsExtension = liveDropdown(
+  'world_actor_import_options',
+  'ACTOR',
+  actorImportFieldOptions,
 );
 /**
  * The same list, for a block whose actor dropdown is not called ACTOR.

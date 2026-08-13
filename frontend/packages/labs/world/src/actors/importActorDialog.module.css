@@ -1,0 +1,29 @@
+/* The stock-actor picker's CONTENT — the same shape as the rule picker's, and
+   deliberately so: the two answer the same kind of question and a learner who
+   has met one should recognise the other. The dialog itself is the design
+   system's, so this shapes only the list inside it. */
+
+.list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* One row per actor: a whole-row button, so the target is the size of the thing
+   being chosen. Layout only — colors, border, hover and focus ring are the
+   design system's. */
+.actor {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  text-align: start;
+  text-transform: none;
+}

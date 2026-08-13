@@ -30,6 +30,7 @@ const RULES = [
   'wrap',
   'bounds',
   'collect',
+  'text',
   'camera',
   'cameraFollow',
   'cameraEase',
