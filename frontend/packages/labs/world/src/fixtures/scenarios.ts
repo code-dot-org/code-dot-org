@@ -287,20 +287,22 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     source: TAPPER_PROJECT.source,
     instructions:
       '## Tapper\n\nClick the coins to take them.\n\n' +
-      '- Click the preview first, then click a coin — a mark is added at the ' +
-      'pointer, and what it lands on it collects\n' +
-      '- `when ⟨left⟩ is pressed` is the WORLD\u2019s event: a click happened ' +
-      'to nobody, so the handler decides who it was about\n' +
-      '- `mouse position` is where the pointer is IN THE WORLD, which is a ' +
-      'different number from where it is on the screen as soon as the camera moves\n' +
-      '- The scoreboard elects `Takes Mouse Input`, so it hears the clicks too ' +
-      'and prints which button it was — try the right one\n' +
+      '- Click the preview first, then click a coin — the coin elects `Can Be ' +
+      'Clicked`, and that one row is the whole of what makes it clickable\n' +
+      '- One press is told three times. `when ⟨left⟩ is pressed` is the ' +
+      'WORLD\u2019s: it happened to nobody, so the handler has to ask where — ' +
+      'watch it print a point for the clicks that hit nothing too\n' +
+      '- `is clicked with` is the COIN\u2019s: it landed on that coin, so the ' +
+      'handler already knows who, and `this actor` is it\n' +
+      '- `presses mouse button` is the scoreboard\u2019s: it elected `Takes ' +
+      'Mouse Input`, so it hears every press wherever it landed and prints ' +
+      'which button — try the right one\n' +
+      '- `mouse position` is not an event at all: it is where the pointer is ' +
+      'IN THE WORLD, a different number from where it is on the screen as soon ' +
+      'as the camera moves, and it answers whenever you ask\n' +
       '- `crosshair.actor` follows the pointer with `each frame`, which is work ' +
       'a KIND of actor does without a rule to do it in — open it and change ' +
-      'which moment of the frame it runs in\n' +
-      '- There is no \u201cwas this actor clicked\u201d block, and this game ' +
-      'shows there does not have to be: a mark that collects is one made of ' +
-      'the rules already here',
+      'which moment of the frame it runs in',
   },
   empty: {
     name: 'Empty',

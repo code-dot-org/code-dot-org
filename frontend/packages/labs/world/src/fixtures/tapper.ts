@@ -1,29 +1,34 @@
-// Tapper — the mouse, and the one thing only the mouse can say.
+// Tapper — the mouse, and the two things only the mouse can say.
 //
 // Every other scenario is played with the keyboard, which can say WHEN but
-// never WHERE: `space` is a moment, and the game decides what it happens to.
-// A click is a moment AND a place, and that is the whole of what this exists to
+// never WHERE: `space` is a moment, and the game decides what it happens to. A
+// click is a moment AND a place, and that is the whole of what this exists to
 // show. Click a coin and it goes; click the floor and nothing does.
 //
-// THREE PIECES OF THE MOUSE RULE, one per idea, and nothing else in the game:
+// THREE TELLINGS OF ONE PRESS, which is the shape of the mouse rule and the
+// reason it has two traits:
 //
-//   - `when ⟨left⟩ is pressed` — the WORLD's event. A click happened to nobody,
-//     so it is raised once with no actor, and the handler decides who it was
-//     about (rules/mouse).
-//   - `mouse position` — where the pointer is IN THE WORLD, which the engine
-//     works out from where it is on the screen and where the camera is looking
-//     (World.mousePosition). The mark is added there, and that is the whole
-//     mechanism: no hit-testing, no "was this actor clicked", just a thing put
-//     where the pointer was.
-//   - `presses mouse button` under `Takes Mouse Input` — the ACTOR's event, for
-//     an actor that asked to hear it. The scoreboard elects it and says which
-//     button, which is how a game tells left from right.
+//   - `when ⟨left⟩ is pressed` — the WORLD's. A click happened to nobody, so it
+//     is raised once with no actor, and a handler that wants to know where has
+//     to ask. This one prints `mouse position`, which is what asking looks like.
+//   - `presses mouse button` under `Takes Mouse Input` — an actor that asked to
+//     hear EVERY press, wherever it landed. The scoreboard elects it and prints
+//     which button, which is how a game tells left from right.
+//   - `is clicked with` under `Can Be Clicked` — an actor that asked to hear
+//     only the presses that landed ON IT. The coin elects it and takes itself
+//     out of the world, and nothing in the handler works out who was clicked
+//     because the event already knows.
 //
-// WHY A MARK RATHER THAN A CLICK-TEST. There is no "is the pointer over this
-// actor" block, and this game does not need one: a mark dropped at the pointer
-// that can COLLECT is a click-test made of the rules already here — Collisions
-// works out what it landed on, Collection takes it, Expiry cleans the mark up a
-// fifth of a second later. The pieces were all in the box.
+// The last one is the one to read twice. `Takes Mouse Input` and `Can Be
+// Clicked` are not two spellings of the same subscription — they are two
+// questions. A scoreboard counting presses and a gun firing wherever it is
+// aimed want the first; a button, a card, and a coin want the second.
+//
+// AND `mouse position`, which is not an event at all. It is where the pointer
+// is IN THE WORLD, worked out from where it is on the screen and where the
+// camera is looking (World.mousePosition), and it answers at any moment rather
+// than when something happens. The crosshair reads it every frame, which is
+// what makes a game feel aimed rather than merely clicked at.
 
 import {
   buildProject,
@@ -33,17 +38,12 @@ import {
   useTrait,
   type ProjectSpec,
 } from '../constants';
-import {collectRule} from '../rules/stock/collect';
-import {collisionsRule} from '../rules/stock/collisions';
-import {expiresRule} from '../rules/stock/expires';
-import {motionRule} from '../rules/stock/motion';
 import {mouseRule} from '../rules/stock/mouse';
 
-import {at, me, number} from './meteors';
+import {at, me} from './meteors';
 
 // A world-local actor is named by its DEFINING BLOCK'S id (blockly/localActors).
 const COIN = 'tapperCoinDef';
-const MARK = 'tapperMarkDef';
 const SCOREBOARD = 'tapperScoreDef';
 
 const local = (blockId: string) => `local:${blockId}`;
@@ -52,9 +52,6 @@ const local = (blockId: string) => `local:${blockId}`;
 const kind = (blockId: string) => ({
   block: {type: 'world_actor_kind', fields: {ACTOR: local(blockId)}},
 });
-
-/** The variable the spawn binds, so the body can position the new mark. */
-const MARK_VAR = {id: 'tapperMarkVar', name: 'mark', type: 'Actor'};
 
 /** One axis of `mouse position`, which is what `set position` takes. */
 const mouseAxis = (component: 'x' | 'y') => ({
@@ -260,25 +257,15 @@ const MAIN_WORLD = JSON.stringify({
           ]),
         },
       },
-      // A coin: something to hit, and something that knows it has been.
+      // A coin: something to click, and the whole of what that takes. `Can Be
+      // Clicked` is the ONLY row here that is about the mouse — no collision
+      // shape, nothing to collect it, nothing to clean up afterwards, because
+      // the rule works out what the pointer was over from where the coin is
+      // and how big it is drawn.
       defineActor(COIN, 'Coin', 20, [
+        useTrait('Mouse#CanBeClickedTrait'),
         useTrait('Spin#SpinTrait'),
-        useTrait('Collisions#CanCollideTrait'),
-        useTrait('Collection#CanBeCollectedTrait'),
         {type: 'world_set_sprite', fields: {SPRITE: 'coin.png'}},
-      ]),
-      // The mark a click leaves. It collects what it lands on and then goes:
-      // a fifth of a second is long enough to be seen and to touch something,
-      // and short enough that a fast clicker does not fill the world with them.
-      defineActor(MARK, 'Mark', 340, [
-        useTrait('Collisions#CanCollideTrait'),
-        useTrait('Collection#CollectsTrait'),
-        useTrait('Expiry#ExpiresTrait'),
-        {
-          type: 'world_set_Expiry_LifetimeProperty',
-          inputs: {ACTOR: me(), VALUE: number(0.2)},
-        },
-        {type: 'world_set_sprite', fields: {SPRITE: 'shot.png'}},
       ]),
       // Somebody to hear the clicks. It elects `Takes Mouse Input`, which is
       // what makes the rule tell it — the world hears every click either way,
@@ -290,8 +277,10 @@ const MAIN_WORLD = JSON.stringify({
         // rather than a thing (blockly/spriteCells).
         {type: 'world_set_sprite', fields: {SPRITE: 'switch.png#0'}},
       ]),
-      // THE CLICK. Raised once, about nobody, so the handler is what decides
-      // that it was about the pointer's position.
+      // THE WORLD'S TELLING. Raised once, about nobody — so a handler that
+      // wants to know where it landed has to ask, and `mouse position` is the
+      // asking. Every press prints a point, including the ones that hit
+      // nothing, which is exactly what "about nobody" means.
       {
         type: 'world_on_Mouse_IsPressedEvent',
         fields: {FILTER0: 'left'},
@@ -299,43 +288,29 @@ const MAIN_WORLD = JSON.stringify({
         y: 700,
         next: {
           block: {
-            type: 'world_add_actor',
-            fields: {ACTOR: local(MARK), NAMED: 'named', VAR: MARK_VAR},
-            extraState: {named: true},
-            inputs: {
-              DO: {
-                block: {
-                  type: 'world_set_position',
-                  inputs: {
-                    ACTOR: {
-                      block: {
-                        type: 'variables_get_Actor',
-                        fields: {VAR: MARK_VAR},
-                      },
-                    },
-                    X: mouseAxis('x'),
-                    Y: mouseAxis('y'),
-                  },
-                },
-              },
-            },
+            type: 'world_print',
+            inputs: {VALUE: {block: {type: 'world_mouse_position'}}},
           },
         },
       },
-      // What the mark caught. `collects` is raised on the collector, and each
-      // click makes a new one — so this says "got one", not a running total.
-      // The count belongs to something that outlives a mark, which is the next
-      // thing to build here.
+      // THE COIN'S. The same press, told to the one actor it landed on, and
+      // the handler does no hit-testing of its own: `this actor` IS the coin
+      // that was clicked, so taking it out of the world is one block.
       {
-        type: 'world_on_Collection_CollectsEvent',
-        x: 20,
-        y: 880,
-        inputs: {ACTOR: kind(MARK)},
+        type: 'world_on_Mouse_IsClickedWithEvent',
+        fields: {FILTER0: ''},
+        x: 520,
+        y: 700,
+        inputs: {ACTOR: kind(COIN)},
         next: {
-          block: {type: 'world_log', fields: {TEXT: 'Got one!'}},
+          block: stack([
+            {type: 'world_log', fields: {TEXT: 'Got one!'}},
+            {type: 'world_remove_actor', inputs: {ACTOR: me()}},
+          ]),
         },
       },
-      // The ACTOR's side of the same click, and the reason the trait exists:
+      // AND THE SCOREBOARD'S. It elected `Takes Mouse Input`, so it hears
+      // every press wherever it landed — the coins it missed included.
       // `(any)` hears both buttons, and the value says which.
       {
         type: 'world_on_Mouse_PressesMouseButtonEvent',
@@ -385,37 +360,13 @@ export const TAPPER_SPEC: ProjectSpec = {
       contents: mouseRule,
       folderId: 'rules',
     },
-    motionRuleFile: {
-      name: 'motion.rule',
-      language: 'rule',
-      contents: motionRule,
-      folderId: 'rules',
-    },
-    collisionsRuleFile: {
-      name: 'collisions.rule',
-      language: 'rule',
-      contents: collisionsRule,
-      folderId: 'rules',
-    },
-    collectRuleFile: {
-      name: 'collect.rule',
-      language: 'rule',
-      contents: collectRule,
-      folderId: 'rules',
-    },
-    expiresRuleFile: {
-      name: 'expires.rule',
-      language: 'rule',
-      contents: expiresRule,
-      folderId: 'rules',
-    },
     animationRuleFile: {
       name: 'animation.js',
       language: 'javascript',
       contents: ruleShim('AnimationRule'),
       folderId: 'rules',
     },
-    ...starterSprites(['coin', 'shot', 'switch']),
+    ...starterSprites(['coin', 'switch']),
   },
   open: ['main'],
 };

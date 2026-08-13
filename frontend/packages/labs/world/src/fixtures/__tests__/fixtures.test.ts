@@ -204,27 +204,29 @@ describe('the scenario catalogue', () => {
   it('gives tapper the mouse, and the rules a click is made of', () => {
     // The one scenario played with the pointer, and the only demonstration
     // there is that the driver's half of the mouse works: a click has to reach
-    // the engine, become an event, and land a mark where the pointer was.
+    // the engine, become an event, and find what it landed on.
     const files = Object.values(WORLD_SCENARIOS.tapper.source.files);
     const named = (name: string) => files.some(file => file.name === name);
     const main = files.find(file => file.name === 'main.world')!.contents;
 
     // `mouse.rule` above all: holding it is what puts it in play, so a scenario
     // about the mouse that forgot the file would be a scenario about nothing.
-    for (const rule of [
-      'mouse.rule',
-      'motion.rule',
-      'collisions.rule',
-      'collect.rule',
-      'expires.rule',
-    ]) {
-      expect(named(rule)).toBe(true);
+    expect(named('mouse.rule')).toBe(true);
+    // …and nothing else. The coins used to be hit by a mark that collected
+    // them, which took four more rules to say "the pointer was over this" —
+    // `Can Be Clicked` says it, so a scenario about the mouse now holds the
+    // mouse rule alone.
+    for (const rule of ['collisions.rule', 'collect.rule', 'expires.rule']) {
+      expect(named(rule)).toBe(false);
     }
-    // Both halves of the rule are shown, which is the point of the scenario:
-    // the WORLD's event (a click happened to nobody) and the ACTOR's (an actor
-    // that elected `Takes Mouse Input` and hears the ones it asked for).
+    // All THREE tellings are shown, which is the point of the scenario: the
+    // WORLD's event (it happened to nobody), the coin's (`Can Be Clicked`,
+    // raised only on what the press landed on), and the scoreboard's (`Takes
+    // Mouse Input`, every press wherever it landed).
     expect(main).toContain('world_on_Mouse_IsPressedEvent');
+    expect(main).toContain('world_on_Mouse_IsClickedWithEvent');
     expect(main).toContain('world_on_Mouse_PressesMouseButtonEvent');
+    expect(main).toContain('Mouse#CanBeClickedTrait');
     expect(main).toContain('Mouse#TakesMouseInputTrait');
     // …and the thing no keyboard can say: WHERE.
     expect(main).toContain('world_mouse_position');
