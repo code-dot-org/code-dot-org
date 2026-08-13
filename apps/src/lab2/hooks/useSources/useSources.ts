@@ -1,7 +1,6 @@
 import {isEqual} from 'lodash';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
-import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 import {
   INITIAL_VERSION_ID,
@@ -17,7 +16,6 @@ import {
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import type {
-  BlocklyLevelProperties,
   Channel,
   LevelProperties,
   ProjectSources,
@@ -49,6 +47,8 @@ export interface UseSourcesInput<T extends ProjectSources> {
   onReinitialize?: () => void;
   /** Optionally decide whether an update counts as a user edit for hasEdited */
   computeHasEdited?: (prev: T, next: T) => boolean;
+  /** Callback to get sources to edit in toolbox edit mode, in place of project sources. */
+  getToolboxEditSources?: (levelProperties: LevelProperties) => T | undefined;
   /** Whether to include version history functionality (previewing, restoring, committing versions) */
   includeVersionHistory?: boolean;
 }
@@ -109,15 +109,18 @@ export default function useSources<T extends ProjectSources>({
   standaloneChannelId,
   onReinitialize,
   computeHasEdited,
+  getToolboxEditSources,
   includeVersionHistory = false,
 }: UseSourcesInput<T>): UseSourcesOutput<T> {
   const dispatch = useAppDispatch();
   const userId = useAppSelector(state => state.progress.viewAsUserId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const projectManagerRef = useRef<ProjectManager | null>(null);
-  // Latest callback without making it a dependency of updateSources.
+  // Latest callbacks without making them dependencies of their callers.
   const computeHasEditedRef = useRef(computeHasEdited);
   computeHasEditedRef.current = computeHasEdited;
+  const getToolboxEditSourcesRef = useRef(getToolboxEditSources);
+  getToolboxEditSourcesRef.current = getToolboxEditSources;
 
   const [isLoading, setIsLoading] = useState(false);
   const [currentSources, setCurrentSources] = useState<T>();
@@ -223,8 +226,11 @@ export default function useSources<T extends ProjectSources>({
       // so we need to set it here. Prefer to read channel from this hook via the consuming lab within lab components.
       dispatch(setChannelAction(projectAndSources?.channel));
       setSources(
-        (getInitialSources(levelProperties, projectAndSources?.sources) as T) ||
-          defaultSources
+        getInitialSources(
+          levelProperties,
+          projectAndSources?.sources as T | undefined,
+          getToolboxEditSourcesRef.current?.(levelProperties)
+        ) || defaultSources
       );
 
       // No project; return early.
@@ -294,11 +300,7 @@ export default function useSources<T extends ProjectSources>({
   const startOver = useCallback(() => {
     const {templateSources, startSources} = levelProperties;
     const startOverSources = isToolboxMode
-      ? {
-          source: toolboxToWorkspaceBlocks(
-            (levelProperties as BlocklyLevelProperties).toolboxDefinition
-          ),
-        }
+      ? getToolboxEditSourcesRef.current?.(levelProperties) ?? defaultSources
       : isStartMode
       ? defaultSources
       : templateSources || startSources || defaultSources;
