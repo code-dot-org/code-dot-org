@@ -279,11 +279,60 @@ export function traitOptions(
 ): Array<[string, string]> {
   const site = traitSiteFor(field);
   const offered = traitOptionsFor(site.subject, field);
-  return orNone(
-    site.electing
-      ? offered.filter(([, value]) => !FOUNDATION_TRAIT_VALUES.has(value))
-      : offered,
+  return withHeld(
+    field,
+    orNone(
+      site.electing
+        ? offered.filter(([, value]) => !FOUNDATION_TRAIT_VALUES.has(value))
+        : offered,
+    ),
   );
+}
+
+/**
+ * The list, plus the value this field is ALREADY holding if nothing offers it.
+ *
+ * What this is for is the row whose rule has been deleted. A live dropdown
+ * keeps a value its options do not have (`bindLiveOptions`, deliberately — a
+ * project can be a keystroke behind the editor), but what it DRAWS in that case
+ * is the label it last drew, and at load time that was the first row in the
+ * list. So `use trait ⟨Affected by Gravity⟩` came back as `use trait ⟨Can Be
+ * Collected⟩`: the value intact, the warning beside it correct, and the face of
+ * the block naming a completely different trait.
+ *
+ * Adding the value to its own menu fixes the drawing without touching the
+ * general fallback, which the uploaded-spritesheet case still wants. The label
+ * is read back out of the reference — `Gravity#AffectedByGravityTrait` is the
+ * only thing left that knows what this row said — so the capitals are the
+ * export's rather than the author's ("Affected By Gravity"), which is a great
+ * deal closer than the name of something else.
+ */
+function withHeld(
+  field: Blockly.FieldDropdown | undefined,
+  options: Array<[string, string]>,
+): Array<[string, string]> {
+  // Optionally, like every other reach into a field here: an extension is also
+  // run against a plain stand-in in tests, and one with no value has none to
+  // keep.
+  const held = (field as {getValue?: () => unknown} | undefined)?.getValue?.();
+  if (
+    typeof held !== 'string' ||
+    !held ||
+    options.some(([, value]) => value === held)
+  ) {
+    return options;
+  }
+  return [...options, [labelForRef(held), held]];
+}
+
+/** A member reference read back as words: `Wind#GustyTrait` → "Gusty". */
+export function labelForRef(value: string): string {
+  const exportName = value.slice(value.indexOf('#') + 1);
+  const words = exportName
+    .replace(/Trait$/, '')
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+    .trim();
+  return words || value;
 }
 
 /** For `has trait`: every trait, because the subject is a value, not a place. */

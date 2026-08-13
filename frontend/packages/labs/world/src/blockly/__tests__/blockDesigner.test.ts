@@ -15,7 +15,18 @@ import {
   SIGNATURE_BLOCK_TYPES,
 } from '../extensions/blockDesigner';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
+import {registerProjectRules} from '../ruleRegistry';
 import {shadowsFor} from '../valueShadow';
+
+// The palette and the registry go together and always did: the editor
+// registers the project's rules and builds the palette from the same list, in
+// the same breath. It has to be said now, because a member block whose rule the
+// registry cannot find generates NOTHING — that is how a deleted rule stops
+// taking the whole project down with it (domainBlocks, `refResolves`).
+const paletteFor = (meta: ReturnType<typeof parseRuleMeta>) => {
+  registerProjectRules(meta ? [meta] : []);
+  return buildDomainPalette(meta ? [meta] : []);
+};
 
 /** A `.rule` whose only member is a designed block. */
 const designed = (
@@ -95,7 +106,7 @@ describe('a designed block', () => {
   it('builds a call-site block that reads like the design', () => {
     // `push %1 toward %2 on %3` — the arrangement, not `name arg arg`.
     const meta = designed(PUSH_PARTS, 'none', PUSH_VARS);
-    const {blocks} = buildDomainPalette([meta]);
+    const {blocks} = paletteFor(meta);
     const call = blocks.find(
       b => b.type === 'world_do_Push_PushTowardAction',
     ) as {message0?: string} | undefined;
@@ -116,7 +127,7 @@ describe('a designed block', () => {
       'none',
       [{id: 'k', name: 'key', type: 'String'}],
     );
-    const {blocks} = buildDomainPalette([meta]);
+    const {blocks} = paletteFor(meta);
     const call = blocks.find(b => b.type === 'world_do_Push_PressAction') as
       | {args0?: Array<{type: string; name?: string; check?: string}>}
       | undefined;
@@ -144,7 +155,7 @@ describe('a designed block', () => {
       'none',
       [{id: 'k', name: 'key', type: 'String'}],
     );
-    const {blocks} = buildDomainPalette([meta]);
+    const {blocks} = paletteFor(meta);
     const call = blocks.find(b => b.type === 'world_do_Push_PressAction') as {
       generator: {
         javascript: (
@@ -201,7 +212,7 @@ describe('a designed block', () => {
         {id: 'b', name: 'ground', type: 'Actor'},
       ],
     );
-    const {blocks} = buildDomainPalette([meta]);
+    const {blocks} = paletteFor(meta);
     const call = blocks.find(
       b => b.type === 'world_query_Push_RestHeightOfQuery',
     ) as {message0?: string} | undefined;
@@ -235,7 +246,7 @@ describe('a designed block', () => {
         },
       }),
     )!;
-    const {blocks} = buildDomainPalette([meta]);
+    const {blocks} = paletteFor(meta);
     const call = blocks.find(
       b => b.type === 'world_query_Push_IsOnTheGroundQuery',
     ) as {message0?: string} | undefined;
@@ -255,7 +266,7 @@ describe('a designed block', () => {
     expect(meta.actions[0].description).toBe(
       'Shove an actor toward another one.',
     );
-    const {blocks} = buildDomainPalette([meta]);
+    const {blocks} = paletteFor(meta);
     const call = blocks.find(
       b => b.type === 'world_do_Push_PushTowardAction',
     ) as {tooltip?: string} | undefined;
@@ -265,7 +276,7 @@ describe('a designed block', () => {
   it('falls back to the member’s own name when there is no description', () => {
     const meta = designed(PUSH_PARTS, 'none', PUSH_VARS);
     expect(meta.actions[0].description).toBeUndefined();
-    const {blocks} = buildDomainPalette([meta]);
+    const {blocks} = paletteFor(meta);
     const call = blocks.find(
       b => b.type === 'world_do_Push_PushTowardAction',
     ) as {tooltip?: string} | undefined;

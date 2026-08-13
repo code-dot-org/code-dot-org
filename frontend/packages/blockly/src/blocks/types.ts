@@ -44,6 +44,22 @@ export interface BlockLabelArgDefinition {
   text: string;
 }
 
+/**
+ * A label that is SAVED, which a plain `field_label` is not.
+ *
+ * Blockly's own `FieldLabelSerializable`, and it earns its place for the case
+ * a definition is built to hold a block somebody else's definition used to
+ * hold: the value must survive a load and a save even though nothing here can
+ * offer the choices it came from. A plain label would show it and lose it.
+ */
+export interface BlockSerializableLabelArgDefinition {
+  type: 'field_label_serializable';
+  /** The internal name — required, since the point is that it round-trips. */
+  name: string;
+  /** The text for the label. */
+  text: string;
+}
+
 export interface BlockImageArgDefinition {
   /** Explicitly an image field */
   type: 'field_image';
@@ -145,6 +161,7 @@ export type BlockArgDefinition =
   | BlockStatementArgDefinition
   | BlockImageArgDefinition
   | BlockLabelArgDefinition
+  | BlockSerializableLabelArgDefinition
   | BlockNumberArgDefinition
   | BlockDropdownArgDefinition
   | BlockInputArgDefinition;

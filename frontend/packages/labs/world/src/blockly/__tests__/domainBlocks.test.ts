@@ -265,6 +265,24 @@ describe('domain block generators', () => {
     );
   });
 
+  it('world_use_trait emits nothing for a rule the project has not got', () => {
+    // A dead reference, which is a thing a project can hold now that removing
+    // a rule deletes its file. Emitting it would import a module that is not
+    // there — `cannot resolve 'rules/gravity' from 'actors/player.actor'` —
+    // and stop the WHOLE project compiling over one row in one actor. So the
+    // row does nothing, the rest of the game runs, and the block says why
+    // (extensions/missingRule).
+    const defs: Record<string, string> = {};
+    const code = generatorFor('world_use_trait')(
+      {getFieldValue: () => 'Ghost#HauntedTrait'} as never,
+      {definitions_: defs} as never,
+      {} as never,
+    );
+
+    expect(code).toBe('');
+    expect(defs).toEqual({});
+  });
+
   it('world_set_position reads a Vector from the x/y value sockets', () => {
     // X/Y are value sockets: their code comes from `valueToCode` (a shadow
     // math_number, or a plugged getter/math block). No ACTOR value → `actor`.
@@ -2701,6 +2719,10 @@ describe('buildDomainPalette (project rule blocks)', () => {
   )!;
 
   it('a project action’s call-site block passes all its params positionally', () => {
+    // Registered as well as built: a member block whose rule the registry
+    // cannot find generates nothing, which is how a deleted rule stops taking
+    // the whole project down (`refResolves`). The editor does both together.
+    registerProjectRules([pushRule]);
     const {blocks} = buildDomainPalette([pushRule]);
     const nudge = blocks.find(b => b.type === 'world_do_Pushes_NudgeAction')!;
     // Two params → two labelled sockets (AMOUNT, PUSH); both passed to `act`.
@@ -2723,6 +2745,7 @@ describe('buildDomainPalette (project rule blocks)', () => {
   });
 
   it('a project actor-query block takes its param after the actor', () => {
+    registerProjectRules([pushRule]);
     const {blocks} = buildDomainPalette([pushRule]);
     const near = blocks.find(b => b.type === 'world_query_Pushes_NearQuery')!;
     const [code] = near.generator.javascript(

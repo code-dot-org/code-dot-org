@@ -29,6 +29,7 @@ import {
   ruleMetaToModule,
   type RuleMeta,
 } from './ruleMeta';
+import {standInBlocks} from './standInBlocks';
 
 // Headless Blockly → world-lab code generation for `.rule`/`.actor` files
 // (INTERFACE.md). Blockly's generator lives on a workspace, so an offscreen
@@ -62,8 +63,17 @@ export const BlocklyGenerator = forwardRef<
     onReady?: () => void;
     projectRules?: readonly RuleMeta[];
     actorOwnProperties?: readonly ActorOwnMeta[];
+    /**
+     * The project's Blockly files, by path — read only to find block types
+     * nothing defines any more, so a file holding one can still be loaded
+     * (blockly/standInBlocks).
+     */
+    blocklyFiles?: Record<string, string>;
   }
->(function BlocklyGenerator({onReady, projectRules, actorOwnProperties}, ref) {
+>(function BlocklyGenerator(
+  {onReady, projectRules, actorOwnProperties, blocklyFiles},
+  ref,
+) {
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
   const generatorRef: MutableRefObject<JavascriptGenerator | null> =
     useRef(null);
@@ -79,17 +89,29 @@ export const BlocklyGenerator = forwardRef<
   // The palette + root-block types for this project: the built-ins extended with
   // the project's own `.rule` rules. Setting `blocks` re-registers on the live
   // workspace (Driver.blocks), so the generator knows a project rule's blocks.
-  const {blocks, rootTypes, worldEventTypes} = useMemo(
+  const {blocks, rootTypes, worldEventTypes} = useMemo(() => {
     // Every rule's own read-only setters: this palette generates ALL of the
     // project's Blockly files, so it cannot be scoped to one `.rule` the way the
     // editor's is. It is never shown, so the extra blocks cost nothing.
-    () =>
-      buildDomainPalette(projectRules ?? [], {
-        allRuleModules: true,
-        actorOwnProperties: actorOwnProperties ?? [],
-      }),
-    [projectRules, actorOwnProperties],
-  );
+    const palette = buildDomainPalette(projectRules ?? [], {
+      allRuleModules: true,
+      actorOwnProperties: actorOwnProperties ?? [],
+    });
+    // …and a stand-in for every type the project's files hold that this
+    // palette does not mint — what a deleted rule leaves behind. The EDITOR
+    // needs them so the file opens (BlocklyFileEditor); this needs them for
+    // the same reason one file down: `generate` loads the file into a headless
+    // workspace, and Blockly refuses a type it does not know, so one dead
+    // reference would fail the generation of the file it sits in.
+    const known = new Set(palette.blocks.map(block => block.type));
+    return {
+      ...palette,
+      blocks: [
+        ...palette.blocks,
+        ...standInBlocks(Object.values(blocklyFiles ?? {}), known),
+      ],
+    };
+  }, [projectRules, actorOwnProperties, blocklyFiles]);
   // `generate` is a stable closure; read the current root types through a ref.
   const rootTypesRef = useRef(rootTypes);
   rootTypesRef.current = rootTypes;

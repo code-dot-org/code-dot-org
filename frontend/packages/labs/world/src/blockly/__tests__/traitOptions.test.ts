@@ -76,6 +76,40 @@ describe('traitOptions (traits from the rules in play)', () => {
     );
   });
 
+  it('keeps a deleted rule’s trait in its own menu, so the block can say it', () => {
+    // The row whose rule has gone. A live dropdown keeps a value nothing
+    // offers, but what it DRAWS in that case is the label it last drew — and
+    // at load time that was the first row in the list, so `use trait ⟨Affected
+    // by Gravity⟩` came back reading `use trait ⟨Can Be Collected⟩`: the right
+    // value, the right warning, and the name of a completely different trait
+    // on the face of the block.
+    setProjectRules([]);
+    const field = {
+      getValue: () => 'Gravity#AffectedByGravityTrait',
+      getSourceBlock: () => null,
+    };
+
+    expect(traitOptions(field as never)).toContainEqual([
+      // Read back out of the reference, which is the only thing left that
+      // knows what the row said. The capitals are the export's.
+      'Affected By Gravity',
+      'Gravity#AffectedByGravityTrait',
+    ]);
+  });
+
+  it('does not double up a value the project still offers', () => {
+    setProjectRules(['Space', 'Appearance']);
+    const field = {
+      getValue: () => 'Space#PositionalTrait',
+      getSourceBlock: () => null,
+    };
+    const values = anyTraitOptions(field as never).map(([, value]) => value);
+
+    expect(values.filter(value => value === 'Space#PositionalTrait')).toEqual([
+      'Space#PositionalTrait',
+    ]);
+  });
+
   it('unions the traits across every attached rule', () => {
     setProjectRules(['Space', 'Appearance']);
     const values = anyTraitOptions().map(([, value]) => value);
