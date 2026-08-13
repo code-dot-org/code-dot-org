@@ -1,0 +1,37 @@
+name 'pl-aif1-js-project-goals-milestones'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>The Reactive Logic Project: Goals and Milestones</h1>
+
+<p>This is the unit's capstone. Everything from web app structure through loops and conditionals comes together here: students plan, build, and reflect on an interactive app of their own design over five class days.</p>
+
+<h2>Project Goals</h2>
+
+<p style="margin: 0 0 8px 0;">• Plan and model the logic for an interactive app that produces different outcomes based on user input</p>
+<p style="margin: 0 0 8px 0;">• Use JavaScript conditionals, logical operators, and variables to manage app behavior and display</p>
+<p style="margin: 0 0 8px 0;">• Organize and structure code with functions and event-driven design</p>
+<p style="margin: 0;">• Reflect on how AI tools and their own creative decisions shaped the process</p>
+
+<h2>The Four Milestones</h2>
+
+<p>The project is divided into four milestones across five days, each with its own goal and its own reflection:</p>
+
+<p style="margin: 0 0 8px 0;">• <b>Milestone 1 (Day 1):</b> Plan the app idea, build a wireframe, and design a flowchart for the logic</p>
+<p style="margin: 0 0 8px 0;">• <b>Milestone 2 (Day 2):</b> Start building, focusing on one working interaction</p>
+<p style="margin: 0 0 8px 0;">• <b>Milestone 3 (Day 3):</b> Continue building and get structured peer feedback</p>
+<p style="margin: 0;">• <b>Milestone 4 (Days 4-5):</b> Refine based on feedback, finalize the project, and self-assess against the rubric</p>
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/d8db4db8bad22674da51415c7517d10f-image-1786542392351.png" alt="A wavy path diagram showing four milestones in sequence, leading to a final showcase at the end." style="max-width: 500px; width: 100%; border-radius: 10px;">
+</div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> encourage students to move quickly from idea to design to logic on Day 1. These early levels are meant to give them a clear starting point, not to fully plan every detail. A rough flowchart they can revise later beats a perfect one that eats the whole class period.</p>
+</div>
+
+<p>Next, you'll look at how students give each other feedback partway through, before anything is finished.</p>
+
+
+MARKDOWN
