@@ -206,7 +206,7 @@ export class RegionalPartnerMiniContact extends React.Component {
               Please enter your school ZIP Code.
             </div>
           )}
-          <div className={style.fieldGroup}>
+          <div className={style.optionFieldGroup}>
             <ButtonList
               groupName="grade_levels"
               label="Grade Level(s)"
@@ -218,10 +218,8 @@ export class RegionalPartnerMiniContact extends React.Component {
               suppressLineBreak
             />
           </div>
-          <FormGroup className={style.fieldGroup}>
-            <ControlLabel className={style.controlLabel}>
-              Your role
-            </ControlLabel>
+          <FormGroup className={style.optionFieldGroup}>
+            <ControlLabel>Your role</ControlLabel>
             <div className={style.roleSelect}>
               <Select
                 id="role"
