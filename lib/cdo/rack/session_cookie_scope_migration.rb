@@ -1,28 +1,18 @@
+require 'cdo/cookie_helpers'
+
 module Rack
-  # Recover users left with two `_learn_session` cookies after the brief
-  # `domain: nil` (host-only) deploy that was rolled back to `domain: :all`.
-  #
-  # Such a browser sends both cookies under one name, oldest first:
+  # Recover users left holding two `_learn_session` cookies after the brief
+  # `domain: nil` deploy that was rolled back to `domain: :all`. The browser
+  # sends both under one name, oldest-first (RFC 6265 5.4):
   #
   #     Cookie: _learn_session=<stale>; _learn_session=<fresh>
   #
-  # Browsers order equal-path cookies oldest-first (RFC 6265 5.4) and Rack keeps
-  # the FIRST occurrence (`Rack::Utils.parse_cookies_header`), so the server
-  # reads the STALE cookie -> failed sign-ins and
-  # `ActionController::InvalidAuthenticityToken` (HTTP 422).
-  #
-  # This middleware rewrites HTTP_COOKIE to keep only the LAST `_learn_session`
-  # cookie -- the newest, i.e. the one the current config wrote -- so the Rails
-  # session middleware and the /v3 project reader resolve the real session. It
-  # only ever reads and rewrites the inbound header; it never touches the
-  # response. No-op unless a request actually carries duplicate session cookies,
-  # so ordinary single-cookie traffic is untouched.
-  #
-  # We do not delete the stale cookie: once we keep the newest it is simply
-  # ignored on every request, and it expires on its own within one session TTL.
-  # This middleware can be removed after duplicate cookies have aged out.
+  # Rack keeps the FIRST occurrence (`Rack::Utils.parse_cookies_header`), so the
+  # server reads the STALE cookie -> failed sign-ins and HTTP 422 (CSRF). This
+  # middleware rewrites HTTP_COOKIE to keep only the LAST (newest) occurrence, so
+  # the session middleware and other cookie readers resolve the real session.
   class SessionCookieScopeMigration
-    def initialize(app, cookie_name:)
+    def initialize(app, cookie_name: environment_specific_cookie_name('_learn_session'))
       @app = app
       @cookie_name = cookie_name
     end
@@ -32,21 +22,23 @@ module Rack
       @app.call(env)
     end
 
-    # Rewrite HTTP_COOKIE to keep only the last occurrence of the session
-    # cookie, leaving every other cookie -- and their order -- untouched.
-    #
-    # We parse the raw header rather than `Rack::Utils.parse_cookies_header`
-    # because that helper is first-wins and would hand back the stale cookie --
-    # the collision we are fixing.
+    # Rewrite HTTP_COOKIE to keep only the last occurrence of the session cookie,
+    # leaving every other cookie -- and their order -- untouched. We parse the
+    # raw header ourselves because `Rack::Utils.parse_cookies_header` is
+    # first-wins and would hand back the stale cookie we are trying to drop.
     private def keep_last_session_cookie(env)
       header = env['HTTP_COOKIE']
       return if header.nil? || header.empty?
 
       pairs = header.split(';').map(&:strip).reject(&:empty?)
-      session, others = pairs.partition {|pair| pair.split('=', 2).first == @cookie_name}
+      session, others = pairs.partition {|pair| session_cookie?(pair)}
       return if session.size < 2
 
       env['HTTP_COOKIE'] = (others << session.last).join('; ')
+    end
+
+    private def session_cookie?(pair)
+      pair.split('=', 2).first == @cookie_name
     end
   end
 end

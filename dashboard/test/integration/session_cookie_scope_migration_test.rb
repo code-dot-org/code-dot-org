@@ -1,48 +1,44 @@
 require 'test_helper'
 
 # Integration coverage for Rack::SessionCookieScopeMigration through the full
-# dashboard stack -- the middleware, Rack's cookie parsing, and the
-# RedisSessionStore -- not just the middleware in isolation (see
-# lib/test/cdo/rack/test_session_cookie_scope_migration.rb for that).
+# dashboard stack (the middleware, Rack's cookie parsing, and the session
+# store), complementing the isolated middleware unit test.
+#
+# Rails keeps a session id it recognizes but mints a new one for an unknown id,
+# so `session.id` tells us which of two same-name cookies the server actually
+# read once the middleware has collapsed the duplicates.
 class SessionCookieScopeMigrationTest < ActionDispatch::IntegrationTest
   KEY = Rails.application.config.session_options[:key] # _learn_session_test
   BOGUS = 'I_AM_NOT_A_VALID_SESSION_ID'.freeze
 
-  # Fetch a real, valid session id freshly issued by Rails.
-  def real_session_id
-    get '/users/sign_in'
-    id = cookies[KEY].presence
-    assert id, "precondition: Rails should issue a #{KEY} cookie"
-    id
+  # A raw Cookie header carrying the given values under the session cookie name.
+  # The single-valued integration cookie jar can't hold two same-name cookies,
+  # so we forge the header; rack-test lets a caller-supplied HTTP_COOKIE win.
+  def cookie_header_with_sessions(*values)
+    {'HTTP_COOKIE' => values.map {|value| "#{KEY}=#{value}"}.join('; ')}
   end
 
-  # The session id in play after the last request. Jar-backed, so it retains the
-  # prior value if Rails re-emits nothing (an unchanged, recognized session).
-  def current_session_id
-    cookies[KEY].presence
+  test 'reads the newer session when the stale cookie is sent first' do
+    get '/'
+    session_id = session.id.to_s
+    assert session_id.present?, 'precondition: the request should establish a session'
+
+    get '/', headers: cookie_header_with_sessions(BOGUS, session_id)
+
+    assert_equal session_id, session.id.to_s,
+      'kept the valid (last) session id rather than the bogus (first) one'
   end
 
-  def get_with_cookies(*values)
-    get '/users/sign_in', headers: {'HTTP_COOKIE' => values.map {|v| "#{KEY}=#{v}"}.join('; ')}
-  end
+  # Guards against a "read whichever cookie is valid" implementation, which would
+  # also satisfy the test above. Here the valid cookie is FIRST and the bogus one
+  # is LAST, so keep-last must read the bogus one and mint a fresh session.
+  test 'reads the last cookie even when it is the bogus one' do
+    get '/'
+    valid_session_id = session.id.to_s
 
-  test 'bogus cookie first, real cookie last: server reads the real (last) one' do
-    real = real_session_id
+    get '/', headers: cookie_header_with_sessions(valid_session_id, BOGUS)
 
-    get_with_cookies(BOGUS, real)
-
-    # Rails recognized the real (last) id and kept it -- rather than reading the
-    # bogus first cookie and minting a fresh session.
-    assert_equal real, current_session_id, 'should keep the real (last) session id'
-  end
-
-  test 'real cookie first, bogus cookie last: server reads the bogus (last) one' do
-    real = real_session_id
-
-    get_with_cookies(real, BOGUS)
-
-    # Rails read the bogus (last) id, could not find it, and minted a new one --
-    # proving it reads the LAST cookie, not merely "whichever one is valid".
-    refute_equal real, current_session_id, 'should read the bogus (last) id and mint a new one'
+    refute_equal valid_session_id, session.id.to_s,
+      'read the bogus (last) cookie, so Rails minted a new session'
   end
 end
