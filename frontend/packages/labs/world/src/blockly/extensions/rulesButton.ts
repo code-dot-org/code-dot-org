@@ -24,7 +24,6 @@ import * as Blockly from 'blockly/core';
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 
-import {translate} from '../../effect/localization';
 import {ruleModuleOptions} from '../moduleOptions';
 import {requestRulesConfig} from '../rulesConfig';
 
@@ -47,11 +46,9 @@ const ruleCount = (): number => ruleModuleOptions().length;
  */
 export function countText(count: number): string {
   if (count === 0) {
-    return translate('no rules');
+    return 'no rules';
   }
-  return count === 1
-    ? translate('1 rule')
-    : translate('{count} rules', {count});
+  return count === 1 ? '1 rule' : `${count} rules`;
 }
 
 /** The input the field rides on: the last one, after `with`. */
@@ -84,7 +81,7 @@ function addFields(block: Block): void {
     COUNT_FIELD,
   );
   const button = block.getField(COUNT_FIELD);
-  button?.setTooltip(translate('See the rules this world runs'));
+  button?.setTooltip('See the rules this world runs');
   // NOT saved, and not editable — see the note in `openSourceButton`, which
   // learned both of these the hard way.
   if (button) {

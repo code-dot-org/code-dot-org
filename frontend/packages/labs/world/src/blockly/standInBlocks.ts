@@ -36,8 +36,6 @@
 import type {BlockArgDefinition, BlockDefinition} from '@code-dot-org/blockly';
 import {Blockly, defineBlock} from '@code-dot-org/blockly';
 
-import {translate} from '../effect/localization';
-
 import {missingRuleExtension} from './extensions/missingRule';
 import {registerStandInRule} from './ruleRegistry';
 
@@ -122,9 +120,9 @@ function standInFor(type: string, state: BlockState, shape: Shape) {
       : {previousStatement: true, nextStatement: true}),
     extensions: [missingRuleExtension],
     style: 'default',
-    tooltip: translate(
-      'This block belongs to a rule your project no longer has. It is kept so nothing in this file is lost.',
-    ),
+    tooltip:
+      'This block belongs to a rule your project no longer has. It is kept ' +
+      'so nothing in this file is lost.',
     generator: {
       // Nothing, on the same terms as every other dead reference: a rule that
       // is not there cannot be asked anything. A value one has to report
