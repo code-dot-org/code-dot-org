@@ -102,6 +102,12 @@ white fill and no outline, so a shape drawn before any `set fill` draws
 something, and `no fill` / `no outline` exist so that absence is a thing you say
 rather than a socket you empty.
 
+A LINE IS STROKED WITH THE OUTLINE, FALLING BACK TO THE FILL. Found while
+building: a line has no interior, so with the pen untouched the first drawing
+anybody writes — `draw line` — produced nothing at all and no way to find out
+why. "The colour" is the only paint a line can mean, so it takes whichever one
+is set.
+
 The alternative was paint on every shape block: `draw rectangle at ⟨⟩ size ⟨⟩
 fill ⟨⟩ outline ⟨⟩ width ⟨⟩`. Self-contained, no order to trip over, and a block
 so wide that the shape is the smallest thing on it.
@@ -233,6 +239,15 @@ UI_ACTORS.md listed and could not solve for a Label.
    `ROOT_HOMES` marking it `.actor`-only, and a palette inside it that offers no
    clock and nothing that mutates.
 7. **`sendThumbnails`** runs the routine when there is no frame.
+
+Found while building, and not in the list above: `colour_picker` and its
+siblings come from `@blockly/field-colour` and were registered only as a side
+effect of the field plugin initializing, which happens after `standInBlocks`
+asks what is registered. A type nothing defines gets a stand-in whose generator
+returns `null` — so every swatch in every project file generated the literal
+`null`, and `set background color` and an effect's color parameter drew nothing
+along with `set fill`. Registering them at the top of `buildDomainPalette`, where
+`installColorMessages` already sits, is the fix.
 
 ## What to check when it is built
 

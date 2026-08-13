@@ -68,6 +68,11 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // NOT `behavior`: a behavior IS its step, so a second one inside it would be
   // a step within a step, which nothing else in the lab has.
   ['world_trait_step', new Set<FileKind>(['actor', 'rule'])],
+  // A drawing belongs to a KIND of actor, and a kind is what an `.actor` file
+  // is. Not a rule or a behavior: those are shared mechanics, and how a
+  // particular actor looks is the one thing that is not shared — an actor that
+  // wants somebody else's picture already has `set sprite` (specs/DRAWING.md).
+  ['world_define_drawing', new Set<FileKind>(['actor'])],
 ]);
 
 /**

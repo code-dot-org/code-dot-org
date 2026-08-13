@@ -5,6 +5,7 @@
 
 import type {EffectDocument} from '../../effect/model/types';
 import {Actor} from '../core/Actor';
+import type {ActorDrawing, Pen} from '../core/drawing';
 import {Trait} from '../core/Trait';
 import type {
   AppliedEffectSpec,
@@ -62,6 +63,7 @@ export class ActorBuilder {
   private readonly handlers: Array<[GameEvent, EventHandler]> = [];
   private readonly effects: AppliedEffectSpec[] = [];
   private readonly steps: ActorStep[] = [];
+  private drawing: ActorDrawing | undefined;
 
   constructor(opts: {id: string; name: string}) {
     this.id = opts.id;
@@ -180,6 +182,43 @@ export class ActorBuilder {
   /** The per-frame bodies this kind declared, for the World to schedule. */
   get ownSteps(): readonly ActorStep[] {
     return this.steps;
+  }
+
+  /**
+   * Declare what this KIND of actor looks like, by describing it.
+   *
+   * `defineStep`'s sibling and its opposite. A step is handed the world and may
+   * change it; a drawing is handed a pen and may not — it says how the actor
+   * looks GIVEN what it currently is, and nothing else. That purity is what
+   * lets the picture be identified by what it describes, which is what makes it
+   * possible to draw nine actors with one texture and to draw an unchanging
+   * actor once (specs/DRAWING.md).
+   *
+   * The canvas is declared rather than measured, and becomes the actor's
+   * `intrinsic size` — so a drawn actor's click box and collision box are the
+   * size of the picture without anything inspecting pixels.
+   *
+   * ONE PER KIND. A second `define drawing` in one file would be two answers to
+   * "what does this look like", and the block is a root that cannot be
+   * duplicated meaningfully; the last one declared wins rather than an
+   * arbitrary one, which is at least the one the author saw last.
+   */
+  defineDrawing(
+    width: number,
+    height: number,
+    run: (actor: Actor, pen: Pen) => void,
+  ): this {
+    this.drawing = {
+      width,
+      height,
+      run: (actor, pen) => run(actor as Actor, pen),
+    };
+    return this;
+  }
+
+  /** The picture this kind describes for itself, for the World to run. */
+  get ownDrawing(): ActorDrawing | undefined {
+    return this.drawing;
   }
 
   /** Respond to an event raised for this actor. */

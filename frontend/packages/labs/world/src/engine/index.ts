@@ -31,8 +31,17 @@ export {
   type WorldInit,
   type RenderState,
   type BackdropState,
+  type DrawingState,
   type WorldSnapshot,
 } from './core/World';
+// What a drawing routine says (specs/DRAWING.md). The driver reads the
+// commands; generated `.actor` code calls the pen.
+export {
+  TEXT_ANCHORS,
+  type DrawCommand,
+  type Pen,
+  type TextAnchor,
+} from './core/drawing';
 export {Scheduler} from './core/Scheduler';
 export {EventQueue} from './core/EventQueue';
 export {DependencySet} from './core/traits';
