@@ -48,16 +48,6 @@ export const KeyboardOnly: StoryFn = () => (
   </>
 );
 
-export const Sizes: StoryFn = () => (
-  <Row>
-    {(['xs', 's', 'm', 'l'] as const).map(size => (
-      <Tooltip key={size} title={`Size ${size}`} size={size}>
-        <Button variant="outlined">{size}</Button>
-      </Tooltip>
-    ))}
-  </Row>
-);
-
 /** The caret is on by default; drop it with `hasCaret={false}`. */
 export const Caret: StoryFn = () => (
   <Row>
@@ -70,20 +60,11 @@ export const Caret: StoryFn = () => (
   </Row>
 );
 
-/** A leading Font Awesome icon, sized per `size`, sits before the text. */
+/** A leading Font Awesome icon sits before the text. */
 export const WithIcon: StoryFn = () => (
-  <Row>
-    {(['xs', 's', 'm', 'l'] as const).map(size => (
-      <Tooltip
-        key={size}
-        title={`Size ${size}`}
-        size={size}
-        iconName="circle-info"
-      >
-        <Button variant="outlined">{size}</Button>
-      </Tooltip>
-    ))}
-  </Row>
+  <Tooltip title="More information" iconName="circle-info">
+    <Button variant="outlined">Details</Button>
+  </Tooltip>
 );
 
 export const Placements: StoryFn = () => (
@@ -135,7 +116,7 @@ export const KeyboardOnlyIconButtons: StoryFn = () => (
           ['trash', 'Delete this file'],
         ] as const
       ).map(([iconName, title]) => (
-        <Tooltip key={iconName} title={title} size="s" keyboardOnly>
+        <Tooltip key={iconName} title={title} keyboardOnly>
           <IconButton variant="outlined" color="secondary" aria-label={title}>
             <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
           </IconButton>

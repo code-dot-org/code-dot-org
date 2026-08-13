@@ -27,7 +27,7 @@ retires.
 import {Tooltip} from '@code-dot-org/component-library/tooltip';
 
 const RunButton = () => (
-  <Tooltip title="Runs your program" size="s">
+  <Tooltip title="Runs your program">
     <IconButton aria-label="Run" onClick={run}>
       <FontAwesomeV6Icon iconName="play" iconStyle="solid" />
     </IconButton>
@@ -35,16 +35,15 @@ const RunButton = () => (
 );
 ```
 
-Props are MUI's [`TooltipProps`](https://mui.com/material-ui/api/tooltip/) —
-`title`, `placement`, `arrow`, `open`, and the rest — plus a few of ours:
+The CADS tooltip is a single fixed size. Props are MUI's
+[`TooltipProps`](https://mui.com/material-ui/api/tooltip/) — `title`,
+`placement`, `arrow`, `open`, and the rest — plus a few of ours:
 
-- `size` (`'xs' | 's' | 'm' | 'l'`, default `'m'`) picks the design system size.
-  MUI has no size prop of its own.
 - `hasCaret` (`boolean`) is our name for MUI's `arrow` — the pointing caret. It
   defaults to `true` via the theme and, when set, wins over a caller's `arrow`.
   Pass `hasCaret={false}` to drop the caret.
-- `iconName` (`string`) renders a leading Font Awesome icon before the text,
-  sized per `size` by the theme. Omit it when there's no icon.
+- `iconName` (`string`) renders a leading Font Awesome icon before the text.
+  Omit it when there's no icon.
 - `keyboardOnly` (default `false`) — see below.
 - `data-theme` — pass it when the trigger sits inside a `data-theme` subtree.
   MUI renders the tooltip in a portal on `document.body`, so it does not
@@ -81,20 +80,14 @@ the tooltip shut, a Tab to it opens it. Escape closes it either way.
 Styling lives in the `MuiTooltip` theme override
 ([src/themes/code.org/styleOverrides/tooltip.ts](../themes/code.org/styleOverrides/tooltip.ts)),
 as it does for every other component migrated to MUI. Text metrics come from the
-theme's `body1`–`body4` variants rather than being restated here.
+theme's `body2` variant, and the border-radius and shadow from the CADS
+`--shape-sm` and `--shadow-md` tokens, rather than being restated here.
 
 Unlike those other migrations, every rule is marked with a `data-cdo-tooltip`
 attribute that only this component sets. Sketch Lab already uses bare MUI
 tooltips, and a global override would restyle them; the earlier migrations had no
 such callsites to disturb, because nothing used MUI `Button` or `Breadcrumbs`
 before their overrides landed.
-
-`size` travels as a `data-size` attribute on the same element, rather than as a
-prop the theme reads off `ownerState` the way `breadcrumbs.ts` does. MUI's
-Tooltip copies props it doesn't recognise onto the trigger, so a `size` prop
-lands on the trigger too — and an MUI trigger such as `IconButton` has its own
-`size`, which ours would override and shrink. Breadcrumbs has no such trigger to
-clone onto.
 
 Both the mark and the flipped defaults are temporary. Once `WithTooltip` retires
 and every tooltip in the repo is this one, the override can go global and the

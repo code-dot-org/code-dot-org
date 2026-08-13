@@ -6,13 +6,10 @@ import {
 import {forwardRef} from 'react';
 
 import {Theme} from '@/common/contexts';
-import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 /** MUI's tooltip props plus ours; the legacy tooltip still owns `TooltipProps`. */
 export interface CdoTooltipProps extends MuiTooltipProps {
-  /** Defaults to 'm'. */
-  size?: ComponentSizeXSToL;
   /** Show only on keyboard focus. Hover and touch do nothing. */
   keyboardOnly?: boolean;
   /** Our name for MUI's `arrow`; defaults to `true`, unlike MUI. */
@@ -69,7 +66,6 @@ const hasTitle = (title: MuiTooltipProps['title']) => !!title || title === 0;
 // forwardRef, or React drops the ref before it reaches the trigger.
 const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
   {
-    size = 'm',
     keyboardOnly = false,
     hasCaret,
     iconName,
@@ -120,15 +116,14 @@ const Tooltip = forwardRef<unknown, CdoTooltipProps>(function Tooltip(
       arrow={hasCaret ?? arrow ?? true}
       slotProps={{
         ...slotProps,
-        // These ride as attributes because MUI copies any prop it doesn't know
-        // onto the trigger, and a `size` prop there fights the trigger's own.
-        // Drop data-cdo-tooltip and the tooltip loses its styling.
+        // data-cdo-tooltip marks the tooltip so the theme targets only ours. It
+        // rides as an attribute because MUI copies any prop it doesn't know onto
+        // the trigger. Drop the mark and the tooltip loses its styling.
         tooltip: ownerState => ({
           ...(typeof callerTooltipProps === 'function'
             ? callerTooltipProps(ownerState)
             : callerTooltipProps),
           'data-cdo-tooltip': '',
-          'data-size': size,
           ...(dataTheme && {'data-theme': dataTheme}),
         }),
       }}

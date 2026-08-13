@@ -191,34 +191,11 @@ describe('Design System - Tooltip (MUI)', () => {
   });
 
   it('marks the tooltip so the themed styles apply to it', async () => {
-    renderKeyboardOnly({size: 's'});
+    renderKeyboardOnly();
 
     await user.tab();
 
-    const bubble = await findTooltipBubble();
-    expect(bubble).toHaveAttribute('data-cdo-tooltip');
-    expect(bubble).toHaveAttribute('data-size', 's');
-  });
-
-  // MUI copies props it doesn't recognise onto the trigger. A `size` prop would
-  // land on an MUI trigger and override its own, shrinking it to fit the icon.
-  it('keeps size off the trigger', async () => {
-    const seen: string[][] = [];
-    const Trigger = (props: Record<string, unknown>) => {
-      seen.push(Object.keys(props ?? {}));
-      return <button type="button">trigger</button>;
-    };
-
-    render(
-      <ThemeProvider theme={CdoTheme}>
-        <Tooltip title="tooltipText" size="s">
-          <Trigger />
-        </Tooltip>
-      </ThemeProvider>,
-    );
-
-    expect(seen).not.toHaveLength(0);
-    seen.forEach(keys => expect(keys).not.toContain('size'));
+    expect(await findTooltipBubble()).toHaveAttribute('data-cdo-tooltip');
   });
 
   it('puts data-theme on the tooltip, not on the trigger', async () => {
@@ -249,7 +226,6 @@ describe('Design System - Tooltip (MUI)', () => {
   // absent, and we always set slotProps.tooltip, so we do the fallback here.
   it('keeps caller tooltip props given the deprecated componentsProps', async () => {
     renderKeyboardOnly({
-      size: 's',
       componentsProps: {tooltip: {className: 'callerClass'}},
     });
 
@@ -257,7 +233,7 @@ describe('Design System - Tooltip (MUI)', () => {
 
     const bubble = await findTooltipBubble();
     expect(bubble).toHaveClass('callerClass');
-    expect(bubble).toHaveAttribute('data-size', 's');
+    expect(bubble).toHaveAttribute('data-cdo-tooltip');
   });
 
   it('prefers slotProps over componentsProps, as MUI does', async () => {
@@ -465,34 +441,25 @@ describe('Design System - Tooltip (MUI)', () => {
       expect(getComputedStyle(bubble).color).toBe(
         'var(--text-neutral-inverse)',
       );
-      expect(getComputedStyle(bubble).borderRadius).toBe('0.25rem');
+      expect(getComputedStyle(bubble).borderRadius).toBe('var(--shape-sm)');
+      expect(getComputedStyle(bubble).boxShadow).toBe('var(--shadow-md)');
       // MUI fills the arrow from currentColor, so this is the background.
       expect(getComputedStyle(arrow).color).toBe(
         'var(--background-neutral-primary-inverse)',
       );
     });
 
-    // Text metrics are the theme's body4/body3/body2/body1, in that order.
-    it.each([
-      ['xs', '0.813rem', '1.64', '0.5rem'],
-      ['s', '0.875rem', '1.54', '0.625rem'],
-      ['m', '1rem', '1.48', '0.75rem'],
-      ['l', '1.25rem', '1.4', '1rem'],
-    ] as const)(
-      'gives size "%s" its own text and arrow metrics',
-      async (size, fontSize, lineHeight, arrowFontSize) => {
-        renderTooltip({size});
+    // One fixed size: the theme's body2 text and its arrow.
+    it('uses the body2 text and arrow metrics', async () => {
+      renderTooltip();
 
-        await user.tab();
-        const bubble = await findTooltipBubble();
-        const arrow = document.querySelector(
-          '.MuiTooltip-arrow',
-        ) as HTMLElement;
+      await user.tab();
+      const bubble = await findTooltipBubble();
+      const arrow = document.querySelector('.MuiTooltip-arrow') as HTMLElement;
 
-        expect(getComputedStyle(bubble).fontSize).toBe(fontSize);
-        expect(getComputedStyle(bubble).lineHeight).toBe(lineHeight);
-        expect(getComputedStyle(arrow).fontSize).toBe(arrowFontSize);
-      },
-    );
+      expect(getComputedStyle(bubble).fontSize).toBe('1rem');
+      expect(getComputedStyle(bubble).lineHeight).toBe('1.48');
+      expect(getComputedStyle(arrow).fontSize).toBe('0.75rem');
+    });
   });
 });
