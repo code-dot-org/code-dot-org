@@ -1,0 +1,238 @@
+# This builds cdo-dev, smoke-tests it on docker and podman on amd64 and
+# arm64, and publishes it from staging as a multi-platform manifest.
+# Per-arch native builds get stitched together, the same as the cdo-base
+# pattern. See docker/dev/README.md.
+#
+# This is not triggered by lockfile changes. Those are cdo-deps-image's
+# gate. This workflow chains off that image's publish instead, so it
+# rebuilds on the cdo-deps that just shipped.
+
+name: cdo-dev-image
+
+on:
+  pull_request:
+    paths:
+      - 'docker/dev/**'
+      - 'docker/smoke-harness.sh'
+      - '.github/workflows/cdo-dev-image.yml'
+  push:
+    branches: [staging]
+    paths:
+      - 'docker/dev/**'
+      - 'docker/smoke-harness.sh'
+      - '.github/workflows/cdo-dev-image.yml'
+  workflow_run:
+    workflows: [cdo-deps-image]
+    types: [completed]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Publishes are not governed here. build-push has its own group.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-dev
+
+jobs:
+  # This resolves the dependency layer once, by content key, so every
+  # build gets the same digest. See docker/deps/README.md#the-content-key.
+  # It also filters the workflow_run chain, which fires for failed runs
+  # and other branches too.
+  resolve-deps:
+    name: resolve cdo-deps digest
+    runs-on: ubuntu-24.04
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'staging')
+    permissions:
+      contents: read
+      packages: read
+    outputs:
+      digest: ${{ steps.deps.outputs.digest }}
+    steps:
+      - name: Checkout key inputs only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github/actions/cdo-deps-key
+            docker
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compute the dependency-layer content key
+        id: key
+        uses: ./.github/actions/cdo-deps-key
+
+      - name: Resolve the keyed cdo-deps tag to a digest
+        id: deps
+        run: |
+          set -euxo pipefail
+          digest="$(docker buildx imagetools inspect \
+            "ghcr.io/code-dot-org/cdo-deps:${{ steps.key.outputs.key }}" \
+            --format '{{json .Manifest.Digest}}' | tr -d '"')"
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+
+  smoke-test:
+    name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
+    needs: resolve-deps
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { engine: docker, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: podman, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: docker, arch: arm64, runs-on: ubuntu-24.04-arm }
+          - { engine: podman, arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
+    permissions:
+      contents: read
+      packages: read
+    env:
+      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-deps@${{ needs.resolve-deps.outputs.digest }}
+    steps:
+      - name: Checkout the image directory only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docker
+
+      # podman reads ~/.docker/config.json as a credential fallback, so one
+      # docker login serves both engines.
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build cdo-dev with ${{ matrix.engine }}
+        run: |
+          ${{ matrix.engine }} build \
+            --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
+            -t cdo-dev:smoke docker/dev/
+
+      - name: Smoke test
+        run: ./docker/dev/smoke-test.sh cdo-dev:smoke ${{ matrix.engine }}
+
+  # One job runs per architecture, natively, with no qemu. Each pushes an
+  # arch-suffixed tag. stitch merges them into the consumer-facing ones.
+  build-push:
+    name: build and push (${{ matrix.arch }})
+    if: github.event_name != 'pull_request'
+    needs: [resolve-deps, smoke-test]
+    strategy:
+      matrix:
+        include:
+          - { arch: amd64, runs-on: ubuntu-24.04 }
+          - { arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
+    # This is inert until its deployment-branch policy is set. See
+    # docker/deps/README.md.
+    environment: ghcr-publish
+    # This groups per architecture. The two arch legs of one run must not
+    # share a group, or they would cancel each other. This is safe to
+    # cancel. Nothing resolves `latest` programmatically.
+    concurrency:
+      group: cdo-dev-publish-${{ matrix.arch }}
+      cancel-in-progress: true
+    permissions:
+      contents: read
+      packages: write
+    env:
+      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-deps@${{ needs.resolve-deps.outputs.digest }}
+    steps:
+      - name: Checkout the image directory only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docker
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build cdo-dev
+        run: |
+          docker build \
+            --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
+            -t cdo-dev:publish docker/dev/
+
+      # This tests the image actually being published, not the matrix's
+      # copies.
+      - name: Smoke test
+        run: ./docker/dev/smoke-test.sh cdo-dev:publish docker
+
+      # This does not use build-push-action with push: true. That would
+      # publish in the step that builds, before the smoke suite can fail
+      # the job.
+      #
+      # The tag is keyed by commit and architecture. No consumer resolves
+      # it. The stitch job builds every consumer-facing tag from this
+      # immutable pair. A racing publish or a leftover tag from a failed
+      # run cannot leak in.
+      - name: Push cdo-dev (per-arch tag)
+        run: |
+          set -euxo pipefail
+          docker tag cdo-dev:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
+          docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
+
+  # Until this runs, only the arch-suffixed tags exist. A half-published
+  # state is therefore visible as such, instead of resolving to one arch
+  # under the final name.
+  stitch:
+    name: stitch multi-platform manifest
+    if: github.event_name != 'pull_request'
+    needs: build-push
+    runs-on: ubuntu-24.04
+    environment: ghcr-publish
+    concurrency:
+      group: cdo-dev-publish
+      cancel-in-progress: true
+    permissions:
+      packages: write
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # This step needs no checkout. This tag contract has no content
+      # key, so metadata-action needs only the event context.
+      - name: Compute tags
+        id: meta
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=sha,prefix=git-,format=long,enable={{is_default_branch}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
+
+      # Both source tags are commit-keyed, so no moving tag ever appears in
+      # the input.
+      - name: Stitch every tag from the sha-keyed per-arch pair
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          set -euxo pipefail
+          # An empty list would make this step a green no-op.
+          test -n "$TAGS"
+          args=()
+          for ref in $TAGS; do args+=(-t "$ref"); done
+          docker buildx imagetools create "${args[@]}" \
+            "$IMAGE:git-${{ github.sha }}-amd64" \
+            "$IMAGE:git-${{ github.sha }}-arm64"
+
+      - name: Inspect a published manifest
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: docker buildx imagetools inspect "$(echo "$TAGS" | head -1)"
