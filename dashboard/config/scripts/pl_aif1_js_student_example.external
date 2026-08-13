@@ -1,0 +1,69 @@
+name 'pl-aif1-js-student-example'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Project Rubric</h1>
+
+<p class="directions" style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 12px 16px;">Use the dropdowns below to review each category in full before grading Mood Playlist Picker.</p>
+
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976;">Algorithmic Planning</summary>
+<div style="margin-top: 10px;">
+<p><b>Extensive:</b> Flowchart or pseudocode includes multiple layers of logic or alternate user paths; criteria are detailed and anticipate complex user behaviors.</p>
+<p><b>Convincing:</b> Flowchart or pseudocode clearly models the app's logic, with branches and decision points that match app behavior; all outcome criteria are defined.</p>
+<p><b>Limited:</b> Flowchart shows basic structure but some branches or decision points don't align with intended app behavior; outcome criteria are partially defined.</p>
+<p><b>No evidence:</b> Flowchart or pseudocode is incomplete or missing, with unclear or missing decision points; outcome criteria are not defined.</p>
+</div>
+</details>
+
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976;">Conditional Logic Implementation</summary>
+<div style="margin-top: 10px;">
+<p><b>Extensive:</b> Code demonstrates efficient use of if/else structures to handle complex app conditions; features update accurately and consistently.</p>
+<p><b>Convincing:</b> JavaScript correctly implements the planned conditional logic using if/else; features update reliably based on user input.</p>
+<p><b>Limited:</b> Code includes basic if/else statements, but some feature updates occur inconsistently or do not fully match the planned logic.</p>
+<p><b>No evidence:</b> Code lacks functional if/else statements or does not reflect the flowchart's logic; features do not update correctly.</p>
+</div>
+</details>
+
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976;">State Management and DOM Manipulation</summary>
+<div style="margin-top: 10px;">
+<p><b>Extensive:</b> Code demonstrates robust state management, efficiently updating multiple DOM elements in real time to create a smooth, responsive experience.</p>
+<p><b>Convincing:</b> Variables accurately track user selections or totals; DOM updates dynamically to reflect user interactions.</p>
+<p><b>Limited:</b> Variables track some user input but DOM updates are incomplete, inconsistent, or hardcoded.</p>
+<p><b>No evidence:</b> Code does not track user state; DOM elements remain static even when users interact with the app.</p>
+</div>
+</details>
+
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976;">Code Organization and Structure</summary>
+<div style="margin-top: 10px;">
+<p><b>Extensive:</b> Code is modular and efficient, with well-structured functions, organized event listeners, and clear, consistent commenting that explains design choices.</p>
+<p><b>Convincing:</b> Functions (e.g., checkCriteria()) encapsulate main logic; event listeners work correctly; code is readable and includes basic comments.</p>
+<p><b>Limited:</b> Some functions or event listeners are used, but logic may be misplaced or inconsistently triggered; code readability is limited.</p>
+<p><b>No evidence:</b> Code is unstructured or repetitive; lacks dedicated functions or event listeners; minimal formatting or comments.</p>
+</div>
+</details>
+
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976;">Process and Reflection</summary>
+<div style="margin-top: 10px;">
+<p><b>Extensive:</b> Reflection is detailed and insightful, linking process artifacts, AI collaboration, and design decisions to the final outcome; evaluates effectiveness and ethics of AI use.</p>
+<p><b>Convincing:</b> Reflection references planning artifacts, includes at least two examples of how AI supported brainstorming/debugging, and evaluates the final app's success.</p>
+<p><b>Limited:</b> Some planning artifacts included; reflection briefly mentions AI but lacks specific examples or insights.</p>
+<p><b>No evidence:</b> Few or no planning artifacts; reflection is missing or lacks detail about the process or AI use.</p>
+</div>
+</details>
+
+For this exercise, you'll practice grading just two of these five categories: **Algorithmic Planning and Conditional Logic Implementation**, using Mood Playlist Picker from the last level. Pay attention to whether the pseudocode, the working app, and the code actually agree with each other, they don't have to score the same.
+
+---
+
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/practice-grading-rubric.html" width="100%" height="820" style="border:none;" title="Practice grading rubric: interactive rubric with two rows for algorithmic planning and conditional logic implementation"></iframe>
+</div>
+
+MARKDOWN
