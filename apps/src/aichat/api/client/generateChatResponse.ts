@@ -49,7 +49,10 @@ export async function generateChatResponse(
   levelSystemPrompt?: string
 ) {
   // Check input for safety.
-  const userInputSafe = await isTextSafe(newMessage.chatMessageText);
+  const userInputSafe = await isTextSafe(
+    newMessage.chatMessageText,
+    'input_filter'
+  );
   Observability.metrics.count('ai-chat.text_moderation', 1, {
     phase: 'input_filter',
     result: userInputSafe ? 'ok' : 'flagged',
@@ -78,12 +81,15 @@ export async function generateChatResponse(
     : undefined;
 
   // Generate a response with the model.
-  const {text, files, finishReason, response, output} = await generateText({
-    model: getModel(modelParameters.selectedModelId),
-    messages,
-    temperature: modelParameters.temperature,
-    ...(outputSchema && {output: outputSchema}),
-  });
+  const {text, files, finishReason, response, output} = await generateText(
+    {
+      model: getModel(modelParameters.selectedModelId),
+      messages,
+      temperature: modelParameters.temperature,
+      ...(outputSchema && {output: outputSchema}),
+    },
+    {phase: 'generation'}
+  );
 
   // chatMessageText has to stay a string: rendering, storage and non-schema
   // messages all depend on that, even when a schema was used.
@@ -199,7 +205,7 @@ export async function generateChatResponse(
   }
 
   // Check model text output for safety.
-  const modelOutputSafe = await isTextSafe(responseText);
+  const modelOutputSafe = await isTextSafe(responseText, 'output_filter');
   Observability.metrics.count('ai-chat.text_moderation', 1, {
     phase: 'output_filter',
     result: modelOutputSafe ? 'ok' : 'flagged',

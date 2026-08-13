@@ -27,10 +27,14 @@ class ProjectStorage < ApplicationRecord
   self.table_name = 'user_project_storage_ids'
 
   belongs_to :user, optional: true
-  has_many :projects, inverse_of: :project_storage
+  has_many :projects, foreign_key: :storage_id, inverse_of: :project_storage
   has_one :geo,
           class_name: 'ProjectStorage::Geo',
           foreign_key: :storage_id,
           inverse_of: :project_storage,
           dependent: :destroy
+
+  scope :anonymous, -> {where(user_id: nil)}
+  scope :without_geo, -> {where.missing(:geo)}
+  scope :with_projects, -> {where(Project.where(Project.arel_table[:storage_id].eq(arel_table[:id])).arel.exists)}
 end

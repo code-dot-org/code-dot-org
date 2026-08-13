@@ -1,0 +1,3 @@
+name 'UI Test U1L1 Student Lesson Introduction'
+title 'UI Test Student Lesson Introduction'
+markdown 'Placeholder student lesson introduction level for UI tests. The production level this replaces is encrypted; UI tests only load this page and assert the URL.'

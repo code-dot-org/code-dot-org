@@ -9,6 +9,7 @@ import {
 } from '@code-dot-org/core/api';
 import {Lab} from '@code-dot-org/lab/host';
 
+import FullHeightLabFrame from '@/modules/labs/router/FullHeightLabFrame';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 import LevelNavigation from '@/modules/labs/router/LevelNavigation';
 import {
@@ -114,10 +115,23 @@ export const Route = createFileRoute(
 
     return {resolved, LabEntrypoint};
   },
+  // The lab is full-bleed and fills the viewport itself (FullHeightLabFrame);
+  // suppress the global StudioFooter so it doesn't sit below the fold.
+  staticData: {hideFooter: true},
   // Preserve the whole query string. The oceans lab reads its own URL flags
   // (?guide, ?testFreeze, ?tts) straight from location.search, so we must not
   // strip to a known subset — pass search through untouched.
   validateSearch: (search: Record<string, unknown>) => search,
+  // Title is set here, not in a component effect: HeadContent manages it per
+  // matched route, so it needs no cleanup and is restored on navigation.
+  head: ({loaderData}) => {
+    const props = loaderData?.resolved.properties as
+      | {displayName?: string}
+      | undefined;
+    const name =
+      props?.displayName ?? loaderData?.resolved.scriptTitle ?? 'CodeAI';
+    return {meta: [{title: `${name} | CodeAI`}]};
+  },
   component: CourseLevelRoute,
   notFoundComponent: () => (
     // h1: this is the only heading on the page when the not-found state renders.
@@ -157,7 +171,7 @@ function CourseLevelRoute() {
   }, [resolved, router]);
 
   return (
-    <>
+    <FullHeightLabFrame>
       <LevelNavigation
         currentPosition={resolved.position}
         levels={resolved.levels}
@@ -175,6 +189,6 @@ function CourseLevelRoute() {
           </Typography>
         )}
       </Lab>
-    </>
+    </FullHeightLabFrame>
   );
 }

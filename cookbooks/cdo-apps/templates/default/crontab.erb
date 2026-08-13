@@ -120,6 +120,9 @@
 
       # Send Warning Emails to Inactive Teacher Accounts before Deletion
       cronjob at: "0,30 0-11 * * *", do: "#{deploy_dir('bin', 'cron', 'perform_job')} User::InactiveTeacherDeletionWarningJob '{\"limit\": 1000}'"
+
+      # Backfills geolocation data for anonymous project storages every 15 minutes from 02:00 to 11:45 UTC.
+      cronjob at: '*/15 2-11 * * *', do: "#{deploy_dir('bin', 'cron', 'perform_job')} ProjectStorage::AnonymousGeoBackfillingJob '{\"limit\": 100000}'"
     end
 
     # 'daemons' in all environments.

@@ -254,6 +254,38 @@ $tab-segment-height: $tab-item-height - 2px;
   @include buttons.quiet-button(22px, 11px);
 }
 
+// The trailing "new image" card: a blank tile with a plus. Same footprint as
+// a thumbnail so the gallery grid stays regular.
+.newImageCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 104px;
+  height: 104px;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+  border: 1px dashed var(--borders-neutral-primary);
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 1;
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
+  }
+}
+
+.newImageLabel {
+  font-size: 12px;
+}
+
 .imageThumb {
   display: flex;
   align-items: center;

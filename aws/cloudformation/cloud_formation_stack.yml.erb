@@ -28,6 +28,14 @@ Parameters:
     Type: String
     Default: <%=CDO.hostedzone_id('codeprojects.org') %>
     Description: Route 53 Hosted Zone ID for Codeprojects base domain name.
+  CodeaiprojectsBaseDomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? 'codeaiprojects.org' : "#{stack_name}.codeaiprojects.org" %>
+    Description: Base domain name for the Web Lab 2 / pyodide preview origin (migrated off codeprojects.org).
+  CodeaiprojectsHostedZoneId:
+    Type: String
+    Default: <%=CDO.hostedzone_id('codeaiprojects.org') %>
+    Description: Route 53 Hosted Zone ID for the codeaiprojects base domain name.
   InstanceType:
     Type: String
     Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
@@ -878,9 +886,14 @@ Resources:
 
 <% if cdn_enabled -%>
   # ---------------------------------------------
-  # Codeprojects Resources
+  # Codeprojects Resources (legacy Web Lab: bare codeprojects.org apex)
   # ---------------------------------------------
 <%= resource_component 'codeprojects_resources' %>
+
+  # ---------------------------------------------
+  # Codeaiprojects Resources (Web Lab 2 / pyodide preview origin)
+  # ---------------------------------------------
+<%= resource_component 'codeaiprojects_resources' %>
 <% end -%>
   # ---------------------------------------------
   # Custom Chef Configuration Secret
@@ -905,6 +918,9 @@ Outputs:
   PreviewCodeprojectsURL:
     Description: Codeprojects URL
     Value: !Sub preview.${CodeprojectsBaseDomainName}
+  PreviewCodeaiprojectsURL:
+    Description: Web Lab 2 / pyodide preview origin
+    Value: !Sub preview.${CodeaiprojectsBaseDomainName}
 <% end -%>
 <% if rack_env?(:adhoc) -%>
   DaemonSSHCommand:

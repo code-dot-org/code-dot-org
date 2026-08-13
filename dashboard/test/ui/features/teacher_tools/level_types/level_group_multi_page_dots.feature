@@ -48,7 +48,7 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   # Verify the three dots in the header are 1. all, 2. none, 3. some questions answered.
   And I verify progress in the header of the current page is "perfect_assessment" for level 2
   And I verify progress in the header of the current page is "not_tried" for level 3
-  And I verify progress in the header of the current page is "attempted_assessment" for level 4
+  And I verify progress in the header of the current page is "attempted_assessment_dot" for level 4
 
   # Open the dropdown and verify the same three dots.
   Then I open the progress drop down of the current page
@@ -73,7 +73,7 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   # Verify the three dots in the header all reflect the submission.
   And I verify progress in the header of the current page is "perfect_assessment" for level 2
   And I verify progress in the header of the current page is "not_tried" for level 3
-  And I verify progress in the header of the current page is "attempted_assessment" for level 4
+  And I verify progress in the header of the current page is "attempted_assessment_dot" for level 4
 
   # Open the dropdown and verify the same three dots.
   Then I open the progress drop down of the current page
@@ -118,7 +118,7 @@ Scenario: optional free play level
 
   # Verify the bubble status and submit dialog message show incomplete
 
-  Then I verify progress in the header of the current page is "attempted_assessment" for level 3
+  Then I verify progress in the header of the current page is "attempted_assessment_dot" for level 3
 
   When I press ".submitButton" using jQuery
   And I wait to see a dialog titled "Submit your assessment"

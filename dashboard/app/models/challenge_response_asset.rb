@@ -29,13 +29,17 @@ class ChallengeResponseAsset < ApplicationRecord
 
   # The S3 object key in the user-content bucket. Derived from the record ids
   # (no key is stored), so the asset must be persisted for this to be stable.
+  # Whiteboard images are always PNG, so their keys carry a .png extension.
   def s3_key
-    "challenge_response_assets/#{challenge_response_id}/#{id}"
+    base = "challenge_response_assets/#{challenge_response_id}/#{id}"
+    asset_whiteboard_image? ? "#{base}.png" : base
   end
 
-  # Accepted upload content types per asset_type.
+  # Accepted upload content types per asset_type. Whiteboard snapshots are
+  # captured client-side as PNG, and the evaluation pipeline assumes PNG, so
+  # nothing else is accepted.
   CONTENT_TYPES = {
-    'whiteboard_image' => %w[image/png image/jpeg],
+    'whiteboard_image' => %w[image/png],
     'video' => %w[video/webm video/mp4],
     'audio' => %w[audio/webm audio/mpeg],
   }.freeze
@@ -67,6 +71,18 @@ class ChallengeResponseAsset < ApplicationRecord
   # Presigned URL the client GETs the asset bytes from.
   def presigned_download_url
     AWS::S3.presigned_download_url(AWS::S3.user_content_bucket, s3_key, expires_in: URL_EXPIRY.to_i)
+  end
+
+  # True once the client has PUT the asset bytes to S3. Asset rows are created
+  # before their bytes arrive, so a row alone does not imply content exists.
+  def uploaded?
+    AWS::S3.exists_in_bucket(AWS::S3.user_content_bucket, s3_key)
+  end
+
+  # The raw asset bytes from S3. Raises AWS::S3::NoSuchKey if the bytes were
+  # never uploaded; check uploaded? first when that is not an error.
+  def download_bytes
+    AWS::S3.download_from_bucket(AWS::S3.user_content_bucket, s3_key)
   end
 
   # @param upload [Boolean] when true, the asset was just created and its

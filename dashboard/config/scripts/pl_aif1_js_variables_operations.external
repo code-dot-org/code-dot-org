@@ -1,0 +1,65 @@
+name 'pl-aif1-js-variables-operations'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Variables and Operations</h1>
+
+<p>Think about the Question of the Day: how can an app "remember" what a user did and show it on screen? That memory has to live somewhere. It lives in variables.</p>
+
+<h2>From User Actions to Variables</h2>
+
+<p>Every time a user clicks, types, or posts, the app stores and updates information behind the scenes. Programs keep track of those changes using a couple of key ideas.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Variable</b> is a named container that stores a value the program can use or change.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-top: 12px;">
+<p>📖 <b>Operation</b> is an action that changes a variable's value.</p>
+</div>
+
+<h2>Creating and Updating Variables in JavaScript</h2>
+
+<p>Here's a variable being created, then updated by an operation, then displayed on the page:</p>
+
+<div style="background-color: #2B2745; border-radius: 10px; padding: 18px 22px; font-family: 'Courier New', monospace; font-size: 15px; color: #E4E2F8; line-height: 1.8; margin: 20px 0;">
+let score = 0;<br>
+score = score + 1;<br>
+scoreDisplay.textContent = score;
+</div>
+
+<p>Line one creates the variable and gives it a starting value. Line two is the operation, it changes that value. Line three updates the DOM so the new value actually shows up on the page, the same DOM update process from the last lesson.</p>
+
+<h2>Two Ways to Create Variables</h2>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+
+  <div>
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+      <span style="width: 12px; height: 12px; border-radius: 3px; background-color: #4C42CF; display: inline-block;"></span>
+      <span style="font-weight: 700; color: #1F1976; font-size: 15px;">let — values that change</span>
+    </div>
+    <div style="background-color: #2B2745; border-radius: 8px; padding: 12px 16px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8;">
+      let score = 4;<br>let username = "GamerGirl";
+    </div>
+  </div>
+
+  <div>
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+      <span style="width: 12px; height: 12px; border-radius: 3px; background-color: #ACA8EA; display: inline-block;"></span>
+      <span style="font-weight: 700; color: #1F1976; font-size: 15px;">const — values that stay the same</span>
+    </div>
+    <div style="background-color: #2B2745; border-radius: 8px; padding: 12px 16px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8;">
+      const maxLives = 3;<br>const gameTitle = "Space Quest";
+    </div>
+  </div>
+
+</div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> a helpful test for students deciding between the two: if the value should ever update while the app runs, like a score or a search query, use let. If it should stay fixed for the life of the page, like a game's title, use const. When AI generates code, this choice is already made for them, but recognizing it helps them read and trust what AI produced.</p>
+</div>
+
+<p>Next, you'll practice reading AI-generated code the way a QA Engineer would: not just checking whether it runs, but whether it actually does what was asked.</p>
+MARKDOWN

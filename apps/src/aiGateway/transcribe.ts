@@ -53,6 +53,7 @@ async function transcribeThroughGateway(
         false,
         {
           'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+          'x-ai-gateway-phase': 'transcription',
           ...turnstileHeaders(turnstileToken),
         }
       );

@@ -1,7 +1,9 @@
 import {SketchLabNode} from '@cdo/apps/sketchlab/reactFlow/types';
 import {
+  countLogicalElements,
   expandGroupDeletion,
   getGroupChildren,
+  getSelectionMoveIds,
   groupSelectedNodes,
   isGroupedChildNode,
   ungroupNode,
@@ -11,6 +13,7 @@ interface TestEdge {
   id: string;
   source: string;
   target: string;
+  data?: {locked?: boolean};
 }
 
 function makeTextNode(
@@ -36,6 +39,145 @@ function makeLineAnchorNode(id: string, x: number, y: number): SketchLabNode {
     data: {},
   } as SketchLabNode;
 }
+
+describe('countLogicalElements', () => {
+  it('counts each non-anchor node as one element', () => {
+    expect(
+      countLogicalElements([makeTextNode('t1', 0, 0), makeTextNode('t2', 0, 0)])
+    ).toBe(2);
+  });
+
+  it('counts a pair of anchors as one line', () => {
+    expect(
+      countLogicalElements([
+        makeLineAnchorNode('a1', 0, 0),
+        makeLineAnchorNode('a2', 0, 0),
+      ])
+    ).toBe(1);
+  });
+
+  it('counts lines and nodes together', () => {
+    expect(
+      countLogicalElements([
+        makeLineAnchorNode('a1', 0, 0),
+        makeLineAnchorNode('a2', 0, 0),
+        makeLineAnchorNode('b1', 0, 0),
+        makeLineAnchorNode('b2', 0, 0),
+        makeTextNode('t1', 0, 0),
+      ])
+    ).toBe(3);
+  });
+
+  it('ignores a half line', () => {
+    expect(
+      countLogicalElements([
+        makeTextNode('t1', 0, 0),
+        makeLineAnchorNode('a1', 0, 0),
+      ])
+    ).toBe(1);
+  });
+
+  it('counts an empty list as zero', () => {
+    expect(countLogicalElements([])).toBe(0);
+  });
+});
+
+describe('getSelectionMoveIds', () => {
+  it('returns every selected id when two nodes are selected', () => {
+    const nodes = [
+      makeTextNode('a', 0, 0),
+      makeTextNode('b', 0, 0),
+      makeTextNode('c', 0, 0),
+    ];
+    expect(getSelectionMoveIds(new Set(['a', 'b']), nodes, [])).toEqual([
+      'a',
+      'b',
+    ]);
+  });
+
+  it('returns nothing for a single selected node', () => {
+    const nodes = [makeTextNode('a', 0, 0), makeTextNode('b', 0, 0)];
+    expect(getSelectionMoveIds(new Set(['a']), nodes, [])).toEqual([]);
+  });
+
+  it('returns nothing for a lone selected line', () => {
+    const nodes = [
+      makeLineAnchorNode('a1', 0, 0),
+      makeLineAnchorNode('a2', 0, 0),
+    ];
+    const edges: TestEdge[] = [{id: 'line', source: 'a1', target: 'a2'}];
+    expect(getSelectionMoveIds(new Set(['a1', 'a2']), nodes, edges)).toEqual(
+      []
+    );
+  });
+
+  it('moves a line together with another node', () => {
+    const nodes = [
+      makeTextNode('text', 0, 0),
+      makeLineAnchorNode('a1', 0, 0),
+      makeLineAnchorNode('a2', 0, 0),
+    ];
+    const edges: TestEdge[] = [{id: 'line', source: 'a1', target: 'a2'}];
+    expect(
+      getSelectionMoveIds(new Set(['text', 'a1', 'a2']), nodes, edges)
+    ).toEqual(['text', 'a1', 'a2']);
+  });
+
+  it('drops a node locked after it was selected', () => {
+    const nodes = [
+      makeTextNode('a', 0, 0),
+      makeTextNode('locked', 0, 0, {data: {text: '', locked: true}}),
+      makeTextNode('c', 0, 0),
+    ];
+    expect(
+      getSelectionMoveIds(new Set(['a', 'locked', 'c']), nodes, [])
+    ).toEqual(['a', 'c']);
+  });
+
+  it('drops both anchors of a line locked after it was selected', () => {
+    const nodes = [
+      makeTextNode('a', 0, 0),
+      makeTextNode('b', 0, 0),
+      makeLineAnchorNode('a1', 0, 0),
+      makeLineAnchorNode('a2', 0, 0),
+    ];
+    const edges: TestEdge[] = [
+      {id: 'line', source: 'a1', target: 'a2', data: {locked: true}},
+    ];
+    expect(
+      getSelectionMoveIds(new Set(['a', 'b', 'a1', 'a2']), nodes, edges)
+    ).toEqual(['a', 'b']);
+  });
+
+  it('keeps a real-node endpoint of a locked line movable', () => {
+    const nodes = [
+      makeTextNode('a', 0, 0),
+      makeTextNode('b', 0, 0),
+      makeLineAnchorNode('a1', 0, 0),
+    ];
+    const edges: TestEdge[] = [
+      {id: 'line', source: 'a1', target: 'b', data: {locked: true}},
+    ];
+    expect(
+      getSelectionMoveIds(new Set(['a', 'b', 'a1']), nodes, edges)
+    ).toEqual(['a', 'b']);
+  });
+
+  it('drops grouped children', () => {
+    const nodes = [
+      makeTextNode('a', 0, 0),
+      makeTextNode('child', 0, 0, {parentId: 'group1'}),
+    ];
+    expect(getSelectionMoveIds(new Set(['a', 'child']), nodes, [])).toEqual([]);
+  });
+
+  it('ignores selected ids with no matching node', () => {
+    const nodes = [makeTextNode('a', 0, 0), makeTextNode('b', 0, 0)];
+    expect(getSelectionMoveIds(new Set(['a', 'b', 'gone']), nodes, [])).toEqual(
+      ['a', 'b']
+    );
+  });
+});
 
 describe('groupSelectedNodes', () => {
   it('does not create a group from a single standalone line (two lineAnchor nodes)', () => {

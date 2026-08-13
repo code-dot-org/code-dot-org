@@ -469,7 +469,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jscodeshift": "^0.15.2",
     "jsdom": "catalog:",
-    "postcss": "^8.5.10",
+    "postcss": "^8.5.23",
     "postcss-modules": "^6.0.1",
     "react": "catalog:",
     "react-dom": "catalog:",
@@ -485,7 +485,7 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vite-plugin-lib-inject-css": "catalog:",
     "vitest": "catalog:"
   },
   "peerDependencies": {

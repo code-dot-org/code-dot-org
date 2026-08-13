@@ -314,9 +314,9 @@ test.describe('Child Account Policy Lockout Phase', () => {
       });
       await page.goto('/users/edit');
 
-      const EXPECTED_VIOLATIONS: Record<string, number> = {
-        'color-contrast': 1, // serious: low-contrast text within the account form
-      };
+      // Clean. The form used to ship one serious color-contrast node; the new
+      // brand palette recolored it and it now passes.
+      const EXPECTED_VIOLATIONS: Record<string, number> = {};
       expect(
         await analyze(page, {
           include: '#account-information',

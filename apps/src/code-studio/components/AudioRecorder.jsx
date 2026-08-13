@@ -7,8 +7,13 @@ import React from 'react';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import i18n from '@cdo/locale';
 
-import {AudioErrorType} from './AssetManager';
 import getRecorder, {RecordingFileType} from './recorders';
+
+export const AudioErrorType = {
+  NONE: 'none',
+  INITIALIZE: 'initialize',
+  SAVE: 'save',
+};
 
 const RECORD_MAX_TIME = 30000;
 

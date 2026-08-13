@@ -3,6 +3,7 @@ module PardotHelpers
   SUCCESS_HTTP_CODES = %w(200 201 204).freeze
   STATUS_OK = 'ok'.freeze
   ERROR_INVALID_EMAIL = 'Invalid prospect email address'
+  ERROR_INVALID_PROSPECT_ID = 'Invalid prospect ID'
   ERROR_INVALID_API_KEY = 'Invalid API key or user key'
   ERROR_PROSPECT_DELETED_FROM_PARDOT = 'Prospect deleted from Pardot'
 
