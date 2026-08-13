@@ -58,7 +58,6 @@
         <block type="spritelab2_makePlatformPlayer">
           <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
         </block>
-        <block type="spritelab2_setPlatformGravity"/>
       </xml>
     </toolbox_blocks>
   </blocks>
