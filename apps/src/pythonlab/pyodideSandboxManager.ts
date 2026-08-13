@@ -10,6 +10,7 @@ import {
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {
+  setCodeEnvironmentError,
   setHasError,
   setLoadedCodeEnvironment,
 } from '@cdo/apps/lab2/redux/systemRedux';
@@ -99,6 +100,22 @@ const getSandboxOrigin = () => {
 // preview domain changes mid-session.
 let cachedSandboxOrigin: string | undefined;
 const sandboxOrigin = () => (cachedSandboxOrigin ??= getSandboxOrigin());
+
+// How long to wait for the sandbox iframe to report ready before telling the user
+// their network is blocking it. Deliberately generous: a slow-but-working sandbox
+// clears the message when it eventually reports in, so the only cost of waiting
+// longer is a later message, while waiting too little cries wolf.
+const SANDBOX_READY_TIMEOUT_MS = 20000;
+
+// The sandbox lives on a different domain from studio.code.org (see
+// getSandboxOrigin() above), so a network that allows studio.code.org can still
+// block it. When that happens nothing arrives from the iframe at all: no load
+// error we can read (it is cross-origin), just silence.
+const SANDBOX_UNREACHABLE_MESSAGE =
+  'Your browser is preventing us from setting up Python Lab. You may need to ' +
+  'adjust your firewall settings. See our IT requirements page ' +
+  '(https://code.org/educate/it) for which site(s) you need ' +
+  'to unblock. If you need assistance, please reach out to support@code.org.';
 
 const handlePyodideMessage = (data: PyodideMessage) => {
   const {type, id, message} = data;
@@ -218,6 +235,15 @@ const handlePyodideMessage = (data: PyodideMessage) => {
 const setUpPyodideSandbox = () => {
   callbacks = {};
 
+  const unreachableTimeout = setTimeout(() => {
+    getStore().dispatch(setCodeEnvironmentError(SANDBOX_UNREACHABLE_MESSAGE));
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logWarning(
+        `Pyodide sandbox at ${sandboxOrigin()} did not report ready within ${SANDBOX_READY_TIMEOUT_MS}ms`
+      );
+  }, SANDBOX_READY_TIMEOUT_MS);
+
   const readyPromise = new Promise<void>(resolve => {
     window.addEventListener('message', event => {
       // The sandbox iframe is the only origin we should ever trust messages from.
@@ -226,6 +252,10 @@ const setUpPyodideSandbox = () => {
       }
       switch (event.data?.type) {
         case FromPyodideSandboxMessage.READY:
+          clearTimeout(unreachableTimeout);
+          // Retract the "we can't reach the sandbox" message if we already gave
+          // up on a sandbox that turned out to be merely slow.
+          getStore().dispatch(setCodeEnvironmentError(null));
           resolve();
           break;
         case FromPyodideSandboxMessage.SERVICE_WORKER_UNAVAILABLE:

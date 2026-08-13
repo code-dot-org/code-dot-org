@@ -46,9 +46,12 @@ export default class ConsoleManager {
     return this.terminalLines;
   }
 
-  public writeConsoleMessage(message: string) {
+  // Writing focuses the terminal so the user can type into a program that is
+  // asking for input. Pass focusTerminal false for messages the user did not
+  // ask for, which would otherwise pull focus out of whatever they are doing.
+  public writeConsoleMessage(message: string, focusTerminal = true) {
     const lines = message.split('\n');
-    lines.forEach(l => this.appendTerminalLine(l));
+    lines.forEach(l => this.appendTerminalLine(l, focusTerminal));
   }
 
   public writePartialLine(message: string) {
@@ -96,12 +99,14 @@ export default class ConsoleManager {
     );
   }
 
-  private appendTerminalLine(line: string) {
+  private appendTerminalLine(line: string, focusTerminal = true) {
     this.updateTerminalLines(line);
     this.lastLineIsPartial = false;
     this.terminal.writeln(line);
     this.terminal.scrollToBottom();
-    this.terminal.focus();
+    if (focusTerminal) {
+      this.terminal.focus();
+    }
   }
 
   private updateTerminalLines(message: string) {

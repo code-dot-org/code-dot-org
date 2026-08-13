@@ -22,6 +22,7 @@ import '@xterm/xterm/css/xterm.css';
 import ConsoleManager from './ConsoleManager';
 import {darkTheme, lightTheme} from './consoleThemes';
 import ControlButtons from './ControlButtons';
+import {getSystemError} from './MessageHelpers';
 
 import moduleStyles from './console.module.scss';
 
@@ -41,6 +42,9 @@ const Console: React.FunctionComponent = () => {
   const fontSizeKey = useAppSelector(
     state => state.lab2View.consoleFontSizeKey
   );
+  const codeEnvironmentError = useAppSelector(
+    state => state.lab2System.codeEnvironmentError
+  );
   const {signInState} = useAppSelector(state => state.currentUser);
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -51,6 +55,34 @@ const Console: React.FunctionComponent = () => {
       sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE);
     }
   }, []);
+
+  // The console shows environment errors -- a lab that cannot be set up at all --
+  // rather than the code that detects them, because the error outlives any one
+  // console: it is still true after the console is cleared on a level change or
+  // re-created on a layout change.
+  const writeCodeEnvironmentError = useCallback(
+    (manager: ConsoleManager | null) => {
+      if (!codeEnvironmentError || !manager) {
+        return;
+      }
+      // A re-created console replays the previous console's lines, which may
+      // already include this message.
+      const alreadyShown = manager
+        .getTerminalLines()
+        .some(line => line.includes(codeEnvironmentError));
+      if (!alreadyShown) {
+        manager.writeConsoleMessage(
+          getSystemError(codeEnvironmentError, appName),
+          /* focusTerminal */ false
+        );
+      }
+    },
+    [codeEnvironmentError, appName]
+  );
+
+  useEffect(() => {
+    writeCodeEnvironmentError(consoleManager);
+  }, [writeCodeEnvironmentError, consoleManager]);
 
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
@@ -63,6 +95,9 @@ const Console: React.FunctionComponent = () => {
   });
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     clearOutput(false);
+    writeCodeEnvironmentError(
+      CodebridgeRegistry.getInstance().getConsoleManager()
+    );
   });
 
   // Handler for terminal input. This manages storing input into a buffer
