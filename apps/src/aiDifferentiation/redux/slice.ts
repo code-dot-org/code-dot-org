@@ -7,7 +7,7 @@ import {
   ThreadTypeFields,
   THREAD_TYPES,
 } from '../constants';
-import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../predefinedPrompts';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../../aiTeacherDrawer/predefinedPrompts';
 import {AiArtifact, ChatItem, ChatPrompt, ChatTextMessage} from '../types';
 
 import {AiDiffChatState} from './state';

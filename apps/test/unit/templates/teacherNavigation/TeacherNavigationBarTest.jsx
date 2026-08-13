@@ -46,27 +46,12 @@ const LocationElement = () => {
   return <div>{location.pathname} path</div>;
 };
 
-// Needed to mock out the PDFDownloadLink component in the AiDiffContainer
 jest.mock('@react-pdf/renderer', () => ({
   PDFDownloadLink: () => null,
   StyleSheet: {
     create: () => null,
   },
 }));
-
-jest.mock('@cdo/apps/aiDifferentiation/AiDiffContainer', () => {
-  const React = require('react');
-  const {useSelector} = require('react-redux');
-  const MockContainer = () => {
-    const chatIsOpen = useSelector(state => state.aiDiffChat.chatIsOpen);
-    return (
-      <div style={chatIsOpen ? undefined : {display: 'none'}}>
-        <span>AI Teaching Assistant</span>
-      </div>
-    );
-  };
-  return {__esModule: true, default: MockContainer};
-});
 
 jest.mock('@cdo/apps/aiTeacherDrawer/AiDiffDrawer', () => {
   const React = require('react');

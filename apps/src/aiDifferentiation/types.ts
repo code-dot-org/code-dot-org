@@ -7,7 +7,7 @@ import {
 
 import {ResponseValidator} from '../util/HttpClient';
 
-import {EXIT_TICKET_PROMPT, LESSON_HOOK_PROMPT} from './predefinedPrompts';
+
 
 export type LessonHook = {
   comment: string;
@@ -132,9 +132,9 @@ function messageValidatorHelper(
   const serverMsg = response as ServerChatMessage;
   let inferredArtifactType = undefined;
   if (serverMsg.role === Role.USER && serverMsg.is_preset) {
-    if (serverMsg.preset_chip_text === EXIT_TICKET_PROMPT.label) {
+    if (serverMsg.preset_chip_text === 'Write an exit ticket') {
       inferredArtifactType = AiDiffArtifactType.EXIT_TICKET;
-    } else if (serverMsg.preset_chip_text === LESSON_HOOK_PROMPT.label) {
+    } else if (serverMsg.preset_chip_text === 'Write a lesson hook') {
       inferredArtifactType = AiDiffArtifactType.LESSON_HOOK;
     }
   }

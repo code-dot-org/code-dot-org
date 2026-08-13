@@ -32,7 +32,7 @@ import {
   SUGGEST_CURRICULUM_PROMPT,
   GET_STARTED_PROMPT,
   CREATE_SECTION_PROMPT,
-} from '../../predefinedPrompts';
+} from '../../../aiTeacherDrawer/predefinedPrompts';
 import {
   ChatPrompt,
   ChatTextMessage,
