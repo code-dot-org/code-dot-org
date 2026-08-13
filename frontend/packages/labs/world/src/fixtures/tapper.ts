@@ -170,6 +170,9 @@ const SPIN_BEHAVIOR = JSON.stringify({
         fields: {NAME: 'Spin'},
         next: {
           block: stack([
+            // A declaration and a default, not code — so it sits wherever it
+            // reads best, which is the top, and is lifted onto the behavior
+            // rather than run (specs/BEHAVIORS.md).
             {
               type: 'world_rule_property',
               fields: {
@@ -180,42 +183,34 @@ const SPIN_BEHAVIOR = JSON.stringify({
               },
             },
             {
-              type: 'world_trait_step',
-              fields: {PHASE: 'decide', NAME: 'turn'},
+              type: 'world_set_Space_RotationProperty',
               inputs: {
-                DO: {
+                ACTOR: me(),
+                // Degrees per SECOND, so the spin is the same however long a
+                // frame took — `delta` is what makes it so.
+                VALUE: {
                   block: {
-                    type: 'world_set_Space_RotationProperty',
+                    type: 'math_arithmetic',
+                    fields: {OP: 'ADD'},
                     inputs: {
-                      ACTOR: me(),
-                      // Degrees per SECOND, so the spin is the same however
-                      // long a frame took — `delta` is what makes it so.
-                      VALUE: {
+                      A: {
+                        block: {
+                          type: 'world_get_Space_RotationProperty',
+                          inputs: {ACTOR: me()},
+                        },
+                      },
+                      B: {
                         block: {
                           type: 'math_arithmetic',
-                          fields: {OP: 'ADD'},
+                          fields: {OP: 'MULTIPLY'},
                           inputs: {
                             A: {
                               block: {
-                                type: 'world_get_Space_RotationProperty',
+                                type: 'world_get_Spin_SpinSpeedProperty',
                                 inputs: {ACTOR: me()},
                               },
                             },
-                            B: {
-                              block: {
-                                type: 'math_arithmetic',
-                                fields: {OP: 'MULTIPLY'},
-                                inputs: {
-                                  A: {
-                                    block: {
-                                      type: 'world_get_Spin_SpinSpeedProperty',
-                                      inputs: {ACTOR: me()},
-                                    },
-                                  },
-                                  B: {block: {type: 'world_step_delta'}},
-                                },
-                              },
-                            },
+                            B: {block: {type: 'world_step_delta'}},
                           },
                         },
                       },

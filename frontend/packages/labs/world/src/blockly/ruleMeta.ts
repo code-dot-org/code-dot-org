@@ -813,7 +813,9 @@ export function parseRuleMeta(
   };
 
   // The rule's own chain: `use rule` dependencies and its world-scoped members.
-  // Traits are separate roots, handled below.
+  // Traits are separate roots, handled below. A BEHAVIOR's chain is its BODY:
+  // the rows it runs every frame, with its declarations mixed in — so only the
+  // declarative ones are read here and the rest belong to its trait.
   for (
     let block: RuleBlock | undefined = root.next?.block;
     block;
@@ -825,9 +827,9 @@ export function parseRuleMeta(
         requires.push(dep);
       }
     } else if (isBehavior) {
-      // Everything else in a behavior's chain belongs to its TRAIT, and the
-      // trait walk below takes it. Declaring it here as well would give the
-      // behavior a world-scoped copy of every member it has.
+      // The rest of a behavior's body is its TRAIT's — its state, and the code
+      // that reads it — and the walk below takes it. Declaring it here as well
+      // would give the behavior a world-scoped copy of everything it has.
       continue;
     } else if (block.type === 'world_rule_property') {
       addProperty(block);
@@ -877,6 +879,49 @@ export function parseRuleMeta(
 
   // Each trait root, and the chain of members below it.
   for (const traitBlock of traitRoots) {
+    // A BEHAVIOR IS ITS STEP (specs/BEHAVIORS.md). Its rows are the body it
+    // runs every frame, and what it needs to REMEMBER is declared in the same
+    // stack — a `define property` is a declaration and a default, not code, so
+    // it sits wherever it reads best and is lifted out here. Everything else in
+    // the body is the implementation, and the whole chain is the step's body.
+    if (traitBlock.type === 'world_behavior') {
+      const traitId = slug(field(traitBlock, 'NAME') || 'Behavior');
+      const traitRequires: string[] = [];
+      for (
+        let member: RuleBlock | undefined = traitBlock.next?.block;
+        member;
+        member = member.next?.block
+      ) {
+        if (member.type === 'world_rule_property') {
+          addProperty(member, traitId, 'actor');
+        } else if (member.type === 'world_use_trait') {
+          const dep = field(member, 'TRAIT');
+          if (dep) {
+            traitRequires.push(dep);
+          }
+        }
+      }
+      // The one step, named for the behavior, in the one phase a behavior has:
+      // `decide` is where something works out what it is about to do, which is
+      // what a behavior is. A body that wants another moment of the frame is a
+      // body that wants to be a rule.
+      steps.push({
+        id: traitId,
+        name: field(traitBlock, 'NAME') || 'Behavior',
+        ownerRef: selfRef,
+        scope: 'actor',
+        ownerTraitId: traitId,
+        order: {kind: 'phase', phase: 'decide'},
+      });
+      traits.push({
+        id: traitId,
+        name: field(traitBlock, 'NAME') || 'Behavior',
+        ref: ref(`${pascal(field(traitBlock, 'NAME') || 'Behavior')}Trait`),
+        requires: traitRequires,
+        subject: 'actor',
+      });
+      continue;
+    }
     const name = field(traitBlock, 'NAME');
     if (!name) {
       continue;
@@ -1061,13 +1106,22 @@ export function extractRuleBodies(
       }
     } else if (root.type === 'world_rule') {
       visit(root.getNextBlock(), 'world', undefined);
-    } else if (
-      root.type === 'world_rule_trait' ||
-      // A behavior's members are its one trait's, so its body is extracted the
-      // way a trait's is — and NOT the way a rule's own chain is, or every
-      // member would be keyed twice (specs/BEHAVIORS.md).
-      root.type === 'world_behavior'
-    ) {
+    } else if (root.type === 'world_behavior') {
+      // A behavior IS its step, so what it runs is its own `DO` body — the same
+      // mouth a trait's step has, which is why this is the same call
+      // (specs/BEHAVIORS.md). The declarations mixed into that body generate
+      // nothing, so they simply are not in what comes back.
+      const id = slug(root.getFieldValue('NAME') ?? '');
+      if (id) {
+        bodies.set(ruleBodyKey('step', 'actor', id, id), {
+          params: [],
+          // The chain below, exactly as a step root's body is: a behavior is a
+          // hat, and what follows it is what runs. The declarations mixed into
+          // that chain generate nothing, so they are not in what comes back.
+          body: gen.chainBody(root),
+        });
+      }
+    } else if (root.type === 'world_rule_trait') {
       // A trait's members belong to whatever elects it — an actor, or a camera
       // (`TraitMeta.subject`). That decides what their bodies call the subject,
       // so it has to be known here as well as at parse time.
