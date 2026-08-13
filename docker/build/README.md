@@ -180,8 +180,8 @@ the gem layer, on both docker and podman. A separate workflow would build the
 same image twice per PR to assert the same contract.
 
 The consequence of not being published is that there is no publish leg to
-gate. The arch legs ride along instead: the deps workflow builds this image
-natively on amd64 and arm64 runners (see
+gate. The architecture coverage comes from the deps workflow instead: it
+builds this image natively on amd64 and arm64 runners (see
 [docker/deps/README.md](../deps/README.md)), so both architectures of
 cdo-build are proven in CI even though only its output ships.
 

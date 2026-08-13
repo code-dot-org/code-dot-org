@@ -157,8 +157,8 @@ Published as `ghcr.io/code-dot-org/cdo-deps`.
 
 Each tag is a multi-platform manifest over amd64 and arm64: the lockfile
 names both `x86_64-linux` and `aarch64-linux`, each architecture builds
-natively in CI, and the per-arch pushes (`<tag>-amd64`, `<tag>-arm64`) are
-stitched under the final name — the cdo-base pattern. Pin by digest: resolve
+natively in CI, and a merge job puts the per-arch pushes (`git-<sha>-amd64`,
+`git-<sha>-arm64`) under the final name — the cdo-base pattern. Pin by digest: resolve
 the `bundle-<hash>` tag to a digest once and give the same digest to every
 build in a pipeline, so a builder stage and a final stage cannot land on
 different bytes. (The manifest-list digest is the pin; each platform
@@ -192,10 +192,10 @@ flags. `COPY --chown` cannot read environment inherited from a parent image —
 it expands only same-stage ARGs — which is why the uid/gid 1000 pair is
 written literally.
 
-**Cross-building under qemu is unreliable.** Emulated `bundle install` fails
-in ways that move around — g++ segfaults compiling the large C++ extensions
-(libsass), dpkg maintainer-script failures — and whether it fails at all
-depends on which qemu build is registered in binfmt and on the engine driving
-it. This is why the workflow builds each architecture natively on its own
-runner. If you need a local arm64 image, prefer native hardware; treat any
-emulated build as best-effort.
+**Cross-building under qemu is unreliable.** An emulated `bundle install`
+fails in ways that do not repeat — g++ segfaults on the large C++ extensions
+(libsass), dpkg maintainer-script errors — and whether it fails at all
+depends on the qemu build registered in binfmt and on the engine driving it.
+That is why the workflow builds each architecture on its own native runner.
+For a local arm64 image, prefer native hardware, and treat an emulated build
+as best-effort.

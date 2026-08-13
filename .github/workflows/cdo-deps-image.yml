@@ -1,8 +1,9 @@
-# This builds cdo-deps, smoke-tests it on docker and podman on amd64 and
-# arm64, and publishes it from staging as a multi-platform manifest.
-# Per-arch native builds get stitched together, the same as the cdo-base
-# pattern. This also gates docker/build, since every job here builds
-# cdo-build anyway. cdo-build is unpublished, so there is nothing to pull.
+# Builds cdo-deps, smoke-tests it on docker and podman on amd64 and arm64,
+# and publishes it from staging as a multi-platform manifest. Each
+# architecture builds natively on its own runner; a merge job puts the two
+# images under the final tags, the same pattern as cdo-base. This also gates
+# docker/build, since every job here builds cdo-build anyway: it is
+# unpublished, so there is nothing to pull.
 # See docker/deps/README.md and docker/build/README.md.
 
 name: cdo-deps-image
@@ -150,10 +151,10 @@ jobs:
   # cdo-build exists only in this job's local image store, which is why nothing
   # sets up a container builder: it would try to pull the tag from a registry.
   #
-  # One job runs per architecture, natively, with no qemu. A cross-built
-  # bundle compiles its extensions at emulated speed and tests nothing
-  # real. Each pushes an arch-suffixed tag. stitch merges them into the
-  # consumer-facing ones.
+  # Each architecture builds on its own native runner. qemu is not an
+  # option here: an emulated bundle install is slow and fails erratically
+  # (see docker/deps/README.md). Each leg pushes one arch-suffixed tag for
+  # the merge job to combine.
   build-push:
     name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
@@ -166,9 +167,8 @@ jobs:
     runs-on: ${{ matrix.runs-on }}
     # Inert until its deployment-branch policy is set; see docker/deps/README.md.
     environment: ghcr-publish
-    # This groups per architecture. The two arch legs of one run must not
-    # share a group, or they would cancel each other. This is safe to
-    # cancel. Nothing resolves `latest` programmatically.
+    # Grouped per architecture so the two legs of one run cannot cancel
+    # each other. Safe to cancel: nothing resolves `latest` programmatically.
     concurrency:
       group: cdo-deps-publish-${{ matrix.arch }}
       cancel-in-progress: true
@@ -226,9 +226,9 @@ jobs:
       # Not build-push-action with push: true — that publishes in the step that
       # builds, before the smoke suites can fail the job.
       #
-      # The tag is keyed by commit and architecture. No consumer resolves
-      # it. The stitch job builds every consumer-facing tag from this
-      # immutable pair. A racing publish or a leftover tag from a failed
+      # The tag is keyed by commit and architecture, and no consumer
+      # resolves it. The merge job builds every consumer-facing tag from
+      # this immutable pair, so a racing publish or a tag left by a failed
       # run cannot leak in.
       - name: Push cdo-deps (per-arch tag)
         run: |
@@ -236,11 +236,11 @@ jobs:
           docker tag cdo-deps:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
           docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
-  # Until this runs, only the arch-suffixed tags exist. A half-published
-  # state is therefore visible as such, instead of resolving to one arch
-  # under the final name.
-  stitch:
-    name: stitch multi-platform manifest
+  # Until this runs, only the arch-suffixed tags exist, so an incomplete
+  # publish is visible as such instead of serving one architecture under
+  # the final name.
+  merge:
+    name: merge per-arch images into one manifest
     if: github.event_name != 'pull_request'
     needs: build-push
     runs-on: ubuntu-24.04
@@ -286,9 +286,9 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
-      # Both source tags are commit-keyed, so no moving tag ever appears in
-      # the input.
-      - name: Stitch every tag from the sha-keyed per-arch pair
+      # The source tags are commit-keyed, so no moving tag can enter the
+      # manifest.
+      - name: Merge the per-arch pair under every tag
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |
