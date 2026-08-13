@@ -45,6 +45,12 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_actor', new Set<FileKind>(['actor', 'world'])],
   ['world_world', new Set<FileKind>(['world'])],
   ['world_rule', new Set<FileKind>(['rule'])],
+  // `each frame` reads two ways: chained under a `define trait` it is one of
+  // that trait's members, and standing on its own in an `.actor` file it is
+  // work that kind of actor does. Both are real; a `.world` is not — a world's
+  // per-frame work belongs to a rule, and the block would generate nothing
+  // there and say nothing about why.
+  ['world_trait_step', new Set<FileKind>(['actor', 'rule'])],
 ]);
 
 /**

@@ -137,6 +137,7 @@ import {
 } from './moduleOptions';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
+import {slug} from './ruleMeta';
 import type {
   ActionMeta,
   EventMeta,
@@ -4997,9 +4998,38 @@ const worldTraitStep = defineBlock({
   extensions: [phaseOptionsExtension],
   style: 'event_blocks',
   tooltip:
-    'Run this every tick for each thing that has this trait, in a named part ' +
-    'of the frame. The thing itself is what the blocks inside act on.',
-  generator: noGenerator,
+    'Run this every tick for each thing that has this trait — or, on its own ' +
+    'in an actor file, for each actor of that kind. The thing itself is what ' +
+    'the blocks inside act on.',
+  generator: {
+    javascript(block, generator) {
+      // WHERE IT SITS DECIDES WHAT IT IS, which is the same bargain
+      // `world_rule_property` makes in its three homes.
+      //
+      // Chained under a `define trait`, this is a DECLARATION: the rule's
+      // module is assembled from its metadata and the body is pulled out by a
+      // pass of its own (ruleMeta), so generating anything here would be
+      // writing it twice.
+      //
+      // Standing on its own in an `.actor` file, there is no metadata pass and
+      // nothing else to write it — so it is the whole declaration, and this is
+      // it. `defineStep` is the behaviour half of `defineProperty`: work a KIND
+      // of actor does every frame without a rule to do it in (ActorBuilder).
+      if (block.getParent()) {
+        return '';
+      }
+      const name = block.getFieldValue('NAME') || 'do something';
+      const phase = block.getFieldValue('PHASE') || 'decide';
+      const body = generator.statementToCode(block, 'DO');
+      // The closure's `actor` SHADOWS the module's builder, deliberately: a
+      // body written in an actor file says `this actor` and means this one, and
+      // `this actor` compiles to `actor` wherever it is written.
+      return (
+        `actor.defineStep(${str(slug(name))}, ${str(phase)}, ` +
+        `(actor, world, delta) => {\n${body}});\n`
+      );
+    },
+  },
 });
 
 const worldRuleStepTick = stepBlock(
@@ -5543,6 +5573,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // a third site is what it was built for, and a separate near-identical
       // block would invite trying the familiar one here and finding it inert.
       'world_rule_property',
+      // …and the behaviour half of the same idea: work this KIND of actor does
+      // every frame. A rule is still the answer when the work is shared between
+      // kinds, elected, or answerable by `has trait`; this is for when it is
+      // none of those (ActorBuilder.defineStep).
+      'world_trait_step',
     ],
   },
   {

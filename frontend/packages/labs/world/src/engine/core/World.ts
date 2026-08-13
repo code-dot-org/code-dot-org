@@ -50,6 +50,20 @@ import {TILE_SIZE, VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from './viewport';
 export interface ActorTemplate {
   readonly id: string;
   instantiate(id?: string, type?: string): Actor;
+  /**
+   * Per-frame bodies this KIND of actor carries — see `ActorBuilder.defineStep`.
+   *
+   * Optional because the shape is structural: a stand-in template in a test has
+   * no opinion about steps, and neither did any template before this existed.
+   */
+  readonly ownSteps?: readonly ActorStep[];
+}
+
+/** One per-frame body an actor kind declares, before it is bound to a kind. */
+export interface ActorStep {
+  readonly id: string;
+  readonly phase: string;
+  readonly run: (actor: Actor, world: World, delta: number) => void;
 }
 
 /**
@@ -330,7 +344,16 @@ export class World {
   );
   private readonly store = new Map<Property, unknown>();
   private readonly actorList: Actor[] = [];
-  private readonly scheduler: Scheduler;
+  // Not readonly: an actor KIND can contribute per-frame steps of its own, and
+  // a kind is not known until one of its actors is placed (`useActorKind`).
+  private scheduler: Scheduler;
+  // Every step the world runs, rules' and actor kinds' alike, in the order they
+  // were contributed — kept so a kind arriving later can be folded in without
+  // asking the rules again.
+  private readonly stepList: Step[] = [];
+  // Which actor kinds have already contributed, by the TYPE they were placed
+  // under: a kind contributes once however many of it there are.
+  private readonly kindsWithSteps = new Set<string>();
   private readonly events = new EventQueue();
   /**
    * Handlers for the world's own events, by event.
@@ -466,12 +489,12 @@ export class World {
       camera.world = this;
     }
 
-    // The per-tick order is fixed by the active rules' steps.
-    const steps: Step[] = [];
+    // The per-tick order starts as the active rules' steps. An actor kind may
+    // add to it later, which is what makes the order a `let` (`useActorKind`).
     for (const rule of rules) {
-      steps.push(...Object.values(rule.steps));
+      this.stepList.push(...Object.values(rule.steps));
     }
-    this.scheduler = new Scheduler(steps);
+    this.scheduler = new Scheduler(this.stepList);
   }
 
   get<T>(property: Property<T>): T {
@@ -545,10 +568,15 @@ export class World {
       return this.place(subject as Actor, idOrLayer);
     }
     const template = subject as ActorTemplate;
-    return this.place(
-      template.instantiate(this.resolveInstanceId(template, idOrLayer), type),
-      layer,
+    const actor = template.instantiate(
+      this.resolveInstanceId(template, idOrLayer),
+      type,
     );
+    // The kind's own per-frame steps, if it declared any. After instantiate so
+    // the type is settled: `Actor.type` falls back to the instance id when the
+    // caller named none, and that is the type the step has to walk.
+    this.useActorKind(actor.type, template);
+    return this.place(actor, layer);
   }
 
   /**
@@ -576,6 +604,52 @@ export class World {
       ordinal += 1;
     }
     return `${base}#${ordinal}`;
+  }
+
+  /**
+   * Let an actor KIND contribute its own per-frame steps.
+   *
+   * The `each frame` an `.actor` file may declare (blockly/actorMeta), and the
+   * counterpart to `defineProperty`: state a kind carries without a rule, and
+   * now behaviour a kind runs without one. A rule is still what you write when
+   * the behaviour is shared, elected or answerable — this is for the case where
+   * it is none of those and a whole `.rule` file is more ceremony than the thing
+   * deserves.
+   *
+   * PER KIND, NOT PER ACTOR. One step is added however many of the kind there
+   * are, and it walks `actors.ofType(type)` — so thirty-one ground tiles are one
+   * entry in the order rather than thirty-one, and an actor placed later is
+   * swept up without anything being registered again.
+   *
+   * Called where the template and the TYPE it is being placed under are both in
+   * hand, which is `addActor` here and `loadMap` on the builder. The type is
+   * what binds them: it is what `any ⟨Coin⟩` means everywhere else, so a step
+   * declared by the coin runs for exactly the actors a learner would point at.
+   *
+   * The scheduler is rebuilt, not appended to — the order is a topological sort
+   * and a new step may belong anywhere in it. A rebuild during a tick is safe:
+   * `Scheduler.run` is iterating the array it started with, so a kind spawned
+   * mid-frame joins the order on the next one.
+   */
+  useActorKind(type: string, template: ActorTemplate): void {
+    const steps = template.ownSteps ?? [];
+    if (!steps.length || this.kindsWithSteps.has(type)) {
+      return;
+    }
+    this.kindsWithSteps.add(type);
+    for (const step of steps) {
+      this.stepList.push({
+        id: `${type}.${step.id}`,
+        ownerId: type,
+        order: {kind: 'phase', phase: step.phase},
+        run: (world, delta) => {
+          for (const actor of world.actors.ofType(type)) {
+            step.run(actor, world, delta);
+          }
+        },
+      });
+    }
+    this.scheduler = new Scheduler(this.stepList);
   }
 
   private place(actor: Actor, layer: string = DEFAULT_LAYER_ID): Actor {
