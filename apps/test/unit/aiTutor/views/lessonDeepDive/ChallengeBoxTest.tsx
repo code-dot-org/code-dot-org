@@ -197,7 +197,7 @@ describe('ChallengeBox', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Text'}));
 
     const textarea = document.getElementById(
-      'reflection-success'
+      'challenge-explanation'
     ) as HTMLTextAreaElement;
     expect(textarea).toBeInTheDocument();
 

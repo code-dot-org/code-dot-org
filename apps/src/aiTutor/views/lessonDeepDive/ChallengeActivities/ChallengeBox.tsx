@@ -192,9 +192,9 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
             )}
             {explanationType === ExplanationTypes.TEXT && (
               <textarea
-                id="reflection-success"
+                id="challenge-explanation"
                 className={styles.textArea}
-                placeholder="Optional"
+                placeholder="Write a paragraph explaining your work"
                 onChange={e => setTextExplanation(e.target.value)}
                 disabled={submitted}
               />
