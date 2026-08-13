@@ -52,6 +52,8 @@ import {
 } from '../levelData';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
+import {removeRule, type HeldRule} from '../rules/removeRule';
+import {RulesInPlayDialog} from '../rules/RulesInPlayDialog';
 import type {StockRule} from '../rules/stock';
 import {projectImageSizes} from '../runtime/imageSize';
 import {
@@ -89,6 +91,7 @@ import {
 import {setRuleImportHandler} from './ruleImport';
 import {parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
+import {setRulesConfigHandler} from './rulesConfig';
 import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
 import {withoutCategories} from './toolboxFilter';
@@ -334,6 +337,15 @@ export const BlocklyFileEditor = ({
   // dropdowns want different dialogs; `importing` says which is open, so only
   // one can be at a time — which is what a modal means anyway.
   const [importingRule, setImportingRule] = useState(false);
+  // The rules panel is a third state rather than a third importer: it is not
+  // choosing a value for anything, and it is what the stock picker returns TO
+  // when the picker was opened from it (`addFromRulesPanel`).
+  const [configuringRules, setConfiguringRules] = useState(false);
+  const resolveRulesConfig = useRef<(() => void) | null>(null);
+  // Whether this import was started from the panel, so closing the picker goes
+  // back there rather than back to the workspace. A learner adding two rules
+  // should not have to find the button again between them.
+  const cameFromRulesPanel = useRef(false);
 
   useEffect(() => {
     setEffectImportHandler(
@@ -350,11 +362,22 @@ export const BlocklyFileEditor = ({
           setImportingRule(true);
         }),
     );
+    // The rules panel, from the world block. It resolves with nothing — what it
+    // changes it changes in the project, and the block only wants to know when
+    // it closed so it can count again (blockly/rulesConfig).
+    setRulesConfigHandler(
+      () =>
+        new Promise<void>(resolve => {
+          resolveRulesConfig.current = resolve;
+          setConfiguringRules(true);
+        }),
+    );
     // Cleared on unmount so a field on a disposed workspace cannot open a
     // dialog this editor no longer owns.
     return () => {
       setEffectImportHandler(null);
       setRuleImportHandler(null);
+      setRulesConfigHandler(null);
     };
   }, []);
 
@@ -364,7 +387,43 @@ export const BlocklyFileEditor = ({
     setImportingAppearance(null);
     resolveImport.current?.(path);
     resolveImport.current = null;
+    // Back where it was opened from. A picker opened by the panel resolves the
+    // panel's own promise the moment it opens (there is no value coming back to
+    // a block), so this is only about what is on screen.
+    if (cameFromRulesPanel.current) {
+      cameFromRulesPanel.current = false;
+      setConfiguringRules(true);
+    }
   }, []);
+
+  /** Close the panel, and let the block that opened it count again. */
+  const finishRulesConfig = useCallback(() => {
+    setConfiguringRules(false);
+    resolveRulesConfig.current?.();
+    resolveRulesConfig.current = null;
+  }, []);
+
+  /**
+   * Delete a rule's file, which is how a world stops having that mechanic.
+   *
+   * The registries are refreshed in the same breath as the write, exactly as an
+   * import does: every dropdown in the workspace is built from them, and a
+   * `use trait` still offering a deleted rule's traits would be offering
+   * something nothing can provide.
+   */
+  const handleRuleRemove = useCallback(
+    (rule: HeldRule) => {
+      const sources = sourcesRef.current;
+      const source = removeRule(sources.source, rule);
+      updateSources({...sources, source});
+      refreshProjectDropdowns(
+        projectFiles(source),
+        projectImagePaths(source),
+        projectImageSizes(source),
+      );
+    },
+    [updateSources],
+  );
 
   const handleImport = useCallback(
     (effect: StockEffect) => {
@@ -994,6 +1053,22 @@ export const BlocklyFileEditor = ({
         <ImportRuleDialog
           onImport={handleRuleImport}
           onCancel={() => finishImport(undefined)}
+        />
+      )}
+      {configuringRules && (
+        <RulesInPlayDialog
+          source={currentSources.source}
+          editable={!isReadOnly}
+          onAdd={() => {
+            // Hand over to the picker and come back — one dialog on screen at a
+            // time. The panel's promise stays unresolved across the handover,
+            // so the block still counts once at the end of the whole errand.
+            cameFromRulesPanel.current = true;
+            setConfiguringRules(false);
+            setImportingRule(true);
+          }}
+          onRemove={handleRuleRemove}
+          onClose={finishRulesConfig}
         />
       )}
       {pickingSprite && (

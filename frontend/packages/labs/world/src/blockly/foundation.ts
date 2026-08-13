@@ -32,6 +32,19 @@ export const FOUNDATION_RULE_NAMES: readonly string[] = BUILTIN_RULE_META.map(
 );
 
 /**
+ * The same two, as the rules panel lists them: what they are, and what a world
+ * has by having them.
+ *
+ * The panel answers "which rules does this world run", and an answer that left
+ * these out would be wrong rather than merely short — every actor is positioned
+ * and drawn, and a learner looking for where that comes from should find it
+ * where they went looking. They are the rows with no Remove: there is no file
+ * to delete, and a world without them is not a world.
+ */
+export const BASE_RULES: ReadonlyArray<{name: string; ability: string}> =
+  BUILTIN_RULE_META.map(rule => ({name: rule.name, ability: rule.ability}));
+
+/**
  * The traits every actor has already, as `use trait` DROPDOWN VALUES.
  *
  * The foundation one level down: a world runs Space and Appearance, and an

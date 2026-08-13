@@ -1,0 +1,61 @@
+/* The rules panel's CONTENT. The dialog itself — surface, width, padding, the
+   button row — is the design system's `Dialog`, so this stays out of its way
+   and shapes only the list inside it. Deliberately close to
+   `importRuleDialog.module.css`: the two are seen one after the other, and a
+   list that changed shape between them would read as a different place. */
+
+.list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* One row per rule. Not a button — nothing is being chosen here — so the row
+   draws its own frame, using the design system's border token so it still
+   reads as a sibling of the picker's rows. */
+.rule {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid var(--brand-neutral-light, #ccc);
+  border-radius: 4px;
+}
+
+.what {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* The confirm state replaces the row's buttons rather than opening a second
+   dialog over the first: a modal on a modal is a place with no way back that
+   is obvious, and the question here is small enough to ask in the row it is
+   about. */
+.decide {
+  display: flex;
+  flex: none;
+  gap: 8px;
+  align-items: center;
+}
+
+.warning {
+  display: block;
+  margin-top: 4px;
+}
+
+/* Nothing held. The panel still opens — "which rules does this world run?" is
+   a question worth being able to ask and get "none" for — and the empty state
+   is where the answer goes. */
+.empty {
+  padding: 12px;
+  text-align: center;
+}

@@ -89,6 +89,7 @@ import {eventActorToolboxExtension} from './extensions/eventActorToolbox';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
 import {ruleImportFieldExtension} from './extensions/ruleImportField';
+import {rulesButtonExtension} from './extensions/rulesButton';
 import {sliderRangeMutator} from './extensions/sliderRange';
 import {spritePickExtension} from './extensions/spritePickField';
 import {worldContextExtension} from './extensions/worldContext';
@@ -3632,11 +3633,17 @@ const worldWorld = defineBlock({
   type: 'world_world',
   message0: 'define world named %1',
   args0: [{type: 'field_input', name: 'NAME', text: 'World'}],
-  // A definition root: no previous connection, a NEXT connection — the `use
-  // rule` / `use animations` body chains below it, not nested in a `do` input.
+  // A definition root: no previous connection, a NEXT connection — the body
+  // (`load map`, `create in map`, the cameras) chains below it rather than
+  // nesting in a `do` input.
   nextStatement: true,
+  // …and after the name, how many rules are in play and the way to see them.
+  // The world runs every rule the project holds, so the block would otherwise
+  // say nothing at all about the thing it is most made of.
+  extensions: [rulesButtonExtension],
   style: 'setup_blocks',
-  tooltip: 'Define a world: the rules in play, and the actors that live in it.',
+  tooltip:
+    'Define a world: the actors that live in it, and what it looks like.',
   generator: {
     javascript(block, generator) {
       const name = block.getFieldValue('NAME');
