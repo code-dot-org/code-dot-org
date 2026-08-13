@@ -1091,6 +1091,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :quiz, parent: :level, class: Quiz do
+    game {Game.quiz}
+    level_num {'custom'}
+  end
+
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
     sublevels do
@@ -2499,5 +2504,38 @@ FactoryBot.define do
     expires_at {1.day.from_now}
     read_at {nil}
     is_dismissed {false}
+  end
+
+  factory :quiz_question do
+    sequence(:question_key) {SecureRandom.uuid}
+    sequence(:question_name) {|n| "Question #{n}"}
+    question {{stem: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
+  end
+
+  factory :quiz_question_standard do
+    quiz_question
+    standard
+  end
+
+  factory :quiz_level_question do
+    level factory: :quiz
+    quiz_question
+    page {1}
+    sequence(:position)
+  end
+
+  factory :quiz_attempt do
+    user
+    level factory: :quiz
+    script
+    attempt_number {1}
+    started_at {Time.now}
+  end
+
+  factory :quiz_question_response do
+    quiz_attempt
+    quiz_question
+    response_data {{selected: ['4']}}
+    grading_status {QuizQuestionResponse::GRADING_STATUSES.first}
   end
 end
