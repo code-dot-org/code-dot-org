@@ -5,13 +5,12 @@
 # smoke-test.sh asserts the image's runtime contract. Runs on PRs touching
 # docker/base/ and pushes nothing.
 #
-# Publish (staging pushes touching docker/base/, weekly cron, manual
-# dispatch): each architecture builds natively, smoke-tests the exact bytes
-# it pushes as git-<sha>-<arch>, and a merge job puts the pair under the
-# final tags. The weekly cron picks up ruby-slim and apt security updates;
-# it produces different bytes for the same git sha, hence the date tag.
-# Publishes build without a registry cache on purpose: a cached apt layer
-# would serve last week's packages and silently defeat the cron.
+# Publish (staging push, weekly cron, manual dispatch): each architecture
+# builds natively, smoke-tests the bytes it pushes as git-<sha>-<arch>, and
+# a merge job puts the pair under the final tags. The cron picks up
+# ruby-slim and apt security updates — new bytes for the same sha, hence
+# the date tag. No registry cache: a cached apt layer would keep last
+# week's packages and defeat the cron.
 
 name: cdo-base-image
 
@@ -37,9 +36,8 @@ env:
   IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-base
 
 jobs:
-  # PRs only. Publish runs are gated by build-push itself, which runs the
-  # same suite against the bytes it pushes; running this matrix there too
-  # tested a separate build of the same input twice.
+  # PRs only: build-push gates publishes with the same suite on the bytes
+  # it pushes.
   smoke-test:
     name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
     if: github.event_name == 'pull_request'
@@ -103,23 +101,19 @@ jobs:
       - name: Build cdo-base
         run: docker build -t cdo-base:publish docker/base/
 
-      # The quality gate for the bytes this job pushes.
       - name: Smoke test
         run: ./docker/base/smoke-test.sh cdo-base:publish docker
 
-      # The tag is keyed by commit and architecture, and no consumer
-      # resolves it. The merge job builds every consumer-facing tag from
-      # this immutable pair, so a racing publish or a tag left by a failed
-      # run cannot leak in.
+      # No consumer resolves this tag. The merge job builds the final tags
+      # from the immutable pair, so a racing or failed run cannot leak in.
       - name: Push cdo-base (per-arch tag)
         run: |
           set -euxo pipefail
           docker tag cdo-base:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
           docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
 
-  # Until this runs, only the arch-suffixed tags exist, so an incomplete
-  # publish is visible as such instead of serving one architecture under
-  # the final name.
+  # Until this runs, only arch-suffixed tags exist: a partial publish is
+  # visible, never a final name that serves one architecture.
   # See: https://docs.docker.com/build/ci/github-actions/multi-platform/#distribute-build-across-multiple-runners
   merge:
     name: merge per-arch images into one manifest
