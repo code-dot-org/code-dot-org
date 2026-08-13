@@ -1,4 +1,6 @@
 require 'cdo/activity_constants'
+require 'cdo/throttle'
+require 'cdo/user_log_token'
 require 'csv'
 require 'tempfile'
 
@@ -8,6 +10,14 @@ class AdminUsersController < ApplicationController
   before_action :require_admin
 
   DEFAULT_MANAGE_PAGE_SIZE = 25
+  # users.id is a signed int, not a bigint. Bounding input on this keeps an
+  # oversized id from reaching the query layer as an ActiveModel::RangeError.
+  MAX_USER_ID = 2_147_483_647
+  # Reversing a log token re-identifies a user, so it is rate limited per admin.
+  # Tunable without a deploy; reversal should be rare enough that this never
+  # bites in legitimate use.
+  LOG_TOKEN_RESOLVE_PREFIX = 'user_log_token_resolve/'.freeze
+  DEFAULT_LOG_TOKEN_RESOLVE_LIMIT_PER_HOUR = 20
   # restrict the PII returned by the controller to the view by selecting only these columns from the model
   RESTRICTED_USER_ATTRIBUTES_FOR_VIEW = %w(
     users.id
@@ -398,6 +408,71 @@ class AdminUsersController < ApplicationController
     end
   end
 
+  # GET /admin/log_token
+  # Forward lookup: a user id in, that user's log token for every destination
+  # out. Unrestricted, because it reveals nothing the operator did not already
+  # have -- they typed the user id in.
+  #
+  # Deliberately checks only whether the user exists rather than loading the
+  # record, so this page discloses nothing beyond its input.
+  def log_token_form
+    @destinations = Cdo::UserLogToken::DESTINATIONS
+    @input = params[:user_id].to_s.strip
+    return if @input.blank?
+
+    unless @input.match?(/\A\d+\z/) && @input.to_i.between?(1, MAX_USER_ID)
+      @invalid_input = true
+      return
+    end
+
+    user_id = @input.to_i
+    @user_exists = User.exists?(id: user_id)
+    @tokens = @destinations.index_with do |destination|
+      Cdo::UserLogToken.derive(user_id, destination: destination)
+    end
+    log_admin_action('log_token_lookup', user_id)
+  end
+
+  # POST /admin/log_token/resolve
+  # Reverse lookup: a log token in, the user it identifies out. This is the
+  # governed direction.
+  #
+  # POST rather than GET so the *token* does not land in a URL, and therefore in
+  # the very request logs this feature exists to keep identifiers out of. Note
+  # this is partial: the forward lookup is a GET carrying a user id, and the
+  # result below links to the permissions page with the resolved id in the query
+  # string, so both still write raw ids to the access log.
+  #
+  # The audit record is written by Cdo::UserLogToken.resolve itself rather than
+  # here, so it cannot be sidestepped by calling the primitive from a console.
+  # That is also why actor and reason are passed through rather than logged
+  # locally.
+  def resolve_log_token
+    @destinations = Cdo::UserLogToken::DESTINATIONS
+    token = params[:token].to_s.strip
+    reason = params[:reason].to_s.strip
+
+    if token.blank? || reason.blank?
+      flash.now[:alert] = 'A token and a reason are both required.'
+      return render :log_token_form
+    end
+
+    if throttle_log_token_resolve?
+      flash.now[:alert] = 'Too many lookups in the last hour. Try again later.'
+      return render :log_token_form, status: :too_many_requests
+    end
+
+    @resolved = Cdo::UserLogToken.resolve(
+      token,
+      actor_id: current_user.id,
+      reason: reason,
+      request_id: request.request_id,
+    )
+    @resolve_attempted = true
+    flash.now[:alert] = 'That token could not be read.' if @resolved.nil?
+    render :log_token_form
+  end
+
   # GET /admin/mass_delete_student_progress
   def mass_delete_student_progress
   end
@@ -571,6 +646,11 @@ class AdminUsersController < ApplicationController
       @target_user = User.from_identifier(user_identifier)
       flash[:alert] = 'User not found' unless @target_user
     end
+  end
+
+  private def throttle_log_token_resolve?
+    limit = DCDO.get('user_log_token_resolve_limit_per_hour', DEFAULT_LOG_TOKEN_RESOLVE_LIMIT_PER_HOUR)
+    Cdo::Throttle.throttle(LOG_TOKEN_RESOLVE_PREFIX + current_user.id.to_s, limit, 1.hour.to_i)
   end
 
   private def log_admin_action(event, affected_user_id = nil, attributes = {})
