@@ -47,16 +47,53 @@ describe('rules/mouse.rule', () => {
     // The subscription, and the reason it exists: only the actors that elected
     // it are walked. Without it the step would raise a click on every actor in
     // the level every frame just to have somebody to raise it for.
-    expect(meta.traits.map(trait => trait.name)).toEqual(['Takes Mouse Input']);
-    const own = meta.events.filter(event => event.scope === 'actor');
+    expect(meta.traits.map(trait => trait.name)).toEqual([
+      'Takes Mouse Input',
+      'Can Be Clicked',
+    ]);
+    const own = meta.events.filter(
+      event => event.ownerTraitId === 'Takes_Mouse_Input',
+    );
     expect(own.map(event => event.name)).toEqual([
       'presses mouse button',
       'releases mouse button',
     ]);
-    expect(own.map(event => event.ownerTraitId)).toEqual([
-      'Takes_Mouse_Input',
-      'Takes_Mouse_Input',
+    expect(own.map(event => event.scope)).toEqual(['actor', 'actor']);
+  });
+
+  it('offers a second trait for an actor that wants only its own clicks', () => {
+    // Two traits because they are two questions. `Takes Mouse Input` hears
+    // every press in the level — a scoreboard counting them, a gun firing
+    // wherever it is aimed. `Can Be Clicked` hears the presses that landed on
+    // this actor, which is what a button, a card, or a coin is asking.
+    const clicked = meta.events.filter(
+      event => event.ownerTraitId === 'Can_Be_Clicked',
+    );
+    expect(clicked.map(event => event.name)).toEqual(['is clicked with']);
+    expect(clicked[0].scope).toBe('actor');
+    // Signed with the button, as the other three are: `is clicked with ⟨right⟩`
+    // is one hat, not a test written inside a handler for all of them.
+    expect(clicked[0].parts).toEqual([
+      {kind: 'label', text: 'is clicked with'},
+      {kind: 'param', name: 'pressed button', type: 'enum:Engine#MouseButton'},
     ]);
+  });
+
+  it('decides what was clicked from where the actor is and how big it is', () => {
+    // The hit test is a BOX — the pointer within half the drawn size of the
+    // middle, on both axes — which is the extent `collisions`, `bounds` and
+    // `wrap` all use. What this pins is that it reads the drawn size rather
+    // than the intrinsic one: an actor at scale 3 is clickable where it is
+    // seen, not where its unscaled picture would have been.
+    expect(mouseRule).toContain('world_mouse_position');
+    expect(mouseRule).toContain('world_get_Space_IntrinsicSizeProperty');
+    expect(mouseRule).toContain('world_get_Space_ScaleProperty');
+    // And that it is a press, not a release: a button let go somewhere else is
+    // not a click of the thing it went down on.
+    const pressBlock = mouseRule.slice(mouseRule.indexOf('"PRESSED"'));
+    const releaseBlock = mouseRule.slice(mouseRule.indexOf('"RELEASED"'));
+    expect(pressBlock).toContain('IsClickedWithEvent');
+    expect(releaseBlock).not.toContain('IsClickedWithEvent');
   });
 
   it('senses, before anything decides on what it found', () => {
@@ -79,6 +116,6 @@ describe('rules/mouse.rule', () => {
     // to say so for the input rules alone is gone.
     expect(meta.requires).toEqual([]);
     const stock = STOCK_RULES.find(rule => rule.id === 'mouse');
-    expect(stock?.provides).toEqual(['Takes Mouse Input']);
+    expect(stock?.provides).toEqual(['Takes Mouse Input', 'Can Be Clicked']);
   });
 });

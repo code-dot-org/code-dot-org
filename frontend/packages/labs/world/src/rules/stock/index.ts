@@ -116,8 +116,8 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Mouse',
     ability: 'Responds to the Mouse',
     description:
-      'Raises an event when a mouse button goes down or comes up, on the same terms as the keyboard rule. Where the pointer is is not an event — it is the “mouse position” block, which answers at any moment.',
-    provides: ['Takes Mouse Input'],
+      'Raises an event when a mouse button goes down or comes up, on the same terms as the keyboard rule, and tells an actor when a press landed on it. Where the pointer is is not an event — it is the “mouse position” block, which answers at any moment.',
+    provides: ['Takes Mouse Input', 'Can Be Clicked'],
     contents: mouseRule,
   },
   {
