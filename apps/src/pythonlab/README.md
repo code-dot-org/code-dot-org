@@ -47,8 +47,9 @@ The sandbox is off by default. Turn it on for a session with
 `?pythonlab-separate-domain=1` on the level URL, or with
 `?new-preview-domain=1`, which turns it on *and* points it at
 `codeaiprojects.org`. For a whole environment, set the
-`use-pythonlab-separate-domain` DCDO flag to `true`; any other value, or
-no value, leaves it off. `pyodideSandboxEnabled.ts` holds that decision.
+`use-pythonlab-separate-domain` DCDO flag to `true`; other values do not
+ enable the sandbox unless one of the per-session experiments is active. 
+`pyodideSandboxEnabled.ts` holds that decision.
 The sandbox domain can also be set via dcdo; use the flag `sandboxed-preview-domain`
 to set it. This value is used by both Web Lab 2 and Python Lab. By default it
 uses `codeprojects.org`, to use `codeaiprojects.org` you must set the flag.
