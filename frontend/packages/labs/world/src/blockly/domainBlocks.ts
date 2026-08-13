@@ -1119,6 +1119,11 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_rule_trait',
   'world_rule_step_tick',
   'world_rule_step_in',
+  // …and `each frame` standing on its own in an `.actor` file, where it is a
+  // kind's own per-frame work rather than a trait's member
+  // (`traitStepDefinition`). Harmless in the other kinds: there it always has a
+  // parent, and a root set is only ever asked about a TOP block.
+  'world_trait_step',
   // …and a set of choices, whose options chain below it.
   'world_rule_enum',
 ]);
@@ -4984,53 +4989,77 @@ const worldRuleStepIn = stepBlock(
 // A mouth rather than a chained body, unlike the hats: a trait's members chain
 // through `next`, so the body needs somewhere else to be. `define block` has
 // the same shape for the same reason.
-const worldTraitStep = defineBlock({
-  type: 'world_trait_step',
-  message0: 'each frame during %1 do %2',
-  args0: [
-    {type: 'field_dropdown', name: 'PHASE', options: phaseOptions},
-    {type: 'field_input', name: 'NAME', text: 'do something'},
-  ],
-  message1: '%1',
-  args1: [{type: 'input_statement', name: 'DO'}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [phaseOptionsExtension],
-  style: 'event_blocks',
-  tooltip:
-    'Run this every tick for each thing that has this trait — or, on its own ' +
-    'in an actor file, for each actor of that kind. The thing itself is what ' +
-    'the blocks inside act on.',
-  generator: {
-    javascript(block, generator) {
-      // WHERE IT SITS DECIDES WHAT IT IS, which is the same bargain
-      // `world_rule_property` makes in its three homes.
-      //
-      // Chained under a `define trait`, this is a DECLARATION: the rule's
-      // module is assembled from its metadata and the body is pulled out by a
-      // pass of its own (ruleMeta), so generating anything here would be
-      // writing it twice.
-      //
-      // Standing on its own in an `.actor` file, there is no metadata pass and
-      // nothing else to write it — so it is the whole declaration, and this is
-      // it. `defineStep` is the behaviour half of `defineProperty`: work a KIND
-      // of actor does every frame without a rule to do it in (ActorBuilder).
-      if (block.getParent()) {
-        return '';
-      }
-      const name = block.getFieldValue('NAME') || 'do something';
-      const phase = block.getFieldValue('PHASE') || 'decide';
-      const body = generator.statementToCode(block, 'DO');
-      // The closure's `actor` SHADOWS the module's builder, deliberately: a
-      // body written in an actor file says `this actor` and means this one, and
-      // `this actor` compiles to `actor` wherever it is written.
-      return (
-        `actor.defineStep(${str(slug(name))}, ${str(phase)}, ` +
-        `(actor, world, delta) => {\n${body}});\n`
-      );
+/**
+ * `each frame` — and it needs TWO SHAPES, which is the whole of this note.
+ *
+ * Chained under a `define trait` it is one of that trait's members, so it has a
+ * previous and a next like every other member. Standing on its own in an
+ * `.actor` file it is a definition root, and a root MUST NOT have a previous
+ * connection: `DisableOrphansPlugin` reads a top-level block with one as an
+ * orphan and disables it — and everything chained after it — so the block a
+ * learner had just dragged out sat there greyed and generating nothing.
+ *
+ * It looked fine while the only ones were written into fixtures, because the
+ * plugin runs on move/drag/change and a freshly loaded workspace has had none.
+ *
+ * So the shape is decided where the palette is built, which already varies
+ * definitions by file kind, and not by a second near-identical block: it is one
+ * block with one name, one generator and one meaning, wearing the connections
+ * its file makes sense of.
+ */
+const traitStepDefinition = (asRoot: boolean) =>
+  defineBlock({
+    type: 'world_trait_step',
+    message0: 'each frame during %1 do %2',
+    args0: [
+      {type: 'field_dropdown', name: 'PHASE', options: phaseOptions},
+      {type: 'field_input', name: 'NAME', text: 'do something'},
+    ],
+    message1: '%1',
+    args1: [{type: 'input_statement', name: 'DO'}],
+    ...(asRoot ? {} : {previousStatement: true, nextStatement: true}),
+    extensions: [phaseOptionsExtension],
+    style: 'event_blocks',
+    tooltip:
+      'Run this every tick for each thing that has this trait — or, on its own ' +
+      'in an actor file, for each actor of that kind. The thing itself is what ' +
+      'the blocks inside act on.',
+    generator: {
+      javascript(block, generator) {
+        // WHERE IT SITS DECIDES WHAT IT IS, which is the same bargain
+        // `world_rule_property` makes in its three homes.
+        //
+        // Chained under a `define trait`, this is a DECLARATION: the rule's
+        // module is assembled from its metadata and the body is pulled out by a
+        // pass of its own (ruleMeta), so generating anything here would be
+        // writing it twice.
+        //
+        // Standing on its own in an `.actor` file, there is no metadata pass and
+        // nothing else to write it — so it is the whole declaration, and this is
+        // it. `defineStep` is the behaviour half of `defineProperty`: work a KIND
+        // of actor does every frame without a rule to do it in (ActorBuilder).
+        if (block.getParent()) {
+          return '';
+        }
+        const name = block.getFieldValue('NAME') || 'do something';
+        const phase = block.getFieldValue('PHASE') || 'decide';
+        const body = generator.statementToCode(block, 'DO');
+        // The closure's `actor` SHADOWS the module's builder, deliberately: a
+        // body written in an actor file says `this actor` and means this one, and
+        // `this actor` compiles to `actor` wherever it is written.
+        return (
+          `actor.defineStep(${str(slug(name))}, ${str(phase)}, ` +
+          `(actor, world, delta) => {\n${body}});\n`
+        );
+      },
     },
-  },
-});
+  });
+
+/** The chaining one — a trait's member, and what `DOMAIN_BLOCKS` carries. */
+const worldTraitStep = traitStepDefinition(false);
+
+/** The root-shaped one, for an `.actor` file (see `traitStepDefinition`). */
+const worldActorStep = traitStepDefinition(true);
 
 const worldRuleStepTick = stepBlock(
   'world_rule_step_tick',
@@ -6084,6 +6113,18 @@ export function buildDomainPalette(
   const ownProperties = (options.actorOwnProperties ?? []).flatMap(
     actor => actor.properties,
   );
+  // `each frame` wears the connections its file makes sense of: a root in an
+  // `.actor`, a trait's member everywhere else (`traitStepDefinition`).
+  //
+  // SUBSTITUTED, not appended. Two definitions of one type in the list would
+  // leave which one lands on the workspace up to registration order, and a
+  // block whose shape depends on that is a block nobody can reason about.
+  const shaped =
+    options.fileKind === 'actor'
+      ? DOMAIN_BLOCKS.map(block =>
+          block.type === 'world_trait_step' ? worldActorStep : block,
+        )
+      : DOMAIN_BLOCKS;
   const ownBlocks: DomainBlock[] = [];
   const ownTypes: string[] = [];
   for (const property of ownProperties) {
@@ -6119,10 +6160,7 @@ export function buildDomainPalette(
       // The shared constant itself when this actor declares nothing, keeping
       // the identity the no-project-rules path has always handed back rather
       // than a fresh copy per rebuild.
-      blocks:
-        ownBlocks.length === 0
-          ? DOMAIN_BLOCKS
-          : [...DOMAIN_BLOCKS, ...ownBlocks],
+      blocks: ownBlocks.length === 0 ? shaped : [...shaped, ...ownBlocks],
       toolbox: editingRule ? withEngine(shown) : shown,
       rootTypes: ROOT_BLOCK_TYPES,
       // The built-in rules declare no events, so there are none to order.
@@ -6148,7 +6186,7 @@ export function buildDomainPalette(
     ...TOOLBOX_TAIL,
   ]);
   return {
-    blocks: [...DOMAIN_BLOCKS, ...palette.blocks, ...ownBlocks],
+    blocks: [...shaped, ...palette.blocks, ...ownBlocks],
     toolbox: editingRule ? withEngine(toolbox) : toolbox,
     rootTypes: new Set([...ROOT_BLOCK_TYPES, ...palette.eventTypes]),
     worldEventTypes: new Set(palette.worldEventTypes),
