@@ -167,4 +167,59 @@ describe('ChallengeBox', () => {
     fireEvent.click(screen.getByRole('button', {name: 'OK'}));
     expect(screen.queryByText('Response submitted')).not.toBeInTheDocument();
   });
+
+  it('shows the audio and text buttons in whiteboard mode', async () => {
+    fetchJson.mockResolvedValue({value: [fakeChallenge]});
+
+    render(<ChallengeBox lessonId={42} />);
+
+    await waitFor(() =>
+      expect(
+        screen.getByText('Draw a flowchart of the algorithm.')
+      ).toBeInTheDocument()
+    );
+
+    expect(screen.getByRole('button', {name: 'Audio'})).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Text'})).toBeInTheDocument();
+  });
+
+  it('shows a textarea that can be typed in when the Text button is clicked', async () => {
+    fetchJson.mockResolvedValue({value: [fakeChallenge]});
+
+    render(<ChallengeBox lessonId={42} />);
+
+    await waitFor(() =>
+      expect(
+        screen.getByText('Draw a flowchart of the algorithm.')
+      ).toBeInTheDocument()
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Text'}));
+
+    const textarea = document.getElementById(
+      'reflection-success'
+    ) as HTMLTextAreaElement;
+    expect(textarea).toBeInTheDocument();
+
+    fireEvent.change(textarea, {target: {value: 'My explanation'}});
+    expect(textarea).toHaveValue('My explanation');
+  });
+
+  it('shows a Start Recording button when the Audio button is selected', async () => {
+    fetchJson.mockResolvedValue({value: [fakeChallenge]});
+
+    render(<ChallengeBox lessonId={42} />);
+
+    await waitFor(() =>
+      expect(
+        screen.getByText('Draw a flowchart of the algorithm.')
+      ).toBeInTheDocument()
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Audio'}));
+
+    expect(
+      screen.getByRole('button', {name: 'Start Recording'})
+    ).toBeInTheDocument();
+  });
 });
