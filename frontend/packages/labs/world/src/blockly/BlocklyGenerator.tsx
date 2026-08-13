@@ -168,7 +168,10 @@ export const BlocklyGenerator = forwardRef<
           topBlocks.map(block => block.type),
         );
         if (shape === 'rule') {
-          const modulePath = (path ?? '').replace(/\.rule$/, '');
+          // `.behavior` too, or a behavior reading its OWN state imports the
+          // module it is being written into and esbuild refuses the duplicate
+          // symbol (specs/BEHAVIORS.md).
+          const modulePath = (path ?? '').replace(/\.(rule|behavior)$/, '');
           const meta = parseRuleMeta(modulePath, contents);
           if (!meta) {
             return generator.finish('export {};\n');

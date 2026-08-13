@@ -17,7 +17,9 @@ import {parseRuleMeta, type RuleMeta} from './ruleMeta';
 import {cellCount} from './spriteCells';
 
 // Code files that define a module: a Blockly rule/actor/world, or plain JS/TS.
-const CODE_EXT = /\.(rule|actor|world|ts|js)$/;
+// `.behavior` among them: a behavior IS a rule in play, so every scan that asks
+// what the project holds has to find one (specs/BEHAVIORS.md).
+const CODE_EXT = /\.(rule|actor|world|behavior|ts|js)$/;
 
 // The root blocks whose NAME field names a Blockly-authored module.
 const NAMED_ROOTS = ['world_actor', 'world_world'];
@@ -285,8 +287,13 @@ export function projectActorOwnMetas(
 export function projectRuleMetas(files: Record<string, string>): RuleMeta[] {
   const metas: RuleMeta[] = [];
   for (const [path, contents] of Object.entries(files)) {
-    if (path.startsWith('rules/') && path.endsWith('.rule')) {
-      const meta = parseRuleMeta(path.replace(/\.rule$/, ''), contents);
+    // `.behavior` too: it parses into a `RuleMeta` with one trait, which is
+    // what makes everything downstream work unchanged (specs/BEHAVIORS.md).
+    if (path.startsWith('rules/') && /\.(rule|behavior)$/.test(path)) {
+      const meta = parseRuleMeta(
+        path.replace(/\.(rule|behavior)$/, ''),
+        contents,
+      );
       if (meta) {
         metas.push(meta);
       }

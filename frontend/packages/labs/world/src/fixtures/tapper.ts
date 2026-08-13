@@ -109,10 +109,13 @@ const CROSSHAIR_ACTOR = JSON.stringify({
         y: 20,
         fields: {NAME: 'Crosshair'},
         next: {
-          block: {
-            type: 'world_set_sprite',
-            fields: {SPRITE: 'switch.png#1'},
-          },
+          block: stack([
+            {type: 'world_set_sprite', fields: {SPRITE: 'switch.png#1'}},
+            // The same behavior the coins carry, which is the whole of what a
+            // behavior is FOR: the crosshair's own `each frame` below belongs
+            // to the crosshair, and this belongs to anything that asks.
+            useTrait('Spin#SpinTrait'),
+          ]),
         },
       },
       {
@@ -140,6 +143,94 @@ const CROSSHAIR_ACTOR = JSON.stringify({
   },
 });
 
+/**
+ * A BEHAVIOR — the one thing an actor's own `each frame` cannot be: shared.
+ *
+ * The crosshair's step belongs to the crosshair and to nothing else, which is
+ * right for a crosshair. Spinning is not like that: the coins do it and so does
+ * the crosshair, and writing it twice would be two copies to keep in step.
+ *
+ * So it is a `.behavior` — a rule with exactly one trait of the same name,
+ * without the two files' worth of ceremony (specs/BEHAVIORS.md) — and an actor
+ * takes it the way it takes anything else, with `use trait ⟨Spin⟩`.
+ *
+ * ITS STATE IS ITS OWN, AND EACH ACTOR'S IS ITS OWN. `spin speed` is declared
+ * inside the behavior, so it arrives and leaves with it and no actor carries a
+ * dial for a mechanic it does not have — and every actor carrying it gets a
+ * copy, which the coins prove by spinning at speeds written into their
+ * arrangement.
+ */
+const SPIN_BEHAVIOR = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_behavior',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'Spin'},
+        next: {
+          block: stack([
+            {
+              type: 'world_rule_property',
+              fields: {
+                TYPE: 'number',
+                ACCESS: 'writable',
+                NAME: 'spin speed',
+                DEFAULT: '120',
+              },
+            },
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'decide', NAME: 'turn'},
+              inputs: {
+                DO: {
+                  block: {
+                    type: 'world_set_Space_RotationProperty',
+                    inputs: {
+                      ACTOR: me(),
+                      // Degrees per SECOND, so the spin is the same however
+                      // long a frame took — `delta` is what makes it so.
+                      VALUE: {
+                        block: {
+                          type: 'math_arithmetic',
+                          fields: {OP: 'ADD'},
+                          inputs: {
+                            A: {
+                              block: {
+                                type: 'world_get_Space_RotationProperty',
+                                inputs: {ACTOR: me()},
+                              },
+                            },
+                            B: {
+                              block: {
+                                type: 'math_arithmetic',
+                                fields: {OP: 'MULTIPLY'},
+                                inputs: {
+                                  A: {
+                                    block: {
+                                      type: 'world_get_Spin_SpinSpeedProperty',
+                                      inputs: {ACTOR: me()},
+                                    },
+                                  },
+                                  B: {block: {type: 'world_step_delta'}},
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          ]),
+        },
+      },
+    ],
+  },
+});
+
 const MAIN_WORLD = JSON.stringify({
   blocks: {
     blocks: [
@@ -159,6 +250,9 @@ const MAIN_WORLD = JSON.stringify({
                   id: `coin${index + 1}`,
                   properties: {
                     positional: {position: {x: at(column), y: at(row)}},
+                    // The behavior's own state, overridden per coin: nine
+                    // actors carrying one behavior, each with its own copy.
+                    Spin: {spin_speed: 40 + index * 35},
                   },
                 })),
               },
@@ -173,6 +267,7 @@ const MAIN_WORLD = JSON.stringify({
       },
       // A coin: something to hit, and something that knows it has been.
       defineActor(COIN, 'Coin', 20, [
+        useTrait('Spin#SpinTrait'),
         useTrait('Collisions#CanCollideTrait'),
         useTrait('Collection#CanBeCollectedTrait'),
         {type: 'world_set_sprite', fields: {SPRITE: 'coin.png'}},
@@ -274,6 +369,12 @@ export const TAPPER_SPEC: ProjectSpec = {
       folderId: 'worlds',
       active: true,
       open: true,
+    },
+    spinBehavior: {
+      name: 'spin.behavior',
+      language: 'behavior',
+      contents: SPIN_BEHAVIOR,
+      folderId: 'rules',
     },
     crosshair: {
       name: 'crosshair.actor',

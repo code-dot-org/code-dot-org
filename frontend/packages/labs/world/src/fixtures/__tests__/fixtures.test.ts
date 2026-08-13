@@ -230,6 +230,19 @@ describe('the scenario catalogue', () => {
     expect(main).toContain('world_mouse_position');
     // The crosshair is a FILE, and has to be: `each frame` compiles to
     // `actor.defineStep`, which needs the const an actor module opens with.
+    // A BEHAVIOR — the one thing an actor's own `each frame` cannot be. Two
+    // kinds carry this one, and the coins carry their own copy of its state,
+    // which is the whole claim (specs/BEHAVIORS.md).
+    expect(named('spin.behavior')).toBe(true);
+    const carriers = files.filter(file =>
+      file.contents.includes('Spin#SpinTrait'),
+    );
+    expect(carriers.map(file => file.name).sort()).toEqual([
+      'crosshair.actor',
+      'main.world',
+    ]);
+    expect(main).toContain('spin_speed');
+
     const crosshair = files.find(file => file.name === 'crosshair.actor')!;
     expect(crosshair.contents).toContain('world_trait_step');
     expect(crosshair.contents).toContain('world_mouse_position');

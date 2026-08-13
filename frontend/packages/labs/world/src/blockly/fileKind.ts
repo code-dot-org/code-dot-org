@@ -8,7 +8,7 @@
 // both ask here.
 
 /** Which kind of file this is. */
-export type FileKind = 'actor' | 'world' | 'rule';
+export type FileKind = 'actor' | 'world' | 'rule' | 'behavior';
 
 /**
  * A Blockly file's kind, from its path — the one place the extensions are read.
@@ -18,7 +18,7 @@ export type FileKind = 'actor' | 'world' | 'rule';
  * callers with no path (tests), and treats it as "work it out from the blocks".
  */
 export const fileKindOf = (path?: string): FileKind | undefined => {
-  const match = /\.(rule|actor|world)$/.exec(path ?? '');
+  const match = /\.(rule|actor|world|behavior)$/.exec(path ?? '');
   return match ? (match[1] as FileKind) : undefined;
 };
 
@@ -45,12 +45,27 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_actor', new Set<FileKind>(['actor', 'world'])],
   ['world_world', new Set<FileKind>(['world'])],
   ['world_rule', new Set<FileKind>(['rule'])],
+  // A behavior is a rule with one trait, said in one block (specs/BEHAVIORS.md).
+  ['world_behavior', new Set<FileKind>(['behavior'])],
+  // What makes a rule a rule rather than a behavior, and so what a `.behavior`
+  // is not offered: a second trait, an event of its own, a designed block, a
+  // set of choices, a world-scoped step. Each of those is a REASON to be a
+  // rule, and a behavior that had them would be a rule wearing another hat
+  // (specs/BEHAVIORS.md). Reaching for one is how you find out you want a
+  // `.rule` — which the file already knows how to become.
+  ['world_rule_trait', new Set<FileKind>(['rule'])],
+  ['world_rule_event', new Set<FileKind>(['rule'])],
+  ['world_rule_block', new Set<FileKind>(['rule'])],
+  ['world_rule_enum', new Set<FileKind>(['rule'])],
+  ['world_rule_enum_option', new Set<FileKind>(['rule'])],
+  ['world_rule_step_tick', new Set<FileKind>(['rule'])],
+  ['world_rule_step_in', new Set<FileKind>(['rule'])],
   // `each frame` reads two ways: chained under a `define trait` it is one of
   // that trait's members, and standing on its own in an `.actor` file it is
   // work that kind of actor does. Both are real; a `.world` is not — a world's
   // per-frame work belongs to a rule, and the block would generate nothing
   // there and say nothing about why.
-  ['world_trait_step', new Set<FileKind>(['actor', 'rule'])],
+  ['world_trait_step', new Set<FileKind>(['actor', 'rule', 'behavior'])],
 ]);
 
 /**
@@ -107,5 +122,10 @@ export function moduleShape(
       );
     }
   }
-  return kind;
+  // A `.behavior` COMPILES to a rule module — it is a rule with one trait, and
+  // `ruleMetaToModule` writes it (specs/BEHAVIORS.md). The kind still differs
+  // from `rule` everywhere the PALETTE is concerned, which is what the two
+  // functions are for: `fileKindOf` says what a file is, this says what it
+  // becomes.
+  return kind === 'behavior' ? 'rule' : kind;
 }
