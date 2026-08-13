@@ -1,6 +1,9 @@
-# Builds cdo-deps, smoke-tests it on docker and podman, and publishes it from
-# staging. This also gates docker/build, since every job here builds cdo-build
-# anyway: it is unpublished, so there is nothing to pull. amd64 only.
+# Builds cdo-deps, smoke-tests it on docker and podman on amd64 and arm64,
+# and publishes it from staging as a multi-platform manifest. Each
+# architecture builds natively on its own runner; a merge job puts the two
+# images under the final tags, the same pattern as cdo-base. This also gates
+# docker/build, since every job here builds cdo-build anyway: it is
+# unpublished, so there is nothing to pull.
 # See docker/deps/README.md and docker/build/README.md.
 
 name: cdo-deps-image
@@ -86,14 +89,22 @@ jobs:
             --format '{{json .Manifest.Digest}}' | tr -d '"')"
           echo "digest=$digest" >> "$GITHUB_OUTPUT"
 
+  # PRs only. Publish runs are gated by build-push itself, which runs the
+  # same suites against the bytes it pushes; running this matrix there too
+  # tested a separate build of the same input twice.
   smoke-test:
-    name: smoke-test (${{ matrix.engine }})
+    name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
+    if: github.event_name == 'pull_request'
     needs: resolve-base
     strategy:
       fail-fast: false
       matrix:
-        engine: [docker, podman]
-    runs-on: ubuntu-24.04
+        include:
+          - { engine: docker, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: podman, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: docker, arch: arm64, runs-on: ubuntu-24.04-arm }
+          - { engine: podman, arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
     permissions:
       contents: read
       packages: read
@@ -143,17 +154,27 @@ jobs:
 
   # cdo-build exists only in this job's local image store, which is why nothing
   # sets up a container builder: it would try to pull the tag from a registry.
+  #
+  # Each architecture builds on its own native runner. qemu is not an
+  # option here: emulated bundle installs fail erratically (g++ segfaults
+  # on libsass, dpkg errors, varying with the binfmt qemu build). Each leg
+  # pushes one arch-suffixed tag for the merge job to combine.
   build-push:
-    name: build and push
+    name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
-    needs: [resolve-base, smoke-test]
-    runs-on: ubuntu-24.04
+    needs: resolve-base
+    strategy:
+      matrix:
+        include:
+          - { arch: amd64, runs-on: ubuntu-24.04 }
+          - { arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
     # Inert until its deployment-branch policy is set; see docker/deps/README.md.
     environment: ghcr-publish
-    # Shared across refs so two publishes cannot interleave. Safe to cancel:
-    # nothing resolves `latest` programmatically.
+    # Grouped per architecture so the two legs of one run cannot cancel
+    # each other. Safe to cancel: nothing resolves `latest` programmatically.
     concurrency:
-      group: cdo-deps-publish
+      group: cdo-deps-publish-${{ matrix.arch }}
       cancel-in-progress: true
     permissions:
       contents: read
@@ -189,19 +210,6 @@ jobs:
         id: key
         uses: ./.github/actions/cdo-deps-key
 
-      # Tag contract: docker/deps/README.md.
-      - name: Compute tags
-        id: meta
-        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
-        with:
-          images: ${{ env.IMAGE }}
-          # latest=auto produces nothing for raw and sha tags, so declare it.
-          tags: |
-            type=raw,value=${{ steps.key.outputs.key }},enable={{is_default_branch}}
-            type=sha,prefix=git-,format=long,enable={{is_default_branch}}
-            type=raw,value=latest,enable={{is_default_branch}}
-            type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
-
       - name: Build cdo-deps
         run: |
           docker build \
@@ -211,8 +219,7 @@ jobs:
             -t cdo-deps:publish \
             .
 
-      # The matrix tested images built on other runners. These test the one
-      # actually being published.
+      # The quality gate for everything this job pushes.
       - name: Smoke test cdo-build
         run: ./docker/build/smoke-test.sh cdo-build:ci docker
 
@@ -221,14 +228,80 @@ jobs:
 
       # Not build-push-action with push: true — that publishes in the step that
       # builds, before the smoke suites can fail the job.
-      - name: Push cdo-deps
+      #
+      # The tag is keyed by commit and architecture, and no consumer
+      # resolves it. The merge job builds every consumer-facing tag from
+      # this immutable pair, so a racing publish or a tag left by a failed
+      # run cannot leak in.
+      - name: Push cdo-deps (per-arch tag)
+        run: |
+          set -euxo pipefail
+          docker tag cdo-deps:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
+          docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
+
+  # Until this runs, only the arch-suffixed tags exist, so an incomplete
+  # publish is visible as such instead of serving one architecture under
+  # the final name.
+  # See: https://docs.docker.com/build/ci/github-actions/multi-platform/#distribute-build-across-multiple-runners
+  merge:
+    name: merge per-arch images into one manifest
+    if: github.event_name != 'pull_request'
+    needs: build-push
+    runs-on: ubuntu-24.04
+    environment: ghcr-publish
+    concurrency:
+      group: cdo-deps-publish
+      cancel-in-progress: true
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      # The key action hashes the dependency inputs, so the checkout must
+      # contain them.
+      - name: Checkout key inputs only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github/actions/cdo-deps-key
+            docker/build
+            docker/deps
+            dashboard/engines
+            python
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compute the dependency-layer content key
+        id: key
+        uses: ./.github/actions/cdo-deps-key
+
+      - name: Compute tags
+        id: meta
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=raw,value=${{ steps.key.outputs.key }},enable={{is_default_branch}}
+            type=sha,prefix=git-,format=long,enable={{is_default_branch}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
+
+      # The source tags are commit-keyed, so no moving tag can enter the
+      # manifest.
+      - name: Merge the per-arch pair under every tag
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |
           set -euxo pipefail
           # An empty list would make this step a green no-op.
           test -n "$TAGS"
-          for ref in $TAGS; do
-            docker tag cdo-deps:publish "$ref"
-            docker push "$ref"
-          done
+          args=()
+          for ref in $TAGS; do args+=(-t "$ref"); done
+          docker buildx imagetools create "${args[@]}" \
+            "$IMAGE:git-${{ github.sha }}-amd64" \
+            "$IMAGE:git-${{ github.sha }}-arm64"
+

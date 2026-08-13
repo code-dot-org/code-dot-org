@@ -1,0 +1,24 @@
+name 'aif-y2-logic-based-ai-postassessment-q8-2026'
+
+right 'Only “Good morning!”'
+wrong 'Only “Good afternoon!”'
+wrong 'Both “Good morning!” and “Good afternoon!”'
+wrong 'Both “Good morning!” and “Good evening!”'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What will the following program print if both `morning` and `afternoon` are `True`?
+```
+if morning:
+    print("Good morning!")
+elif afternoon:
+    print("Good afternoon!")
+else:
+    print("Good evening!")
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Optimization
+MARKDOWN

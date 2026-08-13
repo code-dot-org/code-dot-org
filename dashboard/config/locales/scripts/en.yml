@@ -29254,7 +29254,13 @@ en:
               name: Lesson 12
             lesson-13:
               name: Lesson 13
-          lesson_groups: {}
+            lesson-14:
+              name: End of Unit Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: End of Unit Assessment
           name: aif-year2-semester1-unit1
           title: Logic-Based AI
           description_audience: ''
@@ -29734,6 +29740,8 @@ en:
               name: Interactivity in Web Apps
             lesson-5:
               name: Functions, Conditionals, and Loops
+            lesson-6:
+              name: Final Project
           lesson_groups: {}
           name: pl-aif-intro-programming-js
           title: Teaching Introduction to Programming [JavaScript]

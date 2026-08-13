@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import {type CSSProperties, type FC} from 'react';
 
 import styles from './validated-levels-box.module.scss';
 
@@ -22,9 +22,7 @@ const ValidatedLevelsBox: FC<ValidatedLevelsBoxProps> = ({
       <p className={styles.label}>Progress</p>
       <div
         className={styles.statBlock}
-        style={
-          {'--target-count': validatedLevelsCorrectCount} as React.CSSProperties
-        }
+        style={{'--target-count': validatedLevelsCorrectCount} as CSSProperties}
       >
         <div className={styles.fractionRow}>
           <div className={styles.bigNumber} />

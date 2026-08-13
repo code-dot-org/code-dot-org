@@ -171,7 +171,6 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // Display name given to the fixed scene when it is created; consulted
   // only at creation.
   fixedSceneName?: string;
-  // XML string representation of toolbox blocks.
-  // TODO: deprecate in favor of the JSON toolbox definition.
+  /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }
