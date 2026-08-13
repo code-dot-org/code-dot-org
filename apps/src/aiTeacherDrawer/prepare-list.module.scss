@@ -32,6 +32,11 @@
   border-radius: 8px;
   background: var(--background-neutral-primary, #fff);
   cursor: pointer;
+  // reset for when rendered as a <button>
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  text-align: left;
 
   &:hover {
     background: var(--background-neutral-secondary, #f8f9fa);

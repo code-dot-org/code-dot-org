@@ -1,4 +1,5 @@
 import {
+  isSupported,
   resolvePlatformPhysics,
   PhysicsBox,
   PhysicsSprite,
@@ -213,5 +214,138 @@ describe('platformPhysics', () => {
     step(flyer, []);
     step(flyer, []);
     expect(flyer.position.y).toBeLessThan(0);
+  });
+});
+
+// The set-gravity block's resolver seam: a custom magnitude, and a negative
+// value flipping the world vertically.
+describe('platformPhysics with custom gravity', () => {
+  const stepWith = (
+    sprite: PhysicsSprite,
+    walls: PhysicsBox[],
+    gravity: number,
+    vx = 0
+  ) => {
+    sprite.position.y += sprite.velocity.y;
+    sprite.position.x += vx;
+    resolvePlatformPhysics(
+      [{sprite, x: sprite.position.x, y: sprite.position.y}],
+      walls,
+      VIEW,
+      gravity
+    );
+  };
+
+  it('accrues the given magnitude instead of the default', () => {
+    const player = makeSprite(200, 100);
+    stepWith(player, [], 2);
+    expect(player.velocity.y).toBe(2);
+  });
+
+  it('negative gravity falls up and rests the art on the view top', () => {
+    const player = makeSprite(200, 300);
+    for (let i = 0; i < 60; i++) {
+      stepWith(player, [], -PLATFORM_GRAVITY);
+    }
+    // Image top at 0 — the flipped analogue of feet on the floor line.
+    expect(player.position.y - 25).toBe(0);
+  });
+
+  it('negative gravity lands on a block underside and stays', () => {
+    // Wall cell (col 1, row 1): center (75, 75), underside at y=100.
+    const walls = [wallAt(1, 1)];
+    const player = makeSprite(75, 300);
+    for (let i = 0; i < 60; i++) {
+      stepWith(player, walls, -PLATFORM_GRAVITY);
+    }
+    // Body top (feet-anchor flipped to a head anchor) on the underside:
+    // body center 120, image center 5 below it.
+    expect(player.position.y).toBe(125);
+  });
+
+  it('isSupported sees floor, block tops, and flipped undersides', () => {
+    const walls = [wallAt(1, 6)];
+    const onFloor = makeSprite(300, 375);
+    expect(isSupported(onFloor, walls, VIEW)).toBe(true);
+    const onBlock = makeSprite(75, 275);
+    expect(isSupported(onBlock, walls, VIEW)).toBe(true);
+    const hovering = makeSprite(75, 200);
+    expect(isSupported(hovering, walls, VIEW)).toBe(false);
+    // Under flipped gravity the head-anchored body rests against block
+    // undersides: image top on the underside (cell row 6: y=350) counts,
+    // a gap below it doesn't.
+    const underBlock = makeSprite(75, 375);
+    expect(isSupported(underBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(true);
+    const nearBlock = makeSprite(75, 360);
+    expect(isSupported(nearBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(false);
+  });
+});
+
+// Generated block art rarely crops perfectly square (a real example: a
+// 455x450 block image, so a 50 x 49.45 sprite in its 50px cell). Collision
+// treats such walls as full cells.
+describe('platformPhysics with undersized block art', () => {
+  const shortWall = (col: number): PhysicsBox => ({
+    position: {x: col * 50 + 25, y: 5 * 50 + 25},
+    width: 50,
+    height: (450 / 455) * 50,
+    scale: 1,
+  });
+
+  it('lands on the cell top, not the art top, and walks flush', () => {
+    const walls = [shortWall(2), shortWall(3), shortWall(4), shortWall(5)];
+    // The reporting scene's player: 520x512 art at cell size.
+    const player = makeSprite(175, 75, 50, (512 / 520) * 50);
+    run(player, walls, 30);
+    // Feet on the cell top (y=250), centered landing without drift.
+    expect(feet(player)).toBeCloseTo(250, 6);
+    expect(player.position.x).toBe(175);
+    // Walking right across all three seams stays flush and monotonic.
+    const positions: number[] = [];
+    run(player, walls, 30, 3, s => positions.push(s.position.x));
+    positions.reduce((a, b) => {
+      expect(b).toBeGreaterThanOrEqual(a);
+      return b;
+    });
+    expect(feet(player)).toBeCloseTo(250, 6);
+  });
+});
+
+// The production warp: real sprites carry trimmed art dimensions and
+// fractional scales (a 288x376 costume at scale 50/376, 455x450 blocks at
+// 50/455), whose flush-contact arithmetic leaves ±1e-14 residues. The
+// push-out's zero test read those as overlap and corner-pushed a centered
+// landing sideways (175 -> 184.68 via a two-wall ping-pong).
+describe('platformPhysics with trimmed-art dimensions', () => {
+  it('keeps footing after landing art with non-round dims (jump gate)', () => {
+    // From a live report: trimmed generated art (raccoon, 814x729 at
+    // max-dim 50) lands with ~1e-14 float noise on its image bottom, so
+    // any exact-equality footing gate silently disables jumping for such
+    // costumes. isSupported, which the jump command asks, must hold.
+    const player = makeSprite(175, 225, 814, 729);
+    player.scale = 50 / 814;
+    const walls = [wallAt(0, 5), wallAt(1, 5), wallAt(2, 5), wallAt(3, 5)];
+    run(player, walls, 60);
+    expect(feet(player)).toBeCloseTo(250, 6);
+    expect(isSupported(player, walls, VIEW)).toBe(true);
+  });
+
+  it('lands a centered drop without sideways displacement', () => {
+    const walls: PhysicsBox[] = [2, 3, 4, 5].map(col => ({
+      position: {x: col * 50 + 25, y: 275},
+      width: 455,
+      height: 450,
+      scale: 0.5 * (100 / 455),
+    }));
+    const player: PhysicsSprite = {
+      position: {x: 175, y: 75},
+      velocity: {x: 0, y: 0},
+      width: 288,
+      height: 376,
+      scale: 0.5 * (100 / 376),
+    };
+    const xs = new Set<number>();
+    run(player, walls, 40, 0, s => xs.add(s.position.x));
+    expect([...xs]).toEqual([175]);
   });
 });

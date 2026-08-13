@@ -34,11 +34,11 @@
       "visibilities": {
         "selectedModelId": "hidden",
         "temperature": "hidden",
-        "systemPrompt": "editable",
-        "retrievalContexts": "editable",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "- Keep sentences short. If two sentences can be one short sentence, combine them. Avoid extra words. \n- Target the 950L Lexile Level: Use vocabulary that a typical 8th grader understands. Do not use complex \"college level\" words.\n- Avoid Jargon or Idioms unless necessary for the audience\n\nFor this AI Chat activity, students are going to select 3 of a list of descriptions that you give. So provide enough options to make this choice meaningful. Break up each suggestion into a bullet",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gemini-2.5-flash"
@@ -50,6 +50,6 @@
     "bubble_choice_description": "To add: description",
     "thumbnail_url": "https://images.code.org/4a7583c8a1c2f801c8acc74d0ddf2488-ai-chat-lab-icon (1).png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-06T20:30:50.646+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-aichat-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-aichat-2\"},{\"changed_at\":\"2026-08-06 20:31:19 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-06T20:30:50.646+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-aichat-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-aichat-2\"},{\"changed_at\":\"2026-08-06 20:31:19 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-11 15:17:37 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-11 16:37:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-11 17:08:38 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

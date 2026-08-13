@@ -1,0 +1,6 @@
+// Portal wrapper stacking context so this modal sits above LegacyDialog
+// (#manageAssetsModal ~1050). Modal has no zIndex prop.
+.stackingWrapper {
+  position: relative;
+  z-index: 1100;
+}

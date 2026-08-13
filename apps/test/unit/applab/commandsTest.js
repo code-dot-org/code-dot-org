@@ -9,12 +9,18 @@ import applabCommands, {
   setSelectionRange,
   openUrl,
 } from '@cdo/apps/applab/commands';
+import {clearImageUrlModerationCache} from '@cdo/apps/applab/imageUrlModeration';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
 
 async function flushModerationAsync() {
-  await Promise.resolve();
-  await Promise.resolve();
+  // Moderation goes: Azure mock -> cache handlers -> command callback (e.g.
+  // outputWarning). Awaiting the mock alone stops too early; setTimeout(0)
+  // lets the remaining handlers finish before assertions.
+  await Promise.all(
+    moderateImageUrl.mock.results.map(result => result.value).filter(Boolean)
+  );
+  await new Promise(resolve => setTimeout(resolve, 0));
 }
 
 describe('setProperty image URL moderation', () => {
@@ -26,6 +32,7 @@ describe('setProperty image URL moderation', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    clearImageUrlModerationCache();
     mockModerateImageUrl.mockResolvedValue('flagged');
     errorHandler = {
       outputWarning: jest.fn(),
@@ -112,6 +119,7 @@ describe('other image command URL moderation', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    clearImageUrlModerationCache();
     mockModerateImageUrl.mockResolvedValue('flagged');
     errorHandler = {
       outputWarning: jest.fn(),
