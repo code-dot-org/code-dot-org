@@ -8,6 +8,7 @@
 import '@mui/material/Button';
 import '@mui/material/IconButton';
 import '@mui/material/Breadcrumbs';
+import '@mui/material/Tooltip';
 
 declare module '@mui/material/Button' {
   interface ButtonPropsSizeOverrides {
@@ -59,6 +60,15 @@ declare module '@mui/material/IconButton' {
 
 declare module '@mui/material/Breadcrumbs' {
   interface BreadcrumbsOwnProps {
+    size?: 'xs' | 's' | 'm' | 'l';
+  }
+}
+
+// PoC for PR #74565: the tooltip's size, declared the way Breadcrumbs declares
+// its own. TooltipOwnerState extends TooltipProps, so this also types the
+// `ownerState.size` that styleOverrides/tooltip.ts reads.
+declare module '@mui/material/Tooltip' {
+  interface TooltipProps {
     size?: 'xs' | 's' | 'm' | 'l';
   }
 }
