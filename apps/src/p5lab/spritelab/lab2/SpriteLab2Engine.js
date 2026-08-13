@@ -9,7 +9,12 @@ import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {trimAnimationListImages} from './imageTrim';
-import {resolvePlatformPhysics} from './platformPhysics';
+import {
+  CONTACT_EPSILON,
+  isSupported,
+  PLATFORM_GRAVITY,
+  resolvePlatformPhysics,
+} from './platformPhysics';
 
 const NOOP = () => {};
 
@@ -94,7 +99,43 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Platformer levels size sprites to one grid cell by default (the
       // legacy library's one load-bearing line).
       library.defaultSpriteSize = 50;
+      // Landings carry sub-pixel float noise; footing checks must not
+      // compare contact exactly.
+      library.contactEpsilon = CONTACT_EPSILON;
     }
+    // Fresh library = fresh run; gravity returns to the default until a
+    // set-gravity block says otherwise. Negative flips the world: players
+    // fall up and land on block undersides and the view's top edge.
+    this.platformGravity_ = PLATFORM_GRAVITY;
+    library.commands.setPlatformGravity = value => {
+      this.platformGravity_ = Number(value) || 0;
+    };
+    // Move existing sprites (e.g. world-placed ones) into the players
+    // group; the per-frame resolver picks them up from there.
+    library.commands.setPlatformPlayer = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.group = 'players';
+      });
+    };
+    // Jump against gravity if any player has support in the gravity
+    // direction (the resolver's own footing geometry, so it agrees with
+    // where players actually rest).
+    library.commands.platformJump = speed => {
+      const p5 = this.p5Wrapper.p5;
+      const players = library.getSpriteArray({group: 'players'});
+      const walls = library.getSpriteArray({group: 'walls'});
+      const view = {width: p5.width, height: p5.height};
+      const grounded = players.some(sprite =>
+        isSupported(sprite, walls, view, this.platformGravity_)
+      );
+      if (!grounded) {
+        return;
+      }
+      const up = this.platformGravity_ < 0 ? 1 : -1;
+      players.forEach(sprite => {
+        sprite.velocity.y = up * Math.abs(Number(speed) || 0);
+      });
+    };
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
@@ -420,7 +461,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       {
         width: p5.width,
         height: p5.height,
-      }
+      },
+      this.platformGravity_
     );
   }
 

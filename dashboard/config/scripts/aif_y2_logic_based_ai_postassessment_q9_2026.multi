@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q9-2026'
+
+wrong '`for i <= 5:`'
+wrong '`for i < 5:`'
+wrong '`for range(5):`'
+right '`for i in range(5):`'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of these lines of code will create a loop that repeats five times?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Simulation (Part 1)
+MARKDOWN

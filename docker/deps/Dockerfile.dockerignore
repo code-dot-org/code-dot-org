@@ -1,0 +1,37 @@
+# Allowlist. The context is the repo root (6.7 GB); this cuts it to under a
+# megabyte: everything Bundler needs to resolve the bundle, everything uv
+# needs to sync the venv, and nothing else.
+#
+# A denylist was rejected: it makes every new large directory in the repo a
+# silent context regression, and the k8s/docker equivalent is 486 lines.
+#
+# Re-including a nested path needs its parents un-excluded, hence the
+# dashboard two-step: allow the directory, drop its contents, allow engines.
+# Only the gemspecs and their version.rb are let through, matching the COPY
+# lines in the Dockerfile — engine source would only invalidate the bundle.
+#
+# Verified on docker, on podman 5.8/buildah 1.43, and on the buildah 1.33.7
+# floor: all three honor the <dockerfile>.dockerignore convention and fail
+# the build when an excluded path is COPYed. buildah names the file in the
+# error, which is how the negative test confirms it rather than guessing.
+*
+!.python-version
+!.ruby-version
+!Gemfile
+!Gemfile.lock
+!pyproject.toml
+!uv.lock
+!python
+!dashboard
+dashboard/*
+!dashboard/engines
+dashboard/engines/*/*
+!dashboard/engines/*/*.gemspec
+!dashboard/engines/*/lib
+dashboard/engines/*/lib/*
+!dashboard/engines/*/lib/*/version.rb
+
+# Local artifacts that would ride along with python/ from a developer
+# checkout; CI checkouts never contain them.
+**/.venv
+**/__pycache__
