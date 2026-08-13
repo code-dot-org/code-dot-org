@@ -45,13 +45,7 @@
 // this actor's", which is a comparison against another actor's position every
 // frame, and there is no block for a step a project defines.
 
-import {
-  ruleShim,
-  stack,
-  starterSprites,
-  useTrait,
-  type ProjectSpec,
-} from '../constants';
+import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
 import {
   cameraConfinedRule,
   cameraFollowRule,
@@ -489,12 +483,6 @@ export const FLAPPY_SUPPORT_FILES: ProjectSpec['files'] = {
     name: 'cameraConfined.rule',
     language: 'rule',
     contents: cameraConfinedRule,
-    folderId: 'rules',
-  },
-  animationRuleFile: {
-    name: 'animation.js',
-    language: 'javascript',
-    contents: ruleShim('AnimationRule'),
     folderId: 'rules',
   },
   ...starterSprites(['ship', 'ground', 'coin']),

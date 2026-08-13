@@ -33,13 +33,7 @@
 // velocity turned two ways, which is sayable now. It is left out so the file
 // stays readable, not because it cannot be said.
 
-import {
-  ruleShim,
-  stack,
-  starterSprites,
-  useTrait,
-  type ProjectSpec,
-} from '../constants';
+import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
 import {
   collisionsRule,
   driveRule,
@@ -407,12 +401,6 @@ export const METEORS_SUPPORT_FILES: ProjectSpec['files'] = {
     name: 'expires.rule',
     language: 'rule',
     contents: expiresRule,
-    folderId: 'rules',
-  },
-  animationRuleFile: {
-    name: 'animation.js',
-    language: 'javascript',
-    contents: ruleShim('AnimationRule'),
     folderId: 'rules',
   },
   ...starterSprites(['ship', 'asteroid', 'shot']),

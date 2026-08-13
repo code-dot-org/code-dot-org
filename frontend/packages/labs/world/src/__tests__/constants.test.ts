@@ -65,8 +65,8 @@ describe('the starter project', () => {
   it('says every actor in blocks, so every actor can be opened', () => {
     // The starter is read before it is understood, and a `.js` actor is a file
     // a learner cannot edit with the only editor they have been shown. The
-    // project can still hold a JS module — `rules/animation.js` is one — but
-    // nothing that is an ACTOR is written that way.
+    // project can still hold a JS module — the compiler treats every module
+    // alike — but nothing in the starter is one, least of all an ACTOR.
     const actorFolder = folders.find(folder => folder.name === 'actors')!.id;
     const actors = files.filter(file => file.folderId === actorFolder);
 

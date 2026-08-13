@@ -17,7 +17,6 @@ describe('projectFiles', () => {
       'animations/game.anim',
       'effects/ripple.effect',
       'maps/level1.map',
-      'rules/animation.js',
       'rules/arrows.rule',
       'rules/collect.rule',
       'rules/collisions.rule',
