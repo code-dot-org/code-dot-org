@@ -35,6 +35,13 @@ class QuizQuestion < ApplicationRecord
   validates :question_name, presence: true
   validates :question, presence: true
 
+  # Overridden by subtypes that can grade themselves server-side (currently
+  # MultipleChoiceQuestion). Ungradable types are stored with
+  # grading_status "ungraded" until manual/AI grading is built.
+  def auto_gradable?
+    false
+  end
+
   # Shared by subtypes whose `question` includes a "choices" array (currently
   # MultipleChoiceQuestion and MultipleSelectQuestion). Returns the set of
   # choice ids, or nil (after recording an error on `question`) if the shape

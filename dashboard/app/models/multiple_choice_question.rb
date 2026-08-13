@@ -12,6 +12,17 @@
 class MultipleChoiceQuestion < QuizQuestion
   validate :validate_question_shape
 
+  def auto_gradable?
+    true
+  end
+
+  # response_data shape: {"selectedChoiceId" => "b"}
+  def grade(response_data)
+    selected = response_data.is_a?(Hash) ? response_data['selectedChoiceId'] : nil
+    correct = selected.present? && selected == question['correct_choice_id']
+    {score: correct ? 1 : 0, max_score: 1}
+  end
+
   private def validate_question_shape
     return if question.blank?
     q = question.deep_stringify_keys
