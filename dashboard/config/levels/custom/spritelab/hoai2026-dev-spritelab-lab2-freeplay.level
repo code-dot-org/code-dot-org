@@ -71,8 +71,8 @@
               <shadow type="gamelab_allSpritesWithAnimation"/>
             </value>
           </block>
-          <!-- TODO(spritelab-lab2-platform-updates): add the set-gravity and
-               set-as-platform-player blocks here once that branch merges. -->
+          <block type="spritelab2_setAsPlatformPlayer"/>
+          <block type="spritelab2_setPlatformGravity"/>
         </category>
         <category name="Story">
           <block type="gamelab_setBackgroundImageAs"/>

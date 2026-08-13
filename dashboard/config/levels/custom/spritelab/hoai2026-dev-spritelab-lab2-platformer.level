@@ -54,11 +54,11 @@
     <toolbox_blocks>
       <xml>
         <block type="gamelab_setBackgroundImageAs"/>
+        <block type="spritelab2_setAsPlatformPlayer"/>
         <block type="spritelab2_makePlatformPlayer">
           <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
         </block>
-        <!-- TODO(spritelab-lab2-platform-updates): add the set-gravity and
-             set-as-platform-player blocks here once that branch merges. -->
+        <block type="spritelab2_setPlatformGravity"/>
       </xml>
     </toolbox_blocks>
   </blocks>
