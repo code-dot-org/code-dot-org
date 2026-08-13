@@ -39,6 +39,26 @@ export function getCodeFromBlockXmlSource(blockXmlString: string) {
   return result;
 }
 
+/**
+ * Compiles a serialized (JSON) workspace to executable code on a throwaway
+ * headless workspace. The JSON equivalent of getCodeFromBlockXmlSource.
+ * Returns '' for a missing serialization.
+ */
+export function getCodeFromSerializedWorkspace(
+  source: object | undefined
+): string {
+  if (!source) {
+    return '';
+  }
+  const workspace = new Blockly.Workspace();
+  try {
+    Blockly.serialization.workspaces.load(source, workspace);
+    return Blockly.JavaScript.workspaceToCode(workspace);
+  } finally {
+    workspace.dispose();
+  }
+}
+
 // Sets the lab code based on the student's blocks and any extra (e.g. initialization) code.
 // The students blocks are considered to be any on the main or hidden workspaces.
 export function getAllGeneratedCode(extraCode?: string) {
