@@ -1,9 +1,11 @@
 @import 'color.scss';
 @import 'font';
 
-@mixin button-with-color($color) {
+// Most buttons draw the border in the fill color. Pass $border-color when the
+// design uses a separate border token.
+@mixin button-with-color($color, $border-color: $color) {
   background-color: $color;
-  border-color: $color;
+  border-color: $border-color;
   color: $white;
   margin: 0;
   padding: 6px 12px;
@@ -23,12 +25,11 @@
 }
 
 .primary {
-  @include button-with-color($orange);
-
-  // button-with-color($orange) supplies the non-color metrics only. The
-  // purple matches the MUI primary button on /users/sign_in.
-  background-color: var(--background-brand-purple-primary);
-  border-color: var(--borders-brand-purple-primary);
+  // The purple matches the MUI primary button on /users/sign_in.
+  @include button-with-color(
+    var(--background-brand-purple-primary),
+    var(--borders-brand-purple-primary)
+  );
 
   &:hover,
   &:focus,
