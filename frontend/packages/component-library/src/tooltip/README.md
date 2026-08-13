@@ -4,27 +4,17 @@
 
 | Component                          | Built on                        | Notes                                 |
 | ---------------------------------- | ------------------------------- | ------------------------------------- |
-| [`Tooltip`](./Tooltip.tsx)         | MUI `Tooltip` + `CdoTheme`      | Use this for new code.                |
+| MUI `Tooltip`                      | MUI `Tooltip` + `CdoTheme`      | Use this for new code.                |
 | [`WithTooltip`](./WithTooltip.tsx) | our own SCSS + positioning code | Still what most of the codebase uses. |
 
-`Tooltip` is the first step of the tooltip migration to MUI. It is not yet a
-drop-in replacement for `WithTooltip` — the spacing has not had a design pass
-(see below) — so existing `WithTooltip` callsites stay put for now.
+The new tooltip is **theme-only**, like `Button`, `IconButton` and
+`Breadcrumbs`: there is no wrapper component. Import `Tooltip` straight from
+`@mui/material`, and the `MuiTooltip` entry in
+[`styleOverrides/tooltip.ts`](../themes/code.org/styleOverrides/tooltip.ts)
+(registered on `CdoTheme`) styles and configures it.
 
-Earlier migrations (`Button`, `Breadcrumbs`, `Typography`) added theme overrides
-and left it at that, so callers import from `@mui/material` directly. This one
-also ships a small wrapper component, because `keyboardOnly` and `iconName` are
-behavior, and a theme override can only supply styles.
-
-Two naming wrinkles while both exist: `TooltipProps` refers to the **legacy**
-component, so the new one's props are `CdoTooltipProps`; the legacy component is
-exported as `LegacyTooltip`. Both become the obvious names once `WithTooltip`
-retires.
-
-## `Tooltip`
-
-```javascript
-import {Tooltip} from '@code-dot-org/component-library/tooltip';
+```tsx
+import {Tooltip} from '@mui/material';
 
 const RunButton = () => (
   <Tooltip title="Runs your program">
@@ -35,87 +25,77 @@ const RunButton = () => (
 );
 ```
 
-The CADS tooltip is a single fixed size. Props are MUI's
-[`TooltipProps`](https://mui.com/material-ui/api/tooltip/) — `title`,
-`placement`, `arrow`, `open`, and the rest — plus a few of ours:
+The override is **global** — it styles every MUI tooltip in the app, including
+the handful of Sketch Lab call sites already on bare MUI. This is the first step
+of the tooltip migration; `WithTooltip` and its callers are unchanged.
 
-- `hasCaret` (`boolean`) is our name for MUI's `arrow` — the pointing caret. It
-  defaults to `true` via the theme and, when set, wins over a caller's `arrow`.
-  Pass `hasCaret={false}` to drop the caret.
-- `iconName` (`string`) renders a leading Font Awesome icon before the text.
-  Omit it when there's no icon.
-- `keyboardOnly` (default `false`) — see below.
-- `data-theme` — pass it when the trigger sits inside a `data-theme` subtree.
-  MUI renders the tooltip in a portal on `document.body`, so it does not
-  otherwise inherit the surrounding theme.
+### What the theme sets
 
-Two MUI defaults are flipped, on this component only:
+Two MUI defaults are flipped for the design system, via `defaultProps`:
 
-- `arrow` defaults to `true`. Design system tooltips have tails; MUI's do not.
+- `arrow` defaults to `true` — design system tooltips have a tail. Pass
+  `arrow={false}` to drop it.
 - `describeChild` defaults to `true`, so the text becomes `aria-describedby` on
-  the trigger rather than an `aria-label`. The trigger must carry its own
-  accessible name — the tooltip no longer supplies one.
+  the trigger rather than an `aria-label`. **The trigger must carry its own
+  accessible name** — the tooltip no longer supplies one.
 
-### `keyboardOnly`
+The bubble is one fixed size (the CADS spec drops size options). Text metrics
+come from the theme's `body3` variant; the border-radius and shadow from the
+CADS `--shape-sm` and `--shadow-md` tokens.
 
-```javascript
-<Tooltip title="Delete this file" keyboardOnly>
+### Keyboard-only tooltips
+
+```tsx
+import {keyboardOnlyTooltipProps} from '@code-dot-org/component-library/tooltip';
+
+<Tooltip title="Delete this file" {...keyboardOnlyTooltipProps}>
 ```
 
-The tooltip then appears only when the trigger is reached by keyboard. Hover and
-touch do nothing. Use it for hints that would be noise for a mouse user — an
-icon whose meaning is already clear in context — but are the only way a keyboard
-user learns what the control does.
+Spreading `keyboardOnlyTooltipProps` (`disableHoverListener` +
+`disableTouchListener`) makes the tooltip open only when the trigger is tabbed
+to, never on hover or touch. MUI already gates focus-opening on
+`:focus-visible`, so switching off hover and touch is the whole behavior. Use it
+for a hint a mouse user doesn't need but a keyboard user has no other way to get.
 
-The implementation is two props, because MUI's `Tooltip` already checks
-`:focus-visible` before opening on focus. Switching off the hover and touch
-listeners is the whole behavior: a click that moves focus to the trigger leaves
-the tooltip shut, a Tab to it opens it. Escape closes it either way.
+### A leading icon
 
-`keyboardOnly` is applied after the caller's own props, so it beats an explicit
-`disableHoverListener={false}` rather than being silently overridden.
+There is no `iconName` prop; compose the icon into `title`, and the theme sizes
+it through its `& i` rule:
 
-### Styling
+```tsx
+<Tooltip
+  title={
+    <>
+      <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
+      More information
+    </>
+  }
+>
+```
 
-Styling lives in the `MuiTooltip` theme override
-([src/themes/code.org/styleOverrides/tooltip.ts](../themes/code.org/styleOverrides/tooltip.ts)),
-as it does for every other component migrated to MUI. Text metrics come from the
-theme's `body3` variant (the tooltip's one fixed size), and the border-radius
-and shadow from the CADS `--shape-sm` and `--shadow-md` tokens, rather than being
-restated here.
+### Placement
 
-Unlike those other migrations, every rule is marked with a `data-cdo-tooltip`
-attribute that only this component sets. Sketch Lab already uses bare MUI
-tooltips, and a global override would restyle them; the earlier migrations had no
-such callsites to disturb, because nothing used MUI `Button` or `Breadcrumbs`
-before their overrides landed.
+MUI defaults to `placement="bottom"`, where the legacy tooltip defaulted to
+`direction="onTop"`. A call site moved over from the legacy tooltip that never
+set a direction needs an explicit `placement="top"`, or the tooltip quietly
+moves.
 
-Both the mark and the flipped defaults are temporary. Once `WithTooltip` retires
-and every tooltip in the repo is this one, the override can go global and the
-attribute can go away.
+In a right-to-left locale, `-start`/`-end` placements mirror and plain
+`left`/`right` stay put, matching MUI. This comes free once `CdoTheme` is given
+a `direction` — a follow-up, since setting it flips every MUI popper in the app
+and those haven't been checked in RTL yet.
 
-Spacing between tooltip and trigger is left at MUI's defaults, which are a
-little looser than the SCSS tooltip's. Worth a design pass before this replaces
-`WithTooltip` outright.
+### `data-theme`
 
-### Right-to-left
+MUI renders the tooltip in a portal on `document.body`, so it doesn't inherit a
+surrounding `data-theme` subtree. Pass it through `slotProps` when needed:
 
-`placement="bottom-start"` opens from the right edge in a right-to-left locale,
-and the other three `-start`/`-end` placements mirror the same way. Plain `left`
-and `right` do not, matching MUI: physical placements stay physical. The SCSS
-tooltip mirrored its `onLeft`/`onRight` instead, so when moving a callsite over,
-pick `-start`/`-end` if the side was meant to follow the text.
+```tsx
+<Tooltip title="…" slotProps={{tooltip: {'data-theme': 'Dark'}}}>
+```
 
-Nothing in the tooltip's own styles needs flipping. The padding is horizontally
-symmetric, and the leading icon is placed with flexbox, which already follows
-the text direction.
-
-The mirroring is done in `Tooltip.tsx`, off `<html dir>`, which the server sets
-from the locale. MUI can do this itself, but only from `theme.direction`, and
-`CdoTheme` sets no direction — giving it one would mirror every MUI popper in
-the app, which is a bigger change than this component wants to make. The
-tooltip checks `theme.direction` first and stops mirroring if it is ever set, so
-the two can't cancel out.
+(Or, as a follow-up, the bubble could use `-fixed` tokens and stop caring about
+the surrounding theme at all.)
 
 ## `WithTooltip`
 

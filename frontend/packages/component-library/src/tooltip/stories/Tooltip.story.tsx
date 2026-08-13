@@ -1,17 +1,28 @@
-import {Button, IconButton} from '@mui/material';
+import {Button, IconButton, Tooltip} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
-import {Tooltip} from '../index';
+import {keyboardOnlyTooltipProps} from '../index';
 
+/**
+ * The tooltip is theme-only. Every story imports `Tooltip` straight from
+ * `@mui/material`; the look comes from the `MuiTooltip` theme entry, not a
+ * wrapper component.
+ */
 export default {
   title: 'DesignSystem/Tooltip/Tooltip',
   component: Tooltip,
   parameters: {
-    componentSubtitle: 'Built on MUI. Use this one for new code.',
+    componentSubtitle: 'Bare MUI Tooltip, styled by CdoTheme.',
   },
 } as Meta;
+
+const Row: React.FunctionComponent<{children: React.ReactNode}> = ({
+  children,
+}) => (
+  <div style={{display: 'flex', gap: '2rem', flexWrap: 'wrap'}}>{children}</div>
+);
 
 const KeyboardHint = () => (
   <p>
@@ -20,17 +31,12 @@ const KeyboardHint = () => (
   </p>
 );
 
-const Row: React.FunctionComponent<{children: React.ReactNode}> = ({
-  children,
-}) => (
-  <div style={{display: 'flex', gap: '2rem', flexWrap: 'wrap'}}>{children}</div>
-);
-
 export const Default: StoryFn = () => (
   <>
     <p>
-      Opens on hover and on keyboard focus. Tails are on by default, as in the
-      design system; pass <code>{'arrow={false}'}</code> to drop them.
+      Opens on hover and on keyboard focus. The tail and the
+      describe-the-trigger behavior come from <code>defaultProps</code> in the
+      theme. Pass <code>{'arrow={false}'}</code> to drop the tail.
     </p>
     <Tooltip title="Runs your program">
       <Button variant="contained">Run</Button>
@@ -38,31 +44,28 @@ export const Default: StoryFn = () => (
   </>
 );
 
-/** For hints that are noise to a mouse user but a keyboard user's only cue. */
-export const KeyboardOnly: StoryFn = () => (
-  <>
-    <KeyboardHint />
-    <Tooltip title="Runs your program" keyboardOnly>
-      <Button variant="contained">Run</Button>
-    </Tooltip>
-  </>
-);
-
-/** The caret is on by default; drop it with `hasCaret={false}`. */
+/** MUI's own `arrow` prop, rather than a design-system alias for it. */
 export const Caret: StoryFn = () => (
   <Row>
-    <Tooltip title="With caret" hasCaret>
-      <Button variant="outlined">hasCaret</Button>
+    <Tooltip title="With caret">
+      <Button variant="outlined">default</Button>
     </Tooltip>
-    <Tooltip title="No caret" hasCaret={false}>
-      <Button variant="outlined">hasCaret false</Button>
+    <Tooltip title="No caret" arrow={false}>
+      <Button variant="outlined">arrow false</Button>
     </Tooltip>
   </Row>
 );
 
-/** A leading Font Awesome icon sits before the text. */
+/** A leading icon goes in the title; the theme sizes it with its `& i` rule. */
 export const WithIcon: StoryFn = () => (
-  <Tooltip title="More information" iconName="circle-info">
+  <Tooltip
+    title={
+      <>
+        <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
+        More information
+      </>
+    }
+  >
     <Button variant="outlined">Details</Button>
   </Tooltip>
 );
@@ -83,7 +86,32 @@ export const Placements: StoryFn = () => (
   </div>
 );
 
-/** The portal escapes `data-theme`, so the tooltip needs its own. */
+/** Keyboard-only, via the exported props rather than a component. */
+export const KeyboardOnly: StoryFn = () => (
+  <>
+    <KeyboardHint />
+    <Row>
+      {(
+        [
+          ['play', 'Run your program'],
+          ['rotate-left', 'Undo the last change'],
+          ['trash', 'Delete this file'],
+        ] as const
+      ).map(([iconName, title]) => (
+        <Tooltip key={iconName} title={title} {...keyboardOnlyTooltipProps}>
+          <IconButton color="secondary" aria-label={title}>
+            <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
+          </IconButton>
+        </Tooltip>
+      ))}
+    </Row>
+  </>
+);
+
+/**
+ * The portal escapes `data-theme`, so a tooltip inside a themed subtree needs
+ * its own — passed through `slotProps` since there's no wrapper.
+ */
 export const InsideDarkTheme: StoryFn = () => (
   <div
     data-theme="Dark"
@@ -95,33 +123,14 @@ export const InsideDarkTheme: StoryFn = () => (
       background: 'var(--background-neutral-primary)',
     }}
   >
-    <Tooltip title="Themed tooltip" data-theme="Dark">
-      <Button variant="contained">data-theme passed</Button>
+    <Tooltip
+      title="Themed tooltip"
+      slotProps={{tooltip: {'data-theme': 'Dark'} as never}}
+    >
+      <Button variant="contained">data-theme via slotProps</Button>
     </Tooltip>
     <Tooltip title="Unthemed tooltip">
       <Button variant="contained">data-theme omitted</Button>
     </Tooltip>
   </div>
-);
-
-/** Icon-only controls: obvious to a mouse user, spelled out on focus. */
-export const KeyboardOnlyIconButtons: StoryFn = () => (
-  <>
-    <KeyboardHint />
-    <Row>
-      {(
-        [
-          ['play', 'Run your program'],
-          ['rotate-left', 'Undo the last change'],
-          ['trash', 'Delete this file'],
-        ] as const
-      ).map(([iconName, title]) => (
-        <Tooltip key={iconName} title={title} keyboardOnly>
-          <IconButton variant="outlined" color="secondary" aria-label={title}>
-            <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
-          </IconButton>
-        </Tooltip>
-      ))}
-    </Row>
-  </>
 );
