@@ -1,0 +1,135 @@
+# This is the devcontainer. It gives cdo-dev the state it cannot hold
+# itself.
+#
+# Rails, the apps webpack dev server, and the frontend Vite server all run
+# in the app container, by hand, in a terminal. This file starts nothing
+# for you. It gives them a database, a cache, and the checkout.
+
+services:
+  db:
+    image: ${CDO_DEV_DB_IMAGE:-ghcr.io/code-dot-org/cdo-devdb:latest}
+    healthcheck:
+      test: ["CMD", "mysqladmin", "-uroot", "-pnot-a-secret-password", "ping", "--silent"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+      start_period: 10s
+    ports:
+      # For a GUI client. This avoids 3306, which is usually a native
+      # MySQL already.
+      - "${CDO_DB_PORT:-13306}:3306"
+
+  redis:
+    image: redis:7-bookworm
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+
+  # This emulates S3. Without credentials or an endpoint, a level page
+  # asking for a lesson's PDF gets a 500, not a missing PDF.
+  #
+  # Port 9000 collides with the apps dev server, so it stays unpublished.
+  # Rails reaches it as http://minio:9000 on the compose network instead.
+  minio:
+    image: ${CDO_DEV_MINIO_IMAGE:-minio/minio:latest}
+    command: server /data --quiet
+    environment:
+      - MINIO_ROOT_USER=local-development
+      - MINIO_ROOT_PASSWORD=not-a-secret-password
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  # This runs to completion before the app starts. It creates the buckets
+  # Rails expects, since only reads lazily create them
+  # (lib/cdo/local_development.rb). The list matches
+  # docker/developers/install-s3.sh.
+  init:
+    image: ${CDO_DEV_MINIO_IMAGE:-minio/minio:latest}
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint:
+      - sh
+      - -c
+      - |
+        mc alias set cdo http://minio:9000 local-development not-a-secret-password
+        for b in cdo-ai cdo-animation-library cdo-restricted cdo-sound-library \
+                 cdo-v3-animations cdo-v3-assets cdo-v3-files cdo-v3-libraries \
+                 cdo-v3-sources videos.code.org; do
+          mc mb --ignore-existing "cdo/$$b"
+        done
+
+  app:
+    image: ${CDO_DEV_IMAGE:-ghcr.io/code-dot-org/cdo-dev:latest}
+    volumes:
+      # /code-dot-org is baked into the image. WORKDIR, git's
+      # safe.directory, and the venv's editable installs all assume it.
+      # Point this at a checkout you also build natively only at your own
+      # risk. See the README for the consequences.
+      - ..:/code-dot-org:cached
+
+      # This overrides /code-dot-org/locals.yml. A fresh clone has none. A
+      # natively set-up checkout has one, naming a database this container
+      # cannot reach. Point CDO_LOCALS at your own file instead of editing
+      # the sample, which would dirty the working tree.
+      - type: bind
+        source: ${CDO_LOCALS:-./locals.yml.sample}
+        target: /code-dot-org/locals.yml
+        read_only: true
+
+      # This is yarn's only cache outside the checkout. apps/ and
+      # frontend/ keep theirs inside it. Without this volume, the frontend
+      # workspaces refetch everything on every container recreate. It
+      # mounts all of ~/.yarn, not just cache/, because yarn also writes
+      # index/ there.
+      - type: volume
+        source: yarn-cache
+        target: /home/cdo/.yarn
+    working_dir: /code-dot-org
+    stdin_open: true
+    tty: true
+    init: true
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      init:
+        condition: service_completed_successfully
+    extra_hosts:
+      # Rails, the webpack proxy, and Playwright all address the app as
+      # localhost-studio.code.org.
+      - "localhost-studio.code.org:127.0.0.1"
+    environment:
+      - RAILS_ENV=development
+      # dev-bootstrap's migration probe reads schema_migrations directly
+      # instead of booting Rails, so it needs explicit credentials. rake
+      # still reads locals.yml.
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=not-a-secret-password
+      # Eval source maps and no in-process type checking keep the apps dev
+      # server inside a laptop's memory (apps/README.md). The editor and
+      # CI still type-check.
+      - APPS_DEVTOOL=eval
+      - SKIP_TYPECHECK=1
+      - NODE_OPTIONS=--max-old-space-size=8192
+    ports:
+      - "${CDO_RAILS_PORT:-3000}:3000"
+      - "${CDO_APPS_PORT:-9000}:9000"
+      - "${CDO_FRONTEND_PORT:-3036}:3036"
+      # This port is overridable. A developer already running a Storybook
+      # natively holds the port. A fixed port would block the whole
+      # container.
+      - "${CDO_APPS_STORYBOOK_PORT:-9001}:9001"
+      - "${CDO_DS_STORYBOOK_PORT:-6006}:6006"
+
+volumes:
+  # This has no `name:`, so compose prefixes it with the project, instead
+  # of a machine-global name another project's `down -v` could delete.
+  yarn-cache:

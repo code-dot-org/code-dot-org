@@ -1,0 +1,48 @@
+{
+  "name": "code-dot-org",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/code-dot-org",
+  "remoteUser": "cdo",
+
+  // This runs once per container. A Codespaces prebuild caches the
+  // result. apps/ is deliberately not built here. Downloading the
+  // prebuilt package beats building. Only a commit that changes apps/,
+  // and has never been through CI, needs a manual `yarn build`.
+  "onCreateCommand": "cd /code-dot-org/apps && yarn install && cd /code-dot-org/frontend && yarn install && dev-bootstrap create",
+
+  // This runs on every start, including a bare `docker compose start`.
+  // It fails rather than handing over a half-migrated schema.
+  "postStartCommand": "dev-bootstrap start",
+
+  // Memory and storage cover the apps webpack dev server, Rails, MySQL,
+  // and a jest worker running at once, plus node_modules and the built
+  // apps packages. More CPUs make yarn install faster.
+  "hostRequirements": {
+    "cpus": 8,
+    "memory": "32gb",
+    "storage": "64gb"
+  },
+
+  "forwardPorts": [3000, 9000, 3036, 9001, 6006],
+  "portsAttributes": {
+    "3000": {"label": "Rails (dashboard)", "onAutoForward": "notify"},
+    "9000": {"label": "apps dev server (webpack)", "onAutoForward": "silent"},
+    "3036": {"label": "Vite (frontend/studio)", "onAutoForward": "silent"},
+    "9001": {"label": "apps Storybook", "onAutoForward": "silent"},
+    "6006": {"label": "Design-system Storybook", "onAutoForward": "silent"}
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}

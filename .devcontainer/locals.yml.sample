@@ -1,0 +1,74 @@
+# This is mounted read-only over /code-dot-org/locals.yml, so it wins over
+# a checkout's own. A checkout set up natively names a database this
+# container cannot reach. To change it, copy to .devcontainer/locals.yml
+# and set CDO_LOCALS=./locals.yml (gitignored).
+#
+# Only keys config/*.yml.erb defines will work. An unknown key is a
+# boot-time error. Host and port are separate keys, as in
+# config/development.yml.erb. Folding them together breaks anything that
+# builds a URI from the pieces, including bin/mysql-client-*.
+db_writer: 'mysql://root:not-a-secret-password@db:3306/'
+db_endpoint_writer: db
+db_endpoint_writer_port: 3306
+db_endpoint_proxy_writer: db
+db_endpoint_proxy_writer_port: 3306
+db_endpoint_proxy_reader: db
+db_endpoint_proxy_reader_port: 3306
+db_endpoint_proxy_reporting: db
+db_endpoint_proxy_reporting_port: 3306
+db_credential_admin:
+  username: root
+  password: not-a-secret-password
+db_credential_reader:
+  username: root
+  password: not-a-secret-password
+db_credential_writer:
+  username: root
+  password: not-a-secret-password
+
+redis_url: 'redis://redis:6379/0'
+
+# The minio sidecar. Without an endpoint the S3 client has no credentials.
+# A level page asking whether its lesson has a PDF then becomes a 500.
+aws_s3_emulated: true
+aws_s3_endpoint: 'http://minio:9000'
+aws_s3_access_key_id: local-development
+aws_s3_secret_access_key: not-a-secret-password
+
+# This is empty, not stubbed. 528 encrypted levels then render hollow.
+# That is the price of not holding the production key.
+properties_encryption_key: ''
+
+# config/development.yml.erb clears every global secret, then opts these
+# back in. Without a value, any eager-loading task, `rake db:migrate`
+# especially, dies in Secrets Manager. This matches every `!Secret` there.
+# Keep both files in step.
+applications_gsheet_key: localoverride
+ai_gateway_auth_key: localoverride
+ai_gateway_auth_key_passphrase: localoverride
+ai_gateway_auth_public_key: localoverride
+azure_ai_content_safety_key: localoverride
+device_farm_mobile_project_arn: localoverride
+devinternal_db_writer: 'mysql://root:not-a-secret-password@db:3306/'
+eir_teacher_enrollments_gsheet_key: localoverride
+elevenlabs_api_key: localoverride
+google_gemini_ai_chat_lab_api_key: localoverride
+google_gemini_ai_tutor_api_key: localoverride
+google_vertex_ai_chat_service_account_key: localoverride
+google_vertex_ai_tutor_service_account_key: localoverride
+javabuilder_key_password: localoverride
+javabuilder_private_key: localoverride
+openai_lesson_summaries_api_key: localoverride
+openai_measures_of_learning_api_key: localoverride
+openai_student_learning_api_key: localoverride
+pardot_private_key: localoverride
+slack_bot_token: localoverride
+ta_langfuse_public_key: localoverride
+ta_langfuse_secret_key: localoverride
+tutor_langfuse_public_key: localoverride
+tutor_langfuse_secret_key: localoverride
+
+# false serves the prebuilt apps package the entrypoint downloads from S3,
+# public-read, with no credentials. Set it to true to develop in apps/
+# (README).
+use_my_apps: false
