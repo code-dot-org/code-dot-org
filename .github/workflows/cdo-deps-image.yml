@@ -89,8 +89,12 @@ jobs:
             --format '{{json .Manifest.Digest}}' | tr -d '"')"
           echo "digest=$digest" >> "$GITHUB_OUTPUT"
 
+  # PRs only. Publish runs are gated by build-push itself, which runs the
+  # same suites against the bytes it pushes; running this matrix there too
+  # tested a separate build of the same input twice.
   smoke-test:
     name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
+    if: github.event_name == 'pull_request'
     needs: resolve-base
     strategy:
       fail-fast: false
@@ -158,7 +162,7 @@ jobs:
   build-push:
     name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
-    needs: [resolve-base, smoke-test]
+    needs: resolve-base
     strategy:
       matrix:
         include:
@@ -215,8 +219,7 @@ jobs:
             -t cdo-deps:publish \
             .
 
-      # The matrix tested images built on other runners. These test the one
-      # actually being published.
+      # The quality gate for everything this job pushes.
       - name: Smoke test cdo-build
         run: ./docker/build/smoke-test.sh cdo-build:ci docker
 
@@ -301,7 +304,3 @@ jobs:
             "$IMAGE:git-${{ github.sha }}-amd64" \
             "$IMAGE:git-${{ github.sha }}-arm64"
 
-      - name: Inspect a published manifest
-        env:
-          TAGS: ${{ steps.meta.outputs.tags }}
-        run: docker buildx imagetools inspect "$(echo "$TAGS" | head -1)"

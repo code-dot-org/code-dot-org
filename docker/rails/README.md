@@ -203,6 +203,7 @@ pattern.
 | `git-<sha>` | staging | the commit that published |
 | `latest` | staging | most recent staging publish |
 | `dev-<sha>` | other branches | manual dispatch |
+| `git-<sha>-amd64`, `git-<sha>-arm64` | any publish run | per-arch inputs to the merge job; not for consumers |
 
 `git-<sha>` names the source a publish built, but publishes happen on
 image-definition changes and on the `cdo-deps` chain, not on every staging
@@ -210,11 +211,12 @@ commit, so most shas never get a tag. Do not treat the tag set as a per-commit
 contract.
 
 `.github/workflows/cdo-rails-image.yml` runs the smoke matrix on docker and
-podman, runs `verify.sh`, and publishes from staging. It is not triggered by
-source changes — only by changes to this directory, to the key action, or to
-the workflow, plus the chain from `cdo-deps-image` and manual dispatch. The
-publish job re-runs both suites against the bytes it is about to push, because
-the earlier jobs tested images built on other runners.
+podman and boots the image through `verify.sh` on every PR that can change
+the image. It is not triggered by source changes — only by changes to this
+directory, to the key action, or to the workflow, plus the chain from
+`cdo-deps-image` and manual dispatch. On a publish run those jobs do not
+repeat: each per-arch publish job runs both suites against the bytes it
+pushes, which is the gate that counts.
 
 The workflow resolves `cdo-deps` by the content key its own checkout implies
 and fails, loudly, if no such layer has been published. Rebase onto the staging

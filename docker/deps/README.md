@@ -154,6 +154,7 @@ Published as `ghcr.io/code-dot-org/cdo-deps`.
 | `git-<sha>` | staging | the commit that published |
 | `latest` | staging | most recent staging publish |
 | `dev-<sha>` | other branches | manual dispatch |
+| `git-<sha>-amd64`, `git-<sha>-arm64` | any publish run | per-arch inputs to the merge job; not for consumers |
 
 Each tag is a multi-platform manifest over amd64 and arm64: the lockfile
 names both `x86_64-linux` and `aarch64-linux`, each architecture builds
@@ -165,11 +166,13 @@ different bytes. (The manifest-list digest is the pin; each platform
 resolves its own image through it.)
 
 `.github/workflows/cdo-deps-image.yml` builds and smoke-tests on docker and
-podman, on amd64 and arm64, for every PR touching the key inputs, and
-publishes from staging. It also gates `docker/build`, since every job there
-builds `cdo-build` anyway. The workflow is chained off `cdo-base-image`
-rather than scheduled, so this layer rebuilds on the base that just shipped
-and a failed base rebuilds nothing.
+podman, on amd64 and arm64, for every PR touching the key inputs. It also
+gates `docker/build`, since every job there builds `cdo-build` anyway. On a
+publish run the smoke matrix does not repeat: each per-arch publish job runs
+the same suites against the bytes it pushes, which is the gate that counts.
+The workflow is chained off `cdo-base-image` rather than scheduled, so this
+layer rebuilds on the base that just shipped and a failed base rebuilds
+nothing.
 
 ## Things that will bite
 

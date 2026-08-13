@@ -91,8 +91,12 @@ jobs:
           }
           echo "digest=$digest" >> "$GITHUB_OUTPUT"
 
+  # PRs only. Publish runs are gated by build-push itself, which runs the
+  # same suites against the bytes it pushes; running this matrix there too
+  # tested a separate build of the same input twice.
   smoke-test:
     name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
+    if: github.event_name == 'pull_request'
     needs: resolve-deps
     strategy:
       fail-fast: false
@@ -144,8 +148,11 @@ jobs:
   # proves schema load, a model write, a worker pass, and a signed-in API
   # read over HTTP — the check the Drone image cannot express, since it
   # tests the deployed bytes rather than a CI-only environment.
+  # PRs only, like smoke-test: build-push runs verify.sh on the publish
+  # bytes.
   rails-boot:
     name: rails boots from the image (${{ matrix.arch }})
+    if: github.event_name == 'pull_request'
     needs: resolve-deps
     strategy:
       fail-fast: false
@@ -195,7 +202,7 @@ jobs:
   build-push:
     name: build and push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
-    needs: [resolve-deps, smoke-test, rails-boot]
+    needs: resolve-deps
     strategy:
       matrix:
         include:
@@ -240,8 +247,7 @@ jobs:
             --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
             -t cdo-rails:publish .
 
-      # The matrix and rails-boot tested images built on other runners. These
-      # test the bytes actually being published.
+      # The quality gate for everything this job pushes.
       - name: Smoke test
         run: ./docker/rails/smoke-test.sh cdo-rails:publish docker
 
@@ -310,7 +316,3 @@ jobs:
             "$IMAGE:git-${{ github.sha }}-amd64" \
             "$IMAGE:git-${{ github.sha }}-arm64"
 
-      - name: Inspect a published manifest
-        env:
-          TAGS: ${{ steps.meta.outputs.tags }}
-        run: docker buildx imagetools inspect "$(echo "$TAGS" | head -1)"
