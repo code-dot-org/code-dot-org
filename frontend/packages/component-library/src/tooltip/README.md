@@ -72,10 +72,11 @@ Compose a leading icon into `title`; the theme sizes it:
 
 ### Placement
 
-MUI defaults to `placement="bottom"`, where the legacy tooltip defaulted to
-`direction="onTop"`. A call site moved over from the legacy tooltip that never
-set a direction needs an explicit `placement="top"`, or the tooltip quietly
-moves.
+Placement stays MUI's centered `bottom`. Pass `placement="bottom-start"` (or
+another `-start`/`-end`) when the bubble should line up with the trigger edge;
+the theme pins the caret to that edge. A call site moved over from the legacy
+tooltip that never set a direction still needs an explicit `placement="top"` if
+it used to sit above the trigger.
 
 In a right-to-left locale, `-start`/`-end` placements mirror and plain
 `left`/`right` stay put, matching MUI. This comes free once `CdoTheme` is given

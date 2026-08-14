@@ -66,8 +66,20 @@ describe('Design System - Tooltip (theme-only)', () => {
       renderTooltip();
       await openAndGetBubble();
       const arrow = document.querySelector('.MuiTooltip-arrow') as HTMLElement;
-      expect(getComputedStyle(arrow).fontSize).toBe('0.5rem');
+      expect(getComputedStyle(arrow).fontSize).toBe('0.375rem');
       expect(getComputedStyle(arrow).color).toBe(BACKGROUND);
+    });
+
+    it('sits 8px from the trigger when the caret is on (4px air + 4px tail)', async () => {
+      renderTooltip();
+      const s = getComputedStyle(await openAndGetBubble());
+      expect(s.marginTop).toBe('0.5rem');
+    });
+
+    it('sits 6px from the trigger when the caret is off', async () => {
+      renderTooltip({arrow: false});
+      const s = getComputedStyle(await openAndGetBubble());
+      expect(s.marginTop).toBe('0.375rem');
     });
   });
 
@@ -90,6 +102,34 @@ describe('Design System - Tooltip (theme-only)', () => {
       const trigger = screen.getByRole('button');
       expect(trigger).toHaveAttribute('aria-describedby');
       expect(trigger).not.toHaveAttribute('aria-label');
+    });
+
+    it("defaults to MUI's centered bottom", async () => {
+      renderTooltip();
+      await openAndGetBubble();
+      expect(document.querySelector('[data-popper-placement]')).toHaveAttribute(
+        'data-popper-placement',
+        'bottom',
+      );
+    });
+
+    it('pins the caret to the bubble start edge, not the trigger center', async () => {
+      renderTooltip({placement: 'bottom-start'});
+      await openAndGetBubble();
+      // Popper centers the caret with inline `left: 0; transform:
+      // translate(x, 0)`; the theme beats that with !important rules keyed on
+      // data-popper-placement. jsdom's cascade wrongly lets inline styles win
+      // over stylesheet !important, so assert on the injected rule, not
+      // getComputedStyle.
+      const css = Array.from(document.querySelectorAll('style'))
+        .map(el => el.textContent)
+        .join('\n');
+      const rule = css.match(
+        /[^{}]*\[data-popper-placement="bottom-start"\][^{}]*\{[^}]*\}/,
+      )?.[0];
+      expect(rule).toContain('.MuiTooltip-arrow');
+      expect(rule).toContain('transform:none!important');
+      expect(rule).toContain('left:0.75rem!important');
     });
   });
 
