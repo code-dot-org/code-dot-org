@@ -78,7 +78,7 @@ command prints a reminder. Switching between bundlers cleans
 `build/package/js` automatically, and `yarn start --rspack` cleans it on
 every start (serving over a populated directory costs rspack about 18
 seconds), so the first compile after starting re-copies ace, piskel and
-the pyodide wheels. Source maps work differently under rspack; see
+the pyodide wheels. Source maps default to covering `src/` only; see
 [Source maps under rspack](#source-maps-under-rspack).
 
 Two other levers:
@@ -126,60 +126,30 @@ Two shortcuts combine these levers:
 - `yarn start:cheapest` — `APPS_DEVTOOL=eval` plus `SKIP_TYPECHECK=1`, for the
   lowest-memory dev server.
 
+Both shortcuts describe webpack economics; under `--rspack` the src/-scoped
+default already uses less memory than `eval` (see below), so only
+`SKIP_TYPECHECK` retains its meaning there.
+
 ### Source maps under rspack
 
-Under `--rspack`, the dev server *and* one-shot dev builds default to `eval`
-— no source maps — because rspack's whole-app `-module` map modes are
-currently unusable at our module count (beyond the reach of Node heap caps;
-upstream issue pending). The dev server exceeds 22GB during rebuilds with
-them; a one-shot `yarn build --rspack` forced to full maps was OOM-killed on
-a 30GB machine, because a build compiles every dynamic import up front where
-the dev server defers them. The active mode is printed at startup. Three
-ways to get original-source stepping back:
+Under `--rspack`, the default is source maps for everything in `src/` and
+nothing else: you step through your own TS/JSX in DevTools, and node_modules
+stays unmapped. That boundary is what keeps it affordable — node_modules
+holds over half the module graph, and mapping it is what makes rspack's
+whole-app `-module` modes unusable here (the dev server exceeds 22GB during
+rebuilds; a one-shot `yarn build --rspack` forced to full maps was OOM-killed
+on a 30GB machine, since a build compiles every dynamic import up front where
+the dev server defers them). Measured against no maps at all, the default
+costs about 2 seconds of startup and 2 seconds per shared-file rebuild, and
+*less* memory, because unmapped modules skip eval wrapping entirely. A
+one-shot `yarn build --rspack` pays about 4 seconds and 0.7GB for the same
+maps in its output.
 
-- stay on webpack `yarn start` (unchanged);
-- `APPS_DEVTOOL=eval-cheap-module-source-map yarn start --rspack` — full maps,
-  at the measured memory cost (big-RAM machines only);
-- `APPS_DEVTOOL_SCOPE` — scoped maps, below.
-
-`APPS_DEVTOOL_SCOPE` maps only the parts of `src/` you are working on back to
-original TS/JSX, and leaves everything else unmapped. This costs *less* memory
-than `APPS_DEVTOOL=eval` (unmapped modules skip eval wrapping entirely).
-
-```
-APPS_DEVTOOL_SCOPE=music,lab2 yarn start --rspack
-```
-
-Names are `src/`-relative path prefixes, and may be a directory or a single
-module (`code-studio/header` matches `header.js`). Recipes for common working
-sets:
-
-| Working on...            | Scope                                                       |
-| ------------------------ | ----------------------------------------------------------- |
-| any lab2 lab             | `<lab>,lab2` (e.g. `music,lab2`, `weblab2,lab2`)            |
-| Sprite Lab or Game Lab   | `p5lab` (they share the engine, block definitions included)  |
-| App Lab                  | `applab`, or `applab,storage` when editing data blocks      |
-| the code-studio header   | `code-studio/header,code-studio/components/header,lab2/header` |
-| teacher dashboard        | `templates/teacherDashboard,templates/studioHomepages`      |
-
-Scope controls where you *step*, not what runs: out-of-scope code executes
-normally and shows transpiled if you step into it. A missed guess fails soft —
-append another name and restart; rspack server restarts are fast. Known
-rough edge: unmapped modules show numeric internal names in DevTools.
-
-As each name first matches, the server says how many modules it covered, so a
-typo does not pass silently:
-
-```
-[rspack] scoped source maps: music: 84 modules, lab2: 203 modules; everything
-else is unmapped
-```
-
-A name that has matched nothing yet is called out separately, and it is worth
-reading literally: dynamic imports compile only once a page requests them, so
-a name covering only lazily-loaded code starts empty and reports itself when
-those modules arrive. If it stays empty after you have loaded the page you
-care about, it is a typo.
+One lever adjusts it, and the active mode is printed at startup:
+`APPS_DEVTOOL=eval yarn start --rspack` turns maps off everywhere, trading
+symbols for the ~2 seconds of startup and per-rebuild time they cost. Known
+rough edge either way: unmapped modules (node_modules, or everything under
+`eval`) show numeric internal names in DevTools.
 
 ## Testing
 

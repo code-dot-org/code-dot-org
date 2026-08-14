@@ -30,19 +30,12 @@ module.exports = {
   // For details, see:
   // https://github.com/code-dot-org/code-dot-org/blob/staging/apps/docs/build.md
   DEBUG_MINIFIED: !!getMoocEnv('DEBUG_MINIFIED'),
-  // Overrides the webpack `devtool` (source map) setting for `yarn start`.
-  // `yarn start` defaults to 'eval-cheap-module-source-map' to keep memory
-  // usage manageable. Set APPS_DEVTOOL=eval for the lowest memory (no source
-  // maps) or APPS_DEVTOOL=eval-source-map for the highest fidelity (most
-  // memory).
+  // Overrides the `devtool` (source map) setting for `yarn start`.
+  // Under webpack (default 'eval-cheap-module-source-map'), =eval is the
+  // lowest-memory choice.  Under --rspack (default: maps for src/ only),
+  // =eval trades symbols for ~2s of startup and per-rebuild time — the
+  // src/ default already costs less memory.  Empty means unset.
   APPS_DEVTOOL: process.env.APPS_DEVTOOL,
-  // rspack only: comma-separated src/ path prefixes (e.g. `music,lab2`, or
-  // a single module like `code-studio/header`) that get original-source
-  // eval maps while every other module stays unmapped.  Recipes for common
-  // working sets are in the README.  Costs less memory than even
-  // APPS_DEVTOOL=eval, while rspack's whole-app -module map modes exceed
-  // 22GB at our module count.  Takes precedence over APPS_DEVTOOL.
-  APPS_DEVTOOL_SCOPE: process.env.APPS_DEVTOOL_SCOPE,
   // If set, skips the parallel ForkTsCheckerWebpackPlugin type check, freeing
   // ~2GB of memory during `yarn start`. Your editor and CI still type-check.
   SKIP_TYPECHECK: getBoolEnv('SKIP_TYPECHECK'),
