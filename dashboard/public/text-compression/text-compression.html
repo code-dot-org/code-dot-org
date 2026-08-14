@@ -40,8 +40,8 @@
     .widgetLeftHeader, .widgetRightHeader {
       height: 40px;
       padding: 0 10px;
-      background: #8c52ba;
-      color: #fff;
+      background: var(--background-brand-purple-primary);
+      color: var(--text-neutral-white-fixed);
     }
     .widgetInner {
       table-layout: fixed;
@@ -100,6 +100,18 @@
     }
     #dictionary {
       height: 100%;
+    }
+    /* Two IDs outrank the global #again-button / #continue-button fills in
+       application.scss; fills match LegacyButton's cancel / primary types. */
+    #enter-your-own #again-button {
+      background-color: var(--background-neutral-primary);
+      border: 2px solid var(--borders-neutral-strong);
+      color: var(--text-neutral-primary);
+    }
+    #enter-your-own #continue-button {
+      background-color: var(--background-brand-purple-primary);
+      border: 1px solid var(--background-brand-purple-primary);
+      color: var(--text-neutral-white-fixed);
     }
   </style>
 </head>
