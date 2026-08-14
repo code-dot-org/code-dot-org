@@ -16,6 +16,12 @@
   flex: 0;
 }
 
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
+
 .content {
   flex: 1;
   margin: 10px;

@@ -695,7 +695,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 </WithTooltip>
               )}
             </div>
-            <nav id={resourcePanelTabsElementId} className={styles.tabs}>
+            <nav
+              id={resourcePanelTabsElementId}
+              className={classNames(
+                styles.tabs,
+                hasTabs && styles.tabsWithContent
+              )}
+            >
               {getTypedKeys(availableTabs).map(tab => (
                 <WithTooltip
                   tooltipProps={{

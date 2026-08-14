@@ -30,11 +30,17 @@
     }
   }
 
+  // Kept at a fixed width and always rendered (even with no tabs), so it
+  // continues to anchor the sidebar's overall width - only the top border is
+  // conditional, since an empty nav with a border reads as a stray line.
   .tabs {
     width: 3.5rem;
     margin-top: 0;
     display: flex;
     flex-direction: column;
+  }
+
+  .tabsWithContent {
     border-top: variables.$default-border;
   }
 

@@ -43,6 +43,14 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
+  // Quiz has no top tab content today - the AI Tutor tab isn't built yet (it
+  // needs hiddenContextCallback/aiTutorSystemPrompt, neither of which is
+  // wired up here), so there's nothing to expand the panel into, and the
+  // collapse toggle itself never renders (ResourcePanel hides it when there
+  // are no tabs). Without this, isResourcePanelCollapsed can never become
+  // true, and the panel would stay at its wide min-width forever. Revisit
+  // once the AI Tutor tab actually exists.
+  const hasResourcePanelTabs = false;
 
   useEffect(() => {
     if (!scriptId) {
@@ -105,9 +113,9 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     <div id="quiz-lab" className={styles.quiz}>
       <ResourcePanel
         className={
-          isResourcePanelCollapsed
-            ? styles.resourcePanelCollapsed
-            : styles.resourcePanel
+          hasResourcePanelTabs && !isResourcePanelCollapsed
+            ? styles.resourcePanel
+            : styles.resourcePanelCollapsed
         }
         levelProperties={levelProperties}
         isRunning={false}
@@ -115,6 +123,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         hasEdited={Object.keys(selections).length > 0}
         hideNavigation
       />
+      <div className={styles.divider} />
       <div className={styles.content}>
         <p>Quiz: {levelProperties.name} (not yet implemented)</p>
         {!scriptId && <p>Preview outside a script has no attempt tracking.</p>}
