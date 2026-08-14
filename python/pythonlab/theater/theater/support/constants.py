@@ -13,6 +13,10 @@ MAX_PAUSE_SECONDS = 655.35
 # Gif stream size ceiling (30 MB).
 MAX_GIF_BYTES = 31457280
 
+# Pixel ceiling for a single image, blank or loaded (4096x4096, or 64 MB of
+# RGBA).
+MAX_IMAGE_PIXELS = 16777216
+
 # Frame ceiling, counting the closing frame. Pillow holds a palette copy of
 # every frame while encoding, ~160 KB each, so this bounds the worker's heap
 # far more tightly than MAX_GIF_BYTES does: simple frames compress to almost

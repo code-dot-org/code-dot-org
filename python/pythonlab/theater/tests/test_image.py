@@ -1,9 +1,38 @@
+import pytest
+from PIL import Image as PILImage
+
 from theater import Color, Image
+from theater.support import image as image_module
+from theater.support.constants import MAX_IMAGE_PIXELS
 
 
 def test_blank_image_dimensions_round():
   image = Image(20 / 3, 10.6)
   assert (image.get_width(), image.get_height()) == (7, 11)
+
+
+def test_blank_image_rejects_oversized_dimensions():
+  with pytest.raises(ValueError):
+    Image(MAX_IMAGE_PIXELS, 2)
+
+
+def test_blank_image_rejects_negative_dimensions():
+  with pytest.raises(ValueError):
+    Image(-5, 10)
+
+
+def test_blank_image_allows_the_largest_permitted_size():
+  side = int(MAX_IMAGE_PIXELS**0.5)
+  image = Image(side, side)
+  assert (image.get_width(), image.get_height()) == (side, side)
+
+
+def test_loading_rejects_an_oversized_file(tmp_path, monkeypatch):
+  path = tmp_path / "big.png"
+  PILImage.new("RGBA", (40, 40)).save(path)
+  monkeypatch.setattr(image_module, "MAX_IMAGE_PIXELS", 100)
+  with pytest.raises(ValueError):
+    Image(str(path))
 
 
 def test_pixel_access_accepts_floats():

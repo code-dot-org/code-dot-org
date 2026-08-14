@@ -1,6 +1,7 @@
 from PIL import Image as PILImage
 
 from .color import Color, as_color
+from .constants import MAX_IMAGE_PIXELS
 
 # Loaded images larger than this are scaled down, preserving aspect ratio.
 MAX_WIDTH = 400
@@ -21,7 +22,7 @@ class Image:
   """A bitmap image.
 
   Construct from a filename (read from the Pyodide filesystem), from another
-  Image (copy), or from width/height (a blank transparent image).
+  Image (copy), or from width/height (a blank white image).
   """
 
   def __init__(self, *args):
@@ -33,7 +34,8 @@ class Image:
       self._pil = args[0].convert("RGBA")
     elif len(args) == 2:
       width, height = int(round(args[0])), int(round(args[1]))
-      self._pil = PILImage.new("RGBA", (width, height), (0, 0, 0, 0))
+      _check_dimensions(width, height)
+      self._pil = PILImage.new("RGBA", (width, height), (255, 255, 255, 255))
     else:
       raise TypeError("Image expects a filename, an Image, or (width, height)")
 
@@ -65,8 +67,21 @@ class Image:
     return self._pil
 
 
+def _check_dimensions(width, height):
+  if width < 0 or height < 0:
+    raise ValueError("An image's width and height cannot be negative")
+  if width * height > MAX_IMAGE_PIXELS:
+    raise ValueError(
+      f"The image is too large; the limit is {MAX_IMAGE_PIXELS} pixels"
+    )
+
+
 def _load_and_fit(filename):
-  pil = PILImage.open(filename).convert("RGBA")
+  # open() only reads the header, so the size check happens before convert()
+  # spends memory decoding the file.
+  pil = PILImage.open(filename)
+  _check_dimensions(pil.width, pil.height)
+  pil = pil.convert("RGBA")
   width, height = pil.width, pil.height
   if width <= MAX_WIDTH and height <= MAX_HEIGHT:
     return pil
