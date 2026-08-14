@@ -1,15 +1,34 @@
-# Exactly one correct answer chosen from a list of choices.
+# == Schema Information
 #
-# `question` shape:
-#   {
-#     "stem" => "What is 2 + 2?",
-#     "choices" => [{"id" => "a", "text" => "3"}, {"id" => "b", "text" => "4"}, ...],
-#     "correct_choice_id" => "b"
-#   }
+# Table name: quiz_questions
 #
-# Choices are keyed by a stable `id`, not by text or position, so grading
-# and editing don't break when choice text is reworded or reordered.
+#  id            :bigint           not null, primary key
+#  type          :string(255)      not null
+#  question_key  :string(36)       not null
+#  parent_id     :bigint
+#  question_name :string(255)      not null
+#  question      :json             not null
+#  explanation   :text(65535)
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+# Indexes
+#
+#  index_quiz_questions_on_parent_id     (parent_id)
+#  index_quiz_questions_on_question_key  (question_key)
+#
 class MultipleChoiceQuestion < QuizQuestion
+  # Exactly one correct answer chosen from a list of choices.
+  #
+  # `question` shape:
+  #   {
+  #     "stem" => "What is 2 + 2?",
+  #     "choices" => [{"id" => "a", "text" => "3"}, {"id" => "b", "text" => "4"}, ...],
+  #     "correct_choice_id" => "b"
+  #   }
+  #
+  # Choices are keyed by a stable `id`, not by text or position, so grading
+  # and editing don't break when choice text is reworded or reordered.
   validate :validate_question_shape
 
   def auto_gradable?

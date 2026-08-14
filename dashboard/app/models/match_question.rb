@@ -1,18 +1,37 @@
-# Pairs of prompts and answers the student must match to each other.
+# == Schema Information
 #
-# `question` shape:
-#   {
-#     "stem" => "Match each animal to its sound.",
-#     "pairs" => [
-#       {"id" => "1", "prompt" => "Cat", "answer" => "Meow"},
-#       {"id" => "2", "prompt" => "Dog", "answer" => "Bark"}
-#     ]
-#   }
+# Table name: quiz_questions
 #
-# Each pair's `id` is what a student's response references when matching a
-# prompt to an answer; there's no separate "correct answer" field because
-# the pairing itself defines correctness.
+#  id            :bigint           not null, primary key
+#  type          :string(255)      not null
+#  question_key  :string(36)       not null
+#  parent_id     :bigint
+#  question_name :string(255)      not null
+#  question      :json             not null
+#  explanation   :text(65535)
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+# Indexes
+#
+#  index_quiz_questions_on_parent_id     (parent_id)
+#  index_quiz_questions_on_question_key  (question_key)
+#
 class MatchQuestion < QuizQuestion
+  # Pairs of prompts and answers the student must match to each other.
+  #
+  # `question` shape:
+  #   {
+  #     "stem" => "Match each animal to its sound.",
+  #     "pairs" => [
+  #       {"id" => "1", "prompt" => "Cat", "answer" => "Meow"},
+  #       {"id" => "2", "prompt" => "Dog", "answer" => "Bark"}
+  #     ]
+  #   }
+  #
+  # Each pair's `id` is what a student's response references when matching a
+  # prompt to an answer; there's no separate "correct answer" field because
+  # the pairing itself defines correctness.
   validate :validate_question_shape
 
   private def validate_question_shape
