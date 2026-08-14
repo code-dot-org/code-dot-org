@@ -19,8 +19,9 @@ $select-user-type-button-text-color-hover: #000;
 $select-user-type-button-background-color-selected: #0093a4;
 $select-user-type-button-text-color-selected: #fff;
 
-@import "bootstrap";
-@import "bootstrap/v2-to-v3";
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+@import './bootstrap-v2-to-v3';
+@import 'NpsSurveyBlock';
 
 // Bootstrap runtime-themable brand-purple primary button.
 .btn-primary {
