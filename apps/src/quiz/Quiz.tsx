@@ -1,3 +1,5 @@
+import RadioButton from '@code-dot-org/component-library/radioButton';
+import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
 import {getAppOptionsAuthoringQuizQuestions} from '@cdo/apps/lab2/projects/utils';
@@ -27,6 +29,11 @@ interface QuizQuestionSummary {
 interface QuizLevelProperties extends LevelProperties {
   scriptId?: number;
   quizQuestions?: QuizQuestionSummary[];
+  // Student-facing heading, same role `title` plays on Multi/Match/
+  // FreeResponse/LevelGroup levels - see Quiz#serialized_attrs. Falls back
+  // to the level's internal `name` when unset, since `name` can't be
+  // changed once a level is in a script.
+  title?: string;
 }
 
 interface AttemptResult {
@@ -34,31 +41,24 @@ interface AttemptResult {
   maxScore: number | null;
 }
 
-// A single question's in-progress answer: one choice id (multiple choice),
-// several choice ids (multiple select), or free text (free response).
-type QuestionResponseValue = string | string[];
+// A single question's in-progress answer: a chosen choice id. P0 is
+// multiple choice only for now - see the filter in the quiz-taking view
+// below; this will need to widen again (e.g. string | string[]) once
+// MultipleSelectQuestion/FreeResponseQuestion come back.
+type QuestionResponseValue = string;
 
-const isAnswered = (value: QuestionResponseValue | undefined) =>
-  Array.isArray(value) ? value.length > 0 : !!value;
+const isAnswered = (value: QuestionResponseValue | undefined) => !!value;
 
-// Shapes response_data to match what each subtype's #grade expects - see
-// MultipleChoiceQuestion/MultipleSelectQuestion/FreeResponseQuestion.
-const buildResponseData = (
-  question: QuizQuestionSummary,
-  value: QuestionResponseValue | undefined
-) => {
-  if (question.type === 'MultipleSelectQuestion') {
-    return {selectedChoiceIds: Array.isArray(value) ? value : []};
-  }
-  if (question.type === 'FreeResponseQuestion') {
-    return {text: typeof value === 'string' ? value : ''};
-  }
-  return {selectedChoiceId: typeof value === 'string' ? value : ''};
-};
+// Shapes response_data to match what MultipleChoiceQuestion#grade expects.
+const buildResponseData = (value: QuestionResponseValue | undefined) => ({
+  selectedChoiceId: value || '',
+});
 
 const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const {
     id: levelId,
+    name,
+    title,
     scriptId,
     quizQuestions,
   } = levelProperties as QuizLevelProperties;
@@ -105,14 +105,11 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const setResponse = (questionId: number, value: QuestionResponseValue) =>
     setResponses(prev => ({...prev, [questionId]: value}));
 
-  const toggleMultiSelectChoice = (questionId: number, choiceId: string) =>
-    setResponses(prev => {
-      const current = (prev[questionId] as string[]) || [];
-      const next = current.includes(choiceId)
-        ? current.filter(id => id !== choiceId)
-        : [...current, choiceId];
-      return {...prev, [questionId]: next};
-    });
+  // P0 scope: multiple choice only - see the filter in the quiz-taking view
+  // below.
+  const multipleChoiceQuestions = (quizQuestions || []).filter(
+    question => question.type === 'MultipleChoiceQuestion'
+  );
 
   // One submit for the whole quiz: post every answered question's response,
   // then finalize the attempt so score/max_score get totaled server-side.
@@ -121,7 +118,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       return;
     }
 
-    const answeredQuestions = (quizQuestions || []).filter(question =>
+    const answeredQuestions = multipleChoiceQuestions.filter(question =>
       isAnswered(responses[question.id])
     );
     await Promise.all(
@@ -131,7 +128,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           JSON.stringify({
             quizAttemptId: attemptId,
             quizQuestionId: question.id,
-            responseData: buildResponseData(question, responses[question.id]),
+            responseData: buildResponseData(responses[question.id]),
           }),
           true,
           {'Content-Type': 'application/json'}
@@ -176,84 +173,73 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
             initialQuestions={quizQuestions || []}
           />
         ) : (
-          <>
-            <p>Quiz: {levelProperties.name}</p>
-            {!scriptId && (
-              <p>Preview outside a script has no attempt tracking.</p>
-            )}
-            <ol>
-              {(quizQuestions || []).map(question => (
-                <li key={question.id}>
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <p>Quiz: {title || name}</p>
+              {!scriptId && (
+                <p>Preview outside a script has no attempt tracking.</p>
+              )}
+            </div>
+            <ol className={styles.questionList}>
+              {multipleChoiceQuestions.map((question, index) => (
+                <li key={question.id} className={styles.questionSection}>
+                  <p className={styles.questionEyebrow}>
+                    Question {index + 1} of {multipleChoiceQuestions.length}
+                  </p>
                   <p>{question.stem || question.questionName}</p>
 
-                  {question.type === 'MultipleChoiceQuestion' &&
-                    question.choices && (
-                      <div>
-                        {question.choices.map(choice => (
-                          <label key={choice.id} style={{display: 'block'}}>
-                            <input
-                              type="radio"
+                  {question.choices && (
+                    <fieldset className={styles.answers}>
+                      <legend className={styles.answersLegend}>
+                        Answer options
+                      </legend>
+                      {question.choices.map(choice => {
+                        const isChecked = responses[question.id] === choice.id;
+                        return (
+                          <div
+                            key={choice.id}
+                            className={classNames(
+                              styles.answerOption,
+                              isChecked && styles.answerOptionChecked
+                            )}
+                          >
+                            <RadioButton
+                              checked={isChecked}
                               name={`question-${question.id}`}
                               value={choice.id}
-                              checked={responses[question.id] === choice.id}
                               disabled={!!result}
                               onChange={() =>
                                 setResponse(question.id, choice.id)
                               }
-                            />
-                            {choice.text}
-                          </label>
-                        ))}
-                      </div>
-                    )}
-
-                  {question.type === 'MultipleSelectQuestion' &&
-                    question.choices && (
-                      <div>
-                        {question.choices.map(choice => (
-                          <label key={choice.id} style={{display: 'block'}}>
-                            <input
-                              type="checkbox"
-                              value={choice.id}
-                              checked={(
-                                (responses[question.id] as string[]) || []
-                              ).includes(choice.id)}
-                              disabled={!!result}
-                              onChange={() =>
-                                toggleMultiSelectChoice(question.id, choice.id)
-                              }
-                            />
-                            {choice.text}
-                          </label>
-                        ))}
-                      </div>
-                    )}
-
-                  {question.type === 'FreeResponseQuestion' && (
-                    <textarea
-                      value={(responses[question.id] as string) || ''}
-                      disabled={!!result}
-                      rows={4}
-                      style={{width: '100%'}}
-                      onChange={e => setResponse(question.id, e.target.value)}
-                    />
+                            >
+                              <span className={styles.answerOptionLetter}>
+                                {choice.id.toUpperCase()}.
+                              </span>
+                              <span>{choice.text}</span>
+                            </RadioButton>
+                          </div>
+                        );
+                      })}
+                    </fieldset>
                   )}
                 </li>
               ))}
             </ol>
-            <button
-              type="button"
-              disabled={!attemptId || !!result}
-              onClick={() => submitQuiz()}
-            >
-              Submit Quiz
-            </button>
-            {result && (
-              <p>
-                Final score: {result.score} / {result.maxScore}
-              </p>
-            )}
-          </>
+            <div className={styles.cardFooter}>
+              <button
+                type="button"
+                disabled={!attemptId || !!result}
+                onClick={() => submitQuiz()}
+              >
+                Submit Quiz
+              </button>
+              {result && (
+                <p>
+                  Final score: {result.score} / {result.maxScore}
+                </p>
+              )}
+            </div>
+          </div>
         )}
       </div>
     </div>
