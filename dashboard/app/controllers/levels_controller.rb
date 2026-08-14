@@ -12,7 +12,7 @@ class LevelsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 
-  before_action :set_level, only: [:show, :edit, :update, :destroy]
+  before_action :set_level, only: [:show, :edit, :update, :destroy, :author_quiz_questions]
 
   LEVELS_PER_PAGE = 30
 
@@ -288,26 +288,19 @@ class LevelsController < ApplicationController
 
   # GET /levels/:id/author_quiz_questions
   #
-  # A separate, levelbuilder-only page for authoring a Quiz level's
-  # questions - distinct from the plain edit form and from the student-facing
-  # quiz-taking view. POC scope: MultipleChoiceQuestion only; the "Question
-  # Bank" sidebar is a placeholder, no filtering/browsing/reuse yet.
+  # Renders the same lab2 show page a student would see, but with
+  # is_authoring_quiz_questions threaded through app_options (see
+  # LevelsHelper#lab2_options) so Quiz.tsx renders the question-authoring UI
+  # instead of the quiz-taking UI. Reusing the real show pipeline this way
+  # (rather than a standalone page) means ResourcePanel and the rest of the
+  # lab2 shell work without reimplementing anything - see the design
+  # discussion around useExtraLinksButtonContext.
   def author_quiz_questions
     return head :not_found unless @level.is_a?(Quiz)
 
-    @script_data = {
-      props: {
-        quizId: @level.id,
-        questions: @level.quiz_questions.map do |question|
-          {
-            id: question.id,
-            type: question.type,
-            questionName: question.question_name,
-            question: question.question,
-          }
-        end,
-      }.to_json
-    }
+    level_view_options(@level.id, is_authoring_quiz_questions: true)
+    show
+    render :show
   end
 
   # POST /levels/:id/quiz_questions
@@ -334,7 +327,11 @@ class LevelsController < ApplicationController
       id: question.id,
       type: question.type,
       questionName: question.question_name,
-      question: question.question,
+      stem: question.question['stem'],
+      choices: question.question['choices'],
+      # Unlike the student-facing payload (Quiz#summarize_for_lab2_properties),
+      # the levelbuilder who just set this should see it reflected back.
+      correctChoiceId: question.question['correct_choice_id'],
     }
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}

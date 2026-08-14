@@ -73,6 +73,7 @@ module ViewOptionsHelper
     :edit_blocks,
     :is_editing_exemplar,
     :is_viewing_exemplar,
+    :is_authoring_quiz_questions,
     :exemplar_sources,
     :skip_instructions_popup,
     :embed,
