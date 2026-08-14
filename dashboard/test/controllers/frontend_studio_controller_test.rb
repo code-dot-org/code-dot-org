@@ -23,4 +23,12 @@ class FrontendStudioControllerTest < ActionController::TestCase
 
     assert_response :not_found
   end
+
+  test 'index is not found for a file Vite copies to the package root' do
+    DCDO.set('frontend_studio_enabled', true)
+
+    get :index, params: {path: 'favicon.svg', format: :html}
+
+    assert_response :not_found
+  end
 end
