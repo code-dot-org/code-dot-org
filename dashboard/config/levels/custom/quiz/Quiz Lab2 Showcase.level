@@ -9,8 +9,9 @@
     "encrypted": "false",
     "show_correctness": "false",
     "reveal_answer_explanation": "false",
-    "purpose": "practice"
+    "purpose": "practice",
+    "title": "Demo Quiz"
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-14 16:15:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-14 16:15:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 20:17:59 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 20:32:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 20:33:39 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
 }]]></config>
 </Quiz>

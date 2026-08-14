@@ -26,6 +26,7 @@
 #
 class Quiz < Level
   serialized_attrs %w(
+    title
     time_limit_minutes
     show_correctness
     reveal_answer_explanation

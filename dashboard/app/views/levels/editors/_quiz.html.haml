@@ -5,6 +5,11 @@
 
 #quiz_fields.in.collapse
   .field
+    = f.label :title, 'Quiz title (optional)'
+    = f.text_field :title, placeholder: '(defaults to Name)'
+    %p Shown to students at the top of the quiz - the same role `title` plays on Multi/Match/FreeResponse/LevelGroup levels. Name (above) can't be changed once this level is in a script, so use this instead of renaming the level.
+
+  .field
     = f.label :intro_text, 'Intro screen text (optional)'
     = f.text_area :intro_text, rows: 4
     %p Shown on an optional intro screen before the quiz starts, alongside the question count and time limit. Separate from the instructions above, which are a different, more general-purpose mechanism.
