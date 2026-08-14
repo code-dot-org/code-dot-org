@@ -1,7 +1,8 @@
 import {
-  ThemeProvider,
   useTheme,
+  ThemeProvider,
 } from '@code-dot-org/component-library/common/contexts';
+import {createTheme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import React, {FC, useEffect, useRef, useState} from 'react';
@@ -32,6 +33,12 @@ interface CreatedChallengeResponse {
   id: number;
   assets: {id: number; asset_type: string}[];
 }
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 // The canvas's element toolbars read the component-library ThemeContext,
 // which lab2 provides at its app root but the Tutor+ page does not. The
@@ -227,12 +234,14 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
 };
 
 const WhiteboardChallenge: FC<WhiteboardChallengeProps> = props => (
-  <ThemeProvider>
-    <ForceDarkTheme />
-    <ReactFlowProvider>
-      <WhiteboardChallengeContent {...props} />
-    </ReactFlowProvider>
-  </ThemeProvider>
+  <MuiThemeProvider theme={darkTheme}>
+    <ThemeProvider>
+      <ForceDarkTheme />
+      <ReactFlowProvider>
+        <WhiteboardChallengeContent {...props} />
+      </ReactFlowProvider>
+    </ThemeProvider>
+  </MuiThemeProvider>
 );
 
 export default WhiteboardChallenge;
