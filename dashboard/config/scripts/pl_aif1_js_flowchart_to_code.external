@@ -10,6 +10,8 @@ markdown <<MARKDOWN
 ---
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/flowchart-to-code.html" width="100%" height="1000" style="border:none;" title="From Flowchart to Code: the temperature app"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/flowchart-to-code.html" width="100%" height="900" style="border:none;" title="From Flowchart to Code: the temperature app"></iframe>
 </div>
+
+---
 MARKDOWN

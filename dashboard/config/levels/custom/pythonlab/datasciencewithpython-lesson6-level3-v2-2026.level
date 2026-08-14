@@ -1,0 +1,63 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-14T02:59:09.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Convert Data Types\r\n\r\nThe program loads `survey_data.csv` into a DataFrame named `survey_data`.\r\n\r\n### Do This:\r\n\r\n1. Run the program. Examine the `Height` and `Join Date` columns and the provided graph.\r\n\r\n2. Use AI Tutor to convert `Height` to `int64` and display the updated dataset information.\r\n\r\n3. Examine AI Tutor’s changes, then run the program.\r\n\r\n   * What happened to the decimal values?\r\n\r\n4. Use AI Tutor to convert `Height` back to `float64`. Run the program again.\r\n\r\n   * Were the original decimal values restored?\r\n\r\n5. Use AI Tutor to convert `Join Date` with `pd.to_datetime()` and verify the final data types.\r\n\r\n6. Examine the two conversion expressions and run the program.\r\n\r\n   * How is the syntax for `astype()` different from `pd.to_datetime()`?\r\n   * How did converting `Join Date` affect the graph?",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\nsurvey_data = pd.read_csv(\"survey_data.csv\")\n\n# Display the original data and data types\nprint(survey_data.head())\nsurvey_data.info()\n\n# Use AI Tutor to convert the data types here\n\n\n# Visualize height over time\nsurvey_data = survey_data.sort_values(by=\"Join Date\")\n\nplt.plot(\n    survey_data[\"Join Date\"],\n    survey_data[\"Height\"],\n    marker=\"o\"\n)\nplt.title(\"Height Over Time\")\nplt.xlabel(\"Join Date\")\nplt.ylabel(\"Height\")\nplt.xticks(rotation=45)\nplt.tight_layout()\nplt.show()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "survey_data.csv",
+          "language": "csv",
+          "contents": "Age,Height,Join Date,Feedback Score\n13,180.2,1/12/2024,1\n29,165.8,1/23/2024,2\n12,177.3,1/26/2024,1\n14,145.9,2/5/2024,2\n15,174.7,2/14/2024,2\n17,170,3/17/2024,1\n15,156.3,3/29/2024,3\n99,162.3,4/19/2024,2\n95,169.9,5/20/2024,4\n13,160.5,5/24/2024,2\n15,160,6/2/2024,4\n,175,7/1/2024,3\n18,172.4,7/14/2024,3\n20,158.6,8/8/2024,4\n17,175.1,9/26/2024,3\n16,180,10/7/2024,4\n16,152.2,10/31/2024,5\n18,168.8,11/29/2024,3\n18,172,12/3/2024,4\n13,165.9,12/31/2024,5",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-14T02:59:09.948+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L6_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L5-L6_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-08-14 03:00:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-14 03:01:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-14 03:01:36 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-14 03:02:21 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>
