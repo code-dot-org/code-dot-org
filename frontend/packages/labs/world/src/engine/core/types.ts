@@ -133,9 +133,10 @@ export interface Property<T = unknown> {
    * "owned by a rule or trait" — the shape every property had before an actor
    * could declare one. Present only so an error about a missing slot can say
    * something true instead of asking whether a trait that does not exist has
-   * been applied.
+   * been applied. `'world'` is the same shorthand one level up: state a WORLD
+   * carries with no rule to carry it (specs/WORLD_STATE.md).
    */
-  readonly ownerKind?: 'actor';
+  readonly ownerKind?: 'actor' | 'world';
   /**
    * Called after this property is set on an actor, with the value before and
    * the value after — see {@link watchProperty}, which is how one is added.

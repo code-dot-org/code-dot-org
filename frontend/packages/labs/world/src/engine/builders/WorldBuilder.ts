@@ -43,6 +43,7 @@ import type {
   AppliedEffectSpec,
   GameEvent,
   Property,
+  PropertyType,
   Rule,
   WorldEventHandler,
 } from '../core/types';
@@ -123,6 +124,8 @@ export class WorldBuilder {
   // the World fills in the default layer either way.
   private readonly layers: LayerInit[] = [];
   private readonly types = new Map<string, ActorBuilder>();
+  /** State this WORLD carries, without a rule to carry it (specs/WORLD_STATE.md). */
+  private readonly own: Array<Property<unknown>> = [];
   /**
    * Every call made on this description, in order.
    *
@@ -274,9 +277,47 @@ export class WorldBuilder {
     return this.defer('on', event, handler);
   }
 
-  /** Set a world-scoped property. See {@link World.set}. */
+  /**
+   * Set a world-scoped property. See {@link World.set}.
+   *
+   * COLLAPSED IN THE LOG rather than appended to it, alone among the deferred
+   * calls. Everything else here is an act whose order is its meaning — `add
+   * effect` then `remove effect` leaves none — but a property has one value and
+   * the last write wins, so replaying a hundred of them and replaying the last
+   * are the same world. That matters now that a `.world` file's handler is the
+   * ordinary place to keep a score: `world` is this builder there, so a counter
+   * incremented on every click would otherwise grow the log by one entry per
+   * click, for the life of the game (specs/WORLD_STATE.md).
+   *
+   * Replaced IN PLACE, so a value written during setup stays where it was
+   * written relative to the declarations around it.
+   */
   set<T>(property: Property<T>, value: T): this {
+    const existing = this.log.find(
+      call => call.name === 'set' && call.args[0] === property,
+    );
+    if (existing) {
+      existing.args = [property, value] as OpArgs<'set'>;
+      if (this.built) {
+        apply(this.built, existing);
+      }
+      return this;
+    }
     return this.defer('set', property as Property<unknown>, value);
+  }
+
+  /**
+   * Read a world-scoped property. See {@link World.get}.
+   *
+   * Builds the world, because it hands back a value out of it rather than
+   * telling it something — the same family as `camera`, `actors` and
+   * `mapBounds`. And it has to exist here at all because `world` in a `.world`
+   * file IS this builder, including inside the event handlers written there:
+   * `get score` in a click handler landed on the builder and threw
+   * "world.get is not a function" (specs/WORLD_STATE.md).
+   */
+  get<T>(property: Property<T>): T {
+    return this.getWorld().get(property);
   }
 
   /**
@@ -673,6 +714,55 @@ export class WorldBuilder {
    * arguments a call was given, and the World copies what it stores (a Vector,
    * a colour), so replaying it twice shares nothing.
    */
+  /**
+   * Declare state this WORLD carries — a score, a level number, a flag.
+   *
+   * `ActorBuilder.defineProperty`'s exact sibling, and the same bargain one
+   * level up: the shorthand for state that belongs to nothing shareable. A rule
+   * is still the answer when the state IS a mechanic — something another
+   * project would import — and this is for the case where it is one world's
+   * business and a `.rule` file is more ceremony than the thing deserves.
+   *
+   * NO RULE IS INVENTED. The World's store is otherwise seeded from the rules
+   * in play, and an earlier reading synthesized one per world to hold these.
+   * That works, and it is wrong for the reason `ActorBuilder` gives about
+   * traits: a rule is imported, shared, and named by `use rule`, and this is
+   * none of those — it would put a rule the learner never wrote into
+   * `activeRules()`, into the rules panel, and into the count on their world
+   * block. So the World seeds these slots directly instead.
+   */
+  defineProperty<T>(
+    id: string,
+    type: PropertyType,
+    defaultValue: T,
+    opts: {readonly?: boolean; name?: string} = {},
+  ): Property<T> {
+    const property: Property<T> = {
+      id,
+      type,
+      default: defaultValue,
+      readonly: opts.readonly ?? false,
+      name: opts.name,
+      scope: 'world',
+      // The world that declared it, which is what an error about a missing slot
+      // needs to name. `ownerKind` says there is no rule to point at rather
+      // than leaving a reader to infer it from the id.
+      ownerId: this.id,
+      ownerKind: 'world',
+    };
+    this.own.push(property as Property<unknown>);
+    // A world already built keeps running: declaring a property is something a
+    // module does as it loads, and the world may have been made by an earlier
+    // line of it (`getWorld`).
+    this.built?.defineOwnProperty(property, defaultValue);
+    return property;
+  }
+
+  /** The state this world declared for itself, for the World to seed. */
+  get ownProperties(): readonly Property<unknown>[] {
+    return this.own;
+  }
+
   instantiate(): World {
     const world = new World({
       id: this.id,
@@ -680,6 +770,7 @@ export class WorldBuilder {
       rules: this.rulesInPlay(),
       animations: Object.entries(this.animations),
       layers: this.layers.map(layer => ({...layer})),
+      ownProperties: this.own,
     });
     for (const call of this.log) {
       apply(world, call);

@@ -9,7 +9,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {parseActorOwnMeta} from '../../blockly/actorMeta';
+import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {STOCK_ACTORS} from '../stock';
 import {buttonActor} from '../stock/button';
 import {labelActor} from '../stock/label';

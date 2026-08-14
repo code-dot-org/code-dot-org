@@ -7,7 +7,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {ownPropertyDeclarations, parseActorOwnMeta} from '../actorMeta';
+import {ownPropertyDeclarations, parseActorOwnMeta} from '../ownProperties';
 
 /** An `.actor` workspace: `define actor` with a chain of blocks below it. */
 const actorFile = (name: string, chain: unknown[] = []): string => {
@@ -130,6 +130,11 @@ describe('an actor’s own properties', () => {
       exportName: 'LastFiredProperty',
       ruleName: 'Player',
       modulePath: 'actors/player',
+      // NOT a rule, which is what `own` says. Without it `refResolves` looked
+      // for a rule named "Player", did not find one, and every own-property
+      // block generated nothing — a `set` that vanished and a `get` that read
+      // the type's dead value (ruleRegistry.refResolves).
+      own: true,
     });
   });
 

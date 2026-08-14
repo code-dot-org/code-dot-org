@@ -54,6 +54,19 @@ export interface MemberRef {
    * decoded from a stored value, which name the rule and nothing more.
    */
   readonly modulePath?: string;
+  /**
+   * This member is a FILE's own — an actor's or a world's `define property` —
+   * rather than a rule's (blockly/ownProperties).
+   *
+   * `ruleName` still carries a name, because the block type is keyed from it,
+   * but it names the declaring actor or world. So the question `refResolves`
+   * asks — "is the rule this belongs to still in the project?" — has no answer
+   * for one of these, and answering it by looking for a rule of that name gets
+   * a NO. That is what this flag is for, and its absence was a real bug: an
+   * actor's own `set max health` silently generated nothing, and its `get`
+   * generated the type's dead value.
+   */
+  readonly own?: true;
 }
 
 /**

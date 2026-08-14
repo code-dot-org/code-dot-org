@@ -164,6 +164,13 @@ export function refModule(ref: MemberRef): string | undefined {
  * resolves; it is compiled into the runtime rather than imported.
  */
 export function refResolves(ref: MemberRef): boolean {
+  // A file's own property belongs to the file it is written in, not to a rule
+  // (blockly/ownProperties). There is nothing to look up and nothing that can
+  // go missing while the block still exists: the file holding the block IS the
+  // file holding the declaration.
+  if (ref.own) {
+    return true;
+  }
   return !ref.ruleName || ruleByName(ref.ruleName) !== undefined;
 }
 
