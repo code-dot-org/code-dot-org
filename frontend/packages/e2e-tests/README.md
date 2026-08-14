@@ -31,8 +31,14 @@ and its own `results.json`, and uploads to its own S3 directory. functional uses
 
 - **Drone** — both suites, against the dashboard and apps the PR builds, before
   the Cucumber tests. Drone holds a functional failure until Cucumber also runs,
-  so one build shows both results.
-- **DTT** — the functional suite, against test-studio, with the Cucumber tests.
+  so one build shows both results. The functional suite runs `chromium` alone,
+  because Cucumber there runs Chrome alone. The same commit tags widen both:
+  `[test firefox]` adds `firefox`, `[test safari]` adds `webkit`, and `[test all
+browsers]` adds both. `[skip chrome]` drops `chromium`, and with no browser
+  left the suite does not run. Playwright has no iPad or iPhone project, so
+  `[test ipad]`, `[test iphone]` and `[test ios]` widen Cucumber only.
+- **DTT** — the functional suite in all three browsers, against test-studio, with
+  the Cucumber tests.
   `test:ui_all` starts all four deploy-time suites together. The daemon has no
   Applitools key, so on the DTT the eyes suite runs only through GitHub Actions.
 - **DTT → GitHub Actions** (`dtt.yml` → `e2e-tests-ci.yml`) — `test:ui_all` also
