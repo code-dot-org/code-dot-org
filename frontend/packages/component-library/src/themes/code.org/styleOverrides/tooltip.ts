@@ -28,7 +28,7 @@ export const TOOLTIP_OVERRIDES: Components<Theme>['MuiTooltip'] = {
       maxWidth: '16rem',
       width: 'max-content',
       padding: '0.25rem 0.75rem',
-      textAlign: 'left',
+      textAlign: 'start',
       // A leading icon in the title sits beside the text.
       display: 'inline-flex',
       alignItems: 'center',

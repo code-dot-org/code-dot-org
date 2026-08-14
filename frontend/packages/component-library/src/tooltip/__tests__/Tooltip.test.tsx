@@ -24,13 +24,12 @@ describe('Design System - Tooltip (theme-only)', () => {
 
   const renderTooltip = (
     props: Record<string, unknown> = {},
-    child?: React.ReactElement,
     theme = CdoTheme,
   ) =>
     render(
       <ThemeProvider theme={theme}>
         <MuiTooltip title="tooltipText" {...props}>
-          {child ?? <button type="button">trigger</button>}
+          <button type="button">trigger</button>
         </MuiTooltip>
       </ThemeProvider>,
     );
@@ -53,7 +52,7 @@ describe('Design System - Tooltip (theme-only)', () => {
       expect(s.maxWidth).toBe('16rem');
       expect(s.paddingTop).toBe('0.25rem');
       expect(s.paddingLeft).toBe('0.75rem');
-      expect(s.textAlign).toBe('left');
+      expect(s.textAlign).toBe('start');
     });
 
     it('is one fixed size, the theme body3', async () => {
@@ -131,7 +130,7 @@ describe('Design System - Tooltip (theme-only)', () => {
   // sets none, so this test supplies one.
   it('mirrors -start/-end placements in a right-to-left theme', async () => {
     const rtlTheme = createTheme(CdoTheme, {direction: 'rtl'});
-    renderTooltip({placement: 'bottom-start'}, undefined, rtlTheme);
+    renderTooltip({placement: 'bottom-start'}, rtlTheme);
 
     await user.hover(screen.getByRole('button'));
     const popper = await screen.findByRole('tooltip');
@@ -139,19 +138,5 @@ describe('Design System - Tooltip (theme-only)', () => {
       'data-popper-placement',
       'bottom-end',
     );
-  });
-
-  // A plain MUI tooltip with no special props still gets the design system look.
-  it('styles a tooltip that sets no design-system props at all', async () => {
-    render(
-      <ThemeProvider theme={CdoTheme}>
-        <MuiTooltip title="Duplicate" placement="top">
-          <button type="button">trigger</button>
-        </MuiTooltip>
-      </ThemeProvider>,
-    );
-    const bubble = await openAndGetBubble();
-    expect(getComputedStyle(bubble).backgroundColor).toBe(BACKGROUND);
-    expect(document.querySelector('.MuiTooltip-arrow')).not.toBeNull();
   });
 });

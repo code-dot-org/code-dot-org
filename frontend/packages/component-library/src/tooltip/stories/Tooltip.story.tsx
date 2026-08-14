@@ -124,7 +124,7 @@ export const InsideDarkTheme: StoryFn = () => (
   >
     <Tooltip
       title="Themed tooltip"
-      slotProps={{tooltip: {'data-theme': 'Dark'} as never}}
+      slotProps={{tooltip: {'data-theme': 'Dark'}}}
     >
       <Button variant="contained">data-theme via slotProps</Button>
     </Tooltip>
