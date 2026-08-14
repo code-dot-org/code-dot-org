@@ -22,14 +22,8 @@ class AiGatewayAuthController < ApplicationController
 
     token_id = SecureRandom.uuid
     hostname = CDO.dashboard_hostname
-    # Send the log token, not the raw id. The gateway keys its rate limiter and
-    # its upstream cost-attribution metadata on this, logs it on rate-limit
-    # rejections, and attaches it to its own Sentry events -- none of which
-    # needs a raw id.
-    #
-    # The gateway's own error reporting goes to Sentry, so it shares Sentry's
-    # destination: one token finds a user in both the dashboard's events and the
-    # gateway's.
+
+    # Send the log token, not the raw id.
     user_log_token = Cdo::UserLogToken.derive(
       current_user.id, destination: Cdo::UserLogToken::SENTRY
     )

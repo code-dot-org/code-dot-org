@@ -15,9 +15,6 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
   setup do
     @user = create(:student)
 
-    # ai_gateway_auth_key is not configured in the test environment, so mint with
-    # a throwaway keypair rather than committing one. Scoped to the exact
-    # arguments the controller passes so no other RSA use is affected.
     @signing_key = OpenSSL::PKey::RSA.generate(2048)
     OpenSSL::PKey::RSA.stubs(:new).
       with(AiGatewayAuthController::PRIVATE_KEY, AiGatewayAuthController::PASSPHRASE).
@@ -26,8 +23,6 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     User.any_instance.stubs(:can_access_aichat_chat_completion?).returns(true)
   end
 
-  # Decodes and verifies the minted token, so these assertions run against a real
-  # signature rather than the payload hash we happened to build.
   def decoded_claims
     sign_in @user
     post :get_access_token, params: {aichatContext: AICHAT_CONTEXT}, as: :json
@@ -48,8 +43,6 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     refute_includes decoded_claims.keys, 'user_id'
   end
 
-  # Checks claim values rather than the serialized payload: a short id would
-  # otherwise collide by chance with the uuid token_id or the unix timestamps.
   test 'does not send the raw user id as the value of any claim' do
     refute_includes decoded_claims.values.map(&:to_s), @user.id.to_s
   end
