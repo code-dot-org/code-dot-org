@@ -212,11 +212,18 @@ class S3Packaging
   # Throws a NoSuchKey error if given package doesn't exist on s3, or if the object is private.
   # @return tempfile for the downloaded package
   private def download_package
-    package = Tempfile.new(@commit_hash)
+    download_object(s3_key)
+  end
 
-    @logger.info "Attempting to download: #{s3_key}\nto #{package.path}"
+  # Downloads any object in our bucket to a tempfile.
+  # Throws a NoSuchKey error if the object doesn't exist on s3, or if it is private.
+  # @return tempfile for the downloaded object
+  private def download_object(key)
+    object = Tempfile.new(@commit_hash.to_s)
+
+    @logger.info "Attempting to download: #{key}\nto #{object.path}"
     begin
-      client.get_object({bucket: BUCKET_NAME, key: s3_key}, target: package)
+      client.get_object({bucket: BUCKET_NAME, key: key}, target: object)
     rescue Aws::Errors::MissingCredentialsError,
            Aws::Sigv4::Errors::MissingCredentialsError,
            Aws::S3::Errors::ServiceError
@@ -224,14 +231,14 @@ class S3Packaging
       # Fallback to public-URL download over HTTP if credentials are not provided or invalid.
       # TODO use aws-sdk to leverage aws-client optimizations once unsigned requests are supported:
       # https://github.com/aws/aws-sdk-ruby/issues/1149
-      url = Aws::S3::Bucket.new(BUCKET_NAME, credentials: 0).object(s3_key).public_url
-      File.open(package, 'wb') do |file|
+      url = Aws::S3::Bucket.new(BUCKET_NAME, credentials: 0).object(key).public_url
+      File.open(object, 'wb') do |file|
         IO.copy_stream URI.parse(url).open, file
       rescue OpenURI::HTTPError
         raise Aws::S3::Errors::NoSuchKey.new(nil, file.path)
       end
     end
     @logger.info "Downloaded"
-    package
+    object
   end
 end

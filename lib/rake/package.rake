@@ -70,24 +70,41 @@ namespace :package do
   timed_task_with_logging apps: ['apps:update', 'apps:symlink']
 
   namespace :studio do
+    # Production and levelbuilder frontends have no node, so they cannot run
+    # turbo to work out the package key. They read it from the pointer object
+    # that a build environment wrote for this git tree.
+    def studio_pointer_mode?
+      rack_env?(:production) || rack_env?(:levelbuilder)
+    end
+
     def studio_packager
-      TurboS3Packaging.new('studio', vite_dir, dashboard_dir('public/studio-package'), frontend_dir, '@code-dot-org/studio')
+      TurboS3Packaging.new('studio', vite_dir, dashboard_dir('public/studio-package'), frontend_dir, '@code-dot-org/studio', resolve_from_pointer: studio_pointer_mode?)
     end
 
     desc 'Update studio static asset package.'
     timed_task_with_logging 'update' do
-      # temporarily skip if levelbuilder or production
-      next if rack_env?(:levelbuilder) || rack_env?(:production)
+      # temporarily skip if levelbuilder
+      next if rack_env?(:levelbuilder)
 
       # never download if we build our own and we're not building a package ourselves.
       next if CDO.use_my_studio && !BUILD_PACKAGE
 
-      unless studio_packager.update_from_s3
+      packager = studio_packager
+      unless packager.update_from_s3
         if BUILD_PACKAGE
           Rake::Task['package:studio:build'].invoke
         else
           raise 'No valid studio package found'
         end
+      end
+
+      # Point this git tree at the package it needs. This must also run when the
+      # package was already current: a frontend/ change outside studio's build
+      # inputs rolls the git hash but not the turbo hash, and the new git hash
+      # still needs a pointer.
+      if BUILD_PACKAGE && !rack_env?(:adhoc)
+        packager.upload_pointer
+        ChatClient.log "Studio package pointer #{packager.frontend_git_hash} -> #{packager.commit_hash}"
       end
     end
 
