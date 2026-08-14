@@ -207,7 +207,7 @@ function createRspackConfig({
     if (srcMapsDefault) {
       console.log(
         '[rspack] source maps: src/ (the default) — original-source ' +
-          'stepping for first-party code.  APPS_DEVTOOL=eval turns maps off.'
+          'stepping for first-party code'
       );
     } else {
       console.log(
