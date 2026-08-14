@@ -1,16 +1,14 @@
 module Pd
   module SharedWorkshopConstants
     ACTIVE_COURSES = [
+      COURSE_CSP = 'CS Principles'.freeze,
+      COURSE_CSD = 'CS Discoveries'.freeze,
+      COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
       COURSE_AIF = 'AI Foundations'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [
-      # CSP, CSD, and CSA were moved here to remove the ability to schedule new
-      # workshops for these courses; existing workshops remain valid and viewable.
-      COURSE_CSP = 'CS Principles'.freeze,
-      COURSE_CSD = 'CS Discoveries'.freeze,
-      COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_CSF = 'CS Fundamentals'.freeze,
       COURSE_ECS = 'Exploring Computer Science'.freeze,
       COURSE_CS_IN_A = 'CS in Algebra'.freeze,
@@ -455,10 +453,28 @@ module Pd
           course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
           participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
         )
+      },
+      {
+        slug: COURSE_CSP.parameterize(separator: "_"),
+        label: COURSE_CSP,
+        icon: 'book',
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSP].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_CSD.parameterize(separator: "_"),
+        label: COURSE_CSD,
+        icon: 'book',
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSD].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_CSA.parameterize(separator: "_"),
+        label: COURSE_CSA,
+        icon: 'book',
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
       }
-      # CSP, CSD, and CSA configs were removed to remove the ability to schedule
-      # new workshops for these courses. They are now in ARCHIVED_COURSES, so
-      # config_validation skips them and existing workshops remain valid.
     ].freeze
 
     MIN_SURVEY_RESPONSE_COUNT = 5

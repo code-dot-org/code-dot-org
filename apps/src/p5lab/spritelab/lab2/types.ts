@@ -128,7 +128,6 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // World-tab experiment: the tab edits the whole world, not just the
   // scene-sized corner (equivalent to the world=large URL parameter).
   showLargeWorld?: boolean;
-  // XML string representation of toolbox blocks.
-  // TODO: deprecate in favor of the JSON toolbox definition.
+  /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }
