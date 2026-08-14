@@ -1,3 +1,5 @@
+import category from '@cdo/apps/blockly/blockDefinitions/category';
+import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import goToExternalScene from './goToExternalScene';
@@ -9,6 +11,8 @@ import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
+import setAsPlatformPlayer from './setAsPlatformPlayer';
+import setPlatformGravity from './setPlatformGravity';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
 // block whose runtime half is interpreted code exports it as helperCode.
@@ -26,6 +30,11 @@ const labBlockDefinitions: {
   makePlatformPlayer,
   makeSpriteAtGrid,
   makePlatformBlocks,
+  setPlatformGravity,
+  setAsPlatformPlayer,
+  // Toolbox edit mode's category marker blocks.
+  category,
+  custom_category,
 ];
 
 export default labBlockDefinitions;
