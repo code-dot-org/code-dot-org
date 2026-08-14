@@ -859,10 +859,9 @@ module SharedConstants
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
 
-  # Models served via the Google Gemini API. Single source of truth for both
-  # which client serves a model (apps/src/aichat/api/client/helpers/modelHelpers)
-  # and which models are unavailable to international users (see
-  # User::AiAccessible#can_use_aichat_model?).
+  # Models served via the Google Gemini API. This is about routing — which
+  # provider a model is requested from (see modelHelpers, shouldUseAiGateway) —
+  # not about who may use it.
   AI_CHAT_GEMINI_MODEL_IDS = [
     AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
@@ -870,6 +869,13 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
   ].freeze
+
+  # Models unavailable to users outside the US (see
+  # User::AiAccessible#can_use_aichat_model?). Currently exactly the Gemini
+  # models, but kept separate from the list above because that one answers a
+  # different question: if another provider ever becomes restricted, only this
+  # list changes, and the provider routing stays put.
+  AI_CHAT_REGION_BLOCKED_MODEL_IDS = AI_CHAT_GEMINI_MODEL_IDS
 
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",

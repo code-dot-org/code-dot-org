@@ -38,7 +38,7 @@ module User::AiAccessible
   # Per-request model gate, enforced wherever a model id is known
   # (aichat_requests_controller, ai_gateway_auth_controller).
   def can_use_aichat_model?(model_id)
-    return true unless AI_CHAT_GEMINI_MODEL_IDS.include?(model_id)
+    return true unless AI_CHAT_REGION_BLOCKED_MODEL_IDS.include?(model_id)
     !ai_models_region_blocked?
   end
 

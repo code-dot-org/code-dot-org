@@ -12,7 +12,7 @@ import {
 } from '@cdo/apps/aichat/constants';
 import {
   areAiChatToolsEnabled,
-  isGeminiModelId,
+  isRegionBlockedModelId,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
 import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
@@ -105,7 +105,7 @@ export function useAiChatDisabledState({
     if (
       geminiModelsBlocked &&
       selectedModelId &&
-      isGeminiModelId(selectedModelId)
+      isRegionBlockedModelId(selectedModelId)
     ) {
       if (!isTeacher) {
         return {

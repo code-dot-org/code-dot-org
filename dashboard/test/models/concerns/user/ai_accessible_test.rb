@@ -283,7 +283,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       end
 
       it 'blocks every gemini model, including image generation' do
-        SharedConstants::AI_CHAT_GEMINI_MODEL_IDS.each do |model_id|
+        SharedConstants::AI_CHAT_REGION_BLOCKED_MODEL_IDS.each do |model_id|
           _(user.can_use_aichat_model?(model_id)).must_equal false
         end
         _(user.can_use_aichat_model?(image_model)).must_equal false

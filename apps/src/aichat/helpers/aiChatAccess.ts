@@ -5,16 +5,25 @@ import {
 import {
   AiChatAccessLevels,
   AiChatGeminiModelIds,
+  AiChatRegionBlockedModelIds,
   AiChatToolsDependency,
 } from '@cdo/generated-scripts/sharedConstants';
 
 /**
- * Returns true if the model is served via the Google Gemini API. These models
- * are blocked for international users; see currentUser.aiModelsRegionBlocked
- * and User::AiAccessible on the server.
+ * Returns true if the model is served via the Google Gemini API. This is about
+ * which provider serves the model, not who may use it — use
+ * isRegionBlockedModelId for that.
  */
 export const isGeminiModelId = (modelId: string): boolean =>
   (AiChatGeminiModelIds as readonly string[]).includes(modelId);
+
+/**
+ * Returns true if the model is unavailable in some regions. Pair with
+ * currentUser.aiModelsRegionBlocked, which says whether this user is in one;
+ * User::AiAccessible#can_use_aichat_model? is the server-side equivalent.
+ */
+export const isRegionBlockedModelId = (modelId: string): boolean =>
+  (AiChatRegionBlockedModelIds as readonly string[]).includes(modelId);
 
 // A list of app names for which AI Chat tools (tutor or chat in ai chat lab) are considered essential to the app experience.
 // but can still be disabled by teachers through the access controls in the teacher dashboard (see ai_chat_access_level)
