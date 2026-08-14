@@ -55,10 +55,8 @@ class UserLogTokenTest < Minitest::Spec
       assert Cdo::UserLogToken.derive(12345, destination: DESTINATION).start_with?('v1.')
     end
 
-    it 'rejects an unknown destination rather than silently minting a token' do
-      assert_raises Cdo::UserLogToken::UnknownDestinationError do
-        Cdo::UserLogToken.derive(12345, destination: 'not_a_destination')
-      end
+    it 'returns nil for an unknown destination rather than minting a token' do
+      assert_nil Cdo::UserLogToken.derive(12345, destination: 'not_a_destination')
     end
 
     it 'returns nil for a nil user id' do
@@ -247,6 +245,15 @@ class UserLogTokenTest < Minitest::Spec
           assert_nil Cdo::UserLogToken.derive(12345, destination: DESTINATION)
         end
       end
+    end
+
+    it 'picks the key up on a later call once it can be read' do
+      load_raw(nil)
+      assert_nil Cdo::UserLogToken.derive(12345, destination: DESTINATION)
+
+      CDO.stubs(:user_log_token_keys).returns({'1' => KEY_ONE}.to_json)
+
+      refute_nil Cdo::UserLogToken.derive(12345, destination: DESTINATION)
     end
   end
 end
