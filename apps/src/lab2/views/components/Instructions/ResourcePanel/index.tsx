@@ -171,6 +171,14 @@ type ResourcePanelProps = InstructionsProps & {
   initialWelcomeMessage?: string;
   /** Levelbuilder-only: content for the Question Bank tab, used by the Quiz question authoring UI. */
   questionBankContent?: React.ReactNode;
+  /**
+   * Suppresses the Continue/Finish NavigationArea entirely, in both of the
+   * places it can render (embedded in the Instructions tab, and the
+   * globally-pinned footer instance). `hideNavigation` alone only controls
+   * the former and - confusingly - defaults to relocating it to the latter,
+   * so it can't fully hide navigation for a lab with no Instructions tab.
+   */
+  hideAllNavigation?: boolean;
 };
 
 /**
@@ -203,6 +211,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   onAssetRemoved,
   initialWelcomeMessage,
   questionBankContent,
+  hideAllNavigation = false,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -324,7 +333,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     const instructionsContent = hasInstructions ? (
       <Instructions
         {...instructionsProps}
-        hideNavigation={hideInstructionsNavigation}
+        hideNavigation={hideAllNavigation || hideInstructionsNavigation}
       />
     ) : null;
 
@@ -441,6 +450,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelProperties,
     instructionsProps,
     hideInstructionsNavigation,
+    hideAllNavigation,
     questionBankContent,
     validationSettings,
     hasValidationConditions,
@@ -858,8 +868,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   );
                 })}
               </div>
-              {(hideInstructionsNavigation ||
-                currentTab !== Tabs.Instructions) &&
+              {!hideAllNavigation &&
+                (hideInstructionsNavigation ||
+                  currentTab !== Tabs.Instructions) &&
                 !isProjectLevel && (
                   <NavigationArea
                     {...instructionsProps}

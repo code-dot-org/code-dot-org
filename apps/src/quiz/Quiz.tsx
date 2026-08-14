@@ -161,7 +161,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         isRunning={false}
         hasRun={false}
         hasEdited={Object.keys(responses).length > 0}
-        hideNavigation
+        hideAllNavigation
         questionBankContent={
           isAuthoringMode ? (
             <p>Question bank browsing and filtering coming soon.</p>
