@@ -18,8 +18,7 @@ suite="${1:?please choose a suite: functional or eyes}"
 case "$suite" in
   functional)
     # Named, not default: the default set also has the visual-* projects.
-    # Drone sets PLAYWRIGHT_BROWSERS from the commit tags, as it does for
-    # Cucumber. Everywhere else runs all three.
+    # Drone sets PLAYWRIGHT_BROWSERS from the commit tags. Others run all three.
     read -ra browsers <<< "${PLAYWRIGHT_BROWSERS:-chromium firefox webkit}"
     suite_args=()
     for browser in "${browsers[@]}"; do suite_args+=(--project="$browser"); done

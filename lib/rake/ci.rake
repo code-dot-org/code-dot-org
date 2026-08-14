@@ -176,7 +176,7 @@ namespace :ci do
     playwright_browsers = playwright_browsers_to_run
     playwright_failure =
       if playwright_browsers.empty?
-        # An empty --project list would run every project, the visual ones too.
+        # An empty --project list runs every project, including the visual ones.
         ChatClient.log 'Playwright functional tests skipped: no browsers selected.'
         nil
       else
@@ -305,9 +305,9 @@ def device_farm_browsers_to_run
   browsers
 end
 
-# @return [Array<String>] Playwright projects for this run, from the same commit
-#   tags as the browsers above. Playwright has no iPad or iPhone project, so
-#   those tags do not reach it, and its webkit is Safari's engine, not Safari.
+# @return [Array<String>] Playwright projects for this run, from the same tags as
+#   the browsers above. There is no iPad or iPhone project. Its webkit is
+#   Safari's engine, not Safari.
 def playwright_browsers_to_run
   browsers = []
   browsers << 'chromium' unless CI::Utils.tagged?(SKIP_CHROME_TAG)
