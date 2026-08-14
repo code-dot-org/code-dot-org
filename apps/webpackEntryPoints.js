@@ -200,8 +200,6 @@ const INTERNAL_ENTRIES = {
   'reference_guides/edit': './src/sites/studio/pages/reference_guides/edit.js',
   'reference_guides/edit_all': './src/sites/studio/pages/reference_guides/edit_all.js',
   'images/new': './src/sites/studio/pages/images/new.js',
-  'levels/author_quiz_questions':
-    './src/sites/studio/pages/levels/author_quiz_questions.js',
   'rubrics/new': './src/sites/studio/pages/rubrics/new.js',
   'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
   'sections/new': './src/sites/studio/pages/sections/new.js',
