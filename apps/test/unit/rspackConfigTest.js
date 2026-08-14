@@ -18,9 +18,19 @@ function readConfig(expression, env = {}) {
     // Pin the configuration under test: the .tsx? swc rule exists only
     // when RSPACK_SWC is truthy, so an ambient RSPACK_SWC=0 (set during
     // exactly the bisects this variable is for) would otherwise turn
-    // the assertion into a TypeError on undefined.  APPS_DEVTOOL is
-    // cleared for the same reason: each case below states its own.
-    env: {...process.env, RSPACK_SWC: 'all', APPS_DEVTOOL: '', ...env},
+    // the assertion into a TypeError on undefined.  APPS_DEVTOOL,
+    // DEBUG_MINIFIED and CI are cleared for the same reason — the
+    // shared devtool() helper returns eval whenever CI is set, which
+    // failed the production case on drone — so each case states its
+    // own environment and nothing ambient leaks in.
+    env: {
+      ...process.env,
+      RSPACK_SWC: 'all',
+      APPS_DEVTOOL: '',
+      DEBUG_MINIFIED: '',
+      CI: '',
+      ...env,
+    },
   });
   return JSON.parse(out.match(/^RESULT=(.*)$/m)[1]);
 }
