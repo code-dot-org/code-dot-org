@@ -49,7 +49,7 @@ sadButton.addEventListener("click", () =&gt; { mood = "sad"; showPlaylist(); });
 
 ---
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/mood-playlist-picker.html" width="100%" height="820" style="border:none;" title="sample student project for a mood playlist picker"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/mood-playlist-picker.html" width="100%" height="320" style="border:none;" title="sample student project for a mood playlist picker"></iframe>
 </div>
 
 

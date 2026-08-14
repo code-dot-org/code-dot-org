@@ -28765,7 +28765,7 @@ en:
               display_name: End of Unit Assessment and Survey
             lessonGroup-6:
               display_name: Alternate Level Progressions (Console Only)
-          title: Foundations of AI Programming
+          title: Foundations of AI Programming (Python)
           description: |-
             This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
 
@@ -28806,6 +28806,8 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: foundations-of-ai-programming-2026
         aif-advisory-council-preview:
           lessons: {}
           lesson_groups:
@@ -29649,8 +29651,49 @@ en:
           title: Foundations of AI Programming (JavaScript)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |+
+            This unit introduces you to web app development, AI-assisted design, and interactive programming, exploring how web apps are designed, styled, and made responsive to user actions. Through hands-on activities, you build, test, and refine web apps using JavaScript while applying human-centered design for accessibility. You use AI as a development partner — generating code from prompts, evaluating AI output for correctness, and troubleshooting when it doesn't fit your page — while learning core programming concepts like variables, functions, conditionals, and loops. Career-focused discussions connect these skills to real-world roles like Front-End Developer, Inclusive Designer, and QA Engineer. Grounded in accessibility, critical evaluation of AI, and computational thinking, this unit fosters persistence, design sense, and curiosity, empowering you to build interactive web apps for real-world use.
+
+            > **Choose Python or JavaScript, not both.** This unit and Foundations of AI Programming (Python) cover the same core concepts and similar standards in two different languages. They exist so you can pick the language that best fits your students or pathway — teach one or the other, not both.
+
+            > **Planning on teaching the AI Foundations: Designing and Building with AI (semester 2) course?** _Skip this unit._ Its content overlaps with Semester 2's AI-Generated Design and AI and Algorithmic Decisions units, which already cover this material in the full-year sequence. See the AI Foundations Implementation Guide [link] for how programming instruction is structured across the three implementation models.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Identify the structural components of a web app and explain how layout choices guide user behavior.
+            - Use AI to generate HTML and CSS from prompts, and compare vague versus specific prompts to see how prompt quality affects output.
+            - Explain the separation of structure (HTML) and style (CSS) in a web app.
+            - Apply the POUR accessibility framework to audit and improve real-world websites and AI-generated designs.
+            - Use abstraction to wireframe an app idea, stripping away color and detail to focus on structure.
+            - Give and receive structured peer feedback on design work.
+            - Explain the relationship between events, elements, and the DOM, and connect user actions to on-screen changes.
+            - Write a JavaScript event handler and apply a Show / Describe / Confirm protocol to debug AI-generated code that doesn't fit the page.
+            - Use variables to make an app "remember" state and follow a create-update-display pattern.
+            - Apply an Evaluate AI framework — is the output what I asked for, does it work, can I explain it — to critique AI suggestions rather than accepting them outright.
+            - Write reusable, well-named functions using arrow syntax, parameters, and return values.
+            - Use conditional statements (if/else) to make an app respond differently to different user actions.
+            - Use loops to repeat an action a specified number of times, and test whether AI-generated loops behave correctly.
+            - Plan, build, test, and iterate on a student-designed interactive web app, distinguishing what AI contributed from what they built themselves.
+            :::
+
+          student_description: |-
+            This unit introduces you to web app development, AI-assisted design, and interactive programming, exploring how web apps are designed, styled, and made responsive to user actions. Through hands-on activities, you build, test, and refine web apps using JavaScript while applying human-centered design for accessibility. You use AI as a development partner — generating code from prompts, evaluating AI output for correctness, and troubleshooting when it doesn't fit your page — while learning core programming concepts like variables, functions, conditionals, and loops. Career-focused discussions connect these skills to real-world roles like Front-End Developer, Inclusive Designer, and QA Engineer. Grounded in accessibility, critical evaluation of AI, and computational thinking, this unit fosters persistence, design sense, and curiosity, empowering you to build interactive web apps for real-world use.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Identify the structural components of a web app and explain how layout choices guide user behavior.
+            - Use AI to generate HTML and CSS from prompts, and compare vague versus specific prompts to see how prompt quality affects output.
+            - Explain the separation of structure (HTML) and style (CSS) in a web app.
+            - Apply the POUR accessibility framework to audit and improve real-world websites and AI-generated designs.
+            - Use abstraction to wireframe an app idea, stripping away color and detail to focus on structure.
+            - Give and receive structured peer feedback on design work.
+            - Explain the relationship between events, elements, and the DOM, and connect user actions to on-screen changes.
+            - Write a JavaScript event handler and apply a Show / Describe / Confirm protocol to debug AI-generated code that doesn't fit your page.
+            - Use variables to make an app "remember" state and follow a create-update-display pattern.
+            - Apply an Evaluate AI framework — is the output what I asked for, does it work, can I explain it — to critique AI suggestions rather than accepting them outright.
+            - Write reusable, well-named functions using arrow syntax, parameters, and return values.
+            - Use conditional statements (if/else) to make an app respond differently to different user actions.
+            - Use loops to repeat an action a specified number of times, and test whether AI-generated loops behave correctly.
+            - Plan, build, test, and iterate on your own interactive web app, distinguishing what AI contributed from what you built yourself.
+            :::
         ui-test-mix-move-ai:
           lessons: {}
           lesson_groups: {}
@@ -29733,7 +29776,7 @@ en:
               name: Final Project
           lesson_groups: {}
           name: pl-aif-intro-programming-js
-          title: Teaching Introduction to Programming [JavaScript]
+          title: Teaching Foundations of AI Programming [JavaScript]
           description_audience: ''
           description_short: ''
           description: ''
