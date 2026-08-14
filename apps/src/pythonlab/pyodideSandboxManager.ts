@@ -107,8 +107,8 @@ const sandboxOrigin = () => (cachedSandboxOrigin ??= getSandboxOrigin());
 const SANDBOX_READY_TIMEOUT_MS = 15000;
 
 const SANDBOX_UNREACHABLE_MESSAGE =
-  'Your browser may be preventing us from setting up Python Lab. You may need to ' +
-  'adjust your firewall settings. See our IT requirements page ' +
+  'Your browser may be blocking the setup of Python Lab. You may need to ' +
+  'adjust your firewall settings. See the technical requirements page ' +
   '(https://code.org/educate/it) for which site(s) you need ' +
   'to unblock. If you need assistance, please reach out to support@code.org.';
 
