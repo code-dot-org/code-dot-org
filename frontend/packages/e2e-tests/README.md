@@ -17,33 +17,19 @@ From `frontend/`:
 
 ## functional and eyes
 
-- **functional** — the `chromium`, `firefox` and `webkit` projects. This is every
-  test without the `@visual` tag. A failure stops the Drone PR build and the DTT.
-- **eyes** — the `visual-chromium` project. This is the `@visual` tests, which
-  send images to Applitools. A failure goes to Slack and stops nothing, because a
-  person must approve each new image. Runs only where `VISUAL_PROVIDER` is set.
-
-They run as two processes, so they get two exit codes. Each writes its own report
-and its own `results.json`, and uploads to its own S3 directory. functional uses
-`playwright-report/` and `test-results/`; eyes adds `-eyes` to both names.
+- **functional** — every test without the `@visual` tag. A failure stops the build.
+- **eyes** — the `@visual` tests, checked in Applitools. A failure stops nothing,
+  because a person must approve each new image.
 
 ## Where these tests run
 
-- **Drone** — both suites, against the dashboard and apps the PR builds, before
-  the Cucumber tests. Drone holds a functional failure until Cucumber also runs,
-  so one build shows both results. The functional suite runs `chromium` only, and
-  the Cucumber browser tags widen it. `[skip chrome]` leaves nothing, so the
-  suite does not run. The iPad and iPhone tags do not apply.
+- **Drone** — both suites, against the build the PR makes, before the Cucumber
+  tests. Runs `chromium` only. The Cucumber browser tags widen it.
 - **DTT** — the functional suite in all three browsers, against test-studio, with
-  the Cucumber tests. `test:ui_all` starts all four deploy-time suites together.
-  The daemon has no Applitools key, so on the DTT the eyes suite runs only
-  through GitHub Actions.
-- **DTT → GitHub Actions** (`dtt.yml` → `e2e-tests-ci.yml`) — `test:ui_all` also
-  starts a GitHub Actions run and does not wait for it. The `e2e` job runs the
-  functional suite in all three browsers; the `eyes` job runs `visual-chromium`
-  alone, as everywhere else. They need no CDO secrets and no local Rails build,
-  so an outside contributor or an agent can run them, and GitHub can divide them
-  across runners. Neither job can stop the deploy, because the DTT does not wait.
+  the Cucumber tests. Eyes runs only through GitHub Actions.
+- **DTT → GitHub Actions** (`dtt.yml` → `e2e-tests-ci.yml`) — both suites again,
+  on GitHub runners, with nothing waiting for the result. Needs no CDO secrets
+  and no local Rails build, so contributors and agents can run it too.
 
 Sharding splits the Playwright test report too: each shard can only report on
 the tests it ran. So each writes its slice using Playwright's `blob` reporter, a
