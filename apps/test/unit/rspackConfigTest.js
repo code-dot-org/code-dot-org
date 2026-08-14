@@ -26,7 +26,7 @@ function readConfig(expression, env = {}) {
 }
 
 // The devtool policy in one expression: the chosen devtool, whether the
-// scoped-map plugin is present, and what its pattern matches.
+// src-map plugin is present, and what its pattern matches.
 const DEVTOOL_PROBE = `(() => {
   const plugin = config.plugins.find(
     x => x.constructor.name.includes('EvalSourceMapDevTool')

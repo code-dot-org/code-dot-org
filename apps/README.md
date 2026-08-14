@@ -140,10 +140,10 @@ costs about 2 seconds of startup and 2 seconds per shared-file rebuild, and
 *less* memory, because unmapped modules skip eval wrapping entirely.
 
 One lever adjusts it, and the active mode is printed at startup:
-`APPS_DEVTOOL=eval yarn start --rspack` turns maps off everywhere, for
-machines where the ~2 seconds of startup or the map memory matters more than
-symbols. Known rough edge either way: unmapped modules (node_modules, or
-everything under `eval`) show numeric internal names in DevTools.
+`APPS_DEVTOOL=eval yarn start --rspack` turns maps off everywhere, trading
+symbols for the ~2 seconds of startup and per-rebuild time they cost. Known
+rough edge either way: unmapped modules (node_modules, or everything under
+`eval`) show numeric internal names in DevTools.
 
 ## Testing
 
