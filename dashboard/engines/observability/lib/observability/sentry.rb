@@ -39,12 +39,7 @@ module Observability
     # Identifies the current user in the Sentry context by an opaque log token
     # rather than a raw user id. Intended to be called from a Warden after_fetch
     # hook. Per-user grouping and "users affected" counts still work, since the
-    # token is stable for a given user.
-    #
-    # Never pass a raw user id here. The token is derived by the caller via
-    # Cdo::UserLogToken, which keeps this engine a transport concern with no
-    # knowledge of the key -- and keeps its standalone test bundle free of a
-    # lib/cdo dependency.
+    # token is stable for a given user. Never pass a raw user id here.
     #
     # A nil token leaves the context untouched, so an unconfigured key degrades
     # to anonymous events rather than falling back to the id.
