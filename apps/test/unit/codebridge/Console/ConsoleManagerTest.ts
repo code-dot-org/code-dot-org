@@ -98,4 +98,42 @@ describe('ConsoleManager', () => {
 
     expect(consoleManager.getTerminalLines()).toEqual([]);
   });
+
+  // The environment turned out to work after all, so the explanation is no longer
+  // true and has to come off the screen.
+  it('takes the error off the console when it is retracted', async () => {
+    const consoleManager = newConsoleManager();
+    consoleManager.writeConsoleMessage('program output');
+    consoleManager.setCodeEnvironmentError(ENVIRONMENT_ERROR);
+
+    consoleManager.setCodeEnvironmentError(null);
+
+    expect(consoleManager.getTerminalLines()).toEqual(['program output']);
+    const displayed = await displayedText(consoleManager);
+    expect(displayed).not.toContain('blocking Python Lab');
+    expect(displayed).toContain('program output');
+  });
+
+  it('keeps a half-typed input line when the error is retracted', async () => {
+    const consoleManager = newConsoleManager();
+    consoleManager.setCodeEnvironmentError(ENVIRONMENT_ERROR);
+    consoleManager.writePartialLine('What is your name? ');
+    consoleManager.appendToInputBuffer('Ada');
+
+    consoleManager.setCodeEnvironmentError(null);
+
+    const displayed = await displayedText(consoleManager);
+    expect(displayed).not.toContain('blocking Python Lab');
+    expect(displayed).toContain('What is your name? Ada');
+  });
+
+  it('does nothing when retracting an error that was never reported', async () => {
+    const consoleManager = newConsoleManager();
+    consoleManager.writeConsoleMessage('program output');
+
+    consoleManager.setCodeEnvironmentError(null);
+
+    expect(consoleManager.getTerminalLines()).toEqual(['program output']);
+    expect(await displayedText(consoleManager)).toContain('program output');
+  });
 });

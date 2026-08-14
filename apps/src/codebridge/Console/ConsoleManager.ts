@@ -59,15 +59,44 @@ export default class ConsoleManager {
     }
   }
 
-  // Callers may report the same error as often as they like. The test for
-  // "already printed" is the console's own contents rather than this manager's
-  // state, because the error can reach the console without coming through here:
-  // a re-created console replays the previous console's lines, error included.
+  // Callers may report the same error as often as they like, and may retract it
+  // (null) if the environment turns out to work after all. The test for "already
+  // printed" is the console's own contents rather than this manager's state,
+  // because the error can reach the console without coming through here: a
+  // re-created console replays the previous console's lines, error included.
   public setCodeEnvironmentError(error: string | null) {
+    const previousError = this.codeEnvironmentError;
     this.codeEnvironmentError = error;
-    if (error && !this.terminalLines.some(line => line.includes(error))) {
-      this.writeConsoleMessage(error, false);
+
+    if (error) {
+      if (!this.terminalLines.some(line => line.includes(error))) {
+        this.writeConsoleMessage(error, false);
+      }
+    } else if (previousError) {
+      this.removeTerminalLines(line => line.includes(previousError));
     }
+  }
+
+  // Takes lines back off the console, keeping the rest. A terminal can only
+  // append, so the only way to unprint something is to draw what is left again.
+  private removeTerminalLines(matches: (line: string) => boolean) {
+    const remainingLines = this.terminalLines.filter(line => !matches(line));
+    if (remainingLines.length === this.terminalLines.length) {
+      return;
+    }
+    this.terminalLines = remainingLines;
+
+    this.terminal.write(CLEAR_DISPLAY);
+    this.terminalLines.forEach((line, index) => {
+      const isLastLine = index === this.terminalLines.length - 1;
+      const terminatesLine = !isLastLine || !this.lastLineIsPartial;
+      this.terminal.write(terminatesLine ? `${line}\r\n` : line);
+    });
+    // Anything the user has typed since the last newline is not in
+    // terminalLines yet, so redraw it too.
+    this.terminal.write(this.inputBuffer);
+
+    this.executeTerminalLinesListeners();
   }
 
   public getTerminalLines() {

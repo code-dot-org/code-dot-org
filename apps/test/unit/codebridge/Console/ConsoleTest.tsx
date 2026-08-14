@@ -178,6 +178,20 @@ describe('Console', () => {
     expect(environmentErrorLines()).toHaveLength(1);
   });
 
+  it('removes the environment error when it is retracted', () => {
+    renderConsole();
+    act(() => {
+      store.dispatch(setCodeEnvironmentError(ENVIRONMENT_ERROR));
+    });
+    expect(environmentErrorLines()).toHaveLength(1);
+
+    act(() => {
+      store.dispatch(setCodeEnvironmentError(null));
+    });
+
+    expect(environmentErrorLines()).toHaveLength(0);
+  });
+
   it('keeps the environment error when the console is cleared', () => {
     renderConsole();
     act(() => {
