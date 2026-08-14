@@ -54,8 +54,11 @@ message naming the [IT requirements
 page](https://code.org/en-US/about/it-requirements) into
 `lab2System.codeEnvironmentError`. From there:
 
-- `codebridge/Console/Console.tsx` writes it to the console, and rewrites
-  it after each level change (which clears the console).
+- `codebridge/Console/Console.tsx` hands it to the `ConsoleManager`, which
+  owns printing it: it comes back after the console is cleared (on every
+  level change) and is never printed twice, however many times it is
+  reported. A re-created console adopts the error along with the lines it
+  replays, rather than printing a second copy.
 - `codebridge/Console/ControlButtons.tsx` keeps the run button disabled
   and drops the loading spinner, which would otherwise spin forever.
 

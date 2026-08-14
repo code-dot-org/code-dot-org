@@ -2,13 +2,18 @@ import {setCodeEnvironmentError} from '@cdo/apps/lab2/redux/systemRedux';
 import {FromPyodideSandboxMessage} from '@cdo/apps/pythonlab/sandbox/constants';
 
 const SANDBOX_ORIGIN = 'http://pyodide-sandbox.preview.codeprojects.org';
-const READY_TIMEOUT_MS = 20000;
+const READY_TIMEOUT_MS = 15000;
 
 const mockDispatch = jest.fn();
 const mockLogWarning = jest.fn();
+const mockWriteConsoleMessage = jest.fn();
+let mockIsRunning = false;
 
 jest.mock('@cdo/apps/redux', () => ({
-  getStore: () => ({dispatch: mockDispatch}),
+  getStore: () => ({
+    dispatch: mockDispatch,
+    getState: () => ({lab2System: {isRunning: mockIsRunning}}),
+  }),
 }));
 
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
@@ -24,7 +29,10 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
 
 jest.mock('@codebridge/CodebridgeRegistry', () => ({
   getInstance: () => ({
-    getConsoleManager: () => null,
+    getConsoleManager: () => ({
+      writeConsoleMessage: mockWriteConsoleMessage,
+      writePartialLine: jest.fn(),
+    }),
     getNeighborhood: () => null,
   }),
 }));
@@ -39,10 +47,14 @@ jest.mock('@cdo/apps/util/sandboxedPreviewDomain', () => ({
 
 // The manager creates its sandbox iframe and starts its timer at import time, so
 // each test loads a fresh copy of the module.
-const loadManager = () =>
+const loadManager = () => {
+  let manager: typeof import('@cdo/apps/pythonlab/pyodideSandboxManager');
   jest.isolateModules(() => {
-    require('@cdo/apps/pythonlab/pyodideSandboxManager');
+    manager = require('@cdo/apps/pythonlab/pyodideSandboxManager');
   });
+  // isolateModules runs its callback synchronously, so this is always assigned.
+  return manager!;
+};
 
 const sendSandboxReady = () =>
   window.dispatchEvent(
@@ -57,6 +69,7 @@ describe('pyodideSandboxManager', () => {
     jest.resetModules();
     jest.clearAllMocks();
     jest.useFakeTimers();
+    mockIsRunning = false;
     document.body.innerHTML = '';
   });
 
@@ -73,9 +86,7 @@ describe('pyodideSandboxManager', () => {
       mockDispatch.mock.calls[mockDispatch.mock.calls.length - 1];
     expect(action.type).toBe(setCodeEnvironmentError.type);
     expect(action.payload).toContain('firewall');
-    expect(action.payload).toContain(
-      'https://code.org/en-US/about/it-requirements'
-    );
+    expect(action.payload).toContain('https://code.org/educate/it');
     expect(mockLogWarning).toHaveBeenCalled();
   });
 
@@ -101,5 +112,24 @@ describe('pyodideSandboxManager', () => {
     sendSandboxReady();
 
     expect(mockDispatch).toHaveBeenCalledWith(setCodeEnvironmentError(null));
+  });
+
+  it('says nothing about stopping a program that was never running', () => {
+    const manager = loadManager();
+
+    manager.restartPyodideIfProgramIsRunning();
+
+    expect(mockWriteConsoleMessage).not.toHaveBeenCalled();
+  });
+
+  it('reports stopping a program the user was shown as running', () => {
+    const manager = loadManager();
+    mockIsRunning = true;
+
+    manager.restartPyodideIfProgramIsRunning();
+
+    expect(mockWriteConsoleMessage).toHaveBeenCalledWith(
+      expect.stringContaining('stopped')
+    );
   });
 });

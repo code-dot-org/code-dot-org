@@ -59,30 +59,14 @@ const Console: React.FunctionComponent = () => {
   // The console shows environment errors -- a lab that cannot be set up at all --
   // rather than the code that detects them, because the error outlives any one
   // console: it is still true after the console is cleared on a level change or
-  // re-created on a layout change.
-  const writeCodeEnvironmentError = useCallback(
-    (manager: ConsoleManager | null) => {
-      if (!codeEnvironmentError || !manager) {
-        return;
-      }
-      // A re-created console replays the previous console's lines, which may
-      // already include this message.
-      const alreadyShown = manager
-        .getTerminalLines()
-        .some(line => line.includes(codeEnvironmentError));
-      if (!alreadyShown) {
-        manager.writeConsoleMessage(
-          getSystemError(codeEnvironmentError, appName),
-          /* focusTerminal */ false
-        );
-      }
-    },
-    [codeEnvironmentError, appName]
-  );
-
+  // re-created on a layout change. The manager keeps it to a single copy.
   useEffect(() => {
-    writeCodeEnvironmentError(consoleManager);
-  }, [writeCodeEnvironmentError, consoleManager]);
+    consoleManager?.setCodeEnvironmentError(
+      codeEnvironmentError
+        ? getSystemError(codeEnvironmentError, appName)
+        : null
+    );
+  }, [consoleManager, codeEnvironmentError, appName]);
 
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
@@ -95,9 +79,6 @@ const Console: React.FunctionComponent = () => {
   });
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     clearOutput(false);
-    writeCodeEnvironmentError(
-      CodebridgeRegistry.getInstance().getConsoleManager()
-    );
   });
 
   // Handler for terminal input. This manages storing input into a buffer
@@ -148,11 +129,14 @@ const Console: React.FunctionComponent = () => {
     }
 
     let existingTerminalLines: string[] = [];
+    let existingCodeEnvironmentError: string | null = null;
 
     const existingConsoleManager =
       CodebridgeRegistry.getInstance().getConsoleManager();
     if (existingConsoleManager) {
       existingTerminalLines = existingConsoleManager.getTerminalLines();
+      existingCodeEnvironmentError =
+        existingConsoleManager.getCodeEnvironmentError();
     }
 
     const terminal = new Terminal({
@@ -189,6 +173,11 @@ const Console: React.FunctionComponent = () => {
     if (existingTerminalLines.length > 0) {
       const lines = existingTerminalLines.join('\n');
       newConsoleManager.writeConsoleMessage(lines);
+      // Any environment error is among the replayed lines, so hand it over
+      // without printing a second copy.
+      newConsoleManager.restoreCodeEnvironmentError(
+        existingCodeEnvironmentError
+      );
     }
 
     // Prevent keyboard trap.

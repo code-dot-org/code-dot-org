@@ -9,6 +9,11 @@ export default class ConsoleManager {
   private inputBuffer: string;
   // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
   private lastLineIsPartial: boolean;
+  // The message explaining that the coding environment could not be set up, if
+  // it could not be. Unlike program output it stays true for the whole session,
+  // so this manager owns writing it: it survives clearing the console, and no
+  // caller can print a second copy of it.
+  private codeEnvironmentError: string | null;
   private terminalLinesListeners: ((lines: string[]) => void)[] = [];
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
@@ -17,6 +22,7 @@ export default class ConsoleManager {
     this.terminalLines = [];
     this.inputBuffer = '';
     this.lastLineIsPartial = false;
+    this.codeEnvironmentError = null;
   }
 
   public getTerminal() {
@@ -40,6 +46,31 @@ export default class ConsoleManager {
     this.terminal.clear();
     this.lastLineIsPartial = false;
     this.executeTerminalLinesListeners();
+    // The run button is still disabled and its tooltip still points here, so the
+    // explanation has to come back with the empty console.
+    if (this.codeEnvironmentError) {
+      this.writeConsoleMessage(this.codeEnvironmentError, false);
+    }
+  }
+
+  public setCodeEnvironmentError(error: string | null) {
+    if (error === this.codeEnvironmentError) {
+      return;
+    }
+    this.codeEnvironmentError = error;
+    if (error) {
+      this.writeConsoleMessage(error, false);
+    }
+  }
+
+  public getCodeEnvironmentError() {
+    return this.codeEnvironmentError;
+  }
+
+  // Adopts an error already printed in the lines replayed from a previous
+  // console, so this manager keeps it across clears without printing it again.
+  public restoreCodeEnvironmentError(error: string | null) {
+    this.codeEnvironmentError = error;
   }
 
   public getTerminalLines() {

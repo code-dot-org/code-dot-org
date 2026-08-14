@@ -46,6 +46,32 @@ const consoleLines = () =>
 const environmentErrorLines = () =>
   consoleLines().filter(line => line.includes(ENVIRONMENT_ERROR));
 
+const PROGRAM_OUTPUT = '[PYTHON LAB] Program stopped.';
+
+const writeProgramOutput = () =>
+  CodebridgeRegistry.getInstance()
+    .getConsoleManager()
+    ?.writeConsoleMessage(PROGRAM_OUTPUT);
+
+const notifyLevelLoadStarted = () =>
+  Lab2Registry.getInstance()
+    .getLifecycleNotifier()
+    .notify(LifecycleEvent.LevelLoadStarted, 1);
+
+const notifyLevelLoadCompleted = () =>
+  Lab2Registry.getInstance()
+    .getLifecycleNotifier()
+    .notify(
+      LifecycleEvent.LevelLoadCompleted,
+      {id: 1, name: 'level', appName: 'pythonlab'},
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined
+    );
+
 describe('Console', () => {
   let store: Store;
 
@@ -103,28 +129,62 @@ describe('Console', () => {
     expect(environmentErrorLines()).toHaveLength(1);
   });
 
-  it('rewrites the environment error after a level change clears the console', () => {
+  it('keeps exactly one copy of the environment error across a level change', () => {
+    renderConsole();
+    act(() => {
+      store.dispatch(setCodeEnvironmentError(ENVIRONMENT_ERROR));
+    });
+    writeProgramOutput();
+
+    act(() => notifyLevelLoadStarted());
+    expect(consoleLines()).not.toContain(PROGRAM_OUTPUT);
+    expect(environmentErrorLines()).toHaveLength(1);
+
+    act(() => notifyLevelLoadCompleted());
+    expect(environmentErrorLines()).toHaveLength(1);
+  });
+
+  // A level change unmounts and remounts the whole lab, and the new console
+  // replays the old one's lines -- which already include the error.
+  it('keeps exactly one copy of the environment error when the console is re-created', () => {
+    const {unmount} = renderConsole();
+    act(() => {
+      store.dispatch(setCodeEnvironmentError(ENVIRONMENT_ERROR));
+    });
+
+    act(() => notifyLevelLoadStarted());
+    writeProgramOutput();
+    unmount();
+    renderConsole();
+    act(() => notifyLevelLoadCompleted());
+
+    expect(environmentErrorLines()).toHaveLength(1);
+  });
+
+  // Same re-creation, but with no console mounted when the load completes, so
+  // nothing clears the replayed lines afterwards.
+  it('keeps exactly one copy of the environment error when re-created after the load completes', () => {
+    const {unmount} = renderConsole();
+    act(() => {
+      store.dispatch(setCodeEnvironmentError(ENVIRONMENT_ERROR));
+    });
+
+    act(() => notifyLevelLoadStarted());
+    writeProgramOutput();
+    unmount();
+    notifyLevelLoadCompleted();
+    renderConsole();
+
+    expect(environmentErrorLines()).toHaveLength(1);
+  });
+
+  it('keeps the environment error when the console is cleared', () => {
     renderConsole();
     act(() => {
       store.dispatch(setCodeEnvironmentError(ENVIRONMENT_ERROR));
     });
 
-    const notifier = Lab2Registry.getInstance().getLifecycleNotifier();
-    act(() => notifier.notify(LifecycleEvent.LevelLoadStarted, 1));
-    expect(environmentErrorLines()).toHaveLength(0);
-
-    act(() =>
-      notifier.notify(
-        LifecycleEvent.LevelLoadCompleted,
-        {id: 1, name: 'level', appName: 'pythonlab'},
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
-      )
-    );
+    CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
 
     expect(environmentErrorLines()).toHaveLength(1);
   });
