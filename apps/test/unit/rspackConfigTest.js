@@ -103,6 +103,12 @@ describe('rspack.config', function () {
       expect(probe.hasPlugin).toBe(false);
     });
 
+    it('DEBUG_MINIFIED keeps its full-fidelity maps', function () {
+      const probe = readConfig(DEVTOOL_PROBE, {DEV: '1', DEBUG_MINIFIED: '1'});
+      expect(probe.devtool).toBe('eval-source-map');
+      expect(probe.hasPlugin).toBe(false);
+    });
+
     it('APPS_DEVTOOL=eval opts out of maps entirely', function () {
       const probe = readConfig(DEVTOOL_PROBE, {DEV: '1', APPS_DEVTOOL: 'eval'});
       expect(probe.devtool).toBe('eval');

@@ -141,7 +141,9 @@ rebuilds; a one-shot `yarn build --rspack` forced to full maps was OOM-killed
 on a 30GB machine, since a build compiles every dynamic import up front where
 the dev server defers them). Measured against no maps at all, the default
 costs about 2 seconds of startup and 2 seconds per shared-file rebuild, and
-*less* memory, because unmapped modules skip eval wrapping entirely.
+*less* memory, because unmapped modules skip eval wrapping entirely. A
+one-shot `yarn build --rspack` pays about 4 seconds and 0.7GB for the same
+maps in its output.
 
 One lever adjusts it, and the active mode is printed at startup:
 `APPS_DEVTOOL=eval yarn start --rspack` turns maps off everywhere, trading

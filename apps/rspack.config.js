@@ -200,6 +200,8 @@ function createRspackConfig({
     !envConstants.APPS_DEVTOOL &&
     !process.env.CI &&
     !process.env.DEBUG_MINIFIED;
+  // Unlike devtool(), which puts CI first, an explicit APPS_DEVTOOL
+  // outranks CI here: someone who sets it on a CI box asked for it.
   const rspackDevtool = srcMapsDefault
     ? false
     : minify
@@ -214,12 +216,15 @@ function createRspackConfig({
           'stepping for first-party code'
       );
     } else {
+      // Every whole-app map mode deserves the warning: the -module
+      // modes measured >22GB, and eval-source-map (DEBUG_MINIFIED's
+      // choice) is heavier still — full columns plus original source.
       console.log(
         `[rspack] source maps: ${
           rspackDevtool === 'eval' ? 'none (eval)' : rspackDevtool
         }` +
-          (/-module/.test(String(rspackDevtool))
-            ? ' — WARNING: whole-app -module maps exceed 22GB under rspack;' +
+          (rspackDevtool !== 'eval'
+            ? ' — WARNING: whole-app maps measured >22GB under rspack;' +
               ' the src/ default avoids this (see README)'
             : '')
       );
