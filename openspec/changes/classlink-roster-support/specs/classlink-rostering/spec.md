@@ -145,25 +145,6 @@ The system SHALL paginate all ClassLink collection endpoints (`/applications`, `
 - **WHEN** the system fetches `/applications` to resolve district credentials
 - **THEN** the request carries the explicit limit rather than relying on a server default, since the number of sharing districts already exceeds the OneRoster default limit of 100 and a truncated list would make real districts appear to have ClassLink rostering disabled
 
-### Requirement: One Roster 429 responses are propagated and retried from the browser
-When a One Roster API call fails with HTTP 429, the backend SHALL immediately return 429 to the browser without sleeping or retrying in-process. The frontend SHALL retry the request with automatic exponential backoff — 3 attempts total, with increasing waits between them — using a shared retry helper for both the class-list and import/sync requests, and SHALL surface an error to the user only after all attempts fail.
-
-#### Scenario: Backend propagates 429 without holding the request
-- **WHEN** a One Roster API call made during a rostering request returns 429
-- **THEN** the backend responds 429 to the browser immediately, without sleeping or retrying in-process
-
-#### Scenario: Frontend retry succeeds
-- **WHEN** a rostering request returns 429 and a subsequent backoff attempt (within 3 total) succeeds
-- **THEN** the operation completes normally and no error is shown to the user
-
-#### Scenario: Retries exhausted
-- **WHEN** all 3 attempts of a rostering request return 429
-- **THEN** the frontend surfaces an error to the user through the existing roster-import failure path
-
-#### Scenario: Class-list and import requests share the retry behavior
-- **WHEN** either the class-list fetch or the import/sync request receives a 429
-- **THEN** the same retry helper applies the same backoff policy to both
-
 ### Requirement: One Roster 401 responses trigger token refresh with single retry
 When a One Roster API call fails with HTTP 401, the system SHALL re-fetch the district credentials from `/applications` and compare the fresh bearer token to the cached one to distinguish token expiry from authorization failure.
 
@@ -209,9 +190,9 @@ The system SHALL surface a distinct message for each ClassLink rostering failure
 - **WHEN** a teacher holding only a legacy v1 ClassLink auth option attempts to use rostering
 - **THEN** the teacher sees "Please sign in again from ClassLink to proceed with roster sync."
 
-#### Scenario: Rate limiting exhausts the browser retries
-- **WHEN** the frontend has exhausted its three attempts against repeated 429 responses
-- **THEN** the teacher sees "We're having trouble getting roster information from ClassLink. Please try again later."
+#### Scenario: ClassLink returns an unexpected status
+- **WHEN** a One Roster call fails with a status the design does not handle specifically, such as a transient 500 or a 429
+- **THEN** the teacher sees "We're having trouble getting roster information from ClassLink. Please try again later." and may retry by repeating the action
 
 #### Scenario: Unexpected failure has no specific message
 - **WHEN** a rostering request fails for any reason without its own copy — a response missing its collection key, a malformed body, or an unhandled client error
