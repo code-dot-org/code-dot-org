@@ -70,11 +70,12 @@ namespace :package do
   timed_task_with_logging apps: ['apps:update', 'apps:symlink']
 
   namespace :studio do
-    # Production and levelbuilder frontends have no node, so they cannot run
-    # turbo to work out the package key. They read it from the pointer object
-    # that a build environment wrote for this git tree.
+    # Production frontends have no node, so they cannot run turbo to work out
+    # the package key. They read it from the pointer object that a build
+    # environment wrote for this git tree. Levelbuilder skips the package
+    # altogether below, so it needs no mode of its own.
     def studio_pointer_mode?
-      rack_env?(:production) || rack_env?(:levelbuilder)
+      rack_env?(:production)
     end
 
     def studio_packager
