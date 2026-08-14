@@ -150,5 +150,7 @@ export function buildCodeWidgetHtml(): string {
     css: CSS,
     bodyHtml: BODY,
     js: JS,
+    // Student code runs via new Function inside this widget's sandbox.
+    allowEval: true,
   });
 }

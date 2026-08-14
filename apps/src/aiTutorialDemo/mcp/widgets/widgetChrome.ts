@@ -49,13 +49,21 @@ export function buildWidgetDocument(options: {
   css: string;
   bodyHtml: string;
   js: string;
+  /**
+   * Permits eval/new Function inside the widget. Only for widgets whose job
+   * is running student code; the network stays blocked either way.
+   */
+  allowEval?: boolean;
 }): string {
+  const scriptSrc = options.allowEval
+    ? "'unsafe-inline' 'unsafe-eval'"
+    : "'unsafe-inline'";
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy"
-  content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:;">
+  content="default-src 'none'; style-src 'unsafe-inline'; script-src ${scriptSrc}; img-src data:;">
 <title>${options.title}</title>
 <style>${WIDGET_BASE_CSS}</style>
 <style>${options.css}</style>
