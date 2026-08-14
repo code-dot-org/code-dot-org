@@ -24,7 +24,8 @@ From `frontend/`:
 ## Where these tests run
 
 - **Drone** — both suites, against the build the PR makes, before the Cucumber
-  tests. Runs `chromium` only. The Cucumber browser tags widen it.
+  tests. Runs `chromium` only. To add browsers, see the commit tags in
+  [dashboard/test/ui/README.md](../../../dashboard/test/ui/README.md).
 - **DTT** — the functional suite in all three browsers, against test-studio, with
   the Cucumber tests. Eyes runs only through GitHub Actions.
 - **DTT → GitHub Actions** (`dtt.yml` → `e2e-tests-ci.yml`) — both suites again,
