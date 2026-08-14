@@ -63,6 +63,10 @@ declare module '@mui/material/Breadcrumbs' {
   }
 }
 
+// Tooltip has no `size` here on purpose: MUI's Tooltip copies unknown props
+// onto the trigger, so its size travels as a `data-size` attribute instead.
+// See src/themes/code.org/styleOverrides/tooltip.ts.
+
 declare module '@mui/material/styles' {
   interface TypographyVariants {
     body3: React.CSSProperties;
