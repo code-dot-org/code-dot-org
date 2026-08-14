@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 <div style="width: 100%; margin-top: 20px; border-radius: 10px; background: #4C42CF; padding: 40px 30px; display: flex; align-items: center; justify-content: center; gap: 24px;">
    
     <div style="color: #FFFFFF; font-size: 32px; font-weight: bold; line-height: 1.1;">
-        Teaching Programming with AI [JavaSript]
+        Teaching Foundations of AI Programming [JS]
     </div>
 </div>
 
@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 ## Welcome
     
-This professional learning module is designed to help you prepare to teach CodeAI's        **Programming with AI** from the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>.
+This professional learning module is designed to help you prepare to teach CodeAI's        **Foundations of AI Programming [JavaScript]** from the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>.
 
 The Programming with AI content is designed for 9th - 12th grade students.
     
