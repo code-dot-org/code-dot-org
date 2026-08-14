@@ -128,7 +128,7 @@ const initialState = {
   userCreatedAt: null,
   userSharingDisabled: false,
   hasSeenHomepageWelcome: false,
-  aiChatGeminiModelsBlocked: false,
+  aiModelsRegionBlocked: false,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -260,7 +260,7 @@ export default function currentUser(state = initialState, action) {
       sharing_disabled,
       has_seen_homepage_welcome,
       ai_chat_access_level,
-      ai_chat_gemini_models_blocked,
+      ai_models_region_blocked,
     } = action.serverUser;
     // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
     // renamed to AnalyticsReporter.
@@ -299,7 +299,7 @@ export default function currentUser(state = initialState, action) {
       userSharingDisabled: sharing_disabled,
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
       aiChatAccessLevel: ai_chat_access_level,
-      aiChatGeminiModelsBlocked: ai_chat_gemini_models_blocked ?? false,
+      aiModelsRegionBlocked: ai_models_region_blocked ?? false,
     };
   }
 

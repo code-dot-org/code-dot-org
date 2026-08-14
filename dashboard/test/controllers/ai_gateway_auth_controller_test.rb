@@ -24,7 +24,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
   test 'refuses to mint a token when the user cannot use Gemini models' do
     sign_in(@authorized_teacher)
-    User.any_instance.stubs(:gemini_models_blocked?).returns(true)
+    User.any_instance.stubs(:ai_models_region_blocked?).returns(true)
 
     post :get_access_token, params: @params, as: :json
 
@@ -36,7 +36,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
   test 'mints a token when the user can use Gemini models' do
     sign_in(@authorized_teacher)
-    User.any_instance.stubs(:gemini_models_blocked?).returns(false)
+    User.any_instance.stubs(:ai_models_region_blocked?).returns(false)
     # The signing key is only configured outside the test environment.
     OpenSSL::PKey::RSA.stubs(:new).returns(OpenSSL::PKey::RSA.generate(2048))
     JWT.stubs(:encode).returns('fake.jwt.token')

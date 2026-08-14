@@ -116,7 +116,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'start_chat_completion returns region error for a gemini model when gemini models are blocked' do
     sign_in(@authorized_teacher1)
-    User.any_instance.stubs(:gemini_models_blocked?).returns(true)
+    User.any_instance.stubs(:ai_models_region_blocked?).returns(true)
     gemini_params = @valid_params_chat_completion.merge(
       modelParameters: @default_model_customizations.merge('selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH])
     )
@@ -131,7 +131,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'start_chat_completion allows a non-gemini model when gemini models are blocked' do
     sign_in(@authorized_teacher1)
-    User.any_instance.stubs(:gemini_models_blocked?).returns(true)
+    User.any_instance.stubs(:ai_models_region_blocked?).returns(true)
     # @valid_params_chat_completion uses gpt-4o-mini.
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :success

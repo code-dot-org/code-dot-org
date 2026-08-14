@@ -10,7 +10,7 @@ import {
 
 /**
  * Returns true if the model is served via the Google Gemini API. These models
- * are blocked for international users; see currentUser.aiChatGeminiModelsBlocked
+ * are blocked for international users; see currentUser.aiModelsRegionBlocked
  * and User::AiAccessible on the server.
  */
 export const isGeminiModelId = (modelId: string): boolean =>

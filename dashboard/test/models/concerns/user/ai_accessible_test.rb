@@ -185,15 +185,15 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
   end
 
-  describe '#gemini_models_blocked?' do
-    subject(:gemini_models_blocked?) {user.gemini_models_blocked?}
+  describe '#ai_models_region_blocked?' do
+    subject(:ai_models_region_blocked?) {user.ai_models_region_blocked?}
 
     context 'when a teacher is in a non-US school' do
       it 'returns true even for a verified teacher' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:verified_instructor?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _gemini_models_blocked?.must_equal true
+        _ai_models_region_blocked?.must_equal true
       end
     end
 
@@ -201,7 +201,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       it 'returns false' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_us))
-        _gemini_models_blocked?.must_equal false
+        _ai_models_region_blocked?.must_equal false
       end
     end
 
@@ -210,7 +210,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(nil)
         allow(user).to receive(:user_geos).and_return([build(:user_geo, :sydney)])
-        _gemini_models_blocked?.must_equal true
+        _ai_models_region_blocked?.must_equal true
       end
     end
 
@@ -219,7 +219,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(nil)
         allow(user).to receive(:user_geos).and_return([])
-        _gemini_models_blocked?.must_equal false
+        _ai_models_region_blocked?.must_equal false
       end
     end
 
@@ -228,7 +228,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_without_country))
         allow(user).to receive(:user_geos).and_return([build(:user_geo, :seattle)])
-        _gemini_models_blocked?.must_equal false
+        _ai_models_region_blocked?.must_equal false
       end
     end
 
@@ -237,7 +237,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         non_us_teacher = create(:teacher)
         allow(non_us_teacher).to receive(:school_info).and_return(build(:school_info_non_us))
         allow(user).to receive(:teachers).and_return([non_us_teacher])
-        _gemini_models_blocked?.must_equal true
+        _ai_models_region_blocked?.must_equal true
       end
     end
 
@@ -248,7 +248,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         us_teacher = qualified_teacher
         allow(us_teacher).to receive(:school_info).and_return(build(:school_info_us))
         allow(user).to receive(:teachers).and_return([non_us_teacher, us_teacher])
-        _gemini_models_blocked?.must_equal false
+        _ai_models_region_blocked?.must_equal false
       end
     end
 
@@ -257,7 +257,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(DCDO).to receive(:get).with("allow_international_aichat_usage", false).and_return(true)
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _gemini_models_blocked?.must_equal false
+        _ai_models_region_blocked?.must_equal false
       end
     end
 
@@ -266,7 +266,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:levelbuilder?).and_return(true)
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _gemini_models_blocked?.must_equal false
+        _ai_models_region_blocked?.must_equal false
       end
     end
   end
@@ -279,7 +279,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
 
     context 'when gemini models are blocked' do
       before do
-        allow(user).to receive(:gemini_models_blocked?).and_return(true)
+        allow(user).to receive(:ai_models_region_blocked?).and_return(true)
       end
 
       it 'blocks every gemini model, including image generation' do
@@ -297,7 +297,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
 
     context 'when gemini models are not blocked' do
       before do
-        allow(user).to receive(:gemini_models_blocked?).and_return(false)
+        allow(user).to receive(:ai_models_region_blocked?).and_return(false)
       end
 
       it 'allows all models' do

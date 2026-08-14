@@ -70,7 +70,7 @@ export function useAiChatDisabledState({
     state => state.currentUser.aiChatAccessLevel
   );
   const geminiModelsBlocked = useAppSelector(
-    state => state.currentUser.aiChatGeminiModelsBlocked
+    state => state.currentUser.aiModelsRegionBlocked
   );
   const isLevelbuilder = useAppSelector(
     state => state.currentUser.isLevelbuilder

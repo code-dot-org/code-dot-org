@@ -27,8 +27,10 @@ module User::AiAccessible
     section_enabled_access_level
   end
 
-  # Gemini-served models are blocked for international users
-  def gemini_models_blocked?
+  # Whether some AI models are unavailable to this user because of where they
+  # are. Today that means the Gemini-served models, but the name stays free of
+  # the provider so a future restriction can reuse it. Levelbuilders are exempt.
+  def ai_models_region_blocked?
     return false if levelbuilder?
     international_ai_chat_user?
   end
@@ -37,7 +39,7 @@ module User::AiAccessible
   # (aichat_requests_controller, ai_gateway_auth_controller).
   def can_use_aichat_model?(model_id)
     return true unless AI_CHAT_GEMINI_MODEL_IDS.include?(model_id)
-    !gemini_models_blocked?
+    !ai_models_region_blocked?
   end
 
   # has essential or higher access to AI chat tools
@@ -100,8 +102,12 @@ module User::AiAccessible
   # True only when we can positively determine the user is outside the US, so we
   # never block users whose location we can't establish. Prefer school_info, but
   # only when it has a country (legacy rows may have only state/district data);
-  # otherwise fall back to the most recent geolocation, and fail open if neither
-  # is known.
+  # otherwise fall back to geolocation, and fail open if neither is known.
+  #
+  # Note the geolocation is recorded once, at the user's first tracked sign-in,
+  # and never refreshed (see config/initializers/trackable.rb), so it reflects
+  # where they first signed in rather than where they are now. A user placed
+  # wrongly by it stays that way until they set their school info.
   private def non_us_ai_chat_user?(user)
     return !user.school_info.usa? if user.school_info&.country.present?
     geo_country = user.user_geos.first&.country

@@ -23,7 +23,7 @@ let mockState = {
   currentUser: {
     isTeacher: false,
     aiChatAccessLevel: 'enabled',
-    aiChatGeminiModelsBlocked: false,
+    aiModelsRegionBlocked: false,
     isLevelbuilder: false,
   },
 };
@@ -68,7 +68,7 @@ describe('useAiChatDisabledState', () => {
       currentUser: {
         isTeacher: false,
         aiChatAccessLevel: 'enabled',
-        aiChatGeminiModelsBlocked: false,
+        aiModelsRegionBlocked: false,
         isLevelbuilder: false,
       },
     };
@@ -155,7 +155,7 @@ describe('useAiChatDisabledState', () => {
   });
 
   it('returns the standard student message when a gemini model is region-blocked', () => {
-    mockState.currentUser.aiChatGeminiModelsBlocked = true;
+    mockState.currentUser.aiModelsRegionBlocked = true;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -172,7 +172,7 @@ describe('useAiChatDisabledState', () => {
 
   it('returns the tutor-specific region message and FAQ link for blocked teachers in ai tutor', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.aiChatGeminiModelsBlocked = true;
+    mockState.currentUser.aiModelsRegionBlocked = true;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -197,7 +197,7 @@ describe('useAiChatDisabledState', () => {
 
   it('returns the level-scoped region message and FAQ link for blocked teachers in the aichat lab', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.aiChatGeminiModelsBlocked = true;
+    mockState.currentUser.aiModelsRegionBlocked = true;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -220,7 +220,7 @@ describe('useAiChatDisabledState', () => {
 
   it('omits the FAQ link for region-blocked teachers when clientType is unknown', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.aiChatGeminiModelsBlocked = true;
+    mockState.currentUser.aiModelsRegionBlocked = true;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -237,7 +237,7 @@ describe('useAiChatDisabledState', () => {
 
   it('does not block non-gemini models for region-blocked users', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.aiChatGeminiModelsBlocked = true;
+    mockState.currentUser.aiModelsRegionBlocked = true;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -261,7 +261,7 @@ describe('useAiChatDisabledState', () => {
   });
 
   it('does not block when no selectedModelId is provided', () => {
-    mockState.currentUser.aiChatGeminiModelsBlocked = true;
+    mockState.currentUser.aiModelsRegionBlocked = true;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({appName: 'pythonlab'})
@@ -272,7 +272,7 @@ describe('useAiChatDisabledState', () => {
 
   it('shows predict gating before the region-blocked message for teachers on an unsubmitted predict level', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.aiChatGeminiModelsBlocked = true;
+    mockState.currentUser.aiModelsRegionBlocked = true;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
