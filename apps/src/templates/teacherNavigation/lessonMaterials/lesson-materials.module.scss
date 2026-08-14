@@ -66,12 +66,8 @@
   font-size: 16px;
 }
 
-// Resource-type icon chips. Each is a wash fill with a glyph on top, so
-// both properties come from the same CADS family: the `light` background
-// step (CADS has one wash step, where the legacy ramp had light and
-// extra-light) paired with the `secondary` text step. `primary` is the
-// saturated mid-ramp value and does not reach 3:1 against its own wash —
-// see tags/tags.module.scss for the same pairing.
+// Chip glyphs take the `secondary` text step: `primary` is the mid-ramp
+// value and misses 3:1 against its own `light` wash.
 .slides {
   background-color: var(--background-warning-light);
   color: var(--text-warning-secondary);
@@ -97,9 +93,7 @@
   color: var(--text-info-secondary);
 }
 
-// The legacy aqua, teal and purple families collapse into the single CADS
-// brand family, so custom resources now share the lesson-plan chip color.
-// The glyph and the label still tell them apart.
+// Shares the lesson-plan color: the CADS brand family has one hue.
 .custom {
   background-color: var(--background-brand-light);
   color: var(--text-brand-secondary);
