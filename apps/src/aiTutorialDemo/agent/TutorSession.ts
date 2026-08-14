@@ -204,10 +204,17 @@ export class TutorSession {
         if (!output.toolCall) {
           break;
         }
-        await this.dispatchToolCall(
+        const renderedWidget = await this.dispatchToolCall(
           output.toolCall.name,
           output.toolCall.argumentsJson
         );
+        // A presented widget ends the turn — the student acts next. Looping
+        // here let the model chain chart → question → editor with no student
+        // input in between; only failed calls (nothing rendered) earn the
+        // model another try within the cap.
+        if (renderedWidget) {
+          break;
+        }
       }
     } catch (error) {
       console.error('AI tutorial demo turn failed:', error);
@@ -225,7 +232,11 @@ export class TutorSession {
     }
   }
 
-  private async dispatchToolCall(name: string, argumentsJson: string) {
+  /** Returns true when the call put a widget on screen. */
+  private async dispatchToolCall(
+    name: string,
+    argumentsJson: string
+  ): Promise<boolean> {
     let args: Record<string, unknown>;
     try {
       args = JSON.parse(argumentsJson || '{}');
@@ -234,7 +245,7 @@ export class TutorSession {
         role: 'user',
         content: `[tool_result for ${name}] Error: argumentsJson was not valid JSON.`,
       });
-      return;
+      return false;
     }
     this.pushItem({kind: 'status', text: `Tutor is using ${name}`});
     let result: CallToolResult;
@@ -245,7 +256,7 @@ export class TutorSession {
         role: 'user',
         content: `[tool_result for ${name}] Error: ${String(error)}`,
       });
-      return;
+      return false;
     }
     const tool = this.runtime.getTool(name);
     const template = tool?.uiResourceUri
@@ -265,6 +276,7 @@ export class TutorSession {
       role: 'user',
       content: `[tool_result for ${name}] ${JSON.stringify(result.content)}`,
     });
+    return Boolean(template);
   }
 }
 

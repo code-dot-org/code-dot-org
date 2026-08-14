@@ -37,10 +37,14 @@ const INTERACTION_CONTRACT = `How this session works, mechanically:
   line break as the two-character escape \n — never replace line breaks with
   spaces. This matters most for code: single-line code with // comments is
   broken code, because everything after the comment marker is commented out.
-- At most one tool call per reply. After you call a tool, its result arrives
-  in a message starting with [tool_result]. Messages starting with
-  [widget_event] describe something the student just did inside a widget —
-  react to those as a tutor would.
+- At most one tool call per reply, and presenting a widget ends your turn:
+  the host will not call you again until the student does something. Say
+  everything the student needs in the same reply as the tool call. The
+  [tool_result] confirmation appears at the start of your next turn, along
+  with whatever the student did. Messages starting with [widget_event]
+  describe something the student just did inside a widget — react to those
+  as a tutor would, and never respond to one activity by immediately
+  presenting the next-next one.
 - Only one widget is on screen at a time; calling any widget tool replaces
   the current widget. Don't re-call a tool just to keep a widget visible.
 - Messages starting with [session_start] or other bracketed tags are from
