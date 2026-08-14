@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "show_calendar": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-24 17:54:58 UTC",
+    "serialized_at": "2026-08-14 00:34:30 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -5895,6 +5897,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/courses/6-12-dev-playground/units/19/resources",
+      "key": "all_resources_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/6-12-dev-playground/units/19/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/6-12-dev-playground/units/19/vocab",
+      "key": "all_vocabulary_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6"
+      }
+    },
+    {
       "name": "Build Your First Web Page with AI",
       "url": "https://docs.google.com/presentation/d/14bH29aVDp-cbTaNci71QhYNvawq-bWp1PKehTHKAvOs/edit?usp=sharing",
       "key": "build_your_first_web_page_with_ai_1",
@@ -6554,7 +6589,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    }
   ],
   "scripts_student_resources": [
 

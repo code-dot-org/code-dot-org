@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-30 18:06:43 UTC",
+    "serialized_at": "2026-08-14 03:47:24 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -538,8 +538,21 @@
       }
     },
     {
-      "key": "587555ef-6a36-491a-a9bd-ac50357581ef",
+      "key": "51bf8d29-92b9-4458-b286-982fc9032c4b",
       "position": 1,
+      "properties": {
+        "name": "Revised Level Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "51bf8d29-92b9-4458-b286-982fc9032c4b",
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026"
+      }
+    },
+    {
+      "key": "587555ef-6a36-491a-a9bd-ac50357581ef",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -553,7 +566,7 @@
     },
     {
       "key": "b5108813-331a-4058-98b5-afa5caf42a7c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity "
@@ -567,7 +580,7 @@
     },
     {
       "key": "5b94f8cc-1e24-4517-b327-2dad71135d53",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1508,6 +1521,39 @@
       "seeding_key": {
         "activity_section.key": "c1017fca-432f-4e97-ae74-84a23f40f272",
         "lesson_activity.key": "1857319a-cd9f-4e2e-9c14-166dfe5cc14a"
+      }
+    },
+    {
+      "key": "1d31967c-fc63-485f-8e46-d6569fff1e88",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d31967c-fc63-485f-8e46-d6569fff1e88",
+        "lesson_activity.key": "51bf8d29-92b9-4458-b286-982fc9032c4b"
+      }
+    },
+    {
+      "key": "2ddab036-031b-4170-87d3-db2cd857f212",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212",
+        "lesson_activity.key": "51bf8d29-92b9-4458-b286-982fc9032c4b"
+      }
+    },
+    {
+      "key": "ab89159a-d454-4bdb-bd96-36acf6af0c09",
+      "position": 3,
+      "properties": {
+        "progression_name": "Assess"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09",
+        "lesson_activity.key": "51bf8d29-92b9-4458-b286-982fc9032c4b"
       }
     },
     {
@@ -3736,6 +3782,116 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level1-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "1d31967c-fc63-485f-8e46-d6569fff1e88"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level1-v2-2026"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level2-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level2-v2-2026"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level3-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level3-v2-2026"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assess"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level4-v3-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level4-v3-2026"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assess"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level5-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level5-v2-2026"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3753,8 +3909,8 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 2,
+      "chapter": 50,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3775,8 +3931,8 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 3,
+      "chapter": 51,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3797,8 +3953,8 @@
       ]
     },
     {
-      "chapter": 47,
-      "position": 4,
+      "chapter": 52,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3819,8 +3975,8 @@
       ]
     },
     {
-      "chapter": 48,
-      "position": 5,
+      "chapter": 53,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3841,8 +3997,8 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 6,
+      "chapter": 54,
+      "position": 11,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -3863,8 +4019,8 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 7,
+      "chapter": 55,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3885,8 +4041,8 @@
       ]
     },
     {
-      "chapter": 51,
-      "position": 8,
+      "chapter": 56,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3907,7 +4063,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3929,7 +4085,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3951,7 +4107,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3973,7 +4129,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3995,7 +4151,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4017,7 +4173,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 62,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4039,7 +4195,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 63,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4061,7 +4217,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 64,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4083,7 +4239,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 65,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4105,7 +4261,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4127,7 +4283,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4149,7 +4305,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4171,7 +4327,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4193,7 +4349,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4215,7 +4371,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4237,7 +4393,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4259,7 +4415,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 73,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -4281,7 +4437,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4303,7 +4459,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4325,7 +4481,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4347,7 +4503,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4369,7 +4525,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4391,7 +4547,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4413,7 +4569,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4435,7 +4591,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 81,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4457,7 +4613,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 82,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4479,7 +4635,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 83,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4501,7 +4657,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4523,7 +4679,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 85,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4545,7 +4701,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 86,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4567,7 +4723,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 87,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4589,7 +4745,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 88,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4611,7 +4767,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 89,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4633,7 +4789,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 90,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4655,7 +4811,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 91,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -4677,7 +4833,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4699,7 +4855,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 93,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4721,7 +4877,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 94,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4743,7 +4899,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 95,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4765,7 +4921,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 96,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4787,7 +4943,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 97,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4809,7 +4965,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 98,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4831,7 +4987,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 99,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4853,7 +5009,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 100,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4875,7 +5031,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4897,7 +5053,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5434,6 +5590,66 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "data-science-with-python-unit-2026",
         "activity_section.key": "b24be7f4-c059-4803-b18a-c03b161d100f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level1-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level1-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "1d31967c-fc63-485f-8e46-d6569fff1e88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level2-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level2-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level3-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level3-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level4-v3-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level4-v3-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level5-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level5-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09"
       }
     },
     {
