@@ -20,3 +20,9 @@
   .field
     = f.label :purpose, 'Purpose'
     = f.select :purpose, options_for_select(Quiz::PURPOSES, @level.purpose), include_blank: true
+
+  .field
+    - if @level.new_record?
+      %p Save this level before authoring its questions.
+    - else
+      = link_to 'Author Quiz Questions', author_quiz_questions_level_path(@level), target: '_blank'
