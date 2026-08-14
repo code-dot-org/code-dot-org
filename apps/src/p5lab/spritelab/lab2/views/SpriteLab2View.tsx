@@ -45,6 +45,7 @@ import {
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
+import {countWorldCells, nextGuideStepIndex} from '../guideSteps';
 import {
   renameImageReferences,
   renameImageReferencesOnWorkspace,
@@ -237,10 +238,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // A level with visible_tabs opens on the list's first entry (the display
   // order is fixed by TabShell, so authored order carries the start tab).
-  // Once per level: the slice resets to 'Code' between levels.
-  const hasVisibleTabsProperty = !!levelProperties.visibleTabs?.length;
   useEffect(() => {
-    if (hasVisibleTabsProperty) {
+    if (levelProperties.visibleTabs?.length) {
       dispatch(setActiveTab(tabs[0]));
     }
     // Only the level identity should re-trigger the start tab.
@@ -341,9 +340,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // Create the pinned scene (fixed_scene_id) on first load, and again after
   // Start Over (the reinit count in the deps). On a scene-less project the
-  // pin becomes the first scene — materializing the synthesized default too
-  // would leave a stray "Scene 1" in every level sharing the project — but
-  // real top-level code (a pre-scenes project) is still kept as a scene.
+  // pin becomes the only scene — materializing the synthesized default too
+  // would leave a stray "Scene 1" in every level sharing the project.
   const pinnedSceneId = levelProperties.fixedSceneId;
   useEffect(() => {
     if (!pinnedSceneId) {
@@ -378,9 +376,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
 
   // Keep activeSceneId pointing at a real scene: locked to the pin once the
-  // ensure effect lands it (until then, leave the selection alone rather
-  // than bouncing through the first scene), and reset to the first scene
-  // when the active one disappears (e.g. code cleared via start over).
+  // ensure effect lands it, otherwise reset to the first scene when the
+  // active one disappears (e.g. code cleared via start over).
   useEffect(() => {
     if (pinnedSceneId) {
       if (
@@ -401,41 +398,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
-  // Staged guide instructions (guide_steps): the guide shows one step and
-  // advances - never retreats, so undoing work doesn't yank instructions
-  // back - when the NEXT step's `after` condition holds. Conditions are
-  // judged against the active scene's World grid and the current tab.
+  // Staged guide instructions (guide_steps): one step at a time, advancing
+  // — never retreating — as later steps' conditions are met (see
+  // guideSteps.ts for the semantics).
   const guideSteps = levelProperties.guideSteps;
   const worldGrid = activeScene?.world?.grid;
-  const worldCounts = useMemo(() => {
-    let blocks = 0;
-    let sprites = 0;
-    worldGrid?.forEach(row =>
-      row?.forEach(cell => {
-        if (cell?.kind === 'block') {
-          blocks++;
-        } else if (cell?.kind === 'sprite') {
-          sprites++;
-        }
-      })
-    );
-    return {blocks, sprites};
-  }, [worldGrid]);
+  const worldCounts = useMemo(() => countWorldCells(worldGrid), [worldGrid]);
   const [guideStepIndex, setGuideStepIndex] = useState(0);
   useEffect(() => {
-    const next = guideSteps?.[guideStepIndex + 1]?.after;
-    if (!next) {
-      return;
-    }
-    const satisfied =
-      (next.worldBlocks === undefined ||
-        worldCounts.blocks >= next.worldBlocks) &&
-      (!next.worldSprite || worldCounts.sprites > 0) &&
-      (next.tab === undefined || activeTab === next.tab);
-    if (satisfied) {
-      setGuideStepIndex(guideStepIndex + 1);
-    }
-  }, [guideSteps, guideStepIndex, worldCounts, activeTab]);
+    setGuideStepIndex(index =>
+      nextGuideStepIndex(guideSteps, index, worldCounts, activeTab)
+    );
+  }, [guideSteps, worldCounts, activeTab]);
   const guideInstructions = guideSteps?.length
     ? guideSteps[Math.min(guideStepIndex, guideSteps.length - 1)].text
     : levelProperties.longInstructions;
@@ -1309,8 +1283,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         playTabExtra={
           playspaceMode === 'play' ? (
             <>
-              {/* On a pinned-scene level the game IS the one scene; a
-                  separate whole-game restart would only confuse. */}
+              {/* On a pinned-scene level the game IS the one scene, so no
+                  whole-game restart. */}
               {!pinnedSceneId && (
                 <button
                   type="button"

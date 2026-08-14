@@ -25,6 +25,12 @@ const NOOP = () => {};
 // let the user pick these per scene.
 const STORY_SCENE_SPRITE_SIZE = 300;
 
+// Extra canvas density beyond the device pixel ratio: the canvas is 400
+// logical px and the Playspace transform-scales it to ~900 CSS px on the
+// Play tab, so stock density paints ~2x2 blocks per canvas pixel.
+// Coordinates stay 400-based.
+const CANVAS_DENSITY_FACTOR = 2;
+
 // Markers in a scene's compiled program that make it a platformer: the
 // platform composites and player setup from the toolbox, or the world
 // prelude's wall spawns.
@@ -367,12 +373,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     super.onP5Setup();
-    // The canvas is 400 logical px and the Playspace transform-scales it up
-    // to ~900 CSS px on the Play tab, so at the stock density (the device
-    // ratio) every canvas pixel paints as a ~2x2 block on screen. Double the
-    // density to cover the CSS upscale too; coordinates stay 400-based.
     const p5 = this.p5Wrapper.p5;
-    const density = Math.ceil(2 * (window.devicePixelRatio || 1));
+    const density = Math.ceil(
+      CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
+    );
     if (p5 && p5._renderer && p5.pixelDensity() !== density) {
       p5.pixelDensity(density);
     }
