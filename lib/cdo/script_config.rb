@@ -44,7 +44,7 @@ class ScriptConfig
   end
 
   def self.hoc_scripts
-    HttpCache.cached_scripts + UNCACHED_HOC_UNITS
+    HttpCache.cached_units + UNCACHED_HOC_UNITS
   end
 
   def self.csf_scripts

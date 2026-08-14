@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import {type CSSProperties, type FC} from 'react';
 
 import styles from './levels-attempted-box.module.scss';
 
@@ -16,7 +16,7 @@ const LevelsAttemptedBox: FC<LevelsAttemptedBoxProps> = ({
     <p className={styles.label}>Progress</p>
     <div
       className={styles.statBlock}
-      style={{'--target-count': levelsAttempted} as React.CSSProperties}
+      style={{'--target-count': levelsAttempted} as CSSProperties}
     >
       <div className={styles.bigNumber} />
       <p className={styles.statHeading}>levels attempted</p>

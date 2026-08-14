@@ -39,7 +39,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(true)
     unit = create(:unit, :with_levels, name: 'music-jam-2024')
     create(:single_unit_course, unit: unit, name: 'music-jam-2024', published_state: 'stable')
-    assert_includes HttpCache.cached_scripts, unit.name
+    assert_includes HttpCache.cached_units, unit.name
     get '/courses/music-jam-2024/units/1/lessons/1/levels/1'
     assert_response :success
     assert_nil cookies['_learn_session_test']
@@ -49,7 +49,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
     unit = create(:unit, :with_levels, name: 'music-jam-2024')
     create(:single_unit_course, unit: unit, name: 'music-jam-2024', published_state: 'stable')
-    assert_includes HttpCache.cached_scripts, unit.name
+    assert_includes HttpCache.cached_units, unit.name
     get '/courses/music-jam-2024/units/1/lessons/1/levels/1',
       headers: {'Cache-Control' => 'no-cache'},
       env: {'rack-cache.allow_reload' => true}
