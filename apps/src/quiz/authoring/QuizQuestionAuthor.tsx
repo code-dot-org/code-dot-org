@@ -1,6 +1,9 @@
+import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+import styles from './QuizQuestionAuthor.module.scss';
 
 interface QuizChoice {
   id: string;
@@ -43,6 +46,9 @@ const QuizQuestionAuthor: React.FunctionComponent<QuizQuestionAuthorProps> = ({
   ]);
   const [correctChoiceId, setCorrectChoiceId] = useState('');
   const [error, setError] = useState<string | null>(null);
+  // Collapsed by default - existing questions render as a list of summary
+  // cards, and this form only shows once the levelbuilder asks to add one.
+  const [isAddingQuestion, setIsAddingQuestion] = useState(false);
 
   const updateChoiceText = (index: number, text: string) =>
     setChoices(prev =>
@@ -63,6 +69,12 @@ const QuizQuestionAuthor: React.FunctionComponent<QuizQuestionAuthorProps> = ({
     setStem('');
     setChoices([EMPTY_CHOICE(), EMPTY_CHOICE()]);
     setCorrectChoiceId('');
+    setError(null);
+  };
+
+  const cancelAddQuestion = () => {
+    resetForm();
+    setIsAddingQuestion(false);
   };
 
   const createQuestion = async () => {
@@ -115,6 +127,7 @@ const QuizQuestionAuthor: React.FunctionComponent<QuizQuestionAuthorProps> = ({
     const created = await response.json();
     setQuestions(prev => [...prev, created]);
     resetForm();
+    setIsAddingQuestion(false);
   };
 
   return (
@@ -122,68 +135,123 @@ const QuizQuestionAuthor: React.FunctionComponent<QuizQuestionAuthorProps> = ({
       <h1>Author Quiz Questions</h1>
 
       <h2>Existing questions</h2>
-      <ul>
-        {questions.map(question => (
-          <li key={question.id}>
-            [{question.type}] {question.questionName}: {question.stem}
-            {question.correctChoiceId && (
-              <span> (correct: {question.correctChoiceId})</span>
-            )}
+      <ol className={styles.questionCardList}>
+        {questions.map((question, index) => (
+          <li key={question.id} className={styles.questionCard}>
+            <Typography variant="body3" className={styles.questionCardIndex}>
+              {index + 1}
+            </Typography>
+            <Typography variant="body2" className={styles.questionCardPrompt}>
+              {question.stem || question.questionName}
+            </Typography>
+            <Typography
+              variant="overline3"
+              className={styles.questionCardBadge}
+            >
+              Multiple Choice
+            </Typography>
           </li>
         ))}
-      </ul>
+      </ol>
 
-      <h2>New multiple choice question</h2>
-      {error && <p style={{color: 'red'}}>{error}</p>}
-      <div>
-        <label>
-          Question name
-          <input
-            type="text"
-            value={questionName}
-            onChange={e => setQuestionName(e.target.value)}
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          Stem
-          <textarea value={stem} onChange={e => setStem(e.target.value)} />
-        </label>
-      </div>
-      <div>
-        <p>Choices (select the correct one):</p>
-        {choices.map((choice, index) => {
-          const choiceId = String.fromCharCode(97 + index);
-          return (
-            <div key={index}>
-              <input
-                type="radio"
-                name="correctChoice"
-                checked={correctChoiceId === choiceId}
-                onChange={() => setCorrectChoiceId(choiceId)}
-              />
+      {!isAddingQuestion && (
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
+          type="button"
+          onClick={() => setIsAddingQuestion(true)}
+        >
+          + Add question
+        </MuiButton>
+      )}
+
+      {isAddingQuestion && (
+        <div className={styles.addQuestionForm}>
+          <h2>New multiple choice question</h2>
+          {error && (
+            <Typography variant="body3" color="error">
+              {error}
+            </Typography>
+          )}
+          <div>
+            <label>
+              Question name
               <input
                 type="text"
-                value={choice.text}
-                onChange={e => updateChoiceText(index, e.target.value)}
-                placeholder={`Choice ${choiceId}`}
+                value={questionName}
+                onChange={e => setQuestionName(e.target.value)}
               />
-              {choices.length > 2 && (
-                <button type="button" onClick={() => removeChoice(index)}>
-                  Remove
-                </button>
-              )}
-            </div>
-          );
-        })}
-        <button type="button" onClick={addChoice}>
-          Add choice
-        </button>
-      </div>
-      <button type="button" onClick={() => createQuestion()}>
-        Create question
-      </button>
+            </label>
+          </div>
+          <div>
+            <label>
+              Stem
+              <textarea value={stem} onChange={e => setStem(e.target.value)} />
+            </label>
+          </div>
+          <div>
+            <p>Choices (select the correct one):</p>
+            {choices.map((choice, index) => {
+              const choiceId = String.fromCharCode(97 + index);
+              return (
+                <div key={index}>
+                  <input
+                    type="radio"
+                    name="correctChoice"
+                    checked={correctChoiceId === choiceId}
+                    onChange={() => setCorrectChoiceId(choiceId)}
+                  />
+                  <input
+                    type="text"
+                    value={choice.text}
+                    onChange={e => updateChoiceText(index, e.target.value)}
+                    placeholder={`Choice ${choiceId}`}
+                  />
+                  {choices.length > 2 && (
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      size="small"
+                      type="button"
+                      onClick={() => removeChoice(index)}
+                    >
+                      Remove
+                    </MuiButton>
+                  )}
+                </div>
+              );
+            })}
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
+              type="button"
+              onClick={addChoice}
+            >
+              Add choice
+            </MuiButton>
+          </div>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            type="button"
+            onClick={() => createQuestion()}
+          >
+            Create question
+          </MuiButton>
+          <MuiButton
+            variant="text"
+            color="secondary"
+            size="medium"
+            type="button"
+            onClick={cancelAddQuestion}
+          >
+            Cancel
+          </MuiButton>
+        </div>
+      )}
     </div>
   );
 };
