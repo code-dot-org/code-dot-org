@@ -81,7 +81,10 @@ class TurboS3Packaging < S3Packaging
 
   # Reads the package key that the build environment recorded for this git tree.
   private def read_pointer
-    File.read(download_object(pointer_key).path).strip
+    # Hold the tempfile while we read it. Its finalizer deletes the file as soon
+    # as the object is collected.
+    pointer = download_object(pointer_key)
+    File.read(pointer.path).strip
   rescue Aws::S3::Errors::NoSuchKey
     raise "No #{@package_name} package pointer at #{pointer_key}. " \
       "Build this commit on a build environment (test or staging) before deploying it here."
