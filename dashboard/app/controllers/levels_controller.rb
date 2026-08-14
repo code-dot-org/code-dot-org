@@ -286,6 +286,60 @@ class LevelsController < ApplicationController
     render :show
   end
 
+  # GET /levels/:id/author_quiz_questions
+  #
+  # A separate, levelbuilder-only page for authoring a Quiz level's
+  # questions - distinct from the plain edit form and from the student-facing
+  # quiz-taking view. POC scope: MultipleChoiceQuestion only; the "Question
+  # Bank" sidebar is a placeholder, no filtering/browsing/reuse yet.
+  def author_quiz_questions
+    return head :not_found unless @level.is_a?(Quiz)
+
+    @script_data = {
+      props: {
+        quizId: @level.id,
+        questions: @level.quiz_questions.map do |question|
+          {
+            id: question.id,
+            type: question.type,
+            questionName: question.question_name,
+            question: question.question,
+          }
+        end,
+      }.to_json
+    }
+  end
+
+  # POST /levels/:id/quiz_questions
+  #
+  # POC scope: creates a MultipleChoiceQuestion and attaches it to this Quiz
+  # level. Other question types and reusing an existing bank question are
+  # later work.
+  def create_quiz_question
+    return head :not_found unless @level.is_a?(Quiz)
+
+    question = MultipleChoiceQuestion.create!(
+      question_key: SecureRandom.uuid,
+      question_name: quiz_question_params[:questionName],
+      question: {
+        stem: quiz_question_params[:stem],
+        choices: (quiz_question_params[:choices] || []).map(&:to_h),
+        correct_choice_id: quiz_question_params[:correctChoiceId],
+      }
+    )
+    next_position = (@level.quiz_level_questions.maximum(:position) || 0) + 1
+    QuizLevelQuestion.create!(level: @level, quiz_question: question, page: 1, position: next_position)
+
+    render status: :created, json: {
+      id: question.id,
+      type: question.type,
+      questionName: question.question_name,
+      question: question.question,
+    }
+  rescue StandardError => exception
+    render status: :bad_request, json: {error: exception.message}
+  end
+
   # POST /levels/:id/update_blocks/:type
   # Change a blockset in the level configuration
   def update_blocks
@@ -726,6 +780,10 @@ class LevelsController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the allow-list through.
+  private def quiz_question_params
+    params.permit(:questionName, :stem, :correctChoiceId, choices: [:id, :text])
+  end
+
   private def level_params
     permitted_params = [
       :name,
