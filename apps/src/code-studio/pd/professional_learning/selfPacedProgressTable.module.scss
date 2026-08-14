@@ -22,8 +22,6 @@ table.selfPacedProgressTable {
 
   .progressBarFill {
     display: block;
-    // A token, not $light_primary_500: the literal cannot be rebranded, so the
-    // fill stayed legacy teal under codeai-next.
     background-color: var(--background-brand-primary);
     height: 0.5rem;
     border-start-start-radius: 1rem;

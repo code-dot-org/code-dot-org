@@ -101,12 +101,11 @@
   .regionalWorkshopContainer, .nationalWorkshopContainer {
     border-top: 1px solid var(--neutral-gray-20);
 
-    // Sits in .bodyContainerHeaderText, a sibling of .withWsCardsContainer:
-    // nested any deeper the rule never matches and the link falls back to the
-    // 2022-rebrand-update.scss default.
+    // Must stay at this depth: the link lives in .bodyContainerHeaderText, a
+    // sibling of .withWsCardsContainer.
     .linkText {
       cursor: pointer;
-      color: var(--text-brand-purple-primary);
+      color: var(--text-brand-primary);
     }
 
     .withWsCardsContainer {
@@ -322,8 +321,7 @@
   .supportedGradeBox {
     background-color: var(--background-brand-primary);
 
-    // White under every brand and theme: the fill it sits on is a brand color,
-    // which does not follow the theme.
+    // Fixed white: the brand fill under it does not follow the theme.
     p {
       color: var(--text-neutral-white-fixed);
     }

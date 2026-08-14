@@ -50,14 +50,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-// Tokens, not the $brand_secondary_* literals: a compile-time SCSS value
-// cannot be rebranded, so these links stayed 2022 purple under codeai-next.
 a {
-  color: var(--text-brand-purple-primary);
+  color: var(--text-brand-primary);
   text-decoration: underline;
 
   &:hover {
-    color: var(--text-brand-purple-secondary);
+    color: var(--text-brand-secondary);
     text-decoration: underline;
   }
 }
