@@ -1,0 +1,16 @@
+<Quiz>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 76,
+  "created_at": "2026-08-14T16:14:15.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "show_correctness": "false",
+    "reveal_answer_explanation": "false",
+    "purpose": "practice"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-14 16:15:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+}]]></config>
+</Quiz>
