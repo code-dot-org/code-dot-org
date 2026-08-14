@@ -248,6 +248,67 @@ belongs with world-scoped state rather than here.
 - Two Labels of different kinds are separately addressable; two of the same kind
   are not, which is the documented limit rather than a bug.
 
+## Showing one in a picker
+
+A thumbnail has been answering two questions at once, and nothing noticed
+because they had the same answer: **what does this look like**, and **which kind
+is this**. For a coin they coincide. An interface actor is the first actor whose
+appearance is CONTENT-DEPENDENT — every Label looks different, and at 48 pixels
+they all look like the same smudge — so the two come apart, and a picker wants
+the second one.
+
+Two of the three symptoms were plain bugs and are fixed:
+
+- **The ground belonged to the cell, not to the image.** A thumbnail is a
+  faithful transparent PNG; what it has to be legible against is what the actor
+  will sit on, which is the world's backdrop. White text on transparent over a
+  white palette strip is not a faint cell, it is an EMPTY one, which is what the
+  picker showed above the word "Label".
+- **A drawing's thumbnail is its own shape, at 1:1 unless it is too big.** A
+  sprite fitted into a square is still that sprite; a 96 by 24 Label fitted into
+  48 by 48 is 6px text. The cap is a box, twice as wide as tall, and the map
+  canvas draws a thumbnail at its own aspect too — so a placed Label reads as
+  the strip it will be rather than as a blob.
+
+### The decision in waiting: an icon
+
+What those do not fix is identity. Five interface kinds that are all grey
+rectangles with different words in them will read as five grey rectangles, and
+the answer every comparable tool reaches for is an abstract icon.
+
+**Whatever supplies it, it has to live in the FILE.** That is forced, not
+chosen: importing a stock actor copies the workspace into the learner's project
+and leaves the catalogue entry behind, so an `icon` field on `StockActor` would
+vanish at exactly the moment it was wanted. The same constraint that put `Shows
+Text` on a rule rather than on the actor.
+
+So: a row under `define actor`, beside `use trait`, where an actor already says
+things about itself —
+
+```
+define actor named ⟨Label⟩
+  use trait ⟨Shows Text⟩
+  show as ⟨text icon⟩
+```
+
+— generating nothing, read by the same walk that reads a file's own properties,
+and defaulting to the drawing when the row is absent. A FIELD on `define actor`
+was rejected for the reason VIEWPORT.md rejected a layer dropdown on every
+placement block: it puts an authoring decision on the first block a learner ever
+touches.
+
+The vocabulary is the one the lab already speaks — `config.ts` maps file kinds
+to Font Awesome names — and the picker should render the icon COMPONENT rather
+than rasterizing one in the sandbox, which keeps icons out of the thumbnail
+pipeline entirely: one more field beside `thumbnails`, and the cell draws one or
+the other.
+
+**Not built yet, deliberately.** Every palette cell already carries the actor's
+name, and with the ground and the shape fixed a Label reads. A block that two
+stock actors would use has not earned itself; it earns itself at about five,
+which is also when the file tree would want the same declaration instead of one
+icon for every `.actor`.
+
 ## What this does not solve
 
 The score still has nowhere to live. A Label can be told what to say, and the
