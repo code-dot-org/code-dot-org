@@ -102,17 +102,16 @@ let cachedSandboxOrigin: string | undefined;
 const sandboxOrigin = () => (cachedSandboxOrigin ??= getSandboxOrigin());
 
 // How long to wait for the sandbox iframe to report ready before telling the user
-// their network is blocking it. Deliberately generous: a slow-but-working sandbox
-// clears the message when it eventually reports in, so the only cost of waiting
-// longer is a later message, while waiting too little cries wolf.
-const SANDBOX_READY_TIMEOUT_MS = 20000;
+// their network is blocking it. A slow but working sandbox will clear the message if
+// the sandbox eventually reports ready.
+const SANDBOX_READY_TIMEOUT_MS = 15000;
 
 // The sandbox lives on a different domain from studio.code.org (see
 // getSandboxOrigin() above), so a network that allows studio.code.org can still
 // block it. When that happens nothing arrives from the iframe at all: no load
 // error we can read (it is cross-origin), just silence.
 const SANDBOX_UNREACHABLE_MESSAGE =
-  'Your browser is preventing us from setting up Python Lab. You may need to ' +
+  'Your browser may be preventing us from setting up Python Lab. You may need to ' +
   'adjust your firewall settings. See our IT requirements page ' +
   '(https://code.org/educate/it) for which site(s) you need ' +
   'to unblock. If you need assistance, please reach out to support@code.org.';
