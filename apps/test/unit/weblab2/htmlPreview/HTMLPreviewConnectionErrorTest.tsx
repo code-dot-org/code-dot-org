@@ -137,7 +137,7 @@ describe('HTMLPreview connection error', () => {
 
     expect(screen.getByText(ERROR_TITLE)).toBeInTheDocument();
     expect(
-      screen.getByRole('link', {name: /IT requirements page/})
+      screen.getByRole('link', {name: /technical requirements page/})
     ).toHaveAttribute('href', 'https://code.org/educate/it');
     expect(logWarning).toHaveBeenCalledTimes(1);
   });
