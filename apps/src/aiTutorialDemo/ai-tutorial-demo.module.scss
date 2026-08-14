@@ -1,0 +1,80 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  // The default studio layout keeps its site header; fill the rest of the
+  // viewport and let the two columns manage their own scrolling.
+  height: calc(100vh - 50px);
+  min-height: 480px;
+  background: var(--background-neutral-primary, #fff);
+}
+
+.header {
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border-neutral-secondary, #e7e9ea);
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-neutral-secondary, #56626b);
+}
+
+.columns {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.chatColumn {
+  width: 420px;
+  min-width: 320px;
+  border-right: 1px solid var(--border-neutral-secondary, #e7e9ea);
+}
+
+.stageColumn {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 16px;
+  overflow-y: auto;
+  background: var(--background-neutral-secondary, #f3f7f8);
+}
+
+.widgetCard {
+  background: #fff;
+  border: 1px solid var(--border-neutral-secondary, #e7e9ea);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 720px;
+}
+
+.emptyStage {
+  padding: 48px;
+  text-align: center;
+  color: var(--text-neutral-secondary, #56626b);
+}
+
+.activityLog {
+  margin-top: auto;
+  font-size: 12px;
+
+  summary {
+    cursor: pointer;
+    color: var(--text-neutral-secondary, #56626b);
+  }
+
+  pre {
+    max-height: 200px;
+    overflow: auto;
+    background: #292f36;
+    color: #e7e9ea;
+    padding: 8px;
+    border-radius: 4px;
+  }
+}

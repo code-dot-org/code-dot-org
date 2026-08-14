@@ -159,6 +159,7 @@ Dashboard::Application.routes.draw do
 
     get "/ai_iteration/tools", to: "ai_iteration#tools"
     get "/ai_iteration/image_safety_eval", to: "ai_iteration#image_safety_eval"
+    get "/ai_tutorial_demo", to: "ai_tutorial_demo#show"
     post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
     post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
 
