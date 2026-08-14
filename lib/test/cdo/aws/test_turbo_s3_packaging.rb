@@ -70,6 +70,22 @@ class TurboS3PackagingTest < Minitest::Test
     assert_equal '{"gen2":true}', File.read(File.join(@target, '.vite/manifest.json'))
   end
 
+  def test_an_unpack_that_dies_part_way_leaves_the_old_marker
+    deploy('gen1', 'assets/app-1.js' => 'one')
+
+    packager = packager('gen2')
+    FileUtils.rm_rf(@dist)
+    write_dist('index.html' => 'page', '.vite/manifest.json' => '{"gen2":true}', 'assets/app-2.js' => 'two')
+    package = packager.create_package('/dist', extra_paths: ['.vite'])
+    RakeUtils.stubs(:system).raises(RuntimeError, 'unpack killed')
+
+    assert_raises(RuntimeError) {packager.decompress_package(package)}
+
+    # The next run must see a stale directory and unpack again, so the marker
+    # may not name a package that never landed.
+    assert_equal 'gen1', File.read(File.join(@target, 'commit_hash'))
+  end
+
   def test_a_file_still_used_by_the_newest_generation_is_not_pruned
     deploy('gen1', 'assets/shared.js' => 'shared')
     deploy('gen2', 'assets/shared.js' => 'shared')

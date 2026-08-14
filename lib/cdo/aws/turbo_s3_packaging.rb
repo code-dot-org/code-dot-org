@@ -64,10 +64,14 @@ class TurboS3Packaging < S3Packaging
     FileUtils.mkdir_p(@target_location)
     record_bootstrap_generation
     Dir.chdir(@target_location) do
-      RakeUtils.system "tar -zxmf #{package.path}"
+      RakeUtils.system "tar -zxmf #{package.path} --exclude=commit_hash"
     end
     record_generation(@commit_hash, package_file_list(package))
     prune_old_generations
+    # Write the marker only once the package is whole. A deploy that dies part
+    # way through leaves the old marker, so the next run unpacks again instead
+    # of reading the directory as current and serving a half-written package.
+    File.write(File.join(@target_location, 'commit_hash'), @commit_hash)
     @logger.info "Decompressed"
   end
 
