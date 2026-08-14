@@ -650,8 +650,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               For standalone projects with at least one tab, we display the collapse/expand.
               We hide this button for standalone projects with no tabs, but the bottom buttons
               will still be available for users to access the settings panel, etc.
+              Quiz always gets the toggle too, even though it isn't a project level - a quiz
+              taker collapsing the instructions panel to focus on questions is the same use
+              case as a project author collapsing it to focus on code.
             */}
-              {isProjectLevel && hasTabs && (
+              {(isProjectLevel || appName === 'quiz') && hasTabs && (
                 <WithTooltip
                   tooltipProps={{
                     text: isStandaloneCollapsed

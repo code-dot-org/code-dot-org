@@ -1,0 +1,23 @@
+.quiz {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.resourcePanel {
+  flex: 0;
+  min-width: 25%;
+}
+
+// When collapsed, ResourcePanel shrinks itself to just its icon rail - don't
+// force min-width here too, or a gap opens up between the rail and content.
+.resourcePanelCollapsed {
+  flex: 0;
+}
+
+.content {
+  flex: 1;
+  margin: 10px;
+  overflow: auto;
+}
