@@ -48,6 +48,9 @@ const ControlButtons: React.FunctionComponent = () => {
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
+  const codeEnvironmentError = useAppSelector(
+    state => state.lab2System.codeEnvironmentError
+  );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
 
@@ -114,12 +117,15 @@ const ControlButtons: React.FunctionComponent = () => {
 
   // Returns null if the code action buttons (run, and in the future, test) should be enabled,
   // otherwise returns the help tip text explaining why they are disabled.
-  // We disable the run button while the environment is loading
+  // We disable the run button if the environment failed to set up or is still loading
   // OR if this is a predict level, we are not in start mode,
   // and the user has not yet written a prediction.
   const getDisabledCodeActionsTooltip = () => {
     let tooltip = null;
-    if (awaitingPredictSubmit) {
+    if (codeEnvironmentError) {
+      tooltip =
+        'We could not set up your environment. See the console for details.';
+    } else if (awaitingPredictSubmit) {
       tooltip = codebridgeI18n.predictRunDisabledTooltip();
     } else if (!hasLoadedEnvironment) {
       tooltip = codebridgeI18n.loadingEnvironmentTooltip();
@@ -130,9 +136,10 @@ const ControlButtons: React.FunctionComponent = () => {
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
-  const disabledCodeActionsIcon = !hasLoadedEnvironment
-    ? 'fa-spinner fa-spin fa-solid'
-    : 'fa-circle-question fa-regular';
+  const disabledCodeActionsIcon =
+    !hasLoadedEnvironment && !codeEnvironmentError
+      ? 'fa-spinner fa-spin fa-solid'
+      : 'fa-circle-question fa-regular';
 
   return (
     <div className={moduleStyles.controlButtons}>
