@@ -100,7 +100,15 @@
   
   .regionalWorkshopContainer, .nationalWorkshopContainer {
     border-top: 1px solid var(--neutral-gray-20);
-  
+
+    // Sits in .bodyContainerHeaderText, a sibling of .withWsCardsContainer:
+    // nested any deeper the rule never matches and the link falls back to the
+    // 2022-rebrand-update.scss default.
+    .linkText {
+      cursor: pointer;
+      color: var(--text-brand-purple-primary);
+    }
+
     .withWsCardsContainer {
       display: flex;
       flex-direction: column;
@@ -108,11 +116,6 @@
       margin: 1.875rem auto 0 auto;
       align-items: flex-start;
       gap: 1.875rem;
-
-      .linkText {
-        cursor: pointer;
-        color: var(--brand-purple-50);
-      }
 
       .wsCardContainer {
         width: 100%;
@@ -221,7 +224,7 @@
 
     .spotsOpenCapacityTag {
       i {
-        color: var(--brand-teal-50);
+        color: var(--text-brand-primary);
       }
     }
 
@@ -317,10 +320,12 @@
   }
 
   .supportedGradeBox {
-    background-color: var(--brand-teal-50);
-    
+    background-color: var(--background-brand-primary);
+
+    // White under every brand and theme: the fill it sits on is a brand color,
+    // which does not follow the theme.
     p {
-      color: var(--neutral-base-white);
+      color: var(--text-neutral-white-fixed);
     }
   }
 
