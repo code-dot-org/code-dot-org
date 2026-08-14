@@ -51,6 +51,9 @@ export default class ConsoleManager {
     this.terminalLines = [];
     this.terminal.write(CLEAR_DISPLAY);
     this.lastLineIsPartial = false;
+    // Characters typed since the last newline are erased along with everything
+    // else, so keeping them would send text the user can no longer see.
+    this.inputBuffer = '';
     this.executeTerminalLinesListeners();
     // The run button is still disabled and its tooltip still points here, so the
     // explanation has to come back with the empty console.

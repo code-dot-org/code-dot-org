@@ -89,6 +89,16 @@ describe('ConsoleManager', () => {
     expect(occurrences(displayed, 'blocking Python Lab')).toBe(1);
   });
 
+  it('drops half-typed input when the console is cleared', () => {
+    const consoleManager = newConsoleManager();
+    consoleManager.writePartialLine('What is your name? ');
+    consoleManager.appendToInputBuffer('Ada');
+
+    consoleManager.clearTerminalLines();
+
+    expect(consoleManager.getInputBuffer()).toBe('');
+  });
+
   it('stops reprinting once the error is retracted', () => {
     const consoleManager = newConsoleManager();
     consoleManager.setCodeEnvironmentError(ENVIRONMENT_ERROR);
