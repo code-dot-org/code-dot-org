@@ -35,7 +35,10 @@ Dashboard::Application.routes.draw do
   draw :api
   draw :marketing
 
-  get "frontend-studio(/*path)", to: "frontend_studio#index"
+  # format: false keeps a trailing extension inside :path. Without it Rails
+  # reads '/frontend-studio/assets/app-abc123.js' as format js and answers a
+  # missing asset with a cross-origin error instead of our 404.
+  get "frontend-studio(/*path)", to: "frontend_studio#index", format: false
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
