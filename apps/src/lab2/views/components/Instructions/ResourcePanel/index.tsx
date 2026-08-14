@@ -136,6 +136,7 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     icon: 'backpack',
   },
   [Tabs.StudentResources]: {title: 'Resources', icon: 'compass'},
+  [Tabs.QuestionBank]: {title: 'Question Bank', icon: 'database'},
 };
 
 type ResourcePanelProps = InstructionsProps & {
@@ -168,6 +169,8 @@ type ResourcePanelProps = InstructionsProps & {
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
   initialWelcomeMessage?: string;
+  /** Levelbuilder-only: content for the Question Bank tab, used by the Quiz question authoring UI. */
+  questionBankContent?: React.ReactNode;
 };
 
 /**
@@ -199,6 +202,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   onAssetUploaded,
   onAssetRemoved,
   initialWelcomeMessage,
+  questionBankContent,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -328,6 +332,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Instructions] = instructionsContent;
     }
 
+    if (questionBankContent) {
+      tabMap[Tabs.QuestionBank] = questionBankContent;
+    }
+
     if (validationSettings && hasValidationConditions) {
       tabMap[Tabs.Validation] = <ValidationPanel {...validationSettings} />;
     }
@@ -433,6 +441,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelProperties,
     instructionsProps,
     hideInstructionsNavigation,
+    questionBankContent,
     validationSettings,
     hasValidationConditions,
     hiddenContextCallback,
