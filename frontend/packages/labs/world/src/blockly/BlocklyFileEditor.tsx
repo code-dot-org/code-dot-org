@@ -67,7 +67,6 @@ import {
 } from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
-import {parseActorOwnMeta} from './actorMeta';
 import {addActorThumbnails} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
@@ -77,6 +76,7 @@ import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
 import {redrawLiveDropdowns} from './moduleOptions';
 import {setModuleOpener, setModuleOpeningOffered} from './openModule';
+import {parseActorOwnMeta, parseWorldOwnMeta} from './ownProperties';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {
   projectActorOptions,
@@ -718,12 +718,17 @@ export const BlocklyFileEditor = ({
   // it already had alone, rather than dropping them while a name is half typed.
   const ownActorProperties = useMemo(() => {
     const path = filePath(currentSources.source, fileId);
-    if (!path?.endsWith('.actor')) {
-      return undefined;
-    }
     // `files` is keyed by the path WITH its extension; the module path is that
     // path without one, which is what a ref names.
-    return parseActorOwnMeta(path.replace(/\.actor$/, ''), files[path] ?? '');
+    if (path?.endsWith('.actor')) {
+      return parseActorOwnMeta(path.replace(/\.actor$/, ''), files[path] ?? '');
+    }
+    // A WORLD's own state, which is the same declaration one scope up and
+    // scoped the same way — to the file that declares it (specs/WORLD_STATE.md).
+    if (path?.endsWith('.world')) {
+      return parseWorldOwnMeta(path.replace(/\.world$/, ''), files[path] ?? '');
+    }
+    return undefined;
   }, [currentSources.source, fileId, files]);
 
   // What kind of file this is, where that decides what may be placed in it — a
@@ -742,7 +747,7 @@ export const BlocklyFileEditor = ({
     const palette = buildDomainPalette(projectRuleMetas(files), {
       ownRuleModule,
       fileKind,
-      actorOwnProperties: ownActorProperties ? [ownActorProperties] : [],
+      ownProperties: ownActorProperties ? [ownActorProperties] : [],
     });
     // …and a definition for every block type the project's files hold that
     // this palette does not mint. That is what a deleted rule leaves behind,

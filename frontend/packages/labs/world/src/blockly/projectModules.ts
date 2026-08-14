@@ -9,10 +9,14 @@
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import type {EffectParameter} from '../effect/model/types';
 
-import {parseActorOwnMeta, type ActorOwnMeta} from './actorMeta';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {FOUNDATION_RULE_NAMES} from './foundation';
 import {label} from './label';
+import {
+  parseActorOwnMeta,
+  parseWorldOwnMeta,
+  type OwnMeta,
+} from './ownProperties';
 import {parseRuleMeta, type RuleMeta} from './ruleMeta';
 import {cellCount} from './spriteCells';
 
@@ -269,13 +273,21 @@ function resolveRuleRef(
  * `coin.actor` is being generated. An editor asks for one actor instead —
  * their scope is the declaring file (see `actorMeta`).
  */
-export function projectActorOwnMetas(
-  files: Record<string, string>,
-): ActorOwnMeta[] {
-  const metas: ActorOwnMeta[] = [];
+export function projectOwnMetas(files: Record<string, string>): OwnMeta[] {
+  const metas: OwnMeta[] = [];
   for (const [path, contents] of Object.entries(files)) {
     if (path.startsWith('actors/') && path.endsWith('.actor')) {
       const meta = parseActorOwnMeta(path.replace(/\.actor$/, ''), contents);
+      if (meta) {
+        metas.push(meta);
+      }
+    }
+    // …and every WORLD's own state (specs/WORLD_STATE.md). Missing here, a
+    // world's `set score to …` was a block the generator's palette did not
+    // define, so `standInBlocks` minted a placeholder that generated NOTHING —
+    // the handler ran, took the coin, and quietly failed to count it.
+    if (path.startsWith('worlds/') && path.endsWith('.world')) {
+      const meta = parseWorldOwnMeta(path.replace(/\.world$/, ''), contents);
       if (meta) {
         metas.push(meta);
       }

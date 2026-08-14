@@ -289,6 +289,9 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '## Tapper\n\nClick the coins to take them.\n\n' +
       '- Click the preview first, then click a coin — the coin elects `Can Be ' +
       'Clicked`, and that one row is the whole of what makes it clickable\n' +
+      '- The count is the WORLD\u2019s: `define property ⟨score⟩` sits in ' +
+      '`define world`, so it outlives the coin that raised the event, and the ' +
+      'Label is told what to say\n' +
       '- One press is told three times. `when ⟨left⟩ is pressed` is the ' +
       'WORLD\u2019s: it happened to nobody, so the handler has to ask where — ' +
       'watch it print a point for the clicks that hit nothing too\n' +

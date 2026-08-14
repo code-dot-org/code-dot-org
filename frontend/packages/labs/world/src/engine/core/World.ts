@@ -290,6 +290,12 @@ export interface WorldInit {
    * those, in the order given, which IS the draw order.
    */
   layers?: LayerInit[];
+  /**
+   * State the WORLD declared for itself, with no rule to carry it
+   * (specs/WORLD_STATE.md). Seeded like a rule's world-scoped properties, and
+   * from a second source because a world's score is not a mechanic.
+   */
+  ownProperties?: readonly Property<unknown>[];
 }
 
 // `vector` and `point` are both stored as a `Vector` (see Actor's coerce).
@@ -385,6 +391,8 @@ export class World {
   private readonly kindsWithSteps = new Set<string>();
   /** How each kind that describes its own picture draws itself, by type. */
   private readonly kindDrawings = new Map<string, ActorDrawing>();
+  /** The properties this world declared for itself — see `defineOwnProperty`. */
+  private readonly ownProperties: Array<Property<unknown>> = [];
   private readonly events = new EventQueue();
   /**
    * Handlers for the world's own events, by event.
@@ -488,6 +496,12 @@ export class World {
         this.store.set(property, coerce(property, property.default));
       }
     }
+    // …and the world's OWN, which belong to no rule. After the rules, so a
+    // world declaring a name one of its rules also uses gets its own value:
+    // the file in front of the learner wins over one they imported.
+    for (const property of init.ownProperties ?? []) {
+      this.defineOwnProperty(property, property.default);
+    }
 
     // Seed the animation registry from every active rule's stock animations,
     // then apply any the builder registered (imported `.anim` files).
@@ -539,6 +553,26 @@ export class World {
   }
 
   set<T>(property: Property<T>, value: T): void {
+    this.store.set(property, coerce(property, value));
+  }
+
+  /**
+   * Give the world a slot for a property no rule declared.
+   *
+   * The world's counterpart to the overrides an Actor is built with, and the
+   * whole of what `WorldBuilder.defineProperty` needs from here: `get` and
+   * `set` already take any property, and the only thing they insist on is that
+   * the slot exists.
+   *
+   * Idempotent-by-overwrite on purpose. A world module declares its properties
+   * as it loads, and a hot reload replays that module against a world that may
+   * already be running; re-seeding a slot to the value the file now states is
+   * what "the default changed" should mean.
+   */
+  defineOwnProperty<T>(property: Property<T>, value: T): void {
+    if (!this.store.has(property)) {
+      this.ownProperties.push(property as Property<unknown>);
+    }
     this.store.set(property, coerce(property, value));
   }
 
@@ -1810,6 +1844,13 @@ export class World {
         }
       }
     }
+    // The world's own, which the patcher reaches by the same path.
+    for (const property of this.ownProperties) {
+      if (`${property.ownerId}.${property.id}` === path) {
+        this.set(property, value as never);
+        return true;
+      }
+    }
     return false;
   }
 
@@ -1855,6 +1896,16 @@ export class World {
         }
         world[`${property.ownerId}.${property.id}`] = this.get(property);
       }
+    }
+    // …and the world's own, which belong to no rule. In the snapshot for the
+    // reason it exists: the driver patches a running world when only `world`
+    // values changed (PLAN §9), and a score left out of this would be a score
+    // reset by every edit to the file it lives in.
+    for (const property of this.ownProperties) {
+      if (property.type === 'actors' || property.type === 'actor') {
+        continue;
+      }
+      world[`${property.ownerId}.${property.id}`] = this.get(property);
     }
     const actors: Record<string, Record<string, unknown>> = {};
     for (const actor of this.actorList) {

@@ -1,4 +1,9 @@
-// An actor's OWN properties — state a kind of actor carries without a rule.
+// A FILE's OWN properties — state declared where it is used, without a rule.
+//
+// An actor's first, and a world's since (specs/WORLD_STATE.md): one walk, one
+// emitter, and the declaring root and the scope as the only differences. The
+// note below is written about actors because that is where it started, and
+// every line of it holds for a world one level up.
 //
 // The shorthand for the case where declaring a trait (which means declaring a
 // rule, in a file of its own) is more ceremony than the thing deserves: one
@@ -62,7 +67,7 @@ function chain(from: ActorBlock | undefined): ActorBlock[] {
 }
 
 /** What an actor's own declarations amount to. */
-export interface ActorOwnMeta {
+export interface OwnMeta {
   /** The module the actor is written in — `actors/player`. */
   readonly modulePath: string;
   /** Its `define actor` NAME, which is what its properties are labelled by. */
@@ -81,11 +86,41 @@ export interface ActorOwnMeta {
 export function parseActorOwnMeta(
   modulePath: string,
   contents: string,
-): ActorOwnMeta | undefined {
+): OwnMeta | undefined {
+  return declarationsIn(modulePath, contents, 'world_actor', 'actor', 'Actor');
+}
+
+/**
+ * A WORLD file's own property declarations (specs/WORLD_STATE.md).
+ *
+ * The same walk over a different root, because it is the same declaration in a
+ * fourth home: `world_rule_property` already takes its meaning from where it
+ * sits, and a `.world` file's `define world` body is one more place to sit.
+ *
+ * What differs is the SCOPE, and everything downstream follows from it: a
+ * world-scoped property's get/set blocks take no subject socket and compile to
+ * `world.get(…)` / `world.set(…)`, which is the shape a rule's own properties
+ * already have.
+ */
+export function parseWorldOwnMeta(
+  modulePath: string,
+  contents: string,
+): OwnMeta | undefined {
+  return declarationsIn(modulePath, contents, 'world_world', 'world', 'World');
+}
+
+/** The walk both share: a root's chain, and every declaration in it. */
+function declarationsIn(
+  modulePath: string,
+  contents: string,
+  rootType: string,
+  scope: 'actor' | 'world',
+  fallbackName: string,
+): OwnMeta | undefined {
   let root: ActorBlock | undefined;
   try {
     const parsed = JSON.parse(contents) as {blocks?: {blocks?: ActorBlock[]}};
-    root = (parsed.blocks?.blocks ?? []).find(b => b?.type === 'world_actor');
+    root = (parsed.blocks?.blocks ?? []).find(b => b?.type === rootType);
   } catch {
     return undefined; // mid-edit / not JSON
   }
@@ -93,7 +128,7 @@ export function parseActorOwnMeta(
     return undefined;
   }
 
-  const name = field(root, 'NAME') || 'Actor';
+  const name = field(root, 'NAME') || fallbackName;
   const properties: PropertyMeta[] = [];
   const taken = new Set<string>();
 
@@ -120,8 +155,11 @@ export function parseActorOwnMeta(
     const ref: MemberRef = {
       source: 'project',
       exportName: `${pascal(declared)}Property`,
+      // The declaring actor or world, which is what the block type is keyed
+      // from — and `own` says so, because it is NOT a rule anyone can look up.
       ruleName: name,
       modulePath,
+      own: true,
     };
 
     properties.push({
@@ -134,7 +172,7 @@ export function parseActorOwnMeta(
       // body — there is nowhere in it to run a `set` — so read-only means no
       // setter is offered at all: a per-kind constant, like a max health.
       readonly: field(block, 'ACCESS') === 'readonly',
-      scope: 'actor',
+      scope,
       // No owning trait: nothing elects these, and the `ref` already names the
       // actor and the file, which is the whole of where they come from.
       ref,
@@ -156,7 +194,23 @@ export function parseActorOwnMeta(
  * Nothing is exported. Their scope is this file (see the note at the top), so
  * an export would offer a name no other module is allowed to ask for.
  */
-export function ownPropertyDeclarations(meta: ActorOwnMeta): string {
+export function ownPropertyDeclarations(meta: OwnMeta): string {
+  return declarations(meta, 'actor');
+}
+
+/**
+ * …and the same for a world's own, which a world module needs before anything
+ * reads them.
+ *
+ * `world.defineProperty` rather than `actor.`, and otherwise identical: the
+ * builder methods are siblings on purpose, so one emitter with the receiver
+ * named is the whole difference (specs/WORLD_STATE.md).
+ */
+export function worldOwnPropertyDeclarations(meta: OwnMeta): string {
+  return declarations(meta, 'world');
+}
+
+function declarations(meta: OwnMeta, receiver: string): string {
   return meta.properties
     .map(property => {
       const opts: Record<string, unknown> = {name: property.name};
@@ -164,7 +218,7 @@ export function ownPropertyDeclarations(meta: ActorOwnMeta): string {
         opts.readonly = true;
       }
       return (
-        `const ${property.ref.exportName} = actor.defineProperty(` +
+        `const ${property.ref.exportName} = ${receiver}.defineProperty(` +
         `${JSON.stringify(property.id)}, ${JSON.stringify(property.type)}, ` +
         `${JSON.stringify(property.default)}, ${JSON.stringify(opts)});\n`
       );

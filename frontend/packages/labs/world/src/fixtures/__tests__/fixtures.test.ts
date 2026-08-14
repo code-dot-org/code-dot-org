@@ -228,6 +228,16 @@ describe('the scenario catalogue', () => {
     expect(main).toContain('world_on_Mouse_PressesMouseButtonEvent');
     expect(main).toContain('Mouse#CanBeClickedTrait');
     expect(main).toContain('Mouse#TakesMouseInputTrait');
+    // …and the count, which is the world's own state (specs/WORLD_STATE.md).
+    // The scenario logged `Got one!` for as long as there was nowhere to put a
+    // number that outlives the coin raising the event.
+    expect(main).toContain('world_rule_property');
+    expect(main).toContain('world_set_Tapper_ScoreProperty');
+    expect(main).toContain('world_get_Tapper_ScoreProperty');
+    // Shown, not logged: a Label is an ordinary actor that draws its text.
+    expect(named('label.actor')).toBe(true);
+    expect(named('writing.rule')).toBe(true);
+    expect(main).toContain('text_join');
     // …and the thing no keyboard can say: WHERE.
     expect(main).toContain('world_mouse_position');
     // The crosshair is a FILE, and has to be: `each frame` compiles to

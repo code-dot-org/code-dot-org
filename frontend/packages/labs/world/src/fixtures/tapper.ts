@@ -5,6 +5,12 @@
 // click is a moment AND a place, and that is the whole of what this exists to
 // show. Click a coin and it goes; click the floor and nothing does.
 //
+// AND THE SCORE, which is what all of that was for. `define property ⟨score⟩`
+// sits in `define world` (specs/WORLD_STATE.md), so the count outlives the coin
+// that raised the event — and a Label draws it, so the game says it to the
+// player rather than to the console. This scenario ended with `log ⟨Got one!⟩`
+// for as long as neither of those existed.
+//
 // THREE TELLINGS OF ONE PRESS, which is the shape of the mouse rule and the
 // reason it has two traits:
 //
@@ -30,6 +36,7 @@
 // than when something happens. The crosshair reads it every frame, which is
 // what makes a game feel aimed rather than merely clicked at.
 
+import {labelActor} from '../actors/stock/label';
 import {
   buildProject,
   stack,
@@ -38,14 +45,55 @@ import {
   type ProjectSpec,
 } from '../constants';
 import {mouseRule} from '../rules/stock/mouse';
+import {writingRule} from '../rules/stock/writing';
 
-import {at, me} from './meteors';
+import {at, me, number} from './meteors';
 
 // A world-local actor is named by its DEFINING BLOCK'S id (blockly/localActors).
 const COIN = 'tapperCoinDef';
 const SCOREBOARD = 'tapperScoreDef';
 
 const local = (blockId: string) => `local:${blockId}`;
+
+/**
+ * The Label the score is written on.
+ *
+ * A FILE, so `any ⟨Label⟩` names it by its module path — where `kind()` above
+ * is for a world's OWN actors and stores `local:<block id>`. Handing one the
+ * other's value is a dropdown value that matches no option, which Blockly drops
+ * silently: the socket empties, `actorTarget` falls back to `actor`, and the
+ * score was written onto the coin that had just been clicked.
+ */
+const LABEL = {
+  block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/label'}},
+};
+
+/** The variable the spawn binds, so the body can dress the new Label. */
+const SCORE_VAR = {id: 'tapperScoreVar', name: 'score label', type: 'Actor'};
+
+const scoreLabel = () => ({
+  block: {type: 'variables_get_Actor', fields: {VAR: SCORE_VAR}},
+});
+
+/** `get score` — the world's own, with no subject to name. */
+const score = () => ({block: {type: 'world_get_Tapper_ScoreProperty'}});
+
+/** `set text of ⟨who⟩ to ⟨join "Score: " ⟨score⟩⟩`. */
+const scoreText = (who: object) => ({
+  type: 'world_set_Writing_TextProperty',
+  inputs: {
+    ACTOR: who,
+    VALUE: {
+      block: {
+        type: 'text_join',
+        inputs: {
+          ADD0: {shadow: {type: 'text', fields: {TEXT: 'Score: '}}},
+          ADD1: score(),
+        },
+      },
+    },
+  },
+});
 
 /** `any ⟨kind⟩` — a hat's subject, and so the TEMPLATE rather than an instance. */
 const kind = (blockId: string) => ({
@@ -232,6 +280,18 @@ const MAIN_WORLD = JSON.stringify({
         fields: {NAME: 'Tapper'},
         next: {
           block: stack([
+            // THE SCORE. A world's own state, declared where it is used and
+            // belonging to no rule (specs/WORLD_STATE.md) — which is what was
+            // missing when this scenario could only log `Got one!`.
+            {
+              type: 'world_rule_property',
+              fields: {
+                TYPE: 'number',
+                ACCESS: 'writable',
+                NAME: 'score',
+                DEFAULT: '0',
+              },
+            },
             {
               type: 'world_create_in_map',
               id: 'tapperPlaceCoins',
@@ -253,6 +313,45 @@ const MAIN_WORLD = JSON.stringify({
               fields: {ACTOR: local(SCOREBOARD)},
             },
             {type: 'world_add_actor', fields: {ACTOR: 'actors/crosshair'}},
+            // Somewhere to show it. A Label is an ordinary actor that elects
+            // one trait and draws one thing (specs/UI_ACTORS.md), so this is
+            // `add actor` and two rows of state.
+            {
+              type: 'world_add_actor',
+              fields: {
+                ACTOR: 'actors/label',
+                NAMED: 'named',
+                VAR: SCORE_VAR,
+              },
+              extraState: {named: true},
+              inputs: {
+                DO: {
+                  block: stack([
+                    {
+                      type: 'world_set_position',
+                      inputs: {
+                        ACTOR: scoreLabel(),
+                        X: number(48),
+                        Y: number(16),
+                      },
+                    },
+                    {
+                      type: 'world_set_Writing_TextColorProperty',
+                      inputs: {
+                        ACTOR: scoreLabel(),
+                        VALUE: {
+                          shadow: {
+                            type: 'colour_picker',
+                            fields: {COLOUR: '#ffcc00'},
+                          },
+                        },
+                      },
+                    },
+                    scoreText(scoreLabel()),
+                  ]),
+                },
+              },
+            },
           ]),
         },
       },
@@ -303,7 +402,22 @@ const MAIN_WORLD = JSON.stringify({
         inputs: {ACTOR: kind(COIN)},
         next: {
           block: stack([
-            {type: 'world_log', fields: {TEXT: 'Got one!'}},
+            // The world remembers. Before this there was nowhere to put a
+            // count that outlives the coin raising the event, so the game
+            // could only say `Got one!` and forget.
+            {
+              type: 'world_set_Tapper_ScoreProperty',
+              inputs: {
+                VALUE: {
+                  block: {
+                    type: 'math_arithmetic',
+                    fields: {OP: 'ADD'},
+                    inputs: {A: score(), B: number(1)},
+                  },
+                },
+              },
+            },
+            scoreText(LABEL),
             {type: 'world_remove_actor', inputs: {ACTOR: me()}},
           ]),
         },
@@ -353,6 +467,18 @@ export const TAPPER_SPEC: ProjectSpec = {
     },
     // The mouse rule is the point of the scenario, so it is a file to open and
     // read rather than something that merely happens.
+    writingRuleFile: {
+      name: 'writing.rule',
+      language: 'rule',
+      contents: writingRule,
+      folderId: 'rules',
+    },
+    labelActorFile: {
+      name: 'label.actor',
+      language: 'actor',
+      contents: labelActor,
+      folderId: 'actors',
+    },
     mouseRuleFile: {
       name: 'mouse.rule',
       language: 'rule',

@@ -14,15 +14,17 @@ import {
   BlocklyWorkspace,
 } from '@code-dot-org/blockly';
 
-import {
-  ownPropertyDeclarations,
-  parseActorOwnMeta,
-  type ActorOwnMeta,
-} from './actorMeta';
 import {assembleActorModule, assembleWorldModule} from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {moduleShape} from './fileKind';
+import {
+  ownPropertyDeclarations,
+  parseWorldOwnMeta,
+  worldOwnPropertyDeclarations,
+  parseActorOwnMeta,
+  type OwnMeta,
+} from './ownProperties';
 import {
   extractRuleBodies,
   parseRuleMeta,
@@ -62,7 +64,7 @@ export const BlocklyGenerator = forwardRef<
   {
     onReady?: () => void;
     projectRules?: readonly RuleMeta[];
-    actorOwnProperties?: readonly ActorOwnMeta[];
+    ownProperties?: readonly OwnMeta[];
     /**
      * The project's Blockly files, by path — read only to find block types
      * nothing defines any more, so a file holding one can still be loaded
@@ -71,7 +73,7 @@ export const BlocklyGenerator = forwardRef<
     blocklyFiles?: Record<string, string>;
   }
 >(function BlocklyGenerator(
-  {onReady, projectRules, actorOwnProperties, blocklyFiles},
+  {onReady, projectRules, ownProperties, blocklyFiles},
   ref,
 ) {
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
@@ -95,7 +97,7 @@ export const BlocklyGenerator = forwardRef<
     // editor's is. It is never shown, so the extra blocks cost nothing.
     const palette = buildDomainPalette(projectRules ?? [], {
       allRuleModules: true,
-      actorOwnProperties: actorOwnProperties ?? [],
+      ownProperties: ownProperties ?? [],
     });
     // …and a stand-in for every type the project's files hold that this
     // palette does not mint — what a deleted rule leaves behind. The EDITOR
@@ -111,7 +113,7 @@ export const BlocklyGenerator = forwardRef<
         ...standInBlocks(Object.values(blocklyFiles ?? {}), known),
       ],
     };
-  }, [projectRules, actorOwnProperties, blocklyFiles]);
+  }, [projectRules, ownProperties, blocklyFiles]);
   // `generate` is a stable closure; read the current root types through a ref.
   const rootTypesRef = useRef(rootTypes);
   rootTypesRef.current = rootTypes;
@@ -235,10 +237,24 @@ export const BlocklyGenerator = forwardRef<
           shape === 'actor' && path
             ? parseActorOwnMeta(path.replace(/\.actor$/, ''), contents)
             : undefined;
-        if (ownActor) {
+        // …and a WORLD's own, which are the same declaration one scope up
+        // (specs/WORLD_STATE.md). `__ruleModule` for the same reason: a get
+        // block in this file names the local const rather than importing the
+        // module into itself.
+        const ownWorld =
+          shape === 'world' && path
+            ? parseWorldOwnMeta(path.replace(/\.world$/, ''), contents)
+            : undefined;
+        const owning = ownActor ?? ownWorld;
+        if (owning) {
           (generator as {__ruleModule?: string}).__ruleModule =
-            ownActor.modulePath;
+            owning.modulePath;
         }
+        // The world block emits these itself, right after `const world` and
+        // before its body — the body is what reads them (`world_world`).
+        (generator as {__worldOwn?: string}).__worldOwn = ownWorld
+          ? worldOwnPropertyDeclarations(ownWorld)
+          : '';
 
         const generated = workspace.getTopBlocks(true).map(block => ({
           type: block.type,

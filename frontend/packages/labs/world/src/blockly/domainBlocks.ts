@@ -38,7 +38,6 @@ import {
   actorSubjectExtension,
   cameraInputExtension,
 } from './actorInput';
-import type {ActorOwnMeta} from './actorMeta';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {
@@ -142,6 +141,7 @@ import {
   backgroundImportOptions,
   spriteOptions,
 } from './moduleOptions';
+import type {OwnMeta} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
 import {slug} from './ruleMeta';
@@ -3969,10 +3969,24 @@ const worldWorld = defineBlock({
             .map(entry => `world.defineLayer({id: ${str(entry.id)}});\n`)
             .join('')
         : '';
+      // The world's OWN state, hoisted for the same reason the layers above
+      // are: a declaration cannot be emitted where its block sits when the body
+      // around it reads the const it makes. `add actor … set text to ⟨score⟩`
+      // written above the `define property` compiled to a use before the
+      // declaration — which esbuild rewrites, so it threw as "Cannot read
+      // properties of undefined" rather than as the temporal-dead-zone error it
+      // was (specs/WORLD_STATE.md).
+      //
+      // Passed on the generator rather than read off the block, so there is ONE
+      // parse of a world's declarations (`parseWorldOwnMeta`) instead of a
+      // second walk over live blocks that could drift from it — the same
+      // bargain `__ruleModule` makes two lines below the same seam.
+      const own = (generator as {__worldOwn?: string}).__worldOwn ?? '';
       return (
         `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
           name,
         )}});\n` +
+        own +
         rules +
         animations +
         imageSizes +
@@ -6106,6 +6120,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     name: 'World',
     blocks: [
       'world_world',
+      // State this WORLD carries — a score, a level, a flag. The same block a
+      // rule and an actor declare with, in a fourth home, because it already
+      // takes its meaning from where it sits (specs/WORLD_STATE.md).
+      'world_rule_property',
       // NO `use rule`. A world runs the rules the project holds, so the block
       // says nothing here (blockly/projectModules) — it stays registered so
       // that projects saved with one keep loading and keep meaning what they
@@ -6291,7 +6309,26 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
   },
   // A note block sits with Text: it is words, and it is the one block here that
   // a learner writes for another person rather than for the machine.
-  {name: 'Text', blocks: ['text', 'world_comment']},
+  {
+    name: 'Text',
+    blocks: [
+      'text',
+      // JOINING, which is what a score needs: a Label draws one value, and
+      // "Score: 5" is a word and a number until something puts them together.
+      // Without this the first scoreboard anybody writes is a bare numeral.
+      'text_join',
+      // …and how long a word is, the one question about a string a world made
+      // of actors has a use for: a name that has to fit the box it is drawn in.
+      'text_length',
+      // DELIBERATELY NOT the rest of Blockly's text category. `text_append`
+      // writes to a variable that outlives nothing here; `text_prompt` asks the
+      // browser for input the game cannot see; and `indexOf`, `charAt`,
+      // `substring`, `changeCase`, `trim`, `count`, `replace` and `reverse` are
+      // string surgery with no reading in a world yet. Each is one line to add
+      // the day something wants it.
+      'world_comment',
+    ],
+  },
   // Variables last, as Blockly's own toolboxes have them. A rule's parameters
   // are declared in `define block`'s signature, so there is no block for
   // declaring one — these read and write whatever is in scope, whether that is a
@@ -6597,7 +6634,7 @@ export function buildDomainPalette(
      * reading a property it legitimately declared fails with "Invalid block
      * definition for type: world_get_…" and the whole project stops compiling.
      */
-    actorOwnProperties?: readonly ActorOwnMeta[];
+    ownProperties?: readonly OwnMeta[];
   } = {},
 ): {
   blocks: DomainBlock[];
@@ -6620,7 +6657,7 @@ export function buildDomainPalette(
   // a rule's property — an actor's declaring scope is a DECLARATION, with no
   // body to run a `set` in — so it is a per-kind constant and gets no setter
   // anywhere, rather than one confined to its own file.
-  const ownProperties = (options.actorOwnProperties ?? []).flatMap(
+  const ownProperties = (options.ownProperties ?? []).flatMap(
     actor => actor.properties,
   );
   // `each frame` wears the connections its file makes sense of: a root in an
