@@ -14,7 +14,7 @@ describe('getBrandConfig', () => {
     const {copyright} = getBrandConfig('code.org');
     const {container} = render(<>{copyright}</>);
     const text = container.textContent ?? '';
-    expect(text).toContain('Code.org');
+    expect(text).toContain('CodeAI');
     expect(text).toContain(String(new Date().getFullYear()));
   });
 
@@ -29,7 +29,7 @@ describe('getBrandConfig', () => {
   it('code.org trademark contains full legal text', () => {
     const {trademark} = getBrandConfig('code.org');
     const {container} = render(<>{trademark}</>);
-    expect(container.textContent).toContain('trademarks of Code.org');
+    expect(container.textContent).toContain('trademarks of CodeAI');
   });
 
   it('code.org fineprint contains vendor attributions and trademark', () => {
@@ -37,7 +37,7 @@ describe('getBrandConfig', () => {
     const {container} = render(<>{fineprint}</>);
     const text = container.textContent ?? '';
     expect(text).toContain('Amazon, Google, and Microsoft');
-    expect(text).toContain('trademarks of Code.org');
+    expect(text).toContain('trademarks of CodeAI');
     expect(text).toContain('Built on GitHub from Microsoft');
   });
 
@@ -47,9 +47,9 @@ describe('getBrandConfig', () => {
     expect(container.textContent).toContain('trademarks of AIDay');
   });
 
-  it('falls back to Code.org content for unknown brands', () => {
+  it('falls back to CodeAI content for unknown brands', () => {
     const config = getBrandConfig('unknown-brand' as Brand);
     const {container} = render(<>{config.copyright}</>);
-    expect(container.textContent).toContain('Code.org');
+    expect(container.textContent).toContain('CodeAI');
   });
 });
