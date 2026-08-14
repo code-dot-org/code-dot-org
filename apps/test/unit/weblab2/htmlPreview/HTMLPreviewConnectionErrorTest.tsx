@@ -66,7 +66,7 @@ jest.mock('@cdo/apps/weblab2/htmlPreview/HTMLPreviewHeader', () => ({
 }));
 
 const CONNECTION_TIMEOUT_MS = 15000;
-const ERROR_TITLE = 'Unable to load preview';
+const ERROR_TITLE = 'Unable to Load Preview';
 
 describe('HTMLPreview connection error', () => {
   let store: Store;

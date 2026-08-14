@@ -552,7 +552,11 @@ export const HTMLPreview: React.FC = () => {
           /* This iframe points to the environment-specific preview origin (see previewUrl above). That url will eventually
             route to InnerHTMLPreview. */
           <>
-            {isConnectionBlocked && <PreviewConnectionError />}
+            {isConnectionBlocked && (
+              <div role="alert">
+                <PreviewConnectionError />
+              </div>
+            )}
             <div
               ref={previewContainerRef}
               // This provides a small visual indicator when the iframe is focused after submitting the URL.
