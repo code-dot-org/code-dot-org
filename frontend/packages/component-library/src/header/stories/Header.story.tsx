@@ -214,7 +214,7 @@ export const StudentSignedIn: Story = {
 // Resting-state guards, each a flat assert, ending with no menu open:
 //  - target size (WCAG 2.5.8 AA): every control is at least 24x24px.
 //  - pill geometry: New project + Account triggers are 32px/0.5rem radius,
-//    matching the Rails header's `.header_button` under codeai-brand
+//    which matches `.header_button` in the Rails header
 //    (dashboard/app/assets/stylesheets/application.scss); Help's "?" glyph
 //    grows to 24px while its own box keeps the Rails header's 38px invisible
 //    hit target (it never carries `.header_button`).

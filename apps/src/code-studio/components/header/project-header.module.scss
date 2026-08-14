@@ -22,14 +22,12 @@
 // At tablet widths the header runs out of room, so the project buttons
 // (Rename/Share/Remix) collapse from text to icons. The buttons keep their
 // accessible names via aria-label.
-:global(html.nav-reskin) {
-  @media (max-width: $width-md) {
-    .buttonText {
-      display: none;
-    }
+@media (max-width: $width-md) {
+  .buttonText {
+    display: none;
+  }
 
-    .buttonIcon.buttonIcon {
-      display: inline;
-    }
+  .buttonIcon.buttonIcon {
+    display: inline;
   }
 }

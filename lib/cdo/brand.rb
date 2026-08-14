@@ -74,12 +74,6 @@ module Cdo
       BRANDS.key?(brand) ? brand : default
     end
 
-    # True for codeai-next or its audit variant codeai-audit. Drives the
-    # `html.nav-reskin` class (see application.html.haml).
-    def self.codeai_next?(request = nil)
-      [BRAND_CODEAI_NEXT, BRAND_CODEAI_AUDIT].include?(current_brand_code(request))
-    end
-
     # Get the current brand configuration
     # @param request [ActionDispatch::Request, nil] the current request
     def self.current_brand_configuration(request = nil)
