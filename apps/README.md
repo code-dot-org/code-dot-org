@@ -86,7 +86,7 @@ Two other levers:
 - `RSPACK_NO_WRITE=1 yarn start --rspack` skips the dev server's copy of
   its output to disk. Rebuilds are bounded by writing, not compiling, so
   this is the big one for iterating on a widely-imported file — a shared
-  edit reaches the browser in about 8 seconds instead of 23 — at the cost
+  edit reaches the browser in about 9 seconds instead of 24 — at the cost
   of roughly 1.8GB more resident memory, since the output stays in the
   server's in-memory filesystem. Anything reading `build/package`
   directly (a page served straight from Rails, say) needs the files, so
