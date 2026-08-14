@@ -10,10 +10,10 @@ const PreviewConnectionError = () => {
       title="Unable to Load Preview"
       description={
         <>
-          Your browser may be preventing us from setting up Web Lab. You may
-          need to adjust your firewall settings. See our{' '}
+          Your browser may be blocking the setup of Web Lab. You may need to
+          adjust your firewall settings. See the{' '}
           <Link href={IT_REQUIREMENTS_URL} size="s" external openInNewTab>
-            IT requirements page
+            Technical requirements page
           </Link>{' '}
           for which site(s) you need to unblock. If you need assistance, please
           reach out to support@code.org.
