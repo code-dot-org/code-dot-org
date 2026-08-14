@@ -33,6 +33,19 @@ class MultipleSelectQuestion < QuizQuestion
   # equivalent - see the multi-select ordering problem in the design doc.
   validate :validate_question_shape
 
+  def auto_gradable?
+    true
+  end
+
+  # response_data shape: {"selectedChoiceIds" => ["b", "d"]}. Compared as
+  # sets, not ordered lists - see the class comment above.
+  def grade(response_data)
+    selected = response_data.is_a?(Hash) ? response_data['selectedChoiceIds'] : nil
+    selected = [] unless selected.is_a?(Array)
+    correct = Set.new(question['correct_choice_ids'] || [])
+    {score: Set.new(selected) == correct ? 1 : 0, max_score: 1}
+  end
+
   private def validate_question_shape
     return if question.blank?
     q = question.deep_stringify_keys
