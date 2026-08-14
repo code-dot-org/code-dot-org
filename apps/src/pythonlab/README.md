@@ -70,8 +70,14 @@ A sandbox that was merely slow clears the message when it finally reports
 
 The sandbox is off by default. Turn it on for a session with
 `?pythonlab-separate-domain=1` on the level URL, or with
-`?new-preview-domain=1`, which turns it on _and_ points it at
-`codeaiprojects.org`.
+`?new-preview-domain=1`, which turns it on *and* points it at
+`codeaiprojects.org`. For a whole environment, set the
+`use-pythonlab-separate-domain` DCDO flag to `true`; other values do not
+ enable the sandbox unless one of the per-session experiments is active. 
+`pyodideSandboxEnabled.ts` holds that decision.
+The sandbox domain can also be set via dcdo; use the flag `sandboxed-preview-domain`
+to set it. This value is used by both Web Lab 2 and Python Lab. By default it
+uses `codeprojects.org`, to use `codeaiprojects.org` you must set the flag.
 
 Like Web Lab 2, the sandbox iframe needs a service worker, which
 requires a secure origin. Local dev is plain HTTP, so add the sandbox's
