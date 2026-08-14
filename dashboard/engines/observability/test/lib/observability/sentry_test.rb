@@ -84,4 +84,23 @@ describe Observability::Sentry do
       end
     end
   end
+
+  describe '.set_user_token' do
+    it 'identifies the user by the token it was given' do
+      Sentry.expects(:set_user).with(id: 'v1.an-opaque-log-token')
+      Observability::Sentry.set_user_token('v1.an-opaque-log-token')
+    end
+
+    # An unconfigured key yields a nil token upstream. That has to degrade to
+    # anonymous events rather than falling back to a raw id.
+    it 'leaves the user context untouched when the token is nil' do
+      Sentry.expects(:set_user).never
+      Observability::Sentry.set_user_token(nil)
+    end
+
+    it 'leaves the user context untouched when the token is empty' do
+      Sentry.expects(:set_user).never
+      Observability::Sentry.set_user_token('')
+    end
+  end
 end

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-12 13:30:10 UTC",
+    "serialized_at": "2026-08-13 14:46:46 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -112,7 +112,7 @@
       "name": "Final Project",
       "absolute_position": 6,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -345,7 +345,8 @@
       "key": "e82e63aa-8ac2-487c-9330-e24d6efb6196",
       "position": 1,
       "properties": {
-        "name": "Final Project"
+        "name": "Final Project",
+        "progression_name": "Final Project"
       },
       "seeding_key": {
         "activity_section.key": "e82e63aa-8ac2-487c-9330-e24d6efb6196",
@@ -356,7 +357,8 @@
       "key": "96155fcb-631b-46e5-9e88-6ba17094f3c1",
       "position": 2,
       "properties": {
-        "name": "Wrapping Up"
+        "name": "Wrapping Up",
+        "progression_name": "Wrapping Up"
       },
       "seeding_key": {
         "activity_section.key": "96155fcb-631b-46e5-9e88-6ba17094f3c1",
@@ -1669,6 +1671,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Final Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -1690,6 +1693,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Final Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -1711,6 +1715,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Final Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -1732,6 +1737,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Final Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -1753,6 +1759,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wrapping Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -1774,6 +1781,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Wrapping Up"
       },
       "bonus": false,
       "seeding_key": {

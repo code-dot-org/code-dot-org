@@ -1,0 +1,66 @@
+%h1 User Log Tokens
+
+#application-container
+  = show_flashes.html_safe
+
+%p
+  Logs and telemetry identify users by an opaque token rather than a raw user id. Each destination gets a different token for the same user, so a token from one system cannot be matched against another's.
+
+%h2 Find a user's tokens
+
+%p.text-muted
+  Enter a user id to get that user's token for each destination, then search for it in the corresponding system.
+
+= form_tag url_for(action: 'log_token_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :user_id, params[:user_id], class: 'form-control', placeholder: 'numeric user id', size: 20
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+
+- if @invalid_input
+  %p.text-danger Enter a numeric user id.
+- elsif @tokens.present?
+  - unless @user_exists
+    %p.text-muted
+      No user currently exists with id #{@input}. The tokens below are still what that id would produce.
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th Destination
+      %th Token
+    %tbody
+      - @tokens.each do |destination, token|
+        %tr
+          %td= destination
+          %td
+            - if token
+              %code= token
+            - else
+              %span.text-muted (CDO.user_log_token_keys is not configured in this environment)
+
+%hr
+
+%h2 Identify a user from a token
+
+%p.text-danger
+  This re-identifies a student.
+
+= form_tag resolve_log_token_path, method: 'post', enforce_utf8: false do
+  %div
+    = label_tag :token, 'Token'
+    = text_field_tag :token, nil, class: 'form-control', placeholder: 'v1.…', size: 90
+  %div{style: 'margin-top: 8px;'}
+    = label_tag :reason, 'Reason (required)'
+    = text_field_tag :reason, nil, class: 'form-control', placeholder: 'e.g. Zendesk 4821, safety review', size: 60
+  %div{style: 'margin-top: 8px;'}
+    %button.btn.btn-danger{type: 'submit'} Identify user
+
+- if @resolve_attempted && @resolved.present?
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th User ID
+      %th Destination
+    %tbody
+      %tr
+        %td= link_to @resolved[:user_id], permissions_form_path(search_term: @resolved[:user_id])
+        %td= @resolved[:destination]
+
+= render partial: 'home/admin'

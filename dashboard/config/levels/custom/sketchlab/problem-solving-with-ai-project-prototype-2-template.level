@@ -699,20 +699,20 @@
             "id": "cbec3738-8c78-4e37-928a-fb309fb9c033",
             "type": "text",
             "data": {
-              "text": "TaCo FoRT",
+              "text": "6. DRAFT YOUR SYSTEM PROMPT",
               "strokeColor": "transparent",
               "fontFamily": "cursive",
               "fontSize": "extra-large",
               "locked": true
             },
             "position": {
-              "x": -131.87538975332333,
-              "y": 2662.251359134838
+              "x": -135.87538975332336,
+              "y": 2671.251359134838
             },
-            "width": 232.71977429190557,
+            "width": 593.7197742919045,
             "height": 46.323458634078634,
             "measured": {
-              "width": 233,
+              "width": 594,
               "height": 46
             },
             "dragging": false
@@ -743,7 +743,7 @@
             "id": "821e09dd-be8b-4f37-b4d6-af072d10049b",
             "type": "text",
             "data": {
-              "text": "6. Compose a system prompt that instructs your chatbot how to respond to a user that has questions about your product. \n\nA system prompt is a set of standing instructions that apply to every answer your chatbot produces, rather than to a single response. Each team member should draft all five components independently, then compare versions and select which parts to use.",
+              "text": "Compose a system prompt that instructs your chatbot how to respond to a user that has questions about your product. \n\nA system prompt is a set of standing instructions that apply to every answer your chatbot produces, rather than to a single response. Each team member should draft all five components independently, then compare versions and select which parts to use.",
               "strokeColor": "transparent",
               "rotation": 0,
               "locked": true,
@@ -1153,10 +1153,10 @@
             "id": "a2cde852-449a-4179-9442-39f02ebd52ea",
             "type": "text",
             "data": {
-              "text": "\n\n7.  Draft one question that a potential customer would reasonably ask before purchasing. \n    Draft a second question addressing a detail your spec sheet does not cover. \n    Draft a third question that your chatbot should decline to answer.\n\nEvaluate whether your chatbot answers accurately or generates information that does not appear on your spec sheet. ",
+              "text": "\n\n- Draft one question that your chatbot should be able to fully and accurately answer.\n- Draft a second question addressing a detail your spec sheet does not cover. \n- Draft a third question that your chatbot should decline to answer.\n\nEvaluate whether your chatbot answers accurately or generates information that does not appear on your spec sheet. ",
               "strokeColor": "transparent",
               "rotation": 0,
-              "locked": false,
+              "locked": true,
               "textAlign": "left"
             },
             "position": {
@@ -1237,7 +1237,7 @@
             "id": "5fcafc36-3c15-4598-bb75-f7fd0c8c9110",
             "type": "text",
             "data": {
-              "text": "9.  Launch your product with a single social media post using the template.\n\n\nChoose a job and create supporting media: images, music / jingle, and marketing text.\n",
+              "text": "Launch your product with a single social media post using the template.\n\n\nChoose a job and create supporting media: images, music / jingle, and marketing text.\n",
               "strokeColor": "transparent",
               "rotation": 0,
               "locked": true,
@@ -1689,20 +1689,21 @@
             "id": "5e2cdb35-aedc-4eca-98a4-db1c4f8de1ac",
             "type": "text",
             "data": {
-              "text": "PRODUCT LAUNCH",
+              "text": "PRODUCT LAUNCH PROJECT",
               "strokeColor": "transparent",
               "fontSize": 100,
               "fontFamily": "cursive",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": -536.9295439225829,
               "y": -831.6853923264903
             },
-            "width": 1303.3890206323636,
+            "width": 2017.670452600388,
             "height": 40,
             "measured": {
-              "width": 1303,
+              "width": 2018,
               "height": 40
             },
             "dragging": false
@@ -1711,12 +1712,12 @@
             "id": "81fd845b-5266-41dc-851a-4bc998141ca5",
             "type": "text",
             "data": {
-              "text": "AUDIENCE",
+              "text": "4. AUDIENCE",
               "strokeColor": "transparent",
-              "fontSize": 50,
+              "fontSize": "extra-large",
               "fontFamily": "cursive",
               "textAlign": "center",
-              "locked": false,
+              "locked": true,
               "rotation": 318
             },
             "position": {
@@ -1735,12 +1736,12 @@
             "id": "e19195c8-d3fc-4a79-af7e-4e58f45afd66",
             "type": "text",
             "data": {
-              "text": "SOLUTION",
+              "text": "3. SOLUTION",
               "strokeColor": "transparent",
-              "fontSize": 50,
+              "fontSize": "extra-large",
               "fontFamily": "cursive",
               "textAlign": "center",
-              "locked": false,
+              "locked": true,
               "rotation": 318
             },
             "position": {
@@ -1759,12 +1760,12 @@
             "id": "ed3a5f47-7d41-40cd-b465-9c73b2a63b08",
             "type": "text",
             "data": {
-              "text": "ISSUES",
+              "text": "2. ISSUES",
               "strokeColor": "transparent",
-              "fontSize": 50,
+              "fontSize": "extra-large",
               "fontFamily": "cursive",
               "textAlign": "center",
-              "locked": false,
+              "locked": true,
               "rotation": 318
             },
             "position": {
@@ -1783,12 +1784,12 @@
             "id": "66119d47-d66f-44ad-a520-98caafec5da4",
             "type": "text",
             "data": {
-              "text": "SUBJECT",
+              "text": "1. SUBJECT",
               "strokeColor": "transparent",
-              "fontSize": 50,
+              "fontSize": "extra-large",
               "fontFamily": "cursive",
               "textAlign": "center",
-              "locked": false,
+              "locked": true,
               "rotation": 318
             },
             "position": {
@@ -1829,20 +1830,20 @@
             "id": "4162b8a7-c8de-4c94-a47a-b00e17dedc38",
             "type": "text",
             "data": {
-              "text": "PRODUCT SPEC SHEET",
+              "text": "5. PRODUCT SPEC SHEET",
               "strokeColor": "transparent",
               "fontFamily": "cursive",
-              "fontSize": 45,
-              "locked": true
+              "fontSize": "extra-large",
+              "locked": false
             },
             "position": {
-              "x": -180.30268205062902,
-              "y": 1261.7391932547673
+              "x": -531.3026820506288,
+              "y": 1270.7391932547673
             },
-            "width": 666.1313288066527,
+            "width": 704.3970582190666,
             "height": 40,
             "measured": {
-              "width": 666,
+              "width": 704,
               "height": 40
             },
             "dragging": false
@@ -1876,7 +1877,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#ffffff",
-              "locked": true,
+              "locked": false,
               "strokeColor": "#b8cdff"
             },
             "position": {
@@ -1898,14 +1899,14 @@
               "shapeType": "rectangle",
               "label": "What it is:",
               "backgroundColor": "#ffffff",
-              "locked": false,
+              "locked": true,
               "strokeColor": "var(--sketchlab-stroke-blue)",
               "fontFamily": "sans",
               "fontSize": "large"
             },
             "position": {
-              "x": -401.93443590430945,
-              "y": 1585.3265662375409
+              "x": -405.41663815749394,
+              "y": 1580.1032628577639
             },
             "width": 163.83835304917142,
             "height": 60,
@@ -1968,16 +1969,16 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "What it does not do:",
+              "label": "What it is NOT:",
               "backgroundColor": "#ffffff",
-              "locked": false,
+              "locked": true,
               "strokeColor": "var(--sketchlab-stroke-blue)",
               "fontFamily": "sans",
               "fontSize": "large"
             },
             "position": {
-              "x": -218.83049928122108,
-              "y": 2275.3393990073955
+              "x": -403.3872186999989,
+              "y": 1674.6595103330715
             },
             "width": 163.83835304917142,
             "height": 60,
@@ -2334,7 +2335,7 @@
             },
             "position": {
               "x": -157.70253414180252,
-              "y": 1576.5291108826038
+              "y": 1550.4125939837204
             },
             "width": 917.1377233636966,
             "height": 100.02575286323508,
@@ -2354,8 +2355,8 @@
               "textAlign": "left"
             },
             "position": {
-              "x": -155.23487355211932,
-              "y": 1819.10323000576
+              "x": -151.75267129893487,
+              "y": 1752.9413871952547
             },
             "width": 917.1377233636966,
             "height": 100.02575286323508,
@@ -2375,8 +2376,8 @@
               "textAlign": "left"
             },
             "position": {
-              "x": -158.09634148628368,
-              "y": 2054.9891457262315
+              "x": -152.87303810650695,
+              "y": 1957.487482637066
             },
             "width": 917.1377233636966,
             "height": 100.02575286323508,
@@ -2396,8 +2397,8 @@
               "textAlign": "left"
             },
             "position": {
-              "x": -160.34438440718608,
-              "y": 1697.7674525835473
+              "x": -153.37997990081712,
+              "y": 1650.7577221655567
             },
             "width": 917.1377233636966,
             "height": 100.02575286323508,
@@ -2417,8 +2418,8 @@
               "textAlign": "left"
             },
             "position": {
-              "x": -153.62693543683622,
-              "y": 1938.0493648607603
+              "x": -151.88583431024398,
+              "y": 1856.217611910925
             },
             "width": 917.1377233636966,
             "height": 100.02575286323508,
@@ -2477,7 +2478,7 @@
             "data": {
               "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/43204cc7-180b-45fa-afce-8938e5dffe69.png",
               "altText": "instagram_BG_4",
-              "locked": true
+              "locked": false
             },
             "position": {
               "x": 3036.7126828265336,
@@ -2518,7 +2519,7 @@
             "id": "502ac123-f4ab-42f7-84ac-af3cb478aab7",
             "type": "text",
             "data": {
-              "text": "5. Develop a spec sheet that documents the factual details of your product. A spec sheet is the official record of  \n    what a product includes, what it costs, and what it is capable of doing.\n\nChoose five different categories of question to answer and drag them up spec sheet. ",
+              "text": "Develop a spec sheet that documents the factual details of your product. A spec sheet is the official record of  \nwhat a product includes, what it costs, and what it is capable of doing.\n\nChoose five different categories of question to answer and drag them up spec sheet. ",
               "strokeColor": "transparent",
               "fontSize": "large",
               "textAlign": "left",
@@ -2540,10 +2541,10 @@
             "id": "09cb25ff-fa9b-4d49-b106-ff52a85dbfd2",
             "type": "text",
             "data": {
-              "text": "8.  Identify the response that was least accurate from your testing. \n\nRevise your chatbot component(s), then ask the same question again to confirm that your revision was effective",
+              "text": "Identify the response that was least accurate from your testing. \n\nRevise your chatbot component(s), then ask the same question again to confirm that your revision was effective",
               "strokeColor": "transparent",
               "rotation": 0,
-              "locked": false,
+              "locked": true,
               "textAlign": "left"
             },
             "position": {
@@ -2593,10 +2594,10 @@
               "x": 1059.5091206436946,
               "y": 581.0720160388435
             },
-            "width": 502.37704269575784,
+            "width": 684.3770426957581,
             "height": 99.06225463583405,
             "measured": {
-              "width": 502,
+              "width": 684,
               "height": 99
             },
             "dragging": false
@@ -2611,13 +2612,13 @@
               "textAlign": "left"
             },
             "position": {
-              "x": 1055.5604247825834,
+              "x": 1055.5604247825831,
               "y": 895.0026813040693
             },
-            "width": 502.37704269575784,
+            "width": 698.3770426957581,
             "height": 99.06225463583405,
             "measured": {
-              "width": 502,
+              "width": 698,
               "height": 99
             },
             "dragging": false
@@ -2632,13 +2633,13 @@
               "textAlign": "left"
             },
             "position": {
-              "x": 1051.7711333663076,
+              "x": 1051.7711333663074,
               "y": 1207.6192231468378
             },
-            "width": 502.37704269575784,
+            "width": 706.3770426957581,
             "height": 99.06225463583405,
             "measured": {
-              "width": 502,
+              "width": 706,
               "height": 99
             },
             "dragging": false
@@ -2650,18 +2651,18 @@
               "text": "JOB DESCRIPTIONS (Mandatory)",
               "fontFamily": "cursive",
               "textAlign": "center",
-              "fontSize": "extra-large",
+              "fontSize": "large",
               "locked": true
             },
             "position": {
-              "x": 2767.7696597375525,
-              "y": 1576.132357592774
+              "x": 2847.8603115607957,
+              "y": 1619.6598857575805
             },
-            "width": 811.6395624085471,
-            "height": 120,
+            "width": 498.24135962194214,
+            "height": 59.061460569271276,
             "measured": {
-              "width": 812,
-              "height": 120
+              "width": 498,
+              "height": 59
             },
             "dragging": false
           },
@@ -2669,21 +2670,21 @@
             "id": "b3d9fe22-6d7e-4ae1-abf9-d40b7f535574",
             "type": "text",
             "data": {
-              "text": "SOCIAL MEDIA POST",
+              "text": "10. SOCIAL MEDIA POST",
               "fontFamily": "cursive",
               "textAlign": "center",
               "fontSize": "extra-large",
-              "locked": false
+              "locked": true
             },
             "position": {
-              "x": 3293.09786352499,
-              "y": -152.68901040275853
+              "x": 3223.09786352499,
+              "y": -154.68901040275853
             },
-            "width": 393.3152034379728,
-            "height": 120,
+            "width": 529.3152034379727,
+            "height": 82,
             "measured": {
-              "width": 393,
-              "height": 120
+              "width": 529,
+              "height": 82
             },
             "dragging": false
           },
@@ -2782,18 +2783,18 @@
               "text": "JOB DESCRIPTIONS (Optional)",
               "fontFamily": "cursive",
               "textAlign": "center",
-              "fontSize": "extra-large",
+              "fontSize": "large",
               "locked": true
             },
             "position": {
-              "x": 4195.759020959755,
-              "y": 1576.1323575927738
+              "x": 4289.778481795736,
+              "y": 1603.9899756182494
             },
-            "width": 811.6395624085471,
-            "height": 120,
+            "width": 439.04392131780605,
+            "height": 67.76696620223242,
             "measured": {
-              "width": 812,
-              "height": 120
+              "width": 439,
+              "height": 68
             },
             "dragging": false
           },
@@ -2974,7 +2975,8 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": ""
+              "label": "",
+              "locked": true
             },
             "position": {
               "x": 4002.504168338202,
@@ -2985,6 +2987,136 @@
             "measured": {
               "width": 80,
               "height": 655
+            },
+            "dragging": false
+          },
+          {
+            "id": "b72ea409-1249-4107-8078-76f9766b5b29",
+            "type": "text",
+            "data": {
+              "text": "Product description here...",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -151.55450733033052,
+              "y": 2060.212449106008
+            },
+            "width": 917.1377233636966,
+            "height": 100.02575286323508,
+            "measured": {
+              "width": 917,
+              "height": 100
+            },
+            "dragging": false
+          },
+          {
+            "id": "4043c8d5-5668-49c5-b12f-ac94b0341786",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/fbcc4843-f8d8-41d2-ae42-541a969446ca.png",
+              "altText": "TaCoFoRT",
+              "rotation": 0,
+              "locked": true
+            },
+            "position": {
+              "x": -1153.9800051083366,
+              "y": 3030.988967309394
+            },
+            "width": 914.0000000000002,
+            "height": 402.00000000000045,
+            "measured": {
+              "width": 914,
+              "height": 402
+            },
+            "dragging": false
+          },
+          {
+            "id": "ef7ef443-2e5f-4090-8251-336e7ae949ac",
+            "type": "text",
+            "data": {
+              "text": "7. DRAFT QUESTIONS",
+              "strokeColor": "transparent",
+              "fontFamily": "cursive",
+              "fontSize": "extra-large",
+              "locked": true,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1028.3609633296414,
+              "y": 101.26199157260811
+            },
+            "width": 704.3970582190666,
+            "height": 40,
+            "measured": {
+              "width": 704,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "f67404fc-c0f3-4ebf-b248-e6225291e5fa",
+            "type": "text",
+            "data": {
+              "text": "8. REFINE YOUR CHATBOT",
+              "strokeColor": "transparent",
+              "fontFamily": "cursive",
+              "fontSize": "extra-large",
+              "locked": true,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1037.423046662064,
+              "y": 1355.5174503599599
+            },
+            "width": 704.3970582190666,
+            "height": 40,
+            "measured": {
+              "width": 704,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "e2aea3f9-4aa9-43fe-bae3-50116e7e4499",
+            "type": "text",
+            "data": {
+              "text": "9. CHOOSE YOUR JOB",
+              "fontFamily": "cursive",
+              "textAlign": "left",
+              "fontSize": "extra-large",
+              "locked": false
+            },
+            "position": {
+              "x": 2895.1564793953457,
+              "y": 1555.711615908861
+            },
+            "width": 811.6395624085471,
+            "height": 68,
+            "measured": {
+              "width": 812,
+              "height": 68
+            },
+            "dragging": false
+          },
+          {
+            "id": "d2ba6d94-4ab2-49e6-a9f8-d85a3de04944",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/9ef5e663-1a4e-4491-b655-2f482251ce11.png",
+              "altText": "assetLog",
+              "locked": true
+            },
+            "position": {
+              "x": 2769.197932663229,
+              "y": 2418.514974306716
+            },
+            "width": 1437.8769070276703,
+            "height": 700.0444242489624,
+            "measured": {
+              "width": 1438,
+              "height": 700
             },
             "dragging": false
           }
@@ -3058,14 +3190,14 @@
           }
         ],
         "viewport": {
-          "x": 526.7545952694984,
-          "y": 543.0484601868433,
-          "zoom": 0.3789291416276003
+          "x": 682.9311849449231,
+          "y": 492.4768515060326,
+          "zoom": 0.4594793419988147
         }
       }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28T19:02:19.373+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-07-28 19:02:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:18:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:43:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:56:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:13:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:42:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:15:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:29:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:34:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:38:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:53:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:57:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:18:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:46:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:47:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:48:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:50:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:01:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:10:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:30:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 20:14:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:33:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:54:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:45:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 20:55:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 21:31:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:35:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:38:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:39:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:40:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28T19:02:19.373+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-07-28 19:02:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:18:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:43:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:56:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:13:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:42:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:15:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:29:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:34:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:38:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:53:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:57:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:18:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:46:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:47:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:48:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:50:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:01:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:10:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:30:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 20:14:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:33:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:54:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:45:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 20:55:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 21:31:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:35:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:38:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:39:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:40:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 14:01:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 16:51:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 18:41:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

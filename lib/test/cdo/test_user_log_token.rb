@@ -1,14 +1,16 @@
 require_relative '../test_helper'
 require 'cdo/user_log_token'
 
-# Minitest::Spec rather than Minitest::Test: only Spec extends Minitest::Spec::DSL,
-# which is what supplies `before`/`after` and makes each `describe` a subclass of
-# this class, so the helpers below are in scope inside `it`.
 class UserLogTokenTest < Minitest::Spec
-  DESTINATION = Cdo::UserLogToken::OBSERVABILITY
+  DESTINATION = Cdo::UserLogToken::SENTRY
 
   KEY_ONE = Base64.strict_encode64(SecureRandom.bytes(32))
   KEY_TWO = Base64.strict_encode64(SecureRandom.bytes(32))
+
+  # An index into a token that lands within the encrypted portion: past the
+  # "v1." prefix and the 16 base64 characters holding the IV, well short of the
+  # 16-byte tag at the end.
+  CIPHERTEXT_CHARACTER = 30
 
   def load_keys(*encoded_keys)
     keys = encoded_keys.each_with_index.to_h {|key, index| [(index + 1).to_s, key]}
@@ -53,10 +55,8 @@ class UserLogTokenTest < Minitest::Spec
       assert Cdo::UserLogToken.derive(12345, destination: DESTINATION).start_with?('v1.')
     end
 
-    it 'rejects an unknown destination rather than silently minting a token' do
-      assert_raises Cdo::UserLogToken::UnknownDestinationError do
-        Cdo::UserLogToken.derive(12345, destination: 'not_a_destination')
-      end
+    it 'returns nil for an unknown destination rather than minting a token' do
+      assert_nil Cdo::UserLogToken.derive(12345, destination: 'not_a_destination')
     end
 
     it 'returns nil for a nil user id' do
@@ -104,6 +104,14 @@ class UserLogTokenTest < Minitest::Spec
       assert_raises(ArgumentError) {Cdo::UserLogToken.resolve(token, actor_id: '', reason: 'test')}
     end
 
+    it 'refuses to resolve for an actor that is not a user id' do
+      token = Cdo::UserLogToken.derive(12345, destination: DESTINATION)
+
+      assert_raises(ArgumentError) do
+        Cdo::UserLogToken.resolve(token, actor_id: 'admin@code.org', reason: 'test')
+      end
+    end
+
     it 'refuses to resolve without a reason' do
       token = Cdo::UserLogToken.derive(12345, destination: DESTINATION)
 
@@ -119,10 +127,14 @@ class UserLogTokenTest < Minitest::Spec
     end
 
     # Authenticated encryption: a modified token must fail, never decrypt to
-    # some other valid user.
+    # some other valid user. The flipped character has to land inside the
+    # ciphertext -- the token's last character carries base64 padding bits, and
+    # a change to those is caught by the decoder before the cipher is consulted,
+    # which would leave the cipher untested a quarter of the time.
     it 'rejects a tampered token' do
       token = Cdo::UserLogToken.derive(12345, destination: DESTINATION)
-      tampered = token[0..-2] + (token[-1] == 'A' ? 'B' : 'A')
+      tampered = token.dup
+      tampered[CIPHERTEXT_CHARACTER] = tampered[CIPHERTEXT_CHARACTER] == 'A' ? 'B' : 'A'
 
       assert_nil Cdo::UserLogToken.resolve(tampered, actor_id: 1, reason: 'test')
     end
@@ -155,7 +167,7 @@ class UserLogTokenTest < Minitest::Spec
       Cdo::UserLogToken.resolve(token, actor_id: 42, reason: 'zendesk 4821')
     end
 
-    it 'records failed attempts, since a burst of them is a signal' do
+    it 'records failed attempts' do
       CDO.log.expects(:warn).with do |payload|
         entry = JSON.parse(payload)
         entry['outcome'] == 'not_resolved' && entry['authenticated_user_id'] == 42
@@ -197,6 +209,20 @@ class UserLogTokenTest < Minitest::Spec
     end
   end
 
+  describe 'key configuration already parsed into a Hash' do
+    before {load_raw({'1' => KEY_ONE})}
+
+    it 'reports itself as configured' do
+      assert Cdo::UserLogToken.configured?
+    end
+
+    it 'derives tokens that resolve back to their user id' do
+      token = Cdo::UserLogToken.derive(12345, destination: DESTINATION)
+
+      assert_equal 12345, Cdo::UserLogToken.resolve(token, actor_id: 1, reason: 'test')[:user_id]
+    end
+  end
+
   # A missing or malformed key must degrade to no token rather than raising,
   # because derive sits on a per-request hot path.
   describe 'when the key configuration is unusable' do
@@ -219,6 +245,15 @@ class UserLogTokenTest < Minitest::Spec
           assert_nil Cdo::UserLogToken.derive(12345, destination: DESTINATION)
         end
       end
+    end
+
+    it 'picks the key up on a later call once it can be read' do
+      load_raw(nil)
+      assert_nil Cdo::UserLogToken.derive(12345, destination: DESTINATION)
+
+      CDO.stubs(:user_log_token_keys).returns({'1' => KEY_ONE}.to_json)
+
+      refute_nil Cdo::UserLogToken.derive(12345, destination: DESTINATION)
     end
   end
 end

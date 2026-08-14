@@ -242,12 +242,6 @@ frontend_studio_sentry_dsn: !Secret
 
 # Keys used to derive "log tokens" -- reversible pseudonyms of user ids -- so
 # that raw user ids stay out of our logs and out of third-party systems.
-# A JSON object of version => 32+ random bytes, base64:
-#   {"1": "<base64>", "2": "<base64>"}
-# The highest version encrypts; every version is retained so that tokens already
-# written can still be read. Dropping a key makes its tokens permanently
-# unreadable, so a key must outlive the longest retention window of any
-# destination carrying it. See lib/cdo/user_log_token.rb.
 user_log_token_keys: !Secret
 
 # Credentials for Google-federated AWS access.

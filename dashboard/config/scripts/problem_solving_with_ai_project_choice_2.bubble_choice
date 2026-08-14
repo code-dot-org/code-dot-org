@@ -3,7 +3,8 @@ display_name 'Product Launch, Day Two'
 description 'Use both the Sketch Lab and the AI Chat levels below to accomplish project milestones'
 
 sublevels
-level 'problem-solving-with-ai-project-sketchlab-day-two'
 level 'problem-solving-with-ai-project-aichat-1'
+level 'problem-solving-with-ai-project-sketchlab-day-two'
+
 
 uses_lab2

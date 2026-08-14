@@ -7,8 +7,11 @@ markdown <<MARKDOWN
 
 AI doesn't read a prompt the way a person does. It's matching your words against patterns it's seen across huge numbers of real websites, then predicting what a page like that usually looks like. Below, try it yourself: generate a page from a prompt, then walk through what actually happened behind the scenes.
 
+---
+
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
 <iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/watch-ai-build-page.html" width="100%" height="820" style="border:none;" title="Explore the Parts of a Web Page: an interactive planets site"></iframe>
 </div>
 
+---
 MARKDOWN

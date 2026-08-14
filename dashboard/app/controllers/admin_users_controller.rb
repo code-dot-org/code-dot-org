@@ -1,4 +1,5 @@
 require 'cdo/activity_constants'
+require 'cdo/user_log_token'
 require 'csv'
 require 'tempfile'
 
@@ -396,6 +397,58 @@ class AdminUsersController < ApplicationController
         opts.map(&:credential_type)
       end
     end
+  end
+
+  # GET /admin/log_token
+  # Forward lookup: a user id in, that user's log token for every destination out.
+  # Deliberately checks only whether the user exists rather than loading the
+  # record, so this page discloses nothing beyond its input.
+  def log_token_form
+    @input = params[:user_id].to_s.strip
+    return if @input.blank?
+
+    # Mirrors what Cdo::UserLogToken will accept, so we reject here rather than
+    # rendering a row of empty tokens
+    unless @input.match?(/\A[1-9]\d{0,9}\z/)
+      @invalid_input = true
+      return
+    end
+
+    user_id = @input.to_i
+    @user_exists = begin
+      User.exists?(id: user_id)
+    rescue ActiveModel::RangeError
+      false
+    end
+    @tokens = Cdo::UserLogToken::DESTINATIONS.index_with do |destination|
+      Cdo::UserLogToken.derive(user_id, destination: destination)
+    end
+    log_admin_action('log_token_lookup', user_id)
+  end
+
+  # POST /admin/log_token/resolve
+  # Reverse lookup: a log token in, the user it identifies out.
+  #
+  # The audit record is written by Cdo::UserLogToken.resolve itself rather than
+  # here, so it cannot be sidestepped by calling the primitive from a console.
+  def resolve_log_token
+    token = params[:token].to_s.strip
+    reason = params[:reason].to_s.strip
+
+    if token.blank? || reason.blank?
+      flash.now[:alert] = 'A token and a reason are both required.'
+      return render :log_token_form
+    end
+
+    @resolved = Cdo::UserLogToken.resolve(
+      token,
+      actor_id: current_user.id,
+      reason: reason,
+      request_id: request.request_id,
+    )
+    @resolve_attempted = true
+    flash.now[:alert] = 'That token could not be read.' if @resolved.nil?
+    render :log_token_form
   end
 
   # GET /admin/mass_delete_student_progress

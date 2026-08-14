@@ -1,6 +1,6 @@
 name 'problem-solving-with-ai-lesson7-build-prompt-choice-2026'
 display_name 'Build Your TaCoFoRT Prompt'
-description '####Each of these businesses needs a chatbot to help their customers — but none of them have one yet. Pick one and build it from scratch.'
+description '####Each of these businesses needs an AI chatbot agent to help their customers — but none of them have one yet. Pick one and build it from scratch.'
 
 sublevels
 level 'problem-solving-with-ai-lesson7-build-prompt-a-2026'

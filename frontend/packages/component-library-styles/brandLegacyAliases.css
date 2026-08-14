@@ -1,11 +1,19 @@
-/* Legacy token aliases for the codeai-next brand.
+/* Legacy token aliases for the CADS-schema brands.
  *
  * Under [data-brand='codeai-next'] every legacy semantic token
  * (colors.css) must resolve to a CodeAI value, so that code which has not
  * yet migrated to the CADS token schema (colors_codeAi.css) is still
  * rebranded. This file maps each legacy token name onto its CADS
  * successor. Tokens whose names are identical in both schemas are NOT
- * listed here: brandCodeAiNext.css already redefines those in this scope.
+ * listed here: the brand's own token file (brandCodeAiNext.css,
+ * brandCodeAiAudit.css) already redefines those in its scope.
+ *
+ * The same mapping is scoped to [data-brand='codeai-audit'], where the
+ * CADS successors are pink (brandCodeAiAudit.css) and legacy names
+ * therefore go pink too. That is the only reason the audit brand needs
+ * to know legacy names exist: deleting this file after call-site
+ * migration retires them from the audit brand as well, with no edit to
+ * brandCodeAiAudit.css.
  *
  * Aliases point at CADS *semantic* tokens, which switch with
  * [data-theme] on their own — one brand-scoped block therefore covers
@@ -46,7 +54,12 @@
 [data-brand='codeai-next'][data-theme='Light'],
 [data-brand='codeai-next'][data-theme='Dark'],
 [data-brand='codeai-next'] [data-theme='Light'],
-[data-brand='codeai-next'] [data-theme='Dark'] {
+[data-brand='codeai-next'] [data-theme='Dark'],
+[data-brand='codeai-audit']:root,
+[data-brand='codeai-audit'][data-theme='Light'],
+[data-brand='codeai-audit'][data-theme='Dark'],
+[data-brand='codeai-audit'] [data-theme='Light'],
+[data-brand='codeai-audit'] [data-theme='Dark'] {
   /* Backgrounds — brand families collapse to the CADS brand ramp */
   --background-brand-aqua-extra-light: var(--background-brand-light);
   --background-brand-aqua-light: var(--background-brand-light);
@@ -136,7 +149,8 @@
    through to the legacy :root values under this brand. Same-step
    mapping into the successor family; step 100 retires, CADS tops out
    at 95. Colliding primitive names (neutral-*, sentiment-* 5–90,
-   brand-purple-5–90) are already redefined by brandCodeAiNext.css.
+   brand-purple-5–90) are already redefined by the brand's own token
+   file (brandCodeAiNext.css, brandCodeAiAudit.css).
 
    Unlike the aliases above, primitives do not vary by theme, so this
    one root-level block covers both. Do not re-declare these rows on
@@ -146,7 +160,9 @@
    element, CSS treats the definitions as circular and blanks both
    variables. */
 [data-brand='codeai-next']:root,
-[data-brand='codeai-next'] {
+[data-brand='codeai-next'],
+[data-brand='codeai-audit']:root,
+[data-brand='codeai-audit'] {
   --brand-aqua-10: var(--brand-purple-10);
   --brand-aqua-20: var(--brand-purple-20);
   --brand-aqua-30: var(--brand-purple-30);
