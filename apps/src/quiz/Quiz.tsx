@@ -31,6 +31,28 @@ interface AttemptResult {
   maxScore: number | null;
 }
 
+// A single question's in-progress answer: one choice id (multiple choice),
+// several choice ids (multiple select), or free text (free response).
+type QuestionResponseValue = string | string[];
+
+const isAnswered = (value: QuestionResponseValue | undefined) =>
+  Array.isArray(value) ? value.length > 0 : !!value;
+
+// Shapes response_data to match what each subtype's #grade expects - see
+// MultipleChoiceQuestion/MultipleSelectQuestion/FreeResponseQuestion.
+const buildResponseData = (
+  question: QuizQuestionSummary,
+  value: QuestionResponseValue | undefined
+) => {
+  if (question.type === 'MultipleSelectQuestion') {
+    return {selectedChoiceIds: Array.isArray(value) ? value : []};
+  }
+  if (question.type === 'FreeResponseQuestion') {
+    return {text: typeof value === 'string' ? value : ''};
+  }
+  return {selectedChoiceId: typeof value === 'string' ? value : ''};
+};
+
 const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const {
     id: levelId,
@@ -38,7 +60,9 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     quizQuestions,
   } = levelProperties as QuizLevelProperties;
   const [attemptId, setAttemptId] = useState<number | null>(null);
-  const [selections, setSelections] = useState<Record<number, string>>({});
+  const [responses, setResponses] = useState<
+    Record<number, QuestionResponseValue>
+  >({});
   const [result, setResult] = useState<AttemptResult | null>(null);
   const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
@@ -74,6 +98,18 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       });
   }, [levelId, scriptId]);
 
+  const setResponse = (questionId: number, value: QuestionResponseValue) =>
+    setResponses(prev => ({...prev, [questionId]: value}));
+
+  const toggleMultiSelectChoice = (questionId: number, choiceId: string) =>
+    setResponses(prev => {
+      const current = (prev[questionId] as string[]) || [];
+      const next = current.includes(choiceId)
+        ? current.filter(id => id !== choiceId)
+        : [...current, choiceId];
+      return {...prev, [questionId]: next};
+    });
+
   // One submit for the whole quiz: post every answered question's response,
   // then finalize the attempt so score/max_score get totaled server-side.
   const submitQuiz = async () => {
@@ -81,8 +117,8 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       return;
     }
 
-    const answeredQuestions = (quizQuestions || []).filter(
-      question => selections[question.id]
+    const answeredQuestions = (quizQuestions || []).filter(question =>
+      isAnswered(responses[question.id])
     );
     await Promise.all(
       answeredQuestions.map(question =>
@@ -91,7 +127,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           JSON.stringify({
             quizAttemptId: attemptId,
             quizQuestionId: question.id,
-            responseData: {selectedChoiceId: selections[question.id]},
+            responseData: buildResponseData(question, responses[question.id]),
           }),
           true,
           {'Content-Type': 'application/json'}
@@ -120,42 +156,70 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         levelProperties={levelProperties}
         isRunning={false}
         hasRun={false}
-        hasEdited={Object.keys(selections).length > 0}
+        hasEdited={Object.keys(responses).length > 0}
         hideNavigation
       />
       <div className={styles.divider} />
       <div className={styles.content}>
-        <p>Quiz: {levelProperties.name} (not yet implemented)</p>
-        {!scriptId && <p>Preview outside a script has no attempt tracking.</p>}
-        <ul>
+        <p>Quiz: {levelProperties.name}</p>
+        <ol>
           {(quizQuestions || []).map(question => (
             <li key={question.id}>
               <p>{question.stem || question.questionName}</p>
-              {question.choices && (
-                <div>
-                  {question.choices.map(choice => (
-                    <label key={choice.id} style={{display: 'block'}}>
-                      <input
-                        type="radio"
-                        name={`question-${question.id}`}
-                        value={choice.id}
-                        checked={selections[question.id] === choice.id}
-                        disabled={!!result}
-                        onChange={() =>
-                          setSelections(prev => ({
-                            ...prev,
-                            [question.id]: choice.id,
-                          }))
-                        }
-                      />
-                      {choice.text}
-                    </label>
-                  ))}
-                </div>
+
+              {question.type === 'MultipleChoiceQuestion' &&
+                question.choices && (
+                  <div>
+                    {question.choices.map(choice => (
+                      <label key={choice.id} style={{display: 'block'}}>
+                        <input
+                          type="radio"
+                          name={`question-${question.id}`}
+                          value={choice.id}
+                          checked={responses[question.id] === choice.id}
+                          disabled={!!result}
+                          onChange={() => setResponse(question.id, choice.id)}
+                        />
+                        {choice.text}
+                      </label>
+                    ))}
+                  </div>
+                )}
+
+              {question.type === 'MultipleSelectQuestion' &&
+                question.choices && (
+                  <div>
+                    {question.choices.map(choice => (
+                      <label key={choice.id} style={{display: 'block'}}>
+                        <input
+                          type="checkbox"
+                          value={choice.id}
+                          checked={(
+                            (responses[question.id] as string[]) || []
+                          ).includes(choice.id)}
+                          disabled={!!result}
+                          onChange={() =>
+                            toggleMultiSelectChoice(question.id, choice.id)
+                          }
+                        />
+                        {choice.text}
+                      </label>
+                    ))}
+                  </div>
+                )}
+
+              {question.type === 'FreeResponseQuestion' && (
+                <textarea
+                  value={(responses[question.id] as string) || ''}
+                  disabled={!!result}
+                  rows={4}
+                  style={{width: '100%'}}
+                  onChange={e => setResponse(question.id, e.target.value)}
+                />
               )}
             </li>
           ))}
-        </ul>
+        </ol>
         <button
           type="button"
           disabled={!attemptId || !!result}
