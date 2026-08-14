@@ -65,6 +65,25 @@ const QuizQuestionAuthor: React.FunctionComponent<QuizQuestionAuthorProps> = ({
 
   const createQuestion = async () => {
     setError(null);
+
+    const missing = [];
+    if (!questionName) {
+      missing.push('a question name');
+    }
+    if (!stem) {
+      missing.push('a stem');
+    }
+    if (choices.some(choice => !choice.text)) {
+      missing.push('text for every choice');
+    }
+    if (!correctChoiceId) {
+      missing.push('a correct choice selected');
+    }
+    if (missing.length > 0) {
+      setError(`Missing: ${missing.join(', ')}.`);
+      return;
+    }
+
     // Choice ids just need to be stable/unique within this question - letter
     // them positionally (a, b, c...) rather than asking the levelbuilder to
     // invent ids themselves.
@@ -95,12 +114,6 @@ const QuizQuestionAuthor: React.FunctionComponent<QuizQuestionAuthorProps> = ({
     setQuestions(prev => [...prev, created]);
     resetForm();
   };
-
-  const canSubmit =
-    !!questionName &&
-    !!stem &&
-    !!correctChoiceId &&
-    choices.every(choice => !!choice.text);
 
   return (
     <div style={{display: 'flex', height: '100%'}}>
@@ -175,11 +188,7 @@ const QuizQuestionAuthor: React.FunctionComponent<QuizQuestionAuthorProps> = ({
             Add choice
           </button>
         </div>
-        <button
-          type="button"
-          disabled={!canSubmit}
-          onClick={() => createQuestion()}
-        >
+        <button type="button" onClick={() => createQuestion()}>
           Create question
         </button>
       </div>
