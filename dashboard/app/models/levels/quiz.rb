@@ -30,6 +30,7 @@ class Quiz < Level
     show_correctness
     reveal_answer_explanation
     purpose
+    intro_text
   )
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
