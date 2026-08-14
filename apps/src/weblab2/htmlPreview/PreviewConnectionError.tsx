@@ -7,7 +7,7 @@ const IT_REQUIREMENTS_URL = 'https://code.org/educate/it';
 const PreviewConnectionError = () => {
   return (
     <CodebridgeEmptyState
-      title="Unable to load preview"
+      title="Unable to Load Preview"
       description={
         <>
           Your browser may be preventing us from setting up Web Lab. You may
