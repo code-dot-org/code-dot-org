@@ -11,11 +11,13 @@ interface QuizQuestionData {
   id: number;
   type: string;
   questionName: string;
-  question: {
-    stem?: string;
-    choices?: QuizChoice[];
-    correct_choice_id?: string;
-  };
+  stem?: string;
+  choices?: QuizChoice[];
+  // Only present for questions created this session (see
+  // LevelsController#create_quiz_question) - the initial/student-facing
+  // payload deliberately excludes correct answers, so pre-existing
+  // questions won't show one here yet. Follow-up work, not a bug.
+  correctChoiceId?: string;
 }
 
 interface QuizQuestionAuthorProps {
@@ -116,82 +118,72 @@ const QuizQuestionAuthor: React.FunctionComponent<QuizQuestionAuthorProps> = ({
   };
 
   return (
-    <div style={{display: 'flex', height: '100%'}}>
-      <div
-        style={{
-          width: '20%',
-          minWidth: '200px',
-          borderRight: '1px solid #ccc',
-          padding: '16px',
-        }}
-      >
-        <h2>Question Bank</h2>
+    <div>
+      <h1>Author Quiz Questions</h1>
+
+      <h2>Existing questions</h2>
+      <ul>
+        {questions.map(question => (
+          <li key={question.id}>
+            [{question.type}] {question.questionName}: {question.stem}
+            {question.correctChoiceId && (
+              <span> (correct: {question.correctChoiceId})</span>
+            )}
+          </li>
+        ))}
+      </ul>
+
+      <h2>New multiple choice question</h2>
+      {error && <p style={{color: 'red'}}>{error}</p>}
+      <div>
+        <label>
+          Question name
+          <input
+            type="text"
+            value={questionName}
+            onChange={e => setQuestionName(e.target.value)}
+          />
+        </label>
       </div>
-      <div style={{flex: 1, padding: '16px'}}>
-        <h1>Author Quiz Questions</h1>
-
-        <h2>Existing questions</h2>
-        <ul>
-          {questions.map(question => (
-            <li key={question.id}>
-              [{question.type}] {question.questionName}:{' '}
-              {question.question.stem}
-            </li>
-          ))}
-        </ul>
-
-        <h2>New multiple choice question</h2>
-        {error && <p style={{color: 'red'}}>{error}</p>}
-        <div>
-          <label>
-            Question name
-            <input
-              type="text"
-              value={questionName}
-              onChange={e => setQuestionName(e.target.value)}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Stem
-            <textarea value={stem} onChange={e => setStem(e.target.value)} />
-          </label>
-        </div>
-        <div>
-          <p>Choices (select the correct one):</p>
-          {choices.map((choice, index) => {
-            const choiceId = String.fromCharCode(97 + index);
-            return (
-              <div key={index}>
-                <input
-                  type="radio"
-                  name="correctChoice"
-                  checked={correctChoiceId === choiceId}
-                  onChange={() => setCorrectChoiceId(choiceId)}
-                />
-                <input
-                  type="text"
-                  value={choice.text}
-                  onChange={e => updateChoiceText(index, e.target.value)}
-                  placeholder={`Choice ${choiceId}`}
-                />
-                {choices.length > 2 && (
-                  <button type="button" onClick={() => removeChoice(index)}>
-                    Remove
-                  </button>
-                )}
-              </div>
-            );
-          })}
-          <button type="button" onClick={addChoice}>
-            Add choice
-          </button>
-        </div>
-        <button type="button" onClick={() => createQuestion()}>
-          Create question
+      <div>
+        <label>
+          Stem
+          <textarea value={stem} onChange={e => setStem(e.target.value)} />
+        </label>
+      </div>
+      <div>
+        <p>Choices (select the correct one):</p>
+        {choices.map((choice, index) => {
+          const choiceId = String.fromCharCode(97 + index);
+          return (
+            <div key={index}>
+              <input
+                type="radio"
+                name="correctChoice"
+                checked={correctChoiceId === choiceId}
+                onChange={() => setCorrectChoiceId(choiceId)}
+              />
+              <input
+                type="text"
+                value={choice.text}
+                onChange={e => updateChoiceText(index, e.target.value)}
+                placeholder={`Choice ${choiceId}`}
+              />
+              {choices.length > 2 && (
+                <button type="button" onClick={() => removeChoice(index)}>
+                  Remove
+                </button>
+              )}
+            </div>
+          );
+        })}
+        <button type="button" onClick={addChoice}>
+          Add choice
         </button>
       </div>
+      <button type="button" onClick={() => createQuestion()}>
+        Create question
+      </button>
     </div>
   );
 };

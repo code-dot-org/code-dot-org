@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react';
 
+import {getAppOptionsAuthoringQuizQuestions} from '@cdo/apps/lab2/projects/utils';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import QuizQuestionAuthor from './authoring/QuizQuestionAuthor';
 
 import styles from './quiz-view.module.scss';
 
@@ -59,6 +62,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     scriptId,
     quizQuestions,
   } = levelProperties as QuizLevelProperties;
+  const isAuthoringMode = !!getAppOptionsAuthoringQuizQuestions();
   const [attemptId, setAttemptId] = useState<number | null>(null);
   const [responses, setResponses] = useState<
     Record<number, QuestionResponseValue>
@@ -67,17 +71,17 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
-  // Quiz has no top tab content today - the AI Tutor tab isn't built yet (it
-  // needs hiddenContextCallback/aiTutorSystemPrompt, neither of which is
-  // wired up here), so there's nothing to expand the panel into, and the
-  // collapse toggle itself never renders (ResourcePanel hides it when there
-  // are no tabs). Without this, isResourcePanelCollapsed can never become
-  // true, and the panel would stay at its wide min-width forever. Revisit
-  // once the AI Tutor tab actually exists.
-  const hasResourcePanelTabs = false;
+  // Outside authoring mode, Quiz has no top tab content today - the AI
+  // Tutor tab isn't built yet (it needs hiddenContextCallback/
+  // aiTutorSystemPrompt, neither of which is wired up here), so there's
+  // nothing to expand the panel into, and the collapse toggle itself never
+  // renders (ResourcePanel hides it when there are no tabs). In authoring
+  // mode the Question Bank tab always exists.
+  const hasResourcePanelTabs = isAuthoringMode;
 
   useEffect(() => {
-    if (!scriptId) {
+    // Don't start a student attempt while a levelbuilder is authoring.
+    if (isAuthoringMode || !scriptId) {
       return;
     }
     HttpClient.post(
@@ -96,7 +100,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           setResult({score: data.score, maxScore: data.maxScore});
         }
       });
-  }, [levelId, scriptId]);
+  }, [isAuthoringMode, levelId, scriptId]);
 
   const setResponse = (questionId: number, value: QuestionResponseValue) =>
     setResponses(prev => ({...prev, [questionId]: value}));
@@ -158,79 +162,98 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         hasRun={false}
         hasEdited={Object.keys(responses).length > 0}
         hideNavigation
+        questionBankContent={
+          isAuthoringMode ? (
+            <p>Question bank browsing and filtering coming soon.</p>
+          ) : undefined
+        }
       />
       <div className={styles.divider} />
       <div className={styles.content}>
-        <p>Quiz: {levelProperties.name}</p>
-        <ol>
-          {(quizQuestions || []).map(question => (
-            <li key={question.id}>
-              <p>{question.stem || question.questionName}</p>
+        {isAuthoringMode ? (
+          <QuizQuestionAuthor
+            quizId={levelId as number}
+            initialQuestions={quizQuestions || []}
+          />
+        ) : (
+          <>
+            <p>Quiz: {levelProperties.name}</p>
+            {!scriptId && (
+              <p>Preview outside a script has no attempt tracking.</p>
+            )}
+            <ol>
+              {(quizQuestions || []).map(question => (
+                <li key={question.id}>
+                  <p>{question.stem || question.questionName}</p>
 
-              {question.type === 'MultipleChoiceQuestion' &&
-                question.choices && (
-                  <div>
-                    {question.choices.map(choice => (
-                      <label key={choice.id} style={{display: 'block'}}>
-                        <input
-                          type="radio"
-                          name={`question-${question.id}`}
-                          value={choice.id}
-                          checked={responses[question.id] === choice.id}
-                          disabled={!!result}
-                          onChange={() => setResponse(question.id, choice.id)}
-                        />
-                        {choice.text}
-                      </label>
-                    ))}
-                  </div>
-                )}
+                  {question.type === 'MultipleChoiceQuestion' &&
+                    question.choices && (
+                      <div>
+                        {question.choices.map(choice => (
+                          <label key={choice.id} style={{display: 'block'}}>
+                            <input
+                              type="radio"
+                              name={`question-${question.id}`}
+                              value={choice.id}
+                              checked={responses[question.id] === choice.id}
+                              disabled={!!result}
+                              onChange={() =>
+                                setResponse(question.id, choice.id)
+                              }
+                            />
+                            {choice.text}
+                          </label>
+                        ))}
+                      </div>
+                    )}
 
-              {question.type === 'MultipleSelectQuestion' &&
-                question.choices && (
-                  <div>
-                    {question.choices.map(choice => (
-                      <label key={choice.id} style={{display: 'block'}}>
-                        <input
-                          type="checkbox"
-                          value={choice.id}
-                          checked={(
-                            (responses[question.id] as string[]) || []
-                          ).includes(choice.id)}
-                          disabled={!!result}
-                          onChange={() =>
-                            toggleMultiSelectChoice(question.id, choice.id)
-                          }
-                        />
-                        {choice.text}
-                      </label>
-                    ))}
-                  </div>
-                )}
+                  {question.type === 'MultipleSelectQuestion' &&
+                    question.choices && (
+                      <div>
+                        {question.choices.map(choice => (
+                          <label key={choice.id} style={{display: 'block'}}>
+                            <input
+                              type="checkbox"
+                              value={choice.id}
+                              checked={(
+                                (responses[question.id] as string[]) || []
+                              ).includes(choice.id)}
+                              disabled={!!result}
+                              onChange={() =>
+                                toggleMultiSelectChoice(question.id, choice.id)
+                              }
+                            />
+                            {choice.text}
+                          </label>
+                        ))}
+                      </div>
+                    )}
 
-              {question.type === 'FreeResponseQuestion' && (
-                <textarea
-                  value={(responses[question.id] as string) || ''}
-                  disabled={!!result}
-                  rows={4}
-                  style={{width: '100%'}}
-                  onChange={e => setResponse(question.id, e.target.value)}
-                />
-              )}
-            </li>
-          ))}
-        </ol>
-        <button
-          type="button"
-          disabled={!attemptId || !!result}
-          onClick={() => submitQuiz()}
-        >
-          Submit Quiz
-        </button>
-        {result && (
-          <p>
-            Final score: {result.score} / {result.maxScore}
-          </p>
+                  {question.type === 'FreeResponseQuestion' && (
+                    <textarea
+                      value={(responses[question.id] as string) || ''}
+                      disabled={!!result}
+                      rows={4}
+                      style={{width: '100%'}}
+                      onChange={e => setResponse(question.id, e.target.value)}
+                    />
+                  )}
+                </li>
+              ))}
+            </ol>
+            <button
+              type="button"
+              disabled={!attemptId || !!result}
+              onClick={() => submitQuiz()}
+            >
+              Submit Quiz
+            </button>
+            {result && (
+              <p>
+                Final score: {result.score} / {result.maxScore}
+              </p>
+            )}
+          </>
         )}
       </div>
     </div>
