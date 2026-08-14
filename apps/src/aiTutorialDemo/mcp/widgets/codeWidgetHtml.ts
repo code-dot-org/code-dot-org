@@ -19,6 +19,9 @@ const CSS = `
     line-height: 1.5;
     resize: vertical;
     tab-size: 2;
+    /* Code never soft-wraps; long lines scroll like a real editor. */
+    white-space: pre;
+    overflow-x: auto;
   }
   #editor:focus { outline: 2px solid #0093a4; }
   #toolbar { margin-top: 8px; display: flex; align-items: center; gap: 12px; }
@@ -40,7 +43,7 @@ const CSS = `
 const BODY = `
 <h2>Code it</h2>
 <div id="instructions"></div>
-<textarea id="editor" spellcheck="false" aria-label="Code editor"></textarea>
+<textarea id="editor" wrap="off" spellcheck="false" aria-label="Code editor"></textarea>
 <div id="toolbar">
   <button id="run" class="primary">&#9654; Run</button>
   <span id="note" class="sent-note"></span>

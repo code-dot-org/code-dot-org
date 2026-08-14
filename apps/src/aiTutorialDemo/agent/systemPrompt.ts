@@ -33,7 +33,10 @@ const INTERACTION_CONTRACT = `How this session works, mechanically:
   the student; empty string is allowed when a tool call needs no commentary)
   and "toolCall" (a widget tool to invoke, or null).
 - toolCall.argumentsJson must be a JSON object literal, as a string, matching
-  the tool's input schema exactly.
+  the tool's input schema exactly. Inside its string values, encode every
+  line break as the two-character escape \n — never replace line breaks with
+  spaces. This matters most for code: single-line code with // comments is
+  broken code, because everything after the comment marker is commented out.
 - At most one tool call per reply. After you call a tool, its result arrives
   in a message starting with [tool_result]. Messages starting with
   [widget_event] describe something the student just did inside a widget —

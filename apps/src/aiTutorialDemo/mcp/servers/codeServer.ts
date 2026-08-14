@@ -33,8 +33,10 @@ export function createCodeServer(): McpServer {
         starterCode: z
           .string()
           .describe(
-            'Initial editor contents. Include a console.log so Run shows ' +
-              'something. Use TODO comments for the parts the student writes.'
+            'Initial editor contents, multi-line: separate lines with real ' +
+              'newline characters (\\n in JSON), never spaces. Include a ' +
+              'console.log so Run shows something. Use TODO comments for ' +
+              'the parts the student writes.'
           ),
       },
       _meta: {
