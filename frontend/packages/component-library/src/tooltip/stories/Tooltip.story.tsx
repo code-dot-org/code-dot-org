@@ -31,7 +31,7 @@ const KeyboardHint = () => (
 );
 
 export const Default: StoryFn = () => (
-  <>
+  <div style={{padding: '4rem 8rem'}}>
     <p>
       Opens on hover and on keyboard focus. The tail and the
       describe-the-trigger behavior come from <code>defaultProps</code> in the
@@ -40,7 +40,7 @@ export const Default: StoryFn = () => (
     <Tooltip title="Runs your program">
       <Button variant="contained">Run</Button>
     </Tooltip>
-  </>
+  </div>
 );
 
 /** MUI's `arrow` prop toggles the caret. */
@@ -57,20 +57,22 @@ export const Caret: StoryFn = () => (
 
 /** A leading icon goes in the title; the theme sizes it. */
 export const WithIcon: StoryFn = () => (
-  <Tooltip
-    title={
-      <>
-        <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
-        More information
-      </>
-    }
-  >
-    <Button variant="outlined">Details</Button>
-  </Tooltip>
+  <div style={{padding: '4rem 8rem'}}>
+    <Tooltip
+      title={
+        <>
+          <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
+          More information
+        </>
+      }
+    >
+      <Button variant="outlined">Details</Button>
+    </Tooltip>
+  </div>
 );
 
 export const Placements: StoryFn = () => (
-  <div style={{padding: '4rem 0'}}>
+  <div style={{padding: '4rem 8rem'}}>
     <Row>
       {(['top', 'right', 'bottom', 'left'] as const).map(placement => (
         <Tooltip
@@ -82,6 +84,21 @@ export const Placements: StoryFn = () => (
         </Tooltip>
       ))}
     </Row>
+    <div style={{marginTop: '4rem'}}>
+      <Row>
+        {(['left-start', 'left-end', 'right-start', 'right-end'] as const).map(
+          placement => (
+            <Tooltip
+              key={placement}
+              title="This is a super long tooltip to test alignment. More text to see if it wraps."
+              placement={placement}
+            >
+              <Button variant="outlined">{placement}</Button>
+            </Tooltip>
+          ),
+        )}
+      </Row>
+    </div>
   </div>
 );
 
