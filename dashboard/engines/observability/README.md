@@ -30,7 +30,7 @@ Main Dashboard code should capture errors via `Observability::Errors.capture_exc
 
 Events carry an opaque log token rather than a raw user id. `Observability::Sentry.set_user_token` takes a token and nothing else — **never pass it a user id.** The token is derived by the caller via `Cdo::UserLogToken`, which lives outside this engine deliberately: it is shared by every destination that would otherwise log a user id, and keeping it out of here keeps this engine's standalone test bundle free of a `lib/cdo` dependency.
 
-Per-user grouping still works, because the token is stable for a given user. The token is specific to the `sentry_backend` destination — the same user's token in the AI gateway is a different value, so data from the two cannot be joined.
+Per-user grouping still works, because the token is stable for a given user. The token is specific to the `sentry` destination — the same user's token at another destination is a different value, so data from the two cannot be joined.
 
 A log token is reversible by someone holding the key, through an audited admin path. Do not add a reversal path here; it belongs in Rails, where the key already lives.
 
