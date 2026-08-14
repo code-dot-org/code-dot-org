@@ -71,9 +71,10 @@ Because both domains keep serving previews, clients running a stale bundle
 (open tabs, CDN-cached JS) keep working across the deploy and across flag
 flips.
 
-Note Python Lab's sandbox is itself gated: the iframe is used only when
-`pythonlab-separate-domain` or `new-preview-domain` is on
-(`apps/src/pythonlab/pyodideManager.ts`). `getPreviewDomain()` only matters
+Note Python Lab's sandbox is itself gated: the iframe is used only when the
+`use-pythonlab-separate-domain` DCDO flag is true, or the
+`pythonlab-separate-domain` or `new-preview-domain` experiment is on
+(`apps/src/pythonlab/pyodideSandboxEnabled.ts`). `getPreviewDomain()` only matters
 inside that gate. Web Lab 2 has no such gate — its preview is always an iframe
 on a preview subdomain.
 
