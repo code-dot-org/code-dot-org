@@ -208,10 +208,10 @@ module Dashboard
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
     config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
-    # Rails.cache is a fast memory store, cleared every time the application reloads.
-    config.cache_store = :memory_store, {
-      size: 256.megabytes # max size of entire store
-    }
+    # Rails.cache is a local file system store shared by all Puma worker
+    # processes on a given web application server, which persists for the
+    # lifetime of the server.
+    config.cache_store = :file_store, Rails.root.join('tmp', 'cache')
 
     # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
     config.assets.cache_limit = 1.gigabyte
