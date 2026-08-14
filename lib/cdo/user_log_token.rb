@@ -38,8 +38,6 @@ module Cdo
   #   ruby -rsecurerandom -rbase64 -e 'puts Base64.strict_encode64(SecureRandom.bytes(32))'
   #
   module UserLogToken
-    class UnknownDestinationError < StandardError; end
-
     # Two destinations make different tokens for the same user to preserve privacy across vendors.
     # To add a destination, add a new constant. Do not rename or use again a name
     # that tokens already contain: the old tokens then become unreadable. A name
@@ -66,14 +64,16 @@ module Cdo
     raise 'destination names must not be surrounded by whitespace' if DESTINATIONS.any? {|d| d != d.strip}
 
     class << self
-      # Makes the token for this user id at this destination. Returns nil if
-      # there is no key, or if the id is empty or too large.
+      # Makes the token for this user id at this destination. Returns nil if the
+      # destination is unknown, if there is no key, or if the id is empty or too
+      # large.
       #
       # This method must not raise an error. Rails calls it for each request. If
       # the key is not correct, we lose the token but the site continues. Do not
       # add a fallback to the user id.
       def derive(user_id, destination:)
-        validate_destination!(destination)
+        return nil unless known_destination?(destination)
+
         id = normalize(user_id)
         return nil unless id
 
@@ -122,11 +122,12 @@ module Cdo
         @warned = nil
       end
 
-      private def validate_destination!(destination)
-        return if DESTINATIONS.include?(destination)
+      private def known_destination?(destination)
+        return true if DESTINATIONS.include?(destination)
 
-        raise UnknownDestinationError,
-          "unknown log token destination #{destination.inspect}; expected one of #{DESTINATIONS.join(', ')}"
+        CDO.log.warn "[user_log_token] unknown destination #{destination.inspect}; " \
+          "expected one of #{DESTINATIONS.join(', ')}"
+        false
       end
 
       # Callers give an Integer or a String. Both must make the same token. The
@@ -210,8 +211,12 @@ module Cdo
         keys.keys.max
       end
 
+      # A failed read is retried rather than kept. CDO.user_log_token_keys is a
+      # lazy !Secret, so the first read can fail for a passing reason, and this
+      # process would otherwise mint no tokens until it restarts.
       private def keys
-        @keys ||= parse_keys
+        @keys = parse_keys if @keys.nil? || @keys.empty?
+        @keys
       end
 
       private def parse_keys
