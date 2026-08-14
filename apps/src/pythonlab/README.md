@@ -57,8 +57,9 @@ page](https://code.org/en-US/about/it-requirements) into
 - `codebridge/Console/Console.tsx` hands it to the `ConsoleManager`, which
   owns printing it: it comes back after the console is cleared (on every
   level change) and is never printed twice, however many times it is
-  reported. A re-created console adopts the error along with the lines it
-  replays, rather than printing a second copy.
+  reported. "Already printed" is decided by what the console holds, not by
+  the manager's own state, because a re-created console replays the
+  previous console's lines with the error already among them.
 - `codebridge/Console/ControlButtons.tsx` keeps the run button disabled
   and drops the loading spinner, which would otherwise spin forever.
 

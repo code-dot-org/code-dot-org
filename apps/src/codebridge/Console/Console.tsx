@@ -129,14 +129,11 @@ const Console: React.FunctionComponent = () => {
     }
 
     let existingTerminalLines: string[] = [];
-    let existingCodeEnvironmentError: string | null = null;
 
     const existingConsoleManager =
       CodebridgeRegistry.getInstance().getConsoleManager();
     if (existingConsoleManager) {
       existingTerminalLines = existingConsoleManager.getTerminalLines();
-      existingCodeEnvironmentError =
-        existingConsoleManager.getCodeEnvironmentError();
     }
 
     const terminal = new Terminal({
@@ -173,11 +170,6 @@ const Console: React.FunctionComponent = () => {
     if (existingTerminalLines.length > 0) {
       const lines = existingTerminalLines.join('\n');
       newConsoleManager.writeConsoleMessage(lines);
-      // Any environment error is among the replayed lines, so hand it over
-      // without printing a second copy.
-      newConsoleManager.restoreCodeEnvironmentError(
-        existingCodeEnvironmentError
-      );
     }
 
     // Prevent keyboard trap.

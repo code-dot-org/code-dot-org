@@ -1,6 +1,13 @@
 import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
 
+// Erase the screen (2J), the scrollback (3J), and home the cursor (H).
+// Sent as a write rather than calling terminal.clear(): writes are queued and
+// flushed asynchronously, while clear() edits the buffer immediately, so clear()
+// silently leaves behind any line that has not been written out yet. As a write,
+// the erase is applied in order with the lines around it.
+const CLEAR_DISPLAY = '\x1b[2J\x1b[3J\x1b[H';
+
 // Manager for xterm.js-based console in codebridge
 export default class ConsoleManager {
   private terminal: Terminal;
@@ -43,7 +50,7 @@ export default class ConsoleManager {
 
   public clearTerminalLines() {
     this.terminalLines = [];
-    this.terminal.clear();
+    this.terminal.write(CLEAR_DISPLAY);
     this.lastLineIsPartial = false;
     this.executeTerminalLinesListeners();
     // The run button is still disabled and its tooltip still points here, so the
@@ -53,24 +60,15 @@ export default class ConsoleManager {
     }
   }
 
+  // Callers may report the same error as often as they like. The test for
+  // "already printed" is the console's own contents rather than this manager's
+  // state, because the error can reach the console without coming through here:
+  // a re-created console replays the previous console's lines, error included.
   public setCodeEnvironmentError(error: string | null) {
-    if (error === this.codeEnvironmentError) {
-      return;
-    }
     this.codeEnvironmentError = error;
-    if (error) {
+    if (error && !this.terminalLines.some(line => line.includes(error))) {
       this.writeConsoleMessage(error, false);
     }
-  }
-
-  public getCodeEnvironmentError() {
-    return this.codeEnvironmentError;
-  }
-
-  // Adopts an error already printed in the lines replayed from a previous
-  // console, so this manager keeps it across clears without printing it again.
-  public restoreCodeEnvironmentError(error: string | null) {
-    this.codeEnvironmentError = error;
   }
 
   public getTerminalLines() {
