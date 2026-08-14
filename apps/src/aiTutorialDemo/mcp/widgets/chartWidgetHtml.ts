@@ -2,7 +2,15 @@ import {buildWidgetDocument} from './widgetChrome';
 
 const CSS = `
   #title { margin: 0 0 8px; }
-  svg { width: 100%; height: auto; display: block; touch-action: none; }
+  /* Dragging a bar must never start a text selection of the labels. */
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
   .bar { fill: #0093a4; }
   .bar.draggable { cursor: ns-resize; }
   .bar.draggable:hover, .bar.dragging { fill: #007786; }
@@ -150,6 +158,9 @@ const JS = String.raw`
     if (index === null) {
       return;
     }
+    // Selection can also start in the SVG and extend into surrounding text;
+    // claiming the gesture here stops that at the source.
+    event.preventDefault();
     state.dragIndex = Number(index);
     state.dragged = false;
     svg.setPointerCapture(event.pointerId);
