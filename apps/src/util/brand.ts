@@ -1,19 +1,12 @@
 import {
-  CdoTheme,
   CodeaiTheme,
   CodeaiAuditTheme,
 } from '@code-dot-org/component-library/themes';
 
-const BRAND_CODE_ORG = 'code';
-const BRAND_CODEAI = 'codeai';
 const BRAND_CODEAI_NEXT = 'codeai-next';
 const BRAND_CODEAI_AUDIT = 'codeai-audit';
 
-export type BrandCode =
-  | typeof BRAND_CODE_ORG
-  | typeof BRAND_CODEAI
-  | typeof BRAND_CODEAI_NEXT
-  | typeof BRAND_CODEAI_AUDIT;
+export type BrandCode = typeof BRAND_CODEAI_NEXT | typeof BRAND_CODEAI_AUDIT;
 
 /**
  * Resolve the current brand from the `data-brand` attribute on `<html>`,
@@ -26,15 +19,6 @@ export type BrandCode =
 export function getCurrentBrand(): BrandCode {
   try {
     const brand = document.documentElement.dataset.brand;
-    if (brand === BRAND_CODE_ORG) {
-      return BRAND_CODE_ORG;
-    }
-    if (brand === BRAND_CODEAI) {
-      return BRAND_CODEAI;
-    }
-    if (brand === BRAND_CODEAI_NEXT) {
-      return BRAND_CODEAI_NEXT;
-    }
     if (brand === BRAND_CODEAI_AUDIT) {
       return BRAND_CODEAI_AUDIT;
     }
@@ -51,11 +35,8 @@ export function getCurrentBrand(): BrandCode {
  */
 export function getMuiThemeForBrand(brand?: BrandCode) {
   const resolved = brand ?? getCurrentBrand();
-  if (resolved === BRAND_CODEAI_NEXT) {
-    return CodeaiTheme;
-  }
   if (resolved === BRAND_CODEAI_AUDIT) {
     return CodeaiAuditTheme;
   }
-  return CdoTheme;
+  return CodeaiTheme;
 }

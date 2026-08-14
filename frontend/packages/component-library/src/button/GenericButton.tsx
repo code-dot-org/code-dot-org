@@ -333,7 +333,7 @@ const GenericButton = forwardRef<
  * ###  Status: ```DEPRECATED```
  *
  * @deprecated Use MUI `Button` or `IconButton` from `@mui/material` instead.
- * Style overrides are in `src/themes/code.org/styleOverrides/button.tsx`.
+ * Style overrides are in `src/themes/codeai/styleOverrides/button.tsx`.
  * See `src/button/BUTTON_MIGRATION_TO_MUI.md` for migration guide.
  * Codemod available: `yarn codemod:buttons`.
  *

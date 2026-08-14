@@ -1,4 +1,4 @@
-import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {CodeaiTheme} from '@code-dot-org/component-library/themes';
 import {ThemeProvider} from '@mui/material/styles';
 import type {Meta, StoryObj} from '@storybook/react';
 import React from 'react';
@@ -49,7 +49,7 @@ const meta: Meta<typeof StudentCodeWidget> = {
   decorators: [
     Story => {
       return (
-        <ThemeProvider theme={CdoTheme}>
+        <ThemeProvider theme={CodeaiTheme}>
           <Story />
         </ThemeProvider>
       );

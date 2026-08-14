@@ -58,9 +58,7 @@ const preview = {
  * writes data-brand onto the story's <html> (switching the CSS token set from
  * component-library-styles/brandOverrides.css) and applies the matching MUI
  * theme. The codes are Cdo::Brand's brand enum (lib/cdo/brand.rb):
- *   code         legacy Code.org tokens (== :root default)
- *   codeai       prior default CodeAI branding (== :root default)
- *   codeai-next  current default: the CADS color ramp ([data-brand='codeai-next'])
+ *   codeai-next  default: the CADS color ramp ([data-brand='codeai-next'])
  *   codeai-audit all-pink DSCO-coverage audit ([data-brand='codeai-audit'])
  */
 export const globalTypes = {
@@ -71,8 +69,6 @@ export const globalTypes = {
       title: 'Brand',
       icon: 'paintbrush',
       items: [
-        {value: 'code', title: 'code.org'},
-        {value: 'codeai', title: 'CodeAI'},
         {value: 'codeai-next', title: 'CodeAI · CADS'},
         {value: 'codeai-audit', title: 'CodeAI · Audit (pink)'},
       ],
