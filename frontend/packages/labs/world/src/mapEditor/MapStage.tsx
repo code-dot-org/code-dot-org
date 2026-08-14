@@ -880,13 +880,14 @@ export const MapStage = ({
       ctx.scale(t.scale.x, t.scale.y);
       const image = images[type];
       if (image) {
-        ctx.drawImage(
-          image,
-          -DRAW_SIZE / 2,
-          -DRAW_SIZE / 2,
-          DRAW_SIZE,
-          DRAW_SIZE,
-        );
+        // At the thumbnail's own aspect, not stretched to a square. A sprite's
+        // thumbnail IS square, so nothing changes for one; a drawn actor's is
+        // its canvas's shape, and squaring it drew a 96 by 24 Label as a blob
+        // rather than as the strip it will be (`drawingThumbnail`).
+        const longest = Math.max(image.width, image.height) || 1;
+        const width = (image.width / longest) * DRAW_SIZE;
+        const height = (image.height / longest) * DRAW_SIZE;
+        ctx.drawImage(image, -width / 2, -height / 2, width, height);
       } else {
         ctx.fillStyle = '#33cc66';
         ctx.fillRect(-DRAW_SIZE / 2, -DRAW_SIZE / 2, DRAW_SIZE, DRAW_SIZE);

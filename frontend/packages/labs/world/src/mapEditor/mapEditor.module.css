@@ -75,15 +75,31 @@
   background: var(--background-neutral-secondary);
 }
 
-.actor img,
-.placeholder {
-  width: 40px;
+/* The cell's picture box: a fixed height so the names line up, and up to twice
+   that wide so a wide drawing is shown as the strip it is rather than squashed
+   into a square (`drawingThumbnail`). The image sizes itself inside it. */
+.thumb {
+  display: flex;
+  min-width: 40px;
+  max-width: 80px;
   height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.actor img {
+  max-width: 100%;
+  max-height: 100%;
   display: block;
   image-rendering: pixelated;
 }
 
 .placeholder {
+  width: 40px;
+  height: 40px;
+  display: block;
+  image-rendering: pixelated;
   background: var(--background-neutral-secondary);
   border-radius: 3px;
 }

@@ -75,9 +75,18 @@ export async function frameThumbnail(
  * gap `specs/UI_ACTORS.md` recorded and could not close: a Label has no file to
  * show, so before drawings existed its entry could only be blank.
  *
- * Drawn at its declared size and then scaled to fit the square, rather than
- * scaling the commands: the numbers a routine draws with mean pixels on its own
- * canvas, and scaling them would put a 1px outline at a third of a pixel.
+ * ITS OWN SHAPE, NOT A SQUARE, and at 1:1 unless it is too big for one.
+ *
+ * A sprite's thumbnail is a square because a picture fitted into one is still
+ * that picture. A drawing is not: fitting a 96 by 24 Label into 48 by 48 drew
+ * its 12px text at 6px, on a transparent ground over a white palette strip —
+ * which is to say it drew nothing at all, and the picker showed an empty cell
+ * above the word "Label" (specs/UI_ACTORS.md).
+ *
+ * So the cap is a BOX rather than a side, twice as wide as it is tall, and a
+ * drawing smaller than it is not scaled up. What that buys is a Label that
+ * reads as a strip of legible text and a Button that reads as a button, which
+ * is also the truth about their proportions.
  */
 export async function drawingThumbnail(
   drawing: DrawingState,
@@ -85,15 +94,18 @@ export async function drawingThumbnail(
   uploads: Record<string, string>,
   size: number,
 ): Promise<string> {
+  const width = Math.max(1, Math.round(drawing.width));
+  const height = Math.max(1, Math.round(drawing.height));
+  // Never bigger than the box, never scaled up past 1:1 — an 8 by 8 drawing
+  // blown up to 48 is four fat squares where a learner drew a pixel.
+  const scale = Math.min(1, (size * 2) / width, size / height);
   const square = document.createElement('canvas');
-  square.width = size;
-  square.height = size;
+  square.width = Math.max(1, Math.round(width * scale));
+  square.height = Math.max(1, Math.round(height * scale));
   const target = square.getContext('2d');
   if (!target) {
     return '';
   }
-  const width = Math.max(1, Math.round(drawing.width));
-  const height = Math.max(1, Math.round(drawing.height));
   const source = document.createElement('canvas');
   source.width = width;
   source.height = height;
@@ -127,15 +139,6 @@ export async function drawingThumbnail(
     }),
   );
   paintDrawing(context, drawing.commands, sprite => images.get(sprite));
-  // Fit rather than fill: a wide label squashed into a square would be a
-  // picker showing a shape the map will never draw.
-  const scale = Math.min(size / width, size / height);
-  target.drawImage(
-    source,
-    (size - width * scale) / 2,
-    (size - height * scale) / 2,
-    width * scale,
-    height * scale,
-  );
+  target.drawImage(source, 0, 0, square.width, square.height);
   return square.toDataURL('image/png');
 }

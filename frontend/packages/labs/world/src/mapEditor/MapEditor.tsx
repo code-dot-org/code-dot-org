@@ -19,6 +19,7 @@ import {
   projectActorOptions,
   projectWorldOptions,
 } from '../blockly/projectModules';
+import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import type {ActorSchema} from '../runtime/messages';
 import {projectFiles} from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
@@ -161,11 +162,19 @@ export const MapEditor = ({
             onClick={() => setSelected(path === selected ? null : path)}
             aria-pressed={path === selected}
           >
-            {thumbnails[path] ? (
-              <img src={thumbnails[path]} alt="" />
-            ) : (
-              <span className={styles.placeholder} />
-            )}
+            {/* THE GROUND IS THE CELL'S, not the image's. A thumbnail is a
+                faithful transparent PNG of what the actor looks like; what it
+                needs to be legible against is what it will sit on, which is
+                the world's backdrop. Putting the colour here rather than
+                baking it into the picture keeps one answer for sprites and
+                drawings alike — and a white-on-transparent Label over a white
+                strip was an empty cell (specs/UI_ACTORS.md). */}
+            <span
+              className={styles.thumb}
+              style={{background: DEFAULT_BACKDROP_COLOR}}
+            >
+              {thumbnails[path] && <img src={thumbnails[path]} alt="" />}
+            </span>
             <span className={styles.name}>{name}</span>
           </button>
         ))}
