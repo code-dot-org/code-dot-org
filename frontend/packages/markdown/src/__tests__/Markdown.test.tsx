@@ -397,6 +397,51 @@ describe('Markdown', () => {
       expect(screen.getByRole('img').getAttribute('alt')).toBe('A cat');
     });
 
+    /*
+     * The component is registered for every <span>, so the option must reach the
+     * expandable images and nothing else.
+     */
+    describe('className option', () => {
+      it('applies it to the button, alongside the author class', () => {
+        renderDom(
+          <Markdown
+            content='<span class="author" data-url="https://img/cat.png">A cat</span>'
+            extensions={[
+              expandableImages({onExpand: vi.fn(), className: 'from-option'}),
+            ]}
+          />,
+        );
+        const button = screen.getByRole('button', {name: /A cat/});
+        expect(button.className).toContain('from-option');
+        expect(button.className).toContain('author');
+      });
+
+      it('applies it to the wrapping span when no handler is supplied', () => {
+        renderDom(
+          <Markdown
+            content={md}
+            extensions={[expandableImages({className: 'from-option'})]}
+          />,
+        );
+        const wrapper = screen.getByRole('img').parentElement;
+        expect(wrapper?.tagName).toBe('SPAN');
+        expect(wrapper?.className).toContain('from-option');
+      });
+
+      it('leaves a span that is not an expandable image untouched', () => {
+        renderDom(
+          <Markdown
+            content='<span class="author">plain</span>'
+            extensions={[
+              expandableImages({onExpand: vi.fn(), className: 'from-option'}),
+            ]}
+          />,
+        );
+        const span = screen.getByText('plain');
+        expect(span.className).toBe('author');
+      });
+    });
+
     it('leaves ordinary images alone', () => {
       renderDom(
         <Markdown

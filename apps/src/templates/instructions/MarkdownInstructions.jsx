@@ -11,6 +11,8 @@ import {openDialog} from '@cdo/apps/redux/instructionsDialog';
 import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
 import BlocklyMarkdown from '../markdown/BlocklyMarkdown';
 
+import moduleStyles from './markdownInstructions.module.css';
+
 class MarkdownInstructions extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
@@ -35,7 +37,10 @@ class MarkdownInstructions extends React.Component {
     // array reference is stable across renders and BlocklyMarkdown can memoize
     // its processor.
     this.blocklyExtensions = [
-      extensions.expandableImages({onExpand: props.openImageDialog}),
+      extensions.expandableImages({
+        onExpand: props.openImageDialog,
+        className: moduleStyles.expandableImage,
+      }),
       extensions.lenientHeadings,
       extensions.visualCodeBlock,
       extensions.inlineStyles,
