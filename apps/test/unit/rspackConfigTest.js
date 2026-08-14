@@ -18,15 +18,9 @@ function readConfig(expression, env = {}) {
     // Pin the configuration under test: the .tsx? swc rule exists only
     // when RSPACK_SWC is truthy, so an ambient RSPACK_SWC=0 (set during
     // exactly the bisects this variable is for) would otherwise turn
-    // the assertion into a TypeError on undefined.  Devtool variables
-    // are cleared for the same reason: each case below states its own.
-    env: {
-      ...process.env,
-      RSPACK_SWC: 'all',
-      APPS_DEVTOOL: '',
-      APPS_DEVTOOL_SCOPE: '',
-      ...env,
-    },
+    // the assertion into a TypeError on undefined.  APPS_DEVTOOL is
+    // cleared for the same reason: each case below states its own.
+    env: {...process.env, RSPACK_SWC: 'all', APPS_DEVTOOL: '', ...env},
   });
   return JSON.parse(out.match(/^RESULT=(.*)$/m)[1]);
 }
@@ -72,12 +66,12 @@ describe('rspack.config', function () {
     expect(value).toBe(false);
   });
   describe('devtool policy', function () {
-    // The dev default is scoped maps over all of src/ — measured
+    // The dev default is source maps over all of src/ — measured
     // cheaper on memory than APPS_DEVTOOL=eval, and never touching
     // node_modules, where the whole-app map modes blow past 22GB.
-    // These cases pin the policy from all four sides so a refactor
-    // cannot silently widen the maps into node_modules (the OOM) or
-    // silently drop them.
+    // These cases pin the policy from every side so a refactor cannot
+    // silently widen the maps into node_modules (the OOM) or silently
+    // drop them.
     it('defaults dev builds to source maps for src/ only', function () {
       const probe = readConfig(DEVTOOL_PROBE, {DEV: '1'});
       expect(probe.devtool).toBe(false);
@@ -90,15 +84,6 @@ describe('rspack.config', function () {
       const probe = readConfig(DEVTOOL_PROBE, {DEV: '1', APPS_DEVTOOL: 'eval'});
       expect(probe.devtool).toBe('eval');
       expect(probe.hasPlugin).toBe(false);
-    });
-
-    it('APPS_DEVTOOL_SCOPE narrows instead of widening', function () {
-      const probe = readConfig(DEVTOOL_PROBE, {
-        DEV: '1',
-        APPS_DEVTOOL_SCOPE: 'music',
-      });
-      expect(probe.hasPlugin).toBe(true);
-      expect(probe.matchesSrc).toBe(true); // music/entrypoint.ts is in scope
     });
 
     it('production keeps its own devtool, no scoped plugin', function () {

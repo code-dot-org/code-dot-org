@@ -139,48 +139,11 @@ the dev server defers them). Measured against no maps at all, the default
 costs about 2 seconds of startup and 2 seconds per shared-file rebuild, and
 *less* memory, because unmapped modules skip eval wrapping entirely.
 
-Two levers adjust it, and the active mode is printed at startup:
-
-- `APPS_DEVTOOL=eval yarn start --rspack` — no maps anywhere;
-- `APPS_DEVTOOL_SCOPE` — narrow the maps to a named working set, below.
-
-`APPS_DEVTOOL_SCOPE` maps only the parts of `src/` you name and leaves
-everything else unmapped, which trims the map cost further:
-
-```
-APPS_DEVTOOL_SCOPE=music,lab2 yarn start --rspack
-```
-
-Names are `src/`-relative path prefixes, and may be a directory or a single
-module (`code-studio/header` matches `header.js`). Recipes for common working
-sets:
-
-| Working on...            | Scope                                                       |
-| ------------------------ | ----------------------------------------------------------- |
-| any lab2 lab             | `<lab>,lab2` (e.g. `music,lab2`, `weblab2,lab2`)            |
-| Sprite Lab or Game Lab   | `p5lab` (they share the engine, block definitions included)  |
-| App Lab                  | `applab`, or `applab,storage` when editing data blocks      |
-| the code-studio header   | `code-studio/header,code-studio/components/header,lab2/header` |
-| teacher dashboard        | `templates/teacherDashboard,templates/studioHomepages`      |
-
-Scope controls where you *step*, not what runs: out-of-scope code executes
-normally and shows transpiled if you step into it. A missed guess fails soft —
-append another name and restart; rspack server restarts are fast. Known
-rough edge: unmapped modules show numeric internal names in DevTools.
-
-As each name first matches, the server says how many modules it covered, so a
-typo does not pass silently:
-
-```
-[rspack] scoped source maps: music: 84 modules, lab2: 203 modules; everything
-else is unmapped
-```
-
-A name that has matched nothing yet is called out separately, and it is worth
-reading literally: dynamic imports compile only once a page requests them, so
-a name covering only lazily-loaded code starts empty and reports itself when
-those modules arrive. If it stays empty after you have loaded the page you
-care about, it is a typo.
+One lever adjusts it, and the active mode is printed at startup:
+`APPS_DEVTOOL=eval yarn start --rspack` turns maps off everywhere, for
+machines where the ~2 seconds of startup or the map memory matters more than
+symbols. Known rough edge either way: unmapped modules (node_modules, or
+everything under `eval`) show numeric internal names in DevTools.
 
 ## Testing
 

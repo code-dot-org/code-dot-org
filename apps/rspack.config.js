@@ -178,78 +178,36 @@ function createRspackConfig({
   minify = false,
   piskelDevMode = false,
 } = {}) {
-  // RSPACK-DIFF: APPS_DEVTOOL_SCOPE=music,lab2 maps only the named src/
-  // path prefixes back to original source (module-level eval maps, no
-  // columns — the fidelity of eval-cheap-module-source-map) and leaves
-  // every other module unmapped.  A name may be a directory
-  // (`p5lab/spritelab`) or a single module (`code-studio/header`, which
-  // matches header.js).  Recipes for common working sets are in the
-  // README.  rspack's blanket -module map modes exceed 22GB at our
-  // module count while this costs less than APPS_DEVTOOL=eval, because
-  // unmapped modules skip eval wrapping entirely.  Known rough edge:
-  // unmapped modules show numeric internal names in DevTools.
-  const scopeNames =
-    !minify && envConstants.APPS_DEVTOOL_SCOPE
-      ? envConstants.APPS_DEVTOOL_SCOPE.split(',')
-          .map(s => s.trim())
-          .filter(Boolean)
-      : [];
-  // An empty array is truthy; a value of only separators must fall back
-  // to the normal devtool instead of silently disabling source maps.
-  //
-  // RSPACK-DIFF: with nothing set, the dev default is scoped maps over
-  // all of src/ — the economics above, applied at first-party scale.
-  // node_modules, over half the module graph, is never mapped; the
-  // whole-app modes differ from this default exactly by mapping it (a
-  // one-shot build forced to full maps was OOM-killed on a 30GB
+  // RSPACK-DIFF: the dev default is source maps for src/ and nothing
+  // else — original-source stepping for first-party code, applied with
+  // EvalSourceMapDevToolPlugin below (module-level maps, no columns:
+  // the fidelity of eval-cheap-module-source-map).  The pattern anchors
+  // to this checkout's src/ absolutely, so node_modules — over half the
+  // module graph, including any package that ships its own src/
+  // directory — is never mapped; the whole-app map modes differ from
+  // this default exactly by mapping it, which is what blows past 22GB
+  // (a one-shot build forced to full maps was OOM-killed on a 30GB
   // machine).  Measured against APPS_DEVTOOL=eval on the same box:
-  // lower steady and peak memory, ~2s more startup, ~2s more per
-  // shared-file rebuild, and a 30-edit soak oscillates rather than
-  // accumulates.  APPS_DEVTOOL (e.g. =eval) opts out;
-  // APPS_DEVTOOL_SCOPE narrows to a named working set.
-  const srcMapsDefault =
-    !minify && !scopeNames.length && !envConstants.APPS_DEVTOOL;
-  const devtoolScope = scopeNames.length
-    ? scopeNames
-    : srcMapsDefault
-    ? ['src']
-    : null;
-  // Names stay unescaped in the report so it prints them as the
-  // developer typed them; the pattern for each is compiled once here and
-  // shared by the plugin and the report, which both need every name.
-  const scopeRegexFor = name =>
-    new RegExp(
-      `src[\\\\/]${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\\\/.]`
-    );
-  // The default scope anchors to this checkout's src/ absolutely, so
-  // node_modules packages that ship their own src/ directory stay
-  // unmapped.
+  // lower steady and peak memory (unmapped modules skip eval wrapping),
+  // ~2s more startup, ~2s more per shared-file rebuild, and a 30-edit
+  // soak oscillates rather than accumulates.  An explicit APPS_DEVTOOL
+  // (e.g. =eval) overrides.
   const SRC_PREFIX_REGEX = new RegExp(
     `^${p('src').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\\\/]`
   );
-  const scopeRegexes = scopeNames.length
-    ? scopeNames.map(name => [name, scopeRegexFor(name)])
-    : srcMapsDefault
-    ? [['src', SRC_PREFIX_REGEX]]
-    : [];
-  const rspackDevtool = devtoolScope
+  const srcMapsDefault = !minify && !envConstants.APPS_DEVTOOL;
+  const rspackDevtool = srcMapsDefault
     ? false
     : minify
     ? devtool({minify})
-    : envConstants.APPS_DEVTOOL || 'eval';
+    : envConstants.APPS_DEVTOOL;
   // Say which source-map mode is active up front; waiting to notice what
   // symbols look like in DevTools is a bad way to find out.
   if (!minify) {
     if (srcMapsDefault) {
       console.log(
         '[rspack] source maps: src/ (the default) — original-source ' +
-          'stepping for first-party code.  APPS_DEVTOOL=eval turns maps ' +
-          'off; APPS_DEVTOOL_SCOPE narrows to a working set (see README).'
-      );
-    } else if (devtoolScope) {
-      console.log(
-        `[rspack] source maps: scoped to ${devtoolScope.join(', ')} ` +
-          '(match report follows the first compile)'
+          'stepping for first-party code.  APPS_DEVTOOL=eval turns maps off.'
       );
     } else {
       console.log(
@@ -258,7 +216,7 @@ function createRspackConfig({
         }` +
           (/-module/.test(String(rspackDevtool))
             ? ' — WARNING: whole-app -module maps exceed 22GB under rspack;' +
-              ' prefer APPS_DEVTOOL_SCOPE (see README)'
+              ' the src/ default avoids this (see README)'
             : '')
       );
     }
@@ -693,84 +651,13 @@ function createRspackConfig({
               },
             }),
           ]),
-      ...(devtoolScope
+      ...(srcMapsDefault
         ? [
             new rspack.EvalSourceMapDevToolPlugin({
               module: true,
               columns: false,
-              // The same compiled patterns the report uses, so the two
-              // cannot disagree about which modules a name covers — and
-              // so a name containing regex syntax is escaped here too
-              // rather than corrupting the alternation.
-              test: new RegExp(
-                scopeRegexes.map(([, re]) => re.source).join('|')
-              ),
+              test: SRC_PREFIX_REGEX,
             }),
-            // Report how many modules each scope name matched, so a
-            // misspelled name does not fail silently.  Names are
-            // reported as they first match rather than once: under
-            // serve, lazyCompilation defers dynamic imports, so a name
-            // covering only lazily-reached code matches nothing until a
-            // page asks for it.
-            {
-              apply(compiler) {
-                const matched = new Set();
-                let warnedEmptyKey = null;
-                compiler.hooks.done.tap('DevtoolScopeReport', stats => {
-                  if (matched.size === scopeRegexes.length) {
-                    return;
-                  }
-                  const counts = new Map(
-                    scopeRegexes
-                      .filter(([n]) => !matched.has(n))
-                      .map(([n]) => [n, 0])
-                  );
-                  for (const m of stats.compilation.modules) {
-                    const r =
-                      m.resource ||
-                      (m.nameForCondition && m.nameForCondition());
-                    if (!r) continue;
-                    for (const [n, re] of scopeRegexes) {
-                      if (counts.has(n) && re.test(r)) {
-                        counts.set(n, counts.get(n) + 1);
-                      }
-                    }
-                  }
-                  const found = [];
-                  const empty = [];
-                  for (const [n, c] of counts) {
-                    if (c > 0) {
-                      matched.add(n);
-                      found.push(`${n}: ${c} module${c === 1 ? '' : 's'}`);
-                    } else {
-                      empty.push(n);
-                    }
-                  }
-                  if (found.length) {
-                    console.log(
-                      `[rspack] scoped source maps: ${found.join(', ')}; ` +
-                        'everything else is unmapped'
-                    );
-                  }
-                  // Only when the unmatched set changes: `done` fires per
-                  // incremental compile, and a genuinely misspelled name
-                  // stays unmatched forever, so warning every time would
-                  // put a line on every save.
-                  const emptyKey = empty.join(',');
-                  if (empty.length && emptyKey !== warnedEmptyKey) {
-                    warnedEmptyKey = emptyKey;
-                    console.warn(
-                      `[rspack] APPS_DEVTOOL_SCOPE ${
-                        empty.length === 1 ? 'name' : 'names'
-                      } ${empty.map(n => `"${n}"`).join(', ')} ` +
-                        'matched nothing yet; lazily-loaded code counts once a ' +
-                        'page requests it, otherwise check the name against ' +
-                        'src/ (recipes in the README)'
-                    );
-                  }
-                });
-              },
-            },
           ]
         : []),
       new rspack.DefinePlugin({

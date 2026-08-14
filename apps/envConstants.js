@@ -36,13 +36,6 @@ module.exports = {
   // maps) or APPS_DEVTOOL=eval-source-map for the highest fidelity (most
   // memory).
   APPS_DEVTOOL: process.env.APPS_DEVTOOL,
-  // rspack only: comma-separated src/ path prefixes (e.g. `music,lab2`, or
-  // a single module like `code-studio/header`) that get original-source
-  // eval maps while every other module stays unmapped.  Recipes for common
-  // working sets are in the README.  Costs less memory than even
-  // APPS_DEVTOOL=eval, while rspack's whole-app -module map modes exceed
-  // 22GB at our module count.  Takes precedence over APPS_DEVTOOL.
-  APPS_DEVTOOL_SCOPE: process.env.APPS_DEVTOOL_SCOPE,
   // If set, skips the parallel ForkTsCheckerWebpackPlugin type check, freeing
   // ~2GB of memory during `yarn start`. Your editor and CI still type-check.
   SKIP_TYPECHECK: getBoolEnv('SKIP_TYPECHECK'),
