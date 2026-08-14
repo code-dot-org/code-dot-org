@@ -1,5 +1,4 @@
-import RadioButton from '@code-dot-org/component-library/radioButton';
-import classNames from 'classnames';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import {getAppOptionsAuthoringQuizQuestions} from '@cdo/apps/lab2/projects/utils';
@@ -9,30 +8,13 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import QuizQuestionAuthor from './authoring/QuizQuestionAuthor';
+import QuizQuestion, {QuizQuestionSummary} from './QuizQuestion';
 
 import styles from './quiz-view.module.scss';
-
-interface QuizChoice {
-  id: string;
-  text: string;
-}
-
-interface QuizQuestionSummary {
-  id: number;
-  type: string;
-  questionName: string;
-  stem?: string;
-  choices?: QuizChoice[];
-  explanation?: string;
-}
 
 interface QuizLevelProperties extends LevelProperties {
   scriptId?: number;
   quizQuestions?: QuizQuestionSummary[];
-  // Student-facing heading, same role `title` plays on Multi/Match/
-  // FreeResponse/LevelGroup levels - see Quiz#serialized_attrs. Falls back
-  // to the level's internal `name` when unset, since `name` can't be
-  // changed once a level is in a script.
   title?: string;
 }
 
@@ -161,7 +143,9 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         hideAllNavigation
         questionBankContent={
           isAuthoringMode ? (
-            <p>Question bank browsing and filtering coming soon.</p>
+            <Typography variant="body2">
+              Question bank browsing and filtering coming soon.
+            </Typography>
           ) : undefined
         }
       />
@@ -175,68 +159,43 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         ) : (
           <div className={styles.card}>
             <div className={styles.cardHeader}>
-              <p>Quiz: {title || name}</p>
+              <Typography variant="h2">{title || name}</Typography>
               {!scriptId && (
-                <p>Preview outside a script has no attempt tracking.</p>
+                <Typography variant="body3">
+                  Preview outside a script has no attempt tracking.
+                </Typography>
               )}
             </div>
             <ol className={styles.questionList}>
               {multipleChoiceQuestions.map((question, index) => (
-                <li key={question.id} className={styles.questionSection}>
-                  <p className={styles.questionEyebrow}>
-                    Question {index + 1} of {multipleChoiceQuestions.length}
-                  </p>
-                  <p>{question.stem || question.questionName}</p>
-
-                  {question.choices && (
-                    <fieldset className={styles.answers}>
-                      <legend className={styles.answersLegend}>
-                        Answer options
-                      </legend>
-                      {question.choices.map(choice => {
-                        const isChecked = responses[question.id] === choice.id;
-                        return (
-                          <div
-                            key={choice.id}
-                            className={classNames(
-                              styles.answerOption,
-                              isChecked && styles.answerOptionChecked
-                            )}
-                          >
-                            <RadioButton
-                              checked={isChecked}
-                              name={`question-${question.id}`}
-                              value={choice.id}
-                              disabled={!!result}
-                              onChange={() =>
-                                setResponse(question.id, choice.id)
-                              }
-                            >
-                              <span className={styles.answerOptionLetter}>
-                                {choice.id.toUpperCase()}.
-                              </span>
-                              <span>{choice.text}</span>
-                            </RadioButton>
-                          </div>
-                        );
-                      })}
-                    </fieldset>
-                  )}
-                </li>
+                <QuizQuestion
+                  key={question.id}
+                  question={question}
+                  index={index}
+                  total={multipleChoiceQuestions.length}
+                  selectedChoiceId={responses[question.id]}
+                  disabled={!!result}
+                  onSelectChoice={choiceId =>
+                    setResponse(question.id, choiceId)
+                  }
+                />
               ))}
             </ol>
             <div className={styles.cardFooter}>
-              <button
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="medium"
                 type="button"
                 disabled={!attemptId || !!result}
                 onClick={() => submitQuiz()}
               >
                 Submit Quiz
-              </button>
+              </MuiButton>
               {result && (
-                <p>
+                <Typography variant="h5">
                   Final score: {result.score} / {result.maxScore}
-                </p>
+                </Typography>
               )}
             </div>
           </div>
