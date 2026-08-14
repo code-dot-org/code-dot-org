@@ -106,10 +106,6 @@ const sandboxOrigin = () => (cachedSandboxOrigin ??= getSandboxOrigin());
 // the sandbox eventually reports ready.
 const SANDBOX_READY_TIMEOUT_MS = 15000;
 
-// The sandbox lives on a different domain from studio.code.org (see
-// getSandboxOrigin() above), so a network that allows studio.code.org can still
-// block it. When that happens nothing arrives from the iframe at all: no load
-// error we can read (it is cross-origin), just silence.
 const SANDBOX_UNREACHABLE_MESSAGE =
   'Your browser may be preventing us from setting up Python Lab. You may need to ' +
   'adjust your firewall settings. See our IT requirements page ' +
@@ -252,8 +248,6 @@ const setUpPyodideSandbox = () => {
       switch (event.data?.type) {
         case FromPyodideSandboxMessage.READY:
           clearTimeout(unreachableTimeout);
-          // Retract the "we can't reach the sandbox" message if we already gave
-          // up on a sandbox that turned out to be merely slow.
           getStore().dispatch(setCodeEnvironmentError(null));
           resolve();
           break;
@@ -340,10 +334,9 @@ const asyncRun = (() => {
 const restartPyodideIfProgramIsRunning = () => {
   // Only report stopping if the user was shown a running program. That outlasts
   // the run itself for some programs -- the neighborhood keeps animating after
-  // its callbacks resolve -- so isRunning, not our pending callbacks, decides
-  // whether there was anything to stop. We send via the console manager rather
-  // than the message handler because the neighborhood stops processing messages
-  // on stop, and we want to always show this to the user.
+  // its callbacks resolve -- so isRunning decides whether there was anything to stop.
+  // We send via the console manager rather than the message handler because the neighborhood
+  // stops processing messages on stop, and we want to always show this to the user.
   if (getStore().getState().lab2System.isRunning) {
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     consoleManager?.writeConsoleMessage(

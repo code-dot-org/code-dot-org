@@ -6,9 +6,6 @@ import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 // states, and therefore may not set these values).
 export interface Lab2SystemState {
   loadedCodeEnvironment: boolean;
-  // Set when the code environment cannot be set up at all (as opposed to still
-  // loading), holding the message to show the user. Null when there is no such
-  // failure. The lab that detects the failure supplies the wording.
   codeEnvironmentError: string | null;
   isRunning: boolean;
   hasRun: boolean;

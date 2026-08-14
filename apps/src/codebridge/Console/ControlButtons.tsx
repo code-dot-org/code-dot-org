@@ -136,8 +136,6 @@ const ControlButtons: React.FunctionComponent = () => {
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
-  // Only spin while the environment is still on its way; a failed setup is not
-  // going to finish loading.
   const disabledCodeActionsIcon =
     !hasLoadedEnvironment && !codeEnvironmentError
       ? 'fa-spinner fa-spin fa-solid'

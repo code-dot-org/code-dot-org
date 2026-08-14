@@ -18,8 +18,7 @@ export default class ConsoleManager {
   private lastLineIsPartial: boolean;
   // The message explaining that the coding environment could not be set up, if
   // it could not be. Unlike program output it stays true for the whole session,
-  // so this manager owns writing it: it survives clearing the console, and no
-  // caller can print a second copy of it.
+  // so this manager owns writing it.
   private codeEnvironmentError: string | null;
   private terminalLinesListeners: ((lines: string[]) => void)[] = [];
 

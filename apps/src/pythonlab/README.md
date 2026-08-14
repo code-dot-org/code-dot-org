@@ -46,22 +46,11 @@ to whatever page creates it
 The sandbox domain is separate from `code.org`, so a firewall or browser
 extension can block it while `studio.code.org` itself loads fine. The
 iframe is cross-origin, so there is no load error to read: a blocked
-sandbox simply never posts its `READY` message.
+sandbox never posts its `READY` message.
 
 `pyodideSandboxManager.ts` therefore treats silence as failure. If
-`READY` has not arrived after `SANDBOX_READY_TIMEOUT_MS`, it puts a
-message naming the [IT requirements
-page](https://code.org/en-US/about/it-requirements) into
-`lab2System.codeEnvironmentError`. From there:
-
-- `codebridge/Console/Console.tsx` hands it to the `ConsoleManager`, which
-  owns printing it: it comes back after the console is cleared (on every
-  level change) and is never printed twice, however many times it is
-  reported. "Already printed" is decided by what the console holds, not by
-  the manager's own state, because a re-created console replays the
-  previous console's lines with the error already among them.
-- `codebridge/Console/ControlButtons.tsx` keeps the run button disabled
-  and drops the loading spinner, which would otherwise spin forever.
+`READY` has not arrived after `SANDBOX_READY_TIMEOUT_MS`, it prints a useful
+ error to the user in the console, and stops the load spinner.
 
 A sandbox that was merely slow clears the message when it finally reports
 `READY`.

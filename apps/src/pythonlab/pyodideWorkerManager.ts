@@ -319,10 +319,9 @@ const asyncRun = (() => {
 const restartPyodideIfProgramIsRunning = () => {
   // Only report stopping if the user was shown a running program. That outlasts
   // the run itself for some programs -- the neighborhood keeps animating after
-  // its callbacks resolve -- so isRunning, not our pending callbacks, decides
-  // whether there was anything to stop. We send via the console manager rather
-  // than the message handler because the neighborhood stops processing messages
-  // on stop, and we want to always show this to the user.
+  // its callbacks resolve -- so isRunning decides whether there was anything to stop.
+  // We send via the console manager rather than the message handler because the neighborhood
+  // stops processing messages on stop, and we want to always show this to the user.
   if (getStore().getState().lab2System.isRunning) {
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     consoleManager?.writeConsoleMessage(

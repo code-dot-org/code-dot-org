@@ -56,10 +56,6 @@ const Console: React.FunctionComponent = () => {
     }
   }, []);
 
-  // The console shows environment errors -- a lab that cannot be set up at all --
-  // rather than the code that detects them, because the error outlives any one
-  // console: it is still true after the console is cleared on a level change or
-  // re-created on a layout change. The manager keeps it to a single copy.
   useEffect(() => {
     consoleManager?.setCodeEnvironmentError(
       codeEnvironmentError
