@@ -27,11 +27,11 @@ class AiGatewayAuthController < ApplicationController
     # rejections, and attaches it to its own Sentry events -- none of which
     # needs a raw id.
     #
-    # This is the same value the dashboard sends to Sentry, so one lookup finds
-    # a user across the whole observability stack. See Cdo::UserLogToken for why
-    # these share a destination.
+    # The gateway's own error reporting goes to Sentry, so it shares Sentry's
+    # destination: one token finds a user in both the dashboard's events and the
+    # gateway's.
     user_log_token = Cdo::UserLogToken.derive(
-      current_user.id, destination: Cdo::UserLogToken::OBSERVABILITY
+      current_user.id, destination: Cdo::UserLogToken::SENTRY
     )
 
     # Set a little in the past to account for time drift

@@ -30,7 +30,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
   # signature rather than the payload hash we happened to build.
   def decoded_claims
     sign_in @user
-    post :get_access_token, params: {aichatContext: AICHAT_CONTEXT}
+    post :get_access_token, params: {aichatContext: AICHAT_CONTEXT}, as: :json
     assert_response :success
 
     token = JSON.parse(@response.body)['token']
@@ -38,8 +38,8 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     claims
   end
 
-  test 'mints the observability log token rather than the raw user id' do
-    expected = Cdo::UserLogToken.derive(@user.id, destination: Cdo::UserLogToken::OBSERVABILITY)
+  test 'mints the log token the dashboard sends to Sentry, not the raw user id' do
+    expected = Cdo::UserLogToken.derive(@user.id, destination: Cdo::UserLogToken::SENTRY)
 
     assert_equal expected, decoded_claims['user_log_token']
   end
@@ -52,14 +52,6 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
   # otherwise collide by chance with the uuid token_id or the unix timestamps.
   test 'does not send the raw user id as the value of any claim' do
     refute_includes decoded_claims.values.map(&:to_s), @user.id.to_s
-  end
-
-  # Deliberately the same value the dashboard sends to Sentry: one lookup should
-  # find a user across the whole observability stack.
-  test 'sends the same token the dashboard sends to Sentry' do
-    dashboard_token = Cdo::UserLogToken.derive(@user.id, destination: Cdo::UserLogToken::OBSERVABILITY)
-
-    assert_equal dashboard_token, decoded_claims['user_log_token']
   end
 
   test 'still sends the context claims the gateway depends on' do
@@ -82,7 +74,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     other = create(:student)
 
     refute_equal decoded_claims['user_log_token'],
-      Cdo::UserLogToken.derive(other.id, destination: Cdo::UserLogToken::OBSERVABILITY)
+      Cdo::UserLogToken.derive(other.id, destination: Cdo::UserLogToken::SENTRY)
   end
 
   test 'forbids a user who cannot access aichat' do
