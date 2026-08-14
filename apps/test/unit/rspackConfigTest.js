@@ -18,17 +18,18 @@ function readConfig(expression, env = {}) {
     // Pin the configuration under test: the .tsx? swc rule exists only
     // when RSPACK_SWC is truthy, so an ambient RSPACK_SWC=0 (set during
     // exactly the bisects this variable is for) would otherwise turn
-    // the assertion into a TypeError on undefined.  APPS_DEVTOOL,
-    // DEBUG_MINIFIED and CI are cleared for the same reason — the
-    // shared devtool() helper returns eval whenever CI is set, which
-    // failed the production case on drone — so each case states its
-    // own environment and nothing ambient leaks in.
+    // the assertion into a TypeError on undefined.  Every other env
+    // var the probed policy reads is cleared for the same reason —
+    // drone's ambient CI failed the production case before this list
+    // was complete — so each case states its own environment and
+    // nothing leaks in.
     env: {
       ...process.env,
       RSPACK_SWC: 'all',
       APPS_DEVTOOL: '',
       DEBUG_MINIFIED: '',
       CI: '',
+      NODE_ENV: '',
       ...env,
     },
   });
@@ -41,17 +42,22 @@ const DEVTOOL_PROBE = `(() => {
   const plugin = config.plugins.find(
     x => x.constructor.name.includes('EvalSourceMapDevTool')
   );
-  // rspack's plugin wrapper keeps constructor args on _args.
-  const re = plugin && plugin._args && plugin._args[0] && plugin._args[0].test;
+  // rspack's plugin wrapper keeps constructor args on _args.  The test
+  // is a plain string, which rspack treats as an anchored path prefix.
+  const prefix =
+    plugin && plugin._args && plugin._args[0] && plugin._args[0].test;
   const path = require('path');
   const src = f => path.resolve('src', f);
   const nm = f => path.resolve('node_modules', f);
   return {
     devtool: config.devtool,
     hasPlugin: !!plugin,
-    matchesSrc: re ? re.test(src('music/entrypoint.ts')) : null,
-    matchesNodeModulesSrc: re
-      ? re.test(nm('some-package/src/index.js'))
+    matchesSrc: prefix ? src('music/entrypoint.ts').startsWith(prefix) : null,
+    matchesNodeModulesSrc: prefix
+      ? nm('some-package/src/index.js').startsWith(prefix)
+      : null,
+    matchesSrcSibling: prefix
+      ? path.resolve('src-extra/x.js').startsWith(prefix)
       : null,
   };
 })()`;
@@ -88,6 +94,13 @@ describe('rspack.config', function () {
       expect(probe.hasPlugin).toBe(true);
       expect(probe.matchesSrc).toBe(true);
       expect(probe.matchesNodeModulesSrc).toBe(false);
+      expect(probe.matchesSrcSibling).toBe(false);
+    });
+
+    it('CI dev builds stay map-free, matching webpack policy', function () {
+      const probe = readConfig(DEVTOOL_PROBE, {DEV: '1', CI: 'true'});
+      expect(probe.devtool).toBe('eval');
+      expect(probe.hasPlugin).toBe(false);
     });
 
     it('APPS_DEVTOOL=eval opts out of maps entirely', function () {

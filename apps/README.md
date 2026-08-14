@@ -126,6 +126,10 @@ Two shortcuts combine these levers:
 - `yarn start:cheapest` — `APPS_DEVTOOL=eval` plus `SKIP_TYPECHECK=1`, for the
   lowest-memory dev server.
 
+Both shortcuts describe webpack economics; under `--rspack` the src/-scoped
+default already uses less memory than `eval` (see below), so only
+`SKIP_TYPECHECK` retains its meaning there.
+
 ### Source maps under rspack
 
 Under `--rspack`, the default is source maps for everything in `src/` and

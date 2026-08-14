@@ -189,18 +189,22 @@ function createRspackConfig({
   // (a one-shot build forced to full maps was OOM-killed on a 30GB
   // machine).  Measured against APPS_DEVTOOL=eval on the same box:
   // lower steady and peak memory (unmapped modules skip eval wrapping),
-  // ~2s more startup, ~2s more per shared-file rebuild, and a 30-edit
-  // soak oscillates rather than accumulates.  An explicit APPS_DEVTOOL
-  // (e.g. =eval) overrides.
-  const SRC_PREFIX_REGEX = new RegExp(
-    `^${p('src').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\\\/]`
-  );
-  const srcMapsDefault = !minify && !envConstants.APPS_DEVTOOL;
+  // ~2s more startup, ~2s more per shared-file rebuild, and memory
+  // stays level across a 30-edit session instead of growing with each
+  // rebuild.  An explicit APPS_DEVTOOL (e.g. =eval) overrides, and so
+  // do the two ambient signals the shared devtool() helper decides on:
+  // CI builds stay map-free (webpack policy, deliberate there) and
+  // DEBUG_MINIFIED keeps its full-fidelity maps.
+  const srcMapsDefault =
+    !minify &&
+    !envConstants.APPS_DEVTOOL &&
+    !process.env.CI &&
+    !process.env.DEBUG_MINIFIED;
   const rspackDevtool = srcMapsDefault
     ? false
     : minify
     ? devtool({minify})
-    : envConstants.APPS_DEVTOOL;
+    : envConstants.APPS_DEVTOOL || devtool({minify: false});
   // Say which source-map mode is active up front; waiting to notice what
   // symbols look like in DevTools is a bad way to find out.
   if (!minify) {
@@ -656,7 +660,9 @@ function createRspackConfig({
             new rspack.EvalSourceMapDevToolPlugin({
               module: true,
               columns: false,
-              test: SRC_PREFIX_REGEX,
+              // A string is an anchored path prefix to rspack; the
+              // trailing separator keeps a sibling like src-extra/ out.
+              test: p('src') + path.sep,
             }),
           ]
         : []),

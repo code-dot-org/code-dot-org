@@ -30,11 +30,11 @@ module.exports = {
   // For details, see:
   // https://github.com/code-dot-org/code-dot-org/blob/staging/apps/docs/build.md
   DEBUG_MINIFIED: !!getMoocEnv('DEBUG_MINIFIED'),
-  // Overrides the webpack `devtool` (source map) setting for `yarn start`.
-  // `yarn start` defaults to 'eval-cheap-module-source-map' to keep memory
-  // usage manageable. Set APPS_DEVTOOL=eval for the lowest memory (no source
-  // maps) or APPS_DEVTOOL=eval-source-map for the highest fidelity (most
-  // memory).
+  // Overrides the `devtool` (source map) setting for `yarn start`.
+  // Under webpack (default 'eval-cheap-module-source-map'), =eval is the
+  // lowest-memory choice.  Under --rspack (default: maps for src/ only),
+  // =eval trades symbols for ~2s of startup and per-rebuild time — the
+  // src/ default already costs less memory.  Empty means unset.
   APPS_DEVTOOL: process.env.APPS_DEVTOOL,
   // If set, skips the parallel ForkTsCheckerWebpackPlugin type check, freeing
   // ~2GB of memory during `yarn start`. Your editor and CI still type-check.
