@@ -55,17 +55,23 @@
           box-sizing: border-box;
         }
 
-        // Checked styles
+        // Checked styles: ON half of the track and its icon, the
+        // selected pair.
         &::before {
           content: '\f00c';
-          background-color: var(--background-brand-teal-primary);
+          color: var(--text-selected-primary);
+          background-color: var(--background-selected-primary);
           padding-left: 4px;
         }
 
-        // Unchecked styles
+        // Unchecked styles: OFF half of the track; its icon follows the
+        // theme (white in Light, black in Dark) instead of a fixed white
+        // — the neutral ramp inverts in Dark (septenary resolves to
+        // gray-30), so a fixed-white icon would sit at ~1.9:1 there.
         &::after {
           content: '\f00d';
-          background-color: var(--background-neutral-senary);
+          color: var(--text-neutral-primary-inverse);
+          background-color: var(--background-neutral-septenary);
           text-align: right;
           padding-right: 4px;
         }
@@ -97,22 +103,48 @@
         left: 50%;
       }
     }
+
+    // Thumb follows the theme for the same reason as the OFF icon (the
+    // Figma thumb fill is background/neutral/primary); the disabled
+    // thumb keeps the .switch span rule's white-fixed fill above, since
+    // this selector is more specific only for the non-disabled case.
+    input[type='checkbox']:not(:disabled) + .switch span {
+      background: var(--background-neutral-primary);
+    }
+
+    // ON thumb inverts against the selected track.
+    input[type='checkbox']:checked:not(:disabled) + .switch span {
+      background: var(--background-selected-primary-inverse);
+    }
   }
 
   // Hover styles
   &:hover {
-    div {
-      .switch {
-        i {
-          &::before {
-            background-color: var(--background-brand-teal-strong);
-          }
-
-          &::after {
-            background-color: var(--background-neutral-septenary);
-          }
-        }
+    div .switch i {
+      &::before {
+        background-color: var(--background-selected-strong);
       }
+
+      &::after {
+        background-color: var(--background-neutral-octonary);
+      }
+    }
+  }
+
+  // Pressed styles — the pressed border blends into the fill: on the ON
+  // side border-selected-strong matches background-selected-strong by
+  // design; the OFF side has no matching border token, so the border
+  // stays at its transparent base.
+  &:active div input[type='checkbox']:not(:disabled) + .switch i,
+  div input[type='checkbox']:active:not(:disabled) + .switch i {
+    &::before {
+      border-color: var(--border-selected-strong);
+      background: var(--background-selected-strong);
+    }
+
+    &::after {
+      border-color: transparent;
+      background: var(--background-neutral-octonary);
     }
   }
 
@@ -120,20 +152,6 @@
   div input[type='checkbox']:focus-visible + .switch {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
-  }
-
-  // Pressed styles
-  &:active div input[type='checkbox']:not(:disabled) + .switch i,
-  div input[type='checkbox']:active:not(:disabled) + .switch i {
-    &::before {
-      border-color: var(--borders-brand-teal-primary);
-      background: var(--background-brand-teal-strong);
-    }
-
-    &::after {
-      border-color: var(--borders-neutral-strong);
-      background: var(--background-neutral-septenary);
-    }
   }
 
   // Disabled styles
@@ -149,6 +167,11 @@
         &::before,
         &::after {
           background-color: var(--background-neutral-disabled);
+          // Solid-fill disabled elements pair the disabled track with the
+          // disabled-inverse label (white in Light, black in Dark); this
+          // also keeps the ::before/::after icon recolor above from
+          // leaking into the disabled state.
+          color: var(--text-disabled-neutral-inverse);
         }
       }
     }
@@ -259,84 +282,5 @@ html[dir='rtl'] {
   }
   :nth-child(2) {
     order: 1;
-  }
-}
-
-// CodeAI (CADS) brand overrides — see themes/README.md
-[data-brand='codeai-next'] {
-  .toggle {
-    div .switch i {
-      // ON half of the track and its icon: the selected pair.
-      &::before {
-        color: var(--text-selected-primary);
-        background-color: var(--background-selected-primary);
-      }
-
-      // OFF half of the track; its icon follows the theme (white in
-      // Light, black in Dark) instead of the legacy fixed white — the
-      // neutral ramp inverts in Dark (septenary resolves to gray-30),
-      // so a fixed-white icon would sit at ~1.9:1 there.
-      &::after {
-        color: var(--text-neutral-primary-inverse);
-        background-color: var(--background-neutral-septenary);
-      }
-    }
-
-    // Thumbs follow the theme for the same reason as the OFF icon (the
-    // Figma thumb fill is background/neutral/primary); the disabled
-    // thumb keeps the legacy white-fixed fill from the base rule.
-    div input[type='checkbox']:not(:disabled) + .switch span {
-      background: var(--background-neutral-primary);
-    }
-
-    // ON thumb inverts against the selected track.
-    div input[type='checkbox']:checked:not(:disabled) + .switch span {
-      background: var(--background-selected-primary-inverse);
-    }
-
-    // Hover
-    &:hover {
-      div .switch i {
-        &::before {
-          background-color: var(--background-selected-strong);
-        }
-
-        &::after {
-          background-color: var(--background-neutral-octonary);
-        }
-      }
-    }
-
-    // Pressed — the legacy pressed border blends into the fill: on the
-    // ON side border-selected-strong matches background-selected-strong
-    // by design; the OFF side has no matching border token, so the
-    // border stays at its transparent base.
-    &:active div input[type='checkbox']:not(:disabled) + .switch i,
-    div input[type='checkbox']:active:not(:disabled) + .switch i {
-      &::before {
-        border-color: var(--border-selected-strong);
-        background: var(--background-selected-strong);
-      }
-
-      &::after {
-        border-color: transparent;
-        background: var(--background-neutral-octonary);
-      }
-    }
-
-    // Disabled — solid-fill disabled elements pair the disabled track
-    // with the disabled-inverse label (white in Light, black in Dark);
-    // also keeps the ::before icon recolor above from leaking into the
-    // disabled state.
-    &:has(input[type='checkbox']:disabled) {
-      > div {
-        .switch i {
-          &::before,
-          &::after {
-            color: var(--text-disabled-neutral-inverse);
-          }
-        }
-      }
-    }
   }
 }

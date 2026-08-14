@@ -42,31 +42,36 @@
         opacity: 0;
       }
 
-      // Checked styles
+      // Selected styles
       &:has(input[type='checkbox']:checked) {
-        border: 1px solid var(--borders-brand-teal-primary);
-        background-color: var(--background-brand-teal-primary);
-        color: var(--text-neutral-white-fixed);
+        border: 1px solid var(--border-selected-primary);
+        background-color: var(--background-selected-primary);
+        color: var(--text-selected-primary);
+      }
+
+      // Selected + hover (border intentionally matches the fill)
+      &:hover:has(input[type='checkbox']:checked) {
+        border-color: var(--border-selected-strong);
+        background-color: var(--background-selected-strong);
       }
 
       // Hover styles
       &:hover {
         background-color: var(--background-neutral-tertiary);
-
-        &:has(input[type='checkbox']:checked) {
-          background-color: var(--background-brand-teal-strong);
-        }
       }
 
       // Pressed styles
       &:active {
-        background-color: var(--background-neutral-tertiary);
+        background-color: var(--background-brand-light);
         outline: var(--borders-brand-teal-primary) solid 2px;
         outline-offset: -2px;
 
+        // Selected + pressed; border and the inset outline both take the
+        // fill color, so no ring shows regardless of hover state.
         &:has(input[type='checkbox']:checked) {
-          background-color: var(--background-brand-teal-strong);
-          outline: var(--borders-brand-teal-primary) solid 2px;
+          border-color: var(--border-selected-strong);
+          background-color: var(--background-selected-strong);
+          outline: var(--border-selected-strong) solid 2px;
           outline-offset: -2px;
         }
       }
@@ -93,9 +98,14 @@
         }
       }
 
+      // Selected + disabled — solid disabled fill with the inverse label
+      // (white in light, black in dark), unlike a flat white label. More
+      // specific than the plain selected/disabled rules above, so it
+      // wins regardless of order.
       &:has(input[type='checkbox']:disabled:checked) {
-        background-color: var(--background-neutral-disabled);
-        color: var(--text-neutral-white-fixed);
+        border-color: var(--border-disabled-neutral);
+        background-color: var(--background-disabled-neutral);
+        color: var(--text-disabled-neutral-inverse);
       }
     }
   }
@@ -191,46 +201,6 @@
 
     &.chip-thin {
       @include typography.body-four;
-    }
-  }
-}
-
-// CodeAI (CADS) brand overrides — see themes/README.md
-[data-brand='codeai-next'] {
-  .chips fieldset .chip {
-    // Pressed
-    &:active {
-      background-color: var(--background-brand-light);
-    }
-
-    // Selected
-    &:has(input[type='checkbox']:checked) {
-      border-color: var(--border-selected-primary);
-      background-color: var(--background-selected-primary);
-      color: var(--text-selected-primary);
-    }
-
-    // Selected + hover (border intentionally matches the fill)
-    &:hover:has(input[type='checkbox']:checked) {
-      border-color: var(--border-selected-strong);
-      background-color: var(--background-selected-strong);
-    }
-
-    // Selected + pressed; border and the legacy inset outline both take
-    // the fill color, so no ring shows regardless of hover state.
-    &:active:has(input[type='checkbox']:checked) {
-      border-color: var(--border-selected-strong);
-      background-color: var(--background-selected-strong);
-      outline-color: var(--border-selected-strong);
-    }
-
-    // Selected + disabled — solid disabled fill with the inverse label
-    // (white in light, black in dark), unlike the always-white legacy
-    // label. Last so it outranks the checked hover/pressed rules above.
-    &:has(input[type='checkbox']:disabled:checked) {
-      border-color: var(--border-disabled-neutral);
-      background-color: var(--background-disabled-neutral);
-      color: var(--text-disabled-neutral-inverse);
     }
   }
 }
