@@ -19,9 +19,11 @@ In **Vite Rails mode** (preferred), `vite-plugin-rails` proxies asset requests f
 
 In **standalone mode**, the Vite dev server runs independently of Rails at `http://localhost:3036/frontend-studio/`. Studio is designed to be independently deployable and testable without the backend.
 
-In production, Vite build output is served as static files from `public/frontend-studio/`.
+Deployed environments do not build Studio. `package:studio` unpacks a prebuilt tarball into `dashboard/public/studio-package` and points the `dashboard/public/frontend-studio` symlink at it, so `ActionDispatch::Static` serves the files. Rails reads the Vite manifest from that same served directory (`VITE_RUBY_PUBLIC_DIR` in `dashboard/config/application.rb`), so the asset tags it renders always name files that are on disk. See the [README](../README.md) for how the tarball is built and shipped.
 
-> **Note:** Studio currently returns 404 in production — it is pre-production / experimental only.
+The catch-all answers 404 for any path with a file extension. Such a path always asks for a file from the package — a hashed bundle under `assets/`, or a file Vite copies to the root like `favicon.svg` — so a miss is a bad URL, never a client route. Serving the HTML shell instead would let the CDN cache a page under a `.js` address.
+
+> **Note:** In production the app answers only while the `frontend_studio_enabled` DCDO flag is on. It is off there by default, so production returns 404 until someone turns it on; the flag is also the kill switch afterwards.
 
 ## Init ordering
 
