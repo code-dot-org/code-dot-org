@@ -117,7 +117,8 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
   const widgetFrameFor = (
     widget: ActiveWidget,
     frameKey: React.Key,
-    minHeight?: number
+    minHeight?: number,
+    maxHeight?: number
   ) => (
     <WidgetFrame
       key={frameKey}
@@ -131,6 +132,7 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
       }
       onUserMessage={text => sessionRef.current?.sendStudentMessage(text)}
       minHeight={minHeight}
+      maxHeight={maxHeight}
     />
   );
 
@@ -200,7 +202,14 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
               className={moduleStyles.instructionsCard}
               hidden={instructionsHidden}
             >
-              {widgetFrameFor(instructionsWidget, 'instructions-view', 48)}
+              {widgetFrameFor(
+                instructionsWidget,
+                'instructions-view',
+                48,
+                // Instructions must always show everything; the show/hide
+                // button is the escape hatch on small windows.
+                Number.POSITIVE_INFINITY
+              )}
             </div>
           )}
           <div className={moduleStyles.stageScroll}>

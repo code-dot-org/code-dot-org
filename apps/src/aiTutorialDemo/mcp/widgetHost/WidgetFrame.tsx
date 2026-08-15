@@ -31,10 +31,16 @@ interface WidgetFrameProps {
   onUserMessage: (text: string) => void;
   /** Floor for the auto-height; slim strips (instructions) pass a low one. */
   minHeight?: number;
+  /**
+   * Ceiling for the auto-height. Views that must always show everything
+   * (instructions) pass Infinity; the default keeps a runaway activity
+   * widget from eating the page.
+   */
+  maxHeight?: number;
 }
 
 const DEFAULT_MIN_HEIGHT = 160;
-const MAX_HEIGHT = 640;
+const DEFAULT_MAX_HEIGHT = 640;
 
 /**
  * The host side of one MCP App view: a sandboxed iframe speaking the MCP
@@ -61,6 +67,7 @@ const WidgetFrame: React.FunctionComponent<WidgetFrameProps> = ({
   onModelContextUpdate,
   onUserMessage,
   minHeight = DEFAULT_MIN_HEIGHT,
+  maxHeight = DEFAULT_MAX_HEIGHT,
 }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(minHeight);
@@ -188,7 +195,7 @@ const WidgetFrame: React.FunctionComponent<WidgetFrameProps> = ({
           const requested = Number(msg.params?.height);
           if (Number.isFinite(requested)) {
             setHeight(
-              Math.round(Math.min(MAX_HEIGHT, Math.max(minHeight, requested)))
+              Math.round(Math.min(maxHeight, Math.max(minHeight, requested)))
             );
           }
           break;
