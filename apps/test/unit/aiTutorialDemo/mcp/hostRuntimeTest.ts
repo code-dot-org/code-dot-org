@@ -21,6 +21,7 @@ describe('McpHostRuntime', () => {
 
   it('discovers every widget tool from advertised metadata', () => {
     expect(runtime.tools.map(tool => tool.name).sort()).toEqual([
+      'clear_feedback',
       'present_code_exercise',
       'present_multiple_choice',
       'relevel_instructions',

@@ -127,7 +127,8 @@ export function createInstructionsServer(): McpServer {
         'sentences at about a grade 5 reading level (the panel relevels it ' +
         'with the instructions). Replaces earlier feedback; instructions ' +
         'and the activity stay as they are. Cleared automatically by the ' +
-        'next set_instructions.',
+        'next set_instructions, and when the activity switches to a ' +
+        'different tool.',
       inputSchema: {
         kind: z
           .enum(FEEDBACK_KINDS)
@@ -147,6 +148,33 @@ export function createInstructionsServer(): McpServer {
       canonical.feedback = {kind: input.kind, text: input.text};
       return {
         content: [{type: 'text', text: 'Feedback shown to the student.'}],
+        structuredContent: {...canonical},
+      };
+    }
+  );
+
+  server.registerTool(
+    'clear_feedback',
+    {
+      description:
+        'Clear the feedback section, leaving the instructions as they are. ' +
+        'Called by the host when the activity switches to a different tool, ' +
+        'so feedback about one activity never lingers next to another; not ' +
+        'available to the model.',
+      inputSchema: {},
+      outputSchema: panelOutputSchema,
+      _meta: {
+        ui: {
+          resourceUri: INSTRUCTIONS_WIDGET_URI,
+          visibility: ['app'],
+          slot: 'instructions',
+        },
+      },
+    },
+    async () => {
+      canonical.feedback = null;
+      return {
+        content: [{type: 'text', text: 'Feedback cleared.'}],
         structuredContent: {...canonical},
       };
     }

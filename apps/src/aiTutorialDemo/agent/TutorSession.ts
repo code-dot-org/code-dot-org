@@ -278,6 +278,17 @@ export class TutorSession {
       ? this.runtime.getTemplate(tool.uiResourceUri)
       : undefined;
     if (template && tool) {
+      // Feedback is about an attempt at the current activity; when the
+      // stage switches to a different tool it goes stale, and clearing it
+      // is host policy rather than model discipline. Same-tool re-presents
+      // keep it — the arc's feedback moments re-present the same tool.
+      if (
+        tool.slot === 'stage' &&
+        this.widgets.stage &&
+        this.widgets.stage.toolName !== name
+      ) {
+        await this.clearPanelFeedback();
+      }
       this.widgets[tool.slot] = {
         callId: this.nextId++,
         toolName: name,
@@ -292,6 +303,32 @@ export class TutorSession {
       content: `[tool_result for ${name}] ${JSON.stringify(result.content)}`,
     });
     return template && tool ? tool.slot : null;
+  }
+
+  /**
+   * Host-initiated call to the instructions plugin; deliberately not
+   * recorded in the model transcript — the model didn't ask for it, and
+   * set_feedback's description tells it clears happen on tool switches.
+   */
+  private async clearPanelFeedback() {
+    const tool = this.runtime.getTool('clear_feedback');
+    if (!tool || !this.widgets.instructions) {
+      return;
+    }
+    try {
+      const result = await this.runtime.callTool('clear_feedback', {});
+      // Same callId on purpose: the frame re-delivers on the changed
+      // toolResult, but a clear is not new content and must not re-reveal
+      // a panel the student hid.
+      this.widgets.instructions = {
+        ...this.widgets.instructions,
+        toolResult: result,
+      };
+      this.emit();
+    } catch (error) {
+      // A stale validation is cosmetic; never fail the activity change.
+      console.warn('clear_feedback failed:', error);
+    }
   }
 }
 
