@@ -20,6 +20,9 @@ export interface DiscoveredTool {
   inputSchema: unknown;
   uiResourceUri?: string;
   slot: WidgetSlot;
+  // Per the MCP Apps spec: 'model' means offered to the model, 'app' means
+  // callable from the tool's own view. Omitted on the wire means both.
+  visibility: ('model' | 'app')[];
 }
 
 export interface McpActivityEntry {
@@ -100,6 +103,7 @@ export class McpHostRuntime {
         inputSchema: tool.inputSchema,
         uiResourceUri: uiMeta?.resourceUri,
         slot: uiMeta?.slot ?? 'stage',
+        visibility: uiMeta?.visibility ?? ['model', 'app'],
       });
 
       // Prefetch templates at connect time, as the spec recommends, so a

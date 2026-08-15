@@ -1,4 +1,3 @@
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   IconButton as MuiIconButton,
@@ -20,15 +19,9 @@ import WidgetFrame from './mcp/widgetHost/WidgetFrame';
 
 import moduleStyles from './ai-tutorial-demo.module.scss';
 
-const GRADE_ITEMS = [
-  {value: 'grade 3', text: 'Grade 3'},
-  {value: 'grade 4', text: 'Grade 4'},
-  {value: 'grade 5', text: 'Grade 5'},
-  {value: 'grade 6', text: 'Grade 6'},
-  {value: 'grade 7', text: 'Grade 7'},
-  {value: 'grade 8', text: 'Grade 8'},
-  {value: 'high school', text: 'High school'},
-];
+// The grade selector lives inside the instructions widget (the plugin owns
+// it); this is only what the tutor is told at session start, before any
+// selection. Matches the widget's default.
 const DEFAULT_GRADE = 'grade 5';
 
 /**
@@ -48,11 +41,9 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
   });
   const [activity, setActivity] = useState<McpActivityEntry[]>([]);
   const [initError, setInitError] = useState<string | null>(null);
-  const [grade, setGrade] = useState(DEFAULT_GRADE);
   const [chatCollapsed, setChatCollapsed] = useState(false);
   const runtimeRef = useRef<McpHostRuntime | null>(null);
   const sessionRef = useRef<TutorSession | null>(null);
-  const gradeRef = useRef(DEFAULT_GRADE);
   // Items count at collapse time, for the unread badge on the rail.
   const collapsedAtCountRef = useRef(0);
 
@@ -84,11 +75,7 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
           return;
         }
         runtimeRef.current = runtime;
-        const session = new TutorSession(
-          runtime,
-          setSnapshot,
-          gradeRef.current
-        );
+        const session = new TutorSession(runtime, setSnapshot, DEFAULT_GRADE);
         sessionRef.current = session;
         session.start();
       } catch (error) {
@@ -101,15 +88,28 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
     };
   }, []);
 
+  // tools/call arriving from a widget iframe. Per the MCP Apps visibility
+  // rules, views may only call tools marked app-visible.
   const handleToolCall = useCallback(
-    (name: string, args: Record<string, unknown>) =>
-      runtimeRef.current!.callTool(name, args),
+    (name: string, args: Record<string, unknown>) => {
+      const tool = runtimeRef.current?.getTool(name);
+      if (!tool?.visibility.includes('app')) {
+        return Promise.reject(
+          new Error(`Tool ${name} is not callable from widgets`)
+        );
+      }
+      return runtimeRef.current!.callTool(name, args);
+    },
     []
   );
 
-  const widgetFrameFor = (widget: ActiveWidget, minHeight?: number) => (
+  const widgetFrameFor = (
+    widget: ActiveWidget,
+    frameKey: React.Key,
+    minHeight?: number
+  ) => (
     <WidgetFrame
-      key={widget.callId}
+      key={frameKey}
       html={widget.html}
       toolName={widget.toolName}
       toolInput={widget.toolInput}
@@ -144,20 +144,6 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
             An AI tutor drives interactive widgets over MCP. Lesson: averages.
           </MuiTypography>
         </div>
-        <SimpleDropdown
-          name="grade-level"
-          labelText="Grade level"
-          isLabelVisible={false}
-          size="s"
-          items={GRADE_ITEMS}
-          selectedValue={grade}
-          onChange={event => {
-            const value = event.target.value;
-            setGrade(value);
-            gradeRef.current = value;
-            sessionRef.current?.setGradeLevel(value);
-          }}
-        />
       </div>
       <div className={moduleStyles.columns}>
         {chatCollapsed ? (
@@ -194,37 +180,42 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
           </div>
         )}
         <div className={moduleStyles.stageColumn}>
+          {/* Pinned outside the scroll region so it can never clip; keyed
+              stably so the view persists across set_instructions calls and
+              keeps the student's grade selection. */}
           {instructionsWidget && (
             <div className={moduleStyles.instructionsCard}>
-              {widgetFrameFor(instructionsWidget, 48)}
+              {widgetFrameFor(instructionsWidget, 'instructions-view', 48)}
             </div>
           )}
-          {initError ? (
-            <div className={moduleStyles.emptyStage}>
-              Something went wrong loading the demo: {initError}
-            </div>
-          ) : stageWidget ? (
-            <div className={moduleStyles.widgetCard}>
-              {widgetFrameFor(stageWidget)}
-            </div>
-          ) : (
-            <div className={moduleStyles.emptyStage}>
-              Your tutor will put activities here.
-            </div>
-          )}
-          <details className={moduleStyles.activityLog}>
-            <summary>MCP activity ({activity.length})</summary>
-            <pre>
-              {activity
-                .map(
-                  entry =>
-                    `${new Date(entry.at).toLocaleTimeString()}  ${
-                      entry.label
-                    }` + (entry.detail ? `\n${entry.detail}` : '')
-                )
-                .join('\n\n')}
-            </pre>
-          </details>
+          <div className={moduleStyles.stageScroll}>
+            {initError ? (
+              <div className={moduleStyles.emptyStage}>
+                Something went wrong loading the demo: {initError}
+              </div>
+            ) : stageWidget ? (
+              <div className={moduleStyles.widgetCard}>
+                {widgetFrameFor(stageWidget, stageWidget.callId)}
+              </div>
+            ) : (
+              <div className={moduleStyles.emptyStage}>
+                Your tutor will put activities here.
+              </div>
+            )}
+            <details className={moduleStyles.activityLog}>
+              <summary>MCP activity ({activity.length})</summary>
+              <pre>
+                {activity
+                  .map(
+                    entry =>
+                      `${new Date(entry.at).toLocaleTimeString()}  ${
+                        entry.label
+                      }` + (entry.detail ? `\n${entry.detail}` : '')
+                  )
+                  .join('\n\n')}
+              </pre>
+            </details>
+          </div>
         </div>
       </div>
     </div>

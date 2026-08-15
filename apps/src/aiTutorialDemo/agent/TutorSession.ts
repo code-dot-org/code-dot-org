@@ -92,11 +92,17 @@ export class TutorSession {
     private onChange: (snapshot: TutorSnapshot) => void,
     private gradeLabel: string
   ) {
-    const toolNames = runtime.tools.map(tool => tool.name);
+    // App-only tools (e.g. the instructions plugin's releveler) are the
+    // widgets' business: the model never hears about them and can't name
+    // them in a toolCall.
+    const modelTools = runtime.tools.filter(tool =>
+      tool.visibility.includes('model')
+    );
+    const toolNames = modelTools.map(tool => tool.name);
     if (toolNames.length === 0) {
-      throw new Error('TutorSession needs at least one MCP tool');
+      throw new Error('TutorSession needs at least one model-visible tool');
     }
-    this.systemPrompt = buildSystemPrompt(runtime.tools);
+    this.systemPrompt = buildSystemPrompt(modelTools);
     this.replyOutput = buildReplyOutput(toolNames as [string, ...string[]]);
   }
 
@@ -125,24 +131,6 @@ export class TutorSession {
       content:
         `[session_start] The student just opened the page. The student is ` +
         `in ${this.gradeLabel}. Greet them and begin the lesson.`,
-    });
-    this.runTurn();
-  }
-
-  /** From the page's grade dropdown; retargets language and difficulty. */
-  setGradeLevel(gradeLabel: string) {
-    if (gradeLabel === this.gradeLabel) {
-      return;
-    }
-    this.gradeLabel = gradeLabel;
-    this.pushItem({kind: 'status', text: `Grade level set to ${gradeLabel}`});
-    this.transcript.push({
-      role: 'user',
-      content:
-        `[settings] The student's grade level is now ${gradeLabel}. From ` +
-        `here on, write for that level and adjust difficulty. Update the ` +
-        `instructions panel to match; keep the current activity unless it ` +
-        `is clearly wrong for this level.`,
     });
     this.runTurn();
   }
@@ -315,6 +303,8 @@ function widgetEventCaption(type?: string): string {
       return 'You ran your code';
     case 'chart_values_changed':
       return 'You changed the chart';
+    case 'grade_level_changed':
+      return 'You changed the grade level';
     default:
       return 'Widget update sent to tutor';
   }

@@ -23,6 +23,7 @@ describe('McpHostRuntime', () => {
     expect(runtime.tools.map(tool => tool.name).sort()).toEqual([
       'present_code_exercise',
       'present_multiple_choice',
+      'relevel_instructions',
       'set_instructions',
       'show_bar_chart',
     ]);
@@ -38,6 +39,15 @@ describe('McpHostRuntime', () => {
     expect(runtime.getTool('set_instructions')?.slot).toBe('instructions');
     // Tools without a hint default to the activity area.
     expect(runtime.getTool('show_bar_chart')?.slot).toBe('stage');
+  });
+
+  it('reads visibility so the host can split model and app tools', () => {
+    // The instructions releveler is the plugin's own capability: callable
+    // from its view, hidden from the model.
+    expect(runtime.getTool('relevel_instructions')?.visibility).toEqual([
+      'app',
+    ]);
+    expect(runtime.getTool('set_instructions')?.visibility).toEqual(['model']);
   });
 
   it('prefetches a renderable MCP App template per tool', () => {

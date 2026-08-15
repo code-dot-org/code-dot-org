@@ -7,6 +7,6 @@ class AiTutorialDemoController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    view_options(full_width: true, no_padding_container: true, responsive_content: true)
+    view_options(full_width: true, no_padding_container: true, responsive_content: true, no_footer: true)
   end
 end

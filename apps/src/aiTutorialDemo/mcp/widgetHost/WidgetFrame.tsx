@@ -65,14 +65,48 @@ const WidgetFrame: React.FunctionComponent<WidgetFrameProps> = ({
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(minHeight);
 
-  // Callbacks live in refs so the message listener (bound once per mounted
-  // view) always sees the latest without re-subscribing.
+  // Callbacks and data live in refs so the message listener (bound once per
+  // mounted view) always sees the latest without re-subscribing. Data also
+  // has to survive prop changes: a persistent view (the instructions strip,
+  // keyed stably by its parent) receives fresh tool input across calls
+  // without remounting.
   const callbacksRef = useRef({
     onToolCall,
     onModelContextUpdate,
     onUserMessage,
   });
   callbacksRef.current = {onToolCall, onModelContextUpdate, onUserMessage};
+  const dataRef = useRef({toolInput, toolResult});
+  dataRef.current = {toolInput, toolResult};
+  const initializedRef = useRef(false);
+
+  const sendToolData = () => {
+    iframeRef.current?.contentWindow?.postMessage(
+      {
+        jsonrpc: '2.0',
+        method: 'ui/notifications/tool-input',
+        params: {arguments: dataRef.current.toolInput},
+      },
+      '*'
+    );
+    iframeRef.current?.contentWindow?.postMessage(
+      {
+        jsonrpc: '2.0',
+        method: 'ui/notifications/tool-result',
+        params: (dataRef.current.toolResult as Record<string, unknown>) ?? {},
+      },
+      '*'
+    );
+  };
+
+  // Re-deliver tool data when a new call lands on an already-initialized
+  // persistent view. Remounted views (activity widgets keyed per call) never
+  // hit this: they get their data on the initialized notification below.
+  useEffect(() => {
+    if (initializedRef.current) {
+      sendToolData();
+    }
+  }, [toolInput, toolResult]);
 
   useEffect(() => {
     const iframe = iframeRef.current;
@@ -147,14 +181,8 @@ const WidgetFrame: React.FunctionComponent<WidgetFrameProps> = ({
       switch (msg.method) {
         case 'ui/notifications/initialized':
           // Per spec, data flows only after the view declares readiness.
-          send({
-            method: 'ui/notifications/tool-input',
-            params: {arguments: toolInput},
-          });
-          send({
-            method: 'ui/notifications/tool-result',
-            params: (toolResult as Record<string, unknown>) ?? {},
-          });
+          initializedRef.current = true;
+          sendToolData();
           break;
         case 'ui/notifications/size-changed': {
           const requested = Number(msg.params?.height);
@@ -170,8 +198,7 @@ const WidgetFrame: React.FunctionComponent<WidgetFrameProps> = ({
 
     window.addEventListener('message', onMessage);
     return () => window.removeEventListener('message', onMessage);
-    // toolInput/toolResult are constant for the lifetime of a mounted view;
-    // a new tool call mounts a new WidgetFrame (parent keys on call id).
+    // Bound once per mounted view; everything volatile is read via refs.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
