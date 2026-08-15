@@ -376,7 +376,7 @@ const styles = {
     marginLeft: 0,
   },
   body: {
-    backgroundColor: '#ddd',
+    backgroundColor: 'var(--background-neutral-quaternary)',
     width: '100%',
   },
   leftCol: {
