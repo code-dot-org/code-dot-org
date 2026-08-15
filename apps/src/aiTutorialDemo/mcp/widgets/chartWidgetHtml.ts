@@ -2,11 +2,16 @@ import {buildWidgetDocument} from './widgetChrome';
 
 const CSS = `
   #title { margin: 0 0 8px; }
-  /* Dragging a bar must never start a text selection of the labels. */
+  /* Dragging a bar must never start a text selection of the labels. The
+     drawing keeps a readable width inside a full-width card: scaling a
+     4-bar chart to a wide monitor makes comically fat bars and, because
+     the aspect ratio is fixed, a very tall widget. */
   svg {
     width: 100%;
+    max-width: 720px;
     height: auto;
     display: block;
+    margin: 0 auto;
     touch-action: none;
     user-select: none;
     -webkit-user-select: none;
