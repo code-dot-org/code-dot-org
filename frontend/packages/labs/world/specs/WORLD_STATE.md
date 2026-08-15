@@ -109,13 +109,30 @@ given there: a world's declaring scope is a DECLARATION with no body to run a
 `set` in, so read-only means no setter is generated at all. That is how a world
 says `gravity strength = 9` once and means it.
 
-**The block type is keyed by the world's name.** `world_get_<World>_<Prop>Property`,
-which is `memberKey` doing what it does for a rule and for an actor's own
-properties. It inherits that scheme's hazard: renaming the world changes its own
-properties' block types, and the workspace's existing blocks become stand-ins
-(`standInBlocks`) generating `null`. Actors have carried this since their own
-properties landed. It is one bug with one fix — a rename sweep over own-property
-keys — and inventing a second keying scheme for worlds would make that fix two.
+**The block type is keyed by the FILE, not by the name.**
+`world_get_<WorldsMain>_<Prop>Property`, where a rule's member is
+`world_get_<Gravity>_…`, and the difference is the whole of why renaming is
+free here.
+
+For a rule the NAME is the identity: a `use trait` dropdown stores
+`Gravity#AffectedByGravityTrait`, so renaming one has to be swept through every
+file that mentions it, which is what `renameRule` is. For a file's own property
+nothing anywhere stores the name — the block type is the only thing derived from
+it — so keying on the name bought nothing and cost a rename. It was written that
+way by inheritance, because own properties reuse `memberKey`, which was written
+for rules.
+
+The first version of this document accepted that hazard and proposed a rename
+sweep as the eventual fix. That was the wrong end: there is nothing to sweep once
+the key stops mentioning the name. This is the treatment layers and a world's own
+actors already get, for the reason `layers.ts` states in one line — a name is a
+label, and renaming it should break nothing.
+
+What the file key leaves is a FILE rename: `player.actor` renamed to
+`hero.actor` re-mints the blocks and the saved ones become stand-ins. That is a
+failure the lab already has and treats the same way everywhere — a world's `add
+actor ⟨actors/player⟩` stores a module path too — so it is one bug in one place
+rather than a second one here.
 
 **No per-instance overrides, because there are no instances.** An actor's
 properties are edited per placement in the map editor. A world is placed
@@ -169,6 +186,12 @@ compiled to a use before the declaration. esbuild rewrites the `const`, so it
 threw as "Cannot read properties of undefined" rather than as the
 temporal-dead-zone error it was — the same disguise the module assembler already
 documents for hoisted world hats.
+
+**The warning a dead block wears said "rule" for everything.** A stand-in
+derives what is missing by regex from the block type, so a deleted `.actor` file
+told the learner their project no longer had a RULE of that name and to add it
+back. The sentence now says "add it back", which is true whether the thing was a
+rule or a file.
 
 **`WorldBuilder` needed `get`, and a `set` that does not accumulate.** `world`
 in a `.world` file IS the builder, including inside the handlers written there,

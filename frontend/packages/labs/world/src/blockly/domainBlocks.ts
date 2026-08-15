@@ -312,8 +312,41 @@ const deadValue = (
 // two rules' same-named members (e.g. both a `strength`) don't collide on one
 // block type — and so a member keeps its block type when the rule it belongs to
 // moves, which the reference format is the whole point of.
+//
+// A FILE'S OWN PROPERTY IS NAMESPACED BY THE FILE INSTEAD, and that is the
+// whole of the difference. For a rule the NAME is the identity — a `use trait`
+// dropdown stores `Gravity#AffectedByGravityTrait`, which is why renaming one
+// has to be swept through every file that mentions it (`renameRule`). For an
+// own property nothing anywhere stores the name; the block type is the only
+// thing derived from it. So keying on the name bought nothing and cost a
+// rename: `define actor ⟨Player⟩` renamed to ⟨Hero⟩ re-minted every block as
+// `world_get_Hero_…`, the saved ones became stand-ins, and the learner was told
+// their project no longer had a RULE called Player.
+//
+// This is the treatment layers and a world's own actors already get, for the
+// reason `layers.ts` states in one line: a name is a label, and renaming it
+// should break nothing.
 const memberKey = (ref: MemberRef): string =>
-  ref.ruleName ? `${ruleSlug(ref.ruleName)}_${ref.exportName}` : ref.exportName;
+  ref.own && ref.modulePath
+    ? `${pathSlug(ref.modulePath)}_${ref.exportName}`
+    : ref.ruleName
+      ? `${ruleSlug(ref.ruleName)}_${ref.exportName}`
+      : ref.exportName;
+
+/**
+ * A module path as a block-type segment: `actors/player` → `ActorsPlayer`.
+ *
+ * Pascal-cased per segment rather than merely stripped, so the two things that
+ * read a block type back still work: `standInBlocks` splits the segment on case
+ * to put words on a dead block's face and into its warning, and "Actors Player"
+ * points at a file where "actorsplayer" is a mangle.
+ */
+const pathSlug = (modulePath: string): string =>
+  modulePath
+    .split(/[^A-Za-z0-9]+/)
+    .filter(Boolean)
+    .map(part => part[0].toUpperCase() + part.slice(1))
+    .join('');
 
 // The keyboard's keys, from the enum that declares them (`Engine#Key`). Both
 // key dropdowns read it rather than carrying a list: the World owns the

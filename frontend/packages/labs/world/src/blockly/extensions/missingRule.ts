@@ -58,7 +58,7 @@ function syncWarning(block: Block): void {
   // warning `traitContext` puts on the same block for a different reason.
   block.setWarningText?.(
     missing
-      ? `Your project does not have “${missing}” any more, so this block does nothing. Add the rule back, or delete this block.`
+      ? `Your project does not have “${missing}” any more, so this block does nothing. Add it back, or delete this block.`
       : null,
     MISSING_RULE_EXTENSION,
   );

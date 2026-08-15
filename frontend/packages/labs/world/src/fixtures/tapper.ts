@@ -75,8 +75,14 @@ const scoreLabel = () => ({
   block: {type: 'variables_get_Actor', fields: {VAR: SCORE_VAR}},
 });
 
-/** `get score` — the world's own, with no subject to name. */
-const score = () => ({block: {type: 'world_get_Tapper_ScoreProperty'}});
+/**
+ * `get score` — the world's own, with no subject to name.
+ *
+ * Named for the FILE (`worlds/main`) and not for the world (`Tapper`): a name
+ * is a label here, and renaming the world must not turn every block that reads
+ * its state into a stand-in (`memberKey`, specs/WORLD_STATE.md).
+ */
+const score = () => ({block: {type: 'world_get_WorldsMain_ScoreProperty'}});
 
 /** `set text of ⟨who⟩ to ⟨join "Score: " ⟨score⟩⟩`. */
 const scoreText = (who: object) => ({
@@ -406,7 +412,7 @@ const MAIN_WORLD = JSON.stringify({
             // count that outlives the coin raising the event, so the game
             // could only say `Got one!` and forget.
             {
-              type: 'world_set_Tapper_ScoreProperty',
+              type: 'world_set_WorldsMain_ScoreProperty',
               inputs: {
                 VALUE: {
                   block: {
