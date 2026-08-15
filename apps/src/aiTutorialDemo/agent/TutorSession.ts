@@ -84,6 +84,7 @@ export class TutorSession {
   private pendingEvents: string[] = [];
   private eventTimer: ReturnType<typeof setTimeout> | null = null;
   private turnQueued = false;
+  private disposed = false;
   private readonly systemPrompt: string;
   private readonly replyOutput: ReturnType<typeof buildReplyOutput>;
 
@@ -106,7 +107,23 @@ export class TutorSession {
     this.replyOutput = buildReplyOutput(toolNames as [string, ...string[]]);
   }
 
+  /**
+   * Detach from the page (used by restart). In-flight gateway calls may
+   * still resolve afterwards; the disposed flag keeps them from writing
+   * into the replacement session's UI.
+   */
+  dispose() {
+    this.disposed = true;
+    if (this.eventTimer) {
+      clearTimeout(this.eventTimer);
+      this.eventTimer = null;
+    }
+  }
+
   private emit() {
+    if (this.disposed) {
+      return;
+    }
     this.onChange({
       items: [...this.items],
       busy: this.busy,
@@ -180,6 +197,9 @@ export class TutorSession {
   }
 
   private async runTurn() {
+    if (this.disposed) {
+      return;
+    }
     if (this.busy) {
       // A turn is streaming already; run once more when it finishes so the
       // transcript entries just added get a response.

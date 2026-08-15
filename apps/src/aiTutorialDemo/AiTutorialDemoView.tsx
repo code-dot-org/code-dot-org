@@ -46,6 +46,10 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
   // The panel starts hidden, and instructions updates leave it that way;
   // the student opts in with the Show button.
   const [instructionsHidden, setInstructionsHidden] = useState(true);
+  // Bumped by the Restart button; the init effect keys on it, tearing down
+  // the session and rebuilding servers, runtime, and transcript from
+  // scratch.
+  const [sessionEpoch, setSessionEpoch] = useState(0);
   const runtimeRef = useRef<McpHostRuntime | null>(null);
   const sessionRef = useRef<TutorSession | null>(null);
   // Items count at collapse time, for the unread badge on the rail.
@@ -75,6 +79,18 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
   }, [instructionsCallId, instructionsToolName]);
 
   useEffect(() => {
+    // Fresh page state per epoch: a restart looks exactly like a reload.
+    setSnapshot({
+      items: [],
+      busy: false,
+      stageWidget: null,
+      instructionsWidget: null,
+    });
+    setActivity([]);
+    setInitError(null);
+    setInstructionsHidden(true);
+    collapsedAtCountRef.current = 0;
+
     // The AI gateway's access-token endpoint requires an aichat context.
     // Like the levelbuilder generator pages, this page has no level or
     // channel; lesson-deep-dive is the client type trusted for any
@@ -112,8 +128,13 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
     })();
     return () => {
       cancelled = true;
+      // Old in-memory servers and clients just get garbage collected; the
+      // session is disposed so a late gateway response or debounce timer
+      // can't write into the next epoch's UI.
+      sessionRef.current?.dispose();
+      sessionRef.current = null;
     };
-  }, []);
+  }, [sessionEpoch]);
 
   // tools/call arriving from a widget iframe. Per the MCP Apps visibility
   // rules, views may only call tools marked app-visible.
@@ -173,6 +194,14 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
             An AI tutor drives interactive widgets over MCP. Lesson: averages.
           </MuiTypography>
         </div>
+        <MuiButton
+          variant="outlined"
+          size="extraSmall"
+          startIcon={<FontAwesomeV6Icon iconName="rotate-right" />}
+          onClick={() => setSessionEpoch(epoch => epoch + 1)}
+        >
+          Restart
+        </MuiButton>
       </div>
       <div className={moduleStyles.columns}>
         {chatCollapsed ? (
