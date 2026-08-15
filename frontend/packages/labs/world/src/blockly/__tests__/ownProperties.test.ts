@@ -7,6 +7,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {buildDomainPalette} from '../domainBlocks';
 import {ownPropertyDeclarations, parseActorOwnMeta} from '../ownProperties';
 
 /** An `.actor` workspace: `define actor` with a chain of blocks below it. */
@@ -232,5 +233,90 @@ describe('an actor’s own properties', () => {
     const meta = parseActorOwnMeta('actors/player', actorFile('Player'))!;
 
     expect(ownPropertyDeclarations(meta)).toBe('');
+  });
+});
+
+describe('the blocks an own property mints', () => {
+  /**
+   * Generate one block's code, with every socket answering `values`.
+   *
+   * These exist because the parse tests above could all pass while the blocks
+   * generated NOTHING, which is exactly what happened: `refResolves` asks "is
+   * the rule this belongs to still in the project?" and answered by looking up
+   * `ref.ruleName`, which for an own property names the declaring ACTOR. No
+   * rule of that name, so the setter emitted '' and the getter emitted the
+   * type's dead value — silently, for as long as no fixture declared one.
+   */
+  const codeFor = (
+    type: string,
+    values: Record<string, string> = {},
+  ): string => {
+    const meta = parseActorOwnMeta(
+      'actors/player',
+      actorFile('Player', [property({NAME: 'max health', DEFAULT: '3'})]),
+    )!;
+    const block = buildDomainPalette([], {ownProperties: [meta]}).blocks.find(
+      candidate => candidate.type === type,
+    ) as {
+      generator: {
+        javascript: (b: unknown, g: unknown, e: unknown) => unknown;
+      };
+    };
+    return String(
+      block.generator.javascript(
+        {
+          getFieldValue: () => null,
+          getParent: () => null,
+          getInputTargetBlock: () => null,
+        },
+        {
+          valueToCode: (_b: unknown, name: string) => values[name] ?? '',
+          statementToCode: () => '',
+          definitions_: {},
+          __ruleModule: 'actors/player',
+        },
+        {},
+      ),
+    );
+  };
+
+  it('writes through the setter', () => {
+    expect(codeFor('world_set_ActorsPlayer_MaxHealthProperty', {VALUE: '5'})) //
+      .toContain('.set(MaxHealthProperty, 5)');
+  });
+
+  it('reads through the getter', () => {
+    const code = codeFor('world_get_ActorsPlayer_MaxHealthProperty');
+
+    expect(code).toContain('.get(MaxHealthProperty)');
+    // NOT the dead value a suppressed member reports.
+    expect(code).not.toContain('null');
+  });
+
+  it('falls back to the declared default when the socket is empty', () => {
+    expect(codeFor('world_set_ActorsPlayer_MaxHealthProperty')).toContain(
+      '.set(MaxHealthProperty, 3)',
+    );
+  });
+
+  it('names the file, so renaming the actor mints the same block', () => {
+    const named = (name: string) =>
+      buildDomainPalette([], {
+        ownProperties: [
+          parseActorOwnMeta(
+            'actors/player',
+            actorFile(name, [property({NAME: 'max health'})]),
+          )!,
+        ],
+      })
+        .blocks.map(block => block.type)
+        .filter(type => type.includes('MaxHealth'))
+        .sort();
+
+    expect(named('Hero')).toEqual(named('Player'));
+    expect(named('Player')).toEqual([
+      'world_get_ActorsPlayer_MaxHealthProperty',
+      'world_set_ActorsPlayer_MaxHealthProperty',
+    ]);
   });
 });
