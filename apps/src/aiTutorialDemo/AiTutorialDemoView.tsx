@@ -67,17 +67,6 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
   };
   useEffect(pinActivityLog, [activity]);
 
-  // Feedback is the exception to staying hidden: it reveals the panel,
-  // because a hidden correction is a correction the student never sees.
-  // callId is a dependency so repeated feedback re-reveals.
-  const instructionsCallId = snapshot.instructionsWidget?.callId;
-  const instructionsToolName = snapshot.instructionsWidget?.toolName;
-  useEffect(() => {
-    if (instructionsToolName === 'set_feedback') {
-      setInstructionsHidden(false);
-    }
-  }, [instructionsCallId, instructionsToolName]);
-
   useEffect(() => {
     // Fresh page state per epoch: a restart looks exactly like a reload.
     setSnapshot({
