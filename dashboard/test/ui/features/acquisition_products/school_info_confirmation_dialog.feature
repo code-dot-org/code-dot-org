@@ -14,6 +14,7 @@ Feature: School Info Confirmation Dialog
 # 4. A year later after the user has completed school info, the user sees prompt to
 # confirm or update current school info.
 
+@eyes
 Scenario: School Info Confirmation Dialog
   Given I am on "http://studio.code.org/home"
   Given I use a cookie to mock the DCDO key "hide-teacher-dashboard-logo-animation" as "true"
