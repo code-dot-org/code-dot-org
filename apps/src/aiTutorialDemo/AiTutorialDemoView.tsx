@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
+  Button as MuiButton,
   IconButton as MuiIconButton,
   Typography as MuiTypography,
 } from '@mui/material';
@@ -42,10 +43,20 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
   const [activity, setActivity] = useState<McpActivityEntry[]>([]);
   const [initError, setInitError] = useState<string | null>(null);
   const [chatCollapsed, setChatCollapsed] = useState(false);
+  const [instructionsHidden, setInstructionsHidden] = useState(false);
   const runtimeRef = useRef<McpHostRuntime | null>(null);
   const sessionRef = useRef<TutorSession | null>(null);
   // Items count at collapse time, for the unread badge on the rail.
   const collapsedAtCountRef = useRef(0);
+
+  // New panel content (each call bumps callId) reveals hidden instructions:
+  // a hidden correction is a correction the student never sees.
+  const instructionsCallId = snapshot.instructionsWidget?.callId;
+  useEffect(() => {
+    if (instructionsCallId !== undefined) {
+      setInstructionsHidden(false);
+    }
+  }, [instructionsCallId]);
 
   useEffect(() => {
     // The AI gateway's access-token endpoint requires an aichat context.
@@ -182,9 +193,13 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
         <div className={moduleStyles.stageColumn}>
           {/* Pinned outside the scroll region so it can never clip; keyed
               stably so the view persists across set_instructions calls and
-              keeps the student's grade selection. */}
+              keeps the student's grade selection. Hiding only hides the
+              card — the iframe stays mounted for the same reason. */}
           {instructionsWidget && (
-            <div className={moduleStyles.instructionsCard}>
+            <div
+              className={moduleStyles.instructionsCard}
+              hidden={instructionsHidden}
+            >
               {widgetFrameFor(instructionsWidget, 'instructions-view', 48)}
             </div>
           )}
@@ -216,6 +231,16 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
               </pre>
             </details>
           </div>
+          {instructionsWidget && (
+            <MuiButton
+              variant="outlined"
+              size="extraSmall"
+              className={moduleStyles.instructionsToggle}
+              onClick={() => setInstructionsHidden(hidden => !hidden)}
+            >
+              {instructionsHidden ? 'Show instructions' : 'Hide instructions'}
+            </MuiButton>
+          )}
         </div>
       </div>
     </div>

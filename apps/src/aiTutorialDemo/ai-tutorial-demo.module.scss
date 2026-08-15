@@ -95,6 +95,8 @@
 }
 
 .stageColumn {
+  // Anchor for the pinned instructions toggle.
+  position: relative;
   flex: 1;
   min-width: 0;
   display: flex;
@@ -102,6 +104,13 @@
   padding: 12px 16px;
   gap: 12px;
   background: var(--background-neutral-secondary, #f3f7f8);
+}
+
+.instructionsToggle {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  background: var(--background-neutral-primary, #fff);
 }
 
 // Only the activity area scrolls; the instructions card above it is pinned

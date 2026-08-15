@@ -52,17 +52,6 @@ const CSS = `
     font-size: 12px;
     color: #56626b;
   }
-  #collapse {
-    border: none;
-    background: none;
-    padding: 2px 6px;
-    font-size: 12px;
-    color: #56626b;
-    cursor: pointer;
-  }
-  #collapse:hover { color: #292f36; }
-  body.collapsed #body,
-  body.collapsed #feedback { display: none; }
   #grade {
     padding: 4px 8px;
     border: 1px solid #d8dbdd;
@@ -93,7 +82,6 @@ const BODY = `
         <option value="high school">HS</option>
       </select>
     </label>
-    <button id="collapse" aria-expanded="true" aria-label="Collapse instructions">&#9662;</button>
   </div>
 </div>
 `;
@@ -117,22 +105,6 @@ const JS = String.raw`
   const feedbackEl = document.getElementById('feedback');
   const gradeEl = document.getElementById('grade');
   const statusEl = document.getElementById('status');
-  const collapseEl = document.getElementById('collapse');
-
-  function setCollapsed(collapsed) {
-    document.body.classList.toggle('collapsed', collapsed);
-    collapseEl.innerHTML = collapsed ? '&#9656;' : '&#9662;';
-    collapseEl.setAttribute('aria-expanded', String(!collapsed));
-    collapseEl.setAttribute(
-      'aria-label',
-      collapsed ? 'Expand instructions' : 'Collapse instructions'
-    );
-    McpApp.reportSize();
-  }
-
-  collapseEl.addEventListener('click', () => {
-    setCollapsed(!document.body.classList.contains('collapsed'));
-  });
 
   // The server is the source of truth: every panel tool returns the full
   // panel state as structuredContent, and this view only renders it. The
@@ -203,9 +175,6 @@ const JS = String.raw`
   McpApp.on('toolResult', result => {
     if (result && result.structuredContent) {
       canonical = result.structuredContent;
-      // New content reopens a collapsed panel: a hidden correction is a
-      // correction the student never sees.
-      setCollapsed(false);
       // New canonical text still honors a previously selected grade.
       applyGrade();
     }
