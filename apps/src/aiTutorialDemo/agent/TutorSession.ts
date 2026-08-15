@@ -6,6 +6,7 @@ import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
 import {generateText} from '@cdo/apps/aiGateway';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
+import {WidgetSlot} from '../mcp/constants';
 import {McpHostRuntime} from '../mcp/hostRuntime';
 
 import {buildSystemPrompt} from './systemPrompt';
@@ -25,7 +26,8 @@ export interface ActiveWidget {
 export interface TutorSnapshot {
   items: ChatItem[];
   busy: boolean;
-  widget: ActiveWidget | null;
+  stageWidget: ActiveWidget | null;
+  instructionsWidget: ActiveWidget | null;
 }
 
 // How the model asks for a tool. The gateway supports structured outputs but
@@ -73,7 +75,10 @@ const WIDGET_EVENT_DEBOUNCE_MS = 1000;
 export class TutorSession {
   private items: ChatItem[] = [];
   private transcript: ModelMessage[] = [];
-  private widget: ActiveWidget | null = null;
+  private widgets: Record<WidgetSlot, ActiveWidget | null> = {
+    stage: null,
+    instructions: null,
+  };
   private busy = false;
   private nextId = 1;
   private pendingEvents: string[] = [];
@@ -84,7 +89,8 @@ export class TutorSession {
 
   constructor(
     private runtime: McpHostRuntime,
-    private onChange: (snapshot: TutorSnapshot) => void
+    private onChange: (snapshot: TutorSnapshot) => void,
+    private gradeLabel: string
   ) {
     const toolNames = runtime.tools.map(tool => tool.name);
     if (toolNames.length === 0) {
@@ -98,7 +104,8 @@ export class TutorSession {
     this.onChange({
       items: [...this.items],
       busy: this.busy,
-      widget: this.widget,
+      stageWidget: this.widgets.stage,
+      instructionsWidget: this.widgets.instructions,
     });
   }
 
@@ -116,8 +123,26 @@ export class TutorSession {
     this.transcript.push({
       role: 'user',
       content:
-        '[session_start] The student just opened the page. Greet them and ' +
-        'begin the lesson.',
+        `[session_start] The student just opened the page. The student is ` +
+        `in ${this.gradeLabel}. Greet them and begin the lesson.`,
+    });
+    this.runTurn();
+  }
+
+  /** From the page's grade dropdown; retargets language and difficulty. */
+  setGradeLevel(gradeLabel: string) {
+    if (gradeLabel === this.gradeLabel) {
+      return;
+    }
+    this.gradeLabel = gradeLabel;
+    this.pushItem({kind: 'status', text: `Grade level set to ${gradeLabel}`});
+    this.transcript.push({
+      role: 'user',
+      content:
+        `[settings] The student's grade level is now ${gradeLabel}. From ` +
+        `here on, write for that level and adjust difficulty. Update the ` +
+        `instructions panel to match; keep the current activity unless it ` +
+        `is clearly wrong for this level.`,
     });
     this.runTurn();
   }
@@ -204,15 +229,17 @@ export class TutorSession {
         if (!output.toolCall) {
           break;
         }
-        const renderedWidget = await this.dispatchToolCall(
+        const renderedSlot = await this.dispatchToolCall(
           output.toolCall.name,
           output.toolCall.argumentsJson
         );
-        // A presented widget ends the turn — the student acts next. Looping
-        // here let the model chain chart → question → editor with no student
-        // input in between; only failed calls (nothing rendered) earn the
-        // model another try within the cap.
-        if (renderedWidget) {
+        // Presenting an activity ends the turn — the student acts next.
+        // (Looping unconditionally once let the model chain chart →
+        // question → editor with no student input in between.) Updating the
+        // passive instructions strip does not end the turn, so the model
+        // can set instructions and then present the activity; failed calls
+        // also continue, for a retry within the cap.
+        if (renderedSlot === 'stage') {
           break;
         }
       }
@@ -232,11 +259,11 @@ export class TutorSession {
     }
   }
 
-  /** Returns true when the call put a widget on screen. */
+  /** Returns the slot the call rendered into, or null if nothing rendered. */
   private async dispatchToolCall(
     name: string,
     argumentsJson: string
-  ): Promise<boolean> {
+  ): Promise<WidgetSlot | null> {
     let args: Record<string, unknown>;
     try {
       args = JSON.parse(argumentsJson || '{}');
@@ -245,7 +272,7 @@ export class TutorSession {
         role: 'user',
         content: `[tool_result for ${name}] Error: argumentsJson was not valid JSON.`,
       });
-      return false;
+      return null;
     }
     this.pushItem({kind: 'status', text: `Tutor is using ${name}`});
     let result: CallToolResult;
@@ -256,14 +283,14 @@ export class TutorSession {
         role: 'user',
         content: `[tool_result for ${name}] Error: ${String(error)}`,
       });
-      return false;
+      return null;
     }
     const tool = this.runtime.getTool(name);
     const template = tool?.uiResourceUri
       ? this.runtime.getTemplate(tool.uiResourceUri)
       : undefined;
-    if (template) {
-      this.widget = {
+    if (template && tool) {
+      this.widgets[tool.slot] = {
         callId: this.nextId++,
         toolName: name,
         html: template,
@@ -276,7 +303,7 @@ export class TutorSession {
       role: 'user',
       content: `[tool_result for ${name}] ${JSON.stringify(result.content)}`,
     });
-    return Boolean(template);
+    return template && tool ? tool.slot : null;
   }
 }
 

@@ -29,9 +29,11 @@ interface WidgetFrameProps {
   onModelContextUpdate: (update: ModelContextUpdate) => void;
   /** Widget submitting text into the chat on the student's behalf. */
   onUserMessage: (text: string) => void;
+  /** Floor for the auto-height; slim strips (instructions) pass a low one. */
+  minHeight?: number;
 }
 
-const MIN_HEIGHT = 160;
+const DEFAULT_MIN_HEIGHT = 160;
 const MAX_HEIGHT = 640;
 
 /**
@@ -58,9 +60,10 @@ const WidgetFrame: React.FunctionComponent<WidgetFrameProps> = ({
   onToolCall,
   onModelContextUpdate,
   onUserMessage,
+  minHeight = DEFAULT_MIN_HEIGHT,
 }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [height, setHeight] = useState(MIN_HEIGHT);
+  const [height, setHeight] = useState(minHeight);
 
   // Callbacks live in refs so the message listener (bound once per mounted
   // view) always sees the latest without re-subscribing.
@@ -157,7 +160,7 @@ const WidgetFrame: React.FunctionComponent<WidgetFrameProps> = ({
           const requested = Number(msg.params?.height);
           if (Number.isFinite(requested)) {
             setHeight(
-              Math.round(Math.min(MAX_HEIGHT, Math.max(MIN_HEIGHT, requested)))
+              Math.round(Math.min(MAX_HEIGHT, Math.max(minHeight, requested)))
             );
           }
           break;

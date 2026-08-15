@@ -3,7 +3,7 @@ import {InMemoryTransport} from '@modelcontextprotocol/sdk/inMemory.js';
 import {McpServer} from '@modelcontextprotocol/sdk/server/mcp.js';
 import {CallToolResult} from '@modelcontextprotocol/sdk/types.js';
 
-import {ToolUiMeta} from './constants';
+import {ToolUiMeta, WidgetSlot} from './constants';
 
 export interface McpServerFactory {
   name: string;
@@ -19,6 +19,7 @@ export interface DiscoveredTool {
   description?: string;
   inputSchema: unknown;
   uiResourceUri?: string;
+  slot: WidgetSlot;
 }
 
 export interface McpActivityEntry {
@@ -98,6 +99,7 @@ export class McpHostRuntime {
         description: tool.description,
         inputSchema: tool.inputSchema,
         uiResourceUri: uiMeta?.resourceUri,
+        slot: uiMeta?.slot ?? 'stage',
       });
 
       // Prefetch templates at connect time, as the spec recommends, so a
