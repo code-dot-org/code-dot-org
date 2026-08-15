@@ -69,6 +69,7 @@ export default class Item extends Collidable {
           ],
         }),
         animationFrameDuration: this.getAnimationFrameDuration(),
+        disableAnimations: options.disableAnimations || false, // Toggle to disable animations
       })
     );
   }
