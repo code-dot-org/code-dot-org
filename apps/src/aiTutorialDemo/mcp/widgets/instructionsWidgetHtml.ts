@@ -18,6 +18,32 @@ const CSS = `
     white-space: pre-wrap;
   }
   #body:empty { display: none; }
+  #feedback {
+    display: none;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-left: 3px solid;
+    border-radius: 0 4px 4px 0;
+    white-space: pre-wrap;
+  }
+  #feedback.validation {
+    display: block;
+    border-color: #2e7d32;
+    background: #e8f5e9;
+    color: #1e4620;
+  }
+  #feedback.suggestion {
+    display: block;
+    border-color: #0093a4;
+    background: #e6f4f6;
+    color: #005560;
+  }
+  #feedback.correction {
+    display: block;
+    border-color: #b45309;
+    background: #fff4e5;
+    color: #7c3a02;
+  }
   #controls {
     display: flex;
     align-items: center;
@@ -26,6 +52,17 @@ const CSS = `
     font-size: 12px;
     color: #56626b;
   }
+  #collapse {
+    border: none;
+    background: none;
+    padding: 2px 6px;
+    font-size: 12px;
+    color: #56626b;
+    cursor: pointer;
+  }
+  #collapse:hover { color: #292f36; }
+  body.collapsed #body,
+  body.collapsed #feedback { display: none; }
   #grade {
     padding: 4px 8px;
     border: 1px solid #d8dbdd;
@@ -41,6 +78,7 @@ const BODY = `
   <div>
     <h2 id="title"></h2>
     <p id="body"></p>
+    <div id="feedback" role="status"></div>
   </div>
   <div id="controls">
     <span id="status" aria-live="polite"></span>
@@ -55,9 +93,16 @@ const BODY = `
         <option value="high school">HS</option>
       </select>
     </label>
+    <button id="collapse" aria-expanded="true" aria-label="Collapse instructions">&#9662;</button>
   </div>
 </div>
 `;
+
+const FEEDBACK_PREFIX = {
+  validation: '✓ ',
+  suggestion: '💡 ',
+  correction: '⚠ ',
+};
 
 const JS = String.raw`
 (function () {
@@ -65,22 +110,51 @@ const JS = String.raw`
   // Must match DEFAULT_INSTRUCTIONS_GRADE on the server: canonical text is
   // written at this level, so selecting it skips the relevel round trip.
   const DEFAULT_GRADE = 'grade 5';
+  const FEEDBACK_PREFIX = ${JSON.stringify(FEEDBACK_PREFIX)};
 
   const titleEl = document.getElementById('title');
   const bodyEl = document.getElementById('body');
+  const feedbackEl = document.getElementById('feedback');
   const gradeEl = document.getElementById('grade');
   const statusEl = document.getElementById('status');
+  const collapseEl = document.getElementById('collapse');
 
+  function setCollapsed(collapsed) {
+    document.body.classList.toggle('collapsed', collapsed);
+    collapseEl.innerHTML = collapsed ? '&#9656;' : '&#9662;';
+    collapseEl.setAttribute('aria-expanded', String(!collapsed));
+    collapseEl.setAttribute(
+      'aria-label',
+      collapsed ? 'Expand instructions' : 'Collapse instructions'
+    );
+    McpApp.reportSize();
+  }
+
+  collapseEl.addEventListener('click', () => {
+    setCollapsed(!document.body.classList.contains('collapsed'));
+  });
+
+  // The server is the source of truth: every panel tool returns the full
+  // panel state as structuredContent, and this view only renders it. The
+  // canonical copy is kept for instant display at the default grade.
   let canonical = null;
 
-  function render(text) {
-    titleEl.textContent = text.title || '';
-    bodyEl.textContent = text.body || '';
+  function render(state) {
+    titleEl.textContent = state.title || '';
+    bodyEl.textContent = state.body || '';
+    if (state.feedback && state.feedback.text) {
+      feedbackEl.className = state.feedback.kind;
+      feedbackEl.textContent =
+        (FEEDBACK_PREFIX[state.feedback.kind] || '') + state.feedback.text;
+    } else {
+      feedbackEl.className = '';
+      feedbackEl.textContent = '';
+    }
     McpApp.reportSize();
   }
 
   // Releveling is the plugin's own capability: a tools/call to this
-  // widget's server, which rewrites the stored canonical text. The tutor
+  // widget's server, which rewrites the stored canonical panel. The tutor
   // model is not involved.
   async function applyGrade() {
     if (!canonical) {
@@ -124,10 +198,17 @@ const JS = String.raw`
     });
   });
 
-  McpApp.on('toolInput', input => {
-    canonical = {title: input.title || '', body: input.body || ''};
-    // New canonical text still honors a previously selected grade.
-    applyGrade();
+  // set_instructions and set_feedback both land here, each carrying the
+  // complete panel state.
+  McpApp.on('toolResult', result => {
+    if (result && result.structuredContent) {
+      canonical = result.structuredContent;
+      // New content reopens a collapsed panel: a hidden correction is a
+      // correction the student never sees.
+      setCollapsed(false);
+      // New canonical text still honors a previously selected grade.
+      applyGrade();
+    }
   });
 
   McpApp.connect();

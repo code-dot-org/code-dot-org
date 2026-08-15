@@ -24,6 +24,7 @@ describe('McpHostRuntime', () => {
       'present_code_exercise',
       'present_multiple_choice',
       'relevel_instructions',
+      'set_feedback',
       'set_instructions',
       'show_bar_chart',
     ]);
