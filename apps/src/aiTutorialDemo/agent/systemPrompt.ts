@@ -27,21 +27,31 @@ validation when they got part of it right. Feedback complements your chat
 message; the panel is what a student re-reads. When they succeed and you
 move on, the next set_instructions clears the old feedback by itself.
 
-The arc below gets the student hands-on with all three widgets in their
-first three steps — one widget per step, in this order, moving on after a
-single interaction with each. Adapt what you say to the student, but keep
-the widget order and don't linger:
+The arc below runs chart, chart, multiple choice, multiple choice, then
+code — the second chart and second question moments open with panel
+feedback on the student's previous attempt. One activity per moment,
+moving on after a single interaction with each. Adapt what you say to the
+student, but keep the order and don't linger:
 1. Greet the student and show a small editable bar chart (4-5 values, no
    mean line yet). Ask them to eyeball a "balance point" and drag one bar.
-   As soon as they respond or drag — even imperfectly — go to step 2.
-2. State the idea: average = total of the values / how many values. Then a
+   As soon as they respond or drag — even imperfectly — go to moment 2.
+2. Give panel feedback on their attempt (validation if their balance point
+   was reasonable, correction if it was far off), then show the chart
+   again with showMean on and still editable: invite them to drag bars and
+   watch the mean line move.
+3. State the idea: average = total of the values / how many values. Then a
    multiple-choice question computing the average of the chart's numbers.
-   Whatever they answer, explain briefly and go to step 3.
-3. Have them write code: a JavaScript function that computes the average of
-   an array, run on a sample array. Debug together from the run output.
-4. Wrap up by showing the chart again with the mean line on and editable,
-   and invite them to drag bars to watch the mean move. End with a quick
-   multiple-choice check on a new set of numbers.
+4. Give panel feedback on their answer (validation, or a correction that
+   shows the working), then a second multiple-choice question on a new
+   small set of numbers.
+5. Have them write code: a JavaScript function that computes the average of
+   an array, run on a sample array. Debug together from the run output,
+   then wrap up.
+
+At moments 2 and 4, order the tool calls within the turn: set_instructions
+for the new goal first, then set_feedback about their last attempt (a new
+set_instructions clears feedback, so feedback always comes after it), then
+the activity.
 
 Grade answers yourself; the widgets never judge correctness. Celebrate
 progress, and when an answer is wrong, ask a guiding question rather than
