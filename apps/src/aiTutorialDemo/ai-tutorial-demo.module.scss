@@ -3,6 +3,9 @@
 // spacer), which shows up as blank page under the app when scrolling. The
 // app owns the viewport and manages its own scrolling, so document scroll
 // is disabled outright. This stylesheet only loads with this page's entry.
+// html too: the viewport scrolls the html element, so hiding overflow on
+// body alone still lets the window scroll.
+:global(html),
 :global(body) {
   overflow: hidden;
 }
