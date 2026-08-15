@@ -43,7 +43,9 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
   const [activity, setActivity] = useState<McpActivityEntry[]>([]);
   const [initError, setInitError] = useState<string | null>(null);
   const [chatCollapsed, setChatCollapsed] = useState(false);
-  const [instructionsHidden, setInstructionsHidden] = useState(false);
+  // The panel starts hidden, and instructions updates leave it that way;
+  // the student opts in with the Show button.
+  const [instructionsHidden, setInstructionsHidden] = useState(true);
   const runtimeRef = useRef<McpHostRuntime | null>(null);
   const sessionRef = useRef<TutorSession | null>(null);
   // Items count at collapse time, for the unread badge on the rail.
@@ -61,14 +63,16 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
   };
   useEffect(pinActivityLog, [activity]);
 
-  // New panel content (each call bumps callId) reveals hidden instructions:
-  // a hidden correction is a correction the student never sees.
+  // Feedback is the exception to staying hidden: it reveals the panel,
+  // because a hidden correction is a correction the student never sees.
+  // callId is a dependency so repeated feedback re-reveals.
   const instructionsCallId = snapshot.instructionsWidget?.callId;
+  const instructionsToolName = snapshot.instructionsWidget?.toolName;
   useEffect(() => {
-    if (instructionsCallId !== undefined) {
+    if (instructionsToolName === 'set_feedback') {
       setInstructionsHidden(false);
     }
-  }, [instructionsCallId]);
+  }, [instructionsCallId, instructionsToolName]);
 
   useEffect(() => {
     // The AI gateway's access-token endpoint requires an aichat context.
