@@ -138,12 +138,12 @@ describe('a `.world` file’s own properties', () => {
       ownProperties: [meta],
     });
     const getter = blocks.find(
-      block => block.type === 'world_get_Tapper_ScoreProperty',
+      block => block.type === 'world_get_WorldsMain_ScoreProperty',
     ) as {message0: string} | undefined;
 
     expect(getter?.message0).toBe('get score');
     expect(
-      blocks.some(block => block.type === 'world_set_Tapper_ScoreProperty'),
+      blocks.some(block => block.type === 'world_set_WorldsMain_ScoreProperty'),
     ).toBe(true);
   });
 
@@ -161,11 +161,65 @@ describe('a `.world` file’s own properties', () => {
     });
 
     expect(
-      blocks.some(block => block.type === 'world_get_Tapper_ScoreProperty'),
+      blocks.some(block => block.type === 'world_get_WorldsMain_ScoreProperty'),
     ).toBe(true);
     expect(
-      blocks.some(block => block.type === 'world_set_Tapper_ScoreProperty'),
+      blocks.some(block => block.type === 'world_set_WorldsMain_ScoreProperty'),
     ).toBe(false);
+  });
+});
+
+describe('renaming', () => {
+  /** The block types minted for a file's own property, whatever it is called. */
+  const typesFor = (root: string, name: string, path: string) => {
+    const contents = JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: root,
+            fields: {NAME: name},
+            next: {block: COUNT},
+          },
+        ],
+      },
+    });
+    const meta =
+      root === 'world_world'
+        ? parseWorldOwnMeta(path, contents)!
+        : parseActorOwnMeta(path, contents)!;
+    return buildDomainPalette([], {ownProperties: [meta]})
+      .blocks.map(block => block.type)
+      .filter(type => type.includes('Score'))
+      .sort();
+  };
+
+  it('a world changes nothing about its own state’s blocks', () => {
+    // The bug this closes. `memberKey` namespaced an own property by the
+    // DECLARING NAME, so renaming ⟨Tapper⟩ to ⟨Coins⟩ re-minted every block as
+    // `world_get_Coins_…`; the saved ones matched nothing, became stand-ins,
+    // and told the learner their project no longer had a RULE called Tapper.
+    expect(typesFor('world_world', 'Coins', 'worlds/main')).toEqual(
+      typesFor('world_world', 'Tapper', 'worlds/main'),
+    );
+  });
+
+  it('an actor changes nothing about its own state’s blocks either', () => {
+    expect(typesFor('world_actor', 'Hero', 'actors/player')).toEqual(
+      typesFor('world_actor', 'Player', 'actors/player'),
+    );
+  });
+
+  it('is namespaced by the file, so two files’ same-named state differs', () => {
+    // What the name was doing in the key, and the only thing it was doing:
+    // keeping one project's two `score`s apart. The file does it and does not
+    // change when a learner retitles something.
+    expect(typesFor('world_actor', 'Player', 'actors/player')).not.toEqual(
+      typesFor('world_actor', 'Player', 'actors/enemy'),
+    );
+    expect(typesFor('world_actor', 'Player', 'actors/player')).toEqual([
+      'world_get_ActorsPlayer_ScoreProperty',
+      'world_set_ActorsPlayer_ScoreProperty',
+    ]);
   });
 });
 

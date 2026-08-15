@@ -232,8 +232,8 @@ describe('the scenario catalogue', () => {
     // The scenario logged `Got one!` for as long as there was nowhere to put a
     // number that outlives the coin raising the event.
     expect(main).toContain('world_rule_property');
-    expect(main).toContain('world_set_Tapper_ScoreProperty');
-    expect(main).toContain('world_get_Tapper_ScoreProperty');
+    expect(main).toContain('world_set_WorldsMain_ScoreProperty');
+    expect(main).toContain('world_get_WorldsMain_ScoreProperty');
     // Shown, not logged: a Label is an ordinary actor that draws its text.
     expect(named('label.actor')).toBe(true);
     expect(named('writing.rule')).toBe(true);
