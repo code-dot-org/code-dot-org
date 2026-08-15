@@ -1,3 +1,12 @@
+// The layout's sticky-footer wrapper reserves 256px below the viewport even
+// with no_footer set (min-height: 100% plus a negative bottom margin and
+// spacer), which shows up as blank page under the app when scrolling. The
+// app owns the viewport and manages its own scrolling, so document scroll
+// is disabled outright. This stylesheet only loads with this page's entry.
+:global(body) {
+  overflow: hidden;
+}
+
 .page {
   display: flex;
   flex-direction: column;
