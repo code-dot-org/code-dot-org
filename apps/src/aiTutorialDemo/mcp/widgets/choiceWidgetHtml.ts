@@ -1,6 +1,7 @@
 import {buildWidgetDocument} from './widgetChrome';
 
 const CSS = `
+  .brand { color: #be185d; }
   ul { list-style: none; margin: 0 0 12px; padding: 0; }
   li { margin: 4px 0; }
   label {
@@ -17,7 +18,10 @@ const CSS = `
 `;
 
 const BODY = `
-<h2 id="question"></h2>
+<div class="widget-header">
+  <h2 id="question"></h2>
+  <span class="brand">Multiple Choice, LLC</span>
+</div>
 <ul id="choices"></ul>
 <button id="submit" class="primary" disabled>Submit answer</button>
 <div id="note" class="sent-note"></div>

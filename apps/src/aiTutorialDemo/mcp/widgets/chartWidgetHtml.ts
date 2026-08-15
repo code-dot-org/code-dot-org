@@ -2,6 +2,7 @@ import {buildWidgetDocument} from './widgetChrome';
 
 const CSS = `
   #title { margin: 0 0 8px; }
+  .brand { color: #6d28d9; }
   /* Dragging a bar must never start a text selection of the labels. The
      drawing keeps a readable width inside a full-width card: scaling a
      4-bar chart to a wide monitor makes comically fat bars and, because
@@ -29,7 +30,10 @@ const CSS = `
 `;
 
 const BODY = `
-<h2 id="title"></h2>
+<div class="widget-header">
+  <h2 id="title"></h2>
+  <span class="brand">Bar Chart Corp</span>
+</div>
 <svg id="chart" viewBox="0 0 480 300" role="img" aria-label="Bar chart"></svg>
 <div id="hint" class="sent-note"></div>
 `;

@@ -1,6 +1,7 @@
 import {buildWidgetDocument} from './widgetChrome';
 
 const CSS = `
+  .brand { color: #15803d; }
   #instructions {
     margin: 0 0 12px;
     padding: 8px 12px;
@@ -41,7 +42,10 @@ const CSS = `
 `;
 
 const BODY = `
-<h2>Code it</h2>
+<div class="widget-header">
+  <h2>Code it</h2>
+  <span class="brand">IDE Company</span>
+</div>
 <div id="instructions"></div>
 <textarea id="editor" wrap="off" spellcheck="false" aria-label="Code editor"></textarea>
 <div id="toolbar">

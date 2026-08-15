@@ -20,6 +20,22 @@ const WIDGET_BASE_CSS = `
     font-size: 16px;
     font-weight: 600;
   }
+  /* Provider branding: title on the left, the widget vendor's mark on the
+     right. Each widget colors .brand itself — it ships with the widget,
+     underscoring that every widget can come from a different provider. */
+  .widget-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
   button.primary {
     padding: 6px 16px;
     border: none;
