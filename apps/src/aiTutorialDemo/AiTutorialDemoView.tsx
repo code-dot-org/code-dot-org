@@ -48,6 +48,18 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
   const sessionRef = useRef<TutorSession | null>(null);
   // Items count at collapse time, for the unread badge on the rail.
   const collapsedAtCountRef = useRef(0);
+  const activityLogRef = useRef<HTMLPreElement>(null);
+
+  // Keep the activity log pinned to the newest entry, same as the chat
+  // list. While <details> is closed the pre has no layout, so the log is
+  // also pinned when it's opened (see onToggle below).
+  const pinActivityLog = () => {
+    const node = activityLogRef.current;
+    if (node) {
+      node.scrollTop = node.scrollHeight;
+    }
+  };
+  useEffect(pinActivityLog, [activity]);
 
   // New panel content (each call bumps callId) reveals hidden instructions:
   // a hidden correction is a correction the student never sees.
@@ -226,9 +238,12 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
                 Your tutor will put activities here.
               </div>
             )}
-            <details className={moduleStyles.activityLog}>
+            <details
+              className={moduleStyles.activityLog}
+              onToggle={pinActivityLog}
+            >
               <summary>MCP activity ({activity.length})</summary>
-              <pre>
+              <pre ref={activityLogRef}>
                 {activity
                   .map(
                     entry =>
