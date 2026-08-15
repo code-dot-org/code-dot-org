@@ -177,7 +177,7 @@ const AiTutorialDemoView: React.FunctionComponent = () => {
       <div className={moduleStyles.header}>
         <div>
           <MuiTypography variant="h1" className={moduleStyles.title}>
-            AI Tutorial Demo
+            MCP Tutor Demo
           </MuiTypography>
           <MuiTypography variant="body3" className={moduleStyles.subtitle}>
             An AI tutor drives interactive widgets over MCP. Lesson: averages.
