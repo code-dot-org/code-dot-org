@@ -33,6 +33,8 @@ import {
 import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
 import {VIEWPORT_TILES} from '../runtime/viewport';
 
+import {SHOW_AS} from './actorIconMeta';
+import {ACTOR_ICON_OPTIONS} from './actorIcons';
 import {
   actorInputExtension,
   actorSubjectExtension,
@@ -62,6 +64,7 @@ import {
   type EnumMeta,
 } from './enums';
 import {
+  actorContextExtension,
   builderWorldExtension,
   runtimeActorExtension,
   traitContextExtension,
@@ -5225,6 +5228,37 @@ const worldTraitStep = traitStepDefinition(false);
 /** The root-shaped one, for an `.actor` file (see `traitStepDefinition`). */
 const worldActorStep = traitStepDefinition(true);
 
+/**
+ * `show as ⟨text⟩` — the symbol a picker draws this actor with.
+ *
+ * The third of three tiers (specs/UI_ACTORS.md): the picture where there is
+ * room for it, this where there is not, and the actor's name when there is no
+ * picture at all. Declaring nothing keeps what a project already does, so this
+ * is a thing to reach for rather than a thing to know.
+ *
+ * WHAT IT IS FOR is an actor whose appearance is CONTENT-DEPENDENT — a Label
+ * looks like whatever this one happens to say, so at 24 pixels every Label in
+ * the project is the same smudge and none of them is identifiable. A symbol
+ * says what the kind IS, which is the question a picker asks.
+ *
+ * It generates nothing. Where an actor is shown is the editor's business, and
+ * the running game has no pickers in it.
+ */
+const worldShowAs = defineBlock({
+  type: SHOW_AS,
+  message0: 'show as %1',
+  args0: [{type: 'field_dropdown', name: 'ICON', options: ACTOR_ICON_OPTIONS}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorContextExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Pick the symbol that stands for this kind of actor where it is too ' +
+    'small to draw — a dropdown of actors, for one. Leave it off and the ' +
+    'picture is used.',
+  generator: noGenerator,
+});
+
 // ── Drawing (specs/DRAWING.md) ───────────────────────────────────────────────
 // A kind that describes its own picture. `each frame`'s sibling and its
 // opposite: a step is handed the world and may change it, a drawing is handed a
@@ -6017,6 +6051,7 @@ export const DOMAIN_BLOCKS = [
   worldRuleStepIn,
   worldBehavior,
   worldTraitStep,
+  worldShowAs,
   // Drawing: the root, the pen, and the five commands (specs/DRAWING.md).
   worldDefineDrawing,
   worldPenFill,
@@ -6092,6 +6127,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // `remove` is runtime-only (there is nothing to un-declare).
       'world_add_effect',
       'world_remove_effect',
+      // What a picker draws this kind with, when it is too small for the
+      // picture (specs/UI_ACTORS.md).
+      SHOW_AS,
       'world_this_actor',
       // The 'any of this kind' counterpart, for a world file naming several.
       'world_actor_kind',

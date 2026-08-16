@@ -19,6 +19,19 @@ export const useTrait = (trait: string) => ({
   fields: {TRAIT: trait},
 });
 
+/**
+ * `show as ⟨icon⟩` — the symbol a picker draws this kind with.
+ *
+ * Every stock interface actor wants one, because every one of them looks like
+ * whatever this instance happens to say: at 24 pixels in a dropdown a Label and
+ * a Button are the same smudge, and there is no name beside it
+ * (specs/UI_ACTORS.md).
+ */
+export const showAs = (icon: string) => ({
+  type: 'world_show_as',
+  fields: {ICON: icon},
+});
+
 /** `this actor`, as a socket's contents. */
 export const me = () => ({block: {type: 'world_this_actor'}});
 

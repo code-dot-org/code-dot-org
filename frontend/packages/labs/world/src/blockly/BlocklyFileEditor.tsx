@@ -67,7 +67,8 @@ import {
 } from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
-import {addActorThumbnails} from './actorThumbnails';
+import {projectActorIcons} from './actorIconMeta';
+import {addActorThumbnails, setActorIcons} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingRule} from './editingRule';
@@ -277,6 +278,14 @@ export const BlocklyFileEditor = ({
     () => projectFiles(currentSources.source),
     [currentSources],
   );
+  // The symbols actors elected, pushed to the fields that draw them. Read from
+  // the files rather than rendered by the sandbox, so unlike a thumbnail this
+  // is there the first time a dropdown is drawn — it is text in a file. Set on
+  // every change rather than merged, so a `show as` row DELETED stops being an
+  // icon (`actorThumbnails`).
+  useEffect(() => {
+    setActorIcons(projectActorIcons(files));
+  }, [files]);
   // Names for the pickers (a block stores a name, and the decoded images are
   // keyed by one); paths for the dropdown registries, which have to tell a
   // backdrop from a sprite and the folder is the only thing that says so.

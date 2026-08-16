@@ -231,6 +231,9 @@ belongs with world-scoped state rather than here.
    editor draws a picker beside a hex field rather than six characters to type.
 6. **A scenario** — the smallest honest one is Tapper with a score, which is
    also the first time `Got one!` becomes something the player can see.
+7. **`show as`**, and per-placement thumbnails — see "Showing one, and where".
+   Neither is needed to make an interface actor work; both are needed before a
+   HUD of five of them can be arranged by looking at it.
 
 ## What to check when it is built
 
@@ -248,42 +251,62 @@ belongs with world-scoped state rather than here.
 - Two Labels of different kinds are separately addressable; two of the same kind
   are not, which is the documented limit rather than a bug.
 
-## Showing one in a picker
+## Showing one, and where
 
 A thumbnail has been answering two questions at once, and nothing noticed
 because they had the same answer: **what does this look like**, and **which kind
 is this**. For a coin they coincide. An interface actor is the first actor whose
-appearance is CONTENT-DEPENDENT — every Label looks different, and at 48 pixels
-they all look like the same smudge — so the two come apart, and a picker wants
-the second one.
+appearance is CONTENT-DEPENDENT, so they come apart — and they come apart
+differently in each of the three places a thumbnail is drawn.
 
-Two of the three symptoms were plain bugs and are fixed:
+**A picker needs the KIND. The canvas needs the INSTANCE.** One image serving
+both is why each is wrong in its own way.
 
-- **The ground belonged to the cell, not to the image.** A thumbnail is a
-  faithful transparent PNG; what it has to be legible against is what the actor
-  will sit on, which is the world's backdrop. White text on transparent over a
-  white palette strip is not a faint cell, it is an EMPTY one, which is what the
-  picker showed above the word "Label".
-- **A drawing's thumbnail is its own shape, at 1:1 unless it is too big.** A
-  sprite fitted into a square is still that sprite; a 96 by 24 Label fitted into
-  48 by 48 is 6px text. The cap is a box, twice as wide as tall, and the map
-  canvas draws a thumbnail at its own aspect too — so a placed Label reads as
-  the strip it will be rather than as a blob.
+| where                | how big               | what it should show |
+| -------------------- | --------------------- | ------------------- |
+| the map canvas       | the actor's real size | this placement      |
+| the map palette cell | 80 by 40, name below  | the kind's picture  |
+| a Blockly dropdown   | 24 by 24, no name     | a symbol            |
 
-### The decision in waiting: an icon
+### The canvas wants the instance, and does not have it
 
-What those do not fix is identity. Five interface kinds that are all grey
-rectangles with different words in them will read as five grey rectangles, and
-the answer every comparable tool reaches for is an abstract icon.
+`MapStage` calls `drawSprite(actor.type, …)`, so every placement of a kind is
+drawn from that KIND's one thumbnail. Five Labels with five different texts are
+five identical strips — in the editor whose whole claim is that arranging a HUD
+is arranging actors. The inspector beside it edits each one's text; the canvas
+cannot show what it just changed.
 
-**Whatever supplies it, it has to live in the FILE.** That is forced, not
-chosen: importing a stock actor copies the workspace into the learner's project
-and leaves the catalogue entry behind, so an `icon` field on `StockActor` would
-vanish at exactly the moment it was wanted. The same constraint that put `Shows
-Text` on a rule rather than on the actor.
+The fix is to render per PLACEMENT. `sendThumbnails` already instantiates an
+actor to draw one; applying that placement's property overrides first is a
+change to what it is asked for rather than to how it works, and the result keys
+on the override values — the same content-keyed cache the texture cache is
+(specs/DRAWING.md). A placement with no overrides shares the kind's picture,
+which is most of them.
 
-So: a row under `define actor`, beside `use trait`, where an actor already says
-things about itself —
+This is the piece that turns the map from a grid of grey strips into the HUD.
+
+### The palette cell wants the picture, and has it
+
+80 by 40 with the name printed underneath is enough room for a Label to read as
+a Label. Nothing more is wanted here.
+
+### The dropdown wants a symbol, because it can hold nothing else
+
+`pictured` returns an image OR a name — Blockly's dropdown takes one or the
+other, never both — so there is no name under a picture to save it, and the
+image is 24 by 24. We own that number, and Blockly takes a width and a height,
+so a 48 by 12 strip is available; the arithmetic still loses, because a 96 by 24
+canvas shrunk to a menu row puts its 12px text at 6px.
+
+So this is the surface that forces the icon, and it is the only one.
+
+## The icon
+
+**Elective, and the third of three tiers.** The picture where there is room; the
+icon where there is not; the name when there is no picture at all, which is the
+fallback `pictured` already has for a thumbnail that has not arrived. An actor
+that declares nothing keeps exactly today's behaviour, so a learner never has to
+meet the idea.
 
 ```
 define actor named ⟨Label⟩
@@ -291,23 +314,45 @@ define actor named ⟨Label⟩
   show as ⟨text icon⟩
 ```
 
-— generating nothing, read by the same walk that reads a file's own properties,
-and defaulting to the drawing when the row is absent. A FIELD on `define actor`
-was rejected for the reason VIEWPORT.md rejected a layer dropdown on every
-placement block: it puts an authoring decision on the first block a learner ever
-touches.
+**It lives in the FILE**, which is forced rather than chosen: importing a stock
+actor copies the workspace into the learner's project and leaves the catalogue
+entry behind, so an `icon` field on `StockActor` would vanish at exactly the
+moment it was wanted. The same constraint that put `Shows Text` on a rule.
 
-The vocabulary is the one the lab already speaks — `config.ts` maps file kinds
-to Font Awesome names — and the picker should render the icon COMPONENT rather
-than rasterizing one in the sandbox, which keeps icons out of the thumbnail
-pipeline entirely: one more field beside `thumbnails`, and the cell draws one or
-the other.
+A ROW rather than a field on `define actor`, for the reason VIEWPORT.md rejected
+a layer dropdown on every placement block: a field puts an authoring decision on
+the first block a learner ever touches. Generating nothing, read by the walk that
+already reads a file's own declarations (`ownProperties`).
 
-**Not built yet, deliberately.** Every palette cell already carries the actor's
-name, and with the ground and the shape fixed a Label reads. A block that two
-stock actors would use has not earned itself; it earns itself at about five,
-which is also when the file tree would want the same declaration instead of one
-icon for every `.actor`.
+**An SVG data URI, not an icon component.** Blockly's dropdown option is
+`{src, width, height, alt}`, so on the surface that needs this most an icon has
+to BE an image. A glyph inlined as SVG is crisp at any size and needs no font
+loaded, where a component would have to be rasterized anyway. The vocabulary is
+the one the lab already speaks — `config.ts` maps file kinds to Font Awesome
+names, and `freeIconShims` is what happens when one of them is missing.
+
+### Two answers rejected, and why
+
+**"Show the name instead of the picture when the thumbnail is not square."**
+Attractive because it needs no declaration and no threshold. It is a proxy for
+"content-dependent" wearing a structural costume, and it mispredicts in both
+directions: a Health Bar is 64 by 8 and its bar IS its identity, while a square
+Button would keep a picture whose content varies. It also throws away real
+information — a Label and a Button have distinct and useful appearances, and a
+row of words is a worse picker than a row of pictures, which is the argument
+`pictured` opens with.
+
+**"Bake the world's backdrop into the thumbnail."** There is no world to ask. An
+`.actor` belongs to none, a project may hold several with different backgrounds,
+and a thumbnail is made per kind. What the palette cell paints today is
+`DEFAULT_BACKDROP_COLOR` — the default, not the project's, and the code calls it
+the world's backdrop, which is a guess dressed as a fact. It should say the
+PICKER's ground, because that is what it is.
+
+And any fixed ground is a guess that fails for some drawing: white text needs a
+dark one, black text needs a light one. That is a further argument for the icon
+being the author's choice rather than something derived — the author is the one
+who knows what they drew.
 
 ## What this does not solve
 

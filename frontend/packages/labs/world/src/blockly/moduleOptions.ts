@@ -12,7 +12,8 @@ import {IMPORT_ACTOR_VALUE} from '../actors/actorImport';
 import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
 import type {EffectParameter} from '../effect/model/types';
 
-import {actorThumbnail} from './actorThumbnails';
+import {actorIconImage} from './actorIcons';
+import {actorIcon, actorThumbnail} from './actorThumbnails';
 import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
 import {actorIdFromName, localActorOptions} from './localActors';
@@ -415,7 +416,13 @@ function pictured(
   value: string,
   thumbnailKey: string = value,
 ): DropdownOptions[number] {
-  const src = actorThumbnail(thumbnailKey);
+  // The elected symbol first. This dropdown is the one surface that can hold
+  // neither the picture nor the name — 24 by 24, and an option is an image OR
+  // text — so an actor whose appearance is content-dependent is unidentifiable
+  // here however well it is drawn (specs/UI_ACTORS.md).
+  const src =
+    actorIconImage(actorIcon(thumbnailKey) ?? '') ??
+    actorThumbnail(thumbnailKey);
   return src
     ? [{src, width: ACTOR_ICON, height: ACTOR_ICON, alt: label}, value]
     : [label, value];
