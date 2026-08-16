@@ -22,6 +22,16 @@
   background: var(--background-neutral-primary, #fff);
 }
 
+// Same card chrome as .questionCard, but block layout instead of a flex
+// row - this is the state where the card shows the edit form in place of
+// its summary row.
+.questionCardEditing {
+  padding: 12px 16px;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 0.25rem;
+  background: var(--background-neutral-primary, #fff);
+}
+
 .questionCardIndex {
   flex-shrink: 0;
   min-width: 1.5em;

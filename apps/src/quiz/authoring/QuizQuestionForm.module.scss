@@ -1,0 +1,62 @@
+// Layout for the multiple choice question create/edit form. Modeled on
+// Moshe's assessment builder prototype (QuestionItemEditor.module.scss):
+// vertical sections, an option list of radio + text field + remove-button
+// rows, and an "add" button that doesn't stretch full width. His CSS
+// variables (--text-body-xs, --font-family-main, ...) aren't in our
+// component-library-styles, so this uses our own real tokens instead.
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sectionHeading {
+  color: var(--text-neutral-quaternary);
+}
+
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 96px;
+  padding: 8px 12px;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 0.25rem;
+  font: inherit;
+  resize: vertical;
+}
+
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.optionField {
+  flex: 1;
+  min-width: 0;
+}
+
+.rowActions {
+  flex-shrink: 0;
+}
+
+.addRow {
+  align-self: flex-start;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}

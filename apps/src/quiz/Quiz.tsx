@@ -7,7 +7,7 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import QuizQuestionAuthor from './authoring/QuizQuestionAuthor';
+import QuizBuilder from './authoring/QuizBuilder';
 import QuizQuestion, {QuizQuestionSummary} from './QuizQuestion';
 
 import styles from './quiz-view.module.scss';
@@ -152,8 +152,9 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       <div className={styles.divider} />
       <div className={styles.content}>
         {isAuthoringMode ? (
-          <QuizQuestionAuthor
+          <QuizBuilder
             quizId={levelId as number}
+            quizTitle={title || name}
             initialQuestions={quizQuestions || []}
           />
         ) : (
