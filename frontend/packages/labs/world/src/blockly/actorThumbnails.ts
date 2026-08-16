@@ -1,4 +1,5 @@
-// What an actor looks like, for the parts of Blockly that draw one.
+// What an actor is DRAWN AS, for the parts of Blockly that draw one — its
+// picture, or the symbol it elected instead (specs/UI_ACTORS.md).
 //
 // The sandbox renders these (it is the only thing that can: an actor's
 // appearance is its rules, its traits and its animation frame resolved
@@ -31,4 +32,23 @@ export function actorThumbnail(type: string): string | undefined {
 /** Everything known, for a caller that wants to draw several. */
 export function actorThumbnails(): Record<string, string> {
   return thumbnails;
+}
+
+/**
+ * Elected icons by actor key — the `show as` row, read out of the file.
+ *
+ * Beside the thumbnails because it answers the same question for the same
+ * callers, and REPLACED rather than merged: a thumbnail arrives once and stays
+ * true, while an icon is whatever the file says right now, so a row deleted
+ * from a `.actor` has to stop being an icon.
+ */
+let icons: Record<string, string> = {};
+
+export function setActorIcons(next: Record<string, string>): void {
+  icons = next;
+}
+
+/** The icon an actor elected, or undefined if it elected none. */
+export function actorIcon(key: string): string | undefined {
+  return icons[key];
 }

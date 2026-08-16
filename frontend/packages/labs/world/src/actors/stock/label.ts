@@ -16,6 +16,7 @@ import {
   fill,
   setText,
   textOf,
+  showAs,
   useTrait,
   words,
 } from './workspace';
@@ -28,6 +29,7 @@ export const labelActor = actorFile(
   'Label',
   [
     useTrait('Writing#ShowsTextTrait'),
+    showAs('text'),
     // A default, so a Label dragged onto a map is visible before anybody has
     // typed anything into it — and so the picker has a picture to show.
     setText('TextProperty', words('Label')),

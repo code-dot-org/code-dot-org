@@ -158,6 +158,21 @@ export const builderWorldExtension = builderContextExtension(
     'inside an event there is no world being built to add to.',
 );
 
+export const SHOW_AS_CONTEXT_EXTENSION = 'world_needs_actor_context';
+
+/**
+ * For `show as`, which has ONE home and would say nothing anywhere else.
+ *
+ * It is read off the file by a walk over `define actor` roots
+ * (`actorIconMeta`), so a row that has drifted out of one is not merely inert —
+ * nothing will ever look at it. A block that says nothing has to say so.
+ */
+export const actorContextExtension = builderContextExtension(
+  SHOW_AS_CONTEXT_EXTENSION,
+  ['world_actor'],
+  'This says how a picker draws this kind of actor. Chain it under "define actor".',
+);
+
 export const TRAIT_CONTEXT_EXTENSION = 'world_needs_trait_context';
 
 /**

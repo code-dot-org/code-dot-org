@@ -18,6 +18,7 @@ import {
   outline,
   rectangle,
   setText,
+  showAs,
   swatch,
   textOf,
   useTrait,
@@ -34,6 +35,7 @@ export const buttonActor = actorFile(
     // The whole of what makes it pressable. `is clicked with ⟨button⟩` is
     // raised on this actor alone, so a handler needs no hit test of its own.
     useTrait('Mouse#CanBeClickedTrait'),
+    showAs('button'),
     setText('TextProperty', words('Button')),
   ],
   {

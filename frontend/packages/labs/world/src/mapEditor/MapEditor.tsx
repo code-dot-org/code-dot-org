@@ -162,13 +162,19 @@ export const MapEditor = ({
             onClick={() => setSelected(path === selected ? null : path)}
             aria-pressed={path === selected}
           >
-            {/* THE GROUND IS THE CELL'S, not the image's. A thumbnail is a
-                faithful transparent PNG of what the actor looks like; what it
-                needs to be legible against is what it will sit on, which is
-                the world's backdrop. Putting the colour here rather than
-                baking it into the picture keeps one answer for sprites and
-                drawings alike — and a white-on-transparent Label over a white
-                strip was an empty cell (specs/UI_ACTORS.md). */}
+            {/* THE GROUND IS THE CELL'S, not the image's, and it is the
+                PICKER'S ground rather than any world's. A thumbnail is a
+                faithful transparent PNG, and without something behind it a
+                white-on-transparent Label over a white strip was not a faint
+                cell but an empty one.
+
+                What it is NOT is a claim about where the actor will sit: an
+                `.actor` belongs to no world, a project may hold several with
+                different backgrounds, and a thumbnail is made per kind. This
+                is the lab's default backdrop used as a dark neutral, which
+                reads for most drawings and cannot read for all of them — a
+                black-lettered Label needs a light ground and will not get one.
+                That is what the elected icon is for (specs/UI_ACTORS.md). */}
             <span
               className={styles.thumb}
               style={{background: DEFAULT_BACKDROP_COLOR}}
