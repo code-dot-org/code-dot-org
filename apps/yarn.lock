@@ -4044,6 +4044,21 @@ __metadata:
   languageName: node
   linkType: soft
 
+"@code-dot-org/markdown@portal:../frontend/packages/markdown/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/markdown@portal:../frontend/packages/markdown/::locator=blockly-mooc%40workspace%3A."
+  dependencies:
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/core": "workspace:*"
+  peerDependencies:
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
+    "@mui/material": ^7.0.0
+    classnames: ^2.5.1
+    react: ^18.0.0 || ^19.0.0
+  languageName: node
+  linkType: soft
+
 "@code-dot-org/maze@npm:2.16.0":
   version: 2.16.0
   resolution: "@code-dot-org/maze@npm:2.16.0"
@@ -11387,6 +11402,7 @@ __metadata:
     "@code-dot-org/js-interpreter": "npm:1.3.13"
     "@code-dot-org/js-numbers": "npm:0.1.0-cdo.0"
     "@code-dot-org/lesson-deep-dive": "portal:../frontend/packages/lesson-deep-dive/"
+    "@code-dot-org/markdown": "portal:../frontend/packages/markdown/"
     "@code-dot-org/maze": "npm:2.16.0"
     "@code-dot-org/ml-activities": "npm:0.1.3"
     "@code-dot-org/ml-playground": "npm:0.0.52"
