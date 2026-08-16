@@ -452,6 +452,8 @@ Dashboard::Application.routes.draw do
         get 'edit_exemplar', to: 'levels#edit_exemplar', as: 'edit_exemplar'
         get 'author_quiz_questions', to: 'levels#author_quiz_questions', as: 'author_quiz_questions'
         post 'quiz_questions', to: 'levels#create_quiz_question', as: 'create_quiz_question'
+        get 'quiz_questions/:question_id', to: 'levels#show_quiz_question', as: 'show_quiz_question'
+        put 'quiz_questions/:question_id', to: 'levels#update_quiz_question', as: 'update_quiz_question'
         get 'get_serialized_maze'
         post 'update_properties'
         post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'

@@ -323,16 +323,42 @@ class LevelsController < ApplicationController
     next_position = (@level.quiz_level_questions.maximum(:position) || 0) + 1
     QuizLevelQuestion.create!(level: @level, quiz_question: question, page: 1, position: next_position)
 
-    render status: :created, json: {
-      id: question.id,
-      type: question.type,
-      questionName: question.question_name,
-      stem: question.question['stem'],
-      choices: question.question['choices'],
-      # Unlike the student-facing payload (Quiz#summarize_for_lab2_properties),
-      # the levelbuilder who just set this should see it reflected back.
-      correctChoiceId: question.question['correct_choice_id'],
-    }
+    render status: :created, json: quiz_question_json(question)
+  rescue StandardError => exception
+    render status: :bad_request, json: {error: exception.message}
+  end
+
+  # GET /levels/:id/quiz_questions/:question_id
+  #
+  # Authoring-only counterpart to Quiz#summarize_for_lab2_properties: that
+  # method deliberately excludes correct_choice_id from the payload shared
+  # with the student-facing quiz-taking UI (see its comment), so editing an
+  # existing question's answer needs its own fetch instead of reusing
+  # levelProperties.quizQuestions.
+  def show_quiz_question
+    return head :not_found unless @level.is_a?(Quiz)
+
+    question = @level.quiz_questions.find(params[:question_id])
+    render json: quiz_question_json(question)
+  end
+
+  # PUT /levels/:id/quiz_questions/:question_id
+  #
+  # POC scope note: assumes MultipleChoiceQuestion-shaped params, same as
+  # create_quiz_question - only MultipleChoiceQuestion rows exist in the DB for now.
+  def update_quiz_question
+    return head :not_found unless @level.is_a?(Quiz)
+
+    question = @level.quiz_questions.find(params[:question_id])
+    question.update!(
+      question_name: quiz_question_params[:questionName],
+      question: {
+        stem: quiz_question_params[:stem],
+        choices: (quiz_question_params[:choices] || []).map(&:to_h),
+        correct_choice_id: quiz_question_params[:correctChoiceId],
+      }
+    )
+    render json: quiz_question_json(question)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
   end
@@ -779,6 +805,20 @@ class LevelsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the allow-list through.
   private def quiz_question_params
     params.permit(:questionName, :stem, :correctChoiceId, choices: [:id, :text])
+  end
+
+  # Shared by create/show/update_quiz_question. Includes correct_choice_id -
+  # callers of this must be authoring-only endpoints, never the student-
+  # facing payload (that's Quiz#summarize_for_lab2_properties).
+  private def quiz_question_json(question)
+    {
+      id: question.id,
+      type: question.type,
+      questionName: question.question_name,
+      stem: question.question['stem'],
+      choices: question.question['choices'],
+      correctChoiceId: question.question['correct_choice_id'],
+    }
   end
 
   private def level_params
