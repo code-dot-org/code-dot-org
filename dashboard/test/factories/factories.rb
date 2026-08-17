@@ -1464,26 +1464,12 @@ FactoryBot.define do
 
     trait :with_rubric do
       rubric do
-        {
-          'criteria' => [
-            {
-              'key' => 'accuracy',
-              'description' => 'The answer is mathematically correct',
-              'scale' => [
-                {'level' => 'meets', 'description' => 'Answer is correct'},
-                {'level' => 'developing', 'description' => 'Answer is partially correct'},
-              ],
-            },
-            {
-              'key' => 'explanation',
-              'description' => 'The reasoning is clearly explained',
-              'scale' => [
-                {'level' => 'meets', 'description' => 'Reasoning is complete and clear'},
-                {'level' => 'developing', 'description' => 'Reasoning is incomplete'},
-              ],
-            },
-          ],
-        }
+        [
+          {'level' => 0, 'description' => 'No answer is present'},
+          {'level' => 1, 'description' => 'Answer is partially correct'},
+          {'level' => 2, 'description' => 'Answer is correct'},
+          {'level' => 3, 'description' => 'Answer is correct and the reasoning is clearly explained'},
+        ]
       end
     end
   end
