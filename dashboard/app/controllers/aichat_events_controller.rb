@@ -181,13 +181,12 @@ class AichatEventsController < ApplicationController
     return {error: nil} unless assistant_message?(event)
     return {error: nil, status: :placeholder} if failed_completion_placeholder?(event)
 
-    # Consumes the signature's single use: this is the write a replay would
-    # duplicate. AichatRequestsController#update deliberately does not.
-    result = AichatResponseSignature.verify_and_consume(
+    result = AichatResponseSignature.verify(
       signature: event[:responseSignature],
       response_text: event[:chatMessageText],
       user: current_user,
-      context: context
+      context: context,
+      purpose: :history
     )
     return {error: nil, status: result.status} if result.verified?
 

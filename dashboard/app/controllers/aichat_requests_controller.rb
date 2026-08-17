@@ -128,14 +128,16 @@ class AichatRequestsController < ApplicationController
     # worker did not sign is client-authored, whether the client omitted the
     # signature or never had one.
     #
-    # Verified without consuming the nonce. The signature is spent once, at the
-    # insert in log_chat_event; burning it here would make that insert look like
-    # a replay.
+    # Single use is scoped to :request_response, so spending it here does not
+    # spend the separate use log_chat_event needs to admit the event to history.
+    # A repeat PUT with the same signature reports :replayed and leaves the
+    # already-stored response alone.
     result = AichatResponseSignature.verify(
       signature: params[:responseSignature],
       response_text: params[:response],
       user: current_user,
-      context: signature_context(request)
+      context: signature_context(request),
+      purpose: :request_response
     )
     log_signature_result(result, request)
 

@@ -40,23 +40,15 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     JWT.encode(claims, @key, 'RS256')
   end
 
-  def verify(signature, response_text, user: nil, context: nil, pem: :default)
-    call(:verify, signature, response_text, user: user, context: context, pem: pem)
-  end
-
-  def verify_and_consume(signature, response_text, user: nil, context: nil, pem: :default)
-    call(:verify_and_consume, signature, response_text, user: user, context: context, pem: pem)
-  end
-
-  def call(method, signature, response_text, user:, context:, pem:)
+  def verify(signature, response_text, user: nil, context: nil, pem: :default, purpose: :history)
     key = pem == :default ? @public_pem : pem
     AichatResponseSignature.with_public_key(key) do
-      AichatResponseSignature.public_send(
-        method,
+      AichatResponseSignature.verify(
         signature: signature,
         response_text: response_text,
         user: user || @user,
-        context: context || @context
+        context: context || @context,
+        purpose: purpose
       )
     end
   end
@@ -167,43 +159,63 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     assert_equal :invalid, verify(sign(incomplete), text).status
   end
 
-  test 'verify_and_consume burns the nonce so the same signature cannot be reused' do
+  test 'a signature cannot be reused for the same purpose' do
     text = 'hello'
     signature = sign(claims_for(text))
 
-    assert_equal :verified, verify_and_consume(signature, text).status
-    replay = verify_and_consume(signature, text)
+    assert_equal :verified, verify(signature, text, purpose: :history).status
+    replay = verify(signature, text, purpose: :history)
     assert_equal :replayed, replay.status
     refute replay.verified?
+    assert_match(/already used for history/, replay.error)
   end
 
-  test 'verify_and_consume does not burn the nonce when verification fails' do
+  test 'single use is per purpose, so the two callers do not contend' do
+    # AichatRequestsController#update spends :request_response to decide whether
+    # to store the response; AichatEventsController#log_chat_event then spends
+    # :history to admit the event. One shared counter would make the second call
+    # -- the one that protects chat history -- report :replayed.
+    text = 'hello'
+    signature = sign(claims_for(text))
+
+    assert_equal :verified, verify(signature, text, purpose: :request_response).status
+    assert_equal :verified, verify(signature, text, purpose: :history).status
+    # ...and each is still single-use in its own right.
+    assert_equal :replayed, verify(signature, text, purpose: :request_response).status
+    assert_equal :replayed, verify(signature, text, purpose: :history).status
+  end
+
+  test 'order of the two purposes does not matter' do
+    text = 'hello'
+    signature = sign(claims_for(text))
+
+    assert_equal :verified, verify(signature, text, purpose: :history).status
+    assert_equal :verified, verify(signature, text, purpose: :request_response).status
+  end
+
+  test 'does not spend a use when verification fails' do
     # The nonce is consumed last, so a rejected attempt must not lock out a
     # legitimate retry carrying the same signature.
     signature = sign(claims_for('the real response'))
 
-    assert_equal :invalid, verify_and_consume(signature, 'a forged response').status
-    assert_equal :verified, verify_and_consume(signature, 'the real response').status
+    assert_equal :invalid, verify(signature, 'a forged response').status
+    assert_equal :verified, verify(signature, 'the real response').status
   end
 
-  test 'verify leaves the nonce unspent for the insert to consume' do
-    # AichatRequestsController#update verifies to decide whether to store
-    # `response`, then AichatEventsController#log_chat_event verifies the same
-    # signature to admit the event. If the first call consumed the nonce, the
-    # second -- the one that matters -- would report :replayed.
+  test 'rejects an unknown purpose rather than opening a fresh keyspace' do
+    # A typo would otherwise verify happily while giving that caller no replay
+    # protection at all.
     text = 'hello'
     signature = sign(claims_for(text))
 
-    assert_equal :verified, verify(signature, text).status
-    assert_equal :verified, verify(signature, text).status
-    assert_equal :verified, verify_and_consume(signature, text).status
-    assert_equal :replayed, verify_and_consume(signature, text).status
+    assert_raises(ArgumentError) {verify(signature, text, purpose: :typo)}
   end
 
-  test 'nonces are namespaced per consumer' do
-    # Burning for chat history must not preclude another consumer of the same
-    # signature from using it for its own purpose.
-    assert_match %r{^aichat_response_signature/history}, AichatResponseSignature::NONCE_NAMESPACE
+  test 'nonces are namespaced per consumer and per purpose' do
+    # Namespaced so another consumer of the same store cannot collide with us,
+    # then scoped by purpose so our own two callers cannot collide either.
+    assert_equal 'aichat_response_signature', AichatResponseSignature::NONCE_NAMESPACE
+    assert_equal %i[history request_response], AichatResponseSignature::PURPOSES
   end
 
   test 'nonce TTL outlives the signature plus leeway and skew' do
