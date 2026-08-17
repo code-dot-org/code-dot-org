@@ -89,71 +89,31 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     assert_equal 0, contact_record.data['opt_in']
   end
 
-  test 'retrieve_query_results does not consider the reader when DCDO flag is off' do
+  test 'use_reporting_db_for_selects? follows the DCDO flag' do
     DCDO.stubs(:get).with(ContactRollupsV2::USE_READER_DCDO_KEY, false).returns(false)
-    ContactRollupsV2.expects(:wait_for_reader_catch_up).never
+    refute ContactRollupsV2.use_reporting_db_for_selects?
 
-    refute ContactRollupsV2.use_reader_for_selects?
-  end
-
-  test 'use_reader_for_selects? is true when flag is on and replicas caught up' do
     DCDO.stubs(:get).with(ContactRollupsV2::USE_READER_DCDO_KEY, false).returns(true)
-    ContactRollupsV2.stubs(:wait_for_reader_catch_up).returns(true)
-
-    assert ContactRollupsV2.use_reader_for_selects?
+    assert ContactRollupsV2.use_reporting_db_for_selects?
   end
 
-  test 'use_reader_for_selects? falls back to the writer when replicas lag' do
-    DCDO.stubs(:get).with(ContactRollupsV2::USE_READER_DCDO_KEY, false).returns(true)
-    ContactRollupsV2.stubs(:wait_for_reader_catch_up).returns(false)
-
-    refute ContactRollupsV2.use_reader_for_selects?
-  end
-
-  test 'retrieve_query_results routes to the reader pool when enabled' do
+  test 'retrieve_query_results routes to the reporting pool when enabled' do
     Rails.env.stubs(:test?).returns(false)
-    ContactRollupsV2.stubs(:use_reader_for_selects?).returns(true)
-    ContactRollupsV2::DASHBOARD_DB_READER.expects(:[]).with('SELECT 1').returns(:reader_dataset)
+    ContactRollupsV2.stubs(:use_reporting_db_for_selects?).returns(true)
+    # Sleeps to let replicas catch up before reading tables written earlier in the run.
+    ContactRollupsV2.expects(:sleep).with(ContactRollupsV2::SAFE_AURORA_REPLICA_LAG_SEC)
+    ContactRollupsV2::DASHBOARD_REPORTING_DB.expects(:[]).with('SELECT 1').returns(:reporting_dataset)
 
-    assert_equal :reader_dataset, ContactRollupsV2.retrieve_query_results('SELECT 1')
+    assert_equal :reporting_dataset, ContactRollupsV2.retrieve_query_results('SELECT 1')
   end
 
-  test 'retrieve_query_results routes to the writer pool when reader is disabled' do
+  test 'retrieve_query_results routes to the writer pool when reporting is disabled' do
     Rails.env.stubs(:test?).returns(false)
-    ContactRollupsV2.stubs(:use_reader_for_selects?).returns(false)
+    ContactRollupsV2.stubs(:use_reporting_db_for_selects?).returns(false)
+    ContactRollupsV2.expects(:sleep).never
     ContactRollupsV2::DASHBOARD_DB_WRITER.expects(:[]).with('SELECT 1').returns(:writer_dataset)
 
     assert_equal :writer_dataset, ContactRollupsV2.retrieve_query_results('SELECT 1')
-  end
-
-  test 'wait_for_reader_catch_up passes immediately when no replicas report' do
-    lag_result = mock
-    lag_result.stubs(:first).returns({max_lag_ms: nil})
-    ContactRollupsV2::DASHBOARD_DB_WRITER.stubs(:[]).with(ContactRollupsV2::REPLICA_LAG_QUERY).returns(lag_result)
-
-    assert ContactRollupsV2.wait_for_reader_catch_up
-  end
-
-  test 'wait_for_reader_catch_up passes once lag is below elapsed time' do
-    # Zero lag is always below the elapsed time of the first check.
-    lag_result = mock
-    lag_result.stubs(:first).returns({max_lag_ms: 0.0})
-    ContactRollupsV2::DASHBOARD_DB_WRITER.stubs(:[]).with(ContactRollupsV2::REPLICA_LAG_QUERY).returns(lag_result)
-
-    assert ContactRollupsV2.wait_for_reader_catch_up
-  end
-
-  test 'wait_for_reader_catch_up times out when replicas keep lagging' do
-    lag_result = mock
-    lag_result.stubs(:first).returns({max_lag_ms: 10_000_000.0})
-    ContactRollupsV2::DASHBOARD_DB_WRITER.stubs(:[]).with(ContactRollupsV2::REPLICA_LAG_QUERY).returns(lag_result)
-    ContactRollupsV2.stubs(:sleep)
-
-    # Time.now advances past the timeout on the second loop iteration.
-    start_time = Time.now
-    Time.stubs(:now).returns(start_time, start_time, start_time + ContactRollupsV2::READER_CATCH_UP_TIMEOUT_SEC + 1)
-
-    refute ContactRollupsV2.wait_for_reader_catch_up
   end
 
   test 'dry run makes no Pardot API calls' do
