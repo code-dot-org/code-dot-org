@@ -119,15 +119,17 @@ const ControlButtons: React.FunctionComponent = () => {
 
   // Returns null if the code action buttons (run, and in the future, test) should be enabled,
   // otherwise returns the help tip text explaining why they are disabled.
-  // We disable the run button if the environment failed to set up or is still loading
+  // We disable the run button if the environment is still loading
   // OR if this is a predict level, we are not in start mode,
   // and the user has not yet written a prediction.
+  // A failed environment gets no tooltip: the workspace shows an alert for it,
+  // and the loading tooltip below would otherwise claim it is still loading.
   const getDisabledCodeActionsTooltip = () => {
-    let tooltip = null;
     if (codeEnvironmentError) {
-      tooltip =
-        'We could not set up your environment. See the console for details.';
-    } else if (awaitingPredictSubmit) {
+      return null;
+    }
+    let tooltip = null;
+    if (awaitingPredictSubmit) {
       tooltip = codebridgeI18n.predictRunDisabledTooltip();
     } else if (!hasLoadedEnvironment) {
       tooltip = codebridgeI18n.loadingEnvironmentTooltip();
@@ -138,6 +140,8 @@ const ControlButtons: React.FunctionComponent = () => {
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
+  const disableCodeActions =
+    !!codeEnvironmentError || !!disabledCodeActionsTooltip;
   const isEnvironmentLoading = !hasLoadedEnvironment && !codeEnvironmentError;
 
   return (
@@ -168,7 +172,7 @@ const ControlButtons: React.FunctionComponent = () => {
             variant="contained"
             color="primary"
             size="extraSmall"
-            disabled={!!disabledCodeActionsTooltip}
+            disabled={disableCodeActions}
             loading={isEnvironmentLoading}
             loadingPosition="start"
             className={moduleStyles.controlButton}
