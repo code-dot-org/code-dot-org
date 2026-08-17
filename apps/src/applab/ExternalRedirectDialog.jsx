@@ -51,7 +51,7 @@ class ExternalRedirectDialog extends React.Component {
         }
         customContent={
           response === REDIRECT_RESPONSE.APPROVED && (
-            <Box>
+            <Box id="dsco-dialog-description">
               <MuiTypography variant="h3">
                 {i18n.redirectConfirmation()}
               </MuiTypography>
