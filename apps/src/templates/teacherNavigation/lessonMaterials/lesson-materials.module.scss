@@ -66,37 +66,35 @@
   font-size: 16px;
 }
 
-// Chip glyphs take the `secondary` text step: `primary` is the mid-ramp
-// value and misses 3:1 against its own `light` wash.
 .slides {
   background-color: var(--background-warning-light);
-  color: var(--text-warning-secondary);
+  color: var(--text-warning-primary);
 }
 
 .video {
   background-color: var(--background-success-light);
-  color: var(--text-success-secondary);
+  color: var(--text-success-primary);
 }
 
 .lessonPlan {
   background-color: var(--background-brand-light);
-  color: var(--text-brand-secondary);
+  color: var(--text-brand-primary);
 }
 
 .link {
   background-color: var(--background-accent-pink-light);
-  color: var(--text-accent-pink-secondary);
+  color: var(--text-accent-pink-primary);
 }
 
 .files {
   background-color: var(--background-info-light);
-  color: var(--text-info-secondary);
+  color: var(--text-info-primary);
 }
 
 // Shares the lesson-plan color: the CADS brand family has one hue.
 .custom {
   background-color: var(--background-brand-light);
-  color: var(--text-brand-secondary);
+  color: var(--text-brand-primary);
 }
 
 .noUnitContainer {
