@@ -16,7 +16,10 @@ import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
+import {
+  DEFAULT_MINI_APP_HEIGHT,
+  DEFAULT_MINI_APP_WIDTH,
+} from '../Workspace/constants';
 import {scaleMiniApp} from '../Workspace/outputHelpers';
 
 import moduleStyles from './mini-app-preview.module.scss';
@@ -39,8 +42,8 @@ const NeighborhoodPreview: React.FunctionComponent<
   const containerRef = useRef<HTMLDivElement>(null);
 
   const scaleNeighborhood = useCallback(() => {
-    const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_SIZE;
-    const height = containerRef.current?.clientHeight || DEFAULT_MINI_APP_SIZE;
+    const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_WIDTH;
+    const height = containerRef.current?.clientHeight || DEFAULT_MINI_APP_HEIGHT;
     scaleMiniApp(height, width);
   }, []);
 
