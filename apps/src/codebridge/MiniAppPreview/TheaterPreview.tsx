@@ -57,7 +57,6 @@ const TheaterPreview: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.miniAppContainer}>
       <TheaterVisualization />
-      {/* The prompter is centered in the same space, so it takes over. */}
       {!isOutputVisible && !isPrompterOpen && (
         <MiniAppEmptyState
           iconName="camera-movie"

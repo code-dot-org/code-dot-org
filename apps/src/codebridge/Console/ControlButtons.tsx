@@ -29,8 +29,6 @@ import {getSystemMessage} from './MessageHelpers';
 
 import moduleStyles from './console.module.scss';
 
-const RUN_BUTTON_SX = getRunButtonSx();
-
 // Control buttons for running and stopping code.
 // Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
@@ -117,13 +115,13 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  // Returns null if the code action buttons (run, and in the future, test) should be enabled,
-  // otherwise returns the help tip text explaining why they are disabled.
-  // We disable the run button if the environment is still loading
+  // Returns null if the code action buttons (run, and in the future, test)
+  // should not have a tooltip, otherwise returns any tooltip text.
+  // We show a tooltip and disable the run button if the environment is still loading
   // OR if this is a predict level, we are not in start mode,
   // and the user has not yet written a prediction.
-  // A failed environment gets no tooltip: the workspace shows an alert for it,
-  // and the loading tooltip below would otherwise claim it is still loading.
+  // A failed environment gets no tooltip: the workspace shows an alert for it instead,
+  // and the button gets disabled below.
   const getDisabledCodeActionsTooltip = () => {
     if (codeEnvironmentError) {
       return null;
@@ -179,7 +177,7 @@ const ControlButtons: React.FunctionComponent = () => {
             id="uitest-codebridge-run"
             onClick={handleRun}
             type="button"
-            sx={RUN_BUTTON_SX}
+            sx={getRunButtonSx()}
             startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="play" />}
           >
             {codebridgeI18n.run()}

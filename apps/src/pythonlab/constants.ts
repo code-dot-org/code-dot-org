@@ -67,36 +67,6 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
   },
 };
 
-export const STANDALONE_THEATER_PROJECT: ProjectSources = {
-  source: {
-    files: {
-      '0': {
-        id: '0',
-        name: MAIN_PYTHON_FILE,
-        contents: `from theater import Scene, play_scenes
-
-scene = Scene()
-scene.set_fill_color("blue")
-scene.draw_ellipse(150, 150, 100, 100)
-scene.pause(0.5)
-scene.set_fill_color("red")
-scene.draw_rectangle(150, 150, 100, 100)
-scene.pause(0.5)
-play_scenes(scene)
-`,
-        folderId: '0',
-        active: true,
-      },
-    },
-    folders: {},
-    openFiles: ['0'],
-  },
-  labConfig: {
-    miniApp: {name: 'theater'},
-    standaloneSettings: {projectType: 'theater'},
-  },
-};
-
 export const PYTHONLAB_EDITABLE_FILE_TYPES = ['py', 'csv', 'txt', 'json'];
 
 export const PYTHONLAB_SUPPORTED_FILE_TYPES = PYTHONLAB_EDITABLE_FILE_TYPES;
