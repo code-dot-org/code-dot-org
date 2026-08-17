@@ -652,6 +652,16 @@ function createWebpackConfig({
                   ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
                 test: module => /p5/.test(module.resource),
               },
+              // Keep the generated Rails routes out of the shared bundles.
+              // This file is large and changes whenever the Rails routes change.
+              studioRoutes: {
+                name: 'studioRoutes',
+                test: module =>
+                  module.resource === p('generated-scripts/studioRoutes.js'),
+                chunks: 'all',
+                enforce: true,
+                priority: 40,
+              },
             },
           },
     },
