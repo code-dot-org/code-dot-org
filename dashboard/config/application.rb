@@ -216,9 +216,9 @@ module Dashboard
     #
     # See https://github.com/rails/rails/issues/47704 and
     # https://github.com/rails/rails/pull/47747 for more context.
-    #
-    # TODO infra: remove this custom Coder as part of the update to Rails 7.1
     module Rails70InitInternalsCoder
+      # TODO infra: remove this custom Coder as part of the update to Rails 7.1
+      throw "remove Rails-7.0-specific mitigation" if Rails::VERSION::MAJOR != 7 || Rails::VERSION::MINOR != 0
       include ActiveSupport::Cache::Coders::Rails70Coder
       extend self
 
