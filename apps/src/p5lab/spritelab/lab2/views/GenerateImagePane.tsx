@@ -20,8 +20,8 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   GeneratedImageResult,
   UploadImageFunction,
-} from '../ai/items/itemGeneration';
-import {MODEL_OUTPUT_PX} from '../ai/items/modelHelpers';
+} from '../ai/images/imageGeneration';
+import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
 import {
   getTrimmedThumbnail,
   onTrimsUpdated,

@@ -1,5 +1,5 @@
 import {generateText} from '@cdo/apps/aiGateway';
-import {generateImage} from '@cdo/apps/p5lab/spritelab/lab2/ai/items/itemGeneration';
+import {generateImage} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 
 jest.mock('@cdo/apps/aiGateway', () => ({
   generateText: jest.fn(),

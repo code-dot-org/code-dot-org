@@ -5,7 +5,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import {GeneratedImageResult} from '../ai/items/itemGeneration';
+import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import {
   ImageGenerationMetadata,

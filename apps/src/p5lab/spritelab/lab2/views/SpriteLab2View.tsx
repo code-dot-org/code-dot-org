@@ -41,7 +41,7 @@ import {
   uploadAssetToLevel,
   uploadAssetToProject,
   UploadImageFunction,
-} from '../ai/items/itemGeneration';
+} from '../ai/images/imageGeneration';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
@@ -153,7 +153,8 @@ function getScenes(sources: SpriteLab2Source): SpriteLab2Scene[] {
 // Debounce between a workspace edit and the live-preview re-run.
 const RUN_DEBOUNCE_MS = 400;
 
-// Sprites come from the Items tab, so a new project starts with no animations.
+// Sprites come from the Images tab, so a new project starts with no
+// animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 
 // Focused controls own the game keys pressed on them (see the
@@ -1342,7 +1343,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
             }}
           >
-            <div className={moduleStyles.itemsTab}>
+            <div className={moduleStyles.imagesTab}>
               <GenerateImagePane
                 uploadImage={uploadImage}
                 onRenameImage={handleRenameImage}

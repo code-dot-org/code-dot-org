@@ -1,4 +1,4 @@
-import {keyOutBackground} from '@cdo/apps/p5lab/spritelab/lab2/ai/items/removeBackground';
+import {keyOutBackground} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/removeBackground';
 
 // Build an RGBA buffer from [r,g,b] triples, all fully opaque to start.
 function rgba(pixels) {

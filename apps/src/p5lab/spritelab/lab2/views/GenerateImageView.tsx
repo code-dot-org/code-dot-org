@@ -17,7 +17,7 @@ import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
-} from '../ai/items/itemGeneration';
+} from '../ai/images/imageGeneration';
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import {
   ImageGenerationMetadata,
