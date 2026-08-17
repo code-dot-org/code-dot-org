@@ -25,54 +25,44 @@ docker compose up -d
 docker compose exec app bash
 ```
 
-Run these commands once in the container. They create the databases, add the
-curriculum data, and download the apps package.
+Run these commands once in the container. They create the databases and add
+the curriculum data.
 
 ```sh
 cd /code-dot-org/pegasus && bundle exec rake pegasus:setup_db
 cd /code-dot-org/dashboard && bundle exec rake dashboard:setup_db
-cd /code-dot-org && bundle exec rake package:apps
 ```
 
-Start Rails from the repository root in the container.
+Build the apps files. Leave this server running: it rebuilds each file you
+change. The first build takes about 90 seconds and writes some gigabytes
+into the checkout.
 
 ```sh
+cd /code-dot-org/apps && yarn start:cheapest
+```
+
+In another shell, point Rails at those files and start Rails.
+
+```sh
+cd /code-dot-org && bundle exec rake package:apps
 bin/dashboard-server
 ```
 
-Open <http://localhost:3000>. The database data stays in the `mysql-data`
-volume. Use `docker compose down -v` only when you want to remove that data.
+Open <http://localhost:9000>. That is the apps server. It sends page
+requests to Rails and serves the apps files, so an edit in `apps/src`
+reaches the browser. Port 3000 is Rails alone, without that.
 
-## Change frontend code
+The database data stays in the `mysql-data` volume. Use
+`docker compose down -v` only when you want to remove that data.
 
-The Vite server needs no extra configuration. Run it in another container
-shell. It uses port 3036 and serves `/frontend-studio/`.
+## Change the studio frontend
+
+Run the Vite server in another container shell. It uses port 3036 and
+serves `/frontend-studio/`.
 
 ```sh
 cd /code-dot-org/frontend && yarn dev
 ```
-
-The apps server needs local apps. `rake package:apps` downloads a package
-that is already built, and Rails then asks for the file names in that
-package, which the apps server does not have. Add this file, then start the
-container again.
-
-```sh
-printf 'CDO_USE_MY_APPS=true\nCDO_OPTIMIZE_WEBPACK_ASSETS=false\n' \
-  > docker/dev/apps-dev.env
-```
-
-In the container, build the apps package and point Rails at it. The build
-writes some gigabytes into the checkout.
-
-```sh
-cd /code-dot-org/apps && yarn start:cheapest
-cd /code-dot-org && bundle exec rake package:apps:symlink
-```
-
-Open port 9000, which is the apps server. It sends page requests to Rails
-and serves the apps files itself. An edit to a file in `apps/src` then
-reaches the browser.
 
 Stop a native development environment before you start this one. The ports
 are fixed.
