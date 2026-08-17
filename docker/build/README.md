@@ -37,7 +37,7 @@ during a build and discarded, so cdo-deps takes it as the `BUILD_IMAGE` build
 argument:
 
 ```sh
-docker build -t cdo-build:local docker/build/
+docker build -f docker/build/Dockerfile -t cdo-build:local .
 docker build -f docker/deps/Dockerfile --build-arg BUILD_IMAGE=cdo-build:local ...
 ```
 
@@ -48,8 +48,9 @@ fix, and the smoke gate below already proves it builds standalone.
 
 ## Where node comes from
 
-Node is the release tarball from `nodejs.org`, verified against the Node.js
-release team's keyring: `gpgv` checks the releaser's PGP signature over
+Node is installed by `docker/scripts/install-node.sh`, shared with cdo-dev,
+which carries the version pins. It takes the release tarball from
+`nodejs.org`, verified against the Node.js release team's keyring: `gpgv` checks the releaser's PGP signature over
 `SHASUMS256.txt`, and that file's digest is then checked against the tarball.
 This is the mechanism the official `docker-library/node` image uses and the one
 `nodejs/node` documents under "Verifying binaries". Trust terminates at the
@@ -73,8 +74,9 @@ whatever `apps/package.json` pins.
 
 ## Updating node
 
-Edit `NODE_VERSION`. If `gpgv` then fails with an unknown key, the release was
-signed by a newer releaser, so advance `NODE_KEYS_REF` to the current
+Edit `NODE_VERSION` in `docker/scripts/install-node.sh`. If `gpgv` then
+fails with an unknown key, the release was signed by a newer releaser, so
+advance `NODE_KEYS_REF` to the current
 [nodejs/release-keys](https://github.com/nodejs/release-keys) commit — that
 repository has no tags, which is why it is pinned by commit. Those two tokens
 are the only version-sensitive material in the mechanism.
@@ -128,7 +130,7 @@ ref for byte-stable builds, or with a local tag to test an unpublished base
 change:
 
 ```sh
-docker build --build-arg BASE_IMAGE=cdo-base:test -t cdo-build:test docker/build/
+docker build -f docker/build/Dockerfile --build-arg BASE_IMAGE=cdo-base:test -t cdo-build:test .
 ```
 
 ## Dual-engine policy
@@ -142,9 +144,12 @@ for what each of those breaks.
 
 ## Build
 
+The context is the repo root; the dockerignore admits only the shared
+node install script.
+
 ```sh
-docker build -t cdo-build:test docker/build/
-podman build -t cdo-build:test docker/build/
+docker build -f docker/build/Dockerfile -t cdo-build:test .
+podman build -f docker/build/Dockerfile -t cdo-build:test .
 ```
 
 ## Smoke test
