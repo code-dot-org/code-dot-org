@@ -202,16 +202,14 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   test 'extract_professional_learning_attended' do
     tests = [
       {
-        # Input doesn't have 1 of the 2 tables required, and doesn't have any fields required
-        input: {'dashboard.followers' => {}},
+        # Input doesn't have the required table
+        input: {'dashboard.users' => {}},
         expected_output: {}
       },
       {
-        # Input has a non-nil valid section type
-        input: {
-          'dashboard.followers' => {'section_type' => [{'value' => SECTION_TYPE_MAP[COURSE_CSF]}]}
-        },
-        expected_output: {professional_learning_attended: COURSE_CSF}
+        # Input has the required table but not the required field
+        input: {'dashboard.pd_attendances' => {}},
+        expected_output: {}
       },
       {
         # Input has a non-nil valid course
@@ -221,25 +219,20 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
         expected_output: {professional_learning_attended: COURSE_CSD}
       },
       {
-        # Input contains both nil and multiple non-nil valid values from both required tables
+        # Input contains nil, duplicate, and multiple non-nil valid values.
+        # Output should be de-duplicated, compacted, and sorted.
         input: {
-          'dashboard.followers' => {
-            'section_type' => [
-              {'value' => SECTION_TYPE_MAP[COURSE_CSF]},
-              {'value' => SECTION_TYPE_MAP[COURSE_ECS]},
-              {'value' => nil}
-            ]
-          },
           'dashboard.pd_attendances' => {
             'course' => [
-              {'value' => COURSE_CSD},
               {'value' => COURSE_CSP},
+              {'value' => COURSE_CSD},
+              {'value' => COURSE_CSD},
               {'value' => nil}
             ]
           }
         },
         expected_output: {
-          professional_learning_attended: "#{COURSE_CSD},#{COURSE_CSF},#{COURSE_CSP},#{COURSE_ECS}"
+          professional_learning_attended: "#{COURSE_CSD},#{COURSE_CSP}"
         }
       }
     ]
@@ -259,7 +252,6 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     }
     pd_enrollments_input = {'dashboard.pd_enrollments' => {}}
     pd_attendances_input = {'dashboard.pd_attendances' => {}}
-    followers_input = {'dashboard.followers' => {}}
     census_submissions_input = {
       'dashboard.census_submissions' => {
         'submitter_role' => [
@@ -309,7 +301,6 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       merge!(users_input).
       merge!(pd_enrollments_input).
       merge!(pd_attendances_input).
-      merge!(followers_input).
       merge!(census_submissions_input).
       merge!(forms_input).
       merge!(section_courses_input).
@@ -327,10 +318,6 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       },
       {
         input: pd_attendances_input,
-        expected_output: {roles: 'Teacher'}
-      },
-      {
-        input: followers_input,
         expected_output: {roles: 'Teacher'}
       },
       {
