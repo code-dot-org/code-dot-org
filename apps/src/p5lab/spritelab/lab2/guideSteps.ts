@@ -1,5 +1,4 @@
-// Staged floating-guide instructions (the guide_steps level property): the
-// pure step-advancement logic.
+// Staged floating-guide instructions: the pure step-advancement logic.
 
 import {SpriteLab2Tab} from './redux/spriteLab2Redux';
 import {SpriteLab2GuideStep} from './types';

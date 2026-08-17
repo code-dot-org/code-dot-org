@@ -122,8 +122,8 @@ const WORLD_TABS: readonly SpriteLab2Tab[] = [
 ];
 
 // World-tab experiment flags: ?world-tab=true shows the tab (levels can also
-// opt in via the show_world_tab property); &world=large widens the editor
-// from the scene grid to the whole world.
+// opt in via showWorldTab); &world=large widens the editor from the scene
+// grid to the whole world.
 function getWorldTabParams() {
   const params = new URLSearchParams(window.location.search);
   return {
@@ -206,10 +206,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
   const worldTabParams = useMemo(getWorldTabParams, []);
-  // A level can name its exact tab set (visible_tabs); unknown names are
-  // dropped, and a list that names none falls back to the defaults. Listing
-  // 'World' turns the world tab on; the URL flag and showWorldTab still
-  // work for levels without the property.
+  // A level can name its exact tab set; unknown names are dropped, and a list
+  // naming none falls back to the defaults. Listing 'World' turns the world
+  // tab on, as the URL flag and showWorldTab still do.
   const tabs = useMemo(() => {
     // The property is authored JSON, so its type is a claim, not a guarantee.
     const requested = levelProperties.visibleTabs?.filter(tab =>
@@ -238,8 +237,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       worldTab.enabled ? compileWorldPrelude(world) : '',
     [worldTab.enabled]
   );
-  // A level with visible_tabs opens on the list's first entry (the display
-  // order is fixed by TabShell, so authored order carries the start tab).
+  // A level naming its tabs opens on the list's first entry (display order is
+  // fixed, so authored order is free to carry the start tab).
   useEffect(() => {
     if (levelProperties.visibleTabs?.length) {
       dispatch(setActiveTab(tabs[0]));
@@ -340,7 +339,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [scenes]
   );
 
-  // Create the pinned scene (fixed_scene_id) on first load, and again after
+  // Create the pinned scene on first load, and again after
   // Start Over (the reinit count in the deps). On a scene-less project the
   // pin becomes the only scene — materializing the synthesized default too
   // would leave a stray "Scene 1" in every level sharing the project.
@@ -400,7 +399,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
-  // Staged guide instructions (guide_steps): one step at a time, advancing
+  // Staged guide instructions: one step at a time, advancing
   // — never retreating — as later steps' conditions are met (see
   // guideSteps.ts for the semantics).
   const guideSteps = levelProperties.guideSteps;
