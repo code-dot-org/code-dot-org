@@ -12,6 +12,10 @@ import {blurAfterPointerClick} from '../blurAfterPointerClick';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
 
+// The tabs that edit the selected scene. They share the scene selector, so
+// they render as one group with the selector leading it.
+const SCENE_TABS: readonly SpriteLab2Tab[] = ['World', 'Code'];
+
 interface TabShellProps {
   activeTab: SpriteLab2Tab;
   onTabChange: (tab: SpriteLab2Tab) => void;
@@ -19,7 +23,7 @@ interface TabShellProps {
   enabledTabs: readonly SpriteLab2Tab[];
   // Tabs to show at all. Defaults to every tab.
   visibleTabs?: readonly SpriteLab2Tab[];
-  // Rendered in the tab bar immediately after the Code button (the scene
+  // Rendered in the tab bar leading the scene-editing tabs (the scene
   // selector).
   codeTabExtra?: React.ReactNode;
   // Rendered immediately after the Play button (the restart controls).
@@ -44,9 +48,15 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   children,
   onClickStartOver,
 }) => {
-  // World-tab experiment: the scene selector, World, and Code read as one
-  // group (the selector governs both tabs).
-  const worldMode = visibleTabs.includes('World');
+  // The scene selector leads the scene-editing tabs, which it governs. A lone
+  // Code tab with no selector yet (animations still seeding) needs no group.
+  const sceneTabs = SPRITE_LAB2_TABS.filter(
+    tab => SCENE_TABS.includes(tab) && visibleTabs.includes(tab)
+  );
+  const grouped = !!codeTabExtra || sceneTabs.length > 1;
+  // Clicking the group's non-tab area (the selector, disabled off these tabs)
+  // opens Code, or the only scene tab there is.
+  const defaultSceneTab = sceneTabs.includes('Code') ? 'Code' : sceneTabs[0];
   const renderTab = (tab: SpriteLab2Tab) => (
     <button
       type="button"
@@ -71,19 +81,20 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
         <div className={moduleStyles.tabBar} role="tablist">
           {SPRITE_LAB2_TABS.filter(tab => visibleTabs.includes(tab)).map(
             tab => {
-              const enabled = enabledTabs.includes(tab);
-              const button = renderTab(tab);
-              if (worldMode && tab === 'Code') {
-                // Rendered inside the World group below.
-                return null;
-              }
-              if (worldMode && tab === 'World') {
+              if (grouped && sceneTabs.includes(tab)) {
+                // The whole group renders at the first scene tab's position.
+                if (tab !== sceneTabs[0]) {
+                  return null;
+                }
                 return (
                   <div
                     key={tab}
                     className={classNames(
                       moduleStyles.tabGroup,
-                      moduleStyles.tabGroupWorld
+                      // Only offer the pointer when a click here would move
+                      // the tab; on a scene tab it would do nothing.
+                      !sceneTabs.includes(activeTab) &&
+                        moduleStyles.tabGroupOpensTab
                     )}
                     // Clicks on the disabled selector fall through here and
                     // open the group's default tab. The tab buttons handle
@@ -92,42 +103,19 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                     onClick={e => {
                       if (
                         !(e.target as HTMLElement).closest('button') &&
-                        activeTab !== 'Code' &&
-                        activeTab !== 'World' &&
-                        enabledTabs.includes('Code')
+                        !sceneTabs.includes(activeTab) &&
+                        enabledTabs.includes(defaultSceneTab)
                       ) {
-                        onTabChange('Code');
+                        onTabChange(defaultSceneTab);
                       }
                     }}
                   >
                     {codeTabExtra}
-                    {button}
-                    {renderTab('Code')}
-                  </div>
-                );
-              }
-              // The Code tab and its extra (the scene selector) read as one
-              // segmented control: the group carries the active-tab background,
-              // the pieces inside are transparent.
-              if (tab === 'Code' && codeTabExtra) {
-                return (
-                  <div
-                    key={tab}
-                    className={classNames(
-                      moduleStyles.tabGroup,
-                      activeTab === 'Code' && moduleStyles.tabGroupActive
-                    )}
-                    // The whole group is the Code tab's click target: the scene
-                    // selector is disabled (pointer-events: none) on other tabs,
-                    // so clicks on it land here and activate the tab.
-                    onClick={() => {
-                      if (activeTab !== 'Code' && enabled) {
-                        onTabChange('Code');
-                      }
-                    }}
-                  >
-                    {button}
-                    {codeTabExtra}
+                    {sceneTabs.map(sceneTab => (
+                      <React.Fragment key={sceneTab}>
+                        {renderTab(sceneTab)}
+                      </React.Fragment>
+                    ))}
                   </div>
                 );
               }
@@ -135,12 +123,14 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
               if (tab === 'Play' && playTabExtra) {
                 return (
                   <React.Fragment key={tab}>
-                    {button}
+                    {renderTab(tab)}
                     {playTabExtra}
                   </React.Fragment>
                 );
               }
-              return <React.Fragment key={tab}>{button}</React.Fragment>;
+              return (
+                <React.Fragment key={tab}>{renderTab(tab)}</React.Fragment>
+              );
             }
           )}
         </div>

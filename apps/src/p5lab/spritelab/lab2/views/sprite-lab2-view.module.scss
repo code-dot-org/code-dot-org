@@ -50,7 +50,9 @@ $tab-item-height: 34px;
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  gap: 4px;
+  // The tabs are distinct destinations, not a continuous strip: separate them
+  // enough to be told apart at a glance.
+  gap: 10px;
 }
 
 .tab {
@@ -58,9 +60,10 @@ $tab-item-height: 34px;
   padding: 0 16px;
   // Cancel the legacy global button margin so hover fills the group.
   margin: 0;
-  // A subtle outline gives every tab item the same "button" structure, so
-  // the Code+scene segmented group reads coherently next to plain tabs.
-  border: 1px solid var(--borders-neutral-primary);
+  // Every tab item carries the same "button" structure, so the scene group
+  // reads coherently next to plain tabs. The outer edges are the stronger
+  // border; dividers inside a group stay subtle (see .tabGroup).
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px 4px 0 0;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -82,17 +85,21 @@ $tab-item-height: 34px;
   color: var(--text-neutral-primary);
   font-weight: 600;
   box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  // Already here: clicking does nothing, so don't promise otherwise.
+  cursor: default;
 
   &:hover:not(:disabled) {
     background: var(--background-neutral-primary);
   }
 }
 
-// The Code tab + scene picker as one segmented control (scenes UI variant):
-// the group carries the tab pill's shape and active background; the button
-// and select inside are transparent segments split by a divider. Both
-// segments get the same explicit height so their text shares a centerline.
-// Segments sit inside the group's 1px outline.
+// The scene selector plus the tabs that edit that scene, as one segmented
+// control: the selector leads, the tabs follow as segments. The group carries
+// the pill's shape and its outer border; the pieces inside are transparent and
+// split by subtle dividers, and each tab keeps its own teal active edge (the
+// group can hold two tabs, so a group-wide edge couldn't say which is active).
+// Both segments get the same explicit height so their text shares a
+// centerline, sitting inside the group's 1px outline.
 $tab-segment-height: $tab-item-height - 2px;
 
 .tabGroup {
@@ -100,44 +107,59 @@ $tab-segment-height: $tab-item-height - 2px;
   align-items: center;
   box-sizing: border-box;
   height: $tab-item-height;
-  // The whole group activates the Code tab when it isn't active.
-  cursor: pointer;
-  // The group carries the single outline; the segments inside are borderless
-  // except for the divider between them.
-  border: 1px solid var(--borders-neutral-primary);
+  // The group's radius clips the square-cornered segments.
+  overflow: hidden;
+  // The arrow, not the I-beam `auto` would give over the scene name's text.
+  // Segments that do something (a tab, the live selector) set their own.
+  cursor: default;
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px 4px 0 0;
   background: var(--background-neutral-primary);
 
   .tab {
     height: $tab-segment-height;
     border: none;
-    border-radius: 4px 0 0 0;
+    border-radius: 0;
+    border-left: 1px solid var(--borders-neutral-primary);
+
+    // Without a selector ahead of it, the group's own edge is the left edge.
+    &:first-child {
+      border-left: none;
+    }
   }
 
-  // The group paints the active background and teal edge; the segments
-  // inside stay transparent so both share them.
+  // Transparent so the group's background shows through; the teal active edge
+  // comes from .tabActive.
   .tabActive {
     background: transparent;
-    box-shadow: none;
 
     &:hover:not(:disabled) {
       background: transparent;
     }
   }
+
+  .sceneSelect,
+  .sceneName {
+    border-left: none;
+    border-radius: 0;
+  }
 }
 
-.tabGroupActive {
-  background: var(--background-neutral-primary);
-  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+// Set while a click on the group's non-tab area (the scene selector, when it
+// is disabled or a locked name) would open one of its tabs. Off the rest of
+// the time, so an inert area keeps the default cursor. The enabled selector
+// carries its own pointer: opening the dropdown is always an action.
+.tabGroupOpensTab {
+  cursor: pointer;
 }
 
 // Action buttons beside the Play tab (shown only while playing), not tabs.
 .startOver {
   height: $tab-item-height;
   padding: 0 12px;
+  // The tab bar's gap spaces these; cancel the legacy global button margin.
   margin: 0;
-  margin-inline-start: 4px;
-  border: 1px solid var(--borders-neutral-primary);
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px;
   background: transparent;
   color: var(--text-neutral-primary);
@@ -665,25 +687,3 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-// World-tab experiment: the scene selector leads its group, with the World
-// and Code tabs as segments after it. The group's radius clips the segments,
-// and the active segment carries its own teal edge (two tabs share the
-// group, so a group-wide edge wouldn't say which is active).
-.tabGroupWorld {
-  overflow: hidden;
-
-  .tab {
-    border-radius: 0;
-    border-left: 1px solid var(--borders-neutral-primary);
-  }
-
-  .sceneSelect,
-  .sceneName {
-    border-left: none;
-    border-radius: 0;
-  }
-
-  .tabActive {
-    box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
-  }
-}
