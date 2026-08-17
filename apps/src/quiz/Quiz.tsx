@@ -1,5 +1,5 @@
 import {Typography, Button as MuiButton} from '@mui/material';
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import {getAppOptionsAuthoringQuizQuestions} from '@cdo/apps/lab2/projects/utils';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
@@ -8,6 +8,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import QuizBuilder from './authoring/QuizBuilder';
+import QuizIntro from './QuizIntro';
 import QuizQuestion, {QuizQuestionSummary} from './QuizQuestion';
 
 import styles from './quiz-view.module.scss';
@@ -16,6 +17,8 @@ interface QuizLevelProperties extends LevelProperties {
   scriptId?: number;
   quizQuestions?: QuizQuestionSummary[];
   title?: string;
+  introText?: string;
+  timeLimitMinutes?: number;
 }
 
 interface AttemptResult {
@@ -43,6 +46,8 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     title,
     scriptId,
     quizQuestions,
+    introText,
+    timeLimitMinutes,
   } = levelProperties as QuizLevelProperties;
   const isAuthoringMode = !!getAppOptionsAuthoringQuizQuestions();
   const [attemptId, setAttemptId] = useState<number | null>(null);
@@ -50,6 +55,12 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     Record<number, QuestionResponseValue>
   >({});
   const [result, setResult] = useState<AttemptResult | null>(null);
+  // Shown before the attempt is created, instead of jumping straight into
+  // the quiz - only when there's actually something to show. Set once the
+  // initial GET check finds no existing attempt (see the effect below); a
+  // resumed or already-submitted attempt skips it entirely.
+  const [showIntro, setShowIntro] = useState(false);
+  const needsIntroScreen = !!(introText || timeLimitMinutes);
   const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -61,11 +72,13 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   // mode the Question Bank tab always exists.
   const hasResourcePanelTabs = isAuthoringMode;
 
-  useEffect(() => {
-    // Don't start a student attempt while a levelbuilder is authoring.
-    if (isAuthoringMode || !scriptId) {
-      return;
-    }
+  // Creates (or resumes) the attempt - called either immediately on mount
+  // (quiz has no intro content to show first) or from the intro screen's
+  // Begin Quiz button. Deferring this until Begin Quiz is clicked, when
+  // there is an intro screen, matters: started_at should reflect when the
+  // student actually begins, not when the page happened to load, since a
+  // future time limit is measured from it.
+  const beginAttempt = useCallback(() => {
     HttpClient.post(
       '/quiz_attempts',
       JSON.stringify({levelId, scriptId}),
@@ -75,14 +88,45 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       .then(response => response.json())
       .then(data => {
         setAttemptId(data.id);
+        if (data.submittedAt) {
+          setResult({score: data.score, maxScore: data.maxScore});
+        }
+        setShowIntro(false);
+      });
+  }, [levelId, scriptId]);
+
+  useEffect(() => {
+    // Don't start a student attempt while a levelbuilder is authoring.
+    if (isAuthoringMode || !scriptId) {
+      return;
+    }
+    // Check-only - never creates an attempt as a side effect of loading
+    // the page (see beginAttempt above for why that matters).
+    HttpClient.get(`/quiz_attempts?levelId=${levelId}&scriptId=${scriptId}`)
+      .then(response => response.json())
+      .then(data => {
+        if (!data) {
+          // No attempt yet: show the intro screen first if there's
+          // anything for it to show, otherwise start immediately - same
+          // as this quiz behaved before the intro screen existed.
+          if (needsIntroScreen) {
+            setShowIntro(true);
+          } else {
+            beginAttempt();
+          }
+          return;
+        }
+        setAttemptId(data.id);
         // P0 allows only one attempt: if this attempt was already
         // submitted (e.g. the student reloaded the page), restore its
-        // result instead of showing an editable quiz again.
+        // result instead of showing an editable quiz again. Either way -
+        // submitted or mid-quiz - an existing attempt means the student
+        // already got past the intro screen, so skip it.
         if (data.submittedAt) {
           setResult({score: data.score, maxScore: data.maxScore});
         }
       });
-  }, [isAuthoringMode, levelId, scriptId]);
+  }, [isAuthoringMode, levelId, scriptId, needsIntroScreen, beginAttempt]);
 
   const setResponse = (questionId: number, value: QuestionResponseValue) =>
     setResponses(prev => ({...prev, [questionId]: value}));
@@ -156,6 +200,14 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
             quizId={levelId as number}
             quizTitle={title || name}
             initialQuestions={quizQuestions || []}
+          />
+        ) : showIntro ? (
+          <QuizIntro
+            quizTitle={title || name}
+            introText={introText}
+            questionCount={multipleChoiceQuestions.length}
+            timeLimitMinutes={timeLimitMinutes}
+            onBegin={beginAttempt}
           />
         ) : (
           <div className={styles.card}>
