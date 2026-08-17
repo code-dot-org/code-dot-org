@@ -1,6 +1,13 @@
 import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
 
+// Erase the screen (2J), the scrollback (3J), and home the cursor (H).
+// Sent as a write rather than calling terminal.clear(): writes are queued and
+// flushed asynchronously, while clear() edits the buffer immediately, so clear()
+// silently leaves behind any line that has not been written out yet. As a write,
+// the erase is applied in order with the lines around it.
+const CLEAR_DISPLAY = '\x1b[2J\x1b[3J\x1b[H';
+
 // Manager for xterm.js-based console in codebridge
 export default class ConsoleManager {
   private terminal: Terminal;
@@ -9,6 +16,10 @@ export default class ConsoleManager {
   private inputBuffer: string;
   // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
   private lastLineIsPartial: boolean;
+  // The message explaining that the coding environment could not be set up, if
+  // it could not be. Unlike program output it stays true for the whole session,
+  // so this manager owns writing it.
+  private codeEnvironmentError: string | null;
   private terminalLinesListeners: ((lines: string[]) => void)[] = [];
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
@@ -17,6 +28,7 @@ export default class ConsoleManager {
     this.terminalLines = [];
     this.inputBuffer = '';
     this.lastLineIsPartial = false;
+    this.codeEnvironmentError = null;
   }
 
   public getTerminal() {
@@ -37,8 +49,56 @@ export default class ConsoleManager {
 
   public clearTerminalLines() {
     this.terminalLines = [];
-    this.terminal.clear();
+    this.terminal.write(CLEAR_DISPLAY);
     this.lastLineIsPartial = false;
+    // Characters typed since the last newline are erased along with everything
+    // else, so keeping them would send text the user can no longer see.
+    this.inputBuffer = '';
+    this.executeTerminalLinesListeners();
+    // The run button is still disabled and its tooltip still points here, so the
+    // explanation has to come back with the empty console.
+    if (this.codeEnvironmentError) {
+      this.writeConsoleMessage(this.codeEnvironmentError, false);
+    }
+  }
+
+  // Callers may report the same error as often as they like, and may retract it
+  // (null) if the environment turns out to work after all. The test for "already
+  // printed" is the console's own contents rather than this manager's state,
+  // because the error can reach the console without coming through here: a
+  // re-created console replays the previous console's lines, error included.
+  public setCodeEnvironmentError(error: string | null) {
+    const previousError = this.codeEnvironmentError;
+    this.codeEnvironmentError = error;
+
+    if (error) {
+      if (!this.terminalLines.some(line => line.includes(error))) {
+        this.writeConsoleMessage(error, false);
+      }
+    } else if (previousError) {
+      this.removeTerminalLines(line => line.includes(previousError));
+    }
+  }
+
+  // Takes lines back off the console, keeping the rest. A terminal can only
+  // append, so the only way to unprint something is to draw what is left again.
+  private removeTerminalLines(matches: (line: string) => boolean) {
+    const remainingLines = this.terminalLines.filter(line => !matches(line));
+    if (remainingLines.length === this.terminalLines.length) {
+      return;
+    }
+    this.terminalLines = remainingLines;
+
+    this.terminal.write(CLEAR_DISPLAY);
+    this.terminalLines.forEach((line, index) => {
+      const isLastLine = index === this.terminalLines.length - 1;
+      const terminatesLine = !isLastLine || !this.lastLineIsPartial;
+      this.terminal.write(terminatesLine ? `${line}\r\n` : line);
+    });
+    // Anything the user has typed since the last newline is not in
+    // terminalLines yet, so redraw it too.
+    this.terminal.write(this.inputBuffer);
+
     this.executeTerminalLinesListeners();
   }
 
@@ -46,9 +106,12 @@ export default class ConsoleManager {
     return this.terminalLines;
   }
 
-  public writeConsoleMessage(message: string) {
+  // Writing focuses the terminal so the user can type into a program that is
+  // asking for input. Pass focusTerminal false for messages the user did not
+  // ask for, which would otherwise pull focus out of whatever they are doing.
+  public writeConsoleMessage(message: string, focusTerminal = true) {
     const lines = message.split('\n');
-    lines.forEach(l => this.appendTerminalLine(l));
+    lines.forEach(l => this.appendTerminalLine(l, focusTerminal));
   }
 
   public writePartialLine(message: string) {
@@ -96,12 +159,14 @@ export default class ConsoleManager {
     );
   }
 
-  private appendTerminalLine(line: string) {
+  private appendTerminalLine(line: string, focusTerminal = true) {
     this.updateTerminalLines(line);
     this.lastLineIsPartial = false;
     this.terminal.writeln(line);
     this.terminal.scrollToBottom();
-    this.terminal.focus();
+    if (focusTerminal) {
+      this.terminal.focus();
+    }
   }
 
   private updateTerminalLines(message: string) {

@@ -39,10 +39,32 @@ export default defineConfig({
       insertTypesEntry: false, // Prevent inserting a single types entry
       exclude: ['**/__tests__/**', '**/*.test.tsx', 'demo/**'],
     }),
-    // Ensure dependencies are externalized for library build
-    // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
-    // Instead, they are expected to be provided by the host application.
-    externalizeDeps(),
+    // Externalize only what the host application is expected to provide;
+    // bundle the markdown-processing ecosystem (unified/rehype/remark/hast/...)
+    // into dist so this package is self-contained. The legacy apps/ bundle
+    // still depends on much older, incompatible majors of that ecosystem
+    // (unified 9 vs 11, rehype-raw 5 vs 7, ...); bundling ours keeps the two
+    // dependency graphs from colliding when this package is portal-linked into
+    // apps/ (see apps/package.json `resolutions`).
+    externalizeDeps({
+      // Don't externalize `dependencies` — only component-library/core live
+      // there now, re-added to `external` via `include` below. The bundled
+      // markdown-processing ecosystem lives in `devDependencies` (not
+      // externalized by default), so it gets pulled into dist. Keeping it out
+      // of `dependencies` is what stops it leaking onto the host.
+      deps: false,
+      // react / react-dom / @mui / @emotion / classnames stay external and are
+      // provided by the host as peers.
+      peerDeps: true,
+      include: [
+        // component-library and core are shared singletons: they must resolve
+        // to the host's single instance (a bundled duplicate would mean two
+        // React contexts / two MUI registries), so keep them external. apps/
+        // provides them via its own portal deps.
+        /^@code-dot-org\/component-library(?:\/.*)?$/,
+        /^@code-dot-org\/core(?:\/.*)?$/,
+      ],
+    }),
   ],
   resolve: {
     alias: {

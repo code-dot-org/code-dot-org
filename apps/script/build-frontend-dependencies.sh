@@ -16,6 +16,7 @@ APPS_DEPENDENCIES=(
   --filter @code-dot-org/core
   --filter @code-dot-org/ailab
   --filter @code-dot-org/lesson-deep-dive
+  --filter @code-dot-org/markdown
 )
 
 cd ../frontend || exit 1
@@ -26,5 +27,5 @@ if [ "$1" = "--watch" ]; then
   exec yarn turbo watch build "${APPS_DEPENDENCIES[@]}" --output-logs errors-only
 else
   yarn && \
-    yarn run build "${APPS_DEPENDENCIES[@]}" --output-logs errors-only
+  yarn run build "${APPS_DEPENDENCIES[@]}" --output-logs errors-only
 fi
