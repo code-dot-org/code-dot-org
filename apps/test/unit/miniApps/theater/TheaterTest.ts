@@ -63,6 +63,74 @@ describe('Theater', () => {
     expect(theater.startPlayback).not.toHaveBeenCalled();
   });
 
+  it('cache-busts remote urls', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'https://example.com/theater.gif'},
+    });
+    expect(imageElement.src).toContain('https://example.com/theater.gif?=');
+  });
+
+  it('uses blob and data urls verbatim', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:https://studio.code.org/abc-123'},
+    });
+    expect(imageElement.src).toBe('blob:https://studio.code.org/abc-123');
+
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'data:audio/wav;base64,AAAA'},
+    });
+    expect(audioElement.src).toBe('data:audio/wav;base64,AAAA');
+  });
+
+  it('revokes a blob url when it is replaced', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:first'},
+    });
+    expect(revokeSpy).not.toHaveBeenCalled();
+
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:second'},
+    });
+    expect(revokeSpy).toHaveBeenCalledWith('blob:first');
+    expect(imageElement.src).toBe('blob:second');
+  });
+
+  it('revokes blob urls on reset', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    imageElement.style = {} as CSSStyleDeclaration;
+    imageElement.src = 'blob:image';
+    audioElement.src = 'blob:audio';
+
+    theater.reset();
+
+    expect(revokeSpy).toHaveBeenCalledWith('blob:image');
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
+  });
+
+  it('does not revoke remote urls on reset', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    imageElement.style = {} as CSSStyleDeclaration;
+    imageElement.src = 'https://example.com/theater.gif';
+    audioElement.src = '';
+
+    theater.reset();
+
+    expect(revokeSpy).not.toHaveBeenCalled();
+  });
+
   it('shows a/v once elements have loaded', () => {
     const url = 'url';
     const audioData = {

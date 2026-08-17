@@ -59,14 +59,13 @@ export default class Theater extends MiniApp {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
         this.hasAudio = true;
-        this.getAudioElement().src =
-          data.detail.url + this.getCacheBustSuffix();
+        this.setElementSource(this.getAudioElement(), data.detail.url);
         this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
         // Preload the image. Once it's ready, start the playback
-        this.getImgElement().src = data.detail.url + this.getCacheBustSuffix();
+        this.setElementSource(this.getImgElement(), data.detail.url);
         this.getImgElement().onload = () => this.startPlayback();
         break;
       }
@@ -114,9 +113,40 @@ export default class Theater extends MiniApp {
   resetAudioAndVideo() {
     const audioElement = this.getAudioElement();
     audioElement.pause();
-    audioElement.src = '';
-    this.getImgElement().src = '';
+    this.clearElementSource(audioElement);
+    this.clearElementSource(this.getImgElement());
     this.hasAudio = false;
+  }
+
+  // Point an element at a new source, releasing whatever it held before.
+  //
+  // Java Lab sources are remote urls, cache-busted so a rerun re-fetches rather
+  // than reusing the previous run's file. Python Lab renders in the browser and
+  // passes a blob: url, which must be used verbatim -- a query suffix is not
+  // part of a registered object url -- and revoked once dropped, or it is held
+  // for the life of the page.
+  private setElementSource(
+    element: HTMLImageElement | HTMLAudioElement,
+    url: string | undefined
+  ) {
+    const previousUrl = element.src;
+    element.src =
+      url && (url.startsWith('blob:') || url.startsWith('data:'))
+        ? url
+        : url + this.getCacheBustSuffix();
+    this.releaseIfBlobUrl(previousUrl);
+  }
+
+  private clearElementSource(element: HTMLImageElement | HTMLAudioElement) {
+    const previousUrl = element.src;
+    element.src = '';
+    this.releaseIfBlobUrl(previousUrl);
+  }
+
+  private releaseIfBlobUrl(url: string | undefined) {
+    if (url?.startsWith('blob:')) {
+      URL.revokeObjectURL(url);
+    }
   }
 
   getImgElement() {
