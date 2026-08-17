@@ -1,3 +1,6 @@
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Image, {ImageProps} from '@code-dot-org/component-library/image';
 import {
   Box,
@@ -12,6 +15,8 @@ import styles from './CodebridgeEmptyState.module.scss';
 
 export interface CodebridgeEmptyStateProps {
   imageProps?: ImageProps;
+  /** Decorative icon in a filled circle, an alternative to an illustration. */
+  iconProps?: FontAwesomeV6IconProps;
   title?: string;
   description?: ReactNode;
   className?: string;
@@ -20,6 +25,7 @@ export interface CodebridgeEmptyStateProps {
 
 export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
   imageProps,
+  iconProps,
   title,
   description,
   className,
@@ -36,6 +42,11 @@ export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
           alt=""
           {...imageProps}
         />
+      )}
+      {iconProps && (
+        <div className={styles.emptyStateIconCircle} aria-hidden="true">
+          <FontAwesomeV6Icon iconStyle="solid" {...iconProps} />
+        </div>
       )}
       <div className={styles.textContainer}>
         {title && (
