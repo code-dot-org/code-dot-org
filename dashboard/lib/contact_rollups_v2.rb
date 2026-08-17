@@ -102,6 +102,12 @@ class ContactRollupsV2
 
   # Set all database configurations the pipeline will need
   def self.set_db_variables
+    # In the test environment every pipeline query runs on the ActiveRecord
+    # connection (see retrieve_query_results), so there is no Sequel
+    # connection to configure — and CI cannot serve one (its Sequel URIs
+    # point at hosts the test container cannot reach).
+    return if Rails.env.test?
+
     # Set group_concat_max_len to 65535 (same as VARCHAR max length).
     # Its default value is 1024, too short for the amount of data we need to concat.
     # @see:
