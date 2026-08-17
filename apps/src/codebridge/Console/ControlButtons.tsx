@@ -29,6 +29,8 @@ import {getSystemMessage} from './MessageHelpers';
 
 import moduleStyles from './console.module.scss';
 
+const RUN_BUTTON_SX = getRunButtonSx();
+
 // Control buttons for running and stopping code.
 // Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
@@ -136,10 +138,7 @@ const ControlButtons: React.FunctionComponent = () => {
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
-  const disabledCodeActionsIcon =
-    !hasLoadedEnvironment && !codeEnvironmentError
-      ? 'fa-spinner fa-spin fa-solid'
-      : 'fa-circle-question fa-regular';
+  const isEnvironmentLoading = !hasLoadedEnvironment && !codeEnvironmentError;
 
   return (
     <div className={moduleStyles.controlButtons}>
@@ -157,8 +156,6 @@ const ControlButtons: React.FunctionComponent = () => {
         </MuiButton>
       ) : (
         <WithConditionalTooltip
-          iconName={disabledCodeActionsIcon}
-          iconClassName={moduleStyles.disabledInfoIcon}
           showTooltip={!!disabledCodeActionsTooltip}
           tooltipProps={{
             direction: 'onRight',
@@ -172,11 +169,13 @@ const ControlButtons: React.FunctionComponent = () => {
             color="primary"
             size="extraSmall"
             disabled={!!disabledCodeActionsTooltip}
+            loading={isEnvironmentLoading}
+            loadingPosition="start"
             className={moduleStyles.controlButton}
             id="uitest-codebridge-run"
             onClick={handleRun}
             type="button"
-            sx={getRunButtonSx()}
+            sx={RUN_BUTTON_SX}
             startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="play" />}
           >
             {codebridgeI18n.run()}
