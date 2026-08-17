@@ -6,13 +6,13 @@ import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
-import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import {
-  ImageGenerationMetadata,
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
-  SpriteLab2ImageType,
-} from '../types';
+  ImageGenerationMetadata,
+  ImageType,
+} from '../ai/images/types';
+import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
 import GenerateImageView from './GenerateImageView';
@@ -33,9 +33,9 @@ interface ImageDetailsDialogProps {
   onRename: (newName: string) => string | null;
   onDelete: () => void;
   /** The image's kind; locked while regenerating an existing image. */
-  imageType?: SpriteLab2ImageType;
+  imageType?: ImageType;
   /** Level-imposed type for new images. */
-  lockedImageType?: SpriteLab2ImageType;
+  lockedImageType?: ImageType;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */

@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 
 import {
-  SPRITE_LAB2_TABS,
-  SpriteLab2Tab,
+  ALL_TABS,
+  Tab,
 } from '@cdo/apps/p5lab/spritelab/lab2/redux/spriteLab2Redux';
 
 import {blurAfterPointerClick} from '../blurAfterPointerClick';
@@ -14,15 +14,15 @@ import moduleStyles from '../sprite-lab2-view.module.scss';
 
 // The tabs that edit the selected scene. They share the scene selector, so
 // they render as one group with the selector leading it.
-const SCENE_TABS: readonly SpriteLab2Tab[] = ['World', 'Code'];
+const SCENE_TABS: readonly Tab[] = ['World', 'Code'];
 
 interface TabShellProps {
-  activeTab: SpriteLab2Tab;
-  onTabChange: (tab: SpriteLab2Tab) => void;
+  activeTab: Tab;
+  onTabChange: (tab: Tab) => void;
   // Tabs not yet implemented are disabled in the bar.
-  enabledTabs: readonly SpriteLab2Tab[];
+  enabledTabs: readonly Tab[];
   // Tabs to show at all. Defaults to every tab.
-  visibleTabs?: readonly SpriteLab2Tab[];
+  visibleTabs?: readonly Tab[];
   // Rendered in the tab bar leading the scene-editing tabs (the scene
   // selector).
   sceneTabsExtra?: React.ReactNode;
@@ -42,7 +42,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   activeTab,
   onTabChange,
   enabledTabs,
-  visibleTabs = SPRITE_LAB2_TABS,
+  visibleTabs = ALL_TABS,
   sceneTabsExtra,
   playTabExtra,
   children,
@@ -50,7 +50,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
 }) => {
   const sceneTabs = useMemo(
     () =>
-      SPRITE_LAB2_TABS.filter(
+      ALL_TABS.filter(
         tab => SCENE_TABS.includes(tab) && visibleTabs.includes(tab)
       ),
     [visibleTabs]
@@ -59,7 +59,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   const grouped = !!sceneTabsExtra || sceneTabs.length > 1;
   // Returning to the group reopens the scene tab it was left on, so a trip to
   // Play doesn't cost the World editor.
-  const lastSceneTab = useRef<SpriteLab2Tab | null>(null);
+  const lastSceneTab = useRef<Tab | null>(null);
   useEffect(() => {
     if (sceneTabs.includes(activeTab)) {
       lastSceneTab.current = activeTab;
@@ -71,7 +71,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
       : sceneTabs.includes('Code')
       ? 'Code'
       : sceneTabs[0];
-  const renderTab = (tab: SpriteLab2Tab) => (
+  const renderTab = (tab: Tab) => (
     <button
       type="button"
       role="tab"
@@ -95,60 +95,56 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
     <div className={moduleStyles.tabShell}>
       <div className={moduleStyles.tabContainer}>
         <div className={moduleStyles.tabBar} role="tablist">
-          {SPRITE_LAB2_TABS.filter(tab => visibleTabs.includes(tab)).map(
-            tab => {
-              if (grouped && sceneTabs.includes(tab)) {
-                // The whole group renders at the first scene tab's position.
-                if (tab !== sceneTabs[0]) {
-                  return null;
-                }
-                return (
-                  <div
-                    key={tab}
-                    className={classNames(
-                      moduleStyles.tabGroup,
-                      // Only offer the pointer when a click here would move
-                      // the tab; on a scene tab it would do nothing.
-                      !sceneTabs.includes(activeTab) &&
-                        moduleStyles.tabGroupOpensTab
-                    )}
-                    // Clicks on the disabled selector fall through here and
-                    // open the group's default tab. The tab buttons handle
-                    // their own clicks; acting on their bubbled events too
-                    // would override them (activeTab is stale in this render).
-                    onClick={e => {
-                      if (
-                        !(e.target as HTMLElement).closest('button') &&
-                        !sceneTabs.includes(activeTab) &&
-                        enabledTabs.includes(groupTarget)
-                      ) {
-                        onTabChange(groupTarget);
-                      }
-                    }}
-                  >
-                    {sceneTabsExtra}
-                    {sceneTabs.map(sceneTab => (
-                      <React.Fragment key={sceneTab}>
-                        {renderTab(sceneTab)}
-                      </React.Fragment>
-                    ))}
-                  </div>
-                );
-              }
-              // The restart controls sit just right of the Play button.
-              if (tab === 'Play' && playTabExtra) {
-                return (
-                  <React.Fragment key={tab}>
-                    {renderTab(tab)}
-                    {playTabExtra}
-                  </React.Fragment>
-                );
+          {ALL_TABS.filter(tab => visibleTabs.includes(tab)).map(tab => {
+            if (grouped && sceneTabs.includes(tab)) {
+              // The whole group renders at the first scene tab's position.
+              if (tab !== sceneTabs[0]) {
+                return null;
               }
               return (
-                <React.Fragment key={tab}>{renderTab(tab)}</React.Fragment>
+                <div
+                  key={tab}
+                  className={classNames(
+                    moduleStyles.tabGroup,
+                    // Only offer the pointer when a click here would move
+                    // the tab; on a scene tab it would do nothing.
+                    !sceneTabs.includes(activeTab) &&
+                      moduleStyles.tabGroupOpensTab
+                  )}
+                  // Clicks on the disabled selector fall through here and
+                  // open the group's default tab. The tab buttons handle
+                  // their own clicks; acting on their bubbled events too
+                  // would override them (activeTab is stale in this render).
+                  onClick={e => {
+                    if (
+                      !(e.target as HTMLElement).closest('button') &&
+                      !sceneTabs.includes(activeTab) &&
+                      enabledTabs.includes(groupTarget)
+                    ) {
+                      onTabChange(groupTarget);
+                    }
+                  }}
+                >
+                  {sceneTabsExtra}
+                  {sceneTabs.map(sceneTab => (
+                    <React.Fragment key={sceneTab}>
+                      {renderTab(sceneTab)}
+                    </React.Fragment>
+                  ))}
+                </div>
               );
             }
-          )}
+            // The restart controls sit just right of the Play button.
+            if (tab === 'Play' && playTabExtra) {
+              return (
+                <React.Fragment key={tab}>
+                  {renderTab(tab)}
+                  {playTabExtra}
+                </React.Fragment>
+              );
+            }
+            return <React.Fragment key={tab}>{renderTab(tab)}</React.Fragment>;
+          })}
         </div>
         <div className={moduleStyles.tabBar}>
           {onClickStartOver && (

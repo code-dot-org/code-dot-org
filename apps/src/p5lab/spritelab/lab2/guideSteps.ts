@@ -1,7 +1,10 @@
-// Staged floating-guide instructions: the pure step-advancement logic.
+// Staged floating-guide instructions: the step-advancement logic, and the
+// hook holding a level's position in it.
 
-import {SpriteLab2Tab} from './redux/spriteLab2Redux';
-import {SpriteLab2GuideStep} from './types';
+import {useEffect, useMemo, useState} from 'react';
+
+import {Tab} from './redux/spriteLab2Redux';
+import {GuideStep} from './types';
 import {WorldCell} from './world';
 
 export interface WorldCounts {
@@ -29,10 +32,10 @@ export function countWorldCells(grid?: (WorldCell | null)[][]): WorldCounts {
 // `after` holds, every clause of it passing. Never retreats, and a step
 // without `after` is never reached automatically.
 export function nextGuideStepIndex(
-  steps: SpriteLab2GuideStep[] | undefined,
+  steps: GuideStep[] | undefined,
   index: number,
   counts: WorldCounts,
-  activeTab: SpriteLab2Tab
+  activeTab: Tab
 ): number {
   let result = index;
   for (;;) {
@@ -47,4 +50,26 @@ export function nextGuideStepIndex(
     }
     result++;
   }
+}
+
+/**
+ * The guide text a level should show right now: the current step's, or the
+ * level's plain instructions when it declares no steps. The position only ever
+ * moves forward, so undoing work doesn't pull the instructions back.
+ */
+export function useGuideSteps(
+  steps: GuideStep[] | undefined,
+  grid: (WorldCell | null)[][] | undefined,
+  activeTab: Tab,
+  fallback: string | undefined
+): string | undefined {
+  const counts = useMemo(() => countWorldCells(grid), [grid]);
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    setIndex(current => nextGuideStepIndex(steps, current, counts, activeTab));
+  }, [steps, counts, activeTab]);
+  if (!steps?.length) {
+    return fallback;
+  }
+  return steps[Math.min(index, steps.length - 1)].text;
 }

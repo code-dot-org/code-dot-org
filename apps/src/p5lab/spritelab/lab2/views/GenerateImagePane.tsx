@@ -22,22 +22,19 @@ import {
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
+import {ImageType} from '../ai/images/types';
 import {
   getTrimmedThumbnail,
   onTrimsUpdated,
   trimAnimationListImages,
 } from '../imageTrim';
-import {
-  BACKGROUNDS_CATEGORY,
-  BLOCKS_CATEGORY,
-  SpriteLab2ImageType,
-} from '../types';
+import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import ImageDetailsDialog from './ImageDetailsDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
-function imageTypeFromCategories(categories?: string[]): SpriteLab2ImageType {
+function imageTypeFromCategories(categories?: string[]): ImageType {
   if (categories?.includes(BACKGROUNDS_CATEGORY)) {
     return 'background';
   }
@@ -91,7 +88,7 @@ interface GenerateImagePaneProps {
   /** Rename an image and every reference to it; error message or null. */
   onRenameImage: (oldName: string, newName: string) => string | null;
   /** Level-imposed type for new images. */
-  lockedImageType?: SpriteLab2ImageType;
+  lockedImageType?: ImageType;
 }
 
 /**

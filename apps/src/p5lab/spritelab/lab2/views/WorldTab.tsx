@@ -4,12 +4,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-import {
-  createEmptyWorld,
-  SCENE_GRID_SIZE,
-  SpriteLab2World,
-  WorldCell,
-} from '../world';
+import {createEmptyWorld, SCENE_GRID_SIZE, World, WorldCell} from '../world';
 
 import {PREVIEW_CLEARANCE} from './Playspace';
 
@@ -27,7 +22,7 @@ interface PaletteItem extends WorldCell {
 }
 
 interface WorldTabProps {
-  world?: SpriteLab2World;
+  world?: World;
   // Visible extent (cells per side): the scene grid by default, the whole
   // world with the world=large parameter. Storage is always the full world,
   // so placements keep their coordinates across the two views.

@@ -6,16 +6,9 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-import {
-  ImageGenerationMetadata,
-  SpriteLab2ImageStyle,
-  SpriteLab2ImageType,
-} from '../../types';
-
 import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
 import {cropToContent, removeBackground} from './removeBackground';
-
-export type {SpriteLab2ImageStyle, SpriteLab2ImageType};
+import {ImageGenerationMetadata, ImageStyle} from './types';
 
 // The logical canvas the prompt asks for: model output size over block size.
 const PROMPT_LOGICAL_GRID = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
@@ -24,7 +17,7 @@ const PROMPT_LOGICAL_GRID = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
 // Kept here (not inline) so the sprite and background prompts stay in sync.
 // The pixel prompt requests the same block size detection falls back to
 // (ASSUMED_BLOCK), so an undetectable grid still matches what was asked for.
-const STYLE_PROMPT: Record<SpriteLab2ImageStyle, string> = {
+const STYLE_PROMPT: Record<ImageStyle, string> = {
   pixel:
     'Render as crisp pixel art with a small, limited color palette and ' +
     'hard-edged pixels — no anti-aliasing, gradients, or soft shading. ' +

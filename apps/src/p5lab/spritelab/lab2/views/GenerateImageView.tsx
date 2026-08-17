@@ -18,14 +18,14 @@ import {
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
-import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import {
-  ImageGenerationMetadata,
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
-  SpriteLab2ImageStyle,
-  SpriteLab2ImageType,
-} from '../types';
+  ImageGenerationMetadata,
+  ImageStyle,
+  ImageType,
+} from '../ai/images/types';
+import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
 import TemperatureBot from './TemperatureBot';
@@ -48,7 +48,7 @@ const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
 
 // Prompt hints, one per type, so the example suits what is being made.
-const PROMPT_PLACEHOLDERS: Record<SpriteLab2ImageType, string> = {
+const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
   sprite: 'e.g. a friendly green dragon',
   background: 'e.g. a misty forest at sunrise',
   block: 'e.g. a mossy stone brick',
@@ -62,7 +62,7 @@ interface GenerateImageViewProps {
   existing?: {
     generation?: ImageGenerationMetadata;
     // Locked: regenerating can't change what kind of image this is.
-    imageType: SpriteLab2ImageType;
+    imageType: ImageType;
     /** Current pixels, for "use previous image". */
     getDataURI: () => Promise<string | null>;
   };
@@ -74,7 +74,7 @@ interface GenerateImageViewProps {
     isNameTaken: (name: string) => boolean;
   };
   /** Level-imposed type for new images; the Type choice is locked to it. */
-  lockedImageType?: SpriteLab2ImageType;
+  lockedImageType?: ImageType;
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
@@ -107,10 +107,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
   const [name, setName] = useState('');
-  const [imageType, setImageType] = useState<SpriteLab2ImageType>(
+  const [imageType, setImageType] = useState<ImageType>(
     existing?.imageType || lockedImageType || 'sprite'
   );
-  const [style, setStyle] = useState<SpriteLab2ImageStyle>(
+  const [style, setStyle] = useState<ImageStyle>(
     existing?.generation?.style || 'smooth'
   );
   const [temperatureLevel, setTemperatureLevel] = useState(

@@ -2,7 +2,7 @@ import {
   countWorldCells,
   nextGuideStepIndex,
 } from '@cdo/apps/p5lab/spritelab/lab2/guideSteps';
-import {SpriteLab2GuideStep} from '@cdo/apps/p5lab/spritelab/lab2/types';
+import {GuideStep} from '@cdo/apps/p5lab/spritelab/lab2/types';
 import {WorldCell} from '@cdo/apps/p5lab/spritelab/lab2/world';
 
 const block: WorldCell = {image: 'brick', kind: 'block'};
@@ -26,7 +26,7 @@ describe('countWorldCells', () => {
 });
 
 describe('nextGuideStepIndex', () => {
-  const steps: SpriteLab2GuideStep[] = [
+  const steps: GuideStep[] = [
     {text: 'place blocks'},
     {text: 'place your character', after: {worldBlocks: 3}},
     {text: 'now add a sprite', after: {worldBlocks: 3, worldSprite: true}},
@@ -71,7 +71,7 @@ describe('nextGuideStepIndex', () => {
     expect(nextGuideStepIndex(steps, 3, {blocks: 9, sprites: 9}, 'Code')).toBe(
       3
     );
-    const gap: SpriteLab2GuideStep[] = [{text: 'a'}, {text: 'b'}];
+    const gap: GuideStep[] = [{text: 'a'}, {text: 'b'}];
     expect(nextGuideStepIndex(gap, 0, {blocks: 9, sprites: 9}, 'Code')).toBe(0);
   });
 

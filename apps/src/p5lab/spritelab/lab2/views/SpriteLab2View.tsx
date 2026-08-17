@@ -45,7 +45,7 @@ import {
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
-import {countWorldCells, nextGuideStepIndex} from '../guideSteps';
+import {useGuideSteps} from '../guideSteps';
 import {
   renameImageReferences,
   renameImageReferencesOnWorkspace,
@@ -61,8 +61,8 @@ import spriteLab2Reducer, {
   setActiveTab,
   setExternalScenes,
   setScenes,
-  SPRITE_LAB2_TABS,
-  SpriteLab2Tab,
+  ALL_TABS,
+  Tab,
 } from '../redux/spriteLab2Redux';
 import {
   collectSavedExternalKeys,
@@ -73,16 +73,12 @@ import {
   toExternalSceneOptions,
 } from '../scenesApi';
 import SpriteLab2Engine from '../SpriteLab2Engine';
-import {
-  SpriteLab2LevelProperties,
-  SpriteLab2Scene,
-  SpriteLab2Source,
-} from '../types';
+import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
   paintWorldCell,
   SCENE_GRID_SIZE,
-  SpriteLab2World,
+  World,
   WORLD_GRID_SIZE,
   WorldCell,
 } from '../world';
@@ -113,13 +109,8 @@ registerReducers({
   spriteLab2: spriteLab2Reducer,
 });
 
-const ENABLED_TABS: readonly SpriteLab2Tab[] = ['Images', 'Code', 'Play'];
-const WORLD_TABS: readonly SpriteLab2Tab[] = [
-  'Images',
-  'World',
-  'Code',
-  'Play',
-];
+const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
+const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // World-tab experiment flags: ?world-tab=true shows the tab (levels can also
 // opt in via showWorldTab); &world=large widens the editor from the scene
@@ -135,7 +126,7 @@ function getWorldTabParams() {
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
 
-function getScenes(sources: SpriteLab2Source): SpriteLab2Scene[] {
+function getScenes(sources: Sources): Scene[] {
   if (sources.scenes?.length) {
     return sources.scenes;
   }
@@ -179,9 +170,9 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
-  currentSources: SpriteLab2Source;
-  updateSources: UseSourcesOutput<SpriteLab2Source>['updateSources'];
-  patchSources: UseSourcesOutput<SpriteLab2Source>['patchSources'];
+  currentSources: Sources;
+  updateSources: UseSourcesOutput<Sources>['updateSources'];
+  patchSources: UseSourcesOutput<Sources>['patchSources'];
   channelId?: string;
   hasEdited: boolean;
   startOver: () => void;
@@ -212,7 +203,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const tabs = useMemo(() => {
     // The property is authored JSON, so its type is a claim, not a guarantee.
     const requested = levelProperties.visibleTabs?.filter(tab =>
-      SPRITE_LAB2_TABS.includes(tab)
+      ALL_TABS.includes(tab)
     );
     if (requested?.length) {
       return requested;
@@ -233,8 +224,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // sprites once the tab (URL param or level property) is gone — there
   // would be no UI left to remove them.
   const compileWorldIfEnabled = useCallback(
-    (world?: SpriteLab2World) =>
-      worldTab.enabled ? compileWorldPrelude(world) : '',
+    (world?: World) => (worldTab.enabled ? compileWorldPrelude(world) : ''),
     [worldTab.enabled]
   );
   // A level naming its tabs opens on the list's first entry (display order is
@@ -352,7 +342,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       if (prev.scenes?.some(s => s.id === pinnedSceneId)) {
         return prev;
       }
-      const pinned: SpriteLab2Scene = {
+      const pinned: Scene = {
         id: pinnedSceneId,
         name: pinnedSceneName || 'Scene',
         source: DEFAULT_SCENE_SOURCE,
@@ -399,21 +389,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
-  // Staged guide instructions: one step at a time, advancing
-  // — never retreating — as later steps' conditions are met (see
-  // guideSteps.ts for the semantics).
-  const guideSteps = levelProperties.guideSteps;
-  const worldGrid = activeScene?.world?.grid;
-  const worldCounts = useMemo(() => countWorldCells(worldGrid), [worldGrid]);
-  const [guideStepIndex, setGuideStepIndex] = useState(0);
-  useEffect(() => {
-    setGuideStepIndex(index =>
-      nextGuideStepIndex(guideSteps, index, worldCounts, activeTab)
-    );
-  }, [guideSteps, worldCounts, activeTab]);
-  const guideInstructions = guideSteps?.length
-    ? guideSteps[Math.min(guideStepIndex, guideSteps.length - 1)].text
-    : levelProperties.longInstructions;
+  const guideInstructions = useGuideSteps(
+    levelProperties.guideSteps,
+    activeScene?.world?.grid,
+    activeTab,
+    levelProperties.longInstructions
+  );
 
   // The World palette selection lives here so it survives leaving the tab
   // (WorldTab unmounts when hidden).
@@ -437,7 +418,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // Seed the redux animation list from a sources animations value.
   const seedAnimationList = useCallback(
-    (animations: SpriteLab2Source['animations']) => {
+    (animations: Sources['animations']) => {
       // Deep-cloned: the legacy thunk normalizes its argument IN PLACE, and
       // this object belongs to the sources state. The clone is also what the
       // migration rewrites; the next save persists the result.
@@ -514,7 +495,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // What's on stage right now — updated by every run, including scene jumps —
   // so "Restart scene" (and the reseed watcher below) can re-run it.
   const currentPlayingRef = useRef<
-    | {kind: 'local'; scene: SpriteLab2Scene}
+    | {kind: 'local'; scene: Scene}
     | {kind: 'external'; project: ExternalProject; sceneId: string}
     | null
   >(null);
@@ -674,7 +655,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // The active scene's world, by ref: run callbacks read it at call time,
   // so world edits don't churn their identities.
-  const activeWorldRef = useRef<SpriteLab2World | undefined>(undefined);
+  const activeWorldRef = useRef<World | undefined>(undefined);
   useEffect(() => {
     activeWorldRef.current = activeScene?.world;
   }, [activeScene]);
@@ -704,7 +685,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // headless from saved sources. Cover/fade comes from the engine's jump
   // callbacks, not here — editor/tab switches don't fade.
   const runLocalScene = useCallback(
-    (scene: SpriteLab2Scene) => {
+    (scene: Scene) => {
       const engine = engineRef.current;
       if (!engine) {
         return;
@@ -758,7 +739,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // re-fetches every image per dispatch (a fetch storm across jumps) — and
   // restoring the captured state object keeps selectors reference-equal.
   const compileExternalScene = useCallback(
-    (scene: SpriteLab2Scene, project: ExternalProject) => {
+    (scene: Scene, project: ExternalProject) => {
       const currentAnimations = getStore().getState().animationList;
       const theirs = project.animations;
       const merged = {
@@ -1149,7 +1130,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const handleCreateScene = useCallback(
     (name: string) => {
-      const scene: SpriteLab2Scene = {
+      const scene: Scene = {
         id: createUuid(),
         name,
         source: DEFAULT_SCENE_SOURCE,
@@ -1171,7 +1152,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   const handleTabChange = useCallback(
-    (tab: SpriteLab2Tab) => {
+    (tab: Tab) => {
       // Entering Play from the tab button starts from the beginning.
       if (tab === 'Play') {
         setPlayStartSceneId(null);
