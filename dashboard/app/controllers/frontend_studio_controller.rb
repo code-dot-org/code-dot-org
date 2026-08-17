@@ -1,6 +1,7 @@
 class FrontendStudioController < ApplicationController
   def index
-    # Off in production until we turn it on, and a kill switch afterwards.
+    # The frontend_studio_enabled feature flag is off in production until we
+    # turn it on, and turns the app off again without a deploy.
     return head :not_found unless DCDO.get('frontend_studio_enabled', !Rails.env.production?)
 
     # A path with a file extension asks for a file from the package, never a

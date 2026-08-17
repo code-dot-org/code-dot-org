@@ -23,7 +23,7 @@ Deployed environments do not build Studio. `package:studio` unpacks a prebuilt t
 
 The catch-all answers 404 for any path with a file extension. Such a path always asks for a file from the package — a hashed bundle under `assets/`, or a file Vite copies to the root like `favicon.svg` — so a miss is a bad URL, never a client route. Serving the HTML shell instead would let the CDN cache a page under a `.js` address.
 
-> **Note:** In production the app answers only while the `frontend_studio_enabled` DCDO flag is on. It is off there by default, so production returns 404 until someone turns it on; the flag is also the kill switch afterwards.
+> **Note:** In production the app answers only while the `frontend_studio_enabled` feature flag is on. It is a DCDO flag, off in production by default, so production returns 404 until someone turns it on. The same flag turns the app off again without a deploy.
 
 ## Init ordering
 
