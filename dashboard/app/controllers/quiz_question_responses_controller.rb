@@ -8,7 +8,16 @@ class QuizQuestionResponsesController < ApplicationController
   def create
     attempt = QuizAttempt.find(params[:quizAttemptId])
     raise ActiveRecord::RecordNotFound unless attempt.user_id == current_user.id
-    # P0 allows only one attempt, so a submitted attempt is immutable.
+    # P0 allows only one attempt, so a submitted attempt is immutable. This
+    # is the only write-lock on responses - deliberately NOT also rejecting
+    # writes once attempt.expired?, even though that sounds like the
+    # obvious enforcement point: the client's auto-submit (see Quiz.tsx)
+    # POSTs its last answers exactly when the deadline passes, so by the
+    # time those requests arrive, expired? is already true too - rejecting
+    # on expiry would reject auto-submit's own final save, not just a
+    # student trying to sneak in late changes. submitted_at is the actual
+    # lock; time_limit_minutes is enforced by the client choosing to
+    # auto-submit, not by the server refusing writes.
     raise 'attempt already submitted' if attempt.submitted_at.present?
 
     question = QuizQuestion.find(params[:quizQuestionId])

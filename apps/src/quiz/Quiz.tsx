@@ -1,5 +1,5 @@
 import {Typography, Button as MuiButton} from '@mui/material';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {getAppOptionsAuthoringQuizQuestions} from '@cdo/apps/lab2/projects/utils';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
@@ -32,12 +32,16 @@ interface AttemptResult {
 // MultipleSelectQuestion/FreeResponseQuestion come back.
 type QuestionResponseValue = string;
 
-const isAnswered = (value: QuestionResponseValue | undefined) => !!value;
-
 // Shapes response_data to match what MultipleChoiceQuestion#grade expects.
 const buildResponseData = (value: QuestionResponseValue | undefined) => ({
   selectedChoiceId: value || '',
 });
+
+const formatRemainingTime = (totalSeconds: number) => {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+};
 
 const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const {
@@ -55,6 +59,10 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     Record<number, QuestionResponseValue>
   >({});
   const [result, setResult] = useState<AttemptResult | null>(null);
+  // Deadline for the current attempt, from the server (QuizAttempt#expires_at) -
+  // null when the quiz has no time limit. Drives the countdown effect below.
+  const [expiresAt, setExpiresAt] = useState<string | null>(null);
+  const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
   // Shown before the attempt is created, instead of jumping straight into
   // the quiz - only when there's actually something to show. Set once the
   // initial GET check finds no existing attempt (see the effect below); a
@@ -88,6 +96,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       .then(response => response.json())
       .then(data => {
         setAttemptId(data.id);
+        setExpiresAt(data.expiresAt || null);
         if (data.submittedAt) {
           setResult({score: data.score, maxScore: data.maxScore});
         }
@@ -117,6 +126,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           return;
         }
         setAttemptId(data.id);
+        setExpiresAt(data.expiresAt || null);
         // P0 allows only one attempt: if this attempt was already
         // submitted (e.g. the student reloaded the page), restore its
         // result instead of showing an editable quiz again. Either way -
@@ -137,18 +147,20 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     question => question.type === 'MultipleChoiceQuestion'
   );
 
-  // One submit for the whole quiz: post every answered question's response,
-  // then finalize the attempt so score/max_score get totaled server-side.
+  // One submit for the whole quiz: post every question's response - even a
+  // skipped one, as an empty selection - then finalize the attempt so
+  // score/max_score get totaled server-side. Posting skipped questions too
+  // matters for max_score: MultipleChoiceQuestion#grade already scores a
+  // blank selection as incorrect, but only for questions that actually
+  // have a QuizQuestionResponse row - a question skipped entirely would
+  // otherwise be missing from the denominator, not just the numerator.
   const submitQuiz = async () => {
     if (!attemptId) {
       return;
     }
 
-    const answeredQuestions = multipleChoiceQuestions.filter(question =>
-      isAnswered(responses[question.id])
-    );
     await Promise.all(
-      answeredQuestions.map(question =>
+      multipleChoiceQuestions.map(question =>
         HttpClient.post(
           '/quiz_question_responses',
           JSON.stringify({
@@ -171,6 +183,41 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     const data = await finalizeResponse.json();
     setResult({score: data.score, maxScore: data.maxScore});
   };
+
+  // Kept up to date every render so the countdown effect below always
+  // calls the freshest submitQuiz (latest responses/attemptId) even though
+  // the effect itself only re-runs when expiresAt/result change - without
+  // this, auto-submit could fire with answers captured from whenever the
+  // effect happened to last run instead of what's actually on screen.
+  const submitQuizRef = useRef(submitQuiz);
+  submitQuizRef.current = submitQuiz;
+
+  // Auto-submits once the deadline passes. The real enforcement is
+  // server-side (QuizQuestionResponsesController#create rejects writes
+  // after expiry regardless) - this is what makes that happen without the
+  // student needing to click Submit themselves.
+  useEffect(() => {
+    if (!expiresAt || result) {
+      setRemainingSeconds(null);
+      return;
+    }
+    const deadline = new Date(expiresAt).getTime();
+    let hasAutoSubmitted = false;
+    const tick = () => {
+      const secondsLeft = Math.max(
+        Math.round((deadline - Date.now()) / 1000),
+        0
+      );
+      setRemainingSeconds(secondsLeft);
+      if (secondsLeft <= 0 && !hasAutoSubmitted) {
+        hasAutoSubmitted = true;
+        submitQuizRef.current();
+      }
+    };
+    tick();
+    const interval = setInterval(tick, 1000);
+    return () => clearInterval(interval);
+  }, [expiresAt, result]);
 
   return (
     <div id="quiz-lab" className={styles.quiz}>
@@ -216,6 +263,11 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
               {!scriptId && (
                 <Typography variant="body3">
                   Preview outside a script has no attempt tracking.
+                </Typography>
+              )}
+              {remainingSeconds !== null && (
+                <Typography variant="body2">
+                  Time remaining: {formatRemainingTime(remainingSeconds)}
                 </Typography>
               )}
             </div>

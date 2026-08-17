@@ -30,4 +30,14 @@ class QuizAttempt < ApplicationRecord
 
   validates :attempt_number, presence: true
   validates :started_at, presence: true
+
+  # nil when the quiz has no time limit.
+  def expires_at
+    return nil if level.time_limit_minutes.blank?
+    started_at + level.time_limit_minutes.to_i.minutes
+  end
+
+  def expired?
+    expires_at.present? && Time.now > expires_at
+  end
 end
