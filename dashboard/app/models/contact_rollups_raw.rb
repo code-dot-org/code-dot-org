@@ -73,26 +73,7 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_professional_learning_attendance_old_attendance_model(limit = nil)
-    # "section_type" is not null only in cases where sections was used for
-    # PD attendance. It's always null when a section represents an actual
-    # classroom of students (the vast majority of rows in the sections table).
-    source_sql = <<~SQL.squish
-      SELECT u.email, se.section_type, MAX(GREATEST(se.updated_at, f.updated_at)) AS updated_at
-        FROM users AS u
-        JOIN followers AS f ON u.id = f.student_user_id
-        JOIN sections AS se ON f.section_id = se.id
-        WHERE u.email > ''
-        AND se.section_type IS NOT NULL
-      GROUP BY 1,2
-    SQL
-    source_sql += "LIMIT #{limit}" unless limit.nil?
-
-    query = get_extraction_query('dashboard.followers', source_sql, 'section_type')
-    ContactRollupsV2.execute_query_in_transaction(query)
-  end
-
-  def self.extract_professional_learning_attendance_new_attendance_model(limit = nil)
+  def self.extract_professional_learning_attendance(limit = nil)
     source_sql = <<~SQL.squish
       SELECT u.email, pdw.course, MAX(GREATEST(pda.updated_at, pds.updated_at, pdw.updated_at)) AS updated_at
         FROM pd_attendances AS pda

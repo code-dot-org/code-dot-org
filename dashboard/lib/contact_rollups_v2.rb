@@ -108,11 +108,8 @@ class ContactRollupsV2
     @log_collector.time!('extract_pd_enrollments') {ContactRollupsRaw.extract_pd_enrollments(@limit)}
     @log_collector.time!('extract_census_submissions') {ContactRollupsRaw.extract_census_submissions(@limit)}
     @log_collector.time!('extract_school_geos') {ContactRollupsRaw.extract_school_geos(@limit)}
-    @log_collector.time!('extract_professional_learning_attendance_old') do
-      ContactRollupsRaw.extract_professional_learning_attendance_old_attendance_model(@limit)
-    end
-    @log_collector.time!('extract_professional_learning_attendance_new') do
-      ContactRollupsRaw.extract_professional_learning_attendance_new_attendance_model(@limit)
+    @log_collector.time!('extract_professional_learning_attendance') do
+      ContactRollupsRaw.extract_professional_learning_attendance(@limit)
     end
   ensure
     @log_collector.record_metrics(
