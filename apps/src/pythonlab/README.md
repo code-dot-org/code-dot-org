@@ -41,6 +41,20 @@ isolation goal Web Lab 2 already solves for student HTML/JS (see
 `pyodideWebWorker.ts` itself is unaware of any of this -- it only talks
 to whatever page creates it
 
+## When the sandbox domain is blocked
+
+The sandbox domain is separate from `code.org`, so a firewall or browser
+extension can block it while `studio.code.org` itself loads fine. The
+iframe is cross-origin, so there is no load error to read: a blocked
+sandbox never posts its `READY` message.
+
+`pyodideSandboxManager.ts` therefore treats silence as failure. If
+`READY` has not arrived after `SANDBOX_READY_TIMEOUT_MS`, it prints a useful
+ error to the user in the console, and stops the load spinner.
+
+A sandbox that was merely slow clears the message when it finally reports
+`READY`.
+
 ## How to run locally
 
 The sandbox is off by default. Turn it on for a session with

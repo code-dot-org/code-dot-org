@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Project Launch, Day Three\r\n\r\n**Your product launches today!**\r\n\r\nWork through the following sections in your Product Launch Activity Guide during today's project time:\r\n* Ship: Choose Your Job\r\n* Ship: Social Media Post\r\n\r\nFill in the associated sections in today's Sketch Lab and AI Chat levels. \r\n\r\n\r\n\r\n",
+    "long_instructions": "##Ship\r\n\r\n**Your product launches today!**\r\n\r\n1. Complete the **_Ship_** section of your canvas.\r\n    - Choose different jobs to complete:\r\n      - _Art Director_\r\n      - _Copywriter_\r\n      - _Sound Designer_\r\n      - _Commercial Director_\r\n      - _Community Manager_\r\n    - Fill in your Keep / Reject / Modify chart based on the assets you create with AI.\r\n    - Create your Social Media Post.\r\n",
     "require_edit_to_continue": "true",
     "project_template_level_name": "problem-solving-with-ai-project-prototype-2-template",
     "hide_share_and_remix": "false",
@@ -15,6 +15,6 @@
     "bubble_choice_description": "Create a social media post to launch your product and capture the hearts and minds of your potential customers.\r\n",
     "thumbnail_url": "https://images.code.org/4dd4d3d995d035e97c12644d882ef443-sketch-lab-icon.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-06T15:44:30.108+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-sketchlab-day-two\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-sketchlab-day-two\"},{\"changed_at\":\"2026-08-06 15:45:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 19:28:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-06T15:44:30.108+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-sketchlab-day-two\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-sketchlab-day-two\"},{\"changed_at\":\"2026-08-06 15:45:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 19:28:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 17:32:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 17:34:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

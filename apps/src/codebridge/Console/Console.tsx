@@ -22,6 +22,7 @@ import '@xterm/xterm/css/xterm.css';
 import ConsoleManager from './ConsoleManager';
 import {darkTheme, lightTheme} from './consoleThemes';
 import ControlButtons from './ControlButtons';
+import {getSystemError} from './MessageHelpers';
 
 import moduleStyles from './console.module.scss';
 
@@ -41,6 +42,9 @@ const Console: React.FunctionComponent = () => {
   const fontSizeKey = useAppSelector(
     state => state.lab2View.consoleFontSizeKey
   );
+  const codeEnvironmentError = useAppSelector(
+    state => state.lab2System.codeEnvironmentError
+  );
   const {signInState} = useAppSelector(state => state.currentUser);
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -51,6 +55,14 @@ const Console: React.FunctionComponent = () => {
       sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE);
     }
   }, []);
+
+  useEffect(() => {
+    consoleManager?.setCodeEnvironmentError(
+      codeEnvironmentError
+        ? getSystemError(codeEnvironmentError, appName)
+        : null
+    );
+  }, [consoleManager, codeEnvironmentError, appName]);
 
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
