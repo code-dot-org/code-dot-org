@@ -2,6 +2,11 @@ import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedCons
 
 import {ResponseValidator} from '../../../util/HttpClient';
 
+export const ExplanationTypes = {
+  AUDIO: 'audio',
+  TEXT: 'text',
+};
+
 export type AssessmentQuestionResult = {
   level_id: number;
   script_level_id: number;
