@@ -1,8 +1,10 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {keyboardOnlyTooltipProps} from '@code-dot-org/component-library/tooltip';
 import {autocompletion} from '@codemirror/autocomplete';
 import {MergeView} from '@codemirror/merge';
 import {Compartment, EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
+import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
@@ -49,6 +51,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const [editorView, setEditorView] = useState<EditorView | MergeView | null>(
     null
   );
+  const [showKeyboardHint, setShowKeyboardHint] = useState(false);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const {editorFontSizeKey, editorFontSizeLoaded} = useAppSelector(
@@ -163,10 +166,19 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       };
       cmContentDiv.addEventListener('keydown', onContentKeyDown);
 
+      // Hint shows only while the scroller has keyboard focus, so not while typing.
+      const onScrollerFocus = () =>
+        setShowKeyboardHint(cmScroller.matches(':focus-visible'));
+      const onScrollerBlur = () => setShowKeyboardHint(false);
+      cmScroller.addEventListener('focus', onScrollerFocus);
+      cmScroller.addEventListener('blur', onScrollerBlur);
+
       // Cleanup function
       cleanup = () => {
         cmScroller.removeEventListener('keydown', onScrollerKeyDown);
         cmContentDiv.removeEventListener('keydown', onContentKeyDown);
+        cmScroller.removeEventListener('focus', onScrollerFocus);
+        cmScroller.removeEventListener('blur', onScrollerBlur);
       };
 
       return true;
@@ -381,13 +393,23 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }
 
   return (
-    <div
-      ref={editorRef}
-      className={classNames(
-        'codemirror-container',
-        moduleStyles.codeEditorContainer
-      )}
-    />
+    // Controlled because the tab stop is .cm-scroller inside this div, not the div.
+    <Tooltip
+      title="Enter to edit · Esc to exit"
+      open={showKeyboardHint}
+      placement="top"
+      // The bubble portals to document.body, outside the themed subtree.
+      slotProps={{tooltip: {'data-theme': theme}}}
+      {...keyboardOnlyTooltipProps}
+    >
+      <div
+        ref={editorRef}
+        className={classNames(
+          'codemirror-container',
+          moduleStyles.codeEditorContainer
+        )}
+      />
+    </Tooltip>
   );
 };
 
