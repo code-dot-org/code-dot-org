@@ -25,7 +25,11 @@ services:
     working_dir: /code-dot-org
     volumes:
       - ../..:/code-dot-org:z
-    env_file: dev.env
+    env_file:
+      - dev.env
+      # Optional: apps development. See README.md.
+      - path: apps-dev.env
+        required: false
     # Loopback only: dev.env has a public secret_key_base, and Rails
     # accepts an IP address in the Host header in development.
     #
