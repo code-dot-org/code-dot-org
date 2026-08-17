@@ -49,15 +49,25 @@ class CurriculumCatalogControllerTest < ActionController::TestCase
 
   # Builds a course offering that CourseOffering.assignable_published_for_students_course_offerings
   # will return: assignable, with a published version, for a student participant audience.
+  #
+  # Goes through add_course_offering rather than building the course version directly.
+  # any_version_is_in_published_state? reads course_versions.published_state, which is a
+  # column on that table rather than a delegation to the content root, and
+  # CourseVersion.add_course_version is what copies the content root's state onto it.
+  # Setting the content root's published_state alone leaves the course version
+  # 'in_development' and the offering out of the catalog.
   private def create_catalog_course_offering(key, display_name, is_featured:)
-    course_version = create(:course_version)
-    course_version.content_root.update!(published_state: 'stable')
-    course_version.course_offering.update!(
-      key: key,
-      display_name: display_name,
-      is_featured: is_featured
+    content_root = create(
+      :single_unit_course,
+      family_name: key,
+      version_year: '1991',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
     )
-    course_version.course_offering
+    course_offering = CourseOffering.add_course_offering(content_root)
+    course_offering.update!(display_name: display_name, is_featured: is_featured)
+    course_offering
   end
 
   private def catalog_keys
