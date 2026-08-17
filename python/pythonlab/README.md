@@ -21,6 +21,9 @@ changes directory to the home folder.
 This tests adds some customization to the output of unit tests, and has a function to either run validation tests
 (more customized) or student tests (less customized).
 
+### theater
+This package contains the python theater package used in pythonlab. It is based on the Java Lab [`org.code.theater`](https://github.com/code-dot-org/javabuilder/tree/main/org-code-javabuilder/theater) package and includes the `Scene` class and `play_scenes` function. A scene records drawing commands; `play_scenes` renders them into an animated gif (via Pillow) and returns the raw bytes. The Liberation fonts used for text are bundled as package data and read via `importlib.resources`, since network fetch is unavailable under Pyodide's `jsglobals: {}`.
+
 ## Building a package
 From the package folder containing `pyproject.toml`, run `uv build`. The generated `.whl` file will be in the `code-dot-org/dist` folder.
 The generated `.whl` file can then be copied to [apps/lib/pyodide](../../apps/lib/pyodide/).
