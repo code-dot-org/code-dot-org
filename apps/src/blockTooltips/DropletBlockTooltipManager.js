@@ -116,7 +116,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ =
           functionReady: function (_, contents) {
             var tooltip =
               this.dropletTooltipManager.getDropletTooltip(funcName);
-            if (tooltip.showExamplesLink) {
+            if (this.shouldShowExamplesLink_(tooltip)) {
               var seeExamplesLink = contents.find(
                 '.tooltip-example-link > a'
               )[0];
@@ -190,6 +190,20 @@ DropletBlockTooltipManager.prototype.hideTooltipsOnBlockPick_ = function (
 };
 
 /**
+ * Only labs that publish block documentation set showExamplesLink in their
+ * droplet config. Play Lab, Artist and Maze do not, and the /docs/ URLs we
+ * would build for them do not exist.
+ *
+ * @param {DropletFunctionTooltip} tooltip
+ * @returns {boolean} whether to offer the "Examples" link for this block
+ */
+DropletBlockTooltipManager.prototype.shouldShowExamplesLink_ = function (
+  tooltip
+) {
+  return !!(this.showExamplesLink && tooltip.showExamplesLink);
+};
+
+/**
  * @returns {String} HTML for tooltip
  */
 DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
@@ -201,7 +215,7 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    showExamplesLink: tooltipInfo.showExamplesLink,
+    showExamplesLink: this.shouldShowExamplesLink_(tooltipInfo),
     showCodeLink: tooltipInfo.showCodeLink,
   });
 };
