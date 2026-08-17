@@ -176,8 +176,8 @@ $tab-segment-height: $tab-item-height - 2px;
   max-width: 160px;
   margin: 0;
   // Native (appearance: auto) selects paint their own UA box when disabled,
-  // which read as a stray grey pill. Take over rendering entirely: no
-  // appearance, our own chevron, and disabled = the same content dimmed.
+  // which reads as a stray grey pill. Take over rendering entirely: no
+  // appearance, our own chevron.
   appearance: none;
   padding: 0 26px 0 10px;
   border: none;
@@ -191,13 +191,18 @@ $tab-segment-height: $tab-item-height - 2px;
   font-size: 14px;
   cursor: pointer;
 
+  // Off the scene tabs the picker can't be used, but it stays at full
+  // strength: the group's tab labels don't dim when their tab isn't the
+  // active one, and the scene name reads as one of those labels.
   &:disabled {
-    opacity: 0.4;
     // Disabled controls swallow clicks entirely; let them fall through so
     // clicking the dropdown area activates the Code tab (see tabGroup).
     pointer-events: none;
-    // Chrome re-applies a UA background-color on :disabled; keep ours.
+    // Chrome re-applies a UA background-color and dims the text on :disabled;
+    // keep ours.
     background-color: transparent;
+    color: var(--text-neutral-primary);
+    opacity: 1;
   }
 }
 
@@ -214,11 +219,6 @@ $tab-segment-height: $tab-item-height - 2px;
   color: var(--text-neutral-primary);
   font-size: 14px;
   white-space: nowrap;
-}
-
-// Matches the select's :disabled dimming when off the scene tabs.
-.sceneNameDim {
-  opacity: 0.4;
 }
 
 .tabContent {

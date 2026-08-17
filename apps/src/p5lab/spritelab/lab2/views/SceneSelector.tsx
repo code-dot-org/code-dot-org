@@ -1,6 +1,5 @@
 import Dialog from '@code-dot-org/component-library/dialog';
 import TextField from '@code-dot-org/component-library/textField';
-import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
 import {SceneMetadata} from '../redux/spriteLab2Redux';
@@ -68,12 +67,7 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
 
   if (locked) {
     return (
-      <span
-        className={classNames(
-          moduleStyles.sceneName,
-          disabled && moduleStyles.sceneNameDim
-        )}
-      >
+      <span className={moduleStyles.sceneName}>
         {scenes.find(scene => scene.id === activeSceneId)?.name ?? ''}
       </span>
     );
