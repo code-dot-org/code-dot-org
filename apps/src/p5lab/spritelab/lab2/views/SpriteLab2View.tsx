@@ -343,7 +343,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Start Over (the reinit count in the deps). On a scene-less project the
   // pin becomes the only scene — materializing the synthesized default too
   // would leave a stray "Scene 1" in every level sharing the project.
-  const pinnedSceneId = levelProperties.fixedSceneId;
+  const {pinnedSceneId, pinnedSceneName} = levelProperties;
   useEffect(() => {
     if (!pinnedSceneId) {
       return;
@@ -354,7 +354,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       const pinned: SpriteLab2Scene = {
         id: pinnedSceneId,
-        name: levelProperties.fixedSceneName || 'Scene',
+        name: pinnedSceneName || 'Scene',
         source: DEFAULT_SCENE_SOURCE,
       };
       const existing =
@@ -366,7 +366,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     });
   }, [
     pinnedSceneId,
-    levelProperties.fixedSceneName,
+    pinnedSceneName,
     updateSources,
     sourcesReinitializedCount,
   ]);
@@ -1346,7 +1346,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <GenerateImagePane
                 uploadImage={uploadImage}
                 onRenameImage={handleRenameImage}
-                fixedImageType={levelProperties.fixedImageType}
+                lockedImageType={levelProperties.lockedImageType}
               />
             </div>
           </div>

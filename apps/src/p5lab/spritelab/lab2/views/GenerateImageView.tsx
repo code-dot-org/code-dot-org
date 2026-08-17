@@ -74,7 +74,7 @@ interface GenerateImageViewProps {
     isNameTaken: (name: string) => boolean;
   };
   /** Level-imposed type for new images; the Type choice is locked to it. */
-  fixedImageType?: SpriteLab2ImageType;
+  lockedImageType?: SpriteLab2ImageType;
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
@@ -99,7 +99,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
   thumb,
   create,
-  fixedImageType,
+  lockedImageType,
   onAccept,
   onCancel,
   onDelete,
@@ -108,7 +108,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
   const [name, setName] = useState('');
   const [imageType, setImageType] = useState<SpriteLab2ImageType>(
-    existing?.imageType || fixedImageType || 'sprite'
+    existing?.imageType || lockedImageType || 'sprite'
   );
   const [style, setStyle] = useState<SpriteLab2ImageStyle>(
     existing?.generation?.style || 'smooth'
@@ -244,7 +244,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                   level can lock the choice for new images too. */}
               <fieldset
                 className={moduleStyles.radioGroup}
-                disabled={generating || !!existing || !!fixedImageType}
+                disabled={generating || !!existing || !!lockedImageType}
               >
                 <legend>Type</legend>
                 {(['sprite', 'background', 'block'] as const).map(type => (

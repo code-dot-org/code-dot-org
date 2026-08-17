@@ -91,7 +91,7 @@ interface GenerateImagePaneProps {
   /** Rename an image and every reference to it; error message or null. */
   onRenameImage: (oldName: string, newName: string) => string | null;
   /** Level-imposed type for new images. */
-  fixedImageType?: SpriteLab2ImageType;
+  lockedImageType?: SpriteLab2ImageType;
 }
 
 /**
@@ -101,7 +101,7 @@ interface GenerateImagePaneProps {
 const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   uploadImage,
   onRenameImage,
-  fixedImageType,
+  lockedImageType,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -452,7 +452,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onRename={handleRename}
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
-          fixedImageType={fixedImageType}
+          lockedImageType={lockedImageType}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onAcceptGenerated={handleAcceptGenerated}

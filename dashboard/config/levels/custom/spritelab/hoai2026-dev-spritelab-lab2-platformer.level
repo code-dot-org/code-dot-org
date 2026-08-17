@@ -26,8 +26,8 @@
       "Code",
       "Play"
     ],
-    "fixed_scene_id": "platform-scene",
-    "fixed_scene_name": "Platformer",
+    "pinned_scene_id": "platform-scene",
+    "pinned_scene_name": "Platformer",
     "guide_mode": "instructions",
     "guide_steps": [
       {

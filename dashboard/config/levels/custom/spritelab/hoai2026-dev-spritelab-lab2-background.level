@@ -24,7 +24,7 @@
     "visible_tabs": [
       "Images"
     ],
-    "fixed_image_type": "background",
+    "locked_image_type": "background",
     "guide_mode": "instructions",
     "long_instructions": "# Make a background\nUse AI to create the background for your story scene. Describe a place - a forest, a city, outer space - and press **Generate**."
   }

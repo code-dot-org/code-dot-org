@@ -24,7 +24,7 @@
     "visible_tabs": [
       "Images"
     ],
-    "fixed_image_type": "sprite",
+    "locked_image_type": "sprite",
     "guide_mode": "instructions",
     "long_instructions": "# Make a character\nNow create the hero of your story. Describe what your character looks like and press **Generate**."
   }

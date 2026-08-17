@@ -25,8 +25,8 @@
       "Code",
       "Play"
     ],
-    "fixed_scene_id": "story-scene",
-    "fixed_scene_name": "Story",
+    "pinned_scene_id": "story-scene",
+    "pinned_scene_name": "Story",
     "guide_mode": "instructions",
     "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview.",
     "toolbox_definition": {

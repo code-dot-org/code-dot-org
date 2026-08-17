@@ -141,13 +141,13 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // Staged text for the floating guide, in order; requires guideMode.
   guideSteps?: SpriteLab2GuideStep[];
   // Locks the new-image dialog's Type choice.
-  fixedImageType?: SpriteLab2ImageType;
+  lockedImageType?: SpriteLab2ImageType;
   // The one scene this level edits, created on first load if the project
   // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
   // before scenes existed).
-  fixedSceneId?: string;
-  // Name given to the fixed scene at creation.
-  fixedSceneName?: string;
+  pinnedSceneId?: string;
+  // Name given to the pinned scene at creation.
+  pinnedSceneName?: string;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

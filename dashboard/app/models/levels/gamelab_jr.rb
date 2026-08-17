@@ -43,9 +43,9 @@ class GamelabJr < Gamelab
     show_world_tab
     show_large_world
     visible_tabs
-    fixed_image_type
-    fixed_scene_id
-    fixed_scene_name
+    locked_image_type
+    pinned_scene_id
+    pinned_scene_name
     guide_steps
   )
 
