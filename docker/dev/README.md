@@ -45,16 +45,37 @@ volume. Use `docker compose down -v` only when you want to remove that data.
 
 ## Change frontend code
 
-Run each needed server in another container shell.
+The Vite server needs no extra configuration. Run it in another container
+shell. It uses port 3036 and serves `/frontend-studio/`.
 
 ```sh
-cd /code-dot-org/apps && yarn start:cheapest
 cd /code-dot-org/frontend && yarn dev
 ```
 
-The apps server uses port 9000 and sends requests to Rails. The Vite server
-uses port 3036 and serves `/frontend-studio/`. Stop a native development
-environment before you start this one. The ports are fixed.
+The apps server needs local apps. `rake package:apps` downloads a package
+that is already built, and Rails then asks for the file names in that
+package, which the apps server does not have. Add this file, then start the
+container again.
+
+```sh
+printf 'CDO_USE_MY_APPS=true\nCDO_OPTIMIZE_WEBPACK_ASSETS=false\n' \
+  > docker/dev/apps-dev.env
+```
+
+In the container, build the apps package and point Rails at it. The build
+writes some gigabytes into the checkout.
+
+```sh
+cd /code-dot-org/apps && yarn start:cheapest
+cd /code-dot-org && bundle exec rake package:apps:symlink
+```
+
+Open port 9000, which is the apps server. It sends page requests to Rails
+and serves the apps files itself. An edit to a file in `apps/src` then
+reaches the browser.
+
+Stop a native development environment before you start this one. The ports
+are fixed.
 
 ## Linked worktrees
 
