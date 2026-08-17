@@ -1,0 +1,11 @@
+/**
+ * Lingering dependencies still managed by Sprockets that we have yet to either
+ * remove or migrate into apps. Loaded before the styles provided by apps.
+ *
+ * Gem assets
+ *= require jquery-ui
+ *
+ * Vendor assets
+ *= require add2home
+ *= require jquery.qtip.min
+ */
