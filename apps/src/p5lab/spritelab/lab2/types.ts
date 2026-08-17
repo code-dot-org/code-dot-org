@@ -2,6 +2,7 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
+import {SpriteLab2Tab} from './redux/spriteLab2Redux';
 import {SpriteLab2World} from './world';
 
 // The animation-list category marking an image as a background rather than a
@@ -13,20 +14,20 @@ export const BLOCKS_CATEGORY = 'blocks';
 
 // 'block' is a square platform tile: keyed and cropped to its content so
 // copies tile seamlessly when laid out on the grid.
-export type SpriteLab2ItemType = 'sprite' | 'background' | 'block';
+export type SpriteLab2ImageType = 'sprite' | 'background' | 'block';
 
 // Visual style. 'pixel' yields crisp pixel art with hard edges; 'smooth' a
 // shaded illustration. See removeBackground's MatteOptions.
-export type SpriteLab2ItemStyle = 'smooth' | 'pixel';
+export type SpriteLab2ImageStyle = 'smooth' | 'pixel';
 
 // Display names, shared so the image dialog's summary and generate views
 // use the same words.
-export const ITEM_TYPE_LABELS: Record<SpriteLab2ItemType, string> = {
+export const IMAGE_TYPE_LABELS: Record<SpriteLab2ImageType, string> = {
   sprite: 'Sprite',
   background: 'Background',
   block: 'Block',
 };
-export const ITEM_STYLE_LABELS: Record<SpriteLab2ItemStyle, string> = {
+export const IMAGE_STYLE_LABELS: Record<SpriteLab2ImageStyle, string> = {
   smooth: 'Smooth',
   pixel: 'Pixel art',
 };
@@ -38,8 +39,8 @@ export const ITEM_STYLE_LABELS: Record<SpriteLab2ItemStyle, string> = {
  */
 export interface ImageGenerationMetadata {
   prompt: string;
-  itemType: SpriteLab2ItemType;
-  style: SpriteLab2ItemStyle;
+  imageType: SpriteLab2ImageType;
+  style: SpriteLab2ImageStyle;
   /** Sending the same seed and prompt again asks for the same image. */
   seed: number;
   /** Sampling wildness the user chose; absent = the service default. */
@@ -86,15 +87,6 @@ export interface RuntimeAnimationList {
   propsByKey: {[key: string]: RuntimeAnimationProps};
 }
 
-// One Items-tab gallery entry; the image lives in the project asset bucket
-// and, once in the animationList, is an ordinary costume/background.
-export interface SpriteLab2ItemEntry {
-  name: string;
-  filename: string;
-  prompt?: string;
-  itemType?: 'sprite' | 'background';
-}
-
 // A named code workspace. The id is the source of truth (the go-to-scene
 // block stores it); scenes[0] is the default scene Play starts at.
 export interface SpriteLab2Scene {
@@ -114,26 +106,22 @@ export interface SpriteLab2Source extends ProjectSources {
   // Scenes UI variant: per-scene code workspaces. When present, `source`
   // mirrors scenes[0].source so projects still open with the variant off.
   scenes?: SpriteLab2Scene[];
-  // Items tab gallery metadata.
-  items?: SpriteLab2ItemEntry[];
 }
 
 /**
- * One stage of a level's floating-guide instructions (the guide_steps level
- * property). `text` is markdown. `after` is the condition for reaching this
- * step from the one before it (the first step needs none): every listed
- * clause must hold, judged against the active scene's World grid and the
- * current tab.
+ * One stage of a level's floating-guide instructions. `text` is markdown;
+ * `after` is what must hold to reach this step from the one before it, every
+ * listed clause of it (the first step needs none).
  */
 export interface SpriteLab2GuideStep {
   text: string;
   after?: {
     /** At least this many block-kind cells placed in the World. */
     worldBlocks?: number;
-    /** At least one sprite-kind cell (the character) placed in the World. */
+    /** At least one sprite-kind cell placed in the World. */
     worldSprite?: boolean;
     /** This tab is active. */
-    tab?: string;
+    tab?: SpriteLab2Tab;
   };
 }
 
@@ -147,29 +135,18 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // World-tab experiment: the tab edits the whole world, not just the
   // scene-sized corner (equivalent to the world=large URL parameter).
   showLargeWorld?: boolean;
-  // The exact tab set for this level, values from SPRITE_LAB2_TABS
-  // ('Images' | 'World' | 'Code' | 'Play'). Unknown names are ignored;
-  // absent or empty means the default tab set. Listing 'World' turns the
-  // world tab on without needing showWorldTab. The FIRST entry is the tab
-  // the level opens on (display order is fixed, so authored order is free
-  // to carry that).
-  visibleTabs?: string[];
-  // Staged instructions for the floating guide (requires guideMode).
-  // The guide shows one step at a time and advances - never retreats -
-  // when the next step's `after` condition is met. See SpriteLab2GuideStep.
+  // The tabs this level shows, in the order that names the starting tab
+  // (the first entry). Absent or empty means the default set.
+  visibleTabs?: SpriteLab2Tab[];
+  // Staged text for the floating guide, in order; requires guideMode.
   guideSteps?: SpriteLab2GuideStep[];
-  // Locks the new-image dialog's Type choice (existing images already keep
-  // their recorded type).
-  fixedImageType?: SpriteLab2ItemType;
-  // This level edits exactly one scene, with this id: created in the
-  // project sources on first load if absent, scene selection is locked to
-  // it, and Play starts from it. Levels sharing a project via
-  // projectTemplateLevelName use distinct ids so each level keeps its own
-  // scene. Must not be 'scene-1' (the id synthesized for sources saved
+  // Locks the new-image dialog's Type choice.
+  fixedImageType?: SpriteLab2ImageType;
+  // The one scene this level edits, created on first load if the project
+  // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
   // before scenes existed).
   fixedSceneId?: string;
-  // Display name given to the fixed scene when it is created; consulted
-  // only at creation.
+  // Name given to the fixed scene at creation.
   fixedSceneName?: string;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;

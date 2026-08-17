@@ -51,6 +51,7 @@ import {
   renameImageReferencesOnWorkspace,
 } from '../imageReferences';
 import {onTrimsUpdated} from '../imageTrim';
+import {migrateAnimationList} from '../migrateSources';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -209,9 +210,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // 'World' turns the world tab on; the URL flag and showWorldTab still
   // work for levels without the property.
   const tabs = useMemo(() => {
-    const requested = levelProperties.visibleTabs?.filter(
-      (tab): tab is SpriteLab2Tab =>
-        (SPRITE_LAB2_TABS as readonly string[]).includes(tab)
+    // The property is authored JSON, so its type is a claim, not a guarantee.
+    const requested = levelProperties.visibleTabs?.filter(tab =>
+      SPRITE_LAB2_TABS.includes(tab)
     );
     if (requested?.length) {
       return requested;
@@ -437,11 +438,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Seed the redux animation list from a sources animations value.
   const seedAnimationList = useCallback(
     (animations: SpriteLab2Source['animations']) => {
+      // Deep-cloned: the legacy thunk normalizes its argument IN PLACE, and
+      // this object belongs to the sources state. The clone is also what the
+      // migration rewrites; the next save persists the result.
+      const seeded = cloneDeep(animations || EMPTY_ANIMATION_LIST);
+      migrateAnimationList(seeded);
       dispatch(
         setInitialAnimationList(
-          // Deep-cloned: the legacy thunk normalizes its argument IN PLACE,
-          // and this object belongs to the sources state.
-          cloneDeep(animations || EMPTY_ANIMATION_LIST),
+          seeded,
           // No v3 migration; the engine never runs the legacy share path.
           undefined as unknown as object,
           true /* isSpriteLab */

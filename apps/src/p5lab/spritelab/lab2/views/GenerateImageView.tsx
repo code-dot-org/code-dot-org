@@ -3,7 +3,7 @@ import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
@@ -21,13 +21,14 @@ import {
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import {
   ImageGenerationMetadata,
-  ITEM_STYLE_LABELS,
-  ITEM_TYPE_LABELS,
-  SpriteLab2ItemStyle,
-  SpriteLab2ItemType,
+  IMAGE_STYLE_LABELS,
+  IMAGE_TYPE_LABELS,
+  SpriteLab2ImageStyle,
+  SpriteLab2ImageType,
 } from '../types';
 
 import DeleteImageButton from './DeleteImageButton';
+import TemperatureBot from './TemperatureBot';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -46,58 +47,11 @@ const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
 
-// Art rows in the pixelated bot: coarse enough to read as pixel art at the
-// bot's 64px display height, fine enough to keep its face.
-const PIXEL_BOT_ROWS = 28;
-
-/**
- * The temperature bot, rendered through a coarse pixel grid: the image is
- * downsampled onto a small canvas and the canvas is CSS-upscaled with
- * image-rendering: pixelated. Kept mounted (hidden) alongside the plain
- * bot so style switches show it already drawn instead of flickering
- * through an image load.
- */
-const PixelatedBot: React.FunctionComponent<{src: string; hidden: boolean}> = ({
-  src,
-  hidden,
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext('2d');
-    if (!canvas || !ctx) {
-      return;
-    }
-    let cancelled = false;
-    const image = new Image();
-    image.onload = () => {
-      if (cancelled) {
-        return;
-      }
-      canvas.height = PIXEL_BOT_ROWS;
-      canvas.width = Math.max(
-        1,
-        Math.round((PIXEL_BOT_ROWS * image.width) / image.height)
-      );
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-    };
-    image.src = src;
-    return () => {
-      cancelled = true;
-    };
-  }, [src]);
-  return (
-    <canvas
-      ref={canvasRef}
-      className={classNames(
-        moduleStyles.bot,
-        moduleStyles.botPixelated,
-        hidden && moduleStyles.botHidden
-      )}
-      aria-hidden
-    />
-  );
+// Prompt hints, one per type, so the example suits what is being made.
+const PROMPT_PLACEHOLDERS: Record<SpriteLab2ImageType, string> = {
+  sprite: 'e.g. a friendly green dragon',
+  background: 'e.g. a misty forest at sunrise',
+  block: 'e.g. a mossy stone brick',
 };
 
 type GenerateMode = 'prompt' | 'generating';
@@ -108,7 +62,7 @@ interface GenerateImageViewProps {
   existing?: {
     generation?: ImageGenerationMetadata;
     // Locked: regenerating can't change what kind of image this is.
-    itemType: SpriteLab2ItemType;
+    imageType: SpriteLab2ImageType;
     /** Current pixels, for "use previous image". */
     getDataURI: () => Promise<string | null>;
   };
@@ -120,7 +74,7 @@ interface GenerateImageViewProps {
     isNameTaken: (name: string) => boolean;
   };
   /** Level-imposed type for new images; the Type choice is locked to it. */
-  fixedItemType?: SpriteLab2ItemType;
+  fixedImageType?: SpriteLab2ImageType;
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
@@ -145,7 +99,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
   thumb,
   create,
-  fixedItemType,
+  fixedImageType,
   onAccept,
   onCancel,
   onDelete,
@@ -153,10 +107,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
   const [name, setName] = useState('');
-  const [itemType, setItemType] = useState<SpriteLab2ItemType>(
-    existing?.itemType || fixedItemType || 'sprite'
+  const [imageType, setImageType] = useState<SpriteLab2ImageType>(
+    existing?.imageType || fixedImageType || 'sprite'
   );
-  const [style, setStyle] = useState<SpriteLab2ItemStyle>(
+  const [style, setStyle] = useState<SpriteLab2ImageStyle>(
     existing?.generation?.style || 'smooth'
   );
   const [temperatureLevel, setTemperatureLevel] = useState(
@@ -190,7 +144,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     setError(null);
     try {
       const options: GenerateImageOptions = {
-        itemType,
+        imageType,
         style,
         temperature: levelToTemperature(temperatureLevel),
       };
@@ -213,7 +167,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     }
   }, [
     prompt,
-    itemType,
+    imageType,
     style,
     temperatureLevel,
     source,
@@ -280,18 +234,17 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 className={moduleStyles.promptInput}
                 value={prompt}
                 rows={5}
-                placeholder="e.g. a friendly green dragon"
+                placeholder={PROMPT_PLACEHOLDERS[imageType]}
                 disabled={generating}
                 onChange={e => setPrompt(e.target.value)}
               />
             </label>
             <div className={moduleStyles.formStack}>
-              {/* An existing image's type is locked: regenerating can't
-                  change what kind of image it is. A level can lock new
-                  images to one type the same way (fixedItemType). */}
+              {/* Regenerating can't change what kind of image this is, and a
+                  level can lock the choice for new images too. */}
               <fieldset
                 className={moduleStyles.radioGroup}
-                disabled={generating || !!existing || !!fixedItemType}
+                disabled={generating || !!existing || !!fixedImageType}
               >
                 <legend>Type</legend>
                 {(['sprite', 'background', 'block'] as const).map(type => (
@@ -299,10 +252,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                     key={type}
                     name="generation-type"
                     value={type}
-                    label={ITEM_TYPE_LABELS[type]}
+                    label={IMAGE_TYPE_LABELS[type]}
                     size="s"
-                    checked={itemType === type}
-                    onChange={() => setItemType(type)}
+                    checked={imageType === type}
+                    onChange={() => setImageType(type)}
                   />
                 ))}
               </fieldset>
@@ -316,7 +269,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                     key={s}
                     name="generation-style"
                     value={s}
-                    label={ITEM_STYLE_LABELS[s]}
+                    label={IMAGE_STYLE_LABELS[s]}
                     size="s"
                     checked={style === s}
                     onChange={() => setStyle(s)}
@@ -367,18 +320,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
               disabled={generating}
             >
               <legend id="temperature-label">Temperature</legend>
-              {/* A wink: choosing pixel-art style pixelates the bot too.
-                  Both variants stay mounted; CSS picks one. */}
-              <PixelatedBot src={botImage} hidden={style !== 'pixel'} />
-              <img
-                src={botImage}
-                className={classNames(
-                  moduleStyles.bot,
-                  style === 'pixel' && moduleStyles.botHidden
-                )}
-                alt=""
-                draggable={false}
-              />
+              {/* A wink: choosing pixel-art style pixelates the bot too. */}
+              <TemperatureBot src={botImage} pixelated={style === 'pixel'} />
+
               <Slider
                 name="temperature-slider"
                 aria-labelledby="temperature-label"

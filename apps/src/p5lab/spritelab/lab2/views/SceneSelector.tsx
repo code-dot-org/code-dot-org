@@ -15,8 +15,7 @@ interface SceneSelectorProps {
   activeSceneId: string | null;
   // Disabled off the scene tabs, where switching has no effect.
   disabled?: boolean;
-  // Pinned-scene levels (fixed_scene_id) edit one scene only: show its name
-  // without the picker or the new-scene option.
+  // Locked to the current scene: disallows changing or creating scenes.
   locked?: boolean;
   onSelectScene: (sceneId: string) => void;
   onCreateScene: (name: string) => void;

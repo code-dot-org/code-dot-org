@@ -9,9 +9,9 @@ import {GeneratedImageResult} from '../ai/items/itemGeneration';
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import {
   ImageGenerationMetadata,
-  ITEM_STYLE_LABELS,
-  ITEM_TYPE_LABELS,
-  SpriteLab2ItemType,
+  IMAGE_STYLE_LABELS,
+  IMAGE_TYPE_LABELS,
+  SpriteLab2ImageType,
 } from '../types';
 
 import DeleteImageButton from './DeleteImageButton';
@@ -33,9 +33,9 @@ interface ImageDetailsDialogProps {
   onRename: (newName: string) => string | null;
   onDelete: () => void;
   /** The image's kind; locked while regenerating an existing image. */
-  itemType?: SpriteLab2ItemType;
-  /** Level-imposed type for new images (the fixed_image_type property). */
-  fixedItemType?: SpriteLab2ItemType;
+  imageType?: SpriteLab2ImageType;
+  /** Level-imposed type for new images. */
+  fixedImageType?: SpriteLab2ImageType;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -63,8 +63,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onPaint,
   onRename,
   onDelete,
-  itemType,
-  fixedItemType,
+  imageType,
+  fixedImageType,
   getDataURI,
   isNameTaken,
   onAcceptGenerated,
@@ -199,13 +199,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 ? undefined
                 : {
                     generation,
-                    itemType: itemType || 'sprite',
+                    imageType: imageType || 'sprite',
                     getDataURI,
                   }
             }
             thumb={isNew ? undefined : thumb}
             create={isNew ? {isNameTaken} : undefined}
-            fixedItemType={fixedItemType}
+            fixedImageType={fixedImageType}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
               setView('details');
@@ -245,9 +245,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                       {generation.prompt}
                     </dd>
                     <dt>Type</dt>
-                    <dd>{ITEM_TYPE_LABELS[generation.itemType]}</dd>
+                    <dd>{IMAGE_TYPE_LABELS[generation.imageType]}</dd>
                     <dt>Style</dt>
-                    <dd>{ITEM_STYLE_LABELS[generation.style]}</dd>
+                    <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
                     {generation.temperature !== undefined && (
                       <>
                         <dt>Temperature</dt>

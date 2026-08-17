@@ -9,7 +9,7 @@ const mockGenerateText = generateText as jest.Mock;
 
 // Backgrounds in smooth style skip the canvas post-processing, which jsdom
 // can't run; these tests exercise the request/metadata plumbing only.
-const OPTIONS = {itemType: 'background', style: 'smooth'} as const;
+const OPTIONS = {imageType: 'background', style: 'smooth'} as const;
 
 describe('generateImage', () => {
   beforeEach(() => {
@@ -38,7 +38,7 @@ describe('generateImage', () => {
     expect(sent.temperature).toBe(1.5);
     expect(generation).toMatchObject({
       prompt: 'a beach',
-      itemType: 'background',
+      imageType: 'background',
       style: 'smooth',
       seed: 1234,
       temperature: 1.5,
