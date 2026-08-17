@@ -1,6 +1,24 @@
 class QuizAttemptsController < ApplicationController
   before_action :authenticate_user!
 
+  # GET /quiz_attempts?levelId=&scriptId=
+  #
+  # Read-only check for an existing attempt - unlike #create, this never
+  # creates one. Quiz.tsx needs this to decide whether to show the intro
+  # screen (no attempt yet) or resume/show results (one already exists)
+  # without the side effect of stamping started_at just from loading the
+  # page - that timestamp should reflect clicking "Begin Quiz", not
+  # whenever the intro screen happened to render.
+  def index
+    attempt = QuizAttempt.find_by(
+      user: current_user,
+      level_id: params[:levelId],
+      script_id: params[:scriptId],
+      attempt_number: 1
+    )
+    render json: attempt && quiz_attempt_json(attempt)
+  end
+
   # POC: starts (or resumes) this user's one and only attempt at a quiz
   # level within a script. P0 allows exactly one attempt - multiple
   # attempts are a later milestone - so attempt_number is always 1 and
@@ -18,13 +36,7 @@ class QuizAttemptsController < ApplicationController
       a.started_at = Time.now
     end
 
-    render status: :created, json: {
-      id: attempt.id,
-      attemptNumber: attempt.attempt_number,
-      submittedAt: attempt.submitted_at,
-      score: attempt.score,
-      maxScore: attempt.max_score
-    }
+    render status: :created, json: quiz_attempt_json(attempt)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
   end
@@ -47,8 +59,26 @@ class QuizAttemptsController < ApplicationController
       )
     end
 
-    render status: :ok, json: {id: attempt.id, score: attempt.score, maxScore: attempt.max_score}
+    render status: :ok, json: quiz_attempt_json(attempt)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
+  end
+
+  private def quiz_attempt_json(attempt)
+    {
+      id: attempt.id,
+      attemptNumber: attempt.attempt_number,
+      submittedAt: attempt.submitted_at,
+      score: attempt.score,
+      maxScore: attempt.max_score,
+      # nil when the quiz has no time limit - see QuizAttempt#expires_at.
+      # The client computes its own countdown/auto-submit from this rather
+      # than us pushing a "time's up" event, so clock skew between client
+      # and server just means the countdown's last second or two may be
+      # slightly off, not that auto-submit fires at the wrong wall-clock
+      # time (that's enforced server-side regardless, see
+      # QuizQuestionResponsesController#create).
+      expiresAt: attempt.expires_at
+    }
   end
 end
