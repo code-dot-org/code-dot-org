@@ -1,7 +1,5 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {loadPyodide, PyodideInterface, version} from 'pyodide';
-// Type-only: pyodide's "./ffi" export map has no runtime entry, so a value
-// import of it would not resolve.
 import type {PyBuffer} from 'pyodide/ffi';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
