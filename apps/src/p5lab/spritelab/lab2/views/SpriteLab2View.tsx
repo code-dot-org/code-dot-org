@@ -1268,7 +1268,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         enabledTabs={tabs}
         visibleTabs={tabs}
         onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
-        codeTabExtra={
+        sceneTabsExtra={
           animationsSeeded ? (
             <SceneSelector
               scenes={sceneMetadata}

@@ -25,7 +25,7 @@ interface TabShellProps {
   visibleTabs?: readonly SpriteLab2Tab[];
   // Rendered in the tab bar leading the scene-editing tabs (the scene
   // selector).
-  codeTabExtra?: React.ReactNode;
+  sceneTabsExtra?: React.ReactNode;
   // Rendered immediately after the Play button (the restart controls).
   playTabExtra?: React.ReactNode;
   children: React.ReactNode;
@@ -43,19 +43,16 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   onTabChange,
   enabledTabs,
   visibleTabs = SPRITE_LAB2_TABS,
-  codeTabExtra,
+  sceneTabsExtra,
   playTabExtra,
   children,
   onClickStartOver,
 }) => {
-  // The scene selector leads the scene-editing tabs, which it governs. A lone
-  // Code tab with no selector yet (animations still seeding) needs no group.
   const sceneTabs = SPRITE_LAB2_TABS.filter(
     tab => SCENE_TABS.includes(tab) && visibleTabs.includes(tab)
   );
-  const grouped = !!codeTabExtra || sceneTabs.length > 1;
-  // Clicking the group's non-tab area (the selector, disabled off these tabs)
-  // opens Code, or the only scene tab there is.
+  // A lone scene tab with no selector has nothing to group with.
+  const grouped = !!sceneTabsExtra || sceneTabs.length > 1;
   const defaultSceneTab = sceneTabs.includes('Code') ? 'Code' : sceneTabs[0];
   const renderTab = (tab: SpriteLab2Tab) => (
     <button
@@ -110,7 +107,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                       }
                     }}
                   >
-                    {codeTabExtra}
+                    {sceneTabsExtra}
                     {sceneTabs.map(sceneTab => (
                       <React.Fragment key={sceneTab}>
                         {renderTab(sceneTab)}

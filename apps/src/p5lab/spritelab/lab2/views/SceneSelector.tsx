@@ -13,7 +13,7 @@ const NEW_SCENE_VALUE = '__new_scene__';
 interface SceneSelectorProps {
   scenes: SceneMetadata[];
   activeSceneId: string | null;
-  // Disabled off the Code tab, where switching has no effect.
+  // Disabled off the scene tabs, where switching has no effect.
   disabled?: boolean;
   // Pinned-scene levels (fixed_scene_id) edit one scene only: show its name
   // without the picker or the new-scene option.

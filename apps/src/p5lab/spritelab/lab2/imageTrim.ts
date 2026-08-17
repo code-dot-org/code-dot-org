@@ -125,7 +125,7 @@ export async function trimAnimationListImages(
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
-  // Drop cached trims for names no longer in the list: a deleted image's
+  // Drop cached trims for names absent from the list: a deleted image's
   // thumbnail must not resurface when a new image takes the same name.
   const currentNames = new Set(
     (list.orderedKeys || []).map(key => list.propsByKey[key]?.name)

@@ -94,12 +94,8 @@ $tab-item-height: 34px;
 }
 
 // The scene selector plus the tabs that edit that scene, as one segmented
-// control: the selector leads, the tabs follow as segments. The group carries
-// the pill's shape and its outer border; the pieces inside are transparent and
-// split by subtle dividers, and each tab keeps its own teal active edge (the
-// group can hold two tabs, so a group-wide edge couldn't say which is active).
-// Both segments get the same explicit height so their text shares a
-// centerline, sitting inside the group's 1px outline.
+// control: the selector leads, the tabs follow. Segments share this explicit
+// height so their text sits on one centerline inside the group's outline.
 $tab-segment-height: $tab-item-height - 2px;
 
 .tabGroup {
@@ -107,10 +103,9 @@ $tab-segment-height: $tab-item-height - 2px;
   align-items: center;
   box-sizing: border-box;
   height: $tab-item-height;
-  // The group's radius clips the square-cornered segments.
+  // Clips the square-cornered segments to the group's radius.
   overflow: hidden;
-  // The arrow, not the I-beam `auto` would give over the scene name's text.
-  // Segments that do something (a tab, the live selector) set their own.
+  // The arrow, not the I-beam `auto` gives over the scene name's text.
   cursor: default;
   border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px 4px 0 0;
@@ -120,16 +115,14 @@ $tab-segment-height: $tab-item-height - 2px;
     height: $tab-segment-height;
     border: none;
     border-radius: 0;
+    // Dividers between segments; the group draws the outer edge.
     border-left: 1px solid var(--borders-neutral-primary);
 
-    // Without a selector ahead of it, the group's own edge is the left edge.
     &:first-child {
       border-left: none;
     }
   }
 
-  // Transparent so the group's background shows through; the teal active edge
-  // comes from .tabActive.
   .tabActive {
     background: transparent;
 
@@ -145,10 +138,7 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-// Set while a click on the group's non-tab area (the scene selector, when it
-// is disabled or a locked name) would open one of its tabs. Off the rest of
-// the time, so an inert area keeps the default cursor. The enabled selector
-// carries its own pointer: opening the dropdown is always an action.
+// Set while a click on the group's non-tab area would open one of its tabs.
 .tabGroupOpensTab {
   cursor: pointer;
 }
@@ -191,15 +181,13 @@ $tab-segment-height: $tab-item-height - 2px;
   font-size: 14px;
   cursor: pointer;
 
-  // Off the scene tabs the picker can't be used, but it stays at full
-  // strength: the group's tab labels don't dim when their tab isn't the
-  // active one, and the scene name reads as one of those labels.
+  // Unusable off the scene tabs, but not dimmed: it reads as one of the
+  // group's labels, and those stay bright when their tab isn't the active one.
   &:disabled {
     // Disabled controls swallow clicks entirely; let them fall through so
-    // clicking the dropdown area activates the Code tab (see tabGroup).
+    // clicking the dropdown area activates the Code tab.
     pointer-events: none;
-    // Chrome re-applies a UA background-color and dims the text on :disabled;
-    // keep ours.
+    // Chrome re-applies a UA background-color and dims the text on :disabled.
     background-color: transparent;
     color: var(--text-neutral-primary);
     opacity: 1;
