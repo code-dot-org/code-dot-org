@@ -33,6 +33,7 @@ runs:
           uv.lock
           docker/build/Dockerfile
           docker/deps/Dockerfile
+          docker/scripts/install-node.sh
         )
 
         # A partial set would hash to a key that fails far away, nameless.

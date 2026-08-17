@@ -1,0 +1,3 @@
+# Allowlist: this build copies only the shared node install script.
+*
+!docker/scripts/install-node.sh

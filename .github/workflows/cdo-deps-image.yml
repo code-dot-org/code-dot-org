@@ -13,6 +13,7 @@ on:
     paths:
       - 'docker/deps/**'
       - 'docker/build/**'
+      - 'docker/scripts/install-node.sh'
       - 'Gemfile'
       - 'Gemfile.lock'
       - '.ruby-version'
@@ -27,6 +28,7 @@ on:
     paths:
       - 'docker/deps/**'
       - 'docker/build/**'
+      - 'docker/scripts/install-node.sh'
       - 'Gemfile'
       - 'Gemfile.lock'
       - '.ruby-version'
@@ -119,6 +121,7 @@ jobs:
           sparse-checkout: |
             docker/build
             docker/deps
+            docker/scripts
             dashboard/engines
             python
 
@@ -134,8 +137,9 @@ jobs:
       - name: Build cdo-build with ${{ matrix.engine }}
         run: |
           ${{ matrix.engine }} build \
+            -f docker/build/Dockerfile \
             --build-arg BASE_IMAGE="$BASE_IMAGE" \
-            -t cdo-build:ci docker/build/
+            -t cdo-build:ci .
 
       # A broken builder otherwise surfaces as a bundle install failure.
       - name: Smoke test cdo-build
@@ -189,6 +193,7 @@ jobs:
             .github/actions/cdo-deps-key
             docker/build
             docker/deps
+            docker/scripts
             dashboard/engines
             python
 
@@ -202,8 +207,9 @@ jobs:
       - name: Build cdo-build
         run: |
           docker build \
+            -f docker/build/Dockerfile \
             --build-arg BASE_IMAGE="$BASE_IMAGE" \
-            -t cdo-build:ci docker/build/
+            -t cdo-build:ci .
 
       # The one definition of the content key, shared with every consumer.
       - name: Compute the dependency-layer content key
@@ -265,6 +271,7 @@ jobs:
             .github/actions/cdo-deps-key
             docker/build
             docker/deps
+            docker/scripts
             dashboard/engines
             python
 
