@@ -6,6 +6,7 @@ class AichatEventsController < ApplicationController
   # it out too (see AichatAiHelper) -- so keep the literal local rather than
   # inventing a cross-language enum for one comparison.
   ASSISTANT_ROLE = 'assistant'.freeze
+  USER_ROLE = 'user'.freeze
 
   # Fields the client must not be able to write into stored history.
   #
@@ -41,7 +42,7 @@ class AichatEventsController < ApplicationController
 
     event = params[:newChatEvent]
 
-    integrity = assistant_event_integrity(event, context)
+    integrity = event_integrity(event, context)
     if integrity[:error]
       log_integrity_failure(event, context, integrity[:error])
       if require_response_signature?
@@ -153,22 +154,24 @@ class AichatEventsController < ApplicationController
     render status: :ok, json: {}
   end
 
-  # Assistant-role messages are the only events that claim to be model output,
-  # and so the only ones a forger gains anything by inventing. They must match a
-  # response we can vouch for.
+  # Both halves of a chat turn are checked: the student's message must match what
+  # the model was asked, and the assistant message must match what it answered.
+  # Either one invented is a forgery a teacher would later read as evidence.
   #
-  # Everything else -- the user's own messages, notifications, model updates,
-  # user actions -- is client-authored by construction and carries no integrity
-  # claim that could be checked. That is acceptable only because each is stored
-  # with its own discriminator (notificationType, updatedField, descriptionKey)
-  # and cannot present itself as model output.
+  # Everything else -- notifications, model updates, user actions -- is
+  # client-authored by construction and carries no integrity claim that could be
+  # checked. That is acceptable only because each is stored with its own
+  # discriminator (notificationType, updatedField, descriptionKey) and cannot
+  # present itself as part of the conversation.
   #
   # Two provenances, and note that neither is selected by the client:
   #
-  #   gateway  the browser called the worker, so the only evidence is the
-  #            worker's signature, verified here against chatMessageText.
-  #   legacy   AichatRequestChatCompletionJob ran the completion in-process, so
-  #            aichat_requests.response is ours and the event must match it.
+  #   gateway  the browser both sent the message and reported the reply, so the
+  #            only evidence is the worker's signature. It covers a digest of
+  #            each half, so each is checked against its own claim.
+  #   legacy   AichatRequestChatCompletionJob ran the completion in-process from
+  #            aichat_requests.new_message and wrote aichat_requests.response, so
+  #            both columns are what we sent and received. The event must match.
   #
   # The legacy comparison is only sound because AichatRequestsController#update
   # refuses to write `response` without a matching signature. That route is not
@@ -177,16 +180,18 @@ class AichatEventsController < ApplicationController
   # forged text and then log an event matching it.
   #
   # Returns {error:} with a short reason, or {error: nil, status:} when accepted.
-  private def assistant_event_integrity(event, context)
-    return {error: nil} unless assistant_message?(event)
-    return {error: nil, status: :placeholder} if failed_completion_placeholder?(event)
+  private def event_integrity(event, context)
+    role = event[:role].to_s
+    return {error: nil} if event[:chatMessageText].blank?
+    return {error: nil} unless [USER_ROLE, ASSISTANT_ROLE].include?(role)
+    return {error: nil, status: :no_model_call} if no_model_call?(event, role)
 
     result = AichatResponseSignature.verify(
       signature: event[:responseSignature],
-      response_text: event[:chatMessageText],
+      text: event[:chatMessageText],
       user: current_user,
       context: context,
-      purpose: :history
+      purpose: role == USER_ROLE ? :history_user_message : :history_assistant_message
     )
     return {error: nil, status: result.status} if result.verified?
 
@@ -195,7 +200,7 @@ class AichatEventsController < ApplicationController
     # signature that was supplied and did not check out is never downgraded this
     # way -- that is an attack signal, not a legacy event.
     if result.status == :absent
-      legacy_error = legacy_response_mismatch(event)
+      legacy_error = legacy_mismatch(event, role)
       return {error: nil, status: :server_executed} if legacy_error.nil?
       return {error: legacy_error, status: :absent}
     end
@@ -203,39 +208,61 @@ class AichatEventsController < ApplicationController
     {error: result.error || result.status.to_s, status: result.status}
   end
 
-  # Compares an unsigned assistant message against the response our own job
-  # wrote for its request.
-  private def legacy_response_mismatch(event)
+  # Compares an unsigned event against what our own job sent to the model, or
+  # what it recorded coming back.
+  private def legacy_mismatch(event, role)
     request_id = event[:requestId]
-    return 'assistant message without requestId or response signature' if request_id.blank?
+    return "#{role} message without requestId or response signature" if request_id.blank?
 
     request = AichatRequest.find_by(id: request_id)
     return 'requestId not found' if request.nil?
     # requestId is client-supplied, so ownership has to be checked explicitly or
     # an event could reference another user's request.
     return 'requestId belongs to another user' if request.user_id != current_user.id
-    return 'request has no recorded response' if request.response.nil?
 
-    expected = AichatResponseSignature.sha256(request.response)
+    if role == USER_ROLE
+      # What AichatRequestChatCompletionJob read from the row and sent to the
+      # model, so it is what was asked regardless of what the client now claims.
+      recorded = request.new_message.is_a?(Hash) ? request.new_message['chatMessageText'] : nil
+      return 'request has no recorded message' if recorded.nil?
+    else
+      recorded = request.response
+      return 'request has no recorded response' if recorded.nil?
+    end
+
+    expected = AichatResponseSignature.sha256(recorded)
     actual = AichatResponseSignature.sha256(event[:chatMessageText])
     return nil if ActiveSupport::SecurityUtils.secure_compare(expected, actual)
-    'chatMessageText does not match the recorded response'
+    "chatMessageText does not match the recorded #{role == USER_ROLE ? 'message' : 'response'}"
   end
 
-  private def assistant_message?(event)
-    event[:role].to_s == ASSISTANT_ROLE && event[:chatMessageText].present?
-  end
-
-  # submitChatContents logs a fixed placeholder when a completion never produced
-  # a response at all. It has no requestId because no model output exists to
-  # sign.
+  # Cases where no completion was performed, so there is nothing signed to check
+  # and nothing recorded to compare against.
   #
-  # Deliberately exact rather than "any errored assistant message": a loose
-  # carve-out here would be the bypass for the whole check, since status and
-  # text both come from the client.
-  private def failed_completion_placeholder?(event)
+  # Each is matched exactly rather than by a loose rule like "any errored
+  # message": a broad carve-out here would be the bypass for the whole check,
+  # since role, status and text all come from the client. None of these can claim
+  # the model saw or said anything -- that is precisely why they are safe to
+  # admit unchecked.
+  private def no_model_call?(event, role)
+    if role == ASSISTANT_ROLE
+      # submitChatContents logs this fixed placeholder when a completion never
+      # produced a response at all.
+      return event[:status].to_s == SharedConstants::AI_INTERACTION_STATUS[:ERROR] &&
+          event[:chatMessageText].to_s == 'error' &&
+          event[:requestId].blank?
+    end
+
+    # Input moderation rejected the message before the model was invoked, so the
+    # worker never saw it and could not sign it.
+    return true if [
+      SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION],
+      SharedConstants::AI_INTERACTION_STATUS[:PII_VIOLATION],
+    ].include?(event[:status].to_s)
+
+    # The request never reached a completion (403, 429, network failure), so no
+    # row exists to compare against.
     event[:status].to_s == SharedConstants::AI_INTERACTION_STATUS[:ERROR] &&
-      event[:chatMessageText].to_s == 'error' &&
       event[:requestId].blank?
   end
 

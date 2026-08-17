@@ -1,22 +1,28 @@
 require 'jwt'
 require 'digest'
 
-# Verifies detached response signatures minted by the AI gateway worker.
+# Verifies detached signatures minted by the AI gateway worker.
 #
 # WHY THIS EXISTS
 #
 # Chat history (aichat_events) is written entirely from values the browser posts
 # to AichatEventsController#log_chat_event, which stores the event verbatim. On
-# the gateway path we never see the model response ourselves: the browser calls
-# the worker directly and reports back. So a modified client can invent what the
-# model "said" and we record it as history a teacher later reads as evidence.
+# the gateway path we see neither half of the turn: the browser calls the worker
+# directly, so it both sends the student's message and reports the model's reply.
+# A modified client can therefore invent what the model "said" and what it was
+# asked, and we record both as history a teacher later reads as evidence.
 #
-# The worker signs a detached JWS over a digest of the response, and we verify it
-# here with the worker's public key. The browser stays an untrusted courier: it
-# can drop or corrupt the signature, but cannot forge one without the worker's
-# private key. This is the return leg of the arrangement already running
-# outbound, where AiGatewayAuthController signs a JWT the browser relays to the
-# worker.
+# The worker is the only party that sees both, so it signs a digest of each --
+# prompt_sha256 for the student's message as it received it, response_sha256 for
+# the reply it produced -- in one detached JWS we verify here with its public
+# key. The browser stays an untrusted courier: it can drop or corrupt the
+# signature, but cannot forge one without the worker's private key. This is the
+# return leg of the arrangement already running outbound, where
+# AiGatewayAuthController signs a JWT the browser relays to the worker.
+#
+# Both directions get the same protection. Neither falls back to comparing
+# against something the client also supplied -- that would only prove the client
+# told the same story twice.
 #
 # WHY A DIGEST AND NOT THE MESSAGE
 #
@@ -33,17 +39,22 @@ require 'digest'
 # require those to match the context the event is being filed under. `jti` then
 # makes it single-use.
 #
-# TWO CALLERS, AND WHAT SINGLE-USE MEANS
+# THREE CALLERS, AND WHAT SINGLE-USE MEANS
 #
-# The same signature is checked in two places, which ask different things:
+# One signature covers a whole turn, so it is checked three times, each asking a
+# different question and each against a different digest claim:
 #
-#   AichatEventsController#log_chat_event asks "may this row be written to chat
-#   history?" (purpose :history). This is the admission decision.
+#   log_chat_event, for the student's message: "was this what the model was
+#   asked?" (:history_user_message, prompt_sha256).
 #
-#   AichatRequestsController#update asks "may I store this as the request's
-#   response?" (purpose :request_response). It guards the value log_chat_event
-#   compares an *unsigned* (legacy) event against, which must never be a
-#   free-form client write.
+#   log_chat_event, for the model's reply: "was this what the model answered?"
+#   (:history_assistant_message, response_sha256).
+#
+#   AichatRequestsController#update: "may I store this as the request's
+#   response?" (:request_response, response_sha256). This one is not an
+#   admission decision -- it guards the value log_chat_event compares an
+#   *unsigned* legacy event against, which must never be a free-form client
+#   write.
 #
 # Single use is therefore per purpose, not per signature: spending a signature to
 # write chat history does not spend the right to record it as the request's
@@ -71,10 +82,16 @@ module AichatResponseSignature
   # again by purpose so each caller has its own single-use counter.
   NONCE_NAMESPACE = 'aichat_response_signature'.freeze
 
-  # Every purpose that consumes a signature. Enumerated rather than free-form: a
-  # typo would silently open a fresh keyspace, which reads as "verified" while
-  # granting that caller no replay protection at all.
-  PURPOSES = %i[history request_response].freeze
+  # Every purpose that consumes a signature, mapped to the digest claim it is
+  # checked against. Enumerated rather than free-form: a typo would silently open
+  # a fresh keyspace, which reads as "verified" while granting that caller no
+  # replay protection at all.
+  DIGEST_CLAIM_BY_PURPOSE = {
+    history_user_message: 'prompt_sha256',
+    history_assistant_message: 'response_sha256',
+    request_response: 'response_sha256',
+  }.freeze
+  PURPOSES = DIGEST_CLAIM_BY_PURPOSE.keys.freeze
 
   # Distinguishes "we could not verify" from "verification failed". The former
   # is our own operational problem -- unprovisioned secret, worker not yet
@@ -92,13 +109,15 @@ module AichatResponseSignature
   end
 
   class << self
-    # Checks that +signature+ covers +response_text+ and was minted for +user+ in
+    # Checks that +signature+ covers +text+ and was minted for +user+ in
     # +context+, then spends its single use for +purpose+.
     #
+    # +purpose+ selects which digest claim +text+ is checked against (see
+    # DIGEST_CLAIM_BY_PURPOSE) and which single-use counter is spent, so callers
+    # with different purposes never contend.
+    #
     # +context+ takes the aichatContext keys as the client sends them
-    # (currentLevelId, scriptId, lessonId, channelId). +purpose+ must be one of
-    # PURPOSES; each has its own single-use counter, so callers with different
-    # purposes never contend.
+    # (currentLevelId, scriptId, lessonId, channelId).
     #
     # Returns a Result whose status is one of:
     #   :verified         signature, digest, binding and single-use all hold
@@ -107,8 +126,9 @@ module AichatResponseSignature
     #   :key_unavailable  no usable public key -- our misprovisioning
     #   :invalid          supplied but bad: signature, digest, binding, expiry
     #   :replayed         valid, but already spent for this purpose
-    def verify(signature:, response_text:, user:, context:, purpose:)
-      unless PURPOSES.include?(purpose)
+    def verify(signature:, text:, user:, context:, purpose:)
+      digest_claim = DIGEST_CLAIM_BY_PURPOSE[purpose]
+      unless digest_claim
         raise ArgumentError, "unknown response signature purpose: #{purpose.inspect}"
       end
       return Result.new(status: :absent) if signature.blank?
@@ -118,7 +138,7 @@ module AichatResponseSignature
 
       claims = decode(signature, key)
 
-      digest_error = verify_digest(claims, response_text)
+      digest_error = verify_digest(claims, text, digest_claim)
       return Result.new(status: :invalid, claims: claims, error: digest_error) if digest_error
 
       binding_error = verify_binding(claims, user, context)
@@ -198,18 +218,23 @@ module AichatResponseSignature
         verify_expiration: true,
         verify_iat: true,
         leeway: LEEWAY_SECONDS,
-        required_claims: %w[response_sha256 jti exp user_id token_id]
+      # prompt_sha256 is deliberately absent: it is required only for the
+      # purposes that check it, and verify_digest already fails a missing claim.
+      required_claims: %w[response_sha256 jti exp user_id token_id]
       )
       claims
     end
 
-    private def verify_digest(claims, response_text)
+    # A claim the worker did not send compares as '' and can never match a real
+    # digest, so an old worker that signs only the response cannot pass a
+    # prompt check by omission.
+    private def verify_digest(claims, text, digest_claim)
       # secure_compare because the expected value is attacker-visible and there
       # is nothing to gain by leaking where a mismatch occurred.
-      expected = claims['response_sha256'].to_s
-      actual = sha256(response_text)
+      expected = claims[digest_claim].to_s
+      actual = sha256(text)
       return nil if ActiveSupport::SecurityUtils.secure_compare(expected, actual)
-      'response digest does not match signature'
+      "text does not match #{digest_claim} in signature"
     end
 
     # The signature must have been minted for this user and this context, or a

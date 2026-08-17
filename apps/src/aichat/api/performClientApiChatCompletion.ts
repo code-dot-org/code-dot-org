@@ -81,7 +81,11 @@ export async function performClientApiChatCompletion(
 
   await updateAichatRequest(requestId, status, response, responseSignature);
 
-  const updatedUserMessage = {...newMessage, requestId};
+  // The signature covers both halves of the turn, so the student's message
+  // carries it too: log_chat_event checks that message against the prompt digest
+  // and the reply against the response digest. Undefined when the model was
+  // never called (input moderation), which log_chat_event carves out.
+  const updatedUserMessage = {...newMessage, requestId, responseSignature};
 
   if (status === AiRequestExecutionStatus.USER_PROFANITY) {
     return [

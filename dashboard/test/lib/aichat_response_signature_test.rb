@@ -19,10 +19,15 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     CDO.shared_cache.clear if CDO.shared_cache.respond_to?(:clear)
   end
 
+  DEFAULT_PROMPT = 'what is 2 + 2?'.freeze
+
+  # Digest claims for a turn. Pass prompt_sha256 in overrides to sign a different
+  # student message than the default.
   def claims_for(response_text, overrides = {})
     now = Time.now.to_i
     {
       'response_sha256' => Digest::SHA256.hexdigest(response_text),
+      'prompt_sha256' => Digest::SHA256.hexdigest(DEFAULT_PROMPT),
       'model' => 'gemini-2.5-flash',
       'user_id' => @user.id.to_s,
       'level_id' => @context[:currentLevelId],
@@ -40,12 +45,12 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     JWT.encode(claims, @key, 'RS256')
   end
 
-  def verify(signature, response_text, user: nil, context: nil, pem: :default, purpose: :history)
+  def verify(signature, text, user: nil, context: nil, pem: :default, purpose: :history_assistant_message)
     key = pem == :default ? @public_pem : pem
     AichatResponseSignature.with_public_key(key) do
       AichatResponseSignature.verify(
         signature: signature,
-        response_text: response_text,
+        text: text,
         user: user || @user,
         context: context || @context,
         purpose: purpose
@@ -68,7 +73,7 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
 
     refute result.verified?
     assert_equal :invalid, result.status
-    assert_match(/digest does not match/, result.error)
+    assert_match(/does not match response_sha256/, result.error)
   end
 
   test 'rejects a signature from the wrong key' do
@@ -163,8 +168,8 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     text = 'hello'
     signature = sign(claims_for(text))
 
-    assert_equal :verified, verify(signature, text, purpose: :history).status
-    replay = verify(signature, text, purpose: :history)
+    assert_equal :verified, verify(signature, text, purpose: :history_assistant_message).status
+    replay = verify(signature, text, purpose: :history_assistant_message)
     assert_equal :replayed, replay.status
     refute replay.verified?
     assert_match(/already used for history/, replay.error)
@@ -179,17 +184,17 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     signature = sign(claims_for(text))
 
     assert_equal :verified, verify(signature, text, purpose: :request_response).status
-    assert_equal :verified, verify(signature, text, purpose: :history).status
+    assert_equal :verified, verify(signature, text, purpose: :history_assistant_message).status
     # ...and each is still single-use in its own right.
     assert_equal :replayed, verify(signature, text, purpose: :request_response).status
-    assert_equal :replayed, verify(signature, text, purpose: :history).status
+    assert_equal :replayed, verify(signature, text, purpose: :history_assistant_message).status
   end
 
   test 'order of the two purposes does not matter' do
     text = 'hello'
     signature = sign(claims_for(text))
 
-    assert_equal :verified, verify(signature, text, purpose: :history).status
+    assert_equal :verified, verify(signature, text, purpose: :history_assistant_message).status
     assert_equal :verified, verify(signature, text, purpose: :request_response).status
   end
 
@@ -215,7 +220,10 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     # Namespaced so another consumer of the same store cannot collide with us,
     # then scoped by purpose so our own two callers cannot collide either.
     assert_equal 'aichat_response_signature', AichatResponseSignature::NONCE_NAMESPACE
-    assert_equal %i[history request_response], AichatResponseSignature::PURPOSES
+    assert_equal(
+      %i[history_user_message history_assistant_message request_response],
+      AichatResponseSignature::PURPOSES
+    )
   end
 
   test 'nonce TTL outlives the signature plus leeway and skew' do
@@ -234,5 +242,64 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
       'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
       AichatResponseSignature.sha256('')
     )
+  end
+
+  test 'checks the student message against the prompt digest' do
+    prompt = 'how do I center a div?'
+    signature = sign(claims_for('use flexbox', {'prompt_sha256' => Digest::SHA256.hexdigest(prompt)}))
+
+    result = verify(signature, prompt, purpose: :history_user_message)
+
+    assert result.verified?
+  end
+
+  test 'rejects a student message that is not what the model was asked' do
+    # The other half of the same guarantee: a client cannot ask the model one
+    # thing and record another.
+    signature = sign(claims_for('use flexbox', {'prompt_sha256' => Digest::SHA256.hexdigest('how do I center a div?')}))
+
+    result = verify(signature, 'how do I hack the grader?', purpose: :history_user_message)
+
+    refute result.verified?
+    assert_equal :invalid, result.status
+    assert_match(/prompt_sha256/, result.error)
+  end
+
+  test 'does not accept the response text as the student message' do
+    # Each half is pinned to its own claim, so the two are not interchangeable.
+    response = 'use flexbox'
+    signature = sign(claims_for(response, {'prompt_sha256' => Digest::SHA256.hexdigest('how do I center a div?')}))
+
+    assert_equal :invalid, verify(signature, response, purpose: :history_user_message).status
+  end
+
+  test 'does not accept the student message as the response' do
+    prompt = 'how do I center a div?'
+    signature = sign(claims_for('use flexbox', {'prompt_sha256' => Digest::SHA256.hexdigest(prompt)}))
+
+    assert_equal :invalid, verify(signature, prompt, purpose: :history_assistant_message).status
+  end
+
+  test 'one signature covers both halves of a turn, spent once each' do
+    prompt = 'how do I center a div?'
+    response = 'use flexbox'
+    signature = sign(claims_for(response, {'prompt_sha256' => Digest::SHA256.hexdigest(prompt)}))
+
+    assert_equal :verified, verify(signature, prompt, purpose: :history_user_message).status
+    assert_equal :verified, verify(signature, response, purpose: :history_assistant_message).status
+    assert_equal :replayed, verify(signature, prompt, purpose: :history_user_message).status
+    assert_equal :replayed, verify(signature, response, purpose: :history_assistant_message).status
+  end
+
+  test 'a worker that signs only the response cannot pass a prompt check' do
+    # An older worker omits prompt_sha256. A missing claim must fail rather than
+    # compare equal to anything.
+    claims = claims_for('use flexbox', prompt: 'how do I center a div?')
+    claims.delete('prompt_sha256')
+
+    result = verify(sign(claims), 'how do I center a div?', purpose: :history_user_message)
+
+    refute result.verified?
+    assert_equal :invalid, result.status
   end
 end
