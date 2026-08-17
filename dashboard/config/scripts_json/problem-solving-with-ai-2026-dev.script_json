@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-12 21:26:55 UTC",
+    "serialized_at": "2026-08-14 20:35:43 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -213,9 +213,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**Can we improve AI's responses?**\n\nStudents explore how to improve AI-generated responses by refining their prompts using a five-step framework: task, context, reference, format, and tone. Through hands-on exploration in AI Chat levels, they test different prompt modifications, analyze how AI responds to varying levels of detail, and apply debugging techniques to enhance accuracy. At the end of the lesson, students summarize their learning about AI prompt refinement by adding ideas to a classroom Anchor Chart.",
-        "preparation": "- Prepare a classroom anchor chart containing five columns - Task, Context, Format, Reference, and Tone.",
-        "student_overview": "**Can we improve AI's responses?**\n\nRefine AI-generated responses by experimenting with prompt modifications using a five-step framework—task, context, reference, format, and tone—analyzing AI interactions, applying debugging techniques, and summarizing their insights on a classroom Anchor Chart."
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**Can we improve AI's responses?**\n\nStudents discover how small prompt details change AI output through an unplugged partner activity, then apply the TaCoFoRT framework to build and test their own AI chatbot agent for a business of their choice. After testing their chatbot with three types of questions, students debug and revise their system prompt or Retrieval information based on what they find. The lesson closes with students summarizing what they learned about improving AI responses on a classroom Anchor Chart.",
+        "preparation": "- Provide copies of the Prompt Showdown activity guide (one per pair)\n- Provide copies of the Career Spec Sheet handout (one per student)\n- [Optional] Prepare a classroom anchor chart for an optional wrap up activity containing five columns - Task, Context, Format, Retrieval, and Tone.",
+        "student_overview": "**Can we improve AI's responses?**\n\nYou compare how small changes in format and tone affect an AI's response, then use the TaCoFoRT framework to build and test an AI chatbot agent for a business of your choice. After testing your chatbot, you debug and improve it based on what you find."
       },
       "seeding_key": {
         "lesson.key": "Lesson 8: Debugging and Refining Outputs",
@@ -320,9 +320,9 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this project, students work with AI to develop a future prediction and create a presentation that explains their process. They collaborate with AI to generate and refine ideas, evaluate outputs for accuracy and bias, and reflect on how they shaped the final prediction. The project centers on ethical reasoning, student voice, and thoughtful use of multimodal inputs to support transparency and agency in AI collaboration.",
-        "preparation": "- Print copies of the AI Time Capsule Project Planning Guide (one per student)",
-        "student_overview": "In this project, you work with AI to make and refine a prediction about the future. Then, you create a presentation that explains how you used AI, what decisions you made, and how you improved the prediction to make it more realistic, fair, and your own."
+        "overview": "In this project, students invent a fictional product that solves a real problem from their own lives and take it through a launch cycle: Define, Build, Test, and Ship. They document their product in a factual spec sheet, build and test a customer-facing chatbot powered by a system prompt they compose, and launch with a social media post assembled from AI-generated assets they keep, modify, or reject. Students use AI at every stage, but the project centers their judgment — verifying claims against facts, diagnosing chatbot errors, and deciding when AI output isn't good enough to ship.",
+        "preparation": "- Print copies of the Product Launch Project Planning Guide (one per student).\n- Decide how you'll form teams, or plan to let students choose",
+        "student_overview": "In this project, you invent a product that solves a real problem from your own life, then launch it: a factual spec sheet, a customer chatbot you build and test yourself, and a social media post made with AI assets you chose to keep, change, or reject. You'll use AI at every stage, but you're in control."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
@@ -754,6 +754,18 @@
       }
     },
     {
+      "key": "7f8db1ea-031c-4793-b6b1-d58d9d1708b3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f8db1ea-031c-4793-b6b1-d58d9d1708b3",
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev"
+      }
+    },
+    {
       "key": "e767aeb2-8850-441c-bea1-7ff98f729db7",
       "position": 1,
       "properties": {
@@ -929,30 +941,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c347dc91-1be3-42cf-8f12-844c8946397e",
-        "lesson.key": "Lesson 13: AI Time Capsule Project",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "problem-solving-with-ai-2026-dev"
-      }
-    },
-    {
-      "key": "bf6f0ce1-9751-4599-928d-10c136344bdd",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bf6f0ce1-9751-4599-928d-10c136344bdd",
-        "lesson.key": "Lesson 13: AI Time Capsule Project",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "problem-solving-with-ai-2026-dev"
-      }
-    },
-    {
-      "key": "e3455871-c77e-47d8-89aa-d745b47ea082",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e3455871-c77e-47d8-89aa-d745b47ea082",
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev"
@@ -1588,7 +1576,7 @@
       "key": "11508ca8-0e3c-4226-b7a2-0534a5a9d7a5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students encounter AI-generated misinformation before it has a name. They leave the warm up unable to tell which statement is false, which creates the need for context in the Activity.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the three statements. Direct students to discuss with a partner which statements they think are true and which are not. After a minute or two, facilitate a quick vote by having students hold up fingers for the statement they think is false. Ask two or three students to explain their reasoning.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students encounter AI-generated misinformation before it has a name. They leave the warm up unable to tell which statement is false, which creates the need for retrieval information in the Activity.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the three statements. Direct students to discuss with a partner which statements they think are true and which are not. After a minute or two, facilitate a quick vote by having students hold up fingers for the statement they think is false. Ask two or three students to explain their reasoning.\n",
         "name": "Truth or Lies? ",
         "tips": [
           {
@@ -1617,7 +1605,7 @@
       "key": "efe017b5-5811-4d71-a532-25149773943f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students experience an AI chatbot stating false information confidently, then see how attaching a document changes its answers. This firsthand experience becomes the basis for defining hallucination and context.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1. Students ask the chatbot for information about octopuses and try to determine whether what it tells them is true. They then attach the Octopus Fact Sheet and ask again, using the document to check the statements from the warm up. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** While students work without the document, listen for frustration. The bot answers confidently and does not admit uncertainty, which is intentional. Ask students how they could check whether one of its facts is true. Once students attach the fact sheet, look for students who notice the bot correcting information it gave earlier in the same conversation. Point this out to students who miss it.\n\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students experience an AI chatbot stating false information confidently, then see how attaching a document changes its answers. This firsthand experience becomes the basis for defining hallucination and retrieval information.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1. Students ask the chatbot for information about octopuses and try to determine whether what it tells them is true. They then attach the Octopus Fact Sheet and ask again, using the document to check the statements from the warm up. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** While students work without the document, listen for frustration. The bot answers confidently and does not admit uncertainty, which is intentional. Ask students how they could check whether one of its facts is true. Once students attach the fact sheet, look for students who notice the bot correcting information it gave earlier in the same conversation. Point this out to students who miss it.\n\n",
         "duration": "15",
         "name": "Fact-Check the Bot",
         "progression_name": "Fact-Check the Bot",
@@ -1651,7 +1639,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students have not been given the words **hallucination** or **context** yet. Let them describe what happened in their own language. If a student uses one of the terms already, acknowledge it and tell the class you define both words in a moment.\n"
+            "markdown": "Students have not been given the words **hallucination** or **retrieval information** yet. Let them describe what happened in their own language. If a student uses one of the terms already, acknowledge it and tell the class you define both words in a moment.\n"
           }
         ]
       },
@@ -1703,11 +1691,11 @@
       "key": "b5a2fa34-4d53-4248-8ece-ae72471f4cd7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n Define context. Connect this back to when students attached the Octopus Fact Sheet, which gave the chatbot context. The bot stopped guessing about octopuses and started using the document instead. That's why it's answers changed.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define retrieval information. Connect this back to when students attached the Octopus Fact Sheet, which gave the chatbot additional information. The bot stopped guessing about octopuses and started using the document instead. That's why it's answers changed.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students already used the word context in the level instructions before they had a definition for it. Point that out — they gave the bot context before they had a name for it. \n\nIn the next activity, students go from attaching context to deciding what context a bot gets. That shift is the heart of the rest of the lesson.\n"
+            "markdown": "Students already used the word retrieval in the level instructions before they had a definition for it. Point that out — they gave the bot retrieval information before they had a name for it. \n\nIn the next activity, students go from attaching retrieval information to deciding what retrieval information a bot gets. That shift is the heart of the rest of the lesson.\n"
           }
         ]
       },
@@ -1737,11 +1725,11 @@
       "key": "79305b24-7a88-4405-ab1d-9ee6b803d441",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n Click through the animated slide to explain that adding context improves AI responses but does not guarantee they are correct. AI can only use the information it's given, so if that information is wrong or out of date, the response is too — and AI gives no signal that anything is wrong.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n Click through the animated slide to explain that adding retrieval information improves AI responses but does not guarantee they are correct. AI can only use the information it's given, so if that information is wrong or out of date, the response is too — and AI gives no signal that anything is wrong.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the idea students test in the next activity. Their bot has context, but some of it is bad, and the bot cannot tell the difference. Students have to make that judgment themselves.\n"
+            "markdown": "This is the idea students test in the next activity. Their bot has retrieval information, but some of it is bad, and the bot cannot tell the difference. Students have to make that judgment themselves.\n"
           }
         ]
       },
@@ -1754,14 +1742,14 @@
       "key": "dab2da31-7ae3-4f73-8b1d-83fe239e51cb",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** \n Students decide what information a chatbot gets, discovering that a bot with bad context is unreliable even though it has context. This shifts them from using context to judging it.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**\n Direct students to Lesson 4, Levels 2-3. \n* **Level 2:** Students choose one of four bots to fix, ask it questions, and after finding that its answers are unreliable, remove or edit the Retrieval Context to improve their bot.\n* **Level 3:** Students answer check for understanding questions. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** \n Look for students who never open the Retrieval Contexts panel. Chat alone reveals only the conflicting information — the vague, off-topic, and undated cards are found by reading. Also watch for students who delete every card that looks suspicious. One card is half accurate and half outdated, and deleting it loses information the bot needs. Ask those students whether they lost anything they needed. Two cards are genuine judgment calls: one is accurate but not related to this bot's purpose, and one has no date, so there's no way to know whether it's current. Ask students to explain their reasoning rather than looking for a right answer.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** \n Students decide what information a chatbot gets, discovering that a bot with bad retrieval information is unreliable even though it has additional information. This shifts them from using retrieval information to judging it.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**\n Direct students to Lesson 4, Levels 2-3. \n* **Level 2:** Students choose one of four bots to fix, ask it questions, and after finding that its answers are unreliable, remove or edit the retrieval information to improve their bot.\n* **Level 3:** Students answer check for understanding questions. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** \n Look for students who never open the Retrieval panel. Chat alone reveals only the conflicting information — the vague, off-topic, and undated cards are found by reading. Also watch for students who delete every card that looks suspicious. One card is half accurate and half outdated, and deleting it loses information the bot needs. Ask those students whether they lost anything they needed. Two cards are genuine judgment calls: one is accurate but not related to this bot's purpose, and one has no date, so there's no way to know whether it's current. Ask students to explain their reasoning rather than looking for a right answer.\n",
         "duration": "20",
         "name": "Make a Trustworthy Bot",
         "progression_name": "Make a Trustworthy Bot",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Everything students need is already in the Retrieval Contexts panel. If you see students searching online during this part, redirect them — the optional challenge at the end of the level is where searching belongs.\n\nStudents who pick the dog care bot or the kitchen bot encounter context cards with unsafe advice, such as chocolate being safe for dogs or chicken being safe when only the outside is browned. State the correct information out loud during the discussion so students leave with accurate \nunderstanding.\n"
+            "markdown": "Everything students need is already in the Retrieval panel. If you see students searching online during this part, redirect them — the optional challenge at the end of the level is where searching belongs.\n\nStudents who pick the dog care bot or the kitchen bot encounter retrieval cards with unsafe advice, such as chocolate being safe for dogs or chicken being safe when only the outside is browned. State the correct information out loud during the discussion so students leave with accurate understanding.\n"
           },
           {
             "type": "assessmentOpportunity",
@@ -1795,12 +1783,12 @@
       "key": "44493307-958b-474e-b7bf-40554e1446cd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to answer both halves using a specific example from the lesson — the octopus fact they couldn't verify, the moment the bot corrected itself after they attached the fact sheet, or a context card they removed from their bot. Then invite a few students to share out with the class. Listen for students naming prediction as the reason AI makes things up, and context as the way to reduce it — while recognizing that context doesn't guarantee a correct answer.\n\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to answer both halves using a specific example from the lesson — the octopus fact they couldn't verify, the moment the bot corrected itself after they attached the fact sheet, or a retrieval card they removed from their bot. Then invite a few students to share out with the class. Listen for students naming prediction as the reason AI makes things up, and retrieval information as the way to reduce it — while recognizing that retrieval information doesn't guarantee a correct answer.\n\n",
         "name": "Question of the Day Reflection",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time is short, skip the partner talk and collect two or three quick examples from the whole class instead — one about why AI made things up, one about how context helped, and one about why they'd still check. This makes sure all three threads get named before students leave.\n"
+            "markdown": "If time is short, skip the partner talk and collect two or three quick examples from the whole class instead — one about why AI made things up, one about how retrieval information helped, and one about why they'd still check. This makes sure all three threads get named before students leave.\n"
           }
         ]
       },
@@ -2888,8 +2876,7 @@
       "key": "073680f4-f838-4f79-8729-dc7bc294b2c1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To introduce an interesting new career that is related to the work that students will be asked to do today– refining prompts in order to produce high-quality AI output.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"AI's Hottest New Job Pays Up to $250K a Year. So I Applied\" video.\n\n**Questions to consider with the video:**\n- *What does a prompt engineer do?*\n- *What skills do you need to have to be a prompt engineer?*\n\n**Discussion Goal:** Students should be able to explain that a prompt engineer is someone who develops prompts to get the best output from a large language model. A prompt engineer needs to be good at writing clearly and giving good instructions. They should know how to translate between a machine and a human.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt engineering*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n",
-        "name": "What is a Prompt Engineer?"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce prompt engineering as a valuable skill, and clarify that the job title itself faded even as the underlying skill spread into many other roles.\n\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"AI's Hottest New Job Pays Up to $250K a Year. So I Applied\" video.\n\n**Questions to consider with the video:**\n- *Where do you think this skill shows up now?*\n\n**Discussion Goal:** Students recognize that \"prompt engineer\" was the hot titled job when this video was made, but the standalone title has since mostly disappeared. The skill itself — giving clear, effective instructions to get useful results from AI — didn't go away; it got absorbed into many other roles. Students name at least one job or field where they think this skill shows up today (e.g., customer support, marketing, software development, research).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt engineering*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "073680f4-f838-4f79-8729-dc7bc294b2c1",
@@ -2900,13 +2887,13 @@
       "key": "fc72a01a-c64e-4719-b333-6ca7dd16fbc7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Provide students with a structured method to improve AI-generated responses using five key elements of a strong prompt. They will have a chance to test out each method as they work through levels.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the key elements of a prompt. Explain that just like giving instructions to a friend, the more details you provide, the better the response. By specifying what we want AI to do, giving context, and even suggesting a format, we can make AI's responses much more useful.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce \"TaCo FoRT\" as a mnemonic: **Ta**sk, **Co**ntext, **Fo**rmat, **R**eference, **T**one.\n",
-        "duration": "25",
-        "name": "AI Prompting Framework",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover, through hands-on comparison, that small changes to a prompt's format and tone — not the underlying task — are what shape an AI's response, setting up the TaCoFoRT framework before it's formally introduced.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students in groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair one Prompt Showdown activity guide. Have partners split it in half so each student has their own half-sheet Prompt Showdown copy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct partners to complete Steps 1–3 on their Activity Guide — picking a shared topic and task, then each partner picking a different format and tone, then each combining their own into a prompt.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for pairs who accidentally pick the same format or tone — remind them each partner's combination needs to be different. If a partner is stuck combining their pieces into one prompt, ask: \"What's your topic and task? Now say it in your format, in your tone.\" Don't give them a finished example prompt to copy — the point is for them to write their own.",
+        "duration": "10",
+        "name": "Prompt Showdown",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Suggest that students remember \"TaCo FoRT\" so they can systematically check if they've included each element in their prompts. This prompting framework can be used in future interactions with AI Chatbots in this lesson and beyond.\n\n**Behind the Curtain**: Explain to students that AI doesn't understand a user's intent. Instead, it sees words in context and simply *guesses* what should come next. Strategies like TaCo FoRT work because each element in gives an AI chatbot more structure and context from which to make its guesses."
+            "markdown": "This step should move fast. Aim for about 1 minute on Step 1, 1 minute on Step 2, and 2 minutes for Step 3 — set a visible timer if that helps pairs keep pace. Leaving Step 3 open-ended is intentional, but if a pair is still blank after a minute, prompt them verbally rather than letting them stall on paper.\n"
           }
         ]
       },
@@ -2929,7 +2916,7 @@
       "key": "0d586811-b07f-4801-a584-2fff3b8594db",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Direct students to take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 8, Level 1 to practice providing the core task or objective the AI needs to address. Students should complete the corresponding section of their Unit Guide.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 7, Level 1 to type the prompt they wrote in Step 3 into AI Chat and see the response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Confirm each student is testing their own prompt, not their partner's. If a pair finishes early, have them start comparing responses out loud before the whole-class discussion.\n",
         "progression_name": "Prompt Showdown"
       },
       "seeding_key": {
@@ -2938,10 +2925,93 @@
       }
     },
     {
-      "key": "a1990822-fb7a-493b-ab00-779120bfb434",
+      "key": "1af39e00-7e8f-4399-ade8-d1aa13a9451c",
       "position": 4,
       "properties": {
-        "progression_name": "Build Your TaCoFoRT Prompt"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n* *What's different about your two outputs?*\n* *You started with the same task — so what caused the difference?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that the task and topic were identical, but the format and tone they each chose changed the AI's response. The specific details students add to a prompt — not just the task itself — shape what they get back.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1af39e00-7e8f-4399-ade8-d1aa13a9451c",
+        "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
+      }
+    },
+    {
+      "key": "5eda2ee5-0b74-4e7c-95fb-df7b8580a5ca",
+      "position": 5,
+      "properties": {
+        "description": "What you two just did on paper has a name — it's called TaCoFoRT. You picked a Task and topic together, then each of you chose a different Format and Tone. There are two more pieces — Context and Retrieval — that we didn't use on paper, but you'll use both in the next activity.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5eda2ee5-0b74-4e7c-95fb-df7b8580a5ca",
+        "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
+      }
+    },
+    {
+      "key": "5f594c93-b215-4488-b1fe-8c1994b543fb",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce the five elements of a strong prompt — Task, Context, Format, Retrieval, and Tone — as a framework students apply together to build one complete system prompt for a real purpose.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the key elements of a prompt. Explain that just like giving instructions to a friend, the more details you provide, the better the response. Task tells the AI what to do, Context tells it the background of the situation or purpose, Format shapes how the answer looks, Retrieval gives it real information to draw from, and Tone sets the style.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide one bubble at a time — TASK, CONTEXT, FORMAT, RETRIEVAL, TONE. For each one, ask students which part of the prompt they think matches, then click to reveal the corresponding section that's highlighted. Once all five are revealed, ask students if anything seems to be missing from the prompt, and take a few guesses before continuing.\n",
+        "duration": "25",
+        "name": "AI Prompting Framework"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f594c93-b215-4488-b1fe-8c1994b543fb",
+        "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
+      }
+    },
+    {
+      "key": "db369b7d-ba0d-43cb-9c60-823a0a14a420",
+      "position": 7,
+      "properties": {
+        "description": "All five elements are here — but when building an AI chat agent, the system prompt should include one more thing: a line that tells the AI chatbot agent to stay on topic. Something like — 'Only answer questions about the food truck. If someone asks something unrelated, politely redirect them back to Rosa's Tacos.' This isn't one of our five TaCoFoRT elements, but any AI Chat agent created needs it, and you'll add one to your own AI chatbot agent in the next activity.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "db369b7d-ba0d-43cb-9c60-823a0a14a420",
+        "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
+      }
+    },
+    {
+      "key": "bd4c2d0c-7c07-4ad2-8e6a-180ae07add9e",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Revisit \"TaCo FoRT\" as a memory device: Task, Context, Format, Retrieval, Tone. Revisit \"TaCo FoRT\" as a memory device: Task, Context, Format, Retrieval, Tone.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Suggest that students use \"TaCoFoRT\" to systematically check if they've included each element in their prompts. This prompting framework can be used in future interactions with AI Chatbots in this lesson and beyond.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bd4c2d0c-7c07-4ad2-8e6a-180ae07add9e",
+        "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
+      }
+    },
+    {
+      "key": "0a79afe0-d6bc-4c5e-96d3-3dbf258c44df",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that refining a prompt is like debugging code — you test it, see what happens, fix what's not working, and test again. Tell students that in the next activity, they test their AI chatbot agent three ways: something it should know, something it doesn't, and something totally unrelated. Whatever breaks is what they'll fix.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Career Spec Sheet to use while building their AI chatbot agent.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a79afe0-d6bc-4c5e-96d3-3dbf258c44df",
+        "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
+      }
+    },
+    {
+      "key": "a1990822-fb7a-493b-ab00-779120bfb434",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2 to complete Levels 2 through 3. \n* **Level 2:** Students choose one of four businesses, write a TaCoFoRT system prompt, then test and debug based on what they find.\n* **Level 3:** Students answer a check for understanding question.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for prompts missing one of the five TaCoFoRT elements, especially if the Retrieval is left empty or the stay-on-topic line skipped entirely. If a student's AI chatbot agent answers an off-topic question anyway, that's a good moment to point them back to their own prompt rather than fixing it for them. Watch also for students copying facts word-for-word from the Career Spec Sheet without deciding which ones their AI chatbot agent actually needs.\n",
+        "progression_name": "Build Your TaCoFoRT Prompt",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Levels 2 and 3 can be used to formatively assess the lesson objectives. Look for a system prompt that includes all five TaCoFoRT elements plus a stay-on-topic line, Retrieval cards drawn from the Career Spec Sheet, and a Level 3 response that names a real problem found during testing and the specific change made to fix it — not just \"it worked fine.\"\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a1990822-fb7a-493b-ab00-779120bfb434",
@@ -2949,56 +3019,13 @@
       }
     },
     {
-      "key": "67b89f05-98fe-4607-b1b6-151446df77ab",
-      "position": 5,
+      "key": "dc7ae891-c4a4-47d8-8220-d96e6cdc50ba",
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room and engage students in thoughtful reflection by asking, \"How did AI's response change after you added context?\" or \"Did AI follow your requested format? Why or why not?\" or \"What's still missing from AI's response?\". Offer guidance if a prompt remains too vague (e.g., \"Make sure you tell the AI exactly what you want it to do!\").\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What task did you add to the original prompt?*\n- *How did refining the prompt improve AI's output?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The aim is for students to recognize that making the Task explicit often leads to more focused and relevant AI replies. They should see how even small changes in wording can clarify the objective for the AI. This discussion should serve as an opportunity for guided practice before students work independently through the next four refining output activities.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the connection between _refining a prompt_ and _debugging_ in traditional software development. \n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 8, Level 2 to complete Levels 2 through 5. Students should complete the corresponding sections of their Unit Guide.\n- **Level #2:** Students practice providing necessary background information to give context for the task.\n- **Level #3:** Students practice providing references, examples, or models to guide the AI.\n- **Level #4:** Students practice specifying the format in which the response should be delivered.\n- **Level #5:** Students practice setting the tone for the AI response.\n- **Level #6:** Students answer a quick questions related to careers in computing science.\n\n",
-        "progression_name": "AI Prompting Framework"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What problem did you find when you tested your AI chatbot agent?*\n* *How did you fix it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Different businesses will surface different bugs — a missing Retrieval fact, an off-topic question the AI chatbot agent didn't decline, a tone that didn't fit. Students should recognize that testing reveals real gaps, and that fixing a prompt or Retrieval card and testing again is the same debugging loop used in software development. Adding Retrieval information reduces hallucinations and vague responses — the core takeaway is that AI outputs improve through testing and iteration, not by getting the prompt right on the first try.\n"
       },
       "seeding_key": {
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab",
-        "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
-      }
-    },
-    {
-      "key": "dc043231-c1ae-4d5f-99e8-3989cf1f3b85",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room and engage students in thoughtful reflection by asking, \"How did AI's response change after you added context?\" or \"Did AI follow your requested format? Why or why not?\" or \"What’s still missing from AI's response?\"\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "dc043231-c1ae-4d5f-99e8-3989cf1f3b85",
-        "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
-      }
-    },
-    {
-      "key": "b24d694d-b4ad-4f7a-b730-441415ecdaa2",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the outcomes of debugging and refining output. Ensure students understand that every time they refine their prompt, they are debugging AI—just like a programmer debugs their code. The first response might be generic, but by adjusting details and testing different versions, they can generate clearer, more accurate AI outputs.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "b24d694d-b4ad-4f7a-b730-441415ecdaa2",
-        "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
-      }
-    },
-    {
-      "key": "127e931c-d9c9-48bc-b4d9-ba5ce9c32ea7",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students refine a generic prompt using the Prompting Framework to improve accuracy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 8, Level 7 to complete Levels 7 through 9.\n- **Level #7:** This panel level serves as a review of the key elements of prompt refinement.\n- **Level #8:** Students choose a generic prompt to improve. They use at least three elements (Task, Context, Reference, Format, Tone) and iterate on their prompt until they have one that consistently generates helpful AI output.\n- **Level #9:** Students copy their revised prompt from Level 8 into the free response level. Then they explain why their revised prompt led to a better result than the initial generic prompt.\n",
-        "duration": "10",
-        "name": "Check Your Understanding",
-        "progression_name": "Check Your Understanding",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The assessment on Level 9 can be used as a formative assessment of the lesson objectives. As students submit their final revised prompts, circulate and provide quick feedback by:\n- Looking for clear, specific refinements that improved the AI's output.\n- Asking probing questions like:\n   - *\"What made the AI's response better after refining your prompt?\"*\n   - *\"How did adding context change the AI’s response?\"*\n   - *\"Why do you think AI initially struggled with this prompt?\"*\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "127e931c-d9c9-48bc-b4d9-ba5ce9c32ea7",
+        "activity_section.key": "dc7ae891-c4a4-47d8-8220-d96e6cdc50ba",
         "lesson_activity.key": "74c4cf83-e32e-4d78-86a3-3c1dfb5cc8b6"
       }
     },
@@ -3006,16 +3033,11 @@
       "key": "261bf95b-c03d-4fb4-866f-fa898afb093b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students summarize their learning about AI prompt refinement in a concise, creative, and engaging way.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to take a minute and answer the Question of the Day on a sticky note, providing a specific example of how one of the key element (Task, Context, Format, Reference, Tone) might be used to refine output.\n\nExample Student Responses:\n- **Format:** Write a poem, such as a haiku or limerick\n- **Tone:** Write in a professional tone, as if you are a college admissions counselor\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Prompt deeper thinking with a guiding question: \n- *What strategies did you use in the levels?* \n- *Give an example of how you added more context or chose a different tone.*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students add their sticky notes to the classroom anchor chart.\n",
-        "name": "Key Elements Anchor Chart",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students finish the sentence \"You can improve AI's responses by ___\" using something they learned from building or testing their own AI chatbot agent.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use color-coded notes for different key elements to create a more structured visual representation. This classroom anchor chart will become useful for students to try new ways to refine their prompts throughout this unit and others in the CSAIF curriculum. Encourage students to add to the anchor chart whenever they have a new way of refining their prompts that leads to more interesting, accurate, and fair output."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Question of the Day can be used as a formative assessment of understanding the relationship between prompting techniques and improved AI-generated responses. Make sure students write their name on their sticky note if you plan to use it as an assessment."
+            "markdown": "If time allows, have students write their response on a sticky note and use the next three slides to have them add it to the classroom anchor chart. If time is tight, have students think of their answer, share it with a partner, then cold-call one or two pairs to share with the class.\n"
           }
         ]
       },
@@ -3025,12 +3047,51 @@
       }
     },
     {
-      "key": "5b34ac72-4853-4a3d-9e5b-b9d35eb19ef8",
+      "key": "d6ec8eba-5d40-4d34-8b50-08bfbbed3fc0",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this OPTIONAL activity:** Students summarize their learning about AI prompt refinement in a concise, creative, and engaging way.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note.\n\n",
+        "name": "[Optional] Key Elements Anchor Chart",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This slide and the next two are only needed if you chose the sticky-note path on the previous slide. If you did a think-pair-share instead, skip ahead to the next section.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6ec8eba-5d40-4d34-8b50-08bfbbed3fc0",
+        "lesson_activity.key": "f5ee1062-3384-4d9a-81e3-5e9b593a07b4"
+      }
+    },
+    {
+      "key": "5b34ac72-4853-4a3d-9e5b-b9d35eb19ef8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write their Question of the Day sentence on their sticky note, then bring it up to add to the classroom anchor chart.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Prompt deeper thinking with a guiding question: What did testing your bot reveal? What specifically did you change after something didn't work?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students add their sticky notes to the classroom anchor chart.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use color-coded notes for different key elements to create a more structured visual representation. This classroom anchor chart will become useful for students to try new ways to refine their prompts throughout this unit and others in the AIF curriculum. Encourage students to add to the anchor chart whenever they have a new way of refining their prompts that leads to more interesting, accurate, and fair output.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Question of the Day can be used as a formative check of whether students connect testing and debugging to improved AI outputs. Make sure students write their name on their sticky note if you plan to use it as an assessment.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5b34ac72-4853-4a3d-9e5b-b9d35eb19ef8",
+        "lesson_activity.key": "f5ee1062-3384-4d9a-81e3-5e9b593a07b4"
+      }
+    },
+    {
+      "key": "e47b9748-afc7-48cb-a60a-acc3de54bf9d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e47b9748-afc7-48cb-a60a-acc3de54bf9d",
         "lesson_activity.key": "f5ee1062-3384-4d9a-81e3-5e9b593a07b4"
       }
     },
@@ -3499,6 +3560,17 @@
       "seeding_key": {
         "activity_section.key": "2e3e5fda-9ab1-4570-b17a-df181d3ef782",
         "lesson_activity.key": "8287c67a-990a-4383-b68f-985e9257e825"
+      }
+    },
+    {
+      "key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528",
+      "position": 1,
+      "properties": {
+        "progression_name": "New Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528",
+        "lesson_activity.key": "7f8db1ea-031c-4793-b6b1-d58d9d1708b3"
       }
     },
     {
@@ -4229,390 +4301,296 @@
       }
     },
     {
-      "key": "73374fe1-c142-4349-b2ba-bdda52a9ef2f",
+      "key": "1465d725-87f6-4b51-8e59-c75117eda681",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of two or three. Display the mix of real (“AI Will Soon Take Your Order at Taco Bell and Pizza Hut”) and AI-generated future news headlines and have students analyze the headlines. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which headlines feel possible? Which feel exaggerated?*\n- *How do current trends shape what we believe about the future?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI-generated predictions can be plausible but also exaggerated or biased based on the data AI has been trained on. The goal is for students to start questioning AI-generated content and assessing its realism.\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\nWhat's a product you use for your hobby or interest that clearly wasn't designed for someone like you?\nWhat would the maker need to know about you to fix it?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students surface the gap between generic products and specific users — the exact gap their own product will fill. Listen for answers that name concrete frustrations (\"the sizing runs huge,\" \"the app assumes you already know the rules\") rather than vague dislikes. Use these to point forward: today students will define a product for an audience they actually know, with the specificity of \"freshman wide receivers on our team,\" not \"athletes.\"\n",
         "duration": "5",
-        "name": "Warm Up",
+        "name": "Warm-Up",
+        "progression_name": "Define & Build",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students struggle, prompt them to consider what evidence would be needed to make a prediction believable."
+            "markdown": "If students struggle, prompt them to consider what evidence would be needed to make a prediction believable. "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "73374fe1-c142-4349-b2ba-bdda52a9ef2f",
+        "activity_section.key": "1465d725-87f6-4b51-8e59-c75117eda681",
         "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
       }
     },
     {
-      "key": "22b319ac-2801-42ec-99c5-31a408d327e0",
+      "key": "d5f3c120-6595-42b8-a109-b11c547a7dce",
       "position": 2,
       "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "22b319ac-2801-42ec-99c5-31a408d327e0",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "567d1544-b7a1-43b4-a77e-9ac12067c483",
-      "position": 3,
-      "properties": {
-        "description": "Now that we've examined some AI-generated headlines, let's shift our focus to see how we're going to create our own predictions with AI's help.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "567d1544-b7a1-43b4-a77e-9ac12067c483",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "fe7813b5-b512-40c1-851d-6e68d0a97068",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce students to the AI Time Capsule project, its goals, and expected deliverables. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the AI Time Capsule Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this project, students will be working with AI to explore possible futures.  Introduce the project and explain the project structure:\n- Students will create a future prediction using AI.\n- They will refine it through AI and peer feedback.\n- They will present their final work in a creative format.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to review the assessment criteria rubric and final deliverables on the last pages of the Project Planning Guide. Explain the design challenge framing of \"How can we use AI as a creative partner to generate meaningful future predictions?\"\n",
-        "duration": "10",
-        "name": "Project Overview",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to think about how AI can be a useful tool for prediction, but not an absolute truth-teller."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fe7813b5-b512-40c1-851d-6e68d0a97068",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "3dd687b1-1460-40d7-b15e-bd5270b1ba43",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3dd687b1-1460-40d7-b15e-bd5270b1ba43",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "24a2d8ea-34a1-4ada-a3a0-38caadcc0482",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the project rubric?*\n- *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3."
-      },
-      "seeding_key": {
-        "activity_section.key": "24a2d8ea-34a1-4ada-a3a0-38caadcc0482",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "cf7403aa-64a3-40af-98a9-c60f013dabaa",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Guide students through AI-assisted future predictions, evaluating and refining outputs.",
-        "duration": "20",
-        "name": "Exploring Future Possibilities with AI"
-      },
-      "seeding_key": {
-        "activity_section.key": "cf7403aa-64a3-40af-98a9-c60f013dabaa",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "2ee7446d-0d4c-43c8-8f12-dc53fd9e74d4",
-      "position": 8,
-      "properties": {
-        "description": "Now that you understand the project's structure, let's begin shaping your predictions. We're going to start by gathering information, making an initial prediction, and then seeing how AI builds on it. Your job is to refine AI's ideas into something you truly believe could happen.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "2ee7446d-0d4c-43c8-8f12-dc53fd9e74d4",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "b3fa72ee-6dc3-4f9c-a85a-66f63c46c566",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to select a focus area for their project and record it in Step 1 of their Project Planning Guide.\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Gather enough artifacts to give AI enough context to make a prediction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Emphasize to students that they should find several resources but that they don't need to look for the \"perfect\" artifact. Instead, their focus should be on only spending a few minutes gathering resources so they can move on to the next steps.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Support students who might be spending a long time searching by asking \"What kind of information do you think AI will need?\" or \"Do you already have a Few artifacts that feel useful?\"\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Make a plan beforehand for how you want students to store artifacts. In order to upload them to AI Chat, students need to save the files to their computers. You might consider leading a mini-lesson for students on how to create a folder on their computer's desktop where they can store images and PDFs."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b3fa72ee-6dc3-4f9c-a85a-66f63c46c566",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "81261cf3-2974-4695-8e68-80a98bc75dd7",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the My Initial Prediction section of their planning guide. They should make a prediction using the artifacts they gathered for context.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 13, Level 1 to work with AI Chat to generate on a future prediction for their chosen area. ",
-        "progression_name": "AI Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "81261cf3-2974-4695-8e68-80a98bc75dd7",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "c169279f-6149-49eb-8d54-7dc9b0fe20af",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are working through the steps in the level to refine their output. Have students working at the same pace answer the discussion questions in Step 2 together.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Check if students are evaluating AI's predictions critically or just accepting them. If students accept AI's outputs without questioning, ask:\n- *\"What trends or real-world examples support this prediction?\"*\n- *\"Who might benefit or be excluded from this future?\"*\n\nEncourage students to refine AI’s predictions by comparing the predictions to their own knowledge and research.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c169279f-6149-49eb-8d54-7dc9b0fe20af",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "210835cb-58b4-4976-80ad-fada284311a1",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the self reflection questions in Day 1 Reflection in their Project Planning Guide. Then have students make a final prediction statement using the sentence starter \"I believe . . . \".",
-        "duration": "10",
-        "name": "Wrap Up",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Optionally, you can have students record their answers to these questions on a 3x5 card to be handed in as an Exit Ticket as they leave the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "210835cb-58b4-4976-80ad-fada284311a1",
-        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
-      }
-    },
-    {
-      "key": "401aea4a-28fc-4d2d-bf3b-e28235cbb270",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students recognize how human reasoning improves AI-generated content. They will apply these skills as create a presentation that documents their own process of working with AI.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What exactly did the human change or add?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students identify the specific changes the human made to the AI's prediction, such as clarifying limits of automation and including a more realistic role for humans. This will help them later in the lesson explain their own changes to the AI outputs they received.\n",
-        "duration": "10",
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "401aea4a-28fc-4d2d-bf3b-e28235cbb270",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "bfc8c89f-f872-49f4-9952-bc4d60bc8a6a",
-      "position": 2,
-      "properties": {
-        "description": "Just like in this example, your job today is to explain the refinements you made while working with AI.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "bfc8c89f-f872-49f4-9952-bc4d60bc8a6a",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "6d359a2c-eeeb-4fd9-86db-39e023c50390",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks for Day 2 of the project and explain that today, students' goal is to begin developing their final product.",
+        "description": "####Project Overview & Preparation  (10 min)\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce students to the Product Launch project, its goals, and expected deliverables. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Organize students into their project teams using whatever team size works for your class. Explain that everyone shares one product, one spec sheet, and one chatbot — but each team member will own a different launch job on Day 3, so every member produces individual work the team depends on.\n",
         "duration": "35",
         "name": "Activity",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Decide in advance what platforms students will have available for their final product and where they will save their work. If you plan to have students create a slides presentation, infographic, news article, etc. you may want to create a shared class folder where all students can save their products."
+            "markdown": "Teams where members know the same hobby or interest will define faster, but mixed-interest teams often write sharper spec sheets because they're forced to explain the basics. Either works — just make sure the chosen topic is something at least one member knows personally, since the rubric rewards a \"specific, personally-known problem.\""
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6d359a2c-eeeb-4fd9-86db-39e023c50390",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
+        "activity_section.key": "d5f3c120-6595-42b8-a109-b11c547a7dce",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
       }
     },
     {
-      "key": "7c02977e-3886-4e6e-b30c-6f20831810ba",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7c02977e-3886-4e6e-b30c-6f20831810ba",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "63ce4077-cee7-4c13-ae61-6100315d80fc",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Guide students in selecting their final presentation format."
-      },
-      "seeding_key": {
-        "activity_section.key": "63ce4077-cee7-4c13-ae61-6100315d80fc",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "2011d8b8-2943-4d04-bc44-95aa9e6d4924",
-      "position": 6,
-      "properties": {
-        "description": "Before we start developing our final product, let's decide how you want to present your prediction. Think about what format will best communicate your ideas.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "2011d8b8-2943-4d04-bc44-95aa9e6d4924",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "7613feb4-1d0e-4c97-8f42-f0341aa6aefd",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to pick a product format for their project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Develop Your Presentation section in their Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the checklist with students to ensure they understand what they need to include in their project. Do this before they move on to Lesson 13, Level 2 and begin collaborating with AI. Students can also find this list in the Collaborating with AI section of their Project Planning Guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 13, Level 2 to use AI as a collaborator to help them refine and improve the content or design of their presentation.",
-        "progression_name": "Final Product"
-      },
-      "seeding_key": {
-        "activity_section.key": "7613feb4-1d0e-4c97-8f42-f0341aa6aefd",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "41498c33-d309-4be0-aaa1-fa75055cfe29",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are updating their presentations with the collaboration of AI Chat.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "As students are creating their project’s product, look for if students are integrating AI-generated insights while maintaining their own voice. If students over-rely on AI's wording, ask:\n- *\"How can you make this sound more like your perspective?\"*\n- *\"What details could you add to make this clearer for your audience?\"*\n\nGuide students to refine AI's content rather than copying it directly.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "41498c33-d309-4be0-aaa1-fa75055cfe29",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "7d820f3e-5762-4578-871f-273945658528",
-      "position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7d820f3e-5762-4578-871f-273945658528",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "287a100f-204c-4384-b037-4cafafabc149",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to exchange projects with a peer and complete Peer Review. Students will use the peer feedback to make revisions to their final product.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, you can have students go through one more round of iteration on their project's product after getting peer feedback."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "287a100f-204c-4384-b037-4cafafabc149",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "aafc69c7-a45b-47b4-96aa-6901861ae822",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students that before they move on to finalizing their projects next class, to take a moment to reflect on today's refinements. Direct students to answer Day 2 Reflection questions in their Project Planning Guides.",
-        "duration": "5",
-        "name": "Wrap Up",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, have students share their reflections with a partner or in small groups."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "aafc69c7-a45b-47b4-96aa-6901861ae822",
-        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
-      }
-    },
-    {
-      "key": "c6558df2-17e9-4af4-99dc-c628cfae88c7",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Encourage students to reflect on the importance of making their own voice, decisions, and reasoning clear in their presentation, rather than simply repeating AI-generated content.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How can you tell if something was written by a person or by AI? Why does that matter in your project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the value of personal input in AI-generated content and identify what makes a presentation feel original, human, and thoughtful. They should begin thinking about how to show ownership over their choices and reasoning.\n",
-        "duration": "10",
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "c6558df2-17e9-4af4-99dc-c628cfae88c7",
-        "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
-      }
-    },
-    {
-      "key": "d2d070aa-3de7-4a42-8328-b4923f73a324",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students about 15 minutes to make any final revisions for their project.",
-        "duration": "15",
-        "name": "Finalizing the AI Time Capsule"
-      },
-      "seeding_key": {
-        "activity_section.key": "d2d070aa-3de7-4a42-8328-b4923f73a324",
-        "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
-      }
-    },
-    {
-      "key": "6899641d-dea3-4120-8f22-1df5dd3674c6",
+      "key": "452bb1c2-3d06-4ccd-b561-39d8045b0a27",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students form groups of three or four students. Direct students to present their projects and engage in peer discussion. Make sure each presenter is answering the following questions as well as any questions their peers have for them:\n- *What perspectives are represented in this prediction?*\n- *What biases might have shaped this future scenario?*\n- *How does this prediction encourage responsible AI use?*\n",
-        "duration": "15",
-        "name": "Presenting Your Prediction and Peer Feedback",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce students to the Product Launch project, its goals, and expected deliverables. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Product Launch Project Planning Guide. Explain that the guide walks them through the whole project, but their actual work will live in Sketch Lab and AI Chat levels — the guide is their map, not their deliverable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this project, students will be working with AI to invent a fictional product that solves a real problem from their own life, define exactly who it's for, and then launch it— with a factual spec sheet, a chatbot for potential customers that students build and test themselves, and a social media post that introduces their product to the world.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "452bb1c2-3d06-4ccd-b561-39d8045b0a27",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "5240fff5-2363-4e76-83ac-7b52efe9f8ac",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to review the assessment criteria rubric and final deliverables on the last pages of the Project Planning Guide. Explain the design challenge framing of \"How can we use AI as a creative partner to in order to launch a useful or novel product\". Students should complete the Rubric Reflection section in the planning guide.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Depending on class size, consider using stations, sticky notes for written feedback, or rotating peer groups to keep discussions efficient. \n\nLook for if students are engaging critically with each other’s predictions. If discussions lack depth, ask:\n- \"What makes this prediction compelling or questionable?\"\n- \"What evidence supports or challenges this scenario?\"\n\nPush students to ask thoughtful questions and challenge assumptions.\n"
+            "markdown": "Encourage students to think about how AI can be a useful tool for co-creation, but one that requires human input and judgment to function effectively. Students often skim rubrics and anchor on the final product row. Point them to the Chatbot Creation row specifically — the requirement to document revisions in response to testing is the part teams most often miss."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6899641d-dea3-4120-8f22-1df5dd3674c6",
+        "activity_section.key": "5240fff5-2363-4e76-83ac-7b52efe9f8ac",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "d26388d5-bd2c-42f7-b733-582722d4695a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* _Which part of the rubric do you feel most confident about?_\n* _What questions do you have about what is expected?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify where the rubric asks for evidence of process — testing, revising, keeping/modifying/rejecting AI output — not just finished artifacts. Listen for confusion about \"honest limits (what the product does not do)\"; naming that expectation now sets up today's spec sheet work. Answer expectation questions directly; this is the moment to calibrate the class before planning begins.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d26388d5-bd2c-42f7-b733-582722d4695a",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "c47e084b-cd5b-4f5a-b523-512b0ec2cf51",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the four stages briefly. Define the problem and audience, Build the product's official record and its customer-facing chatbot, Test the chatbot against real questions, and Ship it to the world with a launch post. Emphasize that students use AI at every stage, but they are the decision-makers. The rubric rewards shaping and rejecting AI output, not just accepting it."
+      },
+      "seeding_key": {
+        "activity_section.key": "c47e084b-cd5b-4f5a-b523-512b0ec2cf51",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "3bad6226-b96c-456a-a10b-d49f66ca706a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review today's agenda. Students move through the Define section of the canvas, then start the Build section — the spec sheet and a first draft of the system prompt. Explain the through-line: everything the chatbot will be able to say on Day 2 comes from what gets written on the spec sheet today. A vague spec sheet produces a chatbot that makes things up.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Today is deliberately front-loaded. Teams don't need a polished system prompt by the bell — a complete spec sheet plus a rough TaCoFoRT draft is a successful Day 1. The prompt gets built into a working chatbot and revised on Day 2."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3bad6226-b96c-456a-a10b-d49f66ca706a",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "2f7e6233-4116-492e-9032-786dc03bcd54",
+      "position": 8,
+      "properties": {
+        "description": "####Define & Build  (25 min)\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students translate a personally-known problem into a factual product spec. The goal is concrete, honest documentation for a specific audience.\n\n**Say**: Now that you understand the project's structure, let's begin by heading to Sketch Lab and taking the first steps towards launching an amazing product.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 10, Level 1. In the Define section, teams pick a topic they know personally, name three issues, choose one for their product to solve, and identify a specific audience. In the Build section, they complete the Product Spec Sheet — choosing four question categories plus additional \"What it is\" and \"What it is NOT\" requirements. Teams then draft all five TaCoFoRT components which will be used to create their Product Chatbot on Day 2.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As teams work, push for specificity and factual claims. Ask:\n* \"Who exactly is this for? Can you name real people who'd use it?\"\n* \"Is that spec sheet entry a fact about the product, or a hope for it?\"\n* \"What did you write for 'What it is NOT'? What will your chatbot need to decline?\"\n* \"Which spec sheet category was hardest to answer with a concrete detail?\"\n* \"How does your Retrieval component point the chatbot back at your spec sheet?\"\n\nBefore teams move on, confirm the spec sheet and product definition describe the same product — inconsistency here is the top source of chatbot errors on Day 2.\n",
+        "progression_name": "Define & Build"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f7e6233-4116-492e-9032-786dc03bcd54",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "312bf2d8-ee52-435b-bd62-38999eec29bf",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Level 2 to complete the Day One Reflection. Students write one customer question their chatbot should decline because of what their product does not do, and identify the spec sheet category that was hardest to answer with facts — including what they changed about the product to make it answerable.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for decline questions that are genuinely plausible customer questions, not generic ones. Ask: \"Would a real customer actually ask that?\"\n",
+        "duration": "5",
+        "name": "Wrap-Up",
+        "progression_name": "Day One Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Optionally, you can have students record their answers to these questions on a 3x5 card to be handed in as an Exit Ticket as they leave the class. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "312bf2d8-ee52-435b-bd62-38999eec29bf",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "d8bac9d6-e59b-4c1b-aeab-f15ac9dc5299",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Think of a time a person or a chatbot gave you a confident answer that turned out to be wrong. How did you find out?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect confident-but-wrong answers to the \"What it is NOT\" entries they wrote yesterday. Listen for the insight that a good chatbot's value comes as much from what it declines as from what it answers. This frames today's test plan directly: one question the chatbot should get correct, one it can't answer from the spec sheet, and one it should refuse.\n",
+        "duration": "5",
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8bac9d6-e59b-4c1b-aeab-f15ac9dc5299",
+        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
+      }
+    },
+    {
+      "key": "b175ca0d-26c6-4323-ad7e-09fb6a2b0cfd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review today's agenda. Students build the chatbot from yesterday's drafted system prompt, then run it through a deliberate test-and-refine cycle. Explain that testing here isn't a formality — the rubric requires documented revisions that respond to specific problems observed in testing, so teams should expect (and want) their first version to fail somewhere.",
+        "duration": "35",
+        "name": "Activity ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Teams whose system prompt draft is unfinished should timebox it: get a workable version into AI Chat within the first 10 minutes. A running chatbot they can test beats a perfect prompt they can't. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b175ca0d-26c6-4323-ad7e-09fb6a2b0cfd",
+        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
+      }
+    },
+    {
+      "key": "4e408ca6-7b9b-4241-affb-d40f0772b1d6",
+      "position": 3,
+      "properties": {
+        "description": "####Build & Test (35 min)\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build, test against realistic questions, diagnose which TaCoFoRT component permitted an error, revise, and re-test. The goal is a documented Problem → Fix cycle grounded in the chatbot's output.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 3. \n* In Level 3a (AI Chat), teams compose their system prompt and create their Product Chatbot. \n* In Level 3b (Sketch Lab), they draft three test questions — one the chatbot should answer fully and accurately, one about a detail the spec sheet does not cover, and one the chatbot should decline — then record what the chatbot actually said, word for word, and document at least one Problem → Refine cycle \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As teams test, check that they're recording real outputs and tracing errors to a component. Ask:\n* \"What exactly did the chatbot say — did you copy its actual words into the canvas?\"\n* \"Did it invent an answer to your question two, or admit the spec sheet doesn't cover it?\"\n* \"Did it decline question three, or try to be helpful anyway?\"\n* \"Which TaCoFoRT component let that error through — Task, Context, Format, Retrieval, or Tone?\"\n* \"After your fix, did you re-ask the same question to confirm the revision worked?\"\n\nBefore teams move on, confirm they've completed at least one full test → revise → re-test cycle with the problem and fix written down.\n",
+        "progression_name": "Build & Test",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will want to fix errors by rewriting the whole prompt. Slow that down: the diagnostic skill is naming which component permitted the error and revising that one. If the chatbot hallucinated a price, the conversation is about Retrieval, not Tone."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4e408ca6-7b9b-4241-affb-d40f0772b1d6",
+        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
+      }
+    },
+    {
+      "key": "d3ff637f-1ac1-44ca-a19f-734e597746a7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete the Day Two Reflection. Students quote one answer their chatbot invented and name the system prompt component that permitted the error and report what happened when they asked the question their chatbot was supposed to decline.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that quotes are verbatim from the canvas, not paraphrased from memory. Ask:\n* \"Is that the chatbot's actual wording? Pull it from your Test section.\"\n* \"You changed Retrieval — what specifically did the new version say that the old one didn't?\"\n",
+        "duration": "5",
+        "name": "Wrap-Up",
+        "progression_name": "Day Two Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, invite one or two teams to share their best Problem → Fix. Hearing that other teams' chatbots also failed — and got better — normalizes the revision cycle before tomorrow's launch day. If a team's chatbot never invented anything, that's worth probing rather than celebrating — usually it means their test questions were too easy. Encourage them to ask a harder question two before writing \"no errors.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d3ff637f-1ac1-44ca-a19f-734e597746a7",
+        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
+      }
+    },
+    {
+      "key": "5aebeb17-a3d0-444b-9035-b3d7e791a8e9",
+      "position": 1,
+      "properties": {
+        "description": "There is no designated warm-up on this final day to maximize project completion time.",
+        "duration": "0",
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "5aebeb17-a3d0-444b-9035-b3d7e791a8e9",
         "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
       }
     },
     {
-      "key": "07607dcc-f34e-4d42-9a37-0e513cb7a559",
-      "position": 4,
+      "key": "7dabe5d7-c432-4520-849b-3c8c64126181",
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students think about AI's role in shaping the future and how we ensure AI is used responsibly. Have students complete the End of Project Reflection in their Project Planning Guide.",
-        "duration": "5",
-        "name": "Wrap Up",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review today's agenda. Teams divide launch work by choosing jobs, produce assets with AI assistance, and assemble everything into the final social media post. Name the two mandatory jobs — Art Director and Copywriter — and note that Sound Designer, Commercial Director, and Community Manager are optional third picks. Emphasize the standard that carries the whole day: every claim in every asset must be a fact the spec sheet can back up. The post launches the product they actually defined, not the one they wish they'd built.",
+        "duration": "40",
+        "name": "Activity",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time allows, have students share their reflections with the class."
+            "markdown": "The Keep / Modify / Reject log is where the rubric's AI Content Creation evidence lives. Remind teams that \"Reject, because it promised a feature we don't have\" is exactly the kind of entry that scores — a first-draft AI asset pasted straight in is what the rubric calls out as Limited."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "07607dcc-f34e-4d42-9a37-0e513cb7a559",
+        "activity_section.key": "7dabe5d7-c432-4520-849b-3c8c64126181",
+        "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
+      }
+    },
+    {
+      "key": "2cb97a34-d576-4592-967e-c1cae51edfe5",
+      "position": 3,
+      "properties": {
+        "description": "####Ship (40 min)\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students direct AI as a creative production tool. Each job that students can choose generates assets with AI assistance, while students log what they kept, modified, or rejected and why. \n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 5. Each team member takes a job in the Ship section of the canvas: Art Director generates and checks the main image, Copywriter drafts the name, slogan, and caption, and the team's third job produces a jingle, a commercial script, or predicted comments with a pinned FAQ reply. Every job logs its AI output in the Keep / Modify / Reject table, and the team assembles final assets into the social media post template.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As teams create assets, keep pulling them back to the spec sheet. Ask:\n* \"Does your image match what the spec sheet says — number of parts, colors, appearance?\"\n* \"Read me your caption. Which spec sheet entry backs up each claim?\"\n* \"What did AI give you that you modified or rejected — and what did you write in the log?\"\n* \"Community Manager: did your chatbot handle the questions you predicted, or does the spec sheet need a fix?\"\n* \"Does anything in this post oversell what the product actually does?\"\n\nBefore teams finalize, confirm the post's claims survive a check against the spec sheet — this is the rubric's bar for the Extensive column.\n",
+        "progression_name": "Ship",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Time is the constraint today. Have teams get the mandatory jobs (image + copy) to done before polishing the optional third asset. A coherent post with two strong assets beats three half-finished ones."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2cb97a34-d576-4592-967e-c1cae51edfe5",
+        "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
+      }
+    },
+    {
+      "key": "0f78c031-294a-4c8c-8661-c0e5d992414f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to complete the final project reflection. Students describe one moment where their judgment overrode AI's output, and one place where AI genuinely made the launch better. Encourage them to pull both answers from their Keep / Modify / Reject log.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "progression_name": "Day Three Reflection",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "These two questions are the meta-evidence for the whole project: question 1 maps to the rubric's \"modified or rejected AI output and explains why,\" and question 2 shows students can credit AI accurately without overclaiming. Read them alongside the Keep / Modify / Reject log — strong answers cite a specific asset and a specific reason. Together with the canvas (spec sheet, test cycles, final post), this completes your evidence across all four rubric rows."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0f78c031-294a-4c8c-8661-c0e5d992414f",
+        "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
+      }
+    },
+    {
+      "key": "f95848b2-cb2f-406b-872b-7824604957a4",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Optionally, you can have students record their answers to these questions on a 3x5 card to be handed in as an Exit Ticket as they leave the class. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f95848b2-cb2f-406b-872b-7824604957a4",
         "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
       }
     },
@@ -4626,49 +4604,6 @@
       "seeding_key": {
         "activity_section.key": "e48e578c-522f-44a0-9705-e3aa88fffe02",
         "lesson_activity.key": "c347dc91-1be3-42cf-8f12-844c8946397e"
-      }
-    },
-    {
-      "key": "10dd8858-7915-4863-b4a0-f5f6de5018ca",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "10dd8858-7915-4863-b4a0-f5f6de5018ca",
-        "lesson_activity.key": "bf6f0ce1-9751-4599-928d-10c136344bdd"
-      }
-    },
-    {
-      "key": "a353abf3-718f-4cac-8d80-84e9183fd684",
-      "position": 1,
-      "properties": {
-        "progression_name": "Day One"
-      },
-      "seeding_key": {
-        "activity_section.key": "a353abf3-718f-4cac-8d80-84e9183fd684",
-        "lesson_activity.key": "e3455871-c77e-47d8-89aa-d745b47ea082"
-      }
-    },
-    {
-      "key": "2ac5fad8-1265-49e8-bd19-f1c4ecdc8e90",
-      "position": 2,
-      "properties": {
-        "progression_name": "Day Two"
-      },
-      "seeding_key": {
-        "activity_section.key": "2ac5fad8-1265-49e8-bd19-f1c4ecdc8e90",
-        "lesson_activity.key": "e3455871-c77e-47d8-89aa-d745b47ea082"
-      }
-    },
-    {
-      "key": "daf154f7-2fa9-43a3-8c35-3d96a1d68548",
-      "position": 3,
-      "properties": {
-        "progression_name": "Day Three"
-      },
-      "seeding_key": {
-        "activity_section.key": "daf154f7-2fa9-43a3-8c35-3d96a1d68548",
-        "lesson_activity.key": "e3455871-c77e-47d8-89aa-d745b47ea082"
       }
     },
     {
@@ -5292,164 +5227,10 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "AI Prompting Framework"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level2_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson8-level2_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "AI Prompting Framework"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level3_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson8-level3_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "AI Prompting Framework"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level4_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson8-level4_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 6,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "AI Prompting Framework"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level5_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson8-level5_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 7,
-      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "AI Prompting Framework"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level6_2024-pilot_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson8-level6_2024-pilot_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Check Your Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level6_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "127e931c-d9c9-48bc-b4d9-ba5ce9c32ea7"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson8-level6_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 9,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Check Your Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level7_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "127e931c-d9c9-48bc-b4d9-ba5ce9c32ea7"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson8-level7_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 10,
-      "activity_section_position": 3,
-      "assessment": true,
-      "properties": {
-        "progression": "Check Your Understanding"
+        "progression": "Build Your TaCoFoRT Prompt"
       },
       "bonus": false,
       "seeding_key": {
@@ -5459,14 +5240,14 @@
         "lesson.key": "Lesson 8: Debugging and Refining Outputs",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "127e931c-d9c9-48bc-b4d9-ba5ce9c32ea7"
+        "activity_section.key": "a1990822-fb7a-493b-ab00-779120bfb434"
       },
       "level_keys": [
         "problem-solving-with-ai-lesson8-level8_v2_2026_dev"
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5488,7 +5269,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5510,7 +5291,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5532,7 +5313,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -5554,7 +5335,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5576,7 +5357,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5598,7 +5379,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5620,7 +5401,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5642,7 +5423,51 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-vision-board"
+        ],
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-vision-board"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "New Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-aichat-2"
+        ],
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-aichat-2"
+      ]
+    },
+    {
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5664,7 +5489,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5686,7 +5511,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5708,7 +5533,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5730,7 +5555,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5752,7 +5577,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5774,7 +5599,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5796,7 +5621,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5818,7 +5643,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5840,7 +5665,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5862,7 +5687,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -5884,7 +5709,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5906,7 +5731,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -5928,7 +5753,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5950,7 +5775,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5972,7 +5797,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5994,7 +5819,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6016,7 +5841,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
@@ -6038,7 +5863,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6060,12 +5885,12 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Day One"
+        "progression": "Define & Build"
       },
       "bonus": false,
       "seeding_key": {
@@ -6075,19 +5900,19 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "a353abf3-718f-4cac-8d80-84e9183fd684"
+        "activity_section.key": "2f7e6233-4116-492e-9032-786dc03bcd54"
       },
       "level_keys": [
         "problem-solving-with-ai-project-sketchlab-day-one"
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 59,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Day One"
+        "progression": "Day One Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -6097,19 +5922,19 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "a353abf3-718f-4cac-8d80-84e9183fd684"
+        "activity_section.key": "312bf2d8-ee52-435b-bd62-38999eec29bf"
       },
       "level_keys": [
         "problem-solving-with-ai-project-reflection-day-1"
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Day Two"
+        "progression": "Build & Test"
       },
       "bonus": false,
       "seeding_key": {
@@ -6119,19 +5944,19 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "2ac5fad8-1265-49e8-bd19-f1c4ecdc8e90"
+        "activity_section.key": "4e408ca6-7b9b-4241-affb-d40f0772b1d6"
       },
       "level_keys": [
         "problem-solving-with-ai-project-choice-2"
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 61,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Day Two"
+        "progression": "Day Two Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -6141,19 +5966,19 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "2ac5fad8-1265-49e8-bd19-f1c4ecdc8e90"
+        "activity_section.key": "d3ff637f-1ac1-44ca-a19f-734e597746a7"
       },
       "level_keys": [
         "problem-solving-with-ai-project-reflection-day-2"
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Day Three"
+        "progression": "Ship"
       },
       "bonus": false,
       "seeding_key": {
@@ -6163,19 +5988,19 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "daf154f7-2fa9-43a3-8c35-3d96a1d68548"
+        "activity_section.key": "2cb97a34-d576-4592-967e-c1cae51edfe5"
       },
       "level_keys": [
         "problem-solving-with-ai-project-choice-3"
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 63,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Day Three"
+        "progression": "Day Three Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -6185,14 +6010,14 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "daf154f7-2fa9-43a3-8c35-3d96a1d68548"
+        "activity_section.key": "0f78c031-294a-4c8c-8661-c0e5d992414f"
       },
       "level_keys": [
         "problem-solving-with-ai-project-reflection-day-3"
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6214,7 +6039,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6563,90 +6388,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson8-level2_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level2_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson8-level3_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level3_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson8-level4_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level4_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson8-level5_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level5_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson8-level6_2024-pilot_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level6_2024-pilot_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "67b89f05-98fe-4607-b1b6-151446df77ab"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson8-level6_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level6_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "127e931c-d9c9-48bc-b4d9-ba5ce9c32ea7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson8-level7_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson8-level7_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "127e931c-d9c9-48bc-b4d9-ba5ce9c32ea7"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "problem-solving-with-ai-lesson8-level8_v2_2026_dev",
         "script_level.level_keys": [
           "problem-solving-with-ai-lesson8-level8_v2_2026_dev"
@@ -6654,7 +6395,7 @@
         "lesson.key": "Lesson 8: Debugging and Refining Outputs",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "127e931c-d9c9-48bc-b4d9-ba5ce9c32ea7"
+        "activity_section.key": "a1990822-fb7a-493b-ab00-779120bfb434"
       }
     },
     {
@@ -6751,6 +6492,30 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
         "activity_section.key": "314934a2-be1d-41e5-93f9-96a516c95fb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-vision-board",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-vision-board"
+        ],
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-aichat-2",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-aichat-2"
+        ],
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
       }
     },
     {
@@ -6990,7 +6755,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "a353abf3-718f-4cac-8d80-84e9183fd684"
+        "activity_section.key": "2f7e6233-4116-492e-9032-786dc03bcd54"
       }
     },
     {
@@ -7002,7 +6767,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "a353abf3-718f-4cac-8d80-84e9183fd684"
+        "activity_section.key": "312bf2d8-ee52-435b-bd62-38999eec29bf"
       }
     },
     {
@@ -7014,7 +6779,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "2ac5fad8-1265-49e8-bd19-f1c4ecdc8e90"
+        "activity_section.key": "4e408ca6-7b9b-4241-affb-d40f0772b1d6"
       }
     },
     {
@@ -7026,7 +6791,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "2ac5fad8-1265-49e8-bd19-f1c4ecdc8e90"
+        "activity_section.key": "d3ff637f-1ac1-44ca-a19f-734e597746a7"
       }
     },
     {
@@ -7038,7 +6803,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "daf154f7-2fa9-43a3-8c35-3d96a1d68548"
+        "activity_section.key": "2cb97a34-d576-4592-967e-c1cae51edfe5"
       }
     },
     {
@@ -7050,7 +6815,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "daf154f7-2fa9-43a3-8c35-3d96a1d68548"
+        "activity_section.key": "0f78c031-294a-4c8c-8661-c0e5d992414f"
       }
     },
     {
@@ -7305,31 +7070,6 @@
       }
     },
     {
-      "name": "AI Time Capsule Project",
-      "url": "https://docs.google.com/presentation/d/17qYfwaGmjDBM6KVgpiqFA2-NjKrGlxnjYRpM9iRt7Bk/edit?usp=drivesdk",
-      "key": "ai_time_capsule_project",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "ai_time_capsule_project"
-      }
-    },
-    {
-      "name": "AI Time Capsule Project Planning Guide",
-      "url": "https://docs.google.com/document/d/12ERoL_ehwCFg2KE9PhQpNr59XCZIT_CtnLKkTfNyAkQ/edit?usp=drivesdk",
-      "key": "ai_time_capsule_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "ai_time_capsule_project_planning_guide"
-      }
-    },
-    {
       "name": "All Resources",
       "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/1/resources",
       "key": "all_resources",
@@ -7376,6 +7116,21 @@
       }
     },
     {
+      "name": "Career Spec Sheet",
+      "url": "https://docs.google.com/document/d/1HyJQfGDcUcHJjog7vNk7KidoOvqDEGpYTECMqojgaPI/edit?usp=sharing",
+      "key": "career_spec_sheet",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "career_spec_sheet"
+      }
+    },
+    {
       "name": "Collaborate on a Product Launch",
       "url": "https://docs.google.com/document/d/1DVcGVVtJlZkDlP2v-JGoFNcGLcCqvEh7RTpjRGmfDjU/edit?usp=drive_link",
       "key": "collaborate_on_a_product_launch",
@@ -7405,10 +7160,11 @@
     },
     {
       "name": "Debugging and Refining Outputs",
-      "url": "https://docs.google.com/presentation/d/1_GITEwQ6Ek6PXwnL5bzDtZaqZ8yFNFJWpJ_z0r6IxEc/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1kFIPVkS0Mgi5nA2LUUocoF_lgMDjJwADYgCBCt3Jcq0/edit?usp=sharing",
       "key": "debugging_and_refining_outputs",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7426,30 +7182,6 @@
       },
       "seeding_key": {
         "resource.key": "examining_ai_contradictions"
-      }
-    },
-    {
-      "name": "Exemplar Description",
-      "url": "https://docs.google.com/document/d/1mSADhUQEAXc9V1mO6FUkaX7Hnap85tgYI3KNRDytukg/edit?usp=drivesdk",
-      "key": "exemplar_description",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_description"
-      }
-    },
-    {
-      "name": "Exemplar Project",
-      "url": "https://drive.google.com/file/d/180dIgV9g3UfwKRbvF08D4Yw-iiKQIuE8/view?usp=sharing",
-      "key": "exemplar_project",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_project"
       }
     },
     {
@@ -7561,6 +7293,36 @@
       }
     },
     {
+      "name": "Problem Solving with AI - Product Launch Project Slides",
+      "url": "https://docs.google.com/presentation/d/1ut9ymKHLW4b0CuduHwxrt1Jx9QgJO7_wDIw4lctKMgg/",
+      "key": "problem_solving_with_ai_-_product_launch_project_slides",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_ai_-_product_launch_project_slides"
+      }
+    },
+    {
+      "name": "Problem Solving with AI Product Launch Project",
+      "url": "https://docs.google.com/document/d/1ufEUtOViuB1tBAAU_b5dyaURH1wDWvo7Fnphh5nlLCw/",
+      "key": "problem_solving_with_ai_product_launch_project",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_ai_product_launch_project"
+      }
+    },
+    {
       "name": "Problem Solving with AI - Unit Guide",
       "url": "https://docs.google.com/document/d/1yrGX_ZqO1iuODACJCTH6Z-jmbRpd4epc8vL6oB-54X8/edit?usp=sharing",
       "key": "problem_solving_with_ai_unit_guide",
@@ -7572,6 +7334,21 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_with_ai_unit_guide"
+      }
+    },
+    {
+      "name": "Prompt Showdown",
+      "url": "https://docs.google.com/document/d/1P4jUVp2mmwsU4x-GWVkArcR7XnCTnhv1f8svLBKZ2EU/edit?usp=sharing",
+      "key": "prompt_showdown",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "prompt_showdown"
       }
     },
     {
@@ -7799,25 +7576,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
-        "resource.key": "ai_time_capsule_project"
+        "resource.key": "problem_solving_with_ai_-_product_launch_project_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
-        "resource.key": "ai_time_capsule_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 13: AI Time Capsule Project",
-        "resource.key": "exemplar_description"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 13: AI Time Capsule Project",
-        "resource.key": "exemplar_project"
+        "resource.key": "problem_solving_with_ai_product_launch_project"
       }
     },
     {
@@ -8027,7 +7792,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Debugging and Refining Outputs",
+        "resource.key": "career_spec_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
         "resource.key": "debugging_and_refining_outputs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
+        "resource.key": "prompt_showdown"
       }
     },
     {
@@ -8160,16 +7937,6 @@
       }
     },
     {
-      "key": "context",
-      "word": "context",
-      "definition": "additional information or data surrounding a prompt or query that helps the AI generate more accurate and relevant responses",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "context"
-      }
-    },
-    {
       "key": "contradiction",
       "word": "contradiction",
       "definition": "when an AI generates conflicting or opposing responses based on a similar input, making it impossible for both responses to be correct at the same time",
@@ -8267,6 +8034,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "prompt_engineering"
+      }
+    },
+    {
+      "key": "retrieval_information",
+      "word": "retrieval information",
+      "definition": "additional information or data surrounding a prompt or query that helps the AI generate more accurate and relevant responses",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "retrieval_information"
       }
     },
     {
@@ -8376,19 +8153,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 4: Smart or Just Predictable?",
-        "vocabulary.key": "context"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 4: Smart or Just Predictable?",
         "vocabulary.key": "hallucination"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 5: Uncovering Contradictions",
-        "vocabulary.key": "context"
+        "lesson.key": "Lesson 4: Smart or Just Predictable?",
+        "vocabulary.key": "retrieval_information"
       }
     },
     {
@@ -8499,7 +8270,7 @@
     {
       "key": "2478f2e8-96c6-4dfa-abdd-7a79244c69de",
       "properties": {
-        "description": "Develop a future prediction by combining research with AI-generated insights."
+        "description": "Develop a spec sheet that documents a product that a chatbot can reference"
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
@@ -8527,9 +8298,29 @@
       }
     },
     {
+      "key": "3d34a9b8-2d6e-4dae-baaf-ca29d45b7b90",
+      "properties": {
+        "description": "Create AI-assisted launch assets and exercise judgment over AI output by keeping, modifying, or rejecting it."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "objective.key": "3d34a9b8-2d6e-4dae-baaf-ca29d45b7b90"
+      }
+    },
+    {
+      "key": "488bba46-f0f8-4332-916d-a6ef344fd3eb",
+      "properties": {
+        "description": "Launch a product with a social media post whose claims match what the spec sheet supports"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "objective.key": "488bba46-f0f8-4332-916d-a6ef344fd3eb"
+      }
+    },
+    {
       "key": "5615916b-6fc2-4eaf-8762-3505e51e5b96",
       "properties": {
-        "description": "Create a presentation that explains how you collaborated with AI to shape and improve your final prediction."
+        "description": "Define a product that responds to a personally-known problem and name a specific audience for it."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
@@ -8544,6 +8335,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 3: The AI's Brain",
         "objective.key": "65827cc5-4397-4345-922c-4e6660583591"
+      }
+    },
+    {
+      "key": "69a36b90-0143-4cdf-93ca-6c626e30f34f",
+      "properties": {
+        "description": "Explain how debugging and refining a prompt improves AI outputs."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
+        "objective.key": "69a36b90-0143-4cdf-93ca-6c626e30f34f"
       }
     },
     {
@@ -8569,7 +8370,7 @@
     {
       "key": "92b0ee30-dc47-4374-a4d9-efceb2fc065f",
       "properties": {
-        "description": "Apply debugging techniques to improve AI-generated responses."
+        "description": "Apply the prompting framework to build an effective AI system prompt for a specific purpose."
       },
       "seeding_key": {
         "lesson.key": "Lesson 8: Debugging and Refining Outputs",
@@ -8639,7 +8440,7 @@
     {
       "key": "b1084bef-88dd-4b50-97a4-94bdfb7190c7",
       "properties": {
-        "description": "Explain how prompt refinement improves AI outputs."
+        "description": "Apply debugging techniques to improve AI-generated responses."
       },
       "seeding_key": {
         "lesson.key": "Lesson 8: Debugging and Refining Outputs",
@@ -8689,7 +8490,7 @@
     {
       "key": "ba4f16eb-736f-47ba-a80f-dff14ffe6fe6",
       "properties": {
-        "description": "Evaluate AI outputs for accuracy, inclusivity, and real-world relevance."
+        "description": "Compose a system prompt using the Task, Context, Format, Retrieval, and Tone components to control a chatbot's behavior."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
@@ -8819,7 +8620,7 @@
     {
       "key": "f6aff82f-2575-4a6d-ac6a-da1e309bc503",
       "properties": {
-        "description": "Refine predictions by improving prompts and applying human reasoning."
+        "description": "Test a chatbot with realistic customer questions, trace errors to the system prompt component that permitted them, and confirm that revisions fixed the problem."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",

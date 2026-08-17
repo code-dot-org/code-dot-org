@@ -4,8 +4,11 @@
 # testing, attaching them to a single lesson ("Lesson 1: Talking to Machines")
 # of a unit (default: aif1-2025).
 #
-# Idempotent: challenges are matched by lesson + question, so re-running does
-# not create duplicates. Refuses to run in the production environment.
+# Idempotent: challenges are matched by lesson + question. Existing matches
+# have their other attributes (modality, rubric) updated in place; challenges
+# in the lesson whose question is no longer in the list are deleted, unless
+# they have responses, in which case they are left in place with a warning.
+# Refuses to run in the production environment.
 #
 # Usage:
 #   bin/seed_challenge_activities [unit_name]
@@ -18,25 +21,118 @@
 LESSON_NAME = 'Lesson 1: Talking to Machines'
 
 # The challenges to seed, in order. default_modality reflects the activity each
-# prompt calls for (pitch/film it -> video, draw it -> whiteboard).
+# prompt calls for (pitch/film it -> video, draw it -> whiteboard). Rubrics use
+# the Challenge#rubric shape consumed by ChallengeEvaluationPromptHelper — a
+# single criterion expressed as a list of integer levels:
+#   [{"level" => 0, "description" => ...}, ...]
+# String keys throughout so a re-run compares equal to the stored JSON.
 CHALLENGES = [
   {
     question: 'Shark Tank but for terrible ideas. Invent the most useless, ' \
       'absurd, or chaotic AI product imaginable, then pitch it on camera like ' \
       'you genuinely believe it will make you a billionaire.',
     default_modality: 'video',
+    rubric: [
+      {
+        'level' => 0,
+        'description' => "The transcript doesn't describe an AI-related " \
+          'product, or describes one where "AI" is just a label with no ' \
+          'explanation of what it does.',
+      },
+      {
+        'level' => 1,
+        'description' => 'The transcript describes the product as ' \
+          'absurdly AI-powered, but the absurdity is generic ("it uses ' \
+          'AI for everything," "it\'s the smartest AI ever") — no ' \
+          'specific AI behavior is named or implied.',
+      },
+      {
+        'level' => 2,
+        'description' => 'The transcript names or clearly describes a ' \
+          'real AI behavior or limitation (e.g., "it makes stuff up," ' \
+          '"it\'s way too confident," "it only knows what it was ' \
+          'trained on") as the source of the joke.',
+      },
+      {
+        'level' => 3,
+        'description' => 'The transcript ties the joke to a real AI ' \
+          'behavior or limitation and explains why that makes it ' \
+          'useless/dangerous/absurd as a product — i.e., the pitch ' \
+          'makes an actual (if joking) argument, not just a reference.',
+      },
+    ],
   },
   {
-    question: 'You are David Attenborough. Your subject: a confused AI, alone ' \
-      'in the wild, trying to complete a sentence it has never seen before. ' \
-      'Film a 30 second nature documentary narrating its struggle.',
+    question: 'You are a nature documentary narrator — think hushed, ' \
+      "dramatic voice, like you're describing a rare animal in the wild. " \
+      'Your subject: a confused AI, alone in the wild, trying to complete a ' \
+      'sentence it has never seen before. Film a 30 second nature ' \
+      'documentary narrating its struggle.',
     default_modality: 'video',
+    rubric: [
+      {
+        'level' => 0,
+        'description' => 'The transcript describes the AI as "confused" ' \
+          "or \"struggling\" in a generic, human way (like it's scared " \
+          'or thinking hard), with no connection to how AI actually ' \
+          'generates text.',
+      },
+      {
+        'level' => 1,
+        'description' => 'The transcript references the AI "guessing" ' \
+          'or "trying" but doesn\'t explain what it\'s guessing based ' \
+          'on — the struggle is described, not the mechanism behind it.',
+      },
+      {
+        'level' => 2,
+        'description' => 'The transcript narrates the AI ' \
+          "predicting/completing based on patterns it's seen before " \
+          '(e.g., "it\'s reaching for the most familiar next word," ' \
+          '"it\'s never seen this combination, so it\'s stumbling"), ' \
+          'tying the struggle to how the AI actually works.',
+      },
+      {
+        'level' => 3,
+        'description' => 'The transcript narrates the AI confidently ' \
+          'producing a plausible-sounding completion despite not ' \
+          'truly understanding the sentence — capturing the gap ' \
+          'between fluency and comprehension, not just the struggle ' \
+          'itself.',
+      },
+    ],
   },
   {
     question: 'No one actually knows what AI looks like on the inside, so you ' \
       'get to decide. Draw it - weird, funny mechanical, cosmic - whatever ' \
       'feels right to you.',
     default_modality: 'whiteboard',
+    rubric: [
+      {
+        'level' => 0,
+        'description' => 'The drawing shows no attempt to represent AI ' \
+          'as a concept (e.g., a generic robot with no distinguishing ' \
+          'elements).',
+      },
+      {
+        'level' => 1,
+        'description' => 'The drawing includes at least one element ' \
+          'suggesting AI (wires, circuits, a screen) but stays at a ' \
+          'surface, literal level.',
+      },
+      {
+        'level' => 2,
+        'description' => 'The drawing incorporates a specific idea ' \
+          'about how AI works or feels (data, numbers, patterns, ' \
+          'connections, chaos) beyond generic robot imagery.',
+      },
+      {
+        'level' => 3,
+        'description' => 'The drawing uses its visual choices to make ' \
+          'a point about AI — not just depicting a concept, but ' \
+          'expressing something (uncertainty, scale, weirdness) ' \
+          "through how it's drawn.",
+      },
+    ],
   },
 ].freeze
 
@@ -54,20 +150,40 @@ lesson = unit.lessons.find_by(name: LESSON_NAME)
 abort "unit #{unit_name.inspect} has no lesson named #{LESSON_NAME.inspect}" unless lesson
 
 created = 0
-existing = 0
+updated = 0
+unchanged = 0
+removed = 0
 
 CHALLENGES.each do |attrs|
   challenge = Challenge.find_or_initialize_by(lesson_id: lesson.id, question: attrs[:question])
-  if challenge.persisted?
-    existing += 1
-    next
+  is_new = challenge.new_record?
+  challenge.assign_attributes(
+    default_modality: attrs[:default_modality],
+    whiteboard_starter_image_alt_text: attrs[:whiteboard_starter_image_alt_text],
+    rubric: attrs[:rubric]
+  )
+  if is_new
+    challenge.save!
+    created += 1
+  elsif challenge.changed?
+    challenge.save!
+    updated += 1
+  else
+    unchanged += 1
   end
+end
 
-  challenge.default_modality = attrs[:default_modality]
-  challenge.whiteboard_starter_image_alt_text = attrs[:whiteboard_starter_image_alt_text]
-  challenge.save!
-  created += 1
+# A question edit above leaves the old row behind (matching is by question).
+# Remove such leftovers unless a student response points at them.
+Challenge.where(lesson_id: lesson.id).where.not(question: CHALLENGES.map {|c| c[:question]}).each do |challenge|
+  if challenge.challenge_responses.exists?
+    puts "warning: challenge #{challenge.id} (#{challenge.question.truncate(60).inspect}) " \
+      'is not in the seed list but has responses; leaving it in place'
+  else
+    challenge.destroy!
+    removed += 1
+  end
 end
 
 puts "unit #{unit_name.inspect} (id=#{unit.id}), lesson #{lesson.name.inspect} (id=#{lesson.id})"
-puts "challenges created: #{created}, already existed: #{existing}"
+puts "challenges created: #{created}, updated: #{updated}, unchanged: #{unchanged}, removed: #{removed}"

@@ -2120,6 +2120,7 @@ __metadata:
     "@emotion/react": ^11.0.0
     "@emotion/styled": ^11.0.0
     "@mui/material": ^7.0.0
+    classnames: ^2.5.1
     react: ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft

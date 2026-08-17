@@ -141,6 +141,7 @@ export async function getImageModerationStatus(
       moderateEvent: EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE,
       flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
       assetUrl,
+      feature: 'ai-gateway',
     },
     {Violence: 2}
   );

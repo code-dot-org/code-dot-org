@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Day Two, Reflection Two",
-    "long_instructions": "When you asked the same question with and without your spec sheet attached, what changed in the answers?",
+    "long_instructions": "What happened when you asked your chatbot the question it was supposed to decline? If it declined, what in your system prompt made that work — and if it answered anyway, what would you change?",
     "stay_on_level_after_submit": "false",
     "height": "200",
     "placeholder": "write answer here",
@@ -20,7 +20,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-06T15:14:17.385+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-reflection-question-3\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-reflection-question-3\"},{\"changed_at\":\"2026-08-06 15:14:44 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-08-06T15:14:17.385+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-reflection-question-3\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-reflection-question-3\"},{\"changed_at\":\"2026-08-06 15:14:44 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 20:18:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
