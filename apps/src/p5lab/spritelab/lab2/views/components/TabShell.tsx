@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useMemo, useRef} from 'react';
 
 import {
   SPRITE_LAB2_TABS,
@@ -48,12 +48,29 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   children,
   onClickStartOver,
 }) => {
-  const sceneTabs = SPRITE_LAB2_TABS.filter(
-    tab => SCENE_TABS.includes(tab) && visibleTabs.includes(tab)
+  const sceneTabs = useMemo(
+    () =>
+      SPRITE_LAB2_TABS.filter(
+        tab => SCENE_TABS.includes(tab) && visibleTabs.includes(tab)
+      ),
+    [visibleTabs]
   );
   // A lone scene tab with no selector has nothing to group with.
   const grouped = !!sceneTabsExtra || sceneTabs.length > 1;
-  const defaultSceneTab = sceneTabs.includes('Code') ? 'Code' : sceneTabs[0];
+  // Returning to the group reopens the scene tab it was left on, so a trip to
+  // Play doesn't cost the World editor.
+  const lastSceneTab = useRef<SpriteLab2Tab | null>(null);
+  useEffect(() => {
+    if (sceneTabs.includes(activeTab)) {
+      lastSceneTab.current = activeTab;
+    }
+  }, [activeTab, sceneTabs]);
+  const groupTarget =
+    lastSceneTab.current && sceneTabs.includes(lastSceneTab.current)
+      ? lastSceneTab.current
+      : sceneTabs.includes('Code')
+      ? 'Code'
+      : sceneTabs[0];
   const renderTab = (tab: SpriteLab2Tab) => (
     <button
       type="button"
@@ -68,6 +85,8 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
         blurAfterPointerClick(event);
         onTabChange(tab);
       }}
+      // Read by .tab::after, which reserves the selected label's width.
+      data-label={tab}
     >
       {tab}
     </button>
@@ -101,9 +120,9 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                       if (
                         !(e.target as HTMLElement).closest('button') &&
                         !sceneTabs.includes(activeTab) &&
-                        enabledTabs.includes(defaultSceneTab)
+                        enabledTabs.includes(groupTarget)
                       ) {
-                        onTabChange(defaultSceneTab);
+                        onTabChange(groupTarget);
                       }
                     }}
                   >

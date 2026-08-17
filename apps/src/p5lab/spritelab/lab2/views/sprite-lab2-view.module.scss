@@ -70,6 +70,19 @@ $tab-item-height: 34px;
   cursor: pointer;
   font-size: 14px;
 
+  // Selecting a tab bolds it, and bold text is a couple of px wider — enough
+  // to nudge every tab after it along. Hold the bold width at all times: this
+  // copy of the label is never painted and adds no height, it only sets how
+  // wide the button wants to be.
+  &::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 600;
+  }
+
   &:hover:not(:disabled) {
     background: var(--background-neutral-tertiary);
   }
