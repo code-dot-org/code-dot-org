@@ -1,6 +1,6 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import MiniAppPreview from '@codebridge/MiniAppPreview/MiniAppPreview';
-import {getMiniAppTitle, hasPreview} from '@codebridge/utils';
+import {hasPreview} from '@codebridge/utils';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
 import {SeparatorProps} from 'react-resizable-layout';
@@ -90,7 +90,6 @@ const BaseOutput: React.FunctionComponent<OutputProps> = ({
           maximizeMiniApp={maximizeMiniApp}
           minimizeMiniApp={minimizeMiniApp}
           isMaximized={isMaximized}
-          title={getMiniAppTitle(miniApp)}
           style={{opacity: previewOpacity}}
         />
       </div>

@@ -1,9 +1,7 @@
-import {getMiniAppTitle} from '@codebridge/utils';
 import React from 'react';
 
 import MiniAppPreview from '@cdo/apps/codebridge/MiniAppPreview/MiniAppPreview';
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 interface ConsoleAndPreviewShareProps {
   consoleVisible: boolean;
@@ -14,10 +12,6 @@ interface ConsoleAndPreviewShareProps {
 const ConsoleAndPreviewShare: React.FunctionComponent<
   ConsoleAndPreviewShareProps
 > = ({consoleVisible, height, width}) => {
-  const miniApp = useAppSelector(
-    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
-  );
-
   if (consoleVisible) {
     return (
       <HorizontalOutput
@@ -35,7 +29,6 @@ const ConsoleAndPreviewShare: React.FunctionComponent<
       minimizeMiniApp={() => {}}
       isMaximized={false}
       handleScaling={true}
-      title={getMiniAppTitle(miniApp)}
     />
   );
 };
