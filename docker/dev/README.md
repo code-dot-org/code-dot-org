@@ -70,6 +70,10 @@ printf 'services:\n  app:\n    volumes:\n      - %s:%s:z\n' \
 Do not use `docker compose -f compose.yaml`. That command ignores the
 override file.
 
+The mount makes Git report host paths. `dev.env` sets `TURBO_CACHE_DIR` for
+that reason: turbo puts its cache beside the Git common directory, which is
+outside the container mount.
+
 ## Local configuration
 
 `dev.env` supplies the container configuration. You do not need a
