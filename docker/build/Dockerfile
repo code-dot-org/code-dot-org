@@ -1,5 +1,9 @@
 # cdo-build: cdo-base plus the compile toolchain. Not published; it produces
 # the gem layer and is discarded. See README.md.
+#
+# Context is the repo root; the dockerignore admits only the shared node
+# install script:
+#   docker build -f docker/build/Dockerfile -t cdo-build:local .
 
 # Declared before the first FROM so it can be used in one.
 ARG BASE_IMAGE=ghcr.io/code-dot-org/cdo-base:latest
@@ -17,9 +21,7 @@ ARG \
   GID=1000 \
   SRC=/code-dot-org \
   BUNDLE_PATH=/usr/local/bundle \
-  BUNDLE_WITHOUT=development:test \
-  NODE_VERSION=20.20.2 \
-  NODE_KEYS_REF=b28073028e6d6855cfb53bf7fa0137599c01f967
+  BUNDLE_WITHOUT=development:test
 
 USER root
 
@@ -37,32 +39,11 @@ RUN set -eux \
        > /dev/null \
   && rm -rf /var/lib/apt/lists/*
 
-# Node from the official nodejs.org release rather than a third-party repo, with
-# GPG verification, for supply-chain protection. A bump edits NODE_VERSION.
-# gpgv warns "not a detached signature" on a clearsigned file; the
-# Good-signature line and the exit status are the check. See README.md.
-#
-# No yarn version is pinned here: corepack reads it from each project's
-# package.json "packageManager" field at use time, and the smoke test asserts
-# whatever apps/ pins.
-RUN set -eux \
-  && case "$(dpkg --print-architecture)" in \
-       amd64) node_arch=x64 ;; \
-       arm64) node_arch=arm64 ;; \
-       *) echo "unsupported architecture" >&2; exit 1 ;; \
-     esac \
-  && tarball="node-v${NODE_VERSION}-linux-${node_arch}.tar.gz" \
-  && cd /tmp \
-  && curl -fsSLO "https://nodejs.org/dist/v${NODE_VERSION}/${tarball}" \
-  && curl -fsSLO "https://nodejs.org/dist/v${NODE_VERSION}/SHASUMS256.txt.asc" \
-  && curl -fsSLo nodejs-keyring.kbx "https://github.com/nodejs/release-keys/raw/${NODE_KEYS_REF}/gpg/pubring.kbx" \
-  && gpgv --keyring ./nodejs-keyring.kbx --output SHASUMS256.txt SHASUMS256.txt.asc \
-  && grep " ${tarball}\$" SHASUMS256.txt | sha256sum -c - \
-  && tar -xzf "${tarball}" -C /usr/local --strip-components=1 --no-same-owner \
-  && rm -f "${tarball}" SHASUMS256.txt SHASUMS256.txt.asc nodejs-keyring.kbx \
-  && corepack enable \
-  && node --version \
-  && npm --version
+# No yarn version is pinned: corepack reads it from each project's
+# package.json "packageManager" field at use time, and the smoke test
+# asserts whatever apps/ pins.
+COPY docker/scripts/install-node.sh /tmp/install-node.sh
+RUN /tmp/install-node.sh && rm /tmp/install-node.sh
 
 COPY --from=uv /uv /uvx /usr/local/bin/
 

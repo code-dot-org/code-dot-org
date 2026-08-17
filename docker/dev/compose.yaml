@@ -1,0 +1,45 @@
+# See README.md. Run compose from this directory: with `-f`, compose
+# ignores compose.override.yaml, where a worktree puts its gitdir mount.
+
+services:
+  mysql:
+    image: docker.io/library/mysql:8.0
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    # An anonymous volume does not survive `docker compose down`.
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+
+  redis:
+    image: docker.io/library/redis:7
+
+  app:
+    image: ${IMAGE:-cdo-dev:local}
+    init: true
+    command: ["sleep", "infinity"]
+    working_dir: /code-dot-org
+    volumes:
+      - ../..:/code-dot-org:z
+    env_file: dev.env
+    # Loopback only: dev.env has a public secret_key_base, and Rails
+    # accepts an IP address in the Host header in development.
+    #
+    # Keep 3036 the same on both sides. The vite HMR client uses its
+    # configured port, not the port of the page.
+    ports:
+      - "127.0.0.1:3000:3000"   # rails
+      - "127.0.0.1:9000:9000"   # apps webpack dev server (HMR)
+      - "127.0.0.1:3036:3036"   # frontend vite dev server (HMR)
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+volumes:
+  mysql-data:
