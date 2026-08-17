@@ -14,6 +14,7 @@ export * from './getFilesByLanguage';
 export * from './getFolderChildren';
 export * from './getFolderLineage';
 export * from './getFolderPath';
+export * from './getMiniAppTitle';
 export * from './getOpenFiles';
 export * from './getPossibleDestinationFoldersForFile';
 export * from './getPossibleDestinationFoldersForFolder';

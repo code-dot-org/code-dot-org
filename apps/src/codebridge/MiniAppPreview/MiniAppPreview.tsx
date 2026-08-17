@@ -23,6 +23,8 @@ interface MiniAppPreviewProps {
   maximizeMiniApp: () => void;
   minimizeMiniApp: () => void;
   isMaximized: boolean;
+  /** Panel header. Defaults to a generic "Preview". */
+  title?: string;
   style?: React.CSSProperties;
   showMaximizeButton?: boolean;
   handleScaling?: boolean;
@@ -39,6 +41,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   maximizeMiniApp,
   minimizeMiniApp,
   isMaximized,
+  title,
   style,
   showMaximizeButton = true,
   handleScaling,
@@ -82,7 +85,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   return (
     <PanelContainer
       id="codebridge-preview"
-      headerContent={codebridgeI18n.preview()}
+      headerContent={title ?? codebridgeI18n.preview()}
       leftHeaderContent={<ControlButtons />}
       className={moduleStyles.previewContainer}
       headerClassName={moduleStyles.previewHeader}
@@ -104,7 +107,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
           {showMaximizeButton && (
             <MuiIconButton
               variant="text"
-              color="primary"
+              color="tertiary"
               size="extraSmall"
               onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
               aria-label={

@@ -5,14 +5,13 @@ import React from 'react';
 import moduleStyles from './mini-app-empty-state.module.scss';
 
 interface MiniAppEmptyStateProps {
-  /** FontAwesome v6 icon name, shown in a filled circle. */
   iconName: string;
   title: string;
   description: string;
 }
 
 // Covers a mini app preview that has no output yet. Sized for the preview
-// panel, which is far smaller than the editor and file browser that
+// panel, which is smaller than the editor and file browser that
 // CodebridgeEmptyState is built for.
 const MiniAppEmptyState: React.FunctionComponent<MiniAppEmptyStateProps> = ({
   iconName,
@@ -23,8 +22,8 @@ const MiniAppEmptyState: React.FunctionComponent<MiniAppEmptyStateProps> = ({
     <div className={moduleStyles.iconCircle} aria-hidden="true">
       <FontAwesomeV6Icon iconStyle="solid" iconName={iconName} />
     </div>
-    <Typography variant="body2" className={moduleStyles.title}>
-      {title}
+    <Typography variant="body2">
+      <Typography variant="strong">{title}</Typography>
     </Typography>
     <Typography variant="body4">{description}</Typography>
   </div>
