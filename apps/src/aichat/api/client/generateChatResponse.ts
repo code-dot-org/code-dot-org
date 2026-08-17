@@ -81,16 +81,23 @@ export async function generateChatResponse(
     : undefined;
 
   // Generate a response with the model.
-  const {text, files, finishReason, response, output, outputJson, attestation} =
-    await generateText(
-      {
-        model: getModel(modelParameters.selectedModelId),
-        messages,
-        temperature: modelParameters.temperature,
-        ...(outputSchema && {output: outputSchema}),
-      },
-      {phase: 'generation'}
-    );
+  const {
+    text,
+    files,
+    finishReason,
+    response,
+    output,
+    outputJson,
+    responseSignature,
+  } = await generateText(
+    {
+      model: getModel(modelParameters.selectedModelId),
+      messages,
+      temperature: modelParameters.temperature,
+      ...(outputSchema && {output: outputSchema}),
+    },
+    {phase: 'generation'}
+  );
 
   // chatMessageText has to stay a string: rendering, storage and non-schema
   // messages all depend on that, even when a schema was used.
@@ -195,21 +202,21 @@ export async function generateChatResponse(
       if (imageModerationStatus === 'flagged') {
         return {
           response: responseText,
-          attestation,
+          responseSignature,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       }
       if (imageSafe === false) {
         return {
           response: responseText,
-          attestation,
+          responseSignature,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       }
       if (imageModerationStatus === 'error' || imageSafe === undefined) {
         return {
           response: responseText,
-          attestation,
+          responseSignature,
           status: AiRequestExecutionStatus.FAILURE,
         };
       }
@@ -225,14 +232,14 @@ export async function generateChatResponse(
   if (!modelOutputSafe) {
     return {
       response: responseText,
-      attestation,
+      responseSignature,
       status: AiRequestExecutionStatus.MODEL_PROFANITY,
     };
   }
 
   return {
     response: responseText,
-    attestation,
+    responseSignature,
     assets,
     status: AiRequestExecutionStatus.SUCCESS,
   };

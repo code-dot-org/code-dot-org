@@ -55,17 +55,17 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
 /**
  * The SDK result plus the two gateway-only fields that ride alongside it.
  *
- * `attestation` is the worker's detached signature over the response; callers
- * that persist the response must relay it to dashboard so the value can be
- * verified rather than taken on trust. `outputJson` is the worker's own
+ * `responseSignature` is the worker's detached signature over the response;
+ * callers that persist the response must relay it to dashboard so the value can
+ * be verified rather than taken on trust. `outputJson` is the worker's own
  * serialization of `output`, and must be used verbatim rather than
- * re-stringified -- it is the exact byte sequence the attestation covers.
+ * re-stringified -- it is the exact byte sequence the signature covers.
  */
 export type GatewayGenerateTextResult<
   TOOLS extends SDKTools,
   OUTPUT extends SDKOutput
 > = GenerateTextResult<TOOLS, OUTPUT> & {
-  attestation?: string;
+  responseSignature?: string;
   outputJson?: string;
 };
 

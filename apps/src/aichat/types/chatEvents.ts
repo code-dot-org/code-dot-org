@@ -57,6 +57,13 @@ export interface CompletedChatMessage extends BaseChatMessage {
   /** Profanity classification feedback given by the teacher. If undefined, the teacher took no action or undid their action. */
   teacherFeedback?: FeedbackValue;
   /**
+   * The AI gateway worker's detached signature over chatMessageText, when the
+   * response came from the worker. Relayed to log_chat_event, which verifies it
+   * before admitting the message to history, then drops it -- it is never
+   * stored. Absent on the legacy Rails path, which has no worker to sign.
+   */
+  responseSignature?: string;
+  /**
    * Can be any status besides 'unknown', which is reserved only for pending messages.
    * Note that 'error' here means that the chat message call was returned by the server, but the server returned an error
    * (i.e. downstream AI service error).

@@ -1,7 +1,7 @@
 require 'jwt'
 require 'digest'
 
-# Verifies detached response attestations minted by the AI gateway worker.
+# Verifies detached response signatures minted by the AI gateway worker.
 #
 # WHY THIS EXISTS
 #
@@ -11,55 +11,62 @@ require 'digest'
 # the worker directly and reports back. So a modified client can invent what the
 # model "said" and we record it as history a teacher later reads as evidence.
 #
-# The worker signs a detached attestation over a digest of the response, and we
-# verify it here with the worker's public key. The browser stays an untrusted
-# courier: it can drop or corrupt the attestation, but cannot forge one without
-# the worker's private key. This is the return leg of the arrangement already
-# running outbound, where AiGatewayAuthController signs a JWT the browser
-# relays to the worker.
+# The worker signs a detached JWS over a digest of the response, and we verify it
+# here with the worker's public key. The browser stays an untrusted courier: it
+# can drop or corrupt the signature, but cannot forge one without the worker's
+# private key. This is the return leg of the arrangement already running
+# outbound, where AiGatewayAuthController signs a JWT the browser relays to the
+# worker.
 #
 # WHY A DIGEST AND NOT THE MESSAGE
 #
-# The attestation carries digests and binding claims only. The response travels
-# in the clear, unchanged, so it stays independently verifiable: we recompute
-# the digest from what the browser submitted and compare. Nothing about how the
+# The signature carries digests and binding claims only. The response travels in
+# the clear, unchanged, so it stays independently verifiable: we recompute the
+# digest from what the browser submitted and compare. Nothing about how the
 # message is transmitted changes.
-#
-# WHY VERIFY AT INSERT TIME
-#
-# Deliberately checked where the event is written rather than earlier, when the
-# client reports the response to AichatRequestsController#update. Verifying at
-# insert keeps the check self-contained -- signature over the text, binding
-# claims over the context -- so nothing has to be remembered between two
-# requests and no digest needs storing. It also means a client that lies about
-# which AichatRequest an event belongs to gains nothing, since the attestation
-# covers the text and context directly.
 #
 # WHY BINDING MATTERS AS MUCH AS THE SIGNATURE
 #
 # A signature over a bare digest is a bearer token: replayable into another
 # level, another project, or repeatedly. The worker copies user and context from
 # the inbound token it already verified -- never from the request body -- and we
-# require those to match the context the event is being filed under. `jti` is
-# then burned so an attestation is consumable once.
-module AichatResponseAttestation
+# require those to match the context the event is being filed under. `jti` then
+# makes it single-use.
+#
+# TWO CALLERS, TWO QUESTIONS
+#
+# The same signature is checked in two places, which ask different things:
+#
+#   AichatEventsController#log_chat_event asks "may this row be written?". It is
+#   the admission decision, and it is the write a replay would duplicate, so it
+#   calls verify_and_consume and burns the nonce.
+#
+#   AichatRequestsController#update asks "may I store this as the request's
+#   response?". It is not an admission decision -- it guards the value that
+#   log_chat_event compares an *unsigned* (legacy) event against, which must
+#   never be a free-form client write. It calls verify and leaves the nonce
+#   alone, so the later insert still has it to spend.
+#
+# Hence verify and verify_and_consume rather than one method: a signature must
+# survive being examined and be spent exactly once.
+module AichatResponseSignature
   ALGORITHM = 'RS256'.freeze
 
-  # Must outlive the attestation itself, covering decode leeway plus skew
-  # between three clocks: the worker's (which sets exp), ours (which checks it),
-  # and the cache's (which expires the nonce). Erring long is free -- the
-  # attestation's own exp still rejects it -- while erring short reopens replay
-  # in the band where the attestation verifies but its nonce has already gone.
+  # Must outlive the signature itself, covering decode leeway plus skew between
+  # three clocks: the worker's (which sets exp), ours (which checks it), and the
+  # cache's (which expires the nonce). Erring long is free -- the signature's own
+  # exp still rejects it -- while erring short reopens replay in the band where
+  # the signature verifies but its nonce has already gone.
   LEEWAY_SECONDS = 30
   SKEW_MARGIN_SECONDS = 90
-  ATTESTATION_LIFETIME_SECONDS = 600
-  NONCE_TTL_SECONDS = ATTESTATION_LIFETIME_SECONDS + LEEWAY_SECONDS + SKEW_MARGIN_SECONDS
+  SIGNATURE_LIFETIME_SECONDS = 600
+  NONCE_TTL_SECONDS = SIGNATURE_LIFETIME_SECONDS + LEEWAY_SECONDS + SKEW_MARGIN_SECONDS
 
   # Namespaced per consumer, following LtiV1Controller's use of the same store.
-  # Scoping by consumer means burning an attestation for chat history does not
-  # preclude a different consumer from using the same attestation for its own
+  # Scoping by consumer means burning a signature for chat history does not
+  # preclude a different consumer from using the same signature for its own
   # purpose.
-  NONCE_NAMESPACE = 'aichat_attestation/history'.freeze
+  NONCE_NAMESPACE = 'aichat_response_signature/history'.freeze
 
   # Distinguishes "we could not verify" from "verification failed". The former
   # is our own operational problem -- unprovisioned secret, worker not yet
@@ -77,26 +84,25 @@ module AichatResponseAttestation
   end
 
   class << self
-    # Verifies +attestation+ covers +response_text+ and was minted for +user+ in
-    # +context+, then burns its nonce.
+    # Checks that +signature+ covers +response_text+ and was minted for +user+ in
+    # +context+. Does not consume the nonce -- see verify_and_consume.
     #
     # +context+ takes the aichatContext keys as the client sends them
     # (currentLevelId, scriptId, lessonId, channelId).
     #
     # Returns a Result whose status is one of:
-    #   :verified         signature, digest, binding and single-use all hold
-    #   :absent           no attestation supplied (worker predating signing, or
-    #                     a client that simply omitted it)
+    #   :verified         signature, digest and binding all hold
+    #   :absent           no signature supplied (worker predating signing, the
+    #                     legacy Rails path, or a client that omitted it)
     #   :key_unavailable  no usable public key -- our misprovisioning
     #   :invalid          supplied but bad: signature, digest, binding, expiry
-    #   :replayed         valid, but its nonce was already consumed
-    def verify(attestation:, response_text:, user:, context:)
-      return Result.new(status: :absent) if attestation.blank?
+    def verify(signature:, response_text:, user:, context:)
+      return Result.new(status: :absent) if signature.blank?
 
       key = public_key
       return Result.new(status: :key_unavailable, error: 'no public key configured') if key.nil?
 
-      claims = decode(attestation, key)
+      claims = decode(signature, key)
 
       digest_error = verify_digest(claims, response_text)
       return Result.new(status: :invalid, claims: claims, error: digest_error) if digest_error
@@ -104,17 +110,30 @@ module AichatResponseAttestation
       binding_error = verify_binding(claims, user, context)
       return Result.new(status: :invalid, claims: claims, error: binding_error) if binding_error
 
-      # Burned last: only after everything else holds, so a rejected attestation
-      # does not consume its own nonce and lock out a legitimate retry.
-      unless burn_nonce(claims['jti'])
-        return Result.new(status: :replayed, claims: claims, error: 'attestation already used')
-      end
-
       Result.new(status: :verified, claims: claims)
     rescue JWT::DecodeError => exception
       # Signature mismatch, malformed token and expiry all land here. To us they
-      # mean the same thing: the attestation supplied is not usable.
+      # mean the same thing: the signature supplied is not usable.
       Result.new(status: :invalid, error: "#{exception.class}: #{exception.message}")
+    end
+
+    # verify, plus spending the signature's single use.
+    #
+    # Adds one status to verify's set:
+    #   :replayed  signature holds, but its nonce was already consumed
+    #
+    # The nonce is burned only after everything else holds, so a rejected
+    # signature does not consume its own use and lock out a legitimate retry.
+    def verify_and_consume(signature:, response_text:, user:, context:)
+      result = verify(
+        signature: signature,
+        response_text: response_text,
+        user: user,
+        context: context
+      )
+      return result unless result.verified?
+      return result if burn_nonce(result.claims['jti'])
+      Result.new(status: :replayed, claims: result.claims, error: 'response signature already used')
     end
 
     def sha256(value)
@@ -141,8 +160,8 @@ module AichatResponseAttestation
     # simultaneous submissions both observe "unused" and both proceed.
     #
     # Note the store is explicitly not durable (see Cdo::SharedCache) -- an
-    # eviction before the TTL forgets a burned nonce and lets that attestation
-    # be used again. Accepted deliberately: the binding claims pin user, level,
+    # eviction before the TTL forgets a burned nonce and lets that signature be
+    # used again. Accepted deliberately: the binding claims pin user, level,
     # script and channel, and the digest is fixed, so a replay can only
     # re-insert the same genuine response into the same user's history inside
     # the window. Duplication, not forgery.
@@ -159,14 +178,14 @@ module AichatResponseAttestation
       # traffic. Fail open on replay protection only -- signature, digest and
       # binding have already been checked and are unaffected.
       Rails.logger.warn(
-        "AichatResponseAttestation: nonce store unavailable (#{exception.class}: #{exception.message})"
+        "AichatResponseSignature: nonce store unavailable (#{exception.class}: #{exception.message})"
       )
       true
     end
 
-    private def decode(attestation, key)
+    private def decode(signature, key)
       claims, = JWT.decode(
-        attestation,
+        signature,
         key,
         true,
         algorithm: ALGORITHM,
@@ -184,14 +203,14 @@ module AichatResponseAttestation
       expected = claims['response_sha256'].to_s
       actual = sha256(response_text)
       return nil if ActiveSupport::SecurityUtils.secure_compare(expected, actual)
-      'response digest does not match attestation'
+      'response digest does not match signature'
     end
 
-    # The attestation must have been minted for this user and this context, or a
+    # The signature must have been minted for this user and this context, or a
     # valid one could be filed against a different level, script or project.
     private def verify_binding(claims, user, context)
       unless claims['user_id'].to_s == user.id.to_s
-        return 'attestation user_id does not match current user'
+        return 'signature user_id does not match current user'
       end
       {
         'level_id' => context[:currentLevelId],
@@ -199,14 +218,14 @@ module AichatResponseAttestation
         'lesson_id' => context[:lessonId],
       }.each do |claim, actual|
         unless nilable_int(claims[claim]) == nilable_int(actual)
-          return "attestation #{claim} does not match event context"
+          return "signature #{claim} does not match event context"
         end
       end
       # Compared as the opaque channel string the worker was told about, not as
       # a decoded project id: both sides have the same value, so there is no
       # need to translate and no chance of a translation mismatch.
       unless claims['channel_id'].to_s == context[:channelId].to_s
-        return 'attestation channel_id does not match event context'
+        return 'signature channel_id does not match event context'
       end
       nil
     end
@@ -234,7 +253,7 @@ module AichatResponseAttestation
       # Missing secret, absent AWS credentials, malformed PEM. None are the
       # client's fault, so surface as key_unavailable rather than invalid.
       Rails.logger.warn(
-        "AichatResponseAttestation: public key unavailable (#{exception.class}: #{exception.message})"
+        "AichatResponseSignature: public key unavailable (#{exception.class}: #{exception.message})"
       )
       nil
     end

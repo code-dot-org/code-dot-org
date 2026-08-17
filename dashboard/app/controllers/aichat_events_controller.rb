@@ -9,11 +9,11 @@ class AichatEventsController < ApplicationController
 
   # Fields the client must not be able to write into stored history.
   #
-  # `attestation` is transport, not content: it is verified above and has no
-  # business in the transcript. `teacherFeedback` is authorization-bearing --
+  # `responseSignature` is transport, not content: it is verified above and has
+  # no business in the transcript. `teacherFeedback` is authorization-bearing --
   # submit_teacher_feedback guards it with can_submit_feedback?, and accepting it
   # here verbatim would let a student mark their own message as teacher-reviewed.
-  UNPERSISTED_EVENT_KEYS = %w[attestation teacherFeedback].freeze
+  UNPERSISTED_EVENT_KEYS = %w[responseSignature teacherFeedback].freeze
 
   # POST /aichat_events/log_chat_event
   # ----------------------------------
@@ -44,7 +44,7 @@ class AichatEventsController < ApplicationController
     integrity = assistant_event_integrity(event, context)
     if integrity[:error]
       log_integrity_failure(event, context, integrity[:error])
-      if require_response_attestation?
+      if require_response_signature?
         return render status: :unprocessable_entity, json: {error: 'chat event failed integrity check'}
       end
     end
@@ -166,32 +166,35 @@ class AichatEventsController < ApplicationController
   # Two provenances, and note that neither is selected by the client:
   #
   #   gateway  the browser called the worker, so the only evidence is the
-  #            worker's attestation, verified here against chatMessageText.
+  #            worker's signature, verified here against chatMessageText.
   #   legacy   AichatRequestChatCompletionJob ran the completion in-process, so
   #            aichat_requests.response is ours and the event must match it.
   #
   # The legacy comparison is only sound because AichatRequestsController#update
-  # refuses to write `response` without a matching attestation. Without that,
-  # `response` would be client-writable and comparing against it would prove
-  # nothing.
+  # refuses to write `response` without a matching signature. That route is not
+  # restricted to the gateway path -- any user may PUT their own request -- so
+  # without that guard a legacy user could overwrite the job's response with
+  # forged text and then log an event matching it.
   #
   # Returns {error:} with a short reason, or {error: nil, status:} when accepted.
   private def assistant_event_integrity(event, context)
     return {error: nil} unless assistant_message?(event)
     return {error: nil, status: :placeholder} if failed_completion_placeholder?(event)
 
-    result = AichatResponseAttestation.verify(
-      attestation: event[:attestation],
+    # Consumes the signature's single use: this is the write a replay would
+    # duplicate. AichatRequestsController#update deliberately does not.
+    result = AichatResponseSignature.verify_and_consume(
+      signature: event[:responseSignature],
       response_text: event[:chatMessageText],
       user: current_user,
       context: context
     )
     return {error: nil, status: result.status} if result.verified?
 
-    # No attestation is the expected shape for a legacy event, so fall through
-    # to the server-authored comparison rather than treating it as a failure.
-    # An attestation that was supplied and did not check out is never downgraded
-    # this way -- that is an attack signal, not a legacy event.
+    # No signature is the expected shape for a legacy event, so fall through to
+    # the server-authored comparison rather than treating it as a failure. A
+    # signature that was supplied and did not check out is never downgraded this
+    # way -- that is an attack signal, not a legacy event.
     if result.status == :absent
       legacy_error = legacy_response_mismatch(event)
       return {error: nil, status: :server_executed} if legacy_error.nil?
@@ -201,11 +204,11 @@ class AichatEventsController < ApplicationController
     {error: result.error || result.status.to_s, status: result.status}
   end
 
-  # Compares an unattested assistant message against the response our own job
+  # Compares an unsigned assistant message against the response our own job
   # wrote for its request.
   private def legacy_response_mismatch(event)
     request_id = event[:requestId]
-    return 'assistant message without requestId or attestation' if request_id.blank?
+    return 'assistant message without requestId or response signature' if request_id.blank?
 
     request = AichatRequest.find_by(id: request_id)
     return 'requestId not found' if request.nil?
@@ -214,8 +217,8 @@ class AichatEventsController < ApplicationController
     return 'requestId belongs to another user' if request.user_id != current_user.id
     return 'request has no recorded response' if request.response.nil?
 
-    expected = AichatResponseAttestation.sha256(request.response)
-    actual = AichatResponseAttestation.sha256(event[:chatMessageText])
+    expected = AichatResponseSignature.sha256(request.response)
+    actual = AichatResponseSignature.sha256(event[:chatMessageText])
     return nil if ActiveSupport::SecurityUtils.secure_compare(expected, actual)
     'chatMessageText does not match the recorded response'
   end
@@ -226,7 +229,7 @@ class AichatEventsController < ApplicationController
 
   # submitChatContents logs a fixed placeholder when a completion never produced
   # a response at all. It has no requestId because no model output exists to
-  # attest.
+  # sign.
   #
   # Deliberately exact rather than "any errored assistant message": a loose
   # carve-out here would be the bypass for the whole check, since status and
@@ -241,11 +244,11 @@ class AichatEventsController < ApplicationController
     event.except(*UNPERSISTED_EVENT_KEYS)
   end
 
-  private def require_response_attestation?
-    DCDO.get('aichat_require_response_attestation', false)
+  private def require_response_signature?
+    DCDO.get('aichat_require_response_signature', false)
   end
 
-  # Separate signals on purpose. An invalid or replayed attestation is an attack
+  # Separate signals on purpose. An invalid or replayed signature is an attack
   # signal; :key_unavailable is our own misprovisioning and :absent an
   # un-upgraded worker. Folding them together buries the interesting one.
   private def log_integrity_failure(event, context, reason)
@@ -255,7 +258,7 @@ class AichatEventsController < ApplicationController
       requestId: event[:requestId],
       userId: current_user.id,
       clientType: context[:clientType],
-      enforcing: require_response_attestation?,
+      enforcing: require_response_signature?,
     }.to_json.to_s
 )
   end

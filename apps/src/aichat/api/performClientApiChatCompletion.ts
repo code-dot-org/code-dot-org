@@ -54,7 +54,7 @@ export async function performClientApiChatCompletion(
   ];
   metricsReporter.incrementCounter(`${metricPrefix}.Start`, metricDimensions);
 
-  const {response, assets, status, attestation} =
+  const {response, assets, status, responseSignature} =
     await clientApi.generateChatResponse(
       newMessage,
       storedMessages,
@@ -79,7 +79,7 @@ export async function performClientApiChatCompletion(
     {name: 'ExecutionStatus', value: statusName},
   ]);
 
-  await updateAichatRequest(requestId, status, response, attestation);
+  await updateAichatRequest(requestId, status, response, responseSignature);
 
   const updatedUserMessage = {...newMessage, requestId};
 
@@ -89,12 +89,16 @@ export async function performClientApiChatCompletion(
     ];
   }
 
+  // Carried on the message so logChatEvent relays it to log_chat_event, which
+  // is where the response is admitted to chat history. Stripped before the event
+  // is stored -- it is proof of provenance, not part of the transcript.
   const assistantMessageBase = {
     requestId,
     chatMessageText: response,
     role: Role.ASSISTANT,
     timestamp: Date.now(),
     assets,
+    responseSignature,
   };
 
   if (

@@ -79,7 +79,7 @@
       ],
       "additionalProperties": false
     },
-    "attestation": {
+    "responseSignature": {
       "type": "string"
     },
     "outputJson": {

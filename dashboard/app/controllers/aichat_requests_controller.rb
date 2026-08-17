@@ -116,27 +116,33 @@ class AichatRequestsController < ApplicationController
     # Only the user who initiated the request can update it.
     return render status: :forbidden, json: {} if request.user_id != current_user.id
 
-    # `response` is what AichatEventsController compares an unattested (legacy)
-    # assistant message against, so it must never be a free-form client write.
-    # Accept it only when the worker's attestation covers exactly this value;
-    # otherwise record the outcome and drop the text.
+    # This is not the admission decision for chat history -- that is
+    # AichatEventsController#log_chat_event. This guards the value log_chat_event
+    # compares an *unsigned* assistant message against, and this route is open to
+    # any user who owns the request, gateway path or not. Without the guard a
+    # legacy user could overwrite the job's response with forged text here and
+    # then log an event matching it.
     #
-    # This is not the integrity check itself -- that happens at insert time, in
-    # log_chat_event. It is what makes `response` trustworthy enough for the
-    # legacy comparison there to mean anything, and it keeps the analytics
-    # record from carrying client-authored text as though the model produced it.
-    result = AichatResponseAttestation.verify(
-      attestation: params[:attestation],
+    # So `response` is written only when the worker's signature covers exactly
+    # this value. Note that deliberately includes the no-signature case: text the
+    # worker did not sign is client-authored, whether the client omitted the
+    # signature or never had one.
+    #
+    # Verified without consuming the nonce. The signature is spent once, at the
+    # insert in log_chat_event; burning it here would make that insert look like
+    # a replay.
+    result = AichatResponseSignature.verify(
+      signature: params[:responseSignature],
       response_text: params[:response],
       user: current_user,
-      context: attestation_context(request)
+      context: signature_context(request)
     )
-    log_attestation_result(result, request)
+    log_signature_result(result, request)
 
     attributes = update_params.to_h
     unless result.verified?
       # Content-filter and failure paths legitimately report a
-      # client-synthesized string the worker never produced and cannot attest.
+      # client-synthesized string the worker never produced and cannot sign.
       # Keep the status, drop the text.
       attributes.delete('response')
     end
@@ -157,9 +163,9 @@ class AichatRequestsController < ApplicationController
     AichatRequest.new(attributes).tap(&:save!)
   end
 
-  # The attestation binds to the context the inbound token proved; compare it
+  # The signature binds to the context the inbound token proved; compare it
   # against what this request row was created with.
-  private def attestation_context(request)
+  private def signature_context(request)
     {
       currentLevelId: request.level_id,
       scriptId: request.script_id,
@@ -168,13 +174,13 @@ class AichatRequestsController < ApplicationController
     }
   end
 
-  # Separate signals on purpose. :invalid means an attestation was supplied and
-  # did not check out, which is an attack signal. :key_unavailable is our own
+  # Separate signals on purpose. :invalid means a signature was supplied and did
+  # not check out, which is an attack signal. :key_unavailable is our own
   # misprovisioning and :absent is an un-upgraded worker; folding those together
   # would bury the interesting one.
-  private def log_attestation_result(result, request)
+  private def log_signature_result(result, request)
     CDO.log.info({
-      event: 'aichat_response_attestation',
+      event: 'aichat_response_signature',
       status: result.status,
       requestId: request.id,
       userId: current_user.id,
