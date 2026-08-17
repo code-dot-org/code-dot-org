@@ -1,7 +1,8 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {FC} from 'react';
+import {type CSSProperties, type FC} from 'react';
 
-const styles: Record<string, React.CSSProperties> = {
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
+const styles: Record<string, CSSProperties> = {
   container: {
     display: 'flex',
     flexDirection: 'column',
