@@ -53,8 +53,11 @@ describe('imageUrlModeration', () => {
       expect(mockModerateImageUrl).not.toHaveBeenCalled();
     });
 
-    it('does not skip lookalike hosts of images.code.org', async () => {
-      const url = 'https://images.code.org.evil.com/curriculum.png';
+    it.each([
+      'https://images.code.org.evil.com/curriculum.png',
+      // Unescaped `.` in the host regex would also match images-code-org.
+      'https://images-code-org/curriculum.png',
+    ])('does not skip lookalike host %s', async url => {
       const result = await moderateApplabImageUrl(url);
       expect(result).toEqual({status: 'safe', normalizedUrl: url});
       expect(mockModerateImageUrl).toHaveBeenCalledTimes(1);

@@ -13,7 +13,7 @@ const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp(
   'i'
 );
 export const ABSOLUTE_CDO_IMAGES_REGEXP = new RegExp(
-  '^https://images.code.org/',
+  '^https://images\\.code\\.org/',
   'i'
 );
 
