@@ -28,6 +28,19 @@
   },
   "resources": [
     {
+      "name": "2026 AIF Semester 1 Changelog",
+      "url": "https://docs.google.com/document/d/1dhkmFRrxMF8Ach510fq3QyfKCAflJY6eAccVvc-PJZk/",
+      "key": "2026_aif_semester_1_changelog",
+      "properties": {
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "2026_aif_semester_1_changelog"
+      }
+    },
+    {
       "name": "AI Chat FAQ",
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_faq_1",
