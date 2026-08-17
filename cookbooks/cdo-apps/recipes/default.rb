@@ -47,7 +47,13 @@ end
 # Used by lesson plan generator.
 apt_package 'enscript'
 
-include_recipe 'cdo-python'
+# uv is now installed only on daemon instances (see the daemon-gated
+# `cdo-python` include below). This strips the orphaned uv install and any stale
+# project venv off frontend web servers that received uv from the old
+# (all-server) cdo-python include. It is a no-op on daemons, which keep uv and
+# the Python Lab venv (the managed test server runs Python Lab tests there).
+# TODO infra: remove this once all frontend servers have been cleaned up.
+include_recipe 'cdo-apps::remove_python'
 
 # Debian-family packages for building Ruby C extensions
 apt_package %w(
@@ -127,6 +133,11 @@ include_recipe 'cdo-redis' unless node['cdo-secrets']['redis_url']
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']
 
 include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
+
+# Install uv (Python package manager) only on daemon instances, where the
+# app build runs (aws/ci_build) and where Python Lab wheels/tests are handled.
+# Frontend web servers deliberately do not get uv; see cdo-apps::remove_python.
+include_recipe 'cdo-python' if node['cdo-apps']['daemon']
 
 include_recipe 'cdo-apps::rbspy'
 
