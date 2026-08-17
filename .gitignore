@@ -123,4 +123,3 @@ CLAUDE.local.md
 
 # Local machine-specific compose additions (see docker/dev/README.md)
 docker/dev/compose.override.yaml
-docker/dev/apps-dev.env
