@@ -18,8 +18,8 @@ footer.
 
 ## Current usage
 
-This footer already runs in other places. The marketing site uses this
-footer. Some experimental apps use this footer.
+This footer already runs in other places. Some experimental apps use
+this footer.
 
 ## Next steps
 

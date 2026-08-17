@@ -21,10 +21,9 @@ legacy header still runs in `dashboard` and `apps`.
 
 ## Current usage
 
-This header already runs in other places. The marketing site uses this
-header. Some experimental apps use this header. Teams can A/B test
-this header on a Vite route on staging today. A production rollout on
-that route is coming soon.
+This header already runs in other places. Some experimental apps use
+this header. Teams can A/B test this header on a Vite route on
+staging today. A production rollout on that route is coming soon.
 
 ## Next steps
 
