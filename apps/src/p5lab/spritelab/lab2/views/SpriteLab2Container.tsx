@@ -18,7 +18,7 @@ import {
   setupSpriteLab2BlocklyEnvironment,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
-import type {SpriteLab2LevelProperties, SpriteLab2Source} from '../types';
+import type {SpriteLab2LevelProperties, Sources} from '../types';
 
 import SpriteLab2View from './SpriteLab2View';
 
@@ -31,7 +31,7 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
  */
 function getToolboxEditSources(
   levelProperties: SpriteLab2LevelProperties
-): SpriteLab2Source | undefined {
+): Sources | undefined {
   if (!isToolboxMode) {
     return undefined;
   }
@@ -44,7 +44,7 @@ function getToolboxEditSources(
 }
 
 const SpriteLab2Container: React.FunctionComponent<
-  LabProps<SpriteLab2LevelProperties, SpriteLab2Source>
+  LabProps<SpriteLab2LevelProperties, Sources>
 > = ({levelProperties}) => {
   const dispatch = useAppDispatch();
 
@@ -61,7 +61,7 @@ const SpriteLab2Container: React.FunctionComponent<
     []
   );
   const {currentSources, channel, projectManager, loadError, ...restOutputs} =
-    useSources<SpriteLab2Source>({
+    useSources<Sources>({
       levelProperties,
       defaultSources,
       onReinitialize: handleReinitialize,
