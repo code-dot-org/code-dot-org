@@ -32,7 +32,7 @@ import {ENTRY_FILE} from '../constants';
 
 import {createGeneratedFileCache} from './generatedFiles';
 import {projectImageSizes} from './imageSize';
-import type {ReloadReport} from './messages';
+import type {PlacementRequest, ReloadReport} from './messages';
 import {projectAssets} from './projectAssets';
 import {projectFiles, projectImagePaths} from './projectFiles';
 import {projectSignature} from './projectSignature';
@@ -78,7 +78,11 @@ interface WorldRuntimeValue {
    * Introspect the actor templates (map editor): picker thumbnails and inspector
    * property schemas, both keyed by actor type (module path).
    */
-  getActorInfo: (actorPaths: string[], worldPath: string) => Promise<ActorInfo>;
+  getActorInfo: (
+    actorPaths: string[],
+    worldPath: string,
+    placements?: readonly PlacementRequest[],
+  ) => Promise<ActorInfo>;
 }
 
 const WorldRuntimeContext = createContext<WorldRuntimeValue | null>(null);
@@ -375,6 +379,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   const getActorInfo = async (
     actorPaths: string[],
     worldPath: string,
+    placements: readonly PlacementRequest[] = [],
   ): Promise<ActorInfo> => {
     const pair = managers.current;
     // No guard on `actorPaths` being empty, which this used to have and which
@@ -388,7 +393,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     // What is left to skip on is a world to introspect, which is the one thing
     // the manifest cannot do without.
     if (!pair || !worldPath) {
-      return {thumbnails: {}, schemas: {}};
+      return {thumbnails: {}, schemas: {}, placements: {}};
     }
     // Thumbnails are decoration, and generation can now refuse a file outright
     // (a `define world` in an `.actor`). The compile path reports that properly;
@@ -398,14 +403,14 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     try {
       files = generateBlocklyFiles(projectFiles(currentSources.source));
     } catch {
-      return {thumbnails: {}, schemas: {}};
+      return {thumbnails: {}, schemas: {}, placements: {}};
     }
     const entry = '__thumbnails__.js';
     const moduleUrl = await pair.compile.compile(
       {...files, [entry]: thumbnailManifest(actorPaths, worldPath)},
       entry,
     );
-    return pair.preview.thumbnails(moduleUrl);
+    return pair.preview.thumbnails(moduleUrl, placements);
   };
 
   const value: WorldRuntimeValue = {

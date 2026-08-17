@@ -68,7 +68,11 @@ import {
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {projectActorIcons} from './actorIconMeta';
-import {addActorThumbnails, setActorIcons} from './actorThumbnails';
+import {
+  addActorThumbnails,
+  setActorIcons,
+  setPlacementThumbnails,
+} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingRule} from './editingRule';
@@ -78,6 +82,7 @@ import {fileKindOf} from './fileKind';
 import {redrawLiveDropdowns} from './moduleOptions';
 import {setModuleOpener, setModuleOpeningOffered} from './openModule';
 import {parseActorOwnMeta, parseWorldOwnMeta} from './ownProperties';
+import {projectPlacements} from './placementRequests';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {
   projectActorOptions,
@@ -685,10 +690,14 @@ export const BlocklyFileEditor = ({
       .current(
         projectActorOptions(files).map(([, path]) => path),
         worldPath,
+        projectPlacements(files),
       )
       .then(info => {
         if (alive) {
           addActorThumbnails(info.thumbnails);
+          // …and the pictures of particular placements, where a kind's own is
+          // not what a map should draw (specs/UI_ACTORS.md).
+          setPlacementThumbnails(info.placements);
           // The pictures have only just arrived, and the dropdowns that show
           // them were drawn before they did (moduleOptions.redrawLiveDropdowns).
           if (workspaceRef.current) {

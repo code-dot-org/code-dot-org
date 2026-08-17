@@ -253,7 +253,12 @@ describe('the scenario catalogue', () => {
       'crosshair.actor',
       'main.world',
     ]);
-    expect(main).toContain('spin_speed');
+    // Each coin's own copy of the behavior's state, set from the loop's
+    // counters — where it used to be written into nine map placements, which is
+    // a thing no editor in this lab can do (the `create in map` popup places
+    // prefabs and has no inspector).
+    expect(main).toContain('world_set_Spin_SpinSpeedProperty');
+    expect(main).toContain('world_count_with');
 
     const crosshair = files.find(file => file.name === 'crosshair.actor')!;
     expect(crosshair.contents).toContain('world_trait_step');

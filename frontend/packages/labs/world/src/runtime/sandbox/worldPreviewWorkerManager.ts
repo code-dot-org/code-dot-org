@@ -8,6 +8,8 @@
 import type {
   Actor,
   ActorBuilder,
+  Property,
+  RenderState,
   World,
   WorldBuilder,
   WorldSnapshot,
@@ -23,6 +25,7 @@ import {
   ToPreviewMessage,
   type ActorSchema,
   type LoadMessage,
+  type PlacementRequest,
   type PropertySchema,
   type ReloadMode,
   type ToPreview,
@@ -168,7 +171,7 @@ export async function start(): Promise<void> {
     if (data?.type === ToPreviewMessage.LOAD) {
       void load(data);
     } else if (data?.type === ToPreviewMessage.THUMBNAILS) {
-      void sendThumbnails(data.id, data.moduleUrl);
+      void sendThumbnails(data.id, data.moduleUrl, data.placements);
     } else if (data?.type === ToPreviewMessage.STOP) {
       binding?.stop();
       binding = null;
@@ -195,9 +198,56 @@ export async function start(): Promise<void> {
    * initial frame is what the picker shows), and draws each frame. Independent
    * of the running game.
    */
-  async function sendThumbnails(id: string, moduleUrl: string) {
+  /**
+   * Draw one snapshot entry.
+   *
+   * A described picture wins over a frame for the same reason it wins in the
+   * driver: it is the more specific of two things said about one actor, and it
+   * is what the map will draw (specs/DRAWING.md).
+   */
+  const pictureOf = (state: RenderState): Promise<string> =>
+    state.drawing
+      ? drawingThumbnail(state.drawing, assetBase, lastAssets, THUMBNAIL_SIZE)
+      : frameThumbnail(state.frame, assetBase, lastAssets, THUMBNAIL_SIZE);
+
+  /**
+   * Put a placement's overrides onto the actor drawn for it.
+   *
+   * By the same `${ownerId}.${propId}` path a `.map` names them by, resolved
+   * against the actor's OWN traits rather than against the world's rules —
+   * which is the same lookup `WorldBuilder.loadMap` does, narrowed to the one
+   * actor that is about to be drawn. A path the actor has no slot for is
+   * skipped: a placement saved against a rule the project has since dropped is
+   * a picture to draw anyway, not an error to raise.
+   */
+  function applyOverrides(
+    actor: Actor,
+    properties: Record<string, Record<string, unknown>>,
+  ): void {
+    const slots = new Map<string, Property>();
+    for (const trait of actor.traits()) {
+      for (const property of Object.values(trait.properties)) {
+        slots.set(`${property.ownerId}.${property.id}`, property);
+      }
+    }
+    for (const [ownerId, values] of Object.entries(properties)) {
+      for (const [propId, value] of Object.entries(values)) {
+        const property = slots.get(`${ownerId}.${propId}`);
+        if (property) {
+          actor.set(property, value as never);
+        }
+      }
+    }
+  }
+
+  async function sendThumbnails(
+    id: string,
+    moduleUrl: string,
+    requested: readonly PlacementRequest[] = [],
+  ) {
     const thumbnails: Record<string, string> = {};
     const schemas: Record<string, ActorSchema> = {};
+    const placements: Record<string, string> = {};
     try {
       const mod: ThumbnailManifest = await import(/* @vite-ignore */ moduleUrl);
       const manifest = mod.default;
@@ -208,6 +258,7 @@ export async function start(): Promise<void> {
         // keys are the sprite names a placement may reference.
         const uploadedSprites = Object.keys(lastAssets);
         const typeOf = new Map<unknown, string>();
+        const builders = new Map<string, ActorBuilder>();
         for (const {type, builder} of manifest.actors) {
           const actor = builder.instantiate(`thumb:${type}`);
           // Register the KIND before placing the instance: a drawing is a
@@ -217,27 +268,35 @@ export async function start(): Promise<void> {
           world.useActorKind(actor.type, builder);
           world.addActor(actor);
           typeOf.set(actor, type);
+          builders.set(type, builder);
           schemas[type] = describeActor(actor, animationIds, uploadedSprites);
         }
+        // …and one actor per REQUESTED PLACEMENT, wearing that placement's
+        // overrides. A kind's picture is not a placement's — three Labels say
+        // three different things — and the map editors draw placements
+        // (specs/UI_ACTORS.md). Placed in the same throwaway world and read out
+        // of the same snapshot, so nothing here knows it is doing two jobs.
+        const placedFor = new Map<unknown, string>();
+        for (const request of requested) {
+          const builder = builders.get(request.type);
+          if (!builder) {
+            continue; // a kind the manifest does not list; nothing to draw
+          }
+          const actor = builder.instantiate(`place:${request.key}`);
+          world.useActorKind(actor.type, builder);
+          world.addActor(actor);
+          applyOverrides(actor, request.properties);
+          placedFor.set(actor, request.key);
+        }
         for (const state of world.renderSnapshot()) {
+          const placementKey = placedFor.get(state.actor);
+          if (placementKey) {
+            placements[placementKey] = await pictureOf(state);
+            continue;
+          }
           const type = typeOf.get(state.actor);
           if (type) {
-            // A described picture wins here for the same reason it wins in the
-            // driver: it is the more specific of two things said about one
-            // actor, and it is what the map will draw.
-            thumbnails[type] = state.drawing
-              ? await drawingThumbnail(
-                  state.drawing,
-                  assetBase,
-                  lastAssets,
-                  THUMBNAIL_SIZE,
-                )
-              : await frameThumbnail(
-                  state.frame,
-                  assetBase,
-                  lastAssets,
-                  THUMBNAIL_SIZE,
-                );
+            thumbnails[type] = await pictureOf(state);
           }
         }
       }
@@ -250,7 +309,13 @@ export async function start(): Promise<void> {
       });
       return;
     }
-    post({type: FromPreviewMessage.THUMBNAILS, id, thumbnails, schemas});
+    post({
+      type: FromPreviewMessage.THUMBNAILS,
+      id,
+      thumbnails,
+      schemas,
+      placements,
+    });
   }
 
   /**
