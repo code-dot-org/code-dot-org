@@ -37,6 +37,7 @@ import {
   DEFAULT_PROJECT,
   STANDALONE_CONSOLE_PROJECT,
   STANDALONE_NEIGHBORHOOD_PROJECT,
+  STANDALONE_THEATER_PROJECT,
   PYTHONLAB_EDITABLE_FILE_TYPES,
   PYTHONLAB_SUPPORTED_FILE_TYPES,
 } from './constants';
@@ -66,6 +67,7 @@ const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
 const standaloneStartSources: {[key: string]: ProjectSources} = {
   console: STANDALONE_CONSOLE_PROJECT,
   neighborhood: STANDALONE_NEIGHBORHOOD_PROJECT,
+  theater: STANDALONE_THEATER_PROJECT,
 };
 
 const defaultConfig: ConfigType = {
