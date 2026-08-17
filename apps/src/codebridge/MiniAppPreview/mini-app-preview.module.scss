@@ -22,11 +22,3 @@
 .neighborhoodBackground {
   background-color: var(--background-neutral-secondary);
 }
-
-// Covers the mini app, whose output elements stay mounted so the mini app can
-// keep driving them by id.
-.miniAppEmptyState {
-  position: absolute;
-  inset: 0;
-  --codebridge-empty-state-background: var(--background-neutral-secondary);
-}

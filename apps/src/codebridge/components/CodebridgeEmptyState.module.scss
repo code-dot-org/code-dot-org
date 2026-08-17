@@ -9,24 +9,7 @@
   align-items: center;
   justify-content: center;
   cursor: default;
-  // Callers on a non-primary surface set the custom property to match it.
-  background-color: var(
-    --codebridge-empty-state-background,
-    var(--background-neutral-primary)
-  );
-
-  .emptyStateIconCircle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 6rem;
-    height: 6rem;
-    margin-bottom: 1rem;
-    border-radius: 50%;
-    background-color: var(--background-neutral-septenary);
-    color: var(--text-neutral-inverse);
-    font-size: 2.5rem;
-  }
+  background-color: var(--background-neutral-primary);
 
   .emptyStateImage {
     width: auto;

@@ -1,11 +1,11 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
 import React, {useEffect, useState} from 'react';
 
 import Theater from '@cdo/apps/miniApps/theater/Theater';
 import TheaterVisualization from '@cdo/apps/miniApps/theater/TheaterVisualization';
 
+import MiniAppEmptyState from './MiniAppEmptyState';
 import PhotoPrompterButton from './PhotoPrompterButton';
 
 import moduleStyles from './mini-app-preview.module.scss';
@@ -59,9 +59,8 @@ const TheaterPreview: React.FunctionComponent = () => {
       <TheaterVisualization />
       {/* The prompter is centered in the same space, so it takes over. */}
       {!isOutputVisible && !isPrompterOpen && (
-        <CodebridgeEmptyState
-          className={moduleStyles.miniAppEmptyState}
-          iconProps={{iconName: 'camera-movie'}}
+        <MiniAppEmptyState
+          iconName="camera-movie"
           title="Nothing playing yet"
           description="Press Run to see your code in action."
         />
