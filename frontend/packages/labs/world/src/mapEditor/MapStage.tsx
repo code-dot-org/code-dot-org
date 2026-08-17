@@ -26,6 +26,7 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 
+import {placementKey} from '../blockly/mapPlacements';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 
@@ -869,7 +870,14 @@ export const MapStage = ({
     // The skew is a vertical shear about the center (y' = y + tan(skew)·x),
     // inserted after the translate so it matches the Phaser driver's
     // T(pos)·shear·R·S ordering.
-    const drawSprite = (type: string, t: Transform, alpha: number) => {
+    const drawSprite = (
+      type: string,
+      t: Transform,
+      alpha: number,
+      /** This placement's own picture, where it has one — three Labels on one
+       *  map say three different things (specs/UI_ACTORS.md). */
+      placement?: string,
+    ) => {
       ctx.save();
       ctx.globalAlpha = alpha;
       ctx.translate(t.pos.x, t.pos.y);
@@ -878,7 +886,7 @@ export const MapStage = ({
       }
       ctx.rotate(t.rotation * DEG2RAD);
       ctx.scale(t.scale.x, t.scale.y);
-      const image = images[type];
+      const image = (placement && images[placement]) ?? images[type];
       if (image) {
         // At the thumbnail's own aspect, not stretched to a square. A sprite's
         // thumbnail IS square, so nothing changes for one; a drawn actor's is
@@ -920,7 +928,7 @@ export const MapStage = ({
         continue;
       }
       const t = transformOf(actor);
-      drawSprite(actor.type, t, 1);
+      drawSprite(actor.type, t, 1, placementKey(actor.type, actor.properties));
       if (actor.id === selectedId) {
         selectedTransform = t;
       }

@@ -47,7 +47,7 @@ import {
 import {mouseRule} from '../rules/stock/mouse';
 import {writingRule} from '../rules/stock/writing';
 
-import {at, me, number} from './meteors';
+import {me, number} from './meteors';
 
 // A world-local actor is named by its DEFINING BLOCK'S id (blockly/localActors).
 const COIN = 'tapperCoinDef';
@@ -124,18 +124,148 @@ const defineActor = (id: string, name: string, x: number, rows: object[]) => ({
   next: {block: stack(rows)},
 });
 
-/** Where the coins sit: a loose scatter, none of them on a straight line. */
-const COINS: Array<[number, number]> = [
-  [1, 1],
-  [4, 2],
-  [7, 1],
-  [2, 4],
-  [5, 5],
-  [8, 4],
-  [1, 7],
-  [4, 8],
-  [7, 7],
+/**
+ * The furniture: Labels that say the same thing for the whole game.
+ *
+ * One `add actor` each, dressed in its own `do` body — the same shape the score
+ * Label uses two blocks up. NOT `create ⟨Label⟩ in map` with the words written
+ * into each placement: that popup places prefabs and nothing else (its own
+ * header says "no inspector"), so a placement's properties are not a thing a
+ * learner can set there. A fixture that carried them would be showing a file
+ * format rather than a program anybody could have written.
+ */
+const HUD: Array<[string, number, string, number]> = [
+  ['TAPPER', 300, '#ffffff', 14],
+  ['click a coin', 288, '#8890b0', 9],
+  ['the right button too', 276, '#8890b0', 9],
 ];
+
+/** `set ⟨what⟩ of this actor to ⟨value⟩`, for a property the Writing rule has. */
+const dress = (exportName: string, value: object) => ({
+  type: `world_set_Writing_${exportName}`,
+  inputs: {ACTOR: me(), VALUE: value},
+});
+
+/** One line of furniture: place a Label, then say what it is. */
+const hudLabel = ([text, y, color, size]: [
+  string,
+  number,
+  string,
+  number,
+]) => ({
+  type: 'world_add_actor',
+  fields: {ACTOR: 'actors/label'},
+  inputs: {
+    DO: {
+      block: stack([
+        {
+          type: 'world_set_position',
+          inputs: {ACTOR: me(), X: number(160), Y: number(y)},
+        },
+        dress('TextProperty', {
+          shadow: {type: 'text', fields: {TEXT: text}},
+        }),
+        dress('TextColorProperty', {
+          shadow: {type: 'colour_picker', fields: {COLOUR: color}},
+        }),
+        dress('TextSizeProperty', number(size)),
+      ]),
+    },
+  },
+});
+
+/** The counters the coin grid runs on — numbers, so the body can read them. */
+const ROW_VAR = {id: 'tapperRowVar', name: 'row', type: 'Number'};
+const COLUMN_VAR = {id: 'tapperColumnVar', name: 'column', type: 'Number'};
+
+const count = (variable: object) => ({
+  block: {type: 'variables_get_Number', fields: {VAR: variable}},
+});
+
+/** `a ⟨op⟩ b`, for the arithmetic the grid is worked out with. */
+const math = (op: string, a: object, b: object) => ({
+  block: {
+    type: 'math_arithmetic',
+    fields: {OP: op},
+    inputs: {A: a, B: b},
+  },
+});
+
+/** `count with ⟨v⟩ from 0 to 2 by 1 do …` — one side of the grid. */
+const countTo = (variable: object, body: object) => ({
+  type: 'world_count_with',
+  fields: {VAR: variable},
+  inputs: {
+    FROM: number(0),
+    TO: number(2),
+    BY: number(1),
+    DO: {block: body},
+  },
+});
+
+/**
+ * Nine coins, in three rows of three, each spinning a little faster than the
+ * last.
+ *
+ * TWO NESTED COUNTING LOOPS rather than nine placements on a map. The map popup
+ * places prefabs — it has no inspector, so a placement's properties are not
+ * something a learner can set there — and this scenario used to carry a
+ * per-coin `spin speed` written straight into the file, which is a program
+ * nobody could have written in the editor it ships with.
+ *
+ * What the loop buys is the thing the placements were faking: a number the body
+ * can read. `row` and `column` say where the coin goes, and the two together
+ * say how fast it spins — so the nine copies of the behavior's own state are
+ * visibly nine, which is the whole claim (specs/BEHAVIORS.md).
+ */
+const COIN_GRID = countTo(
+  ROW_VAR,
+  countTo(COLUMN_VAR, {
+    type: 'world_add_actor',
+    fields: {ACTOR: local(COIN)},
+    inputs: {
+      DO: {
+        block: stack([
+          {
+            type: 'world_set_position',
+            inputs: {
+              ACTOR: me(),
+              X: math(
+                'ADD',
+                number(48),
+                math('MULTIPLY', count(COLUMN_VAR), number(96)),
+              ),
+              Y: math(
+                'ADD',
+                number(48),
+                math('MULTIPLY', count(ROW_VAR), number(96)),
+              ),
+            },
+          },
+          {
+            type: 'world_set_Spin_SpinSpeedProperty',
+            inputs: {
+              ACTOR: me(),
+              VALUE: math(
+                'ADD',
+                number(40),
+                math(
+                  'MULTIPLY',
+                  math(
+                    'ADD',
+                    math('MULTIPLY', count(ROW_VAR), number(3)),
+                    count(COLUMN_VAR),
+                  ),
+                  number(35),
+                ),
+              ),
+            },
+          },
+        ]),
+      },
+    },
+  }),
+);
 
 /**
  * The crosshair, in a file of its own — and it has to be a file.
@@ -298,62 +428,83 @@ const MAIN_WORLD = JSON.stringify({
                 DEFAULT: '0',
               },
             },
+            // THE GAME, in a layer of its own. Declared first, so it is drawn
+            // first and everything below is in front of it.
             {
-              type: 'world_create_in_map',
-              id: 'tapperPlaceCoins',
-              fields: {
-                ACTOR: local(COIN),
-                PLACEMENTS: COINS.map(([column, row], index) => ({
-                  id: `coin${index + 1}`,
-                  properties: {
-                    positional: {position: {x: at(column), y: at(row)}},
-                    // The behavior's own state, overridden per coin: nine
-                    // actors carrying one behavior, each with its own copy.
-                    Spin: {spin_speed: 40 + index * 35},
-                  },
-                })),
-              },
-            },
-            {
-              type: 'world_add_actor',
-              fields: {ACTOR: local(SCOREBOARD)},
-            },
-            {type: 'world_add_actor', fields: {ACTOR: 'actors/crosshair'}},
-            // Somewhere to show it. A Label is an ordinary actor that elects
-            // one trait and draws one thing (specs/UI_ACTORS.md), so this is
-            // `add actor` and two rows of state.
-            {
-              type: 'world_add_actor',
-              fields: {
-                ACTOR: 'actors/label',
-                NAMED: 'named',
-                VAR: SCORE_VAR,
-              },
-              extraState: {named: true},
+              type: 'world_define_layer',
+              fields: {NAME: 'Game'},
               inputs: {
                 DO: {
                   block: stack([
+                    COIN_GRID,
                     {
-                      type: 'world_set_position',
-                      inputs: {
-                        ACTOR: scoreLabel(),
-                        X: number(48),
-                        Y: number(16),
-                      },
+                      type: 'world_add_actor',
+                      fields: {ACTOR: local(SCOREBOARD)},
                     },
                     {
-                      type: 'world_set_Writing_TextColorProperty',
+                      type: 'world_add_actor',
+                      fields: {ACTOR: 'actors/crosshair'},
+                    },
+                  ]),
+                },
+              },
+            },
+            // THE INTERFACE, which is a layer and nothing else — `fixed to the
+            // screen` ignores the camera altogether, so what is in here is in
+            // screen space (specs/VIEWPORT.md, specs/UI_ACTORS.md). Declared
+            // last, so it is drawn last and sits over the game.
+            {
+              type: 'world_define_layer',
+              fields: {NAME: 'Interface'},
+              inputs: {
+                DO: {
+                  block: stack([
+                    {type: 'world_layer_fixed', fields: {FIXED: 'fixed'}},
+                    // The one that CHANGES, so it is placed by hand and bound
+                    // to a variable the handlers can reach. A `create in map`
+                    // placement has no name a block can say
+                    // (specs/UI_ACTORS.md).
+                    {
+                      type: 'world_add_actor',
+                      fields: {
+                        ACTOR: 'actors/label',
+                        NAMED: 'named',
+                        VAR: SCORE_VAR,
+                      },
+                      extraState: {named: true},
                       inputs: {
-                        ACTOR: scoreLabel(),
-                        VALUE: {
-                          shadow: {
-                            type: 'colour_picker',
-                            fields: {COLOUR: '#ffcc00'},
-                          },
+                        DO: {
+                          block: stack([
+                            {
+                              type: 'world_set_position',
+                              inputs: {
+                                ACTOR: scoreLabel(),
+                                X: number(48),
+                                Y: number(32),
+                              },
+                            },
+                            {
+                              type: 'world_set_Writing_TextColorProperty',
+                              inputs: {
+                                ACTOR: scoreLabel(),
+                                VALUE: {
+                                  shadow: {
+                                    type: 'colour_picker',
+                                    fields: {COLOUR: '#ffcc00'},
+                                  },
+                                },
+                              },
+                            },
+                            scoreText(scoreLabel()),
+                          ]),
                         },
                       },
                     },
-                    scoreText(scoreLabel()),
+                    // …and the ones that do NOT change. Three of one kind,
+                    // each saying something different, which is why a picker
+                    // cannot identify a Label by its picture
+                    // (specs/UI_ACTORS.md).
+                    ...HUD.map(hudLabel),
                   ]),
                 },
               },

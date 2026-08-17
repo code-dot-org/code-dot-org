@@ -132,6 +132,25 @@ export interface ThumbnailsMessage {
   type: typeof ToPreviewMessage.THUMBNAILS;
   id: string;
   moduleUrl: string;
+  /**
+   * Particular placements to draw, beyond one of each kind.
+   *
+   * A kind's picture is not a placement's: a Label placed three times says
+   * three different things, and drawing all of them from the kind is a map
+   * editor showing three identical smudges (specs/UI_ACTORS.md). These travel
+   * as DATA rather than baked into the manifest module, because the module is
+   * compiled and the overrides change on every keystroke in the inspector.
+   */
+  placements?: readonly PlacementRequest[];
+}
+
+/** One placement to draw: what kind it is, and what it overrides. */
+export interface PlacementRequest {
+  /** Content-derived, so two placements that differ in nothing are drawn once
+   *  and share the answer (`mapModel.placementKey`). */
+  key: string;
+  type: string;
+  properties: Record<string, Record<string, unknown>>;
 }
 
 export type ToPreview =
@@ -228,6 +247,8 @@ export interface ThumbnailsReadyMessage {
   id: string;
   thumbnails: Record<string, string>;
   schemas: Record<string, ActorSchema>;
+  /** One per requested placement key, for the editors that draw placements. */
+  placements: Record<string, string>;
 }
 
 export type FromPreview =

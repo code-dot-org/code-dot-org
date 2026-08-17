@@ -15,6 +15,7 @@ import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {placementKey} from '../blockly/mapPlacements';
 import {
   projectActorOptions,
   projectWorldOptions,
@@ -97,6 +98,54 @@ export const MapEditor = ({
       alive = false;
     };
   }, [actorOptions, worldPath, hasCompiled, thumbnails]);
+
+  // …and a picture of each PLACEMENT that overrides anything, because a kind's
+  // picture is not a placement's: three Labels on one map say three different
+  // things, and drawing them all from the kind is three identical smudges
+  // (specs/UI_ACTORS.md). Keyed by content, so a placement that changed nothing
+  // is not re-rendered and two that match are rendered once.
+  const placements = useMemo(
+    () =>
+      map.actors.flatMap(actor => {
+        // No key means the kind's own picture is the answer — nothing
+        // overridden, or nothing but where it stands.
+        const key = placementKey(actor.type, actor.properties);
+        return key
+          ? [{key, type: actor.type, properties: actor.properties ?? {}}]
+          : [];
+      }),
+    [map],
+  );
+  // The effect depends on WHICH pictures are wanted, not on the array — the
+  // array is fresh every time the document is touched, and a dragged actor
+  // touches it on every frame of the drag.
+  const wanted = placements
+    .map(request => request.key)
+    .sort()
+    .join('|');
+  useEffect(() => {
+    // The paths are what put builders in the manifest; without them there is
+    // nothing to instantiate a placement from, and the reply comes back empty.
+    const paths = actorOptions.map(([, path]) => path);
+    if (!hasCompiled || !worldPath || !placements.length) {
+      return;
+    }
+    if (placements.every(request => thumbnails[request.key])) {
+      return;
+    }
+    let alive = true;
+    void infoFn.current(paths, worldPath, placements).then(info => {
+      if (alive) {
+        setThumbnails(prev => ({...prev, ...info.placements}));
+      }
+    });
+    return () => {
+      alive = false;
+    };
+    // `wanted` stands in for `placements`, which is a fresh array every time
+    // the document is touched — and a dragged actor touches it on every frame
+    // of the drag. What the fetch depends on is WHICH pictures are missing.
+  }, [wanted, worldPath, hasCompiled, thumbnails, actorOptions, placements]);
 
   const commit = (next: MapDoc) => {
     setMap(next);

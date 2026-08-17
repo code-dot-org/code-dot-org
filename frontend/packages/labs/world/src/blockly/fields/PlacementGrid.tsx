@@ -16,11 +16,12 @@ import {useMemo} from 'react';
 import type {Blockly} from '@code-dot-org/blockly';
 
 import {TILE_SIZE} from '../../runtime/viewport';
-import {actorThumbnail} from '../actorThumbnails';
+import {actorThumbnail, placementThumbnail} from '../actorThumbnails';
 import {localActorFor} from '../localActors';
 import {
   cellOf,
   placementAt,
+  placementKey,
   toggleCell,
   type Cell,
   type MapPlacement,
@@ -39,6 +40,9 @@ export interface PlacementGridProps {
 interface Occupant {
   type: string;
   mine: boolean;
+  /** What THIS placement is drawn as, where the kind's picture is not it —
+   *  absent when it is (`mapPlacements.placementKey`, specs/UI_ACTORS.md). */
+  key?: string;
 }
 
 /** The actor type a `create actor in map` block places, as a placed one carries it. */
@@ -82,7 +86,11 @@ export const PlacementGrid = ({
       for (const placement of theirs) {
         const at = cellOf(placement, tile);
         if (at) {
-          cells.set(key(at), {type, mine: false});
+          cells.set(key(at), {
+            type,
+            mine: false,
+            key: placementKey(type, placement.properties),
+          });
         }
       }
     }
@@ -90,7 +98,11 @@ export const PlacementGrid = ({
     for (const placement of value) {
       const at = cellOf(placement, tile);
       if (at && ownType) {
-        cells.set(key(at), {type: ownType, mine: true});
+        cells.set(key(at), {
+          type: ownType,
+          mine: true,
+          key: placementKey(ownType, placement.properties),
+        });
       }
     }
     return cells;
@@ -125,7 +137,14 @@ export const PlacementGrid = ({
             columns.map(column => {
               const cell = {column, row};
               const occupant = occupied.get(key(cell));
-              const thumbnail = occupant && actorThumbnail(occupant.type);
+              // This placement's own picture first: three Labels on one map
+              // say three different things, and the kind has only one answer.
+              const thumbnail =
+                occupant &&
+                ((occupant.key
+                  ? placementThumbnail(occupant.key)
+                  : undefined) ??
+                  actorThumbnail(occupant.type));
               const mine = Boolean(placementAt(value, cell, tile));
               return (
                 <button

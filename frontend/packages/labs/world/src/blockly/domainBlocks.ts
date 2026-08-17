@@ -3386,6 +3386,65 @@ registerValueShadows('world_for_each', [
  * it for its body — Blockly variables are workspace-wide, so the two blocks
  * behave alike here too, including sharing a variable if both name the same one.
  */
+/**
+ * `count with ⟨i⟩ from ⟨0⟩ to ⟨8⟩ by ⟨1⟩` — the loop that knows which time it is.
+ *
+ * `for each` walks actors and `repeat` walks nothing: neither hands the body a
+ * number, so "nine coins, each spinning a little faster than the last" could
+ * only be written as nine blocks — or, as it was, as nine placements carrying
+ * values no editor can set (specs/MAPS.md, and the `create in map` popup, which
+ * places prefabs and has no inspector).
+ *
+ * OURS RATHER THAN BLOCKLY'S `controls_for`, for the reason `for each` is ours:
+ * the counter is a NUMBER and this lab's variables are typed, so it binds the
+ * Number flavour and the body reads it with `variables_get_Number` — which fits
+ * a number socket and nothing else. Blockly's would mint an untyped variable
+ * that no getter in this toolbox can read.
+ */
+const worldCountWith = defineBlock({
+  type: 'world_count_with',
+  message0: 'count with %1 from %2 to %3 by %4',
+  args0: [
+    paramFlavour('number').field('VAR'),
+    {type: 'input_value', name: 'FROM', check: 'Number'},
+    {type: 'input_value', name: 'TO', check: 'Number'},
+    {type: 'input_value', name: 'BY', check: 'Number'},
+  ],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [valueShadowExtension],
+  style: 'loop_blocks',
+  tooltip:
+    'Run the body once for each number from the first to the last, counting ' +
+    'by the step. The counter is a number the body can read.',
+  generator: {
+    javascript(block, generator) {
+      const name = generator.getVariableName(block.getFieldValue('VAR'));
+      const from = generator.valueToCode(block, 'FROM', Order.NONE) || '0';
+      const to = generator.valueToCode(block, 'TO', Order.NONE) || '0';
+      const by = generator.valueToCode(block, 'BY', Order.NONE) || '1';
+      const body = generator.statementToCode(block, 'DO');
+      // Counting DOWN is as reasonable as counting up, and a learner who types
+      // a negative step means it — so the test follows the step's sign rather
+      // than assuming the first number is the smaller one.
+      const step = generator.getVariableName(`${block.id}_step`);
+      return (
+        `const ${step} = ${by} || 1;\n` +
+        `for (let ${name} = ${from}; ${step} > 0 ? ${name} <= ${to} : ` +
+        `${name} >= ${to}; ${name} += ${step}) {\n${body}}\n`
+      );
+    },
+  },
+});
+registerValueShadows('world_count_with', [
+  {name: 'FROM', shadow: {type: 'math_number', fields: {NUM: 1}}},
+  {name: 'TO', shadow: {type: 'math_number', fields: {NUM: 10}}},
+  {name: 'BY', shadow: {type: 'math_number', fields: {NUM: 1}}},
+]);
+
 const worldFirstWhere = defineBlock({
   type: 'world_first_where',
   message0: 'first actor %1 in %2 where %3',
@@ -6052,6 +6111,7 @@ export const DOMAIN_BLOCKS = [
   worldBehavior,
   worldTraitStep,
   worldShowAs,
+  worldCountWith,
   // Drawing: the root, the pen, and the five commands (specs/DRAWING.md).
   worldDefineDrawing,
   worldPenFill,
@@ -6321,7 +6381,25 @@ const ENGINE_CATEGORY: ToolboxCategory = {
 
 const TOOLBOX_TAIL: ToolboxCategory[] = [
   // The loop, and the same question asked for one answer instead of a body.
-  {name: 'Loops', blocks: ['world_for_each', 'world_first_where']},
+  {
+    name: 'Loops',
+    blocks: [
+      // The loop, and the same question asked for one answer instead of a body.
+      'world_for_each',
+      'world_first_where',
+      // …and the two that count rather than walk. `repeat` is Blockly's own,
+      // for the reason `random integer` is: a learner may already have met it,
+      // and its generator ships with the JavaScript one. Spelled out as a
+      // flyout item so its socket arrives filled — a core block carries none of
+      // our shadows, and `repeat ⟨⟩ times` generates a loop that never runs.
+      {
+        kind: 'block',
+        type: 'controls_repeat_ext',
+        inputs: {TIMES: {shadow: {type: 'math_number', fields: {NUM: 10}}}},
+      },
+      'world_count_with',
+    ],
+  },
   {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {
     name: 'Logic',

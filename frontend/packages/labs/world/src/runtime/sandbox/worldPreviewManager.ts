@@ -13,6 +13,7 @@ import {
   SandboxRole,
   ToPreviewMessage,
   type ActorSchema,
+  type PlacementRequest,
   type FromPreview,
 } from '../messages';
 import {SANDBOX_SURFACE_DIR} from '../worldConfig';
@@ -21,6 +22,8 @@ import {SANDBOX_SURFACE_DIR} from '../worldConfig';
 export interface ActorInfo {
   thumbnails: Record<string, string>;
   schemas: Record<string, ActorSchema>;
+  /** One per requested placement key — see `PlacementRequest`. */
+  placements: Record<string, string>;
 }
 
 export interface PreviewManagerOptions {
@@ -80,6 +83,7 @@ export class WorldPreviewManager {
         this.pending.get(data.id)?.resolve({
           thumbnails: data.thumbnails,
           schemas: data.schemas,
+          placements: data.placements ?? {},
         });
         this.pending.delete(data.id);
         break;
@@ -127,7 +131,10 @@ export class WorldPreviewManager {
    * thumbnail-manifest module (one sandbox pass). Independent of `load`, so it
    * never disturbs the running game.
    */
-  async thumbnails(moduleUrl: string): Promise<ActorInfo> {
+  async thumbnails(
+    moduleUrl: string,
+    placements: readonly PlacementRequest[] = [],
+  ): Promise<ActorInfo> {
     await this.ready;
     const id = crypto.randomUUID();
     const result = new Promise<ActorInfo>((resolve, reject) => {
@@ -137,7 +144,7 @@ export class WorldPreviewManager {
       });
     });
     this.iframe.contentWindow?.postMessage(
-      {type: ToPreviewMessage.THUMBNAILS, id, moduleUrl},
+      {type: ToPreviewMessage.THUMBNAILS, id, moduleUrl, placements},
       this.sandboxOrigin,
     );
     return result;
