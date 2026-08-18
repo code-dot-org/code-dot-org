@@ -25,7 +25,8 @@ case "$suite" in
     suffix=''
     ;;
   eyes)
-    suite_args=(--grep @visual --project=visual-chromium)
+    # The project already carries grep: /@visual/, so --grep would be redundant.
+    suite_args=(--project=visual-chromium)
     suffix='-eyes'
     ;;
   *)

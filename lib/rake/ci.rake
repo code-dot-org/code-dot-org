@@ -170,8 +170,10 @@ namespace :ci do
     #   worker IP (see connect.rb).
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
 
-    # Runs first, so Cucumber cannot change this result. The ensure block raises
-    # the failure later, after Cucumber also runs. One build then shows both.
+    # Playwright runs before cucumber. The ensure block raises any playwright
+    # failure later, after Cucumber also runs. The drone logs then show both results,
+    # regardless of whether the playwright suite passed or failed.
+
     ENV['TARGET_URL'] = 'http://localhost-studio.code.org:3000'
     playwright_browsers = playwright_browsers_to_run
     playwright_failure =
