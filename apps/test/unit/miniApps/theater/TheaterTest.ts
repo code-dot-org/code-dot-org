@@ -16,6 +16,7 @@ describe('Theater', () => {
   let openPhotoPrompter: jest.Mock;
   let closePhotoPrompter: jest.Mock;
   let onJavabuilderMessage: jest.Mock;
+  let onOutputVisibleChange: jest.Mock;
   let uploadFile: jest.Mock;
 
   beforeEach(() => {
@@ -24,10 +25,11 @@ describe('Theater', () => {
     openPhotoPrompter = jest.fn();
     closePhotoPrompter = jest.fn();
     onJavabuilderMessage = jest.fn();
+    onOutputVisibleChange = jest.fn();
 
     playAudioSpy = jest.fn();
     pauseAudioSpy = jest.fn();
-    imageElement = {};
+    imageElement = {style: {} as CSSStyleDeclaration};
     audioElement = {play: playAudioSpy, pause: pauseAudioSpy};
     uploadFile = jest.fn();
 
@@ -36,7 +38,8 @@ describe('Theater', () => {
       onNewlineMessage,
       openPhotoPrompter,
       closePhotoPrompter,
-      onJavabuilderMessage
+      onJavabuilderMessage,
+      onOutputVisibleChange
     );
     theater.getImgElement = () => imageElement as HTMLImageElement;
     theater.getAudioElement = () => audioElement as HTMLAudioElement;
@@ -141,15 +144,22 @@ describe('Theater', () => {
       value: TheaterSignalType.VISUAL_URL,
       detail: {url: url},
     };
-    imageElement.style = {} as CSSStyleDeclaration;
     theater.handleSignal(audioData);
     theater.handleSignal(visualData);
     (imageElement as HTMLImageElement).onload?.(new Event('load'));
     (audioElement as HTMLAudioElement).oncanplaythrough?.(
       new Event('canplaythrough')
     );
-    expect(imageElement.style.visibility).toBe('visible');
+    expect(imageElement.style?.visibility).toBe('visible');
     expect(playAudioSpy).toHaveBeenCalledTimes(1);
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(true);
+  });
+
+  it.each(['reset', 'onStop'] as const)('hides output on %s', method => {
+    theater[method]();
+
+    expect(imageElement.style?.visibility).toBe('hidden');
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
   });
 
   it('opens photo prompter after receiving a GET_IMAGE signal', () => {

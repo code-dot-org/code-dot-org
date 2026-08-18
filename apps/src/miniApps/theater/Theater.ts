@@ -32,6 +32,7 @@ export default class Theater extends MiniApp {
     messageType: string,
     message: InputMessage
   ) => void;
+  private readonly onOutputVisibleChange?: (isVisible: boolean) => void;
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
@@ -41,7 +42,8 @@ export default class Theater extends MiniApp {
     onNewlineMessage: () => void,
     openPhotoPrompter: (prompt?: string) => void,
     closePhotoPrompter: () => void,
-    onJavabuilderMessage: (messageType: string, message: InputMessage) => void
+    onJavabuilderMessage: (messageType: string, message: InputMessage) => void,
+    onOutputVisibleChange?: (isVisible: boolean) => void
   ) {
     super();
     this.onOutputMessage = onOutputMessage;
@@ -49,6 +51,7 @@ export default class Theater extends MiniApp {
     this.openPhotoPrompter = openPhotoPrompter;
     this.closePhotoPrompter = closePhotoPrompter;
     this.onJavabuilderMessage = onJavabuilderMessage;
+    this.onOutputVisibleChange = onOutputVisibleChange;
     this.loadEventsFinished = 0;
     this.prompterUploadUrl = null;
     this.hasAudio = false;
@@ -91,7 +94,7 @@ export default class Theater extends MiniApp {
     // We expect exactly 2 responses from Javabuilder. One for audio (or the NO_AUDIO signal) and one for video.
     // Wait for both to respond and load before starting playback.
     if (this.loadEventsFinished > 1) {
-      this.getImgElement().style.visibility = 'visible';
+      this.setOutputVisible(true);
       if (this.hasAudio) {
         this.getAudioElement().play();
       }
@@ -100,14 +103,22 @@ export default class Theater extends MiniApp {
 
   reset() {
     this.loadEventsFinished = 0;
-    this.getImgElement().style.visibility = 'hidden';
+    this.setOutputVisible(false);
     this.resetAudioAndVideo();
   }
 
   onStop() {
+    this.setOutputVisible(false);
     this.resetAudioAndVideo();
     // Close the photo prompter if it is still open
     this.closePhotoPrompter();
+  }
+
+  // Legacy Java Lab reads the image's visibility directly; lab2 also needs the
+  // change in React so it can swap in an empty state.
+  private setOutputVisible(isVisible: boolean) {
+    this.getImgElement().style.visibility = isVisible ? 'visible' : 'hidden';
+    this.onOutputVisibleChange?.(isVisible);
   }
 
   resetAudioAndVideo() {
