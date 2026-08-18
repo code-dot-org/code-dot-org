@@ -47,15 +47,11 @@ class LevelSource < ApplicationRecord
   before_save :recompute_md5
 
   def recompute_md5
-    self.md5 = self.class.compute_md5(data)
-  end
-
-  def self.compute_md5(data)
-    Digest::MD5.hexdigest(data)
+    self.md5 = Digest::MD5.hexdigest(data)
   end
 
   def self.find_identical_or_create(level, data)
-    md5 = compute_md5(data)
+    md5 = Digest::MD5.hexdigest(data)
     LevelSource.find_or_create_by(level:, md5:) do |level_source|
       level_source.data = data
     end
