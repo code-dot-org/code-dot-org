@@ -136,18 +136,18 @@ Under `--rspack`, the default is source maps for everything in `src/` and
 nothing else: you step through your own TS/JSX in DevTools, and node_modules
 stays unmapped. That boundary is what keeps it affordable — node_modules
 holds over half the module graph, and mapping it is what makes rspack's
-whole-app `-module` modes unusable here (the dev server exceeds 22GB during
+whole-app `-module` modes unusable here (the dev server exceeds 25GB during
 rebuilds; a one-shot `yarn build --rspack` forced to full maps was OOM-killed
 on a 30GB machine, since a build compiles every dynamic import up front where
 the dev server defers them). Measured against no maps at all, the default
-costs about 2 seconds of startup and 2 seconds per shared-file rebuild, and
-*less* memory, because unmapped modules skip eval wrapping entirely. A
+costs about 2 seconds per shared-file rebuild, and *less* memory, because
+unmapped modules skip eval wrapping entirely. A
 one-shot `yarn build --rspack` pays about 4 seconds and 0.7GB for the same
 maps in its output.
 
 One lever adjusts it, and the active mode is printed at startup:
 `APPS_DEVTOOL=eval yarn start --rspack` turns maps off everywhere, trading
-symbols for the ~2 seconds of startup and per-rebuild time they cost. Known
+symbols for the ~2 seconds per shared-file rebuild they cost. Known
 rough edge either way: unmapped modules (node_modules, or everything under
 `eval`) show numeric internal names in DevTools.
 

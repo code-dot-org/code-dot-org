@@ -33,7 +33,7 @@ module.exports = {
   // Overrides the `devtool` (source map) setting for `yarn start`.
   // Under webpack (default 'eval-cheap-module-source-map'), =eval is the
   // lowest-memory choice.  Under --rspack (default: maps for src/ only),
-  // =eval trades symbols for ~2s of startup and per-rebuild time — the
+  // =eval trades symbols for ~2s per shared-file rebuild — the
   // src/ default already costs less memory.  Empty means unset.
   APPS_DEVTOOL: process.env.APPS_DEVTOOL,
   // If set, skips the parallel ForkTsCheckerWebpackPlugin type check, freeing

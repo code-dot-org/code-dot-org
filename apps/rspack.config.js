@@ -185,13 +185,12 @@ function createRspackConfig({
   // to this checkout's src/ absolutely, so node_modules — over half the
   // module graph, including any package that ships its own src/
   // directory — is never mapped; the whole-app map modes differ from
-  // this default exactly by mapping it, which is what blows past 22GB
+  // this default exactly by mapping it, which is what blows past 25GB
   // (a one-shot build forced to full maps was OOM-killed on a 30GB
   // machine).  Measured against APPS_DEVTOOL=eval on the same box:
   // lower steady and peak memory (unmapped modules skip eval wrapping),
-  // ~2s more startup, ~2s more per shared-file rebuild, and memory
-  // stays level across a 30-edit session instead of growing with each
-  // rebuild.  An explicit APPS_DEVTOOL (e.g. =eval) overrides, and so
+  // ~2s more per shared-file rebuild, and memory stays level under
+  // sustained editing instead of growing with each rebuild.  An explicit APPS_DEVTOOL (e.g. =eval) overrides, and so
   // do the two ambient signals the shared devtool() helper decides on:
   // CI builds stay map-free (webpack policy, deliberate there) and
   // DEBUG_MINIFIED keeps its full-fidelity maps.
