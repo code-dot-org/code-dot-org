@@ -47,6 +47,11 @@ async function loadPyodideAndPackages() {
   pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
   Object.freeze(theaterBridgeModule);
+  Object.defineProperty(theaterBridgeModule.publish, 'constructor', {
+    writable: false,
+    configurable: false,
+    enumerable: false,
+  });
   Object.freeze(theaterBridgeModule.publish);
   pyodide.registerJsModule('_theater_bridge', theaterBridgeModule);
 
