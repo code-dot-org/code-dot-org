@@ -39,32 +39,25 @@ require 'digest'
 # require those to match the context the event is being filed under. `jti` then
 # makes it single-use.
 #
-# THREE CALLERS, AND WHAT SINGLE-USE MEANS
+# TWO QUESTIONS, AND WHAT SINGLE-USE MEANS
 #
-# One signature covers a whole turn, so it is checked three times, each asking a
-# different question and each against a different digest claim:
+# There are only two things to ask of a turn, so `covers` selects which:
 #
-#   log_chat_event, for the student's message: "was this what the model was
-#   asked?" (:history_user_message, prompt_sha256).
+#   :prompt    was this what the model was asked?   (prompt_sha256)
+#   :response  was this what the model answered?    (response_sha256)
 #
-#   log_chat_event, for the model's reply: "was this what the model answered?"
-#   (:history_assistant_message, response_sha256).
+# Single use is per question, not per signature. One signature covers a whole
+# turn and log_chat_event writes two rows from it -- the student's message and
+# the model's reply -- so each needs its own counter or the second write would
+# look like a replay of the first.
 #
-#   AichatRequestsController#update: "may I store this as the request's
-#   response?" (:request_response, response_sha256). This one is not an
-#   admission decision -- it guards the value log_chat_event compares an
-#   *unsigned* legacy event against, which must never be a free-form client
-#   write.
-#
-# Single use is therefore per purpose, not per signature: spending a signature to
-# write chat history does not spend the right to record it as the request's
-# response, and vice versa. Each purpose burns its own key, so the two callers
-# cannot lock each other out and their order does not matter.
-#
-# One shared counter would force one caller to check without spending, and that
-# caller's signature would then be replayable for its own purpose -- an
-# unbounded number of PUTs overwriting `response`, say. Splitting by purpose
-# gives every caller real replay protection instead of leaving one unprotected.
+# `consume` is separate because not every caller is writing a row.
+# AichatRequestsController#update asks the :response question too, but only to
+# decide whether to keep `aichat_requests.response`. That write is idempotent:
+# the same verified text over the same column. There is nothing for a replay to
+# duplicate, and spending the counter there would leave log_chat_event -- the
+# call that actually protects history -- reporting :replayed. So it verifies
+# without consuming.
 module AichatResponseSignature
   ALGORITHM = 'RS256'.freeze
 
@@ -79,19 +72,16 @@ module AichatResponseSignature
   NONCE_TTL_SECONDS = SIGNATURE_LIFETIME_SECONDS + LEEWAY_SECONDS + SKEW_MARGIN_SECONDS
 
   # Namespaced, following LtiV1Controller's use of the same store, then scoped
-  # again by purpose so each caller has its own single-use counter.
+  # again by the half of the turn being checked, so each has its own counter.
   NONCE_NAMESPACE = 'aichat_response_signature'.freeze
 
-  # Every purpose that consumes a signature, mapped to the digest claim it is
-  # checked against. Enumerated rather than free-form: a typo would silently open
-  # a fresh keyspace, which reads as "verified" while granting that caller no
-  # replay protection at all.
-  DIGEST_CLAIM_BY_PURPOSE = {
-    history_user_message: 'prompt_sha256',
-    history_assistant_message: 'response_sha256',
-    request_response: 'response_sha256',
+  # What a signature can be checked against, mapped to the claim holding that
+  # digest. Enumerated rather than free-form: a typo would silently open a fresh
+  # keyspace, which reads as "verified" while protecting nothing.
+  DIGEST_CLAIMS = {
+    prompt: 'prompt_sha256',
+    response: 'response_sha256',
   }.freeze
-  PURPOSES = DIGEST_CLAIM_BY_PURPOSE.keys.freeze
 
   # Distinguishes "we could not verify" from "verification failed". The former
   # is our own operational problem -- unprovisioned secret, worker not yet
@@ -110,11 +100,11 @@ module AichatResponseSignature
 
   class << self
     # Checks that +signature+ covers +text+ and was minted for +user+ in
-    # +context+, then spends its single use for +purpose+.
+    # +context+.
     #
-    # +purpose+ selects which digest claim +text+ is checked against (see
-    # DIGEST_CLAIM_BY_PURPOSE) and which single-use counter is spent, so callers
-    # with different purposes never contend.
+    # +covers+ is :prompt or :response, selecting which half of the turn +text+
+    # is checked against. +consume+ spends that half's single use, and belongs to
+    # whoever writes a row from it.
     #
     # +context+ takes the aichatContext keys as the client sends them
     # (currentLevelId, scriptId, lessonId, channelId).
@@ -125,11 +115,11 @@ module AichatResponseSignature
     #                     legacy Rails path, or a client that omitted it)
     #   :key_unavailable  no usable public key -- our misprovisioning
     #   :invalid          supplied but bad: signature, digest, binding, expiry
-    #   :replayed         valid, but already spent for this purpose
-    def verify(signature:, text:, user:, context:, purpose:)
-      digest_claim = DIGEST_CLAIM_BY_PURPOSE[purpose]
+    #   :replayed         valid, but this half was already spent (consume only)
+    def verify(signature:, text:, user:, context:, covers:, consume:)
+      digest_claim = DIGEST_CLAIMS[covers]
       unless digest_claim
-        raise ArgumentError, "unknown response signature purpose: #{purpose.inspect}"
+        raise ArgumentError, "signature cannot cover #{covers.inspect}"
       end
       return Result.new(status: :absent) if signature.blank?
 
@@ -146,11 +136,11 @@ module AichatResponseSignature
 
       # Burned last: only after everything else holds, so a rejected signature
       # does not consume its own use and lock out a legitimate retry.
-      unless burn_nonce(claims['jti'], purpose)
+      if consume && !burn_nonce(claims['jti'], covers)
         return Result.new(
           status: :replayed,
           claims: claims,
-          error: "response signature already used for #{purpose}"
+          error: "response signature already used for #{covers}"
         )
       end
 
@@ -178,7 +168,7 @@ module AichatResponseSignature
       end
     end
 
-    # Records +jti+ as consumed for +purpose+. Returns false if it was already
+    # Records +jti+ as consumed for +covers+. Returns false if it was already
     # present.
     #
     # `unless_exist` maps to memcached's atomic `add`, which matters
@@ -191,10 +181,10 @@ module AichatResponseSignature
     # script and channel, and the digest is fixed, so a replay can only
     # re-insert the same genuine response into the same user's history inside
     # the window. Duplication, not forgery.
-    private def burn_nonce(jti, purpose)
+    private def burn_nonce(jti, covers)
       return false if jti.blank?
       CDO.shared_cache.write(
-        "#{NONCE_NAMESPACE}/#{purpose}/#{jti}",
+        "#{NONCE_NAMESPACE}/#{covers}/#{jti}",
         Time.now.utc.iso8601,
         expires_in: NONCE_TTL_SECONDS,
         unless_exist: true

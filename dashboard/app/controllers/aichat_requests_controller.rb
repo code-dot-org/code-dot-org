@@ -128,16 +128,17 @@ class AichatRequestsController < ApplicationController
     # worker did not sign is client-authored, whether the client omitted the
     # signature or never had one.
     #
-    # Single use is scoped to :request_response, so spending it here does not
-    # spend the separate use log_chat_event needs to admit the event to history.
-    # A repeat PUT with the same signature reports :replayed and leaves the
-    # already-stored response alone.
+    # Verified without consuming. Writing `response` is idempotent -- the same
+    # verified text over the same column -- so there is nothing for a replay to
+    # duplicate here, and spending the use would leave log_chat_event, which does
+    # write a row, reporting :replayed.
     result = AichatResponseSignature.verify(
       signature: params[:responseSignature],
-      response_text: params[:response],
+      text: params[:response],
       user: current_user,
       context: signature_context(request),
-      purpose: :request_response
+      covers: :response,
+      consume: false
     )
     log_signature_result(result, request)
 

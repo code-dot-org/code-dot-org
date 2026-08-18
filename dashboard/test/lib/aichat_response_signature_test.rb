@@ -45,7 +45,7 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     JWT.encode(claims, @key, 'RS256')
   end
 
-  def verify(signature, text, user: nil, context: nil, pem: :default, purpose: :history_assistant_message)
+  def verify(signature, text, user: nil, context: nil, pem: :default, covers: :response, consume: true)
     key = pem == :default ? @public_pem : pem
     AichatResponseSignature.with_public_key(key) do
       AichatResponseSignature.verify(
@@ -53,7 +53,8 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
         text: text,
         user: user || @user,
         context: context || @context,
-        purpose: purpose
+        covers: covers,
+        consume: consume
       )
     end
   end
@@ -164,38 +165,29 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     assert_equal :invalid, verify(sign(incomplete), text).status
   end
 
-  test 'a signature cannot be reused for the same purpose' do
+  test 'a signature cannot be reused for the same half of the turn' do
     text = 'hello'
     signature = sign(claims_for(text))
 
-    assert_equal :verified, verify(signature, text, purpose: :history_assistant_message).status
-    replay = verify(signature, text, purpose: :history_assistant_message)
+    assert_equal :verified, verify(signature, text, covers: :response).status
+    replay = verify(signature, text, covers: :response)
     assert_equal :replayed, replay.status
     refute replay.verified?
-    assert_match(/already used for history/, replay.error)
+    assert_match(/already used for response/, replay.error)
   end
 
-  test 'single use is per purpose, so the two callers do not contend' do
-    # AichatRequestsController#update spends :request_response to decide whether
-    # to store the response; AichatEventsController#log_chat_event then spends
-    # :history to admit the event. One shared counter would make the second call
-    # -- the one that protects chat history -- report :replayed.
+  test 'verifying without consuming leaves the use for whoever writes the row' do
+    # AichatRequestsController#update checks the response to decide whether to
+    # keep the column; log_chat_event then checks the same half to admit the
+    # event. If the first spent the use, the second -- the one that protects
+    # history -- would report :replayed.
     text = 'hello'
     signature = sign(claims_for(text))
 
-    assert_equal :verified, verify(signature, text, purpose: :request_response).status
-    assert_equal :verified, verify(signature, text, purpose: :history_assistant_message).status
-    # ...and each is still single-use in its own right.
-    assert_equal :replayed, verify(signature, text, purpose: :request_response).status
-    assert_equal :replayed, verify(signature, text, purpose: :history_assistant_message).status
-  end
-
-  test 'order of the two purposes does not matter' do
-    text = 'hello'
-    signature = sign(claims_for(text))
-
-    assert_equal :verified, verify(signature, text, purpose: :history_assistant_message).status
-    assert_equal :verified, verify(signature, text, purpose: :request_response).status
+    assert_equal :verified, verify(signature, text, consume: false).status
+    assert_equal :verified, verify(signature, text, consume: false).status
+    assert_equal :verified, verify(signature, text, consume: true).status
+    assert_equal :replayed, verify(signature, text, consume: true).status
   end
 
   test 'does not spend a use when verification fails' do
@@ -207,22 +199,22 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     assert_equal :verified, verify(signature, 'the real response').status
   end
 
-  test 'rejects an unknown purpose rather than opening a fresh keyspace' do
+  test 'rejects an unknown covers value rather than opening a fresh keyspace' do
     # A typo would otherwise verify happily while giving that caller no replay
     # protection at all.
     text = 'hello'
     signature = sign(claims_for(text))
 
-    assert_raises(ArgumentError) {verify(signature, text, purpose: :typo)}
+    assert_raises(ArgumentError) {verify(signature, text, covers: :typo)}
   end
 
-  test 'nonces are namespaced per consumer and per purpose' do
+  test 'nonces are namespaced per consumer and per half of the turn' do
     # Namespaced so another consumer of the same store cannot collide with us,
-    # then scoped by purpose so our own two callers cannot collide either.
+    # then scoped by half so the turn's two rows cannot collide either.
     assert_equal 'aichat_response_signature', AichatResponseSignature::NONCE_NAMESPACE
     assert_equal(
-      %i[history_user_message history_assistant_message request_response],
-      AichatResponseSignature::PURPOSES
+      {prompt: 'prompt_sha256', response: 'response_sha256'},
+      AichatResponseSignature::DIGEST_CLAIMS
     )
   end
 
@@ -248,7 +240,7 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     prompt = 'how do I center a div?'
     signature = sign(claims_for('use flexbox', {'prompt_sha256' => Digest::SHA256.hexdigest(prompt)}))
 
-    result = verify(signature, prompt, purpose: :history_user_message)
+    result = verify(signature, prompt, covers: :prompt)
 
     assert result.verified?
   end
@@ -258,7 +250,7 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     # thing and record another.
     signature = sign(claims_for('use flexbox', {'prompt_sha256' => Digest::SHA256.hexdigest('how do I center a div?')}))
 
-    result = verify(signature, 'how do I hack the grader?', purpose: :history_user_message)
+    result = verify(signature, 'how do I hack the grader?', covers: :prompt)
 
     refute result.verified?
     assert_equal :invalid, result.status
@@ -270,14 +262,14 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     response = 'use flexbox'
     signature = sign(claims_for(response, {'prompt_sha256' => Digest::SHA256.hexdigest('how do I center a div?')}))
 
-    assert_equal :invalid, verify(signature, response, purpose: :history_user_message).status
+    assert_equal :invalid, verify(signature, response, covers: :prompt).status
   end
 
   test 'does not accept the student message as the response' do
     prompt = 'how do I center a div?'
     signature = sign(claims_for('use flexbox', {'prompt_sha256' => Digest::SHA256.hexdigest(prompt)}))
 
-    assert_equal :invalid, verify(signature, prompt, purpose: :history_assistant_message).status
+    assert_equal :invalid, verify(signature, prompt, covers: :response).status
   end
 
   test 'one signature covers both halves of a turn, spent once each' do
@@ -285,10 +277,10 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     response = 'use flexbox'
     signature = sign(claims_for(response, {'prompt_sha256' => Digest::SHA256.hexdigest(prompt)}))
 
-    assert_equal :verified, verify(signature, prompt, purpose: :history_user_message).status
-    assert_equal :verified, verify(signature, response, purpose: :history_assistant_message).status
-    assert_equal :replayed, verify(signature, prompt, purpose: :history_user_message).status
-    assert_equal :replayed, verify(signature, response, purpose: :history_assistant_message).status
+    assert_equal :verified, verify(signature, prompt, covers: :prompt).status
+    assert_equal :verified, verify(signature, response, covers: :response).status
+    assert_equal :replayed, verify(signature, prompt, covers: :prompt).status
+    assert_equal :replayed, verify(signature, response, covers: :response).status
   end
 
   test 'a worker that signs only the response cannot pass a prompt check' do
@@ -297,7 +289,7 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     claims = claims_for('use flexbox', prompt: 'how do I center a div?')
     claims.delete('prompt_sha256')
 
-    result = verify(sign(claims), 'how do I center a div?', purpose: :history_user_message)
+    result = verify(sign(claims), 'how do I center a div?', covers: :prompt)
 
     refute result.verified?
     assert_equal :invalid, result.status
