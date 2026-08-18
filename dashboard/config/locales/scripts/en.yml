@@ -20684,6 +20684,8 @@ en:
           lessons:
             lesson-1:
               name: python lab stuff
+            lesson-2:
+              name: generating a lesson
           lesson_groups: {}
           name: jamila-sandbox
           title: jamila's stuff go away
