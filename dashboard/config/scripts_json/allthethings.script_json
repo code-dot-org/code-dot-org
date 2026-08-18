@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-14 16:14:33 UTC",
+    "serialized_at": "2026-08-17 17:15:44 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7930,6 +7930,27 @@
     },
     {
       "chapter": 232,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Python Lab Theater"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      },
+      "level_keys": [
+        "Allthethings Python Lab Theater"
+      ]
+    },
+    {
+      "chapter": 233,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7953,7 +7974,7 @@
       ]
     },
     {
-      "chapter": 233,
+      "chapter": 234,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7977,7 +7998,7 @@
       ]
     },
     {
-      "chapter": 234,
+      "chapter": 235,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8001,7 +8022,7 @@
       ]
     },
     {
-      "chapter": 235,
+      "chapter": 236,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8025,7 +8046,7 @@
       ]
     },
     {
-      "chapter": 236,
+      "chapter": 237,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -8049,7 +8070,7 @@
       ]
     },
     {
-      "chapter": 237,
+      "chapter": 238,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -8073,7 +8094,7 @@
       ]
     },
     {
-      "chapter": 238,
+      "chapter": 239,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -8097,7 +8118,7 @@
       ]
     },
     {
-      "chapter": 239,
+      "chapter": 240,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -8121,7 +8142,7 @@
       ]
     },
     {
-      "chapter": 240,
+      "chapter": 241,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -8145,7 +8166,7 @@
       ]
     },
     {
-      "chapter": 241,
+      "chapter": 242,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -8169,7 +8190,7 @@
       ]
     },
     {
-      "chapter": 242,
+      "chapter": 243,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -8193,7 +8214,7 @@
       ]
     },
     {
-      "chapter": 243,
+      "chapter": 244,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8217,7 +8238,7 @@
       ]
     },
     {
-      "chapter": 244,
+      "chapter": 245,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8241,7 +8262,7 @@
       ]
     },
     {
-      "chapter": 245,
+      "chapter": 246,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8265,7 +8286,7 @@
       ]
     },
     {
-      "chapter": 246,
+      "chapter": 247,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8289,7 +8310,7 @@
       ]
     },
     {
-      "chapter": 247,
+      "chapter": 248,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -8313,7 +8334,7 @@
       ]
     },
     {
-      "chapter": 248,
+      "chapter": 249,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -8337,7 +8358,7 @@
       ]
     },
     {
-      "chapter": 249,
+      "chapter": 250,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -8361,7 +8382,7 @@
       ]
     },
     {
-      "chapter": 250,
+      "chapter": 251,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -8385,7 +8406,7 @@
       ]
     },
     {
-      "chapter": 251,
+      "chapter": 252,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -8409,7 +8430,7 @@
       ]
     },
     {
-      "chapter": 252,
+      "chapter": 253,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -11826,6 +11847,18 @@
         "level.key": "Allthethings Python Lab Neighborhood",
         "script_level.level_keys": [
           "Allthethings Python Lab Neighborhood"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Python Lab Theater",
+        "script_level.level_keys": [
+          "Allthethings Python Lab Theater"
         ],
         "lesson.key": "lesson-53",
         "lesson_group.key": "",

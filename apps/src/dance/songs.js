@@ -29,6 +29,12 @@ const DEPRECATED_SONGS = [
   'starships_nickiminaj',
   'sucker_jonasbrothers',
   'calma_pedrocapo',
+  'euphoria_loreen',
+  'ilkadimisenat_kenandogulu',
+  'odetocode_brendandominicpaolini',
+  'sayso_dojacat',
+  'despedidaycierre_vanesamartin',
+  'stay_thekidlaroi',
 ];
 
 /**

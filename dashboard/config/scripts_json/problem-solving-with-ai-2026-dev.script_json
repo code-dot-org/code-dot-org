@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-13 23:37:46 UTC",
+    "serialized_at": "2026-08-17 16:02:32 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -320,9 +320,9 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this project, students work with AI to develop a future prediction and create a presentation that explains their process. They collaborate with AI to generate and refine ideas, evaluate outputs for accuracy and bias, and reflect on how they shaped the final prediction. The project centers on ethical reasoning, student voice, and thoughtful use of multimodal inputs to support transparency and agency in AI collaboration.",
-        "preparation": "- Print copies of the AI Time Capsule Project Planning Guide (one per student)",
-        "student_overview": "In this project, you work with AI to make and refine a prediction about the future. Then, you create a presentation that explains how you used AI, what decisions you made, and how you improved the prediction to make it more realistic, fair, and your own."
+        "overview": "In this project, students invent a fictional product that solves a real problem from their own lives and take it through a launch cycle: Define, Build, Test, and Ship. They document their product in a factual spec sheet, build and test a customer-facing chatbot powered by a system prompt they compose, and launch with a social media post assembled from AI-generated assets they keep, modify, or reject. Students use AI at every stage, but the project centers their judgment — verifying claims against facts, diagnosing chatbot errors, and deciding when AI output isn't good enough to ship.",
+        "preparation": "- Print copies of the Product Launch Project Planning Guide (one per student).\n- Decide how you'll form teams, or plan to let students choose",
+        "student_overview": "In this project, you invent a product that solves a real problem from your own life, then launch it: a factual spec sheet, a customer chatbot you build and test yourself, and a social media post made with AI assets you chose to keep, change, or reject. You'll use AI at every stage, but you're in control."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
@@ -748,6 +748,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8287c67a-990a-4383-b68f-985e9257e825",
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev"
+      }
+    },
+    {
+      "key": "7f8db1ea-031c-4793-b6b1-d58d9d1708b3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f8db1ea-031c-4793-b6b1-d58d9d1708b3",
         "lesson.key": "Lesson 12: AI's Role in Society",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev"
@@ -1564,7 +1576,7 @@
       "key": "11508ca8-0e3c-4226-b7a2-0534a5a9d7a5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students encounter AI-generated misinformation before it has a name. They leave the warm up unable to tell which statement is false, which creates the need for context in the Activity.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the three statements. Direct students to discuss with a partner which statements they think are true and which are not. After a minute or two, facilitate a quick vote by having students hold up fingers for the statement they think is false. Ask two or three students to explain their reasoning.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students encounter AI-generated misinformation before it has a name. They leave the warm up unable to tell which statement is false, which creates the need for retrieval information in the Activity.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the three statements. Direct students to discuss with a partner which statements they think are true and which are not. After a minute or two, facilitate a quick vote by having students hold up fingers for the statement they think is false. Ask two or three students to explain their reasoning.\n",
         "name": "Truth or Lies? ",
         "tips": [
           {
@@ -1593,7 +1605,7 @@
       "key": "efe017b5-5811-4d71-a532-25149773943f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students experience an AI chatbot stating false information confidently, then see how attaching a document changes its answers. This firsthand experience becomes the basis for defining hallucination and context.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1. Students ask the chatbot for information about octopuses and try to determine whether what it tells them is true. They then attach the Octopus Fact Sheet and ask again, using the document to check the statements from the warm up. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** While students work without the document, listen for frustration. The bot answers confidently and does not admit uncertainty, which is intentional. Ask students how they could check whether one of its facts is true. Once students attach the fact sheet, look for students who notice the bot correcting information it gave earlier in the same conversation. Point this out to students who miss it.\n\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students experience an AI chatbot stating false information confidently, then see how attaching a document changes its answers. This firsthand experience becomes the basis for defining hallucination and retrieval information.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1. Students ask the chatbot for information about octopuses and try to determine whether what it tells them is true. They then attach the Octopus Fact Sheet and ask again, using the document to check the statements from the warm up. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** While students work without the document, listen for frustration. The bot answers confidently and does not admit uncertainty, which is intentional. Ask students how they could check whether one of its facts is true. Once students attach the fact sheet, look for students who notice the bot correcting information it gave earlier in the same conversation. Point this out to students who miss it.\n\n",
         "duration": "15",
         "name": "Fact-Check the Bot",
         "progression_name": "Fact-Check the Bot",
@@ -1627,7 +1639,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students have not been given the words **hallucination** or **context** yet. Let them describe what happened in their own language. If a student uses one of the terms already, acknowledge it and tell the class you define both words in a moment.\n"
+            "markdown": "Students have not been given the words **hallucination** or **retrieval information** yet. Let them describe what happened in their own language. If a student uses one of the terms already, acknowledge it and tell the class you define both words in a moment.\n"
           }
         ]
       },
@@ -1679,11 +1691,11 @@
       "key": "b5a2fa34-4d53-4248-8ece-ae72471f4cd7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n Define context. Connect this back to when students attached the Octopus Fact Sheet, which gave the chatbot context. The bot stopped guessing about octopuses and started using the document instead. That's why it's answers changed.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define retrieval information. Connect this back to when students attached the Octopus Fact Sheet, which gave the chatbot additional information. The bot stopped guessing about octopuses and started using the document instead. That's why it's answers changed.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students already used the word context in the level instructions before they had a definition for it. Point that out — they gave the bot context before they had a name for it. \n\nIn the next activity, students go from attaching context to deciding what context a bot gets. That shift is the heart of the rest of the lesson.\n"
+            "markdown": "Students already used the word retrieval in the level instructions before they had a definition for it. Point that out — they gave the bot retrieval information before they had a name for it. \n\nIn the next activity, students go from attaching retrieval information to deciding what retrieval information a bot gets. That shift is the heart of the rest of the lesson.\n"
           }
         ]
       },
@@ -1713,11 +1725,11 @@
       "key": "79305b24-7a88-4405-ab1d-9ee6b803d441",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n Click through the animated slide to explain that adding context improves AI responses but does not guarantee they are correct. AI can only use the information it's given, so if that information is wrong or out of date, the response is too — and AI gives no signal that anything is wrong.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n Click through the animated slide to explain that adding retrieval information improves AI responses but does not guarantee they are correct. AI can only use the information it's given, so if that information is wrong or out of date, the response is too — and AI gives no signal that anything is wrong.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the idea students test in the next activity. Their bot has context, but some of it is bad, and the bot cannot tell the difference. Students have to make that judgment themselves.\n"
+            "markdown": "This is the idea students test in the next activity. Their bot has retrieval information, but some of it is bad, and the bot cannot tell the difference. Students have to make that judgment themselves.\n"
           }
         ]
       },
@@ -1730,14 +1742,14 @@
       "key": "dab2da31-7ae3-4f73-8b1d-83fe239e51cb",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** \n Students decide what information a chatbot gets, discovering that a bot with bad context is unreliable even though it has context. This shifts them from using context to judging it.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**\n Direct students to Lesson 4, Levels 2-3. \n* **Level 2:** Students choose one of four bots to fix, ask it questions, and after finding that its answers are unreliable, remove or edit the Retrieval Context to improve their bot.\n* **Level 3:** Students answer check for understanding questions. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** \n Look for students who never open the Retrieval Contexts panel. Chat alone reveals only the conflicting information — the vague, off-topic, and undated cards are found by reading. Also watch for students who delete every card that looks suspicious. One card is half accurate and half outdated, and deleting it loses information the bot needs. Ask those students whether they lost anything they needed. Two cards are genuine judgment calls: one is accurate but not related to this bot's purpose, and one has no date, so there's no way to know whether it's current. Ask students to explain their reasoning rather than looking for a right answer.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** \n Students decide what information a chatbot gets, discovering that a bot with bad retrieval information is unreliable even though it has additional information. This shifts them from using retrieval information to judging it.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**\n Direct students to Lesson 3, Levels 2-3. \n* **Level 2:** Students choose one of four bots to fix, ask it questions, and after finding that its answers are unreliable, remove or edit the retrieval information to improve their bot.\n* **Level 3:** Students answer check for understanding questions. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** \n Look for students who never open the Retrieval panel. Chat alone reveals only the conflicting information — the vague, off-topic, and undated cards are found by reading. Also watch for students who delete every card that looks suspicious. One card is half accurate and half outdated, and deleting it loses information the bot needs. Ask those students whether they lost anything they needed. Two cards are genuine judgment calls: one is accurate but not related to this bot's purpose, and one has no date, so there's no way to know whether it's current. Ask students to explain their reasoning rather than looking for a right answer.\n",
         "duration": "20",
         "name": "Make a Trustworthy Bot",
         "progression_name": "Make a Trustworthy Bot",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Everything students need is already in the Retrieval Contexts panel. If you see students searching online during this part, redirect them — the optional challenge at the end of the level is where searching belongs.\n\nStudents who pick the dog care bot or the kitchen bot encounter context cards with unsafe advice, such as chocolate being safe for dogs or chicken being safe when only the outside is browned. State the correct information out loud during the discussion so students leave with accurate \nunderstanding.\n"
+            "markdown": "Everything students need is already in the Retrieval panel. If you see students searching online during this part, redirect them — the optional challenge at the end of the level is where searching belongs.\n\nStudents who pick the dog care bot or the kitchen bot encounter retrieval cards with unsafe advice, such as chocolate being safe for dogs or chicken being safe when only the outside is browned. State the correct information out loud during the discussion so students leave with accurate understanding.\n"
           },
           {
             "type": "assessmentOpportunity",
@@ -1771,12 +1783,12 @@
       "key": "44493307-958b-474e-b7bf-40554e1446cd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to answer both halves using a specific example from the lesson — the octopus fact they couldn't verify, the moment the bot corrected itself after they attached the fact sheet, or a context card they removed from their bot. Then invite a few students to share out with the class. Listen for students naming prediction as the reason AI makes things up, and context as the way to reduce it — while recognizing that context doesn't guarantee a correct answer.\n\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to answer both halves using a specific example from the lesson — the octopus fact they couldn't verify, the moment the bot corrected itself after they attached the fact sheet, or a retrieval card they removed from their bot. Then invite a few students to share out with the class. Listen for students naming prediction as the reason AI makes things up, and retrieval information as the way to reduce it — while recognizing that retrieval information doesn't guarantee a correct answer.\n\n",
         "name": "Question of the Day Reflection",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time is short, skip the partner talk and collect two or three quick examples from the whole class instead — one about why AI made things up, one about how context helped, and one about why they'd still check. This makes sure all three threads get named before students leave.\n"
+            "markdown": "If time is short, skip the partner talk and collect two or three quick examples from the whole class instead — one about why AI made things up, one about how retrieval information helped, and one about why they'd still check. This makes sure all three threads get named before students leave.\n"
           }
         ]
       },
@@ -3551,6 +3563,17 @@
       }
     },
     {
+      "key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528",
+      "position": 1,
+      "properties": {
+        "progression_name": "New Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528",
+        "lesson_activity.key": "7f8db1ea-031c-4793-b6b1-d58d9d1708b3"
+      }
+    },
+    {
       "key": "199a86e9-117f-4660-87d5-99a49ea2719a",
       "position": 1,
       "properties": {
@@ -4281,7 +4304,16 @@
       "key": "1465d725-87f6-4b51-8e59-c75117eda681",
       "position": 1,
       "properties": {
-        "progression_name": "Define & Build"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\nWhat's a product you use for your hobby or interest that clearly wasn't designed for someone like you?\nWhat would the maker need to know about you to fix it?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students surface the gap between generic products and specific users — the exact gap their own product will fill. Listen for answers that name concrete frustrations (\"the sizing runs huge,\" \"the app assumes you already know the rules\") rather than vague dislikes. Use these to point forward: today students will define a product for an audience they actually know, with the specificity of \"freshman wide receivers on our team,\" not \"athletes.\"\n",
+        "duration": "5",
+        "name": "Warm-Up",
+        "progression_name": "Define & Build",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle, prompt them to consider what evidence would be needed to make a prediction believable. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1465d725-87f6-4b51-8e59-c75117eda681",
@@ -4289,10 +4321,187 @@
       }
     },
     {
-      "key": "d3ff637f-1ac1-44ca-a19f-734e597746a7",
+      "key": "d5f3c120-6595-42b8-a109-b11c547a7dce",
+      "position": 2,
+      "properties": {
+        "description": "####Project Overview & Preparation  (10 min)\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce students to the Product Launch project, its goals, and expected deliverables. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Organize students into their project teams using whatever team size works for your class. Explain that everyone shares one product, one spec sheet, and one chatbot — but each team member will own a different launch job on Day 3, so every member produces individual work the team depends on.\n",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Teams where members know the same hobby or interest will define faster, but mixed-interest teams often write sharper spec sheets because they're forced to explain the basics. Either works — just make sure the chosen topic is something at least one member knows personally, since the rubric rewards a \"specific, personally-known problem.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d5f3c120-6595-42b8-a109-b11c547a7dce",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "452bb1c2-3d06-4ccd-b561-39d8045b0a27",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce students to the Product Launch project, its goals, and expected deliverables. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Product Launch Project Planning Guide. Explain that the guide walks them through the whole project, but their actual work will live in Sketch Lab and AI Chat levels — the guide is their map, not their deliverable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this project, students will be working with AI to invent a fictional product that solves a real problem from their own life, define exactly who it's for, and then launch it— with a factual spec sheet, a chatbot for potential customers that students build and test themselves, and a social media post that introduces their product to the world.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "452bb1c2-3d06-4ccd-b561-39d8045b0a27",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "5240fff5-2363-4e76-83ac-7b52efe9f8ac",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to review the assessment criteria rubric and final deliverables on the last pages of the Project Planning Guide. Explain the design challenge framing of \"How can we use AI as a creative partner to in order to launch a useful or novel product\". Students should complete the Rubric Reflection section in the planning guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to think about how AI can be a useful tool for co-creation, but one that requires human input and judgment to function effectively. Students often skim rubrics and anchor on the final product row. Point them to the Chatbot Creation row specifically — the requirement to document revisions in response to testing is the part teams most often miss."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5240fff5-2363-4e76-83ac-7b52efe9f8ac",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "d26388d5-bd2c-42f7-b733-582722d4695a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* _Which part of the rubric do you feel most confident about?_\n* _What questions do you have about what is expected?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify where the rubric asks for evidence of process — testing, revising, keeping/modifying/rejecting AI output — not just finished artifacts. Listen for confusion about \"honest limits (what the product does not do)\"; naming that expectation now sets up today's spec sheet work. Answer expectation questions directly; this is the moment to calibrate the class before planning begins.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d26388d5-bd2c-42f7-b733-582722d4695a",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "c47e084b-cd5b-4f5a-b523-512b0ec2cf51",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the four stages briefly. Define the problem and audience, Build the product's official record and its customer-facing chatbot, Test the chatbot against real questions, and Ship it to the world with a launch post. Emphasize that students use AI at every stage, but they are the decision-makers. The rubric rewards shaping and rejecting AI output, not just accepting it."
+      },
+      "seeding_key": {
+        "activity_section.key": "c47e084b-cd5b-4f5a-b523-512b0ec2cf51",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "3bad6226-b96c-456a-a10b-d49f66ca706a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review today's agenda. Students move through the Define section of the canvas, then start the Build section — the spec sheet and a first draft of the system prompt. Explain the through-line: everything the chatbot will be able to say on Day 2 comes from what gets written on the spec sheet today. A vague spec sheet produces a chatbot that makes things up.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Today is deliberately front-loaded. Teams don't need a polished system prompt by the bell — a complete spec sheet plus a rough TaCoFoRT draft is a successful Day 1. The prompt gets built into a working chatbot and revised on Day 2."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3bad6226-b96c-456a-a10b-d49f66ca706a",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "2f7e6233-4116-492e-9032-786dc03bcd54",
+      "position": 8,
+      "properties": {
+        "description": "####Define & Build  (25 min)\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students translate a personally-known problem into a factual product spec. The goal is concrete, honest documentation for a specific audience.\n\n**Say**: Now that you understand the project's structure, let's begin by heading to Sketch Lab and taking the first steps towards launching an amazing product.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 10, Level 1. In the Define section, teams pick a topic they know personally, name three issues, choose one for their product to solve, and identify a specific audience. In the Build section, they complete the Product Spec Sheet — choosing four question categories plus additional \"What it is\" and \"What it is NOT\" requirements. Teams then draft all five TaCoFoRT components which will be used to create their Product Chatbot on Day 2.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As teams work, push for specificity and factual claims. Ask:\n* \"Who exactly is this for? Can you name real people who'd use it?\"\n* \"Is that spec sheet entry a fact about the product, or a hope for it?\"\n* \"What did you write for 'What it is NOT'? What will your chatbot need to decline?\"\n* \"Which spec sheet category was hardest to answer with a concrete detail?\"\n* \"How does your Retrieval component point the chatbot back at your spec sheet?\"\n\nBefore teams move on, confirm the spec sheet and product definition describe the same product — inconsistency here is the top source of chatbot errors on Day 2.\n",
+        "progression_name": "Define & Build"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f7e6233-4116-492e-9032-786dc03bcd54",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "312bf2d8-ee52-435b-bd62-38999eec29bf",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Level 2 to complete the Day One Reflection. Students write one customer question their chatbot should decline because of what their product does not do, and identify the spec sheet category that was hardest to answer with facts — including what they changed about the product to make it answerable.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for decline questions that are genuinely plausible customer questions, not generic ones. Ask: \"Would a real customer actually ask that?\"\n",
+        "duration": "5",
+        "name": "Wrap-Up",
+        "progression_name": "Day One Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Optionally, you can have students record their answers to these questions on a 3x5 card to be handed in as an Exit Ticket as they leave the class. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "312bf2d8-ee52-435b-bd62-38999eec29bf",
+        "lesson_activity.key": "c267aec3-8c0f-48e4-9e0b-e2e7c8c64cbb"
+      }
+    },
+    {
+      "key": "d8bac9d6-e59b-4c1b-aeab-f15ac9dc5299",
       "position": 1,
       "properties": {
-        "progression_name": "Build & Test"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Think of a time a person or a chatbot gave you a confident answer that turned out to be wrong. How did you find out?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect confident-but-wrong answers to the \"What it is NOT\" entries they wrote yesterday. Listen for the insight that a good chatbot's value comes as much from what it declines as from what it answers. This frames today's test plan directly: one question the chatbot should get correct, one it can't answer from the spec sheet, and one it should refuse.\n",
+        "duration": "5",
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8bac9d6-e59b-4c1b-aeab-f15ac9dc5299",
+        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
+      }
+    },
+    {
+      "key": "b175ca0d-26c6-4323-ad7e-09fb6a2b0cfd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review today's agenda. Students build the chatbot from yesterday's drafted system prompt, then run it through a deliberate test-and-refine cycle. Explain that testing here isn't a formality — the rubric requires documented revisions that respond to specific problems observed in testing, so teams should expect (and want) their first version to fail somewhere.",
+        "duration": "35",
+        "name": "Activity ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Teams whose system prompt draft is unfinished should timebox it: get a workable version into AI Chat within the first 10 minutes. A running chatbot they can test beats a perfect prompt they can't. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b175ca0d-26c6-4323-ad7e-09fb6a2b0cfd",
+        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
+      }
+    },
+    {
+      "key": "4e408ca6-7b9b-4241-affb-d40f0772b1d6",
+      "position": 3,
+      "properties": {
+        "description": "####Build & Test (35 min)\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build, test against realistic questions, diagnose which TaCoFoRT component permitted an error, revise, and re-test. The goal is a documented Problem → Fix cycle grounded in the chatbot's output.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 3. \n* In Level 3a (AI Chat), teams compose their system prompt and create their Product Chatbot. \n* In Level 3b (Sketch Lab), they draft three test questions — one the chatbot should answer fully and accurately, one about a detail the spec sheet does not cover, and one the chatbot should decline — then record what the chatbot actually said, word for word, and document at least one Problem → Refine cycle \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As teams test, check that they're recording real outputs and tracing errors to a component. Ask:\n* \"What exactly did the chatbot say — did you copy its actual words into the canvas?\"\n* \"Did it invent an answer to your question two, or admit the spec sheet doesn't cover it?\"\n* \"Did it decline question three, or try to be helpful anyway?\"\n* \"Which TaCoFoRT component let that error through — Task, Context, Format, Retrieval, or Tone?\"\n* \"After your fix, did you re-ask the same question to confirm the revision worked?\"\n\nBefore teams move on, confirm they've completed at least one full test → revise → re-test cycle with the problem and fix written down.\n",
+        "progression_name": "Build & Test",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will want to fix errors by rewriting the whole prompt. Slow that down: the diagnostic skill is naming which component permitted the error and revising that one. If the chatbot hallucinated a price, the conversation is about Retrieval, not Tone."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4e408ca6-7b9b-4241-affb-d40f0772b1d6",
+        "lesson_activity.key": "b4cb2712-b371-4508-98da-1bdc7206bde5"
+      }
+    },
+    {
+      "key": "d3ff637f-1ac1-44ca-a19f-734e597746a7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete the Day Two Reflection. Students quote one answer their chatbot invented and name the system prompt component that permitted the error and report what happened when they asked the question their chatbot was supposed to decline.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that quotes are verbatim from the canvas, not paraphrased from memory. Ask:\n* \"Is that the chatbot's actual wording? Pull it from your Test section.\"\n* \"You changed Retrieval — what specifically did the new version say that the old one didn't?\"\n",
+        "duration": "5",
+        "name": "Wrap-Up",
+        "progression_name": "Day Two Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, invite one or two teams to share their best Problem → Fix. Hearing that other teams' chatbots also failed — and got better — normalizes the revision cycle before tomorrow's launch day. If a team's chatbot never invented anything, that's worth probing rather than celebrating — usually it means their test questions were too easy. Encourage them to ask a harder question two before writing \"no errors.\""
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d3ff637f-1ac1-44ca-a19f-734e597746a7",
@@ -4300,13 +4509,88 @@
       }
     },
     {
-      "key": "0f78c031-294a-4c8c-8661-c0e5d992414f",
+      "key": "5aebeb17-a3d0-444b-9035-b3d7e791a8e9",
       "position": 1,
       "properties": {
-        "progression_name": "Ship"
+        "description": "There is no designated warm-up on this final day to maximize project completion time.",
+        "duration": "0",
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "5aebeb17-a3d0-444b-9035-b3d7e791a8e9",
+        "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
+      }
+    },
+    {
+      "key": "7dabe5d7-c432-4520-849b-3c8c64126181",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review today's agenda. Teams divide launch work by choosing jobs, produce assets with AI assistance, and assemble everything into the final social media post. Name the two mandatory jobs — Art Director and Copywriter — and note that Sound Designer, Commercial Director, and Community Manager are optional third picks. Emphasize the standard that carries the whole day: every claim in every asset must be a fact the spec sheet can back up. The post launches the product they actually defined, not the one they wish they'd built.",
+        "duration": "40",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Keep / Modify / Reject log is where the rubric's AI Content Creation evidence lives. Remind teams that \"Reject, because it promised a feature we don't have\" is exactly the kind of entry that scores — a first-draft AI asset pasted straight in is what the rubric calls out as Limited."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7dabe5d7-c432-4520-849b-3c8c64126181",
+        "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
+      }
+    },
+    {
+      "key": "2cb97a34-d576-4592-967e-c1cae51edfe5",
+      "position": 3,
+      "properties": {
+        "description": "####Ship (40 min)\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students direct AI as a creative production tool. Each job that students can choose generates assets with AI assistance, while students log what they kept, modified, or rejected and why. \n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 5. Each team member takes a job in the Ship section of the canvas: Art Director generates and checks the main image, Copywriter drafts the name, slogan, and caption, and the team's third job produces a jingle, a commercial script, or predicted comments with a pinned FAQ reply. Every job logs its AI output in the Keep / Modify / Reject table, and the team assembles final assets into the social media post template.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As teams create assets, keep pulling them back to the spec sheet. Ask:\n* \"Does your image match what the spec sheet says — number of parts, colors, appearance?\"\n* \"Read me your caption. Which spec sheet entry backs up each claim?\"\n* \"What did AI give you that you modified or rejected — and what did you write in the log?\"\n* \"Community Manager: did your chatbot handle the questions you predicted, or does the spec sheet need a fix?\"\n* \"Does anything in this post oversell what the product actually does?\"\n\nBefore teams finalize, confirm the post's claims survive a check against the spec sheet — this is the rubric's bar for the Extensive column.\n",
+        "progression_name": "Ship",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Time is the constraint today. Have teams get the mandatory jobs (image + copy) to done before polishing the optional third asset. A coherent post with two strong assets beats three half-finished ones."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2cb97a34-d576-4592-967e-c1cae51edfe5",
+        "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
+      }
+    },
+    {
+      "key": "0f78c031-294a-4c8c-8661-c0e5d992414f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to complete the final project reflection. Students describe one moment where their judgment overrode AI's output, and one place where AI genuinely made the launch better. Encourage them to pull both answers from their Keep / Modify / Reject log.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "progression_name": "Day Three Reflection",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "These two questions are the meta-evidence for the whole project: question 1 maps to the rubric's \"modified or rejected AI output and explains why,\" and question 2 shows students can credit AI accurately without overclaiming. Read them alongside the Keep / Modify / Reject log — strong answers cite a specific asset and a specific reason. Together with the canvas (spec sheet, test cycles, final post), this completes your evidence across all four rubric rows."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0f78c031-294a-4c8c-8661-c0e5d992414f",
+        "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
+      }
+    },
+    {
+      "key": "f95848b2-cb2f-406b-872b-7824604957a4",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Optionally, you can have students record their answers to these questions on a 3x5 card to be handed in as an Exit Ticket as they leave the class. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f95848b2-cb2f-406b-872b-7824604957a4",
         "lesson_activity.key": "88fad595-6657-464b-90af-7a0dff3afcbe"
       }
     },
@@ -5140,6 +5424,50 @@
     },
     {
       "chapter": 37,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-vision-board"
+        ],
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-vision-board"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "New Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-aichat-2"
+        ],
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-aichat-2"
+      ]
+    },
+    {
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5161,7 +5489,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5183,7 +5511,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5205,7 +5533,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5227,7 +5555,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5249,7 +5577,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5271,7 +5599,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5293,7 +5621,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5315,7 +5643,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5337,7 +5665,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5359,7 +5687,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -5381,7 +5709,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5403,7 +5731,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -5425,7 +5753,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5447,7 +5775,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5469,7 +5797,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5491,7 +5819,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5513,7 +5841,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
@@ -5535,7 +5863,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5557,7 +5885,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5572,19 +5900,19 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "1465d725-87f6-4b51-8e59-c75117eda681"
+        "activity_section.key": "2f7e6233-4116-492e-9032-786dc03bcd54"
       },
       "level_keys": [
         "problem-solving-with-ai-project-sketchlab-day-one"
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Define & Build"
+        "progression": "Day One Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -5594,14 +5922,14 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "1465d725-87f6-4b51-8e59-c75117eda681"
+        "activity_section.key": "312bf2d8-ee52-435b-bd62-38999eec29bf"
       },
       "level_keys": [
         "problem-solving-with-ai-project-reflection-day-1"
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5616,19 +5944,19 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "d3ff637f-1ac1-44ca-a19f-734e597746a7"
+        "activity_section.key": "4e408ca6-7b9b-4241-affb-d40f0772b1d6"
       },
       "level_keys": [
         "problem-solving-with-ai-project-choice-2"
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Build & Test"
+        "progression": "Day Two Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -5645,7 +5973,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5660,19 +5988,19 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "0f78c031-294a-4c8c-8661-c0e5d992414f"
+        "activity_section.key": "2cb97a34-d576-4592-967e-c1cae51edfe5"
       },
       "level_keys": [
         "problem-solving-with-ai-project-choice-3"
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Ship"
+        "progression": "Day Three Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -5689,7 +6017,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5711,7 +6039,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6168,6 +6496,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-vision-board",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-vision-board"
+        ],
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-aichat-2",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-aichat-2"
+        ],
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "problem-solving-with-ai-lesson2-level1_v2_2026_dev",
         "script_level.level_keys": [
           "problem-solving-with-ai-lesson2-level1_v2_2026_dev"
@@ -6403,7 +6755,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "1465d725-87f6-4b51-8e59-c75117eda681"
+        "activity_section.key": "2f7e6233-4116-492e-9032-786dc03bcd54"
       }
     },
     {
@@ -6415,7 +6767,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "1465d725-87f6-4b51-8e59-c75117eda681"
+        "activity_section.key": "312bf2d8-ee52-435b-bd62-38999eec29bf"
       }
     },
     {
@@ -6427,7 +6779,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "d3ff637f-1ac1-44ca-a19f-734e597746a7"
+        "activity_section.key": "4e408ca6-7b9b-4241-affb-d40f0772b1d6"
       }
     },
     {
@@ -6451,7 +6803,7 @@
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "0f78c031-294a-4c8c-8661-c0e5d992414f"
+        "activity_section.key": "2cb97a34-d576-4592-967e-c1cae51edfe5"
       }
     },
     {
@@ -7585,16 +7937,6 @@
       }
     },
     {
-      "key": "context",
-      "word": "context",
-      "definition": "additional information or data surrounding a prompt or query that helps the AI generate more accurate and relevant responses",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "context"
-      }
-    },
-    {
       "key": "contradiction",
       "word": "contradiction",
       "definition": "when an AI generates conflicting or opposing responses based on a similar input, making it impossible for both responses to be correct at the same time",
@@ -7692,6 +8034,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "prompt_engineering"
+      }
+    },
+    {
+      "key": "retrieval_information",
+      "word": "retrieval information",
+      "definition": "additional information or data surrounding a prompt or query that helps the AI generate more accurate and relevant responses",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "retrieval_information"
       }
     },
     {
@@ -7801,19 +8153,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 4: Smart or Just Predictable?",
-        "vocabulary.key": "context"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 4: Smart or Just Predictable?",
         "vocabulary.key": "hallucination"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 5: Uncovering Contradictions",
-        "vocabulary.key": "context"
+        "lesson.key": "Lesson 4: Smart or Just Predictable?",
+        "vocabulary.key": "retrieval_information"
       }
     },
     {
@@ -7924,7 +8270,7 @@
     {
       "key": "2478f2e8-96c6-4dfa-abdd-7a79244c69de",
       "properties": {
-        "description": "Develop a future prediction by combining research with AI-generated insights."
+        "description": "Develop a spec sheet that documents a product that a chatbot can reference"
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
@@ -7952,9 +8298,29 @@
       }
     },
     {
+      "key": "3d34a9b8-2d6e-4dae-baaf-ca29d45b7b90",
+      "properties": {
+        "description": "Create AI-assisted launch assets and exercise judgment over AI output by keeping, modifying, or rejecting it."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "objective.key": "3d34a9b8-2d6e-4dae-baaf-ca29d45b7b90"
+      }
+    },
+    {
+      "key": "488bba46-f0f8-4332-916d-a6ef344fd3eb",
+      "properties": {
+        "description": "Launch a product with a social media post whose claims match what the spec sheet supports"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "objective.key": "488bba46-f0f8-4332-916d-a6ef344fd3eb"
+      }
+    },
+    {
       "key": "5615916b-6fc2-4eaf-8762-3505e51e5b96",
       "properties": {
-        "description": "Create a presentation that explains how you collaborated with AI to shape and improve your final prediction."
+        "description": "Define a product that responds to a personally-known problem and name a specific audience for it."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
@@ -8124,7 +8490,7 @@
     {
       "key": "ba4f16eb-736f-47ba-a80f-dff14ffe6fe6",
       "properties": {
-        "description": "Evaluate AI outputs for accuracy, inclusivity, and real-world relevance."
+        "description": "Compose a system prompt using the Task, Context, Format, Retrieval, and Tone components to control a chatbot's behavior."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
@@ -8254,7 +8620,7 @@
     {
       "key": "f6aff82f-2575-4a6d-ac6a-da1e309bc503",
       "properties": {
-        "description": "Refine predictions by improving prompts and applying human reasoning."
+        "description": "Test a chatbot with realistic customer questions, trace errors to the system prompt component that permitted them, and confirm that revisions fixed the problem."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: AI Time Capsule Project",
