@@ -65,6 +65,10 @@ class Pythonlab < Level
     true
   end
 
+  def add_starter_asset!(_, _)
+    true
+  end
+
   # Return the validation condition for this level. If the level has a validation file, the condition
   # is that all tests passed. If there is no validation file, there are no conditions.
   def get_validations
