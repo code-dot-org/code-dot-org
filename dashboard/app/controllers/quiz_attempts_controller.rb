@@ -20,17 +20,21 @@ class QuizAttemptsController < ApplicationController
   end
 
   # POC: starts (or resumes) this user's one and only attempt at a quiz
-  # level within a script. P0 allows exactly one attempt - multiple
-  # attempts are a later milestone - so attempt_number is always 1 and
-  # find_or_create_by! always returns that same row rather than a new one.
+  # level within a script. P0 allows exactly one attempt for now. The attempt_number
+  # is always 1 and find_or_create_by! always returns that same row rather than a new one.
   # Reports submittedAt/score so the frontend can restore a completed
   # quiz's result on reload instead of re-showing an editable form.
   def create
-    level = Level.find(params[:levelId])
+    # The level must be a Quiz, and that Quiz must actually appear in the given script.
+    # Uniqueness is (user, level, script, attempt_number).
+    level = Quiz.find(params[:levelId])
+    script = Unit.find(params[:scriptId])
+    raise ActiveRecord::RecordNotFound unless level.script_levels.exists?(script_id: script.id)
+
     attempt = QuizAttempt.find_or_create_by!(
       user: current_user,
       level: level,
-      script_id: params[:scriptId],
+      script: script,
       attempt_number: 1
     ) do |a|
       a.started_at = Time.now
