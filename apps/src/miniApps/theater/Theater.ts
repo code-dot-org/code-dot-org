@@ -117,15 +117,23 @@ export default class Theater extends MiniApp {
   // Legacy Java Lab reads the image's visibility directly; lab2 also needs the
   // change in React so it can swap in an empty state.
   private setOutputVisible(isVisible: boolean) {
-    this.getImgElement().style.visibility = isVisible ? 'visible' : 'hidden';
+    const imageElement = this.getImgElement();
+    if (imageElement) {
+      imageElement.style.visibility = isVisible ? 'visible' : 'hidden';
+    }
     this.onOutputVisibleChange?.(isVisible);
   }
 
   resetAudioAndVideo() {
     const audioElement = this.getAudioElement();
-    audioElement.pause();
-    this.clearElementSource(audioElement);
-    this.clearElementSource(this.getImgElement());
+    if (audioElement) {
+      audioElement.pause();
+      this.clearElementSource(audioElement);
+    }
+    const imageElement = this.getImgElement();
+    if (imageElement) {
+      this.clearElementSource(imageElement);
+    }
     this.hasAudio = false;
   }
 
