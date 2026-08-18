@@ -80,7 +80,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
     And I am on "http://studio.code.org/courses/ui-test-artist/units/1"
-    And I wait until element "#ui-floatingActionButton" is visible
+    And I wait until element "#uitest-chat-textarea" is visible
 
     # Teacher sees and skips AI Diff chat welcome
     # And I wait until element "button:contains(Get Started)" is visible
