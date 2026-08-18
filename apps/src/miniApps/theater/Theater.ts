@@ -36,6 +36,7 @@ export default class Theater extends MiniApp {
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
+  private imageBlobUrl: string | null;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -55,6 +56,7 @@ export default class Theater extends MiniApp {
     this.loadEventsFinished = 0;
     this.prompterUploadUrl = null;
     this.hasAudio = false;
+    this.imageBlobUrl = null;
   }
 
   handleSignal(data: TheaterSignal) {
@@ -68,8 +70,11 @@ export default class Theater extends MiniApp {
       }
       case TheaterSignalType.VISUAL_URL: {
         // Preload the image. Once it's ready, start the playback
-        this.setElementSource(this.getImgElement(), data.detail.url);
-        this.getImgElement().onload = () => this.startPlayback();
+        this.setImageSource(data.detail.url);
+        const imageElement = this.getImgElement();
+        if (imageElement) {
+          imageElement.onload = () => this.startPlayback();
+        }
         break;
       }
       case TheaterSignalType.GET_IMAGE: {
@@ -130,10 +135,7 @@ export default class Theater extends MiniApp {
       audioElement.pause();
       this.clearElementSource(audioElement);
     }
-    const imageElement = this.getImgElement();
-    if (imageElement) {
-      this.clearElementSource(imageElement);
-    }
+    this.clearImageSource();
     this.hasAudio = false;
   }
 
@@ -154,6 +156,32 @@ export default class Theater extends MiniApp {
         ? url
         : url + this.getCacheBustSuffix();
     this.releaseIfBlobUrl(previousUrl);
+  }
+
+  private setImageSource(url: string | undefined) {
+    const nextUrl =
+      url && (url.startsWith('blob:') || url.startsWith('data:'))
+        ? url
+        : url + this.getCacheBustSuffix();
+    this.clearImageSource();
+    const imageElement = this.getImgElement();
+    if (imageElement) {
+      imageElement.src = nextUrl;
+    }
+    if (nextUrl.startsWith('blob:')) {
+      this.imageBlobUrl = nextUrl;
+    }
+  }
+
+  private clearImageSource() {
+    const imageElement = this.getImgElement();
+    if (imageElement) {
+      imageElement.src = '';
+    }
+    if (this.imageBlobUrl) {
+      URL.revokeObjectURL(this.imageBlobUrl);
+      this.imageBlobUrl = null;
+    }
   }
 
   private clearElementSource(element: HTMLImageElement | HTMLAudioElement) {
