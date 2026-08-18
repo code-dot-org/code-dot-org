@@ -52,7 +52,7 @@ class LevelSource < ApplicationRecord
 
   def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
-    LevelSource.find_or_create_by(level:, md5:) do |level_source|
+    LevelSource.where(level: level, md5: md5).first_or_create do |level_source|
       level_source.data = data
     end
   end
