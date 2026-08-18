@@ -8,7 +8,7 @@ import {Workspace} from 'blockly/core';
 import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimationDropdown';
 import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 
-import {SpriteLab2Source} from './types';
+import {Sources} from './types';
 
 export const IMAGE_NAME_MAX_LENGTH = 40;
 
@@ -78,11 +78,11 @@ const quote = (name: string) => JSON.stringify(name);
  * World-tab grid cells. Pure — returns a new sources object.
  */
 export function renameImageReferences(
-  sources: SpriteLab2Source,
+  sources: Sources,
   oldName: string,
   newName: string
-): SpriteLab2Source {
-  const out: SpriteLab2Source = JSON.parse(JSON.stringify(sources));
+): Sources {
+  const out: Sources = JSON.parse(JSON.stringify(sources));
   const oldQuoted = quote(oldName);
   const newQuoted = quote(newName);
   renameInWorkspace(out.source as WorkspaceSerialization, oldQuoted, newQuoted);

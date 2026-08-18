@@ -6,16 +6,9 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-import {
-  ImageGenerationMetadata,
-  SpriteLab2ItemStyle,
-  SpriteLab2ItemType,
-} from '../../types';
-
 import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
 import {cropToContent, removeBackground} from './removeBackground';
-
-export type {SpriteLab2ItemStyle, SpriteLab2ItemType};
+import {ImageGenerationMetadata, ImageStyle} from './types';
 
 // The logical canvas the prompt asks for: model output size over block size.
 const PROMPT_LOGICAL_GRID = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
@@ -24,7 +17,7 @@ const PROMPT_LOGICAL_GRID = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
 // Kept here (not inline) so the sprite and background prompts stay in sync.
 // The pixel prompt requests the same block size detection falls back to
 // (ASSUMED_BLOCK), so an undetectable grid still matches what was asked for.
-const STYLE_PROMPT: Record<SpriteLab2ItemStyle, string> = {
+const STYLE_PROMPT: Record<ImageStyle, string> = {
   pixel:
     'Render as crisp pixel art with a small, limited color palette and ' +
     'hard-edged pixels — no anti-aliasing, gradients, or soft shading. ' +
@@ -65,7 +58,7 @@ async function normalizeIfPixelArt(
 
 /** What to generate; every omitted field falls back to a default. */
 export type GenerateImageOptions = Partial<
-  Pick<ImageGenerationMetadata, 'itemType' | 'style' | 'seed' | 'temperature'>
+  Pick<ImageGenerationMetadata, 'imageType' | 'style' | 'seed' | 'temperature'>
 > & {
   /**
    * Modify this image per the prompt instead of drawing from scratch. A
@@ -94,15 +87,15 @@ export async function generateImage(
   prompt: string,
   options: GenerateImageOptions = {}
 ): Promise<GeneratedImageResult> {
-  const {itemType = 'sprite', style = 'smooth'} = options;
+  const {imageType = 'sprite', style = 'smooth'} = options;
   // Always choose the seed ourselves: the service doesn't report the one it
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const styleClause = STYLE_PROMPT[style];
   let fullPrompt = `${prompt}. ${styleClause}`;
-  if (itemType === 'sprite') {
+  if (imageType === 'sprite') {
     fullPrompt = `${fullPrompt} Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.`;
-  } else if (itemType === 'block') {
+  } else if (imageType === 'block') {
     // Name no drawable object here ("block", "tile") — the model adds it
     // to the picture. Describe only the square-and-margin layout.
     fullPrompt = `${fullPrompt} Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.`;
@@ -129,7 +122,7 @@ export async function generateImage(
 
   const generation: ImageGenerationMetadata = {
     prompt,
-    itemType,
+    imageType,
     style,
     seed,
     ...(options.temperature !== undefined && {
@@ -147,15 +140,15 @@ export async function generateImage(
   // (both prompts keep the corner as background); blocks are then cropped to
   // content so grid-placed copies tile seamlessly. Pixel style gets
   // grid-normalized; a smooth background passes through as-is.
-  if (itemType !== 'background' || style === 'pixel') {
+  if (imageType !== 'background' || style === 'pixel') {
     let blob = new Blob(
       [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
       {type: imageFile.mediaType}
     );
-    if (itemType === 'sprite' || itemType === 'block') {
+    if (imageType === 'sprite' || imageType === 'block') {
       blob = await removeBackground(blob, {soft: style === 'smooth'});
     }
-    if (itemType === 'block') {
+    if (imageType === 'block') {
       blob = await cropToContent(blob);
     }
     let pixelGridSize: number | undefined;

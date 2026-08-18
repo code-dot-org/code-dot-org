@@ -25308,6 +25308,17 @@ en:
           description_short: Hour of AI 2025 dev
           description: ''
           student_description: ''
+        hoai2026-dev:
+          lessons:
+            lesson-1:
+              name: hoai2026-dev-lesson
+          lesson_groups: {}
+          name: hoai2026-dev
+          title: hoai2026-dev
+          description_audience: ''
+          description_short: Hour of AI 2026 dev
+          description: ''
+          student_description: ''
         ctrl-alt-retreat-2025-teaching-learning-gallery-walk:
           lessons:
             lesson-1:
