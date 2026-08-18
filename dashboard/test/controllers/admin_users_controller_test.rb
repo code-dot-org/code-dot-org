@@ -921,9 +921,9 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
     get :log_token_form, params: {user_id: @not_admin.id}
     assert_response :success
-    assert_select 'tbody tr', Cdo::UserLogToken::DESTINATIONS.length
-    Cdo::UserLogToken::DESTINATIONS.each do |destination|
-      assert_select 'code', text: Cdo::UserLogToken.derive(@not_admin.id, destination: destination)
+    assert_select 'tbody tr', User::LogToken::DESTINATIONS.length
+    User::LogToken::DESTINATIONS.each do |destination|
+      assert_select 'code', text: @not_admin.log_token(destination: destination)
     end
   end
 
@@ -960,7 +960,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'resolve_log_token identifies the user behind a token' do
     sign_in @admin
-    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::SENTRY)
+    token = @not_admin.log_token(destination: User::LogToken::SENTRY)
 
     post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
     assert_response :success
@@ -969,7 +969,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'resolve_log_token refuses without a reason' do
     sign_in @admin
-    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::SENTRY)
+    token = @not_admin.log_token(destination: User::LogToken::SENTRY)
 
     post :resolve_log_token, params: {token: token, reason: ''}
     assert_response :success
@@ -983,16 +983,16 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  # The audit lives in Cdo::UserLogToken.resolve, so it cannot be bypassed by
+  # The audit lives in User::LogToken.resolve, so it cannot be bypassed by
   # reaching the primitive from somewhere other than this controller.
   test 'resolve_log_token audits through the primitive with the acting admin and reason' do
     sign_in @admin
-    token = Cdo::UserLogToken.derive(@not_admin.id, destination: Cdo::UserLogToken::SENTRY)
-    Cdo::UserLogToken.expects(:resolve).with do |passed_token, options|
+    token = @not_admin.log_token(destination: User::LogToken::SENTRY)
+    User::LogToken.expects(:resolve).with do |passed_token, options|
       passed_token == token &&
         options[:actor_id] == @admin.id &&
         options[:reason] == 'zendesk 4821'
-    end.returns({user_id: @not_admin.id, destination: Cdo::UserLogToken::SENTRY})
+    end.returns({user_id: @not_admin.id, destination: User::LogToken::SENTRY})
 
     post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
   end
