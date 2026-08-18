@@ -118,7 +118,10 @@ class MultiCheckboxSelector extends Component {
             const itemLabel = this.props.itemLabel(item);
             const itemId = `${this.id}-item-${index}`;
             return (
-              <li className={moduleStyles.listItem} key={index}>
+              <li
+                className={moduleStyles.listItem}
+                key={`${itemLabel ?? ''}-${itemId}`}
+              >
                 <Checkbox
                   name={`${this.props.itemPropName}-${index}`}
                   // With no label of its own, the checkbox borrows the name of
