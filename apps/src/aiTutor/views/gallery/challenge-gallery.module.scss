@@ -1,6 +1,93 @@
-// Styles for the Tutor+ project gallery: the filter rail (GallerySidebar),
-// the project cards (ProjectCard), and the emoji reaction chips
-// (ReactionChips).
+// Styles for the Tutor+ project gallery: the page layout (ChallengeGallery),
+// the filter rail (GallerySidebar), the project cards (ProjectCard), and the
+// emoji reaction chips (ReactionChips).
+
+// --- Page layout ---
+
+.page {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 50px);
+  background-color: var(--background-neutral-primary);
+  font-family: var(--font-family-main);
+  color: var(--text-neutral-primary);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 20px 40px 40px;
+}
+
+.pageHeader {
+  margin-bottom: 24px;
+}
+
+.pageOverline {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: var(--text-brand-primary-fixed);
+}
+
+.pageTitle {
+  margin: 4px 0 0;
+  font-family: var(--font-family-heading);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 52px;
+  color: var(--text-neutral-primary);
+}
+
+.projectGroup {
+  margin-bottom: 40px;
+}
+
+.groupHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.groupTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: var(--text-neutral-primary);
+}
+
+.groupCount {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-quaternary);
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 16px;
+}
+
+.whiteboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 16px;
+}
+
+.statusText {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-primary);
+}
 
 // --- Sidebar (filter rail) ---
 
