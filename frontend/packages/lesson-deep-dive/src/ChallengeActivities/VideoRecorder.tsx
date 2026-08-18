@@ -1,4 +1,12 @@
-import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import {
+  type Dispatch,
+  type FC,
+  type SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import styles from './video-recorder.module.scss';
 
@@ -22,8 +30,8 @@ const CountdownRing: FC<CountdownRingProps> = ({
     timeRemaining <= 5
       ? '#ff4444'
       : timeRemaining <= 10
-      ? '#ffd600'
-      : '#ffffff';
+        ? '#ffd600'
+        : '#ffffff';
 
   return (
     <div
@@ -77,9 +85,9 @@ interface VideoRecorderProps {
   onRecordingChange: (hasRecording: boolean) => void;
   onIsRecordingChange?: (isRecording: boolean) => void;
   recordedUrl: string | null;
-  setRecordedUrl: React.Dispatch<React.SetStateAction<string | null>>;
+  setRecordedUrl: Dispatch<SetStateAction<string | null>>;
   recordedAudioUrl: string | null;
-  setRecordedAudioUrl: React.Dispatch<React.SetStateAction<string | null>>;
+  setRecordedAudioUrl: Dispatch<SetStateAction<string | null>>;
   timeLimitSeconds?: number;
   disabled?: boolean;
 }
@@ -117,7 +125,7 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     if (!navigator.mediaDevices?.getUserMedia) {
       setError(
         'Camera recording is not available on this page. ' +
-          'Try opening the page over HTTPS.'
+          'Try opening the page over HTTPS.',
       );
       return;
     }
@@ -134,7 +142,7 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     } catch {
       setError(
         'Camera or microphone access was denied. ' +
-          'Please allow access in your browser settings and try again.'
+          'Please allow access in your browser settings and try again.',
       );
     }
   }, []);
@@ -145,7 +153,6 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
       streamRef.current?.getTracks().forEach(t => t.stop());
     };
     // run once on mount; startStream is stable
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Revoke the object URLs whenever they change or on unmount.

@@ -26,8 +26,6 @@ class ContactRollupsProcessed < ApplicationRecord
   DATA_UPDATED_AT_KEY = 'u'.freeze
 
   # Constants used to speed up attribute processing:
-  # Reverse lookup from section_type to course
-  SECTION_TYPE_INVERTED_MAP = Pd::WorkshopConstants::SECTION_TYPE_MAP.invert
   HOC_YEAR_PATTERN = /HocSignup(?<year>\d{4})/
   # Allow only certain pegasus form roles since they are user-generated data
   ALLOWED_FORM_ROLES = %w(administrator educator engineer other parent student teacher volunteer).to_set
@@ -206,14 +204,11 @@ class ContactRollupsProcessed < ApplicationRecord
   end
 
   def self.extract_professional_learning_attended(contact_data)
-    # @see Pd::WorkshopConstants::SECTION_TYPES for section_type values
-    # and Pd::SharedWorkshopConstants::COURSES for course values.
-    section_types = extract_field contact_data, 'dashboard.followers', 'section_type'
-    section_courses = section_types.map {|section| SECTION_TYPE_INVERTED_MAP[section]}
+    # @see Pd::SharedWorkshopConstants::COURSES for course values.
     courses = extract_field contact_data, 'dashboard.pd_attendances', 'course'
 
     # Only care about unique and non-nil value. The result is sorted to keep consistent order.
-    uniq_courses = (courses + section_courses).uniq.compact.sort.join(',')
+    uniq_courses = courses.uniq.compact.sort.join(',')
     return uniq_courses.empty? ? {} : {professional_learning_attended: uniq_courses}
   end
 
@@ -223,8 +218,7 @@ class ContactRollupsProcessed < ApplicationRecord
     roles.add 'Teacher' if
       contact_data.dig('dashboard.users', 'user_id') ||
         contact_data.key?('dashboard.pd_enrollments') ||
-        contact_data.key?('dashboard.pd_attendances') ||
-        contact_data.key?('dashboard.followers')
+        contact_data.key?('dashboard.pd_attendances')
 
     unless roles.include? 'Teacher'
       # Contact is a teacher if they submit a census survey as a teacher

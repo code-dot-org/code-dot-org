@@ -156,6 +156,12 @@
   }
 }
 
+// The prompt is the user's own words; italics set it off from the fixed
+// choices around it.
+.promptValue {
+  font-style: italic;
+}
+
 .footer {
   @include chrome.footer;
 
@@ -290,6 +296,18 @@
   height: 64px;
   align-self: center;
   object-fit: contain;
+}
+
+// The pixelated variant is a canvas whose bitmap IS the coarse art grid;
+// sized to the bitmap's aspect so the upscale stays square-pixeled.
+.botPixelated {
+  width: auto;
+  image-rendering: pixelated;
+}
+
+// The style choice picks which bot variant shows (both stay mounted).
+.botHidden {
+  display: none;
 }
 
 .reviewHint {
