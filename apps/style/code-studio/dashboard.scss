@@ -1,9 +1,9 @@
-@import 'color';
-@import 'font';
-@import 'mixins';
-@import 'style-constants';
-@import 'brand-selectors';
-@import 'NpsSurveyBlock';
+@import "color";
+@import "font";
+@import "mixins";
+@import "style-constants";
+@import "brand-selectors";
+@import "NpsSurveyBlock";
 
 // Bootstrap Variables
 $font-family-base: $main-font;
@@ -932,10 +932,8 @@ $small-footer-standard-width: 400px;
   width: 100%;
   max-width: $small-footer-standard-width;
 
-  /*
-   * Need to have this reasonably high, since some of our elements (such as
-   * applab editor) have higher values
-   */
+  /* Need to have this reasonably high, since some of our elements (such as
+     applab editor) have higher values */
   z-index: 1000;
 
   /*
@@ -995,6 +993,7 @@ $small-footer-standard-width: 400px;
 body.background-dark, body.music-black {
   background-color: $dark_black;
   color: $neutral_light;
+
   .small-footer-base {
     background-color: initial;
     border-top: initial;
@@ -1100,7 +1099,7 @@ body.background-dark, body.music-black {
   bottom: 0;
   left: 0;
 
-  // Just under .small-footer-base
+  /* Just under .small-footer-base */
   z-index: 998;
 
   /* Prevent default unordered-list style */
@@ -1717,6 +1716,7 @@ body.iframe_embed_app_and_code {
 .video-modal {
   z-index: 10000;
   overflow: visible;
+
   .modal-body {
     padding: 0;
   }
@@ -3521,17 +3521,11 @@ $modal-no-icon-gap: 22px;
 
     .lines-of-code-message {
       font-family: var(--font-family-main);
-      font-weight: var(--font-weight-regular);
-      color: var(--text-neutral-primary);
       font-size: 20px;
+      font-weight: var(--font-weight-regular);
       line-height: normal;
+      color: var(--text-neutral-primary);
       margin: 0 0 8px 0;
-    }
-
-    .instructions-markdown p {
-      line-height: 25px;
-      font-size: 16px;
-      color: $neutral_dark;
     }
 
     .instructions2 {
@@ -3738,17 +3732,6 @@ h5.dialog-title {
 }
 
 .csf-top-instructions, .instructions-markdown {
-  p {
-    line-height: 25px;
-    font-size: 16px;
-    color: $black;
-  }
-
-  .secondary-instructions p {
-    font-size: 14px;
-    color: $charcoal;
-  }
-
   strong {
     @include main-font-semi-bold;
   }
