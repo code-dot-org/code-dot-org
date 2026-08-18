@@ -3346,12 +3346,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
       float: left;
       clear: both;
 
-      @media #{$information-phone-narrow} {
-      }
-
-      @media #{$information-phone-wide} {
-      }
-
       @media #{$information-tablet-tall} {
         width: 55%;
       }
@@ -3403,12 +3397,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
     .question {
       float: left;
 
-      @media #{$information-phone-narrow} {
-      }
-
-      @media #{$information-phone-wide} {
-      }
-
       @media #{$information-tablet-tall} {
         width: 35%;
       }
@@ -3438,12 +3426,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
     .answers {
       float: left;
       margin-left: $multi-left-margin;
-
-      @media #{$information-phone-narrow} {
-      }
-
-      @media #{$information-phone-wide} {
-      }
 
       @media #{$information-tablet-tall} {
         width: 55%;
