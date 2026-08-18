@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'cdo/user_log_token'
 
 class AiGatewayAuthControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
@@ -34,7 +33,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
   end
 
   test 'mints the log token the dashboard sends to Sentry, not the raw user id' do
-    expected = Cdo::UserLogToken.derive(@user.id, destination: Cdo::UserLogToken::SENTRY)
+    expected = @user.log_token(destination: User::LogToken::SENTRY)
 
     assert_equal expected, decoded_claims['user_log_token']
   end
@@ -67,7 +66,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     other = create(:student)
 
     refute_equal decoded_claims['user_log_token'],
-      Cdo::UserLogToken.derive(other.id, destination: Cdo::UserLogToken::SENTRY)
+      other.log_token(destination: User::LogToken::SENTRY)
   end
 
   test 'forbids a user who cannot access aichat' do

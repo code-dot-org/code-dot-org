@@ -1,4 +1,3 @@
-require 'cdo/user_log_token'
 require 'jwt'
 require 'securerandom' unless defined?(SecureRandom)
 
@@ -24,9 +23,7 @@ class AiGatewayAuthController < ApplicationController
     hostname = CDO.dashboard_hostname
 
     # Send the log token, not the raw id.
-    user_log_token = Cdo::UserLogToken.derive(
-      current_user.id, destination: Cdo::UserLogToken::SENTRY
-    )
+    user_log_token = current_user.log_token(destination: User::LogToken::SENTRY)
 
     # Set a little in the past to account for time drift
     issued_at_time = (Time.now - 5.seconds).to_i
