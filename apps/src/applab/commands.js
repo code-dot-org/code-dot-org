@@ -35,7 +35,7 @@ import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
 import EventSandboxer from './EventSandboxer';
 import {moderateApplabImageUrl} from './imageUrlModeration';
-import {resolveAppLabImagePath} from './imageUrlUtils';
+import {resolveAppLabImagePath, isBlockedDataUrl} from './imageUrlUtils';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import sanitizeHtml from './sanitizeHtml';
 import * as setPropertyDropdown from './setPropertyDropdown';
@@ -94,10 +94,6 @@ function moderateAbsoluteImageUrl(
       }
     }
   );
-}
-
-function isBlockedDataUrl(url) {
-  return /^data:/i.test(url.trimStart());
 }
 
 function rejectDataUrl(
