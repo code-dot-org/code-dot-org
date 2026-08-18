@@ -97,7 +97,7 @@ function moderateAbsoluteImageUrl(
 }
 
 function isBlockedDataUrl(url) {
-  return /^data:/i.test(url);
+  return /^data:/i.test(url.trimStart());
 }
 
 function rejectDataUrl(

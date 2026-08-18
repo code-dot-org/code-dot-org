@@ -119,6 +119,18 @@ describe('setProperty image URL moderation', () => {
     expect(global.Applab.updateProperty).not.toHaveBeenCalled();
     expect(errorHandler.outputWarning).toHaveBeenCalled();
   });
+
+  it('does not update property for data URLs with leading whitespace', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: '  data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
 });
 
 describe('other image command URL moderation', () => {
