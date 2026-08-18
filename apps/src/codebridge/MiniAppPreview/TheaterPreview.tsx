@@ -59,8 +59,7 @@ const TheaterPreview: React.FunctionComponent = () => {
     );
     CodebridgeRegistry.getInstance().setTheater(theater);
 
-    // Ensure any running program is stopped and the theater is reset
-    // to avoid leaks.
+    // Ensure the theater is stopped and reset to avoid leaks.
     // Drop the registry's reference on unmount; otherwise a later
     // stop could call onStop() on this theater after its DOM is gone.
     return () => {
