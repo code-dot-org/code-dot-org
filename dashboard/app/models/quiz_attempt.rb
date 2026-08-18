@@ -40,4 +40,14 @@ class QuizAttempt < ApplicationRecord
   def expired?
     expires_at.present? && Time.now > expires_at
   end
+
+  # Whether a NEW attempt could be started after this one. Only meaningful
+  # once this attempt is submitted - an in-progress attempt should be
+  # resumed, not retaken. max_attempts blank means unlimited once
+  # allow_multiple_attempts is true - see Quiz#max_attempts_requires_allow_multiple_attempts.
+  def retakeable?
+    return false if submitted_at.blank?
+    return false unless level.allow_multiple_attempts?
+    level.max_attempts.blank? || attempt_number < level.max_attempts.to_i
+  end
 end

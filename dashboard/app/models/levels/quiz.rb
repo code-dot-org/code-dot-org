@@ -32,12 +32,15 @@ class Quiz < Level
     reveal_answer_explanation
     purpose
     intro_text
+    allow_multiple_attempts
+    max_attempts
   )
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
   validates :purpose, inclusion: {in: PURPOSES}, allow_nil: true
 
   validate :reveal_answer_explanation_requires_show_correctness
+  validate :max_attempts_requires_allow_multiple_attempts
 
   has_many :quiz_level_questions, foreign_key: :level_id, dependent: :destroy
   has_many :quiz_questions, through: :quiz_level_questions
@@ -83,5 +86,19 @@ class Quiz < Level
   private def reveal_answer_explanation_requires_show_correctness
     return unless reveal_answer_explanation? && !show_correctness?
     errors.add(:reveal_answer_explanation, 'cannot be true unless show_correctness is also true')
+  end
+
+  # max_attempts blank means unlimited attempts (once allow_multiple_attempts
+  # is true) - not yet enforced anywhere (P0 only builds the
+  # allow_multiple_attempts on/off switch), but declared now since it's just
+  # another serialized_attrs key, not a migration, so the eventual shape
+  # doesn't need renaming/restructuring later.
+  private def max_attempts_requires_allow_multiple_attempts
+    return if max_attempts.blank?
+    unless allow_multiple_attempts?
+      errors.add(:max_attempts, 'cannot be set unless allow_multiple_attempts is also true')
+      return
+    end
+    errors.add(:max_attempts, 'must be at least 2') if max_attempts.to_i < 2
   end
 end

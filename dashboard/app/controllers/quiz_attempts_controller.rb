@@ -10,20 +10,19 @@ class QuizAttemptsController < ApplicationController
   # page - that timestamp should reflect clicking "Begin Quiz", not
   # whenever the intro screen happened to render.
   def index
-    attempt = QuizAttempt.find_by(
-      user: current_user,
-      level_id: params[:levelId],
-      script_id: params[:scriptId],
-      attempt_number: 1
-    )
+    attempt = latest_attempt(params[:levelId], params[:scriptId])
     render json: attempt && quiz_attempt_json(attempt)
   end
 
-  # POC: starts (or resumes) this user's one and only attempt at a quiz
-  # level within a script. P0 allows exactly one attempt for now. The attempt_number
-  # is always 1 and find_or_create_by! always returns that same row rather than a new one.
-  # Reports submittedAt/score so the frontend can restore a completed
-  # quiz's result on reload instead of re-showing an editable form.
+  # Starts, resumes, or retakes this user's attempt at a quiz level within a
+  # script, depending on the latest existing attempt (if any):
+  #   - none yet, or the latest is submitted and Quiz#retakeable? allows
+  #     another one -> create a new attempt (attempt_number + 1)
+  #   - latest is still in progress, or retakes aren't allowed/exhausted ->
+  #     return that same attempt unchanged
+  # Reports submittedAt/score/canRetake so the frontend can restore a
+  # completed quiz's result (and offer a retake, if any are left) on reload
+  # instead of re-showing an editable form.
   def create
     # The level must be a Quiz, and that Quiz must actually appear in the given script.
     # Uniqueness is (user, level, script, attempt_number).
@@ -31,14 +30,19 @@ class QuizAttemptsController < ApplicationController
     script = Unit.find(params[:scriptId])
     raise ActiveRecord::RecordNotFound unless level.script_levels.exists?(script_id: script.id)
 
-    attempt = QuizAttempt.find_or_create_by!(
-      user: current_user,
-      level: level,
-      script: script,
-      attempt_number: 1
-    ) do |a|
-      a.started_at = Time.now
-    end
+    latest = latest_attempt(level.id, script.id)
+    attempt =
+      if latest.nil? || latest.retakeable?
+        QuizAttempt.create!(
+          user: current_user,
+          level: level,
+          script: script,
+          attempt_number: (latest&.attempt_number || 0) + 1,
+          started_at: Time.now
+        )
+      else
+        latest
+      end
 
     render status: :created, json: quiz_attempt_json(attempt)
   rescue StandardError => exception
@@ -72,6 +76,11 @@ class QuizAttemptsController < ApplicationController
     render status: :bad_request, json: {error: exception.message}
   end
 
+  private def latest_attempt(level_id, script_id)
+    QuizAttempt.where(user: current_user, level_id: level_id, script_id: script_id).
+      order(attempt_number: :desc).first
+  end
+
   private def quiz_attempt_json(attempt)
     {
       id: attempt.id,
@@ -86,7 +95,10 @@ class QuizAttemptsController < ApplicationController
       # slightly off, not that auto-submit fires at the wrong wall-clock
       # time (that's enforced server-side regardless, see
       # QuizQuestionResponsesController#create).
-      expiresAt: attempt.expires_at
+      expiresAt: attempt.expires_at,
+      # Whether POSTing to #create again would start a new attempt rather
+      # than just returning this one - see QuizAttempt#retakeable?.
+      canRetake: attempt.retakeable?
     }
   end
 end
