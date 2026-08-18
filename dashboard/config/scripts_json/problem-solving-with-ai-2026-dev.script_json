@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-14 20:35:43 UTC",
+    "serialized_at": "2026-08-17 16:02:32 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1742,7 +1742,7 @@
       "key": "dab2da31-7ae3-4f73-8b1d-83fe239e51cb",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** \n Students decide what information a chatbot gets, discovering that a bot with bad retrieval information is unreliable even though it has additional information. This shifts them from using retrieval information to judging it.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**\n Direct students to Lesson 4, Levels 2-3. \n* **Level 2:** Students choose one of four bots to fix, ask it questions, and after finding that its answers are unreliable, remove or edit the retrieval information to improve their bot.\n* **Level 3:** Students answer check for understanding questions. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** \n Look for students who never open the Retrieval panel. Chat alone reveals only the conflicting information — the vague, off-topic, and undated cards are found by reading. Also watch for students who delete every card that looks suspicious. One card is half accurate and half outdated, and deleting it loses information the bot needs. Ask those students whether they lost anything they needed. Two cards are genuine judgment calls: one is accurate but not related to this bot's purpose, and one has no date, so there's no way to know whether it's current. Ask students to explain their reasoning rather than looking for a right answer.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** \n Students decide what information a chatbot gets, discovering that a bot with bad retrieval information is unreliable even though it has additional information. This shifts them from using retrieval information to judging it.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**\n Direct students to Lesson 3, Levels 2-3. \n* **Level 2:** Students choose one of four bots to fix, ask it questions, and after finding that its answers are unreliable, remove or edit the retrieval information to improve their bot.\n* **Level 3:** Students answer check for understanding questions. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** \n Look for students who never open the Retrieval panel. Chat alone reveals only the conflicting information — the vague, off-topic, and undated cards are found by reading. Also watch for students who delete every card that looks suspicious. One card is half accurate and half outdated, and deleting it loses information the bot needs. Ask those students whether they lost anything they needed. Two cards are genuine judgment calls: one is accurate but not related to this bot's purpose, and one has no date, so there's no way to know whether it's current. Ask students to explain their reasoning rather than looking for a right answer.\n",
         "duration": "20",
         "name": "Make a Trustworthy Bot",
         "progression_name": "Make a Trustworthy Bot",

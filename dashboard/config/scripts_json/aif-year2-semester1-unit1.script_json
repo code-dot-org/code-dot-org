@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-14 18:50:24 UTC",
+    "serialized_at": "2026-08-17 19:22:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -5218,7 +5218,7 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Build a Chatbot"
       },
