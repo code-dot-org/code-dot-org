@@ -15,7 +15,6 @@ Feature: Read and create AI diff threads
     And I wait until element "#teacher-home-header" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
     And I am on "http://studio.code.org/courses/ui-test-artist/units/1"
-    And I wait until element "#ui-floatingActionButton" is visible
 
     # Was asked to disable the AITA welcome experience without removing any code.
     # Commenting out references to welcome experience until further notice
