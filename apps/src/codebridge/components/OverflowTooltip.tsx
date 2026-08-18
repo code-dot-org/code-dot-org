@@ -1,52 +1,74 @@
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {Tooltip, TooltipProps} from '@mui/material';
+import React, {useCallback, useLayoutEffect, useRef, useState} from 'react';
 
-interface OverflowTooltipProps {
-  children: React.ReactNode;
-  tooltipOverlayClassName?: string;
-  tooltipProps: TooltipProps;
-  className?: string;
+type OverflowTooltipProps = {
+  children: React.ReactElement;
+  title: React.ReactNode;
+  placement?: TooltipProps['placement'];
+};
+
+function hasTruncatedText(el: HTMLElement): boolean {
+  const {overflowX, whiteSpace} = getComputedStyle(el);
+  const clips = overflowX === 'hidden' || overflowX === 'clip';
+  // Icons and flex wrappers often report scrollWidth > clientWidth even
+  // when the label isn't truncated (folder-open is wider than the 12px box).
+  // Only a nowrap + clipped text node is an ellipsis'd name.
+  if (clips && whiteSpace === 'nowrap' && el.scrollWidth > el.clientWidth) {
+    return true;
+  }
+  return Array.from(el.children).some(
+    child => child instanceof HTMLElement && hasTruncatedText(child)
+  );
 }
 
-// Component that wraps children with a tooltip if the contents of the children
-// are larger than a div wrapping them (with the given className).
-// This allows us to show a tooltip on hover if the contents are overflowing.
+/**
+ * Shows an MUI tooltip with `title` only when `children` overflow.
+ * Clones `children` so the tooltip anchors to that element (hover and focus).
+ */
 const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
   children,
-  tooltipOverlayClassName,
-  tooltipProps,
-  className,
+  title,
+  placement = 'left',
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [showTooltip, setShowTooltip] = useState(false);
-  useEffect(() => {
+  const containerRef = useRef<HTMLElement>(null);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const {theme} = useTheme();
+
+  const updateOverflow = useCallback(() => {
     if (containerRef.current) {
-      setShowTooltip(
-        containerRef.current.offsetWidth < containerRef.current.scrollWidth
-      );
+      setIsOverflowing(hasTruncatedText(containerRef.current));
     }
-  }, [children]);
+  }, []);
 
-  const containedChildren = useMemo(() => {
-    return (
-      <div ref={containerRef} className={className}>
-        {children}
-      </div>
-    );
-  }, [children, className]);
+  useLayoutEffect(() => {
+    const el = containerRef.current;
+    if (!el) {
+      return;
+    }
 
-  return showTooltip ? (
-    <WithTooltip
-      tooltipProps={tooltipProps}
-      tooltipOverlayClassName={tooltipOverlayClassName}
+    updateOverflow();
+    const observer = new ResizeObserver(updateOverflow);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [children, title, updateOverflow]);
+
+  return (
+    <Tooltip
+      title={isOverflowing ? title : ''}
+      placement={placement}
+      // Theme defaults describeChild on, which would overwrite the file
+      // row's dnd-kit aria-describedby. The trigger already names itself.
+      describeChild={false}
+      slotProps={{
+        popper: {'data-theme': theme},
+        tooltip: {'data-theme': theme},
+      }}
     >
-      {containedChildren}
-    </WithTooltip>
-  ) : (
-    containedChildren
+      {React.cloneElement(children, {
+        ref: containerRef,
+      } as {ref: React.Ref<HTMLElement>})}
+    </Tooltip>
   );
 };
 
