@@ -65,6 +65,11 @@ class TrackedSource {
   clear() {
     const element = this.getElement();
     if (element) {
+      // Detach before dropping the src: a load already in flight is for media we
+      // are discarding, and clearing the src can itself fire an error event.
+      element.onload = null;
+      element.onerror = null;
+      element.oncanplaythrough = null;
       element.src = '';
     }
     if (this.blobUrl) {
@@ -84,6 +89,7 @@ export default class Theater extends MiniApp {
     message: InputMessage
   ) => void;
   private readonly onOutputVisibleChange?: (isVisible: boolean) => void;
+  private readonly onMediaLoadError?: () => void;
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
@@ -97,7 +103,8 @@ export default class Theater extends MiniApp {
     openPhotoPrompter: (prompt?: string) => void,
     closePhotoPrompter: () => void,
     onJavabuilderMessage: (messageType: string, message: InputMessage) => void,
-    onOutputVisibleChange?: (isVisible: boolean) => void
+    onOutputVisibleChange?: (isVisible: boolean) => void,
+    onMediaLoadError?: () => void
   ) {
     super();
     this.onOutputMessage = onOutputMessage;
@@ -106,6 +113,7 @@ export default class Theater extends MiniApp {
     this.closePhotoPrompter = closePhotoPrompter;
     this.onJavabuilderMessage = onJavabuilderMessage;
     this.onOutputVisibleChange = onOutputVisibleChange;
+    this.onMediaLoadError = onMediaLoadError;
     this.loadEventsFinished = 0;
     this.prompterUploadUrl = null;
     this.hasAudio = false;
@@ -134,6 +142,7 @@ export default class Theater extends MiniApp {
         const imageElement = this.getImgElement();
         if (imageElement) {
           imageElement.onload = () => this.startPlayback();
+          imageElement.onerror = () => this.handleVisualLoadError();
         }
         break;
       }
@@ -164,6 +173,14 @@ export default class Theater extends MiniApp {
         this.getAudioElement()?.play();
       }
     }
+  }
+
+  // An image that fails to load never fires onload, so playback would wait on it
+  // forever: the stage stays empty and the run button stays on stop. Put the
+  // theater back and let the host report the failure.
+  private handleVisualLoadError() {
+    this.reset();
+    this.onMediaLoadError?.();
   }
 
   reset() {

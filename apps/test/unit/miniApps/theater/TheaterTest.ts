@@ -17,6 +17,7 @@ describe('Theater', () => {
   let closePhotoPrompter: jest.Mock;
   let onJavabuilderMessage: jest.Mock;
   let onOutputVisibleChange: jest.Mock;
+  let onMediaLoadError: jest.Mock;
   let uploadFile: jest.Mock;
 
   beforeEach(() => {
@@ -26,6 +27,7 @@ describe('Theater', () => {
     closePhotoPrompter = jest.fn();
     onJavabuilderMessage = jest.fn();
     onOutputVisibleChange = jest.fn();
+    onMediaLoadError = jest.fn();
 
     playAudioSpy = jest.fn();
     pauseAudioSpy = jest.fn();
@@ -39,7 +41,8 @@ describe('Theater', () => {
       openPhotoPrompter,
       closePhotoPrompter,
       onJavabuilderMessage,
-      onOutputVisibleChange
+      onOutputVisibleChange,
+      onMediaLoadError
     );
     theater.getImgElement = () => imageElement as HTMLImageElement;
     theater.getAudioElement = () => audioElement as HTMLAudioElement;
@@ -224,6 +227,59 @@ describe('Theater', () => {
 
     expect(imageElement.style?.visibility).toBe('hidden');
     expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+  });
+
+  it('reports a failed image load and drops the media', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+
+    (imageElement as HTMLImageElement).onerror?.(new Event('error'));
+
+    expect(onMediaLoadError).toHaveBeenCalledTimes(1);
+    expect(theater.hasOutput()).toBe(false);
+    expect(imageElement.style?.visibility).toBe('hidden');
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+    expect(revokeSpy).toHaveBeenCalledWith('blob:image');
+  });
+
+  it('does not report an error for media dropped by a reset', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+
+    theater.reset();
+
+    // Clearing the src can fire an error event for the discarded image.
+    expect(imageElement.onerror).toBeNull();
+    expect(imageElement.onload).toBeNull();
+    expect(audioElement.oncanplaythrough).toBeNull();
+    expect(onMediaLoadError).not.toHaveBeenCalled();
+  });
+
+  it('starts playback on a later load after a failed one', () => {
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:bad'},
+    });
+    (imageElement as HTMLImageElement).onerror?.(new Event('error'));
+
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:good'},
+    });
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+
+    expect(imageElement.style?.visibility).toBe('visible');
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(true);
   });
 
   it('opens photo prompter after receiving a GET_IMAGE signal', () => {
