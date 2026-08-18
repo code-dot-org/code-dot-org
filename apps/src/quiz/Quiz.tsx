@@ -59,6 +59,10 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     Record<number, QuestionResponseValue>
   >({});
   const [result, setResult] = useState<AttemptResult | null>(null);
+  // Whether POSTing to /quiz_attempts again would start a genuinely new
+  // attempt (see QuizAttempt#retakeable?) rather than just returning this
+  // one - only meaningful once result is set.
+  const [canRetake, setCanRetake] = useState(false);
   // Deadline for the current attempt, from the server (QuizAttempt#expires_at) -
   // null when the quiz has no time limit. Drives the countdown effect below.
   const [expiresAt, setExpiresAt] = useState<string | null>(null);
@@ -98,6 +102,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         setAttemptId(data.id);
         if (data.submittedAt) {
           setResult({score: data.score, maxScore: data.maxScore});
+          setCanRetake(!!data.canRetake);
         } else {
           // Only start a countdown for an attempt that isn't already done.
           setExpiresAt(data.expiresAt || null);
@@ -105,6 +110,16 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         setShowIntro(false);
       });
   }, [levelId, scriptId]);
+
+  // Starts a fresh attempt on top of an already-submitted one - only ever
+  // called when canRetake is true, so #create (see beginAttempt) will mint
+  // attempt_number + 1 rather than just handing back the finished one.
+  const retakeQuiz = () => {
+    setResult(null);
+    setResponses({});
+    setCanRetake(false);
+    beginAttempt();
+  };
 
   useEffect(() => {
     // Don't start a student attempt while a levelbuilder is authoring.
@@ -135,6 +150,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         // already got past the intro screen, so skip it.
         if (data.submittedAt) {
           setResult({score: data.score, maxScore: data.maxScore});
+          setCanRetake(!!data.canRetake);
         } else {
           // only start a countdown for an attempt that isn't already done.
           setExpiresAt(data.expiresAt || null);
@@ -186,6 +202,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     );
     const data = await finalizeResponse.json();
     setResult({score: data.score, maxScore: data.maxScore});
+    setCanRetake(!!data.canRetake);
   };
 
   // Kept up to date every render so the countdown effect below always
@@ -296,10 +313,12 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                 color="primary"
                 size="medium"
                 type="button"
-                disabled={!attemptId || !!result}
-                onClick={() => submitQuiz()}
+                disabled={!attemptId || (!!result && !canRetake)}
+                onClick={() =>
+                  result && canRetake ? retakeQuiz() : submitQuiz()
+                }
               >
-                Submit Quiz
+                {result && canRetake ? 'Retake Quiz' : 'Submit Quiz'}
               </MuiButton>
               {result && (
                 <Typography variant="h5">
