@@ -1,5 +1,4 @@
 require 'cdo/activity_constants'
-require 'cdo/user_log_token'
 require 'csv'
 require 'tempfile'
 
@@ -407,7 +406,7 @@ class AdminUsersController < ApplicationController
     @input = params[:user_id].to_s.strip
     return if @input.blank?
 
-    # Mirrors what Cdo::UserLogToken will accept, so we reject here rather than
+    # Mirrors what User::LogToken will accept, so we reject here rather than
     # rendering a row of empty tokens
     unless @input.match?(/\A[1-9]\d{0,9}\z/)
       @invalid_input = true
@@ -420,8 +419,8 @@ class AdminUsersController < ApplicationController
     rescue ActiveModel::RangeError
       false
     end
-    @tokens = Cdo::UserLogToken::DESTINATIONS.index_with do |destination|
-      Cdo::UserLogToken.derive(user_id, destination: destination)
+    @tokens = User::LogToken::DESTINATIONS.index_with do |destination|
+      User.log_token_for(user_id, destination: destination)
     end
     log_admin_action('log_token_lookup', user_id)
   end
@@ -429,7 +428,7 @@ class AdminUsersController < ApplicationController
   # POST /admin/log_token/resolve
   # Reverse lookup: a log token in, the user it identifies out.
   #
-  # The audit record is written by Cdo::UserLogToken.resolve itself rather than
+  # The audit record is written by User::LogToken.resolve itself rather than
   # here, so it cannot be sidestepped by calling the primitive from a console.
   def resolve_log_token
     token = params[:token].to_s.strip
@@ -440,7 +439,7 @@ class AdminUsersController < ApplicationController
       return render :log_token_form
     end
 
-    @resolved = Cdo::UserLogToken.resolve(
+    @resolved = User.resolve_log_token(
       token,
       actor_id: current_user.id,
       reason: reason,
