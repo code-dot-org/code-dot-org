@@ -190,7 +190,8 @@ function createRspackConfig({
   // machine).  Measured against APPS_DEVTOOL=eval on the same box:
   // lower steady and peak memory (unmapped modules skip eval wrapping),
   // ~2s more per shared-file rebuild, and memory stays level under
-  // sustained editing instead of growing with each rebuild.  An explicit APPS_DEVTOOL (e.g. =eval) overrides, and so
+  // sustained editing instead of growing with each rebuild.  An
+  // explicit APPS_DEVTOOL (e.g. =eval) overrides, and so
   // do the two ambient signals the shared devtool() helper decides on:
   // CI builds stay map-free (webpack policy, deliberate there) and
   // DEBUG_MINIFIED keeps its full-fidelity maps.
