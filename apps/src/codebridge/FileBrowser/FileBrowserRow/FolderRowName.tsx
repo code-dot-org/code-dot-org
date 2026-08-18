@@ -1,4 +1,3 @@
-import OverflowTooltip from '@codebridge/components/OverflowTooltip';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
@@ -10,23 +9,12 @@ import {FileBrowserNameComponentType} from './types';
 import moduleStyles from '../styles/filebrowser.module.scss';
 
 /**
- * Renders the folder name for a folder row in the file browser, with an optional tooltip for long names.
- * @param item - The ProjectFolder for this row
- * @returns An OverflowTooltip component displaying the folder name with potential truncation.
+ * Renders the folder name for a folder row in the file browser.
  */
 export const FolderRowName: FileBrowserNameComponentType = ({item}) => {
   const {dragData, dropData} = useDndDataContext();
   return (
-    <OverflowTooltip
-      tooltipProps={{
-        text: item.name,
-        tooltipId: `folder-tooltip-${item.id}`,
-        size: 's',
-        direction: 'onBottom',
-      }}
-      tooltipOverlayClassName={moduleStyles.nameContainer}
-      className={moduleStyles.nameContainer}
-    >
+    <div className={moduleStyles.nameContainer}>
       <Typography
         className={classNames({
           [moduleStyles.acceptingDrop]:
@@ -36,6 +24,6 @@ export const FolderRowName: FileBrowserNameComponentType = ({item}) => {
       >
         {item.name}
       </Typography>
-    </OverflowTooltip>
+    </div>
   );
 };
