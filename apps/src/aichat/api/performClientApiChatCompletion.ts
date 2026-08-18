@@ -15,10 +15,7 @@ import {
 } from '../types';
 
 import {getClientApi} from './client';
-import {
-  createAichatRequest,
-  updateAichatRequest,
-} from './client/helpers/aichatRequestHelpers';
+import {createAichatRequest} from './client/helpers/aichatRequestHelpers';
 
 const metricPrefix = 'AichatClientApi';
 
@@ -36,8 +33,11 @@ export async function performClientApiChatCompletion(
   buildAssetUrl: (asset: ChatAsset) => string,
   levelSystemPrompt?: string
 ): Promise<CompletedChatMessage[]> {
-  // Create a new AichatRequest record for this request. This is only needed because the AichatEvent model
-  // (which tracks chat history) has a foreign key dependency on it. Remove if/when we are able to decouple.
+  // Create an AichatRequest row for this request. Needed only because the
+  // AichatEvent model (which tracks chat history) has a foreign key to it, so
+  // the row is created and never written to again. Remove if/when we can
+  // decouple. The worker's signature, relayed on each message below, is what
+  // dashboard checks this turn against.
   const requestId = await createAichatRequest(
     newMessage,
     storedMessages,
@@ -78,8 +78,6 @@ export async function performClientApiChatCompletion(
     ...metricDimensions,
     {name: 'ExecutionStatus', value: statusName},
   ]);
-
-  await updateAichatRequest(requestId, status, response, responseSignature);
 
   // The signature covers both halves of the turn, so the student's message
   // carries it too: log_chat_event checks that message against the prompt digest

@@ -1,6 +1,4 @@
-import {ValueOf} from '@cdo/apps/types/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   AichatContext,
@@ -35,28 +33,4 @@ export async function createAichatRequest(
 
   const {requestId} = (await response.json()) as {requestId: number};
   return requestId;
-}
-
-/**
- * Reports a client-executed chat completion back to dashboard.
- *
- * `responseSignature` is the worker's detached signature over `response`.
- * Relaying it is what lets dashboard keep the response rather than dropping it
- * as client-authored, so it must be passed through unmodified whenever the
- * worker supplied one.
- */
-export async function updateAichatRequest(
-  requestId: number,
-  status: ValueOf<typeof AiRequestExecutionStatus>,
-  response?: string,
-  responseSignature?: string
-) {
-  await HttpClient.put(
-    `${ROOT_URL}/${requestId}`,
-    JSON.stringify({execution_status: status, response, responseSignature}),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    }
-  );
 }

@@ -51,13 +51,9 @@ require 'digest'
 # the model's reply -- so each needs its own counter or the second write would
 # look like a replay of the first.
 #
-# `consume` is separate because not every caller is writing a row.
-# AichatRequestsController#update asks the :response question too, but only to
-# decide whether to keep `aichat_requests.response`. That write is idempotent:
-# the same verified text over the same column. There is nothing for a replay to
-# duplicate, and spending the counter there would leave log_chat_event -- the
-# call that actually protects history -- reporting :replayed. So it verifies
-# without consuming.
+# log_chat_event is the only caller. Nothing else needs to ask: the gateway path
+# writes an aichat_requests row solely to satisfy the aichat_events foreign key,
+# and never reads it back.
 module AichatResponseSignature
   ALGORITHM = 'RS256'.freeze
 
@@ -103,8 +99,7 @@ module AichatResponseSignature
     # +context+.
     #
     # +covers+ is :prompt or :response, selecting which half of the turn +text+
-    # is checked against. +consume+ spends that half's single use, and belongs to
-    # whoever writes a row from it.
+    # is checked against. That half's single use is spent on success.
     #
     # +context+ takes the aichatContext keys as the client sends them
     # (currentLevelId, scriptId, lessonId, channelId).
@@ -115,8 +110,8 @@ module AichatResponseSignature
     #                     legacy Rails path, or a client that omitted it)
     #   :key_unavailable  no usable public key -- our misprovisioning
     #   :invalid          supplied but bad: signature, digest, binding, expiry
-    #   :replayed         valid, but this half was already spent (consume only)
-    def verify(signature:, text:, user:, context:, covers:, consume:)
+    #   :replayed         valid, but this half was already spent
+    def verify(signature:, text:, user:, context:, covers:)
       digest_claim = DIGEST_CLAIMS[covers]
       unless digest_claim
         raise ArgumentError, "signature cannot cover #{covers.inspect}"
@@ -136,7 +131,7 @@ module AichatResponseSignature
 
       # Burned last: only after everything else holds, so a rejected signature
       # does not consume its own use and lock out a legitimate retry.
-      if consume && !burn_nonce(claims['jti'], covers)
+      unless burn_nonce(claims['jti'], covers)
         return Result.new(
           status: :replayed,
           claims: claims,

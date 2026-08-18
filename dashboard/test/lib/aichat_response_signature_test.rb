@@ -45,7 +45,7 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     JWT.encode(claims, @key, 'RS256')
   end
 
-  def verify(signature, text, user: nil, context: nil, pem: :default, covers: :response, consume: true)
+  def verify(signature, text, user: nil, context: nil, pem: :default, covers: :response)
     key = pem == :default ? @public_pem : pem
     AichatResponseSignature.with_public_key(key) do
       AichatResponseSignature.verify(
@@ -53,8 +53,7 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
         text: text,
         user: user || @user,
         context: context || @context,
-        covers: covers,
-        consume: consume
+        covers: covers
       )
     end
   end
@@ -174,20 +173,6 @@ class AichatResponseSignatureTest < ActiveSupport::TestCase
     assert_equal :replayed, replay.status
     refute replay.verified?
     assert_match(/already used for response/, replay.error)
-  end
-
-  test 'verifying without consuming leaves the use for whoever writes the row' do
-    # AichatRequestsController#update checks the response to decide whether to
-    # keep the column; log_chat_event then checks the same half to admit the
-    # event. If the first spent the use, the second -- the one that protects
-    # history -- would report :replayed.
-    text = 'hello'
-    signature = sign(claims_for(text))
-
-    assert_equal :verified, verify(signature, text, consume: false).status
-    assert_equal :verified, verify(signature, text, consume: false).status
-    assert_equal :verified, verify(signature, text, consume: true).status
-    assert_equal :replayed, verify(signature, text, consume: true).status
   end
 
   test 'does not spend a use when verification fails' do

@@ -88,8 +88,13 @@ class AichatRequestsController < ApplicationController
 
   # POST /aichat_requests
   # -----------------------
-  # Create a new AichatRequest record without enqueuing a job.
-  # Used for scenarios where the actual request will be carried out elsewhere (e.g. on the client).
+  # Create an AichatRequest row for a completion the client will carry out itself
+  # against the AI gateway worker.
+  #
+  # The row exists only because aichat_events has a foreign key to it. No job
+  # runs, and nothing here reads the conversation back, so the messages are not
+  # stored -- see build_request_attributes. The worker's signature, not this row,
+  # is what AichatEventsController checks a gateway turn against.
   def create
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
@@ -98,98 +103,21 @@ class AichatRequestsController < ApplicationController
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
-    request = create_request
+    request = create_request(store_messages: false)
     render json: {requestId: request.id}
   end
 
-  # PUT /aichat_requests/:id
-  # -----------------------
-  # Update an existing AichatRequest record with execution status and response.
-  # Used for scenarios where the request has been carried out elsewhere (e.g. on the client).
-  def update
-    begin
-      request = AichatRequest.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: {}
-    end
-
-    # Only the user who initiated the request can update it.
-    return render status: :forbidden, json: {} if request.user_id != current_user.id
-
-    # This is not the admission decision for chat history -- that is
-    # AichatEventsController#log_chat_event. This guards the value log_chat_event
-    # compares an *unsigned* assistant message against, and this route is open to
-    # any user who owns the request, gateway path or not. Without the guard a
-    # legacy user could overwrite the job's response with forged text here and
-    # then log an event matching it.
-    #
-    # So `response` is written only when the worker's signature covers exactly
-    # this value. Note that deliberately includes the no-signature case: text the
-    # worker did not sign is client-authored, whether the client omitted the
-    # signature or never had one.
-    #
-    # Verified without consuming. Writing `response` is idempotent -- the same
-    # verified text over the same column -- so there is nothing for a replay to
-    # duplicate here, and spending the use would leave log_chat_event, which does
-    # write a row, reporting :replayed.
-    result = AichatResponseSignature.verify(
-      signature: params[:responseSignature],
-      text: params[:response],
-      user: current_user,
-      context: signature_context(request),
-      covers: :response,
-      consume: false
-    )
-    log_signature_result(result, request)
-
-    attributes = update_params.to_h
-    unless result.verified?
-      # Content-filter and failure paths legitimately report a
-      # client-synthesized string the worker never produced and cannot sign.
-      # Keep the status, drop the text.
-      attributes.delete('response')
-    end
-
-    if request.update(attributes)
-      render status: :ok, json: {requestId: request.id, responseVerified: result.verified?}
-    else
-      render status: :unprocessable_entity, json: {errors: request.errors}
-    end
-  end
-
-  def create_request
+  def create_request(store_messages: true)
     # TODO: confirm request shape and data usage https://codedotorg.atlassian.net/browse/TEACHING-60
     request_params = params.permit!.to_h.deep_symbolize_keys
 
-    attributes = AichatAiHelper.build_request_attributes(current_user.id, request_params)
+    attributes = AichatAiHelper.build_request_attributes(
+      current_user.id,
+      request_params,
+      store_messages: store_messages
+    )
 
     AichatRequest.new(attributes).tap(&:save!)
-  end
-
-  # The signature binds to the context the inbound token proved; compare it
-  # against what this request row was created with.
-  private def signature_context(request)
-    {
-      currentLevelId: request.level_id,
-      scriptId: request.script_id,
-      lessonId: nil,
-      channelId: params.dig(:aichatContext, :channelId),
-    }
-  end
-
-  # Separate signals on purpose. :invalid means a signature was supplied and did
-  # not check out, which is an attack signal. :key_unavailable is our own
-  # misprovisioning and :absent is an un-upgraded worker; folding those together
-  # would bury the interesting one.
-  private def log_signature_result(result, request)
-    CDO.log.info({
-      event: 'aichat_response_signature',
-      status: result.status,
-      requestId: request.id,
-      userId: current_user.id,
-      error: result.error,
-    }.to_json.to_s
-)
   end
 
   private def should_throttle_request_count?
@@ -242,9 +170,5 @@ class AichatRequestsController < ApplicationController
 
   private def get_backoff_rate
     DCDO.get("aichat_polling_backoff_rate", DEFAULT_POLLING_BACKOFF_RATE)
-  end
-
-  private def update_params
-    params.permit(:execution_status, :response)
   end
 end

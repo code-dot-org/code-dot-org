@@ -1463,7 +1463,7 @@ Dashboard::Application.routes.draw do
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
     post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
 
-    resources :aichat_requests, only: [:create, :update]
+    resources :aichat_requests, only: [:create]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 

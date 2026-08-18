@@ -191,9 +191,7 @@ class AichatEventsController < ApplicationController
       text: event[:chatMessageText],
       user: current_user,
       context: context,
-      covers: role == USER_ROLE ? :prompt : :response,
-      # This is the write a replay would duplicate, so it spends the half's use.
-      consume: true
+      covers: role == USER_ROLE ? :prompt : :response
     )
     return {error: nil, status: result.status} if result.verified?
 
