@@ -171,9 +171,9 @@ label.sectionSelector {
   }
 
   .pinnedResponse {
-    background-color: $light_secondary_500;
+    background-color: var(--background-brand-purple-primary);
     p {
-      color: $light_white;
+      color: var(--text-neutral-white-fixed);
     }
   }
 
@@ -191,14 +191,14 @@ label.sectionSelector {
     }
 
     .pinHeaderIcon {
-      color: $light_secondary_500;
+      color: var(--text-brand-purple-primary);
       margin-inline-end: 8px;
       font-size: 20px;
     }
   }
 
   .unpinnedResponse {
-    background-color: #f6edfd;
+    background-color: var(--background-brand-purple-extra-light);
   }
 
   .studentAnswer {
@@ -221,7 +221,7 @@ label.sectionSelector {
 
     .freeresponsePinnedDropdown {
       &:hover {
-        background-color: $light_secondary_700;
+        background-color: var(--background-brand-purple-strong);
       }
     }
   }
