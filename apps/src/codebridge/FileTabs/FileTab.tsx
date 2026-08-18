@@ -1,10 +1,12 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {keyboardOnlyTooltipProps} from '@code-dot-org/component-library/tooltip';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
-import {Typography} from '@mui/material';
+import {Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
 import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
@@ -27,6 +29,7 @@ type FileTabProps = {
   file: ProjectFile;
   isDragging?: boolean;
   onKeyDown?: (event: React.KeyboardEvent) => void;
+  showReorderHint?: boolean;
 };
 
 function useFileTabState(file: ProjectFile) {
@@ -52,10 +55,17 @@ function useFileTabState(file: ProjectFile) {
   };
 }
 
-const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
+const FileTab = ({
+  file,
+  isDragging = false,
+  onKeyDown,
+  showReorderHint = false,
+}: FileTabProps) => {
   const {iconName, iconStyle, iconClassName, isActive, className} =
     useFileTabState(file);
   const dispatch = useAppDispatch();
+  // Optional form: the existing tests render FileTabs with no ThemeProvider.
+  const {theme} = useTheme(true);
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
   );
@@ -132,21 +142,30 @@ const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
   return (
     <div className={className} ref={setNodeRef} style={dndStyle}>
       {/* Drag handle stops here — CloseButton is a sibling, not nested, to avoid WCAG nested interactive controls violation */}
-      <div
-        ref={labelRef}
-        className={moduleStyles.label}
-        onClick={() => handleOnClick(file.id)}
-        {...attributes}
-        {...listeners}
-        onKeyDown={handleLabelKeyDown}
+      {/* Empty title never opens. Screen readers get these instructions from dnd-kit. */}
+      <Tooltip
+        title={showReorderHint ? 'Press M to reorder · Esc to cancel' : ''}
+        placement="bottom-start"
+        // The bubble portals to document.body, outside the themed subtree.
+        slotProps={{tooltip: {'data-theme': theme}}}
+        {...keyboardOnlyTooltipProps}
       >
-        <FontAwesomeV6Icon
-          iconName={iconName}
-          iconStyle={iconStyle}
-          className={iconClassName}
-        />
-        <Typography variant="body4">{file.name}</Typography>
-      </div>
+        <div
+          ref={labelRef}
+          className={moduleStyles.label}
+          onClick={() => handleOnClick(file.id)}
+          {...attributes}
+          {...listeners}
+          onKeyDown={handleLabelKeyDown}
+        >
+          <FontAwesomeV6Icon
+            iconName={iconName}
+            iconStyle={iconStyle}
+            className={iconClassName}
+          />
+          <Typography variant="body4">{file.name}</Typography>
+        </div>
+      </Tooltip>
       <CloseButton
         onClick={() => dispatch(closeFileThunk(file.id))}
         color={'light'}
