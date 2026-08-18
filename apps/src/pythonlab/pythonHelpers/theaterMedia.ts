@@ -3,8 +3,7 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {TheaterSignalType} from '@cdo/apps/miniApps/theater/constants';
 
 // Turns the gif bytes a student's program rendered into an object URL and hands
-// it to the theater mini app. Java Lab reaches the same mini app with a signed
-// S3 url; in Python Lab the gif never leaves the browser.
+// it to the theater mini app.
 export function handleTheaterMedia(gif: Uint8Array<ArrayBuffer>) {
   const theater = CodebridgeRegistry.getInstance().getTheater();
   if (!theater) {

@@ -20,7 +20,6 @@ import {
 import {MessageType} from './types';
 
 let pyodide: PyodideInterface;
-
 async function loadPyodideAndPackages() {
   pyodide = await loadPyodide({
     // /assets does not serve unhashed files, so we load from /blockly instead,

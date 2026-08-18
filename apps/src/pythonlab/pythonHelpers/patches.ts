@@ -68,9 +68,6 @@ export const theaterBridgeModule = {
 // postMessage cannot clone the proxy itself, and the buffer it hands us is a view
 // into the interpreter's heap, so the copy has to happen before release.
 function copyProxyBytes(proxy: PyBuffer) {
-  // 'u8' pins the view to bytes rather than letting pyodide infer a wider
-  // element type from the format string. getBuffer's return type keeps the whole
-  // TypedArray union regardless, hence the assertion.
   const buffer = proxy.getBuffer('u8');
   try {
     return new Uint8Array(buffer.data as Uint8Array);

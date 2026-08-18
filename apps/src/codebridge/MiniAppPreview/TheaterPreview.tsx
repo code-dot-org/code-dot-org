@@ -45,7 +45,7 @@ const TheaterPreview: React.FunctionComponent = () => {
     // Ensure any running program is stopped and the theater is reset
     // to avoid leaks.
     // Drop the registry's reference on unmount; otherwise a later
-    // stop could onStop() on this theater after its DOM is gone.
+    // stop could call onStop() on this theater after its DOM is gone.
     return () => {
       theater.onStop();
       theater.reset();
