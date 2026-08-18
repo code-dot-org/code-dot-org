@@ -18,7 +18,12 @@ export interface QuizQuestionFormValues {
   correctChoiceId: string;
 }
 
-const EMPTY_CHOICE = (): QuizChoice => ({id: '', text: ''});
+const EMPTY_CHOICE = (): QuizChoice => ({
+  id: crypto.randomUUID(),
+  text: '',
+});
+
+const letterForIndex = (index: number) => String.fromCharCode(97 + index);
 
 interface QuizQuestionFormProps {
   // Omitted when creating a new question.
@@ -55,18 +60,18 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
   );
   const [error, setError] = useState<string | null>(null);
 
-  const updateChoiceText = (index: number, text: string) =>
+  const updateChoiceText = (id: string, text: string) =>
     setChoices(prev =>
-      prev.map((choice, i) => (i === index ? {...choice, text} : choice))
+      prev.map(choice => (choice.id === id ? {...choice, text} : choice))
     );
 
   const addChoice = () => setChoices(prev => [...prev, EMPTY_CHOICE()]);
 
-  const removeChoice = (index: number) => {
-    setChoices(prev => prev.filter((_, i) => i !== index));
-    // Choice ids are positional (see below), so removing one shifts every
-    // later id - simplest safe thing is to make the levelbuilder re-pick.
-    setCorrectChoiceId('');
+  const removeChoice = (id: string) => {
+    setChoices(prev => prev.filter(choice => choice.id !== id));
+    if (id === correctChoiceId) {
+      setCorrectChoiceId('');
+    }
   };
 
   const handleSave = async () => {
@@ -90,19 +95,21 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
       return;
     }
 
-    // Choice ids just need to be stable/unique within this question - letter
-    // them positionally (a, b, c...) rather than asking the levelbuilder to
-    // invent ids themselves.
+    // Letter ids positionally (a, b, c...) on persist; map the selected
+    // row so correctChoiceId still points at the same choice.
     const lettered = choices.map((choice, index) => ({
       ...choice,
-      id: String.fromCharCode(97 + index),
+      id: letterForIndex(index),
     }));
+    const selectedIndex = choices.findIndex(
+      choice => choice.id === correctChoiceId
+    );
 
     const saveError = await onSave({
       questionName,
       stem,
       choices: lettered,
-      correctChoiceId,
+      correctChoiceId: lettered[selectedIndex]?.id ?? '',
     });
     if (saveError) {
       setError(saveError);
@@ -148,23 +155,23 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
         </Typography>
         <div className={styles.optionList}>
           {choices.map((choice, index) => {
-            const choiceId = String.fromCharCode(97 + index);
+            const choiceLetter = letterForIndex(index);
             return (
-              <div key={index} className={styles.optionRow}>
+              <div key={choice.id} className={styles.optionRow}>
                 <RadioButton
-                  checked={correctChoiceId === choiceId}
+                  checked={correctChoiceId === choice.id}
                   name="correctChoice"
-                  value={choiceId}
-                  ariaLabel={`Mark choice ${choiceId} as correct`}
-                  onChange={() => setCorrectChoiceId(choiceId)}
+                  value={choice.id}
+                  ariaLabel={`Mark choice ${choiceLetter} as correct`}
+                  onChange={() => setCorrectChoiceId(choice.id)}
                 />
                 <div className={styles.optionField}>
                   <TextField
-                    name={`choice-${index}`}
+                    name={`choice-${choice.id}`}
                     size="s"
                     value={choice.text}
-                    placeholder={`Choice ${choiceId}`}
-                    onChange={e => updateChoiceText(index, e.target.value)}
+                    placeholder={`Choice ${choiceLetter}`}
+                    onChange={e => updateChoiceText(choice.id, e.target.value)}
                   />
                 </div>
                 {choices.length > 2 && (
@@ -174,7 +181,7 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
                       color="secondary"
                       size="small"
                       type="button"
-                      onClick={() => removeChoice(index)}
+                      onClick={() => removeChoice(choice.id)}
                     >
                       Remove
                     </MuiButton>
