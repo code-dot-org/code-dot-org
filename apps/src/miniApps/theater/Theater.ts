@@ -133,8 +133,8 @@ export default class Theater extends MiniApp {
   //
   // Java Lab sources are remote urls, cache-busted so a rerun re-fetches rather
   // than reusing the previous run's file. Python Lab renders in the browser and
-  // passes a blob: url, which must be used verbatim -- a query suffix is not
-  // part of a registered object url -- and revoked once dropped, or it is held
+  // passes a blob: url, which must be used verbatim (a query suffix is not
+  // part of a registered object url) and revoked once dropped, or it is held
   // for the life of the page.
   private setElementSource(
     element: HTMLImageElement | HTMLAudioElement,

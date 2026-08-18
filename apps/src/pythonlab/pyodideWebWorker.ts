@@ -20,12 +20,9 @@ import {
 import {MessageType} from './types';
 
 let pyodide: PyodideInterface;
-// The id of the run currently executing, so messages the running program
-// produces out-of-band (theater media) can be attributed to it.
-let currentRunId = 'none';
 // Validation imports the student's main file, so a program that plays a theater
 // scene would paint the stage in the middle of a validation run. Suppress
-// publishing for the duration, matching how neighborhood output is suppressed.
+// publishing for the duration.
 let suppressTheaterMedia = false;
 
 async function loadPyodideAndPackages() {
@@ -67,7 +64,7 @@ async function loadPyodideAndPackages() {
       postMessage({
         type: 'theater_media',
         gif: gifBytes,
-        id: currentRunId,
+        id: 'none', // id is not used here, so none is safe
       });
     },
   };
@@ -126,7 +123,6 @@ onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
   const {id, python, source, validationFile} = event.data;
-  currentRunId = id;
   suppressTheaterMedia = !!validationFile;
   let results = undefined;
   let sourceToWrite = source;

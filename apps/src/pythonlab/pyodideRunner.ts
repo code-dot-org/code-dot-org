@@ -79,8 +79,6 @@ export async function runPythonCode(
       CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
     }
     if (isTheaterLevel()) {
-      // Hide the previous run's gif and restart the theater's wait for this
-      // run's load events.
       CodebridgeRegistry.getInstance().getTheater()?.reset();
     }
     // We only send all output to the neighborhood if this is a neighborhood level and
