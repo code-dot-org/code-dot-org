@@ -87,6 +87,7 @@ export default class Theater extends MiniApp {
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
+  private hasMedia: boolean;
   private readonly imageSource: TrackedSource;
   private readonly audioSource: TrackedSource;
 
@@ -108,6 +109,7 @@ export default class Theater extends MiniApp {
     this.loadEventsFinished = 0;
     this.prompterUploadUrl = null;
     this.hasAudio = false;
+    this.hasMedia = false;
     this.imageSource = new TrackedSource(() => this.getImgElement());
     this.audioSource = new TrackedSource(() => this.getAudioElement());
   }
@@ -117,6 +119,7 @@ export default class Theater extends MiniApp {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
         this.hasAudio = true;
+        this.hasMedia = true;
         this.audioSource.set(data.detail.url);
         const audioElement = this.getAudioElement();
         if (audioElement) {
@@ -126,6 +129,7 @@ export default class Theater extends MiniApp {
       }
       case TheaterSignalType.VISUAL_URL: {
         // Preload the image. Once it's ready, start the playback
+        this.hasMedia = true;
         this.imageSource.set(data.detail.url);
         const imageElement = this.getImgElement();
         if (imageElement) {
@@ -190,18 +194,20 @@ export default class Theater extends MiniApp {
     this.audioSource.clear();
     this.imageSource.clear();
     this.hasAudio = false;
+    this.hasMedia = false;
+  }
+
+  // Whether the program handed the theater anything to play.
+  hasOutput() {
+    return this.hasMedia;
   }
 
   getImgElement() {
-    return document.getElementById(
-      THEATER_IMAGE_ID
-    ) as HTMLImageElement | null;
+    return document.getElementById(THEATER_IMAGE_ID) as HTMLImageElement | null;
   }
 
   getAudioElement() {
-    return document.getElementById(
-      THEATER_AUDIO_ID
-    ) as HTMLAudioElement | null;
+    return document.getElementById(THEATER_AUDIO_ID) as HTMLAudioElement | null;
   }
 
   onClose() {

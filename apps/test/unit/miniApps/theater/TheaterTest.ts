@@ -178,6 +178,26 @@ describe('Theater', () => {
     expect(revokeSpy).not.toHaveBeenCalled();
   });
 
+  it('reports output only after media arrives, until the next reset', () => {
+    theater.startPlayback = jest.fn();
+    expect(theater.hasOutput()).toBe(false);
+
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    expect(theater.hasOutput()).toBe(true);
+
+    theater.reset();
+    expect(theater.hasOutput()).toBe(false);
+  });
+
+  it('does not report output for a run that only signals NO_AUDIO', () => {
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+
+    expect(theater.hasOutput()).toBe(false);
+  });
+
   it('shows a/v once elements have loaded', () => {
     const url = 'url';
     const audioData = {

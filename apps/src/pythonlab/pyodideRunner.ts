@@ -64,6 +64,9 @@ export async function handleRunClick(
     if (isNeighborhoodLevel()) {
       setProjectThumbnail();
     }
+    if (isTheaterLevel()) {
+      stopTheaterIfNoOutput();
+    }
   }
 }
 
@@ -156,6 +159,19 @@ export async function runAllTests(
     );
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
     await runPythonCode(runStudentTests(), source);
+  }
+}
+
+// A theater run leaves the run button showing stop while the gif plays, since
+// its length is unknown. A program that ended without producing any media --
+// most often because it threw -- has nothing to play, so put the button back.
+// Safe to check here because the sandbox delivers theater media before it
+// reports the run complete.
+function stopTheaterIfNoOutput() {
+  const theater = CodebridgeRegistry.getInstance().getTheater();
+  if (!theater?.hasOutput()) {
+    theater?.reset();
+    getStore().dispatch(setIsRunning(false));
   }
 }
 
