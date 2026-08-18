@@ -51,6 +51,9 @@ spec:
               value: "1"
             - name: CDO_ACTIVE_JOB_BACKEND_ROLLING_RESTART_IN_N_BATCHES
               value: "1"
+            # Without this the preload aborts boot on an empty database.
+            - name: SKIP_SCRIPT_PRELOAD
+              value: "1"
           envFrom:
             - prefix: CDO_
               configMapRef:
@@ -62,14 +65,16 @@ spec:
             - prefix: CDO_
               secretRef:
                 name: cdo-local-secrets
+          # Measured on a kind cluster: the daemon plateaus at 3.2Gi. At 2Gi it
+          # is OOMKilled about six seconds into boot, in a loop.
           resources:
             requests:
               cpu: 1
-              memory: 2Gi
+              memory: 4Gi
               ephemeral-storage: 30Gi
             limits:
               cpu: 1
-              memory: 2Gi
+              memory: 4Gi
               ephemeral-storage: 30Gi
           securityContext:
             allowPrivilegeEscalation: false
