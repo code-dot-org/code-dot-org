@@ -55,6 +55,8 @@ Resources:
                   - iam:CreatePolicyVersion
                   - iam:DeletePolicy
                   - iam:DeletePolicyVersion
+                  - iam:TagRole
+                  - iam:UntagRole
                 NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
               - Effect: Allow
                 Action:
@@ -74,7 +76,6 @@ Resources:
                   # AWS::IAM::Role
                   - iam:CreateRole
                   - iam:PutRolePermissionsBoundary
-                  - iam:TagRole
                   # Managed policies attached to a Role
                   - iam:AttachRolePolicy
                   - iam:DetachRolePolicy
