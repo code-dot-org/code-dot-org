@@ -96,9 +96,11 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       .then(response => response.json())
       .then(data => {
         setAttemptId(data.id);
-        setExpiresAt(data.expiresAt || null);
         if (data.submittedAt) {
           setResult({score: data.score, maxScore: data.maxScore});
+        } else {
+          // Only start a countdown for an attempt that isn't already done.
+          setExpiresAt(data.expiresAt || null);
         }
         setShowIntro(false);
       });
@@ -126,7 +128,6 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           return;
         }
         setAttemptId(data.id);
-        setExpiresAt(data.expiresAt || null);
         // P0 allows only one attempt: if this attempt was already
         // submitted (e.g. the student reloaded the page), restore its
         // result instead of showing an editable quiz again. Either way -
@@ -134,6 +135,9 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         // already got past the intro screen, so skip it.
         if (data.submittedAt) {
           setResult({score: data.score, maxScore: data.maxScore});
+        } else {
+          // only start a countdown for an attempt that isn't already done.
+          setExpiresAt(data.expiresAt || null);
         }
       });
   }, [isAuthoringMode, levelId, scriptId, needsIntroScreen, beginAttempt]);
