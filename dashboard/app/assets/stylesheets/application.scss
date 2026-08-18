@@ -782,6 +782,7 @@ img.video_thumbnail {
   }
 
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
     font-family: FontAwesome;
   }
 }
