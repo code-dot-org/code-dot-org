@@ -14,6 +14,23 @@
   margin-left: 0;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  /* The gap the heading's own margin used to leave below the rule, which now
+   * has to sit outside the border. */
+  margin-bottom: .875rem;
+}
+
+/* The heading's bottom margin would otherwise push the rule away from the
+ * text and throw off the row's vertical centering. */
+.header h2 {
+  margin-bottom: 0;
+}
+
 .header label {
   align-items: center;
 }

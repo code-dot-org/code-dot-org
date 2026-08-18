@@ -9,9 +9,7 @@ import AssetThumbnail, {
   styles as assetThumbnailStyles,
 } from '../code-studio/components/AssetThumbnail';
 import Sounds from '../Sounds';
-import MultiCheckboxSelector, {
-  styles as multiCheckboxStyles,
-} from '../templates/MultiCheckboxSelector';
+import MultiCheckboxSelector from '../templates/MultiCheckboxSelector';
 import color from '../util/color';
 
 import * as applabConstants from './constants';
@@ -20,6 +18,7 @@ import {
   importableScreenShape,
   importableProjectShape,
 } from './import';
+import moduleStyles from './importScreensDialog.module.css';
 import {toggleImportScreen, importIntoProject} from './redux/screens';
 
 const SCALE = 0.1;
@@ -203,6 +202,7 @@ export class ImportScreensDialog extends React.Component {
                 style={styles.section}
                 header="Screens"
                 items={importableScreens}
+                itemLabel={screen => screen.id}
                 selected={this.state.selectedScreens}
                 onChange={selectedScreens => this.setState({selectedScreens})}
                 itemPropName="screen"
@@ -216,6 +216,7 @@ export class ImportScreensDialog extends React.Component {
                 style={styles.section}
                 header="Other Assets"
                 items={this.props.project.otherAssets}
+                itemLabel={asset => asset.filename}
                 selected={this.state.selectedAssets}
                 onChange={selectedAssets => this.setState({selectedAssets})}
                 itemPropName="asset"
@@ -229,11 +230,21 @@ export class ImportScreensDialog extends React.Component {
             )}
             {nonImportableScreens.length > 0 && (
               <div style={styles.section}>
-                <h2 style={multiCheckboxStyles.header}>Cannot Import</h2>
-                <p style={styles.subtext}>{IMPORT_FAILURE_MESSAGE}</p>
-                <ul style={multiCheckboxStyles.list}>
+                <MuiTypography
+                  variant="h3"
+                  component="h2"
+                  sx={{
+                    borderBottom: '1px solid var(--borders-neutral-primary)',
+                  }}
+                >
+                  Cannot Import
+                </MuiTypography>
+                <MuiTypography variant="body2">
+                  {IMPORT_FAILURE_MESSAGE}
+                </MuiTypography>
+                <ul className={moduleStyles.list}>
                   {nonImportableScreens.map(screen => (
-                    <li key={screen.id} style={multiCheckboxStyles.listItem}>
+                    <li key={screen.id} className={moduleStyles.listItem}>
                       <ScreenListItem screen={screen} />
                     </li>
                   ))}
