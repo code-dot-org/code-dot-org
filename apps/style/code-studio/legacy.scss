@@ -1,9 +1,15 @@
+/**
+ * Legacy styles imported from Dashboard's application.scss
+ *
+ * Avoid adding new application-wide styles here, if possible; it's generally
+ * better to create a new file per style scope.
+ */
 @import "color";
 @import "font";
 @import "mixins";
 @import "style-constants";
 @import "brand-selectors";
-@import "NpsSurveyBlock";
+@import "./legacy/NpsSurveyBlock";
 
 // Bootstrap Variables
 $font-family-base: $main-font;
