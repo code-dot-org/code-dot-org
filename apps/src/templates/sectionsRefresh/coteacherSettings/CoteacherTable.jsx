@@ -1,9 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {
+  Typography,
+  IconButton as MuiIconButton,
+  Tooltip as MuiTooltip,
+} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactTooltip from 'react-tooltip';
 
 import i18n from '@cdo/locale';
 
@@ -11,14 +14,18 @@ import styles from './coteacher-settings.module.scss';
 
 const getPendingPill = () => {
   return (
-    <span>
-      <div
-        className={classNames(styles.tablePending, styles.tablePill)}
-        data-tip
-        data-event="mouseenter focus"
-        data-event-off="mouseleave blur"
-        data-for={'pending-tooltip'}
-      >
+    // The bubble's text metrics, colors and max-width come from the theme's
+    // MuiTooltip override, so the trigger passes only the text and placement.
+    // `placement` is explicit because the theme's default is `bottom` and this
+    // call site sat above the pill under react-tooltip.
+    <MuiTooltip title={i18n.coteacherPendingTooltip()} placement="top">
+      {/* Hover/touch only, as before: the pill is a status, not a control, so
+          it takes no tab stop and the theme's describeChild wiring has nothing
+          to announce to a keyboard user. react-tooltip asked for `focus` here
+          too, but a bare div never receives it, so nothing changes.
+          Making the hint keyboard-reachable means giving the pill a real
+          interactive trigger -- see the InfoTooltipIcon button pattern. */}
+      <div className={classNames(styles.tablePending, styles.tablePill)}>
         <Typography variant="strong">
           <FontAwesomeV6Icon
             iconName={'ellipsis'}
@@ -27,18 +34,7 @@ const getPendingPill = () => {
           {i18n.coteacherPending()}
         </Typography>
       </div>
-      <ReactTooltip
-        id={'pending-tooltip'}
-        role="tooltip"
-        effect="solid"
-        place="top"
-        className={styles.tableToolTipText}
-      >
-        <Typography variant="body3" component="span">
-          {i18n.coteacherPendingTooltip()}
-        </Typography>
-      </ReactTooltip>
-    </span>
+    </MuiTooltip>
   );
 };
 
