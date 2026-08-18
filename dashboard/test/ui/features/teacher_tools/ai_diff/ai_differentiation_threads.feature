@@ -62,7 +62,7 @@ Feature: Read and create AI diff threads
     Then I see no difference for "ai diff threads display old thread"
 
     # Clicking "suggest prompts" gives another set of prompts
-    And I click selector "button:contains(Suggest prompts)"
+    And I click selector "button[aria-label='Suggest prompts']"
     And I click selector "button:contains(Create)"
     And I click selector "button:contains(Write a lesson hook)" once I see it
     And I wait until I see 2 of jquery selector p:contains(Lorem ipsum)
