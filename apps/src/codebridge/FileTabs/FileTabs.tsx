@@ -158,12 +158,14 @@ export const FileTabs = React.memo(() => {
         }}
       >
         <SortableContext items={files} strategy={horizontalListSortingStrategy}>
-          {files.map(f => (
+          {files.map((f, index) => (
             <FileTab
               file={f}
               key={f.id}
               isDragging={f.id === draggingFileId}
               onKeyDown={event => handleTabActivation(event, f.id)}
+              // Once per tab row is enough; the hint is the same on every tab.
+              showReorderHint={index === 0}
             />
           ))}
           <DragOverlay>
