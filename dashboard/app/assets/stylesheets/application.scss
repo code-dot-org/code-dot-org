@@ -3254,7 +3254,6 @@ a.download-video {
   background-color: $charcoal;
   color: $white;
   font-size: 13px;
-  padding-right: 10px;
 
   @include main-font-regular;
   padding: 10px;
@@ -3378,7 +3377,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
     // A single answer button.
     .answerbutton {
       clear: both;
-      margin-left: $multi-left-margin;
       color: var(--text-neutral-primary);
       background-color: transparent;
       background-image: none;
