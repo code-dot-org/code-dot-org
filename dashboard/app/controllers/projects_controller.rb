@@ -452,6 +452,7 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
+    brand_name = Cdo::Brand.legal_name(request)
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
@@ -463,7 +464,7 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game&.uses_small_footer? || @level&.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
-      app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
+      app_name: Rails.env.production? ? brand_name : "#{brand_name} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
       disallowed_html_tags: disallowed_html_tags,
       disallowed_html_attrs: disallowed_html_attrs
@@ -523,22 +524,33 @@ class ProjectsController < ApplicationController
     src_channel_id = params[:channel_id]
     project_type = params[:key]
     return head :forbidden if Projects.in_restricted_share_mode(src_channel_id, project_type)
-
-    new_channel_id = remix_project(src_channel_id, project_type)
+    return head :forbidden if abuse_score_blocks_remix?(src_channel_id)
 
     project = Projects.new(get_storage_id)
     src_project = project.get(src_channel_id)
 
+    # Validate BubbleChoice subprojects before remixing parent or children,
+    # so a forbidden subproject does not leave orphaned remix channels.
+    bubble_choice_subprojects = nil
+    if src_project["subprojects"] && @level.is_a?(BubbleChoice)
+      bubble_choice_subprojects = src_project["subprojects"].first(SharedConstants::BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS)
+      bubble_choice_subprojects.each do |entry|
+        subproject_src_channel_id = entry['channel_id']
+        subproject = project.get(subproject_src_channel_id)
+        subproject_type = subproject["projectType"]
+        return head :forbidden if Projects.in_restricted_share_mode(subproject_src_channel_id, subproject_type)
+        return head :forbidden if abuse_score_blocks_remix?(subproject_src_channel_id)
+      end
+    end
+
+    new_channel_id = remix_project(src_channel_id, project_type)
+
     if src_project["subprojects"]
-      if @level.is_a?(BubbleChoice)
-        # Only process a reasonable number of subprojects.
-        sub_projects = src_project["subprojects"].first(SharedConstants::BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS)
-        # Remix each subproject and update the parent channel.
-        new_subprojects = sub_projects.map do |entry|
+      if bubble_choice_subprojects
+        new_subprojects = bubble_choice_subprojects.map do |entry|
           subproject_src_channel_id = entry['channel_id']
           subproject = project.get(subproject_src_channel_id)
           subproject_type = subproject["projectType"]
-          return head :forbidden if Projects.in_restricted_share_mode(subproject_src_channel_id, subproject_type)
           new_subproject_channel_id = remix_project(subproject_src_channel_id, subproject_type, is_subproject: true)
           {level_id: entry['level_id'], channel_id: new_subproject_channel_id}
         end
@@ -549,7 +561,7 @@ class ProjectsController < ApplicationController
           request.ip
         )
       else
-        # Remove subprojects entirely for non-music_dance_ai project types.
+        # Remove subprojects entirely for non-BubbleChoice project types.
         value = project.get(new_channel_id)
         value.delete("subprojects")
         project.update(new_channel_id, value, request.ip)
@@ -766,6 +778,12 @@ class ProjectsController < ApplicationController
   # For certain actions, check a special permission before proceeding.
   private def authorize_load_project!
     authorize! :load_project, params[:key]
+  end
+
+  # Image-moderation (and other) flags raise abuse_score to the threshold;
+  # do not allow remixing those projects, including by the owner.
+  private def abuse_score_blocks_remix?(channel_id)
+    Projects.get_abuse(channel_id).to_i >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD
   end
 
   # Redirect to the correct view/edit page for Lab2 projects. If a project owner is on a /view

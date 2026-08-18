@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-06-26T19:33:24.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## You as Pilot. AI as Co-Pilot.\r\n\r\nOn this level:\r\n- **You** will act as the **pilot**, making all the updates to the social media post yourself.\r\n- **AI Chat** will act as a **co-pilot**, giving you suggestions to improve your social media post.\r\n\r\n### Do This:\r\n\r\n1. Input the **social media** you recorded in your activity guide into AI Chat.\r\n2. **Pick which area you want AI give you suggestions** on how to improve your post.\r\n    * Clarity – Is it easy to understand?\r\n\t* Engagement – Does it capture interest?\r\n\t* Originality – Does it feel unique?\"\r\n   \r\n_Note: **DO NOT ask AI to revise** the content for you—only ask for **ideas and suggestions**._\r\n3. **Revise your original post** based on the feedback and any suggestions you want to implement from the AI and **record it in your Activity Guide**.\r\n    - *Note: it is fine if you don’t want to implement any of AI’s suggestions. Just make sure to note this in your activity guide and reasons why.*\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Struggling with creating your post?**]\r\nHere are some examples of what your social media post might look like:\r\n- **Event Promotion**\r\n    - _Example: 🎭 Don’t miss our spring play “The Curious Incident of the Dog in the Night-Time” this Friday at 7PM in the auditorium. Tickets on sale now! #SchoolTheater #SupportTheArts_\r\n- **Celebrations and Recognitions**\r\n    - _Example: 👏 Huge congrats to Maya R. for winning 1st place at the district science fair! We’re proud of your hard work and creativity. #StudentSpotlight #ProudSchool_\r\n- **Awareness**\r\n    - _Example: 🧠 Feeling overwhelmed? Our counselors are here for you. Drop by the counseling office or check our wellness resources online. #MentalHealthMatters #YouAreNotAlone_\r\n- **Outreach and Recruitment**\r\n    - *Example: 💬 “The best part of our school is __________.”\r\nFuture students want to know—drop your answer below! 👇 #WhyOurSchool #FutureTigers*\r\n\r\n:::",
+    "long_instructions": "## You as Pilot. AI as Co-Pilot.\r\n\r\nOn this level:\r\n- **You** will act as the **pilot**, making all the updates to the social media post yourself.\r\n- **AI Chat** will act as a **co-pilot**, giving you suggestions to improve your social media post.\r\n\r\n### Do This:\r\n\r\n1. Input the **social media** you recorded in your activity guide into AI Chat.\r\n2. **Pick which area you want AI give you suggestions** on how to improve your post.\r\n    * Clarity – Is it easy to understand?\r\n\t* Engagement – Does it capture interest?\r\n\t* Originality – Does it feel unique?\"\r\n   \r\n_Note: **DO NOT ask AI to revise** the content for you—only ask for **ideas and suggestions**._\r\n3. **Revise your original post** based on the feedback and any suggestions you want to implement from the AI and **record it in your Activity Guide**.\r\n    - *Note: it is fine if you don’t want to implement any of AI’s suggestions. Just make sure to note this in your activity guide and reasons why.*\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Struggling with creating your post?**]\r\nHere are some examples of what your social media post might look like:\r\n- **Event Promotion**\r\n    - _Example: 🎭 Don’t miss our annual school play “The Curious Incident of the Dog in the Night-Time” this Friday at 7PM in the auditorium. Tickets on sale now! #SchoolTheater #SupportTheArts_\r\n- **Celebrations and Recognitions**\r\n    - _Example: 👏 Huge congrats to Maya R. for winning 1st place at the district science fair! We’re proud of your hard work and creativity. #StudentSpotlight #ProudSchool_\r\n- **Awareness**\r\n    - _Example: 🧠 Feeling overwhelmed? Our counselors are here for you. Drop by the counseling office or check our wellness resources online. #MentalHealthMatters #YouAreNotAlone_\r\n- **Outreach and Recruitment**\r\n    - *Example: 💬 “The best part of our school is __________.”\r\nFuture students want to know—drop your answer below! 👇 #WhyOurSchool #FutureTigers*\r\n\r\n:::",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -43,9 +44,11 @@
     "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
     "display_name": "Hospital Triage Nurse",
     "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
-    "name_suffix": "_india-2025"
+    "name_suffix": "_india-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:24.359+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson10-level2_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson10-level2_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:24.359+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson10-level2_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson10-level2_2025\"},{\"changed_at\":\"2026-07-31 06:50:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"},{\"changed_at\":\"2026-07-31 06:51:15 +0000\",\"changed\":[],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

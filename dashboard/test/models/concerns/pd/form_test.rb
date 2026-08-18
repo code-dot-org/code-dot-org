@@ -5,7 +5,7 @@ class DummyForm < ApplicationRecord
 end
 
 # DummyForm and its subclasses are backed by an ad-hoc `dummy_forms` table that
-# exists only for these tests. Two things about it are deliberate:
+# exists only for these tests. Three things about it are deliberate:
 #
 #   * Permanent, not temporary. A MySQL temporary table lives only for the
 #     connection that created it, and this codebase swaps the active
@@ -22,6 +22,7 @@ end
 #     fixture transaction and defeat the rollback that isolates each test. File
 #     load runs before any transaction opens, and the table only needs creating
 #     once.
+#   * Excluded from schema dumps. See dashboard/config/environment.rb.
 ActiveRecord::Base.connection.create_table(:dummy_forms, if_not_exists: true) do |t|
   t.string :form_data
 end
@@ -88,6 +89,12 @@ class DummyFormWithDynamicOptions < DummyForm
 end
 
 class Pd::FormTest < ActiveSupport::TestCase
+  # See the comment on create_table above: without this exclusion the table
+  # this file creates shows up as a spurious db/schema.rb diff.
+  test 'dummy_forms is left out of schema dumps' do
+    assert_includes ActiveRecord::SchemaDumper.ignore_tables, 'dummy_forms'
+  end
+
   test 'pd form requires form data' do
     form = DummyForm.new
     refute form.valid?

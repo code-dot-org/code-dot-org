@@ -1,64 +1,42 @@
-// Self-contained styles for the pixel editor modal. Dark theme to sit
-// comfortably over Lab2's full-screen labs.
+// Self-contained styles for the pixel editor modal, following the page's
+// light/dark theme. The panel chrome is shared with SpriteLab2's image
+// dialog (dialogChrome.scss).
 
-$border-subtle: rgb(255 255 255 / 12%);
+@use './dialogChrome' as chrome;
+
+$border-subtle: chrome.$border-subtle;
 
 // Wraps CustomDialog without affecting layout; the parent selector gives the
 // panel styles below higher specificity than CustomDialog's own class
 // (stylesheet order must not matter).
 .dialogHost {
   display: contents;
+
+  // The host carries data-theme; the chrome colors follow it.
+  @include chrome.theme;
 }
 
 // One high-contrast keyboard focus ring for everything in the dark modal;
-// UA defaults are hard to see against #333a47.
+// UA defaults are hard to see against the panel background.
 .dialogHost .modal :focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
+  @include chrome.focus-ring;
 }
 
 .dialogHost .modal {
-  display: flex;
-  flex-direction: column;
-  max-width: calc(100vw - 32px);
-  max-height: calc(100vh - 32px);
-  border: 1px solid $border-subtle;
-  border-radius: 10px;
-  background-color: #333a47;
-  box-shadow: 0 12px 40px rgb(0 0 0 / 45%);
-  color: #f0f2f6;
   // The panel mounts already at its final size (after the image decodes);
-  // a quick scale-fade makes that arrival feel deliberate.
-  animation: modal-enter 0.14s ease-out;
+  // the chrome's quick scale-fade makes that arrival feel deliberate.
+  @include chrome.panel;
 }
 
 // Screen-reader-only text (the dialog description CustomDialog expects).
 .srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+  @include chrome.sr-only;
 }
 
-@keyframes modal-enter {
-  from {
-    opacity: 0;
-    transform: scale(0.97);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+@include chrome.keyframes;
 
 .header {
-  padding: 12px 16px;
-  border-bottom: 1px solid $border-subtle;
-  font-size: 15px;
-  font-weight: 600;
+  @include chrome.header;
 }
 
 .body {
@@ -116,7 +94,7 @@ $border-subtle: rgb(255 255 255 / 12%);
   border: 1px solid transparent;
   border-radius: 6px;
   background: none;
-  color: #cdd3de;
+  color: var(--dialog-text-secondary);
   cursor: pointer;
 
   // WithTooltip anchors its bubble to the innermost element under the
@@ -131,7 +109,7 @@ $border-subtle: rgb(255 255 255 / 12%);
   }
 
   &:hover:not(:disabled) {
-    background-color: rgb(255 255 255 / 8%);
+    background-color: var(--dialog-hover-bg);
   }
 
   &:disabled {
@@ -141,9 +119,9 @@ $border-subtle: rgb(255 255 255 / 12%);
 }
 
 .toolActive {
-  border-color: rgb(255 255 255 / 35%);
-  background-color: rgb(255 255 255 / 14%);
-  color: #fff;
+  border-color: var(--dialog-control-border-strong);
+  background-color: var(--dialog-active-bg);
+  color: var(--dialog-panel-text);
 }
 
 .toolbarDivider {
@@ -151,7 +129,7 @@ $border-subtle: rgb(255 255 255 / 12%);
   justify-self: stretch;
   height: 1px;
   margin: 4px 0;
-  background-color: rgb(255 255 255 / 15%);
+  background-color: var(--dialog-active-bg);
 }
 
 .brushDot {
@@ -184,7 +162,7 @@ $border-subtle: rgb(255 255 255 / 12%);
   border-radius: 6px;
   // The transparency checkerboard is painted INTO the display canvas (so it
   // can align with the art-pixel grid); the surround stays quiet.
-  background-color: #2b313d;
+  background-color: var(--dialog-inset-bg);
 }
 
 // Shrink-wraps the canvas so the keyboard-cursor overlay positions against
@@ -205,7 +183,7 @@ $border-subtle: rgb(255 255 255 / 12%);
   touch-action: none;
 
   &:focus-visible {
-    outline: 2px solid #fff;
+    outline: 2px solid var(--dialog-focus-ring);
     outline-offset: 3px;
   }
 }
@@ -270,51 +248,19 @@ $border-subtle: rgb(255 255 255 / 12%);
 
 .loadError {
   padding: 40px;
-  color: #ff9d9d;
+  color: var(--dialog-danger-text);
 }
 
 .footer {
-  display: flex;
-  gap: 8px;
-  justify-content: flex-end;
-  padding: 12px 16px;
-  border-top: 1px solid $border-subtle;
+  @include chrome.footer;
 
   button {
-    box-sizing: border-box;
-    height: 34px;
-    margin: 0;
-    padding: 0 18px;
-    border: 1px solid rgb(255 255 255 / 25%);
-    border-radius: 6px;
-    background: none;
-    box-shadow: none;
-    color: #f0f2f6;
-    font-size: 14px;
-    cursor: pointer;
-
-    &:hover:not(:disabled) {
-      background-color: rgb(255 255 255 / 8%);
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      cursor: default;
-    }
+    @include chrome.plain-button;
   }
 }
 
 .savePrimary {
-  // !important: the page's global button CSS (background/box-shadow) has
-  // higher effective specificity inside the modal and bleeds in without it.
-  border-color: transparent;
-  background-color: rgb(255 255 255 / 92%) !important;
-  color: #1b2029 !important;
-  font-weight: 600;
-
-  &:hover:not(:disabled) {
-    background-color: #fff !important;
-  }
+  @include chrome.primary-button;
 }
 
 // Spans both toolbar columns; the popover offset below is measured from its
@@ -341,7 +287,7 @@ $border-subtle: rgb(255 255 255 / 12%);
   height: 30px;
   margin: 0;
   padding: 0;
-  border: 2px solid rgb(255 255 255 / 60%);
+  border: 2px solid var(--dialog-control-border-strong);
   border-radius: 6px;
   cursor: pointer;
 }
@@ -370,13 +316,13 @@ $border-subtle: rgb(255 255 255 / 12%);
   height: 22px;
   margin: 0;
   padding: 0;
-  border: 1px solid rgb(255 255 255 / 45%);
+  border: 1px solid var(--dialog-control-border-strong);
   border-radius: 4px;
   box-shadow: none;
   cursor: pointer;
 
   &:hover {
-    border-color: rgb(255 255 255 / 90%);
+    border-color: var(--dialog-panel-text);
   }
 }
 
@@ -389,9 +335,9 @@ $border-subtle: rgb(255 255 255 / 12%);
   left: calc(100% + 16px);
   z-index: 10;
   padding: 6px;
-  border: 1px solid rgb(255 255 255 / 15%);
+  border: 1px solid var(--dialog-border-subtle);
   border-radius: 8px;
-  background-color: #262c36;
+  background-color: var(--dialog-inset-bg);
   box-shadow: 0 8px 24px rgb(0 0 0 / 45%);
 
   canvas {
@@ -401,7 +347,7 @@ $border-subtle: rgb(255 255 255 / 12%);
     touch-action: none;
 
     &:focus-visible {
-      outline: 2px solid #fff;
+      outline: 2px solid var(--dialog-focus-ring);
       outline-offset: 2px;
     }
   }

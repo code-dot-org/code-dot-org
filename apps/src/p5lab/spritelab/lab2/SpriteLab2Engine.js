@@ -2,6 +2,7 @@ import * as BlocklyCore from 'blockly/core';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -9,9 +10,36 @@ import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {trimAnimationListImages} from './imageTrim';
-import {resolvePlatformPhysics} from './platformPhysics';
+import {
+  CONTACT_EPSILON,
+  isSupported,
+  PLATFORM_GRAVITY,
+  resolvePlatformPhysics,
+} from './platformPhysics';
+import {CELL_SIZE} from './world';
 
 const NOOP = () => {};
+
+// Default sprite size for non-platformer scenes on platform-pool levels;
+// platformer scenes use CELL_SIZE (one grid cell). A later World-tab UI may
+// let the user pick these per scene.
+const STORY_SCENE_SPRITE_SIZE = 300;
+
+// Extra canvas density beyond the device pixel ratio: the canvas is 400
+// logical px and the Playspace transform-scales it to ~900 CSS px on the
+// Play tab, so stock density paints ~2x2 blocks per canvas pixel.
+// Coordinates stay 400-based.
+const CANVAS_DENSITY_FACTOR = 2;
+
+// Markers in a scene's compiled program that make it a platformer: the
+// platform composites and player setup from the toolbox, or the world
+// prelude's wall spawns.
+const PLATFORM_SCENE_MARKERS = [
+  'makePlatformPlayer(',
+  'makePlatformBlocks(',
+  'setAsPlatformPlayer(',
+  "'walls'",
+];
 
 /**
  * Stand-in for the StudioApp singleton: exactly the members the classic
@@ -90,11 +118,66 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
+    // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
+    // classic's ~400px library art: resize once to the canvas's physical
+    // resolution instead of CoreLibrary's logical 400.
+    library.drawBackground = function () {
+      if (typeof this.background === 'string') {
+        this.p5.background(this.background);
+      } else {
+        this.p5.background('white');
+      }
+      if (typeof this.background === 'object') {
+        const size = APP_WIDTH * (this.p5._pixelDensity || 1);
+        if (this.background.width !== size || this.background.height !== size) {
+          this.background.resize(size, size);
+        }
+        this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
+      }
+    };
     if (this.usesPlatformPhysics_) {
-      // Platformer levels size sprites to one grid cell by default (the
-      // legacy library's one load-bearing line).
-      library.defaultSpriteSize = 50;
+      // Sized per SCENE, not per level: one project holds both a platformer
+      // scene (one-cell sprites) and a story scene (large characters).
+      library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
+        ? CELL_SIZE
+        : STORY_SCENE_SPRITE_SIZE;
+      // Landings carry sub-pixel float noise; footing checks must not
+      // compare contact exactly.
+      library.contactEpsilon = CONTACT_EPSILON;
     }
+    // Fresh library = fresh run; gravity returns to the default until a
+    // set-gravity block says otherwise. Negative flips the world: players
+    // fall up and land on block undersides and the view's top edge.
+    this.platformGravity_ = PLATFORM_GRAVITY;
+    library.commands.setPlatformGravity = value => {
+      this.platformGravity_ = Number(value) || 0;
+    };
+    // Move existing sprites (e.g. world-placed ones) into the players
+    // group; the per-frame resolver picks them up from there.
+    library.commands.setPlatformPlayer = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.group = 'players';
+      });
+    };
+    // Jump against gravity if any player has support in the gravity
+    // direction (the resolver's own footing geometry, so it agrees with
+    // where players actually rest).
+    library.commands.platformJump = speed => {
+      const p5 = this.p5Wrapper.p5;
+      const players = library.getSpriteArray({group: 'players'});
+      const walls = library.getSpriteArray({group: 'walls'});
+      const view = {width: p5.width, height: p5.height};
+      const grounded = players.some(sprite =>
+        isSupported(sprite, walls, view, this.platformGravity_)
+      );
+      if (!grounded) {
+        return;
+      }
+      const up = this.platformGravity_ < 0 ? 1 : -1;
+      players.forEach(sprite => {
+        sprite.velocity.y = up * Math.abs(Number(speed) || 0);
+      });
+    };
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
@@ -217,6 +300,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.userCode = code || '';
   }
 
+  sceneLooksLikePlatformer_() {
+    const code = this.userCode || '';
+    return PLATFORM_SCENE_MARKERS.some(marker => code.includes(marker));
+  }
+
   /** Run the given compiled JS program from scratch (creates/recreates p5). */
   run(code) {
     if (code !== undefined) {
@@ -285,6 +373,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     super.onP5Setup();
+    const p5 = this.p5Wrapper.p5;
+    const density = Math.ceil(
+      CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
+    );
+    if (p5 && p5._renderer && p5.pixelDensity() !== density) {
+      p5.pixelDensity(density);
+    }
     this.executeInFlight_ = false;
     if (this.rerunAfterExecute_) {
       this.rerunAfterExecute_ = false;
@@ -420,7 +515,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       {
         width: p5.width,
         height: p5.height,
-      }
+      },
+      this.platformGravity_
     );
   }
 

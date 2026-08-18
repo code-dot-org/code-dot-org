@@ -1,0 +1,219 @@
+import io
+
+import pytest
+from PIL import Image as PILImage
+
+import theater
+from theater import Image, Scene
+from theater.support.constants import (
+  MAX_FRAMES,
+  MAX_PAUSE_SECONDS,
+  MIN_PAUSE_SECONDS,
+  THEATER_HEIGHT,
+  THEATER_WIDTH,
+)
+from theater.support.renderer import PauseTooLongError, TooManyFramesError, render
+
+
+def test_scene_records_actions():
+  scene = Scene()
+  scene.draw_rectangle(10, 10, 50, 50)
+  scene.pause(1)
+  assert len(scene.get_actions()) == 2
+  assert scene.get_width() == THEATER_WIDTH
+  assert scene.get_height() == THEATER_HEIGHT
+
+
+def test_pause_produces_multiframe_gif():
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.draw_rectangle(0, 0, 100, 100)
+  scene.pause(0.5)
+  scene.set_fill_color("blue")
+  scene.draw_rectangle(200, 200, 100, 100)
+  scene.pause(0.5)
+  # A final draw with no trailing pause is captured by the closing frame.
+  scene.set_fill_color("green")
+  scene.draw_rectangle(100, 100, 50, 50)
+  gif_bytes = render(scene.get_actions())
+
+  gif = PILImage.open(io.BytesIO(gif_bytes))
+  assert gif.size == (THEATER_WIDTH, THEATER_HEIGHT)
+  # Frame after each pause, plus the distinct closing frame.
+  assert gif.n_frames == 3
+
+
+def test_gif_only_when_no_pause_is_single_frame():
+  scene = Scene()
+  scene.draw_ellipse(10, 10, 50, 50)
+  gif_bytes = render(scene.get_actions())
+  gif = PILImage.open(io.BytesIO(gif_bytes))
+  assert gif.n_frames == 1
+
+
+def test_draw_text_renders():
+  scene = Scene()
+  scene.set_text_color("black")
+  scene.draw_text("Hi", 50, 50)
+  gif_bytes = render(scene.get_actions())
+  assert len(gif_bytes) > 0
+
+
+def _paused_scene(pause_count):
+  # Each frame must differ; Pillow collapses runs of identical gif frames.
+  scene = Scene()
+  for i in range(pause_count):
+    scene.set_fill_color(theater.Color(i % 256, i // 256, 0))
+    scene.draw_rectangle(0, 0, 10, 10)
+    scene.pause(0.1)
+  # A distinct closing frame, which otherwise collapses into the last pause.
+  scene.set_fill_color("white")
+  scene.draw_rectangle(0, 0, 10, 10)
+  return scene
+
+
+def test_frame_ceiling_allows_a_full_length_animation():
+  # One pause short of the ceiling, since the closing frame occupies a slot.
+  gif = PILImage.open(io.BytesIO(render(_paused_scene(MAX_FRAMES - 1).get_actions())))
+  assert gif.n_frames == MAX_FRAMES
+
+
+def test_too_many_pauses_raises():
+  with pytest.raises(TooManyFramesError):
+    render(_paused_scene(MAX_FRAMES).get_actions())
+
+
+def test_frame_ceiling_is_checked_before_drawing():
+  # A malformed shape raises from the drawing pass, so getting the frame-count
+  # error instead proves nothing was drawn first.
+  scene = _paused_scene(MAX_FRAMES)
+  scene.draw_shape([0, 0, 10], True)
+  with pytest.raises(TooManyFramesError):
+    render(scene.get_actions())
+
+
+def test_removed_colors_draw_nothing():
+  # Pillow's default ink is opaque white, so handing it no color at all draws a
+  # white shape rather than nothing. Clearing to blue makes that visible.
+  blue = (0, 0, 255)
+  scene = Scene()
+  scene.clear("blue")
+  scene.remove_stroke_color()
+  scene.remove_fill_color()
+  scene.draw_line(0, 10, THEATER_WIDTH, 10)
+  scene.draw_rectangle(50, 50, 100, 100)
+  scene.draw_ellipse(50, 200, 100, 100)
+  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  # A point on the line, on the rectangle's edge, and inside the ellipse.
+  assert frame.getpixel((100, 10)) == blue
+  assert frame.getpixel((50, 50)) == blue
+  assert frame.getpixel((100, 250)) == blue
+
+
+def test_stroke_only_shapes_keep_their_interior():
+  scene = Scene()
+  scene.clear("blue")
+  scene.set_stroke_color("red")
+  scene.remove_fill_color()
+  scene.draw_rectangle(50, 50, 100, 100)
+  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  assert frame.getpixel((50, 50)) == (255, 0, 0)
+  assert frame.getpixel((100, 100)) == (0, 0, 255)
+
+
+def _single_frame_scene(build_pauses):
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+  build_pauses(scene)
+  return PILImage.open(io.BytesIO(render(scene.get_actions())))
+
+
+@pytest.mark.parametrize("seconds", [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000])
+def test_out_of_range_pause_raises_at_the_call(seconds):
+  # A gif delay is 16 bits of centiseconds, so a student who meant milliseconds
+  # would otherwise overflow that field inside Pillow.
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.pause(seconds)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+@pytest.mark.parametrize("seconds", [MIN_PAUSE_SECONDS, 1.5, MAX_PAUSE_SECONDS])
+def test_pause_accepts_the_whole_documented_range(seconds):
+  gif = _single_frame_scene(lambda scene: scene.pause(seconds))
+  assert gif.info["duration"] == int(round(seconds * 1000))
+
+
+def test_long_animation_is_not_capped_by_total_duration():
+  # Only a single frame's delay is bounded, never the animation's total, so
+  # frames that differ still encode however long they run.
+  scene = Scene()
+  for i in range(4):
+    scene.set_fill_color(theater.Color(i * 20, 0, 0))
+    scene.draw_rectangle(0, 0, 50, 50)
+    scene.pause(MAX_PAUSE_SECONDS)
+  gif = PILImage.open(io.BytesIO(render(scene.get_actions())))
+  assert gif.n_frames == 4
+  assert gif.info["duration"] == int(MAX_PAUSE_SECONDS * 1000)
+
+
+def test_pauses_accumulating_on_one_picture_raise():
+  # Pillow folds a frame identical to its predecessor into that earlier frame,
+  # summing the delays, so clamping each pause alone does not bound the field.
+  # Each pause is long enough to overflow well inside the frame ceiling, which
+  # would otherwise be the error that fires.
+  seconds_each = 2
+  pause_count = int(MAX_PAUSE_SECONDS / seconds_each) + 1
+  assert pause_count < MAX_FRAMES
+  with pytest.raises(PauseTooLongError):
+    _single_frame_scene(
+      lambda scene: [scene.pause(seconds_each) for _ in range(pause_count)]
+    )
+
+
+@pytest.mark.parametrize("sides", [0, 1, 2, -3])
+def test_too_few_polygon_sides_raises_at_the_draw_call(sides):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_regular_polygon(200, 200, sides, 50)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+def test_draw_regular_polygon_accepts_float_sides():
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.draw_regular_polygon(200, 200, 12 / 2, 50)
+  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  assert frame.getpixel((200, 200)) == (255, 0, 0)
+
+
+def test_draw_image_accepts_float_geometry():
+  # Ordinary student arithmetic like 400 / 2 yields floats, which Pillow's
+  # resize and paste reject outright.
+  image = Image(20, 20)
+  image.clear(theater.Color("red"))
+  scene = Scene()
+  scene.draw_image(image, 400 / 2, 100 / 2, size=60 / 2)
+  scene.draw_image(image, 10.5, 10.5, width=30.5, height=30.5)
+  scene.draw_image(image, 300 / 2, 50.5, size=40.5, rotation=45)
+  gif_bytes = render(scene.get_actions())
+  assert len(gif_bytes) > 0
+
+
+def test_draw_image_lands_at_rounded_position():
+  image = Image(10, 10)
+  image.clear(theater.Color("red"))
+  scene = Scene()
+  scene.draw_image(image, 20.6, 30.6, size=10)
+  frame = PILImage.open(io.BytesIO(render(scene.get_actions()))).convert("RGB")
+  assert frame.getpixel((21, 31)) == (255, 0, 0)
+  assert frame.getpixel((20, 30)) == (255, 255, 255)
+
+
+def test_play_scenes_renders_and_returns_bytes():
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+  gif_bytes = theater.play_scenes(scene)
+  assert len(gif_bytes) > 0

@@ -740,7 +740,7 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2025_v1.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2026.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
@@ -1144,7 +1144,14 @@ module SharedConstants
 
   ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
     'picsum.photos', # Placeholder images - Public API
-    'images.code.org' # Code.org hosted images - Public API
+    'images.code.org', # Code.org hosted images - Public API
+    'upload.wikimedia.org' # Wikimedia-hosted images used in curriculum
+  ].freeze
+
+  # Audio hosts the media proxy will relay. Unlike the image list, this does not
+  # feed any Content Security Policy.
+  ALLOWED_AUDIO_HOSTNAME_SUFFIXES = [
+    'nationalanthems.info' # Anthems in the Countries and Territories dataset - Public API
   ].freeze
 
   ALLOWED_FONT_HOSTNAMES = [

@@ -5,7 +5,10 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
+require 'cdo/safe_http'
+require 'net/http'
 require 'stringio'
+require 'uri'
 require 'nokogiri'
 
 # Rack's built-in mime type table doesn't include some extensions we serve.
@@ -1000,6 +1003,96 @@ class FilesApi < Sinatra::Base
   THUMBNAIL_FILENAME = 'thumbnail.png'
   METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
 
+  # Assets-bucket metadata: which AssetManager upload was accepted after a
+  # flagged moderation verdict (at most one; further uploads are disabled).
+  # Uses "metadata/" (no leading dot) — ".metadata/" is flaky through some
+  # local proxies; files-bucket thumbnails keep ".metadata/" separately.
+  # The flagged *asset* name is in the JSON body, not the URL.
+  ASSETS_METADATA_PATH = 'metadata'.freeze
+  ASSETS_METADATA_FLAGGED = 'image_moderation_flagged'.freeze
+  ASSETS_METADATA_FLAGGED_ROUTE =
+    %r{/v3/assets/([^/]+)/#{ASSETS_METADATA_PATH}/#{ASSETS_METADATA_FLAGGED}$}
+  # {"filename":"<asset>"} is tiny; reject anything larger as abuse.
+  ASSETS_METADATA_FLAGGED_MAX_BYTES = 1024
+
+  def assets_metadata_flagged_path
+    "#{ASSETS_METADATA_PATH}/#{ASSETS_METADATA_FLAGGED}"
+  end
+
+  # Returns a normalized JSON string {"filename":"..."}.
+  # Raises ArgumentError if the body is invalid.
+  def parse_assets_metadata_flagged_body(body)
+    if body.nil? || body.bytesize > ASSETS_METADATA_FLAGGED_MAX_BYTES
+      raise ArgumentError, 'body too large or missing'
+    end
+
+    begin
+      data = JSON.parse(body)
+    rescue JSON::ParserError
+      raise ArgumentError, 'invalid JSON'
+    end
+
+    raise ArgumentError, 'expected object' unless data.is_a?(Hash)
+    filename = data['filename']
+    raise ArgumentError, 'filename required' unless filename.is_a?(String) && !filename.empty?
+    if filename.length > FileBucket::MAXIMUM_FILENAME_LENGTH
+      raise ArgumentError, 'filename too long'
+    end
+    if filename.include?('/') || filename.include?('\\')
+      raise ArgumentError, 'filename must not contain path separators'
+    end
+    # Same character set as AssetManager uploads (BucketHelper.replace_unsafe_chars).
+    if filename != BucketHelper.replace_unsafe_chars(filename)
+      raise ArgumentError, 'filename contains unsafe characters'
+    end
+
+    {filename: filename}.to_json
+  end
+
+  #
+  # PUT /v3/assets/<channel-id>/metadata/image_moderation_flagged
+  # Body: {"filename":"<asset-name>"}
+  #
+  put ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    content_type :json
+    body = request.body.read
+
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    begin
+      normalized = parse_assets_metadata_flagged_body(body)
+    rescue ArgumentError
+      bad_request
+    end
+    path = assets_metadata_flagged_path
+    AssetBucket.new.create_or_replace(encrypted_channel_id, path, normalized)
+    {filename: path}.to_json
+  end
+
+  #
+  # GET /v3/assets/<channel-id>/metadata/image_moderation_flagged
+  #
+  get ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    not_authorized unless can_view_flagged_assets?(encrypted_channel_id)
+    result = AssetBucket.new.get(encrypted_channel_id, assets_metadata_flagged_path)
+    not_found if result[:status] == 'NOT_FOUND'
+    content_type :json
+    result[:body]
+  end
+
+  #
+  # DELETE /v3/assets/<channel-id>/metadata/image_moderation_flagged
+  #
+  delete ASSETS_METADATA_FLAGGED_ROUTE do |encrypted_channel_id|
+    dont_cache
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    AssetBucket.new.delete(encrypted_channel_id, assets_metadata_flagged_path)
+    no_content
+  end
+
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
   #
@@ -1086,6 +1179,89 @@ class FilesApi < Sinatra::Base
     status 400
     allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
     {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
+  end
+
+  def fetch_image_for_moderation(location, redirect_limit = 5)
+    raise URI::InvalidURIError.new if redirect_limit < 0
+
+    url = URI.parse(location)
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+    raise URI::InvalidURIError.new unless %w(http https).include?(url.scheme)
+
+    resolved_ip_address = SafeHttp.resolved_ip_address(url.host)
+    raise SecurityError.new('Image URL host is not allowed.') unless resolved_ip_address
+
+    http = SafeHttp.http_client(url, resolved_ip_address)
+
+    redirect_url = nil
+    body = nil
+    content_type = nil
+
+    # Stream the body so we can enforce max_file_size before an arbitrarily large
+    # payload is fully buffered (Content-Length may be missing or incorrect).
+    http.request_get(SafeHttp.request_path(url)) do |response|
+      if response.is_a?(Net::HTTPRedirection)
+        redirect_target = response['location']
+        raise URI::InvalidURIError.new if redirect_target.nil? || redirect_target.empty?
+        redirect_url = URI.join(url.to_s, redirect_target).to_s
+        next
+      end
+
+      unless response.is_a?(Net::HTTPSuccess)
+        raise StandardError.new("Image URL request failed with status #{response.code}.")
+      end
+
+      content_type = response.content_type
+      unless SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(content_type)
+        raise AzureAiContentSafety::UnsupportedContentType
+      end
+
+      content_length = response['content-length']&.to_i
+      if content_length && content_length > max_file_size
+        raise StandardError.new('Image URL content exceeds maximum file size.')
+      end
+
+      body = +''
+      response.read_body do |chunk|
+        body << chunk
+        if body.bytesize > max_file_size
+          raise StandardError.new('Image URL content exceeds maximum file size.')
+        end
+      end
+    end
+
+    return fetch_image_for_moderation(redirect_url, redirect_limit - 1) if redirect_url
+
+    raise StandardError.new('No image data provided.') if body.nil? || body.empty?
+
+    [body, content_type]
+  end
+
+  #
+  # POST /v3/images/moderate_url
+  #
+  # Moderate an image URL by fetching bytes server-side and passing them to
+  # ImageModeration (Azure AI Content Safety). Returns null if the moderation
+  # service is unavailable.
+  #
+  post %r{/v3/images/moderate_url$} do
+    content_type :json
+    dont_cache
+
+    payload = JSON.parse(request.body.read)
+    image_url = payload['url']
+    unless image_url.is_a?(String) && !image_url.empty?
+      status 400
+      return {error: 'No image URL provided.'}.to_json
+    end
+
+    raw, fetched_content_type = fetch_image_for_moderation(image_url)
+    result = ImageModeration.moderate_image(StringIO.new(raw), fetched_content_type)
+    result.to_json
+  # SecurityError is not a StandardError (inherits Exception directly).
+  rescue SecurityError, StandardError
+    status 400
+    {error: 'Unable to moderate image URL.'}.to_json
   end
 
   #

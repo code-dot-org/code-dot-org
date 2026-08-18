@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q12-2026'
+
+wrong '`lower(s)`'
+wrong '`s(lower)`'
+right '`s.lower()`'
+wrong '`lower.s()`'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Given a string `s`, how would you call the `lower` method on it to convert it to lowercase? 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Autocomplete
+MARKDOWN

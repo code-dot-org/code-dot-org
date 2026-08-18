@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
       "is_migrated": true,
       "pilot_experiment": "data-science-with-python-pilot-2024",
       "show_calendar": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-24 12:40:53 UTC",
+    "serialized_at": "2026-08-18 04:29:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -114,8 +115,8 @@
       "properties": {
         "background": "dark",
         "overview": "**What can I do with Python?**\n\nIn this lesson students will be exposed to some of the uses of the Python programming language, focusing on its strong appeal for data science applications. Utilizing a modified PRIMM methodology, students will be introduced to some of the basic Python syntax that will be necessary to begin manipulating and visualizing data in the lessons to come.\n\n",
-        "preparation": "- Provide copies of the Unit 2 Guided Notes for each student\n- Print copies of the Python anticipation guide (one for each student)",
-        "student_overview": "**What can I do with Python?**\n\nIn this lesson, you will learn about many of the interesting and varied uses of the Python programming language, including its use as a premiere tool for data science. You will learn many of the basic Python commands necessary to begin your journey as a data scientist.\n\n"
+        "preparation": "- Provide copies of the Data Science with Python Unit Guide for each student",
+        "student_overview": "**What can I do with Python?**\n\nIn this lesson, you will explore how Python is used in data science. You will learn to use variables, expressions, lists, indexes, and concatenation, then apply these concepts to build your own Python program with support from AI Tutor."
       },
       "seeding_key": {
         "lesson.key": "Introduction to Python",
@@ -132,9 +133,9 @@
       "relative_position": 4,
       "properties": {
         "background": "dark",
-        "overview": "**What tools and techniques does pandas offer to help us explore and analyze the structure of a dataset?**\n\nIn this lesson, students are introduced to the pandas library and learn how to read CSV files into DataFrames. They explore key functions such as `len()`, `shape`, `head()`, and `tail()` to understand the structure and size of datasets. The lesson emphasizes the practical application of pandas for efficient data manipulation and analysis, preparing students for more advanced data science tasks.\n\n\n",
-        "preparation": "- Print copies of the US Gas Prices Dataset handout (one for each student)\n",
-        "student_overview": "**What tools and techniques does pandas offer to help us explore and analyze the structure of a dataset?**\n\nLearn how to use pandas to read and explore data from CSV files. Discover how to quickly understand a dataset's structure and size using simple, powerful functions.\n\n\n"
+        "overview": "**What tools and techniques does pandas offer to help us explore and analyze the structure of a dataset?**\n\nIn this lesson, students learn how to use the pandas library to load CSV files into DataFrames. They use `shape`, `len()`, `head()`, and `tail()` to examine datasets, then apply these skills to build a program that loads and explores a dataset.\n\n",
+        "preparation": "- Print copies of the US Gas Prices Dataset handout (one for each student)\n- Print copies of the Data Science with Python Unit Guide (one for each student)\n",
+        "student_overview": "**What tools and techniques does pandas offer to help us explore and analyze the structure of a dataset?**\n\nLearn how to use pandas to load CSV files into DataFrames. Use `shape`, `len()`, `head()`, and `tail()` to explore a dataset’s structure, size, and contents.\n\n"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Pandas",
@@ -151,8 +152,9 @@
       "relative_position": 5,
       "properties": {
         "background": "dark",
-        "overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nIn this lesson, students discover the need for a library with functions that create data visualizations in Python. Students explore the syntax and functionality of matplotlib – learning how to create line and bar charts, editing these charts' appearance, title and axis labels.\n\n",
-        "student_overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nCreate and modify data visualizations using matplotlib, a library professional Data Scientists use.\n\n\n"
+        "overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nIn this lesson, students explore how the Matplotlib library is used to create data visualizations in Python. With guided support, students learn to create and customize line and bar charts by adding titles and axis labels. They then apply these skills independently to create visualizations using a dataset of their choice.\n",
+        "preparation": "- Print copies of the Data Science with Python Unit Guide (1 for each student)",
+        "student_overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nCreate and customize line and bar charts using Matplotlib, a Python library used by professional data scientists.\n\n"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Matplotlib",
@@ -371,8 +373,21 @@
       }
     },
     {
-      "key": "e61a9850-64f8-4f75-9cc8-236edc808d2c",
+      "key": "a496e48e-688e-4251-8438-10cb56e05707",
       "position": 1,
+      "properties": {
+        "name": "New Level Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a496e48e-688e-4251-8438-10cb56e05707",
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026"
+      }
+    },
+    {
+      "key": "e61a9850-64f8-4f75-9cc8-236edc808d2c",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -386,7 +401,7 @@
     },
     {
       "key": "d6315390-e956-4282-b900-174db8f818a3",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -400,7 +415,7 @@
     },
     {
       "key": "6f7d70cf-fe9b-42fd-b6a4-f29d027c46fd",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -413,8 +428,21 @@
       }
     },
     {
-      "key": "16ddd4ff-e8e9-4009-a485-a9293371e003",
+      "key": "0598c986-9c84-4d59-88de-525beedac9ef",
       "position": 1,
+      "properties": {
+        "name": "New Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0598c986-9c84-4d59-88de-525beedac9ef",
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026"
+      }
+    },
+    {
+      "key": "16ddd4ff-e8e9-4009-a485-a9293371e003",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -428,7 +456,7 @@
     },
     {
       "key": "67fe1790-3765-4fcb-b849-0a8e4bb34bf1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -442,7 +470,7 @@
     },
     {
       "key": "767855c4-6051-40e4-b878-1fcf019d16c3",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -455,8 +483,21 @@
       }
     },
     {
-      "key": "791b9495-aadd-4e9f-8266-f06eb7ff62e2",
+      "key": "6936a0ef-e010-4fa7-83ce-e9bd9f3732c2",
       "position": 1,
+      "properties": {
+        "name": "New Level Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6936a0ef-e010-4fa7-83ce-e9bd9f3732c2",
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026"
+      }
+    },
+    {
+      "key": "791b9495-aadd-4e9f-8266-f06eb7ff62e2",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -470,7 +511,7 @@
     },
     {
       "key": "d6759d5f-4a0a-4fa7-8c74-3f61fe145dfe",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -484,7 +525,7 @@
     },
     {
       "key": "1857319a-cd9f-4e2e-9c14-166dfe5cc14a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -497,8 +538,21 @@
       }
     },
     {
-      "key": "587555ef-6a36-491a-a9bd-ac50357581ef",
+      "key": "51bf8d29-92b9-4458-b286-982fc9032c4b",
       "position": 1,
+      "properties": {
+        "name": "Revised Level Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "51bf8d29-92b9-4458-b286-982fc9032c4b",
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026"
+      }
+    },
+    {
+      "key": "587555ef-6a36-491a-a9bd-ac50357581ef",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -512,7 +566,7 @@
     },
     {
       "key": "b5108813-331a-4058-98b5-afa5caf42a7c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity "
@@ -526,7 +580,7 @@
     },
     {
       "key": "5b94f8cc-1e24-4517-b327-2dad71135d53",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -965,6 +1019,30 @@
       }
     },
     {
+      "key": "310a9a3b-2880-461c-8a68-7c12eb6f41a8",
+      "position": 1,
+      "properties": {
+        "name": "Investigate",
+        "progression_name": "Explore a Python Program"
+      },
+      "seeding_key": {
+        "activity_section.key": "310a9a3b-2880-461c-8a68-7c12eb6f41a8",
+        "lesson_activity.key": "a496e48e-688e-4251-8438-10cb56e05707"
+      }
+    },
+    {
+      "key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d",
+      "position": 2,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice with Python"
+      },
+      "seeding_key": {
+        "activity_section.key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d",
+        "lesson_activity.key": "a496e48e-688e-4251-8438-10cb56e05707"
+      }
+    },
+    {
       "key": "91709be9-48fd-4fa4-944d-b0a664d799df",
       "position": 1,
       "properties": {
@@ -1135,6 +1213,28 @@
       }
     },
     {
+      "key": "435578cb-c54e-44ad-9706-ff5624ae7fb6",
+      "position": 1,
+      "properties": {
+        "name": "Introduction to Pandas"
+      },
+      "seeding_key": {
+        "activity_section.key": "435578cb-c54e-44ad-9706-ff5624ae7fb6",
+        "lesson_activity.key": "0598c986-9c84-4d59-88de-525beedac9ef"
+      }
+    },
+    {
+      "key": "c5ead911-06e5-4ca0-8e2c-c5922958a849",
+      "position": 2,
+      "properties": {
+        "name": "Explore Data with Python"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849",
+        "lesson_activity.key": "0598c986-9c84-4d59-88de-525beedac9ef"
+      }
+    },
+    {
       "key": "0dd2c2d7-c52c-412e-aa2d-7a2ee84f5cc5",
       "position": 1,
       "properties": {
@@ -1288,6 +1388,28 @@
       }
     },
     {
+      "key": "702a3e5e-aa1a-4ceb-8a78-8a262acd8c3c",
+      "position": 1,
+      "properties": {
+        "name": "Introduction to Matplotlib"
+      },
+      "seeding_key": {
+        "activity_section.key": "702a3e5e-aa1a-4ceb-8a78-8a262acd8c3c",
+        "lesson_activity.key": "6936a0ef-e010-4fa7-83ce-e9bd9f3732c2"
+      }
+    },
+    {
+      "key": "f3bff751-62e8-423e-bcd1-f245a965e103",
+      "position": 2,
+      "properties": {
+        "name": "Create Data Visualizations with Matplotlib"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103",
+        "lesson_activity.key": "6936a0ef-e010-4fa7-83ce-e9bd9f3732c2"
+      }
+    },
+    {
       "key": "78a1e1e8-32e7-423a-993a-05fdbf5847a7",
       "position": 1,
       "properties": {
@@ -1399,6 +1521,39 @@
       "seeding_key": {
         "activity_section.key": "c1017fca-432f-4e97-ae74-84a23f40f272",
         "lesson_activity.key": "1857319a-cd9f-4e2e-9c14-166dfe5cc14a"
+      }
+    },
+    {
+      "key": "1d31967c-fc63-485f-8e46-d6569fff1e88",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d31967c-fc63-485f-8e46-d6569fff1e88",
+        "lesson_activity.key": "51bf8d29-92b9-4458-b286-982fc9032c4b"
+      }
+    },
+    {
+      "key": "2ddab036-031b-4170-87d3-db2cd857f212",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212",
+        "lesson_activity.key": "51bf8d29-92b9-4458-b286-982fc9032c4b"
+      }
+    },
+    {
+      "key": "ab89159a-d454-4bdb-bd96-36acf6af0c09",
+      "position": 3,
+      "properties": {
+        "progression_name": "Assess"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09",
+        "lesson_activity.key": "51bf8d29-92b9-4458-b286-982fc9032c4b"
       }
     },
     {
@@ -2713,6 +2868,116 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Explore a Python Program"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level1-v0-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "310a9a3b-2880-461c-8a68-7c12eb6f41a8"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson3-level1-v0-2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice with Python"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level2-v1-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson3-level2-v1-2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice with Python"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level3-v1-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson3-level3-v1-2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice with Python"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level4-v1-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson3-level4-v1-2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice with Python"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level5-v1-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson3-level5-v1-2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -2730,8 +2995,8 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 2,
+      "chapter": 8,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2752,8 +3017,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 3,
+      "chapter": 9,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2774,8 +3039,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 4,
+      "chapter": 10,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -2796,8 +3061,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 5,
+      "chapter": 11,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -2818,8 +3083,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 6,
+      "chapter": 12,
+      "position": 11,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -2840,8 +3105,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 7,
+      "chapter": 13,
+      "position": 12,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -2862,8 +3127,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 8,
+      "chapter": 14,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2884,8 +3149,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 9,
+      "chapter": 15,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2906,8 +3171,113 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 16,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level1-v2-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "435578cb-c54e-44ad-9706-ff5624ae7fb6"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson4-level1-v2-2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level2-v1-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson4-level2-v1-2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level3-v2-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson4-level3-v2-2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level4-v1-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson4-level4-v1-2026"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level5-v1-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson4-level5-v1-2026"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2928,8 +3298,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 2,
+      "chapter": 22,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2950,8 +3320,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 3,
+      "chapter": 23,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2972,8 +3342,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 4,
+      "chapter": 24,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -2994,8 +3364,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 5,
+      "chapter": 25,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3016,8 +3386,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 6,
+      "chapter": 26,
+      "position": 11,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -3038,8 +3408,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 7,
+      "chapter": 27,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3060,8 +3430,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 8,
+      "chapter": 28,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3082,8 +3452,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 9,
+      "chapter": 29,
+      "position": 14,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3104,8 +3474,113 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 30,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level1-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "702a3e5e-aa1a-4ceb-8a78-8a262acd8c3c"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level1-v1-2026"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level2-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level2-v1-2026"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level3-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level3-v1-2026"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level4-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level4-v1-2026"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level5-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level5-v1-2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3126,8 +3601,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 2,
+      "chapter": 36,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3148,8 +3623,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 3,
+      "chapter": 37,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3170,8 +3645,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 4,
+      "chapter": 38,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3192,8 +3667,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 5,
+      "chapter": 39,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3214,8 +3689,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 6,
+      "chapter": 40,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3236,8 +3711,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 7,
+      "chapter": 41,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3258,8 +3733,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 8,
+      "chapter": 42,
+      "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3280,8 +3755,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 9,
+      "chapter": 43,
+      "position": 14,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3302,8 +3777,118 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 44,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level1-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "1d31967c-fc63-485f-8e46-d6569fff1e88"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level1-v2-2026"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level2-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level2-v2-2026"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level3-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level3-v2-2026"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assess"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level4-v3-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level4-v3-2026"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assess"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level5-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson6-level5-v2-2026"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3324,8 +3909,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 2,
+      "chapter": 50,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3346,8 +3931,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 3,
+      "chapter": 51,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3368,8 +3953,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 4,
+      "chapter": 52,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3390,8 +3975,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 5,
+      "chapter": 53,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3412,8 +3997,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 6,
+      "chapter": 54,
+      "position": 11,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -3434,8 +4019,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 7,
+      "chapter": 55,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3456,8 +4041,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 8,
+      "chapter": 56,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3478,7 +4063,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3500,7 +4085,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3522,7 +4107,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3544,7 +4129,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3566,7 +4151,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3588,7 +4173,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 62,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3610,7 +4195,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 63,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -3632,7 +4217,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 64,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3654,7 +4239,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 65,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -3676,7 +4261,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3698,7 +4283,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3720,7 +4305,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3742,7 +4327,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3764,7 +4349,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3786,7 +4371,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3808,7 +4393,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3830,7 +4415,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 73,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -3852,7 +4437,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3874,7 +4459,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3896,7 +4481,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3918,7 +4503,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3940,7 +4525,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3962,7 +4547,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3984,7 +4569,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4006,7 +4591,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 81,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4028,7 +4613,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 82,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4050,7 +4635,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 83,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4072,7 +4657,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4094,7 +4679,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 85,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4116,7 +4701,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 86,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4138,7 +4723,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 87,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4160,7 +4745,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 88,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4182,7 +4767,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 89,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4204,7 +4789,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 90,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4226,7 +4811,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 91,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -4248,7 +4833,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4270,7 +4855,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 93,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4292,7 +4877,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 94,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4314,7 +4899,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 95,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4336,7 +4921,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 96,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4358,7 +4943,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 97,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4380,7 +4965,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 98,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4402,7 +4987,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 99,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4424,7 +5009,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 100,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4446,7 +5031,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4468,7 +5053,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4501,6 +5086,66 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "data-science-with-python-unit-2026",
         "activity_section.key": "492d65f1-8094-4232-ae6f-2e7fc74ccf5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson3-level1-v0-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level1-v0-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "310a9a3b-2880-461c-8a68-7c12eb6f41a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson3-level2-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level2-v1-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson3-level3-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level3-v1-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson3-level4-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level4-v1-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson3-level5-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson3-level5-v1-2026"
+        ],
+        "lesson.key": "Introduction to Python",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "abc2db6e-9b4d-4184-9e0f-3813dc487a7d"
       }
     },
     {
@@ -4613,6 +5258,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "datasciencewithpython-lesson4-level1-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level1-v2-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "435578cb-c54e-44ad-9706-ff5624ae7fb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson4-level2-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level2-v1-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson4-level3-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level3-v2-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson4-level4-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level4-v1-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson4-level5-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson4-level5-v1-2026"
+        ],
+        "lesson.key": "Introduction to Pandas",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "datascience-U2L3-L1_2024-pilot_pilot_2026",
         "script_level.level_keys": [
           "datascience-U2L3-L1_2024-pilot_pilot_2026"
@@ -4721,6 +5426,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level1-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level1-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "702a3e5e-aa1a-4ceb-8a78-8a262acd8c3c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level2-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level2-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level3-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level3-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level4-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level4-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level5-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level5-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "datascience-U2L4-L1_2024-pilot_pilot_2026",
         "script_level.level_keys": [
           "datascience-U2L4-L1_2024-pilot_pilot_2026"
@@ -4825,6 +5590,66 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "data-science-with-python-unit-2026",
         "activity_section.key": "b24be7f4-c059-4803-b18a-c03b161d100f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level1-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level1-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "1d31967c-fc63-485f-8e46-d6569fff1e88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level2-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level2-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level3-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level3-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "2ddab036-031b-4170-87d3-db2cd857f212"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level4-v3-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level4-v3-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson6-level5-v2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson6-level5-v2-2026"
+        ],
+        "lesson.key": "Getting to Know Your Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "ab89159a-d454-4bdb-bd96-36acf6af0c09"
       }
     },
     {
@@ -5478,6 +6303,62 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
+      "key": "_exemplar_data_science_with_python_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_data_science_with_python_unit_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
+      "key": "_exemplar_data_science_with_python_unit_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_data_science_with_python_unit_guide_1"
+      }
+    },
+    {
+      "name": "[KEY]",
+      "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
+      "key": "_key_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_"
+      }
+    },
+    {
+      "name": "[KEY] Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
+      "key": "_key_data_science_with_python_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_science_with_python_unit_guide"
+      }
+    },
+    {
       "name": "(Optional) Visualization Peer Review",
       "url": "https://docs.google.com/document/d/1Eq_SfFWn7xSb-FdnTWWJFVN5kLSVz7P-ntePFbVq7Wg/edit",
       "key": "_optional_visualization_peer_review",
@@ -5616,6 +6497,62 @@
       }
     },
     {
+      "name": "Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1R1COXhWren9sXLX1hf8WkWCTjXoXhLvXf0N0jghCvzw/edit?usp=sharing",
+      "key": "data_science_with_python_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_with_python_unit_guide"
+      }
+    },
+    {
+      "name": "Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1R1COXhWren9sXLX1hf8WkWCTjXoXhLvXf0N0jghCvzw/edit?usp=sharing",
+      "key": "data_science_with_python_unit_guide_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_with_python_unit_guide_1"
+      }
+    },
+    {
+      "name": "Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1R1COXhWren9sXLX1hf8WkWCTjXoXhLvXf0N0jghCvzw/edit?usp=sharing",
+      "key": "data_science_with_python_unit_guide_2",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_with_python_unit_guide_2"
+      }
+    },
+    {
+      "name": "Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1R1COXhWren9sXLX1hf8WkWCTjXoXhLvXf0N0jghCvzw/edit?usp=sharing",
+      "key": "data_science_with_python_unit_guide_3",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_with_python_unit_guide_3"
+      }
+    },
+    {
       "name": "Exploratory Data Analysis",
       "url": "https://docs.google.com/presentation/d/1NnZk4lfwSDAgtI30pc32mmFLol1GyB3I2w9E8qEiWIk/template/preview",
       "key": "exploratory_data_analysis",
@@ -5641,14 +6578,16 @@
     },
     {
       "name": "Getting to Know Your Data",
-      "url": "https://docs.google.com/presentation/d/1uLyPczIZrZIe6LxkJzOCs8KGeFHZneuLw8aPLu6fZ9c/template/preview",
-      "key": "getting_to_know_your_data",
+      "url": "https://docs.google.com/presentation/d/1qrbFB0U8RRU8_ZEieRUrDk-mVBChDlJH9u9bBcJwpnM/edit?usp=sharing",
+      "key": "getting_to_know_your_data_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "getting_to_know_your_data"
+        "resource.key": "getting_to_know_your_data_1"
       }
     },
     {
@@ -5685,38 +6624,44 @@
     },
     {
       "name": "Introduction to Matplotlib",
-      "url": "https://docs.google.com/presentation/d/1pS679hCaFc49ZaooUzAAcy-RJW9q4JSKugrHSQeliig/template/preview",
-      "key": "introduction_to_matplotlib",
+      "url": "https://docs.google.com/presentation/d/13_lxn8TkuCpIQrSbQ7XZssiD3Vd2hFOCSM0fYvbBBa4/edit?usp=sharing",
+      "key": "introduction_to_matplotlib_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "introduction_to_matplotlib"
+        "resource.key": "introduction_to_matplotlib_1"
       }
     },
     {
       "name": "Introduction to Pandas",
-      "url": "https://docs.google.com/presentation/d/1goCA7-ASIzOZ1iHfAlhi-TWL9CAvMqR7Wqs9YwS8XGA/template/preview",
-      "key": "introduction_to_pandas",
+      "url": "https://docs.google.com/presentation/d/1o8qW1aUVS888SzSlKeyi_yFrMjZ4KqsFoMxX___6_3Y/edit?usp=sharing",
+      "key": "introduction_to_pandas_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "introduction_to_pandas"
+        "resource.key": "introduction_to_pandas_1"
       }
     },
     {
       "name": "Introduction to Python",
-      "url": "https://docs.google.com/presentation/d/17ni7Aw_3c_dAcjRpCWr5cCDMXoBaPzd_DnhTBr8h9fI/template/preview",
-      "key": "introduction_to_python",
+      "url": "https://docs.google.com/presentation/d/1_Z7CeOzhM6wNBLbnM8l6xJ3ckARY3TjdD22lsdnhTl0/edit?usp=sharing",
+      "key": "introduction_to_python_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "introduction_to_python"
+        "resource.key": "introduction_to_python_1"
       }
     },
     {
@@ -5781,31 +6726,6 @@
       }
     },
     {
-      "name": "Python Anticipation Guide",
-      "url": "https://docs.google.com/document/d/13TFHek4g_6yoFLRlGsZphjEq_jL3utJYsDgzpwqwAgw/edit#heading=h.he8kcnk26cq4",
-      "key": "python_anticipation_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "python_anticipation_guide"
-      }
-    },
-    {
-      "name": "Python Anticipation Guide",
-      "url": "https://docs.google.com/document/d/1vkcs31eiWp0AEVeCqwWL4BCvHAqcyXam7Ael8FGkJXs/edit#heading=h.he8kcnk26cq4'",
-      "key": "python_anticipation_guide_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "python_anticipation_guide_1"
-      }
-    },
-    {
       "name": "Python / Pandas Documentation",
       "url": "https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=drive_link",
       "key": "python_pandas_documentation",
@@ -5865,28 +6785,17 @@
       }
     },
     {
-      "name": "Unit 2 Guided Notes",
-      "url": "https://docs.google.com/document/d/175Tq55HFroHz8RIv6MyEvPGV2bNFRvxm3LizFAcvx20/edit#heading=h.gqwpeghz4npc",
-      "key": "unit_2_guided_notes",
+      "name": "U.S. Gas Prices Dataset",
+      "url": "https://docs.google.com/document/d/15Qs1N4XJcWTaRJgMCIubauu7UkEkg_x9oVC2Zzq0yfY/edit?usp=sharing",
+      "key": "u_s_gas_prices_dataset",
       "properties": {
         "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "unit_2_guided_notes"
-      }
-    },
-    {
-      "name": "US Gas Prices Dataset",
-      "url": "https://docs.google.com/document/d/1t6PiigVhrmC98fV-5Py35br4AWV6lUPglPW2vmDHnoI/edit",
-      "key": "us_gas_prices_dataset",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "us_gas_prices_dataset"
+        "resource.key": "u_s_gas_prices_dataset"
       }
     }
   ],
@@ -5960,25 +6869,67 @@
     {
       "seeding_key": {
         "lesson.key": "Getting to Know Your Data",
-        "resource.key": "getting_to_know_your_data"
+        "resource.key": "_key_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting to Know Your Data",
+        "resource.key": "data_science_with_python_unit_guide_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting to Know Your Data",
+        "resource.key": "getting_to_know_your_data_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Matplotlib",
-        "resource.key": "introduction_to_matplotlib"
+        "resource.key": "_key_data_science_with_python_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Matplotlib",
+        "resource.key": "data_science_with_python_unit_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Matplotlib",
+        "resource.key": "introduction_to_matplotlib_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Pandas",
-        "resource.key": "introduction_to_pandas"
+        "resource.key": "_exemplar_data_science_with_python_unit_guide_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Pandas",
-        "resource.key": "us_gas_prices_dataset"
+        "resource.key": "data_science_with_python_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Pandas",
+        "resource.key": "introduction_to_pandas_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Pandas",
+        "resource.key": "u_s_gas_prices_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Python",
+        "resource.key": "_exemplar_data_science_with_python_unit_guide"
       }
     },
     {
@@ -5990,25 +6941,13 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Python",
-        "resource.key": "introduction_to_python"
+        "resource.key": "data_science_with_python_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Python",
-        "resource.key": "python_anticipation_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "resource.key": "python_anticipation_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "resource.key": "unit_2_guided_notes"
+        "resource.key": "introduction_to_python_1"
       }
     },
     {
@@ -6119,6 +7058,16 @@
       }
     },
     {
+      "key": "concatenation",
+      "word": "concatenation",
+      "definition": "combining two or more strings to create one longer string.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "concatenation"
+      }
+    },
+    {
       "key": "csv_comma_separated_values_file",
       "word": "CSV (comma-separated values) file",
       "definition": "a type of text file that stores tabular data, where each row represents a record and columns are separated by commas",
@@ -6146,6 +7095,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "dataframe"
+      }
+    },
+    {
+      "key": "dot_notation",
+      "word": "dot notation",
+      "definition": "a way to access a function by placing a period between an object or library name and the function name",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dot_notation"
       }
     },
     {
@@ -6270,6 +7229,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Getting to Know Your Data",
+        "vocabulary.key": "dot_notation"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Introduction to Matplotlib",
         "vocabulary.key": "matplotlib"
       }
@@ -6296,6 +7261,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Pandas",
         "vocabulary.key": "library"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Python",
+        "vocabulary.key": "concatenation"
       }
     },
     {

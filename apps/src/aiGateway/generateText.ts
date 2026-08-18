@@ -14,7 +14,10 @@ import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 
+export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
+
 type SDKOptions = Parameters<typeof generateText>[0];
+type ExtraOptions = Record<string, unknown>;
 type SDKTools = NonNullable<SDKOptions['tools']>;
 type SDKOutput = NonNullable<SDKOptions['output']>;
 
@@ -77,9 +80,11 @@ const generateTextThroughGateway = async <
   TOOLS extends SDKTools = SDKTools,
   OUTPUT extends SDKOutput = SDKOutput
 >(
-  options: SDKOptions
+  options: SDKOptions,
+  extraOptions?: ExtraOptions
 ): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
+  const phase = extraOptions?.phase as GatewayPhase | undefined;
   const modelString = getModelString(model);
   const promptLength =
     typeof options.prompt === 'string' ? options.prompt.length : 0;
@@ -105,6 +110,7 @@ const generateTextThroughGateway = async <
         'Content-Type': 'application/json',
         'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
         ...turnstileHeaders(turnstileToken),
+        ...(phase && {'x-ai-gateway-phase': phase}),
       };
 
       const response = await HttpClient.post(

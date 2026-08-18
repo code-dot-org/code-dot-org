@@ -1,0 +1,40 @@
+name 'pl-aif1-js-calling-functions'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Named vs. Anonymous Functions</h1>
+
+<p>You just walked through defining and calling a function called <code>addNotification</code>. That's a named function, one that's defined once and can be called from anywhere, like the two buttons that both called it by name. Not every function works that way.</p>
+
+<h2>Named vs. Anonymous: Same Behavior, Written in Two Places</h2>
+
+<p>Here's the exact same behavior, adding one to a notification count, written both ways.</p>
+
+<div style="margin: 20px 0;">
+  <div style="font-size: 12px; font-weight: 700; color: #4C42CF; margin-bottom: 8px;">NAMED: defined once, called by name</div>
+  <div style="background-color: #2B2745; border-radius: 8px; padding: 14px 16px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8; line-height: 1.8;">
+const addNotification = () =&gt; {<br>
+&nbsp;&nbsp;notifications = notifications + 1;<br>
+};<br><br>
+bellButton.addEventListener("click", addNotification);
+  </div>
+</div>
+
+<div style="margin: 20px 0;">
+  <div style="font-size: 12px; font-weight: 700; color: #ACA8EA; margin-bottom: 8px;">ANONYMOUS: written directly where it's used</div>
+  <div style="background-color: #2B2745; border-radius: 8px; padding: 14px 16px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8; line-height: 1.8;">
+bellButton.addEventListener("click", () =&gt; {<br>
+&nbsp;&nbsp;notifications = notifications + 1;<br>
+});
+  </div>
+</div>
+
+<p>Both do exactly the same thing. The difference is where the code lives. The named version is defined separately, so it can be called again anywhere, like the two buttons sharing <code>addNotification</code> from the panel. The anonymous version is written directly inside the one place it's used, since it's never going to be called from anywhere else, it doesn't need a name to be called by.</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> think about it like this: if someone is anonymous, you can't call their name to get their attention. But if you know someone's name, you can call them anytime you need them. Named functions work the same way, we can call them again later. That distinction is often the fastest way to get this to click for students.</p>
+</div>
+
+<p>Next, you'll learn why the name you choose for a function matters just as much as the fact that it has one.</p>
+MARKDOWN

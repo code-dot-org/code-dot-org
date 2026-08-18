@@ -1,4 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 var $ = require('jquery');
 var ReactTestUtils = require('react-dom/test-utils');
@@ -134,7 +135,7 @@ module.exports = {
   levelId: 'ec_simple',
   tests: [
     {
-      description: 'button image with absolute url',
+      description: 'button image with relative path',
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -168,7 +169,7 @@ module.exports = {
       },
     },
     {
-      description: 'button image url correct with fully qualified url',
+      description: 'button image url correct with absolute url',
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -181,22 +182,38 @@ module.exports = {
 
         var assetUrl =
           'https://studio.code.org/blockly/media/skins/studio/small_static_avatar.png';
-        var encodedAssetUrl =
-          '/media?u=https%3A%2F%2Fstudio.code.org%2Fblockly%2Fmedia%2Fskins%2Fstudio%2Fsmall_static_avatar.png';
         var imageInput = $('#imagePickerInput')[0];
 
         var buttonElement = $('#design_button1')[0];
+        var originalHttpClientPost = HttpClient.post;
+        HttpClient.post = function () {
+          return Promise.resolve({
+            json: function () {
+              return Promise.resolve({categoriesAnalysis: []});
+            },
+          });
+        };
 
         ReactTestUtils.Simulate.change(imageInput, {
           target: {value: assetUrl},
         });
 
-        assert.include(
-          buttonElement.style.backgroundImage,
-          encodedAssetUrl,
-          'Button background image should contain proxied, escaped url'
-        );
-        Applab.onPuzzleComplete();
+        setTimeout(function () {
+          // `moderateImageUrl()` awaits the moderation request before updating
+          // the design element style, so assert on a later tick.
+          setTimeout(function () {
+            try {
+              assert.include(
+                buttonElement.style.backgroundImage,
+                assetUrl,
+                'Button background image should contain original url'
+              );
+            } finally {
+              HttpClient.post = originalHttpClientPost;
+              Applab.onPuzzleComplete();
+            }
+          }, 0);
+        }, 0);
       },
       expected: {
         result: true,

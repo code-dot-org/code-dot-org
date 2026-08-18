@@ -13,6 +13,7 @@
 #  evaluated_at      :datetime
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  evaluation_status :integer
 #
 # Indexes
 #
@@ -24,24 +25,56 @@ class ChallengeResponse < ApplicationRecord
   belongs_to :user
   has_many :challenge_response_assets, dependent: :destroy
 
-  # The frontend-facing shape of a response and its assets.
+  # Lifecycle of the AI evaluation of this response. NULL means no evaluation
+  # has been requested.
+  enum evaluation_status: {
+    queued: 0,
+    running: 1,
+    success: 2,
+    failure: 1000,
+    pii_violation: 1001,
+    profanity_violation: 1002,
+  }, _prefix: :evaluation
+
+  # A response can be evaluated once it is a final submission and every
+  # declared asset has had its bytes uploaded to S3 (asset rows are created
+  # before their bytes arrive, so a response with pending uploads is not yet
+  # complete).
+  def ready_for_evaluation?
+    is_final && challenge_response_assets.all?(&:uploaded?)
+  end
+
+  # The frontend-facing shape of a response and its assets, including the
+  # author's display name and the lesson's unit and position.
   # @param assets_for_upload [Boolean] when true (used right after create),
   #   assets carry no download URL since their bytes are not uploaded yet; the
   #   client PUTs them to /challenge_response_assets/:id/upload. Otherwise
   #   each asset carries a presigned download URL.
-  def summarize(assets_for_upload: false)
-    {
+  # @param include_evaluation [Boolean] when true, includes the scored rubric
+  #   evaluation. Scores are teacher-only.
+  # @param include_feedback [Boolean] when false, omits student_feedback,
+  #   which is private to the response's author and their teachers.
+  def summarize(assets_for_upload: false, include_evaluation: false, include_feedback: true)
+    lesson = challenge.lesson
+    summary = {
       id: id,
       challenge_id: challenge_id,
       user_id: user_id,
+      user_name: user.name,
+      unit_id: lesson&.script_id,
+      lesson_position: lesson&.relative_position,
       student_text: student_text,
       transcript: transcript,
-      student_feedback: student_feedback,
-      evaluation_result: evaluation_result,
+      evaluation_status: evaluation_status,
       is_final: is_final,
-      evaluated_at: evaluated_at,
       created_at: created_at,
       assets: challenge_response_assets.map {|asset| asset.summarize(upload: assets_for_upload)},
     }
+    summary[:student_feedback] = student_feedback if include_feedback
+    if include_evaluation
+      summary[:evaluation_result] = evaluation_result
+      summary[:evaluated_at] = evaluated_at
+    end
+    summary
   end
 end

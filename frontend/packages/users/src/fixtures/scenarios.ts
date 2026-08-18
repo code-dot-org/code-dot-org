@@ -28,6 +28,8 @@ export const USERS_SCENARIO_TAGS = [
   'age-state-unset',
   'long-strings',
   'student-can-switch',
+  'teacher-no-dependents',
+  'sso-teacher-dependents',
 ] as const;
 
 export type UsersScenarioTag = (typeof USERS_SCENARIO_TAGS)[number];
@@ -352,13 +354,34 @@ const longStrings: UsersScenario = {
   description: 'Very long + emoji names — overflow / truncation probe.',
 };
 
-// Student who CAN change type: exercises the student->teacher upgrade path,
-// where the confirm modal additionally prompts for a (required) email address.
+// Student who CAN change type: exercises the student -> educator path, where
+// the confirm modal additionally prompts for a (required) email address.
 const studentCanSwitch: UsersScenario = {
   ...student,
   currentUser: {...student.currentUser, id: 11},
   settings: {...student.settings, can_change_user_type: true},
-  description: 'Student who can upgrade — type change prompts for email.',
+  description:
+    'Student who can change type — becoming an educator needs an email.',
+};
+
+// Educator with no dependent students: gets the full teacher disclaimer, but
+// neither the personal-login guidance step nor the acknowledgments.
+const teacherNoDependents: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 12},
+  settings: {...teacher.settings, dependent_students_count: 0},
+  description:
+    'Educator with no dependent students — delete skips guidance and acknowledgments.',
+};
+
+// The heaviest delete gate with no password to fall back on: five
+// acknowledgments plus the typed string are the only things standing in the way.
+const ssoTeacherDependents: UsersScenario = {
+  ...ssoTeacher,
+  currentUser: {...ssoTeacher.currentUser, id: 13},
+  settings: {...ssoTeacher.settings, dependent_students_count: 2},
+  description:
+    'Google-only educator with 2 dependent students — no password, all five acknowledgments.',
 };
 
 export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
@@ -373,4 +396,6 @@ export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
   'age-state-unset': ageStateUnset,
   'long-strings': longStrings,
   'student-can-switch': studentCanSwitch,
+  'teacher-no-dependents': teacherNoDependents,
+  'sso-teacher-dependents': ssoTeacherDependents,
 };

@@ -182,6 +182,8 @@ Javalab.prototype.init = function (config) {
     container.className = container.className + ' pin_bottom';
     this.studioApp_.initTimeSpent();
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
+    // studioApp.init() normally does this; we skip init so call it here.
+    this.studioApp_.alertIfAbusiveProject();
 
     initializeSubmitHelper({
       studioApp: this.studioApp_,
@@ -440,7 +442,7 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
   ) {
     const overrideSources = getSources(getStore().getState());
     connectToJavabuilder = () =>
-      this.javabuilderConnection.connectJavabuilderWithOverrides(
+      this.javabuilderConnection.connectJavabuilderWithOverrideSources(
         overrideSources
       );
   } else if (this.isStartMode && executionType === ExecutionType.TEST) {

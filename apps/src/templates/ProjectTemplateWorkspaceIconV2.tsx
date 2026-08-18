@@ -1,6 +1,7 @@
 import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import classnames from 'classnames';
 import React from 'react';
 
 import commonI18n from '@cdo/locale';
@@ -9,6 +10,7 @@ import styles from './project-template-workspace-icon-v2.module.scss';
 
 interface ProjectTemplateWorkspaceIconV2Props {
   tooltipPlace?: ComponentPlacementDirection;
+  className?: string;
 }
 
 /**
@@ -22,7 +24,7 @@ interface ProjectTemplateWorkspaceIconV2Props {
  */
 const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
   ProjectTemplateWorkspaceIconV2Props
-> = ({tooltipPlace}) => {
+> = ({tooltipPlace, className}) => {
   return (
     <WithTooltip
       tooltipProps={{
@@ -35,8 +37,8 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
       {/* Wrap the icon in a button so that the tooltip is tabbable. */}
       <button
         type="button"
-        className={styles.iconButton}
         aria-label="Project template level"
+        className={classnames(className, styles.iconButton)}
       >
         <FontAwesomeV6Icon
           iconFamily={'kit'}

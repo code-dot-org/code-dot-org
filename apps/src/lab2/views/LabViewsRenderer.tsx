@@ -53,6 +53,9 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const projectSharingDisabled = useAppSelector(
     state => !!state.lab.projectSharingDisabled
   );
+  const hasPrivacyProfanityViolation = useAppSelector(
+    state => !!state.lab.shareFailure
+  );
   const isTeacherOfProjectOwner = useAppSelector(
     state => !!state.lab.isTeacherOfProjectOwner
   );
@@ -76,6 +79,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     pageAction,
     isBlockedAbuse,
     projectSharingDisabled,
+    hasPrivacyProfanityViolation,
     isOwner,
     isTeacherOfProjectOwner,
     isProjectValidator

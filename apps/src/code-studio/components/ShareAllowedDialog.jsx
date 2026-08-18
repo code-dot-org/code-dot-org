@@ -1,13 +1,13 @@
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import Modal from '@code-dot-org/component-library/modal';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {OPEN_ENDED_LEGACY_PROJECT_TYPES} from '@cdo/apps/constants';
-import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -15,18 +15,18 @@ import * as p5labConstants from '@cdo/apps/p5lab/constants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import defaultThumbnail from '@cdo/static/projects/project_default.png';
+import defaultThumbnail from '@cdo/static/projects/project_default.svg';
 
 import * as applabConstants from '../../applab/constants';
-import BaseDialog from '../../templates/BaseDialog';
-import color from '../../util/color';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
 
-import AbuseError from './AbuseError';
 import AdvancedShareOptions from './AdvancedShareOptions';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
+import ProjectAbuseAlert from './ProjectAbuseAlert';
 import SendToPhone from './SendToPhone';
 import {hideShareDialog} from './shareDialogRedux';
+
+import moduleStyles from './share-allowed-dialog.module.scss';
 
 function recordShare(type, appType) {
   if (!window.dashboard) {
@@ -79,7 +79,6 @@ class ShareAllowedDialog extends React.Component {
     appType: PropTypes.string.isRequired,
     onClickPopup: PropTypes.func.isRequired,
     onClose: PropTypes.func.isRequired,
-    hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     inRestrictedShareMode: PropTypes.bool,
@@ -189,14 +188,11 @@ class ShareAllowedDialog extends React.Component {
       selectedSong,
       shareUrl,
       isOpen,
-      hideBackdrop,
       isAbusive,
       onClickPopup,
       exportApp,
       channelId,
     } = this.props;
-
-    const modalClass = 'modal-content no-modal-icon';
 
     const isDroplet = appType === 'applab' || appType === 'gamelab';
     const artistTwitterHandle = SongTitlesToArtistTwitterHandle[selectedSong];
@@ -250,7 +246,7 @@ class ShareAllowedDialog extends React.Component {
     const warningText = this.getWarningText();
 
     return (
-      <div>
+      <>
         {this.sharingDisallowedWhileSignedIn() &&
           this.state.showSharingDisallowedDialog && (
             <Dialog
@@ -271,160 +267,156 @@ class ShareAllowedDialog extends React.Component {
               }}
             />
           )}
-        {!this.sharingDisallowedWhileSignedIn() && (
-          <BaseDialog
-            style={styles.modal}
-            isOpen={isOpen}
-            handleClose={this.close}
-            hideBackdrop={hideBackdrop}
-          >
-            <div>
+        {!this.sharingDisallowedWhileSignedIn() && isOpen && (
+          <Modal
+            className={moduleStyles.modal}
+            title={i18n.shareTitle()}
+            onClose={this.close}
+            closeLabel={i18n.closeDialog()}
+            primaryButtonProps={{
+              onClick: this.close,
+              children: i18n.done(),
+            }}
+            customContent={
               <div
-                id="project-share"
-                className={modalClass}
-                style={{position: 'relative'}}
+                id="dsco-dialog-description"
+                className={moduleStyles.content}
               >
-                <h5 className="dialog-title">{i18n.shareTitle()}</h5>
-                {isAbusive && (
-                  <AbuseError
-                    i18n={{
-                      tos: i18n.tosLong({url: 'http://code.org/tos'}),
-                      contact_us: i18n.contactUs({
-                        url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
-                          `Abuse error for project at url: ${shareUrl}`
-                        )}`,
-                      }),
-                    }}
-                    className="alert-error"
-                    style={styles.abuseStyle}
-                    textStyle={styles.abuseTextStyle}
-                  />
-                )}
-                {showShareWarning && (
-                  <p style={styles.shareWarning}>{i18n.shareU13Warning()}</p>
-                )}
-                <div style={{clear: 'both'}}>
-                  <div style={styles.thumbnail}>
-                    <img
-                      style={styles.thumbnailImg}
-                      src={thumbnailUrl}
-                      alt={i18n.projectThumbnail()}
-                    />
-                  </div>
-                  <div>
-                    <MuiButton
-                      variant="contained"
-                      color="primary"
-                      size="medium"
-                      loadingPosition="start"
-                      id="sharing-dialog-copy-button"
-                      onClick={wrapShareClick(
-                        this.copy,
-                        'SHARING_LINK_COPY',
-                        this.props.appType
-                      )}
-                      type="button"
-                      value={shareUrl}
-                      startIcon={<FontAwesomeV6Icon iconName="copy" />}
+                <div id="project-share" className={moduleStyles.content}>
+                  {isAbusive && <ProjectAbuseAlert shareUrl={shareUrl} />}
+                  {showShareWarning && (
+                    <MuiTypography
+                      variant="body4"
+                      className={moduleStyles.shareWarning}
+                      style={{color: 'var(--text-error-primary)'}}
                     >
-                      {i18n.copyLinkToProject()}
-                    </MuiButton>
+                      {i18n.shareU13Warning()}
+                    </MuiTypography>
+                  )}
+                  <div className={moduleStyles.thumbnailRow}>
+                    <div className={moduleStyles.thumbnail}>
+                      <img
+                        className={moduleStyles.thumbnailImg}
+                        src={thumbnailUrl}
+                        alt={i18n.projectThumbnail()}
+                      />
+                    </div>
+                    <div className={moduleStyles.actionsColumn}>
+                      <MuiButton
+                        variant="contained"
+                        color="primary"
+                        size="medium"
+                        loadingPosition="start"
+                        id="sharing-dialog-copy-button"
+                        onClick={wrapShareClick(
+                          this.copy,
+                          'SHARING_LINK_COPY',
+                          this.props.appType
+                        )}
+                        type="button"
+                        value={shareUrl}
+                        startIcon={<FontAwesomeV6Icon iconName="copy" />}
+                      >
+                        {i18n.copyLinkToProject()}
+                      </MuiButton>
+                      <MuiButton
+                        variant="outlined"
+                        color="secondary"
+                        size="medium"
+                        loadingPosition="start"
+                        id="sharing-phone"
+                        onClick={wrapShareClick(
+                          this.showSendToPhone,
+                          'SHARING_LINK_SEND_TO_PHONE',
+                          this.props.appType
+                        )}
+                        type="button"
+                        startIcon={
+                          <FontAwesomeV6Icon iconName="mobile-screen" />
+                        }
+                      >
+                        {i18n.sendToPhone()}
+                      </MuiButton>
+                      {canPrint && hasThumbnail && (
+                        <MuiButton
+                          variant="outlined"
+                          color="secondary"
+                          size="medium"
+                          loadingPosition="start"
+                          onClick={wrapShareClick(this.print, 'print')}
+                          type="button"
+                          startIcon={<FontAwesomeV6Icon iconName="print" />}
+                        >
+                          {i18n.print()}
+                        </MuiButton>
+                      )}
+                      {this.isSocialShareAllowed() && (
+                        <div className={moduleStyles.socialLinks}>
+                          {this.state.isFacebookAvailable && (
+                            <a
+                              href={facebookShareUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={wrapShareClick(
+                                onClickPopup.bind(this),
+                                'SHARING_FB',
+                                this.props.appType
+                              )}
+                              className={moduleStyles.socialLink}
+                            >
+                              <FontAwesome
+                                icon="facebook-f"
+                                iconStyle="brands"
+                              />
+                            </a>
+                          )}
+                          {this.state.isTwitterAvailable && (
+                            <a
+                              href={twitterShareUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={wrapShareClick(
+                                onClickPopup.bind(this),
+                                'SHARING_TWITTER',
+                                this.props.appType
+                              )}
+                              className={moduleStyles.socialLink}
+                            >
+                              <FontAwesome
+                                icon="x-twitter"
+                                iconStyle="brands"
+                              />
+                            </a>
+                          )}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-                <div className="social-buttons" style={{marginTop: 12}}>
-                  <MuiButton
-                    variant="outlined"
-                    color="secondary"
-                    size="medium"
-                    loadingPosition="start"
-                    id="sharing-phone"
-                    onClick={wrapShareClick(
-                      this.showSendToPhone,
-                      'SHARING_LINK_SEND_TO_PHONE',
-                      this.props.appType
-                    )}
-                    type="button"
-                    startIcon={<FontAwesomeV6Icon iconName="mobile-screen" />}
-                  >
-                    {i18n.sendToPhone()}
-                  </MuiButton>
-                  {canPrint && hasThumbnail && (
-                    <MuiButton
-                      variant="contained"
-                      color="primary"
-                      size="medium"
-                      loadingPosition="start"
-                      onClick={wrapShareClick(this.print, 'print')}
-                      type="button"
-                      startIcon={<FontAwesomeV6Icon iconName="print" />}
+                  {warningText && (
+                    <MuiTypography
+                      variant="body4"
+                      className={moduleStyles.thumbnailWarning}
                     >
-                      {i18n.print()}
-                    </MuiButton>
+                      {warningText}
+                    </MuiTypography>
                   )}
-                  {this.isSocialShareAllowed() && (
-                    <span>
-                      {this.state.isFacebookAvailable && (
-                        <a
-                          href={facebookShareUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={wrapShareClick(
-                            onClickPopup.bind(this),
-                            'SHARING_FB',
-                            this.props.appType
-                          )}
-                          style={styles.socialLink}
-                        >
-                          <FontAwesome icon="facebook-f" iconStyle="brands" />
-                        </a>
-                      )}
-                      {this.state.isTwitterAvailable && (
-                        <a
-                          href={twitterShareUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={wrapShareClick(
-                            onClickPopup.bind(this),
-                            'SHARING_TWITTER',
-                            this.props.appType
-                          )}
-                          style={styles.socialLink}
-                        >
-                          <FontAwesome icon="x-twitter" iconStyle="brands" />
-                        </a>
-                      )}
-                    </span>
-                  )}
-                </div>
-                {this.state.showSendToPhone && (
-                  <div>
-                    <div style={styles.sendToPhoneContainer}>
-                      <div style={styles.sendToPhoneLeft}>
+                  {this.state.showSendToPhone && (
+                    <div className={moduleStyles.sendToPhoneContainer}>
+                      <div className={moduleStyles.sendToPhoneLeft}>
                         <SendToPhone
                           channelId={channelId}
                           appType={appType}
                           isLegacyShare={false}
                         />
                       </div>
-                      <div style={styles.sendToPhoneRight}>
-                        <label>{i18n.scanQRCode()}</label>
+                      <div className={moduleStyles.sendToPhoneRight}>
+                        <MuiTypography variant="body3" component="label">
+                          {i18n.scanQRCode()}
+                        </MuiTypography>
                         <QRCode value={shareUrl + '?qr=true'} size={90} />
                       </div>
                     </div>
-                    <div style={{clear: 'both'}} />
-                  </div>
-                )}
-                {warningText && (
-                  <div style={styles.warningMessageContainer}>
-                    <span
-                      style={styles.thumbnailWarning}
-                      className="thumbnail-warning"
-                    >
-                      {warningText}
-                    </span>
-                  </div>
-                )}
-                <div style={{clear: 'both', marginTop: 40}}>
+                  )}
                   {isDroplet && (
                     <AdvancedShareOptions
                       shareUrl={shareUrl}
@@ -438,97 +430,14 @@ class ShareAllowedDialog extends React.Component {
                   )}
                 </div>
               </div>
-            </div>
-          </BaseDialog>
+            }
+          />
         )}
         <LibraryCreationDialog channelId={channelId} />
-      </div>
+      </>
     );
   }
 }
-
-const styles = {
-  modal: {
-    width: 720,
-  },
-  abuseStyle: {
-    border: '1px solid',
-    borderRadius: 10,
-    padding: 10,
-    marginBottom: 20,
-  },
-  abuseTextStyle: {
-    color: '#b94a48',
-    fontSize: 14,
-  },
-  shareWarning: {
-    color: color.red,
-    fontSize: 13,
-    fontWeight: 'bold',
-  },
-  thumbnail: {
-    float: 'left',
-    marginRight: 16,
-    width: 127,
-    height: 127,
-    overflow: 'hidden',
-    borderRadius: 2,
-    border: '1px solid rgb(187,187,187)',
-    backgroundColor: color.white,
-    position: 'relative',
-  },
-  thumbnailImg: {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    width: '100%',
-    height: 'auto',
-    transform: 'translate(-50%,-50%)',
-    msTransform: 'translate(-50%,-50%)',
-    WebkitTransform: 'translate(-50%,-50%)',
-  },
-  thumbnailWarning: {
-    fontSize: 12,
-    ...fontConstants['main-font-bold'],
-  },
-  sendToPhoneContainer: {
-    width: '100%',
-    marginTop: 15,
-  },
-  sendToPhoneButton: {
-    margin: 0,
-    marginRight: 16,
-    fontSize: 'large',
-    padding: '0 16px',
-    paddingRight: 6,
-    height: 45,
-  },
-  sendToPhoneSpan: {
-    padding: 0,
-    paddingLeft: 10,
-    verticalAlign: 'text-top',
-  },
-  sendToPhoneLeft: {
-    float: 'left',
-    width: '70%',
-    paddingRight: 20,
-    boxSizing: 'border-box',
-  },
-  sendToPhoneRight: {
-    float: 'right',
-    width: '30%',
-  },
-  socialLink: {
-    marginRight: 16,
-  },
-  loadingSpinner: {
-    marginRight: 16,
-  },
-  warningMessageContainer: {
-    clear: 'both',
-    marginTop: 10,
-  },
-};
 
 export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 

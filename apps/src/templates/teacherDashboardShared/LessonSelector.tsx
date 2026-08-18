@@ -10,7 +10,11 @@ import styles from './lessonSelector.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 // Some lessons are lockable and don't have lesson plans (typically assessments or surveys).
-// In this case, we want to display the lesson name without a number.  See CSP1-2022 for an example.
+// Mirrors Lesson#numbered_lesson? in dashboard/app/models/lesson.rb.
+const isNumberedLesson = (lesson: LessonOption) =>
+  lesson.hasLessonPlan || !lesson.isLockable;
+
+// For unnumbered lessons, we want to display the lesson name without a number.  See CSP1-2022 for an example.
 const createDisplayName = (
   lessonName: string,
   lessonPosition: number,
@@ -43,6 +47,7 @@ export interface LessonOption {
   hasLessonPlan: boolean;
   isLockable: boolean;
   position: number;
+  hasCodeLevel?: boolean;
 }
 
 interface LessonSelectorProps {
@@ -100,10 +105,13 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
     [generateLessonDropdownOptions]
   );
 
-  // Auto-select first lesson when lessons change
+  // Auto-select the first numbered lesson when lessons change, skipping
+  // leading surveys/pre-assessments. Falls back to the first lesson if the
+  // unit has no numbered lessons at all.
   useEffect(() => {
     if (lessons.length > 0 && !selectedLesson) {
-      onLessonChange(lessons[0].id);
+      const defaultLesson = lessons.find(isNumberedLesson) || lessons[0];
+      onLessonChange(defaultLesson.id);
     }
   }, [lessons, selectedLesson, onLessonChange]);
 

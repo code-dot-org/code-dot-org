@@ -19,6 +19,12 @@ export const STROKE_FONT_PALETTE: ColorSwatch[] = [
   {value: 'var(--sketchlab-stroke-pink)', label: 'Pink'},
 ];
 
+// Text-box borders offer the same colors as shape borders plus Clear.
+export const TEXT_BORDER_PALETTE: ColorSwatch[] = [
+  {value: 'transparent', label: 'Clear', transparent: true},
+  ...STROKE_FONT_PALETTE,
+];
+
 export const BACKGROUND_PALETTE: ColorSwatch[] = [
   {value: 'transparent', label: 'Clear', transparent: true},
   {value: 'var(--sketchlab-bg-gray)', label: 'Gray'},
@@ -131,6 +137,9 @@ export type TextAlignValue = (typeof TEXT_ALIGN_OPTIONS)[number]['value'];
 export const DEFAULT_BACKGROUND_COLOR = 'transparent';
 export const DEFAULT_STROKE_COLOR = 'var(--sketchlab-stroke-default)';
 export const DEFAULT_FONT_COLOR = 'var(--sketchlab-stroke-default)';
+// Fallback when a text node has no strokeColor, i.e. it predates the border
+// option. New nodes get an explicit color at creation instead.
+export const DEFAULT_TEXT_BORDER_COLOR = 'transparent';
 export const DEFAULT_FONT_SIZE: FontSizeValue = 'medium';
 export const DEFAULT_FONT_FAMILY: FontFamilyValue = 'sans';
 export const DEFAULT_TEXT_ALIGN: TextAlignValue = 'center';

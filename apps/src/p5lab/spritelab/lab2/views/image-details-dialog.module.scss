@@ -1,0 +1,336 @@
+// The image dialog: image large on the left, details or the generate form
+// on the right, actions in a footer bar. Wears the same rounded chrome as
+// the pixel editor (dialogChrome.scss), following the page's light/dark
+// theme.
+
+@use '../../../../pixelEditor/dialogChrome' as chrome;
+
+// display: contents host so our panel styles win over CustomDialog's via
+// parent-selector specificity (the PixelEditorModal pattern).
+.dialogHost {
+  display: contents;
+
+  // The host carries data-theme; the chrome colors follow it.
+  @include chrome.theme;
+}
+
+.dialogHost .dialog {
+  @include chrome.panel;
+
+  // One width for both views; the panel's max-width still shrinks it on
+  // narrow browsers.
+  width: 850px;
+}
+
+.dialogHost .dialog :focus-visible {
+  @include chrome.focus-ring;
+}
+
+.header {
+  @include chrome.header;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerTitle {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.srOnly {
+  @include chrome.sr-only;
+}
+
+@include chrome.keyframes;
+
+.body {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+}
+
+.imagePane {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 380px;
+  height: 380px;
+  flex-shrink: 0;
+  border: 1px solid chrome.$border-subtle;
+  border-radius: 6px;
+  background-color: transparent;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    // Art-pixel edges stay crisp when upscaled.
+    image-rendering: pixelated;
+  }
+}
+
+// Checkerboard signals transparency; base and tint follow the theme (the
+// paint editor draws the same pair into its canvas). Only once there's an
+// image: an empty pane stays blank.
+.imagePaneChecker {
+  background-color: var(--dialog-checker-bg);
+  background-image: linear-gradient(
+      45deg,
+      var(--dialog-checker-tint) 25%,
+      transparent 25%
+    ),
+    linear-gradient(-45deg, var(--dialog-checker-tint) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--dialog-checker-tint) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--dialog-checker-tint) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+}
+
+// The summary view's image is itself the way into the paint editor.
+.imageButton {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+
+  // The page's legacy `button > img {opacity: 0.6}` dims the image until
+  // hover; only the paint affordance should be quiet, never the image.
+  img {
+    opacity: 1;
+  }
+}
+
+// The paint affordance in the image's corner: quiet until the image is
+// hovered or focused.
+.paintOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: var(--dialog-primary-bg);
+  color: var(--dialog-primary-text);
+  font-size: 15px;
+  opacity: 0.55;
+  transition: opacity 0.12s ease;
+}
+
+.imageButton:hover .paintOverlay,
+.imageButton:focus-visible .paintOverlay {
+  opacity: 1;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+}
+
+.detailsPane {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.metadata {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 14px;
+  margin: 0;
+  font-size: 14px;
+
+  dt {
+    color: var(--dialog-text-secondary);
+  }
+
+  dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+// The prompt is the user's own words; italics set it off from the fixed
+// choices around it.
+.promptValue {
+  font-style: italic;
+}
+
+.footer {
+  @include chrome.footer;
+
+  font-size: 14px;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: auto;
+}
+
+.button {
+  @include chrome.plain-button;
+}
+
+.primaryButton {
+  @include chrome.plain-button;
+  @include chrome.primary-button;
+}
+
+.dangerButton {
+  @include chrome.plain-button;
+  @include chrome.danger-button;
+}
+
+.iconButton {
+  @include chrome.plain-button;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-color: transparent;
+  flex-shrink: 0;
+}
+
+// --- Generate view ---
+
+.formRow {
+  display: flex;
+  gap: 16px;
+
+  > * {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+// The row's roomier half (prompt, start-from choices).
+.wide {
+  flex: 1.6 1 0;
+}
+
+.promptLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.promptLabel span,
+.radioGroup legend {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: var(--dialog-text-secondary);
+}
+
+// Bootstrap's global legend styling draws a full-width underline; these
+// sit inset on the group's border like classic fieldset legends.
+.radioGroup legend {
+  width: auto;
+  margin: 0;
+  padding: 0 4px;
+  border: none;
+  line-height: inherit;
+}
+
+// A column of stacked groups sharing a row with the prompt.
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.promptInput {
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid var(--dialog-control-border);
+  border-radius: 6px;
+  background-color: var(--dialog-control-bg);
+  color: chrome.$panel-text;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid chrome.$border-subtle;
+  border-radius: 6px;
+  // The design system's disabled-label grey is illegible on the panel;
+  // remap the variable it reads to our secondary text (the greyed radio
+  // circle still marks the option disabled).
+  --text-neutral-disabled: var(--dialog-text-secondary);
+}
+
+// Wears .radioGroup's bordered look; this only fits the slider, which the
+// design system fixes at 300px (its track and input already stretch to
+// their container).
+.temperatureGroup > div {
+  width: 100%;
+  min-width: 0;
+}
+
+.bot {
+  width: 64px;
+  height: 64px;
+  align-self: center;
+  object-fit: contain;
+}
+
+// The pixelated variant is a canvas whose bitmap IS the coarse art grid;
+// sized to the bitmap's aspect so the upscale stays square-pixeled.
+.botPixelated {
+  width: auto;
+  image-rendering: pixelated;
+}
+
+// The style choice picks which bot variant shows (both stay mounted).
+.botHidden {
+  display: none;
+}
+
+.reviewHint {
+  margin: 0;
+  font-size: 14px;
+  color: chrome.$panel-text;
+}
+
+// The rename field sits in the header; sized so its save/cancel buttons
+// stay next to it (the design system wrapper's own min-width is 300px,
+// wider than the input it draws).
+.header .headerNameField {
+  width: 280px;
+  min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+.generateError {
+  color: var(--dialog-danger-text);
+  font-size: 13px;
+  font-weight: 600;
+}

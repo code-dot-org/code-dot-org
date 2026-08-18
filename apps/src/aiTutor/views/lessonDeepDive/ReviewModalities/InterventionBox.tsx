@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {VocabularyFlashcards} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useState} from 'react';
 
 import {
@@ -16,7 +17,6 @@ import ChallengeBox from '../ChallengeActivities/ChallengeBox';
 import Chat from './Chat';
 import PodcastsBox from './PodcastsBox';
 import VideosBox from './VideosBox';
-import VocabularyFlashcards from './VocabularyFlashcards';
 
 import styles from './intervention-box.module.scss';
 

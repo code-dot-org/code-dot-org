@@ -1,0 +1,17 @@
+name 'pl-aif1-js-reading-event-handler'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Reading an Event Handler in Code</h1>
+
+You now know the three jobs: interact, listen, respond. Here's what that looks like as actual JavaScript. 
+
+You don't need to memorize this syntax, you need to recognize *which lines are doing which job*, the same way you learned to read a CSS rule earlier in this unit.
+
+---
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/reading-an-event-handler.html" width="100%" height="640" style="border:none;" title="Reading an Event Handler: click through interact, listen, respond"></iframe>
+</div>
+MARKDOWN

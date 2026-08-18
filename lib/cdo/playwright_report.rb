@@ -28,22 +28,22 @@ module Cdo
         next unless File.file?(path)
         name = path.delete_prefix("#{report_dir}/")
         content_type = Rack::Mime.mime_type(File.extname(path), 'application/octet-stream')
-        url = File.open(path, 'rb') do |body|
+        versioned_url = File.open(path, 'rb') do |body|
           uploader.upload_log(name, body, content_type: content_type)
         end
-        # Return the unversioned URL: the report SPA resolves sibling data/
-        # attachments relative to its own URL, so a ?versionId= (which belongs
-        # to index.html) leaks onto those requests and 404s. The bare key serves
-        # the latest upload, matching the overwrite-per-run behavior anyway.
-        index_url = url.split('?', 2).first if name == 'index.html'
+        index_url = versioned_url&.split('?', 2)&.first if name == 'index.html'
       end
+      # Unversioned, like the Cucumber status page (upload_status_page_to_s3 in
+      # dashboard/test/ui/runner.rb): the report's JS copies this page's query
+      # onto every link it renders, and a versionId resolves only for its own key.
       index_url
     rescue StandardError => exception
       CDO.log.error "Failed to upload Playwright report: #{exception.message}"
       nil
     end
 
-    # Computed without uploading, so the report can be linked before the run finishes.
+    # The unversioned key, which serves the latest upload. Computed without
+    # uploading, so the report can also be linked before the run finishes.
     def self.index_url
       AWS::S3.public_url(BUCKET, "#{prefix}/playwright/index.html")
     rescue StandardError => exception

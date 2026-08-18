@@ -24,6 +24,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {getPreviewDomain} from '@cdo/apps/util/sandboxedPreviewDomain';
 import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
 import {
   addConsoleLog,
@@ -43,12 +44,14 @@ import {
   DEFAULT_START_HTML_FILE,
 } from './constants';
 import {HTMLPreviewHeader} from './HTMLPreviewHeader';
+import PreviewConnectionError from './PreviewConnectionError';
 import PreviewEmptyState from './PreviewEmptyState';
 import PreviewStopped from './PreviewStopped';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
 const SOURCE_CHANGE_DELAY_MS = 500;
+const IFRAME_CONNECTION_TIMEOUT_MS = 15000;
 
 export const HTMLPreview: React.FC = () => {
   const normalizedChannelId = useAppSelector(
@@ -92,7 +95,9 @@ export const HTMLPreview: React.FC = () => {
       }
     }
 
-    return `${location.protocol}//${prefix}.preview.${subdomain}codeprojects.org${port}`;
+    return `${
+      location.protocol
+    }//${prefix}.preview.${subdomain}${getPreviewDomain()}${port}`;
   }, [
     isEditingExemplar,
     isStartMode,
@@ -135,6 +140,7 @@ export const HTMLPreview: React.FC = () => {
     PreviewViewMode.DESKTOP
   );
   const [isStopped, setIsStopped] = useState<boolean>(false);
+  const [isConnectionBlocked, setIsConnectionBlocked] = useState(false);
   const isPredictLevel = levelProperties?.predictSettings?.isPredictLevel;
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
@@ -482,6 +488,27 @@ export const HTMLPreview: React.FC = () => {
     }
   }, [isIframeLoaded, previewUrl, inspectorEnabled]);
 
+  const isPreviewShowing = !isEmptyProject && !isStopped && !isLevelLoading;
+
+  // The preview iframe announces itself with IFRAME_READY once it loads. If we never hear from it,
+  // the preview origin is most likely unreachable (firewall, DNS, or a browser extension),
+  // which would otherwise leave the panel blank with no explanation.
+  useEffect(() => {
+    if (isIframeLoaded || !isPreviewShowing) {
+      setIsConnectionBlocked(false);
+      return;
+    }
+    const timeoutId = setTimeout(() => {
+      setIsConnectionBlocked(true);
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logWarning(
+          `HTMLPreview iframe did not connect to ${previewUrl} within ${IFRAME_CONNECTION_TIMEOUT_MS}ms.`
+        );
+    }, IFRAME_CONNECTION_TIMEOUT_MS);
+    return () => clearTimeout(timeoutId);
+  }, [isIframeLoaded, isPreviewShowing, previewUrl]);
+
   return (
     <PanelContainer
       id={'html-preview'}
@@ -522,32 +549,43 @@ export const HTMLPreview: React.FC = () => {
         ) : isLevelLoading ? (
           <CodebridgeEmptyState title="Loading..." />
         ) : (
-          /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
+          /* This iframe points to the environment-specific preview origin (see previewUrl above). That url will eventually
             route to InnerHTMLPreview. */
-          <div
-            ref={previewContainerRef}
-            // This provides a small visual indicator when the iframe is focused after submitting the URL.
-            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-            tabIndex={0}
-            className={moduleStyles.previewWrapper}
-            role="application"
-            aria-label="Web Preview Frame"
-          >
-            <iframe
-              sandbox="allow-scripts allow-same-origin allow-forms"
-              allow="self"
-              title="Web Preview"
-              ref={iframeRef}
-              id="preview"
+          <>
+            {isConnectionBlocked && (
+              <div role="alert">
+                <PreviewConnectionError />
+              </div>
+            )}
+            <div
+              ref={previewContainerRef}
+              // This provides a small visual indicator when the iframe is focused after submitting the URL.
+              // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+              tabIndex={0}
+              // The iframe stays mounted while the error shows, so a late connection still recovers.
               className={classNames(
-                moduleStyles.previewIframe,
-                previewViewMode === PreviewViewMode.DESKTOP
-                  ? moduleStyles.desktopPreviewIframe
-                  : moduleStyles.mobilePreviewIframe
+                moduleStyles.previewWrapper,
+                isConnectionBlocked && moduleStyles.hiddenPreviewWrapper
               )}
-              src={previewUrl}
-            />
-          </div>
+              role="application"
+              aria-label="Web Preview Frame"
+            >
+              <iframe
+                sandbox="allow-scripts allow-same-origin allow-forms"
+                allow="self"
+                title="Web Preview"
+                ref={iframeRef}
+                id="preview"
+                className={classNames(
+                  moduleStyles.previewIframe,
+                  previewViewMode === PreviewViewMode.DESKTOP
+                    ? moduleStyles.desktopPreviewIframe
+                    : moduleStyles.mobilePreviewIframe
+                )}
+                src={previewUrl}
+              />
+            </div>
+          </>
         )}
       </div>
     </PanelContainer>

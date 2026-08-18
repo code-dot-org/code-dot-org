@@ -6,14 +6,14 @@ import {
   Typography,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, {FC} from 'react';
+import React, {FC, ReactNode} from 'react';
 
 import styles from './CodebridgeEmptyState.module.scss';
 
 export interface CodebridgeEmptyStateProps {
   imageProps?: ImageProps;
   title?: string;
-  description?: string;
+  description?: ReactNode;
   className?: string;
   buttonProps?: MuiButtonProps;
 }

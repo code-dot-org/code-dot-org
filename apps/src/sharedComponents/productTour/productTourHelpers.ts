@@ -100,6 +100,7 @@ export const createCompletionStep = (
 // 1-second delay before advancing on a correct answer.
 export const createQuizWhenHandlers = (
   tour: Tour,
+  tourName: string,
   wrongAnswerFeedback: string,
   highlightSelector?: string
 ): {show: () => void; hide: () => void} => {
@@ -127,15 +128,16 @@ export const createQuizWhenHandlers = (
         const allOptions = Array.from(
           document.querySelectorAll<HTMLButtonElement>('.quiz-option')
         );
+        const answerValue =
+          target.dataset.originalText ?? target.textContent?.trim() ?? '';
 
         if (target.dataset.answer === 'correct') {
           target.classList.add('quiz-option-correct');
-          target.textContent = `✓ ${
-            target.dataset.originalText ?? target.textContent?.trim() ?? ''
-          }`;
+          target.textContent = `✓ ${answerValue}`;
           allOptions.forEach(btn => {
             btn.disabled = true;
           });
+          recordOnboardingQuizAnswered(tour, tourName, answerValue, true);
           quizAdvanceTimer = setTimeout(() => {
             quizAdvanceTimer = null;
             tour.next();
@@ -149,13 +151,12 @@ export const createQuizWhenHandlers = (
             }
           });
           target.classList.add('quiz-option-wrong');
-          target.textContent = `✗ ${
-            target.dataset.originalText ?? target.textContent?.trim() ?? ''
-          }`;
+          target.textContent = `✗ ${answerValue}`;
           target.disabled = true;
           const feedback =
             document.querySelector<HTMLElement>('.quiz-feedback');
           if (feedback) feedback.textContent = wrongAnswerFeedback;
+          recordOnboardingQuizAnswered(tour, tourName, answerValue, false);
         }
       };
 
@@ -184,6 +185,46 @@ export const createQuizWhenHandlers = (
   };
 };
 
+export const recordOnboardingQuizAnswered = (
+  tour: Tour,
+  tourName: string,
+  answerValue: string,
+  isCorrect: boolean
+): void => {
+  const stepId = tour.currentStep?.id;
+  if (!stepId) return;
+
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_QUIZ_ANSWERED, {
+    tour_name: tourName,
+    step_id: stepId,
+    answer_value: answerValue,
+    is_correct: isCorrect,
+  });
+};
+
+export const recordOnboardingStepViewed = (
+  tour: Tour,
+  tourName: string
+): void => {
+  const stepId = tour.currentStep?.id;
+  if (!stepId) return;
+
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_STEP_VIEWED, {
+    tour_name: tourName,
+    step_id: stepId,
+  });
+};
+
+export const recordOnboardingNavigation = (
+  tourName: string,
+  toPage: string
+): void => {
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_NAVIGATION, {
+    tour_name: tourName,
+    to_page: toPage,
+  });
+};
+
 export const recordOnboardingTourAbandonment = (
   tour: Tour,
   sessionStorageKey: string,
@@ -199,6 +240,21 @@ export const recordOnboardingTourAbandonment = (
     tour_name: tourName,
     step_id: currentStepId,
   });
+};
+
+// Wires the two analytics listeners every onboarding tour instance needs —
+// step-viewed on each step 'show', abandonment on 'cancel'. Shared across
+// useOnboardingTour and the per-tour resume…() functions so each doesn't
+// re-derive this wiring with a different tourName/sessionStorageKey pair.
+export const attachOnboardingAnalytics = (
+  tour: Tour,
+  tourName: string,
+  sessionStorageKey: string
+): void => {
+  tour.on('show', () => recordOnboardingStepViewed(tour, tourName));
+  tour.on('cancel', () =>
+    recordOnboardingTourAbandonment(tour, sessionStorageKey, tourName)
+  );
 };
 
 export const createTourWithSteps = (

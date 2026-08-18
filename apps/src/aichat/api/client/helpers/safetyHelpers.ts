@@ -60,6 +60,7 @@ export function isOutputImageLlmSafetyJudgeEnabled(): boolean {
  */
 export async function isTextSafe(
   text: string,
+  phase?: 'input_filter' | 'output_filter',
   customSafetyConfig?: Partial<SafetyConfig>
 ): Promise<boolean> {
   const safetyConfig = {
@@ -67,11 +68,14 @@ export async function isTextSafe(
     ...customSafetyConfig,
   };
 
-  const response = await generateText({
-    prompt: `${safetyConfig.safetySystemPrompt}. Here is the text to classify: ${text}`,
-    output: outputSchema,
-    model: getModel(safetyConfig.modelId),
-  });
+  const response = await generateText(
+    {
+      prompt: `${safetyConfig.safetySystemPrompt}. Here is the text to classify: ${text}`,
+      output: outputSchema,
+      model: getModel(safetyConfig.modelId),
+    },
+    {phase: phase}
+  );
 
   return isValidAndPassingClassification(response.output?.classification);
 }
@@ -109,11 +113,14 @@ export async function isImageSafe(
     },
   ];
 
-  const response = await generateText({
-    messages,
-    output: outputSchema,
-    model: getModel(safetyConfig.modelId),
-  });
+  const response = await generateText(
+    {
+      messages,
+      output: outputSchema,
+      model: getModel(safetyConfig.modelId),
+    },
+    {phase: 'llm_safety_judge'}
+  );
 
   return isValidAndPassingClassification(response.output?.classification);
 }
@@ -134,6 +141,7 @@ export async function getImageModerationStatus(
       moderateEvent: EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE,
       flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
       assetUrl,
+      feature: 'ai-gateway',
     },
     {Violence: 2}
   );

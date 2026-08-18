@@ -478,18 +478,6 @@ div#visualizationResizeBar {
   color: white;
 }
 
-.assetRow {
-  border-bottom: 1px solid #999;
-}
-
-.assetRow:last-child {
-  border-bottom: none;
-}
-
-.assetRow:hover {
-  background: $lighter_purple;
-}
-
 .no-outline:focus {
   outline: none;
 }

@@ -38,6 +38,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
+  DEFAULT_TEXT_NODE_HEIGHT,
   KEYBOARD_PAN_STEP,
   LINE_DEFAULT_LENGTH_PX,
   LINE_RECONNECT_SNAP_RADIUS_PX,
@@ -56,6 +57,10 @@ import {
 } from '../context';
 import CornerToolbarPanel from '../elementToolbars/components/CornerToolbarPanel';
 import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
+import {
+  MIDDLE_MOUSE_BUTTON,
+  useCanvasToolSwitching,
+} from '../hooks/useCanvasToolSwitching';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useDisplayElements} from '../hooks/useDisplayElements';
 import {useDragSelection} from '../hooks/useDragSelection';
@@ -63,6 +68,7 @@ import {useElementClickHandlers} from '../hooks/useElementClickHandlers';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
+import {ModeratedImageUploader} from '../hooks/useModeratedImageUpload';
 import {useNodeDrag} from '../hooks/useNodeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useTransientMessage} from '../hooks/useTransientMessage';
@@ -79,8 +85,10 @@ import {
   ReactFlowSketchLabSources,
   SketchLabNode,
 } from '../types';
+import type {TabOrderEntry} from '../utils/computeTabOrder';
 import {canCreateConnection} from '../utils/connectionRules';
 import {
+  countLogicalElements,
   expandGroupDeletion,
   groupSelectedNodes,
   ungroupNode,
@@ -90,6 +98,7 @@ import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 import CanvasControls from './CanvasControls';
 import ConnectionLine from './ConnectionLine';
+import EdgeSelectionOutlines from './EdgeSelectionOutlines';
 import Toolbar from './Toolbar';
 
 import styles from './react-flow-canvas.module.scss';
@@ -102,15 +111,13 @@ const NODE_TYPES = {
   group: GroupNode,
 };
 
-// Offset added per new node so they don't stack exactly on top of each other.
-const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 
 const GROUP_MODE_HINT =
   'Tab to move — Enter to select/deselect — G to group — Esc to cancel';
 
 const HAND_MODE_HINT =
-  'Hand tool — use the arrow keys to pan — Esc to return to select';
+  'Hand tool — use the arrow keys to pan — S to return to select';
 const HAND_MODE_HINT_READ_ONLY = 'Hand tool — use the arrow keys to pan';
 
 // Fallbacks for edges that don't specify type/style, kept in sync with the
@@ -131,6 +138,11 @@ function stripDisplayFields<T extends object>(item: T): T {
   delete result.draggable;
   delete result.connectable;
   delete result.deletable;
+  // The clickable band an edge gets while rendered; not part of the drawing.
+  delete result.interactionWidth;
+  // Recomputed from the drawing on every render, so saving it only preserves a
+  // label that will be wrong the next time the line moves.
+  delete result.ariaLabel;
   return result as T;
 }
 
@@ -138,7 +150,11 @@ export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
   >['updateSources'];
-  levelName: string;
+  // When absent, image uploads report an error.
+  uploadImage?: ModeratedImageUploader;
+  uploadsDisabled?: boolean;
+  openUploadsDisabledModal?: () => void;
+  onNodesDeleted?: (deletedNodes: SketchLabNode[]) => void;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
   initialViewport: SketchlabReactFlowSource['viewport'];
@@ -153,9 +169,15 @@ export interface ReactFlowCanvasProps {
 
 export const SKETCHLAB_CONTAINER_CLASS = 'sketchlab-react-flow-container';
 
+const uploadImageUnavailable: ModeratedImageUploader = async ({onError}) =>
+  onError();
+
 export default function ReactFlowCanvas({
   updateSources,
-  levelName,
+  uploadImage = uploadImageUnavailable,
+  uploadsDisabled = false,
+  openUploadsDisabledModal,
+  onNodesDeleted,
   initialNodes,
   initialEdges,
   initialViewport,
@@ -168,10 +190,14 @@ export default function ReactFlowCanvas({
     useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const tourActive = useSyncExternalStore(subscribeToActiveTour, hasActiveTour);
-  const {syncRefs, pushSnapshot, undo, redo, canUndo, canRedo} =
+  const {syncRefs, pushSnapshot, clearHistory, undo, redo, canUndo, canRedo} =
     useUndoHistory();
-  // Keep undo history refs in sync with current canvas state.
+  // Keep undo history refs in sync with current canvas state. nodesRef lets
+  // event callbacks read current nodes without depending on the nodes array,
+  // which changes every drag frame.
+  const nodesRef = useRef(nodes);
   useEffect(() => {
+    nodesRef.current = nodes;
     syncRefs(nodes, edges);
   }, [nodes, edges, syncRefs]);
 
@@ -251,8 +277,8 @@ export default function ReactFlowCanvas({
     getViewport,
     setViewport: setReactFlowViewport,
   } = useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
-  const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
+  const workspaceRef = useRef<HTMLDivElement>(null);
 
   const {
     isDirectAnchorDragging,
@@ -268,6 +294,7 @@ export default function ReactFlowCanvas({
   });
   const {
     multiSelectedNodeIds,
+    setMultiSelectedNodeIds,
     clearSelection,
     isGroupMode,
     ariaAnnouncement,
@@ -285,19 +312,19 @@ export default function ReactFlowCanvas({
     closeToolbar,
   });
 
-  // Count logical groupable elements: regular nodes as 1, standalone-line
-  // anchor pairs as 1. Already-grouped and locked nodes are excluded.
-  const groupableCount = useMemo(() => {
-    let anchors = 0;
-    let nonAnchors = 0;
-    for (const id of multiSelectedNodeIds) {
-      const node = nodes.find(n => n.id === id);
-      if (!node || node.parentId || node.data?.locked) continue;
-      if (node.type === 'lineAnchor') anchors++;
-      else nonAnchors++;
-    }
-    return nonAnchors + anchors / 2;
-  }, [multiSelectedNodeIds, nodes]);
+  // Groupable elements within the current selection.
+  const groupableCount = useMemo(
+    () =>
+      countLogicalElements(
+        nodes.filter(
+          node =>
+            multiSelectedNodeIds.has(node.id) &&
+            !node.parentId &&
+            !node.data?.locked
+        )
+      ),
+    [multiSelectedNodeIds, nodes]
+  );
   // Count ALL groupable elements on the canvas (not just selected) to decide
   // whether entering group mode is possible.
   const totalGroupableCount = useMemo(() => {
@@ -340,14 +367,19 @@ export default function ReactFlowCanvas({
     [announceGroupMode, showGroupModeError]
   );
 
-  const [imageUploadError, showImageUploadError] = useTransientMessage(
+  const [imageError, showImageError] = useTransientMessage(
     TRANSIENT_MESSAGE_DURATION_MS
   );
   const handleImageUploadError = useCallback(() => {
     const message = 'Could not upload image. Please try again.';
     announceGroupMode(message);
-    showImageUploadError(message);
-  }, [announceGroupMode, showImageUploadError]);
+    showImageError(message);
+  }, [announceGroupMode, showImageError]);
+  const handleFlaggedImageCopyBlocked = useCallback(() => {
+    const message = 'Flagged images cannot be copied.';
+    announceGroupMode(message);
+    showImageError(message);
+  }, [announceGroupMode, showImageError]);
 
   // One banner at a time, highest priority first: an upload error, then a
   // group-mode error, the group-mode hint while group mode is active, and
@@ -356,8 +388,8 @@ export default function ReactFlowCanvas({
     message: string;
     variant: 'info' | 'error';
   } | null>(() => {
-    if (imageUploadError) {
-      return {message: imageUploadError, variant: 'error'};
+    if (imageError) {
+      return {message: imageError, variant: 'error'};
     }
     if (groupModeError) {
       return {message: groupModeError, variant: 'info'};
@@ -373,7 +405,7 @@ export default function ReactFlowCanvas({
     }
     return null;
   }, [
-    imageUploadError,
+    imageError,
     groupModeError,
     isGroupMode,
     readOnly,
@@ -381,26 +413,12 @@ export default function ReactFlowCanvas({
     workspaceFocused,
   ]);
 
-  const handlePaneClick = useCallback(() => {
-    canvasContainerRef.current?.focus();
-    clearSelection();
-  }, [clearSelection]);
-
   // The workspace wrapper is the single tab stop for the canvas in hand mode.
-  // While it holds focus, arrow keys pan the viewport and Esc returns to the select tool.
+  // While it holds focus, arrow keys pan the viewport. "S" returns to the
+  // select tool, handled with the rest of the tool shortcuts.
   const handleWorkspaceKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
       if (event.target !== event.currentTarget) return;
-
-      // Leave read-only viewers in pan mode on Escape rather than stranding them,
-      // as the only tool available in read only is the hand tool.
-      if (event.key === 'Escape') {
-        if (readOnly) return;
-        event.preventDefault();
-        setCanvasTool('cursor');
-        canvasContainerRef.current?.focus();
-        return;
-      }
 
       let deltaX = 0;
       let deltaY = 0;
@@ -428,7 +446,7 @@ export default function ReactFlowCanvas({
         y: current.y + deltaY,
       });
     },
-    [readOnly, getViewport, setReactFlowViewport]
+    [getViewport, setReactFlowViewport]
   );
 
   const handleWorkspaceFocus = useCallback((event: React.FocusEvent) => {
@@ -455,17 +473,43 @@ export default function ReactFlowCanvas({
     canvasContainerRef.current?.focus();
   }, []);
 
+  const handleNodesDeleted = useCallback(
+    (deletedNodes: SketchLabNode[]) => {
+      onNodesDeleted?.(deletedNodes);
+      handleElementsDeleted();
+    },
+    [onNodesDeleted, handleElementsDeleted]
+  );
+
   // Intercept React Flow's change callbacks to push undo snapshots before
   // delete. Drag is handled by handleNodeDragStart, and resize by
   // RotatedNodeResizer. Adds that bypass onNodesChange (direct setNodes calls)
   // are handled at their call sites.
   const handleNodesChange: OnNodesChange<SketchLabNode> = useCallback(
     changes => {
-      const hasDelete = changes.some(change => change.type === 'remove');
-      if (hasDelete) pushSnapshot();
+      const removedIds = new Set(
+        changes
+          .filter(change => change.type === 'remove')
+          .map(change => change.id)
+      );
+      if (removedIds.size > 0) {
+        // Deleting a flagged image hard-deletes its asset, so wipe history
+        // instead of snapshotting.
+        const deletesFlaggedImage = nodesRef.current.some(
+          node =>
+            removedIds.has(node.id) &&
+            node.type === 'image' &&
+            node.data.flagged
+        );
+        if (deletesFlaggedImage) {
+          clearHistory();
+        } else {
+          pushSnapshot();
+        }
+      }
       onNodesChange(changes);
     },
-    [onNodesChange, pushSnapshot]
+    [onNodesChange, pushSnapshot, clearHistory]
   );
 
   const handleEdgesChange: OnEdgesChange<SketchlabReactFlowEdge> = useCallback(
@@ -493,10 +537,12 @@ export default function ReactFlowCanvas({
     setNodes,
     setEdges,
     pushSnapshot,
+    clearHistory,
     canvasContainerRef,
     readOnly,
-    levelName,
+    uploadImage,
     onImageUploadError: handleImageUploadError,
+    onFlaggedImageCopyBlocked: handleFlaggedImageCopyBlocked,
   });
 
   const clipboardContextValue = useMemo(
@@ -512,37 +558,34 @@ export default function ReactFlowCanvas({
     setNodeOrEdgeFocused
   );
 
-  const handleGroupNodes = useCallback(
-    (explicitIds?: Set<string>) => {
-      const selectedIds = [...(explicitIds ?? multiSelectedNodeIds)];
-      if (selectedIds.length === 0) return;
-      const groupId = createUuid();
+  const handleGroupNodes = useCallback(() => {
+    const selectedIds = [...multiSelectedNodeIds];
+    if (selectedIds.length === 0) return;
+    const groupId = createUuid();
 
-      // groupSelectedNodes returns the input unchanged when the selection
-      // doesn't meet the minimum threshold (e.g. a single standalone line).
-      // Pre-check so pushSnapshot / announce / focus don't fire when no group
-      // is actually created. The updater re-runs against authoritative current
-      // state in case nodes changed between this render and the flush.
-      if (groupSelectedNodes(selectedIds, nodes, groupId) === nodes) return;
+    // groupSelectedNodes returns the input unchanged when the selection is
+    // below the minimum threshold (e.g. a single standalone line). Pre-check so
+    // pushSnapshot / announce / focus don't fire when no group is created.
+    // The updater below re-runs it against current state, in case nodes
+    // changed between this render and the flush.
+    if (groupSelectedNodes(selectedIds, nodes, groupId) === nodes) return;
 
-      pushSnapshot();
-      setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
-      clearSelection();
-      closeToolbar();
-      announceGroupMode('Group created.');
-      setTimeout(() => focusEntry({type: 'node', id: groupId}), 0);
-    },
-    [
-      multiSelectedNodeIds,
-      nodes,
-      pushSnapshot,
-      setNodes,
-      clearSelection,
-      closeToolbar,
-      announceGroupMode,
-      focusEntry,
-    ]
-  );
+    pushSnapshot();
+    setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
+    clearSelection();
+    closeToolbar();
+    announceGroupMode('Group created.');
+    setTimeout(() => focusEntry({type: 'node', id: groupId}), 0);
+  }, [
+    multiSelectedNodeIds,
+    nodes,
+    pushSnapshot,
+    setNodes,
+    clearSelection,
+    closeToolbar,
+    announceGroupMode,
+    focusEntry,
+  ]);
 
   const handleUngroupNode = useCallback(
     (groupId: string) => {
@@ -564,9 +607,52 @@ export default function ReactFlowCanvas({
     [nodes, edges]
   );
 
+  const handleDragSelectComplete = useCallback(
+    (selectedIds: Set<string>) => {
+      setMultiSelectedNodeIds(selectedIds);
+      closeToolbar();
+      const selectedNodes = nodes.filter(node => selectedIds.has(node.id));
+      const elementCount = countLogicalElements(selectedNodes);
+      if (elementCount === 0) {
+        canvasContainerRef.current?.focus();
+        return;
+      }
+      announceGroupMode(
+        elementCount === 1
+          ? '1 element selected.'
+          : `${elementCount} elements selected. Choose Group Elements to group them.`
+      );
+      // Park focus on a selected element so arrow keys move the selection. A
+      // lines-only selection has no focusable node, so focus a line edge.
+      const focusNode = selectedNodes.find(node => node.type !== 'lineAnchor');
+      const focusEdge = focusNode
+        ? undefined
+        : edges.find(
+            edge => selectedIds.has(edge.source) && selectedIds.has(edge.target)
+          );
+      const target: TabOrderEntry | null = focusNode
+        ? {type: 'node', id: focusNode.id}
+        : focusEdge
+        ? {type: 'edge', id: focusEdge.id}
+        : null;
+      if (target) {
+        setTimeout(() => focusEntry(target), 0);
+      }
+    },
+    [
+      setMultiSelectedNodeIds,
+      closeToolbar,
+      nodes,
+      edges,
+      announceGroupMode,
+      focusEntry,
+    ]
+  );
+
   const {
     selectionBox,
     pendingSelectedIds,
+    consumeDragSelectClick,
     dragSelectMouseDown,
     dragSelectMouseMove,
     dragSelectMouseUp,
@@ -577,8 +663,16 @@ export default function ReactFlowCanvas({
     isGrabMode: canvasTool === 'grab',
     readOnly,
     screenToFlowPosition,
-    onGroupNodes: handleGroupNodes,
+    onSelectNodes: handleDragSelectComplete,
   });
+
+  const handlePaneClick = useCallback(() => {
+    // The click that ends a drag selection also lands on the pane; it must not
+    // clear the selection the drag just made.
+    if (consumeDragSelectClick()) return;
+    canvasContainerRef.current?.focus();
+    clearSelection();
+  }, [clearSelection, consumeDragSelectClick]);
 
   const handleMouseMove = useCallback(
     (event: React.MouseEvent<HTMLDivElement>) => {
@@ -609,6 +703,7 @@ export default function ReactFlowCanvas({
       pushSnapshot,
       lastFocusedEntry,
       onLineKeyboardMove: setKeyboardMovingLineId,
+      multiSelectedNodeIds,
       isGroupMode,
       canGroup: groupableCount >= 2,
       canEnterGroupMode: totalGroupableCount >= 2,
@@ -619,14 +714,48 @@ export default function ReactFlowCanvas({
       onCannotGroup: handleCannotGroup,
     });
 
-  const {handleEdgeMouseDown, isLineDragging} = useLineEdgeDrag({
+  const {
+    middleButtonHeld,
+    spaceHeld,
+    handleMouseDownCapture,
+    handleToolKeyDown,
+  } = useCanvasToolSwitching({
+    setCanvasTool,
     readOnly,
-    setNodes,
-    setEdges,
-    screenToFlowPosition,
-    flowToScreenPosition,
-    pushSnapshot,
+    connecting: !!connectingFrom,
+    isGroupMode,
+    canvasContainerRef,
+    workspaceRef,
   });
+
+  const handleCanvasKeyDown = useCallback(
+    (event: React.KeyboardEvent) => {
+      if (handleToolKeyDown(event)) return;
+      handleKeyDown(event);
+    },
+    [handleToolKeyDown, handleKeyDown]
+  );
+
+  const {handleEdgeMouseDown, isLineDragging, consumeSelectionDragClick} =
+    useLineEdgeDrag({
+      readOnly,
+      setNodes,
+      setEdges,
+      screenToFlowPosition,
+      flowToScreenPosition,
+      pushSnapshot,
+      multiSelectedNodeIds,
+    });
+
+  // The click that ends a drag of the whole selection also lands on the line
+  // it started from; it must not clear the selection the drag just moved.
+  const handleEdgeClickAfterDrag = useCallback(
+    (event: React.MouseEvent, edge: {id: string}) => {
+      if (consumeSelectionDragClick()) return;
+      handleEdgeClick(event, edge);
+    },
+    [consumeSelectionDragClick, handleEdgeClick]
+  );
   const isAnchorDragging =
     isDirectAnchorDragging || isLineDragging || keyboardMovingLineId !== null;
 
@@ -724,6 +853,21 @@ export default function ReactFlowCanvas({
       : multiSelectedNodeIds,
   });
 
+  // Edges that show a selection ring: those React Flow marks selected, plus the
+  // edge holding DOM focus. Read-only mode never marks an edge selected, so the
+  // focused edge would otherwise have no visible indicator.
+  const outlinedEdgeIds = useMemo(() => {
+    const ids = displayEdges.filter(edge => edge.selected).map(edge => edge.id);
+    const focusedEdgeId =
+      nodeOrEdgeFocused && lastFocusedEntry?.type === 'edge'
+        ? lastFocusedEntry.id
+        : null;
+    if (focusedEdgeId && !ids.includes(focusedEdgeId)) {
+      ids.push(focusedEdgeId);
+    }
+    return ids;
+  }, [displayEdges, nodeOrEdgeFocused, lastFocusedEntry]);
+
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
@@ -805,15 +949,19 @@ export default function ReactFlowCanvas({
 
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
-      pushSnapshot();
+      // Undoing a flagged image's addition would strand the abuse block with
+      // nothing visible to delete, so wipe history instead.
+      if (request.type === 'image' && request.data.flagged) {
+        clearHistory();
+      } else {
+        pushSnapshot();
+      }
       setCanvasTool('cursor');
       const {type} = request;
-      const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
-      addedNodeCountRef.current += 1;
 
       const centerPosition = screenToFlowPosition({
-        x: window.innerWidth / 2 + stagger,
-        y: window.innerHeight / 2 + stagger,
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
       });
 
       // For lines, create two hidden anchor nodes and connect them.
@@ -854,10 +1002,12 @@ export default function ReactFlowCanvas({
         return;
       }
 
-      const position = screenToFlowPosition({
-        x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2 + stagger,
-        y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2 + stagger,
-      });
+      const defaultHeight =
+        type === 'text' ? DEFAULT_TEXT_NODE_HEIGHT : DEFAULT_NODE_HEIGHT;
+      const position = {
+        x: centerPosition.x - DEFAULT_NODE_WIDTH / 2,
+        y: centerPosition.y - defaultHeight / 2,
+      };
 
       const newNodeId = createUuid();
       // width/height are the React Flow fields NodeResizer also writes on drag,
@@ -870,7 +1020,7 @@ export default function ReactFlowCanvas({
         data: request.data,
         position,
         width: DEFAULT_NODE_WIDTH,
-        height: DEFAULT_NODE_HEIGHT,
+        height: defaultHeight,
       } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
@@ -886,6 +1036,7 @@ export default function ReactFlowCanvas({
       }, FOCUS_DELAY_MS);
     },
     [
+      clearHistory,
       focusEntry,
       openToolbar,
       pushSnapshot,
@@ -923,14 +1074,22 @@ export default function ReactFlowCanvas({
   // All ReactFlow props that differ between cursor and grab mode, collected in
   // one place so the grab mode contract is visible at a glance.
   const grabModeProps = {
-    panOnDrag: isGrabMode,
-    nodesDraggable: !readOnly && !isGrabMode,
+    // Left button pans in hand mode, or in any mode while space is held; the
+    // middle button pans in every mode. The latter two are how the select tool
+    // gets a momentary hand tool. Nodes must give up dragging for the space
+    // gesture, since React Flow only lets a drag on a node reach the pan
+    // handler when the node isn't draggable.
+    panOnDrag:
+      isGrabMode || spaceHeld
+        ? [0, MIDDLE_MOUSE_BUTTON]
+        : [MIDDLE_MOUSE_BUTTON],
+    nodesDraggable: !readOnly && !isGrabMode && !spaceHeld,
     nodesConnectable: !readOnly && !isGrabMode,
     elementsSelectable: !readOnly && !isGrabMode,
     nodesFocusable: !isGrabMode,
     edgesFocusable: !isGrabMode,
     onNodeClick: isGrabMode ? undefined : handleNodeClick,
-    onEdgeClick: isGrabMode ? undefined : handleEdgeClick,
+    onEdgeClick: isGrabMode ? undefined : handleEdgeClickAfterDrag,
     deleteKeyCode: !readOnly && !isGrabMode ? ['Delete', 'Backspace'] : null,
   };
 
@@ -955,14 +1114,19 @@ export default function ReactFlowCanvas({
                     styles.canvasContainer,
                     {
                       [styles.connectMode]: !!connectingFrom,
-                      [styles.grabMode]: isGrabMode,
+                      [styles.grabMode]:
+                        isGrabMode || middleButtonHeld || spaceHeld,
+                      [styles.grabbing]: middleButtonHeld,
                     },
                     SKETCHLAB_CONTAINER_CLASS
                   )}
                   tabIndex={-1}
-                  onKeyDownCapture={handleKeyDown}
+                  onKeyDownCapture={handleCanvasKeyDown}
                   onFocusCapture={handleFocusCapture}
                   onBlur={handleContainerBlur}
+                  // React Flow stops propagation of the mousedown that starts a
+                  // pan, so the middle button has to be seen on the way down.
+                  onMouseDownCapture={handleMouseDownCapture}
                   onMouseDown={dragSelectMouseDown}
                   onMouseMove={handleMouseMove}
                   onMouseUp={dragSelectMouseUp}
@@ -971,7 +1135,10 @@ export default function ReactFlowCanvas({
                   {!readOnly && (
                     <Toolbar
                       onAddNode={handleAddNode}
-                      levelName={levelName}
+                      uploadImage={uploadImage}
+                      onImageUploadError={handleImageUploadError}
+                      uploadsDisabled={uploadsDisabled}
+                      openUploadsDisabledModal={openUploadsDisabledModal}
                       canvasTool={canvasTool}
                       onSetCanvasTool={setCanvasTool}
                     />
@@ -985,6 +1152,7 @@ export default function ReactFlowCanvas({
                   {/* In hand mode this is the single keyboard tab stop for
                       the canvas, so users can use arrow keys to pan */}
                   <div
+                    ref={workspaceRef}
                     className={styles.workspace}
                     // Only claim the application role while the workspace is the
                     // grab-mode pan target. In cursor mode it's a passive wrapper,
@@ -995,12 +1163,12 @@ export default function ReactFlowCanvas({
                     aria-label={
                       readOnly
                         ? 'Canvas workspace. Use the arrow keys to pan.'
-                        : 'Canvas workspace. Use the arrow keys to pan. Press Escape to return to the select tool.'
+                        : 'Canvas workspace. Use the arrow keys to pan. Press S to return to the select tool.'
                     }
                     aria-keyshortcuts={
                       readOnly
                         ? 'ArrowUp ArrowDown ArrowLeft ArrowRight'
-                        : 'ArrowUp ArrowDown ArrowLeft ArrowRight Escape'
+                        : 'ArrowUp ArrowDown ArrowLeft ArrowRight s'
                     }
                     onFocus={handleWorkspaceFocus}
                     onBlur={handleWorkspaceBlur}
@@ -1015,7 +1183,7 @@ export default function ReactFlowCanvas({
                       onPaneClick={handlePaneClick}
                       onConnect={onConnect}
                       onBeforeDelete={handleBeforeDelete}
-                      onNodesDelete={handleElementsDeleted}
+                      onNodesDelete={handleNodesDeleted}
                       onEdgesDelete={handleElementsDeleted}
                       onNodeDragStart={handleNodeDragStart}
                       onNodeDrag={handleNodeDrag}
@@ -1033,6 +1201,11 @@ export default function ReactFlowCanvas({
                       // drag-to-select; disable React Flow's built-in versions.
                       multiSelectionKeyCode={null}
                       selectionKeyCode={null}
+                      // Space-to-pan is ours too (see useCanvasToolSwitching);
+                      // React Flow's version pans on any mouse button, gives no
+                      // cursor feedback, and arms itself even when focus is
+                      // outside the canvas.
+                      panActivationKeyCode={null}
                       proOptions={{hideAttribution: true}}
                       // Even though we manage tab order, we keep React Flow's keyboard A11y on because
                       // it manages things like moving nodes with arrow keys.
@@ -1065,6 +1238,7 @@ export default function ReactFlowCanvas({
                         </Panel>
                       )}
                       <Background />
+                      <EdgeSelectionOutlines edgeIds={outlinedEdgeIds} />
                       <CanvasControls
                         onUndo={handleUndo}
                         onRedo={handleRedo}

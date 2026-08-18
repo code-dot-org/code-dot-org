@@ -9,7 +9,8 @@
   %head
     %script{src: webpack_asset_path("js/localization.js"), 'data-ot-ignore' => ''}
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
-    - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
+    - brand_name = Cdo::Brand.legal_name(request)
+    - appname = Rails.env.production? ? brand_name : "#{brand_name} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
     -# make sure robots do not index non production environments or disallowed routes
@@ -25,10 +26,8 @@
       = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
-    - if brand != Cdo::Brand::BRAND_CODE_ORG
-      - if (favicon_svg = Cdo::Brand.favicon_svg(request))
-        = tag :link, rel: 'icon', type: 'image/svg+xml', href: asset_path(favicon_svg)
-      = favicon_link_tag asset_path(Cdo::Brand.favicon(request)), rel: 'icon', sizes: '32x32'
+    = tag :link, rel: 'icon', type: 'image/svg+xml', href: asset_path(Cdo::Brand.favicon_svg(request))
+    = favicon_link_tag asset_path(Cdo::Brand.favicon(request)), rel: 'icon', sizes: '32x32'
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/google_analytics'
@@ -69,6 +68,7 @@
     - if content_for? :og
       = yield :og
     - else
+      = tag 'meta', property: 'og:site_name', content: brand_name
       = tag 'meta', property: 'og:title', content: title
       = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
       = tag 'meta', property: 'og:description', content: t('share.description')

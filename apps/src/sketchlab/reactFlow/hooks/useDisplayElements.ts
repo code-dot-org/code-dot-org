@@ -6,9 +6,10 @@ import type {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
+import {LINE_INTERACTION_WIDTH_PX} from '../constants';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
 import {getEdgeLabel} from '../utils/elementLabel';
-import {isGroupedChildNode} from '../utils/grouping';
+import {getLockedLineAnchorIds, isGroupedChildNode} from '../utils/grouping';
 
 import styles from '../components/react-flow-canvas.module.scss';
 
@@ -43,20 +44,7 @@ export function useDisplayElements({
   multiSelectedNodeIds,
 }: UseDisplayElementsOptions) {
   return useMemo(() => {
-    // Anchor endpoints of a locked edge inherit the lock so the user can't
-    // drag them around. Real-node endpoints have their own lock state.
-    const lockedLineAnchorIds = new Set<string>();
-    edges.forEach(edge => {
-      if (edge.data?.locked !== true) return;
-      const sourceNode = nodes.find(node => node.id === edge.source);
-      const targetNode = nodes.find(node => node.id === edge.target);
-      if (sourceNode?.type === 'lineAnchor') {
-        lockedLineAnchorIds.add(edge.source);
-      }
-      if (targetNode?.type === 'lineAnchor') {
-        lockedLineAnchorIds.add(edge.target);
-      }
-    });
+    const lockedLineAnchorIds = getLockedLineAnchorIds(nodes, edges);
 
     const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
       const isTabTarget =
@@ -159,16 +147,14 @@ export function useDisplayElements({
         return {
           ...edge,
           selected,
+          interactionWidth: LINE_INTERACTION_WIDTH_PX,
           deletable: !locked && !readOnly && !grabMode,
           ariaLabel: getEdgeLabel(
             edge,
             nodeMap,
             floatingLineIndex.get(edge.id)
           ),
-          className: classNames(
-            styles.lineEdge,
-            isStandaloneLine && styles.standaloneLineEdge
-          ),
+          className: classNames(isStandaloneLine && styles.standaloneLineEdge),
           domAttributes: {
             ...domAttributes,
             ...(!readOnly && !locked

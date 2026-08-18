@@ -30,7 +30,7 @@ class CollapserButton extends Component {
           variant="outlined"
           color="secondary"
           size="medium"
-          style={{width: 100}}
+          style={{width: 90}}
           onClick={this.props.onClick}
           startIcon={
             this.props.collapsed

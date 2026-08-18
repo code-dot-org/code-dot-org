@@ -1,14 +1,13 @@
-import {Button as MuiButton} from '@mui/material';
+import Dialog from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import {hideShareDialog} from './shareDialogRedux';
+
+import moduleStyles from './share-disallowed-dialog.module.scss';
 
 class ShareDisallowedDialog extends Component {
   static propTypes = {
@@ -17,69 +16,28 @@ class ShareDisallowedDialog extends Component {
   };
 
   render() {
+    if (!this.props.isOpen) {
+      return null;
+    }
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen={this.props.isOpen}
-        handleClose={this.props.hideShareDialog}
-      >
-        <div style={styles.container}>
-          <div style={styles.heading}>{i18n.createAccountToShare()}</div>
-          <div style={styles.middle}>
-            {i18n.createAccountToShareDescription()}
-          </div>
-          <div style={styles.bottom}>
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="medium"
-              onClick={this.props.hideShareDialog}
-              type="button"
-            >
-              {i18n.cancel()}
-            </MuiButton>
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              href={`/users/sign_up/account_type?user_return_to=${location.pathname}`}
-            >
-              {i18n.createAccount()}
-            </MuiButton>
-          </div>
-        </div>
-      </BaseDialog>
+      <Dialog
+        className={moduleStyles.dialog}
+        title={i18n.createAccountToShare()}
+        description={i18n.createAccountToShareDescription()}
+        onClose={this.props.hideShareDialog}
+        closeLabel={i18n.closeDialog()}
+        primaryButtonProps={{
+          children: i18n.createAccount(),
+          href: `/users/sign_up/account_type?user_return_to=${location.pathname}`,
+        }}
+        secondaryButtonProps={{
+          children: i18n.cancel(),
+          onClick: this.props.hideShareDialog,
+        }}
+      />
     );
   }
 }
-
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal,
-  },
-  heading: {
-    fontSize: 16,
-    ...fontConstants['main-font-semi-bold'],
-  },
-  middle: {
-    marginTop: 20,
-    marginBottom: 20,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    display: 'flex',
-  },
-  bottom: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-};
 
 export const UnconnectedShareDisallowedDialog = ShareDisallowedDialog;
 

@@ -3,6 +3,7 @@ import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import moduleStyles from './share-layout.module.scss';
@@ -20,11 +21,15 @@ const ShareButtonPanel: React.FunctionComponent<ShareButtonPanelProps> = ({
   hideViewCode,
   children,
 }) => {
+  const isBlockedAbuse = useAppSelector(state => !!state.lab.isBlockedAbuse);
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const onViewCode = () => {
     projectManager?.redirectToView();
   };
   const onRemix = () => {
+    if (isBlockedAbuse) {
+      return;
+    }
     projectManager?.redirectToRemix();
   };
 
@@ -43,18 +48,20 @@ const ShareButtonPanel: React.FunctionComponent<ShareButtonPanelProps> = ({
           {commonI18n.viewCode()}
         </MuiButton>
       )}
-      <MuiButton
-        variant="text"
-        color="secondary"
-        size="extraSmall"
-        onClick={onRemix}
-        type="button"
-        startIcon={
-          <FontAwesomeV6Icon iconStyle="regular" iconName="pen-to-square" />
-        }
-      >
-        {commonI18n.makeMyOwn()}
-      </MuiButton>
+      {!isBlockedAbuse && (
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
+          onClick={onRemix}
+          type="button"
+          startIcon={
+            <FontAwesomeV6Icon iconStyle="regular" iconName="pen-to-square" />
+          }
+        >
+          {commonI18n.makeMyOwn()}
+        </MuiButton>
+      )}
       <MuiButton
         variant="text"
         color="secondary"

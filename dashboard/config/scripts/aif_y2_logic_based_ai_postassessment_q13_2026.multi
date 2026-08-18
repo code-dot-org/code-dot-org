@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q13-2026'
+
+wrong '`cacao`'
+right '`arcade`'
+wrong '`camera`'
+wrong '`cab`'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+When building an autocomplete system with prefix matching, which of the following words would NOT count as a match for the input `ca`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Autocomplete
+MARKDOWN
