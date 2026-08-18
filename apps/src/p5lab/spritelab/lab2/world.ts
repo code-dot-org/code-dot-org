@@ -17,7 +17,7 @@ export interface WorldCell {
   kind: 'block' | 'sprite';
 }
 
-export interface SpriteLab2World {
+export interface World {
   // Row-major [row][col]; null = empty cell.
   grid: (WorldCell | null)[][];
 }
@@ -26,11 +26,11 @@ export interface SpriteLab2World {
 // sources updater, so rapid paints can't overwrite each other. A world
 // without a grid (saved by an older experiment) is treated as empty.
 export function paintWorldCell(
-  world: SpriteLab2World | undefined,
+  world: World | undefined,
   row: number,
   col: number,
   cell: WorldCell | null
-): SpriteLab2World {
+): World {
   const grid = (world?.grid ?? createEmptyWorld().grid).map(cells => [
     ...cells,
   ]);
@@ -40,7 +40,7 @@ export function paintWorldCell(
   return {grid};
 }
 
-export function createEmptyWorld(): SpriteLab2World {
+export function createEmptyWorld(): World {
   return {
     grid: Array.from({length: WORLD_GRID_SIZE}, () =>
       Array.from({length: WORLD_GRID_SIZE}, () => null)
@@ -52,7 +52,7 @@ export function createEmptyWorld(): SpriteLab2World {
 // to the scene's compiled program. Blocks spawn before sprites so sprites
 // draw on top. Placed items are cell-sized: the prelude pins the default
 // sprite size to one cell, which platformer levels already use.
-export function compileWorldPrelude(world?: SpriteLab2World): string {
+export function compileWorldPrelude(world?: World): string {
   const rows = world?.grid ?? [];
   const blocks: string[] = [];
   const sprites: string[] = [];

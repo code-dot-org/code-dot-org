@@ -1,5 +1,6 @@
+import {type FC} from 'react';
+
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {FC} from 'react';
 
 import styles from './pre-skills-check.module.scss';
 

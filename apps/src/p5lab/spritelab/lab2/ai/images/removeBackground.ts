@@ -21,6 +21,13 @@ export interface MatteOptions {
   highThreshold?: number;
 }
 
+// Soft matte: ramp output below this becomes fully transparent. A "flat"
+// generated background is never perfectly flat, so without a floor the whole
+// background region keeps a near-invisible veil that becomes the image's
+// content bounds (trims, platformer footing). Real edges ramp steeply
+// through this range.
+const SOFT_ALPHA_FLOOR = 48;
+
 // Max per-channel difference from the reference color. Cheap and good enough
 // for a flat key color.
 function chromaDistance(
@@ -103,11 +110,13 @@ export function keyOutBackground(
       // Pure background.
       data[px + 3] = 0;
     } else {
-      // Edge ramp: partial alpha, spill-suppressed.
-      data[px + 3] = Math.round(
+      // Edge ramp: partial alpha, spill-suppressed. Below the floor it's
+      // background noise, not edge — cut it (see SOFT_ALPHA_FLOOR).
+      const alpha = Math.round(
         (255 * (dist - lowThreshold)) / (hi - lowThreshold)
       );
-      if (keyChannel !== null) {
+      data[px + 3] = alpha < SOFT_ALPHA_FLOOR ? 0 : alpha;
+      if (data[px + 3] > 0 && keyChannel !== null) {
         suppressKeySpill(data, px, keyChannel);
       }
     }
