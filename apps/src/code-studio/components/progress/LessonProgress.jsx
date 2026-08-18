@@ -193,7 +193,7 @@ class LessonProgress extends Component {
           <div
             className="full_progress_inner"
             ref="fullProgressInner"
-            style={styles.inner}
+            style={styles.progressInner}
           >
             {levels.map((level, index) => {
               let isCurrent =
@@ -280,6 +280,13 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100%',
+  },
+  progressInner: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    paddingRight: 12,
   },
   headerVignette: {
     width: '100%',
