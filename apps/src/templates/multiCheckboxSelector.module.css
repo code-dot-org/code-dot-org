@@ -1,0 +1,19 @@
+.listItem {
+  list-style-type: 'none';
+  display: flex;
+  align-items: center;
+  margin-bottom: .75rem;
+  gap: .5rem;
+}
+
+.listItem label {
+  align-items: center;
+}
+
+.list {
+  margin-left: 0;
+}
+
+.header label {
+  align-items: center;
+}

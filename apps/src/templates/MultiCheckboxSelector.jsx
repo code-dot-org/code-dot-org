@@ -1,37 +1,11 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {Typography as MuiTypography} from '@mui/material';
 import Immutable from 'immutable';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import color from '../util/color';
-
-const MARGIN = 10;
-export const styles = {
-  header: {
-    color: color.purple,
-    fontWeight: 'normal',
-    borderBottomWidth: 1,
-    borderBottomStyle: 'solid',
-    borderBottomColor: color.purple,
-  },
-  checkbox: {
-    marginRight: MARGIN,
-    marginTop: 0,
-  },
-  selectAllCheckbox: {
-    position: 'relative',
-    bottom: 4,
-  },
-  list: {
-    marginLeft: 0,
-  },
-  listItem: {
-    listStyleType: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: MARGIN,
-  },
-};
+import moduleStyles from './multiCheckboxSelector.module.css';
 
 class MultiCheckboxSelector extends Component {
   static propTypes = {
@@ -105,23 +79,30 @@ class MultiCheckboxSelector extends Component {
     return (
       <div style={this.props.style}>
         {!this.props.noHeader && (
-          <h2 style={styles.header}>
-            <input
-              type="checkbox"
-              style={{...styles.checkbox, ...styles.selectAllCheckbox}}
+          <MuiTypography
+            variant="h3"
+            component="h2"
+            className={moduleStyles.header}
+            sx={{
+              borderBottom: '1px solid var(--borders-neutral-primary)',
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '0.5rem',
+            }}
+          >
+            <Checkbox
+              style={{alignItems: 'center'}}
               checked={this.areAllSelected()}
               onChange={this.toggleSelectAll}
               disabled={this.props.disabled}
             />
             {this.props.header}
-          </h2>
+          </MuiTypography>
         )}
-        <ul style={styles.list}>
+        <ul className={moduleStyles.list}>
           {this.props.items.map((item, index) => (
-            <li style={styles.listItem} key={index}>
-              <input
-                style={styles.checkbox}
-                type="checkbox"
+            <li className={moduleStyles.listItem} key={index}>
+              <Checkbox
                 checked={this.checked(item)}
                 onChange={() => this.toggle(item)}
                 disabled={this.props.disabled}

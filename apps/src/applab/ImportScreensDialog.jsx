@@ -1,4 +1,6 @@
 /* eslint-disable react/no-danger */
+import Dialog from '@code-dot-org/component-library/dialog';
+import {Box, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -6,12 +8,6 @@ import {connect} from 'react-redux';
 import AssetThumbnail, {
   styles as assetThumbnailStyles,
 } from '../code-studio/components/AssetThumbnail';
-import Dialog, {
-  Body,
-  Buttons,
-  Confirm,
-  Cancel,
-} from '../legacySharedComponents/Dialog';
 import Sounds from '../Sounds';
 import MultiCheckboxSelector, {
   styles as multiCheckboxStyles,
@@ -61,10 +57,13 @@ class AssetListItemUnwrapped extends React.Component {
         <div style={combineStyles(styles.assetListItemText, styles.subtext)}>
           {asset.filename}
           {asset.willReplace && (
-            <p style={styles.warning}>
+            <MuiTypography
+              variant="body4"
+              sx={{color: 'var(--text-error-primary)'}}
+            >
               Warning: Importing this will replace your existing "
               {asset.filename}".
-            </p>
+            </MuiTypography>
           )}
         </div>
       </div>
@@ -98,24 +97,33 @@ class ScreenListItemUnwrapped extends React.Component {
           />
         </div>
         <div>
-          {screen.id}
+          <MuiTypography variant="body4">{screen.id}</MuiTypography>
           {screen.conflictingIds.length === 0 && screen.willReplace && (
-            <p style={styles.warning}>
+            <MuiTypography
+              variant="body4"
+              sx={{color: 'var(--text-error-primary)'}}
+            >
               Importing this will replace your existing screen: "{screen.id}".
-            </p>
+            </MuiTypography>
           )}
           {screen.conflictingIds.length === 0 &&
             screen.assetsToReplace.length > 0 && (
-              <p style={styles.warning}>
+              <MuiTypography
+                variant="body4"
+                sx={{color: 'var(--text-error-primary)'}}
+              >
                 Importing this will replace your existing assets:{' '}
                 {quotedCommaJoin(screen.assetsToReplace)}.
-              </p>
+              </MuiTypography>
             )}
           {screen.conflictingIds.length > 0 && (
-            <p style={styles.warning}>
+            <MuiTypography
+              variant="body4"
+              sx={{color: 'var(--text-error-primary)'}}
+            >
               Uses existing element or screen IDs:{' '}
               {quotedCommaJoin(screen.conflictingIds)}.
-            </p>
+            </MuiTypography>
           )}
         </div>
       </div>
@@ -147,6 +155,7 @@ export class ImportScreensDialog extends React.Component {
     if (!this.props.project) {
       return null;
     }
+
     const nonImportableScreens = this.props.project.screens.filter(
       s => !s.canBeImported
     );
@@ -155,39 +164,40 @@ export class ImportScreensDialog extends React.Component {
     );
     const canImport =
       importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
-    const buttons = canImport ? (
-      <Buttons>
-        <Confirm
-          onClick={() =>
-            this.props.onImport(
-              this.props.project.id,
-              this.state.selectedScreens,
-              this.state.selectedAssets
-            )
-          }
-          disabled={this.props.isImporting}
-        >
-          {this.props.isImporting && (
-            <span className="fa-solid fa-spin fa-spinner" />
-          )}
-          {this.props.isImporting && ' '}
-          Import
-        </Confirm>
-      </Buttons>
-    ) : (
-      <Buttons>
-        <Cancel onClick={this.props.handleClose} />
-      </Buttons>
-    );
 
     return (
       <Dialog
         title={`Import from Project: ${this.props.project.name}`}
-        soundPlayer={this.sounds}
-        {...this.props}
-      >
-        <Body>
-          <div style={styles.scrollable}>
+        onClose={this.props.handleClose}
+        primaryButtonProps={
+          canImport
+            ? {
+                children: 'Import',
+                disabled: this.props.isImporting,
+                loading: this.props.isImporting,
+                loadingPosition: 'start',
+                onClick: () =>
+                  this.props.onImport(
+                    this.props.project.id,
+                    this.state.selectedScreens,
+                    this.state.selectedAssets
+                  ),
+              }
+            : {
+                children: 'Cancel',
+                onClick: this.props.handleClose,
+              }
+        }
+        customContent={
+          <Box style={styles.scrollable}>
+            <MuiTypography
+              variant="body2"
+              sx={{display: 'none'}}
+              id="dsco-dialog-description"
+            >
+              This dialog shows a list of screens from the linked project that
+              can be selected to be imported into this project.
+            </MuiTypography>
             {importableScreens.length > 0 && (
               <MultiCheckboxSelector
                 style={styles.section}
@@ -230,10 +240,9 @@ export class ImportScreensDialog extends React.Component {
                 </ul>
               </div>
             )}
-          </div>
-        </Body>
-        {buttons}
-      </Dialog>
+          </Box>
+        }
+      />
     );
   }
 }
@@ -245,11 +254,6 @@ const combineStyles = (...styles) =>
 const styles = {
   section: {
     marginTop: MARGIN * 2,
-  },
-  warning: {
-    color: color.red,
-    fontSize: 'smaller',
-    margin: 0,
   },
   subtext: {
     color: color.black,
@@ -308,6 +312,7 @@ const styles = {
     overflow: 'hidden',
     overflowY: 'scroll',
     maxHeight: '400px',
+    width: '100%',
   },
 };
 

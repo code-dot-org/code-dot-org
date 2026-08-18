@@ -71,7 +71,7 @@ export class ImportProjectDialog extends React.Component {
           </Box>
         }
         primaryButtonProps={{
-          children: this.props.isFetching ? 'Next' : 'Next',
+          children: 'Next',
           onClick: this.onImport,
           disabled: this.props.isFetching,
           loading: this.props.isFetching,
