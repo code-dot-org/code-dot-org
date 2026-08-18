@@ -3,15 +3,6 @@
  * apps. Loaded after the styles provided by apps.
  *
  * Application assets
- *= require ./errors.scss
- *= require ./extra_links.scss
- *= require ./interstitial.scss
- *= require ./level.scss
- *= require ./markdown.scss
- *= require ./scaffolds.scss
- *= require ./teacher-panel.scss
- *= require ./trophy_sparkle.scss
- *= require ./unplugged.scss
  *= require_directory ./lti
  *
  * Shared
