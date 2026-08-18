@@ -44,13 +44,13 @@ $btn-primary-bg: $orange;
 $btn-primary-background-highlight: $orange;
 $code-bg: #f7f7f9;
 $blue: #049cdb;
-$selectUserTypeButtonBorderColor: #ccc;
-$selectUserTypeButtonBackgroundColor: #fff;
-$selectUserTypeButtonTextColor: #000;
-$selectUserTypeButtonBackgroundColorHover: #ddd;
-$selectUserTypeButtonTextColorHover: #000;
-$selectUserTypeButtonBackgroundColorSelected: #0093a4;
-$selectUserTypeButtonTextColorSelected: #fff;
+$select-user-type-button-border-color: #ccc;
+$select-user-type-button-background-color: #fff;
+$select-user-type-button-text-color: #000;
+$select-user-type-button-background-color-hover: #ddd;
+$select-user-type-button-text-color-hover: #000;
+$select-user-type-button-background-color-selected: #0093a4;
+$select-user-type-button-text-color-selected: #fff;
 
 @import "bootstrap";
 @import "bootstrap/v2-to-v3";
@@ -787,30 +787,30 @@ img.video_thumbnail {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_min_height: 236px;
-$footer_padding-top: 20px;
-$footer_fullheight: $footer_min_height + $footer_padding-top;
+$footer-min-height: 236px;
+$footer-padding-top: 20px;
+$footer-fullheight: $footer-min-height + $footer-padding-top;
 html, body {
   height: 100%;
   font-size: 100%;
 }
 .wrapper {
   min-height: 100%;
-  margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
+  margin-bottom: -$footer-fullheight;     /* This is the same as the height of .push. */
   .legacy-share-view & {
     position: relative;
   }
 }
 .push {
-  height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
+  height: $footer-fullheight;             /* This is the same as the height of .footer once its padding is included. */
 }
 .legacy-share-view .push {
   display: none;
 }
 
 .footer {
-  min-height: $footer_min_height;
-  padding-top: $footer_padding-top;
+  min-height: $footer-min-height;
+  padding-top: $footer-padding-top;
   font-size: 14px;
   background-color: var(--background-neutral-primary-inverse);
   color: var(--text-neutral-inverse);
@@ -882,8 +882,8 @@ html, body {
 }
 
 /* Styling that keeps the small footer consistent with other page elements */
-$codeApp-left-margin: 15px;
-$codeApp-bottom-margin: 12px;
+$code-app-left-margin: 15px;
+$code-app-bottom-margin: 12px;
 $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
@@ -973,9 +973,9 @@ $small-footer-standard-width: 400px;
    * fit between the visualization above and the .small-footer
    */
   margin-top: 5px;
-  margin-bottom: $codeApp-bottom-margin;
+  margin-bottom: $code-app-bottom-margin;
   margin-inline-end: 0;
-  margin-inline-start: $codeApp-left-margin;
+  margin-inline-start: $code-app-left-margin;
 
 
   select {
@@ -1135,7 +1135,7 @@ body.background-dark, body.music-black {
 
   & > li > a {
     display: block;
-    padding: 3px $small-footer-horizontal-margin 3px $codeApp-left-margin;
+    padding: 3px $small-footer-horizontal-margin 3px $code-app-left-margin;
     border-bottom: solid thin $lightest_gray;
 
     &:hover {
@@ -1823,9 +1823,9 @@ body.iframe_embed_app_and_code {
   }
 }
 
-@mixin close-button($cornerOffset) {
-  $startWidth: 61px;
-  $startHeight: 59px;
+@mixin close-button($corner-offset) {
+  $start-width: 61px;
+  $start-height: 59px;
   $growth: 3px;
   $movement: 1px;
 
@@ -1835,34 +1835,34 @@ body.iframe_embed_app_and_code {
   background: image-url("x_button.png") no-repeat center center;
   background-size: 100% auto;
 
-  top: $cornerOffset;
-  right: $cornerOffset;
-  width: $startWidth;
-  height: $startHeight;
+  top: $corner-offset;
+  right: $corner-offset;
+  width: $start-width;
+  height: $start-height;
   &:hover {
-    top: $cornerOffset - $movement;
-    right: $cornerOffset - $movement;
-    width: $startWidth + $growth;
-    height: $startHeight + $growth;
+    top: $corner-offset - $movement;
+    right: $corner-offset - $movement;
+    width: $start-width + $growth;
+    height: $start-height + $growth;
   }
 
   html[dir="rtl"] &, .flip-x-close & {
     right: auto;
-    left: $cornerOffset;
+    left: $corner-offset;
   }
   html[dir="rtl"] &:hover, .flip-x-close &:hover {
     right: auto;
-    left: $cornerOffset - $movement;
+    left: $corner-offset - $movement;
   }
 
   html[dir="rtl"] .flip-x-close & {
     right: auto;
-    left: $cornerOffset;
+    left: $corner-offset;
   }
 
   html[dir="rtl"] .flip-x-close &:hover {
     right: auto;
-    left: $cornerOffset - $movement;
+    left: $corner-offset - $movement;
   }
 }
 
@@ -1898,9 +1898,9 @@ body.iframe_embed_app_and_code {
 }
 
 .open-link {
-  $startWidth: 61px;
-  $startHeight: 59px;
-  $cornerOffset: -20px;
+  $start-width: 61px;
+  $start-height: 59px;
+  $corner-offset: -20px;
   $growth: 3px;
   $movement: 1px;
 
@@ -1910,13 +1910,13 @@ body.iframe_embed_app_and_code {
   background: image-url("open_button.png") no-repeat center center;
   background-size: 100% auto;
 
-  top: $cornerOffset;
-  right: -30px + $startWidth;
-  width: $startWidth;
-  height: $startHeight;
+  top: $corner-offset;
+  right: -30px + $start-width;
+  width: $start-width;
+  height: $start-height;
   &:hover {
-    width: $startWidth + $growth;
-    height: $startHeight + $growth;
+    width: $start-width + $growth;
+    height: $start-height + $growth;
   }
 }
 .open-link > a {
@@ -2373,10 +2373,10 @@ a.download-video {
     min-width: 225px;
     min-height: 275px;
     position: relative;
-    background-color: $selectUserTypeButtonBackgroundColor;
-    color: $selectUserTypeButtonTextColor;
+    background-color: $select-user-type-button-background-color;
+    color: $select-user-type-button-text-color;
     border-radius: 15px;
-    border-color: $selectUserTypeButtonBorderColor;
+    border-color: $select-user-type-button-border-color;
     display: flex;
     flex-direction: column;
 
@@ -2409,18 +2409,18 @@ a.download-video {
   }
 
   .select-user-type-teacher-button:hover, .select-user-type-student-button:hover {
-    background-color: $selectUserTypeButtonBackgroundColorHover;
-    color: $selectUserTypeButtonTextColorHover;
+    background-color: $select-user-type-button-background-color-hover;
+    color: $select-user-type-button-text-color-hover;
   }
 
   .select-user-type-button-selected {
-    background-color: $selectUserTypeButtonBackgroundColorSelected;
-    color: $selectUserTypeButtonTextColorSelected;
+    background-color: $select-user-type-button-background-color-selected;
+    color: $select-user-type-button-text-color-selected;
   }
 
   .select-user-type-button-selected:hover {
-    background-color: $selectUserTypeButtonBackgroundColorSelected;
-    color: $selectUserTypeButtonTextColorSelected;
+    background-color: $select-user-type-button-background-color-selected;
+    color: $select-user-type-button-text-color-selected;
   }
 
   .finish-signup {
@@ -2817,7 +2817,7 @@ a.download-video {
   }
 }
 
-@mixin yTranslation($offset) {
+@mixin y-translation($offset) {
   -webkit-transform: translateY($offset);
   -ms-transform: translateY($offset);
   transform: translateY($offset);
@@ -2842,7 +2842,7 @@ a.download-video {
       position: relative;
       top: 50%;
 
-      @include yTranslation(-50%);
+      @include y-translation(-50%);
       height: auto;
       width: auto;
       max-height: 100%;
@@ -2932,7 +2932,7 @@ a.download-video {
       position: relative;
       top: 25%;
 
-      @include yTranslation(-50%);
+      @include y-translation(-50%);
     }
   }
   .match_answers {
@@ -2944,7 +2944,7 @@ a.download-video {
       position: relative;
       top: 25%;
 
-      @include yTranslation(-50%);
+      @include y-translation(-50%);
     }
   }
   .match_correctmarkscolumn {
@@ -3513,7 +3513,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
     padding-right: 10px;
     box-sizing: border-box;
 
-    @include yTranslation(-35%);
+    @include y-translation(-35%);
   }
   .item-mark {
     display: inline-block;
