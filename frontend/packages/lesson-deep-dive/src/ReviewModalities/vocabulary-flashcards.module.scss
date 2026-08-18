@@ -51,7 +51,9 @@ $purple: #9657c7;
   border: 1px solid $border;
   border-radius: 4px;
   background: #a1aebb;
-  box-shadow: 0 2px 2px rgb(0 0 0 / 0.07), 0 4px 7px rgb(0 0 0 / 0.07);
+  box-shadow:
+    0 2px 2px rgb(0 0 0 / 0.07),
+    0 4px 7px rgb(0 0 0 / 0.07);
 }
 
 .cardBehind2 {
@@ -94,7 +96,9 @@ $purple: #9657c7;
   background: #d4dae1;
   border: 1px solid $border;
   border-radius: 4px;
-  box-shadow: 0 2px 2px rgb(0 0 0 / 0.07), 0 4px 7px rgb(0 0 0 / 0.07);
+  box-shadow:
+    0 2px 2px rgb(0 0 0 / 0.07),
+    0 4px 7px rgb(0 0 0 / 0.07);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   text-align: center;

@@ -244,17 +244,17 @@
 }
 
 audio::-webkit-media-controls-panel {
-  background-color: var(--background-neutral-true-base);
+  background-color: var(--background-neutral-primary);
 }
 
 audio::-webkit-media-controls-current-time-display {
   font-size: 12px;
-  color: var(--text-neutral-black-fixed);
+  color: var(--text-neutral-primary);
 }
 
 audio::-webkit-media-controls-time-remaining-display {
   font-size: 12px;
-  color: var(--text-neutral-black-fixed);
+  color: var(--text-neutral-primary);
 }
 
 .lessonSummaryInfo {

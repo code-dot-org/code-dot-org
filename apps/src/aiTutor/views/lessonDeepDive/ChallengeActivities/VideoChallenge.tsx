@@ -1,3 +1,4 @@
+import {VideoRecorder} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -13,7 +14,6 @@ import {
 } from '../types';
 
 import {requestEvaluation} from './requestEvaluation';
-import VideoRecorder from './VideoRecorder';
 
 // import freeResponseStyles from './free-response.module.scss';
 import styles from './video-challenge.module.scss';

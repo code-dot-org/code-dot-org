@@ -4,7 +4,7 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {ExternalSceneOption} from './redux/spriteLab2Redux';
-import {SerializedAnimationList, SpriteLab2Scene} from './types';
+import {SerializedAnimationList, Scene} from './types';
 
 // One scene in a section-mate's project, as listed by the dropdown.
 export interface ExternalSceneRef {
@@ -16,7 +16,7 @@ export interface ExternalSceneRef {
 
 // A fetched external project: everything needed to run its scenes.
 export interface ExternalProject {
-  scenes: SpriteLab2Scene[];
+  scenes: Scene[];
   animations: SerializedAnimationList;
   ownerName: string;
 }
@@ -71,7 +71,7 @@ export async function fetchExternalProject(
  * dropdown values survive block-load validation (as placeholder options) even
  * when the listing API fails or an entry has vanished from it.
  */
-export function collectSavedExternalKeys(scenes: SpriteLab2Scene[]): string[] {
+export function collectSavedExternalKeys(scenes: Scene[]): string[] {
   const keys = new Set<string>();
   const walkBlock = (block: {
     type?: string;

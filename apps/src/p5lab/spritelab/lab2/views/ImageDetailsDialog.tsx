@@ -5,14 +5,14 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import {GeneratedImageResult} from '../ai/items/itemGeneration';
-import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
+import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {
+  IMAGE_STYLE_LABELS,
+  IMAGE_TYPE_LABELS,
   ImageGenerationMetadata,
-  ITEM_STYLE_LABELS,
-  ITEM_TYPE_LABELS,
-  SpriteLab2ItemType,
-} from '../types';
+  ImageType,
+} from '../ai/images/types';
+import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
 import GenerateImageView from './GenerateImageView';
@@ -33,7 +33,9 @@ interface ImageDetailsDialogProps {
   onRename: (newName: string) => string | null;
   onDelete: () => void;
   /** The image's kind; locked while regenerating an existing image. */
-  itemType?: SpriteLab2ItemType;
+  imageType?: ImageType;
+  /** Level-imposed type for new images. */
+  lockedImageType?: ImageType;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -61,7 +63,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onPaint,
   onRename,
   onDelete,
-  itemType,
+  imageType,
+  lockedImageType,
   getDataURI,
   isNameTaken,
   onAcceptGenerated,
@@ -196,12 +199,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 ? undefined
                 : {
                     generation,
-                    itemType: itemType || 'sprite',
+                    imageType: imageType || 'sprite',
                     getDataURI,
                   }
             }
             thumb={isNew ? undefined : thumb}
             create={isNew ? {isNameTaken} : undefined}
+            lockedImageType={lockedImageType}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
               setView('details');
@@ -236,11 +240,14 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 {generation && (
                   <dl className={moduleStyles.metadata}>
                     <dt>Prompt</dt>
-                    <dd>{generation.prompt}</dd>
+                    {/* Italic: the one field here the user wrote themselves. */}
+                    <dd className={moduleStyles.promptValue}>
+                      {generation.prompt}
+                    </dd>
                     <dt>Type</dt>
-                    <dd>{ITEM_TYPE_LABELS[generation.itemType]}</dd>
+                    <dd>{IMAGE_TYPE_LABELS[generation.imageType]}</dd>
                     <dt>Style</dt>
-                    <dd>{ITEM_STYLE_LABELS[generation.style]}</dd>
+                    <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
                     {generation.temperature !== undefined && (
                       <>
                         <dt>Temperature</dt>
