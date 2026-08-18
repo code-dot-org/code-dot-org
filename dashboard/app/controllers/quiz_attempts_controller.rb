@@ -51,7 +51,11 @@ class QuizAttemptsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless attempt.user_id == current_user.id
 
     if attempt.submitted_at.nil?
-      auto_graded = attempt.quiz_question_responses.where(grading_status: 'auto_graded')
+      # Only questions on this quiz count; a response for some other
+      # QuizQuestion must not inflate score/max_score.
+      in_quiz_question_ids = QuizLevelQuestion.where(level_id: attempt.level_id).select(:quiz_question_id)
+      auto_graded = attempt.quiz_question_responses.
+        where(grading_status: 'auto_graded', quiz_question_id: in_quiz_question_ids)
       attempt.update!(
         submitted_at: Time.now,
         score: auto_graded.sum(:score),

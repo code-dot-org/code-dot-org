@@ -20,7 +20,12 @@ class QuizQuestionResponsesController < ApplicationController
     # auto-submit, not by the server refusing writes.
     raise 'attempt already submitted' if attempt.submitted_at.present?
 
+    # The question must be on this attempt's quiz.
     question = QuizQuestion.find(params[:quizQuestionId])
+    raise ActiveRecord::RecordNotFound unless QuizLevelQuestion.exists?(
+      level_id: attempt.level_id,
+      quiz_question_id: question.id
+    )
     response_data = params[:responseData].is_a?(ActionController::Parameters) ? params[:responseData].permit!.to_h : {}
 
     if question.auto_gradable?
