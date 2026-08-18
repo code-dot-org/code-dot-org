@@ -45,12 +45,21 @@ export const marginTopBottom = margin => {
  * ======================================
  */
 
+// Hover treatment for ProgressPill, kept in step with the bubble hover in
+// styles.scss (.progress-bubble.enabled:hover), which carries the note on why
+// the fill is the accent orange rather than the brand purple.
+//
+// Nothing paints these rules today: ProgressPill never spreads them for a
+// multi-level pill (it has neither a url nor an onClick, so the hover branch is
+// dead) and overrides them for a single-level one (levelProgressStyle is spread
+// after them). The tokens move with the bubbles anyway, so the two hovers do
+// not drift apart before that is sorted out.
 export const hoverStyle = {
   ':hover': {
     textDecoration: 'none',
     color: 'var(--text-neutral-inverse)',
-    borderColor: 'var(--borders-brand-purple-primary)',
-    backgroundColor: 'var(--background-brand-purple-primary)',
+    borderColor: 'var(--border-accent-orange-primary)',
+    backgroundColor: 'var(--background-accent-orange-primary)',
   },
   transition:
     'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',

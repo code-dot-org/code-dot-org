@@ -2,11 +2,14 @@
   &.enabled {
     transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
       color 0.2s ease-out;
+    // Hover fills with the accent orange (RE-178). The brand purple this
+    // replaced is the color of the surrounding chrome on a level page, so a
+    // hovered bubble sank into its background instead of standing out.
     &:hover {
       text-decoration: none;
       color: var(--text-neutral-inverse) !important;
-      border-color: var(--borders-brand-teal-primary) !important;
-      background-color: var(--background-brand-teal-primary) !important;
+      border-color: var(--border-accent-orange-primary) !important;
+      background-color: var(--background-accent-orange-primary) !important;
     }
   }
 }
