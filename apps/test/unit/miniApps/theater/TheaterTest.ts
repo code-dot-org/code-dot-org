@@ -107,16 +107,54 @@ describe('Theater', () => {
     });
     expect(revokeSpy).toHaveBeenCalledWith('blob:first');
     expect(imageElement.src).toBe('blob:second');
+
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio-first'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio-second'},
+    });
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio-first');
+    expect(audioElement.src).toBe('blob:audio-second');
   });
 
   it('revokes blob urls on reset', () => {
     const revokeSpy = jest.fn();
     window.URL.revokeObjectURL = revokeSpy;
-    imageElement.style = {} as CSSStyleDeclaration;
-    imageElement.src = 'blob:image';
-    audioElement.src = 'blob:audio';
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
 
     theater.reset();
+
+    expect(revokeSpy).toHaveBeenCalledWith('blob:image');
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
+  });
+
+  it('revokes blob urls after the elements are unmounted', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+    theater.getImgElement = () => null;
+    theater.getAudioElement = () => null;
+
+    theater.onStop();
 
     expect(revokeSpy).toHaveBeenCalledWith('blob:image');
     expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
@@ -125,9 +163,15 @@ describe('Theater', () => {
   it('does not revoke remote urls on reset', () => {
     const revokeSpy = jest.fn();
     window.URL.revokeObjectURL = revokeSpy;
-    imageElement.style = {} as CSSStyleDeclaration;
-    imageElement.src = 'https://example.com/theater.gif';
-    audioElement.src = '';
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'https://example.com/theater.gif'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'https://example.com/theater.wav'},
+    });
 
     theater.reset();
 

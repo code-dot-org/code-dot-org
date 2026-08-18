@@ -23,6 +23,57 @@ interface TheaterSignal {
 
 type UploadCallback = (this: XMLHttpRequest, event: ProgressEvent) => void;
 
+type MediaElement = HTMLImageElement | HTMLAudioElement;
+
+function cacheBustSuffix() {
+  return '?=' + new Date().getTime();
+}
+
+// One media element and the object url currently behind it. The url is kept
+// here rather than read back off the element because a reset can arrive after
+// React has unmounted the element, and a url we can no longer read is a url we
+// can never revoke.
+class TrackedSource {
+  private readonly getElement: () => MediaElement | null;
+  private blobUrl: string | null;
+
+  constructor(getElement: () => MediaElement | null) {
+    this.getElement = getElement;
+    this.blobUrl = null;
+  }
+
+  // Java Lab sources are remote urls, cache-busted so a rerun re-fetches rather
+  // than reusing the previous run's file. Python Lab produces media in the
+  // browser and passes a blob: url, which must be used verbatim (a query suffix
+  // is not part of a registered object url) and revoked once dropped, or it is
+  // held for the life of the page.
+  set(url: string | undefined) {
+    const nextUrl =
+      url && (url.startsWith('blob:') || url.startsWith('data:'))
+        ? url
+        : url + cacheBustSuffix();
+    this.clear();
+    const element = this.getElement();
+    if (element) {
+      element.src = nextUrl;
+    }
+    if (nextUrl.startsWith('blob:')) {
+      this.blobUrl = nextUrl;
+    }
+  }
+
+  clear() {
+    const element = this.getElement();
+    if (element) {
+      element.src = '';
+    }
+    if (this.blobUrl) {
+      URL.revokeObjectURL(this.blobUrl);
+      this.blobUrl = null;
+    }
+  }
+}
+
 export default class Theater extends MiniApp {
   private readonly onOutputMessage: (message: string) => void;
   private readonly onNewlineMessage: () => void;
@@ -36,7 +87,8 @@ export default class Theater extends MiniApp {
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
-  private imageBlobUrl: string | null;
+  private readonly imageSource: TrackedSource;
+  private readonly audioSource: TrackedSource;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -56,7 +108,8 @@ export default class Theater extends MiniApp {
     this.loadEventsFinished = 0;
     this.prompterUploadUrl = null;
     this.hasAudio = false;
-    this.imageBlobUrl = null;
+    this.imageSource = new TrackedSource(() => this.getImgElement());
+    this.audioSource = new TrackedSource(() => this.getAudioElement());
   }
 
   handleSignal(data: TheaterSignal) {
@@ -64,13 +117,16 @@ export default class Theater extends MiniApp {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
         this.hasAudio = true;
-        this.setElementSource(this.getAudioElement(), data.detail.url);
-        this.getAudioElement().oncanplaythrough = () => this.startPlayback();
+        this.audioSource.set(data.detail.url);
+        const audioElement = this.getAudioElement();
+        if (audioElement) {
+          audioElement.oncanplaythrough = () => this.startPlayback();
+        }
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
         // Preload the image. Once it's ready, start the playback
-        this.setImageSource(data.detail.url);
+        this.imageSource.set(data.detail.url);
         const imageElement = this.getImgElement();
         if (imageElement) {
           imageElement.onload = () => this.startPlayback();
@@ -101,7 +157,7 @@ export default class Theater extends MiniApp {
     if (this.loadEventsFinished > 1) {
       this.setOutputVisible(true);
       if (this.hasAudio) {
-        this.getAudioElement().play();
+        this.getAudioElement()?.play();
       }
     }
   }
@@ -130,78 +186,22 @@ export default class Theater extends MiniApp {
   }
 
   resetAudioAndVideo() {
-    const audioElement = this.getAudioElement();
-    if (audioElement) {
-      audioElement.pause();
-      this.clearElementSource(audioElement);
-    }
-    this.clearImageSource();
+    this.getAudioElement()?.pause();
+    this.audioSource.clear();
+    this.imageSource.clear();
     this.hasAudio = false;
   }
 
-  // Point an element at a new source, releasing whatever it held before.
-  //
-  // Java Lab sources are remote urls, cache-busted so a rerun re-fetches rather
-  // than reusing the previous run's file. Python Lab renders in the browser and
-  // passes a blob: url, which must be used verbatim (a query suffix is not
-  // part of a registered object url) and revoked once dropped, or it is held
-  // for the life of the page.
-  private setElementSource(
-    element: HTMLImageElement | HTMLAudioElement,
-    url: string | undefined
-  ) {
-    const previousUrl = element.src;
-    element.src =
-      url && (url.startsWith('blob:') || url.startsWith('data:'))
-        ? url
-        : url + this.getCacheBustSuffix();
-    this.releaseIfBlobUrl(previousUrl);
-  }
-
-  private setImageSource(url: string | undefined) {
-    const nextUrl =
-      url && (url.startsWith('blob:') || url.startsWith('data:'))
-        ? url
-        : url + this.getCacheBustSuffix();
-    this.clearImageSource();
-    const imageElement = this.getImgElement();
-    if (imageElement) {
-      imageElement.src = nextUrl;
-    }
-    if (nextUrl.startsWith('blob:')) {
-      this.imageBlobUrl = nextUrl;
-    }
-  }
-
-  private clearImageSource() {
-    const imageElement = this.getImgElement();
-    if (imageElement) {
-      imageElement.src = '';
-    }
-    if (this.imageBlobUrl) {
-      URL.revokeObjectURL(this.imageBlobUrl);
-      this.imageBlobUrl = null;
-    }
-  }
-
-  private clearElementSource(element: HTMLImageElement | HTMLAudioElement) {
-    const previousUrl = element.src;
-    element.src = '';
-    this.releaseIfBlobUrl(previousUrl);
-  }
-
-  private releaseIfBlobUrl(url: string | undefined) {
-    if (url?.startsWith('blob:')) {
-      URL.revokeObjectURL(url);
-    }
-  }
-
   getImgElement() {
-    return document.getElementById(THEATER_IMAGE_ID) as HTMLImageElement;
+    return document.getElementById(
+      THEATER_IMAGE_ID
+    ) as HTMLImageElement | null;
   }
 
   getAudioElement() {
-    return document.getElementById(THEATER_AUDIO_ID) as HTMLAudioElement;
+    return document.getElementById(
+      THEATER_AUDIO_ID
+    ) as HTMLAudioElement | null;
   }
 
   onClose() {
@@ -212,10 +212,6 @@ export default class Theater extends MiniApp {
     this.onNewlineMessage();
     // Close the photo prompter if it is still open
     this.closePhotoPrompter();
-  }
-
-  getCacheBustSuffix() {
-    return '?=' + new Date().getTime();
   }
 
   onPhotoPrompterFileSelected(photo: Blob) {
