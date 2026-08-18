@@ -52,26 +52,26 @@ describe('ControlButtons', () => {
 
   const getRunButton = () => screen.getByRole('button', {name: /run/i});
 
-  // The loading spinner is a decorative <i>, with no role or text of its own to
-  // query by, so this checks its class -- which is the whole point of the test.
-  const hasSpinner = (container: HTMLElement) =>
-    // eslint-disable-next-line no-restricted-properties
-    container.querySelector('.fa-spinner') !== null;
+  // MUI's pending state swaps the button's icon for a spinner. Which element
+  // that spinner is depends on the theme, so check the class MUI puts on the
+  // button instead.
+  const isPending = () =>
+    getRunButton().classList.contains('MuiButton-loading');
 
-  it('shows a spinner on the disabled run button while the environment loads', () => {
-    const {container} = renderControlButtons();
+  it('shows the disabled run button as pending while the environment loads', () => {
+    renderControlButtons();
 
     expect(getRunButton()).toBeDisabled();
-    expect(hasSpinner(container)).toBe(true);
+    expect(isPending()).toBe(true);
   });
 
-  it('drops the spinner but keeps the run button disabled when the environment fails to set up', () => {
-    const {container} = renderControlButtons();
+  it('drops the pending state but keeps the run button disabled when the environment fails to set up', () => {
+    renderControlButtons();
 
     store.dispatch(setCodeEnvironmentError('Something blocked the sandbox.'));
 
     expect(getRunButton()).toBeDisabled();
-    expect(hasSpinner(container)).toBe(false);
+    expect(isPending()).toBe(false);
   });
 
   it('keeps the run button disabled even once the environment loads, if setup failed', () => {
