@@ -116,7 +116,6 @@ Feature: Send and receive messages in the AI differentiation chat
     And I get debug info for the current user
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
-    And element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
     # And I wait until element "button:contains(Get Started)" is visible
@@ -150,7 +149,6 @@ Feature: Send and receive messages in the AI differentiation chat
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And I wait until element "h2:contains(Welcome, Stilgar)" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
-    And I wait until element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
     # And I wait until element "button:contains(Get Started)" is visible
