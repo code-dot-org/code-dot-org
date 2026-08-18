@@ -42,6 +42,7 @@ let outputToNeighborhood = false;
 let directLogsToDevConsole = false;
 let loadedMessageHandlers = false;
 let sandboxServiceWorkerUnavailable = false;
+let isValidationRun = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -221,7 +222,8 @@ const handlePyodideMessage = (data: PyodideMessage) => {
       directLogsToDevConsole = false;
       break;
     case 'theater_media':
-      if (gif) {
+      // Only show theater output if this is not a validation run.
+      if (gif && !isValidationRun) {
         handleTheaterMedia(gif);
       }
       break;
@@ -311,6 +313,7 @@ const asyncRun = (() => {
     // Reset error state
     getStore().dispatch(setHasError(false));
     outputToNeighborhood = !!shouldOutputToNeighborhood;
+    isValidationRun = !!validationFile;
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
     const messageHandlers = getMessageHandlers(

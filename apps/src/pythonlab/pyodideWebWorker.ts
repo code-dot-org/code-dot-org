@@ -1,6 +1,5 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {loadPyodide, PyodideInterface, version} from 'pyodide';
-import type {PyBuffer} from 'pyodide/ffi';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
@@ -9,6 +8,7 @@ import {
   patchInputCode,
   pythonlabInputModule,
   SETUP_CODE,
+  theaterBridgeModule,
 } from './pythonHelpers/patches';
 import {
   getCleanupCode,
@@ -20,10 +20,6 @@ import {
 import {MessageType} from './types';
 
 let pyodide: PyodideInterface;
-// Validation imports the student's main file, so a program that plays a theater
-// scene would paint the stage in the middle of a validation run. Suppress
-// publishing for the duration.
-let suppressTheaterMedia = false;
 
 async function loadPyodideAndPackages() {
   pyodide = await loadPyodide({
@@ -51,23 +47,6 @@ async function loadPyodideAndPackages() {
 
   pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
-  // The theater package's only way to reach the page: student code renders a gif
-  // in Python, and this hands the bytes to the theater mini app to play.
-  const theaterBridgeModule = {
-    publish: (gif: PyBuffer) => {
-      // Copy before the suppression check: the proxy has to be released either
-      // way, or its WASM memory stays pinned for the life of the worker.
-      const gifBytes = copyProxyBytes(gif);
-      if (suppressTheaterMedia) {
-        return;
-      }
-      postMessage({
-        type: 'theater_media',
-        gif: gifBytes,
-        id: 'none', // id is not used here, so none is safe
-      });
-    },
-  };
   Object.freeze(theaterBridgeModule);
   Object.freeze(theaterBridgeModule.publish);
   pyodide.registerJsModule('_theater_bridge', theaterBridgeModule);
@@ -123,7 +102,6 @@ onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
   const {id, python, source, validationFile} = event.data;
-  suppressTheaterMedia = !!validationFile;
   let results = undefined;
   let sourceToWrite = source;
   // Add the validation file to the source if it exists. Use the id "validation"
@@ -184,22 +162,6 @@ onmessage = async event => {
     postMessage({type: 'run_complete', id});
   }
 };
-
-// Copy a Python bytes object out of WASM memory into a standalone Uint8Array.
-// postMessage cannot clone the proxy itself, and the buffer it hands us is a view
-// into the interpreter's heap, so the copy has to happen before release.
-function copyProxyBytes(proxy: PyBuffer) {
-  // 'u8' pins the view to bytes rather than letting pyodide infer a wider
-  // element type from the format string. getBuffer's return type keeps the whole
-  // TypedArray union regardless, hence the assertion.
-  const buffer = proxy.getBuffer('u8');
-  try {
-    return new Uint8Array(buffer.data as Uint8Array);
-  } finally {
-    buffer.release();
-    proxy.destroy();
-  }
-}
 
 // Run code owned by us (not the user). If there is an error, post a
 // system_error message.
