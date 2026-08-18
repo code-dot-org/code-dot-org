@@ -1,5 +1,6 @@
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
 import {Button as MuiButton, Typography} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
@@ -172,7 +173,10 @@ class UnitOverviewHeader extends Component {
         {displayVerifiedResourcesWarning && <VerifiedResourcesNotification />}
         {displayVersionWarning && (
           <NotificationBanner
-            className="announcement-notification"
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
             variant="warning"
             style="filled"
             icon={WARNING_ICON}
@@ -182,7 +186,10 @@ class UnitOverviewHeader extends Component {
         )}
         {versionWarningDetails && !this.state.versionWarningDismissed && (
           <NotificationBanner
-            className="announcement-notification"
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
             variant="warning"
             style="filled"
             icon={WARNING_ICON}
@@ -193,7 +200,10 @@ class UnitOverviewHeader extends Component {
         )}
         {showHiddenUnitWarning && (
           <NotificationBanner
-            className="announcement-notification"
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
             variant="warning"
             style="filled"
             icon={WARNING_ICON}

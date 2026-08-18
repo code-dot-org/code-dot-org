@@ -4,6 +4,16 @@
   width: '100%';
 }
 
+// The unit overview's version/hidden-unit warnings render as DSCO
+// NotificationBanners. The legacy sharedComponents/Notification they replaced
+// carried its own 20px bottom margin, so migrating dropped the gap and left the
+// banners flush against the unit title. Restore it, matching .notificationBanner
+// in announcements.module.scss and .verifiedResourcesNotification in
+// courseScript.module.scss.
+.notificationBanner {
+  margin-bottom: 20px;
+}
+
 .titleWrapper {
   display: flex;
   justify-content: space-between;
