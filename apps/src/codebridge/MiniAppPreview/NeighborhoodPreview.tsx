@@ -43,7 +43,8 @@ const NeighborhoodPreview: React.FunctionComponent<
 
   const scaleNeighborhood = useCallback(() => {
     const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_WIDTH;
-    const height = containerRef.current?.clientHeight || DEFAULT_MINI_APP_HEIGHT;
+    const height =
+      containerRef.current?.clientHeight || DEFAULT_MINI_APP_HEIGHT;
     scaleMiniApp(height, width);
   }, []);
 
