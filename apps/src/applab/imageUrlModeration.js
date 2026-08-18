@@ -1,4 +1,7 @@
-import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
+import {
+  ABSOLUTE_CDO_IMAGES_REGEXP,
+  ABSOLUTE_REGEXP,
+} from '@cdo/apps/assetManagement/assetPrefix';
 import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
 
 import {normalizeToHttps} from './imageUrlUtils';
@@ -66,6 +69,11 @@ export async function moderateApplabImageUrl(
   }
 
   const normalizedUrl = normalizeToHttps(imageUrl);
+  // Levelbuilder-only bucket; students cannot upload here.
+  if (ABSOLUTE_CDO_IMAGES_REGEXP.test(normalizedUrl)) {
+    return {status: 'safe', normalizedUrl};
+  }
+
   const overrideStatus = allowTestOverride
     ? getModerationStatusOverride()
     : null;

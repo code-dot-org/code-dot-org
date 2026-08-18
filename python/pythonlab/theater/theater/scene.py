@@ -59,6 +59,7 @@ class Scene:
       )
     self._actions.append(actions.Pause(seconds))
 
+  # TODO: determine if we need to put limits on size/width/height
   def draw_image(self, image, x, y, size=None, width=None, height=None, rotation=0.0):
     """Draw an Image (or a file by name) at (x, y).
 
