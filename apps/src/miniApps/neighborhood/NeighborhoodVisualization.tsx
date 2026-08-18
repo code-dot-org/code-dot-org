@@ -11,13 +11,20 @@ import moduleStyles from './neighborhood.module.scss';
 
 interface NeighborhoodVisualizationProps {
   className?: string;
+  /** Surface the maze is drawn on. Defaults to black. */
+  backgroundClassName?: string;
   isDarkMode?: boolean;
   useProtectedDiv?: boolean;
 }
 
 const NeighborhoodVisualization: React.FunctionComponent<
   NeighborhoodVisualizationProps
-> = ({className, isDarkMode, useProtectedDiv = true}) => {
+> = ({
+  className,
+  backgroundClassName = moduleStyles.neighborhoodPreviewBackground,
+  isDarkMode,
+  useProtectedDiv = true,
+}) => {
   const [sliderValue, setSliderValue] = React.useState(
     NeighborhoodSpeedTracker.getInstance().getSpeed()
   );
@@ -29,7 +36,7 @@ const NeighborhoodVisualization: React.FunctionComponent<
 
   return (
     <div className={className}>
-      <div className={moduleStyles.neighborhoodPreviewBackground}>
+      <div className={backgroundClassName}>
         <MazeVisualization useProtectedDiv={useProtectedDiv} />
       </div>
       <div className={moduleStyles.sliderContainer}>

@@ -59,14 +59,17 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
 
-  const miniAppComponent = useMemo(() => {
+  const {miniAppComponent, miniAppTitle} = useMemo(() => {
     if (miniApp === MiniApps.Neighborhood) {
-      return <NeighborhoodPreview handleScaling={handleScaling} />;
+      return {
+        miniAppComponent: <NeighborhoodPreview handleScaling={handleScaling} />,
+        miniAppTitle: 'Neighborhood',
+      };
     }
     if (miniApp === MiniApps.Theater) {
-      return <TheaterPreview />;
+      return {miniAppComponent: <TheaterPreview />, miniAppTitle: 'Theater'};
     }
-    return null;
+    return {miniAppComponent: null, miniAppTitle: codebridgeI18n.preview()};
   }, [handleScaling, miniApp]);
 
   const resetMiniApp = () => {
@@ -82,7 +85,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   return (
     <PanelContainer
       id="codebridge-preview"
-      headerContent={codebridgeI18n.preview()}
+      headerContent={miniAppTitle}
       leftHeaderContent={<ControlButtons />}
       className={moduleStyles.previewContainer}
       headerClassName={moduleStyles.previewHeader}
@@ -104,7 +107,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
           {showMaximizeButton && (
             <MuiIconButton
               variant="text"
-              color="primary"
+              color="tertiary"
               size="extraSmall"
               onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
               aria-label={
