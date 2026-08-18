@@ -118,11 +118,6 @@ body.oceans-blue {
   background-color: $oceans_deep_blue;
 }
 
-body.music-black, body.background-dark {
-  background-color: $dark_black;
-  color: $neutral_light;
-}
-
 // For modern Lab2 labs, prevent the entire body from scrolling.
 // All content is typically displayed on the page at once, and
 // internal components manage their own scroll behavior.
@@ -969,6 +964,10 @@ $small-footer-standard-width: 400px;
   width: 100%;
   max-width: $small-footer-standard-width;
 
+  /* Need to have this reasonably high, since some of our elements (such as
+     applab editor) have higher values */
+  z-index: 1000;
+
   /*
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
    * fit between the visualization above and the .small-footer
@@ -1024,6 +1023,9 @@ $small-footer-standard-width: 400px;
 }
 
 body.background-dark, body.music-black {
+  background-color: $dark_black;
+  color: $neutral_light;
+
   .small-footer-base {
     background-color: initial;
     border-top: initial;
@@ -1129,6 +1131,9 @@ body.background-dark, body.music-black {
   bottom: 0;
   left: 0;
 
+  /* Just under .small-footer-base */
+  z-index: 998;
+
   /* Prevent default unordered-list style */
   list-style-type: none;
   margin: 0;
@@ -1154,18 +1159,6 @@ body.background-dark, body.music-black {
       }
     }
   }
-}
-
-/* All three major components of .small-footer are stacked:
-   Need to have this reasonably, high since some of our elements (such as
-   applab editor) have higher values
-*/
-#more-menu {
-  z-index: 998;
-}
-
-.small-footer-base {
-  z-index: 1000;
 }
 
 #locale {
@@ -1275,10 +1268,6 @@ $default-modal-width: 640px;
   }
 }
 
-.modal-body {
-  max-height: none;
-}
-
 .dash_modal_body {
   padding-right: 25px;
 }
@@ -1343,21 +1332,6 @@ $default-modal-width: 640px;
 
     a {
       color: $white;
-    }
-  }
-}
-
-.video-modal {
-  z-index: 10000;
-  overflow: visible;
-
-  .ui-tabs {
-    height: 100%;
-    width: 100%;
-
-    video {
-      width: 100%;
-      max-height: 100%;
     }
   }
 }
@@ -1772,8 +1746,20 @@ body.iframe_embed_app_and_code {
 // Tabs
 
 .video-modal {
+  z-index: 10000;
+  overflow: visible;
+
   .modal-body {
     padding: 0;
+  }
+  .ui-tabs {
+    height: 100%;
+    width: 100%;
+
+    video {
+      width: 100%;
+      max-height: 100%;
+    }
   }
   .ui-tabs-nav {
     background: var(--background-neutral-primary);
@@ -2504,6 +2490,7 @@ a.download-video {
 
     #school-type {
       height: 36px;
+      width: 370px !important;
     }
 
     input[type="text"], input[type="password"], input[type="email"] {
@@ -2616,10 +2603,6 @@ a.download-video {
       .field_with_errors {
         flex-basis: auto;
       }
-    }
-
-    #school-type {
-      width: 370px !important;
     }
 
     .submit-section {
@@ -2868,6 +2851,7 @@ a.download-video {
     border-color: transparent;
     border-width: 6px;
     box-sizing: content-box;
+    text-align: center;
   }
   .match_questions {
     list-style-type: none;
@@ -2876,9 +2860,6 @@ a.download-video {
       background-color: $white;
       border-color: $lighter_gray;
     }
-  }
-  li {
-    text-align: center;
   }
   .match_slots {
     list-style-type: none;
@@ -3343,6 +3324,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   $multi-left-margin: 50px;
 
   .answerbutton {
+    white-space: nowrap;
     &.lock-answers {
       pointer-events: none;
       color: $light_gray;
@@ -3503,9 +3485,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   input {
     margin-top: 12px;
   }
-  .answerbutton {
-    white-space: nowrap;
-  }
   .item-radio {
     display: inline-block;
     float: left;
@@ -3594,10 +3573,11 @@ $modal-no-icon-gap: 22px;
 
     .lines-of-code-message {
       font-family: var(--font-family-main);
-      font-size: var(--font-size-body-lg);
+      font-size: 20px;
       font-weight: var(--font-weight-regular);
-      line-height: 1.4;
+      line-height: normal;
       color: var(--text-neutral-primary);
+      margin: 0 0 8px 0;
     }
 
     .instructions2 {
@@ -3649,12 +3629,6 @@ $modal-no-icon-gap: 22px;
         float: right;
         width: 20%;
       }
-    }
-
-    .lines-of-code-message {
-      font-size: 20px;
-      line-height: normal;
-      margin: 0 0 8px 0;
     }
 
     .instructions-container {
@@ -3781,6 +3755,7 @@ h5.dialog-title {
 }
 .modal-body {
   height: 100%;
+  max-height: none;
   overflow: visible;
 }
 
