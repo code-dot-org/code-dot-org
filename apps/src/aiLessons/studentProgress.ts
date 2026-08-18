@@ -58,6 +58,19 @@ export interface ProgressSnapshot {
   currentStepId?: string;
   // Latest tutor verdict per lesson-checklist item id.
   checklist?: {[itemId: string]: boolean};
+  // Rubric-scored observations of HOW the student worked, keyed by the
+  // step that carries the rubric.  Teacher-facing; also fed to the
+  // tutor's context.
+  observations?: {[stepId: string]: StepObservation};
+}
+
+export interface StepObservation {
+  // 2-3 teacher-facing sentences about how the student approached the
+  // step (not what the code contains).
+  summary: string;
+  // 0 (flailing) to 4 (highly effective), per the step's rubric.
+  score?: number;
+  at: string;
 }
 
 const EMPTY_SUMMARY = 'No progress yet.';
@@ -189,6 +202,34 @@ interface RecordOptions {
   checklist?: {[itemId: string]: boolean};
 }
 
+// Merge extra fields (observations, checklist) into the latest snapshot
+// and persist WITHOUT appending an event or regenerating the teacher
+// summary.  Used for results that arrive between events — an
+// observation finishing after its step was completed, for example —
+// where riding the next event could lose them (there may be no next
+// event).  Returns the persisted snapshot, or undefined when there is
+// nothing to merge into yet.
+export async function saveSnapshotExtras(
+  lessonId: string,
+  previous: ProgressSnapshot | undefined,
+  extras: Partial<
+    Pick<ProgressSnapshot, 'observations' | 'checklist' | 'currentStepId'>
+  >
+): Promise<ProgressSnapshot | undefined> {
+  if (!previous) return undefined;
+  const snapshot: ProgressSnapshot = {
+    ...previous,
+    ...extras,
+    updatedAt: new Date().toISOString(),
+  };
+  try {
+    await putProgress(lessonId, snapshot);
+  } catch (e) {
+    console.warn('Failed to persist snapshot extras', e);
+  }
+  return snapshot;
+}
+
 export async function recordProgressEvent(
   lessonId: string,
   options: RecordOptions
@@ -238,6 +279,7 @@ export async function recordProgressEvent(
     path: options.path ?? options.previous?.path,
     currentStepId: options.currentStepId ?? options.previous?.currentStepId,
     checklist: options.checklist ?? options.previous?.checklist,
+    observations: options.previous?.observations,
   };
 
   try {

@@ -29,6 +29,7 @@ import BuildPartnerPanel from './BuildPartnerPanel';
 import ChecklistPanel from './ChecklistPanel';
 import EmbeddedLab from './EmbeddedLab';
 import {deterministicResolver, NavDecision} from './navigation';
+import {generateStepObservation} from './observations';
 import QuestionFlow from './QuestionFlow';
 import {Link} from './router';
 import {
@@ -41,11 +42,15 @@ import {
   loadProgress,
   ProgressSnapshot,
   recordProgressEvent,
+  saveSnapshotExtras,
+  StepObservation,
 } from './studentProgress';
 import {
   generateTutorOpening,
   generateTutorReply,
+  judgeFreeResponse,
   TutorAction,
+  TutorContext,
   TutorMessage,
   TutorOpening,
 } from './tutor';
@@ -169,6 +174,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     [itemId: string]: boolean;
   }>({});
   const checklistRef = useRef<{[itemId: string]: boolean}>({});
+  // Rubric-scored step observations (teacher-facing, also tutor context).
+  // Ref-only — nothing student-visible renders from them.
+  const observationsRef = useRef<{[stepId: string]: StepObservation}>({});
   // `evaluating` is a sub-state of `busy`: true when the tutor is actively
   // grading the student's work (auto-check on run, or Check-my-work click).
   // Lets us show "Evaluating…" instead of the general "Tutor is thinking…".
@@ -179,6 +187,19 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const [pageHeight, setPageHeight] = useState<string>('100vh');
   const step = lesson.steps[currentIndex];
   const liveWork = useStudentWork(step);
+
+  // The tutor's full session context, assembled fresh per call from the
+  // refs so effects don't gain churning dependencies.
+  const tutorContext = useCallback(
+    (): TutorContext => ({
+      lesson,
+      currentIndex,
+      studentInputs: inputsRef.current,
+      checklistState: checklistRef.current,
+      observations: observationsRef.current,
+    }),
+    [lesson, currentIndex]
+  );
 
   // Size the page to fill the viewport below whatever studio chrome is
   // rendered above our React root.  Re-measure on window resize in case
@@ -217,6 +238,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       const savedChecklist = snapshot?.checklist || {};
       setChecklistState(savedChecklist);
       checklistRef.current = savedChecklist;
+      observationsRef.current = snapshot?.observations || {};
       const savedId = snapshot?.currentStepId;
       if (savedId && lesson.steps.some(s => s.id === savedId)) {
         setCurrentStepId(savedId);
@@ -289,12 +311,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     setBusy(true);
     (async () => {
       try {
-        const reply = await generateTutorOpening(
-          lesson,
-          currentIndex,
-          inputsRef.current,
-          checklistRef.current
-        );
+        const reply = await generateTutorOpening(tutorContext());
         if (cancelled) return;
         setOpening(reply);
         // Stitch the structured opening into the LLM transcript so reply
@@ -315,7 +332,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [lesson, currentIndex, progressLoading]);
+  }, [lesson, currentIndex, progressLoading, tutorContext]);
 
   // Keep the transcript scrolled to the latest message.
   useEffect(() => {
@@ -386,6 +403,35 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         currentStepId: destinationId ?? step.id,
         branchOptionId: selectedOptionId,
       });
+
+      // Rubric steps get a process observation on completion.  Fire and
+      // forget: the LLM call takes seconds and must not block
+      // navigation; the result merges into the snapshot when it lands.
+      if (step.kind === 'lab' && step.rubric && lesson.id) {
+        const lessonId = lesson.id;
+        const completedStep = step;
+        const workAtCompletion = liveWork;
+        generateStepObservation({
+          lesson,
+          step: completedStep,
+          inputs: inputsRef.current,
+          work: workAtCompletion,
+        })
+          .then(async observation => {
+            observationsRef.current = {
+              ...observationsRef.current,
+              [completedStep.id]: observation,
+            };
+            const saved = await saveSnapshotExtras(
+              lessonId,
+              progressRef.current,
+              {observations: observationsRef.current}
+            );
+            if (saved) progressRef.current = saved;
+          })
+          .catch(e => console.warn('Step observation failed', e));
+      }
+
       navigateTo(decision);
     },
     [
@@ -402,7 +448,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const requestTutorTurn = useCallback(
     async (
       nextHistory: TutorMessage[],
-      options: {evaluating?: boolean} = {}
+      // `work` overrides the live redux snapshot — used to evaluate an
+      // AI build result before the lab has remounted on it.
+      options: {evaluating?: boolean; work?: string} = {}
     ) => {
       setHistory(nextHistory);
       setBusy(true);
@@ -410,12 +458,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       setError(undefined);
       try {
         const reply = await generateTutorReply(
-          lesson,
-          currentIndex,
+          tutorContext(),
           nextHistory,
-          liveWork,
-          inputsRef.current,
-          checklistRef.current
+          options.work ?? liveWork
         );
         setHistory(h => [...h, {role: 'tutor' as const, text: reply.message}]);
         // Merge any per-item checklist verdicts the tutor returned.
@@ -435,7 +480,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         setEvaluating(false);
       }
     },
-    [lesson, currentIndex, liveWork, handleAdvance]
+    [tutorContext, liveWork, handleAdvance]
   );
 
   // Trigger the tutor's check without injecting a synthetic student
@@ -626,6 +671,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
               inputs={inputs}
               onRecordPrompt={handleAnswer}
               onSourcesApplied={() => setSourcesEpoch(e => e + 1)}
+              onEvaluateWork={work =>
+                requestTutorTurn(history, {evaluating: true, work})
+              }
             />
           )}
 
@@ -728,6 +776,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                 },
                 question
               )
+            }
+            judgeAnswer={(question, answer) =>
+              judgeFreeResponse(tutorContext(), question, answer)
             }
           />
         ) : (

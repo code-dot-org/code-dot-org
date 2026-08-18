@@ -1,5 +1,9 @@
 import {loggedGenerateText} from '@cdo/apps/aiLessons/aiLog';
-import {generateTutorReply} from '@cdo/apps/aiLessons/tutor';
+import {
+  generateTutorReply,
+  judgeFreeResponse,
+  TutorContext,
+} from '@cdo/apps/aiLessons/tutor';
 import {LessonPlan, Step, stepShowsChecklist} from '@cdo/apps/aiLessons/types';
 
 // Keep the test hermetic: no gateway, no model registry, no capability
@@ -57,6 +61,10 @@ describe('stepShowsChecklist', () => {
   });
 });
 
+function ctx(overrides: Partial<TutorContext> = {}): TutorContext {
+  return {lesson, currentIndex: 0, ...overrides};
+}
+
 describe('generateTutorReply checklist handling', () => {
   beforeEach(() =>
     mockGenerate.mockReset().mockResolvedValue({
@@ -65,9 +73,7 @@ describe('generateTutorReply checklist handling', () => {
   );
 
   it('carries the checklist and its state in the system prompt', async () => {
-    await generateTutorReply(lesson, 0, [], undefined, undefined, {
-      header: true,
-    });
+    await generateTutorReply(ctx({checklistState: {header: true}}), []);
     const args = mockGenerate.mock.calls[0][1];
     expect(args.system).toContain('PROJECT CHECKLIST');
     expect(args.system).toContain('[x] header: Page has a header');
@@ -75,9 +81,29 @@ describe('generateTutorReply checklist handling', () => {
   });
 
   it('omits the checklist section on sandbox steps', async () => {
-    await generateTutorReply(lesson, 1, []);
+    await generateTutorReply(ctx({currentIndex: 1}), []);
     const args = mockGenerate.mock.calls[0][1];
     expect(args.system).not.toContain('PROJECT CHECKLIST');
+  });
+
+  it('carries observations in the system prompt', async () => {
+    await generateTutorReply(
+      ctx({
+        observations: {
+          practice: {
+            summary: 'Worked methodically through the bugs.',
+            score: 3,
+            at: '2026-01-01T00:00:00Z',
+          },
+        },
+      }),
+      []
+    );
+    const args = mockGenerate.mock.calls[0][1];
+    expect(args.system).toContain('OBSERVATIONS');
+    expect(args.system).toContain(
+      'Build it (3/4): Worked methodically through the bugs.'
+    );
   });
 
   it('coerces per-item verdicts, dropping malformed entries', async () => {
@@ -92,12 +118,41 @@ describe('generateTutorReply checklist handling', () => {
         ],
       },
     });
-    const reply = await generateTutorReply(lesson, 0, []);
+    const reply = await generateTutorReply(ctx(), []);
     expect(reply.checklist).toEqual([{id: 'header', done: true}]);
   });
 
   it('leaves checklist undefined when the model omits it', async () => {
-    const reply = await generateTutorReply(lesson, 0, []);
+    const reply = await generateTutorReply(ctx(), []);
     expect(reply.checklist).toBeUndefined();
+  });
+});
+
+describe('judgeFreeResponse', () => {
+  beforeEach(() => mockGenerate.mockReset());
+
+  it('sends the question, criteria, and answer; coerces the verdict', async () => {
+    mockGenerate.mockResolvedValue({
+      output: {accepted: false, feedback: 'What picks the element?'},
+    });
+    const verdict = await judgeFreeResponse(
+      ctx(),
+      {
+        id: 'q',
+        type: 'freeResponse',
+        prompt: 'What does a selector do?',
+        validation: 'tutor',
+        successCriteria: 'Mentions targeting elements.',
+      },
+      'it makes things blue'
+    );
+    const args = mockGenerate.mock.calls[0][1];
+    expect(args.prompt).toContain('What does a selector do?');
+    expect(args.prompt).toContain('Mentions targeting elements.');
+    expect(args.prompt).toContain('it makes things blue');
+    expect(verdict).toEqual({
+      accepted: false,
+      feedback: 'What picks the element?',
+    });
   });
 });

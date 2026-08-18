@@ -41,6 +41,13 @@ interface QuestionFlowProps {
   // the suggested path for this question.  Purely advisory — never a
   // gate.
   getRecommendation?: (question: Question) => Promise<string | null>;
+  // Judges a validation: 'tutor' free response against its success
+  // criteria.  Gates like a key-validated question, with the LLM as the
+  // key and its feedback as the retry hint.
+  judgeAnswer?: (
+    question: Question,
+    answer: string
+  ) => Promise<{accepted: boolean; feedback: string}>;
 }
 
 function answerRecord(
@@ -80,6 +87,7 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
   onAnswer,
   onComplete,
   getRecommendation,
+  judgeAnswer,
 }) => {
   const [qIndex, setQIndex] = useState(0);
   const [freeText, setFreeText] = useState('');
@@ -99,11 +107,15 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
   const advanceTimer = useRef<ReturnType<typeof setTimeout> | undefined>();
   const exitTimer = useRef<ReturnType<typeof setTimeout> | undefined>();
 
+  // True while a tutor-validated answer is out for judging.
+  const [judging, setJudging] = useState(false);
+
   const question = step.questions[qIndex];
   const isLast = qIndex >= step.questions.length - 1;
   const visited = new Set(path || []);
-  // Lock inputs while a correct-answer beat or an exit animation plays.
-  const locked = exiting || feedback?.kind === 'correct';
+  // Lock inputs while a correct-answer beat, an exit animation, or an
+  // async judgment is in flight.
+  const locked = exiting || judging || feedback?.kind === 'correct';
 
   // Prefill the controls from the recorded answer whenever the active
   // question changes.
@@ -179,6 +191,57 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
   const submit = useCallback(
     (fields: Partial<AnswerRecord> & {answer: string}) => {
       if (!question) return;
+
+      // Tutor-validated free response: async LLM judgment gates like a
+      // key question, with the judge's feedback as the retry hint.  A
+      // judge failure accepts rather than stranding the student.
+      if (
+        question.validation === 'tutor' &&
+        question.type === 'freeResponse' &&
+        judgeAnswer
+      ) {
+        setJudging(true);
+        setFeedback(undefined);
+        judgeAnswer(question, fields.answer)
+          .then(({accepted, feedback: judgeFeedback}) => {
+            setJudging(false);
+            onAnswer(
+              answerRecord(
+                step,
+                question,
+                {...fields, outcome: accepted ? 'correct' : 'incorrect'},
+                inputs[question.id]
+              )
+            );
+            if (!accepted) {
+              setFeedback({
+                kind: 'incorrect',
+                text: judgeFeedback || 'Not quite — try again!',
+              });
+              setShakeNonce(n => n + 1);
+              return;
+            }
+            setFeedback({kind: 'correct', text: judgeFeedback || 'Nice!'});
+            advanceTimer.current = setTimeout(
+              goToNextQuestion,
+              CORRECT_ADVANCE_DELAY_MS
+            );
+          })
+          .catch(() => {
+            setJudging(false);
+            onAnswer(
+              answerRecord(
+                step,
+                question,
+                {...fields, outcome: 'accepted'},
+                inputs[question.id]
+              )
+            );
+            goToNextQuestion();
+          });
+        return;
+      }
+
       const graded =
         question.validation === 'key' && (question.options || []).length > 0;
       const chosen =
@@ -223,7 +286,15 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
 
       goToNextQuestion();
     },
-    [step, question, inputs, onAnswer, onComplete, goToNextQuestion]
+    [
+      step,
+      question,
+      inputs,
+      onAnswer,
+      onComplete,
+      goToNextQuestion,
+      judgeAnswer,
+    ]
   );
 
   if (!question) {
@@ -447,6 +518,7 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
         {question.type === 'multipleChoice' && renderMultipleChoice()}
         {question.type === 'scale' && renderScale()}
         {question.type === 'freeResponse' && renderFreeResponse()}
+        {judging && <div className={styles.muted}>Checking your answer…</div>}
         {feedback && (
           <div
             className={

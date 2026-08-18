@@ -172,10 +172,31 @@ persist in the progress snapshot (riding every progress event), and
 the teacher roll-up shows "checklist n/m" per lesson.  Read-only for
 the student — the tutor is the only thing that checks a box.
 
+### Observations
+
+Beyond answers, the system records HOW students work:
+
+- **Build resolutions**: every build-partner prompt's AnswerRecord
+  carries the files it changed and is re-recorded as 'kept' or 'undone'
+  when the student resolves it.  The tutor's context shows these
+  ("AI build undone"), and a build on a checklist step triggers an
+  immediate tutor evaluation of the generated files — no waiting for
+  the lab remount.
+- **Tutor-judged free responses**: `validation: 'tutor'` questions now
+  gate like key-validated ones, with `judgeFreeResponse` (an LLM call
+  against the authored success criteria) as the key and its feedback as
+  the retry hint.  A judge failure accepts rather than stranding the
+  student.
+- **Step rubrics**: a lab step with an authored `rubric` gets a process
+  observation on completion — one LLM call over the step's prompts,
+  graded answers, and final work, producing a teacher-facing summary
+  plus a 0-4 effectiveness score.  Stored on the progress snapshot
+  (`saveSnapshotExtras` — no event, no summary regeneration), shown in
+  the teacher roll-up, and fed to the tutor's OBSERVATIONS context.
+  The fix-it sidequest carries the exemplar rubric.
+
 **Runtime support still behind the format:**
 
-- `validation: 'tutor'` on individual questions is recorded but not yet
-  judged — the answer is accepted like a survey answer.
 - `starterPrompt` / `aiPrompting` are Web Lab 2 only; Music steps
   ignore them.
 

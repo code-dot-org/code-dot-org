@@ -25,10 +25,14 @@ export interface AnswerRecord {
   optionIds?: string[];
   value?: number;
   // 'accepted' = recorded, nothing to grade.  'correct'/'incorrect' =
-  // graded against the option key.  The latest record wins; `attempts`
-  // counts submissions of this question.
-  outcome?: 'accepted' | 'correct' | 'incorrect';
+  // graded (against the option key, or by the tutor for
+  // validation: 'tutor' free responses).  'kept'/'undone' = the
+  // resolution of an AI build prompt.  The latest record wins;
+  // `attempts` counts submissions of this question.
+  outcome?: 'accepted' | 'correct' | 'incorrect' | 'kept' | 'undone';
   attempts?: number;
+  // For AI build prompts: the files the build changed.
+  changedFiles?: string[];
   at: string;
 }
 

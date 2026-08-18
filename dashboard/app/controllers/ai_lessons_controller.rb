@@ -287,6 +287,8 @@ class AiLessonsController < ApplicationController
         'updated_at' => parsed['updatedAt'] || File.mtime(path).iso8601,
         'checklist_total' => checklist_total,
         'checklist_done' => checklist_total.positive? ? (parsed['checklist'] || {}).count {|_, done| done} : 0,
+        # Rubric-scored process observations, keyed by step id.
+        'observations' => parsed['observations'] || {},
       }]
     end
   end

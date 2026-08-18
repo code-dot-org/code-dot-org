@@ -27,7 +27,9 @@ interface SerializedWeblab2File {
   contents: string;
 }
 
-function serializeWeblab2Source(source: MultiFileSource): string {
+// Exported for callers that need to serialize sources they hold directly
+// (e.g. evaluating a fresh AI build before the lab remounts on it).
+export function serializeWeblab2Source(source: MultiFileSource): string {
   const files: SerializedWeblab2File[] = Object.values(source.files).map(f => ({
     name: f.name,
     contents: f.contents,

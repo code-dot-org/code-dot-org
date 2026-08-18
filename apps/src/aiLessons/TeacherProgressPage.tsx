@@ -29,6 +29,8 @@ interface TeacherProgressEntry {
   // Present when the lesson defines a project checklist.
   checklist_total?: number;
   checklist_done?: number;
+  // Rubric-scored process observations, keyed by step id.
+  observations?: {[stepId: string]: {summary: string; score?: number}};
 }
 
 interface StudentGroup {
@@ -169,6 +171,18 @@ const TeacherProgressPage: React.FunctionComponent = () => {
                     <p className={styles.studentSummary}>
                       {entry.summary || 'No summary yet.'}
                     </p>
+                    {Object.entries(entry.observations || {}).map(
+                      ([stepId, obs]) => (
+                        <p key={stepId} className={styles.studentSummary}>
+                          <strong>
+                            Observation
+                            {obs.score !== undefined ? ` (${obs.score}/4)` : ''}
+                            :
+                          </strong>{' '}
+                          {obs.summary}
+                        </p>
+                      )
+                    )}
                   </li>
                 ))}
               </ul>

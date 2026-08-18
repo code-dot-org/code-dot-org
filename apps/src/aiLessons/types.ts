@@ -83,6 +83,12 @@ export interface LabStep extends StepBase {
   // from, 'free' adds a free-form prompt box.  Default 'off'.
   aiPrompting?: 'off' | 'presets' | 'free';
   presetPrompts?: string[];
+  // Authored observation rubric.  When present, completing this step
+  // triggers an LLM observation of HOW the student worked (their
+  // prompts, attempts, final work) scored against this prose — e.g.
+  // "note which planted bugs got fixed and how targeted the prompts
+  // were".  Stored on the progress snapshot; teacher-facing.
+  rubric?: string;
 }
 
 export interface PanelSlide {

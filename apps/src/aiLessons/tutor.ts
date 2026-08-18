@@ -20,9 +20,20 @@ import {initAiLessonsGatewayContext} from './aiGatewaySetup';
 import {loggedGenerateText} from './aiLog';
 import {getCapabilitiesMarkdownFor, StepSurface} from './labCapabilities';
 import {StudentInputs} from './studentInputs';
-import {LessonPlan, Step, stepShowsChecklist} from './types';
+import {StepObservation} from './studentProgress';
+import {LessonPlan, Question, Step, stepShowsChecklist} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
+
+// Everything the tutor knows about this student's session, shared by
+// openings, replies, and answer judging.
+export interface TutorContext {
+  lesson: LessonPlan;
+  currentIndex: number;
+  studentInputs?: StudentInputs;
+  checklistState?: {[itemId: string]: boolean};
+  observations?: {[stepId: string]: StepObservation};
+}
 
 export type TutorRole = 'tutor' | 'student';
 
@@ -164,18 +175,39 @@ function formatStudentContext(inputs: StudentInputs | undefined): string {
   );
   if (records.length === 0) return '';
   const lines = records.map(r => {
-    const grade =
-      r.outcome === 'correct' || r.outcome === 'incorrect'
-        ? ` (answered ${r.outcome}${
-            r.attempts && r.attempts > 1 ? ` after ${r.attempts} tries` : ''
-          })`
-        : '';
-    return `  - "${r.prompt}" → ${r.answer}${grade}`;
+    let note = '';
+    if (r.outcome === 'correct' || r.outcome === 'incorrect') {
+      note = ` (answered ${r.outcome}${
+        r.attempts && r.attempts > 1 ? ` after ${r.attempts} tries` : ''
+      })`;
+    } else if (r.outcome === 'kept' || r.outcome === 'undone') {
+      note = ` (AI build ${r.outcome})`;
+    }
+    return `  - "${r.prompt}" → ${r.answer}${note}`;
   });
   return `
 STUDENT CONTEXT (their own answers so far — use these to personalize:
 reference their project and interests naturally, match your support to
 their confidence, and never re-ask them)
+${lines.join('\n')}
+`;
+}
+
+// Rubric-scored observations from earlier steps: how the student worked,
+// not what they built.  Gives the tutor a sense of working style.
+function formatObservations(
+  lesson: LessonPlan,
+  observations: {[stepId: string]: StepObservation} | undefined
+): string {
+  const entries = Object.entries(observations || {});
+  if (entries.length === 0) return '';
+  const lines = entries.map(([stepId, obs]) => {
+    const title = lesson.steps.find(s => s.id === stepId)?.title || stepId;
+    const score = obs.score !== undefined ? ` (${obs.score}/4)` : '';
+    return `  - ${title}${score}: ${obs.summary}`;
+  });
+  return `
+OBSERVATIONS (how this student has worked on earlier steps)
 ${lines.join('\n')}
 `;
 }
@@ -205,12 +237,9 @@ ${items}
 `;
 }
 
-const SYSTEM_PROMPT_TEMPLATE = (
-  lesson: LessonPlan,
-  currentIndex: number,
-  studentInputs?: StudentInputs,
-  checklistState?: {[itemId: string]: boolean}
-) => {
+const SYSTEM_PROMPT_TEMPLATE = (ctx: TutorContext) => {
+  const {lesson, currentIndex, studentInputs, checklistState, observations} =
+    ctx;
   const totalSteps = lesson.steps.length;
   const current = lesson.steps[currentIndex];
   const upcoming = lesson.steps[currentIndex + 1];
@@ -227,11 +256,10 @@ decide when the student is ready to move on.
 LESSON
   Title: ${lesson.title}
   Objective: ${lesson.objective}
-${formatStudentContext(studentInputs)}${formatChecklist(
+${formatStudentContext(studentInputs)}${formatObservations(
     lesson,
-    current,
-    checklistState
-  )}
+    observations
+  )}${formatChecklist(lesson, current, checklistState)}
 STEPS
 ${overview}
 
@@ -318,21 +346,13 @@ async function callTutorModel(
 }
 
 export async function generateTutorOpening(
-  lesson: LessonPlan,
-  currentIndex: number,
-  studentInputs?: StudentInputs,
-  checklistState?: {[itemId: string]: boolean}
+  ctx: TutorContext
 ): Promise<TutorOpening> {
   initAiLessonsGatewayContext();
-  const isFirst = currentIndex === 0;
+  const isFirst = ctx.currentIndex === 0;
   const response = await loggedGenerateText('tutor opening', {
     model: getModel(MODEL_ID),
-    system: SYSTEM_PROMPT_TEMPLATE(
-      lesson,
-      currentIndex,
-      studentInputs,
-      checklistState
-    ),
+    system: SYSTEM_PROMPT_TEMPLATE(ctx),
     prompt: `The student has just arrived at this checkpoint.  Return:
 
 welcome:  ONE friendly ${
@@ -360,17 +380,59 @@ Do not greet the student by name.  This is NOT an evaluation.`,
 }
 
 export async function generateTutorReply(
-  lesson: LessonPlan,
-  currentIndex: number,
+  ctx: TutorContext,
   history: TutorMessage[],
-  studentWork?: string,
-  studentInputs?: StudentInputs,
-  checklistState?: {[itemId: string]: boolean}
+  studentWork?: string
 ): Promise<TutorReply> {
   initAiLessonsGatewayContext();
   return callTutorModel(
-    SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex, studentInputs, checklistState),
+    SYSTEM_PROMPT_TEMPLATE(ctx),
     formatTranscript(history, studentWork),
     0.4
   );
+}
+
+const judgeSchema = Output.object({
+  schema: z.object({
+    accepted: z
+      .boolean()
+      .describe("Whether the student's answer meets the success criteria."),
+    feedback: z
+      .string()
+      .describe(
+        'One or two warm sentences: if accepted, affirm what was right; if not, a nudge toward what the criteria want — without giving the answer away.'
+      ),
+  }),
+});
+
+// Judge a tutor-validated free-response answer against its authored
+// success criteria.  Used by QuestionFlow to gate progression with
+// retries, like a key-validated question but with an LLM as the key.
+export async function judgeFreeResponse(
+  ctx: TutorContext,
+  question: Question,
+  answer: string
+): Promise<{accepted: boolean; feedback: string}> {
+  initAiLessonsGatewayContext();
+  const response = await loggedGenerateText('answer judge', {
+    model: getModel(MODEL_ID),
+    system: SYSTEM_PROMPT_TEMPLATE(ctx),
+    prompt: `The student answered a check-for-understanding question.  Judge
+the answer against the success criteria.  Be generous about wording —
+this is a kid explaining an idea in their own words — but the idea in
+the criteria must actually be there.
+
+Question: ${question.prompt}
+Success criteria: ${
+      question.successCriteria || '(none authored — accept any sincere attempt)'
+    }
+Student answer: ${answer}`,
+    temperature: 0.2,
+    output: judgeSchema,
+  });
+  const raw = response.output;
+  return {
+    accepted: !!raw.accepted,
+    feedback: String(raw.feedback || '').trim(),
+  };
 }

@@ -209,6 +209,14 @@
             {"id": "c", "label": "purple"},
             {"id": "d", "label": "{ }"}
           ]
+        },
+        {
+          "id": "css-explain",
+          "type": "freeResponse",
+          "prompt": "In your own words: what does the selector in a CSS rule decide?",
+          "placeholder": "One sentence is plenty.",
+          "validation": "tutor",
+          "successCriteria": "Mentions that the selector chooses/targets which element(s) on the page the rule's styles apply to. Any wording that captures 'it picks what gets styled' passes."
         }
       ]
     },

@@ -17,7 +17,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {saveSources, sourceScopeFor} from './aiLessonsProjectManager';
 import {generateProjectFiles} from './buildPartner';
 import {AnswerRecord, StudentInputs} from './studentInputs';
-import {LabStep, LessonPlan} from './types';
+import {LabStep, LessonPlan, stepShowsChecklist} from './types';
+import {serializeWeblab2Source} from './useStudentWork';
 
 import styles from './aiLessons.module.scss';
 
@@ -25,15 +26,23 @@ interface BuildPartnerPanelProps {
   lesson: LessonPlan;
   step: LabStep;
   inputs: StudentInputs;
-  // Records the student's prompt into the inputs store.
+  // Records the student's prompt into the inputs store — at build time
+  // with outcome 'accepted', re-recorded as 'kept'/'undone' when the
+  // student resolves the build.
   onRecordPrompt: (record: AnswerRecord) => void;
   // The new/restored source is saved server-side; remount the lab on it.
   onSourcesApplied: () => void;
+  // Ask the tutor to evaluate the given serialized work (used to refresh
+  // the project checklist from the build result, without waiting for the
+  // lab remount).
+  onEvaluateWork?: (work: string) => void;
 }
 
 interface LastBuild {
   summary: string;
   changedFiles: string[];
+  // The prompt's AnswerRecord, so Keep/Undo can re-record its outcome.
+  record: AnswerRecord;
   // The source as it was before the build, for Undo.  Undefined when
   // there was nothing yet (undo then isn't offered).
   undoSource?: MultiFileSource;
@@ -45,6 +54,7 @@ const BuildPartnerPanel: React.FunctionComponent<BuildPartnerPanelProps> = ({
   inputs,
   onRecordPrompt,
   onSourcesApplied,
+  onEvaluateWork,
 }) => {
   const [draft, setDraft] = useState('');
   const [busy, setBusy] = useState(false);
@@ -75,22 +85,32 @@ const BuildPartnerPanel: React.FunctionComponent<BuildPartnerPanelProps> = ({
         currentSource: stash,
       });
       await saveSources(lessonId, sourceScopeFor(step), result.sources);
-      onRecordPrompt({
+      const record: AnswerRecord = {
         questionId: `ai-prompt-${step.id}-${Date.now()}`,
         stepId: step.id,
         prompt: `AI build prompt (${step.title})`,
         answer: trimmed,
         outcome: 'accepted',
         attempts: 1,
+        changedFiles: result.changedFiles,
         at: new Date().toISOString(),
-      });
+      };
+      onRecordPrompt(record);
       setLastBuild({
         summary: result.summary,
         changedFiles: result.changedFiles,
+        record,
         undoSource: stash,
       });
       setDraft('');
       onSourcesApplied();
+      // Refresh the project checklist from the build result directly —
+      // the generated files are in hand, no need to wait for the remount.
+      if (stepShowsChecklist(lesson, step) && onEvaluateWork) {
+        onEvaluateWork(
+          serializeWeblab2Source(result.sources.source as MultiFileSource)
+        );
+      }
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -98,16 +118,27 @@ const BuildPartnerPanel: React.FunctionComponent<BuildPartnerPanelProps> = ({
     }
   };
 
-  const undo = async () => {
-    if (!lastBuild?.undoSource || busy) return;
+  const resolveBuild = async (outcome: 'kept' | 'undone') => {
+    if (!lastBuild || busy) return;
+    const undoSource = lastBuild.undoSource;
+    if (outcome === 'undone' && !undoSource) return;
     setBusy(true);
     setError(undefined);
     try {
-      await saveSources(lessonId, sourceScopeFor(step), {
-        source: lastBuild.undoSource,
+      if (outcome === 'undone' && undoSource) {
+        await saveSources(lessonId, sourceScopeFor(step), {
+          source: undoSource,
+        });
+        onSourcesApplied();
+      }
+      // Re-record the prompt with its resolution, for the observation
+      // rubric and the tutor's context.
+      onRecordPrompt({
+        ...lastBuild.record,
+        outcome,
+        at: new Date().toISOString(),
       });
       setLastBuild(undefined);
-      onSourcesApplied();
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -130,13 +161,17 @@ const BuildPartnerPanel: React.FunctionComponent<BuildPartnerPanelProps> = ({
           <div className={styles.buildPartnerActions}>
             <button
               type="button"
-              onClick={() => setLastBuild(undefined)}
+              onClick={() => resolveBuild('kept')}
               disabled={busy}
             >
               Keep it
             </button>
             {lastBuild.undoSource && (
-              <button type="button" onClick={undo} disabled={busy}>
+              <button
+                type="button"
+                onClick={() => resolveBuild('undone')}
+                disabled={busy}
+              >
                 Undo
               </button>
             )}
