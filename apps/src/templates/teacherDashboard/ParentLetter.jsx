@@ -112,13 +112,15 @@ class ParentLetter extends React.Component {
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <Typography variant="h1">{i18n.parentLetterWhy()}</Typography>
+          <Typography variant="h4" component="h2">
+            {i18n.parentLetterWhy()}
+          </Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterWhyDetails({
               researchLink: RESEARCH_ARTICLE_URL,
             })}
           />
-          <Typography variant="h1">
+          <Typography variant="h4" component="h2">
             {i18n.parentLetterStudentPrivacy()}
           </Typography>
           <SafeMarkdown
@@ -149,13 +151,20 @@ export default connect(state => ({
 const Header = ({logoUrl = '/shared/images/CodeLogo_White.png'}) => (
   <Box
     component="header"
-    sx={{backgroundColor: 'primary.main', marginBottom: 3.75}}
+    sx={{
+      backgroundColor: 'primary.main',
+      marginBottom: 3,
+      height: 50,
+      display: 'flex',
+      alignItems: 'center',
+      paddingInlineStart: '13px',
+    }}
   >
     <Box
       component="img"
       src={logoUrl}
       alt={i18n.codeLogo()}
-      sx={{height: 42, margin: '4px 16px'}}
+      sx={{height: 24}}
     />
   </Box>
 );
@@ -175,14 +184,18 @@ const ParentLetterSteps = ({
     case SectionLoginType.lti_v1:
       return (
         <Box>
-          <Typography variant="h1">{i18n.parentLetterStep1()}</Typography>
+          <Typography variant="h4" component="h2">
+            {i18n.parentLetterStep1()}
+          </Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
               videosLink: pegasus(`/educate/resources/videos`),
             })}
           />
-          <Typography variant="h1">{i18n.parentLetterStep2()}</Typography>
+          <Typography variant="h4" component="h2">
+            {i18n.parentLetterStep2()}
+          </Typography>
           <SignInInstructions
             loginType={loginType}
             loginTypeName={loginTypeName}
@@ -202,14 +215,18 @@ const ParentLetterSteps = ({
     default: {
       return (
         <Box>
-          <Typography variant="h1">{i18n.parentLetterStep1()}</Typography>
+          <Typography variant="h4" component="h2">
+            {i18n.parentLetterStep1()}
+          </Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
               videosLink: pegasus(`/educate/resources/videos`),
             })}
           />
-          <Typography variant="h1">{i18n.parentLetterStep2()}</Typography>
+          <Typography variant="h4" component="h2">
+            {i18n.parentLetterStep2()}
+          </Typography>
           <SignInInstructions
             loginType={loginType}
             loginTypeName={loginTypeName}
@@ -225,7 +242,9 @@ const ParentLetterSteps = ({
               atHomeLink: pegasus('/athome'),
             })}
           />
-          <Typography variant="h1">{i18n.parentLetterStep3()}</Typography>
+          <Typography variant="h4" component="h2">
+            {i18n.parentLetterStep3()}
+          </Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterStep3Details({
               accountEditLink: studio('/users/edit'),
