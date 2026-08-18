@@ -1569,7 +1569,7 @@ input.header_input {
 
   .loading {
     margin: 20px;
-    background: url("/assets/spinner-big.gif") no-repeat center center;
+    background: url("/blockly/media/code_studio/spinner-big.gif") no-repeat center center;
   }
 }
 
@@ -1604,7 +1604,7 @@ input.header_input {
 .oceans-blue {
   #codeApp {
     .loading {
-      background: url("/assets/spinner-big-oceans-blue.gif") no-repeat center center;
+      background: url("/blockly/media/code_studio/spinner-big-oceans-blue.gif") no-repeat center center;
     }
 
     .slow_load {
@@ -1619,7 +1619,7 @@ input.header_input {
 
   .loading {
     height: 520px;
-    background: url("/assets/spinner-big.gif") no-repeat center center;
+    background: url("/blockly/media/code_studio/spinner-big.gif") no-repeat center center;
   }
 
   .slow_load {
@@ -1793,7 +1793,7 @@ body.iframe_embed_app_and_code {
   position: absolute;
   cursor: pointer;
   z-index: 10;
-  background: url("/assets/x_button.png") no-repeat center center;
+  background: url("/blockly/media/code_studio/x_button.png") no-repeat center center;
   background-size: 100% auto;
 
   top: $corner-offset;
@@ -1868,7 +1868,7 @@ body.iframe_embed_app_and_code {
   position: absolute;
   cursor: pointer;
   z-index: 1;
-  background: url("/assets/open_button.png") no-repeat center center;
+  background: url("/blockly/media/code_studio/open_button.png") no-repeat center center;
   background-size: 100% auto;
 
   top: $corner-offset;
@@ -3116,7 +3116,7 @@ a.download-video {
 
 .curriculum-reference #iframe-loading.loading {
   height: 200px;
-  background: url("/assets/spinner-big.gif") no-repeat center center;
+  background: url("/blockly/media/code_studio/spinner-big.gif") no-repeat center center;
 }
 
 .external, .free-response, .curriculum-reference {
