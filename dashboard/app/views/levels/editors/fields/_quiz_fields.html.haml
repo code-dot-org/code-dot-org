@@ -27,11 +27,6 @@
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :allow_multiple_attempts, description: "Allow multiple attempts"}
 
   .field
-    = f.label :max_attempts, 'Max attempts (optional, requires Allow multiple attempts)'
-    = f.number_field :max_attempts, min: 2
-    %p Leave blank for unlimited attempts.
-
-  .field
     - if @level.new_record?
       %p Save this level before authoring its questions.
     - else
