@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-14 03:47:24 UTC",
+    "serialized_at": "2026-08-18 04:29:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6331,6 +6331,20 @@
       }
     },
     {
+      "name": "[KEY]",
+      "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
+      "key": "_key_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_"
+      }
+    },
+    {
       "name": "[KEY] Data Science with Python Unit Guide",
       "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
       "key": "_key_data_science_with_python_unit_guide",
@@ -6525,6 +6539,20 @@
       }
     },
     {
+      "name": "Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1R1COXhWren9sXLX1hf8WkWCTjXoXhLvXf0N0jghCvzw/edit?usp=sharing",
+      "key": "data_science_with_python_unit_guide_3",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_with_python_unit_guide_3"
+      }
+    },
+    {
       "name": "Exploratory Data Analysis",
       "url": "https://docs.google.com/presentation/d/1NnZk4lfwSDAgtI30pc32mmFLol1GyB3I2w9E8qEiWIk/template/preview",
       "key": "exploratory_data_analysis",
@@ -6550,14 +6578,16 @@
     },
     {
       "name": "Getting to Know Your Data",
-      "url": "https://docs.google.com/presentation/d/1uLyPczIZrZIe6LxkJzOCs8KGeFHZneuLw8aPLu6fZ9c/template/preview",
-      "key": "getting_to_know_your_data",
+      "url": "https://docs.google.com/presentation/d/1qrbFB0U8RRU8_ZEieRUrDk-mVBChDlJH9u9bBcJwpnM/edit?usp=sharing",
+      "key": "getting_to_know_your_data_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "getting_to_know_your_data"
+        "resource.key": "getting_to_know_your_data_1"
       }
     },
     {
@@ -6839,7 +6869,19 @@
     {
       "seeding_key": {
         "lesson.key": "Getting to Know Your Data",
-        "resource.key": "getting_to_know_your_data"
+        "resource.key": "_key_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting to Know Your Data",
+        "resource.key": "data_science_with_python_unit_guide_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting to Know Your Data",
+        "resource.key": "getting_to_know_your_data_1"
       }
     },
     {
@@ -7056,6 +7098,16 @@
       }
     },
     {
+      "key": "dot_notation",
+      "word": "dot notation",
+      "definition": "a way to access a function by placing a period between an object or library name and the function name",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dot_notation"
+      }
+    },
+    {
       "key": "expression",
       "word": "expression",
       "definition": "a combination of data and operators that evaluates to a single value",
@@ -7173,6 +7225,12 @@
       "seeding_key": {
         "lesson.key": "Cleaning Data",
         "vocabulary.key": "null"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting to Know Your Data",
+        "vocabulary.key": "dot_notation"
       }
     },
     {

@@ -1,4 +1,4 @@
-import {keyOutBackground} from '@cdo/apps/p5lab/spritelab/lab2/ai/items/removeBackground';
+import {keyOutBackground} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/removeBackground';
 
 // Build an RGBA buffer from [r,g,b] triples, all fully opaque to start.
 function rgba(pixels) {
@@ -47,6 +47,15 @@ describe('SpriteLab2 keyOutBackground', () => {
     keyOutBackground(data, 3, 1, {soft: true});
     // The key-dominant edge pixel is pulled down to its max(R,B)=0.
     expect(data[1 * 4 + 1]).toBe(0);
+  });
+
+  it('soft matte cuts near-invisible ramp output to fully transparent', () => {
+    // green | faint veil (chroma distance just past the low threshold) | subject
+    const data = rgba([GREEN, [0, 215, 0], [10, 20, 200]]);
+    keyOutBackground(data, 3, 1, {soft: true});
+    // The ramp would give ~43 alpha — background noise, not an edge.
+    expect(alpha(data, 1)).toBe(0);
+    expect(alpha(data, 2)).toBe(255);
   });
 
   it('keys any corner-sampled color, not just green', () => {

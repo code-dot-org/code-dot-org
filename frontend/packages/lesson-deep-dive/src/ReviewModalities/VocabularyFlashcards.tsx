@@ -1,9 +1,10 @@
+import {type FC, useCallback, useMemo, useState} from 'react';
+
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {FC, useCallback, useMemo, useState} from 'react';
 
 import styles from './vocabulary-flashcards.module.scss';
 
-type VocabularyItem = {id: string; word: string; definition: string};
+export type VocabularyItem = {id: string; word: string; definition: string};
 
 interface VocabularyFlashcardsProps {
   vocabulary: VocabularyItem[];
@@ -15,7 +16,7 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
 
   const currentCard = useMemo(
     () => vocabulary[currentIndex],
-    [currentIndex, vocabulary]
+    [currentIndex, vocabulary],
   );
 
   const goTo = useCallback((nextIndex: number) => {
@@ -46,6 +47,9 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
         </span>
       </div>
 
+      {/* The "Flip card" button also flips the card, and it accepts the
+          keyboard. A button element here would change the DOM. */}
+      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
       <div className={styles.cardStack} onClick={flip}>
         <div className={styles.cardBehind2} />
         <div className={styles.cardBehind1} />
