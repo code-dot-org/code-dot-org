@@ -1,13 +1,13 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {DATA_URL_NOT_ALLOWED_MESSAGE} from '@cdo/apps/applab/constants';
 import ImagePickerPropertyRow from '@cdo/apps/applab/designElements/ImagePickerPropertyRow';
 
 describe('ImagePickerPropertyRow', () => {
-  it('blocks manual data URLs and shows an error', async () => {
+  it('blocks manual data URLs and shows an error', () => {
     const handleChange = jest.fn();
-    const wrapper = shallow(
+    render(
       <ImagePickerPropertyRow
         desc="Image"
         initialValue=""
@@ -15,12 +15,13 @@ describe('ImagePickerPropertyRow', () => {
       />
     );
 
-    await wrapper
-      .instance()
-      .changeImageInternal('  DATA:image/png;base64,AAA=');
-    wrapper.update();
+    fireEvent.change(screen.getByRole('textbox', {name: 'Image'}), {
+      target: {value: '  DATA:image/png;base64,AAA='},
+    });
 
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      DATA_URL_NOT_ALLOWED_MESSAGE
+    );
     expect(handleChange).not.toHaveBeenCalled();
-    expect(wrapper.state('errorMessage')).toBe(DATA_URL_NOT_ALLOWED_MESSAGE);
   });
 });
