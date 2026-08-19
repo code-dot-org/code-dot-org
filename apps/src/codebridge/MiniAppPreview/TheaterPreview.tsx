@@ -28,7 +28,7 @@ const TheaterPreview: React.FunctionComponent = () => {
     CodebridgeRegistry.getInstance()
       .getConsoleManager()
       ?.writeConsoleMessage(
-        getSystemError('Could not display the video.', appName)
+        getSystemError('Could not display the theater video.', appName)
       );
     dispatch(setIsRunning(false));
   }, [appName, dispatch]);
