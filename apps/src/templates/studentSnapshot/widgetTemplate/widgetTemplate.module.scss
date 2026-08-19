@@ -10,15 +10,16 @@
 
 .header {
   height: 40px;
-  background-color: var(--background-neutral-tertiary);
+  // background-color: var(--background-neutral-tertiary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
 .content {
-  padding: 12px;
+  padding: 8px;
   color: var(--text-neutral-primary, #000);
   flex: 1;
   min-height: 0;
