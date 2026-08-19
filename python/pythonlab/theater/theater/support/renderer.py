@@ -7,7 +7,14 @@ from PIL import ImageDraw
 
 from .actions import UNSPECIFIED, SceneActionType
 from .audio import AudioWriter
-from .constants import MAX_FRAMES, MAX_GIF_BYTES, THEATER_HEIGHT, THEATER_WIDTH
+from .constants import (
+  MAX_AUDIO_SECONDS,
+  MAX_FRAMES,
+  MAX_GIF_BYTES,
+  SAMPLE_RATE,
+  THEATER_HEIGHT,
+  THEATER_WIDTH,
+)
 from .fonts import load_font
 from .instrument_samples import load_note_samples
 
@@ -24,6 +31,10 @@ class PauseTooLongError(Exception):
   """Raised when one picture is held longer than a gif delay can express."""
 
 
+class AudioTooLongError(Exception):
+  """Raised when a scene's audio timeline exceeds the length ceiling."""
+
+
 def render(actions):
   """Execute a scene's action list into (gif_bytes, wav_bytes).
 
@@ -35,6 +46,10 @@ def render(actions):
   if len(durations) > MAX_FRAMES:
     raise TooManyFramesError(
       f"The animation has too many frames; the limit is {MAX_FRAMES}"
+    )
+  if _audio_length_bound(actions) > MAX_AUDIO_SECONDS:
+    raise AudioTooLongError(
+      f"The audio is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
     )
   gif_bytes = _encode_gif(_iter_frames(actions), durations)
   return gif_bytes, _render_audio(actions)
@@ -55,6 +70,28 @@ def _frame_durations(actions):
   # Final frame with no trailing delay.
   durations.append(0)
   return durations
+
+
+def _audio_length_bound(actions):
+  """Upper bound on the audio timeline in seconds, loading no samples.
+
+  Follows the same cursor AudioWriter keeps: pauses advance it, and each sound
+  reaches from wherever it sits. A note is bounded by its requested duration,
+  since truncate_samples only ever shortens. Pauses past the last sound never
+  become samples, so they do not count. Bounding this without decoding a note
+  is what lets an impossible timeline be turned away before any drawing.
+  """
+  cursor = 0.0
+  end = 0.0
+  for action in actions:
+    kind = action.type
+    if kind is SceneActionType.PAUSE:
+      cursor += action.seconds
+    elif kind is SceneActionType.PLAY_SOUND:
+      end = max(end, cursor + len(action.samples) / SAMPLE_RATE)
+    elif kind is SceneActionType.PLAY_NOTE:
+      end = max(end, cursor + action.seconds)
+  return end
 
 
 def _render_audio(actions):
