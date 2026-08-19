@@ -358,16 +358,6 @@ async function loadAppAsync(appOptions) {
 
   var isViewingSolution = clientState.queryParams('solution') === 'true';
 
-  if (
-    appOptions.share &&
-    !window.navigator.standalone &&
-    userAgentParser.isSafari()
-  ) {
-    // show a little instruction panel for how to add this app to your home screen
-    // on an iPhone
-    window.addEventListener('load', () => addToHome.show(true), false);
-  }
-
   if (isViewingSolution) {
     return appOptions;
   }
