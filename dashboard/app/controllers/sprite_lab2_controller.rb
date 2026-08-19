@@ -1,6 +1,12 @@
 # Experimental APIs for the Lab2 Sprite Lab scenes UI variant. Lets a signed-in
 # user discover and jump into scenes from projects made by people who share a
 # section with them (classmates and their teachers), on the same level.
+#
+# Level identity is the key, so standalone projects are out of reach by
+# construction: they hang off their own project level ("New Sprite Lab
+# Project"), not off a curriculum level. Including them would mean sharing on
+# project type rather than level, which exposes work made outside any
+# assignment — a consent decision, not a lookup change.
 class SpriteLab2Controller < ApplicationController
   before_action :authenticate_user!
 
