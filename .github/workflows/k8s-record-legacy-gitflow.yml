@@ -1,4 +1,4 @@
-name: k8s-commit-to-kargo-warehouse
+name: k8s-record-legacy-gitflow
 
 on:
   workflow_call:
@@ -6,10 +6,7 @@ on:
       branch_name:
         required: true
         type: string
-      codeai_docker_image_ref:
-        required: true
-        type: string
-      codeai_docker_tag:
+      source_commit_sha:
         required: true
         type: string
     secrets:
@@ -17,8 +14,8 @@ on:
         required: true
 
 jobs:
-  commit-to-kargo-warehouse:
-    name: record legacy gitflow metadata
+  record-legacy-gitflow:
+    name: record legacy gitflow merge
     runs-on: ubuntu-latest
     steps:
       - name: Checkout k8s-gitops
@@ -33,38 +30,32 @@ jobs:
         shell: ruby {0}
         env:
           BRANCH_NAME: ${{ inputs.branch_name }}
-          CODEAI_DOCKER_IMAGE_REF: ${{ inputs.codeai_docker_image_ref }}
-          CODEAI_DOCKER_TAG: ${{ inputs.codeai_docker_tag }}
+          SOURCE_COMMIT_SHA: ${{ inputs.source_commit_sha }}
         run: | # ruby
           require 'fileutils'
           require 'time'
           require 'yaml'
 
           branch_name = ENV.fetch('BRANCH_NAME')
-          image_ref = ENV.fetch('CODEAI_DOCKER_IMAGE_REF')
-          tag = ENV.fetch('CODEAI_DOCKER_TAG')
+          source_commit_sha = ENV.fetch('SOURCE_COMMIT_SHA')
+          tag = "git-#{source_commit_sha}"
+          merged_at = Time.now.utc.iso8601
 
           unless %w[staging test levelbuilder production].include?(branch_name)
             puts "::notice::Skipping legacy gitflow record for non-gitflow branch #{branch_name.inspect}"
             exit 0
           end
 
-          source_commit_sha = tag.delete_prefix('git-')
-          unless source_commit_sha.match?(/\A[0-9a-f]{40}\z/)
-            abort("ERROR: expected a canonical git-<full-commit-sha> tag, got #{tag.inspect}")
-          end
-
-          merged_at = Time.now.utc.iso8601
-          payload = {
-            'revision' => source_commit_sha,
-            'tag' => tag,
-            'imageRef' => image_ref,
-            'mergedAt' => merged_at
-          }
-
           base_dir = File.join('k8s-gitops', 'warehouses', 'codeai', 'legacy-gitflow', branch_name)
           merged_dir = File.join(base_dir, 'merged')
           FileUtils.mkdir_p(merged_dir)
+
+          payload = {
+            'revision' => source_commit_sha,
+            'tag' => tag,
+            'mergedAt' => merged_at
+          }
+
           File.write(File.join(base_dir, 'current.yaml'), payload.to_yaml(line_width: -1))
           File.write(File.join(merged_dir, "#{tag}.yaml"), payload.to_yaml(line_width: -1))
 
@@ -72,7 +63,7 @@ jobs:
         shell: bash -euxo pipefail {0}
         env:
           BRANCH_NAME: ${{ inputs.branch_name }}
-          CODEAI_DOCKER_TAG: ${{ inputs.codeai_docker_tag }}
+          SOURCE_COMMIT_SHA: ${{ inputs.source_commit_sha }}
         run: |
           cd k8s-gitops
           git config user.name "github-actions[bot]"
@@ -82,5 +73,5 @@ jobs:
             echo "No legacy gitflow metadata changes to commit."
             exit 0
           fi
-          git commit -m "Record legacy gitflow ${BRANCH_NAME} => ${CODEAI_DOCKER_TAG}"
+          git commit -m "Record legacy gitflow ${BRANCH_NAME} => git-${SOURCE_COMMIT_SHA}"
           git push origin HEAD:main

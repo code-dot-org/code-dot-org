@@ -1,0 +1,115 @@
+name: k8s-publish-release-capsule
+
+on:
+  workflow_call:
+    inputs:
+      source_commit_sha:
+        required: true
+        type: string
+      codeai_docker_image_ref:
+        required: true
+        type: string
+      codeai_docker_tag:
+        required: true
+        type: string
+      codeai_docker_digest:
+        required: true
+        type: string
+      publish:
+        required: true
+        type: boolean
+
+jobs:
+  publish-release-capsule:
+    name: publish release capsule
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_REPO: ghcr.io/${{ github.repository_owner }}/code-dot-org
+      CAPSULE_REPO: ghcr.io/${{ github.repository_owner }}/codeai-release-capsule
+      SOURCE_COMMIT_SHA: ${{ inputs.source_commit_sha }}
+      CODEAI_DOCKER_IMAGE_REF: ${{ inputs.codeai_docker_image_ref }}
+      CODEAI_DOCKER_TAG: ${{ inputs.codeai_docker_tag }}
+      CODEAI_DOCKER_DIGEST: ${{ inputs.codeai_docker_digest }}
+      CAPSULE_TAG: git-${{ inputs.source_commit_sha }}
+    defaults:
+      run:
+        shell: bash -euxo pipefail {0}
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v6.0.2
+        with:
+          sparse-checkout: |
+            .github
+            k8s
+
+      - name: Checkout k8s-gitops read-only
+        uses: actions/checkout@v6.0.2
+        with:
+          repository: code-dot-org/k8s-gitops
+          ref: main
+          path: k8s-gitops
+          sparse-checkout: |
+            apps/codeai
+
+      - name: Setup Kustomize
+        run: |
+          KUSTOMIZE_VERSION=v5.8.1
+          ARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
+          curl -fsSLo /tmp/kustomize.tar.gz "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2F${KUSTOMIZE_VERSION}/kustomize_${KUSTOMIZE_VERSION}_linux_${ARCH}.tar.gz"
+          tar -xzf /tmp/kustomize.tar.gz -C /tmp
+          sudo install /tmp/kustomize /usr/local/bin/kustomize
+
+      - name: Build capsule filesystem
+        run: |
+          ruby k8s/release/build_release_capsule.rb \
+            --commit-sha "$SOURCE_COMMIT_SHA" \
+            --image-repo "$IMAGE_REPO" \
+            --image-tag "$CODEAI_DOCKER_TAG" \
+            --image-digest "$CODEAI_DOCKER_DIGEST" \
+            --capsule-repo "$CAPSULE_REPO" \
+            --output-dir "./release-capsule-build/$CAPSULE_TAG" \
+            --build-time "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --source-repo-url "https://github.com/${GITHUB_REPOSITORY}.git" \
+            --workflow-name "${GITHUB_WORKFLOW}" \
+            --workflow-run-url "https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+            --workflow-ref "${GITHUB_REF}"
+
+      - name: Package capsule tarball
+        run: |
+          tar -C "./release-capsule-build/$CAPSULE_TAG" -czf ./release-capsule.tgz .
+          mkdir -p ./release-capsule-unpacked
+          tar -xzf ./release-capsule.tgz -C ./release-capsule-unpacked
+
+      - name: Verify release capsule contract
+        run: |
+          ruby k8s/release/verify_release_capsule_contract.rb \
+            --capsule-dir ./release-capsule-unpacked \
+            --gitops-root ./k8s-gitops \
+            --image-repo "$IMAGE_REPO" \
+            --image-tag "$CODEAI_DOCKER_TAG" \
+            --image-digest "$CODEAI_DOCKER_DIGEST"
+
+      - name: Install ORAS
+        if: ${{ inputs.publish }}
+        run: |
+          ORAS_VERSION=1.3.0
+          ARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
+          curl -fsSLo /tmp/oras.tar.gz "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_${ARCH}.tar.gz"
+          tar -xzf /tmp/oras.tar.gz -C /tmp oras
+          sudo install /tmp/oras /usr/local/bin/oras
+
+      - name: Login to GitHub Container Registry
+        if: ${{ inputs.publish }}
+        uses: docker/login-action@v4.0.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish release capsule
+        if: ${{ inputs.publish }}
+        run: |
+          oras push "${CAPSULE_REPO}:${CAPSULE_TAG}" \
+            --annotation "org.opencontainers.image.source=https://github.com/${GITHUB_REPOSITORY}" \
+            --annotation "org.opencontainers.image.revision=${SOURCE_COMMIT_SHA}" \
+            ./release-capsule.tgz:application/vnd.code-dot-org.release-capsule.v1.tar+gzip
