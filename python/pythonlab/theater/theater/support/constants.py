@@ -2,6 +2,21 @@
 THEATER_WIDTH = 400
 THEATER_HEIGHT = 400
 
+# Audio format.
+SAMPLE_RATE = 44100
+BITS_PER_SAMPLE = 16
+CHANNELS = 1  # output is mono
+MAX_16_BIT_VALUE = 32768
+
+# Bundled instrument notes are stored at half the output rate and 8 bits per
+# sample, which is what keeps the theater wheel small enough to load on every
+# Python Lab page.
+INSTRUMENT_SAMPLE_RATE = 22050
+
+# Note range bundled for every instrument, as MIDI note numbers (C3-C6).
+MIN_NOTE = 48
+MAX_NOTE = 84
+
 # Smallest pause/frame duration in seconds; pause() rejects anything shorter.
 MIN_PAUSE_SECONDS = 0.1
 
@@ -12,6 +27,13 @@ MAX_PAUSE_SECONDS = 655.35
 
 # Gif stream size ceiling (30 MB).
 MAX_GIF_BYTES = 31457280
+
+# Audio timeline ceiling in seconds. A second of timeline is 44100 float32
+# samples, and the WAV encode holds the finished bytes twice more, measured at
+# roughly 0.6 MB of peak heap per second of audio. Unlike the gif, whose cost is
+# per frame, silence costs the same as sound: a scene that pauses for five
+# minutes before its last note pays for the whole five minutes.
+MAX_AUDIO_SECONDS = 300
 
 # Pixel ceiling for a single image, blank or loaded (4096x4096, or 64 MB of
 # RGBA).
