@@ -125,6 +125,19 @@ export interface CodebridgeConfig {
    * other type is stored in the assets backend and referenced by URL.
    */
   validMimeTypes?: string[];
+  /**
+   * The largest upload accepted, in bytes. Undefined accepts any size.
+   *
+   * A cap belongs to the lab rather than here, for the reason `validMimeTypes`
+   * does: what a project can hold is a fact about the project. A World Lab
+   * sound and a Python Lab data file have nothing to say to each other about
+   * how big is too big.
+   *
+   * Checked BEFORE the upload starts, so an oversized file costs a message and
+   * not a round trip — and so the message can name a size rather than an HTTP
+   * status.
+   */
+  maxUploadBytes?: number;
 }
 
 export const DEFAULT_CODEBRIDGE_CONFIG: CodebridgeConfig = {

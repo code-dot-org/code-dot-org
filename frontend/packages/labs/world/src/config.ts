@@ -54,9 +54,30 @@ const IMAGE_FILE_TYPES = ['png'];
 export const worldConfig: Partial<CodebridgeConfig> = {
   editableFileTypes: WORLD_EDITABLE_FILE_TYPES,
   supportedFileTypes: [...WORLD_EDITABLE_FILE_TYPES, ...IMAGE_FILE_TYPES],
-  // Learners can upload PNG sprites; they're stored in the assets backend and
-  // referenced by URL (the game resolves them for the preview — see UPLOADS.md).
-  validMimeTypes: ['image/png'],
+  // Learners can upload PNG sprites and their own sounds; both are stored in
+  // the assets backend and referenced by URL (the game resolves them for the
+  // preview — see UPLOADS.md and specs/SOUND.md).
+  //
+  // The audio types are the ones a browser will play and a learner is likely to
+  // have. `soundFiles.isSoundFile` decides the same question by extension for
+  // the dropdowns and the driver; the two lists are allowed to differ, and this
+  // is the narrower one — a MIME type is what a file picker filters on, and
+  // offering a format we cannot name is worse than not offering it.
+  validMimeTypes: [
+    'image/png',
+    'audio/mpeg',
+    'audio/wav',
+    'audio/ogg',
+    'audio/mp4',
+    'audio/webm',
+  ],
+  // 2MB. There was no cap on anything before sounds, and this is the first
+  // (specs/SOUND.md): roughly two minutes of ordinary mp3 — generous for
+  // anything one-shot, enough for a loop, and short of the point where a
+  // project stops loading. It applies to every upload, not only to sounds,
+  // because a size limit that depended on the kind of file would be a second
+  // rule to explain.
+  maxUploadBytes: 2 * 1024 * 1024,
   // A `.sheet` belongs to the `.png` of the same name: the image editor writes
   // it when an image is made a spritesheet and deletes it when it stops being
   // one, so it is not a file to open (appearance/sheetFile).

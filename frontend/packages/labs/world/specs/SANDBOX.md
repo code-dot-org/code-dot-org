@@ -126,6 +126,7 @@ default-src   'self';
 script-src    'self';            /* + blob: only under the fallback transport */
 connect-src   'none';
 img-src       'self' blob: data:;  /* built-in sprite textures load from 'self' */
+media-src     'self' blob: data:;  /* sounds, the same way (specs/SOUND.md) */
 font-src      'self';
 style-src     'self' 'unsafe-inline';
 frame-ancestors <lab-origin> 'self';
@@ -135,7 +136,14 @@ form-action   'none';
 The preview imports the compiled module by a self-origin URL (see _Transport_),
 so `script-src 'self'` suffices and no `blob:` or `eval` of any kind is required
 to run learner code. Sprites and other assets arrive as `blob:` / `data:` URLs
-built from the project, never fetched from the network. The surface is
+built from the project, never fetched from the network.
+
+`media-src` is there for the same reason `img-src` is, and is stated rather than
+left to `default-src`: a sound is a project file inlined as a `data:` URL and
+handed to Phaser's audio loader (specs/SOUND.md). Nothing here has applied this
+policy yet, so its absence broke nothing — but a preview surface that started
+enforcing the list without this line would play no sound in any project, and the
+reason would be nowhere near the symptom. The surface is
 credential-less.
 
 `'wasm-unsafe-eval'` is **deliberately omitted** from the preview surface. If it

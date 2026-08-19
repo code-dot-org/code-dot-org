@@ -87,7 +87,13 @@ describe('the toolbox', () => {
     // Not tucked under Appearance: what a game sounds like is not what it looks
     // like, and a learner looking for "play sound" looks for a word.
     const {DOMAIN_TOOLBOX} = await import('../domainBlocks');
-    const category = DOMAIN_TOOLBOX.find(entry => entry.name === 'Sound');
+    // `Toolbox` is Blockly's own shape; the lab builds it from an array of
+    // categories, which is what `domainBlocks.test` reads it back as too.
+    const categories = DOMAIN_TOOLBOX as Array<{
+      name?: string;
+      blocks?: string[];
+    }>;
+    const category = categories.find(entry => entry.name === 'Sound');
 
     expect(category?.blocks).toEqual(['world_play_sound', 'world_set_music']);
   });

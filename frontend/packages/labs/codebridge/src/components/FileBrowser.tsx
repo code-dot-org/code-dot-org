@@ -31,6 +31,7 @@ import {useFileOperations} from '../hooks/useFileOperations';
 import {useHandleDragEnd} from '../hooks/useHandleDragEnd';
 import {usePrompts} from '../hooks/usePrompts';
 import {useAppSelector} from '../redux/store';
+import {tooLarge} from '../uploadLimit';
 import {
   dragAndDropKeyboardCodes,
   fileBrowserCollisionDetector,
@@ -279,6 +280,13 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
       if (!file) {
         return;
       }
+      // Before anything is read or sent: an oversized file should cost a
+      // message, not a round trip that fails with a status code.
+      const oversized = tooLarge(file, config.maxUploadBytes);
+      if (oversized) {
+        await alert(oversized);
+        return;
+      }
       const language = languageForFileName(config, file.name);
       try {
         if (file.type.startsWith('text/')) {
@@ -311,7 +319,7 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
         console.error('File upload failed', error);
       }
     },
-    [ops, config, channelId],
+    [ops, config, channelId, alert],
   );
 
   const newFilePlaceholder = config.editableFileTypes[0]

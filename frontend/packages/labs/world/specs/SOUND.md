@@ -181,10 +181,12 @@ actor would be promising panning it does not do.
    drains after `tick`, and stops the track before the game goes.
 
    `audio: {noAudio: true}` is gone — it was right while nothing made a noise.
-   NOT YET BROWSER-VERIFIED: Phaser's WebAudio manager starts locked until the
-   surface sees a gesture, so the first sound of a game nobody has clicked on
-   may be dropped by the browser rather than by us. That is the thing to look
-   at first when this is run for real.
+
+   BROWSER-VERIFIED for `play sound`: it plays. The worry was Phaser's WebAudio
+   manager, which starts locked until its own document sees a gesture — and the
+   preview is an iframe, so sticky activation does not reach it from the editor.
+   Phaser's own unlock listeners appear to be enough in practice. `set music to`
+   has not been reported on yet.
 
 4. ✅ **The shelf.** 39 sounds — the vocabulary a first game reaches for, plus
    four loops for `set music to` — in `sounds.txt`, which carries `name<TAB>url`
@@ -231,6 +233,20 @@ actor would be promising panning it does not do.
    importer; a fourth argument would have made that a list to keep in step, so
    it is one `refreshFor(source)`.
 
-7. **The cap.** One constant, enforced where an upload enters, with the message
-   a learner reads.
-8. **`SANDBOX.md`.** `media-src 'self' blob: data:` on the preview surface.
+7. ✅ **The cap.** `CodebridgeConfig.maxUploadBytes`, beside `validMimeTypes`
+   and for the reason that one is config: what a project can hold is a fact
+   about the project, and a World Lab sound has nothing to say to a Python Lab
+   data file about how big is too big. World Lab sets 2MB and adds the audio
+   MIME types the file picker filters on.
+
+   Checked BEFORE the upload starts, so an oversized file costs a message and
+   not a round trip that fails with a status code — and the message names the
+   file, its size and the limit, in one unit, because "too big" with no number
+   leaves a learner unable to tell whether to find a shorter sound or a
+   different one. The decision is `codebridge/uploadLimit`, pulled out of the
+   handler so the wording is testable without a redux shell.
+
+8. ✅ **`SANDBOX.md`.** `media-src 'self' blob: data:` on the preview surface.
+   No surface applies the policy yet, so its absence broke nothing — but one
+   that started enforcing the list without it would play no sound in any
+   project, and the reason would be nowhere near the symptom.
