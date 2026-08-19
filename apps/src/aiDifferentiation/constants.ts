@@ -1,4 +1,4 @@
-import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../aiTeacherDrawer/predefinedPrompts';
 
 export const DEFAULT_THREAD_TITLE = 'Unnamed chat';
 
