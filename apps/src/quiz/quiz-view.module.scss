@@ -30,7 +30,7 @@
 
 // Contains a single quiz question so it reads as a focused card rather than
 // stretching edge-to-edge across the whole quiz panel - only used while a
-// student is taking the quiz, not in authoring mode (that's an admin form
+// student is taking the quiz, not in builder mode (that's an admin form
 // and wants the full width).
 // No horizontal padding here - .questionSection's divider needs to reach
 // this card's own edges, so the horizontal inset lives on .cardHeader/

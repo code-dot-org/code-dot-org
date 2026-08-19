@@ -13,7 +13,7 @@ export interface PartialAppOptions {
   share: boolean;
   isEditingExemplar: boolean;
   isViewingExemplar: boolean;
-  isAuthoringQuizQuestions: boolean;
+  isBuildingQuizQuestions: boolean;
   publicCaching: boolean;
   theme?: string;
 }
@@ -90,14 +90,14 @@ export function getAppOptionsTheme(): string | undefined {
 }
 
 /**
- * Returns whether this Quiz level is being loaded in question-authoring
- * mode (see LevelsController#author_quiz_questions), as opposed to the
+ * Returns whether this Quiz level is being loaded in question-building
+ * mode (see LevelsController#build_quiz_questions), as opposed to the
  * normal student-facing quiz-taking view.
  */
-export function getAppOptionsAuthoringQuizQuestions(): boolean | undefined {
+export function getAppOptionsBuildingQuizQuestions(): boolean | undefined {
   if (hasScriptData('script[data-appoptions]')) {
     const appOptions = getScriptData('appoptions') as PartialAppOptions;
-    return appOptions.isAuthoringQuizQuestions;
+    return appOptions.isBuildingQuizQuestions;
   }
 }
 

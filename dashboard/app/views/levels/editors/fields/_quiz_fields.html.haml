@@ -28,6 +28,6 @@
 
   .field
     - if @level.new_record?
-      %p Save this level before authoring its questions.
+      %p Save this level before building its questions.
     - else
-      = link_to 'Author Quiz Questions', author_quiz_questions_level_path(@level)
+      = link_to 'Build Quiz Questions', build_quiz_questions_level_path(@level)

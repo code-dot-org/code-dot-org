@@ -12,7 +12,7 @@ class LevelsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 
-  before_action :set_level, only: [:show, :edit, :update, :destroy, :author_quiz_questions]
+  before_action :set_level, only: [:show, :edit, :update, :destroy, :build_quiz_questions]
 
   LEVELS_PER_PAGE = 30
 
@@ -286,19 +286,19 @@ class LevelsController < ApplicationController
     render :show
   end
 
-  # GET /levels/:id/author_quiz_questions
+  # GET /levels/:id/build_quiz_questions
   #
   # Renders the same lab2 show page a student would see, but with
-  # is_authoring_quiz_questions threaded through app_options (see
-  # LevelsHelper#lab2_options) so Quiz.tsx renders the question-authoring UI
+  # is_building_quiz_questions threaded through app_options (see
+  # LevelsHelper#lab2_options) so Quiz.tsx renders the question-building UI
   # instead of the quiz-taking UI. Reusing the real show pipeline this way
   # (rather than a standalone page) means ResourcePanel and the rest of the
   # lab2 shell work without reimplementing anything - see the design
   # discussion around useExtraLinksButtonContext.
-  def author_quiz_questions
+  def build_quiz_questions
     return head :not_found unless @level.is_a?(Quiz)
 
-    level_view_options(@level.id, is_authoring_quiz_questions: true)
+    level_view_options(@level.id, is_building_quiz_questions: true)
     show
     render :show
   end
@@ -331,7 +331,7 @@ class LevelsController < ApplicationController
 
   # GET /levels/:id/quiz_questions/:question_id
   #
-  # Authoring-only counterpart to Quiz#summarize_for_lab2_properties: that
+  # Building-only counterpart to Quiz#summarize_for_lab2_properties: that
   # method deliberately excludes correct_choice_id from the payload shared
   # with the student-facing quiz-taking UI (see its comment), so editing an
   # existing question's answer needs its own fetch instead of reusing
@@ -810,7 +810,7 @@ class LevelsController < ApplicationController
   end
 
   # Shared by create/show/update_quiz_question. Includes correct_choice_id -
-  # callers of this must be authoring-only endpoints, never the student-
+  # callers of this must be building-only endpoints, never the student-
   # facing payload (that's Quiz#summarize_for_lab2_properties).
   private def quiz_question_json(question)
     {

@@ -34,7 +34,7 @@ interface QuizBuilderProps {
 }
 
 // POC scope: MultipleChoiceQuestion only, no question bank browsing/reuse -
-// see LevelsController#author_quiz_questions/#create_quiz_question.
+// see LevelsController#build_quiz_questions/#create_quiz_question.
 const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
   quizId,
   quizTitle,
@@ -137,7 +137,7 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
 
   return (
     <div>
-      <Typography variant="overline3">Author Quiz Questions</Typography>
+      <Typography variant="overline3">Build Quiz Questions</Typography>
       <Typography variant="h2">{quizTitle}</Typography>
 
       <h2>Current quiz questions</h2>

@@ -1,13 +1,13 @@
 import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {getAppOptionsAuthoringQuizQuestions} from '@cdo/apps/lab2/projects/utils';
+import {getAppOptionsBuildingQuizQuestions} from '@cdo/apps/lab2/projects/utils';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import QuizBuilder from './authoring/QuizBuilder';
+import QuizBuilder from './builder/QuizBuilder';
 import QuizIntro from './QuizIntro';
 import QuizQuestion, {QuizQuestionSummary} from './QuizQuestion';
 
@@ -77,7 +77,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     introText,
     timeLimitMinutes,
   } = levelProperties as QuizLevelProperties;
-  const isAuthoringMode = !!getAppOptionsAuthoringQuizQuestions();
+  const isBuilderMode = !!getAppOptionsBuildingQuizQuestions();
   const [attemptId, setAttemptId] = useState<number | null>(null);
   const [responses, setResponses] = useState<
     Record<number, QuestionResponseValue>
@@ -100,13 +100,13 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
-  // Outside authoring mode, Quiz has no top tab content today - the AI
+  // Outside builder mode, Quiz has no top tab content today - the AI
   // Tutor tab isn't built yet (it needs hiddenContextCallback/
   // aiTutorSystemPrompt, neither of which is wired up here), so there's
   // nothing to expand the panel into, and the collapse toggle itself never
-  // renders (ResourcePanel hides it when there are no tabs). In authoring
+  // renders (ResourcePanel hides it when there are no tabs). In builder
   // mode the Question Bank tab always exists.
-  const hasResourcePanelTabs = isAuthoringMode;
+  const hasResourcePanelTabs = isBuilderMode;
 
   // Creates (or resumes) the attempt - called either immediately on mount
   // (quiz has no intro content to show first) or from the intro screen's
@@ -151,8 +151,8 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   };
 
   useEffect(() => {
-    // Don't start a student attempt while a levelbuilder is authoring.
-    if (isAuthoringMode || !scriptId) {
+    // Don't start a student attempt while a levelbuilder is building the quiz.
+    if (isBuilderMode || !scriptId) {
       return;
     }
     // Check-only - never creates an attempt as a side effect of loading
@@ -190,7 +190,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           setExpiresAt(data.expiresAt || null);
         }
       });
-  }, [isAuthoringMode, levelId, scriptId, needsIntroScreen, beginAttempt]);
+  }, [isBuilderMode, levelId, scriptId, needsIntroScreen, beginAttempt]);
 
   const setResponse = (questionId: number, value: QuestionResponseValue) =>
     setResponses(prev => ({...prev, [questionId]: value}));
@@ -307,7 +307,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         hasEdited={Object.keys(responses).length > 0}
         hideAllNavigation
         questionBankContent={
-          isAuthoringMode ? (
+          isBuilderMode ? (
             <Typography variant="body2">
               Question bank browsing and filtering coming soon.
             </Typography>
@@ -316,7 +316,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       />
       <div className={styles.divider} />
       <div className={styles.content}>
-        {isAuthoringMode ? (
+        {isBuilderMode ? (
           <QuizBuilder
             quizId={levelId as number}
             quizTitle={title || name}
