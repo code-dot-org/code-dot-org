@@ -5,9 +5,6 @@ import {FileBrowserNameComponentType} from './types';
 
 import moduleStyles from '../styles/filebrowser.module.scss';
 
-/**
- * Renders the file name for a file row in the file browser.
- */
 export const FileRowName: FileBrowserNameComponentType = ({item}) => {
   return (
     <div className={moduleStyles.nameContainer}>
