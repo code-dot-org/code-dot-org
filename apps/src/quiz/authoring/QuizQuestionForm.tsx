@@ -16,6 +16,9 @@ export interface QuizQuestionFormValues {
   stem: string;
   choices: QuizChoice[];
   correctChoiceId: string;
+  // Shown to students only once the quiz's own reveal_answer_explanation
+  // setting allows it - see QuizAttempt#question_results.
+  explanation?: string;
 }
 
 const EMPTY_CHOICE = (): QuizChoice => ({
@@ -57,6 +60,9 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
   );
   const [correctChoiceId, setCorrectChoiceId] = useState(
     initialValues?.correctChoiceId || ''
+  );
+  const [explanation, setExplanation] = useState(
+    initialValues?.explanation || ''
   );
   const [error, setError] = useState<string | null>(null);
 
@@ -110,6 +116,7 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
       stem,
       choices: lettered,
       correctChoiceId: lettered[selectedIndex]?.id ?? '',
+      explanation,
     });
     if (saveError) {
       setError(saveError);
@@ -145,6 +152,21 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
             className={styles.textarea}
             value={stem}
             onChange={e => setStem(e.target.value)}
+          />
+        </FormFieldWrapper>
+      </div>
+
+      <div className={styles.section}>
+        <FormFieldWrapper
+          color="black"
+          size="s"
+          label="Explanation (optional)"
+          helperMessage="Shown to students only if the quiz's Reveal answer explanations setting is on."
+        >
+          <textarea
+            className={styles.textarea}
+            value={explanation}
+            onChange={e => setExplanation(e.target.value)}
           />
         </FormFieldWrapper>
       </div>

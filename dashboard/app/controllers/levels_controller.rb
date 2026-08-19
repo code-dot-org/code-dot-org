@@ -318,7 +318,8 @@ class LevelsController < ApplicationController
         stem: quiz_question_params[:stem],
         choices: (quiz_question_params[:choices] || []).map(&:to_h),
         correct_choice_id: quiz_question_params[:correctChoiceId],
-      }
+      },
+      explanation: quiz_question_params[:explanation]
     )
     next_position = (@level.quiz_level_questions.maximum(:position) || 0) + 1
     QuizLevelQuestion.create!(level: @level, quiz_question: question, page: 1, position: next_position)
@@ -356,7 +357,8 @@ class LevelsController < ApplicationController
         stem: quiz_question_params[:stem],
         choices: (quiz_question_params[:choices] || []).map(&:to_h),
         correct_choice_id: quiz_question_params[:correctChoiceId],
-      }
+      },
+      explanation: quiz_question_params[:explanation]
     )
     render json: quiz_question_json(question)
   rescue StandardError => exception
@@ -804,7 +806,7 @@ class LevelsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the allow-list through.
   private def quiz_question_params
-    params.permit(:questionName, :stem, :correctChoiceId, choices: [:id, :text])
+    params.permit(:questionName, :stem, :correctChoiceId, :explanation, choices: [:id, :text])
   end
 
   # Shared by create/show/update_quiz_question. Includes correct_choice_id -
@@ -818,6 +820,7 @@ class LevelsController < ApplicationController
       stem: question.question['stem'],
       choices: question.question['choices'],
       correctChoiceId: question.question['correct_choice_id'],
+      explanation: question.explanation,
     }
   end
 

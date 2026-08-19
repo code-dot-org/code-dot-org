@@ -24,6 +24,7 @@ interface QuizQuestionData {
   // excludes correct answers, so a question has none here until you create
   // or edit it in this session.
   correctChoiceId?: string;
+  explanation?: string;
 }
 
 interface QuizBuilderProps {
@@ -87,6 +88,7 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
         stem: data.stem || '',
         choices: data.choices || [],
         correctChoiceId: data.correctChoiceId || '',
+        explanation: data.explanation || '',
       });
       setEditingQuestionId(question.id);
       setIsFormOpen(true);
