@@ -61,11 +61,16 @@ export async function fetchSectionScenes(
   return value.scenes || [];
 }
 
+// The level travels with the channel: the server serves only that level's
+// channels.
 export async function fetchExternalProject(
-  channel: string
+  channel: string,
+  levelId: number | string
 ): Promise<ExternalProject> {
   const {value} = await HttpClient.fetchJson<ExternalProject>(
-    `/sprite_lab2/external_scenes?channel=${encodeURIComponent(channel)}`
+    `/sprite_lab2/external_scenes?channel=${encodeURIComponent(
+      channel
+    )}&level_id=${levelId}`
   );
   return value;
 }

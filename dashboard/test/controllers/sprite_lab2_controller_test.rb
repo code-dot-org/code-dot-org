@@ -9,7 +9,7 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     @script = create(:script, :in_single_unit_course)
     # A script that is not part of a unit group, the /s/allthethings shape.
     @loose_script = create(:script)
-    @level = create(:level)
+    @level = create(:spritelab, uses_lab2: 'true')
 
     @teacher = create(:teacher)
     @student = create(:student)
@@ -99,6 +99,51 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_equal 1, JSON.parse(response.body)['scenes'].length
   end
 
+  test 'refuses a level from another lab' do
+    other_level = create(:applab)
+    stub_scenes channel_for(@student_storage_id, @script.id, level: other_level)
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: other_level.id, script_id: @script.id}
+
+    assert_response :bad_request
+  end
+
+  test 'external_scenes serves a channel belonging to the level' do
+    channel = channel_for(@student_storage_id, @script.id)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id}
+
+    assert_response :success
+    assert_equal 1, JSON.parse(response.body)['scenes'].length
+  end
+
+  # The channel must be one of the owner's channels for the level in the
+  # request.
+  test 'external_scenes refuses a channel from another level' do
+    other_level = create(:spritelab, uses_lab2: 'true')
+    channel = channel_for(@student_storage_id, @script.id, level: other_level)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id}
+
+    assert_response :forbidden
+  end
+
+  test 'external_scenes refuses a channel owned by a non-section-mate' do
+    stranger = create(:student)
+    channel = channel_for(create_storage_id_for_user(stranger.id), @script.id)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id}
+
+    assert_response :forbidden
+  end
+
   test 'excludes someone who shares no section' do
     stranger = create(:student)
     stub_scenes channel_for(create_storage_id_for_user(stranger.id), @script.id)
@@ -110,9 +155,9 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_empty JSON.parse(response.body)['scenes']
   end
 
-  private def channel_for(storage_id, script_id)
+  private def channel_for(storage_id, script_id, level: nil)
     ChannelToken.find_or_create_channel_token(
-      @level, FAKE_IP, storage_id, script_id
+      level || @level, FAKE_IP, storage_id, script_id
     ).channel
   end
 

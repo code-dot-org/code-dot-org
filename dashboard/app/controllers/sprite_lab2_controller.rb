@@ -16,6 +16,7 @@ class SpriteLab2Controller < ApplicationController
   # go-to-external-scene block's dropdown.
   def section_scenes
     level = Level.find(params.require(:level_id))
+    return head :bad_request unless sprite_lab2_level?(level)
     script_id = params[:script_id].presence
     scenes = []
     section_mates.each do |user|
@@ -34,12 +35,15 @@ class SpriteLab2Controller < ApplicationController
     render json: {scenes: scenes}
   end
 
-  # GET /sprite_lab2/external_scenes?channel=X
+  # GET /sprite_lab2/external_scenes?channel=X&level_id=N
   # Full scenes + animations of one project, for running an external scene
-  # (including its internal scene jumps and its images). Only allowed when the
-  # project's owner shares a section with the current user.
+  # (including its internal scene jumps and its images). Allowed only when the
+  # owner shares a section with the current user and the channel is one of
+  # that owner's channels for the level in the request.
   def external_scenes
     channel = params.require(:channel)
+    level = Level.find(params.require(:level_id))
+    return head :bad_request unless sprite_lab2_level?(level)
     begin
       owner_storage_id, _project_id = get_storage_id_and_project_id(channel)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
@@ -48,6 +52,7 @@ class SpriteLab2Controller < ApplicationController
     owner_id = user_id_for_storage_id(owner_storage_id)
     owner = User.find_by(id: owner_id)
     return head :forbidden unless owner && section_mates.include?(owner)
+    return head :forbidden unless channels_for(owner, level).include?(channel)
 
     source_data = SourceBucket.new.get(channel, 'main.json')
     return head :not_found unless source_data[:status] == 'FOUND'
@@ -74,6 +79,24 @@ class SpriteLab2Controller < ApplicationController
     end
   end
 
+  # This API is for the Sprite Lab in Lab2 scenes experiment only. Without this
+  # gate any level id is accepted, which widens what the endpoints read from a
+  # section-mate's project beyond the feature that needs it.
+  private def sprite_lab2_level?(level)
+    level.is_a?(GamelabJr) && level.uses_lab2?
+  end
+
+  # Every channel this user has for the level.
+  private def channel_tokens_for(user, level)
+    storage_id = storage_id_for_user_id(user.id)
+    return [] unless storage_id
+    ChannelToken.where(level: level.host_level, storage_id: storage_id).to_a
+  end
+
+  private def channels_for(user, level)
+    channel_tokens_for(user, level).map(&:channel)
+  end
+
   # The user's project channel + parsed sources for a level, or [nil, nil].
   #
   # One level can be reached through several scripts and outside any script,
@@ -82,9 +105,7 @@ class SpriteLab2Controller < ApplicationController
   # work from wherever the level is being played, rather than going empty
   # because a classmate reached the level by a different route.
   private def project_sources_for(user, level, script_id = nil)
-    storage_id = storage_id_for_user_id(user.id)
-    return [nil, nil] unless storage_id
-    tokens = ChannelToken.where(level: level.host_level, storage_id: storage_id).to_a
+    tokens = channel_tokens_for(user, level)
     channel_token =
       (script_id && tokens.find {|ct| ct.script_id.to_s == script_id.to_s}) ||
       tokens.find {|ct| ct.script_id.nil?} ||
