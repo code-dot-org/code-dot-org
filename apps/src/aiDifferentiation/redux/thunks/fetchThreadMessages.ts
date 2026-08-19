@@ -10,11 +10,6 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {
-  THREAD_TYPES,
-  ThreadTypeFields,
-  DEFAULT_THREAD_TITLE,
-} from '../../constants';
-import {
   AIF_PHILOSOPHY_MENU,
   AIF_LOGISTICS_MENU,
   AIF_TEACHER_PREP_MENU,
@@ -32,7 +27,12 @@ import {
   SUGGEST_CURRICULUM_PROMPT,
   GET_STARTED_PROMPT,
   CREATE_SECTION_PROMPT,
-} from '../../predefinedPrompts';
+} from '../../../aiTeacherDrawer/predefinedPrompts';
+import {
+  THREAD_TYPES,
+  ThreadTypeFields,
+  DEFAULT_THREAD_TITLE,
+} from '../../constants';
 import {
   ChatPrompt,
   ChatTextMessage,

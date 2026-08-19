@@ -29,22 +29,7 @@ jest.mock('@react-pdf/renderer', () => {
   };
 });
 
-// Lightweight stubs for the lazy-loaded containers so tests don't trigger
-// AiDiffWorkspace's asyncLoadSectionData (jQuery XHR) or fetchThreadMessages.
-jest.mock('@cdo/apps/aiDifferentiation/AiDiffContainer', () => {
-  const React = require('react');
-  const {useSelector} = require('react-redux');
-  const MockContainer = () => {
-    const chatIsOpen = useSelector(state => state.aiDiffChat.chatIsOpen);
-    return (
-      <div style={chatIsOpen ? undefined : {display: 'none'}}>
-        <span>AI Teaching Assistant</span>
-      </div>
-    );
-  };
-  return {__esModule: true, default: MockContainer};
-});
-
+// Stub the lazy-loaded drawer so tests don't trigger asyncLoadSectionData or fetchThreadMessages.
 jest.mock('@cdo/apps/aiTeacherDrawer/AiDiffDrawer', () => {
   const React = require('react');
   const {useSelector} = require('react-redux');
