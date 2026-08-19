@@ -551,9 +551,6 @@ img.video_thumbnail {
   white-space: nowrap;
 
   &:hover, &:active {
-    border-bottom: none;
-    margin-top: -1px;
-    padding: 5px 10px;
     background-color: var(--neutral-white-alpha-10);
   }
 
@@ -1438,16 +1435,7 @@ $default-modal-width: 640px;
   }
 }
 
-// Wider logo recovers space in the nav gap instead of bumping the collapse
-// threshold. Tighten .headerlinks gap at small-desktop so the wider logo
-// doesn't force links into the hamburger any earlier than the code brand.
-.header-wrapper .header .headerlinks {
-  @media (min-width: 1024px) and (max-width: 1268px) {
-    gap: 1.5rem;
-  }
-}
-// Pill spacing comes from link padding, not container gap; re-assert over
-// the small-desktop band rule above, which would double-space the pills.
+// Pill spacing comes from link padding, not container gap.
 .header-wrapper .header .headerlinks {
   gap: 0;
 }
