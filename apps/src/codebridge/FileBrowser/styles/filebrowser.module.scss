@@ -73,10 +73,8 @@
   margin: 0;
 }
 
-// Nested lists: child icon left = parent label start
-// (icon width 0.75rem + icon end margin 0.375rem).
-// Guide line sits on the parent icon center
-// (row margin 0.375rem + icon start margin 0.5rem + half icon 0.375rem).
+// Child icon lines up with the parent label (icon + its end margin).
+// Guide line is the parent icon center.
 .fileBrowser .folder .folder {
   position: relative;
   padding-inline-start: 1.125rem;
@@ -109,7 +107,7 @@
   grid-template-columns: 15px auto;
 }
 
-// !important is required here to beat the MUI XS theme variant.
+// !important: MUI's XS IconButton size is more specific.
 button.button-kebab {
   opacity: 0;
   box-sizing: border-box;
@@ -151,7 +149,7 @@ button.button-kebab:focus {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    // body4 is 13px; files/folders in this list are 12px.
+    // Override body4 (13px) to match the 12px row.
     font-size: inherit;
 
     .activeFile & {

@@ -8,9 +8,6 @@ import {FileBrowserNameComponentType} from './types';
 
 import moduleStyles from '../styles/filebrowser.module.scss';
 
-/**
- * Renders the folder name for a folder row in the file browser.
- */
 export const FolderRowName: FileBrowserNameComponentType = ({item}) => {
   const {dragData, dropData} = useDndDataContext();
   return (

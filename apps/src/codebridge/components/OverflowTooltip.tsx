@@ -11,9 +11,8 @@ type OverflowTooltipProps = {
 function hasTruncatedText(el: HTMLElement): boolean {
   const {overflowX, whiteSpace} = getComputedStyle(el);
   const clips = overflowX === 'hidden' || overflowX === 'clip';
-  // Icons and flex wrappers often report scrollWidth > clientWidth even
-  // when the label isn't truncated (folder-open is wider than the 12px box).
-  // Only a nowrap + clipped text node is an ellipsis'd name.
+  // Icons report overflow even when the name isn't (folder-open is
+  // wider than its 12px box). Only nowrap + clipped text counts.
   if (clips && whiteSpace === 'nowrap' && el.scrollWidth > el.clientWidth) {
     return true;
   }
@@ -22,10 +21,7 @@ function hasTruncatedText(el: HTMLElement): boolean {
   );
 }
 
-/**
- * Shows an MUI tooltip with `title` only when `children` overflow.
- * Clones `children` so the tooltip anchors to that element (hover and focus).
- */
+/** Tooltip with `title` only when the child text is truncated. */
 const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
   children,
   title,
@@ -57,8 +53,7 @@ const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
     <Tooltip
       title={isOverflowing ? title : ''}
       placement={placement}
-      // Theme defaults describeChild on, which would overwrite the file
-      // row's dnd-kit aria-describedby. The trigger already names itself.
+      // Default describeChild would overwrite the row's dnd-kit aria-describedby.
       describeChild={false}
       slotProps={{
         popper: {'data-theme': theme},
