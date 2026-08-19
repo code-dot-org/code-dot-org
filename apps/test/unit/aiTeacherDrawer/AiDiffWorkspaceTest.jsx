@@ -3,8 +3,8 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {setThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
+import {setThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import {chatThreadMessagesValidator} from '@cdo/apps/aiDifferentiation/types';
 import AiDiffWorkspace from '@cdo/apps/aiTeacherDrawer/AiDiffWorkspace';
 import {

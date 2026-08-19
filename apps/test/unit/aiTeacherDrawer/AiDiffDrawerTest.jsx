@@ -5,8 +5,8 @@ import {Provider} from 'react-redux';
 import {
   setChatIsOpen,
   setPendingArtifactMessage,
-} from '@cdo/apps/aiDifferentiation/redux';
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
+} from '@cdo/apps/aiTeacherDrawer/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import AiDiffDrawer from '@cdo/apps/aiTeacherDrawer/AiDiffDrawer';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {

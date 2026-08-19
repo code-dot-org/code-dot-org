@@ -15,8 +15,8 @@ import {
   setThreadType,
   setThreadMessages,
   setInitialChatMessage,
-} from '@cdo/apps/aiDifferentiation/redux';
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
+} from '@cdo/apps/aiTeacherDrawer/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import AiDiffChat from '@cdo/apps/aiTeacherDrawer/AiDiffChat';
 import {THREAD_TYPES} from '@cdo/apps/aiTeacherDrawer/constants';
 import {
