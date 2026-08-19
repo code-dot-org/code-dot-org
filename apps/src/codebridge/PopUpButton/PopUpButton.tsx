@@ -69,18 +69,6 @@ export const PopUpButton = ({
     timeoutsRef.current.add(timeoutId);
   }, [className]);
 
-  // Close without blur so Escape can return focus to the trigger.
-  const hideMenu = useCallback(() => {
-    setIsOpen(false);
-    document.removeEventListener('click', setIsOpenFalse);
-
-    const timeoutId = setTimeout(() => {
-      setComputedButtonStyles(className);
-      timeoutsRef.current.delete(timeoutId);
-    }, 0);
-    timeoutsRef.current.add(timeoutId);
-  }, [className, setIsOpenFalse]);
-
   // Listen for close events from other dropdowns
   useEffect(() => {
     const handleCloseOthers = (e: Event) => {
@@ -101,46 +89,6 @@ export const PopUpButton = ({
         handleCloseOthers
       );
   }, [setIsOpenFalse]);
-
-  // Trap Escape deactivates without unmounting. Capture the key; focusin
-  // closes if Tab then leaves.
-  useEffect(() => {
-    if (!isOpen) {
-      return;
-    }
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Escape') {
-        return;
-      }
-      event.preventDefault();
-      event.stopPropagation();
-      hideMenu();
-      buttonElementRef.current?.focus();
-    };
-
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target;
-      if (!(target instanceof Node)) {
-        return;
-      }
-      if (
-        buttonElementRef.current?.contains(target) ||
-        dropdownRef.current?.contains(target)
-      ) {
-        return;
-      }
-      setIsOpenFalse();
-    };
-
-    document.addEventListener('keydown', handleKeyDown, true);
-    document.addEventListener('focusin', handleFocusIn, true);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown, true);
-      document.removeEventListener('focusin', handleFocusIn, true);
-    };
-  }, [isOpen, hideMenu, setIsOpenFalse]);
 
   // Handler to show the dropdown.
   const clickHandler = useCallback(
@@ -291,8 +239,7 @@ export const PopUpButton = ({
                 }
                 return event.key === 'Tab' && event.shiftKey;
               },
-              onDeactivate: hideMenu,
-              escapeDeactivates: true,
+              onDeactivate: setIsOpenFalse,
               clickOutsideDeactivates: true,
               preventScroll: true,
               fallbackFocus: initialFocusId
