@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-12 21:00:17 UTC",
+    "serialized_at": "2026-08-17 19:22:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -289,6 +289,7 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -973,6 +974,18 @@
         "lesson_activity.key": "d4973e88-b07d-4ed3-ae9f-ee758403a694",
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "1784fab3-9e2c-4419-952a-2872e8935687",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1784fab3-9e2c-4419-952a-2872e8935687",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "aif-year2-semester1-unit1"
       }
     }
@@ -4923,6 +4936,17 @@
         "activity_section.key": "e5a69cd0-5860-4bff-8c5d-57e9c11ffab9",
         "lesson_activity.key": "d4973e88-b07d-4ed3-ae9f-ee758403a694"
       }
+    },
+    {
+      "key": "2e9cf8d5-d618-439b-80ca-561135937f89",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e9cf8d5-d618-439b-80ca-561135937f89",
+        "lesson_activity.key": "1784fab3-9e2c-4419-952a-2872e8935687"
+      }
     }
   ],
   "script_levels": [
@@ -5194,7 +5218,7 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Build a Chatbot"
       },
@@ -6333,6 +6357,28 @@
       "level_keys": [
         "aif-y2-logic-based-ai-lesson13-survey-2026"
       ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-postassessment-2026"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "2e9cf8d5-d618-439b-80ca-561135937f89"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-postassessment-2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7102,6 +7148,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit1",
         "activity_section.key": "e5a69cd0-5860-4bff-8c5d-57e9c11ffab9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-postassessment-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-postassessment-2026"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "2e9cf8d5-d618-439b-80ca-561135937f89"
       }
     }
   ],

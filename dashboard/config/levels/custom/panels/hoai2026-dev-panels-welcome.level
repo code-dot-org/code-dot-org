@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-10T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Welcome!\nIn this activity you will build your own game with the help of AI.\n\nYou will:\n- Create your own pictures with AI\n- Build a story scene\n- Build a platformer scene\n- Link them into one game",
+        "imageUrl": "",
+        "key": "hoai2026-dev-panels-welcome-aa712bff-174d-449a-8b05-e5ab43d04f41"
+      },
+      {
+        "text": "##One project, many steps\nEverything you make is saved in **one project**. Each level unlocks a new tool:\n- The **Images** tab: make backgrounds, characters, and blocks\n- The **Code** tab: bring your images to life",
+        "imageUrl": "",
+        "key": "hoai2026-dev-panels-welcome-2dee9cc8-b47e-4eee-970b-12389770add4",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "##Dev note\nThis is the in-development Hour of AI 2026 progression. Content and blocks are placeholders - expect rough edges.",
+        "imageUrl": "",
+        "key": "hoai2026-dev-panels-welcome-54d5a1ab-9b15-43ba-9130-775b7f248f74",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "use_links": "false"
+  }
+}]]></config>
+</Panels>

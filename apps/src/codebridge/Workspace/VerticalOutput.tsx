@@ -11,7 +11,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BaseOutput from './BaseOutput';
 import {
-  DEFAULT_MINI_APP_SIZE,
+  DEFAULT_MINI_APP_HEIGHT,
   MIN_MINI_APP_SIZE,
   MAX_MINI_APP_SIZE,
   MIN_CONSOLE_SIZE,
@@ -45,7 +45,7 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
   const appName = levelProperties.appName;
   const [isMaximized, setIsMaximized] = useState<boolean>(false);
   const [miniAppMinimizeHeight, setMiniAppMinimizeHeight] = useState(
-    DEFAULT_MINI_APP_SIZE
+    DEFAULT_MINI_APP_HEIGHT
   );
   const [outputMinimizeWidth, setOutputMinimizeWidth] = useState<number>(width);
   const [waitingForResize, setWaitingForResize] = useState<boolean>(false);
@@ -57,7 +57,7 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
     setPosition: setMiniAppHeight,
   } = useResizable({
     axis: 'y',
-    initial: DEFAULT_MINI_APP_SIZE,
+    initial: DEFAULT_MINI_APP_HEIGHT,
     min: MIN_MINI_APP_SIZE,
     max: MAX_MINI_APP_SIZE,
     containerRef: resizeContainerRef,

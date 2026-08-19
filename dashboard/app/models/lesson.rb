@@ -815,7 +815,16 @@ class Lesson < ApplicationRecord
   end
 
   def next_level_for_lesson_extras(user)
-    level_to_follow = script_levels.last.next_level
+    last_script_level = script_levels.last
+    level_to_follow =
+      if last_script_level
+        last_script_level.next_level
+      else
+        # Published units contain lessons that have a lesson plan but no levels.
+        # Such a lesson has nothing in the unit's flat script level list to walk
+        # forward from, so start from the next lesson that does have levels.
+        first_script_level_of_next_lesson_with_levels
+      end
     level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
     level_to_follow
   end
@@ -1179,5 +1188,20 @@ class Lesson < ApplicationRecord
       position: activity['position'],
       key: SecureRandom.uuid
     )
+  end
+
+  # The first script level of the earliest lesson after this one that has any,
+  # or nil if no later lesson in the unit has levels. Used by
+  # next_level_for_lesson_extras for lessons that have no levels of their own.
+  private def first_script_level_of_next_lesson_with_levels
+    lessons = script.lessons
+    index = lessons.find_index {|lesson| lesson.id == id}
+    return nil unless index
+
+    lessons.drop(index + 1).each do |lesson|
+      script_level = lesson.script_levels.first
+      return script_level if script_level
+    end
+    nil
   end
 end

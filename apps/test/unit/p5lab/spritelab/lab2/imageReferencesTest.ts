@@ -4,7 +4,7 @@ import {
   renameImageReferences,
   sanitizeImageName,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
-import {SpriteLab2Source} from '@cdo/apps/p5lab/spritelab/lab2/types';
+import {Sources} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
 interface TestBlock {
   type?: string;
@@ -21,7 +21,7 @@ const blocksOf = (source: unknown): TestBlock[] =>
 
 describe('renameImageReferences', () => {
   it('renames quoted picker fields everywhere blocks nest', () => {
-    const sources: SpriteLab2Source = {
+    const sources: Sources = {
       source: workspaceWith([
         {
           type: 'gamelab_makeNewSpriteAnon',
@@ -50,7 +50,7 @@ describe('renameImageReferences', () => {
   });
 
   it('leaves TEXT fields and other names alone', () => {
-    const sources: SpriteLab2Source = {
+    const sources: Sources = {
       source: workspaceWith([
         {type: 'text', fields: {TEXT: '"cat"'}},
         {type: 'a', fields: {ANIMATION: '"catalog"'}},
@@ -66,7 +66,7 @@ describe('renameImageReferences', () => {
   });
 
   it('renames world grid cells and does not mutate the input', () => {
-    const sources: SpriteLab2Source = {
+    const sources: Sources = {
       source: workspaceWith([]),
       scenes: [
         {

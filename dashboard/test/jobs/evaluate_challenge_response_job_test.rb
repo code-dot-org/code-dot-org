@@ -7,9 +7,9 @@ class EvaluateChallengeResponseJobTest < ActiveJob::TestCase
   end
 
   EVALUATION = {
-    'evaluations' => [
-      {'key' => 'accuracy', 'level' => 'meets', 'reasoning' => 'correct', 'evidence' => 'It equals 4'},
-    ],
+    'level' => 2,
+    'reasoning' => 'correct',
+    'evidence' => 'It equals 4',
     'student_feedback' => 'You explained your idea clearly. Next time, try showing your steps.',
   }.freeze
 

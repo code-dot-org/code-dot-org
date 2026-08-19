@@ -1,6 +1,13 @@
+import {type VocabularyItem} from '@code-dot-org/lesson-deep-dive';
+
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import {ResponseValidator} from '../../../util/HttpClient';
+
+export const ExplanationTypes = {
+  AUDIO: 'audio',
+  TEXT: 'text',
+};
 
 export type AssessmentQuestionResult = {
   level_id: number;
@@ -37,7 +44,7 @@ export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
-  vocabulary: {id: string; word: string; definition: string}[];
+  vocabulary: VocabularyItem[];
   objectives: {id: string; description: string}[];
   assessmentAnalysis: AssessmentQuestionResult[];
   jsonVideos: JsonVideoData[];
@@ -115,13 +122,17 @@ type ServerChallengeResponseAsset = {
 };
 
 // The student-facing shape of a response. student_feedback carries the
-// constructive AI feedback (null until evaluation completes) and
-// evaluation_status its lifecycle; the scored evaluation_result is
-// teacher-only, so the server omits it here.
+// constructive AI feedback (null until evaluation completes) and is private
+// to the author: the server omits it on rows belonging to section peers.
+// The scored evaluation_result is teacher-only, so it never appears here.
+// user_name / unit_id / lesson_position label the work in the gallery.
 export type ChallengeResponse = {
   id: number;
   challenge_id: number;
   user_id: number;
+  user_name: string;
+  unit_id: number | null;
+  lesson_position: number | null;
   student_text: string | null;
   transcript: string | null;
   student_feedback: string | null;
@@ -135,9 +146,12 @@ type ServerChallengeResponse = {
   id: number;
   challenge_id: number;
   user_id: number;
+  user_name?: string;
+  unit_id?: number | null;
+  lesson_position?: number | null;
   student_text: string | null;
   transcript: string | null;
-  student_feedback: string | null;
+  student_feedback?: string | null;
   evaluation_status: string | null;
   is_final: boolean;
   created_at: string;
@@ -155,6 +169,9 @@ export const challengeResponseValidator: ResponseValidator<
     id: r.id,
     challenge_id: r.challenge_id,
     user_id: r.user_id,
+    user_name: r.user_name ?? '',
+    unit_id: r.unit_id ?? null,
+    lesson_position: r.lesson_position ?? null,
     student_text: r.student_text ?? null,
     transcript: r.transcript ?? null,
     student_feedback: r.student_feedback ?? null,
@@ -167,6 +184,17 @@ export const challengeResponseValidator: ResponseValidator<
       download_url: a.download_url ?? null,
     })),
   };
+};
+
+export const challengeResponseListValidator: ResponseValidator<
+  ChallengeResponse[]
+> = bodyJson => {
+  if (!Array.isArray(bodyJson)) {
+    throw new Error('Expected an array of challenge responses');
+  }
+  return (bodyJson as Record<string, unknown>[]).map(
+    challengeResponseValidator
+  );
 };
 
 export type Challenge = {

@@ -7,11 +7,11 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Project Launch, Day One\r\n\r\nWork through the following sections in your Product Launch Activity Guide:\r\n* Define\r\n* Build: Spec Sheet\r\n* Build: Draft your System Prompt\r\n\r\nFill in the associated sections in the Sketch Lab template provided here. The work that you start today will carry forward into upcoming project days.\r\n\r\n\r\n\r\n",
+    "long_instructions": "##Define & Build\r\n\r\nUse the Sketch Lab canvas provided here to work through the process for launching your product.\r\n\r\n1. Complete the **_Define_** section of your canvas:\r\n    - Pick a _topic of interest_, identify _issues_, _brainstorm_ solutions, and select an _audience_ for the product.\r\n2. Complete the **_Build_** section of your canvas: \r\n    - Create a Product Spec Sheet to document details about your product\r\n    - Draft your System Prompt using Task, Context, Format, Retrieval, and Tone as building blocks\r\n\r\n\r\n\r\n\r\n",
     "require_edit_to_continue": "true",
     "project_template_level_name": "problem-solving-with-ai-project-prototype-2-template",
     "hide_share_and_remix": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-06T15:31:07.560+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-08-06 15:34:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-06T15:31:07.560+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-08-06 15:34:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 17:22:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 17:24:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
