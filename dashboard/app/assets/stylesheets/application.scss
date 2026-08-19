@@ -56,6 +56,43 @@ $selectUserTypeButtonTextColorSelected: #fff;
 @import "bootstrap";
 @import "bootstrap/v2-to-v3";
 
+// Reassert brand colors on the compound states Bootstrap's button-variant mixin
+// hardcodes.  That mixin nests its :active and disabled rules one level deep,
+// making them specificity 0,3,0, so the flat &:hover / &:active overrides below
+// are outranked and the button reverts to its pre-rebrand $background - still
+// $orange for .btn-primary.  Matching the mixin's selector shape ties the
+// specificity and lets source order decide.
+@mixin themable-button-states(
+  $default,
+  $default-border,
+  $strong,
+  $strong-border
+) {
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $strong;
+      border-color: $strong-border;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $default;
+      border-color: $default-border;
+    }
+  }
+}
+
 // Bootstrap runtime-themable brand-purple primary button.
 .btn-primary {
   background-color: var(--background-brand-purple-primary);
@@ -69,9 +106,16 @@ $selectUserTypeButtonTextColorSelected: #fff;
     background-color: var(--background-brand-purple-strong, #{$dark_purple});
     border-color: var(--borders-brand-purple-strong, #{$dark_purple});
   }
+
+  @include themable-button-states(
+    $default: var(--background-brand-purple-primary),
+    $default-border: var(--borders-brand-purple-primary),
+    $strong: var(--background-brand-purple-strong, #{$dark_purple}),
+    $strong-border: var(--borders-brand-purple-strong, #{$dark_purple})
+  );
 }
 
-// Bootstramp runtime-themable success button.
+// Bootstrap runtime-themable success button.
 .btn-success {
   background-color: var(--background-success-primary);
   border-color: var(--borders-success-primary);
@@ -84,6 +128,13 @@ $selectUserTypeButtonTextColorSelected: #fff;
     background-color: var(--background-success-strong);
     border-color: var(--borders-success-strong);
   }
+
+  @include themable-button-states(
+    $default: var(--background-success-primary),
+    $default-border: var(--borders-success-primary),
+    $strong: var(--background-success-strong),
+    $strong-border: var(--borders-success-strong)
+  );
 }
 
 label, input, button, select, textarea {
