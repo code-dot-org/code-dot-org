@@ -1,6 +1,9 @@
 import {MAZE_FILE_NAME} from '@codebridge/constants';
 
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {
+  MAIN_PYTHON_FILE,
+  SUPPORTED_IMAGE_EXTENSIONS,
+} from '@cdo/apps/lab2/constants';
 import {ProjectFileType, ProjectSources} from '@cdo/apps/lab2/types';
 
 export const DEFAULT_PROJECT: ProjectSources = {
@@ -69,4 +72,5 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
 
 export const PYTHONLAB_EDITABLE_FILE_TYPES = ['py', 'csv', 'txt', 'json'];
 
-export const PYTHONLAB_SUPPORTED_FILE_TYPES = PYTHONLAB_EDITABLE_FILE_TYPES;
+export const PYTHONLAB_SUPPORTED_FILE_TYPES =
+  PYTHONLAB_EDITABLE_FILE_TYPES.concat(SUPPORTED_IMAGE_EXTENSIONS);
