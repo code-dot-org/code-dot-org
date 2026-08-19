@@ -378,8 +378,25 @@ class ActorCollection {
     return this.list.filter(actor => actor.layer === layer);
   }
 
+  /**
+   * A COPY, like the three above, and for the reason they give.
+   *
+   * This was the live array's iterator, which made the collection's one
+   * un-copied exit the one a loop actually walks (`blockly/domainBlocks`'s
+   * `actorSource` emits `world.actors` for a loop over `all actors`). Both ways
+   * that goes wrong are reachable from blocks:
+   *
+   *   - a body that ADDS walks what it added, so `for each actor … do
+   *     ⟨add actor⟩` never returns — a hung frame, not a wrong answer;
+   *   - a body that REMOVES skips the next actor every time, because
+   *     `removeActor` splices, so `for each actor … do ⟨remove actor⟩` removes
+   *     half of them and says nothing.
+   *
+   * The second is the one worth the copy: "remove everything" is a sentence a
+   * learner writes, and half-working is worse than failing.
+   */
   [Symbol.iterator](): Iterator<Actor> {
-    return this.list[Symbol.iterator]();
+    return [...this.list][Symbol.iterator]();
   }
 }
 
