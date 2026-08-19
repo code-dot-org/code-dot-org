@@ -25,6 +25,7 @@ import {
   setProjectMaps,
   setProjectRuleModules,
   setProjectBackgrounds,
+  setProjectSounds,
   setProjectSprites,
 } from './moduleOptions';
 import {setOpenableModules} from './openModule';
@@ -38,6 +39,7 @@ import {
   projectRuleMetas,
   projectRuleOptions,
   projectBackgroundOptions,
+  projectSoundOptions,
   projectSpriteOptions,
   projectWorldRules,
 } from './projectModules';
@@ -63,6 +65,14 @@ export function refreshProjectDropdowns(
   images: readonly string[] = [],
   /** Image sizes, by file name, for the ones the editor can measure. */
   imageSizes: Record<string, ImageSize> = {},
+  /**
+   * Sound file PATHS the project holds (`sounds/coin.mp3`).
+   *
+   * Passed alongside `files` for the reason `images` is: a sound carries bytes
+   * on a `url` and never appears in the flattened text map
+   * (projectFiles.projectSoundPaths).
+   */
+  soundPaths: readonly string[] = [],
 ): void {
   // What the editor knows about spritesheets: the grids, and how big the images
   // are — together they say how many cells a sheet holds, which is what a
@@ -78,6 +88,10 @@ export function refreshProjectDropdowns(
   // them apart — one pool never offers the other's contents.
   const backgrounds = projectBackgroundOptions(files, images);
   setProjectBackgrounds(backgrounds);
+  // …and the sounds, a third pool told apart from the other two by extension
+  // rather than by folder (specs/SOUND.md).
+  const sounds = projectSoundOptions(soundPaths);
+  setProjectSounds(sounds);
   // Which module paths there is a file to open for — what puts the eye on a
   // `use rule` / `use trait` block (openModule).
   setOpenableModules(
@@ -122,6 +136,7 @@ export function refreshProjectDropdowns(
   // of it (`spriteCells`).
   environment = JSON.stringify([
     measuredImages(),
+    sounds,
     animationIds,
     sprites,
     backgrounds,

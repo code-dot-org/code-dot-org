@@ -64,8 +64,14 @@ import {
   filePath,
   projectFiles,
   projectImagePaths,
+  projectSoundPaths,
 } from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
+import {fetchStockSound} from '../sound/fetchStockSound';
+import {importStockSound} from '../sound/importStockSound';
+import {setSoundImportHandler} from '../sound/soundImport';
+import {SoundLibraryDialog} from '../sound/SoundLibraryDialog';
+import type {StockSound} from '../sound/stock';
 
 import {projectActorIcons} from './actorIconMeta';
 import {
@@ -324,10 +330,33 @@ export const BlocklyFileEditor = ({
     }),
     [currentSources, decoded],
   );
-  useMemo(
-    () => refreshProjectDropdowns(files, imagePaths, imageSizes),
-    [files, imagePaths, imageSizes],
+  // …and the sounds, told from the images by extension rather than by folder
+  // (specs/SOUND.md) — a sound a learner dragged out of `sounds/` is still one.
+  const soundPaths = useMemo(
+    () => projectSoundPaths(currentSources.source),
+    [currentSources],
   );
+  useMemo(
+    () => refreshProjectDropdowns(files, imagePaths, imageSizes, soundPaths),
+    [files, imagePaths, imageSizes, soundPaths],
+  );
+
+  /**
+   * Refresh every registry from a project that has just been edited.
+   *
+   * Each importer does this before it hands the field its value — the dropdown
+   * rebuilds from the registry, and a value with no matching option is dropped
+   * by Blockly. It was six copies of the same three arguments; a fourth
+   * argument made that a list to keep in step, so it is one function.
+   */
+  const refreshFor = useCallback((source: MultiFileSource) => {
+    refreshProjectDropdowns(
+      projectFiles(source),
+      projectImagePaths(source),
+      projectImageSizes(source),
+      projectSoundPaths(source),
+    );
+  }, []);
 
   // The stock-effect import, opened from an effect dropdown's `(import…)` row.
   //
@@ -393,6 +422,13 @@ export const BlocklyFileEditor = ({
           setImportingActor(true);
         }),
     );
+    setSoundImportHandler(
+      () =>
+        new Promise<string | undefined>(resolve => {
+          resolveImport.current = resolve;
+          setImportingSound(true);
+        }),
+    );
     // The rules panel, from the world block. It resolves with nothing — what it
     // changes it changes in the project, and the block only wants to know when
     // it closed so it can count again (blockly/rulesConfig).
@@ -409,6 +445,7 @@ export const BlocklyFileEditor = ({
       setEffectImportHandler(null);
       setRuleImportHandler(null);
       setActorImportHandler(null);
+      setSoundImportHandler(null);
       setRulesConfigHandler(null);
     };
   }, []);
@@ -417,6 +454,7 @@ export const BlocklyFileEditor = ({
     setImporting(false);
     setImportingRule(false);
     setImportingActor(false);
+    setImportingSound(false);
     setImportingAppearance(null);
     resolveImport.current?.(path);
     resolveImport.current = null;
@@ -449,11 +487,7 @@ export const BlocklyFileEditor = ({
       const sources = sourcesRef.current;
       const source = removeRule(sources.source, rule);
       updateSources({...sources, source});
-      refreshProjectDropdowns(
-        projectFiles(source),
-        projectImagePaths(source),
-        projectImageSizes(source),
-      );
+      refreshFor(source);
     },
     [updateSources],
   );
@@ -466,11 +500,7 @@ export const BlocklyFileEditor = ({
       // dropdown rebuilds from the registry, and a value with no matching option
       // is dropped by Blockly.
       updateSources({...sources, source});
-      refreshProjectDropdowns(
-        projectFiles(source),
-        projectImagePaths(source),
-        projectImageSizes(source),
-      );
+      refreshFor(source);
       finishImport(path);
     },
     [updateSources, finishImport],
@@ -485,11 +515,7 @@ export const BlocklyFileEditor = ({
       // option is dropped by Blockly. The value is the rule's NAME — the field
       // says which rule, never which file.
       updateSources({...sources, source});
-      refreshProjectDropdowns(
-        projectFiles(source),
-        projectImagePaths(source),
-        projectImageSizes(source),
-      );
+      refreshFor(source);
       finishImport(name);
     },
     [updateSources, finishImport],
@@ -505,11 +531,7 @@ export const BlocklyFileEditor = ({
       // an actor dropdown says which file, where a rule dropdown says which
       // rule (`actorFieldOptions` against `useRuleOptions`).
       updateSources({...sources, source});
-      refreshProjectDropdowns(
-        projectFiles(source),
-        projectImagePaths(source),
-        projectImageSizes(source),
-      );
+      refreshFor(source);
       finishImport(path);
     },
     [updateSources, finishImport],
@@ -586,11 +608,7 @@ export const BlocklyFileEditor = ({
       // In the project BEFORE the field takes its value: the dropdown rebuilds
       // from the registry, and a value with no matching option is dropped.
       updateSources({...sources, source});
-      refreshProjectDropdowns(
-        projectFiles(source),
-        projectImagePaths(source),
-        projectImageSizes(source),
-      );
+      refreshFor(source);
       // An import from inside the picker continues the picking: the learner
       // asked for a picture, and now the project has one. Back to the palette
       // rather than straight to the field — an imported spritesheet still has
@@ -618,6 +636,20 @@ export const BlocklyFileEditor = ({
   const [importingBackground, setImportingBackground] = useState(false);
   const [backgroundError, setBackgroundError] = useState<string | undefined>();
 
+  /**
+   * The sound shelf, opened from a `play sound` / `set music to` `(import…)`
+   * row.
+   *
+   * Async and stateful in exactly the way the backdrop shelf is, and for the
+   * same reason: a stock sound's bytes are served rather than bundled
+   * (specs/SOUND.md), so choosing one is a fetch before it is an edit. The
+   * dialog stays open and says so while that happens, because one that vanished
+   * and then failed would leave the learner with nothing to try again.
+   */
+  const [importingSound, setImportingSound] = useState(false);
+  const [fetchingSound, setFetchingSound] = useState(false);
+  const [soundError, setSoundError] = useState<string | undefined>();
+
   const handleBackgroundImport = useCallback(
     async (chosen: StockBackground) => {
       setBackgroundError(undefined);
@@ -642,14 +674,34 @@ export const BlocklyFileEditor = ({
       // In the project BEFORE the field takes its value: the dropdown rebuilds
       // from the registry, and a value with no matching option is dropped.
       updateSources({...sources, source});
-      refreshProjectDropdowns(
-        projectFiles(source),
-        projectImagePaths(source),
-        projectImageSizes(source),
-      );
+      refreshFor(source);
       finishImport(value);
     },
     [updateSources, finishImport],
+  );
+
+  const handleSoundImport = useCallback(
+    async (chosen: StockSound) => {
+      setSoundError(undefined);
+      setFetchingSound(true);
+      let dataUrl: string;
+      try {
+        dataUrl = await fetchStockSound(chosen);
+      } catch (error) {
+        setFetchingSound(false);
+        setSoundError(error instanceof Error ? error.message : String(error));
+        return;
+      }
+      setFetchingSound(false);
+      const sources = sourcesRef.current;
+      const {source, value} = importStockSound(sources.source, chosen, dataUrl);
+      // In the project BEFORE the field takes its value: the dropdown rebuilds
+      // from the registry, and a value with no matching option is dropped.
+      updateSources({...sources, source});
+      refreshFor(source);
+      finishImport(value);
+    },
+    [updateSources, finishImport, refreshFor],
   );
 
   // The world whose module the popup introspects: the file being edited when it
@@ -1176,6 +1228,17 @@ export const BlocklyFileEditor = ({
           error={backgroundError}
           onCancel={() => {
             setBackgroundError(undefined);
+            finishImport(undefined);
+          }}
+        />
+      )}
+      {importingSound && (
+        <SoundLibraryDialog
+          onImport={handleSoundImport}
+          busy={fetchingSound}
+          error={soundError}
+          onCancel={() => {
+            setSoundError(undefined);
             finishImport(undefined);
           }}
         />

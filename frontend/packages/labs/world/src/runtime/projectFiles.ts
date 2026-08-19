@@ -5,6 +5,8 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {isSoundFile} from '../sound/soundFiles';
+
 /** The `folder/sub/` prefix a file sits under; '' at the project root. */
 function folderPath(source: MultiFileSource, folderId: string): string {
   const segments: string[] = [];
@@ -96,9 +98,32 @@ export function projectImageNames(
  * and nothing else (`backgrounds/` versus `sprites/`, BACKGROUNDS.md §5), and a
  * bare name cannot answer that question.
  */
+/** What counts as an image here, matching `projectModules`' own test. */
+const IMAGE_FILE = /\.(png|jpg|jpeg|gif|webp)$/i;
+
 export function projectImagePaths(
   source: MultiFileSource | undefined,
 ): string[] {
+  return binaryPaths(source).filter(path => IMAGE_FILE.test(path));
+}
+
+/**
+ * The project's SOUNDS, folder and all (`sounds/coin.mp3`).
+ *
+ * A sound is a file with bytes on a `url`, exactly as an image is
+ * (specs/SOUND.md), so the only thing telling the two pools apart is the
+ * extension — which is why the function above grew a filter the day this one
+ * was written. Without it a sound turned up in the `set sprite` dropdown, being
+ * a url-bearing file in no `backgrounds/` folder.
+ */
+export function projectSoundPaths(
+  source: MultiFileSource | undefined,
+): string[] {
+  return binaryPaths(source).filter(path => isSoundFile(path));
+}
+
+/** What the two above share: every file that carries bytes rather than text. */
+function binaryPaths(source: MultiFileSource | undefined): string[] {
   if (!source) {
     return [];
   }
