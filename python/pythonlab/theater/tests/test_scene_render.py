@@ -8,6 +8,7 @@ import theater
 from theater import Image, Instrument, Scene
 from theater.support.audio import read_samples_from_wav_bytes
 from theater.support.constants import (
+  MAX_AUDIO_SECONDS,
   MAX_FRAMES,
   MAX_NOTE,
   MAX_PAUSE_SECONDS,
@@ -17,7 +18,12 @@ from theater.support.constants import (
   THEATER_HEIGHT,
   THEATER_WIDTH,
 )
-from theater.support.renderer import PauseTooLongError, TooManyFramesError, render
+from theater.support.renderer import (
+  AudioTooLongError,
+  PauseTooLongError,
+  TooManyFramesError,
+  render,
+)
 
 
 def _render_gif(actions):
@@ -251,6 +257,49 @@ def test_pauses_accumulating_on_one_picture_raise():
     _single_frame_scene(
       lambda scene: [scene.pause(seconds_each) for _ in range(pause_count)]
     )
+
+
+def _scene_sounding_after(pause_seconds):
+  """A scene whose one note lands after the given delay."""
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+  scene.pause(pause_seconds)
+  scene.play_note(60, 0.5)
+  return scene
+
+
+def test_too_long_audio_raises():
+  # A note after long pauses is silence all the way to the cursor, 8 bytes a
+  # sample, so the array asked for here is larger than the worker's whole heap.
+  with pytest.raises(AudioTooLongError):
+    render(_scene_sounding_after(MAX_AUDIO_SECONDS + 1).get_actions())
+
+
+def test_audio_ceiling_is_checked_before_drawing():
+  # A malformed shape raises from the drawing pass, so getting the audio-length
+  # error instead proves nothing was drawn first.
+  scene = _scene_sounding_after(MAX_AUDIO_SECONDS + 1)
+  scene.draw_shape([0, 0, 10], True)
+  with pytest.raises(AudioTooLongError):
+    render(scene.get_actions())
+
+
+def test_audio_ceiling_allows_a_full_length_track():
+  _gif, wav = render(_scene_sounding_after(MAX_AUDIO_SECONDS - 1).get_actions())
+  samples = read_samples_from_wav_bytes(wav)
+  assert len(samples) / SAMPLE_RATE == pytest.approx(MAX_AUDIO_SECONDS - 0.5, abs=0.01)
+
+
+def test_pauses_after_the_last_sound_do_not_count():
+  # Silence past the final sound is never allocated, so it cannot exhaust the
+  # heap and must not count against the ceiling.
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+  scene.play_note(60, 0.5)
+  scene.pause(MAX_AUDIO_SECONDS)
+  scene.pause(MAX_AUDIO_SECONDS)
+  _gif, wav = render(scene.get_actions())
+  assert len(read_samples_from_wav_bytes(wav)) / SAMPLE_RATE == pytest.approx(0.5, abs=0.01)
 
 
 @pytest.mark.parametrize("sides", [0, 1, 2, -3])

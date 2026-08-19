@@ -10,7 +10,7 @@ from theater.support.audio import (
   read_samples_from_wav_bytes,
   truncate_samples,
 )
-from theater.support.constants import SAMPLE_RATE
+from theater.support.constants import MAX_AUDIO_SECONDS, SAMPLE_RATE
 
 
 def _make_wav_bytes(samples, channels, frame_rate=SAMPLE_RATE):
@@ -60,6 +60,17 @@ def test_read_rejects_a_missing_sample_rate():
   wav[24:28] = struct.pack("<I", 0)
   with pytest.raises(ValueError):
     read_samples_from_wav_bytes(bytes(wav))
+
+
+def test_read_rejects_a_sound_past_the_length_ceiling():
+  # Refused from the header, before any frame is read: a file this long would
+  # not fit on the timeline anyway.
+  frame_rate = 8000
+  long_wav = _make_wav_bytes(
+    np.zeros(frame_rate * (MAX_AUDIO_SECONDS + 1)), 1, frame_rate
+  )
+  with pytest.raises(ValueError):
+    read_samples_from_wav_bytes(long_wav)
 
 
 def test_truncate_shortens_but_never_extends():

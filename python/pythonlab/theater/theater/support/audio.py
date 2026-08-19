@@ -3,7 +3,7 @@ import wave
 
 import numpy as np
 
-from .constants import CHANNELS, MAX_16_BIT_VALUE, SAMPLE_RATE
+from .constants import CHANNELS, MAX_16_BIT_VALUE, MAX_AUDIO_SECONDS, SAMPLE_RATE
 
 
 def read_samples_from_wav_bytes(wav_bytes):
@@ -17,11 +17,18 @@ def read_samples_from_wav_bytes(wav_bytes):
     num_channels = reader.getnchannels()
     sample_width = reader.getsampwidth()
     frame_rate = reader.getframerate()
-    frames = reader.readframes(reader.getnframes())
-  if sample_width != 2:
-    raise ValueError("Only 16-bit PCM WAV data is supported")
-  if frame_rate <= 0:
-    raise ValueError("WAV data declares no sample rate")
+    num_frames = reader.getnframes()
+    if sample_width != 2:
+      raise ValueError("Only 16-bit PCM WAV data is supported")
+    if frame_rate <= 0:
+      raise ValueError("WAV data declares no sample rate")
+    # Check the header's length before reading, so an outsized file costs
+    # nothing; the timeline it would land on is bounded by the same ceiling.
+    if num_frames / frame_rate > MAX_AUDIO_SECONDS:
+      raise ValueError(
+        f"The sound is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
+      )
+    frames = reader.readframes(num_frames)
   raw = np.frombuffer(frames, dtype="<i2").astype(np.float64) / MAX_16_BIT_VALUE
   if num_channels == 1:
     mono = raw
