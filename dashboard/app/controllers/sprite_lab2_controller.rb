@@ -17,7 +17,10 @@ class SpriteLab2Controller < ApplicationController
   def section_scenes
     level = Level.find(params.require(:level_id))
     return head :bad_request unless sprite_lab2_level?(level)
+    # Script-scoped play only: at /levels/[id] there is no section context to
+    # share within, and the client does not call.
     script_id = params[:script_id].presence
+    return head :bad_request unless script_id
     scenes = []
     section_mates.each do |user|
       channel, sources = project_sources_for(user, level, script_id)
@@ -99,16 +102,13 @@ class SpriteLab2Controller < ApplicationController
 
   # The user's project channel + parsed sources for a level, or [nil, nil].
   #
-  # One level can be reached through several scripts and outside any script,
-  # and each of those gets its own channel. Prefer the script this request came
-  # from, then a script-less channel, then any: the block's dropdown should
-  # work from wherever the level is being played, rather than going empty
-  # because a classmate reached the level by a different route.
-  private def project_sources_for(user, level, script_id = nil)
+  # One level can be reached through several scripts, and each gets its own
+  # channel. Prefer the script this request came from, then any of the user's
+  # channels for the level: a classmate may have reached it by another route.
+  private def project_sources_for(user, level, script_id)
     tokens = channel_tokens_for(user, level)
     channel_token =
-      (script_id && tokens.find {|ct| ct.script_id.to_s == script_id.to_s}) ||
-      tokens.find {|ct| ct.script_id.nil?} ||
+      tokens.find {|ct| ct.script_id.to_s == script_id.to_s} ||
       tokens.max_by {|ct| ct.script_id.to_i}
     return [nil, nil] unless channel_token
     source_data = SourceBucket.new.get(channel_token.channel, 'main.json')

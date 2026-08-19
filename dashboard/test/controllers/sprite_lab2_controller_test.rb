@@ -34,17 +34,15 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_equal @student.name, scenes.first['ownerName']
   end
 
-  # Playing the level outside any script must still see a project made inside
-  # one. Scoping strictly to the requested script is what left the block's
-  # dropdown empty in production.
-  test 'finds a unit-scoped project when the request carries no script id' do
+  # Script-scoped play only: /levels/[id] has no section context to share
+  # within, and the client does not call from there.
+  test 'refuses a request with no script id' do
     stub_scenes channel_for(@student_storage_id, @script.id)
 
     sign_in @teacher
     get :section_scenes, params: {level_id: @level.id}
 
-    assert_response :success
-    assert_equal 1, JSON.parse(response.body)['scenes'].length
+    assert_response :bad_request
   end
 
   # The same level in a script that is not in a unit group, reached while
@@ -75,25 +73,13 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_equal(['wanted-scene'], scenes.map {|scene| scene['sceneId']})
   end
 
-  # Channels predating the script_id column have a null one; passing a script id
-  # must still find them.
-  test 'finds a project created outside any unit' do
+  # Channels predating the script_id column have a null one, as do projects
+  # made at /levels/[id]; a script-scoped request still finds them.
+  test 'finds a project whose channel has no script' do
     stub_scenes channel_for(@student_storage_id, nil)
 
     sign_in @teacher
     get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
-
-    assert_response :success
-    assert_equal 1, JSON.parse(response.body)['scenes'].length
-  end
-
-  # Hitting /levels/[id] directly while developing, for a project made the same
-  # way: no script at either end.
-  test 'finds a script-less project with no script id in the request' do
-    stub_scenes channel_for(@student_storage_id, nil)
-
-    sign_in @teacher
-    get :section_scenes, params: {level_id: @level.id}
 
     assert_response :success
     assert_equal 1, JSON.parse(response.body)['scenes'].length

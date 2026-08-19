@@ -49,14 +49,18 @@ export function toExternalSceneOptions(
 }
 
 // The script id matters: a project made inside a unit has its channel keyed to
-// that unit, and is invisible to a lookup that omits it.
+// that unit, and is invisible to a lookup that omits it. The API serves
+// script-scoped play only, so outside a script (/levels/[id] while
+// developing) there is nothing to ask.
 export async function fetchSectionScenes(
   levelId: number | string,
   scriptId?: number | null
 ): Promise<ExternalSceneRef[]> {
-  const scriptParam = scriptId ? `&script_id=${scriptId}` : '';
+  if (!scriptId) {
+    return [];
+  }
   const {value} = await HttpClient.fetchJson<{scenes?: ExternalSceneRef[]}>(
-    `/sprite_lab2/section_scenes?level_id=${levelId}${scriptParam}`
+    `/sprite_lab2/section_scenes?level_id=${levelId}&script_id=${scriptId}`
   );
   return value.scenes || [];
 }
