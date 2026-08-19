@@ -1,3 +1,5 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
+
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {
@@ -6,7 +8,6 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {RootState} from '@cdo/apps/types/redux';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 // Redux selectors for lab2 state.
 

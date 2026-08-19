@@ -1,3 +1,4 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -10,7 +11,6 @@ import LevelTokenDetails from '@cdo/apps/levelbuilder/lesson-editor/LevelTokenDe
 import {scriptLevelShape} from '@cdo/apps/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import color from '@cdo/apps/util/color';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * Component for editing puzzle dots with one or more level variants.

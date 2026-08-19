@@ -1,7 +1,7 @@
+import {AiChatClientTypes} from '@code-dot-org/shared-constants';
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {registerReducers} from '@cdo/apps/redux';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {RESET_CONVERSATION_CUSTOMIZATION_UPDATES} from '../constants';
 import {

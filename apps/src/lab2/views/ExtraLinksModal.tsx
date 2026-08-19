@@ -1,3 +1,4 @@
+import {FeaturedProjectStatus} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
@@ -5,7 +6,6 @@ import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import * as utils from '@cdo/apps/utils';
-import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   ExtraLinksLevelData,

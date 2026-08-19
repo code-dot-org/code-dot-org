@@ -1,15 +1,14 @@
 // Selectors and related helpers for progressRedux. These are in their own file
 // because they are quite complex and progressRedux.js is already quite large.
-
-import _ from 'lodash';
-
-import {TestResults} from '@cdo/apps/constants';
-import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   LevelStatus,
   LevelKind,
   BubbleChoiceNavigationTypes,
-} from '@cdo/generated-scripts/sharedConstants';
+} from '@code-dot-org/shared-constants';
+import _ from 'lodash';
+
+import {TestResults} from '@cdo/apps/constants';
+import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 
 import {activityCssClass} from './activityUtils';
 

@@ -1,8 +1,8 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {action} from '@storybook/addon-actions';
 import React from 'react';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   SyncOmniAuthSectionButton,

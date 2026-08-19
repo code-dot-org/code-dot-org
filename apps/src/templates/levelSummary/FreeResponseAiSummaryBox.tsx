@@ -1,5 +1,6 @@
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
+import {StudentWorkEvaluationStatus} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
@@ -7,7 +8,6 @@ import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import aiBot from './AI-Bot-default.png';

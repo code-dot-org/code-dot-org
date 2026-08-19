@@ -1,5 +1,6 @@
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
+
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
 /**

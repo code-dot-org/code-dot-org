@@ -1,3 +1,4 @@
+import {LevelKind} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -14,7 +15,6 @@ import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 

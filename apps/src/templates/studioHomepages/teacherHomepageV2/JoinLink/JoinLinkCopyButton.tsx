@@ -4,6 +4,7 @@ import {
   TooltipOverlay,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
@@ -12,7 +13,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import styles from './joinLinkCopyButton.module.scss';

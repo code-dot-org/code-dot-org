@@ -1,7 +1,7 @@
 import {
   AiChatModelIds,
   SafeAndSupportedImageTypes,
-} from '@cdo/generated-scripts/sharedConstants';
+} from '@code-dot-org/shared-constants';
 
 import {ValueOf} from '../types/utils';
 

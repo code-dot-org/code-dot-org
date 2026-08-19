@@ -1,4 +1,5 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import {AiChatAccessLevels} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import React from 'react';
 
@@ -13,7 +14,6 @@ import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {

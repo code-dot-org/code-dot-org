@@ -1,8 +1,9 @@
+import {UserTypes} from '@code-dot-org/shared-constants';
+
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReport from '@cdo/apps/metrics/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import experiments from '@cdo/apps/util/experiments';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {makeEnum} from '../utils';
 

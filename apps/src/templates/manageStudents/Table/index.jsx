@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {Button as MuiButton, Typography} from '@mui/material';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
@@ -69,7 +70,6 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import experiments from '@cdo/apps/util/experiments';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './table.module.scss';

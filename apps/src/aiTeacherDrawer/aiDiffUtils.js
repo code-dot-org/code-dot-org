@@ -1,3 +1,4 @@
+import {AiDiffContext} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -5,7 +6,6 @@ import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloati
 import {getStore} from '@cdo/apps/redux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 export function displayDifferentiationChat() {
   const aiDiffFabMountPoint = document.getElementById(

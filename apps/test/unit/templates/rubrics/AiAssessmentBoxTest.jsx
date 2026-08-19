@@ -1,3 +1,4 @@
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import {render, screen} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
@@ -10,7 +11,6 @@ import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
 import AiAssessmentFeedbackContext, {
   NO_FEEDBACK,
 } from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 describe('AiAssessmentBox', () => {

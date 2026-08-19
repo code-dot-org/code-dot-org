@@ -1,9 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import BubbleBadge, {BadgeType} from './BubbleBadge';
@@ -15,7 +15,6 @@ import {
 } from './BubbleFactory';
 import {defaultBubbleIcon} from './progressHelpers';
 import {levelProgressStyle} from './progressStyles';
-
 import './styles.scss';
 
 const MAX_UNSPLIT_STATUS_COLUMNS = 5;

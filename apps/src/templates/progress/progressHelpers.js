@@ -1,3 +1,4 @@
+import {LevelStatus, LevelKind} from '@code-dot-org/shared-constants';
 import _ from 'lodash';
 
 import {
@@ -7,7 +8,6 @@ import {
 import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 import {PUZZLE_PAGE_NONE} from './progressTypes';
 

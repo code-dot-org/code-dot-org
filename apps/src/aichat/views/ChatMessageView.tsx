@@ -1,3 +1,7 @@
+import {
+  AiChatClientTypes,
+  AiInteractionStatus as Status,
+} from '@code-dot-org/shared-constants';
 import classNames from 'classnames';
 import React, {memo, useState} from 'react';
 
@@ -8,10 +12,6 @@ import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  AiChatClientTypes,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   ChatAsset,

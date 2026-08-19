@@ -1,3 +1,4 @@
+import {ChildAccountComplianceStates} from '@code-dot-org/shared-constants';
 import {StoryFn} from '@storybook/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -6,7 +7,6 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
 import LockoutPanel, {LockoutPanelProps} from './LockoutPanel';
 

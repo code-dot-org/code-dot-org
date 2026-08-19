@@ -1,3 +1,4 @@
+import {UserTypes} from '@code-dot-org/shared-constants';
 import {render, screen, waitFor, fireEvent} from '@testing-library/react';
 import React from 'react';
 import '@testing-library/jest-dom';
@@ -15,7 +16,6 @@ import {
   USER_RETURN_TO_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {navigateToHref} from '@cdo/apps/utils';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({

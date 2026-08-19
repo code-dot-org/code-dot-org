@@ -1,3 +1,4 @@
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
 import {act, renderHook} from '@testing-library/react-hooks';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -9,7 +10,6 @@ import {
   SCHOOL_ZIP_SESSION_KEY,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/metrics/AnalyticsReporter');
 jest.mock('@cdo/apps/util/AuthenticityTokenStore');

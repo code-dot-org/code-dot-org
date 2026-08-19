@@ -1,5 +1,6 @@
+import {ProjectSubmissionStatus} from '@code-dot-org/shared-constants';
+
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {ValueOf} from '../../../types/utils';
 

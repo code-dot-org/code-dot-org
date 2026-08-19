@@ -1,3 +1,4 @@
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
 import {createContext} from 'react';
 
 import {
@@ -7,7 +8,6 @@ import {
   Visibility,
 } from '@cdo/apps/aichatLab/types';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 export const UpdateContext = createContext({
   aichatSettings: {} as LevelAichatSettings,

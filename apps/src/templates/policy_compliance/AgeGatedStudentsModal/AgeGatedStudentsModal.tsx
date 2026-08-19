@@ -1,4 +1,5 @@
 import Link from '@code-dot-org/component-library/link';
+import {CapLinks} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import React, {useEffect} from 'react';
 
@@ -10,7 +11,6 @@ import {
   selectAtRiskAgeGatedDate,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../BaseDialog';

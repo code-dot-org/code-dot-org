@@ -1,3 +1,5 @@
+import {AiInteractionStatus} from '@code-dot-org/shared-constants';
+
 import {
   AdlibType,
   AdlibChoices,
@@ -5,7 +7,6 @@ import {
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetSessionStorage} from '@cdo/apps/utils';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {baseAssetUrl} from '../../constants';
 import {FunctionEvents} from '../../player/interfaces/FunctionEvents';

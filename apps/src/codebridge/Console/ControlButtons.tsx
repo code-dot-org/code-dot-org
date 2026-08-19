@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {UserLevelInteractions} from '@code-dot-org/shared-constants';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
@@ -23,7 +24,6 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import {getSystemMessage} from './MessageHelpers';
 

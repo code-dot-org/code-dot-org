@@ -1,3 +1,4 @@
+import {LevelStatus, LevelKind} from '@code-dot-org/shared-constants';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -11,7 +12,6 @@ import {
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import * as utils from '@cdo/apps/utils';
-import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

@@ -1,3 +1,4 @@
+import {AbuseConstants} from '@code-dot-org/shared-constants';
 import $ from 'jquery';
 
 import {
@@ -9,7 +10,6 @@ import firehoseClient from '@cdo/apps/metrics/firehose';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
 import {files as filesApi} from '../../clientApi';

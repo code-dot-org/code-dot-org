@@ -1,3 +1,4 @@
+import {UserTypes} from '@code-dot-org/shared-constants';
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 
@@ -5,7 +6,6 @@ import AccountType from '@cdo/apps/signUpFlow/AccountType';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {OAUTH_LOGIN_TYPE_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {navigateToHref} from '@cdo/apps/utils';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/utils', () => ({
   ...jest.requireActual('@cdo/apps/utils'),

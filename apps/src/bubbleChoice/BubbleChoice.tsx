@@ -3,6 +3,10 @@
 // This is a React client for a bubble_choice level.  Note that this is
 // only used for levels that use Lab2.  For levels that don't use Lab2,
 // they will get an older-style level.
+import {
+  BubbleChoiceCustomModes,
+  LevelStatus,
+} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -18,10 +22,6 @@ import {
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  BubbleChoiceCustomModes,
-  LevelStatus,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import {navigateToLevelId} from '../code-studio/progressRedux';
 import {commonI18n} from '../types/locale';

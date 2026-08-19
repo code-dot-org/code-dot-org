@@ -1,6 +1,7 @@
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
+
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {AiCustomizations, Visibility} from './customizations';
 

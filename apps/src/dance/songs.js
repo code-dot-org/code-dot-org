@@ -1,4 +1,4 @@
-import {DanceSongManifestFilename} from '@cdo/generated-scripts/sharedConstants';
+import {DanceSongManifestFilename} from '@code-dot-org/shared-constants';
 
 import Sounds from '../Sounds';
 import {ageDialogSelectedOver13, songFilterOn} from '../templates/AgeDialog';

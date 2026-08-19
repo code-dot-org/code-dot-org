@@ -1,4 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {LmsLinks} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
@@ -10,7 +11,6 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {getRosterSyncErrorMessage} from './LtiSectionSyncDialogHelpers';

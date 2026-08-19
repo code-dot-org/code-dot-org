@@ -1,8 +1,8 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import DetailProgressTable from './DetailProgressTable';
 import {

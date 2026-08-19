@@ -1,3 +1,4 @@
+import {DefaultLocale} from '@code-dot-org/shared-constants';
 import cookies from 'js-cookie';
 
 import {Localization} from '@cdo/apps/localization';
@@ -9,7 +10,6 @@ import type {
 } from '@cdo/apps/localization/Localize';
 import experiments from '@cdo/apps/util/experiments';
 import * as getScriptDataModule from '@cdo/apps/util/getScriptData';
-import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 
 // Ensure we destroy the localizejs loader promise in the global space
 afterEach(() => {

@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {render, screen, fireEvent} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -33,7 +34,6 @@ import teacherSections, {
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';

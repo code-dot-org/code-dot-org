@@ -1,9 +1,10 @@
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiEvaluationTypes,
   AiInteractionStatus,
-} from '@cdo/generated-scripts/sharedConstants';
+} from '@code-dot-org/shared-constants';
+
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   logUserLevelEvaluation,

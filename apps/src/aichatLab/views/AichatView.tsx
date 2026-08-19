@@ -1,8 +1,8 @@
 /** @file Top-level view for AI Chat Lab */
-
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
+import {AiChatClientTypes} from '@code-dot-org/shared-constants';
 import {extensions as mimeToExtensions} from 'mime-types';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
@@ -55,7 +55,6 @@ import {
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {LevelPropertiesContext} from '../levelPropertiesContext';
 import {setChatMessageSent} from '../redux/slice';

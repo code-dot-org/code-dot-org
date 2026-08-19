@@ -1,6 +1,7 @@
+import {AiRequestExecutionStatus} from '@code-dot-org/shared-constants';
+
 import {ValueOf} from '@cdo/apps/types/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   AichatContext,

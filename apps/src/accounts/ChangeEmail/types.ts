@@ -1,4 +1,4 @@
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+import {UserTypes} from '@code-dot-org/shared-constants';
 
 export type UserType = (typeof UserTypes)[keyof typeof UserTypes];
 

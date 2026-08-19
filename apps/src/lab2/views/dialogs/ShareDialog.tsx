@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
+import {ProjectSubmissionStatus} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
@@ -21,7 +22,6 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import {commonI18n as i18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {CopyToClipboardButton} from './CopyToClipboardButton';
 import HoaiCongrats from './finishDialogs/HoaiCongrats';

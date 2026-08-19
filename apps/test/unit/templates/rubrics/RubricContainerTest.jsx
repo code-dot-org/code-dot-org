@@ -1,4 +1,5 @@
 // react testing library import
+import {RubricAiEvaluationLimits} from '@code-dot-org/shared-constants';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import $ from 'jquery';
 import React from 'react';
@@ -23,7 +24,6 @@ import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {

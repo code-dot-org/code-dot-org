@@ -1,3 +1,9 @@
+import {
+  AiChatClientTypes,
+  AiChatModelIds,
+  AiInteractionStatus as Status,
+} from '@code-dot-org/shared-constants';
+
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
 import {
   PendingChatMessage,
@@ -8,11 +14,6 @@ import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichatLab/views/modelCustomizat
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {
-  AiChatClientTypes,
-  AiChatModelIds,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
 // This type is the union of all the valid AI Model IDs.
 export type AiChatModelIdType = ValueOf<typeof AiChatModelIds>;
 

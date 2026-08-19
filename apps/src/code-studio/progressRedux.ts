@@ -1,3 +1,4 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import {
   AnyAction,
   PayloadAction,
@@ -31,7 +32,6 @@ import {
   PeerReviewLevelInfo,
 } from '@cdo/apps/types/progressTypes';
 import {RootState} from '@cdo/apps/types/redux';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {AppDispatch} from '../util/reduxHooks';

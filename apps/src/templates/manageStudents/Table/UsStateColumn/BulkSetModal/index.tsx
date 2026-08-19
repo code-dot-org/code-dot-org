@@ -1,5 +1,6 @@
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import Modal from '@code-dot-org/component-library/modal';
+import {CapLinks} from '@code-dot-org/shared-constants';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
@@ -11,7 +12,6 @@ import {BulkSetModalProps} from '@cdo/apps/templates/manageStudents/Table/UsStat
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {RootState} from '@cdo/apps/types/redux';
-import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './bulkSetModal.module.scss';

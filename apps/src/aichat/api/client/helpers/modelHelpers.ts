@@ -1,9 +1,9 @@
 import {createGoogleGenerativeAI} from '@ai-sdk/google';
 import {createOpenAI} from '@ai-sdk/openai';
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
 import {type LanguageModel} from 'ai';
 
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 type ModelId = ValueOf<typeof AiChatModelIds>;
 

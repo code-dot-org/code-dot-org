@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
@@ -16,7 +17,6 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ReauthorizeClever from '@cdo/apps/templates/teacherDashboard/ReauthorizeClever';
 import * as utils from '@cdo/apps/utils';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

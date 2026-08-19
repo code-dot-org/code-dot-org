@@ -1,5 +1,6 @@
+import {AiChatClientTypes} from '@code-dot-org/shared-constants';
+
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 export type AiChatClientType = ValueOf<typeof AiChatClientTypes>;
 

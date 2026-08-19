@@ -1,3 +1,4 @@
+import {UserLevelInteractions} from '@code-dot-org/shared-constants';
 import React, {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -14,7 +15,6 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import {sendLab2AnalyticsEvent} from '../../lab2/utils/analyticsReporterHelper';
 import {useCodebridgeContext} from '../codebridgeContext';

@@ -1,11 +1,12 @@
 import {
+  AiChatAccessLevels,
+  AiChatToolsDependency,
+} from '@code-dot-org/shared-constants';
+
+import {
   AiChatAccessLevel,
   AiChatToolsDependencyValue,
 } from '@cdo/apps/aichat/types/accessControls';
-import {
-  AiChatAccessLevels,
-  AiChatToolsDependency,
-} from '@cdo/generated-scripts/sharedConstants';
 
 // A list of app names for which AI Chat tools (tutor or chat in ai chat lab) are considered essential to the app experience.
 // but can still be disabled by teachers through the access controls in the teacher dashboard (see ai_chat_access_level)

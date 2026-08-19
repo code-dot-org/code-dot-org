@@ -1,12 +1,10 @@
+import {SectionLoginType, UserTypes} from '@code-dot-org/shared-constants';
+
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {
   AiChatAccessLevel,
   AiChatToolsDependencyValue,
 } from '@cdo/apps/aichat/types/accessControls';
-import {
-  SectionLoginType,
-  UserTypes,
-} from '@cdo/generated-scripts/sharedConstants';
 
 // Typescript definitions for types relating to teacherSections. Note that many
 // of these are "duplicated" in `/templates/teacherDashboard/shapes.jsx, which defined

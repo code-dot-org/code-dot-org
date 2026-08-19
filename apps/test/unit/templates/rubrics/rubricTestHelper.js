@@ -1,7 +1,7 @@
 import {
   LevelStatus,
   RubricAiEvaluationStatus,
-} from '@cdo/generated-scripts/sharedConstants';
+} from '@code-dot-org/shared-constants';
 
 // stub fetch
 

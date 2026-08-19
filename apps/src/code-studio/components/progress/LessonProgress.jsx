@@ -1,3 +1,4 @@
+import {LevelKind, LevelStatus} from '@code-dot-org/shared-constants';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -16,7 +17,6 @@ import LessonTutorProgressBubble from '@cdo/apps/templates/progress/LessonTutorP
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import experiments from '@cdo/apps/util/experiments';
-import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {canChangeLevelInPage} from '../../browserNavigation';
 import remeasureOnFontsReady from '../header/remeasureOnFontsReady';

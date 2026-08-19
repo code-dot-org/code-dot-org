@@ -1,9 +1,9 @@
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import UserPassport from '@cdo/apps/code-studio/pd/workshops/components/UserPassport';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 const DEFAULT_PROPS = {
   displayName: 'Ms. McEntire',

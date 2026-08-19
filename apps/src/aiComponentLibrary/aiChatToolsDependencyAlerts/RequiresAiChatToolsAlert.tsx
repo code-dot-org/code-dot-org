@@ -1,5 +1,6 @@
 import Link from '@code-dot-org/component-library/link';
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {AiChatAccessLevels} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
@@ -9,7 +10,6 @@ import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teac
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {navigateToHref} from '@cdo/apps/utils';
-import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import AiChatToolsInfoAlert from './AiChatToolsInfoAlert';
 

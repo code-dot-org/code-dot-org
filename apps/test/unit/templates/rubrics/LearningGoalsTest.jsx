@@ -1,3 +1,4 @@
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import {render, screen, act as rtlAct, fireEvent} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
@@ -19,7 +20,6 @@ import {
 import {annotateLines} from '@cdo/apps/templates/rubrics/annotateEditor';
 import LearningGoals from '@cdo/apps/templates/rubrics/LearningGoals';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect as deprecatedExpect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

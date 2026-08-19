@@ -1,5 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
+import {
+  AiInteractionStatus as Status,
+  AiDiffContext,
+} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
@@ -12,10 +16,6 @@ import {
 } from '@cdo/apps/aiDifferentiation/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {
-  AiInteractionStatus as Status,
-  AiDiffContext,
-} from '@cdo/generated-scripts/sharedConstants';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';

@@ -1,3 +1,4 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -7,7 +8,6 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {studentShape, levelWithProgress} from './types';

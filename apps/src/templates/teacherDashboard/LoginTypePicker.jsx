@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Dialog from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -13,7 +14,6 @@ import {
 } from '@cdo/apps/accounts/constants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import CardContainer from './CardContainer';

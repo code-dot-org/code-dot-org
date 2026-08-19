@@ -1,3 +1,4 @@
+import {RubricAiEvaluationStatus} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
@@ -6,7 +7,6 @@ import {connect} from 'react-redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setUserAiEvalStatus} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
-import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {reportingDataShape, rubricShape} from './rubricShapes';

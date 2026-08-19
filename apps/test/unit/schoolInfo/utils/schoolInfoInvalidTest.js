@@ -1,6 +1,7 @@
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
+
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import {US_COUNTRY_CODE} from '@cdo/apps/signUpFlow/signUpFlowConstants';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 describe('US country selected', () => {
   it('returns true if zip code is missing', () => {

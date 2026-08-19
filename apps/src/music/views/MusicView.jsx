@@ -1,5 +1,6 @@
 /** @file Top-level view for Music */
 import {ProcedureBase} from '@blockly/block-shareable-procedures';
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import {isEqual} from 'lodash';
 import markdownToTxt from 'markdown-to-txt';
 import PropTypes from 'prop-types';
@@ -7,7 +8,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import './small-footer-music-overrides.scss';
-
 import {validateBlockCategories} from '@cdo/apps/blockly/utils';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -27,7 +27,6 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import MusicAnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {saveGeneratedSongMetadata} from '../ai/generate/GenerateCode';
 import AppConfig from '../appConfig';

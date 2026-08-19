@@ -1,10 +1,10 @@
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {RubricAiEvaluationLimits} from '@code-dot-org/shared-constants';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {TAB_NAMES} from './rubricHelpers';

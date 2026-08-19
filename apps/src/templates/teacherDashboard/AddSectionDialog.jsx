@@ -1,11 +1,11 @@
 import Modal from '@code-dot-org/component-library/modal';
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {navigateToHref} from '@cdo/apps/utils';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {NON_LMS_LOGIN_TYPES} from './LoginTypeConstants';

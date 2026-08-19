@@ -1,9 +1,10 @@
-import {isDevelopmentEnvironment, isTestEnvironment} from '@cdo/apps/utils';
 import {
   AllowedFontHostnames,
   AllowedHostnameSuffixes,
   AllowedImageHostnameSuffixes,
-} from '@cdo/generated-scripts/sharedConstants';
+} from '@code-dot-org/shared-constants';
+
+import {isDevelopmentEnvironment, isTestEnvironment} from '@cdo/apps/utils';
 
 // This is copied from codeprojects_preview_controller.rb to enable setting a content security policy
 // on the frontend. Explanation of the policy can be found there. Any changes here should be mirrored there.

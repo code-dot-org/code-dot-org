@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {SafeAndSupportedImageTypes} from '@code-dot-org/shared-constants';
 import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -15,7 +16,6 @@ import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';

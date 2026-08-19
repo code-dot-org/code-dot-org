@@ -1,5 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -33,7 +34,6 @@ import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
 import {useModeratedImageUpload} from './hooks/useModeratedImageUpload';

@@ -1,3 +1,4 @@
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
 import {type GeneratedFile} from 'ai';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
@@ -9,7 +10,6 @@ import {
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aiGateway', () => ({
   generateText: jest.fn(),

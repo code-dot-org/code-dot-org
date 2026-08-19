@@ -1,3 +1,4 @@
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
@@ -6,7 +7,6 @@ import {
   RUBRIC_PATH,
   SAVE_COMPLETED_TEXT,
 } from '@cdo/apps/levelbuilder/rubrics/rubricHelper';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('rubricHelperTest.js', () => {
   const learningGoalList = [

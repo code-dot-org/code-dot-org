@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {render, fireEvent, screen, within} from '@testing-library/react';
 import React from 'react';
 
@@ -8,7 +9,6 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from '@cdo/apps/templates/teacherDashboard/LoginTypePicker';
 import experiments from '@cdo/apps/util/experiments';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 describe('LoginTypePicker', () => {
   const realIsEnabled = experiments.isEnabled;

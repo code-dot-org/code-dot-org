@@ -1,8 +1,8 @@
 import Chips from '@code-dot-org/component-library/chips';
+import {StudentGradeLevels} from '@code-dot-org/shared-constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './sections-refresh.module.scss';

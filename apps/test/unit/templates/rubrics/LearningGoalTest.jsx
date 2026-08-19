@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -6,7 +7,6 @@ import React from 'react';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('LearningGoal', () => {
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};

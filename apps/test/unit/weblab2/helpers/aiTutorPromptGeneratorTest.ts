@@ -1,3 +1,9 @@
+import {
+  AllowedFontHostnames,
+  AllowedHostnameSuffixes,
+  AllowedImageHostnameSuffixes,
+} from '@code-dot-org/shared-constants';
+
 import askContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/ask.md';
 import {generateAiTutorPrompt} from '@cdo/apps/weblab2/helpers/aiTutorPromptGenerator';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
@@ -11,11 +17,6 @@ import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs
 import preReplyCheckNoJs from '@cdo/apps/weblab2/prompts/preReplyCheckNoJs.md';
 import securityIntro from '@cdo/apps/weblab2/prompts/securityIntro.md';
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
-import {
-  AllowedFontHostnames,
-  AllowedHostnameSuffixes,
-  AllowedImageHostnameSuffixes,
-} from '@cdo/generated-scripts/sharedConstants';
 
 const ALL_ANSWER_TYPES: AiTutorAnswerType[] = [
   'buildHTML',

@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {AiChatToolsDependency} from '@code-dot-org/shared-constants';
 import {Button} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -11,7 +12,6 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import styles from './multipleAssignButton.module.scss';

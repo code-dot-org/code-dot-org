@@ -1,3 +1,4 @@
+import {UserLevelInteractions} from '@code-dot-org/shared-constants';
 import classNames from 'classnames';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -14,7 +15,6 @@ import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback
 import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
-import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import commonStyles from '../../commonStyles';

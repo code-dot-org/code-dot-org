@@ -1,10 +1,10 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
+import {SafeAndSupportedImageTypes} from '@code-dot-org/shared-constants';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 const LABS_WITH_IMAGE_MODERATION = [
   'weblab2',

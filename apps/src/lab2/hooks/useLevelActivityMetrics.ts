@@ -1,10 +1,10 @@
+import {LocalizeToI18nLocales} from '@code-dot-org/shared-constants';
 import {useCallback, useEffect, useRef} from 'react';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {useLocalization} from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
 
 import {LevelProperties} from '../types';
 

@@ -1,3 +1,4 @@
+import {UserTypes, NonSchoolOptions} from '@code-dot-org/shared-constants';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
@@ -20,10 +21,6 @@ import {
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
-import {
-  UserTypes,
-  NonSchoolOptions,
-} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools', () => ({

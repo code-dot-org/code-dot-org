@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import path from 'path';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -15,7 +16,6 @@ import {
   sectionCode as sectionCodeSelector,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';

@@ -1,4 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {AiChatTeacherFeedback as TeacherFeedback} from '@code-dot-org/shared-constants';
 import classNames from 'classnames';
 import moment from 'moment';
 import React, {forwardRef, memo} from 'react';
@@ -7,7 +8,6 @@ import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTut
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
 import {removeUpdateMessage} from '../redux';

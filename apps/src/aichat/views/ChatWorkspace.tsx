@@ -1,6 +1,7 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
+import {AiChatClientTypes} from '@code-dot-org/shared-constants';
 import markdownToTxt from 'markdown-to-txt';
 import React, {
   useCallback,
@@ -13,7 +14,6 @@ import React, {
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import AichatContextManager from '../aichatContextManager';
 import {

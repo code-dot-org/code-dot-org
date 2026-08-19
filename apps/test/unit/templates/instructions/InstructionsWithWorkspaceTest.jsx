@@ -1,9 +1,9 @@
+import {AiChatAccessLevels} from '@code-dot-org/shared-constants';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
-import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {

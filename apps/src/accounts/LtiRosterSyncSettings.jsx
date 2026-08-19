@@ -1,4 +1,5 @@
 import Toggle from '@code-dot-org/component-library/toggle';
+import {LmsLinks} from '@code-dot-org/shared-constants';
 import {Typography as MuiTypography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -6,7 +7,6 @@ import React, {useState} from 'react';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import commonStyles from './common/common.styles.module.scss';

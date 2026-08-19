@@ -1,3 +1,4 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import {isEqual} from 'lodash';
 import React, {
   createContext,
@@ -27,7 +28,6 @@ import StartOverDialog, {
   MessageType,
 } from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectManager from '../projects/ProjectManager';
 import getInitialSources from '../utils/getInitialSources';

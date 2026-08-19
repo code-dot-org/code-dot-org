@@ -1,8 +1,8 @@
+import {AiInteractionStatus} from '@code-dot-org/shared-constants';
 import {createSelector} from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import type {RootState} from '@cdo/apps/types/redux';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {isChatMessage} from '../../types';
 

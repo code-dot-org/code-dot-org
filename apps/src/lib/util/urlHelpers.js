@@ -1,7 +1,7 @@
+import {GlobalEditionExcludedPaths} from '@code-dot-org/shared-constants';
 import $ from 'jquery';
 import _ from 'lodash';
 
-import {GlobalEditionExcludedPaths} from '@cdo/generated-scripts/sharedConstants';
 import {configure, root_url} from '@cdo/generated-scripts/studioRoutes';
 
 /**

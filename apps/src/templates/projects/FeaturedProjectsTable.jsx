@@ -4,6 +4,7 @@ import {
 } from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
+import {FeaturedProjectStatus} from '@code-dot-org/shared-constants';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -13,7 +14,6 @@ import * as sort from 'sortabular';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
-import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {ImageWithStatus} from '../ImageWithStatus';

@@ -1,8 +1,8 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import LevelDetailsDialog from './LevelDetailsDialog';
 

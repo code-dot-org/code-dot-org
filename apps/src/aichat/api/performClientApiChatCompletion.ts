@@ -1,10 +1,11 @@
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {getTypedKeys} from '@cdo/apps/types/utils';
 import {
   AiInteractionStatus,
   AiRequestExecutionStatus,
-} from '@cdo/generated-scripts/sharedConstants';
+} from '@code-dot-org/shared-constants';
+
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getTypedKeys} from '@cdo/apps/types/utils';
 
 import {
   AichatContext,

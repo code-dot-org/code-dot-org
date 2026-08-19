@@ -1,9 +1,9 @@
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import RubricEditor from './RubricEditor';
 import {saveRubricToTable, SAVING_TEXT, styles} from './rubricHelper';

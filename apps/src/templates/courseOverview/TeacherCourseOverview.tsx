@@ -1,3 +1,4 @@
+import {UserTypes} from '@code-dot-org/shared-constants';
 import _ from 'lodash';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -26,7 +27,6 @@ import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   CourseRoles,

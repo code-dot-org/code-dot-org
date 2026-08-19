@@ -1,4 +1,4 @@
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import {LevelStatus} from '@code-dot-org/shared-constants';
 
 /**
  * Note: these constants will be removed in favor of `BubbleFactory.bubbleSizes`

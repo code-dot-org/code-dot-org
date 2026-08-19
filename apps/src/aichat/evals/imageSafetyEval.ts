@@ -1,3 +1,7 @@
+import {
+  AiChatClientTypes,
+  AiChatModelIds,
+} from '@code-dot-org/shared-constants';
 import {type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway';
@@ -7,10 +11,6 @@ import {
   getImageModerationVerdict,
   ImageModerationResult,
 } from '@cdo/apps/util/moderateImage';
-import {
-  AiChatClientTypes,
-  AiChatModelIds,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import AichatContextManager from '../aichatContextManager';
 import {getModel} from '../api/client/helpers/modelHelpers';

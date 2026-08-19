@@ -1,4 +1,5 @@
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
+
 import i18n from '@cdo/locale';
 
 export const UNDERSTANDING_LEVEL_STRINGS = {

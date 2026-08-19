@@ -10,9 +10,9 @@
  *
  * These prompts are typically used in the "create" context.
  */
+import {AiDiffArtifactType} from '@code-dot-org/shared-constants';
 
 import {ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
-import {AiDiffArtifactType} from '@cdo/generated-scripts/sharedConstants';
 
 export const FINISH_EARLY_PROMPT: ChatPrompt = {
   label: 'Write an extension activity for students who finish early',

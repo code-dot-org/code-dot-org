@@ -1,7 +1,8 @@
+import {AiInteractionStatus} from '@code-dot-org/shared-constants';
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
-import '@testing-library/jest-dom';
 
+import '@testing-library/jest-dom';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {
   CompletedChatMessage,
@@ -11,7 +12,6 @@ import {
 import CopyChatHistoryButton from '@cdo/apps/aichat/views/aiChatHeaderButtons/CopyChatHistoryButton';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 // Intercept clipboard writes so tests can assert on the copied text.
 jest.mock('@cdo/apps/util/copyToClipboard');

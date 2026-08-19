@@ -1,6 +1,7 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -13,7 +14,6 @@ import {rosterProvider as rosterProviderSelector} from '@cdo/apps/templates/teac
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AddSectionDialog from '../../teacherDashboard/AddSectionDialog';

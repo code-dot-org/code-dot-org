@@ -1,3 +1,4 @@
+import {PlGradeValue, SectionLoginType} from '@code-dot-org/shared-constants';
 import {
   createSlice,
   AnyAction,
@@ -17,10 +18,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
-import {
-  PlGradeValue,
-  SectionLoginType,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   getFilteredSectionOrderIds,

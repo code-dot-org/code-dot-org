@@ -1,8 +1,12 @@
+import {
+  AiChatClientTypes,
+  AiChatModelIds,
+} from '@code-dot-org/shared-constants';
 import {act, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import '@testing-library/jest-dom';
 
+import '@testing-library/jest-dom';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {
   AssetSource,
@@ -12,10 +16,6 @@ import {
 import UserChatMessageEditor from '@cdo/apps/aichat/views/UserChatMessageEditor';
 import {AichatLabState} from '@cdo/apps/aichatLab/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {
-  AiChatClientTypes,
-  AiChatModelIds,
-} from '@cdo/generated-scripts/sharedConstants';
 
 const mockDispatch = jest.fn();
 const mockSubmitChatContents = jest.fn();

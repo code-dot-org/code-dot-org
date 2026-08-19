@@ -1,3 +1,4 @@
+import {EmailLinks, SectionLoginType} from '@code-dot-org/shared-constants';
 import {Box, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -6,10 +7,6 @@ import {connect} from 'react-redux';
 import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {
-  EmailLinks,
-  SectionLoginType,
-} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {queryParams} from '../../code-studio/utils';

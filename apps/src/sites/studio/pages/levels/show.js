@@ -1,3 +1,4 @@
+import {AiDiffContext} from '@code-dot-org/shared-constants';
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -19,7 +20,6 @@ import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloati
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(initPage);
 

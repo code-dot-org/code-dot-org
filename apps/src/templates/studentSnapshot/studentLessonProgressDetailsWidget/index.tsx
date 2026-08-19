@@ -1,8 +1,8 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import classNames from 'classnames';
 import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import WidgetTemplate from '../widgetTemplate';
 

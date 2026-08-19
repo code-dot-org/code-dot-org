@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -8,7 +9,6 @@ import {
   TransferStatus,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 const studentData = [
   {id: 1, name: 'studentb'},

@@ -1,6 +1,5 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import PropTypes from 'prop-types';
-
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,

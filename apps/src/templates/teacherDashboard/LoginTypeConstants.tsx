@@ -1,4 +1,4 @@
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 
 export const NON_LMS_LOGIN_TYPES = [
   SectionLoginType.word,

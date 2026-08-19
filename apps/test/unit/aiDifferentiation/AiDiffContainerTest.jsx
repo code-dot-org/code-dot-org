@@ -1,3 +1,4 @@
+import {AiDiffContext} from '@code-dot-org/shared-constants';
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -13,7 +14,6 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@react-pdf/renderer', () => {
   return {

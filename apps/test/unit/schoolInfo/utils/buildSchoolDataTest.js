@@ -1,6 +1,7 @@
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
+
 import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
 import {US_COUNTRY_CODE} from '@cdo/apps/signUpFlow/signUpFlowConstants';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 describe('buildSchoolData', () => {
   describe('country is US', () => {

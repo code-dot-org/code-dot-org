@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
 import React, {FC, useCallback, useState} from 'react';
 
 import {
@@ -6,7 +7,6 @@ import {
   saveUserLessonReflection,
 } from '@cdo/apps/aiTutor/reflectionsApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import {LessonDeepDiveData, ReflectionData} from '../types';
 

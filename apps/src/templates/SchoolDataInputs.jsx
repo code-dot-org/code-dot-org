@@ -1,5 +1,6 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -12,7 +13,6 @@ import {
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {getCountriesUsFirst} from '../schoolInfo/utils/getCountriesUsFirst';

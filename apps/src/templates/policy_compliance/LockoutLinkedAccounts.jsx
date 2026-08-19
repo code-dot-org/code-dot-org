@@ -1,3 +1,4 @@
+import {ChildAccountComplianceStates} from '@code-dot-org/shared-constants';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useReducer} from 'react';
@@ -11,7 +12,6 @@ import parentalPermissionRequestReducer, {
 } from '@cdo/apps/redux/parentalPermissionRequestReducer';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import usePrevious from '@cdo/apps/util/usePrevious';
-import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {getStore} from '../../redux';

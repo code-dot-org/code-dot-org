@@ -1,4 +1,5 @@
 import Tags from '@code-dot-org/component-library/tags';
+import {StudentWorkEvaluationStatus} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
@@ -7,7 +8,6 @@ import {
   FeedbackData,
   logAiInteractionFeedback as logUserFeedbackOnStudentEvaluation,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
-import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import AiEvaluationFeedbackModal from './AiEvaluationFeedbackModal';
 import {FEEDBACK_TYPE} from './AiFeedbackType';

@@ -1,3 +1,4 @@
+import {ResourceEmbeddabilityOptions} from '@code-dot-org/shared-constants';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -7,7 +8,6 @@ import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
-import {ResourceEmbeddabilityOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import LessonEditorDialog from './LessonEditorDialog';
 

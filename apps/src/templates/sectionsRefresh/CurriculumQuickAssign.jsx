@@ -1,4 +1,9 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {
+  AiChatToolsDependency,
+  LocalizeToI18nLocales,
+  LocaleFallbacks,
+} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -13,11 +18,6 @@ import {
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {useLocalization} from '@cdo/apps/localization';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {
-  AiChatToolsDependency,
-  LocalizeToI18nLocales,
-  LocaleFallbacks,
-} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
