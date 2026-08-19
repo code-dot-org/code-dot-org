@@ -3,10 +3,8 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {getSystemError} from '@codebridge/Console/MessageHelpers';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import Theater from '@cdo/apps/miniApps/theater/Theater';
 import TheaterVisualization from '@cdo/apps/miniApps/theater/TheaterVisualization';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import MiniAppEmptyState from './MiniAppEmptyState';
 import PhotoPrompterButton from './PhotoPrompterButton';
@@ -17,28 +15,19 @@ import moduleStyles from './mini-app-preview.module.scss';
 const TheaterPreview: React.FunctionComponent = () => {
   const {sendTypedInputMessage, levelProperties} = useCodebridgeContext();
   const appName = levelProperties?.appName;
-  const dispatch = useAppDispatch();
   const [isPrompterOpen, setIsPrompterOpen] = useState(false);
   const [promptText, setPromptText] = useState('');
   const [isOutputVisible, setIsOutputVisible] = useState(false);
 
-  // The theater has already put itself back; report the failure and release the
-  // run button, which a theater run otherwise leaves showing stop.
+  // The theater has already put itself back and let go of anything waiting on
+  // playback, so the run button is taken care of; report the failure.
   const onMediaLoadError = useCallback(() => {
     CodebridgeRegistry.getInstance()
       .getConsoleManager()
       ?.writeConsoleMessage(
         getSystemError('Could not display the theater video.', appName)
       );
-    dispatch(setIsRunning(false));
-  }, [appName, dispatch]);
-
-  // The gif and audio keep playing after the program itself finishes, so a
-  // theater run holds the run button on stop until they are over. They are over
-  // now; the last frame stays on the stage until the next run or a reset.
-  const onPlaybackComplete = useCallback(() => {
-    dispatch(setIsRunning(false));
-  }, [dispatch]);
+  }, [appName]);
 
   useEffect(() => {
     // The console manager may not exist when the theater is created, so look it
@@ -62,8 +51,7 @@ const TheaterPreview: React.FunctionComponent = () => {
       () => setIsPrompterOpen(false),
       sendTypedInputMessage ?? (() => {}),
       setIsOutputVisible,
-      onMediaLoadError,
-      onPlaybackComplete
+      onMediaLoadError
     );
     CodebridgeRegistry.getInstance().setTheater(theater);
 
@@ -75,7 +63,7 @@ const TheaterPreview: React.FunctionComponent = () => {
       theater.reset();
       CodebridgeRegistry.getInstance().setTheater(null);
     };
-  }, [sendTypedInputMessage, onMediaLoadError, onPlaybackComplete]);
+  }, [sendTypedInputMessage, onMediaLoadError]);
 
   const onPhotoSelected = (file: File) => {
     CodebridgeRegistry.getInstance()

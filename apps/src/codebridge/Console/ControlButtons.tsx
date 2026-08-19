@@ -73,6 +73,23 @@ const ControlButtons: React.FunctionComponent = () => {
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
 
+  // A run is over when its output is: the program can finish long before the
+  // theater's gif and audio do, and the gif can finish long before a program
+  // that keeps working after it published one. Waiting on the later of the two
+  // is what keeps the button on stop for the whole run.
+  const clearIsRunningWhenOutputEnds = useCallback(async () => {
+    // The neighborhood clears it itself when its animation finishes.
+    if (miniApp === MiniApps.Neighborhood) {
+      return;
+    }
+    if (miniApp === MiniApps.Theater) {
+      await CodebridgeRegistry.getInstance()
+        .getTheater()
+        ?.waitUntilPlaybackDone();
+    }
+    dispatch(setIsRunning(false));
+  }, [dispatch, miniApp]);
+
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
@@ -81,15 +98,9 @@ const ControlButtons: React.FunctionComponent = () => {
         scriptId: scriptId,
         interaction: UserLevelInteractions.click_run,
       });
-      onRun(/*runTests*/ false, dispatch, source).finally(() => {
-        // Theater and neighborhood output keeps playing after the run promise resolves, so we
-        // don't clear isRunning here for them. Each clears it itself when its
-        // output finishes: the neighborhood when its animation ends, the theater
-        // when its gif and audio run out.
-        if (miniApp !== MiniApps.Neighborhood && miniApp !== MiniApps.Theater) {
-          dispatch(setIsRunning(false));
-        }
-      });
+      onRun(/*runTests*/ false, dispatch, source).finally(
+        clearIsRunningWhenOutputEnds
+      );
       dispatch(setHasRun(true));
       logLevelActivity();
     } else {

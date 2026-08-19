@@ -93,7 +93,6 @@ export default class Theater extends MiniApp {
   ) => void;
   private readonly onOutputVisibleChange?: (isVisible: boolean) => void;
   private readonly onMediaLoadError?: () => void;
-  private readonly onPlaybackComplete?: () => void;
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
@@ -101,7 +100,10 @@ export default class Theater extends MiniApp {
   private visualDurationMs: number | null;
   private playbackTimer: number | null;
   private isPlaybackPending: boolean;
+  private isAudioPlaying: boolean;
+  private isVisualPlaying: boolean;
   private playbackGeneration: number;
+  private playbackWaiters: Array<() => void>;
   private readonly imageSource: TrackedSource;
   private readonly audioSource: TrackedSource;
 
@@ -112,8 +114,7 @@ export default class Theater extends MiniApp {
     closePhotoPrompter: () => void,
     onJavabuilderMessage: (messageType: string, message: InputMessage) => void,
     onOutputVisibleChange?: (isVisible: boolean) => void,
-    onMediaLoadError?: () => void,
-    onPlaybackComplete?: () => void
+    onMediaLoadError?: () => void
   ) {
     super();
     this.onOutputMessage = onOutputMessage;
@@ -123,7 +124,6 @@ export default class Theater extends MiniApp {
     this.onJavabuilderMessage = onJavabuilderMessage;
     this.onOutputVisibleChange = onOutputVisibleChange;
     this.onMediaLoadError = onMediaLoadError;
-    this.onPlaybackComplete = onPlaybackComplete;
     this.loadEventsFinished = 0;
     this.prompterUploadUrl = null;
     this.hasAudio = false;
@@ -131,7 +131,10 @@ export default class Theater extends MiniApp {
     this.visualDurationMs = null;
     this.playbackTimer = null;
     this.isPlaybackPending = false;
+    this.isAudioPlaying = false;
+    this.isVisualPlaying = false;
     this.playbackGeneration = 0;
+    this.playbackWaiters = [];
     this.imageSource = new TrackedSource(() => this.getImgElement());
     this.audioSource = new TrackedSource(() => this.getAudioElement());
   }
@@ -192,57 +195,79 @@ export default class Theater extends MiniApp {
     }
   }
 
-  // Report playback finished once the audio has run out and the gif has had its
-  // full run time. The stage is left as it is, holding the gif's last frame,
-  // until the next run or a reset.
+  // Watch what is playing so waitUntilPlaybackDone can settle when it ends.
   //
   // The gif's length has to come from the host, since an <img> reports nothing
-  // about the animation it is running. A host that sends no length (Java Lab,
-  // whose runs end on a Javabuilder message instead) gets no report.
+  // about the animation it is running. Without one there is no telling when the
+  // animation ends, so playback is never done; Java Lab, whose runs end on a
+  // Javabuilder message instead, sends no length and relies on that.
   private watchForPlaybackEnd(
     audioElement: HTMLAudioElement | null,
     playing: Promise<void> | undefined
   ) {
     // A program that publishes twice replaces what is playing, so the watch it
-    // replaces must not report the run finished when its timer comes due.
+    // replaces must not decide when playback is over.
     this.clearPlaybackTimer();
     const generation = ++this.playbackGeneration;
-    let audioPlaying = audioElement !== null;
-    let visualPlaying = this.visualDurationMs !== null;
-    const reportIfDone = () => {
-      if (
-        audioPlaying ||
-        visualPlaying ||
-        !this.isPlaybackPending ||
-        generation !== this.playbackGeneration
-      ) {
-        return;
-      }
-      this.isPlaybackPending = false;
-      this.onPlaybackComplete?.();
-    };
+    const isCurrentWatch = () => generation === this.playbackGeneration;
+    this.isAudioPlaying = audioElement !== null;
+    this.isVisualPlaying = true;
 
     if (audioElement) {
       audioElement.onended = () => {
-        audioPlaying = false;
-        reportIfDone();
+        if (isCurrentWatch()) {
+          this.audioFinished();
+        }
       };
       // A browser that refuses to start the audio never fires 'ended', so a
       // refusal counts as audio that is already over.
       playing?.catch(() => {
-        audioPlaying = false;
-        reportIfDone();
+        if (isCurrentWatch()) {
+          this.audioFinished();
+        }
       });
     }
     if (this.visualDurationMs !== null) {
       this.playbackTimer = window.setTimeout(() => {
         this.playbackTimer = null;
-        visualPlaying = false;
-        reportIfDone();
+        this.isVisualPlaying = false;
+        this.settleIfPlaybackDone();
       }, this.visualDurationMs);
     }
-    // Nothing to wait on: neither a gif length nor an audio track.
-    reportIfDone();
+  }
+
+  private audioFinished() {
+    this.isAudioPlaying = false;
+    this.settleIfPlaybackDone();
+  }
+
+  // Resolves when the gif and audio this run published have finished playing,
+  // and right away when nothing is playing. Callers pair it with the program's
+  // own end: a run is over at the later of the two.
+  waitUntilPlaybackDone(): Promise<void> {
+    if (!this.isPlaybackPending) {
+      return Promise.resolve();
+    }
+    return new Promise(resolve => {
+      this.playbackWaiters.push(resolve);
+    });
+  }
+
+  private settleIfPlaybackDone() {
+    if (this.isAudioPlaying || this.isVisualPlaying) {
+      return;
+    }
+    this.settlePlayback();
+  }
+
+  // Let go of anything waiting on playback. Playback that is dropped rather
+  // than finished -- a stop, a reset, media that failed to load -- settles the
+  // same way, or the caller would wait on media that is no longer there.
+  private settlePlayback() {
+    this.isPlaybackPending = false;
+    const waiters = this.playbackWaiters;
+    this.playbackWaiters = [];
+    waiters.forEach(resolve => resolve());
   }
 
   // Media that fails to load never fires the event playback waits on, so the
@@ -284,7 +309,9 @@ export default class Theater extends MiniApp {
     this.hasMedia = false;
     this.clearPlaybackTimer();
     this.visualDurationMs = null;
-    this.isPlaybackPending = false;
+    this.isAudioPlaying = false;
+    this.isVisualPlaying = false;
+    this.settlePlayback();
   }
 
   private clearPlaybackTimer() {
