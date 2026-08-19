@@ -132,6 +132,7 @@ export default class Theater extends MiniApp {
         const audioElement = this.getAudioElement();
         if (audioElement) {
           audioElement.oncanplaythrough = () => this.startPlayback();
+          audioElement.onerror = () => this.handleMediaLoadError();
         }
         break;
       }
@@ -142,7 +143,7 @@ export default class Theater extends MiniApp {
         const imageElement = this.getImgElement();
         if (imageElement) {
           imageElement.onload = () => this.startPlayback();
-          imageElement.onerror = () => this.handleVisualLoadError();
+          imageElement.onerror = () => this.handleMediaLoadError();
         }
         break;
       }
@@ -175,10 +176,10 @@ export default class Theater extends MiniApp {
     }
   }
 
-  // An image that fails to load never fires onload, so playback would wait on it
-  // forever: the stage stays empty and the run button stays on stop. Put the
-  // theater back and let the host report the failure.
-  private handleVisualLoadError() {
+  // Media that fails to load never fires the event playback waits on, so the
+  // stage would stay empty and the run button stay on stop. Put the theater back
+  // and let the host report the failure.
+  private handleMediaLoadError() {
     this.reset();
     this.onMediaLoadError?.();
   }
