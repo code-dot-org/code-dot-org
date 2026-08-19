@@ -1,9 +1,11 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Tooltip, TooltipProps} from '@mui/material';
-import React, {useCallback, useLayoutEffect, useRef, useState} from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
+
+import moduleStyles from './OverflowTooltip.module.scss';
 
 type OverflowTooltipProps = {
-  children: React.ReactElement;
+  children: React.ReactNode;
   title: React.ReactNode;
   placement?: TooltipProps['placement'];
 };
@@ -27,15 +29,9 @@ const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
   title,
   placement = 'left',
 }) => {
-  const containerRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isOverflowing, setIsOverflowing] = useState(false);
   const {theme} = useTheme();
-
-  const updateOverflow = useCallback(() => {
-    if (containerRef.current) {
-      setIsOverflowing(hasTruncatedText(containerRef.current));
-    }
-  }, []);
 
   useLayoutEffect(() => {
     const el = containerRef.current;
@@ -43,11 +39,12 @@ const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
       return;
     }
 
+    const updateOverflow = () => setIsOverflowing(hasTruncatedText(el));
     updateOverflow();
     const observer = new ResizeObserver(updateOverflow);
     observer.observe(el);
     return () => observer.disconnect();
-  }, [children, title, updateOverflow]);
+  }, [children]);
 
   return (
     <Tooltip
@@ -60,9 +57,9 @@ const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
         tooltip: {'data-theme': theme},
       }}
     >
-      {React.cloneElement(children, {
-        ref: containerRef,
-      } as {ref: React.Ref<HTMLElement>})}
+      <div ref={containerRef} className={moduleStyles.anchor}>
+        {children}
+      </div>
     </Tooltip>
   );
 };
