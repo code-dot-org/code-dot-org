@@ -37,27 +37,35 @@ jobs:
       docker_tag: ${{ needs.skaffold-build.outputs.docker_tag }}
     secrets: inherit
 
-  # In parallel with skaffold: verify our kustomize and helm packages, etc
+  # In parallel with skaffold: verify the Helm chart and thin-lock contract.
   validate:
     if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
     name: validate
     uses: ./.github/workflows/k8s-validate.yml
+    secrets: inherit
 
-  # Step 3: commit+push the new docker image ref into the k8s-gitops repo
-  # for kargo to discover.
-  #
-  # Kargo is then responsible for promoting the change to ArgoCD codeai
-  # deployments in apps/codeai/deployments/*
+  # Step 3: publish the thin build-lock Freight record for staging releases.
   commit-to-kargo-warehouse:
+    if: github.event_name == 'push' && github.ref_name == 'staging'
     name: commit to kargo warehouse
     uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
     needs:
       - stitch-multiplatform-image
       - validate
     with:
-      branch_name: ${{ github.head_ref || github.ref_name }}
+      source_git_commit: ${{ github.sha }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
-      codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
+      codeai_docker_image_digest: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_digest }}
+      legacy_env: staging
+    secrets: inherit
+
+  commit-legacy-gitflow-metadata:
+    if: github.event_name == 'push' && contains(fromJSON('["test","levelbuilder","production"]'), github.ref_name)
+    name: commit legacy gitflow metadata
+    uses: ./.github/workflows/k8s-commit-legacy-gitflow-metadata.yml
+    with:
+      legacy_env: ${{ github.ref_name }}
+      source_git_commit: ${{ github.sha }}
     secrets: inherit
 
 # Grant the GITHUB_TOKEN the necessary permissions for checkout and publishing to GitHub Packages

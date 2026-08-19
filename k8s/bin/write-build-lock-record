@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+require "optparse"
+require "time"
+require "yaml"
+
+SOURCE_REPO = "https://github.com/code-dot-org/code-dot-org.git"
+SOURCE_PATH = "k8s/helm"
+
+options = {
+  created_at: Time.now.utc.iso8601
+}
+
+OptionParser.new do |parser|
+  parser.on("--git-commit SHA") {|value| options[:git_commit] = value}
+  parser.on("--image-ref REF") {|value| options[:image_ref] = value}
+  parser.on("--image-digest DIGEST") {|value| options[:image_digest] = value}
+  parser.on("--output-dir PATH") {|value| options[:output_dir] = value}
+  parser.on("--created-at ISO8601") {|value| options[:created_at] = value}
+end.parse!
+
+%i[git_commit image_ref image_digest output_dir].each do |key|
+  abort("missing required option: #{key}") if options[key].to_s.strip.empty?
+end
+
+release_id = "git-#{options[:git_commit]}"
+payload = {
+  "schemaVersion" => "v1",
+  "releaseId" => release_id,
+  "gitCommit" => options[:git_commit],
+  "image" => {
+    "ref" => options[:image_ref],
+    "digest" => options[:image_digest]
+  },
+  "packaging" => {
+    "kind" => "helm",
+    "sourceRepo" => SOURCE_REPO,
+    "sourcePath" => SOURCE_PATH
+  },
+  "createdAt" => options[:created_at]
+}
+
+body = YAML.dump(payload).delete_prefix("---\n")
+FileUtils.mkdir_p(options[:output_dir])
+
+historical_path = File.join(options[:output_dir], "#{release_id}.yaml")
+current_path = File.join(options[:output_dir], "current.yaml")
+
+if File.exist?(historical_path) && File.read(historical_path) != body
+  abort("refusing to rewrite #{historical_path} with different contents")
+end
+
+File.write(historical_path, body)
+File.write(current_path, body)
+
+abort("build-lock files differ after write") unless File.read(historical_path) == File.read(current_path)
+
+puts historical_path
+puts current_path
