@@ -75,6 +75,43 @@ const workspaceOf = (
   );
 };
 
+/** The `world_rule` block type; its presence is what makes a file a rule. */
+const DEFINE_RULE = 'world_rule';
+
+/**
+ * Whether this workspace is a RULE — i.e. whether a `define rule` is in it.
+ *
+ * Read off the blocks rather than off the file's name for the reason
+ * `ownTraitOptions` reads its traits that way: a registry refreshes on a parse,
+ * and a caller that has a workspace in front of it should not have to wait for
+ * one. `fileKind` is the answer where a path is what you have.
+ */
+export const definesRule = (
+  workspace: Blockly.Workspace | undefined,
+): boolean =>
+  Boolean(workspace?.getTopBlocks(false).some(b => b.type === DEFINE_RULE));
+
+/**
+ * The workspace a block belongs to — a flyout's block asks about its target.
+ *
+ * `workspaceOf` above answers the same question for a FIELD; this one is for
+ * the callers that hold the block itself (a shadow chooser, which is handed the
+ * block it is about to attach a shadow to).
+ */
+export const workspaceOfBlock = (
+  block: Blockly.Block | undefined,
+): Blockly.Workspace | undefined => {
+  const workspace = block?.workspace as
+    | (Blockly.WorkspaceSvg & {targetWorkspace?: Blockly.Workspace})
+    | undefined;
+  if (!workspace) {
+    return undefined;
+  }
+  return (
+    (workspace.isFlyout ? workspace.targetWorkspace : workspace) ?? undefined
+  );
+};
+
 /** Whether this workspace is a world — i.e. whether a `define world` is in it. */
 export const definesWorld = (
   workspace: Blockly.Workspace | undefined,

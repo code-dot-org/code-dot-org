@@ -28,7 +28,7 @@ import {
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {forgetImageSizes, setProjectGrids} from '../spriteCells';
-import {shadowsFor, VALUE_SHADOW_EXTENSION} from '../valueShadow';
+import {shadowFor, shadowsFor, VALUE_SHADOW_EXTENSION} from '../valueShadow';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
 // them in isolation with fake `block`/`generator` objects — no rendered Blockly
@@ -3067,6 +3067,63 @@ describe('builder-context warnings', () => {
       const names = extensionsOf(type);
       expect(names).not.toContain(RUNTIME_ACTOR_EXTENSION);
       expect(names).not.toContain(TRAIT_CONTEXT_EXTENSION);
+    }
+  });
+});
+
+describe('what an actor list’s source socket wears', () => {
+  // `all actors` is almost never the list somebody wanted; it was the default
+  // because it was the only list there was. `any ⟨Coin ▾⟩` is one dropdown
+  // click from what a learner meant, where a learner is the one holding it.
+  const LIST_BLOCKS = [
+    'world_for_each',
+    'world_filter_actors',
+    'world_ordered_actors',
+    'world_extreme_actor',
+  ];
+
+  /** A stand-in workspace holding one top block of the given type. */
+  const workspaceWith = (type: string) =>
+    ({
+      getTopBlocks: () => [{type}],
+    }) as never;
+
+  const sourceShadow = (blockType: string, rootType: string) => {
+    const entry = shadowsFor(blockType)?.find(s => s.name === 'SOURCE');
+    return shadowFor(entry!.shadow, {
+      workspace: workspaceWith(rootType),
+    } as never);
+  };
+
+  it('offers a kind to pick from in a world or an actor file', () => {
+    for (const type of LIST_BLOCKS) {
+      expect(sourceShadow(type, 'world_world')).toEqual({
+        type: 'world_actor_kind',
+      });
+      expect(sourceShadow(type, 'world_actor')).toEqual({
+        type: 'world_actor_kind',
+      });
+    }
+  });
+
+  it('offers every actor in a rule, which may not name a kind', () => {
+    // Not a preference: a rule is generic over the actors that elect its
+    // traits, and the dropdown there would offer a rule author precisely the
+    // thing they must not name (specs/ACTOR_LISTS.md).
+    for (const type of LIST_BLOCKS) {
+      expect(sourceShadow(type, 'world_rule')).toEqual({
+        type: 'world_all_actors',
+      });
+    }
+  });
+
+  it('leaves the wrapping blocks on `all actors`', () => {
+    // What goes in these is almost always another list block rather than a
+    // kind, so the shadow is replaced by a drag either way and the broader
+    // default costs nothing.
+    for (const type of ['world_first_actor', 'world_take_actors']) {
+      const entry = shadowsFor(type)?.find(s => s.name === 'SOURCE');
+      expect(entry?.shadow).toEqual({type: 'world_all_actors'});
     }
   });
 });

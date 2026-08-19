@@ -117,10 +117,12 @@ import {
 } from './layers';
 import {
   actorIdFromName,
+  definesRule,
   definesWorld,
   localActorBlockId,
   localActorFor,
   localActorVar,
+  workspaceOfBlock,
 } from './localActors';
 import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {instanceId, type MapPlacement} from './mapPlacements';
@@ -1310,6 +1312,31 @@ const actorSource = (block: Block, generator: JavascriptGenerator): string => {
   }
   return `WorldLab.all(${generator.valueToCode(block, 'SOURCE', Order.NONE) || 'actor'})`;
 };
+
+/**
+ * What an actor LIST's source socket wears when nothing has been put in it.
+ *
+ * `any ⟨Coin ▾⟩` in a world or an actor file, because that is what a learner
+ * reaches for first — "the closest Enemy", "the coins that are gold" — and a
+ * default you change with one dropdown click beats one you change by dragging a
+ * block out of the toolbox. `all actors` is almost never the list somebody
+ * wanted; it was the default because it was the only list there was.
+ *
+ * `all actors` in a `.rule`, and that exception is not a preference. A rule is
+ * generic over the actors that elect its traits — it says "everything with this
+ * trait", never "every Coin" — and the dropdown there would offer a rule author
+ * precisely the thing they must not name. Read off the workspace's own blocks
+ * (`definesRule`) rather than off the file's path, which a block does not have.
+ *
+ * The kind block emits NO ACTORS when its dropdown names nothing, so an
+ * untouched shadow is inert rather than quietly meaning `this actor` — see
+ * `world_actor_kind`, where getting that wrong would have made every one of
+ * these loops run its body once.
+ */
+const actorListShadow = (block: Block): ShadowSpec =>
+  definesRule(workspaceOfBlock(block))
+    ? {type: 'world_all_actors'}
+    : {type: 'world_actor_kind'};
 
 /** An actor value read as one actor — the first, when it holds several. */
 const oneActor = (target: ActorTarget): string =>
@@ -2736,17 +2763,28 @@ const worldActorKind = defineBlock({
     javascript(block, generator) {
       const actor = block.getFieldValue('ACTOR');
       const local = localActorFor(block, actor);
-      // A definition since deleted, or nothing chosen: the caller falls back to
-      // its own subject rather than naming a variable no line declares.
-      if (!actor || (localActorBlockId(actor) && !local)) {
-        return ['actor', Order.ATOMIC] as [string, number];
-      }
       // Two compilations of one idea (specs/ACTOR_LISTS.md). Plugged into a
       // handler's subject socket this is the TEMPLATE, so registering on it
       // reaches the coins placed later as well; anywhere else it is the coins
       // there are, which is what a statement acts on and a value reads.
       const parent = block.outputConnection?.targetConnection?.getSourceBlock();
-      if (!parent?.type.startsWith('world_on_')) {
+      const isSubject = Boolean(parent?.type.startsWith('world_on_'));
+      // A definition since deleted, or nothing chosen at all.
+      //
+      // On a HAT the answer is the hat's own subject: `when ⟨any …⟩ is
+      // clicked` with the kind missing is a handler registered on the actor
+      // the file is about, which is what a `.actor` file's hats mean anyway.
+      //
+      // Anywhere ELSE it is NO ACTORS, and the difference matters now that
+      // this block is a list source: `for each actor ⟨each⟩ in ⟨any ⟨…⟩⟩`
+      // falling back to `actor` is a loop that runs its body exactly once, on
+      // the subject — a loop that looks like a loop and is not. Emitting none
+      // is the bargain every other unfinished dropdown here makes
+      // (`world_actors_with_trait`, `use trait`): nothing happens, visibly.
+      if (!actor || (localActorBlockId(actor) && !local)) {
+        return [isSubject ? 'actor' : '[]', Order.ATOMIC] as [string, number];
+      }
+      if (!isSubject) {
         // The world stamps each placed actor with its type: a module path for a
         // project actor, the id `add actor` gave a world's own. Either way it
         // is a string, so nothing has to be imported to ask for them.
@@ -3359,7 +3397,7 @@ const worldForEach = defineBlock({
   },
 });
 registerValueShadows('world_for_each', [
-  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+  {name: 'SOURCE', shadow: actorListShadow},
 ]);
 
 /**
@@ -3466,7 +3504,7 @@ const worldFilterActors = defineBlock({
   },
 });
 registerValueShadows('world_filter_actors', [
-  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+  {name: 'SOURCE', shadow: actorListShadow},
   {name: 'WHERE', shadow: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
 ]);
 
@@ -3599,7 +3637,7 @@ const worldExtremeActor = defineBlock({
   },
 });
 registerValueShadows('world_extreme_actor', [
-  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+  {name: 'SOURCE', shadow: actorListShadow},
   {name: 'KEY', shadow: {type: 'math_number', fields: {NUM: 0}}},
 ]);
 
@@ -3653,7 +3691,7 @@ const worldOrderedActors = defineBlock({
   },
 });
 registerValueShadows('world_ordered_actors', [
-  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+  {name: 'SOURCE', shadow: actorListShadow},
   {name: 'KEY', shadow: {type: 'math_number', fields: {NUM: 0}}},
 ]);
 
