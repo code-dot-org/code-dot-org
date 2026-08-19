@@ -2,6 +2,7 @@ import io
 import wave
 
 import numpy as np
+import pytest
 
 from theater.support.audio import (
   AudioWriter,
@@ -37,6 +38,13 @@ def test_truncate_shortens_but_never_extends():
   samples = np.ones(SAMPLE_RATE)
   assert len(truncate_samples(samples, 0.5)) == SAMPLE_RATE // 2
   assert len(truncate_samples(samples, 2.0)) == SAMPLE_RATE
+
+
+@pytest.mark.parametrize("length_seconds", [0.0, -0.001, -1.0, -1e6])
+def test_truncate_never_trims_from_the_end(length_seconds):
+  # A negative length reaching numpy unclamped would slice off the tail and
+  # play most of the sample instead of none of it.
+  assert len(truncate_samples(np.ones(SAMPLE_RATE), length_seconds)) == 0
 
 
 def test_blend_adds_and_clamps():
