@@ -107,11 +107,23 @@ describe('any <kind>, anywhere else', () => {
     expect(code).toBe('world.actors.ofType("Coin")');
   });
 
-  it('falls back to the subject when it names nothing', () => {
-    // Nothing chosen, or a `define actor` deleted out from under it: better the
-    // block's own subject than a variable no line declares.
-    expect(emitValue({ACTOR: ''}).code).toBe('actor');
-    expect(emitValue({ACTOR: localActorValue('gone')}).code).toBe('actor');
+  it('names no actors at all when it names nothing', () => {
+    // Nothing chosen, or a `define actor` deleted out from under it. It used to
+    // fall back to the block's own subject here, which was defensible while
+    // this block was mostly a hat's subject — and became a trap the moment it
+    // was a list's default source: `for each actor ⟨each⟩ in ⟨any ⟨…⟩⟩` would
+    // run its body exactly once, on `actor`, and look like a loop while doing
+    // it. No actors is the bargain every other unfinished dropdown makes.
+    expect(emitValue({ACTOR: ''}).code).toBe('[]');
+    expect(emitValue({ACTOR: localActorValue('gone')}).code).toBe('[]');
+  });
+
+  it('still falls back to the subject on a hat', () => {
+    // Where the fallback was right and stays right: `when ⟨any …⟩ …` with no
+    // kind chosen is a handler on the actor the file is about, which is what a
+    // `.actor` file's hats mean anyway.
+    expect(emitSubject({ACTOR: ''}).code).toBe('actor');
+    expect(emitSubject({ACTOR: localActorValue('gone')}).code).toBe('actor');
   });
 });
 

@@ -321,6 +321,35 @@ nesting — a variable holding a filter would not fuse — so two programs that 
 the same would perform differently, and because an optimisation that lives in
 the runtime is one function rather than a peephole pass over the workspace.
 
+### What a source socket starts as
+
+`all actors` was the default for every list's source, and it was the default
+because it was the only list there was. It is almost never the list somebody
+wanted: a game asks about the coins, the enemies, the things it is touching.
+
+So the four blocks that TAKE a source — `for each`, `the actors … where`,
+`ordered by`, `with the least` — start as `any ⟨Coin ▾⟩` instead. The change is
+worth making because of what it costs to correct: a wrong dropdown is one click,
+a wrong block is a trip to the toolbox. `first actor in` and `take ⟨n⟩ of` keep
+`all actors`, because what goes in those is almost always another list block, so
+the shadow is replaced by a drag either way.
+
+**Except in a `.rule`**, where it stays `all actors`. A rule is generic over the
+actors that elect its traits — it says "everything with this trait", never
+"every Coin" — and the dropdown there would offer a rule author precisely the
+thing they must not name. A shadow may now be a FUNCTION of the block it is
+attached to (`blockly/valueShadow`), and this one asks the workspace whether a
+`world_rule` root is in it, the way `ownTraitOptions` asks about traits.
+
+This needed one fix first, and it is worth stating because it was nearly a
+silent one. `any ⟨kind⟩` with nothing chosen used to compile to `actor`, the
+block's own subject. That is right on a HAT — `when ⟨any …⟩ …` with no kind is a
+handler on the actor the file is about — and it is a trap in a list source: an
+untouched shadow would make `for each actor ⟨each⟩ in ⟨any ⟨…⟩⟩` run its body
+exactly once, on the subject, looking like a loop the whole time. Outside a
+hat's subject socket it now emits no actors, which is the bargain every other
+unfinished dropdown here makes.
+
 ### Plan
 
 1. ✅ **The engine's half.** `filtered`, `ordered`, `taken`, `firstOf`,
