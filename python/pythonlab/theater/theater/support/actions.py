@@ -2,13 +2,18 @@ from dataclasses import dataclass
 from enum import Enum, auto
 from typing import Optional
 
+import numpy as np
+
 from .color import Color
 from .font import Font, FontStyle
 from .image import Image
+from ..instrument import Instrument
 
 
 class SceneActionType(Enum):
   CLEAR_SCENE = auto()
+  PLAY_SOUND = auto()
+  PLAY_NOTE = auto()
   PAUSE = auto()
   DRAW_IMAGE = auto()
   DRAW_TEXT = auto()
@@ -28,6 +33,20 @@ UNSPECIFIED = -1
 class ClearScene:
   color: Color
   type: SceneActionType = SceneActionType.CLEAR_SCENE
+
+
+@dataclass
+class PlaySound:
+  samples: np.ndarray  # normalized float samples in [-1.0, 1.0]
+  type: SceneActionType = SceneActionType.PLAY_SOUND
+
+
+@dataclass
+class PlayNote:
+  instrument: Instrument
+  note: int
+  seconds: float
+  type: SceneActionType = SceneActionType.PLAY_NOTE
 
 
 @dataclass
