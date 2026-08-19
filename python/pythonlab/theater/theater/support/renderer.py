@@ -55,6 +55,17 @@ def render(actions):
   return gif_bytes, _render_audio(actions)
 
 
+def _pause_milliseconds(seconds):
+  """A pause in whole milliseconds, rounded to a centisecond.
+
+  A gif frame delay counts centiseconds and Pillow truncates whatever it is
+  handed down to that. Rounding here, and advancing the audio cursor by the
+  same figure, is what keeps sound and picture together: a 0.125 s pause is
+  0.12 s of video either way, so the error cannot accumulate.
+  """
+  return int(round(seconds * 100)) * 10
+
+
 def _frame_durations(actions):
   """Frame delays in milliseconds, ending with the closing frame's zero.
 
@@ -63,7 +74,7 @@ def _frame_durations(actions):
   before any drawing is done.
   """
   durations = [
-    int(round(action.seconds * 1000))
+    _pause_milliseconds(action.seconds)
     for action in actions
     if action.type is SceneActionType.PAUSE
   ]
@@ -86,7 +97,7 @@ def _audio_length_bound(actions):
   for action in actions:
     kind = action.type
     if kind is SceneActionType.PAUSE:
-      cursor += action.seconds
+      cursor += _pause_milliseconds(action.seconds) / 1000
     elif kind is SceneActionType.PLAY_SOUND:
       end = max(end, cursor + len(action.samples) / SAMPLE_RATE)
     elif kind is SceneActionType.PLAY_NOTE:
@@ -110,7 +121,7 @@ def _render_audio(actions):
       if samples is not None:
         audio.write_audio_samples(samples, action.seconds)
     elif kind is SceneActionType.PAUSE:
-      audio.add_delay(action.seconds)
+      audio.add_delay_milliseconds(_pause_milliseconds(action.seconds))
   return audio.to_wav_bytes()
 
 

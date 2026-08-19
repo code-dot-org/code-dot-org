@@ -1,3 +1,4 @@
+from functools import lru_cache
 from importlib.resources import files
 
 import numpy as np
@@ -15,12 +16,20 @@ _MU = 255.0
 
 _UPSAMPLE_FACTOR = SAMPLE_RATE // INSTRUMENT_SAMPLE_RATE
 
+# How many decoded notes to keep. Each costs about 1.1 MB of float64 samples,
+# and all 74 bundled notes would come to 84 MB, more than the audio timeline
+# they are blended onto is allowed to be. A melody rarely reaches for this many
+# distinct pitches, so in practice every repeat is a hit.
+_NOTE_CACHE_SIZE = 32
 
+
+@lru_cache(maxsize=_NOTE_CACHE_SIZE)
 def load_note_samples(instrument, note):
   """Return normalized mono samples for an instrument note, or None if unavailable.
 
   Missing samples return None rather than raising, which lets the caller skip
-  the note.
+  the note. A note repeated by a melody is decoded once and shared, so the
+  samples are handed back read-only.
   """
   prefix = _FILE_PREFIX.get(instrument)
   if prefix is None or note < MIN_NOTE or note > MAX_NOTE:
@@ -28,7 +37,9 @@ def load_note_samples(instrument, note):
   resource = files("theater").joinpath("instruments", f"{prefix}{note}.ulaw")
   if not resource.is_file():
     return None
-  return _decode(resource.read_bytes())
+  samples = _decode(resource.read_bytes())
+  samples.setflags(write=False)
+  return samples
 
 
 def _decode(data):

@@ -259,6 +259,33 @@ def test_pauses_accumulating_on_one_picture_raise():
     )
 
 
+def _gif_total_milliseconds(gif_bytes):
+  gif = PILImage.open(io.BytesIO(gif_bytes))
+  total = 0
+  for index in range(gif.n_frames):
+    gif.seek(index)
+    total += gif.info["duration"]
+  return total
+
+
+@pytest.mark.parametrize("seconds_each", [0.125, 60 / 140, 0.333])
+def test_audio_keeps_step_with_the_video(seconds_each):
+  # A gif delay is a whole centisecond, so a 0.125 s pause is 0.12 s of video.
+  # An audio cursor advancing by the exact seconds instead slid about 8 ms per
+  # note at a typical tempo, some seconds over a long melody.
+  scene = Scene()
+  for index in range(20):
+    scene.set_fill_color(theater.Color(index * 10, 0, 0))
+    scene.draw_rectangle(0, 0, 50, 50)
+    scene.pause(seconds_each)
+  # A single sample at the end, so the audio's length is the cursor itself.
+  scene.play_sound([1.0])
+  gif_bytes, wav = render(scene.get_actions())
+  cursor_samples = len(read_samples_from_wav_bytes(wav)) - 1
+  video_ms = _gif_total_milliseconds(gif_bytes)
+  assert cursor_samples == video_ms * SAMPLE_RATE // 1000
+
+
 def _scene_sounding_after(pause_seconds):
   """A scene whose one note lands after the given delay."""
   scene = Scene()
