@@ -33,7 +33,9 @@ class ContactRollupsV2
     if Rails.env.test?
       ActiveRecord::Base.transaction {ActiveRecord::Base.connection.exec_update(query)}
     else
-      DASHBOARD_DB_WRITER.transaction {DASHBOARD_DB_WRITER.execute_dui(query)}
+      # with_sql_update is the public API for running raw SQL and returning
+      # the affected-row count (execute_dui is adapter-internal).
+      DASHBOARD_DB_WRITER.transaction {DASHBOARD_DB_WRITER.dataset.with_sql_update(query)}
     end
   end
 
