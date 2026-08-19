@@ -182,3 +182,172 @@
   white-space: nowrap;
   color: var(--text-accent-pink-secondary);
 }
+
+// --- Work area (media stage) ---
+
+.projectRow {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+
+.mediaColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.mediaArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 0;
+  padding: 24px;
+}
+
+.whiteboardImage {
+  max-width: 854px;
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: var(--shape-md);
+}
+
+.storyVideo {
+  height: 100%;
+  max-height: 556px;
+  max-width: 100%;
+  border-radius: var(--shape-md);
+}
+
+.audioBar {
+  padding: 0 16px 16px;
+
+  audio {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Side panel with the typed explanation on whiteboard + text projects.
+.explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  width: 260px;
+  padding: 16px;
+  border-left: 1px solid var(--border-neutral-primary);
+  overflow-y: auto;
+}
+
+.explanationCard {
+  padding: 12px;
+  background-color: var(--background-neutral-secondary);
+  border-radius: var(--shape-md);
+  font-size: 12px;
+  line-height: 18px;
+  white-space: pre-wrap;
+
+  p {
+    margin: 0;
+  }
+}
+
+// --- Project details footer ---
+
+.detailsWrapper {
+  padding: 16px;
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+.detailsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+  background-color: var(--background-neutral-secondary);
+  border-radius: var(--shape-md);
+}
+
+.detailsMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailsMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.unitLabel {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-info-primary-fixed);
+}
+
+.tags {
+  display: flex;
+  gap: 4px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 6px;
+  border: 1px solid;
+  border-radius: var(--shape-sm);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.tagWarning {
+  background-color: var(--background-warning-light);
+  border-color: var(--border-warning-mid);
+  color: var(--text-warning-secondary);
+}
+
+.tagInfo {
+  background-color: var(--background-info-light);
+  border-color: var(--border-info-mid);
+  color: var(--text-info-secondary);
+}
+
+.tagSuccess {
+  background-color: var(--background-success-light);
+  border-color: var(--border-success-mid);
+  color: var(--text-success-secondary);
+}
+
+.tagOrange {
+  background-color: var(--background-accent-orange-light);
+  border-color: var(--border-accent-orange-mid);
+  color: var(--text-accent-orange-secondary);
+}
+
+.studentName {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-brand-secondary);
+}
+
+.projectPrompt {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-primary);
+}
