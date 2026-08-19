@@ -157,6 +157,17 @@ key` exists because "what changed this frame" is what a rule cannot work out
 - **A source is read once, at the top of the loop**, not watched: `any ⟨Coin⟩`
   as a loop's source is the coins there are when the loop starts, so a rule that
   spawns coins while iterating them terminates.
+
+  This was written as a decision before it was true of every source. `ofType`,
+  `inLayer` and `with` filtered into a new array from the start, but the plain
+  iterator handed back the live list's — and that is the one a loop over
+  `all actors` walks, since `actorSource` emits `world.actors` for it. Two
+  reachable failures, both fixed by copying there as well (`ActorCollection`): a
+  body that ADDS walks what it added and never returns, and a body that REMOVES
+  skips the next actor every time, because `removeActor` splices — so
+  `for each actor ⟨each⟩ in ⟨all actors⟩ do ⟨remove actor⟩` removed half of them
+  and said nothing. The second is what made the copy worth its cost.
+
 - **Order is the world's order** — the order actors were added, which is what
   `world.actors` already yields. Not sorted, not stable under removal; a rule
   that cares must sort, and there is no sort block yet.
