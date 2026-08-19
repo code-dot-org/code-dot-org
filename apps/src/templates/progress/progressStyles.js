@@ -45,6 +45,8 @@ export const marginTopBottom = margin => {
  * ======================================
  */
 
+// Dead: ProgressPill never spreads these for a multi-level pill and overrides
+// them with levelProgressStyle for a single-level one.
 export const hoverStyle = {
   ':hover': {
     textDecoration: 'none',
@@ -55,6 +57,26 @@ export const hoverStyle = {
   transition:
     'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
 };
+
+/**
+ * Maps our statuses onto the three base states the CADS bubble spec draws a
+ * hover for; the colors themselves live in styles.scss. `passed` counts as
+ * completed — the legend labels it "Completed (too many blocks)".
+ */
+const hoverClassByStatus = {
+  [LevelStatus.attempted]: 'hover-in-progress',
+  [LevelStatus.passed]: 'hover-completed',
+  [LevelStatus.perfect]: 'hover-completed',
+  [LevelStatus.submitted]: 'hover-completed',
+  [LevelStatus.free_play_complete]: 'hover-completed',
+  [LevelStatus.completed_assessment]: 'hover-completed',
+  [LevelStatus.review_accepted]: 'hover-completed',
+  [LevelStatus.review_rejected]: 'hover-rejected',
+};
+
+export function levelHoverClass(levelStatus) {
+  return hoverClassByStatus[levelStatus] || 'hover-not-started';
+}
 
 /**
  * ======================================

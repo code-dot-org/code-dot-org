@@ -4,9 +4,32 @@
       color 0.2s ease-out;
     &:hover {
       text-decoration: none;
+    }
+
+    // Per-state hover, per the CADS bubble spec. levelHoverClass picks the
+    // class; !important because the base fill and border arrive as inline
+    // styles from levelProgressStyle.
+    &.hover-not-started:hover {
+      border-color: var(--border-neutral-secondary) !important;
+      background-color: var(--background-neutral-tertiary) !important;
+    }
+
+    &.hover-in-progress:hover {
+      border-color: var(--border-success-strong) !important;
+      background-color: var(--background-success-light) !important;
+    }
+
+    &.hover-completed:hover {
       color: var(--text-neutral-inverse) !important;
-      border-color: var(--borders-brand-teal-primary) !important;
-      background-color: var(--background-brand-teal-primary) !important;
+      border-color: var(--background-success-strong) !important;
+      background-color: var(--background-success-strong) !important;
+    }
+
+    // Not in the spec; peer review rejection is the one red base state.
+    &.hover-rejected:hover {
+      color: var(--text-neutral-inverse) !important;
+      border-color: var(--background-error-strong) !important;
+      background-color: var(--background-error-strong) !important;
     }
   }
 }
