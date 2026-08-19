@@ -4,9 +4,9 @@
 # text, transcript, and whiteboard images) and the structured-output schema
 # the model must answer in.
 #
-# A rubric is stored on Challenge#rubric as JSON shaped like:
-#   {"criteria" => [{"key" => ..., "description" => ...,
-#                    "scale" => [{"level" => ..., "description" => ...}]}]}
+# A rubric is a single criterion, stored on Challenge#rubric as a list of
+# integer levels:
+#   [{"level" => 0, "description" => ...}, ...]
 module ChallengeEvaluationPromptHelper
   # The full messages array for the chat completions API: a system message
   # describing the evaluator role, challenge, and rubric, then a user message
@@ -22,7 +22,9 @@ module ChallengeEvaluationPromptHelper
     <<~PROMPT
       You are an experienced K-12 computer science teacher evaluating a student's response to a challenge question. The student may have answered in writing, by speaking (you will receive a transcript), by drawing on a whiteboard (you will receive images), or a combination of these.
 
-      Evaluate the response against each criterion of the rubric below. For each criterion, choose the scale level that best matches the student's work, and explain your reasoning with specific evidence from the response. Judge only what the student actually communicated; do not give credit for ideas that are not present. Use language appropriate for a teacher reviewing the evaluation.
+      Evaluate the response against the rubric below. Choose the level that best matches the student's work, and explain your reasoning with specific evidence from the response. Judge only what the student actually communicated; do not give credit for ideas that are not present. Use language appropriate for a teacher reviewing the evaluation.
+
+      Separately, write feedback addressed directly to the student: first describe what they did well, then what they could do to improve, grounded in the rubric. This feedback goes to the student, so never mention scores, levels, grades, or the rubric itself in it, and use encouraging language a K-12 student can understand.
 
       Challenge question:
       #{challenge.question}
@@ -47,18 +49,19 @@ module ChallengeEvaluationPromptHelper
     challenge_response.challenge_response_assets.select(&:asset_whiteboard_image?).each do |asset|
       next unless asset.uploaded?
       bytes = asset.download_bytes
-      data_uri = "data:#{image_content_type(bytes)};base64,#{Base64.strict_encode64(bytes)}"
+      # Whiteboard images are always PNG (enforced at upload time).
+      data_uri = "data:image/png;base64,#{Base64.strict_encode64(bytes)}"
       content << {type: 'image_url', image_url: {url: data_uri}}
     end
     content
   end
 
-  # The response_format param forcing the model to return one evaluation per
-  # rubric criterion. The criterion keys are baked into the schema as an enum
-  # so the model cannot skip or invent criteria.
+  # The response_format param forcing the model to return one evaluation
+  # against the rubric. The rubric's integer levels are baked into the
+  # schema as an enum so the model cannot invent a level.
   def self.response_format(challenge)
-    keys = criteria(challenge.rubric).map {|criterion| criterion['key']}
-    raise ArgumentError, "challenge #{challenge.id} has no rubric criteria" if keys.empty?
+    levels = (challenge.rubric || []).map {|entry| entry['level']}
+    raise ArgumentError, "challenge #{challenge.id} has no rubric levels" if levels.empty?
     {
       type: 'json_schema',
       json_schema: {
@@ -67,48 +70,22 @@ module ChallengeEvaluationPromptHelper
         schema: {
           type: 'object',
           properties: {
-            evaluations: {
-              type: 'array',
-              items: {
-                type: 'object',
-                properties: {
-                  key: {type: 'string', enum: keys},
-                  level: {type: 'string'},
-                  reasoning: {type: 'string'},
-                  evidence: {type: 'string'},
-                },
-                required: %w[key level reasoning evidence],
-                additionalProperties: false,
-              },
-            },
-            overall_feedback: {type: 'string'},
+            level: {type: 'integer', enum: levels},
+            reasoning: {type: 'string'},
+            evidence: {type: 'string'},
+            student_feedback: {type: 'string'},
           },
-          required: %w[evaluations overall_feedback],
+          required: %w[level reasoning evidence student_feedback],
           additionalProperties: false,
         },
       },
     }
   end
 
-  def self.criteria(rubric)
-    (rubric || {}).fetch('criteria', [])
-  end
-
-  # Renders the rubric criteria and their scale levels as an indented list.
+  # Renders the rubric's levels as a list.
   def self.rubric_text(rubric)
-    criteria(rubric).map do |criterion|
-      lines = ["- #{criterion['key']}: #{criterion['description']}"]
-      (criterion['scale'] || []).each do |level|
-        lines << "  - #{level['level']}: #{level['description']}"
-      end
-      lines.join("\n")
+    (rubric || []).map do |entry|
+      "- Level #{entry['level']}: #{entry['description']}"
     end.join("\n")
-  end
-
-  # Whiteboard images are PNG or JPEG (enforced at upload time), so the
-  # content type is recoverable from the magic bytes; S3 object metadata is
-  # not consulted.
-  def self.image_content_type(bytes)
-    bytes.start_with?("\x89PNG".b) ? 'image/png' : 'image/jpeg'
   end
 end

@@ -137,22 +137,26 @@ class LevelGroup < DSLDefined
   # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
   def update_levels_and_texts_by_page(new_levels_and_texts_by_page)
     reload
-    self.child_levels = []
-    new_levels = new_levels_and_texts_by_page.flatten
-    new_levels.each_with_index do |level, level_index|
-      ParentLevelsChildLevel.find_or_create_by!(
-        parent_level: self,
-        child_level: level,
-        position: level_index + 1
-      )
-    end
+    # Use a transaction so that the database is not modified if any child level
+    # validations fail. requires_new is necessary to ensure that the database is
+    # restored to its original state when running inside of another transaction.
+    transaction(requires_new: true) do
+      self.child_levels = []
+      new_levels_and_texts_by_page.flatten.each_with_index do |level, level_index|
+        ParentLevelsChildLevel.find_or_create_by!(
+          parent_level: self,
+          child_level: level,
+          position: level_index + 1
+        )
+      end
 
-    self.levels_and_texts_per_page = []
-    @pages = nil
-    new_levels_and_texts_by_page.each do |levels_and_texts_by_page|
-      levels_and_texts_per_page.push(levels_and_texts_by_page.count)
+      self.levels_and_texts_per_page = []
+      @pages = nil
+      new_levels_and_texts_by_page.each do |levels_and_texts_by_page|
+        levels_and_texts_per_page.push(levels_and_texts_by_page.count)
+      end
+      save!
     end
-    save!
   end
 
   def get_levels_and_texts_by_page

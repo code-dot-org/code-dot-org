@@ -32,6 +32,7 @@ interface SectionPodcastCardProps {
   avatarEmoji: number;
   // undefined = suggested_lessons fetch still in flight
   lesson: SuggestedLesson | null | undefined;
+  onSectionClick?: () => void;
 }
 
 const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
@@ -39,6 +40,7 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
   avatarColor,
   avatarEmoji,
   lesson,
+  onSectionClick,
 }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -89,25 +91,38 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
   // so there is no layout shift when audio becomes ready.
   const hasPodcast = !!lesson?.podcast_url;
 
+  const sectionRowInner = (
+    <>
+      <SectionAvatar color={avatarColor} emoji={avatarEmoji} size="xs" />
+      <div className={styles.sectionInfo}>
+        <span className={styles.sectionName}>{sectionName}</span>
+        {lesson?.completed_unit ? (
+          <span className={styles.lessonName}>
+            Your students are finishing this unit! Consider assigning a new one.
+          </span>
+        ) : (
+          lesson?.name && (
+            <span className={styles.lessonName}>{lesson.name}</span>
+          )
+        )}
+      </div>
+      <FontAwesomeV6Icon iconName="chevron-right" />
+    </>
+  );
+
   return (
     <div className={styles.sectionGroup}>
-      <div className={styles.sectionRow}>
-        <SectionAvatar color={avatarColor} emoji={avatarEmoji} size="xs" />
-        <div className={styles.sectionInfo}>
-          <span className={styles.sectionName}>{sectionName}</span>
-          {lesson?.completed_unit ? (
-            <span className={styles.lessonName}>
-              Your students are finishing this unit! Consider assigning a new
-              one.
-            </span>
-          ) : (
-            lesson?.name && (
-              <span className={styles.lessonName}>{lesson.name}</span>
-            )
-          )}
-        </div>
-        <FontAwesomeV6Icon iconName="chevron-right" />
-      </div>
+      {onSectionClick ? (
+        <button
+          type="button"
+          className={styles.sectionRow}
+          onClick={onSectionClick}
+        >
+          {sectionRowInner}
+        </button>
+      ) : (
+        <div className={styles.sectionRow}>{sectionRowInner}</div>
+      )}
       {hasPodcast && (
         <div className={styles.podcastRow}>
           <button

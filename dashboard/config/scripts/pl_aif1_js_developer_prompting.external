@@ -1,0 +1,24 @@
+name 'pl-aif1-js-developer-prompting'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Prompt Like a Developer</h1>
+
+You already know a strong prompt needs a Task, Context, Tone/Format, and Details. 
+
+Professional developers add three more habits on top of that they: 
+- state their goals clearly
+- define the constraints up front
+- think through edge cases
+
+Below are three of those habits, each with two real prompts side by side. Click through both and see what separates a prompt that gets a usable first draft from one that leaves too much to guesswork.
+
+--- 
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/prompt-like-a-developer.html" width="100%" height="820" style="border:none;" title="Explore the Parts of a Web Page: an interactive planets site"></iframe>
+</div>
+
+---
+MARKDOWN

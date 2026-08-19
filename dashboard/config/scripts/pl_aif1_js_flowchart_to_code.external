@@ -1,0 +1,17 @@
+name 'pl-aif1-js-flowchart-to-code'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>From Flowchart to Code: The Temperature App</h1>
+
+<p>You've seen the flowchart shapes, and you've seen a conditional statement written out. Now watch them line up, piece by piece, in a real working app: a slider that decides what message and color to show based on temperature.</p>
+
+---
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/flowchart-to-code.html" width="100%" height="900" style="border:none;" title="From Flowchart to Code: the temperature app"></iframe>
+</div>
+
+---
+MARKDOWN

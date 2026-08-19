@@ -3,14 +3,14 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Every Section of a Page Has a Job<
+# Every Section of a Page Has a Job
 
 The four sections you just started noticing, nav bar, hero, gallery cards, footer, aren't just visual habit. Each one exists because it solves a specific problem for the person using the page: where do I go, what is this, what are my options, how do I get help. When a page feels easy to use, it's usually because someone made those decisions on purpose, not because it happened to look nice.
 
 That's the mindset worth passing on to your students. When AI generates a layout for them, or when they're deciding where to put something themselves, the question isn't "does this look right," it's "what is this section supposed to do for the person looking at it." In the activity below, you'll work through each section yourself and pin down exactly what job it's doing.
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/planets-site-explorer.html" width="100%" height="820" style="border:none;" title="Explore the Parts of a Web Page: an interactive planets site"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/planets-site-explorer-v3.html" width="100%" height="1020" style="border:none;" title="Explore the Parts of a Web Page: an interactive planets site"></iframe>
 </div>
 
 MARKDOWN

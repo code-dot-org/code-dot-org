@@ -1,16 +1,16 @@
 # Acceptable RGB values for the DSCO semantic tokens that paint progress
-# bubbles, as they resolve under the codeai-next brand (the default-brand
-# fallback — see lib/cdo/brand.rb). Tokens resolve differently in the Light vs
+# bubbles, as they resolve under the codeai-next brand (the default — see
+# lib/cdo/brand.rb). Tokens resolve differently in the Light vs
 # Dark theme — Lab2 wraps its content in `<div data-theme="Dark">` so any bubble
 # shown inside a Lab2 page paints with the Dark-theme values — so each status
 # lists Light first, then Dark where the two differ.
 #
-# These are literals, so they only hold for the current default brand: setting
-# default-brand back to codeai moves every one of them.
+# These are literals, so they only hold for the current default brand: a
+# future default swap moves every one of them.
 #
 # Sources (frontend/packages/component-library-styles):
 #   brandCodeAiNext.css        canonical CADS tokens, [data-brand='codeai-next']
-#   brandCodeAiNextAliases.css legacy token names mapped onto CADS values
+#   brandLegacyAliases.css     legacy token names mapped onto CADS values
 def color_strings(key)
   {
     # --background-success-primary (sentiment-success-70 in both themes), which
@@ -23,10 +23,7 @@ def color_strings(key)
     # --background-neutral-primary (white Light, neutral-base-black Dark)
     not_tried: ['rgb(255, 255, 255)', 'rgb(18, 18, 18)'],
     # --borders-neutral-primary
-    lighter_gray: ['rgb(211, 214, 218)', 'rgb(75, 82, 88)'],
-    # --background-brand-purple-primary / --borders-brand-purple-primary, which
-    # collapse to one value in both themes under this brand.
-    assessment: ['rgb(76, 66, 207)']
+    lighter_gray: ['rgb(211, 214, 218)', 'rgb(75, 82, 88)']
   }[key.to_sym]
 end
 
@@ -46,12 +43,20 @@ def verify_progress(selector, test_result)
   when 'not_tried'
     background_colors = color_strings('not_tried')
     border_colors = color_strings('lighter_gray')
+  # Assessment levels are no longer color-coded (they used to paint purple);
+  # they are denoted by a star instead, and take the same status colors as
+  # any other level.
   when 'perfect_assessment'
-    background_colors = color_strings('assessment')
-    border_colors = color_strings('assessment')
+    background_colors = color_strings('perfect')
+    border_colors = color_strings('perfect')
   when 'attempted_assessment'
     background_colors = color_strings('not_tried')
-    border_colors = color_strings('assessment')
+    border_colors = color_strings('perfect')
+  when 'attempted_assessment_dot'
+    # Small (dot) assessment bubbles drop status coloring until completed,
+    # so a started-but-not-completed one keeps the not_tried gray outline.
+    background_colors = color_strings('not_tried')
+    border_colors = color_strings('lighter_gray')
   end
 
   steps %{

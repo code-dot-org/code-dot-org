@@ -1,13 +1,29 @@
 import TextField from '@code-dot-org/component-library/textField';
-import {Box, Button as MuiButton} from '@mui/material';
+import {
+  Box,
+  Button as MuiButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {
+  isAbsoluteImageUrl,
+  moderateApplabImageUrl,
+} from '@cdo/apps/applab/imageUrlModeration';
+import {isBlockedDataUrl} from '@cdo/apps/applab/imageUrlUtils';
 import commonMsg from '@cdo/locale';
 
 import {getStore} from '../../redux';
+import {
+  DATA_URL_NOT_ALLOWED_MESSAGE,
+  FLAGGED_IMAGE_URL_MESSAGE,
+  IMAGE_MODERATION_ERROR_MESSAGE,
+} from '../constants';
 
 import * as rowStyle from './rowStyle';
+
+import styles from './image-picker-property-row.module.scss';
 
 // We'd prefer not to make GET requests every time someone types a character.
 // This is the amount of time that must pass between edits before we'll do a GET
@@ -34,9 +50,13 @@ export default class ImagePickerPropertyRow extends React.Component {
   }
 
   state = {
+    errorMessage: null,
     value: this.props.initialValue,
     lastEdit: 0,
   };
+
+  // Tracks the latest moderation request so older responses are ignored.
+  moderationRequestId = 0;
 
   changeUnlessEditing(filename) {
     if (Date.now() - this.state.lastEdit >= USER_INPUT_DELAY) {
@@ -78,12 +98,54 @@ export default class ImagePickerPropertyRow extends React.Component {
   };
 
   changeImage = (filename, timestamp) => {
+    this.changeImageInternal(filename, timestamp);
+  };
+
+  changeImageInternal = async (filename, timestamp) => {
+    if (!timestamp && isBlockedDataUrl(filename)) {
+      if (this.isMounted_) {
+        this.setState({errorMessage: DATA_URL_NOT_ALLOWED_MESSAGE});
+      }
+      return;
+    }
+
+    // Moderate only manual absolute URL entry; picker callbacks include a
+    // timestamp and URL-picker flows have already moderated absolute URLs.
+    if (!timestamp && isAbsoluteImageUrl(filename)) {
+      const requestId = ++this.moderationRequestId;
+      const {status, normalizedUrl} = await moderateApplabImageUrl(filename);
+
+      if (requestId !== this.moderationRequestId) {
+        return;
+      }
+
+      if (status === 'flagged') {
+        if (this.isMounted_) {
+          this.setState({errorMessage: FLAGGED_IMAGE_URL_MESSAGE});
+        }
+        return;
+      }
+
+      if (status === 'error') {
+        if (this.isMounted_) {
+          this.setState({errorMessage: IMAGE_MODERATION_ERROR_MESSAGE});
+        }
+        return;
+      }
+
+      this.props.handleChange(normalizedUrl, timestamp);
+      if (this.isMounted_) {
+        this.setState({value: normalizedUrl, errorMessage: null});
+      }
+      return;
+    }
+
     this.props.handleChange(filename, timestamp);
     // Because we delay the call to this function via setTimeout, we must be sure not
     // to call setState after the component is unmounted, or React will warn and
     // tests will fail.
     if (this.isMounted_) {
-      this.setState({value: filename});
+      this.setState({value: filename, errorMessage: null});
     }
   };
 
@@ -121,6 +183,17 @@ export default class ImagePickerPropertyRow extends React.Component {
             {commonMsg.choosePrefix()}
           </MuiButton>
         </Box>
+        {this.state.errorMessage && (
+          <MuiTypography
+            className={styles.errorMessage}
+            role="alert"
+            variant="body2"
+            component="div"
+            sx={{color: 'var(--text-error-primary)'}}
+          >
+            {this.state.errorMessage}
+          </MuiTypography>
+        )}
       </Box>
     );
   }

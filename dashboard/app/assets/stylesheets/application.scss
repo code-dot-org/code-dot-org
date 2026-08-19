@@ -1729,11 +1729,11 @@ body.iframe_embed_app_and_code {
   .video_link {
     display: inline-block;
     margin: 6px 0;
-    color: $brand_secondary_default;
+    color: var(--text-brand-purple-primary);
     text-decoration: underline;
 
     &:hover {
-      color: $brand_secondary_dark;
+      color: var(--text-brand-purple-secondary);
     }
   }
 
@@ -1771,7 +1771,7 @@ body.iframe_embed_app_and_code {
     padding: 0;
   }
   .ui-tabs-nav {
-    background: $light_gray;
+    background: var(--background-neutral-primary);
 
     li {
       border-top-right-radius: 4px;
@@ -1781,17 +1781,17 @@ body.iframe_embed_app_and_code {
       margin-bottom: 2px;
 
       a {
-        background: $brand_secondary_default;
-        border: 2px solid $brand_secondary_default;
+        background: var(--background-brand-purple-primary);
+        border: 2px solid var(--borders-brand-purple-primary);
         border-radius: 6px;
-        color: $neutral_white;
+        color: var(--text-neutral-white-fixed);
         @include main-font-semi-bold;
         cursor: pointer !important;
 
         &:hover {
-          background-color: $brand_secondary_dark;
-          border-color: $brand_secondary_dark;
-          color: $neutral_white;
+          background-color: var(--background-brand-purple-strong);
+          border-color: var(--borders-brand-purple-strong);
+          color: var(--text-neutral-white-fixed);
         }
         &:focus {
           outline: 0;
@@ -1805,13 +1805,13 @@ body.iframe_embed_app_and_code {
 
     li.ui-state-active {
       a {
-        background: $neutral_white;
-        color: $neutral_dark;
-        border: 2px solid $neutral_dark;
+        background: var(--background-neutral-primary);
+        color: var(--text-neutral-primary);
+        border: 2px solid var(--borders-neutral-solid);
 
         &:hover {
-          color: $neutral_dark;
-          background-color: $neutral_dark20;
+          color: var(--text-neutral-primary);
+          background-color: var(--background-neutral-quaternary);
         }
       }
     }
@@ -1991,14 +1991,14 @@ a.download-video {
   width: 44px;
   height: 38px;
   font-size: 28px;
-  background-color: $neutral_white;
-  color: $neutral_dark;
-  border: 2px solid $neutral_dark;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 2px solid var(--borders-neutral-solid);
   padding: 0;
   line-height: 36px;
 
   &:hover {
-    background: $neutral_dark20;
+    background: var(--background-neutral-quaternary);
   }
 
   img {
@@ -3565,12 +3565,6 @@ $modal-no-icon-gap: 22px;
       color: var(--text-neutral-primary);
     }
 
-    .instructions-markdown p {
-      line-height: 25px;
-      font-size: 16px;
-      color: $neutral_dark;
-    }
-
     .instructions2 {
       font-size: 18px;
       color: $charcoal;
@@ -3779,17 +3773,6 @@ h5.dialog-title {
 }
 
 .csf-top-instructions, .instructions-markdown {
-  p {
-    line-height: 25px;
-    font-size: 16px;
-    color: $black;
-  }
-
-  .secondary-instructions p {
-    font-size: 14px;
-    color: $charcoal;
-  }
-
   strong {
     @include main-font-semi-bold;
   }

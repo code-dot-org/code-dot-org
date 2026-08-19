@@ -507,6 +507,7 @@ en:
       poetry_hoc: 'Poem Art'
       pythonlab: 'Python Lab'
       scratch: 'Scratch'
+      sketchlab: 'Sketch Lab'
       sports: 'Sports'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
@@ -1436,7 +1437,6 @@ en:
   behaviors:
     this_sprite: "this sprite"
   unit_prefix: "Unit %{n}"
-  code_org_logo_alt: "Code.org Home"
   codeai_logo_alt: "CodeAI Home"
   teacher_feedback: "Teacher Feedback"
   lesson_lock:

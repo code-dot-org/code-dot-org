@@ -7,13 +7,13 @@ import type {
 import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 
 import AppLabIcon from '@/config/brand/assets/courses/app-lab-icon.webp';
-import ArtistIcon from '@/config/brand/assets/courses/artist-icon.webp';
 import DanceIcon from '@/config/brand/assets/courses/dance-party-icon.webp';
 import GameLabIcon from '@/config/brand/assets/courses/game-lab-icon.webp';
 import AllProjectsIcon from '@/config/brand/assets/courses/header-all-projects-icon.webp';
 import MusicDanceAiIcon from '@/config/brand/assets/courses/music-dance-ai-icon.webp';
 import MusicLabIcon from '@/config/brand/assets/courses/music-lab-icon.webp';
 import PythonLabIcon from '@/config/brand/assets/courses/python-lab-icon.webp';
+import SketchLabIcon from '@/config/brand/assets/courses/sketch-lab-icon.webp';
 import SpriteLabIcon from '@/config/brand/assets/courses/sprite-lab-icon.webp';
 import WebLab2Icon from '@/config/brand/assets/courses/weblab2-icon.webp';
 import CodeAILogo from '@/config/brand/assets/logo-codeai-inverse.svg';
@@ -80,6 +80,12 @@ export function buildCreateMenuItems(): CreateMenuItem[] {
       iconUrl: GameLabIcon,
     },
     {
+      id: 'sketchlab',
+      label: 'Sketch Lab',
+      href: '/projects/sketchlab/new',
+      iconUrl: SketchLabIcon,
+    },
+    {
       id: 'weblab2',
       label: 'Web Lab (New)',
       href: '/projects/weblab2/new',
@@ -96,12 +102,6 @@ export function buildCreateMenuItems(): CreateMenuItem[] {
       label: 'Python Lab',
       href: '/projects/pythonlab/new',
       iconUrl: PythonLabIcon,
-    },
-    {
-      id: 'artist',
-      label: 'Artist',
-      href: '/projects/artist/new',
-      iconUrl: ArtistIcon,
     },
     {
       id: 'dance',

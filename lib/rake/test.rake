@@ -125,51 +125,19 @@ namespace :test do
     Lighthouse.report CDO.studio_url('')
   end
 
-  # Non-blocking: a failure is reported to Slack but never fails the deploy or PR build.
+  # A failure stops the Drone PR build (lib/rake/ci.rake) and the DTT (ui_all).
   timed_task_with_logging :playwright_ui do
-    target_url = ENV['TARGET_URL'].presence || CDO.studio_url('')
-    e2e_dir = frontend_dir('packages', 'e2e-tests')
-    script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
+    raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional)
+  end
 
-    # Lane for the config's PLAYWRIGHT_PROVIDER; GHA sets its own and skips this task.
-    provider =
-      if CDO.test_system?            then 'dtt'
-      elsif CI::Utils.running_on_ci? then 'drone'
-      end
-
-    # Link the report up front — the key is stable, so it resolves once this run ends.
-    pending_report = Cdo::PlaywrightReport.index_url
-    start_message = "Starting <b>dashboard</b> Playwright e2e tests against #{target_url}."
-    start_message += %( The <a href="#{pending_report}">HTML report</a> publishes here when the run finishes.) if pending_report
-    ChatClient.log start_message
-
-    # Stream the suite's output (the list reporter, banner, warnings) straight to
-    # the log via system_stream_output (system_with_chat_logging would capture and
-    # discard it). Rescue its non-zero raise so the run stays non-blocking.
-    start_time = Time.now
-    passed =
-      begin
-        env_prefix = ["TARGET_URL=#{target_url}"]
-        env_prefix << "PLAYWRIGHT_PROVIDER=#{provider}" if provider
-        RakeUtils.system_stream_output(*env_prefix, script)
-        true
-      rescue StandardError
-        false
-      end
-    duration = Time.now - start_time
-
-    report_url = Cdo::PlaywrightReport.upload(File.join(e2e_dir, 'playwright-report'))
-    summary = playwright_results_summary(File.join(e2e_dir, 'test-results', 'results.json'))
-
-    playwright_pass_fail_line = playwright_pass_fail_summary(summary, duration)
-    PLAYWRIGHT_ROLLUP[:line] = playwright_rollup_line(passed, playwright_pass_fail_line, report_url)
-
-    status = passed ? '<b>✅ PASSED</b>' : '<b>❌ FAILED</b> (non-blocking)'
-    report = "Playwright e2e tests for <b>dashboard</b>: #{status}\n"
-    report += playwright_pass_fail_line
-    # This run's report by version, since the key itself holds only the latest.
-    report += %(\nSee <a href="#{report_url}">the HTML report</a> for this run, or the <a href="#{pending_report}">latest</a>.) if report_url
-    ChatClient.log report, color: (passed ? 'green' : 'red')
+  # Never stops a build. A person approves each new image in Applitools.
+  # Only Drone calls this. The DTT daemon has no Applitools key.
+  timed_task_with_logging :playwright_eyes do
+    unless ENV['VISUAL_PROVIDER'].present?
+      ChatClient.log 'Playwright Eyes e2e tests: skipped, VISUAL_PROVIDER is unset.'
+      next
+    end
+    run_playwright_suite(:eyes)
   end
 
   # Dispatch the dtt.yml Playwright run on GitHub Actions (ref: test), moving e2e
@@ -185,8 +153,7 @@ namespace :test do
   end
 
   # Run the deploy-time UI suites in parallel. If one suite raises, allow the
-  # others to complete, then make sure this task raises. :playwright_ui rescues
-  # its own failure, so it never makes ui_all raise.
+  # others to complete, then make sure this task raises.
   #
   # The GHA run is dispatched first because from the ensure block its ~18
   # minutes straddled the next deploy's Puma restart, which is where its 502s
@@ -632,29 +599,77 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   docker/ci/**/*
 )
 
+PLAYWRIGHT_SUITES = {functional: 'Playwright', eyes: 'Playwright Eyes'}.freeze
+
 # The suites test:ui_all dispatches, and the names its rollup gives them.
 UI_SUITES = {
   eyes_ui: 'Eyes',
   saucelabs_ui: 'Safari + iPad + iPhone UI',
   devicefarm_desktop_ui: 'Chrome + Firefox UI',
-  playwright_ui: 'Playwright',
+  playwright_ui: PLAYWRIGHT_SUITES.fetch(:functional),
 }.freeze
 
-# :playwright_ui never raises, being non-blocking, so ui_all_rollup cannot read
-# its outcome from an exception like the others. It leaves its line here.
+# An exception cannot carry the test counts and the report link.
 PLAYWRIGHT_ROLLUP = {}
 
-def playwright_rollup_line(passed, pass_fail_line, report_url)
-  line = "#{passed ? '✅' : '❌'} #{UI_SUITES[:playwright_ui]} (non-blocking): #{pass_fail_line}"
-  line += %( <a href="#{report_url}">HTML report</a>.) if report_url
-  line
+# Never raises. The caller decides if a failure stops the build.
+def run_playwright_suite(suite)
+  label = PLAYWRIGHT_SUITES.fetch(suite)
+  # Both suites run in one directory. Equal names would lose the first report.
+  suffix = suite == :eyes ? '-eyes' : ''
+  target_url = ENV['TARGET_URL'].presence || CDO.studio_url('')
+  e2e_dir = frontend_dir('packages', 'e2e-tests')
+  script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
+
+  # GitHub Actions sets its own PLAYWRIGHT_PROVIDER and skips this task.
+  provider =
+    if CDO.test_system?            then 'dtt'
+    elsif CI::Utils.running_on_ci? then 'drone'
+    end
+
+  # The key does not change, so this link works when the run ends.
+  pending_report = Cdo::PlaywrightReport.index_url(name: "playwright#{suffix}")
+  start_message = "Starting <b>dashboard</b> #{label} e2e tests against #{target_url}."
+  start_message += %( The <a href="#{pending_report}">HTML report</a> publishes here when the run finishes.) if pending_report
+  ChatClient.log start_message
+
+  # system_with_chat_logging would hide the output. This method must not raise.
+  start_time = Time.now
+  passed =
+    begin
+      env_prefix = ["TARGET_URL=#{target_url}"]
+      env_prefix << "PLAYWRIGHT_PROVIDER=#{provider}" if provider
+      RakeUtils.system_stream_output(*env_prefix, script, suite.to_s)
+      true
+    rescue StandardError
+      false
+    end
+  duration = Time.now - start_time
+
+  report_url = Cdo::PlaywrightReport.upload(File.join(e2e_dir, "playwright-report#{suffix}"), name: "playwright#{suffix}")
+  summary = playwright_results_summary(File.join(e2e_dir, "test-results#{suffix}", 'results.json'))
+
+  pass_fail_line = playwright_pass_fail_summary(summary, duration)
+  qualifier = suite == :eyes ? ' (warning only)' : ''
+
+  rollup = "#{passed ? '✅' : '❌'} #{label}#{qualifier}: #{pass_fail_line}"
+  rollup += %( <a href="#{report_url}">HTML report</a>.) if report_url
+  PLAYWRIGHT_ROLLUP[suite] = rollup
+
+  status = passed ? '<b>✅ PASSED</b>' : "<b>❌ FAILED</b>#{qualifier}"
+  report = "#{label} e2e tests for <b>dashboard</b>: #{status}\n"
+  report += pass_fail_line
+  report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
+  ChatClient.log report, color: (passed ? 'green' : 'red')
+
+  passed
 end
 
 # The suites report minutes apart and interleaved with everything else in the
 # room, so this is the only place the whole deploy window can be read at once.
 def ui_all_rollup(failures)
   lines = UI_SUITES.map do |target, label|
-    next PLAYWRIGHT_ROLLUP[:line] if target == :playwright_ui && PLAYWRIGHT_ROLLUP[:line]
+    next PLAYWRIGHT_ROLLUP[:functional] if target == :playwright_ui && PLAYWRIGHT_ROLLUP[:functional]
     failures[target] ? "❌ #{label}: #{failures[target].message}." : "✅ #{label}: passed."
   end
   ['Deploy-time UI suites:', *lines].join("\n")

@@ -13,10 +13,11 @@ RAILS_ENV:
 dnsName: studio-development
 dashboard_workers: 0
 
-# Keep the existing full-dashboard default while introducing the ActiveJob
-# worker. Backend-only deployments disable the dashboard explicitly.
+# The chart defaults to a backend-only deployment (ActiveJob worker, no
+# dashboard frontend). Stack dashboard.values.yaml (the Skaffold `dashboard`
+# profile does this) to add the dashboard Deployment/Service/Ingress.
 dashboard:
-  enabled: true
+  enabled: false
 
 locals.yml:
   # For example:

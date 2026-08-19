@@ -9,6 +9,8 @@ import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import shapes from './shapes';
 
+import styles from './see-more-courses.module.scss';
+
 // This component - used on the teacher and student homepages -
 // shows a button to view more courses if the user has more than a few courses.
 // Students and teachers will see up to 5 courses, with their most recent as a
@@ -36,29 +38,28 @@ export default class SeeMoreCourses extends Component {
       <div>
         {this.state.open && courses && (
           <ContentContainer heading="" linkText="" link="" showLink={false}>
-            {courses.map((course, index) => (
-              <div key={index}>
+            <div className={styles.courseCards}>
+              {courses.map((course, index) => (
                 <CourseCard
+                  key={index}
                   title={course.title}
                   description={course.description}
                   link={course.link}
                   isProfessionalLearningCourse={isProfessionalLearningCourse}
                 />
-                {index % 2 === 0 && <div style={styles.spacer}>.</div>}
-              </div>
-            ))}
+              ))}
+            </div>
           </ContentContainer>
         )}
         {!this.state.open && (
-          <div style={styles.viewMoreContainer}>
+          <div className={styles.viewMoreContainer}>
             <MuiButton
               onClick={this.showMoreCourses.bind(this)}
               variant="outlined"
               color="tertiary"
               size="small"
               startIcon={<i className="fa fa-caret-down" />}
-              style={styles.button}
-              className="ui-test-view-more-courses"
+              className={`${styles.button} ui-test-view-more-courses`}
             >
               {i18n.viewMore()}
             </MuiButton>
@@ -68,20 +69,3 @@ export default class SeeMoreCourses extends Component {
     );
   }
 }
-
-const styles = {
-  viewMoreContainer: {
-    display: 'flex',
-    justifyContent: 'end',
-  },
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: 'transparent',
-  },
-  button: {
-    float: 'right',
-    margin: 0,
-    marginBottom: 20,
-  },
-};

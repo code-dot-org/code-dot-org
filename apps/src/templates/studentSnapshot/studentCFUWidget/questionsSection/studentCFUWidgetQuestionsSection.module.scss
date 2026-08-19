@@ -90,6 +90,7 @@
       justify-content: flex-end;
       align-items: center;
       gap: 0.25rem;
+      color: var(--text-neutral-secondary, #69788A);
 
       .cfuQuestionRightPartAiInsightIcon {
         color: var(--background-brand-aqua-strong);
@@ -97,36 +98,56 @@
 
       .cfuStatusBucketTags-correct {
         > div {
-            background: var(--background-success-light, #C7ECC6);
+          // styles overridden because DSCO Tags component does not have colors prop yet.
+          background: var(--background-success-light, #C7ECC6);
+          border-color: var(--border-success-mid, #7CDB87);
+          span {
+            color: var(--text-success-secondary, #17541E);
+          }
           i {
-            color: var(--sentiment-success-50, #3EA33E);
+            color: var(--text-success-secondary, #17541E);
           }
         }
       }
 
       .cfuStatusBucketTags-partially_correct {
         > div {
-          background: var(--background-warning-light, #FEF8C3);
+          // styles overridden because DSCO Tags component does not have colors prop yet.
+          background: var(--background-warning-light, #FFF5DA);
+          border-color: var(--border-warning-mid, #FFD35C);
+          span {
+            color: var(--text-warning-secondary, #885D02);
+          }
           i {
-            color: var(--accent-orange-70, #D68A00);
+            color: var(--text-warning-secondary, #885D02);
           }
         }
       }
 
       .cfuStatusBucketTags-incorrect {
         > div {
-          background: var(--background-error-light, #FFBFB6);
+          // styles overridden because DSCO Tags component does not have colors prop yet.
+          background: var(--background-error-light, #FFDADA);
+          border-color: var(--border-error-mid, #F69898);
+          span {
+            color: var(--text-error-secondary, #B30F0F);
+          }
           i {
-            color: var(--sentiment-error-50, #E02D16);
+            color: var(--text-error-secondary, #B30F0F);
           }
         }
       }
 
       .cfuStatusBucketTags-incomplete {
         > div {
-          background: var(--background-neutral-tertiary, #DFE3E9);
+          // styles overridden because DSCO Tags component does not have colors prop yet.
+          background: var(--background-neutral-tertiary, #E1E3E6);
+          border-color: var(--border-neutral-secondary, #9EA5AD);
+          span {
+            color: var(--text-neutral-secondary, #363B40);
+          }
           i {
-            color: var(--neutral-gray-80, #69788A);
+            color: var(--text-neutral-secondary, #363B40);
           }
         }
       }

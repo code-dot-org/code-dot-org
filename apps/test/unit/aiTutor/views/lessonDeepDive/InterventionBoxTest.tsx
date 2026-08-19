@@ -26,10 +26,10 @@ jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/PodcastsBox',
   () => () => <div>podcasts content</div>
 );
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/VocabularyFlashcards',
-  () => () => <div>flashcards content</div>
-);
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  VocabularyFlashcards: () => <div>flashcards content</div>,
+}));
 
 const mockUserId = 7;
 jest.mock('@cdo/apps/util/reduxHooks', () => ({

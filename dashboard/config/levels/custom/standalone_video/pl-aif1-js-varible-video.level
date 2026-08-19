@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2026-08-10T19:12:54.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "pl-aif2-debugging-variables",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "long_instructions": "<h2>Common Variable Mistakes</h2>\r\n\r\n<p>Small mistakes in variables and operations cause a lot of debugging headaches. Recognizing these patterns will make debugging faster and less frustrating.</p>\r\n\r\n<div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0;\">\r\n\r\n  <div style=\"border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 16px;\">\r\n    <p style=\"font-weight: 700; color: #1F1976; margin-bottom: 6px;\">Indescriptive Names</p>\r\n    <p style=\"font-family: 'Courier New', monospace; background-color: #F7F7FB; border-radius: 6px; padding: 4px 8px; display: inline-block; margin-bottom: 8px;\">x, data1, value</p>\r\n    <p>Does the name clearly describe what it stores?</p>\r\n  </div>\r\n\r\n  <div style=\"border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 16px;\">\r\n    <p style=\"font-weight: 700; color: #1F1976; margin-bottom: 6px;\">Mismatched Names</p>\r\n    <p style=\"font-family: 'Courier New', monospace; background-color: #F7F7FB; border-radius: 6px; padding: 4px 8px; display: inline-block; margin-bottom: 8px;\">totalScore vs totalscore</p>\r\n    <p>Check spelling and capitalization carefully.</p>\r\n  </div>\r\n\r\n  <div style=\"border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 16px;\">\r\n    <p style=\"font-weight: 700; color: #1F1976; margin-bottom: 6px;\">Wrong Operation</p>\r\n    <p style=\"font-family: 'Courier New', monospace; background-color: #F7F7FB; border-radius: 6px; padding: 4px 8px; display: inline-block; margin-bottom: 8px;\">score = score + 2</p>\r\n    <p>Does the amount match the intended behavior?</p>\r\n  </div>\r\n\r\n  <div style=\"border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 16px;\">\r\n    <p style=\"font-weight: 700; color: #1F1976; margin-bottom: 6px;\">Forgetting to Update</p>\r\n    <p style=\"font-family: 'Courier New', monospace; background-color: #F7F7FB; border-radius: 6px; padding: 4px 8px; display: inline-block; margin-bottom: 8px;\">let count = 0; (never changed)</p>\r\n    <p>Should this value change somewhere in the program?</p>\r\n  </div>\r\n\r\n  <div style=\"border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 16px;\">\r\n    <p style=\"font-weight: 700; color: #1F1976; margin-bottom: 6px;\">Accidental Overwrite</p>\r\n    <p style=\"font-family: 'Courier New', monospace; background-color: #F7F7FB; border-radius: 6px; padding: 4px 8px; display: inline-block; margin-bottom: 8px;\">score = 0; inside a loop</p>\r\n    <p>Is the variable being reset at the wrong time?</p>\r\n  </div>\r\n\r\n  <div style=\"border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 16px;\">\r\n    <p style=\"font-weight: 700; color: #1F1976; margin-bottom: 6px;\">Used Before Defined</p>\r\n    <p style=\"font-family: 'Courier New', monospace; background-color: #F7F7FB; border-radius: 6px; padding: 4px 8px; display: inline-block; margin-bottom: 8px;\">console.log(total);</p>\r\n    <p>Is the variable declared before it's used?</p>\r\n  </div>\r\n\r\n</div>\r\n\r\n<h2>Activity Preview</h2>\r\n\r\n<p>In the next level, you'll debug these types of errors inside the app. The video below models how to spot and fix common variable mistakes step by step in a similar activity.</p>"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-08-10T19:12:54.087+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-variable-debugging-video_2026\\\"\"],\"cloned_from\":\"pl-aif-2-U2-variable-debugging-video_2026\"},{\"changed_at\":\"2026-08-10 19:16:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

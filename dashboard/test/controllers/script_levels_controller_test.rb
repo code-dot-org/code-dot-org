@@ -2249,6 +2249,32 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "lesson_extras renders for a lesson with no levels" do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    # A lesson with a lesson plan but no levels of its own. The extras page
+    # still shows the bonus levels accumulated from earlier lessons, and points
+    # at the next lesson that does have levels.
+    lesson1 = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson1, bonus: true)
+    create(:lesson, script: script, lesson_group: lesson_group)
+    lesson3 = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson3)
+
+    get :lesson_extras, params: {
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 2
+    }
+
+    assert_response :success
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    assert_equal 3, extras_data['nextLessonNumber']
+    assert_equal 1, extras_data['bonusLevels'][0]['lessonNumber']
+  end
+
   test "lesson extras shows progress for current user if no section and user id" do
     sign_in @student
     script = create(:script, :in_single_unit_course)

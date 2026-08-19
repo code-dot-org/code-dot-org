@@ -1,6 +1,13 @@
+import {type VocabularyItem} from '@code-dot-org/lesson-deep-dive';
+
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import {ResponseValidator} from '../../../util/HttpClient';
+
+export const ExplanationTypes = {
+  AUDIO: 'audio',
+  TEXT: 'text',
+};
 
 export type AssessmentQuestionResult = {
   level_id: number;
@@ -37,7 +44,7 @@ export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
-  vocabulary: {id: string; word: string; definition: string}[];
+  vocabulary: VocabularyItem[];
   objectives: {id: string; description: string}[];
   assessmentAnalysis: AssessmentQuestionResult[];
   jsonVideos: JsonVideoData[];
@@ -103,25 +110,34 @@ export const userPracticeProblemAttemptValidator: ResponseValidator<
 export type ChallengeResponseAsset = {
   id: number;
   asset_type: 'whiteboard_image' | 'video' | 'audio';
-  upload_url: string;
+  // Presigned S3 URL. Absent right after create, when the bytes have not
+  // been uploaded yet.
+  download_url: string | null;
 };
 
 type ServerChallengeResponseAsset = {
   id: number;
   asset_type: string;
-  upload_url: string;
+  download_url?: string;
 };
 
+// The student-facing shape of a response. student_feedback carries the
+// constructive AI feedback (null until evaluation completes) and is private
+// to the author: the server omits it on rows belonging to section peers.
+// The scored evaluation_result is teacher-only, so it never appears here.
+// user_name / unit_id / lesson_position label the work in the gallery.
 export type ChallengeResponse = {
   id: number;
   challenge_id: number;
   user_id: number;
+  user_name: string;
+  unit_id: number | null;
+  lesson_position: number | null;
   student_text: string | null;
   transcript: string | null;
   student_feedback: string | null;
-  evaluation_result: Record<string, unknown> | null;
+  evaluation_status: string | null;
   is_final: boolean;
-  evaluated_at: string | null;
   created_at: string;
   assets: ChallengeResponseAsset[];
 };
@@ -130,12 +146,14 @@ type ServerChallengeResponse = {
   id: number;
   challenge_id: number;
   user_id: number;
+  user_name?: string;
+  unit_id?: number | null;
+  lesson_position?: number | null;
   student_text: string | null;
   transcript: string | null;
-  student_feedback: string | null;
-  evaluation_result: Record<string, unknown> | null;
+  student_feedback?: string | null;
+  evaluation_status: string | null;
   is_final: boolean;
-  evaluated_at: string | null;
   created_at: string;
   assets: ServerChallengeResponseAsset[];
 };
@@ -151,19 +169,32 @@ export const challengeResponseValidator: ResponseValidator<
     id: r.id,
     challenge_id: r.challenge_id,
     user_id: r.user_id,
+    user_name: r.user_name ?? '',
+    unit_id: r.unit_id ?? null,
+    lesson_position: r.lesson_position ?? null,
     student_text: r.student_text ?? null,
     transcript: r.transcript ?? null,
     student_feedback: r.student_feedback ?? null,
-    evaluation_result: r.evaluation_result ?? null,
+    evaluation_status: r.evaluation_status ?? null,
     is_final: r.is_final,
-    evaluated_at: r.evaluated_at ?? null,
     created_at: r.created_at,
     assets: r.assets.map(a => ({
       id: a.id,
       asset_type: a.asset_type as ChallengeResponseAsset['asset_type'],
-      upload_url: a.upload_url,
+      download_url: a.download_url ?? null,
     })),
   };
+};
+
+export const challengeResponseListValidator: ResponseValidator<
+  ChallengeResponse[]
+> = bodyJson => {
+  if (!Array.isArray(bodyJson)) {
+    throw new Error('Expected an array of challenge responses');
+  }
+  return (bodyJson as Record<string, unknown>[]).map(
+    challengeResponseValidator
+  );
 };
 
 export type Challenge = {

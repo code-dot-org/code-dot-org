@@ -13,7 +13,7 @@ import {
 // Manages the actual pyodide web worker -- creating it, restarting it, and relaying
 // its messages -- on behalf of pyodideSandboxManager.ts, which only manages the
 // sandbox iframe itself and never touches the worker directly. Runs inside a hidden
-// iframe served from a dedicated codeprojects.org subdomain, isolated from
+// iframe served from a dedicated sandboxed-preview subdomain, isolated from
 // studio.code.org's cookies/session. See apps/src/pythonlab/README.md for the full
 // architecture and the postMessage contract in ./constants.ts.
 

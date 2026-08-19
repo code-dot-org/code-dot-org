@@ -10,52 +10,59 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {post: jest.fn(), put: jest.fn()},
 }));
 
+const mockTranscribeAudio = jest.fn();
+
+jest.mock('@cdo/apps/aichat/api/client', () => ({
+  __esModule: true,
+  getClientApi: jest.fn(async () => ({transcribeAudio: mockTranscribeAudio})),
+}));
+
 // VideoRecorder relies on MediaRecorder and getUserMedia, unavailable in jsdom.
 // The stub exposes two buttons mirroring the real recorder's state machine:
 // - "Start Recording" signals recording-in-progress via onIsRecordingChange(true)
-// - "Stop Recording" fires the same sequence as recorder.onstop: setRecordedUrl,
-//   onRecordingChange(true), onIsRecordingChange(false)
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoRecorder',
-  () => {
-    const React = require('react');
-    return {
-      __esModule: true,
-      default: (props: {
-        onRecordingChange: (hasRecording: boolean) => void;
-        onIsRecordingChange?: (isRecording: boolean) => void;
-        setRecordedUrl: (url: string | null) => void;
-        disabled?: boolean;
-      }) =>
+// - "Stop Recording" fires the same sequence as the real onstop handlers:
+//   setRecordedUrl, setRecordedAudioUrl, onRecordingChange(true),
+//   onIsRecordingChange(false)
+jest.mock('@code-dot-org/lesson-deep-dive', () => {
+  const React = require('react');
+  return {
+    ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+    VideoRecorder: (props: {
+      onRecordingChange: (hasRecording: boolean) => void;
+      onIsRecordingChange?: (isRecording: boolean) => void;
+      setRecordedUrl: (url: string | null) => void;
+      setRecordedAudioUrl: (url: string | null) => void;
+      disabled?: boolean;
+    }) =>
+      React.createElement(
+        'div',
+        null,
         React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'button',
-            {
-              type: 'button',
-              disabled: props.disabled,
-              onClick: () => props.onIsRecordingChange?.(true),
-            },
-            'Start Recording'
-          ),
-          React.createElement(
-            'button',
-            {
-              type: 'button',
-              disabled: props.disabled,
-              onClick: () => {
-                props.setRecordedUrl('blob:fake-recording');
-                props.onRecordingChange(true);
-                props.onIsRecordingChange?.(false);
-              },
-            },
-            'Stop Recording'
-          )
+          'button',
+          {
+            type: 'button',
+            disabled: props.disabled,
+            onClick: () => props.onIsRecordingChange?.(true),
+          },
+          'Start Recording'
         ),
-    };
-  }
-);
+        React.createElement(
+          'button',
+          {
+            type: 'button',
+            disabled: props.disabled,
+            onClick: () => {
+              props.setRecordedUrl('blob:fake-recording');
+              props.setRecordedAudioUrl('blob:fake-audio-recording');
+              props.onRecordingChange(true);
+              props.onIsRecordingChange?.(false);
+            },
+          },
+          'Stop Recording'
+        )
+      ),
+  };
+});
 
 const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;
@@ -67,12 +74,10 @@ const createdResponse = {
   user_id: 1,
   student_text: null,
   transcript: null,
-  student_feedback: null,
-  evaluation_result: null,
   is_final: true,
-  evaluated_at: null,
   created_at: '2024-01-01',
-  assets: [{id: 9, asset_type: 'video', upload_url: ''}],
+  // No download_url: bytes are not uploaded yet at create time.
+  assets: [{id: 9, asset_type: 'video'}],
 };
 
 const fakeChallenge = {
@@ -96,6 +101,8 @@ describe('VideoChallenge', () => {
   beforeEach(() => {
     post.mockReset();
     put.mockReset();
+    mockTranscribeAudio.mockReset();
+    mockTranscribeAudio.mockResolvedValue('Hello this is a recording');
     originalFetch = (globalThis as {fetch?: typeof originalFetch}).fetch;
     fetchMock = jest.fn().mockResolvedValue({blob: async () => fakeBlob});
     (globalThis as unknown as {fetch?: jest.Mock}).fetch = fetchMock;
@@ -111,6 +118,7 @@ describe('VideoChallenge', () => {
         challenge={fakeChallenge}
         submitted={false}
         submitCallback={jest.fn()}
+        lessonId={1}
       />
     );
 
@@ -126,6 +134,7 @@ describe('VideoChallenge', () => {
         challenge={fakeChallenge}
         submitted={false}
         submitCallback={jest.fn()}
+        lessonId={1}
       />
     );
 
@@ -146,6 +155,7 @@ describe('VideoChallenge', () => {
         challenge={fakeChallenge}
         submitted={false}
         submitCallback={submitCallback}
+        lessonId={1}
       />
     );
 
@@ -154,10 +164,13 @@ describe('VideoChallenge', () => {
 
     await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
 
+    expect(fetchMock).toHaveBeenCalledWith('blob:fake-audio-recording');
+    expect(mockTranscribeAudio).toHaveBeenCalledWith(fakeBlob);
     expect(fetchMock).toHaveBeenCalledWith('blob:fake-recording');
     expect(post).toHaveBeenCalledWith(
       '/challenge_responses',
       JSON.stringify({
+        transcript: 'Hello this is a recording',
         challenge_id: 5,
         is_final: true,
         assets: [{asset_type: 'video'}],
@@ -170,6 +183,12 @@ describe('VideoChallenge', () => {
       fakeBlob,
       true,
       {'Content-Type': 'video/webm'}
+    );
+    // Kicks off AI evaluation after the upload, fire-and-forget.
+    expect(post).toHaveBeenCalledWith(
+      '/challenge_responses/7/evaluate',
+      '',
+      true
     );
   });
 
@@ -187,6 +206,7 @@ describe('VideoChallenge', () => {
         challenge={fakeChallenge}
         submitted={false}
         submitCallback={jest.fn()}
+        lessonId={1}
       />
     );
 
@@ -213,6 +233,7 @@ describe('VideoChallenge', () => {
         challenge={fakeChallenge}
         submitted={false}
         submitCallback={submitCallback}
+        lessonId={1}
       />
     );
 
@@ -222,5 +243,7 @@ describe('VideoChallenge', () => {
     await waitFor(() =>
       expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled()
     );
+    // A failed upload must not be confirmed as submitted.
+    expect(submitCallback).not.toHaveBeenCalled();
   });
 });

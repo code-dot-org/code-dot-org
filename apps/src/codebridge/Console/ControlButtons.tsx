@@ -48,6 +48,9 @@ const ControlButtons: React.FunctionComponent = () => {
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
+  const codeEnvironmentError = useAppSelector(
+    state => state.lab2System.codeEnvironmentError
+  );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
 
@@ -112,12 +115,17 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  // Returns null if the code action buttons (run, and in the future, test) should be enabled,
-  // otherwise returns the help tip text explaining why they are disabled.
-  // We disable the run button while the environment is loading
+  // Returns null if the code action buttons (run, and in the future, test)
+  // should not have a tooltip, otherwise returns any tooltip text.
+  // We show a tooltip and disable the run button if the environment is still loading
   // OR if this is a predict level, we are not in start mode,
   // and the user has not yet written a prediction.
+  // A failed environment gets no tooltip: the workspace shows an alert for it instead,
+  // and the button gets disabled below.
   const getDisabledCodeActionsTooltip = () => {
+    if (codeEnvironmentError) {
+      return null;
+    }
     let tooltip = null;
     if (awaitingPredictSubmit) {
       tooltip = codebridgeI18n.predictRunDisabledTooltip();
@@ -130,9 +138,9 @@ const ControlButtons: React.FunctionComponent = () => {
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
-  const disabledCodeActionsIcon = !hasLoadedEnvironment
-    ? 'fa-spinner fa-spin fa-solid'
-    : 'fa-circle-question fa-regular';
+  const disableCodeActions =
+    !!codeEnvironmentError || !!disabledCodeActionsTooltip;
+  const isEnvironmentLoading = !hasLoadedEnvironment && !codeEnvironmentError;
 
   return (
     <div className={moduleStyles.controlButtons}>
@@ -150,8 +158,6 @@ const ControlButtons: React.FunctionComponent = () => {
         </MuiButton>
       ) : (
         <WithConditionalTooltip
-          iconName={disabledCodeActionsIcon}
-          iconClassName={moduleStyles.disabledInfoIcon}
           showTooltip={!!disabledCodeActionsTooltip}
           tooltipProps={{
             direction: 'onRight',
@@ -164,7 +170,9 @@ const ControlButtons: React.FunctionComponent = () => {
             variant="contained"
             color="primary"
             size="extraSmall"
-            disabled={!!disabledCodeActionsTooltip}
+            disabled={disableCodeActions}
+            loading={isEnvironmentLoading}
+            loadingPosition="start"
             className={moduleStyles.controlButton}
             id="uitest-codebridge-run"
             onClick={handleRun}

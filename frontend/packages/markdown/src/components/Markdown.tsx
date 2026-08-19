@@ -3,6 +3,7 @@ import type {Components} from 'hast-util-to-jsx-runtime';
 import {
   useMemo,
   useSyncExternalStore,
+  type CSSProperties,
   type ElementType,
   type ReactNode,
 } from 'react';
@@ -35,6 +36,7 @@ import {
   subscribeLocalization,
   translateHtml,
 } from '../localization';
+import rehypeListItemParagraphs from '../rehypeListItemParagraphs';
 import rehypeLocalize from '../rehypeLocalize';
 
 import moduleStyles from './markdown.module.css';
@@ -74,12 +76,27 @@ const LOCALIZE_LINK_ATTRS = {
 const LOCALIZE_PARAGRAPH_ATTRS = {'data-isolate': 'true'};
 const LOCALIZE_NOTRANSLATE_ATTRS = {'data-notranslate': 'true'};
 
-const MarkdownLink: Components['a'] = ({children, href, className, target}) => (
+/*
+ * Every component below forwards `className` and `style`. A mapped element
+ * keeps only what its component passes on, so dropping `style` here would
+ * silently discard the inline CSS the inlineStyles extension exists to permit —
+ * the sanitizer would allow it through and the React layer would throw it away.
+ * When that extension is not enabled, the sanitizer has already removed the
+ * attribute and there is nothing to forward.
+ */
+const MarkdownLink: Components['a'] = ({
+  children,
+  href,
+  className,
+  style,
+  target,
+}) => (
   // A `target="_blank"` on the node (set by the externalLinks extension) maps to
   // the design-system Link's openInNewTab, which also applies rel=noopener.
   <Link
     href={href}
     className={className}
+    style={style}
     openInNewTab={target === '_blank'}
     {...LOCALIZE_LINK_ATTRS}
   >
@@ -96,11 +113,12 @@ const MarkdownLink: Components['a'] = ({children, href, className, target}) => (
  */
 const makeParagraph =
   (localized: boolean): Components['p'] =>
-  ({children, className}) => (
+  ({children, className, style}) => (
     <Typography
       variant="body2"
       component="p"
       className={className}
+      style={style}
       {...(localized ? LOCALIZE_NOTRANSLATE_ATTRS : LOCALIZE_PARAGRAPH_ATTRS)}
     >
       {children}
@@ -117,8 +135,21 @@ const makeParagraph =
  */
 const muiText =
   (variant: TypographyProps['variant'], component: ElementType) =>
-  ({children, className}: {children?: ReactNode; className?: string}) => (
-    <Typography variant={variant} component={component} className={className}>
+  ({
+    children,
+    className,
+    style,
+  }: {
+    children?: ReactNode;
+    className?: string;
+    style?: CSSProperties;
+  }) => (
+    <Typography
+      variant={variant}
+      component={component}
+      className={className}
+      style={style}
+    >
       {children}
     </Typography>
   );
@@ -136,7 +167,7 @@ const baseComponents = (localized: boolean): Partial<Components> => ({
   p: makeParagraph(localized),
   // `---` renders as a themed design-system divider. (Divider is not yet
   // MUI-migrated, so the DSCO component is the design-system component here.)
-  hr: ({className}) => <Divider className={className} />,
+  hr: ({className, style}) => <Divider className={className} style={style} />,
 });
 
 const NO_EXTENSIONS: MarkdownExtension[] = [];
@@ -177,6 +208,10 @@ const buildProcessor = (
     // raw HTML is constrained to safe tags/attributes.
     .use(remarkRehype, {allowDangerousHtml: true})
     .use(rehypeRaw)
+    // Before the extensions' plugins: at this point the only custom elements in
+    // the tree are the block-level ones an author wrote as raw HTML, which the
+    // wrapper already classifies correctly.
+    .use(rehypeListItemParagraphs)
     .use(collectRehypePlugins(extensions))
     // Sanitize before localization, not after: rehypeLocalize serializes each
     // block and reparses it through a live DOM, so the content it handles has
