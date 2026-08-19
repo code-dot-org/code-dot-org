@@ -10,6 +10,7 @@ import {describe, expect, it, vi} from 'vitest';
 import {createGeneratedFileCache} from '../generatedFiles';
 
 const isBlockly = (path: string) => path.endsWith('.rule');
+const isWorld = (path: string) => path.endsWith('.world');
 
 /** A generator that says which file it was asked about, and counts the asking. */
 const generator = () => {
@@ -133,5 +134,44 @@ describe('the generated-file cache', () => {
     // same bytes at two paths are two modules.
     expect(generate).toHaveBeenCalledTimes(2);
     expect(out['rules/a.rule']).not.toBe(out['rules/b.rule']);
+  });
+
+  it('regenerates when the environment the generator reads has changed', () => {
+    // The bug this exists to stop. A `define world` emits `world.useImageSizes`
+    // from what the editor has MEASURED, and an image served from the assets
+    // backend is measured only once it has decoded — a render in which no file
+    // changed at all. Keyed on the files alone, the recompile that arrival
+    // triggers was a cache hit, and the world went on running with actors the
+    // engine sized as the fallback 32-by-32 box.
+    const cache = createGeneratedFileCache();
+    const generate = generator();
+    const files = {'worlds/main.world': 'W'};
+    cache.generateAll(files, isWorld, generate, 'no sizes yet');
+    generate.mockClear();
+
+    const out = cache.generateAll(files, isWorld, generate, 'ground.png 64x16');
+
+    expect(generate).toHaveBeenCalledTimes(1);
+    expect(out['worlds/main.world']).toBe('// worlds/main.world\nW');
+  });
+
+  it('keeps its entries while the environment holds still', () => {
+    // The other half: the environment is a whole-project fact, so it must not
+    // move on an ordinary edit — or every file regenerates on every keystroke,
+    // which is the cost this cache exists to avoid.
+    const cache = createGeneratedFileCache();
+    const generate = generator();
+    const files = {'rules/a.rule': 'A', 'rules/b.rule': 'B'};
+    cache.generateAll(files, isBlockly, generate, 'same');
+    generate.mockClear();
+
+    cache.generateAll(
+      {...files, 'rules/b.rule': 'B2'},
+      isBlockly,
+      generate,
+      'same',
+    );
+
+    expect(generate).toHaveBeenCalledTimes(1);
   });
 });

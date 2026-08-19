@@ -4,6 +4,13 @@
 // workspace (BlocklyFileEditor) — a dropdown drops a serialized value that is
 // not among its options, so the registry must be populated before Blockly
 // deserializes a block that selected it.
+//
+// These registries are also GENERATOR INPUT, not only dropdown options: a
+// `define world` emits `world.useRules` from the project's rule modules and
+// `world.useImageSizes` from what has been measured, and neither is written in
+// any file. So `generationEnvironment` states what is installed, as one
+// comparable string, and the generated-file cache keys on it — see
+// `runtime/generatedFiles` for what went wrong without it.
 
 import {projectSheets} from '../appearance/sheetFile';
 import type {ImageSize} from '../runtime/imageSize';
@@ -35,7 +42,7 @@ import {
   projectWorldRules,
 } from './projectModules';
 import {duplicateRuleNames, registerProjectRules} from './ruleRegistry';
-import {setProjectGrids} from './spriteCells';
+import {measuredImages, setProjectGrids} from './spriteCells';
 import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 
 /** Extensions a module path can resolve to — what a block may open. */
@@ -61,13 +68,16 @@ export function refreshProjectDropdowns(
   // are — together they say how many cells a sheet holds, which is what a
   // `set sprite` dropdown offers and what its generator resolves (spriteCells).
   setProjectGrids(projectSheets(files), imageSizes);
-  setProjectAnimations(projectAnimationIds(files));
+  const animationIds = projectAnimationIds(files);
+  setProjectAnimations(animationIds);
   // The images a `set sprite` block may name: the project's own, and nothing
   // else — a game draws what its project holds.
-  setProjectSprites(projectSpriteOptions(files, images));
+  const sprites = projectSpriteOptions(files, images);
+  setProjectSprites(sprites);
   // And the backdrops, which are the same images minus the folder that tells
   // them apart — one pool never offers the other's contents.
-  setProjectBackgrounds(projectBackgroundOptions(files, images));
+  const backgrounds = projectBackgroundOptions(files, images);
+  setProjectBackgrounds(backgrounds);
   // Which module paths there is a file to open for — what puts the eye on a
   // `use rule` / `use trait` block (openModule).
   setOpenableModules(
@@ -75,14 +85,20 @@ export function refreshProjectDropdowns(
       .filter(path => MODULE_FILE.test(path))
       .map(path => path.replace(MODULE_FILE, '')),
   );
-  setProjectActors(projectActorOptions(files));
-  setProjectAnimationFiles(projectAnimationFileOptions(files));
-  setProjectEffectFiles(projectEffectFileOptions(files));
-  setProjectEffectParameters(projectEffectParameters(files));
-  setProjectMaps(projectMapActorTypes(files));
+  const actors = projectActorOptions(files);
+  setProjectActors(actors);
+  const animationFiles = projectAnimationFileOptions(files);
+  setProjectAnimationFiles(animationFiles);
+  const effectFiles = projectEffectFileOptions(files);
+  setProjectEffectFiles(effectFiles);
+  const effectParameters = projectEffectParameters(files);
+  setProjectEffectParameters(effectParameters);
+  const maps = projectMapActorTypes(files);
+  setProjectMaps(maps);
   // The `use rule` dropdown offers the project's own rule modules (under
   // `rules/`) alongside the built-ins.
-  setProjectRuleModules(projectRuleOptions(files));
+  const ruleModules = projectRuleOptions(files);
+  setProjectRuleModules(ruleModules);
   // The traits an actor may take come from the rules the project's worlds attach
   // — built-ins and the project's own declarative `.rule` rules.
   const ruleMetas = projectRuleMetas(files);
@@ -97,7 +113,45 @@ export function refreshProjectDropdowns(
   // as they are right now.
   registerProjectEnums(ruleMetas.flatMap(rule => rule.enums));
   warnAboutDuplicateNames();
-  setProjectRules(projectWorldRules(files));
+  const worldRules = projectWorldRules(files);
+  setProjectRules(worldRules);
+  // What a generator run will see, now that it is all installed. Read AFTER the
+  // calls above rather than built from their arguments, because one of them is
+  // not a replacement: `setProjectGrids` ACCUMULATES measurements, so what the
+  // editor knows about an image is the running total and not this call's share
+  // of it (`spriteCells`).
+  environment = JSON.stringify([
+    measuredImages(),
+    animationIds,
+    sprites,
+    backgrounds,
+    actors,
+    animationFiles,
+    effectFiles,
+    effectParameters,
+    maps,
+    ruleModules,
+    ruleMetas,
+    worldRules,
+  ]);
+}
+
+// What the last refresh installed, as one comparable string. Empty until the
+// first refresh, which is the honest answer: nothing is installed yet.
+let environment = '';
+
+/**
+ * What a generator run will read besides the file it is given.
+ *
+ * The generated-file cache keys on this (`runtime/generatedFiles`). Everything
+ * in it is something a block's generator reaches for through a module-level
+ * registry rather than through its own workspace — the project's rules, its
+ * animation files, its measured image sizes — so a cached module generated
+ * before one of them arrived is a module that is quietly out of date, and
+ * nothing in the file it came from says so.
+ */
+export function generationEnvironment(): string {
+  return environment;
 }
 
 // The last-warned set, so a collision is reported when it appears rather than on

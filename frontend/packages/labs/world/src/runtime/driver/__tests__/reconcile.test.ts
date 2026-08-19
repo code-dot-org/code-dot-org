@@ -7,9 +7,12 @@ import {
   rgba,
   Vector,
   WorldBuilder,
+  type Trait,
   type World,
 } from '../../../engine';
-// Gravity is a `.rule` now; the engine's test fixture is what these worlds run.
+// Gravity and Collisions are `.rule` files now; the engine's test fixtures are
+// what these worlds run.
+import {SolidTrait} from '../../../engine/__tests__/fixtures/collisionRule';
 import {
   AffectedByGravityTrait,
   GravityRule,
@@ -34,6 +37,33 @@ function makeWorld(strength = 900, playerY = 20): World {
   world.addActor(
     new ActorBuilder({id: 'ground', name: 'Ground'})
       .useTraits([GroundTrait])
+      .set(PositionProperty, new Vector(200, 260))
+      .instantiate(),
+  );
+  return world;
+}
+
+/**
+ * The same world with the ground's traits spelled out — what a `use trait` row
+ * added or removed under `define actor` generates.
+ *
+ * Built rather than mutated, because that is what the preview does: a rebuild
+ * imports a new module and makes a whole new world from it, and the reconciler
+ * compares that against the last build's snapshot.
+ */
+function makeGroundWorld(traits: Trait[]): World {
+  const world = new WorldBuilder({id: 'w', name: 'W'})
+    .useRules([GravityRule])
+    .instantiate();
+  world.addActor(
+    new ActorBuilder({id: 'player', name: 'Player'})
+      .useTraits([AffectedByGravityTrait])
+      .set(PositionProperty, new Vector(200, 20))
+      .instantiate(),
+  );
+  world.addActor(
+    new ActorBuilder({id: 'ground', name: 'Ground'})
+      .useTraits(traits)
       .set(PositionProperty, new Vector(200, 260))
       .instantiate(),
   );
@@ -301,6 +331,32 @@ describe('reconcile', () => {
     const baseline = running.snapshot();
     const incoming = makeWorld(900);
     incoming.addBackgroundEffect('effects/ripple', effectDoc('sample-1'));
+
+    expect(reconcile(running, incoming, baseline).mode).toBe('restarted');
+  });
+
+  it('restarts when an actor takes a trait it did not have', () => {
+    // A `use trait` row added to an actor already in the world. Nothing else in
+    // the snapshot says so: the trait's own property SLOTS arrive looking like
+    // edited values, and `setActorProperty` then finds no slot for those paths
+    // and silently returns false. Patching here left the running ground with
+    // neither `collidable` nor `ground` — a platformer whose player falls
+    // through the floor until some later edit happens to force a restart.
+    const running = makeGroundWorld([]);
+    const baseline = running.snapshot();
+    const incoming = makeGroundWorld([GroundTrait, SolidTrait]);
+
+    expect(reconcile(running, incoming, baseline).mode).toBe('restarted');
+  });
+
+  it('restarts when the trait added declares nothing of its own', () => {
+    // The other half, and the one that only ever worked by accident: `Solid`
+    // brings no property the ground did not already have through `Can Collide`,
+    // so the two snapshots were identical and the reconciler restarted because
+    // it had found nothing to patch rather than because it had noticed.
+    const running = makeGroundWorld([GroundTrait]);
+    const baseline = running.snapshot();
+    const incoming = makeGroundWorld([GroundTrait, SolidTrait]);
 
     expect(reconcile(running, incoming, baseline).mode).toBe('restarted');
   });
