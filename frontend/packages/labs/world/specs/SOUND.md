@@ -186,7 +186,9 @@ actor would be promising panning it does not do.
    manager, which starts locked until its own document sees a gesture — and the
    preview is an iframe, so sticky activation does not reach it from the editor.
    Phaser's own unlock listeners appear to be enough in practice. `set music to`
-   has not been reported on yet.
+   reported working alongside it; the two failures that would be obvious — a
+   track restarting every frame, and one still playing after Restart — did not
+   turn up.
 
 4. ✅ **The shelf.** 39 sounds — the vocabulary a first game reaches for, plus
    four loops for `set music to` — in `sounds.txt`, which carries `name<TAB>url`
