@@ -10,7 +10,14 @@ import {
   logResponse,
   PROMPT_TAGS,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
-import {createUuid} from '@cdo/apps/utils';
+
+import {
+  CodebridgeGeneration,
+  codebridgeFilesSchema,
+  filesToMultiFileSource,
+  generateCodebridgeExemplar,
+  SourceFile,
+} from './codebridge';
 
 const weblabPlanSchema = Output.object({
   schema: z.object({
@@ -48,12 +55,7 @@ const weblabPlanSchema = Output.object({
   }),
 });
 
-export interface Weblab2Generation {
-  startSources: MultiFileSource;
-  longInstructions: string;
-  // Exposed for continuity-context reuse without re-parsing the MultiFileSource.
-  files: {name: string; contents: string}[];
-}
+export type Weblab2Generation = CodebridgeGeneration;
 
 export async function generateWeblab2Level(
   ctx: LevelContext
@@ -134,7 +136,7 @@ export async function generateWeblab2Level(
   });
   const plan = response.output as {
     longInstructions: string;
-    files: {name: string; contents: string}[];
+    files: SourceFile[];
   };
   logResponse(PROMPT_TAGS.WEBLAB2_PLAN, plan, planContext);
   if (!plan.files?.length) {
@@ -151,124 +153,18 @@ export async function generateWeblab2Level(
   };
 }
 
-// fileType is STARTER for the starter pass and undefined for the exemplar
-// pass — matches what codebridge stores when a teacher writes an exemplar
-// by hand.
-export function filesToMultiFileSource(
-  plan: {name: string; contents: string}[],
-  fileType: ProjectFileType | undefined
-): MultiFileSource {
-  const folders: MultiFileSource['folders'] = {};
-  const folderIdByPath = new Map<string, string>();
-  folderIdByPath.set('', '0');
-
-  const files: MultiFileSource['files'] = {};
-  const fileIds: string[] = [];
-  let activeFileId: string | null = null;
-
-  for (const f of plan) {
-    const segments = f.name.split('/').filter(Boolean);
-    const baseName = segments.pop() || f.name;
-    let parentId = '0';
-    let pathSoFar = '';
-    for (const segment of segments) {
-      pathSoFar = pathSoFar ? `${pathSoFar}/${segment}` : segment;
-      const cached = folderIdByPath.get(pathSoFar);
-      if (cached !== undefined) {
-        parentId = cached;
-        continue;
-      }
-      const folderId = createUuid();
-      folders[folderId] = {
-        id: folderId,
-        name: segment,
-        parentId,
-        open: true,
-      };
-      folderIdByPath.set(pathSoFar, folderId);
-      parentId = folderId;
-    }
-
-    const id = createUuid();
-    fileIds.push(id);
-    if (
-      !activeFileId ||
-      (segments.length === 0 && /^index\.html?$/i.test(baseName))
-    ) {
-      activeFileId = id;
-    }
-    files[id] = {
-      id,
-      name: baseName,
-      contents: f.contents,
-      folderId: parentId,
-      ...(fileType ? {type: fileType} : {}),
-      active: false,
-    };
-  }
-  if (activeFileId) {
-    files[activeFileId] = {...files[activeFileId], active: true};
-  }
-  return {folders, files, openFiles: fileIds};
-}
-
-const weblabExemplarSchema = Output.object({
-  schema: z.object({
-    files: z
-      .array(
-        z.object({
-          name: z.string(),
-          contents: z.string().describe('Full file contents.'),
-        })
-      )
-      .min(1)
-      .max(20),
-  }),
-});
-
-// Callers must treat failures as non-fatal: the student-facing level is
-// already saved by the time this runs.
 export async function generateWeblab2Exemplar(
   ctx: LevelContext,
-  starterFiles: {name: string; contents: string}[]
+  starterFiles: SourceFile[]
 ): Promise<MultiFileSource> {
-  const starterListing = starterFiles
-    .map(f => `=== ${f.name} ===\n${f.contents}`)
-    .join('\n\n');
-  const prompt = [
-    'You are writing the teacher-facing EXEMPLAR solution for a Web Lab 2',
-    'level. The student sees the starter files below; their task is the',
-    'level description below. Produce a complete, working solution that',
-    'satisfies the description. Use the SAME file names as the starter',
-    '(do not add new files unless the description requires them); keep',
-    'the same languages, libraries, and structure.',
-    '',
-    'Constraints:',
-    '  - Output must run in Web Lab 2 (HTML/CSS/JS only, no external',
-    '    script or stylesheet links).',
-    '  - Replace placeholder content with a real, working implementation.',
-    '  - Keep it minimal — a model solution, not a portfolio piece. The',
-    '    teacher uses this to check their own work or demo to students.',
-    '',
-    'Starter files:',
-    starterListing,
-    '',
-    `Level description: ${ctx.levelDescription}`,
-  ].join('\n');
-
-  const logContext = {level: ctx.levelName, subtask: 'exemplar'};
-  logPrompt(PROMPT_TAGS.WEBLAB2_EXEMPLAR, prompt, logContext);
-  const response = await generateText({
-    model: getTextModel(),
-    prompt,
-    output: weblabExemplarSchema,
+  return generateCodebridgeExemplar(ctx, starterFiles, {
+    labLabel: 'Web Lab 2',
+    constraints: [
+      'Output must run in Web Lab 2 (HTML/CSS/JS only, no external',
+      '  script or stylesheet links).',
+    ],
+    promptTag: PROMPT_TAGS.WEBLAB2_EXEMPLAR,
   });
-  const plan = response.output as {files: {name: string; contents: string}[]};
-  logResponse(PROMPT_TAGS.WEBLAB2_EXEMPLAR, plan, logContext);
-  if (!plan.files?.length) {
-    throw new Error('Model returned no exemplar files');
-  }
-  return filesToMultiFileSource(plan.files, undefined);
 }
 
 // Template groups: multiple weblab2 members share one starter-source
@@ -277,17 +173,7 @@ export async function generateWeblab2Exemplar(
 // surfaced in the Summary dialog.
 
 const weblabTemplateSchema = Output.object({
-  schema: z.object({
-    files: z
-      .array(
-        z.object({
-          name: z.string(),
-          contents: z.string().describe('Full file contents.'),
-        })
-      )
-      .min(1)
-      .max(20),
-  }),
+  schema: z.object({files: codebridgeFilesSchema}),
 });
 
 export interface TemplateMember {
@@ -307,7 +193,7 @@ export async function generateWeblab2Template(
   }
 ): Promise<{
   startSources: MultiFileSource;
-  files: {name: string; contents: string}[];
+  files: SourceFile[];
 }> {
   const memberList = ctx.members
     .map((m, i) => `  ${i + 1}. ${m.name}: ${m.description}`)
@@ -365,7 +251,7 @@ export async function generateWeblab2Template(
     prompt,
     output: weblabTemplateSchema,
   });
-  const plan = response.output as {files: {name: string; contents: string}[]};
+  const plan = response.output as {files: SourceFile[]};
   logResponse(PROMPT_TAGS.WEBLAB2_TEMPLATE, plan, logContext);
   if (!plan.files?.length) throw new Error('Model returned no template files');
   return {
@@ -393,7 +279,7 @@ const weblabTemplateLevelSchema = Output.object({
 // member's description.
 export async function generateWeblab2TemplateBackedLevel(
   ctx: LevelContext,
-  templateFiles: {name: string; contents: string}[]
+  templateFiles: SourceFile[]
 ): Promise<{longInstructions: string}> {
   const templateListing = templateFiles
     .map(f => `=== ${f.name} ===\n${f.contents}`)
