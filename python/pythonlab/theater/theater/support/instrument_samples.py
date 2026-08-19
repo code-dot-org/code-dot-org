@@ -1,7 +1,9 @@
 from importlib.resources import files
 
+import numpy as np
+
 from ..instrument import Instrument
-from .audio import read_samples_from_wav_bytes
+from .constants import INSTRUMENT_SAMPLE_RATE, SAMPLE_RATE
 
 # Note range available per instrument (C3-C6).
 _MIN_NOTE = 48
@@ -11,6 +13,11 @@ _FILE_PREFIX = {
   Instrument.PIANO: "piano-",
   Instrument.BASS: "bass-",
 }
+
+# The mu-law companding constant, fixed by the G.711 standard that names it.
+_MU = 255.0
+
+_UPSAMPLE_FACTOR = SAMPLE_RATE // INSTRUMENT_SAMPLE_RATE
 
 
 def load_note_samples(instrument, note):
@@ -22,7 +29,27 @@ def load_note_samples(instrument, note):
   prefix = _FILE_PREFIX.get(instrument)
   if prefix is None or note < _MIN_NOTE or note > _MAX_NOTE:
     return None
-  resource = files("theater").joinpath("instruments", f"{prefix}{note}.wav")
+  resource = files("theater").joinpath("instruments", f"{prefix}{note}.ulaw")
   if not resource.is_file():
     return None
-  return read_samples_from_wav_bytes(resource.read_bytes())
+  return _decode(resource.read_bytes())
+
+
+def _decode(data):
+  """Turn one bundled note into normalized samples at the output rate.
+
+  The bundled form is headerless: 8-bit mu-law at INSTRUMENT_SAMPLE_RATE, with
+  nothing but this function to read it. The stdlib `wave` module cannot carry
+  mu-law, and these files are never handed to anything else.
+  """
+  codes = np.frombuffer(data, dtype=np.uint8).astype(np.float64)
+  if not len(codes):
+    return codes
+  compressed = (codes - 128) / 127
+  samples = np.sign(compressed) * ((1 + _MU) ** np.abs(compressed) - 1) / _MU
+  return _to_output_rate(samples)
+
+
+def _to_output_rate(samples):
+  positions = np.arange(len(samples) * _UPSAMPLE_FACTOR) / _UPSAMPLE_FACTOR
+  return np.interp(positions, np.arange(len(samples)), samples)
