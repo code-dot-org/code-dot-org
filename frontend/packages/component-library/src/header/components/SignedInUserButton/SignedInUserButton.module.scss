@@ -3,9 +3,8 @@
 // module classes are unlayered. The Menu items stay in the shared `headerMenu*`
 // sx (MUI-override).
 
-// Account-menu trigger (teal pill with the display name + chevron). Header-button
-// pill geometry matches the Rails header's `.header_button` under codeai-brand:
-// shorter + more rounded, semi-bold name, and a white alpha overlay for hover/press.
+// Account-menu trigger (teal pill with the display name + chevron).
+// Matches `.header_button` in the Rails header.
 .accountTrigger {
   min-width: 0;
   height: 32px;

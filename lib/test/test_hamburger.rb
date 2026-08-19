@@ -137,14 +137,8 @@ class HamburgerTest < Minitest::Test
     assert_includes_id contents[:entries], "hamburger-header-student-projects"
   end
 
-  def test_hamburger_content_nobody
-    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert_includes_id contents[:entries], "learn"
-  end
-
   def test_hamburger_content_nolevel
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert_includes_id contents[:entries], "learn"
     assert_includes_id contents[:entries], "report-bug"
   end
 
@@ -153,23 +147,11 @@ class HamburgerTest < Minitest::Test
     assert(contents[:entries].find {|e| e[:type] == "expander"})
   end
 
-  def test_hamburger_content_nobody_marketing_nav
-    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en", marketing_nav: true})[:entries]
+  def test_hamburger_content_nobody_marketing
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})[:entries]
     assert_includes_id contents, "hamburger-header-teachers"
     assert_includes_id contents, "legal_entries"
     refute(contents.find {|e| e[:id] == "learn"})
-  end
-
-  def test_hamburger_content_nobody_without_marketing_nav_unchanged
-    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})[:entries]
-    assert_includes_id contents, "learn"
-    assert_includes_id contents, "about_entries"
-  end
-
-  def test_hamburger_content_noexpandable_nonen
-    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "fr"})
-    # 'legal_entries' is an allowable section in non-english.
-    assert(contents[:entries].find {|e| e[:type] == "expander" && e[:id] != "legal_entries"})
   end
 
   # Header content tests.
@@ -189,33 +171,28 @@ class HamburgerTest < Minitest::Test
     assert_includes_id contents, "header-districts"
   end
 
-  def test_header_content_nobody_marketing_nav
-    contents = Hamburger.get_header_contents({user_type: nil, language: "en", marketing_nav: true})
+  def test_header_content_nobody_marketing
+    contents = Hamburger.get_header_contents({user_type: nil, language: "en"})
     assert_includes_id contents, "header-teachers"
     assert_includes_id contents, "header-advocacy"
     refute(contents.find {|e| e[:id] == "header-learn" || e[:id] == "header-teach"})
   end
 
-  def test_header_content_nobody_marketing_nav_advocacy_url
-    contents = Hamburger.get_header_contents({user_type: nil, language: "en", marketing_nav: true})
+  def test_header_content_nobody_marketing_advocacy_url
+    contents = Hamburger.get_header_contents({user_type: nil, language: "en"})
     advocacy = contents.find {|e| e[:id] == "header-advocacy"}
     assert_equal "https://advocacy.code.org", advocacy[:url]
   end
 
-  def test_header_content_nobody_marketing_nav_domain_url
-    contents = Hamburger.get_header_contents({user_type: nil, language: "en", marketing_nav: true})
+  def test_header_content_nobody_marketing_domain_url
+    contents = Hamburger.get_header_contents({user_type: nil, language: "en"})
     districts = contents.find {|e| e[:id] == "header-districts"}
     assert_equal CDO.code_org_url("/districts"), districts[:url]
   end
 
-  def test_header_content_nobody_without_marketing_nav
-    contents = Hamburger.get_header_contents({user_type: nil, language: "en"})
-    assert(contents.find {|e| e[:id] == "header-learn" || e[:id] == "header-teach"})
-  end
-
-  def test_header_content_nobody_marketing_nav_region_without_signed_out_marketing_falls_back
-    # "ar" has no header.top.signed_out_marketing, so marketing_nav should fall back to its signed_out list.
-    contents = Hamburger.get_header_contents({user_type: nil, language: "en", marketing_nav: true, ge_region: "ar"})
+  def test_header_content_nobody_marketing_region_without_signed_out_marketing_falls_back
+    # "ar" has no header.top.signed_out_marketing, so the signed-out nav falls back to its signed_out list.
+    contents = Hamburger.get_header_contents({user_type: nil, language: "en", ge_region: "ar"})
     assert_includes_id contents, "header-about"
     refute(contents.find {|e| e[:id] == "header-teachers"})
   end

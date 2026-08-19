@@ -156,7 +156,6 @@ class ApiController < ApplicationController
     @user_header_options[:session_pairings] = pairing_user_ids
     @user_header_options[:loc_prefix] = 'nav.user.'
     @user_header_options[:show_create_menu] = params[:showCreateMenu]
-    @user_header_options[:marketing_nav] = Cdo::Brand.codeai_next?(request)
   end
 
   def update_lockable_state

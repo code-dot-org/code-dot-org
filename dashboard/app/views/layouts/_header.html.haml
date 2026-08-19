@@ -30,9 +30,8 @@
     user_type = "student" if user_type == "student_y"
   end
 
-  rebrand_nav = Cdo::Brand.codeai_next?(request)
   marketing_list = Cdo::GlobalEdition.region_config(request.ge_region, :header, :top, :signed_out_marketing).present?
-  marketing_nav = rebrand_nav && marketing_list && !user_type
+  marketing_nav = marketing_list && !user_type
 
   hamburger_options = {}
   hamburger_options[:level] = level
@@ -45,7 +44,6 @@
   hamburger_options[:page_mode] = request.cookies['pm']
   hamburger_options[:dashboard] = true
   hamburger_options[:ge_region] = request.ge_region
-  hamburger_options[:marketing_nav] = rebrand_nav
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
@@ -53,7 +51,6 @@
   header_contents_options[:loc_prefix] = "nav.header."
   header_contents_options[:page_mode] = request.cookies['pm']
   header_contents_options[:ge_region] = request.ge_region
-  header_contents_options[:marketing_nav] = rebrand_nav
 
   should_show_progress = (script_level || @lesson_extras) && !@is_code_reviewing
 
@@ -71,7 +68,6 @@
   user_header_options[:loc_prefix] = 'nav.user.'
   user_header_options[:level] = level
   user_header_options[:ge_region] = request.ge_region
-  user_header_options[:marketing_nav] = rebrand_nav
 
   require 'cdo/hamburger'
 

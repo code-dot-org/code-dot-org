@@ -35,7 +35,6 @@
 @import "font";
 @import "mixins";
 @import "style-constants";
-@import "brand-selectors";
 
 // Bootstrap Variables
 $font-family-base: $main-font;
@@ -192,10 +191,8 @@ h1 {
   }
 }
 
-@include codeai-brand {
-  h1.existing-account-heading {
-    color: var(--text-neutral-primary);
-  }
+h1.existing-account-heading {
+  color: var(--text-neutral-primary);
 }
 
 h2 {
@@ -408,13 +405,6 @@ img.video_thumbnail {
       &:link, &:visited {
         text-decoration: none;
       }
-
-      &:hover, &:active {
-        // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
-        border-bottom: solid 2px $orange;
-        margin-top: 3px;
-        padding-bottom: 2px;
-      }
     }
 
     html[dir=rtl] & {
@@ -429,7 +419,6 @@ img.video_thumbnail {
     color: var(--text-neutral-white-fixed);
     background-color: transparent;
     border: 1px solid var(--borders-neutral-white-fixed);
-    border-radius: 4px;
     padding: 6.5px 16px;
     font-size: 14px;
     line-height: 20px;
@@ -437,11 +426,8 @@ img.video_thumbnail {
     cursor: pointer;
     white-space: nowrap;
     margin-inline-start: 8px;
-    height: 35px;
     a:hover {
       text-decoration: none;
-      // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
-      background-color: $orange;
     }
     &:active {
       border: 1px solid var(--borders-neutral-white-fixed) !important;
@@ -536,136 +522,132 @@ img.video_thumbnail {
   overflow: hidden;
 }
 
-// Pill nav links and outlined header buttons for codeai-next/codeai-audit;
-// default codeai keeps its square 35px/4px buttons and orange hover underline.
-@include codeai-brand {
-  // clip (not hidden) with a margin lets the 2px-offset focus rings paint
-  // outside the buttons while still containing overflowing content. Browsers
-  // without overflow-clip-margin clip the rings at the box; browsers without
-  // clip keep the hidden fallback above.
-  .project_info_container {
-    overflow: clip;
-    overflow-clip-margin: 4px;
+// clip (not hidden) with a margin lets the 2px-offset focus rings paint
+// outside the buttons while still containing overflowing content. Browsers
+// without overflow-clip-margin clip the rings at the box; browsers without
+// clip keep the hidden fallback above.
+.project_info_container {
+  overflow: clip;
+  overflow-clip-margin: 4px;
+}
+
+// Marketing-site spacing model: no container gap, spacing comes from pill padding.
+.header-wrapper .headerlinks {
+  flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
+}
+
+// marketing-nav-no-create only renders under the marketing nav (see
+// user_header.haml), so there's no stock rule left to out-specificity here.
+.create_menu.marketing-nav-no-create {
+  display: none;
+}
+
+.header-wrapper .headerlinks .headerlink {
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  font-weight: var(--font-weight-semi-bold);
+  // Pills never wrap to two lines; the row overflows visibly rather than
+  // silently breaking vertical rhythm.
+  white-space: nowrap;
+
+  &:hover, &:active {
+    border-bottom: none;
+    margin-top: -1px;
+    padding: 5px 10px;
+    background-color: var(--neutral-white-alpha-10);
   }
 
-  // Marketing-site spacing model: no container gap, spacing comes from pill padding.
-  .header-wrapper .headerlinks {
-    flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
+  &:active {
+    background-color: var(--neutral-white-alpha-30);
   }
 
-  // marketing-nav-no-create only renders under the marketing nav (see
-  // user_header.haml), so there's no stock rule left to out-specificity here.
-  .create_menu.marketing-nav-no-create {
+  &:focus-visible {
+    outline: 1px solid var(--borders-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}
+
+.header-wrapper .header_button {
+  height: 32px;
+  border-radius: 0.5rem;
+  font-weight: var(--font-weight-semi-bold);
+
+  &:hover, a:hover {
+    background-color: var(--neutral-white-alpha-20);
+  }
+
+  &:active {
+    background-color: var(--neutral-white-alpha-30);
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--borders-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}
+
+// Stock hand-centers the right cluster: the create menu, the user menu and
+// the signed-out buttons each carry a 7px margin-top, which centers a 35px
+// button in the 50px header. The reskin's buttons are 32px, so those margins
+// leave the whole cluster 2px high (7px above, 11px below). Center on the
+// cross axis instead and drop the offsets. The sibling help button and
+// hamburger are not in this flex container and keep their own paddings.
+.header-wrapper #sign_in_or_user {
+  align-items: center;
+
+  .header_button {
+    margin-top: 0;
+  }
+}
+
+// Stock markup only shows the UA outline while `.user-is-tabbing` is set
+// (hamburger.js), which is invisible on teal; give these the same ring as
+// the pills/buttons above for a consistent focus treatment.
+.header-wrapper .help_button,
+.header-wrapper #hamburger {
+  &:focus-visible {
+    outline: 1px solid var(--borders-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}
+
+// Signed-out Sign in / Create account: the tabbable element is the wrapping
+// `<a>` (`#signin_button` / `#create_account_button`), not the `.header_button`
+// div nested inside it, so the `.header_button:focus-visible` rule above never
+// engages here -- the anchor itself needs the ring.
+.header-wrapper #signin_button,
+.header-wrapper #create_account_button {
+  &:focus-visible {
+    outline: 1px solid var(--borders-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}
+
+// This container replaces hide_on_tablet outright (see _header.html.haml);
+// its link anchors also drop hide-mobile/hide-small-desktop, which assume a
+// <=7-link row and would otherwise fight the two stages below. hamburger.rb's
+// own get_header_contents() call is unaffected by this HAML change and still
+// needs those stock classes to auto-invert hide->show for the hamburger menu.
+.header-wrapper .headerlinks.marketing-nav {
+  #header-about {
+    margin-inline-start: auto;
+  }
+
+  // Stage 2: visible by default (>= 960px), hidden below. 960px measured
+  // (not the 900px default): the 6 remaining links start overlapping
+  // .header_right below ~950px.
+  @media (max-width: 959px) {
     display: none;
   }
 
-  .header-wrapper .headerlinks .headerlink {
-    padding: 5px 10px;
-    border-radius: 0.5rem;
-    font-weight: var(--font-weight-semi-bold);
-    // Pills never wrap to two lines; the row overflows visibly rather than
-    // silently breaking vertical rhythm.
-    white-space: nowrap;
-
-    &:hover, &:active {
-      border-bottom: none;
-      margin-top: -1px;
-      padding: 5px 10px;
-      background-color: var(--neutral-white-alpha-10);
-    }
-
-    &:active {
-      background-color: var(--neutral-white-alpha-30);
-    }
-
-    &:focus-visible {
-      outline: 1px solid var(--borders-neutral-white-fixed);
-      outline-offset: 2px;
-    }
-  }
-
-  .header-wrapper .header_button {
-    height: 32px;
-    border-radius: 0.5rem;
-    font-weight: var(--font-weight-semi-bold);
-
-    &:hover, a:hover {
-      background-color: var(--neutral-white-alpha-20);
-    }
-
-    &:active {
-      background-color: var(--neutral-white-alpha-30);
-    }
-
-    &:focus-visible {
-      outline: 1px solid var(--borders-neutral-white-fixed);
-      outline-offset: 2px;
-    }
-  }
-
-  // Stock hand-centers the right cluster: the create menu, the user menu and
-  // the signed-out buttons each carry a 7px margin-top, which centers a 35px
-  // button in the 50px header. The reskin's buttons are 32px, so those margins
-  // leave the whole cluster 2px high (7px above, 11px below). Center on the
-  // cross axis instead and drop the offsets. The sibling help button and
-  // hamburger are not in this flex container and keep their own paddings.
-  .header-wrapper #sign_in_or_user {
-    align-items: center;
-
-    .header_button {
-      margin-top: 0;
-    }
-  }
-
-  // Stock markup only shows the UA outline while `.user-is-tabbing` is set
-  // (hamburger.js), which is invisible on teal; give these the same ring as
-  // the pills/buttons above for a consistent focus treatment.
-  .header-wrapper .help_button,
-  .header-wrapper #hamburger {
-    &:focus-visible {
-      outline: 1px solid var(--borders-neutral-white-fixed);
-      outline-offset: 2px;
-    }
-  }
-
-  // Signed-out Sign in / Create account: the tabbable element is the wrapping
-  // `<a>` (`#signin_button` / `#create_account_button`), not the `.header_button`
-  // div nested inside it, so the `.header_button:focus-visible` rule above never
-  // engages here -- the anchor itself needs the ring.
-  .header-wrapper #signin_button,
-  .header-wrapper #create_account_button {
-    &:focus-visible {
-      outline: 1px solid var(--borders-neutral-white-fixed);
-      outline-offset: 2px;
-    }
-  }
-
-  // This container replaces hide_on_tablet outright (see _header.html.haml);
-  // its link anchors also drop hide-mobile/hide-small-desktop, which assume a
-  // <=7-link row and would otherwise fight the two stages below. hamburger.rb's
-  // own get_header_contents() call is unaffected by this HAML change and still
-  // needs those stock classes to auto-invert hide->show for the hamburger menu.
-  .header-wrapper .headerlinks.marketing-nav {
-    #header-about {
-      margin-inline-start: auto;
-    }
-
-    // Stage 2: visible by default (>= 960px), hidden below. 960px measured
-    // (not the 900px default): the 6 remaining links start overlapping
-    // .header_right below ~950px.
-    @media (max-width: 959px) {
+  // Stage 1: About/Donate collapse into the hamburger first; both have
+  // counterparts there. 1079px measured: the 8-link row's slack hits zero
+  // at ~1077px and labels start wrapping. Measured against us.yml's
+  // header.top.signed_out_marketing 8-link list; re-measure both stage
+  // thresholds if its labels, order, or count change.
+  @media (max-width: 1079px) {
+    #header-about, #header-donate {
       display: none;
-    }
-
-    // Stage 1: About/Donate collapse into the hamburger first; both have
-    // counterparts there. 1079px measured: the 8-link row's slack hits zero
-    // at ~1077px and labels start wrapping. Measured against us.yml's
-    // header.top.signed_out_marketing 8-link list; re-measure both stage
-    // thresholds if its labels, order, or count change.
-    @media (max-width: 1079px) {
-      #header-about, #header-donate {
-        display: none;
-      }
     }
   }
 }
@@ -1436,44 +1418,39 @@ $default-modal-width: 640px;
 
 // CodeAI logo is rectangular (~5.9:1), so the square-logo offsets above
 // don't apply. Center it vertically inside the 50px header instead.
-@include codeai-family-brand {
-  .header-wrapper .header .header_logo,
-  .header_logo {
+.header-wrapper .header .header_logo,
+.header_logo {
+  width: auto;
+  max-width: none;
+  height: 50px;
+  margin-top: 0;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 22px;
     width: auto;
-    max-width: none;
-    height: 50px;
-    margin-top: 0;
-    padding: 0 14px;
-    display: flex;
-    align-items: center;
-
-    img {
-      height: 22px;
-      width: auto;
-      // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
-      // reserves ~130px wide before fetch, preventing horizontal CLS.
-      aspect-ratio: 591.15 / 100;
-      display: block;
-    }
+    // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+    // reserves ~130px wide before fetch, preventing horizontal CLS.
+    aspect-ratio: 591.15 / 100;
+    display: block;
   }
+}
 
-  // Wider logo recovers space in the nav gap instead of bumping the collapse
-  // threshold. Tighten .headerlinks gap at small-desktop so the wider logo
-  // doesn't force links into the hamburger any earlier than the code brand.
-  .header-wrapper .header .headerlinks {
-    @media (min-width: 1024px) and (max-width: 1268px) {
-      gap: 1.5rem;
-    }
+// Wider logo recovers space in the nav gap instead of bumping the collapse
+// threshold. Tighten .headerlinks gap at small-desktop so the wider logo
+// doesn't force links into the hamburger any earlier than the code brand.
+.header-wrapper .header .headerlinks {
+  @media (min-width: 1024px) and (max-width: 1268px) {
+    gap: 1.5rem;
   }
 }
 // Pill spacing comes from link padding, not container gap; re-assert over
 // the small-desktop band rule above, which would double-space the pills.
-@include codeai-brand {
-  .header-wrapper .header .headerlinks {
-    gap: 0;
-  }
+.header-wrapper .header .headerlinks {
+  gap: 0;
 }
-
 
 .project_info {
   float: left;
@@ -2273,43 +2250,41 @@ a.download-video {
     background-color: $blue;
     border: 1px solid $blue;
   }
-  @include codeai-brand($ancestor: true) {
-    .primary-button {
-      background-color: var(--background-brand-purple-primary);
-      border-color: var(--borders-brand-purple-primary);
+  .primary-button {
+    background-color: var(--background-brand-purple-primary);
+    border-color: var(--borders-brand-purple-primary);
+    color: var(--text-neutral-white-fixed);
+
+    &:hover {
+      background-color: var(--background-brand-purple-strong);
+      border-color: var(--borders-brand-purple-strong);
       color: var(--text-neutral-white-fixed);
-
-      &:hover {
-        background-color: var(--background-brand-purple-strong);
-        border-color: var(--borders-brand-purple-strong);
-        color: var(--text-neutral-white-fixed);
-      }
-
-      &:focus {
-        border-color: var(--borders-brand-purple-primary);
-      }
     }
-    .secondary-button {
-      background-color: var(--background-neutral-primary);
+
+    &:focus {
+      border-color: var(--borders-brand-purple-primary);
+    }
+  }
+  .secondary-button {
+    background-color: var(--background-neutral-primary);
+    border-color: var(--borders-neutral-solid);
+    color: var(--text-neutral-primary);
+
+    &:hover {
+      background-color: var(--background-neutral-tertiary);
       border-color: var(--borders-neutral-solid);
       color: var(--text-neutral-primary);
-
-      &:hover {
-        background-color: var(--background-neutral-tertiary);
-        border-color: var(--borders-neutral-solid);
-        color: var(--text-neutral-primary);
-      }
-
-      &:focus {
-        border-color: var(--borders-neutral-solid);
-      }
     }
-    .primary-button,
-    .secondary-button {
-      &:focus-visible {
-        outline: 2px solid var(--borders-brand-teal-primary);
-        outline-offset: 2px;
-      }
+
+    &:focus {
+      border-color: var(--borders-neutral-solid);
+    }
+  }
+  .primary-button,
+  .secondary-button {
+    &:focus-visible {
+      outline: 2px solid var(--borders-brand-teal-primary);
+      outline-offset: 2px;
     }
   }
   .neutral-button {
@@ -4076,12 +4051,10 @@ $width: 400px;
   }
 }
 
-@include codeai-family-brand {
-  #main-logo #logo-img {
-    // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
-    // reserves ~130px wide before fetch, preventing horizontal CLS.
-    aspect-ratio: 591.15 / 100;
-  }
+#main-logo #logo-img {
+  // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+  // reserves ~130px wide before fetch, preventing horizontal CLS.
+  aspect-ratio: 591.15 / 100;
 }
 
 #environment_tag {

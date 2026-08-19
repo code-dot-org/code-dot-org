@@ -1,10 +1,8 @@
 @import 'color.scss';
 @import 'font';
-@import 'brand-selectors';
 
 .user_menu, .create_menu, .help_button {
   user-select: none;
-  height: 38px;
   position: relative;
 
   .create_button, .display_name, .pairing_name {
@@ -75,24 +73,17 @@
   }
 }
 
-// .header_button already sets 32px/6px under codeai-brand (see
-// application.scss); repeated here because this file's own
-// `.user_menu, .create_menu, .help_button { height: 38px }` above loads
-// after application.scss in the sprockets manifest and would otherwise
-// win the cascade tie.
+// This repeats `.header_button`'s 32px/6px. This file loads after
+// application.scss and wins the cascade tie.
 .user_menu, .create_menu {
-  @include codeai-brand($ancestor: true) {
-    height: 32px;
-  }
+  height: 32px;
 }
 
 .user_menu {
   padding: 7px 14px;
 
   .display_name {
-    @include codeai-brand($ancestor: true) {
-      font-weight: 600;
-    }
+    font-weight: 600;
   }
 
   .user_options {
@@ -123,6 +114,7 @@
 }
 
 .help_button {
+  height: 38px;
   padding-left: 16px;
   padding-top: 4px;
 
@@ -147,28 +139,20 @@
 
   .help_icon {
     padding: 11px 0 16px 0;
-    font-size: 22px;
+    font-size: 24px;
     color: var(--text-neutral-white-fixed);
     cursor: pointer;
-    // Reserve the glyph box. Otherwise the width comes from the Font Awesome
-    // webfont: zero until it loads, then 22px, shifting the adjacent user menu.
-    // 22px matches the glyph advance, so the layout holds across the font swap.
+    // The fixed width prevents layout shift when the Font Awesome webfont
+    // loads. 24px equals the glyph advance.
     display: inline-block;
-    width: 22px;
+    width: 24px;
     text-align: center;
     height: 20px;
     vertical-align: middle;
     text-decoration: none;
 
-    // fa-circle-question's solid glyph is a single white-filled disc with
-    // the question mark cut out, so the header's own background already
-    // shows through as the "glyph" color per brand -- no color change
-    // needed here, just the mock's larger 24px disc. Width matches, same
-    // glyph-advance reasoning as above.
-    @include codeai-brand($ancestor: true) {
-      font-size: 24px;
-      width: 24px;
-    }
+    // The "?" is a cutout. The header background shows through, so hover
+    // needs no color change.
   }
 
   .help_contents {
@@ -250,17 +234,15 @@
   // create menu has to collapse sooner to keep the inline nav from wrapping.
   // Bump each threshold up; preserve the original ~97px gap between the
   // signed-in (hide-mobile) and signed-out (show-small-desktop) variants.
-  @include codeai-family-brand($ancestor: true) {
-    @media screen and (max-width: 1103px) {
-      &.show-small-desktop {
-        display: none !important;
-      }
+  @media screen and (max-width: 1103px) {
+    &.show-small-desktop {
+      display: none !important;
     }
+  }
 
-    @media screen and (max-width: 1200px) {
-      &.hide-mobile {
-        display: none;
-      }
+  @media screen and (max-width: 1200px) {
+    &.hide-mobile {
+      display: none;
     }
   }
 }
