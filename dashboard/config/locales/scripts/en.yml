@@ -1946,11 +1946,11 @@ en:
             content:
               display_name: Content
           student_description: This is Unit 2 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 2 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
-        allthettsthings:
+        ui-test-tts:
           lesson_groups: {}
           lessons: {}
-          name: allthettsthings
-          title: All The TTS Things
+          name: ui-test-tts
+          title: UI Test Text-to-Speech
           description_audience: ''
           description_short: ''
           description: ''

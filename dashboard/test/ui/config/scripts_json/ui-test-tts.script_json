@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "allthettsthings",
+    "name": "ui-test-tts",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
@@ -11,14 +11,14 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-26 23:18:29 UTC",
+    "serialized_at": "2026-08-14 04:47:28 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
     "seeding_key": {
-      "script.name": "allthettsthings"
+      "script.name": "ui-test-tts"
     }
   },
   "lesson_groups": [
@@ -30,7 +30,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "allthettsthings"
+        "script.name": "ui-test-tts"
       }
     }
   ],
@@ -47,34 +47,34 @@
       "seeding_key": {
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings"
+        "script.name": "ui-test-tts"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "bf438934-f6ea-4fa2-b226-7e488acf1961",
+      "key": "42bdc46d-a0b9-4c75-95ed-5acfb2cdd139",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "bf438934-f6ea-4fa2-b226-7e488acf1961",
+        "lesson_activity.key": "42bdc46d-a0b9-4c75-95ed-5acfb2cdd139",
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings"
+        "script.name": "ui-test-tts"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "037f60ad-a339-497c-ba97-dfb504b7541a",
+      "key": "72d050f8-3da8-432a-b035-517cb5daa3ce",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "037f60ad-a339-497c-ba97-dfb504b7541a",
-        "lesson_activity.key": "bf438934-f6ea-4fa2-b226-7e488acf1961"
+        "activity_section.key": "72d050f8-3da8-432a-b035-517cb5daa3ce",
+        "lesson_activity.key": "42bdc46d-a0b9-4c75-95ed-5acfb2cdd139"
       }
     }
   ],
@@ -86,21 +86,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "allthethings_ttscsf contained"
+          "UI Test allthethings_ttscsf contained"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "allthethings_ttscsf contained"
+          "UI Test allthethings_ttscsf contained"
         ],
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings",
-        "activity_section.key": "037f60ad-a339-497c-ba97-dfb504b7541a"
+        "script.name": "ui-test-tts",
+        "activity_section.key": "72d050f8-3da8-432a-b035-517cb5daa3ce"
       },
       "level_keys": [
-        "allthethings_ttscsf contained"
+        "UI Test allthethings_ttscsf contained"
       ]
     },
     {
@@ -110,21 +110,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "allthethings_ttscsd"
+          "UI Test allthethings_ttscsd"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "allthethings_ttscsd"
+          "UI Test allthethings_ttscsd"
         ],
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings",
-        "activity_section.key": "037f60ad-a339-497c-ba97-dfb504b7541a"
+        "script.name": "ui-test-tts",
+        "activity_section.key": "72d050f8-3da8-432a-b035-517cb5daa3ce"
       },
       "level_keys": [
-        "allthethings_ttscsd"
+        "UI Test allthethings_ttscsd"
       ]
     },
     {
@@ -134,21 +134,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "allthethings_ttscsp contained"
+          "UI Test allthethings_ttscsp contained"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "allthethings_ttscsp contained"
+          "UI Test allthethings_ttscsp contained"
         ],
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings",
-        "activity_section.key": "037f60ad-a339-497c-ba97-dfb504b7541a"
+        "script.name": "ui-test-tts",
+        "activity_section.key": "72d050f8-3da8-432a-b035-517cb5daa3ce"
       },
       "level_keys": [
-        "allthethings_ttscsp contained"
+        "UI Test allthethings_ttscsp contained"
       ]
     },
     {
@@ -158,71 +158,71 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "allthethings_ttscsp"
+          "UI Test allthethings_ttscsp"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "allthethings_ttscsp"
+          "UI Test allthethings_ttscsp"
         ],
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings",
-        "activity_section.key": "037f60ad-a339-497c-ba97-dfb504b7541a"
+        "script.name": "ui-test-tts",
+        "activity_section.key": "72d050f8-3da8-432a-b035-517cb5daa3ce"
       },
       "level_keys": [
-        "allthethings_ttscsp"
+        "UI Test allthethings_ttscsp"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "allthethings_ttscsf contained",
+        "level.key": "UI Test allthethings_ttscsf contained",
         "script_level.level_keys": [
-          "allthethings_ttscsf contained"
+          "UI Test allthethings_ttscsf contained"
         ],
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings",
-        "activity_section.key": "037f60ad-a339-497c-ba97-dfb504b7541a"
+        "script.name": "ui-test-tts",
+        "activity_section.key": "72d050f8-3da8-432a-b035-517cb5daa3ce"
       }
     },
     {
       "seeding_key": {
-        "level.key": "allthethings_ttscsd",
+        "level.key": "UI Test allthethings_ttscsd",
         "script_level.level_keys": [
-          "allthethings_ttscsd"
+          "UI Test allthethings_ttscsd"
         ],
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings",
-        "activity_section.key": "037f60ad-a339-497c-ba97-dfb504b7541a"
+        "script.name": "ui-test-tts",
+        "activity_section.key": "72d050f8-3da8-432a-b035-517cb5daa3ce"
       }
     },
     {
       "seeding_key": {
-        "level.key": "allthethings_ttscsp contained",
+        "level.key": "UI Test allthethings_ttscsp contained",
         "script_level.level_keys": [
-          "allthethings_ttscsp contained"
+          "UI Test allthethings_ttscsp contained"
         ],
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings",
-        "activity_section.key": "037f60ad-a339-497c-ba97-dfb504b7541a"
+        "script.name": "ui-test-tts",
+        "activity_section.key": "72d050f8-3da8-432a-b035-517cb5daa3ce"
       }
     },
     {
       "seeding_key": {
-        "level.key": "allthethings_ttscsp",
+        "level.key": "UI Test allthethings_ttscsp",
         "script_level.level_keys": [
-          "allthethings_ttscsp"
+          "UI Test allthethings_ttscsp"
         ],
         "lesson.key": "TTS",
         "lesson_group.key": "",
-        "script.name": "allthettsthings",
-        "activity_section.key": "037f60ad-a339-497c-ba97-dfb504b7541a"
+        "script.name": "ui-test-tts",
+        "activity_section.key": "72d050f8-3da8-432a-b035-517cb5daa3ce"
       }
     }
   ],

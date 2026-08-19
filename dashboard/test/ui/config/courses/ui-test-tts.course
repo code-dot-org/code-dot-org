@@ -1,7 +1,7 @@
 {
-  "name": "allthettsthings",
+  "name": "ui-test-tts",
   "script_names": [
-    "allthettsthings"
+    "ui-test-tts"
   ],
   "original_script_names": [
 
@@ -11,7 +11,7 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "family_name": "allthettsthings",
+    "family_name": "ui-test-tts",
     "version_year": "unversioned"
   },
   "resources": [
