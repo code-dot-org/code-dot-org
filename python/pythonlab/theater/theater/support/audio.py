@@ -53,28 +53,43 @@ def truncate_samples(samples, length_seconds):
   return samples[:new_length]
 
 
+# Smallest timeline allocation, so growth never proceeds in slivers.
+_MIN_CAPACITY = SAMPLE_RATE
+
+# How much of the timeline to convert to 16-bit at a time when encoding. Any
+# block size keeps the conversion's working set off the length of the track.
+_ENCODE_CHUNK = SAMPLE_RATE
+
+
 class AudioWriter:
   """Accumulates audio by additively blending sources onto a timeline.
 
   New samples are added at the current cursor and clamped to [-1.0, 1.0]; delays
   advance the cursor over silence.
+
+  The timeline is float32, which still carries 24 bits of mantissa into a 16-bit
+  format, and it is reserved ahead of the samples written onto it. Length and
+  capacity are therefore separate: len(self._samples) is what is allocated,
+  self._length is what has been written.
   """
 
   def __init__(self):
-    self._samples = np.zeros(0, dtype=np.float64)
+    self._samples = np.zeros(0, dtype=np.float32)
+    self._length = 0
     self._cursor = 0
 
   def write_audio_samples(self, samples, length_seconds=None):
-    samples = np.asarray(samples, dtype=np.float64)
+    samples = np.asarray(samples, dtype=np.float32)
     if length_seconds is not None:
       samples = truncate_samples(samples, length_seconds)
     end = self._cursor + len(samples)
-    if end > len(self._samples):
-      self._samples = np.concatenate(
-        [self._samples, np.zeros(end - len(self._samples), dtype=np.float64)]
-      )
-    blended = self._samples[self._cursor:end] + samples
-    self._samples[self._cursor:end] = np.clip(blended, -1.0, 1.0)
+    self._reserve(end)
+    # A view, blended in place. Nothing may hold a view of the timeline across
+    # a write, since _reserve is free to move the whole buffer.
+    region = self._samples[self._cursor:end]
+    region += samples
+    np.clip(region, -1.0, 1.0, out=region)
+    self._length = max(self._length, end)
 
   def add_delay_milliseconds(self, delay_milliseconds):
     """Advance the cursor over silence.
@@ -85,20 +100,36 @@ class AudioWriter:
     self._cursor += delay_milliseconds * SAMPLE_RATE // 1000
 
   def get_total_audio_length(self):
-    return len(self._samples) / SAMPLE_RATE
+    return self._length / SAMPLE_RATE
 
   def to_wav_bytes(self):
     """Encode accumulated samples as a mono 16-bit WAV, or None if empty."""
-    if len(self._samples) == 0:
+    if self._length == 0:
       return None
-    int_samples = _to_int16(self._samples)
     buffer = io.BytesIO()
     with wave.open(buffer, "wb") as writer:
       writer.setnchannels(CHANNELS)
       writer.setsampwidth(2)
       writer.setframerate(SAMPLE_RATE)
-      writer.writeframes(int_samples.tobytes())
+      # A chunk at a time: converting the whole track at once needs several
+      # more copies of it, all as wide as the timeline itself.
+      for start in range(0, self._length, _ENCODE_CHUNK):
+        block = self._samples[start:min(start + _ENCODE_CHUNK, self._length)]
+        writer.writeframes(_to_int16(block).tobytes())
     return buffer.getvalue()
+
+  def _reserve(self, end):
+    """Grow the timeline to hold at least `end` samples.
+
+    Doubling, resized in place: numpy reallocs, which usually extends the block
+    rather than copying it, and never holds two full copies the way concatenate
+    does. Growing by exactly what each sound needs instead would re-copy the
+    whole timeline once per note, which is quadratic in the notes played.
+    """
+    if end <= len(self._samples):
+      return
+    capacity = max(end, 2 * len(self._samples), _MIN_CAPACITY)
+    self._samples.resize(capacity, refcheck=False)
 
 
 def _to_output_rate(samples, source_rate):

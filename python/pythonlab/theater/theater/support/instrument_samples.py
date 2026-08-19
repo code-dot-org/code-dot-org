@@ -16,10 +16,9 @@ _MU = 255.0
 
 _UPSAMPLE_FACTOR = SAMPLE_RATE // INSTRUMENT_SAMPLE_RATE
 
-# How many decoded notes to keep. Each costs about 1.1 MB of float64 samples,
-# and all 74 bundled notes would come to 84 MB, more than the audio timeline
-# they are blended onto is allowed to be. A melody rarely reaches for this many
-# distinct pitches, so in practice every repeat is a hit.
+# How many decoded notes to keep. Each costs about 0.6 MB of float32 samples,
+# and all 74 bundled notes would come to 42 MB. A melody rarely reaches for this
+# many distinct pitches, so in practice every repeat is a hit.
 _NOTE_CACHE_SIZE = 32
 
 
@@ -54,7 +53,9 @@ def _decode(data):
     return codes
   compressed = (codes - 128) / 127
   samples = np.sign(compressed) * ((1 + _MU) ** np.abs(compressed) - 1) / _MU
-  return _to_output_rate(samples)
+  # float32 to match the timeline these are blended onto, which halves both the
+  # note cache and the conversion each play would otherwise cost.
+  return _to_output_rate(samples).astype(np.float32)
 
 
 def _to_output_rate(samples):

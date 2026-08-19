@@ -6,6 +6,7 @@ import numpy as np
 import pytest
 
 from theater.support.audio import (
+  _MIN_CAPACITY,
   AudioWriter,
   read_samples_from_wav_bytes,
   truncate_samples,
@@ -115,6 +116,29 @@ def test_delay_lands_on_a_whole_sample(milliseconds):
   writer.write_audio_samples([1.0])
   samples = read_samples_from_wav_bytes(writer.to_wav_bytes())
   assert len(samples) - 1 == milliseconds * SAMPLE_RATE // 1000
+
+
+def test_length_is_what_was_written_not_what_was_reserved():
+  # The timeline is allocated ahead of the samples, so a writer measuring its
+  # capacity would pad every program with a second of trailing silence.
+  writer = AudioWriter()
+  writer.write_audio_samples([1.0, 1.0])
+  assert writer.get_total_audio_length() == 2 / SAMPLE_RATE
+  assert len(read_samples_from_wav_bytes(writer.to_wav_bytes())) == 2
+
+
+def test_a_long_melody_does_not_recopy_the_timeline():
+  # Reserving exactly what each note needs re-copies everything written so far,
+  # once per note: quadratic, and about 6 GB of copying over a 600-note melody.
+  # Doubling keeps the reserved space within a constant factor of the track.
+  note_samples = [0.5] * 100
+  writer = AudioWriter()
+  for _ in range(2000):
+    writer.write_audio_samples(note_samples)
+    writer.add_delay_milliseconds(10)
+  written = 1999 * (10 * SAMPLE_RATE // 1000) + len(note_samples)
+  assert writer.get_total_audio_length() == written / SAMPLE_RATE
+  assert len(writer._samples) < 2 * written + _MIN_CAPACITY
 
 
 def test_empty_writer_returns_none():
