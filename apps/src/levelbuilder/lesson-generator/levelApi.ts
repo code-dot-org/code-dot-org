@@ -153,7 +153,9 @@ export type LevelProperty =
   | 'project_template_level_name'
   | 'thumbnail_url'
   | 'bubble_choice_description'
-  | 'display_name';
+  | 'display_name'
+  | 'placeholder'
+  | 'solution';
 
 export async function updateLevelProperty(
   levelId: number,

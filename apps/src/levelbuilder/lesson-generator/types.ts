@@ -9,6 +9,7 @@ export const SUPPORTED_LAB_TYPES = [
   'sketchlab',
   'multi',
   'match',
+  'freeResponse',
   'bubbleChoice',
 ] as const;
 
@@ -24,6 +25,7 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   sketchlab: 'Sketchlab',
   multi: 'Multi',
   match: 'Match',
+  freeResponse: 'FreeResponse',
   bubbleChoice: 'BubbleChoice',
 };
 
@@ -129,6 +131,16 @@ export const LAB_TYPE_INFO: Record<LabType, LabTypePromptInfo> = {
       'definitions, etc. Content will be a STUB.',
     ],
     chooseFor: 'short formative assessments',
+  },
+  freeResponse: {
+    promptLabel: 'FreeResponse',
+    promptDescription: [
+      'a written-response prompt the student answers in a text box. Use',
+      'for reflection, prediction, or explain-your-thinking checks where',
+      'a fixed answer set would not fit. Content will be a STUB the',
+      'curriculum author rewrites.',
+    ],
+    chooseFor: 'written reflection / open-ended assessment',
   },
   bubbleChoice: {
     promptLabel: 'BubbleChoice',

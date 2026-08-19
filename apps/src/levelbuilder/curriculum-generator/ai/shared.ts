@@ -20,6 +20,7 @@ export const PROMPT_TAGS = {
   SKETCHLAB_PLAN: 'lesson-gen/sketchlab-plan',
   MULTI_PLAN: 'lesson-gen/multi-plan',
   MATCH_PLAN: 'lesson-gen/match-plan',
+  FREE_RESPONSE_PLAN: 'lesson-gen/free-response-plan',
   BUBBLE_CHOICE_PLAN: 'lesson-gen/bubble-choice-plan',
   BUBBLE_CHOICE_THUMBNAIL: 'lesson-gen/bubble-choice-thumbnail',
   SLIDES_OUTLINE: 'lesson-gen/slides-outline',

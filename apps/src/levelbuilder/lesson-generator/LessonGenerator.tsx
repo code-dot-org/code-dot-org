@@ -23,6 +23,7 @@ import {
   generateBubbleChoiceThumbnail,
   renderBubbleChoiceDsl,
 } from './ai/bubbleChoice';
+import {generateFreeResponseLevel} from './ai/freeResponse';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
 import {
@@ -82,6 +83,7 @@ const LAB_LABELS = {
   sketchlab: 'Sketch Lab',
   multi: 'Multiple Choice',
   match: 'Matching',
+  freeResponse: 'Free Response',
   bubbleChoice: 'Bubble Choice',
 } as const satisfies Record<LabType, string>;
 
@@ -972,6 +974,26 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               );
             }
             generatedOutput = {match: matchResult};
+          } else if (spec.labType === 'freeResponse') {
+            const result = await generateFreeResponseLevel(levelCtx);
+            setStage('saving-properties');
+            appendLog(`Saving question for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            if (result.placeholder) {
+              await updateLevelProperty(
+                level.id,
+                'placeholder',
+                result.placeholder
+              );
+            }
+            if (result.solution) {
+              await updateLevelProperty(level.id, 'solution', result.solution);
+            }
+            generatedOutput = {freeResponse: result};
           } else if (spec.labType === 'bubbleChoice' && bubbleChoicePlan) {
             // Parent DSL was written by createOrFindLevel / the reused-
             // level PATCH; still owing are each sublevel's picker-facing

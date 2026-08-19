@@ -5,6 +5,7 @@ import {AichatGeneration} from '../ai/aichat';
 import {AilabGeneration} from '../ai/ailab';
 import {MatchGeneration, MultiGeneration} from '../ai/assessments';
 import {BubbleChoiceGeneration} from '../ai/bubbleChoice';
+import {FreeResponseGeneration} from '../ai/freeResponse';
 import {PythonlabGeneration} from '../ai/pythonlab';
 import {SketchlabGeneration} from '../ai/sketchlab';
 import {Weblab2Generation} from '../ai/weblab2';
@@ -21,6 +22,7 @@ export interface PriorOutputByLab {
   sketchlab: SketchlabGeneration;
   multi: MultiGeneration;
   match: MatchGeneration;
+  freeResponse: FreeResponseGeneration;
   bubbleChoice: BubbleChoiceGeneration;
 }
 
@@ -111,6 +113,19 @@ export function priorOutputFromLevelProperties(
         summary: `system="${systemPrompt.slice(0, 120)}${
           systemPrompt.length > 120 ? '…' : ''
         }"`,
+      },
+    };
+  }
+  if (labType === 'freeResponse') {
+    const longInstructions =
+      (props as {longInstructions?: string}).longInstructions || '';
+    if (!longInstructions) return undefined;
+    return {
+      freeResponse: {
+        longInstructions,
+        placeholder: '',
+        solution: '',
+        summary: `Free response — Q: ${longInstructions.replace(/\s+/g, ' ')}`,
       },
     };
   }
@@ -247,6 +262,9 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
           lines.push(`    ${line}`);
         }
       }
+    }
+    if (e.output?.freeResponse) {
+      lines.push(`  ${e.output.freeResponse.summary}`);
     }
     if (e.output?.multi || e.output?.match) {
       // Assessment levels: just the summary line. Their content is
