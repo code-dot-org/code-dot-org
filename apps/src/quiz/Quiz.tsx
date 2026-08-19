@@ -21,9 +21,22 @@ interface QuizLevelProperties extends LevelProperties {
   timeLimitMinutes?: number;
 }
 
+// Present once this attempt is submitted - selectedChoiceId is always
+// included then, so a reload can restore/highlight what was picked;
+// correct is null unless the quiz's show_correctness setting allows it,
+// and explanation is additionally gated by reveal_answer_explanation. See
+// QuizAttempt#question_results.
+interface QuestionResultData {
+  quizQuestionId: number;
+  selectedChoiceId: string;
+  correct: boolean | null;
+  explanation?: string;
+}
+
 interface AttemptResult {
   score: number | null;
   maxScore: number | null;
+  questionResults?: QuestionResultData[];
 }
 
 // A single question's in-progress answer: a chosen choice id. P0 is
@@ -36,6 +49,17 @@ type QuestionResponseValue = string;
 const buildResponseData = (value: QuestionResponseValue | undefined) => ({
   selectedChoiceId: value || '',
 });
+
+// Rebuilds local `responses` state from a submitted attempt's
+// questionResults, so a reload (or the initial GET check finding an
+// already-submitted attempt) restores/highlights what was actually
+// selected instead of showing every question blank.
+const responsesFromQuestionResults = (
+  questionResults: QuestionResultData[] | undefined
+): Record<number, QuestionResponseValue> =>
+  Object.fromEntries(
+    (questionResults || []).map(r => [r.quizQuestionId, r.selectedChoiceId])
+  );
 
 const formatRemainingTime = (totalSeconds: number) => {
   const minutes = Math.floor(totalSeconds / 60);
@@ -101,7 +125,12 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       .then(data => {
         setAttemptId(data.id);
         if (data.submittedAt) {
-          setResult({score: data.score, maxScore: data.maxScore});
+          setResult({
+            score: data.score,
+            maxScore: data.maxScore,
+            questionResults: data.questionResults || undefined,
+          });
+          setResponses(responsesFromQuestionResults(data.questionResults));
           setCanRetake(!!data.canRetake);
         } else {
           // Only start a countdown for an attempt that isn't already done.
@@ -149,7 +178,12 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         // submitted or mid-quiz - an existing attempt means the student
         // already got past the intro screen, so skip it.
         if (data.submittedAt) {
-          setResult({score: data.score, maxScore: data.maxScore});
+          setResult({
+            score: data.score,
+            maxScore: data.maxScore,
+            questionResults: data.questionResults || undefined,
+          });
+          setResponses(responsesFromQuestionResults(data.questionResults));
           setCanRetake(!!data.canRetake);
         } else {
           // only start a countdown for an attempt that isn't already done.
@@ -165,6 +199,20 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   // below.
   const multipleChoiceQuestions = (quizQuestions || []).filter(
     question => question.type === 'MultipleChoiceQuestion'
+  );
+
+  // Only for correctness display (green/red + Correct/Incorrect label) -
+  // filters out entries where correct is null, i.e. show_correctness is
+  // off, so QuizQuestion never renders that styling in that case.
+  // Restoring which choice was actually selected is handled separately,
+  // via `responses` (see responsesFromQuestionResults), so it still works
+  // even when show_correctness is off.
+  const questionResultsById = new Map(
+    (result?.questionResults || [])
+      .filter(
+        (r): r is QuestionResultData & {correct: boolean} => r.correct !== null
+      )
+      .map(r => [r.quizQuestionId, r])
   );
 
   // One submit for the whole quiz: post every question's response - even a
@@ -201,7 +249,12 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       {'Content-Type': 'application/json'}
     );
     const data = await finalizeResponse.json();
-    setResult({score: data.score, maxScore: data.maxScore});
+    setResult({
+      score: data.score,
+      maxScore: data.maxScore,
+      questionResults: data.questionResults || undefined,
+    });
+    setResponses(responsesFromQuestionResults(data.questionResults));
     setCanRetake(!!data.canRetake);
   };
 
@@ -301,6 +354,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                   total={multipleChoiceQuestions.length}
                   selectedChoiceId={responses[question.id]}
                   disabled={!!result}
+                  result={questionResultsById.get(question.id)}
                   onSelectChoice={choiceId =>
                     setResponse(question.id, choiceId)
                   }

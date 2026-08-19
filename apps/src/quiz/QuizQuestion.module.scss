@@ -70,7 +70,39 @@
   background: var(--background-brand-teal-extra-light);
 }
 
+// Only ever applied to the student's own selected choice, once
+// show_correctness is on and the attempt is submitted - see the
+// isGradedSelection comment in QuizQuestion.tsx.
+.answerOptionCorrect {
+  border: 1px solid var(--borders-success-primary);
+  background: var(--background-success-extra-light);
+}
+
+.answerOptionIncorrect {
+  border: 1px solid var(--borders-error-primary);
+  background: var(--background-error-extra-light);
+}
+
 .answerOptionLetter {
   font-weight: var(--font-weight-semi-bold, 600);
   margin-right: 0.25rem;
+}
+
+.resultSection {
+  margin-top: 0.5rem;
+}
+
+.resultCorrect {
+  color: var(--text-success-primary);
+  font-weight: var(--font-weight-semi-bold, 600);
+}
+
+.resultIncorrect {
+  color: var(--text-error-primary);
+  font-weight: var(--font-weight-semi-bold, 600);
+}
+
+.resultExplanation {
+  margin-top: 0.25rem;
+  color: var(--text-neutral-secondary);
 }

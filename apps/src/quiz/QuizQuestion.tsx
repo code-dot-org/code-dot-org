@@ -19,6 +19,15 @@ export interface QuizQuestionSummary {
   explanation?: string;
 }
 
+// Present only once the attempt is submitted and the quiz's
+// show_correctness/reveal_answer_explanation settings allow it - see
+// QuizAttempt#question_results. Absent otherwise, including while the
+// student is still taking the quiz.
+export interface QuizQuestionResult {
+  correct: boolean;
+  explanation?: string;
+}
+
 interface QuizQuestionProps {
   question: QuizQuestionSummary;
   // 0-indexed position within the questions the student is taking, for the
@@ -27,6 +36,7 @@ interface QuizQuestionProps {
   total: number;
   selectedChoiceId?: string;
   disabled: boolean;
+  result?: QuizQuestionResult;
   onSelectChoice: (choiceId: string) => void;
 }
 
@@ -40,6 +50,7 @@ const QuizQuestion: React.FunctionComponent<QuizQuestionProps> = ({
   total,
   selectedChoiceId,
   disabled,
+  result,
   onSelectChoice,
 }) => (
   <li className={styles.questionSection}>
@@ -55,12 +66,21 @@ const QuizQuestion: React.FunctionComponent<QuizQuestionProps> = ({
         <legend className={styles.answersLegend}>Answer options</legend>
         {question.choices.map(choice => {
           const isChecked = selectedChoiceId === choice.id;
+          // Only the student's own selection gets a correct/incorrect
+          // style - show_correctness reveals whether an answer was right
+          // or wrong, not which choice was the right one (that's a
+          // separate, not-yet-built reveal).
+          const isGradedSelection = isChecked && !!result;
           return (
             <div
               key={choice.id}
               className={classNames(
                 styles.answerOption,
-                isChecked && styles.answerOptionChecked
+                isChecked && !result && styles.answerOptionChecked,
+                isGradedSelection &&
+                  (result.correct
+                    ? styles.answerOptionCorrect
+                    : styles.answerOptionIncorrect)
               )}
             >
               <RadioButton
@@ -85,6 +105,24 @@ const QuizQuestion: React.FunctionComponent<QuizQuestionProps> = ({
           );
         })}
       </fieldset>
+    )}
+
+    {result && (
+      <div className={styles.resultSection}>
+        <Typography
+          variant="body2"
+          className={
+            result.correct ? styles.resultCorrect : styles.resultIncorrect
+          }
+        >
+          {result.correct ? 'Correct' : 'Incorrect'}
+        </Typography>
+        {result.explanation && (
+          <Typography variant="body3" className={styles.resultExplanation}>
+            {result.explanation}
+          </Typography>
+        )}
+      </div>
     )}
   </li>
 );
