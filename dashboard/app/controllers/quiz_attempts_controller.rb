@@ -89,16 +89,23 @@ class QuizAttemptsController < ApplicationController
       score: attempt.score,
       maxScore: attempt.max_score,
       # nil when the quiz has no time limit - see QuizAttempt#expires_at.
-      # The client computes its own countdown/auto-submit from this rather
-      # than us pushing a "time's up" event, so clock skew between client
-      # and server just means the countdown's last second or two may be
-      # slightly off, not that auto-submit fires at the wrong wall-clock
-      # time (that's enforced server-side regardless, see
-      # QuizQuestionResponsesController#create).
+      # The client computes its own countdown/auto-submit.
       expiresAt: attempt.expires_at,
       # Whether POSTing to #create again would start a new attempt rather
       # than just returning this one - see QuizAttempt#retakeable?.
-      canRetake: attempt.retakeable?
+      canRetake: attempt.retakeable?,
+      # nil unless this attempt is submitted - always carries
+      # selectedChoiceId once it does, so the client can restore/highlight
+      # past answers on reload; correct/explanation are further gated by
+      # the quiz's own settings - see QuizAttempt#question_results.
+      questionResults: attempt.question_results&.map do |result|
+        {
+          quizQuestionId: result[:quiz_question_id],
+          selectedChoiceId: result[:selected_choice_id],
+          correct: result[:correct],
+          explanation: result[:explanation]
+        }
+      end
     }
   end
 end

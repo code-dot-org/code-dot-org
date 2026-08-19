@@ -64,7 +64,7 @@ class Quiz < Level
   # (apps/src/quiz/Quiz.tsx) has something to render and answer. Not the real
   # payload shape - question rendering/authoring UI is a later milestone.
   #
-  # Correct-answer fields (e.g. correct_choice_id) are deliberately excluded
+  # Correct-answer and explanation fields (e.g. correct_choice_id) are deliberately excluded
   # so grading stays server-side; see QuizQuestion#auto_gradable?/#grade and
   # QuizQuestionResponsesController.
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
@@ -77,7 +77,6 @@ class Quiz < Level
         questionName: question.question_name,
         stem: question.question['stem'],
         choices: question.question['choices'],
-        explanation: question.explanation,
       }
     end
     properties_camelized
