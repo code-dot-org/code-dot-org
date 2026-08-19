@@ -9,20 +9,27 @@ from .constants import CHANNELS, MAX_16_BIT_VALUE, SAMPLE_RATE
 def read_samples_from_wav_bytes(wav_bytes):
   """Read a WAV file into normalized mono float samples in [-1.0, 1.0].
 
-  Stereo input is averaged to mono.
+  Stereo input is averaged to mono, and any other sample rate is resampled to
+  SAMPLE_RATE, since the timeline the samples land on carries no rate of its
+  own.
   """
   with wave.open(io.BytesIO(wav_bytes), "rb") as reader:
     num_channels = reader.getnchannels()
     sample_width = reader.getsampwidth()
+    frame_rate = reader.getframerate()
     frames = reader.readframes(reader.getnframes())
   if sample_width != 2:
     raise ValueError("Only 16-bit PCM WAV data is supported")
+  if frame_rate <= 0:
+    raise ValueError("WAV data declares no sample rate")
   raw = np.frombuffer(frames, dtype="<i2").astype(np.float64) / MAX_16_BIT_VALUE
   if num_channels == 1:
-    return raw
-  if num_channels == 2:
-    return (raw[0::2] + raw[1::2]) / 2.0
-  raise ValueError("Only mono or stereo WAV data is supported")
+    mono = raw
+  elif num_channels == 2:
+    mono = (raw[0::2] + raw[1::2]) / 2.0
+  else:
+    raise ValueError("Only mono or stereo WAV data is supported")
+  return _to_output_rate(mono, frame_rate)
 
 
 def read_samples_from_file(filename):
@@ -80,6 +87,19 @@ class AudioWriter:
       writer.setframerate(SAMPLE_RATE)
       writer.writeframes(int_samples.tobytes())
     return buffer.getvalue()
+
+
+def _to_output_rate(samples, source_rate):
+  """Linearly resample to SAMPLE_RATE, preserving the sound's duration.
+
+  Linear interpolation aliases when downsampling, which is audible on
+  high-rate input but keeps the wheel free of a filter design.
+  """
+  if source_rate == SAMPLE_RATE or len(samples) == 0:
+    return samples
+  new_length = int(len(samples) * SAMPLE_RATE / source_rate)
+  positions = np.arange(new_length) * source_rate / SAMPLE_RATE
+  return np.interp(positions, np.arange(len(samples)), samples)
 
 
 def _to_int16(samples):
