@@ -13,6 +13,10 @@ MAX_16_BIT_VALUE = 32768
 # Python Lab page.
 INSTRUMENT_SAMPLE_RATE = 22050
 
+# Note range bundled for every instrument, as MIDI note numbers (C3-C6).
+MIN_NOTE = 48
+MAX_NOTE = 84
+
 # Smallest pause/frame duration in seconds; pause() rejects anything shorter.
 MIN_PAUSE_SECONDS = 0.1
 

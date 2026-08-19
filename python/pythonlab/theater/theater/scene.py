@@ -1,10 +1,12 @@
-from .instrument import Instrument
+from .instrument import Instrument, as_instrument
 from .support import actions
 from .support.actions import UNSPECIFIED
 from .support.audio import read_samples_from_file
 from .support.color import Color, as_color
 from .support.constants import (
+  MAX_NOTE,
   MAX_PAUSE_SECONDS,
+  MIN_NOTE,
   MIN_PAUSE_SECONDS,
   THEATER_HEIGHT,
   THEATER_WIDTH,
@@ -74,8 +76,20 @@ class Scene:
     self._actions.append(actions.PlaySound(samples))
 
   def play_note(self, note, seconds, instrument=Instrument.PIANO):
+    """Play one instrument note, cut to the given duration.
+
+    The note is a MIDI number: 60 is middle C, and each step is a semitone.
+    """
     _validate_duration("play_note", seconds)
-    self._actions.append(actions.PlayNote(instrument, note, seconds))
+    # Only whole semitones are bundled, so round as the drawing calls do; the
+    # renderer would otherwise look for a note file that cannot exist and skip
+    # the note without a word.
+    note = int(round(note))
+    if note < MIN_NOTE or note > MAX_NOTE:
+      raise ValueError(
+        f"play_note needs a note between {MIN_NOTE} and {MAX_NOTE}, got {note}"
+      )
+    self._actions.append(actions.PlayNote(as_instrument(instrument), note, seconds))
 
   def play_note_and_pause(self, note, seconds, instrument=Instrument.PIANO):
     self.play_note(note, seconds, instrument)
