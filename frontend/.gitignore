@@ -19,6 +19,8 @@ node_modules
 coverage
 playwright-report/
 test-results/
+playwright-report-eyes/
+test-results-eyes/
 blob-report/
 all-blob-reports/
 playwright/.cache/
