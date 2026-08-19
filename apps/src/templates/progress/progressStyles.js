@@ -45,19 +45,6 @@ export const marginTopBottom = margin => {
  * ======================================
  */
 
-// Dead: ProgressPill never spreads these for a multi-level pill and overrides
-// them with levelProgressStyle for a single-level one.
-export const hoverStyle = {
-  ':hover': {
-    textDecoration: 'none',
-    color: 'var(--text-neutral-inverse)',
-    borderColor: 'var(--borders-brand-purple-primary)',
-    backgroundColor: 'var(--background-brand-purple-primary)',
-  },
-  transition:
-    'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
-};
-
 /**
  * Maps our statuses onto the three base states the CADS bubble spec draws a
  * hover for; the colors themselves live in styles.scss. `passed` counts as

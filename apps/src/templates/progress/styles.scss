@@ -19,6 +19,8 @@
       background-color: var(--background-success-light) !important;
     }
 
+    // The two filled hovers draw their border in the fill color; the -strong
+    // border tokens sit lighter and would show as a ring.
     &.hover-completed:hover {
       color: var(--text-neutral-inverse) !important;
       border-color: var(--background-success-strong) !important;
