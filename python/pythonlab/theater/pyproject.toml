@@ -21,7 +21,7 @@ testpaths = ['tests']
 # via importlib.resources inside Pyodide, where network fetch is unavailable.
 include = [
   'theater/**/*.py',
-  'theater/instruments/*.wav',
+  'theater/instruments/*.ulaw',
   'theater/fonts/*.ttf',
 ]
 
