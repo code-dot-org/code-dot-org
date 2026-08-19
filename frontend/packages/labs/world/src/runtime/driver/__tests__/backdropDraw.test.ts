@@ -238,6 +238,9 @@ const world = (
     tick: () => {},
     effects: () => [],
     renderSnapshot: () => [],
+    // Drained after every tick (specs/SOUND.md).
+    drainSounds: () => [],
+    music: () => undefined,
     backdropSnapshot: () =>
       backdrops.map(backdrop => ({
         offset: {x: 0, y: 0},

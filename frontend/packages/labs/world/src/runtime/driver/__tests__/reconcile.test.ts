@@ -70,6 +70,10 @@ function makeGroundWorld(traits: Trait[]): World {
   return world;
 }
 
+/** A world's snapshot as the reconciler compares it — by stringifying. */
+const stableSnapshot = (world: World): string =>
+  JSON.stringify(world.snapshot());
+
 /** A minimal `.effect` document; `nodeId` is the knob a test turns to differ. */
 const effectDoc = (nodeId: string): EffectDocument => ({
   version: 1,
@@ -358,6 +362,52 @@ describe('reconcile', () => {
     const baseline = running.snapshot();
     const incoming = makeGroundWorld([GroundTrait, SolidTrait]);
 
+    expect(reconcile(running, incoming, baseline).mode).toBe('restarted');
+  });
+  it('changes the track on the running game rather than restarting it', () => {
+    // Music is a value, like the sky. Restarting for it would throw away the
+    // game a learner is listening to while they pick one (specs/SOUND.md).
+    const running = makeWorld(900);
+    running.setMusic('theme');
+    const baseline = running.snapshot();
+    const incoming = makeWorld(900);
+    incoming.setMusic('boss');
+
+    const {mode} = reconcile(running, incoming, baseline);
+
+    expect(mode).toBe('reconciled');
+    // And it landed: without the patch this reconciles to a running world still
+    // playing the old track, and the change is silently lost — the failure the
+    // backdrop patch was written for, one channel over.
+    expect(running.music()).toBe('boss');
+  });
+
+  it('stops the music on the running game', () => {
+    // Silence is a value too, and it is the one an absent key spells — so this
+    // is the case a `!==` on two `undefined`s would get right by accident and a
+    // truthiness check would get wrong.
+    const running = makeWorld(900);
+    running.setMusic('theme');
+    const baseline = running.snapshot();
+    const incoming = makeWorld(900);
+
+    const {mode} = reconcile(running, incoming, baseline);
+
+    expect(mode).toBe('reconciled');
+    expect(running.music()).toBeUndefined();
+  });
+
+  it('does not restart for a sound that was played', () => {
+    // The other half of the split, from this side. A one-shot is not in the
+    // snapshot, so a rebuild whose only difference is that something went pop
+    // has nothing to compare — and a queue that had leaked into the baseline
+    // would both restart the game and play the pop again.
+    const running = makeWorld(900);
+    const baseline = running.snapshot();
+    const incoming = makeWorld(900);
+    incoming.playSound('pop');
+
+    expect(stableSnapshot(incoming)).toBe(stableSnapshot(running));
     expect(reconcile(running, incoming, baseline).mode).toBe('restarted');
   });
 });

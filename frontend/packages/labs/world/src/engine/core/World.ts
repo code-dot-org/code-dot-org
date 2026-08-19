@@ -187,6 +187,15 @@ export interface WorldSnapshot {
   backdrops: SlotValues[];
   /** The same for what each layer draws in front of its actors. */
   foregrounds: SlotValues[];
+  /**
+   * The track this world is playing, or undefined for silence.
+   *
+   * A VALUE, patched like a backdrop and for the same reason: swapping the
+   * music while the game runs should swap the music, not restart the game. It
+   * is the half of sound that IS state — the other half already happened, and
+   * is deliberately not here (specs/SOUND.md).
+   */
+  music?: string;
   /** The one colour behind everything — a value, patched like the sky above. */
   clearColor: Rgba;
   /** World-scoped property values, by `${ruleId}.${propId}`. */
@@ -623,6 +632,10 @@ export class World {
   private readonly leaving = new Set<Actor>();
   /** Whether a tick is running, which is what makes removal deferred. */
   private ticking = false;
+  /** Sounds raised since the driver last drained, in the order raised. */
+  private readonly queuedSounds: string[] = [];
+  /** The track playing, or undefined for silence (specs/SOUND.md). */
+  private track: string | undefined;
 
   /**
    * Place an actor, in `layer` or in the default one.
@@ -1364,6 +1377,59 @@ export class World {
     return this;
   }
 
+  // ── Sound (specs/SOUND.md) ──────────────────────────────────────────────
+  //
+  // Two things with opposite mechanisms, which is why they are two methods and
+  // not one. A one-shot is a MOMENT: it goes on a queue the driver drains after
+  // each tick, and it is NOT in the snapshot, because a moment that survived
+  // into the hot-reload baseline would be compared, found different, and
+  // replayed. Music is STATE: it is in the snapshot and patches in place, the
+  // way the sky does.
+
+  /**
+   * Play a sound once — `play sound ⟨pop⟩`.
+   *
+   * Queued rather than played, because the engine has no speakers and is not
+   * going to grow any: it says what happened, and the driver decides what that
+   * sounds like. The same division `renderSnapshot` makes about pictures.
+   *
+   * Repeats are KEPT. Two coins collected in one tick are two pops, and a queue
+   * that deduplicated would make a busy frame quieter than a calm one.
+   */
+  playSound(sound: string): this {
+    this.queuedSounds.push(sound);
+    return this;
+  }
+
+  /**
+   * Take the sounds raised since the last call, emptying the queue.
+   *
+   * The driver calls this after `tick`. A world nobody drains — one built to be
+   * compared against, or to draw a thumbnail with — accumulates and is thrown
+   * away with its queue, which is what "building a world drops its sounds"
+   * comes to in practice.
+   */
+  drainSounds(): readonly string[] {
+    return this.queuedSounds.splice(0, this.queuedSounds.length);
+  }
+
+  /**
+   * Play a track, replacing whatever was playing — `set music to ⟨theme⟩`.
+   *
+   * `undefined` is silence, and is how it stops: a world either has music or it
+   * does not, so a second `stop music` method would be a second way to say one
+   * thing.
+   */
+  setMusic(track: string | undefined): this {
+    this.track = track;
+    return this;
+  }
+
+  /** The track playing, or undefined for silence. */
+  music(): string | undefined {
+    return this.track;
+  }
+
   /**
    * Slide a layer's background, in world pixels.
    *
@@ -2020,6 +2086,9 @@ export class World {
         slotValues(layer.id, layer.foreground),
       ),
       clearColor: [...this.clearColor] as Rgba,
+      // The track, and not the one-shots: what is playing is state a patch can
+      // set, what already played is a moment (specs/SOUND.md).
+      ...(this.track === undefined ? {} : {music: this.track}),
       world,
       actors,
     };

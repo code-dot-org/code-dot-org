@@ -40,6 +40,7 @@ import type {Actor, BackdropState, RenderState, World} from 'world-lab';
 // `core/keys` imports nothing, so nothing of the engine comes with it.
 import {keyName} from '../../engine/core/keys';
 import {buttonName} from '../../engine/core/pointer';
+import {isSoundFile} from '../../sound/soundFiles';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
 
 import {
@@ -51,6 +52,7 @@ import {
 import {DrawingTextures} from './drawingTextures';
 import {EffectRegistry, type EffectErrorReporter} from './effects';
 import {installSkewHook, type RenderStepInternals} from './skew';
+import {SoundChannel} from './sound';
 
 const ACTOR_SIZE = 24;
 // The game's native resolution — its fixed logical coordinate space, shared with
@@ -190,6 +192,8 @@ const buttonsDown = (pointer: Phaser.Input.Pointer): string[] => {
 export class PhaserBinding {
   private readonly game: Phaser.Game;
   private readonly parent: HTMLElement;
+  /** What is playing, so that stopping the game stops it (specs/SOUND.md). */
+  private readonly sound: SoundChannel;
   /** Set by the first throw out of the learner's code; nothing ticks after. */
   private halted = false;
   private readonly focusOnPointerDown: () => void;
@@ -315,6 +319,52 @@ export class PhaserBinding {
     // does: its textures belong to this scene's texture manager, and a restart
     // builds a new one.
     const drawings = new DrawingTextures();
+    // Sound. The decision — one-shots always, a track only when it changes —
+    // is `SoundChannel`'s and is tested without a browser; this is the port it
+    // calls, and the only part of sound that knows what Phaser is.
+    //
+    // A name the project no longer holds is SAID ONCE and then ignored. It is
+    // reachable by deleting a sound a block still names, and a per-frame step
+    // raising it would otherwise fill the console with one line per frame — the
+    // same bargain `Traited` makes about the messages it says once.
+    const missingSounds = new Set<string>();
+    let scene: Phaser.Scene | undefined;
+    const useScene = (made: Phaser.Scene): void => {
+      scene = made;
+    };
+    let track: Phaser.Sound.BaseSound | undefined;
+    const loaded = (name: string): boolean => {
+      if (scene?.cache.audio.exists(name)) {
+        return true;
+      }
+      if (!missingSounds.has(name)) {
+        missingSounds.add(name);
+        console.warn(`world lab: no sound named "${name}" in this project.`);
+      }
+      return false;
+    };
+    const sound = new SoundChannel({
+      play: name => {
+        if (loaded(name)) {
+          scene?.sound.play(name);
+        }
+      },
+      startMusic: name => {
+        if (!loaded(name) || !scene) {
+          return;
+        }
+        track = scene.sound.add(name, {loop: true});
+        track.play();
+      },
+      stopMusic: () => {
+        // Destroyed as well as stopped: a restart builds a new scene, and a
+        // sound object holding the old one is a leak with a voice.
+        track?.stop();
+        track?.destroy();
+        track = undefined;
+      },
+    });
+    this.sound = sound;
 
     const skewMatrices = new WeakMap<
       GameObject,
@@ -730,17 +780,37 @@ export class PhaserBinding {
       // imports `world-lab` for types only.
       backgroundColor: '#101020',
       banner: false,
-      audio: {noAudio: true},
+      // Audio ON. It was off while nothing made a noise; `play sound` and
+      // `set music to` are what turn it back on (specs/SOUND.md). Phaser's
+      // WebAudio manager starts LOCKED until the surface it lives in sees a
+      // gesture, and installs its own unlock listeners to deal with that —
+      // which means the first sound of a game nobody has clicked on yet may be
+      // dropped by the browser, not by us.
+      audio: {disableWebAudio: false},
       scene: {
         preload(this: Phaser.Scene) {
           // The project's own images, keyed by file name (data URLs — no
           // network, and nothing built in: an image a game draws is a file the
           // project holds, whether the learner drew it or imported it).
           for (const [name, dataUrl] of Object.entries(projectAssets)) {
-            this.load.image(name, dataUrl);
+            // Told apart by the file's name, which is the only thing that tells
+            // a sound from a sprite here — both are bytes on a `url`
+            // (sound/soundFiles). A `data:` URL either way: the loader takes
+            // one for audio as it does for an image, and the sandbox fetches
+            // nothing.
+            if (isSoundFile(name)) {
+              this.load.audio(name, dataUrl);
+            } else {
+              this.load.image(name, dataUrl);
+            }
           }
         },
         create(this: Phaser.Scene) {
+          // What the sound port plays through. Handed over here rather than
+          // closed over at construction, because the scene does not exist until
+          // Phaser makes one — and passed as an argument, like `sync(this)`
+          // below, rather than assigned from `this`.
+          useScene(this);
           // A game may want the right button, and the browser's answer to one
           // is a context menu over the canvas. Turned off here rather than in
           // the page, because it is the GAME's claim on the button.
@@ -762,6 +832,11 @@ export class PhaserBinding {
             world.setPointer(pointer, buttonsDown(pointer));
             // Phaser's delta is milliseconds; the engine ticks in seconds.
             world.tick(delta / 1000);
+            // After the tick, so a sound a step or a handler raised this frame
+            // is heard this frame. Draining is what empties the queue, so a
+            // frame that throws before here replays its sounds next frame
+            // rather than losing them.
+            sound.sync(world.drainSounds(), world.music());
             sync(this);
           });
         },
@@ -795,6 +870,9 @@ export class PhaserBinding {
     forgive(() => this.parent.removeEventListener('keydown', this.onKeyDown));
     forgive(() => this.parent.removeEventListener('keyup', this.onKeyUp));
     forgive(() => this.parent.removeEventListener('blur', this.onBlur));
+    // Before the game goes: a track nobody stopped plays under the game that
+    // replaces it, which is what "the music kept going after Restart" is.
+    forgive(() => this.sound.stop());
     forgive(() => this.game.destroy(true));
     // Phaser removes its own canvas on a clean destroy; this is for the other
     // case. Anything still under the pane belongs to a game that is gone.

@@ -65,6 +65,9 @@ const world = () =>
     tick: () => {},
     effects: () => [],
     renderSnapshot: () => [],
+    // Drained after every tick (specs/SOUND.md).
+    drainSounds: () => [],
+    music: () => undefined,
     snapshot: () => ({world: {}}),
   }) as never;
 
