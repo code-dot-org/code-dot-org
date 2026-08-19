@@ -122,12 +122,17 @@ export type DecisionTreeNode =
   | {
       type: 'leaf';
       prediction: DecisionTreeLabel;
+      sampleCount?: number;
+      labelCounts?: Record<string, number>;
     }
   | {
       type: 'decision';
       featureIndex: number;
       splitType: 'categorical';
       defaultLabel: DecisionTreeLabel;
+      sampleCount?: number;
+      labelCounts?: Record<string, number>;
+      impurityReduction?: number;
       children: Record<string, DecisionTreeNode>;
     }
   | {
@@ -136,6 +141,9 @@ export type DecisionTreeNode =
       splitType: 'numerical';
       threshold: number;
       defaultLabel: DecisionTreeLabel;
+      sampleCount?: number;
+      labelCounts?: Record<string, number>;
+      impurityReduction?: number;
       left: DecisionTreeNode;
       right: DecisionTreeNode;
     };

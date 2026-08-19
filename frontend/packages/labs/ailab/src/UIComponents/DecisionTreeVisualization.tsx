@@ -1,18 +1,23 @@
 import {useEffect, useState} from 'react';
 
 import {Algorithms, ColumnTypes, styles} from '../constants';
+import {getAccuracyGrades} from '../helpers/accuracy';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   getDecisionTreeBranchKey,
+  getDecisionTreeFeatureContributions,
+  getDecisionTreeLeafAccuracyStats,
   getDecisionTreeRoot,
   getDecisionTreeTraceStage,
   traceDecisionTree,
+  type DecisionTreeFeatureContribution,
+  type DecisionTreeLeafAccuracyStats,
   type DecisionTreeTraceResult,
   type DecisionTreeTraceStep,
 } from '../helpers/decisionTree';
 import {getKeyByValue} from '../helpers/utils';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {useAppSelector} from '../hooks';
+import {shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getPredictAvailable} from '../redux';
 import type {DecisionTreeNode} from '../types';
@@ -45,19 +50,39 @@ interface DecisionTreeSvgProps {
     branchValue: string,
   ) => string;
   getPredictionLabel: (prediction: string | number) => string;
+  getLeafAccuracyLabel: (pathKey: string) => string;
+  getDecisionNodeTooltip: (
+    pathKey: string,
+    node: Extract<DecisionTreeNode, {type: 'decision'}>,
+  ) => string;
 }
 
-const TREE_ROW_HEIGHT = 118;
+interface DecisionTreeTooltipState {
+  id: string;
+  lines: string[];
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+const TREE_ROW_HEIGHT = 136;
 const TREE_TOP_PADDING = 18;
 const TREE_BOTTOM_PADDING = 24;
-const TREE_LEAF_SLOT_WIDTH = 180;
+const TREE_LEAF_SLOT_WIDTH = 210;
 const TREE_MIN_WIDTH = 560;
 const TREE_DECISION_NODE_WIDTH = 152;
 const TREE_DECISION_NODE_HEIGHT = 48;
-const TREE_LEAF_NODE_WIDTH = 132;
-const TREE_LEAF_NODE_HEIGHT = 48;
+const TREE_LEAF_NODE_WIDTH = 176;
+const TREE_LEAF_NODE_HEIGHT = 64;
 const TREE_ARROW_COLOR = '#9aa0a6';
 const TREE_ACTIVE_COLOR = 'rgb(89, 202, 211)';
+const TREE_TOOLTIP_WIDTH = 286;
+const TREE_TOOLTIP_LINE_HEIGHT = 18;
+const TREE_TOOLTIP_PADDING_Y = 12;
+const TREE_TOOLTIP_GAP = 12;
+const TREE_TOOLTIP_MARGIN = 8;
+const TREE_TOOLTIP_MAX_LINE_LENGTH = 38;
 
 const formatNumber = (value: number): string =>
   Number.isInteger(value)
@@ -107,8 +132,45 @@ const DecisionTreeSvg = ({
   getFeatureName,
   getBranchLabel,
   getPredictionLabel,
+  getLeafAccuracyLabel,
+  getDecisionNodeTooltip,
 }: DecisionTreeSvgProps) => {
   const layout = getTreeLayout(root);
+  const [tooltip, setTooltip] = useState<DecisionTreeTooltipState>();
+
+  const showTooltip = (placement: TreePlacement, text: string) => {
+    const tooltipLines = getDecisionTreeTooltipLines(text);
+    const tooltipHeight =
+      tooltipLines.length * TREE_TOOLTIP_LINE_HEIGHT +
+      TREE_TOOLTIP_PADDING_Y * 2;
+    const rightX = placement.x + placement.width + TREE_TOOLTIP_GAP;
+    const fitsRight =
+      rightX + TREE_TOOLTIP_WIDTH <= layout.width - TREE_TOOLTIP_MARGIN;
+    const x = fitsRight
+      ? rightX
+      : Math.max(
+          TREE_TOOLTIP_MARGIN,
+          placement.x - TREE_TOOLTIP_WIDTH - TREE_TOOLTIP_GAP,
+        );
+    const y = Math.min(
+      Math.max(TREE_TOOLTIP_MARGIN, placement.y - TREE_TOOLTIP_MARGIN),
+      Math.max(
+        TREE_TOOLTIP_MARGIN,
+        layout.height - tooltipHeight - TREE_TOOLTIP_MARGIN,
+      ),
+    );
+
+    setTooltip({
+      id: getDecisionTreeTooltipId(placement.pathKey),
+      lines: tooltipLines,
+      x,
+      y,
+      width: TREE_TOOLTIP_WIDTH,
+      height: tooltipHeight,
+    });
+  };
+
+  const hideTooltip = () => setTooltip(undefined);
 
   return (
     <svg
@@ -160,8 +222,14 @@ const DecisionTreeSvg = ({
           emphasizedPathKeys={emphasizedPathKeys}
           getFeatureName={getFeatureName}
           getPredictionLabel={getPredictionLabel}
+          getLeafAccuracyLabel={getLeafAccuracyLabel}
+          getDecisionNodeTooltip={getDecisionNodeTooltip}
+          activeTooltipId={tooltip?.id}
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
         />
       ))}
+      {tooltip && <DecisionTreeTooltip tooltip={tooltip} />}
     </svg>
   );
 };
@@ -259,16 +327,37 @@ const TreeSvgNode = ({
   emphasizedPathKeys,
   getFeatureName,
   getPredictionLabel,
+  getLeafAccuracyLabel,
+  getDecisionNodeTooltip,
+  activeTooltipId,
+  showTooltip,
+  hideTooltip,
 }: {
   placement: TreePlacement;
   activePathKeys: Set<string>;
   emphasizedPathKeys: Set<string>;
   getFeatureName: (featureIndex: number) => string;
   getPredictionLabel: (prediction: string | number) => string;
+  getLeafAccuracyLabel: (pathKey: string) => string;
+  getDecisionNodeTooltip: (
+    pathKey: string,
+    node: Extract<DecisionTreeNode, {type: 'decision'}>,
+  ) => string;
+  activeTooltipId?: string;
+  showTooltip: (placement: TreePlacement, text: string) => void;
+  hideTooltip: () => void;
 }) => {
   const nodeIsActive = activePathKeys.has(placement.pathKey);
   const nodeIsEmphasized = emphasizedPathKeys.has(placement.pathKey);
   const isLeaf = placement.node.type === 'leaf';
+  const tooltip =
+    placement.node.type === 'decision'
+      ? getDecisionNodeTooltip(placement.pathKey, placement.node)
+      : undefined;
+  const tooltipId = tooltip
+    ? getDecisionTreeTooltipId(placement.pathKey)
+    : undefined;
+  const tooltipIsActive = tooltipId === activeTooltipId;
   const fill = nodeIsActive
     ? isLeaf
       ? 'rgba(89, 202, 211, 0.28)'
@@ -282,11 +371,36 @@ const TreeSvgNode = ({
       ? [
           I18n.t('decisionTreeLeafLabel') ?? '',
           truncateLabel(getPredictionLabel(placement.node.prediction), 18),
+          truncateLabel(getLeafAccuracyLabel(placement.pathKey), 25),
         ]
       : getNodeLines(getFeatureName(placement.node.featureIndex));
 
   return (
-    <g aria-current={nodeIsActive ? 'step' : undefined}>
+    <g
+      aria-current={nodeIsActive ? 'step' : undefined}
+      aria-describedby={tooltipIsActive ? tooltipId : undefined}
+      aria-label={
+        tooltip && placement.node.type === 'decision'
+          ? getFeatureName(placement.node.featureIndex)
+          : undefined
+      }
+      role={tooltip ? 'group' : undefined}
+      tabIndex={tooltip ? 0 : undefined}
+      onBlur={tooltip ? hideTooltip : undefined}
+      onFocus={tooltip ? () => showTooltip(placement, tooltip) : undefined}
+      onKeyDown={
+        tooltip
+          ? event => {
+              if (event.key === 'Escape') {
+                hideTooltip();
+              }
+            }
+          : undefined
+      }
+      onMouseEnter={tooltip ? () => showTooltip(placement, tooltip) : undefined}
+      onMouseLeave={tooltip ? hideTooltip : undefined}
+      style={tooltip ? {cursor: 'help', outline: 'none'} : undefined}
+    >
       {nodeIsActive && (
         <rect
           x={placement.x - 5}
@@ -298,6 +412,19 @@ const TreeSvgNode = ({
           stroke={TREE_ACTIVE_COLOR}
           strokeWidth={nodeIsEmphasized ? 3 : 2}
           opacity={nodeIsEmphasized ? 0.55 : 0.3}
+        />
+      )}
+      {tooltipIsActive && (
+        <rect
+          x={placement.x - 8}
+          y={placement.y - 8}
+          width={placement.width + 16}
+          height={placement.height + 16}
+          rx={isLeaf ? (placement.height + 16) / 2 : 14}
+          fill="none"
+          stroke="#3f3348"
+          strokeWidth="2"
+          strokeDasharray="4 3"
         />
       )}
       <rect
@@ -315,7 +442,7 @@ const TreeSvgNode = ({
         y={placement.cy - (lines.length - 1) * 7}
         textAnchor="middle"
         dominantBaseline="middle"
-        fontSize={isLeaf ? 12 : 13}
+        fontSize={isLeaf ? 11 : 13}
         fontWeight={nodeIsEmphasized ? 800 : 700}
         fill="#333333"
       >
@@ -329,6 +456,32 @@ const TreeSvgNode = ({
   );
 };
 
+const DecisionTreeTooltip = ({
+  tooltip,
+}: {
+  tooltip: DecisionTreeTooltipState;
+}) => (
+  <foreignObject
+    x={tooltip.x}
+    y={tooltip.y}
+    width={tooltip.width}
+    height={tooltip.height}
+    pointerEvents="none"
+  >
+    <div
+      id={tooltip.id}
+      role="tooltip"
+      style={styles.decisionTreeTooltip}
+    >
+      {tooltip.lines.map((line, index) => (
+        <div key={index} style={styles.decisionTreeTooltipLine}>
+          {line}
+        </div>
+      ))}
+    </div>
+  </foreignObject>
+);
+
 const DecisionTreeVisualization = () => {
   const selectedAlgorithm = useAppSelector(state => state.selectedAlgorithm);
   const trainedModel = useAppSelector(state => state.trainedModel);
@@ -337,6 +490,10 @@ const DecisionTreeVisualization = () => {
   const featureNumberKey = useAppSelector(state => state.featureNumberKey);
   const testData = useAppSelector(state => state.testData);
   const labelColumn = useAppSelector(state => state.labelColumn);
+  const accuracyCheckExamples = useAppSelector(
+    state => state.accuracyCheckExamples,
+  );
+  const accuracyGrades = useAppSelector(getAccuracyGrades, shallowEqual);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const predictAvailable = useAppSelector(getPredictAvailable);
   const [activeTraceIndex, setActiveTraceIndex] = useState(0);
@@ -387,6 +544,17 @@ const DecisionTreeVisualization = () => {
   const emphasizedBranchKeys = new Set<string>(
     activeTraceStage?.emphasizedBranchKeys ?? [],
   );
+  const leafAccuracyStats = getDecisionTreeLeafAccuracyStats(
+    root,
+    accuracyCheckExamples,
+    accuracyGrades,
+  );
+  const featureContributions = traceResult
+    ? getDecisionTreeFeatureContributions(traceResult)
+    : {};
+  const traceDecisionNodePathKeys = new Set<string>(
+    traceResult?.steps.map(step => step.pathKey) ?? [],
+  );
 
   const getFeatureName = (featureIndex: number) => {
     const feature = selectedFeatures[featureIndex];
@@ -423,6 +591,19 @@ const DecisionTreeVisualization = () => {
       columnsByDataType,
       featureNumberKey,
     );
+  const getLeafAccuracyLabel = (pathKey: string) =>
+    getLeafAccuracyLabelFromStats(leafAccuracyStats[pathKey]);
+  const getDecisionNodeTooltip = (
+    pathKey: string,
+    node: Extract<DecisionTreeNode, {type: 'decision'}>,
+  ) =>
+    getDecisionNodeTooltipText(
+      pathKey,
+      node,
+      traceResult,
+      traceDecisionNodePathKeys,
+      featureContributions,
+    );
 
   return (
     <section
@@ -446,6 +627,8 @@ const DecisionTreeVisualization = () => {
             getFeatureName={getFeatureName}
             getBranchLabel={getBranchLabel}
             getPredictionLabel={getPredictionLabel}
+            getLeafAccuracyLabel={getLeafAccuracyLabel}
+            getDecisionNodeTooltip={getDecisionNodeTooltip}
           />
         </div>
         <TracePanel
@@ -743,6 +926,124 @@ function getDisplayValue(
   }
 
   return typeof value === 'number' ? formatNumber(value) : String(value);
+}
+
+function getLeafAccuracyLabelFromStats(
+  stats: DecisionTreeLeafAccuracyStats | undefined,
+): string {
+  if (!stats || stats.total === 0) {
+    return I18n.t('decisionTreeLeafNoTestData') ?? 'no test data reached here';
+  }
+
+  return (
+    I18n.t('decisionTreeLeafAccuracy', {
+      correct: stats.correct,
+      total: stats.total,
+      percent: formatNumber((stats.correct / stats.total) * 100),
+    }) ?? `${stats.correct}/${stats.total} correct`
+  );
+}
+
+function getDecisionNodeTooltipText(
+  pathKey: string,
+  node: Extract<DecisionTreeNode, {type: 'decision'}>,
+  traceResult: DecisionTreeTraceResult | undefined,
+  traceDecisionNodePathKeys: Set<string>,
+  featureContributions: Record<string, DecisionTreeFeatureContribution>,
+): string {
+  const unavailable =
+    I18n.t('decisionTreeTooltipUnavailable') ?? 'not available';
+  const impurityReduction =
+    typeof node.impurityReduction === 'number'
+      ? formatNumber(node.impurityReduction)
+      : unavailable;
+  const sampleCount =
+    typeof node.sampleCount === 'number' ? node.sampleCount : unavailable;
+  const lines = [
+    I18n.t('decisionTreeTooltipImpurityReduction', {
+      value: impurityReduction,
+    }) ?? `How useful this question was: ${impurityReduction}`,
+    I18n.t('decisionTreeTooltipSampleCount', {
+      count: sampleCount,
+    }) ?? `Sample count: ${sampleCount}`,
+  ];
+
+  if (!traceResult) {
+    lines.push(
+      I18n.t('decisionTreeTooltipContributionSelectPrediction') ??
+        'Select a prediction to see how this feature contributed to it',
+    );
+  } else if (!traceDecisionNodePathKeys.has(pathKey)) {
+    lines.push(
+      I18n.t('decisionTreeTooltipContributionNotOnPath') ??
+        'Feature contribution: not on selected prediction path.',
+    );
+  } else {
+    const contribution = featureContributions[pathKey];
+    lines.push(
+      contribution
+        ? I18n.t('decisionTreeTooltipContribution', {
+            before: formatProbability(contribution.beforeProbability),
+            after: formatProbability(contribution.afterProbability),
+            contribution: formatPercentagePointDelta(
+              contribution.contribution,
+            ),
+          }) ??
+            `Feature contribution: ${formatPercentagePointDelta(
+              contribution.contribution,
+            )} pts`
+        : I18n.t('decisionTreeTooltipContributionUnavailable') ??
+            'Feature contribution: not available for this path.',
+    );
+  }
+
+  return lines.join('\n');
+}
+
+function getDecisionTreeTooltipId(pathKey: string): string {
+  return `decision-tree-tooltip-${pathKey.replace(/[^a-zA-Z0-9_-]/g, '-')}`;
+}
+
+function getDecisionTreeTooltipLines(text: string): string[] {
+  return text
+    .split('\n')
+    .flatMap(line => wrapDecisionTreeTooltipLine(line))
+    .filter(line => line.length > 0);
+}
+
+function wrapDecisionTreeTooltipLine(line: string): string[] {
+  const words = line.split(' ');
+  const lines: string[] = [];
+  let currentLine = '';
+
+  words.forEach(word => {
+    const nextLine = currentLine ? `${currentLine} ${word}` : word;
+    if (nextLine.length <= TREE_TOOLTIP_MAX_LINE_LENGTH) {
+      currentLine = nextLine;
+      return;
+    }
+
+    if (currentLine) {
+      lines.push(currentLine);
+    }
+    currentLine = word;
+  });
+
+  if (currentLine) {
+    lines.push(currentLine);
+  }
+
+  return lines.length > 0 ? lines : [''];
+}
+
+function formatProbability(probability: number): string {
+  return `${formatNumber(probability * 100)}%`;
+}
+
+function formatPercentagePointDelta(delta: number): string {
+  const percentagePoints = Math.abs(delta) < 0.0001 ? 0 : delta * 100;
+  const sign = percentagePoints > 0 ? '+' : '';
+  return `${sign}${formatNumber(percentagePoints)}`;
 }
 
 function getTraceKey(

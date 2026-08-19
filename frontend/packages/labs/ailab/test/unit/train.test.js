@@ -11,6 +11,7 @@ import rootReducer, {
   setSelectedAlgorithm,
 } from '../../src/redux';
 import train from '../../src/train';
+import {ID3Model} from '../../src/trainers/ID3Trainer';
 
 describe('train functions', () => {
   test('train and predict with numerical data', async () => {
@@ -138,5 +139,34 @@ describe('train functions', () => {
     const predictedValue = getConvertedPredictedLabel(store.getState());
 
     expect(predictedValue).toBe(20);
+  });
+
+  test('ID3 stores training metadata for decision tree visualization', async () => {
+    const model = new ID3Model(
+      [[0], [0], [1], [1]],
+      ['no', 'no', 'yes', 'yes'],
+      [ColumnTypes.CATEGORICAL],
+    );
+
+    const root = model.toJSON().root;
+
+    expect(root).toMatchObject({
+      type: 'decision',
+      sampleCount: 4,
+      labelCounts: {no: 2, yes: 2},
+    });
+    expect(root.impurityReduction).toBeCloseTo(1);
+    expect(root.children[0]).toMatchObject({
+      type: 'leaf',
+      prediction: 'no',
+      sampleCount: 2,
+      labelCounts: {no: 2},
+    });
+    expect(root.children[1]).toMatchObject({
+      type: 'leaf',
+      prediction: 'yes',
+      sampleCount: 2,
+      labelCounts: {yes: 2},
+    });
   });
 });

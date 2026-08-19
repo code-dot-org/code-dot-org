@@ -1,3 +1,4 @@
+import {ResultsGrades} from '../constants';
 import type {
   DecisionTreeLabel,
   DecisionTreeModelData,
@@ -17,6 +18,7 @@ export interface DecisionTreeTraceStep {
   value: number;
   branchDirection: DecisionTreeBranchDirection;
   branchValue?: string;
+  childNode?: DecisionTreeNode;
   childPathKey?: string;
   branchKey?: string;
   usedDefault: boolean;
@@ -35,6 +37,17 @@ export interface DecisionTreeTraceStage {
   emphasizedPathKeys: string[];
   emphasizedBranchKeys: string[];
   activeTraceIndex: number;
+}
+
+export interface DecisionTreeLeafAccuracyStats {
+  correct: number;
+  total: number;
+}
+
+export interface DecisionTreeFeatureContribution {
+  beforeProbability: number;
+  afterProbability: number;
+  contribution: number;
 }
 
 export function getDecisionTreeBranchKey(
@@ -144,6 +157,7 @@ export function traceDecisionTree(
         node,
         value,
         branchDirection,
+        childNode: child,
         childPathKey,
         branchKey: getDecisionTreeBranchKey(pathKey, childPathKey),
         usedDefault: false,
@@ -162,6 +176,7 @@ export function traceDecisionTree(
         value,
         branchDirection: child ? 'categorical' : 'default',
         branchValue,
+        childNode: child,
         childPathKey,
         branchKey: childPathKey
           ? getDecisionTreeBranchKey(pathKey, childPathKey)
@@ -189,6 +204,69 @@ export function traceDecisionTree(
     prediction: node.prediction,
     usedDefault: false,
   };
+}
+
+export function getDecisionTreeLeafAccuracyStats(
+  root: DecisionTreeNode,
+  accuracyCheckExamples: number[][],
+  accuracyGrades: string[],
+): Record<string, DecisionTreeLeafAccuracyStats> {
+  return accuracyCheckExamples.reduce<
+    Record<string, DecisionTreeLeafAccuracyStats>
+  >((stats, example, index) => {
+    const trace = traceDecisionTree(root, example);
+    if (trace.usedDefault) {
+      return stats;
+    }
+
+    const currentStats = stats[trace.leafPathKey] ?? {correct: 0, total: 0};
+    currentStats.total++;
+    if (accuracyGrades[index] === ResultsGrades.CORRECT) {
+      currentStats.correct++;
+    }
+    stats[trace.leafPathKey] = currentStats;
+    return stats;
+  }, {});
+}
+
+export function getDecisionTreeFeatureContributions(
+  traceResult: DecisionTreeTraceResult,
+): Record<string, DecisionTreeFeatureContribution> {
+  return traceResult.steps.reduce<Record<string, DecisionTreeFeatureContribution>>(
+    (contributions, step) => {
+      const beforeProbability = getLabelProbability(
+        step.node,
+        traceResult.prediction,
+      );
+      const afterProbability = step.childNode
+        ? getLabelProbability(step.childNode, traceResult.prediction)
+        : undefined;
+
+      if (
+        beforeProbability !== undefined &&
+        afterProbability !== undefined
+      ) {
+        contributions[step.pathKey] = {
+          beforeProbability,
+          afterProbability,
+          contribution: afterProbability - beforeProbability,
+        };
+      }
+      return contributions;
+    },
+    {},
+  );
+}
+
+function getLabelProbability(
+  node: DecisionTreeNode,
+  label: DecisionTreeLabel,
+): number | undefined {
+  if (!node.sampleCount || !node.labelCounts) {
+    return undefined;
+  }
+
+  return (node.labelCounts[String(label)] ?? 0) / node.sampleCount;
 }
 
 function isDecisionTreeModelData(

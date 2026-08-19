@@ -1014,6 +1014,26 @@ export const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
   },
 
+  decisionTreeTooltip: {
+    backgroundColor: '#3f3348',
+    border: 'solid 1px rgba(255, 255, 255, 0.28)',
+    borderRadius: 6,
+    boxShadow: '0 8px 20px rgba(0, 0, 0, 0.28)',
+    boxSizing: 'border-box',
+    color: 'white',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 12,
+    height: '100%',
+    lineHeight: '18px',
+    padding: '12px 14px',
+    pointerEvents: 'none',
+    width: '100%',
+  },
+
+  decisionTreeTooltipLine: {
+    whiteSpace: 'nowrap',
+  },
+
   decisionTreeTrace: {
     backgroundColor: 'white',
     border: 'solid 1px #cccccc',

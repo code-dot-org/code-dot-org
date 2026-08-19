@@ -69,20 +69,24 @@ export class ID3Model implements PredictionModel {
     rows: TrainingRow[],
     featureIndexes: number[],
   ): DecisionTreeNode {
+    const nodeStats = {
+      sampleCount: rows.length,
+      labelCounts: this.labelCounts(rows),
+    };
     const defaultLabel = this.majorityLabel(rows);
     const uniqueLabels = Array.from(new Set(rows.map(row => row.label)));
 
     if (uniqueLabels.length === 1) {
-      return {type: 'leaf', prediction: uniqueLabels[0]};
+      return {type: 'leaf', prediction: uniqueLabels[0], ...nodeStats};
     }
 
     if (featureIndexes.length === 0 || rows.length === 0) {
-      return {type: 'leaf', prediction: defaultLabel};
+      return {type: 'leaf', prediction: defaultLabel, ...nodeStats};
     }
 
     const split = this.bestSplit(rows, featureIndexes);
     if (!split || split.gain <= 0) {
-      return {type: 'leaf', prediction: defaultLabel};
+      return {type: 'leaf', prediction: defaultLabel, ...nodeStats};
     }
 
     const remainingFeatureIndexes = featureIndexes.filter(
@@ -102,6 +106,8 @@ export class ID3Model implements PredictionModel {
         splitType: split.splitType,
         threshold: split.threshold!,
         defaultLabel,
+        ...nodeStats,
+        impurityReduction: split.gain,
         left: this.buildTree(leftRows, remainingFeatureIndexes),
         right: this.buildTree(rightRows, remainingFeatureIndexes),
       };
@@ -123,6 +129,8 @@ export class ID3Model implements PredictionModel {
       featureIndex: split.featureIndex,
       splitType: split.splitType,
       defaultLabel,
+      ...nodeStats,
+      impurityReduction: split.gain,
       children,
     };
   }
