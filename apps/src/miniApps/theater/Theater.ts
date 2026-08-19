@@ -23,6 +23,62 @@ interface TheaterSignal {
 
 type UploadCallback = (this: XMLHttpRequest, event: ProgressEvent) => void;
 
+type MediaElement = HTMLImageElement | HTMLAudioElement;
+
+function cacheBustSuffix() {
+  return '?=' + new Date().getTime();
+}
+
+// One media element and the object url currently behind it. The url is kept
+// here rather than read back off the element because a reset can arrive after
+// React has unmounted the element, and a url we can no longer read is a url we
+// can never revoke.
+class TrackedSource {
+  private readonly getElement: () => MediaElement | null;
+  private blobUrl: string | null;
+
+  constructor(getElement: () => MediaElement | null) {
+    this.getElement = getElement;
+    this.blobUrl = null;
+  }
+
+  // Java Lab sources are remote urls, cache-busted so a rerun re-fetches rather
+  // than reusing the previous run's file. Python Lab produces media in the
+  // browser and passes a blob: url, which must be used verbatim (a query suffix
+  // is not part of a registered object url) and revoked once dropped, or it is
+  // held for the life of the page.
+  set(url: string | undefined) {
+    const nextUrl =
+      url && (url.startsWith('blob:') || url.startsWith('data:'))
+        ? url
+        : url + cacheBustSuffix();
+    this.clear();
+    const element = this.getElement();
+    if (element) {
+      element.src = nextUrl;
+    }
+    if (nextUrl.startsWith('blob:')) {
+      this.blobUrl = nextUrl;
+    }
+  }
+
+  clear() {
+    const element = this.getElement();
+    if (element) {
+      // Detach before dropping the src: a load already in flight is for media we
+      // are discarding, and clearing the src can itself fire an error event.
+      element.onload = null;
+      element.onerror = null;
+      element.oncanplaythrough = null;
+      element.src = '';
+    }
+    if (this.blobUrl) {
+      URL.revokeObjectURL(this.blobUrl);
+      this.blobUrl = null;
+    }
+  }
+}
+
 export default class Theater extends MiniApp {
   private readonly onOutputMessage: (message: string) => void;
   private readonly onNewlineMessage: () => void;
@@ -33,9 +89,13 @@ export default class Theater extends MiniApp {
     message: InputMessage
   ) => void;
   private readonly onOutputVisibleChange?: (isVisible: boolean) => void;
+  private readonly onMediaLoadError?: () => void;
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
+  private hasMedia: boolean;
+  private readonly imageSource: TrackedSource;
+  private readonly audioSource: TrackedSource;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -43,7 +103,8 @@ export default class Theater extends MiniApp {
     openPhotoPrompter: (prompt?: string) => void,
     closePhotoPrompter: () => void,
     onJavabuilderMessage: (messageType: string, message: InputMessage) => void,
-    onOutputVisibleChange?: (isVisible: boolean) => void
+    onOutputVisibleChange?: (isVisible: boolean) => void,
+    onMediaLoadError?: () => void
   ) {
     super();
     this.onOutputMessage = onOutputMessage;
@@ -52,9 +113,13 @@ export default class Theater extends MiniApp {
     this.closePhotoPrompter = closePhotoPrompter;
     this.onJavabuilderMessage = onJavabuilderMessage;
     this.onOutputVisibleChange = onOutputVisibleChange;
+    this.onMediaLoadError = onMediaLoadError;
     this.loadEventsFinished = 0;
     this.prompterUploadUrl = null;
     this.hasAudio = false;
+    this.hasMedia = false;
+    this.imageSource = new TrackedSource(() => this.getImgElement());
+    this.audioSource = new TrackedSource(() => this.getAudioElement());
   }
 
   handleSignal(data: TheaterSignal) {
@@ -62,15 +127,23 @@ export default class Theater extends MiniApp {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
         this.hasAudio = true;
-        this.getAudioElement().src =
-          data.detail.url + this.getCacheBustSuffix();
-        this.getAudioElement().oncanplaythrough = () => this.startPlayback();
+        this.hasMedia = true;
+        this.audioSource.set(data.detail.url);
+        const audioElement = this.getAudioElement();
+        if (audioElement) {
+          audioElement.oncanplaythrough = () => this.startPlayback();
+        }
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
         // Preload the image. Once it's ready, start the playback
-        this.getImgElement().src = data.detail.url + this.getCacheBustSuffix();
-        this.getImgElement().onload = () => this.startPlayback();
+        this.hasMedia = true;
+        this.imageSource.set(data.detail.url);
+        const imageElement = this.getImgElement();
+        if (imageElement) {
+          imageElement.onload = () => this.startPlayback();
+          imageElement.onerror = () => this.handleVisualLoadError();
+        }
         break;
       }
       case TheaterSignalType.GET_IMAGE: {
@@ -97,9 +170,17 @@ export default class Theater extends MiniApp {
     if (this.loadEventsFinished > 1) {
       this.setOutputVisible(true);
       if (this.hasAudio) {
-        this.getAudioElement().play();
+        this.getAudioElement()?.play();
       }
     }
+  }
+
+  // An image that fails to load never fires onload, so playback would wait on it
+  // forever: the stage stays empty and the run button stays on stop. Put the
+  // theater back and let the host report the failure.
+  private handleVisualLoadError() {
+    this.reset();
+    this.onMediaLoadError?.();
   }
 
   reset() {
@@ -118,24 +199,32 @@ export default class Theater extends MiniApp {
   // Legacy Java Lab reads the image's visibility directly; lab2 also needs the
   // change in React so it can swap in an empty state.
   private setOutputVisible(isVisible: boolean) {
-    this.getImgElement().style.visibility = isVisible ? 'visible' : 'hidden';
+    const imageElement = this.getImgElement();
+    if (imageElement) {
+      imageElement.style.visibility = isVisible ? 'visible' : 'hidden';
+    }
     this.onOutputVisibleChange?.(isVisible);
   }
 
   resetAudioAndVideo() {
-    const audioElement = this.getAudioElement();
-    audioElement.pause();
-    audioElement.src = '';
-    this.getImgElement().src = '';
+    this.getAudioElement()?.pause();
+    this.audioSource.clear();
+    this.imageSource.clear();
     this.hasAudio = false;
+    this.hasMedia = false;
+  }
+
+  // Whether the program handed the theater anything to play.
+  hasOutput() {
+    return this.hasMedia;
   }
 
   getImgElement() {
-    return document.getElementById(THEATER_IMAGE_ID) as HTMLImageElement;
+    return document.getElementById(THEATER_IMAGE_ID) as HTMLImageElement | null;
   }
 
   getAudioElement() {
-    return document.getElementById(THEATER_AUDIO_ID) as HTMLAudioElement;
+    return document.getElementById(THEATER_AUDIO_ID) as HTMLAudioElement | null;
   }
 
   onClose() {
@@ -146,10 +235,6 @@ export default class Theater extends MiniApp {
     this.onNewlineMessage();
     // Close the photo prompter if it is still open
     this.closePhotoPrompter();
-  }
-
-  getCacheBustSuffix() {
-    return '?=' + new Date().getTime();
   }
 
   onPhotoPrompterFileSelected(photo: Blob) {

@@ -1,3 +1,5 @@
+import {PyBuffer} from 'pyodide/ffi';
+
 import {HOME_FOLDER, SERVICE_WORKER_PATH} from './constants';
 
 export enum MessageTag {
@@ -46,3 +48,31 @@ export const pythonlabInputModule = {
     return request.responseText;
   },
 };
+
+// The theater package's only way to reach the page: student code renders a gif
+// in Python, and this hands the bytes to the theater mini app to play.
+export const theaterBridgeModule = {
+  publish: (gif: PyBuffer) => {
+    // Copy before the suppression check: the proxy has to be released either
+    // way, or its WASM memory stays pinned for the life of the worker.
+    const gifBytes = copyProxyBytes(gif);
+    postMessage({
+      type: 'theater_media',
+      gif: gifBytes,
+      id: 'none', // id is not used here, so none is safe
+    });
+  },
+};
+
+// Copy a Python bytes object out of WASM memory into a standalone Uint8Array.
+// postMessage cannot clone the proxy itself, and the buffer it hands us is a view
+// into the interpreter's heap, so the copy has to happen before release.
+function copyProxyBytes(proxy: PyBuffer) {
+  const buffer = proxy.getBuffer('u8');
+  try {
+    return new Uint8Array(buffer.data as Uint8Array);
+  } finally {
+    buffer.release();
+    proxy.destroy();
+  }
+}

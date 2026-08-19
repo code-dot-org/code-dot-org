@@ -17,6 +17,7 @@ describe('Theater', () => {
   let closePhotoPrompter: jest.Mock;
   let onJavabuilderMessage: jest.Mock;
   let onOutputVisibleChange: jest.Mock;
+  let onMediaLoadError: jest.Mock;
   let uploadFile: jest.Mock;
 
   beforeEach(() => {
@@ -26,6 +27,7 @@ describe('Theater', () => {
     closePhotoPrompter = jest.fn();
     onJavabuilderMessage = jest.fn();
     onOutputVisibleChange = jest.fn();
+    onMediaLoadError = jest.fn();
 
     playAudioSpy = jest.fn();
     pauseAudioSpy = jest.fn();
@@ -39,7 +41,8 @@ describe('Theater', () => {
       openPhotoPrompter,
       closePhotoPrompter,
       onJavabuilderMessage,
-      onOutputVisibleChange
+      onOutputVisibleChange,
+      onMediaLoadError
     );
     theater.getImgElement = () => imageElement as HTMLImageElement;
     theater.getAudioElement = () => audioElement as HTMLAudioElement;
@@ -64,6 +67,138 @@ describe('Theater', () => {
     expect(imageElement.src).toContain(url);
     expect(typeof imageElement.onload).toBe('function');
     expect(theater.startPlayback).not.toHaveBeenCalled();
+  });
+
+  it('cache-busts remote urls', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'https://example.com/theater.gif'},
+    });
+    expect(imageElement.src).toContain('https://example.com/theater.gif?=');
+  });
+
+  it('uses blob and data urls verbatim', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:https://studio.code.org/abc-123'},
+    });
+    expect(imageElement.src).toBe('blob:https://studio.code.org/abc-123');
+
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'data:audio/wav;base64,AAAA'},
+    });
+    expect(audioElement.src).toBe('data:audio/wav;base64,AAAA');
+  });
+
+  it('revokes a blob url when it is replaced', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:first'},
+    });
+    expect(revokeSpy).not.toHaveBeenCalled();
+
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:second'},
+    });
+    expect(revokeSpy).toHaveBeenCalledWith('blob:first');
+    expect(imageElement.src).toBe('blob:second');
+
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio-first'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio-second'},
+    });
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio-first');
+    expect(audioElement.src).toBe('blob:audio-second');
+  });
+
+  it('revokes blob urls on reset', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+
+    theater.reset();
+
+    expect(revokeSpy).toHaveBeenCalledWith('blob:image');
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
+  });
+
+  it('revokes blob urls after the elements are unmounted', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+    theater.getImgElement = () => null;
+    theater.getAudioElement = () => null;
+
+    theater.onStop();
+
+    expect(revokeSpy).toHaveBeenCalledWith('blob:image');
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
+  });
+
+  it('does not revoke remote urls on reset', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'https://example.com/theater.gif'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'https://example.com/theater.wav'},
+    });
+
+    theater.reset();
+
+    expect(revokeSpy).not.toHaveBeenCalled();
+  });
+
+  it('reports output only after media arrives, until the next reset', () => {
+    theater.startPlayback = jest.fn();
+    expect(theater.hasOutput()).toBe(false);
+
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    expect(theater.hasOutput()).toBe(true);
+
+    theater.reset();
+    expect(theater.hasOutput()).toBe(false);
+  });
+
+  it('does not report output for a run that only signals NO_AUDIO', () => {
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+
+    expect(theater.hasOutput()).toBe(false);
   });
 
   it('shows a/v once elements have loaded', () => {
@@ -92,6 +227,59 @@ describe('Theater', () => {
 
     expect(imageElement.style?.visibility).toBe('hidden');
     expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+  });
+
+  it('reports a failed image load and drops the media', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+
+    (imageElement as HTMLImageElement).onerror?.(new Event('error'));
+
+    expect(onMediaLoadError).toHaveBeenCalledTimes(1);
+    expect(theater.hasOutput()).toBe(false);
+    expect(imageElement.style?.visibility).toBe('hidden');
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+    expect(revokeSpy).toHaveBeenCalledWith('blob:image');
+  });
+
+  it('does not report an error for media dropped by a reset', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+
+    theater.reset();
+
+    // Clearing the src can fire an error event for the discarded image.
+    expect(imageElement.onerror).toBeNull();
+    expect(imageElement.onload).toBeNull();
+    expect(audioElement.oncanplaythrough).toBeNull();
+    expect(onMediaLoadError).not.toHaveBeenCalled();
+  });
+
+  it('starts playback on a later load after a failed one', () => {
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:bad'},
+    });
+    (imageElement as HTMLImageElement).onerror?.(new Event('error'));
+
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:good'},
+    });
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+
+    expect(imageElement.style?.visibility).toBe('visible');
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(true);
   });
 
   it('opens photo prompter after receiving a GET_IMAGE signal', () => {
