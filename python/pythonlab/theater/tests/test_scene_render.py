@@ -9,7 +9,9 @@ from theater import Image, Instrument, Scene
 from theater.support.audio import read_samples_from_wav_bytes
 from theater.support.constants import (
   MAX_FRAMES,
+  MAX_NOTE,
   MAX_PAUSE_SECONDS,
+  MIN_NOTE,
   MIN_PAUSE_SECONDS,
   SAMPLE_RATE,
   THEATER_HEIGHT,
@@ -182,6 +184,39 @@ def test_out_of_range_note_duration_raises_at_the_call(seconds):
   with pytest.raises(ValueError):
     scene.play_note_and_pause(60, seconds)
   # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+@pytest.mark.parametrize("note", [MIN_NOTE - 1, MAX_NOTE + 1, 0, -1, 128, 84.6])
+def test_out_of_range_note_raises_at_the_call(note):
+  # Only notes with a bundled sample can sound; the renderer skips the rest in
+  # silence, so the scene never plays and never says why.
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.play_note(note, 0.5)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+def test_note_rounds_to_a_whole_semitone():
+  # Integer division is easy to miss: 120/2 is 60.0, and no 60.0 sample exists.
+  scene = Scene()
+  scene.play_note(120 / 2, 0.5)
+  assert scene.get_actions()[0].note == 60
+
+
+@pytest.mark.parametrize("instrument", ["BASS", "bass", Instrument.BASS])
+def test_instrument_accepts_a_name_or_the_enum(instrument):
+  scene = Scene()
+  scene.play_note(60, 0.5, instrument=instrument)
+  assert scene.get_actions()[0].instrument is Instrument.BASS
+
+
+@pytest.mark.parametrize("instrument", ["TUBA", "", None, 3])
+def test_unknown_instrument_raises_at_the_call(instrument):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.play_note(60, 0.5, instrument=instrument)
   assert scene.get_actions() == []
 
 

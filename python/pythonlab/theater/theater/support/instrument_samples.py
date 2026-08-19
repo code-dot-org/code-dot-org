@@ -3,11 +3,7 @@ from importlib.resources import files
 import numpy as np
 
 from ..instrument import Instrument
-from .constants import INSTRUMENT_SAMPLE_RATE, SAMPLE_RATE
-
-# Note range available per instrument (C3-C6).
-_MIN_NOTE = 48
-_MAX_NOTE = 84
+from .constants import INSTRUMENT_SAMPLE_RATE, MAX_NOTE, MIN_NOTE, SAMPLE_RATE
 
 _FILE_PREFIX = {
   Instrument.PIANO: "piano-",
@@ -27,7 +23,7 @@ def load_note_samples(instrument, note):
   the note.
   """
   prefix = _FILE_PREFIX.get(instrument)
-  if prefix is None or note < _MIN_NOTE or note > _MAX_NOTE:
+  if prefix is None or note < MIN_NOTE or note > MAX_NOTE:
     return None
   resource = files("theater").joinpath("instruments", f"{prefix}{note}.ulaw")
   if not resource.is_file():
