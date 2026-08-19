@@ -40,11 +40,26 @@ const Video: React.FC<VideoProps> = ({
   errorBody,
   className,
   isYouTubeCookieAllowed,
+  posterThumbnailFallback,
 }: VideoProps) => {
   const youtubeVideoUrl = `https://www.youtube-nocookie.com/watch?v=${youTubeId}`;
 
   const [renderState, setRenderState] = useState<RenderState>('facade');
-  const posterThumbnail = `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`;
+  // YouTube does not have a maxres poster for every video, and a blocked
+  // network also blocks its image host. posterThumbnailFallback lets a
+  // caller supply an image that still loads. Without one, this falls back
+  // to hqdefault, which YouTube always has.
+  //
+  // Latch the id that failed, not the resolved URL. Swapping youTubeId then
+  // starts the new video at its own maxres poster.
+  const [posterFailedFor, setPosterFailedFor] = useState<string | undefined>();
+  const resolvedPosterThumbnail =
+    posterFailedFor === youTubeId
+      ? (posterThumbnailFallback ??
+        `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`)
+      : `//i.ytimg.com/vi/${youTubeId}/maxresdefault.jpg`;
+
+  const handlePosterError = () => setPosterFailedFor(youTubeId);
 
   const handleError = (
     event: string | Event | undefined,
@@ -88,14 +103,15 @@ const Video: React.FC<VideoProps> = ({
         return (
           <Facade
             label={`Play video ${videoTitle}`}
-            posterThumbnail={posterThumbnail}
+            posterThumbnail={resolvedPosterThumbnail}
             onClick={handleFacadeClick}
+            onPosterError={handlePosterError}
           />
         );
       case 'youtube':
         return (
           <YouTubeVideo
-            posterThumbnail={posterThumbnail}
+            posterThumbnail={resolvedPosterThumbnail}
             videoTitle={videoTitle}
             src={youtubeVideoUrl}
             onError={error => {
@@ -111,7 +127,7 @@ const Video: React.FC<VideoProps> = ({
       case 'native':
         return (
           <NativeVideo
-            posterThumbnail={posterThumbnail}
+            posterThumbnail={resolvedPosterThumbnail}
             videoTitle={videoTitle}
             src={videoFallback}
             className={className}
@@ -196,14 +212,14 @@ const Video: React.FC<VideoProps> = ({
       </div>
       {/* JSON-LD for structured data. Needed for Google SEO.
       (see https://developers.google.com/search/docs/appearance/structured-data/video#json-ld) */}
-      {videoTitle && posterThumbnail && uploadDate && (
+      {videoTitle && resolvedPosterThumbnail && uploadDate && (
         <JsonLd<VideoObject>
           item={{
             '@context': 'https://schema.org',
             '@type': 'VideoObject',
             name: videoTitle,
             description: videoDesc,
-            thumbnailUrl: posterThumbnail,
+            thumbnailUrl: resolvedPosterThumbnail,
             uploadDate: uploadDate,
             embedUrl: youtubeVideoUrl,
             contentUrl: videoFallback,

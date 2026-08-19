@@ -6,14 +6,18 @@ import {type Mock, vi} from 'vitest';
 
 import Video from '../Video';
 
-type ReactPlayerProps = typeof defaultProps;
+// react-player passes the poster through its `config` prop, not a
+// top-level prop. Surface it here as an attribute for tests to read.
+type ReactPlayerProps = typeof defaultProps & {
+  config?: {html?: {attributes?: {poster?: string}}};
+};
 
 ReactPlayer.canPlay = vi.fn();
 
 vi.mock('react-player', () => ({
   __esModule: true,
-  default: ({light, src, playIcon, onError}: ReactPlayerProps) => (
-    <div>
+  default: ({light, src, playIcon, onError, config}: ReactPlayerProps) => (
+    <div data-poster={config?.html?.attributes?.poster}>
       {src?.endsWith('.mp4') ? 'Fallback ' : 'YouTube '} Player
       {light}
       {playIcon}
@@ -205,6 +209,91 @@ describe('Video Component', () => {
     expect(screen.getByText('Cookie Settings')).toBeInTheDocument();
   });
 
+  it('requests the YouTube maxres poster by default', () => {
+    render(<Video {...defaultProps} />);
+
+    const facadeImage = screen.getByAltText(
+      `Play video ${defaultProps.videoTitle}`,
+    );
+    expect(facadeImage).toHaveAttribute(
+      'src',
+      `//i.ytimg.com/vi/${defaultProps.youTubeId}/maxresdefault.jpg`,
+    );
+  });
+
+  it('falls back to the YouTube hqdefault poster when the maxres poster fails and no fallback is given', () => {
+    render(<Video {...defaultProps} />);
+
+    const facadeImage = screen.getByAltText(
+      `Play video ${defaultProps.videoTitle}`,
+    );
+    fireEvent.error(facadeImage);
+
+    expect(facadeImage).toHaveAttribute(
+      'src',
+      `//i.ytimg.com/vi/${defaultProps.youTubeId}/hqdefault.jpg`,
+    );
+  });
+
+  it('falls back to posterThumbnailFallback when the maxres poster fails', () => {
+    const customPoster = '/c/video_thumbnails/some-key.jpg';
+    render(<Video {...defaultProps} posterThumbnailFallback={customPoster} />);
+
+    const facadeImage = screen.getByAltText(
+      `Play video ${defaultProps.videoTitle}`,
+    );
+    fireEvent.error(facadeImage);
+
+    expect(facadeImage).toHaveAttribute('src', customPoster);
+  });
+
+  // The native player must keep the resolved fallback poster, not revert
+  // to a YouTube-hosted one.
+  it('gives the native player the resolved posterThumbnailFallback after the poster and YouTube both fail', () => {
+    const customPoster = '/c/video_thumbnails/some-key.jpg';
+    (ReactPlayer.canPlay as Mock).mockReturnValue(true);
+    render(<Video {...defaultProps} posterThumbnailFallback={customPoster} />);
+
+    const facadeImage = screen.getByAltText(
+      `Play video ${defaultProps.videoTitle}`,
+    );
+    fireEvent.error(facadeImage);
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Play video ${defaultProps.videoTitle}`,
+      }),
+    );
+
+    act(() => {
+      screen.getByText('Trigger Error').click();
+    });
+
+    expect(screen.getByText('Fallback Player')).toHaveAttribute(
+      'data-poster',
+      customPoster,
+    );
+  });
+
+  // A playlist or carousel that swaps videos must not reuse the old
+  // fallback poster.
+  it('returns to the maxres poster when youTubeId changes after a failure', () => {
+    const {rerender} = render(<Video youTubeId="AAAAAAAAAAA" videoTitle="t" />);
+    const img = () => screen.getByAltText('Play video t');
+
+    fireEvent.error(img());
+    expect(img()).toHaveAttribute(
+      'src',
+      '//i.ytimg.com/vi/AAAAAAAAAAA/hqdefault.jpg',
+    );
+
+    rerender(<Video youTubeId="BBBBBBBBBBB" videoTitle="t" />);
+    expect(img()).toHaveAttribute(
+      'src',
+      '//i.ytimg.com/vi/BBBBBBBBBBB/maxresdefault.jpg',
+    );
+  });
+
   it('renders no JSON-LD script by default', () => {
     const {container} = render(<Video {...defaultProps} />);
     const jsonLdScript = container.querySelector(
@@ -237,7 +326,7 @@ describe('Video Component', () => {
         '@type': 'VideoObject',
         name: defaultProps.videoTitle,
         description: videoDesc,
-        thumbnailUrl: `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`,
+        thumbnailUrl: `//i.ytimg.com/vi/${youTubeId}/maxresdefault.jpg`,
         uploadDate: uploadDate,
         embedUrl: `https://www.youtube-nocookie.com/watch?v=${youTubeId}`,
         contentUrl: defaultProps.videoFallback,
