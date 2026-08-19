@@ -53,6 +53,19 @@ import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 // file with an editor, which is the only thing the button needs.
 const MODULE_FILE = /\.(rule|js|ts|map)$/;
 
+/**
+ * NONE OF THESE HAS A DEFAULT, and that is the point.
+ *
+ * Two places refresh these registries from the same project — the compile path
+ * and the visible editor — and an omitted list does not mean "leave that one
+ * alone", it means REPLACE IT WITH NOTHING. `soundPaths` was added with a
+ * default of `[]` and one of the two callers was not updated, so the editor
+ * populated the sound list and the provider wiped it a moment later: imported
+ * sounds never appeared in a dropdown, and nothing anywhere said why.
+ *
+ * Required parameters make that a compile error instead. A caller with nothing
+ * to pass says so out loud.
+ */
 export function refreshProjectDropdowns(
   files: Record<string, string>,
   /**
@@ -62,9 +75,9 @@ export function refreshProjectDropdowns(
    * it. Paths, not names, because the folder is what says which pool an image
    * belongs to (projectFiles.projectImagePaths).
    */
-  images: readonly string[] = [],
+  images: readonly string[],
   /** Image sizes, by file name, for the ones the editor can measure. */
-  imageSizes: Record<string, ImageSize> = {},
+  imageSizes: Record<string, ImageSize>,
   /**
    * Sound file PATHS the project holds (`sounds/coin.mp3`).
    *
@@ -72,7 +85,7 @@ export function refreshProjectDropdowns(
    * on a `url` and never appears in the flattened text map
    * (projectFiles.projectSoundPaths).
    */
-  soundPaths: readonly string[] = [],
+  soundPaths: readonly string[],
 ): void {
   // What the editor knows about spritesheets: the grids, and how big the images
   // are — together they say how many cells a sheet holds, which is what a

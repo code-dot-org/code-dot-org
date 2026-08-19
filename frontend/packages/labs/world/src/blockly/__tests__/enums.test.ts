@@ -237,10 +237,10 @@ describe('what the editor says about a collision', () => {
   it('warns, the way it warns about two rules with one name', () => {
     // A project with nothing wrong in it first: what has been warned about is
     // remembered across refreshes, which the next test is about.
-    refreshProjectDropdowns({});
+    refreshProjectDropdowns({}, [], {}, []);
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
-    refreshProjectDropdowns({'rules/wind.rule': ambiguous});
+    refreshProjectDropdowns({'rules/wind.rule': ambiguous}, [], {}, []);
 
     expect(warn).toHaveBeenCalledWith(
       expect.stringContaining('more than one set of choices is named'),
@@ -252,11 +252,11 @@ describe('what the editor says about a collision', () => {
   });
 
   it('says it once, not on every keystroke that refreshes the project', () => {
-    refreshProjectDropdowns({});
+    refreshProjectDropdowns({}, [], {}, []);
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
-    refreshProjectDropdowns({'rules/wind.rule': ambiguous});
-    refreshProjectDropdowns({'rules/wind.rule': ambiguous});
+    refreshProjectDropdowns({'rules/wind.rule': ambiguous}, [], {}, []);
+    refreshProjectDropdowns({'rules/wind.rule': ambiguous}, [], {}, []);
 
     expect(warn).toHaveBeenCalledTimes(1);
     warn.mockRestore();
