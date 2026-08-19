@@ -10,7 +10,7 @@ MAX_16_BIT_VALUE = 32768
 
 # Bundled instrument notes are stored at half the output rate and 8 bits per
 # sample, which is what keeps the theater wheel small enough to load on every
-# Python Lab page. tools/encode_instruments.py writes them.
+# Python Lab page.
 INSTRUMENT_SAMPLE_RATE = 22050
 
 # Smallest pause/frame duration in seconds; pause() rejects anything shorter.
