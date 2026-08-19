@@ -40,12 +40,27 @@ describe('handleTheaterMedia', () => {
     });
   });
 
-  it('creates the blob with a gif content type', () => {
-    handleTheaterMedia(new Uint8Array([1, 2, 3]));
+  it('sends the gif and the wav as object urls when there is audio', () => {
+    handleTheaterMedia(new Uint8Array([1, 2, 3]), new Uint8Array([4, 5, 6]));
 
-    const blob = (window.URL.createObjectURL as jest.Mock).mock
-      .calls[0][0] as Blob;
-    expect(blob.type).toBe('image/gif');
+    expect(handleSignal).toHaveBeenCalledTimes(2);
+    expect(handleSignal).toHaveBeenNthCalledWith(1, {
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: createdUrls[0]},
+    });
+    expect(handleSignal).toHaveBeenNthCalledWith(2, {
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: createdUrls[1]},
+    });
+  });
+
+  it('creates the blobs with gif and wav content types', () => {
+    handleTheaterMedia(new Uint8Array([1, 2, 3]), new Uint8Array([4, 5, 6]));
+
+    const blobs = (window.URL.createObjectURL as jest.Mock).mock.calls.map(
+      call => call[0] as Blob
+    );
+    expect(blobs.map(blob => blob.type)).toEqual(['image/gif', 'audio/wav']);
   });
 
   it('does nothing when no theater is registered', () => {
