@@ -33,6 +33,13 @@ const TheaterPreview: React.FunctionComponent = () => {
     dispatch(setIsRunning(false));
   }, [appName, dispatch]);
 
+  // The gif and audio keep playing after the program itself finishes, so a
+  // theater run holds the run button on stop until they are over. They are over
+  // now; the last frame stays on the stage until the next run or a reset.
+  const onPlaybackComplete = useCallback(() => {
+    dispatch(setIsRunning(false));
+  }, [dispatch]);
+
   useEffect(() => {
     // The console manager may not exist when the theater is created, so look it
     // up lazily on each write rather than caching it.
@@ -55,7 +62,8 @@ const TheaterPreview: React.FunctionComponent = () => {
       () => setIsPrompterOpen(false),
       sendTypedInputMessage ?? (() => {}),
       setIsOutputVisible,
-      onMediaLoadError
+      onMediaLoadError,
+      onPlaybackComplete
     );
     CodebridgeRegistry.getInstance().setTheater(theater);
 
@@ -67,7 +75,7 @@ const TheaterPreview: React.FunctionComponent = () => {
       theater.reset();
       CodebridgeRegistry.getInstance().setTheater(null);
     };
-  }, [sendTypedInputMessage, onMediaLoadError]);
+  }, [sendTypedInputMessage, onMediaLoadError, onPlaybackComplete]);
 
   const onPhotoSelected = (file: File) => {
     CodebridgeRegistry.getInstance()

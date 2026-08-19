@@ -83,9 +83,9 @@ const ControlButtons: React.FunctionComponent = () => {
       });
       onRun(/*runTests*/ false, dispatch, source).finally(() => {
         // Theater and neighborhood output keeps playing after the run promise resolves, so we
-        // don't clear isRunning here for them. The neighborhood clears it
-        // itself when its animation finishes; the theater stays running until
-        // the user presses stop (its gif/audio length is unknown).
+        // don't clear isRunning here for them. Each clears it itself when its
+        // output finishes: the neighborhood when its animation ends, the theater
+        // when its gif and audio run out.
         if (miniApp !== MiniApps.Neighborhood && miniApp !== MiniApps.Theater) {
           dispatch(setIsRunning(false));
         }

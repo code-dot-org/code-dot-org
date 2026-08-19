@@ -162,11 +162,11 @@ export async function runAllTests(
   }
 }
 
-// A theater run leaves the run button showing stop while the gif plays, since
-// its length is unknown. A program that ended without producing any media --
-// most often because it threw -- has nothing to play, so put the button back.
-// Safe to check here because the sandbox delivers theater media before it
-// reports the run complete.
+// A theater run leaves the run button showing stop while the gif and audio play,
+// and the theater puts it back when they finish. A program that ended without
+// producing any media -- most often because it threw -- has nothing to play, so
+// put the button back here instead. Safe to check at this point because the
+// sandbox delivers theater media before it reports the run complete.
 function stopTheaterIfNoOutput() {
   const theater = CodebridgeRegistry.getInstance().getTheater();
   if (!theater?.hasOutput()) {
@@ -203,8 +203,8 @@ function handleRunEndedUnexpectedly(
   } else {
     consoleManager?.writeConsoleMessage('');
     if (isTheaterLevel()) {
-      // A theater run normally leaves the run button showing stop, since a gif's
-      // length is unknown. Nothing played here, so put the button back.
+      // A theater run normally leaves the run button showing stop until playback
+      // finishes. Nothing played here, so put the button back.
       CodebridgeRegistry.getInstance().getTheater()?.reset();
       getStore().dispatch(setIsRunning(false));
     }

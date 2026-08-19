@@ -32,7 +32,7 @@ describe('handleTheaterMedia', () => {
     expect(handleSignal).toHaveBeenCalledTimes(2);
     expect(handleSignal).toHaveBeenNthCalledWith(1, {
       value: TheaterSignalType.VISUAL_URL,
-      detail: {url: createdUrls[0]},
+      detail: {url: createdUrls[0], durationMs: undefined},
     });
     expect(handleSignal).toHaveBeenNthCalledWith(2, {
       value: TheaterSignalType.NO_AUDIO,
@@ -46,7 +46,7 @@ describe('handleTheaterMedia', () => {
     expect(handleSignal).toHaveBeenCalledTimes(2);
     expect(handleSignal).toHaveBeenNthCalledWith(1, {
       value: TheaterSignalType.VISUAL_URL,
-      detail: {url: createdUrls[0]},
+      detail: {url: createdUrls[0], durationMs: undefined},
     });
     expect(handleSignal).toHaveBeenNthCalledWith(2, {
       value: TheaterSignalType.AUDIO_URL,
@@ -61,6 +61,24 @@ describe('handleTheaterMedia', () => {
       call => call[0] as Blob
     );
     expect(blobs.map(blob => blob.type)).toEqual(['image/gif', 'audio/wav']);
+  });
+
+  it('sends the length it reads off the gif with the visual', () => {
+    // Two frames written by Pillow, the first held a second.
+    const gif = Uint8Array.from(
+      Buffer.from(
+        'R0lGODlhBAAEAIEAAP8AAAAAAAAAAAAAACH5BARkAAAALAAAAAAEAAQAAAgJAAEIHEiwIICA' +
+          'ACH5BAUAAAEALAAAAAAEAAQAgQD/AAAAAAAAAAAAAAgJAAEIHEiwIICAADs=',
+        'base64'
+      )
+    );
+
+    handleTheaterMedia(gif);
+
+    expect(handleSignal).toHaveBeenNthCalledWith(1, {
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: createdUrls[0], durationMs: 1000},
+    });
   });
 
   it('does nothing when no theater is registered', () => {

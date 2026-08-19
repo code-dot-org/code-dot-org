@@ -2,6 +2,8 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 import {TheaterSignalType} from '@cdo/apps/miniApps/theater/constants';
 
+import {gifDurationMs} from './gifDuration';
+
 // Turns the media bytes a student's program rendered into object URLs and hands
 // them to the theater mini app.
 export function handleTheaterMedia(
@@ -14,9 +16,11 @@ export function handleTheaterMedia(
   }
 
   const gifUrl = URL.createObjectURL(new Blob([gif], {type: 'image/gif'}));
+  // The theater needs the gif's length to know when playback is over; an <img>
+  // will not tell it, so it is read off the bytes here.
   theater.handleSignal({
     value: TheaterSignalType.VISUAL_URL,
-    detail: {url: gifUrl},
+    detail: {url: gifUrl, durationMs: gifDurationMs(gif) ?? undefined},
   });
   // The mini app reveals the stage only after two load events, one visual and
   // one audio. A program that made no sound has no audio to wait on, so

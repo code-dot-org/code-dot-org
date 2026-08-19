@@ -18,6 +18,8 @@ interface TheaterSignal {
     url?: string;
     uploadUrl?: string;
     prompt?: string;
+    // Only on VISUAL_URL, and only from a host that knows how long its gif runs.
+    durationMs?: number;
   };
 }
 
@@ -70,6 +72,7 @@ class TrackedSource {
       element.onload = null;
       element.onerror = null;
       element.oncanplaythrough = null;
+      element.onended = null;
       element.src = '';
     }
     if (this.blobUrl) {
@@ -90,10 +93,15 @@ export default class Theater extends MiniApp {
   ) => void;
   private readonly onOutputVisibleChange?: (isVisible: boolean) => void;
   private readonly onMediaLoadError?: () => void;
+  private readonly onPlaybackComplete?: () => void;
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
   private hasMedia: boolean;
+  private visualDurationMs: number | null;
+  private playbackTimer: number | null;
+  private isPlaybackPending: boolean;
+  private playbackGeneration: number;
   private readonly imageSource: TrackedSource;
   private readonly audioSource: TrackedSource;
 
@@ -104,7 +112,8 @@ export default class Theater extends MiniApp {
     closePhotoPrompter: () => void,
     onJavabuilderMessage: (messageType: string, message: InputMessage) => void,
     onOutputVisibleChange?: (isVisible: boolean) => void,
-    onMediaLoadError?: () => void
+    onMediaLoadError?: () => void,
+    onPlaybackComplete?: () => void
   ) {
     super();
     this.onOutputMessage = onOutputMessage;
@@ -114,10 +123,15 @@ export default class Theater extends MiniApp {
     this.onJavabuilderMessage = onJavabuilderMessage;
     this.onOutputVisibleChange = onOutputVisibleChange;
     this.onMediaLoadError = onMediaLoadError;
+    this.onPlaybackComplete = onPlaybackComplete;
     this.loadEventsFinished = 0;
     this.prompterUploadUrl = null;
     this.hasAudio = false;
     this.hasMedia = false;
+    this.visualDurationMs = null;
+    this.playbackTimer = null;
+    this.isPlaybackPending = false;
+    this.playbackGeneration = 0;
     this.imageSource = new TrackedSource(() => this.getImgElement());
     this.audioSource = new TrackedSource(() => this.getAudioElement());
   }
@@ -128,6 +142,7 @@ export default class Theater extends MiniApp {
         // Wait for the audio to load before starting playback
         this.hasAudio = true;
         this.hasMedia = true;
+        this.isPlaybackPending = true;
         this.audioSource.set(data.detail.url);
         const audioElement = this.getAudioElement();
         if (audioElement) {
@@ -139,6 +154,8 @@ export default class Theater extends MiniApp {
       case TheaterSignalType.VISUAL_URL: {
         // Preload the image. Once it's ready, start the playback
         this.hasMedia = true;
+        this.isPlaybackPending = true;
+        this.visualDurationMs = data.detail.durationMs ?? null;
         this.imageSource.set(data.detail.url);
         const imageElement = this.getImgElement();
         if (imageElement) {
@@ -170,10 +187,62 @@ export default class Theater extends MiniApp {
     // Wait for both to respond and load before starting playback.
     if (this.loadEventsFinished > 1) {
       this.setOutputVisible(true);
-      if (this.hasAudio) {
-        this.getAudioElement()?.play();
-      }
+      const audioElement = this.hasAudio ? this.getAudioElement() : null;
+      this.watchForPlaybackEnd(audioElement, audioElement?.play());
     }
+  }
+
+  // Report playback finished once the audio has run out and the gif has had its
+  // full run time. The stage is left as it is, holding the gif's last frame,
+  // until the next run or a reset.
+  //
+  // The gif's length has to come from the host, since an <img> reports nothing
+  // about the animation it is running. A host that sends no length (Java Lab,
+  // whose runs end on a Javabuilder message instead) gets no report.
+  private watchForPlaybackEnd(
+    audioElement: HTMLAudioElement | null,
+    playing: Promise<void> | undefined
+  ) {
+    // A program that publishes twice replaces what is playing, so the watch it
+    // replaces must not report the run finished when its timer comes due.
+    this.clearPlaybackTimer();
+    const generation = ++this.playbackGeneration;
+    let audioPlaying = audioElement !== null;
+    let visualPlaying = this.visualDurationMs !== null;
+    const reportIfDone = () => {
+      if (
+        audioPlaying ||
+        visualPlaying ||
+        !this.isPlaybackPending ||
+        generation !== this.playbackGeneration
+      ) {
+        return;
+      }
+      this.isPlaybackPending = false;
+      this.onPlaybackComplete?.();
+    };
+
+    if (audioElement) {
+      audioElement.onended = () => {
+        audioPlaying = false;
+        reportIfDone();
+      };
+      // A browser that refuses to start the audio never fires 'ended', so a
+      // refusal counts as audio that is already over.
+      playing?.catch(() => {
+        audioPlaying = false;
+        reportIfDone();
+      });
+    }
+    if (this.visualDurationMs !== null) {
+      this.playbackTimer = window.setTimeout(() => {
+        this.playbackTimer = null;
+        visualPlaying = false;
+        reportIfDone();
+      }, this.visualDurationMs);
+    }
+    // Nothing to wait on: neither a gif length nor an audio track.
+    reportIfDone();
   }
 
   // Media that fails to load never fires the event playback waits on, so the
@@ -213,6 +282,16 @@ export default class Theater extends MiniApp {
     this.imageSource.clear();
     this.hasAudio = false;
     this.hasMedia = false;
+    this.clearPlaybackTimer();
+    this.visualDurationMs = null;
+    this.isPlaybackPending = false;
+  }
+
+  private clearPlaybackTimer() {
+    if (this.playbackTimer !== null) {
+      window.clearTimeout(this.playbackTimer);
+      this.playbackTimer = null;
+    }
   }
 
   // Whether the program handed the theater anything to play.
