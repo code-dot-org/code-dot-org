@@ -47,11 +47,11 @@
       line-height: 10px;
       color: inherit;
     }
+  }
 
-    &:hover,
-    &:active {
-      color: var(--text-neutral-primary);
-    }
+  &:not(.active, .aiTutorVersionActive) .closeButton:hover,
+  &:not(.active, .aiTutorVersionActive) .closeButton:active {
+    color: var(--text-neutral-primary);
   }
 
   &:hover:not(.active, .aiTutorVersionActive, .aiTutorVersionInactive),
@@ -94,13 +94,15 @@
   background-color: var(--background-selected-primary);
   border-color: transparent;
 
-  .closeButton {
+  .closeButton,
+  .closeButton:hover,
+  .closeButton:active {
     color: var(--text-selected-primary);
+  }
 
-    &:hover,
-    &:active {
-      opacity: 0.9;
-    }
+  .closeButton:hover,
+  .closeButton:active {
+    opacity: 0.9;
   }
 
   .label:focus-visible,
