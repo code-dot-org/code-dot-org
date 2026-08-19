@@ -11568,8 +11568,8 @@ __metadata:
     jest-html-reporter: "npm:^3.10.2"
     jest-scss-transform: "npm:^1.0.3"
     jest-transform-stub: "npm:^2.0.0"
-    jquery: "npm:1.12.1"
-    jquery-ui: "npm:^1.12.1"
+    jquery: "npm:^1.12.1"
+    jquery-ui: "npm:^1.13.2"
     js-cookie: "npm:^2.1.2"
     js-file-download: "npm:^0.4.12"
     jshint: "npm:^2.13.6"
@@ -20711,13 +20711,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"jquery-ui@npm:^1.12.1":
-  version: 1.12.1
-  resolution: "jquery-ui@npm:1.12.1"
-  checksum: 10/256e230eb41c797d4a043376a814fe5690382ed6b85901c2cfdfe0fe793a3c5d982e4f2ff3acc4cef6f429f04b07b544d8a8726353776ec25bd8e556cf04612e
-  languageName: node
-  linkType: hard
-
 "jquery-ui@npm:^1.13.2":
   version: 1.13.3
   resolution: "jquery-ui@npm:1.13.3"
@@ -20727,17 +20720,17 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"jquery@npm:1.12.1":
-  version: 1.12.1
-  resolution: "jquery@npm:1.12.1"
-  checksum: 10/12251e6be1fc2fbf059340a9a6ed299ebda6a32327175ff55a2a6ae715e2e86133d7e06feb4982c25f9f28719ddaf962e008186eb1e9e11136c6129fb098a5c9
-  languageName: node
-  linkType: hard
-
 "jquery@npm:>=1.8.0 <4.0.0":
   version: 3.7.1
   resolution: "jquery@npm:3.7.1"
   checksum: 10/17be9929f5fa37697d9848284f0d108c543318ef79ec794e130cd0c49f6c050d60c803a69e8cfa16fa19f5ff7cdb814a6905cceab0831186560c65ed113cd579
+  languageName: node
+  linkType: hard
+
+"jquery@npm:^1.12.1":
+  version: 1.12.4
+  resolution: "jquery@npm:1.12.4"
+  checksum: 10/bb213d70683223716aea597d3cef860b08729a62f799ad98ff9750505d2d6cf3912ea45c88a387e5bade8b0fd0214e33f6753913d833d1bcedef7d73b3f52b50
   languageName: node
   linkType: hard
 

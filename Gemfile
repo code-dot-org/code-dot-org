@@ -203,7 +203,7 @@ gem 'sass', '~> 3.2'
 
 gem 'haml', '~> 5.2.0'
 
-gem 'jquery-ui-rails', '~> 6.0.1'
+gem 'jquery-ui-rails', '~> 7.0'
 
 gem 'nokogiri', '~> 1.18.9'
 
