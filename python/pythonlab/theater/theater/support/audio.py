@@ -76,8 +76,13 @@ class AudioWriter:
     blended = self._samples[self._cursor:end] + samples
     self._samples[self._cursor:end] = np.clip(blended, -1.0, 1.0)
 
-  def add_delay(self, delay_seconds):
-    self._cursor += int(delay_seconds * SAMPLE_RATE)
+  def add_delay_milliseconds(self, delay_milliseconds):
+    """Advance the cursor over silence.
+
+    Milliseconds, and integer arithmetic, so the cursor lands on exactly the
+    sample a gif frame delay of the same length implies.
+    """
+    self._cursor += delay_milliseconds * SAMPLE_RATE // 1000
 
   def get_total_audio_length(self):
     return len(self._samples) / SAMPLE_RATE

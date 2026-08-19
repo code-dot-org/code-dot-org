@@ -99,11 +99,22 @@ def test_blend_adds_and_clamps():
 
 def test_delay_inserts_silence():
   writer = AudioWriter()
-  writer.add_delay(1.0)
+  writer.add_delay_milliseconds(1000)
   writer.write_audio_samples([1.0])
   samples = read_samples_from_wav_bytes(writer.to_wav_bytes())
   assert len(samples) == SAMPLE_RATE + 1
   assert samples[0] == 0.0
+
+
+@pytest.mark.parametrize("milliseconds", [10, 120, 430, 1000, 59000])
+def test_delay_lands_on_a_whole_sample(milliseconds):
+  # The gif counts centiseconds, so the cursor has to sit on the same sample a
+  # frame delay of this length does, exactly, however long the scene runs.
+  writer = AudioWriter()
+  writer.add_delay_milliseconds(milliseconds)
+  writer.write_audio_samples([1.0])
+  samples = read_samples_from_wav_bytes(writer.to_wav_bytes())
+  assert len(samples) - 1 == milliseconds * SAMPLE_RATE // 1000
 
 
 def test_empty_writer_returns_none():
