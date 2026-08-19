@@ -395,6 +395,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         currentStepId: step.id,
         path,
         selectedOptionId,
+        inputs: inputsRef.current,
       });
       const destinationId =
         decision.kind === 'goto' ? decision.stepId : undefined;

@@ -106,6 +106,74 @@ describe('generateTutorReply checklist handling', () => {
     );
   });
 
+  it('labels practice-exercise inputs in the student context', async () => {
+    await generateTutorReply(
+      ctx({
+        studentInputs: {
+          'what-to-make': {
+            questionId: 'what-to-make',
+            stepId: 'interview',
+            prompt: 'What do you want to make?',
+            answer: 'a bakery site',
+            at: '2026-01-01T00:00:00Z',
+          },
+          'ai-prompt-practice-1': {
+            questionId: 'ai-prompt-practice-1',
+            stepId: 'practice',
+            prompt: 'AI build prompt (practice)',
+            answer: 'a page for Nimbus, a weather app startup',
+            at: '2026-01-02T00:00:00Z',
+          },
+        },
+      }),
+      []
+    );
+    const args = mockGenerate.mock.calls[0][1];
+    expect(args.system).toContain(
+      'a page for Nimbus, a weather app startup [from a practice exercise — NOT their project]'
+    );
+    // The real project answer stays unlabeled.
+    expect(args.system).toContain('→ a bakery site\n');
+  });
+
+  it("leaves the current practice step's own inputs unlabeled", async () => {
+    await generateTutorReply(
+      ctx({
+        currentIndex: 1, // the sandbox step itself
+        studentInputs: {
+          'ai-prompt-practice-1': {
+            questionId: 'ai-prompt-practice-1',
+            stepId: 'practice',
+            prompt: 'AI build prompt (practice)',
+            answer: 'a page for Nimbus, a weather app startup',
+            at: '2026-01-02T00:00:00Z',
+          },
+        },
+      }),
+      []
+    );
+    const args = mockGenerate.mock.calls[0][1];
+    expect(args.system).toContain('a page for Nimbus, a weather app startup');
+    expect(args.system).not.toContain('NOT their project');
+  });
+
+  it('tells the tutor about the build panel on prompting steps', async () => {
+    const promptingLesson: LessonPlan = {
+      ...lesson,
+      steps: [{...projectStep, aiPrompting: 'free'} as Step, sandboxStep],
+    };
+    await generateTutorReply(ctx({lesson: promptingLesson}), []);
+    expect(mockGenerate.mock.calls[0][1].system).toContain(
+      'prompts an AI build partner in a separate'
+    );
+    // And stays silent about it when prompting is off.
+    mockGenerate.mockClear();
+    await generateTutorReply(ctx(), []);
+    expect(mockGenerate.mock.calls[0][1].system).not.toContain(
+      'AI build partner in a separate'
+    );
+  });
+
   it('coerces per-item verdicts, dropping malformed entries', async () => {
     mockGenerate.mockResolvedValue({
       output: {

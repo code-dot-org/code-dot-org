@@ -217,6 +217,162 @@ describe('deterministicResolver.recommend', () => {
   });
 });
 
+describe('automatic step branches', () => {
+  const graded = (
+    questionId: string,
+    outcome: 'correct' | 'incorrect',
+    attempts = 1
+  ): AnswerRecord => ({
+    questionId,
+    stepId: 'quiz',
+    prompt: 'p',
+    answer: 'a',
+    outcome,
+    attempts,
+    at: '2026-01-01T00:00:00Z',
+  });
+
+  const branchLesson: LessonPlan = {
+    formatVersion: 2,
+    title: 'Branch test',
+    objective: '',
+    authorInputs: {prompt: ''},
+    steps: [
+      {
+        id: 'quiz',
+        kind: 'questions',
+        title: 'quiz',
+        branches: [
+          {
+            when: {score: {questionsStepId: 'quiz', minFirstTryCorrect: 2}},
+            goTo: 'fast',
+          },
+          {
+            when: {score: {questionsStepId: 'quiz', maxFirstTryCorrect: 0}},
+            goTo: 'remedial',
+          },
+        ],
+        questions: [
+          {
+            id: 'k1',
+            type: 'multipleChoice',
+            prompt: '1',
+            validation: 'key',
+            options: [
+              {id: 'opt', label: 'opt', correct: true},
+              {id: 'escape', label: 'escape', goTo: 'rejoin'},
+            ],
+          },
+          {id: 'k2', type: 'multipleChoice', prompt: '2', validation: 'key'},
+        ],
+      },
+      lab('slow', {next: 'rejoin'}),
+      lab('fast', {next: 'rejoin'}),
+      lab('remedial', {next: 'rejoin'}),
+      lab('rejoin'),
+      lab('build', {
+        branches: [
+          {
+            when: {aiJudge: {stepId: 'build', criteria: 'detailed'}},
+            goTo: 'fast',
+          },
+        ],
+      }),
+      lab('dangler', {
+        branches: [{when: {score: {questionsStepId: 'quiz'}}, goTo: 'nope'}],
+      }),
+    ],
+  };
+
+  const resolveFrom = (
+    currentStepId: string,
+    extra: Partial<NavContext> = {}
+  ) =>
+    deterministicResolver.resolveNext({
+      lesson: branchLesson,
+      currentStepId,
+      path: [currentStepId],
+      ...extra,
+    });
+
+  it('takes the first branch whose score condition holds', async () => {
+    expect(
+      await resolveFrom('quiz', {
+        inputs: {k1: graded('k1', 'correct'), k2: graded('k2', 'correct')},
+      })
+    ).toEqual({kind: 'goto', stepId: 'fast'});
+  });
+
+  it('falls through to array order below the threshold', async () => {
+    expect(
+      await resolveFrom('quiz', {
+        inputs: {k1: graded('k1', 'correct'), k2: graded('k2', 'incorrect')},
+      })
+    ).toEqual({kind: 'goto', stepId: 'slow'});
+  });
+
+  it('does not count retried-to-correct answers as first-try', async () => {
+    expect(
+      await resolveFrom('quiz', {
+        inputs: {k1: graded('k1', 'correct'), k2: graded('k2', 'correct', 2)},
+      })
+    ).toEqual({kind: 'goto', stepId: 'slow'});
+  });
+
+  it('matches a maxFirstTryCorrect condition', async () => {
+    expect(
+      await resolveFrom('quiz', {
+        inputs: {k1: graded('k1', 'incorrect'), k2: graded('k2', 'incorrect')},
+      })
+    ).toEqual({kind: 'goto', stepId: 'remedial'});
+  });
+
+  it('falls through with no inputs at all', async () => {
+    expect(await resolveFrom('quiz')).toEqual({kind: 'goto', stepId: 'slow'});
+  });
+
+  it('lets a student-chosen branch option win over automatic branches', async () => {
+    expect(
+      await resolveFrom('quiz', {
+        selectedOptionId: 'escape',
+        inputs: {k1: graded('k1', 'correct'), k2: graded('k2', 'correct')},
+      })
+    ).toEqual({kind: 'goto', stepId: 'rejoin'});
+  });
+
+  it('skips a branch with a dangling target', async () => {
+    expect(
+      await resolveFrom('dangler', {inputs: {k1: graded('k1', 'correct')}})
+    ).toEqual({kind: 'end'});
+  });
+
+  it('treats an aiJudge condition without a judge as no match', async () => {
+    expect(await resolveFrom('build')).toEqual({
+      kind: 'goto',
+      stepId: 'dangler',
+    });
+  });
+
+  it('routes on the injected judge verdict', async () => {
+    expect(
+      await resolveFrom('build', {judgeCondition: async () => true})
+    ).toEqual({kind: 'goto', stepId: 'fast'});
+    expect(
+      await resolveFrom('build', {judgeCondition: async () => false})
+    ).toEqual({kind: 'goto', stepId: 'dangler'});
+  });
+
+  it('treats a judge failure as no match', async () => {
+    expect(
+      await resolveFrom('build', {
+        judgeCondition: async () => {
+          throw new Error('gateway down');
+        },
+      })
+    ).toEqual({kind: 'goto', stepId: 'dangler'});
+  });
+});
+
 // Walk the real exemplar fixture: both multi-step mini-lessons must
 // route back to the what-next branch point, and "work on my website"
 // must lead to the end.  Guards the loop shape against content edits.
@@ -279,5 +435,109 @@ describe('musical-artist-webpage branch loop', () => {
 
   it('routes "work on my website" to free play and the end', async () => {
     expect(await walk('what-next', 'stay')).toEqual(['free-play', 'end']);
+  });
+});
+
+// Walk the website-with-ai fixture's two branch points: the quiz score
+// splits into accelerated/foundational layout paths that rejoin, and the
+// AI-judged prompt-quality split routes polish vs. prompt-upgrading.
+describe('website-with-ai branch points', () => {
+  const fixture = normalizeLessonPlan(
+    JSON.parse(
+      fs.readFileSync(
+        path.resolve(
+          __dirname,
+          '../../../../dashboard/config/ai_lessons/website-with-ai.json'
+        ),
+        'utf-8'
+      )
+    )
+  );
+
+  const quizAnswers = (firstTryCorrect: number): StudentInputs => {
+    const ids = ['q-footer', 'q-header', 'q-nav', 'q-hero', 'q-cards'];
+    const inputs: StudentInputs = {};
+    ids.forEach((id, i) => {
+      inputs[id] = {
+        questionId: id,
+        stepId: 'webpage-parts-quiz',
+        prompt: 'p',
+        answer: 'a',
+        outcome: 'correct',
+        // Gated quiz: everyone ends correct; below the cut they retried.
+        attempts: i < firstTryCorrect ? 1 : 2,
+        at: '2026-01-01T00:00:00Z',
+      };
+    });
+    return inputs;
+  };
+
+  async function walk(
+    fromStepId: string,
+    extra: Partial<NavContext> = {},
+    stopAt?: string
+  ): Promise<string[]> {
+    const visited: string[] = [];
+    let current = fromStepId;
+    for (let hops = 0; hops < 20; hops++) {
+      const decision = await deterministicResolver.resolveNext({
+        lesson: fixture,
+        currentStepId: current,
+        path: [...visited, current],
+        ...extra,
+      });
+      if (decision.kind === 'end') {
+        visited.push('end');
+        break;
+      }
+      visited.push(decision.stepId);
+      if (decision.stepId === stopAt) break;
+      current = decision.stepId;
+    }
+    return visited;
+  }
+
+  it('routes a 5/5 first-try quiz to the accelerated layout path', async () => {
+    expect(
+      await walk(
+        'webpage-parts-quiz',
+        {inputs: quizAnswers(5)},
+        'great-improvements'
+      )
+    ).toEqual(['layout-prompt', 'great-improvements']);
+  });
+
+  it('routes exactly 4/5 to the accelerated path', async () => {
+    expect(
+      await walk(
+        'webpage-parts-quiz',
+        {inputs: quizAnswers(4)},
+        'great-improvements'
+      )
+    ).toEqual(['layout-prompt', 'great-improvements']);
+  });
+
+  it('routes 3/5 to the foundational layout fix, rejoining after', async () => {
+    expect(
+      await walk(
+        'webpage-parts-quiz',
+        {inputs: quizAnswers(3)},
+        'great-improvements'
+      )
+    ).toEqual(['fix-layout', 'great-improvements']);
+  });
+
+  it('routes a detailed ui-shell prompt to polish & motion', async () => {
+    expect(await walk('ui-shell', {judgeCondition: async () => true})).toEqual([
+      'polish-motion',
+      'finalize',
+      'end',
+    ]);
+  });
+
+  it('routes a vague ui-shell prompt to prompt upgrading', async () => {
+    expect(await walk('ui-shell', {judgeCondition: async () => false})).toEqual(
+      ['upgrade-prompts', 'finalize', 'end']
+    );
   });
 });

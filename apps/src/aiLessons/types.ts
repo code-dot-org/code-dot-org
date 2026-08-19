@@ -39,6 +39,35 @@ export type StepRole =
   | 'freePlay'
   | 'info';
 
+// One automatic branch on a step, evaluated by the resolver when the
+// step completes — after any student-chosen option branch, before the
+// `next` pointer.  First matching branch in authored order wins; when
+// none match the step falls through to next/array order, so the
+// fallthrough path IS the default branch.  A branch-point authoring
+// pattern falls out of these fields: a core exercise carries `branches`,
+// each branch step's `next` points at the rejoin step.
+export interface StepBranch {
+  when: BranchCondition;
+  goTo: string;
+}
+
+// Exactly one condition family per branch.  A condition that can't be
+// evaluated (unanswered questions, judge failure) doesn't match.
+export interface BranchCondition {
+  // Performance on a graded questions step: counts answers that were
+  // correct on the first attempt.  Retries still gate the quiz UI; only
+  // first tries score.
+  score?: {
+    questionsStepId: string;
+    minFirstTryCorrect?: number;
+    maxFirstTryCorrect?: number;
+  };
+  // An LLM reads the student's recorded inputs for the named step (their
+  // answers and AI build prompts) and passes or fails them against this
+  // prose criteria.
+  aiJudge?: {stepId: string; criteria: string};
+}
+
 interface StepBase {
   id: string;
   kind: StepKind;
@@ -53,6 +82,8 @@ interface StepBase {
   // the array; 'end' finishes the lesson.  Branch rejoins (9a -> 9c) and
   // early exits set this explicitly.
   next?: string | 'end';
+  // Automatic performance branching; see StepBranch.
+  branches?: StepBranch[];
 }
 
 export interface LabStep extends StepBase {
@@ -83,6 +114,14 @@ export interface LabStep extends StepBase {
   // from, 'free' adds a free-form prompt box.  Default 'off'.
   aiPrompting?: 'off' | 'presets' | 'free';
   presetPrompts?: string[];
+  // The lab mounts read-only: the student sees code and preview but
+  // can't edit (AI showcase steps).  Rides the synthetic channel's
+  // frozen flag, which lab2/codebridge already honor.
+  readOnly?: boolean;
+  // Pre-fills the build partner's free-form prompt box so the student
+  // arrives with a working prompt to fire or tweak.  Plain text — the
+  // build personalizes via the student's recorded answers regardless.
+  promptPrefill?: string;
   // Authored observation rubric.  When present, completing this step
   // triggers an LLM observation of HOW the student worked (their
   // prompts, attempts, final work) scored against this prose — e.g.
@@ -221,4 +260,13 @@ export function stepShowsChecklist(lesson: LessonPlan, step: Step): boolean {
 
 export function isQuestionsStep(step: Step): step is QuestionsStep {
   return step.kind === 'questions';
+}
+
+// Whether a step id names a sandbox-mode lab step.  Inputs recorded on
+// those steps came from practice exercises (fictional brands, planted
+// bugs), so AI contexts must not mistake them for the student's own
+// project content.
+export function isSandboxStep(lesson: LessonPlan, stepId: string): boolean {
+  const step = lesson.steps.find(s => s.id === stepId);
+  return step?.kind === 'lab' && step.sourceMode === 'sandbox';
 }

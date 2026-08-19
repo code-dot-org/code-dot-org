@@ -21,7 +21,13 @@ import {loggedGenerateText} from './aiLog';
 import {getCapabilitiesMarkdownFor, StepSurface} from './labCapabilities';
 import {StudentInputs} from './studentInputs';
 import {StepObservation} from './studentProgress';
-import {LessonPlan, Question, Step, stepShowsChecklist} from './types';
+import {
+  isSandboxStep,
+  LessonPlan,
+  Question,
+  Step,
+  stepShowsChecklist,
+} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
 
@@ -142,6 +148,15 @@ function currentStepDetails(step: Step): string {
   ${step.description}`);
   }
   if (step.kind === 'lab') {
+    if (step.aiPrompting === 'presets' || step.aiPrompting === 'free') {
+      lines.push(
+        `  On this step the student prompts an AI build partner in a separate
+  panel (NOT this chat).  Prompts they've written appear in STUDENT
+  CONTEXT as "AI build prompt" records.  Never ask them to paste or
+  repeat a prompt here — read it from their records, and coach on it
+  there if it needs work.`
+      );
+    }
     if (step.validation === 'tutor' && step.successCriteria) {
       lines.push(
         `  Success criteria (what you, the tutor, must verify before advancing): ${step.successCriteria}`
@@ -169,7 +184,11 @@ function currentStepDetails(step: Step): string {
 // for the system prompt.  This is the personalization substrate: the
 // tutor should reference the student's own project, adjust its tone to
 // their confidence, and never re-ask what's already been answered.
-function formatStudentContext(inputs: StudentInputs | undefined): string {
+function formatStudentContext(
+  lesson: LessonPlan,
+  currentStepId: string | undefined,
+  inputs: StudentInputs | undefined
+): string {
   const records = Object.values(inputs || {}).sort((a, b) =>
     a.at.localeCompare(b.at)
   );
@@ -182,6 +201,13 @@ function formatStudentContext(inputs: StudentInputs | undefined): string {
       })`;
     } else if (r.outcome === 'kept' || r.outcome === 'undone') {
       note = ` (AI build ${r.outcome})`;
+    }
+    // Practice-exercise records show skill, not project vision — without
+    // this the tutor conflates a fictional exercise brand with the
+    // student's own site.  The current step's own records stay unlabeled:
+    // on a practice step they ARE the work under discussion.
+    if (r.stepId !== currentStepId && isSandboxStep(lesson, r.stepId)) {
+      note += ' [from a practice exercise — NOT their project]';
     }
     return `  - "${r.prompt}" → ${r.answer}${note}`;
   });
@@ -256,7 +282,7 @@ decide when the student is ready to move on.
 LESSON
   Title: ${lesson.title}
   Objective: ${lesson.objective}
-${formatStudentContext(studentInputs)}${formatObservations(
+${formatStudentContext(lesson, current?.id, studentInputs)}${formatObservations(
     lesson,
     observations
   )}${formatChecklist(lesson, current, checklistState)}
@@ -281,7 +307,10 @@ YOUR JOB
 - Stay focused on the current step.  If the student wanders, gently
   bring them back.
 - When the student shares their work (code, a description, or by clicking
-  "Check my work"), evaluate it against the success criteria.
+  "Check my work"), evaluate it against the success criteria.  The
+  success criteria are the ONLY gate: judge them against the work
+  snapshot alone.  The step description is coaching context — never
+  treat it as extra criteria or demand artifacts it mentions.
 - If the success criteria are clearly met, set action="advance" and write a
   brief celebratory transition that previews the next step.
 - If this is the final step and the criteria are met, set

@@ -88,6 +88,7 @@ describe('normalizeLessonPlan', () => {
         expect.arrayContaining([
           'adaptive-fan-page.json',
           'musical-artist-webpage.json',
+          'website-with-ai.json',
         ])
       );
     });
@@ -109,6 +110,9 @@ describe('normalizeLessonPlan', () => {
           if (step.next && step.next !== 'end') {
             expect(ids.has(step.next)).toBe(true);
           }
+          (step.branches || []).forEach(branch => {
+            expect(ids.has(branch.goTo)).toBe(true);
+          });
           if (step.kind === 'questions') {
             step.questions.forEach(q =>
               (q.options || []).forEach(o => {

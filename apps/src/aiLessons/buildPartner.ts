@@ -29,7 +29,7 @@ import {projectSourcesFromFiles} from './aiLessonsProjectManager';
 import {loggedGenerateText} from './aiLog';
 import {getCapabilitiesMarkdownFor} from './labCapabilities';
 import {StudentInputs} from './studentInputs';
-import {LabStep, LessonPlan} from './types';
+import {isSandboxStep, LabStep, LessonPlan} from './types';
 
 // Flash keeps student-invoked builds snappy; flip to PRO if generation
 // quality becomes the bottleneck.
@@ -65,10 +65,19 @@ export interface BuildResult {
   summary: string;
 }
 
-function formatInputs(inputs: StudentInputs): string {
-  const records = Object.values(inputs).sort((a, b) =>
-    a.at.localeCompare(b.at)
-  );
+// Records from OTHER steps' sandboxes are dropped: they're practice
+// exercises (fictional brands, planted bugs) and this section is read as
+// project vision — leaking them writes exercise content into the
+// student's real site.  The current step's own records stay, so builds
+// inside a sandbox keep their iteration history.
+function formatInputs(
+  lesson: LessonPlan,
+  step: LabStep,
+  inputs: StudentInputs
+): string {
+  const records = Object.values(inputs)
+    .filter(r => r.stepId === step.id || !isSandboxStep(lesson, r.stepId))
+    .sort((a, b) => a.at.localeCompare(b.at));
   if (records.length === 0) return '(none yet)';
   return records.map(r => `  - "${r.prompt}" → ${r.answer}`).join('\n');
 }
@@ -98,7 +107,7 @@ LESSON: ${lesson.title} — ${lesson.objective}
 CURRENT STEP: ${step.title}${step.description ? ` — ${step.description}` : ''}
 
 WHAT THE STUDENT HAS SHARED (use this as the project's content and vision):
-${formatInputs(inputs)}
+${formatInputs(lesson, step, inputs)}
 ${formatCurrentFiles(currentSource)}
 RULES
 - Return the COMPLETE project: every file with its whole contents.

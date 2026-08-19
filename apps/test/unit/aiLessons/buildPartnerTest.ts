@@ -153,6 +153,56 @@ describe('generateProjectFiles', () => {
     expect(args.prompt).toBe('add a footer');
   });
 
+  it("drops other steps' practice-exercise inputs from the context", async () => {
+    mockGenerate.mockResolvedValue({
+      output: {files: [{filename: 'index.html', contents: 'x'}], summary: ''},
+    });
+    const practiceStep = labStep({id: 'practice', sourceMode: 'sandbox'});
+    const projectStep = labStep({id: 'project'});
+    const branchedLesson: LessonPlan = {
+      ...lesson,
+      steps: [practiceStep, projectStep],
+    };
+    const inputs = {
+      'what-to-make': {
+        questionId: 'what-to-make',
+        stepId: 'interview',
+        prompt: 'What do you want to make?',
+        answer: 'a bakery site',
+        at: '2026-01-01T00:00:00Z',
+      },
+      'ai-prompt-practice-1': {
+        questionId: 'ai-prompt-practice-1',
+        stepId: 'practice',
+        prompt: 'AI build prompt (practice)',
+        answer: 'a page for Nimbus, a weather app startup',
+        at: '2026-01-02T00:00:00Z',
+      },
+    };
+
+    // Building on the project step: the practice prompt must not leak
+    // into the project's vision.
+    await generateProjectFiles({
+      lesson: branchedLesson,
+      step: projectStep,
+      prompt: 'polish it',
+      inputs,
+    });
+    let args = mockGenerate.mock.calls[0][1];
+    expect(args.system).toContain('a bakery site');
+    expect(args.system).not.toContain('Nimbus');
+
+    // Building on the practice step itself keeps its own history.
+    await generateProjectFiles({
+      lesson: branchedLesson,
+      step: practiceStep,
+      prompt: 'add a footer',
+      inputs,
+    });
+    args = mockGenerate.mock.calls[1][1];
+    expect(args.system).toContain('Nimbus');
+  });
+
   it('throws when the model returns no files', async () => {
     mockGenerate.mockResolvedValue({output: {files: [], summary: 'oops'}});
     await expect(

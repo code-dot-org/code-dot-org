@@ -75,12 +75,27 @@ Cross-cutting fields:
   "project checkpoint") for grouping; never drive behavior.
 - `next` / `option.goTo` — branching pointers: the array is the default
   order, `goTo` jumps, `next` rejoins (or `'end'` finishes).
+- `branches` — automatic performance branching on any step: a list of
+  `{when, goTo}` conditions the resolver evaluates when the step
+  completes.  Conditions: `score` (count of first-attempt-correct
+  answers on a graded questions step) or `aiJudge` (an LLM passes or
+  fails the student's recorded inputs for a step against prose
+  criteria).  First match wins; no match falls through to
+  `next`/array order — so the fallthrough path is the default branch.
+  This encodes the branch-point authoring template: a shared objective,
+  a core exercise carrying `branches`, one step per branch, each branch
+  step's `next` pointing at the rejoin step.
 - `sourceMode: 'sandbox'` — isolates a skill-practice step's source from
   the student's project (scoped to the segment).
 - `starterPrompt` / `starterFiles` — generated-per-student or literal
   starting code.
 - `aiPrompting` / `presetPrompts` — whether the student can prompt the AI
   build partner to write code into this step's source.
+- `promptPrefill` — seeds the build partner's free-form prompt box with
+  a working prompt the student can fire or tweak (their first taste of
+  prompting; personalization comes from recorded answers regardless).
+- `readOnly` — the lab mounts frozen (look, don't touch): showcase
+  steps where the AI generates something aspirational to react to.
 - Lesson-level `checklist` — project rubric the tutor reports against.
 
 ### Navigation

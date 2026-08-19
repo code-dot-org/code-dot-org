@@ -1,0 +1,302 @@
+{
+  "formatVersion": 2,
+  "id": "website-with-ai",
+  "title": "Create a Website with AI",
+  "objective": "Building a world-class website today isn't about memorizing web syntax — it's about curation, problem decomposition, and iterative feedback with AI. Learn to direct AI like an architect: precise structural language first, then style, then motion.",
+  "authorInputs": {
+    "prompt": ""
+  },
+  "steps": [
+    {
+      "id": "questionnaire",
+      "kind": "questions",
+      "title": "A few questions first",
+      "role": "checkIn",
+      "description": "Diagnostic inputs that tune the rest of the lesson: workspace preference, experience with HTML/CSS and JavaScript, and — most importantly — what the student wants to make. That last answer drives the AI showcase and every build in this lesson.",
+      "questions": [
+        {
+          "id": "work-style",
+          "type": "multipleChoice",
+          "prompt": "How do you like to work?",
+          "options": [
+            {"id": "dark", "label": "Dark mode"},
+            {"id": "light", "label": "Light mode"}
+          ]
+        },
+        {
+          "id": "html-css-experience",
+          "type": "scale",
+          "prompt": "How experienced are you with HTML and CSS?",
+          "scale": {
+            "min": 0,
+            "max": 10,
+            "minLabel": "Never touched it",
+            "maxLabel": "Very experienced"
+          }
+        },
+        {
+          "id": "js-experience",
+          "type": "scale",
+          "prompt": "How about JavaScript?",
+          "scale": {
+            "min": 0,
+            "max": 10,
+            "minLabel": "Never touched it",
+            "maxLabel": "Very experienced"
+          }
+        },
+        {
+          "id": "what-to-make",
+          "type": "freeResponse",
+          "prompt": "What do you want to make?",
+          "placeholder": "A site for your team, your art, a cause, a business idea — anything."
+        }
+      ]
+    },
+    {
+      "id": "showcase",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Here's what's possible",
+      "role": "explore",
+      "sourceMode": "sandbox",
+      "readOnly": true,
+      "validation": "none",
+      "description": "The AI has generated a polished, professional version of the site the student said they want to make. The workspace is read-only — this step is about looking, not editing. Point out what makes it feel professional: clear sections, visual hierarchy, consistent style. Build excitement: by the end of this lesson they'll know how to direct AI to build things like this.",
+      "starterPrompt": "Generate a genuinely impressive, professional-quality website for what this student said they want to make — the kind of site a design studio would ship. Multiple clearly distinct sections, strong visual hierarchy, a cohesive color palette, thoughtful spacing, and realistic placeholder content that fits their idea. This is a showcase meant to inspire, so aim high."
+    },
+    {
+      "id": "architect-mindset",
+      "kind": "panels",
+      "title": "You can make this yourself",
+      "role": "info",
+      "panels": [
+        {
+          "caption": "You can make this yourself — and you don't need to write thousands of lines of HTML and CSS by hand to do it."
+        },
+        {
+          "caption": "Think of yourself as an architect or a product manager, using AI as your junior developer."
+        },
+        {
+          "caption": "Your job isn't to type every line. It's to direct the vision, ask the right questions, and assemble the pieces."
+        }
+      ]
+    },
+    {
+      "id": "try-it",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Give it a try!",
+      "role": "explore",
+      "sourceMode": "sandbox",
+      "validation": "none",
+      "aiPrompting": "free",
+      "promptPrefill": "Build me a website based on my idea.",
+      "description": "The student's first build. The prompt box is pre-filled with a simple working prompt — they can fire it as-is or tweak it first. The AI already knows their idea from the questionnaire, so even the generic prompt produces something personal. Encourage a second or third prompt to change or add things; the point is to feel the loop: direct, look, direct again."
+    },
+    {
+      "id": "speak-the-language",
+      "kind": "panels",
+      "title": "How did it do?",
+      "role": "info",
+      "panels": [
+        {
+          "caption": "So — how did the AI do? Probably good, but maybe not exactly what you pictured."
+        },
+        {
+          "caption": "To get precise control, it helps to speak the language of a web developer. Let's learn the words for the parts of a page."
+        }
+      ]
+    },
+    {
+      "id": "webpage-parts-quiz",
+      "kind": "questions",
+      "title": "Parts of a webpage",
+      "role": "skillBuilding",
+      "description": "A five-question vocabulary check on the parts of a webpage. First-attempt performance decides the next step: strong scores go to a layout-prompting challenge, others to a guided layout fix.",
+      "branches": [
+        {
+          "when": {
+            "score": {
+              "questionsStepId": "webpage-parts-quiz",
+              "minFirstTryCorrect": 4
+            }
+          },
+          "goTo": "layout-prompt"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q-footer",
+          "type": "multipleChoice",
+          "validation": "key",
+          "prompt": "Where do you usually find the footer on a website?",
+          "options": [
+            {"id": "top", "label": "At the very top"},
+            {"id": "bottom", "label": "At the very bottom", "correct": true},
+            {"id": "side", "label": "Along the left side"},
+            {"id": "popup", "label": "In a popup window"}
+          ]
+        },
+        {
+          "id": "q-header",
+          "type": "multipleChoice",
+          "validation": "key",
+          "prompt": "What does a website header usually contain?",
+          "options": [
+            {
+              "id": "name-nav",
+              "label": "The site name and main navigation",
+              "correct": true
+            },
+            {"id": "legal", "label": "Copyright and legal fine print"},
+            {"id": "comments", "label": "The comments section"},
+            {"id": "everything", "label": "The full text of every page"}
+          ]
+        },
+        {
+          "id": "q-nav",
+          "type": "multipleChoice",
+          "validation": "key",
+          "prompt": "What is a navigation bar for?",
+          "options": [
+            {"id": "style", "label": "Choosing fonts and colors"},
+            {
+              "id": "move",
+              "label": "Moving between the pages or sections of a site",
+              "correct": true
+            },
+            {"id": "save", "label": "Saving your work"},
+            {"id": "search-web", "label": "Searching the whole internet"}
+          ]
+        },
+        {
+          "id": "q-hero",
+          "type": "multipleChoice",
+          "validation": "key",
+          "prompt": "The big attention-grabbing area at the top of a homepage is usually called the…",
+          "options": [
+            {"id": "hero", "label": "Hero section", "correct": true},
+            {"id": "basement", "label": "Basement"},
+            {"id": "appendix", "label": "Appendix"},
+            {"id": "margin", "label": "Margin"}
+          ]
+        },
+        {
+          "id": "q-cards",
+          "type": "multipleChoice",
+          "validation": "key",
+          "prompt": "A grid of small boxes, each showing one item with a picture and short text, is usually called a set of…",
+          "options": [
+            {"id": "cards", "label": "Cards", "correct": true},
+            {"id": "footers", "label": "Footers"},
+            {"id": "tabs", "label": "Browser tabs"},
+            {"id": "cookies", "label": "Cookies"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fix-layout",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Fix this layout",
+      "role": "skillBuilding",
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "next": "great-improvements",
+      "description": "Foundational path. The starter page has a title, a paragraph, a button, and an image all squeezed into one horizontal row. The student's task: fix the layout direction so the title, paragraph, and button stack vertically in one column, with the image in a second column beside them. They can edit the CSS by hand or direct the AI — either way, the layout words from the quiz (column, section, beside) are the tool. Hint at flex-direction and grouping elements if they're stuck.",
+      "successCriteria": "The title, paragraph, and button are stacked vertically in one column, and the image sits in its own second column beside them — two columns side by side instead of one squeezed row.",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Squeezed</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <div class=\"page\">\n      <h1>Adventure Awaits Travel Club</h1>\n      <p>We plan unforgettable trips for people who want to see the world without the stress of planning every detail themselves.</p>\n      <button>Join the club</button>\n      <svg class=\"photo\" viewBox=\"0 0 200 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"200\" height=\"150\" fill=\"#b3d9ff\"/><circle cx=\"60\" cy=\"45\" r=\"18\" fill=\"#ffd966\"/><path d=\"M0 150 L70 80 L120 130 L160 95 L200 150 Z\" fill=\"#6aa84f\"/></svg>\n    </div>\n  </body>\n</html>\n",
+        "style.css": "body {\n  font-family: sans-serif;\n  margin: 16px;\n}\n\n.page {\n  display: flex;\n  flex-direction: row;\n  gap: 4px;\n  align-items: center;\n}\n\n.photo {\n  width: 200px;\n  flex-shrink: 0;\n}\n\nbutton {\n  padding: 8px 16px;\n}\n"
+      }
+    },
+    {
+      "id": "layout-prompt",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Direct the layout",
+      "role": "skillBuilding",
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "next": "great-improvements",
+      "description": "Accelerated path. The student writes a layout-only prompt for a fictional brand: Nimbus, a weather app startup. The constraint is the exercise — describe structural geometry only (sections, columns, placement, hierarchy) and deliberately leave out colors and fonts. If their prompt drifts into styling, remind them: structure first, style later.",
+      "successCriteria": "The generated page contains at least three visually distinct sections (for example a header, a main content area, and a footer)."
+    },
+    {
+      "id": "great-improvements",
+      "kind": "panels",
+      "title": "Great improvements!",
+      "role": "info",
+      "panels": [
+        {
+          "caption": "Great improvements! You just used structure words — sections, columns, headers — to steer the layout."
+        },
+        {
+          "caption": "That's exactly how professionals direct AI: precise language about what goes where. Now let's aim it at your own site."
+        }
+      ]
+    },
+    {
+      "id": "ui-shell",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Build your UI shell",
+      "role": "projectCheckpoint",
+      "validation": "none",
+      "aiPrompting": "free",
+      "description": "Now the real project begins. Using what they learned, the student writes their own prompt to generate the UI shell of THEIR site — the one from the questionnaire. Coach them toward a detailed structural prompt: name the sections, say what goes in each, describe the arrangement. How detailed their prompts are decides the next step, but don't tell them they're being evaluated — just coach.",
+      "branches": [
+        {
+          "when": {
+            "aiJudge": {
+              "stepId": "ui-shell",
+              "criteria": "The student's build prompts describe concrete page structure: they name specific sections (like a header, hero, cards, or footer) and say something about arrangement or content placement. A vague one-liner like 'make me a website' or 'make it better' does not pass."
+            }
+          },
+          "goTo": "polish-motion"
+        }
+      ]
+    },
+    {
+      "id": "upgrade-prompts",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Upgrade your prompts",
+      "role": "skillBuilding",
+      "validation": "none",
+      "aiPrompting": "free",
+      "next": "finalize",
+      "description": "Foundational path. Help the student upgrade vague prompts into precise ones using a word bank: header, hero, section, card, column, grid, navigation, footer, spacing, alignment. Work through their site one piece at a time — take something vague they want ('make it nicer') and rebuild it as a structural instruction ('add a hero section with a large title and a subtitle, then a row of three cards below it'). Each improved prompt gets fired at their real project so they see precision pay off immediately."
+    },
+    {
+      "id": "polish-motion",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Polish & motion",
+      "role": "skillBuilding",
+      "validation": "none",
+      "aiPrompting": "free",
+      "next": "finalize",
+      "description": "Accelerated path. The student directs micro-interactions and polish on their own site: make the feature cards scale up slightly on hover, add a glow to the call-to-action button, smooth transitions on links. Push for specificity — 'scale up by 5% on hover' beats 'add some animation'. This is where directing AI feels like real front-end craft.",
+      "presetPrompts": [
+        "Make the cards scale up by 5% when you hover over them, with a smooth transition.",
+        "Add a soft glow effect to the main call-to-action button."
+      ]
+    },
+    {
+      "id": "finalize",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Finalize your website",
+      "role": "freePlay",
+      "validation": "none",
+      "aiPrompting": "free",
+      "next": "end",
+      "description": "Free finishing time. The student rounds out their site — more content, refinements, whatever it still needs — prompting the AI, editing by hand, or both. Celebrate what they've built and how they built it: by directing, decomposing, and iterating, not by memorizing syntax."
+    }
+  ]
+}

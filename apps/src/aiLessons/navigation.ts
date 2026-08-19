@@ -10,6 +10,7 @@
 
 import {StudentInputs} from './studentInputs';
 import {
+  BranchCondition,
   LessonPlan,
   Question,
   QuestionsStep,
@@ -25,8 +26,17 @@ export interface NavContext {
   // Set when the step completed via a multiple-choice selection whose
   // option may carry a branch target.
   selectedOptionId?: string;
-  // The student's recorded answers; what recommend() rules match against.
+  // The student's recorded answers; what recommend() rules and branch
+  // score conditions match against.
   inputs?: StudentInputs;
+  // Evaluates a branch's aiJudge condition (an LLM call, so injected by
+  // the page rather than imported here — navigation stays pure and
+  // testable).  Absent, or on judge failure, the condition doesn't
+  // match and the step falls through to its default path.
+  judgeCondition?: (
+    aiJudge: NonNullable<BranchCondition['aiJudge']>,
+    ctx: NavContext
+  ) => Promise<boolean>;
 }
 
 export type NavDecision = {kind: 'goto'; stepId: string} | {kind: 'end'};
@@ -80,14 +90,25 @@ export const deterministicResolver: NavigationResolver = {
         return {kind: 'goto', stepId: branchTarget};
       }
 
-      // 2. The step's own `next` pointer (branch rejoins, early ends).
+      // 2. Automatic branches: the first condition that holds against
+      // the student's record wins.  A condition that can't be evaluated
+      // (unanswered questions, missing judge, judge failure) doesn't
+      // match, so the fallthrough path below is the default branch.
+      for (const branch of step.branches || []) {
+        if (!stepExists(lesson, branch.goTo)) continue;
+        if (await branchConditionHolds(branch.when, ctx)) {
+          return {kind: 'goto', stepId: branch.goTo};
+        }
+      }
+
+      // 3. The step's own `next` pointer (branch rejoins, early ends).
       if (step.next === 'end') return {kind: 'end'};
       if (step.next && stepExists(lesson, step.next)) {
         return {kind: 'goto', stepId: step.next};
       }
     }
 
-    // 3. Array order.
+    // 4. Array order.
     if (index >= 0 && index < lesson.steps.length - 1) {
       return {kind: 'goto', stepId: lesson.steps[index + 1].id};
     }
@@ -107,6 +128,54 @@ export const deterministicResolver: NavigationResolver = {
     return null;
   },
 };
+
+async function branchConditionHolds(
+  when: BranchCondition,
+  ctx: NavContext
+): Promise<boolean> {
+  if (when.score) return scoreConditionHolds(when.score, ctx);
+  if (when.aiJudge && ctx.judgeCondition) {
+    try {
+      return await ctx.judgeCondition(when.aiJudge, ctx);
+    } catch (e) {
+      console.warn('AI judge branch condition failed', e);
+      return false;
+    }
+  }
+  return false;
+}
+
+// Counts answers to the referenced questions step that were correct on
+// the first attempt.  Retries still gate the quiz UI; only first tries
+// score, so a gated quiz can still discriminate.
+function scoreConditionHolds(
+  score: NonNullable<BranchCondition['score']>,
+  ctx: NavContext
+): boolean {
+  const step = ctx.lesson.steps.find(s => s.id === score.questionsStepId);
+  if (!step || step.kind !== 'questions' || !ctx.inputs) return false;
+  const inputs = ctx.inputs;
+  const firstTryCorrect = (step as QuestionsStep).questions.filter(q => {
+    const record = inputs[q.id];
+    return (
+      record?.outcome === 'correct' &&
+      (record.attempts === undefined || record.attempts <= 1)
+    );
+  }).length;
+  if (
+    score.minFirstTryCorrect !== undefined &&
+    firstTryCorrect < score.minFirstTryCorrect
+  ) {
+    return false;
+  }
+  if (
+    score.maxFirstTryCorrect !== undefined &&
+    firstTryCorrect > score.maxFirstTryCorrect
+  ) {
+    return false;
+  }
+  return true;
+}
 
 // Every field present in the rule must hold against the referenced
 // answer; an unanswered question matches nothing.
