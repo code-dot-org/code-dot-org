@@ -6,7 +6,7 @@ import image4 from '@public/images/action-block-04.png';
 import image5 from '@public/images/action-block-05.png';
 import image6 from '@public/images/action-block-06.png';
 import type {Meta, StoryFn} from '@storybook/react-vite';
-import {within, expect, userEvent} from 'storybook/test';
+import {within, expect, userEvent, waitFor} from 'storybook/test';
 
 import ActionBlock from '@/actionBlock';
 import Video from '@/video';
@@ -502,6 +502,16 @@ VideoCarousels.parameters = {
 };
 VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
   const canvas = within(canvasElement);
+
+  // Video swaps to YouTube's larger poster once that image loads. Wait for
+  // every rendered poster, so a screenshot cannot catch a mix of sizes.
+  await waitFor(() =>
+    canvasElement
+      .querySelectorAll('figure img')
+      .forEach(poster =>
+        expect(poster.getAttribute('src')).toContain('maxresdefault'),
+      ),
+  );
   const navArrowPrev = await canvas.findAllByLabelText('Previous slide');
   const navArrowNext = await canvas.findAllByLabelText('Next slide');
   const paginationDots = ['Go to slide 1', 'Go to slide 2'];
