@@ -9,7 +9,7 @@ import {
   addThreadMessage,
   clearPendingArtifactMessage,
   setArtifact,
-} from '@cdo/apps/aiDifferentiation/redux';
+} from '@cdo/apps/aiTeacherDrawer/redux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';

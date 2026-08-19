@@ -10,7 +10,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
