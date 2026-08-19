@@ -5,6 +5,7 @@ import {AichatGeneration} from '../ai/aichat';
 import {AilabGeneration} from '../ai/ailab';
 import {MatchGeneration, MultiGeneration} from '../ai/assessments';
 import {BubbleChoiceGeneration} from '../ai/bubbleChoice';
+import {PythonlabGeneration} from '../ai/pythonlab';
 import {SketchlabGeneration} from '../ai/sketchlab';
 import {Weblab2Generation} from '../ai/weblab2';
 import {LabType} from '../types';
@@ -14,6 +15,7 @@ import {LabType} from '../types';
 export interface PriorOutputByLab {
   panels: Panel[];
   weblab2: Weblab2Generation;
+  pythonlab: PythonlabGeneration;
   ailab: AilabGeneration;
   aichat: AichatGeneration;
   sketchlab: SketchlabGeneration;
@@ -48,7 +50,7 @@ export function priorOutputFromLevelProperties(
     }
     return undefined;
   }
-  if (labType === 'weblab2') {
+  if (labType === 'weblab2' || labType === 'pythonlab') {
     const startSources = props.startSources as MultiFileSource | undefined;
     const longInstructions = props.longInstructions || '';
     const files = startSources?.files
@@ -58,13 +60,14 @@ export function priorOutputFromLevelProperties(
         }))
       : [];
     if (files.length === 0 && !longInstructions) return undefined;
-    return {
-      weblab2: {
-        startSources: startSources || {folders: {}, files: {}},
-        longInstructions,
-        files,
-      },
+    const generation = {
+      startSources: startSources || {folders: {}, files: {}},
+      longInstructions,
+      files,
     };
+    return labType === 'weblab2'
+      ? {weblab2: generation}
+      : {pythonlab: generation};
   }
   if (labType === 'multi' || labType === 'match') {
     const summary = formatAssessmentSummary(props, labType);
@@ -220,16 +223,17 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
         lines.push(`    ${i + 1}. [${p.layout || 'default'}] ${p.text}`);
       });
     }
-    if (e.output?.weblab2) {
+    const codebridge = e.output?.weblab2 ?? e.output?.pythonlab;
+    if (codebridge) {
       lines.push('  Files:');
-      for (const f of e.output.weblab2.files) {
+      for (const f of codebridge.files) {
         lines.push(`    ${f.name}:`);
         for (const line of f.contents.split('\n')) {
           lines.push(`      ${line}`);
         }
       }
       lines.push('  Instructions:');
-      for (const line of e.output.weblab2.longInstructions.split('\n')) {
+      for (const line of codebridge.longInstructions.split('\n')) {
         lines.push(`    ${line}`);
       }
     }

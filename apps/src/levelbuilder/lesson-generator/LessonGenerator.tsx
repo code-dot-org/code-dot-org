@@ -25,6 +25,10 @@ import {
 } from './ai/bubbleChoice';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
+import {
+  generatePythonlabExemplar,
+  generatePythonlabLevel,
+} from './ai/pythonlab';
 import {generateSketchlabLevel} from './ai/sketchlab';
 import {
   generateWeblab2Exemplar,
@@ -72,6 +76,7 @@ import sharedStyles from '../curriculum-generator/curriculum-generator.module.sc
 const LAB_LABELS = {
   panels: 'Panels',
   weblab2: 'Web Lab 2',
+  pythonlab: 'Python Lab',
   ailab: 'AI Lab',
   aichat: 'AI Chat',
   sketchlab: 'Sketch Lab',
@@ -397,6 +402,28 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         try {
           log(`Generating exemplar for sublevel "${subName}"…`);
           const exemplarSources = await generateWeblab2Exemplar(
+            subCtx,
+            result.files
+          );
+          log(`Saving exemplar for sublevel "${subName}"…`);
+          await updateExemplarSources(subLevelId, exemplarSources);
+        } catch (err) {
+          const message = err instanceof Error ? err.message : String(err);
+          log(`Warning: exemplar for sublevel "${subName}" failed: ${message}`);
+        }
+      } else if (sub.labType === 'pythonlab') {
+        const result = await generatePythonlabLevel(subCtx);
+        log(`Saving start sources for sublevel "${subName}"…`);
+        await updateStartSources(subLevelId, result.startSources);
+        log(`Saving instructions for sublevel "${subName}"…`);
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+        try {
+          log(`Generating exemplar for sublevel "${subName}"…`);
+          const exemplarSources = await generatePythonlabExemplar(
             subCtx,
             result.files
           );
@@ -811,6 +838,35 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               const exemplarSources = await generateWeblab2Exemplar(
                 levelCtx,
                 sourcesForExemplar
+              );
+              setStage('saving-exemplar');
+              appendLog(`Saving exemplar for "${levelName}"…`);
+              await updateExemplarSources(level.id, exemplarSources);
+            } catch (err) {
+              const message = err instanceof Error ? err.message : String(err);
+              appendLog(
+                `Warning: exemplar generation failed for "${levelName}": ${message}`
+              );
+            }
+          } else if (spec.labType === 'pythonlab') {
+            const result = await generatePythonlabLevel(levelCtx);
+            setStage('saving-properties');
+            appendLog(`Saving start sources for "${levelName}"…`);
+            await updateStartSources(level.id, result.startSources);
+            appendLog(`Saving instructions for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            generatedOutput = {pythonlab: result};
+            // Same non-fatal exemplar pass as weblab2 above.
+            try {
+              setStage('generating-exemplar');
+              appendLog(`Generating exemplar for "${levelName}"…`);
+              const exemplarSources = await generatePythonlabExemplar(
+                levelCtx,
+                result.files
               );
               setStage('saving-exemplar');
               appendLog(`Saving exemplar for "${levelName}"…`);

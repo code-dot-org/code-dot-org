@@ -3,6 +3,7 @@
 export const SUPPORTED_LAB_TYPES = [
   'panels',
   'weblab2',
+  'pythonlab',
   'ailab',
   'aichat',
   'sketchlab',
@@ -17,6 +18,7 @@ export type LabType = (typeof SUPPORTED_LAB_TYPES)[number];
 export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   panels: 'Panels',
   weblab2: 'Weblab2',
+  pythonlab: 'Pythonlab',
   ailab: 'Ailab',
   aichat: 'Aichat',
   sketchlab: 'Sketchlab',
@@ -38,6 +40,7 @@ export const DSL_LAB_TYPES: readonly LabType[] = [
 export const BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES: readonly LabType[] = [
   'panels',
   'weblab2',
+  'pythonlab',
   'ailab',
   'aichat',
   'sketchlab',
@@ -68,6 +71,16 @@ export const LAB_TYPE_INFO: Record<LabType, LabTypePromptInfo> = {
       'code.',
     ],
     chooseFor: 'web-coding practice',
+  },
+  pythonlab: {
+    promptLabel: 'Pythonlab',
+    promptDescription: [
+      'a hands-on Python exercise where the student edits starter code and',
+      'runs it in the browser (console output, input(), and matplotlib',
+      'work; no network or third-party packages). Use for text/console',
+      'programming practice — not for building web pages.',
+    ],
+    chooseFor: 'Python-coding practice',
   },
   ailab: {
     promptLabel: 'Ailab',

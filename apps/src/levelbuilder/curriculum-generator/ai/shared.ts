@@ -13,6 +13,8 @@ export const PROMPT_TAGS = {
   WEBLAB2_EXEMPLAR: 'lesson-gen/weblab2-exemplar',
   WEBLAB2_TEMPLATE: 'lesson-gen/weblab2-template',
   WEBLAB2_TEMPLATE_LEVEL: 'lesson-gen/weblab2-template-level',
+  PYTHONLAB_PLAN: 'lesson-gen/pythonlab-plan',
+  PYTHONLAB_EXEMPLAR: 'lesson-gen/pythonlab-exemplar',
   AILAB_PLAN: 'lesson-gen/ailab-plan',
   AICHAT_PLAN: 'lesson-gen/aichat-plan',
   SKETCHLAB_PLAN: 'lesson-gen/sketchlab-plan',
