@@ -7,6 +7,7 @@ import {
   axisOf,
   both,
   defineRule,
+  filter,
   forEach,
   frameTime,
   give,
@@ -315,14 +316,18 @@ rule.step('resolve', 'settle', [
   note('Push out sideways FIRST, then up and down — one axis at a time.'),
   note('Doing both at once is what used to make a jump stick to a wall.'),
   forEach(mover, {
-    where: both(
-      hasTrait(mover.get(), CanMove),
-      hasTrait(mover.get(), CanCollide),
-    ),
+    from: filter(mover, {
+      where: both(
+        hasTrait(mover.get(), CanMove),
+        hasTrait(mover.get(), CanCollide),
+      ),
+    }),
     body: [
       forEach(solid, {
-        from: contacts.of(mover.get()),
-        where: hasTrait(solid.get(), Solid),
+        from: filter(solid, {
+          from: contacts.of(mover.get()),
+          where: hasTrait(solid.get(), Solid),
+        }),
         body: [
           pushOutSideways({
             body: mover.get(),
@@ -332,8 +337,10 @@ rule.step('resolve', 'settle', [
         ],
       }),
       forEach(solid, {
-        from: contacts.of(mover.get()),
-        where: hasTrait(solid.get(), Solid),
+        from: filter(solid, {
+          from: contacts.of(mover.get()),
+          where: hasTrait(solid.get(), Solid),
+        }),
         body: [
           pushOutUpOrDown({
             body: mover.get(),

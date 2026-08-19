@@ -2,6 +2,7 @@ import {CanCollide, contacts} from './collisions.mjs';
 import {
   both,
   defineRule,
+  filter,
   forEach,
   hasTrait,
   moduleFor,
@@ -98,11 +99,13 @@ const item = rule.local('item', 'Actor');
 collects.step('pick things up', 'react', [
   note('Anything it is touching that can be taken and has not been.'),
   forEach(item, {
-    from: contacts.of(thisActor()),
-    where: both(
-      hasTrait(item.get(), CanBeCollected),
-      not(taken.of(item.get())),
-    ),
+    from: filter(item, {
+      from: contacts.of(thisActor()),
+      where: both(
+        hasTrait(item.get(), CanBeCollected),
+        not(taken.of(item.get())),
+      ),
+    }),
     body: [
       note('Claim it first: nobody else may take this one now.'),
       taken.set(item.get(), yes()),

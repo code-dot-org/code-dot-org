@@ -9,6 +9,7 @@
 // Not a base class. Actor and Camera are different kinds of thing and neither
 // is a special case of the other; this is a piece they both hold.
 
+import {all, LazyActors} from './actorValue';
 import type {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {Property} from './types';
@@ -42,14 +43,19 @@ const coerce = <T>(property: Property<T>, value: unknown): T => {
     // would mean `WorldLab.all` seeing `undefined` for an empty one and handing
     // back `[undefined]` — one actor that is not an actor, which reads as a
     // camera that has a target when it has none.
+    // A value still being walked is materialised here rather than stored as
+    // one: a property is state a step reads whenever it likes, and a
+    // description of a walk over actors that may since have been removed is not
+    // state (specs/ACTOR_LISTS.md). `all` is the one door that knows how.
+    const held: unknown = value instanceof LazyActors ? all(value) : value;
     if (property.type === 'actor') {
-      const one = Array.isArray(value) ? value[0] : value;
+      const one = Array.isArray(held) ? held[0] : held;
       return (isActor(one) ? [one] : []) as unknown as T;
     }
-    if (Array.isArray(value)) {
-      return [...value] as unknown as T;
+    if (Array.isArray(held)) {
+      return [...held] as unknown as T;
     }
-    return (isActor(value) ? [value] : []) as unknown as T;
+    return (isActor(held) ? [held] : []) as unknown as T;
   }
   return value as T;
 };

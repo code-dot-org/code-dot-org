@@ -280,16 +280,74 @@ function makeLocal(id, name, type) {
   };
 }
 
-/** `for each actor <var> in <list> where <test> do <…>`. */
-export const forEach = (variable, {where, from, body}) => ({
-  type: 'world_for_each',
+/**
+ * `the actors <var> in <list> where <test>` — a filtered list, as a value.
+ *
+ * The loop's `where` used to live on the loop. It is a value of its own now
+ * (specs/ACTOR_LISTS.md), so a rule that walks only some of a list walks a list
+ * that is only some of it.
+ */
+export const filter = (variable, {from, where}) => ({
+  type: 'world_filter_actors',
   fields: {VAR: variable.field},
   inputs: {
     ...(from ? {SOURCE: value(from)} : {}),
     WHERE: value(where),
-    DO: value(chain(body)),
   },
 });
+
+/**
+ * `all actors with trait <T>` — the filter this library writes more than every
+ * other put together.
+ *
+ * Ten of the eighteen filtered loops here tested exactly this, and the engine
+ * has answered it since before there were lists (`ActorCollection.with`). Said
+ * with the general filter it costs a nesting and a second variable field
+ * showing the same name; said with this the loop is SHORTER than the
+ * `for each … where` it replaces.
+ */
+export const allWithTrait = traitRef => ({
+  type: 'world_actors_with_trait',
+  fields: {TRAIT: traitRef},
+});
+
+/** `the actor <var> in <list> with the <least|most> <key>`. */
+export const extremeActor = (variable, {from, end = 'least', key}) => ({
+  type: 'world_extreme_actor',
+  fields: {VAR: variable.field, END: end},
+  inputs: {
+    ...(from ? {SOURCE: value(from)} : {}),
+    KEY: value(key),
+  },
+});
+
+/** `first actor in <list>`. */
+export const firstActor = from => ({
+  type: 'world_first_actor',
+  inputs: {...(from ? {SOURCE: value(from)} : {})},
+});
+
+/** `for each actor <var> in <list> do <…>`. */
+export const forEach = (variable, {from, body, ...rest}) => {
+  // The loop took a `where` until the filter became a value of its own. A
+  // leftover one would be dropped in silence and the body would run over
+  // everything, so it is an error rather than a quiet change of meaning.
+  const left = Object.keys(rest);
+  if (left.length) {
+    throw new Error(
+      `forEach no longer takes ${left.join(', ')} — wrap the source in ` +
+        `filter(variable, {from, where}) or allWithTrait(ref)`,
+    );
+  }
+  return {
+    type: 'world_for_each',
+    fields: {VAR: variable.field},
+    inputs: {
+      ...(from ? {SOURCE: value(from)} : {}),
+      DO: value(chain(body)),
+    },
+  };
+};
 
 /** `for each newly <pressed|released> key <var> do <…>`. */
 export const forEachKey = (edge, variable, body) => ({

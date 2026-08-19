@@ -1,10 +1,12 @@
 import {intrinsicSize, position, scale} from './builtins.mjs';
 import {
   absolute,
+  allWithTrait,
   atMost,
   axisOf,
   both,
   defineRule,
+  filter,
   forEach,
   forEachButton,
   hasTrait,
@@ -120,7 +122,7 @@ const under = subject =>
 const announce = (worldEvent, actorEvent, paramName) => [
   worldEvent({[paramName]: button.get()}),
   forEach(each, {
-    where: hasTrait(each.get(), rule.traitRef('Takes Mouse Input')),
+    from: allWithTrait(rule.traitRef('Takes Mouse Input')),
     body: [actorEvent({[paramName]: button.get()}, each.get())],
   }),
 ];
@@ -135,10 +137,12 @@ const announce = (worldEvent, actorEvent, paramName) => [
  */
 const clickTargets = () => [
   forEach(target, {
-    where: both(
-      hasTrait(target.get(), rule.traitRef('Can Be Clicked')),
-      under(target.get()),
-    ),
+    from: filter(target, {
+      where: both(
+        hasTrait(target.get(), rule.traitRef('Can Be Clicked')),
+        under(target.get()),
+      ),
+    }),
     body: [clicked({'pressed button': button.get()}, target.get())],
   }),
 ];

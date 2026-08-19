@@ -1,12 +1,12 @@
 import {Positional, position, setPosition} from './builtins.mjs';
 import {
   add,
+  allWithTrait,
   axisOf,
   defineRule,
   forEach,
   frameTime,
   give,
-  hasTrait,
   moduleFor,
   note,
   param,
@@ -90,7 +90,7 @@ const travel = rule.local('travel', 'Vector');
 
 rule.step('reposition', 'move', [
   forEach(each, {
-    where: hasTrait(each.get(), CanMove),
+    from: allWithTrait(CanMove),
     body: [
       note('Moving is speed times time: how far do we get this frame?'),
       travel.set(

@@ -20,9 +20,16 @@ export {Actor, type ActorInit} from './core/Actor';
 export {
   all,
   each,
+  extreme,
+  filtered,
+  firstOf,
   firstWhere,
+  LazyActors,
   one,
+  ordered,
   pushed,
+  taken,
+  type ActorSource,
   type ActorValue,
 } from './core/actorValue';
 export {

@@ -199,3 +199,155 @@ key` exists because "what changed this frame" is what a rule cannot work out
 
 5. **What it was for.** Whichever of the three storage answers above collision
    turns out to want — decided there, not here.
+
+## Filtering, ordering, and taking one (the second pass)
+
+The first pass gave the language a list and two ways to make one: walk the world
+with a predicate (`for each … where`), or build one an actor at a time
+(`add … to`). What it never gave was an EXPRESSION that hands a list back. "The
+gold coins I am touching" was four blocks and a variable — `empty ⟨mine⟩`, a
+loop, a test, `add ⟨each⟩ to ⟨mine⟩` — to say one thing.
+
+So the filter becomes a value of its own, and the two blocks that had a
+predicate welded onto them give theirs up:
+
+```
+the actors ⟨c⟩ in ⟨…⟩ where ⟨…⟩                 a list, filtered
+the actors ⟨c⟩ in ⟨…⟩ ordered by ⟨…⟩ ⟨least first ▾⟩   a list, sorted
+the actor  ⟨c⟩ in ⟨…⟩ with the ⟨least ▾⟩ ⟨…⟩     one, by a key
+first actor in ⟨…⟩                               one, by position
+take ⟨3⟩ of ⟨…⟩                                  a shorter list
+all actors with trait ⟨T ▾⟩                      the common filter, said once
+```
+
+`for each actor ⟨each⟩ in ⟨…⟩` loses its `where`, and
+`first actor ⟨v⟩ in ⟨…⟩ where ⟨…⟩` is deleted outright. Both were the same
+construct — a variable, a source, a test — and the only thing that differed was
+what came out of the end. Now the filter is the construct, and what comes out is
+whatever block you wrap it in.
+
+### Why the composite goes, having argued for it
+
+`first actor … where` shipped with a comment defending itself: "the alternative
+is a paragraph… 'The coin I am touching' is one thought and should be one
+block." That was true against the alternative it was compared with, which was
+five blocks and a bug. It is not true against `first actor in ⟨the actors ⟨c⟩ in
+⟨…⟩ where ⟨…⟩⟩`, which is two blocks, composes with everything else here, and
+does not have to be reinvented for `ordered by` and `take`.
+
+The same argument retires the loop's `where`. A loop that walks a list is one
+idea; testing each item as it goes is a second idea welded on, and it was welded
+on because there was nowhere else to put it. Now there is.
+
+### What it costs, and the block that pays for it
+
+Nearly every loop in the stock rules filters: 18 of the 20, of which two are
+`where: yes()` and simply lose a socket. The other 16 gain a nesting, and with
+it a second variable field showing the same name:
+
+```
+for each actor ⟨each⟩ in ⟨the actors ⟨each⟩ in ⟨all actors⟩
+                          where ⟨each has trait ⟨Affected by Gravity⟩⟩⟩
+```
+
+Legal — Blockly variables are workspace-wide, and the filter's field defaults to
+the enclosing loop's variable when it is dropped into a source socket — but two
+fields for one name is noise, and it lands on the files a learner opens to read
+how gravity works.
+
+`all actors with trait ⟨T⟩` is what makes the trade worth taking. Ten of those
+eighteen predicates are a bare trait test, `ActorCollection.with` already
+answers it in the engine, and the block has one dropdown and NO variable:
+
+```
+for each actor ⟨each⟩ in ⟨all actors with trait ⟨Affected by Gravity⟩⟩
+```
+
+which is shorter than what it replaces. The general filter is then left doing
+what only it can: the four compound tests and the two set-differences in
+Collisions and Solid Bodies.
+
+### Ordering: two blocks, because "closest" is not a sort
+
+`ordered by` sorts. `with the least ⟨…⟩` selects. The second is not sugar for
+`first actor in ⟨ordered by …⟩`: it is one pass and no allocation, where the
+sugar spelling sorts n actors to answer a question about one. Since "the closest
+enemy" and "the biggest asteroid" are the whole of what a game usually asks, the
+selector is the block that will be used and the sort is the rarer one.
+
+The key is an expression over a bound variable, not a dropdown of built-in
+orderings, so `closest`, `furthest`, `biggest`, `weakest` and `newest` are one
+block with different keys rather than five blocks. `least`/`most` is a field
+because reversing an order is not a different question.
+
+Ties keep the world's order: the source is snapshotted before the sort and
+`Array.prototype.sort` is stable, so two actors with equal keys come out in the
+order they were added — the same order everything else here yields.
+
+`take ⟨n⟩ of` exists because a sort without it is a list nobody wanted. "The
+three nearest" is the reason to order at all.
+
+### Laziness, and the short-circuit it keeps
+
+`first actor … where` stopped at the match — its comment says so, and deleting a
+block should not delete what it promised. So `the actors … where` does not build
+an array. It hands back a sequence that filters as it is walked, and `first
+actor in` pulls one item and stops.
+
+Three constraints keep this from being a third type:
+
+- **The SOURCE is read eagerly, the predicate lazily.** `world.actors` iterates
+  the live actor list — `ofType` and `inLayer` copy, `all actors` does not — so
+  deferring the read would make `for each` over a body that spawns actors fail
+  to terminate. The source is materialised when the filter is built; only the
+  test is deferred.
+- **It is RE-ITERABLE.** Walking it twice gives the same actors both times. A
+  one-shot generator that reads empty the second time is a bug nobody would
+  diagnose from the blocks. The cost is that the predicate runs again, which is
+  fine for tests that read properties and is the only kind this language can
+  write.
+- **`all` and `one` are the only doors.** Everything downstream already routes
+  through them, `Traited.coerce` materialises before storing, and no other code
+  learns that a value can be lazy.
+
+`ordered by` is strict and cannot be otherwise — the first item of an ordering
+is not knowable without seeing all of it — which is the second reason `with the
+least` is its own block rather than sugar.
+
+NOT generator-side fusion, which was the other way to get the short-circuit and
+would have been idiomatic here: `any ⟨Coin⟩` already compiles two ways depending
+on the socket it lands in. It was rejected because it only fires on the literal
+nesting — a variable holding a filter would not fuse — so two programs that read
+the same would perform differently, and because an optimisation that lives in
+the runtime is one function rather than a peephole pass over the workspace.
+
+### Plan
+
+1. ✅ **The engine's half.** `filtered`, `ordered`, `taken`, `firstOf`,
+   `extreme`, and the re-iterable `LazyActors` the first three hand back; `all`,
+   `one`, `pushed` and `Traited.coerce` widened to know it. `ActorSource` is
+   the wider argument type these take, for the reason `firstWhere` took an
+   `Iterable`: the generator hands them exactly what a `for … of` walks.
+2. ✅ **The blocks that add power**, which break nothing: `the actors … where`,
+   `first actor in`, `all actors with trait`, `with the least/most`,
+   `ordered by`, `take n of`. All six are in `manyActors`' MANY_BY_TYPE — the
+   last three are zero-or-one rather than guaranteed-one, which needs the same
+   broadcast wrapper a many-valued one does.
+3. ✅ **The blocks that lose one.** `for each` drops `WHERE` and
+   `first actor … where` is deleted. NO MIGRATION, because there is nothing to
+   migrate from: neither block has shipped, and the only saved workspaces that
+   hold one are the stock rules, which are generated (step 4). A pass to
+   rewrite them was written and then removed — the two blocks are expressible
+   in the new ones, so if a saved project ever needs it, it is a rewrite and
+   not a loss.
+4. ✅ **The stock rules**, regenerated through the DSL (`yarn build:rules`),
+   which is where the readability of all this is actually decided. Seven loops
+   took `all actors with trait` and came out shorter than the
+   `for each … where` they replaced; two dropped a `where: yes()` that said
+   nothing; the remaining nine wrap a `filter`. `forEach` THROWS on a leftover
+   `where` rather than dropping it, because a silently dropped predicate is a
+   body that runs over everything.
+
+Not done, and deliberately: `last of`, an index block, and a sort key that is
+not a number. The first two are ACTOR_LISTS' original "no index block" argument
+still holding; the third has no use yet that `ordered by` a number cannot say.

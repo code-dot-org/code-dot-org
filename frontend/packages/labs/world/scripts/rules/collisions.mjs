@@ -2,11 +2,13 @@ import {Positional, intrinsicSize, position, scale} from './builtins.mjs';
 import {
   absolute,
   add,
+  allWithTrait,
   axisOf,
   both,
   clearActors,
   defineRule,
   equals,
+  filter,
   forEach,
   give,
   hasTrait,
@@ -24,7 +26,6 @@ import {
   thisActor,
   vector,
   vectorTimes,
-  yes,
   when,
 } from './dsl.mjs';
 
@@ -147,14 +148,16 @@ rule.step('find', 'touch', [
   note('Who is touching whom, worked out once and written down.'),
   note('What to DO about it belongs to whoever reads this.'),
   forEach(body, {
-    where: hasTrait(body.get(), CanCollide),
+    from: allWithTrait(CanCollide),
     body: [
       clearActors(found),
       forEach(other, {
-        where: both(
-          hasTrait(other.get(), CanCollide),
-          not(equals(other.get(), body.get())),
-        ),
+        from: filter(other, {
+          where: both(
+            hasTrait(other.get(), CanCollide),
+            not(equals(other.get(), body.get())),
+          ),
+        }),
         body: [
           when([
             [
@@ -242,15 +245,19 @@ canCollide.step('notice contacts', 'react', [
   note('Touching now and not before: those arrived this frame.'),
   clearActors(arrived),
   forEach(met, {
-    from: contacts.of(thisActor()),
-    where: not(isIn(met.get(), contactsBefore.of(thisActor()))),
+    from: filter(met, {
+      from: contacts.of(thisActor()),
+      where: not(isIn(met.get(), contactsBefore.of(thisActor()))),
+    }),
     body: [pushActor(arrived, met.get())],
   }),
   note('Touching before and not now: those left.'),
   clearActors(left),
   forEach(gone, {
-    from: contactsBefore.of(thisActor()),
-    where: not(isIn(gone.get(), contacts.of(thisActor()))),
+    from: filter(gone, {
+      from: contactsBefore.of(thisActor()),
+      where: not(isIn(gone.get(), contacts.of(thisActor()))),
+    }),
     body: [pushActor(left, gone.get())],
   }),
   note(
@@ -261,12 +268,10 @@ canCollide.step('notice contacts', 'react', [
   note('One event per contact, carrying the actor it is about.'),
   forEach(told, {
     from: arrived.get(),
-    where: yes(),
     body: [startsTouching({other: told.get()}, thisActor())],
   }),
   forEach(untold, {
     from: left.get(),
-    where: yes(),
     body: [stopsTouching({other: untold.get()}, thisActor())],
   }),
   note('Last of all, move the goalposts for the next comparison.'),
