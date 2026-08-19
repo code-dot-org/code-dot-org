@@ -48,11 +48,15 @@ export function toExternalSceneOptions(
   }));
 }
 
+// The script id matters: a project made inside a unit has its channel keyed to
+// that unit, and is invisible to a lookup that omits it.
 export async function fetchSectionScenes(
-  levelId: number | string
+  levelId: number | string,
+  scriptId?: number | null
 ): Promise<ExternalSceneRef[]> {
+  const scriptParam = scriptId ? `&script_id=${scriptId}` : '';
   const {value} = await HttpClient.fetchJson<{scenes?: ExternalSceneRef[]}>(
-    `/sprite_lab2/section_scenes?level_id=${levelId}`
+    `/sprite_lab2/section_scenes?level_id=${levelId}${scriptParam}`
   );
   return value.scenes || [];
 }

@@ -4,15 +4,16 @@
 class SpriteLab2Controller < ApplicationController
   before_action :authenticate_user!
 
-  # GET /sprite_lab2/section_scenes?level_id=N
+  # GET /sprite_lab2/section_scenes?level_id=N&script_id=M
   # Scene metadata from every section-mate's project on the given level:
   # {scenes: [{channel, sceneId, sceneName, ownerName}]}. Powers the
   # go-to-external-scene block's dropdown.
   def section_scenes
     level = Level.find(params.require(:level_id))
+    script_id = params[:script_id].presence
     scenes = []
     section_mates.each do |user|
-      channel, sources = project_sources_for(user, level)
+      channel, sources = project_sources_for(user, level, script_id)
       next unless sources
       (sources['scenes'] || []).each do |scene|
         next unless scene['id'] && scene['name']
@@ -68,10 +69,12 @@ class SpriteLab2Controller < ApplicationController
   end
 
   # The user's project channel + parsed sources for a level, or [nil, nil].
-  private def project_sources_for(user, level)
+  # A project made inside a unit has its channel token keyed to that unit, so
+  # without the script id this finds only channels created outside one.
+  private def project_sources_for(user, level, script_id = nil)
     storage_id = storage_id_for_user_id(user.id)
     return [nil, nil] unless storage_id
-    channel_token = ChannelToken.find_channel_token(level, storage_id, nil)
+    channel_token = ChannelToken.find_channel_token(level, storage_id, script_id)
     return [nil, nil] unless channel_token
     source_data = SourceBucket.new.get(channel_token.channel, 'main.json')
     return [nil, nil] unless source_data[:status] == 'FOUND'

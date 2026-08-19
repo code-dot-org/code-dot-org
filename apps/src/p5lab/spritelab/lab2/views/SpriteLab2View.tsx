@@ -450,7 +450,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
     if (savedExternalKeys.length === 0) {
       setAnimationsSeeded(true);
-      fetchSectionScenes(levelProperties.id)
+      fetchSectionScenes(levelProperties.id, scriptId)
         .then(refs => {
           if (!cancelled) {
             dispatch(setExternalScenes(toExternalSceneOptions(refs)));
@@ -465,7 +465,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             setTimeout(() => reject(new Error('timeout')), 5000)
           );
           const refs = await Promise.race([
-            fetchSectionScenes(levelProperties.id),
+            fetchSectionScenes(levelProperties.id, scriptId),
             timeout,
           ]);
           options = toExternalSceneOptions(refs);
@@ -490,7 +490,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     // Re-seeds only when the level changes (seedAnimationList is stable,
     // initialSources is a ref-captured constant).
-  }, [levelProperties.id, dispatch, initialSources, seedAnimationList]);
+  }, [
+    levelProperties.id,
+    scriptId,
+    dispatch,
+    initialSources,
+    seedAnimationList,
+  ]);
 
   // What's on stage right now — updated by every run, including scene jumps —
   // so "Restart scene" (and the reseed watcher below) can re-run it.
@@ -851,7 +857,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // scenes classmates add while this lab is open show up.
   useEffect(() => {
     setExternalSceneRefreshHandler(async () => {
-      const refs = await fetchSectionScenes(levelProperties.id);
+      const refs = await fetchSectionScenes(levelProperties.id, scriptId);
       const options = toExternalSceneOptions(refs);
       const known = new Set(options.map(o => o.key));
       collectSavedExternalKeys(scenes).forEach(key => {
@@ -862,7 +868,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setExternalScenes(options));
     });
     return () => setExternalSceneRefreshHandler(null);
-  }, [levelProperties.id, dispatch, scenes]);
+  }, [levelProperties.id, scriptId, dispatch, scenes]);
 
   // Scene jumps should only navigate while playing. In preview (Code tab) a
   // goToScene block would otherwise pull the preview off the scene being edited.
