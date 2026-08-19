@@ -3,7 +3,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {chatThreadMessagesValidator} from '@cdo/apps/aiTeacherDrawer/types';
 import AiDiffWorkspace from '@cdo/apps/aiTeacherDrawer/AiDiffWorkspace';
 import {
   EXAMPLE_PROMPT,
@@ -15,7 +14,10 @@ import {
 } from '@cdo/apps/aiTeacherDrawer/predefinedPrompts';
 import {setThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
 import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
-import {chatThreadValidator} from '@cdo/apps/aiTeacherDrawer/types';
+import {
+  chatThreadMessagesValidator,
+  chatThreadValidator,
+} from '@cdo/apps/aiTeacherDrawer/types';
 import {
   getStore,
   registerReducers,
