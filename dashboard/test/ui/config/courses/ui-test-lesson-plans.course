@@ -1,17 +1,17 @@
 {
-  "name": "original-allthelessonplans-course",
+  "name": "ui-test-lesson-plans",
   "script_names": [
-    "allthelessonplans"
+    "ui-test-lesson-plans"
   ],
   "original_script_names": [
-    "allthelessonplans"
+
   ],
-  "published_state": "in_development",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "family_name": "original-allthelessonplans-course",
+    "family_name": "ui-test-lesson-plans",
     "numbered_units": "auto",
     "version_year": "unversioned"
   },

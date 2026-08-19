@@ -6197,8 +6197,8 @@ en:
             If you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab](https://studio.code.org/courses/self-paced-pl-teaching-computer-science-discoveries-music-lab/units/1?section_id=5963300). The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.
             :::
           version_title: "'25-'26"
-        allthelessonplans:
-          title: All The Lesson Plans
+        ui-test-lesson-plans:
+          title: UI Test Lesson Plans
           description_short: ''
           description_student: Student overview of the course.
           description_teacher: Teacher overview of the course.

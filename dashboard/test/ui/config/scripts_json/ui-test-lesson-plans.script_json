@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "allthelessonplans",
+    "name": "ui-test-lesson-plans",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
@@ -15,14 +15,14 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-11 18:59:13 UTC",
+    "serialized_at": "2026-08-14 04:47:28 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
     "seeding_key": {
-      "script.name": "allthelessonplans"
+      "script.name": "ui-test-lesson-plans"
     }
   },
   "lesson_groups": [
@@ -37,7 +37,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
@@ -49,7 +49,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
@@ -62,7 +62,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     }
   ],
@@ -107,7 +107,7 @@
       "seeding_key": {
         "lesson.key": "First Lesson",
         "lesson_group.key": "lessonGroup-2",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
@@ -123,7 +123,7 @@
       "seeding_key": {
         "lesson.key": "Second Lesson",
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
@@ -139,7 +139,7 @@
       "seeding_key": {
         "lesson.key": "Third Lesson",
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
@@ -167,7 +167,7 @@
       "seeding_key": {
         "lesson.key": "Printable Lesson Plans",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
@@ -182,78 +182,78 @@
       "seeding_key": {
         "lesson.key": "Level Details Dialog Examples",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "ee299f36-5fa0-4941-9d57-c056a0e93139",
+      "key": "3ec077cb-41b1-4f40-b179-db52a4cfcfce",
       "position": 1,
       "properties": {
         "duration": 10,
         "name": "Activity 1"
       },
       "seeding_key": {
-        "lesson_activity.key": "ee299f36-5fa0-4941-9d57-c056a0e93139",
+        "lesson_activity.key": "3ec077cb-41b1-4f40-b179-db52a4cfcfce",
         "lesson.key": "First Lesson",
         "lesson_group.key": "lessonGroup-2",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
-      "key": "8bf3b77a-eb01-471c-9470-b4bcdd97ca6b",
+      "key": "0c7ab6a5-8bd1-4bb0-a364-a7a623a7fb32",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "8bf3b77a-eb01-471c-9470-b4bcdd97ca6b",
+        "lesson_activity.key": "0c7ab6a5-8bd1-4bb0-a364-a7a623a7fb32",
         "lesson.key": "Second Lesson",
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
-      "key": "2fb25f30-6e17-4ee9-93c7-b5d92f0bee31",
+      "key": "b2519520-1e63-448d-bca4-288a85133cab",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "2fb25f30-6e17-4ee9-93c7-b5d92f0bee31",
+        "lesson_activity.key": "b2519520-1e63-448d-bca4-288a85133cab",
         "lesson.key": "Third Lesson",
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
-      "key": "0449a400-4ddf-4381-93e6-101aaf14d0e7",
+      "key": "46340884-bec7-4061-81b0-d607e447a4e6",
       "position": 1,
       "properties": {
         "name": "Basic Example"
       },
       "seeding_key": {
-        "lesson_activity.key": "0449a400-4ddf-4381-93e6-101aaf14d0e7",
+        "lesson_activity.key": "46340884-bec7-4061-81b0-d607e447a4e6",
         "lesson.key": "Printable Lesson Plans",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     },
     {
-      "key": "04334866-b95e-4788-96a8-28c096276714",
+      "key": "170fab20-8d35-47e8-af9b-75088232cf7a",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "04334866-b95e-4788-96a8-28c096276714",
+        "lesson_activity.key": "170fab20-8d35-47e8-af9b-75088232cf7a",
         "lesson.key": "Level Details Dialog Examples",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans"
+        "script.name": "ui-test-lesson-plans"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "2330dbf8-5456-4404-82af-0834e9330546",
+      "key": "fc747ff1-6dc7-49fa-854a-5287f90f8a40",
       "position": 1,
       "properties": {
         "duration": "5",
@@ -261,12 +261,12 @@
         "progression_name": "Levels are Cool"
       },
       "seeding_key": {
-        "activity_section.key": "2330dbf8-5456-4404-82af-0834e9330546",
-        "lesson_activity.key": "ee299f36-5fa0-4941-9d57-c056a0e93139"
+        "activity_section.key": "fc747ff1-6dc7-49fa-854a-5287f90f8a40",
+        "lesson_activity.key": "3ec077cb-41b1-4f40-b179-db52a4cfcfce"
       }
     },
     {
-      "key": "6fd90819-2c6c-4dbe-94ed-6ccaf526caed",
+      "key": "fc7a4d2e-7e96-404f-9624-835b7e34b7e4",
       "position": 2,
       "properties": {
         "description": "Discuss the levels you just did",
@@ -280,44 +280,44 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6fd90819-2c6c-4dbe-94ed-6ccaf526caed",
-        "lesson_activity.key": "ee299f36-5fa0-4941-9d57-c056a0e93139"
+        "activity_section.key": "fc7a4d2e-7e96-404f-9624-835b7e34b7e4",
+        "lesson_activity.key": "3ec077cb-41b1-4f40-b179-db52a4cfcfce"
       }
     },
     {
-      "key": "3261dff3-4e21-4b9c-83e7-5076927eae89",
+      "key": "21535de0-6710-4e65-9b0b-cf39ff333a30",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "3261dff3-4e21-4b9c-83e7-5076927eae89",
-        "lesson_activity.key": "8bf3b77a-eb01-471c-9470-b4bcdd97ca6b"
+        "activity_section.key": "21535de0-6710-4e65-9b0b-cf39ff333a30",
+        "lesson_activity.key": "0c7ab6a5-8bd1-4bb0-a364-a7a623a7fb32"
       }
     },
     {
-      "key": "7dc3734a-54af-4b85-aab6-3630186b89b9",
+      "key": "6b62b74e-85d0-4534-a376-2e3fcd3dc07b",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "7dc3734a-54af-4b85-aab6-3630186b89b9",
-        "lesson_activity.key": "2fb25f30-6e17-4ee9-93c7-b5d92f0bee31"
+        "activity_section.key": "6b62b74e-85d0-4534-a376-2e3fcd3dc07b",
+        "lesson_activity.key": "b2519520-1e63-448d-bca4-288a85133cab"
       }
     },
     {
-      "key": "e2b2d639-072c-4fb4-8329-9f86e315c891",
+      "key": "3b8c5385-1561-4d15-bec0-d1429a60dd34",
       "position": 1,
       "properties": {
         "description": "We've just got in here examples of a bunch of the stuff you can include on the page.",
         "name": "This is a basic example of UI content"
       },
       "seeding_key": {
-        "activity_section.key": "e2b2d639-072c-4fb4-8329-9f86e315c891",
-        "lesson_activity.key": "0449a400-4ddf-4381-93e6-101aaf14d0e7"
+        "activity_section.key": "3b8c5385-1561-4d15-bec0-d1429a60dd34",
+        "lesson_activity.key": "46340884-bec7-4061-81b0-d607e447a4e6"
       }
     },
     {
-      "key": "b505347f-aab8-4fc4-b757-111b5ca162e0",
+      "key": "484ef1b2-3838-4982-a457-c9cd372d89a9",
       "position": 2,
       "properties": {
         "name": "callout",
@@ -329,36 +329,36 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "b505347f-aab8-4fc4-b757-111b5ca162e0",
-        "lesson_activity.key": "0449a400-4ddf-4381-93e6-101aaf14d0e7"
+        "activity_section.key": "484ef1b2-3838-4982-a457-c9cd372d89a9",
+        "lesson_activity.key": "46340884-bec7-4061-81b0-d607e447a4e6"
       }
     },
     {
-      "key": "689ea393-84de-4181-adea-52617e57f5cc",
+      "key": "fa0851c7-36ed-4b8e-8e6d-5dc72804b5e4",
       "position": 3,
       "properties": {
         "description": "![](https://images.code.org/d6f923cd0dac99c974331cd458d6684b-lorem-ipsum.jpg)",
         "name": "image"
       },
       "seeding_key": {
-        "activity_section.key": "689ea393-84de-4181-adea-52617e57f5cc",
-        "lesson_activity.key": "0449a400-4ddf-4381-93e6-101aaf14d0e7"
+        "activity_section.key": "fa0851c7-36ed-4b8e-8e6d-5dc72804b5e4",
+        "lesson_activity.key": "46340884-bec7-4061-81b0-d607e447a4e6"
       }
     },
     {
-      "key": "b8278cca-5565-4e4d-b526-0bdaf996174d",
+      "key": "1be90567-8f7d-40a6-b5ca-c9aed5efc927",
       "position": 1,
       "properties": {
         "name": "Bubble Choice",
         "progression_name": "Bubble Choice"
       },
       "seeding_key": {
-        "activity_section.key": "b8278cca-5565-4e4d-b526-0bdaf996174d",
-        "lesson_activity.key": "04334866-b95e-4788-96a8-28c096276714"
+        "activity_section.key": "1be90567-8f7d-40a6-b5ca-c9aed5efc927",
+        "lesson_activity.key": "170fab20-8d35-47e8-af9b-75088232cf7a"
       }
     },
     {
-      "key": "0a6d29e5-b697-45f0-8155-50cf3cdaa662",
+      "key": "cc08dd4a-d87f-43f7-b90b-003a3a5a7218",
       "position": 2,
       "properties": {
         "name": "Standalone Video",
@@ -371,20 +371,20 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "0a6d29e5-b697-45f0-8155-50cf3cdaa662",
-        "lesson_activity.key": "04334866-b95e-4788-96a8-28c096276714"
+        "activity_section.key": "cc08dd4a-d87f-43f7-b90b-003a3a5a7218",
+        "lesson_activity.key": "170fab20-8d35-47e8-af9b-75088232cf7a"
       }
     },
     {
-      "key": "d86c30f9-ee2e-4816-84d4-3cffc74d9086",
+      "key": "ec1884d9-a4ae-4092-adf1-c5dcce8bbac5",
       "position": 3,
       "properties": {
         "name": "Level With Top Instructions",
         "progression_name": "Level with Instructions"
       },
       "seeding_key": {
-        "activity_section.key": "d86c30f9-ee2e-4816-84d4-3cffc74d9086",
-        "lesson_activity.key": "04334866-b95e-4788-96a8-28c096276714"
+        "activity_section.key": "ec1884d9-a4ae-4092-adf1-c5dcce8bbac5",
+        "lesson_activity.key": "170fab20-8d35-47e8-af9b-75088232cf7a"
       }
     }
   ],
@@ -395,20 +395,23 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test U3L2 Using Simple Commands"
+        ],
         "progression": "Levels are Cool"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U3L2 Using Simple Commands"
+          "UI Test U3L2 Using Simple Commands"
         ],
         "lesson.key": "First Lesson",
         "lesson_group.key": "lessonGroup-2",
-        "script.name": "allthelessonplans",
-        "activity_section.key": "2330dbf8-5456-4404-82af-0834e9330546"
+        "script.name": "ui-test-lesson-plans",
+        "activity_section.key": "fc747ff1-6dc7-49fa-854a-5287f90f8a40"
       },
       "level_keys": [
-        "U3L2 Using Simple Commands"
+        "UI Test U3L2 Using Simple Commands"
       ]
     },
     {
@@ -417,20 +420,23 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test ui_lesson_bubble_choice"
+        ],
         "progression": "Bubble Choice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ui_lesson_bubble_choice"
+          "UI Test ui_lesson_bubble_choice"
         ],
         "lesson.key": "Level Details Dialog Examples",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans",
-        "activity_section.key": "b8278cca-5565-4e4d-b526-0bdaf996174d"
+        "script.name": "ui-test-lesson-plans",
+        "activity_section.key": "1be90567-8f7d-40a6-b5ca-c9aed5efc927"
       },
       "level_keys": [
-        "ui_lesson_bubble_choice"
+        "UI Test ui_lesson_bubble_choice"
       ]
     },
     {
@@ -439,20 +445,23 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test ui_lesson_standalone_video"
+        ],
         "progression": "Standalone Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ui_lesson_standalone_video"
+          "UI Test ui_lesson_standalone_video"
         ],
         "lesson.key": "Level Details Dialog Examples",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans",
-        "activity_section.key": "0a6d29e5-b697-45f0-8155-50cf3cdaa662"
+        "script.name": "ui-test-lesson-plans",
+        "activity_section.key": "cc08dd4a-d87f-43f7-b90b-003a3a5a7218"
       },
       "level_keys": [
-        "ui_lesson_standalone_video"
+        "UI Test ui_lesson_standalone_video"
       ]
     },
     {
@@ -461,70 +470,73 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test uitest_lesson_applab"
+        ],
         "progression": "Level with Instructions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "uitest_lesson_applab"
+          "UI Test uitest_lesson_applab"
         ],
         "lesson.key": "Level Details Dialog Examples",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans",
-        "activity_section.key": "d86c30f9-ee2e-4816-84d4-3cffc74d9086"
+        "script.name": "ui-test-lesson-plans",
+        "activity_section.key": "ec1884d9-a4ae-4092-adf1-c5dcce8bbac5"
       },
       "level_keys": [
-        "uitest_lesson_applab"
+        "UI Test uitest_lesson_applab"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "U3L2 Using Simple Commands",
+        "level.key": "UI Test U3L2 Using Simple Commands",
         "script_level.level_keys": [
-          "U3L2 Using Simple Commands"
+          "UI Test U3L2 Using Simple Commands"
         ],
         "lesson.key": "First Lesson",
         "lesson_group.key": "lessonGroup-2",
-        "script.name": "allthelessonplans",
-        "activity_section.key": "2330dbf8-5456-4404-82af-0834e9330546"
+        "script.name": "ui-test-lesson-plans",
+        "activity_section.key": "fc747ff1-6dc7-49fa-854a-5287f90f8a40"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ui_lesson_bubble_choice",
+        "level.key": "UI Test ui_lesson_bubble_choice",
         "script_level.level_keys": [
-          "ui_lesson_bubble_choice"
+          "UI Test ui_lesson_bubble_choice"
         ],
         "lesson.key": "Level Details Dialog Examples",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans",
-        "activity_section.key": "b8278cca-5565-4e4d-b526-0bdaf996174d"
+        "script.name": "ui-test-lesson-plans",
+        "activity_section.key": "1be90567-8f7d-40a6-b5ca-c9aed5efc927"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ui_lesson_standalone_video",
+        "level.key": "UI Test ui_lesson_standalone_video",
         "script_level.level_keys": [
-          "ui_lesson_standalone_video"
+          "UI Test ui_lesson_standalone_video"
         ],
         "lesson.key": "Level Details Dialog Examples",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans",
-        "activity_section.key": "0a6d29e5-b697-45f0-8155-50cf3cdaa662"
+        "script.name": "ui-test-lesson-plans",
+        "activity_section.key": "cc08dd4a-d87f-43f7-b90b-003a3a5a7218"
       }
     },
     {
       "seeding_key": {
-        "level.key": "uitest_lesson_applab",
+        "level.key": "UI Test uitest_lesson_applab",
         "script_level.level_keys": [
-          "uitest_lesson_applab"
+          "UI Test uitest_lesson_applab"
         ],
         "lesson.key": "Level Details Dialog Examples",
         "lesson_group.key": "lessonGroup-4",
-        "script.name": "allthelessonplans",
-        "activity_section.key": "d86c30f9-ee2e-4816-84d4-3cffc74d9086"
+        "script.name": "ui-test-lesson-plans",
+        "activity_section.key": "ec1884d9-a4ae-4092-adf1-c5dcce8bbac5"
       }
     }
   ],
@@ -607,13 +619,13 @@
   ],
   "objectives": [
     {
-      "key": "30a3a285-da92-4628-83de-176f48b91cd2",
+      "key": "ea66fd67-8630-487a-93ca-618c0d2a980b",
       "properties": {
         "description": "Learn lots of stuff"
       },
       "seeding_key": {
         "lesson.key": "First Lesson",
-        "objective.key": "30a3a285-da92-4628-83de-176f48b91cd2"
+        "objective.key": "ea66fd67-8630-487a-93ca-618c0d2a980b"
       }
     }
   ],
@@ -621,6 +633,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

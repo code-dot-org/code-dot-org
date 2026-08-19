@@ -1,6 +1,6 @@
 {
-  "key": "allthelessonplans",
-  "display_name": "allthelessonplans",
+  "key": "ui-test-lesson-plans",
+  "display_name": "ui-test-lesson-plans",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
