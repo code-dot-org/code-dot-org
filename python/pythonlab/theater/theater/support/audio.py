@@ -32,7 +32,8 @@ def read_samples_from_file(filename):
 
 def truncate_samples(samples, length_seconds):
   """Trim samples to the given duration; leave shorter samples untouched."""
-  new_length = int(length_seconds * SAMPLE_RATE)
+  # Clamp at zero: a negative length would otherwise trim from the end.
+  new_length = max(0, int(length_seconds * SAMPLE_RATE))
   if new_length > len(samples):
     return samples
   return samples[:new_length]

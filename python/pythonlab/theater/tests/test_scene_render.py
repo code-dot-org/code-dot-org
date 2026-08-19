@@ -172,6 +172,19 @@ def test_out_of_range_pause_raises_at_the_call(seconds):
   assert scene.get_actions() == []
 
 
+@pytest.mark.parametrize("seconds", [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000])
+def test_out_of_range_note_duration_raises_at_the_call(seconds):
+  # An unbounded duration reaches truncate_samples, where a negative once
+  # trimmed the note's tail and played nearly all of it.
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.play_note(60, seconds)
+  with pytest.raises(ValueError):
+    scene.play_note_and_pause(60, seconds)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
 @pytest.mark.parametrize("seconds", [MIN_PAUSE_SECONDS, 1.5, MAX_PAUSE_SECONDS])
 def test_pause_accepts_the_whole_documented_range(seconds):
   gif = _single_frame_scene(lambda scene: scene.pause(seconds))

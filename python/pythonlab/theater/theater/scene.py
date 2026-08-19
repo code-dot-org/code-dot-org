@@ -19,6 +19,23 @@ _DEFAULT_STROKE_WIDTH = 1.0
 _MIN_POLYGON_SIDES = 3
 
 
+def _validate_duration(method_name, seconds):
+  """Bound a note or pause duration.
+
+  Raise here rather than at render time so the traceback points at the
+  student's own call. Notes share the pause range: play_note_and_pause() hands
+  the same value to both, and the ceiling is what a gif frame delay can hold.
+  """
+  if seconds < MIN_PAUSE_SECONDS:
+    raise ValueError(
+      f"{method_name} needs at least {MIN_PAUSE_SECONDS} seconds, got {seconds}"
+    )
+  if seconds > MAX_PAUSE_SECONDS:
+    raise ValueError(
+      f"{method_name} allows at most {MAX_PAUSE_SECONDS} seconds, got {seconds}"
+    )
+
+
 class Scene:
   """A single scene of drawing and audio commands.
 
@@ -57,6 +74,7 @@ class Scene:
     self._actions.append(actions.PlaySound(samples))
 
   def play_note(self, note, seconds, instrument=Instrument.PIANO):
+    _validate_duration("play_note", seconds)
     self._actions.append(actions.PlayNote(instrument, note, seconds))
 
   def play_note_and_pause(self, note, seconds, instrument=Instrument.PIANO):
@@ -64,16 +82,7 @@ class Scene:
     self.pause(seconds)
 
   def pause(self, seconds):
-    # Raise here rather than at render time so the traceback points at the
-    # student's own call. The upper bound is what a gif frame delay can hold.
-    if seconds < MIN_PAUSE_SECONDS:
-      raise ValueError(
-        f"pause needs at least {MIN_PAUSE_SECONDS} seconds, got {seconds}"
-      )
-    if seconds > MAX_PAUSE_SECONDS:
-      raise ValueError(
-        f"pause allows at most {MAX_PAUSE_SECONDS} seconds, got {seconds}"
-      )
+    _validate_duration("pause", seconds)
     self._actions.append(actions.Pause(seconds))
 
   # TODO: determine if we need to put limits on size/width/height
