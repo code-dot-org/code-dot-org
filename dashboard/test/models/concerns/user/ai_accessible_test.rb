@@ -254,7 +254,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
 
     context 'when international usage is allowed via DCDO' do
       it 'returns false for a non-US teacher' do
-        allow(DCDO).to receive(:get).with("allow_international_aichat_usage", false).and_return(true)
+        allow(DCDO).to receive(:get).with("allow_international_usage_all_models", false).and_return(true)
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
         _ai_models_region_blocked?.must_equal false

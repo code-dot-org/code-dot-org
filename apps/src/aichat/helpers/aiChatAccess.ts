@@ -4,23 +4,14 @@ import {
 } from '@cdo/apps/aichat/types/accessControls';
 import {
   AiChatAccessLevels,
-  AiChatGeminiModelIds,
   AiChatRegionBlockedModelIds,
   AiChatToolsDependency,
 } from '@cdo/generated-scripts/sharedConstants';
 
 /**
- * Returns true if the model is served via the Google Gemini API. This is about
- * which provider serves the model, not who may use it — use
- * isRegionBlockedModelId for that.
- */
-export const isGeminiModelId = (modelId: string): boolean =>
-  (AiChatGeminiModelIds as readonly string[]).includes(modelId);
-
-/**
- * Returns true if the model is unavailable in some regions. Pair with
- * currentUser.aiModelsRegionBlocked, which says whether this user is in one;
- * User::AiAccessible#can_use_aichat_model? is the server-side equivalent.
+ * Returns true if the model is unavailable outside the US. Pair with
+ * currentUser.aiModelsRegionBlocked, which says whether this user should
+ * have such models blocked.
  */
 export const isRegionBlockedModelId = (modelId: string): boolean =>
   (AiChatRegionBlockedModelIds as readonly string[]).includes(modelId);

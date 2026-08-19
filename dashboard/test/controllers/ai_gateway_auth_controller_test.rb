@@ -11,7 +11,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
     DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('block_aichat_lab_chat_completion', anything).returns(false)
-    DCDO.stubs(:get).with('allow_international_aichat_usage', anything).returns(false)
+    DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
     @params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],

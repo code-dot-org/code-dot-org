@@ -22,10 +22,7 @@ import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teac
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-// Message and FAQ article for the region-blocked state, keyed by client type.
-// The copy differs because AI Tutor's model is the same on every level, while
-// the aichat lab's is chosen per level. Client types not listed here fall back
-// to the level-scoped message with no link.
+// Allows specific FAQ articles for different aichat clients.
 const REGION_BLOCKED_COPY: Partial<
   Record<AiChatClientType, {message: string; faqLink: string}>
 > = {
@@ -69,7 +66,7 @@ export function useAiChatDisabledState({
   const userAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
-  const geminiModelsBlocked = useAppSelector(
+  const aiModelsRegionBlocked = useAppSelector(
     state => state.currentUser.aiModelsRegionBlocked
   );
   const isLevelbuilder = useAppSelector(
@@ -98,12 +95,11 @@ export function useAiChatDisabledState({
       };
     }
 
-    // Gemini-served models are blocked for international users, independent of
-    // access level. The server enforces this per-request; this mirrors it so
-    // users see a disabled state instead of failing sends. Per product,
-    // students keep the standard not-authorized message regardless of cause.
+    // Some models are blocked for international users,
+    // so we show disabled if the user is in a region where the model is blocked (aiModelsRegionBlocked)
+    // and the selectedModelId is one of the blocked models (isRegionBlockedModelId).
     if (
-      geminiModelsBlocked &&
+      aiModelsRegionBlocked &&
       selectedModelId &&
       isRegionBlockedModelId(selectedModelId)
     ) {
@@ -147,7 +143,7 @@ export function useAiChatDisabledState({
           },
         };
       }
-      // If the teacher doesn't have access, show the appropriate message.
+      // If the teacher doesn't have access, show the appropriate message to direct the teacher on how to get access.
       if (!enabledForUser) {
         return {
           disabled: true,
@@ -179,7 +175,7 @@ export function useAiChatDisabledState({
     enabledForUser,
     sectionAccessLevel,
     isLevelbuilder,
-    geminiModelsBlocked,
+    aiModelsRegionBlocked,
   ]);
 
   return disabledState;

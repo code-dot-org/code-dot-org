@@ -41,7 +41,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('aichat_polling_interval_ms', anything).returns(AichatRequestsController::DEFAULT_POLLING_INTERVAL_MS)
     DCDO.stubs(:get).with('aichat_polling_backoff_rate', anything).returns(AichatRequestsController::DEFAULT_POLLING_BACKOFF_RATE)
     DCDO.stubs(:get).with('throttle_time_default', anything).returns(60)
-    DCDO.stubs(:get).with('allow_international_aichat_usage', anything).returns(false)
+    DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
   end
 
   # start_chat_completion tests

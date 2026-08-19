@@ -27,16 +27,12 @@ module User::AiAccessible
     section_enabled_access_level
   end
 
-  # Whether some AI models are unavailable to this user because of where they
-  # are. Today that means the Gemini-served models, but the name stays free of
-  # the provider so a future restriction can reuse it. Levelbuilders are exempt.
+  # Whether some AI models are unavailable to this user because of where they are.
   def ai_models_region_blocked?
     return false if levelbuilder?
     international_ai_chat_user?
   end
 
-  # Per-request model gate, enforced wherever a model id is known
-  # (aichat_requests_controller, ai_gateway_auth_controller).
   def can_use_aichat_model?(model_id)
     return true unless AI_CHAT_REGION_BLOCKED_MODEL_IDS.include?(model_id)
     !ai_models_region_blocked?
@@ -82,14 +78,11 @@ module User::AiAccessible
   end
 
   # A teacher is international when they (the teacher) are non-US. A student is
-  # international when they have teachers and all of them are non-US. Gemini
-  # models are blocked for international users by default; the
-  # allow_international_aichat_usage DCDO flag is an escape hatch to re-enable
-  # access without a deploy.
+  # international when they have teachers and all of them are non-US.
   private def international_ai_chat_user?
     return @international_ai_chat_user if defined?(@international_ai_chat_user)
     @international_ai_chat_user =
-      if DCDO.get("allow_international_aichat_usage", false)
+      if DCDO.get("allow_international_usage_all_models", false)
         false
       elsif teacher?
         non_us_ai_chat_user?(self)
@@ -99,15 +92,8 @@ module User::AiAccessible
       end
   end
 
-  # True only when we can positively determine the user is outside the US, so we
-  # never block users whose location we can't establish. Prefer school_info, but
-  # only when it has a country (legacy rows may have only state/district data);
-  # otherwise fall back to geolocation, and fail open if neither is known.
-  #
-  # Note the geolocation is recorded once, at the user's first tracked sign-in,
-  # and never refreshed (see config/initializers/trackable.rb), so it reflects
-  # where they first signed in rather than where they are now. A user placed
-  # wrongly by it stays that way until they set their school info.
+  # We use school_info and user_geos (set once at first sign-in) rather than per request
+  # geolocation so the value stays stable and can be fixed by the teacher if it is wrong.
   private def non_us_ai_chat_user?(user)
     return !user.school_info.usa? if user.school_info&.country.present?
     geo_country = user.user_geos.first&.country

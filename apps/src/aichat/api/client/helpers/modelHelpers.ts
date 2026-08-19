@@ -18,10 +18,6 @@ const openAiProvider = createOpenAI({
   apiKey: '',
 });
 
-// Models served via the Google provider, from the shared constant that also
-// decides which models are region-blocked, so the two can't drift. Use
-// isGeminiModelId (aichat/helpers/aiChatAccess) to test membership — it doesn't
-// pull in the AI SDK.
 const modelMap: {
   [key in ModelId]?: LanguageModel;
 } = {
