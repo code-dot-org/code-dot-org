@@ -3506,7 +3506,7 @@ const worldPlaySound = defineBlock({
     worldContextExtension,
     soundImportFieldExtension,
   ],
-  style: 'behavior_blocks',
+  style: 'default',
   tooltip: 'Play a sound once. Choose one the project holds, or import one.',
   generator: {
     javascript(block) {
@@ -3547,7 +3547,7 @@ const worldSetMusic = defineBlock({
     worldContextExtension,
     soundImportFieldExtension,
   ],
-  style: 'behavior_blocks',
+  style: 'default',
   tooltip:
     'Play a track over and over. Choosing “(none)” stops whatever is playing.',
   generator: {
