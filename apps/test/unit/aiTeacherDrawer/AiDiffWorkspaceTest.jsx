@@ -3,7 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {chatThreadMessagesValidator} from '@cdo/apps/aiDifferentiation/types';
+import {chatThreadMessagesValidator} from '@cdo/apps/aiTeacherDrawer/types';
 import AiDiffWorkspace from '@cdo/apps/aiTeacherDrawer/AiDiffWorkspace';
 import {
   EXAMPLE_PROMPT,
