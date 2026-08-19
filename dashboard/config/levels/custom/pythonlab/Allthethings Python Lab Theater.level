@@ -25,7 +25,7 @@
           "name": "main.py",
           "contents": "from theater import Color, Font, FontStyle, Image, Scene, play_scenes\n\n# --- Scene 1: shapes, strokes and fills ----------------------------------\nshapes = Scene()\nshapes.clear(\"ivory\")\n\nshapes.set_text_color(\"navy\")\nshapes.set_text_height(28)\nshapes.set_text_style(Font.SERIF, FontStyle.BOLD)\nshapes.draw_text(\"Theater check\", 20, 45)\nshapes.pause(0.6)\n\n# x, y is the top left corner of the box the shape fits in.\nshapes.set_fill_color(\"turquoise\")\nshapes.set_stroke_color(\"teal\")\nshapes.set_stroke_width(4)\nshapes.draw_rectangle(30, 80, 150, 90)\nshapes.pause(0.4)\n\nshapes.set_fill_color(Color(255, 140, 0))\nshapes.draw_ellipse(220, 80, 150, 90)\nshapes.pause(0.4)\n\n# Outline only, then fill only.\nshapes.remove_fill_color()\nshapes.set_stroke_color(\"purple\")\nshapes.draw_regular_polygon(105, 250, 6, 55)\nshapes.pause(0.4)\n\nshapes.set_fill_color(\"#e91e63\")\nshapes.remove_stroke_color()\nshapes.draw_regular_polygon(295, 250, 3, 55)\nshapes.pause(0.4)\n\nshapes.set_stroke_color(\"black\")\nshapes.set_stroke_width(3)\nshapes.draw_line(30, 330, 370, 330)\n# A closed triangle from a flat list of x, y pairs.\nshapes.set_fill_color(\"gold\")\nshapes.draw_shape([60, 390, 200, 345, 340, 390], True)\nshapes.pause(0.8)\n\n# --- Scene 2: fonts, styles and rotation --------------------------------\ntext = Scene()\ntext.clear(\"white\")\ntext.set_text_height(24)\ntext.set_text_color(\"black\")\n\n# draw_text puts the baseline at y, so each line steps down by more than the\n# text height.\nfor index, (font, label) in enumerate(\n  [(Font.SANS, \"sans\"), (Font.SERIF, \"serif\"), (Font.MONO, \"mono\")]\n):\n  text.set_text_style(font, FontStyle.NORMAL)\n  text.draw_text(f\"{label} normal\", 25, 60 + index * 40)\n\ntext.set_text_style(Font.SANS, FontStyle.BOLD)\ntext.draw_text(\"sans bold\", 25, 200)\ntext.set_text_style(Font.SANS, FontStyle.ITALIC)\ntext.draw_text(\"sans italic\", 25, 240)\ntext.set_text_style(Font.SANS, FontStyle.BOLD_ITALIC)\ntext.draw_text(\"sans bold italic\", 25, 280)\ntext.pause(0.7)\n\n# Rotation is clockwise, about the point given.\ntext.set_text_style(Font.SANS, FontStyle.BOLD)\ntext.set_text_color(\"red\")\ntext.set_text_height(20)\nfor angle in range(0, 360, 45):\n  text.draw_text(\"spin\", 200, 360, angle)\ntext.pause(0.7)\n\n# --- Scene 3: images ----------------------------------------------------\nimages = Scene()\nimages.clear(\"beige\")\n\n# No image files can reach Python Lab's filesystem yet, so build one by pixel.\nswatch = Image(40, 40)\nfor x in range(40):\n  for y in range(40):\n    swatch.set_pixel(x, y, Color(x * 6, y * 6, 200))\n\n# size sets the width and scales the height to match.\nimages.draw_image(swatch, 30, 40, size=120)\n# width and height together stretch it instead.\nimages.draw_image(swatch, 190, 40, width=180, height=90)\nimages.pause(0.5)\n\n# Rotation pivots about the top left corner, so leave room for the swing.\nimages.draw_image(swatch, 200, 260, size=90, rotation=30)\nimages.set_text_color(\"black\")\nimages.set_text_height(18)\nimages.set_text_style(Font.MONO, FontStyle.NORMAL)\nimages.draw_text(f\"pixel at (0,0): {swatch.get_pixel(0, 0).get_color()}\", 20, 380)\nimages.pause(0.6)\n\nprint(f\"stage is {shapes.get_width()}x{shapes.get_height()}\")\nprint(\"playing 3 scenes\")\n\nplay_scenes(shapes, text, images)\n\nprint(\"done\")",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "folders": {
@@ -33,9 +33,17 @@
       "openFiles": [
         "0"
       ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "validation.py",
+      "contents": "import unittest\nfrom unittest_runner import ValidationProtocol\n\nclass SampleTest(unittest.TestCase):\n\n  def test_validation_protocol(self):\n    \"\"\"Test can get first line from main\"\"\"\n    lines = ValidationProtocol().get_stdout_logs()\n    assert lines[0] == \"stage is 400x400\"\n  ",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-17 10:19:27 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-17 10:19:27 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 15:45:23 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 15:47:33 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 15:47:54 -0700\",\"changed\":[\"validation_file\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
