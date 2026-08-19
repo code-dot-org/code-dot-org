@@ -215,8 +215,22 @@ actor would be promising panning it does not do.
    dialog closes, and when a choice is made — but owns one element instead of a
    singleton, because a singleton is a thing to remember to clear.
 
-6. **The blocks.** `play sound` and `set music to`, their dropdowns, the
-   `(import…)` row, and the toolbox entry.
+6. ✅ **The blocks.** `play sound` and `set music to`, a `Sound` category of
+   their own in the toolbox, and a SOUND dropdown offering what the project
+   holds plus `(import…)`. The two differ in exactly one place — what an empty
+   dropdown generates. `play sound` writes nothing (playing silence once is not
+   a thing anyone means); `set music to` writes `setMusic(undefined)`, because
+   silence is a value a learner does mean, and that is why there is no
+   `stop music` block.
+
+   Two things fell out on the way. `projectImagePaths` returned every file with
+   a `url` — which was every image until a sound was one too, so a sound turned
+   up in the `set sprite` dropdown; it filters by extension now, and
+   `projectSoundPaths` is its sibling. And `BlocklyFileEditor` had six copies of
+   the same `refreshProjectDropdowns(files, images, sizes)` call, one per
+   importer; a fourth argument would have made that a list to keep in step, so
+   it is one `refreshFor(source)`.
+
 7. **The cap.** One constant, enforced where an upload enters, with the message
    a learner reads.
 8. **`SANDBOX.md`.** `media-src 'self' blob: data:` on the preview surface.

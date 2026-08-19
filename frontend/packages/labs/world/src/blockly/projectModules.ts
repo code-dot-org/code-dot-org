@@ -8,6 +8,7 @@
 
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import type {EffectParameter} from '../effect/model/types';
+import {soundLabel} from '../sound/soundFiles';
 
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {FOUNDATION_RULE_NAMES} from './foundation';
@@ -350,6 +351,27 @@ export function projectWorldRules(files: Record<string, string>): string[] {
 }
 
 const IMAGE_FILE = /\.(png|jpg|jpeg|gif|webp)$/i;
+
+/**
+ * The sounds the project holds, as `[label, fileName]` for a SOUND dropdown.
+ *
+ * The VALUE is the file name — what a block stores and what the driver keys the
+ * audio cache by — and the label drops the extension, because "coin" is what
+ * the sentence on the block wants to read. The same bargain
+ * `projectSpriteOptions` makes about images.
+ *
+ * Paths in, names out: which pool a file belongs to is decided by its extension
+ * here rather than by its folder (`runtime/projectFiles.projectSoundPaths`), so
+ * a sound a learner dragged out of `sounds/` is still a sound.
+ */
+export function projectSoundOptions(
+  sounds: readonly string[],
+): Array<[string, string]> {
+  const names = [...new Set(sounds.map(baseName))].sort((a, b) =>
+    a.localeCompare(b),
+  );
+  return names.map(name => [soundLabel(name), name]);
+}
 
 /** Every image path the project holds, from both places they can come from. */
 const imagePaths = (

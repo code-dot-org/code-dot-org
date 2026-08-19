@@ -11,6 +11,7 @@ import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 import {IMPORT_ACTOR_VALUE} from '../actors/actorImport';
 import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
 import type {EffectParameter} from '../effect/model/types';
+import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
 import {actorIconImage} from './actorIcons';
 import {actorIcon, actorThumbnail} from './actorThumbnails';
@@ -25,6 +26,10 @@ let projectSprites: Array<[string, string]> = [];
 // The same, for the images under `backgrounds/` — a pool of its own, because a
 // sky and a costume are never wanted in the same list (BACKGROUNDS.md §5).
 let projectBackgrounds: Array<[string, string]> = [];
+// `[label, fileName]` for the project's sounds — the `play sound` / `set music
+// to` dropdowns. A pool of their own, like the backdrops': a sound is not
+// something to dress an actor in (specs/SOUND.md).
+let projectSounds: Array<[string, string]> = [];
 // `[label, path]` for the project's `.effect` files — the `add effect` dropdown.
 let projectEffectFiles: Array<[string, string]> = [];
 // `[label, path]` for the project's own rule modules under `rules/` — the
@@ -50,6 +55,11 @@ export function setProjectSprites(options: Array<[string, string]>): void {
 /** Replace the backdrop options — the project's images under `backgrounds/`. */
 export function setProjectBackgrounds(options: Array<[string, string]>): void {
   projectBackgrounds = options;
+}
+
+/** Replace the sound options the SOUND dropdowns offer. */
+export function setProjectSounds(options: Array<[string, string]>): void {
+  projectSounds = options;
 }
 
 /** Replace the animation-file options the FILE dropdown offers. */
@@ -133,6 +143,19 @@ export function backgroundOptions(): Array<[string, string]> {
  * still supplies "(none)" there — so a saved block whose backdrop was deleted
  * does not silently become the import row.
  */
+/**
+ * Current SOUND dropdown options, plus an `(import…)` row.
+ *
+ * Both sound blocks offer the row: `play sound` and `set music to` reach the
+ * same shelf, and a learner who has no sounds yet is exactly the learner who
+ * needs it. Listed last, and never as the fallback when the project has none —
+ * `orNone` still supplies "(none)" — so a saved block whose file was deleted
+ * does not silently become the import row.
+ */
+export function soundImportOptions(): Array<[string, string]> {
+  return [...orNone(projectSounds), ['(import…)', IMPORT_SOUND_VALUE]];
+}
+
 export function backgroundImportOptions(): Array<[string, string]> {
   return [
     ...orNone(projectBackgrounds),
@@ -497,6 +520,12 @@ export const effectFileImportOptionsExtension = liveDropdown(
   'world_effect_import_options',
   'EFFECT',
   effectFileImportOptions,
+);
+/** Make the SOUND dropdowns reflect what the project holds, plus `(import…)`. */
+export const soundOptionsExtension = liveDropdown(
+  'world_sound_options',
+  'SOUND',
+  soundImportOptions,
 );
 export const mapOptionsExtension = liveDropdown(
   'world_map_options',

@@ -32,6 +32,7 @@ import {
 } from '../engine';
 import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
 import {VIEWPORT_TILES} from '../runtime/viewport';
+import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
 import {SHOW_AS} from './actorIconMeta';
 import {ACTOR_ICON_OPTIONS} from './actorIcons';
@@ -100,6 +101,7 @@ import {rgbaPreviewExtension} from './extensions/rgbaPreview';
 import {ruleImportFieldExtension} from './extensions/ruleImportField';
 import {rulesButtonExtension} from './extensions/rulesButton';
 import {sliderRangeMutator} from './extensions/sliderRange';
+import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
@@ -144,6 +146,8 @@ import {
   orNone,
   ruleModuleOptions,
   backgroundImportOptions,
+  soundImportOptions,
+  soundOptionsExtension,
   spriteOptions,
 } from './moduleOptions';
 import type {OwnMeta} from './ownProperties';
@@ -3475,6 +3479,92 @@ registerValueShadows('world_count_with', [
  * So `first actor in ⟨the actors … where …⟩` stops at the first match, which is
  * the short-circuit the deleted block promised.
  */
+/**
+ * `play sound ⟨pop ▾⟩` — a noise, once, now.
+ *
+ * A MOMENT, and the first thing this language has been able to say happened
+ * (specs/SOUND.md). It queues on the world; the driver drains the queue after
+ * the tick and plays what it finds.
+ *
+ * NO SUBJECT. A sound has no position in this lab — there is no listener, so
+ * there is nothing for a position to mean — and an actor socket would be
+ * promising panning that does not exist. `set position of` takes a subject
+ * because a position is a fact about an actor; this is a fact about the moment.
+ */
+const worldPlaySound = defineBlock({
+  type: 'world_play_sound',
+  message0: 'play sound %1',
+  args0: [{type: 'field_dropdown', name: 'SOUND', options: soundImportOptions}],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  // `world.playSound` is the world's, so the block warns where no world is
+  // bound — the same guard `all actors` carries. The import extension goes
+  // LAST: it wraps whatever validator the options extension installed.
+  extensions: [
+    soundOptionsExtension,
+    worldContextExtension,
+    soundImportFieldExtension,
+  ],
+  style: 'behavior_blocks',
+  tooltip: 'Play a sound once. Choose one the project holds, or import one.',
+  generator: {
+    javascript(block) {
+      const sound = block.getFieldValue('SOUND');
+      // "(none)" — the project holds no sounds, or the file this named has been
+      // deleted. Nothing rather than `world.playSound()`, which would play
+      // silence loudly by throwing (the bargain every unfinished dropdown here
+      // makes).
+      if (!sound || sound === IMPORT_SOUND_VALUE) {
+        return '';
+      }
+      return `world.playSound(${str(sound)});\n`;
+    },
+  },
+});
+
+/**
+ * `set music to ⟨theme ▾⟩` — the track this world plays.
+ *
+ * STATE, where `play sound` is a moment, and the difference is the whole of the
+ * sound design: this is in the world's snapshot and patches on hot reload the
+ * way the sky does, so swapping the track while the game runs swaps the track
+ * rather than restarting the game around a learner who was listening to it.
+ *
+ * `(none)` is silence and is how it STOPS. A world either has music or it does
+ * not, so a second `stop music` block would be a second way to say one thing —
+ * the same reason `set background to ⟨none⟩` is how a sky is taken away.
+ */
+const worldSetMusic = defineBlock({
+  type: 'world_set_music',
+  message0: 'set music to %1',
+  args0: [{type: 'field_dropdown', name: 'SOUND', options: soundImportOptions}],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    soundOptionsExtension,
+    worldContextExtension,
+    soundImportFieldExtension,
+  ],
+  style: 'behavior_blocks',
+  tooltip:
+    'Play a track over and over. Choosing “(none)” stops whatever is playing.',
+  generator: {
+    javascript(block) {
+      const sound = block.getFieldValue('SOUND');
+      // Here "(none)" is a VALUE rather than an unfinished block: silence is
+      // something a learner means. The import row is still not one.
+      if (sound === IMPORT_SOUND_VALUE) {
+        return '';
+      }
+      return sound
+        ? `world.setMusic(${str(sound)});\n`
+        : 'world.setMusic(undefined);\n';
+    },
+  },
+});
+
 const worldFilterActors = defineBlock({
   type: 'world_filter_actors',
   message0: 'the actors %1 in %2 where %3',
@@ -6361,6 +6451,8 @@ export const DOMAIN_BLOCKS = [
   worldCountWith,
   // Actor lists as values: filtering, ordering, and taking from one
   // (specs/ACTOR_LISTS.md).
+  worldPlaySound,
+  worldSetMusic,
   worldFilterActors,
   worldFirstActor,
   worldActorsWithTrait,
@@ -6666,6 +6758,10 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'world_count_with',
     ],
   },
+  // A noise, and a track. Its own category rather than tucked under Appearance:
+  // what a game sounds like is not what it looks like, and a learner looking
+  // for "play sound" looks for a word, not for a drawer (specs/SOUND.md).
+  {name: 'Sound', blocks: ['world_play_sound', 'world_set_music']},
   {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {
     name: 'Logic',

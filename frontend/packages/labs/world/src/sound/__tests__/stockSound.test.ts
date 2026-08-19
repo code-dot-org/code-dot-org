@@ -121,3 +121,38 @@ describe('importing one', () => {
     expect(Object.keys(source.files)).toHaveLength(2);
   });
 });
+
+describe('telling the pools apart', () => {
+  it('keeps sounds out of the sprite dropdown', async () => {
+    // A sound is a file with bytes on a `url`, exactly as an image is, so the
+    // list of url-bearing files was the sprite pool until sounds existed in it.
+    // The extension is what separates them now (runtime/projectFiles).
+    const {projectImagePaths, projectSoundPaths} = await import(
+      '../../runtime/projectFiles'
+    );
+    const source = {
+      folders: {},
+      files: {
+        '1': {
+          id: '1',
+          name: 'player.png',
+          language: 'png',
+          contents: '',
+          folderId: '0',
+          url: 'data:,a',
+        },
+        '2': {
+          id: '2',
+          name: 'coin.mp3',
+          language: 'mp3',
+          contents: '',
+          folderId: '0',
+          url: 'data:,b',
+        },
+      },
+    } as never;
+
+    expect(projectImagePaths(source)).toEqual(['player.png']);
+    expect(projectSoundPaths(source)).toEqual(['coin.mp3']);
+  });
+});
