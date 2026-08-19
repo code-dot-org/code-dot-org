@@ -19,6 +19,7 @@ import experiments from '@cdo/apps/util/experiments';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {canChangeLevelInPage} from '../../browserNavigation';
+import measureRenderedWidth from '../header/measureRenderedWidth';
 import remeasureOnFontsReady from '../header/remeasureOnFontsReady';
 
 /**
@@ -44,8 +45,7 @@ class LessonProgress extends Component {
   };
 
   getFullWidth() {
-    const component = $(this.refs.fullProgressInner);
-    return component.length > 0 ? component.width() : 0;
+    return measureRenderedWidth(this.refs.fullProgressInner);
   }
 
   setDesiredWidth() {

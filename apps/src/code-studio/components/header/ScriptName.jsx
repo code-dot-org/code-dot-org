@@ -1,8 +1,8 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import measureRenderedWidth from './measureRenderedWidth';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 
@@ -18,8 +18,7 @@ class ScriptName extends React.Component {
   };
 
   getFullWidth() {
-    const component = $(this.refs.scriptName);
-    return component.length > 0 ? component.width() : 0;
+    return measureRenderedWidth(this.refs.scriptName);
   }
 
   setDesiredWidth() {

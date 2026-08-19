@@ -1,7 +1,7 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import measureRenderedWidth from './measureRenderedWidth';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 export default class HeaderFinish extends React.Component {
@@ -13,8 +13,7 @@ export default class HeaderFinish extends React.Component {
   };
 
   getFullWidth() {
-    const component = $(this.refs.headerFinish);
-    return component.length > 0 ? component.width() : 0;
+    return measureRenderedWidth(this.refs.headerFinish);
   }
 
   setDesiredWidth() {
