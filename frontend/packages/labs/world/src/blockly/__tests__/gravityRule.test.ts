@@ -294,17 +294,29 @@ describe('rules/gravity.rule', () => {
         inputs?: Record<string, {block?: {type?: string}}>;
       };
       if (block.type === 'world_for_each') {
-        sources.push(block.inputs?.SOURCE?.block?.type ?? '(all actors)');
+        const walked = block.inputs?.SOURCE?.block;
+        // A filter is a lens on a list, not a list of its own: what the loop
+        // WALKS is what the filter was given (specs/ACTOR_LISTS.md).
+        sources.push(
+          (walked?.type === 'world_filter_actors'
+            ? (walked as {inputs?: Record<string, {block?: {type?: string}}>})
+                .inputs?.SOURCE?.block?.type
+            : walked?.type) ?? '(all actors)',
+        );
       }
       Object.values(node as Record<string, unknown>).forEach(walk);
     };
     walk(JSON.parse(source));
 
     expect(sources).toContain('world_get_Collisions_ContactsProperty');
-    // Its two per-tick steps still walk the world: every actor gravity pulls on,
-    // and every actor that might have landed. It is the INNER loop, over one
-    // faller's grounds, that had a shorter list available all along.
-    expect(sources.filter(s => s === '(all actors)')).toHaveLength(2);
+    // Its two per-tick steps still walk every actor gravity pulls on and every
+    // actor that might have landed — but they now say so in the SOURCE rather
+    // than by testing each of the world's actors in the loop. It is the INNER
+    // loop, over one faller's grounds, that had a shorter list all along.
+    expect(sources.filter(s => s === 'world_actors_with_trait')).toHaveLength(
+      2,
+    );
+    expect(sources).not.toContain('(all actors)');
   });
 
   it('is in play because the project holds it', () => {

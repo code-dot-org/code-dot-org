@@ -34,7 +34,16 @@ const MANY_BY_TYPE = new Set([
   'world_all_actors',
   'world_all_cameras',
   'world_all_actors_in_layer',
-  'world_first_where',
+  // Actor lists as values (specs/ACTOR_LISTS.md). The last three are
+  // zero-or-one rather than guaranteed-one, which needs the same broadcast
+  // wrapper a many-valued one does — a statement over no actors must do
+  // nothing rather than fail.
+  'world_filter_actors',
+  'world_ordered_actors',
+  'world_take_actors',
+  'world_actors_with_trait',
+  'world_first_actor',
+  'world_extreme_actor',
 ]);
 
 /**

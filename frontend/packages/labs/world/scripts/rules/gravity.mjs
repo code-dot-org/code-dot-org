@@ -3,11 +3,13 @@ import {CanCollide, collisionSizeOf, contacts} from './collisions.mjs';
 import {
   absolute,
   add,
+  allWithTrait,
   atLeast,
   atMost,
   axisOf,
   both,
   defineRule,
+  filter,
   forEach,
   frameTime,
   give,
@@ -171,8 +173,10 @@ const landOnGround = rule.block({
     note('If I am, put me exactly on its surface and stop falling.'),
     landed.set(no()),
     forEach(ground, {
-      from: contacts.of(faller.get()),
-      where: hasTrait(ground.get(), rule.traitRef('Acts as Ground')),
+      from: filter(ground, {
+        from: contacts.of(faller.get()),
+        where: hasTrait(ground.get(), rule.traitRef('Acts as Ground')),
+      }),
       body: [
         when([
           [
@@ -238,7 +242,7 @@ const resting = rule.local('resting', 'Boolean');
 
 rule.step('applyVelocity', 'push', [
   forEach(each, {
-    where: hasTrait(each.get(), rule.traitRef('Affected by Gravity')),
+    from: allWithTrait(rule.traitRef('Affected by Gravity')),
     body: [
       note('Falling is not one speed: every frame you fall a little faster.'),
       note('So add a bit of speed, in the direction gravity pulls.'),
@@ -261,7 +265,7 @@ rule.step('applyVelocity', 'push', [
 
 rule.step('handleCollisions', 'react', [
   forEach(each, {
-    where: hasTrait(each.get(), rule.traitRef('Affected by Gravity')),
+    from: allWithTrait(rule.traitRef('Affected by Gravity')),
     body: [
       note(
         'Everything has moved by now, so this is where we decide who is standing.',

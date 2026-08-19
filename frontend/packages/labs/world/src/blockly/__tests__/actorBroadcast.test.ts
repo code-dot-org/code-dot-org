@@ -87,19 +87,30 @@ describe('a statement over an actor value', () => {
     );
   });
 
-  it('wraps `first actor … where …`, which may hold no actor at all', () => {
+  it('wraps `first actor in ⟨…⟩`, which may hold no actor at all', () => {
     // Zero needs the wrapper for the same reason many does, and this is the
-    // block that can answer zero: a search that matches nothing. Broadcast, the
-    // statement runs no times; called bare it would run once on nothing and
-    // throw — a TypeError naming a value the learner never wrote.
-    const code = emit('world_remove_actor', {}, 'world_first_where', {
-      ACTOR: 'WorldLab.firstWhere(world.actors, other => true)',
+    // block that can answer zero: the front of a list that turned out empty.
+    // Broadcast, the statement runs no times; called bare it would run once on
+    // nothing and throw — a TypeError naming a value the learner never wrote.
+    const code = emit('world_remove_actor', {}, 'world_first_actor', {
+      ACTOR: 'WorldLab.firstOf(world.actors)',
     });
 
     expect(code).toBe(
-      'WorldLab.each(WorldLab.firstWhere(world.actors, other => true), ' +
+      'WorldLab.each(WorldLab.firstOf(world.actors), ' +
         'actor => world.removeActor(actor));\n',
     );
+  });
+
+  it('wraps a filter, which may match nothing at all', () => {
+    // The other half of what `first actor … where` used to be, and it needs the
+    // wrapper for both reasons at once: it can hold several, and it can hold
+    // none (specs/ACTOR_LISTS.md).
+    const code = emit('world_remove_actor', {}, 'world_filter_actors', {
+      ACTOR: 'WorldLab.filtered(world.actors, other => true)',
+    });
+
+    expect(code).toContain('WorldLab.each(');
   });
 
   it('is how "remove every coin" is written — no bulk block needed', () => {
@@ -171,13 +182,11 @@ describe('the loop takes a source', () => {
       'world_for_each',
       {VAR: 'each'},
       {SOURCE: 'world_all_actors'},
-      {WHERE: 'true'},
+      {},
       {DO: 'body();\n'},
     );
 
-    expect(code).toBe(
-      'for (const each of world.actors) {\nif (true) {\nbody();\n}\n}\n',
-    );
+    expect(code).toBe('for (const each of world.actors) {\nbody();\n}\n');
   });
 
   it('walks whatever else it is given', () => {
@@ -185,13 +194,13 @@ describe('the loop takes a source', () => {
       'world_for_each',
       {VAR: 'each'},
       {SOURCE: 'world_actor_kind'},
-      {WHERE: 'true', SOURCE: 'world.actors.ofType("actors/coin")'},
+      {SOURCE: 'world.actors.ofType("actors/coin")'},
       {DO: 'body();\n'},
     );
 
     expect(code).toBe(
       'for (const each of WorldLab.all(world.actors.ofType("actors/coin"))) ' +
-        '{\nif (true) {\nbody();\n}\n}\n',
+        '{\nbody();\n}\n',
     );
   });
 

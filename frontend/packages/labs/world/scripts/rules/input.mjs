@@ -1,8 +1,8 @@
 import {
+  allWithTrait,
   defineRule,
   forEach,
   forEachKey,
-  hasTrait,
   moduleFor,
   note,
   param,
@@ -43,7 +43,7 @@ const key = rule.local('key', 'String');
 const announce = (worldEvent, actorEvent, paramName) => [
   worldEvent({[paramName]: key.get()}),
   forEach(each, {
-    where: hasTrait(each.get(), rule.traitRef('Takes Keyboard Input')),
+    from: allWithTrait(rule.traitRef('Takes Keyboard Input')),
     body: [actorEvent({[paramName]: key.get()}, each.get())],
   }),
 ];

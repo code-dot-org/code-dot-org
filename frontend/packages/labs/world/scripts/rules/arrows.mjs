@@ -1,10 +1,10 @@
 import {CanMove, velocity} from './builtins.mjs';
 import {
   add,
+  allWithTrait,
   axisOf,
   defineRule,
   forEach,
-  hasTrait,
   keyDown,
   moduleFor,
   n,
@@ -37,7 +37,7 @@ const whileHeld = (key, speed) => pick(keyDown(key), speed, n(0));
 
 rule.step('control', 'decide', [
   forEach(each, {
-    where: hasTrait(each.get(), rule.traitRef('Controlled by Arrow Keys')),
+    from: allWithTrait(rule.traitRef('Controlled by Arrow Keys')),
     body: [
       note(
         'While an arrow is held, walk that way; while it is not, stand still.',

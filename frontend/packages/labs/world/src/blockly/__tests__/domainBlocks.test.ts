@@ -383,14 +383,15 @@ describe('domain block generators', () => {
     ).toBe('each.type === "actors/coin"');
   });
 
-  it('world_for_each iterates world.actors, guarded by its where predicate', () => {
+  it('world_for_each iterates its source and nothing else', () => {
+    // The `where` is gone: a loop that wants only some of a list walks a list
+    // that is only some of it (specs/ACTOR_LISTS.md).
     const block = {
       getFieldValue: (name: string) => (name === 'VAR' ? 'vid' : ''),
     };
     const generator = {
       getVariableName: (id: string) => (id === 'vid' ? 'each' : id),
-      valueToCode: (_b: unknown, name: string) =>
-        name === 'WHERE' ? 'each.type === "actors/coin"' : '',
+      valueToCode: () => '',
       statementToCode: (_b: unknown, name: string) =>
         name === 'DO' ? 'each.set(X, Y);\n' : '',
     };
@@ -400,9 +401,7 @@ describe('domain block generators', () => {
       {} as never,
     );
     expect(code).toBe(
-      'for (const each of world.actors) {\n' +
-        'if (each.type === "actors/coin") {\n' +
-        'each.set(X, Y);\n}\n}\n',
+      'for (const each of world.actors) {\neach.set(X, Y);\n}\n',
     );
   });
 
@@ -672,9 +671,10 @@ describe('domain block generators', () => {
     expect(code).toBe('touched.layer === "main"');
   });
 
-  it('world_first_where asks the loop’s question and answers with one actor', () => {
-    // The same source and the same predicate as `world_for_each` above — what
-    // differs is that this hands the actor back instead of running a body.
+  it('world_filter_actors is the loop’s question with the loop taken off', () => {
+    // Same variable, same source, same predicate as `world_for_each` above.
+    // What differs is that this hands the actors back instead of running a
+    // body, which is what let the loop drop its `where` (specs/ACTOR_LISTS.md).
     const block = {
       getFieldValue: (name: string) => (name === 'VAR' ? 'vid' : ''),
     };
@@ -683,58 +683,121 @@ describe('domain block generators', () => {
       valueToCode: (_b: unknown, name: string) =>
         name === 'WHERE' ? 'each.type === "actors/coin"' : '',
     };
-    const [code] = generatorFor('world_first_where')(
+
+    const [code] = generatorFor('world_filter_actors')(
       block as never,
       generator as never,
       {} as never,
     ) as unknown as [string, number];
 
     expect(code).toBe(
-      'WorldLab.firstWhere(world.actors, each => each.type === "actors/coin")',
+      'WorldLab.filtered(world.actors, each => each.type === "actors/coin")',
     );
   });
 
-  it('world_first_where walks a plugged source through WorldLab.all', () => {
-    // `all actors` is already every actor and already iterable; anything else
-    // is an actor value, one or many, and has to be made a list first — the
-    // same rule the loop follows, because it is the same `actorSource`.
+  it('world_first_actor takes the first of whatever it is given', () => {
+    const [code] = generatorFor('world_first_actor')(
+      {getFieldValue: () => '', getInputTargetBlock: () => null} as never,
+      {valueToCode: () => ''} as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    // The default source is `all actors`, which is already iterable — the same
+    // `actorSource` shortcut the loop takes.
+    expect(code).toBe('WorldLab.firstOf(world.actors)');
+  });
+
+  it('world_actors_with_trait asks the engine, not a predicate', () => {
+    // Ten of the eighteen filtered loops in the stock rules test exactly this,
+    // and `ActorCollection.with` has answered it since before there were lists.
+    const [code] = emitValue('world_actors_with_trait', {
+      TRAIT: 'AffectedByGravityTrait',
+    });
+
+    expect(code).toBe('world.actors.with(WorldLab.AffectedByGravityTrait)');
+  });
+
+  it('world_actors_with_trait emits no actors when it names nothing', () => {
+    // An unfinished block is inert rather than `world.actors.with()`, which
+    // throws — the bargain every other dropdown block makes.
+    expect(emitValue('world_actors_with_trait', {TRAIT: ''})[0]).toBe('[]');
+  });
+
+  it('world_extreme_actor picks one by a key rather than by position', () => {
     const block = {
-      getFieldValue: (name: string) => (name === 'VAR' ? 'vid' : ''),
-      getInputTargetBlock: (name: string) =>
-        name === 'SOURCE' ? {type: 'world_actor_kind'} : null,
+      getFieldValue: (name: string) =>
+        name === 'VAR' ? 'vid' : name === 'END' ? 'least' : '',
     };
     const generator = {
-      getVariableName: () => 'each',
+      getVariableName: (id: string) => (id === 'vid' ? 'other' : id),
       valueToCode: (_b: unknown, name: string) =>
-        name === 'SOURCE'
-          ? 'world.actors.ofType("actors/coin")'
-          : 'each.get(P) > 3',
+        name === 'KEY' ? 'distance(other)' : '',
     };
-    const [code] = generatorFor('world_first_where')(
+
+    const [code] = generatorFor('world_extreme_actor')(
       block as never,
       generator as never,
       {} as never,
     ) as unknown as [string, number];
 
     expect(code).toBe(
-      'WorldLab.firstWhere(WorldLab.all(world.actors.ofType("actors/coin")), ' +
-        'each => each.get(P) > 3)',
+      'WorldLab.extreme(world.actors, other => distance(other), false)',
     );
   });
 
-  it('world_first_where defaults its predicate to true, as the loop does', () => {
-    // An emptied WHERE socket means "no test", which answers with the first
-    // actor in the source rather than generating `if ()`.
-    const [code] = generatorFor('world_first_where')(
-      {getFieldValue: () => 'vid'} as never,
-      {
-        getVariableName: () => 'each',
-        valueToCode: () => '',
-      } as never,
+  it('world_extreme_actor turns round for “most”', () => {
+    const block = {
+      getFieldValue: (name: string) =>
+        name === 'VAR' ? 'vid' : name === 'END' ? 'most' : '',
+    };
+    const generator = {
+      getVariableName: () => 'other',
+      valueToCode: () => 'size(other)',
+    };
+
+    const [code] = generatorFor('world_extreme_actor')(
+      block as never,
+      generator as never,
       {} as never,
     ) as unknown as [string, number];
 
-    expect(code).toBe('WorldLab.firstWhere(world.actors, each => true)');
+    expect(code).toContain(', true)');
+  });
+
+  it('world_ordered_actors sorts by a key, least first by default', () => {
+    const block = {
+      getFieldValue: (name: string) =>
+        name === 'VAR' ? 'vid' : name === 'END' ? 'least' : '',
+    };
+    const generator = {
+      getVariableName: () => 'other',
+      valueToCode: () => 'distance(other)',
+    };
+
+    const [code] = generatorFor('world_ordered_actors')(
+      block as never,
+      generator as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe(
+      'WorldLab.ordered(world.actors, other => distance(other), false)',
+    );
+  });
+
+  it('world_take_actors takes the front of a list', () => {
+    const block = {getFieldValue: () => '', getInputTargetBlock: () => null};
+    const generator = {
+      valueToCode: (_b: unknown, name: string) => (name === 'COUNT' ? '3' : ''),
+    };
+
+    const [code] = generatorFor('world_take_actors')(
+      block as never,
+      generator as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe('WorldLab.taken(world.actors, 3)');
   });
 
   it('world_set_sprite sets the sprite on the ACTOR value (no trait election)', () => {

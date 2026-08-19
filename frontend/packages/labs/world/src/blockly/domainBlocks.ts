@@ -3322,70 +3322,46 @@ registerValueShadows('world_is_in_actors', [
   {name: 'LIST', shadow: {type: 'world_all_actors'}},
 ]);
 
+/**
+ * `for each actor ⟨each⟩ in ⟨…⟩` — walk a list, run a body.
+ *
+ * It USED TO TEST as it went (`… where ⟨…⟩`), and the test was welded on
+ * because there was nowhere else to put it. Now there is: filtering is a value
+ * (`world_filter_actors`), so a loop that wants only some of a list walks a
+ * list that is only some of it, and a loop that wants all of it is not carrying
+ * a socket saying `true` (specs/ACTOR_LISTS.md).
+ */
 const worldForEach = defineBlock({
   type: 'world_for_each',
-  message0: 'for each actor %1 in %2 where %3',
+  message0: 'for each actor %1 in %2',
   args0: [
     ActorVariable.field('VAR'),
     {type: 'input_value', name: 'SOURCE', check: 'Actor'},
-    {type: 'input_value', name: 'WHERE', check: 'Boolean'},
   ],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
   // Iterates a source, so warn where `world` is unbound (the default source is
-  // the world's own actors); the SOURCE socket seeds `all actors` and the WHERE
-  // socket a `true` shadow, so a loop dragged out reads as it always did.
+  // the world's own actors); the SOURCE socket seeds `all actors`, so a loop
+  // dragged out walks the world.
   extensions: [worldContextExtension, valueShadowExtension],
   style: 'loop_blocks',
   tooltip:
-    'Run the blocks once for each actor the “where” test accepts. Bind the ' +
-    'loop variable to read the current actor. Only valid where a world is known.',
+    'Run the blocks once for each actor in a list. Bind the loop variable to ' +
+    'read the current actor. Only valid where a world is known.',
   generator: {
     javascript(block, generator) {
       const variable = generator.getVariableName(block.getFieldValue('VAR'));
-      const where = generator.valueToCode(block, 'WHERE', Order.NONE) || 'true';
       const body = generator.statementToCode(block, 'DO');
-      return `for (const ${variable} of ${actorSource(block, generator)}) {\nif (${where}) {\n${body}}\n}\n`;
+      return `for (const ${variable} of ${actorSource(block, generator)}) {\n${body}}\n`;
     },
   },
 });
 registerValueShadows('world_for_each', [
   {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
-  {name: 'WHERE', shadow: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
 ]);
 
-/**
- * The first actor a test accepts — `for each … where` that stops and hands one
- * back.
- *
- * The same three parts in the same order, so the two read as one idea in two
- * moods: a variable to call the actor being considered, a source to look
- * through, a test to apply. What differs is what comes out. The loop is a
- * statement and runs a body; this is a value, and the answer is the actor.
- *
- * It exists because the alternative is a paragraph: declare a variable, loop,
- * test, assign, and remember to stop — five blocks and a bug (the loop that
- * forgets to stop keeps going and answers with the LAST match, not the first).
- * "The coin I am touching" is one thought and should be one block.
- *
- * NOTHING MATCHING answers with an actor value holding NONE — not with an
- * error, and not with some other actor. That is the language's existing answer
- * for "no actors" (specs/ACTOR_LISTS.md): `empty ⟨var⟩` makes such a value, and
- * a statement over one runs no times. So `remove actor ⟨first actor … where …⟩`
- * that matches nothing removes nothing, which is what the block is reaching for.
- * `how many actors in ⟨…⟩` is how a program asks whether there was a match, and
- * reading a property off no match fails the way a deleted actor does.
- *
- * Which is why this is in `manyActors`' MANY_BY_TYPE: the value is zero-or-one,
- * never guaranteed-one, and a statement over it needs the same broadcast
- * wrapper a many-valued one does.
- *
- * The loop variable is bound for the WHERE socket the same way the loop binds
- * it for its body — Blockly variables are workspace-wide, so the two blocks
- * behave alike here too, including sharing a variable if both name the same one.
- */
 /**
  * `count with ⟨i⟩ from ⟨0⟩ to ⟨8⟩ by ⟨1⟩` — the loop that knows which time it is.
  *
@@ -3445,45 +3421,279 @@ registerValueShadows('world_count_with', [
   {name: 'BY', shadow: {type: 'math_number', fields: {NUM: 1}}},
 ]);
 
-const worldFirstWhere = defineBlock({
-  type: 'world_first_where',
-  message0: 'first actor %1 in %2 where %3',
+/**
+ * `the actors ⟨c⟩ in ⟨…⟩ where ⟨…⟩` — a filtered list, as a value.
+ *
+ * The loop's three parts with the loop taken off: a variable to call the actor
+ * being considered, a source to look through, a test to apply. What the loop
+ * did with each match, this hands back.
+ *
+ * It is what let `for each` drop its `where` and `first actor … where` be
+ * deleted (specs/ACTOR_LISTS.md). Both were this block with something welded
+ * onto the end of it, and the welding is why neither could be reused for
+ * `ordered by` or `take`.
+ *
+ * LAZY: the source is read as this is built, the test as the result is walked.
+ * So `first actor in ⟨the actors … where …⟩` stops at the first match, which is
+ * the short-circuit the deleted block promised.
+ */
+const worldFilterActors = defineBlock({
+  type: 'world_filter_actors',
+  message0: 'the actors %1 in %2 where %3',
   args0: [
     ActorVariable.field('VAR'),
     {type: 'input_value', name: 'SOURCE', check: 'Actor'},
     {type: 'input_value', name: 'WHERE', check: 'Boolean'},
   ],
   output: 'Actor',
-  // Same guard and same shadows as the loop: the default source is the world's
-  // own actors, so `world` has to be bound, and a block dragged out reads as
-  // `first actor ⟨other⟩ in ⟨all actors⟩ where ⟨true⟩`.
+  // The default source is the world's own actors, so `world` has to be bound.
   extensions: [worldContextExtension, valueShadowExtension],
-  // Actor values share the sprite style — the colour that groups the actors —
-  // rather than the loop colour of the block it mirrors. What a block hands
-  // over is what its colour says, and this one hands over an actor.
+  // Actor values share the sprite colour — what a block hands over is what its
+  // colour says, and this one hands over actors.
   style: 'sprite_blocks',
   tooltip:
-    'The first actor the “where” test accepts, looking through the actors in ' +
-    'the list. Bind the variable to read the actor being considered. When none ' +
-    'of them match it answers with no actors, so a statement using it does ' +
-    'nothing rather than failing.',
+    'The actors the “where” test accepts. Bind the variable to read the actor ' +
+    'being considered. When none of them match it answers with no actors.',
   generator: {
     javascript(block, generator) {
       const variable = generator.getVariableName(block.getFieldValue('VAR'));
       const where = generator.valueToCode(block, 'WHERE', Order.NONE) || 'true';
-      // `actorSource` hands back exactly what the loop walks — `world.actors`
-      // for the common case, `WorldLab.all(…)` otherwise — and `firstWhere`
-      // takes an iterable so that both work without a copy.
       return [
-        `WorldLab.firstWhere(${actorSource(block, generator)}, ${variable} => ${where})`,
+        `WorldLab.filtered(${actorSource(block, generator)}, ${variable} => ${where})`,
         Order.FUNCTION_CALL,
       ] as [string, number];
     },
   },
 });
-registerValueShadows('world_first_where', [
+registerValueShadows('world_filter_actors', [
   {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
   {name: 'WHERE', shadow: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
+]);
+
+/**
+ * `first actor in ⟨…⟩` — one actor, by position.
+ *
+ * What every value socket already does silently. `ACTOR_LISTS.md` calls that
+ * the one place the design is quieter than it should be — "a learner who asks a
+ * question of many actors gets an answer about one of them and is not told" —
+ * and this is how a program says it on purpose.
+ *
+ * Not an index block: there is no number in it, so there is no off-by-one to
+ * get wrong, which is what kept `item ⟨3⟩ of` out.
+ */
+const worldFirstActor = defineBlock({
+  type: 'world_first_actor',
+  message0: 'first actor in %1',
+  args0: [{type: 'input_value', name: 'SOURCE', check: 'Actor'}],
+  inputsInline: true,
+  output: 'Actor',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'The first actor a value holds. When it holds none it answers with no ' +
+    'actors, so a statement using it does nothing rather than failing.',
+  generator: {
+    javascript(block, generator) {
+      return [
+        `WorldLab.firstOf(${actorSource(block, generator)})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_first_actor', [
+  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+]);
+
+/**
+ * `all actors with trait ⟨T⟩` — the filter that is written more than all the
+ * others together.
+ *
+ * Ten of the eighteen filtered loops in the stock rules test exactly this, and
+ * the engine has answered it since before there were lists
+ * (`ActorCollection.with`). Said with the general filter it costs a nesting and
+ * a second variable field showing the same name; said with this it costs a
+ * dropdown, and the loop that walks it is SHORTER than the `for each … where`
+ * it replaces.
+ *
+ * Every trait, not only an actor's, for the reason `has trait` gives: a
+ * camera's value is Actor-typed on purpose, so a loop over cameras is
+ * indistinguishable from one over actors and narrowing the list would hide the
+ * camera traits from it.
+ */
+const worldActorsWithTrait = defineBlock({
+  type: 'world_actors_with_trait',
+  message0: 'all actors with trait %1',
+  args0: [{type: 'field_dropdown', name: 'TRAIT', options: anyTraitOptions}],
+  output: 'Actor',
+  extensions: [worldContextExtension, anyTraitOptionsExtension],
+  style: 'sprite_blocks',
+  tooltip: 'Every actor in the world that has a given trait.',
+  generator: {
+    javascript(block, generator) {
+      const trait = block.getFieldValue('TRAIT');
+      // "(none)" — no rule in play declares a trait. An unfinished block emits
+      // no actors rather than `world.actors.with()`, which throws.
+      if (!trait) {
+        return ['[]', Order.ATOMIC] as [string, number];
+      }
+      const ref = refFromValue(trait);
+      if (!refResolves(ref)) {
+        return ['[]', Order.ATOMIC] as [string, number];
+      }
+      return [
+        `world.actors.with(${refCode(ref, generator)})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+
+/**
+ * `the actor ⟨c⟩ in ⟨…⟩ with the ⟨least ▾⟩ ⟨…⟩` — the closest, the biggest.
+ *
+ * NOT sugar for `first actor in ⟨… ordered by …⟩`. That spelling sorts n actors
+ * to answer a question about one; this is a single pass with no allocation. And
+ * since "the nearest enemy" and "the biggest asteroid" are most of what a game
+ * asks of an ordering, this is the block that gets used and the sort is the
+ * rarer one.
+ *
+ * The key is an EXPRESSION over the bound variable rather than a dropdown of
+ * built-in orderings, so closest, furthest, biggest, weakest and oldest are one
+ * block with different keys instead of five blocks. `least`/`most` is a field
+ * because reversing an order is not a different question.
+ */
+const worldExtremeActor = defineBlock({
+  type: 'world_extreme_actor',
+  message0: 'the actor %1 in %2 with the %3 %4',
+  args0: [
+    ActorVariable.field('VAR'),
+    {type: 'input_value', name: 'SOURCE', check: 'Actor'},
+    {
+      type: 'field_dropdown',
+      name: 'END',
+      options: [
+        ['least', 'least'],
+        ['most', 'most'],
+      ],
+    },
+    {type: 'input_value', name: 'KEY', check: 'Number'},
+  ],
+  output: 'Actor',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'The one actor whose value is the smallest (or the largest). Bind the ' +
+    'variable to read the actor being measured. When there are none to choose ' +
+    'between it answers with no actors.',
+  generator: {
+    javascript(block, generator) {
+      const variable = generator.getVariableName(block.getFieldValue('VAR'));
+      const key = generator.valueToCode(block, 'KEY', Order.NONE) || '0';
+      const most = block.getFieldValue('END') === 'most';
+      return [
+        `WorldLab.extreme(${actorSource(block, generator)}, ${variable} => ${key}, ${most})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_extreme_actor', [
+  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+  {name: 'KEY', shadow: {type: 'math_number', fields: {NUM: 0}}},
+]);
+
+/**
+ * `the actors ⟨c⟩ in ⟨…⟩ ordered by ⟨…⟩ ⟨least first ▾⟩`.
+ *
+ * STRICT, and it cannot be otherwise: the first item of an ordering is not
+ * knowable without seeing all of it. Which is the second reason `with the
+ * least` is a block rather than sugar for the first of one of these.
+ *
+ * Ties keep the world's order — the source is snapshotted and the sort is
+ * stable — so two actors the key cannot tell apart come out in the order they
+ * were added, which is what everything else here yields.
+ *
+ * Worth having only because `take ⟨n⟩ of` is beside it: an ordering nobody
+ * takes the front of is a list in a different order, and no game asked for one.
+ */
+const worldOrderedActors = defineBlock({
+  type: 'world_ordered_actors',
+  message0: 'the actors %1 in %2 ordered by %3 %4',
+  args0: [
+    ActorVariable.field('VAR'),
+    {type: 'input_value', name: 'SOURCE', check: 'Actor'},
+    {type: 'input_value', name: 'KEY', check: 'Number'},
+    {
+      type: 'field_dropdown',
+      name: 'END',
+      options: [
+        ['least first', 'least'],
+        ['most first', 'most'],
+      ],
+    },
+  ],
+  output: 'Actor',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'The actors in order of what the value says about each. Bind the variable ' +
+    'to read the actor being measured. Actors it cannot tell apart keep the ' +
+    'order they were added in.',
+  generator: {
+    javascript(block, generator) {
+      const variable = generator.getVariableName(block.getFieldValue('VAR'));
+      const key = generator.valueToCode(block, 'KEY', Order.NONE) || '0';
+      const descending = block.getFieldValue('END') === 'most';
+      return [
+        `WorldLab.ordered(${actorSource(block, generator)}, ${variable} => ${key}, ${descending})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_ordered_actors', [
+  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+  {name: 'KEY', shadow: {type: 'math_number', fields: {NUM: 0}}},
+]);
+
+/**
+ * `take ⟨3⟩ of ⟨…⟩` — the front of a list.
+ *
+ * What makes `ordered by` worth having: "the three nearest" is the reason to
+ * order at all. Lazy, so taking three of a filter tests until it has three
+ * rather than testing everything and dropping most of it.
+ *
+ * A count of zero or less is no actors, which is ordinary here — `for each`
+ * over it runs nothing and `how many actors in` is 0.
+ */
+const worldTakeActors = defineBlock({
+  type: 'world_take_actors',
+  message0: 'take %1 of %2',
+  args0: [
+    {type: 'input_value', name: 'COUNT', check: 'Number'},
+    {type: 'input_value', name: 'SOURCE', check: 'Actor'},
+  ],
+  inputsInline: true,
+  output: 'Actor',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'The first few actors of a list. Asking for more than there are ' +
+    'gives all of them.',
+  generator: {
+    javascript(block, generator) {
+      const count = generator.valueToCode(block, 'COUNT', Order.NONE) || '0';
+      return [
+        `WorldLab.taken(${actorSource(block, generator)}, ${count})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_take_actors', [
+  {name: 'COUNT', shadow: {type: 'math_number', fields: {NUM: 3}}},
+  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
 ]);
 
 const worldIsA = defineBlock({
@@ -6080,7 +6290,6 @@ export const DOMAIN_BLOCKS = [
   worldIsInLayer,
   worldIsInActors,
   worldForEach,
-  worldFirstWhere,
   worldIsA,
   worldDefineLayer,
   worldLayerParallax,
@@ -6112,6 +6321,14 @@ export const DOMAIN_BLOCKS = [
   worldTraitStep,
   worldShowAs,
   worldCountWith,
+  // Actor lists as values: filtering, ordering, and taking from one
+  // (specs/ACTOR_LISTS.md).
+  worldFilterActors,
+  worldFirstActor,
+  worldActorsWithTrait,
+  worldExtremeActor,
+  worldOrderedActors,
+  worldTakeActors,
   // Drawing: the root, the pen, and the five commands (specs/DRAWING.md).
   worldDefineDrawing,
   worldPenFill,
@@ -6194,6 +6411,16 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // The 'any of this kind' counterpart, for a world file naming several.
       'world_actor_kind',
       'world_all_actors',
+      // …and the one filter written more often than every other put together
+      // (specs/ACTOR_LISTS.md).
+      'world_actors_with_trait',
+      // Making a list out of a list: filtered, ordered, shortened, and the two
+      // ways of taking one actor out of one.
+      'world_filter_actors',
+      'world_ordered_actors',
+      'world_take_actors',
+      'world_first_actor',
+      'world_extreme_actor',
       // Building a group up, and asking about one.
       'world_push_actor',
       'world_clear_actors',
@@ -6384,9 +6611,10 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
   {
     name: 'Loops',
     blocks: [
-      // The loop, and the same question asked for one answer instead of a body.
+      // The loop. What it walks is a list, and the blocks that make one out of
+      // another — filtered, ordered, shortened — live with the actors
+      // (specs/ACTOR_LISTS.md), because what they hand back is actors.
       'world_for_each',
-      'world_first_where',
       // …and the two that count rather than walk. `repeat` is Blockly's own,
       // for the reason `random integer` is: a learner may already have met it,
       // and its generator ships with the JavaScript one. Spelled out as a
