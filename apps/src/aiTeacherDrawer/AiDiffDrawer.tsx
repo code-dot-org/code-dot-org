@@ -2,7 +2,7 @@ import Drawer from '@mui/material/Drawer';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
-import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
+import {fetchThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
 import experiments from '@cdo/apps/util/experiments';
 
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
