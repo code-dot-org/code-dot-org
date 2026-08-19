@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-31 03:22:27 UTC",
+    "serialized_at": "2026-08-18 18:15:22 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -48,6 +48,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**What does it mean for a computer to learn?**\n\nIn this lesson, students explore machine learning as an approach to AI in which a computer learns from data rather than being told what to do. Students consider how a model is trained on examples to make predictions, contrasting this approach with the logic-based AI they have seen in the previous unit. Students then train a machine learning model of their own to recognize the doodles they draw.",
+        "student_overview": "**What does it mean for a computer to learn?**\n\nIn this lesson, you'll explore machine learning as an approach to AI in which a computer learns from data rather than being told what to do. You'll consider how a model is trained on examples to make predictions and how this differs from the logic-based AI approach you saw in the previous unit. You'll then train a machine learning model of your own to recognize doodles."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -238,6 +240,48 @@
   ],
   "lesson_activities": [
     {
+      "key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "a34da9b1-0bee-456b-a901-16b12fe7810c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "2e75b79c-3534-4b9a-b36f-f6e4608821ab",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2e75b79c-3534-4b9a-b36f-f6e4608821ab",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
       "key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f",
       "position": 1,
       "properties": {
@@ -252,6 +296,588 @@
   ],
   "activity_sections": [
     {
+      "key": "dd494682-01be-4547-ad32-38b9a56c206a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to a task for which machine learning is well-suited, but logic-based AI is not.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Cat or Dog? activity, in which students guess whether a doodle represents a cat or a dog.",
+        "duration": "10",
+        "name": "Cat or Dog?"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd494682-01be-4547-ad32-38b9a56c206a",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "5f805f7a-ec5f-4d88-afee-535d5227f5de",
+      "position": 2,
+      "properties": {
+        "description": "Let’s kick things off today with a quick game: Cat or Dog? Your job is to look at a doodle and determine whether it’s a cat or a dog. Ready?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5f805f7a-ec5f-4d88-afee-535d5227f5de",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "c77c0ac0-0b19-477c-b491-b7ec3ae88609",
+      "position": 3,
+      "properties": {
+        "description": "Is this a cat or a dog?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c77c0ac0-0b19-477c-b491-b7ec3ae88609",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "9369f68a-93e5-46d2-aa06-962e2fb27ec9",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to raise their hands if they think if the doodle represents a dog. Ask students to raise their hands if they think the doodle represents a cat.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal that the doodle represents a dog."
+      },
+      "seeding_key": {
+        "activity_section.key": "9369f68a-93e5-46d2-aa06-962e2fb27ec9",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "5cda34db-d476-4c25-a214-bd929031eaff",
+      "position": 5,
+      "properties": {
+        "description": "Is this a cat or a dog?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5cda34db-d476-4c25-a214-bd929031eaff",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "84df463e-ab1c-4952-ba49-877afc5ad81f",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to raise their hands to vote again.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal that the doodle represents a cat."
+      },
+      "seeding_key": {
+        "activity_section.key": "84df463e-ab1c-4952-ba49-877afc5ad81f",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "b66f59d7-72c4-4112-a6ca-df3d901cac14",
+      "position": 7,
+      "properties": {
+        "description": "Is this a cat or a dog?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b66f59d7-72c4-4112-a6ca-df3d901cac14",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "98cee4fc-4316-456c-98b6-3e22c4b18108",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to raise their hands to vote again.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal that the doodle represents a cat."
+      },
+      "seeding_key": {
+        "activity_section.key": "98cee4fc-4316-456c-98b6-3e22c4b18108",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "9b26f14c-e1e9-4959-9ca9-6cffa46ccea6",
+      "position": 9,
+      "properties": {
+        "description": "Is this a cat or a dog?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9b26f14c-e1e9-4959-9ca9-6cffa46ccea6",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "0de96793-2da2-4837-ad33-a1aae21bba91",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to raise their hands to vote again.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal that the doodle represents a dog."
+      },
+      "seeding_key": {
+        "activity_section.key": "0de96793-2da2-4837-ad33-a1aae21bba91",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "d9bf7f61-bcae-45ad-bf92-387377d755e4",
+      "position": 11,
+      "properties": {
+        "description": "Is this a cat or a dog?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d9bf7f61-bcae-45ad-bf92-387377d755e4",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "0f1aba77-856f-46d6-8538-919d075bb194",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to raise their hands to vote again.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal that the doodle represents a dog."
+      },
+      "seeding_key": {
+        "activity_section.key": "0f1aba77-856f-46d6-8538-919d075bb194",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "4e1997ea-81f1-4a5f-81ac-d3f32816ebfc",
+      "position": 13,
+      "properties": {
+        "description": "Is this a cat or a dog?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4e1997ea-81f1-4a5f-81ac-d3f32816ebfc",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "ab99895b-f617-406f-bc58-bcfe77455036",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to raise their hands to vote again.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While the other prior doodles are readily recognizable as cats or dogs, this doodle is more ambiguous. Optionally try to sow doubt about students’ preferred choice to drum up suspense (e.g., “Are you sure?”, “What about the picture makes you think that?”)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ab99895b-f617-406f-bc58-bcfe77455036",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "86eedafa-4b7f-44f0-87ba-728f3e4d44d1",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal that the doodle represents a cat.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Looking at these doodles, what rules—if any—could we use to distinguish between cats and dogs?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to attempt to identify rules that would decide whether a doodle is a cat or a dog—and guide them to the realization this is a harder task than it first seems. Answers may attempt to create rules that rely on traits (e.g., “The cats have whiskers,” or “The dogs have floppy ears”). If students take this path, aim to identify counterexamples (e.g., “The dog on the bottom looks like it has whiskers too,” or “Not all of the dogs have floppy ears—what about the one in the top right?”). Alternatively, prompt students to think about whether their rule is generalizable beyond the doodles shown here (e.g., “All of the cats here seem to have ears at the top of their head, but what if someone didn’t draw the ears?”). Spend a few minutes debating these rules, ending when it seems the point about the task being difficult has been made."
+      },
+      "seeding_key": {
+        "activity_section.key": "86eedafa-4b7f-44f0-87ba-728f3e4d44d1",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "d6d885c3-9f24-4cfb-bcf4-9f57189df01a",
+      "position": 16,
+      "properties": {
+        "description": "When we learned about the limitations of logic-based AI, we learned that there are some problems for which it’s difficult to describe a set of rules that lead to a correct solution. This is one of those problems. But, today, we’ll take a peek at how to overcome it—and how a computer might be able to learn rules for us: even rules we might not be able to describe ourselves!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d6d885c3-9f24-4cfb-bcf4-9f57189df01a",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "42f6298b-2460-43ba-993d-30753422e473",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "42f6298b-2460-43ba-993d-30753422e473",
+        "lesson_activity.key": "e8d63a02-a271-4da9-b8c2-fc23cb2a198b"
+      }
+    },
+    {
+      "key": "4ca9fc09-9c5f-4b38-9df2-03801fe8d2eb",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students, by example, to the key ideas behind machine learning.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *machine learning*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce an example machine learning model.",
+        "duration": "15",
+        "name": "Introduction to Machine Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ca9fc09-9c5f-4b38-9df2-03801fe8d2eb",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "3902771c-b1d4-4170-a81e-c9acb7e632ad",
+      "position": 2,
+      "properties": {
+        "description": "One of the central goals of machine learning is to create a model. Generally speaking, a model’s goal is to make accurate predictions based on the inputs it is given. ",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Different students will have different prior knowledge about “models” in other domains, such as science. Depending on what your students bring up, or what needs you recognize they have, you may have a discussion about the idea of a “model”. Know that in this lesson, the fact that it’s not clear exactly what’s going on inside the “model” and how it learns its own rules, is a purposeful mystery. We are introducing the machine learning approach here, but to understand the details of how models work, the students will need to learn more later in the unit and in the course."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3902771c-b1d4-4170-a81e-c9acb7e632ad",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "d8921906-fc41-443c-a354-f695bb589880",
+      "position": 3,
+      "properties": {
+        "description": "Let’s think about a model that could solve our problem of identifying cats and dogs. Such a model would take a doodle like this as input…",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d8921906-fc41-443c-a354-f695bb589880",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "dd07967f-619c-4d22-bfe4-a422f36d5424",
+      "position": 4,
+      "properties": {
+        "description": "And, as output, the model would predict that the doodle represents a dog.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dd07967f-619c-4d22-bfe4-a422f36d5424",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "3d9c427c-bf76-40a6-b9d1-da5e7e73d5b6",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Provide another example of a model’s input and output."
+      },
+      "seeding_key": {
+        "activity_section.key": "3d9c427c-bf76-40a6-b9d1-da5e7e73d5b6",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "98d6253a-392d-446e-bdea-129acc7074f7",
+      "position": 6,
+      "properties": {
+        "description": "If the model instead got this doodle as input…",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "98d6253a-392d-446e-bdea-129acc7074f7",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "202ab5f5-82dd-44e2-b4a3-25c046b059f5",
+      "position": 7,
+      "properties": {
+        "description": "It would predict that the doodle represents a cat.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "202ab5f5-82dd-44e2-b4a3-25c046b059f5",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "4ad0dd28-8583-452e-b901-21924f818ae9",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *machine learning model*."
+      },
+      "seeding_key": {
+        "activity_section.key": "4ad0dd28-8583-452e-b901-21924f818ae9",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "a7bcbc54-2c3c-4e91-84cd-41d889b80451",
+      "position": 9,
+      "properties": {
+        "description": "We saw that a machine learning model makes predictions. But what does it mean to say that a machine learning model \"learns from data?\" Let’s take a look.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a7bcbc54-2c3c-4e91-84cd-41d889b80451",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "c94b983f-5fd2-4577-9060-83052b075640",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce an example training process."
+      },
+      "seeding_key": {
+        "activity_section.key": "c94b983f-5fd2-4577-9060-83052b075640",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "048db4ef-f2f4-44ee-9a64-333a2240486f",
+      "position": 11,
+      "properties": {
+        "description": "At first, a machine learning model doesn’t know anything about our problem.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "048db4ef-f2f4-44ee-9a64-333a2240486f",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "a03e66f6-5299-4ae0-b474-953c0cf84c3b",
+      "position": 12,
+      "properties": {
+        "description": "When given an input, the best it can do is make a random guess.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a03e66f6-5299-4ae0-b474-953c0cf84c3b",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "5d4b296c-3469-47fc-af2c-c56169ed8be7",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce example training data."
+      },
+      "seeding_key": {
+        "activity_section.key": "5d4b296c-3469-47fc-af2c-c56169ed8be7",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "856a3968-a42b-4d6e-89b8-f135f09d16c5",
+      "position": 14,
+      "properties": {
+        "description": "Making a machine learning model is different from writing a logic-based AI program. Rather than writing rules yourself, you start with data that could help a model learn the rules. This data will, of course, have something to do with the problem you want your model to solve: for our problem, we could start with lots of doodles of cats and dogs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "856a3968-a42b-4d6e-89b8-f135f09d16c5",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "61359b2e-a855-4838-b02e-eb8cb7adff1a",
+      "position": 15,
+      "properties": {
+        "description": "More specifically, we’ll start with lots of labeled doodles of cats and dogs. Ultimately, our goal is to have many example solutions to our problem that a model could learn from.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "61359b2e-a855-4838-b02e-eb8cb7adff1a",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "13e5e716-1c5a-49c5-9fb6-f26411d72cc2",
+      "position": 16,
+      "properties": {
+        "description": "This data is then used to train our machine learning model. Ideally, by the end of training, a model has learned rules from our data that are flexible enough to work when presented with new data. Notice again that, rather than telling the model specific rules about cats and dogs ourselves, the model seems to learn rules on its own from many examples.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "13e5e716-1c5a-49c5-9fb6-f26411d72cc2",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "15b0e1ab-24e6-49a2-b694-6478eccdc6dc",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *training*."
+      },
+      "seeding_key": {
+        "activity_section.key": "15b0e1ab-24e6-49a2-b694-6478eccdc6dc",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "e8e6226d-63d8-452b-9468-f6f774bd49c0",
+      "position": 18,
+      "properties": {
+        "description": "As we just saw, training is an important step before a model becomes capable of making predictions. Without training, a model will make incorrect predictions, if it can make any predictions at all.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e8e6226d-63d8-452b-9468-f6f774bd49c0",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "f6f019c3-730b-4c9e-8cc3-adfd501c27d5",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *training data*."
+      },
+      "seeding_key": {
+        "activity_section.key": "f6f019c3-730b-4c9e-8cc3-adfd501c27d5",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "ff15a78d-8cee-4877-b267-e5db1500ef54",
+      "position": 20,
+      "properties": {
+        "description": "Remember the many labeled doodles of cats and dogs? That was the training data in our example—the data that gave the model many example solutions to learn from.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ff15a78d-8cee-4877-b267-e5db1500ef54",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "44de93f3-b97e-4b48-9822-15de89febab8",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Summarize the machine learning process."
+      },
+      "seeding_key": {
+        "activity_section.key": "44de93f3-b97e-4b48-9822-15de89febab8",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "52ee918e-0d5e-48e7-8288-e6566634f2d8",
+      "position": 22,
+      "properties": {
+        "description": "To summarize, then, the machine learning process typically looks like this. First, start by gathering data a model could use to learn something about the problem you’re trying to solve. Then, use the data to train a model. Finally, after training is complete, use the model to make predictions about new data. Now, let’s see this process in action.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "52ee918e-0d5e-48e7-8288-e6566634f2d8",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "8c80ef30-9af6-404f-9259-35967b2e4f51",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Visit the Doodle Identifier and walk through the process of:\n- Creating training data\n- Training a model\n- Using the model to make predictions about new data",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "An efficient example with a high success rate is differentiating between circles and squares. Call one category “Circle,” and the other category “Square.” Then, quickly draw examples of circles and squares, train a model, and show students that the model can distinguish circles from squares."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8c80ef30-9af6-404f-9259-35967b2e4f51",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "ec16e1ba-ab4f-42a8-8017-d780ebd7ac0c",
+      "position": 24,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students explore the machine learning process by training the Doodle Identifier.",
+        "duration": "15",
+        "name": "Doodle Identifier"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec16e1ba-ab4f-42a8-8017-d780ebd7ac0c",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "d0159a15-936e-4eb2-aafc-6bebee365ca0",
+      "position": 25,
+      "properties": {
+        "description": "It’s time for you to explore the machine learning process by training a model to recognize the doodles you draw.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d0159a15-936e-4eb2-aafc-6bebee365ca0",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "bb5940f8-8ea5-436a-bd58-7b719ec1ed72",
+      "position": 26,
+      "properties": {
+        "progression_name": "Doodle Identifier"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb5940f8-8ea5-436a-bd58-7b719ec1ed72",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "f14c0dee-c34a-44c3-b6e6-fe3bfdafeb99",
+      "position": 27,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Levels 1–2.\n- **Level 1:** Students train the Doodle Identifier to distinguish between doodles of their own design.\n- **Level 2:** Students complete a Check Your Understanding that asks them to evaluate their Doodle Identifier, and to distinguish between machine learning and logic-based AI\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students train the Doodle Identifier on their own drawings, keep an eye out for these moments where students may get stuck:\n- **The Doodle Identifier seems stuck or slow during training.** It can take some time, particularly on less computationally powerful machines, to train the Doodle Identifier. Typically, you can expect the Doodle Identifier to take 2–40 seconds to train. Assure students that the training process will indeed finish.\n- **The Doodle Identifier doesn’t recognize students’ drawings.** The Doodle Identifier isn’t guaranteed to recognize students’ drawings 100% of the time. In fact, the Doodle Identifier may inaccurately identify students’ drawings for any of the following reasons:\n  - *Students’ training data isn’t like the example they’ve asked the Doodle Identifier to predict.* Use this moment to help students see that a model is only as powerful as its training data—if a model hasn’t seen similar examples, it may make mistakes.\n  - *Students’ drawings are too complex or detailed.* The Doodle Identifier is a small neural network that may not be suited to recognizing complex or detailed drawings. Use this moment to help students understand that, even with good data, models can make mistakes.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 2 as an assessment opportunity to check whether students understand the difference between machine learning and logic-based AI. Strong answers will point out that these are two fundamentally different paradigms for building AI systems: one involves writing rules in advance, while the other involves selecting data from which a machine could infer rules."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f14c0dee-c34a-44c3-b6e6-fe3bfdafeb99",
+        "lesson_activity.key": "a34da9b1-0bee-456b-a901-16b12fe7810c"
+      }
+    },
+    {
+      "key": "32238783-7e64-49f9-b8ab-590b8c1e4e3b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do you think the Doodle Identifier learned to identify doodles on its own?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to share their intuitions behind how the Doodle Identifier works. Aim to draw out deeper thinking from students—if they say they think the Doodle Identifier \"learned from examples,\" ask them if they might make a guess about how the Doodle Identifier learns from examples. It’s not expected students will have a fully developed understanding. Rather, the point of the discussion is to reflect on what students’ don’t yet know—and to tee up what they’ll learn throughout this unit."
+      },
+      "seeding_key": {
+        "activity_section.key": "32238783-7e64-49f9-b8ab-590b8c1e4e3b",
+        "lesson_activity.key": "2e75b79c-3534-4b9a-b36f-f6e4608821ab"
+      }
+    },
+    {
+      "key": "d67edff6-6e87-4333-9771-585f18ac247e",
+      "position": 2,
+      "properties": {
+        "description": "Though we don’t yet know exactly how a model learns, we’ll start to explore this question in this unit—and throughout the rest of the course.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d67edff6-6e87-4333-9771-585f18ac247e",
+        "lesson_activity.key": "2e75b79c-3534-4b9a-b36f-f6e4608821ab"
+      }
+    },
+    {
+      "key": "0dca124c-e72c-4055-9da9-81c333c9c426",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "0dca124c-e72c-4055-9da9-81c333c9c426",
+        "lesson_activity.key": "2e75b79c-3534-4b9a-b36f-f6e4608821ab"
+      }
+    },
+    {
+      "key": "2160a8bb-6930-4c59-9a5c-064159f75157",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "2160a8bb-6930-4c59-9a5c-064159f75157",
+        "lesson_activity.key": "2e75b79c-3534-4b9a-b36f-f6e4608821ab"
+      }
+    },
+    {
       "key": "e6bd4fa0-d505-4f77-9ff5-5ef14cf7fe0d",
       "position": 1,
       "properties": {
@@ -265,6 +891,50 @@
   "script_levels": [
     {
       "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Doodle Identifier"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson1-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "bb5940f8-8ea5-436a-bd58-7b719ec1ed72"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson1-level1-2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Doodle Identifier"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson1-level2-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "bb5940f8-8ea5-436a-bd58-7b719ec1ed72"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson1-level2-2026"
+      ]
+    },
+    {
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -288,6 +958,30 @@
   "levels_script_levels": [
     {
       "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson1-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson1-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "bb5940f8-8ea5-436a-bd58-7b719ec1ed72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson1-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson1-level2-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "bb5940f8-8ea5-436a-bd58-7b719ec1ed72"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Classification",
         "script_level.level_keys": [
           "Classification"
@@ -300,10 +994,28 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "What is Machine Learning?",
+      "url": "https://docs.google.com/presentation/d/1a23EyuLsCa-1zAU7VXjiH13miEK2EjAAocaGb_h99FU/edit?usp=sharing",
+      "key": "what_is_machine_learning_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "what_is_machine_learning_"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "what_is_machine_learning_"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -312,16 +1024,113 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "data",
+      "word": "data",
+      "definition": "information used to understand the world",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "machine_learning",
+      "word": "machine learning",
+      "definition": "a field of AI focused on how computers can learn how to do something instead of being told how to do it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "key": "machine_learning_model",
+      "word": "machine learning model",
+      "definition": "a system that learns from data to make predictions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning_model"
+      }
+    },
+    {
+      "key": "training",
+      "word": "training",
+      "definition": "the process by which a machine learning model learns from data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "key": "training_data",
+      "word": "training data",
+      "definition": "the data used to train a machine learning model",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "training_data"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "machine_learning_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "training_data"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "58dae5cd-be4b-41de-bc4e-563e645dd08e",
+      "properties": {
+        "description": "Explain how machine learning differs from logic-based AI"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "58dae5cd-be4b-41de-bc4e-563e645dd08e"
+      }
+    },
+    {
+      "key": "963df9a5-8fdd-4ec4-a8f5-48f44b015f9b",
+      "properties": {
+        "description": "Describe what machine learning is"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "963df9a5-8fdd-4ec4-a8f5-48f44b015f9b"
+      }
+    }
   ],
   "lessons_standards": [
 
@@ -333,12 +1142,79 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "aif-y2-machine-learning-fundamentals-lesson1-level2-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "46058885-4102-4acc-a81f-ec9a8dea2936",
+      "position": 1,
+      "learning_goal": "Applying Predictive Logic",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "46058885-4102-4acc-a81f-ec9a8dea2936",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Student doesn’t substantially engage with the question of how successful their Doodle Identifier was.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "46058885-4102-4acc-a81f-ec9a8dea2936",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student shares an opinion about how successful their Doodle Identifier was, but provides only general information about their thinking.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "46058885-4102-4acc-a81f-ec9a8dea2936",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student evaluates their Doodle Identifier by comparing its predictions to reality, providing specific examples of success or failure.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "46058885-4102-4acc-a81f-ec9a8dea2936",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student thoroughly evaluates their Doodle Identifier by comparing its predictions to reality, using concrete examples that illuminate their understanding of why the Doodle Identifier performed the way they describe.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "46058885-4102-4acc-a81f-ec9a8dea2936",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    }
   ]
 }

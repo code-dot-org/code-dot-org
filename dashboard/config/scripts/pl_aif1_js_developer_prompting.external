@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 You already know a strong prompt needs a Task, Context, Tone/Format, and Details. 
 
-Professional developers add three more habits on top of that they: 
+Professional developers add three more habits on top of that. They: 
 - state their goals clearly
 - define the constraints up front
 - think through edge cases
