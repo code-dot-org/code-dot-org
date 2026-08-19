@@ -1,0 +1,58 @@
+# The stock sounds, as `name<TAB>url` (specs/SOUND.md).
+#
+# NAMED HERE, unlike backgrounds.txt, which carries URLs alone. A backdrop's
+# upstream file name is already close to what a learner should read — `cave`,
+# `city` — so it is derived. A sound's is not: the library's are
+# `retro_game_coin_pickup_1` and `puzzle_game_organic_metal_tile_hit_1`, and
+# camel-casing those gives a dropdown nobody can read. So the shelf says what
+# each one is called and the URL says where it came from.
+#
+# A CURATED SUBSET. Upstream is 1598 sounds behind a 2.2MB manifest, served from
+# the studio API; this lab vendors what it ships (`yarn setup:world` writes them
+# into public/sounds/) because the standalone demo has no code.org origin to
+# ask. Adding one is a line here and a re-run of
+# `node scripts/write-stock-sounds.mjs`.
+#
+# Names are camelCase identifiers: an id becomes a file name (`jump.mp3`), a
+# block's stored value, and generated source, and the writer refuses anything
+# that is not.
+
+jump	https://studio.code.org/api/v1/sound-library/category_jump/classic_jump_1.mp3
+bigJump	https://studio.code.org/api/v1/sound-library/category_jump/arcade_game_jump_11.mp3
+coin	https://studio.code.org/api/v1/sound-library/category_collect/retro_game_coin_pickup_1.mp3
+powerUp	https://studio.code.org/api/v1/sound-library/category_collect/retro_game_classic_power_up_4.mp3
+health	https://studio.code.org/api/v1/sound-library/category_collect/health_pack_1.mp3
+pickup	https://studio.code.org/api/v1/sound-library/category_projectile/retro_game_melodic_pickup_2.mp3
+point	https://studio.code.org/api/v1/sound-library/category_points/retro_game_count_points_1.mp3
+jewel	https://studio.code.org/api/v1/sound-library/category_points/vibrant_game_collect_jewel_1_down.mp3
+hit	https://studio.code.org/api/v1/sound-library/category_hits/retro_game_simple_impact_1.mp3
+blockHit	https://studio.code.org/api/v1/sound-library/category_hits/retro_game_hit_block_3.mp3
+splat	https://studio.code.org/api/v1/sound-library/category_hits/8bit_splat.mp3
+explosion	https://studio.code.org/api/v1/sound-library/category_explosion/8bit_explosion.mp3
+pop	https://studio.code.org/api/v1/sound-library/category_pop/bubble_pop_cluster_1.mp3
+bubble	https://studio.code.org/api/v1/sound-library/category_pop/cute_water_bubble.mp3
+poof	https://studio.code.org/api/v1/sound-library/category_poof/puzzle_game_poof_01.mp3
+bounce	https://studio.code.org/api/v1/sound-library/category_digital/bounce_1.mp3
+boing	https://studio.code.org/api/v1/sound-library/category_digital/boing_1.mp3
+ballBounce	https://studio.code.org/api/v1/sound-library/category_projectile/game_ball_bounce.mp3
+swish	https://studio.code.org/api/v1/sound-library/category_swish/fast_swish.mp3
+sword	https://studio.code.org/api/v1/sound-library/category_swish/bamboo_sword_swish.mp3
+arrow	https://studio.code.org/api/v1/sound-library/category_swish/arrow_fly_pass_by_1.mp3
+whoosh	https://studio.code.org/api/v1/sound-library/category_whoosh/airy_whoosh.mp3
+footstep	https://studio.code.org/api/v1/sound-library/category_movement/footstep_on_gravel_3.mp3
+teleport	https://studio.code.org/api/v1/sound-library/category_movement/airy_teleport_or_craft.mp3
+blastOff	https://studio.code.org/api/v1/sound-library/category_movement/cartoon_blast_off.mp3
+click	https://studio.code.org/api/v1/sound-library/category_retro/retro_game_click.mp3
+select	https://studio.code.org/api/v1/sound-library/category_retro/retro_game_echo_select_1.mp3
+alert	https://studio.code.org/api/v1/sound-library/category_alerts/retro_game_alert_2.mp3
+error	https://studio.code.org/api/v1/sound-library/category_alerts/playful_game_error_sound_4.mp3
+fail	https://studio.code.org/api/v1/sound-library/category_digital/fail.mp3
+death	https://studio.code.org/api/v1/sound-library/category_retro/retro_game_classic_player_death_7.mp3
+gameOver	https://studio.code.org/api/v1/sound-library/category_alerts/comedy_game_over_1.mp3
+win	https://studio.code.org/api/v1/sound-library/category_achievements/melodic_win_1.mp3
+achievement	https://studio.code.org/api/v1/sound-library/category_achievements/bubbly_game_achievement_sound.mp3
+bell	https://studio.code.org/api/v1/sound-library/category_bell/short_bell_alert.mp3
+chaseLoop	https://studio.code.org/api/v1/sound-library/category_loops/misguided_rabbit_chase_minimal_loop.mp3
+pulseLoop	https://studio.code.org/api/v1/sound-library/category_loops/vibrant_game_coming_closer_pulse_loop_1.mp3
+discoveryLoop	https://studio.code.org/api/v1/sound-library/category_loops/pulsating_discovery_loop1.mp3
+heroLoop	https://studio.code.org/api/v1/sound-library/category_loops/show_me_a_hero_middle_loop.mp3

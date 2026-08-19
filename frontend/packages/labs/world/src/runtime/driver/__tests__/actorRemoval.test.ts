@@ -154,6 +154,11 @@ const world = (actors: string[]) => {
           skew: 0,
           effects: [],
         })),
+      // Silent, but ASKED: the binding drains the queue and reads the track
+      // after every tick (specs/SOUND.md), so a fake without these throws
+      // inside the frame guard and nothing after the tick runs.
+      drainSounds: () => [],
+      music: () => undefined,
       snapshot: () => ({world: {}}),
     } as never,
     remove: (id: string) => live.splice(live.indexOf(id), 1),

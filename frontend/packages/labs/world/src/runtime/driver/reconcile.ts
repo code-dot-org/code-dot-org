@@ -65,6 +65,8 @@ interface ReconcilableWorld {
     foregrounds: SlotValues[];
     /** The one colour behind everything (engine color.ts). */
     clearColor: [number, number, number, number];
+    /** The track playing, or undefined for silence (specs/SOUND.md). */
+    music?: string;
     world: Record<string, unknown>;
     actors: Record<string, Record<string, unknown>>;
   };
@@ -81,6 +83,7 @@ interface ReconcilableWorld {
   setBackgroundRepeat(repeat: boolean, layer?: string): unknown;
   setForegroundRepeat(repeat: boolean, layer?: string): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
+  setMusic(track: string | undefined): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
   setEffectValues(
     owner: string,
@@ -153,6 +156,14 @@ export function reconcile(
     stable(previous.actorTraits) === stable(snapshot.actorTraits) &&
     stable(previous.effectIds) === stable(snapshot.effectIds);
   const worldChanged = stable(previous.world) !== stable(snapshot.world);
+  // The track is a value and patches like the sky: swapping the music while the
+  // game runs should swap the music, not restart the game around a learner who
+  // was listening to it. Its own flag rather than folded into `backdropChanged`,
+  // which is about what is DRAWN and would stop being a name for what it holds.
+  //
+  // The one-shots are not here and cannot be: a sound already happened, so it
+  // is not in the snapshot at all (specs/SOUND.md).
+  const musicChanged = previous.music !== snapshot.music;
   // What the backdrops draw is a value, like a world property, and patches the
   // same way. Without this a rebuild whose only change was the background would
   // compare equal to the previous one and reconcile to a running world that
@@ -223,6 +234,7 @@ export function reconcile(
       retunedEffects.length ||
       actorEdits.length ||
       worldChanged ||
+      musicChanged ||
       backdropChanged)
   ) {
     // Level 1: patch the running world rather than replacing it.
@@ -252,6 +264,9 @@ export function reconcile(
     }
     // One sky, the world's — not a layer's (World.setBackgroundColor).
     running.setBackgroundColor(snapshot.clearColor);
+    // …and one track. Written unconditionally like the rest of the values here:
+    // setting the track it already has is what "nothing changed" sounds like.
+    running.setMusic(snapshot.music);
     // Retune each slot whose knobs moved. By slot, so the same effect on two
     // actors keeps two sets of settings.
     for (const slot of retunedEffects) {

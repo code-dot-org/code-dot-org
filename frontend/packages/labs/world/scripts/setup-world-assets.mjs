@@ -30,12 +30,14 @@ import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 import {backgroundFileName, backgroundUrls} from './stockBackgroundNames.mjs';
+import {soundEntries, soundFileName} from './stockSoundNames.mjs';
 
 const require = createRequire(import.meta.url);
 const here = dirname(fileURLToPath(import.meta.url));
 const pkgRoot = join(here, '..');
 const vendorDir = join(pkgRoot, 'public', 'vendor');
 const backgroundsDir = join(pkgRoot, 'public', 'backgrounds');
+const soundsDir = join(pkgRoot, 'public', 'sounds');
 
 /** Resolve a file inside an installed package (which may not export it). */
 function pkgFile(pkg, ...segments) {
@@ -196,6 +198,61 @@ if (process.env.WORLD_DEMO_ICONS !== 'free') {
   console.log(
     `world assets: self-hosted FontAwesome Free ` +
       `(${sheets.length} sheets, ${fonts.length} webfonts)`,
+  );
+}
+
+// The stock sounds, fetched the way the backdrops are and for the same reason:
+// upstream is 1598 files behind the studio API, and a demo with no code.org
+// origin still has to be able to play a coin (specs/SOUND.md). Skipped when
+// already present, and a download that fails is reported rather than fatal.
+const soundListing = join(pkgRoot, 'sounds.txt');
+if (!existsSync(soundListing)) {
+  console.warn('world assets: no sounds.txt — skipping stock sounds');
+} else {
+  mkdirSync(soundsDir, {recursive: true});
+  const entries = soundEntries(readFileSync(soundListing, 'utf8'));
+  const wanted = entries.filter(({id}) => {
+    const file = join(soundsDir, soundFileName(id));
+    return !existsSync(file) || statSync(file).size === 0;
+  });
+  const LANES = 6;
+  const failures = [];
+  const queue = [...wanted];
+  const fetchOne = async ({id, url}) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const bytes = Buffer.from(await response.arrayBuffer());
+    if (bytes.length === 0) {
+      throw new Error('empty response');
+    }
+    // Written whole, so an interrupted run leaves no half an mp3 for the next
+    // run to mistake for a finished download.
+    writeFileSync(join(soundsDir, soundFileName(id)), bytes);
+  };
+  await Promise.all(
+    Array.from({length: Math.min(LANES, queue.length)}, async () => {
+      for (let entry = queue.shift(); entry; entry = queue.shift()) {
+        try {
+          await fetchOne(entry);
+        } catch (error) {
+          failures.push(`${entry.id}: ${error.message}`);
+        }
+      }
+    }),
+  );
+  if (failures.length) {
+    console.warn(
+      `world assets: ${failures.length} stock sound(s) could not be ` +
+        `fetched — ${failures.join('; ')}`,
+    );
+  }
+  const got = entries.length - failures.length;
+  console.log(
+    wanted.length
+      ? `world assets: ${got} stock sounds in public/sounds/`
+      : `world assets: ${entries.length} stock sounds already present`,
   );
 }
 

@@ -346,6 +346,50 @@ export class WorldBuilder {
     return this.defer('setBackground', sprite, layer);
   }
 
+  /**
+   * Play a sound once. See {@link World.playSound}.
+   *
+   * NOT deferred, alone among these, and that is the whole of "building a world
+   * drops its sounds" (specs/SOUND.md). The log is replayed into every world
+   * this description makes — a throwaway for a thumbnail, the `incoming` one a
+   * rebuild is compared against — so a logged one-shot would sound again every
+   * time the picker refreshed. It goes straight to the world instead, where the
+   * driver's next drain finds it or nothing does.
+   *
+   * ONE EDGE, and it is written down rather than guarded. `requireNoActors`
+   * DISCARDS a built world when a declaration arrives late and no actor has
+   * been placed yet, so a `play sound` followed by a `use animations` in the
+   * same setup body would queue into a world that is then thrown away. Not
+   * reachable from blocks: the generator emits every declaration in the world
+   * block's prologue and hoists the layers, so nothing in a body can precede
+   * one. If that ever stops being true, the fix is a pending list on the
+   * builder that `getWorld` flushes — deliberately not built now, because it is
+   * a second queue for a case nobody can reach.
+   */
+  playSound(sound: string): this {
+    this.getWorld().playSound(sound);
+    return this;
+  }
+
+  /**
+   * Play a track. See {@link World.setMusic}.
+   *
+   * Deferred and COLLAPSED, like `set`: music has one value and the last write
+   * wins, so replaying a hundred of them and replaying the last are the same
+   * world.
+   */
+  setMusic(track: string | undefined): this {
+    const existing = this.log.find(call => call.name === 'setMusic');
+    if (existing) {
+      existing.args = [track] as OpArgs<'setMusic'>;
+      if (this.built) {
+        apply(this.built, existing);
+      }
+      return this;
+    }
+    return this.defer('setMusic', track);
+  }
+
   /** Draw an image in front of a layer's actors. See {@link World.setForeground}. */
   setForeground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
     return this.defer('setForeground', sprite, layer);

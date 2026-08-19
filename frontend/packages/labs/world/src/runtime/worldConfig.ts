@@ -26,6 +26,7 @@ export const SANDBOX_SURFACE_DIR = 'sandbox/';
 let sandboxUrl: string | null = null;
 let assetBaseUrl = '/vendor/';
 let backgroundBaseUrl = '/backgrounds/';
+let soundBaseUrl = '/sounds/';
 
 /** Point the lab at a sandbox origin base (e.g. `http://localhost:5202/`). */
 export function setSandboxUrl(url: string | null): void {
@@ -82,4 +83,23 @@ export function getBackgroundBaseUrl(): string {
 
 export function setBackgroundBaseUrl(url: string): void {
   backgroundBaseUrl = url.endsWith('/') ? url : `${url}/`;
+}
+
+/**
+ * Base the stock sounds are served from.
+ *
+ * The LAB's origin, like the backdrops' and for the same reason: a sound is
+ * fetched when a learner imports one, in the library dialog, and ends with the
+ * bytes inlined into the project. The sandbox only ever sees the copy the
+ * project holds, so this is not forwarded to the iframes.
+ *
+ * The demo serves what `yarn setup:world` fetched into `public/sounds/`
+ * (specs/SOUND.md); a studio host serves its own copies and says where.
+ */
+export function getSoundBaseUrl(): string {
+  return soundBaseUrl;
+}
+
+export function setSoundBaseUrl(url: string): void {
+  soundBaseUrl = url.endsWith('/') ? url : `${url}/`;
 }

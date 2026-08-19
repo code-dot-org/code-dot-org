@@ -48,6 +48,7 @@ import {
   getSandboxUrl,
   setAssetBaseUrl,
   setBackgroundBaseUrl,
+  setSoundBaseUrl,
   setSandboxUrl,
 } from './runtime/worldConfig';
 
@@ -102,6 +103,7 @@ const here = withSlash(
 // still needed: a build at `/world/` has no claim on the origin root.
 setAssetBaseUrl(`${import.meta.env.BASE_URL}vendor/`);
 setBackgroundBaseUrl(`${import.meta.env.BASE_URL}backgrounds/`);
+setSoundBaseUrl(`${import.meta.env.BASE_URL}sounds/`);
 
 // Where the sandbox is served from, when the URL does not say — an explicit
 // `?world-sandbox=` always wins (getSandboxUrl reads it). This is the BASE the
