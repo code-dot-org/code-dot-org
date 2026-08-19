@@ -8,6 +8,7 @@ import {
   patchInputCode,
   pythonlabInputModule,
   SETUP_CODE,
+  theaterBridgeModule,
 } from './pythonHelpers/patches';
 import {
   getCleanupCode,
@@ -44,6 +45,15 @@ async function loadPyodideAndPackages() {
   Object.freeze(pythonlabInputModule.getInput);
 
   pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
+
+  Object.freeze(theaterBridgeModule);
+  Object.defineProperty(theaterBridgeModule.publish, 'constructor', {
+    writable: false,
+    configurable: false,
+    enumerable: false,
+  });
+  Object.freeze(theaterBridgeModule.publish);
+  pyodide.registerJsModule('_theater_bridge', theaterBridgeModule);
 
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
   // matplotlib, which pythonlab_setup depends on, and numpy,
@@ -207,6 +217,7 @@ async function loadPackages() {
       `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.3.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/neighborhood-0.5.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/theater-0.1.0-py3-none-any.whl`,
     ],
     {
       errorCallback: (message: string) => {
