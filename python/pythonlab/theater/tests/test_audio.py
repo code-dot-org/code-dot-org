@@ -1,4 +1,5 @@
 import io
+import struct
 import wave
 
 import numpy as np
@@ -12,13 +13,13 @@ from theater.support.audio import (
 from theater.support.constants import SAMPLE_RATE
 
 
-def _make_wav_bytes(samples, channels):
+def _make_wav_bytes(samples, channels, frame_rate=SAMPLE_RATE):
   int_samples = (np.asarray(samples) * 32768).astype("<i2")
   buffer = io.BytesIO()
   with wave.open(buffer, "wb") as writer:
     writer.setnchannels(channels)
     writer.setsampwidth(2)
-    writer.setframerate(SAMPLE_RATE)
+    writer.setframerate(frame_rate)
     writer.writeframes(int_samples.tobytes())
   return buffer.getvalue()
 
@@ -32,6 +33,33 @@ def test_read_stereo_wav_averages_channels():
   # Interleaved L/R: (0.2,0.6) and (0.4,-0.4) average to 0.4 and 0.0.
   samples = read_samples_from_wav_bytes(_make_wav_bytes([0.2, 0.6, 0.4, -0.4], 2))
   assert np.allclose(samples, [0.4, 0.0], atol=1e-4)
+
+
+@pytest.mark.parametrize("frame_rate", [8000, 22050, 48000, 88200])
+def test_read_resamples_to_the_output_rate(frame_rate):
+  # One second in, one second out: without this the samples were spliced onto
+  # the timeline verbatim, so 8 kHz input played 5.5x too fast.
+  samples = read_samples_from_wav_bytes(
+    _make_wav_bytes(np.full(frame_rate, 0.5), 1, frame_rate)
+  )
+  assert len(samples) == SAMPLE_RATE
+  # A constant interpolates to itself, so resampling must not alter the level.
+  assert np.allclose(samples, 0.5, atol=1e-4)
+
+
+def test_read_leaves_output_rate_input_alone():
+  samples = read_samples_from_wav_bytes(_make_wav_bytes([0.25, -0.25], 1))
+  assert np.allclose(samples, [0.25, -0.25], atol=1e-4)
+
+
+def test_read_rejects_a_missing_sample_rate():
+  # The wave module refuses to write a zero rate, so patch the field directly.
+  # Sample rate sits at bytes 24:28 of the canonical header it emits.
+  wav = bytearray(_make_wav_bytes([0.5], 1))
+  assert wav[24:28] == struct.pack("<I", SAMPLE_RATE)
+  wav[24:28] = struct.pack("<I", 0)
+  with pytest.raises(ValueError):
+    read_samples_from_wav_bytes(bytes(wav))
 
 
 def test_truncate_shortens_but_never_extends():
