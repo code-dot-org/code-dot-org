@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-17 19:22:50 UTC",
+    "serialized_at": "2026-08-18 13:24:03 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -7343,6 +7343,20 @@
       }
     },
     {
+      "name": "Conditionals",
+      "url": "https://www.youtube.com/watch?v=ZS6Sld95z0U",
+      "key": "conditionals",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals"
+      }
+    },
+    {
       "name": "Conversational AI Project",
       "url": "https://docs.google.com/presentation/d/1tQzxVcsdIa-AmlkShz698DgSoDn9IGbrwBU5H8g_hIU/edit?usp=sharing",
       "key": "conversational_ai_project",
@@ -7424,6 +7438,20 @@
       },
       "seeding_key": {
         "resource.key": "finding_bugs"
+      }
+    },
+    {
+      "name": "For Loops",
+      "url": "https://www.youtube.com/watch?v=oP-1alsDPDI",
+      "key": "for_loops",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "for_loops"
       }
     },
     {
@@ -7638,6 +7666,20 @@
       }
     },
     {
+      "name": "While Loops",
+      "url": "https://www.youtube.com/watch?v=Y82nBfdbemM",
+      "key": "while_loops",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "while_loops"
+      }
+    },
+    {
       "name": "Writing Functions",
       "url": "https://www.youtube.com/watch?v=mY0cNQcK7K4",
       "key": "writing_functions",
@@ -7812,6 +7854,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "optimization"
       }
     },
@@ -7830,6 +7878,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "going_viral"
       }
     },
@@ -7843,6 +7897,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "simulation_part_2_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "while_loops"
       }
     },
     {

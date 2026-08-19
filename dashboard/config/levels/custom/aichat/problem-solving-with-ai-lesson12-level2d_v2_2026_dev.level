@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-07-29T13:22:30.000Z",
   "level_num": "custom",
@@ -43,16 +44,18 @@
     "display_name": "AI In Schools",
     "thumbnail_url": "https://images.code.org/f1ad19993cb7089a1998cb3a246e31e0-education.png",
     "starter_assets": {
-      "AI, Energy, and the Environment.pdf": "1960c1fa-baf3-4ab7-ad86-29c3650acf96.pdf",
       "AI in the Classroom_ Personalized Learning or Privacy Risk_.pdf": "367a0edf-68e7-4aee-974c-6712e05ab257.pdf",
       "AI INVADES OUR SCHOOLS!.pdf": "a99c7c9d-9a78-4880-ae05-ca5ec87ad980.pdf",
       "AI Might Be Smart, But It Shouldn’t Be the Principal.pdf": "5d56e167-8c32-4eef-b6c5-e5d71e91c715.pdf"
     },
-    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###AI in Schools\r\nYou're going to be working with news articles about Artificial Intelligence (AI). The text of each article is already attached within the assets section of the chatbot, so you can ask the AI questions directly about it.\r\n\r\n###Instructions\r\n* Click  **Add** > **From Library**. Select the article(s) that you wish the chatbot to engage with.\r\n* Use the  chatbot to help you summarize the selected articles, find key points, and gain insights\r\n* Record outputs in your activity guide, focusing specifically on the following:\r\n\t* Who in the community benefits most from this AI?\r\n    * Who is most harmed by it?\r\n    * Are there any negative effects or unintended consequences, such as environmental impact?\r\n\r\nExperiment with different combinations of articles for different insights!\r\n",
+    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###AI in Schools\r\nClick **Add** > **From Library**. Select and attach the article(s) that you wish the chatbot to engage with.\r\n\r\n###Instructions\r\nConsider using the AI Chat to do one or more of the following:\r\n* Get details from the articles. _Who does this AI help? Who does it hurt?_\r\n* Fact-Check the articles. _What is real and what is exaggerated?_\r\n* Summarize from the viewpoint of a specific community member.\r\n* Ask whose perspective is missing.\r\n",
     "name_suffix": "_2026_dev",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "bubble_choice_description": "Use AI Chat to explore articles about AI and Schools"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:30.039+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level2d_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level2d_v2_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:30.039+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level2d_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level2d_v2_2026\"},{\"changed_at\":\"2026-08-18 18:54:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 19:01:01 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
