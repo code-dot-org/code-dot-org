@@ -3,8 +3,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {setThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
-import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import {chatThreadMessagesValidator} from '@cdo/apps/aiDifferentiation/types';
 import AiDiffWorkspace from '@cdo/apps/aiTeacherDrawer/AiDiffWorkspace';
 import {
@@ -15,6 +13,8 @@ import {
   MINI_LESSON_PROMPT,
   SUGGESTED_PROMPTS_FOR_SELECTION,
 } from '@cdo/apps/aiTeacherDrawer/predefinedPrompts';
+import {setThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import {chatThreadValidator} from '@cdo/apps/aiTeacherDrawer/types';
 import {
   getStore,
