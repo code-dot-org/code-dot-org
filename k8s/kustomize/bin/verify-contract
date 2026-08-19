@@ -1,0 +1,180 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'fileutils'
+require 'open3'
+require 'pathname'
+require 'tmpdir'
+require 'yaml'
+
+CODE_DOT_ORG_ROOT = Pathname(ENV.fetch('CODE_DOT_ORG_ROOT', Dir.pwd))
+GITOPS_ROOT = Pathname(ENV.fetch('K8S_GITOPS_ROOT', CODE_DOT_ORG_ROOT.join('k8s-gitops').to_s))
+KUSTOMIZE_ROOT = CODE_DOT_ORG_ROOT.join('k8s/kustomize')
+SOURCE_PATH = 'k8s/kustomize'
+RESOURCE_REF_REGEX = %r{\Agithub\.com/code-dot-org/code-dot-org//#{Regexp.escape(SOURCE_PATH)}/base\?ref=[0-9a-f]{40}&timeout=120s\z}
+
+def load_yaml(path)
+  Psych.safe_load_file(path)
+end
+
+def assert(condition, message)
+  return if condition
+
+  warn("ERROR: #{message}")
+  exit 1
+end
+
+def run!(*command, chdir: nil)
+  env = command.first.is_a?(Hash) ? command.shift : {}
+  options = {}
+  options[:chdir] = chdir if chdir
+  stdout, stderr, status =
+    if env.empty?
+      Open3.capture3(*command, **options)
+    else
+      Open3.capture3(env, *command, **options)
+    end
+  return stdout if status.success?
+
+  warn stdout unless stdout.empty?
+  warn stderr unless stderr.empty?
+  warn("ERROR: command failed: #{command.join(' ')}")
+  exit status.exitstatus
+end
+
+def ensure_kustomization_build(path)
+  run!({'GIT_LFS_SKIP_SMUDGE' => '1'}, 'kustomize', 'build', path.to_s)
+end
+
+assert(KUSTOMIZE_ROOT.join('base/kustomization.yaml').exist?, 'missing k8s/kustomize/base/kustomization.yaml')
+assert(KUSTOMIZE_ROOT.join('local/overlays/development/kustomization.yaml').exist?, 'missing k8s/kustomize/local/overlays/development/kustomization.yaml')
+assert(KUSTOMIZE_ROOT.join('local/overlays/setup-db/kustomization.yaml').exist?, 'missing k8s/kustomize/local/overlays/setup-db/kustomization.yaml')
+assert(KUSTOMIZE_ROOT.join('local/overlays/setup-s3/kustomization.yaml').exist?, 'missing k8s/kustomize/local/overlays/setup-s3/kustomization.yaml')
+
+ensure_kustomization_build(KUSTOMIZE_ROOT.join('base'))
+ensure_kustomization_build(KUSTOMIZE_ROOT.join('local/overlays/development'))
+
+deployment_dirs = Dir.children(GITOPS_ROOT.join('apps/codeai/deployments')).sort
+deployment_dirs.each do |deployment|
+  deployment_root = GITOPS_ROOT.join('apps/codeai/deployments', deployment)
+  metadata_path = deployment_root.join('deployment.yaml')
+  next unless metadata_path.exist?
+
+  metadata = load_yaml(metadata_path)
+  assert(metadata['envType'].is_a?(String) && !metadata['envType'].empty?, "#{metadata_path} must set envType")
+  assert(metadata['namespace'].is_a?(String) && !metadata['namespace'].empty?, "#{metadata_path} must set namespace")
+
+  wrapper_path = deployment_root.join('deploy/kustomization.yaml')
+  assert(wrapper_path.exist?, "#{wrapper_path} must exist")
+  wrapper = load_yaml(wrapper_path)
+
+  assert(wrapper['apiVersion'] == 'kustomize.config.k8s.io/v1beta1', "#{wrapper_path} must be a v1beta1 Kustomization")
+  assert(wrapper['kind'] == 'Kustomization', "#{wrapper_path} must be kind Kustomization")
+  assert(wrapper['namespace'] == metadata['namespace'], "#{wrapper_path} namespace must match deployment metadata")
+
+  resources = wrapper['resources']
+  components = wrapper['components']
+  images = wrapper['images']
+
+  assert(resources.is_a?(Array) && resources.length == 1, "#{wrapper_path} must define exactly one resource")
+  assert(resources.first.match?(RESOURCE_REF_REGEX), "#{wrapper_path} resource must pin code-dot-org base by full sha")
+  assert(components == ["../../../envTypes/#{metadata['envType']}"], "#{wrapper_path} must reference ../../../envTypes/#{metadata['envType']}")
+  assert(images.is_a?(Array) && images.length == 1, "#{wrapper_path} must define exactly one image rewrite")
+  image = images.first
+  assert(image['name'] == 'code-dot-org', "#{wrapper_path} image name must be code-dot-org")
+  assert(image['newName'] == 'ghcr.io/code-dot-org/code-dot-org', "#{wrapper_path} image newName must target ghcr.io/code-dot-org/code-dot-org")
+  assert(image['newTag'].match?(/\Agit-[0-9a-f]{40}\z/), "#{wrapper_path} image newTag must be git-<full-commit-sha>")
+end
+
+env_type_dirs = Dir.children(GITOPS_ROOT.join('apps/codeai/envTypes')).sort
+env_type_dirs.each do |env_type|
+  path = GITOPS_ROOT.join('apps/codeai/envTypes', env_type)
+  next unless path.directory?
+
+  kustomization_path = path.join('kustomization.yaml')
+  next unless kustomization_path.exist?
+
+  doc = load_yaml(kustomization_path)
+  assert(doc['kind'] == 'Component', "#{kustomization_path} must be kind Component")
+end
+
+applicationset = load_yaml(GITOPS_ROOT.join('apps/codeai/applicationset.yaml'))
+source = applicationset.dig('spec', 'template', 'spec', 'sources', 0)
+assert(source['repoURL'] == 'https://github.com/code-dot-org/k8s-gitops.git', 'ApplicationSet must source deployments from k8s-gitops')
+assert(source['targetRevision'] == 'main', 'ApplicationSet must keep targetRevision on main')
+assert(source['path'] == 'apps/codeai/deployments/{{path.basename}}/deploy', 'ApplicationSet must deploy wrapper paths')
+
+k8s_workflow = File.read(CODE_DOT_ORG_ROOT.join('.github/workflows/k8s.yml'))
+assert(k8s_workflow.include?('source_commit_sha'), 'k8s.yml must pass source_commit_sha to k8s-skaffold-build')
+assert(k8s_workflow.include?('branch_tag_alias'), 'k8s.yml must pass branch_tag_alias to k8s-stitch-multiplatform-image')
+assert(k8s_workflow.include?('codeai_docker_image_digest'), 'k8s.yml must pass codeai_docker_image_digest to k8s-commit-to-kargo-warehouse.yml')
+assert(k8s_workflow.include?('k8s-commit-to-kargo-warehouse.yml'), 'k8s.yml must call k8s-commit-to-kargo-warehouse.yml')
+
+Dir.mktmpdir('build-lock') do |tmpdir|
+  gitops_tmp = Pathname(tmpdir).join('k8s-gitops')
+  FileUtils.cp_r(GITOPS_ROOT, gitops_tmp)
+
+  env = {
+    'BRANCH_NAME' => 'staging',
+    'GIT_COMMIT' => '0123456789abcdef0123456789abcdef01234567',
+    'CODEAI_DOCKER_IMAGE_REF' => 'ghcr.io/code-dot-org/code-dot-org:git-0123456789abcdef0123456789abcdef01234567',
+    'CODEAI_DOCKER_TAG' => 'git-0123456789abcdef0123456789abcdef01234567',
+    'CODEAI_DOCKER_IMAGE_DIGEST' => 'sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef',
+    'K8S_GITOPS_ROOT' => gitops_tmp.to_s,
+    'CREATED_AT' => '2026-03-22T12:34:56Z'
+  }
+  run!(env, 'ruby', KUSTOMIZE_ROOT.join('bin/write-build-lock').to_s, chdir: CODE_DOT_ORG_ROOT.to_s)
+
+  current_path = gitops_tmp.join('warehouses/codeai/builds/current.yaml')
+  historical_path = gitops_tmp.join('warehouses/codeai/builds/git-0123456789abcdef0123456789abcdef01234567.yaml')
+  assert(current_path.exist?, 'write-build-lock must produce current.yaml')
+  assert(historical_path.exist?, 'write-build-lock must produce historical build-lock file')
+  assert(File.read(current_path) == File.read(historical_path), 'current.yaml and historical build-lock must be identical')
+
+  build_lock = load_yaml(current_path)
+  assert(build_lock.dig('packaging', 'kind') == 'kustomize', 'build-lock packaging.kind must be kustomize')
+  assert(build_lock.dig('packaging', 'sourcePath') == SOURCE_PATH, 'build-lock packaging.sourcePath must be k8s/kustomize')
+  assert(build_lock['releaseId'] == 'git-0123456789abcdef0123456789abcdef01234567', 'build-lock releaseId must match git commit tag')
+  assert(build_lock.dig('image', 'ref') == 'ghcr.io/code-dot-org/code-dot-org:git-0123456789abcdef0123456789abcdef01234567', 'build-lock image.ref must match immutable git tag')
+  assert(build_lock.dig('image', 'digest') == 'sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef', 'build-lock image.digest must match the stitched image digest')
+
+  Dir.mktmpdir('legacy-merge-repo') do |repo_tmp|
+    repo_root = Pathname(repo_tmp)
+    run!('git', 'init', '-b', 'test', chdir: repo_root.to_s)
+    run!('git', 'config', 'user.name', 'Codex', chdir: repo_root.to_s)
+    run!('git', 'config', 'user.email', 'codex@example.com', chdir: repo_root.to_s)
+
+    File.write(repo_root.join('README.md'), "base\n")
+    run!('git', 'add', 'README.md', chdir: repo_root.to_s)
+    run!('git', 'commit', '-m', 'base', chdir: repo_root.to_s)
+
+    run!('git', 'checkout', '-b', 'staging', chdir: repo_root.to_s)
+    File.write(repo_root.join('STAGING.txt'), "staging release\n")
+    run!('git', 'add', 'STAGING.txt', chdir: repo_root.to_s)
+    run!('git', 'commit', '-m', 'staging release', chdir: repo_root.to_s)
+    upstream_release_commit = run!('git', 'rev-parse', 'HEAD', chdir: repo_root.to_s).strip
+
+    run!('git', 'checkout', 'test', chdir: repo_root.to_s)
+    File.write(repo_root.join('TEST.txt'), "test branch\n")
+    run!('git', 'add', 'TEST.txt', chdir: repo_root.to_s)
+    run!('git', 'commit', '-m', 'test branch', chdir: repo_root.to_s)
+    run!('git', 'merge', '--no-ff', 'staging', '-m', 'merge staging into test', chdir: repo_root.to_s)
+    merge_commit = run!('git', 'rev-parse', 'HEAD', chdir: repo_root.to_s).strip
+
+    env['BRANCH_NAME'] = 'test'
+    env['GIT_COMMIT'] = merge_commit
+    env['CODEAI_DOCKER_TAG'] = "git-#{merge_commit}"
+    env['CODEAI_DOCKER_IMAGE_REF'] = "ghcr.io/code-dot-org/code-dot-org:git-#{merge_commit}"
+    run!(env, 'ruby', KUSTOMIZE_ROOT.join('bin/write-build-lock').to_s, chdir: repo_root.to_s)
+
+    legacy_current_path = gitops_tmp.join('warehouses/codeai/legacy-gitflow/test/current.yaml')
+    legacy_current = load_yaml(legacy_current_path)
+    assert(legacy_current_path.exist?, 'write-build-lock must produce legacy current.yaml for test merges')
+    assert(legacy_current['revision'] == upstream_release_commit, 'legacy current.yaml must track the merged-in release commit')
+    assert(legacy_current['tag'] == "git-#{upstream_release_commit}", 'legacy current.yaml tag must track the merged-in release commit')
+    assert(gitops_tmp.join('warehouses/codeai/legacy-gitflow/test/merged', "git-#{upstream_release_commit}.yaml").exist?, 'write-build-lock must key the merged marker from the merged-in release commit')
+    assert(!gitops_tmp.join('warehouses/codeai/legacy-gitflow/test/merged', "git-#{merge_commit}.yaml").exist?, 'write-build-lock must not key the merged marker from the downstream merge commit')
+  end
+
+  ensure_kustomization_build(GITOPS_ROOT.join('apps/codeai/deployments/staging/deploy'))
+end

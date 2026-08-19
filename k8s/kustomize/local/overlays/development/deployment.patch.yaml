@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-dashboard
+spec:
+  template:
+    spec:
+      containers:
+        - name: dashboard
+          env:
+            - name: RAILS_ENV
+              value: development
+            - name: RACK_ENV
+              value: development
+          securityContext:
+            allowPrivilegeEscalation: true

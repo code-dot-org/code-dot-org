@@ -1,0 +1,89 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'fileutils'
+require 'open3'
+require 'time'
+require 'yaml'
+
+RELEASE_BRANCH = 'staging'
+LEGACY_BRANCHES = %w[staging test levelbuilder production].freeze
+
+branch_name = ENV.fetch('BRANCH_NAME')
+image_ref = ENV.fetch('CODEAI_DOCKER_IMAGE_REF')
+image_tag = ENV.fetch('CODEAI_DOCKER_TAG')
+gitops_root = File.expand_path(ENV.fetch('K8S_GITOPS_ROOT'))
+created_at = ENV.fetch('CREATED_AT', Time.now.utc.iso8601)
+git_commit = ENV.fetch('GIT_COMMIT', image_tag.delete_prefix('git-'))
+image_digest = ENV.fetch('CODEAI_DOCKER_IMAGE_DIGEST', nil)
+
+expected_release_tag = "git-#{git_commit}"
+abort("Expected CODEAI_DOCKER_IMAGE_REF to end with :#{image_tag}") unless image_ref.end_with?(":#{image_tag}")
+if branch_name == RELEASE_BRANCH
+  abort("Expected CODEAI_DOCKER_TAG=#{expected_release_tag}, got #{image_tag}") if image_tag != expected_release_tag
+  abort('Expected CODEAI_DOCKER_IMAGE_DIGEST to be set for release metadata') if image_digest.to_s.empty?
+  abort("Expected CODEAI_DOCKER_IMAGE_DIGEST to look like sha256:<64 hex>, got #{image_digest}") unless image_digest.match?(/\Asha256:[0-9a-f]{64}\z/)
+end
+
+def legacy_release_git_commit(branch_name, default_git_commit)
+  return default_git_commit if branch_name == RELEASE_BRANCH
+
+  explicit = ENV.fetch('LEGACY_RELEASE_GIT_COMMIT', nil)
+  return explicit unless explicit.to_s.empty?
+
+  stdout, stderr, status = Open3.capture3('git', 'rev-list', '--parents', '-n', '1', 'HEAD')
+  warn stderr unless status.success? || stderr.empty?
+  return default_git_commit unless status.success?
+
+  parents = stdout.split.drop(1)
+  return default_git_commit unless parents.length >= 2
+
+  # Legacy promotions merge the upstream release branch into the downstream branch.
+  # The promoted release identity is the merged-in branch tip (second parent), not the
+  # downstream merge commit written to the legacy branch itself.
+  parents[1]
+end
+
+def write_yaml(path, payload)
+  FileUtils.mkdir_p(File.dirname(path))
+  File.write(path, YAML.dump(payload))
+end
+
+if branch_name == RELEASE_BRANCH
+  payload = {
+    'schemaVersion' => 'v1',
+    'releaseId' => image_tag,
+    'gitCommit' => git_commit,
+    'image' => {
+      'ref' => image_ref,
+      'digest' => image_digest
+    },
+    'packaging' => {
+      'kind' => 'kustomize',
+      'sourceRepo' => 'https://github.com/code-dot-org/code-dot-org.git',
+      'sourcePath' => 'k8s/kustomize'
+    },
+    'createdAt' => created_at
+  }
+
+  builds_dir = File.join(gitops_root, 'warehouses/codeai/builds')
+  historical_path = File.join(builds_dir, "#{image_tag}.yaml")
+  current_path = File.join(builds_dir, 'current.yaml')
+  rendered = YAML.dump(payload)
+  FileUtils.mkdir_p(builds_dir)
+  File.write(historical_path, rendered)
+  File.write(current_path, rendered)
+end
+
+if LEGACY_BRANCHES.include?(branch_name)
+  release_git_commit = legacy_release_git_commit(branch_name, git_commit)
+  release_tag = "git-#{release_git_commit}"
+  payload = {
+    'revision' => release_git_commit,
+    'tag' => release_tag,
+    'mergedAt' => created_at
+  }
+  branch_dir = File.join(gitops_root, 'warehouses/codeai/legacy-gitflow', branch_name)
+  write_yaml(File.join(branch_dir, 'current.yaml'), payload)
+  write_yaml(File.join(branch_dir, 'merged', "#{release_tag}.yaml"), payload)
+end
