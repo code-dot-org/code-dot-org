@@ -144,6 +144,20 @@ export interface WorldSnapshot {
    */
   handlerIds: string[];
   /**
+   * Which traits each actor holds, by actor id, in dependency order.
+   *
+   * Structural, and it has to be for the reason {@link handlerIds} gives: a
+   * trait is what puts an actor in a step's `where`, and the running actors
+   * were made with the set they had. Nothing else here notices a `use trait`
+   * row arriving — a trait that declares no property of its own (Gravity's
+   * "Acts as Ground") changes no value at all, and one that does declares
+   * SLOTS, which read as edited values rather than as a new membership. So the
+   * reconciler patched, `setActorProperty` found no slot for the new paths and
+   * silently returned false, and the game went on with a ground that was not
+   * ground until something else forced a restart.
+   */
+  actorTraits: Record<string, string[]>;
+  /**
    * Each applied effect's knob settings, by the same slot key.
    *
    * Values, not structure: a filter that is already running can be retuned in
@@ -1908,6 +1922,7 @@ export class World {
       world[`${property.ownerId}.${property.id}`] = this.get(property);
     }
     const actors: Record<string, Record<string, unknown>> = {};
+    const actorTraits: Record<string, string[]> = {};
     for (const actor of this.actorList) {
       const values: Record<string, unknown> = {};
       for (const trait of actor.traits()) {
@@ -1923,6 +1938,7 @@ export class World {
         }
       }
       actors[actor.id] = values;
+      actorTraits[actor.id] = actor.traits().map(trait => trait.id);
     }
     return {
       ruleIds: rules.map(rule => rule.id).sort(),
@@ -1951,6 +1967,7 @@ export class World {
       // By actor id so the list is stable, but NOT sorted within an actor:
       // handlers for one event run in registration order, so a reorder is a
       // real change and should read as one.
+      actorTraits,
       handlerIds: [...this.actorList]
         .sort((left, right) => (left.id < right.id ? -1 : 1))
         .flatMap(actor => actor.handlerIds().map(id => `${actor.id}:${id}`)),

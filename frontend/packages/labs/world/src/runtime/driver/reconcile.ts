@@ -44,6 +44,8 @@ interface ReconcilableWorld {
     activeCamera: string;
     /** Every handler in the world, hashed with its body (`Actor.handlerIds`). */
     handlerIds: string[];
+    /** Which traits each actor holds — structural, like the handlers. */
+    actorTraits: Record<string, string[]>;
     /** Which effects are in play, and what carries each (effectIds.ts). */
     effectIds: string[];
     /** Their knob settings, by the same key — patchable, unlike the above. */
@@ -141,6 +143,14 @@ export function reconcile(
     // is built to draw through one. Where they LOOK is a value, patched below.
     stable(previous.cameras) === stable(snapshot.cameras) &&
     stable(previous.handlerIds) === stable(snapshot.handlerIds) &&
+    // A `use trait` row added or removed. Structural for the reason handlers
+    // are: the running actors were MADE with the traits they have, and a trait
+    // is what a step's `where` selects on — there is no patch that gives one to
+    // an actor already in the world. Without this the change reads as an edit
+    // to whatever values the new trait's properties brought (or as no change at
+    // all, when it brings none), so the reconciler patched and the game ran on
+    // with a ground that was not ground.
+    stable(previous.actorTraits) === stable(snapshot.actorTraits) &&
     stable(previous.effectIds) === stable(snapshot.effectIds);
   const worldChanged = stable(previous.world) !== stable(snapshot.world);
   // What the backdrops draw is a value, like a world property, and patches the

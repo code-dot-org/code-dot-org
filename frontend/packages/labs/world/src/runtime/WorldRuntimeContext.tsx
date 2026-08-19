@@ -26,7 +26,10 @@ import {
   type BlocklyGeneratorHandle,
 } from '../blockly/BlocklyGenerator';
 import {fileKindOf} from '../blockly/fileKind';
-import {refreshProjectDropdowns} from '../blockly/projectDropdowns';
+import {
+  generationEnvironment,
+  refreshProjectDropdowns,
+} from '../blockly/projectDropdowns';
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
 import {ENTRY_FILE} from '../constants';
 
@@ -156,6 +159,11 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       files,
       isBlocklyPath,
       (contents, path) => generator.generate(contents, path),
+      // What the generator will read besides each file. A `define world` emits
+      // its rules and its image sizes from the installed registries, so a
+      // module cached before one of them arrived is out of date in a way its
+      // own bytes cannot show (blockly/projectDropdowns, runtime/generatedFiles).
+      generationEnvironment(),
     );
   };
 
@@ -401,7 +409,18 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     // are a bare `void getActorInfo(…).then(…)`.
     let files: Record<string, string>;
     try {
-      files = generateBlocklyFiles(projectFiles(currentSources.source));
+      // Refresh first, for the reason the compile effect does: this path
+      // generates the WHOLE project into the same cache, and it runs from a
+      // child's effect — which React flushes before this provider's — so
+      // without it every file the learner just changed was generated against
+      // the registries as they stood one edit ago, and cached that way.
+      const source = currentSources.source;
+      refreshProjectDropdowns(
+        projectFiles(source),
+        projectImagePaths(source),
+        sizesRef.current,
+      );
+      files = generateBlocklyFiles(projectFiles(source));
     } catch {
       return {thumbnails: {}, schemas: {}, placements: {}};
     }
