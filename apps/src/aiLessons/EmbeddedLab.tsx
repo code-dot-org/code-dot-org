@@ -106,13 +106,18 @@ function syntheticChannel(
   lessonId: string,
   labType: ProjectLabType,
   projectType: AppName,
-  checkpointTitle: string
+  checkpointTitle: string,
+  frozen: boolean
 ): Channel {
   const now = new Date().toISOString();
   return {
     id: `ai-lesson-${lessonId}-${labType}`,
     name: `AI Lesson ${labType} project (${checkpointTitle})`,
     isOwner: true,
+    // A frozen channel is lab2's permanent read-only state — codebridge's
+    // editor and file browser honor it.  Set for `readOnly` steps
+    // (AI showcases: look, don't touch).
+    frozen,
     projectType,
     publishedAt: null,
     createdAt: now,
@@ -208,7 +213,8 @@ const PanelsCheckpointLab: React.FC<{
 };
 
 // Pushes a synthetic owner-channel + level metadata into the global lab
-// redux state so isReadOnlyWorkspace() returns false and lab views that
+// redux state so isReadOnlyWorkspace() returns false (or true, via the
+// frozen flag, on `readOnly` showcase steps) and lab views that
 // expect this state (Music's Blockly toolbox in particular) render fully.
 // Also applies the lab's preferred theme — Music ships Dark-only, Panels
 // is Light-first, Weblab2 starts Dark.
@@ -230,7 +236,8 @@ function useLabSetup(
       lessonId,
       labType,
       appName,
-      checkpoint.title
+      checkpoint.title,
+      !!checkpoint.readOnly
     );
     dispatch(setChannel(channel));
     dispatch(

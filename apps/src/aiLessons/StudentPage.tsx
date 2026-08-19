@@ -25,6 +25,7 @@ import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/Us
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {loadLesson} from './api';
+import {judgeBranchCondition} from './branchJudge';
 import BuildPartnerPanel from './BuildPartnerPanel';
 import ChecklistPanel from './ChecklistPanel';
 import EmbeddedLab from './EmbeddedLab';
@@ -146,6 +147,10 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const [pendingAdvance, setPendingAdvance] = useState<TutorAction | null>(
     null
   );
+  // True while the navigation resolver is deciding where Continue goes.
+  // Usually instant, but an aiJudge branch condition is an LLM call —
+  // the Continue button shows a busy label meanwhile.
+  const [resolving, setResolving] = useState(false);
   // The structured opening (welcome + instruction) for the active
   // checkpoint. Rendered in the pinned region above the chat; also
   // stitched into the LLM transcript as the first tutor turn so reply
@@ -390,13 +395,20 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const completeStep = useCallback(
     async (selectedOptionId?: string) => {
       setPendingAdvance(null);
-      const decision = await deterministicResolver.resolveNext({
-        lesson,
-        currentStepId: step.id,
-        path,
-        selectedOptionId,
-        inputs: inputsRef.current,
-      });
+      setResolving(true);
+      let decision: NavDecision;
+      try {
+        decision = await deterministicResolver.resolveNext({
+          lesson,
+          currentStepId: step.id,
+          path,
+          selectedOptionId,
+          inputs: inputsRef.current,
+          judgeCondition: judgeBranchCondition,
+        });
+      } finally {
+        setResolving(false);
+      }
       const destinationId =
         decision.kind === 'goto' ? decision.stepId : undefined;
       persistProgressEvent('checkpoint-completed', currentIndex, liveWork, {
@@ -716,11 +728,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                       type="button"
                       size="small"
                       onClick={() => completeStep()}
-                      disabled={busy}
+                      disabled={busy || resolving}
                       className={styles.continueButton}
                     >
-                      {currentIndex >= lesson.steps.length - 1 ||
-                      step.next === 'end'
+                      {resolving
+                        ? "Deciding what's next…"
+                        : currentIndex >= lesson.steps.length - 1 ||
+                          step.next === 'end'
                         ? 'Finish lesson →'
                         : 'Continue →'}
                     </MuiButton>
@@ -732,11 +746,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                     type="button"
                     size="small"
                     onClick={() => completeStep()}
-                    disabled={busy}
+                    disabled={busy || resolving}
                     className={styles.continueButton}
                   >
                     <span className={styles.shimmerText}>
-                      {pendingAdvance === 'celebrate'
+                      {resolving
+                        ? "Deciding what's next…"
+                        : pendingAdvance === 'celebrate'
                         ? 'Finish lesson →'
                         : 'Continue →'}
                     </span>

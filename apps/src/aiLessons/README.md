@@ -127,6 +127,16 @@ practice from quiz outcomes, the fan-page hub suggests a mini lesson
 from the experience slider and AI rating.  An AI-backed resolver can
 later replace the rule matching without any UI change.
 
+`aiJudge` branch conditions are evaluated by an LLM judge
+(`branchJudge.ts`): it reads the student's recorded inputs for the
+named step and passes or fails them against the authored criteria,
+strictly ("when in doubt, false").  Navigation stays free of LLM
+dependencies — StudentPage injects the judge via
+`NavContext.judgeCondition`, and Continue shows "Deciding what's
+next…" while a judged resolution is in flight.  No recorded inputs
+means no LLM call; a judge failure means no match — both fall through
+to the default path.
+
 ### Questions and student inputs
 
 Questions steps render through `QuestionFlow.tsx`: one question at a

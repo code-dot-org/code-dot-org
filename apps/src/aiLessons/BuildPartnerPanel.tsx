@@ -56,7 +56,10 @@ const BuildPartnerPanel: React.FunctionComponent<BuildPartnerPanelProps> = ({
   onSourcesApplied,
   onEvaluateWork,
 }) => {
-  const [draft, setDraft] = useState('');
+  // Seeded from the authored prefill (if any): the student arrives with
+  // a working prompt to fire or tweak.  Fresh per step — the panel is
+  // keyed by step id at its render site.
+  const [draft, setDraft] = useState(step.promptPrefill || '');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | undefined>();
   const [lastBuild, setLastBuild] = useState<LastBuild | undefined>();
