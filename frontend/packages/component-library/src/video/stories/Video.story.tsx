@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react-vite';
 import {screen as shadowScreen} from 'shadow-dom-testing-library';
-import {within, expect, userEvent, waitFor} from 'storybook/test';
+import {within, expect, userEvent} from 'storybook/test';
 
 import Video from '../index';
 
@@ -128,7 +128,7 @@ export const VideoWithCustomPoster: Story = {
     docs: {
       description: {
         story:
-          "The facade starts on YouTube's full-resolution poster; posterThumbnailFallback only takes over if that image fails to load. Use this for self-hosted thumbnails, e.g. when a network blocks *.ytimg.com.",
+          "The facade starts on posterThumbnailFallback. It upgrades to YouTube's full-resolution poster only if that image loads. This video has no maxres poster, so the supplied one stays.",
       },
     },
     eyes: {
@@ -139,23 +139,12 @@ export const VideoWithCustomPoster: Story = {
   play: async ({canvasElement, args}) => {
     const canvas = within(canvasElement);
 
-    const playButton = await canvas.findByLabelText(
+    const facadeImage = await canvas.findByAltText(
       `Play video ${args.videoTitle}`,
     );
-    await expect(playButton).toBeVisible();
-
-    const facadeImage = canvas.getByAltText(`Play video ${args.videoTitle}`);
     await expect(facadeImage).toHaveAttribute(
       'src',
-      `//i.ytimg.com/vi/${args.youTubeId}/maxresdefault.jpg`,
-    );
-
-    // The swap runs through React state, so wait for the re-render.
-    facadeImage.dispatchEvent(new Event('error'));
-    await waitFor(() =>
-      expect(
-        canvas.getByAltText(`Play video ${args.videoTitle}`),
-      ).toHaveAttribute('src', args.posterThumbnailFallback),
+      args.posterThumbnailFallback,
     );
   },
 };

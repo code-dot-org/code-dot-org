@@ -7,16 +7,9 @@ export interface FacadeProps {
   onClick?: () => void;
   /** Facade alt text */
   alt: string;
-  /** Called when the poster image fails to load */
-  onError?: () => void;
 }
 
-const FacadeBackground = ({
-  posterThumbnail,
-  alt,
-  onClick,
-  onError,
-}: FacadeProps) => {
+const FacadeBackground = ({posterThumbnail, alt, onClick}: FacadeProps) => {
   return (
     posterThumbnail && (
       <img
@@ -26,7 +19,6 @@ const FacadeBackground = ({
         loading={'lazy'}
         alt={alt}
         aria-hidden="true"
-        onError={onError}
       />
     )
   );

@@ -7,12 +7,10 @@ const Facade = ({
   label,
   posterThumbnail,
   onClick,
-  onPosterError,
 }: {
   label: string;
   posterThumbnail: string;
   onClick: () => void;
-  onPosterError?: () => void;
 }) => {
   return (
     <div className={moduleStyles.facade}>
@@ -20,7 +18,6 @@ const Facade = ({
         posterThumbnail={posterThumbnail}
         alt={label}
         onClick={onClick}
-        onError={onPosterError}
       />
       <PlayButton label={label} onClick={onClick} />
     </div>
