@@ -185,15 +185,15 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
   end
 
-  describe '#ai_models_region_blocked?' do
-    subject(:ai_models_region_blocked?) {user.ai_models_region_blocked?}
+  describe '#us_only_aichat_models_disabled?' do
+    subject(:us_only_aichat_models_disabled?) {user.us_only_aichat_models_disabled?}
 
     context 'when a teacher is in a non-US school' do
       it 'returns true even for a verified teacher' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:verified_instructor?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _ai_models_region_blocked?.must_equal true
+        _us_only_aichat_models_disabled?.must_equal true
       end
     end
 
@@ -201,7 +201,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       it 'returns false' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_us))
-        _ai_models_region_blocked?.must_equal false
+        _us_only_aichat_models_disabled?.must_equal false
       end
     end
 
@@ -210,7 +210,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(nil)
         allow(user).to receive(:user_geos).and_return([build(:user_geo, :sydney)])
-        _ai_models_region_blocked?.must_equal true
+        _us_only_aichat_models_disabled?.must_equal true
       end
     end
 
@@ -219,7 +219,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(nil)
         allow(user).to receive(:user_geos).and_return([])
-        _ai_models_region_blocked?.must_equal false
+        _us_only_aichat_models_disabled?.must_equal false
       end
     end
 
@@ -228,7 +228,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_without_country))
         allow(user).to receive(:user_geos).and_return([build(:user_geo, :seattle)])
-        _ai_models_region_blocked?.must_equal false
+        _us_only_aichat_models_disabled?.must_equal false
       end
     end
 
@@ -237,7 +237,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         non_us_teacher = create(:teacher)
         allow(non_us_teacher).to receive(:school_info).and_return(build(:school_info_non_us))
         allow(user).to receive(:teachers).and_return([non_us_teacher])
-        _ai_models_region_blocked?.must_equal true
+        _us_only_aichat_models_disabled?.must_equal true
       end
     end
 
@@ -248,7 +248,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         us_teacher = qualified_teacher
         allow(us_teacher).to receive(:school_info).and_return(build(:school_info_us))
         allow(user).to receive(:teachers).and_return([non_us_teacher, us_teacher])
-        _ai_models_region_blocked?.must_equal false
+        _us_only_aichat_models_disabled?.must_equal false
       end
     end
 
@@ -257,7 +257,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(DCDO).to receive(:get).with("allow_international_usage_all_models", false).and_return(true)
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _ai_models_region_blocked?.must_equal false
+        _us_only_aichat_models_disabled?.must_equal false
       end
     end
 
@@ -266,42 +266,42 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:levelbuilder?).and_return(true)
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _ai_models_region_blocked?.must_equal false
+        _us_only_aichat_models_disabled?.must_equal false
       end
     end
   end
 
   describe '#can_use_aichat_model?' do
-    let(:gemini_model) {SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}
+    let(:us_only_model) {SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}
     let(:image_model) {SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE]}
     let(:mistral_model) {SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL]}
     let(:openai_model) {SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}
 
-    context 'when gemini models are blocked' do
+    context 'when US only models are blocked' do
       before do
-        allow(user).to receive(:ai_models_region_blocked?).and_return(true)
+        allow(user).to receive(:us_only_aichat_models_disabled?).and_return(true)
       end
 
-      it 'blocks every gemini model, including image generation' do
-        SharedConstants::AI_CHAT_REGION_BLOCKED_MODEL_IDS.each do |model_id|
+      it 'blocks every US only model, including image generation' do
+        SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS.each do |model_id|
           _(user.can_use_aichat_model?(model_id)).must_equal false
         end
         _(user.can_use_aichat_model?(image_model)).must_equal false
       end
 
-      it 'allows non-gemini models' do
+      it 'allows models that are available outside the US' do
         _(user.can_use_aichat_model?(openai_model)).must_equal true
         _(user.can_use_aichat_model?(mistral_model)).must_equal true
       end
     end
 
-    context 'when gemini models are not blocked' do
+    context 'when US only models are not blocked' do
       before do
-        allow(user).to receive(:ai_models_region_blocked?).and_return(false)
+        allow(user).to receive(:us_only_aichat_models_disabled?).and_return(false)
       end
 
       it 'allows all models' do
-        _(user.can_use_aichat_model?(gemini_model)).must_equal true
+        _(user.can_use_aichat_model?(us_only_model)).must_equal true
         _(user.can_use_aichat_model?(openai_model)).must_equal true
       end
     end

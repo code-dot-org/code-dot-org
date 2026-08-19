@@ -45,5 +45,5 @@ export interface CurrentUserState {
   inUSA: boolean;
   isLevelbuilder: boolean;
   aiChatAccessLevel: AiChatAccessLevel;
-  aiModelsRegionBlocked: boolean;
+  usOnlyAichatModelsDisabled: boolean;
 }

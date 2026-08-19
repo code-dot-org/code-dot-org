@@ -870,12 +870,10 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
   ].freeze
 
-  # Models unavailable to users outside the US (see
-  # User::AiAccessible#can_use_aichat_model?). Currently exactly the Gemini
-  # models, but kept separate from the list above because that one answers a
-  # different question: if another provider ever becomes restricted, only this
-  # list changes, and the provider routing stays put.
-  AI_CHAT_REGION_BLOCKED_MODEL_IDS = AI_CHAT_GEMINI_MODEL_IDS
+  # Models only available to users in the US
+  # (see User::AiAccessible#can_use_aichat_model?). Kept separate from the list
+  # above, which is about which provider serves a model.
+  AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_GEMINI_MODEL_IDS
 
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",

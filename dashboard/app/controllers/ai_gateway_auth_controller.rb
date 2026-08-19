@@ -23,7 +23,7 @@ class AiGatewayAuthController < ApplicationController
     # token it mints is not bound to a model, so a token issued for one model can
     # be replayed against another. Refuse to mint at all when Gemini is blocked
     # rather than trusting a client-supplied model id we cannot enforce later.
-    if current_user.ai_models_region_blocked?
+    if current_user.us_only_aichat_models_disabled?
       return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 

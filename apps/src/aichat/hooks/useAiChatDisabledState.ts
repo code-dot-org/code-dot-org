@@ -12,7 +12,7 @@ import {
 } from '@cdo/apps/aichat/constants';
 import {
   areAiChatToolsEnabled,
-  isRegionBlockedModelId,
+  isUsOnlyModelId,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
 import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
@@ -48,7 +48,7 @@ interface UseAiChatDisabledStateParams {
  * Computes whether AI chat is disabled and what message to show, consolidating:
  * - which aiChatAccessLevel applies (section override for teachers, or user's own)
  * - whether the access level permits chat for the current app & access level
- * - regional blocking of Gemini-served models (pass selectedModelId to enable)
+ * - blocking of US only models (pass selectedModelId to enable)
  * - predict level gating
  * - teacher vs. student messaging
  */
@@ -66,8 +66,8 @@ export function useAiChatDisabledState({
   const userAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
-  const aiModelsRegionBlocked = useAppSelector(
-    state => state.currentUser.aiModelsRegionBlocked
+  const usOnlyAichatModelsDisabled = useAppSelector(
+    state => state.currentUser.usOnlyAichatModelsDisabled
   );
   const isLevelbuilder = useAppSelector(
     state => state.currentUser.isLevelbuilder
@@ -95,13 +95,10 @@ export function useAiChatDisabledState({
       };
     }
 
-    // Some models are blocked for international users,
-    // so we show disabled if the user is in a region where the model is blocked (aiModelsRegionBlocked)
-    // and the selectedModelId is one of the blocked models (isRegionBlockedModelId).
     if (
-      aiModelsRegionBlocked &&
       selectedModelId &&
-      isRegionBlockedModelId(selectedModelId)
+      usOnlyAichatModelsDisabled &&
+      isUsOnlyModelId(selectedModelId)
     ) {
       if (!isTeacher) {
         return {
@@ -175,7 +172,7 @@ export function useAiChatDisabledState({
     enabledForUser,
     sectionAccessLevel,
     isLevelbuilder,
-    aiModelsRegionBlocked,
+    usOnlyAichatModelsDisabled,
   ]);
 
   return disabledState;
