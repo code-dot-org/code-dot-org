@@ -1,3 +1,4 @@
+import {UserLevelInteractions} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -14,7 +15,6 @@ import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAP
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
-import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import javalabMsg from '@cdo/javalab/locale';
 
 import {

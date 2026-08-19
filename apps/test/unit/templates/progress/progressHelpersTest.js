@@ -1,3 +1,4 @@
+import {LevelKind, LevelStatus} from '@code-dot-org/shared-constants';
 import Immutable from 'immutable';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -16,7 +17,6 @@ import {
   fakeLevels,
   fakeProgressForLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 describe('progressHelpers', () => {
   describe('lessonIsVisible', () => {

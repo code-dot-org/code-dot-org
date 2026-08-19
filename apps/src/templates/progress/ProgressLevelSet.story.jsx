@@ -1,7 +1,7 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import {UnconnectedProgressLevelSet as ProgressLevelSet} from './ProgressLevelSet';

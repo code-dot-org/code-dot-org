@@ -1,6 +1,5 @@
 import {createGoogleGenerativeAI} from '@ai-sdk/google';
-
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
 
 // The API key is injected server-side by the aiGateway proxy.
 const googleProvider = createGoogleGenerativeAI({

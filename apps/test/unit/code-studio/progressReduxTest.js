@@ -1,3 +1,4 @@
+import {LevelStatus, LevelKind} from '@code-dot-org/shared-constants';
 import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -32,7 +33,6 @@ import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 // This is some sample lesson data taken from a course. I truncated to the first two
 // lessons, and also truncated the second lesson to the first 3 levels

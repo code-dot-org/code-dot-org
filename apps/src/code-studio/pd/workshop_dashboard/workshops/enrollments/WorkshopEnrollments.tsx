@@ -3,6 +3,7 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
+import {EducatorRoles} from '@code-dot-org/shared-constants';
 import {
   Table,
   TableBody,
@@ -31,7 +32,6 @@ import React, {
 } from 'react';
 
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import {EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
 import {EnrollmentData} from '../types';
 import {useWorkshopContext} from '../WorkshopLayout';

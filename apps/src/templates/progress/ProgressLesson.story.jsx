@@ -1,3 +1,4 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
@@ -7,7 +8,6 @@ import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {UnconnectedProgressLesson as ProgressLesson} from './ProgressLesson';
 import {fakeLesson, fakeLevels} from './progressTestHelpers';

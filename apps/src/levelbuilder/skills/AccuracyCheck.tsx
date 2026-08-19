@@ -1,19 +1,18 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Link from '@code-dot-org/component-library/link';
+import {
+  AiEvaluationTypes,
+  StudentWorkEvaluationStatus,
+} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
 import './skills.css';
-
 import {
   evaluationFromOpenAI,
   SkillBasedAIResponse,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
-import {
-  AiEvaluationTypes,
-  StudentWorkEvaluationStatus,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import AccuracyDetails from './AccuracyDetails';
 

@@ -1,4 +1,4 @@
-import {BubbleChoiceCustomModes} from '@cdo/generated-scripts/sharedConstants';
+import {BubbleChoiceCustomModes} from '@code-dot-org/shared-constants';
 
 import {LevelProperties} from '../lab2/types';
 import {ValueOf} from '../types/utils';

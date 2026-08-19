@@ -1,10 +1,10 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {UnconnectedLessonProgress as LessonProgress} from '@cdo/apps/code-studio/components/progress/LessonProgress';
 import experiments from '@cdo/apps/util/experiments';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 describe('LessonProgress', () => {
   const defaultProps = {

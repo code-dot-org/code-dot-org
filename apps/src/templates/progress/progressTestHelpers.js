@@ -4,7 +4,7 @@
  * better to have test require helpers from src, then story files in src reach
  * into test.
  */
-
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import Immutable from 'immutable';
 import _ from 'lodash';
 import {createStore} from 'redux';
@@ -13,7 +13,6 @@ import {
   levelProgressFromServer,
   lessonProgressForSection,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 export const fakeLesson = (
   name,

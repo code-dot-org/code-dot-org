@@ -1,12 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {AiChatTeacherFeedback as TeacherFeedback} from '@code-dot-org/shared-constants';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';

@@ -1,6 +1,7 @@
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
+
 import {validateModelId} from '@cdo/apps/aichatLab/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 const SUPPORTED_IDS = [AiChatModelIds.MISTRAL, AiChatModelIds.CHATGPT];
 const UNSUPPORTED_ID = 'deprecated-model-id' as ValueOf<typeof AiChatModelIds>;

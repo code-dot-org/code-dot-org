@@ -1,8 +1,8 @@
+import {AllPublishableProjectTypes} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
-import {AllPublishableProjectTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {getStore} from '../redux';
 

@@ -1,9 +1,9 @@
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import EvidenceDescriptionsRow from './EvidenceDescriptionsRow';
 

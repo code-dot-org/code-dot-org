@@ -1,8 +1,8 @@
+import {AiChatClientTypes} from '@code-dot-org/shared-constants';
 import React from 'react';
 
 import {useLocalization} from '@cdo/apps/localization';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import styles from './aiTutorEnglishOnlyWarning.module.scss';
 

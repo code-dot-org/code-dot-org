@@ -1,3 +1,4 @@
+import {ChildAccountComplianceStates} from '@code-dot-org/shared-constants';
 import {render} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -15,7 +16,6 @@ import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

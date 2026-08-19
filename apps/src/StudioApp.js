@@ -1,3 +1,4 @@
+import {LocalizeToI18nLocales} from '@code-dot-org/shared-constants';
 import * as BlocklyCore from 'blockly/core';
 import {EventEmitter} from 'events';
 import $ from 'jquery';
@@ -35,7 +36,6 @@ import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDia
 import {white, workspace_running_background} from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
-import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
 import annotationList from './acemode/annotationList';

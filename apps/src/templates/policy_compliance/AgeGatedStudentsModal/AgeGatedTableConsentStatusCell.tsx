@@ -1,7 +1,7 @@
+import {ChildAccountComplianceStates} from '@code-dot-org/shared-constants';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles} from '../../tables/tableConstants';

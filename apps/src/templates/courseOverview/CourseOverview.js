@@ -1,4 +1,5 @@
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {AiChatToolsDependency} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
@@ -24,7 +25,6 @@ import {
   onDismissRedirectWarning,
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import SafeMarkdown from '../SafeMarkdown';

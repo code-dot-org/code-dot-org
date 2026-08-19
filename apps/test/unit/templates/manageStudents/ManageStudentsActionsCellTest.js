@@ -1,11 +1,11 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedManageStudentsActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 

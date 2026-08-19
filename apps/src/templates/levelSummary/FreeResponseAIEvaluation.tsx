@@ -1,3 +1,4 @@
+import {StudentWorkEvaluationStatus} from '@code-dot-org/shared-constants';
 import React, {useEffect, useState} from 'react';
 
 import {
@@ -8,7 +9,6 @@ import {
 import {fetchMostRecentUserLevelEvaluation} from '@cdo/apps/aiEvaluation/studentWorkEvaluationsApi';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import FreeResponseAiStudentResponseHeader from './FreeResponseAiStudentResponseHeader';
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';

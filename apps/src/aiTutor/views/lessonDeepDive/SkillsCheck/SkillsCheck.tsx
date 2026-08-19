@@ -1,4 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  AiChatClientTypes,
+  AiInteractionStatus as Status,
+  LessonObjectiveReflectionValues,
+  PracticeProblemDeliveryContext,
+  PracticeProblemTypes,
+} from '@code-dot-org/shared-constants';
 import React, {
   FC,
   useCallback,
@@ -19,13 +26,6 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
-import {
-  AiChatClientTypes,
-  AiInteractionStatus as Status,
-  LessonObjectiveReflectionValues,
-  PracticeProblemDeliveryContext,
-  PracticeProblemTypes,
-} from '@cdo/generated-scripts/sharedConstants';
 import matchJSON from '@cdo/static/tutor/match_example.json';
 import multiSingleJson from '@cdo/static/tutor/multiple_choice_example.json';
 import multiMultiJson from '@cdo/static/tutor/multiple_choice_multi_select.json';

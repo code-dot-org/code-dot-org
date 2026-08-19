@@ -1,11 +1,11 @@
 import Link from '@code-dot-org/component-library/link';
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';

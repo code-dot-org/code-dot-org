@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -8,7 +9,6 @@ import manageStudents, {
   blankStudentTransfer,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import wizardPng from '@cdo/static/skins/studio/wizard_thumb.png';
 import {reduxStore} from '@cdo/storybook/decorators';
 

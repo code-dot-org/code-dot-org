@@ -1,3 +1,4 @@
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {type SpeechToTextAnalytics} from '@cdo/apps/aiComponentLibrary/userMessageEditor/speechToTextButton/SpeechToTextButton';
@@ -7,7 +8,6 @@ import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2Redux
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   selectIsWaitingForChatResponse,

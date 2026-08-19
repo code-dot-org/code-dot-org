@@ -1,12 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
 import {AccountSettingsSectionUrlParams} from '@cdo/apps/accounts/accountUpdateConstants';
 import {UserInfoForWorkshop} from '@cdo/apps/code-studio/pd/workshops/types';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import style from './userPassport.module.scss';
 

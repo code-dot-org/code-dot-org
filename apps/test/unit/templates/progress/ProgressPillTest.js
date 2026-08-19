@@ -1,3 +1,4 @@
+import {LevelStatus, LevelKind} from '@code-dot-org/shared-constants';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
@@ -6,7 +7,6 @@ import * as utils from '@cdo/apps/code-studio/utils';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
-import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

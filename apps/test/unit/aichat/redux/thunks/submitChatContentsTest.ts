@@ -1,3 +1,8 @@
+import {
+  AiChatClientTypes,
+  AiChatModelIds,
+  AiInteractionStatus as Status,
+} from '@code-dot-org/shared-constants';
 import {configureStore} from '@reduxjs/toolkit';
 
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
@@ -7,11 +12,6 @@ import {submitChatContents} from '@cdo/apps/aichat/redux/thunks/submitChatConten
 import {CompletedChatMessage, ModelParameters} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
-import {
-  AiChatClientTypes,
-  AiChatModelIds,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
 
 const mockMetricsReporter = {
   incrementCounter: jest.fn(),

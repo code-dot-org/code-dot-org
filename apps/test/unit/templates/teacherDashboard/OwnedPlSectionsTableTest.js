@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -12,7 +13,6 @@ import {UnconnectedOwnedPlSectionsTable as OwnedPlSectionsTable} from '@cdo/apps
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 const plSectionRowData = [

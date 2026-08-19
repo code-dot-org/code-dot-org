@@ -1,3 +1,4 @@
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
 import {useEffect, useMemo, useRef, useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -11,7 +12,6 @@ import {
   US_COUNTRY_CODE,
   ZIP_REGEX,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolDropdownOption, SchoolInfoInitialState} from '../types';
 import {constructSchoolOption} from '../utils/constructSchoolOption';

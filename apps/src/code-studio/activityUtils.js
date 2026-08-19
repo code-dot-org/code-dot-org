@@ -1,9 +1,9 @@
 /**
  * A set of utility functions made for dealing with activities easier.
  */
+import {LevelStatus} from '@code-dot-org/shared-constants';
 
 import {TestResults} from '@cdo/apps/constants';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * See ApplicationHelper#activity_css_class.

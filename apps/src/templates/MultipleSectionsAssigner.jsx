@@ -1,5 +1,6 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Modal from '@code-dot-org/component-library/modal';
+import {AiChatToolsDependency} from '@code-dot-org/shared-constants';
 import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -14,7 +15,6 @@ import {
   unassignSection,
   sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';

@@ -1,3 +1,4 @@
+import {StudentGradeLevels} from '@code-dot-org/shared-constants';
 import $ from 'jquery';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -23,13 +24,11 @@ import {
   translatedCourseOfferingDeviceCompatibilityLevels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import DatePicker from '../sharedComponents/DatePicker';
 
 import ImageInput from './ImageInput';
-
 import 'react-select/dist/react-select.css';
 
 const translatedNoneOption = `(${i18n.none()})`;

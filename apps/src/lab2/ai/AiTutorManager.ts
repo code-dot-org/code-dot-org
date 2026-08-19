@@ -1,3 +1,9 @@
+import {
+  AiChatClientTypes,
+  AiChatModelIds,
+  AiInteractionStatus as Status,
+} from '@code-dot-org/shared-constants';
+
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
 import {PendingChatMessage, AichatContext} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
@@ -6,11 +12,6 @@ import {
   FeedbackData,
   logAiInteractionFeedback,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
-import {
-  AiChatClientTypes,
-  AiChatModelIds,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import {AiChatModelIdType} from './ai-tutor-model-id';
 

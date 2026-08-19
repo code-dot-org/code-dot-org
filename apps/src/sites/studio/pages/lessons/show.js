@@ -1,3 +1,4 @@
+import {AiDiffContext} from '@code-dot-org/shared-constants';
 import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -27,7 +28,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(function () {
   prepareBlocklyForEmbeddingAllEnvironments();

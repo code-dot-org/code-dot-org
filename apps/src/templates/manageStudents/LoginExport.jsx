@@ -1,8 +1,8 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 const CSV_LOGIN_INFO_HEADERS = [

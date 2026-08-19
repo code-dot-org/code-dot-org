@@ -1,3 +1,4 @@
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -9,7 +10,6 @@ import React, {
   useRef,
 } from 'react';
 
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {

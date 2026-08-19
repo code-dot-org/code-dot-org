@@ -1,3 +1,7 @@
+import {
+  LevelStatus,
+  UserLevelInteractions,
+} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
@@ -9,10 +13,6 @@ import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {
-  LevelStatus,
-  UserLevelInteractions,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
 

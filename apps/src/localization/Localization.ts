@@ -1,4 +1,5 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
+import {DefaultLocale} from '@code-dot-org/shared-constants';
 import {EventEmitter} from 'events';
 import {get} from 'js-cookie';
 
@@ -8,7 +9,6 @@ import type {
   LocalizeSetLanguageData,
 } from '@cdo/apps/localization/Localize';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 
 declare global {
   interface Window {

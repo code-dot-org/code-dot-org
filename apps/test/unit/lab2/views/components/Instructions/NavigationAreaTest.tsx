@@ -1,4 +1,5 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
@@ -20,7 +21,6 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 // Minimal prop shapes for mock child components.
 interface ContinueButtonMockProps {

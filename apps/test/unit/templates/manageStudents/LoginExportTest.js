@@ -1,8 +1,8 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import LoginExport from '@cdo/apps/templates/manageStudents/LoginExport';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 const DEFAULT_PROPS = {
   sectionCode: 'ABCDEF',

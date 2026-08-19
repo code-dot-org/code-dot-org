@@ -1,3 +1,7 @@
+import {
+  StudentGradeLevels,
+  SectionLoginType,
+} from '@code-dot-org/shared-constants';
 import {orderBy, sortBy, random} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -9,10 +13,6 @@ import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
-import {
-  StudentGradeLevels,
-  SectionLoginType,
-} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';

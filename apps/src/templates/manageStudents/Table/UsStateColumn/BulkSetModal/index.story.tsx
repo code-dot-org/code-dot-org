@@ -1,10 +1,10 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {action} from '@storybook/addon-actions';
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import {reduxStoreDecorator} from '@cdo/storybook/decorators';
 
 import BulkUpdateModal from './index';

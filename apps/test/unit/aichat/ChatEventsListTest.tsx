@@ -1,3 +1,7 @@
+import {
+  AiChatTeacherFeedback,
+  AiInteractionStatus,
+} from '@code-dot-org/shared-constants';
 import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
@@ -6,10 +10,6 @@ import {CompletedChatMessage} from '@cdo/apps/aichat/types';
 import ChatEventsList from '@cdo/apps/aichat/views/ChatEventsList';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {
-  AiChatTeacherFeedback,
-  AiInteractionStatus,
-} from '@cdo/generated-scripts/sharedConstants';
 
 const TEACHER_FLAGGED_PLACEHOLDER =
   'This message has been flagged by your teacher.';

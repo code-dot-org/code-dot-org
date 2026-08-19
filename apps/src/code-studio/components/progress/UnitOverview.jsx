@@ -1,3 +1,4 @@
+import {AiChatToolsDependency} from '@code-dot-org/shared-constants';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -22,7 +23,6 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import UnitCalendarGrid from './UnitCalendarGrid';

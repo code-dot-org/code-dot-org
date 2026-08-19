@@ -1,8 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {PracticeProblemTypes} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import React, {FC, useState} from 'react';
-
-import {PracticeProblemTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   MatchSolution,

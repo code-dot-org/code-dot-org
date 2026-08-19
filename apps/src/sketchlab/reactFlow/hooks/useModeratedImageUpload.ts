@@ -1,3 +1,4 @@
+import {SafeAndSupportedImageTypes} from '@code-dot-org/shared-constants';
 import {useCallback, useMemo, useState} from 'react';
 
 import {useFlaggedImage} from '@cdo/apps/lab2/hooks/useFlaggedImage';
@@ -6,7 +7,6 @@ import {unflagProjectChannel} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks'
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {ImageNodeType, SketchLabNode} from '../types';
 import {

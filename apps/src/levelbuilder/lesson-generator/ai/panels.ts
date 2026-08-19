@@ -1,10 +1,10 @@
+import {SafeAndSupportedImageTypes} from '@code-dot-org/shared-constants';
 import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {LevelContext} from '../../curriculum-generator/ai/context';
 import {

@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -6,7 +7,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {setSecretImage, setSecretWords} from './manageStudentsRedux';

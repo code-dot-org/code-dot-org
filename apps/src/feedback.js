@@ -1,8 +1,8 @@
 // Globals used in this file:
 //   Blockly
-
 import Link from '@code-dot-org/component-library/link';
 import Modal from '@code-dot-org/component-library/modal';
+import {UserLevelInteractions} from '@code-dot-org/shared-constants';
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
@@ -20,7 +20,6 @@ import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/use
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
-import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
 import project from './code-studio/initApp/project';

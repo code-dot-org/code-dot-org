@@ -1,4 +1,5 @@
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
+import {LocalizeToI18nLocales} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -8,7 +9,6 @@ import localization from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
-import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
 
 import {getStore} from '../redux';
 

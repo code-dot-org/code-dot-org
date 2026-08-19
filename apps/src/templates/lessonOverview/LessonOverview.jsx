@@ -1,3 +1,4 @@
+import {DefaultLocale} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -23,7 +24,6 @@ import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
-import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Announcements from '../../code-studio/components/progress/Announcements';

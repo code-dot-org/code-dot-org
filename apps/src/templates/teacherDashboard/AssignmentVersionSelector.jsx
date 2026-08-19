@@ -1,3 +1,7 @@
+import {
+  LocaleFallbacks,
+  LocalizeToI18nLocales,
+} from '@code-dot-org/shared-constants';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
@@ -5,10 +9,6 @@ import React, {useState, useEffect, useRef} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import {useLocalization} from '@cdo/apps/localization';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
-import {
-  LocaleFallbacks,
-  LocalizeToI18nLocales,
-} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import PopUpMenu, {STANDARD_PADDING} from '../../sharedComponents/PopUpMenu';

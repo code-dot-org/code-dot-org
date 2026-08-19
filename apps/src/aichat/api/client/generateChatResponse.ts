@@ -1,14 +1,14 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
+import {
+  AiRequestExecutionStatus,
+  SafeAndSupportedImageTypes,
+} from '@code-dot-org/shared-constants';
 import {jsonSchema, Output, type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {
-  AiRequestExecutionStatus,
-  SafeAndSupportedImageTypes,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   ChatAsset,

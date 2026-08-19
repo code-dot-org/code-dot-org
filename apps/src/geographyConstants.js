@@ -1,4 +1,4 @@
-import {UsStates} from '@cdo/generated-scripts/sharedConstants';
+import {UsStates} from '@code-dot-org/shared-constants';
 
 export const STATE_CODES = Object.keys(UsStates).sort();
 

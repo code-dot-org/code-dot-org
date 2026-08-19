@@ -2,10 +2,10 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import Link from '@code-dot-org/component-library/link';
 import {RadioButtonsGroup} from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
+import {UserTypes} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {pegasus} from '../../lib/util/urlHelpers';

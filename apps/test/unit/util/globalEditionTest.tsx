@@ -1,9 +1,10 @@
+import {GlobalEditionDefaultRegion} from '@code-dot-org/shared-constants';
+
 import {
   getGlobalEditionRegion,
   currentGlobalConfiguration,
 } from '@cdo/apps/util/globalEdition';
 import {Regions} from '@cdo/generated-scripts/globalRegionConstants';
-import {GlobalEditionDefaultRegion} from '@cdo/generated-scripts/sharedConstants';
 
 const setGlobalEditionRegion = (region: string) => {
   document.documentElement.dataset.geRegion = region;

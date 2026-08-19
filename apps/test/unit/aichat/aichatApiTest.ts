@@ -1,4 +1,11 @@
 import {
+  AiChatClientTypes,
+  AiChatModelIds,
+  AiInteractionStatus,
+  AiRequestExecutionStatus,
+} from '@code-dot-org/shared-constants';
+
+import {
   GetChatRequestResponse,
   postAichatCompletionMessage,
 } from '@cdo/apps/aichat/aichatApi';
@@ -14,12 +21,6 @@ import {
   default as HttpClient,
   type GetResponse,
 } from '@cdo/apps/util/HttpClient';
-import {
-  AiChatClientTypes,
-  AiChatModelIds,
-  AiInteractionStatus,
-  AiRequestExecutionStatus,
-} from '@cdo/generated-scripts/sharedConstants';
 
 describe('aichatApi', () => {
   let chatMessage: PendingChatMessage,

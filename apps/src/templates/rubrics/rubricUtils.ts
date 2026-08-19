@@ -1,5 +1,6 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
+
 import {LevelWithProgress} from '@cdo/apps/code-studio/teacherPanelTypes';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 export function computeBubbleStatus(
   level: LevelWithProgress | undefined,

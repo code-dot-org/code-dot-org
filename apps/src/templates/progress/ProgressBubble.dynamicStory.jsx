@@ -1,4 +1,4 @@
-import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import {LevelKind, LevelStatus} from '@code-dot-org/shared-constants';
 
 const statuses = Object.values(LevelStatus);
 

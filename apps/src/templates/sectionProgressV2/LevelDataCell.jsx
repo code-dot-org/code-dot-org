@@ -1,3 +1,4 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import {Link} from '@dsco_/link';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -7,7 +8,6 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';

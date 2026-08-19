@@ -1,3 +1,4 @@
+import {AiInteractionStatus as Status} from '@code-dot-org/shared-constants';
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {buildMessagesForModelHistory} from '@cdo/apps/aichat/helpers/buildMessagesForModelHistory';
@@ -23,7 +24,6 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {Weblab2LevelProperties} from '@cdo/apps/weblab2/types';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';

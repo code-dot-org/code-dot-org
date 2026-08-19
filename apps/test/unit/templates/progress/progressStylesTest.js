@@ -1,5 +1,6 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
+
 import {levelProgressStyle} from '@cdo/apps/templates/progress/progressStyles';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 // Semantic-token strings the live styles resolve to (see progressStyles.js).
 // Tests previously asserted on exact legacy hex literals from util/color;

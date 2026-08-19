@@ -1,8 +1,9 @@
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
+
 import {
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolDropdownOption} from '../types';
 

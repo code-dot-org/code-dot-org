@@ -1,6 +1,7 @@
+import {AbuseConstants} from '@code-dot-org/shared-constants';
+
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
-import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
 
 // Fixed bookkeeping resource under metadata/. The flagged *asset* name is in
 // the JSON body ({"filename":"..."}), not in this path.

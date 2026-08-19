@@ -1,3 +1,9 @@
+import {
+  AllowedFontHostnames,
+  AllowedHostnameSuffixes,
+  AllowedImageHostnameSuffixes,
+} from '@code-dot-org/shared-constants';
+
 import {buildAnswerTypeRouterSection} from '@cdo/apps/aiTutor/helpers/aiTutorPromptHelpers';
 import {DEFAULT_ANSWER_TYPES} from '@cdo/apps/weblab2/constants';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
@@ -10,11 +16,6 @@ import {
 } from '@cdo/apps/weblab2/prompts/promptMaps';
 import securityIntro from '@cdo/apps/weblab2/prompts/securityIntro.md';
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
-import {
-  AllowedFontHostnames,
-  AllowedHostnameSuffixes,
-  AllowedImageHostnameSuffixes,
-} from '@cdo/generated-scripts/sharedConstants';
 
 type AnswerTypeGroup = {
   heading: string;

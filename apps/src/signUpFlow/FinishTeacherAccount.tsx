@@ -6,6 +6,7 @@ import {
 } from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
+import {UserTypes, EducatorRoles} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
@@ -19,7 +20,6 @@ import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import GradeLevelChips from '@cdo/apps/templates/sectionsRefresh/GradeLevelChips';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import trackEvent from '@cdo/apps/util/trackEvent';
-import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
 import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
 import {buildSchoolData} from '../schoolInfo/utils/buildSchoolData';

@@ -1,9 +1,9 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 import {UnconnectedLevelDataCell} from '@cdo/apps/templates/sectionProgressV2/LevelDataCell';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 const TEST_URL = 'https://www.test.com/';
 const PROGRESS = {

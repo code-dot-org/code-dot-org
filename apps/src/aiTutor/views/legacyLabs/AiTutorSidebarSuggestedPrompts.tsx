@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {AiChatClientTypes} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
@@ -10,7 +11,6 @@ import {AnalyticsProperties} from '@cdo/apps/aichat/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {useAiTutorModelParameters} from '../../hooks/useAiTutorModelParameters';
 import {AiTutorSuggestedPrompt} from '../../suggestedPrompts';

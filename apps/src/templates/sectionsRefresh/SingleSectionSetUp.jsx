@@ -1,5 +1,6 @@
 import Chips from '@code-dot-org/component-library/chips';
 import TextField from '@code-dot-org/component-library/textField';
+import {StudentGradeLevels} from '@code-dot-org/shared-constants';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -9,7 +10,6 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
-import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import DemoChip from '../DemoChip';

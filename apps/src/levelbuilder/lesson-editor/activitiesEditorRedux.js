@@ -1,3 +1,4 @@
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -6,7 +7,6 @@ import {
   scriptLevelShape,
   tipShape,
 } from '@cdo/apps/levelbuilder/shapes';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 const INIT_LEVEL_SEARCHING = 'activitiesEditor/INIT_LEVEL_SEARCHING';
 const INIT_UNIT_INFO = 'activitiesEditor/INIT_COURSE_INFO';

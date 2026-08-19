@@ -1,3 +1,4 @@
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
 import {render, screen, waitFor, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
@@ -5,7 +6,6 @@ import React from 'react';
 import PodcastsBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/PodcastsBox';
 import {ReflectionData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,

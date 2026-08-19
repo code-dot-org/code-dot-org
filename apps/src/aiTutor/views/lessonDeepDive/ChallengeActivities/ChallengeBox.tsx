@@ -1,11 +1,11 @@
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {ChallengeTypes} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useCallback, useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {Challenge, challengeValidator, ExplanationTypes} from '../types';
 

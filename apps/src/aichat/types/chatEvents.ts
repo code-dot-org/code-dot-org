@@ -1,7 +1,8 @@
+import {AiInteractionStatus} from '@code-dot-org/shared-constants';
+
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {ChatAsset} from './assets';
 import {FeedbackValue} from './feedback';

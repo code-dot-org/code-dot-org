@@ -1,6 +1,7 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
+import {AiChatToolsDependency} from '@code-dot-org/shared-constants';
 import {TextLink} from '@dsco_/link';
 import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
@@ -8,7 +9,6 @@ import React, {useEffect, useRef} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {

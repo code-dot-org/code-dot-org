@@ -1,6 +1,5 @@
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import React from 'react';
-
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import LearningGoal from './LearningGoal';
 

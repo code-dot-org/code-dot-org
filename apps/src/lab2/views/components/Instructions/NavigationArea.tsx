@@ -1,5 +1,6 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 
@@ -15,7 +16,6 @@ import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
 import TextToSpeech from '../TextToSpeech';

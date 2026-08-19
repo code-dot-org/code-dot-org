@@ -1,10 +1,10 @@
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import RubricsContainer from '@cdo/apps/levelbuilder/rubrics/RubricsContainer';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {

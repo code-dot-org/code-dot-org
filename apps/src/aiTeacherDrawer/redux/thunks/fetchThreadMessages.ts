@@ -1,13 +1,13 @@
+import {
+  AiDiffArtifactType,
+  AiDiffContext,
+  AiInteractionStatus as Status,
+} from '@code-dot-org/shared-constants';
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {RootState} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {
-  AiDiffArtifactType,
-  AiDiffContext,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   THREAD_TYPES,

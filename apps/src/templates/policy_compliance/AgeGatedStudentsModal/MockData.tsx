@@ -1,5 +1,6 @@
+import {ChildAccountComplianceStates} from '@code-dot-org/shared-constants';
+
 import {RowType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
 export const MockStudentData = [
   {

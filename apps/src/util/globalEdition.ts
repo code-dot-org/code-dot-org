@@ -1,5 +1,6 @@
+import {GlobalEditionDefaultRegion} from '@code-dot-org/shared-constants';
+
 import {Regions} from '@cdo/generated-scripts/globalRegionConstants';
-import {GlobalEditionDefaultRegion} from '@cdo/generated-scripts/sharedConstants';
 
 interface RegionConfigurationObject {
   [key: string]: object | boolean;

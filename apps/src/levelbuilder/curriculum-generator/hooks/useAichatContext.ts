@@ -1,7 +1,7 @@
+import {AiChatClientTypes} from '@code-dot-org/shared-constants';
 import {useEffect} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 // The AI gateway's access-token request demands an AichatContext; the
 // generator pages aren't inside an aichat lab but reuse the same

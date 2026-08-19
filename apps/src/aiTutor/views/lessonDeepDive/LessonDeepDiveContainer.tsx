@@ -8,12 +8,12 @@ import {
   ValidatedLevelsBox,
   WelcomeBox,
 } from '@code-dot-org/lesson-deep-dive';
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
 import React, {FC, useCallback, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import FizzyButton from './FizzyButton';
 import ReflectionBox from './Reflection/ReflectionBox';

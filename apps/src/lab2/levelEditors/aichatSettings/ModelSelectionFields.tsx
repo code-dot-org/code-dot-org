@@ -1,12 +1,12 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import React, {useContext, useState, useCallback, useMemo} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import {Visibility} from '@cdo/apps/aichatLab/types';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import CollapsibleFieldSection from './CollapsibleFieldSection';
 import {UpdateContext} from './UpdateContext';

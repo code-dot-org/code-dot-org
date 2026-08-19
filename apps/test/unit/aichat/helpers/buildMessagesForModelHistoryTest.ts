@@ -1,3 +1,5 @@
+import {AiInteractionStatus} from '@code-dot-org/shared-constants';
+
 import {buildMessagesForModelHistory} from '@cdo/apps/aichat/helpers/buildMessagesForModelHistory';
 import {
   ChatEvent,
@@ -7,7 +9,6 @@ import {
   AI_TUTOR_VERSION_ACTION_REJECT,
 } from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 const makeCompletedMessage = (
   overrides: Partial<CompletedChatMessage> = {}

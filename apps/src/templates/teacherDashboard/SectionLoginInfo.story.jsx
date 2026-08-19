@@ -1,7 +1,7 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import SectionLoginInfo from './SectionLoginInfo';

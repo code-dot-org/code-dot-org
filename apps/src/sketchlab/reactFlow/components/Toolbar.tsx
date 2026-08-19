@@ -1,9 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {SafeAndSupportedImageTypes} from '@code-dot-org/shared-constants';
 import {Divider, IconButton, Paper, Tooltip} from '@mui/material';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {TOUR_GROUP, TOUR_GROUP_ATTR} from '../constants';
 import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';

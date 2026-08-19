@@ -1,9 +1,10 @@
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   AiDiffContext,
   AiDiffArtifactType,
   AiInteractionStatus,
-} from '@cdo/generated-scripts/sharedConstants';
+} from '@code-dot-org/shared-constants';
+
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 
 import {ResponseValidator} from '../util/HttpClient';
 

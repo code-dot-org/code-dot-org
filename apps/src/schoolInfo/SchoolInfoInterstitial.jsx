@@ -1,3 +1,4 @@
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
@@ -5,7 +6,6 @@ import React, {useEffect, useMemo, useState} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../templates/BaseDialog';

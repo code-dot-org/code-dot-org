@@ -1,10 +1,10 @@
 import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {ThemeProvider} from '@mui/material/styles';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {UnconnectedParentLetter as ParentLetter} from '@cdo/apps/templates/teacherDashboard/ParentLetter';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 const renderWithTheme = ui =>

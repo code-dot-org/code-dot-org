@@ -1,9 +1,9 @@
+import {NonSchoolOptions} from '@code-dot-org/shared-constants';
 import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 describe('SchoolDataInputs', () => {

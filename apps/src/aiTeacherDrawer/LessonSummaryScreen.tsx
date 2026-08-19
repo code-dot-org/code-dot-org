@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {AiDiffContext} from '@code-dot-org/shared-constants';
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
@@ -7,7 +8,6 @@ import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import {SuggestedLesson} from './SectionPodcastCard';
 

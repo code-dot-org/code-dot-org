@@ -1,12 +1,13 @@
+import {
+  AiChatClientTypes,
+  AiInteractionStatus,
+} from '@code-dot-org/shared-constants';
+
 import * as aichatApi from '@cdo/apps/aichat/aichatApi';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import {AichatContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {
-  AiChatClientTypes,
-  AiInteractionStatus,
-} from '@cdo/generated-scripts/sharedConstants';
 
 describe('ChatEventLogger', () => {
   let userChatMessage: CompletedChatMessage;

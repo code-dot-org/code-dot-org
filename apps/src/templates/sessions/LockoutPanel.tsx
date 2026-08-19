@@ -1,3 +1,4 @@
+import {ChildAccountComplianceStates} from '@code-dot-org/shared-constants';
 import cookies from 'js-cookie';
 import React, {CSSProperties, useState, useEffect, useReducer} from 'react';
 import {useSelector} from 'react-redux';
@@ -12,7 +13,6 @@ import parentalPermissionRequestReducer, {
 import {RootState} from '@cdo/apps/types/redux';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import usePrevious from '@cdo/apps/util/usePrevious';
-import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
 import headerImage from '@cdo/static/common_images/penguin/yelling.png';

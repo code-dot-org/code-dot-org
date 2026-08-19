@@ -1,3 +1,5 @@
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
+
 import {sendAnalytics} from '@cdo/apps/aichat/redux/thunks/sendAnalytics';
 import {initializeAiCustomizations} from '@cdo/apps/aichatLab/redux';
 import {setInitialConfiguration} from '@cdo/apps/aichatLab/redux/slice';
@@ -14,7 +16,6 @@ import {
 } from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aichat/redux/thunks/sendAnalytics', () => ({
   sendAnalytics: jest.fn(),

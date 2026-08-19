@@ -1,6 +1,5 @@
+import {SafeAndSupportedImageTypes} from '@code-dot-org/shared-constants';
 import {extensions as mimeToExtensions} from 'mime-types';
-
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {AppName, ProjectType} from './types';
 

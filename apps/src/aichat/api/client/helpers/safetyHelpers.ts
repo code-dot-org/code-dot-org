@@ -1,3 +1,7 @@
+import {
+  AiChatModelIds,
+  SafeAndSupportedImageTypes,
+} from '@code-dot-org/shared-constants';
 import {type GeneratedFile, type ModelMessage, Output} from 'ai';
 import z from 'zod/v3';
 
@@ -6,10 +10,6 @@ import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
-import {
-  AiChatModelIds,
-  SafeAndSupportedImageTypes,
-} from '@cdo/generated-scripts/sharedConstants';
 
 import {prepareGeneratedFile} from './fileHelpers';
 import {getModel} from './modelHelpers';

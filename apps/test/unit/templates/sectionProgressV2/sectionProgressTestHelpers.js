@@ -1,3 +1,5 @@
+import {LevelStatus, SectionLoginType} from '@code-dot-org/shared-constants';
+
 import {TestResults} from '@cdo/apps/constants';
 import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
 import locales from '@cdo/apps/redux/localesRedux';
@@ -14,10 +16,6 @@ import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {
-  LevelStatus,
-  SectionLoginType,
-} from '@cdo/generated-scripts/sharedConstants';
 
 export function createStore(numStudents, numLessons, studentList = null) {
   const scriptData = getScriptData(numLessons);

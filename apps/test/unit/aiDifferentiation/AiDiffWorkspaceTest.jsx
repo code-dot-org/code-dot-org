@@ -1,4 +1,8 @@
 import {
+  AiInteractionStatus as Status,
+  AiDiffContext,
+} from '@code-dot-org/shared-constants';
+import {
   render,
   screen,
   fireEvent,
@@ -37,10 +41,6 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {
-  AiInteractionStatus as Status,
-  AiDiffContext,
-} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 jest.mock('@react-pdf/renderer', () => {

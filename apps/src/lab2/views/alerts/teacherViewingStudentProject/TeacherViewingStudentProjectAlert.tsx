@@ -1,10 +1,10 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {LevelStatus} from '@code-dot-org/shared-constants';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './teacherViewingStudentProjectAlert.module.scss';
 

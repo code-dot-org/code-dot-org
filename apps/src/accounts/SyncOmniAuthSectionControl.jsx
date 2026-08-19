@@ -1,3 +1,4 @@
+import {SectionLoginType} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -22,7 +23,6 @@ import {
   ltiSyncResult,
   syncEnabled,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import * as utils from '../utils';

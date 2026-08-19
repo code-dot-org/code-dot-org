@@ -5,6 +5,7 @@
  *
  */
 import * as Observability from '@code-dot-org/core/plugins/observability';
+import {UserLevelInteractions} from '@code-dot-org/shared-constants';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
@@ -18,7 +19,6 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
-import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import commonMsg from '@cdo/locale';
 
 import annotationList from '../acemode/annotationList';

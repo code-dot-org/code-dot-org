@@ -1,4 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import React, {useCallback, useState} from 'react';
 
@@ -22,7 +23,6 @@ import {
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import CollapsibleFieldSection from './CollapsibleFieldSection';
 import FieldSection from './FieldSection';

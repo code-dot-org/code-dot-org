@@ -1,6 +1,5 @@
 import {type VocabularyItem} from '@code-dot-org/lesson-deep-dive';
-
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
 
 import {ResponseValidator} from '../../../util/HttpClient';
 

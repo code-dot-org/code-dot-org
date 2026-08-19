@@ -1,3 +1,4 @@
+import {AiInteractionStatus as Status} from '@code-dot-org/shared-constants';
 import moment from 'moment';
 import React from 'react';
 
@@ -16,7 +17,6 @@ import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWit
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 const timestampToDateTime = (timestamp: number) =>
   moment(timestamp).format('YYYY-MM-DD HH:mm');

@@ -1,10 +1,10 @@
+import {RubricUnderstandingLevels} from '@code-dot-org/shared-constants';
 import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import EvidenceDescriptions from '@cdo/apps/levelbuilder/rubrics/EvidenceDescriptions';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('EvidenceDescriptions', () => {
   let defaultProps;

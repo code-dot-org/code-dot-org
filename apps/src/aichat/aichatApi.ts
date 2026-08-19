@@ -1,9 +1,10 @@
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus,
   AiRequestExecutionStatus,
   AiChatReadTimeouts,
-} from '@cdo/generated-scripts/sharedConstants';
+} from '@code-dot-org/shared-constants';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {Role} from '../aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '../types/utils';

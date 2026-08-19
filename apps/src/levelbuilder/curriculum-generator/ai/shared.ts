@@ -1,5 +1,6 @@
+import {AiChatModelIds} from '@code-dot-org/shared-constants';
+
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 // Stable identifiers for each prompt site, used as a console.log prefix so
 // debugging conversations can refer to e.g. "the panels-plan prompt" without
