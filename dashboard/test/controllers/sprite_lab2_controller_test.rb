@@ -7,6 +7,8 @@ class SpriteLab2ControllerTest < ActionController::TestCase
 
   setup do
     @script = create(:script, :in_single_unit_course)
+    # A script that is not part of a unit group, the /s/allthethings shape.
+    @loose_script = create(:script)
     @level = create(:level)
 
     @teacher = create(:teacher)
@@ -32,17 +34,45 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_equal @student.name, scenes.first['ownerName']
   end
 
-  # Every project made by walking a unit is keyed to that unit, so omitting the
-  # script id narrows the lookup to channels created outside one and finds
-  # nothing. This is what made the block's dropdown come up empty in production.
-  test 'omitting the script id misses a unit-scoped project' do
+  # Playing the level outside any script must still see a project made inside
+  # one. Scoping strictly to the requested script is what left the block's
+  # dropdown empty in production.
+  test 'finds a unit-scoped project when the request carries no script id' do
     stub_scenes channel_for(@student_storage_id, @script.id)
 
     sign_in @teacher
     get :section_scenes, params: {level_id: @level.id}
 
     assert_response :success
-    assert_empty JSON.parse(response.body)['scenes']
+    assert_equal 1, JSON.parse(response.body)['scenes'].length
+  end
+
+  # The same level in a script that is not in a unit group, reached while
+  # playing it in one that is.
+  test 'finds a project made through a different script' do
+    stub_scenes channel_for(@student_storage_id, @loose_script.id)
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_equal 1, JSON.parse(response.body)['scenes'].length
+  end
+
+  # With a project in each, the one for the script being played wins, so a
+  # classmate's unrelated project elsewhere doesn't shadow the relevant one.
+  test 'prefers the project for the script being played' do
+    wanted = channel_for(@student_storage_id, @script.id)
+    other = channel_for(@student_storage_id, @loose_script.id)
+    stub_scenes wanted, scene_id: 'wanted-scene'
+    stub_scenes other, scene_id: 'other-scene'
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    scenes = JSON.parse(response.body)['scenes']
+    assert_equal(['wanted-scene'], scenes.map {|scene| scene['sceneId']})
   end
 
   # Channels predating the script_id column have a null one; passing a script id
@@ -52,6 +82,18 @@ class SpriteLab2ControllerTest < ActionController::TestCase
 
     sign_in @teacher
     get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_equal 1, JSON.parse(response.body)['scenes'].length
+  end
+
+  # Hitting /levels/[id] directly while developing, for a project made the same
+  # way: no script at either end.
+  test 'finds a script-less project with no script id in the request' do
+    stub_scenes channel_for(@student_storage_id, nil)
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id}
 
     assert_response :success
     assert_equal 1, JSON.parse(response.body)['scenes'].length
@@ -74,8 +116,8 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     ).channel
   end
 
-  private def stub_scenes(channel)
-    body = {scenes: [{id: 'story-scene', name: 'Story'}]}.to_json
+  private def stub_scenes(channel, scene_id: 'story-scene')
+    body = {scenes: [{id: scene_id, name: 'Story'}]}.to_json
     SourceBucket.any_instance.stubs(:get).with(channel, 'main.json').returns(
       {
         status: 'FOUND',

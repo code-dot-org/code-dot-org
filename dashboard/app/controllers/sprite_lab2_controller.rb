@@ -69,12 +69,20 @@ class SpriteLab2Controller < ApplicationController
   end
 
   # The user's project channel + parsed sources for a level, or [nil, nil].
-  # A project made inside a unit has its channel token keyed to that unit, so
-  # without the script id this finds only channels created outside one.
+  #
+  # One level can be reached through several scripts and outside any script,
+  # and each of those gets its own channel. Prefer the script this request came
+  # from, then a script-less channel, then any: the block's dropdown should
+  # work from wherever the level is being played, rather than going empty
+  # because a classmate reached the level by a different route.
   private def project_sources_for(user, level, script_id = nil)
     storage_id = storage_id_for_user_id(user.id)
     return [nil, nil] unless storage_id
-    channel_token = ChannelToken.find_channel_token(level, storage_id, script_id)
+    tokens = ChannelToken.where(level: level.host_level, storage_id: storage_id).to_a
+    channel_token =
+      (script_id && tokens.find {|ct| ct.script_id.to_s == script_id.to_s}) ||
+      tokens.find {|ct| ct.script_id.nil?} ||
+      tokens.max_by {|ct| ct.script_id.to_i}
     return [nil, nil] unless channel_token
     source_data = SourceBucket.new.get(channel_token.channel, 'main.json')
     return [nil, nil] unless source_data[:status] == 'FOUND'
