@@ -226,6 +226,7 @@
     "@code-dot-org/piskel": "0.13.0-cdo.14",
     "@code-dot-org/redactable-markdown": "^0.10.0",
     "@code-dot-org/remark-plugins": "^2.0.1",
+    "@code-dot-org/shared-constants": "portal:../frontend/packages/shared-constants/",
     "@codemirror/autocomplete": "^6.18.6",
     "@codemirror/commands": "^6.8.0",
     "@codemirror/lang-css": "^6.3.1",
