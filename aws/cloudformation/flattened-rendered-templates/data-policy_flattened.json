@@ -1,0 +1,19 @@
+{
+  "Statement": [
+    {
+      "Action": "Update:*",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "Update:Delete",
+        "Update:Replace"
+      ],
+      "Effect": "Deny",
+      "Principal": "*",
+      "Resource": "LogicalResourceId/Tableau"
+    }
+  ]
+}
