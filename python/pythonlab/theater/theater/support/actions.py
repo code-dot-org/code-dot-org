@@ -2,6 +2,8 @@ from dataclasses import dataclass
 from enum import Enum, auto
 from typing import Optional
 
+import numpy as np
+
 from .color import Color
 from .font import Font, FontStyle
 from .image import Image
@@ -35,7 +37,7 @@ class ClearScene:
 
 @dataclass
 class PlaySound:
-  samples: list  # normalized float samples in [-1.0, 1.0]
+  samples: np.ndarray  # normalized float samples in [-1.0, 1.0]
   type: SceneActionType = SceneActionType.PLAY_SOUND
 
 

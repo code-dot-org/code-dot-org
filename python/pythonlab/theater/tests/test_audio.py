@@ -7,6 +7,7 @@ import pytest
 
 from theater.support.audio import (
   _MIN_CAPACITY,
+  as_samples,
   AudioWriter,
   read_samples_from_wav_bytes,
   truncate_samples,
@@ -72,6 +73,24 @@ def test_read_rejects_a_sound_past_the_length_ceiling():
   )
   with pytest.raises(ValueError):
     read_samples_from_wav_bytes(long_wav)
+
+
+@pytest.mark.parametrize(
+  "sound", [[0.5, 0.25], (0.5, 0.25), np.array([0.5, 0.25]), iter([0.5, 0.25])]
+)
+def test_as_samples_accepts_any_sequence_or_iterator(sound):
+  samples = as_samples(sound)
+  assert samples.dtype == np.float32
+  assert np.allclose(samples, [0.5, 0.25])
+
+
+def test_as_samples_copies_what_it_is_given():
+  # numpy hands back the same array for a same-dtype input unless told to copy,
+  # which would leave the caller holding the scene's samples.
+  original = np.array([0.5, 0.5], dtype=np.float32)
+  samples = as_samples(original)
+  original[0] = -1.0
+  assert samples[0] == 0.5
 
 
 def test_truncate_shortens_but_never_extends():

@@ -1,7 +1,7 @@
 from .instrument import Instrument, as_instrument
 from .support import actions
 from .support.actions import UNSPECIFIED
-from .support.audio import read_samples_from_file
+from .support.audio import as_samples, read_samples_from_file
 from .support.color import Color, as_color
 from .support.constants import (
   MAX_NOTE,
@@ -72,7 +72,7 @@ class Scene:
     if isinstance(sound, str):
       samples = read_samples_from_file(sound)
     else:
-      samples = list(sound)
+      samples = as_samples(sound)
     self._actions.append(actions.PlaySound(samples))
 
   def play_note(self, note, seconds, instrument=Instrument.PIANO):

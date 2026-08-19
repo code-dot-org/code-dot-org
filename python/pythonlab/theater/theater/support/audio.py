@@ -44,6 +44,19 @@ def read_samples_from_file(filename):
     return read_samples_from_wav_bytes(handle.read())
 
 
+def as_samples(sound):
+  """Snapshot a caller's samples as a float32 array.
+
+  A scene renders long after play_sound records it, so samples the student goes
+  on to change must not change what plays. An array rather than a list holds a
+  minute of audio in 10 MB instead of 106 MB and matches the timeline it lands
+  on; numpy cannot build one straight from a generator, hence the length check.
+  """
+  return np.array(
+    sound if hasattr(sound, "__len__") else list(sound), dtype=np.float32
+  )
+
+
 def truncate_samples(samples, length_seconds):
   """Trim samples to the given duration; leave shorter samples untouched."""
   # Clamp at zero: a negative length would otherwise trim from the end.

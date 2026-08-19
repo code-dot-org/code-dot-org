@@ -92,6 +92,22 @@ def test_play_sound_samples():
   assert len(samples) == 3
 
 
+def test_play_sound_does_not_follow_the_callers_list():
+  # The scene renders at play_scenes, long after this call, so a list the
+  # student goes on to change must not change what plays.
+  samples = [1.0, 1.0, 1.0]
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+  scene.play_sound(samples)
+  samples[0] = -1.0
+  samples.clear()
+
+  _gif, wav_bytes = render(scene.get_actions())
+  rendered = read_samples_from_wav_bytes(wav_bytes)
+  assert len(rendered) == 3
+  assert rendered[0] > 0.99
+
+
 def test_draw_text_renders():
   scene = Scene()
   scene.set_text_color("black")
