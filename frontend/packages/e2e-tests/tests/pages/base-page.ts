@@ -118,6 +118,30 @@ export class BasePage {
   }
 
   /**
+   * Click the shared instructions overlay if present, no wait for it to hide.
+   * Mirrors the Cucumber step "I close the instructions overlay if it exists"
+   * (a plain click-if-visible; contrast LegacyBlocklyLab.waitForReady()'s
+   * fuller OK-button retry loop for levels that gate boot on this dismissal).
+   */
+  async closeInstructionsOverlayIfShown(): Promise<void> {
+    const overlay = this.page.locator('#overlay');
+    if (await overlay.isVisible()) {
+      await overlay.click();
+    }
+  }
+
+  /**
+   * Assert the free-response Attachments widget has settled past its
+   * transient "Loading..." placeholder. Cucumber: 'element ".uitest-attachment"
+   * is not visible' — run unconditionally on every case of the Scenario
+   * Outline it came from, not just free response; harmless elsewhere since
+   * toBeHidden() also passes when the selector matches nothing.
+   */
+  async assertAttachmentsWidgetSettled(): Promise<void> {
+    await expect(this.page.locator('.uitest-attachment')).toBeHidden();
+  }
+
+  /**
    * The root <html> element when the given Global Edition region is active.
    * Rails sets data-ge-region on <html> on every page, so this is page-agnostic
    * and is the authoritative signal that the region applied (stronger than the

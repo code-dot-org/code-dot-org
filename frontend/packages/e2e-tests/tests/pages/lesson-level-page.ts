@@ -3,6 +3,7 @@ import {expect, type Locator, type Page} from '@playwright/test';
 import {IntroVideoModalComponent} from '../components/intro-video-modal';
 import {progressBubbleShows} from '../shared/progress';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
+import {waitUntilStable} from '../shared/stability';
 
 import {BasePage} from './base-page';
 
@@ -60,6 +61,19 @@ export class LessonLevelPage extends BasePage {
   /** Navigate to a lab level. */
   async gotoLevel(params: LabLevelUrlParams): Promise<void> {
     await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
+  }
+
+  /**
+   * Resolve once the lesson-progress strip has rendered and stopped resizing.
+   * The server ships .header_level empty and a separate React mount fills it
+   * roughly 800ms after domcontentloaded. waitForHeaderSettled does not cover
+   * this: the shared header sets its own flags before domcontentloaded, so it
+   * reports settled while this strip is still blank, and a screenshot taken
+   * then captures an empty lesson header.
+   */
+  async waitForLessonHeaderRendered(): Promise<void> {
+    await expect(this.lessonProgress).toBeVisible();
+    await waitUntilStable(this.lessonProgress);
   }
 
   /** Open the header popup and wait for its progress cards to render. */
