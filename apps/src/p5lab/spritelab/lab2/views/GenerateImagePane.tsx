@@ -559,6 +559,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
 
       {dialogTarget && painting !== 'active' && (
         <ImageDetailsDialog
+          // Keyed by subject: when a paint-save turns 'new' into a real
+          // image, the dialog remounts and opens on the summary view.
+          key={dialogTarget}
           animKey={creating ? null : dialogTarget}
           name={targetProps?.name}
           thumb={

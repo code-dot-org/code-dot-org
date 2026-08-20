@@ -262,7 +262,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 disabled={generating || !!existing || !!lockedImageType}
               >
                 <legend>Type</legend>
-                {(['sprite', 'background', 'block'] as const).map(type => (
+                {(['background', 'sprite', 'block'] as const).map(type => (
                   <RadioButton
                     key={type}
                     name="generation-type"
