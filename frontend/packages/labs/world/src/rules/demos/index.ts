@@ -24,6 +24,7 @@ import {inputDemo} from './input';
 import {jumpDemo} from './jump';
 import {mouseDemo} from './mouse';
 import {physicsDemo} from './physics';
+import {scoreDemo} from './score';
 import {shootsDemo} from './shoots';
 import {solidDemo} from './solid';
 import {steeringDemo} from './steering';
@@ -42,6 +43,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   steering: steeringDemo,
   time: timeDemo,
   writing: writingDemo,
+  score: scoreDemo,
   input: inputDemo,
   mouse: mouseDemo,
   arrows: arrowsDemo,
