@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_08_13_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_08_20_000000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2120,6 +2120,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_13_120000) do
     t.datetime "updated_at", null: false
     t.index ["parent_id"], name: "index_quiz_questions_on_parent_id"
     t.index ["question_key"], name: "index_quiz_questions_on_question_key"
+    t.index ["question_name"], name: "index_quiz_questions_on_question_name", type: :fulltext
   end
 
   create_table "reference_guides", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

@@ -14,8 +14,9 @@
 #
 # Indexes
 #
-#  index_quiz_questions_on_parent_id     (parent_id)
-#  index_quiz_questions_on_question_key  (question_key)
+#  index_quiz_questions_on_parent_id      (parent_id)
+#  index_quiz_questions_on_question_key   (question_key)
+#  index_quiz_questions_on_question_name  (question_name)
 #
 class QuizQuestion < ApplicationRecord
   # Rails only auto-populates the STI discriminator for actual subclasses;

@@ -14,8 +14,9 @@
 #
 # Indexes
 #
-#  index_quiz_questions_on_parent_id     (parent_id)
-#  index_quiz_questions_on_question_key  (question_key)
+#  index_quiz_questions_on_parent_id      (parent_id)
+#  index_quiz_questions_on_question_key   (question_key)
+#  index_quiz_questions_on_question_name  (question_name)
 #
 class MatchQuestion < QuizQuestion
   # Pairs of prompts and answers the student must match to each other.
