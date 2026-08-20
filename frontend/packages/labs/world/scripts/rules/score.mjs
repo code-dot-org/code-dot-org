@@ -1,8 +1,10 @@
 import {
   add,
+  allWithTrait,
   atLeast,
   both,
   defineRule,
+  forEach,
   moduleFor,
   moreThan,
   n,
@@ -49,7 +51,22 @@ const rule = defineRule({
 // which is the normal case, since collecting does not stop — would otherwise
 // raise the event on every coin after it, and a handler that shows a banner
 // would show it again and again. \`won\` is what remembers, and resetting the
-// score is what forgets.`,
+// score is what forgets.
+//
+// IT DECLARES ITS EVENTS TWICE, which is Responds to Input's shape and is here
+// for the same reason. On the rule they are the WORLD's: the score changed,
+// and that is about nobody. Under "Watches the Score" they are an ACTOR's, and
+// only the actors that elected it are told.
+//
+// That is not a convenience. A world event registers on the world, and an
+// \`.actor\` file has no binding for one — so without the trait, the thing a
+// game most wants to do with a score has nowhere to be written. A scoreboard
+// is an actor:
+//
+//     when ⟨this actor⟩ sees the score change  →  set my text to the score
+//     when ⟨this actor⟩ sees the game won      →  set my text to "YOU WIN"
+//
+// and both of those are lines an actor can say.`,
 });
 
 // The tally itself. Writable, because a project may want to set it directly —
@@ -68,6 +85,28 @@ export const targetReached = rule.event(['the target is reached']);
 /** Raised whenever the score changes at all, by any amount, including down. */
 export const scoreChanged = rule.event(['the score changes']);
 
+/**
+ * Elected by whatever shows the score — a scoreboard, a banner, a door.
+ *
+ * It carries no properties, and does not need any: what an actor gets by
+ * electing it is the right to be TOLD, which is the whole of a display's job.
+ */
+const watches = rule.trait('Watches the Score');
+export const WatchesTheScore = rule.traitRef('Watches the Score');
+const seesChange = watches.event(['sees the score change']);
+const seesWin = watches.event(['sees the game won']);
+
+const each = rule.local('each', 'Actor');
+
+/** Tell the world, then the actors that asked to hear it. */
+const announce = (worldEvent, actorEvent) => [
+  worldEvent({}),
+  forEach(each, {
+    from: allWithTrait(rule.traitRef('Watches the Score')),
+    body: [actorEvent({}, each.get())],
+  }),
+];
+
 export const addToScore = rule.block({
   returns: 'none',
   description:
@@ -75,7 +114,7 @@ export const addToScore = rule.block({
   say: ['add', param('points'), 'to the score'],
   body: ({points}) => [
     score.set(add(score.of(), points.get())),
-    scoreChanged({}),
+    ...announce(scoreChanged, seesChange),
     note('Enough, and not already won? Then this is the moment.'),
     note('A target of zero is a game that cannot be won, only played.'),
     when([
@@ -84,7 +123,7 @@ export const addToScore = rule.block({
           both(moreThan(target.of(), n(0)), atLeast(score.of(), target.of())),
           not(won.of()),
         ),
-        [won.set(yes()), targetReached({})],
+        [won.set(yes()), ...announce(targetReached, seesWin)],
       ],
     ]),
   ],
@@ -100,7 +139,7 @@ export const resetScore = rule.block({
     note('one that remembered could never win again.'),
     score.set(n(0)),
     won.set(no()),
-    scoreChanged({}),
+    ...announce(scoreChanged, seesChange),
   ],
 });
 

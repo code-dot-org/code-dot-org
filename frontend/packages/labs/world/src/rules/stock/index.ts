@@ -150,7 +150,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     ability: 'Keeps Score',
     description:
       'A score the whole world shares, and an event the moment it reaches the target. Says when the game is won; what winning looks like is the project\u2019s to write.',
-    provides: [],
+    provides: ['Watches the Score'],
     contents: scoreRule,
   },
   {
