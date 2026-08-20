@@ -121,6 +121,16 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
   // Shown before the attempt is created.
   const [showIntro, setShowIntro] = useState(false);
+  // Index into pageNumbers below, not a raw page number (pages don't have
+  // to be contiguous from 1). Reset on every fresh/resumed/retaken attempt
+  // (see beginAttempt/retakeQuiz) so a retake or reload starts back on page
+  // 1 rather than wherever the student last was.
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
+  // True while submitQuiz's requests (per-question responses + finalize)
+  // are in flight - that round trip is slow enough (~seconds, not
+  // milliseconds) that the button needs to visibly disable and show a
+  // spinner, or a student can double-click it.
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const needsIntroScreen = !!(introText || timeLimitMinutes);
   const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
@@ -154,6 +164,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       .then(response => response.json())
       .then(data => {
         setAttemptId(data.id);
+        setCurrentPageIndex(0);
         if (data.submittedAt) {
           setResult({
             score: data.score,
@@ -181,6 +192,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     setResult(null);
     setResponses({});
     setCanRetake(false);
+    setCurrentPageIndex(0);
     if (needsIntroScreen) {
       setShowIntro(true);
     } else {
@@ -234,6 +246,19 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     question => question.type === 'MultipleChoiceQuestion'
   );
 
+  // Distinct page numbers actually in use, in order - not just [1..max],
+  // since a levelbuilder could leave a gap (e.g. pages 1 and 3 used, no 2).
+  // Every question defaults to page 1 server-side, so a quiz with no pages
+  // assigned yet is just a single page as before.
+  const pageNumbers = Array.from(
+    new Set(multipleChoiceQuestions.map(question => question.page || 1))
+  ).sort((a, b) => a - b);
+  const isLastPage = currentPageIndex >= pageNumbers.length - 1;
+  const currentPageNumber = pageNumbers[currentPageIndex] ?? 1;
+  const currentPageQuestions = multipleChoiceQuestions.filter(
+    question => (question.page || 1) === currentPageNumber
+  );
+
   // Only for correctness display (green/red + Correct/Incorrect label) -
   // filters out entries where correct is null, i.e. show_correctness is
   // off, so QuizQuestion never renders that styling in that case.
@@ -249,39 +274,43 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   );
 
   const submitQuiz = async () => {
-    if (!attemptId) {
+    if (!attemptId || isSubmitting) {
       return;
     }
-
-    await Promise.all(
-      multipleChoiceQuestions.map(question =>
-        HttpClient.post(
-          '/quiz_question_responses',
-          JSON.stringify({
-            quizAttemptId: attemptId,
-            quizQuestionId: question.id,
-            responseData: buildResponseData(responses[question.id]),
-          }),
-          true,
-          {'Content-Type': 'application/json'}
+    setIsSubmitting(true);
+    try {
+      await Promise.all(
+        multipleChoiceQuestions.map(question =>
+          HttpClient.post(
+            '/quiz_question_responses',
+            JSON.stringify({
+              quizAttemptId: attemptId,
+              quizQuestionId: question.id,
+              responseData: buildResponseData(responses[question.id]),
+            }),
+            true,
+            {'Content-Type': 'application/json'}
+          )
         )
-      )
-    );
+      );
 
-    const finalizeResponse = await HttpClient.put(
-      `/quiz_attempts/${attemptId}`,
-      JSON.stringify({}),
-      true,
-      {'Content-Type': 'application/json'}
-    );
-    const data = await finalizeResponse.json();
-    setResult({
-      score: data.score,
-      maxScore: data.maxScore,
-      questionResults: data.questionResults || undefined,
-    });
-    setResponses(responsesFromQuestionResults(data.questionResults));
-    setCanRetake(!!data.canRetake);
+      const finalizeResponse = await HttpClient.put(
+        `/quiz_attempts/${attemptId}`,
+        JSON.stringify({}),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+      const data = await finalizeResponse.json();
+      setResult({
+        score: data.score,
+        maxScore: data.maxScore,
+        questionResults: data.questionResults || undefined,
+      });
+      setResponses(responsesFromQuestionResults(data.questionResults));
+      setCanRetake(!!data.canRetake);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Kept up to date every render so the countdown effect below always
@@ -415,11 +444,11 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                 )}
               </div>
               <ol className={styles.questionList}>
-                {multipleChoiceQuestions.map((question, index) => (
+                {currentPageQuestions.map(question => (
                   <QuizQuestion
                     key={question.id}
                     question={question}
-                    index={index}
+                    index={multipleChoiceQuestions.indexOf(question)}
                     total={multipleChoiceQuestions.length}
                     selectedChoiceId={responses[question.id]}
                     disabled={!!result}
@@ -431,18 +460,46 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                 ))}
               </ol>
               <div className={styles.cardFooter}>
-                <MuiButton
-                  variant="contained"
-                  color="primary"
-                  size="medium"
-                  type="button"
-                  disabled={!attemptId || (!!result && !canRetake)}
-                  onClick={() =>
-                    result && canRetake ? retakeQuiz() : submitQuiz()
-                  }
-                >
-                  {result && canRetake ? 'Retake Quiz' : 'Submit Quiz'}
-                </MuiButton>
+                {pageNumbers.length > 1 && (
+                  <MuiButton
+                    variant="outlined"
+                    color="secondary"
+                    size="medium"
+                    type="button"
+                    disabled={currentPageIndex === 0 || isSubmitting}
+                    onClick={() => setCurrentPageIndex(prev => prev - 1)}
+                  >
+                    Previous
+                  </MuiButton>
+                )}
+                {!result && !isLastPage ? (
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    type="button"
+                    disabled={!attemptId}
+                    onClick={() => setCurrentPageIndex(prev => prev + 1)}
+                  >
+                    Next
+                  </MuiButton>
+                ) : (
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    type="button"
+                    loading={isSubmitting}
+                    disabled={
+                      !attemptId || (!!result && !canRetake) || isSubmitting
+                    }
+                    onClick={() =>
+                      result && canRetake ? retakeQuiz() : submitQuiz()
+                    }
+                  >
+                    {result && canRetake ? 'Retake Quiz' : 'Submit Quiz'}
+                  </MuiButton>
+                )}
                 {result && (
                   <Typography variant="h5">
                     Final score: {result.score} / {result.maxScore}

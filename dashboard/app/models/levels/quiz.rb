@@ -70,13 +70,20 @@ class Quiz < Level
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties_camelized = super
     properties_camelized[:scriptId] = script&.id
-    properties_camelized[:quizQuestions] = quiz_questions.map do |question|
+    # Iterates quiz_level_questions rather than quiz_questions directly so
+    # each question's page is available alongside it - page lives on the
+    # join (a question could in principle be reused across quizzes with a
+    # different page each time), not on the QuizQuestion itself. Ordering
+    # matches QuizLevelQuestion's own default_scope (page, then position).
+    properties_camelized[:quizQuestions] = quiz_level_questions.includes(:quiz_question).map do |quiz_level_question|
+      question = quiz_level_question.quiz_question
       {
         id: question.id,
         type: question.type,
         questionName: question.question_name,
         stem: question.question['stem'],
         choices: question.question['choices'],
+        page: quiz_level_question.page,
       }
     end
     properties_camelized

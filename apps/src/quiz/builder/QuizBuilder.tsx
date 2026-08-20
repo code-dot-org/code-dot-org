@@ -34,6 +34,9 @@ export interface QuizQuestionData {
   // built here - see LevelsController#quiz_question_json. Determines
   // whether removing it from this quiz can also offer permanent deletion.
   attachedToOtherQuizzes?: boolean;
+  // Which page of the quiz this question renders on for students - nil for
+  // a bank question not (yet) attached to this quiz. Defaults to 1.
+  page?: number;
 }
 
 interface QuizBuilderProps {
@@ -109,6 +112,7 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
         correctChoiceId: data.correctChoiceId || '',
         explanation: data.explanation || '',
         standards: data.standards || [],
+        page: data.page || 1,
       });
       setEditingQuestionId(question.id);
       setIsFormOpen(true);

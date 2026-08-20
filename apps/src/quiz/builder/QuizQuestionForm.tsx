@@ -42,6 +42,9 @@ export interface QuizQuestionFormValues {
   // setting allows it - see QuizAttempt#question_results.
   explanation?: string;
   standards?: QuizStandard[];
+  // Which page of the quiz this question renders on for students - see
+  // QuizLevelQuestion. Defaults to 1.
+  page: number;
 }
 
 const EMPTY_CHOICE = (): QuizChoice => ({
@@ -90,6 +93,7 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
   const [standards, setStandards] = useState<QuizStandard[]>(
     initialValues?.standards || []
   );
+  const [page, setPage] = useState(initialValues?.page || 1);
   const [error, setError] = useState<string | null>(null);
 
   const addStandard = (standard: QuizStandard) =>
@@ -170,6 +174,7 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
       correctChoiceId: lettered[selectedIndex]?.id ?? '',
       explanation,
       standards,
+      page,
     });
     if (saveError) {
       setError(saveError);
@@ -197,6 +202,17 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
           className={styles.fullWidthField}
           value={questionName}
           onChange={e => setQuestionName(e.target.value)}
+        />
+      </div>
+
+      <div className={styles.section}>
+        <TextField
+          label="Page"
+          name="page"
+          inputType="number"
+          size="s"
+          value={page}
+          onChange={e => setPage(Math.max(1, Number(e.target.value) || 1))}
         />
       </div>
 

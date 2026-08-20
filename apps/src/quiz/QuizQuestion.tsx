@@ -17,6 +17,7 @@ export interface QuizQuestionSummary {
   stem?: string;
   choices?: QuizChoice[];
   explanation?: string;
+  page?: number;
 }
 
 // Present only once the attempt is submitted and the quiz's

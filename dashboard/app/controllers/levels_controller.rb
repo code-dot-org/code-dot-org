@@ -323,7 +323,10 @@ class LevelsController < ApplicationController
     )
     question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
     next_position = (@level.quiz_level_questions.maximum(:position) || 0) + 1
-    QuizLevelQuestion.create!(level: @level, quiz_question: question, page: 1, position: next_position)
+    QuizLevelQuestion.create!(
+      level: @level, quiz_question: question,
+      page: quiz_question_params[:page].presence || 1, position: next_position
+    )
 
     render status: :created, json: quiz_question_json(question)
   rescue StandardError => exception
@@ -447,6 +450,9 @@ class LevelsController < ApplicationController
       explanation: quiz_question_params[:explanation]
     )
     question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
+    if quiz_question_params[:page].present?
+      @level.quiz_level_questions.find_by!(quiz_question_id: question.id).update!(page: quiz_question_params[:page])
+    end
     render json: quiz_question_json(question)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
@@ -894,7 +900,7 @@ class LevelsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the allow-list through.
   private def quiz_question_params
     params.permit(
-      :questionName, :stem, :correctChoiceId, :explanation,
+      :questionName, :stem, :correctChoiceId, :explanation, :page,
       choices: [:id, :text],
       standards: [:frameworkShortcode, :shortcode]
     )
@@ -937,6 +943,9 @@ class LevelsController < ApplicationController
       explanation: question.explanation,
       standards: question.standards.map(&:summarize_for_lesson_edit),
       attachedToOtherQuizzes: question.levels.where.not(id: @level.id).exists?,
+      # nil for a bank question not (yet) attached to @level - page only
+      # means something in the context of a specific quiz's own join.
+      page: @level.quiz_level_questions.find_by(quiz_question_id: question.id)&.page,
     }
   end
 
