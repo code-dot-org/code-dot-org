@@ -1,7 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
@@ -14,13 +18,13 @@ import i18n from '@cdo/locale';
 import SettingsCog from '../code-studio/components/SettingsCog';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 import {queryParams} from '../code-studio/utils';
-import commonStyles from '../commonStyles';
 import {shouldUseRunModeIndicators} from '../redux/selectors';
 import {singleton as studioApp} from '../StudioApp';
 import color from '../util/color';
 
+import moduleStyles from './code-workspace.module.css';
 import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
+import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIconV2';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import ShowCodeToggle from './ShowCodeToggle';
 
@@ -34,7 +38,7 @@ class CodeWorkspace extends React.Component {
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
     showDebugger: PropTypes.bool.isRequired,
-    style: PropTypes.bool,
+    style: PropTypes.object,
     isRunning: PropTypes.bool.isRequired,
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
@@ -113,11 +117,6 @@ class CodeWorkspace extends React.Component {
       autogenerateML,
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
-    const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
-    const chevronStyle = [
-      styles.chevronButton,
-      runModeIndicators && isRunning && styles.runningIcon,
-    ];
 
     const settingsCog = showSettingsCog && (
       <SettingsCog
@@ -125,53 +124,100 @@ class CodeWorkspace extends React.Component {
       />
     );
 
-    return [
-      <PaneSection
-        id="toolbox-header"
-        key="toolbox-header"
-        style={styles.toolboxHeaderContainer}
-      >
-        <span>
-          <button
+    return (
+      <>
+        <PaneSection
+          id="toolbox-header"
+          key="toolbox-header"
+          style={styles.toolboxHeaderContainer}
+        >
+          <MuiIconButton
+            type="button"
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
+            aria-label="Hide the toolbox"
             id="hide-toolbox-icon"
-            style={[commonStyles.hidden, chevronStyle]}
-            type="button"
-            aria-label={i18n.toolboxHeaderDroplet()}
-            aria-expanded
+            className="hide-toolbox-icon"
+            onClick={this.onToggleToolbox}
+            sx={{
+              borderRadius: '50%',
+              height: '1rem',
+              width: '1rem',
+              display: 'none',
+              '& > i': {transform: 'translateY(1px)'},
+            }}
           >
-            <i className="fa-solid fa-circle-chevron-right" />
-          </button>
-        </span>
-        <span style={textStyle}>
-          {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
-        </span>
-        <span>{settingsCog}</span>
-      </PaneSection>,
-      <PaneSection
-        id="show-toolbox-header"
-        key="show-toolbox-header"
-        style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
-      >
-        <span id="show-toolbox-click-target">
-          <button
-            id="show-toolbox-icon"
-            style={chevronStyle}
-            type="button"
-            aria-label={i18n.toolboxHeaderDroplet()}
-            aria-expanded={false}
+            <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />
+          </MuiIconButton>
+          <MuiTypography
+            variant="body4"
+            sx={{
+              color: 'var(--text-neutral-white-fixed)',
+              flex: '1 1 auto',
+            }}
           >
-            <i className="fa-solid fa-circle-chevron-right" />
-          </button>
-          <span className="show-toolbox-label">{i18n.showToolbox()}</span>
-        </span>
-        <span>{settingsCog}</span>
-      </PaneSection>,
-    ];
+            {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
+          </MuiTypography>
+          {settingsCog}
+        </PaneSection>
+        <PaneSection
+          id="show-toolbox-header"
+          key="show-toolbox-header"
+          style={{
+            alignItems: 'center',
+            display: 'none',
+            justifyContent: 'space-between',
+            paddingLeft: '.5rem',
+            paddingRight: '.5rem',
+            gap: '0.5rem',
+          }}
+        >
+          <span
+            id="show-toolbox-click-target"
+            style={{
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'space-between',
+              gap: '0.5rem',
+            }}
+          >
+            <MuiIconButton
+              type="button"
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              id="show-toolbox-icon"
+              aria-label="Show the toolbox"
+              className="show-toolbox-icon"
+              onClick={this.onToggleToolbox}
+              sx={{
+                borderRadius: '50%',
+                height: '1rem',
+                width: '1rem',
+                '& > i': {transform: 'translateY(1px)'},
+              }}
+            >
+              <FontAwesomeV6Icon iconName="chevron-right" iconStyle="solid" />
+            </MuiIconButton>
+            <MuiTypography
+              variant="body4"
+              sx={{
+                color: 'var(--text-neutral-white-fixed)',
+              }}
+            >
+              {i18n.showToolbox()}
+            </MuiTypography>
+          </span>
+          {settingsCog}
+        </PaneSection>
+      </>
+    );
   }
 
   onToggleShowCode = usingBlocks => {
     this.blockCounterEl.style.display =
-      usingBlocks && studioApp().enableShowBlockCount ? 'inline-block' : 'none';
+      usingBlocks && studioApp().enableShowBlockCount ? 'flex' : 'none';
   };
 
   // The workspace alert will be displayed at the bottom of codeTextbox if editCode is
@@ -206,64 +252,97 @@ class CodeWorkspace extends React.Component {
         <PaneHeader
           id="headers"
           dir={isRtl ? 'rtl' : 'ltr'}
-          hasFocus={hasFocus}
           className={props.isRunning ? 'is-running' : ''}
         >
-          <div id="codeModeHeaders">
-            {this.renderToolboxHeaders()}
-            <ShowCodeToggle
-              isRtl={isRtl}
-              hasFocus={hasFocus}
-              isMinecraft={props.isMinecraft}
-              onToggle={this.onToggleShowCode}
-            />
-            {!props.readonlyWorkspace && (
-              <PaneButton
-                id="clear-puzzle-header"
-                headerHasFocus={hasFocus}
-                iconClass="fa-solid fa-rotate-left"
-                label={i18n.clearPuzzle()}
-                isRtl={isRtl}
-                isMinecraft={props.isMinecraft}
+          {this.renderToolboxHeaders()}
+          <PaneSection
+            id="workspace-header"
+            style={{
+              alignItems: 'center',
+              flex: '1 1 0',
+              gap: '0.5rem',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+            }}
+          >
+            {props.showProjectTemplateWorkspaceIcon && (
+              <ProjectTemplateWorkspaceIcon
+                tooltipPlace="onTop"
+                className={classNames(
+                  moduleStyles.projectIcon,
+                  'projectTemplateWorkspaceIcon'
+                )}
               />
             )}
+            <MuiTypography
+              variant="body4"
+              id="workspace-header-span"
+              sx={{
+                color: 'var(--text-neutral-white-fixed)',
+              }}
+            >
+              {props.readonlyWorkspace
+                ? i18n.readonlyWorkspaceHeader()
+                : i18n.workspaceHeaderShort()}
+            </MuiTypography>
+            <MuiTypography
+              variant="body4"
+              // body4 maps to <p> in the code.org theme, and the block count is
+              // filled in by a ProtectedStatefulDiv - a <div> in a <p> is
+              // invalid nesting, so render this one as a div.
+              component="div"
+              id="blockCounter"
+              ref={el => (this.blockCounterEl = el)}
+              sx={{
+                color: 'var(--text-neutral-white-fixed)',
+                display: 'flex',
+                flexDirection: 'row',
+                gap: 1,
+              }}
+            >
+              <span>-</span>
+              <ProtectedStatefulDiv
+                id="blockUsed"
+                className="block-counter-default"
+              />
+              <span>/</span>
+              <span id="idealBlockNumber" />
+              <span>{' ' + i18n.blocks()}</span>
+            </MuiTypography>
+          </PaneSection>
+          <PaneButton
+            id="settings-header"
+            headerHasFocus={hasFocus}
+            iconProps={{iconName: 'gear', iconStyle: 'solid'}}
+            label={'Settings'}
+            isRtl={isRtl}
+            isMinecraft={props.isMinecraft}
+          />
+          <PaneButton
+            id="versions-header"
+            headerHasFocus={hasFocus}
+            iconProps={{iconName: 'clock', iconStyle: 'regular'}}
+            label={i18n.showVersionsHeader()}
+            isRtl={isRtl}
+            isMinecraft={props.isMinecraft}
+          />
+          {!props.readonlyWorkspace && (
             <PaneButton
-              id="versions-header"
+              id="clear-puzzle-header"
               headerHasFocus={hasFocus}
-              iconClass="fa-regular fa-clock"
-              label={i18n.showVersionsHeader()}
+              iconProps={{iconName: 'rotate-left', iconStyle: 'solid'}}
+              label={i18n.clearPuzzle()}
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
             />
-            <PaneButton
-              id="settings-header"
-              headerHasFocus={hasFocus}
-              iconClass="fa-solid fa-gear"
-              label={'Settings'}
-              isRtl={isRtl}
-              isMinecraft={props.isMinecraft}
-            />
-            <PaneSection id="workspace-header">
-              {props.showProjectTemplateWorkspaceIcon && (
-                <ProjectTemplateWorkspaceIcon />
-              )}
-              <span id="workspace-header-span">
-                {props.readonlyWorkspace
-                  ? i18n.readonlyWorkspaceHeader()
-                  : i18n.workspaceHeaderShort()}
-              </span>
-              <div id="blockCounter" ref={el => (this.blockCounterEl = el)}>
-                <span>: </span>
-                <ProtectedStatefulDiv
-                  id="blockUsed"
-                  className="block-counter-default"
-                />
-                <span> / </span>
-                <span id="idealBlockNumber" />
-                <span>{' ' + i18n.blocks()}</span>
-              </div>
-            </PaneSection>
-          </div>
+          )}
+          <ShowCodeToggle
+            isRtl={isRtl}
+            hasFocus={hasFocus}
+            isMinecraft={props.isMinecraft}
+            onToggle={this.onToggleShowCode}
+          />
         </PaneHeader>
         {props.editCode && (
           <ProtectedStatefulDiv
@@ -399,10 +478,14 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingLeft: '.5rem',
+    paddingRight: '.5rem',
+    borderRight: '1px solid var(--borders-neutral-strong)',
+    height: '30px',
   },
 };
 
-export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
+export const UnconnectedCodeWorkspace = CodeWorkspace;
 export default connect(
   state => ({
     displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
@@ -431,4 +514,4 @@ export default connect(
   dispatch => ({
     closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),
   })
-)(Radium(CodeWorkspace));
+)(CodeWorkspace);

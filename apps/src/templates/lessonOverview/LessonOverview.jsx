@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -182,13 +183,23 @@ class LessonOverview extends Component {
         {displayVerifiedResourcesNotification && (
           <VerifiedResourcesNotification inLesson={true} />
         )}
-        <h1 className="uitest-lesson-title">{lesson.title}</h1>
-        <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
+        <Typography variant="h2" component="h1" className="uitest-lesson-title">
+          {lesson.title}
+        </Typography>
+        <Typography variant="h4" component="h2">
+          {i18n.minutesLabel({number: lesson.duration})}
+        </Typography>
         <div className={styles.frontPage}>
           <div className={styles.left}>
             {lesson.overview && (
               <div>
-                <h2 className={styles.titleNoTopMargin}>{i18n.overview()}</h2>
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  className={styles.titleNoTopMargin}
+                >
+                  {i18n.overview()}
+                </Typography>
                 <EnhancedSafeMarkdown
                   markdown={lesson.overview}
                   expandableImages
@@ -197,7 +208,9 @@ class LessonOverview extends Component {
             )}
             {lesson.purpose && (
               <div>
-                <h2>{i18n.purpose()}</h2>
+                <Typography variant="h4" component="h2">
+                  {i18n.purpose()}
+                </Typography>
                 <EnhancedSafeMarkdown
                   markdown={lesson.purpose}
                   expandableImages
@@ -206,7 +219,9 @@ class LessonOverview extends Component {
             )}
             {lesson.assessmentOpportunities && (
               <div>
-                <h2>{i18n.assessmentOpportunities()}</h2>
+                <Typography variant="h4" component="h2">
+                  {i18n.assessmentOpportunities()}
+                </Typography>
                 <EnhancedSafeMarkdown
                   markdown={lesson.assessmentOpportunities}
                   expandableImages
@@ -216,7 +231,9 @@ class LessonOverview extends Component {
             {lesson.standards.length > 0 && (
               <div>
                 <div className={styles.standardsHeaderAndButton}>
-                  <h2>{i18n.standards()}</h2>
+                  <Typography variant="h4" component="h2">
+                    {i18n.standards()}
+                  </Typography>
                   {lesson.courseVersionStandardsUrl && (
                     <Button
                       __useDeprecatedTag
@@ -233,18 +250,30 @@ class LessonOverview extends Component {
             )}
             {lesson.opportunityStandards.length > 0 && (
               <div>
-                <h2>{i18n.crossCurricularOpportunities()}</h2>
+                <Typography variant="h4" component="h2">
+                  {i18n.crossCurricularOpportunities()}
+                </Typography>
                 <LessonStandards standards={lesson.opportunityStandards} />
               </div>
             )}
-            <h2>{i18n.agenda()}</h2>
+            <Typography variant="h4" component="h2">
+              {i18n.agenda()}
+            </Typography>
             <LessonAgenda activities={this.props.activities} />
           </div>
           <div className={styles.right}>
             {lesson.objectives.length > 0 && (
               <div>
-                <h2 className={styles.titleNoTopMargin}>{i18n.objectives()}</h2>
-                <h5>{i18n.objectivesSubheading()}</h5>
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  className={styles.titleNoTopMargin}
+                >
+                  {i18n.objectives()}
+                </Typography>
+                <Typography variant="h5" component="h3">
+                  {i18n.objectivesSubheading()}
+                </Typography>
                 <ul>
                   {lesson.objectives.map(objective => (
                     <li key={objective.id}>
@@ -256,7 +285,9 @@ class LessonOverview extends Component {
             )}
             {lesson.preparation && (
               <div>
-                <h2>{i18n.preparation()}</h2>
+                <Typography variant="h4" component="h2">
+                  {i18n.preparation()}
+                </Typography>
                 <EnhancedSafeMarkdown
                   markdown={lesson.preparation}
                   expandableImages
@@ -265,13 +296,17 @@ class LessonOverview extends Component {
             )}
             {Object.keys(lesson.resources).length > 0 && (
               <div id="resource-section">
-                <h2>{i18n.links()}</h2>
+                <Typography variant="h4" component="h2">
+                  {i18n.links()}
+                </Typography>
                 <div className={styles.copyResourceWarningArea}>
                   <SafeMarkdown markdown={i18n.copyResourcesWarning()} />
                 </div>
                 {lesson.resources['Teacher'] && (
                   <div>
-                    <h5>{i18n.forTheTeachers()}</h5>
+                    <Typography variant="h5" component="h3">
+                      {i18n.forTheTeachers()}
+                    </Typography>
                     <ResourceList
                       resources={lesson.resources['Teacher']}
                       pageType="teacher-lesson-plan"
@@ -280,7 +315,9 @@ class LessonOverview extends Component {
                 )}
                 {lesson.resources['Student'] && (
                   <div>
-                    <h5>{i18n.forTheStudents()}</h5>
+                    <Typography variant="h5" component="h3">
+                      {i18n.forTheStudents()}
+                    </Typography>
                     <ResourceList
                       resources={lesson.resources['Student']}
                       pageType="teacher-lesson-plan"
@@ -289,7 +326,9 @@ class LessonOverview extends Component {
                 )}
                 {lesson.resources['All'] && (
                   <div>
-                    <h5>{i18n.forAll()}</h5>
+                    <Typography variant="h5" component="h3">
+                      {i18n.forAll()}
+                    </Typography>
                     <ResourceList
                       resources={lesson.resources['All']}
                       pageType="teacher-lesson-plan"
@@ -301,7 +340,13 @@ class LessonOverview extends Component {
 
             {lesson.vocabularies.length > 0 && (
               <div>
-                <h2 className={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  className={styles.titleNoTopMargin}
+                >
+                  {i18n.vocabulary()}
+                </Typography>
                 <ul>
                   {lesson.vocabularies.map(vocab => (
                     <li key={vocab.key}>
@@ -315,9 +360,13 @@ class LessonOverview extends Component {
             )}
             {lesson.programmingExpressions.length > 0 && (
               <div id="unit-test-introduced-code">
-                <h2 className={styles.titleNoTopMargin}>
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  className={styles.titleNoTopMargin}
+                >
                   {i18n.introducedCode()}
-                </h2>
+                </Typography>
                 <ul>
                   {lesson.programmingExpressions.map(expression => (
                     <li key={expression.name}>
@@ -329,7 +378,7 @@ class LessonOverview extends Component {
             )}
           </div>
         </div>
-        <h2>{i18n.teachingGuide()}</h2>
+        <Typography variant="h2">{i18n.teachingGuide()}</Typography>
         {this.props.activities.map(activity => (
           <Activity activity={activity} key={activity.key} />
         ))}

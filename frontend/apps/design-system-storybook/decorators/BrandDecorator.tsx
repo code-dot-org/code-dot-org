@@ -15,10 +15,9 @@ import {
 
 /**
  * Default brand for stories, matching the production default-brand DCDO key
- * (Cdo::Brand::BRAND_CODEAI). Renders identically to the pre-brand-switcher
- * Storybook, since 'code'/'codeai' resolve to the :root legacy tokens.
+ * (Cdo::Brand::BRAND_CODEAI_NEXT).
  */
-export const DEFAULT_BRAND = 'codeai';
+export const DEFAULT_BRAND = 'codeai-next';
 
 /**
  * MUI theme for a brand code, so palette-driven MUI components stay in step
@@ -56,7 +55,7 @@ const cssLayerOrder = (
  * The attribute is set in an effect that runs inside the story's own frame
  * (the canvas iframe, or a non-inline docs iframe), so every rendered story
  * gets it. Stories opt out of the MUI wrapper with `parameters.useMui = false`;
- * data-brand is still applied so their CSS tokens rebrand.
+ * data-brand still applies so their CSS tokens rebrand.
  */
 const BrandDecorator: Decorator = (Story, context: StoryContext) => {
   const brand = (context.globals.brand as string | undefined) ?? DEFAULT_BRAND;
@@ -65,12 +64,10 @@ const BrandDecorator: Decorator = (Story, context: StoryContext) => {
     document.documentElement.setAttribute('data-brand', brand);
   }, [brand]);
 
-  const story = <Story />;
-
   const useMui = context.parameters?.useMui ?? true;
   if (!useMui) {
     // Still branded via data-brand above; just skip the MUI theme wrapper.
-    return story;
+    return <Story />;
   }
 
   return (
@@ -78,7 +75,7 @@ const BrandDecorator: Decorator = (Story, context: StoryContext) => {
       {cssLayerOrder}
       <ThemeProvider theme={muiThemeForBrand(brand)}>
         <CssBaseline />
-        {story}
+        <Story />
       </ThemeProvider>
     </StyledEngineProvider>
   );

@@ -133,7 +133,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       section
     end
 
-    render json: section.summarize
+    # The demo students were just written to the primary; read summarize's counts back from the
+    # primary too, since the read replica may not have caught up with this request's write yet.
+    render json: section.summarize(role: :writing)
   rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => exception
     if exception.is_a?(ActiveRecord::RecordNotUnique) || (exception.respond_to?(:record) && exception.record.errors.of_kind?(:demo_type, :taken))
       render json: {error: "demo section of type #{params[:demo_type]} already exists"}, status: :conflict
@@ -476,35 +478,49 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     active_sections = current_user.sections_instructed.where(hidden: false, participant_type: 'student')
 
-    # Collect lesson IDs up front so we can batch the S3 existence checks,
-    # avoiding one round-trip per section when multiple sections share a lesson.
+    # Collect section object, current lesson, and history for every section.
     section_data = active_sections.map do |section|
       if section.suggested_lesson_stale? && section.script.present?
         section.compute_suggested_lesson
         section.reload
       end
-      [section.id, section.suggested_lesson]
+      [section, section.suggested_lesson, section.suggested_lesson_history || []]
     end
 
-    lesson_ids = section_data.filter_map {|_, data| data&.dig('lesson_id')}.uniq
-    lessons_by_id = Lesson.where(id: lesson_ids).index_by(&:id)
+    # Batch load all lessons referenced by current, history, and coming_up entries.
+    all_lesson_ids = section_data.flat_map do |_, current, history|
+      [
+        current&.dig('lesson_id'),
+        *history.flat_map {|e| [e['lesson_id'], e.dig('coming_up', 'lesson_id')]}
+      ]
+    end.uniq.compact
+
+    lessons_by_id = Lesson.where(id: all_lesson_ids).index_by(&:id)
 
     bucket = AWS::S3.user_content_bucket
-    podcast_exists = lesson_ids.each_with_object({}) do |lesson_id, memo|
+    podcast_exists = all_lesson_ids.each_with_object({}) do |lesson_id, memo|
       key = "podcasts/lesson_#{lesson_id}_podcast.mp3"
       memo[lesson_id] = AWS::S3.exists_in_bucket(bucket, key)
     end
 
-    result = section_data.each_with_object({}) do |(section_id, data), hash|
-      if data && (lesson = lessons_by_id[data['lesson_id']])
-        podcast_url = podcast_exists[lesson.id] ? "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}" : nil
-        data = data.merge(
-          'name' => lesson.localized_title,
-          'url' => script_lesson_path(lesson.script, lesson),
-          'podcast_url' => podcast_url
-        )
-      end
-      hash[section_id] = data
+    enrich = lambda do |entry|
+      return entry unless (lesson = lessons_by_id[entry['lesson_id']])
+      podcast_url = podcast_exists[lesson.id] ? "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}" : nil
+      entry.merge(
+        'name' => lesson.localized_title,
+        'url' => script_lesson_path(lesson.script, lesson),
+        'podcast_url' => podcast_url
+      )
+    end
+
+    today = Time.zone.today.iso8601
+    result = section_data.each_with_object({}) do |(section, data, history), hash|
+      next hash[section.id] = nil unless data
+      enriched = enrich.call(data)
+      enriched_history = history.map {|e| enrich.call(e)}
+      raw_coming_up = history.find {|e| e['date'] == today}&.dig('coming_up')
+      coming_up = raw_coming_up ? enrich.call(raw_coming_up) : nil
+      hash[section.id] = enriched.merge('history' => enriched_history, 'coming_up' => coming_up)
     end
 
     render json: result

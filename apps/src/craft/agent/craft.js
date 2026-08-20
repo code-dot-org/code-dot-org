@@ -4,6 +4,7 @@ import {
   EventType,
   utils as CraftUtils,
 } from '@code-dot-org/craft';
+import {ThemeProvider} from '@mui/material/styles';
 import Hammer from 'hammerjs';
 import $ from 'jquery';
 import React from 'react';
@@ -21,6 +22,8 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
+import downButtonImg from '../../../static/craft/CDO_MC_ScrollDown.png';
+import upButtonImg from '../../../static/craft/CDO_MC_ScrollUp.png';
 import {TestResults} from '../../constants';
 import dom from '../../dom';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -32,6 +35,7 @@ import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import craftMsg from '../locale';
+import minecraftMuiTheme from '../minecraftMuiTheme';
 
 import CraftVisualizationColumn from './CraftVisualizationColumn';
 
@@ -402,15 +406,23 @@ export default class Craft {
     createReactRoot(
       <Provider store={getStore()}>
         <div>
-          <AppView
-            visualizationColumn={
-              <CraftVisualizationColumn
-                showFinishButton={!config.level.isProjectLevel}
-              />
-            }
-            onMount={onMount}
-          />
-          <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
+          <ThemeProvider theme={minecraftMuiTheme}>
+            <AppView
+              upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
+              downIcon={
+                <img style={{width: '15px'}} src={downButtonImg} alt="" />
+              }
+              visualizationColumn={
+                <CraftVisualizationColumn
+                  showFinishButton={!config.level.isProjectLevel}
+                />
+              }
+              onMount={onMount}
+            />
+            <PlayerSelectionDialog
+              players={[CHARACTER_STEVE, CHARACTER_ALEX]}
+            />
+          </ThemeProvider>
         </div>
       </Provider>,
       document.getElementById(config.containerId),

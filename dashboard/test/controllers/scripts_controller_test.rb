@@ -4,12 +4,6 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
-  setup_all do
-    # The page header falls back to the hourofcode unit (Unit.hoc_2014_unit),
-    # so full page renders need it to exist.
-    create_hourofcode_unit_and_levels
-  end
-
   setup do
     @coursez_2017 = create(:script, name: 'coursez-2017')
     create(:single_unit_course, unit: @coursez_2017, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
@@ -102,7 +96,10 @@ class ScriptsControllerTest < ActionController::TestCase
       position: 1,
     }
     assert_response :ok
-    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - Code.org [test]</title>")
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - #{brand_name} [test]</title>")
+    assert_select "meta[property='og:site_name'][content='#{brand_name}']"
+    assert_select "meta[property='og:title'][content='Unit: All The Lesson Plans - #{brand_name} [test]']"
     assert_includes(@response.body, "<meta property=\"description\" content=\"Teacher overview of the unit.\" />")
   end
 
@@ -145,6 +142,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show of hourofcode redirects to hoc" do
+    create_hourofcode_unit_and_levels
     get :show, params: {course_course_name: 'hourofcode', position: 1}
     assert_response :success
   end
@@ -1808,6 +1806,52 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
     data = assigns(:unit_data)
     assert_equal "/courses/#{course.name}/units/1/edit", data[:editUnitUrl]
+  end
+
+  # ---- /listing (levelbuilder level overview page) ----
+
+  test "listing redirects signed-out users" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    get :listing, params: {id: @single_unit_2023.name}
+    assert_redirected_to_sign_in
+  end
+
+  test "listing forbids non-levelbuilders" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:teacher)
+    get :listing, params: {id: @single_unit_2023.name}
+    assert_response :forbidden
+  end
+
+  test "listing renders lessons and links to each level via /s/ URL" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true, name: 'My First Lesson')
+    level = create(:level, name: 'my_first_level')
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    get :listing, params: {id: unit.name}
+    assert_response :ok
+    assert_select 'li.lesson', text: /My First Lesson/
+    # This unit lives in a single-unit course, so build_script_level_path emits
+    # the modular /courses/.../units/N path rather than a legacy /s/ one.
+    assert_select "li.level a[href*=?]", "/units/1/lessons/#{lesson.relative_position}/levels/#{script_level.position}", text: 'my_first_level'
+  end
+
+  test "listing works via /courses/ URL" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    course = @migrated_unit.original_unit_group
+    lesson_group = create(:lesson_group, script: @migrated_unit)
+    create(:lesson, script: @migrated_unit, lesson_group: lesson_group, has_lesson_plan: true, name: 'Course Path Lesson')
+
+    get :listing, params: {course_course_name: course.name, position: 1}
+    assert_response :ok
+    assert_select 'li.lesson', text: /Course Path Lesson/
   end
 
   # ---- PUT /lesson_outlines (bulk-write endpoint) ----

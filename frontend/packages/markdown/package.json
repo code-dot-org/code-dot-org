@@ -19,7 +19,6 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -48,17 +47,7 @@
   },
   "dependencies": {
     "@code-dot-org/component-library": "workspace:*",
-    "@code-dot-org/core": "workspace:*",
-    "classnames": "catalog:",
-    "hast-util-from-html": "^2.0.3",
-    "hast-util-to-html": "^9.0.5",
-    "rehype-raw": "^7.0.0",
-    "rehype-react": "^8.0.0",
-    "rehype-sanitize": "^6.0.0",
-    "remark-gfm": "^4.0.1",
-    "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.2",
-    "unified": "^11.0.5"
+    "@code-dot-org/core": "workspace:*"
   },
   "devDependencies": {
     "@code-dot-org/component-library-styles": "workspace:*",
@@ -71,26 +60,37 @@
     "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
     "@vitejs/plugin-react": "catalog:",
+    "classnames": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
+    "hast-util-from-html": "^2.0.3",
+    "hast-util-to-html": "^9.0.5",
     "jsdom": "catalog:",
     "playwright": "catalog:",
     "prettier": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "rehype-raw": "^7.0.0",
+    "rehype-react": "^8.0.0",
+    "rehype-sanitize": "^6.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
     "stylelint": "catalog:",
     "typescript": "catalog:",
+    "unified": "^11.0.5",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vite-plugin-lib-inject-css": "catalog:",
     "vitest": "catalog:"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@mui/material": "^7.0.0",
+    "classnames": "^2.5.1",
     "react": "^18.0.0 || ^19.0.0"
   }
 }

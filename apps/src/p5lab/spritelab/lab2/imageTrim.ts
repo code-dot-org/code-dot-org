@@ -4,9 +4,11 @@
 
 import {BACKGROUNDS_CATEGORY, RuntimeAnimationList} from './types';
 
-// Alpha above which a pixel counts as content (matches soft-matte fringes
-// without letting near-invisible pixels defeat the trim).
-const ALPHA_THRESHOLD = 8;
+// Alpha above which a pixel counts as content: high enough to shed the soft
+// matte's near-invisible fringe (which otherwise stretches sprite bounds
+// past the visible art — platformer feet float on it), low enough to keep
+// real soft edges.
+const ALPHA_THRESHOLD = 32;
 
 /**
  * The tight bounding box of non-transparent content in RGBA data, or null for
@@ -123,6 +125,17 @@ export async function trimAnimationListImages(
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
+  // Drop cached trims for names absent from the list: a deleted image's
+  // thumbnail must not resurface when a new image takes the same name.
+  const currentNames = new Set(
+    (list.orderedKeys || []).map(key => list.propsByKey[key]?.name)
+  );
+  for (const name of trimmedByName.keys()) {
+    if (!currentNames.has(name)) {
+      trimmedByName.delete(name);
+      newTrims = true;
+    }
+  }
   await Promise.all(
     (list.orderedKeys || []).map(async key => {
       const props = list.propsByKey[key];

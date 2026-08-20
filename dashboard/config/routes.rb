@@ -1,13 +1,43 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # Sandboxed preview hosts (Web Lab 2's HTML preview, Python Lab's pyodide
+  # sandbox). Declared before everything else so these hosts can reach no other
+  # Rails route: the catch-all 404s any other path before the
+  # host-unconstrained routes below (draw :api, draw :marketing, /cable, ...)
+  # are consulted. Rack middleware mounted ahead of routing (FilesApi and
+  # friends, /v3/... — see config/application.rb) is not host-constrained and
+  # still answers on these hosts. Both the codeaiprojects.org (migration
+  # target) and codeprojects.org (pre-migration, current default) origins are
+  # served; clients pick which one to embed via the 'sandboxed-preview-domain'
+  # DCDO flag. See docs/weblab-preview-domain-migration.md.
+  preview_host_pattern = [
+    CDO.preview_codeaiprojects_hostname,
+    CDO.preview_codeprojects_hostname,
+  ].map {|host| Regexp.escape(host)}.join('|')
+
+  constraints host: /^pyodide-sandbox\.(?:#{preview_host_pattern})$/ do
+    get '/', to: 'pyodide_sandbox#show'
+  end
+
+  constraints host: /^[^.]+\.(?:#{preview_host_pattern})$/ do
+    get '/', to: 'codeprojects_preview#show'
+    # Must be served from / on the preview host to control the root scope:
+    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
+    # Custom 404 page for anything else, GET or not, so no other route can
+    # match on a preview host.
+    match '*path', to: 'codeprojects_preview#not_found', via: :all
+  end
+
   mount ActionCable.server => '/cable'
   get 'chatter/index'
 
   draw :api
   draw :marketing
 
-  get "frontend-studio(/*path)", to: "frontend_studio#index"
+  # format: false keeps the extension in :path. Without it Rails reads '.js' as
+  # the format, and a missing asset raises a cross-origin error, not our 404.
+  get "frontend-studio(/*path)", to: "frontend_studio#index", format: false
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -31,16 +61,10 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
-    get '/', to: 'codeprojects_preview#show'
-    # Must be served from / on preview.codeprojects.org to control the root scope:
-    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
-    # Custom 404 page for codeprojects preview
-    get '*path', to: 'codeprojects_preview#not_found'
-  end
-
-  # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname}|[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)})/ do
+  # This matches any host that is neither the codeprojects apex nor a sandboxed
+  # preview host. The preview hosts are already fully handled by the constraint
+  # blocks at the top of this file; excluding them here is defense in depth.
+  constraints host: /^(?!#{Regexp.escape(CDO.codeprojects_hostname)}|[^.]+\.(?:#{preview_host_pattern}))/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
@@ -119,7 +143,7 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
-    resources :json_videos, only: [:create] do
+    resources :json_videos, only: [:create, :update, :destroy] do
       member do
         get 'content'
       end
@@ -482,6 +506,7 @@ Dashboard::Application.routes.draw do
         get 'instructions'
         get 'get_rollup_resources'
         get 'generate', to: 'scripts#generate'
+        get 'listing', to: 'scripts#listing'
         put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
@@ -496,6 +521,7 @@ Dashboard::Application.routes.draw do
         get 'slides/edit', to: 'lessons/slides#edit'
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
+        get 'tutor/gallery', to: 'lessons#tutor_gallery', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -1336,6 +1362,7 @@ Dashboard::Application.routes.draw do
     get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
+    post '/javabuilder/access_token_with_override_sources_and_validation', to: 'javabuilder_sessions#access_token_with_override_sources_and_validation'
 
     post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
@@ -1471,8 +1498,19 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :challenges, only: [:index, :show]
-    resources :challenge_responses, only: [:create, :show]
-    resources :challenge_response_assets, only: [:show]
+    resources :challenge_responses, only: [:index, :create, :show] do
+      collection do
+        get :unit_counts
+      end
+      member do
+        post :evaluate
+      end
+    end
+    resources :challenge_response_assets, only: [:show] do
+      member do
+        put :upload
+      end
+    end
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

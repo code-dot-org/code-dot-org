@@ -93,9 +93,9 @@ const GLOBAL_NAV_ITEMS = [
         href: '//code.org/educate/curriculum/middle-school',
       },
       {label: 'High School', href: '//code.org/educate/curriculum/high-school'},
-      {label: 'Hour of Code', href: 'https://hourofcode.com'},
+      {label: 'Hour of AI', href: '//code.org/hour-of-ai'},
       {
-        label: 'Beyond Code.org',
+        label: 'Beyond CodeAI',
         href: '//code.org/educate/curriculum/3rd-party',
       },
       {label: 'Online Community', href: 'https://forum.code.org/'},
@@ -213,6 +213,11 @@ export const StudentSignedIn: Story = {
 
 // Resting-state guards, each a flat assert, ending with no menu open:
 //  - target size (WCAG 2.5.8 AA): every control is at least 24x24px.
+//  - pill geometry: New project + Account triggers are 32px/0.5rem radius,
+//    matching the Rails header's `.header_button` under codeai-brand
+//    (dashboard/app/assets/stylesheets/application.scss); Help's "?" glyph
+//    grows to 24px while its own box keeps the Rails header's 38px invisible
+//    hit target (it never carries `.header_button`).
 //  - hover colors: hovered New project + Account stay brand-white (label, icon,
 //    border) — CdoTheme has no palette, so a regression resolved hover to MUI's
 //    default primary purple. The white outline comes from var() in sx, not styled.
@@ -240,12 +245,21 @@ export const TeacherSignedIn: Story = {
     }
 
     const newProject = canvas.getByRole('button', {name: 'New project menu'});
+    const account = canvas.getByRole('button', {name: 'Account menu'});
+    const help = canvas.getByRole('button', {name: 'Help menu'});
+
+    for (const trigger of [newProject, account]) {
+      const styles = getComputedStyle(trigger);
+      expect(styles.height).toBe('32px');
+      expect(styles.borderRadius).toBe('8px'); // 0.5rem
+    }
+    expect(getComputedStyle(help.querySelector('i')!).fontSize).toBe('24px');
+
     await userEvent.hover(newProject);
     expect(getComputedStyle(newProject).color).toBe(white);
     expect(getComputedStyle(newProject.querySelector('i')!).color).toBe(white);
     expect(getComputedStyle(newProject).borderColor).toBe(white);
 
-    const account = canvas.getByRole('button', {name: 'Account menu'});
     await userEvent.hover(account);
     expect(getComputedStyle(account).color).toBe(white);
     expect(getComputedStyle(account.querySelector('i')!).color).toBe(white);
@@ -327,6 +341,71 @@ export const SignedOut: Story = {
     expect(signIn.matches(':focus-visible')).toBe(true);
     expect(getComputedStyle(signIn).outlineColor).toBe(inverse);
     signIn.blur();
+  },
+};
+
+// The signed-out marketing nav: an 8-link bar with About/Donate pinned to
+// the trailing edge (alignEnd).
+const MARKETING_NAV_ITEMS = [
+  {label: 'Teachers', href: '//code.org/teachers'},
+  {label: 'Districts', href: '//code.org/districts'},
+  {label: 'Advocacy', href: 'https://advocacy.code.org'},
+  {label: 'Hour of AI', href: '//code.org/hour-of-ai'},
+  {label: 'Parents', href: '//code.org/parents'},
+  {label: 'Students', href: '//code.org/students'},
+  {label: 'About', href: '//code.org/about', alignEnd: true},
+  {label: 'Donate', href: '//code.org/donate', alignEnd: true},
+];
+
+// Signed-out marketing nav: 8-link bar, About/Donate pinned to the trailing
+// edge, pill-styled links. Verifies the pill's computed values (padding,
+// radius, font-weight, focus outline) resolve under real layout, plus the
+// auto-margin placement of the alignEnd pair. `globals.brand` below only
+// selects the MUI theme (CodeaiTheme) — the pill styling itself comes from
+// Header's base CSS. Hover/press backgrounds are verified by live browser
+// interaction instead of a play-function assertion: :hover doesn't reliably
+// register on anchors through this story's component-test harness
+// (userEvent.hover/pointer left `.matches(':hover')` false here, unlike the
+// Button-based hovers other stories assert on).
+export const SignedOutMarketingNav: Story = {
+  args: {
+    ...BASE,
+    menuItems: [],
+    globalNavItems: MARKETING_NAV_ITEMS,
+    userAuth: {status: 'signed-out'},
+    marketingNav: true,
+  },
+  parameters: DESKTOP_LAYOUT_PARAMS,
+  globals: {brand: 'codeai-next'},
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const teachers = canvas.getByRole('link', {name: 'Teachers'});
+    const styles = getComputedStyle(teachers);
+    expect(styles.padding).toBe('5px 10px');
+    expect(styles.borderRadius).toBe('8px'); // 0.5rem
+    expect(styles.fontWeight).toBe('600');
+    expect(styles.whiteSpace).toBe('nowrap');
+
+    // About (the first alignEnd item) sits flush against the right cluster;
+    // Donate follows it directly — both pushed by the same auto margin.
+    const about = canvas.getByRole('link', {name: 'About'});
+    const donate = canvas.getByRole('link', {name: 'Donate'});
+    const hamburger = canvasElement.querySelector(
+      '[aria-label="Open navigation menu"]',
+    )!;
+    expect(about.getBoundingClientRect().left).toBeGreaterThan(
+      teachers.getBoundingClientRect().right,
+    );
+    expect(donate.getBoundingClientRect().left).toBeGreaterThanOrEqual(
+      about.getBoundingClientRect().right,
+    );
+    expect(hamburger.getBoundingClientRect().left).toBeGreaterThanOrEqual(
+      donate.getBoundingClientRect().right,
+    );
+
+    const signIn = canvas.getByRole('link', {name: 'Sign in'});
+    expect(getComputedStyle(signIn).height).toBe('32px');
+    expect(getComputedStyle(signIn).borderRadius).toBe('8px');
   },
 };
 

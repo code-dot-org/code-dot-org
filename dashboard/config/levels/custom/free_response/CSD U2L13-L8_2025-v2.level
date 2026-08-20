@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2026-04-01T20:47:06.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Match the Image Reflection\r\n\r\n🤔 Take a minute to reflect on the last level where you were tasked with applying Flexbox child properties to match the image and answer the following questions:\r\n\r\n1. ✔️ How do you think you did according to the Rubric below and why?\r\n2. 🏁 How did you know how to complete this assessment?\r\n3. 👍🏼 What was easy about the task? / ❗ What was the most challenging? \r\n   - What did you do to overcome the challenging part?\r\n4. ❓ What questions do you still have?\r\n\r\n<hr>\r\n\r\n![](https://images.code.org/8971df3127b3fae7d963ca28d52836bc-image-1708476154856.png)",
+    "long_instructions": "# Match the Image Reflection\r\n\r\n🤔 Take a minute to reflect on the last level where you were tasked with applying Flexbox child properties to match the image and answer the following questions:\r\n\r\n1. ✔️ How do you think you did according to the Rubric below and why?\r\n2. 🏁 How did you know how to complete this assessment?\r\n3. 👍🏼 What was easy about the task? / ❗ What was the most challenging? \r\n   - What did you do to overcome the challenging part?\r\n4. ❓ What questions do you still have?\r\n\r\n<hr>\r\n\r\n::: details [Extensive Evidence]\r\nAdded an `order` property to child paragraphs and images to match the layout of the image in the instructions. Added an `align-self` property to paragraphs to match the image in the instructions. Added a `flex-grow` property to paragraph(s) to match the image in the instructions.\r\n:::\r\n\r\n::: details [Convincing Evidence]\r\nAdded `order`, `align-self`, and `flex-grow` properties to child paragraphs and images but the result does not exactly match the image in the instructions.\r\n:::\r\n\r\n::: details [Limited Evidence]\r\nAdded either `order`, `align-self`, or `flex-grow` properties to child paragraphs and/or images, but not all of the needed properties to match the image in the instructions.\r\n:::\r\n\r\n::: details [No Evidence]\r\nThere are no `order`, `align-self`, or `flex-grow` properties added for child paragraphs or images in order to match the image in the instructions.\r\n:::",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,9 +22,8 @@
     "ai_tutor_available": "true",
     "stay_on_level_after_submit": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:06.045+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L8-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L8-2025\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:06.045+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L8-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L8-2025\"},{\"changed_at\":\"2026-07-26 22:56:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

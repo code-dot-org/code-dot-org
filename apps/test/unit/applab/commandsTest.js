@@ -1,7 +1,301 @@
 import $ from 'jquery';
 
-import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImageUrl: jest.fn(),
+}));
+
+import applabCommands, {
+  rgb,
+  setSelectionRange,
+  openUrl,
+} from '@cdo/apps/applab/commands';
+import {clearImageUrlModerationCache} from '@cdo/apps/applab/imageUrlModeration';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
+
+async function flushModerationAsync() {
+  // Moderation goes: Azure mock -> cache handlers -> command callback (e.g.
+  // outputWarning). Awaiting the mock alone stops too early; setTimeout(0)
+  // lets the remaining handlers finish before assertions.
+  await Promise.all(
+    moderateImageUrl.mock.results.map(result => result.value).filter(Boolean)
+  );
+  await new Promise(resolve => setTimeout(resolve, 0));
+}
+
+describe('setProperty image URL moderation', () => {
+  const mockModerateImageUrl = moderateImageUrl;
+  let errorHandler;
+  let originalApplab;
+  let testDivApplab;
+  let testImage;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    clearImageUrlModerationCache();
+    mockModerateImageUrl.mockResolvedValue('flagged');
+    errorHandler = {
+      outputWarning: jest.fn(),
+      getAsyncOutputWarning: jest.fn(),
+    };
+    errorHandler.getAsyncOutputWarning.mockReturnValue(
+      errorHandler.outputWarning
+    );
+    injectErrorHandler(errorHandler);
+
+    originalApplab = global.Applab;
+    global.Applab = {
+      updateProperty: jest.fn(),
+    };
+
+    testDivApplab = document.createElement('div');
+    testDivApplab.setAttribute('id', 'divApplab');
+    document.body.appendChild(testDivApplab);
+
+    testImage = document.createElement('img');
+    testImage.setAttribute('id', 'test-image');
+    testDivApplab.appendChild(testImage);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(testDivApplab);
+    global.Applab = originalApplab;
+    injectErrorHandler(null);
+  });
+
+  it('does not update property when absolute image URL is flagged', async () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'http://example.com/image.png',
+    });
+    await flushModerationAsync();
+
+    expect(mockModerateImageUrl).toHaveBeenCalledWith(
+      'https://example.com/image.png',
+      'applab',
+      {
+        uploaderType: 'ImageURLInput',
+        assetUrl: 'https://example.com/image.png',
+      }
+    );
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property when moderation is unavailable', async () => {
+    mockModerateImageUrl.mockResolvedValue('error');
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'http://example.com/image.png',
+    });
+    await flushModerationAsync();
+
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property for data URLs', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property for uppercase DATA URLs', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'DATA:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property for data URLs with leading whitespace', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: '  data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+});
+
+describe('other image command URL moderation', () => {
+  const mockModerateImageUrl = moderateImageUrl;
+  let errorHandler;
+  let originalApplab;
+  let testDivApplab;
+  let testScreen;
+  let testImage;
+  let testCanvas;
+
+  function expectModerationCalledWithHttpUrl() {
+    expect(mockModerateImageUrl).toHaveBeenCalledWith(
+      'https://example.com/image.png',
+      'applab',
+      {
+        uploaderType: 'ImageURLInput',
+        assetUrl: 'https://example.com/image.png',
+      }
+    );
+  }
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    clearImageUrlModerationCache();
+    mockModerateImageUrl.mockResolvedValue('flagged');
+    errorHandler = {
+      outputWarning: jest.fn(),
+      getAsyncOutputWarning: jest.fn(),
+    };
+    errorHandler.getAsyncOutputWarning.mockReturnValue(
+      errorHandler.outputWarning
+    );
+    injectErrorHandler(errorHandler);
+
+    originalApplab = global.Applab;
+    testCanvas = document.createElement('canvas');
+    testCanvas.width = 320;
+    testCanvas.height = 480;
+    testCanvas.getContext = jest.fn().mockReturnValue({
+      save: jest.fn(),
+      setTransform: jest.fn(),
+      drawImage: jest.fn(),
+      restore: jest.fn(),
+    });
+    global.Applab = {
+      updateProperty: jest.fn(),
+      activeCanvas: testCanvas,
+      activeScreen: jest.fn(),
+    };
+
+    testDivApplab = document.createElement('div');
+    testDivApplab.setAttribute('id', 'divApplab');
+    document.body.appendChild(testDivApplab);
+
+    testScreen = document.createElement('div');
+    testScreen.setAttribute('id', 'screen1');
+    testDivApplab.appendChild(testScreen);
+    global.Applab.activeScreen.mockReturnValue(testScreen);
+
+    testImage = document.createElement('img');
+    testImage.setAttribute('id', 'test-image');
+    testDivApplab.appendChild(testImage);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(testDivApplab);
+    global.Applab = originalApplab;
+    injectErrorHandler(null);
+  });
+
+  it('image warns and leaves src empty when absolute URL is flagged', async () => {
+    applabCommands.image({
+      elementId: 'new-image',
+      src: 'http://example.com/image.png',
+    });
+    await flushModerationAsync();
+
+    expectModerationCalledWithHttpUrl();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    const createdImage = document.getElementById('new-image');
+    expect(createdImage).toBeTruthy();
+    expect(createdImage.getAttribute('data-canonical-image-url')).toBeNull();
+  });
+
+  it('setImageURL warns and leaves src unchanged when moderation is unavailable', async () => {
+    mockModerateImageUrl.mockResolvedValue('error');
+    const originalSrc = testImage.src;
+    applabCommands.setImageURL({
+      elementId: 'test-image',
+      src: 'http://example.com/image.png',
+    });
+    await flushModerationAsync();
+
+    expectModerationCalledWithHttpUrl();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(testImage.src).toBe(originalSrc);
+    expect(testImage.getAttribute('data-canonical-image-url')).toBeNull();
+  });
+
+  it('setImageURL warns and leaves src unchanged for data URLs', () => {
+    const originalSrc = testImage.src;
+    applabCommands.setImageURL({
+      elementId: 'test-image',
+      src: 'data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(testImage.src).toBe(originalSrc);
+    expect(testImage.getAttribute('data-canonical-image-url')).toBeNull();
+  });
+
+  it('drawImageURL warns and invokes callback(false) when absolute URL is flagged', async () => {
+    const callback = jest.fn();
+    applabCommands.drawImageURL({
+      url: 'http://example.com/image.png',
+      callback,
+    });
+    await flushModerationAsync();
+
+    expectModerationCalledWithHttpUrl();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(callback).toHaveBeenCalledWith(false);
+  });
+
+  it('drawImageURL warns and invokes callback(false) for data URLs', () => {
+    const callback = jest.fn();
+    applabCommands.drawImageURL({
+      url: 'data:image/png;base64,AAA=',
+      callback,
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(callback).toHaveBeenCalledWith(false);
+  });
+
+  it('drawImageURL warns and invokes callback(false) when moderation is unavailable', async () => {
+    mockModerateImageUrl.mockResolvedValue('error');
+    const callback = jest.fn();
+    applabCommands.drawImageURL({
+      url: 'http://example.com/image.png',
+      callback,
+    });
+    await flushModerationAsync();
+
+    expectModerationCalledWithHttpUrl();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(callback).toHaveBeenCalledWith(false);
+  });
+
+  it('image warns and leaves src empty for data URLs', () => {
+    applabCommands.image({
+      elementId: 'new-image',
+      src: 'data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    const createdImage = document.getElementById('new-image');
+    expect(createdImage).toBeTruthy();
+    expect(createdImage.getAttribute('data-canonical-image-url')).toBeNull();
+  });
+});
 
 describe('rgb command', () => {
   it('returns an rgba string with no alpha', function () {

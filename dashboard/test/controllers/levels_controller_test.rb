@@ -1386,6 +1386,43 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal level.name, properties[level.id.to_s]["name"]
   end
 
+  # level_properties is open to signed out users, so the widget2 parameter must be
+  # ignored unless the user could edit a widget2.
+  test "level_properties ignores the widget2 parameter for a student" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    Weblab2.any_instance.stubs(:get_widget2_sources).returns({files: {'1' => {name: 'widget.html'}}})
+    level = create(:weblab2)
+    sign_in create(:student)
+
+    get :level_properties, params: {id: level.id, widget2: 'mywidget'}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_nil properties[level.id.to_s]["startSources"]
+  end
+
+  test "level_properties honors the widget2 parameter for a levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    Weblab2.any_instance.stubs(:get_widget2_sources).returns({files: {'1' => {name: 'widget.html'}}})
+    level = create(:weblab2)
+    sign_in create(:levelbuilder)
+
+    get :level_properties, params: {id: level.id, widget2: 'mywidget'}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal 'widget.html', properties[level.id.to_s].dig("startSources", "files", "1", "name")
+  end
+
+  test "level_properties leaves start sources alone for a widget2 with no sources yet" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    level = create(:weblab2)
+    sign_in create(:levelbuilder)
+
+    get :level_properties, params: {id: level.id, widget2: 'nosuchwidget'}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_nil properties[level.id.to_s]["startSources"]
+  end
+
   test "level_properties includes sublevels if present" do
     level = create(:bubble_choice_level, :with_sublevels)
     get :level_properties, params: {id: level.id}
@@ -1395,6 +1432,59 @@ class LevelsControllerTest < ActionController::TestCase
     level.sublevels.each do |sublevel|
       assert_equal sublevel.name, properties[sublevel.id.to_s]["name"]
     end
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for music levels" do
+    texts = extra_links_texts(create(:music))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start and exemplar but not toolbox for non-Blockly pythonlab levels" do
+    texts = extra_links_texts(create(:pythonlab))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for lab2 dance levels" do
+    level = create(:dance)
+    level.uses_lab2 = true
+    level.save!
+    texts = extra_links_texts(level)
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links omits edit-mode links for classic dance levels" do
+    texts = extra_links_texts(create(:dance))
+    assert_includes texts, '[E]dit'
+    refute_includes texts, '[s]tart'
+    refute_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for sprite lab levels" do
+    texts = extra_links_texts(create(:spritelab))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links omits edit-mode links for non-channel-backed levels" do
+    texts = extra_links_texts(create(:panels))
+    assert_includes texts, '[E]dit'
+    refute_includes texts, '[s]tart'
+    refute_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  private def extra_links_texts(level)
+    get :extra_links, params: {id: level.id}
+    assert_response :success
+    JSON.parse(@response.body)['links'][level.name].map {|link| link['text']}
   end
 
   # Assert that the url is a real S3 url, and not a placeholder.

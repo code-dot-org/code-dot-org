@@ -22,9 +22,13 @@
  * acceptable for a pre-cutover shim (dark mode ships with the CADS
  * schema, not the legacy one).
  *
- * Under [data-brand='codeai-next'] every one of these names is
- * re-declared at higher specificity by brandCodeAiNext.css, so this file
- * is inert there. Delete this file at brand cutover cleanup.
+ * Under both CADS brands every one of these names is re-declared at
+ * higher specificity by the brand's own token file — brandCodeAiNext.css
+ * for codeai-next, brandCodeAiAudit.css for codeai-audit — so this file
+ * is inert there. That is what keeps the audit brand honest: were any
+ * CADS name to fall through to this shim, it would render its real
+ * legacy color under an audit that claims every token is pink.
+ * Delete this file at brand cutover cleanup.
  *
  * The [data-theme] selectors exist because custom properties substitute
  * their var() chains on the declaring element and inherit as resolved
@@ -60,11 +64,15 @@
   --background-success-mid: var(--background-success-light);
   --background-info-mid: var(--background-info-light);
 
-  /* Backgrounds — selected state (no legacy equivalent; teal fill) */
+  /* Backgrounds — selected state (no legacy equivalent; teal fill). The
+     inverse is the legacy selected-menu glyph box: white on the teal
+     row (paired with a teal check via text-selected-primary-inverse). */
   --background-selected-primary: var(--background-brand-teal-strong);
-  --background-selected-hover: var(
+  --background-selected-strong: var(
     --brand-teal-80
   ); /* primitive: theme-fixed */
+
+  --background-selected-primary-inverse: var(--background-neutral-white-fixed);
 
   /* Backgrounds — disabled family collapses onto legacy neutral disabled */
   --background-disabled-brand: var(--background-neutral-disabled);
@@ -93,6 +101,11 @@
   --border-neutral-primary: var(--borders-neutral-primary);
   --border-neutral-secondary: var(--borders-neutral-strong);
   --border-neutral-solid: var(--borders-neutral-solid);
+  --border-neutral-white-fixed: var(--borders-neutral-white-fixed);
+  --border-neutral-black-fixed: var(
+    --neutral-base-black
+  ); /* primitive: theme-fixed */
+
   --border-brand-primary: var(--borders-brand-teal-primary);
   --border-brand-light: var(--borders-brand-teal-light);
   --border-brand-mid: var(--brand-teal-20); /* primitive: theme-fixed */
@@ -123,7 +136,13 @@
 
   --border-info-strong: var(--borders-info-strong);
   --border-selected-primary: var(--borders-brand-teal-strong);
-  --border-selected-hover: var(--brand-teal-80); /* primitive: theme-fixed */
+  --border-selected-strong: var(--brand-teal-80); /* primitive: theme-fixed */
+  --border-selected-primary-inverse: var(--borders-neutral-white-fixed);
+
+  /* Focus ring: legacy teal; inverse ring (on a selected fill) goes
+     white to contrast. */
+  --border-focused-primary: var(--borders-brand-teal-primary);
+  --border-focused-inverse: var(--borders-neutral-white-fixed);
   --border-disabled-brand: var(--borders-neutral-disabled);
   --border-disabled-error: var(--borders-neutral-disabled);
   --border-disabled-info: var(--borders-neutral-disabled);
@@ -150,6 +169,7 @@
   --text-brand-secondary: var(--text-brand-teal-secondary);
   --text-brand-primary-fixed: var(--text-brand-teal-primary-fixed);
   --text-selected-primary: var(--text-neutral-inverse);
+  --text-selected-primary-inverse: var(--text-brand-teal-primary);
   --text-disabled-brand: var(--text-neutral-disabled);
   --text-disabled-error: var(--text-neutral-disabled);
   --text-disabled-info: var(--text-neutral-disabled);
@@ -163,10 +183,10 @@
   /* Accent text on legacy primitives (theme-fixed); orange sits at the
      60 step, the darkest orange in legacy text use. */
   --text-accent-orange-primary: var(--accent-orange-60);
-  --text-accent-orange-strong: var(--accent-orange-80);
+  --text-accent-orange-secondary: var(--accent-orange-80);
   --text-accent-orange-primary-fixed: var(--accent-orange-60);
   --text-accent-pink-primary: var(--accent-strawberry-50);
-  --text-accent-pink-strong: var(--accent-strawberry-70);
+  --text-accent-pink-secondary: var(--accent-strawberry-70);
   --text-accent-pink-primary-fixed: var(--accent-strawberry-50);
 
   /* CADS-only primitives with no legacy name at all (direct primitive
@@ -174,7 +194,7 @@
      unresolved var() under this brand). Same-step mapping into the
      nearest legacy family; legacy's extra "100" step (which CADS dropped)
      absorbs CADS's "95" step, mirroring the reverse mapping in
-     brandCodeAiNextAliases.css. brand-orange has no legacy brand
+     brandLegacyAliases.css. brand-orange has no legacy brand
      counterpart, so it maps to legacy's accent-orange; brand-pink maps to
      accent-strawberry, same as the pink/strawberry semantic mapping
      above. */

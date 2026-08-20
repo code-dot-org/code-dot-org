@@ -28,6 +28,19 @@
   },
   "resources": [
     {
+      "name": "2026 AIF Semester 1 Changelog",
+      "url": "https://docs.google.com/document/d/1dhkmFRrxMF8Ach510fq3QyfKCAflJY6eAccVvc-PJZk/",
+      "key": "2026_aif_semester_1_changelog",
+      "properties": {
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "2026_aif_semester_1_changelog"
+      }
+    },
+    {
       "name": "AI Foundations Syllabus",
       "url": "https://docs.google.com/document/d/1CMpVVbfdObBVB19BTdi70x8wnN4rmen9bfSTQSqAJng/edit?usp=sharing",
       "key": "ai_foundations_syllabus_1",
@@ -36,6 +49,39 @@
       },
       "seeding_key": {
         "resource.key": "ai_foundations_syllabus_1"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/ai-foundations-year1-2026/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-foundations-year1-2026/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/ai-foundations-year1-2026/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     }
   ],

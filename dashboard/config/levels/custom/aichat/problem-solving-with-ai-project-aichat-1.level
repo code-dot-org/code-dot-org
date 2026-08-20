@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-08-06T18:13:53.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Product Chatbot\r\n\r\nCompose a system prompt that instructs your chatbot how to respond to a user who has questions about your product. Use the following components to build your prompt-\r\n* **TASK**: The chatbot's job, and the jobs it should hand off elsewhere\r\n* **CONTEXT**: Who is asking, what they already know, and what they are deciding\r\n* **FORMAT**: How long answers should be and how they should be organized\r\n* **RETRIEVAL**:The information from your product's spec sheet\r\n* **TONE**: How the chatbot should sound to your audience",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Product Chatbot",
+    "project_template_level_name": "problem-solving-with-ai-project-aichat-template",
+    "bubble_choice_description": "In AI Chat, compose & revise your system prompt to instruct your chatbot how to respond to users.",
+    "thumbnail_url": "https://images.code.org/99dd12c138e6b21c3d18ff2124af6b2f-ai-chat-lab-icon (1).png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-06T18:13:53.914+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-aichat-template\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-aichat-template\"},{\"changed_at\":\"2026-08-06 18:19:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 19:02:18 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 17:28:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

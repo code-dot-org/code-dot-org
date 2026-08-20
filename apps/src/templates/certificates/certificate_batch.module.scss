@@ -11,9 +11,15 @@ $border-radius: 4px;
   margin: 0 auto;
   font-size: 14px;
   line-height: 22px;
-  color: dimgray;
+  color: var(--text-neutral-primary);
   flex-direction: column;
   gap: 48px;
+
+  // dashboard/app/assets/stylesheets/application.scss paints every <hr> with
+  // the brand teal; these dividers are neutral.
+  hr {
+    border-color: var(--borders-neutral-strong);
+  }
 }
 
 .certificate {
@@ -25,21 +31,22 @@ $border-radius: 4px;
   width: 360px;
 }
 
-.textarea {
+// Use a high-specificity selector to take priority over bootstrap
+textarea.textarea {
   width: -webkit-fill-available;
   resize: none;
-  border: 1px solid $neutral_dark;
+  border: 1px solid var(--borders-neutral-strong);
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
   padding: 10px;
 }
 
 .submit {
-  background: $light_secondary_500;
-  color: $neutral_white;
-  font-size: 16px;
+  margin-top: 0.5rem;
 }
 
 .header {
-  color: $neutral_dark;
+  color: var(--text-neutral-primary);
 }
 
 .headerContainer {
@@ -52,8 +59,8 @@ $border-radius: 4px;
 }
 
 .entryContainer {
-  width: 50%;
-  background-color: $neutral_light;
+  width: calc(50% + 30px);
+  background-color: var(--background-neutral-secondary);
   padding: 15px 15px 0 15px;
   border-radius: 5px;
 }
@@ -67,7 +74,7 @@ $border-radius: 4px;
 }
 
 .continueBeyond .actionBlock {
-  background-color: $neutral_light;
+  background-color: var(--background-neutral-secondary);
 }
 
 // Action blocks wrappers
@@ -95,8 +102,8 @@ $border-radius: 4px;
 
 // Action blocks shared styles
 .actionBlock {
-  background: $neutral_white;
-  border: 1px solid $neutral_dark20;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: $border-radius;
   display: flex;
   align-content: baseline;
@@ -112,7 +119,7 @@ $border-radius: 4px;
 
     &.overline {
       @include overline-two;
-      color: $brand_primary_default;
+      color: var(--text-brand-purple-primary);
       width: 100%;
     }
   }
@@ -163,11 +170,8 @@ $border-radius: 4px;
     margin-bottom: 1rem;
   }
 
-  a.linkButton {
+  .linkButton {
     width: 100%;
-    text-align: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
     margin: 1rem 0 0;
   }
 }
@@ -195,29 +199,15 @@ $border-radius: 4px;
   }
 
   @media screen and (max-width: $width-sm) {
-    a.linkButton,
+    .linkButton,
     button {
       width: 100%;
-      text-align: center;
     }
   }
 }
 
-a.linkButton {
-  height: unset;
-  display: inline-block;
-  color: white !important;
-  background-color: $light_secondary_500 !important;
-  border: 2px solid $light_secondary_500;
-  border-radius: $border-radius;
-  padding: 0.625rem 1rem;
+.linkButton {
   margin: 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 500 !important;
-  line-height: 1.2;
-  text-decoration: none !important;
-  text-align: center;
-  transition: all ease-in-out 0.2s;
 }
 
 .contentFooter {
@@ -255,12 +245,12 @@ a.linkButton {
   justify-content: flex-start;
 }
 
-.professionalLearning .linkButton {
-  width: auto !important;
+.professionalLearning .actionBlockOneCol .linkButton {
+  width: auto;
 }
 
 .professionalLearningImage {
-  background-color: $neutral_dark;
+  background-color: var(--background-neutral-septenary);
   height: 270px;
 }
 
@@ -294,7 +284,7 @@ h3.textCenter, .textCenter {
 }
 
 .divider {
-  border-color: $lightest_gray;
+  border-color: var(--borders-neutral-primary);
   border-width: 1px 0 0 0;
   border-style: solid;
   margin: 20px 0;
@@ -303,9 +293,4 @@ h3.textCenter, .textCenter {
 .extraLinkContainer {
   clear: both;
   padding-top: 20px;
-}
-
-.extraLink {
-  color: $teal;
-  font-size: 14px;
 }

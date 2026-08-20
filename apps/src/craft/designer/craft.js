@@ -3,6 +3,7 @@ import {
   FacingDirection,
   utils as CraftUtils,
 } from '@code-dot-org/craft';
+import {ThemeProvider} from '@mui/material/styles';
 import Hammer from 'hammerjs';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -22,6 +23,8 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
+import downButtonImg from '../../../static/craft/CDO_MC_ScrollDown.png';
+import upButtonImg from '../../../static/craft/CDO_MC_ScrollUp.png';
 import {TestResults} from '../../constants';
 import dom from '../../dom';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -33,6 +36,7 @@ import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import craftMsg from '../locale';
+import minecraftMuiTheme from '../minecraftMuiTheme';
 
 import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
@@ -452,21 +456,27 @@ Craft.init = function (config) {
   createReactRoot(
     <Provider store={getStore()}>
       <div>
-        <AppView
-          visualizationColumn={
-            <CraftVisualizationColumn
-              showFinishButton={!config.level.isProjectLevel}
-              showScore={!!config.level.useScore}
-            />
-          }
-          onMount={onMount}
-        />
-        <PlayerSelectionDialog
-          players={[CHARACTER_ALEX, CHARACTER_STEVE]}
-          title={craftMsg.playerSelectChooseCharacter()}
-          titleClassName="minecraft-big-gray-header"
-          hideSubtitle
-        />
+        <ThemeProvider theme={minecraftMuiTheme}>
+          <AppView
+            upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
+            downIcon={
+              <img style={{width: '15px'}} src={downButtonImg} alt="" />
+            }
+            visualizationColumn={
+              <CraftVisualizationColumn
+                showFinishButton={!config.level.isProjectLevel}
+                showScore={!!config.level.useScore}
+              />
+            }
+            onMount={onMount}
+          />
+          <PlayerSelectionDialog
+            players={[CHARACTER_ALEX, CHARACTER_STEVE]}
+            title={craftMsg.playerSelectChooseCharacter()}
+            titleClassName="minecraft-big-gray-header"
+            hideSubtitle
+          />
+        </ThemeProvider>
       </div>
     </Provider>,
     document.getElementById(config.containerId),

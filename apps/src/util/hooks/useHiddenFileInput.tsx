@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useRef} from 'react';
+import React, {ChangeEvent, useCallback, useRef} from 'react';
 
 /**
  * Hook that creates a hidden file input element and returns
@@ -16,27 +16,32 @@ export default function useHiddenFileInput(
   capture?: boolean | 'user' | 'environment'
 ) {
   const inputRef = useRef<HTMLInputElement>(null);
+  const onChangeRef = useRef(onChange);
+  onChangeRef.current = onChange;
   const openFileInput = () => {
     if (inputRef.current) {
-      inputRef.current.click();
       inputRef.current.value = '';
+      inputRef.current.click();
     }
   };
 
-  const FileInput = () => (
-    <input
-      type="file"
-      id="file-input"
-      ref={inputRef}
-      style={{display: 'none'}}
-      onChange={onChange}
-      accept={accept}
-      multiple={multiple}
-      capture={capture}
-      onClick={event => {
-        event.stopPropagation();
-      }}
-    />
+  const FileInput = useCallback(
+    () => (
+      <input
+        type="file"
+        id="file-input"
+        ref={inputRef}
+        style={{display: 'none'}}
+        onChange={event => onChangeRef.current(event)}
+        accept={accept}
+        multiple={multiple}
+        capture={capture}
+        onClick={event => {
+          event.stopPropagation();
+        }}
+      />
+    ),
+    [accept, multiple, capture]
   );
 
   return [openFileInput, FileInput] as const;

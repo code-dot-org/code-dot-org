@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -7,20 +9,26 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
+import {
+  setFlaggedFilename,
+  unblockIfFlaggedAssetDeleted,
+} from '../assets/flaggedAssetMetadata';
 
 import AddAssetButtonRow from './AddAssetButtonRow';
 import AssetRow from './AssetRow';
-import AudioRecorder from './AudioRecorder';
+import AudioRecorder, {AudioErrorType} from './AudioRecorder';
 import {RecordingFileType} from './recorders';
 
-export const AudioErrorType = {
-  NONE: 'none',
-  INITIALIZE: 'initialize',
-  SAVE: 'save',
-};
 export const ImageMode = {
   FILE: 'file',
   ICON: 'icon',
@@ -78,7 +86,39 @@ export default class AssetManager extends React.Component {
       recordingAudio: false,
       audioErrorType: AudioErrorType.NONE,
       projectType: '',
+      pendingUploadData: null,
+      showFlaggedModal: false,
+      flaggedModalError: null,
+      uploadsEnabled: props.uploadsEnabled,
     };
+    // Synced flag: set before submit() so a fast onUploadDone
+    // still sees it and writes metadata.
+    this.pendingFlaggedUpload = false;
+  }
+
+  /**
+   * Uploads require local enablement and must not override if a project is flagged for abuse.
+   * Prefer 'live' abuse score (updated on flag/unflag) over the initial prop so
+   * deleting the flagged asset can re-enable without remounting the dialog.
+   */
+  areUploadsEnabled = () => {
+    if (!this.state.uploadsEnabled) {
+      return false;
+    }
+    if (
+      typeof dashboard !== 'undefined' &&
+      dashboard.project?.exceedsAbuseThreshold
+    ) {
+      return !dashboard.project.exceedsAbuseThreshold();
+    }
+    return this.props.uploadsEnabled;
+  };
+
+  componentDidUpdate(prevProps) {
+    // If the parent turns uploads off, force local state to match.
+    if (!this.props.uploadsEnabled && prevProps.uploadsEnabled) {
+      this.setState({uploadsEnabled: false});
+    }
   }
 
   componentDidMount() {
@@ -156,15 +196,91 @@ export default class AssetManager extends React.Component {
    * Called when user initiates an upload.
    * @param data - Upload data from jquery.fileupload
    */
-  onUploadStart = data => {
+  onUploadStart = async data => {
     const file = data?.files?.[0];
     if (!file) {
       console.error('No file found in upload data.');
       this.setState({statusMessage: 'Error: No file selected for upload.'});
       return;
     }
-    this.setState({statusMessage: 'Uploading...'});
+
+    const shouldModerate =
+      !this.props.isStartMode &&
+      SafeAndSupportedImageTypes.includes(file.type || '');
+
+    if (!shouldModerate) {
+      this.setState({statusMessage: 'Uploading...'});
+      data.submit();
+      return;
+    }
+
+    this.setState({pendingUploadData: data, statusMessage: 'Uploading...'});
+
+    const moderationStatus = await moderateImage(file, this.state.projectType, {
+      uploaderType: 'AssetManager',
+      assetUrl: this.uploadApi().getUploadUrl(),
+    });
+
+    if (moderationStatus === 'flagged') {
+      this.setState({showFlaggedModal: true, statusMessage: ''});
+      return;
+    }
+
+    this.setState({pendingUploadData: null});
     data.submit();
+  };
+
+  handleAcceptFlaggedImage = () => {
+    const {pendingUploadData} = this.state;
+    if (!pendingUploadData) {
+      return;
+    }
+
+    const body = JSON.stringify({type: 'flag'});
+    HttpClient.post(
+      `/v3/channels/${this.props.projectId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    )
+      .then(response => response.json())
+      .then(async () => {
+        if (dashboard.project?.fetchAbuseScore) {
+          await dashboard.project.fetchAbuseScore();
+        }
+        this.pendingFlaggedUpload = true;
+        this.setState({
+          showFlaggedModal: false,
+          pendingUploadData: null,
+          flaggedModalError: null,
+          uploadsEnabled: false,
+          statusMessage: 'Uploading...',
+        });
+        pendingUploadData.submit();
+        analyticsReporter.sendEvent(EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE, {
+          UploaderType: 'AssetManager',
+          ProjectType: this.state.projectType,
+        });
+      })
+      .catch(err => {
+        this.setState({
+          showFlaggedModal: true,
+          flaggedModalError: i18n.animationPicker_uploadingError(),
+        });
+        MetricsReporter.logError('Update project abuse error: ' + err);
+      });
+  };
+
+  handleCancelFlaggedImage = () => {
+    this.setState({
+      showFlaggedModal: false,
+      pendingUploadData: null,
+      flaggedModalError: null,
+    });
+    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
+      UploaderType: 'AssetManager',
+      ProjectType: this.state.projectType,
+    });
   };
 
   onUploadDone = result => {
@@ -182,10 +298,24 @@ export default class AssetManager extends React.Component {
       newState.assets = assetListStore.list(this.props.allowedExtensions);
     }
 
+    // Skip flagged-filename metadata when useFilesApi is true. Files are versioned,
+    // so delete-to-unblock is not offered.
+    if (this.pendingFlaggedUpload) {
+      this.pendingFlaggedUpload = false;
+      if (!this.props.useFilesApi) {
+        setFlaggedFilename(this.props.projectId, result.filename).catch(err => {
+          MetricsReporter.logError(
+            'Error writing flagged asset metadata: ' + err
+          );
+        });
+      }
+    }
+
     this.setState(newState);
   };
 
   onUploadError = status => {
+    this.pendingFlaggedUpload = false;
     this.setState({
       statusMessage: 'Error uploading file: ' + getErrorMessage(status),
     });
@@ -195,7 +325,7 @@ export default class AssetManager extends React.Component {
     this.setState({recordingAudio: true});
   };
 
-  deleteAssetRow = name => {
+  deleteAssetRow = async name => {
     assetListStore.remove(name);
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
@@ -205,6 +335,24 @@ export default class AssetManager extends React.Component {
       assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: `File "${name}" successfully deleted!`,
     });
+
+    // Self-unblock only for unversioned asset stores. If lab uses Files API,
+    // then lab stays blocked after delete since a later version restore could
+    // bring the flagged file back.
+    if (this.props.useFilesApi || !this.props.projectId) {
+      return;
+    }
+
+    const {didUnblock} = await unblockIfFlaggedAssetDeleted(
+      this.props.projectId,
+      name
+    );
+    if (didUnblock) {
+      this.setState({
+        uploadsEnabled: true,
+        statusMessage: `File "${name}" successfully deleted!`,
+      });
+    }
   };
 
   deleteStarterAssetRow = name => {
@@ -302,10 +450,14 @@ export default class AssetManager extends React.Component {
     const buttons = (
       <div>
         {this.state.audioErrorType === AudioErrorType.SAVE && (
-          <div>{i18n.audioSaveError()}</div>
+          <MuiTypography variant="body2" component="div">
+            {i18n.audioSaveError()}
+          </MuiTypography>
         )}
         {this.state.audioErrorType === AudioErrorType.INITIALIZE && (
-          <div>{i18n.audioInitializeError()}</div>
+          <MuiTypography variant="body2" component="div">
+            {i18n.audioInitializeError()}
+          </MuiTypography>
         )}
         {displayAudioRecorder && (
           <AudioRecorder
@@ -316,7 +468,7 @@ export default class AssetManager extends React.Component {
           />
         )}
         <AddAssetButtonRow
-          uploadsEnabled={this.props.uploadsEnabled}
+          uploadsEnabled={this.areUploadsEnabled()}
           allowedExtensions={this.props.allowedExtensions}
           api={this.uploadApi()}
           onUploadStart={this.onUploadStart}
@@ -338,8 +490,9 @@ export default class AssetManager extends React.Component {
     if (this.state.assets === null || this.state.starterAssets === null) {
       assetList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
-          <i
-            className="fa-solid fa-spinner fa-spin"
+          <FontAwesomeV6Icon
+            iconName="spinner"
+            animationType="spin"
             style={{fontSize: '32px'}}
           />
         </div>
@@ -351,23 +504,23 @@ export default class AssetManager extends React.Component {
       const emptyText =
         this.props.allowedExtensions === '.mp3' ? (
           <div>
-            <div>
+            <MuiTypography variant="body2" component="div">
               {i18n.manageAssetsSoundLibraryMessage({
                 soundLibraryButtonText: i18n.soundLibrary(),
               })}
-            </div>
-            <div>
+            </MuiTypography>
+            <MuiTypography variant="body2" component="div">
               {i18n.manageAssetsSoundUploadMessage({
                 assetUploaderButtonText: i18n.uploadFile(),
               })}
-            </div>
+            </MuiTypography>
           </div>
         ) : (
-          <div>
+          <MuiTypography variant="body2" component="div">
             {i18n.manageAssetsDefaultMessage({
               assetUploaderButtonText: i18n.uploadFile(),
             })}
-          </div>
+          </MuiTypography>
         );
       assetList = (
         <div>
@@ -379,9 +532,7 @@ export default class AssetManager extends React.Component {
       const rows = [...this.getStarterAssetRows(), ...this.getAssetRows()];
       assetList = (
         <div>
-          <div
-            style={{maxHeight: '380px', overflowY: 'scroll', margin: '1em 0'}}
-          >
+          <div style={{maxHeight: '380px', overflowY: 'auto', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>{rows}</tbody>
             </table>
@@ -391,7 +542,19 @@ export default class AssetManager extends React.Component {
       );
     }
 
-    return assetList;
+    return (
+      <div>
+        {this.state.showFlaggedModal && (
+          <FlaggedImageModal
+            appName={this.state.projectType}
+            onAccept={this.handleAcceptFlaggedImage}
+            onCancel={this.handleCancelFlaggedImage}
+            errorMessage={this.state.flaggedModalError}
+          />
+        )}
+        {assetList}
+      </div>
+    );
   }
 }
 

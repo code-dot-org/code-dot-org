@@ -78,6 +78,7 @@ gem 'rack_csrf'
 
 # Allow profiling in all environments (including production). It will only be enabled when
 # CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
+gem 'bootsnap', '>= 1.14.0', require: false
 gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
@@ -85,11 +86,8 @@ gem 'annotaterb', '~> 4.19', group: [:development, :test]
 
 group :development do
   gem 'aws-google', '~> 0.2.3'
-  gem 'web-console', '~> 4.2.0'
-  # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
-  # We only use it in development atm to get a feel for it, and the benefit is greatest here.
-  gem 'bootsnap', '>= 1.14.0', require: false
   gem 'localhost'
+  gem 'web-console', '~> 4.2.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -175,9 +173,6 @@ gem 'sass-rails', '~> 6.0.0'
 # See https://github.com/sass/sassc-rails/pull/153 for context.
 gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 
-# Use Uglifier as compressor for JavaScript assets.
-gem 'uglifier', '>= 1.3.0'
-
 # Use jquery as the JavaScript library.
 gem 'jquery-rails'
 
@@ -201,7 +196,10 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
 gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 
-gem 'bootstrap-sass', '~> 2.3.2.2'
+# Target the same version of Bootstrap as we use in Javascript while we work on
+# moving all assets into the JS pipeline.
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sass', '~> 3.2'
 
 gem 'haml', '~> 5.2.0'
 
@@ -229,16 +227,6 @@ gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 gem 'naturally' # for sorting string naturally
 
 gem 'retryable' # retry code blocks when they throw exceptions
-
-# Used by `uglifier` to minify JS assets in the Asset Pipeline.
-gem 'execjs'
-
-# JavaScript runtime used by ExecJS.
-# TODO: Either resume installing in all environments once Ubuntu and Mac OS
-# support the same version of mini_racer, or remove this dependency entirely
-# once node is installed in production. For more details, see
-# https://codedotorg.atlassian.net/browse/INF-708
-gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt', '~> 2.7.0'
 
@@ -370,7 +358,7 @@ install_if require_pg do
   gem 'pg', '~> 1.3.0', require: false
 end
 
-gem 'activerecord-import', '~> 1.3.0'
+gem 'activerecord-import', '~> 1.7.0'
 gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'

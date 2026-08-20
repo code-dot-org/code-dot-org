@@ -12,7 +12,6 @@
  *= require jquery-ui
  *
  * Vendor assets
- *= require add2home
  *= require jquery.qtip.min
  *
  * Application assets
@@ -24,6 +23,7 @@
  *= require fonts/barlow-semi-condensed
  *= require fonts/geist
  *= require fonts/noto-sans
+ *= require fonts/space-grotesk
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -35,24 +35,112 @@
 @import "mixins";
 @import "style-constants";
 @import "brand-selectors";
+@import "NpsSurveyBlock";
 
 // Bootstrap Variables
-$baseFontFamily: $main-font;
-$headingsFontWeight: $regular-font-weight;
-$btnPrimaryBackground: $orange;
-$btnPrimaryBackgroundHighlight: $orange;
-
-$selectUserTypeButtonBorderColor: #ccc;
-$selectUserTypeButtonBackgroundColor: #fff;
-$selectUserTypeButtonTextColor: #000;
-$selectUserTypeButtonBackgroundColorHover: #ddd;
-$selectUserTypeButtonTextColorHover: #000;
-$selectUserTypeButtonBackgroundColorSelected: #0093a4;
-$selectUserTypeButtonTextColorSelected: #fff;
-
-$contrastTealHeader: #00818f;
+$font-family-base: $main-font;
+$headings-font-weight: $regular-font-weight;
+$btn-primary-bg: $orange;
+$btn-primary-background-highlight: $orange;
+$code-bg: #f7f7f9;
+$blue: #049cdb;
+$select-user-type-button-border-color: #ccc;
+$select-user-type-button-background-color: #fff;
+$select-user-type-button-text-color: #000;
+$select-user-type-button-background-color-hover: #ddd;
+$select-user-type-button-text-color-hover: #000;
+$select-user-type-button-background-color-selected: #0093a4;
+$select-user-type-button-text-color-selected: #fff;
 
 @import "bootstrap";
+@import "bootstrap/v2-to-v3";
+
+// Reassert brand colors on the compound states Bootstrap's button-variant mixin
+// hardcodes.  That mixin nests its :active and disabled rules one level deep,
+// making them specificity 0,3,0, so the flat &:hover / &:active overrides below
+// are outranked and the button reverts to its pre-rebrand $background - still
+// $orange for .btn-primary.  Matching the mixin's selector shape ties the
+// specificity and lets source order decide.
+@mixin themable-button-states(
+  $default,
+  $default-border,
+  $strong,
+  $strong-border
+) {
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $strong;
+      border-color: $strong-border;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $default;
+      border-color: $default-border;
+    }
+  }
+}
+
+// Bootstrap runtime-themable brand-purple primary button.
+.btn-primary {
+  background-color: var(--background-brand-purple-primary);
+  border-color: var(--borders-brand-purple-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-brand-purple-strong, #{$dark_purple});
+    border-color: var(--borders-brand-purple-strong, #{$dark_purple});
+  }
+
+  @include themable-button-states(
+    $default: var(--background-brand-purple-primary),
+    $default-border: var(--borders-brand-purple-primary),
+    $strong: var(--background-brand-purple-strong, #{$dark_purple}),
+    $strong-border: var(--borders-brand-purple-strong, #{$dark_purple})
+  );
+}
+
+// Bootstrap runtime-themable success button.
+.btn-success {
+  background-color: var(--background-success-primary);
+  border-color: var(--borders-success-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-success-strong);
+    border-color: var(--borders-success-strong);
+  }
+
+  @include themable-button-states(
+    $default: var(--background-success-primary),
+    $default-border: var(--borders-success-primary),
+    $strong: var(--background-success-strong),
+    $strong-border: var(--borders-success-strong)
+  );
+}
+
+label, input, button, select, textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
 
 p,pre,span {
   @include selectable;
@@ -60,7 +148,6 @@ p,pre,span {
 
 body {
   -webkit-tap-highlight-color: transparent;
-  padding: 0;
   font-style: normal;
 }
 
@@ -72,13 +159,14 @@ body.pin_bottom {
   left: 0;
 }
 
-body.oceans-blue {
-  background-color: $oceans_deep_blue;
+// Brand-aware lab shell background for legacy labs. Excludes Minecraft
+// (own theming) and AI for Oceans (needs the deep-blue underwater scene).
+body.pin_bottom:not(.minecraft, .oceans-blue) {
+  background-color: var(--background-neutral-secondary);
 }
 
-body.music-black, body.background-dark {
-  background-color: $dark_black;
-  color: $neutral_light;
+body.oceans-blue {
+  background-color: $oceans_deep_blue;
 }
 
 // For modern Lab2 labs, prevent the entire body from scrolling.
@@ -98,12 +186,27 @@ h1 {
   }
 }
 
+@include codeai-brand {
+  h1.existing-account-heading {
+    color: var(--text-neutral-primary);
+  }
+}
+
 h2 {
   margin: 25px 0 10px 0;
+
   @include main-font-semi-bold;
   font-size: 22px;
   line-height: 30px;
   color: var(--text-brand-teal-primary);
+
+  // Opt-in neutral heading, mirroring h1 above. Needed where a page's heading
+  // would otherwise share the brand color of its primary button: under
+  // codeai-next the brand teal here aliases to the same purple the button
+  // uses.
+  &.text-black {
+    color: var(--text-neutral-primary);
+  }
 }
 
 h3 {
@@ -130,6 +233,7 @@ th {
   border: 1px solid $white;
   text-align: left;
   font-size: 120%;
+
   @include main-font-semi-bold;
   font-weight: normal;
   padding: 5px;
@@ -207,16 +311,16 @@ img.video_thumbnail {
     padding-top: 0;
     padding-bottom: 0;
     height: 50px;
-    background-color: $contrastTealHeader;
-    color: $header_text;
+    background-color: var(--background-brand-teal-primary);
+    color: var(--text-neutral-white-fixed);
     a:link {
       &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
-        color: $header_text;
+        color: var(--text-neutral-white-fixed);
       }
     }
     a:visited {
       &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
-        color: $header_text;
+        color: var(--text-neutral-white-fixed);
       }
     }
 
@@ -240,7 +344,7 @@ img.video_thumbnail {
     }
 
     .header_logo {
-      width: 38px;
+      width: 66px;
       padding: 6px 14px;
       margin-top: 0;
     }
@@ -302,13 +406,14 @@ img.video_thumbnail {
       }
 
       &:hover, &:active {
+        // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
         border-bottom: solid 2px $orange;
         margin-top: 3px;
         padding-bottom: 2px;
       }
     }
 
-    html[dir=rtl] & {
+    html[dir="rtl"] & {
       padding-right: 30px;
     }
   }
@@ -317,9 +422,9 @@ img.video_thumbnail {
     @include main-font-regular;
     display: flex;
     align-items: center;
-    color: $white;
+    color: var(--text-neutral-white-fixed);
     background-color: transparent;
-    border: 1px solid $white;
+    border: 1px solid var(--borders-neutral-white-fixed);
     border-radius: 4px;
     padding: 6.5px 16px;
     font-size: 14px;
@@ -331,17 +436,18 @@ img.video_thumbnail {
     height: 35px;
     a:hover {
       text-decoration: none;
+      // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
       background-color: $orange;
     }
     &:active {
-      border: 1px solid $white !important;
+      border: 1px solid var(--borders-neutral-white-fixed) !important;
     }
   }
 
   .user_menu, .create_menu, .help_button {
     margin-top: 7px;
     .create_button, .display_name, .pairing_name {
-      html[dir=rtl] & {
+      html[dir="rtl"] & {
         float: right;
         padding-left: 3px;
       }
@@ -361,8 +467,8 @@ img.video_thumbnail {
   }
 
   #header_user_create_account {
-    background-color: $light_white !important;
-    color: $light_primary_500;
+    background-color: var(--background-neutral-primary) !important;
+    color: var(--text-brand-teal-primary);
     font-weight: $semi-bold-font-weight;
   }
 
@@ -372,7 +478,7 @@ img.video_thumbnail {
   .project_updated_at {
     font-size: 10px;
     .project-save-error {
-      background-color: $dark_red;
+      background-color: var(--background-error-primary);
       padding: 0 5px;
       margin-top: 2px;
       font-size: 12px;
@@ -405,7 +511,7 @@ img.video_thumbnail {
 
       // Usually transparent, so adding teal allows button to render in front
       .header_user {
-        background-color: $teal;
+        background-color: var(--background-brand-teal-primary);
       }
     }
   }
@@ -416,6 +522,146 @@ img.video_thumbnail {
     .button-signin.desktop,
     .button-create-account.desktop {
       display: none;
+    }
+  }
+}
+
+// Clips project-header content that exceeds its allocated width (the lesson
+// title and Share/Remix share the row).
+.project_info_container {
+  overflow: hidden;
+}
+
+// Pill nav links and outlined header buttons for codeai-next/codeai-audit;
+// default codeai keeps its square 35px/4px buttons and orange hover underline.
+@include codeai-brand {
+  // clip (not hidden) with a margin lets the 2px-offset focus rings paint
+  // outside the buttons while still containing overflowing content. Browsers
+  // without overflow-clip-margin clip the rings at the box; browsers without
+  // clip keep the hidden fallback above.
+  .project_info_container {
+    overflow: clip;
+    overflow-clip-margin: 4px;
+  }
+
+  // Marketing-site spacing model: no container gap, spacing comes from pill padding.
+  .header-wrapper .headerlinks {
+    flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
+  }
+
+  // marketing-nav-no-create only renders under the marketing nav (see
+  // user_header.haml), so there's no stock rule left to out-specificity here.
+  .create_menu.marketing-nav-no-create {
+    display: none;
+  }
+
+  .header-wrapper .headerlinks .headerlink {
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-semi-bold);
+    // Pills never wrap to two lines; the row overflows visibly rather than
+    // silently breaking vertical rhythm.
+    white-space: nowrap;
+
+    &:hover, &:active {
+      border-bottom: none;
+      margin-top: -1px;
+      padding: 5px 10px;
+      background-color: var(--neutral-white-alpha-10);
+    }
+
+    &:active {
+      background-color: var(--neutral-white-alpha-30);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  .header-wrapper .header_button {
+    height: 32px;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-semi-bold);
+
+    &:hover, a:hover {
+      background-color: var(--neutral-white-alpha-20);
+    }
+
+    &:active {
+      background-color: var(--neutral-white-alpha-30);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // Stock hand-centers the right cluster: the create menu, the user menu and
+  // the signed-out buttons each carry a 7px margin-top, which centers a 35px
+  // button in the 50px header. The reskin's buttons are 32px, so those margins
+  // leave the whole cluster 2px high (7px above, 11px below). Center on the
+  // cross axis instead and drop the offsets. The sibling help button and
+  // hamburger are not in this flex container and keep their own paddings.
+  .header-wrapper #sign_in_or_user {
+    align-items: center;
+
+    .header_button {
+      margin-top: 0;
+    }
+  }
+
+  // Stock markup only shows the UA outline while `.user-is-tabbing` is set
+  // (hamburger.js), which is invisible on teal; give these the same ring as
+  // the pills/buttons above for a consistent focus treatment.
+  .header-wrapper .help_button,
+  .header-wrapper #hamburger {
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // Signed-out Sign in / Create account: the tabbable element is the wrapping
+  // `<a>` (`#signin_button` / `#create_account_button`), not the `.header_button`
+  // div nested inside it, so the `.header_button:focus-visible` rule above never
+  // engages here -- the anchor itself needs the ring.
+  .header-wrapper #signin_button,
+  .header-wrapper #create_account_button {
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // This container replaces hide_on_tablet outright (see _header.html.haml);
+  // its link anchors also drop hide-mobile/hide-small-desktop, which assume a
+  // <=7-link row and would otherwise fight the two stages below. hamburger.rb's
+  // own get_header_contents() call is unaffected by this HAML change and still
+  // needs those stock classes to auto-invert hide->show for the hamburger menu.
+  .header-wrapper .headerlinks.marketing-nav {
+    #header-about {
+      margin-inline-start: auto;
+    }
+
+    // Stage 2: visible by default (>= 960px), hidden below. 960px measured
+    // (not the 900px default): the 6 remaining links start overlapping
+    // .header_right below ~950px.
+    @media (max-width: 959px) {
+      display: none;
+    }
+
+    // Stage 1: About/Donate collapse into the hamburger first; both have
+    // counterparts there. 1079px measured: the 8-link row's slack hits zero
+    // at ~1077px and labels start wrapping. Measured against us.yml's
+    // header.top.signed_out_marketing 8-link list; re-measure both stage
+    // thresholds if its labels, order, or count change.
+    @media (max-width: 1079px) {
+      #header-about, #header-donate {
+        display: none;
+      }
     }
   }
 }
@@ -459,8 +705,9 @@ img.video_thumbnail {
     The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
     banner needs to be flipped horizontally so the background image empty space is on the right.
    */
-  html[dir=rtl] & {
+  html[dir="rtl"] & {
     transform: scaleX(-1);
+
     /*
       Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
       layout is not backwards
@@ -581,40 +828,42 @@ img.video_thumbnail {
   }
 
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
     font-family: FontAwesome;
   }
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_min_height: 236px;
-$footer_padding-top: 20px;
-$footer_fullheight: $footer_min_height + $footer_padding-top;
+$footer-min-height: 236px;
+$footer-padding-top: 20px;
+$footer-fullheight: $footer-min-height + $footer-padding-top;
 html, body {
   height: 100%;
+  font-size: 100%;
 }
 .wrapper {
   min-height: 100%;
-  margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
+  margin-bottom: -$footer-fullheight;     /* This is the same as the height of .push. */
   .legacy-share-view & {
     position: relative;
   }
 }
 .push {
-  height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
+  height: $footer-fullheight;             /* This is the same as the height of .footer once its padding is included. */
 }
 .legacy-share-view .push {
   display: none;
 }
 
 .footer {
-  min-height: $footer_min_height;
-  padding-top: $footer_padding-top;
+  min-height: $footer-min-height;
+  padding-top: $footer-padding-top;
   font-size: 14px;
-  background-color: $darkest_gray;
-  color: $header_text;
+  background-color: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-inverse);
   a:link, a:visited, a:hover, a:active {
     @include main-font-regular;
-    color: $white;
+    color: var(--text-neutral-inverse);
     background-color: transparent;
   }
   a:hover {
@@ -653,21 +902,21 @@ html, body {
 
   .container {
     .row {
-      [class*="span"] {
-        html[dir=rtl] & {
+      [class*="col-md"] {
+        html[dir="rtl"] & {
           float: right;
           margin-right: 20px;
           margin-left: 0;
         }
 
         a {
-          html[dir=rtl] & {
+          html[dir="rtl"] & {
             float: right;
           }
         }
 
         div.dim {
-          html[dir=rtl] & {
+          html[dir="rtl"] & {
             float: right;
             margin-left: 4px;
             margin-right: 4px;
@@ -680,8 +929,8 @@ html, body {
 }
 
 /* Styling that keeps the small footer consistent with other page elements */
-$codeApp-left-margin: 15px;
-$codeApp-bottom-margin: 12px;
+$code-app-left-margin: 15px;
+$code-app-bottom-margin: 12px;
 $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
@@ -766,14 +1015,18 @@ $small-footer-standard-width: 400px;
   width: 100%;
   max-width: $small-footer-standard-width;
 
+  /* Need to have this reasonably high, since some of our elements (such as
+     applab editor) have higher values */
+  z-index: 1000;
+
   /*
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
    * fit between the visualization above and the .small-footer
    */
   margin-top: 5px;
-  margin-bottom: $codeApp-bottom-margin;
+  margin-bottom: $code-app-bottom-margin;
   margin-inline-end: 0;
-  margin-inline-start: $codeApp-left-margin;
+  margin-inline-start: $code-app-left-margin;
 
 
   select {
@@ -821,6 +1074,9 @@ $small-footer-standard-width: 400px;
 }
 
 body.background-dark, body.music-black {
+  background-color: $dark_black;
+  color: $neutral_light;
+
   .small-footer-base {
     background-color: initial;
     border-top: initial;
@@ -925,6 +1181,10 @@ body.background-dark, body.music-black {
   position: absolute;
   bottom: 0;
   left: 0;
+
+  /* Just under .small-footer-base */
+  z-index: 998;
+
   /* Prevent default unordered-list style */
   list-style-type: none;
   margin: 0;
@@ -932,7 +1192,7 @@ body.background-dark, body.music-black {
 
   & > li > a {
     display: block;
-    padding: 3px $small-footer-horizontal-margin 3px $codeApp-left-margin;
+    padding: 3px $small-footer-horizontal-margin 3px $code-app-left-margin;
     border-bottom: solid thin $lightest_gray;
 
     &:hover {
@@ -952,21 +1212,10 @@ body.background-dark, body.music-black {
   }
 }
 
-/* All three major components of .small-footer are stacked:
-   Need to have this reasonably, high since some of our elements (such as
-   applab editor) have higher values
-*/
-#more-menu {
-  z-index: 998;
-}
-
-.small-footer-base {
-  z-index: 1000;
-}
-
 #locale {
   font-family: sans-serif;
   height: 24px;
+
   @media screen and (max-width: 1024px) {
     max-width: 150px;
   }
@@ -983,7 +1232,7 @@ body.background-dark, body.music-black {
   margin-top: -8px;
   margin-right: 2px;
   height: 42px;
-  border-right: 1px solid $inset_color;
+  border-right: 1px solid var(--borders-neutral-strong);
   border-right-style: inset;
   display: inline-block;
 }
@@ -991,22 +1240,22 @@ body.background-dark, body.music-black {
 .user_options, .help_contents {
   display: none;
   a:link {
-    color: $black;
+    color: var(--text-neutral-primary);
   }
   a:visited {
-    color: $black;
+    color: var(--text-neutral-primary);
   }
   a:hover {
-    color: $white;
-    background-color: $dark_color;
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-primary);
     text-decoration: none;
   }
   a:active {
-    color: $white;
-    background-color: $dark_color;
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-primary);
   }
-  border: 1px solid $black;
-  color: $black;
+  border: 1px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-primary);
   padding: 10px;
 }
 
@@ -1062,24 +1311,12 @@ $default-modal-width: 640px;
     position: absolute;
     top: 50px; // top of the dialog
 
-    width: $default-modal-width;
-    margin-left: -($default-modal-width * 0.5 + 1);
-
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
     margin-bottom: 25px;
 
     z-index: 1050;
   }
-}
-
-.modal-body {
-  max-height: none;
-}
-
-.dash_modal {
-  width: $default-modal-width;
-  margin-left: -($default-modal-width * 0.5 + 1);
 }
 
 .dash_modal_body {
@@ -1150,21 +1387,6 @@ $default-modal-width: 640px;
   }
 }
 
-.video-modal {
-  z-index: 10000;
-  overflow: visible;
-
-  .ui-tabs {
-    height: 100%;
-    width: 100%;
-
-    video {
-      width: 100%;
-      max-height: 100%;
-    }
-  }
-}
-
 .header_left {
   display: flex;
   float: left;
@@ -1183,8 +1405,8 @@ $default-modal-width: 640px;
   margin-top: -24px;
   padding-top: 14px;
   min-width: 0;
-  max-width: 55px;
-  width: 55px;
+  max-width: 66px;
+  width: 66px;
 
   a:hover {
     background-color: transparent;
@@ -1223,6 +1445,13 @@ $default-modal-width: 640px;
     }
   }
 }
+// Pill spacing comes from link padding, not container gap; re-assert over
+// the small-desktop band rule above, which would double-space the pills.
+@include codeai-brand {
+  .header-wrapper .header .headerlinks {
+    gap: 0;
+  }
+}
 
 
 .project_info {
@@ -1235,7 +1464,7 @@ $default-modal-width: 640px;
   .project_name_wrapper {
     min-width: 160px;
 
-    html[dir=rtl] & {
+    html[dir="rtl"] & {
       padding-left: 5px;
       padding-right: 5px;
     }
@@ -1311,7 +1540,7 @@ $default-modal-width: 640px;
   }
 }
 
-@keyframes header_fadein {
+@keyframes header-fadein {
   from {
     opacity: 0;
   }
@@ -1530,11 +1759,11 @@ body.iframe_embed_app_and_code {
   .video_link {
     display: inline-block;
     margin: 6px 0;
-    color: $brand_secondary_default;
+    color: var(--text-brand-purple-primary);
     text-decoration: underline;
 
     &:hover {
-      color: $brand_secondary_dark;
+      color: var(--text-brand-purple-secondary);
     }
   }
 
@@ -1568,11 +1797,23 @@ body.iframe_embed_app_and_code {
 // Tabs
 
 .video-modal {
+  z-index: 10000;
+  overflow: visible;
+
   .modal-body {
     padding: 0;
   }
+  .ui-tabs {
+    height: 100%;
+    width: 100%;
+
+    video {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
   .ui-tabs-nav {
-    background: $light_gray;
+    background: var(--background-neutral-primary);
 
     li {
       border-top-right-radius: 4px;
@@ -1582,46 +1823,47 @@ body.iframe_embed_app_and_code {
       margin-bottom: 2px;
 
       a {
-        background: $brand_secondary_default;
-        border: 2px solid $brand_secondary_default;
+        background: var(--background-brand-purple-primary);
+        border: 2px solid var(--borders-brand-purple-primary);
         border-radius: 6px;
-        color: $neutral_white;
+        color: var(--text-neutral-white-fixed);
+
         @include main-font-semi-bold;
         cursor: pointer !important;
 
         &:hover {
-          background-color: $brand_secondary_dark;
-          border-color: $brand_secondary_dark;
-          color: $neutral_white;
+          background-color: var(--background-brand-purple-strong);
+          border-color: var(--borders-brand-purple-strong);
+          color: var(--text-neutral-white-fixed);
         }
         &:focus {
           outline: 0;
         }
       }
 
-      html[dir=rtl] & {
+      html[dir="rtl"] & {
         float: right;
       }
     }
 
     li.ui-state-active {
       a {
-        background: $neutral_white;
-        color: $neutral_dark;
-        border: 2px solid $neutral_dark;
+        background: var(--background-neutral-primary);
+        color: var(--text-neutral-primary);
+        border: 2px solid var(--borders-neutral-solid);
 
         &:hover {
-          color: $neutral_dark;
-          background-color: $neutral_dark20;
+          color: var(--text-neutral-primary);
+          background-color: var(--background-neutral-quaternary);
         }
       }
     }
   }
 }
 
-@mixin close-button($cornerOffset) {
-  $startWidth: 61px;
-  $startHeight: 59px;
+@mixin close-button($corner-offset) {
+  $start-width: 61px;
+  $start-height: 59px;
   $growth: 3px;
   $movement: 1px;
 
@@ -1631,49 +1873,72 @@ body.iframe_embed_app_and_code {
   background: image-url("x_button.png") no-repeat center center;
   background-size: 100% auto;
 
-  top: $cornerOffset;
-  right: $cornerOffset;
-  width: $startWidth;
-  height: $startHeight;
+  top: $corner-offset;
+  right: $corner-offset;
+  width: $start-width;
+  height: $start-height;
   &:hover {
-    top: $cornerOffset - $movement;
-    right: $cornerOffset - $movement;
-    width: $startWidth + $growth;
-    height: $startHeight + $growth;
+    top: $corner-offset - $movement;
+    right: $corner-offset - $movement;
+    width: $start-width + $growth;
+    height: $start-height + $growth;
   }
 
-  html[dir=rtl] &, .flip-x-close & {
+  html[dir="rtl"] &, .flip-x-close & {
     right: auto;
-    left: $cornerOffset;
+    left: $corner-offset;
   }
-  html[dir=rtl] &:hover, .flip-x-close &:hover {
+  html[dir="rtl"] &:hover, .flip-x-close &:hover {
     right: auto;
-    left: $cornerOffset - $movement;
-  }
-
-  html[dir=rtl] .flip-x-close & {
-    right: auto;
-    left: $cornerOffset;
+    left: $corner-offset - $movement;
   }
 
-  html[dir=rtl] .flip-x-close &:hover {
+  html[dir="rtl"] .flip-x-close & {
     right: auto;
-    left: $cornerOffset - $movement;
+    left: $corner-offset;
+  }
+
+  html[dir="rtl"] .flip-x-close &:hover {
+    right: auto;
+    left: $corner-offset - $movement;
   }
 }
 
 .x-close {
-  @include close-button($cornerOffset: -20px);
-  // Reset native <button> styles so the icon matches the old <div>-based markup.
-  // (background-color already reset by the `background` shorthand in close-button mixin.)
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-neutral-quaternary);
+  background: transparent;
   border: 0;
   padding: 0;
+
+  i {
+    font-size: var(--font-size-body-md);
+    line-height: 125%;
+  }
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  html[dir="rtl"] &, .flip-x-close & {
+    right: auto;
+    left: 6px;
+  }
 }
 
 .open-link {
-  $startWidth: 61px;
-  $startHeight: 59px;
-  $cornerOffset: -20px;
+  $start-width: 61px;
+  $start-height: 59px;
+  $corner-offset: -20px;
   $growth: 3px;
   $movement: 1px;
 
@@ -1683,13 +1948,13 @@ body.iframe_embed_app_and_code {
   background: image-url("open_button.png") no-repeat center center;
   background-size: 100% auto;
 
-  top: $cornerOffset;
-  right: -30px + $startWidth;
-  width: $startWidth;
-  height: $startHeight;
+  top: $corner-offset;
+  right: -30px + $start-width;
+  width: $start-width;
+  height: $start-height;
   &:hover {
-    width: $startWidth + $growth;
-    height: $startHeight + $growth;
+    width: $start-width + $growth;
+    height: $start-height + $growth;
   }
 }
 .open-link > a {
@@ -1702,14 +1967,15 @@ body.iframe_embed_app_and_code {
 }
 
 .qtip-content {
-  font-size: 20px;
-  line-height: 28px;
-  color: $neutral_dark;
-  @include main-font-semi-bold;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.48;
+  color: var(--text-neutral-primary);
   padding-right: 25px;
 }
 
-html[dir=rtl] .qtip-content {
+html[dir="rtl"] .qtip-content {
   direction: rtl;
   text-align: right;
   padding-right: 9px;
@@ -1717,9 +1983,9 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: $white;
-  color: $charcoal;
-  border: 1px solid $charcoal;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 8px;
   box-shadow: 5px 5px 5px $shadow;
   padding: 10px;
@@ -1734,23 +2000,48 @@ html[dir=rtl] .qtip-content {
 }
 
 .tooltip-x-close.qtip-icon {
-  @include close-button($cornerOffset: -20px);
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-neutral-quaternary);
+  background: transparent;
+
+  i {
+    font-size: var(--font-size-body-md);
+    line-height: 125%;
+  }
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  html[dir="rtl"] &, .flip-x-close & {
+    right: auto;
+    left: 6px;
+  }
 }
 
 a.download-video {
   z-index: 1;
   cursor: pointer;
-  width: 40px;
-  height: 34px;
+  width: 44px;
+  height: 38px;
   font-size: 28px;
-  background-color: $neutral_white;
-  color: $neutral_dark;
-  border: 2px solid $neutral_dark;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 2px solid var(--borders-neutral-solid);
   padding: 0;
   line-height: 36px;
 
   &:hover {
-    background: $neutral_dark20;
+    background: var(--background-neutral-quaternary);
   }
 
   img {
@@ -1887,7 +2178,6 @@ a.download-video {
 // must not inherit the legacy form/button styling.
 .signin-legacy,
 #change-password {
-  $field-width: 310px;
   $button-width: 324px;
 
   min-width: 450px;
@@ -1905,9 +2195,9 @@ a.download-video {
     align-items: center;
     justify-content: space-between;
 
-    input[type=text], input[type=password] {
-      width: $field-width;
-      height: 40px;
+    input[type="text"], input[type="password"] {
+      width: $button-width;
+      height: 42px;
       padding: 0 6px;
     }
     input {
@@ -1919,6 +2209,7 @@ a.download-video {
       font-size: 1em;
       max-width: 20%;
       line-height: 1.2;
+
       @include main-font-semi-bold;
     }
   }
@@ -1932,6 +2223,7 @@ a.download-video {
     color: $neutral_dark;
     font-size: 1em;
     line-height: 1.2;
+
     @include main-font-semi-bold;
   }
 
@@ -1948,6 +2240,7 @@ a.download-video {
     background-color: $brand_secondary_default;
     border: 2px solid $brand_secondary_default;
     color: $neutral_white;
+
     @include main-font-semi-bold;
     margin: 5px 0;
     width: $button-width;
@@ -1966,6 +2259,7 @@ a.download-video {
       color: $neutral_white;
       border-color: $neutral_dark20;
       background-color: $neutral_dark20;
+
       @include box-shadow(none);
       cursor: not-allowed;
     }
@@ -1974,6 +2268,46 @@ a.download-video {
   .blue-button {
     background-color: $blue;
     border: 1px solid $blue;
+  }
+
+  @include codeai-brand($ancestor: true) {
+    .primary-button {
+      background-color: var(--background-brand-purple-primary);
+      border-color: var(--borders-brand-purple-primary);
+      color: var(--text-neutral-white-fixed);
+
+      &:hover {
+        background-color: var(--background-brand-purple-strong);
+        border-color: var(--borders-brand-purple-strong);
+        color: var(--text-neutral-white-fixed);
+      }
+
+      &:focus {
+        border-color: var(--borders-brand-purple-primary);
+      }
+    }
+    .secondary-button {
+      background-color: var(--background-neutral-primary);
+      border-color: var(--borders-neutral-solid);
+      color: var(--text-neutral-primary);
+
+      &:hover {
+        background-color: var(--background-neutral-tertiary);
+        border-color: var(--borders-neutral-solid);
+        color: var(--text-neutral-primary);
+      }
+
+      &:focus {
+        border-color: var(--borders-neutral-solid);
+      }
+    }
+    .primary-button,
+    .secondary-button {
+      &:focus-visible {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+    }
   }
   .neutral-button {
     background-color: $neutral_white;
@@ -1994,6 +2328,7 @@ a.download-video {
       color: $neutral_dark20;
       border-color: $neutral_dark20;
       background-color: $neutral_white;
+
       @include box-shadow(none);
       cursor: not-allowed;
     }
@@ -2076,10 +2411,10 @@ a.download-video {
     min-width: 225px;
     min-height: 275px;
     position: relative;
-    background-color: $selectUserTypeButtonBackgroundColor;
-    color: $selectUserTypeButtonTextColor;
+    background-color: $select-user-type-button-background-color;
+    color: $select-user-type-button-text-color;
     border-radius: 15px;
-    border-color: $selectUserTypeButtonBorderColor;
+    border-color: $select-user-type-button-border-color;
     display: flex;
     flex-direction: column;
 
@@ -2112,18 +2447,18 @@ a.download-video {
   }
 
   .select-user-type-teacher-button:hover, .select-user-type-student-button:hover {
-    background-color: $selectUserTypeButtonBackgroundColorHover;
-    color: $selectUserTypeButtonTextColorHover;
+    background-color: $select-user-type-button-background-color-hover;
+    color: $select-user-type-button-text-color-hover;
   }
 
   .select-user-type-button-selected {
-    background-color: $selectUserTypeButtonBackgroundColorSelected;
-    color: $selectUserTypeButtonTextColorSelected;
+    background-color: $select-user-type-button-background-color-selected;
+    color: $select-user-type-button-text-color-selected;
   }
 
   .select-user-type-button-selected:hover {
-    background-color: $selectUserTypeButtonBackgroundColorSelected;
-    color: $selectUserTypeButtonTextColorSelected;
+    background-color: $select-user-type-button-background-color-selected;
+    color: $select-user-type-button-text-color-selected;
   }
 
   .finish-signup {
@@ -2206,9 +2541,10 @@ a.download-video {
 
     #school-type {
       height: 36px;
+      width: 370px !important;
     }
 
-    input[type=text], input[type=password], input[type=email] {
+    input[type="text"], input[type="password"], input[type="email"] {
       height: 36px;
     }
 
@@ -2224,7 +2560,7 @@ a.download-video {
       display: flex;
       margin-bottom: 20px;
 
-      [class*=span] {
+      [class*="col-md"] {
         align-self: center;
         display: flex;
         .div {
@@ -2237,7 +2573,7 @@ a.download-video {
         margin: 0;
       }
 
-      input[type=checkbox] {
+      input[type="checkbox"] {
         flex-grow: 0;
         align-self: center;
         .field_with_errors {
@@ -2307,21 +2643,17 @@ a.download-video {
     .radio {
       padding: 0;
       display: flex;
-      input[type=radio] {
+      input[type="radio"] {
         margin-left: 0;
         align-self: center;
       }
-      input[type=radio], label {
+      input[type="radio"], label {
         flex-grow: 0;
         margin-right: 5px;
       }
       .field_with_errors {
         flex-basis: auto;
       }
-    }
-
-    #school-type {
-      width: 370px !important;
     }
 
     .submit-section {
@@ -2338,6 +2670,7 @@ a.download-video {
       margin: 5px 0;
       font-size: 18px;
       height: 40px;
+
       @include main-font-bold;
     }
 
@@ -2358,7 +2691,7 @@ a.download-video {
       .checkbox {
         label {
           align-items: baseline;
-          input[type=checkbox] {
+          input[type="checkbox"] {
             align-self: auto;
           }
         }
@@ -2408,6 +2741,13 @@ a.download-video {
 .devise-links {
   flex-grow: 2;
 
+  // Sit at the bottom of the row instead of stretching to the taller React
+  // column beside us. Scoped to this class because the LTI account-linking
+  // page reuses .devise-links and must keep stretching.
+  &.oauth-links-column {
+    align-self: flex-end;
+  }
+
   form {
     margin: 0;
   }
@@ -2445,6 +2785,7 @@ a.download-video {
       color: $neutral_dark20;
       border-color: $neutral_dark20;
       background-color: $neutral_white;
+
       @include box-shadow(none);
       cursor: not-allowed;
     }
@@ -2511,7 +2852,7 @@ a.download-video {
   }
 }
 
-@mixin yTranslation($offset) {
+@mixin y-translation($offset) {
   -webkit-transform: translateY($offset);
   -ms-transform: translateY($offset);
   transform: translateY($offset);
@@ -2535,7 +2876,8 @@ a.download-video {
     img {
       position: relative;
       top: 50%;
-      @include yTranslation(-50%);
+
+      @include y-translation(-50%);
       height: auto;
       width: auto;
       max-height: 100%;
@@ -2559,6 +2901,8 @@ a.download-video {
     border-style: solid;
     border-color: transparent;
     border-width: 6px;
+    box-sizing: content-box;
+    text-align: center;
   }
   .match_questions {
     list-style-type: none;
@@ -2567,9 +2911,6 @@ a.download-video {
       background-color: $white;
       border-color: $lighter_gray;
     }
-  }
-  li {
-    text-align: center;
   }
   .match_slots {
     list-style-type: none;
@@ -2580,6 +2921,7 @@ a.download-video {
       .giantmark {
         .text {
           opacity: 0.8;
+
           @include main-font-semi-bold;
         }
       }
@@ -2622,7 +2964,8 @@ a.download-video {
     h4 {
       position: relative;
       top: 25%;
-      @include yTranslation(-50%);
+
+      @include y-translation(-50%);
     }
   }
   .match_answers {
@@ -2633,11 +2976,12 @@ a.download-video {
     h4 {
       position: relative;
       top: 25%;
-      @include yTranslation(-50%);
+
+      @include y-translation(-50%);
     }
   }
   .match_correctmarkscolumn {
-    width: 20px;
+    width: 40px;
     padding-right: 20px;
   }
   .match_correctmarks {
@@ -2715,7 +3059,7 @@ a.download-video {
   margin-left: 93px;
 }
 
-.peer-review input[type=radio] {
+.peer-review input[type="radio"] {
   margin: 0 3px 3px 5px;
 }
 
@@ -2774,6 +3118,8 @@ a.download-video {
 
 .container {
   width: $content-width;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .container,
@@ -2787,7 +3133,7 @@ a.download-video {
 .bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
-    border: 5px solid var(--borders-info-primary);
+    border: 5px solid var(--borders-info-strong);
     background-color: var(--background-info-extra-light);
     border-radius: 5px;
     margin: 10px auto;
@@ -2801,6 +3147,7 @@ a.download-video {
       padding: 5px;
       font-size: 18px;
       line-height: 18px;
+
       @include main-font-bold;
       color: var(--text-neutral-white-fixed);
       background: var(--background-info-primary);
@@ -2957,7 +3304,7 @@ a.download-video {
   background-color: $charcoal;
   color: $white;
   font-size: 13px;
-  padding-right: 10px;
+
   @include main-font-regular;
   padding: 10px;
 }
@@ -3023,9 +3370,11 @@ $information-desktop: "only screen and (min-width: 1024px)";
     font-size: 16px;
     line-height: 24px;
   }
+
   $multi-left-margin: 50px;
 
   .answerbutton {
+    white-space: nowrap;
     &.lock-answers {
       pointer-events: none;
       color: $light_gray;
@@ -3046,13 +3395,11 @@ $information-desktop: "only screen and (min-width: 1024px)";
     .question .content {
       float: left;
       clear: both;
-      @media #{$information-phone-narrow} {
-      }
-      @media #{$information-phone-wide} {
-      }
+
       @media #{$information-tablet-tall} {
         width: 55%;
       }
+
       @media #{$information-desktop} {
         width: 55%;
       }
@@ -3080,7 +3427,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
     // A single answer button.
     .answerbutton {
       clear: both;
-      margin-left: $multi-left-margin;
       color: var(--text-neutral-primary);
       background-color: transparent;
       background-image: none;
@@ -3099,13 +3445,11 @@ $information-desktop: "only screen and (min-width: 1024px)";
     // The block containing all instructional content (image, text, markdown).
     .question {
       float: left;
-      @media #{$information-phone-narrow} {
-      }
-      @media #{$information-phone-wide} {
-      }
+
       @media #{$information-tablet-tall} {
         width: 35%;
       }
+
       @media #{$information-desktop} {
         width: 35%;
       }
@@ -3121,6 +3465,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
       @media #{$information-tablet-tall} {
         margin-left: $multi-left-margin;
       }
+
       @media #{$information-desktop} {
         margin-left: $multi-left-margin;
       }
@@ -3130,13 +3475,11 @@ $information-desktop: "only screen and (min-width: 1024px)";
     .answers {
       float: left;
       margin-left: $multi-left-margin;
-      @media #{$information-phone-narrow} {
-      }
-      @media #{$information-phone-wide} {
-      }
+
       @media #{$information-tablet-tall} {
         width: 55%;
       }
+
       @media #{$information-desktop} {
         width: 55%;
       }
@@ -3173,9 +3516,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   input {
     margin-top: 12px;
   }
-  .answerbutton {
-    white-space: nowrap;
-  }
   .item-radio {
     display: inline-block;
     float: left;
@@ -3183,7 +3523,8 @@ $information-desktop: "only screen and (min-width: 1024px)";
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
-    @include yTranslation(-35%);
+
+    @include y-translation(-35%);
   }
   .item-mark {
     display: inline-block;
@@ -3222,96 +3563,113 @@ $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
 
-.modal-content {
-  margin-left: $modal-image-width + $modal-image-margin-gap;
-  html[dir=rtl] & {
-    margin-left: 0;
-    margin-right: $modal-image-width + $modal-image-margin-gap;
-  }
-  &.no-modal-icon {
-    margin-left: $modal-no-icon-gap;
-  }
-
-  p, pre {
-    line-height: 27px;
-    font-size: 24px;
-    color: $neutral_dark;
-  }
-
-  pre {
-    color: $purple;
-  }
-
-  .congrats {
-    @include main-font-semi-bold;
-    font-size: 21px;
-    line-height: 27px;
-  }
-
-  .instructions2 {
-    font-size: 18px;
-    color: $charcoal;
-  }
-
-  .aniGif {
-    display: block;
-    margin: 0 auto 6px auto;
-    position: relative;
-    z-index: -1;
-  }
-
-  .feedback-image {
-    width: 180px;
-    height: auto;
-    margin: 0 15px 0 0;
-    float: left;
-    border: $light_gray;
-    border-style: solid;
-  }
-
-  .feedback-links {
-    margin-top: 15px;
-  }
-
-  .feedback-callout {
-    border: solid;
-    border-radius: 10px;
-    border-color: $red;
-
-    p {
-      margin: 15px;
-      color: $red;
-      padding-right: 20%;
+.dash_modal .modal-body {
+  .modal-content {
+    margin-left: $modal-image-width + $modal-image-margin-gap;
+    html[dir="rtl"] & {
+      margin-left: 0;
+      margin-right: $modal-image-width + $modal-image-margin-gap;
+    }
+    &.no-modal-icon {
+      margin-left: $modal-no-icon-gap;
     }
 
+    p, pre {
+      font-size: var(--font-size-body-lg);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
+    }
+
+    .generated-code-container p {
+      font-family: inherit;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: inherit;
+    }
+    .generated-code-container pre {
+      font-family: monospace;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: normal;
+    }
+
+    // Puzzle-complete message ("Congratulations! ...") - mirrors MUI h6.
     .congrats {
-      font-size: 24px;
-      line-height: 27px;
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-lg);
+      font-weight: var(--font-weight-semi-bold);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
     }
 
-    .hint-header {
-      @include main-font-bold;
+    .lines-of-code-message {
+      font-family: var(--font-family-main);
+      font-size: 20px;
+      font-weight: var(--font-weight-regular);
+      line-height: normal;
+      color: var(--text-neutral-primary);
+      margin: 0 0 8px 0;
     }
 
-    .hint-image {
-      float: right;
-      width: 20%;
+    .instructions2 {
+      font-size: 18px;
+      color: $charcoal;
     }
-  }
 
-  .lines-of-code-message {
-    font-size: 20px;
-    line-height: normal;
-    margin: 0 0 8px 0;
-  }
+    .aniGif {
+      display: block;
+      margin: 0 auto 6px auto;
+      position: relative;
+      z-index: -1;
+    }
 
-  .instructions-container {
-    .authored-hints {
-      p, pre {
-        font-size: 18px;
-        line-height: normal;
-        color: $charcoal;
-        margin: 0;
+    .feedback-image {
+      width: 180px;
+      height: auto;
+      margin: 0 15px 0 0;
+      float: left;
+      border: $light_gray;
+      border-style: solid;
+    }
+
+    .feedback-links {
+      margin-top: 15px;
+    }
+
+    .feedback-callout {
+      border: solid;
+      border-radius: 10px;
+      border-color: $red;
+
+      p {
+        margin: 15px;
+        color: $red;
+        padding-right: 20%;
+      }
+
+      .congrats {
+        font-size: 24px;
+        line-height: 27px;
+      }
+
+      .hint-header {
+        @include main-font-bold;
+      }
+
+      .hint-image {
+        float: right;
+        width: 20%;
+      }
+    }
+
+    .instructions-container {
+      .authored-hints {
+        p, pre {
+          font-size: 18px;
+          line-height: normal;
+          color: $charcoal;
+          margin: 0;
+        }
       }
     }
   }
@@ -3347,13 +3705,75 @@ h5.dialog-title {
   margin-right: 10px;
 }
 
+.dash_modal {
+  .modal-content .show-code > summary {
+    font-family: var(--font-family-main) !important;
+    font-size: var(--font-size-body-md) !important;
+    font-weight: var(--font-weight-semi-bold) !important;
+    color: var(--text-neutral-primary) !important;
+  }
+
+  #feedbackButtons > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  #feedbackButtons #continue-button,
+  #feedbackButtons #again-button {
+    float: none !important;
+    margin: 0 !important;
+    font-family: var(--font-family-main);
+  }
+
+  // Puzzle rating buttons. !important on the fills beats
+  // apps/style/common.scss:652 which selects by #like/#dislike id.
+  #puzzleRatingButtons {
+    margin-top: 16px;
+
+    hr {
+      border-top: 1px solid var(--borders-neutral-primary);
+    }
+
+    p {
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-md);
+      color: var(--text-neutral-tertiary);
+      margin: 8px 10px 0 0;
+
+      html[dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+
+    .puzzle-rating-btn {
+      fill: var(--text-neutral-quaternary) !important;
+
+      &:hover {
+        fill: var(--text-neutral-primary) !important;
+      }
+
+      &#like.enabled {
+        fill: var(--text-error-primary-fixed) !important;
+      }
+
+      &#dislike.enabled {
+        fill: var(--text-info-primary-fixed) !important;
+      }
+    }
+  }
+}
+
 .modal-image {
   max-width: $modal-image-width;
   max-height: 100px;
   height: auto;
   margin-top: -75px;
   position: absolute;
-  html[dir=rtl] & {
+  html[dir="rtl"] & {
     float: right;
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
@@ -3366,17 +3786,16 @@ h5.dialog-title {
 }
 .modal-body {
   height: 100%;
+  max-height: none;
   overflow: visible;
 }
 
 .modal-content.markdown-instructions-container {
   margin-left: $modal-no-icon-gap;
   margin-right: $modal-no-icon-gap;
-  /*margin-top: 10px;*/
-  margin-bottom: 15px;
-  float: left;
   padding: 0 0 15px 0;
   background-color: $white;
+
   $outside-margin-side: 15px;
   width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
 }
@@ -3396,17 +3815,6 @@ h5.dialog-title {
 }
 
 .csf-top-instructions, .instructions-markdown {
-  p {
-    line-height: 25px;
-    font-size: 16px;
-    color: $black;
-  }
-
-  .secondary-instructions p {
-    font-size: 14px;
-    color: $charcoal;
-  }
-
   strong {
     @include main-font-semi-bold;
   }
@@ -3480,7 +3888,7 @@ html[dir="rtl"] .instructions-markdown {
 
 .farSide {
   text-align: right;
-  html[dir=rtl] & {
+  html[dir="rtl"] & {
     text-align: left;
   }
 }
@@ -3511,6 +3919,7 @@ button.launch {
   min-width: 96px;
   margin-left: 0;
   margin-right: 10px;
+
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
 }
@@ -3533,9 +3942,10 @@ button.button-active-no-border:active {
   // an active button. (overriding button:active rule above)
   border: none !important;
 }
-button.disabled, button[disabled=disabled] {
+button.disabled, button[disabled="disabled"] {
   border: 1px solid $lighter_gray;
   background-color: $lighter_gray;
+
   @include box-shadow(none);
 }
 button.disabled:hover>img {
@@ -3674,7 +4084,7 @@ $width: 400px;
   color: $white;
   background-color: var(--background-brand-purple-primary);
   padding: 3px;
-  z-index: 100;
+  z-index: 1010; // must be greater than bootstrap's .navbar-static-top (1000)
   cursor: pointer;
   box-shadow: 0 0 7px 2px $shadow;
 }
@@ -3789,6 +4199,7 @@ code {
       cursor: pointer;
       border: none;
       box-shadow: none;
+
       @include main-font-semi-bold;
       font-size: 100%;
       color: $brand_secondary_default;
@@ -4109,13 +4520,13 @@ h2.danger {
   }
 
   /* mobile */
-  @media screen and (min-width: 0px) and (max-width: 970px) {
+  @media screen and (min-width: 0) and (max-width: 970px) {
     display: none;
   }
 }
 
 // Some images must not be flipped over even in RTL
-html[dir=rtl] {
+html[dir="rtl"] {
   img[src="/blockly/media/skins/jigsaw/blocks.png"] {
     -webkit-transform: none !important;
     transform: none !important;
@@ -4136,7 +4547,7 @@ html[dir=rtl] {
   height: 32px;
   padding: 6px !important;
 
-  html[dir=rtl] & {
+  html[dir="rtl"] & {
     float: left;
   }
 
@@ -4199,6 +4610,7 @@ html[dir=rtl] {
 
   .mapboxgl-ctrl-geocoder--suggestion {
     color: $default_text;
+
     @include main-font-regular;
   }
 }
@@ -4206,6 +4618,7 @@ html[dir=rtl] {
 #reset-predict-progress-button {
   display: 'inline-block';
   font-size: 12;
+
   @include main-font-regular;
   border-width: '1px';
   border-style: 'solid';
@@ -4240,6 +4653,7 @@ a {
     &:link, &:visited, &:hover, &:active {
       text-decoration: none;
       border-radius: 4px;
+
       @include main-font-semi-bold;
       font-size: 1em !important;
       padding: 10px 20px;
@@ -4326,7 +4740,7 @@ a {
   }
 
   .lti-integration-form {
-    input[type=text], input[type=email] {
+    input[type="text"], input[type="email"] {
       height: 36px;
     }
 
@@ -4342,7 +4756,7 @@ a {
       display: flex;
       margin-bottom: 20px;
 
-      [class*=span] {
+      [class*="col-md"] {
         align-self: center;
         display: flex;
         .div {
@@ -4370,6 +4784,7 @@ a {
     margin: 5px 0;
     font-size: 18px;
     height: 40px;
+
     @include main-font-semi-bold;
   }
 
@@ -4400,8 +4815,6 @@ a {
     @include white-button;
   }
 }
-
-@import "NpsSurveyBlock";
 
 // cm prefixed classes are from codemirror
 .cm-gutters {

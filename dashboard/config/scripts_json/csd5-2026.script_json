@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "57dcc090-6bfc-47c6-b846-305a58112c2d",
+          "notice": "Looking at CS Discoveries?",
+          "details": "Consider AI Discoveries, our newest middle school course offering: it builds on this course, with an AI focus woven throughout. ",
+          "link": "https://support.code.org/hc/en-us/articles/47237786998669-Transitioning-to-AI-Discoveries-from-CS-Discoveries",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "See what's new →"
+        }
+      ],
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_unnumbered_lessons": true,
@@ -22,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 11:15:36 UTC",
+    "serialized_at": "2026-08-17 17:36:39 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6122,7 +6134,7 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?tab=t.0",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",

@@ -1,134 +1,210 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {GRID_COLS, GRID_ROWS} from '../world/gridConstants';
+import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
+import {createEmptyWorld, SCENE_GRID_SIZE, World, WorldCell} from '../world';
 
-import moduleStyles from './sprite-lab2-view.module.scss';
+import {PREVIEW_CLEARANCE} from './Playspace';
 
-const ERASE = '';
+import moduleStyles from './world-tab.module.scss';
 
-// Deterministic pastel color per item name so painted cells are distinguishable
-// without loading the actual costume image (this editor isn't wired to the
-// runtime yet).
-function colorForItem(name: string): string {
-  let hash = 0;
-  for (let i = 0; i < name.length; i++) {
-    hash = (hash * 31 + name.charCodeAt(i)) & 0xffffff;
-  }
-  const hue = hash % 360;
-  return `hsl(${hue}, 65%, 70%)`;
+// The editor draws the grid at this overall size when there's room; cells
+// shrink as the visible extent grows.
+const GRID_PIXELS = 528;
+// Short windows shrink the grid to fit, down to this; below it the tab
+// scrolls instead (cells get too small to paint).
+const MIN_GRID_PIXELS = 320;
+
+interface PaletteItem extends WorldCell {
+  thumb?: string;
 }
 
 interface WorldTabProps {
-  grid: string[][];
-  onGridChange: (grid: string[][]) => void;
+  world?: World;
+  // Visible extent (cells per side): the scene grid by default, the whole
+  // world with the world=large parameter. Storage is always the full world,
+  // so placements keep their coordinates across the two views.
+  displaySize: number;
+  // Cell-level so the owner can apply it atomically against saved sources.
+  onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
+  // Palette selection, owned by the view so it survives tab switches (this
+  // component unmounts when the tab is hidden).
+  selected: WorldCell | 'erase' | null;
+  onSelect: (selection: WorldCell | 'erase') => void;
 }
 
 /**
- * A rudimentary world-grid editor: pick a costume from the palette (or the
- * eraser) and paint cells. The grid persists to project sources but is not yet
- * wired into the p5.play runtime. Later this is meant to unify with the
- * @blockly/field-bitmap grid editor.
+ * The World tab (experiment): paint starter sprites and blocks onto the
+ * scene's grid from the project's images, instead of placing them with
+ * code. The scene spawns the world's top-left corner when it runs.
  */
 const WorldTab: React.FunctionComponent<WorldTabProps> = ({
-  grid,
-  onGridChange,
+  world,
+  displaySize,
+  onPaintCell,
+  selected,
+  onSelect,
 }) => {
-  // Available costumes to paint with, from the animation list.
-  const itemNames = useAppSelector(state =>
-    state.animationList.orderedKeys
-      .map(key => state.animationList.propsByKey[key]?.name)
-      .filter((name): name is string => !!name)
+  const animationList = useAppSelector(state => state.animationList);
+  const palette: PaletteItem[] = useMemo(
+    () =>
+      animationList.orderedKeys
+        .map(key => animationList.propsByKey[key])
+        .filter(props => !props.categories?.includes(BACKGROUNDS_CATEGORY))
+        .map(props => ({
+          image: props.name,
+          kind: props.categories?.includes(BLOCKS_CATEGORY)
+            ? ('block' as const)
+            : ('sprite' as const),
+          thumb: props.dataURI || props.sourceUrl,
+        })),
+    [animationList]
+  );
+  const thumbsByImage = useMemo(
+    () => new Map(palette.map(item => [item.image, item.thumb])),
+    [palette]
   );
 
-  const [cells, setCells] = useState<string[][]>(grid);
-  const [brush, setBrush] = useState<string>(ERASE);
-  const painting = useRef(false);
+  const grid = world?.grid ?? createEmptyWorld().grid;
+  const paintCell = (row: number, col: number, erase: boolean) => {
+    if (!selected) {
+      return;
+    }
+    onPaintCell(
+      row,
+      col,
+      erase || selected === 'erase'
+        ? null
+        : {image: selected.image, kind: selected.kind}
+    );
+  };
+  // A press on a tile already holding the selected item erases instead
+  // (click-again-to-remove). The pressed tile decides for the whole drag
+  // stroke, so dragging across painted tiles doesn't toggle them.
+  const strokeErase = useRef(false);
+  const startStroke = (row: number, col: number) => {
+    strokeErase.current =
+      selected !== 'erase' && grid[row]?.[col]?.image === selected?.image;
+    paintCell(row, col, strokeErase.current);
+  };
 
-  // Reset when the grid identity changes (e.g. switching levels).
-  useEffect(() => setCells(grid), [grid]);
-
-  const paint = useCallback(
-    (r: number, c: number) => {
-      setCells(prev => {
-        if (prev[r]?.[c] === brush) {
-          return prev;
-        }
-        const next = prev.map(row => row.slice());
-        next[r][c] = brush;
-        onGridChange(next);
-        return next;
-      });
-    },
-    [brush, onGridChange]
-  );
-
-  const stopPainting = useCallback(() => {
-    painting.current = false;
+  // Shrink the grid to the vertical room left after the palette (see
+  // worldGridArea): full size when it fits, floored so cells stay paintable.
+  const gridAreaRef = useRef<HTMLDivElement | null>(null);
+  const [gridPixels, setGridPixels] = useState(GRID_PIXELS);
+  useEffect(() => {
+    const area = gridAreaRef.current;
+    if (!area) {
+      return;
+    }
+    const observer = new ResizeObserver(() => {
+      setGridPixels(
+        Math.max(MIN_GRID_PIXELS, Math.min(GRID_PIXELS, area.clientHeight))
+      );
+    });
+    observer.observe(area);
+    return () => observer.disconnect();
   }, []);
 
+  const cellPixels = gridPixels / displaySize;
   return (
     <div
       className={moduleStyles.worldTab}
-      onMouseUp={stopPainting}
-      onMouseLeave={stopPainting}
+      style={{paddingRight: PREVIEW_CLEARANCE}}
     >
       <div className={moduleStyles.worldPalette}>
-        <strong>Paint:</strong>
+        {palette.map(item => (
+          <button
+            key={item.image}
+            type="button"
+            title={`${item.image} (${item.kind})`}
+            className={classNames(
+              moduleStyles.worldPaletteItem,
+              selected !== 'erase' &&
+                selected?.image === item.image &&
+                moduleStyles.worldPaletteSelected
+            )}
+            onClick={() => onSelect({image: item.image, kind: item.kind})}
+          >
+            {item.thumb && <img src={item.thumb} alt={item.image} />}
+          </button>
+        ))}
         <button
           type="button"
-          className={brush === ERASE ? moduleStyles.brushActive : undefined}
-          onClick={() => setBrush(ERASE)}
+          className={classNames(
+            moduleStyles.worldPaletteItem,
+            moduleStyles.worldPaletteErase,
+            selected === 'erase' && moduleStyles.worldPaletteSelected
+          )}
+          onClick={() => onSelect('erase')}
         >
           Erase
         </button>
-        {itemNames.map(name => (
-          <button
-            key={name}
-            type="button"
-            className={brush === name ? moduleStyles.brushActive : undefined}
-            onClick={() => setBrush(name)}
-          >
-            <span
-              className={moduleStyles.brushSwatch}
-              style={{background: colorForItem(name)}}
-            />
-            {name}
-          </button>
-        ))}
-        {itemNames.length === 0 && (
-          <span>Add costumes in the Images tab to paint with them.</span>
+        {!palette.length && (
+          <span className={moduleStyles.worldEmpty}>
+            Create some images on the Images tab first.
+          </span>
         )}
       </div>
-
-      <div
-        className={moduleStyles.worldGrid}
-        style={{
-          gridTemplateColumns: `repeat(${GRID_COLS}, 1fr)`,
-          gridTemplateRows: `repeat(${GRID_ROWS}, 1fr)`,
-        }}
-      >
-        {cells.map((row, r) =>
-          row.map((cell, c) => (
-            <div
-              key={`${r}-${c}`}
-              className={moduleStyles.worldCell}
-              title={cell || 'empty'}
-              style={{background: cell ? colorForItem(cell) : undefined}}
-              onMouseDown={() => {
-                painting.current = true;
-                paint(r, c);
-              }}
-              onMouseEnter={() => {
-                if (painting.current) {
-                  paint(r, c);
-                }
-              }}
-            />
-          ))
-        )}
+      <div ref={gridAreaRef} className={moduleStyles.worldGridArea}>
+        <div
+          className={moduleStyles.worldGrid}
+          style={{
+            gridTemplateColumns: `repeat(${displaySize}, ${cellPixels}px)`,
+          }}
+        >
+          {Array.from({length: displaySize}, (_, row) =>
+            Array.from({length: displaySize}, (_, col) => {
+              const cell = grid[row]?.[col];
+              const thumb = cell && thumbsByImage.get(cell.image);
+              const outsideScene =
+                row >= SCENE_GRID_SIZE || col >= SCENE_GRID_SIZE;
+              return (
+                <button
+                  key={`${row}-${col}`}
+                  type="button"
+                  aria-label={
+                    cell ? `${cell.image} at ${row},${col}` : `${row},${col}`
+                  }
+                  className={classNames(
+                    moduleStyles.worldCell,
+                    outsideScene && moduleStyles.worldCellOutside
+                  )}
+                  style={{height: cellPixels}}
+                  // Touch implicitly captures the pointer on the pressed cell,
+                  // which would keep drag painting's enter events from the
+                  // neighbors — release it.
+                  onPointerDown={e => {
+                    e.currentTarget.releasePointerCapture?.(e.pointerId);
+                    startStroke(row, col);
+                  }}
+                  onPointerEnter={e => {
+                    if (e.buttons & 1) {
+                      paintCell(row, col, strokeErase.current);
+                    }
+                  }}
+                  // Pointer presses painted above; this is keyboard activation.
+                  onClick={e => {
+                    if (e.detail === 0) {
+                      startStroke(row, col);
+                    }
+                  }}
+                >
+                  {thumb && <img src={thumb} alt="" />}
+                </button>
+              );
+            })
+          )}
+        </div>
       </div>
+      {displaySize > SCENE_GRID_SIZE && (
+        <p className={moduleStyles.worldHint}>
+          The scene runs the brighter top-left {SCENE_GRID_SIZE}x
+          {SCENE_GRID_SIZE} corner.
+        </p>
+      )}
     </div>
   );
 };

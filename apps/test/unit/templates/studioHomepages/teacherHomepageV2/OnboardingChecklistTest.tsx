@@ -3,6 +3,8 @@ import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import confirmDemoSectionSettings from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/confirmDemoSectionSettings';
 import OnboardingChecklist from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/OnboardingChecklist';
 import useCreateSectionTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour';
@@ -77,6 +79,9 @@ const makeJsonResponse = (body: unknown) =>
     headers: {'Content-Type': 'application/json'},
   });
 
+const makeToursResponse = (completed: string[], started: string[] = []) =>
+  makeJsonResponse({completed, started});
+
 // A Tour exposes many methods; the checklist only ever calls start()/cancel(),
 // so we stub just those and cast through unknown.
 const fakeTour = () =>
@@ -87,11 +92,15 @@ describe('OnboardingChecklist', () => {
   let reviewSyllabusTour: Tour;
   let learnHowToEvaluateTour: Tour;
   let mockDispatch: jest.Mock;
+  let sendEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
     jest.clearAllMocks();
-    mockGet.mockResolvedValue(makeJsonResponse([]));
+    mockGet.mockResolvedValue(makeToursResponse([]));
     mockPost.mockResolvedValue(new Response());
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(jest.fn());
 
     createSectionTour = fakeTour();
     reviewSyllabusTour = fakeTour();
@@ -117,6 +126,10 @@ describe('OnboardingChecklist', () => {
           demoType,
         } as unknown as ReturnType<typeof createDemoSection>)
     );
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
   });
 
   function renderComponent(
@@ -160,10 +173,10 @@ describe('OnboardingChecklist', () => {
     renderComponent();
 
     fireEvent.click(screen.getByText('Create a class section'));
-    expect(createSectionTour.start).toHaveBeenCalledTimes(1);
+    await waitFor(() =>
+      expect(createSectionTour.start).toHaveBeenCalledTimes(1)
+    );
 
-    // The syllabus/evaluate tours run through the async staleness gate, so
-    // their start() lands a microtask after the click.
     fireEvent.click(screen.getByText('Review the syllabus'));
     await waitFor(() =>
       expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
@@ -175,20 +188,78 @@ describe('OnboardingChecklist', () => {
     );
   });
 
-  it('calls HttpClient.post with started_at and demo_type when a tour button is clicked', () => {
+  it('calls HttpClient.post with started_at and demo_type when a tour button is clicked', async () => {
     renderComponent({demoType: 'elementary'});
 
     fireEvent.click(screen.getByText('Create a class section'));
 
-    expect(mockPost).toHaveBeenCalledWith(
-      '/dashboardapi/v1/user_product_tours',
-      JSON.stringify({
-        tour_name: 'create_class_section',
-        started_at: true,
-        properties: {demo_type: 'elementary'},
-      }),
-      true,
-      {'Content-Type': 'application/json'}
+    // recordTourStart() only runs after ensureDemoSection() resolves, so the
+    // post lands a microtask after the click.
+    await waitFor(() =>
+      expect(mockPost).toHaveBeenCalledWith(
+        '/dashboardapi/v1/user_product_tours',
+        JSON.stringify({
+          tour_name: 'create_class_section',
+          started_at: true,
+          properties: {demo_type: 'elementary'},
+        }),
+        true,
+        {'Content-Type': 'application/json'}
+      )
+    );
+  });
+
+  it('reports previously_started_not_finished as false for a fresh tour start', async () => {
+    renderComponent({demoType: 'elementary'});
+
+    fireEvent.click(screen.getByText('Create a class section'));
+
+    await waitFor(() =>
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.ONBOARDING_TOUR_STARTED,
+        {
+          tour_name: 'create_class_section',
+          previously_started_not_finished: false,
+        }
+      )
+    );
+  });
+
+  it('reports previously_started_not_finished as true when the tour was started but not completed', async () => {
+    mockGet.mockResolvedValue(makeToursResponse([], ['create_class_section']));
+    renderComponent({demoType: 'elementary'});
+
+    await waitFor(() => expect(mockGet).toHaveBeenCalled());
+    fireEvent.click(screen.getByText('Create a class section'));
+
+    await waitFor(() =>
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.ONBOARDING_TOUR_STARTED,
+        {
+          tour_name: 'create_class_section',
+          previously_started_not_finished: true,
+        }
+      )
+    );
+  });
+
+  it('reports previously_started_not_finished as false when the tour is already completed', async () => {
+    mockGet.mockResolvedValue(
+      makeToursResponse(['create_class_section'], ['create_class_section'])
+    );
+    renderComponent({demoType: 'elementary'});
+
+    await waitFor(() => expect(mockGet).toHaveBeenCalled());
+    fireEvent.click(screen.getByText('Create a class section'));
+
+    await waitFor(() =>
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.ONBOARDING_TOUR_STARTED,
+        {
+          tour_name: 'create_class_section',
+          previously_started_not_finished: false,
+        }
+      )
     );
   });
 
@@ -197,50 +268,56 @@ describe('OnboardingChecklist', () => {
 
     fireEvent.click(screen.getByText('Review the syllabus'));
 
-    expect(mockPost).toHaveBeenCalledWith(
-      '/dashboardapi/v1/user_product_tours',
-      JSON.stringify({
-        tour_name: 'view_syllabus',
-        started_at: true,
-        properties: {demo_type: 'high'},
-      }),
-      true,
-      {'Content-Type': 'application/json'}
+    await waitFor(() =>
+      expect(mockPost).toHaveBeenCalledWith(
+        '/dashboardapi/v1/user_product_tours',
+        JSON.stringify({
+          tour_name: 'view_syllabus',
+          started_at: true,
+          properties: {demo_type: 'high'},
+        }),
+        true,
+        {'Content-Type': 'application/json'}
+      )
     );
     await waitFor(() => expect(reviewSyllabusTour.start).toHaveBeenCalled());
   });
 
-  it('sends the correct tour name for learn-to-evaluate', () => {
+  it('sends the correct tour name for learn-to-evaluate', async () => {
     renderComponent({demoType: 'middle'});
 
     fireEvent.click(screen.getByText('Learn how to evaluate'));
 
-    expect(mockPost).toHaveBeenCalledWith(
-      '/dashboardapi/v1/user_product_tours',
-      JSON.stringify({
-        tour_name: 'learn_to_evaluate',
-        started_at: true,
-        properties: {demo_type: 'middle'},
-      }),
-      true,
-      {'Content-Type': 'application/json'}
+    await waitFor(() =>
+      expect(mockPost).toHaveBeenCalledWith(
+        '/dashboardapi/v1/user_product_tours',
+        JSON.stringify({
+          tour_name: 'learn_to_evaluate',
+          started_at: true,
+          properties: {demo_type: 'middle'},
+        }),
+        true,
+        {'Content-Type': 'application/json'}
+      )
     );
   });
 
   it('does not throw when the tour start POST fails', async () => {
     mockPost.mockRejectedValue(new Error('network error'));
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleErrorSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
 
     renderComponent();
 
     fireEvent.click(screen.getByText('Create a class section'));
 
     await Promise.resolve();
-    expect(console.error).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalled();
   });
 
   it('shows no check icons when no tours are completed', async () => {
-    mockGet.mockResolvedValue(makeJsonResponse([]));
+    mockGet.mockResolvedValue(makeToursResponse([]));
 
     renderComponent();
 
@@ -255,7 +332,7 @@ describe('OnboardingChecklist', () => {
   });
 
   it('shows a check icon only for tours that are completed', async () => {
-    mockGet.mockResolvedValue(makeJsonResponse(['create_class_section']));
+    mockGet.mockResolvedValue(makeToursResponse(['create_class_section']));
 
     renderComponent();
 
@@ -272,7 +349,7 @@ describe('OnboardingChecklist', () => {
   });
 
   it('does not show a check icon for tours that are not completed', async () => {
-    mockGet.mockResolvedValue(makeJsonResponse(['create_class_section']));
+    mockGet.mockResolvedValue(makeToursResponse(['create_class_section']));
 
     renderComponent();
 
@@ -292,7 +369,7 @@ describe('OnboardingChecklist', () => {
     ];
 
     it('shows the celebration state instead of the checklist', async () => {
-      mockGet.mockResolvedValue(makeJsonResponse(ALL_TOURS));
+      mockGet.mockResolvedValue(makeToursResponse(ALL_TOURS));
 
       renderComponent();
 
@@ -304,7 +381,7 @@ describe('OnboardingChecklist', () => {
     });
 
     it('calls onHide when "Complete onboarding" is clicked', async () => {
-      mockGet.mockResolvedValue(makeJsonResponse(ALL_TOURS));
+      mockGet.mockResolvedValue(makeToursResponse(ALL_TOURS));
       const {props} = renderComponent();
 
       await waitFor(() =>
@@ -316,7 +393,7 @@ describe('OnboardingChecklist', () => {
     });
 
     it('hides the "Hide onboarding" button in the celebration state', async () => {
-      mockGet.mockResolvedValue(makeJsonResponse(ALL_TOURS));
+      mockGet.mockResolvedValue(makeToursResponse(ALL_TOURS));
 
       renderComponent();
 
@@ -329,7 +406,7 @@ describe('OnboardingChecklist', () => {
 
   it('does not show the celebration state when only some tours are completed', async () => {
     mockGet.mockResolvedValue(
-      makeJsonResponse(['view_syllabus', 'learn_to_evaluate'])
+      makeToursResponse(['view_syllabus', 'learn_to_evaluate'])
     );
 
     renderComponent();
@@ -349,7 +426,6 @@ describe('OnboardingChecklist', () => {
     renderComponent();
 
     await waitFor(() => expect(consoleErrorSpy).toHaveBeenCalled());
-    consoleErrorSpy.mockRestore();
   });
 
   describe('when the demo section is stale', () => {
@@ -386,7 +462,11 @@ describe('OnboardingChecklist', () => {
 
       fireEvent.click(screen.getByText('Create a class section'));
 
-      expect(createSectionTour.start).toHaveBeenCalledTimes(1);
+      // demoSection already has an id, so ensureDemoSection() short-circuits,
+      // but it's still an async function and yields a microtask before start().
+      await waitFor(() =>
+        expect(createSectionTour.start).toHaveBeenCalledTimes(1)
+      );
       expect(screen.queryByText(STALENESS_TITLE)).toBeNull();
     });
 
@@ -427,9 +507,7 @@ describe('OnboardingChecklist', () => {
           ? Promise.reject(new Error('network error'))
           : Promise.resolve(new Response())
       );
-      const consoleErrorSpy = jest
-        .spyOn(console, 'error')
-        .mockImplementation(() => {});
+      jest.spyOn(console, 'error').mockImplementation(() => {});
 
       renderComponent({demoSection: staleDemoSection});
       await flushMountEffects();
@@ -439,7 +517,6 @@ describe('OnboardingChecklist', () => {
 
       expect(await screen.findByText(RESET_ERROR)).not.toBeNull();
       expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
-      consoleErrorSpy.mockRestore();
     });
   });
 
@@ -469,13 +546,32 @@ describe('OnboardingChecklist', () => {
       );
     });
 
-    it('does not create a demo section for the create-section tour', () => {
+    it('creates a demo section before starting the create-section tour', async () => {
+      renderComponent({demoSection: null, demoType: 'middle'});
+
+      fireEvent.click(screen.getByText('Create a class section'));
+
+      expect(mockCreateDemoSection).toHaveBeenCalledWith('middle');
+      await waitFor(() =>
+        expect(createSectionTour.start).toHaveBeenCalledTimes(1)
+      );
+    });
+
+    it('shows a creation error and leaves the create-section tour unstarted when creation rejects', async () => {
+      mockDispatch.mockRejectedValue(
+        new DemoSectionCreationError(
+          'generic',
+          "Couldn't create your practice section."
+        )
+      );
+      jest.spyOn(console, 'error').mockImplementation(() => {});
+
       renderComponent({demoSection: null});
 
       fireEvent.click(screen.getByText('Create a class section'));
 
-      expect(createSectionTour.start).toHaveBeenCalledTimes(1);
-      expect(mockDispatch).not.toHaveBeenCalled();
+      expect(await screen.findByText(CREATION_ERROR)).not.toBeNull();
+      expect(createSectionTour.start).not.toHaveBeenCalled();
     });
 
     it('shows a creation error and leaves the tour unstarted when creation rejects', async () => {
@@ -501,7 +597,6 @@ describe('OnboardingChecklist', () => {
         'Failed to create demo section:',
         expect.anything()
       );
-      consoleErrorSpy.mockRestore();
     });
 
     it('logs and shows a creation error when creation fails unexpectedly', async () => {
@@ -520,7 +615,6 @@ describe('OnboardingChecklist', () => {
         'Failed to create demo section:',
         expect.any(Error)
       );
-      consoleErrorSpy.mockRestore();
     });
 
     it('shows a creation error when the created section has no id', async () => {
@@ -542,6 +636,19 @@ describe('OnboardingChecklist', () => {
 
       await waitFor(() =>
         expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
+      );
+      expect(mockDispatch).not.toHaveBeenCalled();
+      expect(mockCreateDemoSection).not.toHaveBeenCalled();
+    });
+
+    it('does not create a demo section for the create-section tour when one already exists', async () => {
+      const existingSection = {id: 7} as unknown as Section;
+      renderComponent({demoSection: existingSection});
+
+      fireEvent.click(screen.getByText('Create a class section'));
+
+      await waitFor(() =>
+        expect(createSectionTour.start).toHaveBeenCalledTimes(1)
       );
       expect(mockDispatch).not.toHaveBeenCalled();
       expect(mockCreateDemoSection).not.toHaveBeenCalled();

@@ -1,6 +1,7 @@
 // Ensure critical fonts are loaded very early.
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 import '@code-dot-org/component-library-styles/brandOverrides.css';
@@ -15,12 +16,13 @@ import {
   createRootRoute,
   HeadContent,
   Outlet,
+  useMatches,
   useRouter,
 } from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
 
-import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
@@ -34,6 +36,8 @@ import {
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
 import {queryClient} from '@/modules/queryClient';
+
+import {shouldHideFooter} from './shouldHideFooter';
 
 /**
  * Maps auth status to the route content area.
@@ -74,6 +78,7 @@ function RootContent() {
   const auth = useAuth();
   const router = useRouter();
   const onRetry = useCallback(() => router.invalidate(), [router]);
+  const hideFooter = shouldHideFooter(useMatches());
 
   return (
     <>
@@ -85,7 +90,7 @@ function RootContent() {
       <Box sx={{minHeight: 'calc(100vh - 50px)'}}>
         {renderRouteArea(auth, onRetry)}
       </Box>
-      <StudioFooter />
+      {!hideFooter && <StudioFooter />}
       <TanStackRouterDevtools />
     </>
   );
@@ -105,6 +110,8 @@ const cssLayerOrder = (
   <GlobalStyles styles="@layer theme, base, mui, components, utilities;" />
 );
 
+const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
+
 /** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
   return (
@@ -112,7 +119,7 @@ function RootLayout() {
       <StyledEngineProvider enableCssLayer>
         <HeadContent />
         {cssLayerOrder}
-        <ThemeProvider theme={CdoTheme}>
+        <ThemeProvider theme={theme}>
           {responsiveFloorStyles}
           <Bootstrap locale="en-US">
             <RootContent />
@@ -133,6 +140,9 @@ function RootLayout() {
 export const Route = createRootRoute({
   // Declared here, not in the Rails haml or index.html, so it covers every serving mode.
   head: () => ({
+    // Default document title; leaf routes override it via their own `head`.
+    // HeadContent restores this when navigating back to a title-less route.
+    meta: [{title: 'CodeAI'}],
     links: [
       {
         rel: 'icon',

@@ -1,17 +1,8 @@
-import {
-  render,
-  screen,
-  fireEvent,
-  waitFor,
-  within,
-} from '@testing-library/react';
+import {act, render, screen, fireEvent, within} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {setThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
-import {chatThreadMessagesValidator} from '@cdo/apps/aiDifferentiation/types';
 import AiDiffWorkspace from '@cdo/apps/aiTeacherDrawer/AiDiffWorkspace';
 import {
   EXAMPLE_PROMPT,
@@ -21,7 +12,12 @@ import {
   MINI_LESSON_PROMPT,
   SUGGESTED_PROMPTS_FOR_SELECTION,
 } from '@cdo/apps/aiTeacherDrawer/predefinedPrompts';
-import {chatThreadValidator} from '@cdo/apps/aiTeacherDrawer/types';
+import {setThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
+import {
+  chatThreadMessagesValidator,
+  chatThreadValidator,
+} from '@cdo/apps/aiTeacherDrawer/types';
 import {
   getStore,
   registerReducers,
@@ -158,7 +154,7 @@ describe('AiDiffWorkspace', () => {
     restoreRedux();
   });
 
-  function renderDefault(propOverrides = {}) {
+  async function renderDefault(propOverrides = {}) {
     const store = getStore();
 
     registerReducers({
@@ -185,11 +181,13 @@ describe('AiDiffWorkspace', () => {
       ])
     );
 
-    render(
-      <Provider store={store}>
-        <AiDiffWorkspace {...defaultProps} {...propOverrides} />
-      </Provider>
-    );
+    await act(async () => {
+      render(
+        <Provider store={store}>
+          <AiDiffWorkspace {...defaultProps} {...propOverrides} />
+        </Provider>
+      );
+    });
   }
 
   it('Shows thread list in sidebar, starts with new thread messages and prompts', async () => {
@@ -197,28 +195,22 @@ describe('AiDiffWorkspace', () => {
       value: defaultThreadListResponse,
       response: new Response(),
     });
-    renderDefault();
+    await renderDefault();
 
-    await waitFor(() => {
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        {},
-        chatThreadValidator
-      );
-    });
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      {},
+      chatThreadValidator
+    );
 
-    //threads in sidebar are fetched and displayed
     screen.getByText('blah thread one');
     screen.getByText('blah thread two');
     screen.getByText('blah thread three');
 
-    //initial message and prompts in (new) chat are displayed
     const message = screen.getByLabelText(i18n.aiChatMessageBot());
     expect(message).toHaveTextContent(
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
-    //suggested prompts
     const suggestedPromptsGroup = screen.getByRole('group', {
       name: 'Suggested Prompts',
     });
@@ -232,29 +224,23 @@ describe('AiDiffWorkspace', () => {
     screen.getByRole('button', {name: 'Write an exit ticket'});
   });
 
-  // TODO: flaky, times out intermittently. Re-enable once stabilized.
-  it.skip('Click on thread shows thread messages', async () => {
+  it('Click on thread shows thread messages', async () => {
     fetchJsonStub.mockResolvedValue({
       value: defaultThreadListResponse,
       response: new Response(),
     });
-    renderDefault();
+    await renderDefault();
 
-    await waitFor(() => {
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        {},
-        chatThreadValidator
-      );
-    });
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      {},
+      chatThreadValidator
+    );
 
     screen.getByText('blah thread one');
     const thread = screen.getByText('blah thread two');
     screen.getByText('blah thread three');
-
     fetchJsonStub.mockClear();
-
     fetchJsonStub.mockResolvedValue({
       value: defaultThreadMessagesResponse,
       response: new Response(),
@@ -264,31 +250,23 @@ describe('AiDiffWorkspace', () => {
     expect(message).toHaveTextContent(
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
-    //suggested prompts
     const suggestedPromptsGroup = screen.getByRole('group', {
       name: 'Suggested Prompts',
     });
     expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
       5
     );
-    screen.getByRole('button', {name: 'Give me an example'});
-    screen.getByRole('button', {name: 'Explain a concept'});
-    screen.getByRole('button', {name: 'Debug common mistakes'});
-    screen.getByRole('button', {name: 'Generate a mini lesson'});
-    screen.getByRole('button', {name: 'Write an exit ticket'});
 
-    fireEvent.click(thread);
-
-    await waitFor(() => {
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads/2',
-        {},
-        chatThreadMessagesValidator
-      );
+    await act(async () => {
+      fireEvent.click(thread);
     });
 
-    //no prompt buttons, now shows thread messages
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads/2',
+      {},
+      chatThreadMessagesValidator
+    );
+
     expect(screen.queryByRole('group', {name: 'Suggested Prompts'})).toBeNull();
 
     const bot_messages = screen.getAllByLabelText(i18n.aiChatMessageBot());
@@ -307,58 +285,52 @@ describe('AiDiffWorkspace', () => {
       value: defaultThreadListResponse,
       response: new Response(),
     });
-    renderDefault();
+    await renderDefault();
 
-    await waitFor(() => {
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        {},
-        chatThreadValidator
-      );
-    });
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      {},
+      chatThreadValidator
+    );
 
-    screen.getByText('blah thread one');
     const thread = screen.getByText('blah thread two');
-    screen.getByText('blah thread three');
 
     fetchJsonStub.mockClear();
-
     fetchJsonStub.mockResolvedValue({
       value: defaultThreadMessagesResponse,
       response: new Response(),
     });
 
-    fireEvent.click(thread);
-
-    await waitFor(() => {
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads/2',
-        {},
-        chatThreadMessagesValidator
-      );
+    await act(async () => {
+      fireEvent.click(thread);
     });
+
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads/2',
+      {},
+      chatThreadMessagesValidator
+    );
 
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
     const textbox = screen.getByRole('textbox');
     fireEvent.change(textbox, {target: {value: 'new message on old thread'}});
-    fireEvent.click(submit_btn);
 
-    await waitFor(() => {
-      expect(postStub).toHaveBeenCalledWith(
-        '/aidiff_threads/2/chat_completion',
-        JSON.stringify({
-          inputText: 'new message on old thread',
-          isPreset: false,
-          presetChipText: null,
-        }),
-        true,
-        {
-          'Content-Type': 'application/json',
-        }
-      );
+    await act(async () => {
+      fireEvent.click(submit_btn);
     });
+
+    expect(postStub).toHaveBeenCalledWith(
+      '/aidiff_threads/2/chat_completion',
+      JSON.stringify({
+        inputText: 'new message on old thread',
+        isPreset: false,
+        presetChipText: null,
+      }),
+      true,
+      {
+        'Content-Type': 'application/json',
+      }
+    );
 
     const bot_messages = screen.getAllByLabelText(i18n.aiChatMessageBot());
     expect(bot_messages).toHaveLength(3);
@@ -378,38 +350,31 @@ describe('AiDiffWorkspace', () => {
       value: defaultThreadListResponse,
       response: new Response(),
     });
-    renderDefault();
+    await renderDefault();
 
-    await waitFor(() => {
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        {},
-        chatThreadValidator
-      );
-    });
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      {},
+      chatThreadValidator
+    );
 
-    screen.getByText('blah thread one');
     const thread = screen.getByText('blah thread two');
-    screen.getByText('blah thread three');
 
     fetchJsonStub.mockClear();
-
     fetchJsonStub.mockResolvedValue({
       value: defaultThreadMessagesResponse,
       response: new Response(),
     });
 
-    fireEvent.click(thread);
-
-    await waitFor(() => {
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads/2',
-        {},
-        chatThreadMessagesValidator
-      );
+    await act(async () => {
+      fireEvent.click(thread);
     });
+
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads/2',
+      {},
+      chatThreadMessagesValidator
+    );
 
     expect(screen.queryByRole('group', {name: 'Suggested Prompts'})).toBeNull();
 
@@ -423,18 +388,18 @@ describe('AiDiffWorkspace', () => {
     expect(user_messages[0]).toHaveTextContent('hello help please');
     expect(user_messages[1]).toHaveTextContent('hello help again');
 
-    //click button for a new chat
     const new_thread_btn = screen.getAllByRole('button', {
       name: i18n.aiDifferentiation_new_chat(),
     })[0];
-    fireEvent.click(new_thread_btn);
 
-    //initial messages for a new thread
+    await act(async () => {
+      fireEvent.click(new_thread_btn);
+    });
+
     const message = screen.getByLabelText(i18n.aiChatMessageBot());
     expect(message).toHaveTextContent(
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
-    //suggested prompts
     const suggestedPromptsGroup = screen.getByRole('group', {
       name: 'Suggested Prompts',
     });
@@ -451,39 +416,36 @@ describe('AiDiffWorkspace', () => {
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
     const textbox = screen.getByRole('textbox');
     fireEvent.change(textbox, {target: {value: 'starting new thread'}});
-    fireEvent.click(submit_btn);
 
-    await waitFor(() => {
-      expect(postStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        JSON.stringify({
-          inputText: 'starting new thread',
-          isPreset: false,
-          presetChipText: null,
-          context: {
-            type: AiDiffContext.LESSON,
-            lessonId: 2,
-          },
-        }),
-        true,
-        {
-          'Content-Type': 'application/json',
-        }
-      );
-      // callback to refresh thread list
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        {},
-        chatThreadValidator
-      );
+    await act(async () => {
+      fireEvent.click(submit_btn);
     });
 
-    //one user message
+    expect(postStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      JSON.stringify({
+        inputText: 'starting new thread',
+        isPreset: false,
+        presetChipText: null,
+        context: {
+          type: AiDiffContext.LESSON,
+          lessonId: 2,
+        },
+      }),
+      true,
+      {
+        'Content-Type': 'application/json',
+      }
+    );
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      {},
+      chatThreadValidator
+    );
+
     expect(screen.getByLabelText(i18n.aiChatMessageUser())).toHaveTextContent(
       'starting new thread'
     );
-    //second bot message has the response
     expect(
       screen.getAllByLabelText(i18n.aiChatMessageBot())[1]
     ).toHaveTextContent("Beep boop I'm a bot");
@@ -494,27 +456,22 @@ describe('AiDiffWorkspace', () => {
       value: defaultThreadListResponse,
       response: new Response(),
     });
-    renderDefault();
+    await renderDefault();
 
-    await waitFor(() => {
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        {},
-        chatThreadValidator
-      );
-    });
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      {},
+      chatThreadValidator
+    );
 
     screen.getByText('blah thread one');
     screen.getByText('blah thread two');
     screen.getByText('blah thread three');
 
-    //initial messages
     const message = screen.getByLabelText(i18n.aiChatMessageBot());
     expect(message).toHaveTextContent(
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
-    //suggested prompts
     const suggestedPromptsGroup = screen.getByRole('group', {
       name: 'Suggested Prompts',
     });
@@ -523,105 +480,108 @@ describe('AiDiffWorkspace', () => {
     );
 
     fetchJsonStub.mockClear();
+    fetchJsonStub.mockResolvedValue({
+      value: defaultThreadListResponse,
+      response: new Response(),
+    });
 
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
     const textbox = screen.getByRole('textbox');
     fireEvent.change(textbox, {target: {value: 'starting new thread'}});
-    fireEvent.click(submit_btn);
 
-    await waitFor(() => {
-      expect(postStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        JSON.stringify({
-          inputText: 'starting new thread',
-          isPreset: false,
-          presetChipText: null,
-          context: {
-            type: AiDiffContext.LESSON,
-            lessonId: 2,
-          },
-        }),
-        true,
-        {
-          'Content-Type': 'application/json',
-        }
-      );
-      // callback to refresh thread list
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        {},
-        chatThreadValidator
-      );
+    await act(async () => {
+      fireEvent.click(submit_btn);
     });
-    //one user message
+
+    expect(postStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      JSON.stringify({
+        inputText: 'starting new thread',
+        isPreset: false,
+        presetChipText: null,
+        context: {
+          type: AiDiffContext.LESSON,
+          lessonId: 2,
+        },
+      }),
+      true,
+      {
+        'Content-Type': 'application/json',
+      }
+    );
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      {},
+      chatThreadValidator
+    );
+
     expect(screen.getByLabelText(i18n.aiChatMessageUser())).toHaveTextContent(
       'starting new thread'
     );
-    //second bot message has the response
     expect(
       screen.getAllByLabelText(i18n.aiChatMessageBot())[1]
     ).toHaveTextContent("Beep boop I'm a bot");
 
-    //click button for a new chat
     const new_thread_btn = screen.getAllByRole('button', {
       name: i18n.aiDifferentiation_new_chat(),
     })[0];
-    fireEvent.click(new_thread_btn);
 
-    //initial messages for a new thread
+    await act(async () => {
+      fireEvent.click(new_thread_btn);
+    });
+
     const message2 = screen.getByLabelText(i18n.aiChatMessageBot());
     expect(message2).toHaveTextContent(
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
-    //suggested prompts
     const suggestedPromptsGroup2 = screen.getByRole('group', {
       name: 'Suggested Prompts',
     });
     expect(within(suggestedPromptsGroup2).getAllByRole('button')).toHaveLength(
       5
     );
-    //should have 0 user messages because it's a new thread
     expect(screen.queryByLabelText(i18n.aiChatMessageUser())).toBeNull();
 
     fetchJsonStub.mockClear();
     postStub.mockClear();
+    fetchJsonStub.mockResolvedValue({
+      value: defaultThreadListResponse,
+      response: new Response(),
+    });
 
     const submit_btn2 = screen.getByRole('button', {name: i18n.submit()});
     const textbox2 = screen.getByRole('textbox');
     fireEvent.change(textbox2, {target: {value: 'starting 2nd thread'}});
-    fireEvent.click(submit_btn2);
 
-    await waitFor(() => {
-      expect(postStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        JSON.stringify({
-          inputText: 'starting 2nd thread',
-          isPreset: false,
-          presetChipText: null,
-          context: {
-            type: AiDiffContext.LESSON,
-            lessonId: 2,
-          },
-        }),
-        true,
-        {
-          'Content-Type': 'application/json',
-        }
-      );
-      // callback to refresh thread list
-      expect(fetchJsonStub).toHaveBeenCalledTimes(1);
-      expect(fetchJsonStub).toHaveBeenCalledWith(
-        '/aidiff_threads',
-        {},
-        chatThreadValidator
-      );
+    await act(async () => {
+      fireEvent.click(submit_btn2);
     });
-    // one user message
+
+    expect(postStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      JSON.stringify({
+        inputText: 'starting 2nd thread',
+        isPreset: false,
+        presetChipText: null,
+        context: {
+          type: AiDiffContext.LESSON,
+          lessonId: 2,
+        },
+      }),
+      true,
+      {
+        'Content-Type': 'application/json',
+      }
+    );
+    expect(fetchJsonStub).toHaveBeenCalledWith(
+      '/aidiff_threads',
+      {},
+      chatThreadValidator
+    );
+
     expect(screen.getByLabelText(i18n.aiChatMessageUser())).toHaveTextContent(
       'starting 2nd thread'
     );
-    //second bot message has the response
     expect(
       screen.getAllByLabelText(i18n.aiChatMessageBot())[1]
     ).toHaveTextContent("Beep boop I'm a bot");

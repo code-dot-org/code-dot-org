@@ -71,7 +71,7 @@ export const CurrentAnimations = PropTypes.shape({
  * @property {number} [pixelGridSize] - Physical pixels per art pixel;
  *           absent on classic animations and non-pixel-art images.
  * @property {number[][]} [recentColors] - Pixel-editor recently-used colors
- *           ([r,g,b,a] rows, most recent first); absent until edited there.
+ *           ([r,g,b,a] rows, in first-seen order); absent until edited there.
  */
 const serializedAnimationPropsShape = {
   name: PropTypes.string.isRequired,
@@ -136,6 +136,7 @@ function getSerializedAnimationProps(animation) {
     'categories',
     'pixelGridSize',
     'recentColors',
+    'generation',
   ]);
 }
 

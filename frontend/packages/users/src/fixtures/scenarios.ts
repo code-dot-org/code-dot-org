@@ -28,6 +28,8 @@ export const USERS_SCENARIO_TAGS = [
   'age-state-unset',
   'long-strings',
   'student-can-switch',
+  'teacher-no-dependents',
+  'sso-teacher-dependents',
 ] as const;
 
 export type UsersScenarioTag = (typeof USERS_SCENARIO_TAGS)[number];
@@ -95,6 +97,8 @@ const teacher: UsersScenario = {
     can_delete_own_account: true,
     age: '21+',
     us_state: 'WA',
+    gender: null,
+    is_usa: true,
     parent_email: null,
     dependent_students_count: 2,
   },
@@ -108,8 +112,8 @@ const student: UsersScenario = {
     id: 2,
     user_type: 'student',
     username: 'curious_otter_42',
-    display_name: 'Sam Rivers',
-    short_name: 'Sam',
+    display_name: 'Example Student',
+    short_name: 'Example',
     is_verified_instructor: false,
     educator_role: null,
     grades_teaching: [],
@@ -119,9 +123,9 @@ const student: UsersScenario = {
   // Masked email: a word/picture-style student has no stored cleartext address.
   settings: {
     user_type: 'student',
-    given_name: 'Sam',
+    given_name: 'Example',
     family_name: null,
-    display_name: 'Sam Rivers',
+    display_name: 'Example Student',
     username: 'curious_otter_42',
     email: null,
     has_password: true,
@@ -134,6 +138,8 @@ const student: UsersScenario = {
     can_delete_own_account: true,
     age: 14,
     us_state: 'WA',
+    gender: 'Example gender',
+    is_usa: true,
     parent_email: 'parent@example.com',
     dependent_students_count: 0,
   },
@@ -170,6 +176,8 @@ const ssoTeacher: UsersScenario = {
     can_delete_own_account: true,
     age: '21+',
     us_state: null,
+    gender: null,
+    is_usa: true,
     parent_email: null,
     dependent_students_count: 0,
   },
@@ -184,8 +192,8 @@ const ssoStudent: UsersScenario = {
     id: 4,
     user_type: 'student',
     username: 'brave_fox_88',
-    display_name: 'Max Rivera',
-    short_name: 'Max',
+    display_name: 'Example SSO Student',
+    short_name: 'Example',
     is_verified_instructor: false,
     educator_role: null,
     grades_teaching: [],
@@ -194,9 +202,9 @@ const ssoStudent: UsersScenario = {
   },
   settings: {
     user_type: 'student',
-    given_name: 'Max',
+    given_name: 'Example',
     family_name: null,
-    display_name: 'Max Rivera',
+    display_name: 'Example SSO Student',
     username: 'brave_fox_88',
     email: null,
     has_password: false,
@@ -210,6 +218,8 @@ const ssoStudent: UsersScenario = {
     can_delete_own_account: true,
     age: 13,
     us_state: 'WA',
+    gender: null,
+    is_usa: true,
     parent_email: null,
     dependent_students_count: 0,
   },
@@ -250,6 +260,8 @@ const minimal: UsersScenario = {
     can_delete_own_account: false,
     age: null,
     us_state: null,
+    gender: null,
+    is_usa: false,
     parent_email: null,
     dependent_students_count: 0,
   },
@@ -334,6 +346,8 @@ const longStrings: UsersScenario = {
     can_delete_own_account: true,
     age: '21+',
     us_state: 'WA',
+    gender: null,
+    is_usa: true,
     parent_email: null,
     dependent_students_count: 0,
   },
@@ -341,13 +355,34 @@ const longStrings: UsersScenario = {
   description: 'Very long + emoji names — overflow / truncation probe.',
 };
 
-// Student who CAN change type: exercises the student->teacher upgrade path,
-// where the confirm modal additionally prompts for a (required) email address.
+// Student who CAN change type: exercises the student -> educator path, where
+// the confirm modal additionally prompts for a (required) email address.
 const studentCanSwitch: UsersScenario = {
   ...student,
   currentUser: {...student.currentUser, id: 11},
   settings: {...student.settings, can_change_user_type: true},
-  description: 'Student who can upgrade — type change prompts for email.',
+  description:
+    'Student who can change type — becoming an educator needs an email.',
+};
+
+// Educator with no dependent students: gets the full teacher disclaimer, but
+// neither the personal-login guidance step nor the acknowledgments.
+const teacherNoDependents: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 12},
+  settings: {...teacher.settings, dependent_students_count: 0},
+  description:
+    'Educator with no dependent students — delete skips guidance and acknowledgments.',
+};
+
+// The heaviest delete gate with no password to fall back on: five
+// acknowledgments plus the typed string are the only things standing in the way.
+const ssoTeacherDependents: UsersScenario = {
+  ...ssoTeacher,
+  currentUser: {...ssoTeacher.currentUser, id: 13},
+  settings: {...ssoTeacher.settings, dependent_students_count: 2},
+  description:
+    'Google-only educator with 2 dependent students — no password, all five acknowledgments.',
 };
 
 export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
@@ -362,4 +397,6 @@ export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
   'age-state-unset': ageStateUnset,
   'long-strings': longStrings,
   'student-can-switch': studentCanSwitch,
+  'teacher-no-dependents': teacherNoDependents,
+  'sso-teacher-dependents': ssoTeacherDependents,
 };

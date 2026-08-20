@@ -27,14 +27,14 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       overflow: auto;
     }
     .blocklyFlyoutButton {
-      fill: ${color.brand_secondary_default};
+      fill: var(--background-brand-purple-primary);
       cursor: pointer;
     }
     .blocklyFlyoutButtonShadow {
       fill: none;
     }
     .blocklyFlyoutButton:hover {
-      fill: ${color.brand_secondary_dark};
+      fill: var(--background-brand-purple-strong);
     }
     /* Change look of the editor in angle fields */
     .blocklyAngleCircle {
@@ -73,7 +73,7 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .fieldAngleDropDownContainer .blocklyMenuItem{
       min-width: 0em;
     }
-    .k1ColourDropdown>tr>td {
+    .k1ColourDropdown .blocklyColourSwatch {
       height: 35px;
       width: 45px;
     }
@@ -94,6 +94,10 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyPath:focus {
       outline: none;
     }
+    /* Excluded on Minecraft (Craft) labs which keep their own dark chrome. */
+    body:not(.minecraft) .blocklySvg {
+      background-color: var(--background-neutral-primary) !important;
+    }
     .blocklyToolbox {
       background-color: var(--background-neutral-tertiary) !important;
     }
@@ -106,9 +110,25 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyScrollbarHandle {
       fill: var(--background-neutral-quinary) !important;
     }
+    /* Not !important: fields override this inline to stay legible. */
     .blocklyDropDownDiv {
-      background-color: var(--background-neutral-primary) !important;
-      border-color: var(--borders-neutral-primary) !important;
+      background-color: var(--background-neutral-primary);
+      border-color: var(--borders-neutral-primary);
+    }
+    /* Text token must follow the background token above, or dark-themed
+       labs get Blockly's default black text on a black background. */
+    .blocklyDropDownDiv .blocklyMenuItemContent {
+      color: var(--text-neutral-primary) !important;
+    }
+    /* Checkmark is a baked-in black glyph from sprites.svg; invert it in dark. */
+    [data-theme='Dark'] .blocklyDropDownDiv .blocklyMenuItemCheckbox {
+      filter: invert(1);
+    }
+    /* Restore text color lost when Bootstrap v3 dropped v2's bare-input rule.
+       Pair with background so both flip together under data-theme='Dark'. */
+    .blocklyHtmlInput {
+      background-color: var(--background-neutral-primary);
+      color: var(--text-neutral-primary);
     }
     `
   );

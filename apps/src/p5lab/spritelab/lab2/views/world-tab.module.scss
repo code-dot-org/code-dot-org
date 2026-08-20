@@ -1,0 +1,116 @@
+// World tab (experiment): paint starter placements onto the scene grid.
+
+.worldTab {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 16px;
+  overflow: auto;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+// The vertical room left for the grid, measured so the editor shrinks to
+// fit short windows (down to a floor; past that the tab scrolls).
+.worldGridArea {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.worldPalette {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.worldPaletteItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 2px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-secondary);
+  cursor: pointer;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    // The legacy global `button > img {opacity: 0.6}` dims thumbnails
+    // inside buttons; show them at full strength.
+    opacity: 1;
+  }
+}
+
+.worldPaletteErase {
+  width: auto;
+  padding: 0 10px;
+  color: var(--text-neutral-primary);
+  font-size: 13px;
+}
+
+.worldPaletteSelected {
+  border-color: var(--borders-brand-teal-primary);
+  box-shadow: 0 0 0 1px var(--borders-brand-teal-primary);
+}
+
+.worldEmpty {
+  color: var(--text-neutral-secondary);
+  font-size: 13px;
+}
+
+.worldGrid {
+  display: grid;
+  width: fit-content;
+  border: 1px solid var(--borders-neutral-primary);
+  // Drag painting: keep touch drags painting instead of scrolling.
+  touch-action: none;
+}
+
+.worldCell {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1px;
+  border: 1px solid var(--borders-neutral-quaternary, var(--borders-neutral-primary));
+  border-radius: 0;
+  background: var(--background-neutral-primary);
+  cursor: pointer;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    // See the palette-item note: undo the legacy button > img dimming.
+    opacity: 1;
+    // Keep a drag that starts on a painted cell painting, instead of
+    // becoming a native image drag.
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: var(--background-neutral-tertiary);
+  }
+}
+
+// Beyond the scene's top-left corner (world=large): authorable, not yet run.
+.worldCellOutside {
+  background: var(--background-neutral-secondary);
+
+  img {
+    opacity: 0.55;
+  }
+}
+
+.worldHint {
+  margin-top: 10px;
+  color: var(--text-neutral-secondary);
+  font-size: 13px;
+}

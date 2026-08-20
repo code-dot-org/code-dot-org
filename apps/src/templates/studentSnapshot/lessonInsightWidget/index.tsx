@@ -138,9 +138,9 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
               <Typography variant="body4">{insightData.next_steps}</Typography>
             </div>
             <Typography
-              className={styles.aiGeneratedLabel}
               variant="body4"
-              sx={{fontStyle: 'italic', marginTop: '4px'}}
+              className={styles.aiGeneratedLabel}
+              sx={{fontStyle: 'italic'}}
             >
               <FontAwesomeV6Icon
                 iconName="solid-flask-sparkle"

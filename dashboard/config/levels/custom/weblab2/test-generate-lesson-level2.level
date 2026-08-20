@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-08-17T14:33:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "c2030683-1a77-42f8-bb98-1a4f9f3f38ea": {
+          "id": "c2030683-1a77-42f8-bb98-1a4f9f3f38ea",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Byte's Smart Home</title>\n    <style>\n        body { font-family: sans-serif; margin: 20px; text-align: center; background-color: #f0f8ff; color: #333; }\n        h1 { color: #0056b3; }\n        p { margin-bottom: 25px; }\n        #acStatus { font-size: 1.5em; margin-top: 30px; padding: 15px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }\n    </style>\n</head>\n<body>\n    <h1>Byte's Smart Home Control</h1>\n    <p>Byte is monitoring the temperature. See if the AC turns on!</p>\n    <div id=\"acStatus\">Current AC Status: AC remains OFF.</div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "62a532fb-c959-4a2b-964a-e1d773fac9c9": {
+          "id": "62a532fb-c959-4a2b-964a-e1d773fac9c9",
+          "name": "script.js",
+          "contents": "// Byte is monitoring the temperature in your smart house.\n// If the temperature goes above 75 degrees, Byte needs to turn on the air conditioning.\n\nlet temperature = 82; // Current temperature in Fahrenheit\n\n// This is an 'if' statement. It checks if a condition is true.\n// If the condition (temperature > 75) is true, the code inside the curly braces {} will run.\nif (temperature > 75) {\n    console.log(\"AC is now ON\");\n    document.getElementById(\"acStatus\").innerText = \"Current AC Status: AC is now ON!\";\n}\n\n// Byte always logs the current temperature, regardless of AC status.\nconsole.log(\"Temperature is currently: \" + temperature + \" degrees.\");\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "c2030683-1a77-42f8-bb98-1a4f9f3f38ea",
+        "62a532fb-c959-4a2b-964a-e1d773fac9c9"
+      ]
+    },
+    "long_instructions": "Byte, your robot assistant, is helping to manage your smart home! Right now, Byte's job is to monitor the house temperature and turn on the air conditioning (AC) if it gets too hot.\r\n\r\nYour task is to observe how Byte makes this decision by changing the temperature in the `script.js` file. Follow these steps:\r\n\r\n1.  **Open `index.html` in your web browser.** You should see the initial status of the AC. Open your browser's developer console (usually by pressing F12 or right-clicking and selecting \"Inspect\" then clicking on the \"Console\" tab) to see messages from Byte.\r\n2.  **In `script.js`, find the line `let temperature = 82;`.** This line sets the current temperature Byte is monitoring. Currently, the temperature is 82 degrees.\r\n3.  **Change the value of `temperature` to `70`.** Save the `script.js` file. Then, refresh your `index.html` page in the browser. Observe what happens to the AC status on the page and what messages appear (or don't appear) in the console. Why do you think this happens?\r\n4.  **Now, change the value of `temperature` back to `80`.** Save `script.js` and refresh `index.html` again. Notice how Byte reacts differently this time. You should see the AC turn on!",
+    "generate_outline": "Scenario: Byte is monitoring the temperature in your smart house. If the temperature goes above 75 degrees, Byte needs to turn on the air conditioning.\r\n\r\nCode:\r\ntemperature = 82\r\n\r\nif temperature > 75:\r\n    print(\"AC is now ON\")\r\n\r\nTask: Change the temperature variable to 70 and run the code. Observe that nothing prints because the condition is no longer met. Then, change it back to 80 to see the message return."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-17 14:33:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 14:33:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 14:34:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -162,7 +162,11 @@ class LevelsController < ApplicationController
     # TODO: TEACH-1864 pass in unit_group_unit
     properties = {}
     additional_parameters = {}
-    additional_parameters[:widget2_start_sources] = params[:widget2] if params[:widget2].present?
+    # This action is open to signed out users and the parameter names a directory to
+    # read, so honor it only for a user who could edit a widget2.
+    if params[:widget2].present? && can?(:manage, :widget2)
+      additional_parameters[:widget2_start_sources] = params[:widget2]
+    end
     properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user, **additional_parameters)
     if @level.is_a?(BubbleChoice)
       @level.sublevels.each do |sublevel|
@@ -583,11 +587,11 @@ class LevelsController < ApplicationController
       if can_edit_level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
 
-        if [Javalab, Music, Pythonlab, Weblab2, Dancelab, Sketchlab].include?(@level.class)
+        if @level.channel_backed?
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
           links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
 
-          if [Music, Dancelab].include?(@level.class)
+          if @level.is_a?(Blockly)
             links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end
         end

@@ -65,7 +65,7 @@ class ApplicationController < ActionController::Base
   end
 
   # Persist brand selection as a cookie so the brand sticks across page navigations.
-  # Set brand:   ?brand=codeai
+  # Set brand:   ?brand=codeai-audit
   # Clear brand: ?brand-reset=1
   def persist_brand_params
     return unless DCDO.get('brand-router-enabled', false)

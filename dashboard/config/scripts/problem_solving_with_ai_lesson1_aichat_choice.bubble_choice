@@ -1,0 +1,10 @@
+name 'problem-solving-with-ai-lesson1-aichat-choice'
+display_name 'Website Brainstorming'
+description 'Choose one of the web sites below to build together with AI'
+
+sublevels
+level 'problem-solving-with-ai-lesson1-aichat'
+level 'problem-solving-with-ai-lesson1-aichat-2'
+level 'problem-solving-with-ai-lesson1-aichat-3'
+
+uses_lab2

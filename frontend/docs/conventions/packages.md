@@ -45,6 +45,13 @@ has non-obvious data flow, stateful services, or significant constraints.
 - Use `vite-plugin-externalize-deps` to exclude all peer deps from the bundle
 - Set `preserveModules: true` for dual ESM+CJS output (tree-shakeable)
 - Labs use a standard app config (no `preserveModules`); libraries use library mode
+- `preserveModules` and CSS modules conflict: per-module output emits
+  `*.module.css`, which a consumer whose CSS-modules rule matches that glob
+  (Vite's default does) re-hashes, silently dropping the already-hashed class
+  names. A library with `.module.scss` files must either strip the `.module`
+  infix via `assetFileNames` (see `component-library`) or drop `preserveModules`
+  and emit one chunk plus one stylesheet (see `lesson-deep-dive`). Prefer the
+  latter when the package has a single entry that consumers import wholesale.
 
 ## TypeScript config
 
@@ -71,19 +78,25 @@ export default [globalIgnores(['dist']), ...cdoReactConfig];
 
 ## Stylelint config
 
-- Packages with CSS/SCSS files shall have a `stylelint.config.mjs` extending the shared config:
+Stylelint is wired through `package.json`, not a separate config file — a
+`stylelint` key extending the shared config, plus the scripts that Turborepo's
+`lint` task depends on:
 
-```js
-// stylelint.config.mjs
-import cdoStylelint from '@code-dot-org/lint-config/stylelint/index.mjs';
-export default cdoStylelint;
+```json
+{
+  "scripts": {
+    "stylelint": "stylelint --allow-empty-input \"src/**/*.{css,scss,sass}\"",
+    "stylelint:fix": "yarn run stylelint --fix"
+  },
+  "stylelint": {"extends": "@code-dot-org/lint-config/stylelint/index.mjs"}
+}
 ```
 
 ## Testing
 
 - Use Vitest (not Jest — Jest is for the legacy `apps/` bundle)
 - Test files: `src/**/__tests__/*.test.ts` or `*.test.tsx`
-- React + jsdom packages extend the shared base from `@code-dot-org/lint-config/vitest/react.mjs` (re-export, or merge with `mergeConfig` to add overrides like `setupFiles` or `resolve.alias`)
+- React + jsdom packages extend the shared base from `@code-dot-org/lint-config/vitest/react.mjs` (re-export, or merge with `mergeConfig` to add overrides like `setupFiles` or `resolve.alias`). Both generators scaffold this base, so component tests run without further setup
 
 ## Lint-staged
 

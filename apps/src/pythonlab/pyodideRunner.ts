@@ -11,6 +11,7 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
+import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {SVG_ID} from '@cdo/apps/maze/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
@@ -20,10 +21,7 @@ import {captureThumbnailFromSvgPythonlabNeighborhood} from '@cdo/apps/util/thumb
 import {getValidationFromSource, RunType} from '../codebridge';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
-import {
-  asyncRun,
-  restartPyodideIfProgramIsRunning,
-} from './pyodideWorkerManager';
+import {asyncRun, restartPyodideIfProgramIsRunning} from './pyodideManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 const appName = 'pythonlab';
@@ -66,6 +64,9 @@ export async function handleRunClick(
     if (isNeighborhoodLevel()) {
       setProjectThumbnail();
     }
+    if (isTheaterLevel()) {
+      stopTheaterIfNoOutput();
+    }
   }
 }
 
@@ -79,6 +80,9 @@ export async function runPythonCode(
     if (isNeighborhoodRun) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
       CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    }
+    if (isTheaterLevel()) {
+      CodebridgeRegistry.getInstance().getTheater()?.reset();
     }
     // We only send all output to the neighborhood if this is a neighborhood level and
     // we are not running validation, as validation does not render to the neighborhood.
@@ -100,6 +104,9 @@ export async function runPythonCode(
 export function stopPythonCode() {
   if (isNeighborhoodLevel()) {
     CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  }
+  if (isTheaterLevel()) {
+    CodebridgeRegistry.getInstance().getTheater()?.onStop();
   }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
@@ -155,11 +162,30 @@ export async function runAllTests(
   }
 }
 
+// A theater run leaves the run button showing stop while the gif plays, since
+// its length is unknown. A program that ended without producing any media --
+// most often because it threw -- has nothing to play, so put the button back.
+// Safe to check here because the sandbox delivers theater media before it
+// reports the run complete.
+function stopTheaterIfNoOutput() {
+  const theater = CodebridgeRegistry.getInstance().getTheater();
+  if (!theater?.hasOutput()) {
+    theater?.reset();
+    getStore().dispatch(setIsRunning(false));
+  }
+}
+
+function getMiniApp() {
+  return getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
+    ?.name;
+}
+
 function isNeighborhoodLevel() {
-  return (
-    getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
-      ?.name === MiniApps.Neighborhood
-  );
+  return getMiniApp() === MiniApps.Neighborhood;
+}
+
+function isTheaterLevel() {
+  return getMiniApp() === MiniApps.Theater;
 }
 
 function handleRunEndedUnexpectedly(
@@ -176,6 +202,12 @@ function handleRunEndedUnexpectedly(
     CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');
+    if (isTheaterLevel()) {
+      // A theater run normally leaves the run button showing stop, since a gif's
+      // length is unknown. Nothing played here, so put the button back.
+      CodebridgeRegistry.getInstance().getTheater()?.reset();
+      getStore().dispatch(setIsRunning(false));
+    }
   }
 }
 

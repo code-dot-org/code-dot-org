@@ -30,18 +30,26 @@ import {RootState} from '../types/redux';
 import {NetworkError} from '../util/HttpClient';
 import {AppDispatch} from '../util/reduxHooks';
 
+import {PROJECT_TYPES_WITH_SHARE_FILTERING} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   getInitialValidationState,
   ValidationState,
 } from './progress/ProgressManager';
+import {fetchShareFailure} from './projects/channelsApi';
 import ProjectManager from './projects/ProjectManager';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {getSourcesStoreForApp} from './projects/sourcesStoreForApp';
 import {getPredictResponse} from './projects/userLevelsApi';
 import {setProjectTooLarge} from './redux/lab2ProjectRedux';
 import {isReadOnlyWorkspace} from './redux/lab2ReduxSelectors';
-import {Channel, LevelProperties, ProjectSources, Validation} from './types';
+import {
+  Channel,
+  LevelProperties,
+  ProjectSources,
+  ShareFailure,
+  Validation,
+} from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
@@ -76,6 +84,10 @@ export interface LabState {
   isShareView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
   isBlockedAbuse: boolean | undefined;
+  // The failure the server's share filter found in the project content
+  // (profanity or PII), or null if the project is clean or unfiltered.
+  // A non-null value blocks the lab view and the share dialog.
+  shareFailure: ShareFailure | null;
   // If this lab/project is blocked for project non-owners (excluding owner's teacher).
   projectSharingDisabled: boolean | undefined;
   overrideValidations: Validation[] | undefined;
@@ -98,6 +110,7 @@ const initialState: LabState = {
   scriptId: undefined,
   isShareView: undefined,
   isBlockedAbuse: undefined,
+  shareFailure: null,
   projectSharingDisabled: undefined,
   overrideValidations: undefined,
   permissions: [],
@@ -120,6 +133,7 @@ export const setUpWithLevel = createAsyncThunk<
     levelProperties: LevelProperties;
     channelId?: string;
     userId?: number;
+    managesOwnProject?: boolean;
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
@@ -143,8 +157,9 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = payload.levelProperties;
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
-    if (!levelProperties.usesProjects) {
-      // If projects are disabled on this level, we can skip loading projects data.
+    // If projects are disabled on this level, or this lab manages loading its own project,
+    // skip loading projects data.
+    if (!levelProperties.usesProjects || payload.managesOwnProject) {
       setProjectAndLevelData(
         {levelProperties},
         thunkAPI.signal.aborted,
@@ -234,6 +249,7 @@ export const setUpWithLevel = createAsyncThunk<
       channel,
       abuseScore,
       sharingDisabled,
+      shareFailure,
       isTeacherOfProjectOwner,
     } = await setUpAndLoadProject(projectManager, thunkAPI.dispatch);
     setProjectAndLevelData(
@@ -243,6 +259,7 @@ export const setUpWithLevel = createAsyncThunk<
         levelProperties,
         abuseScore,
         sharingDisabled,
+        shareFailure,
         isTeacherOfProjectOwner,
       },
       thunkAPI.signal.aborted,
@@ -298,6 +315,7 @@ const labSlice = createSlice({
         initialSources?: ProjectSources;
         abuseScore?: number;
         sharingDisabled?: boolean;
+        shareFailure?: ShareFailure | null;
         isTeacherOfProjectOwner?: boolean;
       }>
     ) {
@@ -308,6 +326,7 @@ const labSlice = createSlice({
       if (typeof action.payload.abuseScore === 'number') {
         state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
       }
+      state.shareFailure = action.payload.shareFailure ?? null;
       state.projectSharingDisabled =
         action.payload.sharingDisabled &&
         OPEN_ENDED_LAB2_PROJECT_TYPES.includes(levelProperties.appName);
@@ -330,6 +349,9 @@ const labSlice = createSlice({
     },
     setIsBlockedAbuse(state, action: PayloadAction<boolean>) {
       state.isBlockedAbuse = action.payload;
+    },
+    setShareFailure(state, action: PayloadAction<ShareFailure | null>) {
+      state.shareFailure = action.payload;
     },
     setIsFullScreenView(state, action: PayloadAction<boolean>) {
       state.isFullScreenView = action.payload;
@@ -412,6 +434,7 @@ async function setUpAndLoadProject(
     dispatch(setChannel(channel));
     // If we had a successful save, we know the project is not too large.
     dispatch(setProjectTooLarge(false));
+    refreshShareFailure(channel, dispatch);
   });
   projectManager.addSaveNoopListener(channel => {
     if (channel) {
@@ -441,6 +464,37 @@ async function setUpAndLoadProject(
   return await projectManager.load(resetToStartSources);
 }
 
+let shareFailureRefresh: Promise<void> = Promise.resolve();
+
+// Re-run the share filter after a successful save so the blocked UI and the
+// share dialog both reflect the saved content.
+function refreshShareFailure(
+  channel: Channel,
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+) {
+  if (!PROJECT_TYPES_WITH_SHARE_FILTERING.includes(channel.projectType)) {
+    // Avoid waiting on a stale refresh from a previously-opened filtered project.
+    shareFailureRefresh = Promise.resolve();
+    dispatch(setShareFailure(null));
+    return;
+  }
+  shareFailureRefresh = fetchShareFailure(channel.id)
+    .then(failure => {
+      dispatch(setShareFailure(failure));
+    })
+    .catch(() => {
+      // Fail silently and keep the last known value.
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logWarning('Unable to refresh share failure status after save.');
+    });
+}
+
+// Resolves once any in-flight post-save share filter check has settled.
+export function waitForShareFailureRefresh(): Promise<void> {
+  return shareFailureRefresh;
+}
+
 // Helper function to set the channel, source, and level data in redux.
 // If aborted is true, we won't set anything in redux. Once
 // we are done, we will mark the lab as ready for reload.
@@ -453,6 +507,7 @@ function setProjectAndLevelData(
     initialSources?: ProjectSources;
     abuseScore?: number;
     sharingDisabled?: boolean;
+    shareFailure?: ShareFailure | null;
     isTeacherOfProjectOwner?: boolean;
   },
   aborted: boolean,
@@ -508,6 +563,7 @@ export const {
   setChannel,
   setIsTeacherOfProjectOwner,
   setIsBlockedAbuse,
+  setShareFailure,
   setIsFullScreenView,
 } = labSlice.actions;
 

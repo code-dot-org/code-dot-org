@@ -4,10 +4,6 @@ class SectionsControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
 
   setup_all do
-    # The page header falls back to the hourofcode unit (Unit.hoc_2014_unit),
-    # so full page renders need it to exist.
-    create_hourofcode_unit_and_levels
-
     @teacher = create(:teacher)
 
     @word_section = create(:section, user: @teacher, login_type: 'word')

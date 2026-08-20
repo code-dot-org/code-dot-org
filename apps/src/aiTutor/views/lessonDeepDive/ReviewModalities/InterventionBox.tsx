@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {VocabularyFlashcards} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useState} from 'react';
 
 import {
@@ -8,6 +9,7 @@ import {
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ChallengeBox from '../ChallengeActivities/ChallengeBox';
@@ -15,7 +17,6 @@ import ChallengeBox from '../ChallengeActivities/ChallengeBox';
 import Chat from './Chat';
 import PodcastsBox from './PodcastsBox';
 import VideosBox from './VideosBox';
-import VocabularyFlashcards from './VocabularyFlashcards';
 
 import styles from './intervention-box.module.scss';
 
@@ -139,7 +140,12 @@ const InterventionBox: FC<InterventionBoxProps> = ({
               Pick a mode and we&apos;ll get you going.
             </p>
             <div className={styles.menuList}>
-              {CARDS.map(card => (
+              {CARDS.filter(
+                card =>
+                  card.id !== 'challenge' ||
+                  (card.id === 'challenge' &&
+                    experiments.isEnabled(experiments.LESSON_TUTOR_CHALLENGE))
+              ).map(card => (
                 <button
                   key={card.id}
                   type="button"
@@ -172,7 +178,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             reflectionData={reflectionData}
           />
         )}
-        {selected === 'challenge' && <ChallengeBox />}
+        {selected === 'challenge' && <ChallengeBox lessonId={lessonId} />}
         {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
         {selected === 'podcasts' && (
           <PodcastsBox
@@ -195,7 +201,12 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           <FontAwesomeV6Icon iconName="grid-2" />
         </button>
         <div className={styles.navDivider} />
-        {CARDS.map(card => {
+        {CARDS.filter(
+          card =>
+            card.id !== 'challenge' ||
+            (card.id === 'challenge' &&
+              experiments.isEnabled(experiments.LESSON_TUTOR_CHALLENGE))
+        ).map(card => {
           const isActive = selected === card.id;
           return (
             <button

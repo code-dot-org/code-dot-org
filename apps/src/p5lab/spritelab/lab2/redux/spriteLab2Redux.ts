@@ -1,8 +1,8 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 // The full set of tabs for the SpriteLab2 full-screen UI.
-export const SPRITE_LAB2_TABS = ['Images', 'World', 'Code', 'Play'] as const;
-export type SpriteLab2Tab = (typeof SPRITE_LAB2_TABS)[number];
+export const ALL_TABS = ['Images', 'World', 'Code', 'Play'] as const;
+export type Tab = (typeof ALL_TABS)[number];
 
 // AI code-generation lifecycle, modeled on Music's GenerateCode state machine.
 export type AiGenerateState =
@@ -29,23 +29,18 @@ export interface ExternalSceneOption {
 }
 
 export interface SpriteLab2State {
-  activeTab: SpriteLab2Tab;
+  activeTab: Tab;
   hasRun: boolean;
-  hasEdited: boolean;
   aiGenerateState: AiGenerateState;
   scenes: SceneMetadata[];
-  // The scene whose workspace is open in the Code tab.
-  activeSceneId: string | null;
   externalScenes: ExternalSceneOption[];
 }
 
 const initialState: SpriteLab2State = {
   activeTab: 'Code',
   hasRun: false,
-  hasEdited: false,
   aiGenerateState: 'none',
   scenes: [],
-  activeSceneId: null,
   externalScenes: [],
 };
 
@@ -53,23 +48,17 @@ const spriteLab2Slice = createSlice({
   name: 'spriteLab2',
   initialState,
   reducers: {
-    setActiveTab: (state, action: PayloadAction<SpriteLab2Tab>) => {
+    setActiveTab: (state, action: PayloadAction<Tab>) => {
       state.activeTab = action.payload;
     },
     setHasRun: (state, action: PayloadAction<boolean>) => {
       state.hasRun = action.payload;
-    },
-    setHasEdited: (state, action: PayloadAction<boolean>) => {
-      state.hasEdited = action.payload;
     },
     setAiGenerateState: (state, action: PayloadAction<AiGenerateState>) => {
       state.aiGenerateState = action.payload;
     },
     setScenes: (state, action: PayloadAction<SceneMetadata[]>) => {
       state.scenes = action.payload;
-    },
-    setActiveSceneId: (state, action: PayloadAction<string | null>) => {
-      state.activeSceneId = action.payload;
     },
     setExternalScenes: (
       state,
@@ -84,10 +73,8 @@ const spriteLab2Slice = createSlice({
 export const {
   setActiveTab,
   setHasRun,
-  setHasEdited,
   setAiGenerateState,
   setScenes,
-  setActiveSceneId,
   setExternalScenes,
   resetSpriteLab2,
 } = spriteLab2Slice.actions;

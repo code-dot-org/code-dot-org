@@ -46,9 +46,9 @@
   left: 51px;
   bottom: 97px;
 
-  height: 18px;
-  width: 28px;
-  background-size: 28px;
+  height: 22px;
+  width: 32px;
+  background-size: 32px;
   padding: 0;
 
   border-width: 2px;
@@ -68,8 +68,8 @@
   border-style: solid;
 
   display: inline-flex;
-  height: 18px;
-  min-width: 18px;
+  height: 26px;
+  min-width: 26px;
   padding: 2px 2px;
   justify-content: center;
   align-items: center;
@@ -98,8 +98,8 @@ p.countText {
   z-index: 2000;
 
   display: flex;
-  width: 300px;
-  max-width: 300px;
+  width: 352px;
+  max-width: 352px;
   padding: 12px;
   flex-direction: column;
   align-items: flex-start;
@@ -167,7 +167,7 @@ p.countText {
 
 .viewScoresButton {
   min-height: 35px;
-  width: 286px;
+  width: 318px;
 
   display: flex;
   padding: 5px 16px;
@@ -201,8 +201,8 @@ p.countText {
 }
 
 .settings {
-  width: 724px;
-  min-height: 298px;
+  width: 762px;
+  min-height: 350px;
   padding: 16px 16px 32px 16px;
   gap: 16px;
 
@@ -247,7 +247,7 @@ p.countText {
   border-left: 2px solid var(--borders-neutral-solid);
   background: var(--background-neutral-secondary);
   box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
-  height: 408px;
+  height: 440px;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 16px;
@@ -394,7 +394,7 @@ p.countText {
   padding-inline-start: 0.75rem;
 
   display: flex;
-  height: 40px;
+  height: 42px;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
@@ -1116,7 +1116,7 @@ h5.learningGoalsHeaderTextBody {
 
 .aiToken {
   display: flex;
-  height: 20px;
+  height: 24px;
   padding: 2px 12px 2px 12px;
   justify-content: center;
   align-items: center;
@@ -1127,7 +1127,7 @@ h5.learningGoalsHeaderTextBody {
 }
 
 p.aiTokenText {
-  color: var(--text-neutral-primary);
+  color: var(--text-neutral-white-fixed);
   font-size: 0.7rem;
   line-height: 1rem;
   margin-bottom: 0;
@@ -1281,11 +1281,12 @@ p.evidenceLevelHeaderText {
   border-left: 0.125rem solid var(--borders-neutral-solid);
   background: var(--background-neutral-primary);
   box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
-  height: 408px;
+  height: 440px;
   overflow-x: hidden;
   overflow-y: scroll;
 
   &:last-child {
+    height: 442px;
     border-radius: 0 0 0.25rem 0.25rem;
     border-bottom: 0.125rem solid var(--borders-neutral-solid);
   }

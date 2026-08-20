@@ -1,0 +1,101 @@
+.challengeLayout {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+// Left quarter: activity instructions from the Challenge model.
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  padding: 16px;
+  background-color: var(--background-neutral-primary);
+  border-radius: 8px;
+  gap: 20px;
+}
+
+.sidebarHeading {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-neutral-primary);
+}
+
+.instructionsText {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-neutral-primary);
+}
+
+.explanationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 4px;
+}
+
+.explanationButton :global(.MuiButton-icon) {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.explanationButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
+  background-color: var(--background-neutral-secondary) !important;
+
+  &.Selected {
+    border-color: var(--borders-brand-purple-strong);
+  }
+}
+
+.whiteboardButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.textArea {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-neutral-primary);
+}
+
+// Right three quarters: the active challenge pane with the
+// modality toggle underneath it.
+.activityColumn {
+  flex: 3;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.challengeToggle {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+
+  button {
+    padding: 6px 16px;
+    background-color: transparent;
+    border: 1px solid #9657c7;
+    border-radius: 8px;
+    color: #9657c7;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &.active {
+      background-color: #9657c7;
+      color: #fff;
+    }
+  }
+}

@@ -1,18 +1,26 @@
-import {NodeResizer, type NodeProps} from '@xyflow/react';
+import {type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useMemo} from 'react';
 
-import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {
+  DEFAULT_ROTATION,
+  ELEMENT_BORDER_PX,
+  MIN_NODE_HEIGHT,
+  MIN_NODE_WIDTH,
+} from '../constants';
+import {
+  fontFamilyCss,
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
 import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+import RotatedNodeResizer from './RotatedNodeResizer';
 
 import styles from './shape-node.module.scss';
 
@@ -20,7 +28,6 @@ import styles from './shape-node.module.scss';
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
 // SVG path for a diamond (rhombus) filling a 100x100 viewBox: top, right, bottom, left.
 const DIAMOND_POINTS = '50,5 95,50 50,95 5,50';
-const SHAPE_BORDER_PX = 2;
 
 interface ShapeSvgProps {
   shapeType: ShapeType;
@@ -47,7 +54,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
           rx="48"
           ry="48"
           style={{fill, stroke}}
-          strokeWidth={SHAPE_BORDER_PX}
+          strokeWidth={ELEMENT_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
       </svg>
@@ -66,7 +73,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
         <polygon
           points={TRIANGLE_POINTS}
           style={{fill, stroke}}
-          strokeWidth={SHAPE_BORDER_PX}
+          strokeWidth={ELEMENT_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
       </svg>
@@ -85,7 +92,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
         <polygon
           points={DIAMOND_POINTS}
           style={{fill, stroke}}
-          strokeWidth={SHAPE_BORDER_PX}
+          strokeWidth={ELEMENT_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
       </svg>
@@ -142,15 +149,23 @@ function ShapeNode({
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.fontFamily = fontFamilyCss(data.fontFamily);
     style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
-  }, [data.fontColor, data.fontSize, data.textAlign, isEditing]);
+  }, [
+    data.fontColor,
+    data.fontSize,
+    data.fontFamily,
+    data.textAlign,
+    isEditing,
+  ]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
     () => ({transform: `rotate(${rotation}deg)`}),
     [rotation]
   );
+  useRotatedHandleInternals(rotation);
 
   return (
     <div
@@ -159,12 +174,6 @@ function ShapeNode({
       onDoubleClick={startEditing}
       {...hoverHandlers}
     >
-      <NodeResizer
-        isVisible={selected && !data.locked}
-        minWidth={MIN_NODE_WIDTH}
-        minHeight={MIN_NODE_HEIGHT}
-      />
-
       <div className={styles.rotatable} style={rotatableStyle}>
         {/* Background shape */}
         {isRectangle ? (
@@ -206,13 +215,20 @@ function ShapeNode({
         >
           {label}
         </div>
-      </div>
 
-      <ConnectionHandles
-        visible={showHandles}
-        isConnectable={isConnectable}
-        shapeType={shapeType}
-      />
+        <RotatedNodeResizer
+          isVisible={selected && !data.locked}
+          rotation={rotation}
+          minWidth={MIN_NODE_WIDTH}
+          minHeight={MIN_NODE_HEIGHT}
+        />
+
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
+          shapeType={shapeType}
+        />
+      </div>
     </div>
   );
 }

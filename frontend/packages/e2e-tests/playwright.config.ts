@@ -21,7 +21,8 @@ if (provider === 'drone') {
  * Target host defaults to https://test-studio.code.org (always-on test env); set
  * TARGET_URL to point at another deployment — e.g. a PR's adhoc — so a PR run
  * exercises that PR's code rather than the static test env. No webServer block.
- * Default run lane is Chromium; Firefox and WebKit are opt-in via `--project=...`.
+ * Chromium, Firefox and WebKit all run unless `--project=...` narrows the set;
+ * the visual-* lanes exist only when VISUAL_PROVIDER is set.
  * Sharding is CLI-only: pass `--shard=$i/$n`.
  *
  * @see https://playwright.dev/docs/test-configuration
@@ -66,6 +67,10 @@ export default defineConfig({
       grepInvert: functionalGrepInvert,
     },
     // Applitools/native-screenshot lane for @visual tests; [] unless VISUAL_PROVIDER is set.
-    ...visualProjects(),
+    // The @no_ci skip applies to this lane too — visualProjects() only sets
+    // grep, so Drone must exclude deployed-env-only visual tests itself.
+    ...visualProjects().map(project =>
+      provider === 'drone' ? {...project, grepInvert: /@no_ci/} : project,
+    ),
   ],
 });

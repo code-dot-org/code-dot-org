@@ -197,17 +197,18 @@ class Section < ApplicationRecord
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  serialized_attrs %w(code_review_expires_at suggested_lesson)
+  serialized_attrs %w(code_review_expires_at suggested_lesson suggested_lesson_history)
 
-  SUGGESTED_LESSON_TTL = 1.hour
   SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
+  SUGGESTED_LESSON_HISTORY_MAX_DAYS = 10
 
   def suggested_lesson_stale?
     data = suggested_lesson
     return true if data.nil?
+    return true if suggested_lesson_history.nil?
     timestamp = data['timestamp']
     return true if timestamp.blank?
-    Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
+    Time.parse(timestamp.to_s).to_date < Time.zone.today
   rescue ArgumentError
     true
   end
@@ -265,13 +266,27 @@ class Section < ApplicationRecord
                     lessons.first
                   end
 
-    update!(
-      suggested_lesson: if finished_unit
-                          {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
-                        else
-                          {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
-                        end
-    )
+    new_value = if finished_unit
+                  {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
+                else
+                  {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
+                end
+
+    coming_up = if finished_unit
+                  {'completed_unit' => true}
+                else
+                  idx = numbered_lessons.index(next_lesson)
+                  next_next = numbered_lessons[idx + 1]
+                  next_next ? {'lesson_id' => next_next.id} : {'completed_unit' => true}
+                end
+
+    today = Time.zone.today.iso8601
+    cutoff = (Time.zone.today - SUGGESTED_LESSON_HISTORY_MAX_DAYS).iso8601
+    history = (suggested_lesson_history || []).
+      reject {|entry| entry['date'] == today || entry['date'] < cutoff}
+    history << new_value.merge('date' => today, 'coming_up' => coming_up)
+
+    update!(suggested_lesson: new_value, suggested_lesson_history: history)
   end
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
@@ -639,8 +654,12 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the student homepage.
   # This provides all information in `selected_section_summarize` and `concise_summarize` as well as additional fields.
-  def summarize(include_students: true)
-    ActiveRecord::Base.connected_to(role: :reading) do
+  #
+  # role: defaults to :reading (replica), but callers that just wrote data this same request
+  # (e.g. right after Section#add_student) should pass :writing to read their own write back
+  # from the primary, since the replica may not have caught up yet.
+  def summarize(include_students: true, role: :reading)
+    ActiveRecord::Base.connected_to(role: role) do
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
       course_version_name =

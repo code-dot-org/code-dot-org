@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
@@ -153,7 +154,13 @@ describe('LessonOverview', () => {
 
     expect(wrapper.find('LessonAgenda').length).to.equal(1);
 
-    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.false;
+    expect(
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Standards
+        </Typography>
+      )
+    ).to.be.false;
   });
 
   it('renders correct number of activities', () => {
@@ -266,7 +273,13 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
 
-    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.true;
+    expect(
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Standards
+        </Typography>
+      )
+    ).to.be.true;
     expect(
       wrapper.containsMatchingElement(
         <Button
@@ -276,7 +289,11 @@ describe('LessonOverview', () => {
       )
     ).to.be.true;
     expect(
-      wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Cross-Curricular Opportunities
+        </Typography>
+      )
     ).to.be.false;
   });
 
@@ -301,9 +318,19 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
 
-    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.false;
     expect(
-      wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Standards
+        </Typography>
+      )
+    ).to.be.false;
+    expect(
+      wrapper.containsMatchingElement(
+        <Typography variant="h4" component="h2">
+          Cross-Curricular Opportunities
+        </Typography>
+      )
     ).to.be.true;
   });
 

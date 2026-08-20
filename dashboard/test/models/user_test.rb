@@ -1132,7 +1132,7 @@ class UserTest < ActiveSupport::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal [email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
+    assert_equal 'CodeAI reset password instructions', mail.subject
     student = User.find(student.id)
     old_password = student.encrypted_password
 
@@ -1189,7 +1189,7 @@ class UserTest < ActiveSupport::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal [email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
+    assert_equal 'CodeAI reset password instructions', mail.subject
     student = User.find(student.id)
     old_password = student.encrypted_password
 
@@ -1243,7 +1243,7 @@ class UserTest < ActiveSupport::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal [email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
+    assert_equal 'CodeAI reset password instructions', mail.subject
     student = student.reload
     refute student.age
     assert student.reset_password_token

@@ -386,6 +386,8 @@ module.exports = function (grunt) {
       'bundle exec ./script/generateRegionConfigurations.rb',
     generateStudioRoutes: 'bundle exec ./script/generateStudioRoutes.rb',
     buildFrontendDependencies: './script/build-frontend-dependencies.sh',
+    watchFrontendDependencies:
+      './script/build-frontend-dependencies.sh --watch',
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
@@ -497,9 +499,9 @@ module.exports = function (grunt) {
   };
 
   config.concurrent = {
-    // run our two watch tasks concurrently so that they dont block each other
+    // run our watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: ['watch', 'webpack-dev-server'],
+      tasks: ['watch', 'webpack-dev-server', 'exec:watchFrontendDependencies'],
       options: {
         logConcurrentOutput: true,
       },
@@ -507,6 +509,19 @@ module.exports = function (grunt) {
   };
 
   grunt.initConfig(config);
+
+  // grunt-newer compares each Sass entry file's mtime against its compiled
+  // output, so it never notices a change to a partial pulled in only via
+  // @import. Force a full recompile when the changed file isn't one of the
+  // known entries, so partial edits actually take effect.
+  var sassEntryFiles = new Set(_.values(config.sass.all.files));
+  grunt.event.on('watch', function (action, filepath, target) {
+    if (target !== 'style') {
+      return;
+    }
+    var tasks = sassEntryFiles.has(filepath) ? ['newer:sass'] : ['sass:all'];
+    grunt.config(['watch', 'style', 'tasks'], tasks);
+  });
 
   // Autoload grunt tasks
   require('load-grunt-tasks')(grunt, {

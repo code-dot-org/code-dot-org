@@ -67,7 +67,6 @@ interface Window {
 declare module 'filesaver.js';
 declare module '@blockly/plugin-scroll-options';
 declare module '@blockly/field-angle';
-declare module '@blockly/field-bitmap';
 declare module '@blockly/field-colour';
 declare module '@cdo/locale';
 declare module '@code-dot-org/maze';

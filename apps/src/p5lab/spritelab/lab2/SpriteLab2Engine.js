@@ -2,15 +2,44 @@ import * as BlocklyCore from 'blockly/core';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
-import {SPRITELAB2_EXTRA_SHARED_BLOCKS} from './blockly/extraSharedBlocks';
+import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {trimAnimationListImages} from './imageTrim';
+import {
+  CONTACT_EPSILON,
+  isSupported,
+  PLATFORM_GRAVITY,
+  resolvePlatformPhysics,
+} from './platformPhysics';
+import {CELL_SIZE} from './world';
 
 const NOOP = () => {};
+
+// Default sprite size for non-platformer scenes on platform-pool levels;
+// platformer scenes use CELL_SIZE (one grid cell). A later World-tab UI may
+// let the user pick these per scene.
+const STORY_SCENE_SPRITE_SIZE = 300;
+
+// Extra canvas density beyond the device pixel ratio: the canvas is 400
+// logical px and the Playspace transform-scales it to ~900 CSS px on the
+// Play tab, so stock density paints ~2x2 blocks per canvas pixel.
+// Coordinates stay 400-based.
+const CANVAS_DENSITY_FACTOR = 2;
+
+// Markers in a scene's compiled program that make it a platformer: the
+// platform composites and player setup from the toolbox, or the world
+// prelude's wall spawns.
+const PLATFORM_SCENE_MARKERS = [
+  'makePlatformPlayer(',
+  'makePlatformBlocks(',
+  'setAsPlatformPlayer(',
+  "'walls'",
+];
 
 /**
  * Stand-in for the StudioApp singleton: exactly the members the classic
@@ -50,6 +79,7 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
  * Owns no Blockly workspace and no StudioApp; the caller compiles the workspace
  * to JS and feeds it via run(code).
  */
+
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
@@ -88,6 +118,66 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
+    // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
+    // classic's ~400px library art: resize once to the canvas's physical
+    // resolution instead of CoreLibrary's logical 400.
+    library.drawBackground = function () {
+      if (typeof this.background === 'string') {
+        this.p5.background(this.background);
+      } else {
+        this.p5.background('white');
+      }
+      if (typeof this.background === 'object') {
+        const size = APP_WIDTH * (this.p5._pixelDensity || 1);
+        if (this.background.width !== size || this.background.height !== size) {
+          this.background.resize(size, size);
+        }
+        this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
+      }
+    };
+    if (this.usesPlatformPhysics_) {
+      // Sized per SCENE, not per level: one project holds both a platformer
+      // scene (one-cell sprites) and a story scene (large characters).
+      library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
+        ? CELL_SIZE
+        : STORY_SCENE_SPRITE_SIZE;
+      // Landings carry sub-pixel float noise; footing checks must not
+      // compare contact exactly.
+      library.contactEpsilon = CONTACT_EPSILON;
+    }
+    // Fresh library = fresh run; gravity returns to the default until a
+    // set-gravity block says otherwise. Negative flips the world: players
+    // fall up and land on block undersides and the view's top edge.
+    this.platformGravity_ = PLATFORM_GRAVITY;
+    library.commands.setPlatformGravity = value => {
+      this.platformGravity_ = Number(value) || 0;
+    };
+    // Move existing sprites (e.g. world-placed ones) into the players
+    // group; the per-frame resolver picks them up from there.
+    library.commands.setPlatformPlayer = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.group = 'players';
+      });
+    };
+    // Jump against gravity if any player has support in the gravity
+    // direction (the resolver's own footing geometry, so it agrees with
+    // where players actually rest).
+    library.commands.platformJump = speed => {
+      const p5 = this.p5Wrapper.p5;
+      const players = library.getSpriteArray({group: 'players'});
+      const walls = library.getSpriteArray({group: 'walls'});
+      const view = {width: p5.width, height: p5.height};
+      const grounded = players.some(sprite =>
+        isSupported(sprite, walls, view, this.platformGravity_)
+      );
+      if (!grounded) {
+        return;
+      }
+      const up = this.platformGravity_ < 0 ? 1 : -1;
+      players.forEach(sprite => {
+        sprite.velocity.y = up * Math.abs(Number(speed) || 0);
+      });
+    };
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
@@ -162,13 +252,16 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
+    // The zGameDev name is only the level's opt-in to platformer physics,
+    // which is engine-owned (platformPhysics.ts); no library loads for it.
+    this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
     this.level = {
-      helperLibraries,
+      helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
-      // So the lab-owned behaviors' helperCode is prepended like pool blocks'.
+      // So the lab-owned blocks' helperCode is prepended like pool blocks'.
       sharedBlocks: [
         ...(levelProperties.sharedBlocks || []),
-        ...SPRITELAB2_EXTRA_SHARED_BLOCKS,
+        ...SPRITELAB2_HELPER_CODE,
       ],
       customHelperLibrary: levelProperties.customHelperLibrary,
     };
@@ -186,7 +279,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       spritelab: true,
     });
 
-    await this.loadHelperLibraries(helperLibraries);
+    await this.loadHelperLibraries(this.level.helperLibraries);
   }
 
   // Replicates StudioApp.loadLibrary_: source text stashed where
@@ -205,6 +298,11 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   setCode(code) {
     this.userCode = code || '';
+  }
+
+  sceneLooksLikePlatformer_() {
+    const code = this.userCode || '';
+    return PLATFORM_SCENE_MARKERS.some(marker => code.includes(marker));
   }
 
   /** Run the given compiled JS program from scratch (creates/recreates p5). */
@@ -275,6 +373,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     super.onP5Setup();
+    const p5 = this.p5Wrapper.p5;
+    const density = Math.ceil(
+      CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
+    );
+    if (p5 && p5._renderer && p5.pixelDensity() !== density) {
+      p5.pixelDensity(density);
+    }
     this.executeInFlight_ = false;
     if (this.rerunAfterExecute_) {
       this.rerunAfterExecute_ = false;
@@ -308,6 +413,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       )
     );
     p5.allSprites.removeSprites();
+    // removeSprites destroyed the edge sprites too; clear the handle so the
+    // next edgesCollide/edgesDisplace recreates them instead of colliding
+    // against dead sprites.
+    p5.edges = undefined;
     if (this.JSInterpreter) {
       this.JSInterpreter.deinitialize();
     }
@@ -372,6 +481,63 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.p5Wrapper.preloadSpriteImages(
       await trimAnimationListImages(getStore().getState().animationList)
     );
+  }
+
+  // Platformer physics for players (see platformPhysics.ts for the rules),
+  // run immediately before every paint — after p5's pre-phase velocity
+  // integration and after this frame's behaviors/events have moved
+  // sprites. Program-driven (non-player) sprites keep the stock resolver.
+  resolvePlatformPhysics_() {
+    if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
+      return;
+    }
+    const p5 = this.p5Wrapper.p5;
+    // Snapshot player positions before the stock pass below: the movement
+    // reconstruction must not see its shove.
+    const moved = this.library
+      .getSpriteArray({group: 'players'})
+      .map(sprite => ({
+        sprite,
+        x: sprite.position.x,
+        y: sprite.position.y,
+      }));
+    // Non-player sprites keep the stock resolver; running it pre-paint
+    // means patrollers and props draw already resolved.
+    this.library.commands.collide.call(
+      this.library,
+      'collide',
+      {group: ''},
+      {group: 'walls'}
+    );
+    resolvePlatformPhysics(
+      moved,
+      this.library.getSpriteArray({group: 'walls'}),
+      {
+        width: p5.width,
+        height: p5.height,
+      },
+      this.platformGravity_
+    );
+  }
+
+  // The resolution must run after this frame's behaviors/events but before
+  // the paint; the only seam with that timing is the paint call itself.
+  wrapDrawSpritesOnce_() {
+    const p5 = this.p5Wrapper.p5;
+    if (!p5 || p5.__slab2ResolvesBeforePaint) {
+      return;
+    }
+    p5.__slab2ResolvesBeforePaint = true;
+    const paint = p5.drawSprites.bind(p5);
+    p5.drawSprites = (...args) => {
+      this.resolvePlatformPhysics_();
+      return paint(...args);
+    };
+  }
+
+  onP5Draw() {
+    this.wrapDrawSpritesOnce_();
+    super.onP5Draw();
   }
 
   // --- Overrides that sever the global studioApp() singleton ---

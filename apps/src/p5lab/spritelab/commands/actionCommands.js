@@ -182,20 +182,56 @@ export const commands = {
     return touching;
   },
 
+  // Whether there is footing at the sprite's foot level, offsetX from its
+  // center (resting on the playspace floor always counts). A point probe,
+  // unlike isDirectlyAbove's full-width collider, sees gaps narrower than
+  // the sprite.
+  hasSupportAt(spriteArg, offsetX, targetArg) {
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
+    // Resting contact is an exact equality in classic Sprite Lab; a lab
+    // whose physics leaves sub-pixel float noise on landings sets a
+    // tolerance (see CoreLibrary contactEpsilon).
+    const epsilon = this.contactEpsilon || 0;
+    let supported = false;
+    sprites.forEach(sprite => {
+      const spriteCollider = createSpriteCollider(sprite);
+      if (spriteCollider.bottom >= APP_HEIGHT - epsilon) {
+        supported = true;
+        return;
+      }
+      const probeX = (spriteCollider.left + spriteCollider.right) / 2 + offsetX;
+      for (const target of targets) {
+        const targetCollider = createSpriteCollider(target);
+        if (
+          Math.abs(spriteCollider.bottom - targetCollider.top) <= epsilon &&
+          probeX >= targetCollider.left &&
+          probeX <= targetCollider.right
+        ) {
+          supported = true;
+          break;
+        }
+      }
+    });
+    return supported;
+  },
+
   isDirectlyAbove(spriteArg, targetArg) {
     let sprites = this.getSpriteArray(spriteArg);
     let targets = this.getSpriteArray(targetArg);
+    // Same contact tolerance as hasSupportAt.
+    const epsilon = this.contactEpsilon || 0;
     let touching = false;
     sprites.forEach(sprite => {
       const spriteCollider = createSpriteCollider(sprite);
-      if (spriteCollider.bottom >= APP_HEIGHT) {
+      if (spriteCollider.bottom >= APP_HEIGHT - epsilon) {
         touching = true;
       } else {
         for (const target of targets) {
           const targetCollider = createSpriteCollider(target);
 
           if (
-            spriteCollider.bottom === targetCollider.top &&
+            Math.abs(spriteCollider.bottom - targetCollider.top) <= epsilon &&
             spriteCollider.left <= targetCollider.right &&
             spriteCollider.right >= targetCollider.left
           ) {

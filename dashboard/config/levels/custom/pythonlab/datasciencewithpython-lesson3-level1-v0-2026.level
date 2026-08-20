@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T22:02:03.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Explore a Python Program\r\n\r\n### Do This:\r\n\r\n1. Run the program. Examine the code and its output.\r\n\r\n2. Ask AI Tutor to make the program use the age `8` from the `human_years` list.\r\n\r\n3. Examine AI Tutor’s change:\r\n\r\n   * What part of the code changed?\r\n   * How did the output change?\r\n\r\n4. Ask AI Tutor to add a new age to the `human_years` list and update the program to use it.\r\n\r\n5. Examine the change, then run the program again.\r\n\r\n   * How did AI Tutor add the new value?\r\n   * How does the program select that value?\r\n\r\n6. Ask AI Tutor to change the calculation so the selected age is multiplied by `5` instead of `7`.\r\n\r\n7. Examine the expression AI Tutor changed. Run the program and compare the new output with the previous output.",
+    "teacher_markdown": "This Explore level introduces the three main data types in this lesson: `int`, `str`, and `list`. Students use AI Tutor to make targeted modifications involving list indexes, list values, and expressions, then examine how each change affects the code and its output. They will also encounter concatenation and the `print()` function. The goal is for students to explore how these concepts work together, not to use them independently yet—those skills will be developed in later levels.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "pet_type = \"dog\"\nhuman_years = [5, 7, 3, 2, 8]\nindex = 3\n\npet_years = human_years[index] * 7\n\nprint(\"The \"+ pet_type + \" is \" + str(human_years[index]) + \" human years old.\")\nprint(\"The \"+ pet_type + \" is \" + str(pet_years) + \" pet years old.\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildPython": "buildPython\nGuarantee: Modify the existing Python program according to the learner’s request.\nOutput the updated runnable file in a python fence with the file name.\nNever use f-strings. Build messages using string concatenation and str()."
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWGIY/ZrAXtyOB9uL563fB2CeYUHsCowFfREC6Jt\n7I8mJPJwO2e3tZlmhfOVYqGnrsiJe4kD8WeBo2LVTk4o21rxZjTUQRjLk9ak\nwpBJQlFe0GO46YrkqBG/U5JjXneF3ep/jdBGesDOKuZoX/AjuaWwabSsFMyf\nWI18KLwbW97wGx5ntaVSJ4/Te1TBjnflMhijl/bSxeNq+8ToW3OBBfk3zPKh\njxZTTYtp4JqmtR7FIKDD9K8SIup4l9cx4NyXeZrZzFQZqyYh4h8Ih7OBRZGb\nUZtgMwYm9lUNioknN+cJLLkGxAbQLthF/RoUu7nUNYlTGRV2isWuOPkIRgG5\nJQD4Xig5r89et778/pS2ls1orZaL0Jp9ickw1NjdW7olQfxutGfjc2FgKaJg\nR8x9/HNosaBLVnQZyqNYHFySS+TMkjBpOe4XQxPpjXTHPK01vCRjt0B4G7GF\n/uQKRw7kA8fYxyFn8/+lHaCoTk1XFcjJPNs31ifmuMNXO3XicIOCDfesHRsJ\nlGF3OFIQDXDhfoUIdBCz+SYFjBiQMlryqphm0N5jXkF61Mr/XR1QbgK4SufS\nkqu4qvyL00XaX1Ii6N30vIQWKY/KOm8PhrAgKd0Egd1cdtGTJXkDaQ/EVJ3w\nsEnQzhBp0xFrNgF+LMa2aInHt6khWxswymN9mi7OOgtjQBG0vviC7ayVL84n\nMbnX6g==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28T22:02:03.669+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L1_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L2-L1_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-07-28 22:10:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-28 22:11:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-28 22:17:21 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:33:58 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:51:14 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 17:47:37 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

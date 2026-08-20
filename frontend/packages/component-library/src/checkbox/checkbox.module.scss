@@ -158,9 +158,9 @@
 
       &::before {
         font-size: 14px;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
       }
     }
   }
@@ -183,9 +183,9 @@
       margin-top: 1px;
       &::before {
         font-size: 12px;
-        width: 16px;
-        height: 16px;
-        line-height: 16px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
       }
     }
   }
@@ -209,9 +209,9 @@
 
       &::before {
         font-size: 10px;
-        width: 14px;
-        height: 14px;
-        line-height: 14px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
       }
     }
   }
@@ -235,9 +235,9 @@
 
       &::before {
         font-size: 10px;
-        width: 12px;
-        height: 12px;
-        line-height: 12px;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
       }
     }
   }
@@ -248,5 +248,46 @@
   .checkboxLabel-thin {
     @include typography.body-four;
     margin-bottom: 0;
+  }
+}
+
+// CodeAI (CADS) brand overrides — see themes/README.md ("Component-level
+// brand overrides"); tags/tags.module.scss is the reference example.
+// Only the checked/indeterminate fills diverge from what the token
+// bridge gives: CADS uses the dedicated mode-inverted selected tokens
+// (brand box + seafoam check in light, seafoam box + navy check in
+// dark) where the bridge maps the legacy teal onto the brand ramp, and
+// hover/pressed go to Figma's selected/strong, which the export carries
+// as --background-selected-strong. The box border always matches the
+// fill. Everything else — unselected hover/pressed (brand-light inner,
+// indigo pressed border), the focus ring, and the disabled grays —
+// resolves correctly through the bridge, and the legacy disabled rules
+// outrank these overrides, so disabled needs no re-assert.
+// CheckboxDropdown menus render this component for their items; the
+// dropdown menu's own brand block layers row-context glyph inversions
+// on top at higher specificity.
+// The hover/pressed override also covers the legacy hover/pressed
+// rules, which tie with the checked override below and would otherwise
+// lose to it on source order.
+[data-brand='codeai-next'] {
+  .label {
+    input[type='checkbox'] {
+      &:checked + i::before,
+      &:indeterminate + i::before {
+        color: var(--text-selected-primary);
+        background: var(--background-selected-primary);
+        border-color: var(--border-selected-primary);
+      }
+    }
+
+    &:hover input[type='checkbox'],
+    &:active input[type='checkbox'] {
+      &:checked + i::before,
+      &:indeterminate + i::before {
+        color: var(--text-selected-primary);
+        background: var(--background-selected-strong);
+        border-color: var(--border-selected-strong);
+      }
+    }
   }
 }

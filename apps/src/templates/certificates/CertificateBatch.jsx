@@ -1,4 +1,6 @@
-import {Typography} from '@mui/material';
+import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton, Typography} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
@@ -112,7 +114,6 @@ export default function CertificateBatch({
             />
           </span>
 
-          <br />
           <form
             action="/print_certificates/batch"
             method="post"
@@ -125,19 +126,27 @@ export default function CertificateBatch({
               name="studentNames"
               rows="8"
               placeholder="John Smith"
-              className={style.textarea}
+              className={classNames(style.textarea, 'form-control')}
               value={studentNames}
               onChange={onChange}
               aria-label={i18n.studentNames()}
             />
-            <br />
-            <button type="submit" className={style.submit} id="submit-button">
+            <MuiButton
+              type="submit"
+              id="submit-button"
+              className={style.submit}
+              variant="contained"
+              color="primary"
+            >
               {i18n.generateCertificates()}
-            </button>
-            <br />
+            </MuiButton>
             <hr />
-            {i18n.wantBlankCertificateTemplate()}{' '}
-            <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>
+            <Typography variant="body3">
+              {i18n.wantBlankCertificateTemplate()}{' '}
+              <Link href={imageUrl} size="s">
+                {i18n.printOneCertificateHere()}
+              </Link>
+            </Typography>
           </form>
         </div>
       </div>
@@ -154,17 +163,30 @@ export default function CertificateBatch({
               key={index}
             >
               <div className={style.contentWrapper}>
-                <p className={style.overline}>{item.grade}</p>
+                <Typography
+                  className={style.overline}
+                  variant="overline2"
+                  gutterBottom
+                >
+                  {item.grade}
+                </Typography>
                 <Typography variant="h3" gutterBottom>
                   {item.title}
                 </Typography>
                 <img src={item.image} alt="" />
-                <p>{item.description}</p>
+                <Typography variant="body3" gutterBottom>
+                  {item.description}
+                </Typography>
               </div>
               <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link}>
+                <MuiButton
+                  className={style.linkButton}
+                  variant="contained"
+                  color="primary"
+                  href={item.link}
+                >
                   {item.buttonText}
-                </a>
+                </MuiButton>
               </div>
             </div>
           ))}
@@ -175,18 +197,22 @@ export default function CertificateBatch({
           <Typography variant="h4" gutterBottom>
             {i18n.discoverMore()}
           </Typography>
-          <p>{i18n.discoverMoreCatalogText()}</p>
+          <Typography variant="body3" gutterBottom>
+            {i18n.discoverMoreCatalogText()}
+          </Typography>
           <div className={style.imageContainer}>
             {curriculumCatalogImages.map((item, index) => (
               <img key={index} src={item} alt="" />
             ))}
           </div>
-          <a
+          <MuiButton
             className={`${style.linkButton} ${style.catalogButton}`}
+            variant="contained"
+            color="primary"
             href={'/catalog'}
           >
             {i18n.viewCurriculumCatalog()}
-          </a>
+          </MuiButton>
         </div>
       </div>
       <div className={style.professionalLearning}>
@@ -207,12 +233,19 @@ export default function CertificateBatch({
                 <Typography variant="h3" gutterBottom>
                   {item.title}
                 </Typography>
-                <p>{item.description}</p>
+                <Typography variant="body3" gutterBottom>
+                  {item.description}
+                </Typography>
               </div>
               <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link}>
+                <MuiButton
+                  className={style.linkButton}
+                  variant="contained"
+                  color="primary"
+                  href={item.link}
+                >
                   {item.buttonText}
-                </a>
+                </MuiButton>
               </div>
             </div>
           ))}

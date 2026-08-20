@@ -26,7 +26,7 @@ class DelivererTest < Minitest::Test
   def test_deliverer_render
     template = @deliverer.load_template("dashboard")
     header, html, text = template.render
-    assert_equal "Code.org <noreply@code.org>", header["from"]
+    assert_equal "CodeAI <noreply@code.org>", header["from"]
     refute_nil html
     assert_nil text
   end

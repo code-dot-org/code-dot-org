@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-07-28T02:30:28.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You’re building a music streaming program that plays a user’s favorite songs.\r\n\r\n**Do This**\r\n\r\n1. Update the definition of `play_song` to print a song of your choice to play. For example, your program might print “Now playing: Dancing Queen”.\r\n2. Call your `play_song` function.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo “call” a function is to tell the computer to run it. To call a function in Python, use its name followed by parentheses. For example, to call a function named `hello`, you could write:\r\n\r\n```python\r\nhello()\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def play_song():\n    # TODO 1: Fill in the message with a song name\n    print(\"\")\n\n# TODO 2: Call your play_song function",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "Music Streaming",
+    "bubble_choice_description": "Build a music streaming program that plays a user's favorite songs.",
+    "thumbnail_url": "https://images.code.org/b9efd0b04b1749744614a430095a4cdd-music.png",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:30:33 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 02:34:43 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,3 +1,5 @@
+@use '../nodes/node-mixins';
+
 // The :global(.react-flow__*) selectors below target class names that
 // @xyflow/react owns; they can't import the reactFlowSelectors.ts constants.
 // reactFlowSelectorsTest.tsx renders a live flow to catch a rename, which
@@ -6,6 +8,17 @@
 // Pixels of clickable padding added around connection handles so users don't
 // have to land precisely on the small visible dot.
 $handle-grab-buffer: 10px;
+
+.workspace {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+  }
+}
 
 .canvasContainer {
   position: relative;
@@ -61,34 +74,20 @@ $handle-grab-buffer: 10px;
     cursor: grab;
   }
 
-  &.grabMode:active * {
+  // A held middle mouse button or spacebar pans without leaving the select
+  // tool, so the cursor shows the grab state even though .grabMode isn't the
+  // active tool.
+  &.grabMode:active *,
+  &.grabbing * {
     cursor: grabbing;
   }
 
-  // Focus outline for keyboard navigation, matching the component library pattern.
-  // Group nodes are excluded — React Flow provides their focus indicator.
-  // Line anchors are excluded too — they get a focus ring on the handle dot
-  // itself below, not a square around the node.
-  :global(
-      .react-flow__node:not(
-          .react-flow__node-group,
-          .react-flow__node-lineAnchor
-        ):focus-visible
-    ),
+  // The selection ring for an edge is drawn by EdgeSelectionOutlines, which
+  // rotates it onto the line. React Flow's own wrapper outline would box the
+  // endpoints instead, so suppress it.
+  :global(.react-flow__edge:focus),
   :global(.react-flow__edge:focus-visible) {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: 2px;
-    border-radius: 4px;
-  }
-
-  // Focus or selection outline for standalone line edges.
-  // :focus covers click/programmatic focus; :global(.selected) covers
-  // multi-selection where the edge has selected=true but no DOM focus.
-  :global(.react-flow__edge).lineEdge:focus,
-  :global(.react-flow__edge.selected).lineEdge {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: 2px;
-    border-radius: 4px;
+    outline: none;
   }
 
   // Show anchor dots when a lineAnchor node is part of a multi-selection.
@@ -204,6 +203,16 @@ $handle-grab-buffer: 10px;
   z-index: 5;
   border: 1px solid var(--borders-brand-teal-primary);
   background: color-mix(in srgb, var(--borders-brand-teal-primary) 10%, transparent);
+}
+
+// Selection ring for an edge, sized to its clickable band and rotated onto the
+// line. Lives in the viewport so it zooms and pans with the canvas, the same
+// way a node's ring does. Positioned by EdgeSelectionOutlines.
+.edgeSelectionOutline {
+  @include node-mixins.node-focus-ring;
+
+  position: absolute;
+  pointer-events: none;
 }
 
 // Visually hidden but announced by screen readers.

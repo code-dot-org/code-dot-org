@@ -158,6 +158,7 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
+  hideCollapsedTabBorder?: boolean;
   backpackProps?: BackpackProps;
   onImageFlagged?: (
     file: File,
@@ -192,6 +193,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
+  hideCollapsedTabBorder = false,
   backpackProps,
   onImageFlagged,
   hasInstructionsDrawer,
@@ -216,7 +218,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isFloatingSettingsOpen, setIsFloatingSettingsOpen] = useState(false);
-  const hasAutoCollapsedNoTabs = useRef(false);
+  const hasAutoCollapsed = useRef(false);
   const settingsButtonRef = useRef<HTMLDivElement | null>(null);
   const floatingPanelRef = useRef<HTMLDivElement | null>(null);
   const tabContentRefs = useRef<{[key in Tabs]?: HTMLDivElement | null}>({});
@@ -478,11 +480,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return Object.keys(availableTabs).length > 0;
   }, [availableTabs]);
 
-  const hasOnlyVersionHistoryTab = useMemo(() => {
-    return (
-      Object.keys(availableTabs).length === 1 &&
-      availableTabs[Tabs.VersionHistory] !== undefined
-    );
+  const hasAiTutorTab = useMemo(() => {
+    return availableTabs[Tabs.AiTutor] !== undefined;
   }, [availableTabs]);
 
   const floatingSettingsPanelStyles = usePanelPosition(
@@ -493,18 +492,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
 
   useEffect(() => {
-    // Auto-collapse on initial mount if on a standalone project and there are no available tabs.
-    // Also auto-collapse if the only available tab is version history.
-    // Only run this once to allow user to toggle the panel.
-    if (
-      !hasAutoCollapsedNoTabs.current &&
-      isProjectLevel &&
-      (!hasTabs || hasOnlyVersionHistoryTab)
-    ) {
+    // On a standalone project, auto-collapse the panel on initial mount unless
+    // it offers the AI Tutor tab, which is worth keeping open by default.
+    // Only run this once to allow the user to toggle the panel.
+    if (!hasAutoCollapsed.current && isProjectLevel && !hasAiTutorTab) {
       dispatch(setIsStandaloneCollapsed(true));
-      hasAutoCollapsedNoTabs.current = true;
+      hasAutoCollapsed.current = true;
     }
-  }, [isProjectLevel, hasTabs, dispatch, hasOnlyVersionHistoryTab]);
+  }, [isProjectLevel, hasAiTutorTab, dispatch]);
 
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
@@ -649,7 +644,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         <div
           className={classNames(
             styles.sidebar,
-            isStandaloneCollapsed && styles.collapsed
+            isStandaloneCollapsed && styles.collapsed,
+            hideCollapsedTabBorder && styles.hideCollapsedTabBorder
           )}
         >
           <div className={styles.topSection}>

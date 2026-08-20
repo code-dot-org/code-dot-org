@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
@@ -40,10 +41,14 @@ const MAX_CSS_WIDTH_PX = 900;
 
 // Transparency checkerboard: cell size in display px outside pixel mode, the
 // smallest legible cell in pixel mode (art-pixel cells are grouped up to it),
-// and the tint drawn over the white base.
+// and per-theme base/tint pairs (a white base reads best on a light panel, a
+// panel-colored base on a dark one — the image dialog uses the same pairs).
 const CHECKER_CELL_PX = 16;
 const MIN_CHECKER_CELL_PX = 4;
-const CHECKER_COLOR = 'rgb(128 128 128 / 16%)';
+const CHECKER_COLORS = {
+  light: {base: '#ffffff', tint: 'rgb(128 128 128 / 16%)'},
+  dark: {base: '#333a47', tint: 'rgb(128 128 128 / 22%)'},
+};
 
 // Dark navy ink.
 const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
@@ -80,9 +85,12 @@ const SHAPE_TOOLS: ReadonlySet<PixelTool> = new Set([
 // Brush-size swatch dot: rendered edge in px for brush size N.
 const brushDotPx = (size: number) => 3 + size * 1.6;
 
+// Keyboard painting: Shift+arrow moves the cursor this many art pixels.
+const KB_SHIFT_STEP = 10;
+
 export interface PixelEditorSaveMeta {
   pixelGridSize?: number;
-  // Recently used colors after this session, most recent first; the caller
+  // Recently used colors after this session, in first-seen order; the caller
   // persists them (e.g. in the image's project data) and seeds them back via
   // initialRecentColors next time.
   recentColors?: RGBA[];
@@ -99,6 +107,10 @@ interface PixelEditorModalProps {
   knownPixelGrid?: number;
   // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
   initialRecentColors?: RGBA[];
+  // Fires when the editor first renders content (the image loaded or
+  // failed). Until then the modal renders nothing; a caller swapping
+  // another dialog for this one can wait for it to avoid a scrim gap.
+  onReady?: () => void;
   onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
   onCancel: () => void;
 }
@@ -117,14 +129,36 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   imageUrl,
   knownPixelGrid,
   initialRecentColors,
+  onReady,
   onSave,
   onCancel,
 }) => {
+  const {theme} = useTheme();
+  const themeMode = theme === 'Dark' ? 'dark' : 'light';
+  // A ref so repaint (a stable callback) always draws the current theme's
+  // checkerboard.
+  const themeModeRef = useRef<'light' | 'dark'>(themeMode);
+  themeModeRef.current = themeMode;
   const [tool, setTool] = useState<PixelTool>('pen');
+  // The last non-eyedropper tool, so the eyedropper returns you to what you
+  // were using rather than always the pen. Tracked during render: whenever
+  // the active tool isn't the eyedropper, it's the one to come back to.
+  const lastNonEyedropperToolRef = useRef<PixelTool>('pen');
+  if (tool !== 'eyedropper') {
+    lastNonEyedropperToolRef.current = tool;
+  }
   const [brushSize, setBrushSize] = useState(BRUSH_SIZES[1]);
   const [color, setColor] = useState<RGBA>(DEFAULT_COLOR);
   const [loaded, setLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
+  // See the onReady prop; by ref so a changing identity can't re-fire it.
+  const onReadyRef = useRef(onReady);
+  onReadyRef.current = onReady;
+  useEffect(() => {
+    if (loaded || loadError) {
+      onReadyRef.current?.();
+    }
+  }, [loaded, loadError]);
   // Editing at the image's logical resolution (see knownPixelGrid).
   const [pixelMode, setPixelMode] = useState(false);
   // Mirror for the stable repaint callback (which runs on every stroke).
@@ -140,6 +174,42 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   const lastPointRef = useRef<{x: number; y: number} | null>(null);
   // Anchor corner/center of the shape being dragged (circle or rectangle).
   const shapeStartRef = useRef<{x: number; y: number} | null>(null);
+  // Last end point of the shape drag (may be off-canvas), so a release the
+  // browser reports without coordinates still commits the previewed shape.
+  const shapeEndRef = useRef<{x: number; y: number} | null>(null);
+
+  // Keyboard painting: once the canvas has keyboard focus, a cursor
+  // indicator appears; arrows move it, Space/Enter applies the active tool,
+  // and shape tools take two presses (anchor, then place). Escape peels back
+  // one layer per press — abort the shape, dismiss the cursor, and only then
+  // (bubbling to the dialog) close the editor. Pointer use dismisses it.
+  const [kbCursor, setKbCursor] = useState<{x: number; y: number} | null>(null);
+  // Where the cursor was when last dismissed, so reactivating returns there.
+  const lastKbCursorRef = useRef<{x: number; y: number} | null>(null);
+  // Anchor of the in-progress keyboard shape (two-press model).
+  const kbAnchorRef = useRef<{x: number; y: number} | null>(null);
+  // Pen/eraser hold-to-draw: while Space/Enter is held, this holds the last
+  // stamped point so arrow moves extend one continuous stroke (a single undo
+  // entry). null when not mid-stroke. Cleared on key release.
+  const kbStrokeRef = useRef<{x: number; y: number} | null>(null);
+  // Rendered CSS px per art pixel, for positioning the cursor overlay.
+  const [cssScale, setCssScale] = useState<{x: number; y: number} | null>(null);
+  // Screen-reader narration (polite live region). Moves are debounced so
+  // held arrow keys don't flood the queue; actions announce immediately.
+  const [announcement, setAnnouncement] = useState('');
+  const announceTimerRef = useRef<number>();
+  const announce = useCallback((message: string) => {
+    window.clearTimeout(announceTimerRef.current);
+    setAnnouncement(message);
+  }, []);
+  const announceMove = useCallback((p: {x: number; y: number}) => {
+    window.clearTimeout(announceTimerRef.current);
+    announceTimerRef.current = window.setTimeout(
+      () => setAnnouncement(`Cursor at column ${p.x + 1}, row ${p.y + 1}`),
+      500
+    );
+  }, []);
+  useEffect(() => () => window.clearTimeout(announceTimerRef.current), []);
 
   // Undo/redo: snapshots of the backing's pixels, one per completed
   // operation, in refs (they change on every stroke). historyVersion only
@@ -148,8 +218,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   const redoStackRef = useRef<Uint8ClampedArray[]>([]);
   const [historyVersion, setHistoryVersion] = useState(0);
 
-  // Recently used colors, most recent first (transparent excluded: it has a
-  // permanent swatch of its own in the picker). Handed back on save for the
+  // Recently used colors, in first-seen order (transparent excluded: it has
+  // a permanent swatch of its own in the picker). Handed back on save for the
   // caller to persist.
   const [recentColors, setRecentColors] = useState<RGBA[]>(
     () => initialRecentColors ?? []
@@ -158,12 +228,15 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     if (used[3] === 0) {
       return;
     }
-    setRecentColors(prev =>
-      [used, ...prev.filter(c => !c.every((v, i) => v === used[i]))].slice(
-        0,
-        RECENT_COLORS_MAX
-      )
-    );
+    setRecentColors(prev => {
+      // A color already in the row keeps its slot — reusing familiar colors
+      // shouldn't shuffle the palette. New colors append; once full, the
+      // oldest (front) drops.
+      if (prev.some(c => c.every((v, i) => v === used[i]))) {
+        return prev;
+      }
+      return [...prev, used].slice(-RECENT_COLORS_MAX);
+    });
   }, []);
 
   // Snapshot the backing before a mutating operation. Memory-bounded: total
@@ -234,13 +307,14 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       return;
     }
     ctx.imageSmoothingEnabled = false;
-    ctx.fillStyle = '#ffffff';
+    const checker = CHECKER_COLORS[themeModeRef.current];
+    ctx.fillStyle = checker.base;
     ctx.fillRect(0, 0, display.width, display.height);
     const scale = scaleRef.current;
     const cell = pixelModeRef.current
       ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
       : CHECKER_CELL_PX;
-    ctx.fillStyle = CHECKER_COLOR;
+    ctx.fillStyle = checker.tint;
     for (let y = 0; y * cell < display.height; y++) {
       for (let x = y % 2; x * cell < display.width; x += 2) {
         ctx.fillRect(x * cell, y * cell, cell, cell);
@@ -251,6 +325,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
     }
   }, []);
+
+  // The checkerboard is baked into the canvas; redraw it if the page theme
+  // flips while the editor is open.
+  useEffect(() => {
+    repaint();
+  }, [repaint, themeMode]);
 
   // Abandon any in-progress stroke or shape drag. Losing the window
   // mid-press swallows the pointerup (and pointercancel isn't reliably
@@ -263,10 +343,29 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     drawingRef.current = false;
     lastPointRef.current = null;
     shapeStartRef.current = null;
+    shapeEndRef.current = null;
     const preview = previewRef.current;
     preview?.getContext('2d')?.clearRect(0, 0, preview.width, preview.height);
     repaint();
   }, [repaint]);
+
+  // Abort an in-progress keyboard shape; true when there was one.
+  const abortKeyboardShape = useCallback(() => {
+    if (!kbAnchorRef.current) {
+      return false;
+    }
+    kbAnchorRef.current = null;
+    const preview = previewRef.current;
+    preview?.getContext('2d')?.clearRect(0, 0, preview.width, preview.height);
+    repaint();
+    return true;
+  }, [repaint]);
+
+  const dismissKeyboardCursor = useCallback(() => {
+    abortKeyboardShape();
+    kbStrokeRef.current = null;
+    setKbCursor(null);
+  }, [abortKeyboardShape]);
 
   useEffect(() => {
     window.addEventListener('blur', cancelInteraction);
@@ -434,7 +533,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       ) {
         return;
       }
-      const match = TOOLS.find(t => t.shortcut === e.key.toLowerCase());
+      // Shape solids share their outline's letter with Shift held, so the
+      // shift state selects between the pair.
+      const match = TOOLS.find(
+        t =>
+          t.shortcut === e.key.toLowerCase() && !!t.requiresShift === e.shiftKey
+      );
       if (match) {
         setTool(match.id);
         return;
@@ -478,6 +582,10 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       }
       display.style.width = `${Math.round(cssW)}px`;
       display.style.height = `${Math.round(cssH)}px`;
+      setCssScale({
+        x: Math.round(cssW) / backing.width,
+        y: Math.round(cssH) / backing.height,
+      });
       repaint();
     }
   }, [loaded, repaint]);
@@ -500,6 +608,44 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       return null;
     }
     return {x, y};
+  }, []);
+
+  // Like toPixel but clamps to the image bounds instead of returning null
+  // off-canvas. Shape drags use this so a pointer past the edge still drives
+  // the shape in real time (clipped to the edge) — otherwise you can't make a
+  // shape whose far corner needs the pointer outside the paint area.
+  // Like toPixel but never returns null: off-canvas maps to coordinates
+  // outside [0,w)x[0,h) rather than being rejected. Shape drags use this so
+  // the shape reflects the pointer's TRUE position past the edge (a circle
+  // keeps growing, a rectangle's far corner keeps moving); the drawing
+  // primitives clip writes to the raster, so only the visible part lands.
+  const toPixelUnbounded = useCallback(
+    (e: React.PointerEvent<HTMLCanvasElement>) => {
+      const display = displayRef.current;
+      const backing = backingRef.current;
+      if (!display || !backing) {
+        return null;
+      }
+      const rect = display.getBoundingClientRect();
+      return {
+        x: Math.floor(((e.clientX - rect.left) / rect.width) * backing.width),
+        y: Math.floor(((e.clientY - rect.top) / rect.height) * backing.height),
+      };
+    },
+    []
+  );
+
+  // Clamp a (possibly off-canvas) point into the image, for the keyboard
+  // cursor's resume position — which must stay on the canvas.
+  const clampToImage = useCallback((p: {x: number; y: number}) => {
+    const backing = backingRef.current;
+    if (!backing) {
+      return p;
+    }
+    return {
+      x: Math.min(backing.width - 1, Math.max(0, p.x)),
+      y: Math.min(backing.height - 1, Math.max(0, p.y)),
+    };
   }, []);
 
   // Run an operation against the backing canvas's pixels, then repaint.
@@ -572,6 +718,11 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       if (!p || !backing) {
         return;
       }
+      // Pointer use takes over from the keyboard cursor — but remember the
+      // pixel, so switching back to the keyboard resumes from where the
+      // pointer last acted rather than the image center.
+      dismissKeyboardCursor();
+      lastKbCursorRef.current = p;
       e.currentTarget.setPointerCapture(e.pointerId);
       drawingRef.current = true;
       if (tool === 'eyedropper') {
@@ -593,6 +744,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         );
       } else {
         shapeStartRef.current = p;
+        shapeEndRef.current = p;
       }
     },
     [
@@ -604,12 +756,18 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       pushUndo,
       recordColorUse,
       pickColorAt,
+      dismissKeyboardCursor,
     ]
   );
 
   const handlePointerMove = useCallback(
     (e: React.PointerEvent<HTMLCanvasElement>) => {
       if (!drawingRef.current) {
+        // A hover (not a drag) means the mouse is back in use: drop the
+        // keyboard cursor so its crosshair and the OS pointer don't coexist.
+        if (kbCursor) {
+          dismissKeyboardCursor();
+        }
         return;
       }
       if ((e.buttons & 1) === 0) {
@@ -618,12 +776,42 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         cancelInteraction();
         return;
       }
-      const p = toPixel(e);
       const backing = backingRef.current;
       const preview = previewRef.current;
-      if (!p || !backing) {
+      if (!backing) {
         return;
       }
+      // Shapes track the pointer's true position even past the edge, so a
+      // drag whose far corner is outside the paint area keeps updating the
+      // shape live (only the on-canvas part draws).
+      if (SHAPE_TOOLS.has(tool) && shapeStartRef.current && preview) {
+        const end = toPixelUnbounded(e);
+        if (!end) {
+          return;
+        }
+        const start = shapeStartRef.current;
+        shapeEndRef.current = end;
+        lastKbCursorRef.current = clampToImage(end);
+        preview
+          .getContext('2d')
+          ?.clearRect(0, 0, preview.width, preview.height);
+        withRaster(preview, raster =>
+          drawShape(
+            raster,
+            start,
+            end,
+            brushSize,
+            color[3] === 0 ? PREVIEW_STANDIN : color
+          )
+        );
+        return;
+      }
+      // Freehand tools only act on a real in-bounds pixel.
+      const p = toPixel(e);
+      if (!p) {
+        return;
+      }
+      lastKbCursorRef.current = p;
       if (tool === 'eyedropper') {
         pickColorAt(p);
       } else if (tool === 'pen' || tool === 'eraser') {
@@ -640,31 +828,21 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             tool === 'pen' ? color : null
           )
         );
-      } else if (SHAPE_TOOLS.has(tool) && shapeStartRef.current && preview) {
-        const start = shapeStartRef.current;
-        preview
-          .getContext('2d')
-          ?.clearRect(0, 0, preview.width, preview.height);
-        withRaster(preview, raster =>
-          drawShape(
-            raster,
-            start,
-            p,
-            brushSize,
-            color[3] === 0 ? PREVIEW_STANDIN : color
-          )
-        );
       }
     },
     [
       tool,
       brushSize,
       color,
+      kbCursor,
       toPixel,
+      toPixelUnbounded,
+      clampToImage,
       withRaster,
       drawShape,
       pickColorAt,
       cancelInteraction,
+      dismissKeyboardCursor,
     ]
   );
 
@@ -677,9 +855,9 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       lastPointRef.current = null;
       if (tool === 'eyedropper') {
         // The pick is final on release (a drag samples continuously until
-        // then); hand the pen back so the picked color is immediately
-        // usable.
-        setTool('pen');
+        // then); return to whatever tool was active before, so picking a
+        // color mid-task drops you back where you were.
+        setTool(lastNonEyedropperToolRef.current);
         return;
       }
       const backing = backingRef.current;
@@ -690,13 +868,17 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         backing &&
         preview
       ) {
-        const p = toPixel(e);
+        // Commit at the true release position (off-canvas included) — matches
+        // the live preview when the pointer ended past the edge.
+        const p = toPixelUnbounded(e) ?? shapeEndRef.current;
         const start = shapeStartRef.current;
         shapeStartRef.current = null;
+        shapeEndRef.current = null;
         preview
           .getContext('2d')
           ?.clearRect(0, 0, preview.width, preview.height);
         if (p) {
+          lastKbCursorRef.current = clampToImage(p);
           pushUndo();
           recordColorUse(color);
           withRaster(backing, raster =>
@@ -711,7 +893,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       tool,
       brushSize,
       color,
-      toPixel,
+      toPixelUnbounded,
+      clampToImage,
       withRaster,
       repaint,
       drawShape,
@@ -719,6 +902,298 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       recordColorUse,
     ]
   );
+
+  // --- Keyboard painting handlers ---
+
+  // Show the cursor where it was last dismissed, or at the image center.
+  const activateKeyboardCursor = useCallback(() => {
+    const backing = backingRef.current;
+    if (!backing) {
+      return null;
+    }
+    const p = lastKbCursorRef.current ?? {
+      x: Math.floor(backing.width / 2),
+      y: Math.floor(backing.height / 2),
+    };
+    lastKbCursorRef.current = p;
+    setKbCursor(p);
+    return p;
+  }, []);
+
+  const redrawKeyboardShapePreview = useCallback(
+    (p: {x: number; y: number}) => {
+      const anchor = kbAnchorRef.current;
+      const preview = previewRef.current;
+      if (!anchor || !preview) {
+        return;
+      }
+      preview.getContext('2d')?.clearRect(0, 0, preview.width, preview.height);
+      withRaster(preview, raster =>
+        drawShape(
+          raster,
+          anchor,
+          p,
+          brushSize,
+          color[3] === 0 ? PREVIEW_STANDIN : color
+        )
+      );
+    },
+    [withRaster, drawShape, brushSize, color]
+  );
+
+  const applyToolAtKeyboardCursor = useCallback(
+    (p: {x: number; y: number}) => {
+      const backing = backingRef.current;
+      if (!backing) {
+        return;
+      }
+      const at = `at column ${p.x + 1}, row ${p.y + 1}`;
+      if (SHAPE_TOOLS.has(tool)) {
+        if (!kbAnchorRef.current) {
+          kbAnchorRef.current = p;
+          redrawKeyboardShapePreview(p);
+          announce(
+            `Shape started ${at}. Move and press Space to place it, or Escape to cancel.`
+          );
+        } else {
+          const start = kbAnchorRef.current;
+          kbAnchorRef.current = null;
+          const preview = previewRef.current;
+          preview
+            ?.getContext('2d')
+            ?.clearRect(0, 0, preview.width, preview.height);
+          pushUndo();
+          recordColorUse(color);
+          withRaster(backing, raster =>
+            drawShape(raster, start, p, brushSize, color)
+          );
+          announce(`Shape placed ${at}`);
+        }
+      } else if (tool === 'eyedropper') {
+        pickColorAt(p);
+        // Mirror the pointer flow: return to the tool used before the pick.
+        setTool(lastNonEyedropperToolRef.current);
+        announce(`Color picked ${at}`);
+      } else if (tool === 'bucket') {
+        pushUndo();
+        recordColorUse(color);
+        withRaster(backing, raster =>
+          floodFill(raster, p.x, p.y, color, FILL_TOLERANCE)
+        );
+        announce(`Filled ${at}`);
+      }
+      // Pen and eraser aren't here: they use the hold-to-draw stroke path
+      // (startKeyboardStroke / extendKeyboardStroke) instead of a tap.
+    },
+    [
+      tool,
+      brushSize,
+      color,
+      withRaster,
+      drawShape,
+      pushUndo,
+      recordColorUse,
+      pickColorAt,
+      redrawKeyboardShapePreview,
+      announce,
+    ]
+  );
+
+  // Pen/eraser hold-to-draw. The first press stamps a dot and opens a stroke
+  // (one undo entry); arrow moves while held extend it as a continuous line;
+  // release ends it. This mirrors a pointer drag.
+  const startKeyboardStroke = useCallback(
+    (p: {x: number; y: number}) => {
+      const backing = backingRef.current;
+      if (!backing) {
+        return;
+      }
+      pushUndo();
+      if (tool === 'pen') {
+        recordColorUse(color);
+      }
+      kbStrokeRef.current = p;
+      withRaster(backing, raster =>
+        stamp(raster, p.x, p.y, brushSize, tool === 'pen' ? color : null)
+      );
+      announce(
+        `${tool === 'pen' ? 'Painting' : 'Erasing'} at column ${p.x + 1}, row ${
+          p.y + 1
+        }. Hold and move to draw.`
+      );
+    },
+    [tool, color, brushSize, withRaster, pushUndo, recordColorUse, announce]
+  );
+
+  // Extend an open stroke to a new point; true when a stroke was open.
+  const extendKeyboardStroke = useCallback(
+    (to: {x: number; y: number}) => {
+      const from = kbStrokeRef.current;
+      const backing = backingRef.current;
+      if (!from || !backing) {
+        return false;
+      }
+      withRaster(backing, raster =>
+        stampLine(
+          raster,
+          from.x,
+          from.y,
+          to.x,
+          to.y,
+          brushSize,
+          tool === 'pen' ? color : null
+        )
+      );
+      kbStrokeRef.current = to;
+      return true;
+    },
+    [tool, color, brushSize, withRaster]
+  );
+
+  const handleCanvasKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLCanvasElement>) => {
+      const backing = backingRef.current;
+      if (!backing) {
+        return;
+      }
+      const ARROWS: {[key: string]: [number, number]} = {
+        ArrowLeft: [-1, 0],
+        ArrowRight: [1, 0],
+        ArrowUp: [0, -1],
+        ArrowDown: [0, 1],
+      };
+      const delta = ARROWS[e.key];
+      if (delta) {
+        e.preventDefault();
+        const from = kbCursor ?? activateKeyboardCursor();
+        if (!from) {
+          return;
+        }
+        const step = e.shiftKey ? KB_SHIFT_STEP : 1;
+        const next = {
+          x: Math.min(backing.width - 1, Math.max(0, from.x + delta[0] * step)),
+          y: Math.min(
+            backing.height - 1,
+            Math.max(0, from.y + delta[1] * step)
+          ),
+        };
+        lastKbCursorRef.current = next;
+        setKbCursor(next);
+        // While a pen/eraser stroke is open (Space held), the move draws a
+        // line segment; otherwise it may update a shape's preview.
+        if (!extendKeyboardStroke(next)) {
+          redrawKeyboardShapePreview(next);
+        }
+        announceMove(next);
+        return;
+      }
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        // Ignore auto-repeat: the first press starts the action; repeats
+        // while held must not re-fire it (a flood of one-per-stamp undo
+        // entries, or a shape's anchor/commit toggling into nonsense).
+        // Held-arrow movement still repeats, which is what draws the line.
+        if (e.repeat) {
+          return;
+        }
+        if (!kbCursor) {
+          // First press only reveals the cursor; painting starts on the
+          // next one, so entering the canvas can't leave a stray mark.
+          const p = activateKeyboardCursor();
+          if (p) {
+            announce(`Cursor at column ${p.x + 1}, row ${p.y + 1}`);
+          }
+          return;
+        }
+        if (tool === 'pen' || tool === 'eraser') {
+          startKeyboardStroke(kbCursor);
+        } else {
+          applyToolAtKeyboardCursor(kbCursor);
+        }
+        return;
+      }
+      if (e.key === 'Delete' || e.key === 'Backspace') {
+        e.preventDefault();
+        if (e.repeat || !kbCursor || kbAnchorRef.current) {
+          return;
+        }
+        pushUndo();
+        withRaster(backing, raster =>
+          stamp(raster, kbCursor.x, kbCursor.y, brushSize, null)
+        );
+        announce(`Erased at column ${kbCursor.x + 1}, row ${kbCursor.y + 1}`);
+        return;
+      }
+      if (e.key === 'Escape') {
+        if (abortKeyboardShape()) {
+          e.preventDefault();
+          e.stopPropagation();
+          announce('Shape canceled');
+          return;
+        }
+        if (kbCursor) {
+          e.preventDefault();
+          e.stopPropagation();
+          setKbCursor(null);
+          announce('Cursor hidden');
+        }
+        // Without a cursor, Escape bubbles on to the dialog and closes it.
+      }
+    },
+    [
+      kbCursor,
+      tool,
+      brushSize,
+      activateKeyboardCursor,
+      applyToolAtKeyboardCursor,
+      startKeyboardStroke,
+      extendKeyboardStroke,
+      redrawKeyboardShapePreview,
+      abortKeyboardShape,
+      withRaster,
+      pushUndo,
+      announce,
+      announceMove,
+    ]
+  );
+
+  // Releasing Space/Enter ends a pen/eraser stroke (the next press starts a
+  // fresh one, as its own undo entry).
+  const handleCanvasKeyUp = useCallback(
+    (e: React.KeyboardEvent<HTMLCanvasElement>) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        kbStrokeRef.current = null;
+      }
+    },
+    []
+  );
+
+  // Keyboard-driven focus (tabbing in) shows the cursor; a click also
+  // focuses, but pointer users shouldn't see it — :focus-visible is the
+  // browser's own modality heuristic for exactly this split.
+  const handleCanvasFocus = useCallback(
+    (e: React.FocusEvent<HTMLCanvasElement>) => {
+      if (e.target.matches(':focus-visible')) {
+        const p = activateKeyboardCursor();
+        if (p) {
+          announce(`Cursor at column ${p.x + 1}, row ${p.y + 1}`);
+        }
+      }
+    },
+    [activateKeyboardCursor, announce]
+  );
+
+  // A tool switch mid-shape would commit as the NEW shape; abort instead.
+  useEffect(() => {
+    abortKeyboardShape();
+  }, [tool, abortKeyboardShape]);
+
+  // Losing the window mid-interaction dismisses the cursor, like the
+  // pointer path's cancelInteraction.
+  useEffect(() => {
+    window.addEventListener('blur', dismissKeyboardCursor);
+    return () => window.removeEventListener('blur', dismissKeyboardCursor);
+  }, [dismissKeyboardCursor]);
 
   const handleSave = useCallback(() => {
     const backing = backingRef.current;
@@ -769,11 +1244,11 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   return (
     // display: contents host, so the editor's panel styles win over
     // CustomDialog's via parent-selector specificity (never load order).
-    <div className={moduleStyles.dialogHost}>
+    <div className={moduleStyles.dialogHost} data-theme={themeMode}>
       <CustomDialog
         aria-label={title}
         onClose={onCancel}
-        mode="dark"
+        mode={themeMode}
         className={moduleStyles.modal}
       >
         <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
@@ -888,15 +1363,94 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
                 This image couldn't be loaded for editing.
               </div>
             ) : (
-              <canvas
-                ref={displayRef}
-                className={moduleStyles.displayCanvas}
-                onPointerDown={handlePointerDown}
-                onPointerMove={handlePointerMove}
-                onPointerUp={handlePointerUp}
-                onPointerCancel={handlePointerUp}
-              />
+              <div className={moduleStyles.canvasWrap}>
+                {/* role="application" so screen readers hand the arrow keys
+                    through to the canvas instead of their virtual cursor —
+                    the APG pattern for key-driven drawing surfaces. The rule
+                    can't know canvas semantics. */}
+                {/* eslint-disable jsx-a11y/no-interactive-element-to-noninteractive-role */}
+                <canvas
+                  ref={displayRef}
+                  className={moduleStyles.displayCanvas}
+                  // Hide the OS pointer while the keyboard cursor is shown, so
+                  // its crosshair doesn't sit next to the drawn one; moving
+                  // the mouse dismisses the keyboard cursor and brings it back.
+                  style={kbCursor ? {cursor: 'none'} : undefined}
+                  tabIndex={0}
+                  role="application"
+                  aria-label="Drawing canvas"
+                  aria-describedby="pixel-canvas-keyboard-help"
+                  onPointerDown={handlePointerDown}
+                  onPointerMove={handlePointerMove}
+                  onPointerUp={handlePointerUp}
+                  onPointerCancel={handlePointerUp}
+                  onKeyDown={handleCanvasKeyDown}
+                  onKeyUp={handleCanvasKeyUp}
+                  onFocus={handleCanvasFocus}
+                  onBlur={dismissKeyboardCursor}
+                />
+                {/* eslint-enable jsx-a11y/no-interactive-element-to-noninteractive-role */}
+                {kbCursor &&
+                  cssScale &&
+                  (pixelMode ? (
+                    // The exact brush footprint (stamp anchors the size x
+                    // size square at x - floor((size - 1) / 2)).
+                    <div
+                      className={moduleStyles.kbCursorRect}
+                      style={{
+                        left:
+                          (kbCursor.x - Math.floor((brushSize - 1) / 2)) *
+                          cssScale.x,
+                        top:
+                          (kbCursor.y - Math.floor((brushSize - 1) / 2)) *
+                          cssScale.y,
+                        width: brushSize * cssScale.x,
+                        height: brushSize * cssScale.y,
+                      }}
+                    />
+                  ) : (
+                    // Crosshair with an open center. Arm thickness matches the
+                    // brush's rendered footprint (what a stamp would paint);
+                    // the gap leaves that footprint open in the middle.
+                    <div
+                      className={moduleStyles.kbCursorCross}
+                      style={
+                        {
+                          left: (kbCursor.x + 0.5) * cssScale.x,
+                          top: (kbCursor.y + 0.5) * cssScale.y,
+                          '--stroke': `${Math.max(
+                            1,
+                            brushSize * cssScale.x
+                          )}px`,
+                          '--gap': `${Math.max(
+                            4,
+                            (brushSize * cssScale.x) / 2 + 2
+                          )}px`,
+                        } as React.CSSProperties
+                      }
+                    >
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                  ))}
+              </div>
             )}
+            <span
+              id="pixel-canvas-keyboard-help"
+              className={moduleStyles.srOnly}
+            >
+              Use the arrow keys to move the paint cursor; hold Shift to move
+              ten pixels at a time. Press Space or Enter to use the selected
+              tool at the cursor. With the pen or eraser, hold Space and move to
+              draw a continuous line. With the circle and rectangle tools, press
+              once to start the shape and again to place it. Delete erases.
+              Escape hides the cursor.
+            </span>
+            <div aria-live="polite" className={moduleStyles.srOnly}>
+              {announcement}
+            </div>
           </div>
         </div>
         <div className={moduleStyles.footer}>

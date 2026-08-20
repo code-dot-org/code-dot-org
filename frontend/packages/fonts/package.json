@@ -56,6 +56,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "devDependencies": {
+    "@fontsource-variable/geist": "^5.3.0",
     "@fontsource-variable/noto-sans": "^5.1.1",
     "@fontsource-variable/noto-sans-arabic": "^5.1.1",
     "@fontsource-variable/noto-sans-armenian": "^5.1.1",
@@ -74,7 +75,9 @@
     "@fontsource-variable/noto-sans-telugu": "^5.1.1",
     "@fontsource-variable/noto-sans-thaana": "^5.1.1",
     "@fontsource-variable/noto-sans-thai": "^5.1.1",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
     "@fontsource/barlow-semi-condensed": "^5.1.1",
+    "@fontsource/geist": "^5.3.0",
     "@fontsource/noto-sans-jp": "^5.1.1",
     "@fontsource/noto-sans-kr": "^5.1.1",
     "@fontsource/noto-sans-math": "^5.1.1",
@@ -82,9 +85,10 @@
     "@fontsource/noto-sans-sc": "^5.1.1",
     "@fontsource/noto-sans-tc": "^5.1.1",
     "@fontsource/roboto-mono": "^5.2.6",
+    "@fontsource/space-grotesk": "^5.3.0",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "sass": "^1.85.0",
+    "sass": "catalog:",
     "stylelint": "catalog:",
     "tsup": "^8.3.6"
   },

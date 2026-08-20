@@ -338,7 +338,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonTutorPath: lesson_tutor_available? ? "#{get_uncached_show_path}/tutor" : nil,
+        lessonTutorPath: lesson_tutor_path,
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
@@ -423,6 +423,11 @@ class Lesson < ApplicationRecord
   # (assessments/surveys are excluded) that belong to an AIF/AID student course.
   def lesson_tutor_available?
     has_lesson_plan && !!script&.lesson_tutor_available?
+  end
+
+  # Path to the lesson's tutor deep dive space, or nil if it is unavailable.
+  def lesson_tutor_path
+    lesson_tutor_available? ? "#{get_uncached_show_path}/tutor" : nil
   end
 
   def summarize_for_calendar(unit_group_unit: nil)
@@ -516,6 +521,7 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_edit),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_edit),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_edit),
+      tutorVideos: JSONVideo.joins(:objectives).where(objectives: {lesson_id: id}).distinct.map {|v| v.summarize_for_lesson_edit(self)},
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
@@ -809,7 +815,16 @@ class Lesson < ApplicationRecord
   end
 
   def next_level_for_lesson_extras(user)
-    level_to_follow = script_levels.last.next_level
+    last_script_level = script_levels.last
+    level_to_follow =
+      if last_script_level
+        last_script_level.next_level
+      else
+        # Published units contain lessons that have a lesson plan but no levels.
+        # Such a lesson has nothing in the unit's flat script level list to walk
+        # forward from, so start from the next lesson that does have levels.
+        first_script_level_of_next_lesson_with_levels
+      end
     level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
     level_to_follow
   end
@@ -1173,5 +1188,20 @@ class Lesson < ApplicationRecord
       position: activity['position'],
       key: SecureRandom.uuid
     )
+  end
+
+  # The first script level of the earliest lesson after this one that has any,
+  # or nil if no later lesson in the unit has levels. Used by
+  # next_level_for_lesson_extras for lessons that have no levels of their own.
+  private def first_script_level_of_next_lesson_with_levels
+    lessons = script.lessons
+    index = lessons.find_index {|lesson| lesson.id == id}
+    return nil unless index
+
+    lessons.drop(index + 1).each do |lesson|
+      script_level = lesson.script_levels.first
+      return script_level if script_level
+    end
+    nil
   end
 end

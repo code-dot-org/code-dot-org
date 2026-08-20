@@ -1,18 +1,27 @@
-import {NodeResizer, type NodeProps} from '@xyflow/react';
+import {type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useMemo} from 'react';
 
-import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {
+  DEFAULT_ROTATION,
+  ELEMENT_BORDER_PX,
+  MIN_NODE_WIDTH,
+  MIN_TEXT_NODE_HEIGHT,
+} from '../constants';
+import {
+  fontFamilyCss,
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
+  DEFAULT_TEXT_BORDER_COLOR,
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
 import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+import RotatedNodeResizer from './RotatedNodeResizer';
 
 import styles from './text-node.module.scss';
 
@@ -42,15 +51,24 @@ function TextNode({
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.fontFamily = fontFamilyCss(data.fontFamily);
     style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
-  }, [data.fontColor, data.fontSize, data.textAlign]);
+  }, [data.fontColor, data.fontSize, data.fontFamily, data.textAlign]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
-  const rotatableStyle: React.CSSProperties = useMemo(
-    () => ({transform: `rotate(${rotation}deg)`}),
-    [rotation]
-  );
+  const strokeColor = data.strokeColor ?? DEFAULT_TEXT_BORDER_COLOR;
+  const rotatableStyle: React.CSSProperties = useMemo(() => {
+    const style: React.CSSProperties = {transform: `rotate(${rotation}deg)`};
+    // Only a chosen color gets inline border styles; when clear, the
+    // stylesheet's transparent border (and its hover highlight) stays active.
+    if (strokeColor !== 'transparent') {
+      style.borderColor = strokeColor;
+      style.borderWidth = ELEMENT_BORDER_PX;
+    }
+    return style;
+  }, [rotation, strokeColor]);
+  useRotatedHandleInternals(rotation);
 
   return (
     <div
@@ -59,12 +77,6 @@ function TextNode({
       onDoubleClick={startEditing}
       {...hoverHandlers}
     >
-      <NodeResizer
-        isVisible={selected && !data.locked}
-        minWidth={MIN_NODE_WIDTH}
-        minHeight={MIN_NODE_HEIGHT}
-      />
-
       <div className={styles.rotatable} style={rotatableStyle}>
         <div
           ref={editableRef}
@@ -86,9 +98,19 @@ function TextNode({
         >
           {text}
         </div>
-      </div>
 
-      <ConnectionHandles visible={showHandles} isConnectable={isConnectable} />
+        <RotatedNodeResizer
+          isVisible={selected && !data.locked}
+          rotation={rotation}
+          minWidth={MIN_NODE_WIDTH}
+          minHeight={MIN_TEXT_NODE_HEIGHT}
+        />
+
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
+        />
+      </div>
     </div>
   );
 }

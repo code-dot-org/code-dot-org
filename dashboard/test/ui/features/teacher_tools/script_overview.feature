@@ -52,10 +52,13 @@ Feature: Unit overview page
     # verify name format in detail view
     And element "span:contains(Lesson 2: Maze)" is visible
 
-    And I am on "http://studio.code.org/courses/mc/units/1"
-    And I wait until element "td:contains(Minecraft)" is visible
-    # verify script name overrides lesson name when there is only one lesson
-    And element "td:contains(1. Minecraft Hour of Code)" is visible
+    And I am on "http://studio.code.org/courses/ui-test-maze/units/1"
+    And I wait until element "td:contains(Maze Puzzles)" is visible
+    # verify a unit whose only lesson is lesson 1 still numbers that lesson in
+    # summary view. This is the lesson's own name, not Lesson#localized_title's
+    # "one lesson, so use the unit name" override: the unit overview never
+    # renders localized_title.
+    And element "td:contains(1. Maze Puzzles)" is visible
 
   Scenario: Unit overview end-of-lesson
     Given I create a student named "Jean"

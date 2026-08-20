@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
+import ShareLogo from '@cdo/apps/code-studio/components/shareLogo/ShareLogo';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -38,6 +39,16 @@ function initPage() {
   // If viewing the unit overview components on the level page it is in
   // the mini view
   getStore().dispatch(setIsMiniView(true));
+
+  // The share-page logo mount node is present only on share views
+  // (gated server-side by view_options[:code_studio_logo]).
+  const mainLogoMountPoint = document.getElementById('main-logo');
+  if (mainLogoMountPoint) {
+    createReactRoot(
+      <ShareLogo logoUrl={mainLogoMountPoint.dataset.logoUrl} />,
+      mainLogoMountPoint
+    );
+  }
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
   if (redirectDialogMountPoint && config.redirect_script_url) {
