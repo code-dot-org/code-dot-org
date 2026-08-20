@@ -29,6 +29,7 @@ import {motionRule} from './motion';
 import {mouseRule} from './mouse';
 import {shootsRule} from './shoots';
 import {solidRule} from './solid';
+import {steeringRule} from './steering';
 import {wrapRule} from './wrap';
 import {writingRule} from './writing';
 
@@ -112,6 +113,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Lets actors be hurt and run out. One ability says what can be damaged and the other says what damages it, so a spike, a bullet and a patrolling enemy are dangerous without knowing who to. Contact damage is spaced by a mercy time, and running out raises an event rather than removing anything — what dying means is the game\u2019s to say.',
     provides: ['Has Health', 'Deals Damage'],
     contents: healthRule,
+  },
+  {
+    id: 'steering',
+    name: 'Steering',
+    ability: 'Chases and Flees',
+    description:
+      'Lets an actor go after another one, or run from it. A chaser walks toward what it is told to chase and stops when it is close enough; a fleer runs only when the thing it avoids is too near. It sets velocity, so walls still stop it and gravity still owns the vertical when you say so \u2014 and it brings the \u201cdistance from \u2039a\u203a to \u2039b\u203a\u201d block, which is what \u201cthe nearest enemy\u201d is asked with.',
+    provides: ['Chases', 'Flees'],
+    contents: steeringRule,
   },
   {
     id: 'writing',
@@ -275,6 +285,7 @@ export {
   boundsRule,
   collectRule,
   healthRule,
+  steeringRule,
   dragRule,
   driveRule,
   expiresRule,
