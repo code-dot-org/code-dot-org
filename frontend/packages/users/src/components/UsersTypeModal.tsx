@@ -1,12 +1,16 @@
-import {Button, DialogContentText} from '@mui/material';
+import {Box, Button, DialogContentText, Typography} from '@mui/material';
 import {useState} from 'react';
 
 import {FormError} from '@code-dot-org/component-library/form';
+import Link from '@code-dot-org/component-library/link';
+import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import {useToast} from '@code-dot-org/component-library/toast';
+import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 import {
   DashboardApiClient,
   useUpdateUserType,
+  type EmailOptIn,
   type UserType,
 } from '@code-dot-org/core/api';
 
@@ -38,11 +42,13 @@ export default function UsersTypeModal({
   const toast = useToast();
   const {errors, resetErrors, onSubmit} = useModalForm();
   const [email, setEmail] = useState('');
+  const [emailOptIn, setEmailOptIn] = useState<EmailOptIn>('');
 
   const isChangingToEducator = prospectiveType === 'teacher';
 
   const close = () => {
     setEmail('');
+    setEmailOptIn('');
     resetErrors();
     onClose();
   };
@@ -52,7 +58,12 @@ export default function UsersTypeModal({
     if (!prospectiveType) return;
     await mutation.mutateAsync(
       isChangingToEducator
-        ? {userType: 'teacher', email, hashedEmail: hashEmail(email)}
+        ? {
+            userType: 'teacher',
+            email,
+            hashedEmail: hashEmail(email),
+            emailOptIn,
+          }
         : {userType: prospectiveType},
     );
     toast(`Account type changed to ${TYPE_LABEL[prospectiveType]}.`);
@@ -78,7 +89,8 @@ export default function UsersTypeModal({
             variant="contained"
             disabled={
               mutation.isPending ||
-              (isChangingToEducator && email.trim().length === 0)
+              (isChangingToEducator &&
+                (email.trim().length === 0 || emailOptIn === ''))
             }
           >
             {prospectiveType
@@ -107,6 +119,54 @@ export default function UsersTypeModal({
           aria-invalid={errors.fieldErrors.email ? true : undefined}
           helperMessage="Educator accounts need an email address."
         />
+      )}
+      {isChangingToEducator && (
+        /* A radiogroup named by the question, not a fieldset/legend: the
+           privacy link inside a legend would be flattened into the group's name
+           and announced with every radio. The link follows the group so reading
+           and tab order reach the answer before the aside. */
+        <Box>
+          <Typography
+            id="account-type-optin-question"
+            variant="body2"
+            component="div"
+            sx={{mb: 1}}
+          >
+            Can we email you about updates to our courses, local opportunities,
+            or other computer science news?
+          </Typography>
+          <Box
+            role="radiogroup"
+            aria-labelledby="account-type-optin-question"
+            sx={{display: 'flex', gap: 3}}
+          >
+            <RadioButton
+              name="email_preference_opt_in"
+              value="yes"
+              label="Yes"
+              checked={emailOptIn === 'yes'}
+              onChange={event =>
+                setEmailOptIn(event.target.value as EmailOptIn)
+              }
+              disabled={mutation.isPending}
+            />
+            <RadioButton
+              name="email_preference_opt_in"
+              value="no"
+              label="No"
+              checked={emailOptIn === 'no'}
+              onChange={event =>
+                setEmailOptIn(event.target.value as EmailOptIn)
+              }
+              disabled={mutation.isPending}
+            />
+          </Box>
+          <Typography variant="body2" component="div" sx={{mt: 1}}>
+            <Link href={siteConfig.marketingUrl('/privacy')} openInNewTab>
+              (See our privacy policy)
+            </Link>
+          </Typography>
+        </Box>
       )}
     </FormDialog>
   );
