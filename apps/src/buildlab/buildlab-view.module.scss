@@ -1,0 +1,767 @@
+.root {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.header {
+  align-items: center;
+  background-color: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.subtitle {
+  color: inherit;
+}
+
+.headerActions {
+  display: flex;
+  gap: 8px;
+}
+
+.headerActions :global(.MuiButton-root) {
+  border-color: currentcolor;
+  color: inherit;
+}
+
+.headerActions :global(.MuiButton-contained) {
+  background-color: var(--background-neutral-white);
+  color: var(--text-brand-teal-primary);
+}
+
+.tabs {
+  background-color: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  padding: 0 24px;
+}
+
+.layout {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 38%);
+  min-height: 0;
+}
+
+.workspacePanel {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.previewPanel {
+  align-items: center;
+  background-color: var(--background-neutral-secondary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  overflow: auto;
+  padding: 24px;
+}
+
+.previewHeading,
+.workspaceHeading,
+.dataHeading,
+.artboardHeading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.previewHeading > :last-child {
+  color: var(--text-neutral-secondary);
+}
+
+.screenControls {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.screenDropdown {
+  min-width: 112px;
+}
+
+.buildPanel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.workspaceHeading {
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  padding: 16px 20px;
+}
+
+.blocklyWorkspace {
+  flex: 1;
+  min-height: 480px;
+}
+
+.stage {
+  aspect-ratio: 1;
+  background-color: var(--background-neutral-white);
+  border: 10px solid var(--borders-neutral-primary);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  max-width: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.stageTopBar {
+  background-color: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.stageContent {
+  height: 100%;
+  position: relative;
+}
+
+.stageButton,
+.stageLabel,
+.stageSprite,
+.elementListItem,
+.assetButton {
+  font: inherit;
+}
+
+.stageButton,
+.stageLabel,
+.stageSprite {
+  cursor: pointer;
+}
+
+.stageElement {
+  left: var(--element-x);
+  position: absolute;
+  top: var(--element-y);
+}
+
+.stageElement[draggable='true'] {
+  cursor: grab;
+}
+
+.stageElement[draggable='true']:active {
+  cursor: grabbing;
+}
+
+.stageButton {
+  background-color: var(--background-brand-teal-primary);
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: var(--text-neutral-white);
+  font-weight: 600;
+  padding: 10px 28px;
+}
+
+.stageLabel {
+  background: transparent;
+  border: 2px solid transparent;
+  color: var(--text-neutral-primary);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 4px;
+}
+
+.stageSprite {
+  background-color: transparent;
+  border: 2px solid transparent;
+  height: 76px;
+  width: 76px;
+}
+
+.stageSpriteWithImage {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.selected {
+  outline: 3px solid var(--borders-brand-teal-primary);
+  outline-offset: 3px;
+}
+
+.designPanel,
+.createPanel {
+  display: grid;
+  grid-template-columns: minmax(180px, 28%) minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+}
+
+.elementPalette,
+.assetRail {
+  background-color: var(--background-neutral-secondary);
+  border-right: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+  padding: 20px;
+}
+
+.paletteItem {
+  align-items: center;
+  background-color: var(--background-neutral-white);
+  border: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: grab;
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  text-align: left;
+}
+
+.paletteItem:active {
+  cursor: grabbing;
+}
+
+.paletteGlyph {
+  align-items: center;
+  color: var(--text-brand-teal-primary);
+  display: inline-flex;
+  font-size: 20px;
+  font-weight: 700;
+  justify-content: center;
+  min-width: 28px;
+}
+
+.inspector,
+.artboard,
+.dataPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
+  padding: 24px;
+}
+
+.propertyFields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.positionFields {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.elementList {
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+.elementListItem {
+  align-items: center;
+  background-color: var(--background-neutral-white);
+  border: 0;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  text-align: left;
+  width: 100%;
+}
+
+.elementListItem:last-child {
+  border-bottom: 0;
+}
+
+.elementListItem[aria-pressed='true'],
+.assetButton[aria-pressed='true'] {
+  background-color: var(--background-brand-teal-secondary);
+}
+
+.eventsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eventCard,
+.liveEventCard {
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.liveEventCard {
+  background-color: var(--background-success-extra-light);
+  border-color: var(--borders-success-primary);
+}
+
+.eventCardHeading {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.eventStatus {
+  background-color: var(--background-success-primary);
+  border-radius: 2px;
+  color: var(--text-neutral-white);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 6px;
+  white-space: nowrap;
+}
+
+.eventSetup {
+  border-top: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.eventSentence {
+  font-weight: 600;
+}
+
+.eventCodePreview {
+  background-color: var(--background-neutral-white);
+  border: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  overflow: auto;
+  padding: 10px;
+  white-space: pre-wrap;
+}
+
+.eventActions {
+  display: flex;
+  gap: 8px;
+}
+
+.assetButton {
+  align-items: center;
+  background-color: var(--background-neutral-white);
+  border: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
+.assetArt,
+.canvasArt,
+.stageSprite {
+  display: inline-block;
+}
+
+.assetArt {
+  height: 44px;
+  width: 44px;
+}
+
+.assetImage {
+  height: 44px;
+  image-rendering: pixelated;
+  object-fit: contain;
+  width: 44px;
+}
+
+.canvas {
+  align-items: center;
+  background-color: var(--background-neutral-secondary);
+  border: 1px dashed var(--borders-neutral-primary);
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  min-height: 360px;
+}
+
+.canvasArt {
+  height: 180px;
+  width: 180px;
+}
+
+.assetEditor {
+  border: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.assetEditorFooter {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.assetEditorBody {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 104px minmax(280px, 1fr) minmax(190px, 28%);
+  min-height: 440px;
+  padding: 20px;
+}
+
+.assetToolRail,
+.assetEditorDetails,
+.frameControls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.assetTool {
+  justify-content: flex-start;
+}
+
+.assetEditorCanvas {
+  align-items: center;
+  background-color: var(--background-neutral-secondary);
+  background-image: linear-gradient(
+      45deg,
+      var(--background-neutral-tertiary) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      -45deg,
+      var(--background-neutral-tertiary) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 75%,
+      var(--background-neutral-tertiary) 75%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75%,
+      var(--background-neutral-tertiary) 75%
+    );
+  background-position: 0 0, 0 16px, 16px -16px, -16px 0;
+  background-size: 32px 32px;
+  border: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.pixelCanvas {
+  aspect-ratio: 1;
+  cursor: crosshair;
+  height: auto;
+  image-rendering: pixelated;
+  max-height: 400px;
+  max-width: 100%;
+  touch-action: none;
+  width: min(100%, 400px);
+}
+
+.assetEditorBackgroundCanvas {
+  background-color: var(--background-brand-teal-secondary);
+  background-image: none;
+}
+
+.assetEditorBackgroundCanvas .canvasArt {
+  border-radius: 50% 50% 24% 24%;
+  height: 260px;
+  opacity: 0.7;
+  width: 260px;
+}
+
+.assetEditorBackgroundCanvas .pixelCanvas {
+  aspect-ratio: 1.6;
+}
+
+.assetEditorDetails {
+  border-left: 1px solid var(--borders-neutral-primary);
+  padding-left: 16px;
+}
+
+.frameControls > div {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.colorPalette {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.colorPalette > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.colorSwatch {
+  border: 2px solid var(--borders-neutral-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  padding: 0;
+  width: 28px;
+}
+
+.colorSwatch[aria-pressed='true'] {
+  outline: 3px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+}
+
+.pixelColorInk {
+  background-color: #1f2933;
+}
+
+.pixelColorRed {
+  background-color: #d94b4b;
+}
+
+.pixelColorGold {
+  background-color: #f7be36;
+}
+
+.pixelColorTeal {
+  background-color: #248da8;
+}
+
+.pixelColorWhite {
+  background-color: #fff;
+}
+
+.stageSpriteImage {
+  height: 100%;
+  image-rendering: pixelated;
+  object-fit: contain;
+  width: 100%;
+}
+
+.sun {
+  background-color: #f7be36;
+  border: 10px solid #f9d56d;
+  border-radius: 50%;
+}
+
+.orbit {
+  background-color: #4a7fcc;
+  border: 8px solid #a9c6ef;
+  border-radius: 50%;
+  box-shadow: 24px -8px 0 -10px #e05d5d;
+}
+
+.wave {
+  background-color: #48a9c5;
+  border-radius: 50% 50% 24% 24%;
+  transform: rotate(18deg);
+}
+
+.dataPanel {
+  gap: 16px;
+  padding: 20px 24px 24px;
+}
+
+.dataWorkspace {
+  border: 1px solid var(--borders-neutral-primary);
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(210px, 26%) minmax(0, 1fr);
+  min-height: 0;
+}
+
+.dataTableRail {
+  background-color: var(--background-neutral-secondary);
+  border-right: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
+  padding: 16px;
+}
+
+.newTableControls,
+.addColumnControls,
+.addKeyValueControls {
+  align-items: end;
+  display: flex;
+  gap: 8px;
+}
+
+.newTableControls {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.dataTableList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dataTableSelector {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font: inherit;
+  padding: 10px;
+  text-align: left;
+}
+
+.dataTableSelector[aria-pressed='true'] {
+  background-color: var(--background-brand-teal-secondary);
+  border-color: var(--borders-brand-teal-primary);
+  font-weight: 600;
+}
+
+.dataEditor,
+.keyValueEditor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 16px;
+}
+
+.dataEditorHeading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addColumnControls > :first-child,
+.addKeyValueControls > :first-child,
+.addKeyValueControls > :nth-child(2) {
+  flex: 1;
+}
+
+.dataTableScroll {
+  min-height: 0;
+  overflow: auto;
+}
+
+.dataTable {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+}
+
+.dataTable caption {
+  caption-side: top;
+  font-weight: 600;
+  padding-bottom: 8px;
+  text-align: left;
+}
+
+.dataTable th,
+.dataTable td {
+  border: 1px solid var(--borders-neutral-primary);
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+.dataTable th {
+  background-color: var(--background-neutral-secondary);
+}
+
+.dataTable th :global(.MuiButton-root) {
+  margin-top: 6px;
+}
+
+.newDataRow td {
+  background-color: var(--background-neutral-secondary);
+}
+
+.rowActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 136px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(500px, 1fr) auto;
+  }
+
+  .previewPanel {
+    border-left: 0;
+    border-top: 1px solid var(--borders-neutral-primary);
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .tabs {
+    padding: 0 16px;
+  }
+
+  .designPanel,
+  .createPanel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .elementPalette,
+  .assetRail {
+    border-bottom: 1px solid var(--borders-neutral-primary);
+    border-right: 0;
+  }
+
+  .assetEditorBody {
+    grid-template-columns: 88px minmax(0, 1fr);
+  }
+
+  .assetEditorDetails {
+    border-left: 0;
+    border-top: 1px solid var(--borders-neutral-primary);
+    grid-column: 1 / -1;
+    padding-left: 0;
+    padding-top: 16px;
+  }
+
+  .dataWorkspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dataTableRail {
+    border-bottom: 1px solid var(--borders-neutral-primary);
+    border-right: 0;
+  }
+
+  .addKeyValueControls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
