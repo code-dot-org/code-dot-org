@@ -50,6 +50,10 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_setCameraZoom"
+            },
+            {
+              "kind": "block",
               "type": "gamelab_spriteClicked",
               "inputs": {
                 "SPRITE": {
