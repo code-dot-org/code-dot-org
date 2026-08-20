@@ -162,12 +162,21 @@ function scenarioRoutes(tag: UsersScenarioTag): MockRoute[] {
         us_state_options: US_STATE_OPTIONS,
       }),
     },
+    // registrations#update: one Rails action behind PATCH /users, serving both
+    // the profile fields and the parent-email clear.
     {
       method: 'patch',
-      path: '*/dashboardapi/users',
+      path: '*/users',
       respond: async ctx => {
         const user = await readUserBody(ctx);
         if (user.username === 'taken') return json(TAKEN_USERNAME, 422);
+        if ('parent_email' in user) {
+          ctx.store.write('settings', {
+            ...readSettings(ctx, scenario),
+            parent_email: asNullableString(user.parent_email) || null,
+          });
+          return json(null, 204);
+        }
         if (typeof user.password === 'string') {
           if (
             scenario.password &&
@@ -253,20 +262,6 @@ function scenarioRoutes(tag: UsersScenarioTag): MockRoute[] {
         ctx.store.write('settings', {
           ...readSettings(ctx, scenario),
           parent_email: parentEmail,
-        });
-        return json(null, 204);
-      },
-    },
-    // Registration update; the page uses it only to clear the parent email.
-    // Ordered after */dashboardapi/users so it never shadows the profile PATCH.
-    {
-      method: 'patch',
-      path: '*/users',
-      respond: async ctx => {
-        const user = await readUserBody(ctx);
-        ctx.store.write('settings', {
-          ...readSettings(ctx, scenario),
-          parent_email: asNullableString(user.parent_email) || null,
         });
         return json(null, 204);
       },

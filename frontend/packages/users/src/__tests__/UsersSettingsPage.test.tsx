@@ -196,7 +196,7 @@ describe('UsersSettingsPage save flow', () => {
     renderPage('teacher');
     mockServer.use(
       http.patch(
-        '*/dashboardapi/users',
+        '*/users',
         () =>
           new HttpResponse(
             JSON.stringify({name: ['Display name is too long']}),

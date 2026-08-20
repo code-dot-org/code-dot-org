@@ -381,11 +381,11 @@ export function createUsersApi(transport: Transport) {
       return UserSettingsResponseSchema.parse(raw);
     },
 
-    /** PATCH /dashboardapi/users */
+    /** PATCH /users */
     async updateProfile(params: UpdateProfileParams): Promise<void> {
       await transport.request<unknown>({
         method: 'PATCH',
-        url: '/dashboardapi/users',
+        url: '/users',
         headers: JSON_ACCEPT,
         body: {
           user: {
@@ -407,11 +407,11 @@ export function createUsersApi(transport: Transport) {
       });
     },
 
-    /** PATCH /dashboardapi/users */
+    /** PATCH /users */
     async updatePassword(params: UpdatePasswordParams): Promise<void> {
       await transport.request<unknown>({
         method: 'PATCH',
-        url: '/dashboardapi/users',
+        url: '/users',
         headers: JSON_ACCEPT,
         body: {
           user: {
@@ -423,11 +423,11 @@ export function createUsersApi(transport: Transport) {
       });
     },
 
-    /** PATCH /dashboardapi/users — SSO-only accounts add a first password. */
+    /** PATCH /users — SSO-only accounts add a first password. */
     async createPassword(params: CreatePasswordParams): Promise<void> {
       await transport.request<unknown>({
         method: 'PATCH',
-        url: '/dashboardapi/users',
+        url: '/users',
         headers: JSON_ACCEPT,
         body: {
           user: {
