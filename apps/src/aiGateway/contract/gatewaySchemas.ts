@@ -219,24 +219,6 @@ export const GatewayGenerateTextResponseV1Schema = z.object({
   // Accessing response.body is intentional for provider-specific fields
   // (e.g. Gemini moderation details live in body.candidates[0]).
   response: ResponseMetaSchema.optional(),
-  // Detached signature over this response: a compact JWS (RS256) signed with
-  // the worker's private key. Its payload carries digests and binding claims
-  // only -- no message content -- so `text`/`output` above remain the
-  // authoritative, independently verifiable copy. Dashboard verifies it with
-  // the worker's public key before accepting a client-submitted response as
-  // authoritative; see AichatResponseAttestation.
-  //
-  // Optional because a worker deployed before response signing landed omits
-  // it, and because dashboard tolerates its absence while running permissively.
-  responseSignature: z.string().optional(),
-  // The exact serialization of `output` whose digest `responseSignature` covers.
-  // Present only when the request supplied an `output` schema.
-  //
-  // Consumers MUST forward this string verbatim rather than re-stringifying
-  // the parsed `output` above: JSON.stringify() gives no key-order guarantee,
-  // so a browser-side re-serialization need not reproduce the bytes the worker
-  // hashed, and verification would fail on legitimate traffic.
-  outputJson: z.string().optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -263,6 +245,36 @@ export const GatewayTranscribeResponseV1Schema = z.object({
 });
 
 // ---------------------------------------------------------------------------
+// Schema version 2
+// ---------------------------------------------------------------------------
+//
+// V2 adds `responseSignature` to the generateText response. Nothing else
+// changes, but a version covers the whole API rather than one endpoint: the
+// worker calls resolveVersion() once per request and then looks up a serializer
+// by that version, so an endpoint left without a V2 entry would be an undefined
+// lookup for any V2 client. The unchanged shapes are therefore re-exported
+// under V2 rather than omitted.
+
+export const GatewayGenerateTextResponseV2Schema =
+  GatewayGenerateTextResponseV1Schema.extend({
+    // Detached signature over the response: a compact JWS (RS256) signed with
+    // the worker's private key, carrying digests and binding claims only. The
+    // response itself travels unchanged in `text` above, so it stays
+    // independently verifiable -- dashboard recomputes the digest from what the
+    // browser submits and compares. See dashboard's AichatResponseSignature.
+    //
+    // Optional because the worker returns no signature when it has no signing
+    // key configured, and none is available for the finish reasons that
+    // withhold `text`.
+    responseSignature: z.string().optional(),
+  });
+
+const GatewayGenerateTextRequestV2Schema = GatewayGenerateTextRequestV1Schema;
+const GatewayTranscribeRequestV2Schema = GatewayTranscribeRequestV1Schema;
+export const GatewayTranscribeResponseV2Schema =
+  GatewayTranscribeResponseV1Schema;
+
+// ---------------------------------------------------------------------------
 // Exported inferred types — use these in runtime code instead of hand-rolling
 // parallel type definitions.
 // ---------------------------------------------------------------------------
@@ -279,6 +291,12 @@ export type GatewayTranscribeRequestV1 = z.infer<
 export type GatewayTranscribeResponseV1 = z.infer<
   typeof GatewayTranscribeResponseV1Schema
 >;
+export type GatewayGenerateTextResponseV2 = z.infer<
+  typeof GatewayGenerateTextResponseV2Schema
+>;
+export type GatewayTranscribeResponseV2 = z.infer<
+  typeof GatewayTranscribeResponseV2Schema
+>;
 
 // ---------------------------------------------------------------------------
 // Versioned schema maps — the authoritative list of "what versions exist".
@@ -288,18 +306,22 @@ export type GatewayTranscribeResponseV1 = z.infer<
 
 export const generateTextRequestSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayGenerateTextRequestV1Schema,
+  2: GatewayGenerateTextRequestV2Schema,
 };
 
 export const generateTextResponseSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayGenerateTextResponseV1Schema,
+  2: GatewayGenerateTextResponseV2Schema,
 };
 
 export const transcribeRequestSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayTranscribeRequestV1Schema,
+  2: GatewayTranscribeRequestV2Schema,
 };
 
 export const transcribeResponseSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayTranscribeResponseV1Schema,
+  2: GatewayTranscribeResponseV2Schema,
 };
 
 export const ALL_GATEWAY_SCHEMA_GROUPS: Record<
@@ -319,4 +341,29 @@ export const ALL_GATEWAY_SCHEMA_GROUPS: Record<
 // version is introduced.
 // ---------------------------------------------------------------------------
 
-export const CURRENT_SCHEMA_VERSION = '1' as const;
+export const CURRENT_SCHEMA_VERSION = '2' as const;
+
+// ---------------------------------------------------------------------------
+// Current-version response schemas — what the client should parse replies with.
+//
+// The client asks for CURRENT_SCHEMA_VERSION and must validate against the
+// matching schema. Parsing with an older one silently drops the newer fields,
+// because z.object() strips unknown keys and callers use the parsed result.
+//
+// These are separate exports rather than a lookup in the maps above so the
+// inferred types survive: the maps are typed z.ZodTypeAny, which erases them.
+// gatewaySchemaVersionTest.ts asserts each alias is the same schema the map
+// holds for CURRENT_SCHEMA_VERSION, so the two cannot drift.
+// ---------------------------------------------------------------------------
+
+export const CurrentGatewayGenerateTextResponseSchema =
+  GatewayGenerateTextResponseV2Schema;
+export const CurrentGatewayTranscribeResponseSchema =
+  GatewayTranscribeResponseV2Schema;
+
+export type CurrentGatewayGenerateTextResponse = z.infer<
+  typeof CurrentGatewayGenerateTextResponseSchema
+>;
+export type CurrentGatewayTranscribeResponse = z.infer<
+  typeof CurrentGatewayTranscribeResponseSchema
+>;

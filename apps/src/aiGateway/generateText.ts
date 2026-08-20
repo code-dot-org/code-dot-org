@@ -7,8 +7,8 @@ import AichatContextManager from '../aichat/aichatContextManager';
 
 import {
   CURRENT_SCHEMA_VERSION,
-  GatewayGenerateTextResponseV1Schema,
-  type GatewayGenerateTextResponseV1,
+  CurrentGatewayGenerateTextResponseSchema,
+  type CurrentGatewayGenerateTextResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
@@ -53,24 +53,22 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
 };
 
 /**
- * The SDK result plus the two gateway-only fields that ride alongside it.
+ * The SDK result plus the one gateway-only field that rides alongside it.
  *
- * `responseSignature` is the worker's detached signature over the response;
- * callers that persist the response must relay it to dashboard so the value can
- * be verified rather than taken on trust. `outputJson` is the worker's own
- * serialization of `output`, and must be used verbatim rather than
- * re-stringified -- it is the exact byte sequence the signature covers.
+ * `responseSignature` is the worker's detached signature over `text`. A caller
+ * that persists the response must relay it to dashboard, which verifies it
+ * before admitting the text to chat history rather than taking the browser's
+ * word for what the model said.
  */
 export type GatewayGenerateTextResult<
   TOOLS extends SDKTools,
   OUTPUT extends SDKOutput
 > = GenerateTextResult<TOOLS, OUTPUT> & {
   responseSignature?: string;
-  outputJson?: string;
 };
 
 const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
-  wire: GatewayGenerateTextResponseV1
+  wire: CurrentGatewayGenerateTextResponse
 ): GatewayGenerateTextResult<TOOLS, OUTPUT> => {
   return {
     ...wire,
@@ -141,7 +139,7 @@ const generateTextThroughGateway = async <
 
       const rawResponse = await response.json();
       const parseResult =
-        GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
+        CurrentGatewayGenerateTextResponseSchema.safeParse(rawResponse);
       if (!parseResult.success) {
         await reportGatewayError(
           parseResult.error,
@@ -157,7 +155,7 @@ const generateTextThroughGateway = async <
       }
       const wire = parseResult.success
         ? parseResult.data
-        : (rawResponse as GatewayGenerateTextResponseV1);
+        : (rawResponse as CurrentGatewayGenerateTextResponse);
 
       return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
     } catch (error) {

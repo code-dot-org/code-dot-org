@@ -10,8 +10,8 @@ import AichatContextManager from '../aichat/aichatContextManager';
 
 import {
   CURRENT_SCHEMA_VERSION,
-  GatewayTranscribeResponseV1Schema,
-  type GatewayTranscribeResponseV1,
+  CurrentGatewayTranscribeResponseSchema,
+  type CurrentGatewayTranscribeResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
@@ -60,7 +60,7 @@ async function transcribeThroughGateway(
 
       const rawResponse = await response.json();
       const parseResult =
-        GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
+        CurrentGatewayTranscribeResponseSchema.safeParse(rawResponse);
       if (!parseResult.success) {
         await reportGatewayError(
           parseResult.error,
@@ -75,7 +75,7 @@ async function transcribeThroughGateway(
       }
       const wire = parseResult.success
         ? parseResult.data
-        : (rawResponse as GatewayTranscribeResponseV1);
+        : (rawResponse as CurrentGatewayTranscribeResponse);
 
       return {
         ...wire,
