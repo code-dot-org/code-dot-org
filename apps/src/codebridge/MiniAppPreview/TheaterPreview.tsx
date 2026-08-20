@@ -24,14 +24,17 @@ const TheaterPreview: React.FunctionComponent = () => {
 
   // The theater has already put itself back; report the failure and release the
   // run button, which a theater run otherwise leaves showing stop.
-  const onMediaLoadError = useCallback(() => {
-    CodebridgeRegistry.getInstance()
-      .getConsoleManager()
-      ?.writeConsoleMessage(
-        getSystemError('Could not display the theater video.', appName)
-      );
-    dispatch(setIsRunning(false));
-  }, [appName, dispatch]);
+  const onMediaLoadError = useCallback(
+    (type: 'video' | 'audio') => {
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeConsoleMessage(
+          getSystemError(`Could not load the theater ${type}.`, appName)
+        );
+      dispatch(setIsRunning(false));
+    },
+    [appName, dispatch]
+  );
 
   useEffect(() => {
     // The console manager may not exist when the theater is created, so look it
