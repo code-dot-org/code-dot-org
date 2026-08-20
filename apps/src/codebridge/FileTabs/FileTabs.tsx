@@ -164,7 +164,7 @@ export const FileTabs = React.memo(() => {
               key={f.id}
               isDragging={f.id === draggingFileId}
               onKeyDown={event => handleTabActivation(event, f.id)}
-              // Once per tab row is enough; the hint is the same on every tab.
+              // Same hint on every tab; one is enough.
               showReorderHint={index === 0}
             />
           ))}
