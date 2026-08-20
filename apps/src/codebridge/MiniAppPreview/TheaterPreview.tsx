@@ -11,13 +11,20 @@ import PhotoPrompterButton from './PhotoPrompterButton';
 
 import moduleStyles from './mini-app-preview.module.scss';
 
+interface TheaterPreviewProps {
+  isOutputVisible: boolean;
+  setIsOutputVisible: (isVisible: boolean) => void;
+}
+
 // Preview panel for the theater mini app.
-const TheaterPreview: React.FunctionComponent = () => {
+const TheaterPreview: React.FunctionComponent<TheaterPreviewProps> = ({
+  isOutputVisible,
+  setIsOutputVisible,
+}) => {
   const {sendTypedInputMessage, levelProperties} = useCodebridgeContext();
   const appName = levelProperties?.appName;
   const [isPrompterOpen, setIsPrompterOpen] = useState(false);
   const [promptText, setPromptText] = useState('');
-  const [isOutputVisible, setIsOutputVisible] = useState(false);
 
   const onMediaLoadError = useCallback(
     (type: 'video' | 'audio') => {
@@ -64,7 +71,7 @@ const TheaterPreview: React.FunctionComponent = () => {
       theater.reset();
       CodebridgeRegistry.getInstance().setTheater(null);
     };
-  }, [sendTypedInputMessage, onMediaLoadError]);
+  }, [sendTypedInputMessage, onMediaLoadError, setIsOutputVisible]);
 
   const onPhotoSelected = (file: File) => {
     CodebridgeRegistry.getInstance()
