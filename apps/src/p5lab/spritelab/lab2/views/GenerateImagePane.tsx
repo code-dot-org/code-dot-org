@@ -430,9 +430,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [uploadImage]
   );
 
-  const handleEditorSave = useCallback(
+  const applyEditorSave = useCallback(
     async (dataURI: string, meta: PixelEditorSaveMeta) => {
-      setPainting('no');
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
 
@@ -524,6 +523,27 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       session.noteAsset(previousUrl);
     },
     [dialogTarget, targetProps, paintNewDraft, uploadEdited, dispatch, session]
+  );
+
+  // Guards a second Save click while the first is still uploading.
+  const savingPaintRef = useRef(false);
+
+  const handleEditorSave = useCallback(
+    async (dataURI: string, meta: PixelEditorSaveMeta) => {
+      if (savingPaintRef.current) {
+        return;
+      }
+      savingPaintRef.current = true;
+      try {
+        await applyEditorSave(dataURI, meta);
+      } finally {
+        savingPaintRef.current = false;
+        // The editor stays up through the save, so the dialog reappears
+        // only once the new state is in place — no flash of a stale view.
+        setPainting('no');
+      }
+    },
+    [applyEditorSave]
   );
 
   const creating = dialogTarget === 'new';
