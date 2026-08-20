@@ -63,8 +63,18 @@ import {
 
 export type RuleModule = Record<string, unknown>;
 
-/** Turn one generated module into a value, given the ones it imports. */
-function evaluate(js: string, modules: Record<string, RuleModule>): RuleModule {
+/**
+ * Turn one generated module into a value, given the ones it imports.
+ *
+ * Exported because compiling a whole PROJECT needs the same trick on `.actor`
+ * and `.world` modules (`__tests__/support/compileProject`), and the rewrite
+ * is tied to the shape the generator emits — one copy of that coupling is
+ * enough.
+ */
+export function evaluate(
+  js: string,
+  modules: Record<string, RuleModule>,
+): RuleModule {
   const exported = [...js.matchAll(/^export const (\w+)/gm)].map(m => m[1]);
   const body = js
     // The engine, injected rather than imported. Both forms appear.
@@ -83,6 +93,16 @@ function evaluate(js: string, modules: Record<string, RuleModule>): RuleModule {
       'const $1 = __modules["$2"].default;',
     )
     .replace(/^export default (.*);$/m, '__exports.default = $1;')
+    // `export {a, b};`, which a `.world` module emits for its local actors.
+    // The comment above says a new form needs a line here; this is that line.
+    .replace(/^export \{([^}]*)\};$/gm, (_, names: string) =>
+      names
+        .split(',')
+        .map(name => name.trim())
+        .filter(Boolean)
+        .map(name => `__exports.${name} = ${name};`)
+        .join('\n'),
+    )
     .replace(/^export const (\w+)/gm, 'const $1');
   const collect = exported
     .map(name => `__exports.${name} = ${name};`)
