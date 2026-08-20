@@ -1,0 +1,11 @@
+name 'UI Test Test anonymous student survey'
+submittable 'true'
+anonymous 'true'
+
+page
+level 'UI Test test anonymous student survey fun'           # Multi
+level 'UI Test test anonymous student survey educational'   # Multi
+level 'UI Test test_anonymous_student_survey_why_class'     # FreeResponse
+
+page
+level 'UI Test test_anonymous_student_survey_next_class'    # FreeResponse

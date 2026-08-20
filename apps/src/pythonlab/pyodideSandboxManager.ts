@@ -28,6 +28,7 @@ import {
   parseErrorMessage,
 } from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
+import {handleTheaterMedia} from './pythonHelpers/theaterMedia';
 import {
   FromPyodideSandboxMessage,
   ToPyodideSandboxMessage,
@@ -41,6 +42,7 @@ let outputToNeighborhood = false;
 let directLogsToDevConsole = false;
 let loadedMessageHandlers = false;
 let sandboxServiceWorkerUnavailable = false;
+let isValidationRun = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -113,7 +115,7 @@ const SANDBOX_UNREACHABLE_MESSAGE =
   'to unblock. If you need assistance, please reach out to support@code.org.';
 
 const handlePyodideMessage = (data: PyodideMessage) => {
-  const {type, id, message} = data;
+  const {type, id, message, gif} = data;
   const onSuccess = callbacks[id];
 
   const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
@@ -219,6 +221,12 @@ const handlePyodideMessage = (data: PyodideMessage) => {
     case 'loaded_packages':
       directLogsToDevConsole = false;
       break;
+    case 'theater_media':
+      // Only show theater output if this is not a validation run.
+      if (gif && !isValidationRun) {
+        handleTheaterMedia(gif);
+      }
+      break;
     default:
       console.warn(
         `Unknown message type ${type} with message ${message} from pyodideWorker.`
@@ -305,6 +313,7 @@ const asyncRun = (() => {
     // Reset error state
     getStore().dispatch(setHasError(false));
     outputToNeighborhood = !!shouldOutputToNeighborhood;
+    isValidationRun = !!validationFile;
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
     const messageHandlers = getMessageHandlers(
