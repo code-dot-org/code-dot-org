@@ -1,5 +1,6 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-08-14T15:09:13.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "hide_share_and_remix": "false",
     "require_edit_to_continue": "true",
-    "long_instructions": "#Vision Board Creation",
+    "long_instructions": "#Vision Board Creation\r\n\r\nCreate your AI vision board! Use what you discovered in your research to fill in all four sections:\r\n\r\n* **My Hopes** — what you want AI to do for your community\r\n* **My Fears** — what worries you, and who could get hurt\r\n* **My Role** — what you will do, ask, or check when you use AI\r\n* **Questions I'm Sitting With** — what your articles didn't answer\r\n\r\n##Tips:\r\n\r\n- Put your strongest ideas from your research on the board first.\r\n- Pair every image with words — a label, a caption, or a sticky note.\r\n- Check out the model board if you're not sure where to start.\r\n- Use the icons, shapes, notes, and sentence starters as needed — and feel free to add outside images or resources to give your board more depth.",
     "start_sources": {
       "source": {
         "nodes": [
@@ -485,21 +486,21 @@
             "id": "2a54bba7-4e01-490b-a52a-2adc9eae2600",
             "type": "text",
             "data": {
-              "text": "your thoughts here...",
+              "text": "I hope AI helps ___ by ___",
               "strokeColor": "transparent"
             },
             "position": {
-              "x": -1718.706649592512,
-              "y": 266.4507734405522
+              "x": -1974.292033579352,
+              "y": 2041.1897319109685
             },
-            "width": 181.11212657236638,
-            "height": 145.56063286183132,
+            "width": 183.98387245985907,
+            "height": 62.28000212454651,
             "measured": {
-              "width": 181,
-              "height": 146
+              "width": 184,
+              "height": 62
             },
             "dragging": false,
-            "zIndex": 15
+            "zIndex": 17
           },
           {
             "id": "99ed5a28-33db-4a03-877a-00e270d53d44",
@@ -1008,7 +1009,7 @@
               "text": "Icons / Shapes / Notes to Use",
               "strokeColor": "transparent",
               "fontSize": 60,
-              "locked": true
+              "locked": false
             },
             "position": {
               "x": -1943.062544201198,
@@ -1100,6 +1101,667 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "305ebada-5d62-48f6-b9bf-a302c16e222d",
+            "type": "text",
+            "data": {
+              "text": "Sentence Starters",
+              "strokeColor": "transparent",
+              "fontSize": 60,
+              "locked": false
+            },
+            "position": {
+              "x": -1967.310211112855,
+              "y": 1839.0683349639785
+            },
+            "width": 934.9154595108657,
+            "height": 104.32710787983382,
+            "measured": {
+              "width": 935,
+              "height": 104
+            },
+            "dragging": false
+          },
+          {
+            "id": "e49ec7e6-56de-4fd9-96a1-db12b29a578e",
+            "type": "text",
+            "data": {
+              "text": "your thoughts here...",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1723.3932968055378,
+              "y": 281.40404705708806
+            },
+            "width": 181.11212657236638,
+            "height": 145.56063286183132,
+            "measured": {
+              "width": 181,
+              "height": 146
+            },
+            "dragging": false,
+            "zIndex": 13
+          },
+          {
+            "id": "fb8add68-0641-464f-bbec-7ea18643a60e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/433a25bd-e48a-4925-9575-86e57ca62d15.png",
+              "altText": "yellowSticky"
+            },
+            "position": {
+              "x": -1980.3140755814252,
+              "y": 1985.2621107305395
+            },
+            "width": 206,
+            "height": 197.99999999999977,
+            "measured": {
+              "width": 206,
+              "height": 198
+            },
+            "dragging": false,
+            "zIndex": 9
+          },
+          {
+            "id": "640bc87a-82e1-45b4-814f-862ac8d3d084",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/bbbdd6d8-1476-402a-92f4-e36e9e2b56be.png",
+              "altText": "pinkSticky"
+            },
+            "position": {
+              "x": -1723.8149226434068,
+              "y": 1981.9038943585265
+            },
+            "width": 205.99999999999977,
+            "height": 201.99999999999977,
+            "measured": {
+              "width": 206,
+              "height": 202
+            },
+            "dragging": false,
+            "zIndex": 12
+          },
+          {
+            "id": "0b47b81a-75d7-4157-b357-6a5e06ea6db8",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/0b8a70c4-03fc-4534-9c9b-94440ea80415.png",
+              "altText": "greenSticky"
+            },
+            "position": {
+              "x": -1489.7892294060046,
+              "y": 1981.587510822048
+            },
+            "width": 229.99999999999977,
+            "height": 195.99999999999977,
+            "measured": {
+              "width": 230,
+              "height": 196
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "9891aadf-97d3-46af-956a-d7b45e7cbc29",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/be28c17f-4e2a-4de0-9fb1-8367f79e51c0.png",
+              "altText": "blueSticky"
+            },
+            "position": {
+              "x": -1227.6143416674659,
+              "y": 1985.3063331320973
+            },
+            "width": 213.99999999999977,
+            "height": 189.99999999999977,
+            "measured": {
+              "width": 214,
+              "height": 190
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "f66cb2ed-89ab-4d10-9424-6295a2a16c27",
+            "type": "text",
+            "data": {
+              "text": "I worry that ___ will happen to ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1712.7710221571933,
+              "y": 2032.5744942484907
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "8f6e8285-10b7-40c0-9fc5-52e627d7ab70",
+            "type": "text",
+            "data": {
+              "text": "I want to become someone who ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1471.3522319474828,
+              "y": 2035.4462401359833
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "533a020b-defc-4086-86e9-66a85afa6506",
+            "type": "text",
+            "data": {
+              "text": "Who decides ___?",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1215.574712300309,
+              "y": 2038.317986023476
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "7c81dd2c-aa0d-4f94-b442-34d5b4733efe",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/433a25bd-e48a-4925-9575-86e57ca62d15.png",
+              "altText": "yellowSticky"
+            },
+            "position": {
+              "x": -1981.0698343642541,
+              "y": 2200.7233751463295
+            },
+            "width": 206,
+            "height": 197.99999999999977,
+            "measured": {
+              "width": 206,
+              "height": 198
+            },
+            "dragging": false,
+            "zIndex": 9
+          },
+          {
+            "id": "1eb11364-f8fd-4202-8499-4b4185a3ccc1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/433a25bd-e48a-4925-9575-86e57ca62d15.png",
+              "altText": "yellowSticky"
+            },
+            "position": {
+              "x": -1979.649216738843,
+              "y": 2416.18463956212
+            },
+            "width": 206,
+            "height": 197.99999999999977,
+            "measured": {
+              "width": 206,
+              "height": 198
+            },
+            "dragging": false,
+            "zIndex": 9
+          },
+          {
+            "id": "8eda1306-b0ca-467b-a8f1-84dc375df3f1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/433a25bd-e48a-4925-9575-86e57ca62d15.png",
+              "altText": "yellowSticky"
+            },
+            "position": {
+              "x": -1978.2285991134315,
+              "y": 2629.46952756967
+            },
+            "width": 206,
+            "height": 197.99999999999977,
+            "measured": {
+              "width": 206,
+              "height": 198
+            },
+            "dragging": false,
+            "zIndex": 9
+          },
+          {
+            "id": "1ccaab88-e8cf-4caa-ac93-733c233925a8",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/bbbdd6d8-1476-402a-92f4-e36e9e2b56be.png",
+              "altText": "pinkSticky"
+            },
+            "position": {
+              "x": -1719.6909370899812,
+              "y": 2194.066388997385
+            },
+            "width": 205.99999999999977,
+            "height": 201.99999999999977,
+            "measured": {
+              "width": 206,
+              "height": 202
+            },
+            "dragging": false,
+            "zIndex": 12
+          },
+          {
+            "id": "f4352c32-7b6d-46a1-bc12-7d6248089365",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/bbbdd6d8-1476-402a-92f4-e36e9e2b56be.png",
+              "altText": "pinkSticky"
+            },
+            "position": {
+              "x": -1721.500678912359,
+              "y": 2416.0567826378956
+            },
+            "width": 205.99999999999977,
+            "height": 201.99999999999977,
+            "measured": {
+              "width": 206,
+              "height": 202
+            },
+            "dragging": false,
+            "zIndex": 12
+          },
+          {
+            "id": "c32b0836-e4b9-4a36-8cb9-8cb224c75430",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/bbbdd6d8-1476-402a-92f4-e36e9e2b56be.png",
+              "altText": "pinkSticky"
+            },
+            "position": {
+              "x": -1721.729446175414,
+              "y": 2633.76283379107
+            },
+            "width": 205.99999999999977,
+            "height": 201.99999999999977,
+            "measured": {
+              "width": 206,
+              "height": 202
+            },
+            "dragging": false,
+            "zIndex": 12
+          },
+          {
+            "id": "f761fe22-d51a-49f0-8f79-8167666598d4",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/0b8a70c4-03fc-4534-9c9b-94440ea80415.png",
+              "altText": "greenSticky"
+            },
+            "position": {
+              "x": -1490.4851286794774,
+              "y": 2199.2251516460788
+            },
+            "width": 229.99999999999977,
+            "height": 195.99999999999977,
+            "measured": {
+              "width": 230,
+              "height": 196
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "9a0acddb-4d8b-43b3-b97e-6ea385081c07",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/0b8a70c4-03fc-4534-9c9b-94440ea80415.png",
+              "altText": "greenSticky"
+            },
+            "position": {
+              "x": -1486.8282751364693,
+              "y": 2419.0391688783493
+            },
+            "width": 229.99999999999977,
+            "height": 195.99999999999977,
+            "measured": {
+              "width": 230,
+              "height": 196
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "f390c9ee-e6e7-4af8-a83b-8ffad1f05336",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/0b8a70c4-03fc-4534-9c9b-94440ea80415.png",
+              "altText": "greenSticky"
+            },
+            "position": {
+              "x": -1487.5241744099417,
+              "y": 2638.8531861106203
+            },
+            "width": 229.99999999999977,
+            "height": 195.99999999999977,
+            "measured": {
+              "width": 230,
+              "height": 196
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "b39a8854-bb7d-4c28-b012-180c87066440",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/be28c17f-4e2a-4de0-9fb1-8367f79e51c0.png",
+              "altText": "blueSticky"
+            },
+            "position": {
+              "x": -1231.2519824914966,
+              "y": 2205.1203503643683
+            },
+            "width": 213.99999999999977,
+            "height": 189.99999999999977,
+            "measured": {
+              "width": 214,
+              "height": 190
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "35701294-5450-4684-9b4c-b1e1bd6b9825",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/be28c17f-4e2a-4de0-9fb1-8367f79e51c0.png",
+              "altText": "blueSticky"
+            },
+            "position": {
+              "x": -1228.3604940908065,
+              "y": 2418.405238371918
+            },
+            "width": 213.99999999999977,
+            "height": 189.99999999999977,
+            "measured": {
+              "width": 214,
+              "height": 190
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "6b26d97f-971f-4a24-8b88-d07825ae965d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson9-vision-board/uuid/be28c17f-4e2a-4de0-9fb1-8367f79e51c0.png",
+              "altText": "blueSticky"
+            },
+            "position": {
+              "x": -1226.0130997921765,
+              "y": 2640.395632012429
+            },
+            "width": 213.99999999999977,
+            "height": 189.99999999999977,
+            "measured": {
+              "width": 214,
+              "height": 190
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "1709ece1-47b5-42bd-af14-36cf62b7f075",
+            "type": "text",
+            "data": {
+              "text": "What happens when ___ goes wrong?",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1212.2300817243954,
+              "y": 2260.308379663987
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "d29d55cb-3e66-4769-a217-4389354d29d9",
+            "type": "text",
+            "data": {
+              "text": "Why doesn't anyone talk about ___?",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1208.8854511484817,
+              "y": 2469.2405148550565
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "ecae7fd5-63d2-4b24-88e8-6ecb44b18595",
+            "type": "text",
+            "data": {
+              "text": "Is it true that ___?",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1207.7171969808082,
+              "y": 2689.0545320873275
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "623b4a8e-e57d-4791-8726-a89b7e385c1b",
+            "type": "text",
+            "data": {
+              "text": "When I see AI being used for ___, I will ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1463.3613589854908,
+              "y": 2249.426497622786
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "84d483e8-c978-4dd3-aed9-9d105def8073",
+            "type": "text",
+            "data": {
+              "text": "I can speak up about ___ by ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1468.7222340425383,
+              "y": 2467.0641384468163
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "e027dab0-7807-424b-950b-5856418111b6",
+            "type": "text",
+            "data": {
+              "text": "My job is to notice when ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1465.3776034666246,
+              "y": 2691.230908495568
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "4ef81aa4-2fbc-4155-a3b7-4a67e7e4bc7d",
+            "type": "text",
+            "data": {
+              "text": "I want to see more ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1974.5588540788713,
+              "y": 2469.424886983657
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "a0098291-5e1d-47c6-81c8-4fc2d6f6c864",
+            "type": "text",
+            "data": {
+              "text": "The article said ___, and that concerns me because ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1708.1057371957068,
+              "y": 2241.809772375333
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "40be8bd2-ab2f-481c-87f3-8fc277bc5712",
+            "type": "text",
+            "data": {
+              "text": "If nobody checks this, ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1712.1517420209846,
+              "y": 2471.074271872123
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "8461373a-03c2-4478-b7fc-8c882289b367",
+            "type": "text",
+            "data": {
+              "text": "I don't want to live in a world where ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1711.249592180864,
+              "y": 2680.5461527073194
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "2ebf37d4-ea00-4cea-b81f-0c160e030d16",
+            "type": "text",
+            "data": {
+              "text": "The best version of this technology would ___.",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1968.7085495733525,
+              "y": 2250.0566968176636
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "1321d95f-4c46-4386-ac14-c48c1725eb27",
+            "type": "text",
+            "data": {
+              "text": "If this works, ___ finally gets ___\n\n",
+              "strokeColor": "transparent"
+            },
+            "position": {
+              "x": -1966.1570148447663,
+              "y": 2683.8449224842516
+            },
+            "width": 183.98387245985907,
+            "height": 79.51047744950199,
+            "measured": {
+              "width": 184,
+              "height": 80
+            },
+            "dragging": false,
+            "zIndex": 15
           }
         ],
         "edges": [
@@ -1122,14 +1784,13 @@
           }
         ],
         "viewport": {
-          "x": 922.3696199752459,
-          "y": 401.012112319311,
-          "zoom": 0.3482202253184502
+          "x": 551.427515143535,
+          "y": 227.4888113871885,
+          "zoom": 0.22973967099940762
         }
       }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-14T15:09:13.547+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-aichat\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-aichat\"},{\"changed_at\":\"2026-08-14 15:09:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 17:18:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 17:35:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 17:49:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 18:41:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 18:43:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 19:38:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 19:40:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 15:59:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-14T15:09:13.547+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-aichat\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-aichat\"},{\"changed_at\":\"2026-08-14 15:09:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 17:18:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 17:35:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 17:49:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 18:41:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 18:43:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 19:38:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 19:40:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 15:59:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 18:31:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 18:41:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 19:02:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 19:44:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
