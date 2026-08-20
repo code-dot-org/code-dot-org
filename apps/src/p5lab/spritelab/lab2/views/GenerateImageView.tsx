@@ -225,16 +225,30 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         </div>
         <div className={moduleStyles.detailsPane}>
           {create && (
-            <div>
+            <div className={moduleStyles.nameRow}>
               <TextField
                 name="newImageName"
                 label="Name"
                 value={name}
-                errorMessage={nameError || undefined}
+                aria-invalid={!!nameError || undefined}
+                aria-describedby={
+                  nameError ? 'new-image-name-error' : undefined
+                }
                 disabled={generating}
                 maxLength={IMAGE_NAME_MAX_LENGTH}
                 onChange={e => setName(sanitizeImageName(e.target.value))}
               />
+              {/* Beside the field, not below it: appearing under the input
+                  would change the dialog's height for the moment it shows. */}
+              {nameError && (
+                <span
+                  id="new-image-name-error"
+                  role="status"
+                  className={moduleStyles.inlineFieldError}
+                >
+                  {nameError}
+                </span>
+              )}
             </div>
           )}
 

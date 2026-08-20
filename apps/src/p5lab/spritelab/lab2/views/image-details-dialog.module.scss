@@ -371,3 +371,18 @@
     transform: none;
   }
 }
+
+// A field's error, beside it rather than below, so its appearance doesn't
+// change the dialog's height.
+.nameRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.inlineFieldError {
+  margin-bottom: 10px;
+  color: var(--dialog-danger-text);
+  font-size: 13px;
+  white-space: nowrap;
+}

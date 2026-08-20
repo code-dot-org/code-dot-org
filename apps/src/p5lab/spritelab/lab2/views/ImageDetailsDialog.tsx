@@ -152,7 +152,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 aria-label="Image name"
                 className={moduleStyles.headerNameField}
                 value={nameDraft}
-                errorMessage={shownNameError || undefined}
+                aria-invalid={!!shownNameError || undefined}
+                aria-describedby={
+                  shownNameError ? 'rename-image-error' : undefined
+                }
                 maxLength={IMAGE_NAME_MAX_LENGTH}
                 onChange={e => {
                   setNameDraft(sanitizeImageName(e.target.value));
@@ -185,6 +188,17 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               >
                 <FontAwesomeV6Icon iconName="xmark" />
               </button>
+              {/* Beside the field: below it would change the header's height
+                  for the moment it shows. */}
+              {shownNameError && (
+                <span
+                  id="rename-image-error"
+                  role="status"
+                  className={moduleStyles.inlineFieldError}
+                >
+                  {shownNameError}
+                </span>
+              )}
             </>
           ) : (
             <>
