@@ -88,6 +88,7 @@ describe('normalizeLessonPlan', () => {
         expect.arrayContaining([
           'adaptive-fan-page.json',
           'musical-artist-webpage.json',
+          'website-skill-tree.json',
           'website-with-ai.json',
         ])
       );
@@ -106,6 +107,19 @@ describe('normalizeLessonPlan', () => {
         const ids = new Set(plan.steps.map(s => s.id));
         expect(ids.size).toBe(plan.steps.length);
 
+        // A step may belong to at most one hub path — hub ownership is
+        // how the resolver knows where a completed step returns to.
+        const owners = new Map<string, string>();
+        plan.steps.forEach(step => {
+          if (step.kind !== 'hub') return;
+          step.paths.forEach(p =>
+            p.steps.forEach(sid => {
+              expect(owners.get(sid)).toBeUndefined();
+              owners.set(sid, `${step.id}/${p.id}`);
+            })
+          );
+        });
+
         plan.steps.forEach(step => {
           if (step.next && step.next !== 'end') {
             expect(ids.has(step.next)).toBe(true);
@@ -113,6 +127,15 @@ describe('normalizeLessonPlan', () => {
           (step.branches || []).forEach(branch => {
             expect(ids.has(branch.goTo)).toBe(true);
           });
+          if (step.kind === 'hub') {
+            step.paths.forEach(p => {
+              expect(p.steps.length).toBeGreaterThan(0);
+              p.steps.forEach(sid => expect(ids.has(sid)).toBe(true));
+              (p.requires || []).forEach(reqId =>
+                expect(step.paths.some(other => other.id === reqId)).toBe(true)
+              );
+            });
+          }
           if (step.kind === 'questions') {
             step.questions.forEach(q =>
               (q.options || []).forEach(o => {

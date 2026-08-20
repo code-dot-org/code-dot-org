@@ -169,6 +169,21 @@ function currentStepDetails(step: Step): string {
       );
     }
   }
+  if (step.kind === 'hub') {
+    lines.push('  Skill paths on this hub:');
+    step.paths.forEach(p =>
+      lines.push(
+        `    - ${p.title}${p.objective ? ` — ${p.objective}` : ''}${
+          p.standard ? ` (standard: ${p.standard})` : ''
+        }`
+      )
+    );
+    lines.push(
+      `  The student picks a path in the main area, plays through its steps,
+  and returns here.  Help them choose if asked; never set
+  action="advance" — the hub advances itself when its paths are done.`
+    );
+  }
   if (step.kind === 'questions') {
     lines.push('  Questions the student answers on this step:');
     step.questions.forEach(q => lines.push(`    - ${q.prompt}`));

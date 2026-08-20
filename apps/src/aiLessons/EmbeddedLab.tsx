@@ -506,9 +506,9 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
     );
   }
 
-  if (step.kind === 'questions') {
-    // Questions steps are rendered by QuestionFlow at the page level,
-    // not through the lab mount.
+  if (step.kind === 'questions' || step.kind === 'hub') {
+    // Questions and hub steps are rendered at the page level
+    // (QuestionFlow / SkillHub), not through the lab mount.
     return null;
   }
 

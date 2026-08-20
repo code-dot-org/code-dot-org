@@ -1206,3 +1206,189 @@ textarea {
     text-decoration: none;
   }
 }
+
+// --- Skill-tree hub (walking skeleton; rings land in the UI phase) ---
+
+.skillHub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 48px 24px;
+  height: 100%;
+  overflow-y: auto;
+  text-align: center;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-secondary);
+  animation: question-enter 320ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
+
+  h2 {
+    margin: 0;
+    color: var(--text-neutral-primary);
+  }
+}
+
+.skillHubPaths {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.skillHubPath {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 16px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 12px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--background-brand-teal-primary);
+  }
+}
+
+.skillHubPathCount {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.skillHubPathTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.skillHubPathObjective {
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+// "Back to hub" affordance shown while inside a skill path.  Becomes
+// the mini-ring progress header in the UI phase.
+.backToHub {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 16px;
+  background: none;
+  color: var(--text-neutral-secondary);
+  font-size: 12px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-neutral-primary);
+    border-color: var(--background-brand-teal-primary);
+  }
+}
+
+.skillHubPathLocked {
+  opacity: 0.55;
+  cursor: not-allowed;
+
+  &:hover {
+    transform: none;
+    border-color: var(--borders-neutral-primary);
+  }
+}
+
+// --- Segmented progress rings (ProgressRing.tsx) ---
+
+.ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    display: block;
+    // Segments fill clockwise from 12 o'clock.
+    transform: rotate(0deg);
+  }
+}
+
+.ringSegment {
+  fill: none;
+  stroke: var(--borders-neutral-primary);
+  stroke-linecap: round;
+  transition: stroke 400ms ease;
+}
+
+.ringSegmentDone {
+  fill: none;
+  stroke: var(--background-brand-teal-primary);
+  stroke-linecap: round;
+  transition: stroke 400ms ease;
+}
+
+.ringCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillHubPathCountDone {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-brand-teal-primary, var(--text-success-primary));
+}
+
+// Mini rings in the in-path header: the whole row is the back-to-hub
+// button; the current path's ring gets a subtle emphasis.
+.miniRing {
+  display: inline-flex;
+  opacity: 0.55;
+}
+
+.miniRingCurrent {
+  display: inline-flex;
+  border-radius: 50%;
+  outline: 2px solid var(--background-brand-teal-primary);
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ringSegment,
+  .ringSegmentDone {
+    transition: none;
+  }
+
+  .skillHub {
+    animation: none;
+  }
+}
+
+// Teacher roll-up: per-hub path rings on a student's lesson entry.
+.teacherHubRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.teacherHubTitle {
+  font-weight: 600;
+  color: var(--text-neutral-secondary);
+}
+
+.teacherHubPath {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-neutral-primary);
+}

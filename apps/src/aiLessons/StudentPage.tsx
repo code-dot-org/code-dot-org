@@ -31,8 +31,10 @@ import ChecklistPanel from './ChecklistPanel';
 import EmbeddedLab from './EmbeddedLab';
 import {deterministicResolver, NavDecision} from './navigation';
 import {generateStepObservation} from './observations';
+import ProgressRing from './ProgressRing';
 import QuestionFlow from './QuestionFlow';
 import {Link} from './router';
+import SkillHub, {pathProgress} from './SkillHub';
 import {
   AnswerRecord,
   loadInputs,
@@ -55,7 +57,13 @@ import {
   TutorMessage,
   TutorOpening,
 } from './tutor';
-import {LessonPlan, stepShowsChecklist} from './types';
+import {
+  hubOwning,
+  LessonPlan,
+  pathStepsFor,
+  SkillPath,
+  stepShowsChecklist,
+} from './types';
 import {useStudentWork} from './useStudentWork';
 
 import styles from './aiLessons.module.scss';
@@ -168,6 +176,11 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // opening on every answer).
   const [inputs, setInputs] = useState<StudentInputs>({});
   const inputsRef = useRef<StudentInputs>({});
+  // Step ids the student has completed, in order.  What skill-tree hubs
+  // count (path rings light per completed step).  Ref mirrors state so
+  // completions and persists read the latest without effect churn.
+  const [completedStepIds, setCompletedStepIds] = useState<string[]>([]);
+  const completedRef = useRef<string[]>([]);
   // Bumped when the AI build partner rewrites the current step's saved
   // source; part of the EmbeddedLab key, so the lab remounts and loads
   // the new source through the normal path.
@@ -244,6 +257,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       setChecklistState(savedChecklist);
       checklistRef.current = savedChecklist;
       observationsRef.current = snapshot?.observations || {};
+      const savedCompleted = snapshot?.completedStepIds || [];
+      setCompletedStepIds(savedCompleted);
+      completedRef.current = savedCompleted;
       const savedId = snapshot?.currentStepId;
       if (savedId && lesson.steps.some(s => s.id === savedId)) {
         setCurrentStepId(savedId);
@@ -287,9 +303,10 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           lesson,
           work,
           previous: progressRef.current,
-          // Ride the latest checklist verdicts on every event so tutor
-          // updates between events aren't lost for long.
+          // Ride the latest checklist verdicts and completion set on
+          // every event so updates between events aren't lost for long.
           checklist: checklistRef.current,
+          completedStepIds: completedRef.current,
           ...position,
         });
         progressRef.current = snapshot;
@@ -387,6 +404,45 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     setPath(p => [...p, decision.stepId]);
   }, []);
 
+  // Persist a non-completing navigation (entering a path, returning to
+  // the hub) so a reload resumes there rather than at the last event.
+  const persistPosition = useCallback(
+    (stepId: string) => {
+      if (!lesson.id) return;
+      saveSnapshotExtras(lesson.id, progressRef.current, {
+        currentStepId: stepId,
+      }).then(saved => {
+        if (saved) progressRef.current = saved;
+      });
+    },
+    [lesson.id]
+  );
+
+  // Enter a hub path: jump to its first incomplete step (or replay from
+  // the top when it's already done).  Navigation, not completion —
+  // nothing is recorded until steps complete.
+  const enterPath = useCallback(
+    (skillPath: SkillPath) => {
+      const ids = pathStepsFor(lesson, skillPath);
+      const target =
+        ids.find(id => !completedRef.current.includes(id)) || ids[0];
+      if (!target) return;
+      navigateTo({kind: 'goto', stepId: target});
+      persistPosition(target);
+    },
+    [lesson, navigateTo, persistPosition]
+  );
+
+  // The hub owning the current step, when it's a skill-path step.
+  // Drives the "back to hub" affordance.
+  const owningHub = hubOwning(lesson, currentStepId);
+
+  const backToHub = useCallback(() => {
+    if (!owningHub) return;
+    navigateTo({kind: 'goto', stepId: owningHub.hub.id});
+    persistPosition(owningHub.hub.id);
+  }, [owningHub, navigateTo, persistPosition]);
+
   // Complete the current step: record it, ask the resolver where to go,
   // and navigate.  `selectedOptionId` is set when completion came from a
   // multiple-choice selection whose option may carry a branch target.
@@ -395,6 +451,12 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const completeStep = useCallback(
     async (selectedOptionId?: string) => {
       setPendingAdvance(null);
+      // Mark the step complete before resolving: path continuation needs
+      // the current step in the completed set to find the next one.
+      if (!completedRef.current.includes(step.id)) {
+        completedRef.current = [...completedRef.current, step.id];
+        setCompletedStepIds(completedRef.current);
+      }
       setResolving(true);
       let decision: NavDecision;
       try {
@@ -404,6 +466,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           path,
           selectedOptionId,
           inputs: inputsRef.current,
+          completedStepIds: completedRef.current,
           judgeCondition: judgeBranchCondition,
         });
       } finally {
@@ -621,6 +684,32 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
               →
             </button>
           </div>
+          {owningHub && (
+            <button
+              type="button"
+              className={styles.backToHub}
+              onClick={backToHub}
+              title="Return to the skill map — your progress here is kept"
+            >
+              <span>← {owningHub.hub.title}</span>
+              {owningHub.hub.paths.map(p => {
+                const {done, total} = pathProgress(lesson, p, completedStepIds);
+                return (
+                  <span
+                    key={p.id}
+                    className={
+                      p.id === owningHub.path.id
+                        ? styles.miniRingCurrent
+                        : styles.miniRing
+                    }
+                    title={`${p.title}: ${done}/${total}`}
+                  >
+                    <ProgressRing done={done} total={total} size={20} />
+                  </span>
+                );
+              })}
+            </button>
+          )}
         </header>
 
         {/* Pin the tutor's opening (welcome + instruction) at the top so
@@ -775,7 +864,16 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       </aside>
 
       <main className={styles.labArea}>
-        {step.kind === 'questions' ? (
+        {step.kind === 'hub' ? (
+          <SkillHub
+            key={`${lesson.id || 'unsaved'}-${step.id}`}
+            lesson={lesson}
+            hub={step}
+            completedStepIds={completedStepIds}
+            onEnterPath={enterPath}
+            onContinue={() => completeStep()}
+          />
+        ) : step.kind === 'questions' ? (
           <QuestionFlow
             key={`${lesson.id || 'unsaved'}-${step.id}`}
             step={step}

@@ -23,7 +23,7 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
 import {loggedGenerateText} from './aiLog';
-import {LessonPlan} from './types';
+import {LessonPlan, pathStepsFor} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
 const MAX_EVENTS_TO_KEEP = 200;
@@ -56,6 +56,11 @@ export interface ProgressSnapshot {
   // lastCompletedCheckpointIndex + 1.
   path?: string[];
   currentStepId?: string;
+  // Every step id the student has completed, in completion order.
+  // Unlike `path` (which records navigation, revisits included), this
+  // is the set skill-tree hubs count: a path's ring segments light per
+  // completed step.
+  completedStepIds?: string[];
   // Latest tutor verdict per lesson-checklist item id.
   checklist?: {[itemId: string]: boolean};
   // Rubric-scored observations of HOW the student worked, keyed by the
@@ -129,10 +134,34 @@ function formatEventsForPrompt(events: ProgressEvent[]): string {
     .join('\n');
 }
 
+// Per-path progress for every hub in the lesson, as prompt lines.
+// Empty string when the lesson has no hubs.
+function formatHubStatus(
+  lesson: LessonPlan,
+  completedStepIds: string[]
+): string {
+  const lines: string[] = [];
+  for (const step of lesson.steps) {
+    if (step.kind !== 'hub') continue;
+    lines.push(`Skill hub "${step.title}":`);
+    for (const p of step.paths) {
+      const ids = pathStepsFor(lesson, p);
+      const done = ids.filter(id => completedStepIds.includes(id)).length;
+      const standard = p.standard ? ` [standard: ${p.standard}]` : '';
+      const objective = p.objective ? ` — ${p.objective}` : '';
+      lines.push(
+        `  - ${p.title}${standard}${objective}: ${done}/${ids.length} steps complete`
+      );
+    }
+  }
+  return lines.join('\n');
+}
+
 async function generateSummary(
   lesson: LessonPlan,
   events: ProgressEvent[],
-  latestWork: string | undefined
+  latestWork: string | undefined,
+  completedStepIds: string[]
 ): Promise<string> {
   initAiLessonsGatewayContext();
   if (events.length === 0) return EMPTY_SUMMARY;
@@ -150,6 +179,13 @@ async function generateSummary(
     ),
   ].join('\n');
 
+  const hubStatus = formatHubStatus(lesson, completedStepIds);
+  const hubSection = hubStatus
+    ? `\n\nSkill-path progress (speak to these — name the paths and their
+learning objectives, not step numbers):
+${hubStatus}`
+    : '';
+
   const work = latestWork
     ? `\n\nMost recent snapshot of the student's work:\n${clipWork(latestWork)}`
     : '';
@@ -158,7 +194,7 @@ async function generateSummary(
 for their teacher to read.  Be specific about what they've actually done.
 Two or three sentences, no more.
 
-${lessonOverview}
+${lessonOverview}${hubSection}
 
 Recent activity (most recent last):
 ${formatEventsForPrompt(events.slice(-30))}${work}`;
@@ -197,6 +233,8 @@ interface RecordOptions {
   currentStepId?: string;
   // The branch option that produced this navigation, when there was one.
   branchOptionId?: string;
+  // Completed step ids after this event (completions append the step).
+  completedStepIds?: string[];
   // Latest checklist verdicts, carried on every event so tutor updates
   // between events aren't lost for long.
   checklist?: {[itemId: string]: boolean};
@@ -267,7 +305,12 @@ export async function recordProgressEvent(
     ? step.id
     : options.previous?.lastCompletedCheckpointId;
 
-  const summary = await generateSummary(options.lesson, events, options.work);
+  const summary = await generateSummary(
+    options.lesson,
+    events,
+    options.work,
+    options.completedStepIds ?? options.previous?.completedStepIds ?? []
+  );
 
   const snapshot: ProgressSnapshot = {
     lastCompletedCheckpointIndex,
@@ -278,6 +321,8 @@ export async function recordProgressEvent(
     updatedAt: now,
     path: options.path ?? options.previous?.path,
     currentStepId: options.currentStepId ?? options.previous?.currentStepId,
+    completedStepIds:
+      options.completedStepIds ?? options.previous?.completedStepIds,
     checklist: options.checklist ?? options.previous?.checklist,
     observations: options.previous?.observations,
   };

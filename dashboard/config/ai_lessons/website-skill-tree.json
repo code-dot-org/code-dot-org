@@ -1,0 +1,310 @@
+{
+  "formatVersion": 2,
+  "id": "website-skill-tree",
+  "title": "Website Skill Tree",
+  "objective": "Build a website with AI by developing three real skills — prompting, debugging, and JavaScript — chosen and sequenced by the student from a skill hub, then applied to their own project.",
+  "authorInputs": {
+    "prompt": ""
+  },
+  "steps": [
+    {
+      "id": "questionnaire",
+      "kind": "questions",
+      "title": "A few questions first",
+      "role": "checkIn",
+      "description": "Diagnostic inputs that tune the lesson: workspace preference, experience with HTML/CSS and JavaScript, and what the student wants to make. That last answer drives the AI showcase and every build in this lesson.",
+      "questions": [
+        {
+          "id": "work-style",
+          "type": "multipleChoice",
+          "prompt": "How do you like to work?",
+          "options": [
+            {"id": "dark", "label": "Dark mode"},
+            {"id": "light", "label": "Light mode"}
+          ]
+        },
+        {
+          "id": "html-css-experience",
+          "type": "scale",
+          "prompt": "How experienced are you with HTML and CSS?",
+          "scale": {
+            "min": 0,
+            "max": 10,
+            "minLabel": "Never touched it",
+            "maxLabel": "Very experienced"
+          }
+        },
+        {
+          "id": "js-experience",
+          "type": "scale",
+          "prompt": "How about JavaScript?",
+          "scale": {
+            "min": 0,
+            "max": 10,
+            "minLabel": "Never touched it",
+            "maxLabel": "Very experienced"
+          }
+        },
+        {
+          "id": "what-to-make",
+          "type": "freeResponse",
+          "prompt": "What do you want to make?",
+          "placeholder": "A site for your team, your art, a cause, a business idea — anything."
+        }
+      ]
+    },
+    {
+      "id": "showcase",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Here's what's possible",
+      "role": "explore",
+      "sourceMode": "sandbox",
+      "readOnly": true,
+      "validation": "none",
+      "description": "The AI has generated a polished, professional version of the site the student said they want to make. The workspace is read-only — this step is about looking, not editing. Point out what makes it feel professional. By the end of this lesson they'll have the skills to direct AI to build things like this.",
+      "starterPrompt": "Generate a genuinely impressive, professional-quality website for what this student said they want to make — the kind of site a design studio would ship. Multiple clearly distinct sections, strong visual hierarchy, a cohesive color palette, thoughtful spacing, and realistic placeholder content that fits their idea. This is a showcase meant to inspire, so aim high."
+    },
+    {
+      "id": "architect-mindset",
+      "kind": "panels",
+      "title": "You can make this yourself",
+      "role": "info",
+      "panels": [
+        {
+          "caption": "You can make this yourself — and you don't need to write thousands of lines of code by hand to do it."
+        },
+        {
+          "caption": "Think of yourself as an architect directing AI as your junior developer: your job is the vision, the right questions, and assembling the pieces."
+        }
+      ]
+    },
+    {
+      "id": "try-it",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Give it a try!",
+      "role": "explore",
+      "sourceMode": "sandbox",
+      "validation": "none",
+      "aiPrompting": "free",
+      "promptPrefill": "Build me a website based on my idea.",
+      "description": "The student's first build. The prompt box is pre-filled with a simple working prompt — fire it as-is or tweak it. The AI already knows their idea from the questionnaire. Encourage a second prompt to change something; the point is to feel the loop: direct, look, direct again."
+    },
+    {
+      "id": "how-did-it-do",
+      "kind": "panels",
+      "title": "How did it do?",
+      "role": "info",
+      "panels": [
+        {
+          "caption": "Pretty good — but probably not exactly what you pictured. Getting precise takes real skills."
+        },
+        {
+          "caption": "Up next: a skill map. Three paths — prompting, debugging, JavaScript. You choose what to work on and in what order."
+        }
+      ]
+    },
+    {
+      "id": "skill-hub",
+      "kind": "hub",
+      "title": "Your skill map",
+      "role": "checkIn",
+      "next": "bridge",
+      "description": "The central skill hub: three paths the student works through in any order. Each path builds one web-development skill. The student returns here after each path; once all three are complete they move on to apply the skills to their own project.",
+      "paths": [
+        {
+          "id": "prompting",
+          "title": "Prompting",
+          "objective": "Write structural, specific prompts that direct AI precisely — naming sections, layout, and placement instead of vague wishes.",
+          "steps": ["prompt-layout", "prompt-refine"]
+        },
+        {
+          "id": "debugging",
+          "title": "Debugging",
+          "objective": "Find and fix bugs in web code — reading symptoms, locating causes, and directing AI with targeted fix requests.",
+          "steps": ["debug-fixit", "debug-reflect"]
+        },
+        {
+          "id": "javascript",
+          "title": "JavaScript",
+          "objective": "Make a page react to the user: wire up events and change the page from code.",
+          "steps": ["js-motion", "js-build"]
+        }
+      ]
+    },
+    {
+      "id": "prompt-layout",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Direct the layout",
+      "role": "skillBuilding",
+      "segment": {"id": "path-prompting", "title": "Prompting"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "description": "First prompting exercise. The student writes a layout-only prompt for a fictional brand: Nimbus, a weather app startup. Structural geometry only — sections, columns, placement — deliberately no colors or fonts. If their prompt drifts into styling, remind them: structure first.",
+      "successCriteria": "The generated page contains at least three visually distinct sections (for example a header, a main content area, and a footer)."
+    },
+    {
+      "id": "prompt-refine",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Make it precise",
+      "role": "skillBuilding",
+      "segment": {"id": "path-prompting", "title": "Prompting"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "description": "Second prompting exercise, continuing the Nimbus page from the previous step. Take something vague the student wants ('make it nicer') and rebuild it as a structural instruction using the word bank: header, hero, section, card, column, grid, navigation, footer, spacing, alignment. Each precise prompt gets fired so they see specificity pay off.",
+      "successCriteria": "The student has issued at least one specific, structural prompt (naming a section or element and what should change about it), and the page reflects the change."
+    },
+    {
+      "id": "debug-fixit",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Fix it!",
+      "role": "skillBuilding",
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "description": "A debugging exercise on a broken page. Three planted issues range in difficulty: (1) the second paragraph's closing tag is missing, so text runs together; (2) style.css misspells 'color' as 'colr', so the heading isn't blue; (3) script.js targets the id 'buton' which doesn't exist, so the button does nothing. The student can fix by hand or direct the AI — which issue they attack first and how targeted their prompts are is exactly what we want to observe.",
+      "successCriteria": "At least two of the three planted bugs are verifiably fixed. Celebrate if all three are.",
+      "rubric": "Score how effectively the student debugged: 4 = named specific bugs or symptoms and asked targeted questions or fixes; 2 = generic 'fix it' prompting that still converged; 0 = flailing or no engagement. Note which of the three planted bugs (unclosed paragraph tag, the 'colr' typo, the wrong button id) ended up fixed.",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Fix me</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <script src=\"script.js\" defer></script>\n  </head>\n  <body>\n    <h1>This heading should be blue</h1>\n    <p>This paragraph is fine.</p>\n    <p>This paragraph never ends…\n    <p>…and this one got swallowed by it.</p>\n    <button id=\"button\">This button should change the heading</button>\n  </body>\n</html>\n",
+        "style.css": "h1 {\n  colr: blue;\n}\n",
+        "script.js": "document.getElementById('buton').addEventListener('click', function () {\n  document.querySelector('h1').textContent = 'Fixed it!';\n});\n"
+      }
+    },
+    {
+      "id": "debug-reflect",
+      "kind": "questions",
+      "title": "Your debugging strategy",
+      "role": "reflection",
+      "description": "A short reflection closing the debugging path. There are no wrong answers; the answer feeds the student's profile.",
+      "questions": [
+        {
+          "id": "debug-strategy",
+          "type": "freeResponse",
+          "prompt": "How did you decide which bug to attack first — and what would you try first next time?"
+        }
+      ]
+    },
+    {
+      "id": "js-motion",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Make it react",
+      "role": "skillBuilding",
+      "segment": {"id": "path-js", "title": "JavaScript"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "description": "First JavaScript exercise: the sandbox has a button that changes the heading when clicked. Have the student change what the click does — different text, a different color, something of their own. Hand edits or AI prompts both count; the goal is understanding that JS connects an event to a change.",
+      "successCriteria": "The click handler does something visibly different from the starter behavior ('Something happened!').",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Motion</title>\n    <script src=\"script.js\" defer></script>\n  </head>\n  <body>\n    <h1 id=\"headline\">Nothing has happened yet</h1>\n    <button id=\"go\">Make something happen</button>\n  </body>\n</html>\n",
+        "script.js": "document.getElementById('go').addEventListener('click', function () {\n  document.getElementById('headline').textContent = 'Something happened!';\n});\n"
+      }
+    },
+    {
+      "id": "js-build",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Add your own interaction",
+      "role": "skillBuilding",
+      "segment": {"id": "path-js", "title": "JavaScript"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "description": "Second JavaScript exercise, continuing the same sandbox: add a NEW interaction of the student's own — a second button, a hover effect driven by JS, a counter, anything that reacts to the user. Directing the AI to write it is fine; understanding what it wired up is the point — ask them to explain what their new code listens for and what it changes.",
+      "successCriteria": "The page has a second, working interaction beyond the starter button, and the student can say what event it listens for and what it changes."
+    },
+    {
+      "id": "bridge",
+      "kind": "panels",
+      "title": "Skills unlocked",
+      "role": "info",
+      "panels": [
+        {
+          "caption": "Prompting, debugging, JavaScript — that's a real web developer's toolkit."
+        },
+        {
+          "caption": "Now aim it at your own site. Build it, then polish it from the next skill map."
+        }
+      ]
+    },
+    {
+      "id": "build-project",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Build your site",
+      "role": "projectCheckpoint",
+      "validation": "none",
+      "aiPrompting": "free",
+      "description": "The real project: using the prompting skills from the hub, the student generates and shapes the UI shell of THEIR site — the one from the questionnaire. Coach toward detailed structural prompts; debugging and JS skills come into play as things break or need behavior.",
+      "next": "polish-hub"
+    },
+    {
+      "id": "polish-hub",
+      "kind": "hub",
+      "title": "Polish your site",
+      "role": "checkIn",
+      "next": "finalize",
+      "description": "The second skill hub, applied to the student's real project: a styling pass, then a motion pass that unlocks after styling is complete.",
+      "paths": [
+        {
+          "id": "polish-styling",
+          "title": "Styling",
+          "objective": "Apply a deliberate visual style: a cohesive color palette, readable typography, consistent spacing.",
+          "steps": ["style-pass"]
+        },
+        {
+          "id": "polish-motion",
+          "title": "Motion",
+          "objective": "Direct micro-interactions with precision: exact triggers and exact effects.",
+          "steps": ["motion-pass"],
+          "requires": ["polish-styling"]
+        }
+      ]
+    },
+    {
+      "id": "style-pass",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Styling pass",
+      "role": "projectCheckpoint",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "description": "A deliberate styling pass on the student's own site: pick a palette that fits the topic, make the typography readable, even out the spacing. Prompts or hand edits both count.",
+      "successCriteria": "The site has a deliberate, cohesive color scheme (not browser defaults) applied via CSS."
+    },
+    {
+      "id": "motion-pass",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Motion pass",
+      "role": "projectCheckpoint",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "description": "Micro-interactions on the student's own site: cards that scale slightly on hover, a glowing call-to-action, smooth transitions. Push for specificity — 'scale up by 5% on hover' beats 'add some animation'.",
+      "successCriteria": "At least one working hover or transition effect exists on the page.",
+      "presetPrompts": [
+        "Make the cards scale up by 5% when you hover over them, with a smooth transition.",
+        "Add a soft glow effect to the main call-to-action button."
+      ]
+    },
+    {
+      "id": "finalize",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Finalize your website",
+      "role": "freePlay",
+      "validation": "none",
+      "aiPrompting": "free",
+      "next": "end",
+      "description": "Free finishing time. The student rounds out their site with everything they've learned. Celebrate what they built and how: skills chosen and practiced on their own terms, then applied."
+    }
+  ]
+}

@@ -32,7 +32,7 @@ import {
 // The surfaces a step can present.  Lab steps map to their labType;
 // panels and questions steps have their own blurbs so the tutor knows
 // what the student is looking at.
-export type StepSurface = 'weblab2' | 'music' | 'panels' | 'questions';
+export type StepSurface = 'weblab2' | 'music' | 'panels' | 'questions' | 'hub';
 
 // ---- Music ----
 
@@ -124,6 +124,13 @@ const SECTION_RULES = [
   'the student will hit a dead end.',
 ];
 
+function hubCapabilities(): string {
+  return `Skill hub — a map of skill paths the student chooses between.
+  Each path shows its progress; the student clicks one to play its next
+  step and returns here when the path is done.  The student navigates in
+  the main area, not the chat.  No code is involved.`;
+}
+
 function questionsCapabilities(): string {
   return `Questions — a full-screen prompt surface, one question at a time.
   Questions are free-response, multiple-choice, or a slider scale.  The
@@ -153,6 +160,13 @@ export function getCapabilitiesMarkdownFor(surface: StepSurface): string {
         '',
         '=== Panels capabilities ===',
         panelsCapabilities(),
+      ].join('\n');
+    case 'hub':
+      return [
+        ...SECTION_RULES,
+        '',
+        '=== Skill hub capabilities ===',
+        hubCapabilities(),
       ].join('\n');
     case 'questions':
       return [

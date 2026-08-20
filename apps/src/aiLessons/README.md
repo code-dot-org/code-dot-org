@@ -68,6 +68,24 @@ Step kinds:
 - **panels** — the instructional slide carousel; Continue advances.
 - **questions** — free-response / multiple-choice / scale prompts,
   one at a time.  Every answer is recorded as student input.
+- **hub** — a skill-tree hub: several `paths` (ordered runs of ordinary
+  lesson steps, each with a `title`, an `objective`, and optionally an
+  official `standard` key) visible at once with per-path progress; the
+  student picks which to continue.  Entering a path is navigation, not
+  completion; finishing a path's last step returns to the hub.  A path
+  with `requires: [pathIds]` stays locked until those complete (the
+  expanding tree).  The hub's own `next` fires once every required path
+  is complete — which is how a lesson strings hub sections together.
+  Path membership is read through `pathStepsFor()`, the seam where a
+  per-student overlay (the future mastery agent appending remediation
+  steps) slots in.  Completion is tracked as `completedStepIds` on the
+  progress snapshot.
+
+  Teachers see the same picture: the roll-up carries each lesson's hub
+  definitions plus the student's completion set, rendered with the same
+  `ProgressRing` component the student hub uses; and the AI progress
+  summary describes hub lessons per path — named skills, objectives,
+  standards — instead of step numbers.
 
 Cross-cutting fields:
 
@@ -101,9 +119,13 @@ Cross-cutting fields:
 ### Navigation
 
 Where to go after a step completes is decided by a **navigation
-resolver** (`navigation.ts`), never by the page: the deterministic
-resolver follows the student's branch option, then the step's `next`
-pointer, then array order, then ends the lesson.  The interface is async
+resolver** (`navigation.ts`), never by the page.  The deterministic
+resolver's precedence: the student's branch option, then automatic
+`branches`, then skill-path continuation (next incomplete step in the
+owning hub's path, else the hub itself), then the step's `next`
+pointer, then array order, then end.  Entering a hub path and the
+"back to hub" affordance are plain navigation — nothing records until
+a step completes.  The interface is async
 and context-fed so an adaptive resolver (suggest the next step from the
 student's answers, performance, and chat) can replace it without touching
 call sites; a `recommend()` seam for "highlight one option in a hub"

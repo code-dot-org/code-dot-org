@@ -11,7 +11,9 @@
 import {StudentInputs} from './studentInputs';
 import {
   BranchCondition,
+  hubOwning,
   LessonPlan,
+  pathStepsFor,
   Question,
   QuestionsStep,
   RecommendRule,
@@ -29,6 +31,9 @@ export interface NavContext {
   // The student's recorded answers; what recommend() rules and branch
   // score conditions match against.
   inputs?: StudentInputs;
+  // Step ids the student has completed (the current step included, when
+  // resolving its completion).  Drives skill-path continuation.
+  completedStepIds?: string[];
   // Evaluates a branch's aiJudge condition (an LLM call, so injected by
   // the page rather than imported here — navigation stays pure and
   // testable).  Absent, or on judge failure, the condition doesn't
@@ -101,14 +106,28 @@ export const deterministicResolver: NavigationResolver = {
         }
       }
 
-      // 3. The step's own `next` pointer (branch rejoins, early ends).
+      // 3. Skill-path continuation: a step owned by a hub path flows to
+      // the path's next incomplete step, and back to its hub once none
+      // remain.  Ranked below `branches` so remediation spurs inside a
+      // path still fire, above `next` so path steps never need authored
+      // pointers.
+      const owner = hubOwning(lesson, currentStepId);
+      if (owner) {
+        const completed = ctx.completedStepIds || [];
+        const nextInPath = pathStepsFor(lesson, owner.path).find(
+          id => id !== currentStepId && !completed.includes(id)
+        );
+        return {kind: 'goto', stepId: nextInPath || owner.hub.id};
+      }
+
+      // 4. The step's own `next` pointer (branch rejoins, early ends).
       if (step.next === 'end') return {kind: 'end'};
       if (step.next && stepExists(lesson, step.next)) {
         return {kind: 'goto', stepId: step.next};
       }
     }
 
-    // 4. Array order.
+    // 5. Array order.
     if (index >= 0 && index < lesson.steps.length - 1) {
       return {kind: 'goto', stepId: lesson.steps[index + 1].id};
     }

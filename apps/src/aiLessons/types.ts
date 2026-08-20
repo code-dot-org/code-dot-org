@@ -23,7 +23,7 @@
 
 export type ProjectLabType = 'weblab2' | 'music';
 
-export type StepKind = 'lab' | 'panels' | 'questions';
+export type StepKind = 'lab' | 'panels' | 'questions' | 'hub';
 
 // Advisory metadata describing the step's place in the lesson arc.  Used
 // for grouping and labeling in the student and author UIs, never for
@@ -207,7 +207,40 @@ export interface QuestionsStep extends StepBase {
   hub?: boolean;
 }
 
-export type Step = LabStep | PanelsStep | QuestionsStep;
+// One skill path on a hub: an ordered run of ordinary lesson steps the
+// student plays through and returns from.  The hub references steps, it
+// never contains them — read the list through pathStepsFor() so a
+// per-student overlay (the future mastery agent appending remediation
+// steps) can extend a path without touching the authored lesson.
+export interface SkillPath {
+  id: string;
+  title: string;
+  // What mastery of this path means.  Shown to the tutor, and the yard-
+  // stick for the future mastery agent.
+  objective?: string;
+  // Official education standard key (e.g. a CSTA identifier).
+  standard?: string;
+  // Ordered step ids making up the path.
+  steps: string[];
+  // Path ids that must be complete before this one unlocks (the
+  // expanding skill tree).  Absent: available immediately.
+  requires?: string[];
+  // Counts toward the hub's completion gate.  Default true.
+  required?: boolean;
+}
+
+// A skill-tree hub: several paths visible at once, the student picks
+// which to continue.  Entering a path is navigation (not completion);
+// finishing a path's last step returns here.  The hub's own
+// next/branches fire once every required path is complete, which is how
+// a lesson strings hub sections together.
+export interface HubStep extends StepBase {
+  kind: 'hub';
+  description?: string;
+  paths: SkillPath[];
+}
+
+export type Step = LabStep | PanelsStep | QuestionsStep | HubStep;
 
 export interface ChecklistItem {
   id: string;
@@ -260,6 +293,32 @@ export function stepShowsChecklist(lesson: LessonPlan, step: Step): boolean {
 
 export function isQuestionsStep(step: Step): step is QuestionsStep {
   return step.kind === 'questions';
+}
+
+export function isHubStep(step: Step): step is HubStep {
+  return step.kind === 'hub';
+}
+
+// The ordered steps of a path that actually exist in the lesson.  The
+// single read path for path membership — the seam where a per-student
+// overlay slots in later.
+export function pathStepsFor(lesson: LessonPlan, path: SkillPath): string[] {
+  return path.steps.filter(id => lesson.steps.some(s => s.id === id));
+}
+
+// The hub that owns a step (lists it in one of its paths).  Steps
+// belong to at most one hub — fixtures enforce this in tests; at
+// runtime the first match wins.
+export function hubOwning(
+  lesson: LessonPlan,
+  stepId: string
+): {hub: HubStep; path: SkillPath} | undefined {
+  for (const step of lesson.steps) {
+    if (!isHubStep(step)) continue;
+    const path = step.paths.find(p => p.steps.includes(stepId));
+    if (path) return {hub: step, path};
+  }
+  return undefined;
 }
 
 // Whether a step id names a sandbox-mode lab step.  Inputs recorded on

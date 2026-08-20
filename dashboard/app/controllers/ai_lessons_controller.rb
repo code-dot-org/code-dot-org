@@ -289,6 +289,25 @@ class AiLessonsController < ApplicationController
         'checklist_done' => checklist_total.positive? ? (parsed['checklist'] || {}).count {|_, done| done} : 0,
         # Rubric-scored process observations, keyed by step id.
         'observations' => parsed['observations'] || {},
+        # Skill-tree progress: the completion set plus each hub's path
+        # definitions, so the client can render per-path rings without a
+        # second fetch per lesson.
+        'completed_step_ids' => parsed['completedStepIds'] || [],
+        'hubs' => (lesson['steps'] || []).select {|s| s['kind'] == 'hub'}.map do |hub|
+          {
+            'id' => hub['id'],
+            'title' => hub['title'],
+            'paths' => (hub['paths'] || []).map do |p|
+              {
+                'id' => p['id'],
+                'title' => p['title'],
+                'objective' => p['objective'],
+                'standard' => p['standard'],
+                'steps' => p['steps'] || [],
+              }
+            end,
+          }
+        end,
       }]
     end
   end

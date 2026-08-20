@@ -541,3 +541,165 @@ describe('website-with-ai branch points', () => {
     );
   });
 });
+
+describe('skill-path continuation', () => {
+  const hubLesson: LessonPlan = {
+    formatVersion: 2,
+    title: 'Hub test',
+    objective: '',
+    authorInputs: {prompt: ''},
+    steps: [
+      {
+        id: 'hub',
+        kind: 'hub',
+        title: 'hub',
+        next: 'after',
+        paths: [
+          {id: 'p1', title: 'P1', steps: ['s1', 's2']},
+          {id: 'p2', title: 'P2', steps: ['s3']},
+        ],
+      },
+      lab('s1'),
+      lab('s2', {
+        branches: [
+          {when: {aiJudge: {stepId: 's2', criteria: 'x'}}, goTo: 'after'},
+        ],
+      }),
+      lab('s3'),
+      lab('after', {next: 'end'}),
+    ],
+  };
+
+  const resolveFrom = (
+    currentStepId: string,
+    completedStepIds: string[],
+    extra: Partial<NavContext> = {}
+  ) =>
+    deterministicResolver.resolveNext({
+      lesson: hubLesson,
+      currentStepId,
+      path: [currentStepId],
+      completedStepIds,
+      ...extra,
+    });
+
+  it('continues to the next incomplete step in the path', async () => {
+    expect(await resolveFrom('s1', ['s1'])).toEqual({
+      kind: 'goto',
+      stepId: 's2',
+    });
+    // Works even when the completion set is missing the current step
+    // (older callers): the current step never counts as a candidate.
+    expect(await resolveFrom('s1', [])).toEqual({kind: 'goto', stepId: 's2'});
+  });
+
+  it('returns to the owning hub when the path is done', async () => {
+    expect(await resolveFrom('s2', ['s1', 's2'])).toEqual({
+      kind: 'goto',
+      stepId: 'hub',
+    });
+    expect(await resolveFrom('s3', ['s3'])).toEqual({
+      kind: 'goto',
+      stepId: 'hub',
+    });
+  });
+
+  it('skips already-completed steps when replaying a path', async () => {
+    expect(await resolveFrom('s1', ['s1', 's2'])).toEqual({
+      kind: 'goto',
+      stepId: 'hub',
+    });
+  });
+
+  it('lets automatic branches win over path continuation', async () => {
+    expect(
+      await resolveFrom('s2', ['s1', 's2'], {
+        inputs: {
+          seed: {
+            questionId: 'seed',
+            stepId: 's2',
+            prompt: 'p',
+            answer: 'a',
+            at: '2026-01-01T00:00:00Z',
+          },
+        },
+        judgeCondition: async () => true,
+      })
+    ).toEqual({kind: 'goto', stepId: 'after'});
+  });
+
+  it('routes the hub itself via its next pointer', async () => {
+    expect(await resolveFrom('hub', ['s1', 's2', 's3'])).toEqual({
+      kind: 'goto',
+      stepId: 'after',
+    });
+  });
+});
+
+// Walk the skill-tree fixture: every path returns to its hub, hubs
+// route past their path steps, and the lesson ends after finalize.
+describe('website-skill-tree hub navigation', () => {
+  const fixture = normalizeLessonPlan(
+    JSON.parse(
+      fs.readFileSync(
+        path.resolve(
+          __dirname,
+          '../../../../dashboard/config/ai_lessons/website-skill-tree.json'
+        ),
+        'utf-8'
+      )
+    )
+  );
+
+  const resolveFrom = (currentStepId: string, completedStepIds: string[]) =>
+    deterministicResolver.resolveNext({
+      lesson: fixture,
+      currentStepId,
+      path: [currentStepId],
+      completedStepIds,
+    });
+
+  it('walks each skill path and returns to the hub', async () => {
+    expect(await resolveFrom('prompt-layout', ['prompt-layout'])).toEqual({
+      kind: 'goto',
+      stepId: 'prompt-refine',
+    });
+    expect(
+      await resolveFrom('prompt-refine', ['prompt-layout', 'prompt-refine'])
+    ).toEqual({kind: 'goto', stepId: 'skill-hub'});
+    expect(await resolveFrom('debug-fixit', ['debug-fixit'])).toEqual({
+      kind: 'goto',
+      stepId: 'debug-reflect',
+    });
+    expect(
+      await resolveFrom('debug-reflect', ['debug-fixit', 'debug-reflect'])
+    ).toEqual({kind: 'goto', stepId: 'skill-hub'});
+    expect(await resolveFrom('js-build', ['js-motion', 'js-build'])).toEqual({
+      kind: 'goto',
+      stepId: 'skill-hub',
+    });
+  });
+
+  it('routes hubs past their own path steps', async () => {
+    expect(await resolveFrom('skill-hub', [])).toEqual({
+      kind: 'goto',
+      stepId: 'bridge',
+    });
+    expect(await resolveFrom('polish-hub', [])).toEqual({
+      kind: 'goto',
+      stepId: 'finalize',
+    });
+  });
+
+  it('returns polish paths to the polish hub and ends after finalize', async () => {
+    expect(await resolveFrom('style-pass', ['style-pass'])).toEqual({
+      kind: 'goto',
+      stepId: 'polish-hub',
+    });
+    expect(await resolveFrom('motion-pass', ['motion-pass'])).toEqual({
+      kind: 'goto',
+      stepId: 'polish-hub',
+    });
+    expect(await resolveFrom('finalize', ['finalize'])).toEqual({kind: 'end'});
+  });
+});

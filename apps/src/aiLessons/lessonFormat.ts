@@ -6,6 +6,7 @@
 // normalizeLessonPlan() so the rest of the codebase only ever sees v2.
 
 import {
+  HubStep,
   LabStep,
   LessonPlan,
   PanelSlide,
@@ -87,6 +88,19 @@ function normalizeStep(raw: unknown, index: number): Step {
           ? 'tutor'
           : 'none',
     };
+  }
+
+  if (step.kind === 'hub') {
+    const h = step as Partial<HubStep>;
+    const paths = (Array.isArray(h.paths) ? h.paths : []).map((p, pIndex) => ({
+      ...p,
+      id: p.id || `${id}-path-${pIndex}`,
+      title: p.title || `Path ${pIndex + 1}`,
+      steps: (Array.isArray(p.steps) ? p.steps : []).filter(
+        (s): s is string => typeof s === 'string'
+      ),
+    }));
+    return {...(h as HubStep), id, title, kind: 'hub', paths};
   }
 
   if (step.kind === 'questions') {

@@ -11,9 +11,24 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import ProgressRing from './ProgressRing';
 import {Link} from './router';
 
 import styles from './aiLessons.module.scss';
+
+interface TeacherHubPath {
+  id: string;
+  title: string;
+  objective?: string;
+  standard?: string;
+  steps: string[];
+}
+
+interface TeacherHub {
+  id: string;
+  title: string;
+  paths: TeacherHubPath[];
+}
 
 interface TeacherProgressEntry {
   user_id: number;
@@ -31,6 +46,10 @@ interface TeacherProgressEntry {
   checklist_done?: number;
   // Rubric-scored process observations, keyed by step id.
   observations?: {[stepId: string]: {summary: string; score?: number}};
+  // Skill-tree progress: the student's completion set plus the lesson's
+  // hub/path definitions (same segment math as the student's rings).
+  completed_step_ids?: string[];
+  hubs?: TeacherHub[];
 }
 
 interface StudentGroup {
@@ -168,6 +187,38 @@ const TeacherProgressPage: React.FunctionComponent = () => {
                         <em>{entry.lesson_objective}</em>
                       </div>
                     )}
+                    {(entry.hubs || [])
+                      .filter(hub => hub.paths.length > 0)
+                      .map(hub => (
+                        <div key={hub.id} className={styles.teacherHubRow}>
+                          <span className={styles.teacherHubTitle}>
+                            {hub.title}
+                          </span>
+                          {hub.paths.map(p => {
+                            const done = p.steps.filter(id =>
+                              (entry.completed_step_ids || []).includes(id)
+                            ).length;
+                            return (
+                              <span
+                                key={p.id}
+                                className={styles.teacherHubPath}
+                                title={
+                                  [p.standard, p.objective]
+                                    .filter(Boolean)
+                                    .join(' — ') || undefined
+                                }
+                              >
+                                <ProgressRing
+                                  done={done}
+                                  total={p.steps.length}
+                                  size={22}
+                                />
+                                {p.title} {done}/{p.steps.length}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      ))}
                     <p className={styles.studentSummary}>
                       {entry.summary || 'No summary yet.'}
                     </p>
