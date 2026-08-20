@@ -14,6 +14,17 @@ export function imageTypeFromCategories(categories?: string[]): ImageType {
   return 'sprite';
 }
 
+/** The categories that record an image kind — imageTypeFromCategories' inverse. */
+export function categoriesForType(imageType: ImageType): string[] {
+  if (imageType === 'background') {
+    return [BACKGROUNDS_CATEGORY];
+  }
+  if (imageType === 'block') {
+    return [BLOCKS_CATEGORY];
+  }
+  return [];
+}
+
 const GROUP_ORDER: Record<ImageType, number> = {
   background: 0,
   sprite: 1,
