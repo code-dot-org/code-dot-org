@@ -178,6 +178,39 @@ describe('the project a learner opens', () => {
     expect(coin?.drawing).toBeUndefined();
   });
 
+  it('can be lost: walking into the crawler costs health', async () => {
+    // The starter could be WON and not lost, which left Health with a demo,
+    // tests and no user at all. Four files have to agree again — the rule
+    // being held, the crawler electing Deals Damage, the player electing Has
+    // Health, and the map putting one where the player will walk.
+    const {world, modules} = await opened();
+    const health = modules['rules/health'].HealthProperty;
+    const player = () =>
+      actor(world, 'Player')!.get(health as never) as unknown as number;
+
+    play(world, 0.5);
+    const full = player();
+    play(world, 2.5, ['right arrow']);
+
+    expect(full).toBeGreaterThan(0);
+    expect(player()).toBeLessThan(full);
+  });
+
+  it('says so on the board when the player runs out', async () => {
+    // Health raises `dies` and removes nothing — running out is a fact, not a
+    // policy — so what dying MEANS is the player's handler, and it means the
+    // board says so. Held right the whole way: the crawler walks its beat back
+    // over the player, and the mercy time paces the hits.
+    const {world, modules} = await opened();
+    const text = modules['rules/writing'].TextProperty;
+    const board = () =>
+      actor(world, 'Scoreboard')!.get(text as never) as unknown as string;
+
+    play(world, 12, ['right arrow']);
+
+    expect(board()).toBe('GAME OVER');
+  });
+
   it('is winnable — three coins, and a target of exactly three coins', () => {
     // Not a play-through: the third coin needs a jump landed on a moving
     // platform, which is a level design to check rather than a mechanic. What

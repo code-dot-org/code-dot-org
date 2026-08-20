@@ -140,7 +140,8 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     name: 'Platformer',
     description:
       'The starter project: gravity, arrow keys, and a room with coins to ' +
-      'collect — two on the floor and one that has to be jumped for.',
+      'collect — two on the floor and one that has to be jumped for — a ' +
+      'score to reach, and something walking about that will hurt you.',
     source: DEFAULT_PROJECT.source,
     instructions:
       '## World Lab\n\nBuild a game world in code. Edit the world and ' +
@@ -148,7 +149,11 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- The preview runs your game as you edit\n' +
       '- Click the preview, then use the arrow keys to move the player, and space to jump\n' +
       '- Walk into a coin to take it: the coin is `Can Be Collected` and the ' +
-      'player `Collects`, and the Console counts what it has\n' +
+      'player `Collects`, the Scoreboard adds ten, and the Console counts ' +
+      'what it has\n' +
+      '- Take all three and you win; the Scoreboard says so\n' +
+      '- Avoid the Crawler, which walks its beat and takes a heart off you ' +
+      'each time it touches — three and it is over\n' +
       '- Animations are files under `animations/`: open one to edit its frames\n' +
       '- `console.log` output appears in the Console\n' +
       '- Try changing the player’s start position, gravity, or move speed — or ' +
