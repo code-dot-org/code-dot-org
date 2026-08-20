@@ -180,8 +180,6 @@ dashboard/brakeman_security_report.htm
 /aws/.dashboard-up-to-date
 aws/**/deploy-*.log
 /aws/.level_builder-built
-/aws/.pegasus-built
-/aws/.pegasus-up-to-date
 /aws/.website-ci-built
 /aws/.websites-built
 /aws/.websites-test-built

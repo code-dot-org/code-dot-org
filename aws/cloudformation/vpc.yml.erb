@@ -140,11 +140,6 @@ Resources:
           FromPort: 9000
           ToPort: 9000
           CidrIp: 0.0.0.0/0
-        # Forward HTTP requests directly to Pegasus Puma on Web Application Server ("Front End") EC2 Instances.
-        - IpProtocol: tcp
-          FromPort: 9001
-          ToPort: 9001
-          CidrIp: 0.0.0.0/0
   # Used by legacy Load Balancers that only serve traffic directly from the public internet (codeprojects.org).
   ELBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -176,11 +171,6 @@ Resources:
           FromPort: 9000
           ToPort: 9000
           CidrIp: 0.0.0.0/0
-        # Forward HTTP requests directly to Pegasus Puma on Web Application Server ("Front End") EC2 Instances.
-        - IpProtocol: tcp
-          FromPort: 9001
-          ToPort: 9001
-          CidrIp: 0.0.0.0/0
   FrontendSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -201,11 +191,6 @@ Resources:
         - IpProtocol: tcp
           FromPort: 9000
           ToPort: 9000
-          SourceSecurityGroupId: {Ref: ELBSecurityGroup}
-        # Enable Pegasus Puma to listen on a TCP port (in addition to receiving HTTP requests via a Unix socket from nginx).
-        - IpProtocol: tcp
-          FromPort: 9001
-          ToPort: 9001
           SourceSecurityGroupId: {Ref: ELBSecurityGroup}
         - IpProtocol: tcp
           FromPort: 22

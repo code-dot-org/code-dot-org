@@ -73,9 +73,6 @@ gem 'google-apis-analytics_v3'
 gem 'google-apis-classroom_v1'
 gem 'google-apis-youtube_v3'
 
-# CSRF protection for Sinatra.
-gem 'rack_csrf'
-
 # Allow profiling in all environments (including production). It will only be enabled when
 # CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
 gem 'bootsnap', '>= 1.14.0', require: false
@@ -96,7 +93,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-  gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
 
@@ -137,15 +133,14 @@ group :development, :test do
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
 
-  # For pegasus PDF generation / merging testing.
+  # For parallel test runs.
   gem 'parallel_tests'
-  gem 'pdf-reader', require: false
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
 gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc]
 
-# For pegasus PDF generation.
+# Follow http -> https redirects in open-uri (see lib/cdo/tempfile.rb).
 gem 'open_uri_redirections', require: false
 
 # Optimizes copy-on-write memory usage with GC before web-application fork.
