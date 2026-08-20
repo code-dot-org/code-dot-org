@@ -73,9 +73,15 @@ rule.uses('Gravity');
 const jumps = rule.trait('Jumps');
 jumps.uses(AffectedByGravity);
 
-// Units a second, upward. With the default gravity of 9 this clears about
-// three tiles and hangs for a little under a second — a jump you can steer.
-const strength = jumps.number('jump strength', 4);
+// Units a second, upward. Against the default gravity of 9 that is a rise of
+// v²/2g — about a hundred and forty pixels, or four and a bit tiles.
+//
+// FOUR RATHER THAN THREE, and the starter's own level is why. Its platform is
+// three tiles above the floor, which needs 96 pixels of rise and so a strength
+// of 4.2; a rounder-looking 4 clears 89 and lands the player just under the
+// ledge, forever. A default that ALMOST reaches the canonical platform is the
+// worst of the available numbers, so this one clears it with a tile to spare.
+const strength = jumps.number('jump strength', 5);
 // Seconds of grace after the ground goes. A tenth is the number most
 // platformers land on: long enough to forgive a late press, short enough that
 // nobody notices it as flight.

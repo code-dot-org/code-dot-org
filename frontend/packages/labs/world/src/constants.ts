@@ -20,6 +20,7 @@ import {
   collisionsRule,
   gravityRule,
   inputRule,
+  jumpRule,
   motionRule,
 } from './rules/stock';
 import {TILE_SIZE, VIEWPORT_TILES} from './runtime/viewport';
@@ -275,6 +276,10 @@ const PLAYER_ACTOR = JSON.stringify(
           next: {
             block: stack([
               useTrait('Gravity#AffectedByGravityTrait'),
+              // Jumping requires being affected by gravity, which is why it
+              // sits under it here: a jump is a push AWAY from a ground, and
+              // an actor nothing pulls down has no ground to push away from.
+              useTrait('Jumping#JumpsTrait'),
               useTrait('Arrow Keys#MovesAcrossTrait'),
               // Hearing the keyboard is something an actor ELECTS. The world's
               // own key events are raised once a frame whatever is in it; this
@@ -305,14 +310,26 @@ const PLAYER_ACTOR = JSON.stringify(
         },
         // Space to jump. WHICH key is on the hat — `rules/input` declares its
         // trait's events as "presses ⟨a key⟩", so the handler is registered for
-        // the space bar and never runs for anything else (specs/ENUMS.md). What
-        // is left inside is the one condition a filter cannot express:
-        // gravity's own query, keeping the jump honest — no second jump in
-        // mid-air.
+        // the space bar and never runs for anything else (specs/ENUMS.md).
         //
         // The TRAIT's event, not the world's. A world event is handed no actor
         // and registers on the world, which an `.actor` module has no binding
         // for — "this actor presses space" is the statement an actor can make.
+        //
+        // ONE BLOCK INSIDE, and it used to be four. This handler was
+        //
+        //     if ⟨this actor⟩ is on the ground?
+        //       apply force ⟨0, -5⟩ on ⟨this actor⟩
+        //
+        // which is a jump, and is also the jump `rules/jump` was written
+        // because of. It refuses a late press by a single frame — walk off a
+        // ledge and the space bar does nothing — and it pushes rather than
+        // sets, so a jump taken while already rising goes higher than one
+        // taken from standing. `make ⟨who⟩ jump` owns both of those, along
+        // with the count that turns `jumps allowed: 2` into a double jump.
+        //
+        // The old shape is not lost: it is in the rule's own header, as the
+        // thing the rule exists to replace.
         {
           type: 'world_on_Input_PressesEvent',
           fields: {FILTER0: 'space'},
@@ -320,29 +337,8 @@ const PLAYER_ACTOR = JSON.stringify(
           y: 440,
           next: {
             block: {
-              type: 'controls_if',
-              inputs: {
-                IF0: {
-                  block: {
-                    type: 'world_query_Gravity_IsOnTheGroundQuery',
-                    inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
-                  },
-                },
-                DO0: {
-                  block: {
-                    type: 'world_do_Physics_ApplyForceAction',
-                    inputs: {
-                      VALUE: {
-                        block: {
-                          type: 'world_vector',
-                          fields: {VECTOR: {x: 0, y: -5}},
-                        },
-                      },
-                      ACTOR: {block: {type: 'world_this_actor'}},
-                    },
-                  },
-                },
-              },
+              type: 'world_do_Jumping_MakeJumpAction',
+              inputs: {VALUE: {block: {type: 'world_this_actor'}}},
             },
           },
         },
@@ -684,6 +680,12 @@ export const STARTER_SPEC: ProjectSpec = {
       language: 'map',
       contents: LEVEL1_MAP,
       folderId: 'maps',
+    },
+    jumpRule: {
+      name: 'jump.rule',
+      language: 'rule',
+      contents: jumpRule,
+      folderId: 'rules',
     },
     gravityRule: {
       name: 'gravity.rule',

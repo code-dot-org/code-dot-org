@@ -108,6 +108,31 @@ describe('the starter project', () => {
     );
   });
 
+  it('gives the player a jump, in one block instead of four', () => {
+    // Three things have to agree, and two of the three failures are silent:
+    // the rule has to be in the project at all, the player has to elect the
+    // trait, and the space bar has to reach `make ⟨who⟩ jump`. Miss the trait
+    // and the action simply does nothing; miss the rule and the block is not
+    // in the palette to place.
+    expect(starterFile('jumpRule').name).toBe('jump.rule');
+
+    const player = starterFile('player').contents;
+    expect(player).toContain('Jumping#JumpsTrait');
+    expect(player).toContain('world_do_Jumping_MakeJumpAction');
+
+    // …and the hand-rolled version it replaced is GONE, which is the point of
+    // the change rather than a tidy. It was
+    //
+    //     if ⟨this actor⟩ is on the ground?
+    //       apply force ⟨0, -5⟩ on ⟨this actor⟩
+    //
+    // — a jump that refuses a press one frame late and pushes rather than
+    // sets. Leaving it beside the new block would give the space bar two
+    // handlers and a doubled jump.
+    expect(player).not.toContain('world_do_Physics_ApplyForceAction');
+    expect(player).not.toContain('world_query_Gravity_IsOnTheGroundQuery');
+  });
+
   it('gives the count something to count', () => {
     // The player prints how many coins it has taken. With one coin in the map
     // that number is only ever 1, which makes `how many ⟨Coin⟩ in ⟨collected⟩`
