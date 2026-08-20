@@ -71,9 +71,9 @@ function createDevStore(): ProviderStore {
 injectFontAwesome();
 
 async function boot(): Promise<void> {
-  // Without the worker every request goes to the network, which the Vite proxy
-  // forwards to a local Rails dashboard. VITE_API_MODE=msw takes the fixtures
-  // instead, for work that needs no Rails; same flag studio and users use.
+  // Without the worker, requests go to the network, and the Vite proxy
+  // forwards them to a local Rails dashboard. Set VITE_API_MODE=msw to serve
+  // the fixtures instead, with no Rails. Studio and users use the same flag.
   if (import.meta.env.VITE_API_MODE === 'msw') {
     const {startMockWorker} = await import('@code-dot-org/core/api/mocks');
     registerLessonDeepDiveMocks();

@@ -40,14 +40,14 @@ const devHostAliases: Alias[] = [
   },
 ];
 
-// Dashboard route prefixes the feature calls. Sub-routes (/evaluate,
-// /unit_counts, /generate_podcast, /retrieve_podcast_from_s3, /:id/upload) are
-// subsumed by their prefix and are not listed.
+// Dashboard route prefixes that the feature calls. Each prefix also matches
+// its sub-routes (/evaluate, /unit_counts, /generate_podcast,
+// /retrieve_podcast_from_s3, /:id/upload), so those are not listed.
 //
-// The proxy is a bridge: it exists because apps' HttpClient issues
-// root-relative URLs. Once the feature moves to @code-dot-org/core's
-// dashboard API client (baseUrl + CORS, as studio does), this block and
-// allowedHosts below can be deleted.
+// The proxy is temporary. It is necessary because apps' HttpClient sends
+// root-relative URLs. When the feature moves to @code-dot-org/core's
+// dashboard API client (baseUrl + CORS, as studio uses), delete this list,
+// the proxy, and allowedHosts.
 const dashboardProxyPrefixes = [
   '/practice_problems',
   '/user_practice_problem_attempts',
@@ -119,21 +119,22 @@ export default defineConfig(({command}) => ({
     fs: {allow: [repoRoot]},
     ...(command === 'serve'
       ? {
-          // Serving the shell on Rails' own hostname is what makes the browser
-          // attach the dashboard session cookie to the proxied requests;
-          // cookies ignore the port but not the host.
+          // Browse the shell on Rails' own hostname. The browser then
+          // attaches the dashboard session cookie to the proxied requests.
+          // Cookies ignore the port but not the host.
           allowedHosts: ['localhost-studio.code.org'],
-          // That hostname is an /etc/hosts entry for 127.0.0.1. Vite's default
-          // bind ("localhost") can land on ::1 alone, unreachable there.
+          // Public DNS resolves that hostname to 127.0.0.1. Vite's default
+          // bind ("localhost") can listen only on ::1, and then requests to
+          // that hostname cannot reach the server.
           host: '127.0.0.1',
-          // Always on. Under VITE_API_MODE=msw the service worker answers
-          // in-page before the network, so the proxy sees only what the
-          // fixtures do not cover.
+          // The proxy is always on. In msw mode, the service worker answers
+          // in the page before the network, so the proxy only sees requests
+          // that the fixtures do not cover.
           //
-          // No changeOrigin, deliberately: Rails compares the browser's Origin
-          // header against request.base_url, which it derives from Host.
-          // Rewriting Host to :3000 would break that match and make every
-          // write a 422.
+          // Do not set changeOrigin. Rails compares the Origin header with
+          // request.base_url, which it derives from Host. If the proxy
+          // rewrites Host to :3000, that check fails and every write returns
+          // a 422.
           proxy: Object.fromEntries(
             dashboardProxyPrefixes.map(prefix => [
               prefix,
