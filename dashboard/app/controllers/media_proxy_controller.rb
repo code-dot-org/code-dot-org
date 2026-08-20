@@ -9,8 +9,6 @@
 # abuse and potentially add other abuse prevention measures (e.g. a signature
 # based on a secret.)
 
-require 'set'
-
 class MediaProxyController < ApplicationController
   include ProxyHelper
   include SharedConstants

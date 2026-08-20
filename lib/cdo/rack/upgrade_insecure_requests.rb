@@ -4,7 +4,6 @@
 
 require 'cdo/rack/process_html'
 require 'dynamic_config/dcdo'
-require 'set'
 
 module Rack
   class UpgradeInsecureRequests < ProcessHtml

@@ -9,7 +9,6 @@
 # list of JSON response types. We will need to monitor usage to detect
 # abuse and potentially add other abuse prevention measures.
 
-require 'set'
 require 'cdo/shared_constants'
 
 class XhrProxyController < ApplicationController

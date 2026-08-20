@@ -1,5 +1,3 @@
-require 'set'
-
 class RedirectProxyController < ApplicationController
   include ProxyHelper
 

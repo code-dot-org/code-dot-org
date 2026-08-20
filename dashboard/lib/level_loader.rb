@@ -1,5 +1,3 @@
-require 'set'
-
 class LevelLoader
   # Top-level entry point, called by rake seed:custom_levels and
   # seed:custom_levels_ui_tests. With a level_name, the tree is chosen by the

@@ -1,5 +1,3 @@
-require 'set'
-
 module CI
   module Utils
     # Checks the HEAD commit for the current CI build for the specified tag,

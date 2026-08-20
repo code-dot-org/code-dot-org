@@ -90,11 +90,6 @@ Lint/RedundantCopDisableDirective:
 Lint/RedundantDirGlobSort:
   Enabled: false
 
-# Offense count: 13
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Lint/RedundantRequireStatement:
-  Enabled: false
-
 # Offense count: 9
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: AllowedMethods.

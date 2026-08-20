@@ -2,7 +2,6 @@
 # This script uses the Twilio API to bulk-purchase numbers for load-balancing SMS via the Messaging Service.
 require_relative '../../config/environment'
 require 'twilio-ruby'
-require 'set'
 
 # credentials
 ACCOUNT_SID = CDO.twilio_sid

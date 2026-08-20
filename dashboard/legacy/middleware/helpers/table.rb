@@ -1,5 +1,4 @@
 require 'csv'
-require 'set'
 
 class TableMetadata
   def self.generate_column_list(records)

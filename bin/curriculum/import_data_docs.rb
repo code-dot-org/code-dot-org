@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'set'
 require 'json'
 require 'optparse'
 require 'uri'

@@ -1,5 +1,4 @@
 require 'net/http'
-require 'set'
 
 # This proxy controller allows us to serve curriculum builder docs that live on
 # [docs|curriculum].code.org as if they live on studio.code.org. This is done so that we can
