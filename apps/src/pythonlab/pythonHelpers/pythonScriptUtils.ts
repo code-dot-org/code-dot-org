@@ -1,6 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
-import type {PyodideInterface} from 'pyodide';
+import {version, type PyodideInterface} from 'pyodide';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
@@ -193,6 +193,14 @@ function updateAndDeleteSourceWithContents(
   });
 }
 
+// Wheels of ours that are fetched only for a program that imports them, keyed by
+// the module name a student writes. The rest of what we ship is loaded at startup
+// (see loadPackages in pyodideWebWorker); the theater wheel is 3 MB of instrument
+// samples and fonts, which is too much to charge every Python Lab page for.
+export const ON_DEMAND_PACKAGE_URLS: Record<string, string> = {
+  theater: `/blockly/js/pyodide/${version}/theater-0.2.0-py3-none-any.whl`,
+};
+
 export async function importPackagesFromFiles(
   source: MultiFileSource,
   pyodide: PyodideInterface
@@ -200,10 +208,38 @@ export async function importPackagesFromFiles(
   // Loading can throw erroneous console errors if a user has a package with the same name as one
   // in the pyodide list of packages that we have not put in our repo. We can ignore these,
   // any actual import errors will be caught by the runPythonAsync call.
+  const wheelUrls = new Set<string>();
   for (const file of Object.values(source.files)) {
     if (file.name.endsWith('.py')) {
       await pyodide.loadPackagesFromImports(file.contents);
+      for (const moduleName of findImportedModules(file.contents, pyodide)) {
+        const wheelUrl = ON_DEMAND_PACKAGE_URLS[moduleName];
+        if (wheelUrl) {
+          wheelUrls.add(wheelUrl);
+        }
+      }
     }
+  }
+  if (wheelUrls.size > 0) {
+    // Pyodide skips a package it already holds, so a rerun does not refetch.
+    await pyodide.loadPackage([...wheelUrls]);
+  }
+}
+
+// The top-level modules a file imports, read with the same helper Pyodide uses
+// for loadPackagesFromImports: an import written in a comment or a string does
+// not count, and a file that does not parse yields nothing.
+function findImportedModules(
+  contents: string,
+  pyodide: PyodideInterface
+): string[] {
+  const findImports = pyodide.pyimport('pyodide.code.find_imports');
+  const imports = findImports(contents);
+  try {
+    return imports.toJs();
+  } finally {
+    imports.destroy();
+    findImports.destroy();
   }
 }
 

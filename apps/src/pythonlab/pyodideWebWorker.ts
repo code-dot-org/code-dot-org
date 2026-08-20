@@ -213,11 +213,12 @@ async function loadPackages() {
       'pytz',
       'six',
       // Custom packages that we have built. They are defined in the
-      // python/pythonlab/ folder in the codebase.
+      // python/pythonlab/ folder in the codebase. The theater wheel is missing
+      // here on purpose: it is fetched per run for a program that imports it,
+      // see ON_DEMAND_PACKAGE_URLS.
       `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.3.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/neighborhood-0.5.0-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/theater-0.1.0-py3-none-any.whl`,
     ],
     {
       errorCallback: (message: string) => {
