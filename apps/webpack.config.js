@@ -658,7 +658,7 @@ function createWebpackConfig({
                 name: 'studioRoutes',
                 test: module =>
                   module.resource === p('generated-scripts/studioRoutes.js'),
-                chunks: 'all',
+                chunks: 'initial',
                 enforce: true,
                 priority: 40,
               },
