@@ -201,7 +201,8 @@ export default class Theater extends MiniApp {
   //
   // The gif's length has to come from the host, since an <img> reports nothing
   // about the animation it is running. Without one there is no telling when the
-  // animation ends, so playback is never done.
+  // animation ends, so the gif does not hold playback open at all; waiting on a
+  // length we never learn would park the caller until the next run resets us.
   private watchForPlaybackEnd(
     audioElement: HTMLAudioElement | null,
     playing: Promise<void> | undefined
@@ -212,7 +213,7 @@ export default class Theater extends MiniApp {
     const generation = ++this.playbackGeneration;
     const isCurrentWatch = () => generation === this.playbackGeneration;
     this.isAudioPlaying = audioElement !== null;
-    this.isVisualPlaying = true;
+    this.isVisualPlaying = this.visualDurationMs !== null;
 
     if (audioElement) {
       audioElement.onended = () => {
@@ -235,6 +236,7 @@ export default class Theater extends MiniApp {
         this.settleIfPlaybackDone();
       }, this.visualDurationMs);
     }
+    this.settleIfPlaybackDone();
   }
 
   private audioFinished() {

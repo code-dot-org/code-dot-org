@@ -320,14 +320,24 @@ describe('Theater', () => {
     expect(await isPlaybackDone()).toBe(true);
   });
 
-  it('never settles for a video of unknown length', async () => {
+  it('settles right away for a video of unknown length', async () => {
     jest.useFakeTimers();
     playMedia();
 
-    jest.advanceTimersByTime(60000);
-
     // Java Lab sends no length, and ends its runs on a Javabuilder message.
+    // Holding playback open on a length we never learn would park the caller
+    // until some later run reset the theater.
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('still waits for the audio when the video length is unknown', async () => {
+    jest.useFakeTimers();
+    playMedia(undefined, /* withAudio */ true);
+
     expect(await isPlaybackDone()).toBe(false);
+
+    (audioElement as HTMLAudioElement).onended?.(new Event('ended'));
+    expect(await isPlaybackDone()).toBe(true);
   });
 
   it('treats refused audio playback as audio that is already over', async () => {
