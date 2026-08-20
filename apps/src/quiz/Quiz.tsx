@@ -11,6 +11,9 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import QuizBuilder, {QuizQuestionData} from './builder/QuizBuilder';
+import QuizConfigurationForm, {
+  QuizConfigurationData,
+} from './builder/QuizConfigurationForm';
 import QuizQuestionBank from './builder/QuizQuestionBank';
 import QuizIntro from './QuizIntro';
 import QuizQuestion, {QuizQuestionSummary} from './QuizQuestion';
@@ -23,7 +26,21 @@ interface QuizLevelProperties extends LevelProperties {
   title?: string;
   introText?: string;
   timeLimitMinutes?: number;
+  // Level#summarize_for_lab2_properties dumps serialized_attrs values
+  // as-is (properties.camelize_keys) rather than through Quiz's own `?`
+  // predicate methods, so a boolean setting arrives as the literal string
+  // "true"/"false", not a real boolean - see toBool below.
+  showCorrectness?: boolean | string;
+  revealAnswerExplanation?: boolean | string;
+  purpose?: string;
+  allowMultipleAttempts?: boolean | string;
 }
+
+// levelProperties sends serialized_attrs booleans as "true"/"false" strings
+// (see QuizLevelProperties above) - a plain !!value would treat the string
+// "false" as truthy, so this checks for the two valid shapes explicitly.
+const toBool = (value: boolean | string | undefined) =>
+  value === true || value === 'true';
 
 // Present once this attempt is submitted - selectedChoiceId is always
 // included then, so a reload can restore/highlight what was picked;
@@ -83,12 +100,28 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const {
     id: levelId,
     name,
-    title,
     scriptId,
     quizQuestions,
-    introText,
-    timeLimitMinutes,
+    title: initialTitle,
+    introText: initialIntroText,
+    timeLimitMinutes: initialTimeLimitMinutes,
+    showCorrectness: initialShowCorrectness,
+    revealAnswerExplanation: initialRevealAnswerExplanation,
+    purpose: initialPurpose,
+    allowMultipleAttempts: initialAllowMultipleAttempts,
   } = levelProperties as QuizLevelProperties;
+  // Lifted so the Configuration tab's saves are reflected immediately (e.g.
+  // by Preview) without a page reload - see QuizConfigurationForm's onSaved.
+  const [quizConfig, setQuizConfig] = useState<QuizConfigurationData>({
+    title: initialTitle,
+    introText: initialIntroText,
+    timeLimitMinutes: initialTimeLimitMinutes,
+    showCorrectness: toBool(initialShowCorrectness),
+    revealAnswerExplanation: toBool(initialRevealAnswerExplanation),
+    purpose: initialPurpose,
+    allowMultipleAttempts: toBool(initialAllowMultipleAttempts),
+  });
+  const {title, introText, timeLimitMinutes} = quizConfig;
   // Whether this page load is the build_quiz_questions route at all (a
   // levelbuilder capability, fixed for the whole page load).
   const isBuilderMode = !!getAppOptionsBuildingQuizQuestions();
@@ -373,6 +406,15 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                 attachedQuestionIds={questions.map(question => question.id)}
                 excludedQuestionIds={destroyedQuestionIds}
                 onAttach={question => setQuestions(prev => [...prev, question])}
+              />
+            ) : undefined
+          }
+          configurationContent={
+            isBuilderMode ? (
+              <QuizConfigurationForm
+                quizId={levelId as number}
+                initialValues={quizConfig}
+                onSaved={setQuizConfig}
               />
             ) : undefined
           }

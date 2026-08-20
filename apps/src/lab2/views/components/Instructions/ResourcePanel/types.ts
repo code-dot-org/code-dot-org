@@ -8,6 +8,7 @@ export enum Tabs {
   Backpack = 'backpack',
   StudentResources = 'studentResources',
   QuestionBank = 'questionBank',
+  Configuration = 'configuration',
 }
 
 export interface Setting {

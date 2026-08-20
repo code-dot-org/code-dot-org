@@ -1,0 +1,44 @@
+// ResourcePanel's own tab content box (.tabContent) doesn't scroll on its
+// own - height: 100% + overflow-y: auto here gives this form its own
+// scroll region instead, sized to whatever space that box provides.
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 16px 16px;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+// Same fix as quiz-question-form.module.scss/quiz-question-bank.module.scss:
+// TextField/FormFieldWrapper hardcode a 300px min-width and never set width
+// on their own input/children, so they size to content instead of filling
+// the panel.
+.fullWidthField {
+  width: 100%;
+  min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 64px;
+  min-height: 32px;
+  padding: 8px 12px;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 0.25rem;
+  font: inherit;
+  resize: vertical;
+}

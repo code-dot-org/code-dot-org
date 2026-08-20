@@ -38,6 +38,9 @@ class Quiz < Level
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
   validates :purpose, inclusion: {in: PURPOSES}, allow_nil: true
+  # nil/blank means "no time limit" - only a set value has to be a real
+  # positive duration.
+  validates :time_limit_minutes, numericality: {only_integer: true, greater_than: 0}, allow_blank: true
 
   validate :reveal_answer_explanation_requires_show_correctness
   validate :max_attempts_requires_allow_multiple_attempts

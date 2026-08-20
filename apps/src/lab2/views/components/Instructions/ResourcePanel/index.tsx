@@ -136,7 +136,8 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     icon: 'backpack',
   },
   [Tabs.StudentResources]: {title: 'Resources', icon: 'compass'},
-  [Tabs.QuestionBank]: {title: 'Question Bank', icon: 'database'},
+  [Tabs.QuestionBank]: {title: 'Question Bank', icon: 'clipboard-question'},
+  [Tabs.Configuration]: {title: 'Configuration', icon: 'wrench'},
 };
 
 type ResourcePanelProps = InstructionsProps & {
@@ -169,8 +170,10 @@ type ResourcePanelProps = InstructionsProps & {
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
   initialWelcomeMessage?: string;
-  /** Levelbuilder-only: content for the Question Bank tab, used by the Quiz question authoring UI. */
+  /** Used by the Quiz question authoring UI. */
   questionBankContent?: React.ReactNode;
+  /** Used by the Quiz build UI. */
+  configurationContent?: React.ReactNode;
   /**
    * Suppresses the Continue/Finish NavigationArea entirely, in both of the
    * places it can render (embedded in the Instructions tab, and the
@@ -211,6 +214,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   onAssetRemoved,
   initialWelcomeMessage,
   questionBankContent,
+  configurationContent,
   hideAllNavigation = false,
   ...instructionsProps
 }) => {
@@ -345,6 +349,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.QuestionBank] = questionBankContent;
     }
 
+    if (configurationContent) {
+      tabMap[Tabs.Configuration] = configurationContent;
+    }
+
     if (validationSettings && hasValidationConditions) {
       tabMap[Tabs.Validation] = <ValidationPanel {...validationSettings} />;
     }
@@ -452,6 +460,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hideInstructionsNavigation,
     hideAllNavigation,
     questionBankContent,
+    configurationContent,
     validationSettings,
     hasValidationConditions,
     hiddenContextCallback,
