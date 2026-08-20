@@ -5785,38 +5785,64 @@ const paintArg = (name: string) => ({
   check: COLOUR_CHECK,
 });
 
-const worldDefineDrawing = defineBlock({
-  type: 'world_define_drawing',
-  message0: 'define drawing %1 by %2',
-  args0: [
-    {type: 'field_number', name: 'WIDTH', value: 32, min: 1, max: 512},
-    {type: 'field_number', name: 'HEIGHT', value: 32, min: 1, max: 512},
-  ],
-  message1: '%1',
-  args1: [{type: 'input_statement', name: 'DO'}],
-  // A ROOT: no previous connection, because `DisableOrphansPlugin` disables a
-  // top-level block that has one along with everything chained after it — the
-  // bug `each frame` hit and the reason it needed two shapes. This one needs
-  // only the root shape, since a drawing is never a trait's member.
-  style: 'sprite_blocks',
-  tooltip:
-    'Describe what this kind of actor looks like. The size is the picture, ' +
-    'and it is also how big the actor is for clicks and collisions.',
-  generator: {
-    javascript(block, generator) {
-      const width = Number(block.getFieldValue('WIDTH')) || 1;
-      const height = Number(block.getFieldValue('HEIGHT')) || 1;
-      const body = generator.statementToCode(block, 'DO');
-      // `actor` SHADOWS the module's builder inside the closure, exactly as a
-      // step's body does, so `this actor` written here means this one. `pen` is
-      // bound only here — the one place `drawingContext` knows about.
-      return (
-        `actor.defineDrawing(${width}, ${height}, ` +
-        `(actor, pen) => {\n${body}});\n`
-      );
+/**
+ * `define drawing` — and it needs TWO SHAPES, exactly as `each frame` does.
+ *
+ * Standing on its own in an `.actor` file it is a definition root, and a root
+ * MUST NOT have a previous connection: `DisableOrphansPlugin` reads a
+ * top-level block with one as an orphan and disables it, along with everything
+ * chained after it.
+ *
+ * Chained inside a world's own `define actor` it is one of that actor's rows,
+ * so it has a previous and a next like `use trait` beside it. That is what
+ * lets a world-defined actor draw itself — and it needed no new field to say
+ * WHICH actor, because a local actor's body already generates inside a block
+ * where `actor` is that builder (`world_actor`'s generator). The drawing is
+ * inside the actor it belongs to, which is the only place it could mean
+ * anything.
+ *
+ * It used to be root-only, and the note here said a drawing "needs only the
+ * root shape". That was true of the `.actor` file it was written for and made
+ * a whole class of actor unsayable in a world: one with a picture. The
+ * single-world platformer scenario shipped a scoreboard drawn as a plain box
+ * because of it.
+ */
+const drawingDefinition = (asRoot: boolean) =>
+  defineBlock({
+    type: 'world_define_drawing',
+    message0: 'define drawing %1 by %2',
+    args0: [
+      {type: 'field_number', name: 'WIDTH', value: 32, min: 1, max: 512},
+      {type: 'field_number', name: 'HEIGHT', value: 32, min: 1, max: 512},
+    ],
+    message1: '%1',
+    args1: [{type: 'input_statement', name: 'DO'}],
+    ...(asRoot ? {} : {previousStatement: true, nextStatement: true}),
+    style: 'sprite_blocks',
+    tooltip:
+      'Describe what this kind of actor looks like. The size is the picture, ' +
+      'and it is also how big the actor is for clicks and collisions.',
+    generator: {
+      javascript(block, generator) {
+        const width = Number(block.getFieldValue('WIDTH')) || 1;
+        const height = Number(block.getFieldValue('HEIGHT')) || 1;
+        const body = generator.statementToCode(block, 'DO');
+        // `actor` SHADOWS the module's builder inside the closure, exactly as a
+        // step's body does, so `this actor` written here means this one. `pen` is
+        // bound only here — the one place `drawingContext` knows about.
+        return (
+          `actor.defineDrawing(${width}, ${height}, ` +
+          `(actor, pen) => {\n${body}});\n`
+        );
+      },
     },
-  },
-});
+  });
+
+/** Chained inside a world's `define actor` (see `drawingDefinition`). */
+const worldDefineDrawing = drawingDefinition(false);
+
+/** The root-shaped one, for an `.actor` file. */
+const actorDefineDrawing = drawingDefinition(true);
 
 const worldPenFill = defineBlock({
   type: 'world_pen_fill',
@@ -7292,8 +7318,9 @@ export function buildDomainPalette(
   const ownProperties = (options.ownProperties ?? []).flatMap(
     actor => actor.properties,
   );
-  // `each frame` wears the connections its file makes sense of: a root in an
-  // `.actor`, a trait's member everywhere else (`traitStepDefinition`).
+  // `each frame` and `define drawing` wear the connections their file makes
+  // sense of: a root in an `.actor`, a chained row everywhere else
+  // (`traitStepDefinition`, `drawingDefinition`).
   //
   // SUBSTITUTED, not appended. Two definitions of one type in the list would
   // leave which one lands on the workspace up to registration order, and a
@@ -7301,7 +7328,11 @@ export function buildDomainPalette(
   const shaped =
     options.fileKind === 'actor'
       ? DOMAIN_BLOCKS.map(block =>
-          block.type === 'world_trait_step' ? worldActorStep : block,
+          block.type === 'world_trait_step'
+            ? worldActorStep
+            : block.type === 'world_define_drawing'
+              ? actorDefineDrawing
+              : block,
         )
       : DOMAIN_BLOCKS;
   const ownBlocks: DomainBlock[] = [];

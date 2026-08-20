@@ -5,6 +5,7 @@ import type {
   ProjectSources,
 } from '@code-dot-org/core/api';
 
+import {drawText, fill, showAs, textOf} from './actors/stock/workspace';
 import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
 import {
   spriteFileName,
@@ -473,6 +474,10 @@ const COIN_ACTOR = actorFile('Coin', [
 // event, so `when the score changes` — the rule's other, world-scoped copy of
 // this — could only be written in `main.world`, and would then have to reach
 // back out for whichever actor is the scoreboard.
+/** The scoreboard's canvas, shared with the single-world telling of it. */
+export const SCOREBOARD_WIDTH = 96;
+export const SCOREBOARD_HEIGHT = 24;
+
 const SCOREBOARD_ACTOR = JSON.stringify(
   {
     blocks: {
@@ -486,11 +491,40 @@ const SCOREBOARD_ACTOR = JSON.stringify(
             block: stack([
               useTrait('Writing#ShowsTextTrait'),
               useTrait('Scoring#WatchesTheScoreTrait'),
+              // The picker's symbol, which is not the picture — that is the
+              // drawing below (blockly/actorIconMeta).
+              showAs('text'),
               // Something to read before the first coin. Without it the board
               // is blank until the score moves, which looks like a broken
               // scoreboard rather than a score of nothing.
               setText({type: 'text', fields: {TEXT: 'SCORE 0'}}),
             ]),
+          },
+        },
+        // THE DRAWING, and without it this actor is a plain rectangle.
+        //
+        // `Shows Text` has no steps and draws nothing: it declares what an
+        // actor's words ARE and leaves the drawing to the actor that elects it
+        // (specs/DRAWING.md). An actor with the trait, the text and no drawing
+        // is an actor nothing knows how to paint, so the driver paints the
+        // fallback box — which is exactly what this shipped as at first.
+        //
+        // Two commands, the same two `actors/stock/label` uses: ink of
+        // whatever colour the actor carries, then the words at the middle of
+        // the canvas. Every part of the text is READ off the actor rather than
+        // typed here, which is what makes the trait worth having.
+        {
+          type: 'world_define_drawing',
+          x: 20,
+          y: 140,
+          fields: {WIDTH: SCOREBOARD_WIDTH, HEIGHT: SCOREBOARD_HEIGHT},
+          inputs: {
+            DO: {
+              block: stack([
+                fill(textOf('TextColorProperty')),
+                drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
+              ]),
+            },
           },
         },
         {

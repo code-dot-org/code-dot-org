@@ -72,7 +72,10 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // is. Not a rule or a behavior: those are shared mechanics, and how a
   // particular actor looks is the one thing that is not shared — an actor that
   // wants somebody else's picture already has `set sprite` (specs/DRAWING.md).
-  ['world_define_drawing', new Set<FileKind>(['actor'])],
+  // A world may describe its OWN actors' pictures too, chained inside the
+  // `define actor` that owns them (`drawingDefinition`). Root-shaped in an
+  // `.actor` file, a row in a world; one block either way.
+  ['world_define_drawing', new Set<FileKind>(['actor', 'world'])],
 ]);
 
 /**
