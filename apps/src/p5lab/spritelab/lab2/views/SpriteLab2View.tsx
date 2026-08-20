@@ -837,7 +837,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       try {
         project = await fetchExternalProject(
           parsed.channel,
-          levelProperties.id
+          levelProperties.id,
+          scriptId
         );
         externalProjectsRef.current.set(parsed.channel, project);
       } catch (e) {
@@ -853,7 +854,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       runExternalProjectScene(project, parsed.sceneId);
     },
-    [runExternalProjectScene, levelProperties.id]
+    [runExternalProjectScene, levelProperties.id, scriptId]
   );
 
   // The external dropdown re-fetches the section list on every open, so

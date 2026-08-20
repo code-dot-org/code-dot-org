@@ -45,21 +45,19 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  # The same level in a script that is not in a unit group, reached while
-  # playing it in one that is.
-  test 'finds a project made through a different script' do
+  # Deliberately narrow while experimental: the same level played through a
+  # different script stays unshared.
+  test 'does not serve a project made through a different script' do
     stub_scenes channel_for(@student_storage_id, @loose_script.id)
 
     sign_in @teacher
     get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
 
     assert_response :success
-    assert_equal 1, JSON.parse(response.body)['scenes'].length
+    assert_empty JSON.parse(response.body)['scenes']
   end
 
-  # With a project in each, the one for the script being played wins, so a
-  # classmate's unrelated project elsewhere doesn't shadow the relevant one.
-  test 'prefers the project for the script being played' do
+  test 'serves only the channel for the script being played' do
     wanted = channel_for(@student_storage_id, @script.id)
     other = channel_for(@student_storage_id, @loose_script.id)
     stub_scenes wanted, scene_id: 'wanted-scene'
@@ -74,15 +72,15 @@ class SpriteLab2ControllerTest < ActionController::TestCase
   end
 
   # Channels predating the script_id column have a null one, as do projects
-  # made at /levels/[id]; a script-scoped request still finds them.
-  test 'finds a project whose channel has no script' do
+  # made at /levels/[id]; neither is shared.
+  test 'does not serve a channel with no script' do
     stub_scenes channel_for(@student_storage_id, nil)
 
     sign_in @teacher
     get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
 
     assert_response :success
-    assert_equal 1, JSON.parse(response.body)['scenes'].length
+    assert_empty JSON.parse(response.body)['scenes']
   end
 
   test 'refuses a level from another lab' do
@@ -95,15 +93,35 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test 'external_scenes serves a channel belonging to the level' do
+  test 'external_scenes serves the channel for this level and script' do
+    channel = channel_for(@student_storage_id, @script.id)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_equal 1, JSON.parse(response.body)['scenes'].length
+  end
+
+  test 'external_scenes refuses a channel from another script' do
+    channel = channel_for(@student_storage_id, @loose_script.id)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
+
+    assert_response :forbidden
+  end
+
+  test 'external_scenes refuses a request with no script id' do
     channel = channel_for(@student_storage_id, @script.id)
     stub_scenes channel
 
     sign_in @teacher
     get :external_scenes, params: {channel: channel, level_id: @level.id}
 
-    assert_response :success
-    assert_equal 1, JSON.parse(response.body)['scenes'].length
+    assert_response :bad_request
   end
 
   # The channel must be one of the owner's channels for the level in the
@@ -114,7 +132,7 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     stub_scenes channel
 
     sign_in @teacher
-    get :external_scenes, params: {channel: channel, level_id: @level.id}
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
 
     assert_response :forbidden
   end
@@ -125,7 +143,7 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     stub_scenes channel
 
     sign_in @teacher
-    get :external_scenes, params: {channel: channel, level_id: @level.id}
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
 
     assert_response :forbidden
   end

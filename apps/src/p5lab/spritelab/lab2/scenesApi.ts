@@ -65,16 +65,18 @@ export async function fetchSectionScenes(
   return value.scenes || [];
 }
 
-// The level travels with the channel: the server serves only that level's
-// channels.
+// The level and script travel with the channel: the server serves only the
+// owner's channel for that level and script — the rule the dropdown
+// discovers by.
 export async function fetchExternalProject(
   channel: string,
-  levelId: number | string
+  levelId: number | string,
+  scriptId?: number | null
 ): Promise<ExternalProject> {
   const {value} = await HttpClient.fetchJson<ExternalProject>(
     `/sprite_lab2/external_scenes?channel=${encodeURIComponent(
       channel
-    )}&level_id=${levelId}`
+    )}&level_id=${levelId}&script_id=${scriptId ?? ''}`
   );
   return value;
 }
