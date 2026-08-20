@@ -8,11 +8,12 @@ import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 export const MIN_ZOOM = 1;
 export const MAX_ZOOM = 3;
 
-// The background zooms harder than the sprite plane, so the two slide at
-// different rates as the view scrolls (parallax). The overhang this creates
-// also keeps the background's own edges out of view at every zoom: the
-// visible margin works out to 100 * (1 - 1/zoom) px per side.
+// The background zooms harder than the sprite plane and scrolls slower —
+// the distant-plane parallax. The zoom overhang keeps the background's own
+// edges out of view at every pan; the scroll rate is the background's
+// screen-space pan as a fraction of the foreground's.
 export const BACKGROUND_ZOOM_RATE = 1.5;
+export const BACKGROUND_SCROLL_RATE = 0.5;
 
 // Fraction of the remaining distance covered per frame, and the gap under
 // which the zoom snaps to its target. ~0.3s to settle at 30fps.
@@ -68,17 +69,21 @@ export function worldPoint(screen: Point, zoom: number, focus: Point): Point {
 
 /**
  * The screen-space rectangle to draw the world-sized background into: the
- * background plane rendered at its own (harder) zoom about the same focus.
- * At zoom 1 this is exactly the unzoomed full-canvas draw.
+ * background plane at its own (harder) zoom, centered when the camera is,
+ * panning at BACKGROUND_SCROLL_RATE of the foreground's screen shift. At
+ * zoom 1 this is exactly the unzoomed full-canvas draw.
  */
 export function backgroundFrame(
   zoom: number,
   focus: Point
 ): {x: number; y: number; size: number} {
   const scale = backgroundZoom(zoom);
+  const half = APP_WIDTH / 2;
+  const place = (coord: number) =>
+    half - half * scale - BACKGROUND_SCROLL_RATE * (coord - half) * zoom;
   return {
-    x: APP_WIDTH / 2 - focus.x * scale,
-    y: APP_WIDTH / 2 - focus.y * scale,
+    x: place(focus.x),
+    y: place(focus.y),
     size: APP_WIDTH * scale,
   };
 }

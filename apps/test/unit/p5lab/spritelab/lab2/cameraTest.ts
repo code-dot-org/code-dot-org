@@ -86,12 +86,12 @@ describe('camera', () => {
     });
   });
 
-  it('pans the background farther than one screen across a traversal', () => {
-    // The parallax: crossing the world moves the background more than the
-    // sprite plane's view. At zoom 2 the view pans 200 world px; the
-    // background frame shifts by 200 * backgroundZoom(2) = 500 px.
+  it("pans the background at half the foreground's screen rate", () => {
+    // The parallax: at zoom 2 a full traversal shifts the foreground one
+    // screen (400 px) on screen; the background shifts half that, the same
+    // direction.
     const left = backgroundFrame(2, cameraFocus(2, {x: 0, y: 200}));
     const right = backgroundFrame(2, cameraFocus(2, {x: 400, y: 200}));
-    expect(left.x - right.x).toBe(500);
+    expect(left.x - right.x).toBe(200);
   });
 });
