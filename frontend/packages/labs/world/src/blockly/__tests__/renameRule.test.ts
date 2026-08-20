@@ -136,12 +136,18 @@ describe('renameRuleInSource', () => {
     // the trait that makes it landable, and the rule file itself is full of
     // its own members.
     //
+    // AND `jump.rule`, which is the interesting one: a RULE may name another,
+    // and Jumping names Gravity twice over — `use rule Gravity` and `use trait
+    // Gravity#AffectedByGravityTrait`, since a jump is a push away from a
+    // ground. So a rename has to walk the rules as well as the actors, and
+    // this is the first shipped rule that proves it does.
+    //
     // NOT the world, which is the change: a world names no rules now — holding
     // the file is what puts one in play (blockly/projectModules) — so there is
     // nothing in `main.world` for a rename to rewrite. A rename that touched
     // it would be rewriting something that no longer says anything.
     expect(new Set(touched.map(id => next.files[id].name))).toEqual(
-      new Set(['player.actor', 'ground.actor', 'gravity.rule']),
+      new Set(['player.actor', 'ground.actor', 'gravity.rule', 'jump.rule']),
     );
   });
 

@@ -307,6 +307,24 @@ describe('Jumping', () => {
     expect(height(player)).toBeGreaterThanOrEqual(rising - 1);
   });
 
+  it('clears three tiles on its default, which the starter needs', () => {
+    // The number that would fail silently. The starter's level puts a platform
+    // three tiles — 96 pixels — above its floor, with a coin above that; a
+    // default jump that fell an inch short would land the player under the
+    // ledge every single time, with nothing anywhere to say why.
+    const {world, player} = standing();
+    const floorLevel = height(player);
+    let peak = floorLevel;
+
+    ask(world, player);
+    for (let tick = 0; tick < 60; tick++) {
+      world.tick(1 / 60);
+      peak = Math.min(peak, height(player));
+    }
+
+    expect(floorLevel - peak).toBeGreaterThan(3 * 32);
+  });
+
   it('comes back down and can go again', () => {
     const {world, player} = standing();
     const floorLevel = height(player);

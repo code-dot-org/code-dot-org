@@ -22,6 +22,7 @@ describe('projectFiles', () => {
       'rules/collisions.rule',
       'rules/gravity.rule',
       'rules/input.rule',
+      'rules/jump.rule',
       'rules/motion.rule',
       'rules/solid.rule',
       // The images themselves are bytes on a `url`, so they are not here; the
