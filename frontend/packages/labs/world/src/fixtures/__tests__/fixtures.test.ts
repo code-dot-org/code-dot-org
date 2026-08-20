@@ -127,6 +127,7 @@ describe('the scenario catalogue', () => {
         'ground.actor',
         'coin.actor',
         'ball.actor',
+        'crawler.actor',
         'scoreboard.actor',
         'level1.map',
       ]),

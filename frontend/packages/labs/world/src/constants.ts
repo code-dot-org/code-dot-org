@@ -20,8 +20,10 @@ import {
   solidRule,
   collisionsRule,
   gravityRule,
+  healthRule,
   inputRule,
   jumpRule,
+  patrolRule,
   motionRule,
   scoreRule,
   writingRule,
@@ -221,6 +223,8 @@ export const LEVEL1_ACTORS = [
   place('actors/coin', 'Coin2', tileCenter(8), tileCenter(8)),
   place('actors/coin', 'Coin3', tileCenter(6), tileCenter(3)),
   place('actors/ball', 'Ball', tileCenter(3), tileCenter(2)),
+  // On the floor between the two coins, walking its beat across them.
+  place('actors/crawler', 'Crawler', tileCenter(6), tileCenter(8)),
   // Top left, out of the way of everything that moves.
   place('actors/scoreboard', 'Scoreboard', tileCenter(2), tileCenter(0)),
 ];
@@ -300,6 +304,10 @@ const PLAYER_ACTOR = JSON.stringify(
           next: {
             block: stack([
               useTrait('Gravity#AffectedByGravityTrait'),
+              // Something to lose. Without it the Crawler is scenery that
+              // walks — `Deals Damage` needs somebody with health to deal it
+              // to, and the two halves live in different files on purpose.
+              useTrait('Health#HasHealthTrait'),
               // Jumping requires being affected by gravity, which is why it
               // sits under it here: a jump is a push AWAY from a ground, and
               // an actor nothing pulls down has no ground to push away from.
@@ -372,6 +380,33 @@ const PLAYER_ACTOR = JSON.stringify(
           200,
           'Player started falling',
         ),
+        // The ending the starter did not have. Health raises `dies` and
+        // removes nothing — running out is a fact, not a policy — so what
+        // dying MEANS is this handler, and here it means the board says so.
+        //
+        // It reaches another actor to say it, which is the only block in the
+        // starter that does: `any ⟨Scoreboard⟩` names the kind, and an actor
+        // socket handed several takes the first. A game with two scoreboards
+        // would want a rule; a game with one wants this.
+        {
+          type: 'world_on_Health_DiesEvent',
+          x: 20,
+          y: 560,
+          next: {
+            block: {
+              type: 'world_set_Writing_TextProperty',
+              inputs: {
+                ACTOR: {
+                  block: {
+                    type: 'world_actor_kind',
+                    fields: {ACTOR: 'actors/scoreboard'},
+                  },
+                },
+                VALUE: {block: {type: 'text', fields: {TEXT: 'GAME OVER'}}},
+              },
+            },
+          },
+        },
         onEvent('Gravity_StopsFallingEvent', 20, 320, 'Player landed!'),
         // Taking the coin is the RULE's business — this handler is only told
         // that it happened, which is why the coin is already out of the world
@@ -556,6 +591,25 @@ const SCOREBOARD_ACTOR = JSON.stringify(
   null,
   2,
 );
+
+// The one thing in the starter that can go wrong.
+//
+// Everything else here is a reward: coins to take, a platform to reach, a
+// score that only goes up. A game in which nothing can go wrong is a stroll,
+// and half the shelf — Health, and now Patrol — had no user at all.
+//
+// It PATROLS rather than chasing, which is the difference between a level and
+// an ambush: it walks its beat whether or not anybody is watching, so a
+// learner can see what it does before having to avoid it. Steering is the
+// other rule and the other feeling.
+//
+// `Deals Damage` and nothing else about hurting: what a hit costs is Health's
+// business, and the mercy time that stops a touch being thirty hits is too.
+const CRAWLER_ACTOR = actorFile('Crawler', [
+  useTrait('Patrol#PatrolsAcrossTrait'),
+  useTrait('Health#DealsDamageTrait'),
+  {type: 'world_set_sprite', fields: {SPRITE: 'asteroid.png'}},
+]);
 
 // A ball playing "pulse" — the animation in animations/game.anim.
 const BALL_ACTOR = actorFile('Ball', [
@@ -795,6 +849,12 @@ export const STARTER_SPEC: ProjectSpec = {
       contents: COIN_ACTOR,
       folderId: 'actors',
     },
+    crawler: {
+      name: 'crawler.actor',
+      language: 'actor',
+      contents: CRAWLER_ACTOR,
+      folderId: 'actors',
+    },
     scoreboard: {
       name: 'scoreboard.actor',
       language: 'actor',
@@ -861,6 +921,18 @@ export const STARTER_SPEC: ProjectSpec = {
       contents: solidRule,
       folderId: 'rules',
     },
+    healthRule: {
+      name: 'health.rule',
+      language: 'rule',
+      contents: healthRule,
+      folderId: 'rules',
+    },
+    patrolRule: {
+      name: 'patrol.rule',
+      language: 'rule',
+      contents: patrolRule,
+      folderId: 'rules',
+    },
     scoreRule: {
       name: 'score.rule',
       language: 'rule',
@@ -893,7 +965,14 @@ export const STARTER_SPEC: ProjectSpec = {
     // The images. A project draws only what it holds, so the four the starter
     // level uses are files in it — copies of the stock drawings, exactly as
     // importing them would leave them, and editable from here on.
-    ...starterSprites(['player', 'ground', 'coin', 'ball', 'coinSpin']),
+    ...starterSprites([
+      'player',
+      'ground',
+      'coin',
+      'ball',
+      'asteroid',
+      'coinSpin',
+    ]),
     // …and one animation copied in whole, frames and image both: the coin's
     // spin, which reads six squares out of one strip. The other two
     // animations here scale a single image instead — between them they show

@@ -57,6 +57,7 @@ const GROUND = 'platformerGroundDef';
 const COIN = 'platformerCoinDef';
 const BALL = 'platformerBallDef';
 const SCOREBOARD = 'platformerScoreboardDef';
+const CRAWLER = 'platformerCrawlerDef';
 
 const local = (blockId: string) => `local:${blockId}`;
 
@@ -139,6 +140,7 @@ const SINGLE_WORLD = JSON.stringify({
             createInMap('placePlayer', local(PLAYER), 'actors/player'),
             createInMap('placeCoins', local(COIN), 'actors/coin'),
             createInMap('placeBall', local(BALL), 'actors/ball'),
+            createInMap('placeCrawler', local(CRAWLER), 'actors/crawler'),
             createInMap(
               'placeScoreboard',
               local(SCOREBOARD),
@@ -167,6 +169,7 @@ const SINGLE_WORLD = JSON.stringify({
       ]),
       defineActor(PLAYER, 'Player', 360, [
         useTrait('Gravity#AffectedByGravityTrait'),
+        useTrait('Health#HasHealthTrait'),
         useTrait('Jumping#JumpsTrait'),
         useTrait('Arrow Keys#MovesAcrossTrait'),
         useTrait('Input#TakesKeyboardInputTrait'),
@@ -180,7 +183,12 @@ const SINGLE_WORLD = JSON.stringify({
       defineActor(BALL, 'Ball', 1140, [
         {type: 'world_play_animation', fields: {ANIMATION: 'pulse'}},
       ]),
-      defineActor(SCOREBOARD, 'Scoreboard', 1520, [
+      defineActor(CRAWLER, 'Crawler', 1520, [
+        useTrait('Patrol#PatrolsAcrossTrait'),
+        useTrait('Health#DealsDamageTrait'),
+        {type: 'world_set_sprite', fields: {SPRITE: 'asteroid.png'}},
+      ]),
+      defineActor(SCOREBOARD, 'Scoreboard', 1900, [
         useTrait('Writing#ShowsTextTrait'),
         useTrait('Scoring#WatchesTheScoreTrait'),
         showAs('text'),
@@ -222,6 +230,20 @@ const SINGLE_WORLD = JSON.stringify({
         },
       },
       says('Gravity_StartsFallingEvent', 900, 'Player started falling'),
+      // Dying, which Health raises and does nothing else about. Reaching the
+      // Scoreboard by kind is the one cross-actor line in either telling.
+      {
+        type: 'world_on_Health_DiesEvent',
+        x: 520,
+        y: 900,
+        inputs: {ACTOR: kind(PLAYER)},
+        next: {
+          block: setText(kind(SCOREBOARD), {
+            type: 'text',
+            fields: {TEXT: 'GAME OVER'},
+          }),
+        },
+      },
       says('Gravity_StopsFallingEvent', 1020, 'Player landed!'),
       // The score, twice over. `add 10 to the score` is the game's number,
       // shown on the Scoreboard; the print below it asks `collected`, which is
@@ -306,6 +328,7 @@ const MOVED_IN = [
   'ground',
   'coin',
   'ball',
+  'crawler',
   'scoreboard',
   'level1',
 ];
