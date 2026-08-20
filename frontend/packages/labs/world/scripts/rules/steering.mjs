@@ -1,6 +1,5 @@
-import {CanMove, position, velocity} from './builtins.mjs';
+import {CanMove, position, rotation, velocity} from './builtins.mjs';
 import {
-  add,
   anyOf,
   axisOf,
   both,
@@ -14,11 +13,11 @@ import {
   note,
   param,
   pick,
-  power,
-  root,
   times,
   thisActor,
   vector,
+  vectorDirection,
+  vectorLength,
   vectorOver,
   vectorTimes,
   when,
@@ -57,11 +56,12 @@ const rule = defineRule({
 // ("we only set sideways speed — up and down belongs to gravity"). Turning it
 // off leaves the vertical alone.
 //
-// WHAT IS NOT HERE, and why: \`turn to face ⟨actor⟩\`. Rotation is a number of
-// degrees and the direction to a point is an arctangent, and the block language
-// has no arctangent — no angle-of-a-vector block of any kind. It is a small gap
-// with a wide reach (aiming, thrust, look-at) and it belongs in the maths
-// blocks rather than in this rule.`,
+// \`turn to face ⟨actor⟩\` is here because the maths blocks grew
+// \`direction of ⟨…⟩\` for it. Writing this rule is what found that gap: rotation
+// is degrees, the way to a point is an arctangent, and the language had no
+// arctangent — no angle-of-a-vector block of any kind — so aiming, thrust and
+// look-at were all unsayable. The fix belonged in the maths blocks rather than
+// in this rule, and once it landed the block was four lines.`,
 });
 rule.uses('Physics');
 
@@ -86,19 +86,50 @@ export const Flees = rule.traitRef('Flees');
  * PIXELS, like every other length here — positions are pixels and speeds are
  * units (engine/core/units), and a distance is a position thing.
  */
+/**
+ * The vector from one actor to another — what everything here is built on.
+ *
+ * Its length is the distance, its direction is the way to face, and divided by
+ * its length it is the way to walk. Three questions, one subtraction.
+ */
+const apart = rule.block({
+  returns: 'vector',
+  description: 'The vector from the first actor to the second.',
+  say: ['from', param('a', 'actor'), 'to', param('b', 'actor')],
+  body: ({a, b}) => [
+    give(
+      vector(
+        minus(position.x(b.get()), position.x(a.get())),
+        minus(position.y(b.get()), position.y(a.get())),
+      ),
+    ),
+  ],
+});
+
 const distance = rule.block({
   returns: 'number',
   description: 'How far apart two actors are, in pixels.',
   say: ['distance from', param('a', 'actor'), 'to', param('b', 'actor')],
-  body: ({a, b}) => [
-    note('Pythagoras: the long side of the triangle between them.'),
-    give(
-      root(
-        add(
-          power(minus(position.x(b.get()), position.x(a.get())), n(2)),
-          power(minus(position.y(b.get()), position.y(a.get())), n(2)),
-        ),
-      ),
+  body: ({a, b}) => [give(vectorLength(apart({a: a.get(), b: b.get()})))],
+});
+
+/**
+ * `⟨me⟩ turn to face ⟨you⟩` — point at another actor.
+ *
+ * This could not be written until the maths blocks grew `direction of ⟨…⟩`:
+ * rotation is degrees, the way to a point is an arctangent, and the language
+ * had no arctangent of any kind. It is here rather than under a trait because
+ * facing is not a thing you elect — anything with a rotation can do it, and a
+ * turret that never moves wants it most.
+ */
+rule.block({
+  returns: 'none',
+  description: 'Turn this actor to point at another one.',
+  say: [param('turner', 'actor'), 'turn to face', param('target', 'actor')],
+  body: ({turner, target}) => [
+    rotation.set(
+      turner.get(),
+      vectorDirection(apart({a: turner.get(), b: target.get()})),
     ),
   ],
 });
@@ -172,18 +203,10 @@ const towards = rule.block({
     'toward',
     param('there', 'actor'),
     'over',
-    param('apart', 'number'),
+    param('gapBetween', 'number'),
   ],
-  body: ({here, there, apart}) => [
-    give(
-      vectorOver(
-        vector(
-          minus(position.x(there.get()), position.x(here.get())),
-          minus(position.y(there.get()), position.y(here.get())),
-        ),
-        apart.get(),
-      ),
-    ),
+  body: ({here, there, gapBetween}) => [
+    give(vectorOver(apart({a: here.get(), b: there.get()}), gapBetween.get())),
   ],
 });
 
@@ -205,7 +228,7 @@ chases.step('chase', 'push', [
                     towards({
                       here: thisActor(),
                       there: quarry.of(thisActor()),
-                      apart: gap.get(),
+                      gapBetween: gap.get(),
                     }),
                     chaseSpeed.of(thisActor()),
                   ),
@@ -255,7 +278,7 @@ flees.step('flee', 'push', [
                   towards({
                     here: thisActor(),
                     there: threat.of(thisActor()),
-                    apart: gap.get(),
+                    gapBetween: gap.get(),
                   }),
                   times(fleeSpeed.of(thisActor()), n(-1)),
                 ),

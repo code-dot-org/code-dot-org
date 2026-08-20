@@ -3127,3 +3127,40 @@ describe('what an actor list’s source socket wears', () => {
     }
   });
 });
+
+describe('a vector and its polar halves', () => {
+  // Nothing turned a direction into an angle before these — no arctangent, no
+  // angle-of-a-vector — so `turn to face ⟨actor⟩` could not be written at all
+  // and the Steering rule shipped without it.
+  it('world_vector_length asks how long', () => {
+    expect(emitValue('world_vector_length', {}, {VECTOR: 'v'})[0]).toBe(
+      'v.length()',
+    );
+  });
+
+  it('world_vector_direction asks which way', () => {
+    expect(emitValue('world_vector_direction', {}, {VECTOR: 'v'})[0]).toBe(
+      'v.angle()',
+    );
+  });
+
+  it('world_vector_from_angle makes one from the two', () => {
+    // Length then angle, because that is the order the sentence wants — "5 in
+    // direction 90" — while the engine takes the angle first.
+    expect(
+      emitValue('world_vector_from_angle', {}, {LENGTH: '5', DEGREES: '90'})[0],
+    ).toBe('WorldLab.Vector.fromAngle(90, 5)');
+  });
+
+  it('stands in for an empty socket rather than emitting nothing', () => {
+    // An unplugged vector socket is `(0, 0)`, as the sibling vector blocks
+    // already treat one; an unplugged length is 1, so the block answers a
+    // direction rather than a point.
+    expect(emitValue('world_vector_length')[0]).toBe(
+      'new WorldLab.Vector(0, 0).length()',
+    );
+    expect(emitValue('world_vector_from_angle')[0]).toBe(
+      'WorldLab.Vector.fromAngle(0, 1)',
+    );
+  });
+});

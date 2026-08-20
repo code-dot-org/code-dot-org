@@ -154,6 +154,24 @@ export const vectorMinus = (a, b) => vectorOp('SUBTRACT', a, b);
 export const vectorTimes = (a, b) => vectorOp('MULTIPLY', a, b);
 export const vectorOver = (a, b) => vectorOp('DIVIDE', a, b);
 
+/** `length of <v>` — how long a vector is. */
+export const vectorLength = v => ({
+  type: 'world_vector_length',
+  inputs: {VECTOR: value(v)},
+});
+
+/** `direction of <v>` — which way it points, in degrees (0 right, 90 down). */
+export const vectorDirection = v => ({
+  type: 'world_vector_direction',
+  inputs: {VECTOR: value(v)},
+});
+
+/** `<length> in direction <degrees>°` — the inverse of the two above. */
+export const vectorFromAngle = (length, degrees) => ({
+  type: 'world_vector_from_angle',
+  inputs: {LENGTH: value(length), DEGREES: value(degrees)},
+});
+
 export const rotated = (v, degrees) => ({
   type: 'world_vector_rotate',
   inputs: {VECTOR: value(v), DEGREES: value(degrees)},

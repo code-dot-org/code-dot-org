@@ -2639,6 +2639,105 @@ registerValueShadows('world_vector_rotate', [
   {name: 'DEGREES', shadow: {type: 'math_number', fields: {NUM: 90}}},
 ]);
 
+/**
+ * `length of ⟨…⟩` — how long a vector is.
+ *
+ * How fast something is going, how far apart two points are. It was written by
+ * hand until now, as Pythagoras in a rule's own blocks
+ * (`rules/steering`'s distance block did exactly that), which is four blocks
+ * for a thing with a name.
+ */
+const worldVectorLength = defineBlock({
+  type: 'world_vector_length',
+  message0: 'length of %1',
+  args0: [{type: 'input_value', name: 'VECTOR', check: 'Vector'}],
+  inputsInline: true,
+  output: 'Number',
+  style: 'location_blocks',
+  tooltip: 'How long a vector is — its speed, or a distance.',
+  generator: {
+    javascript(block, generator) {
+      const vector =
+        generator.valueToCode(block, 'VECTOR', Order.MEMBER) ||
+        'new WorldLab.Vector(0, 0)';
+      return [`${vector}.length()`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+/**
+ * `direction of ⟨…⟩` — which way a vector points, in degrees.
+ *
+ * 0 is to the right and 90 is DOWN, clockwise, because y is down — the same
+ * convention `rotate ⟨…⟩ by ⟨…⟩°` turns in and the same one an actor's
+ * rotation is drawn with. So the direction of a velocity IS the rotation that
+ * faces along it, and `set rotation of ⟨me⟩ to ⟨direction of ⟨my velocity⟩⟩`
+ * is a sprite that points where it is going.
+ *
+ * THE MISSING BLOCK. Until this, nothing in the language turned a direction
+ * into an angle — no arctangent, no angle-of-a-vector, nothing. Which meant
+ * `turn to face ⟨actor⟩` could not be written at all, and the Steering rule
+ * shipped without it and said so in its header.
+ */
+const worldVectorDirection = defineBlock({
+  type: 'world_vector_direction',
+  message0: 'direction of %1',
+  args0: [{type: 'input_value', name: 'VECTOR', check: 'Vector'}],
+  inputsInline: true,
+  output: 'Number',
+  style: 'location_blocks',
+  tooltip:
+    'Which way a vector points, in degrees: 0 is right, 90 is down. The same ' +
+    'angle an actor’s rotation uses, so a sprite can face the way it moves.',
+  generator: {
+    javascript(block, generator) {
+      const vector =
+        generator.valueToCode(block, 'VECTOR', Order.MEMBER) ||
+        'new WorldLab.Vector(0, 0)';
+      return [`${vector}.angle()`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+/**
+ * `⟨1⟩ in direction ⟨0⟩°` — a vector from a length and an angle.
+ *
+ * `direction of`'s inverse, and the half a game needs to ACT on an angle:
+ * thrust the way I am facing, fire a bullet along my rotation, scatter things
+ * around a circle. Written as length-then-angle because that is the order the
+ * sentence wants — "5 in direction 90" — and because the length is the part a
+ * learner most often plugs a speed into.
+ */
+const worldVectorFromAngle = defineBlock({
+  type: 'world_vector_from_angle',
+  message0: '%1 in direction %2°',
+  args0: [
+    {type: 'input_value', name: 'LENGTH', check: 'Number'},
+    {type: 'input_value', name: 'DEGREES', check: 'Number'},
+  ],
+  inputsInline: true,
+  output: 'Vector',
+  extensions: [valueShadowExtension],
+  style: 'location_blocks',
+  tooltip:
+    'A vector of this length pointing this way — 0 is right, 90 is down.',
+  generator: {
+    javascript(block, generator) {
+      const length = generator.valueToCode(block, 'LENGTH', Order.NONE) || '1';
+      const degrees =
+        generator.valueToCode(block, 'DEGREES', Order.NONE) || '0';
+      return [
+        `WorldLab.Vector.fromAngle(${degrees}, ${length})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_vector_from_angle', [
+  {name: 'LENGTH', shadow: {type: 'math_number', fields: {NUM: 1}}},
+  {name: 'DEGREES', shadow: {type: 'math_number', fields: {NUM: 0}}},
+]);
+
 const worldVectorComponent = defineBlock({
   type: 'world_vector_component',
   message0: '%1 of %2',
@@ -6395,6 +6494,9 @@ export const DOMAIN_BLOCKS = [
   worldVectorOf,
   worldSlider,
   worldRgba,
+  worldVectorLength,
+  worldVectorDirection,
+  worldVectorFromAngle,
   worldVectorComponent,
   worldThisActor,
   worldActorKind,
@@ -6809,6 +6911,12 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'world_vector_math',
       'world_vector_rotate',
       'world_vector_component',
+      // A vector and its polar halves: how long it is, which way it points,
+      // and one made from those two. Nothing turned a direction into an angle
+      // before these, so "face the way you are going" was not sayable.
+      'world_vector_length',
+      'world_vector_direction',
+      'world_vector_from_angle',
     ],
   },
   // Color values, beside Math because that is what they are. The picker is
