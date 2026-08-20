@@ -28,6 +28,7 @@ import {inputRule} from './input';
 import {jumpRule} from './jump';
 import {motionRule} from './motion';
 import {mouseRule} from './mouse';
+import {scoreRule} from './score';
 import {shootsRule} from './shoots';
 import {solidRule} from './solid';
 import {steeringRule} from './steering';
@@ -142,6 +143,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Gives an actor words, a size, a color and an anchor — the state a drawn word is drawn from. It runs nothing: what an actor does with its words is its own “define drawing”, which is why the stock Label and Button are ordinary actors.',
     provides: ['Shows Text'],
     contents: writingRule,
+  },
+  {
+    id: 'score',
+    name: 'Scoring',
+    ability: 'Keeps Score',
+    description:
+      'A score the whole world shares, and an event the moment it reaches the target. Says when the game is won; what winning looks like is the project\u2019s to write.',
+    provides: [],
+    contents: scoreRule,
   },
   {
     id: 'input',
@@ -325,4 +335,5 @@ export {
   cameraConfinedRule,
   cameraDeadzoneRule,
   jumpRule,
+  scoreRule,
 };

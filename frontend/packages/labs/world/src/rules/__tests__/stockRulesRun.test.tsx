@@ -245,6 +245,117 @@ describe('Time', () => {
   });
 });
 
+describe('Scoring', () => {
+  /** A world with the rule in play and a target set. */
+  const game = (targetScore = 0) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/score')])
+      .instantiate();
+    if (targetScore) {
+      world.set(of('rules/score', 'TargetScoreProperty'), targetScore as never);
+    }
+    return world;
+  };
+  /**
+   * Score some points, and let the world deliver what that raised.
+   *
+   * The tick is not decoration. An event is QUEUED when it is raised and
+   * flushed when the world ticks (engine/core/EventQueue), so a test that
+   * scored without ticking would watch a handler that never ran and conclude
+   * the rule raises nothing.
+   */
+  const add = (world: World, points: number) => {
+    world.act(of('rules/score', 'AddToTheScoreAction'), points);
+    world.tick(1 / 60);
+  };
+  const scoreOf = (world: World) =>
+    world.get(of('rules/score', 'ScoreProperty')) as unknown as number;
+
+  it('adds up, and says so every time', () => {
+    const world = game();
+    let changes = 0;
+    world.on(of('rules/score', 'TheScoreChangesEvent'), () => {
+      changes++;
+    });
+
+    add(world, 10);
+    add(world, 5);
+
+    expect(scoreOf(world)).toBe(15);
+    expect(changes).toBe(2);
+  });
+
+  it('says the target is reached, once and not again', () => {
+    // The whole reason `won` exists. Collecting does not stop when you win, so
+    // without it a handler that shows a banner would show it on every coin
+    // after the winning one.
+    const world = game(30);
+    let wins = 0;
+    world.on(of('rules/score', 'TheTargetIsReachedEvent'), () => {
+      wins++;
+    });
+
+    add(world, 10);
+    expect(wins).toBe(0);
+    add(world, 25);
+    expect(wins).toBe(1);
+    add(world, 25);
+    expect(wins).toBe(1);
+  });
+
+  it('never says it with no target, however high the score goes', () => {
+    // A game that only wants a number on the screen gets one, and is never
+    // told it has won something it never entered.
+    const world = game();
+    let wins = 0;
+    world.on(of('rules/score', 'TheTargetIsReachedEvent'), () => {
+      wins++;
+    });
+
+    add(world, 1000);
+
+    expect(wins).toBe(0);
+    expect(scoreOf(world)).toBe(1000);
+  });
+
+  it('lets a reset be won again', () => {
+    // Both halves of the reset, and each alone is a bug: a score that forgot
+    // it had won would win twice on one run, and one that remembered could
+    // never win a second game.
+    const world = game(10);
+    let wins = 0;
+    world.on(of('rules/score', 'TheTargetIsReachedEvent'), () => {
+      wins++;
+    });
+
+    add(world, 10);
+    world.act(of('rules/score', 'ResetTheScoreAction'));
+    world.tick(1 / 60);
+    expect(scoreOf(world)).toBe(0);
+    add(world, 10);
+
+    expect(wins).toBe(2);
+  });
+
+  it('counts down as readily as up', () => {
+    // `add` takes what it is given. A penalty is a negative number, not a
+    // second block — and the target is a floor to cross, not a total reached,
+    // so dropping below it and climbing back does not win twice.
+    const world = game(10);
+    let wins = 0;
+    world.on(of('rules/score', 'TheTargetIsReachedEvent'), () => {
+      wins++;
+    });
+
+    add(world, 12);
+    add(world, -8);
+    add(world, 8);
+
+    expect(scoreOf(world)).toBe(12);
+    expect(wins).toBe(1);
+  });
+});
+
 describe('Jumping', () => {
   /** A world with a floor, and a jumper standing on it. */
   const standing = (settings: Record<string, number> = {}) => {
@@ -556,6 +667,17 @@ describe('what the newer demos show', () => {
         }
       }
     }
+  });
+
+  it('score: it counts the coins and then says so', () => {
+    // Two rules that know nothing about each other, joined by one line in the
+    // demo's own handler: Collection says a coin was taken, Scoring says that
+    // was the third. What the strip shows is the banner, so what this checks
+    // is the flag the banner reads.
+    const {world} = play(RULE_DEMOS.score);
+
+    expect(world.get(of('rules/score', 'ScoreProperty'))).toBe(30);
+    expect(world.get(of('rules/score', 'WonProperty'))).toBe(true);
   });
 
   it('jump: it clears the hole, and the second press does nothing', () => {
