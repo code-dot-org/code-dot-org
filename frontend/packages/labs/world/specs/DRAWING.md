@@ -49,6 +49,16 @@ It was root-only at first, and that made a whole class of actor unsayable in a
 world: one with a picture. It presented as a scoreboard drawn as a plain green
 box, which is what the driver paints for an actor nothing knows how to draw.
 
+**An actor with words and no drawing is warned about, not fixed.** `Shows Text`
+paints nothing on its own, so electing it and stopping there is a file in which
+everything a learner can see is correct and the screen shows a coloured
+rectangle. The engine cannot guess a picture and should not, so the `use trait`
+row says so on its own face instead (`extensions/textNeedsDrawing`) — the
+answer `missingRule` gives to its own silent case. What counts as drawing them
+is `draw text` and only that: a sprite is a picture and not these words, and
+`draw text` reads the text off the actor running the drawing, so another
+actor's cannot stand in.
+
 `each frame` proved the mechanism. `ActorBuilder.defineStep` folds a per-kind
 routine into the tick order the first time one of the kind is placed
 (`World.useActorKind`), declared in the actor's own file and shared with

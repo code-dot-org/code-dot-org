@@ -103,6 +103,7 @@ import {rulesButtonExtension} from './extensions/rulesButton';
 import {sliderRangeMutator} from './extensions/sliderRange';
 import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
+import {textNeedsDrawingExtension} from './extensions/textNeedsDrawing';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {fieldSliderArg} from './fields/FieldSlider';
@@ -494,6 +495,9 @@ const worldUseTrait = defineBlock({
     // …and, when the rule that declares this trait has been deleted, a warning
     // saying so — since the generator's answer to that is to write nothing.
     missingRuleExtension,
+    // …and, for `Shows Text` alone, one saying the actor has words nothing
+    // paints — which is a correct-looking file that draws a plain box.
+    textNeedsDrawingExtension,
   ],
   style: 'behavior_blocks',
   tooltip: 'Give the actor a trait (its properties and behavior).',
