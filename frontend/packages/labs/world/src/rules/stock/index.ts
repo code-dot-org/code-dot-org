@@ -28,6 +28,7 @@ import {inputRule} from './input';
 import {jumpRule} from './jump';
 import {motionRule} from './motion';
 import {mouseRule} from './mouse';
+import {patrolRule} from './patrol';
 import {scoreRule} from './score';
 import {shootsRule} from './shoots';
 import {solidRule} from './solid';
@@ -125,6 +126,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Lets an actor go after another one, or run from it. A chaser walks toward what it is told to chase and stops when it is close enough; a fleer runs only when the thing it avoids is too near. It sets velocity, so walls still stop it and gravity still owns the vertical when you say so \u2014 and it brings the \u201cdistance from \u2039a\u203a to \u2039b\u203a\u201d block, which is what \u201cthe nearest enemy\u201d is asked with.',
     provides: ['Chases', 'Flees'],
     contents: steeringRule,
+  },
+  {
+    id: 'patrol',
+    name: 'Patrol',
+    ability: 'Walks Back and Forth',
+    description:
+      'Walks an actor out and back on a beat of its own, across or down or both. What an enemy does when the player is not there, and what a moving platform does always.',
+    provides: ['Patrols Across', 'Patrols Down'],
+    contents: patrolRule,
   },
   {
     id: 'time',
@@ -336,4 +346,5 @@ export {
   cameraDeadzoneRule,
   jumpRule,
   scoreRule,
+  patrolRule,
 };

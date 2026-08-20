@@ -35,6 +35,7 @@ const RULES = [
   'steering',
   'time',
   'score',
+  'patrol',
   'writing',
   'camera',
   'cameraFollow',
