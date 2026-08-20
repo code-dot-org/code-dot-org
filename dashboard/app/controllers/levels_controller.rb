@@ -329,6 +329,44 @@ class LevelsController < ApplicationController
     render status: :bad_request, json: {error: exception.message}
   end
 
+  # GET /levels/:id/quiz_questions?search=&sort=
+  #
+  # Question bank browsing: lists existing MultipleChoiceQuestions matching
+  # a question_name search, each marked attached: true/false for whether it's
+  # already on this quiz. Search follows the same MySQL fulltext convention as
+  # Vocabulary/Resources/Standards search - see QuizQuestionAutocomplete/AutocompleteHelper.
+  # sort is 'name' or 'recent' (default) - see QuizQuestionAutocomplete::SORT_ORDERS.
+  def index_quiz_questions
+    return head :not_found unless @level.is_a?(Quiz)
+
+    questions = QuizQuestionAutocomplete.get_search_matches(params[:search], params[:limit], params[:sort])
+    attached_ids = @level.quiz_questions.pluck(:id)
+
+    render json: questions.map {|question| quiz_question_json(question).merge(attached: attached_ids.include?(question.id))}
+  end
+
+  # POST /levels/:id/quiz_questions/:question_id/attach
+  #
+  # Attaches an EXISTING bank question to this quiz - unlike
+  # create_quiz_question, this never creates a new QuizQuestion row, only a
+  # new QuizLevelQuestion join. find_or_create_by! makes this idempotent
+  # against a double click (adding twice would otherwise be a silent no-op
+  # anyway, but this avoids a spurious duplicate row/error).
+  def attach_quiz_question
+    return head :not_found unless @level.is_a?(Quiz)
+
+    question = MultipleChoiceQuestion.find(params[:question_id])
+    next_position = (@level.quiz_level_questions.maximum(:position) || 0) + 1
+    QuizLevelQuestion.find_or_create_by!(level: @level, quiz_question: question) do |quiz_level_question|
+      quiz_level_question.page = 1
+      quiz_level_question.position = next_position
+    end
+
+    render status: :created, json: quiz_question_json(question)
+  rescue StandardError => exception
+    render status: :bad_request, json: {error: exception.message}
+  end
+
   # GET /levels/:id/quiz_questions/:question_id
   #
   # Building-only counterpart to Quiz#summarize_for_lab2_properties: that
