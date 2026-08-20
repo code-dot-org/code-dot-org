@@ -38,6 +38,14 @@ describe('rules/steering.rule', () => {
     expect(meta.requires).toContain('Physics');
   });
 
+  it('can turn an actor to face another', () => {
+    // Writing this rule is what found the maths gap: the language had no
+    // arctangent of any kind, so aiming was unsayable. `direction of ⟨…⟩` is
+    // the block that fixed it, and this is what asked for it.
+    const said = meta.actions.map(one => one.name);
+    expect(said.some(name => name.includes('turn to face'))).toBe(true);
+  });
+
   it('brings the distance block the language was missing', () => {
     // `the actor ⟨e⟩ in ⟨any Enemy⟩ with the least ⟨…⟩` shipped with no way to
     // say the something a game actually sorts by: there is no length-of-vector
