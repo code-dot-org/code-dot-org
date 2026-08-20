@@ -23,6 +23,7 @@ import {
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
 import {ImageType} from '../ai/images/types';
+import {galleryOrder, imageTypeFromCategories} from '../imageGallery';
 import {
   getTrimmedThumbnail,
   onTrimsUpdated,
@@ -33,16 +34,6 @@ import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 import ImageDetailsDialog from './ImageDetailsDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
-
-function imageTypeFromCategories(categories?: string[]): ImageType {
-  if (categories?.includes(BACKGROUNDS_CATEGORY)) {
-    return 'background';
-  }
-  if (categories?.includes(BLOCKS_CATEGORY)) {
-    return 'block';
-  }
-  return 'sprite';
-}
 
 function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
   let binary = '';
@@ -105,10 +96,13 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // The project's images live in the animation list (AI-generated images are
   // bridged in there); this view is also how you manage them.
   const images = useAppSelector(state =>
-    state.animationList.orderedKeys.map(key => ({
-      key,
-      props: state.animationList.propsByKey[key],
-    }))
+    galleryOrder(
+      state.animationList.orderedKeys.map(key => ({
+        key,
+        props: state.animationList.propsByKey[key],
+      })),
+      image => imageTypeFromCategories(image.props?.categories)
+    )
   );
 
   // Gallery thumbnails prefer the border-trimmed image (backgrounds aren't
