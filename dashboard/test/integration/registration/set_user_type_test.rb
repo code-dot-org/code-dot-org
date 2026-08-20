@@ -376,6 +376,23 @@ module RegistrationsControllerTests
       refute Section.exists?(demo_section.id)
     end
 
+    test "converting student to teacher is refused when the student is under 21 and in a section" do
+      student = create(:student, email: 'example@email.com', birthday: 15.years.ago)
+      create(:follower, student_user: student)
+      sign_in student
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'teacher',
+          email: 'example@email.com',
+          hashed_email: student.hashed_email
+        }
+      }
+      assert_response :bad_request
+
+      assert_equal 'student', student.reload.user_type
+    end
+
     test "converting teacher to student ignores email opt-in" do
       test_email = 'example@email.com'
       teacher = create(:teacher, email: test_email)
