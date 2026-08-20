@@ -323,6 +323,63 @@ describe('what the newer demos show', () => {
     expect([...world.actors].length).toBeLessThan(5);
   });
 
+  it('bounds: both boxes park in the corners they were heading for', () => {
+    // Two, because one box in a corner is a box in a corner. What says the
+    // rule stopped them is that the other, going the other way, stopped just
+    // as dead at the opposite edge.
+    const {world, cast} = play(RULE_DEMOS.bounds);
+    const where = (who: unknown) =>
+      (who as {get(p: unknown): Vector}).get(PositionProperty);
+
+    // Half a box back from each edge, which is what "stays in the map" means
+    // for a thing with a width (`rules/bounds` assumes 32 unmeasured).
+    expect(where(cast.falling).x).toBeCloseTo(192 - 16, 0);
+    expect(where(cast.falling).y).toBeCloseTo(128 - 16, 0);
+    expect(where(cast.rising).x).toBeCloseTo(16, 0);
+    expect(where(cast.rising).y).toBeCloseTo(16, 0);
+
+    // …and PARKED rather than passing through: another second changes nothing.
+    const settled = `${where(cast.falling).x},${where(cast.rising).y}`;
+    run(world, 1);
+    expect(`${where(cast.falling).x},${where(cast.rising).y}`).toBe(settled);
+  });
+
+  it('time: the marks land evenly, not all at once', () => {
+    // The spacing IS the demonstration. A timer that fired every frame would
+    // fill the row in the first two frames of the strip, which is exactly the
+    // bug the Time tests above were written against.
+    const {world} = play(RULE_DEMOS.time);
+    const marks = [...world.actors]
+      .filter(actor => actor.id.startsWith('beat'))
+      .map(actor => actor.get(PositionProperty).x)
+      .sort((a, b) => a - b);
+
+    expect(marks.length).toBeGreaterThan(4);
+    const gaps = marks.slice(1).map((x, n) => x - marks[n]);
+    expect(new Set(gaps).size).toBe(1);
+  });
+
+  it('shoots: asked every frame, it answers at its reload rate', () => {
+    // The gun is asked sixty times a second and fires four, so the bullets
+    // come out evenly spaced — the reload time made visible as a distance.
+    const {world} = play(RULE_DEMOS.shoots);
+    const bullets = [...world.actors]
+      .filter(actor => actor.id.startsWith('shot'))
+      .map(actor => actor.get(PositionProperty).x)
+      .sort((a, b) => a - b);
+
+    expect(bullets.length).toBeGreaterThan(2);
+    const gaps = bullets.slice(1).map((x, n) => x - bullets[n]);
+    // Sixteen frames apart at 120 pixels a second, not the fifteen a quarter
+    // of a second looks like: the clock is a running sum of 1/60, and fifteen
+    // of those is 0.24999999999999997 — a hair short of the reload, so the
+    // shot lands on the next frame. Evenly, which is what the strip shows and
+    // what the rule promises; the exact number is arithmetic, not a rate.
+    for (const gap of gaps) {
+      expect(gap).toBeCloseTo(32, 0);
+    }
+  });
+
   // The camera family, checked the way the strips read: what a camera rule
   // does is entirely a fact about where the walker sits IN THE FRAME, so each
   // of these measures that and nothing else. The world positions are identical

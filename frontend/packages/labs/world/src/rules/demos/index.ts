@@ -6,6 +6,7 @@
 
 import {getDemoBaseUrl} from '../../runtime/worldConfig';
 
+import {boundsDemo} from './bounds';
 import {
   cameraConfinedDemo,
   cameraDeadzoneDemo,
@@ -18,8 +19,10 @@ import {expiresDemo} from './expires';
 import {gravityDemo} from './gravity';
 import {healthDemo} from './health';
 import {physicsDemo} from './physics';
+import {shootsDemo} from './shoots';
 import {solidDemo} from './solid';
 import {steeringDemo} from './steering';
+import {timeDemo} from './time';
 import {DEMO_FPS, type RuleDemo} from './types';
 import {wrapDemo} from './wrap';
 
@@ -31,9 +34,12 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   collect: collectDemo,
   health: healthDemo,
   steering: steeringDemo,
+  time: timeDemo,
   gravity: gravityDemo,
   drag: dragDemo,
+  shoots: shootsDemo,
   expires: expiresDemo,
+  bounds: boundsDemo,
   wrap: wrapDemo,
   cameraFollow: cameraFollowDemo,
   cameraEase: cameraEaseDemo,

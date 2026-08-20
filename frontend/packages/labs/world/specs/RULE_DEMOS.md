@@ -154,9 +154,13 @@ the input — a key glyph that lights as it is "held", a pointer that travels an
 clicks. That is a real design question with real answers, and it is not one to
 answer in the same pass as the pipeline.
 
-Writing is the odd one: a still already says what it does, and the interesting
-version — text arriving, a score counting up — is animatable and worth doing
-once there is something to say with it.
+Writing is the odd one, and it is BLOCKED rather than merely unattractive. The
+recorder paints rectangles into a byte array — that is what makes it a build
+step rather than a browser — and text is the one thing a rectangle cannot
+stand in for. Demonstrating it means teaching the strip writer a font, which is
+a small enough job (a five-by-seven bitmap and a lookup) but a different one,
+and it is the thing to do first if the interesting version — text arriving, a
+score counting up — is wanted.
 
 Until a rule has a demo it shows what it shows today, which the dialog has to be
 comfortable with anyway (see above).
@@ -206,10 +210,23 @@ comfortable with anyway (see above).
    a custom property computed from the demo (`seconds × DEMO_FPS`) rather than
    from a manifest, which would have been a second thing to fetch and a second
    thing to be stale.
-5. 🔶 **The rest of the obvious ones**, once the shape has survived contact
-   with three. Done: Physics, Solid Bodies, Collection, Health, Steering,
-   Gravity, Drag, Expiry, Screen Wrap, and the four camera rules. Left:
-   Boundaries, Shooting, Time, Writing.
+5. ✅ **The rest of the obvious ones**, once the shape has survived contact
+   with three: Physics, Solid Bodies, Collection, Health, Steering, Gravity,
+   Drag, Expiry, Screen Wrap, Boundaries, Time, Shooting, and the four camera
+   rules.
+
+   **Two of them needed a handler, which is the point.** Time raises "timer
+   fires" and Shooting raises "fires", and neither owns what happens next — so
+   their demos write the handler a project would write, in TypeScript instead
+   of blocks. The Time demo leaves a mark per beat and the strip fills with
+   evenly spaced marks; the Shooting demo asks to fire every single frame and
+   the strip shows bullets coming out four a second, which is the reload time
+   made visible as a distance.
+
+   Asking every frame is done with a timer whose period is under one frame.
+   The obvious way to ask constantly is a key held down, and nobody is
+   pressing anything in a recording — that is step 6's problem, and Shooting
+   did not have to wait for it.
 
    **The camera rules needed the recorder to learn to see.** It drew where
    actors ARE, so a rule whose entire effect is on the view moved nothing
