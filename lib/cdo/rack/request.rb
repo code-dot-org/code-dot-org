@@ -91,6 +91,21 @@ module Cdo
       host
     end
 
+    # Returns the CloudFront request ID if it originated at the CDN, nil otherwise.
+    # Useful for debugging CDN-specific issues where you need the exact CloudFront hop ID.
+    def cloudfront_request_id
+      env['HTTP_X_AMZ_CF_ID']
+    end
+
+    # Returns the best available request ID for correlation, preferring CloudFront ID.
+    # Falls back to: action_dispatch.request_id -> HTTP_X_REQUEST_ID.
+    # Use this when you need "some" ID for logs/metrics. This method is what the rest of the app
+    # should call—cloudfront_request_id only matters when you explicitly care whether the request
+    # traversed CloudFront.
+    def correlation_id
+      cloudfront_request_id || env['action_dispatch.request_id'] || env['HTTP_X_REQUEST_ID']
+    end
+
     def splat_path_info
       env[:splat_path_info]
     end

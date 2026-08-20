@@ -13,6 +13,7 @@ Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| re
 
 require 'bootstrap-sass'
 require 'cdo/global_edition'
+require 'cdo/rack/cloudfront_request_id'
 require 'cdo/hash'
 require 'cdo/i18n'
 require 'cdo/i18n_backend'
@@ -52,6 +53,8 @@ module Dashboard
         resource '/dashboardapi/*', headers: :any, methods: [:get]
       end
     end
+
+    config.middleware.insert_before ActionDispatch::RequestId, Rack::CloudFrontRequestId
 
     if CDO.use_cookie_dcdo
       # Enables the setting of DCDO via cookies for testing purposes.

@@ -1,3 +1,5 @@
+require 'cdo/request_tracing'
+
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
   include SharedConstants
@@ -219,6 +221,8 @@ class RubricsController < ApplicationController
       user_id: @user.id,
       requester_id: current_user.id,
       script_level_id: script_level.id,
+      request_id: request.request_id,
+      traceparent: RequestTracing.current_traceparent
     )
     return head :ok
   end
@@ -270,6 +274,8 @@ class RubricsController < ApplicationController
         user_id: @user.id,
         requester_id: current_user.id,
         script_level_id: script_level.id,
+        request_id: request.request_id,
+        traceparent: RequestTracing.current_traceparent
       )
     end
     return head :ok
