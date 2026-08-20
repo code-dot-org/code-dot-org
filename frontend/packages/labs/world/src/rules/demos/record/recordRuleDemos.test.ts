@@ -25,7 +25,13 @@ import {
   compileStockRules,
 } from '../../__tests__/support/compileStockRules';
 import {RULE_DEMOS} from '../index';
-import {DEMO_BACKGROUND, DEMO_SIZE, viewOrigin, type RuleDemo} from '../types';
+import {
+  DEMO_BACKGROUND,
+  DEMO_SIZE,
+  stepDemo,
+  viewOrigin,
+  type RuleDemo,
+} from '../types';
 
 import {drawStrip, rgb, type Box} from './strip';
 
@@ -62,12 +68,15 @@ function play(
   const ticks = Math.round(demo.seconds * 60);
   const every = Math.round(60 / FPS);
   for (let tick = 0; tick < ticks; tick++) {
-    if (tick % every === 0) {
+    stepDemo(world, demo, tick, () => {
+      if (tick % every !== 0) {
+        return;
+      }
       const view = viewOrigin(world);
       frames.push(
         world.renderSnapshot().map(state => {
           const id = (state.actor as unknown as {id: string}).id;
-          const look = demo.look(id, state.actor);
+          const look = demo.look(id, state.actor, world);
           return {
             id,
             x: state.x - view.x,
@@ -78,8 +87,7 @@ function play(
           };
         }),
       );
-    }
-    world.tick(1 / 60);
+    });
   }
   return frames;
 }

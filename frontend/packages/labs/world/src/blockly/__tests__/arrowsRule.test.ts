@@ -32,11 +32,15 @@ describe('rules/arrows.rule', () => {
   it('declares what the engine rule declared', () => {
     expect(meta.name).toBe('Arrow Keys');
     expect(meta.ability).toBe('Moves with Arrow Keys');
+    // TWO traits, one per direction: a platformer elects across and leaves
+    // down to gravity, a top-down game elects both (`scripts/rules/arrows`).
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
-      'ControlledByArrowKeysTrait',
+      'MovesAcrossTrait',
+      'MovesDownTrait',
     ]);
     expect(meta.properties.map(property => property.ref.exportName)).toEqual([
-      'MoveSpeedProperty',
+      'AcrossSpeedProperty',
+      'DownSpeedProperty',
     ]);
   });
 
@@ -45,32 +49,41 @@ describe('rules/arrows.rule', () => {
     // (`key … is down`), so walking works in a project that never imported the
     // rule that raises key events.
     expect(meta.requires).toEqual(['Physics']);
-    expect(meta.traits[0].requires).toEqual(['Physics#CanMoveTrait']);
+    for (const trait of meta.traits) {
+      expect(trait.requires).toEqual(['Physics#CanMoveTrait']);
+    }
   });
 
-  it('carries a walk speed in units, not pixels', () => {
+  it('carries a walk speed per direction, in units rather than pixels', () => {
     // 1.5 units/s is 150 px/s — the same walk, in the numbers a learner can
     // reason about (engine/core/units).
-    const speed = meta.properties.find(p => p.id === 'move_speed');
-    expect(speed?.default).toBe(1.5);
-    expect(speed?.scope).toBe('actor');
+    for (const id of ['across_speed', 'down_speed']) {
+      const speed = meta.properties.find(p => p.id === id);
+      expect(speed?.default).toBe(1.5);
+      expect(speed?.scope).toBe('actor');
+    }
   });
 
   it('decides, which is what a held key means', () => {
     // It turns intent into velocity, and that is a phase: `decide` runs before
     // `push` and `move`, so a key held this frame moves this frame. It used to
     // say `before Physics ▸ reposition` — true, and about the wrong rule.
-    const [step] = meta.steps;
-    expect(step.order.kind).toBe('phase');
-    expect(step.order.phase).toBe('decide');
+    // Both of them, in the same moment. A moment is unordered, so the two
+    // steps have to commute — each reads the axis it writes and passes the
+    // other through, which is how holding two arrows moves diagonally.
+    expect(meta.steps).toHaveLength(2);
+    for (const step of meta.steps) {
+      expect(step.order.kind).toBe('phase');
+      expect(step.order.phase).toBe('decide');
+    }
   });
 
   it('declares the members the project references', () => {
     // The player's `use trait` names this export; a rename here breaks the
     // default project, which is what this pins.
-    expect(module_).toContain(
-      'export const ControlledByArrowKeysTrait = rule.addTrait(',
-    );
-    expect(module_).toContain('export const MoveSpeedProperty =');
+    expect(module_).toContain('export const MovesAcrossTrait = rule.addTrait(');
+    expect(module_).toContain('export const MovesDownTrait = rule.addTrait(');
+    expect(module_).toContain('export const AcrossSpeedProperty =');
+    expect(module_).toContain('export const DownSpeedProperty =');
   });
 });

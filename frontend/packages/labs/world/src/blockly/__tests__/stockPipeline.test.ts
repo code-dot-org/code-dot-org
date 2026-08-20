@@ -60,7 +60,8 @@ describe('the pipeline the stock rules describe', () => {
   it('runs in the order the anchors used to produce', () => {
     expect(new Scheduler(stockSteps()).order().map(step => step.id)).toEqual([
       'keyEvents', // sense   — read the keys
-      'control', // decide  — a held key becomes sideways velocity
+      'walk_across', // decide  — a held arrow becomes sideways velocity
+      'walk_down', // decide  — …and the other pair becomes vertical
       'applyVelocity', // push    — gravity adds to velocity
       'reposition', // move    — velocity becomes position
       'find', // touch   — who is against what

@@ -28,7 +28,13 @@ import {
   WorldBuilder,
   type World,
 } from '../../engine';
-import {DEMO_SIZE, RULE_DEMOS, viewOrigin, type RuleDemo} from '../demos';
+import {
+  DEMO_SIZE,
+  RULE_DEMOS,
+  stepDemo,
+  viewOrigin,
+  type RuleDemo,
+} from '../demos';
 
 import {
   ALL_STOCK_SOURCES,
@@ -52,10 +58,18 @@ const run = (world: World, seconds: number): void => {
 
 const at = (x: number, y: number) => new Vector(x, y);
 
-/** Build a demo world and run it for as long as the demo says. */
+/**
+ * Build a demo world and run it for as long as the demo says.
+ *
+ * Through `stepDemo` rather than `run`, so a demo that scripts input is driven
+ * here exactly as the recorder drives it. A test that ticked without the hands
+ * would assert about a world nobody was playing.
+ */
 const play = (demo: RuleDemo) => {
   const {world, cast} = demo.build(modules);
-  run(world, demo.seconds);
+  for (let tick = 0; tick < Math.round(demo.seconds * 60); tick++) {
+    stepDemo(world, demo, tick);
+  }
   return {world, cast};
 };
 
@@ -250,7 +264,9 @@ describe('every demo world', () => {
         .join(' ');
     const before = where();
 
-    run(world, demo.seconds);
+    for (let tick = 0; tick < Math.round(demo.seconds * 60); tick++) {
+      stepDemo(world, demo, tick);
+    }
 
     const after = where();
     expect(after).not.toEqual(before);
@@ -266,9 +282,7 @@ describe('every demo world', () => {
     // there is to see — so "inside the frame" cannot mean "inside the map",
     // and the scenery a camera pans away from is out of shot on purpose.
     const demo = RULE_DEMOS[id];
-    const {world} = demo.build(modules);
-
-    run(world, demo.seconds);
+    const {world} = play(demo);
 
     const view = viewOrigin(world);
     const subjects = demo.filmed
@@ -378,6 +392,70 @@ describe('what the newer demos show', () => {
     for (const gap of gaps) {
       expect(gap).toBeCloseTo(32, 0);
     }
+  });
+
+  it('arrows: it walks both ways while held, and stops when it is not', () => {
+    // The stopping is the half a moving box cannot demonstrate, so it is
+    // measured across the gap in the script rather than at the end. The gap
+    // runs from 0.7s to 1.0s and nothing is held in it.
+    const demo = RULE_DEMOS.arrows;
+    const {world, cast} = demo.build(modules);
+    const player = cast.player as {get(p: unknown): Vector};
+    const seen: Vector[] = [];
+    for (let tick = 0; tick < Math.round(demo.seconds * 60); tick++) {
+      stepDemo(world, demo, tick);
+      if (tick === 44 || tick === 58) {
+        seen.push(player.get(PositionProperty));
+      }
+    }
+
+    // Went right, then stood perfectly still for the rest of the gap.
+    expect(seen[0].x).toBeGreaterThan(100);
+    expect(seen[1].x).toBe(seen[0].x);
+    expect(seen[1].y).toBe(seen[0].y);
+
+    // …and by the end it has been down and then back up and left, which is
+    // the pair of traits doing two different things with one keyboard.
+    const at = player.get(PositionProperty);
+    expect(at.x).toBeLessThan(seen[0].x);
+    expect(at.y).toBeLessThan(seen[0].y + 4);
+  });
+
+  it('input: a tap is a hop, and holding is no more than a tap', () => {
+    // Five presses, one of them held for seven tenths of a second. If holding
+    // counted as pressing every frame the hopper would be off the map.
+    const {cast} = play(RULE_DEMOS.input);
+    const hopper = cast.hopper as {get(p: unknown): Vector};
+
+    expect(hopper.get(PositionProperty).x).toBe(34 + 5 * 26);
+  });
+
+  it('drive: it turns rather than sliding, and comes back round', () => {
+    // Both keys held from a third of a second in, so the path is an arc. What
+    // says "turn" rather than "diagonal" is that the ship ends up heading back
+    // toward where it began: a thing that only slid could not.
+    const {cast} = play(RULE_DEMOS.drive);
+    const ship = cast.ship as {get(p: unknown): Vector};
+    const at = ship.get(PositionProperty);
+
+    // Started at (60, 92) facing up, and looped: above where it started, and
+    // to the right of it, with the loop's far side already behind it.
+    expect(at.y).toBeLessThan(92);
+    expect(at.x).toBeGreaterThan(60);
+    expect(Math.hypot(at.x - 60, at.y - 92)).toBeLessThan(70);
+  });
+
+  it('mouse: a click is a place, and the target answers twice', () => {
+    // The bug this caught is worth the test on its own: `setPointer` speaks
+    // VIEWPORT pixels, so a demo handing it world coordinates put the pointer
+    // ninety pixels adrift and every click missed — silently, with the strip
+    // showing a pointer sitting on a target that never responded.
+    const {cast} = play(RULE_DEMOS.mouse);
+    const clicked = cast.clicked as () => number;
+    const target = cast.target as {get(p: unknown): Vector};
+
+    expect(clicked()).toBe(2);
+    expect(target.get(PositionProperty).x).toBe(48);
   });
 
   // The camera family, checked the way the strips read: what a camera rule

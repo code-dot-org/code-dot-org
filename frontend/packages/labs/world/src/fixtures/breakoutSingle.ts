@@ -132,7 +132,7 @@ const SINGLE_WORLD = JSON.stringify({
         {type: 'world_set_sprite', fields: {SPRITE: 'box.png'}},
       ]),
       defineActor(PADDLE, 'Paddle', 720, [
-        useTrait('Arrow Keys#ControlledByArrowKeysTrait'),
+        useTrait('Arrow Keys#MovesAcrossTrait'),
         useTrait('Input#TakesKeyboardInputTrait'),
         useTrait('Solid Bodies#SolidTrait'),
         setNumber('world_set_SolidBodies_BouncinessProperty', 1),

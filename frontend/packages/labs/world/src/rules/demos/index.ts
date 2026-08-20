@@ -6,6 +6,7 @@
 
 import {getDemoBaseUrl} from '../../runtime/worldConfig';
 
+import {arrowsDemo} from './arrows';
 import {boundsDemo} from './bounds';
 import {
   cameraConfinedDemo,
@@ -15,9 +16,12 @@ import {
 } from './cameras';
 import {collectDemo} from './collect';
 import {dragDemo} from './drag';
+import {driveDemo} from './drive';
 import {expiresDemo} from './expires';
 import {gravityDemo} from './gravity';
 import {healthDemo} from './health';
+import {inputDemo} from './input';
+import {mouseDemo} from './mouse';
 import {physicsDemo} from './physics';
 import {shootsDemo} from './shoots';
 import {solidDemo} from './solid';
@@ -35,7 +39,11 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   health: healthDemo,
   steering: steeringDemo,
   time: timeDemo,
+  input: inputDemo,
+  mouse: mouseDemo,
+  arrows: arrowsDemo,
   gravity: gravityDemo,
+  drive: driveDemo,
   drag: dragDemo,
   shoots: shootsDemo,
   expires: expiresDemo,
@@ -51,7 +59,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
 export const ruleDemo = (id: string): RuleDemo | undefined => RULE_DEMOS[id];
 
 export type {RuleDemo, RuleModules} from './types';
-export {DEMO_FPS, DEMO_SIZE, viewOrigin} from './types';
+export {DEMO_FPS, DEMO_SIZE, stepDemo, viewOrigin} from './types';
 
 /**
  * Where a rule's demo strip is served from, or undefined if it has none.
