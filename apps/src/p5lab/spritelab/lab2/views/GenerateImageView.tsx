@@ -57,6 +57,13 @@ const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
 
+/** What the new-image form has settled on, enough to start painting. */
+export interface NewImageDraft {
+  name: string;
+  imageType: ImageType;
+  style: ImageStyle;
+}
+
 interface GenerateImageViewProps {
   /** Set for an existing image; absent when generating a brand-new one. */
   existing?: {
@@ -72,7 +79,11 @@ interface GenerateImageViewProps {
   create?: {
     /** Whether another image already uses this name. */
     isNameTaken: (name: string) => boolean;
+    /** Form values to reopen with (returning from a cancelled paint). */
+    initial?: NewImageDraft;
   };
+  /** Open the paint editor on a blank canvas instead of generating. */
+  onPaintManually?: (draft: NewImageDraft) => void;
   /** Level-imposed type for new images; the Type choice is locked to it. */
   lockedImageType?: ImageType;
   /** Persist a finished result (name set when creating). */
@@ -100,18 +111,22 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   thumb,
   create,
   lockedImageType,
+  onPaintManually,
   onAccept,
   onCancel,
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
-  const [name, setName] = useState('');
+  const [name, setName] = useState(create?.initial?.name || '');
   const [imageType, setImageType] = useState<ImageType>(
-    existing?.imageType || lockedImageType || 'sprite'
+    existing?.imageType ||
+      lockedImageType ||
+      create?.initial?.imageType ||
+      'sprite'
   );
   const [style, setStyle] = useState<ImageStyle>(
-    existing?.generation?.style || 'smooth'
+    existing?.generation?.style || create?.initial?.style || 'smooth'
   );
   const [temperatureLevel, setTemperatureLevel] = useState(
     TEMPERATURE_LEVEL_DEFAULT
@@ -367,6 +382,21 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         {onDelete && (
           <div className={moduleStyles.footerLeft}>
             <DeleteImageButton onDelete={onDelete} />
+          </div>
+        )}
+        {create && onPaintManually && (
+          <div className={moduleStyles.footerLeft}>
+            <button
+              type="button"
+              className={moduleStyles.button}
+              disabled={generating || !nameUsable}
+              onClick={() =>
+                onPaintManually({name: trimmedName, imageType, style})
+              }
+            >
+              <FontAwesomeV6Icon iconName="paintbrush" />
+              Paint manually
+            </button>
           </div>
         )}
         <button

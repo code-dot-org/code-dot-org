@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {AnyAction} from 'redux';
 
 import {dataURIToSourceSize} from '@cdo/apps/imageUtils';
@@ -29,11 +29,23 @@ import {
   onTrimsUpdated,
   trimAnimationListImages,
 } from '../imageTrim';
+import {blankPaintImage} from '../paintBlank';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
+import type {NewImageDraft} from './GenerateImageView';
 import ImageDetailsDialog from './ImageDetailsDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
+
+function categoriesForType(imageType: ImageType): string[] {
+  if (imageType === 'background') {
+    return [BACKGROUNDS_CATEGORY];
+  }
+  if (imageType === 'block') {
+    return [BLOCKS_CATEGORY];
+  }
+  return [];
+}
 
 function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
   let binary = '';
@@ -153,22 +165,42 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // for a moment between the two dialogs.
   const [dialogTarget, setDialogTarget] = useState<string | 'new' | null>(null);
   const [painting, setPainting] = useState<'no' | 'loading' | 'active'>('no');
+  // Set while a brand-new image is being painted onto a blank canvas; kept
+  // through a cancel so the form reopens with what was typed.
+  const [paintNewDraft, setPaintNewDraft] = useState<NewImageDraft | null>(
+    null
+  );
+  const blankPaint = useMemo(
+    () =>
+      paintNewDraft
+        ? blankPaintImage(paintNewDraft.imageType, paintNewDraft.style)
+        : null,
+    [paintNewDraft]
+  );
+
+  const handlePaintNew = useCallback((draft: NewImageDraft) => {
+    setPaintNewDraft(draft);
+    setPainting('loading');
+  }, []);
   // The gallery card that opened the dialog; focus returns to it on close.
   const triggerRef = useRef<HTMLElement | null>(null);
 
   const openDialog = useCallback((key: string, trigger: HTMLElement) => {
     triggerRef.current = trigger;
     setDialogTarget(key);
+    setPaintNewDraft(null);
   }, []);
 
   const openNewDialog = useCallback((event: React.MouseEvent<HTMLElement>) => {
     triggerRef.current = event.currentTarget;
     setDialogTarget('new');
+    setPaintNewDraft(null);
   }, []);
 
   const closeDialog = useCallback(() => {
     setDialogTarget(null);
     setPainting('no');
+    setPaintNewDraft(null);
     triggerRef.current?.focus();
   }, []);
 
@@ -266,12 +298,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             frameCount: 1,
             frameDelay: 2,
             looping: true,
-            categories:
-              result.generation.imageType === 'background'
-                ? [BACKGROUNDS_CATEGORY]
-                : result.generation.imageType === 'block'
-                ? [BLOCKS_CATEGORY]
-                : [],
+            categories: categoriesForType(result.generation.imageType),
             pixelGridSize: result.pixelGridSize,
             generation: result.generation,
           }) as unknown as AnyAction
@@ -352,6 +379,36 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
 
+      if (dialogTarget === 'new' && paintNewDraft) {
+        const {name, imageType} = paintNewDraft;
+        const sourceUrl = await uploadEdited(name, dataURI);
+        const key = createUuid();
+        dispatch(
+          // addAnimation is an untyped JS thunk; cast for dispatch.
+          addAnimation(key, {
+            name,
+            sourceUrl,
+            frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
+            frameCount: 1,
+            frameDelay: 2,
+            looping: true,
+            categories: categoriesForType(imageType),
+            pixelGridSize: meta.pixelGridSize,
+            recentColors: meta.recentColors,
+          }) as unknown as AnyAction
+        );
+        // The classic thunk unconditionally renames to name_N; take the
+        // plain name back (validated free before entering the view).
+        if (
+          isNameUnique(name, getStore().getState().animationList.propsByKey)
+        ) {
+          dispatch(setAnimationName(key, name) as unknown as AnyAction);
+        }
+        setPaintNewDraft(null);
+        setDialogTarget(key);
+        return;
+      }
+
       const props = targetProps;
       const key = dialogTarget;
       if (!key || key === 'new' || !props) {
@@ -391,7 +448,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       // The image now points at the fresh asset; drop the old one.
       deleteUnreferencedAsset(previousUrl);
     },
-    [dialogTarget, targetProps, uploadEdited, dispatch, deleteUnreferencedAsset]
+    [
+      dialogTarget,
+      targetProps,
+      paintNewDraft,
+      uploadEdited,
+      dispatch,
+      deleteUnreferencedAsset,
+    ]
   );
 
   const creating = dialogTarget === 'new';
@@ -440,6 +504,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           generation={targetProps?.generation}
           onClose={closeDialog}
           onPaint={() => setPainting('loading')}
+          onPaintNew={handlePaintNew}
+          newImageDraft={paintNewDraft ?? undefined}
           onRename={handleRename}
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
@@ -452,14 +518,27 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
 
       {dialogTarget && painting !== 'no' && (
         <PixelEditorModal
-          title={`Edit ${targetProps?.name}`}
+          title={
+            creating && paintNewDraft
+              ? `Paint ${paintNewDraft.name}`
+              : `Edit ${targetProps?.name}`
+          }
           // Edit the ORIGINAL image (untrimmed): trims are a display-time
-          // optimization; the animation's pixels are the source of truth.
-          imageUrl={targetProps?.dataURI || targetProps?.sourceUrl || ''}
+          // optimization; the animation's pixels are the source of truth. A
+          // brand-new image starts on a blank canvas sized for its style.
+          imageUrl={
+            creating && blankPaint
+              ? blankPaint.dataURI
+              : targetProps?.dataURI || targetProps?.sourceUrl || ''
+          }
           // Recorded at generation time; images without it (legacy, smooth
           // style) edit at native resolution.
-          knownPixelGrid={targetProps?.pixelGridSize}
-          initialRecentColors={targetProps?.recentColors}
+          knownPixelGrid={
+            creating && blankPaint
+              ? blankPaint.pixelGridSize
+              : targetProps?.pixelGridSize
+          }
+          initialRecentColors={creating ? undefined : targetProps?.recentColors}
           onReady={() => setPainting('active')}
           onSave={handleEditorSave}
           onCancel={() => setPainting('no')}

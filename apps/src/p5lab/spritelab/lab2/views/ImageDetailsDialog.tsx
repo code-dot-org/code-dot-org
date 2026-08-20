@@ -15,7 +15,7 @@ import {
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
-import GenerateImageView from './GenerateImageView';
+import GenerateImageView, {NewImageDraft} from './GenerateImageView';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -29,6 +29,10 @@ interface ImageDetailsDialogProps {
   onClose: () => void;
   /** Open the paint editor on this image. */
   onPaint: () => void;
+  /** New image only: open the paint editor on a blank canvas. */
+  onPaintNew?: (draft: NewImageDraft) => void;
+  /** New image only: form values to reopen with after a cancelled paint. */
+  newImageDraft?: NewImageDraft;
   /** Rename this image everywhere; error or null. */
   onRename: (newName: string) => string | null;
   onDelete: () => void;
@@ -61,6 +65,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   generation,
   onClose,
   onPaint,
+  onPaintNew,
+  newImageDraft,
   onRename,
   onDelete,
   imageType,
@@ -204,8 +210,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   }
             }
             thumb={isNew ? undefined : thumb}
-            create={isNew ? {isNameTaken} : undefined}
+            create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
             lockedImageType={lockedImageType}
+            onPaintManually={isNew ? onPaintNew : undefined}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
               setView('details');
