@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-24 13:30:13 UTC",
+    "serialized_at": "2026-08-18 22:29:30 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -4000,7 +4000,7 @@
     },
     {
       "name": "Generate and Judge Project Guide",
-      "url": "https://docs.google.com/document/d/1DlPA8XSLKFaWIeBzc8nC5q0V-e0wC2B2xsCyXFMlKQw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1DlPA8XSLKFaWIeBzc8nC5q0V-e0wC2B2xsCyXFMlKQw/template/preview",
       "key": "generate_judge_project_guide",
       "properties": {
         "audience": "Student",

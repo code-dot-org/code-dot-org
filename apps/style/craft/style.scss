@@ -311,8 +311,8 @@ body {
   }
 }
 
-a.video_link {
-  color: $lighter_cyan;
+.reference_area a.video_link {
+  color: var(--text-neutral-black-fixed);
 }
 
 #visualizationColumn.pin_bottom {

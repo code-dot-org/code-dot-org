@@ -12,6 +12,9 @@ export interface PyodideMessage {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   message: any;
   id: string;
+  // Only on 'theater_media' messages: the rendered gif as raw bytes. Structured
+  // clone gives it a plain ArrayBuffer, which is what Blob accepts.
+  gif?: Uint8Array<ArrayBuffer>;
 }
 
 export type MessageType =
@@ -26,7 +29,8 @@ export type MessageType =
   | 'loaded_pyodide'
   | 'load_failed'
   | 'loading_packages'
-  | 'loaded_packages';
+  | 'loaded_packages'
+  | 'theater_media';
 
 export interface PythonValidationResult {
   name: string;

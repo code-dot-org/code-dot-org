@@ -11,7 +11,7 @@ import {
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
+import {fetchThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
