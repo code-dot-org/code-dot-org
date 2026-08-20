@@ -15,6 +15,15 @@ export default defineConfig({
     setupFiles: ['./src/__tests__/setup.ts'],
     // `spikes/**` holds throwaway investigations that write files and take
     // seconds; they are run by hand, by path, and are not the suite.
-    exclude: ['node_modules/**', 'dist/**', 'spikes/**'],
+    exclude: [
+      'node_modules/**',
+      'dist/**',
+      'spikes/**',
+      // A build step wearing a test's name (`vitest.record.config.ts`): it
+      // writes into `public/` and must not run with the suite. The file
+      // itself, not its directory — the strip renderer beside it is ordinary
+      // code with ordinary tests.
+      'src/rules/demos/record/recordRuleDemos.test.ts',
+    ],
   },
 });

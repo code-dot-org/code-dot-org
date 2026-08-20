@@ -27,6 +27,7 @@ let sandboxUrl: string | null = null;
 let assetBaseUrl = '/vendor/';
 let backgroundBaseUrl = '/backgrounds/';
 let soundBaseUrl = '/sounds/';
+let demoBaseUrl = '/demos/';
 
 /** Point the lab at a sandbox origin base (e.g. `http://localhost:5202/`). */
 export function setSandboxUrl(url: string | null): void {
@@ -102,4 +103,24 @@ export function getSoundBaseUrl(): string {
 
 export function setSoundBaseUrl(url: string): void {
   soundBaseUrl = url.endsWith('/') ? url : `${url}/`;
+}
+
+/**
+ * Base the rule demonstrations are served from.
+ *
+ * The LAB's origin, like the backdrops' and the sounds', and for a reason of
+ * its own: a demo strip is shown IN the import dialog rather than copied into a
+ * project, so it never reaches the sandbox at all.
+ *
+ * Assets rather than bundle, deliberately (specs/RULE_DEMOS.md): a learner who
+ * never opens the dialog never downloads one. The cost is that a machine with
+ * no `public/demos/` shows rows without pictures, which the dialog has to be
+ * complete without anyway.
+ */
+export function getDemoBaseUrl(): string {
+  return demoBaseUrl;
+}
+
+export function setDemoBaseUrl(url: string): void {
+  demoBaseUrl = url.endsWith('/') ? url : `${url}/`;
 }

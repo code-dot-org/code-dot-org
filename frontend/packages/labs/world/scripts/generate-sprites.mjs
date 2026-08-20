@@ -338,7 +338,14 @@ function chunk(type, dataBuf) {
   crc.writeUInt32BE(crc32(body));
   return Buffer.concat([len, body, crc]);
 }
-function encodePng(rgba, width, height) {
+/**
+ * RGBA bytes as a PNG.
+ *
+ * Exported because the rule-demo recorder writes strips with it
+ * (specs/RULE_DEMOS.md). A pure-Node encoder, no image dependency — which is
+ * what lets that recorder run without a browser in the build path.
+ */
+export function encodePng(rgba, width, height) {
   const ihdr = Buffer.alloc(13);
   ihdr.writeUInt32BE(width, 0);
   ihdr.writeUInt32BE(height, 4);

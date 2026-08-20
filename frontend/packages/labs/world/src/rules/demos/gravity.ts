@@ -39,4 +39,10 @@ export const gravityDemo: RuleDemo = {
     world.addActor(ground);
     return {world, cast: {ball, ground}};
   },
+
+  look(id: string) {
+    return id === 'ground'
+      ? {width: 160, height: 16, colour: '#5a7d5a'}
+      : {width: 16, height: 16, colour: '#f6c453'};
+  },
 };

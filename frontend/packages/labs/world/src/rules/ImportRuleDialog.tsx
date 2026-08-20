@@ -29,6 +29,7 @@ import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
+import {demoFrames, demoUrl, DEMO_SIZE} from './demos';
 import styles from './importRuleDialog.module.css';
 import {stockRequirements} from './importStockRule';
 import {type StockRule} from './stock';
@@ -74,6 +75,7 @@ export const ImportRuleDialog = ({
           {stockRuleRows().map(({rule, depth}) => (
             <li
               key={rule.id}
+              className={styles.row}
               // Indented by what it is written against, so an add-on reads as
               // one. A depth is a number rather than a class because it is
               // data — a rule three deep is a rule three deep.
@@ -101,6 +103,40 @@ export const ImportRuleDialog = ({
                 <Typography component="span" variant="body4" color="inherit">
                   {rule.description}
                 </Typography>
+                {demoUrl(rule.id) && (
+                  // What the rule DOES, which no sentence on this row can say
+                  // (specs/RULE_DEMOS.md). One strip PNG: frame one is the
+                  // still every row shows, and a row that is being LOOKED at
+                  // steps through the rest — hovered, focused or selected.
+                  //
+                  // One asset for both states, rather than a still and a GIF
+                  // beside it: two files would be two things to produce, name,
+                  // cache and keep in step, and the pair could drift. And a
+                  // strip can be HELD, which is what `prefers-reduced-motion`
+                  // asks of it and what a GIF has no way to offer.
+                  <span
+                    className={
+                      chosen?.id === rule.id
+                        ? `${styles.demo} ${styles.playing}`
+                        : styles.demo
+                    }
+                    // Custom properties rather than a class per rule: the frame
+                    // count is a fact about the recording, so it comes from the
+                    // demo rather than from a stylesheet that would have to be
+                    // edited every time one was re-recorded.
+                    style={
+                      {
+                        '--demo': `url(${demoUrl(rule.id)})`,
+                        '--frames': demoFrames(rule.id),
+                        '--demo-width': `${DEMO_SIZE.width}px`,
+                        '--demo-height': `${DEMO_SIZE.height}px`,
+                      } as React.CSSProperties
+                    }
+                    // Decoration beside a row that already says what it is in
+                    // words: a screen reader gains nothing from "a box falls".
+                    aria-hidden="true"
+                  />
+                )}
                 {chosen?.id === rule.id &&
                   stockRequirements(rule).length > 0 && (
                     // What else lands in `rules/`. A mechanic is written

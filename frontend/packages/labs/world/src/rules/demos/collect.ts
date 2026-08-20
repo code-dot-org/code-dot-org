@@ -43,4 +43,10 @@ export const collectDemo: RuleDemo = {
     });
     return {world, cast: {walker, coins}};
   },
+
+  look(id: string) {
+    return id === 'walker'
+      ? {width: 16, height: 16, colour: '#c678dd'}
+      : {width: 12, height: 12, colour: '#f6c453'};
+  },
 };

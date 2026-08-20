@@ -48,6 +48,7 @@ import {
   getSandboxUrl,
   setAssetBaseUrl,
   setBackgroundBaseUrl,
+  setDemoBaseUrl,
   setSoundBaseUrl,
   setSandboxUrl,
 } from './runtime/worldConfig';
@@ -104,6 +105,7 @@ const here = withSlash(
 setAssetBaseUrl(`${import.meta.env.BASE_URL}vendor/`);
 setBackgroundBaseUrl(`${import.meta.env.BASE_URL}backgrounds/`);
 setSoundBaseUrl(`${import.meta.env.BASE_URL}sounds/`);
+setDemoBaseUrl(`${import.meta.env.BASE_URL}demos/`);
 
 // Where the sandbox is served from, when the URL does not say — an explicit
 // `?world-sandbox=` always wins (getSandboxUrl reads it). This is the BASE the
