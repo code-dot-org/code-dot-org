@@ -20,15 +20,37 @@
   color: var(--text-neutral-quaternary);
 }
 
+.fullWidthField {
+  width: 100%;
+  min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
 .textarea {
   box-sizing: border-box;
   width: 100%;
-  min-height: 96px;
+  height: 48px;
+  min-height: 32px;
   padding: 8px 12px;
   border: 1px solid var(--borders-neutral-primary, #d4dae1);
   border-radius: 0.25rem;
   font: inherit;
   resize: vertical;
+}
+
+.collapsibleSection {
+  > :not(summary) {
+    margin-top: 6px;
+  }
+}
+
+.collapsibleSummary {
+  cursor: pointer;
+  color: var(--text-neutral-quaternary);
 }
 
 .optionList {

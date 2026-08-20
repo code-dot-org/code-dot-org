@@ -1,4 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
@@ -129,13 +130,6 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
   return (
     <div className={styles.root}>
       <div className={styles.searchField}>
-        <TextField
-          label="Search by question name"
-          name="questionBankSearch"
-          size="s"
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-        />
         <SimpleDropdown
           name="questionBankSort"
           size="s"
@@ -148,46 +142,61 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
           selectedValue={sort}
           onChange={e => setSort(e.target.value)}
         />
-        <Typography variant="body3">Filter by standard</Typography>
-        {standardFilter ? (
-          <div className={styles.standardFilter}>
-            <Typography variant="body3">
-              {standardFilter.frameworkShortcode.toUpperCase()} -{' '}
-              {standardFilter.shortcode}
-            </Typography>
-            <MuiButton
-              variant="text"
-              color="secondary"
-              size="small"
-              type="button"
-              onClick={() => setStandardFilter(null)}
-            >
-              Clear
-            </MuiButton>
-          </div>
-        ) : (
-          <SearchBox
-            onSearchSelect={(option: StandardSearchOption) =>
-              option && setStandardFilter(option.standard)
-            }
-            searchUrl="standards/search"
-            constructOptions={(json: QuizStandard[]) => ({
-              options: json.map(standard => ({
-                value: `${standard.frameworkShortcode}-${standard.shortcode}`,
-                label: `${standard.frameworkShortcode.toUpperCase()} - ${
-                  standard.shortcode
-                } - ${standard.description}`,
-                standard,
-              })),
-            })}
-          />
-        )}
+        <TextField
+          label="Search by question name"
+          name="questionBankSearch"
+          size="s"
+          className={styles.fullWidthField}
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+        />
+        <FormFieldWrapper
+          color="black"
+          size="s"
+          label="Filter by standard"
+          className={styles.fullWidthField}
+        >
+          {standardFilter ? (
+            <div className={styles.standardFilter}>
+              <Typography variant="body3">
+                {standardFilter.frameworkShortcode.toUpperCase()} -{' '}
+                {standardFilter.shortcode}
+              </Typography>
+              <MuiButton
+                variant="text"
+                color="secondary"
+                size="small"
+                type="button"
+                onClick={() => setStandardFilter(null)}
+              >
+                Clear
+              </MuiButton>
+            </div>
+          ) : (
+            <SearchBox
+              onSearchSelect={(option: StandardSearchOption) =>
+                option && setStandardFilter(option.standard)
+              }
+              searchUrl="standards/search"
+              constructOptions={(json: QuizStandard[]) => ({
+                options: json.map(standard => ({
+                  value: `${standard.frameworkShortcode}-${standard.shortcode}`,
+                  label: `${standard.frameworkShortcode.toUpperCase()} - ${
+                    standard.shortcode
+                  } - ${standard.description}`,
+                  standard,
+                })),
+              })}
+            />
+          )}
+        </FormFieldWrapper>
       </div>
       {error && (
         <Typography variant="body3" color="error">
           {error}
         </Typography>
       )}
+      <Typography variant="overline3">Questions</Typography>
       {isLoading ? (
         <Typography variant="body3">Loading…</Typography>
       ) : (

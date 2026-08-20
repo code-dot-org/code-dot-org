@@ -12,6 +12,24 @@
   padding-top: 8px;
 }
 
+.fullWidthField {
+  width: 100%;
+  min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  // SearchBox (react-select v1, imported globally - no CSS module scoping)
+  // renders a plain block-level .Select div, but its parent here
+  // (FormFieldWrapper's <label>) uses align-items: flex-start, which sizes
+  // children to their own content instead of stretching them full-width.
+  :global(.Select) {
+    width: 100%;
+  }
+}
+
 .standardFilter {
   display: flex;
   align-items: center;

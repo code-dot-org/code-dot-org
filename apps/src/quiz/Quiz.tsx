@@ -1,9 +1,12 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {useResizable} from 'react-resizable-layout';
 
 import {getAppOptionsBuildingQuizQuestions} from '@cdo/apps/lab2/projects/utils';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -62,6 +65,11 @@ const responsesFromQuestionResults = (
     (questionResults || []).map(r => [r.quizQuestionId, r.selectedChoiceId])
   );
 
+// Floor for the resource panel's drag-resizable width, in px - also its
+// starting width. Collapsing it entirely (to the icon rail) is a separate,
+// pre-existing toggle unrelated to this floor.
+const RESOURCE_PANEL_MIN_WIDTH = 350;
+
 const formatRemainingTime = (totalSeconds: number) => {
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
@@ -78,7 +86,12 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     introText,
     timeLimitMinutes,
   } = levelProperties as QuizLevelProperties;
+  // Whether this page load is the build_quiz_questions route at all (a
+  // levelbuilder capability, fixed for the whole page load).
   const isBuilderMode = !!getAppOptionsBuildingQuizQuestions();
+  // Build/Preview toggle - only reachable at all when isBuilderMode.
+  const [viewMode, setViewMode] = useState<'build' | 'preview'>('build');
+  const isBuilderView = isBuilderMode && viewMode === 'build';
   const [questions, setQuestions] = useState<QuizQuestionData[]>(
     quizQuestions || []
   );
@@ -97,36 +110,37 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   >({});
   const [result, setResult] = useState<AttemptResult | null>(null);
   // Whether POSTing to /quiz_attempts again would start a genuinely new
-  // attempt (see QuizAttempt#retakeable?) rather than just returning this
-  // one - only meaningful once result is set.
+  // attempt rather than just returning this one - only meaningful once result is set.
   const [canRetake, setCanRetake] = useState(false);
-  // Deadline for the current attempt, from the server (QuizAttempt#expires_at) -
+  // Deadline for the current attempt, from the server.
   // null when the quiz has no time limit. Drives the countdown effect below.
   const [expiresAt, setExpiresAt] = useState<string | null>(null);
   const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
-  // Shown before the attempt is created, instead of jumping straight into
-  // the quiz - only when there's actually something to show. Set once the
-  // initial GET check finds no existing attempt (see the effect below); a
-  // resumed or already-submitted attempt skips it entirely.
+  // Shown before the attempt is created.
   const [showIntro, setShowIntro] = useState(false);
   const needsIntroScreen = !!(introText || timeLimitMinutes);
   const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
-  // Outside builder mode, Quiz has no top tab content today - the AI
-  // Tutor tab isn't built yet (it needs hiddenContextCallback/
-  // aiTutorSystemPrompt, neither of which is wired up here), so there's
-  // nothing to expand the panel into, and the collapse toggle itself never
-  // renders (ResourcePanel hides it when there are no tabs). In builder
-  // mode the Question Bank tab always exists.
   const hasResourcePanelTabs = isBuilderMode;
+  const isResourcePanelExpanded =
+    hasResourcePanelTabs && !isResourcePanelCollapsed;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const {
+    position: resourcePanelWidth,
+    separatorProps: resourcePanelSeparatorProps,
+    isDragging: isResizingResourcePanel,
+  } = useResizable({
+    axis: 'x',
+    containerRef,
+    initial: RESOURCE_PANEL_MIN_WIDTH,
+    min: RESOURCE_PANEL_MIN_WIDTH,
+    disabled: !isResourcePanelExpanded,
+  });
 
   // Creates (or resumes) the attempt - called either immediately on mount
   // (quiz has no intro content to show first) or from the intro screen's
-  // Begin Quiz button. Deferring this until Begin Quiz is clicked, when
-  // there is an intro screen, matters: started_at should reflect when the
-  // student actually begins, not when the page happened to load, since a
-  // future time limit is measured from it.
+  // Begin Quiz button.
   const beginAttempt = useCallback(() => {
     HttpClient.post(
       '/quiz_attempts',
@@ -164,8 +178,8 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   };
 
   useEffect(() => {
-    // Don't start a student attempt while a levelbuilder is building the quiz.
-    if (isBuilderMode || !scriptId) {
+    // Don't start a student attempt while the Build view is showing.
+    if (isBuilderView || !scriptId) {
       return;
     }
     // Check-only - never creates an attempt as a side effect of loading
@@ -185,11 +199,6 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           return;
         }
         setAttemptId(data.id);
-        // P0 allows only one attempt: if this attempt was already
-        // submitted (e.g. the student reloaded the page), restore its
-        // result instead of showing an editable quiz again. Either way -
-        // submitted or mid-quiz - an existing attempt means the student
-        // already got past the intro screen, so skip it.
         if (data.submittedAt) {
           setResult({
             score: data.score,
@@ -203,7 +212,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           setExpiresAt(data.expiresAt || null);
         }
       });
-  }, [isBuilderMode, levelId, scriptId, needsIntroScreen, beginAttempt]);
+  }, [isBuilderView, levelId, scriptId, needsIntroScreen, beginAttempt]);
 
   const setResponse = (questionId: number, value: QuestionResponseValue) =>
     setResponses(prev => ({...prev, [questionId]: value}));
@@ -228,13 +237,6 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       .map(r => [r.quizQuestionId, r])
   );
 
-  // One submit for the whole quiz: post every question's response - even a
-  // skipped one, as an empty selection - then finalize the attempt so
-  // score/max_score get totaled server-side. Posting skipped questions too
-  // matters for max_score: MultipleChoiceQuestion#grade already scores a
-  // blank selection as incorrect, but only for questions that actually
-  // have a QuizQuestionResponse row - a question skipped entirely would
-  // otherwise be missing from the denominator, not just the numerator.
   const submitQuiz = async () => {
     if (!attemptId) {
       return;
@@ -307,101 +309,138 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   }, [expiresAt, result]);
 
   return (
-    <div id="quiz-lab" className={styles.quiz}>
-      <ResourcePanel
+    <div id="quiz-lab" className={styles.quiz} ref={containerRef}>
+      <div
         className={
-          hasResourcePanelTabs && !isResourcePanelCollapsed
+          isResourcePanelExpanded
             ? styles.resourcePanel
             : styles.resourcePanelCollapsed
         }
-        levelProperties={levelProperties}
-        isRunning={false}
-        hasRun={false}
-        hasEdited={Object.keys(responses).length > 0}
-        hideAllNavigation
-        questionBankContent={
-          isBuilderMode ? (
-            <QuizQuestionBank
-              quizId={levelId as number}
-              attachedQuestionIds={questions.map(question => question.id)}
-              excludedQuestionIds={destroyedQuestionIds}
-              onAttach={question => setQuestions(prev => [...prev, question])}
-            />
-          ) : undefined
+        style={
+          isResourcePanelExpanded ? {width: resourcePanelWidth} : undefined
         }
-      />
-      <div className={styles.divider} />
+      >
+        <ResourcePanel
+          levelProperties={levelProperties}
+          isRunning={false}
+          hasRun={false}
+          hasEdited={Object.keys(responses).length > 0}
+          hideAllNavigation
+          questionBankContent={
+            isBuilderMode ? (
+              <QuizQuestionBank
+                quizId={levelId as number}
+                attachedQuestionIds={questions.map(question => question.id)}
+                excludedQuestionIds={destroyedQuestionIds}
+                onAttach={question => setQuestions(prev => [...prev, question])}
+              />
+            ) : undefined
+          }
+        />
+      </div>
+      {isResourcePanelExpanded ? (
+        <ResizeBar
+          isVertical
+          isDragging={isResizingResourcePanel}
+          separatorProps={resourcePanelSeparatorProps}
+        />
+      ) : (
+        <div className={styles.divider} />
+      )}
       <div className={styles.content}>
-        {isBuilderMode ? (
-          <QuizBuilder
-            quizId={levelId as number}
-            quizTitle={title || name}
-            questions={questions}
-            setQuestions={setQuestions}
-            onQuestionDestroyed={questionId =>
-              setDestroyedQuestionIds(prev => [...prev, questionId])
-            }
-          />
-        ) : showIntro ? (
-          <QuizIntro
-            quizTitle={title || name}
-            introText={introText}
-            questionCount={multipleChoiceQuestions.length}
-            timeLimitMinutes={timeLimitMinutes}
-            onBegin={beginAttempt}
-          />
-        ) : (
-          <div className={styles.card}>
-            <div className={styles.cardHeader}>
-              <Typography variant="h2">{title || name}</Typography>
-              {!scriptId && (
-                <Typography variant="body3">
-                  Preview outside a script has no attempt tracking.
-                </Typography>
-              )}
-              {remainingSeconds !== null && (
-                <Typography variant="body2">
-                  Time remaining: {formatRemainingTime(remainingSeconds)}
-                </Typography>
-              )}
-            </div>
-            <ol className={styles.questionList}>
-              {multipleChoiceQuestions.map((question, index) => (
-                <QuizQuestion
-                  key={question.id}
-                  question={question}
-                  index={index}
-                  total={multipleChoiceQuestions.length}
-                  selectedChoiceId={responses[question.id]}
-                  disabled={!!result}
-                  result={questionResultsById.get(question.id)}
-                  onSelectChoice={choiceId =>
-                    setResponse(question.id, choiceId)
-                  }
-                />
-              ))}
-            </ol>
-            <div className={styles.cardFooter}>
-              <MuiButton
-                variant="contained"
-                color="primary"
-                size="medium"
-                type="button"
-                disabled={!attemptId || (!!result && !canRetake)}
-                onClick={() =>
-                  result && canRetake ? retakeQuiz() : submitQuiz()
-                }
-              >
-                {result && canRetake ? 'Retake Quiz' : 'Submit Quiz'}
-              </MuiButton>
-              {result && (
-                <Typography variant="h5">
-                  Final score: {result.score} / {result.maxScore}
-                </Typography>
-              )}
-            </div>
+        {isBuilderMode && (
+          <div className={styles.buildPreviewToggleBar}>
+            <SegmentedButtons
+              size="xs"
+              selectedButtonValue={viewMode}
+              onChange={value => setViewMode(value as 'build' | 'preview')}
+              buttons={[
+                {label: 'Build', value: 'build'},
+                {label: 'Preview', value: 'preview'},
+              ]}
+            />
+            <Typography
+              component="h2"
+              variant="overline2"
+              className={styles.buildPreviewToggleTitle}
+            >
+              Workspace
+            </Typography>
+            <div />
           </div>
         )}
+        <div className={styles.contentInner}>
+          {isBuilderView ? (
+            <QuizBuilder
+              quizId={levelId as number}
+              quizTitle={title || name}
+              questions={questions}
+              setQuestions={setQuestions}
+              onQuestionDestroyed={questionId =>
+                setDestroyedQuestionIds(prev => [...prev, questionId])
+              }
+            />
+          ) : showIntro ? (
+            <QuizIntro
+              quizTitle={title || name}
+              introText={introText}
+              questionCount={multipleChoiceQuestions.length}
+              timeLimitMinutes={timeLimitMinutes}
+              onBegin={beginAttempt}
+            />
+          ) : (
+            <div className={styles.card}>
+              <div className={styles.cardHeader}>
+                <Typography variant="h2">{title || name}</Typography>
+                {!scriptId && (
+                  <Typography variant="body3">
+                    Preview outside a script has no attempt tracking.
+                  </Typography>
+                )}
+                {remainingSeconds !== null && (
+                  <Typography variant="body2">
+                    Time remaining: {formatRemainingTime(remainingSeconds)}
+                  </Typography>
+                )}
+              </div>
+              <ol className={styles.questionList}>
+                {multipleChoiceQuestions.map((question, index) => (
+                  <QuizQuestion
+                    key={question.id}
+                    question={question}
+                    index={index}
+                    total={multipleChoiceQuestions.length}
+                    selectedChoiceId={responses[question.id]}
+                    disabled={!!result}
+                    result={questionResultsById.get(question.id)}
+                    onSelectChoice={choiceId =>
+                      setResponse(question.id, choiceId)
+                    }
+                  />
+                ))}
+              </ol>
+              <div className={styles.cardFooter}>
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  size="medium"
+                  type="button"
+                  disabled={!attemptId || (!!result && !canRetake)}
+                  onClick={() =>
+                    result && canRetake ? retakeQuiz() : submitQuiz()
+                  }
+                >
+                  {result && canRetake ? 'Retake Quiz' : 'Submit Quiz'}
+                </MuiButton>
+                {result && (
+                  <Typography variant="h5">
+                    Final score: {result.score} / {result.maxScore}
+                  </Typography>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

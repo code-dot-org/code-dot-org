@@ -1,3 +1,5 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
 .quiz {
   display: flex;
   flex-direction: row;
@@ -6,14 +8,16 @@
 }
 
 .resourcePanel {
-  flex: 0;
-  min-width: 25%;
+  flex: 0 0 auto;
+  min-width: 280px;
+  height: 100%;
 }
 
 // When collapsed, ResourcePanel shrinks itself to just its icon rail - don't
 // force min-width here too, or a gap opens up between the rail and content.
 .resourcePanelCollapsed {
   flex: 0;
+  height: 100%;
 }
 
 .divider {
@@ -24,8 +28,29 @@
 
 .content {
   flex: 1;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
   overflow: auto;
+}
+
+.buildPreviewToggleBar {
+  height: 41px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  padding-inline: 0.5rem;
+  background-color: var(--background-neutral-primary);
+  border-bottom: variables.$default-border;
+}
+
+.buildPreviewToggleTitle {
+  margin: 0;
+}
+
+.contentInner {
+  margin: 10px;
 }
 
 // Contains a single quiz question so it reads as a focused card rather than

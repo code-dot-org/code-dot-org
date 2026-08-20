@@ -194,10 +194,13 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
 
   return (
     <div>
-      <Typography variant="overline3">Build Quiz Questions</Typography>
       <Typography variant="h2">{quizTitle}</Typography>
 
-      <h2>Current quiz questions</h2>
+      <h2>
+        {multipleChoiceQuestions.length === 1
+          ? '1 question'
+          : `${multipleChoiceQuestions.length} questions`}
+      </h2>
       <ol className={styles.questionCardList}>
         {multipleChoiceQuestions.map((question, index) => {
           const isEditingThis = editingQuestionId === question.id;

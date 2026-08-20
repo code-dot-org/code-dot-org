@@ -194,74 +194,28 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
           label="Question name"
           name="questionName"
           size="s"
+          className={styles.fullWidthField}
           value={questionName}
           onChange={e => setQuestionName(e.target.value)}
         />
       </div>
 
       <div className={styles.section}>
-        <FormFieldWrapper color="black" size="s" label="Stem">
+        <Typography variant="overline3" component="span">
+          Stem
+        </Typography>
+
+        <FormFieldWrapper
+          color="black"
+          size="s"
+          className={styles.fullWidthField}
+        >
           <textarea
             className={styles.textarea}
             value={stem}
             onChange={e => setStem(e.target.value)}
           />
         </FormFieldWrapper>
-      </div>
-
-      <div className={styles.section}>
-        <FormFieldWrapper
-          color="black"
-          size="s"
-          label="Explanation (optional)"
-          helperMessage="Shown to students only if the quiz's Reveal answer explanations setting is on."
-        >
-          <textarea
-            className={styles.textarea}
-            value={explanation}
-            onChange={e => setExplanation(e.target.value)}
-          />
-        </FormFieldWrapper>
-      </div>
-
-      <div className={styles.section}>
-        <Typography variant="overline3" className={styles.sectionHeading}>
-          Standards (optional)
-        </Typography>
-        <SearchBox
-          key={standards
-            .map(s => `${s.frameworkShortcode}-${s.shortcode}`)
-            .join(',')}
-          onSearchSelect={onStandardSearchSelect}
-          searchUrl="standards/search"
-          constructOptions={constructStandardOptions}
-        />
-        {standards.length > 0 && (
-          <div className={styles.optionList}>
-            {standards.map(standard => (
-              <div
-                key={`${standard.frameworkShortcode}-${standard.shortcode}`}
-                className={styles.optionRow}
-              >
-                <Typography variant="body3" className={styles.optionField}>
-                  {standard.frameworkShortcode.toUpperCase()} -{' '}
-                  {standard.shortcode} - {standard.description}
-                </Typography>
-                <div className={styles.rowActions}>
-                  <MuiButton
-                    variant="outlined"
-                    color="secondary"
-                    size="small"
-                    type="button"
-                    onClick={() => removeStandard(standard)}
-                  >
-                    Remove
-                  </MuiButton>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
 
       <div className={styles.section}>
@@ -284,6 +238,7 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
                   <TextField
                     name={`choice-${choice.id}`}
                     size="s"
+                    className={styles.fullWidthField}
                     value={choice.text}
                     placeholder={`Choice ${choiceLetter}`}
                     onChange={e => updateChoiceText(choice.id, e.target.value)}
@@ -316,6 +271,72 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
         >
           Add choice
         </MuiButton>
+      </div>
+
+      <div className={styles.section}>
+        <details className={styles.collapsibleSection}>
+          <summary className={styles.collapsibleSummary}>
+            <Typography variant="overline3" component="span">
+              Explanation (optional)
+            </Typography>
+          </summary>
+          <FormFieldWrapper
+            color="black"
+            size="s"
+            className={styles.fullWidthField}
+            helperMessage="Shown to students only if the quiz's Reveal answer explanations setting is on."
+          >
+            <textarea
+              className={styles.textarea}
+              value={explanation}
+              onChange={e => setExplanation(e.target.value)}
+            />
+          </FormFieldWrapper>
+        </details>
+      </div>
+
+      <div className={styles.section}>
+        <details className={styles.collapsibleSection}>
+          <summary className={styles.collapsibleSummary}>
+            <Typography variant="overline3" component="span">
+              Standards (optional)
+            </Typography>
+          </summary>
+          <SearchBox
+            key={standards
+              .map(s => `${s.frameworkShortcode}-${s.shortcode}`)
+              .join(',')}
+            onSearchSelect={onStandardSearchSelect}
+            searchUrl="standards/search"
+            constructOptions={constructStandardOptions}
+          />
+          {standards.length > 0 && (
+            <div className={styles.optionList}>
+              {standards.map(standard => (
+                <div
+                  key={`${standard.frameworkShortcode}-${standard.shortcode}`}
+                  className={styles.optionRow}
+                >
+                  <Typography variant="body3" className={styles.optionField}>
+                    {standard.frameworkShortcode.toUpperCase()} -{' '}
+                    {standard.shortcode} - {standard.description}
+                  </Typography>
+                  <div className={styles.rowActions}>
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      size="small"
+                      type="button"
+                      onClick={() => removeStandard(standard)}
+                    >
+                      Remove
+                    </MuiButton>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </details>
       </div>
 
       <div className={styles.actions}>
