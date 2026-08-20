@@ -21,6 +21,8 @@ interface TheaterSignal {
   };
 }
 
+type MediaLoadErrorCallback = (type: 'video' | 'audio') => void;
+
 type UploadCallback = (this: XMLHttpRequest, event: ProgressEvent) => void;
 
 type MediaElement = HTMLImageElement | HTMLAudioElement;
@@ -89,7 +91,7 @@ export default class Theater extends MiniApp {
     message: InputMessage
   ) => void;
   private readonly onOutputVisibleChange?: (isVisible: boolean) => void;
-  private readonly onMediaLoadError?: () => void;
+  private readonly onMediaLoadError?: MediaLoadErrorCallback;
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
@@ -104,7 +106,7 @@ export default class Theater extends MiniApp {
     closePhotoPrompter: () => void,
     onJavabuilderMessage: (messageType: string, message: InputMessage) => void,
     onOutputVisibleChange?: (isVisible: boolean) => void,
-    onMediaLoadError?: () => void
+    onMediaLoadError?: MediaLoadErrorCallback
   ) {
     super();
     this.onOutputMessage = onOutputMessage;
@@ -132,6 +134,7 @@ export default class Theater extends MiniApp {
         const audioElement = this.getAudioElement();
         if (audioElement) {
           audioElement.oncanplaythrough = () => this.startPlayback();
+          audioElement.onerror = () => this.handleMediaLoadError('audio');
         }
         break;
       }
@@ -142,7 +145,7 @@ export default class Theater extends MiniApp {
         const imageElement = this.getImgElement();
         if (imageElement) {
           imageElement.onload = () => this.startPlayback();
-          imageElement.onerror = () => this.handleVisualLoadError();
+          imageElement.onerror = () => this.handleMediaLoadError('video');
         }
         break;
       }
@@ -175,12 +178,12 @@ export default class Theater extends MiniApp {
     }
   }
 
-  // An image that fails to load never fires onload, so playback would wait on it
-  // forever: the stage stays empty and the run button stays on stop. Put the
-  // theater back and let the host report the failure.
-  private handleVisualLoadError() {
+  // Media that fails to load never fires the event playback waits on, so the
+  // stage would stay empty and the run button stay on stop. Put the theater back
+  // and let the host report the failure.
+  private handleMediaLoadError(type: 'video' | 'audio') {
     this.reset();
-    this.onMediaLoadError?.();
+    this.onMediaLoadError?.(type);
   }
 
   reset() {
