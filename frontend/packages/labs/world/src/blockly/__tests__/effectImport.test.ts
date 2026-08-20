@@ -4,13 +4,9 @@
 // that it never survives as one: a block left holding `__import_effect__` would
 // generate `actor.addEffect("__import_effect__", …)` and fail at run time.
 
-import {afterEach, describe, expect, it, vi} from 'vitest';
+import {afterEach, describe, expect, it} from 'vitest';
 
-import {
-  IMPORT_EFFECT_VALUE,
-  requestEffectImport,
-  setEffectImportHandler,
-} from '../effectImport';
+import {IMPORT_EFFECT_VALUE, setEffectImportHandler} from '../effectImport';
 import {
   effectFileImportOptions,
   effectFileOptions,
@@ -48,27 +44,6 @@ describe('the effect dropdown options', () => {
   });
 });
 
-describe('requestEffectImport', () => {
-  it('resolves undefined when nothing is listening', async () => {
-    // The headless code generator and the unit tests have no dialog; asking
-    // there must be harmless rather than a crash or a hang.
-    await expect(requestEffectImport()).resolves.toBeUndefined();
-  });
-
-  it('hands the request to a registered handler', async () => {
-    setEffectImportHandler(() => Promise.resolve('effects/tint'));
-
-    await expect(requestEffectImport()).resolves.toBe('effects/tint');
-  });
-
-  it('stops asking once the handler is cleared', async () => {
-    // Unmounting the editor clears it, so a field on a disposed workspace
-    // cannot open a dialog nobody owns.
-    const handler = vi.fn(() => Promise.resolve('effects/tint'));
-    setEffectImportHandler(handler);
-    setEffectImportHandler(null);
-
-    await expect(requestEffectImport()).resolves.toBeUndefined();
-    expect(handler).not.toHaveBeenCalled();
-  });
-});
+// The seam itself — asking with nobody listening, registering, unregistering —
+// is `libraryImport.test`. It is one mechanism now, and this file used to hold
+// a copy of those three tests.

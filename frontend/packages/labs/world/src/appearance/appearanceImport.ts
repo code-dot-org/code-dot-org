@@ -1,14 +1,16 @@
 // The seam between a `set sprite` / `play animation` dropdown and the picker.
 //
-// The same shape as `ruleImport` and `effectImport`, and for the same reason: a
-// Blockly field cannot open a React dialog or write a file, and the registries
-// it can reach are plain module state by design. The field asks through a
-// handler the editor registers while it is mounted.
+// `blockly/ruleImport`'s sibling, on `blockly/libraryImport`'s mechanism, and
+// the only one of the five whose request carries an argument.
 //
-// A sentinel per dropdown rather than one shared, because they pick different
+// A SENTINEL PER DROPDOWN rather than one shared, because they pick different
 // things: an image, an animation and a backdrop are not interchangeable, and a
 // picker that had to ask which one you meant would be asking a question the
-// block already answered.
+// block already answered. One HANDLER for all three, though — the three
+// sentinels name one picker opened on a different shelf, which is what the
+// kind says and why this seam takes one.
+
+import {importSeam, type ImportHandler} from '../blockly/libraryImport';
 
 /** What a dropdown's `(import…)` row carries. */
 export const IMPORT_SPRITE_VALUE = '__import_sprite__';
@@ -19,32 +21,13 @@ export const IMPORT_BACKGROUND_VALUE = '__import_background__';
 export type AppearanceKind = 'sprite' | 'animation' | 'background';
 
 /**
- * Opens the picker and resolves with what the field should now hold — a sprite's
- * file name or an animation's id — or undefined if nothing was imported.
+ * Opens the picker and resolves with what the field should now hold — a
+ * sprite's file name or an animation's id — or undefined if nothing was
+ * imported.
  */
-export type AppearanceImportHandler = (
-  kind: AppearanceKind,
-) => Promise<string | undefined>;
+export type AppearanceImportHandler = ImportHandler<[kind: AppearanceKind]>;
 
-let handler: AppearanceImportHandler | null = null;
+const seam = importSeam<[kind: AppearanceKind]>();
 
-/**
- * Register the picker. Called by the Blockly editor while it is mounted, and
- * with `null` on unmount so a stale closure over a dead workspace cannot run.
- */
-export function setAppearanceImportHandler(
-  next: AppearanceImportHandler | null,
-): void {
-  handler = next;
-}
-
-/**
- * Ask for an import. Resolves undefined when nothing was imported — including
- * when no handler is registered, which is the case in the headless generator and
- * in tests.
- */
-export function requestAppearanceImport(
-  kind: AppearanceKind,
-): Promise<string | undefined> {
-  return handler ? handler(kind) : Promise.resolve(undefined);
-}
+export const setAppearanceImportHandler = seam.register;
+export const requestAppearanceImport = seam.request;
