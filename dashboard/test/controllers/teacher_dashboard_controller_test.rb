@@ -67,4 +67,37 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     get :show, params: {section_id: cotaught_section.id}
     assert_response :success
   end
+
+  test 'unit_in_aif_or_aid: returns true for AIF units' do
+    sign_in @section_owner
+    unit = create(:script)
+    unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_cs
+    unit.save!
+
+    get :unit_in_aif_or_aid, params: {unit_id: unit.id}
+    assert_response :success
+    assert_equal true, JSON.parse(response.body)['aif']
+  end
+
+  test 'unit_in_aif_or_aid: returns true for AID units' do
+    sign_in @section_owner
+    unit = create(:script)
+    unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.AID
+    unit.save!
+
+    get :unit_in_aif_or_aid, params: {unit_id: unit.id}
+    assert_response :success
+    assert_equal true, JSON.parse(response.body)['aif']
+  end
+
+  test 'unit_in_aif_or_aid: returns false for units outside AIF and AID' do
+    sign_in @section_owner
+    unit = create(:script)
+    unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
+    unit.save!
+
+    get :unit_in_aif_or_aid, params: {unit_id: unit.id}
+    assert_response :success
+    assert_equal false, JSON.parse(response.body)['aif']
+  end
 end
