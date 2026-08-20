@@ -12,6 +12,12 @@
   padding-top: 8px;
 }
 
+.standardFilter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .resultList {
   display: flex;
   flex-direction: column;

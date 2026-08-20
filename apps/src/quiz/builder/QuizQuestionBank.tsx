@@ -3,9 +3,11 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
+import SearchBox from '@cdo/apps/levelbuilder/lesson-editor/SearchBox';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {QuizQuestionData} from './QuizBuilder';
+import {QuizStandard} from './QuizQuestionForm';
 
 import styles from './quiz-question-bank.module.scss';
 
@@ -38,6 +40,12 @@ const SORT_OPTIONS = [
   {value: 'name', text: 'Alphabetical (A-Z)'},
 ];
 
+interface StandardSearchOption {
+  value: string;
+  label: string;
+  standard: QuizStandard;
+}
+
 // Question bank: browse/search existing MultipleChoiceQuestions and attach
 // one to this quiz (creating a new QuizLevelQuestion, not a new question
 // row) - see LevelsController#index_quiz_questions/#attach_quiz_question.
@@ -51,6 +59,9 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
 }) => {
   const [search, setSearch] = useState('');
   const [sort, setSort] = useState('recent');
+  const [standardFilter, setStandardFilter] = useState<QuizStandard | null>(
+    null
+  );
   const [results, setResults] = useState<BankQuestion[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -64,10 +75,15 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
       // an omitted limit param clamps to MIN_LIMIT (1) server-side, not a
       // sensible default, which would make an empty search "browse the
       // bank" show a single question instead of a real list.
+      const standardParams = standardFilter
+        ? `&standardFrameworkShortcode=${encodeURIComponent(
+            standardFilter.frameworkShortcode
+          )}&standardShortcode=${encodeURIComponent(standardFilter.shortcode)}`
+        : '';
       HttpClient.get(
         `/levels/${quizId}/quiz_questions?search=${encodeURIComponent(
           search
-        )}&limit=80&sort=${sort}`
+        )}&limit=80&sort=${sort}${standardParams}`
       )
         .then(response => {
           if (!response.ok) {
@@ -80,7 +96,7 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
         .finally(() => setIsLoading(false));
     }, SEARCH_DEBOUNCE_MS);
     return () => clearTimeout(timeout);
-  }, [quizId, search, sort]);
+  }, [quizId, search, sort, standardFilter]);
 
   const attach = async (question: BankQuestion) => {
     setAttachingId(question.id);
@@ -132,6 +148,40 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
           selectedValue={sort}
           onChange={e => setSort(e.target.value)}
         />
+        <Typography variant="body3">Filter by standard</Typography>
+        {standardFilter ? (
+          <div className={styles.standardFilter}>
+            <Typography variant="body3">
+              {standardFilter.frameworkShortcode.toUpperCase()} -{' '}
+              {standardFilter.shortcode}
+            </Typography>
+            <MuiButton
+              variant="text"
+              color="secondary"
+              size="small"
+              type="button"
+              onClick={() => setStandardFilter(null)}
+            >
+              Clear
+            </MuiButton>
+          </div>
+        ) : (
+          <SearchBox
+            onSearchSelect={(option: StandardSearchOption) =>
+              option && setStandardFilter(option.standard)
+            }
+            searchUrl="standards/search"
+            constructOptions={(json: QuizStandard[]) => ({
+              options: json.map(standard => ({
+                value: `${standard.frameworkShortcode}-${standard.shortcode}`,
+                label: `${standard.frameworkShortcode.toUpperCase()} - ${
+                  standard.shortcode
+                } - ${standard.description}`,
+                standard,
+              })),
+            })}
+          />
+        )}
       </div>
       {error && (
         <Typography variant="body3" color="error">

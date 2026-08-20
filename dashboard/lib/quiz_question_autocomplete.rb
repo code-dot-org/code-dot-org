@@ -17,10 +17,15 @@ class QuizQuestionAutocomplete < AutocompleteHelper
     'recent' => {created_at: :desc}
   }.freeze
 
-  def self.get_search_matches(query, limit, sort = nil)
+  # standard_id, if given, narrows to questions tagged with that Standard
+  # (AND'd with the question_name search below, not an alternative to it).
+  # Resolving a frontend-facing (frameworkShortcode, shortcode) pair into
+  # this id is the caller's job - see LevelsController#index_quiz_questions.
+  def self.get_search_matches(query, limit, sort = nil, standard_id = nil)
     limit = limit.to_i.clamp(MIN_LIMIT, MAX_LIMIT)
     order = SORT_ORDERS.fetch(sort, SORT_ORDERS['recent'])
     rows = MultipleChoiceQuestion.order(order).limit(limit)
+    rows = rows.joins(:standards).where(standards: {id: standard_id}) if standard_id
     return rows if query.blank?
     return MultipleChoiceQuestion.none if query.length < MIN_WORD_LENGTH
 

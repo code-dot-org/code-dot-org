@@ -330,20 +330,25 @@ class LevelsController < ApplicationController
     render status: :bad_request, json: {error: exception.message}
   end
 
-  # GET /levels/:id/quiz_questions?search=&sort=
+  # GET /levels/:id/quiz_questions?search=&sort=&standardFrameworkShortcode=&standardShortcode=
   #
   # Question bank browsing: lists existing MultipleChoiceQuestions matching
   # a question_name search, each marked attached: true/false for whether it's
   # already on this quiz. Search follows the same MySQL fulltext convention as
   # Vocabulary/Resources/Standards search - see QuizQuestionAutocomplete/AutocompleteHelper.
   # sort is 'name' or 'recent' (default) - see QuizQuestionAutocomplete::SORT_ORDERS.
+  # standardFrameworkShortcode/standardShortcode, if both given, narrow to
+  # questions tagged with that Standard (AND'd with search, not exclusive of it).
   def index_quiz_questions
     return head :not_found unless @level.is_a?(Quiz)
 
-    questions = QuizQuestionAutocomplete.get_search_matches(params[:search], params[:limit], params[:sort])
+    standard = find_standard(params[:standardFrameworkShortcode], params[:standardShortcode])
+    questions = QuizQuestionAutocomplete.get_search_matches(params[:search], params[:limit], params[:sort], standard&.id)
     attached_ids = @level.quiz_questions.pluck(:id)
 
     render json: questions.map {|question| quiz_question_json(question).merge(attached: attached_ids.include?(question.id))}
+  rescue ActiveRecord::RecordNotFound
+    render json: []
   end
 
   # POST /levels/:id/quiz_questions/:question_id/attach
@@ -900,10 +905,19 @@ class LevelsController < ApplicationController
   # fetch_standards and Standard#summarize_for_lesson_edit, which this
   # mirrors rather than exposing raw Standard ids to the frontend.
   private def fetch_quiz_question_standards(standards_data)
-    (standards_data || []).map do |s|
-      framework = Framework.find_by!(shortcode: s['frameworkShortcode'])
-      Standard.find_by!(framework: framework, shortcode: s['shortcode'])
-    end
+    (standards_data || []).map {|s| find_standard(s['frameworkShortcode'], s['shortcode'])}
+  end
+
+  # Returns nil, rather than raising, when framework_shortcode is blank -
+  # both callers treat "no standard specified" as a legitimate, common case
+  # (index_quiz_questions with no standard filter; a question tagged with
+  # nothing). A present but unresolvable shortcode still raises
+  # ActiveRecord::RecordNotFound, same as before this was extracted.
+  private def find_standard(framework_shortcode, shortcode)
+    return nil if framework_shortcode.blank?
+
+    framework = Framework.find_by!(shortcode: framework_shortcode)
+    Standard.find_by!(framework: framework, shortcode: shortcode)
   end
 
   # Shared by create/show/update_quiz_question. Includes correct_choice_id -
