@@ -245,6 +245,102 @@ describe('Time', () => {
   });
 });
 
+describe('Patrol', () => {
+  /** A patroller of one kind, on its own in an empty world. */
+  const walker = (traits: string[], settings: Record<string, number> = {}) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/motion'), rule('rules/patrol')])
+      .instantiate();
+    const actor = new ActorBuilder({id: 'guard', name: 'guard'})
+      .useTraits([
+        of('rules/motion', 'CanMoveTrait'),
+        ...traits.map(name => of('rules/patrol', name)),
+      ])
+      .set(PositionProperty, at(100, 100))
+      .instantiate('guard');
+    for (const [name, value] of Object.entries(settings)) {
+      actor.set(of('rules/patrol', name), value as never);
+    }
+    world.addActor(actor);
+    return {world, actor};
+  };
+  const spot = (actor: unknown) =>
+    (actor as {get(p: unknown): Vector}).get(PositionProperty);
+
+  it('sets off forwards rather than turning on its first frame', () => {
+    // Heading starts at -1 so the frame-one turn makes it +1. Starting at +1
+    // would send it backwards immediately, which reads as a rule that cannot
+    // count — and is what the first cut of this did.
+    const {world, actor} = walker(['PatrolsAcrossTrait']);
+
+    run(world, 0.5);
+
+    expect(spot(actor).x).toBeGreaterThan(100);
+  });
+
+  it('comes back, and does not walk away over time', () => {
+    // The whole claim, and the bug it was written against. A turn is taken on
+    // the first frame at or after it is due, so it is always a fraction late;
+    // booking the next one a period from THEN carried that fraction forward
+    // and the beat slipped — a measured two pixels a second, which is a
+    // platform that leaves its track and an enemy that leaves its beat.
+    //
+    // Twenty seconds of it, because one round trip cannot tell a fixed offset
+    // from a drift and forty round trips can.
+    const {world, actor} = walker(['PatrolsAcrossTrait'], {
+      AcrossTimeProperty: 0.5,
+    });
+
+    run(world, 0.5);
+    const far = spot(actor).x;
+    run(world, 0.5);
+    const afterOne = spot(actor).x;
+    run(world, 19);
+
+    expect(far).toBeGreaterThan(120);
+    // Two pixels out and two pixels out for ever: the frame it moves on
+    // before the first turn lands is an offset, not a slip.
+    expect(afterOne).toBeCloseTo(102, 0);
+    expect(spot(actor).x).toBeCloseTo(afterOne, 0);
+  });
+
+  it('walks the distance its two numbers multiply out to', () => {
+    // Speed times time, which is arithmetic a learner can do in their head and
+    // change either half of. 0.6 units for 1.5 seconds is ninety pixels.
+    const {world, actor} = walker(['PatrolsAcrossTrait']);
+
+    run(world, 1.5);
+
+    expect(spot(actor).x - 100).toBeCloseTo(90, 0);
+  });
+
+  it('lifts as readily as it guards', () => {
+    // The axis split, and the reason for it: down is not a second half of
+    // across, it is a different thing to want. A platform on a track.
+    const {world, actor} = walker(['PatrolsDownTrait']);
+
+    run(world, 1.5);
+
+    expect(spot(actor).y - 100).toBeCloseTo(90, 0);
+    expect(spot(actor).x).toBe(100);
+  });
+
+  it('walks a rectangle when it takes both', () => {
+    // The two steps share a moment, so they have to commute — each reads the
+    // axis it writes and passes the other through. An actor with both is the
+    // proof, and nothing in the rule arranges it.
+    const {world, actor} = walker(['PatrolsAcrossTrait', 'PatrolsDownTrait']);
+
+    run(world, 0.7);
+
+    // Same speed and same period on both, so the two distances must be the
+    // SAME distance — which is the sharpest way to say that neither step
+    // clobbered the axis the other wrote.
+    expect(spot(actor).x - 100).toBeGreaterThan(30);
+    expect(spot(actor).y - 100).toBe(spot(actor).x - 100);
+  });
+});
+
 describe('Scoring', () => {
   /** A world with the rule in play and a target set. */
   const game = (targetScore = 0) => {
