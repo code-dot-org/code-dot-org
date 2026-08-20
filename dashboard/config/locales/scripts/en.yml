@@ -1141,8 +1141,8 @@ en:
           description: Planning Script for CSF 2.0
           description_short: Planning Script for CSF 2.0
           description_audience: Ages 5-18
-        alltheplcthings:
-          title: Sample course for PLC things
+        ui-test-plc:
+          title: UI Test course for PLC things
           description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
           description_short: This is a sample course that has all of the plc special things
           description_audience: ''

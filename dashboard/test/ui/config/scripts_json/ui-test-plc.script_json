@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "alltheplcthings",
+    "name": "ui-test-plc",
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
@@ -8,17 +8,18 @@
       "curriculum_umbrella": "Other",
       "is_migrated": true,
       "peer_reviews_to_complete": 5,
-      "professional_learning_course": "All The PLC Things"
+      "professional_learning_course": "UI Test PLC Things"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:13:53 UTC",
+    "serialized_at": "2026-08-14 04:47:29 UTC",
+    "hide_within_course": false,
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
     "participant_audience": "facilitator",
     "seeding_key": {
-      "script.name": "alltheplcthings"
+      "script.name": "ui-test-plc"
     }
   },
   "lesson_groups": [
@@ -31,7 +32,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "required",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -43,7 +44,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -55,7 +56,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     }
   ],
@@ -72,7 +73,7 @@
       "seeding_key": {
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -87,7 +88,7 @@
       "seeding_key": {
         "lesson.key": "Lesson 1,4",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -102,7 +103,7 @@
       "seeding_key": {
         "lesson.key": "Lesson 1,6",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -117,7 +118,7 @@
       "seeding_key": {
         "lesson.key": "Lesson 1,9",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -132,7 +133,7 @@
       "seeding_key": {
         "lesson.key": "Lesson 1,10",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -147,7 +148,7 @@
       "seeding_key": {
         "lesson.key": "Lesson 1,11",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -162,7 +163,7 @@
       "seeding_key": {
         "lesson.key": "Lesson 2,2",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -177,7 +178,7 @@
       "seeding_key": {
         "lesson.key": "Lesson 2,3",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -192,7 +193,7 @@
       "seeding_key": {
         "lesson.key": "Lesson 2,10",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -207,7 +208,7 @@
       "seeding_key": {
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -222,7 +223,7 @@
       "seeding_key": {
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
@@ -237,441 +238,441 @@
       "seeding_key": {
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "4d705243-0b4a-4745-8978-de1b7b1e0595",
+      "key": "8030ebef-9f8d-4c85-a5da-92f5351f3d80",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "4d705243-0b4a-4745-8978-de1b7b1e0595",
+        "lesson_activity.key": "8030ebef-9f8d-4c85-a5da-92f5351f3d80",
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "f010ae04-5c84-4983-8fa2-78fd76c230ee",
+      "key": "2e3299fe-ba1a-4c2d-abab-5852bd6f6fae",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "f010ae04-5c84-4983-8fa2-78fd76c230ee",
+        "lesson_activity.key": "2e3299fe-ba1a-4c2d-abab-5852bd6f6fae",
         "lesson.key": "Lesson 1,4",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "7d0ac7c9-7b97-481f-be23-69b5cc59e6d0",
+      "key": "6c7da54a-1171-4fdd-8a36-85bc26bec7b6",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "7d0ac7c9-7b97-481f-be23-69b5cc59e6d0",
+        "lesson_activity.key": "6c7da54a-1171-4fdd-8a36-85bc26bec7b6",
         "lesson.key": "Lesson 1,6",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "0169b1f2-c182-46bd-8c66-1ca2c3b7b62b",
+      "key": "0c2cfe05-3cec-49f5-93ac-c04ae0137762",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "0169b1f2-c182-46bd-8c66-1ca2c3b7b62b",
+        "lesson_activity.key": "0c2cfe05-3cec-49f5-93ac-c04ae0137762",
         "lesson.key": "Lesson 1,9",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "60ef3dfb-4c32-4d0c-8978-415339922ffe",
+      "key": "94ef0a34-e46b-40f9-87b9-578f327c1661",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "60ef3dfb-4c32-4d0c-8978-415339922ffe",
+        "lesson_activity.key": "94ef0a34-e46b-40f9-87b9-578f327c1661",
         "lesson.key": "Lesson 1,10",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "184be636-1a9a-4a9c-9254-69b5250c0db5",
+      "key": "d4c51108-1161-49de-aa89-a175bc011338",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "184be636-1a9a-4a9c-9254-69b5250c0db5",
+        "lesson_activity.key": "d4c51108-1161-49de-aa89-a175bc011338",
         "lesson.key": "Lesson 1,11",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "6672d9f2-d9fb-40c0-9633-0c3a67d15cf4",
+      "key": "cd1a2a22-af05-4c92-a468-ad63b2f3d8c5",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "6672d9f2-d9fb-40c0-9633-0c3a67d15cf4",
+        "lesson_activity.key": "cd1a2a22-af05-4c92-a468-ad63b2f3d8c5",
         "lesson.key": "Lesson 2,2",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "0d56ac33-b729-4b3e-87ec-58a3959c7c28",
+      "key": "f694bc66-fd5d-4762-b704-f9cbb1356dbf",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "0d56ac33-b729-4b3e-87ec-58a3959c7c28",
+        "lesson_activity.key": "f694bc66-fd5d-4762-b704-f9cbb1356dbf",
         "lesson.key": "Lesson 2,3",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "8dfcb458-8b43-4a84-92ea-539a8e74b399",
+      "key": "5459d55c-25c1-4554-b4b0-3b29d94bcb40",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "8dfcb458-8b43-4a84-92ea-539a8e74b399",
+        "lesson_activity.key": "5459d55c-25c1-4554-b4b0-3b29d94bcb40",
         "lesson.key": "Lesson 2,10",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "6eb0786c-57d6-403a-b32d-00b9e8d65403",
+      "key": "c3b08df6-3bfb-4da2-90ac-404e0b81c42d",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "6eb0786c-57d6-403a-b32d-00b9e8d65403",
+        "lesson_activity.key": "c3b08df6-3bfb-4da2-90ac-404e0b81c42d",
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3",
+      "key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3",
+        "lesson_activity.key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d",
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     },
     {
-      "key": "f2e8759f-556d-417b-b864-3f62ced3e1d8",
+      "key": "8b7048d9-6ba8-4f7d-8cec-a03a7ee2f4e0",
       "position": 1,
       "properties": {
         "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "f2e8759f-556d-417b-b864-3f62ced3e1d8",
+        "lesson_activity.key": "8b7048d9-6ba8-4f7d-8cec-a03a7ee2f4e0",
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings"
+        "script.name": "ui-test-plc"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "a49f21de-3cfb-47b2-bf65-79ba665971fa",
+      "key": "3de6418b-7703-42b8-b7bd-a991f61bb029",
       "position": 1,
       "properties": {
         "progression_name": "Welcome to TeacherCon!"
       },
       "seeding_key": {
-        "activity_section.key": "a49f21de-3cfb-47b2-bf65-79ba665971fa",
-        "lesson_activity.key": "4d705243-0b4a-4745-8978-de1b7b1e0595"
+        "activity_section.key": "3de6418b-7703-42b8-b7bd-a991f61bb029",
+        "lesson_activity.key": "8030ebef-9f8d-4c85-a5da-92f5351f3d80"
       }
     },
     {
-      "key": "60210c25-cf13-4f65-9f09-a02b3073cbf3",
+      "key": "ba41bfd4-eaac-4321-934f-cf4d3e388832",
       "position": 2,
       "properties": {
         "progression_name": "TeacherCon Agenda"
       },
       "seeding_key": {
-        "activity_section.key": "60210c25-cf13-4f65-9f09-a02b3073cbf3",
-        "lesson_activity.key": "4d705243-0b4a-4745-8978-de1b7b1e0595"
+        "activity_section.key": "ba41bfd4-eaac-4321-934f-cf4d3e388832",
+        "lesson_activity.key": "8030ebef-9f8d-4c85-a5da-92f5351f3d80"
       }
     },
     {
-      "key": "c56abe4c-ca4c-4446-a166-a17845de74fb",
+      "key": "543c5417-f673-48b1-b7e0-58e8d8806023",
       "position": 3,
       "properties": {
         "name": "TeacherCon Self-Assessment",
         "progression_name": "TeacherCon Self-Assessment"
       },
       "seeding_key": {
-        "activity_section.key": "c56abe4c-ca4c-4446-a166-a17845de74fb",
-        "lesson_activity.key": "4d705243-0b4a-4745-8978-de1b7b1e0595"
+        "activity_section.key": "543c5417-f673-48b1-b7e0-58e8d8806023",
+        "lesson_activity.key": "8030ebef-9f8d-4c85-a5da-92f5351f3d80"
       }
     },
     {
-      "key": "c87c6b3a-f9f6-4359-9c84-8d0fdc432137",
+      "key": "25901fb8-7aca-411e-9f41-dfa0c1da2b0b",
       "position": 1,
       "properties": {
         "name": "U1L4 Lesson Overview",
         "progression_name": "U1L4 Lesson Overview"
       },
       "seeding_key": {
-        "activity_section.key": "c87c6b3a-f9f6-4359-9c84-8d0fdc432137",
-        "lesson_activity.key": "f010ae04-5c84-4983-8fa2-78fd76c230ee"
+        "activity_section.key": "25901fb8-7aca-411e-9f41-dfa0c1da2b0b",
+        "lesson_activity.key": "2e3299fe-ba1a-4c2d-abab-5852bd6f6fae"
       }
     },
     {
-      "key": "16f01b35-77a6-41bb-9552-38a3e2334723",
+      "key": "f15755cd-5c77-49c7-8b5b-b68c49446252",
       "position": 1,
       "properties": {
         "name": "U1L6 Lesson Overview",
         "progression_name": "U1L6 Lesson Overview"
       },
       "seeding_key": {
-        "activity_section.key": "16f01b35-77a6-41bb-9552-38a3e2334723",
-        "lesson_activity.key": "7d0ac7c9-7b97-481f-be23-69b5cc59e6d0"
+        "activity_section.key": "f15755cd-5c77-49c7-8b5b-b68c49446252",
+        "lesson_activity.key": "6c7da54a-1171-4fdd-8a36-85bc26bec7b6"
       }
     },
     {
-      "key": "d4f8ed56-aa48-4aa8-94d8-3806736cbdf6",
+      "key": "afb8e44b-8255-43bb-9ce5-585775acf744",
       "position": 1,
       "properties": {
         "name": "U1L9 Lesson Overview",
         "progression_name": "U1L9 Lesson Overview"
       },
       "seeding_key": {
-        "activity_section.key": "d4f8ed56-aa48-4aa8-94d8-3806736cbdf6",
-        "lesson_activity.key": "0169b1f2-c182-46bd-8c66-1ca2c3b7b62b"
+        "activity_section.key": "afb8e44b-8255-43bb-9ce5-585775acf744",
+        "lesson_activity.key": "0c2cfe05-3cec-49f5-93ac-c04ae0137762"
       }
     },
     {
-      "key": "4da17869-cbaf-4fc5-8ead-0ebe2eb674bb",
+      "key": "7c5dacb7-5d97-44e7-87e4-310440ff4d2d",
       "position": 1,
       "properties": {
         "name": "U1L10 Lesson Overview",
         "progression_name": "U1L10 Lesson Overview"
       },
       "seeding_key": {
-        "activity_section.key": "4da17869-cbaf-4fc5-8ead-0ebe2eb674bb",
-        "lesson_activity.key": "60ef3dfb-4c32-4d0c-8978-415339922ffe"
+        "activity_section.key": "7c5dacb7-5d97-44e7-87e4-310440ff4d2d",
+        "lesson_activity.key": "94ef0a34-e46b-40f9-87b9-578f327c1661"
       }
     },
     {
-      "key": "e9760578-66f7-4c2a-9b78-f4b22a93745b",
+      "key": "dd63842c-ff1f-4c8c-96e4-648a5c07f53b",
       "position": 1,
       "properties": {
         "name": "U1L11 Lesson Overview",
         "progression_name": "U1L11 Lesson Overview"
       },
       "seeding_key": {
-        "activity_section.key": "e9760578-66f7-4c2a-9b78-f4b22a93745b",
-        "lesson_activity.key": "184be636-1a9a-4a9c-9254-69b5250c0db5"
+        "activity_section.key": "dd63842c-ff1f-4c8c-96e4-648a5c07f53b",
+        "lesson_activity.key": "d4c51108-1161-49de-aa89-a175bc011338"
       }
     },
     {
-      "key": "6700c89c-8b3b-4bf4-849f-652c69beed6b",
+      "key": "495bd526-1348-4593-9d87-19ba7bd926e7",
       "position": 1,
       "properties": {
         "name": "U2L2 Lesson Overview",
         "progression_name": "U2L2 Lesson Overview"
       },
       "seeding_key": {
-        "activity_section.key": "6700c89c-8b3b-4bf4-849f-652c69beed6b",
-        "lesson_activity.key": "6672d9f2-d9fb-40c0-9633-0c3a67d15cf4"
+        "activity_section.key": "495bd526-1348-4593-9d87-19ba7bd926e7",
+        "lesson_activity.key": "cd1a2a22-af05-4c92-a468-ad63b2f3d8c5"
       }
     },
     {
-      "key": "048cd2d5-24d6-4a91-9129-c7d658f1b3ae",
+      "key": "3bb4aee7-732d-42e2-aa0a-fac6b8952721",
       "position": 1,
       "properties": {
         "name": "U2L3 Lesson Overview",
         "progression_name": "U2L3 Lesson Overview"
       },
       "seeding_key": {
-        "activity_section.key": "048cd2d5-24d6-4a91-9129-c7d658f1b3ae",
-        "lesson_activity.key": "0d56ac33-b729-4b3e-87ec-58a3959c7c28"
+        "activity_section.key": "3bb4aee7-732d-42e2-aa0a-fac6b8952721",
+        "lesson_activity.key": "f694bc66-fd5d-4762-b704-f9cbb1356dbf"
       }
     },
     {
-      "key": "319c97bd-a162-4ea1-a9a9-6413587b8faa",
+      "key": "010f6867-a494-4779-802a-a036b4e83dfa",
       "position": 1,
       "properties": {
         "name": "U2L10 Lesson Overview",
         "progression_name": "U2L10 Lesson Overview"
       },
       "seeding_key": {
-        "activity_section.key": "319c97bd-a162-4ea1-a9a9-6413587b8faa",
-        "lesson_activity.key": "8dfcb458-8b43-4a84-92ea-539a8e74b399"
+        "activity_section.key": "010f6867-a494-4779-802a-a036b4e83dfa",
+        "lesson_activity.key": "5459d55c-25c1-4554-b4b0-3b29d94bcb40"
       }
     },
     {
-      "key": "a7447745-98d0-4d94-b550-2240c0838cff",
+      "key": "7d7ca932-3785-472d-90f3-cee90a6dab23",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "a7447745-98d0-4d94-b550-2240c0838cff",
-        "lesson_activity.key": "6eb0786c-57d6-403a-b32d-00b9e8d65403"
+        "activity_section.key": "7d7ca932-3785-472d-90f3-cee90a6dab23",
+        "lesson_activity.key": "c3b08df6-3bfb-4da2-90ac-404e0b81c42d"
       }
     },
     {
-      "key": "a7f85768-a0f8-4bea-96bc-9c7d2779370a",
+      "key": "8cfd7793-ac3f-49ff-b671-490e147d2fab",
       "position": 1,
       "properties": {
         "progression_name": "Exploring Practices and Strategies during TeacherCon"
       },
       "seeding_key": {
-        "activity_section.key": "a7f85768-a0f8-4bea-96bc-9c7d2779370a",
-        "lesson_activity.key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3"
+        "activity_section.key": "8cfd7793-ac3f-49ff-b671-490e147d2fab",
+        "lesson_activity.key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d"
       }
     },
     {
-      "key": "347741a5-3ec9-4c86-bbf2-7b0e334cc2a3",
+      "key": "f441205d-0f68-408b-8fb0-032112461786",
       "position": 2,
       "properties": {
         "progression_name": "Overview: Group Work and Peer Learning"
       },
       "seeding_key": {
-        "activity_section.key": "347741a5-3ec9-4c86-bbf2-7b0e334cc2a3",
-        "lesson_activity.key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3"
+        "activity_section.key": "f441205d-0f68-408b-8fb0-032112461786",
+        "lesson_activity.key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d"
       }
     },
     {
-      "key": "fc85ce57-a79a-4b8f-90aa-30687db5e762",
+      "key": "33f8f458-ba42-4ade-bd11-49268d925f3f",
       "position": 3,
       "properties": {
         "progression_name": "Collaborative Learning and Group Work: Description and Strategies"
       },
       "seeding_key": {
-        "activity_section.key": "fc85ce57-a79a-4b8f-90aa-30687db5e762",
-        "lesson_activity.key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3"
+        "activity_section.key": "33f8f458-ba42-4ade-bd11-49268d925f3f",
+        "lesson_activity.key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d"
       }
     },
     {
-      "key": "410d294d-3607-43f6-887c-4e00f8e5c64b",
+      "key": "ad104ab2-40b0-4c72-b66a-b1734db45d95",
       "position": 4,
       "properties": {
         "progression_name": "The Official Peer Instruction Blog"
       },
       "seeding_key": {
-        "activity_section.key": "410d294d-3607-43f6-887c-4e00f8e5c64b",
-        "lesson_activity.key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3"
+        "activity_section.key": "ad104ab2-40b0-4c72-b66a-b1734db45d95",
+        "lesson_activity.key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d"
       }
     },
     {
-      "key": "73c562c8-8b1a-4fb5-937b-284915726e41",
+      "key": "93681412-7763-48f1-af9f-a183d0dc4f7c",
       "position": 5,
       "properties": {
         "progression_name": "the Journal of Peer Learning"
       },
       "seeding_key": {
-        "activity_section.key": "73c562c8-8b1a-4fb5-937b-284915726e41",
-        "lesson_activity.key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3"
+        "activity_section.key": "93681412-7763-48f1-af9f-a183d0dc4f7c",
+        "lesson_activity.key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d"
       }
     },
     {
-      "key": "3d19c118-5bc6-4fda-9eb9-2f9d0ca67b74",
+      "key": "59a8562a-8659-49a1-9323-c177a390e264",
       "position": 6,
       "properties": {
         "progression_name": "Wednesday Report: Balancing Teachers and Tools in Unit 1"
       },
       "seeding_key": {
-        "activity_section.key": "3d19c118-5bc6-4fda-9eb9-2f9d0ca67b74",
-        "lesson_activity.key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3"
+        "activity_section.key": "59a8562a-8659-49a1-9323-c177a390e264",
+        "lesson_activity.key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d"
       }
     },
     {
-      "key": "612477b0-c4c8-4e49-974c-b1855b27432e",
+      "key": "5db8f5cb-e999-43b8-8c13-7b3370a97f48",
       "position": 7,
       "properties": {
         "progression_name": "Peer Review Level 1 - Tuesday Report"
       },
       "seeding_key": {
-        "activity_section.key": "612477b0-c4c8-4e49-974c-b1855b27432e",
-        "lesson_activity.key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3"
+        "activity_section.key": "5db8f5cb-e999-43b8-8c13-7b3370a97f48",
+        "lesson_activity.key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d"
       }
     },
     {
-      "key": "d0fb7853-fb1d-446e-86b2-529f5a75cee3",
+      "key": "7a5de701-909f-4a22-840e-7bdb47cdc5f3",
       "position": 8,
       "properties": {
         "name": "Peer Review Level 2 - Wednesday Report",
         "progression_name": "Peer Review Level 2 - Wednesday Report"
       },
       "seeding_key": {
-        "activity_section.key": "d0fb7853-fb1d-446e-86b2-529f5a75cee3",
-        "lesson_activity.key": "2b2e27d8-441f-426e-8b1d-bce7ccef4aa3"
+        "activity_section.key": "7a5de701-909f-4a22-840e-7bdb47cdc5f3",
+        "lesson_activity.key": "8c84d982-10c5-471a-8ae9-cb7e4d394e0d"
       }
     },
     {
-      "key": "f2173ccb-4f5e-4963-af1d-849778da468a",
+      "key": "d8839675-fc72-4bf3-a9b9-c8c809e3f15e",
       "position": 1,
       "properties": {
         "progression_name": "Exploring Practices and Strategies during TeacherCon"
       },
       "seeding_key": {
-        "activity_section.key": "f2173ccb-4f5e-4963-af1d-849778da468a",
-        "lesson_activity.key": "f2e8759f-556d-417b-b864-3f62ced3e1d8"
+        "activity_section.key": "d8839675-fc72-4bf3-a9b9-c8c809e3f15e",
+        "lesson_activity.key": "8b7048d9-6ba8-4f7d-8cec-a03a7ee2f4e0"
       }
     },
     {
-      "key": "9f6a59f4-c328-49c5-a1e3-4b785f8e2891",
+      "key": "82c51f9f-93ed-4712-9712-2e38a2e58187",
       "position": 2,
       "properties": {
         "progression_name": "Overview: Balancing Teachers and Tools"
       },
       "seeding_key": {
-        "activity_section.key": "9f6a59f4-c328-49c5-a1e3-4b785f8e2891",
-        "lesson_activity.key": "f2e8759f-556d-417b-b864-3f62ced3e1d8"
+        "activity_section.key": "82c51f9f-93ed-4712-9712-2e38a2e58187",
+        "lesson_activity.key": "8b7048d9-6ba8-4f7d-8cec-a03a7ee2f4e0"
       }
     },
     {
-      "key": "790592c9-6892-441f-a912-878c389d6d00",
+      "key": "3d7102ff-c0ea-468e-920c-44470c6942d5",
       "position": 3,
       "properties": {
         "progression_name": "Peer Review Level 1 - Tuesday Report"
       },
       "seeding_key": {
-        "activity_section.key": "790592c9-6892-441f-a912-878c389d6d00",
-        "lesson_activity.key": "f2e8759f-556d-417b-b864-3f62ced3e1d8"
+        "activity_section.key": "3d7102ff-c0ea-468e-920c-44470c6942d5",
+        "lesson_activity.key": "8b7048d9-6ba8-4f7d-8cec-a03a7ee2f4e0"
       }
     },
     {
-      "key": "88f323b8-c672-4367-9e3d-c17c5cd476c9",
+      "key": "eb810f6d-a732-4381-9667-4806cb41598a",
       "position": 4,
       "properties": {
         "name": "Peer Review Level 2 - Wednesday Report",
         "progression_name": "Peer Review Level 2 - Wednesday Report"
       },
       "seeding_key": {
-        "activity_section.key": "88f323b8-c672-4367-9e3d-c17c5cd476c9",
-        "lesson_activity.key": "f2e8759f-556d-417b-b864-3f62ced3e1d8"
+        "activity_section.key": "eb810f6d-a732-4381-9667-4806cb41598a",
+        "lesson_activity.key": "8b7048d9-6ba8-4f7d-8cec-a03a7ee2f4e0"
       }
     }
   ],
@@ -683,22 +684,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Welcome to TeacherCon!"
+          "UI Test TeacherCon Welcome"
         ],
         "progression": "Welcome to TeacherCon!"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Welcome to TeacherCon!"
+          "UI Test TeacherCon Welcome"
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a49f21de-3cfb-47b2-bf65-79ba665971fa"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "3de6418b-7703-42b8-b7bd-a991f61bb029"
       },
       "level_keys": [
-        "Welcome to TeacherCon!"
+        "UI Test TeacherCon Welcome"
       ]
     },
     {
@@ -708,22 +709,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "TeacherCon Agenda"
+          "UI Test TeacherCon Agenda"
         ],
         "progression": "TeacherCon Agenda"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "TeacherCon Agenda"
+          "UI Test TeacherCon Agenda"
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "60210c25-cf13-4f65-9f09-a02b3073cbf3"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "ba41bfd4-eaac-4321-934f-cf4d3e388832"
       },
       "level_keys": [
-        "TeacherCon Agenda"
+        "UI Test TeacherCon Agenda"
       ]
     },
     {
@@ -733,22 +734,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "TeacherCon Self-Assessment"
+          "UI Test TeacherCon Self-Assessment"
         ],
         "progression": "TeacherCon Self-Assessment"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "TeacherCon Self-Assessment"
+          "UI Test TeacherCon Self-Assessment"
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "c56abe4c-ca4c-4446-a166-a17845de74fb"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "543c5417-f673-48b1-b7e0-58e8d8806023"
       },
       "level_keys": [
-        "TeacherCon Self-Assessment"
+        "UI Test TeacherCon Self-Assessment"
       ]
     },
     {
@@ -758,22 +759,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U1L4 Lesson Overview"
+          "UI Test U1L4 Lesson Overview"
         ],
         "progression": "U1L4 Lesson Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U1L4 Lesson Overview"
+          "UI Test U1L4 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,4",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "c87c6b3a-f9f6-4359-9c84-8d0fdc432137"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "25901fb8-7aca-411e-9f41-dfa0c1da2b0b"
       },
       "level_keys": [
-        "U1L4 Lesson Overview"
+        "UI Test U1L4 Lesson Overview"
       ]
     },
     {
@@ -783,22 +784,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U1L6 Lesson Overview"
+          "UI Test U1L6 Lesson Overview"
         ],
         "progression": "U1L6 Lesson Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U1L6 Lesson Overview"
+          "UI Test U1L6 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,6",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "16f01b35-77a6-41bb-9552-38a3e2334723"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "f15755cd-5c77-49c7-8b5b-b68c49446252"
       },
       "level_keys": [
-        "U1L6 Lesson Overview"
+        "UI Test U1L6 Lesson Overview"
       ]
     },
     {
@@ -808,22 +809,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U1L9 Lesson Overview"
+          "UI Test U1L9 Lesson Overview"
         ],
         "progression": "U1L9 Lesson Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U1L9 Lesson Overview"
+          "UI Test U1L9 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,9",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "d4f8ed56-aa48-4aa8-94d8-3806736cbdf6"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "afb8e44b-8255-43bb-9ce5-585775acf744"
       },
       "level_keys": [
-        "U1L9 Lesson Overview"
+        "UI Test U1L9 Lesson Overview"
       ]
     },
     {
@@ -833,22 +834,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U1L10 Lesson Overview"
+          "UI Test U1L10 Lesson Overview"
         ],
         "progression": "U1L10 Lesson Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U1L10 Lesson Overview"
+          "UI Test U1L10 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,10",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "4da17869-cbaf-4fc5-8ead-0ebe2eb674bb"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7c5dacb7-5d97-44e7-87e4-310440ff4d2d"
       },
       "level_keys": [
-        "U1L10 Lesson Overview"
+        "UI Test U1L10 Lesson Overview"
       ]
     },
     {
@@ -858,22 +859,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U1L11 Lesson Overview"
+          "UI Test U1L11 Lesson Overview"
         ],
         "progression": "U1L11 Lesson Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U1L11 Lesson Overview"
+          "UI Test U1L11 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,11",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "e9760578-66f7-4c2a-9b78-f4b22a93745b"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "dd63842c-ff1f-4c8c-96e4-648a5c07f53b"
       },
       "level_keys": [
-        "U1L11 Lesson Overview"
+        "UI Test U1L11 Lesson Overview"
       ]
     },
     {
@@ -883,22 +884,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U2L2 Lesson Overview"
+          "UI Test U2L2 Lesson Overview"
         ],
         "progression": "U2L2 Lesson Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U2L2 Lesson Overview"
+          "UI Test U2L2 Lesson Overview"
         ],
         "lesson.key": "Lesson 2,2",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "6700c89c-8b3b-4bf4-849f-652c69beed6b"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "495bd526-1348-4593-9d87-19ba7bd926e7"
       },
       "level_keys": [
-        "U2L2 Lesson Overview"
+        "UI Test U2L2 Lesson Overview"
       ]
     },
     {
@@ -908,22 +909,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U2L3 Lesson Overview"
+          "UI Test U2L3 Lesson Overview"
         ],
         "progression": "U2L3 Lesson Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U2L3 Lesson Overview"
+          "UI Test U2L3 Lesson Overview"
         ],
         "lesson.key": "Lesson 2,3",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "048cd2d5-24d6-4a91-9129-c7d658f1b3ae"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "3bb4aee7-732d-42e2-aa0a-fac6b8952721"
       },
       "level_keys": [
-        "U2L3 Lesson Overview"
+        "UI Test U2L3 Lesson Overview"
       ]
     },
     {
@@ -933,22 +934,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U2L10 Lesson Overview"
+          "UI Test U2L10 Lesson Overview"
         ],
         "progression": "U2L10 Lesson Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U2L10 Lesson Overview"
+          "UI Test U2L10 Lesson Overview"
         ],
         "lesson.key": "Lesson 2,10",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "319c97bd-a162-4ea1-a9a9-6413587b8faa"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "010f6867-a494-4779-802a-a036b4e83dfa"
       },
       "level_keys": [
-        "U2L10 Lesson Overview"
+        "UI Test U2L10 Lesson Overview"
       ]
     },
     {
@@ -958,21 +959,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "cspu5_assess1_eventprograms"
+          "UI Test cspu5_assess1_eventprograms"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "cspu5_assess1_eventprograms"
+          "UI Test cspu5_assess1_eventprograms"
         ],
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7447745-98d0-4d94-b550-2240c0838cff"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7d7ca932-3785-472d-90f3-cee90a6dab23"
       },
       "level_keys": [
-        "cspu5_assess1_eventprograms"
+        "UI Test cspu5_assess1_eventprograms"
       ]
     },
     {
@@ -982,21 +983,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "cspu5_assess1_elementid"
+          "UI Test cspu5_assess1_elementid"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "cspu5_assess1_elementid"
+          "UI Test cspu5_assess1_elementid"
         ],
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7447745-98d0-4d94-b550-2240c0838cff"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7d7ca932-3785-472d-90f3-cee90a6dab23"
       },
       "level_keys": [
-        "cspu5_assess1_elementid"
+        "UI Test cspu5_assess1_elementid"
       ]
     },
     {
@@ -1006,21 +1007,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "cspu5_assess1_debugging"
+          "UI Test cspu5_assess1_debugging"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "cspu5_assess1_debugging"
+          "UI Test cspu5_assess1_debugging"
         ],
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7447745-98d0-4d94-b550-2240c0838cff"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7d7ca932-3785-472d-90f3-cee90a6dab23"
       },
       "level_keys": [
-        "cspu5_assess1_debugging"
+        "UI Test cspu5_assess1_debugging"
       ]
     },
     {
@@ -1030,21 +1031,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "cspu5_assess1_codevalues"
+          "UI Test cspu5_assess1_codevalues"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "cspu5_assess1_codevalues"
+          "UI Test cspu5_assess1_codevalues"
         ],
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7447745-98d0-4d94-b550-2240c0838cff"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7d7ca932-3785-472d-90f3-cee90a6dab23"
       },
       "level_keys": [
-        "cspu5_assess1_codevalues"
+        "UI Test cspu5_assess1_codevalues"
       ]
     },
     {
@@ -1054,22 +1055,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Exploring Practices and Strategies during TeacherCon"
+          "UI Test Exploring Practices and Strategies during TeacherCon"
         ],
         "progression": "Exploring Practices and Strategies during TeacherCon"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Exploring Practices and Strategies during TeacherCon"
+          "UI Test Exploring Practices and Strategies during TeacherCon"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7f85768-a0f8-4bea-96bc-9c7d2779370a"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "8cfd7793-ac3f-49ff-b671-490e147d2fab"
       },
       "level_keys": [
-        "Exploring Practices and Strategies during TeacherCon"
+        "UI Test Exploring Practices and Strategies during TeacherCon"
       ]
     },
     {
@@ -1079,22 +1080,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Overview: Group Work and Peer Learning"
+          "UI Test Overview: Group Work and Peer Learning"
         ],
         "progression": "Overview: Group Work and Peer Learning"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Overview: Group Work and Peer Learning"
+          "UI Test Overview: Group Work and Peer Learning"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "347741a5-3ec9-4c86-bbf2-7b0e334cc2a3"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "f441205d-0f68-408b-8fb0-032112461786"
       },
       "level_keys": [
-        "Overview: Group Work and Peer Learning"
+        "UI Test Overview: Group Work and Peer Learning"
       ]
     },
     {
@@ -1104,22 +1105,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Collaborative Learning and Group Work: Description and Strategies"
+          "UI Test Collaborative Learning and Group Work"
         ],
         "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Collaborative Learning and Group Work: Description and Strategies"
+          "UI Test Collaborative Learning and Group Work"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "fc85ce57-a79a-4b8f-90aa-30687db5e762"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "33f8f458-ba42-4ade-bd11-49268d925f3f"
       },
       "level_keys": [
-        "Collaborative Learning and Group Work: Description and Strategies"
+        "UI Test Collaborative Learning and Group Work"
       ]
     },
     {
@@ -1129,22 +1130,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "The Official Peer Instruction Blog"
+          "UI Test The Official Peer Instruction Blog"
         ],
         "progression": "The Official Peer Instruction Blog"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "The Official Peer Instruction Blog"
+          "UI Test The Official Peer Instruction Blog"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "410d294d-3607-43f6-887c-4e00f8e5c64b"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "ad104ab2-40b0-4c72-b66a-b1734db45d95"
       },
       "level_keys": [
-        "The Official Peer Instruction Blog"
+        "UI Test The Official Peer Instruction Blog"
       ]
     },
     {
@@ -1154,22 +1155,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "the Journal of Peer Learning"
+          "UI Test the Journal of Peer Learning"
         ],
         "progression": "the Journal of Peer Learning"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "the Journal of Peer Learning"
+          "UI Test the Journal of Peer Learning"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "73c562c8-8b1a-4fb5-937b-284915726e41"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "93681412-7763-48f1-af9f-a183d0dc4f7c"
       },
       "level_keys": [
-        "the Journal of Peer Learning"
+        "UI Test the Journal of Peer Learning"
       ]
     },
     {
@@ -1179,22 +1180,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+          "UI Test Wednesday Report: Balancing Teachers and Tools in Unit 1"
         ],
         "progression": "Wednesday Report: Balancing Teachers and Tools in Unit 1"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+          "UI Test Wednesday Report: Balancing Teachers and Tools in Unit 1"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "3d19c118-5bc6-4fda-9eb9-2f9d0ca67b74"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "59a8562a-8659-49a1-9323-c177a390e264"
       },
       "level_keys": [
-        "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+        "UI Test Wednesday Report: Balancing Teachers and Tools in Unit 1"
       ]
     },
     {
@@ -1204,22 +1205,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Peer Review Level 1 - Tuesday Report"
+          "UI Test Peer Review Level 1 - Tuesday Report"
         ],
         "progression": "Peer Review Level 1 - Tuesday Report"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Peer Review Level 1 - Tuesday Report"
+          "UI Test Peer Review Level 1 - Tuesday Report"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "612477b0-c4c8-4e49-974c-b1855b27432e"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "5db8f5cb-e999-43b8-8c13-7b3370a97f48"
       },
       "level_keys": [
-        "Peer Review Level 1 - Tuesday Report"
+        "UI Test Peer Review Level 1 - Tuesday Report"
       ]
     },
     {
@@ -1229,22 +1230,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Peer Review Level 2 - Wednesday Report"
+          "UI Test Peer Review Level 2 - Wednesday Report"
         ],
         "progression": "Peer Review Level 2 - Wednesday Report"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Peer Review Level 2 - Wednesday Report"
+          "UI Test Peer Review Level 2 - Wednesday Report"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "d0fb7853-fb1d-446e-86b2-529f5a75cee3"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7a5de701-909f-4a22-840e-7bdb47cdc5f3"
       },
       "level_keys": [
-        "Peer Review Level 2 - Wednesday Report"
+        "UI Test Peer Review Level 2 - Wednesday Report"
       ]
     },
     {
@@ -1254,22 +1255,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Exploring Practices and Strategies during TeacherCon"
+          "UI Test Exploring Practices and Strategies during TeacherCon"
         ],
         "progression": "Exploring Practices and Strategies during TeacherCon"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Exploring Practices and Strategies during TeacherCon"
+          "UI Test Exploring Practices and Strategies during TeacherCon"
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "f2173ccb-4f5e-4963-af1d-849778da468a"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "d8839675-fc72-4bf3-a9b9-c8c809e3f15e"
       },
       "level_keys": [
-        "Exploring Practices and Strategies during TeacherCon"
+        "UI Test Exploring Practices and Strategies during TeacherCon"
       ]
     },
     {
@@ -1279,22 +1280,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Overview: Balancing Teachers and Tools"
+          "UI Test Overview: Balancing Teachers and Tools"
         ],
         "progression": "Overview: Balancing Teachers and Tools"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Overview: Balancing Teachers and Tools"
+          "UI Test Overview: Balancing Teachers and Tools"
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "9f6a59f4-c328-49c5-a1e3-4b785f8e2891"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "82c51f9f-93ed-4712-9712-2e38a2e58187"
       },
       "level_keys": [
-        "Overview: Balancing Teachers and Tools"
+        "UI Test Overview: Balancing Teachers and Tools"
       ]
     },
     {
@@ -1304,22 +1305,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Peer Review Level 1 - Tuesday Report"
+          "UI Test Peer Review Level 1 - Tuesday Report"
         ],
         "progression": "Peer Review Level 1 - Tuesday Report"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Peer Review Level 1 - Tuesday Report"
+          "UI Test Peer Review Level 1 - Tuesday Report"
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "790592c9-6892-441f-a912-878c389d6d00"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "3d7102ff-c0ea-468e-920c-44470c6942d5"
       },
       "level_keys": [
-        "Peer Review Level 1 - Tuesday Report"
+        "UI Test Peer Review Level 1 - Tuesday Report"
       ]
     },
     {
@@ -1329,348 +1330,348 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Peer Review Level 2 - Wednesday Report"
+          "UI Test Peer Review Level 2 - Wednesday Report"
         ],
         "progression": "Peer Review Level 2 - Wednesday Report"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Peer Review Level 2 - Wednesday Report"
+          "UI Test Peer Review Level 2 - Wednesday Report"
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "88f323b8-c672-4367-9e3d-c17c5cd476c9"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "eb810f6d-a732-4381-9667-4806cb41598a"
       },
       "level_keys": [
-        "Peer Review Level 2 - Wednesday Report"
+        "UI Test Peer Review Level 2 - Wednesday Report"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "Welcome to TeacherCon!",
+        "level.key": "UI Test TeacherCon Welcome",
         "script_level.level_keys": [
-          "Welcome to TeacherCon!"
+          "UI Test TeacherCon Welcome"
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a49f21de-3cfb-47b2-bf65-79ba665971fa"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "3de6418b-7703-42b8-b7bd-a991f61bb029"
       }
     },
     {
       "seeding_key": {
-        "level.key": "TeacherCon Agenda",
+        "level.key": "UI Test TeacherCon Agenda",
         "script_level.level_keys": [
-          "TeacherCon Agenda"
+          "UI Test TeacherCon Agenda"
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "60210c25-cf13-4f65-9f09-a02b3073cbf3"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "ba41bfd4-eaac-4321-934f-cf4d3e388832"
       }
     },
     {
       "seeding_key": {
-        "level.key": "TeacherCon Self-Assessment",
+        "level.key": "UI Test TeacherCon Self-Assessment",
         "script_level.level_keys": [
-          "TeacherCon Self-Assessment"
+          "UI Test TeacherCon Self-Assessment"
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "c56abe4c-ca4c-4446-a166-a17845de74fb"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "543c5417-f673-48b1-b7e0-58e8d8806023"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U1L4 Lesson Overview",
+        "level.key": "UI Test U1L4 Lesson Overview",
         "script_level.level_keys": [
-          "U1L4 Lesson Overview"
+          "UI Test U1L4 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,4",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "c87c6b3a-f9f6-4359-9c84-8d0fdc432137"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "25901fb8-7aca-411e-9f41-dfa0c1da2b0b"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U1L6 Lesson Overview",
+        "level.key": "UI Test U1L6 Lesson Overview",
         "script_level.level_keys": [
-          "U1L6 Lesson Overview"
+          "UI Test U1L6 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,6",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "16f01b35-77a6-41bb-9552-38a3e2334723"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "f15755cd-5c77-49c7-8b5b-b68c49446252"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U1L9 Lesson Overview",
+        "level.key": "UI Test U1L9 Lesson Overview",
         "script_level.level_keys": [
-          "U1L9 Lesson Overview"
+          "UI Test U1L9 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,9",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "d4f8ed56-aa48-4aa8-94d8-3806736cbdf6"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "afb8e44b-8255-43bb-9ce5-585775acf744"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U1L10 Lesson Overview",
+        "level.key": "UI Test U1L10 Lesson Overview",
         "script_level.level_keys": [
-          "U1L10 Lesson Overview"
+          "UI Test U1L10 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,10",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "4da17869-cbaf-4fc5-8ead-0ebe2eb674bb"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7c5dacb7-5d97-44e7-87e4-310440ff4d2d"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U1L11 Lesson Overview",
+        "level.key": "UI Test U1L11 Lesson Overview",
         "script_level.level_keys": [
-          "U1L11 Lesson Overview"
+          "UI Test U1L11 Lesson Overview"
         ],
         "lesson.key": "Lesson 1,11",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "e9760578-66f7-4c2a-9b78-f4b22a93745b"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "dd63842c-ff1f-4c8c-96e4-648a5c07f53b"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U2L2 Lesson Overview",
+        "level.key": "UI Test U2L2 Lesson Overview",
         "script_level.level_keys": [
-          "U2L2 Lesson Overview"
+          "UI Test U2L2 Lesson Overview"
         ],
         "lesson.key": "Lesson 2,2",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "6700c89c-8b3b-4bf4-849f-652c69beed6b"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "495bd526-1348-4593-9d87-19ba7bd926e7"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U2L3 Lesson Overview",
+        "level.key": "UI Test U2L3 Lesson Overview",
         "script_level.level_keys": [
-          "U2L3 Lesson Overview"
+          "UI Test U2L3 Lesson Overview"
         ],
         "lesson.key": "Lesson 2,3",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "048cd2d5-24d6-4a91-9129-c7d658f1b3ae"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "3bb4aee7-732d-42e2-aa0a-fac6b8952721"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U2L10 Lesson Overview",
+        "level.key": "UI Test U2L10 Lesson Overview",
         "script_level.level_keys": [
-          "U2L10 Lesson Overview"
+          "UI Test U2L10 Lesson Overview"
         ],
         "lesson.key": "Lesson 2,10",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "319c97bd-a162-4ea1-a9a9-6413587b8faa"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "010f6867-a494-4779-802a-a036b4e83dfa"
       }
     },
     {
       "seeding_key": {
-        "level.key": "cspu5_assess1_eventprograms",
+        "level.key": "UI Test cspu5_assess1_eventprograms",
         "script_level.level_keys": [
-          "cspu5_assess1_eventprograms"
+          "UI Test cspu5_assess1_eventprograms"
         ],
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7447745-98d0-4d94-b550-2240c0838cff"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7d7ca932-3785-472d-90f3-cee90a6dab23"
       }
     },
     {
       "seeding_key": {
-        "level.key": "cspu5_assess1_elementid",
+        "level.key": "UI Test cspu5_assess1_elementid",
         "script_level.level_keys": [
-          "cspu5_assess1_elementid"
+          "UI Test cspu5_assess1_elementid"
         ],
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7447745-98d0-4d94-b550-2240c0838cff"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7d7ca932-3785-472d-90f3-cee90a6dab23"
       }
     },
     {
       "seeding_key": {
-        "level.key": "cspu5_assess1_debugging",
+        "level.key": "UI Test cspu5_assess1_debugging",
         "script_level.level_keys": [
-          "cspu5_assess1_debugging"
+          "UI Test cspu5_assess1_debugging"
         ],
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7447745-98d0-4d94-b550-2240c0838cff"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7d7ca932-3785-472d-90f3-cee90a6dab23"
       }
     },
     {
       "seeding_key": {
-        "level.key": "cspu5_assess1_codevalues",
+        "level.key": "UI Test cspu5_assess1_codevalues",
         "script_level.level_keys": [
-          "cspu5_assess1_codevalues"
+          "UI Test cspu5_assess1_codevalues"
         ],
         "lesson.key": "Test stage with bubbles",
         "lesson_group.key": "content",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7447745-98d0-4d94-b550-2240c0838cff"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7d7ca932-3785-472d-90f3-cee90a6dab23"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Exploring Practices and Strategies during TeacherCon",
+        "level.key": "UI Test Exploring Practices and Strategies during TeacherCon",
         "script_level.level_keys": [
-          "Exploring Practices and Strategies during TeacherCon"
+          "UI Test Exploring Practices and Strategies during TeacherCon"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "a7f85768-a0f8-4bea-96bc-9c7d2779370a"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "8cfd7793-ac3f-49ff-b671-490e147d2fab"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Overview: Group Work and Peer Learning",
+        "level.key": "UI Test Overview: Group Work and Peer Learning",
         "script_level.level_keys": [
-          "Overview: Group Work and Peer Learning"
+          "UI Test Overview: Group Work and Peer Learning"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "347741a5-3ec9-4c86-bbf2-7b0e334cc2a3"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "f441205d-0f68-408b-8fb0-032112461786"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Collaborative Learning and Group Work: Description and Strategies",
+        "level.key": "UI Test Collaborative Learning and Group Work",
         "script_level.level_keys": [
-          "Collaborative Learning and Group Work: Description and Strategies"
+          "UI Test Collaborative Learning and Group Work"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "fc85ce57-a79a-4b8f-90aa-30687db5e762"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "33f8f458-ba42-4ade-bd11-49268d925f3f"
       }
     },
     {
       "seeding_key": {
-        "level.key": "The Official Peer Instruction Blog",
+        "level.key": "UI Test The Official Peer Instruction Blog",
         "script_level.level_keys": [
-          "The Official Peer Instruction Blog"
+          "UI Test The Official Peer Instruction Blog"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "410d294d-3607-43f6-887c-4e00f8e5c64b"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "ad104ab2-40b0-4c72-b66a-b1734db45d95"
       }
     },
     {
       "seeding_key": {
-        "level.key": "the Journal of Peer Learning",
+        "level.key": "UI Test the Journal of Peer Learning",
         "script_level.level_keys": [
-          "the Journal of Peer Learning"
+          "UI Test the Journal of Peer Learning"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "73c562c8-8b1a-4fb5-937b-284915726e41"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "93681412-7763-48f1-af9f-a183d0dc4f7c"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Wednesday Report: Balancing Teachers and Tools in Unit 1",
+        "level.key": "UI Test Wednesday Report: Balancing Teachers and Tools in Unit 1",
         "script_level.level_keys": [
-          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+          "UI Test Wednesday Report: Balancing Teachers and Tools in Unit 1"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "3d19c118-5bc6-4fda-9eb9-2f9d0ca67b74"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "59a8562a-8659-49a1-9323-c177a390e264"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Peer Review Level 1 - Tuesday Report",
+        "level.key": "UI Test Peer Review Level 1 - Tuesday Report",
         "script_level.level_keys": [
-          "Peer Review Level 1 - Tuesday Report"
+          "UI Test Peer Review Level 1 - Tuesday Report"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "612477b0-c4c8-4e49-974c-b1855b27432e"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "5db8f5cb-e999-43b8-8c13-7b3370a97f48"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Peer Review Level 2 - Wednesday Report",
+        "level.key": "UI Test Peer Review Level 2 - Wednesday Report",
         "script_level.level_keys": [
-          "Peer Review Level 2 - Wednesday Report"
+          "UI Test Peer Review Level 2 - Wednesday Report"
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "d0fb7853-fb1d-446e-86b2-529f5a75cee3"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "7a5de701-909f-4a22-840e-7bdb47cdc5f3"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Exploring Practices and Strategies during TeacherCon",
+        "level.key": "UI Test Exploring Practices and Strategies during TeacherCon",
         "script_level.level_keys": [
-          "Exploring Practices and Strategies during TeacherCon"
+          "UI Test Exploring Practices and Strategies during TeacherCon"
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "f2173ccb-4f5e-4963-af1d-849778da468a"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "d8839675-fc72-4bf3-a9b9-c8c809e3f15e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Overview: Balancing Teachers and Tools",
+        "level.key": "UI Test Overview: Balancing Teachers and Tools",
         "script_level.level_keys": [
-          "Overview: Balancing Teachers and Tools"
+          "UI Test Overview: Balancing Teachers and Tools"
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "9f6a59f4-c328-49c5-a1e3-4b785f8e2891"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "82c51f9f-93ed-4712-9712-2e38a2e58187"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Peer Review Level 1 - Tuesday Report",
+        "level.key": "UI Test Peer Review Level 1 - Tuesday Report",
         "script_level.level_keys": [
-          "Peer Review Level 1 - Tuesday Report"
+          "UI Test Peer Review Level 1 - Tuesday Report"
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "790592c9-6892-441f-a912-878c389d6d00"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "3d7102ff-c0ea-468e-920c-44470c6942d5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Peer Review Level 2 - Wednesday Report",
+        "level.key": "UI Test Peer Review Level 2 - Wednesday Report",
         "script_level.level_keys": [
-          "Peer Review Level 2 - Wednesday Report"
+          "UI Test Peer Review Level 2 - Wednesday Report"
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "alltheplcthings",
-        "activity_section.key": "88f323b8-c672-4367-9e3d-c17c5cd476c9"
+        "script.name": "ui-test-plc",
+        "activity_section.key": "eb810f6d-a732-4381-9667-4806cb41598a"
       }
     }
   ],
@@ -1702,6 +1703,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
