@@ -26,6 +26,7 @@ export interface QuizQuestionSummary {
 export interface QuizQuestionResult {
   correct: boolean;
   explanation?: string;
+  correctChoiceId?: string;
 }
 
 interface QuizQuestionProps {
@@ -66,11 +67,15 @@ const QuizQuestion: React.FunctionComponent<QuizQuestionProps> = ({
         <legend className={styles.answersLegend}>Answer options</legend>
         {question.choices.map(choice => {
           const isChecked = selectedChoiceId === choice.id;
-          // Only the student's own selection gets a correct/incorrect
-          // style - show_correctness reveals whether an answer was right
-          // or wrong, not which choice was the right one (that's a
-          // separate, not-yet-built reveal).
+          // The student's own selection gets a correct/incorrect style
+          // (show_correctness). The actual correct choice, if reveal_
+          // answer_explanation additionally allows it, gets marked correct
+          // too even when it isn't what the student picked - otherwise an
+          // incorrect answer would show an explanation without ever
+          // revealing what the right answer actually was.
           const isGradedSelection = isChecked && !!result;
+          const isRevealedCorrectChoice =
+            !isChecked && result?.correctChoiceId === choice.id;
           return (
             <div
               key={choice.id}
@@ -80,7 +85,8 @@ const QuizQuestion: React.FunctionComponent<QuizQuestionProps> = ({
                 isGradedSelection &&
                   (result.correct
                     ? styles.answerOptionCorrect
-                    : styles.answerOptionIncorrect)
+                    : styles.answerOptionIncorrect),
+                isRevealedCorrectChoice && styles.answerOptionCorrect
               )}
             >
               <RadioButton

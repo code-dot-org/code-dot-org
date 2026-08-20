@@ -62,11 +62,13 @@ class QuizAttempt < ApplicationRecord
     # totaling score/max_score in QuizAttemptsController#update.
     in_quiz_question_ids = QuizLevelQuestion.where(level_id: level_id).select(:quiz_question_id)
     quiz_question_responses.where(quiz_question_id: in_quiz_question_ids).includes(:quiz_question).map do |response|
+      reveal_answer = level.show_correctness? && level.reveal_answer_explanation?
       {
         quiz_question_id: response.quiz_question_id,
         selected_choice_id: response.response_data['selectedChoiceId'],
         correct: level.show_correctness? ? response.max_score.present? && response.score == response.max_score : nil,
-        explanation: (level.show_correctness? && level.reveal_answer_explanation?) ? response.quiz_question.explanation : nil
+        explanation: reveal_answer ? response.quiz_question.explanation : nil,
+        correct_choice_id: reveal_answer ? response.quiz_question.question['correct_choice_id'] : nil
       }
     end
   end

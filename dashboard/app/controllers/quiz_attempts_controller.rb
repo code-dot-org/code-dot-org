@@ -103,7 +103,8 @@ class QuizAttemptsController < ApplicationController
           quizQuestionId: result[:quiz_question_id],
           selectedChoiceId: result[:selected_choice_id],
           correct: result[:correct],
-          explanation: result[:explanation]
+          explanation: result[:explanation],
+          correctChoiceId: result[:correct_choice_id]
         }
       end
     }

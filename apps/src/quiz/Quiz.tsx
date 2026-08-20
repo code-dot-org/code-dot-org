@@ -35,6 +35,9 @@ interface QuestionResultData {
   selectedChoiceId: string;
   correct: boolean | null;
   explanation?: string;
+  // Gated the same as explanation (show_correctness && reveal_answer_explanation) -
+  // see QuizAttempt#question_results.
+  correctChoiceId?: string;
 }
 
 interface AttemptResult {
@@ -170,11 +173,19 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   // Starts a fresh attempt on top of an already-submitted one - only ever
   // called when canRetake is true, so #create (see beginAttempt) will mint
   // attempt_number + 1 rather than just handing back the finished one.
+  // Mirrors the mount-effect's own needsIntroScreen branch (see below):
+  // beginAttempt() itself always clears showIntro once it resolves, so
+  // calling it directly here would skip the intro screen on every retake
+  // instead of just the first attempt.
   const retakeQuiz = () => {
     setResult(null);
     setResponses({});
     setCanRetake(false);
-    beginAttempt();
+    if (needsIntroScreen) {
+      setShowIntro(true);
+    } else {
+      beginAttempt();
+    }
   };
 
   useEffect(() => {
