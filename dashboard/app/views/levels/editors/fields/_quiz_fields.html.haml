@@ -1,33 +1,5 @@
-%h1.control-legend{data: {toggle: "collapse", target: "#quiz_fields"}}
-  Quiz Fields
-
-#quiz_fields.in.collapse
-  .field
-    = f.label :title, 'Quiz title (optional)'
-    = f.text_field :title, placeholder: '(defaults to Name)'
-    %p Shown to students at the top of the quiz.
-
-  .field
-    = f.label :intro_text, 'Intro screen text (optional)'
-    = f.text_area :intro_text, rows: 4, style: 'width: 80%'
-    %p Shown on an optional intro screen before the quiz starts in the main panel, alongside the question count and time limit. Separate from the instructions above.
-
-  .field
-    = f.label :time_limit_minutes, 'Time limit (minutes)'
-    = f.number_field :time_limit_minutes, min: 0
-
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_correctness, description: "Show correctness (whether each answer was right or wrong)"}
-
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :reveal_answer_explanation, description: "Reveal answer explanations (requires Show correctness)"}
-
-  .field
-    = f.label :purpose, 'Purpose'
-    = f.select :purpose, options_for_select(Quiz::PURPOSES, @level.purpose), include_blank: true
-
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :allow_multiple_attempts, description: "Allow multiple attempts"}
-
-  .field
-    - if @level.new_record?
-      %p Save this level before building its questions.
-    - else
-      = link_to 'Build Quiz Questions', build_quiz_questions_level_path(@level)
+.field
+  - if @level.new_record?
+    %p{style: 'font-size: 18px'} Save this level before building its questions.
+  - else
+    = link_to 'Build Quiz Questions', build_quiz_questions_level_path(@level), style: 'font-size: 18px'

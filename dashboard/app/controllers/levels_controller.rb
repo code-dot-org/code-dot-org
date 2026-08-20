@@ -303,6 +303,24 @@ class LevelsController < ApplicationController
     render :show
   end
 
+  # PUT /levels/:id/quiz_configuration
+  def update_quiz_configuration
+    return head :not_found unless @level.is_a?(Quiz)
+
+    @level.update!(
+      title: quiz_configuration_params[:title],
+      intro_text: quiz_configuration_params[:introText],
+      time_limit_minutes: quiz_configuration_params[:timeLimitMinutes],
+      show_correctness: quiz_configuration_params[:showCorrectness],
+      reveal_answer_explanation: quiz_configuration_params[:revealAnswerExplanation],
+      purpose: quiz_configuration_params[:purpose],
+      allow_multiple_attempts: quiz_configuration_params[:allowMultipleAttempts]
+    )
+    render json: quiz_configuration_json(@level)
+  rescue StandardError => exception
+    render status: :bad_request, json: {error: exception.message}
+  end
+
   # POST /levels/:id/quiz_questions
   #
   # POC scope: creates a MultipleChoiceQuestion and attaches it to this Quiz
@@ -895,6 +913,25 @@ class LevelsController < ApplicationController
         Level.find(params[:id])
       end
     @game = @level.game
+  end
+
+  private def quiz_configuration_params
+    params.permit(
+      :title, :introText, :timeLimitMinutes, :showCorrectness,
+      :revealAnswerExplanation, :purpose, :allowMultipleAttempts
+    )
+  end
+
+  private def quiz_configuration_json(quiz)
+    {
+      title: quiz.title,
+      introText: quiz.intro_text,
+      timeLimitMinutes: quiz.time_limit_minutes,
+      showCorrectness: quiz.show_correctness?,
+      revealAnswerExplanation: quiz.reveal_answer_explanation?,
+      purpose: quiz.purpose,
+      allowMultipleAttempts: quiz.allow_multiple_attempts?
+    }
   end
 
   # Never trust parameters from the scary internet, only allow the allow-list through.

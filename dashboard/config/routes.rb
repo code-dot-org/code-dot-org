@@ -451,6 +451,7 @@ Dashboard::Application.routes.draw do
         get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
         get 'edit_exemplar', to: 'levels#edit_exemplar', as: 'edit_exemplar'
         get 'build_quiz_questions', to: 'levels#build_quiz_questions', as: 'build_quiz_questions'
+        put 'quiz_configuration', to: 'levels#update_quiz_configuration', as: 'update_quiz_configuration'
         get 'quiz_questions', to: 'levels#index_quiz_questions', as: 'index_quiz_questions'
         post 'quiz_questions', to: 'levels#create_quiz_question', as: 'create_quiz_question'
         get 'quiz_questions/:question_id', to: 'levels#show_quiz_question', as: 'show_quiz_question'
