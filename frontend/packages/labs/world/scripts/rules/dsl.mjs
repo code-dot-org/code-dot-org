@@ -502,13 +502,27 @@ function declareBlock(ruleSlug, into, variables, spec, scoped) {
     inputs: {DO: value(chain(body(refs)))},
   });
 
-  /** Calling it: sockets are named from the parameters, uppercased. */
+  /**
+   * Calling it: sockets are named from the parameters, uppercased — EXCEPT a
+   * lone argument to an action, which keeps the default `VALUE`.
+   *
+   * That exception is `defineActionBlock`'s (`labelled = params.length > 1`),
+   * made so the built-in single-argument actions kept the sockets they always
+   * had. Two places therefore have to agree about one name, and they did not:
+   * Health's `take ⟨amount⟩ damage` was emitted with an `AMOUNT` socket the
+   * block does not have, so the rule failed to load with "missing a(n) AMOUNT"
+   * — which no test saw, because nothing in the suite ran a rule.
+   *
+   * A query always uses its parameter names, however many it has.
+   */
   const kind = reports ? 'query' : 'do';
+  const socketOf = part =>
+    !reports && params.length === 1 ? 'VALUE' : part.name.toUpperCase();
   return (args = {}, subject) => ({
     type: `world_${kind}_${ruleSlug}_${exportName}`,
     inputs: {
       ...Object.fromEntries(
-        params.map(part => [part.name.toUpperCase(), value(args[part.name])]),
+        params.map(part => [socketOf(part), value(args[part.name])]),
       ),
       ...(scoped && subject !== undefined ? {ACTOR: value(subject)} : {}),
     },
