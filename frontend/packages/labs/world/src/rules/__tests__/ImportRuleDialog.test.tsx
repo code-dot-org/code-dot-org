@@ -180,13 +180,18 @@ describe('a rule showing what it does', () => {
     // A row with no picture is a row, not a hole — which the dialog needs
     // anyway, since a machine with no `public/demos/` has none of them.
     //
-    // Writing is the standing example, and it is blocked rather than merely
-    // undone: the recorder paints rectangles, and text is the one thing a
-    // rectangle cannot stand in for (specs/RULE_DEMOS.md).
+    // Two of them now, and both for the same honest reason: they are BASES,
+    // and a base does nothing visible on its own. "Notices Collisions" answers
+    // a question that Solid Bodies and Collection then act on, and "Has a
+    // Camera" moves the view to wherever something else aimed it. A strip of
+    // either would be a strip of whichever rule was standing on it.
     open();
 
     expect(
-      rowFor('Shows Text')?.querySelector('[aria-hidden="true"]'),
+      rowFor('Notices Collisions')?.querySelector('[aria-hidden="true"]'),
+    ).toBeNull();
+    expect(
+      rowFor('Has a Camera')?.querySelector('[aria-hidden="true"]'),
     ).toBeNull();
   });
 

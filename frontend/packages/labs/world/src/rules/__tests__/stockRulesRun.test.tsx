@@ -35,6 +35,7 @@ import {
   viewOrigin,
   type RuleDemo,
 } from '../demos';
+import {KNOWN} from '../demos/record/font';
 
 import {
   ALL_STOCK_SOURCES,
@@ -253,13 +254,22 @@ describe('every demo world', () => {
   it.each(Object.keys(RULE_DEMOS))('%s changes while it runs', id => {
     const demo = RULE_DEMOS[id];
     const {world} = demo.build(modules);
-    // Both axes and the cast: gravity's ball only moves DOWN, and Collection's
-    // demonstration is that a coin stops being there at all.
+    // WHAT THE STRIP WOULD SHOW, rather than where the actors are. Position
+    // alone was the first version and it was too narrow twice over: gravity's
+    // ball only moves down, Collection's demonstration is that a coin stops
+    // being there at all — and Writing's actors never move one pixel, because
+    // what changes about them is their text. Everything the recorder draws
+    // goes in, so a demo that changes anything visible passes and a demo that
+    // changes nothing cannot.
     const where = () =>
       [...world.actors]
         .map(actor => {
           const at = actor.get(PositionProperty);
-          return `${actor.id}@${Math.round(at.x)},${Math.round(at.y)}`;
+          const look = demo.look(actor.id, actor, world);
+          return (
+            `${actor.id}@${Math.round(at.x)},${Math.round(at.y)}` +
+            `:${look.width}x${look.height}:${look.colour}:${look.text ?? ''}`
+          );
         })
         .join(' ');
     const before = where();
@@ -335,6 +345,36 @@ describe('what the newer demos show', () => {
     const {world} = play(RULE_DEMOS.expires);
 
     expect([...world.actors].length).toBeLessThan(5);
+  });
+
+  it('writing: one label holds still while the other counts', () => {
+    // Half of what the rule does is NOT change, and a strip with only the
+    // counter in it would read as a rule about numbers.
+    const {cast} = play(RULE_DEMOS.writing);
+    const shown = (who: unknown) =>
+      (who as {get(p: unknown): string}).get(cast.text as never);
+
+    expect(shown(cast.label)).toBe('SCORE');
+    // Six beats at 0.4s, the first on the first frame: 0.017, 0.417 … 2.017,
+    // and the seventh would fall at 2.417, just inside a 2.5 second run.
+    expect(Number(shown(cast.counter))).toBeGreaterThan(100);
+  });
+
+  it('every demo asks only for letters the font can draw', () => {
+    // A character with no glyph draws as a GAP, silently — the strip is still
+    // a strip, and the word is missing a letter. This is the only place that
+    // notices, because nothing downstream can tell a space from a hole.
+    for (const [id, demo] of Object.entries(RULE_DEMOS)) {
+      const {world} = demo.build(modules);
+      for (const actor of world.actors) {
+        const text = demo.look(actor.id, actor, world).text ?? '';
+        for (const character of text.toUpperCase()) {
+          expect(KNOWN.has(character), `${id}: ${JSON.stringify(text)}`).toBe(
+            true,
+          );
+        }
+      }
+    }
   });
 
   it('bounds: both boxes park in the corners they were heading for', () => {

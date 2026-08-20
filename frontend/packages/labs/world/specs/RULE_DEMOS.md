@@ -154,13 +154,25 @@ the input — a key glyph that lights as it is "held", a pointer that travels an
 clicks. That is a real design question with real answers, and it is not one to
 answer in the same pass as the pipeline.
 
-Writing is the odd one, and it is BLOCKED rather than merely unattractive. The
-recorder paints rectangles into a byte array — that is what makes it a build
-step rather than a browser — and text is the one thing a rectangle cannot
-stand in for. Demonstrating it means teaching the strip writer a font, which is
-a small enough job (a five-by-seven bitmap and a lookup) but a different one,
-and it is the thing to do first if the interesting version — text arriving, a
-score counting up — is wanted.
+Writing was the odd one, and it was BLOCKED rather than merely unattractive:
+the recorder paints rectangles into a byte array — that is what makes it a
+build step rather than a browser — and text is the one thing a rectangle
+cannot stand in for. So the strip writer was taught a font (`record/font`) —
+five by seven, upper case, digits and a little punctuation, scaled by whole
+pixels because half a pixel of a letter is a smudge and there is no
+anti-aliasing here to hide it in. A `Look` may now carry `text` INSTEAD of a
+rectangle, drawn in the same clip and the same colour the box would have had.
+
+A character with no glyph draws as a GAP rather than as a box, since a demo
+asking for one is missing a letter and a box would look like a rule drawing a
+box. Nothing downstream can tell that gap from a space, so a test walks every
+demo's text and checks the font knows each character.
+
+**Two rules will never get one, and that is the right answer.** "Notices
+Collisions" and "Has a Camera" are BASES: the first answers a question that
+Solid Bodies and Collection then act on, and the second moves the view to
+wherever something else aimed it. Neither does anything visible alone, so a
+strip of either would be a strip of whichever rule was standing on it.
 
 Until a rule has a demo it shows what it shows today, which the dialog has to be
 comfortable with anyway (see above).
@@ -212,8 +224,8 @@ comfortable with anyway (see above).
    thing to be stale.
 5. ✅ **The rest of the obvious ones**, once the shape has survived contact
    with three: Physics, Solid Bodies, Collection, Health, Steering, Gravity,
-   Drag, Expiry, Screen Wrap, Boundaries, Time, Shooting, and the four camera
-   rules.
+   Drag, Expiry, Screen Wrap, Boundaries, Time, Shooting, Writing, and the four
+   camera rules.
 
    **Two of them needed a handler, which is the point.** Time raises "timer
    fires" and Shooting raises "fires", and neither owns what happens next — so
@@ -227,6 +239,14 @@ comfortable with anyway (see above).
    The obvious way to ask constantly is a key held down, and nobody is
    pressing anything in a recording — that is step 6's problem, and Shooting
    did not have to wait for it.
+
+   **Writing needed the font**, and getting it also widened the blanket test
+   that keeps every demo honest. It compared POSITIONS, and Writing's two
+   actors never move one pixel — what changes about them is their text. It now
+   fingerprints everything the recorder draws, so a demo that changes anything
+   visible passes and one that changes nothing cannot. Position alone had
+   always been too narrow; Writing is just the first demo it could not see at
+   all.
 
    **The camera rules needed the recorder to learn to see.** It drew where
    actors ARE, so a rule whose entire effect is on the view moved nothing
