@@ -220,13 +220,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: tabs.includes('World'),
     large: worldTabParams.large || !!levelProperties.showLargeWorld,
   };
-  // A world painted while the tab was enabled must not keep spawning
-  // sprites once the tab (URL param or level property) is gone — there
-  // would be no UI left to remove them.
-  const compileWorldIfEnabled = useCallback(
-    (world?: World) => (worldTab.enabled ? compileWorldPrelude(world) : ''),
-    [worldTab.enabled]
-  );
   // A level naming its tabs opens on the list's first entry (display order is
   // fixed, so authored order is free to carry the start tab).
   useEffect(() => {
@@ -668,9 +661,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     dispatch(setIsRunning(true));
     engine.runProgram(
-      compileWorldIfEnabled(activeWorldRef.current) + (getCode() ?? '')
+      compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
     );
-  }, [dispatch, getCode, compileWorldIfEnabled]);
+  }, [dispatch, getCode]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -694,7 +687,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       currentExternalProjectRef.current = null;
       engine.preloadAnimationsOverride = null;
       currentPlayingRef.current = {kind: 'local', scene};
-      const prelude = compileWorldIfEnabled(scene.world);
+      const prelude = compileWorldPrelude(scene.world);
       let code = '';
       try {
         const live = scene.id === activeSceneId ? getCode() : null;
@@ -709,7 +702,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       engine.runProgram(prelude + code);
     },
-    [dispatch, activeSceneId, getCode, compileWorldIfEnabled]
+    [dispatch, activeSceneId, getCode]
   );
 
   const runScene = useCallback(
@@ -792,7 +785,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       currentExternalProjectRef.current = project;
       currentPlayingRef.current = {kind: 'external', project, sceneId};
-      const prelude = compileWorldIfEnabled(scene.world);
+      const prelude = compileWorldPrelude(scene.world);
       let code = '';
       try {
         code = compileExternalScene(scene, project);
@@ -814,7 +807,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       engine.runProgram(prelude + code);
     },
-    [dispatch, compileExternalScene, compileWorldIfEnabled]
+    [dispatch, compileExternalScene]
   );
 
   // Fetch the classmate's project fresh (their scenes may have changed);
@@ -947,6 +940,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return;
       }
       if (scenes.some(s => s.id === sceneId)) {
+        // Follow the jump in the editor too: leaving Play lands on the
+        // scene that was just playing.
+        setActiveSceneId(sceneId);
         runScene(sceneId);
         return;
       }
