@@ -66,15 +66,16 @@ class TeacherDashboardController < ApplicationController
     }
   end
 
-  # This is used for the AI Lesson Summaries limited release in AIF and AID.
-  # It can also be used for the limited release of AI audio summaries
-  def unit_in_aif_or_aid
+  # This is used for the AI Lesson Summaries limited release, currently
+  # in AIF and AID units. It can also be used for the limited release of
+  # AI audio summaries.
+  def lesson_summaries_enabled_for_unit
     unit = Unit.find(params[:unit_id])
     if unit
-      aif_status = unit.foundations_of_cs? || unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.AID)
-      render json: {aif: aif_status}
+      enabled = unit.foundations_of_cs? || unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.AID)
+      render json: {enabled: enabled}
     else
-      render json: {aif: false}
+      render json: {enabled: false}
     end
   end
 end

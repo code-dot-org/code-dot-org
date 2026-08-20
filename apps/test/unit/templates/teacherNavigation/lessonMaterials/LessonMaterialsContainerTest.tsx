@@ -334,9 +334,9 @@ describe('LessonMaterialsContainer', () => {
           value: lessonSummary,
           response: new Response(),
         });
-      } else if (path.includes('unit_in_aif_or_aid')) {
+      } else if (path.includes('lesson_summaries_enabled_for_unit')) {
         return Promise.resolve({
-          value: {aif: true},
+          value: {enabled: true},
           response: new Response(),
         });
       }

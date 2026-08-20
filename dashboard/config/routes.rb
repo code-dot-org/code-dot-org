@@ -69,7 +69,7 @@ Dashboard::Application.routes.draw do
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
       get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
-      get :unit_in_aif_or_aid, controller: :teacher_dashboard, action: :unit_in_aif_or_aid
+      get :lesson_summaries_enabled_for_unit, controller: :teacher_dashboard, action: :lesson_summaries_enabled_for_unit
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter

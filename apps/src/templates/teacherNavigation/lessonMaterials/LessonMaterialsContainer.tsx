@@ -61,8 +61,8 @@ interface LessonSummaryInfoResponse {
   script: string;
 }
 
-interface AIFStatus {
-  aif: boolean;
+interface LessonSummariesEnabledResponse {
+  enabled: boolean;
 }
 
 const lessonMaterialsApiCall = (unitId: number) =>
@@ -225,10 +225,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           console.log(`Error: ${error}`);
         });
       if (showAITAPodcasts || experiments.isEnabled('ai-lesson-podcasts')) {
-        HttpClient.fetchJson<AIFStatus>(
-          `/teacher_dashboard/unit_in_aif_or_aid?unit_id=${selectedSection.unitId}`
+        HttpClient.fetchJson<LessonSummariesEnabledResponse>(
+          `/teacher_dashboard/lesson_summaries_enabled_for_unit?unit_id=${selectedSection.unitId}`
         )
-          .then(data => setCanShowPodcasts(data.value.aif))
+          .then(data => setCanShowPodcasts(data.value.enabled))
           .catch(error => console.error(error));
       }
     }
