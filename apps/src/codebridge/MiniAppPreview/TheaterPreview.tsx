@@ -5,6 +5,7 @@ import React, {useEffect, useState} from 'react';
 import Theater from '@cdo/apps/miniApps/theater/Theater';
 import TheaterVisualization from '@cdo/apps/miniApps/theater/TheaterVisualization';
 
+import MiniAppEmptyState from './MiniAppEmptyState';
 import PhotoPrompterButton from './PhotoPrompterButton';
 
 import moduleStyles from './mini-app-preview.module.scss';
@@ -14,6 +15,7 @@ const TheaterPreview: React.FunctionComponent = () => {
   const {sendTypedInputMessage} = useCodebridgeContext();
   const [isPrompterOpen, setIsPrompterOpen] = useState(false);
   const [promptText, setPromptText] = useState('');
+  const [isOutputVisible, setIsOutputVisible] = useState(false);
 
   useEffect(() => {
     // The console manager may not exist when the theater is created, so look it
@@ -35,7 +37,8 @@ const TheaterPreview: React.FunctionComponent = () => {
         setIsPrompterOpen(true);
       },
       () => setIsPrompterOpen(false),
-      sendTypedInputMessage ?? (() => {})
+      sendTypedInputMessage ?? (() => {}),
+      setIsOutputVisible
     );
     CodebridgeRegistry.getInstance().setTheater(theater);
 
@@ -54,6 +57,13 @@ const TheaterPreview: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.miniAppContainer}>
       <TheaterVisualization />
+      {!isOutputVisible && !isPrompterOpen && (
+        <MiniAppEmptyState
+          iconName="camera-movie"
+          title="Nothing playing yet"
+          description="Press Run to see your code in action."
+        />
+      )}
       {isPrompterOpen && (
         <PhotoPrompterButton
           promptText={promptText}
