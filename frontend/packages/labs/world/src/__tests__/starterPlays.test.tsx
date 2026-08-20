@@ -152,6 +152,32 @@ describe('the project a learner opens', () => {
     expect(board()).toBe('SCORE 20');
   });
 
+  it('draws the scoreboard, rather than the box that stands for nothing', () => {
+    // WHAT THE OTHER TESTS MISSED. They read the text property and found it
+    // right, and the scoreboard on screen was a plain green rectangle — which
+    // is what the driver paints for an actor with no picture.
+    //
+    // "Shows Text" has no steps and paints nothing: it declares what an
+    // actor's words ARE and leaves the drawing to the actor that elects it
+    // (specs/DRAWING.md). So holding the trait is not the same as being drawn,
+    // and only the render snapshot can tell them apart.
+    const drawn = project.world
+      .renderSnapshot()
+      .find(state =>
+        (state.actor as unknown as {id: string}).id.endsWith('Scoreboard'),
+      );
+
+    expect(drawn?.drawing).toBeDefined();
+    // …and the coin beside it is drawn the other way, by an animation frame,
+    // so this is a real distinction rather than a field everything carries.
+    const coin = project.world
+      .renderSnapshot()
+      .find(state =>
+        (state.actor as unknown as {id: string}).id.endsWith('Coin1'),
+      );
+    expect(coin?.drawing).toBeUndefined();
+  });
+
   it('is winnable — three coins, and a target of exactly three coins', () => {
     // Not a play-through: the third coin needs a jump landed on a moving
     // platform, which is a level design to check rather than a mechanic. What
@@ -228,5 +254,25 @@ describe('the same project, said in one file', () => {
     }
 
     expect(floorLevel - peak).toBeGreaterThan(3 * TILE_SIZE);
+  });
+
+  it('draws its scoreboard, now that a world may describe a picture', async () => {
+    // The point of giving `define drawing` a second shape. A world-defined
+    // actor with words and no picture is painted as a plain box, and this
+    // scenario shipped exactly that — a green rectangle where a score goes.
+    //
+    // The drawing is a ROW inside `define actor` here rather than a root
+    // beside the world, which is also how it says whose picture it is: a local
+    // actor's body generates inside a block where `actor` is that builder.
+    const {world} = await compileProject(
+      projectFiles(WORLD_SCENARIOS['platformer-single'].source),
+    );
+    const drawn = world
+      .renderSnapshot()
+      .find(state =>
+        (state.actor as unknown as {id: string}).id.endsWith('Scoreboard'),
+      );
+
+    expect(drawn?.drawing).toBeDefined();
   });
 });

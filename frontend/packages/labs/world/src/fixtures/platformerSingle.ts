@@ -30,8 +30,19 @@
 // edited in place, in the world that uses it. Which is the right answer for a
 // board that belongs to one game and the wrong one for a board that several
 // worlds share.
+//
+// A SECOND thing was lost until this scenario went looking for it. The
+// Scoreboard has a picture — it draws its own words — and `define drawing` was
+// a definition root legal in an `.actor` file and nowhere else, so a world that
+// defined the Scoreboard locally got one with no picture, which the driver
+// paints as a plain box. It is a row inside `define actor` now
+// (`drawingDefinition`), so a world-defined actor draws itself and the loss is
+// gone rather than documented.
 
+import {drawText, fill, showAs, textOf} from '../actors/stock/workspace';
 import {
+  SCOREBOARD_HEIGHT,
+  SCOREBOARD_WIDTH,
   LEVEL1_ACTORS,
   stack,
   STARTER_SPEC,
@@ -77,10 +88,17 @@ const placementsOf = (type: string) =>
     }),
   );
 
-const createInMap = (blockId: string, defBlockId: string, type: string) => ({
+/**
+ * An arrangement placing one kind, by whichever name that kind has.
+ *
+ * `of` is a local definition's block id for an actor this world defines, and a
+ * MODULE PATH for one that stays a file. Both are rows in the same dropdown,
+ * which is what lets a single-world telling keep a file when it has to.
+ */
+const createInMap = (blockId: string, of: string, type: string) => ({
   type: 'world_create_in_map',
   id: blockId,
-  fields: {ACTOR: local(defBlockId), PLACEMENTS: placementsOf(type)},
+  fields: {ACTOR: of, PLACEMENTS: placementsOf(type)},
 });
 
 const defineActor = (id: string, name: string, x: number, rows: object[]) => ({
@@ -117,11 +135,15 @@ const SINGLE_WORLD = JSON.stringify({
             // One block per kind, which is what an arrangement is: the room is
             // 31 ground tiles and they are one field, because they are one
             // kind of thing placed in 31 spots.
-            createInMap('placeGround', GROUND, 'actors/ground'),
-            createInMap('placePlayer', PLAYER, 'actors/player'),
-            createInMap('placeCoins', COIN, 'actors/coin'),
-            createInMap('placeBall', BALL, 'actors/ball'),
-            createInMap('placeScoreboard', SCOREBOARD, 'actors/scoreboard'),
+            createInMap('placeGround', local(GROUND), 'actors/ground'),
+            createInMap('placePlayer', local(PLAYER), 'actors/player'),
+            createInMap('placeCoins', local(COIN), 'actors/coin'),
+            createInMap('placeBall', local(BALL), 'actors/ball'),
+            createInMap(
+              'placeScoreboard',
+              local(SCOREBOARD),
+              'actors/scoreboard',
+            ),
             // Three coins at ten each. The starter says this in its own
             // `main.world`, and here it is the same line in the same place.
             {
@@ -161,11 +183,27 @@ const SINGLE_WORLD = JSON.stringify({
       defineActor(SCOREBOARD, 'Scoreboard', 1520, [
         useTrait('Writing#ShowsTextTrait'),
         useTrait('Scoring#WatchesTheScoreTrait'),
+        showAs('text'),
         // `this actor`, not `any ⟨Scoreboard⟩`. A definition body runs while
         // the module is still being assembled — the actors are hoisted above
         // the world — so resolving a KIND here reaches for a world that does
         // not exist yet, and the module throws on load.
         setText(me(), {type: 'text', fields: {TEXT: 'SCORE 0'}}),
+        // The picture, chained here rather than standing beside the world: a
+        // drawing inside `define actor` is the actor's, and there is nowhere
+        // else for it to say whose it is.
+        {
+          type: 'world_define_drawing',
+          fields: {WIDTH: SCOREBOARD_WIDTH, HEIGHT: SCOREBOARD_HEIGHT},
+          inputs: {
+            DO: {
+              block: stack([
+                fill(textOf('TextColorProperty')),
+                drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
+              ]),
+            },
+          },
+        },
       ]),
       // Space to jump. WHICH key is on the hat, so the handler is registered
       // for the space bar and never runs for anything else; the rest is the

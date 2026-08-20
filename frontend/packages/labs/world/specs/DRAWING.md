@@ -36,6 +36,19 @@ define drawing ⟨64⟩ by ⟨8⟩
   draw rectangle at ⟨0, 0⟩ size ⟨64 × ⟨fraction of this actor⟩, 8⟩
 ```
 
+It is the sibling of `each frame` in shape as well as in job: TWO SHAPES, one
+block. Standing on its own in an `.actor` file it is a definition root, since
+`DisableOrphansPlugin` greys out a top-level block that has a previous
+connection along with everything chained after it. Chained inside a world's own
+`define actor` it is one of that actor's rows, which is what lets a
+world-defined actor have a picture — and it needed no field to say WHOSE, since
+a local actor's body already generates inside a block where `actor` is that
+builder.
+
+It was root-only at first, and that made a whole class of actor unsayable in a
+world: one with a picture. It presented as a scoreboard drawn as a plain green
+box, which is what the driver paints for an actor nothing knows how to draw.
+
 `each frame` proved the mechanism. `ActorBuilder.defineStep` folds a per-kind
 routine into the tick order the first time one of the kind is placed
 (`World.useActorKind`), declared in the actor's own file and shared with

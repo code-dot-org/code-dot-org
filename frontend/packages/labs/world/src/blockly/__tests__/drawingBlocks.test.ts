@@ -11,7 +11,7 @@ import {describe, expect, it} from 'vitest';
 import {Blockly} from '@code-dot-org/blockly';
 
 import {buildDomainPalette, ROOT_BLOCK_TYPES} from '../domainBlocks';
-import {ROOT_HOMES} from '../fileKind';
+import {ROOT_HOMES, type FileKind} from '../fileKind';
 import {standInBlocks} from '../standInBlocks';
 
 type Generated = {
@@ -68,23 +68,43 @@ describe('define drawing', () => {
     );
   });
 
-  it('is a root, so the orphan plugin cannot grey it out', () => {
-    // The bug `each frame` hit: `DisableOrphansPlugin` disables a top-level
-    // block that has a previous connection, and everything chained after it.
-    const block = blockNamed('world_define_drawing') as {
-      previousStatement?: boolean;
+  it('wears the connections its file makes sense of', () => {
+    // TWO SHAPES, like `each frame` and for its reason. On its own in an
+    // `.actor` file it is a root, and a root must have no previous connection:
+    // `DisableOrphansPlugin` reads a top-level block with one as an orphan and
+    // disables it, along with everything chained after it.
+    //
+    // Inside a world's own `define actor` it is one of that actor's rows, and
+    // chains like the `use trait` above it. Which is also how it says WHOSE
+    // picture it is — a local actor's body generates inside a block where
+    // `actor` is that builder, so no field was needed to name one.
+    const shapeIn = (fileKind: FileKind) => {
+      const matches = buildDomainPalette([], {fileKind}).blocks.filter(
+        block => block.type === 'world_define_drawing',
+      ) as Array<{previousStatement?: boolean}>;
+      // Exactly one definition per type: two would leave which one lands on
+      // the workspace up to registration order.
+      expect(matches).toHaveLength(1);
+      return matches[0].previousStatement;
     };
 
+    expect(shapeIn('actor')).toBeUndefined();
+    expect(shapeIn('world')).toBe(true);
+    // Still in the root set, which is only ever asked about a TOP block — so
+    // it is the right answer in an `.actor` file and harmless in a world,
+    // where the block always has a parent.
     expect(ROOT_BLOCK_TYPES.has('world_define_drawing')).toBe(true);
-    expect(block.previousStatement).toBeUndefined();
   });
 
-  it('lives in an `.actor` file and nowhere else', () => {
-    // A drawing belongs to a KIND of actor. Not a rule or a behavior: those are
-    // shared mechanics, and how a particular actor looks is the one thing that
-    // is not shared.
+  it('lives where an actor is described, and nowhere else', () => {
+    // A drawing belongs to a KIND of actor, and both places one can be
+    // described are here: its own file, and a world that defines it locally.
+    //
+    // Not a rule or a behavior: those are shared mechanics, and how a
+    // particular actor looks is the one thing that is not shared.
     expect([...(ROOT_HOMES.get('world_define_drawing') ?? [])]).toEqual([
       'actor',
+      'world',
     ]);
   });
 });
