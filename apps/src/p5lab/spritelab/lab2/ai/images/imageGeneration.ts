@@ -7,7 +7,11 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
 import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
-import {cropToContent, removeBackground} from './removeBackground';
+import {
+  cropToContent,
+  flattenOverBlack,
+  removeBackground,
+} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
 // The logical canvas the prompt asks for: model output size over block size.
@@ -37,11 +41,19 @@ const STYLE_PROMPT: Record<ImageStyle, string> = {
  * recorded on the animation so the editor never has to re-detect.
  */
 async function normalizeIfPixelArt(
-  blob: Blob
+  blob: Blob,
+  {requireSquare = false} = {}
 ): Promise<{blob: Blob; pixelGridSize?: number}> {
   try {
     const normalized = await normalizePixelArtBlob(blob, ASSUMED_BLOCK);
     if (!normalized) {
+      return {blob};
+    }
+    // A grid detected at an offset adds a partial cell on that axis, making
+    // the logical output non-square. A background must stay square and
+    // full-frame (it letterboxes over the stage otherwise), so it keeps the
+    // raw square output instead and simply edits at native resolution.
+    if (requireSquare && normalized.logicalWidth !== normalized.logicalHeight) {
       return {blob};
     }
     return {
@@ -151,9 +163,14 @@ export async function generateImage(
     if (imageType === 'block') {
       blob = await cropToContent(blob);
     }
+    if (imageType === 'background') {
+      blob = await flattenOverBlack(blob);
+    }
     let pixelGridSize: number | undefined;
     if (style === 'pixel') {
-      const normalized = await normalizeIfPixelArt(blob);
+      const normalized = await normalizeIfPixelArt(blob, {
+        requireSquare: imageType === 'background',
+      });
       blob = normalized.blob;
       pixelGridSize = normalized.pixelGridSize;
     }

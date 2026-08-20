@@ -33,7 +33,7 @@ import {
   onTrimsUpdated,
   trimAnimationListImages,
 } from '../imageTrim';
-import {blankPaintImage} from '../paintBlank';
+import {blankPaintImage, flattenDataURIOverBlack} from '../paintBlank';
 
 import type {NewImageDraft} from './GenerateImageView';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
@@ -438,6 +438,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
 
   const applyEditorSave = useCallback(
     async (dataURI: string, meta: PixelEditorSaveMeta) => {
+      // Backgrounds must be fully opaque; the eraser can leave holes.
+      const paintedType =
+        dialogTarget === 'new' && paintNewDraft
+          ? paintNewDraft.imageType
+          : imageTypeFromCategories(targetProps?.categories);
+      if (paintedType === 'background') {
+        dataURI = await flattenDataURIOverBlack(dataURI).catch(() => dataURI);
+      }
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
 
