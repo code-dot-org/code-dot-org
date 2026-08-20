@@ -9,7 +9,6 @@ import {
   renderTeacherPanel,
   renderTeacherPanelHandle,
 } from '@cdo/apps/code-studio/teacherPanelHelpers';
-import experiments from '@cdo/apps/util/experiments';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore} from '@cdo/apps/redux';
@@ -18,6 +17,7 @@ import {
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(initPage);
 

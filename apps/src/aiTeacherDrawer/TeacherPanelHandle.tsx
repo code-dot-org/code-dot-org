@@ -1,7 +1,7 @@
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import React from 'react';
 
 import {openDrawerToNav} from '@cdo/apps/aiDifferentiation/redux';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 // Renders a fixed-position blue tab (matching the teacher panel's show-handle)
