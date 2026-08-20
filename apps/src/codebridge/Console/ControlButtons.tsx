@@ -79,13 +79,17 @@ const ControlButtons: React.FunctionComponent = () => {
       return;
     }
     if (miniApp === MiniApps.Theater) {
+      if (appName === 'javalab') {
+        // Java Lab leaves the run button in 'stop' state.
+        return;
+      }
       // Ensure the audio/visual playback has finished before clearing the run state.
       await CodebridgeRegistry.getInstance()
         .getTheater()
         ?.waitUntilPlaybackDone();
     }
     dispatch(setIsRunning(false));
-  }, [dispatch, miniApp]);
+  }, [appName, dispatch, miniApp]);
 
   const handleRun = () => {
     if (onRun) {
