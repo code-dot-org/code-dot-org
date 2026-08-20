@@ -456,6 +456,8 @@ Dashboard::Application.routes.draw do
         get 'quiz_questions/:question_id', to: 'levels#show_quiz_question', as: 'show_quiz_question'
         put 'quiz_questions/:question_id', to: 'levels#update_quiz_question', as: 'update_quiz_question'
         post 'quiz_questions/:question_id/attach', to: 'levels#attach_quiz_question', as: 'attach_quiz_question'
+        delete 'quiz_questions/:question_id/detach', to: 'levels#detach_quiz_question', as: 'detach_quiz_question'
+        delete 'quiz_questions/:question_id', to: 'levels#destroy_quiz_question', as: 'destroy_quiz_question'
         get 'get_serialized_maze'
         post 'update_properties'
         post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'

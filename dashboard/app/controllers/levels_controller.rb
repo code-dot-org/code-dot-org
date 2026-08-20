@@ -367,6 +367,42 @@ class LevelsController < ApplicationController
     render status: :bad_request, json: {error: exception.message}
   end
 
+  # DELETE /levels/:id/quiz_questions/:question_id/detach
+  #
+  # Removes the question from this quiz only - destroys the
+  # QuizLevelQuestion join, leaves the QuizQuestion itself untouched.
+  def detach_quiz_question
+    return head :not_found unless @level.is_a?(Quiz)
+
+    @level.quiz_level_questions.find_by!(quiz_question_id: params[:question_id]).destroy!
+
+    head :no_content
+  rescue ActiveRecord::RecordNotFound
+    head :not_found
+  end
+
+  # DELETE /levels/:id/quiz_questions/:question_id
+  #
+  # Removes the question from this quiz AND destroys the QuizQuestion
+  # itself, provided it's not attached to any other quiz once detached.
+  # "unused elsewhere" is re-checked here rather than trusted from the
+  # client's earlier attachedToOtherQuizzes read (see quiz_question_json) -
+  # a stale read can't accidentally delete a question another quiz picked up
+  # in the meantime, so this falls back to a plain detach in that case.
+  def destroy_quiz_question
+    return head :not_found unless @level.is_a?(Quiz)
+
+    quiz_level_question = @level.quiz_level_questions.find_by!(quiz_question_id: params[:question_id])
+    question = quiz_level_question.quiz_question
+    quiz_level_question.destroy!
+
+    question.destroy! unless question.levels.exists?
+
+    head :no_content
+  rescue ActiveRecord::RecordNotFound
+    head :not_found
+  end
+
   # GET /levels/:id/quiz_questions/:question_id
   #
   # Building-only counterpart to Quiz#summarize_for_lab2_properties: that
@@ -850,6 +886,9 @@ class LevelsController < ApplicationController
   # Shared by create/show/update_quiz_question. Includes correct_choice_id -
   # callers of this must be building-only endpoints, never the student-
   # facing payload (that's Quiz#summarize_for_lab2_properties).
+  # attachedToOtherQuizzes tells the "remove from quiz" UI whether deleting this
+  # question outright is even an option, vs. only detaching it from @level -
+  # see remove_quiz_question.
   private def quiz_question_json(question)
     {
       id: question.id,
@@ -859,6 +898,7 @@ class LevelsController < ApplicationController
       choices: question.question['choices'],
       correctChoiceId: question.question['correct_choice_id'],
       explanation: question.explanation,
+      attachedToOtherQuizzes: question.levels.where.not(id: @level.id).exists?,
     }
   end
 
