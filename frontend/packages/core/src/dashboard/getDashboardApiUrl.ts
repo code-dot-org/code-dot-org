@@ -1,11 +1,29 @@
 import type {Environment} from '../environment';
 
-export function getDashboardApiUrl(environment: Environment): string {
+type LocationLike = Pick<Location, 'hostname' | 'origin'>;
+
+export function getDashboardApiUrl(
+  environment: Environment,
+  location?: LocationLike,
+): string {
   switch (environment) {
-    case 'adhoc':
-      return window.location.origin;
-    case 'development':
-      return 'http://localhost-studio.code.org:3000';
+    case 'adhoc': {
+      const currentLocation =
+        location ??
+        (typeof window === 'undefined' ? undefined : window.location);
+      if (!currentLocation) {
+        throw new Error('The adhoc environment requires a browser location');
+      }
+      return currentLocation.origin;
+    }
+    case 'development': {
+      const currentLocation =
+        location ??
+        (typeof window === 'undefined' ? undefined : window.location);
+      return currentLocation?.hostname === 'localhost-studio.code.org'
+        ? currentLocation.origin
+        : 'http://localhost-studio.code.org:3000';
+    }
     case 'staging':
       return 'https://staging-studio.code.org';
     case 'levelbuilder':

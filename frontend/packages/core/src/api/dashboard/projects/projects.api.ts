@@ -1,11 +1,24 @@
 import type {Transport} from '../../transports/types';
 import {
+  BuildLabProjectCreationSchema,
   ExtraLinksProjectDataSchema,
   ProjectChannelForLevelSchema,
 } from './projects.schemata';
 
 export function createProjectsApi(transport: Transport) {
   return {
+    /**
+     * POST /api/v1/build_lab/projects
+     */
+    async createBuildLabProject() {
+      const raw = await transport.request<unknown>({
+        method: 'POST',
+        url: '/api/v1/build_lab/projects',
+      });
+
+      return BuildLabProjectCreationSchema.parse(raw);
+    },
+
     /**
      * GET /projects/[script/:scriptId/]level/:levelId[/user/:userId]
      */

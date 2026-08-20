@@ -2,6 +2,7 @@ import {z} from 'zod';
 
 import {
   AppNames,
+  BuildLabProjectCreationSchema,
   ExtraLinksProjectDataSchema,
   StandaloneAppNames,
   ProjectTypes,
@@ -10,5 +11,8 @@ import {
 export type AppName = (typeof AppNames)[number];
 export type StandaloneAppName = (typeof StandaloneAppNames)[number];
 export type ProjectType = (typeof ProjectTypes)[number];
+export type BuildLabProjectCreation = z.infer<
+  typeof BuildLabProjectCreationSchema
+>;
 
 export type ExtraLinksProjectData = z.infer<typeof ExtraLinksProjectDataSchema>;

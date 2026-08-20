@@ -18,6 +18,7 @@ export const AppNames = [
   'fish',
   'panels',
   'pythonlab',
+  'build-lab',
   'standalone_video',
   'weblab',
   'weblab2',
@@ -84,6 +85,10 @@ export const ProjectChannelForLevelSchema = z.object({
   channel: z.string().optional(),
   started: z.boolean().optional(),
   reduceChannelUpdates: z.boolean().optional(),
+});
+
+export const BuildLabProjectCreationSchema = z.object({
+  channel: z.string(),
 });
 
 export const ExtraLinksProjectDataSchema = z

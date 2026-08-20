@@ -1,8 +1,8 @@
 # @code-dot-org/build-lab
 
-Build Lab is an interactive prototype for a unified block-based app and game
-authoring experience. It is a standalone Vite lab and can also be lazy-loaded
-by the frontend Studio shell.
+Build Lab is the frontend lab for a unified block-based app and game authoring
+experience. It is a standalone Vite lab and can also be lazy-loaded by the
+frontend Studio shell.
 
 ## Development
 
@@ -14,8 +14,14 @@ yarn dev
 
 The standalone Vite app runs at `http://localhost:5173`.
 
-## Prototype boundaries
+## Project storage
 
-Blockly serialization is the in-memory source of truth for the supported
-events and the prototype runtime. Project persistence, asset storage, data
-services, and the production execution model are out of scope.
+The lab stores its project document as JSON in the existing `main.json` source
+for a Studio channel. Studio passes the channel ID into the lab, and the lab
+uses `DashboardApiClient.sources` for reads and debounced writes. The
+standalone app uses a local-storage adapter so the same editor can be exercised
+without Rails.
+
+Blockly serialization remains the source of truth for supported behavior. The
+Design tab writes event blocks into the workspace, and Run interprets a clone
+of that serialized workspace.

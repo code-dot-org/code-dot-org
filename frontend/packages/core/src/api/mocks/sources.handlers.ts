@@ -54,8 +54,8 @@ export const sourcesHandlers = [
     });
   }),
 
-  // PUT /v3/sources/:channelId[?...]
-  http.put('*/v3/sources/:channelId', async ({request}) => {
+  // PUT /v3/sources/:channelId/:sourceFile[?...]
+  http.put('*/v3/sources/:channelId/:sourceFile', async ({request}) => {
     const body = (await request.json()) as ProjectSourcesAny;
     writeResource('sources', body);
     const next = bumpVersion(activeVersion());

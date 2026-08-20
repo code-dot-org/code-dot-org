@@ -62,21 +62,36 @@ export function createSourcesApi(transport: Transport) {
     },
 
     /**
-     * PUT /v3/sources/:channelId[?<options>]
+     * PUT /v3/sources/:channelId/:sourceFile[?<options>]
      */
     async update(params: {
       channelId: string;
+      sourceFile?: string;
       sources: ProjectSourcesAny;
       options?: SaveSourceOptions;
     }) {
-      const {channelId, sources, options} = params;
+      const {channelId, sourceFile = SOURCE_FILE, sources, options} = params;
 
       // Validate sources
       const validatedSources = ProjectSourcesSchema.parse(sources);
 
+      const query = options
+        ? new URLSearchParams(
+            Object.entries(options).reduce<Record<string, string>>(
+              (params, [key, value]) => {
+                if (value !== undefined) {
+                  params[key] = String(value);
+                }
+                return params;
+              },
+              {},
+            ),
+          ).toString()
+        : '';
+
       const raw = await transport.request<unknown>({
         method: 'PUT',
-        url: `/v3/sources/${channelId}${options ? `?${new URLSearchParams(options as Record<string, string>).toString()}` : ''}`,
+        url: `/v3/sources/${channelId}/${sourceFile}${query ? `?${query}` : ''}`,
         body: validatedSources,
       });
 

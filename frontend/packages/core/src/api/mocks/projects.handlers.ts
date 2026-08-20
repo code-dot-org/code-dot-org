@@ -31,6 +31,11 @@ const extraLinksPayload = () => ({
 });
 
 export const projectsHandlers = [
+  // POST /api/v1/build_lab/projects
+  http.post('*/api/v1/build_lab/projects', () =>
+    HttpResponse.json({channel: `build-lab-${Date.now()}`}, {status: 201}),
+  ),
+
   // GET /projects/[script/:scriptId/]level/:levelId[/user/:userId] — list
   // every variant explicitly; MSW path patterns don't support optional
   // segments. Most specific first.

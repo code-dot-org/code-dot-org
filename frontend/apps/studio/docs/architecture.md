@@ -2,10 +2,10 @@
 
 ## Rails integration
 
-Studio is an SPA shell served under the `/frontend-studio/` URL prefix in every mode. The request flow:
+Studio is an SPA shell whose Vite assets are served under `/frontend-studio/`. The Dashboard can serve the shell at that mount for standalone development, and at the public `/projects/build-lab/...` route for Build Lab. The request flow is:
 
 ```
-Browser → Rails catch-all route (get "frontend-studio(/*path)")
+Browser → Rails catch-all route (`frontend-studio(/*path)` or `projects/build-lab(/*path)`)
         → FrontendStudioController#index
         → dashboard/app/views/frontend_studio/index.html.haml
             - injects Vite bundle via vite_typescript_tag 'application.tsx'
@@ -13,7 +13,7 @@ Browser → Rails catch-all route (get "frontend-studio(/*path)")
         → entrypoints/application.tsx (React app boots)
 ```
 
-The `/frontend-studio` prefix has one source of truth: `config/vite.json`'s `publicOutputDir`. `vite-plugin-ruby` reads it and sets Vite's `base` to `/frontend-studio/`, which determines (a) where Vite's dev server serves the SPA, (b) the URL prefix Vite bakes into asset references in the production manifest, and (c) the directory `public/frontend-studio/` where the production build lands. The Rails catch-all route and the TanStack Router `basepath` both use the same string.
+The `/frontend-studio` prefix has one source of truth: `config/vite.json`'s `publicOutputDir`. `vite-plugin-ruby` reads it and sets Vite's `base` to `/frontend-studio/`, which determines (a) where Vite's dev server serves assets, (b) the URL prefix Vite bakes into asset references in the production manifest, and (c) the directory `public/frontend-studio/` where the production build lands. It is an asset and standalone-shell mount, not the public Build Lab URL.
 
 In **Vite Rails mode** (preferred), `vite-plugin-rails` proxies asset requests from Rails to the Vite dev server on port 3036. Access the app at `http://localhost-studio.code.org:3000/frontend-studio/`.
 
@@ -44,9 +44,13 @@ select what kind of level data should be mocked.
 
 ## Routing
 
-Route files in `src/routes/` declare canonical paths (e.g. `/projects/$labType/$channelId/edit`) with no surrounding prefix. `src/modules/router/index.ts` configures TanStack Router with `basepath: '/frontend-studio'`, which strips that prefix during URL matching and prepends it when constructing internal links. The basepath string is intentionally hardcoded — keeping it in lockstep with `config/vite.json`'s `publicOutputDir` and the Rails `frontend-studio(/*path)` route is required for the SPA to boot at all in any mode.
+Route files in `src/routes/` declare public paths (e.g. `/projects/$labType/$channelId/edit`) with no surrounding prefix. `src/modules/router/index.ts` uses `/frontend-studio` as the basepath only for the standalone shell; when Rails serves Build Lab at `/projects/build-lab/...`, the router uses the public path directly.
 
-When a legacy Rails route eventually migrates to render the Vite shell at its canonical path, the migration will involve adding a Rails route + a separate Vite mount point under the canonical URL, not changing the basepath here.
+Build Lab creation is the first Studio-owned project lifecycle path. The
+`/projects/build-lab/new` route calls `POST /api/v1/build_lab/projects`, then
+redirects to the shared `$labType/$channelId/edit` route. The API creates the
+channel with the existing `ChannelToken` and `Projects` storage services; the
+lab initializes and saves its `main.json` source after it mounts.
 
 ## Route tree (auto-generated)
 
@@ -54,16 +58,20 @@ TanStack Router's Vite plugin (`tanstackRouter({ autoCodeSplitting: true })`) sc
 
 ## Lab lazy-load boundary
 
-Each lab is a separate Vite chunk, loaded only when the user navigates to `/frontend-studio/projects/:labType/:channelId/edit`:
+Each lab is a separate Vite chunk, loaded when the user navigates to a public `/projects/:labType/:channelId/edit` or `/view` route, or the equivalent standalone `/frontend-studio/projects/...` route:
 
 ```
 Studio bundle (loaded on first visit to /frontend-studio)
-└── projects/$labType/$channelId/edit route loader
+└── projects/$labType/$channelId/{edit,view} route loader
     └── getLabEntrypoint(labType)
         └── lazy(() => import('@code-dot-org/music-lab'))  ← separate chunk, fetched on demand
 ```
 
 The route loader calls `getLabEntrypoint` to resolve the lazy component, then throws `notFound()` if the lab type is unregistered. The route component wraps the result in `<Suspense>`.
+
+The route also passes the URL's `$channelId` to the lab entrypoint. Labs that
+own project documents use that identifier to read and write channel sources;
+the identifier is a host contract, not a route-global singleton.
 
 ## React singleton
 

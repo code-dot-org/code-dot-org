@@ -22,7 +22,16 @@ export type ProjectVersion = z.infer<typeof ProjectVersionSchema>;
 export type LabConfig = ProjectSources['labConfig'];
 
 export interface SaveSourceOptions {
+  /** The project type used by the dashboard save path. */
   projectType?: string;
+  /** The S3 version the client last loaded. */
+  currentVersion?: string;
+  /** Replace the current version instead of creating a new one. */
+  replace?: boolean;
+  /** Timestamp used by the dashboard's save/version grouping. */
+  firstSaveTimestamp?: string;
+  /** Client tab identifier used to coordinate concurrent editors. */
+  tabId?: string | null;
 }
 
 export interface UpdateSourceOptions extends SaveSourceOptions {

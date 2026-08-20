@@ -62,6 +62,12 @@ export function buildCreateMenuItems(): CreateMenuItem[] {
       iconUrl: MusicDanceAiIcon,
     },
     {
+      id: 'build-lab',
+      label: 'Build Lab',
+      href: '/projects/build-lab/new',
+      iconUrl: AllProjectsIcon,
+    },
+    {
       id: 'spritelab',
       label: 'Sprite Lab',
       href: '/projects/spritelab/new',
