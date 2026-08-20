@@ -29,7 +29,7 @@ import BlocklyGenerator, {
 } from '../../blockly/BlocklyGenerator';
 import {fileKindOf} from '../../blockly/fileKind';
 import {refreshProjectDropdowns} from '../../blockly/projectDropdowns';
-import {parseRuleMeta} from '../../blockly/ruleMeta';
+import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {registerProjectRules} from '../../blockly/ruleRegistry';
 import type {World, WorldBuilder} from '../../engine';
 import {
@@ -89,13 +89,33 @@ export async function compileProject(
   // builds with nothing in it — silently, since an empty map is legal.
   refreshProjectDropdowns(files, [], {}, []);
 
-  const metas = Object.entries(files)
-    .filter(([path]) => path.endsWith('.rule'))
-    .map(([path, contents]) => parseRuleMeta(modulePath(path), contents)!);
+  // `projectRuleMetas`, not a filter of my own. A rule is a `.rule` OR a
+  // `.behavior` — a behavior parses into a RuleMeta with one trait, which is
+  // what makes everything downstream work unchanged (specs/BEHAVIORS.md). A
+  // hand-written `.rule` filter here missed the tapper scenario's `Spin`
+  // entirely, and the failure was "Invalid block definition for type
+  // world_set_Spin_SpinSpeedProperty" — a whole project refusing to compile
+  // over a file kind this had not heard of.
+  const metas = projectRuleMetas(files);
   registerProjectRules(metas);
 
   const ref = createRef<BlocklyGeneratorHandle>();
-  render(<BlocklyGenerator ref={ref} projectRules={metas} />);
+  render(
+    <BlocklyGenerator
+      ref={ref}
+      projectRules={metas}
+      // Every actor's and world's OWN properties — `define property`, which is
+      // a kind's rather than a rule's. The generator compiles the whole project
+      // with one palette, so a block it fails to mint is a project that will
+      // not compile at all: the tapper scenario's world keeps a score of its
+      // own, and without this the whole of it died on
+      // `world_get_WorldsMain_ScoreProperty`.
+      ownProperties={projectOwnMetas(files)}
+      // …and a stand-in for any type nothing defines any more, which is what a
+      // deleted rule leaves behind in a file that still mentions it.
+      blocklyFiles={files}
+    />,
+  );
   await new Promise(resolve => setTimeout(resolve, 50));
 
   // Blockly files become code; everything else is data, and becomes a module
