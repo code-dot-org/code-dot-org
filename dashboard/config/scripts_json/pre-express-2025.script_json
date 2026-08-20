@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-16 17:27:34 UTC",
+    "serialized_at": "2026-08-19 23:08:33 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8043,6 +8043,185 @@
       }
     },
     {
+      "name": "Reflection Journal",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_journal",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_journal"
+      }
+    },
+    {
+      "name": "Reflection Journal",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_journal_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_journal_1"
+      }
+    },
+    {
+      "name": "Reflection Journal",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_journal_2",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_journal_2"
+      }
+    },
+    {
+      "name": "Reflection Log",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_log",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_log"
+      }
+    },
+    {
+      "name": "Reflection Log",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_log_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_log_1"
+      }
+    },
+    {
+      "name": "Reflection Log",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_log_2",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_log_2"
+      }
+    },
+    {
+      "name": "Reflection Log",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_log_3",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_log_3"
+      }
+    },
+    {
+      "name": "Reflection Log",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_log_4",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_log_4"
+      }
+    },
+    {
+      "name": "Reflection Log",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_log_5",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_log_5"
+      }
+    },
+    {
+      "name": "Reflection Log",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_log_6",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_log_6"
+      }
+    },
+    {
+      "name": "Reflection Log",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_log_7",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_log_7"
+      }
+    },
+    {
+      "name": "Reflection Log",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_log_8",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_log_8"
+      }
+    },
+    {
       "name": "Stevie and the Big Project",
       "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
       "key": "stevie_and_the_big_project",
@@ -8155,6 +8334,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "resource.key": "reflection_log_5"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
         "resource.key": "csf_-_pre-express_-_slides_2024-2025"
       }
@@ -8193,6 +8378,12 @@
       "seeding_key": {
         "lesson.key": "Loops with Laurel",
         "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "resource.key": "reflection_log_3"
       }
     },
     {
@@ -8240,6 +8431,12 @@
     {
       "seeding_key": {
         "lesson.key": "Loops with Scrat",
+        "resource.key": "reflection_log_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
         "resource.key": "unplugged_blockly_blocks_grades_k-1_"
       }
     },
@@ -8259,6 +8456,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: A Royal Battle with Events",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: A Royal Battle with Events",
+        "resource.key": "reflection_log_7"
       }
     },
     {
@@ -8300,6 +8503,12 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "reflection_log_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
         "resource.key": "the_big_event_courses_a_b_"
       }
     },
@@ -8331,6 +8540,12 @@
       "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "reflection_log_4"
       }
     },
     {
@@ -8372,6 +8587,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
+        "resource.key": "reflection_journal_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
         "resource.key": "unplugged_blockly_blocks_grades_k-1_"
       }
     },
@@ -8385,6 +8606,24 @@
       "seeding_key": {
         "lesson.key": "Programming with Harvester",
         "resource.key": "feeling_faces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Harvester",
+        "resource.key": "reflection_log"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Harvester",
+        "resource.key": "reflection_log_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Harvester",
+        "resource.key": "reflection_log_8"
       }
     },
     {
@@ -8419,6 +8658,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "reflection_journal_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "resource.key": "csf_-_pre-express_-_slides_2024-2025"
       }
@@ -8427,6 +8672,12 @@
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "reflection_journal"
       }
     },
     {
@@ -9381,6 +9632,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

@@ -56,7 +56,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:06:05 UTC",
+    "serialized_at": "2026-08-19 17:42:37 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7225,6 +7226,21 @@
       }
     },
     {
+      "name": "Reflection Journal",
+      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+      "key": "reflection_journal",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "download_url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_journal"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum_1",
@@ -7350,6 +7366,12 @@
       "seeding_key": {
         "lesson.key": "Programming in with Angry Birds",
         "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "resource.key": "reflection_journal"
       }
     },
     {
@@ -8228,6 +8250,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
