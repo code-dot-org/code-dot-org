@@ -256,6 +256,37 @@ if (!existsSync(soundListing)) {
   );
 }
 
+// The rule demonstrations, GENERATED rather than fetched — the only assets here
+// that need no network (specs/RULE_DEMOS.md). They come from the demo worlds in
+// `src/rules/demos`, played and painted into strip PNGs.
+//
+// Through vitest, because the recorder needs a DOM: a rule is Blockly JSON and
+// the thing that compiles one is the headless generator. Skipped when they are
+// already there, like everything else here, so a second `setup:world` is quick.
+const demosDir = join(pkgRoot, 'public', 'demos');
+if (
+  existsSync(demosDir) &&
+  readdirSync(demosDir).some(f => f.endsWith('.png'))
+) {
+  console.log('world assets: rule demos already present');
+} else {
+  const {spawnSync} = await import('node:child_process');
+  const done = spawnSync(
+    'npx',
+    ['vitest', '--run', '--config', 'vitest.record.config.ts'],
+    {cwd: pkgRoot, stdio: 'pipe', encoding: 'utf8'},
+  );
+  if (done.status === 0) {
+    const written = readdirSync(demosDir).filter(f => f.endsWith('.png'));
+    console.log(`world assets: ${written.length} rule demos in public/demos/`);
+  } else {
+    // A warning rather than a failure, like a backdrop that would not
+    // download: a lab with no demonstrations is a lab, and the dialog is
+    // complete without them.
+    console.warn('world assets: could not record the rule demos');
+  }
+}
+
 // The sprite drawings used to be written out here as files. They are not any
 // more: `write-stock-assets.mjs` bakes them into the source as data URLs, which
 // is what the library hands out at import time, and nothing fetches them. Any

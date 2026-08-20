@@ -29,3 +29,47 @@
   text-align: start;
   text-transform: none;
 }
+
+/* A rule's demonstration: one strip PNG, stepped through by CSS.
+   The width is one frame, so the element is a window onto the strip and
+   `background-position` slides it along by whole frames. */
+.demo {
+  width: var(--demo-width);
+  height: var(--demo-height);
+  border-radius: 4px;
+  background-image: var(--demo);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  /* `steps()` over the whole strip: `100%` of a background that is N frames
+     wide is N-1 frames along, which is exactly the last cell. */
+  background-size: calc(var(--demo-width) * var(--frames)) var(--demo-height);
+}
+
+/* Play while the row is being LOOKED at — hovered, focused, or selected.
+   Browsing a shelf should not cost a click per row, and a keyboard user
+   arriving by Tab is looking at it just as much as a pointer hovering is.
+   Everything else holds on frame one, which is the still. */
+.playing,
+.row:hover .demo,
+.row:focus-within .demo {
+  animation: demo-strip calc(var(--frames) * 1s / 12) steps(var(--frames))
+    infinite;
+}
+
+@keyframes demo-strip {
+  to {
+    background-position: calc(-1 * var(--demo-width) * var(--frames)) 0;
+  }
+}
+
+/* Held, for a reader who has asked for less motion. The still is the first
+   frame either way, so what they lose is the animation and not the picture —
+   the reason this is a strip and not a GIF, which plays because it is a GIF. */
+@media (prefers-reduced-motion: reduce) {
+  .playing,
+  .row:hover .demo,
+  .row:focus-within .demo {
+    animation: none;
+  }
+}

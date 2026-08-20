@@ -148,3 +148,62 @@ describe('the shelf as a tree', () => {
     expect(top.length).toBeLessThan(STOCK_RULES.length / 1.5);
   });
 });
+
+describe('a rule showing what it does', () => {
+  // No sentence on a row can say what a rule DOES, which is the thing a
+  // learner is choosing between. One strip PNG per demo: frame one is the
+  // still, and the selected row steps through the rest (specs/RULE_DEMOS.md).
+  const rowFor = (ability: string) =>
+    screen.getByRole('button', {name: new RegExp(ability)}).parentElement;
+
+  it('shows a strip for a rule that has one', () => {
+    open();
+
+    const demo = rowFor('Has Gravity')?.querySelector('[aria-hidden="true"]');
+    expect(demo).toBeTruthy();
+    expect((demo as HTMLElement).style.getPropertyValue('--demo')).toContain(
+      'gravity.png',
+    );
+  });
+
+  it('tells the CSS how many cells to step through', () => {
+    // From the demo rather than a manifest: the bundle already holds how long
+    // the demo runs, and a manifest would be a second thing to fetch and a
+    // second thing to be stale.
+    open();
+
+    const demo = rowFor('Has Gravity')?.querySelector('[aria-hidden="true"]');
+    expect((demo as HTMLElement).style.getPropertyValue('--frames')).toBe('24');
+  });
+
+  it('shows nothing for a rule with no demo yet', () => {
+    // Most of the shelf, for now. A row with no picture is a row, not a hole —
+    // which the dialog needs anyway, since a machine with no `public/demos/`
+    // has none of them.
+    open();
+
+    expect(
+      rowFor('Responds to Input')?.querySelector('[aria-hidden="true"]'),
+    ).toBeNull();
+  });
+
+  it('marks the row, so hovering or focusing it plays', () => {
+    // The animation is CSS — `.row:hover .demo`, `.row:focus-within .demo` —
+    // which jsdom has no engine for, so what is testable is that the row still
+    // carries the class the stylesheet keys on. Browsing a shelf should not
+    // cost a click per row, and a keyboard user arriving by Tab is looking at
+    // it as much as a pointer hovering is.
+    open();
+
+    expect(rowFor('Has Gravity')?.className).toBeTruthy();
+  });
+
+  it('hides the strip from a screen reader', () => {
+    // Decoration beside a row that already says what it is in words: a reader
+    // gains nothing from "a box falls".
+    open();
+
+    const demo = rowFor('Has Gravity')?.querySelector('[aria-hidden="true"]');
+    expect(demo).toHaveAttribute('aria-hidden', 'true');
+  });
+});

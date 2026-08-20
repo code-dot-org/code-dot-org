@@ -53,6 +53,11 @@ has to answer rather than accept — see below.
 
 ## One asset, not two: a sprite strip
 
+A still beside a GIF would be the obvious shape, and it is one asset too many.
+Frame one of the strip IS the still, so the pair already exists — and two files
+would be two things to produce, name, cache and keep in step, with the standing
+possibility of a still that no longer matches its animation.
+
 Each demo is ONE PNG: the frames laid out in a row, animated with CSS
 `steps()`.
 
@@ -172,14 +177,35 @@ comfortable with anyway (see above).
    (`src/rules/demos`) — gravity, steering and collection, the three the spike
    wrote. `stockRulesRun.test.tsx` builds its worlds from them, so there is one
    definition and the test is what keeps it honest.
-2. **The recorder.** A script driving the real preview through Playwright (the
-   path `build-effect-stills.mjs` already takes), capturing N frames of a demo
-   world and writing one strip PNG per rule.
-3. **Serving them.** `yarn setup:world` fetches or generates into
-   `public/demos/`; a `setDemoBaseUrl` beside the background and sound ones.
-4. **The dialog.** The selected row plays its strip; every other row shows frame
-   one; a rule with no demo shows what it shows today. `prefers-reduced-motion`
-   holds every row on frame one.
+2. ✅ **The recorder** — and NO BROWSER, against this document's first draft. A
+   demo actor wears no picture, and an actor with no picture is what the driver
+   already draws as a plain rectangle: painting boxes into a byte array is what
+   Phaser would have painted, and `generate-sprites` already had a pure-Node PNG
+   writer. It still needs a DOM to COMPILE the rules, so it runs through vitest
+   with a config of its own — a build step wearing a test's name.
+
+   The world ticks at sixty a second and only the KEEPING is at twelve: a rule
+   stepped at twelve would fall differently, and a demo has to be the same
+   simulation the game runs. A strip is 4–5.5KB, which is more than an order of
+   magnitude under the estimate above — the shelf will be about 110KB, not a
+   megabyte. That reopened the bundle question and it was settled the same way:
+   assets, so a learner who never opens the dialog never downloads one.
+
+3. ✅ **Serving them.** `setDemoBaseUrl` beside the background and sound ones,
+   and `yarn setup:world` GENERATES rather than fetches — the only assets here
+   that need no network, since they come from demo worlds the repo already
+   holds. Skipped when they are already there, and a warning rather than a
+   failure when the recorder cannot run.
+4. ✅ **The dialog.** A row plays its strip while it is being LOOKED at —
+   hovered, focused or selected — and holds frame one otherwise; a rule with no
+   demo shows what it shows today. Playing on hover as well as on selection is
+   what makes the shelf browsable: reading it should not cost a click per row,
+   and a keyboard user arriving by Tab is looking at a row as much as a pointer
+   hovering over it is.
+   `prefers-reduced-motion` holds every row. The frame count reaches the CSS as
+   a custom property computed from the demo (`seconds × DEMO_FPS`) rather than
+   from a manifest, which would have been a second thing to fetch and a second
+   thing to be stale.
 5. **The rest of the obvious ones**, once the shape has survived contact with
    three.
 6. **The ones that need a device**, as their own piece of work: what stands for
