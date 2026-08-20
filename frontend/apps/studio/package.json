@@ -19,6 +19,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@code-dot-org/build-lab": "workspace:*",
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/core": "workspace:*",
@@ -35,6 +36,7 @@
     "@tanstack/react-query": "catalog:",
     "@tanstack/react-router": "^1.139.14",
     "@tanstack/react-router-devtools": "^1.139.14",
+    "blockly": "13.1.1",
     "ky": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"

@@ -1,0 +1,11 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.node.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo"
+  },
+  "include": ["vite.config.ts"]
+}

@@ -1728,6 +1728,40 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/build-lab@workspace:*, @code-dot-org/build-lab@workspace:packages/labs/build-lab":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/build-lab@workspace:packages/labs/build-lab"
+  dependencies:
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/component-library-styles": "workspace:*"
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    blockly: "npm:13.1.1"
+    eslint: "catalog:"
+    jsdom: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    sass: "npm:^1.85.0"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    "@code-dot-org/component-library": "*"
+    "@code-dot-org/component-library-styles": "*"
+    "@mui/material": "*"
+    blockly: 13.1.1
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/changelogs@workspace:*, @code-dot-org/changelogs@workspace:packages/changelogs":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/changelogs@workspace:packages/changelogs"
@@ -2233,6 +2267,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
   dependencies:
+    "@code-dot-org/build-lab": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/core": "workspace:*"
@@ -2258,6 +2293,7 @@ __metadata:
     "@types/react": "catalog:"
     "@types/react-dom": "catalog:"
     "@vitejs/plugin-react": "catalog:"
+    blockly: "npm:13.1.1"
     eslint: "catalog:"
     eslint-plugin-react-hooks: "catalog:"
     eslint-plugin-react-refresh: "catalog:"
@@ -9483,6 +9519,15 @@ __metadata:
     buffers: "npm:~0.1.1"
     chainsaw: "npm:~0.1.0"
   checksum: 10c0/752c2c2ff9f23506b3428cc8accbfcc92fec07bf8a31a1953e9c7e2193eb5db8a67252034ab93e8adab2a1c43f3eeb3da0bacae0320e9814f3ca127942c55871
+  languageName: node
+  linkType: hard
+
+"blockly@npm:13.1.1":
+  version: 13.1.1
+  resolution: "blockly@npm:13.1.1"
+  peerDependencies:
+    jsdom: ^27.4.0
+  checksum: 10c0/5a21faf42b2da8fc5a1164ba154570c34a892b56caa8108076f551c6b7ec2551ee59663f93e55d1842e7da7b50fce5652d06b1787b64e6ee562f2a3e4513c301
   languageName: node
   linkType: hard
 
