@@ -7,22 +7,22 @@ import QuizQuestionForm, {QuizQuestionFormValues} from './QuizQuestionForm';
 
 import styles from './QuizBuilder.module.scss';
 
-interface QuizChoice {
+export interface QuizChoice {
   id: string;
   text: string;
 }
 
-interface QuizQuestionData {
+export interface QuizQuestionData {
   id: number;
   type: string;
   questionName: string;
   stem?: string;
   choices?: QuizChoice[];
-  // Present for questions created or edited this session (see
-  // LevelsController#create_quiz_question/#update_quiz_question) - the
-  // student-facing payload (Quiz#summarize_for_lab2_properties) deliberately
-  // excludes correct answers, so a question has none here until you create
-  // or edit it in this session.
+  // Present for questions created, edited, or fetched via the question
+  // bank this session (see LevelsController#create_quiz_question/
+  // #update_quiz_question/#index_quiz_questions) - the student-facing
+  // payload (Quiz#summarize_for_lab2_properties) deliberately excludes
+  // correct answers, so a question has none here until then.
   correctChoiceId?: string;
   explanation?: string;
 }
@@ -30,18 +30,18 @@ interface QuizQuestionData {
 interface QuizBuilderProps {
   quizId: number;
   quizTitle: string;
-  initialQuestions: QuizQuestionData[];
+  questions: QuizQuestionData[];
+  setQuestions: React.Dispatch<React.SetStateAction<QuizQuestionData[]>>;
 }
 
-// POC scope: MultipleChoiceQuestion only, no question bank browsing/reuse -
-// see LevelsController#build_quiz_questions/#create_quiz_question.
+// POC scope: MultipleChoiceQuestion only - see
+// LevelsController#build_quiz_questions/#create_quiz_question.
 const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
   quizId,
   quizTitle,
-  initialQuestions,
+  questions,
+  setQuestions,
 }) => {
-  const [questions, setQuestions] =
-    useState<QuizQuestionData[]>(initialQuestions);
   // Only one form open at a time: null editingQuestionId + isFormOpen means
   // the "new question" form (rendered after the list); a non-null
   // editingQuestionId means that question's card shows the form in place of

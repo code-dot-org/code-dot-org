@@ -7,7 +7,8 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import QuizBuilder from './builder/QuizBuilder';
+import QuizBuilder, {QuizQuestionData} from './builder/QuizBuilder';
+import QuizQuestionBank from './builder/QuizQuestionBank';
 import QuizIntro from './QuizIntro';
 import QuizQuestion, {QuizQuestionSummary} from './QuizQuestion';
 
@@ -78,6 +79,9 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     timeLimitMinutes,
   } = levelProperties as QuizLevelProperties;
   const isBuilderMode = !!getAppOptionsBuildingQuizQuestions();
+  const [questions, setQuestions] = useState<QuizQuestionData[]>(
+    quizQuestions || []
+  );
   const [attemptId, setAttemptId] = useState<number | null>(null);
   const [responses, setResponses] = useState<
     Record<number, QuestionResponseValue>
@@ -308,9 +312,11 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
         hideAllNavigation
         questionBankContent={
           isBuilderMode ? (
-            <Typography variant="body2">
-              Question bank browsing and filtering coming soon.
-            </Typography>
+            <QuizQuestionBank
+              quizId={levelId as number}
+              attachedQuestionIds={questions.map(question => question.id)}
+              onAttach={question => setQuestions(prev => [...prev, question])}
+            />
           ) : undefined
         }
       />
@@ -320,7 +326,8 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           <QuizBuilder
             quizId={levelId as number}
             quizTitle={title || name}
-            initialQuestions={quizQuestions || []}
+            questions={questions}
+            setQuestions={setQuestions}
           />
         ) : showIntro ? (
           <QuizIntro

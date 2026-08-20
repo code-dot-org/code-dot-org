@@ -1,0 +1,169 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography} from '@mui/material';
+import React, {useEffect, useState} from 'react';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {QuizQuestionData} from './QuizBuilder';
+
+import styles from './quiz-question-bank.module.scss';
+
+interface BankQuestion extends QuizQuestionData {
+  attached: boolean;
+}
+
+interface QuizQuestionBankProps {
+  quizId: number;
+  // Ids already on this quiz - used to seed each freshly-fetched result's
+  // initial attached state (the server also computes this per search, but
+  // seeding from the current list means a question added a moment ago via
+  // the "Existing questions" edit form, rather than through the bank,
+  // shows as already attached without waiting on a fetch).
+  attachedQuestionIds: number[];
+  onAttach: (question: QuizQuestionData) => void;
+}
+
+// Search-as-you-type debounce - avoids firing a request per keystroke.
+const SEARCH_DEBOUNCE_MS = 300;
+
+// Mirrors QuizQuestionAutocomplete::SORT_ORDERS keys.
+const SORT_OPTIONS = [
+  {value: 'recent', text: 'Recently added'},
+  {value: 'name', text: 'Alphabetical (A-Z)'},
+];
+
+// Question bank: browse/search existing MultipleChoiceQuestions and attach
+// one to this quiz (creating a new QuizLevelQuestion, not a new question
+// row) - see LevelsController#index_quiz_questions/#attach_quiz_question.
+// P0 scope: search by question name only; standard/unit/course filters are
+// later work.
+const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
+  quizId,
+  attachedQuestionIds,
+  onAttach,
+}) => {
+  const [search, setSearch] = useState('');
+  const [sort, setSort] = useState('recent');
+  const [results, setResults] = useState<BankQuestion[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [attachingId, setAttachingId] = useState<number | null>(null);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(true);
+      setError(null);
+      // limit=80 requests QuizQuestionAutocomplete::MAX_LIMIT explicitly -
+      // an omitted limit param clamps to MIN_LIMIT (1) server-side, not a
+      // sensible default, which would make an empty search "browse the
+      // bank" show a single question instead of a real list.
+      HttpClient.get(
+        `/levels/${quizId}/quiz_questions?search=${encodeURIComponent(
+          search
+        )}&limit=80&sort=${sort}`
+      )
+        .then(response => {
+          if (!response.ok) {
+            throw new Error();
+          }
+          return response.json();
+        })
+        .then(data => setResults(data))
+        .catch(() => setError('Could not load the question bank.'))
+        .finally(() => setIsLoading(false));
+    }, SEARCH_DEBOUNCE_MS);
+    return () => clearTimeout(timeout);
+  }, [quizId, search, sort]);
+
+  const attach = async (question: BankQuestion) => {
+    setAttachingId(question.id);
+    try {
+      const response = await HttpClient.post(
+        `/levels/${quizId}/quiz_questions/${question.id}/attach`,
+        JSON.stringify({}),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+      if (!response.ok) {
+        setError('Could not attach this question.');
+        return;
+      }
+      const attached = await response.json();
+      onAttach(attached);
+      setResults(prev =>
+        prev.map(result =>
+          result.id === question.id ? {...result, attached: true} : result
+        )
+      );
+    } finally {
+      setAttachingId(null);
+    }
+  };
+
+  return (
+    <div className={styles.root}>
+      <div className={styles.searchField}>
+        <TextField
+          label="Search by question name"
+          name="questionBankSearch"
+          size="s"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+        />
+        <SimpleDropdown
+          name="questionBankSort"
+          size="s"
+          dropdownTextThickness="thin"
+          labelText="Sort by"
+          items={SORT_OPTIONS.map(option => ({
+            value: option.value,
+            text: option.text,
+          }))}
+          selectedValue={sort}
+          onChange={e => setSort(e.target.value)}
+        />
+      </div>
+      {error && (
+        <Typography variant="body3" color="error">
+          {error}
+        </Typography>
+      )}
+      {isLoading ? (
+        <Typography variant="body3">Loading…</Typography>
+      ) : (
+        <ul className={styles.resultList}>
+          {results.length === 0 && (
+            <Typography variant="body3">No questions found.</Typography>
+          )}
+          {results.map(question => {
+            // A question just attached this session (via this component or
+            // the "Existing questions" list elsewhere) should read as
+            // attached even if the server hasn't been asked again yet.
+            const attached =
+              question.attached || attachedQuestionIds.includes(question.id);
+            return (
+              <li key={question.id} className={styles.resultRow}>
+                <Typography variant="body2" className={styles.resultPrompt}>
+                  {question.stem || question.questionName}
+                </Typography>
+                <MuiButton
+                  variant={attached ? 'text' : 'outlined'}
+                  color="secondary"
+                  size="small"
+                  type="button"
+                  disabled={attached || attachingId === question.id}
+                  onClick={() => attach(question)}
+                >
+                  {attached ? 'Added' : 'Add'}
+                </MuiButton>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+export default QuizQuestionBank;
