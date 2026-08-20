@@ -9,6 +9,9 @@ describe('Theater', () => {
   let theater: Theater;
   let playAudioSpy: jest.Mock;
   let pauseAudioSpy: jest.Mock;
+  let removeImageSrcSpy: jest.Mock;
+  let removeAudioSrcSpy: jest.Mock;
+  let loadAudioSpy: jest.Mock;
   let imageElement: Partial<HTMLImageElement>;
   let audioElement: Partial<HTMLAudioElement>;
   let onOutputMessage: jest.Mock;
@@ -31,8 +34,19 @@ describe('Theater', () => {
 
     playAudioSpy = jest.fn();
     pauseAudioSpy = jest.fn();
-    imageElement = {style: {} as CSSStyleDeclaration};
-    audioElement = {play: playAudioSpy, pause: pauseAudioSpy};
+    removeImageSrcSpy = jest.fn();
+    removeAudioSrcSpy = jest.fn();
+    loadAudioSpy = jest.fn();
+    imageElement = {
+      style: {} as CSSStyleDeclaration,
+      removeAttribute: removeImageSrcSpy,
+    };
+    audioElement = {
+      play: playAudioSpy,
+      pause: pauseAudioSpy,
+      removeAttribute: removeAudioSrcSpy,
+      load: loadAudioSpy,
+    };
     uploadFile = jest.fn();
 
     theater = new Theater(
@@ -141,6 +155,29 @@ describe('Theater', () => {
 
     expect(revokeSpy).toHaveBeenCalledWith('blob:image');
     expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
+  });
+
+  it('drops a media src without loading an empty url', () => {
+    // Assigning '' would make the browser load the empty url, which Firefox
+    // reports as "Invalid URI. Load of media resource failed."
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+
+    theater.reset();
+
+    expect(removeImageSrcSpy).toHaveBeenCalledWith('src');
+    expect(removeAudioSrcSpy).toHaveBeenCalledWith('src');
+    expect(imageElement.src).not.toBe('');
+    expect(audioElement.src).not.toBe('');
+    // The audio element only lets go of the revoked object url once it reloads.
+    expect(loadAudioSpy).toHaveBeenCalled();
   });
 
   it('revokes blob urls after the elements are unmounted', () => {

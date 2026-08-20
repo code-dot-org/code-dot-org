@@ -72,7 +72,14 @@ class TrackedSource {
       element.onload = null;
       element.onerror = null;
       element.oncanplaythrough = null;
-      element.src = '';
+      // Remove the attribute rather than assign '', which browsers treat as a
+      // url to load.
+      element.removeAttribute('src');
+      // An audio element holds the resource it already selected until told to
+      // look again, which is what frees the object url we are about to revoke.
+      if ('load' in element) {
+        element.load();
+      }
     }
     if (this.blobUrl) {
       URL.revokeObjectURL(this.blobUrl);
