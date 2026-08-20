@@ -73,6 +73,12 @@ export const ConsolePanel = () => {
                 }
               >
                 {line.text}
+                {line.repeats !== undefined && line.repeats > 1 && (
+                  // A count rather than four hundred copies of one sentence
+                  // (WorldRuntimeContext.collapse). Beside the text, so the
+                  // line still reads as the thing that was said.
+                  <span className={styles.repeats}>×{line.repeats}</span>
+                )}
               </div>
             ))
           )}
