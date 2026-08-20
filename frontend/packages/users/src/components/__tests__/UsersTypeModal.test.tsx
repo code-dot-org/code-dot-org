@@ -48,6 +48,20 @@ describe('UsersTypeModal', () => {
     expect(optInRadio('Yes')).toBeNull();
   });
 
+  it('warns that the linked parent/guardian email is removed when changing to educator', () => {
+    renderModal('teacher');
+    expect(
+      screen.getByText(/parent\/guardian email address .* will be removed/i),
+    ).toBeInTheDocument();
+  });
+
+  it('does not warn about the parent/guardian email when changing to student', () => {
+    renderModal('student');
+    expect(
+      screen.queryByText(/parent\/guardian email address .* will be removed/i),
+    ).toBeNull();
+  });
+
   it('keeps confirm disabled until both email and opt-in are answered', () => {
     renderModal('teacher');
     const confirm = screen.getByRole('button', {name: /change to educator/i});
