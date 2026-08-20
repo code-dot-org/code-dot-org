@@ -25,12 +25,8 @@ const LargeCard: React.FC<{value: string | number; label: string}> = ({
 }) => (
   <div className={classnames(styles.summaryCard, styles.largeCard)}>
     <div className={styles.summaryCardContent}>
-      <Typography variant="h4" className={styles.cardValue}>
-        {value}
-      </Typography>
-      <Typography variant="overline3" className={styles.cardLabel}>
-        {label}
-      </Typography>
+      <Typography variant="h4">{value}</Typography>
+      <Typography variant="overline3">{label}</Typography>
     </div>
   </div>
 );
@@ -45,7 +41,7 @@ const SmallCard: React.FC<{
     <div className={styles.iconContainer}>
       <FontAwesomeV6Icon iconName={iconName} className={styles.icon} />
     </div>
-    <Typography variant="overline3" className={styles.cardText}>
+    <Typography variant="overline3">
       {count} {label}
     </Typography>
   </div>

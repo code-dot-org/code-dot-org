@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-14 03:47:24 UTC",
+    "serialized_at": "2026-08-20 05:06:54 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -593,8 +593,21 @@
       }
     },
     {
-      "key": "1ef4ed56-0614-4ce1-a823-e6a9b93a55b5",
+      "key": "16b06112-87b2-4e4a-968a-6f7593f4a7c3",
       "position": 1,
+      "properties": {
+        "name": "Revised Level Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "16b06112-87b2-4e4a-968a-6f7593f4a7c3",
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026"
+      }
+    },
+    {
+      "key": "1ef4ed56-0614-4ce1-a823-e6a9b93a55b5",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -608,7 +621,7 @@
     },
     {
       "key": "84e653b9-cad7-4cdc-ba71-db48f07307fa",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -622,7 +635,7 @@
     },
     {
       "key": "957f0505-9674-4370-84db-df8992a36a3c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -635,8 +648,21 @@
       }
     },
     {
-      "key": "26a1334b-0281-4be1-b658-b1218d1a8867",
+      "key": "a190ff46-5012-48fc-8ace-f82d3f56dd80",
       "position": 1,
+      "properties": {
+        "name": "Revised Level Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a190ff46-5012-48fc-8ace-f82d3f56dd80",
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026"
+      }
+    },
+    {
+      "key": "26a1334b-0281-4be1-b658-b1218d1a8867",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -650,7 +676,7 @@
     },
     {
       "key": "263de1a3-7ba0-4c1e-aac2-6ff4c0fcc8c9",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -664,7 +690,7 @@
     },
     {
       "key": "871a673e-cd9e-438b-b138-595d5272e2ea",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -1716,6 +1742,39 @@
       }
     },
     {
+      "key": "c2973188-f828-436a-919c-e6502542bfa0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2973188-f828-436a-919c-e6502542bfa0",
+        "lesson_activity.key": "16b06112-87b2-4e4a-968a-6f7593f4a7c3"
+      }
+    },
+    {
+      "key": "e1057d80-a99e-40e2-a045-0fd01de5b678",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1057d80-a99e-40e2-a045-0fd01de5b678",
+        "lesson_activity.key": "16b06112-87b2-4e4a-968a-6f7593f4a7c3"
+      }
+    },
+    {
+      "key": "3c3067b5-78ef-4fc3-a9c5-26beebaeb358",
+      "position": 3,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c3067b5-78ef-4fc3-a9c5-26beebaeb358",
+        "lesson_activity.key": "16b06112-87b2-4e4a-968a-6f7593f4a7c3"
+      }
+    },
+    {
       "key": "eab2d54d-b68f-42a8-94dc-d7001cbedefe",
       "position": 1,
       "properties": {
@@ -1839,6 +1898,39 @@
       "seeding_key": {
         "activity_section.key": "6291bc1f-0162-4450-9820-6d21ecda089c",
         "lesson_activity.key": "957f0505-9674-4370-84db-df8992a36a3c"
+      }
+    },
+    {
+      "key": "63e1dd16-c5e1-4c18-b046-dbaa783cc80e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore / Predict (No change)"
+      },
+      "seeding_key": {
+        "activity_section.key": "63e1dd16-c5e1-4c18-b046-dbaa783cc80e",
+        "lesson_activity.key": "a190ff46-5012-48fc-8ace-f82d3f56dd80"
+      }
+    },
+    {
+      "key": "18da4230-9674-4492-8d44-bd24f4abb31d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "18da4230-9674-4492-8d44-bd24f4abb31d",
+        "lesson_activity.key": "a190ff46-5012-48fc-8ace-f82d3f56dd80"
+      }
+    },
+    {
+      "key": "a6f11868-df09-4002-b46a-de0e690fe18c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Assess"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6f11868-df09-4002-b46a-de0e690fe18c",
+        "lesson_activity.key": "a190ff46-5012-48fc-8ace-f82d3f56dd80"
       }
     },
     {
@@ -4068,6 +4160,160 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level1-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c2973188-f828-436a-919c-e6502542bfa0"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson7-level1-v1-2026"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level2-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "e1057d80-a99e-40e2-a045-0fd01de5b678"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson7-level2-v1-2026"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level3-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "e1057d80-a99e-40e2-a045-0fd01de5b678"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson7-level3-v1-2026"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level4-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "e1057d80-a99e-40e2-a045-0fd01de5b678"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson7-level4-v1-2026"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level5-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "e1057d80-a99e-40e2-a045-0fd01de5b678"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson7-level5-v1-2026"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level6-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "3c3067b5-78ef-4fc3-a9c5-26beebaeb358"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson7-level6-v1-2026"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level7-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "3c3067b5-78ef-4fc3-a9c5-26beebaeb358"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson7-level7-v1-2026"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -4085,8 +4331,8 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 2,
+      "chapter": 65,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4107,8 +4353,8 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 3,
+      "chapter": 66,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4129,8 +4375,8 @@
       ]
     },
     {
-      "chapter": 60,
-      "position": 4,
+      "chapter": 67,
+      "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4151,8 +4397,8 @@
       ]
     },
     {
-      "chapter": 61,
-      "position": 5,
+      "chapter": 68,
+      "position": 12,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -4173,8 +4419,8 @@
       ]
     },
     {
-      "chapter": 62,
-      "position": 6,
+      "chapter": 69,
+      "position": 13,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -4195,8 +4441,8 @@
       ]
     },
     {
-      "chapter": 63,
-      "position": 7,
+      "chapter": 70,
+      "position": 14,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -4217,8 +4463,8 @@
       ]
     },
     {
-      "chapter": 64,
-      "position": 8,
+      "chapter": 71,
+      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4239,8 +4485,8 @@
       ]
     },
     {
-      "chapter": 65,
-      "position": 9,
+      "chapter": 72,
+      "position": 16,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4261,8 +4507,140 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 73,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore / Predict (No change)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level1-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "63e1dd16-c5e1-4c18-b046-dbaa783cc80e"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson8-level1-v1-2026"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level2-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "18da4230-9674-4492-8d44-bd24f4abb31d"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson8-level2-v1-2026"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level3-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "18da4230-9674-4492-8d44-bd24f4abb31d"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson8-level3-v1-2026"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level4-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "18da4230-9674-4492-8d44-bd24f4abb31d"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson8-level4-v1-2026"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assess"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level5-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "a6f11868-df09-4002-b46a-de0e690fe18c"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson8-level5-v1-2026"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assess"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level6-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "a6f11868-df09-4002-b46a-de0e690fe18c"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson8-level6-v1-2026"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4283,8 +4661,8 @@
       ]
     },
     {
-      "chapter": 67,
-      "position": 2,
+      "chapter": 80,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4305,8 +4683,8 @@
       ]
     },
     {
-      "chapter": 68,
-      "position": 3,
+      "chapter": 81,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4327,8 +4705,8 @@
       ]
     },
     {
-      "chapter": 69,
-      "position": 4,
+      "chapter": 82,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4349,8 +4727,8 @@
       ]
     },
     {
-      "chapter": 70,
-      "position": 5,
+      "chapter": 83,
+      "position": 11,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -4371,8 +4749,8 @@
       ]
     },
     {
-      "chapter": 71,
-      "position": 6,
+      "chapter": 84,
+      "position": 12,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -4393,8 +4771,8 @@
       ]
     },
     {
-      "chapter": 72,
-      "position": 7,
+      "chapter": 85,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4415,8 +4793,8 @@
       ]
     },
     {
-      "chapter": 73,
-      "position": 8,
+      "chapter": 86,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4437,7 +4815,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4459,7 +4837,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4481,7 +4859,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4503,7 +4881,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4525,7 +4903,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4547,7 +4925,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4569,7 +4947,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4591,7 +4969,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 94,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4613,7 +4991,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 95,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4635,7 +5013,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 96,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4657,7 +5035,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4679,7 +5057,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4701,7 +5079,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4723,7 +5101,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4745,7 +5123,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4767,7 +5145,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4789,7 +5167,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4811,7 +5189,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -4833,7 +5211,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4855,7 +5233,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 106,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4877,7 +5255,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 107,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4899,7 +5277,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 108,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4921,7 +5299,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 109,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4943,7 +5321,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 110,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4965,7 +5343,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 111,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4987,7 +5365,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 112,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5009,7 +5387,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 113,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5031,7 +5409,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 114,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5053,7 +5431,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5750,6 +6128,90 @@
     },
     {
       "seeding_key": {
+        "level.key": "datasciencewithpython-lesson7-level1-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level1-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "c2973188-f828-436a-919c-e6502542bfa0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson7-level2-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level2-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "e1057d80-a99e-40e2-a045-0fd01de5b678"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson7-level3-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level3-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "e1057d80-a99e-40e2-a045-0fd01de5b678"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson7-level4-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level4-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "e1057d80-a99e-40e2-a045-0fd01de5b678"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson7-level5-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level5-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "e1057d80-a99e-40e2-a045-0fd01de5b678"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson7-level6-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level6-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "3c3067b5-78ef-4fc3-a9c5-26beebaeb358"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson7-level7-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson7-level7-v1-2026"
+        ],
+        "lesson.key": "Accessing and Grouping Values",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "3c3067b5-78ef-4fc3-a9c5-26beebaeb358"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "datascience-U2L6-L1_2024-pilot_pilot_2026",
         "script_level.level_keys": [
           "datascience-U2L6-L1_2024-pilot_pilot_2026"
@@ -5854,6 +6316,78 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "data-science-with-python-unit-2026",
         "activity_section.key": "3b91ffee-0393-4423-87e7-9e0a2e0b7aee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson8-level1-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level1-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "63e1dd16-c5e1-4c18-b046-dbaa783cc80e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson8-level2-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level2-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "18da4230-9674-4492-8d44-bd24f4abb31d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson8-level3-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level3-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "18da4230-9674-4492-8d44-bd24f4abb31d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson8-level4-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level4-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "18da4230-9674-4492-8d44-bd24f4abb31d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson8-level5-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level5-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "a6f11868-df09-4002-b46a-de0e690fe18c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson8-level6-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson8-level6-v1-2026"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "a6f11868-df09-4002-b46a-de0e690fe18c"
       }
     },
     {
@@ -6331,6 +6865,48 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=drive_link",
+      "key": "_exemplar_data_science_with_python_unit_guide_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_data_science_with_python_unit_guide_2"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
+      "key": "_exemplar_data_science_with_python_unit_guide_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_data_science_with_python_unit_guide_3"
+      }
+    },
+    {
+      "name": "[KEY]",
+      "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
+      "key": "_key_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_"
+      }
+    },
+    {
       "name": "[KEY] Data Science with Python Unit Guide",
       "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
       "key": "_key_data_science_with_python_unit_guide",
@@ -6358,14 +6934,16 @@
     },
     {
       "name": "Accessing and Grouping Values",
-      "url": "https://docs.google.com/presentation/d/1I0BTjvAuzC0R2jT7X8fVHrOhDBWZHqufZ_HU4jmwbxU/template/preview",
-      "key": "accessing_and_grouping_values",
+      "url": "https://docs.google.com/presentation/d/1spGUqhSjoUpDbjChuFil4wVOKSqpKhBGrjmTrDj0rrM/edit?usp=sharing",
+      "key": "accessing_and_grouping_values_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "accessing_and_grouping_values"
+        "resource.key": "accessing_and_grouping_values_1"
       }
     },
     {
@@ -6403,14 +6981,16 @@
     },
     {
       "name": "Cleaning Data",
-      "url": "https://docs.google.com/presentation/d/1746UQoze6wGE4b9FGDt2sLHTIoQ2hixYs9nJL5ocFhE/template/preview",
-      "key": "cleaning_data",
+      "url": "https://docs.google.com/presentation/d/10hgPIBTwzUmfLguBGYo_paE-72m8iRiFhA-xJDGsCTs/edit?usp=sharing",
+      "key": "cleaning_data_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "cleaning_data"
+        "resource.key": "cleaning_data_1"
       }
     },
     {
@@ -6525,6 +7105,48 @@
       }
     },
     {
+      "name": "Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1R1COXhWren9sXLX1hf8WkWCTjXoXhLvXf0N0jghCvzw/edit?usp=sharing",
+      "key": "data_science_with_python_unit_guide_3",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_with_python_unit_guide_3"
+      }
+    },
+    {
+      "name": "Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1R1COXhWren9sXLX1hf8WkWCTjXoXhLvXf0N0jghCvzw/edit?usp=drive_link",
+      "key": "data_science_with_python_unit_guide_4",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_with_python_unit_guide_4"
+      }
+    },
+    {
+      "name": "Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1R1COXhWren9sXLX1hf8WkWCTjXoXhLvXf0N0jghCvzw/edit?usp=sharing",
+      "key": "data_science_with_python_unit_guide_5",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_with_python_unit_guide_5"
+      }
+    },
+    {
       "name": "Exploratory Data Analysis",
       "url": "https://docs.google.com/presentation/d/1NnZk4lfwSDAgtI30pc32mmFLol1GyB3I2w9E8qEiWIk/template/preview",
       "key": "exploratory_data_analysis",
@@ -6550,14 +7172,16 @@
     },
     {
       "name": "Getting to Know Your Data",
-      "url": "https://docs.google.com/presentation/d/1uLyPczIZrZIe6LxkJzOCs8KGeFHZneuLw8aPLu6fZ9c/template/preview",
-      "key": "getting_to_know_your_data",
+      "url": "https://docs.google.com/presentation/d/1qrbFB0U8RRU8_ZEieRUrDk-mVBChDlJH9u9bBcJwpnM/edit?usp=sharing",
+      "key": "getting_to_know_your_data_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "getting_to_know_your_data"
+        "resource.key": "getting_to_know_your_data_1"
       }
     },
     {
@@ -6659,15 +7283,17 @@
       }
     },
     {
-      "name": "Occupations Dataset",
-      "url": "https://docs.google.com/document/d/1NwRaVYYXfcGPL69tUgkQTWv5IN3a9yaP05q4foNyyNg/edit",
-      "key": "occupations_dataset",
+      "name": "Occupation Bar Chart",
+      "url": "https://docs.google.com/document/d/16jXrmSBbFCFiw8NBXfOvf9rPA49Kw4tCUwadLc180jc/edit?usp=sharing",
+      "key": "occupation_bar_chart",
       "properties": {
         "audience": "Student",
-        "type": "Handout"
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "occupations_dataset"
+        "resource.key": "occupation_bar_chart"
       }
     },
     {
@@ -6720,14 +7346,16 @@
     },
     {
       "name": "Quiz, Quiz, Trade Cards",
-      "url": "https://docs.google.com/document/d/1kYKagn6Ea2GlGBiGDvjECg1xMCCtcg4qC9kNHwIiw08/edit",
-      "key": "quiz_quiz_trade_cards",
+      "url": "https://docs.google.com/document/d/1a9GQujVr4g4lpEj1NxJdvkmqRmpa4vbI0SDfqU5lTnA/edit?usp=sharing",
+      "key": "quiz_quiz_trade_cards_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "quiz_quiz_trade_cards"
+        "resource.key": "quiz_quiz_trade_cards_1"
       }
     },
     {
@@ -6743,15 +7371,17 @@
       }
     },
     {
-      "name": "Stars Data Roundtable",
-      "url": "https://docs.google.com/document/d/1brLAvfHS12OXRcBqF9TF7E9xQNfboGfBoWcg56q8DzA/edit#heading=h.5isxwos4ollk",
-      "key": "stars_data_roundtable",
+      "name": "Star Data Roundtable",
+      "url": "https://docs.google.com/document/d/17bFghz4P9GUVj89Tj1015yXY2oGEAA7rpeZqij_lWj8/edit?usp=drive_link",
+      "key": "star_data_roundtable",
       "properties": {
         "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "stars_data_roundtable"
+        "resource.key": "star_data_roundtable"
       }
     },
     {
@@ -6773,31 +7403,55 @@
     {
       "seeding_key": {
         "lesson.key": "Accessing and Grouping Values",
-        "resource.key": "accessing_and_grouping_values"
+        "resource.key": "_exemplar_data_science_with_python_unit_guide_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessing and Grouping Values",
-        "resource.key": "stars_data_roundtable"
+        "resource.key": "accessing_and_grouping_values_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing and Grouping Values",
+        "resource.key": "data_science_with_python_unit_guide_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing and Grouping Values",
+        "resource.key": "star_data_roundtable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Cleaning Data",
-        "resource.key": "cleaning_data"
+        "resource.key": "_exemplar_data_science_with_python_unit_guide_3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Cleaning Data",
-        "resource.key": "occupations_dataset"
+        "resource.key": "cleaning_data_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Cleaning Data",
-        "resource.key": "quiz_quiz_trade_cards"
+        "resource.key": "data_science_with_python_unit_guide_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cleaning Data",
+        "resource.key": "occupation_bar_chart"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cleaning Data",
+        "resource.key": "quiz_quiz_trade_cards_1"
       }
     },
     {
@@ -6839,7 +7493,19 @@
     {
       "seeding_key": {
         "lesson.key": "Getting to Know Your Data",
-        "resource.key": "getting_to_know_your_data"
+        "resource.key": "_key_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting to Know Your Data",
+        "resource.key": "data_science_with_python_unit_guide_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting to Know Your Data",
+        "resource.key": "getting_to_know_your_data_1"
       }
     },
     {
@@ -7056,6 +7722,16 @@
       }
     },
     {
+      "key": "dot_notation",
+      "word": "dot notation",
+      "definition": "a way to access a function by placing a period between an object or library name and the function name",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dot_notation"
+      }
+    },
+    {
       "key": "expression",
       "word": "expression",
       "definition": "a combination of data and operators that evaluates to a single value",
@@ -7173,6 +7849,12 @@
       "seeding_key": {
         "lesson.key": "Cleaning Data",
         "vocabulary.key": "null"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting to Know Your Data",
+        "vocabulary.key": "dot_notation"
       }
     },
     {

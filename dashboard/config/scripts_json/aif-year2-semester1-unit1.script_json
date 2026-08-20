@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-12 21:00:17 UTC",
+    "serialized_at": "2026-08-18 13:24:03 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -289,6 +289,7 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -973,6 +974,18 @@
         "lesson_activity.key": "d4973e88-b07d-4ed3-ae9f-ee758403a694",
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "1784fab3-9e2c-4419-952a-2872e8935687",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1784fab3-9e2c-4419-952a-2872e8935687",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "aif-year2-semester1-unit1"
       }
     }
@@ -4923,6 +4936,17 @@
         "activity_section.key": "e5a69cd0-5860-4bff-8c5d-57e9c11ffab9",
         "lesson_activity.key": "d4973e88-b07d-4ed3-ae9f-ee758403a694"
       }
+    },
+    {
+      "key": "2e9cf8d5-d618-439b-80ca-561135937f89",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e9cf8d5-d618-439b-80ca-561135937f89",
+        "lesson_activity.key": "1784fab3-9e2c-4419-952a-2872e8935687"
+      }
     }
   ],
   "script_levels": [
@@ -5194,7 +5218,7 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Build a Chatbot"
       },
@@ -6333,6 +6357,28 @@
       "level_keys": [
         "aif-y2-logic-based-ai-lesson13-survey-2026"
       ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-postassessment-2026"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "2e9cf8d5-d618-439b-80ca-561135937f89"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-postassessment-2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7103,6 +7149,18 @@
         "script.name": "aif-year2-semester1-unit1",
         "activity_section.key": "e5a69cd0-5860-4bff-8c5d-57e9c11ffab9"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-postassessment-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-postassessment-2026"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "2e9cf8d5-d618-439b-80ca-561135937f89"
+      }
     }
   ],
   "resources": [
@@ -7285,6 +7343,20 @@
       }
     },
     {
+      "name": "Conditionals",
+      "url": "https://www.youtube.com/watch?v=ZS6Sld95z0U",
+      "key": "conditionals",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals"
+      }
+    },
+    {
       "name": "Conversational AI Project",
       "url": "https://docs.google.com/presentation/d/1tQzxVcsdIa-AmlkShz698DgSoDn9IGbrwBU5H8g_hIU/edit?usp=sharing",
       "key": "conversational_ai_project",
@@ -7366,6 +7438,20 @@
       },
       "seeding_key": {
         "resource.key": "finding_bugs"
+      }
+    },
+    {
+      "name": "For Loops",
+      "url": "https://www.youtube.com/watch?v=oP-1alsDPDI",
+      "key": "for_loops",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "for_loops"
       }
     },
     {
@@ -7580,6 +7666,20 @@
       }
     },
     {
+      "name": "While Loops",
+      "url": "https://www.youtube.com/watch?v=Y82nBfdbemM",
+      "key": "while_loops",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "while_loops"
+      }
+    },
+    {
       "name": "Writing Functions",
       "url": "https://www.youtube.com/watch?v=mY0cNQcK7K4",
       "key": "writing_functions",
@@ -7754,6 +7854,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "optimization"
       }
     },
@@ -7772,6 +7878,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "going_viral"
       }
     },
@@ -7785,6 +7897,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "simulation_part_2_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "while_loops"
       }
     },
     {

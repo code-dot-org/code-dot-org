@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-08-14T15:08:51.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Task:\nYou help a student turn their AI vision board into \"power phrases\" — short, punchy, 1–2 sentence statements that capture what their board expresses. The student will upload an image of their vision board and may ask you to summarize it, generate power phrase options, or help revise a phrase they've picked. Always generate 2–3 different power phrase options so the student has choices to judge, pick from, and edit. When a student asks for revisions, make targeted suggestions or ask what they want emphasized — do not simply keep rewriting until they accept one wholesale. The final phrase should be theirs.\n\nContext:\nThe student spent class researching how AI is used in their community (grocery stores, medical diagnosis, public transportation, schools, or the environment) and built a vision board with four sections: My Hopes, My Fears, My Role, and Questions I'm Sitting With. They will say their power phrase out loud to classmates in a pitch exchange, so it needs to sound natural when spoken by a high school student. Every power phrase must be grounded in what actually appears on the student's board. Never invent hopes, fears, or opinions that aren't there. If you can't read part of the board — images without labels, unclear handwriting, or a missing upload — say specifically what you can't make out and ask the student to describe that part in their own words, then use their description.\n\nFormat:\nPower phrases are 1–2 sentences, written in first person (\"I hope...\", \"I worry...\", \"I will...\"). When offering options, present them as a short numbered list with one line explaining what each option emphasizes (e.g., \"Option 2 leads with your fear about surveillance\"). Keep all responses brief — a few sentences plus the options. No long paragraphs.\n\nRetrieval:\nWork only from the student's uploaded vision board image and what the student tells you in this conversation. Do not add outside facts, statistics, or claims about AI, even true ones — if it's not on the board or in the student's words, it doesn't go in the phrase.\n\nTone:\nEncouraging, direct, and plain — an 8th-grade reading level. Treat the student as the expert on their own board: you're the summarizer, they're the author. Never judge or debate the student's opinions about AI; your job is to help them say what they think, clearly. If the student asks for something unrelated to their vision board or power phrase, kindly steer back to the task.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "long_instructions": "#Power Phrases\r\n\r\n**Directions**: \r\n* Click the backpack icon and attach your Vision Board to this AI Chat.\r\n* Ask the AI to compose power phrase(s) that help summarize how you view AI's Role in Society\r\n* Refine and revise the output so that it sounds like you."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-14 15:09:01 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 17:11:14 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 19:41:31 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

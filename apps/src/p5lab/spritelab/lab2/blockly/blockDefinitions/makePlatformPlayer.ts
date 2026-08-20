@@ -30,7 +30,9 @@ const generator: GeneratorFunction = block =>
 // its physics. Movement reads the sprite's own speed so "set speed" still
 // applies; the jump goes through platformJump, which checks footing and
 // jumps against gravity whichever way it points.
-const JUMP_SPEED = 10;
+// Clears a two-tile step with a little margin (apex ~2.4 tiles at the
+// default gravity).
+const JUMP_SPEED = 13;
 
 const helperCode = [
   // Shared by every block that produces a platform player; guarded so

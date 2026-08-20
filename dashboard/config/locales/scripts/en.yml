@@ -20684,6 +20684,8 @@ en:
           lessons:
             lesson-1:
               name: python lab stuff
+            lesson-2:
+              name: generating a lesson
           lesson_groups: {}
           name: jamila-sandbox
           title: jamila's stuff go away
@@ -25308,6 +25310,17 @@ en:
           description_short: Hour of AI 2025 dev
           description: ''
           student_description: ''
+        hoai2026-dev:
+          lessons:
+            lesson-1:
+              name: hoai2026-dev-lesson
+          lesson_groups: {}
+          name: hoai2026-dev
+          title: hoai2026-dev
+          description_audience: ''
+          description_short: Hour of AI 2026 dev
+          description: ''
+          student_description: ''
         ctrl-alt-retreat-2025-teaching-learning-gallery-walk:
           lessons:
             lesson-1:
@@ -29647,6 +29660,8 @@ en:
               display_name: Content
             lessonGroup-3:
               display_name: End of Unit Project
+            lessonGroup-4:
+              display_name: End of Unit Survey
           name: foundations-of-ai-programming-js
           title: Foundations of AI Programming (JavaScript)
           description_audience: ''

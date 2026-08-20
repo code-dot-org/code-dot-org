@@ -1,0 +1,189 @@
+from .instrument import Instrument, as_instrument
+from .support import actions
+from .support.actions import UNSPECIFIED
+from .support.audio import as_samples, read_samples_from_file
+from .support.color import Color, as_color
+from .support.constants import (
+  MAX_NOTE,
+  MAX_PAUSE_SECONDS,
+  MIN_NOTE,
+  MIN_PAUSE_SECONDS,
+  THEATER_HEIGHT,
+  THEATER_WIDTH,
+)
+from .support.font import Font, FontStyle
+from .support.image import Image
+
+_DEFAULT_FONT = Font.SANS
+_DEFAULT_FONT_STYLE = FontStyle.NORMAL
+_DEFAULT_TEXT_HEIGHT = 20
+_DEFAULT_STROKE_WIDTH = 1.0
+_MIN_POLYGON_SIDES = 3
+
+
+def _validate_duration(method_name, seconds):
+  """Bound a note or pause duration.
+
+  Raise here rather than at render time so the traceback points at the
+  student's own call. Notes share the pause range: play_note_and_pause() hands
+  the same value to both, and the ceiling is what a gif frame delay can hold.
+  """
+  if seconds < MIN_PAUSE_SECONDS:
+    raise ValueError(
+      f"{method_name} needs at least {MIN_PAUSE_SECONDS} seconds, got {seconds}"
+    )
+  if seconds > MAX_PAUSE_SECONDS:
+    raise ValueError(
+      f"{method_name} allows at most {MAX_PAUSE_SECONDS} seconds, got {seconds}"
+    )
+
+
+class Scene:
+  """A single scene of drawing and audio commands.
+
+  Method calls record actions; play_scenes(scene) later renders them to a gif
+  and audio track and plays them on the theater stage.
+  """
+
+  def __init__(self):
+    self._actions = []
+    self._font = _DEFAULT_FONT
+    self._font_style = _DEFAULT_FONT_STYLE
+    self._text_height = _DEFAULT_TEXT_HEIGHT
+    self._text_color = Color("black")
+    self._stroke_color = Color("black")
+    self._fill_color = Color("black")
+    self._stroke_width = _DEFAULT_STROKE_WIDTH
+
+  def get_actions(self):
+    return self._actions
+
+  def get_width(self):
+    return THEATER_WIDTH
+
+  def get_height(self):
+    return THEATER_HEIGHT
+
+  def clear(self, color):
+    self._actions.append(actions.ClearScene(as_color(color)))
+
+  def play_sound(self, sound):
+    """Play a list of normalized samples, or a WAV file by name."""
+    if isinstance(sound, str):
+      samples = read_samples_from_file(sound)
+    else:
+      samples = as_samples(sound)
+    self._actions.append(actions.PlaySound(samples))
+
+  def play_note(self, note, seconds, instrument=Instrument.PIANO):
+    """Play one instrument note, cut to the given duration.
+
+    The note is a MIDI number: 60 is middle C, and each step is a semitone.
+    """
+    _validate_duration("play_note", seconds)
+    # Only whole semitones are bundled, so round as the drawing calls do; the
+    # renderer would otherwise look for a note file that cannot exist and skip
+    # the note without a word.
+    note = int(round(note))
+    if note < MIN_NOTE or note > MAX_NOTE:
+      raise ValueError(
+        f"play_note needs a note between {MIN_NOTE} and {MAX_NOTE}, got {note}"
+      )
+    self._actions.append(actions.PlayNote(as_instrument(instrument), note, seconds))
+
+  def play_note_and_pause(self, note, seconds, instrument=Instrument.PIANO):
+    self.play_note(note, seconds, instrument)
+    self.pause(seconds)
+
+  def pause(self, seconds):
+    _validate_duration("pause", seconds)
+    self._actions.append(actions.Pause(seconds))
+
+  # TODO: determine if we need to put limits on size/width/height
+  def draw_image(self, image, x, y, size=None, width=None, height=None, rotation=0.0):
+    """Draw an Image (or a file by name) at (x, y).
+
+    Provide size to set the width and scale height proportionally, or provide
+    both width and height to stretch the image.
+    """
+    image_copy = Image(image)
+    if size is not None:
+      self._actions.append(
+        actions.DrawImage(image_copy, x, y, size, UNSPECIFIED, UNSPECIFIED, rotation)
+      )
+    elif width is not None and height is not None:
+      self._actions.append(
+        actions.DrawImage(image_copy, x, y, UNSPECIFIED, width, height, rotation)
+      )
+    else:
+      raise ValueError("draw_image needs either size, or both width and height")
+
+  def set_text_style(self, font, style):
+    self._font = font
+    self._font_style = style
+
+  def set_text_height(self, height):
+    self._text_height = height
+
+  def set_text_color(self, color):
+    self._text_color = as_color(color)
+
+  def draw_text(self, text, x, y, rotation=0.0):
+    self._actions.append(
+      actions.DrawText(
+        text, x, y, rotation, self._text_height, self._font, self._font_style,
+        self._text_color,
+      )
+    )
+
+  def draw_line(self, start_x, start_y, end_x, end_y):
+    self._actions.append(
+      actions.DrawLine(start_x, start_y, end_x, end_y, self._stroke_color, self._stroke_width)
+    )
+
+  def draw_regular_polygon(self, x, y, sides, radius):
+    if sides < _MIN_POLYGON_SIDES:
+      raise ValueError(
+        f"draw_regular_polygon needs at least {_MIN_POLYGON_SIDES} sides, got {sides}"
+      )
+    self._actions.append(
+      actions.DrawPolygon(
+        x, y, sides, radius, self._stroke_color, self._fill_color, self._stroke_width
+      )
+    )
+
+  def draw_shape(self, points, close):
+    self._actions.append(
+      actions.DrawShape(
+        list(points), close, self._stroke_color, self._fill_color, self._stroke_width
+      )
+    )
+
+  def draw_ellipse(self, x, y, width, height):
+    self._actions.append(
+      actions.DrawEllipse(
+        x, y, width, height, self._stroke_color, self._fill_color, self._stroke_width
+      )
+    )
+
+  def draw_rectangle(self, x, y, width, height):
+    self._actions.append(
+      actions.DrawRectangle(
+        x, y, width, height, self._stroke_color, self._fill_color, self._stroke_width
+      )
+    )
+
+  def set_stroke_width(self, width):
+    self._stroke_width = width
+
+  def set_fill_color(self, color):
+    self._fill_color = as_color(color)
+
+  def set_stroke_color(self, color):
+    self._stroke_color = as_color(color)
+
+  def remove_stroke_color(self):
+    self._stroke_color = None
+
+  def remove_fill_color(self):
+    self._fill_color = None
