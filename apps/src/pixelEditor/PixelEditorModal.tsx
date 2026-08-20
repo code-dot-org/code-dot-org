@@ -50,9 +50,9 @@ const CHECKER_COLORS = {
   dark: {base: '#333a47', tint: 'rgb(128 128 128 / 22%)'},
 };
 
-// A bright azure: visible against transparency in either theme, and against
-// a black background fill.
-const DEFAULT_COLOR: RGBA = [0, 157, 236, 255];
+// A bright azure, at the darkest shade that clears 3:1 against white while
+// holding 3:1 on the dark checker and 6.9:1 on a black background fill.
+const DEFAULT_COLOR: RGBA = [0, 155, 233, 255];
 
 // Summed per-channel difference a pixel may have from the clicked color and
 // still flood-fill: AI-generated "solid" regions carry small variations that
