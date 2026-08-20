@@ -26,6 +26,7 @@ const RULES = [
   'motion',
   'collisions',
   'gravity',
+  'jump',
   'solid',
   'wrap',
   'bounds',

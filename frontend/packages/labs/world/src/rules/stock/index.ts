@@ -25,6 +25,7 @@ import {expiresRule} from './expires';
 import {gravityRule} from './gravity';
 import {healthRule} from './health';
 import {inputRule} from './input';
+import {jumpRule} from './jump';
 import {motionRule} from './motion';
 import {mouseRule} from './mouse';
 import {shootsRule} from './shoots';
@@ -179,6 +180,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: gravityRule,
   },
   {
+    id: 'jump',
+    name: 'Jumping',
+    ability: 'Jumps',
+    description:
+      'Pushes an actor away from the ground when it asks, and only when it has a jump left. Carries a jump height, a moment of grace after walking off a ledge, and a count for double jumps.',
+    provides: ['Jumps'],
+    contents: jumpRule,
+  },
+  {
     id: 'drive',
     name: 'Arrow Drive',
     ability: 'Drives with Arrow Keys',
@@ -314,4 +324,5 @@ export {
   cameraEaseRule,
   cameraConfinedRule,
   cameraDeadzoneRule,
+  jumpRule,
 };

@@ -245,6 +245,169 @@ describe('Time', () => {
   });
 });
 
+describe('Jumping', () => {
+  /** A world with a floor, and a jumper standing on it. */
+  const standing = (settings: Record<string, number> = {}) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/gravity'),
+        rule('rules/jump'),
+      ])
+      .instantiate();
+    const floor = new ActorBuilder({id: 'floor', name: 'floor'})
+      .useTraits([of('rules/gravity', 'ActsAsGroundTrait')])
+      .set(PositionProperty, at(100, 120))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(200, 16))
+      .instantiate('floor');
+    world.addActor(floor);
+    const player = new ActorBuilder({id: 'player', name: 'player'})
+      .useTraits([
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/jump', 'JumpsTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(100, 104))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('player');
+    for (const [name, value] of Object.entries(settings)) {
+      player.set(of('rules/jump', name), value as never);
+    }
+    world.addActor(player);
+    // Long enough to land and be counted as standing.
+    run(world, 0.2);
+    return {world, floor, player};
+  };
+
+  const ask = (world: World, player: unknown) =>
+    world.act(of('rules/jump', 'MakeJumpAction'), player as never);
+  const spent = (player: unknown) =>
+    (player as {get(p: unknown): number}).get(
+      of('rules/jump', 'JumpsUsedProperty'),
+    );
+  const height = (player: unknown) =>
+    (player as {get(p: unknown): Vector}).get(PositionProperty).y;
+
+  it('leaves the ground when asked, and only once', () => {
+    const {world, player} = standing();
+    const floorLevel = height(player);
+
+    ask(world, player);
+    run(world, 0.25);
+
+    expect(height(player)).toBeLessThan(floorLevel - 20);
+    // Asked again in mid-air with nothing left, and refused. This is the whole
+    // difference from the jump a learner writes by hand, which works in the
+    // air, works twice, and works while falling down a pit.
+    const rising = height(player);
+    ask(world, player);
+    expect(spent(player)).toBe(1);
+    ask(world, player);
+    expect(height(player)).toBeGreaterThanOrEqual(rising - 1);
+  });
+
+  it('comes back down and can go again', () => {
+    const {world, player} = standing();
+    const floorLevel = height(player);
+
+    ask(world, player);
+    run(world, 1.2);
+
+    // Landed: back where it started, and the tally cleared by the ground.
+    expect(height(player)).toBeCloseTo(floorLevel, 0);
+    expect(spent(player)).toBe(0);
+  });
+
+  it('forgives a late press, for as long as the grace lasts', () => {
+    // Coyote time, and the reason it exists: walking off a ledge and pressing
+    // jump a frame later is the commonest thing a player does that a naive
+    // platformer refuses.
+    const {world, floor, player} = standing();
+    world.removeActor(floor);
+    run(world, 0.05);
+
+    ask(world, player);
+
+    expect(spent(player)).toBe(1);
+  });
+
+  it('will not forgive a press after it', () => {
+    const {world, floor, player} = standing();
+    world.removeActor(floor);
+    // Three tenths against a grace of one: long gone.
+    run(world, 0.3);
+
+    ask(world, player);
+
+    // Already spent by the lapse itself, not by this ask.
+    expect(spent(player)).toBe(1);
+  });
+
+  it('spends the ground jump when the grace lapses, not an air one', () => {
+    // What makes double jump fall out of one number rather than a second rule.
+    // Walking off a ledge has to COST the ground jump, or a double jumper who
+    // steps off a platform gets two air jumps and floats away.
+    const {world, floor, player} = standing({JumpsAllowedProperty: 2});
+    world.removeActor(floor);
+    run(world, 0.3);
+
+    ask(world, player);
+    expect(spent(player)).toBe(2);
+    // …and that is the lot.
+    ask(world, player);
+    expect(spent(player)).toBe(2);
+  });
+
+  it('gives a double jumper two from the ground, and no more', () => {
+    const {world, player} = standing({JumpsAllowedProperty: 2});
+
+    ask(world, player);
+    run(world, 0.15);
+    ask(world, player);
+    run(world, 0.15);
+    ask(world, player);
+
+    expect(spent(player)).toBe(2);
+  });
+
+  it('treats an actor spawned in mid-air as standing, for one frame', () => {
+    // Not a design, a consequence, and worth pinning as one: gravity decides
+    // who is falling in `react`, and this rule's bookkeeping reads that in
+    // `sense` on the NEXT frame. So on the very first frame `falling` is still
+    // its default of false and the ground jump is available.
+    //
+    // One sixtieth of a second, against a grace period of a tenth that is
+    // deliberate. It is inside the noise the rule already accepts, and the
+    // alternative is a "have we ticked yet" flag on every jumper.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/gravity'),
+        rule('rules/jump'),
+      ])
+      .instantiate();
+    const player = new ActorBuilder({id: 'player', name: 'player'})
+      .useTraits([
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/jump', 'JumpsTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(100, 20))
+      .instantiate('player');
+    world.addActor(player);
+
+    world.tick(1 / 60);
+    ask(world, player);
+    expect(spent(player)).toBe(1);
+
+    // And from the second frame on it is airborne, as it always was.
+    run(world, 0.3);
+    expect(spent(player)).toBe(1);
+  });
+});
+
 describe('every demo world', () => {
   // A demo is a claim shown to every learner who opens the import dialog, so
   // the cheapest useful check is that each one DOES something: the first
@@ -375,6 +538,34 @@ describe('what the newer demos show', () => {
         }
       }
     }
+  });
+
+  it('jump: it clears the hole, and the second press does nothing', () => {
+    // The demo's whole claim. A jumping box shows the first half; what says
+    // this is a RULE rather than a line of blocks is the ask that is refused.
+    const demo = RULE_DEMOS.jump;
+    const {world, cast} = demo.build(modules);
+    const player = cast.player as {get(p: unknown): Vector};
+    let highest = 128;
+    let midAir = 0;
+    for (let tick = 0; tick < Math.round(demo.seconds * 60); tick++) {
+      stepDemo(world, demo, tick);
+      highest = Math.min(highest, player.get(PositionProperty).y);
+      // 1.65s: inside the second press, which is in mid-air.
+      if (tick === 99) {
+        midAir = player.get(PositionProperty).y;
+      }
+    }
+
+    // Went up, over the hole at 96–128, and came down the far side.
+    expect(highest).toBeLessThan(40);
+    expect(player.get(PositionProperty).x).toBeGreaterThan(140);
+    // Resting on the far floor: its top is at 80, and a 16-pixel box sits
+    // with its middle 8 above that.
+    expect(player.get(PositionProperty).y).toBeCloseTo(72, 0);
+    // The refused press left it on the arc it was already on: at the apex,
+    // which a second jump would have thrown it well above.
+    expect(midAir).toBeGreaterThan(highest - 1);
   });
 
   it('bounds: both boxes park in the corners they were heading for', () => {

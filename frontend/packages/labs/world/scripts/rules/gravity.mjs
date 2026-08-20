@@ -57,7 +57,10 @@ const rule = defineRule({
 rule.uses('Physics');
 rule.uses('Solid Bodies');
 
-const directionOfGravity = rule.vector('direction of gravity', {x: 0, y: 1});
+export const directionOfGravity = rule.vector('direction of gravity', {
+  x: 0,
+  y: 1,
+});
 const amountOfGravity = rule.number('amount of gravity', 9);
 
 const sign = rule.local('sign', 'Number');
@@ -215,11 +218,13 @@ rule.block({
   ],
 });
 
+export const AffectedByGravity = rule.traitRef('Affected by Gravity');
+
 const affected = rule.trait('Affected by Gravity');
 affected.uses(CanMove);
 affected.uses(CanCollide);
 const gravityScale = affected.number('gravity scale', 1);
-const falling = affected.boolean('falling', 'false', {readonly: true});
+export const falling = affected.boolean('falling', 'false', {readonly: true});
 
 affected.block({
   returns: 'boolean',
