@@ -4,7 +4,7 @@
 //
 // Shapes mirror the Rails controllers: practice_problems,
 // user_practice_problem_attempts, challenges, challenge_responses,
-// ai_student_podcasts, user_lesson_reflections.
+// ai_student_podcasts, user_lesson_reflections, plus get_token for CSRF.
 
 import {registerMockFixture} from '@code-dot-org/core/api/mocks';
 
@@ -53,6 +53,15 @@ let nextAttemptId = 500;
 
 export function registerLessonDeepDiveMocks(): void {
   registerMockFixture([
+    // The shell emits no csrf-token meta tag, so AuthenticityTokenStore falls
+    // back to this before the first write. It reads the token off the response
+    // header, not the body, hence the raw Response.
+    {
+      path: '*/get_token',
+      respond: () =>
+        new Response(null, {headers: {'csrf-token': 'dev-shell-csrf-token'}}),
+    },
+
     // PracticeProblemsController#index filters by objective when asked. The
     // seeded problems hang off a different lesson's objective, so the deep
     // dive's own objective ids match none and SkillsCheck falls back to its

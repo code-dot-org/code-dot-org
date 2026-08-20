@@ -40,6 +40,30 @@ const devHostAliases: Alias[] = [
   },
 ];
 
+// Dashboard route prefixes the feature calls. Sub-routes (/evaluate,
+// /unit_counts, /generate_podcast, /retrieve_podcast_from_s3, /:id/upload) are
+// subsumed by their prefix and are not listed.
+//
+// The proxy is a bridge: it exists because apps' HttpClient issues
+// root-relative URLs. Once the feature moves to @code-dot-org/core's
+// dashboard API client (baseUrl + CORS, as studio does), this block and
+// allowedHosts below can be deleted.
+const dashboardProxyPrefixes = [
+  '/practice_problems',
+  '/user_practice_problem_attempts',
+  '/challenges',
+  '/challenge_responses',
+  '/challenge_response_assets',
+  '/user_lesson_reflections',
+  '/user_lesson_objective_reflections',
+  '/ai_student_podcasts',
+  '/aichat_request',
+  '/ai_gateway',
+  '/get_token',
+];
+
+const dashboardTarget = 'http://localhost-studio.code.org:3000';
+
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
@@ -93,6 +117,31 @@ export default defineConfig(({command}) => ({
   server: {
     // The dev shell imports source from apps/, outside this package's root.
     fs: {allow: [repoRoot]},
+    ...(command === 'serve'
+      ? {
+          // Serving the shell on Rails' own hostname is what makes the browser
+          // attach the dashboard session cookie to the proxied requests;
+          // cookies ignore the port but not the host.
+          allowedHosts: ['localhost-studio.code.org'],
+          // That hostname is an /etc/hosts entry for 127.0.0.1. Vite's default
+          // bind ("localhost") can land on ::1 alone, unreachable there.
+          host: '127.0.0.1',
+          // Always on. Under VITE_API_MODE=msw the service worker answers
+          // in-page before the network, so the proxy sees only what the
+          // fixtures do not cover.
+          //
+          // No changeOrigin, deliberately: Rails compares the browser's Origin
+          // header against request.base_url, which it derives from Host.
+          // Rewriting Host to :3000 would break that match and make every
+          // write a 422.
+          proxy: Object.fromEntries(
+            dashboardProxyPrefixes.map(prefix => [
+              prefix,
+              {target: dashboardTarget},
+            ]),
+          ),
+        }
+      : {}),
   },
   // public/ holds the MSW service worker, which only the dev shell needs.
   // Keeping it out of build mode leaves the published dist/ untouched.

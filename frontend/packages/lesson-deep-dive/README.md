@@ -9,9 +9,23 @@ in.
 
 ## Dev shell
 
+Two modes. The default talks to a real local Rails dashboard through the Vite
+proxy; `VITE_API_MODE=msw` serves fixtures and needs no backend.
+
 ```bash
-yarn dev            # http://localhost:5173/
+yarn dev                        # dashboard mode; needs Rails, see below
+VITE_API_MODE=msw yarn dev      # mocked mode; http://localhost:5173/
 ```
+
+Dashboard mode has three prerequisites:
+
+1. Rails is running — `bin/dashboard-server` from the repo root.
+2. Browse the shell at `http://localhost-studio.code.org:5173`, not
+   `localhost`. The hostname resolves to 127.0.0.1. Cookies ignore the port but
+   not the hostname, so sharing the hostname with Rails is what makes the
+   browser attach the dashboard session cookie to the shell's proxied requests.
+3. Sign in as a student at `http://localhost-studio.code.org:3000` first. The
+   shell has no sign-in flow of its own; it borrows that session.
 
 In Studio the flow is gated behind the `lesson-tutor` and
 `lesson-tutor-challenge` experiments. The shell turns both on by default —
@@ -59,20 +73,48 @@ Two things the config has to get right or nothing renders:
 
 `src/dev/nodeShims.ts` restates the Node globals webpack's `ProvidePlugin`
 gives apps' bundles; `@code-dot-org/redactable-markdown` needs `process`.
-`index.html` carries the `csrf_meta_tags` the Rails layout emits, because
-`AuthenticityTokenStore` reads that tag and otherwise falls back to
-`GET /get_token`; without it every write the feature makes fails before it is
-sent.
+
+`index.html` emits no `csrf-token` meta tag, unlike the Rails layout, so both
+modes get the token from `AuthenticityTokenStore`'s `GET /get_token` fallback —
+mocked in msw mode, proxied and session-authenticated in dashboard mode. A tag
+carrying a made-up token would be worse than none: `AuthenticityTokenStore`
+caches whatever it reads first, and real Rails answers a made-up token with
+422 on every write.
 
 `src/dev/cdo-ambient.d.ts` declares the `@cdo/*` modules the shell imports, so
 `yarn typecheck` never crawls apps' type graph.
 
 ### Backend
 
-`src/dev/mocks.ts` registers the dashboard endpoints the feature calls with
+In dashboard mode `vite.config.ts` proxies the route prefixes the feature calls
+(`/practice_problems`, `/user_practice_problem_attempts`, `/challenges`,
+`/challenge_responses`, `/challenge_response_assets`,
+`/user_lesson_reflections`, `/user_lesson_objective_reflections`,
+`/ai_student_podcasts`, `/get_token`) to `localhost-studio.code.org:3000`. The
+proxy deliberately does not set `changeOrigin`: Rails checks the browser's
+`Origin` against `request.base_url`, which it derives from `Host`, so rewriting
+`Host` to `:3000` would make every write a 422.
+
+These endpoints are user-scoped, and some need the AI-Tutor experiments enabled
+for the signed-in student. Read the controller's authorization before debugging
+a 403.
+
+In msw mode `src/dev/mocks.ts` registers those same endpoints with
 `@code-dot-org/core`'s MSW registry, so the real `HttpClient` calls run
-unmodified. `src/dev/fixtures.ts` holds a `lessonDeepDiveData` payload
-harvested from a local Rails dashboard rather than an invented one.
+unmodified either way. The surface the mocks fake most heavily is the podcast
+loop — `generate_podcast` then `retrieve_podcast_from_s3` — where they return a
+one-second silent WAV in place of synthesized audio. `localhost:5173` is fine
+in this mode; no cookies are involved.
+
+The proxy is registered under `command === 'serve'` in both modes. In msw mode
+the service worker answers in-page before the network, so the proxy only sees
+requests the fixtures do not cover.
+
+The page payload is a fixture in both modes. Studio embeds
+`lessonDeepDiveData` server-side in the HTML
+(`script[data-lessondeepdivedata]`, from `LessonsController#tutor`); there is
+no JSON endpoint to proxy. `src/dev/fixtures.ts` holds a payload harvested from
+a local Rails dashboard rather than an invented one.
 
 The wire shape differs from `LessonDeepDiveData` in
 `apps/src/aiTutor/views/lessonDeepDive/types.ts`: Rails never sends
