@@ -15,12 +15,17 @@ interface BankQuestion extends QuizQuestionData {
 
 interface QuizQuestionBankProps {
   quizId: number;
-  // Ids already on this quiz - used to seed each freshly-fetched result's
-  // initial attached state (the server also computes this per search, but
-  // seeding from the current list means a question added a moment ago via
-  // the "Existing questions" edit form, rather than through the bank,
-  // shows as already attached without waiting on a fetch).
+  // Ids currently on this quiz - the only source used to decide each
+  // result's Add/Added state (see the attachedQuestionIds.includes check
+  // below). Kept in Quiz.tsx from the live `questions` list, so it stays
+  // correct as questions get added, edited, or removed anywhere on the
+  // page, not just fetched once alongside the bank's own search results.
   attachedQuestionIds: number[];
+  // Question ids permanently deleted in this session (via destroy_quiz_question,
+  // not detach_quiz_question). A bank search fetched before the delete can
+  // still have one of these cached in `results`; this hides it, since the
+  // question no longer exists for the "Add" button to attach.
+  excludedQuestionIds: number[];
   onAttach: (question: QuizQuestionData) => void;
 }
 
@@ -41,6 +46,7 @@ const SORT_OPTIONS = [
 const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
   quizId,
   attachedQuestionIds,
+  excludedQuestionIds,
   onAttach,
 }) => {
   const [search, setSearch] = useState('');
@@ -90,16 +96,19 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
         return;
       }
       const attached = await response.json();
+      // onAttach bubbles up to Quiz.tsx's setQuestions, which is what
+      // attachedQuestionIds below is derived from - no need to also patch
+      // this row's local `attached` field, since the render no longer
+      // reads it (see the attachedQuestionIds.includes check below).
       onAttach(attached);
-      setResults(prev =>
-        prev.map(result =>
-          result.id === question.id ? {...result, attached: true} : result
-        )
-      );
     } finally {
       setAttachingId(null);
     }
   };
+
+  const visibleResults = results.filter(
+    question => !excludedQuestionIds.includes(question.id)
+  );
 
   return (
     <div className={styles.root}>
@@ -133,15 +142,15 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
         <Typography variant="body3">Loading…</Typography>
       ) : (
         <ul className={styles.resultList}>
-          {results.length === 0 && (
+          {visibleResults.length === 0 && (
             <Typography variant="body3">No questions found.</Typography>
           )}
-          {results.map(question => {
-            // A question just attached this session (via this component or
-            // the "Existing questions" list elsewhere) should read as
-            // attached even if the server hasn't been asked again yet.
-            const attached =
-              question.attached || attachedQuestionIds.includes(question.id);
+          {visibleResults.map(question => {
+            // attachedQuestionIds (from the live `questions` list on Quiz.tsx)
+            // is trusted alone, not OR'd with the fetch-time question.attached
+            // - that field never gets un-set, so an OR could never reflect a
+            // question being removed from this quiz after this list loaded.
+            const attached = attachedQuestionIds.includes(question.id);
             return (
               <li key={question.id} className={styles.resultRow}>
                 <Typography variant="body2" className={styles.resultPrompt}>

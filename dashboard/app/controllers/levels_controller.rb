@@ -396,9 +396,15 @@ class LevelsController < ApplicationController
     question = quiz_level_question.quiz_question
     quiz_level_question.destroy!
 
-    question.destroy! unless question.levels.exists?
+    destroyed = !question.levels.exists?
+    question.destroy! if destroyed
 
-    head :no_content
+    # destroyed tells the caller whether this fell back to a plain detach
+    # (another quiz grabbed the question between the frontend's last
+    # attachedToOtherQuizzes read and this request) - QuizQuestionBank needs
+    # to know that to decide whether the question should disappear from its
+    # results or just remain there, still attachable.
+    render json: {destroyed: destroyed}
   rescue ActiveRecord::RecordNotFound
     head :not_found
   end

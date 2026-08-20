@@ -82,6 +82,15 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const [questions, setQuestions] = useState<QuizQuestionData[]>(
     quizQuestions || []
   );
+  // Ids permanently deleted (destroy_quiz_question, not detach_quiz_question)
+  // via QuizBuilder's remove flow this session - passed to QuizQuestionBank
+  // so a bank result list fetched before the delete doesn't keep offering a
+  // now-nonexistent question. Detached-only removals don't need this: the
+  // question still exists in the bank, so attachedQuestionIds (derived from
+  // `questions` below) already flips its button back to "Add" on its own.
+  const [destroyedQuestionIds, setDestroyedQuestionIds] = useState<number[]>(
+    []
+  );
   const [attemptId, setAttemptId] = useState<number | null>(null);
   const [responses, setResponses] = useState<
     Record<number, QuestionResponseValue>
@@ -315,6 +324,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
             <QuizQuestionBank
               quizId={levelId as number}
               attachedQuestionIds={questions.map(question => question.id)}
+              excludedQuestionIds={destroyedQuestionIds}
               onAttach={question => setQuestions(prev => [...prev, question])}
             />
           ) : undefined
@@ -328,6 +338,9 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
             quizTitle={title || name}
             questions={questions}
             setQuestions={setQuestions}
+            onQuestionDestroyed={questionId =>
+              setDestroyedQuestionIds(prev => [...prev, questionId])
+            }
           />
         ) : showIntro ? (
           <QuizIntro
