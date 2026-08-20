@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-18 20:06:24 UTC",
+    "serialized_at": "2026-08-19 17:03:31 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -107,7 +107,6 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I use AI effectively?**\n\nIn this lesson, students explore how AI generates responses by recognizing patterns and predicting likely outcomes. Through a “Yes, and…” game, they simulate AI’s response-building process. They experiment using text and images to craft effective prompts using AI Chat levels. By the end, they understand how AI processes information and how to use strategic prompting for better results.",
-        "preparation": "- Print copies of the Problem Solving with AI Unit Guide (one for each student)",
         "student_overview": "**How can I use AI effectively?**\n\nExplore how AI predicts responses and practice crafting better prompts to get more useful AI-generated answers."
       },
       "seeding_key": {
@@ -2799,7 +2798,7 @@
       "key": "582823f9-b949-4afe-b75e-676f68637275",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Engage students in critical thinking about AI hallucinations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a moment to think about the Question of the Day before sharing with a partner. Encourage them to use specific examples from the lesson, such as case studies or AI-generated errors they encountered.\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to take a minute to write a response to the Question of the Day in their Unit Guide. Encourage them to use specific examples from the lesson, such as case studies or AI-generated errors they encountered.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Engage students in critical thinking about AI hallucinations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a moment to think about the Question of the Day before sharing with a partner. Encourage them to use specific examples from the lesson, such as case studies or AI-generated errors they encountered. Popcorn out the question with the class and get student perspectives.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
