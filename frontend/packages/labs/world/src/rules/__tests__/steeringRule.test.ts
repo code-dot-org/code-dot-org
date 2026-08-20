@@ -8,7 +8,9 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {buildDomainPalette} from '../../blockly/domainBlocks';
 import {parseRuleMeta} from '../../blockly/ruleMeta';
+import {registerProjectRules} from '../../blockly/ruleRegistry';
 import {steeringRule, stockRule} from '../stock';
 
 const meta = parseRuleMeta('rules/steering', steeringRule)!;
@@ -93,5 +95,72 @@ describe('rules/steering.rule', () => {
 
     expect(shelved?.provides).toEqual(['Chases', 'Flees']);
     expect(shelved?.description).toContain('distance');
+  });
+});
+
+describe('passing an actor into one of its own queries', () => {
+  // The bug the demo spike found, and it had shipped. A parameter typed `actor`
+  // takes ONE, and what is plugged into it may hold several: `any ⟨Coin⟩` does,
+  // and so does any `actor`-typed PROPERTY, which `Traited.coerce` stores as a
+  // list whatever it was handed.
+  //
+  // Read raw, the query's body then called `.get` on an array — so Steering's
+  // own chase step, passing `actor to chase` into `distance from ⟨a⟩ to ⟨b⟩`,
+  // crashed the instant a chaser had something to chase. Every test passed:
+  // nothing here runs a rule, and the reimplementations the engine tests use
+  // are not the rules that ship.
+  /**
+   * Emit the `distance from ⟨a⟩ to ⟨b⟩` call.
+   *
+   * `many` names the sockets holding a value that could be several. That is a
+   * question about the BLOCK plugged in rather than about its code
+   * (`manyActors`), so the stub has to answer it — `any ⟨kind⟩` is the
+   * shortest thing that does.
+   */
+  const call = (values: Record<string, string>, many: string[] = []) => {
+    registerProjectRules([meta]);
+    const palette = buildDomainPalette([meta], {
+      ownRuleModule: 'rules/steering',
+    });
+    const block = palette.blocks.find(one =>
+      one.type.includes('DistanceFromToQuery'),
+    );
+    const [code] = block!.generator.javascript(
+      {
+        getFieldValue: () => '',
+        getInputTargetBlock: (name: string) =>
+          many.includes(name) ? {type: 'world_actor_kind'} : null,
+      } as never,
+      {
+        valueToCode: (_b: unknown, name: string) => values[name] ?? '',
+        definitions_: {},
+      } as never,
+      {} as never,
+    ) as [string, number];
+    return code;
+  };
+
+  it('reads a many-valued argument as one actor', () => {
+    // `WorldLab.one` is the language's own rule for a value read of several
+    // (specs/ACTOR_LISTS.md) — the same thing every built-in getter beside
+    // these already did, which is why Camera Follow escaped by reading its
+    // target through `x position of`.
+    const code = call({A: 'actor', B: 'actor.get(ActorToChaseProperty)'}, [
+      'B',
+    ]);
+
+    expect(code).toContain('WorldLab.one(actor.get(ActorToChaseProperty))');
+  });
+
+  it('leaves a single actor alone', () => {
+    // The wrapper is for values that could hold several. A loop variable or
+    // `this actor` is one already, and wrapping it would be noise in code a
+    // learner can open.
+    expect(call({A: 'actor', B: 'other'})).toContain('other');
+    expect(call({A: 'actor', B: 'other'})).not.toContain('WorldLab.one(other)');
+  });
+
+  it('still defaults an empty socket to the subject', () => {
+    expect(call({})).toContain('actor');
   });
 });
