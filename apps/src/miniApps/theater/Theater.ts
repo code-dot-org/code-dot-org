@@ -95,7 +95,12 @@ export default class Theater extends MiniApp {
   ) => void;
   private readonly onOutputVisibleChange?: (isVisible: boolean) => void;
   private readonly onMediaLoadError?: MediaLoadErrorCallback;
-  private loadEventsFinished: number;
+  // Playback starts once both the visual and the audio are ready, where ready
+  // audio means a loaded track or the NO_AUDIO signal. Each signal clears its
+  // own flag, so a second publish waits for its own media instead of riding on
+  // what the first one loaded.
+  private isVisualLoaded: boolean;
+  private isAudioReady: boolean;
   private prompterUploadUrl: string | null;
   private hasAudio: boolean;
   private hasMedia: boolean;
@@ -126,7 +131,8 @@ export default class Theater extends MiniApp {
     this.onJavabuilderMessage = onJavabuilderMessage;
     this.onOutputVisibleChange = onOutputVisibleChange;
     this.onMediaLoadError = onMediaLoadError;
-    this.loadEventsFinished = 0;
+    this.isVisualLoaded = false;
+    this.isAudioReady = false;
     this.prompterUploadUrl = null;
     this.hasAudio = false;
     this.hasMedia = false;
@@ -148,10 +154,14 @@ export default class Theater extends MiniApp {
         this.hasAudio = true;
         this.hasMedia = true;
         this.isPlaybackPending = true;
+        this.isAudioReady = false;
         this.audioSource.set(data.detail.url);
         const audioElement = this.getAudioElement();
         if (audioElement) {
-          audioElement.oncanplaythrough = () => this.startPlayback();
+          audioElement.oncanplaythrough = () => {
+            this.isAudioReady = true;
+            this.startPlayback();
+          };
           audioElement.onerror = () => this.handleMediaLoadError('audio');
         }
         break;
@@ -161,10 +171,14 @@ export default class Theater extends MiniApp {
         this.hasMedia = true;
         this.isPlaybackPending = true;
         this.visualDurationMs = data.detail.durationMs ?? null;
+        this.isVisualLoaded = false;
         this.imageSource.set(data.detail.url);
         const imageElement = this.getImgElement();
         if (imageElement) {
-          imageElement.onload = () => this.startPlayback();
+          imageElement.onload = () => {
+            this.isVisualLoaded = true;
+            this.startPlayback();
+          };
           imageElement.onerror = () => this.handleMediaLoadError('video');
         }
         break;
@@ -176,8 +190,9 @@ export default class Theater extends MiniApp {
         break;
       }
       case TheaterSignalType.NO_AUDIO: {
-        // there is no audio associated with the video, trigger startPlayback so we don't wait for the audio file
+        // there is no audio associated with the video, so nothing to wait for
         this.hasAudio = false;
+        this.isAudioReady = true;
         this.startPlayback();
         break;
       }
@@ -187,14 +202,12 @@ export default class Theater extends MiniApp {
   }
 
   startPlayback() {
-    this.loadEventsFinished++;
-    // We expect exactly 2 responses from Javabuilder. One for audio (or the NO_AUDIO signal) and one for video.
-    // Wait for both to respond and load before starting playback.
-    if (this.loadEventsFinished > 1) {
-      this.setOutputVisible(true);
-      const audioElement = this.hasAudio ? this.getAudioElement() : null;
-      this.watchForPlaybackEnd(audioElement, audioElement?.play());
+    if (!this.isVisualLoaded || !this.isAudioReady) {
+      return;
     }
+    this.setOutputVisible(true);
+    const audioElement = this.hasAudio ? this.getAudioElement() : null;
+    this.watchForPlaybackEnd(audioElement, audioElement?.play());
   }
 
   // Watch what is playing so waitUntilPlaybackDone can settle when it ends.
@@ -259,6 +272,11 @@ export default class Theater extends MiniApp {
     if (this.isAudioPlaying || this.isVisualPlaying) {
       return;
     }
+    // A publish still loading is playback that has not started yet, so the one
+    // it replaces must not declare the run's playback over on its way out.
+    if (!this.isVisualLoaded || !this.isAudioReady) {
+      return;
+    }
     this.settlePlayback();
   }
 
@@ -281,7 +299,6 @@ export default class Theater extends MiniApp {
   }
 
   reset() {
-    this.loadEventsFinished = 0;
     this.setOutputVisible(false);
     this.resetAudioAndVideo();
   }
@@ -309,6 +326,8 @@ export default class Theater extends MiniApp {
     this.imageSource.clear();
     this.hasAudio = false;
     this.hasMedia = false;
+    this.isVisualLoaded = false;
+    this.isAudioReady = false;
     this.clearPlaybackTimer();
     this.visualDurationMs = null;
     this.isAudioPlaying = false;

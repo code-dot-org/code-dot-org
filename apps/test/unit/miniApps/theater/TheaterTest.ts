@@ -308,6 +308,25 @@ describe('Theater', () => {
     expect(await isPlaybackDone()).toBe(true);
   });
 
+  it('waits for the second video of a run to load before timing it', async () => {
+    jest.useFakeTimers();
+    playMedia(3000);
+
+    // A scene with no pauses renders a gif of zero length, so its timer would
+    // settle at once if it started before the image loaded.
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image2', durationMs: 0},
+    });
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    jest.advanceTimersByTime(3000);
+    expect(await isPlaybackDone()).toBe(false);
+
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+    jest.advanceTimersByTime(0);
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
   it('waits for the last of two videos published by one run', async () => {
     jest.useFakeTimers();
     playMedia(1000);
