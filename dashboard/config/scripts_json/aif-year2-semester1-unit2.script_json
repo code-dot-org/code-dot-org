@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-18 18:15:22 UTC",
+    "serialized_at": "2026-08-19 22:24:33 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -42,7 +42,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Lesson 1",
+      "name": "What is Machine Learning?",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -89,12 +89,15 @@
     },
     {
       "key": "lesson-4",
-      "name": "Lesson 4",
+      "name": "Prediction Models",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**Why are predictions useful?**\n\nIn this lesson, students explore prediction as a way of navigating uncertainty, taking on the role of a small business owner running an ice cream shop. Students consider the kinds of questions a business owner might want answered and discover that machine learning offers two broad approaches to making predictions: regression, which predicts numerical data, and classification, which predicts categorical data. Students then experiment with a regression model and a classification model of their own, using them to make predictions about the shop.",
+        "preparation": "- Open **Level 1: Regression** and **Level 3: Classification** to preview these widgets for students.",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**Why are predictions useful?**\n\nIn this lesson, you'll explore prediction as a way of navigating uncertainty, taking on the role of a small business owner running an ice cream shop. You'll consider the kinds of questions a business owner might want answered and discover that machine learning offers two broad approaches to making predictions: regression, which predicts numerical data, and classification, which predicts categorical data. You'll then experiment with using a regression model and a classification model to make predictions about the shop."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -119,12 +122,15 @@
     },
     {
       "key": "lesson-6",
-      "name": "Lesson 6",
+      "name": "Testing Regression Models",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**How do I know if one regression model is better than another?**\n\nIn this lesson, students learn how to test and compare regression models. Students begin by informally judging two regression models against a set of data points, then confront the question of how to make that judgment precise. They then invent their own ways to quantify a model's \"loss\"—the errors it makes—and discover why some approaches can be misleading. Finally, they translate their thinking into Python by writing a loss function that compares two linear regression models on data of their choice, using the results to decide which model makes better predictions.",
+        "preparation": "- Print copies of the Exploring Loss Activity Guide (one for each student)",
+        "student_overview": "**How do I know if one regression model is better than another?**\n\nIn this lesson, you'll learn how to test and compare regression models. You'll begin by informally judging two regression models against a set of data points, then confront the question of how to make that judgment precise. You'll then invent your own ways to quantify a model's \"loss\"—the errors it makes—and discover why some approaches can be misleading. Finally, you'll translate your thinking into Python by writing a loss function that compares two linear regression models on data of your choice, using the results to decide which model makes better predictions."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -179,12 +185,15 @@
     },
     {
       "key": "lesson-10",
-      "name": "Lesson 10",
+      "name": "Sensing the World",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**What does the world look like to a computer?**\n\nIn this lesson, students are introduced to how computers sense the world. Students first consider how computers \"see.\" They explore how a grid of bits can represent an image, coming to understand that computers sense the world through numeric representations. Students then consider how computers \"hear.\" They take on the problem of helping a computer tell two instruments apart, learning that the way a computer senses the world is determined by the way humans choose to represent it. As students build their own simple classifier, they see how those choices shape how well a computer can distinguish one instrument from another.",
+        "preparation": "- Print copies of the Seeing Through Bits Activity Guide (one for every two students). Optionally print copies of each variation, so different groups reveal different images.",
+        "student_overview": "**What does the world look like to a computer?**\n\nIn this lesson, you're learn how computers sense the world. You'll first consider how computers \"see,\" then consider how computers \"hear.\" You'll then take on the problem of helping a computer tell two instruments apart, learning that the way a computer senses the world is determined by the way humans choose to represent it."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -285,10 +294,124 @@
       "key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "831a929f-d04f-490b-8d69-b559778be3d2",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "831a929f-d04f-490b-8d69-b559778be3d2",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "3aebda17-a3e5-475d-a765-c6f54540abdb",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3aebda17-a3e5-475d-a765-c6f54540abdb",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "ef50655a-43c8-4d95-8df3-a469d0e241b7",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef50655a-43c8-4d95-8df3-a469d0e241b7",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "99d21aa1-9cc5-420e-975b-533d122b02f0",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "e2877047-ef1e-4fef-9cdd-d78cd29c76ba",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e2877047-ef1e-4fef-9cdd-d78cd29c76ba",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2"
       }
@@ -878,13 +1001,1083 @@
       }
     },
     {
-      "key": "e6bd4fa0-d505-4f77-9ff5-5ef14cf7fe0d",
+      "key": "88ae367f-70dd-4d6d-b952-c7123a63d46e",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce this lesson’s Career Journeys connection: small business owners."
       },
       "seeding_key": {
-        "activity_section.key": "e6bd4fa0-d505-4f77-9ff5-5ef14cf7fe0d",
+        "activity_section.key": "88ae367f-70dd-4d6d-b952-c7123a63d46e",
         "lesson_activity.key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f"
+      }
+    },
+    {
+      "key": "09f88682-122a-4fff-aa11-603f541ea843",
+      "position": 2,
+      "properties": {
+        "description": "Today, you’ll get to think like a small business owner. More specifically, you’ll see what it takes to run an ice cream shop!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "09f88682-122a-4fff-aa11-603f541ea843",
+        "lesson_activity.key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f"
+      }
+    },
+    {
+      "key": "3a3a25ef-8052-4d5c-8ee6-7ed813bee6f2",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce students to the typical challenges and uncertainties faced by small business owners.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the “I Bought An Ice Cream Shop” video (0:00–2:34)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The portion of the video that best illustrates the challenges faced by small business owners is the recommended clip: 0:00–2:34. Beyond 2:34, the video begins to explore financial details that may or may not be interesting to your students. The video uses financial terms such as “capital”—a financial resource, such as cash, used to expand a business—and “debt”—money borrowed and later owed to someone else. Consider pausing the video and providing definitions for these terms if you think it’s unlikely your students will be familiar with them."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3a3a25ef-8052-4d5c-8ee6-7ed813bee6f2",
+        "lesson_activity.key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f"
+      }
+    },
+    {
+      "key": "c47b6396-ecee-4531-8d23-5523868eaafd",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce Anita’s Parlor, the business students will make predictions about.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Describe a few of the uncertainties Anita’s Parlor might face.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Motivate business owners’ need for predictions to help them successfully run their business.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prediction*."
+      },
+      "seeding_key": {
+        "activity_section.key": "c47b6396-ecee-4531-8d23-5523868eaafd",
+        "lesson_activity.key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f"
+      }
+    },
+    {
+      "key": "8778083c-a830-4cc8-98be-15aa330d8b6a",
+      "position": 5,
+      "properties": {
+        "description": "Today, we’ll explore different methods of prediction and what they can do to help us address uncertainties—like those faced by small business owners.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8778083c-a830-4cc8-98be-15aa330d8b6a",
+        "lesson_activity.key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f"
+      }
+    },
+    {
+      "key": "9b35fc39-fa02-4223-820c-866d2742d166",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "9b35fc39-fa02-4223-820c-866d2742d166",
+        "lesson_activity.key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f"
+      }
+    },
+    {
+      "key": "15088a27-7b14-4b23-9618-e2bac935fbc9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Prompt students to put themselves in the shoes of a small business owner, illustrating the kinds of uncertainties it’s helpful to make predictions about.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you’re in charge of Anita’s Parlor. Your goal is to make ice cream and sell it for a profit. What uncertainties would it be helpful to make predictions about?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to think like a small business owner, recognizing the many uncertainties it would be helpful to make informed predictions about. Consider starting by having students get into pairs or small groups to discuss. Strong responses will be questions that 1) address something genuinely uncertain about the business, and 2) could be answered with a prediction. For example, “How many customers will buy vanilla ice cream?”. Be aware of students proposing questions that could be answered with a business decision rather than a prediction: for instance, “How much will we charge for ice cream?”. Try reframing such questions so they could be answered by a prediction in the face of uncertainty: for example, “How many people will buy ice cream if we charge $9 per scoop?”. When students have generated six or so useful questions, continue on.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Keep track of students’ questions on the board or another location visible to the whole classroom. You’ll revisit their questions in this lesson’s activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Transition students from their class-wide discussion into an introduction to methods of making predictions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prediction model*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Transition students from their class-wide discussion into an introduction to methods of making predictions.\n",
+        "duration": "10",
+        "name": "Navigating Uncertainty"
+      },
+      "seeding_key": {
+        "activity_section.key": "15088a27-7b14-4b23-9618-e2bac935fbc9",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "b48dfba0-b063-4c44-96b0-ff44bceaf7ee",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to regression through a hands-on exploration of Anita’s ice cream shop data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *regression*.",
+        "duration": "8",
+        "name": "Regression"
+      },
+      "seeding_key": {
+        "activity_section.key": "b48dfba0-b063-4c44-96b0-ff44bceaf7ee",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "0334185d-b184-4c65-b8a2-2590cb9a5606",
+      "position": 3,
+      "properties": {
+        "description": "Remember that numerical data is data where each value is a number.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0334185d-b184-4c65-b8a2-2590cb9a5606",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "6c03a2e1-7720-4d1b-a33c-aa4057c90efa",
+      "position": 4,
+      "properties": {
+        "description": "We’ve learned that regression is a method used to predict numerical data. Suppose Anita’s Parlor wants to answer this question: ‘Based on today’s temperature, how many customers should I expect?’ This question is an example of one that could be answered with regression: it asks us to predict a number.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6c03a2e1-7720-4d1b-a33c-aa4057c90efa",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "a27f6fb3-7e95-41c9-ad4c-1c9a7c716d6a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly preview the regression widget students will explore on their own."
+      },
+      "seeding_key": {
+        "activity_section.key": "a27f6fb3-7e95-41c9-ad4c-1c9a7c716d6a",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "803228a2-e406-4c90-974c-724c212ce626",
+      "position": 6,
+      "properties": {
+        "description": "It’s time for you to explore regression on your own!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "803228a2-e406-4c90-974c-724c212ce626",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "12087aa2-11b5-4c99-8d76-8bcaef507a17",
+      "position": 7,
+      "properties": {
+        "progression_name": "Regression"
+      },
+      "seeding_key": {
+        "activity_section.key": "12087aa2-11b5-4c99-8d76-8bcaef507a17",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "85c4425c-7d1b-4bfa-a59a-e7fc2cb5cd84",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Levels 1–2.\n- **Level 1:** Students tinker with a regression model, using it to predict how many customers will arrive at Anita’s Parlor given a certain temperature.\n- **Level 2:** Students reflect on their experience in Level 1 and evaluate the regression model in simple terms."
+      },
+      "seeding_key": {
+        "activity_section.key": "85c4425c-7d1b-4bfa-a59a-e7fc2cb5cd84",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "80e8c4c6-1165-434e-b58c-059bfeb3ace3",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to classification through a hands-on exploration of Anita’s ice cream shop data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define classification.",
+        "duration": "7",
+        "name": "Classification"
+      },
+      "seeding_key": {
+        "activity_section.key": "80e8c4c6-1165-434e-b58c-059bfeb3ace3",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "ab991c08-73a5-4665-b8d8-166ac6bf4200",
+      "position": 10,
+      "properties": {
+        "description": "Remember that categorical data is data that represents a category. Classification is used when we’re trying to put some data into defined categories.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab991c08-73a5-4665-b8d8-166ac6bf4200",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "ca946e31-4137-4467-a945-fe24557dc939",
+      "position": 11,
+      "properties": {
+        "description": "We’ve learned that classification is a method used to predict categorical data. The simplest scenario for this involves just 2 classes, so that’s what we’ll start with in this lesson. Suppose Anita’s Parlor wants to answer this question: ‘Will this customer leave a positive review?’ This question is an example of one that could be answered with classification: it asks us to predict a category—’yes’ or ‘no.’",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ca946e31-4137-4467-a945-fe24557dc939",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "e5b79663-53f9-473d-bdd5-dd7e84c81b6f",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate the example of classification students will explore on their own. Aim to demonstrate how to use the widget while saving most of the exploration for students themselves.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider clarifying to students that classification can involve more than two categories. For simplicity, the examples they’ve seen in this lesson include only two categories—but classification tasks often involve two or more categories."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e5b79663-53f9-473d-bdd5-dd7e84c81b6f",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "60cf67c7-b0ff-4343-a7e0-e6ca9bf20753",
+      "position": 13,
+      "properties": {
+        "description": "It’s time for you to explore classification on your own!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "60cf67c7-b0ff-4343-a7e0-e6ca9bf20753",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "ef9de551-01b5-4bff-ba1f-90c9b5a102ce",
+      "position": 14,
+      "properties": {
+        "progression_name": "Classification"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef9de551-01b5-4bff-ba1f-90c9b5a102ce",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "914f85ee-3abb-4899-b9f0-11b695108c95",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Levels 3–5.\n- **Level 3:** Students tinker with a classification model, using it to predict whether a customer will leave a positive review.\n- **Level 4:** Students reflect on their experience in Level 3 and hypothesize about how the classification model made its predictions.\n- **Level 5:** Students label scenarios as examples of classification or regression.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 5 as an assessment opportunity to check whether students understand the difference between classification and regression."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "914f85ee-3abb-4899-b9f0-11b695108c95",
+        "lesson_activity.key": "b82eca85-19f5-4b0a-beb4-63c96a4d3671"
+      }
+    },
+    {
+      "key": "909b567f-f0b7-4a0b-b81e-1b78e024e86d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Revisit the questions faced by Anita’s Parlor you brainstormed as a class. Invite students to use their new knowledge of classification and regression to identify which kind of prediction might help them answer each question. Once students have worked with a partner, invite them to share out their thoughts with the class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider revisiting each question from the prior discussion one by one. For each, ask the class if they think it’s a question that could be answered with classification or regression. Use mistakes as opportunities to reinforce the definitions of classification and regression students have learned."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "909b567f-f0b7-4a0b-b81e-1b78e024e86d",
+        "lesson_activity.key": "831a929f-d04f-490b-8d69-b559778be3d2"
+      }
+    },
+    {
+      "key": "d7fd20c4-7f1c-4102-8555-ca58d5726028",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "d7fd20c4-7f1c-4102-8555-ca58d5726028",
+        "lesson_activity.key": "831a929f-d04f-490b-8d69-b559778be3d2"
+      }
+    },
+    {
+      "key": "54c2f389-48f1-4e9c-8a9c-4ec0c9b14f41",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to the concept of loss by inviting them to take sides in a debate.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario."
+      },
+      "seeding_key": {
+        "activity_section.key": "54c2f389-48f1-4e9c-8a9c-4ec0c9b14f41",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "c7d569fa-4ca7-4c8d-a66e-2c10d6807cf5",
+      "position": 2,
+      "properties": {
+        "description": "Dani and Sasha are debating whose regression model is better.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c7d569fa-4ca7-4c8d-a66e-2c10d6807cf5",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "67bc74a9-b6d6-4207-83c6-6326abadbc71",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Visualize the test data."
+      },
+      "seeding_key": {
+        "activity_section.key": "67bc74a9-b6d6-4207-83c6-6326abadbc71",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "b2436291-5ac8-4bf5-9caa-c20d04291b6f",
+      "position": 4,
+      "properties": {
+        "description": "First, they plot some test data. Each point is an actual outcome their model should predict.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b2436291-5ac8-4bf5-9caa-c20d04291b6f",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "ec9c609b-7257-48ef-8bab-7b27e502472a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show Dani’s model."
+      },
+      "seeding_key": {
+        "activity_section.key": "ec9c609b-7257-48ef-8bab-7b27e502472a",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "d6b8a281-b1e0-4782-b1ad-09e892695a19",
+      "position": 6,
+      "properties": {
+        "description": "It seems like Dani thinks that, because her model gets more predictions correct, hers is the better model.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d6b8a281-b1e0-4782-b1ad-09e892695a19",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "66dc6a9f-d42b-4129-8168-c6dde69d1527",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show Sasha’s model."
+      },
+      "seeding_key": {
+        "activity_section.key": "66dc6a9f-d42b-4129-8168-c6dde69d1527",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "29d7339c-6460-4dbd-b74a-a39ade78804c",
+      "position": 8,
+      "properties": {
+        "description": "Sasha doesn’t seem to care how many predictions her model gets exactly correct, so long as all of its predictions are as close as they can be.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "29d7339c-6460-4dbd-b74a-a39ade78804c",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "e8a6e4dc-0859-4b40-b145-9edf95b1d335",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Whose model—Dani’s or Sasha’s—is better? Why do you think so?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to consider their own, pre-lesson intuitions behind how to compare regression models. Guide students toward the realization that Sasha’s line is, in fact, a better regression model. Strong rationales can vary: students may point out that Sasha’s line better “fits” the data or that Sasha’s line is “closer” to all the data points. If some students argue that Dani’s line is better, acknowledge that—in some circumstances—they could be correct: there may be scenarios where it’s important a model get a few predictions exactly right. However, in most scenarios, it’s better to use a model whose predictions align with an overall trend in the data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *loss*."
+      },
+      "seeding_key": {
+        "activity_section.key": "e8a6e4dc-0859-4b40-b145-9edf95b1d335",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "ab93af70-ed75-47e3-b85a-1c99d6d3da4d",
+      "position": 10,
+      "properties": {
+        "description": "What Dani and Sasha were arguing about was *loss*: how wrong were their models, and whose was less wrong? Turns out there’s rarely a perfect regression model: as you’ll see today, testing regression models is about finding the model with the smallest loss.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab93af70-ed75-47e3-b85a-1c99d6d3da4d",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "feb7f8ea-552b-4dd7-8674-5a9897370306",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "feb7f8ea-552b-4dd7-8674-5a9897370306",
+        "lesson_activity.key": "d17dda5e-bbdb-49ab-be45-5aadc33c0ec4"
+      }
+    },
+    {
+      "key": "4c55b784-6a0a-491e-854b-14295d07c81b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Prompt students to get hands-on with calculating loss and comparing two models formally.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Exploring Loss Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Exploring Loss Activity Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students fill in the Loss column, notice the range of strategies they invent or try. Look especially for students who keep the sign of each difference (i.e., a \"signed loss\" approach): their totals cancel out, so the first model sums to 0. Make a mental note of these students so you can call on them in the following discussion. Also watch for students who are stuck, either because the open-ended directions leave them unsure where to start or because they feel unsure how to turn three rows into one Total Loss. If a student is stuck, ask: \"Pick one row—how far off was the prediction from what actually happened?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you decide to calculate each model’s loss? Why did you decide to do it that way?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get students to put their loss-calculation thinking into words. Most may describe some version of: \"Find how far each prediction is from the actual value, then add up those distances.\" Listen for any student whose method gave the first model a loss of 0. This usually means they used \"signed loss\"—treating an overshoot and an undershoot as canceling each other out. If so, push back: the first model clearly isn't perfect, so a loss of 0 can't be right. Use that contradiction to motivate \"absolute loss\", where we count only the distance between a prediction and the actual value.",
+        "duration": "15",
+        "name": "Exploring Loss"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c55b784-6a0a-491e-854b-14295d07c81b",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "126449af-e13f-499e-a6b3-8bf0df4b1071",
+      "position": 2,
+      "properties": {
+        "description": "Now that we’ve explored ways to calculate loss, let’s introduce some vocabulary to describe what we’ve just learned.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "126449af-e13f-499e-a6b3-8bf0df4b1071",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "c7f1fbcf-6167-4a1d-8ea9-a484c5dec927",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *test data*."
+      },
+      "seeding_key": {
+        "activity_section.key": "c7f1fbcf-6167-4a1d-8ea9-a484c5dec927",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "4d7e0844-2e6b-4433-af73-4d30e408629d",
+      "position": 4,
+      "properties": {
+        "description": "Test data is the data we use to assess a model’s loss. It’s kept separate from training data, which is the data we use to train a model. It’s important to test a model on data it has never \"seen\" before—that way, we can get a better sense of how the model performs in the real world.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you define test data and the following vocabulary terms, consider pointing students to the relevant aspects of their Activity Guide so they can see these terms concretely. For test data, consider pointing students to the dots on the chart in their Activity Guide as an example."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d7e0844-2e6b-4433-af73-4d30e408629d",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "60cca803-97f1-4eb1-ac97-6c0207a1748d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *loss function*."
+      },
+      "seeding_key": {
+        "activity_section.key": "60cca803-97f1-4eb1-ac97-6c0207a1748d",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "f46f0608-11ae-4680-aeae-5a48d8244361",
+      "position": 6,
+      "properties": {
+        "description": "*Loss function* is just a formal word for what we’ve been talking about already: a loss function describes how we should calculate a model’s loss to help a model learn to get better. There are many different loss functions—that is, ways to calculate a model’s loss. We’ve been talking about one in particular…",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider pointing students to the place they calculated loss in their Activity Guide. What they did in that section represents a loss function: they chose a way to calculate a model’s loss."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f46f0608-11ae-4680-aeae-5a48d8244361",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "9804db1e-6c33-4cc3-b341-f2f891129b60",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *absolute loss*. Indicate that absolute loss is one possible loss function."
+      },
+      "seeding_key": {
+        "activity_section.key": "9804db1e-6c33-4cc3-b341-f2f891129b60",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "c6a7f2ef-7593-4109-8e5d-62a686bf4bbb",
+      "position": 8,
+      "properties": {
+        "description": "Absolute loss is one way to calculate a model’s loss. It simply looks at the distance between what a model should have predicted and what it actually predicted. Absolute loss is a loss function. It’s the one we’ll implement in code next.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider pointing students to the Prediction and Actual values in the table of their Activity Guide. Absolute loss describes calculating the distance between the Prediction and Actual values. Point out that distance can never be negative. A prediction of 1 and 3 are the same distance from the actual value 2: that distance is 1."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c6a7f2ef-7593-4109-8e5d-62a686bf4bbb",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "9a7054bd-6b91-41b3-952e-2b5a65ee00aa",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Invite students to put their loss-calculation thinking into Python code, then use it to compare two models that make predictions about data of their choice.",
+        "duration": "15",
+        "name": "Comparing Models"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a7054bd-6b91-41b3-952e-2b5a65ee00aa",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "1fe3e7bc-4168-4d6e-bf44-ac074477e8fb",
+      "position": 10,
+      "properties": {
+        "progression_name": "Writing a Loss Function"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fe3e7bc-4168-4d6e-bf44-ac074477e8fb",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "1b4e9eac-dbee-4b7d-9109-892f237f00c5",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Levels 1–2.\n- **Level 1:** Students use AI to implement an absolute loss function in Python code. They see how their loss function is used to compare two different models.\n- **Level 2:** Students complete a Check Your Understanding that asks them to choose which model in Level 1 was better, and to express their thinking in terms of their loss function.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, check on their comfort with loss functions and with translating their ideas into code.\n- Some students may be stuck on how to prompt AI. Have them say aloud how to calculate absolute loss, then type that same explanation as their prompt.\n- Some students might have AI-generated code that doesn’t match what they’ve described. Prompt students to read their code back: “Does this do what you wanted? How can you tell?”",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 2 as an assessment opportunity to check whether students can define what makes one regression model better than another, and whether they can express their thinking in terms of the loss they calculated. Look for answers that both correctly identify the better model and describe its lower loss as a reason it’s better. If students misidentify the better model, or fail to bring loss calculation into their rationale, consider prompting students to explain their loss function in their own words, pointing out how it helps them judge which model is better."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1b4e9eac-dbee-4b7d-9109-892f237f00c5",
+        "lesson_activity.key": "7f1fe8b8-9ffb-4731-875b-d4a542c6109f"
+      }
+    },
+    {
+      "key": "e4fb52b4-5642-4311-8212-661a54499773",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A common answer to this question might be: “We can only know relative to the loss function we’re using.” This answer might open up further questions: how do we choose a good loss function? If you’re feeling comfortable and there’s additional time, consider facilitating a discussion around this question. If the question feels too advanced for now, it will be explored in more depth in Unit 4."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e4fb52b4-5642-4311-8212-661a54499773",
+        "lesson_activity.key": "3aebda17-a3e5-475d-a765-c6f54540abdb"
+      }
+    },
+    {
+      "key": "fca92710-2110-4dff-9369-2c9442a94fa5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "fca92710-2110-4dff-9369-2c9442a94fa5",
+        "lesson_activity.key": "3aebda17-a3e5-475d-a765-c6f54540abdb"
+      }
+    },
+    {
+      "key": "d2fdc287-9cae-4c92-af9c-cc17413bda9d",
+      "position": 1,
+      "properties": {
+        "description": "Machine learning helps computers sense, and make sense of, the world around us. Today, we’ll explore how computers can learn to \"see\" and \"hear.\" Let’s look at an example of an autonomous robot, called Atlas, which seems to sense the world around itself much like a human would.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d2fdc287-9cae-4c92-af9c-cc17413bda9d",
+        "lesson_activity.key": "ef50655a-43c8-4d95-8df3-a469d0e241b7"
+      }
+    },
+    {
+      "key": "ae074cfb-fcd9-44f1-baa6-90408f135da4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt to think to themselves as they watch: “What senses would Atlas need to navigate the world around it?”\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Atlas Gets a Grip” video.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What senses do you think Atlas needs to sense the world around it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface students’ thoughts after watching the video. Strong responses will relate the tasks Atlas performed—placing a wooden board, grabbing a bag, doing a backflip—with senses that help perform them: sight, touch, balance, and more. If students aren’t sure, consider prompting them with a follow-up question: “What senses would be helpful for you to perform the tasks you saw Atlas perform?” Once students have named a few senses they think Atlas might have, move on to the next part of the lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *multimodal model*."
+      },
+      "seeding_key": {
+        "activity_section.key": "ae074cfb-fcd9-44f1-baa6-90408f135da4",
+        "lesson_activity.key": "ef50655a-43c8-4d95-8df3-a469d0e241b7"
+      }
+    },
+    {
+      "key": "6857c94d-57f9-4946-8816-49f1ef3295f2",
+      "position": 3,
+      "properties": {
+        "description": "Today is all about how AI systems can sense the world in many different ways. We’ll focus in particular on images and sound.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6857c94d-57f9-4946-8816-49f1ef3295f2",
+        "lesson_activity.key": "ef50655a-43c8-4d95-8df3-a469d0e241b7"
+      }
+    },
+    {
+      "key": "dabef32d-e963-4d70-b04c-df094e47422e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "dabef32d-e963-4d70-b04c-df094e47422e",
+        "lesson_activity.key": "ef50655a-43c8-4d95-8df3-a469d0e241b7"
+      }
+    },
+    {
+      "key": "44a6b6b4-ae21-4d36-a5b3-24b73898cc74",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** By exploring how computers ‘see,’ students learn that computers don’t sense the world in the same way humans do: rather, they sense the world through numeric representations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use what students saw in the \"Atlas Gets a Grip\" video to motivate an exploration of how computers see.",
+        "duration": "15",
+        "name": "Seeing"
+      },
+      "seeding_key": {
+        "activity_section.key": "44a6b6b4-ae21-4d36-a5b3-24b73898cc74",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "ad6193f0-2caa-4911-abd9-14af96807358",
+      "position": 2,
+      "properties": {
+        "description": "A robot like Atlas might seem to see the world in a human-like way. But humans and computers see the same world in very different ways.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ad6193f0-2caa-4911-abd9-14af96807358",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "16223719-4390-44ff-a69b-e4e7e50811d9",
+      "position": 3,
+      "properties": {
+        "description": "A computer has no eyes. It has only numbers: specifically, ones and zeros called bits. Humans and computers see the same world in very different ways.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "16223719-4390-44ff-a69b-e4e7e50811d9",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "f54cd4ad-92b2-41e2-a456-03c9a6dd207f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to find a partner for the Seeing Through Bits Activity Guide.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student pair a copy of the Seeing Through Bits Activity Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are five available variations of the Activity Guide, each revealing a different image. If you want groups to reveal different images, give different groups different variations."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f54cd4ad-92b2-41e2-a456-03c9a6dd207f",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "f0613c43-9722-42a3-8849-716c10bf59f4",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Seeing Through Bits Activity Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students complete the Activity Guide, look for pairs working together to find and fill in the 1’s in the grid. Keep a close eye on students who accidentally misread the instructions—1’s should be colored in black, while 0’s should be white.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal the five possible images students could have revealed (one for each variation of the Activity Guide).\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0613c43-9722-42a3-8849-716c10bf59f4",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "1557e5dc-b179-441c-80fe-497a83d494a4",
+      "position": 6,
+      "properties": {
+        "description": "Though a computer can only 'see' numbers, those numbers can represent something about the world, like light or colors. Computers can then use those numbers to sense the world.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1557e5dc-b179-441c-80fe-497a83d494a4",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "e7b6fc19-88ab-40cf-b697-8f54857dbf01",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define representation."
+      },
+      "seeding_key": {
+        "activity_section.key": "e7b6fc19-88ab-40cf-b697-8f54857dbf01",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "6c96ee3a-81f0-4110-9df0-e7624d9248ee",
+      "position": 8,
+      "properties": {
+        "description": "Remember that in this example, the sequence of numbers represents an entire image.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6c96ee3a-81f0-4110-9df0-e7624d9248ee",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "cd2bae67-63a6-43ef-a492-bde915dd1a44",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What patterns could a computer find in your numbers to recognize what the image is?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Connect the idea of representation to machine learning: when a machine learns to identify something in an image, it’s really learning to find a pattern of numbers that represent that thing. Students don’t need to have specific answers—rather, answers that convey the general idea of recognizing lines, circles, and other patterns suffice to get the point across. Once students have the sense that a computer is looking for patterns in numbers, rather than in some sense of sight, continue on with the Activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the takeaway sentence in their Unit Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "cd2bae67-63a6-43ef-a492-bde915dd1a44",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "6e41c656-9111-479f-a6f5-f7334d085951",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** By exploring how computers ‘hear,’ students come to see that humans choose how to represent the world in terms a computer can understand. They also see that these choices impact how well a computer can sense the world.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the next activity.",
+        "duration": "20",
+        "name": "Hearing"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e41c656-9111-479f-a6f5-f7334d085951",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "a449c461-f671-4eea-8241-1a2d432bd8fc",
+      "position": 11,
+      "properties": {
+        "description": "In a moment, you’ll hear two different instruments. One of them is a cello, and the other is a violin.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a449c461-f671-4eea-8241-1a2d432bd8fc",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "1c83fe32-5767-4999-8c2e-29404a0e7628",
+      "position": 12,
+      "properties": {
+        "description": "Can you guess which is a cello and which is a violin?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1c83fe32-5767-4999-8c2e-29404a0e7628",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "34c5d0c2-cd36-45a1-a415-2bb43c6f4580",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play each of the notes. Let students vote for which is the cello. Then, let students vote for which is the violin.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal which note was played by a cello, and which by a violin. If students aren’t very familiar with cellos and violins, offer a brief explanation of the difference. Both are string instruments, but a cello is a much larger (and deeper-sounding) instrument.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It’s not expected every student know the difference between a cello and a violin. If some students seem confidently correct, or perhaps even play the cello or violin themselves, consider inviting them to share what they know with others."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "34c5d0c2-cd36-45a1-a415-2bb43c6f4580",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "2fc26a19-f34d-4826-b4c5-7cf91889562c",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Suppose we want a computer to \"hear\" a sound and figure out what instrument made it. What would be helpful for a computer to sense in order to do so?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to identify features of the instruments that distinguish them. As students bring up ideas, ask them to think about how they would measure these features numerically, going back to the idea that computers really only understand numbers."
+      },
+      "seeding_key": {
+        "activity_section.key": "2fc26a19-f34d-4826-b4c5-7cf91889562c",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "1617a338-e737-4fce-8444-dafad52db611",
+      "position": 15,
+      "properties": {
+        "description": "Here’s one way a computer can 'hear' sound. These are spectrograms of each note. Spectrograms visualize how loud a sound’s frequencies are over time. 'Frequency' means how high- or low-pitched a sound is. In a spectrogram, louder frequencies are darker. Quieter frequencies are lighter.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1617a338-e737-4fce-8444-dafad52db611",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "42ca7b82-e749-4452-9516-7340403e6aa1",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What differences do you see between the spectrograms of the cello and the violin?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students toward the realization that—generally speaking—violins tend to play higher notes, and thus have a higher frequency, than cellos. It’s okay if students don’t use precise language: they could say, for instance, that the cello’s spectrogram is “darker on the bottom” or the violin’s is “darker toward the top.” Try to interpret students’ imprecise language more precisely: you could respond by saying, “You’re right, the cello does have a darker part on the bottom. That means this cello is playing at a lower frequency, which means it will sound lower pitched to us.”\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Emphasize that, to translate sound into something a computer can understand, humans make choices about what features of the sound to capture numerically."
+      },
+      "seeding_key": {
+        "activity_section.key": "42ca7b82-e749-4452-9516-7340403e6aa1",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "fa3f33cc-03fe-4b3c-bce9-71585faa48c1",
+      "position": 17,
+      "properties": {
+        "description": "To represent each note, we’ll need to choose the features we think are most important for the computer to sense.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fa3f33cc-03fe-4b3c-bce9-71585faa48c1",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "c83767d1-9329-4ec3-b2a2-584242f27cda",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Preview how students will work with these features in Python code."
+      },
+      "seeding_key": {
+        "activity_section.key": "c83767d1-9329-4ec3-b2a2-584242f27cda",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "86169518-afca-4f1a-9a55-462798be71a8",
+      "position": 19,
+      "properties": {
+        "description": "In Python, we can represent each note as a dictionary with these features.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "86169518-afca-4f1a-9a55-462798be71a8",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "6e37f3d5-3f16-4fa5-9bff-d96f2e7a092d",
+      "position": 20,
+      "properties": {
+        "description": "Remember a dictionary has keys, like 'volume,' and 'frequency.'",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6e37f3d5-3f16-4fa5-9bff-d96f2e7a092d",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "7b7cbbcf-3554-44a2-a27c-ba2e85a36aa8",
+      "position": 21,
+      "properties": {
+        "description": "These keys have values, like 300 and 60.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7b7cbbcf-3554-44a2-a27c-ba2e85a36aa8",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "871a4cdc-538f-4135-8572-bb356bbd20be",
+      "position": 22,
+      "properties": {
+        "description": "To access a value from a dictionary, use its key. Write the key’s name in square brackets after the dictionary’s name.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "871a4cdc-538f-4135-8572-bb356bbd20be",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "fd7a67a3-2085-45c0-a584-a10ffc53f915",
+      "position": 23,
+      "properties": {
+        "description": "Now, you’ll write a simple program to help a computer hear the difference between a violin and a cello.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fd7a67a3-2085-45c0-a584-a10ffc53f915",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "f9691c10-6ea7-4e57-96db-59bad03fe8ad",
+      "position": 24,
+      "properties": {
+        "progression_name": "Choosing Representations (Part 1)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f9691c10-6ea7-4e57-96db-59bad03fe8ad",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "8cfb9c0a-fbd3-430e-9540-adc781b6fa84",
+      "position": 25,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1.\n- **Level 1:** Students write a simple conditional to classify cellos and violins by their frequency and volume. However, they should notice that their classifier doesn’t do very well when it can only sense frequency: sometimes, cellos and violins can play at the same frequency—for example, if they play the same note.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write Python code, look for:\n- **Level 1:** Help students use the new syntax they’ve learned to access the values of a Python dictionary. If necessary, prompt them to use AI tutor for assistance. In addition, guide students toward the realization that they could write a simple conditional to make a prediction based on a note’s frequency. Encourage students to try many variations on their conditional, testing their classifier many times.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Debrief student’s first attempt at a classifier that can only sense frequency and volume. Explain why frequency and volume aren’t enough to build a reliable classifier."
+      },
+      "seeding_key": {
+        "activity_section.key": "8cfb9c0a-fbd3-430e-9540-adc781b6fa84",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "d49026fb-45c7-45fa-bee5-db4ab3b1955f",
+      "position": 26,
+      "properties": {
+        "description": "If a cello and violin play the same note, each will have the same frequency. And, neither instrument tends to be louder than the other.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d49026fb-45c7-45fa-bee5-db4ab3b1955f",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "b70a2fc2-257c-43be-93be-91d8024bd7a1",
+      "position": 27,
+      "properties": {
+        "description": "Look again at the spectrograms of a cello and a violin. What else do you notice?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b70a2fc2-257c-43be-93be-91d8024bd7a1",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "ef31e045-a283-4b76-bbc8-9864d1e31a68",
+      "position": 28,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Guide students toward noticing that the violin’s spectrogram is darker overall, and that it has more visible bands of frequencies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal that the violin’s spectrogram has more stacked bands of frequencies than the cello’s."
+      },
+      "seeding_key": {
+        "activity_section.key": "ef31e045-a283-4b76-bbc8-9864d1e31a68",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "3cdbc690-04b2-43e5-b325-bd1f8a41f3be",
+      "position": 29,
+      "properties": {
+        "description": "The violin’s spectrogram has many more visible, stacked bands of frequencies. The cello’s has fewer, fainter bands. More stacked bands of frequencies make an instrument sound brighter, not just higher-pitched. That makes sense for a violin: a violin is typically used to play bright melodies.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3cdbc690-04b2-43e5-b325-bd1f8a41f3be",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "8ca1fa8f-08ec-471d-9d2b-d0231fa1a725",
+      "position": 30,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Describe why choosing to add a brightness feature can help students build a better classifier."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ca1fa8f-08ec-471d-9d2b-d0231fa1a725",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "efbd18b4-abee-43bd-8ac4-d41d5c88548b",
+      "position": 31,
+      "properties": {
+        "description": "Choosing to add a brightness feature may help a computer tell apart the instruments. We know that violins will have a brighter sound than cellos.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "efbd18b4-abee-43bd-8ac4-d41d5c88548b",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "05c69105-3c78-4670-bcd7-a225431c44b4",
+      "position": 32,
+      "properties": {
+        "description": "Now, update your classifier to take brightness into account.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "05c69105-3c78-4670-bcd7-a225431c44b4",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "75823313-3dc7-4f9c-b8a2-4e300e927526",
+      "position": 33,
+      "properties": {
+        "progression_name": "Choosing Representations (Part 2)"
+      },
+      "seeding_key": {
+        "activity_section.key": "75823313-3dc7-4f9c-b8a2-4e300e927526",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "896cbe12-6be1-4d2b-92a5-19c1e9aecec6",
+      "position": 34,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Levels 2–3.\n- **Level 2:** Students get access to a new feature, \"brightness.\" Students see that this feature, combined with frequency, helps their classifier better distinguish between cellos and violins.\n- **Level 3:** Students complete a Check Your Understanding that asks them about why their classifier was improved by the addition of brightness.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write Python code, look for:\n- **Level 2:** Encourage students to again explore many variations on their classifier, aiming to classify as many notes correctly as they can. If students tweak their classifier correctly, they’ll be able to successfully classify 90%+ of the notes. Also remind students they can use nested conditionals to take both brightness and frequency into account.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 3 can be used as a formative assessment of this Activity’s key takeaway: that the choices we make about how to represent the world determine how well a computer can make sense of it. Look for students describing how brightness has some predictive power when combined with frequency: we know that violins tend both to play higher notes and to sound brighter. When a computer has access to both of these senses, it’s able to make better predictions than with access to only one."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "896cbe12-6be1-4d2b-92a5-19c1e9aecec6",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "6d21e5e7-2bd2-473e-86cc-5ef9865428f7",
+      "position": 35,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the takeaway sentences in their Unit Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "6d21e5e7-2bd2-473e-86cc-5ef9865428f7",
+        "lesson_activity.key": "99d21aa1-9cc5-420e-975b-533d122b02f0"
+      }
+    },
+    {
+      "key": "aa8ad152-253d-4c96-a529-845f2019928b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "aa8ad152-253d-4c96-a529-845f2019928b",
+        "lesson_activity.key": "e2877047-ef1e-4fef-9cdd-d78cd29c76ba"
       }
     }
   ],
@@ -915,7 +2108,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Doodle Identifier"
       },
@@ -939,19 +2132,218 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Regression"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Classification"
+          "aif-y2-machine-learning-fundamentals-lesson4-level1-2026"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2",
-        "activity_section.key": "e6bd4fa0-d505-4f77-9ff5-5ef14cf7fe0d"
+        "activity_section.key": "12087aa2-11b5-4c99-8d76-8bcaef507a17"
       },
       "level_keys": [
-        "Classification"
+        "aif-y2-machine-learning-fundamentals-lesson4-level1-2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Regression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson4-level2-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "12087aa2-11b5-4c99-8d76-8bcaef507a17"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson4-level2-2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Classification"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson4-level3-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "ef9de551-01b5-4bff-ba1f-90c9b5a102ce"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson4-level3-2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Classification"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson4-level4-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "ef9de551-01b5-4bff-ba1f-90c9b5a102ce"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson4-level4-2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Classification"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson4-level5-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "ef9de551-01b5-4bff-ba1f-90c9b5a102ce"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson4-level5-2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Writing a Loss Function"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson6-level1-2026"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "1fe3e7bc-4168-4d6e-bf44-ac074477e8fb"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson6-level1-2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Writing a Loss Function"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson6-level2-v2-2026"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "1fe3e7bc-4168-4d6e-bf44-ac074477e8fb"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson6-level2-v2-2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Choosing Representations (Part 1)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson10-level1-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "f9691c10-6ea7-4e57-96db-59bad03fe8ad"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson10-level1-2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Choosing Representations (Part 2)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson10-level2-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "75823313-3dc7-4f9c-b8a2-4e300e927526"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson10-level2-2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Choosing Representations (Part 2)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson10-level3-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "75823313-3dc7-4f9c-b8a2-4e300e927526"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson10-level3-2026"
       ]
     }
   ],
@@ -982,18 +2374,279 @@
     },
     {
       "seeding_key": {
-        "level.key": "Classification",
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson4-level1-2026",
         "script_level.level_keys": [
-          "Classification"
+          "aif-y2-machine-learning-fundamentals-lesson4-level1-2026"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2",
-        "activity_section.key": "e6bd4fa0-d505-4f77-9ff5-5ef14cf7fe0d"
+        "activity_section.key": "12087aa2-11b5-4c99-8d76-8bcaef507a17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson4-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson4-level2-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "12087aa2-11b5-4c99-8d76-8bcaef507a17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson4-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson4-level3-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "ef9de551-01b5-4bff-ba1f-90c9b5a102ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson4-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson4-level4-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "ef9de551-01b5-4bff-ba1f-90c9b5a102ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson4-level5-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson4-level5-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "ef9de551-01b5-4bff-ba1f-90c9b5a102ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson6-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson6-level1-2026"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "1fe3e7bc-4168-4d6e-bf44-ac074477e8fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson6-level2-v2-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson6-level2-v2-2026"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "1fe3e7bc-4168-4d6e-bf44-ac074477e8fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson10-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson10-level1-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "f9691c10-6ea7-4e57-96db-59bad03fe8ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson10-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson10-level2-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "75823313-3dc7-4f9c-b8a2-4e300e927526"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson10-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson10-level3-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "75823313-3dc7-4f9c-b8a2-4e300e927526"
       }
     }
   ],
   "resources": [
+    {
+      "name": "Exploring Loss",
+      "url": "https://docs.google.com/document/d/1E57-lJEmSXXKJklyGT66G-6K_eR06Bnfq2b2iQysINo/edit?usp=sharing",
+      "key": "exploring_loss",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_loss"
+      }
+    },
+    {
+      "name": "Exploring Loss",
+      "url": "https://docs.google.com/document/d/1pUOuC_59ebp90e8SphVTTw9ZGS1RP7zClENedu7NIR4/edit?usp=sharing",
+      "key": "exploring_loss_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_loss_1"
+      }
+    },
+    {
+      "name": "Prediction Models",
+      "url": "https://docs.google.com/presentation/d/16CIXM92TeskobzPsLbOnIUoMqvyl7vhguR5g96pFK6o/edit?usp=sharing",
+      "key": "prediction_models",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "prediction_models"
+      }
+    },
+    {
+      "name": "Seeing Through Bits",
+      "url": "https://docs.google.com/document/d/15-orA3zXPU74IXL82Xf5oFJae-8CPdXJPlq0-GJFl5s/edit?usp=sharing",
+      "key": "seeing_through_bits",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "seeing_through_bits"
+      }
+    },
+    {
+      "name": "Seeing Through Bits (Variation 1)",
+      "url": "https://docs.google.com/document/d/1LPfEV_3fJpgmG9AidlYMA71nLnVkkiZ3tMXNe9fNjVU/edit?usp=sharing",
+      "key": "seeing_through_bits_variation_1_",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "seeing_through_bits_variation_1_"
+      }
+    },
+    {
+      "name": "Seeing Through Bits (Variation 2)",
+      "url": "https://docs.google.com/document/d/1xttzVHc7GnVzGiUBlWjd2RQqrC0vrp2q69uem5vaydI/edit?usp=sharing",
+      "key": "seeing_through_bits_variation_2_",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "seeing_through_bits_variation_2_"
+      }
+    },
+    {
+      "name": "Seeing Through Bits (Variation 3)",
+      "url": "https://docs.google.com/document/d/1RUt9aiaa7wUBhOQjNoN8PXa9OGpiOI55F6e7kFGJlIY/edit?usp=sharing",
+      "key": "seeing_through_bits_variation_3_",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "seeing_through_bits_variation_3_"
+      }
+    },
+    {
+      "name": "Seeing Through Bits (Variation 4)",
+      "url": "https://docs.google.com/document/d/1VpkxZsoGRrdhe5WTAiqtvFahHzs_MRell8c4yb1eSEM/edit?usp=sharing",
+      "key": "seeing_through_bits_variation_4_",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "seeing_through_bits_variation_4_"
+      }
+    },
+    {
+      "name": "Seeing Through Bits (Variation 5)",
+      "url": "https://docs.google.com/document/d/1bUbFa1C-Hp5CalyafAxOozuuMwPUJ8Uc3mafZBPBkFk/edit?usp=sharing",
+      "key": "seeing_through_bits_variation_5_",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "seeing_through_bits_variation_5_"
+      }
+    },
+    {
+      "name": "Sensing the World",
+      "url": "https://docs.google.com/presentation/d/1PBC__uHGjMEjpMRL8SHeycvDWSR-iCuveXaA2XuYhyE/edit?usp=sharing",
+      "key": "sensing_the_world",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sensing_the_world"
+      }
+    },
+    {
+      "name": "Testing Regression Models",
+      "url": "https://docs.google.com/presentation/d/1J8BURItbJ4_tYieUdiriL1FIgKbA-0LJ8rGMHXV247U/edit?usp=sharing",
+      "key": "testing_regression_models",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "testing_regression_models"
+      }
+    },
     {
       "name": "What is Machine Learning?",
       "url": "https://docs.google.com/presentation/d/1a23EyuLsCa-1zAU7VXjiH13miEK2EjAAocaGb_h99FU/edit?usp=sharing",
@@ -1015,6 +2668,72 @@
         "lesson.key": "lesson-1",
         "resource.key": "what_is_machine_learning_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "seeing_through_bits"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "seeing_through_bits_variation_1_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "seeing_through_bits_variation_2_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "seeing_through_bits_variation_3_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "seeing_through_bits_variation_4_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "seeing_through_bits_variation_5_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "sensing_the_world"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "prediction_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "exploring_loss"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "exploring_loss_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "testing_regression_models"
+      }
     }
   ],
   "scripts_resources": [
@@ -1025,6 +2744,26 @@
   ],
   "vocabularies": [
     {
+      "key": "absolute_loss",
+      "word": "absolute loss",
+      "definition": "the distance between a prediction and an actual value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "absolute_loss"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "classification",
+      "definition": "a type of prediction that predicts categorical data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
       "key": "data",
       "word": "data",
       "definition": "information used to understand the world",
@@ -1032,6 +2771,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "loss",
+      "word": "loss",
+      "definition": "how wrong a model’s predictions are",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loss"
+      }
+    },
+    {
+      "key": "loss_function",
+      "word": "loss function",
+      "definition": "a way of measuring loss to help a model learn",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loss_function"
       }
     },
     {
@@ -1052,6 +2811,66 @@
       },
       "seeding_key": {
         "vocabulary.key": "machine_learning_model"
+      }
+    },
+    {
+      "key": "multimodal_model",
+      "word": "multimodal model",
+      "definition": "an AI system that can process information from multiple types of input.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "multimodal_model"
+      }
+    },
+    {
+      "key": "prediction",
+      "word": "prediction",
+      "definition": "an informed guess about something unknown",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prediction"
+      }
+    },
+    {
+      "key": "prediction_model",
+      "word": "prediction model",
+      "definition": "a machine learning model that makes predictions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prediction_model"
+      }
+    },
+    {
+      "key": "regression",
+      "word": "regression",
+      "definition": "a type of prediction that predicts numerical data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "regression"
+      }
+    },
+    {
+      "key": "representation",
+      "word": "representation",
+      "definition": "a way of describing real-world information with data computers can understand.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "representation"
+      }
+    },
+    {
+      "key": "test_data",
+      "word": "test data",
+      "definition": "the data against which a model’s loss is calculated",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "test_data"
       }
     },
     {
@@ -1105,6 +2924,66 @@
         "lesson.key": "lesson-1",
         "vocabulary.key": "training_data"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "multimodal_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "representation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "prediction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "prediction_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "regression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "absolute_loss"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "loss"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "loss_function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "test_data"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -1122,6 +3001,26 @@
       }
     },
     {
+      "key": "75cc0613-8865-4c60-ae75-5b7741863dda",
+      "properties": {
+        "description": "Identify how prediction models are used in the world."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "75cc0613-8865-4c60-ae75-5b7741863dda"
+      }
+    },
+    {
+      "key": "95a821fe-d031-4525-bec3-703a934a6368",
+      "properties": {
+        "description": "Create a loss function to compare regression models."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "95a821fe-d031-4525-bec3-703a934a6368"
+      }
+    },
+    {
       "key": "963df9a5-8fdd-4ec4-a8f5-48f44b015f9b",
       "properties": {
         "description": "Describe what machine learning is"
@@ -1129,6 +3028,16 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "963df9a5-8fdd-4ec4-a8f5-48f44b015f9b"
+      }
+    },
+    {
+      "key": "a6f8911b-47de-4e3b-907a-55144fe87d79",
+      "properties": {
+        "description": "Describe the difference between classification and regression."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "a6f8911b-47de-4e3b-907a-55144fe87d79"
       }
     }
   ],
@@ -1150,6 +3059,33 @@
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2"
       }
+    },
+    {
+      "level_name": "aif-y2-machine-learning-fundamentals-lesson10-level3-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "level_name": "aif-y2-machine-learning-fundamentals-lesson4-level4-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "level_name": "aif-y2-machine-learning-fundamentals-lesson6-level2-v2-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
     }
   ],
   "learning_goals": [
@@ -1162,6 +3098,45 @@
       "seeding_key": {
         "learning_goal.key": "46058885-4102-4acc-a81f-ec9a8dea2936",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "d396ccd6-a572-46aa-87c2-88db324092b3",
+      "position": 1,
+      "learning_goal": "Applying Predictive Logic",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "d396ccd6-a572-46aa-87c2-88db324092b3",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "d6b8eea2-ce1d-4706-bb08-7b8a82d7a1b5",
+      "position": 1,
+      "learning_goal": "Interpreting Data",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "d6b8eea2-ce1d-4706-bb08-7b8a82d7a1b5",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "d96caa17-3733-43be-ada7-a22eb6914d33",
+      "position": 1,
+      "learning_goal": "Interpreting Data",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "d96caa17-3733-43be-ada7-a22eb6914d33",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2"
       }
@@ -1212,6 +3187,150 @@
         "understanding": 3,
         "learning_goal.key": "46058885-4102-4acc-a81f-ec9a8dea2936",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not answer the question.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "d396ccd6-a572-46aa-87c2-88db324092b3",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student describes an inaccurate relationship between temperature and visitors.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "d396ccd6-a572-46aa-87c2-88db324092b3",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student accurately describes the relationship between temperature and visitors.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "d396ccd6-a572-46aa-87c2-88db324092b3",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student accurately describes the relationship between temperature and visitors, while noting how well the relationship corresponds to reality.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "d396ccd6-a572-46aa-87c2-88db324092b3",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student has not answered the question, or chooses a model without providing any reasoning.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "d6b8eea2-ce1d-4706-bb08-7b8a82d7a1b5",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student names the better model, but with significant help or without grounding their response in the data or the model’s loss.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "d6b8eea2-ce1d-4706-bb08-7b8a82d7a1b5",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student names the better model and points to its lower loss as the reason, with minimal help.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "d6b8eea2-ce1d-4706-bb08-7b8a82d7a1b5",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student names the better model and explains that it has the lower loss, describing in their own words what the loss tells them and clarifying that the lower loss means the model’s predictions will ultimately land closer to actual values.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "d6b8eea2-ce1d-4706-bb08-7b8a82d7a1b5",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student has not answered the question, or does not connect brightness to the classifier's improvement.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "d96caa17-3733-43be-ada7-a22eb6914d33",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student names brightness as a reason the classifier improved. However, they reason only in general terms (e.g., \"another feature gives more information\").",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "d96caa17-3733-43be-ada7-a22eb6914d33",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student explains brightness carries information that separates the instruments where frequency and volume cannot: a cello and violin can play the same note at the same volume, so those features can't tell them apart, but the violin sounds brighter, so brightness distinguishes them.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "d96caa17-3733-43be-ada7-a22eb6914d33",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student reasons about the task of representation itself, rather than just the addition of brightness. They may explain that the classifier can only find patterns in the features it is given, so the choice of which features to represent determines which patterns are learnable.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "d96caa17-3733-43be-ada7-a22eb6914d33",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2"
       }
