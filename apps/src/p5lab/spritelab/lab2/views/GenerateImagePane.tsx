@@ -509,6 +509,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         ) {
           dispatch(setAnimationName(key, name) as unknown as AnyAction);
         }
+        pushAlternative({
+          id: createUuid(),
+          thumb: dataURI,
+          sourceUrl,
+          dataURI,
+          frameSize,
+          pixelGridSize: meta.pixelGridSize,
+        });
+        sessionUrls.current.add(sourceUrl);
         setPaintNewDraft(null);
         setDialogTarget(key);
         return;
@@ -550,12 +559,28 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       // Recompute this image's trimmed thumbnail (cached by source; fires
       // onTrimsUpdated, refreshing the gallery and block dropdowns).
       trimAnimationListImages(updated);
+      pushAlternative({
+        id: createUuid(),
+        thumb: dataURI,
+        sourceUrl,
+        dataURI,
+        frameSize,
+        pixelGridSize: meta.pixelGridSize,
+      });
+      sessionUrls.current.add(sourceUrl);
       // Reclaimed at dialog close, with the rest of the session's leftovers.
       if (previousUrl) {
         sessionUrls.current.add(previousUrl);
       }
     },
-    [dialogTarget, targetProps, paintNewDraft, uploadEdited, dispatch]
+    [
+      dialogTarget,
+      targetProps,
+      paintNewDraft,
+      uploadEdited,
+      dispatch,
+      pushAlternative,
+    ]
   );
 
   const creating = dialogTarget === 'new';
