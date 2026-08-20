@@ -73,16 +73,13 @@ const ControlButtons: React.FunctionComponent = () => {
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
 
-  // A run is over when its output is: the program can finish long before the
-  // theater's gif and audio do, and the gif can finish long before a program
-  // that keeps working after it published one. Waiting on the later of the two
-  // is what keeps the button on stop for the whole run.
   const clearIsRunningWhenOutputEnds = useCallback(async () => {
     // The neighborhood clears it itself when its animation finishes.
     if (miniApp === MiniApps.Neighborhood) {
       return;
     }
     if (miniApp === MiniApps.Theater) {
+      // Ensure the audio/visual playback has finished before clearing the run state.
       await CodebridgeRegistry.getInstance()
         .getTheater()
         ?.waitUntilPlaybackDone();

@@ -18,7 +18,7 @@ interface TheaterSignal {
     url?: string;
     uploadUrl?: string;
     prompt?: string;
-    // Only on VISUAL_URL, and only from a host that knows how long its gif runs.
+    // Only provided with VISUAL_URL, and only from a host that knows how long its gif runs (python).
     durationMs?: number;
   };
 }
@@ -201,13 +201,12 @@ export default class Theater extends MiniApp {
   //
   // The gif's length has to come from the host, since an <img> reports nothing
   // about the animation it is running. Without one there is no telling when the
-  // animation ends, so playback is never done; Java Lab, whose runs end on a
-  // Javabuilder message instead, sends no length and relies on that.
+  // animation ends, so playback is never done.
   private watchForPlaybackEnd(
     audioElement: HTMLAudioElement | null,
     playing: Promise<void> | undefined
   ) {
-    // A program that publishes twice replaces what is playing, so the watch it
+    // A program that publishes twice replaces what is playing, so the timer it
     // replaces must not decide when playback is over.
     this.clearPlaybackTimer();
     const generation = ++this.playbackGeneration;
@@ -244,8 +243,7 @@ export default class Theater extends MiniApp {
   }
 
   // Resolves when the gif and audio this run published have finished playing,
-  // and right away when nothing is playing. Callers pair it with the program's
-  // own end: a run is over at the later of the two.
+  // and right away when nothing is playing.
   waitUntilPlaybackDone(): Promise<void> {
     if (!this.isPlaybackPending) {
       return Promise.resolve();

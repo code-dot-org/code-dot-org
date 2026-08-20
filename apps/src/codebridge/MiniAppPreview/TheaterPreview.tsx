@@ -19,8 +19,6 @@ const TheaterPreview: React.FunctionComponent = () => {
   const [promptText, setPromptText] = useState('');
   const [isOutputVisible, setIsOutputVisible] = useState(false);
 
-  // The theater has already put itself back and let go of anything waiting on
-  // playback, so the run button is taken care of; report the failure.
   const onMediaLoadError = useCallback(
     (type: 'video' | 'audio') => {
       CodebridgeRegistry.getInstance()
