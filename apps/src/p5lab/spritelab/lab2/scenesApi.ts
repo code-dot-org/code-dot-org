@@ -48,20 +48,30 @@ export function toExternalSceneOptions(
   }));
 }
 
+// Scenes are shared within a script; outside one there is nothing to ask.
 export async function fetchSectionScenes(
-  levelId: number | string
+  levelId: number | string,
+  scriptId?: number | null
 ): Promise<ExternalSceneRef[]> {
+  if (!scriptId) {
+    return [];
+  }
   const {value} = await HttpClient.fetchJson<{scenes?: ExternalSceneRef[]}>(
-    `/sprite_lab2/section_scenes?level_id=${levelId}`
+    `/sprite_lab2/section_scenes?level_id=${levelId}&script_id=${scriptId}`
   );
   return value.scenes || [];
 }
 
+// The server serves only the owner's channel for this level and script.
 export async function fetchExternalProject(
-  channel: string
+  channel: string,
+  levelId: number | string,
+  scriptId?: number | null
 ): Promise<ExternalProject> {
   const {value} = await HttpClient.fetchJson<ExternalProject>(
-    `/sprite_lab2/external_scenes?channel=${encodeURIComponent(channel)}`
+    `/sprite_lab2/external_scenes?channel=${encodeURIComponent(
+      channel
+    )}&level_id=${levelId}&script_id=${scriptId ?? ''}`
   );
   return value;
 }

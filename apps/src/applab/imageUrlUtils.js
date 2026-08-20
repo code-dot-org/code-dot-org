@@ -17,3 +17,7 @@ export function resolveAppLabImagePath(url) {
   }
   return normalizeToHttps(url);
 }
+
+export function isBlockedDataUrl(value) {
+  return /^data:/i.test((value || '').trimStart());
+}

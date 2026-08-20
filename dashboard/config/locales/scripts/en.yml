@@ -29660,6 +29660,8 @@ en:
               display_name: Content
             lessonGroup-3:
               display_name: End of Unit Project
+            lessonGroup-4:
+              display_name: End of Unit Survey
           name: foundations-of-ai-programming-js
           title: Foundations of AI Programming (JavaScript)
           description_audience: ''
