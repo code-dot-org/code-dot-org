@@ -110,7 +110,7 @@ describe('the scenario catalogue', () => {
 
   it('is the starter minus the files that moved into the world', () => {
     // Written as a subtraction (STARTER_SPEC), so what is checked is that the
-    // subtraction took the right five and nothing else: a rule or a picture
+    // subtraction took the right ones and nothing else: a rule or a picture
     // dropped here would be a `use rule` pointing at nothing, and the dropdown
     // resolves that to another rule rather than saying so.
     const named = (tag: 'simple' | 'platformer-single') =>
@@ -127,6 +127,7 @@ describe('the scenario catalogue', () => {
         'ground.actor',
         'coin.actor',
         'ball.actor',
+        'scoreboard.actor',
         'level1.map',
       ]),
     );

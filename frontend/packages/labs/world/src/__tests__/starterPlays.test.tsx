@@ -26,6 +26,7 @@ import {beforeAll, describe, expect, it} from 'vitest';
 
 import {DEFAULT_PROJECT} from '../constants';
 import {PositionProperty, type World} from '../engine';
+import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 import {TILE_SIZE} from '../runtime/viewport';
 
@@ -41,15 +42,31 @@ const play = (world: World, seconds: number, keys: string[] = []): void => {
   }
 };
 
-const actor = (world: World, id: string) =>
-  [...world.actors].find(one => one.id === id);
+/**
+ * An actor by the name the project gave it.
+ *
+ * By SUFFIX as well as exactly, because the two tellings of this project name
+ * their instances differently and both are right. A `.map` file's entry is
+ * `Player`; an arrangement's is `placePlayer:Player`, scoped by the block that
+ * placed it, since two arrangements may each place a "Player" and they are not
+ * the same one.
+ */
+const actor = (world: World, name: string) =>
+  [...world.actors].find(one => one.id === name || one.id.endsWith(`:${name}`));
 
 const where = (world: World, id: string) =>
   actor(world, id)!.get(PositionProperty);
 
-/** A fresh world, since each test plays it differently. */
-const opened = async (): Promise<World> =>
-  (await compileProject(projectFiles(DEFAULT_PROJECT.source))).world;
+/**
+ * A freshly compiled project, since each test plays it differently.
+ *
+ * The MODULES come back with it, and must: a property is identified by object
+ * identity, and every compile makes its own. Reading a second compile's
+ * `TextProperty` off this one's Scoreboard reports "has no property 'text'",
+ * which reads exactly like a missing trait and is not one.
+ */
+const opened = (): Promise<CompiledProject> =>
+  compileProject(projectFiles(DEFAULT_PROJECT.source));
 
 beforeAll(async () => {
   project = await compileProject(projectFiles(DEFAULT_PROJECT.source));
@@ -83,7 +100,7 @@ describe('the project a learner opens', () => {
   });
 
   it('walks right while the right arrow is held', async () => {
-    const world = await opened();
+    const {world} = await opened();
     play(world, 0.6);
     const from = where(world, 'Player').x;
 
@@ -99,7 +116,7 @@ describe('the project a learner opens', () => {
     //
     // Verified to have teeth: put the old default of 4 back and this reports
     // "expected 85.58 to be greater than 96".
-    const world = await opened();
+    const {world} = await opened();
     play(world, 0.8);
     const floorLevel = where(world, 'Player').y;
 
@@ -114,12 +131,47 @@ describe('the project a learner opens', () => {
     expect(floorLevel - peak).toBeGreaterThan(3 * TILE_SIZE);
   });
 
+  it('shows the score on the scoreboard as coins are taken', async () => {
+    // The longest chain in the starter, and every link is in a different file.
+    // Collection raises "collects"; the player's handler turns that into
+    // points; Scoring raises "sees the score change" at whoever asked; the
+    // scoreboard's handler writes it into the text Writing draws. Five files
+    // have to agree, and a break anywhere shows as a board that never changes.
+    const {world, modules} = await opened();
+    const text = modules['rules/writing'].TextProperty;
+    const board = () =>
+      actor(world, 'Scoreboard')!.get(text as never) as unknown as string;
+
+    expect(board()).toBe('SCORE 0');
+
+    play(world, 0.5);
+    play(world, 2, ['right arrow']);
+
+    // Two coins sit on the floor along the way; the third is above the
+    // platform and wants a jump, which is the next test.
+    expect(board()).toBe('SCORE 20');
+  });
+
+  it('is winnable — three coins, and a target of exactly three coins', () => {
+    // Not a play-through: the third coin needs a jump landed on a moving
+    // platform, which is a level design to check rather than a mechanic. What
+    // is worth pinning is that the numbers agree — a target of 40 against
+    // three ten-point coins is a game that cannot be won, and nothing in the
+    // running of it would ever say so.
+    const target = project.modules['rules/score'].TargetScoreProperty;
+    const coins = [...project.world.actors].filter(one =>
+      one.id.startsWith('Coin'),
+    ).length;
+
+    expect(project.world.get(target as never)).toBe(coins * 10);
+  });
+
   it('takes a coin by walking into it, and the coin leaves the world', async () => {
     // Four files have to agree for this — the rule being held, the coin
     // electing Can Be Collected, the player electing Collects, and the map
     // putting one where the player will walk. Three of the four failures are
     // silent (constants.test), and this is what silence looks like when run.
-    const world = await opened();
+    const {world} = await opened();
     const coins = () =>
       [...world.actors].filter(one => one.id.startsWith('Coin')).length;
     const before = coins();
@@ -129,5 +181,52 @@ describe('the project a learner opens', () => {
 
     expect(before).toBeGreaterThan(1);
     expect(coins()).toBeLessThan(before);
+  });
+});
+
+describe('the same project, said in one file', () => {
+  // `platformer-single` is the starter with its actors and its map moved into
+  // `main.world` — a teaching artefact whose whole claim is that it is the
+  // SAME game told differently. Nothing checked that claim by running it, and
+  // it had already stopped being true: the starter's jump became one block and
+  // the fixture kept the four-block version for a whole commit.
+  //
+  // So this plays it and asks for the same answers. Not the same blocks —
+  // the point of the pair is that the blocks differ — but the same game.
+  it('plays the same as the starter it was made from', async () => {
+    const {world, modules} = await compileProject(
+      projectFiles(WORLD_SCENARIOS['platformer-single'].source),
+    );
+    const text = modules['rules/writing'].TextProperty;
+    const board = () =>
+      actor(world, 'Scoreboard')!.get(text as never) as unknown as string;
+
+    expect(board()).toBe('SCORE 0');
+
+    play(world, 0.5);
+    play(world, 2, ['right arrow']);
+
+    // The two coins on the floor, exactly as in the starter's own telling.
+    expect(board()).toBe('SCORE 20');
+  });
+
+  it('jumps as high, which is the mechanic most easily left behind', async () => {
+    // The drift that happened. A jump written the old way still compiles, is
+    // still a jump, and clears a different height — so "it has five handlers"
+    // passed while the two tellings had stopped agreeing.
+    const {world} = await compileProject(
+      projectFiles(WORLD_SCENARIOS['platformer-single'].source),
+    );
+    play(world, 0.8);
+    const floorLevel = where(world, 'Player').y;
+
+    let peak = floorLevel;
+    for (let frame = 0; frame < 60; frame++) {
+      world.setInput(['space']);
+      world.tick(1 / 60);
+      peak = Math.min(peak, where(world, 'Player').y);
+    }
+
+    expect(floorLevel - peak).toBeGreaterThan(3 * TILE_SIZE);
   });
 });
