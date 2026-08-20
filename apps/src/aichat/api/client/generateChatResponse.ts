@@ -81,35 +81,23 @@ export async function generateChatResponse(
     : undefined;
 
   // Generate a response with the model.
-  const {
-    text,
-    files,
-    finishReason,
-    response,
-    output,
-    outputJson,
-    responseSignature,
-  } = await generateText(
-    {
-      model: getModel(modelParameters.selectedModelId),
-      messages,
-      temperature: modelParameters.temperature,
-      ...(outputSchema && {output: outputSchema}),
-    },
-    {phase: 'generation'}
-  );
+  const {text, files, finishReason, response, responseSignature} =
+    await generateText(
+      {
+        model: getModel(modelParameters.selectedModelId),
+        messages,
+        temperature: modelParameters.temperature,
+        ...(outputSchema && {output: outputSchema}),
+      },
+      {phase: 'generation'}
+    );
 
-  // chatMessageText has to stay a string: rendering, storage and non-schema
-  // messages all depend on that, even when a schema was used.
-  //
-  // For the schema case prefer the worker's own serialization (outputJson): the
-  // signature covers a digest of exactly those bytes, and JSON.stringify()
-  // guarantees no key order, so re-serializing here could produce a different
-  // string and fail verification on a perfectly good response. The fallback is
-  // only for a worker predating outputJson, which sends no signature anyway.
-  const responseText = outputSchema
-    ? outputJson ?? JSON.stringify(output)
-    : text;
+  // `text` is returned as the response even when a schema was used, where it
+  // holds the JSON document the model emitted. Do not substitute the SDK's
+  // parsed `output` re-serialized: that is a different byte sequence for the
+  // same data, and it is not what the worker signed. Callers that want the
+  // parsed form parse this string -- see applySchemaDisplayTransform and
+  // notifySchemaResponse, which both do exactly that.
 
   if (['content-filter', 'other'].includes(finishReason)) {
     // Gemini stores moderation information in a non-standard place so we need to dig into the raw HTTP body.
@@ -133,7 +121,7 @@ export async function generateChatResponse(
   const assets: ChatAsset[] = [];
   for (const file of files) {
     if (file.uint8Array.length === 0) {
-      return {response: responseText, status: AiRequestExecutionStatus.FAILURE};
+      return {response: text, status: AiRequestExecutionStatus.FAILURE};
     }
     let asset: ChatAsset;
     try {
@@ -201,21 +189,21 @@ export async function generateChatResponse(
       }
       if (imageModerationStatus === 'flagged') {
         return {
-          response: responseText,
+          response: text,
           responseSignature,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       }
       if (imageSafe === false) {
         return {
-          response: responseText,
+          response: text,
           responseSignature,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       }
       if (imageModerationStatus === 'error' || imageSafe === undefined) {
         return {
-          response: responseText,
+          response: text,
           responseSignature,
           status: AiRequestExecutionStatus.FAILURE,
         };
@@ -224,21 +212,21 @@ export async function generateChatResponse(
   }
 
   // Check model text output for safety.
-  const modelOutputSafe = await isTextSafe(responseText, 'output_filter');
+  const modelOutputSafe = await isTextSafe(text, 'output_filter');
   Observability.metrics.count('ai-chat.text_moderation', 1, {
     phase: 'output_filter',
     result: modelOutputSafe ? 'ok' : 'flagged',
   });
   if (!modelOutputSafe) {
     return {
-      response: responseText,
+      response: text,
       responseSignature,
       status: AiRequestExecutionStatus.MODEL_PROFANITY,
     };
   }
 
   return {
-    response: responseText,
+    response: text,
     responseSignature,
     assets,
     status: AiRequestExecutionStatus.SUCCESS,
