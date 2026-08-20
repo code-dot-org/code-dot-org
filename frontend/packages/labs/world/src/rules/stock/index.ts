@@ -30,6 +30,7 @@ import {mouseRule} from './mouse';
 import {shootsRule} from './shoots';
 import {solidRule} from './solid';
 import {steeringRule} from './steering';
+import {timeRule} from './time';
 import {wrapRule} from './wrap';
 import {writingRule} from './writing';
 
@@ -122,6 +123,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Lets an actor go after another one, or run from it. A chaser walks toward what it is told to chase and stops when it is close enough; a fleer runs only when the thing it avoids is too near. It sets velocity, so walls still stop it and gravity still owns the vertical when you say so \u2014 and it brings the \u201cdistance from \u2039a\u203a to \u2039b\u203a\u201d block, which is what \u201cthe nearest enemy\u201d is asked with.',
     provides: ['Chases', 'Flees'],
     contents: steeringRule,
+  },
+  {
+    id: 'time',
+    name: 'Time',
+    ability: 'Keeps Time',
+    description:
+      'Lets things happen every so often, and lets things be done only every so often. A timer belongs to an actor and raises an event on its own beat \u2014 a spawner, a blinking lamp, a bomb \u2014 and each one starts, stops and restarts on its own. A cooldown is the same idea with the sides swapped: ask whether it is ready, and start the wait when it is used.',
+    provides: ['Has a Timer', 'Has a Cooldown'],
+    contents: timeRule,
   },
   {
     id: 'writing',
@@ -286,6 +296,7 @@ export {
   collectRule,
   healthRule,
   steeringRule,
+  timeRule,
   dragRule,
   driveRule,
   expiresRule,

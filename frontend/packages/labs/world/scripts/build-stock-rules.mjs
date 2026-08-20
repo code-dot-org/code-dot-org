@@ -32,6 +32,7 @@ const RULES = [
   'collect',
   'health',
   'steering',
+  'time',
   'writing',
   'camera',
   'cameraFollow',
