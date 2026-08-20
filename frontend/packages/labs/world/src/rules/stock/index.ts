@@ -23,6 +23,7 @@ import {dragRule} from './drag';
 import {driveRule} from './drive';
 import {expiresRule} from './expires';
 import {gravityRule} from './gravity';
+import {healthRule} from './health';
 import {inputRule} from './input';
 import {motionRule} from './motion';
 import {mouseRule} from './mouse';
@@ -102,6 +103,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Lets an actor pick up the things it walks into, and says which kinds can be picked up. It keeps what each collector has taken, so a game can ask how many of a kind somebody holds, and raises an event on both sides of the moment.',
     provides: ['Collects', 'Can Be Collected'],
     contents: collectRule,
+  },
+  {
+    id: 'health',
+    name: 'Health',
+    ability: 'Has Health',
+    description:
+      'Lets actors be hurt and run out. One ability says what can be damaged and the other says what damages it, so a spike, a bullet and a patrolling enemy are dangerous without knowing who to. Contact damage is spaced by a mercy time, and running out raises an event rather than removing anything — what dying means is the game\u2019s to say.',
+    provides: ['Has Health', 'Deals Damage'],
+    contents: healthRule,
   },
   {
     id: 'writing',
@@ -264,6 +274,7 @@ export {
   arrowsRule,
   boundsRule,
   collectRule,
+  healthRule,
   dragRule,
   driveRule,
   expiresRule,
