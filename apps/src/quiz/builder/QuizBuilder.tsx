@@ -4,7 +4,10 @@ import React, {useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import QuizQuestionForm, {QuizQuestionFormValues} from './QuizQuestionForm';
+import QuizQuestionForm, {
+  QuizQuestionFormValues,
+  QuizStandard,
+} from './QuizQuestionForm';
 
 import styles from './quiz-builder.module.scss';
 
@@ -26,6 +29,7 @@ export interface QuizQuestionData {
   // correct answers, so a question has none here until then.
   correctChoiceId?: string;
   explanation?: string;
+  standards?: QuizStandard[];
   // Whether this question is attached to any quiz other than the one being
   // built here - see LevelsController#quiz_question_json. Determines
   // whether removing it from this quiz can also offer permanent deletion.
@@ -104,6 +108,7 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
         choices: data.choices || [],
         correctChoiceId: data.correctChoiceId || '',
         explanation: data.explanation || '',
+        standards: data.standards || [],
       });
       setEditingQuestionId(question.id);
       setIsFormOpen(true);

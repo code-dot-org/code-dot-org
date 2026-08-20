@@ -4,12 +4,34 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useState} from 'react';
 
+import SearchBox from '@cdo/apps/levelbuilder/lesson-editor/SearchBox';
+
 import styles from './quiz-question-form.module.scss';
 
 interface QuizChoice {
   id: string;
   text: string;
 }
+
+// A Standard is identified by (frameworkShortcode, shortcode) across this
+// request/response boundary, not by its raw id - matches how
+// LessonsController/StandardsEditor.jsx already do this for lessons. Shape
+// matches Standard#summarize_for_lesson_edit.
+export interface QuizStandard {
+  frameworkShortcode: string;
+  frameworkName: string;
+  shortcode: string;
+  description: string;
+}
+
+interface StandardSearchOption {
+  value: string;
+  label: string;
+  standard: QuizStandard;
+}
+
+const isSameStandard = (a: QuizStandard, b: QuizStandard) =>
+  a.frameworkShortcode === b.frameworkShortcode && a.shortcode === b.shortcode;
 
 export interface QuizQuestionFormValues {
   questionName: string;
@@ -19,6 +41,7 @@ export interface QuizQuestionFormValues {
   // Shown to students only once the quiz's own reveal_answer_explanation
   // setting allows it - see QuizAttempt#question_results.
   explanation?: string;
+  standards?: QuizStandard[];
 }
 
 const EMPTY_CHOICE = (): QuizChoice => ({
@@ -64,7 +87,36 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
   const [explanation, setExplanation] = useState(
     initialValues?.explanation || ''
   );
+  const [standards, setStandards] = useState<QuizStandard[]>(
+    initialValues?.standards || []
+  );
   const [error, setError] = useState<string | null>(null);
+
+  const addStandard = (standard: QuizStandard) =>
+    setStandards(prev =>
+      prev.some(s => isSameStandard(s, standard)) ? prev : [...prev, standard]
+    );
+
+  const removeStandard = (standard: QuizStandard) =>
+    setStandards(prev => prev.filter(s => !isSameStandard(s, standard)));
+
+  const onStandardSearchSelect = (option: StandardSearchOption) => {
+    if (option) {
+      addStandard(option.standard);
+    }
+  };
+
+  const constructStandardOptions = (json: QuizStandard[]) => ({
+    options: json
+      .filter(standard => !standards.some(s => isSameStandard(s, standard)))
+      .map(standard => ({
+        value: `${standard.frameworkShortcode}-${standard.shortcode}`,
+        label: `${standard.frameworkShortcode.toUpperCase()} - ${
+          standard.shortcode
+        } - ${standard.description}`,
+        standard,
+      })),
+  });
 
   const updateChoiceText = (id: string, text: string) =>
     setChoices(prev =>
@@ -117,6 +169,7 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
       choices: lettered,
       correctChoiceId: lettered[selectedIndex]?.id ?? '',
       explanation,
+      standards,
     });
     if (saveError) {
       setError(saveError);
@@ -169,6 +222,46 @@ const QuizQuestionForm: React.FunctionComponent<QuizQuestionFormProps> = ({
             onChange={e => setExplanation(e.target.value)}
           />
         </FormFieldWrapper>
+      </div>
+
+      <div className={styles.section}>
+        <Typography variant="overline3" className={styles.sectionHeading}>
+          Standards (optional)
+        </Typography>
+        <SearchBox
+          key={standards
+            .map(s => `${s.frameworkShortcode}-${s.shortcode}`)
+            .join(',')}
+          onSearchSelect={onStandardSearchSelect}
+          searchUrl="standards/search"
+          constructOptions={constructStandardOptions}
+        />
+        {standards.length > 0 && (
+          <div className={styles.optionList}>
+            {standards.map(standard => (
+              <div
+                key={`${standard.frameworkShortcode}-${standard.shortcode}`}
+                className={styles.optionRow}
+              >
+                <Typography variant="body3" className={styles.optionField}>
+                  {standard.frameworkShortcode.toUpperCase()} -{' '}
+                  {standard.shortcode} - {standard.description}
+                </Typography>
+                <div className={styles.rowActions}>
+                  <MuiButton
+                    variant="outlined"
+                    color="secondary"
+                    size="small"
+                    type="button"
+                    onClick={() => removeStandard(standard)}
+                  >
+                    Remove
+                  </MuiButton>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className={styles.section}>

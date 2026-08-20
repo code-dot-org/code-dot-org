@@ -321,6 +321,7 @@ class LevelsController < ApplicationController
       },
       explanation: quiz_question_params[:explanation]
     )
+    question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
     next_position = (@level.quiz_level_questions.maximum(:position) || 0) + 1
     QuizLevelQuestion.create!(level: @level, quiz_question: question, page: 1, position: next_position)
 
@@ -440,6 +441,7 @@ class LevelsController < ApplicationController
       },
       explanation: quiz_question_params[:explanation]
     )
+    question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
     render json: quiz_question_json(question)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
@@ -886,15 +888,30 @@ class LevelsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the allow-list through.
   private def quiz_question_params
-    params.permit(:questionName, :stem, :correctChoiceId, :explanation, choices: [:id, :text])
+    params.permit(
+      :questionName, :stem, :correctChoiceId, :explanation,
+      choices: [:id, :text],
+      standards: [:frameworkShortcode, :shortcode]
+    )
+  end
+
+  # (frameworkShortcode, shortcode) is how a Standard is identified across
+  # this codebase's request/response boundary - see LessonsController's own
+  # fetch_standards and Standard#summarize_for_lesson_edit, which this
+  # mirrors rather than exposing raw Standard ids to the frontend.
+  private def fetch_quiz_question_standards(standards_data)
+    (standards_data || []).map do |s|
+      framework = Framework.find_by!(shortcode: s['frameworkShortcode'])
+      Standard.find_by!(framework: framework, shortcode: s['shortcode'])
+    end
   end
 
   # Shared by create/show/update_quiz_question. Includes correct_choice_id -
   # callers of this must be building-only endpoints, never the student-
   # facing payload (that's Quiz#summarize_for_lab2_properties).
-  # attachedToOtherQuizzes tells the "remove from quiz" UI whether deleting this
-  # question outright is even an option, vs. only detaching it from @level -
-  # see remove_quiz_question.
+  # attachedToOtherQuizzes tells the "remove from quiz" UI whether deleting
+  # this question outright is even an option, vs. only detaching it from
+  # @level - see detach_quiz_question/destroy_quiz_question.
   private def quiz_question_json(question)
     {
       id: question.id,
@@ -904,6 +921,7 @@ class LevelsController < ApplicationController
       choices: question.question['choices'],
       correctChoiceId: question.question['correct_choice_id'],
       explanation: question.explanation,
+      standards: question.standards.map(&:summarize_for_lesson_edit),
       attachedToOtherQuizzes: question.levels.where.not(id: @level.id).exists?,
     }
   end
