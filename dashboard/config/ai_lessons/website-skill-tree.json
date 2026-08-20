@@ -19,8 +19,14 @@
           "type": "multipleChoice",
           "prompt": "How do you like to work?",
           "options": [
-            {"id": "dark", "label": "Dark mode"},
-            {"id": "light", "label": "Light mode"}
+            {
+              "id": "dark",
+              "label": "Dark mode"
+            },
+            {
+              "id": "light",
+              "label": "Light mode"
+            }
           ]
         },
         {
@@ -117,19 +123,31 @@
           "id": "prompting",
           "title": "Prompting",
           "objective": "Write structural, specific prompts that direct AI precisely — naming sections, layout, and placement instead of vague wishes.",
-          "steps": ["prompt-layout", "prompt-refine"]
+          "standard": "Engage with AI 3: Evaluate whether AI outputs should be accepted, revised or rejected.",
+          "steps": [
+            "prompt-layout",
+            "prompt-refine"
+          ]
         },
         {
           "id": "debugging",
           "title": "Debugging",
           "objective": "Find and fix bugs in web code — reading symptoms, locating causes, and directing AI with targeted fix requests.",
-          "steps": ["debug-fixit", "debug-reflect"]
+          "standard": "Manage AI 4: Monitor and evaluate AI use throughout a problem-solving process.",
+          "steps": [
+            "debug-fixit",
+            "debug-reflect"
+          ]
         },
         {
           "id": "javascript",
           "title": "JavaScript",
           "objective": "Make a page react to the user: wire up events and change the page from code.",
-          "steps": ["js-motion", "js-build"]
+          "standard": "Engage with AI 3: Evaluate whether AI outputs should be accepted, revised or rejected.",
+          "steps": [
+            "js-motion",
+            "js-build"
+          ]
         }
       ]
     },
@@ -139,7 +157,10 @@
       "labType": "weblab2",
       "title": "Direct the layout",
       "role": "skillBuilding",
-      "segment": {"id": "path-prompting", "title": "Prompting"},
+      "segment": {
+        "id": "path-prompting",
+        "title": "Prompting"
+      },
       "sourceMode": "sandbox",
       "validation": "tutor",
       "aiPrompting": "free",
@@ -152,7 +173,10 @@
       "labType": "weblab2",
       "title": "Make it precise",
       "role": "skillBuilding",
-      "segment": {"id": "path-prompting", "title": "Prompting"},
+      "segment": {
+        "id": "path-prompting",
+        "title": "Prompting"
+      },
       "sourceMode": "sandbox",
       "validation": "tutor",
       "aiPrompting": "free",
@@ -197,7 +221,10 @@
       "labType": "weblab2",
       "title": "Make it react",
       "role": "skillBuilding",
-      "segment": {"id": "path-js", "title": "JavaScript"},
+      "segment": {
+        "id": "path-js",
+        "title": "JavaScript"
+      },
       "sourceMode": "sandbox",
       "validation": "tutor",
       "aiPrompting": "free",
@@ -214,7 +241,10 @@
       "labType": "weblab2",
       "title": "Add your own interaction",
       "role": "skillBuilding",
-      "segment": {"id": "path-js", "title": "JavaScript"},
+      "segment": {
+        "id": "path-js",
+        "title": "JavaScript"
+      },
       "sourceMode": "sandbox",
       "validation": "tutor",
       "aiPrompting": "free",
@@ -258,14 +288,22 @@
           "id": "polish-styling",
           "title": "Styling",
           "objective": "Apply a deliberate visual style: a cohesive color palette, readable typography, consistent spacing.",
-          "steps": ["style-pass"]
+          "standard": "Engage with AI 3: Evaluate whether AI outputs should be accepted, revised or rejected.",
+          "steps": [
+            "style-pass"
+          ]
         },
         {
           "id": "polish-motion",
           "title": "Motion",
           "objective": "Direct micro-interactions with precision: exact triggers and exact effects.",
-          "steps": ["motion-pass"],
-          "requires": ["polish-styling"]
+          "standard": "Manage AI 4: Monitor and evaluate AI use throughout a problem-solving process.",
+          "steps": [
+            "motion-pass"
+          ],
+          "requires": [
+            "polish-styling"
+          ]
         }
       ]
     },

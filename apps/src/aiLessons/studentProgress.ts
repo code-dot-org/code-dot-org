@@ -67,6 +67,20 @@ export interface ProgressSnapshot {
   // step that carries the rubric.  Teacher-facing; also fed to the
   // tutor's context.
   observations?: {[stepId: string]: StepObservation};
+  // Mastery verdicts per skill path, judged against the path's
+  // objective/standard when its last step completes.  Teacher-facing;
+  // later also the trigger for agent-generated remediation steps.
+  mastery?: {[pathId: string]: PathMastery};
+}
+
+export interface PathMastery {
+  mastered: boolean;
+  // The judge's evidence-citing rationale, teacher-facing.
+  reasoning: string;
+  // What's missing when not mastered; feeds the future remediation
+  // generator.
+  gaps?: string[];
+  at: string;
 }
 
 export interface StepObservation {
@@ -251,7 +265,10 @@ export async function saveSnapshotExtras(
   lessonId: string,
   previous: ProgressSnapshot | undefined,
   extras: Partial<
-    Pick<ProgressSnapshot, 'observations' | 'checklist' | 'currentStepId'>
+    Pick<
+      ProgressSnapshot,
+      'observations' | 'checklist' | 'currentStepId' | 'mastery'
+    >
   >
 ): Promise<ProgressSnapshot | undefined> {
   if (!previous) return undefined;
@@ -325,6 +342,7 @@ export async function recordProgressEvent(
       options.completedStepIds ?? options.previous?.completedStepIds,
     checklist: options.checklist ?? options.previous?.checklist,
     observations: options.previous?.observations,
+    mastery: options.previous?.mastery,
   };
 
   try {

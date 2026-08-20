@@ -293,6 +293,8 @@ class AiLessonsController < ApplicationController
         # definitions, so the client can render per-path rings without a
         # second fetch per lesson.
         'completed_step_ids' => parsed['completedStepIds'] || [],
+        # Per-path mastery verdicts, keyed by path id.
+        'mastery' => parsed['mastery'] || {},
         'hubs' => (lesson['steps'] || []).select {|s| s['kind'] == 'hub'}.map do |hub|
           {
             'id' => hub['id'],

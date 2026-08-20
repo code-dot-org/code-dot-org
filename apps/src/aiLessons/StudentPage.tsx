@@ -29,6 +29,7 @@ import {judgeBranchCondition} from './branchJudge';
 import BuildPartnerPanel from './BuildPartnerPanel';
 import ChecklistPanel from './ChecklistPanel';
 import EmbeddedLab from './EmbeddedLab';
+import {evaluatePathMastery} from './mastery';
 import {deterministicResolver, NavDecision} from './navigation';
 import {generateStepObservation} from './observations';
 import ProgressRing from './ProgressRing';
@@ -506,6 +507,45 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
             if (saved) progressRef.current = saved;
           })
           .catch(e => console.warn('Step observation failed', e));
+      }
+
+      // Completing a hub path's last step triggers a background mastery
+      // evaluation against the path's objective/standard.  Fire and
+      // forget — the student is already back at the hub; the verdict
+      // merges into the snapshot for the teacher (and, later, drives
+      // remediation).  One verdict per path: replays don't re-judge.
+      const owner = hubOwning(lesson, step.id);
+      if (
+        owner &&
+        lesson.id &&
+        !progressRef.current?.mastery?.[owner.path.id] &&
+        pathStepsFor(lesson, owner.path).every(id =>
+          completedRef.current.includes(id)
+        )
+      ) {
+        const lessonId = lesson.id;
+        const masteredPath = owner.path;
+        evaluatePathMastery({
+          lesson,
+          path: masteredPath,
+          inputs: inputsRef.current,
+          observations: observationsRef.current,
+          work: liveWork,
+        })
+          .then(async verdict => {
+            const saved = await saveSnapshotExtras(
+              lessonId,
+              progressRef.current,
+              {
+                mastery: {
+                  ...progressRef.current?.mastery,
+                  [masteredPath.id]: verdict,
+                },
+              }
+            );
+            if (saved) progressRef.current = saved;
+          })
+          .catch(e => console.warn('Mastery evaluation failed', e));
       }
 
       navigateTo(decision);

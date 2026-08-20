@@ -1392,3 +1392,17 @@ textarea {
   gap: 6px;
   color: var(--text-neutral-primary);
 }
+
+// Mastery verdict badges on teacher hub-path chips.  Hover shows the
+// judge's reasoning and any named gaps.
+.masteryBadge {
+  color: var(--text-success-primary);
+  font-weight: 600;
+  cursor: help;
+}
+
+.masteryBadgeGaps {
+  color: var(--text-warning-primary, var(--text-neutral-secondary));
+  font-weight: 600;
+  cursor: help;
+}

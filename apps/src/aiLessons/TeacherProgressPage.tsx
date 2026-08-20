@@ -50,6 +50,11 @@ interface TeacherProgressEntry {
   // hub/path definitions (same segment math as the student's rings).
   completed_step_ids?: string[];
   hubs?: TeacherHub[];
+  // Per-path mastery verdicts, judged against objective/standard when
+  // the path's last step completes.
+  mastery?: {
+    [pathId: string]: {mastered: boolean; reasoning: string; gaps?: string[]};
+  };
 }
 
 interface StudentGroup {
@@ -198,6 +203,7 @@ const TeacherProgressPage: React.FunctionComponent = () => {
                             const done = p.steps.filter(id =>
                               (entry.completed_step_ids || []).includes(id)
                             ).length;
+                            const verdict = entry.mastery?.[p.id];
                             return (
                               <span
                                 key={p.id}
@@ -214,6 +220,25 @@ const TeacherProgressPage: React.FunctionComponent = () => {
                                   size={22}
                                 />
                                 {p.title} {done}/{p.steps.length}
+                                {verdict && (
+                                  <span
+                                    className={
+                                      verdict.mastered
+                                        ? styles.masteryBadge
+                                        : styles.masteryBadgeGaps
+                                    }
+                                    title={[
+                                      verdict.reasoning,
+                                      ...(verdict.gaps || []).map(
+                                        g => `Gap: ${g}`
+                                      ),
+                                    ].join('\n')}
+                                  >
+                                    {verdict.mastered
+                                      ? '★ mastered'
+                                      : '△ needs more'}
+                                  </span>
+                                )}
                               </span>
                             );
                           })}

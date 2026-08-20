@@ -87,6 +87,17 @@ Step kinds:
   summary describes hub lessons per path — named skills, objectives,
   standards — instead of step numbers.
 
+  Completing a path's last step also triggers a background **mastery
+  evaluation** (`mastery.ts`): an LLM judges the path's recorded
+  evidence — answers, AI prompts and their kept/undone outcomes, rubric
+  observations, final work — against the path's objective and standard,
+  producing `{mastered, reasoning, gaps}` on the progress snapshot.
+  One verdict per path; never blocks navigation.  Teachers see a
+  "★ mastered" / "△ needs more" badge on the path chip with the
+  reasoning and gaps on hover.  The `gaps` list is sized for the next
+  phase: a remediation generator appending steps to the path through a
+  per-student overlay.
+
 Cross-cutting fields:
 
 - `role` + `segment` — advisory labels ("skill practice: HTML tags",
