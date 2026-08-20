@@ -21,6 +21,7 @@ import {expiresDemo} from './expires';
 import {gravityDemo} from './gravity';
 import {healthDemo} from './health';
 import {inputDemo} from './input';
+import {jumpDemo} from './jump';
 import {mouseDemo} from './mouse';
 import {physicsDemo} from './physics';
 import {shootsDemo} from './shoots';
@@ -45,6 +46,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   mouse: mouseDemo,
   arrows: arrowsDemo,
   gravity: gravityDemo,
+  jump: jumpDemo,
   drive: driveDemo,
   drag: dragDemo,
   shoots: shootsDemo,
