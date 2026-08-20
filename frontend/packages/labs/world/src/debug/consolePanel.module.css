@@ -36,3 +36,11 @@
   color: var(--text-neutral-tertiary);
   font-style: italic;
 }
+
+/* How many times in a row a line was said. Quiet, and after the sentence: the
+   count is context, not the message. */
+.repeats {
+  margin-left: 0.5em;
+  opacity: 0.6;
+  font-size: 0.85em;
+}

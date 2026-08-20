@@ -33,6 +33,7 @@ import {
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
 import {ENTRY_FILE} from '../constants';
 
+import {collapseConsole, type ConsoleLine} from './consoleCollapse';
 import {createGeneratedFileCache} from './generatedFiles';
 import {projectImageSizes} from './imageSize';
 import type {PlacementRequest, ReloadReport} from './messages';
@@ -60,10 +61,7 @@ import {getAssetBaseUrl, getSandboxUrl} from './worldConfig';
  */
 const isBlocklyPath = (path: string): boolean => fileKindOf(path) !== undefined;
 
-export interface ConsoleLine {
-  level: string;
-  text: string;
-}
+export type {ConsoleLine} from './consoleCollapse';
 
 export type RuntimeStatus = 'idle' | 'compiling' | 'running' | 'error';
 
@@ -95,7 +93,6 @@ interface WorldRuntimeValue {
 const WorldRuntimeContext = createContext<WorldRuntimeValue | null>(null);
 
 const DEBOUNCE_MS = 300;
-const MAX_CONSOLE_LINES = 500;
 
 export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   const sandboxUrl = useMemo(() => getSandboxUrl(), []);
@@ -139,8 +136,44 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   const blocklyGenerator = useRef<BlocklyGeneratorHandle>(null);
   const [generatorReady, setGeneratorReady] = useState(false);
 
-  const pushConsole = (line: ConsoleLine) =>
-    setConsoleLog(prev => [...prev, line].slice(-MAX_CONSOLE_LINES));
+  // Lines said since the last flush. A game can say sixty a second, and a state
+  // update per line is a render of everything under this provider per line —
+  // which is what shuts a Blockly flyout the moment the console gets busy: the
+  // toolbox closes because the tree beneath it re-rendered, over and over, and
+  // a learner cannot hold a drawer open long enough to drag a block out of it.
+  //
+  // So lines are buffered and flushed once an animation frame. Sixty renders a
+  // second becomes one, and the flood stops fighting the editor for the main
+  // thread.
+  const consoleBuffer = useRef<ConsoleLine[]>([]);
+  const consoleFlush = useRef<number | null>(null);
+
+  const pushConsole = (line: ConsoleLine) => {
+    consoleBuffer.current.push(line);
+    if (consoleFlush.current !== null) {
+      return;
+    }
+    consoleFlush.current = window.requestAnimationFrame(() => {
+      consoleFlush.current = null;
+      const said = consoleBuffer.current;
+      consoleBuffer.current = [];
+      if (!said.length) {
+        return;
+      }
+      setConsoleLog(prev => collapseConsole([...prev, ...said]));
+    });
+  };
+
+  // Stop the pending flush when this provider goes, so a frame callback cannot
+  // set state on a component that is gone.
+  useEffect(
+    () => () => {
+      if (consoleFlush.current !== null) {
+        window.cancelAnimationFrame(consoleFlush.current);
+      }
+    },
+    [],
+  );
 
   // Generated modules, kept between compiles: an edit to one file leaves the
   // others byte-identical, and regenerating them is the expensive half of a
