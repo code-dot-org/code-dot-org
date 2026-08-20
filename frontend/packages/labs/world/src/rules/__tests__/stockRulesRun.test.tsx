@@ -28,19 +28,13 @@ import {
   WorldBuilder,
   type World,
 } from '../../engine';
-import {RULE_DEMOS, type RuleDemo} from '../demos';
-import {
-  collectRule,
-  collisionsRule,
-  gravityRule,
-  healthRule,
-  motionRule,
-  solidRule,
-  steeringRule,
-  timeRule,
-} from '../stock';
+import {DEMO_SIZE, RULE_DEMOS, viewOrigin, type RuleDemo} from '../demos';
 
-import {compileStockRules, type RuleModule} from './support/compileStockRules';
+import {
+  ALL_STOCK_SOURCES,
+  compileStockRules,
+  type RuleModule,
+} from './support/compileStockRules';
 
 let modules: Record<string, RuleModule>;
 
@@ -75,16 +69,7 @@ const between = (a: unknown, b: unknown): number => {
 beforeAll(async () => {
   // Compiled once for the file: this is the expensive part, and it is the same
   // six modules for every test below. Dependency order.
-  modules = await compileStockRules({
-    'rules/motion': motionRule,
-    'rules/collisions': collisionsRule,
-    'rules/solid': solidRule,
-    'rules/gravity': gravityRule,
-    'rules/steering': steeringRule,
-    'rules/collect': collectRule,
-    'rules/health': healthRule,
-    'rules/time': timeRule,
-  });
+  modules = await compileStockRules(ALL_STOCK_SOURCES);
 }, 30000);
 
 describe('Gravity', () => {
@@ -242,5 +227,161 @@ describe('Time', () => {
     run(world, 2);
 
     expect(fired).toBe(1);
+  });
+});
+
+describe('every demo world', () => {
+  // A demo is a claim shown to every learner who opens the import dialog, so
+  // the cheapest useful check is that each one DOES something: the first
+  // Collection demo recorded twenty-four identical frames, because a collector
+  // that does not also elect `Can Move` never reaches a coin, and nothing said
+  // so until the strip was looked at (specs/RULE_DEMOS.md).
+  it.each(Object.keys(RULE_DEMOS))('%s changes while it runs', id => {
+    const demo = RULE_DEMOS[id];
+    const {world} = demo.build(modules);
+    // Both axes and the cast: gravity's ball only moves DOWN, and Collection's
+    // demonstration is that a coin stops being there at all.
+    const where = () =>
+      [...world.actors]
+        .map(actor => {
+          const at = actor.get(PositionProperty);
+          return `${actor.id}@${Math.round(at.x)},${Math.round(at.y)}`;
+        })
+        .join(' ');
+    const before = where();
+
+    run(world, demo.seconds);
+
+    const after = where();
+    expect(after).not.toEqual(before);
+  });
+
+  it.each(Object.keys(RULE_DEMOS))('%s stays inside its frame', id => {
+    // Clipped rather than scaled by the recorder, so an actor that wanders out
+    // is simply missing from the picture — which is a demo world to fix and
+    // not something to find by squinting at a strip.
+    //
+    // In VIEW space, via the same `viewOrigin` the recorder films through. A
+    // camera demo's map is deliberately wider than its frame — that is what
+    // there is to see — so "inside the frame" cannot mean "inside the map",
+    // and the scenery a camera pans away from is out of shot on purpose.
+    const demo = RULE_DEMOS[id];
+    const {world} = demo.build(modules);
+
+    run(world, demo.seconds);
+
+    const view = viewOrigin(world);
+    const subjects = demo.filmed
+      ? [...world.actors].filter(actor => demo.filmed!.includes(actor.id))
+      : [...world.actors];
+    for (const actor of subjects) {
+      const at = actor.get(PositionProperty);
+      const x = at.x - view.x;
+      const y = at.y - view.y;
+      expect(x, `${id}: ${actor.id} x`).toBeGreaterThan(-20);
+      expect(x, `${id}: ${actor.id} x`).toBeLessThan(DEMO_SIZE.width + 20);
+      expect(y, `${id}: ${actor.id} y`).toBeGreaterThan(-20);
+      expect(y, `${id}: ${actor.id} y`).toBeLessThan(DEMO_SIZE.height + 20);
+    }
+  });
+});
+
+describe('what the newer demos show', () => {
+  it('wrap: the rover comes back round', () => {
+    // The rule whose demonstration is unmistakable in motion and invisible in
+    // a still. It must actually cross, or the strip is a box walking right.
+    const {cast} = play(RULE_DEMOS.wrap);
+    const rover = cast.rover as {get(p: unknown): Vector};
+
+    // Started at 30 heading right at 2.4 units — without wrapping it would be
+    // far past the frame by now.
+    expect(rover.get(PositionProperty).x).toBeLessThan(DEMO_SIZE.width);
+  });
+
+  it('solid: the mover stops at the wall', () => {
+    const {cast} = play(RULE_DEMOS.solid);
+    const mover = cast.mover as {get(p: unknown): Vector};
+
+    // The wall's left face is at 150 − 8; a mover that passed through would be
+    // beyond it by the end of the run.
+    expect(mover.get(PositionProperty).x).toBeLessThan(145);
+    expect(mover.get(PositionProperty).x).toBeGreaterThan(100);
+  });
+
+  it('health: the player loses health it can be drawn losing', () => {
+    // `look` reads this to size the box, so a demo that took no damage would
+    // record a box that never changes.
+    const {cast} = play(RULE_DEMOS.health);
+    const player = cast.player as {get(p: unknown): number};
+
+    expect(player.get(of('rules/health', 'HealthProperty'))).toBeLessThan(3);
+  });
+
+  it('expires: the sparks go out one by one', () => {
+    const {world} = play(RULE_DEMOS.expires);
+
+    expect([...world.actors].length).toBeLessThan(5);
+  });
+
+  // The camera family, checked the way the strips read: what a camera rule
+  // does is entirely a fact about where the walker sits IN THE FRAME, so each
+  // of these measures that and nothing else. The world positions are identical
+  // across all four — the same walker crossing the same map.
+  const onScreen = (demo: RuleDemo) => {
+    const {world, cast} = play(demo);
+    const walker = cast.walker as {get(p: unknown): Vector};
+    return walker.get(PositionProperty).x - viewOrigin(world).x;
+  };
+  const middle = DEMO_SIZE.width / 2;
+
+  it('cameraFollow: the walker stays in the middle of the picture', () => {
+    // Both halves, because either alone passes for the wrong reason. A camera
+    // that never moved would leave the walker drifting out of shot; a camera
+    // that moves without FOLLOWING would pan past the walker as readily as
+    // past a post.
+    const {world, cast} = play(RULE_DEMOS.cameraFollow);
+    const walker = cast.walker as {get(p: unknown): Vector};
+    const view = viewOrigin(world);
+
+    // The camera left where it started — a twelve-tile map through six tiles.
+    expect(view.x).toBeGreaterThan(180);
+    // …and the walker is still centred, which is what following MEANS.
+    expect(walker.get(PositionProperty).x - view.x).toBeCloseTo(middle, 0);
+  });
+
+  it('cameraEase: the walker runs ahead of the view and settles there', () => {
+    // The lag IS the demonstration, and it is a steady one: at a twentieth of
+    // the gap a frame, a walker moving a hundred pixels a second ends up about
+    // thirty ahead of centre and stays there.
+    const ahead = onScreen(RULE_DEMOS.cameraEase) - middle;
+
+    expect(ahead).toBeGreaterThan(15);
+    expect(ahead).toBeLessThan(60);
+  });
+
+  it('cameraDeadzone: the walker rests on the edge of the box it left', () => {
+    // Neither centred nor carried along: exactly `slack` off centre, which is
+    // the default forty-eight, and travelling with the view from then on.
+    const ahead = onScreen(RULE_DEMOS.cameraDeadzone) - middle;
+
+    expect(ahead).toBeCloseTo(48, 0);
+  });
+
+  it('cameraConfined: the view stops and the walker walks on', () => {
+    // The one demo whose walker is meant to leave the middle for good. The
+    // camera runs out of map, so from then on every pixel the walker moves is
+    // a pixel further from centre — but still inside the picture, or the strip
+    // ends with its subject missing.
+    const {world, cast} = play(RULE_DEMOS.cameraConfined);
+    const walker = cast.walker as {get(p: unknown): Vector};
+    const view = viewOrigin(world);
+
+    // Stopped with the VIEWPORT's right edge on the map's. The viewport is the
+    // engine's ten tiles rather than this frame's six, which is the one place
+    // these demos have to know the two rectangles differ.
+    expect(view.x + middle + 160).toBeCloseTo(12 * 32, 0);
+    const past = walker.get(PositionProperty).x - view.x;
+    expect(past).toBeGreaterThan(middle + 40);
+    expect(past).toBeLessThan(DEMO_SIZE.width);
   });
 });

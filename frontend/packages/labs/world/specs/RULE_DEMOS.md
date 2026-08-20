@@ -206,7 +206,32 @@ comfortable with anyway (see above).
    a custom property computed from the demo (`seconds × DEMO_FPS`) rather than
    from a manifest, which would have been a second thing to fetch and a second
    thing to be stale.
-5. **The rest of the obvious ones**, once the shape has survived contact with
-   three.
+5. 🔶 **The rest of the obvious ones**, once the shape has survived contact
+   with three. Done: Physics, Solid Bodies, Collection, Health, Steering,
+   Gravity, Drag, Expiry, Screen Wrap, and the four camera rules. Left:
+   Boundaries, Shooting, Time, Writing.
+
+   **The camera rules needed the recorder to learn to see.** It drew where
+   actors ARE, so a rule whose entire effect is on the view moved nothing
+   anybody could see; it now films through `viewOrigin`, which is the top-left
+   of what the active camera shows. That is an identity for every other demo,
+   because `demoWorld` puts the camera at the frame's middle — which is why
+   adding it re-recorded all nine existing strips byte for byte.
+
+   The four of them share one stage (`src/rules/demos/cameras.ts`): the same
+   walker crossing the same posts on a map twice the frame wide, so each strip
+   differs only in how the picture moves. Scenery is not optional here — a
+   followed actor is motionless on screen by definition, so with an empty world
+   the recording is one box sitting still.
+
+   **The frame and the engine's viewport are different rectangles**, and Camera
+   Confined is where that stops being an implementation detail: it keeps the
+   VIEWPORT inside the map, and the viewport is a fixed ten tiles square
+   (`engine/core/viewport`) while a demo frame is six by four. So a confined
+   demo's map must be at least ten tiles TALL or the rule has no legal vertical
+   position and pins the camera somewhere the demo never meant — which is a
+   whole strip drawn a hundred pixels off, for a reason nothing in the demo
+   mentions. The shared stage is twelve by ten for that one rule's sake.
+
 6. **The ones that need a device**, as their own piece of work: what stands for
    a key being held, or a pointer clicking, inside a frame nobody is touching.

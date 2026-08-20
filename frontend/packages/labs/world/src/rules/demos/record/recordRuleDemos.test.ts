@@ -20,29 +20,26 @@ import {createRequire} from 'node:module';
 import {join} from 'node:path';
 import {describe, expect, it} from 'vitest';
 
-import {compileStockRules} from '../../__tests__/support/compileStockRules';
 import {
-  collectRule,
-  collisionsRule,
-  gravityRule,
-  motionRule,
-  solidRule,
-  steeringRule,
-} from '../../stock';
+  ALL_STOCK_SOURCES,
+  compileStockRules,
+} from '../../__tests__/support/compileStockRules';
 import {RULE_DEMOS} from '../index';
-import {DEMO_BACKGROUND, DEMO_SIZE, type RuleDemo} from '../types';
+import {DEMO_BACKGROUND, DEMO_SIZE, viewOrigin, type RuleDemo} from '../types';
 
 import {drawStrip, rgb, type Box} from './strip';
 
-/** Every rule a demo might ask for, in dependency order. */
-const SOURCES: Record<string, string> = {
-  'rules/motion': motionRule,
-  'rules/collisions': collisionsRule,
-  'rules/solid': solidRule,
-  'rules/gravity': gravityRule,
-  'rules/steering': steeringRule,
-  'rules/collect': collectRule,
-};
+/**
+ * Every stock rule, by the path a demo names it with, in DEPENDENCY ORDER.
+ *
+ * All of them, rather than the ones today's demos happen to need: a demo
+ * declares its `rules` and the union is what would have to be assembled here
+ * otherwise — a second list, kept in step by hand, whose failure mode is the
+ * one this already hit ("Cannot read properties of undefined"). Compiling a
+ * rule nobody asks for costs milliseconds.
+ *
+ * The order is the order: a rule is evaluated against the ones before it.
+ */
 
 /** Frames a second in the recording — not the simulation's rate. */
 const FPS = 12;
@@ -66,14 +63,15 @@ function play(
   const every = Math.round(60 / FPS);
   for (let tick = 0; tick < ticks; tick++) {
     if (tick % every === 0) {
+      const view = viewOrigin(world);
       frames.push(
         world.renderSnapshot().map(state => {
           const id = (state.actor as unknown as {id: string}).id;
-          const look = demo.look(id);
+          const look = demo.look(id, state.actor);
           return {
             id,
-            x: state.x,
-            y: state.y,
+            x: state.x - view.x,
+            y: state.y - view.y,
             width: look.width,
             height: look.height,
             colour: rgb(look.colour),
@@ -88,7 +86,7 @@ function play(
 
 describe('recording the rule demos', () => {
   it('writes a strip per demo', async () => {
-    const modules = await compileStockRules(SOURCES);
+    const modules = await compileStockRules(ALL_STOCK_SOURCES);
     const {encodePng} = createRequire(import.meta.url)(
       '../../../../scripts/generate-sprites.mjs',
     ) as {encodePng: (rgba: Uint8Array, w: number, h: number) => Buffer};
