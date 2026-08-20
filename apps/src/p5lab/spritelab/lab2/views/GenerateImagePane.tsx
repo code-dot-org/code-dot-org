@@ -152,6 +152,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [channelId]
   );
 
+  // Guards a second Save click while one save is in flight. Reset on every
+  // editor open, so a save that never settles can't leave Save dead for the
+  // next session.
+  const savingPaintRef = useRef(false);
+
   // The dialog's subject: an animation key, 'new', or closed. Painting is
   // three-way: the details dialog stays up through 'loading' (the paint
   // editor renders nothing until its image decodes) and hands off in one
@@ -174,6 +179,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
 
   const handlePaintNew = useCallback((draft: NewImageDraft) => {
     setPaintNewDraft(draft);
+    savingPaintRef.current = false;
     setPainting('loading');
   }, []);
 
@@ -525,9 +531,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [dialogTarget, targetProps, paintNewDraft, uploadEdited, dispatch, session]
   );
 
-  // Guards a second Save click while the first is still uploading.
-  const savingPaintRef = useRef(false);
-
   const handleEditorSave = useCallback(
     async (dataURI: string, meta: PixelEditorSaveMeta) => {
       if (savingPaintRef.current) {
@@ -594,7 +597,10 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           }
           generation={targetProps?.generation}
           onClose={closeDialog}
-          onPaint={() => setPainting('loading')}
+          onPaint={() => {
+            savingPaintRef.current = false;
+            setPainting('loading');
+          }}
           onPaintNew={handlePaintNew}
           newImageDraft={paintNewDraft ?? undefined}
           onRename={handleRename}
