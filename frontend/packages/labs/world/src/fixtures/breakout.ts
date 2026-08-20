@@ -177,7 +177,7 @@ const PADDLE_ACTOR = JSON.stringify({
           block: stack([
             {
               type: 'world_use_trait',
-              fields: {TRAIT: 'Arrow Keys#ControlledByArrowKeysTrait'},
+              fields: {TRAIT: 'Arrow Keys#MovesAcrossTrait'},
             },
             {
               type: 'world_use_trait',

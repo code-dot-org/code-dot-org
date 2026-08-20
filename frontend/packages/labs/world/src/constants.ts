@@ -275,7 +275,7 @@ const PLAYER_ACTOR = JSON.stringify(
           next: {
             block: stack([
               useTrait('Gravity#AffectedByGravityTrait'),
-              useTrait('Arrow Keys#ControlledByArrowKeysTrait'),
+              useTrait('Arrow Keys#MovesAcrossTrait'),
               // Hearing the keyboard is something an actor ELECTS. The world's
               // own key events are raised once a frame whatever is in it; this
               // trait is what makes `rules/input` also tell THIS actor, and it

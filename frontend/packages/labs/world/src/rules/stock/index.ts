@@ -165,8 +165,8 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Arrow Keys',
     ability: 'Moves with Arrow Keys',
     description:
-      'Walks an actor left and right while the arrow keys are held, at a speed the actor carries.',
-    provides: ['Controlled by Arrow Keys'],
+      'Moves an actor while the arrow keys are held, at a speed the actor carries. Across and down are separate abilities: a platformer takes one, a top-down game takes both.',
+    provides: ['Moves Across', 'Moves Down'],
     contents: arrowsRule,
   },
   {

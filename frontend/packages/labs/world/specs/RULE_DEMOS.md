@@ -250,5 +250,31 @@ comfortable with anyway (see above).
    whole strip drawn a hundred pixels off, for a reason nothing in the demo
    mentions. The shared stage is twelve by ten for that one rule's sake.
 
-6. **The ones that need a device**, as their own piece of work: what stands for
-   a key being held, or a pointer clicking, inside a frame nobody is touching.
+6. ✅ **The ones that need a device**: Input, Mouse, Arrow Keys and Arrow
+   Drive.
+
+   **The device is drawn in the frame.** A key cap is a small box that lights
+   while its key is held, and the arrow cluster is the inverted T every
+   keyboard has — a shape legible without a letter on it, which matters
+   because this recorder cannot draw a letter. The mouse gets a pointer
+   instead, since a mouse is a place as well as a button, and the click is the
+   moment the pointer fattens. Nothing remembers anything: a cap asks the
+   world whether its key is down, which is why `look` is handed one.
+
+   **The input is scripted where a driver would put it.** A demo may declare
+   `input(world, seconds)`, called once a frame before the tick — exactly
+   where the driver calls `setInput` and `setPointer`. So an input demo is
+   DRIVEN rather than faked: what the strip shows is the rule reacting to a
+   keyboard, not a demo reaching past the rule to move an actor. The recorder
+   and the behaviour tests both step through one `stepDemo`, which fixes the
+   order as hands, then shutter, then tick — a frame drawn before the input
+   was applied lights the cap one frame after the actor it moved, which reads
+   as the rule acting on its own.
+
+   Two things this caught that nothing else had. `setPointer` speaks VIEWPORT
+   pixels and the world converts by the active camera, so the first cut put
+   the pointer ninety pixels adrift and every click missed silently — a strip
+   of a pointer sitting on a target that never answered. And Arrow Keys was
+   sideways only, so its demo recorded a box standing still with the down
+   arrow lit; the rule now has a trait per direction, like Screen Wrap and
+   Boundaries (specs/RULES.md).

@@ -129,7 +129,7 @@ const SINGLE_WORLD = JSON.stringify({
       ]),
       defineActor(PLAYER, 'Player', 360, [
         useTrait('Gravity#AffectedByGravityTrait'),
-        useTrait('Arrow Keys#ControlledByArrowKeysTrait'),
+        useTrait('Arrow Keys#MovesAcrossTrait'),
         useTrait('Input#TakesKeyboardInputTrait'),
         useTrait('Collection#CollectsTrait'),
         {type: 'world_play_animation', fields: {ANIMATION: 'playerBob'}},

@@ -177,13 +177,16 @@ describe('a rule showing what it does', () => {
   });
 
   it('shows nothing for a rule with no demo yet', () => {
-    // Most of the shelf, for now. A row with no picture is a row, not a hole —
-    // which the dialog needs anyway, since a machine with no `public/demos/`
-    // has none of them.
+    // A row with no picture is a row, not a hole — which the dialog needs
+    // anyway, since a machine with no `public/demos/` has none of them.
+    //
+    // Writing is the standing example, and it is blocked rather than merely
+    // undone: the recorder paints rectangles, and text is the one thing a
+    // rectangle cannot stand in for (specs/RULE_DEMOS.md).
     open();
 
     expect(
-      rowFor('Responds to Input')?.querySelector('[aria-hidden="true"]'),
+      rowFor('Shows Text')?.querySelector('[aria-hidden="true"]'),
     ).toBeNull();
   });
 

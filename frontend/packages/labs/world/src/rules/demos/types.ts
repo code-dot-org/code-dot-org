@@ -86,6 +86,20 @@ export interface RuleDemo {
    * matters — that the thing the strip is about is still in the picture.
    */
   readonly filmed?: readonly string[];
+  /**
+   * What the player is DOING at this moment of the recording, if anything.
+   *
+   * Called once a frame, before the world ticks, which is exactly where a
+   * driver calls `setInput` and `setPointer` — so a demo of an input rule is
+   * driven the way a game is, rather than by reaching past the rule and
+   * moving an actor itself.
+   *
+   * `seconds` is elapsed time, so a script is a function of when rather than
+   * of a counter the demo keeps: the same instant produces the same input in
+   * the recorder and in the test, and neither has to be run from the start to
+   * ask what is held.
+   */
+  readonly input?: (world: World, seconds: number) => void;
   /** Build the world. Returns the actors worth naming in an assertion. */
   build(modules: RuleModules): {world: World; cast: Record<string, unknown>};
   /**
@@ -97,14 +111,19 @@ export interface RuleDemo {
    * fallback 32-by-32 box for everything that never set one.
    *
    * The actor is passed because some rules change something a fixed box cannot
-   * show. Health is the case that forced it: health is a NUMBER, and a
+   * show: health is a NUMBER, and a
    * demonstration of losing it has to be visible, so that demo reads the
-   * property and shrinks the box. What a fixed box cannot show at all is a
+   * property and shrinks the box. The WORLD is passed for the same reason one
+   * step further out: an input demo has to draw what is being pressed, and
+   * which keys are down is a fact about the world rather than about any actor
+   * in it.
+   *
+   * Health is the case that forced the actor. What a fixed box cannot show at all is a
    * rule with no effect on any actor; the camera rules escape that because the
    * recorder films through `viewOrigin`, so moving the view moves every box in
    * the frame together.
    */
-  look(id: string, actor: unknown): Look;
+  look(id: string, actor: unknown, world: World): Look;
 }
 
 /**
@@ -161,4 +180,24 @@ export function viewOrigin(world: World): {x: number; y: number} {
     x: (active?.position.x ?? 0) - DEMO_SIZE.width / 2,
     y: (active?.position.y ?? 0) - DEMO_SIZE.height / 2,
   };
+}
+
+/**
+ * One frame of a demo: the player's hands, then the shutter, then the tick.
+ *
+ * That ORDER is the reason this is a function rather than two loops that look
+ * alike. A frame drawn before the input was applied shows a key lighting up
+ * one frame after the actor it moved, which reads as the rule acting on its
+ * own — the exact opposite of what an input demo is for. The recorder and the
+ * behaviour tests both step through here, so neither can drift.
+ */
+export function stepDemo(
+  world: World,
+  demo: RuleDemo,
+  tick: number,
+  capture?: () => void,
+): void {
+  demo.input?.(world, tick / 60);
+  capture?.();
+  world.tick(1 / 60);
 }
