@@ -1,7 +1,7 @@
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {openDrawerToNav} from '@cdo/apps/aiTeacherDrawer/redux';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 // Renders a fixed-position blue tab (matching the teacher panel's show-handle)
@@ -17,7 +17,11 @@ const TeacherPanelHandle: React.FC = () => {
         className="show-handle"
         onClick={() => dispatch(openDrawerToNav('Teacher Panel'))}
       >
-        <FontAwesome icon="chevron-left" className="" title="Open teacher panel" />
+        <FontAwesome
+          icon="chevron-left"
+          className=""
+          title="Open teacher panel"
+        />
       </div>
     </div>
   );
