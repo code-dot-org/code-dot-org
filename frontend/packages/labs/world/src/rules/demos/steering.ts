@@ -4,30 +4,23 @@
 // of what happens. `keep distance` is what makes it stop rather than climb onto
 // it, and a still taken at any point is two boxes at some distance.
 
-import {
-  ActorBuilder,
-  PositionProperty,
-  Vector,
-  WorldBuilder,
-} from '../../engine';
+import {ActorBuilder, PositionProperty, Vector} from '../../engine';
 
-import type {RuleDemo, RuleModules} from './types';
+import {demoWorld, type RuleDemo, type RuleModules} from './types';
 
 export const steeringDemo: RuleDemo = {
   rules: ['rules/motion', 'rules/collisions', 'rules/solid', 'rules/steering'],
   seconds: 2,
   build(modules: RuleModules) {
     const of = (path: string, name: string) => modules[path][name] as never;
-    const world = new WorldBuilder({id: 'steering', name: 'Steering'})
-      .useRules([modules['rules/steering'].default as never])
-      .instantiate();
+    const world = demoWorld('steering', modules, steeringDemo.rules);
     const prey = new ActorBuilder({id: 'prey', name: 'prey'})
-      .set(PositionProperty, new Vector(160, 70))
+      .set(PositionProperty, new Vector(150, 64))
       .instantiate('prey');
     world.addActor(prey);
     const hunter = new ActorBuilder({id: 'hunter', name: 'hunter'})
       .useTraits([of('rules/steering', 'ChasesTrait')])
-      .set(PositionProperty, new Vector(20, 70))
+      .set(PositionProperty, new Vector(24, 100))
       .set(of('rules/steering', 'KeepDistanceProperty'), 20)
       .instantiate('hunter');
     world.addActor(hunter);

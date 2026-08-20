@@ -34,6 +34,31 @@ import BlocklyGenerator, {
 import {parseRuleMeta} from '../../../blockly/ruleMeta';
 import {registerProjectRules} from '../../../blockly/ruleRegistry';
 import * as WorldLab from '../../../engine';
+import {
+  arrowsRule,
+  boundsRule,
+  cameraConfinedRule,
+  cameraDeadzoneRule,
+  cameraEaseRule,
+  cameraFollowRule,
+  cameraRule,
+  collectRule,
+  collisionsRule,
+  dragRule,
+  driveRule,
+  expiresRule,
+  gravityRule,
+  healthRule,
+  inputRule,
+  motionRule,
+  mouseRule,
+  shootsRule,
+  solidRule,
+  steeringRule,
+  timeRule,
+  wrapRule,
+  writingRule,
+} from '../../stock';
 
 export type RuleModule = Record<string, unknown>;
 
@@ -95,3 +120,38 @@ export async function compileStockRules(
   }
   return modules;
 }
+
+/**
+ * Every stock rule, by the path a demo names it with, in DEPENDENCY ORDER.
+ *
+ * One list, shared by everything that compiles rules — the behaviour tests and
+ * the demo recorder. Each kept its own until each in turn compiled a subset and
+ * met "Cannot read properties of undefined" the moment a demo asked for a rule
+ * that list had not heard of. Compiling one nobody wants costs milliseconds;
+ * two lists cost that bug twice.
+ */
+export const ALL_STOCK_SOURCES: Record<string, string> = {
+  'rules/motion': motionRule,
+  'rules/collisions': collisionsRule,
+  'rules/solid': solidRule,
+  'rules/gravity': gravityRule,
+  'rules/steering': steeringRule,
+  'rules/collect': collectRule,
+  'rules/health': healthRule,
+  'rules/time': timeRule,
+  'rules/drag': dragRule,
+  'rules/expires': expiresRule,
+  'rules/wrap': wrapRule,
+  'rules/bounds': boundsRule,
+  'rules/shoots': shootsRule,
+  'rules/input': inputRule,
+  'rules/arrows': arrowsRule,
+  'rules/drive': driveRule,
+  'rules/mouse': mouseRule,
+  'rules/writing': writingRule,
+  'rules/camera': cameraRule,
+  'rules/cameraFollow': cameraFollowRule,
+  'rules/cameraEase': cameraEaseRule,
+  'rules/cameraDeadzone': cameraDeadzoneRule,
+  'rules/cameraConfined': cameraConfinedRule,
+};

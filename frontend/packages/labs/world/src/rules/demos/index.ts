@@ -6,22 +6,46 @@
 
 import {getDemoBaseUrl} from '../../runtime/worldConfig';
 
+import {
+  cameraConfinedDemo,
+  cameraDeadzoneDemo,
+  cameraEaseDemo,
+  cameraFollowDemo,
+} from './cameras';
 import {collectDemo} from './collect';
+import {dragDemo} from './drag';
+import {expiresDemo} from './expires';
 import {gravityDemo} from './gravity';
+import {healthDemo} from './health';
+import {physicsDemo} from './physics';
+import {solidDemo} from './solid';
 import {steeringDemo} from './steering';
 import {DEMO_FPS, type RuleDemo} from './types';
+import {wrapDemo} from './wrap';
 
 export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
-  gravity: gravityDemo,
-  steering: steeringDemo,
+  // Keyed by the stock rule's id (`rules/stock`), in the order the shelf
+  // lists them, so a demo is found the way everything else about a rule is.
+  motion: physicsDemo,
+  solid: solidDemo,
   collect: collectDemo,
+  health: healthDemo,
+  steering: steeringDemo,
+  gravity: gravityDemo,
+  drag: dragDemo,
+  expires: expiresDemo,
+  wrap: wrapDemo,
+  cameraFollow: cameraFollowDemo,
+  cameraEase: cameraEaseDemo,
+  cameraDeadzone: cameraDeadzoneDemo,
+  cameraConfined: cameraConfinedDemo,
 };
 
 /** The demo for a stock rule id, or undefined if it has none yet. */
 export const ruleDemo = (id: string): RuleDemo | undefined => RULE_DEMOS[id];
 
 export type {RuleDemo, RuleModules} from './types';
-export {DEMO_FPS, DEMO_SIZE} from './types';
+export {DEMO_FPS, DEMO_SIZE, viewOrigin} from './types';
 
 /**
  * Where a rule's demo strip is served from, or undefined if it has none.

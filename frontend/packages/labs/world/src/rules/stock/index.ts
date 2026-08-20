@@ -292,6 +292,8 @@ export function stockRuleByName(name: string): StockRule | undefined {
 
 export {
   arrowsRule,
+  mouseRule,
+  writingRule,
   boundsRule,
   collectRule,
   healthRule,
