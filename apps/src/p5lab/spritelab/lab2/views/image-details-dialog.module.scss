@@ -334,3 +334,50 @@
   font-size: 13px;
   font-weight: 600;
 }
+
+// This dialog session's recent generations, pinned to the pane's bottom so
+// they sit beside the jumbo image's foot.
+.alternatives {
+  margin-top: auto;
+}
+
+.alternativesLabel {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.alternativesRow {
+  display: flex;
+  gap: 8px;
+}
+
+.alternativeThumb {
+  width: 56px;
+  height: 56px;
+  padding: 2px;
+  margin: 0;
+  border: 2px solid var(--dialog-control-border);
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--dialog-control-border-strong);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.alternativeSelected {
+  // The chosen one wears the strongest border the chrome has.
+  border-color: var(--dialog-focus-ring);
+  cursor: default;
+
+  &:hover {
+    border-color: var(--dialog-focus-ring);
+  }
+}

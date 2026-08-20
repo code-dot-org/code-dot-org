@@ -49,6 +49,17 @@ interface ImageDetailsDialogProps {
     result: GeneratedImageResult,
     newName?: string
   ) => Promise<void>;
+  /** This dialog session's recent generations; shown when there's a choice. */
+  alternatives?: AlternativeImage[];
+  /** Make this alternative the image. */
+  onSelectAlternative?: (id: string) => void;
+}
+
+/** One choice in the Alternatives strip. */
+export interface AlternativeImage {
+  id: string;
+  thumb: string;
+  selected: boolean;
 }
 
 /**
@@ -74,6 +85,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   getDataURI,
   isNameTaken,
   onAcceptGenerated,
+  alternatives,
+  onSelectAlternative,
 }) => {
   const isNew = animKey === null;
   const {theme} = useTheme();
@@ -263,6 +276,31 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                     )}
                   </dl>
                 )}
+                {alternatives && alternatives.length > 1 && (
+                  <div className={moduleStyles.alternatives}>
+                    <div className={moduleStyles.alternativesLabel}>
+                      Alternatives
+                    </div>
+                    <div className={moduleStyles.alternativesRow}>
+                      {alternatives.map(alt => (
+                        <button
+                          key={alt.id}
+                          type="button"
+                          className={classNames(
+                            moduleStyles.alternativeThumb,
+                            moduleStyles.imagePaneChecker,
+                            alt.selected && moduleStyles.alternativeSelected
+                          )}
+                          aria-label="Use this image"
+                          aria-pressed={alt.selected}
+                          onClick={() => onSelectAlternative?.(alt.id)}
+                        >
+                          <img src={alt.thumb} alt="" />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             <div className={moduleStyles.footer}>
@@ -275,7 +313,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 onClick={() => setView('generate')}
               >
                 <FontAwesomeV6Icon iconName="sparkles" />
-                {generation ? 'Regenerate with AI' : 'Generate with AI'}
+                Generate with AI
               </button>
               <button
                 type="button"

@@ -22,7 +22,7 @@ import {
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
-import {ImageType} from '../ai/images/types';
+import {ImageGenerationMetadata, ImageType} from '../ai/images/types';
 import {galleryOrder, imageTypeFromCategories} from '../imageGallery';
 import {
   getTrimmedThumbnail,
@@ -33,9 +33,24 @@ import {blankPaintImage} from '../paintBlank';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import type {NewImageDraft} from './GenerateImageView';
-import ImageDetailsDialog from './ImageDetailsDialog';
+import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
+
+// One generation kept for this dialog session's Alternatives strip: enough
+// to make it the image again (and to carry its seed into the generate view).
+interface Alternative {
+  id: string;
+  thumb: string;
+  sourceUrl: string;
+  dataURI?: string;
+  frameSize: {x: number; y: number} | null;
+  pixelGridSize?: number;
+  generation?: ImageGenerationMetadata;
+}
+
+// The strip shows the last few generations; older ones age out.
+const MAX_ALTERNATIVES = 4;
 
 function categoriesForType(imageType: ImageType): string[] {
   if (imageType === 'background') {
@@ -182,6 +197,19 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     setPaintNewDraft(draft);
     setPainting('loading');
   }, []);
+
+  // The dialog session's recent generations, oldest first; the image the
+  // dialog opened on seeds the strip so it stays reachable after a
+  // generation replaces it.
+  const [alternatives, setAlternatives] = useState<Alternative[]>([]);
+  // Asset URLs this session superseded or generated. None are deleted while
+  // the dialog is open — an alternative may become the image again — and on
+  // close whichever are left unreferenced are reclaimed.
+  const sessionUrls = useRef<Set<string>>(new Set());
+
+  const pushAlternative = useCallback((alt: Alternative) => {
+    setAlternatives(prev => [...prev, alt].slice(-MAX_ALTERNATIVES));
+  }, []);
   // The gallery card that opened the dialog; focus returns to it on close.
   const triggerRef = useRef<HTMLElement | null>(null);
 
@@ -189,20 +217,45 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     triggerRef.current = trigger;
     setDialogTarget(key);
     setPaintNewDraft(null);
+    sessionUrls.current = new Set();
+    const props = getStore().getState().animationList.propsByKey[key];
+    const thumb = props?.dataURI || props?.sourceUrl;
+    setAlternatives(
+      props && thumb
+        ? [
+            {
+              id: createUuid(),
+              thumb,
+              sourceUrl: props.sourceUrl || thumb,
+              dataURI: props.dataURI,
+              frameSize: props.frameSize || null,
+              pixelGridSize: props.pixelGridSize,
+              generation: props.generation,
+            },
+          ]
+        : []
+    );
   }, []);
 
   const openNewDialog = useCallback((event: React.MouseEvent<HTMLElement>) => {
     triggerRef.current = event.currentTarget;
     setDialogTarget('new');
     setPaintNewDraft(null);
+    sessionUrls.current = new Set();
+    setAlternatives([]);
   }, []);
 
   const closeDialog = useCallback(() => {
     setDialogTarget(null);
     setPainting('no');
     setPaintNewDraft(null);
+    // Whatever this session left behind and nothing points at goes now:
+    // the chosen image is referenced, so only the also-rans are deleted.
+    sessionUrls.current.forEach(deleteUnreferencedAsset);
+    sessionUrls.current = new Set();
+    setAlternatives([]);
     triggerRef.current?.focus();
-  }, []);
+  }, [deleteUnreferencedAsset]);
 
   const targetProps =
     dialogTarget && dialogTarget !== 'new'
@@ -287,6 +340,17 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
 
+      pushAlternative({
+        id: createUuid(),
+        thumb: dataURI,
+        sourceUrl,
+        dataURI,
+        frameSize,
+        pixelGridSize: result.pixelGridSize,
+        generation: result.generation,
+      });
+      sessionUrls.current.add(sourceUrl);
+
       if (dialogTarget === 'new' && newName) {
         const key = createUuid();
         dispatch(
@@ -340,10 +404,51 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       };
       dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
       trimAnimationListImages(updated);
-      // The image now points at the fresh asset; drop the old one.
-      deleteUnreferencedAsset(previousUrl);
+      // The superseded asset stays until the dialog closes: it's in the
+      // Alternatives strip and may become the image again.
+      if (previousUrl) {
+        sessionUrls.current.add(previousUrl);
+      }
     },
-    [dialogTarget, targetProps, uploadImage, dispatch, deleteUnreferencedAsset]
+    [dialogTarget, targetProps, uploadImage, dispatch, pushAlternative]
+  );
+
+  // Make a strip entry the image again. The same repoint an accepted
+  // generation does, minus the upload — the asset already exists.
+  const handleSelectAlternative = useCallback(
+    (id: string) => {
+      const alt = alternatives.find(a => a.id === id);
+      const key = dialogTarget;
+      if (!alt || !key || key === 'new') {
+        return;
+      }
+      const current = getStore().getState().animationList;
+      const previousUrl = current.propsByKey[key]?.sourceUrl;
+      const updated = {
+        orderedKeys: current.orderedKeys,
+        propsByKey: {
+          ...current.propsByKey,
+          [key]: {
+            ...current.propsByKey[key],
+            sourceUrl: alt.sourceUrl,
+            dataURI: alt.dataURI,
+            ...(alt.frameSize
+              ? {frameSize: alt.frameSize, sourceSize: alt.frameSize}
+              : {}),
+            pixelGridSize: alt.pixelGridSize,
+            generation: alt.generation,
+            loadedFromSource: true,
+            saved: false,
+          },
+        },
+      };
+      dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
+      trimAnimationListImages(updated);
+      if (previousUrl) {
+        sessionUrls.current.add(previousUrl);
+      }
+    },
+    [alternatives, dialogTarget, dispatch]
   );
 
   // Persist an edited (or first-painted) image: upload the PNG as a fresh
@@ -445,17 +550,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       // Recompute this image's trimmed thumbnail (cached by source; fires
       // onTrimsUpdated, refreshing the gallery and block dropdowns).
       trimAnimationListImages(updated);
-      // The image now points at the fresh asset; drop the old one.
-      deleteUnreferencedAsset(previousUrl);
+      // Reclaimed at dialog close, with the rest of the session's leftovers.
+      if (previousUrl) {
+        sessionUrls.current.add(previousUrl);
+      }
     },
-    [
-      dialogTarget,
-      targetProps,
-      paintNewDraft,
-      uploadEdited,
-      dispatch,
-      deleteUnreferencedAsset,
-    ]
+    [dialogTarget, targetProps, paintNewDraft, uploadEdited, dispatch]
   );
 
   const creating = dialogTarget === 'new';
@@ -513,6 +613,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onAcceptGenerated={handleAcceptGenerated}
+          alternatives={alternatives.map(
+            (alt): AlternativeImage => ({
+              id: alt.id,
+              thumb: alt.thumb,
+              selected: alt.sourceUrl === targetProps?.sourceUrl,
+            })
+          )}
+          onSelectAlternative={handleSelectAlternative}
         />
       )}
 
