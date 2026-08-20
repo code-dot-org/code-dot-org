@@ -21,6 +21,7 @@ import {
 import {
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
+  IMAGE_TYPES,
   ImageGenerationMetadata,
   ImageStyle,
   ImageType,
@@ -262,7 +263,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 disabled={generating || !!existing || !!lockedImageType}
               >
                 <legend>Type</legend>
-                {(['background', 'sprite', 'block'] as const).map(type => (
+                {IMAGE_TYPES.map(type => (
                   <RadioButton
                     key={type}
                     name="generation-type"

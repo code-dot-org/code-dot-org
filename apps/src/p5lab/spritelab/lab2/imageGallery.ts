@@ -1,6 +1,6 @@
 // Gallery presentation logic for the Images tab.
 
-import {ImageType} from './ai/images/types';
+import {IMAGE_TYPES, ImageType} from './ai/images/types';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from './types';
 
 /** The image kind an animation's categories record. */
@@ -25,15 +25,9 @@ export function categoriesForType(imageType: ImageType): string[] {
   return [];
 }
 
-const GROUP_ORDER: Record<ImageType, number> = {
-  background: 0,
-  sprite: 1,
-  block: 2,
-};
-
 /**
- * Display order for the gallery: backgrounds, then sprites, then blocks,
- * keeping the stored order within each group.
+ * Display order for the gallery: IMAGE_TYPES order between groups, keeping
+ * the stored order within each group.
  */
 export function galleryOrder<T>(
   images: readonly T[],
@@ -42,6 +36,6 @@ export function galleryOrder<T>(
   // Array.prototype.sort is stable, which is what keeps the stored order
   // within a group.
   return [...images].sort(
-    (a, b) => GROUP_ORDER[typeOf(a)] - GROUP_ORDER[typeOf(b)]
+    (a, b) => IMAGE_TYPES.indexOf(typeOf(a)) - IMAGE_TYPES.indexOf(typeOf(b))
   );
 }
