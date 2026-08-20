@@ -10,6 +10,14 @@
 // falls, lands, chases, collects, hurts or fires on time is a rule that works;
 // the rest of its surface is covered by the metadata tests, which are cheaper
 // and do not need a DOM.
+//
+// THREE OF THEM BUILD A DEMO WORLD (`rules/demos`) rather than a world of their
+// own, and that sharing is the point rather than a saving. A demo is a claim
+// about what a rule does, recorded once and shown to every learner who opens
+// the import dialog; a claim nothing checks is one that goes on being made
+// after it stops being true (specs/RULE_DEMOS.md). So the world a recording
+// films is the world a test asserts on, and a rule that stops doing the thing
+// fails here, on the commit that caused it.
 
 import {beforeAll, describe, expect, it} from 'vitest';
 
@@ -20,6 +28,7 @@ import {
   WorldBuilder,
   type World,
 } from '../../engine';
+import {RULE_DEMOS, type RuleDemo} from '../demos';
 import {
   collectRule,
   collisionsRule,
@@ -49,6 +58,20 @@ const run = (world: World, seconds: number): void => {
 
 const at = (x: number, y: number) => new Vector(x, y);
 
+/** Build a demo world and run it for as long as the demo says. */
+const play = (demo: RuleDemo) => {
+  const {world, cast} = demo.build(modules);
+  run(world, demo.seconds);
+  return {world, cast};
+};
+
+/** How far apart two actors ended up. */
+const between = (a: unknown, b: unknown): number => {
+  const one = (a as {get(p: unknown): Vector}).get(PositionProperty);
+  const other = (b as {get(p: unknown): Vector}).get(PositionProperty);
+  return Math.hypot(other.x - one.x, other.y - one.y);
+};
+
 beforeAll(async () => {
   // Compiled once for the file: this is the expensive part, and it is the same
   // six modules for every test below. Dependency order.
@@ -66,32 +89,15 @@ beforeAll(async () => {
 
 describe('Gravity', () => {
   it('falls, lands, and stops', () => {
-    const world = new WorldBuilder({id: 'w', name: 'W'})
-      .useRules([rule('rules/gravity')])
-      .instantiate();
-    const ball = new ActorBuilder({id: 'ball', name: 'ball'})
-      .useTraits([of('rules/gravity', 'AffectedByGravityTrait')])
-      .set(PositionProperty, at(100, 20))
-      .instantiate('ball');
-    world.addActor(ball);
-    world.addActor(
-      new ActorBuilder({id: 'ground', name: 'ground'})
-        .useTraits([
-          of('rules/gravity', 'ActsAsGroundTrait'),
-          of('rules/solid', 'SolidTrait'),
-        ])
-        .set(PositionProperty, at(100, 120))
-        .set(of('rules/collisions', 'SizeProperty'), at(160, 16))
-        .instantiate('ground'),
-    );
-
-    run(world, 1.5);
+    const {world, cast} = play(RULE_DEMOS.gravity);
+    const ball = cast.ball as {get(p: unknown): Vector};
     const landed = ball.get(PositionProperty).y;
+
+    // Half a second more: it landed rather than passing through.
     run(world, 0.5);
 
     expect(landed).toBeGreaterThan(20);
     expect(landed).toBeLessThan(120);
-    // Still there half a second later: it landed rather than passing through.
     expect(ball.get(PositionProperty).y).toBeCloseTo(landed, 1);
   });
 });
@@ -101,27 +107,9 @@ describe('Steering', () => {
     // The regression. `distance from ⟨a⟩ to ⟨b⟩` took `actor to chase`, which
     // is stored as a LIST, and its body called `.get` on the array — so a
     // chaser crashed the moment it had something to chase.
-    const world = new WorldBuilder({id: 'w', name: 'W'})
-      .useRules([rule('rules/steering')])
-      .instantiate();
-    const prey = new ActorBuilder({id: 'prey', name: 'prey'})
-      .set(PositionProperty, at(160, 70))
-      .instantiate('prey');
-    world.addActor(prey);
-    const hunter = new ActorBuilder({id: 'hunter', name: 'hunter'})
-      .useTraits([of('rules/steering', 'ChasesTrait')])
-      .set(PositionProperty, at(20, 70))
-      .set(of('rules/steering', 'KeepDistanceProperty'), 20)
-      .instantiate('hunter');
-    world.addActor(hunter);
-    hunter.set(of('rules/steering', 'ActorToChaseProperty'), prey as never);
+    const {cast} = play(RULE_DEMOS.steering);
 
-    run(world, 2);
-
-    const apart = Math.hypot(
-      prey.get(PositionProperty).x - hunter.get(PositionProperty).x,
-      prey.get(PositionProperty).y - hunter.get(PositionProperty).y,
-    );
+    const apart = between(cast.hunter, cast.prey);
     expect(apart).toBeLessThan(30);
     // …and it stopped rather than climbing onto it.
     expect(apart).toBeGreaterThan(10);
@@ -129,32 +117,10 @@ describe('Steering', () => {
 });
 
 describe('Collection', () => {
-  it('takes what it walks into, and the coin leaves the world', () => {
-    const world = new WorldBuilder({id: 'w', name: 'W'})
-      .useRules([rule('rules/collect')])
-      .instantiate();
-    world.addActor(
-      new ActorBuilder({id: 'walker', name: 'walker'})
-        // Can Move as well: Collection does not imply motion, and a collector
-        // that cannot move never reaches a coin.
-        .useTraits([
-          of('rules/collect', 'CollectsTrait'),
-          of('rules/motion', 'CanMoveTrait'),
-        ])
-        .set(PositionProperty, at(20, 70))
-        .set(of('rules/motion', 'VelocityProperty'), at(1.6, 0))
-        .instantiate('walker'),
-    );
-    world.addActor(
-      new ActorBuilder({id: 'coin', name: 'coin'})
-        .useTraits([of('rules/collect', 'CanBeCollectedTrait')])
-        .set(PositionProperty, at(100, 70))
-        .instantiate('coin'),
-    );
+  it('takes what it walks into, and the coins leave the world', () => {
+    const {world} = play(RULE_DEMOS.collect);
 
-    run(world, 1.5);
-
-    expect([...world.actors].map(actor => actor.id)).not.toContain('coin');
+    expect([...world.actors].map(actor => actor.id)).toEqual(['walker']);
   });
 });
 
