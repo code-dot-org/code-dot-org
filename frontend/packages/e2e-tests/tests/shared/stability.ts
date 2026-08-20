@@ -45,13 +45,12 @@ export async function waitForVisualStability(
 }
 
 /**
- * Wait for the shared header to finish its post-webfont relayout.
- * HeaderMiddle.jsx sets data-header-present on <html> when it mounts and
- * data-header-fonts-relaid-out once it re-measures against the now-loaded
- * fonts; keying on the flag (not #header_middle_content's own presence,
- * which is unconditional and set before the relayout even starts) avoids
- * capturing the pre-relayout, fallback-font layout. Resolves immediately on
- * pages that never mount this header (data-header-present unset).
+ * Wait for the shared header to relayout against the loaded web fonts.
+ *
+ * Keys on the HeaderMiddle.jsx flags, not on #header_middle_content, which is
+ * always present and lands before the relayout starts. Returns at once on a
+ * page that never mounts this header. Does not cover the lesson-progress
+ * strip; use LessonLevelPage.waitForLessonHeaderRendered() for that.
  */
 export async function waitForHeaderSettled(page: Page): Promise<void> {
   await expect

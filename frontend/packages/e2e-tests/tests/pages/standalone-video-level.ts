@@ -21,11 +21,12 @@ export class StandaloneVideoLevel extends LessonLevelPage {
   /** Continue button: fires the milestone POST, then navigates on click. */
   readonly continueButton: Locator;
 
+  readonly videoIframeSelector = '#video';
+
   /**
-   * The embedded video player (a cross-origin youtube-nocookie.com iframe).
-   * CSS: the iframe carries no title attribute, so it has no accessible name
-   * (a11y gap; axe would record this under image/frame naming rules if it
-   * inspected cross-origin frame content, which it does not).
+   * Cross-origin youtube-nocookie.com player. Keep it out of accessibility
+   * baselines: the server sends no title attribute, then the YouTube script
+   * adds one, so axe frame-title fails or passes by timing alone.
    */
   readonly videoIframe: Locator;
 
@@ -34,7 +35,7 @@ export class StandaloneVideoLevel extends LessonLevelPage {
     this.continueButton = page
       .locator(this.rootSelector)
       .getByRole('button', {name: 'Continue'});
-    this.videoIframe = page.locator('#video');
+    this.videoIframe = page.locator(this.videoIframeSelector);
   }
 
   /** Navigate to a standalone-video level and wait for the widget to render. */

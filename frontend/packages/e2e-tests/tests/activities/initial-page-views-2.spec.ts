@@ -14,36 +14,30 @@ import {
 } from '../shared/stability';
 
 interface ScenarioSurface {
-  /** Scoped a11y-scan include selector; every POM here inherits #main_content from BasePage. */
   rootSelector: string;
-  /**
-   * Frame-selector chain excluded from the a11y scan (see shared/axe.ts). Only
-   * the unplugged-video-level scenario needs this: its #video iframe embeds a
-   * live, cross-origin YouTube player whose own UI axe otherwise descends
-   * into, producing violations (aria-allowed-attr, aria-prohibited-attr,
-   * button-name) that belong to YouTube, not this app, and that vary with
-   * YouTube's own markup.
-   */
+  /** Third-party markup this app cannot correct. See shared/axe.ts. */
   axeExclude?: string | string[];
-  /** Elements masked out of the visual check for run-to-run content that never affects the app's own layout. */
+  /** Content that changes between runs without moving the layout. */
   masks: Locator[];
 }
 
 interface Scenario {
   testName: string;
   goto: (page: Page) => Promise<ScenarioSurface>;
-  /** Measured against rootSelector (minus axeExclude), identical on all three engines. */
+  /** Measured on all three engines, which agree. */
   violations: Record<string, number>;
 }
 
-// The literal Cucumber URLs for the four lesson/level scenarios below (unplugged
-// video level, no iframe in dsl, rich long assessment, free response) carry no
-// query string at all, but labLevelUrl()'s noautoplay default appends
-// ?noautoplay=true to every one of them. Accepted deliberately, not silently:
-// Part 1's own Examples table bakes the identical ?noautoplay=true onto every
-// literal URL for the same reason (autoplaying video is the one thing that can
-// make an "initial load" screenshot non-deterministic), so this matches
-// established suite convention rather than diverging from it.
+// Two deliberate differences from the Cucumber outline:
+//
+// labLevelUrl() adds ?noautoplay=true, which the literal URLs omit. Part 1 sets
+// it on every URL for the same reason: a video that starts by itself makes the
+// first screenshot unreliable.
+//
+// The outline also closes the instructions overlay and waits for
+// ".uitest-attachment" to hide, on all seven pages. Neither element reaches the
+// document on any of them, as measured, so only App Lab still closes the
+// overlay.
 const SCENARIOS: Scenario[] = [
   {
     testName: 'new applab project',
@@ -51,15 +45,14 @@ const SCENARIOS: Scenario[] = [
       const lab = new ApplabLab(page);
       await lab.gotoNewProject();
       await lab.closeInstructionsOverlayIfShown();
-      await lab.assertAttachmentsWidgetSettled();
       return {
         rootSelector: lab.mainContentSelector,
-        masks: [lab.savedTimestamp],
+        masks: [lab.projectUpdatedAt],
       };
     },
-    // color-contrast: #runButton label, #ffffff on #f46800 is 3.07:1 (needs 4.5:1) — shared Run-button style, same as Part 1.
-    // label: droplet's three hidden keystroke-capture inputs (.ace_text-input, .droplet-hidden-input, an unclassed textarea).
-    // scrollable-region-focusable: .droplet-palette-scroller, a scrollable toolbox panel with no tabindex.
+    // color-contrast: #runButton, #ffffff on #f46800, 3.07:1 against 4.5:1.
+    // label: three hidden droplet keystroke inputs. scrollable-region-focusable:
+    // .droplet-palette-scroller scrolls without a tabindex.
     violations: {
       'color-contrast': 1,
       label: 3,
@@ -72,8 +65,6 @@ const SCENARIOS: Scenario[] = [
       const home = new HomePage(page);
       await home.goto();
       await waitForHeaderSettled(page);
-      await home.closeInstructionsOverlayIfShown();
-      await home.assertAttachmentsWidgetSettled();
       return {rootSelector: home.mainContentSelector, masks: []};
     },
     violations: {},
@@ -84,8 +75,6 @@ const SCENARIOS: Scenario[] = [
       const overview = new UnitOverviewPage(page);
       await overview.gotoOverview();
       await waitForHeaderSettled(page);
-      await overview.closeInstructionsOverlayIfShown();
-      await overview.assertAttachmentsWidgetSettled();
       return {rootSelector: overview.mainContentSelector, masks: []};
     },
     violations: {},
@@ -97,34 +86,27 @@ const SCENARIOS: Scenario[] = [
       await level.gotoLevel({lesson: 34, level: 1});
       await waitForHeaderSettled(page);
       await level.waitForLessonHeaderRendered();
-      await level.closeInstructionsOverlayIfShown();
-      await level.assertAttachmentsWidgetSettled();
-      // A live, cross-origin YouTube embed; its own player chrome/thumbnail can vary run-to-run.
       return {
         rootSelector: level.mainContentSelector,
-        axeExclude: ['#video', '*'],
+        axeExclude: level.videoIframeSelector,
         masks: [level.videoIframe],
       };
     },
-    // color-contrast: "Download Video" link, #0596ce on #ffffff is 3.36:1 (needs 4.5:1) — shared link style.
-    // frame-title: #video has no title attribute (a11y gap; the iframe's own YouTube content is excluded above).
-    violations: {'color-contrast': 1, 'frame-title': 1},
+    // color-contrast: "Download Video", the shared link style, 3.36:1 against 4.5:1.
+    violations: {'color-contrast': 1},
   },
   {
     testName: 'no iframe in dsl',
     async goto(page) {
-      // Not ExternalLevel: its gotoLevel() waits for #extra-details-tag, authored
-      // only on a different external level than this one. This level needs no
-      // lab-specific locator, so the plain LessonLevelPage base is enough.
+      // Not ExternalLevel: its gotoLevel() waits for #extra-details-tag, which
+      // the curriculum sets on a different external level.
       const level = new LessonLevelPage(page);
       await level.gotoLevel({lesson: 18, level: 14});
       await waitForHeaderSettled(page);
       await level.waitForLessonHeaderRendered();
-      await level.closeInstructionsOverlayIfShown();
-      await level.assertAttachmentsWidgetSettled();
       return {rootSelector: level.mainContentSelector, masks: []};
     },
-    // color-contrast: the markdown-authored "this link", #0596ce on #ffffff is 3.36:1 (needs 4.5:1) — same shared link style as above.
+    // color-contrast: the markdown link, same shared style, 3.36:1 against 4.5:1.
     violations: {'color-contrast': 1},
   },
   {
@@ -134,11 +116,9 @@ const SCENARIOS: Scenario[] = [
       await level.gotoLevel({lesson: 26, level: 1});
       await waitForHeaderSettled(page);
       await level.waitForLessonHeaderRendered();
-      await level.closeInstructionsOverlayIfShown();
-      await level.assertAttachmentsWidgetSettled();
       return {rootSelector: level.mainContentSelector, masks: []};
     },
-    // image-alt: 10 authored screenshots illustrating Next/Previous/Submit and answer-choice images, none carrying alt text.
+    // image-alt: 10 authored screenshots and answer-choice images, none with alt text.
     violations: {'image-alt': 10},
   },
   {
@@ -148,11 +128,6 @@ const SCENARIOS: Scenario[] = [
       await level.gotoLevel({lesson: 27, level: 1});
       await waitForHeaderSettled(page);
       await level.waitForLessonHeaderRendered();
-      await level.closeInstructionsOverlayIfShown();
-      // The deflake hack this scenario's Cucumber comment names: the Attachments
-      // widget shows "Loading..." for ~200ms after domcontentloaded before
-      // settling (empty, for this fresh-account fixture).
-      await level.assertAttachmentsWidgetSettled();
       return {rootSelector: level.mainContentSelector, masks: []};
     },
     violations: {},
@@ -167,7 +142,7 @@ test.describe('Looking at a few things with Applitools Eyes - Part 2', () => {
      */
     test(scenario.testName, {tag: '@visual'}, async ({page, visualCheck}) => {
       await resetSession(page);
-      await page.goto('/');
+      await page.goto('/', {waitUntil: 'domcontentloaded'});
       await createStudent(page, {name: 'Tester'});
 
       const {masks} = await scenario.goto(page);
@@ -180,12 +155,12 @@ test.describe('Looking at a few things with Applitools Eyes - Part 2', () => {
   }
 
   for (const scenario of SCENARIOS) {
-    /** Net-new coverage; no Cucumber source. */
+    /** New coverage; the Cucumber feature has no equivalent. */
     test(`${scenario.testName}: no unexpected accessibility violations`, async ({
       page,
     }) => {
       await resetSession(page);
-      await page.goto('/');
+      await page.goto('/', {waitUntil: 'domcontentloaded'});
       await createStudent(page, {name: 'Tester'});
 
       const {rootSelector, axeExclude} = await scenario.goto(page);

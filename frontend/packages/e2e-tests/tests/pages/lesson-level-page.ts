@@ -64,12 +64,10 @@ export class LessonLevelPage extends BasePage {
   }
 
   /**
-   * Resolve once the lesson-progress strip has rendered and stopped resizing.
-   * The server ships .header_level empty and a separate React mount fills it
-   * roughly 800ms after domcontentloaded. waitForHeaderSettled does not cover
-   * this: the shared header sets its own flags before domcontentloaded, so it
-   * reports settled while this strip is still blank, and a screenshot taken
-   * then captures an empty lesson header.
+   * The server sends .header_level empty and a separate React mount fills it
+   * about 800ms after domcontentloaded. waitForHeaderSettled() reports settled
+   * before that, because the shared header sets its flags earlier, so a
+   * screenshot taken then shows a blank lesson header.
    */
   async waitForLessonHeaderRendered(): Promise<void> {
     await expect(this.lessonProgress).toBeVisible();
