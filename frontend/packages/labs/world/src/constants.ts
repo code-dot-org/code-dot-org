@@ -22,6 +22,8 @@ import {
   inputRule,
   jumpRule,
   motionRule,
+  scoreRule,
+  writingRule,
 } from './rules/stock';
 import {TILE_SIZE, VIEWPORT_TILES} from './runtime/viewport';
 
@@ -94,6 +96,15 @@ export const useTrait = (trait: string) => ({
  * also has event handlers, and a handler is its own top-level block rather than
  * something chained inside the definition.
  */
+/** `set text of ⟨this actor⟩ to …` — the scoreboard's only verb. */
+const setText = (value: object) => ({
+  type: 'world_set_Writing_TextProperty',
+  inputs: {
+    ACTOR: {block: {type: 'world_this_actor'}},
+    VALUE: {block: value},
+  },
+});
+
 const actorFile = (name: string, rows: object[]) =>
   JSON.stringify(
     {
@@ -209,6 +220,8 @@ export const LEVEL1_ACTORS = [
   place('actors/coin', 'Coin2', tileCenter(8), tileCenter(8)),
   place('actors/coin', 'Coin3', tileCenter(6), tileCenter(3)),
   place('actors/ball', 'Ball', tileCenter(3), tileCenter(2)),
+  // Top left, out of the way of everything that moves.
+  place('actors/scoreboard', 'Scoreboard', tileCenter(2), tileCenter(0)),
 ];
 
 const LEVEL1_MAP = JSON.stringify(
@@ -254,6 +267,16 @@ const MAIN_WORLD = JSON.stringify(
           next: {
             block: stack([
               {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
+              // Three coins at ten each. Set HERE rather than left to the
+              // rule's default of nothing, because a target of zero is a game
+              // that can be played and not won — and the level has an ending
+              // in it.
+              {
+                type: 'world_set_Scoring_TargetScoreProperty',
+                inputs: {
+                  VALUE: {block: {type: 'math_number', fields: {NUM: 30}}},
+                },
+              },
             ]),
           },
         },
@@ -349,33 +372,47 @@ const PLAYER_ACTOR = JSON.stringify(
           'Player started falling',
         ),
         onEvent('Gravity_StopsFallingEvent', 20, 320, 'Player landed!'),
-        // The score, such as it is. Taking the coin is the RULE's business —
-        // this handler is only told that it happened, which is why the coin is
-        // already out of the world by the time anything reads the count.
+        // Taking the coin is the RULE's business — this handler is only told
+        // that it happened, which is why the coin is already out of the world
+        // by the time anything reads the count.
         //
-        // `collected` is a list of what was taken rather than a tally, so "how
-        // many coins" is a question asked of it rather than a second number
-        // kept alongside it. Which is the answer to "and how many of the other
-        // thing", too, without a second counter and without remembering to
-        // increment it.
+        // TWO THINGS, and they answer different questions. `add 10 to the
+        // score` is the game's number: shared, shown on the Scoreboard, and
+        // the thing the target is measured against. The print below it is the
+        // learner's — `collected` is a LIST of what was taken rather than a
+        // tally, so "how many coins" is a question asked of it, and so is "and
+        // how many of the other thing", without a second counter to keep
+        // agreeing.
+        //
+        // Collection knows nothing about points and Scoring knows nothing
+        // about coins. This handler is where the starter says they are the
+        // same event, and it is one block.
         {
           type: 'world_on_Collection_CollectsEvent',
           x: 20,
           y: 620,
           next: {
             block: {
-              type: 'world_print',
+              type: 'world_do_Scoring_AddToTheScoreAction',
               inputs: {
-                VALUE: {
-                  block: {
-                    type: 'world_count_of_kind',
-                    fields: {TYPE: 'actors/coin'},
-                    inputs: {
-                      LIST: {
-                        block: {
-                          type: 'world_get_Collection_CollectedProperty',
-                          inputs: {
-                            ACTOR: {block: {type: 'world_this_actor'}},
+                VALUE: {block: {type: 'math_number', fields: {NUM: 10}}},
+              },
+              next: {
+                block: {
+                  type: 'world_print',
+                  inputs: {
+                    VALUE: {
+                      block: {
+                        type: 'world_count_of_kind',
+                        fields: {TYPE: 'actors/coin'},
+                        inputs: {
+                          LIST: {
+                            block: {
+                              type: 'world_get_Collection_CollectedProperty',
+                              inputs: {
+                                ACTOR: {block: {type: 'world_this_actor'}},
+                              },
+                            },
                           },
                         },
                       },
@@ -424,6 +461,67 @@ const COIN_ACTOR = actorFile('Coin', [
   {type: 'world_play_animation', fields: {ANIMATION: 'coinSpin'}},
   useTrait('Collection#CanBeCollectedTrait'),
 ]);
+
+// The scoreboard: a Label, which is what an actor with text and no body is.
+//
+// It is where the starter's score BECOMES visible, and it is an actor because
+// that is the only thing text can go on (`rules/writing`). Two traits and two
+// handlers: it shows text, it asked to hear the score, and it answers.
+//
+// The handlers are the ACTOR's events rather than the world's, which is what
+// "Watches the Score" exists for. An `.actor` file has no binding for a world
+// event, so `when the score changes` — the rule's other, world-scoped copy of
+// this — could only be written in `main.world`, and would then have to reach
+// back out for whichever actor is the scoreboard.
+const SCOREBOARD_ACTOR = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Scoreboard'},
+          next: {
+            block: stack([
+              useTrait('Writing#ShowsTextTrait'),
+              useTrait('Scoring#WatchesTheScoreTrait'),
+              // Something to read before the first coin. Without it the board
+              // is blank until the score moves, which looks like a broken
+              // scoreboard rather than a score of nothing.
+              setText({type: 'text', fields: {TEXT: 'SCORE 0'}}),
+            ]),
+          },
+        },
+        {
+          type: 'world_on_Scoring_SeesTheScoreChangeEvent',
+          x: 20,
+          y: 200,
+          next: {
+            block: setText({
+              type: 'text_join',
+              extraState: {itemCount: 2},
+              inputs: {
+                ADD0: {block: {type: 'text', fields: {TEXT: 'SCORE '}}},
+                ADD1: {block: {type: 'world_get_Scoring_ScoreProperty'}},
+              },
+            }),
+          },
+        },
+        {
+          type: 'world_on_Scoring_SeesTheGameWonEvent',
+          x: 20,
+          y: 320,
+          next: {
+            block: setText({type: 'text', fields: {TEXT: 'YOU WIN'}}),
+          },
+        },
+      ],
+    },
+  },
+  null,
+  2,
+);
 
 // A ball playing "pulse" — the animation in animations/game.anim.
 const BALL_ACTOR = actorFile('Ball', [
@@ -663,6 +761,12 @@ export const STARTER_SPEC: ProjectSpec = {
       contents: COIN_ACTOR,
       folderId: 'actors',
     },
+    scoreboard: {
+      name: 'scoreboard.actor',
+      language: 'actor',
+      contents: SCOREBOARD_ACTOR,
+      folderId: 'actors',
+    },
     ball: {
       name: 'ball.actor',
       language: 'actor',
@@ -721,6 +825,18 @@ export const STARTER_SPEC: ProjectSpec = {
       name: 'solid.rule',
       language: 'rule',
       contents: solidRule,
+      folderId: 'rules',
+    },
+    scoreRule: {
+      name: 'score.rule',
+      language: 'rule',
+      contents: scoreRule,
+      folderId: 'rules',
+    },
+    writingRule: {
+      name: 'writing.rule',
+      language: 'rule',
+      contents: writingRule,
       folderId: 'rules',
     },
     collectRule: {

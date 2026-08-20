@@ -13,6 +13,7 @@ describe('projectFiles', () => {
       'actors/coin.actor',
       'actors/ground.actor',
       'actors/player.actor',
+      'actors/scoreboard.actor',
       'animations/coinSpin.anim',
       'animations/game.anim',
       'effects/ripple.effect',
@@ -24,7 +25,9 @@ describe('projectFiles', () => {
       'rules/input.rule',
       'rules/jump.rule',
       'rules/motion.rule',
+      'rules/score.rule',
       'rules/solid.rule',
+      'rules/writing.rule',
       // The images themselves are bytes on a `url`, so they are not here; the
       // `.sheet` saying how to cut one of them up is text, so it is.
       'sprites/coinSpin.sheet',

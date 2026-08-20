@@ -45,11 +45,18 @@ const PLAYER = 'platformerPlayerDef';
 const GROUND = 'platformerGroundDef';
 const COIN = 'platformerCoinDef';
 const BALL = 'platformerBallDef';
+const SCOREBOARD = 'platformerScoreboardDef';
 
 const local = (blockId: string) => `local:${blockId}`;
 
 /** `⟨this actor⟩`, which inside a hat means the actor the event fired for. */
 const me = () => ({block: {type: 'world_this_actor'}});
+
+/** `set text of ⟨who⟩ to …` — the scoreboard's only verb. */
+const setText = (who: object, value: object) => ({
+  type: 'world_set_Writing_TextProperty',
+  inputs: {ACTOR: who, VALUE: {block: value}},
+});
 
 /** `any ⟨kind⟩` — a hat's subject, and so the TEMPLATE rather than an instance. */
 const kind = (blockId: string) => ({
@@ -114,6 +121,15 @@ const SINGLE_WORLD = JSON.stringify({
             createInMap('placePlayer', PLAYER, 'actors/player'),
             createInMap('placeCoins', COIN, 'actors/coin'),
             createInMap('placeBall', BALL, 'actors/ball'),
+            createInMap('placeScoreboard', SCOREBOARD, 'actors/scoreboard'),
+            // Three coins at ten each. The starter says this in its own
+            // `main.world`, and here it is the same line in the same place.
+            {
+              type: 'world_set_Scoring_TargetScoreProperty',
+              inputs: {
+                VALUE: {block: {type: 'math_number', fields: {NUM: 30}}},
+              },
+            },
           ]),
         },
       },
@@ -129,6 +145,7 @@ const SINGLE_WORLD = JSON.stringify({
       ]),
       defineActor(PLAYER, 'Player', 360, [
         useTrait('Gravity#AffectedByGravityTrait'),
+        useTrait('Jumping#JumpsTrait'),
         useTrait('Arrow Keys#MovesAcrossTrait'),
         useTrait('Input#TakesKeyboardInputTrait'),
         useTrait('Collection#CollectsTrait'),
@@ -141,9 +158,18 @@ const SINGLE_WORLD = JSON.stringify({
       defineActor(BALL, 'Ball', 1140, [
         {type: 'world_play_animation', fields: {ANIMATION: 'pulse'}},
       ]),
-      // Space to jump, guarded by gravity's own query so there is no second
-      // jump in mid-air. WHICH key is on the hat, so the handler is registered
-      // for the space bar and never runs for anything else.
+      defineActor(SCOREBOARD, 'Scoreboard', 1520, [
+        useTrait('Writing#ShowsTextTrait'),
+        useTrait('Scoring#WatchesTheScoreTrait'),
+        // `this actor`, not `any ⟨Scoreboard⟩`. A definition body runs while
+        // the module is still being assembled — the actors are hoisted above
+        // the world — so resolving a KIND here reaches for a world that does
+        // not exist yet, and the module throws on load.
+        setText(me(), {type: 'text', fields: {TEXT: 'SCORE 0'}}),
+      ]),
+      // Space to jump. WHICH key is on the hat, so the handler is registered
+      // for the space bar and never runs for anything else; the rest is the
+      // Jumping rule's, which is what keeps it honest in mid-air.
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'space'},
@@ -152,36 +178,17 @@ const SINGLE_WORLD = JSON.stringify({
         inputs: {ACTOR: kind(PLAYER)},
         next: {
           block: {
-            type: 'controls_if',
-            inputs: {
-              IF0: {
-                block: {
-                  type: 'world_query_Gravity_IsOnTheGroundQuery',
-                  inputs: {ACTOR: me()},
-                },
-              },
-              DO0: {
-                block: {
-                  type: 'world_do_Physics_ApplyForceAction',
-                  inputs: {
-                    VALUE: {
-                      block: {
-                        type: 'world_vector',
-                        fields: {VECTOR: {x: 0, y: -5}},
-                      },
-                    },
-                    ACTOR: me(),
-                  },
-                },
-              },
-            },
+            type: 'world_do_Jumping_MakeJumpAction',
+            inputs: {VALUE: me()},
           },
         },
       },
       says('Gravity_StartsFallingEvent', 900, 'Player started falling'),
       says('Gravity_StopsFallingEvent', 1020, 'Player landed!'),
-      // The score. `collected` is a list of what was taken, so "how many
-      // coins" is asked of it rather than kept beside it.
+      // The score, twice over. `add 10 to the score` is the game's number,
+      // shown on the Scoreboard; the print below it asks `collected`, which is
+      // a LIST of what was taken rather than a tally, so "how many coins" is a
+      // question asked of it rather than a second number kept beside it.
       {
         type: 'world_on_Collection_CollectsEvent',
         x: 520,
@@ -189,17 +196,25 @@ const SINGLE_WORLD = JSON.stringify({
         inputs: {ACTOR: kind(PLAYER)},
         next: {
           block: {
-            type: 'world_print',
+            type: 'world_do_Scoring_AddToTheScoreAction',
             inputs: {
-              VALUE: {
-                block: {
-                  type: 'world_count_of_kind',
-                  fields: {TYPE: local(COIN)},
-                  inputs: {
-                    LIST: {
-                      block: {
-                        type: 'world_get_Collection_CollectedProperty',
-                        inputs: {ACTOR: me()},
+              VALUE: {block: {type: 'math_number', fields: {NUM: 10}}},
+            },
+            next: {
+              block: {
+                type: 'world_print',
+                inputs: {
+                  VALUE: {
+                    block: {
+                      type: 'world_count_of_kind',
+                      fields: {TYPE: local(COIN)},
+                      inputs: {
+                        LIST: {
+                          block: {
+                            type: 'world_get_Collection_CollectedProperty',
+                            inputs: {ACTOR: me()},
+                          },
+                        },
                       },
                     },
                   },
@@ -207,6 +222,36 @@ const SINGLE_WORLD = JSON.stringify({
               },
             },
           },
+        },
+      },
+      // The scoreboard's own two handlers — the ACTOR's events, which is what
+      // "Watches the Score" is for. In the starter these live in
+      // `scoreboard.actor`; here they are hats on `any ⟨Scoreboard⟩`, and they
+      // still belong to the template, so a second scoreboard would keep itself
+      // up to date too.
+      {
+        type: 'world_on_Scoring_SeesTheScoreChangeEvent',
+        x: 1020,
+        y: 700,
+        inputs: {ACTOR: kind(SCOREBOARD)},
+        next: {
+          block: setText(me(), {
+            type: 'text_join',
+            extraState: {itemCount: 2},
+            inputs: {
+              ADD0: {block: {type: 'text', fields: {TEXT: 'SCORE '}}},
+              ADD1: {block: {type: 'world_get_Scoring_ScoreProperty'}},
+            },
+          }),
+        },
+      },
+      {
+        type: 'world_on_Scoring_SeesTheGameWonEvent',
+        x: 1020,
+        y: 840,
+        inputs: {ACTOR: kind(SCOREBOARD)},
+        next: {
+          block: setText(me(), {type: 'text', fields: {TEXT: 'YOU WIN'}}),
         },
       },
     ],
@@ -217,7 +262,15 @@ const SINGLE_WORLD = JSON.stringify({
 // moved into the world above. Written as a subtraction so that a rule or a
 // picture added to the starter arrives here too — the alternative is a second
 // list, and a second list is a thing to forget.
-const MOVED_IN = ['main', 'player', 'ground', 'coin', 'ball', 'level1'];
+const MOVED_IN = [
+  'main',
+  'player',
+  'ground',
+  'coin',
+  'ball',
+  'scoreboard',
+  'level1',
+];
 
 const SUPPORT_FILES = Object.fromEntries(
   Object.entries(STARTER_SPEC.files).filter(([key]) => !MOVED_IN.includes(key)),
