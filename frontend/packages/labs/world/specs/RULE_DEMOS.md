@@ -107,13 +107,27 @@ the place the fault is, on the commit that caused it. The recording may then be
 out of date for as long as it takes to re-run the recorder, and that is a
 tolerable staleness because it is a KNOWN one.
 
-## Where a demo world lives
+## What a demo world IS, and where it lives
 
-Beside the rule it demonstrates: `scripts/rules/<name>.mjs` gains a `demo`
-export alongside the rule's definition. Same file, same commit, same review.
+A FUNCTION from the compiled rule modules to a running world
+(`src/rules/demos`), and nothing else: no project, no `.world` file, no
+compile.
 
-A demo in a separate directory would be a second list to keep in step, and the
-first thing to rot when a rule's traits are renamed.
+That is a change from this document's first draft, which put a demo in
+`scripts/rules/<name>.mjs` beside the rule it demonstrates, on the grounds that
+a demo in a directory of its own is the first thing to rot when a rule's traits
+are renamed. The reasoning was right and the mechanism was wrong. Those files
+generate block JSON, so a demo there would have meant authoring a world in
+blocks — a world-authoring DSL to build, and a compile in the path of every
+recording — to demonstrate rules that are OUR code and need none of the
+machinery that exists to run a learner's safely.
+
+**The anti-rot argument is answered better by sharing than by adjacency.** The
+demo world and the behaviour test are the same world: `stockRulesRun.test.tsx`
+builds each demo and asserts what the rule did with it. A renamed trait breaks
+the test, in the test's own words, on the commit that renamed it — which is a
+stronger guarantee than living in the same file, and it is the guarantee the
+recording actually needs.
 
 ## Which rules get one FIRST
 
@@ -154,9 +168,9 @@ comfortable with anyway (see above).
 
 ## Plan
 
-1. **A demo world beside each rule.** `demo` exports in `scripts/rules/*.mjs`,
-   starting with the three the spike already wrote — and the behaviour tests
-   rewritten to build their worlds from those exports, so there is one
+1. ✅ **A demo world per rule**, as a function of the compiled modules
+   (`src/rules/demos`) — gravity, steering and collection, the three the spike
+   wrote. `stockRulesRun.test.tsx` builds its worlds from them, so there is one
    definition and the test is what keeps it honest.
 2. **The recorder.** A script driving the real preview through Playwright (the
    path `build-effect-stills.mjs` already takes), capturing N frames of a demo

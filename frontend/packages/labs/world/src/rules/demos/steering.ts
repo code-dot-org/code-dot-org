@@ -1,0 +1,39 @@
+// "Chases and Flees" — one actor goes after another and stops when close.
+//
+// The hunter starts across the frame from the prey, so the chase is the whole
+// of what happens. `keep distance` is what makes it stop rather than climb onto
+// it, and a still taken at any point is two boxes at some distance.
+
+import {
+  ActorBuilder,
+  PositionProperty,
+  Vector,
+  WorldBuilder,
+} from '../../engine';
+
+import type {RuleDemo, RuleModules} from './types';
+
+export const steeringDemo: RuleDemo = {
+  rules: ['rules/motion', 'rules/collisions', 'rules/solid', 'rules/steering'],
+  seconds: 2,
+  build(modules: RuleModules) {
+    const of = (path: string, name: string) => modules[path][name] as never;
+    const world = new WorldBuilder({id: 'steering', name: 'Steering'})
+      .useRules([modules['rules/steering'].default as never])
+      .instantiate();
+    const prey = new ActorBuilder({id: 'prey', name: 'prey'})
+      .set(PositionProperty, new Vector(160, 70))
+      .instantiate('prey');
+    world.addActor(prey);
+    const hunter = new ActorBuilder({id: 'hunter', name: 'hunter'})
+      .useTraits([of('rules/steering', 'ChasesTrait')])
+      .set(PositionProperty, new Vector(20, 70))
+      .set(of('rules/steering', 'KeepDistanceProperty'), 20)
+      .instantiate('hunter');
+    world.addActor(hunter);
+    // The target is set after both exist, which is how a game does it too:
+    // `set actor to chase of ⟨…⟩ to ⟨the nearest Player⟩`.
+    hunter.set(of('rules/steering', 'ActorToChaseProperty'), prey as never);
+    return {world, cast: {hunter, prey}};
+  },
+};
