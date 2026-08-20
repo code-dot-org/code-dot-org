@@ -1398,8 +1398,21 @@ const typedValueCode = (
       })`;
     }
     case 'actor':
-      // An Actor socket (default `this actor`); a plugged actor value replaces it.
-      return read(names.value) || 'actor';
+      // An Actor socket (default `this actor`), read as ONE actor.
+      //
+      // Through `actorTarget`/`oneActor` rather than raw, because a parameter
+      // typed `actor` takes one and the thing plugged into it may hold several:
+      // `any ⟨Coin⟩` does, and so does any `actor`-typed PROPERTY, which
+      // `Traited.coerce` stores as a list whatever it was given. Read raw, the
+      // body of a rule's own query then called `.get` on an array — which is
+      // how Steering's `distance from ⟨a⟩ to ⟨b⟩` crashed the moment a chaser
+      // had something to chase, while every test passed.
+      //
+      // Taking the first is the language's own rule for a value read of
+      // several (specs/ACTOR_LISTS.md), and it is what every built-in getter
+      // beside these already did — which is why Camera Follow, reading its
+      // target through `x position of`, escaped this.
+      return oneActor(actorTarget(block, generator, Order.NONE, names.value));
     case 'boolean':
       return read(names.value) || (d ? 'true' : 'false');
     case 'string':
