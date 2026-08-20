@@ -318,6 +318,50 @@ describe('Scoring', () => {
     expect(scoreOf(world)).toBe(1000);
   });
 
+  it('tells the actors that elected to hear it, as well as the world', () => {
+    // The reason the events are declared twice. A world event registers on the
+    // WORLD, and an `.actor` file has no binding for one — so a scoreboard,
+    // which is the thing every game wants to do with a score, would have
+    // nowhere to write its handler.
+    const world = game(20);
+    const board = new ActorBuilder({id: 'board', name: 'board'})
+      .useTraits([of('rules/score', 'WatchesTheScoreTrait')])
+      .instantiate('board');
+    let shown = 0;
+    let banner = 0;
+    board.on(of('rules/score', 'SeesTheScoreChangeEvent'), () => {
+      shown++;
+    });
+    board.on(of('rules/score', 'SeesTheGameWonEvent'), () => {
+      banner++;
+    });
+    world.addActor(board);
+
+    add(world, 10);
+    add(world, 10);
+
+    expect(shown).toBe(2);
+    expect(banner).toBe(1);
+  });
+
+  it('tells nobody who did not ask', () => {
+    // `allWithTrait`, not every actor: a level of coins should not each be
+    // woken up because the score moved.
+    const world = game();
+    const coin = new ActorBuilder({id: 'coin', name: 'coin'}).instantiate(
+      'coin',
+    );
+    let heard = 0;
+    coin.on(of('rules/score', 'SeesTheScoreChangeEvent'), () => {
+      heard++;
+    });
+    world.addActor(coin);
+
+    add(world, 10);
+
+    expect(heard).toBe(0);
+  });
+
   it('lets a reset be won again', () => {
     // Both halves of the reset, and each alone is a bug: a score that forgot
     // it had won would win twice on one run, and one that remembered could
