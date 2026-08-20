@@ -467,6 +467,9 @@ export function createUsersApi(transport: Transport) {
             ...(params.hashedEmail !== undefined && {
               hashed_email: params.hashedEmail,
             }),
+            ...(params.emailOptIn !== undefined && {
+              email_preference_opt_in: params.emailOptIn,
+            }),
           },
         },
       });

@@ -108,6 +108,64 @@ describe('createUsersApi mutations target the right routes', () => {
     );
   });
 
+  it('updateUserType PATCHes /users/user_type with a positive email opt-in', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateUserType({
+      userType: 'teacher',
+      email: 'a@b.co',
+      hashedEmail: 'h',
+      emailOptIn: 'yes',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'PATCH',
+        url: '/users/user_type',
+        body: {
+          user: {
+            user_type: 'teacher',
+            email: 'a@b.co',
+            hashed_email: 'h',
+            email_preference_opt_in: 'yes',
+          },
+        },
+      }),
+    );
+  });
+
+  it('updateUserType sends a negative email opt-in', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateUserType({
+      userType: 'teacher',
+      email: 'a@b.co',
+      hashedEmail: 'h',
+      emailOptIn: 'no',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        body: {
+          user: {
+            user_type: 'teacher',
+            email: 'a@b.co',
+            hashed_email: 'h',
+            email_preference_opt_in: 'no',
+          },
+        },
+      }),
+    );
+  });
+
+  it('updateUserType sends no opt-in on a downgrade', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateUserType({userType: 'student'});
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'PATCH',
+        url: '/users/user_type',
+        body: {user: {user_type: 'student'}},
+      }),
+    );
+  });
+
   it('updateParentEmail PATCHes /users/parent_email with the change source', async () => {
     const {api, request} = fakeTransport();
     await api.updateParentEmail({parentEmail: 'p@e.com', optIn: 'yes'});

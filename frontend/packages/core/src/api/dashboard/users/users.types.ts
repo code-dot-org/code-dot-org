@@ -71,10 +71,14 @@ export interface CreatePasswordParams {
   newPasswordConfirmation: string;
 }
 
+/** '' means the opt-in question was left unanswered. */
+export type EmailOptIn = 'yes' | 'no' | '';
+
 export interface UpdateUserTypeParams {
   userType: UserType;
   email?: string;
   hashedEmail?: string;
+  emailOptIn?: EmailOptIn;
 }
 
 export interface DeleteUserParams {
