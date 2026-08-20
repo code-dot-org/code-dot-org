@@ -11,6 +11,7 @@ import {
 import {PyodideMessage, PyodidePathContent} from '../types';
 
 import {HIDDEN_FOLDERS} from './constants';
+import {ExternalFileContents} from './externalFileContents';
 import {TEARDOWN_CODE} from './patches';
 
 // Returns the cleanup code to be run after the user's code.
@@ -40,17 +41,26 @@ if "${filePath}" in sys.modules:
 
 // Write source to the Pyodide file system.
 // This enables python files to import from other files in the project.
+// externalFiles holds the bytes of any url-backed file,
+// whose contents are not carried in the source.
 export function writeSource(
   source: MultiFileSource,
   currentFolderId: string,
   currentPath: string,
-  pyodide: PyodideInterface
+  pyodide: PyodideInterface,
+  externalFiles: ExternalFileContents = {}
 ) {
   // Find all files in this folder and write them.
   Object.values(source.files)
     .filter(f => f.folderId === currentFolderId)
     .forEach(file => {
-      pyodide.FS.writeFile(`${currentPath}${file.name}`, file.contents);
+      const contents = file.url ? externalFiles[file.id] : file.contents;
+      // A url-backed file whose fetch failed has no bytes to write. Leave it
+      // out so python reports a missing file rather than an unreadable one.
+      if (contents === undefined) {
+        return;
+      }
+      pyodide.FS.writeFile(`${currentPath}${file.name}`, contents);
     });
   Object.values(source.folders)
     .filter(f => f.parentId === currentFolderId)
@@ -59,7 +69,7 @@ export function writeSource(
       const newPath = `${currentPath}${folder.name}`;
       createFolderIfNotExists(newPath, pyodide);
       // Recurse to write all children of the folder (files and folders).
-      writeSource(source, folder.id, newPath + '/', pyodide);
+      writeSource(source, folder.id, newPath + '/', pyodide, externalFiles);
     });
 }
 
@@ -108,12 +118,14 @@ function updateAndDeleteSourceWithContents(
   contents.forEach(content => {
     const fullPath = currentPath + content.name;
     if (pyodide.FS.isFile(content.mode)) {
+      const file = Object.values(source.files).find(
+        f => f.name === content.name && f.folderId === folderId
+      );
       // Only update the source with files that are not skipped.
-      // We still want to delete skipped files below.
-      if (!skippedFilenames.includes(content.name)) {
-        const file = Object.values(source.files).find(
-          f => f.name === content.name && f.folderId === folderId
-        );
+      // We still want to delete skipped files below. A url-backed file keeps
+      // its bytes in S3, not in the source, so reading it back as text would
+      // overwrite the project with garbage.
+      if (!skippedFilenames.includes(content.name) && !file?.url) {
         try {
           const newContents = pyodide.FS.readFile(fullPath, {
             encoding: 'utf8',
