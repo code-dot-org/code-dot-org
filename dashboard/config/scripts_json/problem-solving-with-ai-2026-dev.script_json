@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-17 16:02:32 UTC",
+    "serialized_at": "2026-08-19 17:03:31 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -107,7 +107,6 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I use AI effectively?**\n\nIn this lesson, students explore how AI generates responses by recognizing patterns and predicting likely outcomes. Through a “Yes, and…” game, they simulate AI’s response-building process. They experiment using text and images to craft effective prompts using AI Chat levels. By the end, they understand how AI processes information and how to use strategic prompting for better results.",
-        "preparation": "- Print copies of the Problem Solving with AI Unit Guide (one for each student)",
         "student_overview": "**How can I use AI effectively?**\n\nExplore how AI predicts responses and practice crafting better prompts to get more useful AI-generated answers."
       },
       "seeding_key": {
@@ -177,9 +176,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What is AI bias, and how does it emerge?**\n\nIn this lesson, students explore how AI bias emerges from biased training data. Students analyze results from online search engines and AI Chat to examine them for bias. In the main activity, students select candidates for a particular job by filtering resumes. They compare their selections with those made by AI and note any bias in the selection process. Throughout the lesson, students brainstorm and discuss strategies to make AI systems more fair and ethical.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What is AI bias, and how does it emerge?**\n\nIn this lesson, students explore how AI bias emerges from unrepresentative training data and examine biased responses from AI Chat. In the main activity, students take on a decision-making role — hospital triage nurse, college admissions officer, or hiring manager — compare their own selections to AI's, and refine prompts to see how training data and system prompts shape AI's choices. Throughout the lesson, students discuss strategies for reducing bias and aligning AI systems with human values.",
         "preparation": "- Print copies of the AI Audit activity guide (one for each student)",
-        "student_overview": "**What is AI bias, and how does it emerge?**\n\nExplore how AI bias emerges from training data by analyzing search results, evaluating AI-generated decisions, and comparing your own hiring choices with those made by AI. Then, discuss ways to make AI fairer and less biased."
+        "student_overview": "**What is AI bias, and how does it emerge?**\n\nExplore how AI bias emerges from training data by analyzing AI Chat's responses, then take on a decision-making role and compare your choices to AI's. Discuss ways to make AI fairer and less biased."
       },
       "seeding_key": {
         "lesson.key": "Lesson 6: Understanding Bias",
@@ -250,8 +249,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**How should AI be used in solving real-world problems?**\n\nStudents choose a real-world example of AI in use within the community, investigating who might benefit and who might be harmed from its implementation. They use their research to draft a call to action in which they propose solutions to the perceived issues that they uncover.",
-        "student_overview": "**How should AI be used in solving real-world problems?**\n\nYou explore a variety of different ways that AI is being and will be used within your community. Using a chatbot to summarize a variety of different articles, you create your own draft of a short-form video script that addresses issues that you have uncovered."
+        "overview": "**How should AI be used in solving real-world problems?**\n\nStudents choose a real-world example of AI in use within their community — grocery stores, medical diagnosis, public transportation, schools, or the environment — and investigate who benefits and who might be harmed by its implementation, using AI Chat to summarize and fact-check across article types. They express their findings and point of view on a vision board capturing their hopes, fears, questions, and role in AI's future, then collaborate with AI to distill the board into a power phrase they share with peers.",
+        "student_overview": "**How should AI be used in solving real-world problems?**\n\nYou'll pick a real example of AI at work in your community and dig into it with an AI research partner: Who does it help? Who could it hurt? What's the real story behind the headlines? Then you'll turn what you find into a vision board — your hopes, your fears, your questions, and the role you want to play in AI's future. Finally, you'll team up with AI to shrink your whole board down to one powerful phrase — and share it with your classmates."
       },
       "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
@@ -715,7 +714,7 @@
       "key": "d9a1889c-9c99-4534-8530-01a5d16ba551",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -729,7 +728,7 @@
       "key": "eaeba70a-6415-450f-bff8-5b4113630ecc",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -748,18 +747,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8287c67a-990a-4383-b68f-985e9257e825",
-        "lesson.key": "Lesson 12: AI's Role in Society",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev"
-      }
-    },
-    {
-      "key": "7f8db1ea-031c-4793-b6b1-d58d9d1708b3",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7f8db1ea-031c-4793-b6b1-d58d9d1708b3",
         "lesson.key": "Lesson 12: AI's Role in Society",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev"
@@ -2285,7 +2272,7 @@
       "key": "cce28430-f904-4ee2-b33a-adbade3b811b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explore AI's assumptions and analyze how training data influences AI-generated responses. Students analyze AI's initial responses, identify potential biases, and refine their prompts to create more neutral and inclusive descriptions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explore AI's assumptions and analyze how training data influences AI-generated responses. Students analyze AI's initial responses, identify potential biases, and refine their prompts to create more neutral and inclusive descriptions.\n\n\n",
         "duration": "10",
         "name": "Bias Intro: Career Clothing"
       },
@@ -2350,7 +2337,7 @@
       "key": "9bad62a3-89af-4a4d-927e-aff762ed85dd",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to explore AI-generated descriptions of clothing worn by different professions – a secretary and a CEO. Students should complete the AI Bias Analysis section of their activity guide as they interact with each task.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to explore AI-generated descriptions of clothing worn by different professions – a secretary and a CEO. Students should complete the AI Bias Analysis section of their activity guide as they interact with each task.",
         "progression_name": "Career Clothing",
         "tips": [
           {
@@ -2407,7 +2394,7 @@
       "key": "09914e9f-dc5c-4e20-841d-1da02ed00301",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Return students to Lesson 6, Level 1. Refine the original prompts to improve neutrality. Students document their refined prompts and compare AI's new responses in the AI Bias Analysis Chart section of their activity guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Return students to Lesson 5, Level 1. Refine the original prompts to improve neutrality. Students document their refined prompts and compare AI's new responses in the AI Bias Analysis Chart section of their activity guide."
       },
       "seeding_key": {
         "activity_section.key": "09914e9f-dc5c-4e20-841d-1da02ed00301",
@@ -2441,7 +2428,7 @@
       "key": "a751befa-3a76-4b7e-9ed9-8e68eca7c3ab",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 6, Level 2 to complete the formative assessment.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n- Students answer the multiple-select question: \"How could AI developers make adjustments to reduce bias?\"\n- Use the \"View Student Responses\" feature to analyze the class results.\n- Ask students: \"What do you notice?\" and \"What do you wonder?\" Have them discuss with a partner before selecting a few volunteers to share.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 5, Level 2 to complete the formative assessment.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n- Students answer the multiple-choice question: \"How could AI developers make adjustments to reduce bias?\"\n- Use the \"View Student Responses\" feature to analyze the class results.\n- Ask students: \"What do you notice?\" and \"What do you wonder?\" Have them discuss with a partner before selecting a few volunteers to share.\n",
         "progression_name": "Check Your Understanding",
         "tips": [
           {
@@ -2488,7 +2475,7 @@
       "key": "47e5f6e9-9806-4443-89dd-879ee8098aaa",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 6, Level 3 to complete Levels 3 and 4.\n- **Level #3:** Students choose one decision-making role and navigate an interactive panel level:\n   - **Hiring Manager:** Selects top candidates for job interviews.\n   - **College Admissions Officer:** Picks students for acceptance.\n   - **Hospital Triage Nurse:** Prioritizes patients for urgent care.\n- **Level #4:** Students review resources in Sketch Lab related to their scenario and rank their candidates. They record and justify selections in both the activity guide",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 5, Level 3 to complete Levels 3 and 4.\n- **Level 3:** Students choose one decision-making role and navigate an interactive panel level:\n   - **Hiring Manager:** Selects top candidates for job interviews.\n   - **College Admissions Officer:** Picks students for acceptance.\n   - **Hospital Triage Nurse:** Prioritizes patients for urgent care.\n- **Level 4:** Students review resources in Sketch Lab related to their scenario and rank their candidates. \n\nThey record and justify selections in both the activity guide\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Listen for students discussing why certain candidates stood out over others. If students struggle, ask:\n- *\"What specific qualifications made you choose these candidates?\"*\n- *\"Did you consider factors beyond qualifications, like personal background?\"*",
         "progression_name": "Decision-Making Roles"
       },
       "seeding_key": {
@@ -2500,7 +2487,6 @@
       "key": "3ae79a06-59f0-4662-9256-5abf22b92f0a",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Listen for students discussing why certain candidates stood out over others. If students struggle, ask:\n- *\"What specific qualifications made you choose these candidates?\"*\n- *\"Did you consider factors beyond qualifications, like personal background?\"*\n"
       },
       "seeding_key": {
         "activity_section.key": "3ae79a06-59f0-4662-9256-5abf22b92f0a",
@@ -2523,7 +2509,7 @@
       "key": "8f02a287-8b9c-4750-a595-04ee8358ac02",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 6, Level 5 to complete Levels 5 and 6.\n- **Level #5:** Students will ask AI Chat to select candidates for the same decision-making role they previously chose. Students will then compare AI's selections to their own\n- **Level #6:** Student refine the the system prompt to better align with their priorities, specifying which qualities AI should prioritize while abstracting away irrelevant details.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 5, Level 5 to complete Levels 5 and 6.\n- **Level 5:** Students will ask AI Chat to select candidates for the same decision-making role they previously chose. Students will then compare AI's selections to their own\n- **Level 6:** Student refine the the system prompt to better align with their priorities, specifying which qualities AI should prioritize while abstracting away irrelevant details.\n- **Level 7:** Students answer a quick question about careers in computer science.\n\n",
         "progression_name": "AI Audit Challenge"
       },
       "seeding_key": {
@@ -2557,12 +2543,12 @@
       "key": "2d9a54e3-dd14-4233-a2c6-dc28a76a31a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** In the Unit Guide, students reflect on 3 examples of AI bias from this lesson, 2 things to help reduce AI bias, and 1 cause of AI bias. After, they discuss their responses with the class.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Assign students numbers in small groups and give them a discussion prompt. After a short discussion, randomly call out a number—students with that number share their group's response.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a moment to think about the Question of the Day. Click the animated slide to reveal the 3-2-1 prompt. Have students share 3 examples of AI bias from this lesson, 2 things to help reduce AI bias, and 1 cause of AI bias. \n\n\n\n",
         "name": "3-2-1 Reflection and Discussion",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Rotate which number is called in future discussions to ensure all students participate over time."
+            "markdown": "Teachers can choose to have students share the 3-2-1 prompt with a partner, call on students to share with the class, or have students write their responses on a sticky note and turn it in as an exit ticket."
           }
         ]
       },
@@ -2772,7 +2758,7 @@
       "key": "a0aad6a7-68d1-4bdf-92d8-1d84615d582b",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 2.\n- **Level #1:** Students review how to reduce AI hallucinations.\n- **Level #2:** Students complete a formative assessment.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to complete Levels 1 through 2.\n- **Level 1:** Students review how to reduce AI hallucinations.\n- **Level 2:** Students complete a formative assessment.\n",
         "progression_name": "Reduce AI Hallucinations"
       },
       "seeding_key": {
@@ -2812,11 +2798,11 @@
       "key": "582823f9-b949-4afe-b75e-676f68637275",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Engage students in critical thinking about AI hallucinations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to take a minute to write a response to the Question of the Day in their Unit Guide. Encourage them to use specific examples from the lesson, such as case studies or AI-generated errors they encountered.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Engage students in critical thinking about AI hallucinations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a moment to think about the Question of the Day before sharing with a partner. Encourage them to use specific examples from the lesson, such as case studies or AI-generated errors they encountered. Popcorn out the question with the class and get student perspectives.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The Question of the Day can be used as a formative assessment to check whether students can recall real-world examples of AI hallucinations and their impacts. If students struggle to provide examples, review key moments from the lesson, such as the case studies and AI panel discussion."
+            "markdown": "The Question of the Day can written on an “exit ticket” and be used as a formative assessment to check whether students can recall real-world examples of AI hallucinations and their impacts. If students struggle to provide examples, review key moments from the lesson, such as the case studies and AI panel discussion.\n"
           }
         ]
       },
@@ -3362,7 +3348,7 @@
       "key": "0c57dedf-eddd-4eb1-8671-98a649c9d0ca",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students practice weighing pros and cons of an AI-powered system.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario about*Newsclues.com*, a fictional website that is deciding to replace the people who pick the articles to feature on the site with an AI-powered news filtering system.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Have students write a one-minute response to the discussion prompts about the scenario from the previous slide. Then, have them pair up and take turns summarizing their writing in one minute.\n- *What are the risks of using an AI-system to decide which news articles to feature?*\n- *Who is impacted most by AI errors, such as linking to unverified or inaccurate sources?*\n- *Who is impacted most by AI bias, such as linking to articles that present only one perspective on an issue?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal of this discussion is to help students critically evaluate the benefits and risks of AI decision-making in media curation. This discussion will set the stage for deeper exploration of AI's role in their own communities. Here are things to listen for:\n- AI is not neutral; it reflects biases in training data.\n- AI may favor certain perspectives while excluding others.\n- Risk of misinformation (e.g., promoting unreliable sources).\n- AI may prioritize engagement over accuracy.\n- Benefits: Companies (cost savings), increased efficiency.\n- Harms: Journalists (job loss), misinformation in communities.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Give students a shared, low-stakes rehearsal of the hope/fear thinking they'll use on their own vision boards later in the lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario about Newsclues.com, a fictional website that is deciding to replace the people who pick the articles to feature on the site with an AI-powered news filtering system.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts. Have students think for 30 seconds, then share with a partner before inviting 2–3 responses\n- *What's your hope for a system like this? What could it do better than the team of 10?*\n- *What's your fear? What could go wrong — and who gets hurt?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal of this discussion is to help students critically evaluate the benefits and risks of AI decision-making in media curation. This discussion will set the stage for deeper exploration of AI's role in their own communities. Here are things to listen for:\n- AI is not neutral; it reflects biases in training data.\n- AI may favor certain perspectives while excluding others.\n- Risk of misinformation (e.g., promoting unreliable sources).\n- AI may prioritize engagement over accuracy.\n- Benefits: Companies (cost savings), increased efficiency.\n- Harms: Journalists (job loss), misinformation in communities.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3390,14 +3376,14 @@
       "key": "0a68c771-434d-4d70-bb76-ca83e55ead03",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Help students assess how AI is impacting their own local communities. AI's impact varies by location, economy, and social factors—students should advocate for fair and accessible AI. This part of the activity also focuses on having students use AI to help summarize and draw key points out of source material.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI in My Community activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 1. Students choose one implementation of AI to focus on. For all of the choices, students will be sent to a folder with four articles – one feature article about the use of AI they picked, one editorial on the use of AI they picked, one tabloid-style article about the area they picked, and one feature article focused on environmental issues.\n",
-        "duration": "15",
-        "name": "AI in My Community: Helpful or Harmful?",
-        "progression_name": "Articles",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students select a topic of interest that illustrates AI's role in society, both real and imagined. An AI Chat level supports their research by acting as a summarizing and fact-checking collaborator.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Levels 1 & 2:\n* **Level 1**: Students choose one role of AI in the community to focus on. Each choice sends them to a folder with three articles — a feature article, an editorial, and a tabloid-style article. Keep this quick (about 2 minutes): they are skimming headlines and first sentences to pick a topic that interests them, not reading deeply yet. \n* **Level 2**: Students attach articles related to the subject they chose and interrogate AI Chat about them\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Keep students moving toward a choice. Check in with:\n* \"Which of these AI uses have you actually run into yourself?\"\n* \"Which topic do you already have feelings about?\"\n* \"Which claim from the article didn't survive a fact-check?\" \n\n",
+        "duration": "10",
+        "name": "AI's Role in Society ",
+        "progression_name": "AI's Role in Society",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Note:** These articles were written by Code.org staff members. The articles were crafted along with ChatGPT, which was used to synthesizing around 20 different news articles on the respective subjects. The facts presented in the articles all come from one or more of these news sources.\n\nYou may choose to tailor this list to issues you know are relevant in your students community if you have sources they can use to learn about these issues.\n"
+            "markdown": "These articles were written by CodeAI staff members, crafted along with ChatGPT / Gemini to synthesize around 20 different news articles on each subject. The facts presented all come from one or more of these news sources. You may choose to tailor the topic list to issues relevant in your students' community if you have sources they can use.\n"
           }
         ]
       },
@@ -3407,9 +3393,29 @@
       }
     },
     {
-      "key": "d9dfd9c4-58cd-4179-bd96-89a5e51f6f8c",
+      "key": "a8c0ebf4-031e-41ae-b999-d86f5bb6e172",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What was one way that AI Chat assisted you with gathering information from your articles?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students name a concrete way AI Chat functioned as a research collaborator whether summarizing across articles, pulling key points, fact-checking a tabloid claim, or answering a follow-up question. Listen for students who pushed back or asked follow-ups when a summary was incomplete; that's the behavior to praise aloud. If answers are generic (\"it summarized\"), push once: \"What's one thing you learned from AI that you wouldn't have caught skimming on your own?\" This also quietly previews the second AI collaboration coming later: turning their board into a power phrase.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8c0ebf4-031e-41ae-b999-d86f5bb6e172",
+        "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
+      }
+    },
+    {
+      "key": "d9dfd9c4-58cd-4179-bd96-89a5e51f6f8c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students investigate how AI is impacting their communities and build a vision board expressing their own hopes, fears, questions, and role, turning research into a personal point of view. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the concept of a vision board. Students may know vision boards from social media or goal-setting. Connect it to the Question of the Day: today's question is how AI should be used in solving real-world problems. This often depends on what people value and what they're willing to speak up about. \n",
+        "duration": "25",
+        "name": "AI's Role - Vision Board  ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students will hear \"vision board\" and think decoration. Set the expectation that the best boards aren't the prettiest, they're the most specific. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d9dfd9c4-58cd-4179-bd96-89a5e51f6f8c",
@@ -3417,121 +3423,98 @@
       }
     },
     {
-      "key": "3f8c058b-de8d-4ae5-ac16-fa73099c1210",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 12, Level 2. Students choose the same implementation they picked in the previous level and then use AI Chat to summarize the articles and pull out key information. They should record their findings in their activity guide.\n",
-        "progression_name": "AI in the Community"
-      },
-      "seeding_key": {
-        "activity_section.key": "3f8c058b-de8d-4ae5-ac16-fa73099c1210",
-        "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
-      }
-    },
-    {
-      "key": "8b6d0daa-364c-454c-aa5b-825183b36eb4",
+      "key": "6cbc4cce-faea-4c2b-b810-754365d51297",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Listen for students making local connections to their own school or city and asking follow-up questions to the AI when summaries are incomplete. If students finish too fast or seem stuck:\n- \"How would someone in your neighborhood feel about this?\"\n- \"How could this tech be made more fair or eco-friendly?\"\n"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 3 to explore the vision board that they will be creating today. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore, make sure everyone has found the palette (icons, shapes, sticky notes), the model board, and the sentence starters. Check in with:\n* \"Which section do you think will be easiest for you? Which will be hardest?\"\n* \"What's one thing on the model board you wouldn't have thought of?\" The check-ins should confirm every student can navigate the canvas before the discussion — the next slide's notice/wonder works best when everyone has actually poked around.\n",
+        "progression_name": "Build Your Vision Board",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Explain that students will be adding to this board using what they found in their articles and AI Chat research. Every idea worth keeping becomes a sticky note, image, or icon. They can also bring in outside images or ideas separate from the articles if they desire. By the end of class, the board shows what they hope, what they fear, what they still wonder, and what role they want to play."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "8b6d0daa-364c-454c-aa5b-825183b36eb4",
+        "activity_section.key": "6cbc4cce-faea-4c2b-b810-754365d51297",
         "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
       }
     },
     {
-      "key": "0a02183d-0da3-4a14-bddc-86b72c9e9664",
+      "key": "e4454af1-428e-4086-9c4a-834814022056",
       "position": 5,
       "properties": {
-        "description": "You've explored how AI is affecting different parts of your community—now let's shift into reflecting and connecting ideas. Think about the biggest impacts you noticed, any concerns that stood out to you, and what questions you still have about AI's role in society.",
-        "remarks": true
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What do you notice and what do you wonder about the vision board and model?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Two things might surface. First, every image on the model board has words attached (a label, a caption, a sticky note). Labeled ideas are clearer to viewers. Second, the model is specific — \"AI uses SO much energy?\" and \"Future AI Auditor\". Students should aim to say more than \"AI is bad\" or \"AI is cool\". Students might share wonders about how to fill their own board (\"Can I use just pictures?\" \"What goes in My Role?\").\n"
       },
       "seeding_key": {
-        "activity_section.key": "0a02183d-0da3-4a14-bddc-86b72c9e9664",
+        "activity_section.key": "e4454af1-428e-4086-9c4a-834814022056",
         "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
       }
     },
     {
-      "key": "6594b998-9de1-4004-88c7-13768b951aef",
+      "key": "91c513b1-e1f1-45ff-b958-95fd086ddc84",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 3 to complete the formative assessment.",
-        "progression_name": "Check Your Understanding",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will now populate their vision boards using information from your articles, any outside sources / images, and the provided template in Sketch Lab.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students brainstorm an idea, encourage them to focus on the core problem or concern they uncovered in their research. Ask questions like: \n* What’s something you think should be done differently with this technology?\n* Who is being left out or harmed in the way this AI is currently used?\n* What would make this system more fair or useful for your school or neighborhood? \n\nSupport students in thinking practically and specifically — their ideas don’t need to be perfect or large-scale, just thoughtful and connected to what they learned.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "91c513b1-e1f1-45ff-b958-95fd086ddc84",
+        "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
+      }
+    },
+    {
+      "key": "25ff2300-fdbe-4e17-b651-675cbcb82c02",
+      "position": 7,
+      "properties": {
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "This reflection will help you gauge how well students understand AI’s impact on communities and the environment, and whether they're thinking critically about equity. Pay attention to the following:\n- Community awareness: Are students identifying both positive and negative impacts of AI on different groups in their community (e.g., age, income, ability, race, location)?\n- Environmental understanding: Do students recognize specific environmental concerns like AI's energy use, reliance on data centers, or carbon emissions?\n- Curiosity and gaps: Are student questions thoughtful and relevant, revealing areas where they want to dig deeper—or misunderstandings that need clarification?\n\n**Actions to take:**\n- If students focus too narrowly (e.g., one group or only benefits), prompt them with: \"How might this affect someone with different needs or background?\" or pair students to challenge each other's perspectives.\n- If students skip environmental concerns, briefly review how AI depends on large-scale computing and power use. Encourage connections to articles or earlier class discussions.\n- If student questions reveal confusion or patterns of misunderstanding, group similar ones and address them in a brief discussion or mini-lesson to clarify before moving on.\n"
+            "markdown": "The board is your evidence of student thinking. As you circulate, look for: grounded fears (traceable to an article or fact-check, not \"AI takes over\"), action-oriented roles (something they'll do or ask, not a feeling), and real questions (things the articles genuinely didn't answer). "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6594b998-9de1-4004-88c7-13768b951aef",
+        "activity_section.key": "25ff2300-fdbe-4e17-b651-675cbcb82c02",
         "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
       }
     },
     {
-      "key": "71dca043-b7fe-40b0-8c82-972cbe28fab1",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to turn to Part 2 of their activity guide. Explain that this is their chance to reflect on everything they’ve learned so far and come up with one change or improvement that could make AI more fair, more effective, or less harmful — especially for people in their community. Emphasize that it can be a small, practical idea or a bigger, more visionary one. If students are stuck, encourage them to think about who benefits or is left out in their topic, and what could be done differently to improve that.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students brainstorm an idea, encourage them to focus on the core problem or concern they uncovered in their research. Ask questions like: What’s something you think should be done differently with this technology?, Who is being left out or harmed in the way this AI is currently used?, or What would make this system more fair or useful for your school or neighborhood? Support students in thinking practically and specifically — their ideas don’t need to be perfect or large-scale, just thoughtful and connected to what they learned.\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "71dca043-b7fe-40b0-8c82-972cbe28fab1",
-        "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
-      }
-    },
-    {
-      "key": "d614b450-0e33-4f30-92ac-2a03f5aedabe",
+      "key": "c94346d2-72d3-4369-a7cc-107ba1d87829",
       "position": 8,
       "properties": {
-        "description": "We’ve spent time learning about how AI affects different parts of our community — and you’ve started thinking about a change you’d like to see. Now we’re going to watch a short video from a youth advocate who shares their message about an issue that matters to them. As you watch, see if you can identify the parts of their message that make it powerful — especially the hook, the main idea, and the call to action. These are the same pieces you’ll use in your own elevator pitch.",
-        "duration": "15",
-        "name": "Share Your Voice",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Let students know this example is a little longer and more reflective than a typical elevator pitch. For their own pitch, they should aim to keep it short, clear, and direct — something they could realistically say in 30 seconds or less.\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students save their Vision Board sketch to the Backpack.  They will click the backpack icon on the left of the screen and then click the \"Save Sketch to Backpack\" button. Their canvas will export as a PNG that can be imported into AI Chat in the next level."
       },
       "seeding_key": {
-        "activity_section.key": "d614b450-0e33-4f30-92ac-2a03f5aedabe",
+        "activity_section.key": "c94346d2-72d3-4369-a7cc-107ba1d87829",
         "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
       }
     },
     {
-      "key": "314934a2-be1d-41e5-93f9-96a516c95fb0",
+      "key": "9ebccc8c-eea8-4e2c-9597-1ef85322e81a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"UNICEF Youth Advocate Ayshka on Mental Health\" video.\n\n**Questions to consider with the video:**\n- Can you identify the different parts of the pitch — like the hook, the main idea, and the call to action?\n- What makes the message feel personal and effective?\n\n**Discussion Goal:** Students begin to recognize the key elements of an effective elevator pitch — including a strong hook, a clear main message, and a compelling call to action. They also notice how personal experience, emotion, and audience awareness can make a short message more powerful and memorable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students are now moving on to Part 3 of their activity guide, where they’ll turn their ideas into a clear message they can share with others. First, they’ll choose an audience that would benefit from or care about what they’ve learned. Then, they’ll write a short elevator pitch using the guide on page 3. Students can collaborate with AI — by revising their own draft with AI’s help or improving a draft written by AI. Encourage students to think about what kind of message would connect with their audience — should it sound formal or casual? Informative or persuasive?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for them making connections between their pitch and what they learned in Part 1. If they’re unsure how to start, remind them they can begin with the hook and write one sentence at a time. Prompt them to use vocabulary like “equity,” “access,” “impact,” or “responsibility” if relevant.\n\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Let students know that if they want help drafting or refining their elevator pitch, they can go to Level 4 to use AI Chat. They can choose to be the pilot (write it themselves and ask AI to revise) or the co-pilot (ask AI to draft and then improve it). Using AI is optional — students can also write and revise on their own if they prefer.\n\n",
-        "progression_name": "Optional: Collaborate with AI",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": " Some students might benefit from using AI to help them with tone or structure, especially if they’re stuck. Others may prefer to write on their own. Either approach is okay — the goal is to clearly communicate their idea to the audience they chose."
-          }
-        ]
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 4. Students share their board with AI Chat and ask it to generate power phrases: 1–2 sentence summaries of what their board expresses. Frame the collaboration explicitly: \"You spent all class building that board, now let's have AI summarize what it sees. Your job is to judge whether it got you right.\" Students pick the strongest phrase and revise it. This phrase is what they'll share in the Give One, Get One activity.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for critical evaluation of the AI output:\n* \"Does that phrase sound like you, or like anybody?\"\n* \"What did AI get right about your board? What did it miss?\"\n* \"Which word would you swap to make it yours?\"\n",
+        "progression_name": "Crafting a Power Phrase"
       },
       "seeding_key": {
-        "activity_section.key": "314934a2-be1d-41e5-93f9-96a516c95fb0",
+        "activity_section.key": "9ebccc8c-eea8-4e2c-9597-1ef85322e81a",
         "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
       }
     },
     {
-      "key": "fb70d782-d905-43a0-a44f-8573e434458d",
+      "key": "1d311423-4751-4f3c-b1e4-0a5d7c08ea1c",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will participate in a “Give One, Get One” elevator pitch exchange. They will find a partner and take turns sharing their elevator pitches — one person gives their pitch, the other listens and gives quick feedback or asks a question. Then they switch roles. After both students have shared, they’ll find a new partner and repeat. Encourage students to share with multiple classmates to hear a variety of perspectives and practice tailoring their pitch to different audiences.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to signal the start of the activity. Use the same music cue consistently so students recognize when it's time to begin “Give One, Get One.”\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share their elevator pitches, listen for how clearly they’re communicating their main idea and call to action. Offer support to students who may be stuck or rushing through their pitch. Prompt partners with questions like:\n- “What did you find most interesting about your partner’s idea?”\n- “Was anything unclear or missing?”\n- “Did their pitch include a strong hook and a clear call to action?”\n\n\n\n\n\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will participate in a \"Give One, Get One\" exchange. They find a partner and take turns sharing their power phrases. One person gives their phrase, the other listens and gives quick feedback or asks a question. Then they switch, find new partners, and repeat. Encourage students to share with multiple classmates to hear a range of hopes, fears, and roles across different AI topics.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to signal the start of the activity. Use the same music cue consistently so students recognize when it's time to begin “Give One, Get One.”\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students exchange phrases, listen for whether each phrase communicates something specific from the speaker's board. Prompt partners with: \n* \"What did your partner's phrase make you curious about?\"\n* \"Can you guess what's on their board from the phrase alone?\"\n* \"Was anything unclear or missing?\"\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Give One, Get One encourages students to seek and share ideas and information. When prompted by the teacher, students circulate the classroom and pair up with a partner. Each student \"gives\" or shares one of their ideas as the other student \"gets\" or listens and writes it down. The teacher then prompts students to find new partners and repeat the process.\n\nUsing music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means and be consistent with using the music clip to cue the activity. **Click the blue play icon on the slide to play the music cue.**\n"
+            "markdown": "Give One, Get One encourages students to seek and share ideas. Using music to cue transitions helps create classroom routines — when students hear the cue, they know it's time to circulate. Click the play icon on the slide to start the music. If you're short on time, two exchanges beat zero: even one round gets every voice in the room heard."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "fb70d782-d905-43a0-a44f-8573e434458d",
+        "activity_section.key": "1d311423-4751-4f3c-b1e4-0a5d7c08ea1c",
         "lesson_activity.key": "eaeba70a-6415-450f-bff8-5b4113630ecc"
       }
     },
@@ -3539,38 +3522,17 @@
       "key": "92996370-9de1-4dc5-b4b2-fe548fc3d5c7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students form small groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain that now that they have reflected in their Unit Guide, they will share key takeaways with their group. Explain that the \"Pass the Mic\" discussion is designed so that everyone gets a chance to share. Each person will share their answer to the Question of the Day in one or two sentences and then \"pass the mic\" so that everyone has a turn.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share in their groups:\n- Listen for common themes and misconceptions such as:\n   - Are students clearly identifying AI's strengths and weaknesses?\n   - Are students misunderstanding AI's capabilities (e.g., assuming AI \"thinks\" like a human)?\n- Prompt deeper thinking with guiding questions such as:\n   - Did AI ever surprise you with what it could or couldn't do?\n   - Would you trust AI more or less after today's lesson?\n   - Did anyone in your group have a different perspective that made you think differently?\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students form small groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the \"Pass the Mic\" discussion is designed so that everyone gets a chance to share. Each person answers the Question of the Day in one or two sentences and then \"passes the mic\" so everyone has a turn.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share in their groups, listen for answers grounded in today's work rather than general opinions about AI. Prompt deeper thinking with:\n* \"What's on your board that wasn't in your head 40 minutes ago?\"\n* \"Did anyone's power phrase change how you think about your own topic?\"\n* \"You researched different topics — did you hear a hope or fear that matches yours?\"\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time allows, facilitate a full-class discussion of the QotD. Consider asking students to raise their hands if they heard a new perspective in their group that made them think differently.\n- If students only state a general opinion (e.g., \"AI is good at math\"), follow up with: \"What makes AI good at that task? Is it better than a human?\" or \"Can you give an example of when AI would fail at that same task?\"\n- If some students are not engaging in discussion, ask them directly: \"What did you write down in your Unit Guide? Can you share one thing that stood out to you?\" or \"Did you hear something from your group that you agree or disagree with?\"\n"
+            "markdown": "If time allows, close with a quick whole-class beat: hands up if you heard a perspective in your group that made you think differently. If a student only offers a general opinion (\"AI is helpful\"), follow up with: \"What did you find today that backs that up or complicates it?\""
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "92996370-9de1-4dc5-b4b2-fe548fc3d5c7",
         "lesson_activity.key": "8287c67a-990a-4383-b68f-985e9257e825"
-      }
-    },
-    {
-      "key": "2e3e5fda-9ab1-4570-b17a-df181d3ef782",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "2e3e5fda-9ab1-4570-b17a-df181d3ef782",
-        "lesson_activity.key": "8287c67a-990a-4383-b68f-985e9257e825"
-      }
-    },
-    {
-      "key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528",
-      "position": 1,
-      "properties": {
-        "progression_name": "New Levels"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528",
-        "lesson_activity.key": "7f8db1ea-031c-4793-b6b1-d58d9d1708b3"
       }
     },
     {
@@ -5340,7 +5302,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Articles"
+        "progression": "AI's Role in Society"
       },
       "bonus": false,
       "seeding_key": {
@@ -5359,10 +5321,10 @@
     {
       "chapter": 34,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "AI in the Community"
+        "progression": "AI's Role in Society"
       },
       "bonus": false,
       "seeding_key": {
@@ -5372,7 +5334,7 @@
         "lesson.key": "Lesson 12: AI's Role in Society",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "3f8c058b-de8d-4ae5-ac16-fa73099c1210"
+        "activity_section.key": "0a68c771-434d-4d70-bb76-ca83e55ead03"
       },
       "level_keys": [
         "problem-solving-with-ai-lesson12-level2_v2_2026_dev"
@@ -5382,53 +5344,9 @@
       "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check Your Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson12-level3_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 12: AI's Role in Society",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "6594b998-9de1-4004-88c7-13768b951aef"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson12-level3_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 4,
-      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Optional: Collaborate with AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson12-level4_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 12: AI's Role in Society",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "314934a2-be1d-41e5-93f9-96a516c95fb0"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson12-level4_v2_2026_dev"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "New Levels"
+        "progression": "Build Your Vision Board"
       },
       "bonus": false,
       "seeding_key": {
@@ -5438,19 +5356,19 @@
         "lesson.key": "Lesson 12: AI's Role in Society",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+        "activity_section.key": "6cbc4cce-faea-4c2b-b810-754365d51297"
       },
       "level_keys": [
         "problem-solving-with-ai-lesson9-vision-board"
       ]
     },
     {
-      "chapter": 38,
-      "position": 6,
-      "activity_section_position": 2,
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "New Levels"
+        "progression": "Crafting a Power Phrase"
       },
       "bonus": false,
       "seeding_key": {
@@ -5460,14 +5378,14 @@
         "lesson.key": "Lesson 12: AI's Role in Society",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+        "activity_section.key": "9ebccc8c-eea8-4e2c-9597-1ef85322e81a"
       },
       "level_keys": [
         "problem-solving-with-ai-lesson9-aichat-2"
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5489,7 +5407,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5511,7 +5429,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5533,7 +5451,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5555,7 +5473,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5577,7 +5495,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5599,7 +5517,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5621,7 +5539,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5643,7 +5561,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5665,7 +5583,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5687,7 +5605,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -5709,7 +5627,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5731,7 +5649,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -5753,7 +5671,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5775,7 +5693,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5797,7 +5715,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5819,7 +5737,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5841,7 +5759,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
@@ -5863,7 +5781,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5885,7 +5803,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5907,7 +5825,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5929,7 +5847,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5951,7 +5869,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5973,7 +5891,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5995,7 +5913,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6017,7 +5935,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6039,7 +5957,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6467,31 +6385,7 @@
         "lesson.key": "Lesson 12: AI's Role in Society",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "3f8c058b-de8d-4ae5-ac16-fa73099c1210"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson12-level3_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson12-level3_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 12: AI's Role in Society",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "6594b998-9de1-4004-88c7-13768b951aef"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson12-level4_v2_2026_dev",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson12-level4_v2_2026_dev"
-        ],
-        "lesson.key": "Lesson 12: AI's Role in Society",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "314934a2-be1d-41e5-93f9-96a516c95fb0"
+        "activity_section.key": "0a68c771-434d-4d70-bb76-ca83e55ead03"
       }
     },
     {
@@ -6503,7 +6397,7 @@
         "lesson.key": "Lesson 12: AI's Role in Society",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+        "activity_section.key": "6cbc4cce-faea-4c2b-b810-754365d51297"
       }
     },
     {
@@ -6515,7 +6409,7 @@
         "lesson.key": "Lesson 12: AI's Role in Society",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "0d6e7fb7-1061-4a57-a1f3-9f0025aab528"
+        "activity_section.key": "9ebccc8c-eea8-4e2c-9597-1ef85322e81a"
       }
     },
     {
@@ -6870,26 +6764,15 @@
     },
     {
       "name": "[KEY] AI Audit",
-      "url": "https://docs.google.com/document/d/1KWiPmB-kVpuTPXPSq2xXnhdQfoMkgSYgaJRKFPeI_NA/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1Gp09EpwnWSLtM-D_UzmYlhiIO_jXcwYQt-mlEzE59ZI/edit?usp=sharing",
       "key": "_key_ai_audit",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_ai_audit"
-      }
-    },
-    {
-      "name": "[KEY] AI in the Community",
-      "url": "https://docs.google.com/document/d/1otRrV4we_4C2ld5Krnu6nHQI53GVghfJdeCbIIERHb8/edit?usp=drivesdk",
-      "key": "_key_ai_in_the_community",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_ai_in_the_community"
       }
     },
     {
@@ -6919,10 +6802,11 @@
     },
     {
       "name": "[KEY] Hallucination Case Studies",
-      "url": "https://docs.google.com/document/d/1P7WjuDzEZsNGJdqIZ8yYqzbW4sEZMD1pSuvFWva8R-w/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/15bDOiJzhfDQPIkTjp3zAfnxcYObKwmmmG5YoE8N6Bxo/edit?usp=sharing",
       "key": "_key_hallucination_case_studies",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -6986,10 +6870,11 @@
     },
     {
       "name": "AI Audit",
-      "url": "https://docs.google.com/document/d/1AWjOcaVEHH6Ac4AvFvkzW7q2YRMmgviebXg5H8zi5WM/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1MzVkWsEIlHfi0p9k4HoPjEsuY71ZbR2htT8VI2nLFyo/edit?usp=sharing",
       "key": "ai_audit",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -7008,28 +6893,16 @@
       }
     },
     {
-      "name": "AI In Grocery Stores - 1 ",
-      "url": "https://drive.google.com/file/d/1-MykYtR1K7qzncS7F7v34_2kCkJCa7DN/view",
+      "name": "AI's Role in Society Articles ",
+      "url": "https://drive.google.com/drive/folders/1UwH4s8epVngjOAg3CI9rsK2G0V70QcYi",
       "key": "ai_in_grocery_stores_-_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "ai_in_grocery_stores_-_1"
-      }
-    },
-    {
-      "name": "AI in the Community",
-      "url": "https://docs.google.com/document/d/1swk3Ytu52zPLdffHXsKMbNDrTTI87NIX9nZzSHQtBag/edit?usp=drivesdk",
-      "key": "ai_in_the_community",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "ai_in_the_community"
       }
     },
     {
@@ -7046,10 +6919,11 @@
     },
     {
       "name": "AI's Role in Society",
-      "url": "https://docs.google.com/presentation/d/1PqMz7P4nIgD_znshzS-gzsY07Fp8QPTfxzWXEDg73R8/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1X4bYHJ6rEqrxtCzuNt_44e0Po45-6ZIHYe1MwGWz1Hc/",
       "key": "ai_s_role_in_society",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7058,7 +6932,7 @@
     },
     {
       "name": "AI's Wild Imagination",
-      "url": "https://docs.google.com/presentation/d/1tKxRI-XuS2Rxtv6PdqaKci171_VBuQOsoJ1GgYOqTms/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1hXkYzs_tsn9O-PyYuRfwH0-dZTQWbuYLJ1Cij1RRzPM/edit?usp=sharing",
       "key": "ai_s_wild_imagination",
       "properties": {
         "audience": "Verified Teacher",
@@ -7186,10 +7060,11 @@
     },
     {
       "name": "Hallucination Case Studies",
-      "url": "https://docs.google.com/document/d/1sULqyWw0YVmt_n3XNSwuTJqGhUqB2HQtDVnr2Ufrf3o/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1lBSM9GsL-Rak93DdvxYSPBFZRSd8PWO5ko2LDRlppes/edit?usp=sharing",
       "key": "hallucination_case_studies",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -7212,10 +7087,11 @@
     },
     {
       "name": "Jigsaw Articles",
-      "url": "https://docs.google.com/document/d/1Ts7OnRbtooAKrlj92wMV76XE_PANXwENCMIFz7gFUPM/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1x2NnGMl-W9bwMER_iCgtqfafFaiwM4sYaeUqYgPbwu0/edit?usp=sharing",
       "key": "jigsaw_articles",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Handout"
       },
@@ -7418,7 +7294,7 @@
     },
     {
       "name": "Understanding Bias",
-      "url": "https://docs.google.com/presentation/d/1ANcnbmp1suC5qroS7YZdZbhFsrM8J3rWWgaFyqTniNs/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1aLfvT3HvWFaKtB8sKT8etAl6ChH2N_lcmLt6X8sD76w/edit?usp=sharing",
       "key": "understanding_bias",
       "properties": {
         "audience": "Verified Teacher",
@@ -7427,18 +7303,6 @@
       },
       "seeding_key": {
         "resource.key": "understanding_bias"
-      }
-    },
-    {
-      "name": "UNICEF Youth Advocate Ayshka on Mental Health",
-      "url": "https://youtu.be/zsiMg1zRdWU?si=hcMihJqh28_QfkwD",
-      "key": "unicef_youth_advocate_ayshka_on_mental_health",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "unicef_youth_advocate_ayshka_on_mental_health"
       }
     },
     {
@@ -7546,31 +7410,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
-        "resource.key": "_key_ai_in_the_community"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 12: AI's Role in Society",
         "resource.key": "ai_in_grocery_stores_-_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
-        "resource.key": "ai_in_the_community"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 12: AI's Role in Society",
         "resource.key": "ai_s_role_in_society"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 12: AI's Role in Society",
-        "resource.key": "unicef_youth_advocate_ayshka_on_mental_health"
       }
     },
     {
@@ -8250,7 +8096,7 @@
     {
       "key": "19d5bc73-6fb1-4f58-b6c1-d73fd5bf34d0",
       "properties": {
-        "description": "Assess the environmental costs of AI, including energy consumption and carbon emissions."
+        "description": "Investigate how AI affects different groups in a community"
       },
       "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
@@ -8420,7 +8266,7 @@
     {
       "key": "aac5da8c-30dc-4c8a-a583-e6d26626c148",
       "properties": {
-        "description": "Propose equitable AI solutions to ensure responsible and inclusive implementation."
+        "description": "Collaborate with AI to turn your ideas into a message you can share."
       },
       "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
@@ -8600,7 +8446,7 @@
     {
       "key": "f4f0c180-7b07-45bb-bbb4-cc7aaac40761",
       "properties": {
-        "description": "Evaluate AI’s societal impact by investigating its effects on different community groups."
+        "description": "Create a vision board that expresses your hopes, fears, questions, and role in AI's future"
       },
       "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
