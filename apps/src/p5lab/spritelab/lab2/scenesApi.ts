@@ -48,10 +48,7 @@ export function toExternalSceneOptions(
   }));
 }
 
-// The script id matters: a project made inside a unit has its channel keyed to
-// that unit, and is invisible to a lookup that omits it. The API serves
-// script-scoped play only, so outside a script (/levels/[id] while
-// developing) there is nothing to ask.
+// Scenes are shared within a script; outside one there is nothing to ask.
 export async function fetchSectionScenes(
   levelId: number | string,
   scriptId?: number | null
@@ -65,9 +62,7 @@ export async function fetchSectionScenes(
   return value.scenes || [];
 }
 
-// The level and script travel with the channel: the server serves only the
-// owner's channel for that level and script — the rule the dropdown
-// discovers by.
+// The server serves only the owner's channel for this level and script.
 export async function fetchExternalProject(
   channel: string,
   levelId: number | string,

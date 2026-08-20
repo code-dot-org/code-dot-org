@@ -2,12 +2,6 @@
 # user discover and jump into scenes from projects made by people who share a
 # section with them (classmates and their teachers), on the same level in the
 # same script.
-#
-# Level identity is the key, so standalone projects are out of reach by
-# construction: they hang off their own project level ("New Sprite Lab
-# Project"), not off a curriculum level. Including them would mean sharing on
-# project type rather than level, which exposes work made outside any
-# assignment — a consent decision, not a lookup change.
 class SpriteLab2Controller < ApplicationController
   before_action :authenticate_user!
 
@@ -18,8 +12,6 @@ class SpriteLab2Controller < ApplicationController
   def section_scenes
     level = Level.find(params.require(:level_id))
     return head :bad_request unless sprite_lab2_level?(level)
-    # Script-scoped play only: at /levels/[id] there is no section context to
-    # share within, and the client does not call.
     script_id = params[:script_id].presence
     return head :bad_request unless script_id
     scenes = []
@@ -43,8 +35,7 @@ class SpriteLab2Controller < ApplicationController
   # Full scenes + animations of one project, for running an external scene
   # (including its internal scene jumps and its images). Allowed only when the
   # owner shares a section with the current user and the channel is that
-  # owner's channel for the level and script in the request — the same rule
-  # the dropdown discovers by, so this serves nothing it would not offer.
+  # owner's channel for the level and script in the request.
   def external_scenes
     channel = params.require(:channel)
     level = Level.find(params.require(:level_id))
@@ -86,16 +77,12 @@ class SpriteLab2Controller < ApplicationController
     end
   end
 
-  # This API is for the Sprite Lab in Lab2 scenes experiment only. Without this
-  # gate any level id is accepted, which widens what the endpoints read from a
-  # section-mate's project beyond the feature that needs it.
+  # The scenes experiment runs on Sprite Lab in Lab2 levels only.
   private def sprite_lab2_level?(level)
     level.is_a?(GamelabJr) && level.uses_lab2?
   end
 
-  # The user's channels for exactly this level and script. Deliberately
-  # narrow while the feature is experimental: work done on the same level
-  # through another script, or outside any script, stays unshared.
+  # The user's channel tokens for this level and script.
   private def channel_tokens_for(user, level, script_id)
     storage_id = storage_id_for_user_id(user.id)
     return [] unless storage_id

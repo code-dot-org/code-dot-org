@@ -34,8 +34,6 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_equal @student.name, scenes.first['ownerName']
   end
 
-  # Script-scoped play only: /levels/[id] has no section context to share
-  # within, and the client does not call from there.
   test 'refuses a request with no script id' do
     stub_scenes channel_for(@student_storage_id, @script.id)
 
@@ -45,8 +43,6 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  # Deliberately narrow while experimental: the same level played through a
-  # different script stays unshared.
   test 'does not serve a project made through a different script' do
     stub_scenes channel_for(@student_storage_id, @loose_script.id)
 
@@ -71,8 +67,8 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_equal(['wanted-scene'], scenes.map {|scene| scene['sceneId']})
   end
 
-  # Channels predating the script_id column have a null one, as do projects
-  # made at /levels/[id]; neither is shared.
+  # Channels predating the script_id column, and projects made at
+  # /levels/[id], carry a null script id.
   test 'does not serve a channel with no script' do
     stub_scenes channel_for(@student_storage_id, nil)
 
@@ -124,8 +120,6 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  # The channel must be one of the owner's channels for the level in the
-  # request.
   test 'external_scenes refuses a channel from another level' do
     other_level = create(:spritelab, uses_lab2: 'true')
     channel = channel_for(@student_storage_id, @script.id, level: other_level)
