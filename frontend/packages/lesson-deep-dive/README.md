@@ -22,9 +22,9 @@ Dashboard mode has three prerequisites:
 
 1. Start Rails: run `bin/dashboard-server` from the repo root.
 2. Browse the shell at `http://localhost-studio.code.org:5173`, not
-   `localhost`. Public DNS resolves that hostname to 127.0.0.1. Cookies ignore
-   the port but not the hostname, so the browser attaches the dashboard
-   session cookie to the shell's proxied requests.
+   `localhost`. That hostname is public DNS for 127.0.0.1, and cookies ignore
+   the port but not the hostname, so the Rails session cookie rides the
+   proxied requests.
 3. Sign in as a student at `http://localhost-studio.code.org:3000` first. The
    shell has no sign-in flow of its own; it borrows that session.
 
@@ -75,37 +75,30 @@ Two things the config has to get right or nothing renders:
 `src/dev/nodeShims.ts` restates the Node globals webpack's `ProvidePlugin`
 gives apps' bundles; `@code-dot-org/redactable-markdown` needs `process`.
 
-`index.html` has no `csrf-token` meta tag, unlike the Rails layout. Both modes
-therefore get the token from `AuthenticityTokenStore`'s `GET /get_token`
-fallback: a fixture answers it in msw mode, and the proxied,
-session-authenticated Rails answers it in dashboard mode. A tag with an invented token
-would be worse than none. `AuthenticityTokenStore` caches the first token it
-reads, and real Rails answers an invented token with a 422 on every write.
+`index.html` has no `csrf-token` meta tag, so both modes take
+`AuthenticityTokenStore`'s `GET /get_token` fallback: a fixture in msw mode,
+the proxied Rails in dashboard mode. An invented token in a tag would be worse
+than none — the store caches the first token it reads, and Rails answers it
+with a 422.
 
 `src/dev/cdo-ambient.d.ts` declares the `@cdo/*` modules the shell imports, so
 `yarn typecheck` never crawls apps' type graph.
 
 ### Backend
 
-In dashboard mode, `vite.config.ts` proxies the route prefixes that the
-feature calls to `localhost-studio.code.org:3000`; `dashboardProxyPrefixes`
-lists them. The proxy does not set `changeOrigin`, and that is deliberate.
-Rails compares the `Origin` header with `request.base_url`, which it derives
-from `Host`. A rewritten `Host` fails that check, and every write returns a 422.
+In dashboard mode, `vite.config.ts` proxies the route prefixes the feature
+calls (`dashboardProxyPrefixes`) to `localhost-studio.code.org:3000`. No
+`changeOrigin`: Rails checks `Origin` against `Host`, and a rewritten `Host`
+makes every write a 422.
 
-The endpoints are user-scoped. Some also require the AI-Tutor experiments for
+The endpoints are user-scoped, and some require the AI-Tutor experiments for
 the signed-in student. Read the controller's authorization before you debug a 403.
 
 In msw mode, `src/dev/mocks.ts` registers the same endpoints with
 `@code-dot-org/core`'s MSW registry, so the real `HttpClient` calls run
 unmodified in either mode. The podcast loop is the most heavily faked surface:
-for `generate_podcast` and `retrieve_podcast_from_s3`, the mocks return a
-one-second silent WAV in place of synthesized audio. In this mode
-`localhost:5173` works; no cookies are involved.
-
-The proxy is registered under `command === 'serve'` in both modes. In msw
-mode, the service worker answers in the page before the network, so the proxy
-only sees requests that the fixtures do not cover.
+the mocks return a one-second silent WAV in place of synthesized audio. Plain
+`localhost:5173` works here; no cookies are involved.
 
 The page payload is a fixture in both modes. Studio embeds
 `lessonDeepDiveData` server-side in the HTML

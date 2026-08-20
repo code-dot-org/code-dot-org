@@ -40,14 +40,12 @@ const devHostAliases: Alias[] = [
   },
 ];
 
-// Dashboard route prefixes that the feature calls. Each prefix also matches
-// its sub-routes (/evaluate, /unit_counts, /generate_podcast,
-// /retrieve_podcast_from_s3, /:id/upload), so those are not listed.
+// Dashboard route prefixes the feature calls. A prefix also matches its
+// sub-routes.
 //
-// The proxy is temporary. It is necessary because apps' HttpClient sends
-// root-relative URLs. When the feature moves to @code-dot-org/core's
-// dashboard API client (baseUrl + CORS, as studio uses), delete this list,
-// the proxy, and allowedHosts.
+// The proxy exists because apps' HttpClient sends root-relative URLs. When
+// the feature moves to @code-dot-org/core's API client (baseUrl + CORS),
+// delete this list, the proxy, and allowedHosts.
 const dashboardProxyPrefixes = [
   '/practice_problems',
   '/user_practice_problem_attempts',
@@ -119,22 +117,17 @@ export default defineConfig(({command}) => ({
     fs: {allow: [repoRoot]},
     ...(command === 'serve'
       ? {
-          // Browse the shell on Rails' own hostname. The browser then
-          // attaches the dashboard session cookie to the proxied requests.
-          // Cookies ignore the port but not the host.
+          // Browse on Rails' own hostname so the session cookie rides along;
+          // cookies ignore the port but not the host.
           allowedHosts: ['localhost-studio.code.org'],
-          // Public DNS resolves that hostname to 127.0.0.1. Vite's default
-          // bind ("localhost") can listen only on ::1, and then requests to
-          // that hostname cannot reach the server.
+          // That hostname is public DNS for 127.0.0.1; Vite's default bind
+          // can land on ::1 only.
           host: '127.0.0.1',
-          // The proxy is always on. In msw mode, the service worker answers
-          // in the page before the network, so the proxy only sees requests
-          // that the fixtures do not cover.
+          // In msw mode the service worker answers first, so the proxy is
+          // safe to leave always on.
           //
-          // Do not set changeOrigin. Rails compares the Origin header with
-          // request.base_url, which it derives from Host. If the proxy
-          // rewrites Host to :3000, that check fails and every write returns
-          // a 422.
+          // No changeOrigin: Rails checks Origin against Host, and a
+          // rewritten Host makes every write a 422.
           proxy: Object.fromEntries(
             dashboardProxyPrefixes.map(prefix => [
               prefix,

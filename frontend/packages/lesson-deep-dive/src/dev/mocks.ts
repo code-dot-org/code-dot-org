@@ -53,10 +53,8 @@ let nextAttemptId = 500;
 
 export function registerLessonDeepDiveMocks(): void {
   registerMockFixture([
-    // The shell has no csrf-token meta tag, so AuthenticityTokenStore calls
-    // this endpoint before the first write. The store reads the token from
-    // the csrf-token response header, not from the body. That is why the
-    // mock returns a raw Response.
+    // AuthenticityTokenStore calls this before the first write and reads the
+    // token from the csrf-token response header, not the body.
     {
       path: '*/get_token',
       respond: () =>
