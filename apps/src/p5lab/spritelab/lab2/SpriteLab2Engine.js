@@ -522,10 +522,9 @@ export default class SpriteLab2Engine extends SpriteLab {
    * p5.play activates its camera around the whole draw cycle (identity until
    * a set-zoom block runs). The pre-draw hook pushed last frame's transform,
    * so the loop re-pushes with this frame's values, splitting the frame into
-   * a screen-space background pass (drawn at its own harder zoom about the
-   * same focus — the parallax), a camera pass for world content (sprites and
-   * their speech bubbles), and a screen-space HUD pass (variable bubbles,
-   * effects, title).
+   * a screen-space background pass (its own harder zoom and half-rate pan —
+   * the parallax), a camera pass for world content (sprites and their speech
+   * bubbles), and a screen-space HUD pass (variable bubbles, effects, title).
    */
   installZoomedDrawLoop_(library) {
     const engine = this;

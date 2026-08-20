@@ -1,7 +1,7 @@
 // Runtime camera math for the set-zoom block (platform scenes). The world
 // keeps its canvas-sized coordinates; zooming narrows the view onto the
 // player and the view scrolls with them. Pure functions; the engine owns the
-// per-frame state.
+// per-frame state. Assumes the square stage (APP_WIDTH == APP_HEIGHT).
 
 import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 
@@ -12,12 +12,12 @@ export const MAX_ZOOM = 3;
 // the distant-plane parallax. The zoom overhang keeps the background's own
 // edges out of view at every pan; the scroll rate is the background's
 // screen-space pan as a fraction of the foreground's.
-export const BACKGROUND_ZOOM_RATE = 1.5;
-export const BACKGROUND_SCROLL_RATE = 0.5;
+const BACKGROUND_ZOOM_RATE = 1.5;
+const BACKGROUND_SCROLL_RATE = 0.5;
 
 // Fraction of the remaining distance covered per frame, and the gap under
 // which the zoom snaps to its target. ~0.3s to settle at 30fps.
-export const ZOOM_EASE = 0.25;
+const ZOOM_EASE = 0.25;
 const ZOOM_SNAP = 0.001;
 
 export interface Point {
