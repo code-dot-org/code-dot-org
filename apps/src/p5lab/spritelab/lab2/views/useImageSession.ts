@@ -21,7 +21,7 @@ export interface Alternative {
 }
 
 // The strip shows the last few results; older ones age out.
-const MAX_ALTERNATIVES = 4;
+const MAX_ALTERNATIVES = 5;
 
 /** The strip entry for an animation's current state, or null without one. */
 export function alternativeFromAnimation(props?: {
