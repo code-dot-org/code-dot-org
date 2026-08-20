@@ -3,7 +3,7 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './QuizQuestion.module.scss';
+import styles from './quiz-question.module.scss';
 
 export interface QuizChoice {
   id: string;

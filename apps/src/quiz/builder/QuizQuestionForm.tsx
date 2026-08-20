@@ -4,7 +4,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useState} from 'react';
 
-import styles from './QuizQuestionForm.module.scss';
+import styles from './quiz-question-form.module.scss';
 
 interface QuizChoice {
   id: string;
