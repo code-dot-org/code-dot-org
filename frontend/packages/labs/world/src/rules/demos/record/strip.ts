@@ -11,6 +11,13 @@
 // Phaser, a canvas, or a browser in the build path. The day a demo wants a
 // sprite is the day this grows a decoder or moves into the renderer; until
 // then, a rule is being demonstrated rather than dressed.
+//
+// AND TEXT, which is the one exception and had to be. Writing puts a string on
+// an actor, and no arrangement of rectangles says "SCORE" — so a box may carry
+// text instead, drawn from a bitmap table (`./font`) in the same clip and the
+// same colour a box would have had.
+
+import {GLYPH_HEIGHT, textPixels, textWidth} from './font';
 
 /** One actor at one moment, as much of it as a box needs. */
 export interface Box {
@@ -20,6 +27,16 @@ export interface Box {
   width: number;
   height: number;
   colour: [number, number, number];
+  /**
+   * A string to draw INSTEAD of the rectangle, centred where the box was.
+   *
+   * Instead rather than over: a label is what the actor is, not a decoration
+   * on it, and a rectangle behind the letters would be a box with text on it
+   * — which is not what the rule draws.
+   */
+  text?: string;
+  /** Whole-pixel scale for that text. Two is legible at this size. */
+  textScale?: number;
 }
 
 export interface StripSize {
@@ -58,25 +75,43 @@ export function drawStrip(
     pixels[at + 3] = 255;
   }
 
+  /** Light one pixel, if it is on the strip at all. */
+  const put = (
+    x: number,
+    y: number,
+    offset: number,
+    colour: readonly [number, number, number],
+  ) => {
+    if (x < 0 || x >= size.width || y < 0 || y >= size.height) {
+      return;
+    }
+    const at = (y * stripWidth + offset + x) * 4;
+    pixels[at] = colour[0];
+    pixels[at + 1] = colour[1];
+    pixels[at + 2] = colour[2];
+    pixels[at + 3] = 255;
+  };
+
   frames.forEach((frame, index) => {
     const offset = index * size.width;
     for (const box of frame) {
+      if (box.text !== undefined) {
+        const scale = box.textScale ?? 2;
+        // Centred on the actor's position, as a box is: the same anchor for
+        // both, so a demo can swap one for the other without moving anything.
+        const left = Math.round(box.x - textWidth(box.text, scale) / 2);
+        const top = Math.round(box.y - (GLYPH_HEIGHT * scale) / 2);
+        for (const [x, y] of textPixels(box.text, scale)) {
+          put(left + x, top + y, offset, box.colour);
+        }
+        continue;
+      }
       // Positions are the actor's MIDDLE, as everything in the engine is.
       const left = Math.round(box.x - box.width / 2);
       const top = Math.round(box.y - box.height / 2);
       for (let y = top; y < top + box.height; y++) {
-        if (y < 0 || y >= size.height) {
-          continue;
-        }
         for (let x = left; x < left + box.width; x++) {
-          if (x < 0 || x >= size.width) {
-            continue;
-          }
-          const at = (y * stripWidth + offset + x) * 4;
-          pixels[at] = box.colour[0];
-          pixels[at + 1] = box.colour[1];
-          pixels[at + 2] = box.colour[2];
-          pixels[at + 3] = 255;
+          put(x, y, offset, box.colour);
         }
       }
     }

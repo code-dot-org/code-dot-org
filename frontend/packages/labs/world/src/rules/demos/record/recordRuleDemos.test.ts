@@ -84,6 +84,8 @@ function play(
             width: look.width,
             height: look.height,
             colour: rgb(look.colour),
+            text: look.text,
+            textScale: look.textScale,
           };
         }),
       );

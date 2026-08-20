@@ -61,6 +61,16 @@ export interface Look {
   width: number;
   height: number;
   colour: string;
+  /**
+   * A string drawn in place of the rectangle, centred where it would have been.
+   *
+   * The one thing a box cannot stand in for, and the reason Writing had no
+   * demo until the strip writer learned a font (`record/font`). Upper case,
+   * digits and a little punctuation; anything else draws as a gap.
+   */
+  text?: string;
+  /** Whole-pixel scale for that text. Two is legible in a 192-wide frame. */
+  textScale?: number;
 }
 
 export interface RuleDemo {

@@ -29,6 +29,7 @@ import {steeringDemo} from './steering';
 import {timeDemo} from './time';
 import {DEMO_FPS, type RuleDemo} from './types';
 import {wrapDemo} from './wrap';
+import {writingDemo} from './writing';
 
 export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   // Keyed by the stock rule's id (`rules/stock`), in the order the shelf
@@ -39,6 +40,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   health: healthDemo,
   steering: steeringDemo,
   time: timeDemo,
+  writing: writingDemo,
   input: inputDemo,
   mouse: mouseDemo,
   arrows: arrowsDemo,
