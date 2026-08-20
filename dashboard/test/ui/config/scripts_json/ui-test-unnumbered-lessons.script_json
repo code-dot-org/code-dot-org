@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-02 19:27:57 UTC",
+    "serialized_at": "2026-08-11 17:50:03 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -98,13 +98,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "unnumbered-lesson-level-one"
+          "UI Test unnumbered-lesson-level-one"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "unnumbered-lesson-level-one"
+          "UI Test unnumbered-lesson-level-one"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -112,16 +112,16 @@
         "activity_section.key": "572676da-a9fa-4143-a00e-d109f950efe9"
       },
       "level_keys": [
-        "unnumbered-lesson-level-one"
+        "UI Test unnumbered-lesson-level-one"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "unnumbered-lesson-level-one",
+        "level.key": "UI Test unnumbered-lesson-level-one",
         "script_level.level_keys": [
-          "unnumbered-lesson-level-one"
+          "UI Test unnumbered-lesson-level-one"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -158,6 +158,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
