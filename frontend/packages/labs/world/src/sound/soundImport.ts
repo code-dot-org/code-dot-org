@@ -5,9 +5,13 @@
 // file, and the registries it can reach are plain module state by design. The
 // field asks through a handler the editor registers while it is mounted.
 //
-// This is the FOURTH copy of that shape. Each is a dozen lines and they have
-// not drifted, so it is not urgent — but a shared `libraryImport` taking the
-// kind as data is the obvious tidy, and it should happen before a fifth.
+// This is the FIFTH copy of that shape (rule, effect, actor, appearance, and
+// this). They have drifted once already: two of the five carried a
+// `field.getOptions(false)` before `setValue` that stopped being necessary when
+// `bindLiveOptions` took the cache away, and the comment explaining it was
+// copied here before anyone checked. A shared `libraryImport` taking the kind
+// as data is the obvious tidy — `appearanceImportField` is already that shape
+// for three of them — and the case for it is now evidence rather than taste.
 
 /** What a `play sound` dropdown's `(import…)` row carries. */
 export const IMPORT_SOUND_VALUE = '__import_sound__';

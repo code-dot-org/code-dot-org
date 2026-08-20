@@ -41,10 +41,16 @@ export const soundImportFieldExtension: Extension = defineExtension(
           if (!imported || block.isDisposed()) {
             return;
           }
-          // The import put a new row in the registry, and a dropdown caches the
-          // options it last built. Rebuild that cache first, or the field takes
-          // the value and goes on showing "(none)" — right in the generated
-          // code, wrong on the block, which is the worst way to be wrong.
+          // Rebuild the option list before the value lands, so the field
+          // cannot end up right in the generated code and wrong on the block.
+          //
+          // BELT AND BRACES on today's fields, not load-bearing: every dropdown
+          // with an `(import…)` row is bound by `bindLiveOptions`, which
+          // replaces `getOptions` with a call to the registry and takes no
+          // `useCache` argument at all — there is no cache left to rebuild
+          // (`liveDropdowns.test`). The three sibling extensions omit this and
+          // are not broken. It stays because it is correct for a field that is
+          // NOT live-bound, and costs one registry read for one that is.
           field.getOptions(false);
           field.setValue(imported);
         });

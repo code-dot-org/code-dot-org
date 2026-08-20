@@ -20,10 +20,12 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {Blockly} from '@code-dot-org/blockly';
+
 import {DEFAULT_PROJECT} from '../../constants';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
-import {liveDropdownFieldNames} from '../moduleOptions';
+import {bindLiveOptions, liveDropdownFieldNames} from '../moduleOptions';
 import {projectRuleMetas} from '../projectModules';
 
 /** As much of a block definition as this needs to read. */
@@ -100,5 +102,30 @@ describe('live dropdowns', () => {
     expect(named.size).toBeGreaterThanOrEqual(5);
     expect(users.length).toBeGreaterThanOrEqual(5);
     expect(users.map(definition => definition.type)).toContain('world_is_a');
+  });
+});
+
+describe('a live dropdown has no cache', () => {
+  it('regenerates even when asked for the cached list', () => {
+    // Blockly caches a dynamic dropdown's options and resolves both the
+    // validator and the label against that cache. `bindLiveOptions` replaces
+    // `getOptions` with a call to the registry — it takes no `useCache`
+    // argument at all — so there is nothing left to invalidate.
+    //
+    // This is here because two import extensions rebuild the option list
+    // before writing an imported value, with a comment saying that without it
+    // the field would take the value and go on showing "(none)" — and three
+    // sibling extensions do not, which reads like a bug in three places. It is
+    // not: the rebuild is belt and braces on a live-bound field, and every
+    // field with an `(import…)` row is live-bound. This is what says so, so the
+    // next person to notice the difference does not have to work it out again.
+    let live: Array<[string, string]> = [['old', 'old.mp3']];
+    const field = new Blockly.FieldDropdown(() => live);
+    bindLiveOptions(field as never, () => live);
+    field.getOptions(true);
+
+    live = [['new', 'new.mp3']];
+
+    expect(field.getOptions(true)).toEqual([['new', 'new.mp3']]);
   });
 });
