@@ -85,18 +85,18 @@ module User::AiAccessible
       if DCDO.get("allow_international_usage_all_models", false)
         false
       elsif teacher?
-        non_us_ai_chat_user?(self)
+        non_us_teacher?(self)
       else
         student_teachers = teachers
-        student_teachers.any? && student_teachers.all? {|teacher| non_us_ai_chat_user?(teacher)}
+        student_teachers.any? && student_teachers.all? {|teacher| non_us_teacher?(teacher)}
       end
   end
 
   # We use school_info and user_geos (set once at first sign-in) rather than per request
   # geolocation so the value stays stable and can be fixed by the teacher if it is wrong.
-  private def non_us_ai_chat_user?(user)
-    return !user.school_info.usa? if user.school_info&.country.present?
-    geo_country = user.user_geos.first&.country
+  private def non_us_teacher?(teacher)
+    return !teacher.school_info.usa? if teacher.school_info&.country.present?
+    geo_country = teacher.user_geos.first&.country
     geo_country.present? && geo_country != 'United States'
   end
 end
