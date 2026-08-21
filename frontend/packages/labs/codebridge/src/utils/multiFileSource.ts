@@ -27,6 +27,45 @@ export const getFileExtension = (filename: string): string =>
   filename.split('.').pop()?.toLowerCase() || '';
 
 /**
+ * A folder's path, from the project root, ending in a slash.
+ *
+ * `/` for the root itself; `/styles/` for a folder one down. Ported from
+ * legacy `@codebridge/utils/getFolderPath`, which the AI tutor's project
+ * context needs: a model told about `index.html` twice, once in the root and
+ * once in a folder, cannot tell which one it is being asked about.
+ *
+ * A folder whose parent is missing terminates the walk rather than looping —
+ * the path is then relative to wherever the chain broke, which is wrong but
+ * finite, and a cycle in a hand-edited project would otherwise hang the tab.
+ */
+export const getFolderPath = (
+  folderId: FolderId,
+  folders: MultiFileSource['folders'],
+): string => {
+  const names: string[] = [];
+  const seen = new Set<FolderId>();
+  let at: FolderId | undefined = folderId;
+
+  while (at && at !== DEFAULT_FOLDER_ID && !seen.has(at)) {
+    seen.add(at);
+    const folder: ProjectFolder | undefined = folders[at];
+    if (!folder) {
+      break;
+    }
+    names.unshift(folder.name);
+    at = folder.parentId;
+  }
+
+  return names.length ? `/${names.join('/')}/` : '/';
+};
+
+/** A file's path from the project root, folders included. */
+export const getFilePath = (
+  file: ProjectFile,
+  folders: MultiFileSource['folders'],
+): string => `${getFolderPath(file.folderId, folders)}${file.name}`;
+
+/**
  * One past the highest integer id in `ids`, as a string.
  *
  * Ids that are not integers are ignored rather than folded into the maximum.
