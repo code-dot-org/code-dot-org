@@ -4055,14 +4055,17 @@ const worldIsA = defineBlock({
 // the Blockly block's own id, which is stable across edits.
 
 /** A JS import identifier for a project module path (`actors/coin` → `Coin`). */
-const importVar = (path: string): string => {
-  const base = (path.split('/').pop() ?? path).replace(/\.[^.]+$/, '');
-  const camel = base.replace(/[^a-zA-Z0-9]+(.)?/g, (_all, c: string) =>
-    c ? c.toUpperCase() : '',
-  );
-  const pascal = camel.charAt(0).toUpperCase() + camel.slice(1);
-  return pascal || 'Module';
-};
+const importVar = (path: string): string =>
+  // THE WHOLE PATH, not the file name. It was the last segment, and a project
+  // holding `actors/healthBar` and `rules/healthBar` — which is exactly what
+  // importing the stock Health Bar gives you — emitted two different imports
+  // under one name and would not compile: "The symbol HealthBar has already
+  // been declared". Any actor and rule sharing a name did it; the stock shelf
+  // is just where it finally happened.
+  //
+  // `pathSlug` is the same folder-and-file name the property and action block
+  // types are minted from, so a module's import reads like its blocks do.
+  pathSlug(path.replace(/\.[^./]+$/, '')) || 'Module';
 
 /** Register a hoisted top-level import; Blockly's `finish()` emits it, deduped. */
 const addImport = (generator: unknown, key: string, code: string): void => {

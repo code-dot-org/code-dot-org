@@ -135,7 +135,7 @@ describe('create actor in map', () => {
   it('places a module actor, imported like `add actor` imports one', () => {
     const {code, imports} = emit({ACTOR: 'actors/coin', PLACEMENTS: COIN});
 
-    expect(code).toContain('world.define("actors/coin", Coin);');
+    expect(code).toContain('world.define("actors/coin", ActorsCoin);');
     expect(code).toContain('"type":"actors/coin"');
     expect(imports).toEqual(['mod:actors/coin']);
   });

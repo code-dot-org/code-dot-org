@@ -74,7 +74,7 @@ export const HasHealth = rule.traitRef('Has Health');
 export const DealsDamage = rule.traitRef('Deals Damage');
 
 /** How much more damage this can take. At zero it is dead. */
-const health = hurtable.number('health', 3);
+export const health = hurtable.number('health', 3);
 
 /**
  * The most it can have — what a full one is.
@@ -95,7 +95,7 @@ const health = hurtable.number('health', 3);
  * a number a block had just set would be worse than the mistake. What it
  * bounds is HEALING, which is the operation that means "up to full".
  */
-const mostHealth = hurtable.number('most health', 3);
+export const mostHealth = hurtable.number('most health', 3);
 
 /**
  * Seconds of not being hurt again after being hurt.

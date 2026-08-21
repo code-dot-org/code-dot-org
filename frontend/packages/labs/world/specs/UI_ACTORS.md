@@ -161,8 +161,30 @@ else is the whole of what a progress bar is. Writing is the precedent and
 Progress is written to be read beside it.
 
 It is not a HEALTH bar. What fills it is a project's own handler, and health is
-one of the things that might: `rules/attachment` puts it over an actor, and
-`most health` is what a fraction of health divides by (`rules/health`).
+one of the things that might — which is what the fourth stock actor is.
+
+**Health Bar** is a Progress Bar that elects two more traits, exactly as a
+Button is a Label that elects one. Its picture is the Progress Bar's picture,
+shared rather than copied, because a health bar IS a progress bar: what makes
+it a health one is where its number comes from, and that is a trait rather than
+a drawing.
+
+The trait is `rules/healthBar`, a rule for one step that owns no state and
+draws nothing. It requires Health, Progress and Attachment and says the one
+thing none of them can say alone — my fraction is my subject's health out of
+its full. Putting it in any of the three would make that one know about the
+others, and each is a mechanic a game may want without them.
+
+It reads the ATTACHMENT rather than carrying a subject of its own, so
+
+```
+set attached to of ⟨any ⟨Health Bar⟩⟩ to ⟨this actor⟩
+```
+
+both puts it over that actor and makes it show that actor's health. One
+intention, one property; two would be two chances to disagree, and a bar
+hovering over one thing while reporting another is a bug nobody would think to
+look for.
 
 ## The interface layer, restated rather than re-derived
 

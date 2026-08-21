@@ -2052,10 +2052,12 @@ describe('actor-placing block generators', () => {
       'actor.set(X);\n',
     );
     expect(code).toBe(
-      '{\nconst actor = world.addActor(Coin, "add-coin", "actors/coin", "main");\n' +
+      '{\nconst actor = world.addActor(ActorsCoin, "add-coin", "actors/coin", "main");\n' +
         'actor.set(X);\n}\n',
     );
-    expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
+    expect(defs['mod:actors/coin']).toBe(
+      'import ActorsCoin from "actors/coin";',
+    );
   });
 
   it('binds `actor` when no name was chosen, as every saved block expects', () => {
@@ -2157,9 +2159,9 @@ describe('world block generators', () => {
     // and is the only place in the generated module a path appears at all.
     const defs: Record<string, string> = {};
     expect(run('world_use_rule', {RULE: 'Has Wind'}, defs, '')).toBe(
-      'world.useRules([Wind]);\n',
+      'world.useRules([RulesWind]);\n',
     );
-    expect(defs['mod:rules/wind']).toBe('import Wind from "rules/wind";');
+    expect(defs['mod:rules/wind']).toBe('import RulesWind from "rules/wind";');
   });
 
   it('world_use_rule treats an unknown value as a module — a `.js` rule', () => {
@@ -2167,10 +2169,10 @@ describe('world block generators', () => {
     // by its file and imported from exactly there.
     const defs: Record<string, string> = {};
     expect(run('world_use_rule', {RULE: 'rules/animation'}, defs, '')).toBe(
-      'world.useRules([Animation]);\n',
+      'world.useRules([RulesAnimation]);\n',
     );
     expect(defs['mod:rules/animation']).toBe(
-      'import Animation from "rules/animation";',
+      'import RulesAnimation from "rules/animation";',
     );
   });
 
@@ -2184,9 +2186,9 @@ describe('world block generators', () => {
     // handler. One block, both jobs; `addEffect` is on both objects.
     const defs: Record<string, string> = {};
     const code = run('world_add_effect', {EFFECT: 'effects/ripple'}, defs, '');
-    expect(code).toBe('actor.addEffect("effects/ripple", Ripple);\n');
+    expect(code).toBe('actor.addEffect("effects/ripple", EffectsRipple);\n');
     expect(defs['mod:effects/ripple']).toBe(
-      'import Ripple from "effects/ripple";',
+      'import EffectsRipple from "effects/ripple";',
     );
   });
 
@@ -2203,7 +2205,7 @@ describe('world block generators', () => {
       [{id: 'strength', name: 'strength', type: 'float', defaultValue: 0.02}],
     );
     expect(code).toBe(
-      'actor.addEffect("effects/ripple", Ripple, {"strength": 0.05});\n',
+      'actor.addEffect("effects/ripple", EffectsRipple, {"strength": 0.05});\n',
     );
   });
 
@@ -2300,7 +2302,7 @@ describe('world block generators', () => {
 
   it('world_add_effect omits the argument when the effect has no parameters', () => {
     const code = run('world_add_effect', {EFFECT: 'effects/ripple'}, {}, '');
-    expect(code).toBe('actor.addEffect("effects/ripple", Ripple);\n');
+    expect(code).toBe('actor.addEffect("effects/ripple", EffectsRipple);\n');
   });
 
   it('world_add_effect names the socket target when one is plugged in', () => {
@@ -2308,8 +2310,10 @@ describe('world block generators', () => {
     const code = run('world_add_effect', {EFFECT: 'effects/glow'}, defs, '', {
       ACTOR: 'actor',
     });
-    expect(code).toBe('actor.addEffect("effects/glow", Glow);\n');
-    expect(defs['mod:effects/glow']).toBe('import Glow from "effects/glow";');
+    expect(code).toBe('actor.addEffect("effects/glow", EffectsGlow);\n');
+    expect(defs['mod:effects/glow']).toBe(
+      'import EffectsGlow from "effects/glow";',
+    );
   });
 
   it('world_add_effect passes explicit values alongside a socket target', () => {
@@ -2329,7 +2333,7 @@ describe('world block generators', () => {
     const code = run('world_add_effect', {EFFECT: 'effects/glow'}, {}, '', {
       ACTOR: 'touched',
     });
-    expect(code).toBe('touched.addEffect("effects/glow", Glow);\n');
+    expect(code).toBe('touched.addEffect("effects/glow", EffectsGlow);\n');
   });
 
   it('world_remove_effect needs only the path, so imports nothing', () => {
@@ -2393,9 +2397,11 @@ describe('world block generators', () => {
       defs,
       '',
     );
-    expect(code).toBe('world.addEffect("effects/underwater", Underwater);\n');
+    expect(code).toBe(
+      'world.addEffect("effects/underwater", EffectsUnderwater);\n',
+    );
     expect(defs['mod:effects/underwater']).toBe(
-      'import Underwater from "effects/underwater";',
+      'import EffectsUnderwater from "effects/underwater";',
     );
   });
 
@@ -2514,10 +2520,10 @@ describe('world block generators', () => {
       '',
     );
     expect(code).toBe(
-      'world.addBackgroundEffect("effects/ripple", Ripple, undefined, "main");\n',
+      'world.addBackgroundEffect("effects/ripple", EffectsRipple, undefined, "main");\n',
     );
     expect(defs['mod:effects/ripple']).toBe(
-      'import Ripple from "effects/ripple";',
+      'import EffectsRipple from "effects/ripple";',
     );
   });
 
@@ -2578,10 +2584,10 @@ describe('world block generators', () => {
       ) as string;
 
     expect(run('world_add_foreground_effect')).toBe(
-      'world.addForegroundEffect("effects/ripple", Ripple, undefined, "main");\n',
+      'world.addForegroundEffect("effects/ripple", EffectsRipple, undefined, "main");\n',
     );
     expect(run('world_add_world_effect')).toBe(
-      'world.addEffect("effects/ripple", Ripple);\n',
+      'world.addEffect("effects/ripple", EffectsRipple);\n',
     );
     expect(run('world_remove_foreground_effect')).toBe(
       'world.removeForegroundEffect("effects/ripple", "main");\n',
@@ -2615,13 +2621,13 @@ describe('world block generators', () => {
     const code = run('world_world', {NAME: 'Platform World'}, defs, '');
 
     expect(code).toContain(
-      'world.useAnimations(WorldLab.parseAnimationFile(Game));',
+      'world.useAnimations(WorldLab.parseAnimationFile(AnimationsGame));',
     );
     expect(code).toContain(
-      'world.useAnimations(WorldLab.parseAnimationFile(CoinSpin));',
+      'world.useAnimations(WorldLab.parseAnimationFile(AnimationsCoinSpin));',
     );
     expect(defs['mod:animations/game']).toBe(
-      'import Game from "animations/game";',
+      'import AnimationsGame from "animations/game";',
     );
     setProjectAnimationFiles([]);
   });
@@ -2640,11 +2646,13 @@ describe('world block generators', () => {
 
     const code = run('world_world', {NAME: 'Platform World'}, defs, '');
 
-    expect(code).toContain('world.useRules([Input]);');
-    expect(code).toContain('world.useRules([Gravity]);');
-    expect(defs['mod:rules/input']).toBe('import Input from "rules/input";');
+    expect(code).toContain('world.useRules([RulesInput]);');
+    expect(code).toContain('world.useRules([RulesGravity]);');
+    expect(defs['mod:rules/input']).toBe(
+      'import RulesInput from "rules/input";',
+    );
     expect(defs['mod:rules/gravity']).toBe(
-      'import Gravity from "rules/gravity";',
+      'import RulesGravity from "rules/gravity";',
     );
     setProjectRuleModules([]);
   });
@@ -2664,6 +2672,34 @@ describe('world block generators', () => {
 describe('world_load_map generator', () => {
   afterEach(() => setProjectMaps({}));
 
+  it('names an actor and a rule apart when they share a file name', () => {
+    // THE BUG THIS PINS. An import name was the last path segment, so a
+    // project holding `actors/healthBar` and `rules/healthBar` — which is
+    // exactly what importing the stock Health Bar gives you — emitted two
+    // imports called `HealthBar` and would not compile: "The symbol HealthBar
+    // has already been declared". Any actor and rule sharing a name did it.
+    setProjectMaps({'maps/level1': ['actors/healthBar']});
+    const defs: Record<string, string> = {};
+    const placed = generatorFor('world_load_map')(
+      {getFieldValue: () => 'maps/level1'} as never,
+      {definitions_: defs, statementToCode: () => ''} as never,
+      {} as never,
+    ) as string;
+    const used = generatorFor('world_use_rule')(
+      {getFieldValue: () => 'rules/healthBar'} as never,
+      {definitions_: defs} as never,
+      {} as never,
+    ) as string;
+
+    expect(placed).toContain('ActorsHealthBar');
+    expect(used).toContain('RulesHealthBar');
+    // …and both imports survive, because they are two names rather than one.
+    const bindings = Object.values(defs)
+      .map(line => /^import (\w+) /.exec(line)?.[1])
+      .filter(Boolean);
+    expect(new Set(bindings).size).toBe(bindings.length);
+  });
+
   it('imports+defines each actor the map places, then loads it', () => {
     setProjectMaps({'maps/level1': ['actors/player', 'actors/coin']});
     const defs: Record<string, string> = {};
@@ -2673,15 +2709,19 @@ describe('world_load_map generator', () => {
       {} as never,
     ) as string;
     expect(code).toBe(
-      'world.define("actors/player", Player);\n' +
-        'world.define("actors/coin", Coin);\n' +
-        'world.loadMap(Level1, "main");\n',
+      'world.define("actors/player", ActorsPlayer);\n' +
+        'world.define("actors/coin", ActorsCoin);\n' +
+        'world.loadMap(MapsLevel1, "main");\n',
     );
     expect(defs['mod:actors/player']).toBe(
-      'import Player from "actors/player";',
+      'import ActorsPlayer from "actors/player";',
     );
-    expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
-    expect(defs['map:maps/level1']).toBe('import Level1 from "maps/level1";');
+    expect(defs['mod:actors/coin']).toBe(
+      'import ActorsCoin from "actors/coin";',
+    );
+    expect(defs['map:maps/level1']).toBe(
+      'import MapsLevel1 from "maps/level1";',
+    );
   });
 });
 

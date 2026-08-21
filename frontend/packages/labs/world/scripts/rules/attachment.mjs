@@ -56,7 +56,7 @@ attached.uses(Positional);
  * things to be in the middle of, and saying `actor` is what stops `add … to
  * attached to` being generated (`rules/cameraFollow` makes the same choice).
  */
-const to = attached.actor('attached to');
+export const attachedTo = attached.actor('attached to');
 
 /**
  * Where to sit relative to it. Up the level is NEGATIVE y, so the default puts
@@ -72,12 +72,12 @@ attached.step('ride along', 'react', [
   note('pointed yet, so it stays where it was put rather than at the origin.'),
   when([
     [
-      anyOf(to.of(thisActor())),
+      anyOf(attachedTo.of(thisActor())),
       [
         setPosition(
           thisActor(),
-          add(position.x(to.of(thisActor())), offset.x(thisActor())),
-          add(position.y(to.of(thisActor())), offset.y(thisActor())),
+          add(position.x(attachedTo.of(thisActor())), offset.x(thisActor())),
+          add(position.y(attachedTo.of(thisActor())), offset.y(thisActor())),
         ),
       ],
     ],
