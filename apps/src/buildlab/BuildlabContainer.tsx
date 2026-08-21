@@ -58,6 +58,18 @@ const BuildlabContainer: React.FunctionComponent<LabProps> = ({
     () => (currentSources ? projectFromSources(currentSources) : undefined),
     [currentSources]
   );
+  const providedModels = useMemo(
+    () =>
+      levelProperties.aiModelId && levelProperties.aiModelName
+        ? [
+            {
+              id: levelProperties.aiModelId,
+              name: levelProperties.aiModelName,
+            },
+          ]
+        : [],
+    [levelProperties.aiModelId, levelProperties.aiModelName]
+  );
   const handleProjectChange = useCallback(
     (nextProject: BuildLabProject) => {
       updateSources(
@@ -79,6 +91,7 @@ const BuildlabContainer: React.FunctionComponent<LabProps> = ({
       channelId={channel?.id ?? standaloneChannelId}
       initialProject={project}
       onProjectChange={handleProjectChange}
+      providedModels={providedModels}
       readOnly={!isEditable}
     />
   );

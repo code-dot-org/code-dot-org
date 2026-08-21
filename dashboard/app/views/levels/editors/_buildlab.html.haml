@@ -1,0 +1,11 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#buildlab-model"}}
+  Build Lab
+
+#buildlab-model.in.collapse
+  .field
+    = f.label :ai_model_id, 'Provided ML model id'
+    = f.text_field :ai_model_id, value: @level.ai_model_id
+  .field
+    = f.label :ai_model_name, 'Provided ML model name'
+    = f.text_field :ai_model_name, value: @level.ai_model_name
+  %p Set both fields to make a Levelbuilder model available in the Build Lab data tab.

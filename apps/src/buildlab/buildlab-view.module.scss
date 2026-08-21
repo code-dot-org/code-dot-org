@@ -698,6 +698,28 @@
   min-width: min(460px, 70vw);
 }
 
+.mlModelSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mlModelList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mlModelListItem {
+  align-items: center;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 10px 12px;
+}
+
 .mlModelModal {
   max-width: 560px;
 }

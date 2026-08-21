@@ -5,6 +5,8 @@ import classNames from 'classnames';
 import React, {
   useCallback,
   useEffect,
+  forwardRef,
+  useImperativeHandle,
   useLayoutEffect,
   useRef,
   useState,
@@ -113,10 +115,60 @@ interface PixelEditorModalProps {
   onReady?: () => void;
   onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
   onCancel: () => void;
+  inline?: boolean;
+  editorRef?: React.Ref<PixelEditorHandle>;
 }
 
+export interface PixelEditorHandle {
+  getImage: () => {dataURI: string; meta: PixelEditorSaveMeta} | undefined;
+}
+
+interface PixelEditorShellProps {
+  children: React.ReactNode;
+  inline: boolean;
+  onCancel: () => void;
+  themeMode: 'light' | 'dark';
+  title: string;
+}
+
+const PixelEditorShell: React.FunctionComponent<PixelEditorShellProps> = ({
+  children,
+  inline,
+  onCancel,
+  themeMode,
+  title,
+}) => {
+  if (inline) {
+    return (
+      <section
+        aria-label={title}
+        className={moduleStyles.inlineEditor}
+        data-theme={themeMode}
+      >
+        {children}
+      </section>
+    );
+  }
+
+  return (
+    // display: contents host, so the editor's panel styles win over
+    // CustomDialog's via parent-selector specificity (never load order).
+    <div className={moduleStyles.dialogHost} data-theme={themeMode}>
+      <CustomDialog
+        aria-label={title}
+        onClose={onCancel}
+        mode={themeMode}
+        className={moduleStyles.modal}
+      >
+        {children}
+      </CustomDialog>
+    </div>
+  );
+};
+
 /**
- * A small, self-contained pixel editor in a modal. Edits happen on a backing
+ * A small, self-contained pixel editor. It can render in a modal or inline.
+ * Edits happen on a backing
  * canvas at the image's native resolution; the display canvas scales it up
  * with nearest-neighbor sampling. Tools: pen, eraser, tolerant bucket fill,
  * eyedropper, outline/solid circles and rectangles, four brush sizes, one
@@ -132,6 +184,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   onReady,
   onSave,
   onCancel,
+  inline = false,
+  editorRef,
 }) => {
   const {theme} = useTheme();
   const themeMode = theme === 'Dark' ? 'dark' : 'light';
@@ -567,28 +621,41 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       display.width = backing.width * scaleRef.current;
       display.height = backing.height * scaleRef.current;
       const aspect = backing.width / backing.height;
-      let cssH = Math.min(
-        window.innerHeight * CSS_HEIGHT_VIEWPORT_FRACTION,
-        MAX_CSS_HEIGHT_PX
-      );
-      let cssW = cssH * aspect;
-      const maxW = Math.min(
-        window.innerWidth * CSS_WIDTH_VIEWPORT_FRACTION,
-        MAX_CSS_WIDTH_PX
-      );
-      if (cssW > maxW) {
-        cssW = maxW;
-        cssH = cssW / aspect;
+      const canvasArea = display.parentElement?.parentElement;
+      const resizeDisplay = () => {
+        const availableWidth = canvasArea?.getBoundingClientRect().width;
+        const maxW = Math.min(
+          MAX_CSS_WIDTH_PX,
+          inline
+            ? availableWidth
+              ? Math.max(200, availableWidth - 24)
+              : Infinity
+            : Infinity,
+          window.innerWidth * CSS_WIDTH_VIEWPORT_FRACTION
+        );
+        const maxH = Math.min(
+          MAX_CSS_HEIGHT_PX,
+          window.innerHeight * CSS_HEIGHT_VIEWPORT_FRACTION
+        );
+        const cssW = Math.min(maxW, maxH * aspect);
+        const cssH = cssW / aspect;
+        display.style.width = `${Math.round(cssW)}px`;
+        display.style.height = `${Math.round(cssH)}px`;
+        setCssScale({
+          x: Math.round(cssW) / backing.width,
+          y: Math.round(cssH) / backing.height,
+        });
+        repaint();
+      };
+
+      resizeDisplay();
+      if (inline && canvasArea && typeof ResizeObserver !== 'undefined') {
+        const observer = new ResizeObserver(resizeDisplay);
+        observer.observe(canvasArea);
+        return () => observer.disconnect();
       }
-      display.style.width = `${Math.round(cssW)}px`;
-      display.style.height = `${Math.round(cssH)}px`;
-      setCssScale({
-        x: Math.round(cssW) / backing.width,
-        y: Math.round(cssH) / backing.height,
-      });
-      repaint();
     }
-  }, [loaded, repaint]);
+  }, [inline, loaded, repaint]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -1195,10 +1262,10 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     return () => window.removeEventListener('blur', dismissKeyboardCursor);
   }, [dismissKeyboardCursor]);
 
-  const handleSave = useCallback(() => {
+  const getImage = useCallback(() => {
     const backing = backingRef.current;
     if (!backing) {
-      return;
+      return undefined;
     }
     if (pixelMode) {
       // Store crisp: nearest-neighbor upscale of the logical pixels, so the
@@ -1222,15 +1289,26 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             0,
             0
           );
-        onSave(out.toDataURL('image/png'), {
-          pixelGridSize: crispScale,
-          recentColors,
-        });
-        return;
+        return {
+          dataURI: out.toDataURL('image/png'),
+          meta: {pixelGridSize: crispScale, recentColors},
+        };
       }
     }
-    onSave(backing.toDataURL('image/png'), {recentColors});
-  }, [onSave, pixelMode, recentColors]);
+    return {
+      dataURI: backing.toDataURL('image/png'),
+      meta: {recentColors},
+    };
+  }, [pixelMode, recentColors]);
+
+  useImperativeHandle(editorRef, () => ({getImage}), [getImage]);
+
+  const handleSave = useCallback(() => {
+    const image = getImage();
+    if (image) {
+      onSave(image.dataURI, image.meta);
+    }
+  }, [getImage, onSave]);
 
   // historyVersion re-renders this component whenever the stacks change; the
   // stacks themselves live in refs.
@@ -1242,217 +1320,212 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   }
 
   return (
-    // display: contents host, so the editor's panel styles win over
-    // CustomDialog's via parent-selector specificity (never load order).
-    <div className={moduleStyles.dialogHost} data-theme={themeMode}>
-      <CustomDialog
-        aria-label={title}
-        onClose={onCancel}
-        mode={themeMode}
-        className={moduleStyles.modal}
+    <PixelEditorShell
+      inline={inline}
+      onCancel={onCancel}
+      themeMode={themeMode}
+      title={title}
+    >
+      <span
+        id={inline ? 'pixel-editor-description' : 'dsco-dialog-description'}
+        className={moduleStyles.srOnly}
       >
-        <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
-          Draw on the image with the toolbar's tools, then save or cancel.
-        </span>
-        {/* Tabbable so the dialog's focus trap lands here on open (the
+        Draw on the image with the toolbar's tools, then save or cancel.
+      </span>
+      {/* Tabbable so the dialog's focus trap lands here on open (the
             WAI-ARIA dialog pattern's title-as-initial-focus): its
             first-focusable would otherwise be the pen button, whose
             focus-triggered tooltip then appears unprompted — positioned
             against the still-animating (scaled) modal — and lingers. */}
-        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-        <div className={moduleStyles.header} tabIndex={0}>
-          {title}
-        </div>
-        <div className={moduleStyles.body}>
-          <div className={moduleStyles.toolbar}>
-            <div className={moduleStyles.toolGrid}>
-              {TOOLS.map((t, index) => (
-                <PixelTooltip
-                  key={t.id}
-                  tooltipId={`pixel-tool-${t.id}-tooltip`}
-                  text={toolTitle(t)}
-                  fromLeftColumn={index % 2 === 0}
-                >
-                  <button
-                    type="button"
-                    aria-label={toolTitle(t)}
-                    aria-pressed={tool === t.id}
-                    className={classNames(
-                      moduleStyles.toolButton,
-                      tool === t.id && moduleStyles.toolActive
-                    )}
-                    onClick={() => setTool(t.id)}
-                  >
-                    {t.icon}
-                  </button>
-                </PixelTooltip>
-              ))}
-              <div className={moduleStyles.toolbarDivider} />
-              {BRUSH_SIZES.map((size, index) => (
-                <PixelTooltip
-                  key={size}
-                  tooltipId={`pixel-brush-${size}-tooltip`}
-                  text={`Brush size ${size} (${index + 1})`}
-                  fromLeftColumn={index % 2 === 0}
-                >
-                  <button
-                    type="button"
-                    aria-label={`Brush size ${size} (${index + 1})`}
-                    aria-pressed={brushSize === size}
-                    className={classNames(
-                      moduleStyles.toolButton,
-                      brushSize === size && moduleStyles.toolActive
-                    )}
-                    onClick={() => setBrushSize(size)}
-                  >
-                    <span
-                      className={classNames(
-                        moduleStyles.brushDot,
-                        pixelMode && moduleStyles.brushDotSquare
-                      )}
-                      style={{
-                        width: brushDotPx(size),
-                        height: brushDotPx(size),
-                      }}
-                    />
-                  </button>
-                </PixelTooltip>
-              ))}
-              <div className={moduleStyles.toolbarDivider} />
-              <ColorPicker
-                color={color}
-                onChange={setColor}
-                recentColors={recentColors}
-              />
-            </div>
-            <div className={moduleStyles.historyRow}>
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+      <div className={moduleStyles.header} tabIndex={0}>
+        {title}
+      </div>
+      <div className={moduleStyles.body}>
+        <div className={moduleStyles.toolbar}>
+          <div className={moduleStyles.toolGrid}>
+            {TOOLS.map((t, index) => (
               <PixelTooltip
-                tooltipId="pixel-undo-tooltip"
-                text="Undo (Ctrl+Z)"
-                fromLeftColumn
+                key={t.id}
+                tooltipId={`pixel-tool-${t.id}-tooltip`}
+                text={toolTitle(t)}
+                fromLeftColumn={index % 2 === 0}
               >
                 <button
                   type="button"
-                  aria-label="Undo (Ctrl+Z)"
-                  className={moduleStyles.toolButton}
-                  disabled={!canUndo}
-                  onClick={undo}
+                  aria-label={toolTitle(t)}
+                  aria-pressed={tool === t.id}
+                  className={classNames(
+                    moduleStyles.toolButton,
+                    tool === t.id && moduleStyles.toolActive
+                  )}
+                  onClick={() => setTool(t.id)}
                 >
-                  <FontAwesomeV6Icon iconName="rotate-left" />
+                  {t.icon}
                 </button>
               </PixelTooltip>
+            ))}
+            <div className={moduleStyles.toolbarDivider} />
+            {BRUSH_SIZES.map((size, index) => (
               <PixelTooltip
-                tooltipId="pixel-redo-tooltip"
-                text="Redo (Ctrl+Shift+Z)"
+                key={size}
+                tooltipId={`pixel-brush-${size}-tooltip`}
+                text={`Brush size ${size} (${index + 1})`}
+                fromLeftColumn={index % 2 === 0}
               >
                 <button
                   type="button"
-                  aria-label="Redo (Ctrl+Shift+Z)"
-                  className={moduleStyles.toolButton}
-                  disabled={!canRedo}
-                  onClick={redo}
+                  aria-label={`Brush size ${size} (${index + 1})`}
+                  aria-pressed={brushSize === size}
+                  className={classNames(
+                    moduleStyles.toolButton,
+                    brushSize === size && moduleStyles.toolActive
+                  )}
+                  onClick={() => setBrushSize(size)}
                 >
-                  <FontAwesomeV6Icon iconName="rotate-right" />
+                  <span
+                    className={classNames(
+                      moduleStyles.brushDot,
+                      pixelMode && moduleStyles.brushDotSquare
+                    )}
+                    style={{
+                      width: brushDotPx(size),
+                      height: brushDotPx(size),
+                    }}
+                  />
                 </button>
               </PixelTooltip>
-            </div>
+            ))}
+            <div className={moduleStyles.toolbarDivider} />
+            <ColorPicker
+              color={color}
+              onChange={setColor}
+              recentColors={recentColors}
+            />
           </div>
-          <div className={moduleStyles.canvasArea}>
-            {loadError ? (
-              <div className={moduleStyles.loadError}>
-                This image couldn't be loaded for editing.
-              </div>
-            ) : (
-              <div className={moduleStyles.canvasWrap}>
-                {/* role="application" so screen readers hand the arrow keys
+          <div className={moduleStyles.historyRow}>
+            <PixelTooltip
+              tooltipId="pixel-undo-tooltip"
+              text="Undo (Ctrl+Z)"
+              fromLeftColumn
+            >
+              <button
+                type="button"
+                aria-label="Undo (Ctrl+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canUndo}
+                onClick={undo}
+              >
+                <FontAwesomeV6Icon iconName="rotate-left" />
+              </button>
+            </PixelTooltip>
+            <PixelTooltip
+              tooltipId="pixel-redo-tooltip"
+              text="Redo (Ctrl+Shift+Z)"
+            >
+              <button
+                type="button"
+                aria-label="Redo (Ctrl+Shift+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canRedo}
+                onClick={redo}
+              >
+                <FontAwesomeV6Icon iconName="rotate-right" />
+              </button>
+            </PixelTooltip>
+          </div>
+        </div>
+        <div className={moduleStyles.canvasArea}>
+          {loadError ? (
+            <div className={moduleStyles.loadError}>
+              This image couldn't be loaded for editing.
+            </div>
+          ) : (
+            <div className={moduleStyles.canvasWrap}>
+              {/* role="application" so screen readers hand the arrow keys
                     through to the canvas instead of their virtual cursor —
                     the APG pattern for key-driven drawing surfaces. The rule
                     can't know canvas semantics. */}
-                {/* eslint-disable jsx-a11y/no-interactive-element-to-noninteractive-role */}
-                <canvas
-                  ref={displayRef}
-                  className={moduleStyles.displayCanvas}
-                  // Hide the OS pointer while the keyboard cursor is shown, so
-                  // its crosshair doesn't sit next to the drawn one; moving
-                  // the mouse dismisses the keyboard cursor and brings it back.
-                  style={kbCursor ? {cursor: 'none'} : undefined}
-                  tabIndex={0}
-                  role="application"
-                  aria-label="Drawing canvas"
-                  aria-describedby="pixel-canvas-keyboard-help"
-                  onPointerDown={handlePointerDown}
-                  onPointerMove={handlePointerMove}
-                  onPointerUp={handlePointerUp}
-                  onPointerCancel={handlePointerUp}
-                  onKeyDown={handleCanvasKeyDown}
-                  onKeyUp={handleCanvasKeyUp}
-                  onFocus={handleCanvasFocus}
-                  onBlur={dismissKeyboardCursor}
-                />
-                {/* eslint-enable jsx-a11y/no-interactive-element-to-noninteractive-role */}
-                {kbCursor &&
-                  cssScale &&
-                  (pixelMode ? (
-                    // The exact brush footprint (stamp anchors the size x
-                    // size square at x - floor((size - 1) / 2)).
-                    <div
-                      className={moduleStyles.kbCursorRect}
-                      style={{
-                        left:
-                          (kbCursor.x - Math.floor((brushSize - 1) / 2)) *
-                          cssScale.x,
-                        top:
-                          (kbCursor.y - Math.floor((brushSize - 1) / 2)) *
-                          cssScale.y,
-                        width: brushSize * cssScale.x,
-                        height: brushSize * cssScale.y,
-                      }}
-                    />
-                  ) : (
-                    // Crosshair with an open center. Arm thickness matches the
-                    // brush's rendered footprint (what a stamp would paint);
-                    // the gap leaves that footprint open in the middle.
-                    <div
-                      className={moduleStyles.kbCursorCross}
-                      style={
-                        {
-                          left: (kbCursor.x + 0.5) * cssScale.x,
-                          top: (kbCursor.y + 0.5) * cssScale.y,
-                          '--stroke': `${Math.max(
-                            1,
-                            brushSize * cssScale.x
-                          )}px`,
-                          '--gap': `${Math.max(
-                            4,
-                            (brushSize * cssScale.x) / 2 + 2
-                          )}px`,
-                        } as React.CSSProperties
-                      }
-                    >
-                      <span />
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-                  ))}
-              </div>
-            )}
-            <span
-              id="pixel-canvas-keyboard-help"
-              className={moduleStyles.srOnly}
-            >
-              Use the arrow keys to move the paint cursor; hold Shift to move
-              ten pixels at a time. Press Space or Enter to use the selected
-              tool at the cursor. With the pen or eraser, hold Space and move to
-              draw a continuous line. With the circle and rectangle tools, press
-              once to start the shape and again to place it. Delete erases.
-              Escape hides the cursor.
-            </span>
-            <div aria-live="polite" className={moduleStyles.srOnly}>
-              {announcement}
+              {/* eslint-disable jsx-a11y/no-interactive-element-to-noninteractive-role */}
+              <canvas
+                ref={displayRef}
+                className={moduleStyles.displayCanvas}
+                // Hide the OS pointer while the keyboard cursor is shown, so
+                // its crosshair doesn't sit next to the drawn one; moving
+                // the mouse dismisses the keyboard cursor and brings it back.
+                style={kbCursor ? {cursor: 'none'} : undefined}
+                tabIndex={0}
+                role="application"
+                aria-label="Drawing canvas"
+                aria-describedby="pixel-canvas-keyboard-help"
+                onPointerDown={handlePointerDown}
+                onPointerMove={handlePointerMove}
+                onPointerUp={handlePointerUp}
+                onPointerCancel={handlePointerUp}
+                onKeyDown={handleCanvasKeyDown}
+                onKeyUp={handleCanvasKeyUp}
+                onFocus={handleCanvasFocus}
+                onBlur={dismissKeyboardCursor}
+              />
+              {/* eslint-enable jsx-a11y/no-interactive-element-to-noninteractive-role */}
+              {kbCursor &&
+                cssScale &&
+                (pixelMode ? (
+                  // The exact brush footprint (stamp anchors the size x
+                  // size square at x - floor((size - 1) / 2)).
+                  <div
+                    className={moduleStyles.kbCursorRect}
+                    style={{
+                      left:
+                        (kbCursor.x - Math.floor((brushSize - 1) / 2)) *
+                        cssScale.x,
+                      top:
+                        (kbCursor.y - Math.floor((brushSize - 1) / 2)) *
+                        cssScale.y,
+                      width: brushSize * cssScale.x,
+                      height: brushSize * cssScale.y,
+                    }}
+                  />
+                ) : (
+                  // Crosshair with an open center. Arm thickness matches the
+                  // brush's rendered footprint (what a stamp would paint);
+                  // the gap leaves that footprint open in the middle.
+                  <div
+                    className={moduleStyles.kbCursorCross}
+                    style={
+                      {
+                        left: (kbCursor.x + 0.5) * cssScale.x,
+                        top: (kbCursor.y + 0.5) * cssScale.y,
+                        '--stroke': `${Math.max(1, brushSize * cssScale.x)}px`,
+                        '--gap': `${Math.max(
+                          4,
+                          (brushSize * cssScale.x) / 2 + 2
+                        )}px`,
+                      } as React.CSSProperties
+                    }
+                  >
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                ))}
             </div>
+          )}
+          <span id="pixel-canvas-keyboard-help" className={moduleStyles.srOnly}>
+            Use the arrow keys to move the paint cursor; hold Shift to move ten
+            pixels at a time. Press Space or Enter to use the selected tool at
+            the cursor. With the pen or eraser, hold Space and move to draw a
+            continuous line. With the circle and rectangle tools, press once to
+            start the shape and again to place it. Delete erases. Escape hides
+            the cursor.
+          </span>
+          <div aria-live="polite" className={moduleStyles.srOnly}>
+            {announcement}
           </div>
         </div>
+      </div>
+      {!inline && (
         <div className={moduleStyles.footer}>
           <button type="button" onClick={onCancel}>
             Cancel
@@ -1466,9 +1539,14 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             Save
           </button>
         </div>
-      </CustomDialog>
-    </div>
+      )}
+    </PixelEditorShell>
   );
 };
 
-export default PixelEditorModal;
+const PixelEditorModalWithRef = forwardRef<
+  PixelEditorHandle,
+  PixelEditorModalProps
+>((props, ref) => <PixelEditorModal {...props} editorRef={ref} />);
+
+export default PixelEditorModalWithRef;

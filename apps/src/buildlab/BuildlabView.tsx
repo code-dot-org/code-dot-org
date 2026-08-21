@@ -17,6 +17,10 @@ import React, {
   useState,
 } from 'react';
 
+import PixelEditorModal, {
+  type PixelEditorHandle,
+} from '@cdo/apps/pixelEditor/PixelEditorModal';
+
 import {generateBuildLabText} from './ai';
 import BlocklyWorkspace, {
   appendDesignEventToWorkspace,
@@ -25,6 +29,7 @@ import BlocklyWorkspace, {
   removeDesignEventsForElement,
   removeDesignEventsForScreen,
   removeAssetReferencesInWorkspace,
+  removeModelReferencesInWorkspace,
   renameElementReferencesInWorkspace,
   renameScreenReferencesInWorkspace,
   updateDesignEventInWorkspace,
@@ -34,8 +39,7 @@ import BlocklyWorkspace, {
 } from './BlocklyWorkspace';
 import BuildLabEngine from './BuildLabEngine';
 import {createMlModelElements, predictMlModel} from './mlModel';
-import MlModelManager from './MlModelManager';
-import PixelEditor from './pixel-editor/PixelEditor';
+import MlModelManager, {type ProvidedMlModel} from './MlModelManager';
 import {
   DEFAULT_PROJECT,
   type Asset,
@@ -60,6 +64,8 @@ type DesignInspectorTab = 'properties' | 'events';
 type EventAction = BuildlabDesignEvent['action'];
 
 type DesignEvent = BuildlabDesignEvent;
+
+const EMPTY_PROVIDED_MODELS: ProvidedMlModel[] = [];
 
 type DataSection = 'tables' | 'keyValues';
 type ElementOrder = 'back' | 'backward' | 'forward' | 'front';
@@ -365,6 +371,7 @@ export interface BuildLabProps {
   channelId?: string;
   initialProject?: BuildLabProject;
   onProjectChange?: (project: BuildLabProject) => void;
+  providedModels?: ProvidedMlModel[];
   readOnly?: boolean;
 }
 
@@ -372,6 +379,7 @@ export default function BuildlabView({
   channelId,
   initialProject,
   onProjectChange,
+  providedModels = EMPTY_PROVIDED_MODELS,
   readOnly = false,
 }: BuildLabProps) {
   // BuildlabContainer renders this view only after Lab2 has loaded the source.
@@ -1190,6 +1198,44 @@ export default function BuildlabView({
         targetElementId: generated.resultElementId,
       })
     );
+  };
+
+  const handleRemoveMlModel = (modelId: string) => {
+    if (readOnly) {
+      return;
+    }
+
+    const removedElementIds = new Set(
+      elements
+        .filter(element => element.mlModelId === modelId)
+        .map(element => element.id)
+    );
+    setMlModels(current => current.filter(model => model.id !== modelId));
+    setElements(current =>
+      current.filter(element => element.mlModelId !== modelId)
+    );
+    setWorkspaceState(current =>
+      removeModelReferencesInWorkspace(current, modelId)
+    );
+
+    if (removedElementIds.has(selectedElementId)) {
+      setSelectedElementId(
+        elements.find(element => !removedElementIds.has(element.id))?.id ?? ''
+      );
+    }
+    setEventModelId(current =>
+      current === modelId
+        ? mlModels.find(model => model.id !== modelId)?.id ?? ''
+        : current
+    );
+
+    if (isRunning) {
+      runtimeRunIdRef.current += 1;
+      runtimeEngineRef.current = null;
+      setIsRunning(false);
+      setRuntimeElements([]);
+      setRuntimeKeyboardMovements([]);
+    }
   };
 
   useEffect(() => {
@@ -2610,7 +2656,7 @@ export default function BuildlabView({
                       startIcon={<FontAwesomeV6Icon iconName="brain" />}
                       variant="outlined"
                     >
-                      Import ML model
+                      Manage ML models
                     </Button>
                   </div>
                 </div>
@@ -3071,10 +3117,13 @@ export default function BuildlabView({
         )}
       </div>
       <MlModelManager
+        importedModels={mlModels}
         importedModelIds={mlModels.map(model => model.id)}
         isOpen={isModelManagerOpen}
         onClose={() => setIsModelManagerOpen(false)}
         onImport={handleImportMlModel}
+        onRemove={handleRemoveMlModel}
+        providedModels={providedModels}
       />
     </main>
   );
@@ -3154,6 +3203,7 @@ function AssetEditor({
   );
   const [isDirty, setIsDirty] = useState(false);
   const [pixelEditorRevision, setPixelEditorRevision] = useState(0);
+  const pixelEditorRef = useRef<PixelEditorHandle>(null);
   const isAnimation = asset.assetType === 'animation';
   const imageHeight = asset.assetType === 'background' ? 20 : 32;
 
@@ -3183,31 +3233,31 @@ function AssetEditor({
     getAssetEditorImageUrl(asset) ||
     createSeedImageData(seedColor, imageHeight);
 
-  const updateImage = (nextDataUrl: string) => {
+  const commitCurrentEditorFrame = () => {
+    const nextDataUrl = pixelEditorRef.current?.getImage()?.dataURI;
+    if (!nextDataUrl) {
+      return undefined;
+    }
     setIsDirty(true);
     if (!isAnimation) {
       setDataUrl(nextDataUrl);
-      return;
+      return nextDataUrl;
     }
     setFrames(current =>
       current.map((currentFrame, index) =>
         index === frame ? nextDataUrl : currentFrame
       )
     );
-  };
-
-  const applyPixelEditorSave = (nextDataUrl: string) => {
-    updateImage(nextDataUrl);
-    setPixelEditorRevision(current => current + 1);
-  };
-
-  const discardPixelEditorChanges = () => {
-    setPixelEditorRevision(current => current + 1);
+    return nextDataUrl;
   };
 
   const addFrame = () => {
+    const currentEditorFrame = commitCurrentEditorFrame();
     setFrames(current => {
-      const nextFrames = [...current, current[frame] ?? ''];
+      const nextFrames = [
+        ...current,
+        currentEditorFrame ?? current[frame] ?? '',
+      ];
       setFrame(nextFrames.length - 1);
       return nextFrames;
     });
@@ -3215,9 +3265,14 @@ function AssetEditor({
   };
 
   const duplicateFrame = () => {
+    const currentEditorFrame = commitCurrentEditorFrame();
     setFrames(current => {
-      const nextFrames = [...current];
-      nextFrames.splice(frame + 1, 0, current[frame] ?? '');
+      const nextFrames = currentEditorFrame
+        ? current.map((currentFrame, index) =>
+            index === frame ? currentEditorFrame : currentFrame
+          )
+        : [...current];
+      nextFrames.splice(frame + 1, 0, nextFrames[frame] ?? '');
       return nextFrames;
     });
     setFrame(current => current + 1);
@@ -3228,6 +3283,7 @@ function AssetEditor({
     if (frames.length <= 1) {
       return;
     }
+    commitCurrentEditorFrame();
     setFrames(current => current.filter((_, index) => index !== frame));
     setFrame(current => Math.max(0, Math.min(current, frames.length - 2)));
     setIsDirty(true);
@@ -3236,11 +3292,18 @@ function AssetEditor({
   const save = () => {
     const trimmedName = name.trim();
     if (trimmedName) {
+      const currentEditorFrame = pixelEditorRef.current?.getImage()?.dataURI;
+      const nextDataUrl = currentEditorFrame ?? dataUrl;
+      const nextFrames = isAnimation
+        ? frames.map((currentFrame, index) =>
+            index === frame ? currentEditorFrame ?? currentFrame : currentFrame
+          )
+        : undefined;
       onSave(
         asset.id,
         trimmedName,
-        isAnimation ? undefined : dataUrl,
-        isAnimation ? frames : undefined
+        isAnimation ? undefined : nextDataUrl,
+        nextFrames
       );
       setIsDirty(false);
     }
@@ -3256,6 +3319,12 @@ function AssetEditor({
     );
     setFrame(0);
     setIsDirty(false);
+    setPixelEditorRevision(current => current + 1);
+  };
+
+  const selectFrame = (nextFrame: number) => {
+    commitCurrentEditorFrame();
+    setFrame(nextFrame);
   };
 
   return (
@@ -3293,14 +3362,13 @@ function AssetEditor({
       <div className={styles.assetEditorBody}>
         <div className={styles.assetCanvasColumn}>
           <div className={styles.sharedPixelEditor}>
-            <PixelEditor
-              cancelLabel="Discard edits"
+            <PixelEditorModal
+              ref={pixelEditorRef}
               imageUrl={editorImageData}
+              inline
               key={`${asset.id}-${frame}-${pixelEditorRevision}`}
-              onCancel={discardPixelEditorChanges}
-              onSave={applyPixelEditorSave}
-              saveLabel="Apply frame"
-              theme="dark"
+              onCancel={() => undefined}
+              onSave={() => undefined}
               title={`Edit ${name || asset.name}`}
             />
           </div>
@@ -3331,7 +3399,7 @@ function AssetEditor({
                     aria-pressed={frame === index}
                     className={styles.frameButton}
                     key={`${asset.id}-frame-${index}`}
-                    onClick={() => setFrame(index)}
+                    onClick={() => selectFrame(index)}
                     type="button"
                   >
                     <span className={styles.frameThumbnail}>
@@ -3350,7 +3418,7 @@ function AssetEditor({
                   aria-label="Previous frame"
                   className={styles.frameIconButton}
                   disabled={frame === 0}
-                  onClick={() => setFrame(current => Math.max(0, current - 1))}
+                  onClick={() => selectFrame(Math.max(0, frame - 1))}
                   title="Previous frame"
                   type="button"
                 >
@@ -3380,9 +3448,7 @@ function AssetEditor({
                   className={styles.frameIconButton}
                   disabled={frame === frames.length - 1}
                   onClick={() =>
-                    setFrame(current =>
-                      Math.min(frames.length - 1, current + 1)
-                    )
+                    selectFrame(Math.min(frames.length - 1, frame + 1))
                   }
                   title="Next frame"
                   type="button"

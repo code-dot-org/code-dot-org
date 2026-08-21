@@ -452,6 +452,26 @@ export function removeAssetReferencesInWorkspace(
   };
 }
 
+export function removeModelReferencesInWorkspace(
+  workspaceState: BuildlabWorkspaceState,
+  modelId: string
+): BuildlabWorkspaceState {
+  return {
+    ...workspaceState,
+    blocks: {
+      ...workspaceState.blocks,
+      blocks: workspaceState.blocks.blocks.filter(block => {
+        const actionBlock = block.next?.block;
+        return !(
+          block.type === 'buildlab_on_click' &&
+          actionBlock?.type === 'buildlab_predict_model' &&
+          String(actionBlock.fields?.MODEL ?? '') === modelId
+        );
+      }),
+    },
+  };
+}
+
 function updateDropdownOptions(
   workspace: BlocklyCore.WorkspaceSvg,
   fieldName: string,

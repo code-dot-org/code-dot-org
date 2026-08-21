@@ -26,6 +26,8 @@ class Buildlab < Level
   serialized_attrs %w(
     hide_share_and_remix
     is_project_level
+    ai_model_id
+    ai_model_name
   )
 
   def self.create_from_level_builder(params, level_params)

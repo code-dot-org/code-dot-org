@@ -1,5 +1,6 @@
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import Modal from '@code-dot-org/component-library/modal';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import React, {useEffect, useState} from 'react';
 
@@ -8,11 +9,26 @@ import type {ImportedMlModel} from './project';
 import styles from './buildlab-view.module.scss';
 
 interface Props {
+  importedModels: ImportedMlModel[];
   importedModelIds: string[];
   isOpen: boolean;
   onClose: () => void;
   onImport: (model: ImportedMlModel) => Promise<void>;
+  onRemove: (modelId: string) => void;
+  providedModels: ProvidedMlModel[];
 }
+
+export interface ProvidedMlModel {
+  id: string;
+  name: string;
+}
+
+type ModelSource = 'my' | 'provided';
+
+const MODEL_SOURCE_OPTIONS = [
+  {text: 'My models', value: 'my'},
+  {text: 'Provided models', value: 'provided'},
+];
 
 function isModel(value: unknown): value is ImportedMlModel {
   if (typeof value !== 'object' || value === null) {
@@ -29,12 +45,17 @@ function isModel(value: unknown): value is ImportedMlModel {
 }
 
 export default function MlModelManager({
+  importedModels,
   importedModelIds,
   isOpen,
   onClose,
   onImport,
+  onRemove,
+  providedModels,
 }: Props) {
   const [models, setModels] = useState<ImportedMlModel[]>([]);
+  const [levelModels, setLevelModels] = useState<ImportedMlModel[]>([]);
+  const [modelSource, setModelSource] = useState<ModelSource>('my');
   const [selectedModelId, setSelectedModelId] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isImporting, setIsImporting] = useState(false);
@@ -47,57 +68,112 @@ export default function MlModelManager({
 
     let isCurrent = true;
     setModels([]);
+    setLevelModels([]);
+    setModelSource('my');
     setSelectedModelId('');
     setError('');
     setIsLoading(true);
 
-    fetch('/api/v1/ml_models/names')
-      .then(async response => {
+    const myModelsPromise = fetch('/api/v1/ml_models/names').then(
+      async response => {
         if (!response.ok) {
           throw new Error(`Unable to load models: ${response.status}`);
         }
-        return (await response.json()) as unknown;
+        const payload = (await response.json()) as unknown;
+        return Array.isArray(payload) ? payload.filter(isModel) : [];
+      }
+    );
+    const providedModelsPromise = Promise.all(
+      providedModels.map(async model => {
+        const response = await fetch(
+          `/api/v1/ml_models/${encodeURIComponent(model.id)}`
+        );
+        if (!response.ok) {
+          throw new Error(`Unable to load model: ${response.status}`);
+        }
+        const metadata = (await response.json()) as unknown;
+        const hydratedModel = {id: model.id, name: model.name, metadata};
+        return isModel(hydratedModel) ? hydratedModel : null;
       })
-      .then(payload => {
+    ).then(models =>
+      models.filter((model): model is ImportedMlModel => !!model)
+    );
+
+    Promise.allSettled([myModelsPromise, providedModelsPromise]).then(
+      ([myModelsResult, providedModelsResult]) => {
         if (!isCurrent) {
           return;
         }
-        const availableModels = Array.isArray(payload)
-          ? payload.filter(isModel)
-          : [];
-        setModels(availableModels);
-        setSelectedModelId(availableModels[0]?.id ?? '');
-      })
-      .catch(() => {
-        if (isCurrent) {
+
+        const myModels =
+          myModelsResult.status === 'fulfilled' ? myModelsResult.value : [];
+        const loadedProvidedModels =
+          providedModelsResult.status === 'fulfilled'
+            ? providedModelsResult.value
+            : [];
+        setModels(myModels);
+        setLevelModels(loadedProvidedModels);
+        const initialSource: ModelSource =
+          myModels.length > 0 || loadedProvidedModels.length === 0
+            ? 'my'
+            : 'provided';
+        setModelSource(initialSource);
+        const initialModels =
+          initialSource === 'my' ? myModels : loadedProvidedModels;
+        setSelectedModelId(
+          initialModels.find(model => !importedModelIds.includes(model.id))
+            ?.id ?? ''
+        );
+        if (myModelsResult.status === 'rejected') {
           setError(
-            'Unable to load trained models. Sign in to Studio and try again.'
+            'Unable to load your trained models. Sign in to Studio and try again.'
           );
+        } else if (providedModelsResult.status === 'rejected') {
+          setError('Unable to load the models provided for this level.');
         }
-      })
-      .finally(() => {
-        if (isCurrent) {
-          setIsLoading(false);
-        }
-      });
+        setIsLoading(false);
+      }
+    );
 
     return () => {
       isCurrent = false;
     };
-  }, [isOpen]);
+  }, [importedModelIds, isOpen, providedModels]);
 
   if (!isOpen) {
     return null;
   }
 
-  const selectedModel = models.find(model => model.id === selectedModelId);
-  const imported = selectedModel
-    ? importedModelIds.includes(selectedModel.id)
-    : false;
+  const sourceModels = modelSource === 'my' ? models : levelModels;
+  const availableModels = sourceModels.filter(
+    model => !importedModelIds.includes(model.id)
+  );
+  const selectedModel = availableModels.find(
+    model => model.id === selectedModelId
+  );
+  const modelDetails = (model: ImportedMlModel) => (
+    <div className={styles.mlModelDetails}>
+      <Typography component="h4" variant="subtitle1">
+        {model.metadata.name ?? model.name}
+      </Typography>
+      <Typography variant="body2">
+        Predict <strong>{model.metadata.label.id}</strong> from{' '}
+        {model.metadata.features.map(feature => feature.id).join(', ')}.
+      </Typography>
+      {model.metadata.summaryStat?.stat !== undefined && (
+        <Typography variant="body2">
+          Accuracy: {model.metadata.summaryStat.stat}%
+        </Typography>
+      )}
+      <Typography variant="body2">
+        Inputs: {model.metadata.features.length}
+      </Typography>
+    </div>
+  );
   const metadata = selectedModel?.metadata;
 
   const importModel = async () => {
-    if (!selectedModel || imported || isImporting) {
+    if (!selectedModel || isImporting) {
       return;
     }
 
@@ -113,78 +189,106 @@ export default function MlModelManager({
     }
   };
 
+  const handleSourceChange = (source: ModelSource) => {
+    setModelSource(source);
+    const nextModels = source === 'my' ? models : levelModels;
+    setSelectedModelId(
+      nextModels.find(model => !importedModelIds.includes(model.id))?.id ?? ''
+    );
+  };
+
   return (
     <Modal
       className={styles.mlModelModal}
       customContent={
         <div className={styles.mlModelManager}>
-          {isLoading && (
-            <Typography variant="body2">Loading models...</Typography>
-          )}
-          {!isLoading && error && (
-            <Typography color="error" variant="body2">
-              {error}
+          <div className={styles.mlModelSection}>
+            <Typography component="h3" variant="subtitle1">
+              Imported into this project
             </Typography>
-          )}
-          {!isLoading && !error && models.length === 0 && (
-            <Typography variant="body2">
-              No trained models are available for this account yet.
+            {importedModels.length === 0 ? (
+              <Typography variant="body2">
+                No models have been imported into this project.
+              </Typography>
+            ) : (
+              <div className={styles.mlModelList}>
+                {importedModels.map(model => (
+                  <div className={styles.mlModelListItem} key={model.id}>
+                    <div>
+                      <Typography component="h4" variant="body2">
+                        {model.name}
+                      </Typography>
+                      <Typography variant="body2">
+                        Predicts {model.metadata.label.id} from{' '}
+                        {model.metadata.features.length} input
+                        {model.metadata.features.length === 1 ? '' : 's'}
+                      </Typography>
+                    </div>
+                    <Button
+                      disabled={isImporting}
+                      onClick={() => onRemove(model.id)}
+                      size="small"
+                      variant="outlined"
+                    >
+                      Remove
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className={styles.mlModelSection}>
+            <Typography component="h3" variant="subtitle1">
+              Import another model
             </Typography>
-          )}
-          {!isLoading && !error && models.length > 0 && (
-            <>
+            {providedModels.length > 0 && (
               <SimpleDropdown
-                items={models.map(model => ({
-                  text: model.name,
-                  value: model.id,
-                }))}
-                labelText="Trained model"
-                name="buildlab-ml-model"
-                onChange={event => setSelectedModelId(event.target.value)}
-                selectedValue={selectedModelId}
+                items={MODEL_SOURCE_OPTIONS}
+                labelText="Model source"
+                name="buildlab-ml-model-source"
+                onChange={event =>
+                  handleSourceChange(event.target.value as ModelSource)
+                }
+                selectedValue={modelSource}
               />
-              {selectedModel && metadata && (
-                <div className={styles.mlModelDetails}>
-                  <Typography component="h3" variant="subtitle1">
-                    {metadata.name ?? selectedModel.name}
-                  </Typography>
-                  <Typography variant="body2">
-                    Predict <strong>{metadata.label.id}</strong> from{' '}
-                    {metadata.features.map(feature => feature.id).join(', ')}.
-                  </Typography>
-                  {metadata.summaryStat?.stat !== undefined && (
-                    <Typography variant="body2">
-                      Accuracy: {metadata.summaryStat.stat}%
-                    </Typography>
-                  )}
-                  {metadata.potentialUses && (
-                    <Typography variant="body2">
-                      Intended use: {metadata.potentialUses}
-                    </Typography>
-                  )}
-                  {metadata.potentialMisuses && (
-                    <Typography variant="body2">
-                      Notes: {metadata.potentialMisuses}
-                    </Typography>
-                  )}
-                  <Typography variant="body2">
-                    Inputs: {metadata.features.length}
-                  </Typography>
-                </div>
-              )}
-              {imported && (
-                <Typography variant="body2">
-                  This model is already imported into the project.
-                </Typography>
-              )}
-            </>
-          )}
+            )}
+            {isLoading && (
+              <Typography variant="body2">Loading models...</Typography>
+            )}
+            {!isLoading && error && (
+              <Typography color="error" variant="body2">
+                {error}
+              </Typography>
+            )}
+            {!isLoading && !error && availableModels.length === 0 && (
+              <Typography variant="body2">
+                {modelSource === 'provided'
+                  ? 'No models have been provided for this level.'
+                  : 'No additional trained models are available for your account.'}
+              </Typography>
+            )}
+            {!isLoading && !error && availableModels.length > 0 && (
+              <>
+                <SimpleDropdown
+                  items={availableModels.map(model => ({
+                    text: model.name,
+                    value: model.id,
+                  }))}
+                  labelText="Trained model"
+                  name="buildlab-ml-model"
+                  onChange={event => setSelectedModelId(event.target.value)}
+                  selectedValue={selectedModelId}
+                />
+                {selectedModel && metadata && modelDetails(selectedModel)}
+              </>
+            )}
+          </div>
         </div>
       }
       onClose={onClose}
       primaryButtonProps={{
         children: isImporting ? 'Importing...' : 'Import model',
-        disabled: isLoading || !selectedModel || imported || isImporting,
+        disabled: isLoading || !selectedModel || isImporting,
         onClick: importModel,
       }}
       secondaryButtonProps={{
