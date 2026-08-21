@@ -28,6 +28,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def classlink
     return connect_provider if should_connect_provider?
 
+    apply_classlink_v2_authentication_id(auth_hash)
+
     user = find_user_by_credential
     if user
       sign_in_classlink user
@@ -475,6 +477,42 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     auth.info&.merge!(classlink_data)
     auth
+  end
+
+  # Dual-match login for ClassLink: prefer the v2 "<TenantId>|<SourcedId>"
+  # authentication id, falling back to the legacy UserId. A user found only by
+  # the legacy id gets a v2 auth option created at login time (the v1 record is
+  # left untouched), after which the v2 lookup succeeds on every later login.
+  # Runs before User.from_omniauth, which treats a failed lookup as a brand-new
+  # signup — so an existing v1 user must be migrated (or left on their v1 uid)
+  # before that lookup happens, or they would get a duplicate account.
+  private def apply_classlink_v2_authentication_id(auth)
+    return if auth.nil?
+    classlink_v2_id = Services::Classlink::V2AuthOptionBuilder.build_authentication_id(
+      tenant_id: auth.info&.district_id,
+      sourced_id: auth.info&.external_id,
+      classlink_user_id: auth.uid
+    )
+    # Components invalid or absent: stay on the legacy v1 path.
+    return if classlink_v2_id.nil?
+
+    unless User.find_by_credential(type: AuthenticationOption::CLASSLINK, id: classlink_v2_id)
+      legacy_user = User.find_by_credential(type: AuthenticationOption::CLASSLINK, id: auth.uid)
+      if legacy_user
+        # Login-time migration: create the v2 auth option alongside the v1 record.
+        new_auth_option = Services::Classlink::V2AuthOptionBuilder.call(
+          classlink_v1_id: auth.uid.to_s,
+          tenant_id: auth.info&.district_id,
+          sourced_id: auth.info&.external_id
+        )
+        # If the v2 record can't be created (e.g. a non-migrated user has no v1
+        # auth option to duplicate), keep the legacy uid so the existing user is
+        # still found rather than duplicated.
+        return unless new_auth_option&.save
+      end
+    end
+
+    auth.uid = classlink_v2_id
   end
 
   private def just_authorized_google_classroom?

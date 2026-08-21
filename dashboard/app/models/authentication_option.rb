@@ -114,6 +114,12 @@ class AuthenticationOption < ApplicationRecord
     }.freeze
   end
 
+  module Classlink
+    VERSION = {
+      v2: 'v2',
+    }.freeze
+  end
+
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
 
   # The authentication_id column's collation (utf8mb3_unicode_ci) compares
