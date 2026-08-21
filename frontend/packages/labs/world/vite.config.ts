@@ -6,6 +6,8 @@ import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
+import {tutorKeyProxy} from '@code-dot-org/aitutor/dev';
+
 /**
  * Rename emitted CSS-module assets from `*.module.css` to plain `*.css` (and
  * lib-inject-css's injected `import` follows the rename). This matters when
@@ -83,17 +85,25 @@ export default defineConfig(({command, mode}) => {
     define: {
       'import.meta.env.VITE_WORLD_ICONS': JSON.stringify(icons),
     },
-    plugins: isDemo
-      ? [react()]
-      : [
-          react(),
-          // Emit each chunk's CSS as a real `.css` file and inject an `import`
-          // for it at the top of that chunk's JS, so styles load automatically
-          // when a module is imported. Matches markdown / base / music / web.
-          libInjectCss(),
-          dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
-          externalizeDeps(),
-        ],
+    plugins: [
+      // The standalone harness's optional live AI Tutor: with
+      // ANTHROPIC_API_KEY set it serves `/__tutor/complete` from THIS dev
+      // server's node process, so the key never reaches the browser. Outside
+      // the isDemo branch on purpose — that one is the BUILT demo, and this
+      // plugin is `apply: 'serve'`, so it is already inert in every build.
+      tutorKeyProxy(),
+      ...(isDemo
+        ? [react()]
+        : [
+            react(),
+            // Emit each chunk's CSS as a real `.css` file and inject an `import`
+            // for it at the top of that chunk's JS, so styles load automatically
+            // when a module is imported. Matches markdown / base / music / web.
+            libInjectCss(),
+            dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
+            externalizeDeps(),
+          ]),
+    ],
     // Dev only (Vite ignores optimizeDeps for a build). By default the dep
     // scanner crawls only index.html, so the sandbox surfaces' deps — reached
     // through sandbox/preview.html and sandbox/compile.html and two levels of

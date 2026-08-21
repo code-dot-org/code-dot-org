@@ -1,7 +1,10 @@
 import {act, render, screen} from '@testing-library/react';
 import {expect, it, vi} from 'vitest';
 
-import type {LevelProperties} from '@code-dot-org/core/api';
+import {
+  QueryClientProvider,
+  type LevelProperties,
+} from '@code-dot-org/core/api';
 import {RootStateProvider} from '@code-dot-org/core/redux';
 import {Lab} from '@code-dot-org/lab/host';
 
@@ -53,9 +56,16 @@ vi.mock('@code-dot-org/codebridge', async () => {
 it('renders the World Lab shell from the default project', async () => {
   render(
     <RootStateProvider>
-      <Lab levelId="1" levelPropertiesMap={{'1': {} as LevelProperties}}>
-        <WorldLab />
-      </Lab>
+      {/*
+        The layout asks who is signed in (`useWorldTutor` -> `useCurrentUser`)
+        to decide whether the AI Tutor tab belongs here. Every real host
+        provides a query client.
+      */}
+      <QueryClientProvider>
+        <Lab levelId="1" levelPropertiesMap={{'1': {} as LevelProperties}}>
+          <WorldLab />
+        </Lab>
+      </QueryClientProvider>
     </RootStateProvider>,
   );
 

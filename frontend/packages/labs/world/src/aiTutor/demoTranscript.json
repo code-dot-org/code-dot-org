@@ -1,0 +1,29 @@
+{
+  "name": "World Lab, with no dashboard",
+  "turns": [
+    {
+      "when": {"matches": "jump|gravity|fall"},
+      "delayMs": 800,
+      "reply": {
+        "text": "Jumping is a **rule**, not something you write on the player directly.\n\nOpen your Player actor and look at its `use rule` rows. If `Jumps` is not among them, add it — that gives the actor a `jump` action and the properties behind it (`jump strength`, `coyote time`).\n\nThen the player needs a reason to jump. In the same actor, add a handler for the event you want:\n\n- `when Player is pressing up` → `Player jump`\n\nIf it already has the rule and still does not move, check that something is giving it gravity: `Falls` is a separate rule, and a jump with nothing pulling back down looks like nothing happening."
+      }
+    },
+    {
+      "when": {"matches": "score|coin|collect|point"},
+      "delayMs": 800,
+      "reply": {
+        "text": "Scoring hangs off a collision, so two actors have to agree.\n\nThe coin needs the `Collectable` trait from the `Collection` rule, and the player needs `Collects`. Neither has to know about the other — that is what makes \"these things can be picked up\" sayable at all.\n\nThen, on the Player, handle the event:\n\n- `when Player collects ⟨thing⟩` → `add 1 to score`\n\nIf nothing happens, the usual cause is that one of the two actors is missing its half of the pair — check the `use rule` rows on both."
+      }
+    },
+    {
+      "when": {"matches": "error|undefined|crash|broke"},
+      "delayMs": 700,
+      "reply": {
+        "text": "Look at the console under the game — a world says what went wrong there.\n\nA message about reading a property of nothing almost always means a block is pointing at an actor that is not in the map, or one that was removed while a rule still held it. Check the actor-typed properties in your map: if a Health Bar's `subject` names an actor you deleted, it will be empty at run time."
+      }
+    }
+  ],
+  "fallback": {
+    "text": "This is a recorded conversation — there is no model behind it. Ask about jumping, about scoring, or about an error you are seeing, and I have an answer ready."
+  }
+}

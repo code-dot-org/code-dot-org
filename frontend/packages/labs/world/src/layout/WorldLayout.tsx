@@ -12,6 +12,7 @@ import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {useAppSelector} from '@code-dot-org/lab/redux';
 import type {Setting} from '@code-dot-org/lab/resourcePanel';
 
+import {useWorldTutor} from '../aiTutor/useWorldTutor';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
@@ -91,6 +92,10 @@ const WorldLayout = () => {
     [options, selectedBase, setSelectedBase],
   );
 
+  // The AI Tutor tab. `undefined` when the access rules say it should not be
+  // here at all, which is what `ResourcePanel` reads as "no tab".
+  const aiTutor = useWorldTutor();
+
   const showEditor = viewMode !== ViewMode.PREVIEW;
   const showPreview = viewMode !== ViewMode.CODE;
   const isSplit = showEditor && showPreview;
@@ -108,6 +113,10 @@ const WorldLayout = () => {
         className={styles.instructions}
         documentationUrl="/docs/ide/world"
         hasConsole={false}
+        // Read-only: it reads the generated code and the console, and answers
+        // in blocks. It offers no file edits, because a model cannot author a
+        // Blockly workspace safely (`aiTutor/useWorldTutor`).
+        aiTutor={aiTutor}
         extraSettings={[blocklyThemeSetting]}
       />
       {!isInstructionsCollapsed && (

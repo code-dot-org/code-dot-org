@@ -88,6 +88,20 @@ interface WorldRuntimeValue {
     worldPath: string,
     placements?: readonly PlacementRequest[],
   ) => Promise<ActorInfo>;
+  /**
+   * The project as JAVASCRIPT — every Blockly file replaced by what it
+   * generates, every other file as it is.
+   *
+   * The same transform the compiler runs, exposed because a `.actor` on disk is
+   * a serialized Blockly workspace: block ids, coordinates and field values,
+   * which describe where the blocks SIT rather than what they say. Anything
+   * that needs to read a world project as a program — the AI Tutor, for one —
+   * wants this instead.
+   *
+   * Cheap to call: the cache underneath it is the same one the compiler uses,
+   * so a file that has not changed is not regenerated.
+   */
+  generatedProject: (files: Record<string, string>) => Record<string, string>;
 }
 
 const WorldRuntimeContext = createContext<WorldRuntimeValue | null>(null);
@@ -486,6 +500,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     setPreviewColors: (background, border) =>
       void managers.current?.preview.setColors(background, border),
     getActorInfo,
+    generatedProject: generateBlocklyFiles,
   };
 
   return (

@@ -60,6 +60,11 @@ function fixtureFor(scenario: WorldScenario): LabFixture {
         showExemplarLink: false,
         exemplarSources: null,
         longInstructions: scenario.instructions,
+        // Opt this level into the AI Tutor. World Lab is not an app whose
+        // experience assumes one (unlike weblab2), so `shouldShowAiTutor`
+        // requires the level to say — which a curriculum author decides per
+        // level, and which the harness has to stand in for.
+        aiTutorAvailable: true,
         ...(scenario.levelData ? {levelData: scenario.levelData} : {}),
       }),
     },
