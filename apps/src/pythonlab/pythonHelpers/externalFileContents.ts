@@ -5,7 +5,9 @@ import {FileId, MultiFileSource} from '@cdo/apps/lab2/types';
 export type ExternalFileContents = Record<FileId, Uint8Array<ArrayBuffer>>;
 
 // An asset url carries a uuid minted when the file was uploaded, so the bytes
-// behind a given url never change.
+// behind a given url never change. Only the urls of the source most recently
+// loaded are kept, so a deleted file's bytes are not pinned for the lifetime of
+// the tab.
 const contentsByUrl = new Map<string, Uint8Array<ArrayBuffer>>();
 
 /**
@@ -25,36 +27,38 @@ export async function loadExternalFileContents(
   source: MultiFileSource
 ): Promise<ExternalFileContents> {
   const contents: ExternalFileContents = {};
+  const urlFiles = Object.values(source.files).filter(file => file.url);
+  const urls = new Set(urlFiles.map(file => file.url as string));
+  for (const cachedUrl of contentsByUrl.keys()) {
+    if (!urls.has(cachedUrl)) {
+      contentsByUrl.delete(cachedUrl);
+    }
+  }
+
   await Promise.all(
-    Object.values(source.files)
-      .filter(file => file.url)
-      .map(async file => {
-        const url = file.url as string;
-        const cached = contentsByUrl.get(url);
-        if (cached) {
-          contents[file.id] = cached;
-          return;
+    urlFiles.map(async file => {
+      const url = file.url as string;
+      const cached = contentsByUrl.get(url);
+      if (cached) {
+        contents[file.id] = cached;
+        return;
+      }
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Request for ${url} returned ${response.status}`);
         }
-        try {
-          const response = await fetch(url);
-          if (!response.ok) {
-            throw new Error(`Request for ${url} returned ${response.status}`);
-          }
-          const bytes = new Uint8Array(await response.arrayBuffer());
-          contentsByUrl.set(url, bytes);
-          contents[file.id] = bytes;
-        } catch (error) {
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .logError(
-              'Failed to load Python Lab project file',
-              error as Error,
-              {
-                fileName: file.name,
-              }
-            );
-        }
-      })
+        const bytes = new Uint8Array(await response.arrayBuffer());
+        contentsByUrl.set(url, bytes);
+        contents[file.id] = bytes;
+      } catch (error) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Failed to load Python Lab project file', error as Error, {
+            fileName: file.name,
+          });
+      }
+    })
   );
   return contents;
 }

@@ -71,6 +71,24 @@ describe('externalFileContents', () => {
     expect(asBytes(contents['1'])).toEqual(bytesOf('cat bytes'));
   });
 
+  it('drops the bytes of a url the source no longer contains', async () => {
+    const sourceWith = (id: string, name: string, url: string) => ({
+      folders: {},
+      files: {[id]: {id, name, contents: '', folderId: '0', url}},
+    });
+    const catSource = sourceWith('1', 'cat.png', '/v3/assets/c/uuid-cat.png');
+    const dogSource = sourceWith('2', 'dog.png', '/v3/assets/c/uuid-dog.png');
+    fetchMock.mockResponse('bytes');
+
+    await loadExternalFileContents(catSource);
+    await loadExternalFileContents(dogSource);
+    await loadExternalFileContents(catSource);
+
+    // The cat's bytes were dropped while the dog's source was loaded, so the
+    // third load has to fetch them again.
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+  });
+
   it('logs an error and omits a file whose fetch fails', async () => {
     const source: MultiFileSource = {
       folders: {},
