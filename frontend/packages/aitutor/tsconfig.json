@@ -1,7 +1,13 @@
 {
   "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "types": [
+      "vite/client",
+      "vitest/globals",
+      "node",
+      "@testing-library/jest-dom"
+    ]
   },
   "include": ["src"]
 }

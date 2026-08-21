@@ -10,7 +10,8 @@ This package is that panel, extracted from `apps/` so a lab in
 all** — against recorded fixtures, or against a dev's own API key through a
 local proxy.
 
-Status: nothing is ported yet. This file is the plan.
+Status: milestones 1 and 2 are done (§10). The panel runs, against
+recordings only — nothing talks to a server yet.
 
 ## 1. What exists today, and where
 
@@ -201,15 +202,29 @@ says), `equals`, `contains`, `matches` (a regex source). A turn with no
 matcher matches once, in order — which makes the common case, a straight-line
 scripted conversation, need no matchers at all.
 
-A reply may be a failure instead of text, because every failure path has UI
-that is otherwise unreachable without a server:
+A reply may fail instead of answering, because every failure path has UI that
+is otherwise unreachable without a server. There is no separate error
+vocabulary: a failure is a `status`, drawn from the same
+`AiInteractionStatus` the real path uses, because that field is the only thing
+the panel consults when it chooses what to say about a failed turn.
 
 ```jsonc
-{"reply": {"error": "profanity"}}     // AiInteractionStatus.USER_PROFANITY
-{"reply": {"error": "unauthorized"}}  // the section-disabled notice
-{"reply": {"error": "server"}}        // the generic error message
-{"reply": {"error": "timeout"}}       // never resolves; exercises abort
+{"reply": {"userStatus": "profanity_violation"}} // the model is never called
+{"reply": {"userStatus": "pii_violation"}}
+{"reply": {"userStatus": "user_input_too_large"}}
+{"reply": {"status": "model_timeout"}}           // the answer failed
+{"reply": {"status": "model_rate_limited"}}
+{"reply": {"status": "error"}}                   // the copy of last resort
+{"hang": true, "reply": {}}                      // never answers; exercises abort
 ```
+
+The split between `userStatus` and `status` is not decoration. Three of the
+failures are about what was TYPED, and land on the student's own message: the
+model is never called, so there is no assistant turn to carry them
+(`generateChatResponse` returns before it builds one). A reply with a failing
+`userStatus` therefore contains one message, not two — which is the shape the
+real profanity path produces, and the only way to reach that UI without
+misbehaving at a live server on purpose.
 
 Two consumers, and they are why fixtures come before UI:
 
@@ -313,8 +328,8 @@ progress slice at all and must still work.
 
 | #   | Deliverable                                         | Done when                                                                                                   |
 | --- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| 1   | Message model, `TutorTransport`, `FixtureTransport` | headless vitest drives a scripted conversation, every error branch included; no UI                          |
-| 2   | Panel UI — list, composer, waiting, errors          | the demo page under `yarn dev` holds a fixture conversation end to end                                      |
+| 1   | Message model, `TutorTransport`, `FixtureTransport` | **done** — 34 tests drive a scripted conversation and every failing status; no UI                           |
+| 2   | Panel UI — list, composer, waiting, errors          | **done** — `yarn dev` holds a fixture conversation end to end                                               |
 | 3   | Context assembly + suggested prompts                | `hiddenContext` string is byte-identical to `AiTutorContextHelper`'s for the same input (a test asserts it) |
 | 4   | Dev proxy                                           | a real answer from a real key on the demo page; absent key degrades visibly                                 |
 | 5   | Structured responses + proposals                    | a fixture proposal renders chips and Accept/Reject; the host callback fires with the files                  |
@@ -328,8 +343,13 @@ is last.
 Per `frontend/docs/conventions/packages.md`: vitest, `src/**/__tests__/*.test.tsx`,
 jsdom via `@code-dot-org/lint-config/vitest/react.mjs`. The fixture transport
 is the whole test strategy — there is no HTTP to intercept, so there is nothing
-to mock. Browser verification of the demo page follows the world lab's
-Playwright-against-`yarn dev` habit.
+to mock.
+
+AND A BROWSER, because jsdom does not paint. The first run of the demo page
+under Playwright showed the student's own question tinted as a REJECTED one for
+as long as the answer took to arrive: `unknown` is not-yet-settled, the tint
+read it as not-`ok`, and every test passed because a class name is not a
+colour. Every milestone from here ends with the demo driven in a real browser.
 
 ## 12. Open questions
 
