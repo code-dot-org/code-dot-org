@@ -1,5 +1,4 @@
-@use '@code-dot-org/component-library-styles/typography.module.scss' as
-  typography;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as typography;
 @import 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap';
 
 // TeacherHomepage
@@ -353,6 +352,7 @@
 
 .courseContentDropdownContainer .courseContentDropdown {
   width: 100%;
+
   button {
     display: flex;
     flex-direction: row;
@@ -510,14 +510,12 @@
 }
 
 .gradientIcon {
-  background: linear-gradient(
-    to right,
-    #15c5f9,
-    #2b72ff,
-    #8f20ec,
-    #c710c2,
-    #e50976
-  );
+  background: linear-gradient(to right,
+      #15c5f9,
+      #2b72ff,
+      #8f20ec,
+      #c710c2,
+      #e50976);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -666,4 +664,42 @@
 
 .drawerImage {
   width: 192px;
+}
+
+.diversitySurveyContainer {
+  display: flex;
+  width: 800px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.diversitySurveyOptions {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 24px;
+  row-gap: 16px;
+}
+
+.diversitySurveyPrompt {
+  font-weight: bold;
+}
+
+.diversitySurveyRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+
+  .diversitySurveyInput {
+    flex: none;
+    min-width: 60px;
+
+    input {
+      width: 60px;
+      box-sizing: border-box;
+      padding: 5px 10px;
+    }
+  }
 }

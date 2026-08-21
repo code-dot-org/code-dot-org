@@ -119,7 +119,8 @@ describe('TeacherHomepageDrawer', () => {
     showConfirmation: boolean,
     showAFE: boolean,
     showNPS: boolean,
-    existingSchoolInfo: SchoolInfo
+    existingSchoolInfo: SchoolInfo,
+    showDiversity: boolean = false
   ) {
     const store = getStore();
     registerReducers({currentUser});
@@ -132,6 +133,7 @@ describe('TeacherHomepageDrawer', () => {
           schoolInfoInterstitialOpenInitially={showInterstitial}
           afeOpenInitially={showAFE}
           npsOpenInitially={showNPS}
+          diversityOpenInitially={showDiversity}
           npsProps={
             '{"formQuestions":{"completedHtml":"Thank you for your response.","pages":[{"name":"page1","elements":[{"type":"rating","name":"nps_value","title":"How likely are you to recommend CodeAI to a friend or colleague?","isRequired":true,"requiredErrorText":"Please select a value","rateMin":0,"rateMax":10,"minRateDescription":"Not at all likely","maxRateDescription":"Extremely likely"},{"type":"checkbox","name":"nps_details","visibleIf":"{nps_value} notempty","title":"What are the top areas of our website and/or curriculum that we should focus on improving? (Choose up to 3)","validators":[{"type":"answercount","text":"Please select a maximum of three areas","minCount":0,"maxCount":3}],"choices":[{"value":"student_sign_in","text":"Student sign-in and section set-up experience"},{"value":"tracking_progress","text":"Tracking student progress in courses or keeping students on-track"},{"value":"grading_work","text":"Grading student work, assessing student learning, or giving feedback to students"},{"value":"differentiation","text":"More support for different student skill levels in the same class"},{"value":"site_navigation","text":"Navigating around the website or finding things on the website"},{"value":"more_student_resources","text":"More student-facing resources (videos, references, etc.) that explain CS concepts and/or support lesson activities"},{"value":"performance","text":"Fix bugs with the coding tools or website, or improve how quickly the website loads"},{"value":"lms_integration","text":"Assign CodeAI materials and track students\' progress in Learning Management Systems (LMS)"},{"value":"more_subjects","text":"Create new curriculum to cover additional subject areas, programming languages, or concepts, etc."},{"value":"curriculum_resources","text":"Improve lesson plans and curriculum resources in our existing courses to support teachers"},{"value":"self_paced_pl","text":"Additional self-directed professional development for teachers (videos, online modules, etc.)"}],"choicesOrder":"random","hasOther":true,"otherText":"Other (write-in)","otherErrorText":"Please enter a response for \\"Other (write-in)\\""},{"type":"comment","name":"nps_details_explanation","visibleIf":"{nps_value} notempty","title":"Tell us more about your choice above"},{"type":"comment","name":"nps_general_comment","visibleIf":"{nps_value} notempty","title":"Is there anything else you’d like to tell us?"}],"title":"Quick survey"}],"showQuestionNumbers":"off","completeText":"Submit","published":true},"formName":"surveys/teachers/nps_survey","formVersion":1,"surveyData":null,"submitApi":"/dashboardapi/v1/foorm/simple_survey_submission","submitParams":{"simple_survey_form_id":1,"user_id":8}}'
           }
@@ -250,5 +252,58 @@ describe('TeacherHomepageDrawer', () => {
     screen.getByText(
       'How likely are you to recommend CodeAI to a friend or colleague?'
     );
+  });
+
+  it('renders the diversity survey when diversityOpen is true', async () => {
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    renderComponent(false, false, false, false, schoolInfo, true);
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText(i18n.diversitySurveyHeading());
+    screen.getByText(i18n.diversitySurveyPrompt());
+    screen.getByLabelText(i18n.diversitySurveyEthnicityAsian());
+  });
+
+  it('posts the diversity survey and shows success when Continue is clicked', async () => {
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    postSpy.mockImplementation(() => Promise.resolve(new Response()));
+    renderComponent(false, false, false, false, schoolInfo, true);
+    await act(async () => await new Promise(process.nextTick));
+
+    const asianInput = screen.getByLabelText(
+      i18n.diversitySurveyEthnicityAsian()
+    );
+    await act(
+      async () => await fireEvent.change(asianInput, {target: {value: '3'}})
+    );
+
+    const continueButton = screen.getByText(i18n.diversitySurveyContinue());
+    await act(async () => await fireEvent.click(continueButton));
+    await act(async () => await new Promise(process.nextTick));
+
+    expect(postSpy).toHaveBeenCalled();
+    const [url, body] = postSpy.mock.calls[0];
+    expect(url).toBe('/survey_results');
+    expect(JSON.parse(body)).toEqual({
+      survey: {
+        kind: 'Diversity2026',
+        diversity_asian: '3',
+        diversity_black: '0',
+        diversity_hispanic: '0',
+        diversity_american_indian: '0',
+        diversity_hawaiian: '0',
+        diversity_white: '0',
+        diversity_tr: '0',
+      },
+    });
+    screen.getByText(i18n.diversitySurveySuccessHeading());
+  });
+
+  it('does not post the diversity survey when Ask me later is clicked', async () => {
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    renderComponent(false, false, false, false, schoolInfo, true);
+    await act(async () => await new Promise(process.nextTick));
+    const askLater = screen.getByText(i18n.diversitySurveyAskMeLater());
+    await act(async () => await fireEvent.click(askLater));
+    expect(postSpy).not.toHaveBeenCalled();
   });
 });
