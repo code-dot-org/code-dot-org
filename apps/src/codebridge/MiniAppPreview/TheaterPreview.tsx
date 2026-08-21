@@ -3,27 +3,29 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {getSystemError} from '@codebridge/Console/MessageHelpers';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import Theater from '@cdo/apps/miniApps/theater/Theater';
 import TheaterVisualization from '@cdo/apps/miniApps/theater/TheaterVisualization';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import MiniAppEmptyState from './MiniAppEmptyState';
 import PhotoPrompterButton from './PhotoPrompterButton';
 
 import moduleStyles from './mini-app-preview.module.scss';
 
+interface TheaterPreviewProps {
+  isOutputVisible: boolean;
+  setIsOutputVisible: (isVisible: boolean) => void;
+}
+
 // Preview panel for the theater mini app.
-const TheaterPreview: React.FunctionComponent = () => {
+const TheaterPreview: React.FunctionComponent<TheaterPreviewProps> = ({
+  isOutputVisible,
+  setIsOutputVisible,
+}) => {
   const {sendTypedInputMessage, levelProperties} = useCodebridgeContext();
   const appName = levelProperties?.appName;
-  const dispatch = useAppDispatch();
   const [isPrompterOpen, setIsPrompterOpen] = useState(false);
   const [promptText, setPromptText] = useState('');
-  const [isOutputVisible, setIsOutputVisible] = useState(false);
 
-  // The theater has already put itself back; report the failure and release the
-  // run button, which a theater run otherwise leaves showing stop.
   const onMediaLoadError = useCallback(
     (type: 'video' | 'audio') => {
       CodebridgeRegistry.getInstance()
@@ -31,9 +33,8 @@ const TheaterPreview: React.FunctionComponent = () => {
         ?.writeConsoleMessage(
           getSystemError(`Could not load the theater ${type}.`, appName)
         );
-      dispatch(setIsRunning(false));
     },
-    [appName, dispatch]
+    [appName]
   );
 
   useEffect(() => {
@@ -70,7 +71,7 @@ const TheaterPreview: React.FunctionComponent = () => {
       theater.reset();
       CodebridgeRegistry.getInstance().setTheater(null);
     };
-  }, [sendTypedInputMessage, onMediaLoadError]);
+  }, [sendTypedInputMessage, onMediaLoadError, setIsOutputVisible]);
 
   const onPhotoSelected = (file: File) => {
     CodebridgeRegistry.getInstance()
