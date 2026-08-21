@@ -47,13 +47,6 @@ export interface BuildlabDesignEvent {
   elementId: string;
 }
 
-export const INITIAL_WORKSPACE_STATE: BuildlabWorkspaceState = {
-  blocks: {
-    languageVersion: 0,
-    blocks: [],
-  },
-};
-
 export function getDesignEventsFromWorkspace(
   workspaceState: BuildlabWorkspaceState
 ): BuildlabDesignEvent[] {

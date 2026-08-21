@@ -36,11 +36,6 @@ import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
 import {queryClient} from '@/modules/queryClient';
 
-// Keep router diagnostics available for local debugging without putting them in
-// the user-facing Studio surface by default.
-const showRouterDevtools =
-  import.meta.env.VITE_ENABLE_ROUTER_DEVTOOLS === 'true';
-
 /**
  * Maps auth status to the route content area.
  * Returns the outlet for non-error states; the auth error page on failure.
@@ -92,7 +87,7 @@ function RootContent() {
         {renderRouteArea(auth, onRetry)}
       </Box>
       <StudioFooter />
-      {showRouterDevtools && <TanStackRouterDevtools />}
+      <TanStackRouterDevtools />
     </>
   );
 }

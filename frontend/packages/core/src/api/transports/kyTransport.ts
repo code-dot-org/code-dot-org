@@ -1,5 +1,4 @@
-import kyModule, {type KyInstance, HTTPError} from 'ky';
-import {type Options as KyOptions} from 'ky';
+import ky, {type Options as KyOptions, type KyInstance, HTTPError} from 'ky';
 import {
   ApiError,
   type Transport,
@@ -7,15 +6,6 @@ import {
   type ApiResponse,
   type ResponseMeta,
 } from './types';
-
-// The core package emits both ESM and CommonJS builds. Ky is ESM-only, so a
-// CommonJS consumer receives its client under `default`.
-const ky =
-  (kyModule as unknown as {default?: typeof kyModule}).default ?? kyModule;
-
-function isKyHttpError(error: unknown): error is HTTPError {
-  return typeof HTTPError === 'function' && error instanceof HTTPError;
-}
 
 export function createKyTransport(opts: {
   baseUrl?: string;
@@ -167,7 +157,7 @@ export function createKyTransport(opts: {
 
       return {data, meta};
     } catch (error) {
-      if (isKyHttpError(error)) {
+      if (error instanceof HTTPError) {
         throw await toApiError(error, req);
       }
       throw error;

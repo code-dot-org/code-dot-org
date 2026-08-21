@@ -62,7 +62,6 @@ export function useUpdateSources(
       Error,
       {
         channelId: string;
-        sourceFile?: string;
         sources: ProjectSourcesAny;
         options?: SaveSourceOptions;
       }
@@ -75,7 +74,6 @@ export function useUpdateSources(
   return useMutation({
     mutationFn: (params: {
       channelId: string;
-      sourceFile?: string;
       sources: ProjectSourcesAny;
       options?: SaveSourceOptions;
     }) => api.sources.update(params),

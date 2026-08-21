@@ -104,11 +104,4 @@ describe('buildCreateMenuItems', () => {
       siteConfig.marketingUrl('/mix-move-ai'),
     );
   });
-
-  it('links Build Lab through the public projects route', () => {
-    const items = buildCreateMenuItems();
-    expect(items.find(i => i.label === 'Build Lab')?.href).toBe(
-      '/projects/build-lab/new',
-    );
-  });
 });

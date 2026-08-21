@@ -18,7 +18,6 @@ export const AppNames = [
   'fish',
   'panels',
   'pythonlab',
-  'build-lab',
   'standalone_video',
   'weblab',
   'weblab2',

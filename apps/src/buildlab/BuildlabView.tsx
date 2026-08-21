@@ -998,8 +998,9 @@ export default function BuildlabView({
           ...table,
           columns: table.columns.filter(column => column.id !== columnId),
           rows: table.rows.map(row => {
-            const {[columnId]: _, ...values} = row.values;
-            console.log(_);
+            const values = Object.fromEntries(
+              Object.entries(row.values).filter(([id]) => id !== columnId)
+            );
             return {...row, values};
           }),
         };
