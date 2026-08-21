@@ -10,9 +10,9 @@ This package is that panel, extracted from `apps/` so a lab in
 all** — against recorded fixtures, or against a dev's own API key through a
 local proxy.
 
-Status: all six milestones are done (§10), and the access rules that gate the
-tutor are ported. One thing stands between here and a lab switching the tab on,
-and it is a DATA gap rather than a logic one — see §11.1.
+Status: all six milestones are done (§10), the access rules that gate the tutor
+are ported, and the state they read is carried. What is left for a lab to switch
+the tab on is wiring — see §11.1.
 
 ## 1. What exists today, and where
 
@@ -447,19 +447,29 @@ four values the legacy hook selects — the user's own access level, the selecte
 section's, whether they are a teacher, whether they are a levelbuilder — are not
 in this package's state and should not be.
 
-THE GAP IS THAT THEY ARE NOT IN THE FRONTEND'S STATE EITHER.
-`@code-dot-org/users`' `currentUserSlice` does not carry `aiChatAccessLevel`
-(legacy reads `ai_chat_access_level` from the same payload, so the server sends
-it there), and `core`'s `ConciseSectionSchema` has no `ai_chat_access_level`
-field. Adding them is a few lines each — but the schemata are zod and a required
-field the endpoint does not send makes every section fail to parse, so it wants
-checking against the actual serializer for the endpoints the FRONTEND uses,
-which are not the ones legacy uses.
+THE STATE IS NOW CARRIED. `@code-dot-org/users`' `currentUserSlice` reads
+`ai_chat_access_level` and `is_levelbuilder`; `core`'s `ConciseSectionSchema`
+has `ai_chat_access_level`. All three are OPTIONAL, and that is the decision
+worth recording: whether the endpoints these parse actually send the fields has
+not been checked against the serializer, and the two ways of being wrong are not
+equal. A required field the server omits makes every section fail to parse; a
+permissive default puts an AI tool in a classroom that did not ask for one.
+Optional, with silence read as no (`areAiChatToolsEnabled`), is wrong in neither
+direction — a field that never arrives yields a tutor nobody can use, which is
+visible and safe, rather than one nobody authorised.
 
-Until then the safe direction is the one taken: the tab exists only when a host
-asks for it, so a tutor cannot appear in a classroom where a teacher switched it
-off. A lab that wants the tab must call `shouldShowAiTutor` itself, and pass
-`disabledStateFor(...)` as `TutorConfig.disabledState`.
+WHAT IS LEFT IS WIRING, in the lab. A lab that wants the tab must:
+
+    const accessLevel = useAppSelector(s => s.currentUser.aiChatAccessLevel);
+    const section = useAppSelector(selectedSectionSelector);
+
+    shouldShowAiTutor({appName, isTutorLevel, aiChatAccessLevel: accessLevel})
+      ? <InfoPanel aiTutor={{transport, context, prompts,
+          disabledState: disabledStateFor({...})}} />
+      : <InfoPanel />
+
+and until one does, no tutor appears anywhere — which is the right default while
+the fields are unverified.
 
 Two smaller gaps of a different kind:
 

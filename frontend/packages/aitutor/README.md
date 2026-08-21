@@ -16,9 +16,9 @@ reaches a model four ways.
 
 **No lab switches the tab on yet.** The access rules are here —
 `shouldShowAiTutor`, `areAiChatToolsEnabled`, `disabledStateFor` — as pure
-functions a host calls with its own state. What is missing is that
-`aiChatAccessLevel` is not yet carried by the frontend's `currentUser` slice or
-its section schema. See `specs/PLAN.md` §11.1.
+functions a host calls with its own state, and that state is now carried by
+`currentUser` and the section schema. What is left is a lab calling them. See
+`specs/PLAN.md` §11.1.
 
     yarn dev     # the panel, standing alone, answering from recordings
 
