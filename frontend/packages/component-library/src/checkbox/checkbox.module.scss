@@ -34,6 +34,7 @@
 
       &::before {
         display: inline-block;
+        box-sizing: content-box;
         content: ' ';
         text-align: center;
         border: 2px solid var(--borders-neutral-solid);
