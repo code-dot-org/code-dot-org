@@ -11,6 +11,7 @@ import {useDispatch} from 'react-redux';
 import {AiTutorPanel} from '../components/AiTutorPanel';
 import conversation from '../fixtures/conversation.json';
 import failures from '../fixtures/failures.json';
+import {promptsFor} from '../prompts/suggestedPrompts';
 import {conversationCleared} from '../session/slice';
 import {TutorProvider} from '../session/TutorContext';
 import {FixtureTransport} from '../transport/fixture/FixtureTransport';
@@ -21,10 +22,11 @@ import moduleStyles from './demo.module.scss';
 const TRANSCRIPTS: Record<string, unknown> = {conversation, failures};
 
 /** A project, stood in for. A real host would ask its editor. */
-const PRETEND_PROJECT = `Here is the student's current code:
-let x = 10;
-circle(x, 50, 10);
-`;
+const PRETEND_PROJECT = {
+  sourceCode: 'let x = 10;\ncircle(x, 50, 10);',
+  longInstructions: 'Draw a row of circles.',
+  hasRun: false,
+};
 
 export const Demo = () => {
   const dispatch = useDispatch();
@@ -66,7 +68,11 @@ export const Demo = () => {
         </pre>
       </aside>
       <main className={moduleStyles.panel}>
-        <TutorProvider transport={transport} context={() => PRETEND_PROJECT}>
+        <TutorProvider
+          transport={transport}
+          context={() => PRETEND_PROJECT}
+          prompts={promptsFor('level')}
+        >
           <AiTutorPanel
             emptyState={
               <p className={moduleStyles.empty}>

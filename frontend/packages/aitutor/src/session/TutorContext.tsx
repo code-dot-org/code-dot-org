@@ -20,6 +20,8 @@ import {
   type ReactNode,
 } from 'react';
 
+import type {AiTutorContext} from '../context/types';
+import type {SuggestedPrompt} from '../prompts/suggestedPrompts';
 import type {TutorSessionInfo, TutorTransport} from '../transport/types';
 
 /** A set of file edits the tutor is proposing (specs/PLAN.md §8). */
@@ -40,8 +42,22 @@ export interface TutorConfig {
    * Called once per turn, not once per session, because the answer is about the
    * code as it is NOW. May be async: gathering it can mean asking an editor for
    * its current contents.
+   *
+   * Returns the FACTS, not the sentences. Turning them into a prompt is this
+   * package's job (`context/hiddenContext`), for the reason the legacy helper
+   * gives: the wording has been tuned against a model, and a lab that phrased
+   * its own would be tuning against a different input from every other lab.
    */
-  context?: () => string | Promise<string>;
+  context?: () => AiTutorContext | Promise<AiTutorContext>;
+
+  /**
+   * The buttons above the composer.
+   *
+   * Which ones make sense depends on where the student is, and only the host
+   * knows that — `promptsFor('level' | 'project')` builds the two sets the
+   * legacy uses. Omitted means no buttons.
+   */
+  prompts?: readonly SuggestedPrompt[];
 
   systemPrompt?: string;
 
@@ -76,6 +92,7 @@ export const TutorProvider: FC<TutorConfig & {children: ReactNode}> = ({
       config.transport,
       config.session,
       config.context,
+      config.prompts,
       config.systemPrompt,
       config.responseSchema,
       config.onProposal,

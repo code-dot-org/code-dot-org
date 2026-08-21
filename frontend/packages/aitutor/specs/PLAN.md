@@ -10,8 +10,8 @@ This package is that panel, extracted from `apps/` so a lab in
 all** — against recorded fixtures, or against a dev's own API key through a
 local proxy.
 
-Status: milestones 1 and 2 are done (§10). The panel runs, against
-recordings only — nothing talks to a server yet.
+Status: milestones 1 to 3 are done (§10). The panel runs and knows what to
+say about a project, against recordings only — nothing talks to a server yet.
 
 ## 1. What exists today, and where
 
@@ -93,8 +93,17 @@ becomes a strategy object rather than an `if`.
 **Context.** `AiTutorContextHelper` (abstract, per-lab subclass) turns a
 `AiTutorContext` bag — source code, hidden source, validation contents and
 results, instructions, documentation, console output, `hasRun`, `hasEdited` —
-into one string prepended to each request. The _format_ is shared and should
-port verbatim; the _gathering_ is the lab's and becomes a callback.
+into one string prepended to each request. The _format_ is shared and ports
+verbatim; the _gathering_ is the lab's and becomes a callback.
+
+Done as `TutorConfig.context`, which returns the BAG and not the string. The
+subclassing bought a per-lab `getAiTutorContext` and two fields set once per
+lab, and both are better said by passing an object — there is nothing for a
+base class to hold when the string builder is the only shared behaviour. That
+the wording stays on this side is the point, and the legacy header says so:
+"conversion to a system prompt string should be kept here for coordination and
+consistency". A lab that phrased its own would be tuning against a different
+input from every other lab.
 
 **Actions.** A structured response carries files. `useAiTutorResponseSchemaSettings`
 dispatches `setSource`, `setViewingAiTutorVersion`,
@@ -326,14 +335,14 @@ progress slice at all and must still work.
 
 ## 10. Milestones
 
-| #   | Deliverable                                         | Done when                                                                                                   |
-| --- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| 1   | Message model, `TutorTransport`, `FixtureTransport` | **done** — 34 tests drive a scripted conversation and every failing status; no UI                           |
-| 2   | Panel UI — list, composer, waiting, errors          | **done** — `yarn dev` holds a fixture conversation end to end                                               |
-| 3   | Context assembly + suggested prompts                | `hiddenContext` string is byte-identical to `AiTutorContextHelper`'s for the same input (a test asserts it) |
-| 4   | Dev proxy                                           | a real answer from a real key on the demo page; absent key degrades visibly                                 |
-| 5   | Structured responses + proposals                    | a fixture proposal renders chips and Accept/Reject; the host callback fires with the files                  |
-| 6   | `DashboardTransport` + resource-panel socket        | the commented block in `ResourcePanel.tsx` is real code again, and world lab shows the tab                  |
+| #   | Deliverable                                         | Done when                                                                                  |
+| --- | --------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 1   | Message model, `TutorTransport`, `FixtureTransport` | **done** — 34 tests drive a scripted conversation and every failing status; no UI          |
+| 2   | Panel UI — list, composer, waiting, errors          | **done** — `yarn dev` holds a fixture conversation end to end                              |
+| 3   | Context assembly + suggested prompts                | **done** — a test asserts the whole `hiddenContext` string, byte for byte                  |
+| 4   | Dev proxy                                           | a real answer from a real key on the demo page; absent key degrades visibly                |
+| 5   | Structured responses + proposals                    | a fixture proposal renders chips and Accept/Reject; the host callback fires with the files |
+| 6   | `DashboardTransport` + resource-panel socket        | the commented block in `ResourcePanel.tsx` is real code again, and world lab shows the tab |
 
 1–5 need no server and no studio. 6 is the only one that does, which is why it
 is last.
