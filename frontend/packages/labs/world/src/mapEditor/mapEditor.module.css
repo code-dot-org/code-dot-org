@@ -154,6 +154,14 @@
   cursor: grabbing;
 }
 
+/* Arming a reference: the click chooses an actor rather than grabbing one, and
+   the crosshair is the cursor that already means exactly that.
+   LAST, because it has to beat `.hovering` — an armed click over an actor is
+   still a choice, and the hand would say it was about to be picked up. */
+.canvas.picking {
+  cursor: crosshair;
+}
+
 /* Floating view controls (zoom readout + reset), top-right of the stage. */
 .toolbar {
   position: absolute;
@@ -243,6 +251,23 @@
   display: flex;
   align-items: flex-end;
   gap: 0.5rem;
+}
+
+/* A reference field: the exact way to say it and the quick one, side by side.
+   The dropdown names any placement in the map and is the only one a keyboard
+   can reach; the button beside it arms a click on the canvas, which is what
+   anybody with a pointer will actually do once a level has thirty things in
+   it. Bottom-aligned like the colour row above, so the control lines up with
+   the field rather than with its label. */
+.inspectorPick {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.inspectorPick .inspectorDropdown {
+  flex: 1;
+  min-width: 0;
 }
 
 /* The browser's own colour input, made to look like it belongs: the design

@@ -135,6 +135,21 @@ export const MapStage = ({
   // select mode, where `selectedId` is the placed instance under edit.
   const selected = placing;
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  /**
+   * The actor-typed property being POINTED at something, if any.
+   *
+   * A reference's other affordance is a dropdown of every placement in the
+   * map, which is exact and unreadable the moment a level has thirty things in
+   * it. Pointing is the gesture the canvas is already for: press the button
+   * beside the field, then click the actor.
+   *
+   * The dropdown STAYS. A canvas click is not reachable from a keyboard, and
+   * an affordance that is the only way to do something has to be.
+   */
+  const [picking, setPicking] = useState<{
+    ownerId: string;
+    propId: string;
+  } | null>(null);
   // The placed actor under the cursor in select mode, highlighted so a heavily
   // skewed sprite (drawn far from a naive center point) is easy to find and grab.
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -380,6 +395,10 @@ export const MapStage = ({
   // clobber a field mid-type; a drag re-seeds explicitly on release.
   useEffect(() => {
     seedDraft(mapRef.current.actors.find(a => a.id === selectedId) ?? null);
+    // …and disarm. An armed pick belongs to the property of the actor that was
+    // selected when the button was pressed; carrying it to a different actor
+    // would set a property nobody asked about.
+    setPicking(null);
   }, [selectedId, schemas]);
 
   // Edit a scalar field: number applies parsed, string as-is; keep the draft.
@@ -515,20 +534,38 @@ export const MapStage = ({
       // Itself excluded, and anonymous placements with it — see
       // `placementChoices`, which is where that list is decided.
       const others = placementChoices(mapRef.current.actors, actor.id);
+      const pickingThis =
+        picking?.ownerId === prop.ownerId && picking?.propId === prop.propId;
       return (
-        <SimpleDropdown
-          key={fieldKey(prop)}
-          name={`prop-${fieldKey(prop)}`}
-          labelText={capitalize(prop.name)}
-          size="s"
-          className={styles.inspectorDropdown}
-          disabled={isReadOnly}
-          selectedValue={draft[fieldKey(prop)] ?? ''}
-          items={[{value: '', text: '(none)'}, ...others]}
-          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-            selectOption(prop, event.target.value)
-          }
-        />
+        <div key={fieldKey(prop)} className={styles.inspectorPick}>
+          <SimpleDropdown
+            name={`prop-${fieldKey(prop)}`}
+            labelText={capitalize(prop.name)}
+            size="s"
+            className={styles.inspectorDropdown}
+            disabled={isReadOnly}
+            selectedValue={draft[fieldKey(prop)] ?? ''}
+            items={[{value: '', text: '(none)'}, ...others]}
+            onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+              selectOption(prop, event.target.value)
+            }
+          />
+          <Button
+            variant={pickingThis ? 'contained' : 'text'}
+            size="extraSmall"
+            disabled={isReadOnly}
+            aria-pressed={pickingThis}
+            onClick={() =>
+              setPicking(
+                pickingThis
+                  ? null
+                  : {ownerId: prop.ownerId, propId: prop.propId},
+              )
+            }
+          >
+            {pickingThis ? 'Click an actor…' : 'Pick'}
+          </Button>
+        </div>
       );
     }
     if (prop.type === 'string' && prop.options) {
@@ -680,9 +717,29 @@ export const MapStage = ({
     if (selected) {
       return;
     }
-    // Left button in SELECT mode: grab a placed actor, else deselect + pan.
     const world = screenToWorld(event.clientX, event.clientY);
     const hit = isReadOnly ? undefined : hitTest(world);
+    // Left button while POINTING a reference: the click chooses, and does not
+    // select or drag. Changing the selection would take away the very actor
+    // whose property is being set, which is the one thing this must not do.
+    if (picking && selectedActor) {
+      event.preventDefault();
+      setPicking(null);
+      if (hit && hit.id !== selectedActor.id) {
+        selectOption(
+          {
+            ownerId: picking.ownerId,
+            propId: picking.propId,
+          } as PropertySchema,
+          hit.id,
+        );
+      }
+      // A click on nothing CANCELS rather than clearing the reference: undoing
+      // a pick is what the dropdown's "(none)" row is for, and a missed click
+      // should not be destructive.
+      return;
+    }
+    // Left button in SELECT mode: grab a placed actor, else deselect + pan.
     if (hit) {
       event.preventDefault();
       const pos = positionOf(hit)!;
@@ -784,6 +841,13 @@ export const MapStage = ({
   };
 
   const handleKeyDown = (event: ReactKeyboardEvent) => {
+    // Escape disarms a reference pick, which is what Escape means everywhere:
+    // the next click goes back to selecting, and nothing was changed.
+    if (event.key === 'Escape' && picking) {
+      event.preventDefault();
+      setPicking(null);
+      return;
+    }
     // Place mode is click-driven; the keyboard shortcuts are select-mode only.
     if (selected) {
       return;
@@ -1009,7 +1073,10 @@ export const MapStage = ({
     // Hover highlight (a lighter outline), drawn under the selection outline and
     // skipped when the hovered actor is already the selected one.
     if (hoveredTransform && hoveredId !== selectedId) {
-      strokeActorBox(hoveredTransform, HOVER);
+      // While POINTING a reference, the hover says what the click will choose
+      // rather than what it will select — so it wears the reference colour,
+      // which is the colour the line to it will be.
+      strokeActorBox(hoveredTransform, picking ? REFERENCE : HOVER);
     }
     // What the selected actor POINTS AT, before its own outline so that an
     // actor which is both selected and referenced reads as selected.
@@ -1050,10 +1117,15 @@ export const MapStage = ({
     // sandbox after the first paint has to repaint.
     selectedActor,
     selectedSchema,
+    // …and the hover changes colour while a reference is being pointed.
+    picking,
   ]);
 
   const canvasClass = [
     styles.canvas,
+    // Pointing borrows the crosshair, which is the one cursor that already
+    // means "this click is a choice, not a grab".
+    picking ? styles.picking : '',
     panning
       ? styles.panning
       : selected
