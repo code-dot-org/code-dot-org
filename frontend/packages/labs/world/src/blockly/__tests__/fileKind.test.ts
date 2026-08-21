@@ -11,6 +11,7 @@ import {describe, expect, it} from 'vitest';
 
 import {buildDomainPalette} from '../domainBlocks';
 import {fileKindOf, moduleShape, ROOT_HOMES, type FileKind} from '../fileKind';
+import {projectOwnMetas} from '../projectModules';
 
 const KINDS: FileKind[] = ['actor', 'world', 'rule'];
 
@@ -76,13 +77,17 @@ describe('which definition roots a file may hold', () => {
     expect(offeredTypes('actor')).toContain('world_use_trait');
   });
 
-  it('offers `each frame` where it means something', () => {
-    // Two real readings — a trait's member in a `.rule`, and a kind's own work
-    // in an `.actor` — and no third. In a `.world` it would generate nothing
-    // and say nothing about why, which is the trap this avoids.
+  it('offers `each frame` wherever there is an owner to name', () => {
+    // Three readings, all the same sentence about whoever owns it: a trait's
+    // member in a `.rule`, a kind's own work in an `.actor`, and that same
+    // work inside a world's own `define actor`.
+    //
+    // The third was missing, and it read as a health bar that never moved —
+    // an actor a world defines could do no per-frame work, so an actor that
+    // had to look at something each frame had to be a file.
     expect(offeredTypes('actor')).toContain('world_trait_step');
     expect(offeredTypes('rule')).toContain('world_trait_step');
-    expect(offeredTypes('world')).not.toContain('world_trait_step');
+    expect(offeredTypes('world')).toContain('world_trait_step');
   });
 
   it('gives `each frame` no previous connection in an actor file', () => {
@@ -211,5 +216,88 @@ describe('ROOT_HOMES', () => {
     for (const [type, homes] of ROOT_HOMES) {
       expect(homes.size, type).toBeGreaterThan(0);
     }
+  });
+});
+
+describe('an actor a world defines for itself', () => {
+  // The three things that used to make a world-defined actor second class: it
+  // could not draw, it could not do per-frame work, and it could not remember
+  // anything. All three were the same shape — a block legal only in the file
+  // an actor usually lives in — and the single-world platformer showed all
+  // three as one symptom: a health bar drawn as a plain box that never moved.
+
+  /** A world with one local actor, holding `rows` in its body. */
+  const worldWith = (rows: object[]) =>
+    JSON.stringify({
+      blocks: {
+        blocks: [
+          {type: 'world_world', fields: {NAME: 'W'}},
+          {
+            type: 'world_actor',
+            id: 'barDef',
+            fields: {NAME: 'Bar'},
+            next: {block: rows[0]},
+          },
+        ],
+      },
+    });
+
+  it('may keep a property, keyed by the block that defines it', () => {
+    // The key is what made this hard rather than the idea. A block type is
+    // minted from the module path, so two local actors in one world both
+    // declaring `subject` would mint ONE type for two properties, and which
+    // one a `get` read would depend on registration order.
+    const metas = projectOwnMetas({
+      'worlds/main.world': worldWith([
+        {
+          type: 'world_rule_property',
+          fields: {TYPE: 'actor', ACCESS: 'writable', NAME: 'subject'},
+        },
+      ]),
+    });
+    const mine = metas.find(meta => meta.modulePath.includes('#'));
+
+    expect(mine?.modulePath).toBe('worlds/main#barDef');
+    expect(mine?.properties[0].ref.exportName).toBe('SubjectProperty');
+    expect(mine?.properties[0].scope).toBe('actor');
+  });
+
+  it('keeps the world’s own properties apart from its actors’', () => {
+    // A world may declare its own as well, and those are world-scoped. Both
+    // come out of one file and must not be confused for each other.
+    const metas = projectOwnMetas({
+      'worlds/main.world': JSON.stringify({
+        blocks: {
+          blocks: [
+            {
+              type: 'world_world',
+              fields: {NAME: 'W'},
+              next: {
+                block: {
+                  type: 'world_rule_property',
+                  fields: {TYPE: 'number', NAME: 'score'},
+                },
+              },
+            },
+            {
+              type: 'world_actor',
+              id: 'barDef',
+              fields: {NAME: 'Bar'},
+              next: {
+                block: {
+                  type: 'world_rule_property',
+                  fields: {TYPE: 'number', NAME: 'fraction'},
+                },
+              },
+            },
+          ],
+        },
+      }),
+    });
+
+    expect(metas.map(meta => meta.properties[0].scope).sort()).toEqual([
+      'actor',
+      'world',
+    ]);
   });
 });

@@ -31,16 +31,32 @@
 // board that belongs to one game and the wrong one for a board that several
 // worlds share.
 //
-// A SECOND thing was lost until this scenario went looking for it. The
-// Scoreboard has a picture — it draws its own words — and `define drawing` was
-// a definition root legal in an `.actor` file and nowhere else, so a world that
-// defined the Scoreboard locally got one with no picture, which the driver
-// paints as a plain box. It is a row inside `define actor` now
-// (`drawingDefinition`), so a world-defined actor draws itself and the loss is
-// gone rather than documented.
+// A SECOND thing was lost until this scenario went looking for it, and it is
+// given back now. A world-defined actor was second class in three separate
+// ways, and every one of them showed as the same symptom: a health bar drawn
+// as a plain box that never moved.
+//
+// It could not DRAW — `define drawing` was a definition root legal in an
+// `.actor` file and nowhere else. It could not do PER-FRAME WORK — `each
+// frame` was not offered to a world at all, and its generator wrote nothing
+// for any copy that had a parent, which in a world every copy does. And it
+// could not REMEMBER — the walk that reads `define property` looks in one root
+// per file, and a world's `define actor` roots were not it, so the path now
+// carries the defining block (`worlds/main#thatBlock`) to keep two local
+// actors' properties apart (blockly/ownProperties).
+//
+// The bar needs only the first of those, in the end. It asks the world who has
+// health from inside its own drawing, so it keeps nothing and does nothing
+// between frames — which is what a picture should be. The other two are why an
+// actor a world defines is no longer a lesser one, and this scenario is simply
+// where the question got asked.
+//
+// So all seven kinds move in, and what this telling costs is one thing rather
+// than three.
 
 import {drawText, fill, showAs, textOf} from '../actors/stock/workspace';
 import {
+  healthBarDrawing,
   SCOREBOARD_HEIGHT,
   SCOREBOARD_WIDTH,
   LEVEL1_ACTORS,
@@ -58,6 +74,7 @@ const COIN = 'platformerCoinDef';
 const BALL = 'platformerBallDef';
 const SCOREBOARD = 'platformerScoreboardDef';
 const CRAWLER = 'platformerCrawlerDef';
+const HEALTH_BAR = 'platformerHealthBarDef';
 
 const local = (blockId: string) => `local:${blockId}`;
 
@@ -142,6 +159,11 @@ const SINGLE_WORLD = JSON.stringify({
             createInMap('placeBall', local(BALL), 'actors/ball'),
             createInMap('placeCrawler', local(CRAWLER), 'actors/crawler'),
             createInMap(
+              'placeHealthBar',
+              local(HEALTH_BAR),
+              'actors/healthBar',
+            ),
+            createInMap(
               'placeScoreboard',
               local(SCOREBOARD),
               'actors/scoreboard',
@@ -188,7 +210,11 @@ const SINGLE_WORLD = JSON.stringify({
         useTrait('Health#DealsDamageTrait'),
         {type: 'world_set_sprite', fields: {SPRITE: 'asteroid.png'}},
       ]),
-      defineActor(SCOREBOARD, 'Scoreboard', 1900, [
+      // The health bar, which is a PICTURE and nothing else — no property, no
+      // step, no handler pointing it at anybody. Its drawing asks the world
+      // who has health, which a drawing may do now that its closure binds one.
+      defineActor(HEALTH_BAR, 'Health Bar', 1900, [healthBarDrawing()]),
+      defineActor(SCOREBOARD, 'Scoreboard', 2280, [
         useTrait('Writing#ShowsTextTrait'),
         useTrait('Scoring#WatchesTheScoreTrait'),
         showAs('text'),
@@ -329,6 +355,7 @@ const MOVED_IN = [
   'coin',
   'ball',
   'crawler',
+  'healthBar',
   'scoreboard',
   'level1',
 ];

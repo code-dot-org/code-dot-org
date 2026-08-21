@@ -13,6 +13,7 @@ describe('projectFiles', () => {
       'actors/coin.actor',
       'actors/crawler.actor',
       'actors/ground.actor',
+      'actors/healthBar.actor',
       'actors/player.actor',
       'actors/scoreboard.actor',
       'animations/coinSpin.anim',

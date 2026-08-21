@@ -1874,7 +1874,7 @@ export class World {
         return undefined;
       }
       const pen = new CommandPen();
-      drawing.run(actor, pen);
+      drawing.run(actor, pen, this);
       return {
         key: drawingKey(drawing.width, drawing.height, pen.commands),
         width: drawing.width,

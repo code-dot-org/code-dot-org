@@ -206,12 +206,12 @@ export class ActorBuilder {
   defineDrawing(
     width: number,
     height: number,
-    run: (actor: Actor, pen: Pen) => void,
+    run: (actor: Actor, pen: Pen, world: World) => void,
   ): this {
     this.drawing = {
       width,
       height,
-      run: (actor, pen) => run(actor as Actor, pen),
+      run: (actor, pen, world) => run(actor as Actor, pen, world as World),
     };
     return this;
   }

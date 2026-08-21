@@ -42,6 +42,9 @@ export function inWorldContext(block: Block): boolean {
       // what world it was on — in a trait step as much as in an actor's.
       parent.type === 'world_trait_step' ||
       parent.type === 'world_rule_block' ||
+      // A drawing's closure is `(actor, pen, world)`. It reads and never
+      // writes, which is what a drawing is; asking the world is reading.
+      parent.type === 'world_define_drawing' ||
       parent.type.startsWith('world_on_')
     ) {
       return true;

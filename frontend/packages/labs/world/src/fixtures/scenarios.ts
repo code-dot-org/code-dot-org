@@ -153,7 +153,8 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'what it has\n' +
       '- Take all three and you win; the Scoreboard says so\n' +
       '- Avoid the Crawler, which walks its beat and takes a heart off you ' +
-      'each time it touches — three and it is over\n' +
+      'each time it touches — watch the bar at the top right, and three and ' +
+      'it is over\n' +
       '- Animations are files under `animations/`: open one to edit its frames\n' +
       '- `console.log` output appears in the Console\n' +
       '- Try changing the player’s start position, gravity, or move speed — or ' +

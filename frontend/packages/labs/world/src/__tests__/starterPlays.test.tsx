@@ -196,6 +196,41 @@ describe('the project a learner opens', () => {
     expect(player()).toBeLessThan(full);
   });
 
+  it('shows the damage as it happens, on a bar that gets shorter', async () => {
+    // Losing health showed NOTHING until the moment it ran out: three touches
+    // and GAME OVER, with no warning in between. A number a player cannot see
+    // is a number they cannot play against.
+    //
+    // The bar reads the player rather than the player writing the bar, because
+    // `define property` mints its getter and setter into its own file's
+    // palette and NOWHERE ELSE — which is also why this test cannot read the
+    // fraction. It is not exported, on purpose.
+    //
+    // So it asks what a player would see instead: the drawing's key, which is
+    // the identity of the commands it was painted from. A bar whose red
+    // rectangle got narrower is a different picture, and the driver
+    // rasterizes on a key it has not seen (World.renderSnapshot).
+    //
+    // Asking for the key RUNS the routine, which is also how the guard gets
+    // tested: on a world nobody has ticked, the bar is watching nobody yet,
+    // and `health of ⟨nothing⟩` would throw rather than draw an empty bar.
+    const {world} = await opened();
+    expect(() => world.renderSnapshot()).not.toThrow();
+    const bar = () =>
+      world
+        .renderSnapshot()
+        .find(
+          state => (state.actor as unknown as {id: string}).id === 'HealthBar',
+        )?.drawing?.key;
+
+    play(world, 0.5);
+    const full = bar();
+    play(world, 2.5, ['right arrow']);
+
+    expect(full).toBeDefined();
+    expect(bar()).not.toBe(full);
+  });
+
   it('says so on the board when the player runs out', async () => {
     // Health raises `dies` and removes nothing — running out is a fact, not a
     // policy — so what dying MEANS is the player's handler, and it means the
@@ -267,6 +302,29 @@ describe('the same project, said in one file', () => {
 
     // The two coins on the floor, exactly as in the starter's own telling.
     expect(board()).toBe('SCORE 20');
+  });
+
+  it('shows damage on its bar too, which is its only own property', async () => {
+    // The health bar is the one actor in either telling that keeps a number of
+    // its own, and a world-defined one keeps it in `worlds/main` rather than
+    // in a file of its own — a different exported name for the same idea. If
+    // the two tellings had drifted there, this is where it would show.
+    const {world} = await compileProject(
+      projectFiles(WORLD_SCENARIOS['platformer-single'].source),
+    );
+    const bar = () =>
+      world
+        .renderSnapshot()
+        .find(state =>
+          (state.actor as unknown as {id: string}).id.endsWith('HealthBar'),
+        )?.drawing?.key;
+
+    play(world, 0.5);
+    const full = bar();
+    play(world, 2.5, ['right arrow']);
+
+    expect(full).toBeDefined();
+    expect(bar()).not.toBe(full);
   });
 
   it('jumps as high, which is the mechanic most easily left behind', async () => {

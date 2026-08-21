@@ -127,7 +127,17 @@ export interface ActorDrawing {
    *  box are worked out from. */
   readonly width: number;
   readonly height: number;
-  readonly run: (actor: unknown, pen: Pen) => void;
+  /**
+   * The routine, given the actor it is drawing, a pen, and the WORLD.
+   *
+   * The world is here so a drawing can ASK — the health bar reads the health
+   * of whatever has some, and a bar that could only see its own actor had to
+   * be handed a reference by somebody else, which meant a property and a step
+   * to fill it. A drawing stays pure without it: it may read anything and
+   * change nothing, and its cache key is the commands it emitted, so a reading
+   * that changes is a picture that changes (specs/DRAWING.md).
+   */
+  readonly run: (actor: unknown, pen: Pen, world: unknown) => void;
 }
 
 /** The pen, and the list it fills. */

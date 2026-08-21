@@ -109,6 +109,52 @@ export function parseWorldOwnMeta(
   return declarationsIn(modulePath, contents, 'world_world', 'world', 'World');
 }
 
+/**
+ * Every ACTOR a world defines for itself, and what each declares.
+ *
+ * A world's own `define actor` roots are actors like any other, so `define
+ * property` inside one is that actor's — the same declaration in a fifth home.
+ * They were not read at all until this, which is not a boundary anybody drew:
+ * the walk simply looked for ONE root of one type per file, and `world_world`
+ * was the one it looked for. A world-defined actor could therefore have a
+ * picture and no memory, and a scoreboard that carried a number had to be a
+ * file (fixtures/platformerSingle).
+ *
+ * THE MODULE PATH CARRIES THE DEFINING BLOCK, `worlds/main#someActorDef`, and
+ * that is the whole of what made this hard. A block type is minted from the
+ * path (`pathSlug` in domainBlocks), so two local actors in one world both
+ * declaring `subject` would mint one block type for two different properties —
+ * and which one a `get` block read would depend on which meta was registered
+ * last. The `#` is not a path anything resolves; nothing imports these, and
+ * their scope is the block their actor's body generates into.
+ */
+export function parseWorldActorOwnMetas(
+  modulePath: string,
+  contents: string,
+): OwnMeta[] {
+  let roots: ActorBlock[];
+  try {
+    const parsed = JSON.parse(contents) as {
+      blocks?: {blocks?: (ActorBlock & {id?: string})[]};
+    };
+    roots = (parsed.blocks?.blocks ?? []).filter(
+      b => b?.type === 'world_actor',
+    );
+  } catch {
+    return []; // mid-edit / not JSON
+  }
+  return roots.flatMap(root => {
+    const id = (root as {id?: string}).id;
+    const meta = declarationsFrom(
+      id ? `${modulePath}#${id}` : modulePath,
+      root,
+      'actor',
+      'Actor',
+    );
+    return meta ? [meta] : [];
+  });
+}
+
 /** The walk both share: a root's chain, and every declaration in it. */
 function declarationsIn(
   modulePath: string,
@@ -127,7 +173,16 @@ function declarationsIn(
   if (!root) {
     return undefined;
   }
+  return declarationsFrom(modulePath, root, scope, fallbackName);
+}
 
+/** Everything one root declares, given the root itself. */
+function declarationsFrom(
+  modulePath: string,
+  root: ActorBlock,
+  scope: 'actor' | 'world',
+  fallbackName: string,
+): OwnMeta | undefined {
   const name = field(root, 'NAME') || fallbackName;
   const properties: PropertyMeta[] = [];
   const taken = new Set<string>();
@@ -212,16 +267,75 @@ export function worldOwnPropertyDeclarations(meta: OwnMeta): string {
 
 function declarations(meta: OwnMeta, receiver: string): string {
   return meta.properties
-    .map(property => {
-      const opts: Record<string, unknown> = {name: property.name};
-      if (property.readonly) {
-        opts.readonly = true;
-      }
-      return (
-        `const ${property.ref.exportName} = ${receiver}.defineProperty(` +
-        `${JSON.stringify(property.id)}, ${JSON.stringify(property.type)}, ` +
-        `${JSON.stringify(property.default)}, ${JSON.stringify(opts)});\n`
-      );
-    })
+    .map(property =>
+      declarationLine(receiver, property.ref.exportName, property.id, {
+        type: property.type,
+        value: property.default,
+        name: property.name,
+        readonly: property.readonly,
+      }),
+    )
     .join('');
+}
+
+/** The one line every one of these compiles to, wherever it was declared. */
+function declarationLine(
+  receiver: string,
+  exportName: string,
+  id: string,
+  declared: {
+    type: PropertyType;
+    value: unknown;
+    name: string;
+    readonly: boolean;
+  },
+): string {
+  const opts: Record<string, unknown> = {name: declared.name};
+  if (declared.readonly) {
+    opts.readonly = true;
+  }
+  return (
+    `const ${exportName} = ${receiver}.defineProperty(` +
+    `${JSON.stringify(id)}, ${JSON.stringify(declared.type)}, ` +
+    `${JSON.stringify(declared.value)}, ${JSON.stringify(opts)});\n`
+  );
+}
+
+/**
+ * A declaration emitted from the BLOCK rather than from parsed metadata.
+ *
+ * The one case that needs it: an actor a world defines for itself. Everywhere
+ * else the declaration is written by the module assembler from an `OwnMeta`,
+ * at the top of a module where the whole file can see it. A world-local
+ * actor's body generates inside a block of its own — `{ const actor = …; … }`
+ * — so the declaration has to be emitted THERE, by the block that opens it,
+ * or nothing in the body can see the property.
+ *
+ * It shares `declarationLine` with the assembler rather than formatting its
+ * own, because the two must agree on the name a `get` block will reach for.
+ */
+export function ownPropertyDeclarationFor(fields: {
+  name: string;
+  type: string;
+  default: string;
+  access: string;
+}): string {
+  const declared = fields.name;
+  if (!declared) {
+    return ''; // an unnamed declaration declares nothing
+  }
+  const type = (
+    PROPERTY_TYPES.has(fields.type) ? fields.type : 'number'
+  ) as PropertyType;
+  return declarationLine(
+    'actor',
+    `${pascal(declared)}Property`,
+    slug(declared),
+    {
+      type,
+      value: parseDefault(fields.default, type),
+      name: declared,
+      readonly: fields.access === 'readonly',
+    },
+  );
 }
