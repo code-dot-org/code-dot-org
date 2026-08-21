@@ -67,4 +67,37 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     get :show, params: {section_id: cotaught_section.id}
     assert_response :success
   end
+
+  test 'lesson_summaries_enabled_for_unit: returns true for AIF units' do
+    sign_in @section_owner
+    unit = create(:script)
+    unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_cs
+    unit.save!
+
+    get :lesson_summaries_enabled_for_unit, params: {unit_id: unit.id}
+    assert_response :success
+    assert_equal true, JSON.parse(response.body)['enabled']
+  end
+
+  test 'lesson_summaries_enabled_for_unit: returns true for AID units' do
+    sign_in @section_owner
+    unit = create(:script)
+    unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.AID
+    unit.save!
+
+    get :lesson_summaries_enabled_for_unit, params: {unit_id: unit.id}
+    assert_response :success
+    assert_equal true, JSON.parse(response.body)['enabled']
+  end
+
+  test 'lesson_summaries_enabled_for_unit: returns false for units outside AIF and AID' do
+    sign_in @section_owner
+    unit = create(:script)
+    unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
+    unit.save!
+
+    get :lesson_summaries_enabled_for_unit, params: {unit_id: unit.id}
+    assert_response :success
+    assert_equal false, JSON.parse(response.body)['enabled']
+  end
 end
