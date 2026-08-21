@@ -1636,7 +1636,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       it 'creates new user (Teacher) from auth hash' do
         classlink_req
         _(partial_user).wont_be_nil
-        _(partial_user.uid).must_equal TEST_CLASSLINK_AUTH_HASH.uid
+        # New sign-ups get the v2 "<TenantId>|<SourcedId>" authentication id,
+        # built from the auth hash's district_id and external_id.
+        _(partial_user.uid).must_equal '0001|1234_5678-0000'
         _(partial_user.provider).must_equal AuthenticationOption::CLASSLINK
         _(partial_user.user_type).must_equal User::TYPE_TEACHER
       end
@@ -1661,7 +1663,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       it 'creates partial user (Student) from auth hash' do
         classlink_req
         _(partial_user).wont_be_nil
-        _(partial_user.uid).must_equal student_auth_hash.uid
+        _(partial_user.uid).must_equal '0001|1234_5678-0000'
         _(partial_user.provider).must_equal AuthenticationOption::CLASSLINK
         _(partial_user.user_type).must_equal User::TYPE_STUDENT
       end
@@ -1686,8 +1688,17 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         _(existing_user.primary_contact_info.data_hash[:oauth_token_expiration]).wont_equal auth_hash[:credentials][:expires_at]
         classlink_req
         existing_user.reload
-        _(existing_user.primary_contact_info.data_hash[:oauth_token]).must_equal auth_hash[:credentials][:token]
-        _(existing_user.primary_contact_info.data_hash[:oauth_token_expiration]).must_be_nil
+        # Login-time migration creates a v2 auth option alongside the v1 record;
+        # the login credential now matches the v2 record, so tokens land there.
+        # The v1 record is deliberately left untouched.
+        v2_auth_option = existing_user.authentication_options.find_by(
+          credential_type: AuthenticationOption::CLASSLINK,
+          authentication_id: '0001|1234_5678-0000'
+        )
+        _(v2_auth_option).wont_be_nil
+        _(v2_auth_option.data_hash[:oauth_token]).must_equal auth_hash[:credentials][:token]
+        _(v2_auth_option.data_hash[:oauth_token_expiration]).must_be_nil
+        _(existing_user.primary_contact_info.data_hash[:oauth_token]).wont_equal auth_hash[:credentials][:token]
       end
 
       it 'signs in the existing user' do

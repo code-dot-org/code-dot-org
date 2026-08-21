@@ -512,7 +512,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
     end
 
-    auth.uid = classlink_v2_id
+    # Swap a copy carrying the v2 uid into the request env rather than
+    # mutating the given hash in place — everything downstream re-reads
+    # request.env['omniauth.auth'], and the caller's object may be shared.
+    request.env['omniauth.auth'] = auth.dup.tap {|a| a.uid = classlink_v2_id}
   end
 
   private def just_authorized_google_classroom?
