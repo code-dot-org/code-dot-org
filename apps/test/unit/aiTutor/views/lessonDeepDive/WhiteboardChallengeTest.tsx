@@ -27,25 +27,49 @@ jest.mock(
   })
 );
 
-// React Flow does not render in jsdom. The stub exposes a button that
-// reports one node through updateSources, simulating the student drawing.
+// React Flow does not render in jsdom. The stub exposes a button that reports
+// one node through updateSources (simulating the student drawing), mirrors the
+// real toolbar by rendering an "Add image" button only when uploads are
+// allowed, and renders each seeded image node as an <img> so tests can assert
+// the starter image via its alt text.
 jest.mock('@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas', () => {
   const React = require('react');
   return {
     __esModule: true,
     default: (props: {
       updateSources: (sources: ReactFlowSketchLabSources) => void;
+      allowImageUpload?: boolean;
+      initialNodes: {
+        type: string;
+        data: {src?: string; altText?: string; locked?: boolean};
+      }[];
     }) =>
       React.createElement(
-        'button',
-        {
-          type: 'button',
-          onClick: () =>
-            props.updateSources({
-              source: {nodes: [{id: 'n1'}], edges: []},
-            } as unknown as ReactFlowSketchLabSources),
-        },
-        'Draw something'
+        'div',
+        null,
+        React.createElement(
+          'button',
+          {
+            type: 'button',
+            onClick: () =>
+              props.updateSources({
+                source: {nodes: [{id: 'n1'}], edges: []},
+              } as unknown as ReactFlowSketchLabSources),
+          },
+          'Draw something'
+        ),
+        props.allowImageUpload &&
+          React.createElement('button', {type: 'button'}, 'Add image'),
+        props.initialNodes
+          .filter(node => node.type === 'image')
+          .map((node, index) =>
+            React.createElement('img', {
+              key: index,
+              alt: node.data.altText,
+              src: node.data.src,
+              'data-locked': String(node.data.locked),
+            })
+          )
       ),
   };
 });
@@ -119,18 +143,24 @@ const Harness: FC<{
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
   explanationType: string | null;
   textExplanation?: string;
+  starterImageUrl?: string | null;
+  starterImageAltText?: string | null;
 }> = ({
   challengeId,
   submitted,
   submitCallback,
   explanationType,
   textExplanation = '',
+  starterImageUrl = null,
+  starterImageAltText = null,
 }) => {
   const [isRecording, setIsRecording] = useState(false);
   const [hasRecording, setHasRecording] = useState(false);
   return (
     <WhiteboardChallenge
       challengeId={challengeId}
+      starterImageUrl={starterImageUrl}
+      starterImageAltText={starterImageAltText}
       submitted={submitted}
       submitCallback={submitCallback}
       isRecording={isRecording}
@@ -184,6 +214,67 @@ describe('WhiteboardChallenge', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
     expect(submitButton).toBeEnabled();
+  });
+
+  it('hides the image upload tool from the canvas', () => {
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={jest.fn()}
+        explanationType={null}
+      />
+    );
+
+    expect(
+      screen.queryByRole('button', {name: 'Add image'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('seeds the canvas with the starter image as a locked node', async () => {
+    // jsdom never fires <img> load events, so stub Image to resolve
+    // measureImage synchronously with a fixed natural size.
+    const originalImage = globalThis.Image;
+    class FakeImage {
+      naturalWidth = 100;
+      naturalHeight = 50;
+      onload: (() => void) | null = null;
+      onerror: (() => void) | null = null;
+      set src(_value: string) {
+        this.onload?.();
+      }
+    }
+    (globalThis as unknown as {Image: unknown}).Image = FakeImage;
+
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      blob: async () => new Blob(['png-bytes'], {type: 'image/png'}),
+    });
+
+    try {
+      render(
+        <Harness
+          challengeId={5}
+          submitted={false}
+          submitCallback={jest.fn()}
+          explanationType={null}
+          starterImageUrl="/challenges/5/starter_image"
+          starterImageAltText="a blank grid"
+        />
+      );
+
+      expect(fetchMock).toHaveBeenCalledWith('/challenges/5/starter_image', {
+        credentials: 'same-origin',
+      });
+
+      const starterImage = await screen.findByAltText('a blank grid');
+      // Locked so the student draws over the prompt, not moves/deletes it.
+      expect(starterImage).toHaveAttribute('data-locked', 'true');
+      // Inlined as a data URL so the submission snapshot captures it.
+      expect(starterImage.getAttribute('src')).toMatch(/^data:/);
+    } finally {
+      globalThis.Image = originalImage;
+    }
   });
 
   it('disables submit while the challenge is still loading', () => {
