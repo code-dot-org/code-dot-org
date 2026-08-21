@@ -6,6 +6,7 @@ import {
   getCleanupCode,
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
+  ON_DEMAND_PACKAGE_URLS,
   resetGlobals,
   writeSource,
 } from '@cdo/apps/pythonlab/pythonHelpers/pythonScriptUtils';
@@ -354,28 +355,103 @@ describe('pythonScriptUtils', () => {
   });
 
   describe('importPackagesFromFiles', () => {
-    it('loads packages only from python files', async () => {
-      const source: MultiFileSource = {
-        folders: {},
-        files: {
-          '1': {
-            id: '1',
-            name: 'main.py',
-            contents: 'import numpy',
-            folderId: '0',
-          },
-          '2': {id: '2', name: 'data.csv', contents: 'x,y', folderId: '0'},
-        },
-      };
+    // Stands in for pyodide.pyimport('pyodide.code.find_imports'), which returns
+    // a Python list: hence the toJs/destroy shape. Test code maps file contents
+    // to the modules the real helper would report.
+    function fakePyodide(importsByContents: Record<string, string[]>) {
       const loadPackagesFromImports = jest.fn().mockResolvedValue(undefined);
+      const loadPackage = jest.fn().mockResolvedValue(undefined);
+      const destroy = jest.fn();
+      const findImports = Object.assign(
+        (contents: string) => ({
+          toJs: () => importsByContents[contents] || [],
+          destroy,
+        }),
+        {destroy}
+      );
       const pyodide = {
         loadPackagesFromImports,
+        loadPackage,
+        pyimport: jest.fn().mockReturnValue(findImports),
       } as unknown as PyodideInterface;
+      return {pyodide, loadPackagesFromImports, loadPackage, destroy};
+    }
+
+    function sourceWithFiles(contentsByName: Record<string, string>) {
+      const files = Object.entries(contentsByName).map(
+        ([name, contents], index) => [
+          `${index + 1}`,
+          {id: `${index + 1}`, name, contents, folderId: '0'},
+        ]
+      );
+      return {folders: {}, files: Object.fromEntries(files)} as MultiFileSource;
+    }
+
+    it('loads packages only from python files', async () => {
+      const source = sourceWithFiles({
+        'main.py': 'import numpy',
+        'data.csv': 'x,y',
+      });
+      const {pyodide, loadPackagesFromImports} = fakePyodide({
+        'import numpy': ['numpy'],
+      });
 
       await importPackagesFromFiles(source, pyodide);
 
       expect(loadPackagesFromImports).toHaveBeenCalledTimes(1);
       expect(loadPackagesFromImports).toHaveBeenCalledWith('import numpy');
+    });
+
+    it('fetches an on-demand wheel for a program that imports it', async () => {
+      const source = sourceWithFiles({'main.py': 'import theater'});
+      const {pyodide, loadPackage} = fakePyodide({
+        'import theater': ['theater'],
+      });
+
+      await importPackagesFromFiles(source, pyodide);
+
+      expect(loadPackage).toHaveBeenCalledWith([
+        ON_DEMAND_PACKAGE_URLS.theater,
+      ]);
+    });
+
+    it('leaves an on-demand wheel unfetched for a program without it', async () => {
+      const source = sourceWithFiles({'main.py': 'import numpy'});
+      const {pyodide, loadPackage} = fakePyodide({
+        'import numpy': ['numpy'],
+      });
+
+      await importPackagesFromFiles(source, pyodide);
+
+      expect(loadPackage).not.toHaveBeenCalled();
+    });
+
+    it('fetches an on-demand wheel once for a project that imports it twice', async () => {
+      const source = sourceWithFiles({
+        'main.py': 'import theater',
+        'helper.py': 'from theater import Scene',
+      });
+      const {pyodide, loadPackage} = fakePyodide({
+        'import theater': ['theater'],
+        'from theater import Scene': ['theater'],
+      });
+
+      await importPackagesFromFiles(source, pyodide);
+
+      expect(loadPackage).toHaveBeenCalledTimes(1);
+      expect(loadPackage).toHaveBeenCalledWith([
+        ON_DEMAND_PACKAGE_URLS.theater,
+      ]);
+    });
+
+    it('releases the python proxies it reads imports through', async () => {
+      const source = sourceWithFiles({'main.py': 'import theater'});
+      const {pyodide, destroy} = fakePyodide({'import theater': ['theater']});
+
+      await importPackagesFromFiles(source, pyodide);
+
+      // The import list and the helper itself, or each run leaks a PyProxy.
+      expect(destroy).toHaveBeenCalledTimes(2);
     });
   });
 

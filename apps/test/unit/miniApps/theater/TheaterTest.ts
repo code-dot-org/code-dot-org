@@ -56,6 +56,7 @@ describe('Theater', () => {
     theater.handleSignal(data);
     expect(audioElement.src).toContain(url);
     expect(typeof audioElement.oncanplaythrough).toBe('function');
+    expect(typeof audioElement.onerror).toBe('function');
     expect(theater.startPlayback).not.toHaveBeenCalled();
   });
 
@@ -247,6 +248,40 @@ describe('Theater', () => {
     expect(revokeSpy).toHaveBeenCalledWith('blob:image');
   });
 
+  it('reports a failed audio load and drops the media', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+
+    (audioElement as HTMLAudioElement).onerror?.(new Event('error'));
+
+    expect(onMediaLoadError).toHaveBeenCalledTimes(1);
+    expect(theater.hasOutput()).toBe(false);
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
+  });
+
+  it('does not leave the stage hidden waiting on audio that never loads', () => {
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+
+    (audioElement as HTMLAudioElement).onerror?.(new Event('error'));
+
+    expect(playAudioSpy).not.toHaveBeenCalled();
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+    expect(onMediaLoadError).toHaveBeenCalledTimes(1);
+  });
+
   it('does not report an error for media dropped by a reset', () => {
     theater.startPlayback = jest.fn();
     theater.handleSignal({
@@ -260,6 +295,7 @@ describe('Theater', () => {
     expect(imageElement.onerror).toBeNull();
     expect(imageElement.onload).toBeNull();
     expect(audioElement.oncanplaythrough).toBeNull();
+    expect(audioElement.onerror).toBeNull();
     expect(onMediaLoadError).not.toHaveBeenCalled();
   });
 

@@ -40,6 +40,28 @@ const devHostAliases: Alias[] = [
   },
 ];
 
+// Dashboard route prefixes the feature calls. A prefix also matches its
+// sub-routes.
+//
+// The proxy exists because apps' HttpClient sends root-relative URLs. When
+// the feature moves to @code-dot-org/core's API client (baseUrl + CORS),
+// delete this list, the proxy, and allowedHosts.
+const dashboardProxyPrefixes = [
+  '/practice_problems',
+  '/user_practice_problem_attempts',
+  '/challenges',
+  '/challenge_responses',
+  '/challenge_response_assets',
+  '/user_lesson_reflections',
+  '/user_lesson_objective_reflections',
+  '/ai_student_podcasts',
+  '/aichat_request',
+  '/ai_gateway',
+  '/get_token',
+];
+
+const dashboardTarget = 'http://localhost-studio.code.org:3000';
+
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
@@ -93,6 +115,27 @@ export default defineConfig(({command}) => ({
   server: {
     // The dev shell imports source from apps/, outside this package's root.
     fs: {allow: [repoRoot]},
+    ...(command === 'serve'
+      ? {
+          // Browse on Rails' own hostname so the session cookie rides along;
+          // cookies ignore the port but not the host.
+          allowedHosts: ['localhost-studio.code.org'],
+          // That hostname is public DNS for 127.0.0.1; Vite's default bind
+          // can land on ::1 only.
+          host: '127.0.0.1',
+          // In msw mode the service worker answers first, so the proxy is
+          // safe to leave always on.
+          //
+          // No changeOrigin: Rails checks Origin against Host, and a
+          // rewritten Host makes every write a 422.
+          proxy: Object.fromEntries(
+            dashboardProxyPrefixes.map(prefix => [
+              prefix,
+              {target: dashboardTarget},
+            ]),
+          ),
+        }
+      : {}),
   },
   // public/ holds the MSW service worker, which only the dev shell needs.
   // Keeping it out of build mode leaves the published dist/ untouched.

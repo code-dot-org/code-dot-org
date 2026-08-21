@@ -1,4 +1,7 @@
-import {levelProgressStyle} from '@cdo/apps/templates/progress/progressStyles';
+import {
+  levelHoverClass,
+  levelProgressStyle,
+} from '@cdo/apps/templates/progress/progressStyles';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 // Semantic-token strings the live styles resolve to (see progressStyles.js).
@@ -79,6 +82,42 @@ describe('progressStyles', () => {
 
       expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
       expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
+    });
+  });
+
+  describe('levelHoverClass', () => {
+    it('treats every finished status as completed', () => {
+      [
+        LevelStatus.perfect,
+        LevelStatus.passed,
+        LevelStatus.submitted,
+        LevelStatus.free_play_complete,
+        LevelStatus.completed_assessment,
+        LevelStatus.review_accepted,
+      ].forEach(status =>
+        expect(levelHoverClass(status)).toBe('hover-completed')
+      );
+    });
+
+    it('treats an attempted level as in progress', () => {
+      expect(levelHoverClass(LevelStatus.attempted)).toBe('hover-in-progress');
+    });
+
+    it('gives a rejected review its own class', () => {
+      expect(levelHoverClass(LevelStatus.review_rejected)).toBe(
+        'hover-rejected'
+      );
+    });
+
+    it('falls back to not started for unstarted and unknown statuses', () => {
+      [
+        LevelStatus.not_tried,
+        LevelStatus.dots_disabled,
+        undefined,
+        'a status that does not exist',
+      ].forEach(status =>
+        expect(levelHoverClass(status)).toBe('hover-not-started')
+      );
     });
   });
 });
