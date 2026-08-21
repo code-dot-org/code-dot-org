@@ -260,11 +260,21 @@ export default class ConsoleManager {
     const chunk = this.queuedWrites.join('');
     this.discardQueuedWrites();
     this.awaitingWrite = true;
-    this.terminal.write(chunk, () => {
+    try {
+      this.terminal.write(chunk, () => {
+        this.awaitingWrite = false;
+        this.reportDroppedOutput();
+        this.flushQueuedWrites();
+      });
+    } catch {
+      // The terminal refuses a write outright once too much of what it has been
+      // given is still unparsed, and then never runs the callback, so this is the
+      // only place the flag can be cleared. Count the chunk as dropped and let
+      // the next write that the terminal does accept report the total; reporting
+      // it here would write again, into the same refusal.
       this.awaitingWrite = false;
-      this.reportDroppedOutput();
-      this.flushQueuedWrites();
-    });
+      this.droppedCharacters += chunk.length;
+    }
   }
 
   // Said once the console has caught up, rather than once per dropped write.

@@ -235,6 +235,25 @@ describe('ConsoleManager', () => {
     );
   });
 
+  // The terminal rejects a write outright once too much of what it already holds
+  // is unparsed, and does not run the write callback in that case.
+  it('keeps writing after the terminal rejects a write', () => {
+    const {consoleManager, terminal, writtenData, acknowledgeWrites} =
+      stalledTerminal();
+    terminal.write.mockImplementationOnce(() => {
+      throw new Error('write data discarded');
+    });
+
+    consoleManager.writeConsoleMessage('rejected output');
+    consoleManager.writeConsoleMessage('later output');
+    acknowledgeWrites();
+
+    expect(writtenData()).toContain('later output\r\n');
+    expect(writtenData().join('')).toContain(
+      'characters of output were dropped'
+    );
+  });
+
   it('does not write output that was cleared before it was sent', () => {
     const {consoleManager, writtenData, acknowledgeWrites} = stalledTerminal();
     consoleManager.writeConsoleMessage('first line');
