@@ -37,7 +37,6 @@ const RULES = [
   'score',
   'patrol',
   'attachment',
-  'healthBar',
   'writing',
   'progress',
   'camera',

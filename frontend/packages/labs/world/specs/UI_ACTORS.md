@@ -163,28 +163,35 @@ Progress is written to be read beside it.
 It is not a HEALTH bar. What fills it is a project's own handler, and health is
 one of the things that might — which is what the fourth stock actor is.
 
-**Health Bar** is a Progress Bar that elects two more traits, exactly as a
-Button is a Label that elects one. Its picture is the Progress Bar's picture,
-shared rather than copied, because a health bar IS a progress bar: what makes
-it a health one is where its number comes from, and that is a trait rather than
-a drawing.
-
-The trait is `rules/healthBar`, a rule for one step that owns no state and
-draws nothing. It requires Health, Progress and Attachment and says the one
-thing none of them can say alone — my fraction is my subject's health out of
-its full. Putting it in any of the three would make that one know about the
-others, and each is a mechanic a game may want without them.
-
-It reads the ATTACHMENT rather than carrying a subject of its own, so
+**Health Bar** carries the actor it is about and asks that actor as it paints.
+One property, one picture, no rule and no trait:
 
 ```
-set attached to of ⟨any ⟨Health Bar⟩⟩ to ⟨this actor⟩
+set subject of ⟨any ⟨Health Bar⟩⟩ to ⟨this actor⟩
 ```
 
-both puts it over that actor and makes it show that actor's health. One
-intention, one property; two would be two chances to disagree, and a bar
-hovering over one thing while reporting another is a bug nobody would think to
-look for.
+WHERE IT SITS IS A SEPARATE QUESTION, and that is the design. A bar in the
+corner of the screen shows the player and must not follow the player; a bar
+over an enemy's head must. So position is `rules/attachment`'s, and a floating
+bar is this actor with `Attached` elected too. Two intentions, two properties.
+
+**It took three tries, and the wrong turns are the useful part.** The first
+elected `Shows Progress` and came with a rule whose only job was a step writing
+`health ÷ most health` into `fraction` every frame, so that the Progress Bar's
+drawing could be shared — one drawing bought with a rule, a trait, a step and a
+paragraph explaining why any of it was there. The second dropped the rule and
+read the health straight from the drawing, which a drawing may do now, but used
+`attached to` as the subject and so could not be a HUD.
+
+The third keeps `subject` as its OWN property, which was impossible until an
+actor's own properties were exported and offered in every file's palette. That
+is the change worth remembering: an actor may keep a name for something without
+a rule, and a rule is for what is SHARED. `text` is Writing's because a Label
+and a Button and a Score all mean the same thing by it; `subject` is the bar's
+because whose health it shows is nobody else's idea.
+
+What is duplicated is ten blocks of rectangle. If a third kind of bar arrives,
+that is when a seam is worth building; two is not.
 
 ## The interface layer, restated rather than re-derived
 

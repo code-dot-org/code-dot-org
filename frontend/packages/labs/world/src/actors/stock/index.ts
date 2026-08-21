@@ -58,11 +58,16 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     id: 'healthBar',
     name: 'Health Bar',
     description:
-      'A Progress Bar that fills itself in. Point it at an actor with “attached to” and it rides above that actor and shows that actor’s health — one line for both.',
-    // The three it ELECTS. `Health` is not among them because the bar has no
-    // health — its subject does — and the `Health Bar` rule names Health as
-    // its own dependency, which the import follows.
-    requires: ['Progress', 'Attachment', 'Health Bar'],
+      'A bar that fills itself in. Point it at an actor with “subject” and it shows how much health that actor has left. Put it in the corner for a HUD, or add “Attached” to have it ride above the actor it is about.',
+    // HEALTH, and nothing else. It elects no trait at all: the actor it is
+    // about is a property of its own, and the health it reads belongs to that
+    // actor. Health still has to arrive with it — a `world_get_Health_…` block
+    // in a project without Health is one the palette never mints, and the file
+    // fails to generate with nothing on screen saying why.
+    //
+    // NOT Attachment: where a bar sits is the project's business. One over an
+    // enemy's head elects it too; one in the corner of the screen does not.
+    requires: ['Health'],
     contents: healthBarActor,
   },
   {

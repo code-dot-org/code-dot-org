@@ -39,26 +39,57 @@ describe('every stock actor', () => {
     }
   });
 
-  it('declares no properties of its own', () => {
-    // The whole reason `Shows Text` is a rule's trait. An actor-own property's
-    // getter and setter live in that file's palette and nowhere else, so a
-    // world could never say `set text of ⟨any ⟨Label⟩⟩` — which is the entire
-    // point of having a label (specs/UI_ACTORS.md).
+  it('borrows a property when a rule owns the idea, and keeps its own when none does', () => {
+    // An actor MAY keep its own now — they are exported, and every actor's are
+    // in every file's palette, so `set subject of ⟨any ⟨Health Bar⟩⟩` is a
+    // sentence a world can say (blockly/ownProperties).
+    //
+    // What decides which is whether the idea is shared. `text` is Writing's
+    // because a Label and a Score and a Button all mean the same thing by it;
+    // `subject` is the Health Bar's because "whose health this bar is about"
+    // is nobody else's idea and a rule for it would be a rule for one
+    // property.
+    const own = (id: string, contents: string) =>
+      (parseActorOwnMeta(`actors/${id}`, contents)?.properties ?? []).map(
+        property => property.id,
+      );
+
     for (const actor of STOCK_ACTORS) {
-      const meta = parseActorOwnMeta(`actors/${actor.id}`, actor.contents);
-      expect(meta?.properties ?? []).toEqual([]);
+      expect(own(actor.id, actor.contents)).toEqual(
+        actor.id === 'healthBar' ? ['subject'] : [],
+      );
     }
   });
 
   it('names the rules it needs, and needs the ones it names', () => {
-    // A `use trait` row naming a rule the project does not hold fails at
-    // compile time with nothing on screen to say why, so the import brings
-    // them — and this is what keeps the list honest.
+    // A block naming a rule the project does not hold fails at compile time
+    // with nothing on screen to say why, so the import brings them — and this
+    // is what keeps the list honest.
+    //
+    // ELECTED AND READ, which used to be only elected. The Health Bar has no
+    // health of its own: it reads its subject's, so `Health` appears in its
+    // blocks and in no `use trait` row of its own. A list that only counted
+    // traits would have said it needed nothing but Attachment, and the file
+    // would not have generated in a project without Health.
+    const slug = (name: string) => name.replace(/[^A-Za-z0-9]/g, '');
     for (const actor of STOCK_ACTORS) {
       const elected = [...actor.contents.matchAll(/"TRAIT": "([^#]+)#/g)].map(
-        match => match[1],
+        match => slug(match[1]),
       );
-      expect([...new Set(elected)].sort()).toEqual([...actor.requires].sort());
+      // An OWN property's block is keyed by the actor's module path rather
+      // than by a rule, so it names no dependency — `actors/healthBar` is not
+      // a rule the import has to bring.
+      const mine = slug(`Actors ${actor.id}`);
+      const read = [
+        ...actor.contents.matchAll(
+          /"type": "world_(?:get|set|do|query)_([A-Za-z0-9]+)_/g,
+        ),
+      ]
+        .map(match => match[1])
+        .filter(name => name.toLowerCase() !== mine.toLowerCase());
+      const named = [...new Set([...elected, ...read])].sort();
+
+      expect(named).toEqual([...actor.requires].map(slug).sort());
     }
   });
 });
@@ -123,29 +154,47 @@ describe('Progress Bar', () => {
 });
 
 describe('Health Bar', () => {
-  it('is a Progress Bar that elects two more traits', () => {
-    // The Button's shape one shelf along, and the same demonstration: a health
-    // bar IS a progress bar, and what makes it a health one is where its
-    // number comes from. That is a trait, not a drawing.
+  it('asks for the health rather than being told it', () => {
+    // The design, and the reason it is not a Progress Bar with a trait bolted
+    // on. An earlier one elected `Shows Progress` and came with a rule whose
+    // only job was a step writing `health ÷ most health` into `fraction` every
+    // frame — one shared drawing bought with a rule, a trait, a step and a
+    // paragraph. A drawing may ask the world now, so this one asks.
     const drawn = types(healthBarActor);
-    const shared = types(progressBarActor);
 
-    expect(drawn.filter(type => type === 'world_draw_rectangle')).toEqual(
-      shared.filter(type => type === 'world_draw_rectangle'),
-    );
-    expect(healthBarActor).toContain('Progress#ShowsProgressTrait');
-    expect(healthBarActor).toContain('Attachment#AttachedTrait');
-    expect(healthBarActor).toContain('Health Bar#ShowsHealthTrait');
+    expect(drawn).toContain('world_get_ActorsHealthBar_SubjectProperty');
+    expect(drawn).toContain('world_get_Health_HealthProperty');
+    expect(drawn).toContain('world_get_Health_MostHealthProperty');
+    expect(healthBarActor).not.toContain('Progress#');
   });
 
-  it('draws exactly what a Progress Bar draws, from the same blocks', () => {
-    // Not "the same shape" — the same source. A second copy of the track, the
-    // fill and the expression between them would be somewhere for the two to
-    // disagree, and the whole claim here is that they cannot.
-    const drawingOf = (contents: string) =>
-      contents.slice(contents.indexOf('world_define_drawing'));
+  it('says whose health it is about, and nothing about where it sits', () => {
+    // TWO INTENTIONS, TWO PROPERTIES. An earlier version read the actor
+    // Attachment pointed it at, so one line said both — which is right for a
+    // bar over an enemy's head and impossible for the commonest health bar
+    // there is, the one in the corner of the screen that shows the player and
+    // must not follow the player.
+    //
+    // A bar has no health of its own either: the thing it is pointed at does.
+    // Electing Health here would give the BAR three hit points.
+    const elected = [...healthBarActor.matchAll(/"TRAIT": "([^"]+)"/g)].map(
+      match => match[1],
+    );
 
-    expect(drawingOf(healthBarActor)).toBe(drawingOf(progressBarActor));
+    // None at all: `subject` is its own property, and the health belongs to
+    // whatever that property names.
+    expect(elected).toEqual([]);
+    // Attachment is a project's to add, and composes: set both and it is a
+    // bar that rides above the actor it is about.
+    expect(healthBarActor).not.toContain('Attachment#');
+  });
+
+  it('draws an empty bar rather than throwing at nobody', () => {
+    // Attached to nothing is the state of every one of these until something
+    // points it, and a drawing runs on every paint — so the guard is
+    // load-bearing rather than defensive.
+    expect(types(healthBarActor)).toContain('world_any_actors');
+    expect(types(healthBarActor)).toContain('logic_ternary');
   });
 });
 

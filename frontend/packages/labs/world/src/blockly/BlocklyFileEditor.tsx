@@ -87,11 +87,11 @@ import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
 import {redrawLiveDropdowns} from './moduleOptions';
 import {setModuleOpener, setModuleOpeningOffered} from './openModule';
-import {parseActorOwnMeta, parseWorldOwnMeta} from './ownProperties';
 import {projectPlacements} from './placementRequests';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {
   projectActorOptions,
+  projectOwnMetas,
   projectRuleMetas,
   projectWorldOptions,
 } from './projectModules';
@@ -786,20 +786,17 @@ export const BlocklyFileEditor = ({
   // rebuilt when the sources change, which is exactly when a declaration was
   // added or renamed. A file mid-edit parses to undefined and leaves the blocks
   // it already had alone, rather than dropping them while a name is half typed.
-  const ownActorProperties = useMemo(() => {
-    const path = filePath(currentSources.source, fileId);
-    // `files` is keyed by the path WITH its extension; the module path is that
-    // path without one, which is what a ref names.
-    if (path?.endsWith('.actor')) {
-      return parseActorOwnMeta(path.replace(/\.actor$/, ''), files[path] ?? '');
-    }
-    // A WORLD's own state, which is the same declaration one scope up and
-    // scoped the same way — to the file that declares it (specs/WORLD_STATE.md).
-    if (path?.endsWith('.world')) {
-      return parseWorldOwnMeta(path.replace(/\.world$/, ''), files[path] ?? '');
-    }
-    return undefined;
-  }, [currentSources.source, fileId, files]);
+  //
+  // EVERY actor's and world's, not only the open file's. A property declared
+  // in `healthBar.actor` exists to be set from somewhere ELSE — that is what a
+  // property on an interface element is for — so its block has to be in the
+  // palette of the file doing the setting. Scoped to the open file, a world
+  // had no way to say `set subject of ⟨any ⟨Health Bar⟩⟩`.
+  //
+  // They land in the Actor category rather than one of their own
+  // (`withOwnProperties`), which is what keeps this from becoming a category
+  // per actor.
+  const ownActorProperties = useMemo(() => projectOwnMetas(files), [files]);
 
   // What kind of file this is, where that decides what may be placed in it — a
   // world event's hat needs a `world` at module scope and only a `.world` has
@@ -817,7 +814,7 @@ export const BlocklyFileEditor = ({
     const palette = buildDomainPalette(projectRuleMetas(files), {
       ownRuleModule,
       fileKind,
-      ownProperties: ownActorProperties ? [ownActorProperties] : [],
+      ownProperties: ownActorProperties,
     });
     // …and a definition for every block type the project's files hold that
     // this palette does not mint. That is what a deleted rule leaves behind,

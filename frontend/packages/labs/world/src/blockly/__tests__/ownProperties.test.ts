@@ -203,7 +203,7 @@ describe('an actor’s own properties', () => {
     )!;
 
     expect(ownPropertyDeclarations(meta)).toBe(
-      'const LastFiredProperty = actor.defineProperty("last_fired", "number", 0, {"name":"last fired"});\n',
+      'export const LastFiredProperty = actor.defineProperty("last_fired", "number", 0, {"name":"last fired"});\n',
     );
   });
 
@@ -218,15 +218,27 @@ describe('an actor’s own properties', () => {
     expect(ownPropertyDeclarations(meta)).toContain('"readonly":true');
   });
 
-  it('exports nothing', () => {
-    // Their scope is this file, so an export would offer a name no other module
-    // is allowed to ask for.
+  it('exports them, so another file may name one', () => {
+    // It exported nothing at first, on the grounds that their scope was the
+    // declaring file — and the note said widening would be additive. It was.
+    //
+    // A property on an interface element exists to be set from somewhere else:
+    // the stock Health Bar carries the actor it is about, and a world says
+    // `set subject of ⟨any ⟨Health Bar⟩⟩ to ⟨this actor⟩`. Module-local, that
+    // generated an import of a name the module did not offer and the project
+    // would not compile.
+    //
+    // What stays narrow is the DECLARATION — only the actor's own file may say
+    // `define property`. Who reads and writes one afterwards is a different
+    // question, and a rule's property already answers it this way.
     const meta = parseActorOwnMeta(
       'actors/player',
       actorFile('Player', [property({NAME: 'ammo'})]),
     )!;
 
-    expect(ownPropertyDeclarations(meta)).not.toContain('export');
+    expect(ownPropertyDeclarations(meta)).toContain(
+      'export const AmmoProperty =',
+    );
   });
 
   it('declares nothing when the actor declares nothing', () => {
@@ -318,5 +330,31 @@ describe('the blocks an own property mints', () => {
       'world_get_ActorsPlayer_MaxHealthProperty',
       'world_set_ActorsPlayer_MaxHealthProperty',
     ]);
+  });
+
+  it('is reachable from another file, which is what exporting is for', () => {
+    // THE WHOLE POINT, end to end. A bar carries the actor it is about; a
+    // world says so. Before this the world imported `SubjectProperty` from a
+    // module that declared it `const`, and the project would not compile —
+    // which is why `subject` briefly lived in a rule of its own, for no reason
+    // except that a rule's properties were reachable and an actor's were not.
+    const bar = actorFile('Health Bar', [
+      property({NAME: 'subject', TYPE: 'actor'}),
+    ]);
+    const meta = parseActorOwnMeta('actors/healthBar', bar)!;
+
+    // The module offers the name…
+    expect(ownPropertyDeclarations(meta)).toContain(
+      'export const SubjectProperty =',
+    );
+    // …under the block type another file's palette mints for it, which carries
+    // the module path rather than a rule name.
+    expect(meta.properties[0].ref).toEqual(
+      expect.objectContaining({
+        exportName: 'SubjectProperty',
+        modulePath: 'actors/healthBar',
+        own: true,
+      }),
+    );
   });
 });
