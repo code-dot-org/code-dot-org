@@ -16,7 +16,21 @@ export interface CurrentUserDefinition {
   mute_music: boolean;
   sort_by_family_name: boolean;
   is_lti?: boolean;
+  is_levelbuilder?: boolean;
   is_verified_instructor: boolean;
+  /**
+   * Whether this user may use AI chat tools, and how far.
+   *
+   * `SharedConstants::AI_CHAT_ACCESS_LEVELS` — `enabled`, `disabled` or
+   * `essential_only`. Spelled out rather than imported so this package does not
+   * depend on an AI one; `@code-dot-org/aitutor` declares the same union and
+   * the two match structurally.
+   *
+   * OPTIONAL, and absent means no: whether every endpoint that populates this
+   * slice carries the field has not been confirmed, and the safe reading of
+   * silence is the restrictive one (see `areAiChatToolsEnabled`).
+   */
+  ai_chat_access_level?: 'enabled' | 'disabled' | 'essential_only';
   under_13: boolean;
   over_21: boolean;
   child_account_compliance_state?: string;
@@ -47,7 +61,10 @@ export interface CurrentUserState {
   isBackgroundMusicMuted: boolean;
   isSortedByFamilyName: boolean;
   isLti?: boolean;
+  isLevelbuilder?: boolean;
   isTeacher?: boolean;
+  /** See {@link CurrentUserDefinition.ai_chat_access_level}. */
+  aiChatAccessLevel?: 'enabled' | 'disabled' | 'essential_only';
   under13: boolean;
   over21: boolean;
   childAccountComplianceState?: string;
@@ -144,6 +161,8 @@ const currentUserSlice = createSlice({
         created_at,
         has_completed_ai_differentiation_welcome,
         sharing_disabled,
+        is_levelbuilder,
+        ai_chat_access_level,
       } = action.payload;
 
       state.userId = id;
@@ -174,6 +193,8 @@ const currentUserSlice = createSlice({
       state.inSection = in_section;
       state.userCreatedAt = created_at;
       state.userSharingDisabled = sharing_disabled;
+      state.isLevelbuilder = is_levelbuilder;
+      state.aiChatAccessLevel = ai_chat_access_level;
     },
     setMuteMusic: (state, action: PayloadAction<boolean>) => {
       state.isBackgroundMusicMuted = action.payload;
