@@ -271,6 +271,9 @@ export async function start(): Promise<void> {
   ) {
     const thumbnails: Record<string, string> = {};
     const schemas: Record<string, ActorSchema> = {};
+    // What a kind's picture is, for the kinds that declare one. See
+    // `ThumbnailsReadyMessage.sizes` for why a sprite-backed one is absent.
+    const sizes: Record<string, {width: number; height: number}> = {};
     const placements: Record<string, string> = {};
     try {
       const mod: ThumbnailManifest = await import(/* @vite-ignore */ moduleUrl);
@@ -321,6 +324,12 @@ export async function start(): Promise<void> {
           const type = typeOf.get(state.actor);
           if (type) {
             thumbnails[type] = await pictureOf(state);
+            if (state.drawing) {
+              sizes[type] = {
+                width: state.drawing.width,
+                height: state.drawing.height,
+              };
+            }
           }
         }
       }
@@ -338,6 +347,7 @@ export async function start(): Promise<void> {
       id,
       thumbnails,
       schemas,
+      sizes,
       placements,
     });
   }

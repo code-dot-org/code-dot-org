@@ -49,6 +49,10 @@ import {
 } from './mapModel';
 
 const DRAW_SIZE = 32;
+// The smallest an actor can be to click, in world pixels. A drawn actor may be
+// a few pixels tall — a health bar is eight — and its own size is too small a
+// target to find with a pointer.
+const MIN_HIT_SIZE = 14;
 
 // Camera limits. `FIT_PADDING` leaves a margin so the bordered map doesn't touch
 // the pane edges at the default (reset) zoom.
@@ -102,6 +106,13 @@ export interface MapStageProps {
   thumbnails: Record<string, string>;
   /** Editable property schemas by type — what the inspector offers. */
   schemas: Record<string, ActorSchema>;
+  /**
+   * How big each kind is in the world, for the kinds that declare a picture.
+   *
+   * Absent for a sprite-backed one, which falls back to the nominal tile — see
+   * `ThumbnailsReadyMessage.sizes`.
+   */
+  sizes?: Record<string, {width: number; height: number}>;
   isReadOnly: boolean;
 }
 
@@ -120,6 +131,7 @@ export const MapStage = ({
   placing,
   thumbnails,
   schemas,
+  sizes,
   isReadOnly,
 }: MapStageProps) => {
   // The document as this stage currently has it. A drag mutates it live for
@@ -296,6 +308,23 @@ export const MapStage = ({
 
   // Topmost placed actor under a world point (actors draw in array order, so
   // search back-to-front); its DRAW_SIZE box is the hit area.
+  /**
+   * How big a kind is drawn, in world pixels.
+   *
+   * A drawing DECLARES its canvas and that canvas is the actor's size, so the
+   * map can draw it at the size the game will — a 64-by-8 bar two tiles wide
+   * beside a 32-pixel player, rather than fitted into the same square as
+   * everything else.
+   *
+   * The nominal tile for a kind that does not say. A sprite's size is its
+   * image's and the image is not measured in the sandbox, so those still
+   * normalise — right for the 32-pixel sprites everything ships with, wrong
+   * for any other, and a measurement to add rather than a shape to guess
+   * (`ThumbnailsReadyMessage.sizes`).
+   */
+  const sizeOf = (type: string): {width: number; height: number} =>
+    sizes?.[type] ?? {width: DRAW_SIZE, height: DRAW_SIZE};
+
   const hitTest = (world: Vec): Placement | undefined => {
     const actors = mapRef.current.actors;
     for (let i = actors.length - 1; i >= 0; i--) {
@@ -315,7 +344,14 @@ export const MapStage = ({
       const sin = Math.sin(a);
       const lx = (dx * cos + dy * sin) / (t.scale.x || 1);
       const ly = (-dx * sin + dy * cos) / (t.scale.y || 1);
-      if (Math.abs(lx) <= DRAW_SIZE / 2 && Math.abs(ly) <= DRAW_SIZE / 2) {
+      // The drawn size, but never so thin it cannot be hit. A health bar is
+      // eight pixels tall and would otherwise be an eight-pixel target; the
+      // OUTLINE still hugs the true shape, because that is what the actor is —
+      // only the reach is generous.
+      const box = sizeOf(actors[i].type);
+      const hw = Math.max(box.width, MIN_HIT_SIZE) / 2;
+      const hh = Math.max(box.height, MIN_HIT_SIZE) / 2;
+      if (Math.abs(lx) <= hw && Math.abs(ly) <= hh) {
         return actors[i];
       }
     }
@@ -983,18 +1019,25 @@ export const MapStage = ({
       ctx.rotate(t.rotation * DEG2RAD);
       ctx.scale(t.scale.x, t.scale.y);
       const image = (placement && images[placement]) ?? images[type];
+      const box = sizeOf(type);
       if (image) {
-        // At the thumbnail's own aspect, not stretched to a square. A sprite's
-        // thumbnail IS square, so nothing changes for one; a drawn actor's is
-        // its canvas's shape, and squaring it drew a 96 by 24 Label as a blob
-        // rather than as the strip it will be (`drawingThumbnail`).
+        // At the kind's DECLARED size when it has one, so a 64-by-8 bar is two
+        // tiles wide beside a 32-pixel player rather than fitted into the same
+        // square as everything else. A kind that declares none falls back to
+        // the nominal tile, at the thumbnail's own aspect — a sprite's
+        // thumbnail is square, so nothing changes for one, and a drawn actor
+        // without a size would still not be squashed (`drawingThumbnail`).
         const longest = Math.max(image.width, image.height) || 1;
-        const width = (image.width / longest) * DRAW_SIZE;
-        const height = (image.height / longest) * DRAW_SIZE;
+        const width = sizes?.[type]
+          ? box.width
+          : (image.width / longest) * DRAW_SIZE;
+        const height = sizes?.[type]
+          ? box.height
+          : (image.height / longest) * DRAW_SIZE;
         ctx.drawImage(image, -width / 2, -height / 2, width, height);
       } else {
         ctx.fillStyle = '#33cc66';
-        ctx.fillRect(-DRAW_SIZE / 2, -DRAW_SIZE / 2, DRAW_SIZE, DRAW_SIZE);
+        ctx.fillRect(-box.width / 2, -box.height / 2, box.width, box.height);
       }
       ctx.restore();
       ctx.globalAlpha = 1;
@@ -1003,15 +1046,18 @@ export const MapStage = ({
     // sprite uses (translate → skew → rotate), so it tracks the visible shape.
     // Scale is folded into the box size, not the context, so the stroke stays a
     // constant 2 screen px at any zoom.
-    const strokeActorBox = (t: Transform, color: string) => {
+    const strokeActorBox = (t: Transform, color: string, type: string) => {
       ctx.save();
       ctx.translate(t.pos.x, t.pos.y);
       if (t.skew) {
         ctx.transform(1, Math.tan(t.skew * DEG2RAD), 0, 1, 0, 0);
       }
       ctx.rotate(t.rotation * DEG2RAD);
-      const hw = (DRAW_SIZE * Math.abs(t.scale.x)) / 2 + 3 / view.scale;
-      const hh = (DRAW_SIZE * Math.abs(t.scale.y)) / 2 + 3 / view.scale;
+      // The kind's own size, so an outline hugs what is drawn rather than the
+      // square everything used to be — and the same box the hit test uses.
+      const box = sizeOf(type);
+      const hw = (box.width * Math.abs(t.scale.x)) / 2 + 3 / view.scale;
+      const hh = (box.height * Math.abs(t.scale.y)) / 2 + 3 / view.scale;
       ctx.strokeStyle = color;
       ctx.lineWidth = 2 / view.scale;
       ctx.strokeRect(-hw, -hh, hw * 2, hh * 2);
@@ -1054,7 +1100,9 @@ export const MapStage = ({
       ctx.restore();
     };
     let selectedTransform: Transform | null = null;
+    let selectedType = '';
     let hoveredTransform: Transform | null = null;
+    let hoveredType = '';
     const transformById = new Map<string, Transform>();
     for (const actor of map.actors) {
       if (!positionOf(actor)) {
@@ -1065,9 +1113,11 @@ export const MapStage = ({
       transformById.set(actor.id, t);
       if (actor.id === selectedId) {
         selectedTransform = t;
+        selectedType = actor.type;
       }
       if (actor.id === hoveredId) {
         hoveredTransform = t;
+        hoveredType = actor.type;
       }
     }
     // Hover highlight (a lighter outline), drawn under the selection outline and
@@ -1076,7 +1126,11 @@ export const MapStage = ({
       // While POINTING a reference, the hover says what the click will choose
       // rather than what it will select — so it wears the reference colour,
       // which is the colour the line to it will be.
-      strokeActorBox(hoveredTransform, picking ? REFERENCE : HOVER);
+      strokeActorBox(
+        hoveredTransform,
+        picking ? REFERENCE : HOVER,
+        hoveredType,
+      );
     }
     // What the selected actor POINTS AT, before its own outline so that an
     // actor which is both selected and referenced reads as selected.
@@ -1090,12 +1144,16 @@ export const MapStage = ({
         if (!target) {
           continue; // named, but nowhere on the canvas to point at
         }
-        strokeActorBox(target, REFERENCE);
+        strokeActorBox(
+          target,
+          REFERENCE,
+          map.actors.find(one => one.id === link.targetId)?.type ?? '',
+        );
         strokeLink(selectedTransform.pos, target.pos, link.name);
       }
     }
     if (selectedTransform) {
-      strokeActorBox(selectedTransform, SELECT);
+      strokeActorBox(selectedTransform, SELECT, selectedType);
     }
     if (selected && hover) {
       drawSprite(
@@ -1113,6 +1171,7 @@ export const MapStage = ({
     selected,
     selectedId,
     hoveredId,
+    sizes,
     // The links are read through the schema, so a schema arriving from the
     // sandbox after the first paint has to repaint.
     selectedActor,

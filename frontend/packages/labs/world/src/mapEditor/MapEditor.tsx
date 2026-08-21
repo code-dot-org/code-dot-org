@@ -68,6 +68,10 @@ export const MapEditor = ({
 
   const [thumbnails, setThumbnails] = useState<Record<string, string>>({});
   const [schemas, setSchemas] = useState<Record<string, ActorSchema>>({});
+  /** How big each kind is, for the kinds that declare a picture. */
+  const [sizes, setSizes] = useState<
+    Record<string, {width: number; height: number}>
+  >({});
   // The picker template to PLACE; null is the stage's select mode.
   const [selected, setSelected] = useState<string | null>(null);
 
@@ -92,6 +96,7 @@ export const MapEditor = ({
       if (alive) {
         setThumbnails(prev => ({...prev, ...info.thumbnails}));
         setSchemas(prev => ({...prev, ...info.schemas}));
+        setSizes(prev => ({...prev, ...info.sizes}));
       }
     });
     return () => {
@@ -240,6 +245,7 @@ export const MapEditor = ({
         placing={selected}
         thumbnails={thumbnails}
         schemas={schemas}
+        sizes={sizes}
         isReadOnly={isReadOnly}
       />
     </div>

@@ -22,6 +22,8 @@ import {SANDBOX_SURFACE_DIR} from '../worldConfig';
 export interface ActorInfo {
   thumbnails: Record<string, string>;
   schemas: Record<string, ActorSchema>;
+  /** How big each kind is, for the kinds that declare a picture. */
+  sizes: Record<string, {width: number; height: number}>;
   /** One per requested placement key — see `PlacementRequest`. */
   placements: Record<string, string>;
 }
@@ -83,6 +85,7 @@ export class WorldPreviewManager {
         this.pending.get(data.id)?.resolve({
           thumbnails: data.thumbnails,
           schemas: data.schemas,
+          sizes: data.sizes ?? {},
           placements: data.placements ?? {},
         });
         this.pending.delete(data.id);
