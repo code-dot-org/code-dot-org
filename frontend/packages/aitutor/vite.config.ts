@@ -6,6 +6,7 @@ import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 import {tutorKeyProxy} from './src/dev/keyProxy';
+import {stripModuleFromCssName} from './vite/cssAssetNames';
 
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
@@ -14,6 +15,7 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
+    assetFileNames: stripModuleFromCssName,
   };
 }
 
