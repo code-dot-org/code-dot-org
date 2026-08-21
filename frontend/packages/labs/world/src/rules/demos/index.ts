@@ -7,6 +7,7 @@
 import {getDemoBaseUrl} from '../../runtime/worldConfig';
 
 import {arrowsDemo} from './arrows';
+import {attachmentDemo} from './attachment';
 import {boundsDemo} from './bounds';
 import {
   cameraConfinedDemo,
@@ -43,6 +44,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   health: healthDemo,
   steering: steeringDemo,
   patrol: patrolDemo,
+  attachment: attachmentDemo,
   time: timeDemo,
   writing: writingDemo,
   score: scoreDemo,

@@ -36,6 +36,7 @@ import {registerProjectRules} from '../../../blockly/ruleRegistry';
 import * as WorldLab from '../../../engine';
 import {
   arrowsRule,
+  attachmentRule,
   boundsRule,
   cameraConfinedRule,
   cameraDeadzoneRule,
@@ -161,6 +162,7 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   'rules/jump': jumpRule,
   'rules/steering': steeringRule,
   'rules/patrol': patrolRule,
+  'rules/attachment': attachmentRule,
   'rules/collect': collectRule,
   'rules/health': healthRule,
   'rules/time': timeRule,

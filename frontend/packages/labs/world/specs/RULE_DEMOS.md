@@ -225,7 +225,7 @@ comfortable with anyway (see above).
 5. ✅ **The rest of the obvious ones**, once the shape has survived contact
    with three: Physics, Solid Bodies, Collection, Health, Steering, Gravity,
    Drag, Expiry, Screen Wrap, Boundaries, Time, Shooting, Writing, Jumping,
-   Scoring, Patrol, and the four camera rules.
+   Scoring, Patrol, Attachment, and the four camera rules.
 
    **Two of them needed a handler, which is the point.** Time raises "timer
    fires" and Shooting raises "fires", and neither owns what happens next — so
