@@ -43,92 +43,107 @@ const TRACK = '#301820';
 const BAR = '#e04040';
 
 /**
- * `subject of this actor` — the actor this bar is about, wherever it sits.
+ * The `define property` this bar keeps: the actor it is about.
  *
- * The block type carries the module path, so this is only right because an
- * import always lands at `actors/healthBar` (`importStockActor`).
+ * Exported with the drawing below, because a world may define this actor for
+ * ITSELF rather than importing the file (fixtures/platformerSingle) and the
+ * two must declare the same property or they are two different bars.
  */
-const subject = () => ({
-  block: {
-    type: 'world_get_ActorsHealthBar_SubjectProperty',
-    inputs: {ACTOR: me()},
+export const HEALTH_BAR_SUBJECT = {
+  type: 'world_rule_property',
+  fields: {
+    TYPE: 'actor',
+    ACCESS: 'writable',
+    NAME: 'subject',
+    DEFAULT: '',
   },
-});
+};
 
-/** `⟨name⟩ of ⟨the subject⟩`, for a property the Health rule declares. */
-const healthOf = (exportName: string) => ({
-  block: {
-    type: `world_get_Health_${exportName}`,
-    inputs: {ACTOR: subject()},
-  },
-});
-
-export const healthBarActor = actorFile(
-  'Health Bar',
-  [
-    {
-      type: 'world_rule_property',
-      fields: {
-        TYPE: 'actor',
-        ACCESS: 'writable',
-        NAME: 'subject',
-        DEFAULT: '',
-      },
-    },
-    showAs('bar'),
-  ],
+/**
+ * The picture, given the block type that reads `subject` off this actor.
+ *
+ * PARAMETERISED, because an own property's block type carries the path of the
+ * file that declared it (`blockly/ownProperties`) — `ActorsHealthBar_…` for the
+ * imported file, and `WorldsMain…_…` for a world that defines the bar itself.
+ * Everything else about the picture is the same, and a second copy of the
+ * track, the fill and the expression between them would be somewhere for the
+ * two to disagree.
+ */
+/** The two rectangles, given the two readers the drawing was built with. */
+const HEALTH_BAR_COMMANDS = (
+  subject: () => object,
+  healthOf: (exportName: string) => object,
+): object[] => [
+  // The track first and whole, so what is left of it IS the empty part.
+  fill({shadow: {type: 'colour_picker', fields: {COLOUR: TRACK}}}),
+  rectangle(0, 0, WIDTH, HEIGHT),
+  fill({shadow: {type: 'colour_picker', fields: {COLOUR: BAR}}}),
   {
-    width: WIDTH,
-    height: HEIGHT,
-    commands: [
-      // The track first and whole, so what is left of it IS the empty part.
-      fill({shadow: {type: 'colour_picker', fields: {COLOUR: TRACK}}}),
-      rectangle(0, 0, WIDTH, HEIGHT),
-      fill({shadow: {type: 'colour_picker', fields: {COLOUR: BAR}}}),
-      {
-        type: 'world_draw_rectangle',
-        inputs: {
-          X: num(0),
-          Y: num(0),
-          // Attached to nobody, or to something whose full is nothing: an
-          // empty bar. Both are states a learner can reach, and `health of
-          // ⟨nothing⟩` would throw inside a routine that runs on every paint.
-          WIDTH: {
-            block: {
-              type: 'math_arithmetic',
-              fields: {OP: 'MULTIPLY'},
-              inputs: {
-                A: num(WIDTH),
-                B: {
-                  block: {
-                    type: 'logic_ternary',
-                    inputs: {
-                      IF: {
-                        block: {
-                          type: 'world_any_actors',
-                          inputs: {LIST: subject()},
-                        },
-                      },
-                      THEN: {
-                        block: {
-                          type: 'math_arithmetic',
-                          fields: {OP: 'DIVIDE'},
-                          inputs: {
-                            A: healthOf('HealthProperty'),
-                            B: healthOf('MostHealthProperty'),
-                          },
-                        },
-                      },
-                      ELSE: {block: {type: 'math_number', fields: {NUM: 0}}},
+    type: 'world_draw_rectangle',
+    inputs: {
+      X: num(0),
+      Y: num(0),
+      // Attached to nobody, or to something whose full is nothing: an
+      // empty bar. Both are states a learner can reach, and `health of
+      // ⟨nothing⟩` would throw inside a routine that runs on every paint.
+      WIDTH: {
+        block: {
+          type: 'math_arithmetic',
+          fields: {OP: 'MULTIPLY'},
+          inputs: {
+            A: num(WIDTH),
+            B: {
+              block: {
+                type: 'logic_ternary',
+                inputs: {
+                  IF: {
+                    block: {
+                      type: 'world_any_actors',
+                      inputs: {LIST: subject()},
                     },
                   },
+                  THEN: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'DIVIDE'},
+                      inputs: {
+                        A: healthOf('HealthProperty'),
+                        B: healthOf('MostHealthProperty'),
+                      },
+                    },
+                  },
+                  ELSE: {block: {type: 'math_number', fields: {NUM: 0}}},
                 },
               },
             },
           },
-          HEIGHT: num(HEIGHT),
         },
       },
-    ],
+      HEIGHT: num(HEIGHT),
+    },
   },
+];
+
+export const healthBarDrawing = (subjectGetType: string) => {
+  const subject = () => ({
+    block: {type: subjectGetType, inputs: {ACTOR: me()}},
+  });
+  /** `⟨name⟩ of ⟨the subject⟩`, for a property the Health rule declares. */
+  const healthOf = (exportName: string) => ({
+    block: {
+      type: `world_get_Health_${exportName}`,
+      inputs: {ACTOR: subject()},
+    },
+  });
+  return {
+    width: WIDTH,
+    height: HEIGHT,
+    commands: HEALTH_BAR_COMMANDS(subject, healthOf),
+  };
+};
+
+export const healthBarActor = actorFile(
+  'Health Bar',
+  [HEALTH_BAR_SUBJECT, showAs('bar')],
+  healthBarDrawing('world_get_ActorsHealthBar_SubjectProperty'),
 );
