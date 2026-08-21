@@ -9,18 +9,13 @@ import {Terminal} from '@xterm/xterm';
 const CLEAR_DISPLAY = '\x1b[2J\x1b[3J\x1b[H';
 
 // xterm.js parses writes on a timer rather than on the spot, and throws
-// "write data discarded, use flow control to avoid losing data" once 50MB of
-// unparsed writes have piled up -- which a program printing in a tight loop
-// reaches in seconds. So hand xterm one chunk at a time and hold the rest here:
+// an error once 50MB of unparsed writes have piled up.
+// Hand xterm one chunk at a time and hold the rest here:
 // nothing of ours is outstanding at the moment we call write(), so its limit
 // stays out of reach. Output arriving while this queue is full is counted and
 // dropped; a single oversized write, such as a plot, still goes through whole.
 const MAX_QUEUED_BYTES = 4_000_000;
 
-// Lines are kept so they can be replayed into a re-created console and read by
-// the AI tutor, so a program that prints without stopping would otherwise grow
-// this without bound. Trimming in batches keeps the cost of a long run
-// proportional to the number of lines printed.
 const MAX_TERMINAL_LINES = 5000;
 const TERMINAL_LINES_TRIM_BATCH = 1000;
 
@@ -80,8 +75,6 @@ export default class ConsoleManager {
 
   public clearTerminalLines() {
     this.terminalLines = [];
-    // Output still waiting here is output the user just asked to be rid of, and
-    // dropping it means a clear stays instant however flooded the console is.
     this.discardQueuedWrites();
     this.droppedCharacters = 0;
     this.writeToTerminal(CLEAR_DISPLAY);
@@ -226,12 +219,10 @@ export default class ConsoleManager {
     this.executeTerminalLinesListeners();
   }
 
-  // Every write to the terminal goes through here. Data is held until the
-  // terminal reports that the previous chunk has been parsed, which is what
-  // keeps xterm's own backlog -- and its 50MB ceiling -- out of the picture.
+  // Writes are held until the terminal reports that the previous chunk has been parsed.
   private writeToTerminal(data: string) {
     // A write larger than the whole allowance is still let through when nothing
-    // is queued, so that one big thing, such as a plot, is never half-drawn.
+    // is queued, so that one big item, such as a plot, is never half-drawn.
     if (
       this.queuedBytes > 0 &&
       this.queuedBytes + data.length > MAX_QUEUED_BYTES
