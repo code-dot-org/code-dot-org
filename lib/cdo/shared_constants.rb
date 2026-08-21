@@ -1157,16 +1157,14 @@ module SharedConstants
     'fonts.gstatic.com'
   ].freeze
 
-  # Patterns for YouTube video IDs and embed URLs, shared with the frontend so
-  # both sides match the same URLs. Stored as pattern strings, not regexes, so
-  # Ruby and JavaScript can each build their own.
-  # A YouTube video ID is 11 characters and excludes characters that are
-  # invalid in a URL segment.
-  # Ref: https://developers.google.com/youtube/iframe_api_reference (events|onError|2)
-  # An embed URL looks like https://www.youtube-nocookie.com/embed/VIDEO_ID
-  # Ref: https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds
+  # Pattern strings, not regexes, so Ruby and JavaScript can each build their
+  # own from the same source.
   YOUTUBE_PATTERNS = {
+    # YouTube video IDs must be 11 characters and contain no invalid characters, such as exclamation points or asterisks.
+    # Ref: https://developers.google.com/youtube/iframe_api_reference (events|onError|2)
     id: '[^!*"&?/ ]{11}',
+    # YouTube embed URL has the following format: http://www.youtube-nocookie.com/embed/VIDEO_ID
+    # Ref: https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds
     embed_url: '(?:https?:)?//(?:www\.)?youtube(?:education|-nocookie)?\.com/embed/(?<id>[^!*"&?/ ]{11})'
   }.freeze
 
