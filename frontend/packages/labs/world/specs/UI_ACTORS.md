@@ -31,11 +31,21 @@ layer ⟨fixed to the screen⟩` (`blockly/layers`, `world_layer_fixed`) compile
    which writes this exact worked example). A HUD is a layer. A layer's contents
    are actors.
 2. **The map editor already edits an actor's per-instance properties, including
-   strings.** `describeActor` walks every trait an actor carries and reports
-   each writable actor-scoped property; `MapStage`'s inspector renders a field
-   per property and writes `properties[ownerId][propId]` onto the placement;
-   `editScalar` already has a string branch. Tapper's `Spin: {spin_speed: 40 +
+   strings.** `describeActor` walks every trait an actor carries — AND the
+   properties the kind declared for itself, which belong to no trait
+   (`Actor.ownProperties`) — and reports each writable actor-scoped one;
+   `MapStage`'s inspector renders a field per property and writes
+   `properties[ownerId][propId]` onto the placement; `editScalar` already has a
+   string branch.
+
+   The own ones were missing at first, and missing in two places at once: the
+   walk was over traits, and so was the lookup a placement's overrides are
+   resolved against at `loadMap`. So a property an actor kept for itself could
+   not be offered by the inspector and would have been dropped in silence if
+   it had been. The stock Health Bar's `subject` is exactly that property, and
+   is what found it. Tapper's `Spin: {spin_speed: 40 +
 index * 35}` is that mechanism in the tree today, on nine coins.
+
 3. **Placement is placement.** Dragging a score into the top-left corner is the
    gesture that drags a coin onto a platform, on a canvas that already draws the
    dashed rectangle of what the player will actually see.

@@ -647,6 +647,27 @@ export class WorldBuilder {
     world.growToFit(map);
     const lookup = this.propertyLookup(world);
     const added: Actor[] = [];
+    /**
+     * Placements by the id the MAP gave them, and the actor-typed values
+     * waiting on one.
+     *
+     * A map is JSON and JSON holds no actors, so a placement names another by
+     * its entry id and this resolves it — in a SECOND PASS, once every entry
+     * exists, which is what lets a reference point forwards or in a circle.
+     *
+     * Ordering the entries so references came first would have done for the
+     * forward case and cost two things it should not: placement order is DRAW
+     * order within a layer (`renderSnapshot` walks `actorList` as it was
+     * filled), and a cycle has no order at all.
+     *
+     * By ENTRY id, not by the actor's. `resolveInstanceId` disambiguates a
+     * taken id to `base#2`, and maps stack — a level and a HUD — so looking a
+     * name up in the world could find an actor from another map or the wrong
+     * one of two. What a placement means by "Player" is the Player in THIS
+     * map.
+     */
+    const placed = new Map<string, Actor>();
+    const deferred: Array<[Actor, Property, string]> = [];
     for (const entry of map.actors) {
       const builder = this.types.get(entry.type);
       if (!builder) {
@@ -661,12 +682,32 @@ export class WorldBuilder {
         this.resolveInstanceId(world, builder, entry.id),
         entry.type,
       );
+      // The world's rules and traits, plus THIS actor's own — which belong to
+      // no rule and so are in no world-wide lookup. A placement carrying one
+      // used to be dropped here in silence: the inspector could not offer it
+      // either, so nothing ever wrote one and nothing noticed.
+      const own = new Map<string, Property>(
+        actor
+          .ownProperties()
+          .map(property => [`${property.ownerId}.${property.id}`, property]),
+      );
+      if (entry.id) {
+        placed.set(entry.id, actor);
+      }
       for (const [ownerId, props] of Object.entries(entry.properties ?? {})) {
         for (const [propId, value] of Object.entries(props)) {
-          const property = lookup.get(`${ownerId}.${propId}`);
-          if (property && actor.hasProperty(property)) {
-            actor.set(property, value);
+          const key = `${ownerId}.${propId}`;
+          const property = own.get(key) ?? lookup.get(key);
+          if (!property || !actor.hasProperty(property)) {
+            continue;
           }
+          // An actor-typed value is the id of another entry, and the actor it
+          // names may not exist yet. Held over rather than resolved here.
+          if (property.type === 'actor' && typeof value === 'string') {
+            deferred.push([actor, property, value]);
+            continue;
+          }
+          actor.set(property, value);
         }
       }
       // The kind's own per-frame steps (`World.useActorKind`). Here rather
@@ -675,6 +716,18 @@ export class WorldBuilder {
       world.useActorKind(entry.type, builder);
       world.addActor(actor, layer);
       added.push(actor);
+    }
+    // Every entry exists now, so the references can be followed.
+    //
+    // One that names nothing is LEFT UNSET, which is what a map already does
+    // with a property it cannot resolve. A placement may point at one that has
+    // since been deleted, and refusing to load the map over it would take a
+    // whole level away for a bar pointed at a missing enemy.
+    for (const [actor, property, id] of deferred) {
+      const target = placed.get(id);
+      if (target) {
+        actor.set(property, target as never);
+      }
     }
     return added;
   }

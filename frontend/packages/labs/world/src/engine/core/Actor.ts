@@ -221,6 +221,17 @@ export class Actor {
     return this.traited.traits();
   }
 
+  /**
+   * The properties this KIND declared for itself, which belong to no trait.
+   *
+   * Anything asking what an actor may be configured with has to ask both this
+   * and {@link traits} — `define property` invents no trait, so a walk over
+   * traits alone leaves these out (see `Traited.ownProperties`).
+   */
+  ownProperties(): readonly Property[] {
+    return this.traited.ownProperties();
+  }
+
   /** The effects played on this actor's image, in application order. */
   effects(): readonly AppliedEffectSpec[] {
     return this.appliedEffects;

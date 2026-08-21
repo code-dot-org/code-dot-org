@@ -189,3 +189,27 @@ export const withProperty = (
 });
 
 /** Centre the whole map in a `w`×`h` pane with a margin (the reset view). */
+
+/**
+ * The placements an actor-typed property may be pointed at.
+ *
+ * A map is JSON and JSON holds no actors, so what a placement stores is
+ * another placement's ID, resolved by `WorldBuilder.loadMap` once every entry
+ * exists. This is the list the inspector offers, and it is the one thing the
+ * sandbox cannot supply: it introspects actor KINDS, and which of them a
+ * particular map holds is the editor's to know.
+ *
+ * ITSELF EXCLUDED. An actor pointed at itself is a thing a learner could pick
+ * and nothing sensible would come of it — a health bar showing its own health,
+ * a rider attached to where it already is.
+ *
+ * An entry with no id is left out because there would be nothing to store: a
+ * reference is a name, and an anonymous placement has none.
+ */
+export const placementChoices = (
+  actors: readonly Placement[],
+  selfId: string | undefined,
+): Array<{value: string; text: string}> =>
+  actors
+    .filter(actor => actor.id && actor.id !== selfId)
+    .map(actor => ({value: actor.id as string, text: actor.id as string}));

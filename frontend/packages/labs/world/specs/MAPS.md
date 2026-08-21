@@ -187,6 +187,36 @@ step 2 — is now back to one caller. The extraction still pays for itself in
 `MapEditor` being 125 lines instead of 1103, but it is fair to say the second
 caller it was made for no longer exists.
 
+## An actor-typed property: a placement naming another
+
+A placement may hold a REFERENCE to another placement — the stock Health Bar's
+`subject` is one, and it is what lets a bar be pointed at the player in the map
+editor rather than in a block.
+
+A map is JSON and JSON holds no actors, so what is stored is the other entry's
+ID and `WorldBuilder.loadMap` resolves it. In a SECOND PASS, once every entry
+exists, which is what lets a reference point forwards or in a circle.
+
+**Ordering the entries instead would have been cheaper to describe and wrong
+twice.** Placement order is DRAW order within a layer — `renderSnapshot` walks
+`actorList` as it was filled — so sorting a map to put references first would
+silently restack anything sharing one. And a cycle has no order to be put in.
+
+**By ENTRY id, not by the actor's.** `resolveInstanceId` disambiguates a taken
+id to `base#2`, and maps stack — a level and a HUD — so looking a name up in
+the world could find an actor from another map, or the wrong one of two. What a
+placement means by "Player" is the Player in THIS map.
+
+**A reference to nothing is left unset.** A placement may point at one that has
+since been deleted, and refusing the map over it would take a whole level away
+for a bar pointed at a missing enemy. That is what a map already does with a
+property it cannot resolve. Rewriting references when a placement is deleted or
+renamed — the way `renameRule` rewrites rule names — is the better answer and is
+not built.
+
+A SET of actors is still not offered: `contacts` is what a rule works out at
+runtime and there is nothing sensible to pick.
+
 ## 5. What blocks this: a world-local actor has no schema
 
 The inspector is driven by `schemas[type]`, which the sandbox builds by

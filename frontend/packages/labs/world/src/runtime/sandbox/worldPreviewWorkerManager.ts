@@ -71,24 +71,34 @@ function describeActor(
   uploadedSprites: string[],
 ): ActorSchema {
   const groups: ActorSchema = [];
-  for (const trait of actor.traits()) {
-    const props = Object.values(trait.properties)
+  /** What a placement may be given, out of one owner's properties. */
+  const configurable = (properties: readonly Property[]) =>
+    properties
       .filter(
         property =>
           !property.readonly &&
           property.scope === 'actor' &&
-          // Actors are not a value a placement can be given in a panel: they
-          // are what a rule works out at runtime (specs/COLLISION.md), and
-          // there is no field that would edit one.
+          // A SET of actors is not a value a placement can be given: it is
+          // what a rule works out at runtime (specs/COLLISION.md), and there
+          // is nothing sensible to pick.
+          //
+          // ONE actor is, and used to be refused alongside it on the grounds
+          // that "there is no field that would edit one". That was true of a
+          // contact set and false of the stock Health Bar's `subject`, which
+          // is exactly a value a placement should be given. The field is a
+          // dropdown of the map's other placements, and what it stores is an
+          // ID that `loadMap` resolves in a second pass.
           property.type !== 'actors' &&
-          property.type !== 'actor' &&
           !DEFERRED_PROPS.has(`${property.ownerId}.${property.id}`),
       )
       .map(property => {
         // The actor template's configured value (what an unset placement
         // inherits) — e.g. the player's `playerBob` animation — not the
         // property's static default.
-        const base = actor.get(property);
+        // An actor-typed property holds a REFERENCE in a map, and the
+        // template's value is an actor value rather than an id — there is no
+        // sensible inherited default, so it starts unset.
+        const base = property.type === 'actor' ? '' : actor.get(property);
         const options = optionsFor(
           `${property.ownerId}.${property.id}`,
           animationIds,
@@ -106,9 +116,23 @@ function describeActor(
           ...(options ? {options} : {}),
         };
       });
+  for (const trait of actor.traits()) {
+    const props = configurable(Object.values(trait.properties) as Property[]);
     if (props.length) {
       groups.push({trait: trait.id, traitName: trait.name, props});
     }
+  }
+  // …and the ones this KIND declared for itself, which belong to no trait and
+  // so appeared in no group. A `define property` invents none on purpose
+  // (`ActorBuilder.defineProperty`), so a walk over traits alone left them out
+  // of the inspector entirely — the stock Health Bar's `subject` was a
+  // property nothing in the map editor could see.
+  //
+  // Under the ACTOR's own name rather than a trait's, which is what they are:
+  // an actor's own state, grouped as one thing the way a trait's is.
+  const own = configurable(actor.ownProperties());
+  if (own.length) {
+    groups.push({trait: actor.type, traitName: actor.name, props: own});
   }
   return groups;
 }

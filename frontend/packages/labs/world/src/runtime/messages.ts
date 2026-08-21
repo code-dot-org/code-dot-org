@@ -219,7 +219,20 @@ export interface PropertySchema {
   propId: string;
   /** Localizable label. */
   name: string;
-  type: 'number' | 'boolean' | 'string' | 'color' | 'vector' | 'point';
+  /**
+   * `actor` is a REFERENCE: the value stored is another placement's id, and
+   * `WorldBuilder.loadMap` resolves it once every entry exists. The inspector
+   * offers the map's own placements, which is the one list the sandbox cannot
+   * supply — it knows the actor kinds, not what a particular map holds.
+   */
+  type:
+    | 'number'
+    | 'boolean'
+    | 'string'
+    | 'color'
+    | 'vector'
+    | 'point'
+    | 'actor';
   /** Default value; a vector/point is `{x, y}`. */
   default: unknown;
   /**

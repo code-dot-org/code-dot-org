@@ -35,6 +35,7 @@ import {
   asVec,
   extentOf,
   positionOf,
+  placementChoices,
   propValue,
   transformOf,
   withProperty,
@@ -495,6 +496,32 @@ export const MapStage = ({
           disabled={isReadOnly}
           onChange={(event: ChangeEvent<HTMLInputElement>) =>
             toggleBool(prop, event.target.checked)
+          }
+        />
+      );
+    }
+    if (prop.type === 'actor') {
+      // A REFERENCE to another placement, stored as its id and resolved by
+      // `WorldBuilder.loadMap` once every entry exists. The list is the map's
+      // own placements, which is the one thing the sandbox cannot supply: it
+      // introspects actor KINDS, and which of them a particular map holds is
+      // this editor's to know.
+      //
+      // Itself excluded, and anonymous placements with it — see
+      // `placementChoices`, which is where that list is decided.
+      const others = placementChoices(mapRef.current.actors, actor.id);
+      return (
+        <SimpleDropdown
+          key={fieldKey(prop)}
+          name={`prop-${fieldKey(prop)}`}
+          labelText={capitalize(prop.name)}
+          size="s"
+          className={styles.inspectorDropdown}
+          disabled={isReadOnly}
+          selectedValue={draft[fieldKey(prop)] ?? ''}
+          items={[{value: '', text: '(none)'}, ...others]}
+          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+            selectOption(prop, event.target.value)
           }
         />
       );

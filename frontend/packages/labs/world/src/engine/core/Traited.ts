@@ -225,4 +225,25 @@ export class Traited {
   traits(): readonly Trait[] {
     return this.membership.items();
   }
+
+  /**
+   * The properties this thing has that no trait declared — its OWN.
+   *
+   * `traits()` is how everything else asks what an actor carries, and it
+   * cannot answer for these: a `define property` invents no trait, on purpose
+   * (`ActorBuilder.defineProperty`). So anything walking traits to find out
+   * what may be configured missed them entirely — the map editor's inspector
+   * showed none of them, and a map placement carrying one was dropped in
+   * silence at load.
+   *
+   * Read off the STORE rather than kept in a second list, because the store is
+   * already the answer to "what does this have a slot for": an own property's
+   * slot comes from the override every instance is built with, and `ownerKind`
+   * is what says a property came from a builder rather than a trait.
+   */
+  ownProperties(): readonly Property[] {
+    return [...this.store.keys()].filter(
+      property => property.ownerKind !== undefined,
+    );
+  }
 }

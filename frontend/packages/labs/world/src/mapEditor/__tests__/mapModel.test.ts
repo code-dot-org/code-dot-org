@@ -15,7 +15,9 @@ import {
   MAX_MAP_TILES,
   MIN_MAP_TILES,
   parseMap,
+  placementChoices,
   type MapDoc,
+  type Placement,
 } from '../mapModel';
 
 const doc = (map: Partial<MapDoc>): string =>
@@ -102,5 +104,40 @@ describe('extentOf', () => {
       w: VIEWPORT_TILES * TILE_SIZE,
       h: VIEWPORT_TILES * TILE_SIZE,
     });
+  });
+});
+
+describe('placementChoices', () => {
+  // What an actor-typed property may be pointed at. A map is JSON and JSON
+  // holds no actors, so a placement stores another placement's ID and
+  // `WorldBuilder.loadMap` resolves it once every entry exists.
+
+  const at = (id?: string) => ({type: 'actors/coin', id}) as Placement;
+
+  it('offers the other placements', () => {
+    expect(
+      placementChoices([at('Meter'), at('Hero'), at('Coin1')], 'Meter'),
+    ).toEqual([
+      {value: 'Hero', text: 'Hero'},
+      {value: 'Coin1', text: 'Coin1'},
+    ]);
+  });
+
+  it('never offers the placement itself', () => {
+    // A health bar showing its own health, a rider attached to where it
+    // already is: things a learner could pick and nothing comes of.
+    expect(placementChoices([at('Meter')], 'Meter')).toEqual([]);
+  });
+
+  it('leaves out an anonymous placement, which has no name to store', () => {
+    expect(placementChoices([at(), at('Hero')], 'Meter')).toEqual([
+      {value: 'Hero', text: 'Hero'},
+    ]);
+  });
+
+  it('offers everything when nothing is selected', () => {
+    expect(placementChoices([at('Hero')], undefined)).toEqual([
+      {value: 'Hero', text: 'Hero'},
+    ]);
   });
 });
