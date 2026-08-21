@@ -6,6 +6,8 @@ import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
+import {tutorKeyProxy} from '@code-dot-org/aitutor/dev';
+
 /**
  * Rename emitted CSS-module assets from `*.module.css` to plain `*.css` (and
  * lib-inject-css's injected `import` follows the rename). This matters when
@@ -38,6 +40,12 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
 
 export default defineConfig(({command}) => ({
   plugins: [
+    // The standalone harness's optional live AI Tutor: with ANTHROPIC_API_KEY
+    // in the environment it serves `/__tutor/complete` from THIS dev server's
+    // node process, so the key never reaches the browser. `apply: 'serve'` on
+    // the plugin means a build never runs it, and no key means it does not
+    // mount at all (`@code-dot-org/aitutor` specs/PLAN.md §7).
+    tutorKeyProxy(),
     react(),
     // Emit each chunk's CSS as a real `.css` file and inject an `import` for it
     // at the top of that chunk's JS, so styles load automatically when a module

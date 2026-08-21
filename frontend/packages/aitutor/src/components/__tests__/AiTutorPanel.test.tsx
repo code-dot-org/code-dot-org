@@ -379,3 +379,60 @@ describe('when chat is disabled', () => {
     );
   });
 });
+
+describe('an answer with nothing in it', () => {
+  // The worst outcome there is: an empty assistant turn draws no bubble, so
+  // the student watches the waiting dots stop and sees no reply appear, with
+  // no way to tell whether the tutor is thinking, broken, or ignoring them.
+
+  it('says something rather than nothing', async () => {
+    show(fromTurns([{reply: {text: ''}}]));
+
+    await ask('hello?');
+
+    expect(await screen.findByText(strings.responseError)).toBeInTheDocument();
+  });
+
+  it('treats whitespace as nothing', async () => {
+    show(fromTurns([{reply: {text: '   \n  '}}]));
+
+    await ask('hello?');
+
+    expect(await screen.findByText(strings.responseError)).toBeInTheDocument();
+  });
+
+  it('allows an empty explanation when there are files to show', async () => {
+    // A proposal's chips and buttons ARE the answer; the prose beside them may
+    // reasonably be empty.
+    const proposing = fromTurns([
+      {
+        reply: {
+          structured: {
+            answer: {
+              answerType: 'buildJavaScript',
+              explanation: '',
+              code: [{filename: 'main.js', sourceCode: 'x'}],
+            },
+          },
+        },
+      },
+    ]);
+    const store = configureStore({reducer: {aiTutor: slice.reducer}});
+    render(
+      <Provider store={store}>
+        <TutorProvider
+          transport={proposing}
+          proposals={{answerTypes: ['buildJavaScript'], fileTypes: ['js']}}
+        >
+          <AiTutorPanel />
+        </TutorProvider>
+      </Provider>,
+    );
+    const user = userEvent.setup();
+    await user.type(screen.getByRole('textbox'), 'do it');
+    await user.click(screen.getByRole('button', {name: strings.submit}));
+
+    expect(await screen.findByText('main.js')).toBeInTheDocument();
+    expect(screen.queryByText(strings.responseError)).toBeNull();
+  });
+});

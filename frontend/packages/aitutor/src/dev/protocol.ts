@@ -56,4 +56,18 @@ export interface ProxyReply {
    * should not be re-deriving "was that a rate limit" from a message string.
    */
   failure?: string;
+
+  /**
+   * What the provider SAID about the failure, verbatim.
+   *
+   * For the developer, never for the student: the panel picks its copy from
+   * `failure` and never reads this. It exists because the alternative is what
+   * this proxy did at first — map a 401 to "there was an error getting a
+   * response" and drop the body explaining that the key was invalid, leaving
+   * the one person who could fix it with less information than curl would
+   * have given them.
+   *
+   * Dev-only by construction: nothing but the dev proxy ever sets it.
+   */
+  detail?: string;
 }

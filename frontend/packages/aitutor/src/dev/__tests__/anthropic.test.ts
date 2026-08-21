@@ -124,13 +124,105 @@ describe('askAnthropic', () => {
   it('turns a refused request into a failed turn, not an exception', async () => {
     // The panel renders a failed turn; it has nothing to do with an HTTP
     // status.
+    // Deliberately a response with no `text` at all: a refused request must
+    // resolve however odd the thing that refused it looks.
     const fetchImpl = vi.fn().mockResolvedValue({ok: false, status: 429});
 
     await expect(
       askAnthropic(ask(), 'k', 'm', fetchImpl as never),
-    ).resolves.toEqual({
+    ).resolves.toMatchObject({
       text: '',
       failure: AiInteractionStatus.MODEL_RATE_LIMITED,
+    });
+  });
+});
+
+describe('what a failure says', () => {
+  it('carries the provider’s own words back for the terminal', async () => {
+    // Without this the developer who owns the key is told "there was an error
+    // getting a response" and nothing else — less than curl would have said.
+    const fetchImpl = vi.fn().mockResolvedValue({
+      ok: false,
+      status: 401,
+      text: () => Promise.resolve('{"error":{"message":"invalid x-api-key"}}'),
+    });
+
+    const reply = await askAnthropic(
+      ask(),
+      'sk-wrong',
+      'm',
+      fetchImpl as never,
+    );
+
+    expect(reply.failure).toBe(AiInteractionStatus.ERROR);
+    expect(reply.detail).toContain('401');
+    expect(reply.detail).toContain('invalid x-api-key');
+  });
+
+  it('still names the status when the body cannot be read', async () => {
+    const fetchImpl = vi.fn().mockResolvedValue({
+      ok: false,
+      status: 429,
+      text: () => Promise.reject(new Error('stream closed')),
+    });
+
+    const reply = await askAnthropic(ask(), 'k', 'm', fetchImpl as never);
+
+    expect(reply.failure).toBe(AiInteractionStatus.MODEL_RATE_LIMITED);
+    expect(reply.detail).toBe('429');
+  });
+
+  it('says nothing extra when the turn succeeded', () => {
+    expect(
+      anthropicReply({content: [{type: 'text', text: 'ok'}]}).detail,
+    ).toBeUndefined();
+  });
+});
+
+describe('running out of room', () => {
+  // The failure that produced the worst symptom there is: the model is still
+  // writing when it hits the ceiling, its tool call stops mid-object, and the
+  // turn reads as EMPTY rather than as broken — so the panel showed the
+  // waiting dots stopping and then nothing at all.
+
+  it('names a truncated answer instead of returning an empty one', () => {
+    const reply = anthropicReply({
+      stop_reason: 'max_tokens',
+      content: [{type: 'tool_use', name: 'respond', input: {answer: {}}}],
+    });
+
+    expect(reply.failure).toBe(AiInteractionStatus.USER_INPUT_TOO_LARGE);
+    expect(reply.detail).toContain('max_tokens');
+    expect(reply.structured).toBeUndefined();
+  });
+
+  it('says nothing about a turn that finished', () => {
+    const reply = anthropicReply({
+      stop_reason: 'tool_use',
+      content: [{type: 'tool_use', name: 'respond', input: {answer: {a: 1}}}],
+    });
+
+    expect(reply.failure).toBeUndefined();
+    expect(reply.structured).toEqual({answer: {a: 1}});
+  });
+
+  it('reads a real tool-call reply, which carries no text block at all', () => {
+    // The shape a schema-constrained request actually comes back as. If this
+    // is misread the answer is empty, which is how the silence happened.
+    const reply = anthropicReply({
+      stop_reason: 'tool_use',
+      content: [
+        {
+          type: 'tool_use',
+          name: 'respond',
+          input: {answer: {answerType: 'hint', explanation: 'try a loop'}},
+        },
+      ],
+    });
+
+    expect(reply.text).toBe('');
+    expect(reply.structured).toEqual({
+      answer: {answerType: 'hint', explanation: 'try a loop'},
     });
   });
 });

@@ -101,15 +101,38 @@ export const tutorKeyProxy = (options: KeyProxyOptions = {}): Plugin => {
               apiKey as string,
               body.model ?? model,
             );
+            // The panel gets a status it has copy for; the terminal gets what
+            // the provider actually said, because the developer who owns the
+            // key is the only person who can act on it.
+            if (reply.detail) {
+              server.config.logger.error(
+                `AI Tutor proxy: ${envVar} request failed — ${reply.detail}`,
+              );
+            } else if (!reply.text && reply.structured === undefined) {
+              // A 200 with nothing in it. The panel now shows an error rather
+              // than nothing at all, but only the terminal can say WHY —
+              // usually a model that answered in a block shape this proxy does
+              // not read, or a schema the provider rejected silently.
+              server.config.logger.warn(
+                'AI Tutor proxy: the model answered with no text and no tool ' +
+                  'call. Set TUTOR_DEBUG=1 to log the whole response.',
+              );
+            }
+            if (process.env.TUTOR_DEBUG) {
+              server.config.logger.info(
+                `AI Tutor proxy: ${JSON.stringify(reply).slice(0, 2000)}`,
+              );
+            }
             response.end(JSON.stringify(reply));
           } catch (error) {
             // A 200 carrying a failure, not a 500: the panel renders a failed
             // turn and has nothing to do with an HTTP status. The message goes
             // to the terminal, where the developer who owns the key is looking.
-            server.config.logger.error(
-              `AI Tutor proxy: ${(error as Error).message}`,
+            const message = (error as Error).message;
+            server.config.logger.error(`AI Tutor proxy: ${message}`);
+            response.end(
+              JSON.stringify({text: '', failure: 'error', detail: message}),
             );
-            response.end(JSON.stringify({text: '', failure: 'error'}));
           }
         })();
       });
