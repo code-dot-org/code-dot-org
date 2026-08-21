@@ -10,8 +10,8 @@
     "link_title": "End of Lesson Survey ",
     "url": "https://form.jotform.com/262170765959167",
     "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End of Lesson Survey](https://form.jotform.com/262164695629166).",
-    "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCode.org takes your privacy seriously. Your responses will be kept **anonymous**."
+    "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCodeAI takes your privacy seriously. Your responses will be kept **anonymous**."
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-12T19:56:44.517+00:00\",\"changed\":[\"cloned from \\\"aif-y2-logic-based-ai-lesson2-survey-2026\\\"\"],\"cloned_from\":\"aif-y2-logic-based-ai-lesson2-survey-2026\"},{\"changed_at\":\"2026-08-12 19:56:46 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-12T19:56:44.517+00:00\",\"changed\":[\"cloned from \\\"aif-y2-logic-based-ai-lesson2-survey-2026\\\"\"],\"cloned_from\":\"aif-y2-logic-based-ai-lesson2-survey-2026\"},{\"changed_at\":\"2026-08-12 19:56:46 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-20 17:58:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </ExternalLink>

@@ -299,6 +299,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const disabledState = useAiChatDisabledState({
     appName: levelProperties.appName,
+    clientType: AiChatClientTypes.AI_CHAT_LAB,
+    selectedModelId: modelParameters.selectedModelId,
     isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
     hasSubmittedPredictResponse,
   });

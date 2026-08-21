@@ -1,0 +1,184 @@
+// Styles for the Tutor+ project page: the side panel (AssessmentPanel),
+// the work area (ProjectStage), the details footer (ProjectDetailsCard),
+// and the page frame with its top bar (ProjectView).
+
+// --- Side panel (AI assessment / feedback) ---
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 360px;
+  border-right: 1px solid var(--border-neutral-primary);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 8px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+
+.panelContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.panelSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionLabelRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionLabel {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+  color: var(--text-info-primary-fixed);
+}
+
+// "Shown to / Not shown to" visibility tag on the teacher's panel sections.
+.visibilityTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  padding: 0 6px;
+  background-color: var(--background-neutral-tertiary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-sm);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+  color: var(--text-neutral-secondary);
+}
+
+// --- Feedback chat card ---
+
+.chatCard {
+  overflow: hidden;
+  border-radius: var(--shape-md);
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background-color: var(--background-info-strong);
+}
+
+.chatAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--background-neutral-white-fixed);
+  border-radius: var(--shape-round);
+
+  img {
+    width: 30px;
+    height: 20px;
+  }
+}
+
+.chatMeta {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-neutral-white-fixed);
+}
+
+.chatAuthor {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.chatTimestamp {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.chatBody {
+  padding: 16px;
+  background-color: var(--background-neutral-secondary);
+  font-size: 12px;
+  line-height: 18px;
+
+  p {
+    margin: 0;
+  }
+}
+
+// --- Rubric (teacher only) ---
+
+.rubricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid transparent;
+  border-radius: var(--shape-md);
+  font-size: 12px;
+  line-height: 18px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.rubricItemAssigned {
+  border-color: var(--border-accent-pink-primary);
+}
+
+.rubricLevelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 20px;
+}
+
+.rubricLevel {
+  font-weight: 600;
+}
+
+.assignedTag {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 6px;
+  background-color: var(--background-accent-pink-light);
+  border: 1px solid var(--border-accent-pink-mid);
+  border-radius: var(--shape-sm);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+  color: var(--text-accent-pink-secondary);
+}

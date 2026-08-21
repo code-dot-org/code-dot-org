@@ -247,7 +247,7 @@ export const oceansCourseFixtures: MockRoute[] = [
         videoKey: 'oceans_machine_learning',
         displayName: 'Video: Machine Learning',
         levelData: {
-          src: 'https://www.youtube-nocookie.com/embed/KHbwOetbmbs/',
+          src: 'https://www.youtube-nocookie.com/embed/KHbwOetbmbs/?autoplay=0&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=KHbwOetbmbs&wmode=transparent',
           key: 'oceans_machine_learning',
           name: 'Machine Learning',
           download:
@@ -282,7 +282,7 @@ export const oceansCourseFixtures: MockRoute[] = [
         videoKey: 'oceans_training_data',
         displayName: 'Video: Training Data',
         levelData: {
-          src: 'https://www.youtube-nocookie.com/embed/x2mRoFNm22g/',
+          src: 'https://www.youtube-nocookie.com/embed/x2mRoFNm22g/?autoplay=0&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=x2mRoFNm22g&wmode=transparent',
           key: 'oceans_training_data',
           name: 'Training Data',
           download:
@@ -305,7 +305,7 @@ export const oceansCourseFixtures: MockRoute[] = [
         videoKey: 'oceans_societal_implications',
         displayName: 'Video: Societal Implications',
         levelData: {
-          src: 'https://www.youtube-nocookie.com/embed/ng4c1g3COfs/',
+          src: 'https://www.youtube-nocookie.com/embed/ng4c1g3COfs/?autoplay=0&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=ng4c1g3COfs&wmode=transparent',
           key: 'oceans_societal_implications',
           name: 'Societal Implications',
           download:

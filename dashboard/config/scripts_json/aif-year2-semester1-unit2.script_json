@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-19 22:24:33 UTC",
+    "serialized_at": "2026-08-20 21:51:35 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -155,12 +155,15 @@
     },
     {
       "key": "lesson-8",
-      "name": "Lesson 8",
+      "name": "Building Classifiers",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can a computer make a prediction about something it’s never seen before?**\n\nIn this lesson, students explore classification in more depth. Working as postmasters who want to know whether a day's mail will arrive late or on time, students discover the nearest neighbors algorithm: to label something new, look at the most similar examples you've already seen. They first apply the idea by hand on a single feature, then in code with multiple features. Students learn to represent a day's features as a Python dictionary, and explore how the prediction shifts as they change both the values of those features and the number of neighbors the classifier considers.",
+        "preparation": "- Print copies of the Nearest Neighbors Activity Guide (one for each student)",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can a computer make a prediction about something it’s never seen before?**\n\nIn this lesson, students explore classification in more depth. Working as postmasters who want to know whether a day's mail will arrive late or on time, students discover the nearest neighbors algorithm: to label something new, look at the most similar examples you've already seen. They first apply the idea by hand on a single feature, then in code with multiple features. Students learn to represent a day's features as a Python dictionary, and explore how the prediction shifts as they change both the values of those features and the number of neighbors the classifier considers."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -170,12 +173,15 @@
     },
     {
       "key": "lesson-9",
-      "name": "Lesson 9",
+      "name": "Testing Classifiers",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What makes one classifier better than another?**\n\nIn this lesson, students explore how to evaluate a classifier. Students consider three metrics—accuracy, recall, and precision—and compare two models that fail in different ways, discovering that the best classifier depends on the cost of each kind of mistake. Students then tune a classifier of their own, adjusting its confidence threshold to balance recall and precision in a context they choose.",
+        "preparation": "- Print copies of the Berry Picking Activity Guide (one for each student)",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What makes one classifier better than another?**\n\nIn this lesson, you'll explore how to evaluate a classifier. You'll consider three metrics—accuracy, recall, and precision—and compare two models that fail in different ways. You'll then tune a classifier of your own, adjusting its confidence threshold to balance recall and precision in a context of your choice."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -370,6 +376,90 @@
       "seeding_key": {
         "lesson_activity.key": "3aebda17-a3e5-475d-a765-c6f54540abdb",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "24808930-ab41-47f4-b557-8e2dc535491e",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24808930-ab41-47f4-b557-8e2dc535491e",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "29be8c48-0b25-4385-a9f5-70ff8dff235b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "29be8c48-0b25-4385-a9f5-70ff8dff235b",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "4410c847-36ac-4048-ad6b-2761380dae8a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4410c847-36ac-4048-ad6b-2761380dae8a",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "e9b77cf0-7079-4869-8a62-b3bbc8a57a85",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e9b77cf0-7079-4869-8a62-b3bbc8a57a85",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2"
       }
@@ -1599,6 +1689,524 @@
       }
     },
     {
+      "key": "093a8284-dfaf-49f9-9719-32ba3e4ec65e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce this lesson’s Career Journeys connection."
+      },
+      "seeding_key": {
+        "activity_section.key": "093a8284-dfaf-49f9-9719-32ba3e4ec65e",
+        "lesson_activity.key": "24808930-ab41-47f4-b557-8e2dc535491e"
+      }
+    },
+    {
+      "key": "e0efaf4a-d237-4f91-84c6-e7006385adac",
+      "position": 2,
+      "properties": {
+        "description": "We’ll see today how AI is used to make predictions about the important work of delivering mail on time.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e0efaf4a-d237-4f91-84c6-e7006385adac",
+        "lesson_activity.key": "24808930-ab41-47f4-b557-8e2dc535491e"
+      }
+    },
+    {
+      "key": "6125baf7-1280-4555-9476-2f0b82d42e53",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you know—or not know—about how mail gets delivered in your community?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Invite students’ voices and experiences into this lesson at its start. Some students may know very little about how mail gets delivered, while others may have family or family-friends who work in the postal service. If students don’t know much about how mail gets delivered, prompt them to express what they don’t know as questions: “Who delivers the mail?”, “How would I send a letter, if I wanted to?”, or “What happens if mail gets lost?” If students do know something about how mail gets delivered—maybe they know about their local postal worker, have been to a post office, or have seen a mail truck—invite them to share what they do know. Once you’ve drawn out students’ connections to mail and mail delivery, feel free to start the lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "6125baf7-1280-4555-9476-2f0b82d42e53",
+        "lesson_activity.key": "24808930-ab41-47f4-b557-8e2dc535491e"
+      }
+    },
+    {
+      "key": "363c3213-9eb0-43b8-9a36-c20a53391e94",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Through a hands-on activity, students come to see and understand the nearest neighbors classification algorithm.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Narrate the context for the Nearest Neighbors Activity Guide.",
+        "duration": "20",
+        "name": "Exploring Nearest Neighbors"
+      },
+      "seeding_key": {
+        "activity_section.key": "363c3213-9eb0-43b8-9a36-c20a53391e94",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "3015048f-36e0-453e-80a6-5ae6484c273f",
+      "position": 2,
+      "properties": {
+        "description": "Postmasters often want to know whether a day’s mail will arrive late or on time. This is an example of a *classification* problem: we need to predict a label.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3015048f-36e0-453e-80a6-5ae6484c273f",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "209111bb-5417-4435-a62a-5a716ec3fe81",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *label*."
+      },
+      "seeding_key": {
+        "activity_section.key": "209111bb-5417-4435-a62a-5a716ec3fe81",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "4cd22996-238c-43f5-861d-dde2e81c0865",
+      "position": 4,
+      "properties": {
+        "description": "In this problem, we have two possible labels: ‘Late’ or ‘On Time.’ In other classification problems, we could have more than two possible labels.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4cd22996-238c-43f5-861d-dde2e81c0865",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "1b0213c0-c3f0-4858-86c2-2eff3cb40000",
+      "position": 5,
+      "properties": {
+        "description": "To make a prediction, we can look at features: pieces of information about each day.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1b0213c0-c3f0-4858-86c2-2eff3cb40000",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "f411e183-3ddb-4708-8769-8fcf06cb3aa5",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *feature*."
+      },
+      "seeding_key": {
+        "activity_section.key": "f411e183-3ddb-4708-8769-8fcf06cb3aa5",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "dd54f842-6c02-413b-a0e4-e64037715ae7",
+      "position": 7,
+      "properties": {
+        "description": "In your activity guide, you’ll use snowfall to predict whether a day’s mail will be late or on time.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dd54f842-6c02-413b-a0e4-e64037715ae7",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "e1983f02-a672-4164-8dd7-01025773cd61",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *classifier*."
+      },
+      "seeding_key": {
+        "activity_section.key": "e1983f02-a672-4164-8dd7-01025773cd61",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "d7ec4046-776b-49a5-b570-76bf2f9efbf3",
+      "position": 9,
+      "properties": {
+        "description": "You’ll explore a specific kind of classifier today: a nearest-neighbors classifier.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d7ec4046-776b-49a5-b570-76bf2f9efbf3",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "9909a223-c397-499a-8dad-f04b0c0e5b47",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Nearest Neighbors Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Nearest Neighbors Activity Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, watch how they find neighbors. Look for students roughly measuring distance along the line to identify the closest day(s), rather than guessing from the snowfall amount alone. For Three-Nearest Neighbors, check that students take the most common label among the three closest days, rather than defaulting to the single closest. If students are stuck, ask: \"Which past day is closest to Today?\" and \"What label does that day have?\" For three neighbors, ask: \"Of the three closest days, which label shows up most often?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does a nearest neighbors classifier work? Can you think of additional features, beyond snowfall, that would help us predict whether a day’s mail will arrive on time?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Check for students’ understanding of the key ideas behind the Nearest Neighbors Activity Guide: that the nearest neighbors classification algorithm labels new data by looking at the labels of existing data with similar features. Strong responses will describe how, by finding similar data it already knows about, a computer can arrive at a prediction for data it’s never seen before. If students struggle to address how nearest neighbors works, ask them to put into words what they did in the Activity Guide. Follow up by asking students to imagine other features of a day, beyond snowfall, that might be useful for determining whether the mail will be delivered on time. Encourage students to think of things that are unexpected: significant rainfall, low visibility, slippery roads, and more. Strong ideas are both 1) measurable, and 2) likely to matter for delivering mail on time."
+      },
+      "seeding_key": {
+        "activity_section.key": "9909a223-c397-499a-8dad-f04b0c0e5b47",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "b6298d8a-47f3-41de-9240-a4b950d8bb24",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Build on students’ hands-on understanding of nearest neighbors. Introduce them to nearest neighbors with two features, and to the ways features and their values can be represented in code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce students to how to represent features and their values in programs.",
+        "duration": "15",
+        "name": "Nearest Neighbors Classification"
+      },
+      "seeding_key": {
+        "activity_section.key": "b6298d8a-47f3-41de-9240-a4b950d8bb24",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "f928ac90-4ea6-4149-9899-bd8ed83b4a4a",
+      "position": 12,
+      "properties": {
+        "description": "As you add more features, you’ll need a way to organize this data for a computer. Python offers something called a dictionary to do just that.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f928ac90-4ea6-4149-9899-bd8ed83b4a4a",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "f1e9f806-b0a8-4548-a2a5-c8b7b612d860",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Connect the visual representation of features to the Python representation of a dictionary."
+      },
+      "seeding_key": {
+        "activity_section.key": "f1e9f806-b0a8-4548-a2a5-c8b7b612d860",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "bf1f1a90-62a7-42ec-bda3-2b9a51f7a032",
+      "position": 14,
+      "properties": {
+        "description": "On the left, we see two features: snowfall and visibility. Each has their own value. On the right, we see a Python dictionary. The dictionary is called today. In Python, a dictionary is created with curly brackets: { and }. Inside the curly brackets are pairs of keys and values. The keys, on the left, represent the names of features—like snowfall and visibility. The values, on the right, represent the values of those features. As you can see, a dictionary is a common way to group related information.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bf1f1a90-62a7-42ec-bda3-2b9a51f7a032",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "fa54083c-c5bb-40f8-8cc4-e3d953439099",
+      "position": 15,
+      "properties": {
+        "progression_name": "Nearest Neighbors Classification"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa54083c-c5bb-40f8-8cc4-e3d953439099",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "bddabb83-2139-4507-a1cf-43b5956fbe4e",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1–4.\n- **Level 1:** Students choose a context in which to make predictions about whether mail will be delivered on time. They run a program that plots, in two dimensions, data about previous deliveries. They then see a nearest neighbors classifier’s prediction about whether a new date’s mail will be late or on time.\n- **Level 2:**  Students edit the values of the new date’s features, assessing how the model’s prediction changes.\n- **Level 3:**  Students change how many neighbors the nearest neighbors classifier uses to make a prediction. They try to find an optimal number of neighbors to consider.\n- **Level 4:**  Students complete a Check Your Understanding that prompts them to describe their findings from the previous levels.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students move through the levels, offer guidance in these ways:\n- **Level 1:** Check whether students can locate the model's prediction on the plot: it appears in the title and along the dashed lines connecting Today to the neighbors it used.\n- **Level 2:** Check whether students can connect changing a feature's value to the prediction changing. Prompt them to notice how moving Today toward one group of points changes which neighbors are closest.\n- **Level 3:** Look for students who assume more neighbors is always better; encourage them to try several values and notice when the prediction stays stable versus when it flips. If students are unsure what to look at, ask: \"Where does the plot show the prediction?\", \"Which points are connected to Today, and why those?\", and \"What happens to the prediction as you change the number of neighbors?\"",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 4 can be used as a formative assessment of the lesson objectives. Look for most students explaining that a nearest neighbors classifier predicts a label by finding the most similar past example(s). Also look for evidence that students have tried multiple variations on the nearest neighbors approach, changing the number of neighbors considered. If students struggle to reason about the number of neighbors, point them back to Level 3 and have them compare predictions from a small number of neighbors (e.g., 2–3), and from an (overly) large number of neighbors (e.g., 10+). Prompt them to notice that more neighbors aren’t always better: at some point, you start to lose the signal in the noise."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bddabb83-2139-4507-a1cf-43b5956fbe4e",
+        "lesson_activity.key": "8b6307b6-4f16-4bce-982a-47cbec0aa9ef"
+      }
+    },
+    {
+      "key": "6f23c1ec-a86d-43fe-9872-465d1125f931",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "6f23c1ec-a86d-43fe-9872-465d1125f931",
+        "lesson_activity.key": "29be8c48-0b25-4385-a9f5-70ff8dff235b"
+      }
+    },
+    {
+      "key": "8269fa88-066b-4312-970a-f1884816b729",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce this lesson’s Career Journeys connection."
+      },
+      "seeding_key": {
+        "activity_section.key": "8269fa88-066b-4312-970a-f1884816b729",
+        "lesson_activity.key": "4410c847-36ac-4048-ad6b-2761380dae8a"
+      }
+    },
+    {
+      "key": "032daee0-328e-44fb-b068-4e0747cf3279",
+      "position": 2,
+      "properties": {
+        "description": "Today we’re exploring how classifiers can help rangers and other naturalists better identify the plants and animals around them.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "032daee0-328e-44fb-b068-4e0747cf3279",
+        "lesson_activity.key": "4410c847-36ac-4048-ad6b-2761380dae8a"
+      }
+    },
+    {
+      "key": "21a46627-7f06-4a2d-ba7f-756dcd6a238b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What plants or animals can you recognize in your neighborhood? How can you tell what they are?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Invite students’ voices and experiences into this lesson at its start. The primary goal of this discussion is simply to understand the kinds of plants and animals students are familiar with. Strong responses will name a living thing and the features that help identify it: its color, shape, size, sounds, where it grows, etc. If students can name a plant or animal they recognize, but struggle to identify how they can tell what it is, ask them questions as if you didn’t know how to identify it yourself: “If you had to tell me how to spot one, how would you do it?” In their response, try to identify the features—color, sound, smell, etc.—that make it identifiable. Connect the discussion to the day’s lesson, which is about how we can test classifiers that identify plants and animals.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "21a46627-7f06-4a2d-ba7f-756dcd6a238b",
+        "lesson_activity.key": "4410c847-36ac-4048-ad6b-2761380dae8a"
+      }
+    },
+    {
+      "key": "ffc005b2-d46b-4aab-9177-41ccfa09be5f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Invite students to explore three different metrics with which to evaluate classifiers: accuracy, recall, and precision.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the context in which students compare classifiers, and prompt students to pick a berry.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal which berry is toxic.",
+        "duration": "20",
+        "name": "Comparing Classifiers",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students this scenario is just a classroom exercise, not real advice about berries to eat. In fact, elderberries—the berries labeled \"Not Toxic\"—are still safest when cooked, rather than eaten raw. Remind students that wild berries are difficult to identify, so as a general rule, it’s best not to eat them."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ffc005b2-d46b-4aab-9177-41ccfa09be5f",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "80141961-230f-4eaa-bc3e-55bd2b7d4ed2",
+      "position": 2,
+      "properties": {
+        "description": "A ranger has built two classifiers to help people identify toxic berries. It’ll be up to you to test them.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "80141961-230f-4eaa-bc3e-55bd2b7d4ed2",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "03613036-a695-4297-8b0c-10202b4079ff",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Berry Picking Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the first part of the Berry Picking Activity Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students fill in the accuracy rows, look for students to compare each model’s predictions (in the Model A and Model B columns) with the correct prediction (in the Actual column). If students need guidance, consider prompting them to look at one row at a time: “For this row, did Model A’s prediction match the Actual column?” Have them tally their yeses. Finally, confirm students arrive at 70% accuracy for Model A and 80% accuracy for Model B before moving on.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *accuracy*."
+      },
+      "seeding_key": {
+        "activity_section.key": "03613036-a695-4297-8b0c-10202b4079ff",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "7c786211-5206-46d5-bfbd-cbee0fe28ade",
+      "position": 4,
+      "properties": {
+        "description": "As you’ve seen, accuracy is one way to assess how well a classifier works.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7c786211-5206-46d5-bfbd-cbee0fe28ade",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "2db0b4e2-440f-45ca-96c2-b4750b36e264",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students which classifier from the Activity Guide they think is better. Students may vote for Model B, because its accuracy is higher. But as the activity continues, they may change their minds.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the rest of the Berry Picking Activity Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Keep in mind that measures of recall and precision can be more difficult to grasp than accuracy: they rely on different denominators. For recall, it’s important to ensure students look only at the model’s predictions for rows that are actually toxic (i.e., the first 5 rows) and ask how many of those the model correctly identified as toxic. For precision, it’s important students look only at the rows where the model predicted the berries to be toxic and ask how many were right. Listen for students who are looking beyond these rows, and guide them back to the definition of recall and precision.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *recall*."
+      },
+      "seeding_key": {
+        "activity_section.key": "2db0b4e2-440f-45ca-96c2-b4750b36e264",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "f2f1f31e-d29e-4867-b89e-90c5de635f35",
+      "position": 6,
+      "properties": {
+        "description": "In our activity, recall represents the proportion of actually toxic berries the model identified. That is, looking only at the berries that are actually toxic, recall is the proportion the model identified as toxic.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Check that students found Model A to have a recall of 5/5 (100%) and Model B to have a recall of 3/5 (60%). If not, step through the calculation in the Activity Guide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f2f1f31e-d29e-4867-b89e-90c5de635f35",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "1b1c92d5-d74e-4d98-9f48-647d7e1de76c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *precision*.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b1c92d5-d74e-4d98-9f48-647d7e1de76c",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "2b52a43a-1f80-4395-9ee1-b6653a5fe0e7",
+      "position": 8,
+      "properties": {
+        "description": "In our activity, precision represents the proportion of berries the model thought were toxic that were actually toxic. That is, looking only at the berries the model predicted are toxic, precision is the proportion of those predictions the model got correct.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Check that students found Model A to have a precision of 5/8 (63%) and Model B to have a precision of 3/3 (100%). If not, step through the calculation in the Activity Guide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2b52a43a-1f80-4395-9ee1-b6653a5fe0e7",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "fdcb9ffc-1be6-43b8-95b7-3b2d92ac6093",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which model did you recommend? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to see that each metric—accuracy, recall, and precision—tells a different story about a model’s performance, and that a model can only be effectively evaluated by looking at all three. Strong responses will emphasize that, for a model meant to keep people from eating something toxic, it’s especially important to prioritize recall: the model’s ability to identify a toxic berry as a toxic berry. While this same model may perform worse on other measures, these mistakes are less costly than saying a toxic berry is safe to eat. Consider guiding students towards this line of thinking by arguing, hypothetically, that because one model has a higher accuracy than the other, it’s a better model. Prompt students to critique this reasoning. End the discussion by emphasizing that the right metric to prioritize depends on the goal and the cost of making certain kinds of mistakes."
+      },
+      "seeding_key": {
+        "activity_section.key": "fdcb9ffc-1be6-43b8-95b7-3b2d92ac6093",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "8b2b97b5-2ffc-4396-98e0-0377760e6d93",
+      "position": 10,
+      "properties": {
+        "description": "We’ve seen how the best way to evaluate a classifier depends significantly on its goals. In our next activity, you’ll learn how you can tune a classifier to prioritize different goals.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8b2b97b5-2ffc-4396-98e0-0377760e6d93",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "a18d2dc9-d363-494c-9200-78471c2d16c7",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Help students see that a classifier doesn’t just output a binary prediction, like “toxic” or “not toxic.” Instead, it often produces a probability-based confidence. A confidence threshold is one parameter students can tweak to optimize a model’s recall and precision for a given context.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define confidence.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Provide examples of confidence scores and what they mean.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Should a classifier say this berry is, in fact, toxic?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to apply their understanding of confidence scores to a situation they’re, by now, familiar with. There is no right answer, but the process of taking a side can reinforce students’ understanding of confidence scores and of how different mistakes can have different costs. Strong responses will reference the costs of making a mistake: “Yes, the classifier thinks it’s more likely toxic than not and, even if it’s not completely sure, it would be bad if it said the berry wasn’t toxic when it was.” End the discussion by previewing the next idea about thresholds: that the class has essentially been arguing where to draw the line between when a model predicts “toxic” vs. “not toxic.”",
+        "duration": "15",
+        "name": "Tuning Classifiers"
+      },
+      "seeding_key": {
+        "activity_section.key": "a18d2dc9-d363-494c-9200-78471c2d16c7",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "c6070ebc-9c58-4368-95b7-8e21688c1357",
+      "position": 12,
+      "properties": {
+        "description": "After a model calculates its confidence, it might still need to make a claim about whether the berry is toxic or not toxic. Let’s see how a model might decide this.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c6070ebc-9c58-4368-95b7-8e21688c1357",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "74dda293-1718-49f8-905c-65be3e72e14c",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define threshold using the meter on the slide: the confidence level at which a classifier will predict that a berry is toxic.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example."
+      },
+      "seeding_key": {
+        "activity_section.key": "74dda293-1718-49f8-905c-65be3e72e14c",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "a09e3d61-8ef8-4368-84f3-ea5971f83f21",
+      "position": 14,
+      "properties": {
+        "description": "If the classifier’s confidence is above the threshold, it will say this berry is toxic.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a09e3d61-8ef8-4368-84f3-ea5971f83f21",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "ab87173b-1033-4c23-948f-8421749436d3",
+      "position": 15,
+      "properties": {
+        "description": "If the classifier’s confidence is below the threshold, it won’t.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab87173b-1033-4c23-948f-8421749436d3",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "f1404f84-14ef-4d4e-b8ba-e03658c0f1b8",
+      "position": 16,
+      "properties": {
+        "description": "Where to place this threshold is an important question—both in this problem and in others!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f1404f84-14ef-4d4e-b8ba-e03658c0f1b8",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "8ea7fe5c-f554-4675-800b-4adc5c9b1ec5",
+      "position": 17,
+      "properties": {
+        "progression_name": "Tuning Classifiers"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ea7fe5c-f554-4675-800b-4adc5c9b1ec5",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "225e94e3-e896-496a-bfa6-3ab33c46aca0",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1–2.\n- **Level 1:** Students explore an interactive widget in which they tune a classifier in a context of their choice. They aim to find the optimal threshold for the context they’ve chosen.\n- **Level 2:** Students complete a Check Your Understanding that prompts them to reflect on their experience and justify the threshold they chose.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore the widget, look for the realization that a lower threshold raises recall but lowers precision. Prompt students to experiment with both very low and very high thresholds, asking them to pay attention to what happens to the recall and precision metrics in particular.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 2 can be used as a formative assessment of the lesson objectives. Look for students to justify their threshold by naming the relevant metric they prioritized and offering relevant reasoning about why they chose it. Strong responses may mention the cost of different mistakes: in some contexts, it may be costly to have a low recall, while in other contexts, it may be costly to have a low precision."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "225e94e3-e896-496a-bfa6-3ab33c46aca0",
+        "lesson_activity.key": "25a21684-ea1c-4529-9bd5-ebeb37e5fbed"
+      }
+    },
+    {
+      "key": "df5a35fb-600b-4797-806f-5c2ce7f3a4c9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "df5a35fb-600b-4797-806f-5c2ce7f3a4c9",
+        "lesson_activity.key": "e9b77cf0-7079-4869-8a62-b3bbc8a57a85"
+      }
+    },
+    {
       "key": "d2fdc287-9cae-4c92-af9c-cc17413bda9d",
       "position": 1,
       "properties": {
@@ -2286,6 +2894,138 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Nearest Neighbors Classification"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson8-level1-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "fa54083c-c5bb-40f8-8cc4-e3d953439099"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson8-level1-2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Nearest Neighbors Classification"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson8-level2-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "fa54083c-c5bb-40f8-8cc4-e3d953439099"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson8-level2-2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Nearest Neighbors Classification"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson8-level3-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "fa54083c-c5bb-40f8-8cc4-e3d953439099"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson8-level3-2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Nearest Neighbors Classification"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson8-level4-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "fa54083c-c5bb-40f8-8cc4-e3d953439099"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson8-level4-2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Tuning Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson9-level1-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "8ea7fe5c-f554-4675-800b-4adc5c9b1ec5"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson9-level1-2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Tuning Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson9-level2-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "8ea7fe5c-f554-4675-800b-4adc5c9b1ec5"
+      },
+      "level_keys": [
+        "aif-y2-machine-learning-fundamentals-lesson9-level2-2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Choosing Representations (Part 1)"
       },
       "bonus": false,
@@ -2303,7 +3043,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2325,7 +3065,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2458,6 +3198,78 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson8-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson8-level1-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "fa54083c-c5bb-40f8-8cc4-e3d953439099"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson8-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson8-level2-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "fa54083c-c5bb-40f8-8cc4-e3d953439099"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson8-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson8-level3-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "fa54083c-c5bb-40f8-8cc4-e3d953439099"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson8-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson8-level4-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "fa54083c-c5bb-40f8-8cc4-e3d953439099"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson9-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson9-level1-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "8ea7fe5c-f554-4675-800b-4adc5c9b1ec5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-machine-learning-fundamentals-lesson9-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-machine-learning-fundamentals-lesson9-level2-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "8ea7fe5c-f554-4675-800b-4adc5c9b1ec5"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aif-y2-machine-learning-fundamentals-lesson10-level1-2026",
         "script_level.level_keys": [
           "aif-y2-machine-learning-fundamentals-lesson10-level1-2026"
@@ -2495,6 +3307,48 @@
   ],
   "resources": [
     {
+      "name": "Berry Picking",
+      "url": "https://docs.google.com/document/d/1D6HEOSP1ZeJ7agud9HDHhfVdxXoonaU3UrvE2D1aXwg/edit?usp=sharing",
+      "key": "berry_picking",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "berry_picking"
+      }
+    },
+    {
+      "name": "Berry Picking",
+      "url": "https://docs.google.com/document/d/1pKPWUtMn1pJg4rVCihWpw77FoOBzjFRiST8qgA-ylS4/edit?usp=sharing",
+      "key": "berry_picking_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "berry_picking_1"
+      }
+    },
+    {
+      "name": "Building Classifiers",
+      "url": "https://docs.google.com/presentation/d/1vyFCL15K71Hi5vFfKulWHg2tmpLoaxOOM8KkbVf57Sg/edit?usp=sharing",
+      "key": "building_classifiers",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "building_classifiers"
+      }
+    },
+    {
       "name": "Exploring Loss",
       "url": "https://docs.google.com/document/d/1E57-lJEmSXXKJklyGT66G-6K_eR06Bnfq2b2iQysINo/edit?usp=sharing",
       "key": "exploring_loss",
@@ -2519,6 +3373,34 @@
       },
       "seeding_key": {
         "resource.key": "exploring_loss_1"
+      }
+    },
+    {
+      "name": "Nearest Neighbors",
+      "url": "https://docs.google.com/document/d/1xlxrpl2Y8J_WsX6pTh5SYJVDHhooRIwLvwW1rweK5UQ/edit?usp=sharing",
+      "key": "nearest_neighbors",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "nearest_neighbors"
+      }
+    },
+    {
+      "name": "Nearest Neighbors",
+      "url": "https://docs.google.com/document/d/1mZ08BFeNVtGWK6OuOoVH1OMZknUxiKTOlFgUKqee75o/edit?usp=sharing",
+      "key": "nearest_neighbors_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "nearest_neighbors_1"
       }
     },
     {
@@ -2634,6 +3516,20 @@
       }
     },
     {
+      "name": "Testing Classifiers",
+      "url": "https://docs.google.com/presentation/d/1znthN7vIIOYKkhz_sClxyJk4OPUH-h2WpB-irhR47fE/edit?usp=sharing",
+      "key": "testing_classifiers",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "testing_classifiers"
+      }
+    },
+    {
       "name": "Testing Regression Models",
       "url": "https://docs.google.com/presentation/d/1J8BURItbJ4_tYieUdiriL1FIgKbA-0LJ8rGMHXV247U/edit?usp=sharing",
       "key": "testing_regression_models",
@@ -2734,6 +3630,42 @@
         "lesson.key": "lesson-6",
         "resource.key": "testing_regression_models"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "building_classifiers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "nearest_neighbors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "nearest_neighbors_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "berry_picking"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "berry_picking_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "testing_classifiers"
+      }
     }
   ],
   "scripts_resources": [
@@ -2754,6 +3686,16 @@
       }
     },
     {
+      "key": "accuracy",
+      "word": "accuracy",
+      "definition": "the proportion of all of a classifier’s predictions that are correct",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "accuracy"
+      }
+    },
+    {
       "key": "classification",
       "word": "classification",
       "definition": "a type of prediction that predicts categorical data",
@@ -2764,6 +3706,16 @@
       }
     },
     {
+      "key": "classifier",
+      "word": "classifier",
+      "definition": "a model that predicts labels for data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classifier"
+      }
+    },
+    {
       "key": "data",
       "word": "data",
       "definition": "information used to understand the world",
@@ -2771,6 +3723,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "feature",
+      "word": "feature",
+      "definition": "a piece of information used to make a prediction",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature"
+      }
+    },
+    {
+      "key": "label",
+      "word": "label",
+      "definition": "the category to which data belongs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "label"
       }
     },
     {
@@ -2824,6 +3796,16 @@
       }
     },
     {
+      "key": "precision",
+      "word": "precision",
+      "definition": "out of all the times a classifier predicted a certain label, the proportion that were correct",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "precision"
+      }
+    },
+    {
       "key": "prediction",
       "word": "prediction",
       "definition": "an informed guess about something unknown",
@@ -2841,6 +3823,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "prediction_model"
+      }
+    },
+    {
+      "key": "recall",
+      "word": "recall",
+      "definition": "out of all the data that actually has a certain label, the proportion the model correctly identified",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "recall"
       }
     },
     {
@@ -2984,6 +3976,42 @@
         "lesson.key": "lesson-6",
         "vocabulary.key": "test_data"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "classifier"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "feature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "label"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "accuracy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "precision"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "recall"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -3039,6 +4067,16 @@
         "lesson.key": "lesson-4",
         "objective.key": "a6f8911b-47de-4e3b-907a-55144fe87d79"
       }
+    },
+    {
+      "key": "c237dc44-e8a2-43dc-9352-c9118d8f5ae1",
+      "properties": {
+        "description": "Describe how classifiers make predictions from data."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "c237dc44-e8a2-43dc-9352-c9118d8f5ae1"
+      }
     }
   ],
   "lessons_standards": [
@@ -3086,6 +4124,24 @@
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2"
       }
+    },
+    {
+      "level_name": "aif-y2-machine-learning-fundamentals-lesson8-level4-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "level_name": "aif-y2-machine-learning-fundamentals-lesson9-level2-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
     }
   ],
   "learning_goals": [
@@ -3098,6 +4154,32 @@
       "seeding_key": {
         "learning_goal.key": "46058885-4102-4acc-a81f-ec9a8dea2936",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "52ab8035-e43a-4a3a-94eb-85ba6cea0e4f",
+      "position": 1,
+      "learning_goal": "Reasoning About Uncertainty",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "52ab8035-e43a-4a3a-94eb-85ba6cea0e4f",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "7bb228a1-c3f7-4fa4-b9c9-384f2575a3fe",
+      "position": 1,
+      "learning_goal": "Applying Predictive Logic",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "7bb228a1-c3f7-4fa4-b9c9-384f2575a3fe",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2"
       }
@@ -3187,6 +4269,102 @@
         "understanding": 3,
         "learning_goal.key": "46058885-4102-4acc-a81f-ec9a8dea2936",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student has not answered, or treats the model’s threshold as an arbitrary measure.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "52ab8035-e43a-4a3a-94eb-85ba6cea0e4f",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student explains where they set the model’s threshold, but offers only generic reasoning to support their response.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "52ab8035-e43a-4a3a-94eb-85ba6cea0e4f",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Students explains where they set the model’s threshold, and offers a well-reasoned argument for why they chose such a threshold: for instance, by naming the metric they chose to prioritize.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "52ab8035-e43a-4a3a-94eb-85ba6cea0e4f",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Students explains where they set the model’s threshold, and offers a well-reasoned argument for why they chose such a threshold: for instance, by naming the metric they were prioritizing. They also ground their reasoning in the particular context they chose, describing why the prioritization of that metric makes sense.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "52ab8035-e43a-4a3a-94eb-85ba6cea0e4f",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student has not answered, or treats the classifier’s prediction as a guess: they name a label without connecting it to past delivery dates, or give no reason about how many neighbors a nearest neighbors classifier should use.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "7bb228a1-c3f7-4fa4-b9c9-384f2575a3fe",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student explains that the classifier looks at the closest day (or days) and uses that label. They note that the number of neighbors changes the prediction, but justify the number only in general terms.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "7bb228a1-c3f7-4fa4-b9c9-384f2575a3fe",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student explains precisely, and in their own words, that the classifier predicts by finding the past days most similar to today, taking the most common label among them. They justify an optimal number of neighbors with reasoning grounded in what they saw.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "7bb228a1-c3f7-4fa4-b9c9-384f2575a3fe",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student explains precisely, and in their own words, that the classifier predicts by finding the past days most similar to today, taking the most common label among them. Student justifies an optimal number of neighbors with reasoning grounded in experimentation. They may also note that the optimal number of neighbors could depend on the data and the context in which the classifier is used.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "7bb228a1-c3f7-4fa4-b9c9-384f2575a3fe",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit2"
       }

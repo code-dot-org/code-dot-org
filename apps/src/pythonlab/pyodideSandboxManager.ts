@@ -116,7 +116,7 @@ const SANDBOX_UNREACHABLE_MESSAGE =
   'to unblock. If you need assistance, please reach out to support@code.org.';
 
 const handlePyodideMessage = (data: PyodideMessage) => {
-  const {type, id, message, gif, wav} = data;
+  const {type, id, message, gif, wav, gifDurationMs} = data;
   const onSuccess = callbacks[id];
 
   const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
@@ -225,7 +225,7 @@ const handlePyodideMessage = (data: PyodideMessage) => {
     case 'theater_media':
       // Only show theater output if this is not a validation run.
       if (gif && !isValidationRun) {
-        handleTheaterMedia(gif, wav);
+        handleTheaterMedia(gif, wav, gifDurationMs);
       }
       break;
     default:
