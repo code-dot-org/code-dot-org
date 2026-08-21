@@ -507,8 +507,21 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         )
         # If the v2 record can't be created (e.g. a non-migrated user has no v1
         # auth option to duplicate), keep the legacy uid so the existing user is
-        # still found rather than duplicated.
-        return unless new_auth_option&.save
+        # still found rather than duplicated. Logged because a population whose
+        # migration silently fails here never converges to v2, and the Phase 3
+        # cleanup gate needs to know why.
+        unless new_auth_option&.save
+          CDO.log.info(
+            {
+              event: 'classlink_v2_auth_option_not_created',
+              namespace: Services::Classlink::V2AuthOptionBuilder::LOG_NAMESPACE,
+              classlink_user_id: auth.uid,
+              classlink_v2_id: classlink_v2_id,
+              errors: new_auth_option&.errors&.full_messages,
+            }.to_json
+          )
+          return
+        end
       end
     end
 

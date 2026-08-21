@@ -8,6 +8,7 @@ module Services
   module Classlink
     class V2AuthOptionBuilder < Services::Base
       SEPARATOR = '|'.freeze
+      LOG_NAMESPACE = 'ClassLink'.freeze
 
       attr_reader :classlink_v1_id, :tenant_id, :sourced_id
 
@@ -33,10 +34,18 @@ module Services
         tenant = tenant_id.to_s
         sourced = sourced_id.to_s
         if tenant.blank? || sourced.blank? || tenant.include?(SEPARATOR)
-          Rails.logger.warn(
-            "ClassLink v2 authentication_id not built " \
-            "(UserId: #{classlink_user_id.inspect}, TenantId blank: #{tenant.blank?}, " \
-            "SourcedId blank: #{sourced.blank?}, TenantId pipe: #{tenant.include?(SEPARATOR)})"
+          # INFO rather than WARN on purpose: CDO.log's formatter prefixes
+          # non-INFO lines with the severity, which breaks JSON parsing in
+          # CloudWatch queries. The event name carries the signal.
+          CDO.log.info(
+            {
+              event: 'classlink_v2_authentication_id_not_built',
+              namespace: LOG_NAMESPACE,
+              classlink_user_id: classlink_user_id,
+              tenant_id_blank: tenant.blank?,
+              sourced_id_blank: sourced.blank?,
+              tenant_id_contains_separator: tenant.include?(SEPARATOR),
+            }.to_json
           )
           return nil
         end
