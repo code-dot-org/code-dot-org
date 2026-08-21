@@ -20,7 +20,6 @@ import {
   disabledStateFor,
   shouldShowAiTutor,
   answerSchema,
-  DashboardTransport,
   promptsFor,
   type TutorConfig,
 } from '@code-dot-org/aitutor';
@@ -32,6 +31,7 @@ import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 
 import {webLabContext} from './context';
 import {mergeProposedFiles} from './proposals';
+import {tutorTransport} from './transport';
 
 /** The app name the access rules and the server know this lab by. */
 const APP_NAME = 'weblab2';
@@ -125,7 +125,7 @@ export const useWebLabTutor = (): TutorConfig | undefined => {
     [],
   );
 
-  const transport = useMemo(() => new DashboardTransport(), []);
+  const transport = useMemo(tutorTransport, []);
 
   return useMemo(() => {
     if (!visible) {

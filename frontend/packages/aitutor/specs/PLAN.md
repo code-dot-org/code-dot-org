@@ -447,6 +447,19 @@ lab's answer types. Its three pieces are the three a host owes:
 | `proposals`     | the four `build` answer types, `html`/`css`/`js`/`json`, and a merge into `MultiFileSource`            |
 | `disabledState` | `disabledStateFor` over the user's access level, the section's, and the predict gate                   |
 
+Its standalone harness answers from a RECORDING rather than the dashboard —
+there is no Rails behind the mock API, and a completion posted into a handler
+that does not exist is an error rather than a demo. `main.tsx` declares it
+(`useRecordedTutor`), because the harness is the thing that knows; sniffing
+`import.meta.env.VITE_API_MODE` was tried and is wrong twice, since Vite does
+not expose shell variables there and whatever value it had would be inlined into
+the built library for every consumer of it.
+
+The harness also stands in for the signed-in student, since the mock has no
+users handler and the access rules read silence as no permission. The two
+pretences are separate calls on purpose: a transport that quietly granted access
+would be an access decision hidden inside a network choice.
+
 No other lab does. World Lab would need something else entirely — its project is
 Blockly workspace JSON, and a model shown that is being shown serialised block
 positions rather than a program.
