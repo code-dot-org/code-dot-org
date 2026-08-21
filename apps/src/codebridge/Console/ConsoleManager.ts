@@ -23,7 +23,8 @@ const TERMINAL_TRIM_BATCH = 200_000;
 // The longest single line kept. Output that never sends a newline, such as one
 // input prompt after another, would otherwise grow one line without bound.
 // Nothing is cut: a message that would take the line past this starts the next
-// one instead, which a redraw then draws on a row of its own.
+// one instead, which a redraw then draws on a row of its own. A single message
+// longer than this is still kept whole, on a line of its own.
 const MAX_LINE_CHARACTERS = 100_000;
 
 const countCharacters = (lines: string[]) =>
@@ -264,7 +265,7 @@ export default class ConsoleManager {
     if (
       this.lastLineIsPartial &&
       lastLine !== undefined &&
-      lastLine.length < MAX_LINE_CHARACTERS
+      lastLine.length + message.length <= MAX_LINE_CHARACTERS
     ) {
       this.terminalLines[this.terminalLines.length - 1] = lastLine + message;
     } else {

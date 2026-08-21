@@ -298,7 +298,9 @@ describe('ConsoleManager', () => {
     }
 
     const lines = consoleManager.getTerminalLines();
-    expect(Math.max(...lines.map(line => line.length))).toBeLessThan(200_000);
+    expect(Math.max(...lines.map(line => line.length))).toBeLessThanOrEqual(
+      100_000
+    );
     expect(lines.join('').length).toBeLessThan(1_500_000);
   });
 
