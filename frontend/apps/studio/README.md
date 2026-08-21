@@ -56,6 +56,19 @@ See `frontend/docs/conventions/packages.md` (the `## Labs` section) for the full
 - `src/modules/labs/router/getLabEntrypoint.ts` — add the lazy import to `LabEntrypoints`
 - `src/modules/labs/router/getLabFixtures.ts` — _(optional, MSW mode)_ add a loader entry if the lab ships a `./mocks` subpath. Without an entry the lab still works against Rails and the MSW handlers' built-in defaults; the entry only matters if you want per-tag fixtures (`simple`, `complex`, …) at `/projects/<lab>/<tag>/edit`.
 
+## Deployment
+
+Deployed environments do not build Studio. During `rake build`, staging or test
+builds it once, tars `dist/frontend-studio/` — `.vite` included, so the manifest
+travels with the assets — and uploads the tarball to S3. Every environment
+unpacks it into `dashboard/public/studio-package` and serves it through the
+`dashboard/public/frontend-studio` symlink. See `lib/rake/package.rake`.
+
+The S3 key is a git hash of `frontend/`, so a machine without node can work out
+which package it needs. Production only downloads. If no package exists for the
+commit, the build stops and says so; build that commit on test or staging first,
+the same as for an apps hotfix.
+
 ## Architecture
 
 See [docs/architecture.md](./docs/architecture.md) for the Rails integration chain, init ordering, and lab loading boundary.
