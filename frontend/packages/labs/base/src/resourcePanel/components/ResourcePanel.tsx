@@ -8,8 +8,11 @@ import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 //import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-//import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
-//import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import {
+  AiTutorPanel,
+  TutorProvider,
+  type TutorConfig,
+} from '@code-dot-org/aitutor';
 //import {StudentRubricView} from '@code-dot-org/rubrics';
 
 //import type {ChatButtonData, ResponseSchemaSettings} from '../../../aichat/types';
@@ -42,7 +45,7 @@ import {Tabs} from '../types';
 import '../../introjs.scss';
 
 import CopyrightButton from './CopyrightButton';
-//import DisclaimerButton from './DisclaimerButton';
+import DisclaimerButton from './DisclaimerButton';
 import OnboardingTourSteps from './OnboardingTourSteps';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
@@ -111,7 +114,17 @@ export type ResourcePanelProps = InstructionsProps & {
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
   aiTutorMultimodalEnabled?: boolean;
-  //aiTutorChatButtonData?: ChatButtonData[];
+  /**
+   * The AI Tutor tab. Omitted, there is no tab.
+   *
+   * WHETHER THE TUTOR SHOULD BE HERE AT ALL IS THE LAB'S DECISION, expressed by
+   * passing this or not. Legacy asks `shouldShowAiTutor`, which reads the
+   * section's `aiChatAccessLevel` — a teacher setting this package cannot see
+   * (specs/PLAN.md §12 in `@code-dot-org/aitutor`). Until that is ported, a lab
+   * MUST apply it itself before passing a config; a tutor tab appearing where a
+   * teacher switched it off is a real bug, and the default here is off.
+   */
+  aiTutor?: TutorConfig;
   /** If the navigation area in the footer should be styled as a "bubble", like instructions content. */
   styleNavigationAsBubble?: boolean;
   isValidationTourEnabled?: boolean;
@@ -135,7 +148,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
   settings,
   versionHistoryProps,
   //aiTutorMultimodalEnabled,
-  //aiTutorChatButtonData,
+  aiTutor,
   // Default hideNavigation to true since most labs pin the navigation area to bottom.
   hideNavigation: hideInstructionsNavigation = true,
   styleNavigationAsBubble = false,
@@ -189,10 +202,6 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
   const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
-  /*const aiTutorVisible = shouldShowAiTutor(
-    appName,
-    levelProperties.aiTutorAvailable,
-  );*/
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -216,21 +225,13 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
       );
     }
 
-    /*
-    if (hiddenContextCallback && aiTutorVisible) {
+    if (aiTutor) {
       tabMap[Tabs.AiTutor] = (
-        <AiTutorChat
-          hiddenContextCallback={hiddenContextCallback}
-          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-          levelName={levelName}
-          channelId={channelId}
-          aiTutorChatButtonData={aiTutorChatButtonData}
-          aiTutorSystemPromptName={aiTutorSystemPromptName}
-          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        />
+        <TutorProvider {...aiTutor}>
+          <AiTutorPanel />
+        </TutorProvider>
       );
     }
-    */
 
     // The version history tab is hidden in permanently read-only mode with the following exception:
     // - if a teacher is viewing a student's project (in which case they can view old versions, but not restore them).
@@ -278,8 +279,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
     levelProperties,
     instructionsProps,
     hasValidationConditions,
-    //hiddenContextCallback,
-    //aiTutorVisible,
+    aiTutor,
     isPermanentlyReadOnly,
     viewAsUserId,
     isWidgetView,
@@ -290,9 +290,6 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
     //aiTutorMultimodalEnabled,
     //levelName,
     //channelId,
-    //aiTutorChatButtonData,
-    //aiTutorSystemPromptName,
-    //aiTutorResponseSchemaSettings,
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,
@@ -557,7 +554,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
                 buttonSize="s"
               />
             )}
-            {/*aiTutorVisible && <DisclaimerButton theme={theme} />*/}
+            {aiTutor && <DisclaimerButton theme={theme} />}
             <CopyrightButton theme={theme} />
             <div ref={settingsButtonRef}>
               <IconButtonWithTooltip
@@ -581,13 +578,11 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
               id={currentTab || 'resource-panel'}
               headerContent={currentTab && tabInfo[currentTab].title}
               headerClassName={headerClassName}
-              rightHeaderContent={
-                /*currentTab === Tabs.AiTutor ? (
-                  <AiChatHeaderButtons />
-                ) : (*/
-                rightHeaderContent
-                //)
-              }
+              // TODO: the tutor tab wants its own header buttons — Clear Chat
+              // above all, which `useTutor().clear` already implements. Legacy
+              // renders `AiChatHeaderButtons` here; that component has not been
+              // ported (specs/PLAN.md §12 in `@code-dot-org/aitutor`).
+              rightHeaderContent={rightHeaderContent}
             >
               <div className={styles.tabContentContainer}>
                 {getTypedKeys(availableTabs).map(tab => (

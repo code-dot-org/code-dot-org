@@ -1,9 +1,8 @@
 // Public API for @code-dot-org/aitutor.
 //
-// See specs/PLAN.md. Milestones 1 to 4: the message model, the transport seam,
-// a transport that answers from a recording, the panel, what the panel tells
-// the model about the project, and an optional dev-only path to a real model
-// through a local proxy. Nothing here talks to the dashboard yet.
+// See specs/PLAN.md. The message model, the transport seam and its four
+// implementations, the panel, what the panel tells the model about a project,
+// and the file edits it can offer to make.
 //
 // The Vite plugin that holds the key is NOT exported here — it is node code,
 // and the browser entry must not be able to reach it. It has its own subpath:
@@ -30,6 +29,12 @@ export type {
   TutorSessionInfo,
   TutorTransport,
 } from './transport/types';
+
+export {
+  DashboardTransport,
+  type DashboardTransportOptions,
+} from './transport/dashboard/DashboardTransport';
+export {messagesFor, stillRunning} from './transport/dashboard/executionStatus';
 
 export {
   DirectTransport,

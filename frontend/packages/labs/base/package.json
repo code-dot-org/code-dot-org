@@ -125,6 +125,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@code-dot-org/aitutor": "workspace:*",
     "@code-dot-org/audio": "workspace:*",
     "@code-dot-org/blockly": "workspace:*",
     "@code-dot-org/component-library": "workspace:*",

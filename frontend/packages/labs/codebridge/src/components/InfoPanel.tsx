@@ -1,5 +1,6 @@
 import {useEffect} from 'react';
 
+import type {TutorConfig} from '@code-dot-org/aitutor';
 import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
@@ -31,6 +32,18 @@ export interface InfoPanelProps {
    * needed.
    */
   extraSettings?: Setting[];
+  /**
+   * The AI Tutor tab, passed through to the base panel. Omitted, no tab.
+   *
+   * Passed through rather than built here because what the tutor should be told
+   * about a project — and which transport answers it — is the LAB's to say: a
+   * Codebridge project is a file tree, and what counts as "the student's code"
+   * differs between one that runs Python and one that runs a game world.
+   *
+   * A lab must apply the section access-level rule before passing this; see
+   * the prop on the base `ResourcePanel`.
+   */
+  aiTutor?: TutorConfig;
 }
 
 /**
@@ -49,6 +62,7 @@ export const InfoPanel = ({
   supportedThemes = ['Light', 'Dark'],
   hasConsole = true,
   extraSettings = [],
+  aiTutor,
 }: InfoPanelProps) => {
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
@@ -140,6 +154,7 @@ export const InfoPanel = ({
   return (
     <ResourcePanel
       className={className}
+      aiTutor={aiTutor}
       levelProperties={levelProperties}
       isRunning={isRunning}
       hasRun={hasRun}

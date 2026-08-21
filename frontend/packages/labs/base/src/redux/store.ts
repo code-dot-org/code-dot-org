@@ -4,6 +4,7 @@
 
 import type {ThunkDispatch, UnknownAction} from '@reduxjs/toolkit';
 
+import {aiTutorSlice} from '@code-dot-org/aitutor';
 import {progressSlice} from '@code-dot-org/progress/redux';
 import {injectSlices, storeHooks} from '@code-dot-org/core/redux';
 import {teacherSectionsSlice} from '@code-dot-org/teacher-dashboard/redux';
@@ -16,6 +17,7 @@ import labViewSlice from './labViewSlice';
 import predictLevelSlice from './predictLevelSlice';
 
 const store = injectSlices([
+  aiTutorSlice,
   currentUserSlice,
   labSlice,
   labSystemSlice,
