@@ -5,6 +5,8 @@ import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
+import {stripModuleFromCssName} from './vite/cssAssetNames';
+
 /**
  * Get Rollup output configuration.
  * @param format es or cjs
@@ -17,6 +19,7 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
+    assetFileNames: stripModuleFromCssName,
   };
 }
 
