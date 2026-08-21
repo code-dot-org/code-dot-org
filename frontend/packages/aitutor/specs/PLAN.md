@@ -455,10 +455,18 @@ that does not exist is an error rather than a demo. `main.tsx` declares it
 not expose shell variables there and whatever value it had would be inlined into
 the built library for every consumer of it.
 
-The harness also stands in for the signed-in student, since the mock has no
-users handler and the access rules read silence as no permission. The two
-pretences are separate calls on purpose: a transport that quietly granted access
-would be an access decision hidden inside a network choice.
+Who is signed in comes from the MOCK API, not from anything faked in the store:
+`@code-dot-org/core/api/mocks` answers `/api/v1/users/current` as a student with
+AI enabled, and everything downstream runs its production path over it.
+
+WHICH CURRENT USER, though, is a trap worth naming. There are two in the
+frontend and only one is populated: studio primes `useCurrentUser` (react-query)
+in its root `beforeLoad`, while nothing anywhere dispatches
+`currentUserSlice.setInitialData` — that is legacy's path, from
+`apps/src/code-studio/header.js`. A lab reading the redux slice gets `undefined`
+forever, and `undefined` access reads as no access, so the tutor would be
+permanently disabled with nothing to show for it. `useWebLabTutor` reads the
+query.
 
 No other lab does. World Lab would need something else entirely — its project is
 Blockly workspace JSON, and a model shown that is being shown serialised block

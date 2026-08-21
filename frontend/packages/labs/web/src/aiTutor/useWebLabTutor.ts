@@ -21,10 +21,15 @@ import {
   shouldShowAiTutor,
   answerSchema,
   promptsFor,
+  type AiChatAccessLevel,
   type TutorConfig,
 } from '@code-dot-org/aitutor';
 import {useAppSelector} from '@code-dot-org/codebridge';
-import type {MultiFileSource} from '@code-dot-org/core/api';
+import {
+  DashboardApiClient,
+  useCurrentUser,
+  type MultiFileSource,
+} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {predictLevelActions} from '@code-dot-org/lab/redux';
 import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
@@ -77,13 +82,26 @@ export const useWebLabTutor = (): TutorConfig | undefined => {
   const levelProperties = useMaybeLevelProperties();
   const {currentSources, updateSources} = useSources<MultiFileSource>();
 
-  const userAccessLevel = useAppSelector(
-    state => state.currentUser.aiChatAccessLevel,
-  );
-  const isTeacher = useAppSelector(state => state.currentUser.isTeacher);
-  const isLevelbuilder = useAppSelector(
-    state => state.currentUser.isLevelbuilder,
-  );
+  // From the QUERY, not the redux slice. Both exist and only one is populated:
+  // studio primes `useCurrentUser` in its root `beforeLoad`
+  // (`apps/studio/src/modules/auth/primeCurrentUser`), while nothing in
+  // `frontend/` ever dispatches `currentUserSlice.setInitialData` — that is
+  // legacy's path, from `apps/src/code-studio/header.js`. Reading the slice
+  // gives `undefined` forever, and `undefined` access reads as no access, so
+  // the tutor would be permanently disabled with nothing to show for it.
+  const {data: currentUser} = useCurrentUser(DashboardApiClient);
+  // The response is a union: a signed-out visitor carries nothing but
+  // `isSignedIn: false`, and has no access level to read.
+  const user = currentUser?.isSignedIn ? currentUser : undefined;
+
+  // The schema types this as `string | number` because the server has sent
+  // both; only the string form is an access level this package knows.
+  const userAccessLevel =
+    typeof user?.aiChatAccessLevel === 'string'
+      ? (user.aiChatAccessLevel as AiChatAccessLevel)
+      : undefined;
+  const isTeacher = user?.userType === 'teacher';
+  const isLevelbuilder = user?.isLevelbuilder;
   const sectionAccessLevel = useAppSelector(
     state => selectedSectionSelector(state)?.aiChatAccessLevel,
   );

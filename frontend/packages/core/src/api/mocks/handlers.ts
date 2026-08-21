@@ -28,5 +28,6 @@ export function getMockHandlers(): RequestHandler[] {
     ...projectsHandlers,
     ...usersHandlers,
     ...assetsHandlers,
+    ...usersHandlers,
   ];
 }
