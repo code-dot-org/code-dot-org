@@ -117,6 +117,38 @@ export const VideoWithCaptionAndFallback: Story = {
   },
 };
 
+export const VideoWithCustomPoster: Story = {
+  args: {
+    videoTitle: "What Most Schools Don't Teach",
+    youTubeId: 'nKIu9yen5nc',
+    posterThumbnailFallback: 'https://videos.code.org/youtube/nKIu9yen5nc.jpg',
+    isYouTubeCookieAllowed: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "The facade starts on posterThumbnailFallback. It upgrades to YouTube's full-resolution poster only if that image loads. This video has no maxres poster, so the supplied one stays.",
+      },
+    },
+    eyes: {
+      // Skip eyes for video as this auto plays
+      include: false,
+    },
+  },
+  play: async ({canvasElement, args}) => {
+    const canvas = within(canvasElement);
+
+    const facadeImage = await canvas.findByAltText(
+      `Play video ${args.videoTitle}`,
+    );
+    await expect(facadeImage).toHaveAttribute(
+      'src',
+      args.posterThumbnailFallback,
+    );
+  },
+};
+
 export const VideoCookieBlocked: Story = {
   args: {
     videoTitle: "What Most Schools Don't Teach",
