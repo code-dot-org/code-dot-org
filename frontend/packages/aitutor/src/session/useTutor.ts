@@ -135,22 +135,47 @@ export const useTutor = (): Tutor => {
           ? proposalFrom(answer, config.proposals)
           : undefined;
 
-        dispatch(
-          turnCompleted(
-            answer
-              ? reply.messages.map(held =>
-                  held.role === Role.ASSISTANT
-                    ? {
-                        ...held,
-                        chatMessageText: offered
-                          ? formatProposalText(answer)
-                          : formatAnswer(answer),
-                      }
-                    : held,
-                )
-              : reply.messages,
-          ),
-        );
+        const settled = reply.messages.map(held => {
+          if (held.role !== Role.ASSISTANT) {
+            return held;
+          }
+          const text = answer
+            ? offered
+              ? formatProposalText(answer)
+              : formatAnswer(answer)
+            : held.chatMessageText;
+
+          // AN ANSWER WITH NOTHING IN IT IS A FAILURE, not an answer. It
+          // renders as nothing at all — `MessageView` draws no bubble for an
+          // empty turn — so the student watches the waiting dots stop and sees
+          // no reply appear, with no way to tell whether the tutor is thinking,
+          // broken, or ignoring them. Silence is the one outcome worse than an
+          // error message.
+          //
+          // Reachable more easily than it looks: a model answering a
+          // schema-constrained request replies with a tool call and often NO
+          // text block at all, so anything that stops the answer being read
+          // back out of that call lands here.
+          //
+          // Only for a turn that claims to have SUCCEEDED. A failed one is
+          // empty on purpose — the panel supplies its words from the status
+          // (`components/failureText`) — and rewriting `model_timeout` to a
+          // generic error would replace an explanation with a shrug.
+          //
+          // A proposal is the other exception: its files and buttons are the
+          // answer, and the explanation beside them may reasonably be empty.
+          const empty =
+            held.status === AiInteractionStatus.OK &&
+            text.trim() === '' &&
+            !offered;
+          return {
+            ...held,
+            chatMessageText: text,
+            status: empty ? AiInteractionStatus.ERROR : held.status,
+          };
+        });
+
+        dispatch(turnCompleted(settled));
 
         if (offered) {
           dispatch(proposalOffered(offered));

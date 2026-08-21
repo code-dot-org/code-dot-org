@@ -28,8 +28,17 @@ export const ANTHROPIC_VERSION = '2023-06-01';
  */
 export const DEFAULT_MODEL = 'claude-sonnet-5';
 
-/** Enough room for an explanation and a file, which is the long case. */
-const MAX_TOKENS = 4096;
+/**
+ * Room for an explanation AND the files it rewrote.
+ *
+ * The schema asks the model to "provide the entire contents of the file", so a
+ * single answer can carry a whole page of HTML plus its stylesheet. At 4096
+ * this truncated silently and often: the reply comes back `stop_reason:
+ * max_tokens` with a tool call whose JSON stops mid-object, so there is no
+ * answer to read and the panel had nothing to show. Overridable for a model
+ * whose ceiling is lower.
+ */
+const MAX_TOKENS = Number(process.env.TUTOR_MAX_TOKENS ?? 16384);
 
 /**
  * The one tool, when the request wants structured output.
@@ -77,8 +86,24 @@ interface AnthropicBlock {
 /** Pull the answer out of whatever mixture of blocks came back. */
 export const anthropicReply = (payload: {
   content?: AnthropicBlock[];
+  stop_reason?: string;
 }): ProxyReply => {
   const blocks = payload.content ?? [];
+
+  // RAN OUT OF ROOM. The model was still writing — a tool call whose JSON
+  // stops mid-object parses to something missing the fields the caller needs,
+  // and the turn reads as empty rather than as broken. Named here, where the
+  // stop reason is visible, so the panel can say the answer was too long
+  // instead of showing nothing.
+  if (payload.stop_reason === 'max_tokens') {
+    return {
+      text: '',
+      failure: AiInteractionStatus.USER_INPUT_TOO_LARGE,
+      detail:
+        `the model hit max_tokens (${MAX_TOKENS}) and its answer was cut off. ` +
+        'Raise TUTOR_MAX_TOKENS, or ask for a smaller change.',
+    };
+  }
   const text = blocks
     .filter(block => block.type === 'text' && block.text)
     .map(block => block.text)
@@ -128,8 +153,31 @@ export const askAnthropic = async (
     body: JSON.stringify(anthropicBody(request, model)),
   });
 
+  if (process.env.TUTOR_DEBUG) {
+    // Before anything is interpreted, because interpreting it is where this
+    // goes wrong: a model that answers in a block shape `anthropicReply` does
+    // not read produces an empty turn and no clue as to what it actually said.
+    const clone =
+      typeof response.clone === 'function' ? response.clone() : undefined;
+    void clone?.text().then(body => {
+      console.info(`[tutor] ${response.status} ${body.slice(0, 4000)}`);
+    });
+  }
+
   if (!response.ok) {
-    return {text: '', failure: failureFor(response.status)};
+    // The body is where the provider says WHY — an invalid key, a model this
+    // account cannot reach, a malformed request. Carried back for the
+    // developer's terminal (`dev/keyProxy`), not for the panel.
+    let detail = `${response.status}`;
+    try {
+      const body = await response.text();
+      detail = `${response.status} ${body}`.trim();
+    } catch {
+      // A body that cannot be read is not a reason to lose the turn. The
+      // status alone still names the failure, and a refused request must
+      // resolve however odd the response is.
+    }
+    return {text: '', failure: failureFor(response.status), detail};
   }
   return anthropicReply(await response.json());
 };

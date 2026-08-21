@@ -31,21 +31,31 @@ import {RootStateProvider} from '@code-dot-org/core/redux';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import {LabHost} from '@code-dot-org/lab/host';
 
-import {useRecordedTutor} from './aiTutor/transport';
+import {chooseHarnessTutor} from './aiTutor/transport';
 import App from './App';
 
 initializeCore({plugins: [localizationPlugin]});
 injectFontAwesome();
 
-// There is no Rails behind the mock API, so the AI Tutor answers from a
-// recording rather than posting a completion into a handler that does not
-// exist. The recording is written against this harness's own project, so the
-// accept/reject flow really does rewrite `styles.css` (`aiTutor/transport`).
+// There is no Rails behind the mock API, so the AI Tutor cannot post a
+// completion to `/aichat_request`. It answers from a real model when this
+// harness was started with a key —
+//
+//     ANTHROPIC_API_KEY=sk-... yarn dev
+//
+// — and from a recording otherwise. Decided before anything renders, so the
+// panel never offers a conversation it cannot have (`aiTutor/transport`).
 //
 // Who is looking at the page comes from the mock API's own
 // `/api/v1/users/current` handler (`@code-dot-org/core/api/mocks`), which
 // answers as a signed-in student with AI enabled.
-useRecordedTutor();
+const tutor = await chooseHarnessTutor();
+console.log(
+  tutor.kind === 'live'
+    ? `🤖 AI Tutor: live, ${tutor.model}`
+    : `🤖 AI Tutor: recorded (${tutor.reason ?? 'no ANTHROPIC_API_KEY'}). ` +
+        'Start with ANTHROPIC_API_KEY=sk-... yarn dev for real answers.',
+);
 
 // The lab loads a project by channel id from the URL; default to the `simple`
 // fixture scenario so the harness works at the root path (the channel id doubles
