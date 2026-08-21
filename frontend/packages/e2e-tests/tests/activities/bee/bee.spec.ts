@@ -23,8 +23,8 @@ test.describe('Bee — level 4', () => {
 
     // .congrats is the direct signal; #feedback-dialog ancestor has offsetParent
     // null — assert on the descendant, not the container.
-    await expect(bee.congratsMessage).toBeVisible();
-    await expect(bee.congratsMessage).toHaveText(
+    await expect(bee.feedbackDialog.congratsMessage).toBeVisible();
+    await expect(bee.feedbackDialog.congratsMessage).toHaveText(
       'Congratulations! You completed Puzzle 4.',
     );
   });

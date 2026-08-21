@@ -2,10 +2,20 @@ import {expect, type Locator, type Page} from '@playwright/test';
 
 import {AuthoredHintsComponent} from '../components/authored-hints';
 import {CalloutsComponent} from '../components/callouts';
+import {FeedbackDialogComponent} from '../components/feedback-dialog';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 import {waitUntilStable} from '../shared/stability';
 
 import {LessonLevelPage} from './lesson-level-page';
+
+export interface LabReadyOptions {
+  /**
+   * Close the intro video modal if this load autoplays it. Defaults to true:
+   * its backdrop blocks the lab underneath, so every other scenario wants it
+   * gone. Pass false when the modal itself is what the scenario asserts on.
+   */
+  dismissIntroVideo?: boolean;
+}
 
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
 export class LegacyBlocklyLab extends LessonLevelPage {
@@ -46,11 +56,20 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    */
   readonly showCodeModalOverlay: Locator;
 
+  /** Inline feedback panel selector; a11y scans scope here. */
+  readonly inlineFeedbackSelector = '.uitest-topInstructions-inline-feedback';
+
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
-  /** Congratulations overlay shown on puzzle completion. */
-  readonly congratsMessage: Locator;
+  /** Run-feedback dialog shown after a program runs (congrats, or the failure message). */
+  readonly feedbackDialog: FeedbackDialogComponent;
+
+  /**
+   * Reopens the level video. Positional, not role+name: its accessible name is
+   * the video's localized title, which varies per level and locale.
+   */
+  readonly referenceAreaLastLink: Locator;
 
   /**
    * The maze/game visualization surface (#visualization, see
@@ -88,10 +107,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.showCodeModalOverlay = page.locator(
       '#showCodeModal [role="presentation"]',
     );
-    this.inlineFeedback = page.locator(
-      '.uitest-topInstructions-inline-feedback',
-    );
-    this.congratsMessage = page.locator('.congrats');
+    this.inlineFeedback = page.locator(this.inlineFeedbackSelector);
+    this.feedbackDialog = new FeedbackDialogComponent(page);
+    this.referenceAreaLastLink = page.locator('.reference_area a').last();
     this.visualization = page.locator('#visualization');
     this.continueButton = page.locator('#continue-button');
     this.embeddedInstructionBlocks = page.locator(
@@ -107,9 +125,12 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    * the lab is interactive long before all subresources, and 'load' can exceed
    * the test timeout on webkit.
    */
-  async gotoLevel(params: LabLevelUrlParams): Promise<void> {
+  async gotoLevel(
+    params: LabLevelUrlParams,
+    options: LabReadyOptions = {},
+  ): Promise<void> {
     await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
-    await this.waitForReady();
+    await this.waitForReady(options);
   }
 
   /**
@@ -118,9 +139,12 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    * params (show_callouts). Same wait strategy as gotoLevel; prefer gotoLevel
    * when labLevelUrl can build the URL.
    */
-  async gotoLevelUrl(url: string): Promise<void> {
+  async gotoLevelUrl(
+    url: string,
+    options: LabReadyOptions = {},
+  ): Promise<void> {
     await this.page.goto(url, {waitUntil: 'domcontentloaded'});
-    await this.waitForReady();
+    await this.waitForReady(options);
   }
 
   /**
@@ -140,7 +164,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   protected async dismissLabInterstitials(): Promise<void> {}
 
   /** Wait for the lab to be interactive: run button, header, overlay dismissed, header settled. */
-  async waitForReady(): Promise<void> {
+  async waitForReady({
+    dismissIntroVideo = true,
+  }: LabReadyOptions = {}): Promise<void> {
     // #runButton mounts on window 'load'; a cold or contended boot can exceed 15s.
     const LAB_LOAD_TIMEOUT_MS = 45_000;
     await expect(this.loadingSpinner).toBeHidden({
@@ -152,7 +178,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     await this.header.waitForUserChrome();
     // Both of these stack above the instructions overlay handled below, whose
     // OK-dialog click they would otherwise intercept.
-    await this.introVideoModal.dismissIfShown();
+    if (dismissIntroVideo) {
+      await this.introVideoModal.dismissIfShown();
+    }
     await this.dismissLabInterstitials();
     // Dismiss the instructions overlay if shown (anonymous sessions). Its
     // backdrop (#overlay) fills the viewport and a plain .click() lands on
@@ -233,6 +261,11 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** A block's rendered SVG group, keyed by its Blockly block id. */
   blockLocator(blockId: string): Locator {
     return this.page.locator(`.blocklySvg [data-id="${blockId}"]`);
+  }
+
+  /** A block's rendered SVG group, scoped to where it is nested under a given parent block's group. */
+  blockChild({child, parent}: {child: string; parent: string}): Locator {
+    return this.blockLocator(parent).locator(`[data-id="${child}"]`);
   }
 
   /**

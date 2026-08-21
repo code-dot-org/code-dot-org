@@ -1,5 +1,6 @@
 import {createVisualTest} from '@code-dot-org/playwright-support/visual';
 
+import {extendExpect} from './matchers';
 import {
   createUser,
   resetSession,
@@ -44,7 +45,7 @@ export const test = visual.test.extend<Fixtures>({
   },
 });
 
-export const {expect} = visual;
+export const expect = extendExpect(visual.expect);
 export type {
   VisualCheck,
   VisualCheckOptions,

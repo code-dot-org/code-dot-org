@@ -64,6 +64,25 @@ export function unitOverviewUrl({
   return `/courses/${course}/units/${unit}`;
 }
 
+export interface UnitResetUrlParams {
+  course?: string;
+  unit?: number;
+}
+
+/**
+ * Build a relative URL for a unit's reset endpoint (ScriptLevelsController#reset).
+ * For an anonymous session this clears client_state and the Rails session,
+ * then renders a page whose inline script clears sessionStorage and redirects
+ * (window.location, with a meta-refresh fallback) to the unit's starting
+ * lesson/level — bare, no query string carried over.
+ */
+export function unitResetUrl({
+  course = 'allthethingscourse',
+  unit = 1,
+}: UnitResetUrlParams = {}): string {
+  return `/courses/${course}/units/${unit}/reset`;
+}
+
 export interface LessonOverviewUrlParams {
   course?: string;
   unit?: number;

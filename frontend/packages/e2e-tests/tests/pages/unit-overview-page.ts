@@ -1,6 +1,6 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {progressBubbleShows} from '../shared/progress';
+import {ProgressBubble} from '../components/progress-bubble';
 import {unitOverviewUrl, type UnitOverviewUrlParams} from '../shared/routes';
 
 import {BasePage} from './base-page';
@@ -43,27 +43,13 @@ export class UnitOverviewPage extends BasePage {
   }
 
   /** Progress bubble for a 1-based lesson/level pair (see progress.rb's summary selector). */
-  summaryProgressBubble({lesson, level}: LessonLevelRef): Locator {
-    return this.summaryProgressTable
-      .locator('.uitest-summary-progress-row')
-      .nth(lesson - 1)
-      .locator('.progress-bubble')
-      .nth(level - 1);
-  }
-
-  /** Whether the given lesson/level summary bubble shows 'perfect' (see progress.rb verify_progress). */
-  async isProgressBubblePerfect(ref: LessonLevelRef): Promise<boolean> {
-    return progressBubbleShows({
-      bubble: this.summaryProgressBubble(ref),
-      state: 'perfect',
-    });
-  }
-
-  /** Whether the given lesson/level summary bubble shows 'not_tried' (see progress.rb verify_progress). */
-  async isProgressBubbleNotTried(ref: LessonLevelRef): Promise<boolean> {
-    return progressBubbleShows({
-      bubble: this.summaryProgressBubble(ref),
-      state: 'not_tried',
-    });
+  summaryProgressBubble({lesson, level}: LessonLevelRef): ProgressBubble {
+    return new ProgressBubble(
+      this.summaryProgressTable
+        .locator('.uitest-summary-progress-row')
+        .nth(lesson - 1)
+        .locator('.progress-bubble')
+        .nth(level - 1),
+    );
   }
 }
