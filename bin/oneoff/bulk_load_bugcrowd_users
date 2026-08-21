@@ -7,7 +7,6 @@ require 'optparse'
 exit unless [:development, :adhoc].include? rack_env
 
 # To run: ruby bin/oneoff/bulk_load_bugcrowd_users --filename=users.csv --dry-run=false
-# To revert: ruby bin/oneoff/move_user_storage_ids_to_dashboard.rb --revert
 
 # Parse options
 options = {

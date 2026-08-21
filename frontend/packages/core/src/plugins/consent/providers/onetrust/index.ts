@@ -39,9 +39,19 @@ export function parseActiveGroups(raw: string | undefined): ConsentState {
  * Adopt the host page's OneTrust promise, if any, pushing initial and
  * mid-session state through `push`. Never injects scripts; a host page
  * with no `oneTrustPromise` leaves consent at its default state.
+ *
+ * `settle` fires once the consent source comes to rest: the promise resolved
+ * (with or without a usable SDK), the promise rejected, or there was no promise
+ * to wait for. A promise that never settles never fires it.
  */
-export function connectOneTrust(push: (state: ConsentState) => void): void {
-  if (!window.oneTrustPromise) return;
+export function connectOneTrust(
+  push: (state: ConsentState) => void,
+  settle: () => void,
+): void {
+  if (!window.oneTrustPromise) {
+    settle();
+    return;
+  }
 
   window.oneTrustPromise
     .then(oneTrust => {
@@ -52,5 +62,6 @@ export function connectOneTrust(push: (state: ConsentState) => void): void {
       });
       push(parseActiveGroups(window.OnetrustActiveGroups));
     })
-    .catch(err => Observability.recordError(err));
+    .catch(err => Observability.recordError(err))
+    .finally(settle);
 }
