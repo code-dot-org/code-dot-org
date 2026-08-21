@@ -130,7 +130,7 @@ describe('ConsoleManager', () => {
   it('drops half-typed input when the console is cleared', () => {
     const consoleManager = newConsoleManager();
     consoleManager.writePartialLine('What is your name? ');
-    consoleManager.appendToInputBuffer('Ada');
+    consoleManager.echoInput('Ada');
 
     consoleManager.clearTerminalLines();
 
@@ -166,7 +166,7 @@ describe('ConsoleManager', () => {
     const consoleManager = newConsoleManager();
     consoleManager.setCodeEnvironmentError(ENVIRONMENT_ERROR);
     consoleManager.writePartialLine('What is your name? ');
-    consoleManager.appendToInputBuffer('Ada');
+    consoleManager.echoInput('Ada');
 
     consoleManager.setCodeEnvironmentError(null);
 
@@ -216,6 +216,22 @@ describe('ConsoleManager', () => {
 
     expect(writtenData().join('')).toContain(
       'characters of output were dropped'
+    );
+  });
+
+  // Both echo and program output used to reach xterm by separate routes, which
+  // let a typed character overtake output printed before it.
+  it('echoes typed characters behind output printed before them', () => {
+    const {consoleManager, writtenData, acknowledgeWrites} = stalledTerminal();
+    consoleManager.writePartialLine('first output');
+    consoleManager.writeConsoleMessage('queued output');
+
+    consoleManager.echoInput('A');
+    acknowledgeWrites();
+
+    const secondWrite = writtenData()[1];
+    expect(secondWrite.indexOf('A')).toBeGreaterThan(
+      secondWrite.indexOf('queued output')
     );
   });
 

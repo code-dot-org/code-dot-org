@@ -154,12 +154,25 @@ export default class ConsoleManager {
     this.terminal.focus();
   }
 
-  public appendToInputBuffer(data: string) {
+  // Keystrokes are echoed through the same queue as program output, so that a
+  // character the user typed cannot reach the screen ahead of output the program
+  // printed before it.
+  public echoInput(data: string) {
     this.inputBuffer += data;
+    this.writeToTerminal(data);
   }
 
-  public backspaceInputBuffer() {
+  // Erases the character to the left of the cursor: back up over it, overwrite
+  // it with a space, and back up again.
+  public echoBackspace() {
     this.inputBuffer = this.inputBuffer.slice(0, -1);
+    this.writeToTerminal('\b \b');
+  }
+
+  // Ends the line the user was typing on. The buffer itself is handed to the
+  // program and recorded separately, see saveAndClearInputBuffer.
+  public echoNewline() {
+    this.writeToTerminal('\r\n');
   }
 
   public getInputBuffer() {

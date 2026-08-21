@@ -83,14 +83,13 @@ const Console: React.FunctionComponent = () => {
     (data: string) => {
       const consoleManager =
         CodebridgeRegistry.getInstance().getConsoleManager();
-      const terminal = consoleManager?.getTerminal();
-      if (!terminal || !consoleManager) {
+      if (!consoleManager) {
         return;
       }
       const charCode = data.charCodeAt(0);
       if (charCode === 13) {
         // new line
-        terminal.writeln('');
+        consoleManager.echoNewline();
         // send input
         if (sendConsoleInput) {
           sendConsoleInput(consoleManager.getInputBuffer());
@@ -100,12 +99,9 @@ const Console: React.FunctionComponent = () => {
       } else if (charCode < 32) {
         // control characters, do nothing
       } else if (charCode === 127) {
-        // backspace
-        terminal.write('\b \b');
-        consoleManager.backspaceInputBuffer();
+        consoleManager.echoBackspace();
       } else {
-        terminal.write(data);
-        consoleManager.appendToInputBuffer(data);
+        consoleManager.echoInput(data);
       }
     },
     [sendConsoleInput]
