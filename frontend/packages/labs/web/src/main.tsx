@@ -19,7 +19,6 @@ import '@code-dot-org/lab/styles/variables.scss';
 import {GlobalStyles, StyledEngineProvider, ThemeProvider} from '@mui/material';
 import {createRoot} from 'react-dom/client';
 
-import store from '@code-dot-org/codebridge/redux';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {
@@ -32,10 +31,7 @@ import {RootStateProvider} from '@code-dot-org/core/redux';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import {LabHost} from '@code-dot-org/lab/host';
 
-import {
-  pretendSignedInWithAiEnabled,
-  useRecordedTutor,
-} from './aiTutor/transport';
+import {useRecordedTutor} from './aiTutor/transport';
 import App from './App';
 
 initializeCore({plugins: [localizationPlugin]});
@@ -46,11 +42,10 @@ injectFontAwesome();
 // exist. The recording is written against this harness's own project, so the
 // accept/reject flow really does rewrite `styles.css` (`aiTutor/transport`).
 //
-// And the mock has no users handler, so nothing has said who is looking at
-// this page. The tutor's access rules read that as no permission — correctly,
-// and uselessly for a harness — so the harness says.
+// Who is looking at the page comes from the mock API's own
+// `/api/v1/users/current` handler (`@code-dot-org/core/api/mocks`), which
+// answers as a signed-in student with AI enabled.
 useRecordedTutor();
-pretendSignedInWithAiEnabled(store.dispatch);
 
 // The lab loads a project by channel id from the URL; default to the `simple`
 // fixture scenario so the harness works at the root path (the channel id doubles

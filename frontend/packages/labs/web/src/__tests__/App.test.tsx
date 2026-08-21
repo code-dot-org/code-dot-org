@@ -1,7 +1,10 @@
 import {act, render, screen} from '@testing-library/react';
 import {expect, it, vi} from 'vitest';
 
-import type {LevelProperties} from '@code-dot-org/core/api';
+import {
+  QueryClientProvider,
+  type LevelProperties,
+} from '@code-dot-org/core/api';
 import {RootStateProvider} from '@code-dot-org/core/redux';
 import {Lab} from '@code-dot-org/lab/host';
 
@@ -35,6 +38,10 @@ vi.mock('@xterm/addon-image', () => ({ImageAddon: class {}}));
 // dashboard API (via useApiClient) and needs the host's ApiClientProvider.
 // That's base's concern and is exercised in the dev demo; here we only assert
 // the shell composes.
+//
+// The QueryClientProvider below is NOT stubbable in the same way: the layout
+// itself asks who is signed in (`useWebLabTutor` -> `useCurrentUser`), to
+// decide whether the AI Tutor tab belongs here. Every real host provides one.
 vi.mock('@code-dot-org/codebridge', async () => {
   const actual = await vi.importActual<
     typeof import('@code-dot-org/codebridge')
@@ -45,9 +52,11 @@ vi.mock('@code-dot-org/codebridge', async () => {
 it('renders the Web Lab shell from the default project', async () => {
   render(
     <RootStateProvider>
-      <Lab levelId="1" levelPropertiesMap={{'1': {} as LevelProperties}}>
-        <WebLab />
-      </Lab>
+      <QueryClientProvider>
+        <Lab levelId="1" levelPropertiesMap={{'1': {} as LevelProperties}}>
+          <WebLab />
+        </Lab>
+      </QueryClientProvider>
     </RootStateProvider>,
   );
 

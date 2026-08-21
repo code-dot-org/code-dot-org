@@ -7,6 +7,7 @@ import {levelsHandlers} from './levels.handlers';
 import {preferencesHandlers} from './preferences.handlers';
 import {projectsHandlers} from './projects.handlers';
 import {sourcesHandlers} from './sources.handlers';
+import {usersHandlers} from './users.handlers';
 
 /**
  * Aggregate handler list consumed by the worker. Order matters only for
@@ -26,5 +27,6 @@ export function getMockHandlers(): RequestHandler[] {
     ...sourcesHandlers,
     ...projectsHandlers,
     ...assetsHandlers,
+    ...usersHandlers,
   ];
 }
