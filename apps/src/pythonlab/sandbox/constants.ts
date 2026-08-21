@@ -27,8 +27,7 @@ export interface PyodideSandboxRunMessage {
   python: string;
   source: MultiFileSource;
   validationFile?: ProjectFile;
-  // Bytes of the project's url-backed files, fetched on studio.code.org because
-  // this origin cannot read studio's assets.
+  // Bytes of the project's url-backed files.
   externalFiles?: ExternalFileContents;
 }
 
