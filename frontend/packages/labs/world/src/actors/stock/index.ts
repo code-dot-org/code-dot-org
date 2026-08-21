@@ -12,6 +12,7 @@
 // openable, editable, and no longer connected to anything here.
 
 import {buttonActor} from './button';
+import {healthBarActor} from './healthBar';
 import {labelActor} from './label';
 import {progressBarActor} from './progressBar';
 
@@ -52,6 +53,17 @@ export const STOCK_ACTORS: readonly StockActor[] = [
       'A bar that fills up. Set its fraction between 0 and 1 and it draws that much of itself — health, a loading bar, how close a boss is to waking. Attach it to an actor to have it ride above one.',
     requires: ['Progress'],
     contents: progressBarActor,
+  },
+  {
+    id: 'healthBar',
+    name: 'Health Bar',
+    description:
+      'A Progress Bar that fills itself in. Point it at an actor with “attached to” and it rides above that actor and shows that actor’s health — one line for both.',
+    // The three it ELECTS. `Health` is not among them because the bar has no
+    // health — its subject does — and the `Health Bar` rule names Health as
+    // its own dependency, which the import follows.
+    requires: ['Progress', 'Attachment', 'Health Bar'],
+    contents: healthBarActor,
   },
   {
     id: 'button',

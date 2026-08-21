@@ -83,7 +83,7 @@ describe('any <kind>, in a handler’s subject socket', () => {
   it('is a module actor, imported like anything else that names one', () => {
     const {code, imports} = emitSubject({ACTOR: 'actors/coin'});
 
-    expect(code).toBe('Coin');
+    expect(code).toBe('ActorsCoin');
     expect(imports).toEqual(['mod:actors/coin']);
   });
 });

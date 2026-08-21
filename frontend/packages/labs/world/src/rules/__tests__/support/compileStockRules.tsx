@@ -49,6 +49,7 @@ import {
   driveRule,
   expiresRule,
   gravityRule,
+  healthBarRule,
   healthRule,
   inputRule,
   jumpRule,
@@ -178,6 +179,8 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   'rules/mouse': mouseRule,
   'rules/writing': writingRule,
   'rules/progress': progressRule,
+  // After Health, Progress and Attachment, which is all it does.
+  'rules/healthBar': healthBarRule,
   'rules/score': scoreRule,
   'rules/camera': cameraRule,
   'rules/cameraFollow': cameraFollowRule,

@@ -1,4 +1,4 @@
-// The stock Label, Progress Bar and Button (specs/UI_ACTORS.md).
+// The stock Label, Progress Bar, Health Bar and Button (specs/UI_ACTORS.md).
 //
 // What these pin is that an interface element is an ORDINARY ACTOR. Every
 // assertion below is one anybody's own `.actor` file would have to pass: it
@@ -12,6 +12,7 @@ import {describe, expect, it} from 'vitest';
 import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {STOCK_ACTORS} from '../stock';
 import {buttonActor} from '../stock/button';
+import {healthBarActor} from '../stock/healthBar';
 import {labelActor} from '../stock/label';
 import {progressBarActor} from '../stock/progressBar';
 
@@ -118,6 +119,33 @@ describe('Progress Bar', () => {
     expect(parseActorOwnMeta('actors/progressBar', progressBarActor)).toEqual(
       expect.objectContaining({properties: []}),
     );
+  });
+});
+
+describe('Health Bar', () => {
+  it('is a Progress Bar that elects two more traits', () => {
+    // The Button's shape one shelf along, and the same demonstration: a health
+    // bar IS a progress bar, and what makes it a health one is where its
+    // number comes from. That is a trait, not a drawing.
+    const drawn = types(healthBarActor);
+    const shared = types(progressBarActor);
+
+    expect(drawn.filter(type => type === 'world_draw_rectangle')).toEqual(
+      shared.filter(type => type === 'world_draw_rectangle'),
+    );
+    expect(healthBarActor).toContain('Progress#ShowsProgressTrait');
+    expect(healthBarActor).toContain('Attachment#AttachedTrait');
+    expect(healthBarActor).toContain('Health Bar#ShowsHealthTrait');
+  });
+
+  it('draws exactly what a Progress Bar draws, from the same blocks', () => {
+    // Not "the same shape" — the same source. A second copy of the track, the
+    // fill and the expression between them would be somewhere for the two to
+    // disagree, and the whole claim here is that they cannot.
+    const drawingOf = (contents: string) =>
+      contents.slice(contents.indexOf('world_define_drawing'));
+
+    expect(drawingOf(healthBarActor)).toBe(drawingOf(progressBarActor));
   });
 });
 

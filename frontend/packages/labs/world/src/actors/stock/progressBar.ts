@@ -37,36 +37,46 @@ const progressOf = (exportName: string) => ({
   block: {type: `world_get_Progress_${exportName}`, inputs: {ACTOR: me()}},
 });
 
+/**
+ * The picture, as its own thing.
+ *
+ * EXPORTED, because the stock Health Bar is this bar with a trait added and
+ * draws exactly the same way — a second copy of the track, the fill and the
+ * expression between them would be somewhere for the two to disagree, and the
+ * whole claim of a Health Bar is that it IS a Progress Bar.
+ */
+export const progressBarDrawing = () => ({
+  width: WIDTH,
+  height: HEIGHT,
+  commands: [
+    // The track first and whole, so what is left of it IS the empty part —
+    // there is no second rectangle for "the rest", and none to keep in step.
+    fill(progressOf('TrackColorProperty')),
+    rectangle(0, 0, WIDTH, HEIGHT),
+    fill(progressOf('BarColorProperty')),
+    {
+      type: 'world_draw_rectangle',
+      inputs: {
+        X: num(0),
+        Y: num(0),
+        // The one measurement that is not a number. Above 1 this draws wider
+        // than the canvas and the canvas clips it; below 0 there is nothing
+        // to draw. Neither needs arithmetic to defend against.
+        WIDTH: {
+          block: {
+            type: 'math_arithmetic',
+            fields: {OP: 'MULTIPLY'},
+            inputs: {A: num(WIDTH), B: progressOf('FractionProperty')},
+          },
+        },
+        HEIGHT: num(HEIGHT),
+      },
+    },
+  ],
+});
+
 export const progressBarActor = actorFile(
   'Progress Bar',
   [useTrait('Progress#ShowsProgressTrait'), showAs('bar')],
-  {
-    width: WIDTH,
-    height: HEIGHT,
-    commands: [
-      // The track first and whole, so what is left of it IS the empty part —
-      // there is no second rectangle for "the rest", and none to keep in step.
-      fill(progressOf('TrackColorProperty')),
-      rectangle(0, 0, WIDTH, HEIGHT),
-      fill(progressOf('BarColorProperty')),
-      {
-        type: 'world_draw_rectangle',
-        inputs: {
-          X: num(0),
-          Y: num(0),
-          // The one measurement that is not a number. Above 1 this draws wider
-          // than the canvas and the canvas clips it; below 0 there is nothing
-          // to draw. Neither needs arithmetic to defend against.
-          WIDTH: {
-            block: {
-              type: 'math_arithmetic',
-              fields: {OP: 'MULTIPLY'},
-              inputs: {A: num(WIDTH), B: progressOf('FractionProperty')},
-            },
-          },
-          HEIGHT: num(HEIGHT),
-        },
-      },
-    ],
-  },
+  progressBarDrawing(),
 );

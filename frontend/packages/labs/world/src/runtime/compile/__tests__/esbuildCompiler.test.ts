@@ -69,9 +69,9 @@ describe('WorldCompiler', () => {
     const project: Record<string, string> = {
       'worlds/main.ts': `
         import {WorldBuilder} from 'world-lab';
-        import Ripple from 'effects/ripple';
+        import EffectsRipple from 'effects/ripple';
         const world = new WorldBuilder({id: 'g', name: 'G'});
-        console.log(Ripple.name);
+        console.log(EffectsRipple.name);
         export default world;
       `,
       'effects/ripple.effect': `{"version":1,"name":"Ripple","parameters":[],"nodes":[{"id":"sample-1","type":"sample","position":{"x":0,"y":0}}],"edges":[],"functions":[]}`,

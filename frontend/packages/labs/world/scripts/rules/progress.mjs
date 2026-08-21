@@ -36,11 +36,12 @@ const rule = defineRule({
 });
 
 const shows = rule.trait('Shows Progress');
+export const ShowsProgress = rule.traitRef('Shows Progress');
 
 // Full, because a bar nobody has told anything to is a bar showing what it
 // was given — and a game that forgets to set one has an obvious bug rather
 // than an empty bar that looks deliberate.
-shows.number('fraction', 1);
+export const fraction = shows.number('fraction', 1);
 // The part that fills. Red is the health bar's colour because health is what
 // most learners put in the first one they make.
 shows.color('bar color', '#e04040');
