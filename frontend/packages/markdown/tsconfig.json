@@ -3,5 +3,5 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "include": ["src", "demo"]
+  "include": ["src", "demo", "vite"]
 }
