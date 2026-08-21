@@ -44,7 +44,7 @@ export async function loadExternalFileContents(
         return;
       }
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, {credentials: 'omit'});
         if (!response.ok) {
           throw new Error(`Request for ${url} returned ${response.status}`);
         }
