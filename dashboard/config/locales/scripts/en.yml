@@ -29849,7 +29849,7 @@ en:
               display_name: End of Unit Project
             lessonGroup-5:
               display_name: End of Unit Assessment and Survey
-          title: AI and the Systems That Power It
+          title: "[DEV] AI and the Systems That Power It 26/27"
           description: |-
             This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
 
@@ -29892,6 +29892,8 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: ai-and-the-systems-that-power-it-2026-dev
         the-fabric-of-the-internet-and-ai-2026-dev:
           lesson_groups:
             lessonGroup-2:

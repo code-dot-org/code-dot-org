@@ -1,0 +1,44 @@
+name 'pl-aif-lesson-2-overview-JS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Lesson 2: Web Apps</h1>
+
+<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 1-2</div>
+
+<p>This lesson prepares you to teach two curriculum lessons:</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 1:</b> Introduction to Web Apps</p>
+<a href="[LESSON 1 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 1</a>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>Curriculum Lesson 2:</b> Build Your First Web Page with AI</p>
+<a href="[LESSON 2 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 2</a>
+</div>
+
+<hr>
+
+<p><b>In this lesson, you'll:</b></p>
+<p style="margin: 0 0 6px 0;">• Click through decades of web design to see structural patterns emerge</p>
+<p style="margin: 0 0 6px 0;">• Watch AI generate a webpage from a prompt and see pattern recognition at work</p>
+<p style="margin: 0 0 6px 0;">• Get oriented in Web Lab</p>
+<p style="margin: 0;">• Try creating a webpage yourself with AI</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+<p><b>💡 Notice as you explore: </b> the structural vocabulary, nav bar, hero section, gallery cards, footer, and how AI's pattern recognition connects to what students will build when prompting their first page.</p>
+</div>
+
+<hr>
+
+<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 1</div>
+  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 2</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 3</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 4</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 5</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 6</div>
+</div>
+MARKDOWN
