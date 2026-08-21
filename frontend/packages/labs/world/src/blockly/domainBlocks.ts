@@ -153,6 +153,13 @@ import {
 } from './moduleOptions';
 import {ownPropertyDeclarationFor, type OwnMeta} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
+import {
+  propertyByKey,
+  propertyOptions,
+  setKnownProperties,
+  writablePropertyOptions,
+  type PropertyKind,
+} from './propertyOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
 import {slug} from './ruleMeta';
 import type {
@@ -2017,6 +2024,159 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     },
   });
 };
+
+// ── The general property blocks ──────────────────────────────────────────────
+// One `get` and one `set` PER KIND, covering every actor property in the
+// project from a dropdown (blockly/propertyOptions). The per-property blocks
+// below are not going anywhere — a rule's category is a catalogue you can
+// browse, and that is the good half of minting one each — but they cannot
+// cover an actor's OWN property without giving every actor a category of its
+// own, and these can.
+//
+// SIX KINDS, TWELVE BLOCKS, against a hundred and sixty-eight. The alternative
+// was one polymorphic pair whose output changed as the dropdown moved; that
+// works and disconnects whatever was plugged in the moment somebody browses
+// the menu. A block per kind is statically typed, and the list inside it is
+// only the properties it could possibly report.
+//
+// A POINT REPORTS THE WHOLE VECTOR here, where its own getter reports one axis
+// from a second dropdown. `⟨x⟩ of ⟨…⟩` is a block that already exists and
+// composes, and two dropdowns on one block — the second meaningless for most
+// of what the first offers — is worse than asking for it.
+
+/** The output/socket check each kind carries. */
+const KIND_CHECK: Record<PropertyKind, string> = {
+  number: 'Number',
+  text: 'String',
+  boolean: 'Boolean',
+  color: COLOUR_CHECK,
+  vector: 'Vector',
+  actor: 'Actor',
+};
+
+/** What the menu says when the project has no property of this kind. */
+const kindOptions =
+  (kind: PropertyKind, writable: boolean) => (): Array<[string, string]> =>
+    orNone(
+      writable ? writablePropertyOptions(kind) : propertyOptions(kind),
+    ) as Array<[string, string]>;
+
+const generalPropertyBlocks = (kind: PropertyKind) => {
+  const getType = `world_get_${kind}_property`;
+  const setType = `world_set_${kind}_property`;
+  // An actor value reports a LIST, always, so a socket reading one narrows it
+  // rather than reading the property off an array (`registerManyActorBlock`).
+  if (kind === 'actor') {
+    registerManyActorBlock(getType);
+  }
+  return [
+    defineBlock({
+      type: getType,
+      message0: 'get %1 of %2',
+      args0: [
+        {
+          type: 'field_dropdown',
+          name: 'PROP',
+          options: kindOptions(kind, false),
+        },
+        {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+      ],
+      inputsInline: true,
+      output: KIND_CHECK[kind],
+      extensions: [
+        subjectInputExtension('actor'),
+        liveDropdown(`world_get_${kind}_property_options`, 'PROP', () =>
+          kindOptions(kind, false)(),
+        ),
+      ],
+      style: valueStyle(kind === 'text' ? 'string' : (kind as PropertyType)),
+      tooltip:
+        'Read any property an actor has — one a rule gives it, or one its ' +
+        'own file declares.',
+      generator: {
+        javascript(block, generator) {
+          const known = propertyByKey(
+            String(block.getFieldValue('PROP') ?? ''),
+          );
+          if (!known) {
+            // A property the project no longer holds. A value block has to
+            // report SOMETHING of the shape its socket expects, which is what
+            // every other dead reference here does.
+            return [deadValue(kindType(kind), generator), Order.ATOMIC] as [
+              string,
+              number,
+            ];
+          }
+          const subject = oneActor(actorTarget(block, generator, Order.MEMBER));
+          return [
+            `${subject}.get(${refCode(known.property.ref, generator)})`,
+            Order.ATOMIC,
+          ] as [string, number];
+        },
+      },
+    }),
+    defineBlock({
+      type: setType,
+      message0: 'set %1 of %2 to %3',
+      args0: [
+        {
+          type: 'field_dropdown',
+          name: 'PROP',
+          options: kindOptions(kind, true),
+        },
+        {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+        {type: 'input_value', name: 'VALUE', check: KIND_CHECK[kind]},
+      ],
+      inputsInline: true,
+      previousStatement: true,
+      nextStatement: true,
+      extensions: [
+        subjectInputExtension('actor'),
+        liveDropdown(`world_set_${kind}_property_options`, 'PROP', () =>
+          kindOptions(kind, true)(),
+        ),
+      ],
+      style: valueStyle(kind === 'text' ? 'string' : (kind as PropertyType)),
+      tooltip:
+        'Write any property an actor has — one a rule gives it, or one its ' +
+        'own file declares.',
+      generator: {
+        javascript(block, generator) {
+          const known = propertyByKey(
+            String(block.getFieldValue('PROP') ?? ''),
+          );
+          const value =
+            generator.valueToCode(block, 'VALUE', Order.NONE) || 'null';
+          if (!known) {
+            return '';
+          }
+          // Over the actor value, which may hold several: `set ⟨…⟩ of ⟨any
+          // ⟨Coin⟩⟩` broadcasts, exactly as the per-property setter does.
+          return forEachActor(
+            actorTarget(block, generator),
+            who =>
+              `${who}.set(${refCode(known.property.ref, generator)}, ${value})`,
+          );
+        },
+      },
+    }),
+  ];
+};
+
+/** A representative property type for a kind, for `deadValue` and `valueStyle`. */
+const kindType = (kind: PropertyKind): PropertyType =>
+  kind === 'text'
+    ? 'string'
+    : kind === 'actor'
+      ? 'actors'
+      : (kind as PropertyType);
+
+const GENERAL_PROPERTY_BLOCKS = (
+  ['number', 'text', 'boolean', 'color', 'vector', 'actor'] as PropertyKind[]
+).flatMap(generalPropertyBlocks);
+
+/** …and their types, for the toolbox. */
+const GENERAL_PROPERTY_TYPES = GENERAL_PROPERTY_BLOCKS.map(block => block.type);
 
 // Generate a set + get block for every settable property, in rule/trait
 // declaration order, and record which belong to each rule's toolbox category: a
@@ -6606,6 +6766,7 @@ const worldRemoveTrait = traitMutation({
 });
 
 export const DOMAIN_BLOCKS = [
+  ...GENERAL_PROPERTY_BLOCKS,
   worldActor,
   worldUseTrait,
   worldAddTrait,
@@ -6767,6 +6928,12 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     blocks: [
       'world_actor',
       'world_use_trait',
+      // Any property of any actor, by name — a rule's or one an actor's own
+      // file declares. The per-rule categories still list a rule's properties
+      // one by one, which is how they are DISCOVERED; these are how they are
+      // reached when you already know what you want, and they are the only way
+      // an actor's own is reachable at all (blockly/propertyOptions).
+      ...GENERAL_PROPERTY_TYPES,
       // …and the runtime pair beside it: what an actor IS as it is built,
       // against what it is doing now. `has trait` asks, and sits with Logic.
       'world_add_trait',
@@ -7417,6 +7584,31 @@ export function buildDomainPalette(
   // anywhere, rather than one confined to its own file.
   const ownProperties = (options.ownProperties ?? []).flatMap(
     actor => actor.properties,
+  );
+  // What the general get/set blocks offer: every ACTOR-scoped property in the
+  // project, a rule's and an actor's own alike, keyed by the same member key
+  // the per-property block types are minted from.
+  //
+  // Set here because this is the one place that has both lists at once, and it
+  // runs whenever either changes — a rule imported, an actor's `define
+  // property` renamed.
+  setKnownProperties(
+    [
+      ...projectRules.flatMap(rule =>
+        rule.properties.map(property => ({rule: rule.name, property})),
+      ),
+      ...(options.ownProperties ?? []).flatMap(actor =>
+        actor.properties.map(property => ({rule: actor.name, property})),
+      ),
+    ]
+      .filter(({property}) => property.scope === 'actor')
+      .map(({rule, property}) => ({
+        key: memberKey(property.ref),
+        // Where it came from, because two rules may both call something
+        // `fraction` and a bare name would offer one word twice.
+        label: `${rule} \u25b8 ${property.name}`,
+        property,
+      })),
   );
   // `each frame` and `define drawing` wear the connections their file makes
   // sense of: a root in an `.actor`, a chained row everywhere else
