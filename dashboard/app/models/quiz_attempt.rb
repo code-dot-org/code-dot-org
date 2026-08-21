@@ -41,6 +41,14 @@ class QuizAttempt < ApplicationRecord
     expires_at.present? && Time.now > expires_at
   end
 
+  # How long after expires_at a response write is still accepted - covers
+  # the client's own legitimate auto-submit.
+  RESPONSE_GRACE_PERIOD = 30.seconds
+
+  def response_deadline_passed?
+    expires_at.present? && Time.now > expires_at + RESPONSE_GRACE_PERIOD
+  end
+
   # Whether a NEW attempt could be started after this one. Only meaningful
   # once this attempt is submitted - an in-progress attempt should be
   # resumed, not retaken. max_attempts blank means unlimited once
