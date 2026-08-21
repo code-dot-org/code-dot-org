@@ -13,7 +13,7 @@ const CLEAR_DISPLAY = '\x1b[2J\x1b[3J\x1b[H';
 // Hand xterm one chunk at a time and hold the rest here:
 // nothing of ours is outstanding at the moment we call write(), so its limit
 // stays out of reach. Output arriving while this queue is full is counted and
-// dropped; a single oversized write, such as a plot, still goes through whole.
+// dropped; a single oversized write still goes through whole.
 const MAX_QUEUED_BYTES = 4_000_000;
 
 // How much output is kept for redrawing the console and for handing over to a
@@ -43,12 +43,9 @@ export default class ConsoleManager {
   // so this manager owns writing it.
   private codeEnvironmentError: string | null;
   private terminalLinesListeners: ((lines: string[]) => void)[] = [];
-  // Writes waiting to be handed to the terminal, and the number of characters
-  // in them. See MAX_QUEUED_BYTES.
   private queuedWrites: string[];
   private queuedBytes: number;
   private awaitingWrite: boolean;
-  // Characters dropped because the queue was full, reported once the flood ends.
   private droppedCharacters: number;
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
@@ -323,11 +320,7 @@ export default class ConsoleManager {
         this.flushQueuedWrites();
       });
     } catch {
-      // The terminal refuses a write outright once too much of what it has been
-      // given is still unparsed, and then never runs the callback, so this is the
-      // only place the flag can be cleared. Count the chunk as dropped and let
-      // the next write that the terminal does accept report the total; reporting
-      // it here would write again, into the same refusal.
+      // If we hit an error, count the chunk as dropped.
       this.awaitingWrite = false;
       this.droppedCharacters += chunk.length;
     }
