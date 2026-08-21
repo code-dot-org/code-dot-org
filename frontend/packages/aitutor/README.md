@@ -10,9 +10,14 @@ turned into interfaces the host implements, so the panel also runs with **no
 server**: against recorded fixtures, or against a developer's own API key
 through a dev-only local proxy.
 
-Milestones 1 to 4 of [`specs/PLAN.md`](specs/PLAN.md) are done: the panel runs,
-knows what to say about a project, and can reach a real model through a local
-proxy. It does not talk to the dashboard yet.
+All six milestones of [`specs/PLAN.md`](specs/PLAN.md) are done. The panel
+runs, knows what to say about a project, can offer a set of file edits, and
+reaches a model four ways.
+
+**No lab switches the tab on yet**, on purpose: whether the tutor may appear
+depends on a section's `aiChatAccessLevel`, a teacher setting that has not been
+ported. A lab must apply that rule before passing a config. See `specs/PLAN.md`
+§11.1.
 
     yarn dev     # the panel, standing alone, answering from recordings
 

@@ -1820,6 +1820,7 @@ __metadata:
     vite-plugin-lib-inject-css: "npm:^2.2.2"
     vitest: "catalog:"
   peerDependencies:
+    "@code-dot-org/core": "workspace:*"
     "@emotion/react": ^11.0.0
     "@emotion/styled": ^11.0.0
     "@mui/material": ^7.0.0
@@ -1931,6 +1932,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/codebridge@workspace:packages/labs/codebridge"
   dependencies:
+    "@code-dot-org/aitutor": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lab": "workspace:*"
@@ -2227,6 +2229,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/lab@workspace:packages/labs/base"
   dependencies:
+    "@code-dot-org/aitutor": "workspace:*"
     "@code-dot-org/audio": "workspace:*"
     "@code-dot-org/blockly": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"

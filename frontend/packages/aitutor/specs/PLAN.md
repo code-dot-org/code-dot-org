@@ -10,9 +10,9 @@ This package is that panel, extracted from `apps/` so a lab in
 all** — against recorded fixtures, or against a dev's own API key through a
 local proxy.
 
-Status: milestones 1 to 5 are done (§10). The panel runs, knows what to say
-about a project, can reach a real model through a local proxy, and can offer a
-set of file edits. Nothing talks to the dashboard yet.
+Status: all six milestones are done (§10). One thing is deliberately NOT done
+and is the gate on switching the tab on for real students: the section
+access-level rule (§12).
 
 ## 1. What exists today, and where
 
@@ -411,7 +411,7 @@ progress slice at all and must still work.
 | 3   | Context assembly + suggested prompts                | **done** — a test asserts the whole `hiddenContext` string, byte for byte                  |
 | 4   | Dev proxy                                           | **done** — `/__tutor/status` gates the demo's live option; no key degrades visibly         |
 | 5   | Structured responses + proposals                    | **done** — a fixture proposal renders chips and Accept/Reject; the host gets the files     |
-| 6   | `DashboardTransport` + resource-panel socket        | the commented block in `ResourcePanel.tsx` is real code again, and world lab shows the tab |
+| 6   | `DashboardTransport` + resource-panel socket        | **done** — the block in `ResourcePanel.tsx` is real code; no lab passes a config yet (§12) |
 
 1–5 need no server and no studio. 6 is the only one that does, which is why it
 is last.
@@ -428,6 +428,29 @@ under Playwright showed the student's own question tinted as a REJECTED one for
 as long as the answer took to arrive: `unknown` is not-yet-settled, the tint
 read it as not-`ok`, and every test passed because a class name is not a
 colour. Every milestone from here ends with the demo driven in a real browser.
+
+## 11.1 What is wired, and what is not
+
+The socket is filled. `ResourcePanel` takes an `aiTutor?: TutorConfig` and
+renders the tab from it; Codebridge's `InfoPanel` passes one through, so any
+Codebridge lab can supply one. `labs/base` injects the slice into the shared
+store, so a host does nothing but pass the config.
+
+NO LAB PASSES ONE YET, and that is on purpose. Legacy decides whether the tutor
+appears with `shouldShowAiTutor`, which reads the section's `aiChatAccessLevel`
+— a teacher setting, held in studio state this package cannot see. Until that
+rule is ported, the safe direction is the one taken: the tab exists only when a
+host explicitly asks for it, so a tutor cannot appear in a classroom where a
+teacher switched it off. A lab that wants the tab must apply the rule itself
+first.
+
+Two smaller gaps of the same kind:
+
+- **The header buttons.** Clear Chat above all — `useTutor().clear` implements
+  it, and there is nowhere in the panel header to put it yet. Legacy renders
+  `AiChatHeaderButtons` there.
+- **Teacher view.** Reading a student's transcript, and flagging a response,
+  are the chat-history feature (§2, §12).
 
 ## 12. Open questions
 
