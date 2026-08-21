@@ -99,7 +99,7 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
       processed_count   += processed_storage_ids.size
       first_storage_id ||= processed_storage_ids.min
       last_storage_id    = processed_storage_ids.max
-      storage_id_cursor  = last_storage_id || to_storage_id
+      storage_id_cursor  = processed_storage_ids.size < current_batch_size ? to_storage_id : last_storage_id
 
       self.class.storage_id_cursor = storage_id_cursor unless dry_run
     end
