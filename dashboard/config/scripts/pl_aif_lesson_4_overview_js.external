@@ -1,0 +1,50 @@
+name 'pl-aif-lesson-4-overview-JS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Lesson 4: Interactivity in Web Apps</h1>
+
+<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 6-8</div>
+
+<p>This lesson prepares you to teach three curriculum lessons:</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 6:</b> Interactivity in Web Apps</p>
+<a href="[LESSON 6 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 6</a>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 7:</b> Making a Button Respond</p>
+<a href="[LESSON 7 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 7</a>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>Curriculum Lesson 8:</b> Variables and Live Updates</p>
+<a href="[LESSON 8 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 8</a>
+</div>
+
+<hr>
+
+<p><b>In this lesson, you'll:</b></p>
+<p style="margin: 0 0 6px 0;">• Explore a mock site to spot real interactivity in action</p>
+<p style="margin: 0 0 6px 0;">• Sort user actions from page elements</p>
+<p style="margin: 0 0 6px 0;">• Walk through the DOM and a live event-handler demo, piece by piece</p>
+<p style="margin: 0 0 6px 0;">• Practice evaluating AI-generated code like a QA Engineer</p>
+<p style="margin: 0;">• Try a Web Lab practice activity yourself</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+<p><b>💡 Notice as you explore:</b> the difference between AI confidence and AI correctness, working code isn't proof that AI understood the request, and that distinction matters every time you're reading a student's AI-generated code.</p>
+</div>
+
+<hr>
+
+<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 1</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 2</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 3</div>
+  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 4</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 5</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 6</div>
+</div>
+MARKDOWN

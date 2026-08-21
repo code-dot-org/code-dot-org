@@ -1,0 +1,38 @@
+name 'pl-aif-lesson-6-overview-JS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Lesson 6: Preparing for the Final Project</h1>
+
+<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lesson 12</div>
+
+<p>This lesson prepares you to teach one curriculum lesson:</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>Curriculum Lesson 12:</b> Reactive Logic Project</p>
+<a href="[LESSON 12 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 12</a>
+</div>
+
+<hr>
+
+<p><b>In this lesson, you'll:</b></p>
+<p style="margin: 0 0 6px 0;">• Review the project's goals and four-milestone structure</p>
+<p style="margin: 0 0 6px 0;">• Learn the TAG feedback method students use with each other</p>
+<p style="margin: 0;">• Practice grading a real mock project against the rubric</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+<p><b>💡 Notice as you explore:</b> the rubric's five categories are graded independently, a weak plan doesn't automatically mean weak code, and your professional judgment is always the final call, not a single calibrated answer.</p>
+</div>
+
+<hr>
+
+<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 1</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 2</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 3</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 4</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 5</div>
+  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 6</div>
+</div>
+MARKDOWN
