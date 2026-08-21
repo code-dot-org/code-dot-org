@@ -169,7 +169,7 @@ class CertificateImage
           name: {
             font_size: 62,
             x_offset: 0,
-            y_offset: -248,
+            y_offset: -198,
             height: 70,
             width: CERT_NAME_AREA_WIDTH,
           },
@@ -177,11 +177,11 @@ class CertificateImage
             unit_group_height: 85,
             unit_group_font_size: 62,
             unit_group_x_offset: 0,
-            unit_group_y_offset: -57,
+            unit_group_y_offset: -7,
             unit_height: 71,
             unit_font_size: 57,
             unit_x_offset: 0,
-            unit_y_offset: 36,
+            unit_y_offset: 76,
           },
           one_title: {
             font_size: 62,
