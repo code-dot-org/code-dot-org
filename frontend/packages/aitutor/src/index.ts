@@ -1,8 +1,13 @@
 // Public API for @code-dot-org/aitutor.
 //
-// See specs/PLAN.md. Milestones 1 to 3: the message model, the transport seam,
-// a transport that answers from a recording, the panel, and what the panel
-// tells the model about the project. Nothing here talks to a server yet.
+// See specs/PLAN.md. Milestones 1 to 4: the message model, the transport seam,
+// a transport that answers from a recording, the panel, what the panel tells
+// the model about the project, and an optional dev-only path to a real model
+// through a local proxy. Nothing here talks to the dashboard yet.
+//
+// The Vite plugin that holds the key is NOT exported here — it is node code,
+// and the browser entry must not be able to reach it. It has its own subpath:
+// `@code-dot-org/aitutor/dev`.
 
 export {
   AiInteractionStatus,
@@ -27,6 +32,13 @@ export type {
 } from './transport/types';
 
 export {
+  DirectTransport,
+  proxyStatus,
+  type DirectTransportOptions,
+} from './transport/direct/DirectTransport';
+export type {ProxyStatus} from './dev/protocol';
+
+export {
   FixtureExhausted,
   FixtureTransport,
   type FixtureTransportOptions,
@@ -45,6 +57,8 @@ export {default as aiTutorSlice} from './session/slice';
 export {
   conversationCleared,
   messageSent,
+  proposalOffered,
+  proposalSettled,
   turnCompleted,
   turnFailed,
   type AiTutorState,
@@ -54,8 +68,23 @@ export {
   TutorProvider,
   useTutorConfig,
   type TutorConfig,
-  type TutorProposal,
 } from './session/TutorContext';
+
+export {
+  answerFrom,
+  applicableFiles,
+  proposalFrom,
+  type ProposalPolicy,
+  type TutorProposal,
+} from './response/proposal';
+export {formatAnswer, formatProposalText} from './response/format';
+export {
+  answerSchema,
+  type Answer,
+  type AnswerCodeFile,
+  type AnswerSchemaOptions,
+  type JsonSchema,
+} from './response/schema';
 
 export {useTutor, type Tutor} from './session/useTutor';
 
@@ -78,6 +107,7 @@ export {default as AiTutorPanel} from './components/AiTutorPanel';
 export type {AiTutorPanelProps} from './components/AiTutorPanel';
 export {default as Composer} from './components/Composer';
 export {default as MessageView} from './components/MessageView';
+export {default as ProposalActions} from './components/ProposalActions';
 export {default as SuggestedPrompts} from './components/SuggestedPrompts';
 export {default as WaitingAnimation} from './components/WaitingAnimation';
 export {failureText} from './components/failureText';

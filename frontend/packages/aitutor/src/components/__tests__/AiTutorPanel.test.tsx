@@ -14,7 +14,7 @@ import {describe, expect, it, vi} from 'vitest';
 import type {AiTutorContext} from '../../context/types';
 import type {SuggestedPrompt} from '../../prompts/suggestedPrompts';
 import slice from '../../session/slice';
-import {TutorProvider} from '../../session/TutorContext';
+import {TutorProvider, type TutorConfig} from '../../session/TutorContext';
 import {strings} from '../../strings';
 import {FixtureTransport} from '../../transport/fixture/FixtureTransport';
 import {
@@ -208,5 +208,130 @@ describe('the suggested prompts', () => {
     await waitFor(() =>
       expect(screen.getByRole('button', {name: 'Give a hint'})).toBeDisabled(),
     );
+  });
+});
+
+describe('a proposal', () => {
+  const policy = {
+    answerTypes: ['buildJavaScript'],
+    fileTypes: ['js'],
+  };
+
+  const proposing = (answerType = 'buildJavaScript', filename = 'main.js') =>
+    fromTurns([
+      {
+        reply: {
+          structured: {
+            answer: {
+              answerType,
+              explanation: 'moved it into a loop',
+              code: [{filename, sourceCode: 'for (;;) {}'}],
+            },
+          },
+        },
+      },
+    ]);
+
+  const showWith = (
+    transport: TutorTransport,
+    proposals?: Partial<TutorConfig['proposals']>,
+  ) => {
+    const store = configureStore({reducer: {aiTutor: slice.reducer}});
+    render(
+      <Provider store={store}>
+        <TutorProvider
+          transport={transport}
+          proposals={{...policy, ...proposals} as TutorConfig['proposals']}
+        >
+          <AiTutorPanel />
+        </TutorProvider>
+      </Provider>,
+    );
+    return store;
+  };
+
+  it('offers the files and both answers, and applies them at once', async () => {
+    // Applied when offered, not when accepted: legacy replaces the sources and
+    // makes the workspace read-only, so the decision is about something the
+    // student can see rather than a description of it.
+    const onPropose = vi.fn();
+    showWith(proposing(), {onPropose});
+
+    await ask('make it loop');
+
+    expect(await screen.findByText('main.js')).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Accept'})).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Reject'})).toBeInTheDocument();
+    expect(onPropose).toHaveBeenCalledWith(
+      expect.objectContaining({
+        files: [{path: 'main.js', contents: 'for (;;) {}'}],
+      }),
+    );
+  });
+
+  it('shows the explanation without repeating the code', async () => {
+    // The student is looking at the applied edit; a second copy in the chat is
+    // the same content twice, once unreadably.
+    showWith(proposing());
+
+    await ask('make it loop');
+
+    expect(await screen.findByText('moved it into a loop')).toBeInTheDocument();
+    expect(screen.queryByText(/for \(;;\)/)).toBeNull();
+  });
+
+  it('asks what changed before it accepts, and will not save an unnamed version', async () => {
+    const onAccept = vi.fn();
+    const user = userEvent.setup();
+    showWith(proposing(), {onAccept});
+    await ask('make it loop');
+
+    await user.click(await screen.findByRole('button', {name: 'Accept'}));
+
+    // A version with no description is one nobody can find later.
+    expect(screen.getByRole('button', {name: 'Save'})).toBeDisabled();
+    await user.type(
+      screen.getByRole('textbox', {name: /what did you change/i}),
+      'a loop',
+    );
+    await user.click(screen.getByRole('button', {name: 'Save'}));
+
+    expect(onAccept).toHaveBeenCalledWith(expect.anything(), 'a loop');
+  });
+
+  it('rejects in one press, and the offer is gone', async () => {
+    const onReject = vi.fn();
+    const user = userEvent.setup();
+    showWith(proposing(), {onReject});
+    await ask('make it loop');
+
+    await user.click(await screen.findByRole('button', {name: 'Reject'}));
+
+    expect(onReject).toHaveBeenCalledTimes(1);
+    await waitFor(() =>
+      expect(screen.queryByRole('button', {name: 'Reject'})).toBeNull(),
+    );
+  });
+
+  it('is prose when the lab cannot place the files', async () => {
+    // The answer type alone is not enough: a `.py` file in a web project is
+    // something the student should read, not accept.
+    showWith(proposing('buildJavaScript', 'helper.py'));
+
+    await ask('make it loop');
+
+    expect(await screen.findByText(/moved it into a loop/)).toBeInTheDocument();
+    expect(screen.queryByRole('button', {name: 'Accept'})).toBeNull();
+    // Falling back to prose means the code comes with it, to copy across.
+    expect(screen.getByText(/helper\.py/)).toBeInTheDocument();
+  });
+
+  it('never offers to change anything when the host declared no policy', async () => {
+    show(proposing());
+
+    await ask('make it loop');
+
+    expect(await screen.findByText(/moved it into a loop/)).toBeInTheDocument();
+    expect(screen.queryByRole('button', {name: 'Accept'})).toBeNull();
   });
 });

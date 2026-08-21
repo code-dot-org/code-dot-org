@@ -10,8 +10,9 @@ This package is that panel, extracted from `apps/` so a lab in
 all** — against recorded fixtures, or against a dev's own API key through a
 local proxy.
 
-Status: milestones 1 to 3 are done (§10). The panel runs and knows what to
-say about a project, against recordings only — nothing talks to a server yet.
+Status: milestones 1 to 5 are done (§10). The panel runs, knows what to say
+about a project, can reach a real model through a local proxy, and can offer a
+set of file edits. Nothing talks to the dashboard yet.
 
 ## 1. What exists today, and where
 
@@ -77,6 +78,54 @@ affordance.
 - Teacher-facing chat history (`fetchUserChatHistory`, `studentChatHistory`,
   profanity feedback). Server-shaped, and useless without a server. §12.
 - Audio (`transcribeAudio`) and multimodal assets. §12.
+
+## 2.1 One package, three things in it
+
+The legacy names three layers and this package holds two of them, so it is
+worth saying plainly which is which before anyone goes looking.
+
+`ChatWorkspace` has exactly two consumers in the legacy bundle:
+`aichatLab/views/AichatView.tsx` and `lab2/views/components/AiTutorChat.tsx`.
+So:
+
+| Legacy               | What it is                                            |
+| -------------------- | ----------------------------------------------------- |
+| `apps/src/aichat`    | shared chat plumbing — model, transport, workspace UI |
+| `apps/src/aichatLab` | a LAB whose subject is a chat                         |
+| `apps/src/aiTutor`   | a PANEL that lives inside other labs                  |
+
+The tutor and the chat lab are different products. They share the plumbing and
+nothing else: one is a resource-panel tab that reads the project a student is
+working on, the other is a level type whose exercise is the conversation
+itself.
+
+**This package holds the plumbing and the tutor**, and the split within it is
+by directory:
+
+| Plumbing — a chat lab would want all of it                                         | The tutor's own                                                      |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `model/`, `transport/`, `dev/`, `session/`                                         | `context/`                                                           |
+| `components/MessageView`, `Composer`, `WaitingAnimation`, `failureText`, `strings` | `prompts/`, `components/AiTutorPanel`, `components/SuggestedPrompts` |
+
+Roughly 1700 lines against 400.
+
+A separate `@code-dot-org/aichat` was considered and not done. It is the
+tidier shape and it costs a package, an import graph and a release for a
+boundary that has one consumer today. When `packages/labs/aichat` is built it
+becomes the second, and the split is a move of whole directories — the seam is
+already where it would be cut.
+
+WHAT THIS COSTS, so nobody is surprised by it: the generic types are named for
+the tutor. `ChatTransport` is spelled `TutorTransport`, and a chat lab would
+import `useTutor` to run a conversation that has no tutor in it. The names are
+wrong and the code is not; renaming them is the first commit of the split, not
+a reason to do it early.
+
+Legacy makes the same distinction the same way, which is the strongest argument
+that the seam is real: `ChatWorkspace` takes `hiddenContextCallback` and
+`chatButtons` as PROPS — generic slots — and `AiTutorChat` fills them with
+tutor-flavoured values. The plumbing owns the slots; the tutor owns what goes
+in them.
 
 ## 3. The three seams
 
@@ -290,10 +339,23 @@ The structured path, ported from `aiTutorStructuredResponseHelper.ts`:
    object with one `answer`, itself `{answerType, explanation, videoUrl?,
 code: [{filename, sourceCode}]}`).
 2. The reply arrives parsed as `TutorReply.structuredOutput`.
-3. `answerType` decides: one of the `acceptRejectAnswerTypes` (`buildHTML`,
-   `buildCSS`, `buildJavaScript`, `buildJSON`) with well-formed `code` becomes
-   a **proposal**; anything else is formatted as prose and shown as a normal
-   message.
+3. `answerType` decides: one of the host's declared rewrite types with files
+   the host can place becomes a **proposal**; anything else is formatted as
+   prose and shown as a normal message.
+
+   BOTH HALVES OF THAT TEST ARE THE HOST'S, and neither can be guessed here.
+   Which answer types mean "I changed your files" depends on what the lab asked
+   the model for (`['buildHTML', 'buildCSS', 'buildJavaScript', 'buildJSON']`
+   in weblab2); which file types can be applied depends on what a project in
+   that lab is made of. So `TutorConfig.proposals` carries both, and omitting
+   it means the tutor never offers to change anything — the right default for a
+   host with no way to apply an edit.
+
+   The answer type alone is NOT enough. `buildJavaScript` carrying a `.py` file
+   is a model doing something the lab cannot carry out, and the student is
+   better served by prose they can read than by an Accept button that would put
+   a Python file in a web project.
+
 4. A proposal is emitted to the host as one value:
 
 ```ts
@@ -307,7 +369,14 @@ export interface TutorProposal {
 
 The host decides what a file is, whether the workspace goes read-only while
 the proposal stands, and what a version commit means — all of which weblab2
-currently does inside a redux callback that this package cannot import. What
+currently does inside a redux callback that this package cannot import.
+
+APPLIED WHEN OFFERED, not when accepted, which is the legacy order and the
+better one: `onPropose` fires as the answer lands, so Accept and Reject are a
+decision about an edit the student can SEE rather than a description of one.
+Accept is two steps because it saves a version and a version wants a name;
+Reject is one, because undoing something you did not ask for should not
+require a form. What
 the package owns is the chat-side half: the proposal message, the file chips,
 the Accept/Reject buttons, and the two notification events
 (`aiTutorVersionActionAccept` / `…Reject`) that already exist in the legacy
@@ -340,8 +409,8 @@ progress slice at all and must still work.
 | 1   | Message model, `TutorTransport`, `FixtureTransport` | **done** — 34 tests drive a scripted conversation and every failing status; no UI          |
 | 2   | Panel UI — list, composer, waiting, errors          | **done** — `yarn dev` holds a fixture conversation end to end                              |
 | 3   | Context assembly + suggested prompts                | **done** — a test asserts the whole `hiddenContext` string, byte for byte                  |
-| 4   | Dev proxy                                           | a real answer from a real key on the demo page; absent key degrades visibly                |
-| 5   | Structured responses + proposals                    | a fixture proposal renders chips and Accept/Reject; the host callback fires with the files |
+| 4   | Dev proxy                                           | **done** — `/__tutor/status` gates the demo's live option; no key degrades visibly         |
+| 5   | Structured responses + proposals                    | **done** — a fixture proposal renders chips and Accept/Reject; the host gets the files     |
 | 6   | `DashboardTransport` + resource-panel socket        | the commented block in `ResourcePanel.tsx` is real code again, and world lab shows the tab |
 
 1–5 need no server and no studio. 6 is the only one that does, which is why it

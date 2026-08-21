@@ -22,13 +22,8 @@ import {
 
 import type {AiTutorContext} from '../context/types';
 import type {SuggestedPrompt} from '../prompts/suggestedPrompts';
+import type {ProposalPolicy, TutorProposal} from '../response/proposal';
 import type {TutorSessionInfo, TutorTransport} from '../transport/types';
-
-/** A set of file edits the tutor is proposing (specs/PLAN.md §8). */
-export interface TutorProposal {
-  explanation: string;
-  files: Array<{path: string; contents: string}>;
-}
 
 export interface TutorConfig {
   transport: TutorTransport;
@@ -69,13 +64,33 @@ export interface TutorConfig {
   responseSchema?: object;
 
   /**
-   * What to do with a proposal.
+   * What to do when the tutor rewrites some files.
    *
-   * The host decides what a file is, whether the workspace goes read-only while
-   * the proposal stands, and what accepting one commits — none of which this
-   * package can know. Returning nothing means the proposal is shown as prose.
+   * Omitted, the tutor never offers to change anything: every answer is shown
+   * as prose for the student to copy across, which is the right default for a
+   * host that has no way to apply an edit.
+   *
+   * The POLICY half is here because neither part of it can be guessed — which
+   * answer types mean a rewrite depends on what the lab asked for, and which
+   * file types can be applied depends on what a project in that lab is made
+   * of. The CALLBACKS are here because the host decides what a file is, whether
+   * the workspace goes read-only while the offer stands, and what accepting one
+   * commits.
    */
-  onProposal?: (proposal: TutorProposal) => void;
+  proposals?: ProposalPolicy & {
+    /**
+     * The tutor has rewritten some files. Apply them, provisionally.
+     *
+     * Legacy replaces the project sources here and makes the workspace
+     * read-only until the student answers, so that Accept and Reject are a
+     * decision about something they can see rather than a description.
+     */
+    onPropose?: (proposal: TutorProposal) => void;
+    /** Keep them. `description` is what the student typed for the version. */
+    onAccept?: (proposal: TutorProposal, description: string) => void;
+    /** Put the project back. */
+    onReject?: (proposal: TutorProposal) => void;
+  };
 }
 
 const TutorContext = createContext<TutorConfig | undefined>(undefined);
@@ -95,7 +110,7 @@ export const TutorProvider: FC<TutorConfig & {children: ReactNode}> = ({
       config.prompts,
       config.systemPrompt,
       config.responseSchema,
-      config.onProposal,
+      config.proposals,
     ],
   );
   return (

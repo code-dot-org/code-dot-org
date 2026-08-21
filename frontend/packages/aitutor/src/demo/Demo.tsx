@@ -5,15 +5,20 @@
 // makes a hand-written fixture reviewable — and writing one is how a lab team
 // will describe the tutor behaviour they want before any of it exists.
 
-import {useMemo, useState} from 'react';
+import {useEffect, useMemo, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
 import {AiTutorPanel} from '../components/AiTutorPanel';
+import type {ProxyStatus} from '../dev/protocol';
 import conversation from '../fixtures/conversation.json';
 import failures from '../fixtures/failures.json';
 import {promptsFor} from '../prompts/suggestedPrompts';
 import {conversationCleared} from '../session/slice';
 import {TutorProvider} from '../session/TutorContext';
+import {
+  DirectTransport,
+  proxyStatus,
+} from '../transport/direct/DirectTransport';
 import {FixtureTransport} from '../transport/fixture/FixtureTransport';
 import {parseTranscript} from '../transport/fixture/transcript';
 
@@ -28,14 +33,40 @@ const PRETEND_PROJECT = {
   hasRun: false,
 };
 
+/**
+ * What this pretend lab can apply.
+ *
+ * A real host declares this from what its projects are made of; the demo
+ * declares it so the accept/reject flow is reachable — the `conversation`
+ * transcript's last turn is a rewrite of `main.js`.
+ */
+const PROPOSALS = {
+  answerTypes: ['buildJavaScript', 'buildHTML', 'buildCSS', 'buildJSON'],
+  fileTypes: ['js', 'html', 'css', 'json'],
+};
+
+/** The live option, listed beside the recordings when a key is present. */
+const LIVE = 'live';
+
 export const Demo = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('conversation');
 
-  // A new transport per transcript, so switching starts the conversation over
+  // Asked once, before anything is sent. A live transport that fails on first
+  // use looks like a broken tutor; a missing key should look like a missing
+  // key (specs/PLAN.md §7).
+  const [proxy, setProxy] = useState<ProxyStatus>();
+  useEffect(() => {
+    void proxyStatus().then(setProxy);
+  }, []);
+
+  // A new transport per choice, so switching starts the conversation over
   // rather than resuming one recording at another's turn count.
   const transport = useMemo(
-    () => new FixtureTransport(parseTranscript(TRANSCRIPTS[name])),
+    () =>
+      name === LIVE
+        ? new DirectTransport()
+        : new FixtureTransport(parseTranscript(TRANSCRIPTS[name])),
     [name],
   );
 
@@ -44,15 +75,27 @@ export const Demo = () => {
     dispatch(conversationCleared());
   };
 
+  // A real host would replace its project sources here and go read-only. The
+  // demo has no project, so it says what it would have done.
+  const [applied, setApplied] = useState<string>();
+
+  const choices = [
+    ...Object.keys(TRANSCRIPTS),
+    ...(proxy?.available ? [LIVE] : []),
+  ];
+
   return (
     <div className={moduleStyles.page}>
       <aside className={moduleStyles.side}>
         <h1 className={moduleStyles.title}>AI Tutor</h1>
         <p className={moduleStyles.note}>
-          No server, no key. Every answer below comes from the transcript.
+          {name === LIVE
+            ? `Live: ${proxy?.model} through the dev proxy. None of the
+               moderation the dashboard applies is running.`
+            : 'No server, no key. Every answer below comes from the transcript.'}
         </p>
         <div className={moduleStyles.picker}>
-          {Object.keys(TRANSCRIPTS).map(key => (
+          {choices.map(key => (
             <button
               key={key}
               type="button"
@@ -64,14 +107,31 @@ export const Demo = () => {
           ))}
         </div>
         <pre className={moduleStyles.transcript}>
-          {JSON.stringify(TRANSCRIPTS[name], null, 2)}
+          {name === LIVE
+            ? 'Answers come from the model. Nothing is scripted.'
+            : JSON.stringify(TRANSCRIPTS[name], null, 2)}
         </pre>
+        {applied && <p className={moduleStyles.note}>Host: {applied}</p>}
+        {!proxy?.available && (
+          <p className={moduleStyles.note}>
+            Live answers: set <code>ANTHROPIC_API_KEY</code> and restart{' '}
+            <code>yarn dev</code>.{proxy?.reason ? ` (${proxy.reason})` : ''}
+          </p>
+        )}
       </aside>
       <main className={moduleStyles.panel}>
         <TutorProvider
           transport={transport}
           context={() => PRETEND_PROJECT}
           prompts={promptsFor('level')}
+          proposals={{
+            ...PROPOSALS,
+            onPropose: p =>
+              setApplied(`applied ${p.files.map(f => f.path).join(', ')}`),
+            onAccept: (p, description) =>
+              setApplied(`kept ${p.files.length} file(s) as "${description}"`),
+            onReject: () => setApplied('put the project back'),
+          }}
         >
           <AiTutorPanel
             emptyState={

@@ -24,6 +24,7 @@ import {
   type PendingMessage,
 } from '../model/messages';
 import {AiInteractionStatus} from '../model/status';
+import type {TutorProposal} from '../response/proposal';
 
 export interface AiTutorState {
   /** The conversation, oldest first. */
@@ -35,6 +36,16 @@ export interface AiTutorState {
    * second is not reachable, and a queue would be a feature nobody asked for.
    */
   awaiting?: string;
+
+  /**
+   * A set of file edits offered and not yet settled.
+   *
+   * At most one, and it belongs to the LAST message — which is where the
+   * legacy puts its actions too (`renderLastMessagePostText`). A second
+   * proposal while one stands would be two answers to "is this what you
+   * wanted", and the host has already applied the first to the project.
+   */
+  proposal?: TutorProposal;
 }
 
 const initialState: AiTutorState = {messages: []};
@@ -110,15 +121,38 @@ const slice = createSlice({
       state.awaiting = undefined;
     },
 
+    /** The tutor has rewritten some files and is waiting to hear. */
+    proposalOffered(state, action: PayloadAction<TutorProposal>) {
+      state.proposal = action.payload;
+    },
+
+    /**
+     * Accepted or rejected — the panel does not care which.
+     *
+     * What the two words MEAN is the host's: one commits a version and lets
+     * the workspace be edited again, the other puts the project back. All this
+     * side has to know is that the question has been answered.
+     */
+    proposalSettled(state) {
+      state.proposal = undefined;
+    },
+
     /** Start over. The transcript is gone; the session is not. */
     conversationCleared(state) {
       state.messages = [];
       state.awaiting = undefined;
+      state.proposal = undefined;
     },
   },
 });
 
-export const {messageSent, turnCompleted, turnFailed, conversationCleared} =
-  slice.actions;
+export const {
+  messageSent,
+  turnCompleted,
+  turnFailed,
+  proposalOffered,
+  proposalSettled,
+  conversationCleared,
+} = slice.actions;
 
 export default slice;
