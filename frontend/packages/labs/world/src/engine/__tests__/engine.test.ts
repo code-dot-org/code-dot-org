@@ -2,6 +2,7 @@ import {describe, expect, it} from 'vitest';
 
 import {
   ActorBuilder,
+  one,
   PositionProperty,
   PositionalTrait,
   ScaleProperty,
@@ -350,6 +351,33 @@ describe('world property hot-patch (hot-reload level 1)', () => {
   });
 });
 
+describe('an actor’s own properties, enumerated', () => {
+  // `traits()` is how everything else asks what an actor carries, and it
+  // cannot answer for these — so anything walking traits to find out what may
+  // be configured missed them. Two things were: the map editor's inspector,
+  // and the lookup a placement's overrides are resolved against.
+
+  it('reports what the kind declared, and no trait’s', () => {
+    const template = new ActorBuilder({id: 'bar', name: 'Bar'}).useTraits([
+      AffectedByGravityTrait,
+    ]);
+    const label = template.defineProperty('label', 'string', 'Bar');
+    const actor = template.instantiate('one');
+
+    expect(actor.ownProperties()).toEqual([label]);
+    // …and the trait's are still the traits', which is the distinction.
+    expect(actor.traits().length).toBeGreaterThan(0);
+  });
+
+  it('reports none for an actor that declared none', () => {
+    const actor = new ActorBuilder({id: 'plain', name: 'Plain'})
+      .useTraits([AffectedByGravityTrait])
+      .instantiate('one');
+
+    expect(actor.ownProperties()).toEqual([]);
+  });
+});
+
 describe('WorldBuilder.loadMap (Map data)', () => {
   it('instantiates registered actor types and applies property overrides', () => {
     const builder = new WorldBuilder({
@@ -373,6 +401,101 @@ describe('WorldBuilder.loadMap (Map data)', () => {
     expect(actor.get(PositionProperty).equals({x: 5, y: 7})).toBe(true);
     // The populated actor is live in the world.
     expect([...world.actors].length).toBe(1);
+  });
+
+  it('applies an override to a property the actor declared for ITSELF', () => {
+    // These belong to no trait on purpose (`ActorBuilder.defineProperty`), and
+    // the lookup a placement is resolved against walked the world's rules and
+    // their traits — so a placement carrying one was dropped here in SILENCE.
+    // Nothing noticed, because the map editor could not offer one either: the
+    // inspector walks traits too (`describeActor`).
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const template = new ActorBuilder({id: 'bar', name: 'Bar'});
+    const label = template.defineProperty('label', 'string', 'Bar');
+    builder.define('actors/bar', template);
+
+    const [actor] = builder.loadMap({
+      actors: [{type: 'actors/bar', properties: {bar: {label: 'Boss'}}}],
+    });
+
+    expect(actor.get(label)).toBe('Boss');
+  });
+
+  it('leaves one alone when the placement says nothing about it', () => {
+    // The template's value is what an unset placement inherits, which is what
+    // the inspector shows as the default.
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const template = new ActorBuilder({id: 'bar', name: 'Bar'});
+    const label = template.defineProperty('label', 'string', 'Bar');
+    builder.define('actors/bar', template);
+
+    const [actor] = builder.loadMap({actors: [{type: 'actors/bar'}]});
+
+    expect(actor.get(label)).toBe('Bar');
+  });
+
+  it('resolves an actor-typed value against another placement', () => {
+    // A map is JSON and JSON holds no actors, so a placement names one by its
+    // entry id. This is what makes the stock Health Bar placeable: point it at
+    // the player in the map editor rather than in a block.
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const bar = new ActorBuilder({id: 'bar', name: 'Bar'});
+    const subject = bar.defineProperty<unknown>('subject', 'actor', '');
+    builder.define('actors/bar', bar);
+    builder.define('actors/player', new ActorBuilder({id: 'p', name: 'P'}));
+
+    const [meter, player] = builder.loadMap({
+      actors: [
+        // The bar FIRST, naming an entry that does not exist yet — which is
+        // the case ordering the entries could not have covered.
+        {type: 'actors/bar', id: 'Meter', properties: {bar: {subject: 'Hero'}}},
+        {type: 'actors/player', id: 'Hero'},
+      ],
+    });
+
+    // Through `one`, because an actor value is held as a LIST whatever it was
+    // set to — saying `actor` narrows what is generated around it, not how it
+    // is stored (`actorValue`).
+    expect(one(meter.get(subject) as never)).toBe(player);
+  });
+
+  it('lets two placements name each other', () => {
+    // The other thing a second pass buys that an ordering cannot: a cycle has
+    // no order to put it in.
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const twin = new ActorBuilder({id: 'twin', name: 'Twin'});
+    const other = twin.defineProperty<unknown>('other', 'actor', '');
+    builder.define('actors/twin', twin);
+
+    const [a, b] = builder.loadMap({
+      actors: [
+        {type: 'actors/twin', id: 'A', properties: {twin: {other: 'B'}}},
+        {type: 'actors/twin', id: 'B', properties: {twin: {other: 'A'}}},
+      ],
+    });
+
+    expect(one(a.get(other) as never)).toBe(b);
+    expect(one(b.get(other) as never)).toBe(a);
+  });
+
+  it('leaves a reference to nothing unset, rather than failing the load', () => {
+    // A placement may point at one that has since been deleted. Refusing the
+    // map over it would take a whole level away for a bar pointed at a missing
+    // enemy, so it is left as it was — which is what a map already does with a
+    // property it cannot resolve.
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const bar = new ActorBuilder({id: 'bar', name: 'Bar'});
+    const subject = bar.defineProperty<unknown>('subject', 'actor', '');
+    builder.define('actors/bar', bar);
+
+    const [meter] = builder.loadMap({
+      actors: [
+        {type: 'actors/bar', id: 'Meter', properties: {bar: {subject: 'Gone'}}},
+      ],
+    });
+
+    expect(meter.get(subject)).toEqual([]);
+    expect([...builder.getWorld().actors].length).toBe(1);
   });
 
   it('stacks maps rather than replacing, so a level and a HUD compose', () => {
