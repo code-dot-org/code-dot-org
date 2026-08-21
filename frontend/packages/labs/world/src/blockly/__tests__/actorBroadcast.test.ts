@@ -54,8 +54,8 @@ describe('a statement over an actor value', () => {
     });
 
     expect(code).toBe(
-      'WorldLab.each(world.actors.ofType("actors/coin"), actor => ' +
-        'actor.set(WorldLab.PositionProperty, new WorldLab.Vector(1, 2)));\n',
+      'WorldLab.each(world.actors.ofType("actors/coin"), subject => ' +
+        'subject.set(WorldLab.PositionProperty, new WorldLab.Vector(1, 2)));\n',
     );
   });
 
@@ -82,8 +82,8 @@ describe('a statement over an actor value', () => {
     });
 
     expect(code).toBe(
-      'WorldLab.each(world.actors.ofType("actors/coin"), actor => ' +
-        'world.removeActor(actor));\n',
+      'WorldLab.each(world.actors.ofType("actors/coin"), subject => ' +
+        'world.removeActor(subject));\n',
     );
   });
 
@@ -98,7 +98,7 @@ describe('a statement over an actor value', () => {
 
     expect(code).toBe(
       'WorldLab.each(WorldLab.firstOf(world.actors), ' +
-        'actor => world.removeActor(actor));\n',
+        'subject => world.removeActor(subject));\n',
     );
   });
 
@@ -113,6 +113,29 @@ describe('a statement over an actor value', () => {
     expect(code).toContain('WorldLab.each(');
   });
 
+  it('does not capture `this actor` from the scope around it', () => {
+    // The parameter is `subject` and not `actor`, and that is a bug fix rather
+    // than taste. The VALUE being set is generated in the enclosing scope — a
+    // handler, where `this actor` means whoever the event fired for — and is
+    // then placed textually inside this lambda. `this actor` compiles to the
+    // bare name `actor`, so a parameter of that name captured it.
+    //
+    // It was silent in the way that matters: the code ran, read the wrong
+    // actor's property, and threw somewhere else entirely. The starter's
+    // health bar was told to read its own health and reported
+    // "Actor 'HealthBar' has no property 'health'".
+    const code = emit('world_set_position', {}, KIND, {
+      ACTOR: 'world.actors.ofType("actors/coin")',
+      X: 'actor.get(WorldLab.PositionProperty).x',
+      Y: '0',
+    });
+
+    // The read of the ENCLOSING actor survives, because nothing between it and
+    // its binding is called `actor`.
+    expect(code).toContain('actor.get(WorldLab.PositionProperty).x');
+    expect(code).not.toContain('actor =>');
+  });
+
   it('is how "remove every coin" is written — no bulk block needed', () => {
     // The same pair as above, stated as the thing a learner is trying to do.
     // `remove actor` over a value holding several IS the bulk operation, so a
@@ -125,7 +148,7 @@ describe('a statement over an actor value', () => {
 
     expect(one).toBe('world.removeActor(actor);\n');
     expect(every).toContain('WorldLab.each(');
-    expect(every).toContain('world.removeActor(actor)');
+    expect(every).toContain('world.removeActor(subject)');
   });
 });
 
@@ -238,7 +261,7 @@ describe('all actors', () => {
     });
 
     expect(code).toBe(
-      'WorldLab.each([...world.actors], actor => world.removeActor(actor));\n',
+      'WorldLab.each([...world.actors], subject => world.removeActor(subject));\n',
     );
   });
 });
@@ -354,7 +377,7 @@ describe('building a group', () => {
     );
 
     expect(code).toBe(
-      'WorldLab.each(coins, actor => world.removeActor(actor));\n',
+      'WorldLab.each(coins, subject => world.removeActor(subject));\n',
     );
   });
 });

@@ -15,6 +15,7 @@ import {FOUNDATION_RULE_NAMES} from './foundation';
 import {label} from './label';
 import {
   parseActorOwnMeta,
+  parseWorldActorOwnMetas,
   parseWorldOwnMeta,
   type OwnMeta,
 } from './ownProperties';
@@ -288,10 +289,15 @@ export function projectOwnMetas(files: Record<string, string>): OwnMeta[] {
     // define, so `standInBlocks` minted a placeholder that generated NOTHING —
     // the handler ran, took the coin, and quietly failed to count it.
     if (path.startsWith('worlds/') && path.endsWith('.world')) {
-      const meta = parseWorldOwnMeta(path.replace(/\.world$/, ''), contents);
+      const world = path.replace(/\.world$/, '');
+      const meta = parseWorldOwnMeta(world, contents);
       if (meta) {
         metas.push(meta);
       }
+      // …and every actor the world defines for ITSELF, each keyed by the
+      // block that defines it. A world-defined actor is an actor, and one
+      // that keeps a number of its own had to be a file until this.
+      metas.push(...parseWorldActorOwnMetas(world, contents));
     }
   }
   return metas;

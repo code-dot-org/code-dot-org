@@ -57,13 +57,18 @@ describe('define drawing', () => {
     // `this actor` compiles to `actor` wherever it is written, so a routine
     // reading its own state means this one — the same bargain `each frame`
     // makes in the same file (ActorBuilder.defineStep).
+    //
+    // And `world`, so a drawing may ask about actors other than the one it is
+    // drawing. It reads and never writes, which is what a drawing IS; a health
+    // bar that could only see itself had to be handed the actor it watches, by
+    // a property and a step that existed for no other reason.
     const code = codeFor('world_define_drawing', {
       fields: {WIDTH: '64', HEIGHT: '16'},
       body: 'pen.rectangle(0, 0, 8, 8);\n',
     });
 
     expect(code).toBe(
-      'actor.defineDrawing(64, 16, (actor, pen) => {\n' +
+      'actor.defineDrawing(64, 16, (actor, pen, world) => {\n' +
         'pen.rectangle(0, 0, 8, 8);\n});\n',
     );
   });

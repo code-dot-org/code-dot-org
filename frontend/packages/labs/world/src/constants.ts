@@ -5,7 +5,15 @@ import type {
   ProjectSources,
 } from '@code-dot-org/core/api';
 
-import {drawText, fill, showAs, textOf} from './actors/stock/workspace';
+import {
+  drawText,
+  fill,
+  num,
+  rectangle,
+  showAs,
+  swatch,
+  textOf,
+} from './actors/stock/workspace';
 import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
 import {
   spriteFileName,
@@ -225,6 +233,7 @@ export const LEVEL1_ACTORS = [
   place('actors/ball', 'Ball', tileCenter(3), tileCenter(2)),
   // On the floor between the two coins, walking its beat across them.
   place('actors/crawler', 'Crawler', tileCenter(6), tileCenter(8)),
+  place('actors/healthBar', 'HealthBar', tileCenter(7), tileCenter(0)),
   // Top left, out of the way of everything that moves.
   place('actors/scoreboard', 'Scoreboard', tileCenter(2), tileCenter(0)),
 ];
@@ -592,6 +601,142 @@ const SCOREBOARD_ACTOR = JSON.stringify(
   2,
 );
 
+// What being hurt LOOKS like, which is a bar that gets shorter.
+//
+// The starter could be lost before this and showed nothing about it until the
+// moment it was: three touches and GAME OVER, with no warning in between. A
+// number a player cannot see is a number they cannot play against.
+//
+// It is `specs/DRAWING.md`'s own worked example, made real, and it is ONE
+// DRAWING AND NOTHING ELSE: no property, no step, no handler anywhere in the
+// project pointing it at anybody. Two rectangles — a dark one that is the
+// whole bar and a red one whose WIDTH is an expression — and the expression
+// asks the world.
+//
+// It got there by two wrong turns worth recording. The first bar carried a
+// `fraction` and a step that copied health into it every frame, which is a
+// number kept in two places and a frame of lag. The second carried the ACTOR
+// it was watching and a step to point it there — better, but still state and
+// still a step, for a picture that only ever wanted to read. Both existed
+// because a drawing's closure was `(actor, pen)` and could not ask the world
+// anything. It is `(actor, pen, world)` now, and neither is needed.
+//
+// IT ASKS FOR WHATEVER HAS HEALTH, not for the Player. A module path would tie
+// this file to a project that has an `actors/player` in it — and the
+// single-world telling of this very game defines its player IN the world,
+// where there is no such module to name. A trait is the thing both can say.
+/** The bar's canvas and its idea of full, shared with the single-world telling. */
+export const HEALTH_BAR_WIDTH = 64;
+export const HEALTH_BAR_HEIGHT = 8;
+/** The health a full bar means. Health keeps no maximum; a picture must. */
+export const HEALTH_BAR_FULL = 3;
+
+/** `first actor with trait ⟨Has Health⟩` — whoever this bar is about. */
+const hurtable = () => ({
+  block: {
+    type: 'world_first_actor',
+    inputs: {
+      SOURCE: {
+        block: {
+          type: 'world_actors_with_trait',
+          fields: {TRAIT: 'Health#HasHealthTrait'},
+        },
+      },
+    },
+  },
+});
+
+/**
+ * The bar's picture, as the block that defines it.
+ *
+ * EXPORTED, because the single-world telling of this project draws the same
+ * bar (fixtures/platformerSingle) and two copies of a nest of arithmetic this
+ * size is somewhere for the two to disagree.
+ */
+export const healthBarDrawing = () => ({
+  type: 'world_define_drawing',
+  x: 20,
+  y: 140,
+  fields: {WIDTH: HEALTH_BAR_WIDTH, HEIGHT: HEALTH_BAR_HEIGHT},
+  inputs: {DO: {block: stack(HEALTH_BAR_COMMANDS)}},
+});
+
+const HEALTH_BAR_COMMANDS: object[] = [
+  fill(swatch('#301820')),
+  rectangle(0, 0, HEALTH_BAR_WIDTH, HEALTH_BAR_HEIGHT),
+  fill(swatch('#e04040')),
+  // The one measurement that is not a number: the full width times how much
+  // health is left, and nothing at all when there is nobody to have any.
+  //
+  // The guard is load-bearing rather than defensive. A world with nothing
+  // hurtable in it is a real state — and `health of ⟨nothing⟩` would throw
+  // inside a routine that runs every time this actor is painted.
+  {
+    type: 'world_draw_rectangle',
+    inputs: {
+      X: num(0),
+      Y: num(0),
+      WIDTH: {
+        block: {
+          type: 'math_arithmetic',
+          fields: {OP: 'MULTIPLY'},
+          inputs: {
+            A: num(HEALTH_BAR_WIDTH),
+            B: {
+              block: {
+                type: 'logic_ternary',
+                inputs: {
+                  IF: {
+                    block: {
+                      type: 'world_any_actors',
+                      inputs: {LIST: hurtable()},
+                    },
+                  },
+                  THEN: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'DIVIDE'},
+                      inputs: {
+                        A: {
+                          block: {
+                            type: 'world_get_Health_HealthProperty',
+                            inputs: {ACTOR: hurtable()},
+                          },
+                        },
+                        B: {
+                          block: {
+                            type: 'math_number',
+                            fields: {NUM: HEALTH_BAR_FULL},
+                          },
+                        },
+                      },
+                    },
+                  },
+                  ELSE: {block: {type: 'math_number', fields: {NUM: 0}}},
+                },
+              },
+            },
+          },
+        },
+      },
+      HEIGHT: num(HEALTH_BAR_HEIGHT),
+    },
+  },
+];
+
+const HEALTH_BAR_ACTOR = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {type: 'world_actor', x: 20, y: 20, fields: {NAME: 'Health Bar'}},
+        healthBarDrawing(),
+      ],
+    },
+  },
+  null,
+  2,
+);
+
 // The one thing in the starter that can go wrong.
 //
 // Everything else here is a reward: coins to take, a platform to reach, a
@@ -847,6 +992,12 @@ export const STARTER_SPEC: ProjectSpec = {
       name: 'coin.actor',
       language: 'actor',
       contents: COIN_ACTOR,
+      folderId: 'actors',
+    },
+    healthBar: {
+      name: 'healthBar.actor',
+      language: 'actor',
+      contents: HEALTH_BAR_ACTOR,
       folderId: 'actors',
     },
     crawler: {

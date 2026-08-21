@@ -23,7 +23,7 @@ import {describe, expect, it} from 'vitest';
 import {DEFAULT_PROJECT, starterFile} from '../../constants';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
-import {projectRuleMetas} from '../projectModules';
+import {projectOwnMetas, projectRuleMetas} from '../projectModules';
 
 /** A saved block, as much of one as this needs to walk it. */
 interface SavedBlock {
@@ -68,10 +68,14 @@ function typesIn(contents: string): string[] {
 const files = projectFiles(DEFAULT_PROJECT.source);
 
 // The generator's palette, not an editor's: it defines every rule's blocks at
-// once, which is the widest set a shipped file may draw on.
+// once, which is the widest set a shipped file may draw on — and every actor's
+// and world's OWN properties too, which is the other half of what the real
+// generator is handed (BlocklyGenerator). Without those the starter's health
+// bar looks like a file naming blocks nothing mints.
 const palette = new Set(
   buildDomainPalette(projectRuleMetas(files), {
     allRuleModules: true,
+    ownProperties: projectOwnMetas(files),
   }).blocks.map(block => block.type),
 );
 

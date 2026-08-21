@@ -151,7 +151,7 @@ import {
   soundOptionsExtension,
   spriteOptions,
 } from './moduleOptions';
-import type {OwnMeta} from './ownProperties';
+import {ownPropertyDeclarationFor, type OwnMeta} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
 import {slug} from './ruleMeta';
@@ -240,7 +240,12 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
   if (modulePath) {
     const selfModule = (generator as {__ruleModule?: string} | undefined)
       ?.__ruleModule;
-    if (generator && modulePath !== selfModule) {
+    // …and an actor a WORLD defines carries `worlds/main#thatBlock`, which is
+    // the same module with the declaring block on the end (`ownProperties`).
+    // Compared whole it never matches, so the world imported a property it
+    // declares itself, from a path nothing resolves.
+    const owning = modulePath.split('#')[0];
+    if (generator && owning !== selfModule) {
       addImport(
         generator,
         `named:${modulePath}:${ref.exportName}`,
@@ -351,6 +356,56 @@ const memberKey = (ref: MemberRef): string =>
  * to put words on a dead block's face and into its warning, and "Actors Player"
  * points at a file where "actorsplayer" is a mangle.
  */
+/**
+ * Every `define property` chained under a `define actor`, as declarations.
+ *
+ * Read off the BLOCKS, because this runs while generating and there is no
+ * metadata pass reaching into a block scope. `ownPropertyDeclarationFor` is
+ * shared with the assembler so the two agree on the name a `get` block will
+ * reach for.
+ */
+/**
+ * Whether a block that speaks of `actor` has one to speak of.
+ *
+ * In an `.actor` file the module has `const actor = …` at the top and the
+ * answer is always yes. In a WORLD, `actor` is bound only inside the block a
+ * `define actor` opens — so a `define drawing` or an `each frame` chained
+ * under `define world` instead would emit a call on a name that is not there,
+ * and the module would throw as it loaded, taking the whole project with it.
+ *
+ * Both generators ask, and write nothing when the answer is no. Silence is not
+ * a good outcome, but it is the one the lab gives a misplaced block everywhere
+ * else — a hat in the wrong file, a `use trait` outside an actor — and it is a
+ * great deal better than a project that will not start.
+ */
+const hasActorInScope = (block: Block): boolean => {
+  if (!definesWorld(block.workspace)) {
+    return true;
+  }
+  for (let at: Block | null = block; at; at = at.getParent?.() ?? null) {
+    if (at.type === 'world_actor') {
+      return true;
+    }
+  }
+  return false;
+};
+
+const ownDeclarationsIn = (block: Block): string => {
+  let out = '';
+  for (let at = block.getNextBlock?.(); at; at = at.getNextBlock?.()) {
+    if (at.type !== 'world_rule_property') {
+      continue;
+    }
+    out += ownPropertyDeclarationFor({
+      name: at.getFieldValue('NAME') ?? '',
+      type: at.getFieldValue('TYPE') ?? '',
+      default: at.getFieldValue('DEFAULT') ?? '',
+      access: at.getFieldValue('ACCESS') ?? '',
+    });
+  }
+  return out;
+};
+
 const pathSlug = (modulePath: string): string =>
   modulePath
     .split(/[^A-Za-z0-9]+/)
@@ -458,6 +513,12 @@ const worldActor = defineBlock({
         return (
           `const ${variable} = ${built};\n` +
           `{\nconst actor = ${variable};\n` +
+          // Its own properties, declared HERE rather than by the assembler.
+          // An `.actor` file's go at the top of the module, where the whole
+          // file can see them; this actor's body is a block, so a declaration
+          // written anywhere else is a name its own drawing cannot reach
+          // (blockly/ownProperties).
+          `${ownDeclarationsIn(block)}` +
           `${nextChainCode(block, generator)}}\n` +
           // Registered under the type a placed one carries, so the module can
           // hand its own templates out (`export {localActors}`) — which is how
@@ -1297,13 +1358,23 @@ const actorTarget = (
  *
  * `body` is handed the expression naming one actor, so a single value emits the
  * line it always did and a many-valued one emits the broadcast around it.
+ *
+ * THE PARAMETER IS NOT CALLED `actor`, and that is a bug fix rather than
+ * taste. `body` may embed an expression generated in the ENCLOSING scope —
+ * `set ⟨fraction⟩ of ⟨any ⟨Health Bar⟩⟩ to ⟨health of ⟨this actor⟩⟩` puts a
+ * read of the handler's own actor inside this lambda — and `this actor`
+ * compiles to the bare name `actor`. A parameter of that name captured it, so
+ * the starter's health bar read its own health, found none, and threw
+ * "Actor 'HealthBar' has no property 'health'". The shadowing `actor` that
+ * `define drawing` and `each frame` rely on is the opposite case: there the
+ * body IS about the subject, and here it is about whoever asked.
  */
-const forEachActor = (
+export const forEachActor = (
   target: ActorTarget,
   body: (actor: string) => string,
 ): string =>
   target.many
-    ? `WorldLab.each(${target.code}, actor => ${body('actor')});\n`
+    ? `WorldLab.each(${target.code}, subject => ${body('subject')});\n`
     : `${body(target.code)};\n`;
 
 /**
@@ -5718,7 +5789,17 @@ const traitStepDefinition = (asRoot: boolean) =>
         // nothing else to write it — so it is the whole declaration, and this is
         // it. `defineStep` is the behaviour half of `defineProperty`: work a KIND
         // of actor does every frame without a rule to do it in (ActorBuilder).
-        if (block.getParent()) {
+        //
+        // And chained inside a WORLD's own `define actor`, it is that same
+        // declaration for a kind the world defines rather than a file — so it
+        // has a parent AND has to generate. "Has a parent" was the test for
+        // "somebody else writes this", and it stopped being the same question
+        // the moment an actor could be defined in a world.
+        const inWorldActor = definesWorld(block.workspace);
+        if (block.getParent() && !inWorldActor) {
+          return '';
+        }
+        if (inWorldActor && !hasActorInScope(block)) {
           return '';
         }
         const name = block.getFieldValue('NAME') || 'do something';
@@ -5828,15 +5909,27 @@ const drawingDefinition = (asRoot: boolean) =>
       'and it is also how big the actor is for clicks and collisions.',
     generator: {
       javascript(block, generator) {
+        // Nothing at all when `actor` is not bound — a drawing chained under
+        // `define world` rather than inside a `define actor` would emit a call
+        // on a name that is not there, and the module would throw as it loaded.
+        if (!hasActorInScope(block)) {
+          return '';
+        }
         const width = Number(block.getFieldValue('WIDTH')) || 1;
         const height = Number(block.getFieldValue('HEIGHT')) || 1;
         const body = generator.statementToCode(block, 'DO');
         // `actor` SHADOWS the module's builder inside the closure, exactly as a
         // step's body does, so `this actor` written here means this one. `pen` is
         // bound only here — the one place `drawingContext` knows about.
+        //
+        // `world` is bound too, so a drawing may ASK. `first actor with trait
+        // ⟨Has Health⟩` inside one is what makes a health bar a drawing and
+        // nothing else: without it a bar had to be HANDED the actor it watches,
+        // which meant a property to hold it and a step to fill it, for a
+        // picture that only ever wanted to read.
         return (
           `actor.defineDrawing(${width}, ${height}, ` +
-          `(actor, pen) => {\n${body}});\n`
+          `(actor, pen, world) => {\n${body}});\n`
         );
       },
     },

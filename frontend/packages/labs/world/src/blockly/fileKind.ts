@@ -60,14 +60,24 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_rule_enum_option', new Set<FileKind>(['rule'])],
   ['world_rule_step_tick', new Set<FileKind>(['rule'])],
   ['world_rule_step_in', new Set<FileKind>(['rule'])],
-  // `each frame` reads two ways: chained under a `define trait` it is one of
-  // that trait's members, and standing on its own in an `.actor` file it is
-  // work that kind of actor does. Both are real; a `.world` is not — a world's
-  // per-frame work belongs to a rule, and the block would generate nothing
-  // there and say nothing about why.
+  // `each frame` reads three ways, and all three are the same sentence about
+  // whoever owns it: chained under a `define trait` it is one of that trait's
+  // members; standing on its own in an `.actor` file it is work that kind of
+  // actor does; and chained inside a world's own `define actor` it is that
+  // same work for a kind the world defines rather than a file.
+  //
+  // The third was missing, and it read as a health bar that never moved: a
+  // world-defined actor could do no per-frame work at all, so an actor that
+  // had to look at something each frame had to be a file.
+  //
+  // In a world it must be INSIDE a `define actor`, and its generator writes
+  // nothing when it is not — `actor` is bound by the block that opens that
+  // actor's body, and a step chained under `define world` would emit a call on
+  // a name that is not there, which stops the whole project compiling.
+  //
   // NOT `behavior`: a behavior IS its step, so a second one inside it would be
   // a step within a step, which nothing else in the lab has.
-  ['world_trait_step', new Set<FileKind>(['actor', 'rule'])],
+  ['world_trait_step', new Set<FileKind>(['actor', 'rule', 'world'])],
   // A drawing belongs to a KIND of actor, and a kind is what an `.actor` file
   // is. Not a rule or a behavior: those are shared mechanics, and how a
   // particular actor looks is the one thing that is not shared — an actor that
