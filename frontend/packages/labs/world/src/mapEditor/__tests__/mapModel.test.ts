@@ -15,6 +15,7 @@ import {
   MAX_MAP_TILES,
   MIN_MAP_TILES,
   parseMap,
+  linksFrom,
   placementChoices,
   type MapDoc,
   type Placement,
@@ -138,6 +139,86 @@ describe('placementChoices', () => {
   it('offers everything when nothing is selected', () => {
     expect(placementChoices([at('Hero')], undefined)).toEqual([
       {value: 'Hero', text: 'Hero'},
+    ]);
+  });
+});
+
+describe('linksFrom', () => {
+  // What the canvas draws a line for. A reference is otherwise invisible — the
+  // value is a name in a panel and the actor it names may be scrolled off the
+  // canvas — so this is the rule behind the line, kept out of the drawing so
+  // it can be checked.
+
+  const schema = [
+    {
+      props: [
+        {ownerId: 'bar', propId: 'subject', name: 'subject', type: 'actor'},
+        {ownerId: 'bar', propId: 'label', name: 'label', type: 'string'},
+      ],
+    },
+  ];
+  const meter = {
+    type: 'actors/bar',
+    id: 'Meter',
+    properties: {bar: {subject: 'Hero', label: 'Hero'}},
+  } as Placement;
+  const hero = {type: 'actors/player', id: 'Hero'} as Placement;
+
+  it('finds the actor a reference names, and what it is called', () => {
+    expect(linksFrom(meter, schema, [meter, hero])).toEqual([
+      {name: 'subject', targetId: 'Hero'},
+    ]);
+  });
+
+  it('ignores a string property that merely holds the same word', () => {
+    // The SCHEMA is what says a property is a reference, because the map
+    // cannot: the value is a string either way, and `"Hero"` is a name to
+    // resolve or a word to display depending on a type the map does not
+    // record. `label` holds "Hero" here too, and draws no line.
+    const links = linksFrom(meter, schema, [meter, hero]);
+
+    expect(links).toHaveLength(1);
+  });
+
+  it('draws nothing for a reference to a placement that is gone', () => {
+    // The map keeps the value — a placement may name one since deleted, and
+    // `loadMap` leaves such a property unset rather than failing — but there
+    // is nothing on the canvas to point at.
+    expect(linksFrom(meter, schema, [meter])).toEqual([]);
+  });
+
+  it('draws nothing for a reference that was never set', () => {
+    const blank = {type: 'actors/bar', id: 'Meter'} as Placement;
+
+    expect(linksFrom(blank, schema, [blank, hero])).toEqual([]);
+  });
+
+  it('finds every reference an actor holds, not just the first', () => {
+    // A Health Bar over a player is `subject` AND `attached to`, and two
+    // identical lines would say there were two of something without saying
+    // which — which is what the labels are for.
+    const both = [
+      {
+        props: [
+          {ownerId: 'bar', propId: 'subject', name: 'subject', type: 'actor'},
+          {
+            ownerId: 'att',
+            propId: 'attached_to',
+            name: 'attached to',
+            type: 'actor',
+          },
+        ],
+      },
+    ];
+    const rider = {
+      type: 'actors/bar',
+      id: 'Meter',
+      properties: {bar: {subject: 'Hero'}, att: {attached_to: 'Hero'}},
+    } as Placement;
+
+    expect(linksFrom(rider, both, [rider, hero]).map(l => l.name)).toEqual([
+      'subject',
+      'attached to',
     ]);
   });
 });
