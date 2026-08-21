@@ -20,6 +20,7 @@ import {
   type ReactNode,
 } from 'react';
 
+import type {AiChatDisabledState} from '../access/disabledState';
 import type {AiTutorContext} from '../context/types';
 import type {SuggestedPrompt} from '../prompts/suggestedPrompts';
 import type {ProposalPolicy, TutorProposal} from '../response/proposal';
@@ -53,6 +54,18 @@ export interface TutorConfig {
    * legacy uses. Omitted means no buttons.
    */
   prompts?: readonly SuggestedPrompt[];
+
+  /**
+   * Whether the tutor may be used, and what to say when it may not.
+   *
+   * Computed by the host with `disabledStateFor`, because every input to that
+   * rule — the user's access level, the section's, whether they are a teacher —
+   * is studio state this package cannot see (`access/accessLevels`).
+   *
+   * Distinct from not rendering the tab at all: an absent tutor is a course
+   * that does not offer one, and a disabled tutor is one somebody switched off.
+   */
+  disabledState?: AiChatDisabledState;
 
   systemPrompt?: string;
 
@@ -108,6 +121,7 @@ export const TutorProvider: FC<TutorConfig & {children: ReactNode}> = ({
       config.session,
       config.context,
       config.prompts,
+      config.disabledState,
       config.systemPrompt,
       config.responseSchema,
       config.proposals,

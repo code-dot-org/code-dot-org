@@ -335,3 +335,47 @@ describe('a proposal', () => {
     expect(screen.queryByRole('button', {name: 'Accept'})).toBeNull();
   });
 });
+
+describe('when chat is disabled', () => {
+  const disabled = {
+    disabled: true,
+    disabledMessage: 'Chat is disabled for this class section.',
+    disabledLink: {href: 'https://support.code.org/x', text: 'Learn more'},
+  };
+
+  const showDisabled = () => {
+    const store = configureStore({reducer: {aiTutor: slice.reducer}});
+    render(
+      <Provider store={store}>
+        <TutorProvider
+          transport={{complete: vi.fn()}}
+          disabledState={disabled}
+          prompts={[{id: 'hint', label: 'Give a hint', value: 'hint?'}]}
+        >
+          <AiTutorPanel />
+        </TutorProvider>
+      </Provider>,
+    );
+  };
+
+  it('says why, instead of inviting a question', () => {
+    // A message explaining that chat is off, above a box inviting a question,
+    // would be two answers to the same question.
+    showDisabled();
+
+    expect(
+      screen.getByText('Chat is disabled for this class section.'),
+    ).toBeInTheDocument();
+    expect(screen.queryByRole('textbox')).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Give a hint'})).toBeNull();
+  });
+
+  it('offers the link that explains it', () => {
+    showDisabled();
+
+    expect(screen.getByRole('link', {name: 'Learn more'})).toHaveAttribute(
+      'href',
+      'https://support.code.org/x',
+    );
+  });
+});

@@ -14,10 +14,11 @@ All six milestones of [`specs/PLAN.md`](specs/PLAN.md) are done. The panel
 runs, knows what to say about a project, can offer a set of file edits, and
 reaches a model four ways.
 
-**No lab switches the tab on yet**, on purpose: whether the tutor may appear
-depends on a section's `aiChatAccessLevel`, a teacher setting that has not been
-ported. A lab must apply that rule before passing a config. See `specs/PLAN.md`
-§11.1.
+**No lab switches the tab on yet.** The access rules are here —
+`shouldShowAiTutor`, `areAiChatToolsEnabled`, `disabledStateFor` — as pure
+functions a host calls with its own state. What is missing is that
+`aiChatAccessLevel` is not yet carried by the frontend's `currentUser` slice or
+its section schema. See `specs/PLAN.md` §11.1.
 
     yarn dev     # the panel, standing alone, answering from recordings
 

@@ -10,9 +10,9 @@ This package is that panel, extracted from `apps/` so a lab in
 all** — against recorded fixtures, or against a dev's own API key through a
 local proxy.
 
-Status: all six milestones are done (§10). One thing is deliberately NOT done
-and is the gate on switching the tab on for real students: the section
-access-level rule (§12).
+Status: all six milestones are done (§10), and the access rules that gate the
+tutor are ported. One thing stands between here and a lab switching the tab on,
+and it is a DATA gap rather than a logic one — see §11.1.
 
 ## 1. What exists today, and where
 
@@ -436,15 +436,32 @@ renders the tab from it; Codebridge's `InfoPanel` passes one through, so any
 Codebridge lab can supply one. `labs/base` injects the slice into the shared
 store, so a host does nothing but pass the config.
 
-NO LAB PASSES ONE YET, and that is on purpose. Legacy decides whether the tutor
-appears with `shouldShowAiTutor`, which reads the section's `aiChatAccessLevel`
-— a teacher setting, held in studio state this package cannot see. Until that
-rule is ported, the safe direction is the one taken: the tab exists only when a
-host explicitly asks for it, so a tutor cannot appear in a classroom where a
-teacher switched it off. A lab that wants the tab must apply the rule itself
-first.
+NO LAB PASSES ONE YET. The rules are here — `shouldShowAiTutor`,
+`areAiChatToolsEnabled` and `disabledStateFor` are ported from
+`aichat/helpers/aiChatAccess.ts` and `useAiChatDisabledState`, and the panel
+renders the disabled state. What is missing is the INPUT.
 
-Two smaller gaps of the same kind:
+They are pure functions taking the facts, not a hook reading them, for the
+reason everything else in this package takes its studio facts from the host: the
+four values the legacy hook selects — the user's own access level, the selected
+section's, whether they are a teacher, whether they are a levelbuilder — are not
+in this package's state and should not be.
+
+THE GAP IS THAT THEY ARE NOT IN THE FRONTEND'S STATE EITHER.
+`@code-dot-org/users`' `currentUserSlice` does not carry `aiChatAccessLevel`
+(legacy reads `ai_chat_access_level` from the same payload, so the server sends
+it there), and `core`'s `ConciseSectionSchema` has no `ai_chat_access_level`
+field. Adding them is a few lines each — but the schemata are zod and a required
+field the endpoint does not send makes every section fail to parse, so it wants
+checking against the actual serializer for the endpoints the FRONTEND uses,
+which are not the ones legacy uses.
+
+Until then the safe direction is the one taken: the tab exists only when a host
+asks for it, so a tutor cannot appear in a classroom where a teacher switched it
+off. A lab that wants the tab must call `shouldShowAiTutor` itself, and pass
+`disabledStateFor(...)` as `TutorConfig.disabledState`.
+
+Two smaller gaps of a different kind:
 
 - **The header buttons.** Clear Chat above all — `useTutor().clear` implements
   it, and there is nowhere in the panel header to put it yet. Legacy renders
