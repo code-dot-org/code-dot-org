@@ -4,17 +4,24 @@ import {
   AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
+  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_TUTOR_FAQ_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {
+  AiChatClientTypes,
+  AiChatDisabledReasons,
+} from '@cdo/generated-scripts/sharedConstants';
 
 let mockState = {
   currentUser: {
     isTeacher: false,
     aiChatAccessLevel: 'enabled',
+    aiChatDisabledReason: null as string | null,
     isLevelbuilder: false,
   },
 };
@@ -58,6 +65,7 @@ describe('useAiChatDisabledState', () => {
       currentUser: {
         isTeacher: false,
         aiChatAccessLevel: 'enabled',
+        aiChatDisabledReason: null,
         isLevelbuilder: false,
       },
     };
@@ -140,6 +148,84 @@ describe('useAiChatDisabledState', () => {
         openInNewTab: true,
         text: 'Learn more',
       },
+    });
+  });
+
+  it('returns the standard student message for blocked students, even when international', () => {
+    mockAreAiChatToolsEnabled.mockReturnValue(false);
+    mockState.currentUser.aiChatAccessLevel = 'disabled';
+    mockState.currentUser.aiChatDisabledReason =
+      AiChatDisabledReasons.INTERNATIONAL;
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({appName: 'pythonlab'})
+    );
+
+    expect(result.current).toEqual({
+      disabled: true,
+      disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
+    });
+  });
+
+  it('returns the international message with the client-specific FAQ link for blocked teachers', () => {
+    mockState.currentUser.isTeacher = true;
+    mockAreAiChatToolsEnabled.mockReturnValue(false);
+    mockState.currentUser.aiChatAccessLevel = 'disabled';
+    mockState.currentUser.aiChatDisabledReason =
+      AiChatDisabledReasons.INTERNATIONAL;
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({
+        appName: 'pythonlab',
+        clientType: AiChatClientTypes.AI_TUTOR,
+      })
+    );
+
+    expect(result.current).toEqual({
+      disabled: true,
+      disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+      disabledLink: {
+        href: AI_TUTOR_FAQ_LINK,
+        openInNewTab: true,
+        text: 'Learn more',
+      },
+    });
+  });
+
+  it('omits the FAQ link for blocked international teachers when clientType is unknown', () => {
+    mockState.currentUser.isTeacher = true;
+    mockAreAiChatToolsEnabled.mockReturnValue(false);
+    mockState.currentUser.aiChatAccessLevel = 'disabled';
+    mockState.currentUser.aiChatDisabledReason =
+      AiChatDisabledReasons.INTERNATIONAL;
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({appName: 'pythonlab'})
+    );
+
+    expect(result.current).toEqual({
+      disabled: true,
+      disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+    });
+  });
+
+  it('shows predict gating before the international message for teachers on an unsubmitted predict level', () => {
+    mockState.currentUser.isTeacher = true;
+    mockState.currentUser.aiChatDisabledReason =
+      AiChatDisabledReasons.INTERNATIONAL;
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({
+        appName: 'pythonlab',
+        clientType: AiChatClientTypes.AI_TUTOR,
+        isPredictLevel: true,
+        hasSubmittedPredictResponse: false,
+      })
+    );
+
+    expect(result.current).toEqual({
+      disabled: true,
+      disabledMessage: 'Chat is disabled until you submit your prediction.',
     });
   });
 

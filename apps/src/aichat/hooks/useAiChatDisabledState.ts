@@ -4,16 +4,32 @@ import {
   AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
+  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_CHAT_LAB_FAQ_LINK,
+  AI_TUTOR_FAQ_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
+import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AiChatClientTypes,
+  AiChatDisabledReasons,
+} from '@cdo/generated-scripts/sharedConstants';
+
+// FAQ article shown with the international-block message, keyed by client type.
+// Client types without a dedicated article get no link.
+const FAQ_LINK_BY_CLIENT_TYPE: Partial<Record<AiChatClientType, string>> = {
+  [AiChatClientTypes.AI_CHAT_LAB]: AI_CHAT_LAB_FAQ_LINK,
+  [AiChatClientTypes.AI_TUTOR]: AI_TUTOR_FAQ_LINK,
+};
 
 interface UseAiChatDisabledStateParams {
   appName?: string;
+  clientType?: AiChatClientType;
   isPredictLevel?: boolean;
   hasSubmittedPredictResponse?: boolean;
 }
@@ -27,6 +43,7 @@ interface UseAiChatDisabledStateParams {
  */
 export function useAiChatDisabledState({
   appName,
+  clientType,
   isPredictLevel = false,
   hasSubmittedPredictResponse = false,
 }: UseAiChatDisabledStateParams): AiChatDisabledState {
@@ -36,6 +53,9 @@ export function useAiChatDisabledState({
   );
   const userAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
+  );
+  const disabledReason = useAppSelector(
+    state => state.currentUser.aiChatDisabledReason
   );
   const isLevelbuilder = useAppSelector(
     state => state.currentUser.isLevelbuilder
@@ -83,8 +103,22 @@ export function useAiChatDisabledState({
           },
         };
       }
-      // If the teacher doesn't have access, show the appropriate message to direct the teacher on how to get access.
+      // If the teacher doesn't have access, show the appropriate message.
       if (!enabledForUser) {
+        if (disabledReason === AiChatDisabledReasons.INTERNATIONAL) {
+          const faqLink = clientType && FAQ_LINK_BY_CLIENT_TYPE[clientType];
+          return {
+            disabled: true,
+            disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+            ...(faqLink && {
+              disabledLink: {
+                href: faqLink,
+                openInNewTab: true,
+                text: 'Learn more',
+              },
+            }),
+          };
+        }
         return {
           disabled: true,
           disabledMessage: AI_CHAT_NOT_AUTHORIZED_TEACHER,
@@ -107,12 +141,14 @@ export function useAiChatDisabledState({
         };
   }, [
     appName,
+    clientType,
     isPredictLevel,
     hasSubmittedPredictResponse,
     isTeacher,
     enabledForUser,
     sectionAccessLevel,
     isLevelbuilder,
+    disabledReason,
   ]);
 
   return disabledState;

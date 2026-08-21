@@ -11,6 +11,7 @@ import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {
@@ -72,6 +73,7 @@ export const AiTutorContainer: FC<{
 
   const disabledState = useAiChatDisabledState({
     appName: labState.appType,
+    clientType: AiChatClientTypes.AI_TUTOR,
   });
 
   const lab: CommonLab | undefined =

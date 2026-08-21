@@ -28,6 +28,7 @@ import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAP
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 
@@ -95,6 +96,7 @@ export const Codebridge = React.memo(
     );
     const {disabled: aiTutorDisabled} = useAiChatDisabledState({
       appName,
+      clientType: AiChatClientTypes.AI_TUTOR,
       isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
       hasSubmittedPredictResponse,
     });

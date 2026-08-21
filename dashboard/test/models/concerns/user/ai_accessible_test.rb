@@ -174,6 +174,123 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
       end
     end
+
+    context 'when international users are blocked (default)' do
+      context 'when an otherwise-verified teacher is in a non-US school' do
+        it 'returns DISABLED' do
+          allow(user).to receive(:teacher?).and_return(true)
+          allow(user).to receive(:verified_instructor?).and_return(true)
+          allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
+          _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+        end
+      end
+
+      context 'when a verified teacher is in a US school' do
+        it 'returns ENABLED' do
+          allow(user).to receive(:teacher?).and_return(true)
+          allow(user).to receive(:verified_instructor?).and_return(true)
+          allow(user).to receive(:school_info).and_return(build(:school_info_us))
+          _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+        end
+      end
+
+      context 'when a verified teacher has no school_info but a non-US geolocation' do
+        it 'returns DISABLED' do
+          allow(user).to receive(:teacher?).and_return(true)
+          allow(user).to receive(:verified_instructor?).and_return(true)
+          allow(user).to receive(:school_info).and_return(nil)
+          allow(user).to receive(:user_geos).and_return([build(:user_geo, :sydney)])
+          _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+        end
+      end
+
+      context 'when a verified teacher has neither school_info nor geolocation' do
+        it 'returns ENABLED (location cannot be confirmed, so we do not block)' do
+          allow(user).to receive(:teacher?).and_return(true)
+          allow(user).to receive(:verified_instructor?).and_return(true)
+          allow(user).to receive(:school_info).and_return(nil)
+          allow(user).to receive(:user_geos).and_return([])
+          _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+        end
+      end
+
+      context 'when a verified teacher has legacy countryless school_info and a US geolocation' do
+        it 'falls back to geolocation rather than treating the missing country as non-US' do
+          allow(user).to receive(:teacher?).and_return(true)
+          allow(user).to receive(:verified_instructor?).and_return(true)
+          allow(user).to receive(:school_info).and_return(build(:school_info_without_country))
+          allow(user).to receive(:user_geos).and_return([build(:user_geo, :seattle)])
+          _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+        end
+      end
+
+      context 'when all of a student\'s teachers are non-US' do
+        it 'returns DISABLED even though a section would otherwise grant access' do
+          non_us_teacher = create(:teacher).tap {|t| allow(t).to receive(:teacher_can_access_aichat?).and_return(true)}
+          allow(non_us_teacher).to receive(:school_info).and_return(build(:school_info_non_us))
+          enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+          allow(user).to receive(:teachers).and_return([non_us_teacher])
+          allow(user).to receive(:sections_as_student).and_return([enabled_section])
+          _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+        end
+      end
+
+      context 'when a student has a mix of US and non-US teachers' do
+        it 'returns the section access level (not blocked as international)' do
+          non_us_teacher = create(:teacher)
+          allow(non_us_teacher).to receive(:school_info).and_return(build(:school_info_non_us))
+          us_teacher = qualified_teacher
+          allow(us_teacher).to receive(:school_info).and_return(build(:school_info_us))
+          enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+          allow(user).to receive(:teachers).and_return([non_us_teacher, us_teacher])
+          allow(user).to receive(:sections_as_student).and_return([enabled_section])
+          _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+        end
+      end
+    end
+
+    context 'when international usage is allowed via DCDO' do
+      it 'does not block a verified non-US teacher' do
+        allow(DCDO).to receive(:get).with("allow_international_aichat_usage", false).and_return(true)
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:verified_instructor?).and_return(true)
+        allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
+        _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      end
+    end
+  end
+
+  describe '#ai_chat_disabled_reason' do
+    subject(:ai_chat_disabled_reason) {user.ai_chat_disabled_reason}
+
+    it 'returns nil when access is enabled' do
+      allow(user).to receive(:ai_chat_access_level).and_return(Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+      _ai_chat_disabled_reason.must_be_nil
+    end
+
+    it 'returns nil when access is essential_only' do
+      allow(user).to receive(:ai_chat_access_level).and_return(Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+      _ai_chat_disabled_reason.must_be_nil
+    end
+
+    it 'returns INTERNATIONAL for a non-US teacher (over the verification reason)' do
+      allow(user).to receive(:teacher?).and_return(true)
+      allow(user).to receive(:verified_instructor?).and_return(true)
+      allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
+      _ai_chat_disabled_reason.must_equal SharedConstants::AI_CHAT_DISABLED_REASONS[:INTERNATIONAL]
+    end
+
+    it 'returns TEACHER_NOT_VERIFIED for an unverified US teacher' do
+      allow(user).to receive(:teacher?).and_return(true)
+      allow(user).to receive(:school_info).and_return(build(:school_info_us))
+      _ai_chat_disabled_reason.must_equal SharedConstants::AI_CHAT_DISABLED_REASONS[:TEACHER_NOT_VERIFIED]
+    end
+
+    it 'returns NO_SECTION_ACCESS for a student whose sections do not grant access' do
+      allow(user).to receive(:teachers).and_return([qualified_teacher])
+      # sections_as_student returns disabled_section from the before block
+      _ai_chat_disabled_reason.must_equal SharedConstants::AI_CHAT_DISABLED_REASONS[:NO_SECTION_ACCESS]
+    end
   end
 
   describe '#can_access_aichat_chat_completion?' do
