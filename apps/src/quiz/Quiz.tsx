@@ -288,16 +288,16 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   ).sort((a, b) => a - b);
   const isLastPage = currentPageIndex >= pageNumbers.length - 1;
   const currentPageNumber = pageNumbers[currentPageIndex] ?? 1;
-  const currentPageQuestions = multipleChoiceQuestions.filter(
-    question => (question.page || 1) === currentPageNumber
-  );
+  // Review shows every question on one page rather than paging through them.
+  const currentPageQuestions = result
+    ? multipleChoiceQuestions
+    : multipleChoiceQuestions.filter(
+        question => (question.page || 1) === currentPageNumber
+      );
 
   // Only for correctness display (green/red + Correct/Incorrect label) -
   // filters out entries where correct is null, i.e. show_correctness is
   // off, so QuizQuestion never renders that styling in that case.
-  // Restoring which choice was actually selected is handled separately,
-  // via `responses` (see responsesFromQuestionResults), so it still works
-  // even when show_correctness is off.
   const questionResultsById = new Map(
     (result?.questionResults || [])
       .filter(
@@ -502,7 +502,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                 ))}
               </ol>
               <div className={styles.cardFooter}>
-                {pageNumbers.length > 1 && (
+                {!result && pageNumbers.length > 1 && (
                   <MuiButton
                     variant="outlined"
                     color="secondary"
@@ -520,7 +520,11 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                     color="primary"
                     size="medium"
                     type="button"
-                    disabled={!attemptId}
+                    // Next is a local pagination action with no dependency
+                    // on an attempt existing - only require one when
+                    // running inside a script, where an attempt actually
+                    // gets created at all.
+                    disabled={(!!scriptId && !attemptId) || isSubmitting}
                     onClick={() => setCurrentPageIndex(prev => prev + 1)}
                   >
                     Next
