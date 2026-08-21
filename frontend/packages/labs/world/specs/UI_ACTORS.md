@@ -141,16 +141,28 @@ a rule pulls its dependencies.
 
 The other five interface elements wait on nameable things:
 
-| actor      | what it is                     | waits on                          |
-| ---------- | ------------------------------ | --------------------------------- |
-| Label      | text, no picture               | DRAWING.md                        |
-| Button     | a box, text, `Can Be Clicked`  | DRAWING.md                        |
-| Meter      | a bar whose length is a number | DRAWING.md                        |
-| Panel      | a background behind a group    | grouping, which is layout         |
-| Text field | typed input                    | a keyboard the world does not own |
+| actor        | what it is                     | waits on                          |
+| ------------ | ------------------------------ | --------------------------------- |
+| Label        | text, no picture               | DONE                              |
+| Button       | a box, text, `Can Be Clicked`  | DONE                              |
+| Progress Bar | a bar whose length is a number | DONE                              |
+| Panel        | a background behind a group    | grouping, which is layout         |
+| Text field   | typed input                    | a keyboard the world does not own |
 
-Three of the five arrive together, because they are the same feature seen from
+Three of the five arrived together, because they are the same feature seen from
 three angles.
+
+**"Meter" became "Progress Bar"**, which is what everybody calls one, and its
+number lives in a rule of its own (`rules/progress`) for the reason a Label's
+text does. `define property` in an `.actor` file mints its getter and setter
+into that file's palette and nowhere else — so a bar keeping its own fraction
+would be a bar nothing in the project could fill, and being filled by something
+else is the whole of what a progress bar is. Writing is the precedent and
+Progress is written to be read beside it.
+
+It is not a HEALTH bar. What fills it is a project's own handler, and health is
+one of the things that might: `rules/attachment` puts it over an actor, and
+`most health` is what a fraction of health divides by (`rules/health`).
 
 ## The interface layer, restated rather than re-derived
 

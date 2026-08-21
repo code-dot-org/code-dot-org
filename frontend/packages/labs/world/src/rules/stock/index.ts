@@ -30,6 +30,7 @@ import {jumpRule} from './jump';
 import {motionRule} from './motion';
 import {mouseRule} from './mouse';
 import {patrolRule} from './patrol';
+import {progressRule} from './progress';
 import {scoreRule} from './score';
 import {shootsRule} from './shoots';
 import {solidRule} from './solid';
@@ -163,6 +164,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Gives an actor words, a size, a color and an anchor — the state a drawn word is drawn from. It runs nothing: what an actor does with its words is its own “define drawing”, which is why the stock Label and Button are ordinary actors.',
     provides: ['Shows Text'],
     contents: writingRule,
+  },
+  {
+    id: 'progress',
+    name: 'Progress',
+    ability: 'Shows Progress',
+    description:
+      'A fraction between 0 and 1 that an actor carries, and the two colours a bar of it is drawn in. Writing\u2019s sibling: it holds the number and paints none of it, and the stock Progress Bar is what draws one.',
+    provides: ['Shows Progress'],
+    contents: progressRule,
   },
   {
     id: 'score',
@@ -358,4 +368,5 @@ export {
   scoreRule,
   patrolRule,
   attachmentRule,
+  progressRule,
 };

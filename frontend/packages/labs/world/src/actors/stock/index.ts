@@ -13,6 +13,7 @@
 
 import {buttonActor} from './button';
 import {labelActor} from './label';
+import {progressBarActor} from './progressBar';
 
 /** One entry in the library. */
 export interface StockActor {
@@ -43,6 +44,14 @@ export const STOCK_ACTORS: readonly StockActor[] = [
       'A word on the screen. Give it text, a size, a color and an anchor, and it draws them — the smallest way for a game to say anything to the player.',
     requires: ['Writing'],
     contents: labelActor,
+  },
+  {
+    id: 'progressBar',
+    name: 'Progress Bar',
+    description:
+      'A bar that fills up. Set its fraction between 0 and 1 and it draws that much of itself — health, a loading bar, how close a boss is to waking. Attach it to an actor to have it ride above one.',
+    requires: ['Progress'],
+    contents: progressBarActor,
   },
   {
     id: 'button',

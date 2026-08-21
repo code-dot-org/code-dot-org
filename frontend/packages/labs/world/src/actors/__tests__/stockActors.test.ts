@@ -1,4 +1,4 @@
-// The stock Label and Button (specs/UI_ACTORS.md).
+// The stock Label, Progress Bar and Button (specs/UI_ACTORS.md).
 //
 // What these pin is that an interface element is an ORDINARY ACTOR. Every
 // assertion below is one anybody's own `.actor` file would have to pass: it
@@ -13,6 +13,7 @@ import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {STOCK_ACTORS} from '../stock';
 import {buttonActor} from '../stock/button';
 import {labelActor} from '../stock/label';
+import {progressBarActor} from '../stock/progressBar';
 
 /** The top-level blocks a file holds. */
 const roots = (contents: string) =>
@@ -81,6 +82,42 @@ describe('Label', () => {
     // the picker has a picture rather than a blank.
     expect(labelActor).toContain('world_set_Writing_TextProperty');
     expect(labelActor).toContain('"TEXT": "Label"');
+  });
+});
+
+describe('Progress Bar', () => {
+  it('draws a whole track and a fill that is an expression', () => {
+    // Two rectangles, and the second is the only measurement here that is not
+    // a number. The track is drawn WHOLE and first, so what is left of it is
+    // the empty part: there is no third rectangle for "the rest" and none to
+    // keep in step with the other two.
+    const drawn = types(progressBarActor);
+
+    expect(drawn.filter(type => type === 'world_draw_rectangle')).toHaveLength(
+      2,
+    );
+    expect(drawn).toContain('math_arithmetic');
+  });
+
+  it('reads every part of itself off the actor', () => {
+    // Which is what lets two bars of one kind show two different things, set
+    // from the map editor's inspector with no editor work.
+    const drawn = types(progressBarActor);
+
+    expect(drawn).toContain('world_get_Progress_FractionProperty');
+    expect(drawn).toContain('world_get_Progress_BarColorProperty');
+    expect(drawn).toContain('world_get_Progress_TrackColorProperty');
+  });
+
+  it('keeps its number in a rule, not in itself', () => {
+    // THE WHOLE REASON `Progress` EXISTS. A `define property` mints its getter
+    // and setter into its own file's palette and nowhere else, so a bar that
+    // kept its own fraction would be a bar nothing in the project could fill —
+    // and being filled by something else is what a progress bar is.
+    expect(progressBarActor).toContain('Progress#ShowsProgressTrait');
+    expect(parseActorOwnMeta('actors/progressBar', progressBarActor)).toEqual(
+      expect.objectContaining({properties: []}),
+    );
   });
 });
 
