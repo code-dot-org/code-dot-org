@@ -3,7 +3,10 @@
 
 export const SPRITE_SIZE: number;
 export const SPRITE_NAMES: string[];
-export const ANIMATION_SPECS: Record<string, {frames: number; frameRate: number}>;
+export const ANIMATION_SPECS: Record<
+  string,
+  {frames: number; frameRate: number}
+>;
 export function generateSprites(outDir: string): {
   sprites: string[];
   animations: string[];

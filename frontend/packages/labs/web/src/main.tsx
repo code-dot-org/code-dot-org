@@ -71,13 +71,27 @@ async function enableMocks() {
   const {
     startMockWorker,
     registerLabFixtures,
+    registerMockFixture,
     setActiveScenario,
     maybeResetFromUrl,
   } = await import('@code-dot-org/core/api/mocks');
   const {WebFixtures} = await import('./fixtures');
+  const {SIGNED_IN_STUDENT} = await import('./fixtures/signedInUser');
 
   maybeResetFromUrl();
   registerLabFixtures('web', WebFixtures);
+
+  // Core answers `/api/v1/users/current` as SIGNED OUT by default, which is
+  // right for a general harness and wrong for this one: the AI Tutor's access
+  // rules read the current user, and read silence as no permission. Registered
+  // the way core's own handler prescribes — a wildcard route ahead of the
+  // default — rather than by writing a user into redux, which nothing in
+  // `frontend/` populates from the server anyway.
+  registerMockFixture({
+    method: 'get',
+    path: '*/api/v1/users/current',
+    respond: SIGNED_IN_STUDENT,
+  });
   setActiveScenario({labKey: 'web', tag: channelId});
 
   await startMockWorker();

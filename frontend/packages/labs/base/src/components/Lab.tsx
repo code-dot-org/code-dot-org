@@ -126,8 +126,18 @@ const Lab = ({
           <ThemeProvider>
             {/* Supports extra links buttons and toggling */}
             <ExtraLinksButtonProvider>
-              {/* The host supplies the resolved level-properties map. */}
-              <LevelPropertiesProvider levelPropertiesMap={levelPropertiesMap}>
+              {/*
+                The host supplies the resolved level-properties map. Both are
+                optional here and required by the provider, because `<Lab>`
+                takes no required props — Studio renders it bare on routes that
+                have no level. An empty map looks the same to every consumer as
+                no provider at all: the lookup misses and `levelProperties` is
+                undefined, which is the case they already have to handle.
+              */}
+              <LevelPropertiesProvider
+                levelId={Number(levelId ?? NaN)}
+                levelPropertiesMap={levelPropertiesMap ?? {}}
+              >
                 {/* Manages the shared lab dialogs (Start Over, Skip, Share, …);
                   without it `useDialogControl().showDialog` is a no-op. */}
                 <DialogControlProvider dialogViews={DialogViews}>

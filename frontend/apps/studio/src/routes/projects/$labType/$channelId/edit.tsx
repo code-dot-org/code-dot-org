@@ -1,6 +1,6 @@
 import {createFileRoute, notFound} from '@tanstack/react-router';
 
-import {LabHost} from '@code-dot-org/lab/host';
+import {Lab} from '@code-dot-org/lab/host';
 
 import FullHeightLabFrame from '@/modules/labs/router/FullHeightLabFrame';
 import {getLabEntrypoint} from '@/modules/labs/router/getLabEntrypoint';
@@ -44,11 +44,7 @@ export const Route = createFileRoute('/projects/$labType/$channelId/edit')({
 
 function RouteComponent() {
   const {LabEntrypoint} = Route.useLoaderData();
-  const {labType, channelId} = Route.useParams();
 
-  // LabHost is the single host wrapper: it resolves the standalone project's
-  // level properties, loads its sources by channel, and renders the propless
-  // entrypoint inside one `<Lab>`.
   return (
     <FullHeightLabFrame>
       <Lab>
