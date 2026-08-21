@@ -9,6 +9,7 @@ import {
   forEach,
   give,
   hasTrait,
+  lessThan,
   minus,
   moduleFor,
   moreThan,
@@ -74,6 +75,27 @@ export const DealsDamage = rule.traitRef('Deals Damage');
 
 /** How much more damage this can take. At zero it is dead. */
 const health = hurtable.number('health', 3);
+
+/**
+ * The most it can have — what a full one is.
+ *
+ * Health is a number that goes down, so nothing needed a ceiling until two
+ * things did. HEALING needs one, or a potion is a way to become invincible;
+ * and a BAR needs one, because "half health" is not a fact about a number, it
+ * is a number divided by what full means. There is no way to draw one without
+ * this and no way to ask for one either.
+ *
+ * A separate property rather than health's own default, because they are two
+ * different statements: how much a kind of thing can take, and how much this
+ * one has left. A boss with 20 and a scratch on it is `most health` 20 and
+ * `health` 19, and neither number is derivable from the other.
+ *
+ * NOT ENFORCED ON `health` ITSELF. Setting health to a hundred is a thing a
+ * learner may write and this does not undo it — a rule that silently rewrote
+ * a number a block had just set would be worse than the mistake. What it
+ * bounds is HEALING, which is the operation that means "up to full".
+ */
+const mostHealth = hurtable.number('most health', 3);
 
 /**
  * Seconds of not being hurt again after being hurt.
@@ -154,6 +176,37 @@ const takeDamage = hurtable.block({
           when([
             [atMost(health.of(thisActor()), n(0)), [dies({}, thisActor())]],
           ]),
+        ],
+      ],
+    ]),
+  ],
+});
+
+/** Somewhere to work the sum out, as `left` is for taking it away. */
+const gained = rule.local('gained', 'Number');
+
+export const heal = hurtable.block({
+  returns: 'none',
+  description:
+    'Get some health back, up to full. Does nothing for something already dead — coming back is a bigger decision than a potion.',
+  say: ['heal', param('amount', 'number')],
+  body: ({amount}) => [
+    note('Already dead? A heal is not a resurrection: `dies` has been said,'),
+    note('and a game that wants somebody back says so itself.'),
+    when([
+      [
+        moreThan(health.of(thisActor()), n(0)),
+        [
+          note('Up to full and no further, which is what the ceiling is for.'),
+          gained.set(add(health.of(thisActor()), amount.get())),
+          health.set(
+            thisActor(),
+            pick(
+              lessThan(gained.get(), mostHealth.of(thisActor())),
+              gained.get(),
+              mostHealth.of(thisActor()),
+            ),
+          ),
         ],
       ],
     ]),

@@ -149,6 +149,66 @@ describe('Health', () => {
     expect(player.get(of('rules/health', 'HealthProperty'))).toBe(2);
   });
 
+  it('heals back up to full and no further', () => {
+    // What the ceiling is FOR. Without one a potion is a way to become
+    // invincible, and "half health" is not a fact anything could draw.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/health')])
+      .instantiate();
+    const player = new ActorBuilder({id: 'player', name: 'player'})
+      .useTraits([of('rules/health', 'HasHealthTrait')])
+      .set(of('rules/health', 'HealthProperty'), 1)
+      .set(PositionProperty, at(100, 70))
+      .instantiate('player');
+    world.addActor(player);
+
+    // An actor action: the subject is the receiver, not an argument. `heal` is
+    // declared on the trait, so it is something an actor DOES.
+    player.act(of('rules/health', 'HealAction'), 10);
+    world.tick(1 / 60);
+
+    expect(player.get(of('rules/health', 'HealthProperty'))).toBe(3);
+  });
+
+  it('does not heal something already dead', () => {
+    // A heal is not a resurrection: `dies` has been said once, and a game that
+    // wants somebody back says so itself rather than having a potion mean it.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/health')])
+      .instantiate();
+    const player = new ActorBuilder({id: 'player', name: 'player'})
+      .useTraits([of('rules/health', 'HasHealthTrait')])
+      .set(of('rules/health', 'HealthProperty'), 0)
+      .set(PositionProperty, at(100, 70))
+      .instantiate('player');
+    world.addActor(player);
+
+    player.act(of('rules/health', 'HealAction'), 5);
+    world.tick(1 / 60);
+
+    expect(player.get(of('rules/health', 'HealthProperty'))).toBe(0);
+  });
+
+  it('carries a full of its own, which a boss may set higher', () => {
+    // Two statements, not one: how much a kind can take, and how much this one
+    // has left. Neither is derivable from the other.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/health')])
+      .instantiate();
+    const boss = new ActorBuilder({id: 'boss', name: 'boss'})
+      .useTraits([of('rules/health', 'HasHealthTrait')])
+      .set(of('rules/health', 'MostHealthProperty'), 20)
+      .set(of('rules/health', 'HealthProperty'), 19)
+      .set(PositionProperty, at(100, 70))
+      .instantiate('boss');
+    world.addActor(boss);
+
+    boss.act(of('rules/health', 'HealAction'), 5);
+    world.tick(1 / 60);
+
+    expect(boss.get(of('rules/health', 'HealthProperty'))).toBe(20);
+  });
+
   it('hurts again once the mercy time has passed', () => {
     const world = new WorldBuilder({id: 'w', name: 'W'})
       .useRules([rule('rules/health')])
@@ -169,6 +229,77 @@ describe('Health', () => {
     run(world, 1.6);
 
     expect(player.get(of('rules/health', 'HealthProperty'))).toBe(0);
+  });
+});
+
+describe('Attachment', () => {
+  /** A rider, a subject, and the world they are in. */
+  const attached = (offset?: Vector) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/motion'), rule('rules/attachment')])
+      .instantiate();
+    const carrier = new ActorBuilder({id: 'carrier', name: 'carrier'})
+      .useTraits([of('rules/motion', 'CanMoveTrait')])
+      .set(PositionProperty, at(100, 100))
+      .set(of('rules/motion', 'VelocityProperty'), new Vector(1, 0))
+      .instantiate('carrier');
+    world.addActor(carrier);
+    const rider = new ActorBuilder({id: 'rider', name: 'rider'})
+      .useTraits([of('rules/attachment', 'AttachedTrait')])
+      .set(PositionProperty, at(0, 0))
+      .instantiate('rider');
+    if (offset) {
+      rider.set(of('rules/attachment', 'OffsetProperty'), offset as never);
+    }
+    world.addActor(rider);
+    return {world, carrier, rider};
+  };
+  const spot = (actor: unknown) =>
+    (actor as {get(p: unknown): Vector}).get(PositionProperty);
+
+  it('stays where it was put while it is attached to nobody', () => {
+    // The ordinary state of a rider nothing has pointed yet — and the one that
+    // would otherwise read every frame from an empty property and park it at
+    // the origin, which looks like the rule being broken rather than unused.
+    const {world, rider} = attached();
+
+    run(world, 0.5);
+
+    expect(spot(rider).x).toBe(0);
+    expect(spot(rider).y).toBe(0);
+  });
+
+  it('rides along once it is pointed at something', () => {
+    const {world, carrier, rider} = attached();
+    rider.set(of('rules/attachment', 'AttachedToProperty'), carrier as never);
+
+    run(world, 0.5);
+
+    // Default offset is a little above: up the level is negative y.
+    expect(spot(rider).x).toBe(spot(carrier).x);
+    expect(spot(rider).y).toBe(spot(carrier).y - 24);
+  });
+
+  it('keeps the offset it carries, not the one it started with', () => {
+    const {world, carrier, rider} = attached(new Vector(12, 40));
+    rider.set(of('rules/attachment', 'AttachedToProperty'), carrier as never);
+
+    run(world, 0.5);
+
+    expect(spot(rider).x).toBe(spot(carrier).x + 12);
+    expect(spot(rider).y).toBe(spot(carrier).y + 40);
+  });
+
+  it('moves the rider and never the subject', () => {
+    // Which is what lets two actors be attached to each other without either
+    // fighting the other: each reads where the other ENDED UP.
+    const {world, carrier, rider} = attached();
+    rider.set(of('rules/attachment', 'AttachedToProperty'), carrier as never);
+    const wentTo = 100 + 0.5 * 100;
+
+    run(world, 0.5);
+
+    expect(spot(carrier).x).toBeCloseTo(wentTo, 0);
   });
 });
 

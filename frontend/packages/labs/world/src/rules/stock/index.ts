@@ -11,6 +11,7 @@
 // default project is a project that imported it.
 
 import {arrowsRule} from './arrows';
+import {attachmentRule} from './attachment';
 import {boundsRule} from './bounds';
 import {cameraRule} from './camera';
 import {cameraConfinedRule} from './cameraConfined';
@@ -135,6 +136,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Walks an actor out and back on a beat of its own, across or down or both. What an enemy does when the player is not there, and what a moving platform does always.',
     provides: ['Patrols Across', 'Patrols Down'],
     contents: patrolRule,
+  },
+  {
+    id: 'attachment',
+    name: 'Attachment',
+    ability: 'Rides Along with an Actor',
+    description:
+      'Keeps one actor on another, at an offset it carries. A health bar over an enemy, a name over a player, a shield around a ship — anything that should move as one thing with something else.',
+    provides: ['Attached'],
+    contents: attachmentRule,
   },
   {
     id: 'time',
@@ -347,4 +357,5 @@ export {
   jumpRule,
   scoreRule,
   patrolRule,
+  attachmentRule,
 };
