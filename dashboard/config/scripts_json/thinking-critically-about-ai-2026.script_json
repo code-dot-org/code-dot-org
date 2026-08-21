@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-18 22:29:30 UTC",
+    "serialized_at": "2026-08-20 14:02:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1402,7 +1402,7 @@
       "key": "abf56b64-b8a4-45ec-98f6-87339303307b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Students choose an image and try to generate a new one as close as possible.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1. Students choose an image and try to generate a new one as close as possible.",
         "progression_name": "The Prompt Off",
         "tips": [
           {
