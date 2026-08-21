@@ -260,6 +260,23 @@ export interface ThumbnailsReadyMessage {
   id: string;
   thumbnails: Record<string, string>;
   schemas: Record<string, ActorSchema>;
+  /**
+   * How big each kind is IN THE WORLD, for the kinds that say.
+   *
+   * A drawing declares its canvas and that canvas is the actor's size — its
+   * click box and its collision box are worked out from it (specs/DRAWING.md).
+   * The map editor drew every kind at one nominal tile, so a 64-by-8 bar came
+   * out 32 by 4: the right shape at the wrong scale, a quarter of the width it
+   * will have beside a 32-pixel player.
+   *
+   * ONLY THE KINDS THAT SAY. A sprite-backed actor's size is its image's, and
+   * the image is not measured here — a frame names a sprite and carries no
+   * dimensions (`animationTypes.FrameState`). Those keep the nominal tile,
+   * which is exactly right for the 32-pixel sprites everything ships with and
+   * wrong for any other, and is a measurement to add rather than a shape to
+   * guess.
+   */
+  sizes: Record<string, {width: number; height: number}>;
   /** One per requested placement key, for the editors that draw placements. */
   placements: Record<string, string>;
 }

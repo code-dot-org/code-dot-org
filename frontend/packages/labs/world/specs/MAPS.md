@@ -187,6 +187,31 @@ step 2 — is now back to one caller. The extraction still pays for itself in
 `MapEditor` being 125 lines instead of 1103, but it is fair to say the second
 caller it was made for no longer exists.
 
+## Drawn at the size it will be
+
+Every kind used to be drawn at one nominal tile, fitted to its thumbnail's
+aspect. That is right for the 32-pixel sprites everything ships with and wrong
+for anything else: a 64-by-8 health bar came out 32 by 4 — the right shape at
+the wrong scale, a quarter of the width it will have beside a player.
+
+A DRAWING declares its canvas, and that canvas IS the actor's size — its click
+box and its collision box are worked out from it (specs/DRAWING.md). So the
+sandbox reports it per kind alongside the thumbnails and the schemas, and the
+canvas draws, outlines and hit-tests at it.
+
+**Only the kinds that say.** A sprite-backed actor's size is its image's, and
+the image is not measured here — a frame names a sprite and carries no
+dimensions. Those keep the nominal tile, which is a measurement to add rather
+than a shape to guess.
+
+**The hit box has a floor and the outline does not.** A health bar is eight
+pixels tall and would otherwise be an eight-pixel target. The outline hugs the
+true shape, because that is what the actor is; only the reach is generous.
+
+The PLACEMENTS field is a grid of cells rather than a canvas — one actor per
+tile, `object-fit: contain` — so nothing there is squashed and nothing there
+has a size to honour.
+
 ## An actor-typed property: a placement naming another
 
 A placement may hold a REFERENCE to another placement — the stock Health Bar's

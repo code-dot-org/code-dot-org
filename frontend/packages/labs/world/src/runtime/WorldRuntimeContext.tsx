@@ -443,7 +443,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     // What is left to skip on is a world to introspect, which is the one thing
     // the manifest cannot do without.
     if (!pair || !worldPath) {
-      return {thumbnails: {}, schemas: {}, placements: {}};
+      return {thumbnails: {}, schemas: {}, sizes: {}, placements: {}};
     }
     // Thumbnails are decoration, and generation can now refuse a file outright
     // (a `define world` in an `.actor`). The compile path reports that properly;
@@ -465,7 +465,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       );
       files = generateBlocklyFiles(projectFiles(source));
     } catch {
-      return {thumbnails: {}, schemas: {}, placements: {}};
+      return {thumbnails: {}, schemas: {}, sizes: {}, placements: {}};
     }
     const entry = '__thumbnails__.js';
     const moduleUrl = await pair.compile.compile(
