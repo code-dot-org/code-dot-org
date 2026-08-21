@@ -473,9 +473,11 @@ the fields are unverified.
 
 Two smaller gaps of a different kind:
 
-- **The header buttons.** Clear Chat above all — `useTutor().clear` implements
-  it, and there is nowhere in the panel header to put it yet. Legacy renders
-  `AiChatHeaderButtons` there.
+- **Copy Chat History.** The other of the two buttons legacy puts in the panel
+  header; it belongs with the chat-history feature (§2). Clear Chat is done —
+  `TutorHeaderButtons`, rendered by `ResourcePanel` on the tutor's tab, and
+  blocked while a proposal stands, because clearing would take away the only
+  Accept and Reject there are.
 - **Teacher view.** Reading a student's transcript, and flagging a response,
   are the chat-history feature (§2, §12).
 
