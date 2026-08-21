@@ -26,9 +26,7 @@ const CfuQuestionsSections: React.FC<CfuQuestionsSectionsProps> = ({
   return (
     <div className={styles.studentCFUWidgetQuestionsSectionContainer}>
       <div className={styles.heading}>
-        <Typography variant="body2">
-          <strong>Level Details</strong>
-        </Typography>
+        <Typography variant="body2">Level Details</Typography>
       </div>
       <div className={styles.questionsList}>
         {cfuLevels.map((level, i) => (

@@ -45,7 +45,11 @@ class LessonProgress extends Component {
 
   getFullWidth() {
     const component = $(this.refs.fullProgressInner);
-    return component.length > 0 ? component.width() : 0;
+    // Measure with outerWidth so the inner's right padding counts: that
+    // padding reserves room for the assessment star badge, which overhangs
+    // the last bubble. Content width alone under-reports, and the container
+    // (overflow: hidden) then clips the badge.
+    return component.length > 0 ? component.outerWidth() : 0;
   }
 
   setDesiredWidth() {
@@ -193,7 +197,7 @@ class LessonProgress extends Component {
           <div
             className="full_progress_inner"
             ref="fullProgressInner"
-            style={styles.inner}
+            style={styles.progressInner}
           >
             {levels.map((level, index) => {
               let isCurrent =
@@ -280,6 +284,18 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100%',
+  },
+  progressInner: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    // This padding is measured into the width reported to HeaderMiddle
+    // (getFullWidth uses outerWidth). Together with HeaderMiddle's 10px
+    // lessonProgressExtraWidth it fits the star badge overhanging the last
+    // bubble (8px past the content edge) with a 1px gap to the container
+    // edge, matching the badge's gap to the top.
+    paddingRight: 3,
   },
   headerVignette: {
     width: '100%',

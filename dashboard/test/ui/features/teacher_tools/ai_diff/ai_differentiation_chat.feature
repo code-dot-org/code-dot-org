@@ -80,7 +80,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
     And I am on "http://studio.code.org/courses/ui-test-artist/units/1"
-    And I wait until element "#ui-floatingActionButton" is visible
+    And I wait until element "#uitest-chat-textarea" is visible
 
     # Teacher sees and skips AI Diff chat welcome
     # And I wait until element "button:contains(Get Started)" is visible
@@ -97,7 +97,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I wait until element "p:contains(Lorem ipsum)" is visible
 
     # Clicking "suggest prompts" gives another set of prompts
-    And I click selector "button:contains(Suggest prompts)"
+    And I click selector "button[aria-label='Suggest prompts']"
     And I click selector "button:contains(Create)"
     And I click selector "button:contains(Write a lesson hook)" once I see it
     And I wait until I see 2 of jquery selector p:contains(Lorem ipsum)
@@ -116,7 +116,6 @@ Feature: Send and receive messages in the AI differentiation chat
     And I get debug info for the current user
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
-    And element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
     # And I wait until element "button:contains(Get Started)" is visible
@@ -124,7 +123,7 @@ Feature: Send and receive messages in the AI differentiation chat
     # And I click selector "a:contains('Skip the tutorial')" once I see it
 
     # Typing a chat message
-    And I wait until element "button:contains(Suggest prompts)" is visible
+    And I wait until element "button[aria-label='Suggest prompts']" is visible
     And I click selector "#uitest-chat-textarea" once I see it
     And I press keys "How do I add a classroom section" for element "#uitest-chat-textarea"
     And I wait until element "textarea:contains(How do I add a classroom section)" is visible
@@ -150,7 +149,6 @@ Feature: Send and receive messages in the AI differentiation chat
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And I wait until element "h2:contains(Welcome, Stilgar)" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
-    And I wait until element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
     # And I wait until element "button:contains(Get Started)" is visible
@@ -159,8 +157,8 @@ Feature: Send and receive messages in the AI differentiation chat
     # And I click selector "a:contains('Skip the tutorial')"
 
     #Now we see the regular AI diff chat (with thread sidebar)
-    And I wait until element "button:contains(Suggest prompts)" is visible
-    And I click selector "#ui-notificationsButton"
+    And I wait until element "button[aria-label='Suggest prompts']" is visible
+    And I click selector "button:contains(Alerts)"
     And I wait until element "p:contains(Test notification no. 1)" is visible
     And element "p:contains(The deepest parts of the ocean are totally unknown to us)" is visible
     And element "p:contains(Test notification no. 2)" is visible

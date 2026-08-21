@@ -1,18 +1,22 @@
 # Experimental APIs for the Lab2 Sprite Lab scenes UI variant. Lets a signed-in
 # user discover and jump into scenes from projects made by people who share a
-# section with them (classmates and their teachers), on the same level.
+# section with them (classmates and their teachers), on the same level in the
+# same script.
 class SpriteLab2Controller < ApplicationController
   before_action :authenticate_user!
 
-  # GET /sprite_lab2/section_scenes?level_id=N
-  # Scene metadata from every section-mate's project on the given level:
-  # {scenes: [{channel, sceneId, sceneName, ownerName}]}. Powers the
+  # GET /sprite_lab2/section_scenes?level_id=N&script_id=M
+  # Scene metadata from every section-mate's project on the given level and
+  # script: {scenes: [{channel, sceneId, sceneName, ownerName}]}. Powers the
   # go-to-external-scene block's dropdown.
   def section_scenes
     level = Level.find(params.require(:level_id))
+    return head :bad_request unless sprite_lab2_level?(level)
+    script_id = params[:script_id].presence
+    return head :bad_request unless script_id
     scenes = []
     section_mates.each do |user|
-      channel, sources = project_sources_for(user, level)
+      channel, sources = project_sources_for(user, level, script_id)
       next unless sources
       (sources['scenes'] || []).each do |scene|
         next unless scene['id'] && scene['name']
@@ -27,12 +31,17 @@ class SpriteLab2Controller < ApplicationController
     render json: {scenes: scenes}
   end
 
-  # GET /sprite_lab2/external_scenes?channel=X
+  # GET /sprite_lab2/external_scenes?channel=X&level_id=N&script_id=M
   # Full scenes + animations of one project, for running an external scene
-  # (including its internal scene jumps and its images). Only allowed when the
-  # project's owner shares a section with the current user.
+  # (including its internal scene jumps and its images). Allowed only when the
+  # owner shares a section with the current user and the channel is that
+  # owner's channel for the level and script in the request.
   def external_scenes
     channel = params.require(:channel)
+    level = Level.find(params.require(:level_id))
+    return head :bad_request unless sprite_lab2_level?(level)
+    script_id = params[:script_id].presence
+    return head :bad_request unless script_id
     begin
       owner_storage_id, _project_id = get_storage_id_and_project_id(channel)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
@@ -41,6 +50,7 @@ class SpriteLab2Controller < ApplicationController
     owner_id = user_id_for_storage_id(owner_storage_id)
     owner = User.find_by(id: owner_id)
     return head :forbidden unless owner && section_mates.include?(owner)
+    return head :forbidden unless channels_for(owner, level, script_id).include?(channel)
 
     source_data = SourceBucket.new.get(channel, 'main.json')
     return head :not_found unless source_data[:status] == 'FOUND'
@@ -67,11 +77,27 @@ class SpriteLab2Controller < ApplicationController
     end
   end
 
-  # The user's project channel + parsed sources for a level, or [nil, nil].
-  private def project_sources_for(user, level)
+  # The scenes experiment runs on Sprite Lab in Lab2 levels only.
+  private def sprite_lab2_level?(level)
+    level.is_a?(GamelabJr) && level.uses_lab2?
+  end
+
+  # The user's channel tokens for this level and script.
+  private def channel_tokens_for(user, level, script_id)
     storage_id = storage_id_for_user_id(user.id)
-    return [nil, nil] unless storage_id
-    channel_token = ChannelToken.find_channel_token(level, storage_id, nil)
+    return [] unless storage_id
+    ChannelToken.where(
+      level: level.host_level, storage_id: storage_id, script_id: script_id
+    ).to_a
+  end
+
+  private def channels_for(user, level, script_id)
+    channel_tokens_for(user, level, script_id).map(&:channel)
+  end
+
+  # The user's project channel + parsed sources, or [nil, nil].
+  private def project_sources_for(user, level, script_id)
+    channel_token = channel_tokens_for(user, level, script_id).first
     return [nil, nil] unless channel_token
     source_data = SourceBucket.new.get(channel_token.channel, 'main.json')
     return [nil, nil] unless source_data[:status] == 'FOUND'

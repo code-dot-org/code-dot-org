@@ -70,6 +70,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    */
   readonly embeddedInstructionBlocks: Locator;
 
+  /** CSS: no accessible role or name (a11y gap), just a div around the modal's Blockly workspace. */
+  readonly functionEditorContainer: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
@@ -93,6 +96,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.continueButton = page.locator('#continue-button');
     this.embeddedInstructionBlocks = page.locator(
       '.readonly-block-space-container',
+    );
+    this.functionEditorContainer = page.locator(
+      '[class*="modalFunctionEditorContainer"]',
     );
   }
 
