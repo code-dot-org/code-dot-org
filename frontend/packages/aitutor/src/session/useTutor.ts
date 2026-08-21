@@ -23,10 +23,18 @@ import {
   type PendingMessage,
 } from '../model/messages';
 import {AiInteractionStatus} from '../model/status';
+import {formatAnswer, formatProposalText} from '../response/format';
+import {
+  answerFrom,
+  proposalFrom,
+  type TutorProposal,
+} from '../response/proposal';
 
 import {
   conversationCleared,
   messageSent,
+  proposalOffered,
+  proposalSettled,
   turnCompleted,
   turnFailed,
   type AiTutorState,
@@ -46,9 +54,15 @@ export interface Tutor {
   messages: ChatMessage[];
   /** Whether a turn is in flight — what disables the composer. */
   awaiting: boolean;
+  /** A set of file edits offered and not yet answered (specs/PLAN.md §8). */
+  proposal?: TutorProposal;
   send: (text: string, displayText?: string) => Promise<void>;
   /** Abandon the turn in flight. Does nothing when there is none. */
   cancel: () => void;
+  /** Keep the offered edits. `description` names the version the host saves. */
+  accept: (description: string) => void;
+  /** Put the project back. */
+  reject: () => void;
   clear: () => void;
 }
 
@@ -57,6 +71,7 @@ export const useTutor = (): Tutor => {
   const config = useTutorConfig();
   const messages = useSelector((state: WithAiTutor) => state.aiTutor.messages);
   const awaiting = useSelector((state: WithAiTutor) => state.aiTutor.awaiting);
+  const proposal = useSelector((state: WithAiTutor) => state.aiTutor.proposal);
 
   // The turn in flight, so it can be abandoned — by the student, or by this
   // component going away. Without the second, a fixture with a long delay keeps
@@ -111,7 +126,39 @@ export const useTutor = (): Tutor => {
           },
           controller.signal,
         );
-        dispatch(turnCompleted(reply.messages));
+        // A structured reply's text blocks are usually empty — everything is in
+        // the tool call — so what the student sees is composed here, from the
+        // answer, exactly as the legacy `jsonSchemaResponseCallback` returns
+        // the string to display.
+        const answer = answerFrom(reply.structuredOutput);
+        const offered = answer
+          ? proposalFrom(answer, config.proposals)
+          : undefined;
+
+        dispatch(
+          turnCompleted(
+            answer
+              ? reply.messages.map(held =>
+                  held.role === Role.ASSISTANT
+                    ? {
+                        ...held,
+                        chatMessageText: offered
+                          ? formatProposalText(answer)
+                          : formatAnswer(answer),
+                      }
+                    : held,
+                )
+              : reply.messages,
+          ),
+        );
+
+        if (offered) {
+          dispatch(proposalOffered(offered));
+          // The host applies it provisionally — legacy replaces the project
+          // sources and makes the workspace read-only — so that Accept and
+          // Reject are a decision about something the student can see.
+          config.proposals?.onPropose?.(offered);
+        }
       } catch {
         // Including an abort, which settles the message as an error rather than
         // leaving it pending forever. The student cancelled it; the transcript
@@ -127,10 +174,49 @@ export const useTutor = (): Tutor => {
   );
 
   const cancel = useCallback(() => flight.current?.abort(), []);
+
+  // Read through a ref for the same reason `messages` is: the callbacks are
+  // handed to buttons, and an identity that changed per render would re-render
+  // every one of them.
+  const offer = useRef(proposal);
+  offer.current = proposal;
+
+  const settle = useCallback(
+    (answered: (proposal: TutorProposal) => void) => () => {
+      const held = offer.current;
+      if (!held) {
+        return;
+      }
+      // Cleared FIRST, so a double click cannot apply the same decision twice —
+      // one of which would be a second version commit for one change.
+      dispatch(proposalSettled());
+      answered(held);
+    },
+    [dispatch],
+  );
+
+  const accept = useCallback(
+    (description: string) =>
+      settle(held => config.proposals?.onAccept?.(held, description))(),
+    [config, settle],
+  );
+  const reject = useCallback(
+    () => settle(held => config.proposals?.onReject?.(held))(),
+    [config, settle],
+  );
   const clear = useCallback(() => {
     flight.current?.abort();
     dispatch(conversationCleared());
   }, [dispatch]);
 
-  return {messages, awaiting: awaiting !== undefined, send, cancel, clear};
+  return {
+    messages,
+    awaiting: awaiting !== undefined,
+    proposal,
+    send,
+    cancel,
+    accept,
+    reject,
+    clear,
+  };
 };

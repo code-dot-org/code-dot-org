@@ -10,8 +10,23 @@ turned into interfaces the host implements, so the panel also runs with **no
 server**: against recorded fixtures, or against a developer's own API key
 through a dev-only local proxy.
 
-**Nothing is ported yet.** See [`specs/PLAN.md`](specs/PLAN.md) for the design,
-the scope boundary, and the milestones.
+Milestones 1 to 4 of [`specs/PLAN.md`](specs/PLAN.md) are done: the panel runs,
+knows what to say about a project, and can reach a real model through a local
+proxy. It does not talk to the dashboard yet.
+
+    yarn dev     # the panel, standing alone, answering from recordings
+
+## What is in here
+
+Two layers, split by directory. `model/`, `transport/`, `dev/` and `session/`
+are generic chat plumbing — a chat-based LAB would want all of it unchanged.
+`context/`, `prompts/` and `AiTutorPanel` are the tutor's own: reading the
+project a student is working on, and offering to change it.
+
+They are one package because the boundary has one consumer today. When
+`packages/labs/aichat` exists it becomes the second, and the plumbing moves out
+whole. Until then the generic types are named for the tutor —
+`TutorTransport` runs any conversation, tutor or not. See `specs/PLAN.md` §2.1.
 
 ## Where it plugs in
 
@@ -28,6 +43,25 @@ fixed. See `specs/PLAN.md` §1.
 | `DirectTransport`    | a key in the dev server's environment | trying real answers locally         |
 | `DashboardTransport` | studio                                | production                          |
 
-The dev proxy holds the key in the Vite dev server's node process; the browser
-only ever talks to localhost. It does not mount in production builds, and it
-runs **none** of the moderation the dashboard path runs. See `specs/PLAN.md` §7.
+### Live answers, locally
+
+    ANTHROPIC_API_KEY=sk-... yarn dev
+
+The key stays in the Vite dev server's node process. The browser posts to
+`/__tutor/complete` on its own origin and never sees it — a key a page can
+reach is a key in the bundle. `/__tutor/status` says whether a proxy is there,
+so the demo can offer a recording instead of failing on first use.
+
+`TUTOR_MODEL` picks the model. A host's own dev server can mount the same
+plugin:
+
+```js
+// vite.config.ts
+import {tutorKeyProxy} from '@code-dot-org/aitutor/dev';
+export default {plugins: [tutorKeyProxy()]};
+```
+
+**It runs none of the moderation the dashboard path runs** — no profanity
+classification, no image moderation, no Turnstile. It is a developer's own key
+against a developer's own prompt, it does not mount for a production build, and
+it is not a thing to point at students. See `specs/PLAN.md` §7.

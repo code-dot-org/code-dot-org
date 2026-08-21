@@ -19,6 +19,7 @@ import {useTutor} from '../session/useTutor';
 
 import {Composer} from './Composer';
 import {MessageView} from './MessageView';
+import {ProposalActions} from './ProposalActions';
 import {SuggestedPrompts} from './SuggestedPrompts';
 import {WaitingAnimation} from './WaitingAnimation';
 
@@ -34,7 +35,7 @@ export const AiTutorPanel: FC<AiTutorPanelProps> = ({
   className,
   emptyState,
 }) => {
-  const {messages, awaiting, send} = useTutor();
+  const {messages, awaiting, proposal, accept, reject, send} = useTutor();
   const {prompts} = useTutorConfig();
   const foot = useRef<HTMLDivElement | null>(null);
 
@@ -48,10 +49,22 @@ export const AiTutorPanel: FC<AiTutorPanelProps> = ({
     <div className={classNames(moduleStyles.panel, className)}>
       <div className={moduleStyles.conversation}>
         {messages.length === 0 && emptyState}
-        {messages.map(message => (
+        {messages.map((message, at) => (
           <MessageView
             key={message.updateId ?? `${message.timestamp}-${message.role}`}
             message={message}
+            // Under the LAST message, where the legacy puts them
+            // (`renderLastMessagePostText`), because that is the answer they
+            // belong to and there is only ever one offer standing.
+            postText={
+              proposal && at === messages.length - 1 ? (
+                <ProposalActions
+                  proposal={proposal}
+                  onAccept={accept}
+                  onReject={reject}
+                />
+              ) : undefined
+            }
           />
         ))}
         {/*
