@@ -1,9 +1,12 @@
 # Builds cdo-rails, smoke-tests it on docker and podman on amd64 and arm64,
 # boots Rails from it against MySQL and Redis on both architectures, and
-# publishes it from staging as a multi-platform manifest. Each architecture
+# publishes it as a multi-platform manifest. Each architecture
 # builds natively on its own runner; a merge job puts the two images under
 # the final tags, the same pattern as cdo-base. Not triggered by source PRs
 # — the slice is validated at publish time. See docker/rails/README.md.
+#
+# Publishing is where this workflow stops. The tag contract it publishes under
+# is in docker/rails/README.md.
 
 name: cdo-rails-image
 
@@ -15,10 +18,6 @@ on:
       - '.github/workflows/cdo-rails-image.yml'
   push:
     branches: [staging]
-    paths:
-      - 'docker/rails/**'
-      - '.github/actions/cdo-deps-key/**'
-      - '.github/workflows/cdo-rails-image.yml'
   # Chained off cdo-deps rather than scheduled, so the source layer
   # rebuilds on the dependency layer that just shipped, a failed deps publish
   # rebuilds nothing, and the weekly cadence is inherited from cdo-base's
@@ -39,8 +38,11 @@ env:
 jobs:
   # Resolve cdo-deps once, by the bundle- content key this checkout implies,
   # and give the same digest to every build. A checkout whose dependency
-  # inputs have no published layer fails here, loudly, instead of landing on
-  # stale bytes.
+  # inputs have no published layer must not land on stale bytes.
+  #
+  # A push can arrive before that layer exists. cdo-deps-image is building it.
+  # It will chain this workflow again. A push miss therefore ends the run
+  # quietly. Any other event has no such second chance and fails.
   #
   # This is also where the workflow_run chain is filtered: that event fires
   # for failed runs and for other branches, and skipping this job skips the
@@ -81,15 +83,22 @@ jobs:
         id: deps
         env:
           REF: ghcr.io/code-dot-org/cdo-deps:${{ steps.key.outputs.key }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          set -euxo pipefail
-          digest="$(docker buildx imagetools inspect "$REF" \
-            --format '{{json .Manifest.Digest}}' | tr -d '"')" || {
-            echo "::error::No published dependency layer for this checkout's dependency inputs ($REF)." \
-                 "A lockfile change publishes its dependency layer on the staging push." >&2
-            exit 1
-          }
-          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+          if digest="$(docker buildx imagetools inspect "$REF" \
+            --format '{{json .Manifest.Digest}}' | tr -d '"')"; then
+            echo "digest=$digest" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$EVENT_NAME" = push ]; then
+            echo "::notice::No dependency layer yet for this checkout ($REF)." \
+                 "cdo-deps-image is building it and will re-run this workflow." >&2
+            exit 0
+          fi
+          echo "::error::No published dependency layer for this checkout's dependency inputs ($REF)." \
+               "A lockfile change publishes its dependency layer on the staging push." >&2
+          exit 1
 
   # PRs only. Publish runs are gated by build-push itself, which runs the
   # same suites against the bytes it pushes; running this matrix there too
@@ -201,7 +210,7 @@ jobs:
   # combine.
   build-push:
     name: build and push (${{ matrix.arch }})
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && needs.resolve-deps.outputs.digest != ''
     needs: resolve-deps
     strategy:
       matrix:
@@ -213,8 +222,9 @@ jobs:
     environment: ghcr-publish
     # Grouped per architecture so the two legs of one run cannot cancel
     # each other. Safe to cancel: nothing resolves `latest` programmatically.
+    # Grouped per ref so one branch cannot cancel another.
     concurrency:
-      group: cdo-rails-publish-${{ matrix.arch }}
+      group: cdo-rails-publish-${{ github.ref }}-${{ matrix.arch }}
       cancel-in-progress: true
     permissions:
       contents: read
@@ -278,7 +288,7 @@ jobs:
     runs-on: ubuntu-24.04
     environment: ghcr-publish
     concurrency:
-      group: cdo-rails-publish
+      group: cdo-rails-publish-${{ github.ref }}
       cancel-in-progress: true
     permissions:
       packages: write

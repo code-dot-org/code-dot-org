@@ -873,7 +873,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
   end
 
   test "student_code endpoint returns 200 with studentCode shape when student belongs to current teacher" do
-    pythonlab_level = create(:pythonlab, name: 'Test Pythonlab Level')
+    pythonlab_level = create(:pythonlab, name: 'Test Pythonlab Level', long_instructions: 'Write some code.')
     create(:script_level, script: @unit, lesson: @lesson1, levels: [pythonlab_level])
 
     student = create(:student)
@@ -888,6 +888,33 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     response_data = JSON.parse(response.body)
     assert response_data.key?('studentCode'), "response should include 'studentCode' key"
     assert_equal fake_code, response_data['studentCode']
+    assert_equal 'Write some code.', response_data['instructions']
+  end
+
+  test "exemplar_code endpoint returns exemplar source and instructions" do
+    stub_encryption_key = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(stub_encryption_key)
+
+    sign_in(create(:authorized_teacher))
+    pythonlab_level = create(
+      :pythonlab,
+      name: 'Test Pythonlab Level',
+      long_instructions: 'Write some code.',
+      exemplar_sources: {'main.py' => 'print("hello")'}
+    )
+    create(:script_level, script: @unit, lesson: @lesson1, levels: [pythonlab_level])
+
+    get :exemplar_code, params: {lesson_id: @lesson1.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    assert_equal 'Write some code.', response_data['instructions']
+  end
+
+  test "exemplar_code endpoint returns forbidden for a non-verified-instructor" do
+    get :exemplar_code, params: {lesson_id: @lesson1.id}
+
+    assert_response :forbidden
   end
 
   test "student_code endpoint returns forbidden when student does not belong to current teacher" do

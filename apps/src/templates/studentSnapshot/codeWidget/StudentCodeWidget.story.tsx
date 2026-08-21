@@ -123,6 +123,31 @@ export const NoFiles: Story = {
   ],
 };
 
+export const WithInstructions: Story = {
+  args: {
+    selectedUnitId: 1,
+    selectedLessonId: 1,
+    selectedStudentId: 1,
+    hasCodeLevel: true,
+  },
+  decorators: [
+    Story => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (HttpClient as any).fetchJson = async () => {
+        return {
+          value: {
+            studentCode: SAMPLE_STUDENT_CODE,
+            instructions:
+              '## Instructions\n\nCreate three variables below, one of each data type, then use at least one operation to compute total calories.',
+          },
+          response: new Response(),
+        };
+      };
+      return <Story />;
+    },
+  ],
+};
+
 export const Hidden: Story = {
   args: {
     selectedUnitId: 1,

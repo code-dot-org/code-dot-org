@@ -9,7 +9,12 @@ import {currentLocation, makeEnum} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
-import {flex, marginLeftRight, marginTopBottom} from './progressStyles';
+import {
+  flex,
+  levelHoverClass,
+  marginLeftRight,
+  marginTopBottom,
+} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
 import TooltipWithIcon from './TooltipWithIcon';
 import './styles.scss';
@@ -217,8 +222,10 @@ export function getBubbleShape(isUnplugged, isConcept) {
     : BubbleShape.circle;
 }
 
-export function getBubbleClassNames(isEnabled) {
-  return classNames('progress-bubble', {enabled: isEnabled});
+export function getBubbleClassNames(isEnabled, levelStatus) {
+  return classNames('progress-bubble', levelHoverClass(levelStatus), {
+    enabled: isEnabled,
+  });
 }
 
 export function getBubbleUrl(

@@ -1,8 +1,12 @@
+from .instrument import Instrument, as_instrument
 from .support import actions
 from .support.actions import UNSPECIFIED
+from .support.audio import as_samples, read_samples_from_file
 from .support.color import Color, as_color
 from .support.constants import (
+  MAX_NOTE,
   MAX_PAUSE_SECONDS,
+  MIN_NOTE,
   MIN_PAUSE_SECONDS,
   THEATER_HEIGHT,
   THEATER_WIDTH,
@@ -17,11 +21,28 @@ _DEFAULT_STROKE_WIDTH = 1.0
 _MIN_POLYGON_SIDES = 3
 
 
+def _validate_duration(method_name, seconds):
+  """Bound a note or pause duration.
+
+  Raise here rather than at render time so the traceback points at the
+  student's own call. Notes share the pause range: play_note_and_pause() hands
+  the same value to both, and the ceiling is what a gif frame delay can hold.
+  """
+  if seconds < MIN_PAUSE_SECONDS:
+    raise ValueError(
+      f"{method_name} needs at least {MIN_PAUSE_SECONDS} seconds, got {seconds}"
+    )
+  if seconds > MAX_PAUSE_SECONDS:
+    raise ValueError(
+      f"{method_name} allows at most {MAX_PAUSE_SECONDS} seconds, got {seconds}"
+    )
+
+
 class Scene:
-  """A single scene of drawing commands.
+  """A single scene of drawing and audio commands.
 
   Method calls record actions; play_scenes(scene) later renders them to a gif
-  and displays it on the theater stage.
+  and audio track and plays them on the theater stage.
   """
 
   def __init__(self):
@@ -46,17 +67,36 @@ class Scene:
   def clear(self, color):
     self._actions.append(actions.ClearScene(as_color(color)))
 
+  def play_sound(self, sound):
+    """Play a list of normalized samples, or a WAV file by name."""
+    if isinstance(sound, str):
+      samples = read_samples_from_file(sound)
+    else:
+      samples = as_samples(sound)
+    self._actions.append(actions.PlaySound(samples))
+
+  def play_note(self, note, seconds, instrument=Instrument.PIANO):
+    """Play one instrument note, cut to the given duration.
+
+    The note is a MIDI number: 60 is middle C, and each step is a semitone.
+    """
+    _validate_duration("play_note", seconds)
+    # Only whole semitones are bundled, so round as the drawing calls do; the
+    # renderer would otherwise look for a note file that cannot exist and skip
+    # the note without a word.
+    note = int(round(note))
+    if note < MIN_NOTE or note > MAX_NOTE:
+      raise ValueError(
+        f"play_note needs a note between {MIN_NOTE} and {MAX_NOTE}, got {note}"
+      )
+    self._actions.append(actions.PlayNote(as_instrument(instrument), note, seconds))
+
+  def play_note_and_pause(self, note, seconds, instrument=Instrument.PIANO):
+    self.play_note(note, seconds, instrument)
+    self.pause(seconds)
+
   def pause(self, seconds):
-    # Raise here rather than at render time so the traceback points at the
-    # student's own call. The upper bound is what a gif frame delay can hold.
-    if seconds < MIN_PAUSE_SECONDS:
-      raise ValueError(
-        f"pause needs at least {MIN_PAUSE_SECONDS} seconds, got {seconds}"
-      )
-    if seconds > MAX_PAUSE_SECONDS:
-      raise ValueError(
-        f"pause allows at most {MAX_PAUSE_SECONDS} seconds, got {seconds}"
-      )
+    _validate_duration("pause", seconds)
     self._actions.append(actions.Pause(seconds))
 
   # TODO: determine if we need to put limits on size/width/height
