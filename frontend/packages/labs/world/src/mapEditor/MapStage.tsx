@@ -35,6 +35,7 @@ import {
   asVec,
   extentOf,
   positionOf,
+  linksFrom,
   placementChoices,
   propValue,
   transformOf,
@@ -63,6 +64,10 @@ const BORDER = 'rgba(255, 255, 255, 0.6)'; // outlines the placeable map space
 const VIEWPORT_EDGE = 'rgba(255, 214, 102, 0.75)';
 const SELECT = '#4d9fff'; // highlights the selected placed actor
 const HOVER = 'rgba(77, 159, 255, 0.45)'; // lighter outline for the hovered actor
+// …and a third, for an actor the selected one POINTS AT. Amber rather than a
+// paler blue: it is not a weaker selection, it is a different relationship, and
+// two shades of one colour would read as two strengths of the same thing.
+const REFERENCE = '#ffb454';
 const DEG2RAD = Math.PI / 180;
 
 const clamp = (n: number, lo: number, hi: number) =>
@@ -948,14 +953,52 @@ export const MapStage = ({
       ctx.strokeRect(-hw, -hh, hw * 2, hh * 2);
       ctx.restore();
     };
+    /**
+     * Draw a line from the selected actor to one it names, labelled.
+     *
+     * DASHED, because it is a relationship and not a wall — the only other
+     * lines on this canvas are the grid and the outlines, both of which are
+     * things you could bump into. The label is what makes several references
+     * readable: a Health Bar over a player is `subject` AND `attached to`, and
+     * two identical lines would say there were two of something without
+     * saying which.
+     *
+     * The text is drawn with a dark stroke under the fill, which is the
+     * cheapest thing that stays legible over a sprite, a grid line or bare
+     * background without a backing rectangle to keep aligned.
+     */
+    const strokeLink = (from: Vec, to: Vec, label: string) => {
+      ctx.save();
+      ctx.strokeStyle = REFERENCE;
+      ctx.lineWidth = 1.5 / view.scale;
+      ctx.setLineDash([6 / view.scale, 4 / view.scale]);
+      ctx.beginPath();
+      ctx.moveTo(from.x, from.y);
+      ctx.lineTo(to.x, to.y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.font = `${11 / view.scale}px sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      const midX = (from.x + to.x) / 2;
+      const midY = (from.y + to.y) / 2;
+      ctx.lineWidth = 3 / view.scale;
+      ctx.strokeStyle = 'rgba(0, 0, 0, 0.75)';
+      ctx.strokeText(label, midX, midY);
+      ctx.fillStyle = REFERENCE;
+      ctx.fillText(label, midX, midY);
+      ctx.restore();
+    };
     let selectedTransform: Transform | null = null;
     let hoveredTransform: Transform | null = null;
+    const transformById = new Map<string, Transform>();
     for (const actor of map.actors) {
       if (!positionOf(actor)) {
         continue;
       }
       const t = transformOf(actor);
       drawSprite(actor.type, t, 1, placementKey(actor.type, actor.properties));
+      transformById.set(actor.id, t);
       if (actor.id === selectedId) {
         selectedTransform = t;
       }
@@ -968,6 +1011,22 @@ export const MapStage = ({
     if (hoveredTransform && hoveredId !== selectedId) {
       strokeActorBox(hoveredTransform, HOVER);
     }
+    // What the selected actor POINTS AT, before its own outline so that an
+    // actor which is both selected and referenced reads as selected.
+    //
+    // A reference is otherwise invisible: the value is a name in a panel, and
+    // the actor it names may be scrolled off the canvas. Drawing it is the
+    // whole reason a map can hold one.
+    if (selectedActor && selectedTransform) {
+      for (const link of linksFrom(selectedActor, selectedSchema, map.actors)) {
+        const target = transformById.get(link.targetId);
+        if (!target) {
+          continue; // named, but nowhere on the canvas to point at
+        }
+        strokeActorBox(target, REFERENCE);
+        strokeLink(selectedTransform.pos, target.pos, link.name);
+      }
+    }
     if (selectedTransform) {
       strokeActorBox(selectedTransform, SELECT);
     }
@@ -978,7 +1037,20 @@ export const MapStage = ({
         0.5,
       );
     }
-  }, [view, size, map, images, hover, selected, selectedId, hoveredId]);
+  }, [
+    view,
+    size,
+    map,
+    images,
+    hover,
+    selected,
+    selectedId,
+    hoveredId,
+    // The links are read through the schema, so a schema arriving from the
+    // sandbox after the first paint has to repaint.
+    selectedActor,
+    selectedSchema,
+  ]);
 
   const canvasClass = [
     styles.canvas,

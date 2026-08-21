@@ -188,8 +188,6 @@ export const withProperty = (
   },
 });
 
-/** Centre the whole map in a `w`×`h` pane with a margin (the reset view). */
-
 /**
  * The placements an actor-typed property may be pointed at.
  *
@@ -213,3 +211,53 @@ export const placementChoices = (
   actors
     .filter(actor => actor.id && actor.id !== selfId)
     .map(actor => ({value: actor.id as string, text: actor.id as string}));
+
+/** One placement pointing at another, and the property that says so. */
+export interface PlacementLink {
+  /** The property's label, drawn beside the line. */
+  name: string;
+  /** The entry id it names. */
+  targetId: string;
+}
+
+/**
+ * Which placements the selected one points at, and what it calls each.
+ *
+ * A reference is invisible in a map: the value is a string in a panel, and the
+ * actor it names is somewhere else on a canvas that may be scrolled away from
+ * it. So the canvas draws them — and this is the part with a decision in it,
+ * kept out of the drawing so it can be checked.
+ *
+ * The SCHEMA is what says which properties are references, because the map
+ * itself cannot: a placement's value is a string either way, and `"Hero"` is a
+ * name to resolve or a word to display depending on a type the map does not
+ * record.
+ *
+ * A reference to nothing is left out rather than drawn as a stub. The map
+ * keeps it — a placement may name one that has since been deleted, and
+ * `loadMap` leaves such a property unset rather than failing — but there is
+ * nothing on the canvas to draw a line to.
+ */
+export const linksFrom = (
+  actor: Placement,
+  schema: ReadonlyArray<{
+    props: ReadonlyArray<{
+      ownerId: string;
+      propId: string;
+      name: string;
+      type: string;
+    }>;
+  }>,
+  actors: readonly Placement[],
+): PlacementLink[] =>
+  schema
+    .flatMap(group => group.props)
+    .filter(prop => prop.type === 'actor')
+    .flatMap(prop => {
+      const targetId = propValue(actor, prop.ownerId, prop.propId);
+      return typeof targetId === 'string' &&
+        targetId !== '' &&
+        actors.some(other => other.id === targetId)
+        ? [{name: prop.name, targetId}]
+        : [];
+    });
