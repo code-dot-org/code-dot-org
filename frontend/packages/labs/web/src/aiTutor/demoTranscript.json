@@ -1,0 +1,65 @@
+{
+  "name": "Web Lab, with no dashboard",
+  "turns": [
+    {
+      "when": {"matches": "blue|colou?r|heading|h1|style"},
+      "delayMs": 900,
+      "reply": {
+        "structured": {
+          "answer": {
+            "answerType": "buildCSS",
+            "goal": "Colour the heading.",
+            "explanation": "`h1` selects the heading in your HTML, and `color` sets the colour of its text. I added a rule for it and left the `body` rule alone.",
+            "nextSteps": "- Try a different colour name, or a hex value like `#336699`\n- Add a `text-align` to the same rule and see what happens",
+            "code": [
+              {
+                "filename": "styles.css",
+                "sourceCode": "body {\n  font-family: sans-serif;\n}\n\nh1 {\n  color: steelblue;\n}\n"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "when": {"matches": "console|log|script|javascript|\\bjs\\b"},
+      "delayMs": 700,
+      "reply": {
+        "structured": {
+          "answer": {
+            "answerType": "explainCode",
+            "goal": "Explain the script.",
+            "explanation": "`console.log` writes a message to the console — it does not change the page. Open the debug panel from the preview toolbar to see it.",
+            "nextSteps": "- Change the message and reload the preview\n- Try logging a number instead of text",
+            "code": []
+          }
+        }
+      }
+    },
+    {
+      "delayMs": 700,
+      "reply": {
+        "structured": {
+          "answer": {
+            "answerType": "hint",
+            "goal": "Point at the next thing to try.",
+            "explanation": "Your page has three files: `index.html` for what is on the page, `styles.css` for how it looks, and `script.js` for what it does.",
+            "nextSteps": "- Ask me to change the heading's colour\n- Ask me what `script.js` does",
+            "code": []
+          }
+        }
+      }
+    }
+  ],
+  "fallback": {
+    "structured": {
+      "answer": {
+        "answerType": "hint",
+        "goal": "Offer something to ask.",
+        "explanation": "This is a recorded conversation — there is no model behind it. Ask about the heading's colour, or about `script.js`, and I have an answer ready.",
+        "nextSteps": "- Try: “make the heading blue”\n- Try: “what does script.js do?”",
+        "code": []
+      }
+    }
+  }
+}

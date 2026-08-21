@@ -2,6 +2,7 @@
 // of the library build (the lib entry is src/index.ts). It mounts the App
 // through the same host path the studio uses — `LabHost` drives the load against
 // the MSW mock API (see ./fixtures), so there is no Rails backend.
+
 //
 // The page preview is still a placeholder until the HTML preview is ported;
 // everything else — instructions, file browser, editor — is real.
@@ -18,6 +19,7 @@ import '@code-dot-org/lab/styles/variables.scss';
 import {GlobalStyles, StyledEngineProvider, ThemeProvider} from '@mui/material';
 import {createRoot} from 'react-dom/client';
 
+import store from '@code-dot-org/codebridge/redux';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {
@@ -30,10 +32,25 @@ import {RootStateProvider} from '@code-dot-org/core/redux';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import {LabHost} from '@code-dot-org/lab/host';
 
+import {
+  pretendSignedInWithAiEnabled,
+  useRecordedTutor,
+} from './aiTutor/transport';
 import App from './App';
 
 initializeCore({plugins: [localizationPlugin]});
 injectFontAwesome();
+
+// There is no Rails behind the mock API, so the AI Tutor answers from a
+// recording rather than posting a completion into a handler that does not
+// exist. The recording is written against this harness's own project, so the
+// accept/reject flow really does rewrite `styles.css` (`aiTutor/transport`).
+//
+// And the mock has no users handler, so nothing has said who is looking at
+// this page. The tutor's access rules read that as no permission — correctly,
+// and uselessly for a harness — so the harness says.
+useRecordedTutor();
+pretendSignedInWithAiEnabled(store.dispatch);
 
 // The lab loads a project by channel id from the URL; default to the `simple`
 // fixture scenario so the harness works at the root path (the channel id doubles
