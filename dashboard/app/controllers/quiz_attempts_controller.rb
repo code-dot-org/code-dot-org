@@ -52,23 +52,32 @@ class QuizAttemptsController < ApplicationController
   # POC: finalizes the attempt - one submit for the whole quiz, not per
   # question. score/max_score only sum auto-graded responses; ungraded
   # responses (e.g. free response) don't count until manual/AI grading
-  # exists. Since P0 allows only one attempt, an already-submitted attempt
-  # is immutable - this returns its existing result rather than re-scoring.
+  # exists. Once submitted, an attempt is immutable - this returns its
+  # existing result rather than re-scoring. A retake (see Quiz#retakeable?)
+  # mints a brand new attempt row (attempt_number + 1) instead of reopening
+  # this one, so allow_multiple_attempts doesn't conflict with that.
   def update
     attempt = QuizAttempt.find(params[:id])
     raise ActiveRecord::RecordNotFound unless attempt.user_id == current_user.id
 
-    if attempt.submitted_at.nil?
-      # Only questions on this quiz count; a response for some other
-      # QuizQuestion must not inflate score/max_score.
-      in_quiz_question_ids = QuizLevelQuestion.where(level_id: attempt.level_id).select(:quiz_question_id)
-      auto_graded = attempt.quiz_question_responses.
-        where(grading_status: 'auto_graded', quiz_question_id: in_quiz_question_ids)
-      attempt.update!(
-        submitted_at: Time.now,
-        score: auto_graded.sum(:score),
-        max_score: auto_graded.sum(:max_score)
-      )
+    # Locks the same quiz_attempts row QuizQuestionResponsesController#create
+    # locks - without this, a response write racing this finalize could sum
+    # into score/max_score here without actually being reflected consistently,
+    # or land after submitted_at is set despite that being meant as the
+    # point of immutability.
+    attempt.with_lock do
+      if attempt.submitted_at.nil?
+        # Only questions on this quiz count; a response for some other
+        # QuizQuestion must not inflate score/max_score.
+        in_quiz_question_ids = QuizLevelQuestion.where(level_id: attempt.level_id).select(:quiz_question_id)
+        auto_graded = attempt.quiz_question_responses.
+          where(grading_status: 'auto_graded', quiz_question_id: in_quiz_question_ids)
+        attempt.update!(
+          submitted_at: Time.now,
+          score: auto_graded.sum(:score),
+          max_score: auto_graded.sum(:max_score)
+        )
+      end
     end
 
     render status: :ok, json: quiz_attempt_json(attempt)
