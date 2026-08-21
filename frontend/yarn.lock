@@ -1784,6 +1784,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/aitutor@workspace:*, @code-dot-org/aitutor@workspace:packages/aitutor":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/aitutor@workspace:packages/aitutor"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@types/node": "catalog:"
+    eslint: "catalog:"
+    prettier: "catalog:"
+    react: "npm:^19.2.0"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/audio@workspace:*, @code-dot-org/audio@workspace:packages/audio":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/audio@workspace:packages/audio"
@@ -2519,6 +2538,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
   dependencies:
+    "@code-dot-org/aitutor": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/core": "workspace:*"
@@ -22101,6 +22121,13 @@ __metadata:
   dependencies:
     loose-envify: "npm:^1.1.0"
   checksum: 10c0/283e8c5efcf37802c9d1ce767f302dd569dd97a70d9bb8c7be79a789b9902451e0d16334b05d73299b20f048cbc3c7d288bbbde10b701fa194e2089c237dbea3
+  languageName: node
+  linkType: hard
+
+"react@npm:^19.2.0":
+  version: 19.2.8
+  resolution: "react@npm:19.2.8"
+  checksum: 10c0/5f86bdb56426652fd6d989d30a6f2e603c057272c47c9ca3a3fbe190a3a39ee9ccce937d63cfc039717abed1b8891d6a499134bc35311acc07eafdacd86537cd
   languageName: node
   linkType: hard
 
