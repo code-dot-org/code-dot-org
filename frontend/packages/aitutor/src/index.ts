@@ -134,6 +134,7 @@ export {default as Composer} from './components/Composer';
 export {default as MessageView} from './components/MessageView';
 export {default as ProposalActions} from './components/ProposalActions';
 export {default as SuggestedPrompts} from './components/SuggestedPrompts';
+export {default as TutorHeaderButtons} from './components/TutorHeaderButtons';
 export {default as WaitingAnimation} from './components/WaitingAnimation';
 export {failureText} from './components/failureText';
 export {strings} from './strings';

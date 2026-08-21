@@ -9,6 +9,7 @@ import {useEffect, useMemo, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
 import {AiTutorPanel} from '../components/AiTutorPanel';
+import {TutorHeaderButtons} from '../components/TutorHeaderButtons';
 import type {ProxyStatus} from '../dev/protocol';
 import conversation from '../fixtures/conversation.json';
 import failures from '../fixtures/failures.json';
@@ -133,6 +134,13 @@ export const Demo = () => {
             onReject: () => setApplied('put the project back'),
           }}
         >
+          {/*
+            Where a lab puts them: the resource panel's header, beside the tab
+            title. Here they sit above the panel so the demo exercises them.
+          */}
+          <div className={moduleStyles.header}>
+            <TutorHeaderButtons />
+          </div>
           <AiTutorPanel
             emptyState={
               <p className={moduleStyles.empty}>

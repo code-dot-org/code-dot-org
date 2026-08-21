@@ -10,6 +10,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 //import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {
   AiTutorPanel,
+  TutorHeaderButtons,
   TutorProvider,
   type TutorConfig,
 } from '@code-dot-org/aitutor';
@@ -578,11 +579,19 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
               id={currentTab || 'resource-panel'}
               headerContent={currentTab && tabInfo[currentTab].title}
               headerClassName={headerClassName}
-              // TODO: the tutor tab wants its own header buttons — Clear Chat
-              // above all, which `useTutor().clear` already implements. Legacy
-              // renders `AiChatHeaderButtons` here; that component has not been
-              // ported (specs/PLAN.md §12 in `@code-dot-org/aitutor`).
-              rightHeaderContent={rightHeaderContent}
+              rightHeaderContent={
+                // The tutor's own buttons — Clear Chat — replace whatever the
+                // lab put here, on the tutor's tab only. A lab's header content
+                // is about the lab, and on this tab the header belongs to the
+                // conversation.
+                currentTab === Tabs.AiTutor && aiTutor ? (
+                  <TutorProvider {...aiTutor}>
+                    <TutorHeaderButtons />
+                  </TutorProvider>
+                ) : (
+                  rightHeaderContent
+                )
+              }
             >
               <div className={styles.tabContentContainer}>
                 {getTypedKeys(availableTabs).map(tab => (
