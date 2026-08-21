@@ -17,6 +17,7 @@ import {isPendingMessage} from '../model/messages';
 import {useTutorConfig} from '../session/TutorContext';
 import {useTutor} from '../session/useTutor';
 
+import {ChatDisabled} from './ChatDisabled';
 import {Composer} from './Composer';
 import {MessageView} from './MessageView';
 import {ProposalActions} from './ProposalActions';
@@ -36,7 +37,7 @@ export const AiTutorPanel: FC<AiTutorPanelProps> = ({
   emptyState,
 }) => {
   const {messages, awaiting, proposal, accept, reject, send} = useTutor();
-  const {prompts} = useTutorConfig();
+  const {prompts, disabledState} = useTutorConfig();
   const foot = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -79,19 +80,29 @@ export const AiTutorPanel: FC<AiTutorPanelProps> = ({
         )}
         <div ref={foot} />
       </div>
-      <div className={moduleStyles.foot}>
-        {/*
+      {disabledState?.disabled ? (
+        // Instead of the composer, not beside it. A message explaining that
+        // chat is off, above a box inviting a question, would be two answers to
+        // the same question.
+        <ChatDisabled
+          message={disabledState.disabledMessage}
+          link={disabledState.disabledLink}
+        />
+      ) : (
+        <div className={moduleStyles.foot}>
+          {/*
           Above the composer and outside it, as in the legacy layout: they are
           a way to START a conversation, and a student who has begun typing
           should not have the field jump as they do.
         */}
-        <SuggestedPrompts
-          prompts={prompts ?? []}
-          onChoose={prompt => send(prompt.value)}
-          disabled={awaiting}
-        />
-        <Composer onSubmit={send} disabled={awaiting} />
-      </div>
+          <SuggestedPrompts
+            prompts={prompts ?? []}
+            onChoose={prompt => send(prompt.value)}
+            disabled={awaiting}
+          />
+          <Composer onSubmit={send} disabled={awaiting} />
+        </div>
+      )}
     </div>
   );
 };

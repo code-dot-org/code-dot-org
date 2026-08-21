@@ -94,6 +94,25 @@ export {
 export {useTutor, type Tutor} from './session/useTutor';
 
 export {
+  AiChatAccessLevels,
+  APPS_WHERE_AI_TUTOR_IS_ESSENTIAL,
+  APPS_WITH_ESSENTIAL_AI_CHAT,
+  areAiChatToolsEnabled,
+  shouldShowAiTutor,
+  type AiChatAccessLevel,
+} from './access/accessLevels';
+export {
+  AI_CHAT_NOT_AUTHORIZED_STUDENT,
+  AI_CHAT_NOT_AUTHORIZED_TEACHER,
+  AI_SETTINGS_SUPPORT_LINK,
+  disabledStateFor,
+  VERIFIED_TEACHER_SUPPORT_LINK,
+  type AccessFacts,
+  type AiChatDisabledState,
+  type DisabledLink,
+} from './access/disabledState';
+
+export {
   codeBlock,
   hiddenContextFrom,
   MAX_CONSOLE_LINES,
@@ -110,6 +129,7 @@ export {
 
 export {default as AiTutorPanel} from './components/AiTutorPanel';
 export type {AiTutorPanelProps} from './components/AiTutorPanel';
+export {default as ChatDisabled} from './components/ChatDisabled';
 export {default as Composer} from './components/Composer';
 export {default as MessageView} from './components/MessageView';
 export {default as ProposalActions} from './components/ProposalActions';
