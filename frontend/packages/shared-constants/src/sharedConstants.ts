@@ -688,3 +688,8 @@ export const SafeAndSupportedImageTypes = [
   "image/png",
   "image/webp"
 ] as const;
+
+export const YoutubePatterns = {
+  "id": "[^!*\"&?/ ]{11}",
+  "embed_url": "(?:https?:)?//(?:www\\.)?youtube(?:education|-nocookie)?\\.com/embed/(?<id>[^!*\"&?/ ]{11})"
+} as const;
