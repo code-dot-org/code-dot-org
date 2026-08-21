@@ -19,4 +19,27 @@ describe('maze Visualization', () => {
     expect(svg.prop('role')).toBe('application');
     expect(svg.prop('tabIndex')).toBe(0);
   });
+
+  // The label is the only place the keys are announced, so it has to name all
+  // of them. Painter passes its own wording through navHint.
+  it('names every key in the default nav hint', () => {
+    const label = shallow(<Visualization useProtectedDiv={false} />)
+      .find('svg#svgMaze')
+      .prop('aria-label');
+
+    expect(label).toContain('Enter');
+    expect(label).toContain('arrow keys');
+    expect(label).toContain('P');
+    expect(label).toContain('Escape');
+  });
+
+  it('uses a caller-supplied nav hint', () => {
+    const rendered = shallow(
+      <Visualization useProtectedDiv={false} navHint="Neighborhood grid." />
+    );
+
+    expect(rendered.find('svg#svgMaze').prop('aria-label')).toBe(
+      'Neighborhood grid.'
+    );
+  });
 });

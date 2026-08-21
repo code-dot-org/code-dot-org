@@ -1,41 +1,110 @@
-// Keyboard navigation for the maze. The maze SVG itself is the only
-// thing in the tab order. Enter activates a focus cursor on Pegman's
-// cell. Arrows walk it along open cells, obstacles, and the goal;
-// walls and out-of-bounds block. Escape removes the cursor.
+// Keyboard navigation for the maze. The svg is the only tab stop. Enter puts a
+// cursor on the character's cell, arrows walk it, P jumps back to the
+// character, Escape removes it. Edges always block; walls block too, except in
+// Painter, where the walls hold the scenery worth reading.
 //
-// The svg is the interactive host (rather than a wrapping div) so it
-// stays the direct child of #visualization; the responsive scaling in
-// common.scss / responsive-visualization.scss targets that direct child,
-// and an intermediate wrapper box shifts where the scale is anchored.
+// The svg is the interactive host rather than a wrapping div so it stays the
+// direct child of #visualization, which is what common.scss and
+// responsive-visualization.scss scale. A wrapper shifts the scale anchor.
 //
-// Pegman and maze state are never mutated. Cells are read through
-// window.Maze.controller (set by loadMaze.js); without it the svg is
-// just inert focus.
+// Nothing here mutates maze state. Cells come from window.Maze.controller,
+// published by loadMaze.js on maze levels and by the Neighborhood mini app in
+// Lab2. Without it the svg is just inert focus.
 
 import maze from '@code-dot-org/maze';
 
-import {Locale} from '@cdo/apps/types/locale';
+// The English source for every maze string, used as the fallback below. Read
+// relatively because @cdo/i18n is a type-only alias with no bundler mapping.
+import mazeStrings from '../../i18n/maze/en_us.json';
 
 import * as mazeMsg from './locale';
-
-// Cast the runtime locale object to a type whose keys are derived from the
-// source strings JSON, so missing/mistyped message keys fail typecheck.
-const msg = mazeMsg as Locale<typeof import('@cdo/i18n/maze/en_us.json')>;
+import {describeNeighborhoodCell, SpriteMap} from './neighborhoodDescriptions';
 
 const {SquareType, Direction} = maze.tiles;
 const {HarvesterCell, PlanterCell} = maze.cells;
 
-// Direction value (from maze.tiles.Direction) -> localized name accessor.
+// Naming a key that is not already in the strings file fails typecheck, so no
+// new keys can be added here.
+type MazeMessageKey = keyof typeof mazeStrings;
+
+type MessageParams = Record<string, string | number>;
+type MessageFn = (params?: MessageParams) => string;
+
+// Rails serves only the level's own <app>_locale.js, so a Painter level in
+// Python Lab has no compiled maze strings. Translated maze levels use their
+// translation; everyone else falls back to the English source with its
+// {placeholders} filled in.
+function t(
+  key: MazeMessageKey,
+  params: MessageParams = {},
+  // Only for the one source string whose plural syntax this cannot expand.
+  fallback: string = mazeStrings[key]
+): string {
+  const compiled = (mazeMsg as Record<string, MessageFn | undefined>)[key];
+  return typeof compiled === 'function'
+    ? compiled(params)
+    : fallback.replace(/\{(\w+)\}/g, (_, name) => String(params[name]));
+}
+
+// Painter has no key in the strings file, so those few are written in English.
+const MSG = {
+  goal: () => t('mazeNavGoal'),
+  obstacle: () => t('mazeNavObstacle'),
+  start: () => t('mazeNavStart'),
+  openPath: () => t('mazeNavOpenPath'),
+  wall: () => t('mazeNavWall'),
+  edge: () => t('mazeNavEdge'),
+  exited: () => t('mazeNavExited'),
+  edgeOfNeighborhood: () => 'Edge of the neighborhood.',
+  noPainter: () => 'No painter on the grid yet. Press Run to place one.',
+  noCharacter: () => 'Character is not on the grid.',
+  painterHere: (name: string) => `${name} is here.`,
+  painterHereFacing: (name: string, direction: string) =>
+    `${name} is here, facing ${direction}.`,
+  characterHere: () => t('mazeNavCharacterHere'),
+  characterHereFacing: (direction: string) =>
+    t('mazeNavCharacterHereFacing', {direction}),
+  position: (row: number, col: number) => t('mazeNavPosition', {row, col}),
+  letter: (letter: string) => t('mazeNavLetter', {letter}),
+  flowerRed: (count: number) => t('mazeNavFlowerRed', {count}),
+  flowerRedUnlimited: () => t('mazeNavFlowerRedUnlimited'),
+  flowerPurple: (count: number) => t('mazeNavFlowerPurple', {count}),
+  flowerPurpleUnlimited: () => t('mazeNavFlowerPurpleUnlimited'),
+  hive: (count: number) => t('mazeNavHive', {count}),
+  hiveUnlimited: () => t('mazeNavHiveUnlimited'),
+  cloud: () => t('mazeNavCloud'),
+  // The source string's plural syntax needs a formatter we only have at build
+  // time, so spell out the English. Only the collector subtype reaches it.
+  collectibles: (count: number) =>
+    t(
+      'mazeNavCollectibles',
+      {count},
+      count === 1 ? '1 item to collect.' : '{count} items to collect.'
+    ),
+  dirtPile: (count: number) => t('mazeNavDirtPile', {count}),
+  hole: (count: number) => t('mazeNavHole', {count}),
+  hiddenCrop: () => t('mazeNavHiddenCrop'),
+  corn: (count: number) => t('mazeNavCorn', {count}),
+  pumpkin: (count: number) => t('mazeNavPumpkin', {count}),
+  lettuce: (count: number) => t('mazeNavLettuce', {count}),
+  soil: () => t('mazeNavSoil'),
+  sprout: () => t('mazeNavSprout'),
+};
+
 const DIRECTION_NAME: Record<number, () => string> = {
-  [Direction.NORTH]: () => msg.mazeNavNorth(),
-  [Direction.EAST]: () => msg.mazeNavEast(),
-  [Direction.SOUTH]: () => msg.mazeNavSouth(),
-  [Direction.WEST]: () => msg.mazeNavWest(),
+  [Direction.NORTH]: () => t('mazeNavNorth'),
+  [Direction.EAST]: () => t('mazeNavEast'),
+  [Direction.SOUTH]: () => t('mazeNavSouth'),
+  [Direction.WEST]: () => t('mazeNavWest'),
 };
 
 // Returns whether the level requires "turn right/left" movement
 // to enable reporting of the direction the character is facing.
 function usesTurns(ctrl: MazeController): boolean {
+  // Painter always turns, and has no block XML to scan.
+  if (ctrl.subtype.isNeighborhood?.()) {
+    return true;
+  }
   const {toolbox, startBlocks} = ctrl.level ?? {};
   return [toolbox, startBlocks].some(
     xml => typeof xml === 'string' && xml.includes('maze_turn')
@@ -53,6 +122,8 @@ interface MazeCell {
   isStaticCloud?: () => boolean; // BeeCell
   featureName?: () => string; // HarvesterCell / PlanterCell
   startsHidden?: () => boolean; // HarvesterCell
+  getColor?: () => string | undefined; // NeighborhoodCell
+  getAssetId?: () => number | undefined; // NeighborhoodCell
 }
 
 interface MazeSubtype {
@@ -61,6 +132,8 @@ interface MazeSubtype {
   isCollector?: () => boolean;
   isFarmer?: () => boolean;
   isWordSearch?: () => boolean;
+  isNeighborhood?: () => boolean;
+  getSpriteMap?: () => SpriteMap;
   getCell?: (row: number, col: number) => MazeCell;
   // Bee-only helpers; take (row, col) and do not record user checks.
   isRedFlower?: (row: number, col: number) => boolean;
@@ -80,9 +153,13 @@ interface MazeGlobal {
     // toolbox/startBlocks are the rendered block XML; we scan them to learn
     // whether turning is part of this level's controls.
     level?: {toolbox?: string; startBlocks?: string};
-    getPegmanX: (id?: string) => number;
-    getPegmanY: (id?: string) => number;
+    // Undefined until a pegman with this id exists; Painter has none until a
+    // program places one.
+    getPegmanX: (id?: string) => number | undefined;
+    getPegmanY: (id?: string) => number | undefined;
     getPegmanD: (id?: string) => number | undefined;
+    // Neighborhood runs one pegman per Painter object; see painterIds.
+    pegmanController?: {getAllPegmanIds?: () => string[]};
   };
 }
 
@@ -160,7 +237,7 @@ export function describeObject(
 
   if (sub.isWordSearch?.()) {
     const letter = wordSearchLetterAt(row, col);
-    return letter ? msg.mazeNavLetter({letter}) : null;
+    return letter ? MSG.letter(letter) : null;
   }
 
   const cell = sub.getCell?.(row, col);
@@ -168,34 +245,36 @@ export function describeObject(
     return null;
   }
 
+  if (sub.isNeighborhood?.()) {
+    return describeNeighborhoodCell(sub.getSpriteMap?.(), {
+      color: cell.getColor?.(),
+      paintCount: cell.getCurrentValue(),
+      assetId: cell.getAssetId?.(),
+    });
+  }
+
   if (sub.isBee?.()) {
     if (cell.isFlower?.()) {
       const red = sub.isRedFlower?.(row, col);
       const count = sub.flowerRemainingCapacity?.(row, col) ?? 0;
       if (!Number.isFinite(count)) {
-        return red
-          ? msg.mazeNavFlowerRedUnlimited()
-          : msg.mazeNavFlowerPurpleUnlimited();
+        return red ? MSG.flowerRedUnlimited() : MSG.flowerPurpleUnlimited();
       }
-      return red
-        ? msg.mazeNavFlowerRed({count})
-        : msg.mazeNavFlowerPurple({count});
+      return red ? MSG.flowerRed(count) : MSG.flowerPurple(count);
     }
     if (cell.isHive?.()) {
       const count = sub.hiveRemainingCapacity?.(row, col) ?? 0;
-      return Number.isFinite(count)
-        ? msg.mazeNavHive({count})
-        : msg.mazeNavHiveUnlimited();
+      return Number.isFinite(count) ? MSG.hive(count) : MSG.hiveUnlimited();
     }
     if (cell.isStaticCloud?.()) {
-      return msg.mazeNavCloud();
+      return MSG.cloud();
     }
     return null;
   }
 
   if (sub.isCollector?.()) {
     const count = cell.getCurrentValue();
-    return count && count > 0 ? msg.mazeNavCollectibles({count}) : null;
+    return count && count > 0 ? MSG.collectibles(count) : null;
   }
 
   if (sub.isFarmer?.()) {
@@ -203,27 +282,25 @@ export function describeObject(
     if (value === undefined || value === 0) {
       return null;
     }
-    return value > 0
-      ? msg.mazeNavDirtPile({count: value})
-      : msg.mazeNavHole({count: -value});
+    return value > 0 ? MSG.dirtPile(value) : MSG.hole(-value);
   }
 
   // Harvester and Planter have no subtype predicate; discriminate by the
   // cell subclass the subtype instantiated.
   if (HarvesterCell && cell instanceof HarvesterCell) {
     if (cell.startsHidden?.()) {
-      return msg.mazeNavHiddenCrop();
+      return MSG.hiddenCrop();
     }
     const count = cell.getCurrentValue() ?? 0;
     switch (cell.featureName?.()) {
       case 'corn':
-        return msg.mazeNavCorn({count});
+        return MSG.corn(count);
       case 'pumpkin':
-        return msg.mazeNavPumpkin({count});
+        return MSG.pumpkin(count);
       case 'lettuce':
-        return msg.mazeNavLettuce({count});
+        return MSG.lettuce(count);
       case 'unknown':
-        return msg.mazeNavHiddenCrop();
+        return MSG.hiddenCrop();
       default:
         return null;
     }
@@ -232,9 +309,9 @@ export function describeObject(
   if (PlanterCell && cell instanceof PlanterCell) {
     switch (cell.featureName?.()) {
       case 'soil':
-        return msg.mazeNavSoil();
+        return MSG.soil();
       case 'sprout':
-        return msg.mazeNavSprout();
+        return MSG.sprout();
       default:
         return null;
     }
@@ -243,21 +320,66 @@ export function describeObject(
   return null;
 }
 
-// The "character is here" clause, empty unless the cursor is on pegman.
-// On turn levels it names pegman's facing so the student can reason about
-// turnLeft/turnRight; absolute-movement levels omit it as noise.
+// @code-dot-org/maze keys its lone pegman under this id and does not export it.
+const DEFAULT_PEGMAN_ID = 'default';
+
+// Which pegmen are worth reporting. Painter hides the default pegman on run and
+// adds one per Painter object, so once those exist the parked default is noise.
+function painterIds(ctrl: MazeController): string[] {
+  if (!ctrl.subtype.isNeighborhood?.()) {
+    return [DEFAULT_PEGMAN_ID];
+  }
+  const painters = (ctrl.pegmanController?.getAllPegmanIds?.() ?? []).filter(
+    id => id !== DEFAULT_PEGMAN_ID
+  );
+  return painters.length > 0 ? painters : [DEFAULT_PEGMAN_ID];
+}
+
+// Where a pegman stands, or null before it has been placed.
+function pegmanSpot(ctrl: MazeController, id: string): CursorPos | null {
+  const col = ctrl.getPegmanX(id);
+  const row = ctrl.getPegmanY(id);
+  return typeof col === 'number' && typeof row === 'number' ? {col, row} : null;
+}
+
+// Painter names its pegmen "painter-1", "painter-2"; say that as "Painter 1".
+// Java Lab ids may differ, so unknown ones are read as they come.
+function painterName(id: string): string {
+  if (id === DEFAULT_PEGMAN_ID) {
+    return 'Painter';
+  }
+  const numbered = /^painter-(\d+)$/.exec(id);
+  return numbered ? `Painter ${numbered[1]}` : id;
+}
+
+// The "is here" clause, empty unless the cursor is on a pegman. Facing is named
+// only on levels that turn, where it tells the student something.
 function describeCharacterHere(
   ctrl: MazeController,
   col: number,
   row: number
 ): string {
-  if (ctrl.getPegmanX() !== col || ctrl.getPegmanY() !== row) {
+  const here = painterIds(ctrl).filter(
+    id => ctrl.getPegmanX(id) === col && ctrl.getPegmanY(id) === row
+  );
+  // usesTurns scans block XML, so skip it on the many cells with no pegman.
+  if (here.length === 0) {
     return '';
   }
-  const name = usesTurns(ctrl) && DIRECTION_NAME[ctrl.getPegmanD() as number];
-  return name
-    ? msg.mazeNavCharacterHereFacing({direction: name()})
-    : msg.mazeNavCharacterHere();
+  const named = usesTurns(ctrl);
+  const isPainter = ctrl.subtype.isNeighborhood?.() ?? false;
+  return here
+    .map(id => {
+      const facing = named && DIRECTION_NAME[ctrl.getPegmanD(id) as number];
+      if (isPainter) {
+        const name = painterName(id);
+        return facing
+          ? MSG.painterHereFacing(name, facing())
+          : MSG.painterHere(name);
+      }
+      return facing ? MSG.characterHereFacing(facing()) : MSG.characterHere();
+    })
+    .join(' ');
 }
 
 export function describeCell(
@@ -273,16 +395,16 @@ export function describeCell(
   if (object) {
     primary = object;
   } else if (isGoal) {
-    primary = msg.mazeNavGoal();
+    primary = MSG.goal();
   } else {
     primary =
       tile === SquareType.OBSTACLE
-        ? msg.mazeNavObstacle()
+        ? MSG.obstacle()
         : tile === SquareType.START
-        ? msg.mazeNavStart()
-        : msg.mazeNavOpenPath();
+        ? MSG.start()
+        : MSG.openPath();
   }
-  const position = msg.mazeNavPosition({row: row + 1, col: col + 1});
+  const position = MSG.position(row + 1, col + 1);
   const here = describeCharacterHere(ctrl, col, row);
   return [primary, here, position].filter(Boolean).join(' ');
 }
@@ -366,6 +488,11 @@ export default class MazeKeyboardNavigation {
       this.exit();
       return;
     }
+    if (e.key === 'p' || e.key === 'P') {
+      consume();
+      this.jumpToCharacter();
+      return;
+    }
     const delta = ARROW_TO_DELTA[e.key];
     if (delta) {
       consume();
@@ -383,7 +510,9 @@ export default class MazeKeyboardNavigation {
   private enter(): void {
     const ctrl = getMazeController();
     if (!ctrl) return;
-    this.cursorPos = {col: ctrl.getPegmanX(), row: ctrl.getPegmanY()};
+    // Painter levels have no start square and no painter until a program runs,
+    // so fall back to the top-left cell.
+    this.cursorPos = pegmanSpot(ctrl, painterIds(ctrl)[0]) ?? {col: 0, row: 0};
 
     // Two stacked rects: a fatter white halo so the cursor stays
     // visible across light and dark tiles, and a thinner blue rect on
@@ -399,6 +528,9 @@ export default class MazeKeyboardNavigation {
     this.cursor.focus();
   }
 
+  // Focus lands on this rect once and then it slides between cells. Painter's
+  // changed aria-label went unread, so there the live region speaks. Maze
+  // already reads the label; announcing would say every cell twice.
   private placeCursor(): void {
     const ctrl = getMazeController();
     if (!ctrl || !this.cursor || !this.cursorPos) return;
@@ -411,22 +543,52 @@ export default class MazeKeyboardNavigation {
     }
     const label = describeCell(ctrl, col, row);
     this.cursor.setAttribute('aria-label', label);
+    if (ctrl.subtype.isNeighborhood?.()) {
+      this.announce(label);
+    }
   }
 
   private tryMove(delta: {dx: number; dy: number}): void {
     const ctrl = getMazeController();
     if (!ctrl || !this.cursorPos) return;
+    const isPainter = ctrl.subtype.isNeighborhood?.() ?? false;
     const nx = this.cursorPos.col + delta.dx;
     const ny = this.cursorPos.row + delta.dy;
     if (nx < 0 || nx >= ctrl.map.COLS || ny < 0 || ny >= ctrl.map.ROWS) {
-      this.announce(msg.mazeNavEdge());
+      this.announce(isPainter ? MSG.edgeOfNeighborhood() : MSG.edge());
       return;
     }
-    if (tileAt(ctrl, nx, ny) === SquareType.WALL) {
-      this.announce(msg.mazeNavWall());
+    // Painter keeps its scenery on wall tiles — grass, houses, the cone that
+    // ends a level — so the read-only cursor walks onto them. A student who
+    // cannot visit a wall cannot survey the neighborhood.
+    if (!isPainter && tileAt(ctrl, nx, ny) === SquareType.WALL) {
+      this.announce(MSG.wall());
       return;
     }
     this.cursorPos = {col: nx, row: ny};
+    this.placeCursor();
+  }
+
+  // Every cell is walkable in Painter, so a student can wander far from the
+  // painter. Repeated presses cycle through several painters.
+  private jumpToCharacter(): void {
+    const ctrl = getMazeController();
+    if (!ctrl || !this.cursorPos) return;
+    const {col, row} = this.cursorPos;
+    const spots = painterIds(ctrl)
+      .map(id => pegmanSpot(ctrl, id))
+      .filter((spot): spot is CursorPos => spot !== null);
+    if (spots.length === 0) {
+      this.announce(
+        ctrl.subtype.isNeighborhood?.() ? MSG.noPainter() : MSG.noCharacter()
+      );
+      return;
+    }
+    // Off every painter gives -1, which lands on the first.
+    const current = spots.findIndex(
+      spot => spot.col === col && spot.row === row
+    );
+    this.cursorPos = spots[(current + 1) % spots.length];
     this.placeCursor();
   }
 
@@ -447,7 +609,7 @@ export default class MazeKeyboardNavigation {
     halo?.remove();
     if (restoreFocus) {
       this.svg.focus();
-      this.announce(msg.mazeNavExited());
+      this.announce(MSG.exited());
     }
   }
 }

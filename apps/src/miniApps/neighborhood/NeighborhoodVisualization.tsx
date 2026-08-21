@@ -9,6 +9,10 @@ import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
 
 import moduleStyles from './neighborhood.module.scss';
 
+const NAV_HINT =
+  'Neighborhood grid. Press Enter to explore it with the arrow keys. ' +
+  'Press P to jump to the painter. Press Escape to exit.';
+
 interface NeighborhoodVisualizationProps {
   className?: string;
   /** Surface the maze is drawn on. Defaults to black. */
@@ -37,7 +41,10 @@ const NeighborhoodVisualization: React.FunctionComponent<
   return (
     <div className={className}>
       <div className={backgroundClassName}>
-        <MazeVisualization useProtectedDiv={useProtectedDiv} />
+        <MazeVisualization
+          useProtectedDiv={useProtectedDiv}
+          navHint={NAV_HINT}
+        />
       </div>
       <div className={moduleStyles.sliderContainer}>
         <Slider

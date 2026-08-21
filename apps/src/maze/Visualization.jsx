@@ -9,11 +9,13 @@ import {LOOK_ID, SVG_ID} from './constants';
 import MazeKeyboardNavigation from './keyboardNavigation';
 
 const NAV_HINT =
-  'Maze visualization. Press Enter to walk the path with the arrow keys. Press Escape to exit.';
+  'Maze visualization. Press Enter to walk the path with the arrow keys. ' +
+  'Press P to jump to the character. Press Escape to exit.';
 
 // In lab2 labs we often want to be able to unmount components, so we
 // include the option to not use ProtectedVisualizationDiv.
-const Visualization = function ({useProtectedDiv = true}) {
+// navHint names the grid, so labs reusing this svg can call it their own.
+const Visualization = function ({useProtectedDiv = true, navHint = NAV_HINT}) {
   const svgRef = useRef(null);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ const Visualization = function ({useProtectedDiv = true}) {
       ref={svgRef}
       tabIndex={0}
       role="application"
-      aria-label={NAV_HINT}
+      aria-label={navHint}
     >
       <g id={LOOK_ID}>
         <path d="M 0,-15 a 15 15 0 0 1 15 15" />
@@ -49,6 +51,7 @@ const Visualization = function ({useProtectedDiv = true}) {
 
 Visualization.propTypes = {
   useProtectedDiv: PropTypes.bool,
+  navHint: PropTypes.string,
 };
 module.exports = Visualization;
 export default Visualization;
