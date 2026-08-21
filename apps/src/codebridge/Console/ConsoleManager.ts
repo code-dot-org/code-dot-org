@@ -188,25 +188,36 @@ export default class ConsoleManager {
     this.terminal.focus();
   }
 
-  // Keystrokes are echoed through the same queue as program output, so that a
-  // character the user typed cannot reach the screen ahead of output the program
-  // printed before it.
   public echoInput(data: string) {
     this.inputBuffer += data;
-    this.writeToTerminal(data);
+    this.echoToTerminal(data);
   }
 
   // Erases the character to the left of the cursor: back up over it, overwrite
   // it with a space, and back up again.
   public echoBackspace() {
     this.inputBuffer = this.inputBuffer.slice(0, -1);
-    this.writeToTerminal('\b \b');
+    this.echoToTerminal('\b \b');
   }
 
   // Ends the line the user was typing on. The buffer itself is handed to the
   // program and recorded separately, see saveAndClearInputBuffer.
   public echoNewline() {
-    this.writeToTerminal('\r\n');
+    this.echoToTerminal('\r\n');
+  }
+
+  // What the user types goes straight to the terminal instead of through the
+  // queue. Behind a backlog of program output a queued keystroke would not show
+  // up until the backlog had drained, which reads as typing being broken.
+  private echoToTerminal(data: string) {
+    try {
+      this.terminal.write(data);
+    } catch {
+      // The terminal refuses writes once too much of what it holds is unparsed,
+      // and the echo is not worth reporting as lost output: the character is in
+      // the input buffer, so the program still receives it and the next redraw
+      // still draws it.
+    }
   }
 
   public getInputBuffer() {

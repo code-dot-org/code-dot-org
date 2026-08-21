@@ -219,20 +219,27 @@ describe('ConsoleManager', () => {
     );
   });
 
-  // Both echo and program output used to reach xterm by separate routes, which
-  // let a typed character overtake output printed before it.
-  it('echoes typed characters behind output printed before them', () => {
-    const {consoleManager, writtenData, acknowledgeWrites} = stalledTerminal();
+  // A queued keystroke would not appear until the backlog ahead of it had
+  // drained, which reads as typing being broken.
+  it('echoes typed characters without waiting for queued output', () => {
+    const {consoleManager, writtenData} = stalledTerminal();
     consoleManager.writePartialLine('first output');
     consoleManager.writeConsoleMessage('queued output');
 
     consoleManager.echoInput('A');
-    acknowledgeWrites();
 
-    const secondWrite = writtenData()[1];
-    expect(secondWrite.indexOf('A')).toBeGreaterThan(
-      secondWrite.indexOf('queued output')
-    );
+    expect(writtenData()).toEqual(['first output', 'A']);
+  });
+
+  it('keeps the typed character when the terminal refuses the echo', () => {
+    const {consoleManager, terminal} = stalledTerminal();
+    terminal.write.mockImplementationOnce(() => {
+      throw new Error('write data discarded');
+    });
+
+    consoleManager.echoInput('A');
+
+    expect(consoleManager.getInputBuffer()).toBe('A');
   });
 
   // The terminal rejects a write outright once too much of what it already holds
