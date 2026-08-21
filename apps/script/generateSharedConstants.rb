@@ -140,6 +140,7 @@ def main
       ALLOWED_IMAGE_HOSTNAME_SUFFIXES
       ALLOWED_FONT_HOSTNAMES
       SAFE_AND_SUPPORTED_IMAGE_TYPES
+      YOUTUBE_PATTERNS
     ),
     file_type: 'ts'
   )
