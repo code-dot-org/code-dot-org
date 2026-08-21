@@ -17,8 +17,13 @@ const fetchJson = HttpClient.fetchJson as jest.Mock;
 const galleryData: TutorGalleryData = {
   currentUnitId: 100,
   units: [
-    {id: 100, name: 'Problem Solving with AI', position: 1},
-    {id: 200, name: 'Foundations of AI Programming', position: 2},
+    {id: 100, name: 'Problem Solving with AI', position: 1, link: '/s/ai-1'},
+    {
+      id: 200,
+      name: 'Foundations of AI Programming',
+      position: 2,
+      link: '/s/ai-2',
+    },
   ],
   sections: [
     {id: 5, name: 'Section 1 - CS Period 3'},
