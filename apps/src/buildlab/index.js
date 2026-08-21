@@ -1,1 +1,1 @@
-export {default as BuildlabView} from './BuildlabView';
+export {default as BuildlabView} from './BuildlabContainer';

@@ -1,0 +1,12 @@
+<Buildlab>
+  <config><![CDATA[{
+  "game_id": 76,
+  "created_at": "2026-08-21T00:00:00.000Z",
+  "level_num": "custom",
+  "properties": {
+    "is_project_level": "true",
+    "hide_share_and_remix": "false"
+  },
+  "published": true
+}]]></config>
+</Buildlab>

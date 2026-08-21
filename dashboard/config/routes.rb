@@ -8,7 +8,6 @@ Dashboard::Application.routes.draw do
   draw :marketing
 
   get "frontend-studio(/*path)", to: "frontend_studio#index"
-  get "/projects/build-lab(/*path)", to: "frontend_studio#index"
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -1130,8 +1129,6 @@ Dashboard::Application.routes.draw do
 
     namespace :api do
       namespace :v1 do
-        post 'build_lab/projects', to: 'build_lab_projects#create', defaults: {format: 'json'}
-
         resources :scrapbook_entries, only: [:create, :index, :destroy] do
           post :image, on: :collection
         end

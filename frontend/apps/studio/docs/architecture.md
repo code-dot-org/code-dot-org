@@ -2,10 +2,10 @@
 
 ## Rails integration
 
-Studio is an SPA shell whose Vite assets are served under `/frontend-studio/`. The Dashboard can serve the shell at that mount for standalone development, and at the public `/projects/build-lab/...` route for Build Lab. The request flow is:
+Studio is an SPA shell whose Vite assets are served under `/frontend-studio/`. Dashboard serves this shell at that mount. Build Lab is not part of this SPA; it uses the standard Dashboard project route and the root `apps` Lab2 bundle. The request flow for Studio is:
 
 ```
-Browser → Rails catch-all route (`frontend-studio(/*path)` or `projects/build-lab(/*path)`)
+Browser → Rails catch-all route (`frontend-studio(/*path)`)
         → FrontendStudioController#index
         → dashboard/app/views/frontend_studio/index.html.haml
             - injects Vite bundle via vite_typescript_tag 'application.tsx'
@@ -44,13 +44,13 @@ select what kind of level data should be mocked.
 
 ## Routing
 
-Route files in `src/routes/` declare public paths (e.g. `/projects/$labType/$channelId/edit`) with no surrounding prefix. `src/modules/router/index.ts` uses `/frontend-studio` as the basepath only for the standalone shell; when Rails serves Build Lab at `/projects/build-lab/...`, the router uses the public path directly.
+Route files in `src/routes/` declare paths inside the Studio shell (for example, `/frontend-studio/projects/$labType/$channelId/edit`). The router is responsible for Studio-owned routes only. Build Lab's `/projects/build-lab/...` paths bypass this router and are resolved by Dashboard's standard project controller.
 
-Build Lab creation is the first Studio-owned project lifecycle path. The
-`/projects/build-lab/new` route calls `POST /api/v1/build_lab/projects`, then
-redirects to the shared `$labType/$channelId/edit` route. The API creates the
-channel with the existing `ChannelToken` and `Projects` storage services; the
-lab initializes and saves its `main.json` source after it mounts.
+Build Lab uses the existing project lifecycle. `/projects/build-lab/new` is
+registered by `ProjectsController`, creates a normal project channel, and
+loads the `Buildlab` level through the Lab2 entry point registered in
+`apps/lab2EntryPoints.ts`. The lab persists its `main.json` source through the
+shared Lab2 `useSources` contract.
 
 ## Route tree (auto-generated)
 
@@ -58,7 +58,8 @@ TanStack Router's Vite plugin (`tanstackRouter({ autoCodeSplitting: true })`) sc
 
 ## Lab lazy-load boundary
 
-Each lab is a separate Vite chunk, loaded when the user navigates to a public `/projects/:labType/:channelId/edit` or `/view` route, or the equivalent standalone `/frontend-studio/projects/...` route:
+Each Studio lab is a separate Vite chunk, loaded when the user navigates to a
+registered `/frontend-studio/projects/...` route:
 
 ```
 Studio bundle (loaded on first visit to /frontend-studio)
@@ -67,7 +68,7 @@ Studio bundle (loaded on first visit to /frontend-studio)
         └── lazy(() => import('@code-dot-org/music-lab'))  ← separate chunk, fetched on demand
 ```
 
-The route loader calls `getLabEntrypoint` to resolve the lazy component, then throws `notFound()` if the lab type is unregistered. The route component wraps the result in `<Suspense>`.
+The route loader calls `getLabEntrypoint` to resolve the lazy component, then throws `notFound()` if the lab type is unregistered. The route component wraps the result in `<Suspense>`. Build Lab is loaded by the root Apps webpack entrypoint instead of this boundary.
 
 The route also passes the URL's `$channelId` to the lab entrypoint. Labs that
 own project documents use that identifier to read and write channel sources;

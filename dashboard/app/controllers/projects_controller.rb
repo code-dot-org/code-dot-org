@@ -157,6 +157,10 @@ class ProjectsController < ApplicationController
       name: 'New Music Lab Project',
       i18n: true
     },
+    'build-lab': {
+      name: 'New Build Lab Project',
+      login_required: true,
+    },
     poetry: {
       name: 'New Poetry Project'
     },
@@ -713,9 +717,12 @@ class ProjectsController < ApplicationController
   end
 
   private def initial_data
+    # Rails normalizes hyphens to underscores when it creates route helper
+    # names, while the public project type may retain its hyphen.
+    project_route_key = params[:key].to_s.tr('-', '_').to_sym
     data = {
       name: 'Untitled Project',
-      level: polymorphic_url([params[:key].to_sym, :project_projects])
+      level: polymorphic_url([project_route_key, :project_projects])
     }
     default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
     data[:thumbnailUrl] = default_image_url if default_image_url

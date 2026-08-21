@@ -87,10 +87,6 @@ export const ProjectChannelForLevelSchema = z.object({
   reduceChannelUpdates: z.boolean().optional(),
 });
 
-export const BuildLabProjectCreationSchema = z.object({
-  channel: z.string(),
-});
-
 export const ExtraLinksProjectDataSchema = z
   .object({
     owner_info: z

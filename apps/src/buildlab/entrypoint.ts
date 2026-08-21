@@ -8,5 +8,6 @@ export const BuildlabEntryPoint: Lab2EntryPoint = {
       ({BuildlabView}) => ({default: BuildlabView})
     )
   ),
-  themes: ['Dark', 'Light'],
+  managesOwnProject: true,
+  themes: ['Light', 'Dark'],
 };

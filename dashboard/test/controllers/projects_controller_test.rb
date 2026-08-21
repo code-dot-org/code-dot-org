@@ -386,6 +386,12 @@ class ProjectsControllerTest < ActionController::TestCase
     assert @response.headers['Location'].ends_with? '/edit'
   end
 
+  test '/projects/build-lab/new creates a channel and redirects to edit' do
+    get :create_new, params: {key: 'build-lab'}
+    assert_response :redirect
+    assert @response.headers['Location'].ends_with? '/edit'
+  end
+
   test '/applab/new with enableMaker param preserves param in redirect' do
     get :create_new, params: {key: 'applab', enableMaker: 'true'}
     assert_response :redirect

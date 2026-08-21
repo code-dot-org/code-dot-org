@@ -8,7 +8,6 @@ type LabEntrypointMap = {
 };
 
 const LabEntrypoints: LabEntrypointMap = {
-  ['build-lab']: lazy(() => import('@/modules/labs/buildLab')),
   ['music']: lazy(() => import('@code-dot-org/music-lab')),
   // Oceans is wrapped in a studio-side container that replicates the FishView
   // sizing algorithm (16:9, clamped, proportional font size).
