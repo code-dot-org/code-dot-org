@@ -14,10 +14,12 @@ import classNames from 'classnames';
 import {useEffect, useRef, type FC, type ReactNode} from 'react';
 
 import {isPendingMessage} from '../model/messages';
+import {useTutorConfig} from '../session/TutorContext';
 import {useTutor} from '../session/useTutor';
 
 import {Composer} from './Composer';
 import {MessageView} from './MessageView';
+import {SuggestedPrompts} from './SuggestedPrompts';
 import {WaitingAnimation} from './WaitingAnimation';
 
 import moduleStyles from './ai-tutor-panel.module.scss';
@@ -33,6 +35,7 @@ export const AiTutorPanel: FC<AiTutorPanelProps> = ({
   emptyState,
 }) => {
   const {messages, awaiting, send} = useTutor();
+  const {prompts} = useTutorConfig();
   const foot = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -63,7 +66,19 @@ export const AiTutorPanel: FC<AiTutorPanelProps> = ({
         )}
         <div ref={foot} />
       </div>
-      <Composer onSubmit={send} disabled={awaiting} />
+      <div className={moduleStyles.foot}>
+        {/*
+          Above the composer and outside it, as in the legacy layout: they are
+          a way to START a conversation, and a student who has begun typing
+          should not have the field jump as they do.
+        */}
+        <SuggestedPrompts
+          prompts={prompts ?? []}
+          onChoose={prompt => send(prompt.value)}
+          disabled={awaiting}
+        />
+        <Composer onSubmit={send} disabled={awaiting} />
+      </div>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 // Public API for @code-dot-org/aitutor.
 //
-// See specs/PLAN.md. Milestones 1 and 2: the message model, the transport seam,
-// a transport that answers from a recording, and the panel itself. Nothing here
-// talks to a server yet.
+// See specs/PLAN.md. Milestones 1 to 3: the message model, the transport seam,
+// a transport that answers from a recording, the panel, and what the panel
+// tells the model about the project. Nothing here talks to a server yet.
 
 export {
   AiInteractionStatus,
@@ -59,10 +59,26 @@ export {
 
 export {useTutor, type Tutor} from './session/useTutor';
 
+export {
+  codeBlock,
+  hiddenContextFrom,
+  MAX_CONSOLE_LINES,
+} from './context/hiddenContext';
+export type {AiTutorContext} from './context/types';
+
+export {
+  defaultPrompts,
+  levelPrompts,
+  promptsFor,
+  standaloneProjectPrompts,
+  type SuggestedPrompt,
+} from './prompts/suggestedPrompts';
+
 export {default as AiTutorPanel} from './components/AiTutorPanel';
 export type {AiTutorPanelProps} from './components/AiTutorPanel';
 export {default as Composer} from './components/Composer';
 export {default as MessageView} from './components/MessageView';
+export {default as SuggestedPrompts} from './components/SuggestedPrompts';
 export {default as WaitingAnimation} from './components/WaitingAnimation';
 export {failureText} from './components/failureText';
 export {strings} from './strings';

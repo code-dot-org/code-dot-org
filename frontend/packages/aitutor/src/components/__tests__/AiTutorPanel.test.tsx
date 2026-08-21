@@ -11,6 +11,8 @@ import userEvent from '@testing-library/user-event';
 import {Provider} from 'react-redux';
 import {describe, expect, it, vi} from 'vitest';
 
+import type {AiTutorContext} from '../../context/types';
+import type {SuggestedPrompt} from '../../prompts/suggestedPrompts';
 import slice from '../../session/slice';
 import {TutorProvider} from '../../session/TutorContext';
 import {strings} from '../../strings';
@@ -22,14 +24,18 @@ import {
 import type {TutorTransport} from '../../transport/types';
 import {AiTutorPanel} from '../AiTutorPanel';
 
-const show = (transport: TutorTransport, context?: () => string) => {
+const show = (
+  transport: TutorTransport,
+  context?: () => AiTutorContext,
+  prompts?: SuggestedPrompt[],
+) => {
   // A store of this package's slice alone. A host injects it into the one
   // `@code-dot-org/core/redux` owns; nothing here needs that machinery, which
   // is the point of the slice never naming a root state.
   const store = configureStore({reducer: {aiTutor: slice.reducer}});
   render(
     <Provider store={store}>
-      <TutorProvider transport={transport} context={context}>
+      <TutorProvider transport={transport} context={context} prompts={prompts}>
         <AiTutorPanel />
       </TutorProvider>
     </Provider>,
@@ -64,14 +70,18 @@ describe('asking a question', () => {
     // Per turn, not per session: the answer is about the code as it is now, and
     // the student has been editing it.
     const complete = vi.fn().mockResolvedValue({messages: []});
-    const context = vi.fn().mockReturnValue('the code');
+    const context = vi.fn().mockReturnValue({sourceCode: 'let x = 1;'});
     show({complete}, context);
 
     await ask('help');
     await ask('again');
 
     expect(context).toHaveBeenCalledTimes(2);
-    expect(complete.mock.calls[0][0].hiddenContext).toBe('the code');
+    // The host hands over facts; the wording is the package's, so that every
+    // lab tunes against the same prompt.
+    expect(complete.mock.calls[0][0].hiddenContext).toBe(
+      "Here is the student's current code: let x = 1;",
+    );
   });
 
   it('sends prior turns, but not the ones that failed', async () => {
@@ -158,5 +168,45 @@ describe('failure', () => {
     await ask('two');
 
     expect(await screen.findByText('better luck')).toBeInTheDocument();
+  });
+});
+
+describe('the suggested prompts', () => {
+  const prompts = [
+    {id: 'hint', label: 'Give a hint', value: 'Can you give me a hint?'},
+  ];
+
+  const press = async (label: string) => {
+    const user = userEvent.setup();
+    await user.click(screen.getByRole('button', {name: label}));
+  };
+
+  it('sends what the button stands for, not what it says', async () => {
+    // The label is short because it is a button; the value is a question
+    // because it is going to a model.
+    const complete = vi.fn().mockResolvedValue({messages: []});
+    show({complete}, undefined, prompts);
+
+    await press('Give a hint');
+
+    expect(complete.mock.calls[0][0].message.chatMessageText).toBe(
+      'Can you give me a hint?',
+    );
+  });
+
+  it('is absent when the host offers none', () => {
+    show({complete: vi.fn()});
+
+    expect(screen.queryByRole('button', {name: 'Give a hint'})).toBeNull();
+  });
+
+  it('will not take a second question while one is in flight', async () => {
+    show(fromTurns([{hang: true, reply: {}}]), undefined, prompts);
+
+    await press('Give a hint');
+
+    await waitFor(() =>
+      expect(screen.getByRole('button', {name: 'Give a hint'})).toBeDisabled(),
+    );
   });
 });

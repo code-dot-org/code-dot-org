@@ -14,6 +14,7 @@
 import {useCallback, useEffect, useRef} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
+import {hiddenContextFrom} from '../context/hiddenContext';
 import {
   isCompletedMessage,
   Role,
@@ -80,8 +81,10 @@ export const useTutor = (): Tutor => {
       };
 
       // Gathered per turn rather than per session: the answer is about the code
-      // as it is now, and the student has been editing it.
-      const hiddenContext = await config.context?.();
+      // as it is now, and the student has been editing it. The host hands over
+      // facts; the wording is ours (`context/hiddenContext`).
+      const gathered = await config.context?.();
+      const hiddenContext = gathered && hiddenContextFrom(gathered);
       message.hiddenContext = hiddenContext;
 
       dispatch(messageSent(message));

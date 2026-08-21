@@ -21,3 +21,11 @@
   display: flex;
   justify-content: flex-start;
 }
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+  padding: 0 0.75rem 0.75rem;
+}
