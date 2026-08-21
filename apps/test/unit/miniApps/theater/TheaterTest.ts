@@ -49,6 +49,10 @@ describe('Theater', () => {
     theater.uploadFile = uploadFile;
   });
 
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   it('sets audio detail when handleSignal with audio is called', () => {
     const url = 'url';
     const data = {value: TheaterSignalType.AUDIO_URL, detail: {url: url}};
@@ -222,6 +226,166 @@ describe('Theater', () => {
     expect(playAudioSpy).toHaveBeenCalledTimes(1);
     expect(onOutputVisibleChange).toHaveBeenLastCalledWith(true);
   });
+
+  // Play a gif of the given length, with audio only when a length says so, and
+  // return once both elements have loaded.
+  const playMedia = (durationMs?: number, withAudio = false) => {
+    if (withAudio) {
+      theater.handleSignal({
+        value: TheaterSignalType.AUDIO_URL,
+        detail: {url: 'blob:audio'},
+      });
+    } else {
+      theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    }
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image', durationMs},
+    });
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+    if (withAudio) {
+      (audioElement as HTMLAudioElement).oncanplaythrough?.(
+        new Event('canplaythrough')
+      );
+    }
+  };
+
+  // Whether waitUntilPlaybackDone has settled by now.
+  const isPlaybackDone = async () => {
+    let done = false;
+    theater.waitUntilPlaybackDone().then(() => {
+      done = true;
+    });
+    await Promise.resolve();
+    return done;
+  };
+
+  it('settles once the gif has run its length', async () => {
+    jest.useFakeTimers();
+    playMedia(2000);
+
+    jest.advanceTimersByTime(1999);
+    expect(await isPlaybackDone()).toBe(false);
+
+    jest.advanceTimersByTime(1);
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('settles right away when the run played nothing', async () => {
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('leaves the last frame on the stage when playback finishes', () => {
+    jest.useFakeTimers();
+    playMedia(1000);
+
+    jest.advanceTimersByTime(1000);
+
+    expect(imageElement.style?.visibility).toBe('visible');
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(true);
+    expect(imageElement.src).toBe('blob:image');
+  });
+
+  it('waits for the audio to end as well as the gif', async () => {
+    jest.useFakeTimers();
+    playMedia(1000, /* withAudio */ true);
+
+    jest.advanceTimersByTime(1000);
+    expect(await isPlaybackDone()).toBe(false);
+
+    (audioElement as HTMLAudioElement).onended?.(new Event('ended'));
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('waits for the gif as well as the audio', async () => {
+    jest.useFakeTimers();
+    playMedia(1000, /* withAudio */ true);
+
+    (audioElement as HTMLAudioElement).onended?.(new Event('ended'));
+    expect(await isPlaybackDone()).toBe(false);
+
+    jest.advanceTimersByTime(1000);
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('waits for the second video of a run to load before timing it', async () => {
+    jest.useFakeTimers();
+    playMedia(3000);
+
+    // A scene with no pauses renders a gif of zero length, so its timer would
+    // settle at once if it started before the image loaded.
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image2', durationMs: 0},
+    });
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    jest.advanceTimersByTime(3000);
+    expect(await isPlaybackDone()).toBe(false);
+
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+    jest.advanceTimersByTime(0);
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('waits for the last of two videos published by one run', async () => {
+    jest.useFakeTimers();
+    playMedia(1000);
+    playMedia(3000);
+
+    jest.advanceTimersByTime(1000);
+    expect(await isPlaybackDone()).toBe(false);
+
+    jest.advanceTimersByTime(2000);
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('settles right away for a video of unknown length', async () => {
+    jest.useFakeTimers();
+    playMedia();
+
+    // Java Lab sends no length, and ends its runs on a Javabuilder message.
+    // Holding playback open on a length we never learn would park the caller
+    // until some later run reset the theater.
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('still waits for the audio when the video length is unknown', async () => {
+    jest.useFakeTimers();
+    playMedia(undefined, /* withAudio */ true);
+
+    expect(await isPlaybackDone()).toBe(false);
+
+    (audioElement as HTMLAudioElement).onended?.(new Event('ended'));
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('treats refused audio playback as audio that is already over', async () => {
+    jest.useFakeTimers();
+    playAudioSpy.mockReturnValue(Promise.reject(new Error('autoplay blocked')));
+    playMedia(1000, /* withAudio */ true);
+
+    await Promise.resolve();
+    jest.advanceTimersByTime(1000);
+
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it.each(['reset', 'onStop'] as const)(
+    'stops waiting on media dropped by %s',
+    async method => {
+      jest.useFakeTimers();
+      playMedia(1000);
+      let done = false;
+      theater.waitUntilPlaybackDone().then(() => {
+        done = true;
+      });
+
+      theater[method]();
+
+      await Promise.resolve();
+      expect(done).toBe(true);
+    }
+  );
 
   it.each(['reset', 'onStop'] as const)('hides output on %s', method => {
     theater[method]();

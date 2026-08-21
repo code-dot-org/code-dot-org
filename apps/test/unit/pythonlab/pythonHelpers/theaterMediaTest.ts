@@ -27,12 +27,12 @@ describe('handleTheaterMedia', () => {
   });
 
   it('sends the gif as an object url followed by NO_AUDIO', () => {
-    handleTheaterMedia(new Uint8Array([1, 2, 3]));
+    handleTheaterMedia(new Uint8Array([1, 2, 3]), undefined, 1000);
 
     expect(handleSignal).toHaveBeenCalledTimes(2);
     expect(handleSignal).toHaveBeenNthCalledWith(1, {
       value: TheaterSignalType.VISUAL_URL,
-      detail: {url: createdUrls[0]},
+      detail: {url: createdUrls[0], durationMs: 1000},
     });
     expect(handleSignal).toHaveBeenNthCalledWith(2, {
       value: TheaterSignalType.NO_AUDIO,
@@ -41,12 +41,16 @@ describe('handleTheaterMedia', () => {
   });
 
   it('sends the gif and the wav as object urls when there is audio', () => {
-    handleTheaterMedia(new Uint8Array([1, 2, 3]), new Uint8Array([4, 5, 6]));
+    handleTheaterMedia(
+      new Uint8Array([1, 2, 3]),
+      new Uint8Array([4, 5, 6]),
+      1000
+    );
 
     expect(handleSignal).toHaveBeenCalledTimes(2);
     expect(handleSignal).toHaveBeenNthCalledWith(1, {
       value: TheaterSignalType.VISUAL_URL,
-      detail: {url: createdUrls[0]},
+      detail: {url: createdUrls[0], durationMs: 1000},
     });
     expect(handleSignal).toHaveBeenNthCalledWith(2, {
       value: TheaterSignalType.AUDIO_URL,
