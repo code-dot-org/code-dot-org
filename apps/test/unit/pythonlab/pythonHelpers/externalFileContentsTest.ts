@@ -43,7 +43,10 @@ describe('externalFileContents', () => {
 
     const contents = await loadExternalFileContents(source);
 
-    expect(fetchMock).toHaveBeenCalledWith('/v3/assets/channel-id/uuid-1.jpeg');
+    expect(fetchMock).toHaveBeenCalledWith(
+      '/v3/assets/channel-id/uuid-1.jpeg',
+      {credentials: 'omit'}
+    );
     expect(asBytes(contents['2'])).toEqual(bytesOf('dog bytes'));
     // A file that carries its own contents is not fetched.
     expect(contents['1']).toBeUndefined();
