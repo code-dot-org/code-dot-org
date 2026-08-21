@@ -130,7 +130,6 @@ export const SectionStudentSchema = z
     age: z.number(),
     sharing_disabled: z.boolean(),
     has_ever_signed_in: z.boolean(),
-    ai_tutor_access_denied: z.boolean(),
     at_risk_age_gated_date: z.string().nullable(),
     child_account_compliance_state: z.string().nullable(),
     latest_permission_request_sent_at: z.string().nullable(),
