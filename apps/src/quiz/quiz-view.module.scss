@@ -75,6 +75,9 @@
 }
 
 .cardFooter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 0 24px 24px;
 }
 
