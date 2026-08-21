@@ -123,7 +123,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       end
 
       it 'captures error without reraising' do
-        Observability::Errors.expects(:capture_exception).with(error).once
+        Observability::Errors.expects(:report).with(error).once
 
         CDO.log.expects(:info).once.with do |log_json|
           log_data = JSON.parse(log_json)
@@ -159,7 +159,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       end
 
       it 'terminates job' do
-        Observability::Errors.expects(:capture_exception).with(instance_of(Timeout::Error)).once
+        Observability::Errors.expects(:report).with(instance_of(Timeout::Error)).once
 
         CDO.log.expects(:info).once.with do |log_json|
           log_data = JSON.parse(log_json)

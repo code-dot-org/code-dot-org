@@ -1028,7 +1028,7 @@ module LevelsHelper
       begin
         body = s3.get_object(s3_args)[:body].read
       rescue => exception
-        Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
+        Observability::Errors.report(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
         return
       end
       student_code = nil
