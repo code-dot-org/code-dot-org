@@ -8,6 +8,7 @@ import {
   WorkspaceHeader,
 } from '@code-dot-org/lab/components';
 
+import {useWebLabTutor} from '../aiTutor/useWebLabTutor';
 import {ViewMode, type ViewModeType} from '../constants';
 import {DebugProvider, useDebug} from '../debug/DebugContext';
 import {DebugPanel} from '../debug/DebugPanel';
@@ -55,6 +56,11 @@ const WebWorkspace = () => {
   // close button; the layout only gives it room.
   const {isOpen: isDebugPanelOpen} = useDebug();
 
+  // The AI Tutor tab. `undefined` when the tutor should not be here at all —
+  // which for this lab means only that the access rules said so, since
+  // `weblab2` is an app whose experience assumes one.
+  const aiTutor = useWebLabTutor();
+
   const showEditor = viewMode !== ViewMode.PREVIEW;
   const showPreview = viewMode !== ViewMode.CODE;
   const isSplit = showEditor && showPreview;
@@ -74,6 +80,7 @@ const WebWorkspace = () => {
         // Web Lab's console is the debug panel's, styled by the design system,
         // so the Codebridge console font-size setting would do nothing here.
         hasConsole={false}
+        aiTutor={aiTutor}
       />
       <ResizeHandle
         axis="x"

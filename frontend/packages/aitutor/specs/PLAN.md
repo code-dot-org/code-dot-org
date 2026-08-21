@@ -10,9 +10,8 @@ This package is that panel, extracted from `apps/` so a lab in
 all** — against recorded fixtures, or against a dev's own API key through a
 local proxy.
 
-Status: all six milestones are done (§10), the access rules that gate the tutor
-are ported, and the state they read is carried. What is left for a lab to switch
-the tab on is wiring — see §11.1.
+Status: all six milestones are done (§10), the access rules are ported, and Web
+Lab is the first lab wired to it (§11.1).
 
 ## 1. What exists today, and where
 
@@ -436,7 +435,23 @@ renders the tab from it; Codebridge's `InfoPanel` passes one through, so any
 Codebridge lab can supply one. `labs/base` injects the slice into the shared
 store, so a host does nothing but pass the config.
 
-NO LAB PASSES ONE YET. The rules are here — `shouldShowAiTutor`,
+WEB LAB PASSES ONE (`labs/web/src/aiTutor`). It is the tutor's home lab:
+`weblab2` is the one app name in `APPS_WHERE_AI_TUTOR_IS_ESSENTIAL`, so the tab
+is always there and a teacher who switches AI chat off gets a tab that says why
+rather than no tab; and the accept/reject flow in §8 was written against this
+lab's answer types. Its three pieces are the three a host owes:
+
+| It supplies     | Which is                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------ |
+| `context`       | every readable file, path and all, minus validation, system support, `txt`/`csv`/`md`, and image bytes |
+| `proposals`     | the four `build` answer types, `html`/`css`/`js`/`json`, and a merge into `MultiFileSource`            |
+| `disabledState` | `disabledStateFor` over the user's access level, the section's, and the predict gate                   |
+
+No other lab does. World Lab would need something else entirely — its project is
+Blockly workspace JSON, and a model shown that is being shown serialised block
+positions rather than a program.
+
+The rules are here — `shouldShowAiTutor`,
 `areAiChatToolsEnabled` and `disabledStateFor` are ported from
 `aichat/helpers/aiChatAccess.ts` and `useAiChatDisabledState`, and the panel
 renders the disabled state. What is missing is the INPUT.
