@@ -16,14 +16,25 @@ const CLEAR_DISPLAY = '\x1b[2J\x1b[3J\x1b[H';
 // dropped; a single oversized write, such as a plot, still goes through whole.
 const MAX_QUEUED_BYTES = 4_000_000;
 
-const MAX_TERMINAL_LINES = 5000;
-const TERMINAL_LINES_TRIM_BATCH = 1000;
+// How much output is kept for redrawing the console and for handing over to a
+// re-created one.
+const MAX_TERMINAL_CHARACTERS = 1_000_000;
+const TERMINAL_TRIM_BATCH = 200_000;
+// The longest single line kept. Output that never sends a newline, such as one
+// input prompt after another, would otherwise grow one line without bound.
+// Nothing is cut: a message that would take the line past this starts the next
+// one instead, which a redraw then draws on a row of its own.
+const MAX_LINE_CHARACTERS = 100_000;
+
+const countCharacters = (lines: string[]) =>
+  lines.reduce((total, line) => total + line.length, 0);
 
 // Manager for xterm.js-based console in codebridge
 export default class ConsoleManager {
   private terminal: Terminal;
   private terminalFitAddon: FitAddon;
   private terminalLines: string[];
+  private terminalCharacters: number;
   private inputBuffer: string;
   // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
   private lastLineIsPartial: boolean;
@@ -44,6 +55,7 @@ export default class ConsoleManager {
     this.terminal = terminal;
     this.terminalFitAddon = terminalFitAddon;
     this.terminalLines = [];
+    this.terminalCharacters = 0;
     this.inputBuffer = '';
     this.lastLineIsPartial = false;
     this.codeEnvironmentError = null;
@@ -75,6 +87,7 @@ export default class ConsoleManager {
 
   public clearTerminalLines() {
     this.terminalLines = [];
+    this.terminalCharacters = 0;
     this.discardQueuedWrites();
     this.droppedCharacters = 0;
     this.writeToTerminal(CLEAR_DISPLAY);
@@ -116,21 +129,45 @@ export default class ConsoleManager {
       return;
     }
     this.terminalLines = remainingLines;
+    this.terminalCharacters = countCharacters(remainingLines);
 
     // Queued writes are already part of terminalLines, so the redraw covers
     // them; keeping them queued would only draw them a second time.
     this.discardQueuedWrites();
-    const redrawnLines = this.terminalLines.map((line, index) => {
-      const isLastLine = index === this.terminalLines.length - 1;
-      const terminatesLine = !isLastLine || !this.lastLineIsPartial;
-      return terminatesLine ? `${line}\r\n` : line;
-    });
     // Anything the user has typed since the last newline is not in
     // terminalLines yet, so redraw it too.
     this.writeToTerminal(
-      CLEAR_DISPLAY + redrawnLines.join('') + this.inputBuffer
+      CLEAR_DISPLAY + this.drawnTerminalLines() + this.inputBuffer
     );
 
+    this.executeTerminalLinesListeners();
+  }
+
+  // terminalLines as one write. Only the last line is left unterminated, and
+  // only while it is still being written to.
+  private drawnTerminalLines() {
+    return this.terminalLines
+      .map((line, index) => {
+        const isLastLine = index === this.terminalLines.length - 1;
+        const terminatesLine = !isLastLine || !this.lastLineIsPartial;
+        return terminatesLine ? `${line}\r\n` : line;
+      })
+      .join('');
+  }
+
+  public replayTerminalLines(lines: string[]) {
+    if (lines.length === 0) {
+      return;
+    }
+    this.terminalLines = [...lines];
+    this.terminalCharacters = countCharacters(this.terminalLines);
+    this.trimTerminalLines();
+    // Where the previous console broke its lines is not carried over, so every
+    // replayed line is drawn as a line of its own.
+    this.lastLineIsPartial = false;
+    this.writeToTerminal(this.drawnTerminalLines());
+    this.terminal.scrollToBottom();
+    this.terminal.focus();
     this.executeTerminalLinesListeners();
   }
 
@@ -215,21 +252,40 @@ export default class ConsoleManager {
   }
 
   private updateTerminalLines(message: string) {
-    if (this.lastLineIsPartial && this.terminalLines.length > 0) {
-      this.terminalLines[this.terminalLines.length - 1] += message;
+    const lastLine = this.terminalLines[this.terminalLines.length - 1];
+    if (
+      this.lastLineIsPartial &&
+      lastLine !== undefined &&
+      lastLine.length < MAX_LINE_CHARACTERS
+    ) {
+      this.terminalLines[this.terminalLines.length - 1] = lastLine + message;
     } else {
       this.terminalLines.push(message);
-      if (
-        this.terminalLines.length >
-        MAX_TERMINAL_LINES + TERMINAL_LINES_TRIM_BATCH
-      ) {
-        this.terminalLines.splice(
-          0,
-          this.terminalLines.length - MAX_TERMINAL_LINES
-        );
-      }
     }
+    this.terminalCharacters += message.length;
+    this.trimTerminalLines();
     this.executeTerminalLinesListeners();
+  }
+
+  // Drops the oldest lines once the record is over its limit. The last line is
+  // always kept: it is the one being written to, and a single message
+  // can be larger than the whole allowance on its own.
+  private trimTerminalLines() {
+    if (
+      this.terminalCharacters <=
+      MAX_TERMINAL_CHARACTERS + TERMINAL_TRIM_BATCH
+    ) {
+      return;
+    }
+    let firstKeptLine = 0;
+    while (
+      this.terminalCharacters > MAX_TERMINAL_CHARACTERS &&
+      firstKeptLine < this.terminalLines.length - 1
+    ) {
+      this.terminalCharacters -= this.terminalLines[firstKeptLine].length;
+      firstKeptLine++;
+    }
+    this.terminalLines.splice(0, firstKeptLine);
   }
 
   // Writes are held until the terminal reports that the previous chunk has been parsed.

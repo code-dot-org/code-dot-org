@@ -265,6 +265,52 @@ describe('ConsoleManager', () => {
     expect(writtenData().join('')).not.toContain('queued line');
   });
 
+  // Both a redraw and a replay write the whole record at once, so the record has
+  // to stay small enough for the terminal to take in one write.
+  it('bounds how much output it keeps for redrawing', () => {
+    const {consoleManager} = stalledTerminal();
+    const tenThousandCharacterLine = 'x'.repeat(10_000);
+
+    for (let line = 0; line < 500; line++) {
+      consoleManager.writeConsoleMessage(tenThousandCharacterLine);
+    }
+
+    const lines = consoleManager.getTerminalLines();
+    expect(lines.join('').length).toBeLessThan(1_500_000);
+    expect(lines.length).toBeGreaterThan(50);
+  });
+
+  // A program printing prompts and never a newline used to append to one line of
+  // the record forever.
+  it('bounds a line that the program never ends', () => {
+    const {consoleManager} = stalledTerminal();
+    const tenThousandCharacterPrompt = 'x'.repeat(10_000);
+
+    for (let write = 0; write < 500; write++) {
+      consoleManager.writePartialLine(tenThousandCharacterPrompt);
+    }
+
+    const lines = consoleManager.getTerminalLines();
+    expect(Math.max(...lines.map(line => line.length))).toBeLessThan(200_000);
+    expect(lines.join('').length).toBeLessThan(1_500_000);
+  });
+
+  // The replay is history being carried over, not output arriving now: dropping
+  // part of it would lose the lines it exists to preserve and would report the
+  // loss as a program printing too fast.
+  it('replays the previous console without dropping any of it', () => {
+    const {consoleManager, writtenData} = stalledTerminal();
+    const lines = Array.from({length: 200}, (_, index) =>
+      `line ${index} `.padEnd(10_000, '.')
+    );
+
+    consoleManager.replayTerminalLines(lines);
+
+    expect(writtenData()).toHaveLength(1);
+    expect(writtenData()[0]).toContain('line 199 ');
+    expect(writtenData().join('')).not.toContain('were dropped');
+  });
+
   it('does nothing when retracting an error that was never reported', async () => {
     const consoleManager = newConsoleManager();
     consoleManager.writeConsoleMessage('program output');
