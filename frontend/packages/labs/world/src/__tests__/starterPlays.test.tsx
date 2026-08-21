@@ -304,27 +304,30 @@ describe('the same project, said in one file', () => {
     expect(board()).toBe('SCORE 20');
   });
 
-  it('shows damage on its bar too, which is its only own property', async () => {
-    // The health bar is the one actor in either telling that keeps a number of
-    // its own, and a world-defined one keeps it in `worlds/main` rather than
-    // in a file of its own — a different exported name for the same idea. If
-    // the two tellings had drifted there, this is where it would show.
+  it('draws its bar, which is the one actor here that keeps state', async () => {
+    // The health bar is the only actor in either telling that keeps a property
+    // of its own, and a world-defined one keeps it under the block that
+    // defines it rather than under a file — a different name for the same
+    // idea. If the two tellings had drifted there, the drawing would not
+    // resolve at all and there would be no picture.
+    //
+    // WHAT IT DOES NOT DO here is follow anybody. A placement pointing at
+    // another is resolved within one `loadMap`, and an arrangement is one call
+    // per KIND — so the bar's call does not contain the player. It draws
+    // empty, which is this telling's third cost and is written up in its
+    // header.
     const {world} = await compileProject(
       projectFiles(WORLD_SCENARIOS['platformer-single'].source),
     );
-    const bar = () =>
-      world
-        .renderSnapshot()
-        .find(state =>
-          (state.actor as unknown as {id: string}).id.endsWith('HealthBar'),
-        )?.drawing?.key;
-
     play(world, 0.5);
-    const full = bar();
-    play(world, 2.5, ['right arrow']);
 
-    expect(full).toBeDefined();
-    expect(bar()).not.toBe(full);
+    const bar = world
+      .renderSnapshot()
+      .find(state =>
+        (state.actor as unknown as {id: string}).id.endsWith('HealthBar'),
+      );
+
+    expect(bar?.drawing).toBeDefined();
   });
 
   it('jumps as high, which is the mechanic most easily left behind', async () => {

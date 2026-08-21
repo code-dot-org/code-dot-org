@@ -53,10 +53,22 @@
 //
 // So all seven kinds move in, and what this telling costs is one thing rather
 // than three.
+//
+// A THIRD THING IS LOST, and it is new: a placement here cannot point at
+// another. The starter's map holds every entry in one document, so a Health
+// Bar's `subject` names the Player and `loadMap` resolves it once every entry
+// exists (specs/MAPS.md). An arrangement is per KIND — `create in map` emits
+// one `loadMap` call for each, with ids scoped to the block that placed them —
+// so the bar's call does not contain the player at all, and a reference across
+// two of them has nothing to resolve against.
+//
+// The bar is therefore UNPOINTED here: it draws, and it draws empty. Which is
+// the honest state of this telling rather than a bug to hide, and the reason
+// the map editor exists for the other one.
 
+import {healthBarDrawing, HEALTH_BAR_SUBJECT} from '../actors/stock/healthBar';
 import {drawText, fill, showAs, textOf} from '../actors/stock/workspace';
 import {
-  healthBarDrawing,
   SCOREBOARD_HEIGHT,
   SCOREBOARD_WIDTH,
   LEVEL1_ACTORS,
@@ -77,6 +89,28 @@ const CRAWLER = 'platformerCrawlerDef';
 const HEALTH_BAR = 'platformerHealthBarDef';
 
 const local = (blockId: string) => `local:${blockId}`;
+
+/**
+ * A drawing SPEC as the row a `define actor` holds.
+ *
+ * `actorFile` takes the spec and writes the root beside the definition, which
+ * is where a drawing goes in an `.actor` file. In a world it is a row inside
+ * the actor that owns it (`drawingDefinition`), so the same spec has to be
+ * wrapped rather than passed.
+ */
+const drawingBlock = (drawing: {
+  width: number;
+  height: number;
+  commands: object[];
+}) => ({
+  type: 'world_define_drawing',
+  fields: {WIDTH: drawing.width, HEIGHT: drawing.height},
+  inputs: {DO: {block: stack(drawing.commands)}},
+});
+
+/** A defining block's id as `pathSlug` spells it, for an own property's block. */
+const pascalId = (blockId: string) =>
+  blockId.charAt(0).toUpperCase() + blockId.slice(1);
 
 /** `⟨this actor⟩`, which inside a hat means the actor the event fired for. */
 const me = () => ({block: {type: 'world_this_actor'}});
@@ -213,7 +247,21 @@ const SINGLE_WORLD = JSON.stringify({
       // The health bar, which is a PICTURE and nothing else — no property, no
       // step, no handler pointing it at anybody. Its drawing asks the world
       // who has health, which a drawing may do now that its closure binds one.
-      defineActor(HEALTH_BAR, 'Health Bar', 1900, [healthBarDrawing()]),
+      // The same bar the starter imports, said in the world instead — its own
+      // `subject` property and the stock picture, which is parameterised by
+      // the block type that reads that property. An own property's block
+      // carries the path of the file that declared it, and a world-defined
+      // actor's path is the WORLD's plus the block that defines it
+      // (blockly/ownProperties), so the two tellings cannot share the literal
+      // blocks and do share the shape.
+      defineActor(HEALTH_BAR, 'Health Bar', 1900, [
+        HEALTH_BAR_SUBJECT,
+        drawingBlock(
+          healthBarDrawing(
+            `world_get_WorldsMain${pascalId(HEALTH_BAR)}_SubjectProperty`,
+          ),
+        ),
+      ]),
       defineActor(SCOREBOARD, 'Scoreboard', 2280, [
         useTrait('Writing#ShowsTextTrait'),
         useTrait('Scoring#WatchesTheScoreTrait'),

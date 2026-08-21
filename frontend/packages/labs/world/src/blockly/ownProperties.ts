@@ -277,7 +277,7 @@ export function worldOwnPropertyDeclarations(meta: OwnMeta): string {
 function declarations(meta: OwnMeta, receiver: string): string {
   return meta.properties
     .map(property =>
-      declarationLine(receiver, property.ref.exportName, property.id, {
+      declarationLine(receiver, property.ref.exportName, property.id, true, {
         type: property.type,
         value: property.default,
         name: property.name,
@@ -292,6 +292,7 @@ function declarationLine(
   receiver: string,
   exportName: string,
   id: string,
+  exported: boolean,
   declared: {
     type: PropertyType;
     value: unknown;
@@ -304,7 +305,7 @@ function declarationLine(
     opts.readonly = true;
   }
   return (
-    `export const ${exportName} = ${receiver}.defineProperty(` +
+    `${exported ? 'export ' : ''}const ${exportName} = ${receiver}.defineProperty(` +
     `${JSON.stringify(id)}, ${JSON.stringify(declared.type)}, ` +
     `${JSON.stringify(declared.value)}, ${JSON.stringify(opts)});\n`
   );
@@ -322,6 +323,14 @@ function declarationLine(
  *
  * It shares `declarationLine` with the assembler rather than formatting its
  * own, because the two must agree on the name a `get` block will reach for.
+ *
+ * NOT EXPORTED, unlike a file-level actor's. `export` is only legal at a
+ * module's top level and this lands inside the block a `define actor` opens,
+ * so exporting it is a syntax error — and there would be nothing to export to
+ * anyway, since the name is block-scoped. What that costs is that a handler
+ * elsewhere in the world cannot `set ⟨…⟩ of ⟨any ⟨Bar⟩⟩` for a world-defined
+ * actor's own property; the MAP still can, because `loadMap` resolves against
+ * the actor's live properties rather than by name (`Actor.ownProperties`).
  */
 export function ownPropertyDeclarationFor(fields: {
   name: string;
@@ -340,6 +349,7 @@ export function ownPropertyDeclarationFor(fields: {
     'actor',
     `${pascal(declared)}Property`,
     slug(declared),
+    false,
     {
       type,
       value: parseDefault(fields.default, type),

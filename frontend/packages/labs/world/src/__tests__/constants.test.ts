@@ -11,6 +11,7 @@ import {describe, expect, it} from 'vitest';
 
 import {getNextFileId, getNextFolderId} from '@code-dot-org/codebridge';
 
+import {healthBarActor} from '../actors/stock/healthBar';
 import {DEFAULT_PROJECT, starterFile} from '../constants';
 
 const source = DEFAULT_PROJECT.source;
@@ -106,6 +107,33 @@ describe('the starter project', () => {
     expect(starterFile('player').contents).toContain(
       'Collection#CollectsTrait',
     );
+  });
+
+  it('ships the stock health bar, pointed at the player by the map', () => {
+    // The bar used to be one the starter kept for itself, asking the world for
+    // the first actor with health — which works for exactly one game: the one
+    // with a single hurtable thing in it. This is the file a learner gets by
+    // importing, so the starter is a worked example of the shelf rather than a
+    // thing beside it.
+    //
+    // WHO IT IS ABOUT IS IN THE MAP and in no blocks at all: a placement holds
+    // the id of another placement, and `loadMap` resolves it once every entry
+    // exists (specs/MAPS.md).
+    expect(starterFile('healthBar').contents).toBe(healthBarActor);
+
+    const map = JSON.parse(starterFile('level1').contents) as {
+      actors: Array<{
+        id?: string;
+        properties?: Record<string, Record<string, unknown>>;
+      }>;
+    };
+    const bar = map.actors.find(actor => actor.id === 'HealthBar');
+    const named = bar?.properties?.Health_Bar?.subject;
+
+    // …and the placement it names is really there, since a reference to
+    // nothing is left unset and would draw an empty bar for ever.
+    expect(named).toBe('Player');
+    expect(map.actors.some(actor => actor.id === named)).toBe(true);
   });
 
   it('gives the player a jump, in one block instead of four', () => {
