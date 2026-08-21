@@ -217,6 +217,25 @@ not built.
 A SET of actors is still not offered: `contacts` is what a rule works out at
 runtime and there is nothing sensible to pick.
 
+**Two ways to say who, and both are needed.** The dropdown names any placement
+in the map; the button beside it arms a click on the canvas, and the next click
+chooses whatever it lands on. The dropdown is exact and unreadable the moment a
+level has thirty things in it; pointing is the gesture the canvas is already
+for, and is the one anybody with a pointer will use.
+
+Neither replaces the other. A canvas click cannot be reached from a keyboard,
+so an affordance that was the only way to set a reference would put the feature
+out of reach — the dropdown is what keeps it available.
+
+While a pick is armed the cursor is a crosshair and the hovered actor wears the
+REFERENCE colour rather than the hover one, because the click will point at it
+rather than select it. The click never changes the selection: doing so would
+take away the very actor whose property is being set. Escape disarms, a click
+on empty space disarms without clearing the value — undoing a reference is what
+the dropdown's "(none)" row is for, and a missed click should not be
+destructive — and selecting another actor disarms too, since the armed property
+belonged to the one that was selected when the button was pressed.
+
 ## 5. What blocks this: a world-local actor has no schema
 
 The inspector is driven by `schemas[type]`, which the sandbox builds by
