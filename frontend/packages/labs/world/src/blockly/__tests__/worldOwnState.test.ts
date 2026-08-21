@@ -89,7 +89,7 @@ describe('a `.world` file’s own properties', () => {
     const meta = parseWorldOwnMeta('worlds/main', worldFile([COUNT]))!;
 
     expect(worldOwnPropertyDeclarations(meta)).toBe(
-      'const ScoreProperty = world.defineProperty("score", "number", 0, ' +
+      'export const ScoreProperty = world.defineProperty("score", "number", 0, ' +
         '{"name":"score"});\n',
     );
   });

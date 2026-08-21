@@ -246,8 +246,17 @@ function declarationsFrom(
  * hoisted world hats emit `world.on(…)` above `const world`. The handlers that
  * read them come later still and close over these consts.
  *
- * Nothing is exported. Their scope is this file (see the note at the top), so
- * an export would offer a name no other module is allowed to ask for.
+ * EXPORTED, which the note at the top said this would grow into: "widening
+ * this later is additive". It has, and the stock Health Bar is why. A bar
+ * carries the actor it is about, and the whole point of that property is that
+ * something ELSE sets it — a world saying `set subject of ⟨any ⟨Health Bar⟩⟩
+ * to ⟨this actor⟩`. Module-local, that generated an import of a name the
+ * module did not offer, and the project would not compile.
+ *
+ * The scope that stays narrow is the DECLARATION: only the actor's own file
+ * may declare one, and only its own body may say `define property`. Who may
+ * read and write it afterwards is a different question, and the answer a
+ * rule's property already gives is the right one.
  */
 export function ownPropertyDeclarations(meta: OwnMeta): string {
   return declarations(meta, 'actor');
@@ -295,7 +304,7 @@ function declarationLine(
     opts.readonly = true;
   }
   return (
-    `const ${exportName} = ${receiver}.defineProperty(` +
+    `export const ${exportName} = ${receiver}.defineProperty(` +
     `${JSON.stringify(id)}, ${JSON.stringify(declared.type)}, ` +
     `${JSON.stringify(declared.value)}, ${JSON.stringify(opts)});\n`
   );

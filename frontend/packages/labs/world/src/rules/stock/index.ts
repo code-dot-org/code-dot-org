@@ -25,7 +25,6 @@ import {driveRule} from './drive';
 import {expiresRule} from './expires';
 import {gravityRule} from './gravity';
 import {healthRule} from './health';
-import {healthBarRule} from './healthBar';
 import {inputRule} from './input';
 import {jumpRule} from './jump';
 import {motionRule} from './motion';
@@ -147,15 +146,6 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Keeps one actor on another, at an offset it carries. A health bar over an enemy, a name over a player, a shield around a ship — anything that should move as one thing with something else.',
     provides: ['Attached'],
     contents: attachmentRule,
-  },
-  {
-    id: 'healthBar',
-    name: 'Health Bar',
-    ability: "Shows an Actor's Health",
-    description:
-      'Fills a progress bar from the health of whatever it is attached to. One step and no state \u2014 it is the sentence that says Health, Progress and Attachment are about the same actor.',
-    provides: ['Shows Health'],
-    contents: healthBarRule,
   },
   {
     id: 'time',
@@ -379,5 +369,4 @@ export {
   patrolRule,
   attachmentRule,
   progressRule,
-  healthBarRule,
 };
