@@ -16,10 +16,8 @@ const errorLines = (consoleManager: ConsoleManager) =>
     .getTerminalLines()
     .filter(line => line.includes(ENVIRONMENT_ERROR));
 
-// What is actually on screen. Writes are queued, so this waits for them to flush
-// -- and it can disagree with getTerminalLines(), which is the point of the tests
-// that use it.
-const displayedText = (consoleManager: ConsoleManager) =>
+// Reads the screen once everything written before this point has been parsed.
+const readScreen = (consoleManager: ConsoleManager) =>
   new Promise<string>(resolve => {
     const terminal = consoleManager.getTerminal();
     terminal.write('', () => {
@@ -31,6 +29,46 @@ const displayedText = (consoleManager: ConsoleManager) =>
       resolve(lines.join('\n'));
     });
   });
+
+// The manager gives the terminal one chunk at a time and queues the rest, so a
+// few rounds may be needed before all of it has reached the screen. Anything
+// these tests queue fits in far fewer rounds than this.
+const DRAIN_ROUNDS = 5;
+
+// What is actually on screen -- which can disagree with getTerminalLines(),
+// the point of the tests that use it.
+const displayedText = async (consoleManager: ConsoleManager) => {
+  let screen = '';
+  for (let round = 0; round < DRAIN_ROUNDS; round++) {
+    screen = await readScreen(consoleManager);
+  }
+  return screen;
+};
+
+// A terminal that acknowledges writes only when the test says so, so that a
+// backlog can be built up on demand.
+const stalledTerminal = () => {
+  const acknowledgements: (() => void)[] = [];
+  const terminal = {
+    write: jest.fn((data: string, done?: () => void) => {
+      if (done) {
+        acknowledgements.push(done);
+      }
+    }),
+    scrollToBottom: jest.fn(),
+    focus: jest.fn(),
+  };
+  return {
+    terminal,
+    consoleManager: new ConsoleManager(
+      terminal as unknown as Terminal,
+      new FitAddon()
+    ),
+    // Acknowledge every outstanding write, which lets the manager send more.
+    acknowledgeWrites: () => acknowledgements.splice(0).forEach(done => done()),
+    writtenData: () => terminal.write.mock.calls.map(call => call[0]),
+  };
+};
 
 const occurrences = (text: string, search: string) =>
   text.split(search).length - 1;
@@ -135,6 +173,61 @@ describe('ConsoleManager', () => {
     const displayed = await displayedText(consoleManager);
     expect(displayed).not.toContain('blocking Python Lab');
     expect(displayed).toContain('What is your name? Ada');
+  });
+
+  // The terminal throws "write data discarded" once 50MB of writes are waiting
+  // to be parsed, so it is never given a second write before the first lands.
+  it('gives the terminal one write at a time', () => {
+    const {consoleManager, writtenData, acknowledgeWrites} = stalledTerminal();
+
+    for (let line = 0; line < 100; line++) {
+      consoleManager.writeConsoleMessage(`line ${line}`);
+    }
+
+    expect(writtenData()).toEqual(['line 0\r\n']);
+    acknowledgeWrites();
+    expect(writtenData()).toHaveLength(2);
+    expect(writtenData()[1]).toContain('line 99');
+  });
+
+  it('drops output once the queue is full rather than piling it up', () => {
+    const {consoleManager, writtenData, acknowledgeWrites} = stalledTerminal();
+    const oneMegabyteLine = 'x'.repeat(1_000_000);
+
+    for (let line = 0; line < 20; line++) {
+      consoleManager.writeConsoleMessage(oneMegabyteLine);
+    }
+
+    const queuedCharacters = writtenData().join('').length;
+    expect(queuedCharacters).toBeLessThan(2_000_000);
+    acknowledgeWrites();
+    expect(writtenData().join('').length).toBeLessThan(6_000_000);
+  });
+
+  it('reports dropped output once the console has caught up', () => {
+    const {consoleManager, writtenData, acknowledgeWrites} = stalledTerminal();
+    const oneMegabyteLine = 'x'.repeat(1_000_000);
+
+    for (let line = 0; line < 20; line++) {
+      consoleManager.writeConsoleMessage(oneMegabyteLine);
+    }
+    acknowledgeWrites();
+    acknowledgeWrites();
+
+    expect(writtenData().join('')).toContain(
+      'characters of output were dropped'
+    );
+  });
+
+  it('does not write output that was cleared before it was sent', () => {
+    const {consoleManager, writtenData, acknowledgeWrites} = stalledTerminal();
+    consoleManager.writeConsoleMessage('first line');
+    consoleManager.writeConsoleMessage('queued line');
+
+    consoleManager.clearTerminalLines();
+    acknowledgeWrites();
+
+    expect(writtenData().join('')).not.toContain('queued line');
   });
 
   it('does nothing when retracting an error that was never reported', async () => {

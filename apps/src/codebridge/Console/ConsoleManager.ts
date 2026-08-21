@@ -8,6 +8,22 @@ import {Terminal} from '@xterm/xterm';
 // the erase is applied in order with the lines around it.
 const CLEAR_DISPLAY = '\x1b[2J\x1b[3J\x1b[H';
 
+// xterm.js parses writes on a timer rather than on the spot, and throws
+// "write data discarded, use flow control to avoid losing data" once 50MB of
+// unparsed writes have piled up -- which a program printing in a tight loop
+// reaches in seconds. So hand xterm one chunk at a time and hold the rest here:
+// nothing of ours is outstanding at the moment we call write(), so its limit
+// stays out of reach. Output arriving while this queue is full is counted and
+// dropped; a single oversized write, such as a plot, still goes through whole.
+const MAX_QUEUED_BYTES = 4_000_000;
+
+// Lines are kept so they can be replayed into a re-created console and read by
+// the AI tutor, so a program that prints without stopping would otherwise grow
+// this without bound. Trimming in batches keeps the cost of a long run
+// proportional to the number of lines printed.
+const MAX_TERMINAL_LINES = 5000;
+const TERMINAL_LINES_TRIM_BATCH = 1000;
+
 // Manager for xterm.js-based console in codebridge
 export default class ConsoleManager {
   private terminal: Terminal;
@@ -21,6 +37,13 @@ export default class ConsoleManager {
   // so this manager owns writing it.
   private codeEnvironmentError: string | null;
   private terminalLinesListeners: ((lines: string[]) => void)[] = [];
+  // Writes waiting to be handed to the terminal, and the number of characters
+  // in them. See MAX_QUEUED_BYTES.
+  private queuedWrites: string[];
+  private queuedBytes: number;
+  private awaitingWrite: boolean;
+  // Characters dropped because the queue was full, reported once the flood ends.
+  private droppedCharacters: number;
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
@@ -29,6 +52,10 @@ export default class ConsoleManager {
     this.inputBuffer = '';
     this.lastLineIsPartial = false;
     this.codeEnvironmentError = null;
+    this.queuedWrites = [];
+    this.queuedBytes = 0;
+    this.awaitingWrite = false;
+    this.droppedCharacters = 0;
   }
 
   public getTerminal() {
@@ -41,6 +68,10 @@ export default class ConsoleManager {
 
   public setTerminal(terminal: Terminal) {
     this.terminal = terminal;
+    // The write we are waiting on belongs to the old terminal and its callback
+    // may never arrive, so stop waiting for it.
+    this.awaitingWrite = false;
+    this.flushQueuedWrites();
   }
 
   public setTerminalFitAddon(terminalFitAddon: FitAddon) {
@@ -49,7 +80,11 @@ export default class ConsoleManager {
 
   public clearTerminalLines() {
     this.terminalLines = [];
-    this.terminal.write(CLEAR_DISPLAY);
+    // Output still waiting here is output the user just asked to be rid of, and
+    // dropping it means a clear stays instant however flooded the console is.
+    this.discardQueuedWrites();
+    this.droppedCharacters = 0;
+    this.writeToTerminal(CLEAR_DISPLAY);
     this.lastLineIsPartial = false;
     // Characters typed since the last newline are erased along with everything
     // else, so keeping them would send text the user can no longer see.
@@ -89,15 +124,19 @@ export default class ConsoleManager {
     }
     this.terminalLines = remainingLines;
 
-    this.terminal.write(CLEAR_DISPLAY);
-    this.terminalLines.forEach((line, index) => {
+    // Queued writes are already part of terminalLines, so the redraw covers
+    // them; keeping them queued would only draw them a second time.
+    this.discardQueuedWrites();
+    const redrawnLines = this.terminalLines.map((line, index) => {
       const isLastLine = index === this.terminalLines.length - 1;
       const terminatesLine = !isLastLine || !this.lastLineIsPartial;
-      this.terminal.write(terminatesLine ? `${line}\r\n` : line);
+      return terminatesLine ? `${line}\r\n` : line;
     });
     // Anything the user has typed since the last newline is not in
     // terminalLines yet, so redraw it too.
-    this.terminal.write(this.inputBuffer);
+    this.writeToTerminal(
+      CLEAR_DISPLAY + redrawnLines.join('') + this.inputBuffer
+    );
 
     this.executeTerminalLinesListeners();
   }
@@ -117,7 +156,7 @@ export default class ConsoleManager {
   public writePartialLine(message: string) {
     this.updateTerminalLines(message);
     this.lastLineIsPartial = true;
-    this.terminal.write(message);
+    this.writeToTerminal(message);
     this.terminal.scrollToBottom();
     this.terminal.focus();
   }
@@ -162,7 +201,7 @@ export default class ConsoleManager {
   private appendTerminalLine(line: string, focusTerminal = true) {
     this.updateTerminalLines(line);
     this.lastLineIsPartial = false;
-    this.terminal.writeln(line);
+    this.writeToTerminal(`${line}\r\n`);
     this.terminal.scrollToBottom();
     if (focusTerminal) {
       this.terminal.focus();
@@ -174,7 +213,66 @@ export default class ConsoleManager {
       this.terminalLines[this.terminalLines.length - 1] += message;
     } else {
       this.terminalLines.push(message);
+      if (
+        this.terminalLines.length >
+        MAX_TERMINAL_LINES + TERMINAL_LINES_TRIM_BATCH
+      ) {
+        this.terminalLines.splice(
+          0,
+          this.terminalLines.length - MAX_TERMINAL_LINES
+        );
+      }
     }
     this.executeTerminalLinesListeners();
+  }
+
+  // Every write to the terminal goes through here. Data is held until the
+  // terminal reports that the previous chunk has been parsed, which is what
+  // keeps xterm's own backlog -- and its 50MB ceiling -- out of the picture.
+  private writeToTerminal(data: string) {
+    // A write larger than the whole allowance is still let through when nothing
+    // is queued, so that one big thing, such as a plot, is never half-drawn.
+    if (
+      this.queuedBytes > 0 &&
+      this.queuedBytes + data.length > MAX_QUEUED_BYTES
+    ) {
+      this.droppedCharacters += data.length;
+      return;
+    }
+    this.queuedWrites.push(data);
+    this.queuedBytes += data.length;
+    this.flushQueuedWrites();
+  }
+
+  private discardQueuedWrites() {
+    this.queuedWrites = [];
+    this.queuedBytes = 0;
+  }
+
+  private flushQueuedWrites() {
+    if (this.awaitingWrite || this.queuedWrites.length === 0) {
+      return;
+    }
+    const chunk = this.queuedWrites.join('');
+    this.discardQueuedWrites();
+    this.awaitingWrite = true;
+    this.terminal.write(chunk, () => {
+      this.awaitingWrite = false;
+      this.reportDroppedOutput();
+      this.flushQueuedWrites();
+    });
+  }
+
+  // Said once the console has caught up, rather than once per dropped write.
+  private reportDroppedOutput() {
+    if (this.droppedCharacters === 0 || this.queuedWrites.length > 0) {
+      return;
+    }
+    const dropped = this.droppedCharacters;
+    this.droppedCharacters = 0;
+    this.appendTerminalLine(
+      `[${dropped.toLocaleString()} characters of output were dropped: the program printed faster than the console could display.]`,
+      false
+    );
   }
 }
