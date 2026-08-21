@@ -23,6 +23,7 @@ import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 import {getPreviewDomain} from '@cdo/apps/util/sandboxedPreviewDomain';
 import {createUuid} from '@cdo/apps/utils';
 
+import type {ExternalFileContents} from './pythonHelpers/externalFileContents';
 import {
   parseMessageToNeighborhoodSignal,
   parseErrorMessage,
@@ -304,7 +305,8 @@ const asyncRun = (() => {
     script: string,
     source: MultiFileSource,
     validationFile?: ProjectFile,
-    shouldOutputToNeighborhood?: boolean
+    shouldOutputToNeighborhood?: boolean,
+    externalFiles?: ExternalFileContents
   ) => {
     id = createUuid();
 
@@ -333,6 +335,7 @@ const asyncRun = (() => {
           id,
           source,
           validationFile,
+          externalFiles,
         },
         sandboxOrigin()
       );

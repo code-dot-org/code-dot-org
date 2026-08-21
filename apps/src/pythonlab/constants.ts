@@ -72,5 +72,13 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
 
 export const PYTHONLAB_EDITABLE_FILE_TYPES = ['py', 'csv', 'txt', 'json'];
 
+// Theater's draw_image draws only the first frame of an animated gif, so a gif
+// in a project would look broken to a student.
+const UNPLAYABLE_IMAGE_EXTENSION = 'gif';
+
 export const PYTHONLAB_SUPPORTED_FILE_TYPES =
-  PYTHONLAB_EDITABLE_FILE_TYPES.concat(SUPPORTED_IMAGE_EXTENSIONS);
+  PYTHONLAB_EDITABLE_FILE_TYPES.concat(
+    SUPPORTED_IMAGE_EXTENSIONS.filter(
+      extension => extension !== UNPLAYABLE_IMAGE_EXTENSION
+    )
+  );

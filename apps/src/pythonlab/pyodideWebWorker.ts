@@ -105,7 +105,7 @@ initializePyodide();
 onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, source, validationFile} = event.data;
+  const {id, python, source, validationFile, externalFiles} = event.data;
   let results = undefined;
   let sourceToWrite = source;
   // Add the validation file to the source if it exists. Use the id "validation"
@@ -120,7 +120,7 @@ onmessage = async event => {
     };
   }
   try {
-    writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
+    writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide, externalFiles);
     postMessage({type: 'loading_packages'});
     await importPackagesFromFiles(sourceToWrite, pyodide);
     postMessage({type: 'loaded_packages'});
