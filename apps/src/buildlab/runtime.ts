@@ -1,9 +1,11 @@
 import type {StageElement} from './project';
 
 const STAGE_SIZE = 400;
+export const DEFAULT_SPRITE_SIZE = 76;
 
 export interface RuntimeState {
   elements: StageElement[];
+  variables: Record<string, string>;
   pendingGeneration?: PendingGeneration;
   keyboardMovements?: KeyboardMovement[];
   pendingPrediction?: PendingPrediction;
@@ -30,6 +32,41 @@ export type ArrowDirection =
   | 'ArrowLeft'
   | 'ArrowRight'
   | 'ArrowUp';
+
+export function spritesAreTouching(
+  elements: readonly StageElement[],
+  firstId: string,
+  secondId: string
+) {
+  if (firstId === secondId) {
+    return false;
+  }
+
+  const first = elements.find(element => element.id === firstId);
+  const second = elements.find(element => element.id === secondId);
+  if (
+    !first ||
+    !second ||
+    first.kind !== 'sprite' ||
+    second.kind !== 'sprite' ||
+    first.visible === false ||
+    second.visible === false
+  ) {
+    return false;
+  }
+
+  const firstWidth = first.width ?? DEFAULT_SPRITE_SIZE;
+  const firstHeight = first.height ?? DEFAULT_SPRITE_SIZE;
+  const secondWidth = second.width ?? DEFAULT_SPRITE_SIZE;
+  const secondHeight = second.height ?? DEFAULT_SPRITE_SIZE;
+
+  return (
+    first.x < second.x + secondWidth &&
+    first.x + firstWidth > second.x &&
+    first.y < second.y + secondHeight &&
+    first.y + firstHeight > second.y
+  );
+}
 
 export function moveWithArrowKeys(
   runtimeState: RuntimeState,

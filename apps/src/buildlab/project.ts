@@ -21,6 +21,7 @@ export interface StageElement {
   borderColor?: string;
   borderRadius?: number;
   borderWidth?: number;
+  className?: string;
   fontFamily?: string;
   fontSize?: number;
   height?: number;
@@ -124,54 +125,12 @@ export const SPRITE_LAB_STARTER_ASSETS_VERSION = 1;
 
 export const DEFAULT_PROJECT: BuildLabProject = {
   assets: SPRITE_LAB_STARTER_ASSETS,
-  dataTables: [
-    {
-      columns: [
-        {id: 'name', name: 'name'},
-        {id: 'score', name: 'score'},
-      ],
-      id: 'scores',
-      name: 'Scores',
-      rows: [
-        {id: 'scores-row-1', values: {name: 'Avery', score: '12'}},
-        {id: 'scores-row-2', values: {name: 'Sam', score: '8'}},
-      ],
-    },
-  ],
-  elements: [
-    {
-      id: 'label1',
-      kind: 'label',
-      label: 'Welcome to Build Lab',
-      screenId: 'screen1',
-      x: 54,
-      y: 64,
-    },
-    {
-      id: 'button1',
-      kind: 'button',
-      label: 'Start',
-      screenId: 'screen1',
-      x: 145,
-      y: 155,
-    },
-    {
-      assetId: 'bear',
-      id: 'sprite1',
-      kind: 'sprite',
-      label: 'Orbit',
-      screenId: 'screen1',
-      x: 162,
-      y: 245,
-    },
-  ],
+  dataTables: [],
+  elements: [],
   mlModels: [],
-  keyValuePairs: [
-    {id: 'welcome-message', key: 'welcomeMessage', value: 'Hello, friend!'},
-  ],
+  keyValuePairs: [],
   screens: [
     {
-      backgroundAssetId: 'background-space',
       id: 'screen1',
       isDefault: true,
       name: 'Screen 1',
@@ -181,21 +140,7 @@ export const DEFAULT_PROJECT: BuildLabProject = {
   workspaceState: {
     blocks: {
       languageVersion: 0,
-      blocks: [
-        {
-          type: 'buildlab_when_run',
-          id: 'project-start',
-          x: 48,
-          y: 48,
-          next: {
-            block: {
-              type: 'buildlab_create_sprite',
-              id: 'starter-sprite',
-              fields: {ASSET: 'bear', X: 200, Y: 200},
-            },
-          },
-        },
-      ],
+      blocks: [],
     },
   },
 };

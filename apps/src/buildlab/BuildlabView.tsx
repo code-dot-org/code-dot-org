@@ -569,6 +569,36 @@ export default function BuildlabView({
         .map(element => [`${element.id} (${element.label})`, element.id]),
     [elements]
   );
+  const blocklyTouchTargetOptions = useMemo<BuildlabDropdownOption[]>(() => {
+    const spriteOptions: BuildlabDropdownOption[] = elements
+      .filter(element => element.kind === 'sprite')
+      .map(
+        element =>
+          [
+            `${element.id} (${element.label})`,
+            element.id,
+          ] as BuildlabDropdownOption
+      );
+    const classNames = Array.from(
+      new Set(
+        elements
+          .filter(element => element.kind === 'sprite')
+          .map(element => element.className?.trim())
+          .filter((className): className is string => Boolean(className))
+      )
+    ).sort();
+
+    return [
+      ...spriteOptions,
+      ...classNames.map(
+        className =>
+          [
+            `${className} (class)`,
+            `class:${className}`,
+          ] as BuildlabDropdownOption
+      ),
+    ];
+  }, [elements]);
   const blocklyScreenOptions = useMemo<BuildlabDropdownOption[]>(
     () => screens.map(screen => [screen.name, screen.id]),
     [screens]
@@ -1145,6 +1175,7 @@ export default function BuildlabView({
       initialState: {
         elements: elements.map(element => ({...element})),
         keyboardMovements: [],
+        variables: {},
         screenId: defaultScreenId(screens, activeScreenId),
       },
       screens,
@@ -1704,6 +1735,7 @@ export default function BuildlabView({
                   readOnly={readOnly}
                   screenOptions={blocklyScreenOptions}
                   spriteOptions={blocklySpriteOptions}
+                  touchTargetOptions={blocklyTouchTargetOptions}
                   modelOptions={blocklyModelOptions}
                   workspaceState={workspaceState}
                 />
@@ -1833,17 +1865,21 @@ export default function BuildlabView({
                           value={activeScreen?.id ?? ''}
                         />
                         <SimpleDropdown
-                          items={assets
-                            .filter(asset => asset.assetType === 'background')
-                            .map(asset => ({
-                              text: asset.name,
-                              value: asset.id,
-                            }))}
+                          items={[
+                            {text: 'None', value: ''},
+                            ...assets
+                              .filter(asset => asset.assetType === 'background')
+                              .map(asset => ({
+                                text: asset.name,
+                                value: asset.id,
+                              })),
+                          ]}
                           labelText="Background image"
                           name="screen-background"
                           onChange={event =>
                             updateScreen(activeScreenId, {
-                              backgroundAssetId: event.target.value,
+                              backgroundAssetId:
+                                event.target.value || undefined,
                             })
                           }
                           selectedValue={activeScreen?.backgroundAssetId ?? ''}
@@ -1898,6 +1934,16 @@ export default function BuildlabView({
                           setSelectedElementId(id);
                         }}
                         value={selectedElement.id}
+                      />
+                      <TextField
+                        label="Class"
+                        name="element-class"
+                        onChange={event =>
+                          updateElement(selectedElement.id, {
+                            className: event.target.value.trim() || undefined,
+                          })
+                        }
+                        value={selectedElement.className ?? ''}
                       />
                       <TextField
                         label="Text"
@@ -3077,6 +3123,9 @@ export default function BuildlabView({
                 ...(displayedBackgroundImageUrl
                   ? {
                       backgroundImage: `url(${displayedBackgroundImageUrl})`,
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: '100% 100%',
                     }
                   : {}),
               }}
@@ -3159,23 +3208,13 @@ function PaletteElement({
   );
 }
 
-function createSeedImageData(color: string, height: number) {
+function createSeedImageData(width: number, height: number) {
   if (typeof document === 'undefined') {
     return '';
   }
   const canvas = document.createElement('canvas');
-  canvas.width = 32;
+  canvas.width = width;
   canvas.height = height;
-  const context = canvas.getContext('2d');
-  if (!context) {
-    return '';
-  }
-  context.fillStyle = color;
-  context.fillRect(0, 0, canvas.width, canvas.height);
-  context.fillStyle = 'rgba(255, 255, 255, 0.3)';
-  context.fillRect(3, 3, 10, Math.min(10, height));
-  context.fillStyle = 'rgba(0, 0, 0, 0.2)';
-  context.fillRect(19, Math.max(0, height - 12), 10, Math.min(9, height));
   return canvas.toDataURL('image/png');
 }
 
@@ -3205,7 +3244,8 @@ function AssetEditor({
   const [pixelEditorRevision, setPixelEditorRevision] = useState(0);
   const pixelEditorRef = useRef<PixelEditorHandle>(null);
   const isAnimation = asset.assetType === 'animation';
-  const imageHeight = asset.assetType === 'background' ? 20 : 32;
+  const imageWidth = asset.assetType === 'background' ? 400 : 100;
+  const imageHeight = imageWidth;
 
   useEffect(() => {
     setName(asset.name);
@@ -3221,17 +3261,10 @@ function AssetEditor({
   }, [asset]);
 
   const currentImageData = isAnimation ? frames[frame] : dataUrl;
-  const seedColor =
-    asset.style === 'sun'
-      ? '#f7be36'
-      : asset.style === 'orbit'
-      ? '#4a7fcc'
-      : '#48a9c5';
-
   const editorImageData =
     currentImageData ||
     getAssetEditorImageUrl(asset) ||
-    createSeedImageData(seedColor, imageHeight);
+    createSeedImageData(imageWidth, imageHeight);
 
   const commitCurrentEditorFrame = () => {
     const nextDataUrl = pixelEditorRef.current?.getImage()?.dataURI;
@@ -3347,7 +3380,9 @@ function AssetEditor({
           >
             {isDirty ? 'Unsaved changes' : 'All changes saved'}
           </span>
-          <span className={styles.editorDimensions}>32 × {imageHeight} px</span>
+          <span className={styles.editorDimensions}>
+            {imageWidth} × {imageHeight} px
+          </span>
           <button
             aria-label={`Delete ${asset.name}`}
             className={styles.deleteAssetButton}
@@ -3481,7 +3516,9 @@ function AssetEditor({
             <span>Type</span>
             <strong>{asset.assetType}</strong>
             <span>Canvas</span>
-            <strong>32 × {imageHeight} px</strong>
+            <strong>
+              {imageWidth} × {imageHeight} px
+            </strong>
           </div>
           <div className={styles.assetHint}>
             <FontAwesomeV6Icon iconName="lightbulb" />

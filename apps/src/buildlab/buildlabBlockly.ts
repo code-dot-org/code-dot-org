@@ -39,6 +39,25 @@ export const BUILD_LAB_BLOCK_DEFINITIONS = [
     tooltip: 'Runs when a stage element is clicked.',
   },
   {
+    type: 'buildlab_on_touch',
+    message0: 'when %1 touches %2',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'SPRITE',
+        options: [['sprite1', 'sprite1']],
+      },
+      {
+        type: 'field_dropdown',
+        name: 'TARGET',
+        options: [['sprite1', 'sprite1']],
+      },
+    ],
+    nextStatement: null,
+    style: 'event_blocks',
+    tooltip: 'Runs once when two sprites begin touching.',
+  },
+  {
     type: 'buildlab_set_text',
     message0: 'set %1 text to %2',
     args0: [
@@ -110,6 +129,46 @@ export const BUILD_LAB_BLOCK_DEFINITIONS = [
     tooltip: 'Shows or hides an element.',
   },
   {
+    type: 'buildlab_set_variable',
+    message0: 'set variable %1 to %2',
+    args0: [
+      {type: 'field_input', name: 'NAME', text: 'score'},
+      {type: 'field_input', name: 'VALUE', text: '0'},
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: 'Stores a value in a variable.',
+  },
+  {
+    type: 'buildlab_change_variable',
+    message0: 'change variable %1 by %2',
+    args0: [
+      {type: 'field_input', name: 'NAME', text: 'score'},
+      {type: 'field_number', name: 'AMOUNT', value: 1},
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: 'Changes a numeric variable by an amount.',
+  },
+  {
+    type: 'buildlab_set_text_from_variable',
+    message0: 'set %1 text to variable %2',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'ELEMENT',
+        options: [['label1', 'label1']],
+      },
+      {type: 'field_input', name: 'NAME', text: 'score'},
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: 'Keeps an element text in sync with a variable.',
+  },
+  {
     type: 'buildlab_move_with_arrow_keys',
     message0: 'make %1 move with arrow keys at speed %2',
     args0: [
@@ -124,6 +183,39 @@ export const BUILD_LAB_BLOCK_DEFINITIONS = [
     nextStatement: null,
     style: 'behavior_blocks',
     tooltip: 'Moves a sprite while an arrow key is held.',
+  },
+  {
+    type: 'buildlab_set_sprite_size',
+    message0: 'set %1 size to %2 %',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'SPRITE',
+        options: [['sprite1', 'sprite1']],
+      },
+      {type: 'field_number', name: 'SIZE', value: 100, min: 10, max: 300},
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'sprite_blocks',
+    tooltip: 'Changes a sprite size relative to its default size.',
+  },
+  {
+    type: 'buildlab_change_sprite_position',
+    message0: 'change %1 x by %2 y by %3',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'SPRITE',
+        options: [['sprite1', 'sprite1']],
+      },
+      {type: 'field_number', name: 'DX', value: 10},
+      {type: 'field_number', name: 'DY', value: 0},
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'sprite_blocks',
+    tooltip: 'Moves a sprite by an amount without leaving the stage.',
   },
   {
     type: 'buildlab_predict_model',
@@ -213,7 +305,19 @@ export const BUILD_LAB_TOOLBOX: BlocklyCore.utils.toolbox.ToolboxInfo = {
       colour: '#e08528',
       contents: [
         {kind: 'block', type: 'buildlab_move_with_arrow_keys'},
+        {kind: 'block', type: 'buildlab_set_sprite_size'},
+        {kind: 'block', type: 'buildlab_change_sprite_position'},
         {kind: 'block', type: 'buildlab_predict_model'},
+      ],
+    },
+    {
+      kind: 'category',
+      name: 'Variables',
+      colour: '#4c9f38',
+      contents: [
+        {kind: 'block', type: 'buildlab_set_variable'},
+        {kind: 'block', type: 'buildlab_change_variable'},
+        {kind: 'block', type: 'buildlab_set_text_from_variable'},
       ],
     },
     {
@@ -226,12 +330,19 @@ export const BUILD_LAB_TOOLBOX: BlocklyCore.utils.toolbox.ToolboxInfo = {
       kind: 'category',
       name: 'Events',
       colour: '#d45c3a',
-      contents: [{kind: 'block', type: 'buildlab_on_click'}],
+      contents: [
+        {kind: 'block', type: 'buildlab_on_click'},
+        {kind: 'block', type: 'buildlab_on_touch'},
+      ],
     },
   ],
 };
 
-const HAT_BLOCK_TYPES = new Set(['buildlab_when_run', 'buildlab_on_click']);
+const HAT_BLOCK_TYPES = new Set([
+  'buildlab_when_run',
+  'buildlab_on_click',
+  'buildlab_on_touch',
+]);
 
 function quote(value: unknown) {
   return JSON.stringify(String(value));
@@ -255,6 +366,11 @@ function registerGenerators() {
       block.getFieldValue('ELEMENT')
     )}, function () {\n${nextCode(block, blockGenerator)}});\n`;
 
+  generator.forBlock.buildlab_on_touch = (block, blockGenerator) =>
+    `engine.onTouch(${quote(block.getFieldValue('SPRITE'))}, ${quote(
+      block.getFieldValue('TARGET')
+    )}, function () {\n${nextCode(block, blockGenerator)}});\n`;
+
   generator.forBlock.buildlab_set_text = block =>
     `engine.setText(${quote(block.getFieldValue('ELEMENT'))}, ${quote(
       block.getFieldValue('TEXT')
@@ -273,10 +389,37 @@ function registerGenerators() {
       block.getFieldValue('VISIBLE')
     )});\n`;
 
+  generator.forBlock.buildlab_set_variable = block =>
+    `engine.setVariable(${quote(block.getFieldValue('NAME'))}, ${quote(
+      block.getFieldValue('VALUE')
+    )});\n`;
+
+  generator.forBlock.buildlab_change_variable = block =>
+    `engine.changeVariable(${quote(block.getFieldValue('NAME'))}, ${quote(
+      block.getFieldValue('AMOUNT')
+    )});\n`;
+
+  generator.forBlock.buildlab_set_text_from_variable = block =>
+    `engine.bindTextToVariable(${quote(
+      block.getFieldValue('ELEMENT')
+    )}, ${quote(block.getFieldValue('NAME'))});\n`;
+
   generator.forBlock.buildlab_move_with_arrow_keys = block =>
     `engine.enableArrowMovement(${quote(
       block.getFieldValue('SPRITE')
     )}, ${quote(block.getFieldValue('SPEED'))});\n`;
+
+  generator.forBlock.buildlab_set_sprite_size = block =>
+    `engine.setSpriteSize(${quote(block.getFieldValue('SPRITE'))}, ${quote(
+      block.getFieldValue('SIZE')
+    )});\n`;
+
+  generator.forBlock.buildlab_change_sprite_position = block =>
+    `engine.changeSpritePosition(${quote(
+      block.getFieldValue('SPRITE')
+    )}, ${quote(block.getFieldValue('DX'))}, ${quote(
+      block.getFieldValue('DY')
+    )});\n`;
 
   generator.forBlock.buildlab_predict_model = block =>
     `engine.predictModel(${quote(block.getFieldValue('MODEL'))}, ${quote(

@@ -28,6 +28,7 @@ interface Props {
   readOnly?: boolean;
   screenOptions: BuildlabDropdownOption[];
   spriteOptions: BuildlabDropdownOption[];
+  touchTargetOptions: BuildlabDropdownOption[];
   modelOptions: BuildlabDropdownOption[];
   workspaceState: BuildlabWorkspaceState;
 }
@@ -49,21 +50,7 @@ export interface BuildlabDesignEvent {
 export const INITIAL_WORKSPACE_STATE: BuildlabWorkspaceState = {
   blocks: {
     languageVersion: 0,
-    blocks: [
-      {
-        type: 'buildlab_when_run',
-        id: 'project-start',
-        x: 48,
-        y: 48,
-        next: {
-          block: {
-            type: 'buildlab_create_sprite',
-            id: 'starter-sprite',
-            fields: {ASSET: 'bear', X: 200, Y: 200},
-          },
-        },
-      },
-    ],
+    blocks: [],
   },
 };
 
@@ -260,6 +247,7 @@ export function renameElementReferencesInWorkspace(
     if (
       (block.type === 'buildlab_on_click' ||
         block.type === 'buildlab_set_text' ||
+        block.type === 'buildlab_set_text_from_variable' ||
         block.type === 'buildlab_set_position' ||
         block.type === 'buildlab_set_visible') &&
       fields.ELEMENT === previousElementId
@@ -271,6 +259,20 @@ export function renameElementReferencesInWorkspace(
       fields.SPRITE === previousElementId
     ) {
       fields.SPRITE = nextElementId;
+    }
+    if (
+      (block.type === 'buildlab_on_touch' ||
+        block.type === 'buildlab_set_sprite_size' ||
+        block.type === 'buildlab_change_sprite_position') &&
+      fields.SPRITE === previousElementId
+    ) {
+      fields.SPRITE = nextElementId;
+    }
+    if (
+      block.type === 'buildlab_on_touch' &&
+      fields.TARGET === previousElementId
+    ) {
+      fields.TARGET = nextElementId;
     }
     if (
       (block.type === 'buildlab_predict_model' ||
@@ -340,8 +342,25 @@ export function removeDesignEventsForElement(
       ...workspaceState.blocks,
       blocks: workspaceState.blocks.blocks.filter(block => {
         if (
-          block.type === 'buildlab_move_with_arrow_keys' &&
+          (block.type === 'buildlab_move_with_arrow_keys' ||
+            block.type === 'buildlab_set_sprite_size' ||
+            block.type === 'buildlab_change_sprite_position') &&
           block.fields?.SPRITE === elementId
+        ) {
+          return false;
+        }
+
+        if (
+          block.type === 'buildlab_on_touch' &&
+          (block.fields?.SPRITE === elementId ||
+            block.fields?.TARGET === elementId)
+        ) {
+          return false;
+        }
+
+        if (
+          block.type === 'buildlab_set_text_from_variable' &&
+          block.fields?.ELEMENT === elementId
         ) {
           return false;
         }
@@ -352,7 +371,8 @@ export function removeDesignEventsForElement(
 
         const actionBlock = block.next?.block;
         const actionTarget =
-          actionBlock?.type === 'buildlab_set_text'
+          actionBlock?.type === 'buildlab_set_text' ||
+          actionBlock?.type === 'buildlab_set_text_from_variable'
             ? actionBlock.fields?.ELEMENT
             : actionBlock?.type === 'buildlab_predict_model' ||
               actionBlock?.type === 'buildlab_generate_text'
@@ -380,8 +400,25 @@ export function removeDesignEventsForScreen(
       ...workspaceState.blocks,
       blocks: workspaceState.blocks.blocks.filter(block => {
         if (
-          block.type === 'buildlab_move_with_arrow_keys' &&
+          (block.type === 'buildlab_move_with_arrow_keys' ||
+            block.type === 'buildlab_set_sprite_size' ||
+            block.type === 'buildlab_change_sprite_position') &&
           removedElementIds.has(String(block.fields?.SPRITE ?? ''))
+        ) {
+          return false;
+        }
+
+        if (
+          block.type === 'buildlab_on_touch' &&
+          (removedElementIds.has(String(block.fields?.SPRITE ?? '')) ||
+            removedElementIds.has(String(block.fields?.TARGET ?? '')))
+        ) {
+          return false;
+        }
+
+        if (
+          block.type === 'buildlab_set_text_from_variable' &&
+          removedElementIds.has(String(block.fields?.ELEMENT ?? ''))
         ) {
           return false;
         }
@@ -405,6 +442,10 @@ export function removeDesignEventsForScreen(
         return (
           !(
             actionBlock?.type === 'buildlab_set_text' &&
+            removedElementIds.has(String(actionBlock.fields?.ELEMENT ?? ''))
+          ) &&
+          !(
+            actionBlock?.type === 'buildlab_set_text_from_variable' &&
             removedElementIds.has(String(actionBlock.fields?.ELEMENT ?? ''))
           ) &&
           !(
@@ -515,6 +556,7 @@ function updateWorkspaceDropdowns(
   screenOptions: BuildlabDropdownOption[],
   assetOptions: BuildlabDropdownOption[],
   spriteOptions: BuildlabDropdownOption[],
+  touchTargetOptions: BuildlabDropdownOption[],
   modelOptions: BuildlabDropdownOption[]
 ) {
   updateDropdownOptions(
@@ -539,6 +581,12 @@ function updateWorkspaceDropdowns(
     workspace,
     'SPRITE',
     spriteOptions,
+    'No sprites available'
+  );
+  updateDropdownOptions(
+    workspace,
+    'TARGET',
+    touchTargetOptions,
     'No sprites available'
   );
   updateDropdownOptions(workspace, 'MODEL', modelOptions, 'No models imported');
@@ -592,6 +640,7 @@ function loadWorkspaceState(
   screenOptions: BuildlabDropdownOption[],
   assetOptions: BuildlabDropdownOption[],
   spriteOptions: BuildlabDropdownOption[],
+  touchTargetOptions: BuildlabDropdownOption[],
   modelOptions: BuildlabDropdownOption[]
 ) {
   const normalizedWorkspaceState =
@@ -604,6 +653,7 @@ function loadWorkspaceState(
     screenOptions,
     assetOptions,
     spriteOptions,
+    touchTargetOptions,
     modelOptions
   );
   restoreDropdownValues(workspace, normalizedWorkspaceState);
@@ -616,6 +666,7 @@ export default function BlocklyWorkspace({
   readOnly = false,
   screenOptions,
   spriteOptions,
+  touchTargetOptions,
   modelOptions,
   workspaceState,
 }: Props) {
@@ -626,6 +677,7 @@ export default function BlocklyWorkspace({
     elementOptions,
     screenOptions,
     spriteOptions,
+    touchTargetOptions,
     modelOptions,
   });
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
@@ -636,6 +688,7 @@ export default function BlocklyWorkspace({
     elementOptions,
     screenOptions,
     spriteOptions,
+    touchTargetOptions,
     modelOptions,
   };
   onWorkspaceChangeRef.current = onWorkspaceChange;
@@ -671,6 +724,7 @@ export default function BlocklyWorkspace({
       dropdownOptionsRef.current.screenOptions,
       dropdownOptionsRef.current.assetOptions,
       dropdownOptionsRef.current.spriteOptions,
+      dropdownOptionsRef.current.touchTargetOptions,
       dropdownOptionsRef.current.modelOptions
     );
 
@@ -683,6 +737,7 @@ export default function BlocklyWorkspace({
           dropdownOptionsRef.current.screenOptions,
           dropdownOptionsRef.current.assetOptions,
           dropdownOptionsRef.current.spriteOptions,
+          dropdownOptionsRef.current.touchTargetOptions,
           dropdownOptionsRef.current.modelOptions
         );
       } finally {
@@ -775,6 +830,7 @@ export default function BlocklyWorkspace({
         dropdownOptionsRef.current.screenOptions,
         dropdownOptionsRef.current.assetOptions,
         dropdownOptionsRef.current.spriteOptions,
+        dropdownOptionsRef.current.touchTargetOptions,
         dropdownOptionsRef.current.modelOptions
       );
     } finally {
@@ -796,6 +852,7 @@ export default function BlocklyWorkspace({
         screenOptions,
         assetOptions,
         spriteOptions,
+        touchTargetOptions,
         modelOptions
       );
     } finally {
@@ -807,6 +864,7 @@ export default function BlocklyWorkspace({
     modelOptions,
     screenOptions,
     spriteOptions,
+    touchTargetOptions,
   ]);
 
   return <div className={styles.blocklyWorkspace} ref={containerRef} />;
