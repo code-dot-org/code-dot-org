@@ -9,5 +9,5 @@
       "@testing-library/jest-dom"
     ]
   },
-  "include": ["src"]
+  "include": ["src", "vite"]
 }
