@@ -30,10 +30,12 @@ export interface QuizQuestionData {
   correctChoiceId?: string;
   explanation?: string;
   standards?: QuizStandard[];
-  // Whether this question is attached to any quiz other than the one being
-  // built here - see LevelsController#quiz_question_json. Determines
-  // whether removing it from this quiz can also offer permanent deletion.
+  // Determines whether removing it from this quiz can also offer permanent deletion,
+  // and (with usedInPublishedUnit) whether editing it prompts for
+  // edit-in-place vs. save-as-new-version.
   attachedToOtherQuizzes?: boolean;
+  // If true, editing always forks regardless of what the client requests.
+  usedInPublishedUnit?: boolean;
   // Which page of the quiz this question renders on for students - nil for
   // a bank question not (yet) attached to this quiz. Defaults to 1.
   page?: number;
@@ -69,6 +71,12 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
   );
   const [editingInitialValues, setEditingInitialValues] =
     useState<QuizQuestionFormValues | null>(null);
+  // Metadata about the question being edited - only needed to
+  // decide the edit-in-place-vs-fork question on save.
+  const [editingQuestionMetadata, setEditingQuestionMetadata] = useState<{
+    usedInPublishedUnit: boolean;
+    attachedToOtherQuizzes: boolean;
+  } | null>(null);
   const [isLoadingQuestion, setIsLoadingQuestion] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
   // Non-null while the remove-confirmation Dialog is open for this question.
@@ -76,17 +84,24 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
     null
   );
   const [isRemoving, setIsRemoving] = useState(false);
+  // Non-null while the save-confirmation Dialog is open (only shown when a
+  // question is attached elsewhere but not forced to fork).
+  const [pendingSaveChoice, setPendingSaveChoice] = useState<{
+    resolve: (choice: 'edit' | 'fork' | 'cancel') => void;
+  } | null>(null);
 
   const closeForm = () => {
     setIsFormOpen(false);
     setEditingQuestionId(null);
     setEditingInitialValues(null);
+    setEditingQuestionMetadata(null);
   };
 
   const startAddQuestion = () => {
     setLoadError(null);
     setEditingQuestionId(null);
     setEditingInitialValues(null);
+    setEditingQuestionMetadata(null);
     setIsFormOpen(true);
   };
 
@@ -114,6 +129,10 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
         standards: data.standards || [],
         page: data.page || 1,
       });
+      setEditingQuestionMetadata({
+        usedInPublishedUnit: !!data.usedInPublishedUnit,
+        attachedToOtherQuizzes: !!data.attachedToOtherQuizzes,
+      });
       setEditingQuestionId(question.id);
       setIsFormOpen(true);
     } finally {
@@ -129,12 +148,30 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
     values: QuizQuestionFormValues
   ): Promise<string | undefined> => {
     const isEditing = editingQuestionId !== null;
+    let editMode: 'edit' | 'fork' | undefined;
+
+    if (isEditing && editingQuestionMetadata?.usedInPublishedUnit) {
+      // Forced regardless of choice - the server enforces this anyway, but
+      // sending it explicitly keeps intent clear. No dialog: there's no
+      // real choice to offer here.
+      editMode = 'fork';
+    } else if (isEditing && editingQuestionMetadata?.attachedToOtherQuizzes) {
+      const choice = await new Promise<'edit' | 'fork' | 'cancel'>(resolve =>
+        setPendingSaveChoice({resolve})
+      );
+      setPendingSaveChoice(null);
+      if (choice === 'cancel') {
+        return undefined;
+      }
+      editMode = choice;
+    }
+
     const endpoint = isEditing
       ? `/levels/${quizId}/quiz_questions/${editingQuestionId}`
       : `/levels/${quizId}/quiz_questions`;
     const response = await (isEditing ? HttpClient.put : HttpClient.post)(
       endpoint,
-      JSON.stringify(values),
+      JSON.stringify({...values, editMode}),
       true,
       {'Content-Type': 'application/json'}
     );
@@ -145,9 +182,14 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
     }
 
     const saved = await response.json();
+    // Matches on editingQuestionId, not saved.id - a fork means the server
+    // hands back a different id than what was being edited, so matching on
+    // saved.id would leave a stale duplicate instead of replacing it.
     setQuestions(prev =>
       isEditing
-        ? prev.map(question => (question.id === saved.id ? saved : question))
+        ? prev.map(question =>
+            question.id === editingQuestionId ? saved : question
+          )
         : [...prev, saved]
     );
     closeForm();
@@ -348,6 +390,33 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
             onClose={() => setPendingRemoval(null)}
           />
         ))}
+
+      {pendingSaveChoice && (
+        <Dialog
+          title="Save changes to this question?"
+          description="This question is also used in another quiz. Saving as a new version keeps the other quiz's copy untouched; saving for all quizzes changes it everywhere it's used."
+          primaryButtonProps={{
+            children: 'Save as new version',
+            onClick: () => pendingSaveChoice.resolve('fork'),
+          }}
+          secondaryButtonProps={{
+            children: 'Cancel',
+            onClick: () => pendingSaveChoice.resolve('cancel'),
+          }}
+          customBottomContent={
+            <MuiButton
+              variant="text"
+              color="secondary"
+              size="small"
+              type="button"
+              onClick={() => pendingSaveChoice.resolve('edit')}
+            >
+              Save for all quizzes
+            </MuiButton>
+          }
+          onClose={() => pendingSaveChoice.resolve('cancel')}
+        />
+      )}
     </div>
   );
 };
