@@ -175,8 +175,42 @@ export const proposalFrom = (
   };
 };
 
-/** Pull the answer out of the wrapper the schema puts it in. */
+/**
+ * A value that may have been JSON-encoded one more time than it should be.
+ *
+ * Providers do this. Asked for an object, a model sometimes emits the object
+ * SERIALIZED — a correct answer, spelled as a string — and a server that stores
+ * and replays what it was given passes the string straight through. Anything
+ * that is not a string is returned as it came.
+ */
+const parsedIfString = (value: unknown): unknown => {
+  if (typeof value !== 'string') {
+    return value;
+  }
+  try {
+    return JSON.parse(value);
+  } catch {
+    // Not JSON, so not an answer in disguise. The caller's own check rejects it.
+    return undefined;
+  }
+};
+
+/**
+ * Pull the answer out of the wrapper the schema puts it in.
+ *
+ * TOLERANT OF DOUBLE ENCODING, at both levels, because the cost of not being
+ * was severe and silent: a complete, valid, schema-shaped answer arrived with
+ * `answer` as a JSON STRING rather than an object, this returned undefined, the
+ * message text fell back to the reply's empty text block, and the empty-answer
+ * guard downstream turned the whole turn into "There was an error getting a
+ * response. Please try again." The student retried a request that had already
+ * succeeded — the answer was sitting in the network tab, whole.
+ *
+ * Parsing here rather than in a transport because every transport can meet it:
+ * it is the model's doing, not the wire's.
+ */
 export const answerFrom = (structured: unknown): Answer | undefined => {
-  const wrapper = structured as {answer?: Answer} | undefined;
-  return wrapper?.answer?.answerType ? wrapper.answer : undefined;
+  const wrapper = parsedIfString(structured) as {answer?: unknown} | undefined;
+  const answer = parsedIfString(wrapper?.answer) as Answer | undefined;
+  return answer?.answerType ? answer : undefined;
 };

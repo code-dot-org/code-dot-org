@@ -7,6 +7,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {formatAnswer, formatProposalText} from '../format';
 import {answerFrom, applicableFiles, proposalFrom} from '../proposal';
 import type {Answer} from '../schema';
 
@@ -21,6 +22,9 @@ const answer = (over: Partial<Answer> = {}): Answer => ({
   code: [{filename: 'main.js', sourceCode: 'let x = 1;'}],
   ...over,
 });
+
+const ENCODED_ANSWER =
+  '{"answerType": "buildWorld", "goal": "Surround the map with Ground actors so the Player can\'t walk off the edge", "code": [{"filename": "main.world", "sourceCode": "{\\"blocks\\":{\\"blocks\\":[]}}"}], "explanation": "The map is 10x10 tiles (320x320 pixels), with tile centres at 16, 48, 80, ... 304.", "nextSteps": "- Playtest walking to each edge", "questions": "- Same tile for the side walls?"}';
 
 describe('proposalFrom', () => {
   it('offers a proposal for a declared rewrite the lab can apply', () => {
@@ -245,5 +249,63 @@ describe('saying why an answer was not offered', () => {
 
     expect(proposalFrom(answer(), {...policy, onDowngrade})).toBeDefined();
     expect(reasons).toEqual([]);
+  });
+});
+
+// A REAL reply, in the shape it actually arrived in.
+//
+// Captured from the network tab of a turn the student saw as "There was an
+// error getting a response. Please try again." Nothing had gone wrong: the
+// model answered completely, declared `buildWorld`, and handed back a whole
+// map ringed with Ground. It just spelled the answer object as a JSON STRING,
+// one encoding deeper than the schema asks for.
+//
+// The cost of not tolerating that was total. `answerFrom` returned undefined,
+// the message text fell back to the reply's empty text block, and the
+// empty-answer guard rewrote the turn as a failure — so the student retried a
+// request that had already succeeded.
+describe('an answer the model encoded twice', () => {
+  const doubled = {answer: ENCODED_ANSWER};
+
+  it('is read, not discarded', () => {
+    const found = answerFrom(doubled);
+
+    expect(found?.answerType).toBe('buildWorld');
+    expect(found?.code?.[0].filename).toBe('main.world');
+  });
+
+  it('still becomes an offer, which is the whole point', () => {
+    const found = answerFrom(doubled)!;
+
+    expect(
+      proposalFrom(found, {
+        answerTypes: ['buildWorld'],
+        fileTypes: ['world'],
+      }),
+    ).toMatchObject({
+      answerType: 'buildWorld',
+      files: [{path: 'main.world'}],
+    });
+  });
+
+  it('reads one encoded the whole way down', () => {
+    // Belt and braces: a server that re-encodes the wrapper too.
+    expect(answerFrom(JSON.stringify(doubled))?.answerType).toBe('buildWorld');
+  });
+
+  it('formats to something, which is what stops the failure', () => {
+    // The last link in the chain that broke. `answerFrom` returning undefined
+    // left the message text as the reply's empty text block, and the
+    // empty-answer guard in `useTutor` rewrites an OK turn with no text into
+    // an ERROR. Text out of the decoded answer means that guard never fires.
+    const found = answerFrom(doubled)!;
+
+    expect(formatAnswer(found).trim()).not.toBe('');
+    expect(formatProposalText(found).trim()).not.toBe('');
+  });
+
+  it('is undefined for a string that is not an answer at all', () => {
+    expect(answerFrom('just some text')).toBeUndefined();
+    expect(answerFrom('{"answer":"still not an object"}')).toBeUndefined();
   });
 });
