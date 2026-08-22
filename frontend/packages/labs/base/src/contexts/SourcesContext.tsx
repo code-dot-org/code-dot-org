@@ -39,6 +39,20 @@ export interface SourcesContent<T = string> {
   currentSources: ProjectSources<T>;
   updateSources: (newSources: ProjectSources<T>, forceSave?: boolean) => void;
   /**
+   * Put a different document in front of the lab, from outside its editors.
+   *
+   * `updateSources` is for an edit the student made: the editor that made it is
+   * already showing it, and re-seeding from its own typing would fight them. A
+   * document REPLACED — a version restored, an AI tutor's change applied or
+   * taken back — is the other case, and an open editor has no way to know it
+   * happened. Bumping the epoch is how it finds out.
+   *
+   * Without this, an editor goes on showing the file as it was, and the next
+   * keystroke in that stale workspace writes the old contents back over the
+   * change.
+   */
+  replaceSources: (newSources: ProjectSources<T>, forceSave?: boolean) => void;
+  /**
    * Show sources that already exist on the server without saving them back —
    * previewing or restoring a version from the version history. Unlike
    * {@link updateSources} this never enqueues a save, so it cannot overwrite the
@@ -73,6 +87,7 @@ const SourcesContext = createContext<SourcesContent>({
     source: '',
   },
   updateSources: (_, __) => {},
+  replaceSources: (_, __) => {},
   previewSources: _ => {},
   sourcesEpoch: 0,
   showStartOverDialog: (_, __) => {},
@@ -173,6 +188,26 @@ export const SourcesProvider = <
       });
     },
     [setCurrentSources],
+  );
+
+  /**
+   * `replaceSources` with the saving half of `updateSources`.
+   *
+   * The two halves are separate inside this file — one puts the document in
+   * front of the lab, the other persists it — and a caller outside it wants
+   * both, exactly as an ordinary edit does.
+   */
+  const replaceAndSave = useCallback(
+    (next: ProjectSources<U>, forceSave = false) => {
+      replaceSources(transform?.(next) || next);
+      if (!readonlyWorkspaceRef.current) {
+        (projectManager || LabRegistry.projectManager)?.save(
+          next as ProjectSources,
+          forceSave,
+        );
+      }
+    },
+    [replaceSources, transform, projectManager],
   );
 
   const reinitializationHandler = useRef<(() => void) | null>(null);
@@ -294,6 +329,7 @@ export const SourcesProvider = <
       value={{
         currentSources,
         updateSources,
+        replaceSources: replaceAndSave,
         previewSources,
         sourcesEpoch,
         showStartOverDialog,

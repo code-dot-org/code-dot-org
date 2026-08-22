@@ -80,7 +80,7 @@ const CODE_DESCRIPTION =
 
 export const useWebLabTutor = (): TutorConfig | undefined => {
   const levelProperties = useMaybeLevelProperties();
-  const {currentSources, updateSources} = useSources<MultiFileSource>();
+  const {currentSources, replaceSources} = useSources<MultiFileSource>();
 
   // From the QUERY, not the redux slice. Both exist and only one is populated:
   // studio primes `useCurrentUser` in its root `beforeLoad`
@@ -191,7 +191,10 @@ export const useWebLabTutor = (): TutorConfig | undefined => {
           const {source} = mergeProposedFiles(before, proposal.files);
           // Applied so the student can SEE the change before answering, which
           // is what makes Accept and Reject a decision rather than a guess.
-          updateSources({...held, source});
+          // Replaced, not updated: an editor showing one of these files has to
+          // re-seed, or the next keystroke writes the old contents back over
+          // the change (SourcesContext.replaceSources).
+          replaceSources({...held, source});
         },
         onAccept: () => {
           // The merged project is already what the editor holds and what the
@@ -203,7 +206,7 @@ export const useWebLabTutor = (): TutorConfig | undefined => {
           const held = sources.current;
           beforeProposal.current = undefined;
           if (back && held) {
-            updateSources({...held, source: back});
+            replaceSources({...held, source: back});
           }
         },
       },
@@ -224,6 +227,6 @@ export const useWebLabTutor = (): TutorConfig | undefined => {
     isLevelbuilder,
     isPredictLevel,
     hasSubmittedPredictResponse,
-    updateSources,
+    replaceSources,
   ]);
 };

@@ -82,7 +82,7 @@ const CODE_DESCRIPTION =
 
 export const useWorldTutor = (): TutorConfig | undefined => {
   const levelProperties = useMaybeLevelProperties();
-  const {currentSources, updateSources} = useSources<MultiFileSource>();
+  const {currentSources, replaceSources} = useSources<MultiFileSource>();
   const {consoleLog, hasCompiled, generatedProject} = useWorldRuntime();
 
   const {data: currentUser} = useCurrentUser(DashboardApiClient);
@@ -195,7 +195,12 @@ export const useWorldTutor = (): TutorConfig | undefined => {
           // Applied so the student can OPEN the changed actor and look at the
           // blocks before answering. That is the whole difference between a
           // decision and a guess here: the diff is visual.
-          updateSources({...held, source});
+          //
+          // REPLACED, not updated. `updateSources` is for an edit the student
+          // made, and an editor does not re-seed from its own typing — so a
+          // file already open went on showing its old blocks, and the next
+          // keystroke in that stale workspace wrote them back over the change.
+          replaceSources({...held, source});
         },
         onAccept: () => {
           beforeProposal.current = undefined;
@@ -205,7 +210,9 @@ export const useWorldTutor = (): TutorConfig | undefined => {
           const held = sources.current;
           beforeProposal.current = undefined;
           if (back && held) {
-            updateSources({...held, source: back});
+            // Replaced for the same reason: taking the change back is another
+            // thing that happens to an open file from outside it.
+            replaceSources({...held, source: back});
           }
         },
       },
@@ -225,7 +232,7 @@ export const useWorldTutor = (): TutorConfig | undefined => {
     levelProperties?.longInstructions,
     generatedProject,
     schema,
-    updateSources,
+    replaceSources,
     hasCompiled,
     hasEdited,
     userAccessLevel,
