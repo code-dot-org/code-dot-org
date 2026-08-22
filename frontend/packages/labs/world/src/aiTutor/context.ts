@@ -36,6 +36,7 @@ import type {RuleMeta} from '../blockly/ruleMeta';
 
 import {blockCatalogue} from './blockCatalogue';
 import {worldMeasurements} from './measurements';
+import {importableRules} from './ruleShelf';
 import {summarizeRules} from './ruleSummary';
 
 /** Kinds whose workspace is small enough to send whole. */
@@ -107,6 +108,13 @@ export const worldSourceCode = ({
         'shown, and you do not need them.\n\n' +
         summarizeRules(rules),
     );
+  }
+
+  // Straight after the rules the project HAS, because the two are one subject:
+  // here is your vocabulary, and here is what else you may send for.
+  const shelf = importableRules(rules);
+  if (shelf) {
+    add(shelf);
   }
 
   const workspaces: string[] = [];
@@ -212,6 +220,12 @@ export const WORLD_SYSTEM_PROMPT = [
   'explanation it is just text on the screen: the student gets no button, and',
   'no way to use it except to retype it by hand. If you have written a file,',
   'it goes in `code`.',
+  '',
+  'REACH FOR A RULE BEFORE BUILDING ONE. Most of what a game needs already',
+  'exists as a mechanic an actor can elect, including mechanics this project has',
+  'not imported yet — they are listed for you. Electing “Stays Across” is a',
+  'better answer than a wall of tiles round the edge of the map, and saying so',
+  'teaches the student something the tiles do not.',
   '',
   'If you are not confident the workspace you would write is valid, explain the',
   'change in words instead and do not claim a rewrite — a broken file loses the',

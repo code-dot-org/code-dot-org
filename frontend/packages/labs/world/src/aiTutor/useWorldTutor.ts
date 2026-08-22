@@ -40,8 +40,8 @@ import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {WORLD_SYSTEM_PROMPT, worldContext} from './context';
 import {
-  mergeProposedWorkspaces,
   PROPOSABLE_TYPES,
+  proposedProject,
   workspacesGenerate,
 } from './proposals';
 import {tutorTransport} from './transport';
@@ -83,7 +83,7 @@ const CODE_DESCRIPTION =
 export const useWorldTutor = (): TutorConfig | undefined => {
   const levelProperties = useMaybeLevelProperties();
   const {currentSources, updateSources} = useSources<MultiFileSource>();
-  const {consoleLog, hasCompiled, generateFile} = useWorldRuntime();
+  const {consoleLog, hasCompiled, generatedProject} = useWorldRuntime();
 
   const {data: currentUser} = useCurrentUser(DashboardApiClient);
   const user = currentUser?.isSignedIn ? currentUser : undefined;
@@ -162,11 +162,24 @@ export const useWorldTutor = (): TutorConfig | undefined => {
       proposals: {
         answerTypes: REWRITE_TYPES,
         fileTypes: [...PROPOSABLE_TYPES],
-        // The gate. Every proposed workspace is generated first, and the
-        // generator throws for anything the editor could not open — so a bad
-        // answer becomes an explanation rather than an Accept button over a
-        // file that will not load (`aiTutor/proposals`).
-        accepts: files => workspacesGenerate(files, generateFile),
+        // The gate. The project the offer WOULD produce is generated first —
+        // rules it implies included — and the generator throws for anything
+        // the editor could not open, so a bad answer becomes an explanation
+        // rather than an Accept button over a file that will not load
+        // (`aiTutor/proposals`).
+        accepts: files => {
+          const before = sources.current?.source as MultiFileSource | undefined;
+          if (!before) {
+            // Nothing to judge the offer against. Said out loud because a
+            // silent `false` here is indistinguishable from a refusal, and
+            // every silent path in this chain has cost a day.
+            console.warn(
+              'AI Tutor: refusing a change because the project is not loaded.',
+            );
+            return false;
+          }
+          return workspacesGenerate(before, files, generatedProject);
+        },
         onPropose: proposal => {
           const held = sources.current;
           const before = held?.source as MultiFileSource | undefined;
@@ -174,7 +187,11 @@ export const useWorldTutor = (): TutorConfig | undefined => {
             return;
           }
           beforeProposal.current = before;
-          const {source} = mergeProposedWorkspaces(before, proposal.files);
+          // The same call the check made, so what is applied is what passed.
+          // Rejecting puts back `before`, which is the project WITHOUT the
+          // imported rules as well as without the workspaces — an offer
+          // turned down should leave nothing of itself behind.
+          const {source} = proposedProject(before, proposal.files);
           // Applied so the student can OPEN the changed actor and look at the
           // blocks before answering. That is the whole difference between a
           // decision and a guess here: the diff is visual.
@@ -206,7 +223,7 @@ export const useWorldTutor = (): TutorConfig | undefined => {
     scriptId,
     channelId,
     levelProperties?.longInstructions,
-    generateFile,
+    generatedProject,
     schema,
     updateSources,
     hasCompiled,

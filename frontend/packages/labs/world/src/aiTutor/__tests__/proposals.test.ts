@@ -16,7 +16,24 @@ import {
   workspacesGenerate,
 } from '../proposals';
 
-const ok = () => 'generated module';
+/** A project with the folders a world has, and whatever files are given. */
+const generatable = (
+  files: Record<string, {name: string; contents: string}> = {},
+): MultiFileSource => ({
+  files: Object.fromEntries(
+    Object.entries(files).map(([id, file]) => [
+      id,
+      {id, language: 'actor', folderId: 'actors', ...file},
+    ]),
+  ),
+  folders: {
+    actors: {id: 'actors', name: 'actors', parentId: '0'},
+    rules: {id: 'rules', name: 'rules', parentId: '0'},
+  },
+  openFiles: [],
+});
+
+const ok = () => ({});
 const throws = () => {
   throw new Error('Invalid block definition for type world_nonsense');
 };
@@ -24,55 +41,106 @@ const throws = () => {
 describe('workspacesGenerate', () => {
   it('accepts a workspace the generator can build', () => {
     expect(
-      workspacesGenerate([{path: 'actors/coin.actor', contents: '{}'}], ok),
+      workspacesGenerate(
+        generatable(),
+        [{path: 'actors/coin.actor', contents: '{}'}],
+        ok,
+      ),
     ).toBe(true);
   });
 
   it('refuses one that throws — an unknown block type, or bad JSON', () => {
-    expect(
-      workspacesGenerate([{path: 'actors/coin.actor', contents: '{'}], throws),
-    ).toBe(false);
-  });
-
-  it('refuses the whole offer when any one file is bad', () => {
-    // A half-applied proposal is a project in a state nobody asked for.
-    const generate = vi
-      .fn()
-      .mockImplementationOnce(ok)
-      .mockImplementationOnce(throws);
+    const quiet = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
     expect(
       workspacesGenerate(
-        [
-          {path: 'actors/a.actor', contents: '{}'},
-          {path: 'actors/b.actor', contents: '{}'},
-        ],
-        generate,
+        generatable(),
+        [{path: 'actors/coin.actor', contents: '{'}],
+        throws,
       ),
     ).toBe(false);
+
+    quiet.mockRestore();
   });
 
   it('refuses a kind the agent may not write', () => {
-    // A `.map` is placements and a `.png` is bytes; neither is a workspace,
-    // and the generator would not be asked about them.
-    for (const path of ['maps/level1.map', 'sprites/hero.png', 'notes.md']) {
-      expect(workspacesGenerate([{path, contents: '{}'}], ok)).toBe(false);
-    }
+    const quiet = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    expect(
+      workspacesGenerate(
+        generatable(),
+        [{path: 'sprites/coin.png', contents: ''}],
+        ok,
+      ),
+    ).toBe(false);
+
+    quiet.mockRestore();
+  });
+});
+
+describe('refusedWorkspaces', () => {
+  it('is empty when the project it would produce generates', () => {
+    expect(
+      refusedWorkspaces(
+        generatable(),
+        [{path: 'actors/coin.actor', contents: '{}'}],
+        ok,
+      ),
+    ).toEqual([]);
   });
 
-  it('accepts a rule, which is a workspace like any other', () => {
-    // Big imported rules are not shown to the agent, but a small one it writes
-    // itself is exactly the interesting case.
-    expect(
-      workspacesGenerate([{path: 'rules/lava.rule', contents: '{}'}], ok),
-    ).toBe(true);
+  it('names the file, by trying each again when the whole fails', () => {
+    // The generator is handed a whole project and can only say what went
+    // wrong, not which file carried it. So a failure is followed by one pass
+    // per file to attribute it.
+    const bad = '{"blocks":{"blocks":[{"type":"world_nonsense"}]}}';
+    const generate = (files: Record<string, string>) => {
+      if (Object.values(files).some(one => one.includes('world_nonsense'))) {
+        throw new Error('Invalid block definition for type world_nonsense');
+      }
+      return {};
+    };
+
+    const refused = refusedWorkspaces(
+      generatable(),
+      [
+        {path: 'actors/good.actor', contents: '{}'},
+        {path: 'actors/bad.actor', contents: bad},
+      ],
+      generate,
+    );
+
+    expect(refused).toEqual([
+      {
+        path: 'actors/bad.actor',
+        reason: 'Invalid block definition for type world_nonsense',
+      },
+    ]);
   });
 
-  it('does not judge an empty module a failure', () => {
-    // An actor with no handlers yet generates almost nothing, and is fine.
-    expect(
-      workspacesGenerate([{path: 'actors/a.actor', contents: '{}'}], () => ''),
-    ).toBe(true);
+  it('still reports when each file is fine alone and the set is not', () => {
+    // An empty list would read as "nothing wrong", and the offer would be
+    // made over a project that does not generate.
+    let seen = 0;
+    const generate = () => {
+      // Fails only the first call, which is the whole-set pass.
+      if (seen++ === 0) {
+        throw new Error('two actors cannot both be called Coin');
+      }
+      return {};
+    };
+
+    const refused = refusedWorkspaces(
+      generatable(),
+      [
+        {path: 'actors/a.actor', contents: '{}'},
+        {path: 'actors/b.actor', contents: '{}'},
+      ],
+      generate,
+    );
+
+    expect(refused).toHaveLength(1);
+    expect(refused[0].reason).toContain('cannot both be called');
   });
 });
 
@@ -147,65 +215,5 @@ describe('mergeProposedWorkspaces', () => {
     ]);
 
     expect(JSON.stringify(source)).toBe(before);
-  });
-});
-
-// The reason, which used to be thrown away.
-//
-// A bare `catch {}` made every refusal look the same from outside: the student
-// saw the workspace printed in the chat with no Accept button, and there was no
-// way to tell a bad block type from a badly named file from the model simply
-// choosing to explain. The generator knows which; it just had nowhere to say it.
-describe('refusedWorkspaces', () => {
-  const good = () => 'module code';
-  const bad = (): string => {
-    throw new Error('Unknown block type world_make_it_awesome');
-  };
-
-  it('is empty when every file generates', () => {
-    expect(
-      refusedWorkspaces([{path: 'actors/coin.actor', contents: '{}'}], good),
-    ).toEqual([]);
-  });
-
-  it('keeps the generator’s own message, which names the block', () => {
-    const refused = refusedWorkspaces(
-      [{path: 'actors/coin.actor', contents: '{}'}],
-      bad,
-    );
-
-    expect(refused).toEqual([
-      {
-        path: 'actors/coin.actor',
-        reason: 'Unknown block type world_make_it_awesome',
-      },
-    ]);
-  });
-
-  it('names a file of a kind the agent may not write', () => {
-    const refused = refusedWorkspaces(
-      [{path: 'sprites/coin.png', contents: ''}],
-      good,
-    );
-
-    expect(refused[0].path).toBe('sprites/coin.png');
-    expect(refused[0].reason).toContain('may write');
-  });
-
-  it('reports every bad file, not only the first', () => {
-    // One bad file disqualifies the whole offer, but a refusal that named one
-    // of three would send somebody round the loop twice.
-    const refused = refusedWorkspaces(
-      [
-        {path: 'actors/a.actor', contents: '{}'},
-        {path: 'actors/b.actor', contents: '{}'},
-      ],
-      bad,
-    );
-
-    expect(refused.map(one => one.path)).toEqual([
-      'actors/a.actor',
-      'actors/b.actor',
-    ]);
   });
 });

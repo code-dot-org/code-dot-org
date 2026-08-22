@@ -19,11 +19,25 @@
 
 import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
+import {refreshProjectDropdowns} from '../blockly/projectDropdowns';
+import {importStockRule} from '../rules/importStockRule';
+import type {StockRule} from '../rules/stock';
+import {
+  projectFiles,
+  projectImagePaths,
+  projectSoundPaths,
+} from '../runtime/projectFiles';
+
+import {impliedRules} from './impliedRules';
+
 /** Kinds the agent may write. Everything else is data or an image. */
 export const PROPOSABLE_TYPES = ['actor', 'world', 'rule'] as const;
 
 const extensionOf = (path: string): string =>
   path.split('.').pop()?.toLowerCase() ?? '';
+
+/** A rule file, by the only thing that decides a file's kind: its name. */
+const isRule = (path: string): boolean => extensionOf(path) === 'rule';
 
 /** A proposed file's name, without any folders the model invented. */
 const nameOf = (path: string): string => path.split('/').pop() ?? path;
@@ -33,6 +47,39 @@ export interface ProposedFile {
   contents: string;
 }
 
+/** The project as it would be if the offer were accepted. */
+export interface ProposedProject {
+  source: MultiFileSource;
+  /** Stock rules brought in because a proposed file elects their traits. */
+  imported: StockRule[];
+}
+
+/**
+ * Apply an offer to a copy of the project: the rules it implies, then the
+ * workspaces themselves.
+ *
+ * ONE FUNCTION FOR BOTH HALVES. The check and the application used to be
+ * different code — generate each file, then separately merge them — and the
+ * moment a proposal could also bring a RULE with it, those two could disagree
+ * about what was being judged. Validation now means "generate the project this
+ * would produce", so a passing check is a statement about the thing that will
+ * actually be written.
+ */
+export const proposedProject = (
+  source: MultiFileSource,
+  files: readonly ProposedFile[],
+): ProposedProject => {
+  const imported = impliedRules(
+    source,
+    files.map(file => file.contents),
+  );
+  let current = source;
+  for (const rule of imported) {
+    current = importStockRule(current, rule).source;
+  }
+  return {source: mergeProposedWorkspaces(current, files).source, imported};
+};
+
 /** Why a proposed file was refused — one line, for the console. */
 export interface Refusal {
   path: string;
@@ -40,65 +87,136 @@ export interface Refusal {
 }
 
 /**
- * The proposed workspaces that would not open, and why.
+ * How a whole project is generated — `generatedProject` from the runtime.
  *
- * `generate` is the headless generator (`WorldRuntimeContext`); it throws for
- * anything the editor could not open. Each file is tried on its own, because
- * one bad file disqualifies the whole offer — a half-applied proposal is a
- * project in a state nobody asked for — but every one is tried, so a refusal
- * names all of them rather than only the first.
+ * The WHOLE project, not one file: a single proposed actor cannot be judged
+ * alone once a proposal may also bring a rule, because whether it generates
+ * depends on a rule that is not in the project yet. `generateFile` compiles
+ * against the project as it stands and would refuse every such offer.
+ */
+export type GenerateAll = (
+  files: Record<string, string>,
+) => Record<string, string>;
+
+/**
+ * Why an offer was refused, if it was.
  *
- * THE REASON IS KEPT. It used to be a bare `catch {}`, and the cost of that
- * was a silent downgrade: the student saw the workspace JSON printed in the
- * chat with no Accept button, and there was no way to tell whether the model
- * had written a bad block type, named a file wrongly, or simply chosen to
- * explain rather than build. Five different causes, one indistinguishable
- * symptom. The generator already knows which; it just had nowhere to say it.
+ * The project it would produce is generated whole. That is one pass, and on
+ * failure each proposed file is then tried on its own — against the same
+ * augmented project, so the retry is judging what the first pass judged — to
+ * say WHICH file is the problem. Attribution costs a pass only when something
+ * is already wrong.
  */
 export const refusedWorkspaces = (
+  source: MultiFileSource,
   files: readonly ProposedFile[],
-  generate: (contents: string, path: string) => string,
+  generateAll: GenerateAll,
 ): Refusal[] => {
-  const refused: Refusal[] = [];
-  for (const file of files) {
-    if (!PROPOSABLE_TYPES.includes(extensionOf(file.path) as never)) {
-      refused.push({
-        path: file.path,
-        reason: `not a kind the agent may write (${PROPOSABLE_TYPES.join(', ')})`,
-      });
-      continue;
-    }
-    try {
-      // The return value is not inspected: an empty module is a legitimate
-      // answer (an actor with no handlers yet). What matters is that it did
-      // not throw.
-      generate(file.contents, file.path);
-    } catch (error) {
-      refused.push({
-        path: file.path,
-        reason: error instanceof Error ? error.message : String(error),
-      });
-    }
+  const wrongKind = files
+    .filter(file => !PROPOSABLE_TYPES.includes(extensionOf(file.path) as never))
+    .map(file => ({
+      path: file.path,
+      reason: `not a kind the agent may write (${PROPOSABLE_TYPES.join(', ')})`,
+    }));
+  if (wrongKind.length) {
+    return wrongKind;
   }
-  return refused;
+
+  // TELL THE EDITOR'S REGISTRIES, not just the file map.
+  //
+  // A trait is not a block type. `use trait` is one block whose TRAIT field is
+  // a dropdown, and its options are the traits in play — held in registries
+  // that `refreshProjectDropdowns` fills from the project's files. Handing the
+  // generator a file map containing `bounds.rule` does not put Boundaries in
+  // them, so `Boundaries#StaysAcrossTrait` remains a value with no option
+  // behind it and the file will not load. The offer that brings the rule with
+  // it was refused for not already having it.
+  //
+  // This is the call `compileProject` makes before generating, which is why the
+  // test harness accepted the offer and the running lab did not: the harness
+  // was doing something the real gate was not.
+  const describeProject = (
+    of: MultiFileSource,
+    files: Record<string, string>,
+  ) =>
+    refreshProjectDropdowns(
+      files,
+      projectImagePaths(of),
+      {},
+      projectSoundPaths(of),
+    );
+
+  const held = projectFiles(source);
+
+  const generates = (offered: readonly ProposedFile[]): string | undefined => {
+    const candidate = proposedProject(source, offered).source;
+    const files = projectFiles(candidate);
+
+    // WHAT IS CHECKED IS WHAT THE MODEL WROTE, and not the rules that came with
+    // it. An imported `.rule` is ours: generated from `scripts/rules/*.mjs`,
+    // committed, and covered by its own tests. Generating it here proves
+    // nothing about the offer.
+    //
+    // It also cannot be done. The generator's block palette is built from the
+    // project's rules AS THEY WERE — a memo over a prop, which nothing outside
+    // the component can rebuild — so a rule that has just arrived has no block
+    // definitions, and loading it fails on the first one of its own blocks it
+    // meets ("Invalid block definition for type
+    // world_query_Boundaries_KeepBetweenAndQuery"). The registries below still
+    // get the whole project, because the ACTOR needs `Boundaries#StaysAcross`
+    // to be a trait that exists; it is only the rule's own file that is skipped.
+    const toGenerate = Object.fromEntries(
+      Object.entries(files).filter(([path]) => path in held || !isRule(path)),
+    );
+
+    try {
+      describeProject(candidate, files);
+      generateAll(toGenerate);
+      return undefined;
+    } catch (error) {
+      return error instanceof Error ? error.message : String(error);
+    } finally {
+      // Always put it back. These registries are what the editor's own
+      // dropdowns read, and leaving them describing a project the student has
+      // not agreed to would offer blocks from a rule they do not have.
+      //
+      // Image SIZES are not restored — they are measured asynchronously and
+      // this has none to give. That costs a re-measure, not correctness.
+      describeProject(source, projectFiles(source));
+    }
+  };
+
+  const whole = generates(files);
+  if (whole === undefined) {
+    return [];
+  }
+  const each = files
+    .map(file => ({path: file.path, reason: generates([file])}))
+    .filter((one): one is Refusal => one.reason !== undefined);
+
+  // Every file on its own is fine and together they are not: report the
+  // failure rather than an empty list, which would read as "nothing wrong".
+  return each.length
+    ? each
+    : [{path: files.map(f => f.path).join(', '), reason: whole}];
 };
 
 /**
- * Whether every proposed workspace generates, saying so when one does not.
+ * Whether an offer can be carried out, saying so when it cannot.
  *
  * The warning goes to the browser console rather than to the student: a
  * refusal is not their mistake and there is nothing for them to do about it.
  * What they get is the explanation, which is what the downgrade is for.
  */
 export const workspacesGenerate = (
+  source: MultiFileSource,
   files: readonly ProposedFile[],
-  generate: (contents: string, path: string) => string,
+  generateAll: GenerateAll,
 ): boolean => {
-  const refused = refusedWorkspaces(files, generate);
+  const refused = refusedWorkspaces(source, files, generateAll);
   if (refused.length) {
     console.warn(
-      'AI Tutor: refusing to offer a change, because ' +
-        `${refused.length} of ${files.length} proposed file(s) would not open:\n` +
+      'AI Tutor: refusing to offer a change, because it would not open:\n' +
         refused.map(one => `  ${one.path}: ${one.reason}`).join('\n'),
     );
   }
