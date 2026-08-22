@@ -5,7 +5,7 @@ class AichatRequestsController < ApplicationController
   before_action :reassign_model_customizations, only: [:start_chat_completion]
 
   AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
-  DEFAULT_REQUEST_LIMIT_PER_MIN = 50
+  DEFAULT_REQUEST_LIMIT_PER_MIN = 30
 
   # Distinct error body so the client can tell a regional model block apart
   # from a generic authorization failure.
