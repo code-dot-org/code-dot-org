@@ -53,6 +53,19 @@ export interface SourcesContent<T = string> {
    */
   replaceSources: (newSources: ProjectSources<T>, forceSave?: boolean) => void;
   /**
+   * Save what is showing as a NAMED version the student can come back to.
+   *
+   * An ordinary save folds into whichever version is current; this makes one of
+   * its own and records `description` against it, then stops later saves
+   * writing into it. For a change the student agreed to — accepting an AI
+   * tutor's edit is the case it was built for — that is the difference between
+   * a thing they can undo tomorrow and a thing they cannot.
+   *
+   * Rejects if there is no project manager, or if the save produced no version
+   * to name. A caller that cannot show the failure should still not swallow it.
+   */
+  createCommit: (description: string) => Promise<void>;
+  /**
    * Show sources that already exist on the server without saving them back —
    * previewing or restoring a version from the version history. Unlike
    * {@link updateSources} this never enqueues a save, so it cannot overwrite the
@@ -88,6 +101,7 @@ const SourcesContext = createContext<SourcesContent>({
   },
   updateSources: (_, __) => {},
   replaceSources: (_, __) => {},
+  createCommit: () => Promise.resolve(),
   previewSources: _ => {},
   sourcesEpoch: 0,
   showStartOverDialog: (_, __) => {},
@@ -210,6 +224,17 @@ export const SourcesProvider = <
     [replaceSources, transform, projectManager],
   );
 
+  const createCommit = useCallback(
+    async (description: string) => {
+      const manager = projectManager || LabRegistry.projectManager;
+      if (!manager) {
+        throw new Error('Cannot name a version: there is no project manager');
+      }
+      await manager.createCommit(description);
+    },
+    [projectManager],
+  );
+
   const reinitializationHandler = useRef<(() => void) | null>(null);
   const setReinitializationHandler = useCallback((handler: () => void) => {
     reinitializationHandler.current = handler;
@@ -330,6 +355,7 @@ export const SourcesProvider = <
         currentSources,
         updateSources,
         replaceSources: replaceAndSave,
+        createCommit,
         previewSources,
         sourcesEpoch,
         showStartOverDialog,

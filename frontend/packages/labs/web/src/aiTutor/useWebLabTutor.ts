@@ -80,7 +80,8 @@ const CODE_DESCRIPTION =
 
 export const useWebLabTutor = (): TutorConfig | undefined => {
   const levelProperties = useMaybeLevelProperties();
-  const {currentSources, replaceSources} = useSources<MultiFileSource>();
+  const {currentSources, replaceSources, createCommit} =
+    useSources<MultiFileSource>();
 
   // From the QUERY, not the redux slice. Both exist and only one is populated:
   // studio primes `useCurrentUser` in its root `beforeLoad`
@@ -196,10 +197,19 @@ export const useWebLabTutor = (): TutorConfig | undefined => {
           // the change (SourcesContext.replaceSources).
           replaceSources({...held, source});
         },
-        onAccept: () => {
-          // The merged project is already what the editor holds and what the
-          // autosave will write. Nothing to do but forget the way back.
+        onAccept: (_, description) => {
           beforeProposal.current = undefined;
+          // The merged project is already what the editor holds and what the
+          // autosave will write — but an autosave folds into whichever version
+          // is current, and Accept asked the student to NAME this one. Same
+          // reasoning as World Lab's; see `useWorldTutor`.
+          void createCommit(description).catch((error: unknown) => {
+            console.warn(
+              'AI Tutor: the change was kept, but naming a version for it ' +
+                'failed. It is saved as an ordinary edit.',
+              error,
+            );
+          });
         },
         onReject: () => {
           const back = beforeProposal.current;
@@ -228,5 +238,6 @@ export const useWebLabTutor = (): TutorConfig | undefined => {
     isPredictLevel,
     hasSubmittedPredictResponse,
     replaceSources,
+    createCommit,
   ]);
 };

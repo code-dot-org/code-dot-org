@@ -302,16 +302,13 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async flushSave() {
+  async flushSave(forceNewVersion = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return await this.enqueueSaveOrSave(
-      /* forceSave */ true,
-      /* forceNewVersion */ false,
-    );
+    return await this.enqueueSaveOrSave(/* forceSave */ true, forceNewVersion);
   }
 
   /**
@@ -429,6 +426,38 @@ export default class ProjectManager {
 
   getCurrentVersionId(): string | null {
     return this.sourcesStore.getCurrentVersionId();
+  }
+
+  /**
+   * Create a named commit: force-flush any pending sources as a new version,
+   * then record the comment against that version.
+   *
+   * Three steps in an order that matters. The flush is what MAKES the version —
+   * without `forceNewVersion` the save folds into whichever version is current,
+   * and the comment would name a version holding other edits too. Only then is
+   * there a version id to attach the comment to. And `setForceNewVersion` at
+   * the end is what stops the next autosave writing into the version just
+   * named: a commit the student can go back to has to stop changing.
+   *
+   * Ported from `apps/src/lab2/projects/ProjectManager.ts`, whose AI Tutor has
+   * called it since the feature shipped. The frontend port left it out, so the
+   * tutor's Accept collected a version name and discarded it.
+   */
+  async createCommit(description: string): Promise<void> {
+    this.throwErrorIfDestroyed('createCommit');
+    await this.flushSave(/* forceNewVersion */ true);
+    const versionId = this.getCurrentVersionId();
+    if (!versionId) {
+      throw new Error(
+        'Cannot create a commit: the project has no saved version',
+      );
+    }
+    await this.apiClient.projects.updateCommit({
+      channelId: this.channelId,
+      versionId,
+      comment: description,
+    });
+    this.setForceNewVersion(true);
   }
 
   getForceNewVersion(): boolean {

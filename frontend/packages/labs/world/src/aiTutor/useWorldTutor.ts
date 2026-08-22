@@ -82,7 +82,8 @@ const CODE_DESCRIPTION =
 
 export const useWorldTutor = (): TutorConfig | undefined => {
   const levelProperties = useMaybeLevelProperties();
-  const {currentSources, replaceSources} = useSources<MultiFileSource>();
+  const {currentSources, replaceSources, createCommit} =
+    useSources<MultiFileSource>();
   const {consoleLog, hasCompiled, generatedProject} = useWorldRuntime();
 
   const {data: currentUser} = useCurrentUser(DashboardApiClient);
@@ -202,8 +203,23 @@ export const useWorldTutor = (): TutorConfig | undefined => {
           // keystroke in that stale workspace wrote them back over the change.
           replaceSources({...held, source});
         },
-        onAccept: () => {
+        onAccept: (_, description) => {
           beforeProposal.current = undefined;
+          // A NAMED VERSION, which is what the second step of Accept was
+          // asking for. The student typed it into a field that until now
+          // threw it away — worse than not asking, because it promised
+          // something to come back to and made nothing.
+          //
+          // Not awaited: the decision is already made and the project already
+          // holds the change. A commit that fails should say so in the console
+          // and leave the student's work where it is, not block the button.
+          void createCommit(description).catch((error: unknown) => {
+            console.warn(
+              'AI Tutor: the change was kept, but naming a version for it ' +
+                'failed. It is saved as an ordinary edit.',
+              error,
+            );
+          });
         },
         onReject: () => {
           const back = beforeProposal.current;
@@ -233,6 +249,7 @@ export const useWorldTutor = (): TutorConfig | undefined => {
     generatedProject,
     schema,
     replaceSources,
+    createCommit,
     hasCompiled,
     hasEdited,
     userAccessLevel,
