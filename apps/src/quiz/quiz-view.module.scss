@@ -30,7 +30,8 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .buildPreviewToggleBar {
@@ -50,6 +51,9 @@
 }
 
 .contentInner {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
   margin: 10px;
 }
 
