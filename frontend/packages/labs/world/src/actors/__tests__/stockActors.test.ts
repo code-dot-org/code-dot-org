@@ -27,25 +27,39 @@ const types = (contents: string): string[] =>
   [...contents.matchAll(/"type": "([^"]+)"/g)].map(match => match[1]);
 
 describe('every stock actor', () => {
-  it('is a `define actor`, with a `define drawing` only if it paints itself', () => {
-    // TWO ROOTS when there is a drawing. A drawing takes no previous connection
-    // — `DisableOrphansPlugin` greys out a top-level block that has one, and
-    // everything below it — so it sits beside the definition rather than inside
-    // it (specs/DRAWING.md).
-    //
-    // ONE ROOT when the actor has a picture instead. An interface actor looks
-    // like whatever it says and must paint itself; a Coin looks like a coin,
-    // and a drawing over the top of its animation would hide it.
+  it('has one `define actor`, and paints itself only if it has no picture', () => {
+    // SEPARATE ROOTS. A drawing and a handler hat both take no previous
+    // connection — `DisableOrphansPlugin` greys out a top-level block that has
+    // one, and everything below it — so they sit beside the definition rather
+    // than inside it (specs/DRAWING.md).
     for (const actor of STOCK_ACTORS) {
-      const paints = roots(actor.contents).includes('world_define_drawing');
-      expect(roots(actor.contents)).toEqual(
-        paints ? ['world_actor', 'world_define_drawing'] : ['world_actor'],
-      );
-      // Whichever it is, it is not both and not neither: an actor with a
-      // picture names one, and an actor without a picture draws one.
-      expect(paints).toBe(
-        !types(actor.contents).includes('world_play_animation'),
-      );
+      const found = roots(actor.contents);
+      expect(found.filter(type => type === 'world_actor')).toHaveLength(1);
+      expect(found[0]).toBe('world_actor');
+
+      // An actor either has a picture or draws one, and never both: an
+      // interface actor looks like whatever it says and must paint itself; a
+      // Coin looks like a coin, and a drawing over the top of its animation
+      // would hide it.
+      const blocks = types(actor.contents);
+      const paints = found.includes('world_define_drawing');
+      const pictured =
+        blocks.includes('world_play_animation') ||
+        blocks.includes('world_set_sprite');
+      expect(paints).toBe(!pictured);
+    }
+  });
+
+  it('binds a key only through a trait that hears one', () => {
+    // A handler hat is the actor's own doing, and `presses` is raised on an
+    // actor only if it elected `Takes Keyboard Input`. A Player that bound the
+    // space bar without electing it would be a file that reads correctly and
+    // never fires.
+    for (const actor of STOCK_ACTORS) {
+      const blocks = types(actor.contents);
+      if (blocks.includes('world_on_Input_PressesEvent')) {
+        expect(actor.contents).toContain('Input#TakesKeyboardInputTrait');
+      }
     }
   });
 

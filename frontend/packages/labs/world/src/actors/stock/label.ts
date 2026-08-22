@@ -35,11 +35,13 @@ export const labelActor = actorFile(
     setText('TextProperty', words('Label')),
   ],
   {
-    width: WIDTH,
-    height: HEIGHT,
-    commands: [
-      fill(textOf('TextColorProperty')),
-      drawText(WIDTH / 2, HEIGHT / 2),
-    ],
+    drawing: {
+      width: WIDTH,
+      height: HEIGHT,
+      commands: [
+        fill(textOf('TextColorProperty')),
+        drawText(WIDTH / 2, HEIGHT / 2),
+      ],
+    },
   },
 );

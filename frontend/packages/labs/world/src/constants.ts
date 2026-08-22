@@ -6,6 +6,7 @@ import type {
 } from '@code-dot-org/core/api';
 
 import {coinActor} from './actors/stock/coin';
+import {groundActor} from './actors/stock/ground';
 import {healthBarActor} from './actors/stock/healthBar';
 import {drawText, fill, showAs, textOf} from './actors/stock/workspace';
 import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
@@ -487,11 +488,7 @@ const PLAYER_ACTOR = JSON.stringify(
 // tile electing some other rule's would compile, run, and hold nothing up.
 // Naming a trait by rule name rather than by module is what makes that hard to
 // get wrong — there is only one "Gravity" in play.
-const GROUND_ACTOR = actorFile('Ground', [
-  useTrait('Gravity#ActsAsGroundTrait'),
-  useTrait('Solid Bodies#SolidTrait'),
-  {type: 'world_set_sprite', fields: {SPRITE: 'ground.png'}},
-]);
+const GROUND_ACTOR = groundActor;
 
 // A coin playing "coinSpin" — the animation in animations/coinSpin.anim — and
 // electing to be takeable.

@@ -13,8 +13,10 @@
 
 import {buttonActor} from './button';
 import {COIN_ANIMATION, coinActor} from './coin';
+import {GROUND_SPRITE, groundActor} from './ground';
 import {healthBarActor} from './healthBar';
 import {labelActor} from './label';
+import {PLAYER_ANIMATION, playerActor} from './player';
 import {progressBarActor} from './progressBar';
 
 /** One entry in the library. */
@@ -107,6 +109,27 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: ['Collection'],
     animations: [COIN_ANIMATION],
     contents: coinActor,
+  },
+  {
+    id: 'player',
+    name: 'Player',
+    description:
+      'Somebody to be. Walks with the arrow keys, jumps with the space bar, and falls when there is nothing under it \u2014 which is why it comes with a Ground.',
+    // Jumping pulls Gravity, and Arrow Keys pulls Physics: three named rules
+    // leave five in the project. What the entry names is what the FILE says,
+    // and the rule importer works out the rest.
+    requires: ['Jumping', 'Arrow Keys', 'Input'],
+    animations: [PLAYER_ANIMATION],
+    contents: playerActor,
+  },
+  {
+    id: 'ground',
+    name: 'Ground',
+    description:
+      'A tile that holds things up and cannot be walked through. The other half of the Player \u2014 gravity with nothing to land on is a long fall.',
+    requires: ['Gravity', 'Solid Bodies'],
+    sprites: [GROUND_SPRITE],
+    contents: groundActor,
   },
 ];
 

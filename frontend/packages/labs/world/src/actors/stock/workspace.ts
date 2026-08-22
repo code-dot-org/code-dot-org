@@ -61,6 +61,26 @@ export const setText = (exportName: string, value: object) => ({
   inputs: {ACTOR: me(), VALUE: value},
 });
 
+/** `set sprite ⟨file⟩` — a still picture, named by its file. */
+export const setSprite = (file: string) => ({
+  type: 'world_set_sprite',
+  fields: {SPRITE: file},
+});
+
+/**
+ * `when this actor presses ⟨key⟩` — a key binding the actor owns.
+ *
+ * The TRAIT's event, not the world's. A world event is handed no actor and
+ * registers on the world, which an `.actor` module has no binding for; "this
+ * actor presses space" is the statement an actor can make. Electing
+ * `Input#TakesKeyboardInput` is what makes the broadcast reach it.
+ */
+export const onKey = (key: string, body: object[]) => ({
+  type: 'world_on_Input_PressesEvent',
+  fields: {FILTER0: key},
+  ...(body.length ? {next: {block: chain(body)}} : {}),
+});
+
 /**
  * `play animation ⟨id⟩` — the picture, for an actor that has one.
  *
@@ -74,25 +94,43 @@ export const playAnimation = (id: string) => ({
   fields: {ANIMATION: id},
 });
 
+/** What an actor file may hold beside its `define actor`. */
+export interface ActorExtras {
+  /**
+   * The picture it paints, for an actor that has no sprite.
+   *
+   * Only an interface actor needs one. A Label has no picture and must paint
+   * itself; a Coin has a picture and must not, since a drawing would cover it.
+   */
+  drawing?: {width: number; height: number; commands: object[]};
+  /**
+   * Event handlers — `when this actor presses ⟨space⟩` and the like.
+   *
+   * A hat is a root of its own, so these sit beside the definition. They are
+   * for what the actor does to ITSELF: a Player binds the space bar because
+   * a control scheme is what a player is. What it does to other actors is the
+   * project's, and belongs in the world.
+   */
+  handlers?: object[];
+}
+
 /**
- * A stock actor's file: the definition, and the drawing beside it if it has one.
+ * A stock actor's file: the definition, and whatever sits beside it.
  *
- * TWO ROOTS, not one. A drawing is a definition root of its own — it takes no
- * previous connection, because `DisableOrphansPlugin` disables a top-level
- * block that has one along with everything below it (specs/DRAWING.md). So it
- * sits beside the `define actor` rather than inside it, exactly as `each frame`
- * does in an actor file.
+ * SEPARATE ROOTS, not one. A drawing and a handler hat both take no previous
+ * connection, and `DisableOrphansPlugin` disables a top-level block that has
+ * one along with everything below it (specs/DRAWING.md). So they sit beside the
+ * `define actor` rather than inside it, exactly as `each frame` does in an
+ * actor file.
  *
- * THE DRAWING IS OPTIONAL, because only an interface actor needs one. A Label
- * has no picture and must paint itself; a Coin has a picture and must not. An
- * actor that omits it is a `define actor` alone, which is the same one root the
- * starter project's own actors are — and byte-for-byte the same JSON, so the
- * two can be the same file (see `constants.ts`).
+ * An actor with neither is a `define actor` alone, which is the same one root
+ * the starter project's own actors are — and byte-for-byte the same JSON, so
+ * the two can be the same file (see `constants.ts`).
  */
 export const actorFile = (
   name: string,
   rows: object[],
-  drawing?: {width: number; height: number; commands: object[]},
+  extras: ActorExtras = {},
 ): string =>
   JSON.stringify(
     {
@@ -105,14 +143,24 @@ export const actorFile = (
             fields: {NAME: name},
             ...(rows.length ? {next: {block: chain(rows)}} : {}),
           },
-          ...(drawing
+          // Handlers before the drawing, and laid out down the left: the
+          // reading order of a file is what a learner opening it meets first.
+          ...(extras.handlers ?? []).map((handler, index) => ({
+            ...handler,
+            x: 20,
+            y: 180 + index * 120,
+          })),
+          ...(extras.drawing
             ? [
                 {
                   type: 'world_define_drawing',
                   x: 20,
-                  y: 180,
-                  fields: {WIDTH: drawing.width, HEIGHT: drawing.height},
-                  inputs: {DO: {block: chain(drawing.commands)}},
+                  y: 180 + (extras.handlers?.length ?? 0) * 120,
+                  fields: {
+                    WIDTH: extras.drawing.width,
+                    HEIGHT: extras.drawing.height,
+                  },
+                  inputs: {DO: {block: chain(extras.drawing.commands)}},
                 },
               ]
             : []),

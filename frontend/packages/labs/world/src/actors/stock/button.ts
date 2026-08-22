@@ -39,17 +39,19 @@ export const buttonActor = actorFile(
     setText('TextProperty', words('Button')),
   ],
   {
-    width: WIDTH,
-    height: HEIGHT,
-    commands: [
-      fill(swatch('#3050a0')),
-      outline(swatch('#ffffff'), 2),
-      rectangle(0, 0, WIDTH, HEIGHT),
-      // The edge belongs to the face, not to the word: a stroked letter at this
-      // size is a smudge.
-      noOutline(),
-      fill(textOf('TextColorProperty')),
-      drawText(WIDTH / 2, HEIGHT / 2),
-    ],
+    drawing: {
+      width: WIDTH,
+      height: HEIGHT,
+      commands: [
+        fill(swatch('#3050a0')),
+        outline(swatch('#ffffff'), 2),
+        rectangle(0, 0, WIDTH, HEIGHT),
+        // The edge belongs to the face, not to the word: a stroked letter at this
+        // size is a smudge.
+        noOutline(),
+        fill(textOf('TextColorProperty')),
+        drawText(WIDTH / 2, HEIGHT / 2),
+      ],
+    },
   },
 );

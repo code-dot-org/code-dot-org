@@ -19,6 +19,7 @@ import {STOCK_ACTORS, stockActorById} from '../stock';
 const label = stockActorById('label')!;
 const button = stockActorById('button')!;
 const coin = stockActorById('coin')!;
+const ground = stockActorById('ground')!;
 
 /** A project with `actors/` and `rules/` folders and whatever files are given. */
 const project = (
@@ -200,5 +201,39 @@ describe('importStockActor, for an actor with a picture', () => {
     // Coin would otherwise lose the painting.
     expect(names(twice).sort()).toEqual(names(once).sort());
     expect(twice.files).toEqual(once.files);
+  });
+});
+
+// The other half of the aggregate: a still picture rather than an animation.
+// An animation carries its own strip, so until something named a sprite
+// DIRECTLY this path had no caller and no test.
+describe('importStockActor, for an actor with a still picture', () => {
+  const names = (source: MultiFileSource) =>
+    Object.values(source.files).map(file => file.name);
+
+  it('writes the image its `set sprite` row names', () => {
+    const {source} = importStockActor(project(), ground);
+
+    expect(names(source)).toEqual(expect.arrayContaining(['ground.png']));
+  });
+
+  it('names an image that exists, spelling and all', () => {
+    // A `set sprite` field holds a FILE NAME, and the importer writes one from
+    // the sprite id. Nothing but this checks that the two agree — a Ground
+    // asking for `ground.PNG` would import a file and point at nothing.
+    const {source} = importStockActor(project(), ground);
+    const named = [...ground.contents.matchAll(/"SPRITE": "([^"]+)"/g)].map(
+      match => match[1],
+    );
+
+    for (const file of named) {
+      expect(names(source)).toContain(file);
+    }
+  });
+
+  it('brings no `.sheet`, because a still picture is not a grid', () => {
+    const {source} = importStockActor(project(), ground);
+
+    expect(names(source).filter(name => name.endsWith('.sheet'))).toEqual([]);
   });
 });

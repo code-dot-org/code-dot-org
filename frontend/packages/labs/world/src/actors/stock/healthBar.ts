@@ -145,5 +145,5 @@ export const healthBarDrawing = (subjectGetType: string) => {
 export const healthBarActor = actorFile(
   'Health Bar',
   [HEALTH_BAR_SUBJECT, showAs('bar')],
-  healthBarDrawing('world_get_ActorsHealthBar_SubjectProperty'),
+  {drawing: healthBarDrawing('world_get_ActorsHealthBar_SubjectProperty')},
 );

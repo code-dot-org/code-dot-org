@@ -78,5 +78,5 @@ export const progressBarDrawing = () => ({
 export const progressBarActor = actorFile(
   'Progress Bar',
   [useTrait('Progress#ShowsProgressTrait'), showAs('bar')],
-  progressBarDrawing(),
+  {drawing: progressBarDrawing()},
 );
