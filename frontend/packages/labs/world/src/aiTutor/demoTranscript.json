@@ -2,28 +2,71 @@
   "name": "World Lab, with no dashboard",
   "turns": [
     {
-      "when": {"matches": "jump|gravity|fall"},
+      "when": {
+        "matches": "jump|gravity|fall"
+      },
       "delayMs": 800,
       "reply": {
-        "text": "Jumping is a **rule**, not something you write on the player directly.\n\nOpen your Player actor and look at its `use rule` rows. If `Jumps` is not among them, add it — that gives the actor a `jump` action and the properties behind it (`jump strength`, `coyote time`).\n\nThen the player needs a reason to jump. In the same actor, add a handler for the event you want:\n\n- `when Player is pressing up` → `Player jump`\n\nIf it already has the rule and still does not move, check that something is giving it gravity: `Falls` is a separate rule, and a jump with nothing pulling back down looks like nothing happening."
+        "structured": {
+          "answer": {
+            "answerType": "hint",
+            "goal": "Point at the rule that makes jumping possible.",
+            "explanation": "Jumping is a **rule**, not something you write on the player directly.\n\nOpen your Player actor and look at its `use trait` rows. If `Jumping#JumpsTrait` is not among them, add it \u2014 that is what gives the actor a `jump` action.\n\nThen it needs a reason to jump: a `when \u27e8key\u27e9 is pressed` handler that calls `jump`.",
+            "nextSteps": "- Check the Player actor for `Jumping#JumpsTrait`\n- Check that something gives it gravity, or a jump looks like nothing happening",
+            "code": []
+          }
+        }
       }
     },
     {
-      "when": {"matches": "score|coin|collect|point"},
-      "delayMs": 800,
+      "when": {
+        "matches": "hurt|damage|spike|dangerous"
+      },
+      "delayMs": 1100,
       "reply": {
-        "text": "Scoring hangs off a collision, so two actors have to agree.\n\nThe coin needs the `Collectable` trait from the `Collection` rule, and the player needs `Collects`. Neither has to know about the other — that is what makes \"these things can be picked up\" sayable at all.\n\nThen, on the Player, handle the event:\n\n- `when Player collects ⟨thing⟩` → `add 1 to score`\n\nIf nothing happens, the usual cause is that one of the two actors is missing its half of the pair — check the `use rule` rows on both."
+        "structured": {
+          "answer": {
+            "answerType": "buildActor",
+            "goal": "Make the coin dangerous.",
+            "explanation": "Being hurt has two sides, and the two actors do not have to know about each other. The Player already elects `Health#HasHealthTrait`; the Coin needs the other half, `Health#DealsDamageTrait`.\n\nI added that row to your Coin. It keeps everything it already had \u2014 the spin animation and being collectable \u2014 so it is still a coin, just one that costs you something.",
+            "nextSteps": "- Open the Coin actor and look at the new `use trait` row\n- Set its `damage` property in the map if you want it to hurt more than 1",
+            "code": [
+              {
+                "filename": "coin.actor",
+                "sourceCode": "{\n  \"blocks\": {\n    \"blocks\": [\n      {\n        \"type\": \"world_actor\",\n        \"x\": 20,\n        \"y\": 20,\n        \"fields\": {\n          \"NAME\": \"Coin\"\n        },\n        \"next\": {\n          \"block\": {\n            \"type\": \"world_play_animation\",\n            \"fields\": {\n              \"ANIMATION\": \"coinSpin\"\n            },\n            \"next\": {\n              \"block\": {\n                \"type\": \"world_use_trait\",\n                \"fields\": {\n                  \"TRAIT\": \"Collection#CanBeCollectedTrait\"\n                },\n                \"next\": {\n                  \"block\": {\n                    \"type\": \"world_use_trait\",\n                    \"fields\": {\n                      \"TRAIT\": \"Health#DealsDamageTrait\"\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    ]\n  }\n}"
+              }
+            ]
+          }
+        }
       }
     },
     {
-      "when": {"matches": "error|undefined|crash|broke"},
+      "when": {
+        "matches": "error|undefined|crash|broke"
+      },
       "delayMs": 700,
       "reply": {
-        "text": "Look at the console under the game — a world says what went wrong there.\n\nA message about reading a property of nothing almost always means a block is pointing at an actor that is not in the map, or one that was removed while a rule still held it. Check the actor-typed properties in your map: if a Health Bar's `subject` names an actor you deleted, it will be empty at run time."
+        "structured": {
+          "answer": {
+            "answerType": "debug",
+            "goal": "Read the console.",
+            "explanation": "Look at the console under the game \u2014 a world says what went wrong there.\n\nA message about reading a property of nothing usually means a block points at an actor that is not in the map, or one removed while a rule still held it.",
+            "nextSteps": "- Check the actor-typed properties in your map for a name that no longer exists",
+            "code": []
+          }
+        }
       }
     }
   ],
   "fallback": {
-    "text": "This is a recorded conversation — there is no model behind it. Ask about jumping, about scoring, or about an error you are seeing, and I have an answer ready."
+    "structured": {
+      "answer": {
+        "answerType": "ask",
+        "goal": "Offer something to ask.",
+        "explanation": "This is a recorded conversation \u2014 there is no model behind it. Ask about jumping, about making something hurt the player, or about an error you are seeing.",
+        "nextSteps": "- Try: \u201cmake the coin hurt the player\u201d\n- Try: \u201cwhy does the player fall through the floor?\u201d",
+        "code": []
+      }
+    }
   }
 }

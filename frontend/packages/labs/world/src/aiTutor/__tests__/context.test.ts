@@ -1,109 +1,128 @@
 // What World Lab tells the tutor.
 //
-// The substance is what a world project IS: a `.actor` on disk is a serialized
-// Blockly workspace — ids, coordinates, field values — and sending that would
-// spend the whole context window describing where blocks sit. The tutor is
-// shown what those blocks GENERATE instead.
+// The design decision under test is the SPLIT, and it comes from measurement:
+// the starter project's rules serialize to ~950,000 characters (`solid.rule`
+// alone is 390,714) while its actors and world come to ~24,000 between them.
+// So actors and worlds go as they are, and rules go as metadata.
 
 import {describe, expect, it} from 'vitest';
 
-import {MAX_CONTEXT_CHARS, worldContext, worldSourceCode} from '../context';
+import type {RuleMeta} from '../../blockly/ruleMeta';
+import {MAX_FILE_CHARS, worldContext, worldSourceCode} from '../context';
 
-const generated = (files: Record<string, string>) => files;
+const rule = (over: Partial<RuleMeta> = {}): RuleMeta =>
+  ({
+    id: 'Gravity',
+    name: 'Gravity',
+    ability: 'Falls',
+    source: 'builtin',
+    ref: {} as RuleMeta['ref'],
+    requires: [],
+    traits: [{id: 'Falls', name: 'Falls', ref: {}, requires: []}],
+    properties: [
+      {
+        id: 'gravity',
+        name: 'gravity',
+        type: 'number',
+        default: 1,
+        readonly: false,
+        scope: 'trait',
+        ref: {},
+      },
+    ],
+    actions: [],
+    queries: [],
+    events: [
+      {id: 'startsFalling', name: 'starts falling', params: [], ref: {}},
+    ],
+    steps: [],
+    enums: [],
+    ...over,
+  }) as unknown as RuleMeta;
 
-describe('worldSourceCode', () => {
-  it('shows a Blockly file as the code it generates, named by the file', () => {
-    // Named by what the STUDENT knows. When the tutor says "in your Player
-    // actor" they have to be able to find it.
-    const out = worldSourceCode(
-      generated({'actors/player.actor': 'actor.useTraits([Jumps]);'}),
+const source = (files: Record<string, string>, rules: RuleMeta[] = []) =>
+  worldSourceCode({files, rules})!;
+
+describe('rules go as metadata', () => {
+  it('names what a rule offers, not how it is built', () => {
+    // `solid.rule` is 390,714 characters of machine-generated blocks. What a
+    // student needs is that electing "Falls" makes a thing fall.
+    const out = source({}, [rule()]);
+
+    expect(out).toContain('Gravity — Falls');
+    expect(out).toContain('traits an actor can elect: Falls');
+    expect(out).toContain('gravity (number)');
+    expect(out).toContain('starts falling');
+  });
+
+  it('says outright that implementations are not shown', () => {
+    // Otherwise the model asks for them, or invents them.
+    expect(source({}, [rule()])).toContain('implementations are not shown');
+  });
+
+  it('never sends a rule file itself, however small', () => {
+    const out = source({'rules/gravity.rule': '{"blocks":{"blocks":[]}}'}, [
+      rule(),
+    ]);
+
+    expect(out).not.toContain('"blocks"');
+  });
+});
+
+describe('actors and worlds go as they are', () => {
+  it('sends the workspace, unmodified', () => {
+    // It is the form the agent has to write BACK, so sending anything else
+    // would be asking it to author a shape it has never seen.
+    const workspace = '{"blocks":{"languageVersion":0,"blocks":[]}}';
+    const out = source({'actors/coin.actor': workspace});
+
+    expect(out).toContain('actors/coin.actor');
+    expect(out).toContain(workspace);
+  });
+
+  it('says that this is the form to write back', () => {
+    expect(source({'actors/coin.actor': '{}'})).toContain(
+      'the form to write back',
     );
-
-    expect(out).toContain('actors/player.actor');
-    expect(out).toContain('actor.useTraits([Jumps]);');
   });
 
-  it('says that a Blockly file is blocks, not a file they can edit', () => {
-    // The single most important thing the model can know about this lab.
-    expect(worldSourceCode(generated({'actors/player.actor': 'x'}))).toContain(
-      'shown as the code they generate',
-    );
+  it('names a workspace too big to send rather than dropping it silently', () => {
+    // A silent omission reads to the model as a file that does not exist.
+    const out = source({
+      'actors/huge.actor': '{'.repeat(MAX_FILE_CHARS + 1),
+      'actors/small.actor': '{}',
+    });
+
+    expect(out).toContain('Not shown, too large to send: actors/huge.actor');
+    expect(out).toContain('actors/small.actor');
+  });
+});
+
+describe('the block catalogue', () => {
+  it('is always sent, because the agent cannot invent block types', () => {
+    const out = source({});
+
+    expect(out).toContain('Every block available in this project');
+    expect(out).toContain('world_use_trait');
   });
 
-  it('shows a hand-written file plainly, with no such note', () => {
-    const out = worldSourceCode(
-      generated({'helpers.js': 'export const x = 1;'}),
-    );
-
-    expect(out).toContain('filename: helpers.js\n');
-    expect(out).not.toContain('shown as the code');
-  });
-
-  it('leaves out the kinds that generate nothing worth reading', () => {
-    // A map is placements, an anim is frames, an effect is a shader graph.
-    // None of them explains why a game misbehaves.
-    const out = worldSourceCode(
-      generated({
-        'actors/player.actor': 'real code',
-        'maps/level1.map': '{"actors":[]}',
-        'anims/run.anim': '{"frames":[]}',
-        'effects/ripple.effect': '{"nodes":[]}',
-        'sprites/hero.png': 'binary',
-      }),
-    );
-
-    expect(out).toContain('player.actor');
-    for (const left of [
-      'level1.map',
-      'run.anim',
-      'ripple.effect',
-      'hero.png',
-    ]) {
-      expect(out).not.toContain(left);
-    }
-  });
-
-  it('is undefined when there is nothing readable', () => {
-    expect(worldSourceCode(generated({}))).toBeUndefined();
-    expect(worldSourceCode(generated({'maps/a.map': '{}'}))).toBeUndefined();
-    expect(
-      worldSourceCode(generated({'actors/a.actor': '   '})),
-    ).toBeUndefined();
-  });
-
-  it('orders files predictably, so two identical projects read the same', () => {
-    const out = worldSourceCode(generated({'b.js': 'second', 'a.js': 'first'}));
-
-    expect(out!.indexOf('a.js')).toBeLessThan(out!.indexOf('b.js'));
-  });
-
-  it('says what it dropped rather than truncating a program mid-function', () => {
-    // A program that stops mid-function reads as a bug the student did not
-    // write, and the model will helpfully try to fix it.
-    // Two thirds of the budget each: the first fits, the second cannot.
-    const big = 'x'.repeat(Math.floor((MAX_CONTEXT_CHARS * 2) / 3));
-    const out = worldSourceCode(generated({'a.js': big, 'zz-dropped.js': big}));
-
-    expect(out).toContain('a.js');
-    expect(out).toContain('left out because the whole project did not fit');
-    expect(out).toContain('zz-dropped.js');
-    // The one that did fit is whole.
-    expect(out).toContain(big);
+  it('explains how to read a block sentence', () => {
+    expect(source({})).toContain('marking its sockets in order');
   });
 });
 
 describe('worldContext', () => {
-  it('carries the console, which is where a running game says what went wrong', () => {
+  it('carries the console, where a running game says what went wrong', () => {
     expect(
       worldContext({
-        generated: {'a.actor': 'code'},
-        consoleOutput: 'TypeError: cannot read health of undefined',
-        hasRun: true,
-        hasEdited: true,
+        files: {},
+        rules: [],
+        consoleOutput: 'Player started falling',
         longInstructions: 'Make the player jump.',
+        hasRun: true,
       }),
     ).toMatchObject({
-      consoleOutput: 'TypeError: cannot read health of undefined',
+      consoleOutput: 'Player started falling',
       longInstructions: 'Make the player jump.',
       hasRun: true,
     });

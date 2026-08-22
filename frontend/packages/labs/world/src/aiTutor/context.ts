@@ -1,146 +1,194 @@
 // What World Lab tells the tutor about the project.
 //
-// THE HARD PART IS THAT A WORLD PROJECT IS NOT TEXT. Web Lab's files are HTML,
-// CSS and JavaScript — a model reads them as-is. A `.world`, `.actor` or `.rule`
-// is a serialized Blockly workspace: block ids, x/y coordinates, field values,
-// nested `inputs` maps. Sent raw it is enormous, mostly positional, and says
-// almost nothing about what the program DOES.
+// A world project is not text. Web Lab's files are HTML and CSS, which a model
+// reads as-is; a `.world`, `.actor` or `.rule` is a serialized Blockly
+// workspace. So the question is which serialization to send, and the answer is
+// different per file kind — because their sizes differ by three orders of
+// magnitude. Measured on the starter project:
 //
-// So the tutor is shown what the project GENERATES — the JavaScript the
-// compiler builds and the sandbox runs (`runtime/WorldRuntimeContext`'s
-// `generatedProject`). That is a real program describing real behaviour, and it
-// is derived from the blocks by the same transform that makes the game run, so
-// it cannot drift from what the student built.
+//     solid.rule       390,714      player.actor      5,310
+//     gravity.rule     145,790      healthBar.actor   9,773
+//     collisions.rule  122,117      coin.actor          588
+//     health.rule       72,968      ball.actor          358
+//     ────────────────────────      main.world          790
+//     all rules        ~950,000     all actors+world  ~24,000
 //
-// THE STUDENT CANNOT EDIT IT, and that is the thing the model must be told.
-// They drag blocks; the JavaScript is an artifact they never see. A tutor that
-// says "change line 12 of actors/player.js" has given a useless instruction.
-// The system prompt below exists to prevent exactly that, and it is why this
-// lab offers no code proposals at all (`useWorldTutor`).
+// ACTORS AND WORLDS GO AS THEY ARE. Twenty-four thousand characters for the
+// whole project, and it is the form the agent has to write back, so sending
+// anything else would mean asking it to author a shape it has never seen.
+//
+// RULES GO AS METADATA (`ruleSummary`). The big ones are machine-generated from
+// `scripts/rules/*.mjs` and no context is worth 390,000 characters of one. It
+// is also the wrong content: what a student needs from `Gravity` is that
+// electing "Falls" makes a thing fall and that it raises `starts falling` — not
+// the four hundred blocks behind that. What the game does, not how it works.
+//
+// AND THE BLOCK CATALOGUE, so the agent can write blocks that exist
+// (`blockCatalogue`).
 
 import type {AiTutorContext} from '@code-dot-org/aitutor';
 
-/** The Blockly-backed kinds, whose on-disk form is a workspace rather than code. */
-const BLOCKLY_TYPES = ['world', 'actor', 'rule', 'behavior'];
+import type {RuleMeta} from '../blockly/ruleMeta';
 
-/** Editable files whose contents are already prose or code the model can read. */
+import {blockCatalogue} from './blockCatalogue';
+import {summarizeRules} from './ruleSummary';
+
+/** Kinds whose workspace is small enough to send whole. */
+const SENT_WHOLE = ['world', 'actor', 'behavior'];
+
+/** Editable files that are already text a model can read. */
 const READABLE_TYPES = ['js', 'ts', 'json', 'md', 'txt'];
 
 /**
- * Kinds that generate nothing worth reading.
+ * A ceiling on any single workspace, in characters.
  *
- * A `.map` is a list of placements, a `.anim` a list of frames, an `.effect` a
- * shader graph, a `.sheet` an image's companion. All are data the game consumes
- * rather than behaviour the student wrote, and none of them explains why a game
- * is doing the wrong thing.
+ * Actors are hundreds to low thousands; the biggest in the starter project is
+ * under ten thousand. A file past this is not the kind of thing this budget was
+ * measured against — a generated actor, or a rule mis-named — and sending it
+ * would crowd out everything else. Named rather than dropped, so the tutor can
+ * say it did not look.
  */
+export const MAX_FILE_CHARS = 24_000;
+
+/** A ceiling on everything, so one enormous project cannot fill the window. */
+export const MAX_CONTEXT_CHARS = 120_000;
+
 const extensionOf = (path: string): string =>
   path.split('.').pop()?.toLowerCase() ?? '';
 
-/**
- * How much generated code to send.
- *
- * A big world generates a lot, and the whole point of the context window is
- * that it is finite. Cut at a size that comfortably holds a starter project
- * whole; past it the model is told what was left out rather than silently
- * given a truncated program, because a program that stops mid-function reads
- * as a bug the student did not write.
- */
-export const MAX_CONTEXT_CHARS = 60_000;
-
-const fence = (contents: string) => `\`\`\`\n${contents}\n\`\`\``;
-
-/**
- * The project as the model should see it: generated code, named by its source.
- *
- * Named by the file the STUDENT knows — `actors/player.actor`, not the module
- * path — so that when the tutor says "in your Player actor" the student knows
- * where to look.
- */
-export const worldSourceCode = (
-  generated: Record<string, string>,
-): string | undefined => {
-  const parts: string[] = [];
-  let budget = MAX_CONTEXT_CHARS;
-  const omitted: string[] = [];
-
-  for (const path of Object.keys(generated).sort()) {
-    const extension = extensionOf(path);
-    if (
-      !BLOCKLY_TYPES.includes(extension) &&
-      !READABLE_TYPES.includes(extension)
-    ) {
-      continue;
-    }
-    const contents = generated[path];
-    if (!contents?.trim()) {
-      continue;
-    }
-    const kind = BLOCKLY_TYPES.includes(extension)
-      ? `${path} (blocks, shown as the code they generate)`
-      : path;
-    const block = `filename: ${kind}\n${fence(contents)}`;
-    if (block.length > budget) {
-      omitted.push(path);
-      continue;
-    }
-    budget -= block.length;
-    parts.push(block);
-  }
-
-  if (omitted.length) {
-    parts.push(
-      `These files were left out because the whole project did not fit: ${omitted.join(', ')}. Ask the student to describe them if they matter.`,
-    );
-  }
-
-  return parts.length ? parts.join('\n\n') : undefined;
-};
-
-/**
- * What the tutor is told about the medium, once per turn.
- *
- * Not a nicety. Without it a model reads JavaScript and answers about
- * JavaScript — line numbers, syntax, edits to files the student cannot open.
- */
-export const WORLD_SYSTEM_PROMPT = [
-  'You are helping a student who is building a game with BLOCKS, not with text.',
-  'They drag blocks together in a visual editor. The code you are shown is',
-  'GENERATED from those blocks by the lab; the student never sees it and cannot',
-  'edit it.',
-  '',
-  'So: never tell them to edit a line, a file, or any JavaScript. Answer in',
-  'terms of the blocks they work with — the actors they have defined, the rules',
-  'those actors use, the traits a rule provides, the events a handler responds',
-  'to. "Add a `when Player touches Coin` handler to your Player actor" is useful.',
-  '"Change line 12 of actors/player.js" is not.',
-  '',
-  'A `.world` file defines the world and which actors are in it. An `.actor`',
-  'defines a kind of thing in the world. A `.rule` defines a mechanic that',
-  'actors opt into by electing one of its traits.',
-].join('\n');
+const fence = (contents: string, language = '') =>
+  `\`\`\`${language}\n${contents}\n\`\`\``;
 
 export interface WorldContextFacts {
-  /** The project after `generatedProject` — Blockly files as their code. */
-  generated: Record<string, string>;
+  /** Every project file, by path. */
+  files: Record<string, string>;
+  /** The rules the project has, as the editor builds them for its palette. */
+  rules: readonly RuleMeta[];
   longInstructions?: string;
-  /** The game's console output, most recent last. */
   consoleOutput?: string;
-  /** Whether the game has been compiled and run at least once. */
   hasRun?: boolean;
   hasEdited?: boolean;
 }
 
+/**
+ * The project, told in three registers.
+ *
+ * Order matters: the rules first, because they are the vocabulary everything
+ * else is written in; then the actors and world, which are what the student
+ * actually built; then the catalogue, which is reference material and the
+ * least likely thing to need re-reading.
+ */
+export const worldSourceCode = ({
+  files,
+  rules,
+}: Pick<WorldContextFacts, 'files' | 'rules'>): string | undefined => {
+  const sections: string[] = [];
+  let budget = MAX_CONTEXT_CHARS;
+
+  const add = (text: string): boolean => {
+    if (text.length > budget) {
+      return false;
+    }
+    budget -= text.length;
+    sections.push(text);
+    return true;
+  };
+
+  if (rules.length) {
+    add(
+      '# The rules this project has\n\n' +
+        'Each is a mechanic an actor opts into by electing one of its traits. ' +
+        'Their blocks are in the catalogue below; their implementations are not ' +
+        'shown, and you do not need them.\n\n' +
+        summarizeRules(rules),
+    );
+  }
+
+  const workspaces: string[] = [];
+  const tooBig: string[] = [];
+  const readable: string[] = [];
+
+  for (const path of Object.keys(files).sort()) {
+    const extension = extensionOf(path);
+    const contents = files[path];
+    if (!contents?.trim()) {
+      continue;
+    }
+    if (SENT_WHOLE.includes(extension)) {
+      if (contents.length > MAX_FILE_CHARS) {
+        tooBig.push(path);
+        continue;
+      }
+      workspaces.push(`### ${path}\n${fence(contents, 'json')}`);
+    } else if (READABLE_TYPES.includes(extension)) {
+      readable.push(`### ${path}\n${fence(contents)}`);
+    }
+  }
+
+  if (workspaces.length) {
+    add(
+      '# The actors and worlds the student built\n\n' +
+        'These are Blockly workspaces, exactly as stored. This is the form to ' +
+        'write back when proposing a change.\n\n' +
+        workspaces.join('\n\n'),
+    );
+  }
+  if (tooBig.length) {
+    add(`Not shown, too large to send: ${tooBig.join(', ')}.`);
+  }
+  if (readable.length) {
+    add('# Other files\n\n' + readable.join('\n\n'));
+  }
+
+  const catalogue = blockCatalogue(rules);
+  add(
+    '# Every block available in this project\n\n' +
+      '`says` is the sentence on the block, with `%1`, `%2` … marking its ' +
+      'sockets in order; `args` names them. Use no type that is not here.\n\n' +
+      fence(JSON.stringify(catalogue), 'json'),
+  );
+
+  return sections.length ? sections.join('\n\n') : undefined;
+};
+
 export const worldContext = ({
-  generated,
+  files,
+  rules,
   longInstructions,
   consoleOutput,
   hasRun,
   hasEdited,
 }: WorldContextFacts): AiTutorContext => ({
-  sourceCode: worldSourceCode(generated),
+  sourceCode: worldSourceCode({files, rules}),
   longInstructions,
   consoleOutput,
   hasRun,
   hasEdited,
 });
+
+/**
+ * What the tutor is told about the medium, once per turn.
+ *
+ * Without it a model reads JSON and answers about JSON. With it, it answers
+ * about blocks — and knows that when it proposes a change, the change is a
+ * whole workspace file.
+ */
+export const WORLD_SYSTEM_PROMPT = [
+  'You are helping a student build a game out of BLOCKS, in a visual editor.',
+  'They never type code. Everything you are shown is the blocks, serialized.',
+  '',
+  'A `.world` file defines the world and what is in it. An `.actor` defines a',
+  'kind of thing in the world. A `.rule` defines a mechanic that actors opt',
+  'into by electing one of its traits — you are shown what each rule offers,',
+  'not how it is built, and that is all you need.',
+  '',
+  'Talk in blocks, never in code. "Add a `when Player touches Coin` handler to',
+  'your Player actor" is useful; "change line 12" is not, because there are no',
+  'lines.',
+  '',
+  'When you change something, return the WHOLE file as a Blockly workspace, in',
+  'the same shape as the ones you were shown. Use only block types from the',
+  'catalogue. If you are not confident the workspace you would write is valid,',
+  'explain the change in words instead — a broken file loses the student their',
+  'work, and an explanation never does.',
+].join('\n');

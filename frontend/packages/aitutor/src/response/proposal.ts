@@ -32,6 +32,26 @@ export interface ProposalPolicy {
    * `['html', 'css', 'js', 'json']` in weblab2.
    */
   fileTypes: readonly string[];
+
+  /**
+   * A last check the host makes before the offer is shown at all.
+   *
+   * The answer type says what the model MEANT to produce and the extensions say
+   * what this lab can place; neither says whether the content is any good. For
+   * a lab whose files are plain text that gap does not matter — a broken CSS
+   * rule is a broken CSS rule, visibly, and the student can undo it.
+   *
+   * It matters enormously where a file must PARSE to be opened at all. World
+   * Lab's `.actor` is a Blockly workspace: a model that invents a block type
+   * writes a file the editor cannot load, and "accept" on that is a student's
+   * work replaced by something that will not open. There, this generates the
+   * proposed workspace and returns false if it throws — so a bad answer becomes
+   * an explanation rather than an offer.
+   *
+   * Return false and the answer is shown as prose, exactly as an unsupported
+   * answer type would be. Omitted, everything applicable is offered.
+   */
+  accepts?: (files: ReadonlyArray<{path: string; contents: string}>) => boolean;
 }
 
 /** A set of file edits the tutor is offering (specs/PLAN.md §8). */
@@ -79,13 +99,22 @@ export const proposalFrom = (
   if (code.length === 0 || !applicableFiles(code, policy.fileTypes)) {
     return undefined;
   }
+  const files = code.map(file => ({
+    path: file.filename,
+    contents: file.sourceCode,
+  }));
+
+  // The host's own last word. Anything it cannot actually carry out is prose,
+  // not an offer — an Accept button over a file that will not open is worse
+  // than no button at all.
+  if (policy.accepts && !policy.accepts(files)) {
+    return undefined;
+  }
+
   return {
     explanation: answer.explanation ?? '',
     answerType: answer.answerType,
-    files: code.map(file => ({
-      path: file.filename,
-      contents: file.sourceCode,
-    })),
+    files,
   };
 };
 

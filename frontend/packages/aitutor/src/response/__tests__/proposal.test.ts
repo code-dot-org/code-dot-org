@@ -103,3 +103,63 @@ describe('answerFrom', () => {
     expect(answerFrom('a string')).toBeUndefined();
   });
 });
+
+describe('the host’s last word', () => {
+  // `answerType` says what the model meant to produce and the extensions say
+  // what the lab can place. Neither says whether the content will open — which
+  // is the whole question for a lab whose files must parse to be edited at all.
+
+  const withAccepts = (
+    accepts: (files: ReadonlyArray<{path: string}>) => boolean,
+  ) => ({
+    ...policy,
+    accepts,
+  });
+
+  it('offers nothing the host says it cannot carry out', () => {
+    expect(
+      proposalFrom(
+        answer(),
+        withAccepts(() => false),
+      ),
+    ).toBeUndefined();
+  });
+
+  it('offers it when the host agrees', () => {
+    expect(
+      proposalFrom(
+        answer(),
+        withAccepts(() => true),
+      ),
+    ).toBeDefined();
+  });
+
+  it('shows the host the files it would apply, not the raw answer', () => {
+    // Paths and contents, already unwrapped — the host should not have to know
+    // the model's field names to check its own work.
+    let seen: ReadonlyArray<{path: string; contents: string}> = [];
+    proposalFrom(
+      answer(),
+      withAccepts(files => {
+        seen = files as typeof seen;
+        return true;
+      }),
+    );
+
+    expect(seen).toEqual([{path: 'main.js', contents: 'let x = 1;'}]);
+  });
+
+  it('is not asked about an answer that was never a proposal', () => {
+    // No point validating files for a hint.
+    let asked = false;
+    proposalFrom(
+      answer({answerType: 'hint'}),
+      withAccepts(() => {
+        asked = true;
+        return true;
+      }),
+    );
+
+    expect(asked).toBe(false);
+  });
+});

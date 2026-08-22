@@ -19,6 +19,7 @@
 import {useMemo, useRef} from 'react';
 
 import {
+  answerSchema,
   disabledStateFor,
   promptsFor,
   shouldShowAiTutor,
@@ -33,9 +34,15 @@ import {
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {useAppSelector} from '@code-dot-org/lab/redux';
 
+import {projectRuleMetas} from '../blockly/projectModules';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {WORLD_SYSTEM_PROMPT, worldContext} from './context';
+import {
+  mergeProposedWorkspaces,
+  PROPOSABLE_TYPES,
+  workspacesGenerate,
+} from './proposals';
 import {tutorTransport} from './transport';
 
 /** The app name the access rules and the server know this lab by. */
@@ -44,10 +51,38 @@ const APP_NAME = 'world';
 /** How much console history to send, as the shared context helper documents. */
 const MAX_CONSOLE_LINES = 50;
 
+/**
+ * The kinds of answer this lab asks the model for.
+ *
+ * The three `build` kinds are the ones that mean "I have written you a
+ * workspace"; the rest are answers to read.
+ */
+const ANSWER_TYPES = [
+  'ask',
+  'hint',
+  'debug',
+  'example',
+  'explainCode',
+  'buildActor',
+  'buildWorld',
+  'buildRule',
+  'refusal',
+] as const;
+
+const REWRITE_TYPES = ['buildActor', 'buildWorld', 'buildRule'];
+
+/** What the model is told to put in `code`, which here is not code. */
+const CODE_DESCRIPTION =
+  'Whole Blockly workspace files, as JSON. `filename` is the file to write ' +
+  '(`actors/player.actor`, `rules/lava.rule`) and `sourceCode` is the entire ' +
+  'workspace in the same shape you were shown — never a fragment, never a ' +
+  'diff. Use only block types from the catalogue. The list may be empty when ' +
+  'you are only explaining something.';
+
 export const useWorldTutor = (): TutorConfig | undefined => {
   const levelProperties = useMaybeLevelProperties();
-  const {currentSources} = useSources<MultiFileSource>();
-  const {consoleLog, hasCompiled, generatedProject} = useWorldRuntime();
+  const {currentSources, updateSources} = useSources<MultiFileSource>();
+  const {consoleLog, hasCompiled, generateFile} = useWorldRuntime();
 
   const {data: currentUser} = useCurrentUser(DashboardApiClient);
   const user = currentUser?.isSignedIn ? currentUser : undefined;
@@ -76,6 +111,20 @@ export const useWorldTutor = (): TutorConfig | undefined => {
 
   const transport = useMemo(tutorTransport, []);
 
+  const schema = useMemo(
+    () =>
+      answerSchema({
+        answerTypes: ANSWER_TYPES,
+        codeDescription: CODE_DESCRIPTION,
+      }),
+    [],
+  );
+
+  // The project as it was before the agent touched it, so Reject can put it
+  // back. Captured when the offer lands, because by the time either button is
+  // pressed the sources are the merged ones.
+  const beforeProposal = useRef<MultiFileSource | undefined>(undefined);
+
   return useMemo(() => {
     if (!visible) {
       return undefined;
@@ -94,9 +143,10 @@ export const useWorldTutor = (): TutorConfig | undefined => {
           ]),
         );
         return worldContext({
-          // The same transform the compiler runs, so what the tutor reads and
-          // what the game does cannot disagree.
-          generated: generatedProject(files),
+          files,
+          // The rules as the editor builds them for its own palette, so the
+          // tutor's vocabulary and the student's are the same list.
+          rules: projectRuleMetas(files),
           longInstructions: levelProperties?.longInstructions,
           consoleOutput: console_.current
             .slice(-MAX_CONSOLE_LINES)
@@ -107,6 +157,40 @@ export const useWorldTutor = (): TutorConfig | undefined => {
         });
       },
       prompts: promptsFor(scriptId ? 'level' : 'project'),
+      responseSchema: schema,
+      proposals: {
+        answerTypes: REWRITE_TYPES,
+        fileTypes: [...PROPOSABLE_TYPES],
+        // The gate. Every proposed workspace is generated first, and the
+        // generator throws for anything the editor could not open — so a bad
+        // answer becomes an explanation rather than an Accept button over a
+        // file that will not load (`aiTutor/proposals`).
+        accepts: files => workspacesGenerate(files, generateFile),
+        onPropose: proposal => {
+          const held = sources.current;
+          const before = held?.source as MultiFileSource | undefined;
+          if (!held || !before) {
+            return;
+          }
+          beforeProposal.current = before;
+          const {source} = mergeProposedWorkspaces(before, proposal.files);
+          // Applied so the student can OPEN the changed actor and look at the
+          // blocks before answering. That is the whole difference between a
+          // decision and a guess here: the diff is visual.
+          updateSources({...held, source});
+        },
+        onAccept: () => {
+          beforeProposal.current = undefined;
+        },
+        onReject: () => {
+          const back = beforeProposal.current;
+          const held = sources.current;
+          beforeProposal.current = undefined;
+          if (back && held) {
+            updateSources({...held, source: back});
+          }
+        },
+      },
       disabledState: disabledStateFor({
         appName: APP_NAME,
         userAccessLevel,
@@ -121,7 +205,9 @@ export const useWorldTutor = (): TutorConfig | undefined => {
     scriptId,
     channelId,
     levelProperties?.longInstructions,
-    generatedProject,
+    generateFile,
+    schema,
+    updateSources,
     hasCompiled,
     hasEdited,
     userAccessLevel,

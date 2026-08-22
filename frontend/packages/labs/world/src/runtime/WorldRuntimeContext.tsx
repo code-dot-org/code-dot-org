@@ -102,6 +102,20 @@ interface WorldRuntimeValue {
    * so a file that has not changed is not regenerated.
    */
   generatedProject: (files: Record<string, string>) => Record<string, string>;
+  /**
+   * Generate ONE workspace, throwing if it could not be loaded.
+   *
+   * The validator behind the AI Tutor's proposals (`aiTutor/proposals`): the
+   * generator parses the JSON, loads the workspace and emits the module, so it
+   * throws for malformed JSON, an unknown block type, or a root the file's
+   * kind forbids. A workspace that passes here is one the editor can open.
+   *
+   * Separate from `generatedProject` rather than a one-file call to it: that
+   * one REBUILDS the cache from the files it is given, so asking it about a
+   * single file would evict every other entry and make the next compile
+   * regenerate the whole project.
+   */
+  generateFile: (contents: string, path: string) => string;
 }
 
 const WorldRuntimeContext = createContext<WorldRuntimeValue | null>(null);
@@ -501,6 +515,13 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       void managers.current?.preview.setColors(background, border),
     getActorInfo,
     generatedProject: generateBlocklyFiles,
+    generateFile: (contents: string, path: string) => {
+      const generator = blocklyGenerator.current;
+      if (!generator) {
+        throw new Error('Blockly generator is not ready');
+      }
+      return generator.generate(contents, path);
+    },
   };
 
   return (
