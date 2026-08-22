@@ -229,6 +229,30 @@ function ownTraitOptions(
     );
 }
 
+/**
+ * The subject a trait DECLARES, by the value a dropdown stores.
+ *
+ * Not the same question as `traitSubjectFor`, which asks where a block SITS.
+ * `add trait ⟨…⟩ to ⟨…⟩` can name any trait from anywhere, so what decides
+ * whether its target is a camera is the trait itself, not the surroundings.
+ *
+ * Undefined for a value naming a trait nothing in play declares — a rule
+ * deleted, or a file that outlived one. The caller then leaves the socket as
+ * it was rather than guessing.
+ */
+export function subjectOfTraitValue(
+  value: string,
+): 'actor' | 'camera' | undefined {
+  for (const rule of rulesInPlay(projectRuleRefs)) {
+    for (const trait of rule.traits) {
+      if (trait.ref.exportName && memberValue(trait.ref) === value) {
+        return trait.subject ?? 'actor';
+      }
+    }
+  }
+  return undefined;
+}
+
 function traitOptionsFor(
   wanted?: 'actor' | 'camera',
   field?: {getSourceBlock(): unknown},
@@ -335,6 +359,30 @@ export function labelForRef(value: string): string {
   return words || value;
 }
 
+/**
+ * Only the traits an ACTOR can take, and only the ones a CAMERA can.
+ *
+ * `add trait ⟨…⟩ to ⟨…⟩` exists twice in the toolbox — once for each subject —
+ * because one block offering both put every camera trait in front of somebody
+ * wiring up an actor, and a camera trait elected on an actor reads correctly
+ * and does nothing at all. Narrowing the list is what stops the mistake being
+ * available, which is better than catching it afterwards.
+ *
+ * `traitOptions` cannot serve: it filters by where the block SITS, and these
+ * blocks sit wherever the student put them.
+ */
+export function actorTraitOptions(
+  field?: Blockly.FieldDropdown,
+): Array<[string, string]> {
+  return traitOptionsFor('actor', field);
+}
+
+export function cameraTraitOptions(
+  field?: Blockly.FieldDropdown,
+): Array<[string, string]> {
+  return traitOptionsFor('camera', field);
+}
+
 /** For `has trait`: every trait, because the subject is a value, not a place. */
 export function anyTraitOptions(
   field?: Blockly.FieldDropdown,
@@ -350,6 +398,18 @@ export const traitOptionsExtension = liveDropdown(
 );
 
 /** Make `has trait`'s dropdown reflect every trait in play. */
+export const actorTraitOptionsExtension = liveDropdown(
+  'world_actor_trait_options',
+  'TRAIT',
+  actorTraitOptions,
+);
+
+export const cameraTraitOptionsExtension = liveDropdown(
+  'world_camera_trait_options',
+  'TRAIT',
+  cameraTraitOptions,
+);
+
 export const anyTraitOptionsExtension = liveDropdown(
   'world_any_trait_options',
   'TRAIT',

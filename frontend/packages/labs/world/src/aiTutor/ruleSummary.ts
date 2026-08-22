@@ -60,9 +60,22 @@ export const summarizeRule = (rule: RuleMeta): string => {
   if (rule.requires.length) {
     lines.push(`requires: ${list([...rule.requires])}`);
   }
-  lines.push(
-    `traits an actor can elect: ${list(rule.traits.map(t => t.name))}`,
-  );
+  // WHOSE trait, not just which. A camera trait goes on a CAMERA, and a model
+  // told only the name assumed importing the rule was enough — leaving the
+  // camera doing nothing, with a correct-looking project and no error.
+  const held = (subject: 'actor' | 'camera') =>
+    rule.traits.filter(trait => (trait.subject ?? 'actor') === subject);
+  if (held('actor').length) {
+    lines.push(
+      `traits an actor can elect: ${list(held('actor').map(t => t.name))}`,
+    );
+  }
+  if (held('camera').length) {
+    lines.push(
+      'traits a CAMERA elects, not an actor: ' +
+        `${list(held('camera').map(t => t.name))}`,
+    );
+  }
   if (rule.properties.length) {
     lines.push(`properties: ${list(rule.properties.map(property))}`);
   }

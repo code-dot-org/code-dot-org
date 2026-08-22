@@ -182,8 +182,12 @@ import {
 import {measuredImages, parseSpriteRef, spriteCell} from './spriteCells';
 import {
   projectRuleIdentities,
+  actorTraitOptions,
+  actorTraitOptionsExtension,
   anyTraitOptions,
   anyTraitOptionsExtension,
+  cameraTraitOptions,
+  cameraTraitOptionsExtension,
   traitOptions,
   traitOptionsExtension,
   traitSubjectFor,
@@ -6719,21 +6723,41 @@ const traitMutation = (opts: {
   type: string;
   message0: string;
   method: 'addTrait' | 'removeTrait';
+  /**
+   * Whose traits this one offers.
+   *
+   * TWO BLOCKS, one sentence. A single block offering every trait put the
+   * camera ones in front of somebody wiring up an actor, and a camera trait
+   * elected on an actor reads correctly and does nothing at all — the failure
+   * says nothing, because nothing is wrong with the sentence. Narrowing each
+   * list is what stops the mistake being available.
+   *
+   * They read alike on purpose: the sentence IS the same sentence, and what
+   * differs is what it is about, which the socket's own shadow says — `this
+   * actor` against `camera ⟨the main camera⟩`.
+   */
+  subject: 'actor' | 'camera';
   tooltip: string;
 }) =>
   defineBlock({
     type: opts.type,
     message0: opts.message0,
     args0: [
-      // EVERY trait, for the reason `has trait` gives: what is plugged into the
-      // socket decides the subject, and a camera's value is Actor-typed.
-      {type: 'field_dropdown', name: 'TRAIT', options: anyTraitOptions},
+      {
+        type: 'field_dropdown',
+        name: 'TRAIT',
+        options:
+          opts.subject === 'camera' ? cameraTraitOptions : actorTraitOptions,
+      },
       {type: 'input_value', name: 'ACTOR', check: 'Actor'},
     ],
     inputsInline: true,
     previousStatement: true,
     nextStatement: true,
-    extensions: [actorInputExtension, anyTraitOptionsExtension],
+    extensions:
+      opts.subject === 'camera'
+        ? [cameraInputExtension, cameraTraitOptionsExtension]
+        : [actorInputExtension, actorTraitOptionsExtension],
     style: 'setup_blocks',
     tooltip: opts.tooltip,
     generator: {
@@ -6745,24 +6769,46 @@ const traitMutation = (opts: {
     },
   });
 
+const RUNTIME_TRAIT_NOTE =
+  'Its steps start on the next frame, and a trait it had before keeps the ' +
+  'values it had then.';
+
 const worldAddTrait = traitMutation({
   type: 'world_add_trait',
   message0: 'add trait %1 to %2',
   method: 'addTrait',
-  tooltip:
-    'Give an actor — or a camera — a trait while the game runs. Its steps ' +
-    'start on the next frame, and a trait it had before keeps the values it ' +
-    'had then.',
+  subject: 'actor',
+  tooltip: `Give an actor a trait while the game runs. ${RUNTIME_TRAIT_NOTE}`,
 });
+
+const worldAddCameraTrait = traitMutation({
+  type: 'world_add_camera_trait',
+  message0: 'add trait %1 to %2',
+  method: 'addTrait',
+  subject: 'camera',
+  tooltip:
+    'Give a camera a trait while the game runs — which is how a camera rule ' +
+    `reaches the camera every world already has. ${RUNTIME_TRAIT_NOTE}`,
+});
+
+const REMOVE_TRAIT_NOTE =
+  'What it remembers is kept, so adding it back picks up where it left off. ' +
+  'A trait that is only there because another trait needs it stays.';
 
 const worldRemoveTrait = traitMutation({
   type: 'world_remove_trait',
   message0: 'remove trait %1 from %2',
   method: 'removeTrait',
-  tooltip:
-    'Take a trait away while the game runs, so its steps stop. What it ' +
-    'remembers is kept, so adding it back picks up where it left off. A trait ' +
-    'that is only there because another trait needs it stays.',
+  subject: 'actor',
+  tooltip: `Take a trait away from an actor while the game runs, so its steps stop. ${REMOVE_TRAIT_NOTE}`,
+});
+
+const worldRemoveCameraTrait = traitMutation({
+  type: 'world_remove_camera_trait',
+  message0: 'remove trait %1 from %2',
+  method: 'removeTrait',
+  subject: 'camera',
+  tooltip: `Take a trait away from a camera while the game runs, so its steps stop. ${REMOVE_TRAIT_NOTE}`,
 });
 
 export const DOMAIN_BLOCKS = [
@@ -6770,7 +6816,9 @@ export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
   worldAddTrait,
+  worldAddCameraTrait,
   worldRemoveTrait,
+  worldRemoveCameraTrait,
   worldAddEffect,
   worldRemoveEffect,
   ...EFFECT_OWNER_BLOCKS,
@@ -7044,6 +7092,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // "whichever cameras have this trait".
       'world_camera',
       'world_all_cameras',
+      // How a camera rule reaches the camera every world already has. Listed
+      // HERE, beside the camera blocks, because that is where somebody wiring
+      // one up is looking — the actor pair stays with the runtime blocks.
+      'world_add_camera_trait',
+      'world_remove_camera_trait',
       // The one a camera-scoped step is running for — `this actor`'s
       // counterpart, and the only way such a step names its own subject.
       'world_this_camera',

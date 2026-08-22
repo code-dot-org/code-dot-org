@@ -21,7 +21,10 @@ import {STOCK_RULES} from '../rules/stock';
 /** One shelf entry, in the form the tutor reads. */
 const describe = (rule: (typeof STOCK_RULES)[number]): string =>
   `- **${rule.name}** — ${rule.ability}. ` +
-  `Traits: ${rule.provides.join(', ')}. ${rule.description}`;
+  (rule.subject === 'camera'
+    ? `Traits a CAMERA elects (not an actor): ${rule.provides.join(', ')}. `
+    : `Traits: ${rule.provides.join(', ')}. `) +
+  rule.description;
 
 /**
  * The importable rules, or nothing when the project already holds them all.
@@ -50,6 +53,19 @@ export const importableRules = (
     'Prefer this to building the same behaviour by hand. An actor that elects',
     '“Stays Across” cannot leave the map; a wall of tiles around the edge does',
     'the same thing with thirty-seven actors and is harder to change later.',
+    '',
+    'A CAMERA rule is different in one way: importing it does nothing on its',
+    'own, and its traits go on a camera rather than on an actor. Unless the',
+    'world defines a camera of its own, that means a row in the world file:',
+    '',
+    '    add trait ⟨Camera Follow#FollowsTrait⟩ to ⟨camera ⟨the main camera⟩⟩',
+    '',
+    'That row is `world_add_camera_trait`, which is the camera’s copy of the',
+    'block — `world_add_trait` offers an actor’s traits and will not take one',
+    'of a camera’s.',
+    '',
+    'and then the trait’s properties are set on that same camera. A camera',
+    'trait elected on an actor reads correctly and does nothing at all.',
     '',
     ...shelf.map(describe),
   ].join('\n');

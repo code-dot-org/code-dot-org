@@ -335,3 +335,28 @@ describe('a generator that only knows the blocks it started with', () => {
     expect(workspacesGenerate(withAPlayer(), offer, strict(known))).toBe(true);
   });
 });
+
+// Camera rules, which the tutor got wrong in a way the shelf invited.
+//
+// Told only that Camera Follow provides "Follows", a model assumed importing
+// the rule was enough — and the trait names give it no reason to think
+// otherwise: "Follows", "Eases", "Aimed" all read like an actor's. Importing a
+// camera rule does nothing on its own, and a camera trait elected on an actor
+// reads correctly and does nothing at all.
+describe('what the shelf says about a camera rule', () => {
+  const shelf = () => importableRules([])!;
+
+  it('says whose traits they are', () => {
+    expect(shelf()).toContain('Traits a CAMERA elects (not an actor)');
+  });
+
+  it('gives the row to write, since there is usually no `define camera`', () => {
+    expect(shelf()).toContain('add trait');
+    expect(shelf()).toContain('the main camera');
+  });
+
+  it('still describes an actor rule as an actor rule', () => {
+    expect(shelf()).toContain('**Boundaries**');
+    expect(shelf()).toMatch(/\*\*Boundaries\*\* — [^\n]*Traits: Stays Across/);
+  });
+});

@@ -32,6 +32,7 @@ import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import {addOnChange, isStructuralChange} from './extensions/onChange';
 import {definesWorld} from './localActors';
+import {subjectOfTraitValue} from './traitOptions';
 
 export const ACTOR_INPUT_EXTENSION = 'world_actor_input';
 export const ACTOR_SUBJECT_EXTENSION = 'world_actor_subject_input';
@@ -88,8 +89,35 @@ export const inCameraBody = (block: Block): boolean => {
  * it fits the same socket, and a camera has the foundation's traits (a position,
  * a rotation) that these blocks read. Everywhere else it is the actor.
  */
-export const subjectShadow = (block: Block): string =>
-  inCameraBody(block) ? 'world_this_camera' : 'world_this_actor';
+export const subjectShadow = (block: Block): string => {
+  if (inCameraBody(block)) {
+    return 'world_this_camera';
+  }
+  // A block that NAMES a trait is a special case, and `add trait ⟨…⟩ to ⟨…⟩`
+  // is the one that matters: the trait decides whose it is. A camera trait
+  // given to `this actor` is a sentence that reads fine and does nothing, and
+  // the fix was to drag `camera ⟨the main camera⟩` in every single time.
+  //
+  // The main camera rather than `this camera`, because outside a `define
+  // camera` body there is no such thing — `this camera` generates the bare
+  // identifier `camera`, which a world body does not bind.
+  const named = block.getFieldValue?.('TRAIT');
+  if (named && subjectOfTraitValue(String(named)) === 'camera') {
+    return 'world_camera';
+  }
+  return 'world_this_actor';
+};
+
+/**
+ * The subject for a member a CAMERA elects — `set look offset of ⟨…⟩`.
+ *
+ * Inside `define camera`, the camera being defined. Outside it, the main
+ * camera: `define camera` is for the SECOND camera a world wants, so the
+ * common case is a world file adjusting the one every world already has, and
+ * `this camera` there generates an identifier nothing binds.
+ */
+export const cameraShadow = (block: Block): string =>
+  inCameraBody(block) ? 'world_this_camera' : 'world_camera';
 
 /**
  * Replace the shadow when the block's surroundings change its subject.
@@ -104,7 +132,10 @@ export const subjectShadow = (block: Block): string =>
  * be editing their program. `isShadow` is the whole test — a real block sits in
  * front of the shadow, and finding one means the question was already answered.
  */
-const reseedShadow = (block: Block): void => {
+const reseedShadow = (
+  block: Block,
+  choose: (block: Block) => string = subjectShadow,
+): void => {
   const connection = block.getInput('ACTOR')?.connection;
   if (!connection) {
     return;
@@ -113,7 +144,7 @@ const reseedShadow = (block: Block): void => {
   if (current && !current.isShadow()) {
     return;
   }
-  const wanted = subjectShadow(block);
+  const wanted = choose(block);
   // Already right: setting it again would discard a shadow's own state (an
   // `any ⟨kind⟩` shadow remembers which kind) for no change.
   if (current?.type === wanted) {
@@ -171,7 +202,15 @@ export const cameraInputExtension: Extension = defineExtension(
   CAMERA_INPUT_EXTENSION,
   {
     extension() {
-      seedShadow(this, () => 'world_this_camera');
+      seedShadow(this, () => cameraShadow(this));
+      // Re-seeded for the reason the actor one is: a block dragged into a
+      // `define camera` should read as that camera's, and dragged out again
+      // should stop pretending there is one.
+      addOnChange(this, function (this: Block, event) {
+        if (isStructuralChange(this, event)) {
+          reseedShadow(this, cameraShadow);
+        }
+      });
     },
   },
 );

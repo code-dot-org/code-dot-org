@@ -67,6 +67,16 @@ export interface StockRule {
   // ran by merely holding — the keyboard, because noticing a keypress is not a
   // mechanic anybody opts into. That is every rule now (blockly/projectModules),
   // so the flag marked nothing and the distinction it drew has no other half.
+  /**
+   * Whose traits these are, when they are not an actor's.
+   *
+   * A camera rule's traits go on a CAMERA — `add trait ⟨…⟩ to camera ⟨…⟩` —
+   * and importing the rule does nothing on its own. Said here because the
+   * shelf is read by the import dialog and by the AI tutor, and a reader told
+   * only the trait names assumes an actor. Checked against what the rule
+   * actually declares (`stockRuleSubjects.test.ts`), so it cannot drift.
+   */
+  subject?: 'camera';
   /** The `.rule` workspace JSON, copied verbatim on import. */
   contents: string;
 }
@@ -299,6 +309,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     description:
       'Gives a camera somewhere it wants to look, and moves it there at the end of each frame. On its own it holds the view still; other camera rules decide where to look.',
     provides: ['Aimed'],
+    subject: 'camera',
     contents: cameraRule,
   },
   {
@@ -308,6 +319,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     description:
       'Points a camera at an actor, so the view keeps up as it moves. Needs Camera, which is what actually moves the view.',
     provides: ['Follows'],
+    subject: 'camera',
     contents: cameraFollowRule,
   },
   {
@@ -317,6 +329,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     description:
       'Lets a camera catch up to what it is aiming at over a few frames instead of snapping to it. Needs Camera.',
     provides: ['Eases'],
+    subject: 'camera',
     contents: cameraEaseRule,
   },
   {
@@ -326,6 +339,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     description:
       'Holds a camera still while what it follows moves about inside a box, so the view only travels when the player really goes somewhere. Needs Camera.',
     provides: ['Has a Deadzone'],
+    subject: 'camera',
     contents: cameraDeadzoneRule,
   },
   {
@@ -335,6 +349,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     description:
       'Stops a camera at the edge of the map, so the view never shows past the level. Needs Camera.',
     provides: ['Confined to the Map'],
+    subject: 'camera',
     contents: cameraConfinedRule,
   },
 ];
