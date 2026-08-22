@@ -48,11 +48,24 @@ interface StandardSearchOption {
   standard: QuizStandard;
 }
 
+interface CourseOrUnit {
+  type: 'unit' | 'course';
+  id: number;
+  name: string;
+}
+
+interface CourseOrUnitSearchOption {
+  value: string;
+  label: string;
+  courseOrUnit: CourseOrUnit;
+}
+
 // Question bank: browse/search existing MultipleChoiceQuestions and attach
 // one to this quiz (creating a new QuizLevelQuestion, not a new question
 // row) - see LevelsController#index_quiz_questions/#attach_quiz_question.
-// P0 scope: search by question name only; standard/unit/course filters are
-// later work.
+// Search is by question name, AND'd with an optional standard and/or
+// course/unit filter (a question matches the course/unit filter if it's
+// used, via some quiz, in that course/unit).
 const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
   quizId,
   attachedQuestionIds,
@@ -65,6 +78,8 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
   const [standardFilter, setStandardFilter] = useState<QuizStandard | null>(
     null
   );
+  const [courseOrUnitFilter, setCourseOrUnitFilter] =
+    useState<CourseOrUnit | null>(null);
   const [results, setResults] = useState<BankQuestion[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -83,10 +98,15 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
             standardFilter.frameworkShortcode
           )}&standardShortcode=${encodeURIComponent(standardFilter.shortcode)}`
         : '';
+      const courseOrUnitParams = courseOrUnitFilter
+        ? `&courseOrUnitType=${encodeURIComponent(
+            courseOrUnitFilter.type
+          )}&courseOrUnitId=${encodeURIComponent(courseOrUnitFilter.id)}`
+        : '';
       HttpClient.get(
         `/levels/${quizId}/quiz_questions?search=${encodeURIComponent(
           search
-        )}&limit=80&sort=${sort}${standardParams}`
+        )}&limit=80&sort=${sort}${standardParams}${courseOrUnitParams}`
       )
         .then(response => {
           if (!response.ok) {
@@ -99,7 +119,7 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
         .finally(() => setIsLoading(false));
     }, SEARCH_DEBOUNCE_MS);
     return () => clearTimeout(timeout);
-  }, [quizId, search, sort, standardFilter, refreshKey]);
+  }, [quizId, search, sort, standardFilter, courseOrUnitFilter, refreshKey]);
 
   const attach = async (question: BankQuestion) => {
     setAttachingId(question.id);
@@ -187,6 +207,46 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
                     standard.shortcode
                   } - ${standard.description}`,
                   standard,
+                })),
+              })}
+            />
+          )}
+        </FormFieldWrapper>
+        <FormFieldWrapper
+          color="black"
+          size="s"
+          label="Filter by course or unit"
+          className={styles.fullWidthField}
+        >
+          {courseOrUnitFilter ? (
+            <div className={styles.standardFilter}>
+              <Typography variant="body3">
+                {courseOrUnitFilter.type === 'course' ? 'Course' : 'Unit'} -{' '}
+                {courseOrUnitFilter.name}
+              </Typography>
+              <MuiButton
+                variant="text"
+                color="secondary"
+                size="small"
+                type="button"
+                onClick={() => setCourseOrUnitFilter(null)}
+              >
+                Clear
+              </MuiButton>
+            </div>
+          ) : (
+            <SearchBox
+              onSearchSelect={(option: CourseOrUnitSearchOption) =>
+                option && setCourseOrUnitFilter(option.courseOrUnit)
+              }
+              searchUrl={`levels/${quizId}/course_unit_search`}
+              constructOptions={(json: CourseOrUnit[]) => ({
+                options: json.map(courseOrUnit => ({
+                  value: `${courseOrUnit.type}-${courseOrUnit.id}`,
+                  label: `${
+                    courseOrUnit.type === 'course' ? 'Course' : 'Unit'
+                  } - ${courseOrUnit.name}`,
+                  courseOrUnit,
                 })),
               })}
             />

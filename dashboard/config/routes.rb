@@ -453,6 +453,7 @@ Dashboard::Application.routes.draw do
         get 'build_quiz_questions', to: 'levels#build_quiz_questions', as: 'build_quiz_questions'
         put 'quiz_configuration', to: 'levels#update_quiz_configuration', as: 'update_quiz_configuration'
         get 'quiz_questions', to: 'levels#index_quiz_questions', as: 'index_quiz_questions'
+        get 'course_unit_search', to: 'levels#course_unit_search', as: 'course_unit_search'
         post 'quiz_questions', to: 'levels#create_quiz_question', as: 'create_quiz_question'
         get 'quiz_questions/:question_id', to: 'levels#show_quiz_question', as: 'show_quiz_question'
         put 'quiz_questions/:question_id', to: 'levels#update_quiz_question', as: 'update_quiz_question'
