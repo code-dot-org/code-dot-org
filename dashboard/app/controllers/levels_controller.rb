@@ -454,11 +454,22 @@ class LevelsController < ApplicationController
   #
   # POC scope note: assumes MultipleChoiceQuestion-shaped params, same as
   # create_quiz_question - only MultipleChoiceQuestion rows exist in the DB for now.
+  #
+  # editMode: 'fork' requests a fork explicitly (offered by the frontend
+  # only when the question is attached to some other quiz too, with nothing
+  # forcing the choice) - never trusted alone, though: used_in_published_unit?
+  # forces a fork. Forking never touches the original row or any other
+  # quiz's join to it - it only repoints *this* quiz's own QuizLevelQuestion
+  # at a brand new question carrying the edited content.
   def update_quiz_question
     return head :not_found unless @level.is_a?(Quiz)
 
     question = @level.quiz_questions.find(params[:question_id])
-    question.update!(
+    quiz_level_question = @level.quiz_level_questions.find_by!(quiz_question_id: question.id)
+    should_fork = question.used_in_published_unit? || quiz_question_params[:editMode] == 'fork'
+    target = should_fork ? MultipleChoiceQuestion.new(question_key: SecureRandom.uuid, parent: question) : question
+
+    target.update!(
       question_name: quiz_question_params[:questionName],
       question: {
         stem: quiz_question_params[:stem],
@@ -467,11 +478,13 @@ class LevelsController < ApplicationController
       },
       explanation: quiz_question_params[:explanation]
     )
-    question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
-    if quiz_question_params[:page].present?
-      @level.quiz_level_questions.find_by!(quiz_question_id: question.id).update!(page: quiz_question_params[:page])
-    end
-    render json: quiz_question_json(question)
+    target.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
+
+    quiz_level_question.quiz_question = target if should_fork
+    quiz_level_question.page = quiz_question_params[:page] if quiz_question_params[:page].present?
+    quiz_level_question.save!
+
+    render json: quiz_question_json(target)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
   end
@@ -937,7 +950,7 @@ class LevelsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the allow-list through.
   private def quiz_question_params
     params.permit(
-      :questionName, :stem, :correctChoiceId, :explanation, :page,
+      :questionName, :stem, :correctChoiceId, :explanation, :page, :editMode,
       choices: [:id, :text],
       standards: [:frameworkShortcode, :shortcode]
     )
@@ -980,6 +993,7 @@ class LevelsController < ApplicationController
       explanation: question.explanation,
       standards: question.standards.map(&:summarize_for_lesson_edit),
       attachedToOtherQuizzes: question.levels.where.not(id: @level.id).exists?,
+      usedInPublishedUnit: question.used_in_published_unit?,
       # nil for a bank question not (yet) attached to @level - page only
       # means something in the context of a specific quiz's own join.
       page: @level.quiz_level_questions.find_by(quiz_question_id: question.id)&.page,

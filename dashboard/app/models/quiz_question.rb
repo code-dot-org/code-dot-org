@@ -36,6 +36,16 @@ class QuizQuestion < ApplicationRecord
   validates :question_name, presence: true
   validates :question, presence: true
 
+  # preview/stable/sunsetting scripts
+  def used_in_published_unit?
+    levels.any? do |quiz|
+      quiz.script_levels.any? do |sl|
+        script = sl.script
+        script && (script.launched? || script.get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+      end
+    end
+  end
+
   # Overridden by subtypes that can grade themselves server-side (currently
   # MultipleChoiceQuestion). Ungradable types are stored with
   # grading_status "ungraded" until manual/AI grading is built.
