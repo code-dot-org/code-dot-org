@@ -29,6 +29,7 @@ interface QuizQuestionBankProps {
   // still have one of these cached in `results`; this hides it, since the
   // question no longer exists for the "Add" button to attach.
   excludedQuestionIds: number[];
+  refreshKey: number;
   onAttach: (question: QuizQuestionData) => void;
 }
 
@@ -56,6 +57,7 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
   quizId,
   attachedQuestionIds,
   excludedQuestionIds,
+  refreshKey,
   onAttach,
 }) => {
   const [search, setSearch] = useState('');
@@ -97,7 +99,7 @@ const QuizQuestionBank: React.FunctionComponent<QuizQuestionBankProps> = ({
         .finally(() => setIsLoading(false));
     }, SEARCH_DEBOUNCE_MS);
     return () => clearTimeout(timeout);
-  }, [quizId, search, sort, standardFilter]);
+  }, [quizId, search, sort, standardFilter, refreshKey]);
 
   const attach = async (question: BankQuestion) => {
     setAttachingId(question.id);

@@ -140,6 +140,9 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const [destroyedQuestionIds, setDestroyedQuestionIds] = useState<number[]>(
     []
   );
+  // Updated on every successful QuizBuilder save (create, edit-in-place, or
+  // fork) so QuizQuestionBank re-fetches.
+  const [bankRefreshKey, setBankRefreshKey] = useState(0);
   const [attemptId, setAttemptId] = useState<number | null>(null);
   const [responses, setResponses] = useState<
     Record<number, QuestionResponseValue>
@@ -405,6 +408,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                 quizId={levelId as number}
                 attachedQuestionIds={questions.map(question => question.id)}
                 excludedQuestionIds={destroyedQuestionIds}
+                refreshKey={bankRefreshKey}
                 onAttach={question => setQuestions(prev => [...prev, question])}
               />
             ) : undefined
@@ -461,6 +465,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
               onQuestionDestroyed={questionId =>
                 setDestroyedQuestionIds(prev => [...prev, questionId])
               }
+              onQuestionSaved={() => setBankRefreshKey(prev => prev + 1)}
             />
           ) : showIntro ? (
             <QuizIntro

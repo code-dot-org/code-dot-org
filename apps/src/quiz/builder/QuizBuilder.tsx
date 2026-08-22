@@ -50,6 +50,7 @@ interface QuizBuilderProps {
   // so QuizQuestionBank's already-fetched results can drop a question that
   // no longer exists anywhere - see Quiz.tsx's destroyedQuestionIds.
   onQuestionDestroyed: (questionId: number) => void;
+  onQuestionSaved: () => void;
 }
 
 // POC scope: MultipleChoiceQuestion only - see
@@ -60,6 +61,7 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
   questions,
   setQuestions,
   onQuestionDestroyed,
+  onQuestionSaved,
 }) => {
   // Only one form open at a time: null editingQuestionId + isFormOpen means
   // the "new question" form (rendered after the list); a non-null
@@ -193,6 +195,7 @@ const QuizBuilder: React.FunctionComponent<QuizBuilderProps> = ({
         : [...prev, saved]
     );
     closeForm();
+    onQuestionSaved();
     return undefined;
   };
 
