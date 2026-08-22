@@ -351,3 +351,81 @@
   line-height: 22px;
   color: var(--text-neutral-primary);
 }
+
+// --- Page frame ---
+
+.projectView {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  color: var(--text-neutral-primary);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 40px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.topBarSide {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 180px;
+
+  &:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.contentRow {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+// --- Version / project navigation ---
+
+.versionControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.versionLabel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+
+.projectCount {
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+// --- Loading / error ---
+
+.statusText {
+  padding: 24px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-primary);
+}
