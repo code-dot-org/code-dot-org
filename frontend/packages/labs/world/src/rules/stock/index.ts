@@ -24,6 +24,7 @@ import {dragRule} from './drag';
 import {driveRule} from './drive';
 import {expiresRule} from './expires';
 import {gravityRule} from './gravity';
+import {gridRule} from './grid';
 import {healthRule} from './health';
 import {inputRule} from './input';
 import {jumpRule} from './jump';
@@ -209,6 +210,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Moves an actor while the arrow keys are held, at a speed the actor carries. Across and down are separate abilities: a platformer takes one, a top-down game takes both.',
     provides: ['Moves Across', 'Moves Down'],
     contents: arrowsRule,
+  },
+  {
+    id: 'grid',
+    name: 'Grid',
+    ability: 'Moves on a Grid',
+    description:
+      'Moves an actor one whole square at a time instead of by a speed, refusing a step it cannot finish. Walls block a step and crates are pushed by one, which is the whole of a board game.',
+    provides: ['Steps on the Grid', 'Fills a Tile', 'Can Be Pushed'],
+    contents: gridRule,
   },
   {
     id: 'gravity',

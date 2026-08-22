@@ -34,6 +34,7 @@ import {FLAPPY_SINGLE_SPEC} from './flappySingle';
 import {METEORS_SPEC} from './meteors';
 import {METEORS_SINGLE_SPEC} from './meteorsSingle';
 import {PLATFORMER_SINGLE_SPEC} from './platformerSingle';
+import {SOKOBAN} from './sokoban';
 import {TAPPER_PROJECT} from './tapper';
 
 /**
@@ -56,6 +57,7 @@ export const WORLD_SCENARIO_TAGS = [
   'flappy',
   'flappy-single',
   'tapper',
+  'sokoban',
   'empty',
 ] as const;
 
@@ -312,6 +314,27 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- `crosshair.actor` follows the pointer with `each frame`, which is work ' +
       'a KIND of actor does without a rule to do it in — open it and change ' +
       'which moment of the frame it runs in',
+  },
+  sokoban: {
+    name: 'Sokoban',
+    description:
+      'Push the crates onto the marks. The only game here with no speeds in ' +
+      'it — a thing is on a square or crossing to the next one, and never ' +
+      'anywhere else.',
+    source: SOKOBAN.source,
+    instructions:
+      '## Sokoban\n\nPush both crates onto the two marks.\n\n' +
+      '- Arrow keys. You move one square at a time, and cannot stop between ' +
+      'squares — that is `Moves on a Grid`, and it is what makes this a ' +
+      'puzzle rather than a driving game\n' +
+      '- A crate moves when you walk into it, IF the square past it is free. ' +
+      'Nothing in this project says so: pushing belongs to the rule, because ' +
+      'deciding whether a step is legal is the same question as deciding ' +
+      'whether a crate can go\n' +
+      '- Open `crate.actor` to see the three traits that make a crate, and ' +
+      'the one thing this project does write — the win, counted as the ' +
+      'crates that are NOT on a mark\n' +
+      '- Watch the console for `Solved!`',
   },
   empty: {
     name: 'Empty',

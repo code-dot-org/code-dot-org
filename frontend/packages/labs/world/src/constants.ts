@@ -142,7 +142,8 @@ const onEvent = (event: string, x: number, y: number, message: string) => ({
 // optional id and property overrides keyed by owner (trait) id then property id
 // — `positional.position` is the actor's start position. A dedicated map editor
 // will author these; for now it is edited as JSON.
-const place = (type: string, id: string, x: number, y: number) => ({
+/** One actor in a map: a kind, an instance id, and where it starts. */
+export const place = (type: string, id: string, x: number, y: number) => ({
   type,
   id,
   properties: {positional: {position: {x, y}}},
@@ -151,7 +152,7 @@ const place = (type: string, id: string, x: number, y: number) => ({
 // placed actor's position names. Everything in the starter level is on the grid,
 // because "the floor is the bottom row" should be true of the numbers as well as
 // of the picture.
-const tileCenter = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;
+export const tileCenter = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;
 
 /** A run of ground tiles along `row`, one per column in `columns`. */
 const ground = (name: string, row: number, columns: readonly number[]) =>

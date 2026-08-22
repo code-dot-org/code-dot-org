@@ -44,6 +44,7 @@ const RULES = [
   'cameraEase',
   'cameraConfined',
   'cameraDeadzone',
+  'grid',
 ];
 
 const check = process.argv.includes('--check');
