@@ -1,0 +1,19 @@
+<Quiz>
+  <config><![CDATA[{
+  "game_id": 76,
+  "created_at": "2026-08-22T22:25:26.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "show_correctness": true,
+    "reveal_answer_explanation": true,
+    "purpose": "practice",
+    "display_name": "Demo Quiz",
+    "title": "Demo Quiz",
+    "allow_multiple_attempts": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-22T22:25:26.825+00:00\",\"changed\":[\"cloned from \\\"Quiz Lab2 Showcase\\\"\"],\"cloned_from\":\"Quiz Lab2 Showcase\"}]"
+}]]></config>
+</Quiz>
