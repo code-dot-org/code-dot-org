@@ -183,14 +183,100 @@ export const proposalFrom = (
  * and replays what it was given passes the string straight through. Anything
  * that is not a string is returned as it came.
  */
-const parsedIfString = (value: unknown): unknown => {
+/**
+ * Where the first complete JSON value in `text` ends, if it completes.
+ *
+ * Written because a model handed back its answer with one brace too many: a
+ * whole, valid, correct answer object, and then a stray `}` that the wrapper
+ * should have carried. `JSON.parse` reads the value, finds input after it, and
+ * throws — so the entire turn was lost to a single character at the end.
+ *
+ * A scan rather than reading the position out of the thrown message. Engines
+ * word that message differently and number it differently (V8 gives a position,
+ * SpiderMonkey a line and column), and a parser that only works in Chrome is
+ * not a parser.
+ *
+ * Strings and their escapes are tracked, because a brace inside a string is not
+ * a brace — and a serialized Blockly workspace is thousands of characters of
+ * exactly that.
+ */
+export const endOfFirstJsonValue = (text: string): number | undefined => {
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  let started = false;
+
+  for (let at = 0; at < text.length; at++) {
+    const character = text[at];
+    if (inString) {
+      if (escaped) {
+        escaped = false;
+      } else if (character === '\\') {
+        escaped = true;
+      } else if (character === '"') {
+        inString = false;
+      }
+      continue;
+    }
+    if (character === '"') {
+      inString = true;
+      continue;
+    }
+    if (character === '{' || character === '[') {
+      depth++;
+      started = true;
+      continue;
+    }
+    if (character === '}' || character === ']') {
+      depth--;
+      if (depth === 0 && started) {
+        return at + 1;
+      }
+      // More closes than opens: not a value with something after it, but
+      // something this cannot make sense of at all.
+      if (depth < 0) {
+        return undefined;
+      }
+    }
+  }
+  return undefined;
+};
+
+const parsedIfString = (value: unknown, what: string): unknown => {
   if (typeof value !== 'string') {
     return value;
   }
   try {
     return JSON.parse(value);
-  } catch {
-    // Not JSON, so not an answer in disguise. The caller's own check rejects it.
+  } catch (error) {
+    // A complete value with something after it is worth rescuing: the answer is
+    // all there and a stray character at the end is not the student's problem.
+    // Said out loud even so — a reply needing repair is a fact about the model
+    // worth knowing, not a thing to paper over.
+    const ends = endOfFirstJsonValue(value);
+    if (ends !== undefined && ends < value.length) {
+      try {
+        const parsed: unknown = JSON.parse(value.slice(0, ends));
+        console.warn(
+          `AI Tutor: ${what} had ${value.length - ends} character(s) after ` +
+            `the end of it (${JSON.stringify(value.slice(ends, ends + 40))}). ` +
+            'Read the part that parsed.',
+        );
+        return parsed;
+      } catch {
+        // Fall through to the report below: the prefix is no better.
+      }
+    }
+    // SAID OUT LOUD. A silent catch here is how this whole class of bug keeps
+    // hiding: the turn ends as "There was an error getting a response" with
+    // nothing anywhere to say that a reply arrived and could not be read. The
+    // string is printed truncated because it is the whole answer and the
+    // interesting part is usually the first line or the last.
+    console.warn(
+      `AI Tutor: ${what} looked like JSON and did not parse — ` +
+        `${error instanceof Error ? error.message : String(error)}. ` +
+        `It began: ${value.slice(0, 200)}`,
+    );
     return undefined;
   }
 };
@@ -210,7 +296,26 @@ const parsedIfString = (value: unknown): unknown => {
  * it is the model's doing, not the wire's.
  */
 export const answerFrom = (structured: unknown): Answer | undefined => {
-  const wrapper = parsedIfString(structured) as {answer?: unknown} | undefined;
-  const answer = parsedIfString(wrapper?.answer) as Answer | undefined;
-  return answer?.answerType ? answer : undefined;
+  const wrapper = parsedIfString(structured, 'the reply') as
+    | {answer?: unknown}
+    | undefined;
+  const answer = parsedIfString(wrapper?.answer, 'the answer') as
+    | Answer
+    | undefined;
+  if (answer?.answerType) {
+    return answer;
+  }
+  // A reply came and no answer could be read out of it. Downstream this becomes
+  // an empty message, which the turn then reports as a failure — so without
+  // this line the student is told the request failed when it succeeded, and
+  // nothing says otherwise. `structured` being absent is ordinary: a transport
+  // that was never asked for structured output has nothing here.
+  if (structured !== undefined && structured !== null) {
+    console.warn(
+      'AI Tutor: a reply arrived with no answer in it. Keys: ' +
+        `${Object.keys((wrapper ?? {}) as object).join(', ') || '(none)'}; ` +
+        `answerType: ${String((answer as {answerType?: unknown})?.answerType)}.`,
+    );
+  }
+  return undefined;
 };

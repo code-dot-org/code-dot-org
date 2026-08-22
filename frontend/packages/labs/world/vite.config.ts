@@ -143,6 +143,16 @@ export default defineConfig(({command, mode}) => {
         // dependencies — this alias never applies there.
         ...(useSourceAliases
           ? {
+              // Aliased for a second reason as well as the CSS one: the tutor
+              // is developed by editing `packages/aitutor` and watching this
+              // lab, and a dev server resolving its `dist` serves whatever was
+              // built last. That cost half a day — a fix was made, tested,
+              // committed and rebuilt, and the browser went on running the
+              // previous copy, so the same bug reported itself twice.
+              '@code-dot-org/aitutor': path.resolve(
+                __dirname,
+                '../../aitutor/src',
+              ),
               '@code-dot-org/codebridge': path.resolve(
                 __dirname,
                 '../codebridge/src',

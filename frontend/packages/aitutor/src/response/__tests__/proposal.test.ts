@@ -8,7 +8,12 @@
 import {describe, expect, it} from 'vitest';
 
 import {formatAnswer, formatProposalText} from '../format';
-import {answerFrom, applicableFiles, proposalFrom} from '../proposal';
+import {
+  answerFrom,
+  applicableFiles,
+  endOfFirstJsonValue,
+  proposalFrom,
+} from '../proposal';
 import type {Answer} from '../schema';
 
 const policy = {
@@ -305,7 +310,144 @@ describe('an answer the model encoded twice', () => {
   });
 
   it('is undefined for a string that is not an answer at all', () => {
+    const quiet = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
     expect(answerFrom('just some text')).toBeUndefined();
     expect(answerFrom('{"answer":"still not an object"}')).toBeUndefined();
+
+    quiet.mockRestore();
+  });
+
+  it('says so when a reply arrives that it cannot read', () => {
+    // The silence that cost four round trips. An unreadable reply becomes an
+    // empty message, which the turn reports as "There was an error getting a
+    // response" — so if this does not say something, nothing does.
+    const warned: string[] = [];
+    const quiet = vi
+      .spyOn(console, 'warn')
+      .mockImplementation(line => warned.push(String(line)));
+
+    expect(answerFrom({answer: '{"not":"an answer"}'})).toBeUndefined();
+
+    expect(warned.join(' ')).toContain('no answer in it');
+    quiet.mockRestore();
+  });
+
+  it('names the parse failure, and shows the start of what it got', () => {
+    const warned: string[] = [];
+    const quiet = vi
+      .spyOn(console, 'warn')
+      .mockImplementation(line => warned.push(String(line)));
+
+    expect(
+      answerFrom({answer: '{"answerType": "buildWorld", OOPS'}),
+    ).toBeUndefined();
+
+    expect(warned.join(' ')).toContain('did not parse');
+    expect(warned.join(' ')).toContain('OOPS');
+    quiet.mockRestore();
+  });
+
+  it('stays quiet when there is no structured output at all', () => {
+    // Ordinary: a transport never asked for structured output has nothing here.
+    const warned: string[] = [];
+    const quiet = vi
+      .spyOn(console, 'warn')
+      .mockImplementation(line => warned.push(String(line)));
+
+    expect(answerFrom(undefined)).toBeUndefined();
+
+    expect(warned).toEqual([]);
+    quiet.mockRestore();
+  });
+});
+
+// One brace too many.
+//
+// The second real reply, and the second way the same sentence was shown for a
+// turn that had succeeded: a whole, valid, correct answer with a stray `}`
+// after it — the wrapper's closing brace, emitted inside the string. V8 reports
+// it as "Unexpected non-whitespace character after JSON at position 6848", 6848
+// being the length of the answer that was sitting right there.
+describe('endOfFirstJsonValue', () => {
+  it('finds the end of a complete object', () => {
+    expect(endOfFirstJsonValue('{"a":1}')).toBe(7);
+  });
+
+  it('is not fooled by a brace inside a string', () => {
+    // A serialized Blockly workspace is thousands of characters of exactly
+    // this, so a scanner that counted raw braces would stop in the middle of
+    // the answer and "recover" a fragment.
+    expect(endOfFirstJsonValue('{"a":"}}}}"}')).toBe(12);
+  });
+
+  it('is not fooled by an escaped quote inside a string', () => {
+    const text = String.raw`{"a":"say \"hi\" }"}`;
+    expect(endOfFirstJsonValue(text)).toBe(text.length);
+  });
+
+  it('stops at the end of the FIRST value, leaving the rest', () => {
+    expect(endOfFirstJsonValue('{"a":1}}')).toBe(7);
+    expect(endOfFirstJsonValue('{"a":1} trailing junk')).toBe(7);
+  });
+
+  it('is undefined when nothing completes', () => {
+    expect(endOfFirstJsonValue('{"a":1')).toBeUndefined();
+    expect(endOfFirstJsonValue('plain text')).toBeUndefined();
+  });
+});
+
+describe('an answer with a stray brace after it', () => {
+  const withTrailingBrace = {
+    answer:
+      JSON.stringify({
+        answerType: 'buildWorld',
+        explanation: 'A ring of Ground around the map.',
+        code: [
+          {filename: 'main.world', sourceCode: '{"blocks":{"blocks":[]}}'},
+        ],
+      }) + '}\n',
+  };
+
+  it('is read anyway, because the answer is all there', () => {
+    const quiet = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    expect(answerFrom(withTrailingBrace)?.answerType).toBe('buildWorld');
+
+    quiet.mockRestore();
+  });
+
+  it('says what it threw away, rather than repairing in silence', () => {
+    const warned: string[] = [];
+    const quiet = vi
+      .spyOn(console, 'warn')
+      .mockImplementation(line => warned.push(String(line)));
+
+    answerFrom(withTrailingBrace);
+
+    expect(warned.join(' ')).toContain('after the end of it');
+    quiet.mockRestore();
+  });
+
+  it('still becomes an offer', () => {
+    const quiet = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const found = answerFrom(withTrailingBrace)!;
+
+    expect(
+      proposalFrom(found, {
+        answerTypes: ['buildWorld'],
+        fileTypes: ['world'],
+      }),
+    ).toMatchObject({answerType: 'buildWorld'});
+
+    quiet.mockRestore();
+  });
+
+  it('is still refused when the prefix is not an answer either', () => {
+    const quiet = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    expect(answerFrom({answer: '{"no":"type"}}'})).toBeUndefined();
+
+    quiet.mockRestore();
   });
 });

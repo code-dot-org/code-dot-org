@@ -184,10 +184,22 @@ export const useTutor = (): Tutor => {
           // Reject are a decision about something the student can see.
           config.proposals?.onPropose?.(offered);
         }
-      } catch {
+      } catch (error) {
         // Including an abort, which settles the message as an error rather than
         // leaving it pending forever. The student cancelled it; the transcript
         // should show that it went nowhere.
+        //
+        // SAID OUT LOUD, because everything this catches renders as the same
+        // sentence — "There was an error getting a response" — and the causes
+        // are not alike. A dead proxy, a cancelled turn, and a host whose
+        // `onPropose` threw while applying a perfectly good answer are three
+        // different problems wearing one face. This catch used to bind nothing
+        // at all, so the difference was not merely hidden: it was discarded.
+        //
+        // An abort is not a fault and is not reported as one.
+        if (!controller.signal.aborted) {
+          console.error('AI Tutor: the turn failed.', error);
+        }
         dispatch(turnFailed({updateId: message.updateId}));
       } finally {
         if (flight.current === controller) {
