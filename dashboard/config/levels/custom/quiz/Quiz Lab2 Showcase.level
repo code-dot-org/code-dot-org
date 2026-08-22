@@ -1,20 +1,20 @@
 <Quiz>
   <config><![CDATA[{
-  "published": true,
   "game_id": 76,
   "created_at": "2026-08-14T16:14:15.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
     "encrypted": "false",
-    "show_correctness": "true",
-    "reveal_answer_explanation": "true",
-    "purpose": "practice",
+    "show_correctness": true,
+    "reveal_answer_explanation": true,
+    "purpose": "exam_simulation",
     "display_name": "Demo Quiz",
-    "title": "Demo Quiz",
-    "time_limit_minutes": "1",
-    "allow_multiple_attempts": "true"
+    "title": "Exam",
+    "intro_text": "This is an example of an exam with multiple pages and time limit. Only 1 attempt is allowed. ",
+    "time_limit_minutes": 1
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-14 16:15:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 20:17:59 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 20:32:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 20:33:39 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 00:06:23 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 00:10:19 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 00:16:48 +0000\",\"changed\":[\"time_limit_minutes\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 00:18:56 +0000\",\"changed\":[\"intro_text\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 22:01:45 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 16:08:16 +0000\",\"changed\":[\"show_correctness\",\"reveal_answer_explanation\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-14 16:15:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 20:17:59 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 20:32:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-14 20:33:39 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 00:06:23 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 00:10:19 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 00:16:48 +0000\",\"changed\":[\"time_limit_minutes\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-17 00:18:56 +0000\",\"changed\":[\"intro_text\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 22:01:45 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 16:08:16 +0000\",\"changed\":[\"show_correctness\",\"reveal_answer_explanation\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 19:50:54 +0000\",\"changed\":[\"reveal_answer_explanation\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 19:51:24 +0000\",\"changed\":[\"show_correctness\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 19:51:57 +0000\",\"changed\":[\"show_correctness\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 20:00:46 +0000\",\"changed\":[\"reveal_answer_explanation\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 20:44:04 +0000\",\"changed\":[\"show_correctness\",\"reveal_answer_explanation\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 20:44:05 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-20 20:50:44 +0000\",\"changed\":[\"show_correctness\",\"reveal_answer_explanation\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-20 22:21:19 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
 }]]></config>
 </Quiz>
