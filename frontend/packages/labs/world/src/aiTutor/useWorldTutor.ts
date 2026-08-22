@@ -1,20 +1,21 @@
 // World Lab's AI Tutor, assembled.
 //
-// READ-ONLY, deliberately, where Web Lab's can rewrite files. Web Lab's project
-// is HTML and CSS: a model can write a whole file and the lab can apply it. A
-// world project is Blockly workspaces, and a model asked to produce one would
-// be asked to emit block ids, coordinates, nested input maps and matching
-// field types by hand. It would sometimes succeed, and the failures would land
-// as a `.actor` that no longer opens — the student's work, gone, with an Accept
-// button next to it.
+// IT MAY WRITE, but only what it can be proved will open. Web Lab's files are
+// HTML and CSS: a model writes a whole file and the lab applies it, and a wrong
+// stylesheet is visibly wrong and undoable. A world project is Blockly
+// workspaces, and a model producing one is emitting block ids, nested input
+// maps and matching field types by hand. It sometimes succeeds, and a failure
+// lands as a `.actor` that no longer opens — the student's work, gone, with an
+// Accept button next to it.
 //
-// So `proposals` is omitted, which `@code-dot-org/aitutor` reads as "never
-// offer to change anything" (specs/PLAN.md §8): every answer is prose. The
-// tutor explains the game; the student moves the blocks.
+// So the offer is gated on GENERATING the proposed workspace first
+// (`proposals.accepts`), which is the same call the compiler makes: a file that
+// passes is a file that opens. One that does not becomes an explanation, which
+// costs the student a paragraph rather than their project.
 //
-// What it CAN do well is read. The generated code is a faithful, complete
-// description of the behaviour, and the console is where a running game says
-// what went wrong — which together is most of what a stuck learner needs.
+// A refusal now says why, in the browser console. It used to be silent, and a
+// silent downgrade is indistinguishable from a bug — the student sees the
+// workspace printed in the chat with no Accept button either way.
 
 import {useMemo, useRef} from 'react';
 

@@ -10,7 +10,11 @@ import {describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
-import {mergeProposedWorkspaces, workspacesGenerate} from '../proposals';
+import {
+  mergeProposedWorkspaces,
+  refusedWorkspaces,
+  workspacesGenerate,
+} from '../proposals';
 
 const ok = () => 'generated module';
 const throws = () => {
@@ -143,5 +147,65 @@ describe('mergeProposedWorkspaces', () => {
     ]);
 
     expect(JSON.stringify(source)).toBe(before);
+  });
+});
+
+// The reason, which used to be thrown away.
+//
+// A bare `catch {}` made every refusal look the same from outside: the student
+// saw the workspace printed in the chat with no Accept button, and there was no
+// way to tell a bad block type from a badly named file from the model simply
+// choosing to explain. The generator knows which; it just had nowhere to say it.
+describe('refusedWorkspaces', () => {
+  const good = () => 'module code';
+  const bad = (): string => {
+    throw new Error('Unknown block type world_make_it_awesome');
+  };
+
+  it('is empty when every file generates', () => {
+    expect(
+      refusedWorkspaces([{path: 'actors/coin.actor', contents: '{}'}], good),
+    ).toEqual([]);
+  });
+
+  it('keeps the generator’s own message, which names the block', () => {
+    const refused = refusedWorkspaces(
+      [{path: 'actors/coin.actor', contents: '{}'}],
+      bad,
+    );
+
+    expect(refused).toEqual([
+      {
+        path: 'actors/coin.actor',
+        reason: 'Unknown block type world_make_it_awesome',
+      },
+    ]);
+  });
+
+  it('names a file of a kind the agent may not write', () => {
+    const refused = refusedWorkspaces(
+      [{path: 'sprites/coin.png', contents: ''}],
+      good,
+    );
+
+    expect(refused[0].path).toBe('sprites/coin.png');
+    expect(refused[0].reason).toContain('may write');
+  });
+
+  it('reports every bad file, not only the first', () => {
+    // One bad file disqualifies the whole offer, but a refusal that named one
+    // of three would send somebody round the loop twice.
+    const refused = refusedWorkspaces(
+      [
+        {path: 'actors/a.actor', contents: '{}'},
+        {path: 'actors/b.actor', contents: '{}'},
+      ],
+      bad,
+    );
+
+    expect(refused.map(one => one.path)).toEqual([
+      'actors/a.actor',
+      'actors/b.actor',
+    ]);
   });
 });

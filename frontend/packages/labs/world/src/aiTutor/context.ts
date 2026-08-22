@@ -25,12 +25,17 @@
 //
 // AND THE BLOCK CATALOGUE, so the agent can write blocks that exist
 // (`blockCatalogue`).
+//
+// AND THE MEASUREMENTS (`worldMeasurements`), because a model shown
+// `set position x 208 y 112` and told nothing else asks how big a tile is —
+// or, worse, assumes 16.
 
 import type {AiTutorContext} from '@code-dot-org/aitutor';
 
 import type {RuleMeta} from '../blockly/ruleMeta';
 
 import {blockCatalogue} from './blockCatalogue';
+import {worldMeasurements} from './measurements';
 import {summarizeRules} from './ruleSummary';
 
 /** Kinds whose workspace is small enough to send whole. */
@@ -107,12 +112,16 @@ export const worldSourceCode = ({
   const workspaces: string[] = [];
   const tooBig: string[] = [];
   const readable: string[] = [];
+  const worlds: Record<string, string> = {};
 
   for (const path of Object.keys(files).sort()) {
     const extension = extensionOf(path);
     const contents = files[path];
     if (!contents?.trim()) {
       continue;
+    }
+    if (extension === 'world') {
+      worlds[path] = contents;
     }
     if (SENT_WHOLE.includes(extension)) {
       if (contents.length > MAX_FILE_CHARS) {
@@ -123,6 +132,13 @@ export const worldSourceCode = ({
     } else if (READABLE_TYPES.includes(extension)) {
       readable.push(`### ${path}\n${fence(contents)}`);
     }
+  }
+
+  // Before the workspaces, because it is how to read them: a position in one
+  // of those files is a number that means nothing without this.
+  const measurements = worldMeasurements(worlds);
+  if (measurements) {
+    add(measurements);
   }
 
   if (workspaces.length) {
@@ -186,9 +202,18 @@ export const WORLD_SYSTEM_PROMPT = [
   'your Player actor" is useful; "change line 12" is not, because there are no',
   'lines.',
   '',
-  'When you change something, return the WHOLE file as a Blockly workspace, in',
-  'the same shape as the ones you were shown. Use only block types from the',
-  'catalogue. If you are not confident the workspace you would write is valid,',
-  'explain the change in words instead — a broken file loses the student their',
-  'work, and an explanation never does.',
+  'HOW TO CHANGE SOMETHING. Answer with type `buildActor`, `buildWorld` or',
+  '`buildRule`, and put the WHOLE file in `code` — `filename` is its path and',
+  '`sourceCode` is the entire workspace, in the same shape as the ones you were',
+  'shown. Never a fragment and never a diff. Use only block types from the',
+  'catalogue.',
+  '',
+  'A workspace written anywhere else cannot be applied. Pasted into your',
+  'explanation it is just text on the screen: the student gets no button, and',
+  'no way to use it except to retype it by hand. If you have written a file,',
+  'it goes in `code`.',
+  '',
+  'If you are not confident the workspace you would write is valid, explain the',
+  'change in words instead and do not claim a rewrite — a broken file loses the',
+  'student their work, and an explanation never does.',
 ].join('\n');

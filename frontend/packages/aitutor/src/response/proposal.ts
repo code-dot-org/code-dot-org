@@ -52,6 +52,23 @@ export interface ProposalPolicy {
    * answer type would be. Omitted, everything applicable is offered.
    */
   accepts?: (files: ReadonlyArray<{path: string; contents: string}>) => boolean;
+
+  /**
+   * Told why an answer that CARRIED files was shown as prose anyway.
+   *
+   * There are four ways for that to happen and the student sees the same thing
+   * for all of them: the code printed in the chat, fenced and labelled, with no
+   * Accept button. Which is correct behaviour — but it is also what a genuine
+   * bug looks like, so without this there is no way to tell "the model chose to
+   * explain" from "the model wrote a block type that does not exist".
+   *
+   * Only for answers that carried files. An ordinary question has nothing to
+   * offer and is not a downgrade.
+   *
+   * Defaults to a `console.warn`. Pass a function to route it elsewhere, or
+   * `() => {}` to silence it.
+   */
+  onDowngrade?: (reason: string) => void;
 }
 
 /** A set of file edits the tutor is offering (specs/PLAN.md §8). */
@@ -79,6 +96,12 @@ export const applicableFiles = (
     return extension !== undefined && fileTypes.includes(extension);
   });
 
+const defaultDowngrade = (reason: string): void => {
+  console.warn(
+    `AI Tutor: showing an answer as prose rather than an offer — ${reason}.`,
+  );
+};
+
 /**
  * The proposal in an answer, if the host can carry it out.
  *
@@ -89,15 +112,48 @@ export const proposalFrom = (
   answer: Answer,
   policy: ProposalPolicy | undefined,
 ): TutorProposal | undefined => {
-  if (!policy || !policy.answerTypes.includes(answer.answerType)) {
-    return undefined;
-  }
   const code = answer.code ?? [];
+
+  // Every `return undefined` below goes through here, so that an answer which
+  // brought files and was not offered always says why somewhere.
+  const asProse = (reason: string): undefined => {
+    if (code.length) {
+      (policy?.onDowngrade ?? defaultDowngrade)(reason);
+    }
+    return undefined;
+  };
+
+  if (!policy) {
+    return asProse('this lab does not apply changes');
+  }
+  if (!policy.answerTypes.includes(answer.answerType)) {
+    return asProse(
+      `answerType was \`${answer.answerType}\`, and this lab only applies ` +
+        `${policy.answerTypes.join(', ')}`,
+    );
+  }
   // An empty rewrite is not a rewrite. The model says so sometimes — it
   // explains rather than changing anything — and offering Accept over nothing
   // is a button that does nothing.
-  if (code.length === 0 || !applicableFiles(code, policy.fileTypes)) {
+  //
+  // Worth saying out loud even though `asProse` would not, because the answer
+  // type CLAIMED a rewrite. A model that pastes a file into its explanation
+  // instead of into `code` produces exactly this, and it is the one downgrade
+  // the student can see is wrong: the file is right there in the chat and no
+  // button will apply it.
+  if (code.length === 0) {
+    (policy.onDowngrade ?? defaultDowngrade)(
+      `answerType was \`${answer.answerType}\`, which claims a rewrite, but no ` +
+        'files came with it — a workspace pasted into the explanation cannot ' +
+        'be applied',
+    );
     return undefined;
+  }
+  if (!applicableFiles(code, policy.fileTypes)) {
+    return asProse(
+      `the files are ${code.map(file => file.filename).join(', ')}, and this ` +
+        `lab can only write ${policy.fileTypes.join(', ')}`,
+    );
   }
   const files = code.map(file => ({
     path: file.filename,
@@ -106,9 +162,10 @@ export const proposalFrom = (
 
   // The host's own last word. Anything it cannot actually carry out is prose,
   // not an offer — an Accept button over a file that will not open is worse
-  // than no button at all.
+  // than no button at all. The host knows WHY and this does not, so the reason
+  // here is deliberately thin: expect a second, more specific line beside it.
   if (policy.accepts && !policy.accepts(files)) {
-    return undefined;
+    return asProse('the lab refused the files it was given');
   }
 
   return {

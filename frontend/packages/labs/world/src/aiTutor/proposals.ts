@@ -33,32 +33,77 @@ export interface ProposedFile {
   contents: string;
 }
 
+/** Why a proposed file was refused — one line, for the console. */
+export interface Refusal {
+  path: string;
+  reason: string;
+}
+
 /**
- * Whether every proposed workspace generates.
+ * The proposed workspaces that would not open, and why.
  *
  * `generate` is the headless generator (`WorldRuntimeContext`); it throws for
  * anything the editor could not open. Each file is tried on its own, because
- * one bad file should disqualify the whole offer — a half-applied proposal is
- * a project in a state nobody asked for.
+ * one bad file disqualifies the whole offer — a half-applied proposal is a
+ * project in a state nobody asked for — but every one is tried, so a refusal
+ * names all of them rather than only the first.
+ *
+ * THE REASON IS KEPT. It used to be a bare `catch {}`, and the cost of that
+ * was a silent downgrade: the student saw the workspace JSON printed in the
+ * chat with no Accept button, and there was no way to tell whether the model
+ * had written a bad block type, named a file wrongly, or simply chosen to
+ * explain rather than build. Five different causes, one indistinguishable
+ * symptom. The generator already knows which; it just had nowhere to say it.
  */
-export const workspacesGenerate = (
+export const refusedWorkspaces = (
   files: readonly ProposedFile[],
   generate: (contents: string, path: string) => string,
-): boolean =>
-  files.every(file => {
+): Refusal[] => {
+  const refused: Refusal[] = [];
+  for (const file of files) {
     if (!PROPOSABLE_TYPES.includes(extensionOf(file.path) as never)) {
-      return false;
+      refused.push({
+        path: file.path,
+        reason: `not a kind the agent may write (${PROPOSABLE_TYPES.join(', ')})`,
+      });
+      continue;
     }
     try {
       // The return value is not inspected: an empty module is a legitimate
       // answer (an actor with no handlers yet). What matters is that it did
       // not throw.
       generate(file.contents, file.path);
-      return true;
-    } catch {
-      return false;
+    } catch (error) {
+      refused.push({
+        path: file.path,
+        reason: error instanceof Error ? error.message : String(error),
+      });
     }
-  });
+  }
+  return refused;
+};
+
+/**
+ * Whether every proposed workspace generates, saying so when one does not.
+ *
+ * The warning goes to the browser console rather than to the student: a
+ * refusal is not their mistake and there is nothing for them to do about it.
+ * What they get is the explanation, which is what the downgrade is for.
+ */
+export const workspacesGenerate = (
+  files: readonly ProposedFile[],
+  generate: (contents: string, path: string) => string,
+): boolean => {
+  const refused = refusedWorkspaces(files, generate);
+  if (refused.length) {
+    console.warn(
+      'AI Tutor: refusing to offer a change, because ' +
+        `${refused.length} of ${files.length} proposed file(s) would not open:\n` +
+        refused.map(one => `  ${one.path}: ${one.reason}`).join('\n'),
+    );
+  }
+  return refused.length === 0;
+};
 
 export interface MergeResult {
   source: MultiFileSource;

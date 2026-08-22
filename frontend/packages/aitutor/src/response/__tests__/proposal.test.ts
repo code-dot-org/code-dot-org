@@ -163,3 +163,87 @@ describe('the host’s last word', () => {
     expect(asked).toBe(false);
   });
 });
+
+// The four ways an answer that CARRIED files ends up as prose. The student sees
+// the same thing for all of them — the code fenced in the chat, no Accept
+// button — which is correct, and is also exactly what a bug looks like. So each
+// one has to say which it was.
+describe('saying why an answer was not offered', () => {
+  const said = () => {
+    const reasons: string[] = [];
+    return {reasons, onDowngrade: (why: string) => reasons.push(why)};
+  };
+
+  it('names the answer type the lab does not treat as a rewrite', () => {
+    const {reasons, onDowngrade} = said();
+
+    proposalFrom(answer({answerType: 'example'}), {...policy, onDowngrade});
+
+    expect(reasons).toHaveLength(1);
+    expect(reasons[0]).toContain('example');
+    expect(reasons[0]).toContain('buildHTML');
+  });
+
+  it('names the files whose kind the lab cannot write', () => {
+    const {reasons, onDowngrade} = said();
+
+    proposalFrom(answer({code: [{filename: 'notes.txt', sourceCode: 'hi'}]}), {
+      ...policy,
+      onDowngrade,
+    });
+
+    expect(reasons[0]).toContain('notes.txt');
+    expect(reasons[0]).toContain('html, css, js');
+  });
+
+  it('says when the host itself refused', () => {
+    const {reasons, onDowngrade} = said();
+
+    proposalFrom(answer(), {...policy, accepts: () => false, onDowngrade});
+
+    expect(reasons[0]).toContain('refused');
+  });
+
+  it('says when the lab applies nothing at all', () => {
+    const {reasons} = said();
+
+    // No policy means no `onDowngrade` to call, so this is the one case the
+    // default handles — asserted through the default being reached at all
+    // rather than through what it prints.
+    expect(proposalFrom(answer(), undefined)).toBeUndefined();
+    expect(reasons).toEqual([]);
+  });
+
+  it('stays quiet for an ordinary question that brought no files', () => {
+    const {reasons, onDowngrade} = said();
+
+    // Not a downgrade. Warning on every turn would bury the one line that
+    // matters.
+    proposalFrom(answer({answerType: 'ask', code: []}), {
+      ...policy,
+      onDowngrade,
+    });
+
+    expect(reasons).toEqual([]);
+  });
+
+  it('does NOT stay quiet for a rewrite that brought no files', () => {
+    const {reasons, onDowngrade} = said();
+
+    // The one downgrade a student can see is wrong: a model that pastes the
+    // file into its explanation rather than into `code` lands here, and the
+    // file is right there in the chat with no button that will apply it.
+    proposalFrom(answer({code: []}), {...policy, onDowngrade});
+
+    expect(reasons).toHaveLength(1);
+    expect(reasons[0]).toContain('claims a rewrite');
+    expect(reasons[0]).toContain('pasted into the explanation');
+  });
+
+  it('stays quiet when the offer is made', () => {
+    const {reasons, onDowngrade} = said();
+
+    expect(proposalFrom(answer(), {...policy, onDowngrade})).toBeDefined();
+    expect(reasons).toEqual([]);
+  });
+});
