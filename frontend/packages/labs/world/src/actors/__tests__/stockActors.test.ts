@@ -27,15 +27,25 @@ const types = (contents: string): string[] =>
   [...contents.matchAll(/"type": "([^"]+)"/g)].map(match => match[1]);
 
 describe('every stock actor', () => {
-  it('is a `define actor` and a `define drawing`, and nothing else', () => {
-    // TWO ROOTS. A drawing takes no previous connection — `DisableOrphansPlugin`
-    // greys out a top-level block that has one, and everything below it — so it
-    // sits beside the definition rather than inside it (specs/DRAWING.md).
+  it('is a `define actor`, with a `define drawing` only if it paints itself', () => {
+    // TWO ROOTS when there is a drawing. A drawing takes no previous connection
+    // — `DisableOrphansPlugin` greys out a top-level block that has one, and
+    // everything below it — so it sits beside the definition rather than inside
+    // it (specs/DRAWING.md).
+    //
+    // ONE ROOT when the actor has a picture instead. An interface actor looks
+    // like whatever it says and must paint itself; a Coin looks like a coin,
+    // and a drawing over the top of its animation would hide it.
     for (const actor of STOCK_ACTORS) {
-      expect(roots(actor.contents)).toEqual([
-        'world_actor',
-        'world_define_drawing',
-      ]);
+      const paints = roots(actor.contents).includes('world_define_drawing');
+      expect(roots(actor.contents)).toEqual(
+        paints ? ['world_actor', 'world_define_drawing'] : ['world_actor'],
+      );
+      // Whichever it is, it is not both and not neither: an actor with a
+      // picture names one, and an actor without a picture draws one.
+      expect(paints).toBe(
+        !types(actor.contents).includes('world_play_animation'),
+      );
     }
   });
 

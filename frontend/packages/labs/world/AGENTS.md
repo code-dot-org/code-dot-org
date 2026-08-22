@@ -50,6 +50,38 @@ and whether one is in flight are the rule's bookkeeping, not settings a student
 sets. Read-only properties still get `set` blocks inside the rule that owns
 them, which is the only place they should be written.
 
+## Adding a stock actor
+
+`src/actors/stock/` is the actor library the `(import…)` row on an ACTOR
+dropdown offers. Unlike the rules, these are hand-written — they are two dozen
+blocks each, not hundreds — so there is no generator and no regeneration step.
+Write the file, add a shelf entry to `stock/index.ts`, and that is the whole
+mechanism.
+
+**Declare everything the workspace names.** A `use trait` row names a trait, a
+`play animation` row names an animation, a `set sprite` row names an image, and
+every one of them is a field whose value must be among options the PROJECT
+supplies. The shelf entry's `requires` / `animations` / `sprites` are how those
+arrive: `importStockActor` walks them into `importStockRule`,
+`importStockAnimation`, and `importStockSprite`, each of which brings its own
+dependencies. A Coin naming one rule and one animation writes seven files.
+
+**A drawing is only for actors that paint themselves.** `actorFile`'s third
+argument is optional. An interface actor has no picture and must draw one; an
+actor with a sprite or an animation must not, or the drawing covers it.
+
+**"Does it compile" is not a test of any of this.** The generator deliberately
+mints a stand-in for any block type nothing defines, so that a project with one
+deleted rule still opens instead of dying whole. An actor whose rule never
+arrived therefore compiles perfectly and does nothing. Test what the BUILT actor
+turns out to be — `actor.has(module.SomeTrait)` — and check the test can fail by
+deleting the dependency from the shelf entry and re-running it. Both halves of
+`coinGenerates.test.ts` were confirmed load-bearing that way.
+
+**Also: a generator only reaches the modules a world names.** A project that
+merely contains `coin.actor` never compiles the file, so a test needs a world
+with `add actor` in it.
+
 ## Adding a scenario
 
 Demo projects live in `src/fixtures/` as hand-written Blockly JSON, registered

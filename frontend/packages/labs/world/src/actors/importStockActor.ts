@@ -5,15 +5,34 @@
 // learner's own edits live, and a second import that silently replaced the
 // first would take work with it and give no sign.
 //
-// THE RULES COME WITH IT, for the reason the rule importer's dependencies do. A
-// Label elects `Shows Text`; without the Text rule that row names a trait the
-// project does not have, which fails at compile time with nothing on screen to
-// say why. `importStockRule` then brings each rule's own dependencies, so this
-// asks for two and may write four.
+// EVERYTHING THE FILE NAMES COMES WITH IT, which is the whole of what this
+// adds over writing the file yourself. An actor's rows are references — to a
+// trait, to an animation, to an image — and every one of them is a field whose
+// value must be among options the PROJECT supplies. A row naming something the
+// project lacks does not announce itself: a missing trait fails at compile time
+// with nothing on screen to say why, and a missing animation resolves to
+// whatever else is in the dropdown.
+//
+// So an import is an aggregate. A Coin asks for ONE rule and ONE animation and
+// writes seven files: Collection, the Collisions it requires, the Motion that
+// requires, the `.anim`, the strip its frames read, that strip's `.sheet`, and
+// the actor. Nothing here counts to seven — each of the three importers this
+// calls walks its own dependencies and is a pure never-overwrite transform, so
+// they compose without any of them knowing about the others.
 
 import {createNewFolder, getNextFileId} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {
+  importStockAnimation,
+  importStockSprite,
+} from '../appearance/importStock';
+import {
+  STOCK_ANIMATIONS,
+  STOCK_SPRITES,
+  type StockAnimation,
+  type StockSprite,
+} from '../appearance/stock';
 import {importStockRule} from '../rules/importStockRule';
 import {stockRuleByName, type StockRule} from '../rules/stock';
 
@@ -60,6 +79,26 @@ export function actorRequirements(actor: StockActor): StockRule[] {
     .filter((rule): rule is StockRule => rule !== undefined);
 }
 
+/** The stock animations an actor brings with it. For the dialog, as above. */
+export function actorAnimations(actor: StockActor): StockAnimation[] {
+  return (actor.animations ?? [])
+    .map(id => STOCK_ANIMATIONS.find(entry => entry.id === id))
+    .filter((entry): entry is StockAnimation => entry !== undefined);
+}
+
+/**
+ * The stock sprites an actor brings with it — the ones it names DIRECTLY.
+ *
+ * Not the strips its animations read. Those arrive too, but through
+ * `importStockAnimation`, and naming them here would say a Coin adds two
+ * pictures when what it adds is one animation.
+ */
+export function actorSprites(actor: StockActor): StockSprite[] {
+  return (actor.sprites ?? [])
+    .map(id => STOCK_SPRITES.find(entry => entry.id === id))
+    .filter((entry): entry is StockSprite => entry !== undefined);
+}
+
 /**
  * Whether `actors/<stem>` already resolves to something in the project.
  *
@@ -81,7 +120,7 @@ function alreadyImported(source: MultiFileSource, stem: string): boolean {
 }
 
 /**
- * Copy a stock actor into the project, with the rules it elects traits from.
+ * Copy a stock actor into the project, with everything its rows name.
  *
  * The file is added but NOT made the active tab, for the reason the rule
  * importer gives: an import is started from a dropdown, and the point is to get
@@ -96,6 +135,12 @@ export function importStockActor(
   let current = source;
   for (const rule of actorRequirements(actor)) {
     current = importStockRule(current, rule).source;
+  }
+  for (const sprite of actorSprites(actor)) {
+    current = importStockSprite(current, sprite).source;
+  }
+  for (const animation of actorAnimations(actor)) {
+    current = importStockAnimation(current, animation).source;
   }
 
   const placed = actorsFolder(current);

@@ -5,6 +5,7 @@ import type {
   ProjectSources,
 } from '@code-dot-org/core/api';
 
+import {coinActor} from './actors/stock/coin';
 import {healthBarActor} from './actors/stock/healthBar';
 import {drawText, fill, showAs, textOf} from './actors/stock/workspace';
 import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
@@ -504,10 +505,13 @@ const GROUND_ACTOR = actorFile('Ground', [
 // Being touchable is not among the rows, because "Can Be Collected" requires
 // "Can Collide" and a trait brings its own dependencies. A coin that could be
 // taken but could not be touched would be a rule that silently does nothing.
-const COIN_ACTOR = actorFile('Coin', [
-  {type: 'world_play_animation', fields: {ANIMATION: 'coinSpin'}},
-  useTrait('Collection#CanBeCollectedTrait'),
-]);
+// …and it is the STOCK Coin, not a copy of one. The starter's images are
+// already copies of what the picker hands out, so that "the starter project
+// cannot drift from what a learner would get by importing one"
+// (`starterSprites`). The same argument applies to the actor made of them, and
+// more strongly: a learner who opens the starter's Coin and then imports one
+// should get the same file, or the library is lying about what it holds.
+const COIN_ACTOR = coinActor;
 
 // The scoreboard: a Label, which is what an actor with text and no body is.
 //

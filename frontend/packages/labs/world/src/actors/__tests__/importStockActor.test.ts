@@ -11,11 +11,14 @@ import {describe, expect, it} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {importStockAnimation} from '../../appearance/importStock';
+import {STOCK_ANIMATIONS} from '../../appearance/stock';
 import {actorRequirements, importStockActor} from '../importStockActor';
 import {STOCK_ACTORS, stockActorById} from '../stock';
 
 const label = stockActorById('label')!;
 const button = stockActorById('button')!;
+const coin = stockActorById('coin')!;
 
 /** A project with `actors/` and `rules/` folders and whatever files are given. */
 const project = (
@@ -112,5 +115,90 @@ describe('the catalogue', () => {
     for (const actor of STOCK_ACTORS) {
       expect(actorRequirements(actor)).toHaveLength(actor.requires.length);
     }
+  });
+});
+
+// An actor whose rows name a picture as well as a trait. Everything below is
+// about the same hazard the rules answer: a field whose value must be among
+// options the project supplies, and which says nothing when it is not.
+describe('importStockActor, for an actor with a picture', () => {
+  const names = (source: MultiFileSource) =>
+    Object.values(source.files).map(file => file.name);
+
+  it('writes the animation, the strip it reads, and the strip\u2019s grid', () => {
+    const {source} = importStockActor(project(), coin);
+
+    // Three files for one animation, and the third is the one that is easy to
+    // forget: without the `.sheet`, `coinSpin.png` is a wide picture and the
+    // animation has no frames to play.
+    expect(names(source)).toEqual(
+      expect.arrayContaining([
+        'coinSpin.anim',
+        'coinSpin.png',
+        'coinSpin.sheet',
+      ]),
+    );
+  });
+
+  it('brings the rule the trait needs, and the rules that rule needs', () => {
+    const {source} = importStockActor(project(), coin);
+
+    // Collection is the only rule asked for. "Can Be Collected" requires "Can
+    // Collide", so the rule importer brings Collisions, and Collisions brings
+    // Motion — which is why a shelf entry naming ONE rule leaves three in the
+    // project, and why the dependency walk belongs to the rule importer rather
+    // than to a list written out by hand here.
+    expect(names(source)).toEqual(
+      expect.arrayContaining([
+        'collect.rule',
+        'collisions.rule',
+        'motion.rule',
+      ]),
+    );
+  });
+
+  it('writes seven files for one click', () => {
+    const {source} = importStockActor(project(), coin);
+
+    expect(names(source).sort()).toEqual([
+      'coin.actor',
+      'coinSpin.anim',
+      'coinSpin.png',
+      'coinSpin.sheet',
+      'collect.rule',
+      'collisions.rule',
+      'motion.rule',
+    ]);
+  });
+
+  it('plays an animation the import actually registered', () => {
+    // THE POINT OF THE WHOLE EXERCISE. A `play animation` field stores the
+    // animation's key INSIDE its file, which is not always the file's stem —
+    // the stock "switch" animation holds "switchFlip". An actor naming a key
+    // the import does not write is a dropdown value with no option behind it,
+    // and nothing anywhere reports that.
+    const played = [...coin.contents.matchAll(/"ANIMATION": "([^"]+)"/g)].map(
+      match => match[1],
+    );
+    const registered = (coin.animations ?? []).map(
+      id =>
+        importStockAnimation(
+          project(),
+          STOCK_ANIMATIONS.find(entry => entry.id === id)!,
+        ).value,
+    );
+
+    expect(played).toEqual(registered);
+  });
+
+  it('is unchanged by a second import, pictures and all', () => {
+    const once = importStockActor(project(), coin).source;
+    const twice = importStockActor(once, coin).source;
+
+    // Never-overwrite has to hold for every file the aggregate writes, not just
+    // the actor: a learner who repainted `coinSpin.png` and imported a second
+    // Coin would otherwise lose the painting.
+    expect(names(twice).sort()).toEqual(names(once).sort());
+    expect(twice.files).toEqual(once.files);
   });
 });

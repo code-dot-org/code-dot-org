@@ -15,7 +15,11 @@ import {useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
 import styles from './importActorDialog.module.css';
-import {actorRequirements} from './importStockActor';
+import {
+  actorAnimations,
+  actorRequirements,
+  actorSprites,
+} from './importStockActor';
 import {STOCK_ACTORS, type StockActor} from './stock';
 
 export interface ImportActorDialogProps {
@@ -24,6 +28,19 @@ export interface ImportActorDialogProps {
   /** Dismissed without choosing. */
   onCancel: () => void;
 }
+
+/**
+ * Everything an import writes besides the actor, in words a learner reads.
+ *
+ * A rule is named by its ABILITY ("Collects Things") because that is how the
+ * rule library names one; a picture by its own name. Rules first: they are what
+ * the actor can do, and a picture is what it looks like doing it.
+ */
+const brings = (actor: StockActor): string[] => [
+  ...actorRequirements(actor).map(rule => rule.ability),
+  ...actorAnimations(actor).map(animation => animation.name),
+  ...actorSprites(actor).map(sprite => sprite.name),
+];
 
 export const ImportActorDialog = ({
   onImport,
@@ -66,17 +83,19 @@ export const ImportActorDialog = ({
                 <Typography component="span" variant="body4" color="inherit">
                   {actor.description}
                 </Typography>
-                {actorRequirements(actor).length > 0 && (
-                  // What else lands in `rules/`. An actor is written against
-                  // mechanics — a Label against Text, a Button against Text and
-                  // the Mouse — and they come with it, so the dialog says so
-                  // rather than leaving a learner to wonder where the extra
-                  // files came from.
+                {brings(actor).length > 0 && (
+                  // What else lands in the project. An actor is written against
+                  // mechanics and pictures — a Label against Text, a Coin
+                  // against Collection and an animation — and they come with
+                  // it, so the dialog says so rather than leaving a learner to
+                  // wonder where the extra files came from.
+                  //
+                  // Abilities and picture names in one list, because from here
+                  // they are one thing: what this adds that is not the actor.
+                  // Which folder each lands in is not a question anybody is
+                  // asking before they have clicked Import.
                   <Typography component="span" variant="body4" color="inherit">
-                    Also adds:{' '}
-                    {actorRequirements(actor)
-                      .map(rule => rule.ability)
-                      .join(', ')}
+                    Also adds: {brings(actor).join(', ')}
                   </Typography>
                 )}
               </Button>

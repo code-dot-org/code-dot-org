@@ -62,18 +62,37 @@ export const setText = (exportName: string, value: object) => ({
 });
 
 /**
- * A stock actor's file: the definition, and the drawing beside it.
+ * `play animation ⟨id⟩` — the picture, for an actor that has one.
+ *
+ * The id is the animation's own key inside its `.anim` file, which is not
+ * always the file's stem: the stock "switch" animation holds "switchFlip".
+ * `importStockAnimation` returns the key it registered, so an actor and its
+ * import can be checked against each other rather than trusted to agree.
+ */
+export const playAnimation = (id: string) => ({
+  type: 'world_play_animation',
+  fields: {ANIMATION: id},
+});
+
+/**
+ * A stock actor's file: the definition, and the drawing beside it if it has one.
  *
  * TWO ROOTS, not one. A drawing is a definition root of its own — it takes no
  * previous connection, because `DisableOrphansPlugin` disables a top-level
  * block that has one along with everything below it (specs/DRAWING.md). So it
  * sits beside the `define actor` rather than inside it, exactly as `each frame`
  * does in an actor file.
+ *
+ * THE DRAWING IS OPTIONAL, because only an interface actor needs one. A Label
+ * has no picture and must paint itself; a Coin has a picture and must not. An
+ * actor that omits it is a `define actor` alone, which is the same one root the
+ * starter project's own actors are — and byte-for-byte the same JSON, so the
+ * two can be the same file (see `constants.ts`).
  */
 export const actorFile = (
   name: string,
   rows: object[],
-  drawing: {width: number; height: number; commands: object[]},
+  drawing?: {width: number; height: number; commands: object[]},
 ): string =>
   JSON.stringify(
     {
@@ -86,13 +105,17 @@ export const actorFile = (
             fields: {NAME: name},
             ...(rows.length ? {next: {block: chain(rows)}} : {}),
           },
-          {
-            type: 'world_define_drawing',
-            x: 20,
-            y: 180,
-            fields: {WIDTH: drawing.width, HEIGHT: drawing.height},
-            inputs: {DO: {block: chain(drawing.commands)}},
-          },
+          ...(drawing
+            ? [
+                {
+                  type: 'world_define_drawing',
+                  x: 20,
+                  y: 180,
+                  fields: {WIDTH: drawing.width, HEIGHT: drawing.height},
+                  inputs: {DO: {block: chain(drawing.commands)}},
+                },
+              ]
+            : []),
         ],
       },
     },

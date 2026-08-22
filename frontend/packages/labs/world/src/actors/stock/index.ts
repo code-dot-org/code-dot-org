@@ -12,6 +12,7 @@
 // openable, editable, and no longer connected to anything here.
 
 import {buttonActor} from './button';
+import {COIN_ANIMATION, coinActor} from './coin';
 import {healthBarActor} from './healthBar';
 import {labelActor} from './label';
 import {progressBarActor} from './progressBar';
@@ -33,6 +34,23 @@ export interface StockActor {
    * short and the list is two long; saying them is cheaper than parsing them.
    */
   requires: readonly string[];
+  /**
+   * The stock ANIMATIONS the workspace plays, by id.
+   *
+   * Brought with the actor for the reason the rules are. A `play animation`
+   * field holds an id the project's own `.anim` files define, so one naming an
+   * animation the project lacks is a field whose value is not among its
+   * options — which resolves to something else or to nothing, and says so
+   * nowhere. Each animation brings the image its frames read.
+   */
+  animations?: readonly string[];
+  /**
+   * The stock SPRITES the workspace names, by id.
+   *
+   * For an actor with a still picture. One whose picture is an animation needs
+   * nothing here — the animation carries its own strip.
+   */
+  sprites?: readonly string[];
   /** The `.actor` workspace JSON, copied verbatim on import. */
   contents: string;
 }
@@ -77,6 +95,18 @@ export const STOCK_ACTORS: readonly StockActor[] = [
       'A label you can press. It raises “is clicked with” on itself, so a handler needs no hit test of its own.',
     requires: ['Writing', 'Mouse'],
     contents: buttonActor,
+  },
+  {
+    id: 'coin',
+    name: 'Coin',
+    description:
+      'A spinning coin that can be picked up. It knows nothing about points — who may collect it, and what that is worth, are the game\u2019s to say.',
+    // Collection alone, which arrives with Collisions of its own accord: "Can
+    // Be Collected" requires "Can Collide", and a trait brings its
+    // dependencies. NOT Scoring — see the note in `coin.ts`.
+    requires: ['Collection'],
+    animations: [COIN_ANIMATION],
+    contents: coinActor,
   },
 ];
 
