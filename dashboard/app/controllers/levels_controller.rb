@@ -360,16 +360,37 @@ class LevelsController < ApplicationController
   # sort is 'name' or 'recent' (default) - see QuizQuestionAutocomplete::SORT_ORDERS.
   # standardFrameworkShortcode/standardShortcode, if both given, narrow to
   # questions tagged with that Standard (AND'd with search, not exclusive of it).
+  # courseOrUnitType/courseOrUnitId, if both given, narrow to questions used
+  # (via some quiz) in that course/unit (also AND'd, not exclusive of it).
   def index_quiz_questions
     return head :not_found unless @level.is_a?(Quiz)
 
     standard = find_standard(params[:standardFrameworkShortcode], params[:standardShortcode])
-    questions = QuizQuestionAutocomplete.get_search_matches(params[:search], params[:limit], params[:sort], standard&.id)
+    course_or_unit = find_course_or_unit(params[:courseOrUnitType], params[:courseOrUnitId])
+    questions = QuizQuestionAutocomplete.get_search_matches(params[:search], params[:limit], params[:sort], standard&.id, course_or_unit)
     attached_ids = @level.quiz_questions.pluck(:id)
 
     render json: questions.map {|question| quiz_question_json(question).merge(attached: attached_ids.include?(question.id))}
   rescue ActiveRecord::RecordNotFound
     render json: []
+  end
+
+  # GET /levels/:id/course_unit_search
+  #
+  # Combined course/unit typeahead backing the question bank's course/unit
+  # filter (see QuizQuestionBank.tsx). A plain name substring match, not the
+  # MATCH/AGAINST fulltext convention used elsewhere in this file - course
+  # and unit names are short, and neither table carries a FULLTEXT index.
+  def course_unit_search
+    query = params[:query].to_s.strip
+    return render json: [] if query.length < AutocompleteHelper::MIN_WORD_LENGTH
+
+    units = Unit.where('name LIKE ?', "%#{query}%").order(:name).limit(10)
+    courses = UnitGroup.where('name LIKE ?', "%#{query}%").order(:name).limit(10)
+
+    render json:
+      units.map {|u| {type: 'unit', id: u.id, name: u.name}} +
+        courses.map {|c| {type: 'course', id: c.id, name: c.name}}
   end
 
   # POST /levels/:id/quiz_questions/:question_id/attach
@@ -799,6 +820,10 @@ class LevelsController < ApplicationController
             links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end
         end
+
+        if @level.is_a?(Quiz)
+          links[@level.name] << {text: 'Build quiz questions', url: build_quiz_questions_level_path(@level)}
+        end
       else
         links[@level.name] << {text: '(Cannot edit)', url: ''}
       end
@@ -974,6 +999,25 @@ class LevelsController < ApplicationController
 
     framework = Framework.find_by!(shortcode: framework_shortcode)
     Standard.find_by!(framework: framework, shortcode: shortcode)
+  end
+
+  # Resolves index_quiz_questions' courseOrUnitType/courseOrUnitId params
+  # (as picked from course_unit_search's results) into the {type, id} shape
+  # QuizQuestionAutocomplete.get_search_matches expects. nil, not raising,
+  # when type is blank - "no course/unit filter" is the common case, same
+  # as find_standard above. A present but unresolvable id still raises
+  # ActiveRecord::RecordNotFound, caught by index_quiz_questions' rescue.
+  private def find_course_or_unit(type, id)
+    return nil if type.blank?
+
+    case type
+    when 'unit'
+      {type: 'unit', id: Unit.find(id).id}
+    when 'course'
+      {type: 'course', id: UnitGroup.find(id).id}
+    else
+      raise ActiveRecord::RecordNotFound, "unrecognized courseOrUnitType #{type}"
+    end
   end
 
   # Shared by create/show/update_quiz_question. Includes correct_choice_id -
