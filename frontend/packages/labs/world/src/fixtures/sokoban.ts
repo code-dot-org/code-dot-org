@@ -235,12 +235,18 @@ const PLAYER_ACTOR = JSON.stringify({
       },
       // The whole of the controls. Four handlers, one block each, and no
       // mention anywhere of walls or crates — that is the rule's business.
+      //
+      // THE LAB'S NAME FOR THE KEY, not the browser's. The driver translates
+      // `KeyboardEvent.key` before the world ever sees it (`engine/core/keys`),
+      // so a handler registered for "ArrowUp" waits for a key that never
+      // arrives — which is exactly what this fixture did, and why it rendered
+      // a board nobody could move.
       ...(
         [
-          ['ArrowUp', 'StepUpAction', 320],
-          ['ArrowDown', 'StepDownAction', 420],
-          ['ArrowLeft', 'StepLeftAction', 520],
-          ['ArrowRight', 'StepRightAction', 620],
+          ['up arrow', 'StepUpAction', 320],
+          ['down arrow', 'StepDownAction', 420],
+          ['left arrow', 'StepLeftAction', 520],
+          ['right arrow', 'StepRightAction', 620],
         ] as const
       ).map(([key, action, y]) => ({
         type: 'world_on_Input_PressesEvent',
@@ -328,6 +334,20 @@ const CRATE_ACTOR = JSON.stringify({
 });
 
 /** A target: a picture and nothing else. It is a place, not a mechanic. */
+/**
+ * A mark on the floor, DRAWN rather than pictured.
+ *
+ * It used to `set sprite switch.png`, which is a six-frame STRIP — the stock
+ * "switch" is an animation's worth of pictures side by side — so the target
+ * rendered as the whole filmstrip laid out across the board. A strip is not a
+ * picture; it is an image an animation reads rectangles out of, and drawing
+ * one whole is drawing all six frames at once.
+ *
+ * Nothing in the stock sprites is a goal mark, and a mark is four numbers and
+ * a colour, so the actor draws its own — which is what `define drawing` is
+ * for. A second root, beside the definition rather than chained under it: a
+ * drawing takes no previous connection (specs/DRAWING.md).
+ */
 const TARGET_ACTOR = JSON.stringify({
   blocks: {
     blocks: [
@@ -336,8 +356,39 @@ const TARGET_ACTOR = JSON.stringify({
         x: 20,
         y: 20,
         fields: {NAME: 'Target'},
-        next: {
-          block: {type: 'world_set_sprite', fields: {SPRITE: 'switch.png'}},
+      },
+      {
+        type: 'world_define_drawing',
+        x: 20,
+        y: 140,
+        fields: {WIDTH: TILE_SIZE, HEIGHT: TILE_SIZE},
+        inputs: {
+          DO: {
+            block: stack([
+              {
+                type: 'world_pen_fill',
+                inputs: {
+                  COLOUR: {
+                    block: {
+                      type: 'colour_picker',
+                      fields: {COLOUR: '#d8a032'},
+                    },
+                  },
+                },
+              },
+              // Centred in the tile and small enough that a crate standing on
+              // one plainly covers it, which is how the board says "done".
+              {
+                type: 'world_draw_rectangle',
+                inputs: {
+                  X: number(TILE_SIZE / 2 - 6),
+                  Y: number(TILE_SIZE / 2 - 6),
+                  WIDTH: number(12),
+                  HEIGHT: number(12),
+                },
+              },
+            ]),
+          },
         },
       },
     ],
@@ -379,53 +430,53 @@ const SPEC: ProjectSpec = {
   files: {
     main: {
       name: 'main.world',
-      language: 'json',
+      language: 'world',
       contents: MAIN_WORLD,
       folderId: 'worlds',
     },
     player: {
       name: 'player.actor',
-      language: 'json',
+      language: 'actor',
       contents: PLAYER_ACTOR,
       folderId: 'actors',
     },
     wall: {
       name: 'wall.actor',
-      language: 'json',
+      language: 'actor',
       contents: WALL_ACTOR,
       folderId: 'actors',
     },
     crate: {
       name: 'crate.actor',
-      language: 'json',
+      language: 'actor',
       contents: CRATE_ACTOR,
       folderId: 'actors',
     },
     target: {
       name: 'target.actor',
-      language: 'json',
+      language: 'actor',
       contents: TARGET_ACTOR,
       folderId: 'actors',
     },
     level1: {
       name: 'level1.map',
-      language: 'json',
+      language: 'map',
       contents: LEVEL1_MAP,
       folderId: 'maps',
     },
     'rule-grid': {
       name: 'grid.rule',
-      language: 'json',
+      language: 'rule',
       contents: gridRule,
       folderId: 'rules',
     },
     'rule-input': {
       name: 'input.rule',
-      language: 'json',
+      language: 'rule',
       contents: inputRule,
       folderId: 'rules',
     },
-    ...starterSprites(['player', 'ground', 'box', 'switch']),
+    ...starterSprites(['player', 'ground', 'box']),
   },
   open: ['main'],
 };

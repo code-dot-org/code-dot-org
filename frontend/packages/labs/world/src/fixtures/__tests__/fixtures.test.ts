@@ -7,6 +7,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {keyName, KEY_CHOICES} from '../../engine/core/keys';
 import {VIEWPORT_TILES} from '../../runtime/viewport';
 import {
   WORLD_SCENARIOS,
@@ -667,5 +668,83 @@ describe('the scenario catalogue', () => {
       expect(level?.usesProjects).toBe(true);
       expect(level?.longInstructions).toBe(WORLD_SCENARIOS[tag].instructions);
     }
+  });
+});
+
+// Every file's LANGUAGE against its name.
+//
+// The language is what the editor opens a file WITH: `.actor` with `world`,
+// `actor`, `rule` or `map` on it gets a Blockly workspace, and anything else
+// gets a text editor. Sokoban shipped every one of its files as `json`, so the
+// whole scenario opened as raw serialization — a project you could look at and
+// not edit. Nothing failed; the tests here compile from PATHS, which is why
+// they were all green while the lab was unusable.
+describe('the language on each file', () => {
+  /** What a file of this name has to be opened as. */
+  const wanted: Record<string, string> = {
+    world: 'world',
+    actor: 'actor',
+    rule: 'rule',
+    behavior: 'behavior',
+    map: 'map',
+    anim: 'anim',
+    effect: 'effect',
+  };
+
+  it('matches what the name says the file is', () => {
+    const wrong: string[] = [];
+    for (const tag of WORLD_SCENARIO_TAGS) {
+      for (const file of Object.values(WORLD_SCENARIOS[tag].source.files)) {
+        const extension = file.name.split('.').pop() ?? '';
+        const expected = wanted[extension];
+        if (expected && file.language !== expected) {
+          wrong.push(`${tag}: ${file.name} is '${file.language}'`);
+        }
+      }
+    }
+
+    expect(wrong).toEqual([]);
+  });
+});
+
+// Every key a handler waits for, against the names the world is ever sent.
+//
+// The driver translates `KeyboardEvent.key` before `setInput`
+// (`engine/core/keys`), so the lab's name is what a handler must be registered
+// for: "up arrow", not "ArrowUp". Sokoban shipped with all four of its
+// controls waiting for browser names, which meant a board that rendered and
+// could not be moved — and nine tests passed, because they fed `setInput`
+// directly and so fed something the running lab never sends.
+describe('the keys a handler waits for', () => {
+  it('are never the browser’s name for one the lab renames', () => {
+    // A key the table does not rename passes through unchanged, so "F7" is
+    // fine and this cannot just demand membership of a list. What it can say
+    // is that no handler waits for a name the driver will have replaced.
+    const renamed = new Set(
+      KEY_CHOICES.map(([, value]) => value).filter(
+        value => keyName(value) !== value,
+      ),
+    );
+    const domNames = new Set(
+      ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', ' '].filter(
+        dom => keyName(dom) !== dom,
+      ),
+    );
+    const wrong: string[] = [];
+
+    for (const tag of WORLD_SCENARIO_TAGS) {
+      for (const file of Object.values(WORLD_SCENARIOS[tag].source.files)) {
+        for (const match of file.contents.matchAll(
+          /"world_on_Input_[A-Za-z]*Event"[\s\S]{0,200}?"FILTER0":\s*"([^"]*)"/g,
+        )) {
+          const key = match[1];
+          if (domNames.has(key) || renamed.has(key)) {
+            wrong.push(`${tag}: ${file.name} waits for "${key}"`);
+          }
+        }
+      }
+    }
+
+    expect(wrong).toEqual([]);
   });
 });

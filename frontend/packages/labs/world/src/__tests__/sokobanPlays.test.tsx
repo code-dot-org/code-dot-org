@@ -12,6 +12,7 @@
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import {PositionProperty, type World} from '../engine';
+import {keyName} from '../engine/core/keys';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 import {TILE_SIZE} from '../runtime/viewport';
@@ -23,14 +24,23 @@ let project: CompiledProject;
 /** Tick for `seconds` at sixty frames a second, holding `keys` throughout. */
 const play = (world: World, seconds: number, keys: string[] = []): void => {
   for (let frame = 0; frame < Math.round(seconds * 60); frame++) {
-    world.setInput(keys);
+    world.setInput(keys.map(keyName));
     world.tick(1 / 60);
   }
 };
 
-/** Press a key for one frame, then let the step finish. */
+/**
+ * Press a key for one frame, then let the step finish.
+ *
+ * THROUGH `keyName`, as the driver does. The browser hands the world
+ * `KeyboardEvent.key` and `PhaserBinding` translates it before `setInput` ever
+ * sees it, so a test that fed the DOM name directly was feeding something the
+ * running lab never sends. That is how this fixture shipped with four handlers
+ * registered for keys that could not arrive: nine tests passing, and a board
+ * nobody could move.
+ */
 const press = (world: World, key: string): void => {
-  world.setInput([key]);
+  world.setInput([keyName(key)]);
   world.tick(1 / 60);
   play(world, 0.3);
 };
