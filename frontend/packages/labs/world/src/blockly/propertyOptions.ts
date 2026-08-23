@@ -109,6 +109,55 @@ export const writablePropertyOptions = (
     )
     .map(({label, key}) => [label, key]);
 
-/** The property a dropdown value names, if the project still holds it. */
+/**
+ * The properties a TWEEN can move — the ones with a path between two values.
+ *
+ * Numbers and vectors and nothing else: a colour, a sprite name or a boolean
+ * has no midpoint worth guessing at, and offering one would be offering a
+ * half-way that does not exist (`engine/core/tween`).
+ *
+ * Writable only, for the reason `writablePropertyOptions` gives: a read-only
+ * property is a rule's own bookkeeping, and easing one to a new value over
+ * half a second is a slower way of lying to the rule about its own state.
+ */
+export const tweenablePropertyOptions = (): Array<[string, string]> => [
+  ...builtinTweenables.map(({label, key}) => [label, key] as [string, string]),
+  ...writablePropertyOptions('number'),
+  ...writablePropertyOptions('vector'),
+];
+
+/**
+ * The FOUNDATION's tweenable properties — opacity, scale, rotation, position.
+ *
+ * Not in `known`, which holds what the project's own rules and actors declare.
+ * The general get/set blocks leave the foundation out on purpose: `set
+ * position` and `set sprite` have blocks of their own, and offering them twice
+ * would be two ways to say one thing.
+ *
+ * A tween is the case where that reasoning does not hold. Fading a thing out
+ * is the first tween anybody writes, and "you may ease any property except the
+ * four worth easing" is not a rule anybody would choose. So these rows are the
+ * tween dropdown's alone and the general blocks are untouched.
+ *
+ * Handed in ready-made rather than derived here, because the key a dropdown
+ * stores is minted where the blocks are (`domainBlocks.memberKey`) and that is
+ * also the one place holding both lists at once.
+ */
+let builtinTweenables: readonly KnownProperty[] = [];
+
+export function setBuiltinTweenables(next: readonly KnownProperty[]): void {
+  builtinTweenables = next;
+}
+
+/**
+ * The property a dropdown value names, if the project still holds it.
+ *
+ * Both lists. The tween dropdown offers the foundation's properties as well as
+ * the project's, so resolving only the project's meant a chosen `opacity`
+ * generated nothing at all — the block looked right and emitted an empty
+ * string, which showed up as a `ReferenceError` for the const that was never
+ * bound.
+ */
 export const propertyByKey = (key: string): KnownProperty | undefined =>
-  known.find(entry => entry.key === key);
+  known.find(entry => entry.key === key) ??
+  builtinTweenables.find(entry => entry.key === key);

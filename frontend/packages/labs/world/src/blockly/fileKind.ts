@@ -86,6 +86,10 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // `define actor` that owns them (`drawingDefinition`). Root-shaped in an
   // `.actor` file, a row in a world; one block either way.
   ['world_define_drawing', new Set<FileKind>(['actor', 'world'])],
+  // A tween is defined where it is used — an actor's in its own file, a
+  // world's in the world — and referenced by the defining block's id. A file
+  // of shared ones is the same axis an actor sits on and is not built yet.
+  ['world_define_tween', new Set<FileKind>(['actor', 'world'])],
 ]);
 
 /**

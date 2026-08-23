@@ -92,3 +92,12 @@ export {parseAnimationFile, type AnimationFile} from './core/animationFile';
 // Color conversion for effect parameters: the generated `add effect` call
 // wraps whatever a color block produced, so any of them can drive a uniform.
 export {rgb, rgba, toHex, type Rgb, type Rgba} from './core/color';
+export {
+  advanceTween,
+  isTweenable,
+  tweenDisplaced,
+  tweenValue,
+  type Curve,
+  type Tweenable,
+  type TweenRun,
+} from './core/tween';

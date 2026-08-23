@@ -102,3 +102,22 @@ export const advanceTween = (
   actor.set(run.property, tweenValue(run.from, run.to, CURVES[run.curve](t)));
   return t >= 1;
 };
+
+/**
+ * What generated code passes as `startTween`'s `onReplace`.
+ *
+ * The engine has no console and no opinion about where a warning belongs, so
+ * `Actor.startTween` only reports; this is the report a WORLD makes, and it
+ * goes where every other message from a running game goes — the lab's console
+ * panel, by way of the sandbox's `console`.
+ *
+ * Worth saying at all because the alternative is silence: fading a thing out
+ * while fading it in is a real mistake, and honouring the newer one looks
+ * exactly like the older one never ran.
+ */
+export const tweenDisplaced = (displaced: TweenRun): void => {
+  console.warn(
+    `The tween "${displaced.id}" was stopped: something else started ` +
+      `moving the same property. The newest one wins.`,
+  );
+};

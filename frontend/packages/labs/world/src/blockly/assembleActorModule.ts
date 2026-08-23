@@ -10,6 +10,8 @@
 // the exported instance.
 
 /** A top-level block's type and its already-generated code. */
+import {DEFINE_TWEEN} from './tweens';
+
 export interface GeneratedBlock {
   type: string;
   code: string;
@@ -28,10 +30,17 @@ export function assembleActorModule(
   declarations = '',
 ): string {
   const actor = blocks.find(block => block.type === 'world_actor');
-  const events = blocks.filter(block => block !== actor);
+  // A tween's definition is a `const` a handler reads, so it has to be bound
+  // before one runs — the same temporal-dead-zone hazard a world's local
+  // actors have, and the same answer.
+  const tweens = blocks.filter(block => block.type === DEFINE_TWEEN);
+  const events = blocks.filter(
+    block => block !== actor && !tweens.includes(block),
+  );
   const actorCode = actor ? actor.code : '';
+  const tweensCode = tweens.map(block => block.code).join('');
   const eventsCode = events.map(block => block.code).join('');
-  return `${actorCode}${declarations}${eventsCode}export default actor;\n`;
+  return `${actorCode}${declarations}${tweensCode}${eventsCode}export default actor;\n`;
 }
 
 /**
@@ -62,6 +71,11 @@ export function assembleWorldModule(
 ): string {
   const world = blocks.find(block => block.type === 'world_world');
   const actors = blocks.filter(block => block.type === 'world_actor');
+  // Tween definitions, hoisted for exactly the reason local actors are: they
+  // are `const`s the world's own body reads — `add actor … do play tween …` —
+  // and `rest` is emitted AFTER the world block, so left there the name is in
+  // its temporal dead zone and the module throws as it is imported.
+  const tweens = blocks.filter(block => block.type === DEFINE_TWEEN);
   // Event handlers are REGISTRATIONS, and the two kinds have OPPOSITE
   // constraints — which is why they are split rather than kept together.
   //
@@ -80,10 +94,14 @@ export function assembleWorldModule(
   const onWorld = handlers.filter(block => worldEventTypes.has(block.type));
   const rest = blocks.filter(
     block =>
-      block !== world && !actors.includes(block) && !handlers.includes(block),
+      block !== world &&
+      !actors.includes(block) &&
+      !tweens.includes(block) &&
+      !handlers.includes(block),
   );
-  const actorsCode = actors
+  const actorsCode = tweens
     .map(block => block.code)
+    .concat(actors.map(block => block.code))
     .concat(onActors.map(block => block.code))
     .join('');
   const worldCode =

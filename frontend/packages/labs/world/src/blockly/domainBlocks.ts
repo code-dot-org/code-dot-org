@@ -155,7 +155,9 @@ import {ownPropertyDeclarationFor, type OwnMeta} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {
   propertyByKey,
+  tweenablePropertyOptions,
   propertyOptions,
+  setBuiltinTweenables,
   setKnownProperties,
   writablePropertyOptions,
   type PropertyKind,
@@ -193,6 +195,13 @@ import {
   traitSubjectFor,
 } from './traitOptions';
 import {
+  DEFINE_TWEEN,
+  tweenOptions,
+  tweenOptionsExtension,
+  tweensIn,
+  tweenVar,
+} from './tweens';
+import {
   ActorVariable,
   paramFlavour,
   PARAM_GETTER_BLOCKS,
@@ -218,6 +227,14 @@ const spriteFieldOptions = (): Array<[string, string]> => [
 ];
 
 /** Point a `SPRITE` dropdown at the live list (the project's images + import). */
+// The tweenable properties change as rules come and go, so the dropdown asks
+// again at block-init rather than keeping what it was minted with.
+const tweenablePropertyOptionsExtension = liveDropdown(
+  'world_tweenable_property_options',
+  'PROP',
+  tweenablePropertyOptions,
+);
+
 const spriteOptionsExtension = liveDropdown(
   'world_sprite_options',
   'SPRITE',
@@ -1242,6 +1259,9 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   // file: a top-level block with a previous connection is disabled as an
   // orphan, along with everything chained after it.
   'world_define_drawing',
+  // A tween's definition, for both of the reasons above: it declares rather
+  // than does, and a chained one would be an orphan at the top level.
+  'world_define_tween',
   'world_world',
   'world_rule',
   // A behavior is a rule root and its one trait root at once
@@ -6787,6 +6807,124 @@ const RUNTIME_TRAIT_NOTE =
   'Its steps start on the next frame, and a trait it had before keeps the ' +
   'values it had then.';
 
+/**
+ * `define tween ⟨name⟩` — a movement of one property, named and reusable.
+ *
+ * A DEFINITION ROOT, like `define actor` and `define drawing`: it declares
+ * something and generates a `const`, and playing it is a separate block. The
+ * alternative — one block that both describes and starts the movement — cannot
+ * be reused, and a game fades a dozen things the same way.
+ *
+ * NO `from`. A tween starts wherever the property already is, captured when it
+ * is played (`engine/core/tween`): "fade out" means from however visible you
+ * are now, and a definition that fixed the start would snap before it moved.
+ */
+const worldDefineTween = defineBlock({
+  type: DEFINE_TWEEN,
+  message0: 'define tween %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'fade out'}],
+  message1: 'move %1 to %2',
+  args1: [
+    {type: 'field_dropdown', name: 'PROP', options: tweenablePropertyOptions},
+    {type: 'input_value', name: 'TO'},
+  ],
+  message2: 'over %1 seconds, %2',
+  args2: [
+    {type: 'input_value', name: 'SECONDS', check: 'Number'},
+    {
+      type: 'field_dropdown',
+      name: 'CURVE',
+      options: [
+        ['steadily', 'linear'],
+        ['starting slowly', 'ease-in'],
+        ['ending slowly', 'ease-out'],
+        ['slow at both ends', 'ease-in-out'],
+      ],
+    },
+  ],
+  // A ROOT, with no connections — the shape `define drawing` has and for the
+  // same two reasons. It declares something rather than doing something, so
+  // there is no moment for it to happen AT; and a top-level block that has a
+  // previous connection is disabled as an orphan by `DisableOrphansPlugin`,
+  // along with everything below it.
+  extensions: [tweenablePropertyOptionsExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Describe a movement of one property over time. Nothing happens until ' +
+    'something plays it.',
+  generator: {
+    javascript(block, generator) {
+      const known = propertyByKey(String(block.getFieldValue('PROP') ?? ''));
+      if (!known || !refResolves(known.property.ref)) {
+        // A property the project can no longer name. Nothing to move.
+        return '';
+      }
+      const name = String(block.getFieldValue('NAME') ?? 'tween');
+      const to = generator.valueToCode(block, 'TO', Order.NONE) || '0';
+      const seconds =
+        generator.valueToCode(block, 'SECONDS', Order.NONE) || '0';
+      return (
+        `const ${tweenVar(name, block.id)} = {` +
+        `id: ${str(name)}, ` +
+        `property: ${refCode(known.property.ref, generator)}, ` +
+        `to: ${to}, duration: ${seconds}, ` +
+        `curve: ${str(String(block.getFieldValue('CURVE') ?? 'linear'))}};\n`
+      );
+    },
+  },
+});
+
+/**
+ * `play tween ⟨…⟩ on ⟨…⟩` — start one running.
+ *
+ * The definition says what the movement IS; this says when and to whom. It
+ * returns at once and the movement continues on its own, which is the whole
+ * reason a tween is runtime state (`engine/core/tween`).
+ */
+const worldPlayTween = defineBlock({
+  type: 'world_play_tween',
+  message0: 'play tween %1 on %2',
+  args0: [
+    {type: 'field_dropdown', name: 'TWEEN', options: tweenOptions},
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorInputExtension, tweenOptionsExtension],
+  style: 'behavior_blocks',
+  tooltip:
+    'Start a movement this file describes. It carries on by itself; a ' +
+    '“tween finishes” handler is how to hear about the end.',
+  generator: {
+    javascript(block, generator) {
+      const chosen = String(block.getFieldValue('TWEEN') ?? '');
+      if (!chosen) {
+        // No tween defined yet, so nothing to play — the bargain `use trait`
+        // makes with "(none)", and for the same reason: half a block should
+        // generate nothing rather than a name with nothing behind it.
+        return '';
+      }
+      const defined = tweensIn(block.workspace).find(
+        held => held.blockId === chosen,
+      );
+      if (!defined) {
+        // The definition was deleted and this still names it.
+        return '';
+      }
+      const held = tweenVar(defined.name, defined.blockId);
+      // `from` is read HERE, not in the definition: the movement starts from
+      // wherever the property has got to by now.
+      return forEachActor(
+        actorTarget(block, generator),
+        who =>
+          `${who}.startTween({...${held}, from: ${who}.get(${held}.property), ` +
+          `elapsed: 0}, WorldLab.tweenDisplaced)`,
+      );
+    },
+  },
+});
+
 const worldAddTrait = traitMutation({
   type: 'world_add_trait',
   message0: 'add trait %1 to %2',
@@ -6829,6 +6967,8 @@ export const DOMAIN_BLOCKS = [
   ...GENERAL_PROPERTY_BLOCKS,
   worldActor,
   worldUseTrait,
+  worldDefineTween,
+  worldPlayTween,
   worldAddTrait,
   worldAddCameraTrait,
   worldRemoveTrait,
@@ -7106,6 +7246,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // "whichever cameras have this trait".
       'world_camera',
       'world_all_cameras',
+      // Movement over time: described once, played wherever. Beside the
+      // camera blocks because both are about how a thing gets somewhere
+      // rather than where it is.
+      'world_define_tween',
+      'world_play_tween',
       // How a camera rule reaches the camera every world already has. Listed
       // HERE, beside the camera blocks, because that is where somebody wiring
       // one up is looking — the actor pair stays with the runtime blocks.
@@ -7659,6 +7804,28 @@ export function buildDomainPalette(
   // Set here because this is the one place that has both lists at once, and it
   // runs whenever either changes — a rule imported, an actor's `define
   // property` renamed.
+  // The foundation's tweenable properties, which the general get/set blocks
+  // deliberately leave out — `set position` and `set sprite` have blocks of
+  // their own. A tween is the case where that does not hold: fading a thing
+  // out is the first tween anybody writes.
+  setBuiltinTweenables(
+    AUTHORING_RULES.flatMap(rule =>
+      rule.properties
+        .filter(
+          property =>
+            property.scope === 'actor' &&
+            !property.readonly &&
+            (property.type === 'number' ||
+              property.type === 'vector' ||
+              property.type === 'point'),
+        )
+        .map(property => ({
+          key: memberKey(property.ref),
+          label: `${rule.name} \u25b8 ${property.name ?? property.ref.exportName}`,
+          property,
+        })),
+    ),
+  );
   setKnownProperties(
     [
       ...projectRules.flatMap(rule =>
