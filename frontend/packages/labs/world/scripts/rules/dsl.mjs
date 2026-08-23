@@ -112,6 +112,29 @@ export const anyOf = list => ({
 
 export const give = v => ({type: 'world_return', inputs: {VALUE: value(v)}});
 
+/** How many characters `words` has. */
+export const textLength = words => ({
+  type: 'text_length',
+  inputs: {VALUE: value(words)},
+});
+
+/**
+ * The first `count` characters of `words`.
+ *
+ * Blockly's own substring block, pinned to the one shape a world has a use for
+ * — from the start, to a count — so a rule says "the first n letters" rather
+ * than choosing two ends and two directions every time.
+ *
+ * `AT1` is 1-based, which is Blockly's convention and not ours: character one
+ * is the first. A count of zero gives the empty string, which is what a line
+ * nobody has begun reading should look like.
+ */
+export const firstCharacters = (words, count) => ({
+  type: 'text_getSubstring',
+  fields: {WHERE1: 'FROM_START', WHERE2: 'FROM_START'},
+  inputs: {STRING: value(words), AT1: value(n(1)), AT2: value(count)},
+});
+
 export const note = text => ({type: 'world_comment', fields: {TEXT: text}});
 
 export const yes = () => ({type: 'logic_boolean', fields: {BOOL: 'TRUE'}});

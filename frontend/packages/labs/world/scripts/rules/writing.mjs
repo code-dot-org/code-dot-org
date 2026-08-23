@@ -29,10 +29,16 @@ const rule = defineRule({
 });
 
 const shows = rule.trait('Shows Text');
+export const ShowsText = rule.traitRef('Shows Text');
 
 // Empty, because every actor that has not been given words has none. A Label
 // placed and left alone draws nothing rather than the word "text".
-shows.string('text', '');
+//
+// EXPORTED, so a rule that reveals words a few at a time can write it —
+// `rules/reveals` does, the way `cameraFollow` writes the Camera's goal. What
+// it buys is that every drawing already reading `text` keeps working: a Label
+// and a Button reveal themselves without knowing anything has changed.
+export const text = shows.string('text', '');
 // Pixels, like every other size in the lab (engine/core/units): positions and
 // sizes are pixels and only RATES are in units.
 shows.number('text size', 12);

@@ -32,6 +32,7 @@ import {motionRule} from './motion';
 import {mouseRule} from './mouse';
 import {patrolRule} from './patrol';
 import {progressRule} from './progress';
+import {revealsRule} from './reveals';
 import {scoreRule} from './score';
 import {shootsRule} from './shoots';
 import {solidRule} from './solid';
@@ -175,6 +176,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Gives an actor words, a size, a color and an anchor — the state a drawn word is drawn from. It runs nothing: what an actor does with its words is its own “define drawing”, which is why the stock Label and Button are ordinary actors.',
     provides: ['Shows Text'],
     contents: writingRule,
+  },
+  {
+    id: 'reveals',
+    name: 'Reveals Text',
+    ability: 'Reveals Text',
+    description:
+      'Shows a line of words a few letters at a time, the way a game with dialogue does. Set the whole line and it arrives at reading pace; ask it to show all of it when somebody clicks, and hear about it when the line has finished.',
+    provides: ['Reveals Text'],
+    contents: revealsRule,
   },
   {
     id: 'progress',

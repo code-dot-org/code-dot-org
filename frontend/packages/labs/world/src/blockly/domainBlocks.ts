@@ -7457,12 +7457,16 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // …and how long a word is, the one question about a string a world made
       // of actors has a use for: a name that has to fit the box it is drawn in.
       'text_length',
+      // …and a piece of one, which is the day the comment below anticipated:
+      // revealing a line a few letters at a time is a substring per frame, and
+      // `rules/reveals` is written in terms of it.
+      'text_getSubstring',
       // DELIBERATELY NOT the rest of Blockly's text category. `text_append`
       // writes to a variable that outlives nothing here; `text_prompt` asks the
       // browser for input the game cannot see; and `indexOf`, `charAt`,
-      // `substring`, `changeCase`, `trim`, `count`, `replace` and `reverse` are
-      // string surgery with no reading in a world yet. Each is one line to add
-      // the day something wants it.
+      // `changeCase`, `trim`, `count`, `replace` and `reverse` are string
+      // surgery with no reading in a world yet. Each is one line to add the day
+      // something wants it.
       'world_comment',
     ],
   },

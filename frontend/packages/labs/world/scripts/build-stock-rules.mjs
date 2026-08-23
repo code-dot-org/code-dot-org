@@ -38,6 +38,7 @@ const RULES = [
   'patrol',
   'attachment',
   'writing',
+  'reveals',
   'progress',
   'camera',
   'cameraFollow',

@@ -96,6 +96,112 @@ const project = (seconds?: number) =>
     openFiles: [],
   } as never);
 
+/** The same world, but the play block is handed `any ⟨Player⟩` — several. */
+const broadcastWorld = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_define_tween',
+        id: 'fadeDef',
+        x: 20,
+        y: 300,
+        fields: {
+          NAME: 'fade out',
+          PROP: 'Appearance_OpacityProperty',
+          CURVE: 'linear',
+        },
+        inputs: {
+          TO: {block: {type: 'math_number', fields: {NUM: 0}}},
+          SECONDS: {block: {type: 'math_number', fields: {NUM: 1}}},
+        },
+      },
+      {
+        type: 'world_world',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'My World'},
+        next: {
+          block: {
+            type: 'world_add_actor',
+            fields: {ACTOR: 'actors/player'},
+            next: {
+              block: {
+                type: 'world_add_actor',
+                fields: {ACTOR: 'actors/player'},
+                next: {
+                  block: {
+                    type: 'world_play_tween',
+                    fields: {TWEEN: 'fadeDef'},
+                    inputs: {
+                      ACTOR: {
+                        block: {
+                          type: 'world_actor_kind',
+                          fields: {ACTOR: 'actors/player'},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    ],
+  },
+});
+
+const broadcast = () =>
+  projectFiles({
+    files: {
+      p: {
+        id: 'p',
+        name: 'player.actor',
+        language: 'actor',
+        contents: PLAYER,
+        folderId: 'actors',
+      },
+      w: {
+        id: 'w',
+        name: 'main.world',
+        language: 'world',
+        contents: broadcastWorld,
+        folderId: 'worlds',
+      },
+    },
+    folders: {
+      actors: {id: 'actors', name: 'actors', parentId: '0'},
+      worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
+    },
+    openFiles: [],
+  } as never);
+
+// An actor socket may hold SEVERAL — `any ⟨Player⟩` is every one of them — and
+// every other block that takes one broadcasts over the lot. A tween that
+// started on the first and left the rest would be the odd one out, and the
+// failure would be quiet: two of three coins fading is a bug you notice late.
+describe('a tween played on several actors at once', () => {
+  it('starts on every one of them', async () => {
+    const {world: built} = await compileProject(broadcast());
+    const actors = [...built.actors];
+
+    expect(actors).toHaveLength(2);
+    for (const actor of actors) {
+      expect(actor.tweens()).toHaveLength(1);
+    }
+  });
+
+  it('moves them all, not just the first', async () => {
+    const {world: built} = await compileProject(broadcast());
+
+    built.tick(0.5);
+
+    for (const actor of [...built.actors]) {
+      expect(actor.get(OpacityProperty)).toBeCloseTo(0.5, 6);
+    }
+  });
+});
+
 describe('a tween defined in a file and played', () => {
   it('compiles — the play block names a const the definition bound', async () => {
     // The agreement the unit tests cannot see. A mismatch here is a
