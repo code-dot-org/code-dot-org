@@ -28,6 +28,11 @@ export const APPEARANCE = {
   spriteCellOrigin: 'spriteCellOrigin',
   spriteCellSize: 'spriteCellSize',
   animation: 'animation',
+  // How solid the actor is drawn, 0 to 1. On APPEARANCE and not on the
+  // positional foundation, which is the line a Camera falls on: it has a
+  // position and no appearance (specs/VIEWPORT.md), and a camera you could
+  // fade would be a camera nobody draws.
+  opacity: 'opacity',
   frame: 'frame',
   elapsed: 'elapsed',
   done: 'done',

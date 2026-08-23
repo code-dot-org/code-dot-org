@@ -43,6 +43,28 @@ export const SpriteProperty = AppearanceTrait.addProperty(
 );
 
 /**
+ * How solid this actor is drawn: 1 is opaque, 0 is invisible.
+ *
+ * FOUNDATION, not a trait. It sits beside `scale` and `rotation` in the same
+ * sense — a thing that can be drawn can be drawn faintly, and asking an actor
+ * to elect "Can Fade" before it may be half-visible would be electing a fact
+ * rather than an ability. It is on APPEARANCE rather than the positional
+ * foundation because it is about drawing, which is exactly the line a Camera
+ * falls on the other side of.
+ *
+ * FADING IS NOT HERE. This is the value; moving it over time is a tween's
+ * business, and several rules already hand-roll that arithmetic
+ * (`cameraEase`'s note on why a per-frame fraction is frame-rate dependent is
+ * the clearest statement of it).
+ */
+export const OpacityProperty = AppearanceTrait.addProperty(
+  APPEARANCE.opacity,
+  'number',
+  1,
+  {name: 'opacity'},
+);
+
+/**
  * Which cell of a spritesheet {@link SpriteProperty} draws.
  *
  * Two vectors rather than one rectangle, because a rectangle is not a property

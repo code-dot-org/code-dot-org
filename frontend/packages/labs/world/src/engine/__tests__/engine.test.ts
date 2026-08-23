@@ -10,6 +10,7 @@ import {
   Vector,
   WorldBuilder,
 } from '../index';
+import {AppearanceTrait, OpacityProperty} from '../rules/animation';
 
 // Neither gravity nor collision is part of the engine any more — both are
 // `.rule` files a project imports (rules/stock). The rules these tests drive
@@ -554,6 +555,41 @@ describe('renderSnapshot (driver view)', () => {
     const after = world.renderSnapshot().find(s => s.actor === player);
     expect(after?.y).toBeCloseTo(9);
     expect(after?.x).toBe(10);
+  });
+
+  // FOUNDATION, not a trait, and on APPEARANCE rather than on the positional
+  // foundation. Both halves are load-bearing: a thing that can be drawn can be
+  // drawn faintly, so electing "Can Fade" first would be electing a fact rather
+  // than an ability — but a Camera has a position and no appearance
+  // (specs/VIEWPORT.md), and a camera you could fade would be one nobody draws.
+  //
+  // Fading is NOT here. This is the value; moving it over time is a tween's.
+  it('reports how solid to draw an actor, defaulting to opaque', () => {
+    const builder = new WorldBuilder({id: 'seen', name: 'Seen'});
+    const world = builder.getWorld();
+    const shown = builder.addActor(
+      new ActorBuilder({id: 'shown', name: 'Shown'})
+        .useTraits([AppearanceTrait])
+        .set(PositionProperty, new Vector(0, 0)),
+    );
+
+    // Opaque by default: a default of 0 would make every new actor invisible
+    // and read as a broken sprite.
+    expect(world.renderSnapshot()[0].opacity).toBe(1);
+
+    shown.set(OpacityProperty, 0.25);
+
+    expect(world.renderSnapshot()[0].opacity).toBe(0.25);
+  });
+
+  it('reports 1 for an actor that is positional and never drawn', () => {
+    // The honest answer — it has no opacity, and the driver still has to be
+    // told a number.
+    const {world} = makeWorld();
+
+    for (const state of world.renderSnapshot()) {
+      expect(state.opacity).toBe(1);
+    }
   });
 
   it('reports an actor’s vertical skew', () => {

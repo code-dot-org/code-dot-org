@@ -716,6 +716,11 @@ export class PhaserBinding {
           // The rectangle is centered on its position; shear about that point.
           applySkew(object, state.x, state.y, state.skew);
         }
+        // AFTER the branches, because all three want it and none of them
+        // differs about it: a drawing, a sprite frame and a plain rectangle are
+        // three ways to have a picture, and how solid that picture is is the
+        // same question in each. An actor with no appearance reports 1.
+        object.setAlpha(state.opacity);
       }
     };
 

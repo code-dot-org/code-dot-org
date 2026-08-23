@@ -239,6 +239,13 @@ export interface RenderState {
   /** Vertical skew in degrees — a shear the driver applies about the actor's
    * center (0 = none). */
   skew: number;
+  /**
+   * How solid to draw it: 1 opaque, 0 invisible.
+   *
+   * 1 for an actor with no appearance trait, which is the honest answer — it
+   * has no opacity, and the driver still has to be told a number.
+   */
+  opacity: number;
   /** Effects to play on this actor's image; empty for most actors. */
   effects: readonly AppliedEffectSpec[];
   /** The current appearance frame to draw; absent means draw a plain rectangle. */
@@ -1806,6 +1813,11 @@ export class World {
     const spriteProp = appearanceTrait?.properties[APPEARANCE.sprite] as
       | Property<string>
       | undefined;
+    // Optional like the rest of them: an actor may be positional and never
+    // drawn, and a world built before this property existed still renders.
+    const opacityProp = appearanceTrait?.properties[APPEARANCE.opacity] as
+      | Property<number>
+      | undefined;
     const cellOriginProp = appearanceTrait?.properties[
       APPEARANCE.spriteCellOrigin
     ] as Property<Vector> | undefined;
@@ -1898,6 +1910,10 @@ export class World {
         scaleY: scale.y,
         rotation: actor.get(rotationProp),
         skew: skewProp ? actor.get(skewProp) : 0,
+        opacity:
+          opacityProp && appearanceTrait && actor.has(appearanceTrait)
+            ? actor.get(opacityProp)
+            : 1,
         frame: frameFor(actor),
         drawing: drawingFor(actor),
         effects: actor.effects(),

@@ -50,6 +50,9 @@ vi.mock('phaser', () => {
     setRotation() {
       return this;
     }
+    setAlpha() {
+      return this;
+    }
     destroy() {
       this.record.destroyed = true;
     }
