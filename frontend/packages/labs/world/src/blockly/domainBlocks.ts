@@ -3109,7 +3109,11 @@ const worldActorKind = defineBlock({
   message0: 'any %1',
   args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions}],
   output: 'Actor',
-  extensions: [actorOptionsExtension, worldContextExtension],
+  extensions: [
+    actorOptionsExtension,
+    worldContextExtension,
+    openSourceButtonExtension,
+  ],
   // Actor values share the sprite style — the color that groups the actors.
   style: 'sprite_blocks',
   tooltip:
@@ -3617,7 +3621,11 @@ const worldCountOfKind = defineBlock({
   ],
   inputsInline: true,
   output: 'Number',
-  extensions: [actorTypeOptionsExtension, valueShadowExtension],
+  extensions: [
+    actorTypeOptionsExtension,
+    valueShadowExtension,
+    openSourceButtonExtension,
+  ],
   style: 'math_blocks',
   tooltip:
     'How many actors of one kind a value holds — the collected things, the ' +
@@ -4188,7 +4196,11 @@ const worldIsA = defineBlock({
   // actor templates AND the world's own `define actor`s, the same as
   // `world_add_actor` — through the TYPE-bound extension, because the socket
   // here has taken the name ACTOR.
-  extensions: [actorInputExtension, actorTypeOptionsExtension],
+  extensions: [
+    actorInputExtension,
+    actorTypeOptionsExtension,
+    openSourceButtonExtension,
+  ],
   style: 'logic_blocks',
   tooltip:
     'Whether an actor is of a given kind (the map places it by its type).',
@@ -4258,6 +4270,7 @@ const worldAddActor = defineBlock({
     // After the options extension, so it wraps that validator rather than
     // being wrapped by it (see `actorImportField`).
     actorImportFieldExtension,
+    openSourceButtonExtension,
   ],
   // Optional `as ⟨…⟩`, which is what lets a body reach the actor that DID the
   // placing: unticked the new actor is `this actor` as it always was, ticked it
@@ -4545,6 +4558,7 @@ const worldCreateInMap = defineBlock({
     actorImportOptionsExtension,
     builderWorldExtension,
     actorImportFieldExtension,
+    openSourceButtonExtension,
   ],
   style: 'behavior_blocks',
   tooltip:

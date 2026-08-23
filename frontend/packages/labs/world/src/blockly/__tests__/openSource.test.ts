@@ -163,3 +163,51 @@ describe('what the level says', () => {
     });
   });
 });
+
+// Actors, which had no way in at all.
+//
+// `WorldLayout` states the invariant — "every other file is reachable from a
+// block that names it" — and it was false for actors. In a level with the file
+// browser hidden, importing one wrote `actors/coin.actor` and left no way to
+// read it: no list to find it in, and no eye on the block that named it. The
+// student had to already know it was there.
+describe('an actor a block names', () => {
+  it('is the module the field holds', () => {
+    // Direct, like a map and unlike a rule: an actor declares no name for a
+    // registry to resolve, so the field IS the path.
+    expect(moduleNamedBy(block({ACTOR: 'actors/coin'}))).toBe('actors/coin');
+  });
+
+  it('is read from TYPE too, which `is a` calls it', () => {
+    expect(moduleNamedBy(block({TYPE: 'actors/crate'}))).toBe('actors/crate');
+  });
+
+  it('is nothing for an actor defined inside the world', () => {
+    // `local:<block id>` names a `define actor` in this very workspace. There
+    // is no file, and an eye offering to open one would be a lie.
+    expect(moduleNamedBy(block({ACTOR: 'local:abc123'}))).toBeUndefined();
+  });
+
+  it('is nothing for a TYPE that is a kind of VALUE', () => {
+    // `world_rule_property` calls its field TYPE as well, and holds "number".
+    // A module path always names its folder, so the slash tells them apart.
+    expect(moduleNamedBy(block({TYPE: 'number'}))).toBeUndefined();
+  });
+
+  it('gets an eye once the project has the file', () => {
+    setModuleOpener(() => {});
+    setOpenableModules(['actors/coin']);
+
+    expect(canOpenModule('actors/coin')).toBe(true);
+    expect(canOpenModule('actors/nothing')).toBe(false);
+  });
+
+  it('loses it when the level says so', () => {
+    // A level's call, as it is for a rule: reading is not always the lesson.
+    setModuleOpener(() => {});
+    setOpenableModules(['actors/coin']);
+    setModuleOpeningOffered(false);
+
+    expect(canOpenModule('actors/coin')).toBe(false);
+  });
+});

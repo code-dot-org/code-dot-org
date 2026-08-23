@@ -56,7 +56,24 @@ export function moduleNamedBy(block: Block): string | undefined {
   // A map names its file directly — there is no rule registry in between,
   // because a map is not a module and declares nothing to be looked up by.
   const map = block.getFieldValue('MAP');
-  return typeof map === 'string' && map ? map : undefined;
+  if (typeof map === 'string' && map) {
+    return map;
+  }
+  // An actor, named the same direct way: `add actor ⟨actors/coin⟩`, and `is a
+  // ⟨actors/crate⟩` on the field it calls TYPE.
+  //
+  // ONLY A PATH. The same fields hold two other things — `local:<block id>`
+  // for an actor defined inside this world, which has no file to open, and
+  // `world_rule_property`'s TYPE, which is a kind of value ("number") and not
+  // a module at all. A module path always names its folder, so the slash is
+  // what tells them apart.
+  for (const name of ['ACTOR', 'TYPE']) {
+    const value = block.getFieldValue(name);
+    if (typeof value === 'string' && value.includes('/')) {
+      return value;
+    }
+  }
+  return undefined;
 }
 
 /** The eye glyph, as the `<tspan>` `FieldButton` draws inside itself. */
