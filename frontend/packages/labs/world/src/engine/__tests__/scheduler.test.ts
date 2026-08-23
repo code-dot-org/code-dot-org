@@ -24,6 +24,11 @@ describe('Scheduler', () => {
       .instantiate();
     const ids = world.stepOrder().map(s => `${s.ownerId}.${s.id}`);
     expect(ids).toEqual([
+      // Tweens are PHASED (`adjust`), and a phased step sorts ahead of an
+      // unanchored one — which every rule in this test is. In a real project
+      // the stock rules are phased too, so `adjust` lands after `move` and a
+      // tween is the later word on a position than the simulation is.
+      'spatial.advanceTweens',
       // Appearance is in play whether or not a world says so (WorldBuilder's
       // foundation), and its step is unanchored, so it sorts to the front.
       'animation.advanceAnimation',

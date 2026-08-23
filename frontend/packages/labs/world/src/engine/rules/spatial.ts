@@ -5,6 +5,7 @@
 import {RuleBuilder} from '../builders/RuleBuilder';
 import type {Actor} from '../core/Actor';
 import {SPATIAL} from '../core/spatialKeys';
+import {advanceTween} from '../core/tween';
 import {Vector, type VectorLike} from '../core/Vector';
 import {watchProperty} from '../core/watchProperty';
 
@@ -206,5 +207,45 @@ watchProperty(PositionProperty, (actor, previous: Vector, next: Vector) => {
     world.emit(LeftMapEvent, actor);
   }
 });
+
+/**
+ * Raised on an actor when one of its tweens reaches its end.
+ *
+ * On the SPATIAL rule because a tween is not about appearance — it moves any
+ * property with a path between two values, and position is the obvious one.
+ * The value carried is the tween's name, so one handler can answer for several
+ * ("when a tween finishes: if it was `fade out`, remove me").
+ */
+export const TweenFinishedEvent = rule.addEvent('tweenFinished', {
+  name: 'a tween finishes',
+});
+
+/**
+ * Advance every tween in flight, once a frame.
+ *
+ * IN `adjust`, after `move` and before `touch`. A tween is an authored
+ * instruction and the simulation is not, so when both write a position the
+ * tween is the later word — and collisions then see where the tween actually
+ * put things rather than where physics wanted them. For opacity and scale the
+ * phase makes no difference; it is position that decides it.
+ *
+ * The list is copied before walking it: a handler for `a tween finishes` may
+ * start another tween, or remove the actor, and a step that mutates the array
+ * it is iterating skips its neighbour.
+ */
+export const AdvanceTweensStep = rule.addStepIn(
+  'advanceTweens',
+  'adjust',
+  (world, delta) => {
+    for (const actor of world.actors.with(PositionalTrait)) {
+      for (const run of [...actor.tweens()]) {
+        if (advanceTween(run, actor, delta)) {
+          actor.stopTween(run);
+          world.emit(TweenFinishedEvent, actor, run.id);
+        }
+      }
+    }
+  },
+);
 
 export const SpatialRule = rule.build();

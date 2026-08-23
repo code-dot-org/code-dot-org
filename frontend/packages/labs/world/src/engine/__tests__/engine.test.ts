@@ -298,6 +298,11 @@ describe('gravity simulation', () => {
   it('runs the steps in the intended per-tick order', () => {
     const {world} = makeWorld();
     expect(world.stepOrder().map(s => `${s.ownerId}.${s.id}`)).toEqual([
+      // Phased, so ahead of the unanchored ones these fixtures use. In a real
+      // project the stock rules are phased too and `adjust` lands after
+      // `move`, which is the point: a tween is the later word on a position
+      // than the simulation is.
+      'spatial.advanceTweens',
       // The foundation's, which no world asks for (WorldBuilder.rulesInPlay).
       'animation.advanceAnimation',
       'gravity.applyVelocity',

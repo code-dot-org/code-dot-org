@@ -7,6 +7,7 @@
 import {fnv1a} from './hash';
 import {Trait} from './Trait';
 import {Traited} from './Traited';
+import type {TweenRun} from './tween';
 import type {
   ActorAction,
   AppliedEffectSpec,
@@ -81,6 +82,9 @@ export class Actor {
   // Mutable because effects can be added and removed while the game runs — the
   // driver re-reads this list every frame through `renderSnapshot`.
   private readonly appliedEffects: AppliedEffectSpec[];
+  // Tweens in flight. Mutable for the reason `appliedEffects` is: they start
+  // and finish while the game runs, and a step reads this list every frame.
+  private readonly runningTweens: TweenRun[] = [];
 
   constructor(init: ActorInit) {
     this.id = init.id;
@@ -230,6 +234,47 @@ export class Actor {
    */
   ownProperties(): readonly Property[] {
     return this.traited.ownProperties();
+  }
+
+  /** The tweens in flight on this actor, in the order they were started. */
+  tweens(): readonly TweenRun[] {
+    return this.runningTweens;
+  }
+
+  /**
+   * Start a tween, replacing any already moving the same property.
+   *
+   * LAST WRITE WINS, decided at the START rather than per frame. Two tweens
+   * left running on one property would both write it every tick and the
+   * winner would be whichever the list happened to reach second — a race
+   * decided by insertion order, which is no rule at all. Replacing means the
+   * newest instruction is the one in force, which is what "last write wins"
+   * is for.
+   *
+   * It is still worth saying out loud. Fading a thing out while fading it in
+   * is a real mistake, and silently honouring one of them looks like the
+   * other one never ran. `onReplace` is how the caller reports it — the engine
+   * has no console of its own and no opinion about where a warning belongs.
+   */
+  startTween(run: TweenRun, onReplace?: (displaced: TweenRun) => void): this {
+    const at = this.runningTweens.findIndex(
+      held => held.property.id === run.property.id,
+    );
+    if (at >= 0) {
+      onReplace?.(this.runningTweens[at]);
+      this.runningTweens.splice(at, 1);
+    }
+    this.runningTweens.push(run);
+    return this;
+  }
+
+  /** Drop a tween in flight, leaving the property wherever it reached. */
+  stopTween(run: TweenRun): this {
+    const at = this.runningTweens.indexOf(run);
+    if (at >= 0) {
+      this.runningTweens.splice(at, 1);
+    }
+    return this;
   }
 
   /** The effects played on this actor's image, in application order. */
