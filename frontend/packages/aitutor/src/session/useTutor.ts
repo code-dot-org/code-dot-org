@@ -178,11 +178,29 @@ export const useTutor = (): Tutor => {
         dispatch(turnCompleted(settled));
 
         if (offered) {
-          dispatch(proposalOffered(offered));
-          // The host applies it provisionally — legacy replaces the project
-          // sources and makes the workspace read-only — so that Accept and
-          // Reject are a decision about something the student can see.
-          config.proposals?.onPropose?.(offered);
+          // THE TURN IS OVER, and what follows is the host's business.
+          //
+          // Inside the turn's own catch, a host that threw while applying a
+          // perfectly good answer settled the question as failed — so the
+          // transcript carried the answer AND "there was an error getting a
+          // response", the second contradicting the first. It also appended a
+          // second assistant message with the first one's timestamp, which
+          // React then reported as a duplicate key.
+          //
+          // The request succeeded. What failed is applying the offer, which is
+          // a different sentence, and the student still has the explanation.
+          try {
+            dispatch(proposalOffered(offered));
+            // The host applies it provisionally — legacy replaces the project
+            // sources and makes the workspace read-only — so that Accept and
+            // Reject are a decision about something the student can see.
+            config.proposals?.onPropose?.(offered);
+          } catch (error) {
+            console.error(
+              'AI Tutor: the answer arrived, but the lab could not apply it.',
+              error,
+            );
+          }
         }
       } catch (error) {
         // Including an abort, which settles the message as an error rather than

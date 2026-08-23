@@ -115,11 +115,38 @@ describe('the reply that kept failing', () => {
     expect(screen.queryByText(strings.responseError)).toBeNull();
   });
 
-  it('IS an error when applying it throws, and says so out loud', async () => {
-    // The one remaining way this reply can fail. `onPropose` runs inside the
-    // turn's try, so a host that throws while applying a good answer produces
-    // the same sentence as a dead proxy — which is why the catch now reports.
+  it('is NOT an error when applying it throws — the request succeeded', async () => {
+    // `onPropose` used to run inside the turn's own catch, so a host that threw
+    // while applying a perfectly good answer settled the question as failed:
+    // the transcript carried the answer AND "there was an error getting a
+    // response", each contradicting the other.
     const shouted = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    const store = show(
+      policy({
+        onPropose: () => {
+          throw new Error('host could not apply it');
+        },
+      }),
+    );
+    await ask();
+
+    await waitFor(() =>
+      expect(
+        store
+          .getState()
+          .aiTutor.messages.filter(held => held.role === Role.ASSISTANT),
+      ).toHaveLength(1),
+    );
+    expect(screen.queryByText(strings.responseError)).toBeNull();
+    shouted.mockRestore();
+  });
+
+  it('says the LAB could not apply it, which is a different sentence', async () => {
+    const said: string[] = [];
+    const shouted = vi
+      .spyOn(console, 'error')
+      .mockImplementation(line => said.push(String(line)));
 
     show(
       policy({
@@ -130,13 +157,33 @@ describe('the reply that kept failing', () => {
     );
     await ask();
 
-    await waitFor(() =>
-      expect(screen.getByText(strings.responseError)).toBeTruthy(),
+    await waitFor(() => expect(said.join(' ')).toContain('could not apply it'));
+    expect(said.join(' ')).not.toContain('the turn failed');
+    shouted.mockRestore();
+  });
+
+  it('leaves one assistant message, so no two share a key', async () => {
+    // The duplicate React key came from `turnFailed` appending a SECOND
+    // assistant message carrying the first one's timestamp.
+    const shouted = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    const store = show(
+      policy({
+        onPropose: () => {
+          throw new Error('host could not apply it');
+        },
+      }),
     );
-    expect(shouted).toHaveBeenCalledWith(
-      'AI Tutor: the turn failed.',
-      expect.objectContaining({message: 'host could not apply it'}),
-    );
+    await ask();
+
+    await waitFor(() => {
+      const keys = store
+        .getState()
+        .aiTutor.messages.map(
+          held => held.updateId ?? `${held.timestamp}-${held.role}`,
+        );
+      expect(new Set(keys).size).toBe(keys.length);
+    });
     shouted.mockRestore();
   });
 });
