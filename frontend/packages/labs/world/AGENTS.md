@@ -212,6 +212,36 @@ either way proves nothing, and doing exactly that is how the stale server went
 unnoticed for two more rounds — `replaceSources` was already a private helper
 in the file, so it matched before and after.
 
+## The test harness is kinder than the lab
+
+Four bugs in one sitting shipped green because the harness did something the
+running lab does not. Each time the test was right about the code and wrong
+about the world it ran in.
+
+- **`compileProject` builds its block palette from the files it is HANDED.**
+  The lab builds it from a memoised prop holding the project's rules as they
+  WERE. So a rule that has just arrived has its blocks defined in the harness
+  and not in the lab, and a proposal importing one passed every test while the
+  editor refused it.
+- **`compileProject` calls `refreshProjectDropdowns`; the gate did not.** A
+  trait is a dropdown VALUE, so the harness resolved `Boundaries#StaysAcross`
+  and production had never heard of it.
+- **The generator mints a stand-in for any unknown block type.** So "does it
+  compile" answers yes for a project whose rule never arrived. Assert what the
+  BUILT actor turns out to be — `actor.has(module.SomeTrait)` — never that it
+  compiled.
+- **`setInput` takes the LAB's key names, not the browser's.** The driver calls
+  `keyName(event.key)` first, so a test pressing `ArrowUp` presses something no
+  player can. Sokoban shipped with four dead controls and nine passing tests.
+
+**The move each time is the same: check the test can fail.** Delete the thing
+under test — the import, the registration, the key name — and watch it go red.
+Every one of these was found that way, and none was found by reading.
+
+**And when a fix does not reach the browser, suspect the harness gap before the
+logic.** The question to ask is not "is my code right" but "what does the lab do
+here that my test does not".
+
 ## Verifying a change
 
 In this order, from this directory:
