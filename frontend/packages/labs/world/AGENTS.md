@@ -180,6 +180,38 @@ times wrong and a bird that flew off the top of the level.
 hoisted above the world block whatever order they sit in, so put `define world`
 at the top left and stop thinking about it.
 
+## Editing a sibling package while the dev server runs
+
+**The dev server serves a stale transform of an aliased sibling, and only a
+restart clears it.** `vite.config.ts` resolves `@code-dot-org/lab`,
+`@code-dot-org/codebridge` and `@code-dot-org/aitutor` to their SOURCE for
+`serve` and the demo build. Editing this package hot-reloads. Editing one of
+those does not: Vite logs `hmr update` for the file, the browser dutifully
+re-fetches it, and the server hands back the transform from whenever it
+started. Measured — after an edit, both the bare `/@fs/…` URL and one with a
+fresh `?t=` return the old code, while a newly started server returns the new.
+
+`server.watcher.add` does not help; the watcher already sees the change. If you
+find the real cause, this note should become a fix.
+
+**So: restart the dev server after editing `base`, `codebridge` or `aitutor`.**
+A browser reload cannot help, and neither can a hard one. This cost three
+rounds of re-diagnosing a bug that was already fixed on disk — the symptom is a
+`TypeError: <something> is not a function` for a function you just added.
+
+**Check for a string that did not exist before.** The way to confirm what the
+server has:
+
+```
+curl -s "http://localhost:5139/@fs$PWD/../base/src/contexts/SourcesContext.tsx" \
+  | grep -c createCommit
+```
+
+`createCommit` is new, so a zero is proof. Grepping for a name that existed
+either way proves nothing, and doing exactly that is how the stale server went
+unnoticed for two more rounds — `replaceSources` was already a private helper
+in the file, so it matched before and after.
+
 ## Verifying a change
 
 In this order, from this directory:

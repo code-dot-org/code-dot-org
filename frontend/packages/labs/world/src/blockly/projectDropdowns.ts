@@ -28,7 +28,7 @@ import {
   setProjectSounds,
   setProjectSprites,
 } from './moduleOptions';
-import {setOpenableModules} from './openModule';
+import {OPENABLE_EXTENSIONS, setOpenableModules} from './openModule';
 import {projectAnimationIds} from './projectAnimations';
 import {
   projectActorOptions,
@@ -51,12 +51,9 @@ import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 // What the eye can open. A `.map` is not a module the compiler resolves — a
 // world names one in a dropdown and `loadMap` reads it as data — but it IS a
 // file with an editor, which is the only thing the button needs.
-// `.actor` and `.behavior` were missing, and each was the same bug: a block
-// naming one showed no eye, so in a level with the file browser hidden there
-// was no way at all to read the actor you had just imported. WorldLayout says
-// the invariant this restores — "every other file is reachable from a block
-// that names it".
-const MODULE_FILE = /\.(rule|behavior|actor|js|ts|map)$/;
+// Built from the one list, so what gets an eye and what the eye can open
+// cannot drift apart (openModule.OPENABLE_EXTENSIONS).
+const MODULE_FILE = new RegExp(`\\.(${OPENABLE_EXTENSIONS.join('|')})$`);
 
 /**
  * NONE OF THESE HAS A DEFAULT, and that is the point.

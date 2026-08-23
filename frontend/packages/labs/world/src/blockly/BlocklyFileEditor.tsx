@@ -86,7 +86,11 @@ import {setEffectImportHandler} from './effectImport';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
 import {redrawLiveDropdowns} from './moduleOptions';
-import {setModuleOpener, setModuleOpeningOffered} from './openModule';
+import {
+  OPENABLE_EXTENSIONS,
+  setModuleOpener,
+  setModuleOpeningOffered,
+} from './openModule';
 import {projectPlacements} from './placementRequests';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {
@@ -240,7 +244,7 @@ function fileIdForModule(
   source: MultiFileSource,
   modulePath: string,
 ): string | undefined {
-  for (const extension of ['.rule', '.js', '.ts', '.map']) {
+  for (const extension of OPENABLE_EXTENSIONS.map(kind => `.${kind}`)) {
     const wanted = `${modulePath}${extension}`;
     const found = Object.keys(source.files).find(
       id => filePath(source, id) === wanted,
@@ -1090,12 +1094,22 @@ export const BlocklyFileEditor = ({
     setModuleOpener(modulePath => {
       const sources = sourcesRef.current;
       const fileId = fileIdForModule(sources.source, modulePath);
-      if (fileId) {
-        updateSources({
-          ...sources,
-          source: activateFile(sources.source, fileId),
-        });
+      if (!fileId) {
+        // The eye is only drawn when the project holds the file
+        // (`canOpenModule`), so getting here means the two disagree about what
+        // "holds" means — which is what happened when `.actor` was registered
+        // as openable and not listed among the extensions tried here. The
+        // button did nothing at all, and nothing anywhere said why.
+        console.warn(
+          `World Lab: nothing to open for \`${modulePath}\`. The eye offered ` +
+            'it, so the openable registry and this resolver disagree.',
+        );
+        return;
       }
+      updateSources({
+        ...sources,
+        source: activateFile(sources.source, fileId),
+      });
     });
     // Cleared on unmount so a field on a disposed workspace cannot open a file
     // through an editor that is gone.

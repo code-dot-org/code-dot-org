@@ -16,6 +16,33 @@
 // reach React context or the project's files, so the editor registers a handler
 // while it is mounted and the field asks through it.
 
+/**
+ * The file kinds a module path can name, in the order resolution tries them.
+ *
+ * ONE LIST, because there are two questions and they must not be able to
+ * disagree: which paths get an eye (`setOpenableModules` filters the project's
+ * files by this) and which file the eye then opens (`fileIdForModule` tries
+ * these suffixes in turn). They were separate lists, and `.actor` was added to
+ * the first and not the second — so the eye appeared on `create ⟨Coin⟩ in map`
+ * and clicking it did nothing at all.
+ *
+ * Ordered, because the first three follow the compiler's own resolution: a
+ * module path is tried as `.rule`, then `.js`, then `.ts`, so the file the eye
+ * opens is the file the project would compile. `.behavior` sits with `.rule`,
+ * being a rule file by another name and living in `rules/` beside them.
+ * `.actor` is a module with a namespace of its own. `.map` is last and is not
+ * a module at all — a map is data a world names — but it has an editor, and
+ * the eye opens FILES.
+ */
+export const OPENABLE_EXTENSIONS = [
+  'rule',
+  'behavior',
+  'js',
+  'ts',
+  'actor',
+  'map',
+] as const;
+
 /** Opens the project file a module path names. */
 export type ModuleOpener = (modulePath: string) => void;
 
