@@ -8,7 +8,6 @@ module Services
   module Classlink
     class V2AuthOptionBuilder < Services::Base
       SEPARATOR = '|'.freeze
-      LOG_NAMESPACE = 'ClassLink'.freeze
 
       attr_reader :classlink_v1_id, :tenant_id, :sourced_id
 
@@ -26,26 +25,22 @@ module Services
       # string whose format ClassLink does not constrain. The format stays
       # unambiguous anyway: parse with split('|', 2), never a bare split('|').
       #
-      # Returns nil (and logs the ClassLink UserId for follow-up) when the
-      # components cannot form an id, so callers fall back to the v1 path
-      # rather than constructing "<TenantId>|" and colliding every user in
-      # the tenant onto one auth option.
+      # Returns nil (and reports the ClassLink UserId to Sentry for follow-up)
+      # when the components cannot form an id, so callers fall back to the v1
+      # path rather than constructing "<TenantId>|" and colliding every user
+      # in the tenant onto one auth option.
       def self.build_authentication_id(tenant_id:, sourced_id:, classlink_user_id: nil)
         tenant = tenant_id.to_s
         sourced = sourced_id.to_s
         if tenant.blank? || sourced.blank? || tenant.include?(SEPARATOR)
-          # INFO rather than WARN on purpose: CDO.log's formatter prefixes
-          # non-INFO lines with the severity, which breaks JSON parsing in
-          # CloudWatch queries. The event name carries the signal.
-          CDO.log.info(
-            {
-              event: 'classlink_v2_authentication_id_not_built',
-              namespace: LOG_NAMESPACE,
+          Observability::Errors.capture_message(
+            'ClassLink v2 authentication id not built',
+            extra: {
               classlink_user_id: classlink_user_id,
               tenant_id_blank: tenant.blank?,
               sourced_id_blank: sourced.blank?,
               tenant_id_contains_separator: tenant.include?(SEPARATOR),
-            }.to_json
+            }
           )
           return nil
         end
