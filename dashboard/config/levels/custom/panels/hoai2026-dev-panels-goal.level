@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##Give them something to do\nYour platformer has a world to run and jump around. Next you'll add two things that make it a game: something to reach, and someone to watch out for.\n\nFirst a treasure to find. Then a guard walking a platform - and you decide what happens when your player meets them.",
+        "text": "##Give them something to do\nYour platformer has a world to run and jump around. Next you'll add two things that make it a game: something to reach, and someone to meet.\n\nFirst a treasure to find. Then another character walking a platform - and you decide what happens when your player meets them.",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-goal-5c165dc5-ec80-4be2-8a4b-9cf8dc768b75"
       }

@@ -342,13 +342,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "hoai2026-dev-spritelab-lab2-enemy"
+          "hoai2026-dev-spritelab-lab2-patrol"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "hoai2026-dev-spritelab-lab2-enemy"
+          "hoai2026-dev-spritelab-lab2-patrol"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -356,7 +356,7 @@
         "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
       },
       "level_keys": [
-        "hoai2026-dev-spritelab-lab2-enemy"
+        "hoai2026-dev-spritelab-lab2-patrol"
       ]
     },
     {
@@ -555,9 +555,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "hoai2026-dev-spritelab-lab2-enemy",
+        "level.key": "hoai2026-dev-spritelab-lab2-patrol",
         "script_level.level_keys": [
-          "hoai2026-dev-spritelab-lab2-enemy"
+          "hoai2026-dev-spritelab-lab2-patrol"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
