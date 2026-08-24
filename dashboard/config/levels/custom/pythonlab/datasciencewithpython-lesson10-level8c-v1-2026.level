@@ -1,0 +1,69 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-24T00:42:51.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Arctic Sea Ice\r\n\r\nAnalyze changes in Arctic sea-ice extent over time.\r\n\r\n1. Run the starter code and review the dataset information and statistics.\r\n2. Use `min()`, `max()`, and `sum()` to calculate statistics for `Extent (million km2)`.\r\n3. Use `agg()` to calculate the total, average, minimum, and maximum sea-ice extent.\r\n4. Discuss the trends or anomalies you notice and form a hypothesis about what may have influenced them.\r\n\r\n:::: details [Need Help?]\r\n\r\nAsk AI Tutor for an example, documentation, or an explanation of the code or output. Use its guidance to complete the work yourself.\r\n\r\n::::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndata = pd.read_csv('Arctic_Sea_Ice.csv')\n\ndata.info()\nprint(data.describe())\n\n# Add your analysis below",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "locked_starter"
+        },
+        "1": {
+          "id": "1",
+          "name": "Arctic_Sea_Ice.csv",
+          "language": "csv",
+          "contents": "ID,Year,Month,Extent (million km2),Area (million km2)\n0,1979,9,7.05,4.58\n1,1980,9,7.67,4.87\n2,1981,9,7.14,4.44\n3,1982,9,7.3,4.43\n4,1983,9,7.39,4.7\n5,1984,9,6.81,4.11\n6,1985,9,6.7,4.23\n7,1986,9,7.41,4.72\n8,1987,9,7.28,5.64\n9,1988,9,7.37,5.36\n10,1989,9,7.01,4.86\n11,1990,9,6.14,4.55\n12,1991,9,6.47,4.51\n13,1992,9,7.47,5.43\n14,1993,9,6.4,4.58\n15,1994,9,7.14,5.13\n16,1995,9,6.08,4.43\n17,1996,9,7.58,5.62\n18,1997,9,6.69,4.89\n19,1998,9,6.54,4.3\n20,1999,9,6.12,4.29\n21,2000,9,6.25,4.35\n22,2001,9,6.73,4.59\n23,2002,9,5.83,4.03\n24,2003,9,6.12,4.05\n25,2004,9,5.98,4.39\n26,2005,9,5.5,4.07\n27,2006,9,5.86,4.01\n28,2007,9,4.27,2.82\n29,2008,9,4.69,3.26\n30,2009,9,5.26,3.76\n31,2010,9,4.87,3.34\n32,2011,9,4.56,3.21\n33,2012,9,3.57,2.41\n34,2013,9,5.21,3.78\n35,2014,9,5.22,3.74\n36,2015,9,4.62,3.42\n37,2016,9,4.53,2.91\n38,2017,9,4.82,3.35\n39,2018,9,4.79,3.35\n40,2019,9,4.36,3.17\n41,2020,9,4,2.83\n42,2021,9,4.95,3.47\n43,2022,9,4.87,3.43",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Arctic Sea Ice",
+    "bubble_choice_description": "Practice using pandas functions to identify important statistics about the sea ice extent over time and uncover initial insights.",
+    "thumbnail_url": "https://images.code.org/6f0b03f2ffb52431556f53ea02516ea2-glacier.png",
+    "teacher_markdown": "**What Students Should Take Away:**\r\n- Students practice using min() and max() to find the lowest and highest sea ice extents, providing a clear picture of the dataset’s extremes.\r\n- Students learn to use the sum() function to calculate total sea ice extent, reinforcing their understanding of cumulative data analysis.\r\n- By using agg() and groupby() together, students practice summarizing sea ice data across different time periods, which helps them see broader trends.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n- Students might think that only one statistic (e.g., mean) is important, neglecting the significance of other statistics.\r\n  - Tip: Encourage students to consider how each statistic offers a different perspective. For instance, the mean shows overall trends, while min and max highlight extremes.\r\n- Students may have difficulty seeing the significance of gradual changes in the data.\r\n  - Tip: Guide students to look for long-term trends and discuss how even small, gradual changes can have significant impacts over time.",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\niAIXnk7ZEK4ES8I=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-24T00:42:51.366+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L8c_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L9-L8c_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-08-24 00:43:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 00:44:27 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 00:45:37 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

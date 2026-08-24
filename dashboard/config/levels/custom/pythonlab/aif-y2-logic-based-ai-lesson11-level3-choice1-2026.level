@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T20:56:58.000Z",
   "level_num": "custom",
@@ -11,7 +12,7 @@
     "bubble_choice_description": "Build a decision tree to go shopping.",
     "thumbnail_url": "https://images.code.org/15db47e2166f771d4cb87e554fa1af2c-shopping.jpg",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -42,9 +43,9 @@
       "openFiles": [
         "0"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqNpIEuIqc8ekeN\nOOAxi+dYtY2M0bNQ74IPQ9aPo2sY2XlgcM1ZbSgAZb5ubjOAF6LJyNv4afQO\nYPaz8dPv9LrHopFTs5hwbfqeXgShfBMlazKgp1ZYCE9BYy0LL8FgqpwuH2Vd\nJgEt2gQaf4w2UN5dbOy8aKEixGPWQZUesll7apXXjlY2cfDezFV9BQMtxPDZ\nFv+ML+iSV4k4CsHEQVCE++E3cte0TQu7KL4ylulJ2V0SKRdkHLiOSUBUPI7B\nwS8IsS1XvYXb9MZvhRO0MJ9BnqEbCZbkaui42r4EQIq6+7IspCfx4c1kLd5R\nHQc0PwVNC7WHXtjBnZf3+xcYiZOpECg7U/biEUEoic+cquanGpXkiLVbr7bB\ng+yZMLpbPgIri1+351ZQgcfZ1WfzLnnRxPdtdUYl9/meNg7aromRd+AhaB44\n0Xoe1NgV4ZlM89zQEb4Qa6hhSDmv2U3iLj17n7Iz7Un+zqyn3FppUNNl9/dG\ngzW4K7v7FoleMJSW38axHWPKV4aRp48v6jW9WRDRfkPvhhdMAloSAmLhQNRO\nkA5ZthG7/w12Xzdf+A+X0MauPXD+c71GCIAV8rm9xQDcD3Gy4anWTUy1FcrC\njUt47PuLwQ1Q1LLbbGOTj4Iu3/BIjf1i++IU2RDiW0ThxgXXiEYjpegadrBu\nrzTYjLJ0Wg==\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 20:58:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:58:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 20:58:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:58:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:27:50 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:44:55 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>
