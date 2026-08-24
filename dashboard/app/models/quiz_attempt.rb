@@ -72,10 +72,13 @@ class QuizAttempt < ApplicationRecord
     in_quiz_question_ids = QuizLevelQuestion.where(level_id: level_id).select(:quiz_question_id)
     quiz_question_responses.where(quiz_question_id: in_quiz_question_ids).includes(:quiz_question).map do |response|
       reveal_answer = level.show_correctness? && level.reveal_answer_explanation?
+      # Pending/manual/ungraded responses have no score yet - report nil rather than false,
+      # or an ungraded response would be shown to the student as incorrect.
+      graded = response.score.present? && response.max_score.present?
       {
         quiz_question_id: response.quiz_question_id,
         selected_choice_id: response.response_data['selectedChoiceId'],
-        correct: level.show_correctness? ? response.max_score.present? && response.score == response.max_score : nil,
+        correct: (level.show_correctness? && graded) ? response.score == response.max_score : nil,
         explanation: reveal_answer ? response.quiz_question.explanation : nil,
         correct_choice_id: reveal_answer ? response.quiz_question.question['correct_choice_id'] : nil
       }

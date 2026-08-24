@@ -72,4 +72,20 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     )
     refute question.valid?
   end
+
+  test "requires choice ids to be non-blank" do
+    # An empty-string id would otherwise pass the string-type check and
+    # could be stored as correct_choice_id - but grade only counts a
+    # selection as correct when it's present, so "" could never actually
+    # be graded as correct.
+    question = build(
+      :multiple_choice_question,
+      question: {
+        stem: 'What is 2 + 2?',
+        choices: [{id: '', text: '3'}, {id: 'b', text: '4'}],
+        correct_choice_id: 'b'
+      }
+    )
+    refute question.valid?
+  end
 end

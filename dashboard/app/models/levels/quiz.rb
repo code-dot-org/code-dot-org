@@ -71,7 +71,7 @@ class Quiz < Level
     properties_camelized[:scriptId] = script&.id
     # Iterates quiz_level_questions rather than quiz_questions directly so
     # each question's page is available alongside it. Ordering matches
-    # matches QuizLevelQuestion's own default_scope (page, then position).
+    # QuizLevelQuestion's own default_scope (page, then position).
     properties_camelized[:quizQuestions] = quiz_level_questions.includes(:quiz_question).map do |quiz_level_question|
       question = quiz_level_question.quiz_question
       {

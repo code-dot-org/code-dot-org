@@ -33,5 +33,9 @@ class QuizQuestionResponse < ApplicationRecord
     ungraded
   ).freeze
   validates :grading_status, inclusion: {in: GRADING_STATUSES}
-  validates :response_data, presence: true
+  # MultipleChoiceQuestion#grade explicitly treats {} as a valid
+  # "skipped" response (score 0, not an error), and QuizAttempt#question_results
+  # expects exactly one response row per question whether or not it was answered.
+  # Only nil (the column missing entirely) should be rejected.
+  validates :response_data, exclusion: {in: [nil], message: "can't be nil"}
 end

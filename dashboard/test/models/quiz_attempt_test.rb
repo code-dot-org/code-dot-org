@@ -124,4 +124,23 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_equal 'because math', result[:explanation]
     assert_equal 'b', result[:correct_choice_id]
   end
+
+  test "question_results reports correct as nil for a pending/ungraded response, even with show_correctness on" do
+    quiz = create(:quiz, show_correctness: true)
+    question = create(:quiz_question)
+    create(:quiz_level_question, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {},
+      grading_status: 'pending_manual',
+      score: nil,
+      max_score: nil
+    )
+
+    result = attempt.question_results.first
+    assert_nil result[:correct]
+  end
 end

@@ -18,6 +18,11 @@ class QuizQuestionResponseTest < ActiveSupport::TestCase
     assert_includes response.errors.attribute_names, :response_data
   end
 
+  test "an empty response_data ({}) is valid - it represents a skipped question" do
+    response = build(:quiz_question_response, response_data: {})
+    assert response.valid?
+  end
+
   test "a quiz_question cannot have two responses within the same attempt" do
     attempt = create(:quiz_attempt)
     question = create(:quiz_question)
