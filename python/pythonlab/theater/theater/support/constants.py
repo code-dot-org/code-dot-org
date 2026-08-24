@@ -39,6 +39,11 @@ MAX_AUDIO_SECONDS = 300
 # RGBA).
 MAX_IMAGE_PIXELS = 16777216
 
+# Largest width or height draw_image() will scale an image to. The scaled copy
+# is built in full before it is pasted, so this bounds that copy at 4000x4000
+# of RGBA, just under MAX_IMAGE_PIXELS.
+MAX_DRAW_IMAGE_SIZE = 4000
+
 # Frame ceiling, counting the closing frame. Pillow holds a palette copy of
 # every frame while encoding, ~160 KB each, so this bounds the worker's heap
 # far more tightly than MAX_GIF_BYTES does: simple frames compress to almost

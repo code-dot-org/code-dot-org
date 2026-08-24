@@ -4,6 +4,7 @@ from .support.actions import UNSPECIFIED
 from .support.audio import as_samples, read_samples_from_file
 from .support.color import Color, as_color
 from .support.constants import (
+  MAX_DRAW_IMAGE_SIZE,
   MAX_NOTE,
   MAX_PAUSE_SECONDS,
   MIN_NOTE,
@@ -12,7 +13,7 @@ from .support.constants import (
   THEATER_WIDTH,
 )
 from .support.font import Font, FontStyle
-from .support.image import Image
+from .support.image import Image, fit_to_width
 
 _DEFAULT_FONT = Font.SANS
 _DEFAULT_FONT_STYLE = FontStyle.NORMAL
@@ -35,6 +36,18 @@ def _validate_duration(method_name, seconds):
   if seconds > MAX_PAUSE_SECONDS:
     raise ValueError(
       f"{method_name} allows at most {MAX_PAUSE_SECONDS} seconds, got {seconds}"
+    )
+
+
+def _validate_draw_size(name, value):
+  """Bound one dimension draw_image() will scale to.
+
+  Raise here rather than at render time so the traceback points at the
+  student's own call.
+  """
+  if value > MAX_DRAW_IMAGE_SIZE:
+    raise ValueError(
+      f"draw_image allows a {name} of at most {MAX_DRAW_IMAGE_SIZE}, got {value}"
     )
 
 
@@ -99,7 +112,6 @@ class Scene:
     _validate_duration("pause", seconds)
     self._actions.append(actions.Pause(seconds))
 
-  # TODO: determine if we need to put limits on size/width/height
   def draw_image(self, image, x, y, size=None, width=None, height=None, rotation=0.0):
     """Draw an Image (or a file by name) at (x, y).
 
@@ -108,10 +120,23 @@ class Scene:
     """
     image_copy = Image(image)
     if size is not None:
+      _validate_draw_size("size", size)
+      # size sets the width and scales the height by the image's aspect ratio,
+      # so a tall image can cross the ceiling on a size that is under it.
+      _, scaled_height = fit_to_width(
+        image_copy.get_width(), image_copy.get_height(), size
+      )
+      if scaled_height > MAX_DRAW_IMAGE_SIZE:
+        raise ValueError(
+          f"draw_image with size={size} would make this image {scaled_height} "
+          f"tall, and the limit is {MAX_DRAW_IMAGE_SIZE}"
+        )
       self._actions.append(
         actions.DrawImage(image_copy, x, y, size, UNSPECIFIED, UNSPECIFIED, rotation)
       )
     elif width is not None and height is not None:
+      _validate_draw_size("width", width)
+      _validate_draw_size("height", height)
       self._actions.append(
         actions.DrawImage(image_copy, x, y, UNSPECIFIED, width, height, rotation)
       )

@@ -9,6 +9,7 @@ from theater import Image, Instrument, Scene
 from theater.support.audio import read_samples_from_wav_bytes
 from theater.support.constants import (
   MAX_AUDIO_SECONDS,
+  MAX_DRAW_IMAGE_SIZE,
   MAX_FRAMES,
   MAX_NOTE,
   MAX_PAUSE_SECONDS,
@@ -374,6 +375,39 @@ def test_draw_image_accepts_float_geometry():
   scene.draw_image(image, 300 / 2, 50.5, size=40.5, rotation=45)
   gif_bytes = _render_gif(scene.get_actions())
   assert len(gif_bytes) > 0
+
+
+@pytest.mark.parametrize(
+  "geometry",
+  [
+    {"size": MAX_DRAW_IMAGE_SIZE + 1},
+    {"width": MAX_DRAW_IMAGE_SIZE + 1, "height": 10},
+    {"width": 10, "height": MAX_DRAW_IMAGE_SIZE + 1},
+  ],
+)
+def test_oversized_draw_image_raises_at_the_call(geometry):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_image(Image(10, 10), 0, 0, **geometry)
+  assert scene.get_actions() == []
+
+
+def test_oversized_scaled_height_raises_at_the_call():
+  # size only sets the width; a tall image's height is scaled past the ceiling.
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_image(Image(1, 10), 0, 0, size=MAX_DRAW_IMAGE_SIZE)
+  assert scene.get_actions() == []
+
+
+def test_draw_image_accepts_the_largest_allowed_size():
+  scene = Scene()
+  scene.draw_image(Image(10, 10), 0, 0, size=MAX_DRAW_IMAGE_SIZE)
+  scene.draw_image(
+    Image(10, 10), 0, 0, width=MAX_DRAW_IMAGE_SIZE, height=MAX_DRAW_IMAGE_SIZE
+  )
+  scene.draw_image(Image(1, 10), 0, 0, size=MAX_DRAW_IMAGE_SIZE / 10)
+  assert len(scene.get_actions()) == 3
 
 
 def test_draw_image_lands_at_rounded_position():
