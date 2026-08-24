@@ -43,7 +43,22 @@ function makeController(
     getPegmanX: () => pegman.x,
     getPegmanY: () => pegman.y,
     getPegmanD: () => pegman.d,
+    // The engine always holds the default pegman once it has drawn one.
+    pegmanController: {getAllPegmanIds: () => ['default']},
   } as Controller;
+}
+
+// The maze package draws each pegman as an element and hides it rather than
+// removing it, so visibility is how the cursor tells a placed painter apart.
+function renderPegman(id = 'default', visibility = 'visible') {
+  const el = document.createElement('div');
+  el.id = id === 'default' ? 'pegman' : `pegman-${id}`;
+  el.setAttribute('visibility', visibility);
+  document.body.appendChild(el);
+}
+
+function clearPegmen() {
+  document.querySelectorAll('[id^="pegman"]').forEach(el => el.remove());
 }
 
 describe('maze keyboard navigation reporting', () => {
@@ -383,6 +398,8 @@ describe('maze keyboard navigation reporting', () => {
   // neighborhoodDescriptionsTest covers the wording. These only check that the
   // neighborhood branch is wired up and that a nameless cell still reads.
   describe('describeObject - neighborhood (painter)', () => {
+    afterEach(clearPegmen);
+
     const painterCtrl = (
       cell: {color?: string; value?: number; assetId?: number},
       opts: Parameters<typeof makeController>[0] = {}
@@ -414,6 +431,7 @@ describe('maze keyboard navigation reporting', () => {
     });
 
     it('always names the facing direction, with no block xml to scan', () => {
+      renderPegman();
       const ctrl = painterCtrl(
         {assetId: 0},
         {pegman: {x: 1, y: 1, d: Direction.WEST}}
@@ -427,10 +445,16 @@ describe('maze keyboard navigation reporting', () => {
   describe('describeCharacterHere - neighborhood painters', () => {
     // Painter keeps a hidden "default" pegman and adds painter-1, painter-2,
     // ... once a program runs.
+    afterEach(clearPegmen);
+
     const painterCtrl = (
-      pegmen: Record<string, {x: number; y: number; d?: number}>
-    ) =>
-      ({
+      pegmen: Record<string, {x: number; y: number; d?: number}>,
+      hidden: string[] = []
+    ) => {
+      Object.keys(pegmen).forEach(id =>
+        renderPegman(id, hidden.includes(id) ? 'hidden' : 'visible')
+      );
+      return {
         SQUARE_SIZE: 50,
         subtype: {isNeighborhood: () => true},
         map: {ROWS: 10, COLS: 10, getTile: () => undefined},
@@ -438,13 +462,17 @@ describe('maze keyboard navigation reporting', () => {
         getPegmanX: (id = 'default') => pegmen[id]?.x,
         getPegmanY: (id = 'default') => pegmen[id]?.y,
         getPegmanD: (id = 'default') => pegmen[id]?.d,
-      } as unknown as Controller);
+      } as unknown as Controller;
+    };
 
     it('ignores the hidden default pegman once a painter exists', () => {
-      const ctrl = painterCtrl({
-        default: {x: 0, y: 0, d: Direction.NORTH},
-        'painter-1': {x: 3, y: 4, d: Direction.EAST},
-      });
+      const ctrl = painterCtrl(
+        {
+          default: {x: 0, y: 0, d: Direction.NORTH},
+          'painter-1': {x: 3, y: 4, d: Direction.EAST},
+        },
+        ['default']
+      );
       expect(describeCell(ctrl, 0, 0)).toBe('Open path. Row 1, column 1.');
       expect(describeCell(ctrl, 3, 4)).toBe(
         'Open path. Painter 1 is here, facing east. Row 5, column 4.'
@@ -468,6 +496,15 @@ describe('maze keyboard navigation reporting', () => {
         'Open path. Painter 1 is here, facing north. ' +
           'Painter 2 is here, facing west. Row 2, column 2.'
       );
+    });
+
+    // Neighborhood.reset() hides painters rather than removing them, so a
+    // hidden one must not be reported at its pre-reset position.
+    it('ignores painters a reset has hidden', () => {
+      const ctrl = painterCtrl({'painter-1': {x: 3, y: 4, d: Direction.EAST}}, [
+        'painter-1',
+      ]);
+      expect(describeCell(ctrl, 3, 4)).toBe('Open path. Row 5, column 4.');
     });
 
     it('reads an unrecognized id as it comes', () => {
@@ -502,6 +539,7 @@ describe('MazeKeyboardNavigation interaction', () => {
   });
 
   afterEach(() => {
+    clearPegmen();
     nav.destroy();
     jest.runOnlyPendingTimers();
     jest.useRealTimers();
@@ -596,9 +634,11 @@ describe('MazeKeyboardNavigation interaction', () => {
           getPegmanY: (id: string) => (id === 'painter-1' ? 1 : 5),
           getPegmanD: () => undefined,
         } as unknown as Controller;
+      renderPegman('painter-1');
+      renderPegman('painter-2');
       // Entry already lands on the first painter, so P advances to the next.
       press('Enter');
-      expect(liveRegionText()).toBe(
+      expect(focusableCursor()?.getAttribute('aria-label')).toBe(
         'Open path. Painter 1 is here. Row 2, column 2.'
       );
       press('p');
@@ -610,6 +650,43 @@ describe('MazeKeyboardNavigation interaction', () => {
       expect(liveRegionText()).toBe(
         'Open path. Painter 1 is here. Row 2, column 2.'
       );
+    });
+
+    // Cycling on coordinates alone would stick on the first of the pair.
+    it('reaches a third painter when two share a cell', () => {
+      const at: Record<string, number[]> = {
+        'painter-1': [1, 1],
+        'painter-2': [1, 1],
+        'painter-3': [4, 5],
+      };
+      (window as unknown as {Maze: {controller: Controller}}).Maze.controller =
+        {
+          SQUARE_SIZE: 50,
+          subtype: {isNeighborhood: () => true},
+          map: {ROWS: 10, COLS: 10, getTile: () => undefined},
+          pegmanController: {getAllPegmanIds: () => Object.keys(at)},
+          getPegmanX: (id: string) => at[id][0],
+          getPegmanY: (id: string) => at[id][1],
+          getPegmanD: () => undefined,
+        } as unknown as Controller;
+      Object.keys(at).forEach(id => renderPegman(id));
+
+      press('Enter');
+      press('p');
+      press('p');
+      expect(liveRegionText()).toBe(
+        'Open path. Painter 3 is here. Row 6, column 5.'
+      );
+    });
+
+    it('leaves Ctrl+P to the browser', () => {
+      press('Enter');
+      press('ArrowRight');
+      const before = focusableCursor()?.getAttribute('aria-label');
+      svg.dispatchEvent(
+        new KeyboardEvent('keydown', {key: 'p', ctrlKey: true, bubbles: true})
+      );
+      expect(focusableCursor()?.getAttribute('aria-label')).toBe(before);
     });
 
     it('says so when no painter has been placed yet', () => {
@@ -710,6 +787,7 @@ describe('MazeKeyboardNavigation interaction', () => {
       });
 
     it('moves onto a wall and names the scenery', () => {
+      renderPegman();
       (window as unknown as {Maze: {controller: Controller}}).Maze.controller =
         neighborhoodController({'1,2': SquareType.WALL});
       press('Enter');
@@ -719,18 +797,23 @@ describe('MazeKeyboardNavigation interaction', () => {
       );
     });
 
-    // The other half of the gate above: Painter's label goes unread, so every
-    // cell it lands on has to reach the live region.
-    it('announces every cell it lands on', () => {
+    // The other half of the gate above: moves have to reach the live region,
+    // and entry must not, or the first cell is read twice.
+    it('announces moves but not the cell it entered on', () => {
+      renderPegman();
       (window as unknown as {Maze: {controller: Controller}}).Maze.controller =
         neighborhoodController({});
       press('Enter');
-      expect(liveRegionText()).toBe('Grass. Painter is here. Row 2, column 2.');
+      expect(focusableCursor()?.getAttribute('aria-label')).toBe(
+        'Grass. Painter is here. Row 2, column 2.'
+      );
+      expect(liveRegionText()).toBeFalsy();
       press('ArrowRight');
       expect(liveRegionText()).toBe('Grass. Row 2, column 3.');
     });
 
     it('still refuses to leave the grid', () => {
+      renderPegman();
       (window as unknown as {Maze: {controller: Controller}}).Maze.controller =
         neighborhoodController({});
       press('Enter');

@@ -12,9 +12,12 @@ import {ConsoleSignal, NeighborhoodSignal} from './types';
 const Direction = tiles.Direction;
 
 // The keyboard cursor reads the grid from window.Maze.controller, where
-// loadMaze.js publishes it on maze levels. Lab2 has no such global.
+// loadMaze.js publishes it on maze levels. Set only that one property: on a
+// maze page window.Maze is the Maze app object that maze/api.js relies on.
 function publishController(controller: unknown): void {
-  (window as unknown as {Maze: {controller: unknown}}).Maze = {controller};
+  const global = window as unknown as {Maze?: {controller?: unknown}};
+  global.Maze = global.Maze ?? {};
+  global.Maze.controller = controller;
 }
 
 const PAUSE_BETWEEN_SIGNALS = 200;

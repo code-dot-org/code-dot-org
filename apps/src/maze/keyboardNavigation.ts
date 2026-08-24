@@ -29,7 +29,7 @@ type MessageParams = Record<string, string | number>;
 type MessageFn = (params?: MessageParams) => string;
 
 // Rails serves only the level's own <app>_locale.js, so a Painter level has no
-// compiled maze strings. Fall back to the English source, filling {placeholders}.
+// compiled maze strings. Fall back to the English source and fill it in.
 function t(
   key: MazeMessageKey,
   params: MessageParams = {},
@@ -42,7 +42,7 @@ function t(
     : fallback.replace(/\{(\w+)\}/g, (_, name) => String(params[name]));
 }
 
-// Painter has no key in the strings file, so those few are written in English.
+// The Painter-only lines have no key in the strings file, so they are literal.
 const MSG = {
   goal: () => t('mazeNavGoal'),
   obstacle: () => t('mazeNavObstacle'),
@@ -317,16 +317,23 @@ export function describeObject(
 // @code-dot-org/maze keys its lone pegman under this id and does not export it.
 const DEFAULT_PEGMAN_ID = 'default';
 
-// Which pegmen are worth reporting. Painter hides the default pegman on run and
-// adds one per Painter object, so once those exist the parked default is noise.
+// A pegman is on the grid when its icon is not hidden. The maze package never
+// removes one: Painter hides the default on run and the painters on reset.
+function isPegmanVisible(id: string): boolean {
+  const suffix = id === DEFAULT_PEGMAN_ID ? '' : `-${id}`;
+  const icon = document.getElementById(`pegman${suffix}`);
+  return icon !== null && icon.getAttribute('visibility') !== 'hidden';
+}
+
+// Which pegmen to report. Maze has exactly one. Painter has one per Painter
+// object and none at all until a program runs.
 function painterIds(ctrl: MazeController): string[] {
   if (!ctrl.subtype.isNeighborhood?.()) {
     return [DEFAULT_PEGMAN_ID];
   }
-  const painters = (ctrl.pegmanController?.getAllPegmanIds?.() ?? []).filter(
-    id => id !== DEFAULT_PEGMAN_ID
+  return (ctrl.pegmanController?.getAllPegmanIds?.() ?? []).filter(
+    isPegmanVisible
   );
-  return painters.length > 0 ? painters : [DEFAULT_PEGMAN_ID];
 }
 
 // Where a pegman stands, or null before it has been placed.
@@ -334,6 +341,12 @@ function pegmanSpot(ctrl: MazeController, id: string): CursorPos | null {
   const col = ctrl.getPegmanX(id);
   const row = ctrl.getPegmanY(id);
   return typeof col === 'number' && typeof row === 'number' ? {col, row} : null;
+}
+
+function painterSpots(ctrl: MazeController): CursorPos[] {
+  return painterIds(ctrl)
+    .map(id => pegmanSpot(ctrl, id))
+    .filter((spot): spot is CursorPos => spot !== null);
 }
 
 // Painter names its pegmen "painter-1", "painter-2"; say that as "Painter 1".
@@ -432,6 +445,8 @@ export default class MazeKeyboardNavigation {
   private cursor: SVGRectElement | null = null;
   private cursorHalo: SVGRectElement | null = null;
   private cursorPos: CursorPos | null = null;
+  // Which painter P last jumped to; see jumpToCharacter.
+  private painterIndex = 0;
 
   // Read from the DOM rather than tracked, so a level reload that clears the
   // svg cannot leave us thinking a cursor is still up.
@@ -487,7 +502,9 @@ export default class MazeKeyboardNavigation {
       this.exit();
       return;
     }
-    if (e.key === 'p' || e.key === 'P') {
+    // Bare P only, so Ctrl+P still prints.
+    const plain = !e.ctrlKey && !e.metaKey && !e.altKey;
+    if (plain && (e.key === 'p' || e.key === 'P')) {
       consume();
       this.jumpToCharacter();
       return;
@@ -511,7 +528,8 @@ export default class MazeKeyboardNavigation {
     if (!ctrl) return;
     // Painter levels have no start square and no painter until a program runs,
     // so fall back to the top-left cell.
-    this.cursorPos = pegmanSpot(ctrl, painterIds(ctrl)[0]) ?? {col: 0, row: 0};
+    this.cursorPos = painterSpots(ctrl)[0] ?? {col: 0, row: 0};
+    this.painterIndex = 0;
 
     // Two stacked rects: a fatter white halo so the cursor stays
     // visible across light and dark tiles, and a thinner blue rect on
@@ -521,14 +539,15 @@ export default class MazeKeyboardNavigation {
     this.cursor = createCursorRect(size, CURSOR_STROKE, CURSOR_WIDTH, true);
     this.svg.appendChild(this.cursorHalo);
     this.svg.appendChild(this.cursor);
-    this.placeCursor();
+    // Focus will read the label on arrival; speaking too would double it.
+    this.placeCursor({speak: false});
     this.cursor.focus();
   }
 
   // Focus lands on this rect once and then it slides between cells. Painter's
   // changed aria-label went unread, so there the live region speaks. Maze
   // already reads the label; announcing would say every cell twice.
-  private placeCursor(): void {
+  private placeCursor({speak = true} = {}): void {
     const ctrl = getMazeController();
     if (!ctrl || !this.cursor || !this.cursorPos) return;
     const {col, row} = this.cursorPos;
@@ -540,7 +559,7 @@ export default class MazeKeyboardNavigation {
     }
     const label = describeCell(ctrl, col, row);
     this.cursor.setAttribute('aria-label', label);
-    if (ctrl.subtype.isNeighborhood?.()) {
+    if (speak && ctrl.subtype.isNeighborhood?.()) {
       this.announce(label);
     }
   }
@@ -566,26 +585,24 @@ export default class MazeKeyboardNavigation {
     this.placeCursor();
   }
 
-  // Every cell is walkable in Painter, so a student can wander far from the
-  // painter. Repeated presses cycle through several painters.
+  // Every cell is walkable in Painter, so a student can wander a long way off.
   private jumpToCharacter(): void {
     const ctrl = getMazeController();
     if (!ctrl || !this.cursorPos) return;
     const {col, row} = this.cursorPos;
-    const spots = painterIds(ctrl)
-      .map(id => pegmanSpot(ctrl, id))
-      .filter((spot): spot is CursorPos => spot !== null);
+    const spots = painterSpots(ctrl);
     if (spots.length === 0) {
       this.announce(
         ctrl.subtype.isNeighborhood?.() ? MSG.noPainter() : MSG.noCharacter()
       );
       return;
     }
-    // Off every painter gives -1, which lands on the first.
-    const current = spots.findIndex(
-      spot => spot.col === col && spot.row === row
-    );
-    this.cursorPos = spots[(current + 1) % spots.length];
+    // Step by index, not position: two painters can share a cell and matching
+    // on coordinates would stick on the first. Landing anywhere else restarts.
+    const selected = spots[this.painterIndex];
+    const onSelected = selected?.col === col && selected?.row === row;
+    this.painterIndex = onSelected ? (this.painterIndex + 1) % spots.length : 0;
+    this.cursorPos = spots[this.painterIndex];
     this.placeCursor();
   }
 

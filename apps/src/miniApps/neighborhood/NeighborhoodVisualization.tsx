@@ -11,7 +11,7 @@ import moduleStyles from './neighborhood.module.scss';
 
 const NAV_HINT =
   'Neighborhood grid. Press Enter to explore it with the arrow keys. ' +
-  'Press P to jump to the painter. Press Escape to exit.';
+  'Press P to jump to a painter, again for the next one. Press Escape to exit.';
 
 interface NeighborhoodVisualizationProps {
   className?: string;

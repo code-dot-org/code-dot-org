@@ -1,5 +1,4 @@
-// Plain-English descriptions of Neighborhood (Painter) cells, for the maze
-// keyboard navigation cursor.
+// What the keyboard cursor says about a Neighborhood (Painter) cell.
 
 export type SpriteMap = Record<string, {name: string} | undefined>;
 

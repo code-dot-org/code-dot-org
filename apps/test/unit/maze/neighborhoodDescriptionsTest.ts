@@ -53,9 +53,8 @@ describe('describeAsset', () => {
     expect(describeAsset(undefined, 0)).toBeNull();
   });
 
-  // Swept over the shipped sheet, not a fixture: a family with no token returns
-  // null and the cell silently reads as bare ground. The painter avatar and
-  // paint can are described elsewhere.
+  // Swept over the shipped sheet, not a fixture: a family with no token reads
+  // as bare ground with nothing to flag it. Painter and paint can are elsewhere.
   it('names every sprite in the shipped sprite sheet', () => {
     const describedElsewhere = /painter|paintcan/i;
     const sprites = realSprites as unknown as SpriteMap;
