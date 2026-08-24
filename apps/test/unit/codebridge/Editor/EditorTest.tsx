@@ -4,6 +4,7 @@ import React from 'react';
 
 import '@testing-library/jest-dom';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
 let mockAiTutorDisabled = false;
@@ -178,5 +179,8 @@ describe('Editor non-editable file views', () => {
     render(<Editor langMapping={{}} editableFileTypes={['html']} />);
 
     expect(screen.queryByRole('button', {name: 'Play bark.wav'})).toBeNull();
+    expect(
+      screen.getByText(codebridgeI18n.cannotEditFile({language: 'wav'}))
+    ).toBeInTheDocument();
   });
 });
