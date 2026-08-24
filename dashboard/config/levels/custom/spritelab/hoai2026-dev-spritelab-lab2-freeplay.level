@@ -58,17 +58,6 @@
             },
             {
               "kind": "block",
-              "type": "gamelab_spriteClicked",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
               "type": "gamelab_checkTouching",
               "inputs": {
                 "SPRITE1": {
@@ -79,20 +68,6 @@
                 "SPRITE2": {
                   "shadow": {
                     "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_atTime",
-              "inputs": {
-                "N": {
-                  "shadow": {
-                    "type": "math_number",
-                    "fields": {
-                      "NUM": 3
-                    }
                   }
                 }
               }

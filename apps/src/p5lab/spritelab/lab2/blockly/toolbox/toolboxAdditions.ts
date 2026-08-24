@@ -72,7 +72,8 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
 // default lineup appears only when the level doesn't mention the name.
 const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   {
-    // The platformer composites plus the core event blocks.
+    // Building and playing a platformer: the composites, the world's feel, and
+    // reacting to the player reaching something.
     name: 'Platform',
     types: [
       'gamelab_setBackgroundImageAs',
@@ -84,9 +85,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'spritelab2_setCameraZoom',
       RESTART_SCENE_BLOCK_TYPE,
       'spritelab2_makeSpriteAtGrid',
-      'gamelab_spriteClicked',
       'gamelab_checkTouching',
-      'gamelab_atTime',
       'gamelab_spriteSay',
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
