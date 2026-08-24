@@ -128,6 +128,8 @@ interface WhiteboardChallengeProps {
   explanationType: string | null;
   lessonId: number;
   textExplanation: string;
+  setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
+  setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
 }
 
 // Split from the default export so useReactFlow (needed by the snapshot
@@ -145,6 +147,8 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   explanationType,
   lessonId,
   textExplanation,
+  setEvaluationStatus,
+  setChallengeResponseId,
 }) => {
   // ReactFlowCanvas reports edits through the same updateSources contract
   // as sketchlab's SourcesContainer; here the drawing lives in local state
@@ -277,8 +281,9 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
 
       // Fire-and-forget: the evaluation result goes to the teacher, not the
       // student, so the submission flow does not wait on it.
-      requestEvaluation(created.id);
-
+      const status = await requestEvaluation(created.id);
+      setChallengeResponseId(created.id);
+      setEvaluationStatus(status);
       submitCallback(true);
     } catch (error) {
       setSubmitError(

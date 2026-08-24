@@ -8,7 +8,7 @@
         {
           "type": "panel",
           "name": "testing_panel",
-          "visible": true,
+          "visible": false,
           "title": " ",
           "elements": [
             {
@@ -21,8 +21,8 @@
               "name": "unit_name",
               "defaultValueExpression": "{unit_number}",
               "startWithNewLine": false,
-              "readOnly": false,
-              "visible": true,
+              "readOnly": true,
+              "visible": false,
               "choices": [
                 {
                   "value": "problem_solving",
@@ -38,11 +38,19 @@
                 },
                 {
                   "value": "cyber",
-                  "text": "Cybersecurity and Global Impacts"
+                  "text": "AI-Powered Threats and Defenses"
                 },
                 {
                   "value": "data",
                   "text": "Insights from Data and AI"
+                },
+                {
+                  "value": "programming_python",
+                  "text": "Foundations of AI Programming (Python)"
+                },
+                {
+                  "value": "programming_javascript",
+                  "text": "Foundations of AI Programming (JavaScript)"
                 },
                 {
                   "value": "design",

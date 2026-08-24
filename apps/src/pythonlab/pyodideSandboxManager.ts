@@ -23,6 +23,7 @@ import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 import {getPreviewDomain} from '@cdo/apps/util/sandboxedPreviewDomain';
 import {createUuid} from '@cdo/apps/utils';
 
+import type {ExternalFileContents} from './pythonHelpers/externalFileContents';
 import {
   parseMessageToNeighborhoodSignal,
   parseErrorMessage,
@@ -115,7 +116,7 @@ const SANDBOX_UNREACHABLE_MESSAGE =
   'to unblock. If you need assistance, please reach out to support@code.org.';
 
 const handlePyodideMessage = (data: PyodideMessage) => {
-  const {type, id, message, gif, wav} = data;
+  const {type, id, message, gif, wav, gifDurationMs} = data;
   const onSuccess = callbacks[id];
 
   const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
@@ -224,7 +225,7 @@ const handlePyodideMessage = (data: PyodideMessage) => {
     case 'theater_media':
       // Only show theater output if this is not a validation run.
       if (gif && !isValidationRun) {
-        handleTheaterMedia(gif, wav);
+        handleTheaterMedia(gif, wav, gifDurationMs);
       }
       break;
     default:
@@ -304,7 +305,8 @@ const asyncRun = (() => {
     script: string,
     source: MultiFileSource,
     validationFile?: ProjectFile,
-    shouldOutputToNeighborhood?: boolean
+    shouldOutputToNeighborhood?: boolean,
+    externalFiles?: ExternalFileContents
   ) => {
     id = createUuid();
 
@@ -333,6 +335,7 @@ const asyncRun = (() => {
           id,
           source,
           validationFile,
+          externalFiles,
         },
         sandboxOrigin()
       );

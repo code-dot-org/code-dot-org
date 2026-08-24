@@ -31,7 +31,7 @@ describe('requestEvaluation', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    await expect(requestEvaluation(7)).resolves.toBeUndefined();
+    await expect(requestEvaluation(7)).resolves.toBe('error');
 
     expect(consoleError).toHaveBeenCalled();
     consoleError.mockRestore();

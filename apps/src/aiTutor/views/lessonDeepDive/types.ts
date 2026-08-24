@@ -9,6 +9,13 @@ export const ExplanationTypes = {
   TEXT: 'text',
 };
 
+export const EvaluationStatus = {
+  PENDING: 'pending',
+  ERROR: 'error',
+  NONE: 'none',
+  SUCCESS: 'success',
+};
+
 export type AssessmentQuestionResult = {
   level_id: number;
   script_level_id: number;

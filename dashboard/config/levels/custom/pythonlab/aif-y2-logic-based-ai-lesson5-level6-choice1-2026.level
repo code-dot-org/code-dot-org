@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T02:44:38.000Z",
   "level_num": "custom",
@@ -11,7 +12,7 @@
     "bubble_choice_description": "Build a music streaming program that plays a user's favorite songs.",
     "thumbnail_url": "https://images.code.org/5081a72ca3e731275e6ca0afa090a258-music.png",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -42,9 +43,9 @@
       "openFiles": [
         "0"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqmq85ntKounpXY\nGGmIBTr7BZc7jXF2X/dzhHRbvfDWyvCkpK9Sy2Du/wtjwicnKxpW59KOBcjs\nye+Re93kvpw2hyAASmGROc9OlQ3oxIfpIV3cCXuZRVNCVUYzKyaCnD2a8B65\n2htcgCT2pTu37pEpYCObRayP1Vw7KO9erfguoCNYDAdYRjSm99JY6xhosilS\n0J5DrUlYh26YBXE2GgTH4FuYwRxoRSjV8V/C2RzlQhIUmvOOOdnKTH4ycfdv\n5d5JPlIyT+23Sm8H810Y11eYEM6aysl554hJUvQPMwSuCrbr5u6YyarsQ+F5\nS8V86mU5udYoXrksg4asrQTqrqU0sgDsiwShm3W8yBZn0UvDTRT7LTq9XmPM\nsoDHKg92gg7WQ95fNhl+s/GlEE+fPuRVZxqP+CKSqcWUISfDJBwgeRZ9nJLL\nGzB5MjSqxqJgoop6KJaqcX3S6Pwcc5kLTQaokF2As7ruAE8WL0xM1CAMVoMl\nbdoJKoSz5O0zK33qKn9/efIuM5bFMYWDXM3CmHnK1cj6h3hYzUlV/79BpVqQ\ngUx++HCoQr3kmPdWDqMapp4iw0mpJwmiOMYcGBoo1NwVxFCVFSbh+cMGx967\n0ZPF0g==\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:45:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-29 19:14:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:45:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-29 19:14:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:59:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:40:21 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>
