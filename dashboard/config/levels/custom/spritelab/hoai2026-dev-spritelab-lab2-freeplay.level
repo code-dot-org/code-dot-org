@@ -46,6 +46,10 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_thePlayer"
+            },
+            {
+              "kind": "block",
               "type": "gamelab_addBehaviorSimple",
               "inputs": {
                 "SPRITE": {
