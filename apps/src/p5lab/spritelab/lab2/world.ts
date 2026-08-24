@@ -49,10 +49,13 @@ export function createEmptyWorld(
 }
 
 /**
- * The same world at a new playfield size, keeping every placement's row and
- * column. Growing pads with empty cells. Shrinking is refused when it would
- * drop a placement — student work outweighs the requested size — so callers
- * get back a world that may still be larger than they asked for.
+ * The same world at a new playfield size. Growing keeps the playfield's FLOOR
+ * at the floor: down is meaningful in a platformer, so a taller playfield adds
+ * its new rows above the existing layout rather than below it, and a floor
+ * painted along the old bottom row is still a floor. Columns keep their index.
+ * Shrinking is refused when it would drop a placement — student work outweighs
+ * the requested size — so callers get back a world that may still be larger
+ * than they asked for.
  */
 export function resizeWorld(
   world: World | undefined,
@@ -66,17 +69,24 @@ export function resizeWorld(
   if (current === side) {
     return world;
   }
-  if (
-    current > side &&
-    world.grid.some((cells, row) =>
-      cells.some((cell, col) => cell && (row >= side || col >= side))
+  // Rows move with the playfield's bottom, in either direction, so a floor
+  // stays a floor. Columns keep their index.
+  const rowShift = sceneSize - sceneGridSize(world);
+  const lost = world.grid.some((cells, row) =>
+    cells.some(
+      (cell, col) =>
+        cell && (row + rowShift < 0 || row + rowShift >= side || col >= side)
     )
-  ) {
+  );
+  if (lost) {
     return world;
   }
   return {
     grid: Array.from({length: side}, (_, row) =>
-      Array.from({length: side}, (_, col) => world.grid[row]?.[col] ?? null)
+      Array.from(
+        {length: side},
+        (_, col) => world.grid[row - rowShift]?.[col] ?? null
+      )
     ),
   };
 }

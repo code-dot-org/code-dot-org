@@ -135,30 +135,7 @@
             },
             {
               "kind": "block",
-              "type": "gamelab_removeAllBehaviors",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
               "type": "spritelab2_patrollingOnBlocks"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_patrollingLeftRight"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_movingLeft"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_movingWithArrowKeys"
             }
           ]
         },

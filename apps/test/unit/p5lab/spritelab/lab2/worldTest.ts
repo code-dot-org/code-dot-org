@@ -70,13 +70,41 @@ describe('world', () => {
     expect(compileWorldPrelude(world)).toBe('');
   });
 
-  it('grows a smaller world, keeping every placement at its own cell', () => {
+  it("grows a smaller world, keeping the playfield's floor at the floor", () => {
     const legacy = createEmptyWorld(LEGACY_SCENE_SIZE);
-    legacy.grid[7][0] = {image: 'ice', kind: 'block'};
+    // A floor along the old playfield's bottom row, and someone standing on
+    // it. A taller playfield must not leave them mid-air.
+    legacy.grid[LEGACY_SCENE_SIZE - 1][0] = {image: 'ice', kind: 'block'};
+    legacy.grid[LEGACY_SCENE_SIZE - 2][0] = {image: 'cat', kind: 'sprite'};
     const grown = resizeWorld(legacy, DEFAULT_SCENE_GRID_SIZE);
     expect(sceneGridSize(grown)).toBe(DEFAULT_SCENE_GRID_SIZE);
-    expect(grown.grid[7][0]).toEqual({image: 'ice', kind: 'block'});
-    expect(grown.grid.flat().filter(Boolean)).toHaveLength(1);
+    expect(grown.grid[DEFAULT_SCENE_GRID_SIZE - 1][0]).toEqual({
+      image: 'ice',
+      kind: 'block',
+    });
+    expect(grown.grid[DEFAULT_SCENE_GRID_SIZE - 2][0]).toEqual({
+      image: 'cat',
+      kind: 'sprite',
+    });
+    expect(grown.grid.flat().filter(Boolean)).toHaveLength(2);
+  });
+
+  it('shrinks a larger world, still keeping the floor at the floor', () => {
+    const wide = createEmptyWorld(12);
+    wide.grid[11][2] = {image: 'ice', kind: 'block'};
+    const shrunk = resizeWorld(wide, DEFAULT_SCENE_GRID_SIZE);
+    expect(sceneGridSize(shrunk)).toBe(DEFAULT_SCENE_GRID_SIZE);
+    expect(shrunk.grid[DEFAULT_SCENE_GRID_SIZE - 1][2]).toEqual({
+      image: 'ice',
+      kind: 'block',
+    });
+  });
+
+  it('refuses a resize that would push a placement off the grid', () => {
+    // Painted above the playfield's top: shrinking would have to drop it.
+    const wide = createEmptyWorld(12);
+    wide.grid[0][0] = {image: 'ice', kind: 'block'};
+    expect(sceneGridSize(resizeWorld(wide, DEFAULT_SCENE_GRID_SIZE))).toBe(12);
   });
 
   it('shrinks only when no placement would be dropped', () => {
@@ -84,12 +112,14 @@ describe('world', () => {
     expect(sceneGridSize(resizeWorld(empty, LEGACY_SCENE_SIZE))).toBe(
       LEGACY_SCENE_SIZE
     );
+    // Painted at the very bottom of the authoring area: the smaller world has
+    // nowhere to put it, even after the rows shift, so the size is kept.
     const painted = createEmptyWorld(DEFAULT_SCENE_GRID_SIZE);
-    const outside = LEGACY_SCENE_SIZE * WORLD_MULTIPLE;
-    painted.grid[outside][0] = {image: 'ice', kind: 'block'};
+    const lastRow = DEFAULT_SCENE_GRID_SIZE * WORLD_MULTIPLE - 1;
+    painted.grid[lastRow][0] = {image: 'ice', kind: 'block'};
     const kept = resizeWorld(painted, LEGACY_SCENE_SIZE);
     expect(sceneGridSize(kept)).toBe(DEFAULT_SCENE_GRID_SIZE);
-    expect(kept.grid[outside][0]).toEqual({image: 'ice', kind: 'block'});
+    expect(kept.grid[lastRow][0]).toEqual({image: 'ice', kind: 'block'});
   });
 
   it('returns the same world when the size already matches', () => {
