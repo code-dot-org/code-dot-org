@@ -294,6 +294,30 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "hoai2026-dev-panels-goal"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-panels-goal"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      },
+      "level_keys": [
+        "hoai2026-dev-panels-goal"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "hoai2026-dev-spritelab-lab2-treasure"
         ]
       },
@@ -312,9 +336,9 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -336,9 +360,9 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 12,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -360,9 +384,9 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
-      "activity_section_position": 13,
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -534,6 +558,18 @@
         "level.key": "hoai2026-dev-spritelab-lab2-enemy",
         "script_level.level_keys": [
           "hoai2026-dev-spritelab-lab2-enemy"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-panels-goal",
+        "script_level.level_keys": [
+          "hoai2026-dev-panels-goal"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

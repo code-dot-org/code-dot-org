@@ -401,13 +401,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
-  const guideInstructions = useGuideSteps(
-    levelProperties.guideSteps,
-    activeWorld.grid,
+  const guideInstructions = useGuideSteps({
+    steps: levelProperties.guideSteps,
+    grid: activeWorld.grid,
     activeTab,
-    imageCount,
-    levelProperties.longInstructions
-  );
+    images: imageCount,
+    fallback: levelProperties.longInstructions,
+  });
 
   // The World palette selection lives here so it survives leaving the tab
   // (WorldTab unmounts when hidden).

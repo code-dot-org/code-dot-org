@@ -35,21 +35,39 @@ describe('nextGuideStepIndex', () => {
   const none = {blocks: 0, sprites: 0};
 
   it('holds the first step until its successor condition is met', () => {
-    expect(nextGuideStepIndex(steps, 0, none, 'World', 0)).toBe(0);
     expect(
-      nextGuideStepIndex(steps, 0, {blocks: 2, sprites: 0}, 'World', 0)
+      nextGuideStepIndex(steps, 0, {
+        counts: none,
+        activeTab: 'World',
+        images: 0,
+      })
+    ).toBe(0);
+    expect(
+      nextGuideStepIndex(steps, 0, {
+        counts: {blocks: 2, sprites: 0},
+        activeTab: 'World',
+        images: 0,
+      })
     ).toBe(0);
   });
 
   it('advances one step when exactly its condition holds', () => {
     expect(
-      nextGuideStepIndex(steps, 0, {blocks: 3, sprites: 0}, 'World', 0)
+      nextGuideStepIndex(steps, 0, {
+        counts: {blocks: 3, sprites: 0},
+        activeTab: 'World',
+        images: 0,
+      })
     ).toBe(1);
   });
 
   it('advances through several steps at once when all their conditions hold', () => {
     expect(
-      nextGuideStepIndex(steps, 0, {blocks: 5, sprites: 1}, 'Code', 0)
+      nextGuideStepIndex(steps, 0, {
+        counts: {blocks: 5, sprites: 1},
+        activeTab: 'Code',
+        images: 0,
+      })
     ).toBe(3);
   });
 
@@ -57,24 +75,44 @@ describe('nextGuideStepIndex', () => {
     // Sprite placed but not enough blocks: the worldBlocks clause of step 2
     // still gates.
     expect(
-      nextGuideStepIndex(steps, 1, {blocks: 2, sprites: 1}, 'World', 0)
+      nextGuideStepIndex(steps, 1, {
+        counts: {blocks: 2, sprites: 1},
+        activeTab: 'World',
+        images: 0,
+      })
     ).toBe(1);
     expect(
-      nextGuideStepIndex(steps, 2, {blocks: 3, sprites: 1}, 'World', 0)
+      nextGuideStepIndex(steps, 2, {
+        counts: {blocks: 3, sprites: 1},
+        activeTab: 'World',
+        images: 0,
+      })
     ).toBe(2);
     expect(
-      nextGuideStepIndex(steps, 2, {blocks: 3, sprites: 1}, 'Code', 0)
+      nextGuideStepIndex(steps, 2, {
+        counts: {blocks: 3, sprites: 1},
+        activeTab: 'Code',
+        images: 0,
+      })
     ).toBe(3);
   });
 
   it('stops at the last step and at a conditionless next step', () => {
     expect(
-      nextGuideStepIndex(steps, 3, {blocks: 9, sprites: 9}, 'Code', 0)
+      nextGuideStepIndex(steps, 3, {
+        counts: {blocks: 9, sprites: 9},
+        activeTab: 'Code',
+        images: 0,
+      })
     ).toBe(3);
     const gap: GuideStep[] = [{text: 'a'}, {text: 'b'}];
-    expect(nextGuideStepIndex(gap, 0, {blocks: 9, sprites: 9}, 'Code', 0)).toBe(
-      0
-    );
+    expect(
+      nextGuideStepIndex(gap, 0, {
+        counts: {blocks: 9, sprites: 9},
+        activeTab: 'Code',
+        images: 0,
+      })
+    ).toBe(0);
   });
 
   it('waits for a count of images, and for more sprites in the world', () => {
@@ -83,19 +121,47 @@ describe('nextGuideStepIndex', () => {
       {text: 'place it', after: {images: 4}},
       {text: 'code it', after: {worldSprites: 2}},
     ];
-    expect(nextGuideStepIndex(imageSteps, 0, none, 'Images', 3)).toBe(0);
-    expect(nextGuideStepIndex(imageSteps, 0, none, 'Images', 4)).toBe(1);
+    expect(
+      nextGuideStepIndex(imageSteps, 0, {
+        counts: none,
+        activeTab: 'Images',
+        images: 3,
+      })
+    ).toBe(0);
+    expect(
+      nextGuideStepIndex(imageSteps, 0, {
+        counts: none,
+        activeTab: 'Images',
+        images: 4,
+      })
+    ).toBe(1);
     // The player is already placed, so one sprite is not the new one.
     expect(
-      nextGuideStepIndex(imageSteps, 1, {blocks: 7, sprites: 1}, 'World', 4)
+      nextGuideStepIndex(imageSteps, 1, {
+        counts: {blocks: 7, sprites: 1},
+        activeTab: 'World',
+        images: 4,
+      })
     ).toBe(1);
     expect(
-      nextGuideStepIndex(imageSteps, 1, {blocks: 7, sprites: 2}, 'World', 4)
+      nextGuideStepIndex(imageSteps, 1, {
+        counts: {blocks: 7, sprites: 2},
+        activeTab: 'World',
+        images: 4,
+      })
     ).toBe(2);
   });
 
   it('handles absent steps', () => {
-    expect(nextGuideStepIndex(undefined, 0, none, 'Code', 0)).toBe(0);
-    expect(nextGuideStepIndex([], 0, none, 'Code', 0)).toBe(0);
+    expect(
+      nextGuideStepIndex(undefined, 0, {
+        counts: none,
+        activeTab: 'Code',
+        images: 0,
+      })
+    ).toBe(0);
+    expect(
+      nextGuideStepIndex([], 0, {counts: none, activeTab: 'Code', images: 0})
+    ).toBe(0);
   });
 });

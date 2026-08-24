@@ -33,28 +33,28 @@
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Make trouble.** Describe a character who guards your platforms - something your player should stay away from."
+        "text": "**Make someone to meet.** Describe another character - a guard pacing a platform, a friend waiting on a ledge, whoever you like."
       },
       {
-        "text": "**Give it a post.** In the **World** tab, place your guard on top of a platform. It will walk back and forth along it.",
+        "text": "**Give them a platform.** In the **World** tab, place them on top of some blocks. They will walk back and forth along them.",
         "after": {
           "images": 5
         }
       },
       {
-        "text": "**Teach it to patrol.** Over in the **Code** tab, use **sprite [guard] begins [patrolling left and right on blocks]**.",
+        "text": "**Set them walking.** In the **Code** tab, use **sprite [them] begins [patrolling left and right on blocks]**.",
         "after": {
           "worldSprites": 3
         }
       },
       {
-        "text": "**Make it cost something.** Add **when [player] touches [guard]** with a **restart scene** block inside - your player goes back to the start. Press **Play** and try to get past it.",
+        "text": "**Now your choice.** Add **when [the player] touches [them]**, and pick what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start. Press **Play** and go and meet them.",
         "after": {
           "tab": "Code"
         }
       }
     ],
-    "long_instructions": "# Add a guard\nMake a second character, place it on a platform, and have it patrol back and forth. If your player touches it, the scene restarts.",
+    "long_instructions": "# Add someone else\nMake a second character and place it on a platform, walking back and forth. Then decide what happens when your player meets them: a friendly hello, or back to the start.",
     "toolbox_definition": {
       "kind": "categoryToolbox",
       "contents": [
@@ -80,13 +80,9 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_restartScene"
-            },
-            {
-              "kind": "block",
               "type": "gamelab_spriteSay",
               "fields": {
-                "SPEECH": "Ouch!"
+                "SPEECH": "Hello!"
               },
               "inputs": {
                 "SPRITE": {
@@ -95,6 +91,10 @@
                   }
                 }
               }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_restartScene"
             }
           ]
         },
