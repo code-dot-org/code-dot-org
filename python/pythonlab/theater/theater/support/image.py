@@ -68,8 +68,10 @@ class Image:
 
 
 def _check_dimensions(width, height):
-  if width < 0 or height < 0:
-    raise ValueError("An image's width and height cannot be negative")
+  # Zero is refused along with the negatives: an image with no pixels cannot be
+  # drawn, and draw_image() divides by the width to hold the aspect ratio.
+  if width < 1 or height < 1:
+    raise ValueError("An image's width and height must be at least 1")
   if width * height > MAX_IMAGE_PIXELS:
     raise ValueError(
       f"The image is too large; the limit is {MAX_IMAGE_PIXELS} pixels"
