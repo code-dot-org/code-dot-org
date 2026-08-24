@@ -48,7 +48,7 @@
         }
       },
       {
-        "text": "**Now your choice.** Add **when [the player] touches [them]**, and pick what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start. Press **Play** and go and meet them.",
+        "text": "**Now your choice.** Add **when [ ] touches [ ]** and pick your player and your new character from the dropdowns. Then decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start. Press **Play** and go and meet them.",
         "after": {
           "tab": "Code"
         }
@@ -79,8 +79,8 @@
           "type": "gamelab_checkTouching",
           "inputs": {
             "SPRITE1": {
-              "block": {
-                "type": "spritelab2_thePlayer"
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
               }
             },
             "SPRITE2": {
