@@ -7,8 +7,11 @@ from .support.constants import (
   MAX_DRAW_IMAGE_SIZE,
   MAX_NOTE,
   MAX_PAUSE_SECONDS,
+  MAX_TEXT_HEIGHT,
+  MAX_TEXT_PIXELS,
   MIN_NOTE,
   MIN_PAUSE_SECONDS,
+  MIN_TEXT_HEIGHT,
   THEATER_HEIGHT,
   THEATER_WIDTH,
 )
@@ -48,6 +51,35 @@ def _validate_draw_size(name, value):
   if value > MAX_DRAW_IMAGE_SIZE:
     raise ValueError(
       f"draw_image allows a {name} of at most {MAX_DRAW_IMAGE_SIZE}, got {value}"
+    )
+
+
+def _validate_text_height(height):
+  """Bound the text height.
+
+  Raise here rather than at render time so the traceback points at the
+  student's own call. Pillow builds a bitmap as tall as the text before it
+  clips anything to the stage, so the height is what that costs. Written as a
+  range rather than two comparisons, which is also what turns away a nan.
+  """
+  if not MIN_TEXT_HEIGHT <= height <= MAX_TEXT_HEIGHT:
+    raise ValueError(
+      f"set_text_height needs a height between {MIN_TEXT_HEIGHT} and "
+      f"{MAX_TEXT_HEIGHT}, got {height}"
+    )
+
+
+def _validate_text_extent(text, height):
+  """Bound the bitmap one draw_text() call needs.
+
+  Long text costs what tall text costs: the whole string is drawn into one
+  bitmap and only then clipped to the stage, so a line reaching well past the
+  edge is paid for in full.
+  """
+  if len(text) * height * height > MAX_TEXT_PIXELS:
+    raise ValueError(
+      f"draw_text cannot draw {len(text)} characters at a height of {height}; "
+      f"use shorter text, or a smaller text height"
     )
 
 
@@ -148,12 +180,14 @@ class Scene:
     self._font_style = style
 
   def set_text_height(self, height):
+    _validate_text_height(height)
     self._text_height = height
 
   def set_text_color(self, color):
     self._text_color = as_color(color)
 
   def draw_text(self, text, x, y, rotation=0.0):
+    _validate_text_extent(text, self._text_height)
     self._actions.append(
       actions.DrawText(
         text, x, y, rotation, self._text_height, self._font, self._font_style,

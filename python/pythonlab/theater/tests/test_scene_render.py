@@ -13,8 +13,11 @@ from theater.support.constants import (
   MAX_FRAMES,
   MAX_NOTE,
   MAX_PAUSE_SECONDS,
+  MAX_TEXT_HEIGHT,
+  MAX_TEXT_PIXELS,
   MIN_NOTE,
   MIN_PAUSE_SECONDS,
+  MIN_TEXT_HEIGHT,
   SAMPLE_RATE,
   THEATER_HEIGHT,
   THEATER_WIDTH,
@@ -345,6 +348,52 @@ def test_pauses_after_the_last_sound_do_not_count():
   scene.pause(MAX_AUDIO_SECONDS)
   _gif, wav = render(scene.get_actions())
   assert len(read_samples_from_wav_bytes(wav)) / SAMPLE_RATE == pytest.approx(0.5, abs=0.01)
+
+
+@pytest.mark.parametrize(
+  "height", [0, -1, -20, MAX_TEXT_HEIGHT + 1, 12000, float("nan"), float("inf")]
+)
+def test_out_of_range_text_height_raises_at_the_call(height):
+  # Pillow builds a bitmap as tall as the text: a height of 12000 costs 163 MB
+  # for one letter, and 20000 reaches Pillow's own decompression-bomb guard,
+  # whose message is no help to a student. Zero and below Pillow simply refuses.
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.set_text_height(height)
+  # The height was not kept, so a later draw_text still renders.
+  scene.draw_text("hi", 10, 20)
+  scene.pause(0.1)
+  assert _render_gif(scene.get_actions())
+
+
+@pytest.mark.parametrize("height", [MIN_TEXT_HEIGHT, 20, MAX_TEXT_HEIGHT])
+def test_text_height_accepts_the_whole_documented_range(height):
+  scene = Scene()
+  scene.set_text_height(height)
+  scene.draw_text("A", 0, THEATER_HEIGHT)
+  scene.pause(0.1)
+  assert _render_gif(scene.get_actions())
+
+
+def test_text_too_long_for_its_height_raises_at_the_call():
+  # Length costs what height costs, since the whole string is drawn into one
+  # bitmap before any of it is clipped to the stage.
+  scene = Scene()
+  scene.set_text_height(400)
+  characters = MAX_TEXT_PIXELS // (400 * 400) + 1
+  with pytest.raises(ValueError):
+    scene.draw_text("A" * characters, 0, 0)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+def test_a_paragraph_at_a_readable_height_is_allowed():
+  # The extent ceiling must not stand in the way of ordinary text.
+  scene = Scene()
+  scene.set_text_height(20)
+  scene.draw_text("The quick brown fox. " * 100, 0, 200)
+  scene.pause(0.1)
+  assert _render_gif(scene.get_actions())
 
 
 @pytest.mark.parametrize("sides", [0, 1, 2, -3])
