@@ -186,10 +186,14 @@ def _single_frame_scene(build_pauses):
   return PILImage.open(io.BytesIO(_render_gif(scene.get_actions())))
 
 
-@pytest.mark.parametrize("seconds", [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000])
+@pytest.mark.parametrize(
+  "seconds",
+  [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000, float("nan"), float("inf")],
+)
 def test_out_of_range_pause_raises_at_the_call(seconds):
   # A gif delay is 16 bits of centiseconds, so a student who meant milliseconds
-  # would otherwise overflow that field inside Pillow.
+  # would otherwise overflow that field inside Pillow. A nan compares false
+  # against both bounds, so it used to reach the frame delay and raise there.
   scene = Scene()
   with pytest.raises(ValueError):
     scene.pause(seconds)
@@ -197,7 +201,10 @@ def test_out_of_range_pause_raises_at_the_call(seconds):
   assert scene.get_actions() == []
 
 
-@pytest.mark.parametrize("seconds", [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000])
+@pytest.mark.parametrize(
+  "seconds",
+  [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000, float("nan"), float("inf")],
+)
 def test_out_of_range_note_duration_raises_at_the_call(seconds):
   # An unbounded duration reaches truncate_samples, where a negative once
   # trimmed the note's tail and played nearly all of it.

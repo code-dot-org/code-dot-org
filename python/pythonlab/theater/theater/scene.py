@@ -28,13 +28,13 @@ def _validate_duration(method_name, seconds):
   student's own call. Notes share the pause range: play_note_and_pause() hands
   the same value to both, and the ceiling is what a gif frame delay can hold.
   """
-  if seconds < MIN_PAUSE_SECONDS:
+  # A range rather than two comparisons, which is what turns away a nan: every
+  # comparison against one is false, so a nan cleared both bounds and reached
+  # the frame delay, where rounding it to an integer raised from the renderer.
+  if not MIN_PAUSE_SECONDS <= seconds <= MAX_PAUSE_SECONDS:
     raise ValueError(
-      f"{method_name} needs at least {MIN_PAUSE_SECONDS} seconds, got {seconds}"
-    )
-  if seconds > MAX_PAUSE_SECONDS:
-    raise ValueError(
-      f"{method_name} allows at most {MAX_PAUSE_SECONDS} seconds, got {seconds}"
+      f"{method_name} needs between {MIN_PAUSE_SECONDS} and "
+      f"{MAX_PAUSE_SECONDS} seconds, got {seconds}"
     )
 
 
