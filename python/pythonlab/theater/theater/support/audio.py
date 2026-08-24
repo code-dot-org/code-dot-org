@@ -51,6 +51,21 @@ _MAX_SAMPLES = MAX_AUDIO_SECONDS * SAMPLE_RATE
 
 _TOO_LONG = f"The sound is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
 
+_NOT_FLAT = "play_sound needs a flat sequence of numbers"
+
+
+def _reject_unless_flat(sound):
+  """Turn away a nested sequence before any of it is copied.
+
+  len() measures the outer dimension alone, so a list of rows, or an array
+  shaped (2, N), would clear the length ceiling and then allocate whatever the
+  caller had built. We don't allow nested sequences as valid input.
+  """
+  if getattr(sound, "ndim", 1) != 1:
+    raise ValueError(_NOT_FLAT)
+  if hasattr(next(iter(sound), 0.0), "__len__"):
+    raise ValueError(_NOT_FLAT)
+
 
 def as_samples(sound):
   """Snapshot a caller's samples as a float32 array.
@@ -65,6 +80,7 @@ def as_samples(sound):
   student's own play_sound call.
   """
   if hasattr(sound, "__len__"):
+    _reject_unless_flat(sound)
     if len(sound) > _MAX_SAMPLES:
       raise ValueError(_TOO_LONG)
     return np.array(sound, dtype=np.float32)
