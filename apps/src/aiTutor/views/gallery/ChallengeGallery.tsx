@@ -9,6 +9,7 @@ import {
 
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';
+import ProjectView from './ProjectView';
 import {GallerySort, TutorGalleryData, unitCountsValidator} from './types';
 
 import styles from './challenge-gallery.module.scss';
@@ -20,10 +21,19 @@ interface ChallengeGalleryProps {
 const hasVideoAsset = (response: ChallengeResponse) =>
   response.assets.some(asset => asset.asset_type === 'video');
 
+// The selected project is deep-linked via ?project=<id> so project pages
+// can be shared and survive a reload.
+const projectIdFromLocation = () => {
+  const value = new URLSearchParams(window.location.search).get('project');
+  const id = value ? parseInt(value, 10) : NaN;
+  return isNaN(id) ? null : id;
+};
+
 // The Tutor+ project gallery: submitted challenge work, browsable by class
 // section and unit, split into video and whiteboard project grids. Shows
 // the selected section's work, or the signed-in user's own submissions in
-// the "My projects" view.
+// the "My projects" view. Clicking a project opens its project page in
+// place.
 const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
   const {units, sections, currentUnitId} = tutorGalleryData;
 
@@ -35,6 +45,31 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
   const [responses, setResponses] = useState<ChallengeResponse[] | null>(null);
   const [unitCounts, setUnitCounts] = useState<Record<string, number>>({});
   const [loadFailed, setLoadFailed] = useState(false);
+  const [projectId, setProjectId] = useState<number | null>(
+    projectIdFromLocation
+  );
+
+  useEffect(() => {
+    const onPopState = () => setProjectId(projectIdFromLocation());
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
+
+  const navigateToProject = (id: number | null) => {
+    const params = new URLSearchParams(window.location.search);
+    if (id === null) {
+      params.delete('project');
+    } else {
+      params.set('project', id.toString());
+    }
+    const query = params.toString();
+    window.history.pushState(
+      null,
+      '',
+      window.location.pathname + (query ? `?${query}` : '')
+    );
+    setProjectId(id);
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -122,6 +157,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
             response={response}
             variant={variant}
             unitPosition={unitPositionFor(response.unit_id)}
+            onOpen={() => navigateToProject(response.id)}
           />
         ))}
       </div>
@@ -163,6 +199,20 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
       </>
     );
   };
+
+  if (projectId !== null) {
+    return (
+      <div className={styles.page} data-theme="Dark">
+        <ProjectView
+          responseId={projectId}
+          units={units}
+          galleryResponses={responses}
+          onBack={() => navigateToProject(null)}
+          onOpenProject={navigateToProject}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.page} data-theme="Dark">

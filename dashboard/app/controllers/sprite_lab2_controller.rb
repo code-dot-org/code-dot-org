@@ -6,9 +6,9 @@ class SpriteLab2Controller < ApplicationController
   before_action :authenticate_user!
 
   # GET /sprite_lab2/section_scenes?level_id=N&script_id=M
-  # Scene metadata from every section-mate's project on the given level and
-  # script: {scenes: [{channel, sceneId, sceneName, ownerName}]}. Powers the
-  # go-to-external-scene block's dropdown.
+  # Scene metadata from section-mates' projects on the given level and script,
+  # excluding the caller's own project: {scenes: [{channel, sceneId,
+  # sceneName, ownerName}]}. Powers the go-to-external-scene block's dropdown.
   def section_scenes
     level = Level.find(params.require(:level_id))
     return head :bad_request unless sprite_lab2_level?(level)
@@ -16,6 +16,7 @@ class SpriteLab2Controller < ApplicationController
     return head :bad_request unless script_id
     scenes = []
     section_mates.each do |user|
+      next if user == current_user
       channel, sources = project_sources_for(user, level, script_id)
       next unless sources
       (sources['scenes'] || []).each do |scene|

@@ -9,6 +9,13 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
+import {
+  backgroundFrame,
+  cameraFocus,
+  clampZoom,
+  stepZoom,
+  worldPoint,
+} from './camera';
 import {trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
@@ -120,20 +127,34 @@ export default class SpriteLab2Engine extends SpriteLab {
     const library = super.createLibrary(args);
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
     // classic's ~400px library art: resize once to the canvas's physical
-    // resolution instead of CoreLibrary's logical 400.
-    library.drawBackground = function () {
+    // resolution instead of CoreLibrary's logical 400. A frame (from the
+    // zoomed platform draw loop) draws into that rectangle instead, straight
+    // from the stored resolution — a zoomed-in view needs the extra pixels a
+    // one-time downsize would destroy.
+    library.drawBackground = function (frame) {
       if (typeof this.background === 'string') {
         this.p5.background(this.background);
       } else {
         this.p5.background('white');
       }
-      if (typeof this.background === 'object') {
-        const size = APP_WIDTH * (this.p5._pixelDensity || 1);
-        if (this.background.width !== size || this.background.height !== size) {
-          this.background.resize(size, size);
-        }
-        this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
+      if (typeof this.background !== 'object') {
+        return;
       }
+      if (frame) {
+        this.p5.image(
+          this.background,
+          frame.x,
+          frame.y,
+          frame.size,
+          frame.size
+        );
+        return;
+      }
+      const size = APP_WIDTH * (this.p5._pixelDensity || 1);
+      if (this.background.width !== size || this.background.height !== size) {
+        this.background.resize(size, size);
+      }
+      this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
     };
     if (this.usesPlatformPhysics_) {
       // Sized per SCENE, not per level: one project holds both a platformer
@@ -152,6 +173,16 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
     };
+    // The view eases toward the target zoom a frame at a time (see the
+    // platform draw loop below); a fresh run starts back at 1.
+    this.cameraZoom_ = 1;
+    this.cameraZoomTarget_ = 1;
+    library.commands.setCameraZoom = value => {
+      this.cameraZoomTarget_ = clampZoom(Number(value));
+    };
+    if (this.usesPlatformPhysics_) {
+      this.installZoomedDrawLoop_(library);
+    }
     // Move existing sprites (e.g. world-placed ones) into the players
     // group; the per-frame resolver picks them up from there.
     library.commands.setPlatformPlayer = spriteArg => {
@@ -481,6 +512,57 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.p5Wrapper.preloadSpriteImages(
       await trimAnimationListImages(getStore().getState().animationList)
     );
+  }
+
+  /**
+   * CoreLibrary's draw loop with the set-zoom camera folded in (platform
+   * levels only; the stock loop runs elsewhere). Zoom is render-only: sprites
+   * keep world coordinates and the physics keeps the canvas-sized world.
+   *
+   * p5.play activates its camera around the whole draw cycle (identity until
+   * a set-zoom block runs). The pre-draw hook pushed last frame's transform,
+   * so the loop re-pushes with this frame's values, splitting the frame into
+   * a screen-space background pass (its own harder zoom and half-rate pan —
+   * the parallax), a camera pass for world content (sprites and their speech
+   * bubbles), and a screen-space HUD pass (variable bubbles, effects, title).
+   */
+  installZoomedDrawLoop_(library) {
+    const engine = this;
+    library.commands.executeDrawLoopAndCallbacks = function () {
+      const p5 = this.p5;
+      const camera = p5.camera;
+      engine.cameraZoom_ = stepZoom(
+        engine.cameraZoom_,
+        engine.cameraZoomTarget_
+      );
+      const zoom = engine.cameraZoom_;
+      const player = this.getSpriteArray({group: 'players'})[0];
+      const focus = cameraFocus(zoom, player ? player.position : null);
+      camera.off();
+      this.drawBackground(backgroundFrame(zoom, focus));
+      camera.zoom = zoom;
+      camera.position.x = focus.x;
+      camera.position.y = focus.y;
+      camera.on();
+      // p5.play's own mouse translation ignores zoom; the click events read
+      // these during runEvents.
+      const mouse = worldPoint({x: p5.mouseX, y: p5.mouseY}, zoom, focus);
+      camera.mouseX = mouse.x;
+      camera.mouseY = mouse.y;
+      this.runBehaviors();
+      this.runEvents();
+      p5.drawSprites();
+      this.drawSpeechBubbles();
+      camera.off();
+      this.drawVariableBubbles();
+      if (!this.isPreviewFrame()) {
+        this.foregroundEffects.forEach(effect => effect.func());
+      }
+      if (this.screenText.title || this.screenText.subtitle) {
+        this.commands.drawTitle.apply(this);
+      }
+      this.commands.drawStoryLabText.apply(this);
+    };
   }
 
   // Platformer physics for players (see platformPhysics.ts for the rules),

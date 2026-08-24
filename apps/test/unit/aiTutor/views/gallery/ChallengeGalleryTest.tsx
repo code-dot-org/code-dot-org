@@ -82,6 +82,9 @@ const stubFetches = (
 describe('ChallengeGallery', () => {
   beforeEach(() => {
     fetchJson.mockReset();
+    // Project navigation pushes ?project=<id>; start each test off a
+    // clean URL.
+    window.history.replaceState(null, '', '/');
   });
 
   it('fetches the first section and current unit, and groups projects', async () => {
@@ -219,6 +222,49 @@ describe('ChallengeGallery', () => {
       expect(
         screen.getByText(/We couldn't load the gallery/)
       ).toBeInTheDocument()
+    );
+  });
+
+  it('opens a project page from a card and returns via the back button', async () => {
+    const detail = {
+      ...whiteboardResponse,
+      viewer_role: 'peer',
+      question: 'Draw a network.',
+    };
+    fetchJson.mockImplementation((url: string) => {
+      if (url.startsWith('/challenge_responses/')) {
+        return Promise.resolve({value: detail});
+      }
+      if (url.includes('unit_counts')) {
+        return Promise.resolve({value: {}});
+      }
+      return Promise.resolve({value: [videoResponse, whiteboardResponse]});
+    });
+
+    render(<ChallengeGallery tutorGalleryData={galleryData} />);
+    await waitFor(() =>
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+    );
+
+    fireEvent.click(screen.getByRole('link', {name: 'Grace Hopper'}));
+
+    expect(window.location.search).toBe('?project=8');
+    await waitFor(() =>
+      expect(
+        screen.getByText('Project Prompt: Draw a network.')
+      ).toBeInTheDocument()
+    );
+    expect(fetchJson).toHaveBeenCalledWith(
+      '/challenge_responses/8',
+      {},
+      expect.any(Function)
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: /project gallery/}));
+
+    expect(window.location.search).toBe('');
+    await waitFor(() =>
+      expect(screen.getByText('Extension Activities')).toBeInTheDocument()
     );
   });
 });

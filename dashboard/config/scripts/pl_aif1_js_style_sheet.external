@@ -13,13 +13,72 @@ markdown <<MARKDOWN
 
 <p>Remember the <code>&lt;link&gt;</code> tag from a couple levels back, the one that connects an HTML file to its styling? A stylesheet is exactly what that tag is pointing to. Every rule you've clicked through so far in this unit lives inside a file just like this one.</p>
 
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://images.code.org/0b23a806a13218861539ef63b1af26e0-image-1785949866900.png" alt="A stylesheet is a file that controls how a web page looks, defining colors, fonts, spacing, and layout. The AI will create a style.css file to store this code. A preview shows the Dog Lover's Page heading and text before styling is applied, alongside a Unit Guide button." style="max-width: 750px; width: 100%; border-radius: 10px;">
+<div style="
+  border:3px solid #ccc;
+  border-radius:16px;
+  padding:12px;
+  margin:24px 0;
+  background:#fff;
+">
+
+> #### Review the stylesheet below and try to identify the selectors, properties, and values. 
+
+
+<div style="clear:both;"></div>
+
+<div style="border: 1px solid #E4E2F8; border-radius: 10px; overflow: hidden; margin: 20px 0;">
+  <div style="display: flex; background-color: #F7F7FB; border-bottom: 1px solid #E4E2F8;">
+    <div style="padding: 10px 18px; font-size: 14px; color: #888888; background-color: #F0F0F5;">index.html</div>
+    <div style="padding: 10px 18px; font-size: 14px; font-weight: bold; color: #1F1976; background-color: #FFFFFF; border-top: 3px solid #4C42CF;">style.css</div>
+  </div>
+  <div style="background-color: #2B2745; color: #E4E2F8; font-family: 'Courier New', monospace; font-size: 16px; line-height: 1.8; padding: 20px 24px;">
+header {<br>
+&nbsp;&nbsp;background-color: lightblue;<br>
+&nbsp;&nbsp;text-align: center;<br>
+}<br><br>
+body {<br>
+&nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+&nbsp;&nbsp;margin: 0 auto;<br>
+&nbsp;&nbsp;max-width: 800px;<br>
+&nbsp;&nbsp;padding: 20px;<br>
+&nbsp;&nbsp;background-color: #f4f4f4;<br>
+&nbsp;&nbsp;color: #333;<br>
+}<br><br>
+h1 {<br>
+&nbsp;&nbsp;color: #0056b3;<br>
+&nbsp;&nbsp;text-align: center;<br>
+&nbsp;&nbsp;margin-bottom: 1.5rem;<br>
+}<br><br>
+h2 {<br>
+&nbsp;&nbsp;color: #007bff;<br>
+&nbsp;&nbsp;margin-top: 1.5rem;<br>
+&nbsp;&nbsp;margin-bottom: 0.8rem;<br>
+}
+  </div>
 </div>
+
+<br>
+
+<details style="text-align:center;">
+<summary style="cursor:pointer;display:inline-block; background:#8148B2; color:white; padding:14px 22px; font-size:18px; font-weight:600; border-radius:999px; list-style:none; margin:0 auto;">
+Click to show example how this might look on a webpage.
+</summary>
+
+<div style="margin-top:16px;display:flex;justify-content:center;gap:20px;">
+<img src="https://images.code.org/249cab55a1e216d7653998ffb88ba016-Screenshot%202026-01-16%20at%2012.54.52%20PM.png" alt="annotated html structure" width="400" style="border-radius:10px;">
+<img src="https://images.code.org/a546b33c4184dc532d0e59c7e15f6104-Screenshot%202026-01-16%20at%2012.52.29%20PM.png" alt="annotated html structure" width="450" style="border-radius:10px;">
+</div>
+</details>
+</div>
+
 
 <p>In Web Lab, this file is named <code>style.css</code> by default, sitting right alongside the HTML file it's styling.</p>
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;"><p>
 <strong>💡 Teacher tip:</strong> your students won't create or name this file themselves, AI generates style.css automatically the moment it builds a page. What matters is that they recognize it when they see it in Web Lab, and know that any color, font, or spacing change they ask for gets written here.</p>
 </div>
+
+---
+
+
 MARKDOWN
