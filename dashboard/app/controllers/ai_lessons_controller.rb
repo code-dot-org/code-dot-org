@@ -63,6 +63,7 @@ class AiLessonsController < ApplicationController
     FileUtils.rm_rf(File.join(storage_dir, 'sources', params[:id]))
     FileUtils.rm_rf(File.join(storage_dir, 'progress', params[:id]))
     FileUtils.rm_rf(File.join(storage_dir, 'inputs', params[:id]))
+    FileUtils.rm_rf(File.join(storage_dir, 'overlays', params[:id]))
     render json: {id: params[:id]}
   rescue ArgumentError
     head :bad_request
@@ -78,6 +79,7 @@ class AiLessonsController < ApplicationController
     FileUtils.rm_rf(File.join(storage_dir, 'sources', id))
     FileUtils.rm_rf(File.join(storage_dir, 'progress', id))
     FileUtils.rm_rf(File.join(storage_dir, 'inputs', id))
+    FileUtils.rm_rf(File.join(storage_dir, 'overlays', id))
     render json: {id: id}
   rescue ArgumentError
     head :bad_request
@@ -199,6 +201,32 @@ class AiLessonsController < ApplicationController
     head :bad_request
   end
 
+  # Returns the current user's lesson overlay — steps the mastery agent
+  # generated for them and where they extend the hub paths.  Empty
+  # object when no overlay exists (the common case: mastered on the
+  # authored steps alone).
+  def read_overlay
+    return head :not_found unless load_lesson_json(params[:id])
+    path = overlay_path(params[:id], current_user.id)
+    return render json: {} unless File.exist?(path)
+    render json: JSON.parse(File.read(path))
+  rescue ArgumentError, JSON::ParserError
+    head :bad_request
+  end
+
+  # Stores the current user's lesson overlay.  Whole JSON request body
+  # replaces the stored overlay.
+  def write_overlay
+    return head :not_found unless load_lesson_json(params[:id])
+    parsed = JSON.parse(request.raw_post)
+    path = overlay_path(params[:id], current_user.id)
+    FileUtils.mkdir_p(File.dirname(path))
+    File.write(path, JSON.pretty_generate(parsed))
+    head :no_content
+  rescue ArgumentError, JSON::ParserError
+    head :bad_request
+  end
+
   private def storage_dir
     @storage_dir ||= begin
       dir = Rails.root.join('tmp', 'ai_lessons')
@@ -273,6 +301,7 @@ class AiLessonsController < ApplicationController
       user_label = user ? (user.name.presence || user.username.presence || "Student ##{user_id}") : "Student ##{user_id}"
 
       checklist_total = lesson['checklist']&.length || 0
+      extensions = path_extensions(lesson_id, user_id)
 
       [{
         'user_id' => user_id,
@@ -291,7 +320,8 @@ class AiLessonsController < ApplicationController
         'observations' => parsed['observations'] || {},
         # Skill-tree progress: the completion set plus each hub's path
         # definitions, so the client can render per-path rings without a
-        # second fetch per lesson.
+        # second fetch per lesson.  Paths include this student's
+        # agent-generated extensions so ring totals match theirs.
         'completed_step_ids' => parsed['completedStepIds'] || [],
         # Per-path mastery verdicts, keyed by path id.
         'mastery' => parsed['mastery'] || {},
@@ -300,12 +330,14 @@ class AiLessonsController < ApplicationController
             'id' => hub['id'],
             'title' => hub['title'],
             'paths' => (hub['paths'] || []).map do |p|
+              added = extensions[p['id']] || []
               {
                 'id' => p['id'],
                 'title' => p['title'],
                 'objective' => p['objective'],
                 'standard' => p['standard'],
-                'steps' => p['steps'] || [],
+                'steps' => (p['steps'] || []) + added,
+                'added_steps' => added.length,
               }
             end,
           }
@@ -378,5 +410,21 @@ class AiLessonsController < ApplicationController
     raise ArgumentError, "bad id" unless id.is_a?(String) && id.match?(/\A[a-z0-9_-]{1,64}\z/)
     raise ArgumentError, "bad user_id" unless user_id.is_a?(Integer) && user_id.positive?
     File.join(storage_dir, 'inputs', id, "#{user_id}.json")
+  end
+
+  private def overlay_path(id, user_id)
+    raise ArgumentError, "bad id" unless id.is_a?(String) && id.match?(/\A[a-z0-9_-]{1,64}\z/)
+    raise ArgumentError, "bad user_id" unless user_id.is_a?(Integer) && user_id.positive?
+    File.join(storage_dir, 'overlays', id, "#{user_id}.json")
+  end
+
+  # The (lesson, user) overlay's per-path step extensions, or {} when no
+  # overlay exists or it doesn't parse.
+  private def path_extensions(lesson_id, user_id)
+    path = overlay_path(lesson_id, user_id)
+    return {} unless File.exist?(path)
+    JSON.parse(File.read(path))['pathExtensions'] || {}
+  rescue ArgumentError, JSON::ParserError
+    {}
   end
 end

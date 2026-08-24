@@ -17,7 +17,7 @@
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -29,9 +29,24 @@ import {judgeBranchCondition} from './branchJudge';
 import BuildPartnerPanel from './BuildPartnerPanel';
 import ChecklistPanel from './ChecklistPanel';
 import EmbeddedLab from './EmbeddedLab';
-import {evaluatePathMastery} from './mastery';
-import {deterministicResolver, NavDecision} from './navigation';
+import {
+  evaluatePathMastery,
+  generateRemediationSteps,
+  MAX_REMEDIATION_ROUNDS,
+} from './mastery';
+import {
+  deterministicNextStep,
+  deterministicResolver,
+  NavDecision,
+} from './navigation';
 import {generateStepObservation} from './observations';
+import {
+  applyOverlay,
+  EMPTY_OVERLAY,
+  LessonOverlay,
+  loadOverlay,
+  saveOverlay,
+} from './overlay';
 import ProgressRing from './ProgressRing';
 import QuestionFlow from './QuestionFlow';
 import {Link} from './router';
@@ -132,8 +147,21 @@ interface StudentPageInnerProps {
 }
 
 const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
-  lesson,
+  lesson: authoredLesson,
 }) => {
+  // The mastery agent's per-student additions.  Merged with the
+  // authored lesson into the effective lesson everything below runs on;
+  // when a remediation lands mid-session, setOverlay re-merges and the
+  // hub rings grow in place.
+  const [overlay, setOverlay] = useState<LessonOverlay>(EMPTY_OVERLAY);
+  const lesson = useMemo(
+    () => applyOverlay(authoredLesson, overlay),
+    [authoredLesson, overlay]
+  );
+  // Render-sync mirror so the background mastery chain reads the
+  // freshest overlay without joining callback dependencies.
+  const overlayRef = useRef<LessonOverlay>(EMPTY_OVERLAY);
+  overlayRef.current = overlay;
   // Position is a step id plus the ordered path of visited ids (ending
   // with the current step).  The array index is derived — it's what the
   // tutor prompt and progress events still speak.
@@ -209,15 +237,23 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
 
   // The tutor's full session context, assembled fresh per call from the
   // refs so effects don't gain churning dependencies.
+  // Ref mirrors the effective lesson so tutorContext can stay stable
+  // across overlay merges: a remediation landing mid-step must not
+  // change tutorContext's identity, or the opening effect would refire
+  // for the step the student is sitting on.
+  const lessonRef = useRef(lesson);
+  lessonRef.current = lesson;
+
   const tutorContext = useCallback(
     (): TutorContext => ({
-      lesson,
+      lesson: lessonRef.current,
       currentIndex,
       studentInputs: inputsRef.current,
       checklistState: checklistRef.current,
       observations: observationsRef.current,
+      mastery: progressRef.current?.mastery,
     }),
-    [lesson, currentIndex]
+    [currentIndex]
   );
 
   // Size the page to fill the viewport below whatever studio chrome is
@@ -240,19 +276,24 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // (currentStepId + path); older ones only have an index, so fall back
   // to one past the last completed step with a synthesized linear path.
   useEffect(() => {
-    if (!lesson.id) {
+    if (!authoredLesson.id) {
       setProgressLoading(false);
       return;
     }
     let cancelled = false;
     (async () => {
-      const [snapshot, savedInputs] = await Promise.all([
-        loadProgress(lesson.id!),
-        loadInputs(lesson.id!),
+      const [snapshot, savedInputs, savedOverlay] = await Promise.all([
+        loadProgress(authoredLesson.id!),
+        loadInputs(authoredLesson.id!),
+        loadOverlay(authoredLesson.id!),
       ]);
       if (cancelled) return;
       setInputs(savedInputs);
       inputsRef.current = savedInputs;
+      setOverlay(savedOverlay);
+      // Resume positions may point at overlay (generated) steps, so
+      // resolve them against the merged plan, not the authored one.
+      const merged = applyOverlay(authoredLesson, savedOverlay);
       progressRef.current = snapshot;
       const savedChecklist = snapshot?.checklist || {};
       setChecklistState(savedChecklist);
@@ -262,7 +303,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       setCompletedStepIds(savedCompleted);
       completedRef.current = savedCompleted;
       const savedId = snapshot?.currentStepId;
-      if (savedId && lesson.steps.some(s => s.id === savedId)) {
+      if (savedId && merged.steps.some(s => s.id === savedId)) {
         setCurrentStepId(savedId);
         setPath(
           snapshot.path && snapshot.path.length > 0 ? snapshot.path : [savedId]
@@ -270,17 +311,17 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       } else if (snapshot && snapshot.lastCompletedCheckpointIndex >= 0) {
         const next = Math.min(
           snapshot.lastCompletedCheckpointIndex + 1,
-          lesson.steps.length - 1
+          merged.steps.length - 1
         );
-        setCurrentStepId(lesson.steps[next].id);
-        setPath(lesson.steps.slice(0, next + 1).map(s => s.id));
+        setCurrentStepId(merged.steps[next].id);
+        setPath(merged.steps.slice(0, next + 1).map(s => s.id));
       }
       setProgressLoading(false);
     })();
     return () => {
       cancelled = true;
     };
-  }, [lesson.id, lesson.steps]);
+  }, [authoredLesson]);
 
   // Persist a single progress event (run or checkpoint completion) and
   // hold on to the returned snapshot so subsequent events can append to
@@ -355,7 +396,10 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [lesson, currentIndex, progressLoading, tutorContext]);
+    // Keyed on the step position, not the lesson object: an overlay
+    // merge changes the lesson's identity mid-step and must not refire
+    // the opening for the step the student is on.
+  }, [currentIndex, progressLoading, tutorContext]);
 
   // Keep the transcript scrolled to the latest message.
   useEffect(() => {
@@ -438,6 +482,11 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // Drives the "back to hub" affordance.
   const owningHub = hubOwning(lesson, currentStepId);
 
+  // Whether completing this step ends the lesson, per the deterministic
+  // preview.  Array position alone is wrong here: overlay steps are
+  // appended to the array's end but route back to their hub.
+  const endsLesson = !deterministicNextStep(lesson, currentStepId);
+
   const backToHub = useCallback(() => {
     if (!owningHub) return;
     navigateTo({kind: 'goto', stepId: owningHub.hub.id});
@@ -511,41 +560,87 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
 
       // Completing a hub path's last step triggers a background mastery
       // evaluation against the path's objective/standard.  Fire and
-      // forget — the student is already back at the hub; the verdict
-      // merges into the snapshot for the teacher (and, later, drives
-      // remediation).  One verdict per path: replays don't re-judge.
+      // forget — the student is already back at the hub.  A mastered
+      // verdict is final; a failed one regenerates targeted practice
+      // (extending the path through the overlay) until the rounds cap,
+      // after which the honest verdict stands.  Completing the added
+      // practice re-completes the path, which re-enters right here.
       const owner = hubOwning(lesson, step.id);
+      const priorVerdict = owner
+        ? progressRef.current?.mastery?.[owner.path.id]
+        : undefined;
       if (
         owner &&
         lesson.id &&
-        !progressRef.current?.mastery?.[owner.path.id] &&
+        !priorVerdict?.mastered &&
         pathStepsFor(lesson, owner.path).every(id =>
           completedRef.current.includes(id)
         )
       ) {
         const lessonId = lesson.id;
         const masteredPath = owner.path;
-        evaluatePathMastery({
-          lesson,
-          path: masteredPath,
-          inputs: inputsRef.current,
-          observations: observationsRef.current,
-          work: liveWork,
-        })
-          .then(async verdict => {
-            const saved = await saveSnapshotExtras(
-              lessonId,
-              progressRef.current,
-              {
-                mastery: {
-                  ...progressRef.current?.mastery,
-                  [masteredPath.id]: verdict,
-                },
+        (async () => {
+          const verdict = await evaluatePathMastery({
+            lesson,
+            path: masteredPath,
+            inputs: inputsRef.current,
+            observations: observationsRef.current,
+            work: liveWork,
+          });
+          // The overlay write lands BEFORE the verdict write: a crash
+          // between them leaves an extra exercise without a verdict
+          // (harmless) rather than a "needs more" verdict whose
+          // remediation never appeared.
+          if (!verdict.mastered) {
+            const roundsUsed = overlayRef.current.rounds[masteredPath.id] || 0;
+            if (roundsUsed < MAX_REMEDIATION_ROUNDS) {
+              try {
+                const newSteps = await generateRemediationSteps({
+                  lesson,
+                  path: masteredPath,
+                  verdict,
+                  inputs: inputsRef.current,
+                  round: roundsUsed + 1,
+                });
+                if (newSteps.length > 0) {
+                  const current = overlayRef.current;
+                  const updated: LessonOverlay = {
+                    steps: [...current.steps, ...newSteps],
+                    pathExtensions: {
+                      ...current.pathExtensions,
+                      [masteredPath.id]: [
+                        ...(current.pathExtensions[masteredPath.id] || []),
+                        ...newSteps.map(s => s.id),
+                      ],
+                    },
+                    rounds: {
+                      ...current.rounds,
+                      [masteredPath.id]: roundsUsed + 1,
+                    },
+                  };
+                  await saveOverlay(lessonId, updated);
+                  setOverlay(updated);
+                }
+              } catch (e) {
+                // Generation failing must not lose the verdict; the
+                // round is not consumed, so a later re-completion can
+                // try again.
+                console.warn('Remediation generation failed', e);
               }
-            );
-            if (saved) progressRef.current = saved;
-          })
-          .catch(e => console.warn('Mastery evaluation failed', e));
+            }
+          }
+          const saved = await saveSnapshotExtras(
+            lessonId,
+            progressRef.current,
+            {
+              mastery: {
+                ...progressRef.current?.mastery,
+                [masteredPath.id]: verdict,
+              },
+            }
+          );
+          if (saved) progressRef.current = saved;
+        })().catch(e => console.warn('Mastery evaluation failed', e));
       }
 
       navigateTo(decision);
@@ -862,8 +957,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                     >
                       {resolving
                         ? "Deciding what's next…"
-                        : currentIndex >= lesson.steps.length - 1 ||
-                          step.next === 'end'
+                        : endsLesson
                         ? 'Finish lesson →'
                         : 'Continue →'}
                     </MuiButton>

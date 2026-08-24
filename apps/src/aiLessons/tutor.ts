@@ -19,9 +19,11 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
 import {loggedGenerateText} from './aiLog';
 import {getCapabilitiesMarkdownFor, StepSurface} from './labCapabilities';
+import {deterministicNextStep} from './navigation';
 import {StudentInputs} from './studentInputs';
-import {StepObservation} from './studentProgress';
+import {PathMastery, StepObservation} from './studentProgress';
 import {
+  hubOwning,
   isSandboxStep,
   LessonPlan,
   Question,
@@ -39,6 +41,9 @@ export interface TutorContext {
   studentInputs?: StudentInputs;
   checklistState?: {[itemId: string]: boolean};
   observations?: {[stepId: string]: StepObservation};
+  // Per-path mastery verdicts, so the tutor can narrate skill-hub
+  // progress and frame added practice steps as growth.
+  mastery?: {[pathId: string]: PathMastery};
 }
 
 export type TutorRole = 'tutor' | 'student';
@@ -137,11 +142,30 @@ function overviewLine(step: Step, index: number, currentIndex: number) {
   )})${segment}${description}`;
 }
 
-function currentStepDetails(step: Step): string {
+function currentStepDetails(
+  lesson: LessonPlan,
+  step: Step,
+  mastery: {[pathId: string]: PathMastery} | undefined
+): string {
   const lines: (string | false | undefined)[] = [
     `  Title: ${step.title}`,
     `  Surface: ${surfaceFor(step)}`,
   ];
+  // Agent-generated practice steps: the tutor must frame them as
+  // growth, and knows exactly why they exist.
+  if (step.generated) {
+    const owner = hubOwning(lesson, step.id);
+    const verdict = owner ? mastery?.[owner.path.id] : undefined;
+    lines.push(
+      `  This step was GENERATED for this student as targeted practice: they
+  completed the ${owner ? `"${owner.path.title}"` : 'skill'} path without
+  yet demonstrating its objective${
+    verdict?.gaps?.length ? ` (gaps: ${verdict.gaps.join('; ')})` : ''
+  }.  Frame it as a chance to level up — a new challenge because they're
+  close — never as failure or punishment.  Do not mention judging,
+  evaluation, or that an AI decided this.`
+    );
+  }
   if (step.kind !== 'panels' && step.description) {
     lines.push(`  Description (what the student should do — turn this into your own
   natural-language guidance for the student; never paste it verbatim):
@@ -171,17 +195,32 @@ function currentStepDetails(step: Step): string {
   }
   if (step.kind === 'hub') {
     lines.push('  Skill paths on this hub:');
-    step.paths.forEach(p =>
+    step.paths.forEach(p => {
+      const verdict = mastery?.[p.id];
+      const hasGenerated = p.steps.some(id => {
+        const pathStep = lesson.steps.find(s => s.id === id);
+        return Boolean(pathStep?.generated);
+      });
+      const status = verdict
+        ? verdict.mastered
+          ? ' [status: mastered]'
+          : ` [status: not yet mastered${
+              hasGenerated ? '; a targeted practice step was added' : ''
+            }]`
+        : '';
       lines.push(
         `    - ${p.title}${p.objective ? ` — ${p.objective}` : ''}${
           p.standard ? ` (standard: ${p.standard})` : ''
-        }`
-      )
-    );
+        }${status}`
+      );
+    });
     lines.push(
       `  The student picks a path in the main area, plays through its steps,
   and returns here.  Help them choose if asked; never set
-  action="advance" — the hub advances itself when its paths are done.`
+  action="advance" — the hub advances itself when its paths are done.
+  If a practice step was added to a path, frame it warmly as a new
+  challenge because they're close — never as failure, and never mention
+  judging or that an AI decided it.`
     );
   }
   if (step.kind === 'questions') {
@@ -283,7 +322,12 @@ const SYSTEM_PROMPT_TEMPLATE = (ctx: TutorContext) => {
     ctx;
   const totalSteps = lesson.steps.length;
   const current = lesson.steps[currentIndex];
-  const upcoming = lesson.steps[currentIndex + 1];
+  // Path-aware preview: for hub-path steps (agent-generated ones
+  // included, which sit at the array's end) the next step is the next
+  // path step or the hub — array order would wrongly call them LAST.
+  const upcoming = current
+    ? deterministicNextStep(lesson, current.id)
+    : undefined;
 
   const overview = lesson.steps
     .map((s, i) => overviewLine(s, i, currentIndex))
@@ -305,7 +349,7 @@ STEPS
 ${overview}
 
 CURRENT STEP (#${currentIndex + 1} of ${totalSteps})
-${currentStepDetails(current)}
+${currentStepDetails(lesson, current, ctx.mastery)}
 
 ${
   upcoming

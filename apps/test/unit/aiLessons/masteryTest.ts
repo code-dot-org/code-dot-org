@@ -1,5 +1,8 @@
 import {loggedGenerateText} from '@cdo/apps/aiLessons/aiLog';
-import {evaluatePathMastery} from '@cdo/apps/aiLessons/mastery';
+import {
+  evaluatePathMastery,
+  generateRemediationSteps,
+} from '@cdo/apps/aiLessons/mastery';
 import {LessonPlan, SkillPath} from '@cdo/apps/aiLessons/types';
 
 // Keep the test hermetic: no gateway, no model registry.  jest hoists
@@ -112,5 +115,85 @@ describe('evaluatePathMastery', () => {
     const verdict = await evaluatePathMastery({lesson, path, inputs});
     expect(verdict.mastered).toBe(false);
     expect(verdict.gaps).toEqual(['Never located the wrong button id', '42']);
+  });
+});
+
+describe('generateRemediationSteps', () => {
+  beforeEach(() => mockGenerate.mockReset());
+
+  const verdict = {
+    mastered: false,
+    reasoning: 'Only one bug fixed.',
+    gaps: ['Never located the wrong button id'],
+    at: '2026-01-03T00:00:00Z',
+  };
+
+  it('briefs the model with gaps, existing steps, and student background', async () => {
+    mockGenerate.mockResolvedValue({output: {steps: []}});
+    await generateRemediationSteps({
+      lesson,
+      path,
+      verdict,
+      inputs: {
+        'what-to-make': {
+          questionId: 'what-to-make',
+          stepId: 'interview',
+          prompt: 'What do you want to make?',
+          answer: 'a site about my soccer team',
+          at: '2026-01-01T00:00:00Z',
+        },
+        ...inputs,
+      },
+      round: 1,
+    });
+    const args = mockGenerate.mock.calls[0][1];
+    expect(args.system).toContain('OBJECTIVE: Find and fix bugs in web code.');
+    expect(args.system).toContain('- Fix it!: fix the planted bugs');
+    expect(args.system).toContain('a site about my soccer team');
+    // Practice-step prompts are evidence, not project vision.
+    expect(args.system).not.toContain('misspelled colr');
+    expect(args.prompt).toContain('Only one bug fixed.');
+    expect(args.prompt).toContain('- Never located the wrong button id');
+  });
+
+  it('coerces output into overlay-ready lab steps, capped at two', async () => {
+    mockGenerate.mockResolvedValue({
+      output: {
+        steps: [
+          {
+            title: 'Button detective',
+            description: 'find the wrong id',
+            successCriteria: 'the button works',
+            starterFiles: [
+              {filename: 'index.html', contents: '<button id="go">'},
+              {filename: '', contents: 'dropped'},
+            ],
+          },
+          {title: 'Second', description: '', successCriteria: ''},
+          {title: 'Third (over cap)', description: '', successCriteria: ''},
+        ],
+      },
+    });
+    const steps = await generateRemediationSteps({
+      lesson,
+      path,
+      verdict,
+      inputs: {},
+      round: 2,
+    });
+    expect(steps).toHaveLength(2);
+    expect(steps[0]).toMatchObject({
+      id: 'gen-debugging-2-1',
+      kind: 'lab',
+      labType: 'weblab2',
+      sourceMode: 'sandbox',
+      validation: 'tutor',
+      aiPrompting: 'free',
+      generated: true,
+      title: 'Button detective',
+      starterFiles: {'index.html': '<button id="go">'},
+    });
+    expect(steps[1].id).toBe('gen-debugging-2-2');
+    expect(steps[1].starterFiles).toBeUndefined();
   });
 });

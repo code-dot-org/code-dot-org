@@ -224,3 +224,78 @@ describe('judgeFreeResponse', () => {
     });
   });
 });
+
+describe('skill-hub mastery framing', () => {
+  beforeEach(() =>
+    mockGenerate.mockReset().mockResolvedValue({
+      output: {message: 'hi', action: 'stay'},
+    })
+  );
+
+  const genStep: Step = {
+    id: 'gen-debugging-1-1',
+    kind: 'lab',
+    title: 'One more bug hunt',
+    labType: 'weblab2',
+    description: 'targeted practice',
+    validation: 'tutor',
+    sourceMode: 'sandbox',
+    generated: true,
+  };
+
+  const hubLesson: LessonPlan = {
+    formatVersion: 2,
+    title: 'Tree lesson',
+    objective: '',
+    authorInputs: {prompt: ''},
+    steps: [
+      {
+        id: 'hub',
+        kind: 'hub',
+        title: 'Skill map',
+        paths: [
+          {
+            id: 'debugging',
+            title: 'Debugging',
+            steps: ['practice-step', 'gen-debugging-1-1'],
+          },
+        ],
+      },
+      {...projectStep, id: 'practice-step'},
+      genStep,
+    ],
+  };
+
+  const mastery = {
+    debugging: {
+      mastered: false,
+      reasoning: 'Only one bug fixed.',
+      gaps: ['Never located the wrong button id'],
+      at: '2026-01-03T00:00:00Z',
+    },
+  };
+
+  it('narrates path mastery status on the hub', async () => {
+    await generateTutorReply(
+      ctx({lesson: hubLesson, currentIndex: 0, mastery}),
+      []
+    );
+    const args = mockGenerate.mock.calls[0][1];
+    expect(args.system).toContain(
+      '[status: not yet mastered; a targeted practice step was added]'
+    );
+    expect(args.system).toContain('frame it warmly');
+  });
+
+  it('briefs the tutor on a generated practice step', async () => {
+    await generateTutorReply(
+      ctx({lesson: hubLesson, currentIndex: 2, mastery}),
+      []
+    );
+    const args = mockGenerate.mock.calls[0][1];
+    expect(args.system).toContain('GENERATED for this student');
+    expect(args.system).toContain('"Debugging" path');
+    expect(args.system).toContain('gaps: Never located the wrong button id');
+    expect(args.system).toContain('never as failure or punishment');
+  });
+});

@@ -3,6 +3,7 @@ import path from 'path';
 
 import {normalizeLessonPlan} from '@cdo/apps/aiLessons/lessonFormat';
 import {
+  deterministicNextStep,
   deterministicResolver,
   NavContext,
 } from '@cdo/apps/aiLessons/navigation';
@@ -701,5 +702,47 @@ describe('website-skill-tree hub navigation', () => {
       stepId: 'polish-hub',
     });
     expect(await resolveFrom('finalize', ['finalize'])).toEqual({kind: 'end'});
+  });
+});
+
+describe('deterministicNextStep (preview for labels and tutor)', () => {
+  const hubLesson: LessonPlan = {
+    formatVersion: 2,
+    title: 'Preview test',
+    objective: '',
+    authorInputs: {prompt: ''},
+    steps: [
+      {
+        id: 'hub',
+        kind: 'hub',
+        title: 'hub',
+        next: 'closing',
+        // gen-extra sits at the array's END (overlay steps are appended
+        // there) but must preview as returning to the hub, not as the
+        // lesson's last step.
+        paths: [{id: 'p1', title: 'P1', steps: ['s1', 's2', 'gen-extra']}],
+      },
+      lab('s1'),
+      lab('s2'),
+      lab('closing', {next: 'end'}),
+      lab('gen-extra'),
+    ],
+  };
+
+  it('previews the next path step, then the hub, for path steps', () => {
+    expect(deterministicNextStep(hubLesson, 's1')?.id).toBe('s2');
+    expect(deterministicNextStep(hubLesson, 's2')?.id).toBe('gen-extra');
+    expect(deterministicNextStep(hubLesson, 'gen-extra')?.id).toBe('hub');
+  });
+
+  it('previews next pointers and lesson end', () => {
+    expect(deterministicNextStep(hubLesson, 'hub')?.id).toBe('closing');
+    expect(deterministicNextStep(hubLesson, 'closing')).toBeUndefined();
+    expect(deterministicNextStep(hubLesson, 'unknown')).toBeUndefined();
+  });
+
+  it('falls back to array order for plain steps', () => {
+    expect(deterministicNextStep(lesson, 'a')?.id).toBe('check-in');
+    expect(deterministicNextStep(lesson, 'unreachable')).toBeUndefined();
   });
 });

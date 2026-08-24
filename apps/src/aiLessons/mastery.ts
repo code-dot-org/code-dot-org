@@ -19,9 +19,21 @@ import {initAiLessonsGatewayContext} from './aiGatewaySetup';
 import {loggedGenerateText} from './aiLog';
 import {StudentInputs} from './studentInputs';
 import {PathMastery, StepObservation} from './studentProgress';
-import {LessonPlan, pathStepsFor, SkillPath} from './types';
+import {
+  isSandboxStep,
+  LabStep,
+  LessonPlan,
+  pathStepsFor,
+  SkillPath,
+} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
+// Remediation content is authored off the critical path (the student is
+// already back at the hub) — spend the bigger model on it.
+const REMEDIATION_MODEL_ID = AiChatModelIds.GEMINI_2_5_PRO;
+// The generation loop must terminate: at the cap the honest verdict
+// stands and no more steps are added.
+export const MAX_REMEDIATION_ROUNDS = 2;
 
 // `reasoning` and `gaps` precede the verdict so the model commits to
 // its reading of the evidence before deciding.
@@ -126,4 +138,154 @@ ${formatEvidence(lesson, stepIds, inputs, observations)}${
     gaps: (raw.gaps || []).map(g => String(g)).filter(Boolean),
     at: new Date().toISOString(),
   };
+}
+
+// --- Remediation generation ---
+
+const remediationSchema = Output.object({
+  schema: z.object({
+    steps: z
+      .array(
+        z.object({
+          title: z
+            .string()
+            .describe('Short, encouraging student-facing title.'),
+          description: z
+            .string()
+            .describe(
+              "The AI tutor's brief for this step: what the student should do, what the exercise plants (bugs, structure), and which gap it targets. The tutor paraphrases this — never shown verbatim."
+            ),
+          successCriteria: z
+            .string()
+            .describe(
+              'What must verifiably be true of the work to pass. Concrete and checkable from the code.'
+            ),
+          starterFiles: z
+            .array(
+              z.object({
+                filename: z
+                  .string()
+                  .describe('e.g. "index.html", "style.css", "script.js"'),
+                contents: z.string().describe('Complete file contents.'),
+              })
+            )
+            .describe(
+              'The starting files that ARE the exercise — plant the bug to find or the structure to extend here. Include index.html.'
+            ),
+        })
+      )
+      .min(1)
+      .max(2)
+      .describe('One exercise per gap, at most two.'),
+  }),
+});
+
+// The student's own question-step answers (interests, project idea) so
+// the exercise can be about THEIR topic.  Practice-step records are
+// evidence, not vision — the evaluator already weighed those.
+function formatStudentBackground(
+  lesson: LessonPlan,
+  inputs: StudentInputs
+): string {
+  const records = Object.values(inputs)
+    .filter(r => !isSandboxStep(lesson, r.stepId))
+    .filter(r => !r.questionId.startsWith('ai-prompt-'))
+    .sort((a, b) => a.at.localeCompare(b.at));
+  if (records.length === 0) return '(nothing recorded)';
+  return records.map(r => `  - "${r.prompt}" → ${r.answer}`).join('\n');
+}
+
+// Generates targeted practice steps for a failed mastery verdict.
+// Returns fully-formed LabSteps ready for the overlay: sandboxed,
+// tutor-gated, flagged `generated`, ids namespaced by path and round.
+export async function generateRemediationSteps(options: {
+  lesson: LessonPlan;
+  path: SkillPath;
+  verdict: PathMastery;
+  inputs: StudentInputs;
+  round: number;
+}): Promise<LabStep[]> {
+  initAiLessonsGatewayContext();
+  const {lesson, path, verdict, inputs, round} = options;
+
+  const existingSteps = pathStepsFor(lesson, path)
+    .map(id => lesson.steps.find(s => s.id === id))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s))
+    .map(
+      s =>
+        `  - ${s.title}${
+          s.kind !== 'panels' && s.description ? `: ${s.description}` : ''
+        }`
+    )
+    .join('\n');
+
+  const response = await loggedGenerateText('remediation generator', {
+    model: getModel(REMEDIATION_MODEL_ID),
+    system: `You design one or two short remediation exercises for a K-12
+student who completed a skill path without demonstrating mastery.  Each
+exercise is a small Web Lab 2 sandbox: you write the starting files, the
+AI tutor coaches from your description, and your success criteria decide
+when the student passes.
+
+SKILL PATH: ${path.title}
+OBJECTIVE: ${path.objective || '(none authored)'}${
+      path.standard ? `\nSTANDARD: ${path.standard}` : ''
+    }
+
+THE PATH'S EXISTING EXERCISES (do not repeat these — the student already
+did them without demonstrating mastery; come at the gaps differently):
+${existingSteps}
+
+ABOUT THIS STUDENT (make the exercise about THEIR interests — a bug hunt
+in a page about their topic beats a generic one):
+${formatStudentBackground(lesson, inputs)}
+
+RULES
+- One exercise per gap below, at most two exercises.
+- Beginner-readable code: small files, no frameworks, no build tools.
+- The starting files ARE the exercise: plant exactly what the gap needs
+  practiced (a bug to find, a structure to extend, a behavior to wire).
+- Success criteria must be checkable from the code alone.`,
+    prompt: `THE JUDGE'S VERDICT (why mastery wasn't demonstrated):
+${verdict.reasoning}
+
+GAPS TO TARGET:
+${
+  (verdict.gaps || []).map(g => `  - ${g}`).join('\n') ||
+  '  - (none named — design one exercise for the weakest part of the objective)'
+}`,
+    temperature: 0.5,
+    output: remediationSchema,
+  });
+
+  const raw = response.output as {
+    steps?: {
+      title?: string;
+      description?: string;
+      successCriteria?: string;
+      starterFiles?: {filename?: string; contents?: string}[];
+    }[];
+  };
+
+  return (raw.steps || []).slice(0, 2).map((s, i) => {
+    const starterFiles: {[filename: string]: string} = {};
+    (s.starterFiles || []).forEach(f => {
+      const name = String(f.filename || '').trim();
+      if (name) starterFiles[name] = String(f.contents ?? '');
+    });
+    return {
+      id: `gen-${path.id}-${round}-${i + 1}`,
+      kind: 'lab',
+      labType: 'weblab2',
+      title: String(s.title || `More ${path.title} practice`),
+      role: 'skillBuilding',
+      sourceMode: 'sandbox',
+      validation: 'tutor',
+      aiPrompting: 'free',
+      generated: true,
+      description: String(s.description || ''),
+      successCriteria: String(s.successCriteria || ''),
+      ...(Object.keys(starterFiles).length > 0 ? {starterFiles} : {}),
+    };
+  });
 }

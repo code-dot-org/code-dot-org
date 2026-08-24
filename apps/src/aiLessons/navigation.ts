@@ -148,6 +148,34 @@ export const deterministicResolver: NavigationResolver = {
   },
 };
 
+// Deterministic preview of where completing a step leads — undefined
+// means the lesson ends.  Ignores student-dependent routing (branch
+// options, score/aiJudge conditions, which path steps are complete):
+// for a hub-path step it assumes in-order play (next path step, else
+// the hub).  For UI labels and the tutor's next-step preview only;
+// actual navigation always goes through resolveNext with full context.
+export function deterministicNextStep(
+  lesson: LessonPlan,
+  stepId: string
+): Step | undefined {
+  const index = findStepIndex(lesson, stepId);
+  const step = index >= 0 ? lesson.steps[index] : undefined;
+  if (!step) return undefined;
+  const owner = hubOwning(lesson, stepId);
+  if (owner) {
+    const ids = pathStepsFor(lesson, owner.path);
+    const pos = ids.indexOf(stepId);
+    const nextId =
+      pos >= 0 && pos < ids.length - 1 ? ids[pos + 1] : owner.hub.id;
+    return lesson.steps.find(s => s.id === nextId);
+  }
+  if (step.next === 'end') return undefined;
+  if (step.next && stepExists(lesson, step.next)) {
+    return lesson.steps.find(s => s.id === step.next);
+  }
+  return index < lesson.steps.length - 1 ? lesson.steps[index + 1] : undefined;
+}
+
 async function branchConditionHolds(
   when: BranchCondition,
   ctx: NavContext

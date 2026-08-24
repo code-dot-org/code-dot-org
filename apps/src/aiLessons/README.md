@@ -98,6 +98,35 @@ Step kinds:
   phase: a remediation generator appending steps to the path through a
   per-student overlay.
 
+  A failed verdict closes the loop: `generateRemediationSteps`
+  (Gemini Pro — off the critical path, content quality matters) writes
+  1-2 targeted sandbox exercises from the verdict's gaps, personalized
+  with the student's own interview answers and forbidden from repeating
+  the path's existing exercises.  They land in the overlay (overlay
+  write BEFORE the verdict write, so a crash between them leaves an
+  extra exercise without a verdict rather than the reverse), the path's
+  ring grows a segment in place, and the hub gate reopens.  Completing
+  the added practice re-completes the path, which re-evaluates —
+  mastered verdicts are final; failed ones regenerate up to
+  MAX_REMEDIATION_ROUNDS (2), after which the honest verdict stands.
+  The tutor is briefed to frame added steps as growth ("a new challenge
+  because you're close"), never as failure, and never to mention
+  judging; teachers see "+N added" beside the mastery badge.
+
+  The **overlay** (`overlay.ts`) is that landing pad: a per-(lesson,
+  user) file (`overlays/<lessonId>/<userId>.json`, GET/PUT at
+  `/ai_lessons/:id/overlay`) holding generated step definitions, the
+  path ids they extend, and the remediation rounds consumed.  The
+  authored lesson is shared and immutable; `applyOverlay()` merges the
+  two into the effective lesson the player runs — generated steps are
+  appended to the end of the array (array position drives
+  checkpointIndex, so mid-array insertion would corrupt event history)
+  and routed by path membership.  Defensive on generated content:
+  colliding ids and dangling extensions are dropped, and the merged
+  plan re-normalizes so malformed steps degrade like malformed authored
+  JSON.  The teacher roll-up merges the same extensions so ring totals
+  match the student's.
+
 Cross-cutting fields:
 
 - `role` + `segment` — advisory labels ("skill practice: HTML tags",

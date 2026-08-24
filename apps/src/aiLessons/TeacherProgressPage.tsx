@@ -22,6 +22,8 @@ interface TeacherHubPath {
   objective?: string;
   standard?: string;
   steps: string[];
+  // How many of `steps` are agent-generated remediation.
+  added_steps?: number;
 }
 
 interface TeacherHub {
@@ -220,6 +222,14 @@ const TeacherProgressPage: React.FunctionComponent = () => {
                                   size={22}
                                 />
                                 {p.title} {done}/{p.steps.length}
+                                {(p.added_steps ?? 0) > 0 && (
+                                  <span
+                                    className={styles.muted}
+                                    title="Agent-generated practice steps added to this path"
+                                  >
+                                    +{p.added_steps} added
+                                  </span>
+                                )}
                                 {verdict && (
                                   <span
                                     className={

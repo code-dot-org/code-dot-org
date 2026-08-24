@@ -1405,6 +1405,8 @@ Dashboard::Application.routes.draw do
     put '/ai_lessons/:id/progress', to: 'ai_lessons#write_progress'
     get '/ai_lessons/:id/inputs', to: 'ai_lessons#read_inputs'
     put '/ai_lessons/:id/inputs', to: 'ai_lessons#write_inputs'
+    get '/ai_lessons/:id/overlay', to: 'ai_lessons#read_overlay'
+    put '/ai_lessons/:id/overlay', to: 'ai_lessons#write_overlay'
 
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do

@@ -84,6 +84,10 @@ interface StepBase {
   next?: string | 'end';
   // Automatic performance branching; see StepBranch.
   branches?: StepBranch[];
+  // True on steps the mastery agent generated into a student's overlay
+  // (never on authored steps).  The tutor frames these as targeted
+  // practice; teacher views can badge them.
+  generated?: boolean;
 }
 
 export interface LabStep extends StepBase {
