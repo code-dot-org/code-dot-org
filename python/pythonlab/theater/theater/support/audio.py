@@ -1,5 +1,6 @@
 import io
 import wave
+from itertools import islice
 
 import numpy as np
 
@@ -44,17 +45,33 @@ def read_samples_from_file(filename):
     return read_samples_from_wav_bytes(handle.read())
 
 
+# Longest sample sequence play_sound accepts, in samples. The same ceiling the
+# timeline these land on is bounded by.
+_MAX_SAMPLES = MAX_AUDIO_SECONDS * SAMPLE_RATE
+
+_TOO_LONG = f"The sound is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
+
+
 def as_samples(sound):
   """Snapshot a caller's samples as a float32 array.
 
   A scene renders long after play_sound records it, so samples the student goes
   on to change must not change what plays. An array rather than a list holds a
   minute of audio in 10 MB instead of 106 MB and matches the timeline it lands
-  on; numpy cannot build one straight from a generator, hence the length check.
+  on.
+
+  Length is checked here rather than at render time: an endless iterator has to
+  be turned away before it is drawn from, and the traceback then points at the
+  student's own play_sound call.
   """
-  return np.array(
-    sound if hasattr(sound, "__len__") else list(sound), dtype=np.float32
-  )
+  if hasattr(sound, "__len__"):
+    if len(sound) > _MAX_SAMPLES:
+      raise ValueError(_TOO_LONG)
+    return np.array(sound, dtype=np.float32)
+  samples = np.fromiter(islice(sound, _MAX_SAMPLES + 1), dtype=np.float32)
+  if len(samples) > _MAX_SAMPLES:
+    raise ValueError(_TOO_LONG)
+  return samples
 
 
 def truncate_samples(samples, length_seconds):

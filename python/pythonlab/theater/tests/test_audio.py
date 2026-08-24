@@ -6,6 +6,7 @@ import numpy as np
 import pytest
 
 from theater.support.audio import (
+  _MAX_SAMPLES,
   _MIN_CAPACITY,
   as_samples,
   AudioWriter,
@@ -91,6 +92,32 @@ def test_as_samples_copies_what_it_is_given():
   samples = as_samples(original)
   original[0] = -1.0
   assert samples[0] == 0.5
+
+
+def test_as_samples_rejects_a_sequence_past_the_length_ceiling():
+  with pytest.raises(ValueError):
+    as_samples(np.zeros(_MAX_SAMPLES + 1))
+
+
+def test_as_samples_allows_a_sequence_at_the_length_ceiling():
+  assert len(as_samples(np.zeros(_MAX_SAMPLES))) == _MAX_SAMPLES
+
+
+def test_as_samples_rejects_an_endless_iterator():
+  # Drawing on this without a bound exhausts the heap rather than raising, and
+  # in the browser that takes the interpreter down with it. Counting what the
+  # iterator was asked for proves the ceiling stopped it.
+  drawn = 0
+
+  def forever():
+    nonlocal drawn
+    while True:
+      drawn += 1
+      yield 0.5
+
+  with pytest.raises(ValueError):
+    as_samples(forever())
+  assert drawn == _MAX_SAMPLES + 1
 
 
 def test_truncate_shortens_but_never_extends():
