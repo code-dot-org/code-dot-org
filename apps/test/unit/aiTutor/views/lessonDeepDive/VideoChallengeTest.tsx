@@ -119,6 +119,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={jest.fn()}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 
@@ -135,6 +137,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={jest.fn()}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 
@@ -156,6 +160,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={submitCallback}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 
@@ -207,6 +213,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={jest.fn()}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 
@@ -234,6 +242,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={submitCallback}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 
