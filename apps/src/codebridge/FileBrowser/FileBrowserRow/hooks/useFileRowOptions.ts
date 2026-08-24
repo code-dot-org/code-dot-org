@@ -42,6 +42,7 @@ const handleFileDownload = async (file: ProjectFile) => {
           `Failed to fetch file: ${response.status} ${response.statusText}`
         );
         alert('File retrieval failed. Please try again.');
+        return;
       }
       const blob = await response.blob();
       fileDownload(blob, file.name);

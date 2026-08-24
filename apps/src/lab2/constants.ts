@@ -32,7 +32,7 @@ export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
 ];
 
 // Project types whose content is share-filtered for profanity/PII on the
-// server. Must stay in sync with FILTERED_PROJECT_TYPES in
+// server. Must stay in sync with FILTERED_PROJECT_TYPES inp
 // lib/cdo/share_filtering.rb (for the lab2 project types listed there).
 export const PROJECT_TYPES_WITH_SHARE_FILTERING: ProjectType[] = ['sketchlab'];
 
@@ -68,6 +68,6 @@ export const SUPPORTED_IMAGE_EXTENSIONS = SafeAndSupportedImageTypes.flatMap(
   mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
 );
 
-// Audio formats a project file can be played back as. Kept narrow on purpose:
-// every browser we support decodes WAV without a codec negotiation.
+// Audio formats a project file can be played back as. Kept narrow on purpose;
+// wav is widely supported across browsers.
 export const SUPPORTED_AUDIO_EXTENSIONS = ['wav'];
