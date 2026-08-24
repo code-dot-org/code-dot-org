@@ -21,6 +21,11 @@ interface TokenAcquisition {
   token: Promise<string>;
 }
 
+// Mutable so a caller adopting a pre-fetch can relabel it before it settles.
+interface ChallengeOutcomeMode {
+  mode: TokenAcquisitionMode;
+}
+
 /**
  * Manages Turnstile widget lifecycle with three goals:
  *
@@ -55,6 +60,8 @@ export class TurnstileManager {
   // Timestamp (Date.now()) recorded when nextTokenPromise resolved. Used to
   // detect tokens older than TOKEN_MAX_AGE_MS before they are consumed.
   private nextTokenResolvedAt: number | null = null;
+
+  private nextTokenOutcomeMode: ChallengeOutcomeMode | null = null;
 
   private widgetId: string | null = null;
 
@@ -181,6 +188,7 @@ export class TurnstileManager {
         );
         this.nextTokenPromise = null;
         this.nextTokenResolvedAt = null;
+        this.nextTokenOutcomeMode = null;
       } else {
         console.log(
           `${LOG} Pre-fetch hit — returning in-progress token${
@@ -188,15 +196,20 @@ export class TurnstileManager {
           }`
         );
         const p = this.nextTokenPromise;
+        // This caller now awaits it, so a failure here is user-visible.
+        if (age === null && this.nextTokenOutcomeMode) {
+          this.nextTokenOutcomeMode.mode = 'on-demand';
+        }
         this.nextTokenPromise = null;
         this.nextTokenResolvedAt = null;
+        this.nextTokenOutcomeMode = null;
         this.schedulePrefetch();
         return {mode: 'pre-fetch', token: p};
       }
     }
 
     console.log(`${LOG} Pre-fetch miss — enqueueing fresh challenge`);
-    const result = this.runSerializedChallenge('on-demand');
+    const result = this.runSerializedChallenge({mode: 'on-demand'});
     result.then(
       () => this.schedulePrefetch(),
       () => {}
@@ -210,8 +223,10 @@ export class TurnstileManager {
       return;
     }
     console.log(`${LOG} Scheduling pre-fetch challenge`);
-    const p = this.runSerializedChallenge('pre-fetch');
+    const outcomeMode: ChallengeOutcomeMode = {mode: 'pre-fetch'};
+    const p = this.runSerializedChallenge(outcomeMode);
     this.nextTokenPromise = p;
+    this.nextTokenOutcomeMode = outcomeMode;
     p.then(
       token => {
         this.nextTokenResolvedAt = Date.now();
@@ -229,16 +244,18 @@ export class TurnstileManager {
         if (this.nextTokenPromise === p) {
           this.nextTokenPromise = null;
           this.nextTokenResolvedAt = null;
+          this.nextTokenOutcomeMode = null;
         }
       }
     );
   }
 
-  private runSerializedChallenge(mode: TokenAcquisitionMode): Promise<string> {
+  private runSerializedChallenge(
+    outcomeMode: ChallengeOutcomeMode
+  ): Promise<string> {
     console.log(`${LOG} Challenge enqueued on chain`);
 
-    // Timed from release rather than from enqueue so the duration is comparable
-    // to CHALLENGE_TIMEOUT_MS and excludes time spent waiting behind the chain.
+    // Timed from chain release, not enqueue, to match CHALLENGE_TIMEOUT_MS.
     const startChallenge = () => {
       const start = performance.now();
       return loadTurnstileScript()
@@ -246,14 +263,14 @@ export class TurnstileManager {
         .then(
           token => {
             recordTurnstileOutcome({
-              mode,
+              mode: outcomeMode.mode,
               durationMs: performance.now() - start,
             });
             return token;
           },
           error => {
             recordTurnstileOutcome({
-              mode,
+              mode: outcomeMode.mode,
               durationMs: performance.now() - start,
               error,
             });

@@ -77,7 +77,10 @@ type TurnstileManagerPrivates = {
     mode: 'pre-fetch' | 'on-demand';
     token: Promise<string>;
   };
-  runSerializedChallenge: (mode: 'pre-fetch' | 'on-demand') => Promise<string>;
+  nextTokenOutcomeMode: {mode: 'pre-fetch' | 'on-demand'} | null;
+  runSerializedChallenge: (outcomeMode: {
+    mode: 'pre-fetch' | 'on-demand';
+  }) => Promise<string>;
 };
 
 describe('TurnstileManager stale pre-fetch', () => {
@@ -149,7 +152,7 @@ describe('TurnstileManager challenge acquisition mode', () => {
 
     m.startTokenAcquisition();
 
-    expect(challenge).toHaveBeenCalledWith('on-demand');
+    expect(challenge).toHaveBeenCalledWith({mode: 'on-demand'});
   });
 
   it('labels the speculative follow-up challenge as pre-fetch', async () => {
@@ -161,8 +164,40 @@ describe('TurnstileManager challenge acquisition mode', () => {
     const {token} = m.startTokenAcquisition();
     await token;
 
-    expect(challenge).toHaveBeenNthCalledWith(1, 'on-demand');
-    expect(challenge).toHaveBeenNthCalledWith(2, 'pre-fetch');
+    expect(challenge).toHaveBeenNthCalledWith(1, {mode: 'on-demand'});
+    expect(challenge).toHaveBeenNthCalledWith(2, {mode: 'pre-fetch'});
+  });
+
+  it('promotes a still-running pre-fetch to on-demand when a caller adopts it', () => {
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    jest
+      .spyOn(m, 'runSerializedChallenge')
+      .mockResolvedValue('replacement-token');
+
+    const outcomeMode: {mode: 'pre-fetch' | 'on-demand'} = {mode: 'pre-fetch'};
+    m.nextTokenPromise = new Promise(() => {}); // never settles
+    m.nextTokenResolvedAt = null;
+    m.nextTokenOutcomeMode = outcomeMode;
+
+    m.startTokenAcquisition();
+
+    expect(outcomeMode.mode).toBe('on-demand');
+  });
+
+  it('leaves an already-resolved pre-fetch labelled pre-fetch', () => {
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    jest.spyOn(m, 'runSerializedChallenge').mockResolvedValue('ignored');
+
+    const outcomeMode: {mode: 'pre-fetch' | 'on-demand'} = {mode: 'pre-fetch'};
+    m.nextTokenPromise = Promise.resolve('prefetched-token');
+    m.nextTokenResolvedAt = Date.now();
+    m.nextTokenOutcomeMode = outcomeMode;
+
+    m.startTokenAcquisition();
+
+    expect(outcomeMode.mode).toBe('pre-fetch');
   });
 });
 

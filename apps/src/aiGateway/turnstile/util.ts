@@ -26,8 +26,7 @@ export function isTurnstileDevToolsError(error: Error): boolean {
   return error.name === 'TurnstileDevToolsError';
 }
 
-// Errors are sampled well below 1.0, so the metric and log streams are the
-// authoritative record. This only makes the sampled remainder filterable.
+// Errors are sampled far below 1.0 — metrics and logs are authoritative.
 export function turnstileErrorTags(
   error: unknown
 ): {'error.category': GatewayErrorCategory} | undefined {

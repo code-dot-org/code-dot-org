@@ -6,8 +6,7 @@ import {
   type TurnstileFailureReason,
 } from './types';
 
-// Sentry alert rules divide a filtered series by an unfiltered one, so success
-// and failure share a metric name and are separated by the `result` attribute.
+// One metric name for both outcomes so alert rules can divide error by total.
 const OUTCOME_METRIC = 'ai-gateway.turnstile';
 const DURATION_METRIC = 'ai-gateway.turnstile.duration_ms';
 

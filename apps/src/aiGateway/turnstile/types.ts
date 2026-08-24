@@ -11,14 +11,7 @@ declare global {
   }
 }
 
-/**
- * Where the delivered token came from: 'pre-fetch' when a challenge started in
- * the background after the previous delivery had already produced it,
- * 'on-demand' when the caller had to wait for a challenge started for it.
- *
- * Reported separately in metrics because a pre-fetch failure is invisible to
- * the user and self-healing, while an on-demand failure is a broken request.
- */
+/** Whether a caller was waiting on the challenge that produced the token. */
 export type TokenAcquisitionMode = 'pre-fetch' | 'on-demand';
 
 export type TurnstileFailureReason =
@@ -29,10 +22,7 @@ export type TurnstileFailureReason =
   | 'remove_failed'
   | 'unknown';
 
-/**
- * A challenge failure carrying the reason it failed, so metrics and logs can
- * aggregate on a bounded enum rather than string-matching error messages.
- */
+/** Carries a bounded reason so metrics aggregate without matching messages. */
 export class TurnstileChallengeError extends Error {
   readonly reason: TurnstileFailureReason;
 
@@ -47,8 +37,7 @@ export class TurnstileChallengeError extends Error {
   }
 }
 
-// Subclassed Errors do not survive `instanceof` under the es5 downlevel build,
-// so the tag is read from `name` instead.
+// instanceof fails on Error subclasses under the es5 downlevel build.
 export const isTurnstileChallengeError = (
   error: unknown
 ): error is TurnstileChallengeError =>
