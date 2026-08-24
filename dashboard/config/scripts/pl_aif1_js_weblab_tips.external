@@ -14,7 +14,7 @@ markdown <<MARKDOWN
     <div style="flex: 1;">
       <h3>Using the AI</h3>
       <p>The AI can be a great partner for debugging and creating. Encourage students to ask it for help finding problems in their code or brainstorming ways to improve their project.</p>
-      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;font-size: 16px;">
         ➡️ Click the AI icon in the top left of the workspace to open the AI bot.
       </div>
     </div>
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
     <div style="flex: 1;">
       <h3>Prompt Engineering</h3>
       <p>Good prompts lead to better results. Be specific about what you want the AI to do.</p>
-      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px; font-size: 16px;">
         💡 Instead of "make it look better," try "center the box and change the text color to blue."
       </div>
     </div>
@@ -36,7 +36,7 @@ markdown <<MARKDOWN
     <div style="flex: 1;">
       <h3>Using the Code</h3>
       <p>Make sure code goes in the right place. HTML handles structure, CSS handles style.</p>
-      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px; font-size: 16px;">
         🧠 Double check which file you're on before editing text.
       </div>
     </div>
@@ -47,7 +47,7 @@ markdown <<MARKDOWN
     <div style="flex: 1;">
       <h3>Version History</h3>
       <p>Mistakes happen. Get into the habit of saving version history so it's easy to roll back to an earlier version if something breaks.</p>
-      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px; font-size: 16px;">
         🔁 Click the Version History icon, describe the change, and save. This lets students experiment and return to an earlier version if something doesn't work out.
       </div>
     </div>
@@ -58,7 +58,7 @@ markdown <<MARKDOWN
     <div style="flex: 1;">
       <h3>Troubleshooting</h3>
       <p>Something not working? Slow down and look for small details. Missing tags, typos, or misplaced brackets are usually the culprit.</p>
-      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px; font-size: 16px;">
         🔍 Debugging is detective work, not guessing. The AI can help here too.
       </div>
     </div>
@@ -69,7 +69,7 @@ markdown <<MARKDOWN
     <div style="flex: 1;">
       <h3>Lag Time and Patience with Results</h3>
       <p>Sometimes Web Lab or the AI takes a few seconds to load. Remind students to pause and wait before refreshing or clicking again.</p>
-      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px; font-size: 16px;">
         ⏳ A little patience keeps things running smoothly.
       </div>
     </div>
@@ -77,7 +77,7 @@ markdown <<MARKDOWN
 
 </div>
 
-<div style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<div style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 16px 20px; margin: 20px 0; font-size: 16px;">
 Which of these do you want to emphasize with your students during this unit?
 </div>
 

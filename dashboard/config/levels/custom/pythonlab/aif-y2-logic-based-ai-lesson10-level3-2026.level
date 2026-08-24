@@ -10,7 +10,7 @@
     "project_template_level_name": "aif-y2-logic-based-ai-lesson10-2026 + template",
     "long_instructions": "**☑️ Do This:**\r\n\r\n\r\n- Ask AI how to update the `is_match` function so that capitalization doesn’t matter.\r\n- Update your program.\r\n- Choose your own fragments and predictions to test your program. Again, be creative with your testing! Does the program work for words you frequently type?\r\n",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -29,8 +29,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpDORubODNc0lRY\niWtGwdUkJeYvZ5JFuDISozEInyOJzn6nDS/HOTMfwgmvk4yhNjh0ta31yJ1D\nD2ThwRGRVK7CElGXwkQNuTWXHr6HzeaaBSJ/tTu+g5C7P1lqeKrDJsD6rHyQ\niX5eZF4SLQDkobqY6FvxrFHtxT5f3/+oTbD9EDCFyaqvEMnAMx6P3v2jaMhE\n393+QBob+lecHcnBBhUaN+ZiqK6Ps4kIl+HFJr+Hzwwyrfx6vmziJybeKlTJ\nlR5L2kUscdVUtl17XNU4BlukK43RO25FOe1dUJc9vOGoe42cL/kOl5CkTLp9\nx6Ool3wLp36XmfcFoVXIpa3kZG/W7/dPMAIxyG9TFgHSt+VGPftnPBdIjc7J\nmPPx9dstmfd4ewz/NO/75PaI36Xm2c09moJ25gXV5bJWlRazrF2DjLHgiofa\noneJIFbUNtVA81IByCB39PiRIWHnI0+N1yDGH44+DNSg9B8AyFS+gn8OX/RP\n9eaRVG0CPoXDckl3zXbRr/hG2R+anX+nUps8zfVdhhmk+UyL/QJ3tudO4bBt\n/xrmP1et57kEOyeLx9KAUA9elxVcRtLnvL4W87R7y0Vc\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 20:01:49 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 20:01:49 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:26:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:42:30 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>
