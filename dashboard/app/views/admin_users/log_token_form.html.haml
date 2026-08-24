@@ -1,0 +1,67 @@
+%h1 User Log Tokens
+
+#application-container
+  = show_flashes.html_safe
+
+%p
+  Logs and telemetry identify users by an opaque token rather than a raw user id. Each destination gets a different token for the same user, so a token from one system cannot be matched against another's, and every user gets a new token each school year.
+
+%h2 Find a user's tokens
+
+%p.text-muted
+  Enter a user id to list the tokens that user already has, then search for one in the corresponding system. This page does not create tokens.
+
+= form_tag url_for(action: 'log_token_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :user_id, params[:user_id], class: 'form-control', placeholder: 'numeric user id', size: 20
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+
+- if @invalid_input
+  %p.text-danger Enter a numeric user id.
+- elsif @tokens.present?
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th Destination
+      %th School year
+      %th Token
+    %tbody
+      - @tokens.each do |token|
+        %tr
+          %td= token.destination
+          %td= token.period
+          %td
+            %code= token.uuid
+- elsif @input.present?
+  %p.text-muted
+    No log tokens for user #{@input}. This user has not appeared in any destination, so there is nothing to search for.
+
+%hr
+
+%h2 Identify a user from a token
+
+%p.text-danger
+  This re-identifies a student.
+
+= form_tag resolve_log_token_path, method: 'post', enforce_utf8: false do
+  %div
+    = label_tag :token, 'Token'
+    = text_field_tag :token, nil, class: 'form-control', placeholder: '3f2a9c14-7b8e-4d21-9a33-c5e1f0b47d92', size: 90
+  %div{style: 'margin-top: 8px;'}
+    = label_tag :reason, 'Reason (required)'
+    = text_field_tag :reason, nil, class: 'form-control', placeholder: 'e.g. Zendesk 4821, safety review', size: 60
+  %div{style: 'margin-top: 8px;'}
+    %button.btn.btn-danger{type: 'submit'} Identify user
+
+- if @resolve_attempted && @resolved.present?
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th User ID
+      %th Destination
+      %th School year
+    %tbody
+      %tr
+        %td= link_to @resolved[:user_id], permissions_form_path(search_term: @resolved[:user_id])
+        %td= @resolved[:destination]
+        %td= @resolved[:period]
+
+= render partial: 'home/admin'
