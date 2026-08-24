@@ -7,6 +7,8 @@ import pytest
 
 from theater.support.audio import (
   _MIN_CAPACITY,
+  _RESAMPLE_CHUNK,
+  _to_output_rate,
   as_samples,
   AudioWriter,
   read_samples_from_wav_bytes,
@@ -52,6 +54,46 @@ def test_read_resamples_to_the_output_rate(frame_rate):
 def test_read_leaves_output_rate_input_alone():
   samples = read_samples_from_wav_bytes(_make_wav_bytes([0.25, -0.25], 1))
   assert np.allclose(samples, [0.25, -0.25], atol=1e-4)
+
+
+def _unblocked_resample(samples, source_rate):
+  """The whole track at once, as a reference for the blocked version."""
+  new_length = int(len(samples) * SAMPLE_RATE / source_rate)
+  positions = np.arange(new_length) * source_rate / SAMPLE_RATE
+  return np.interp(positions, np.arange(len(samples)), samples)
+
+
+def test_read_returns_float32():
+  # These land on a float32 timeline. A float64 decode doubled the heap at
+  # every step, which for a track near the length ceiling ran to hundreds of
+  # megabytes on a machine with none to spare.
+  samples = read_samples_from_wav_bytes(_make_wav_bytes([0.25, -0.25], 1))
+  assert samples.dtype == np.float32
+
+
+def test_stereo_averaging_is_exact():
+  # Not allclose, unlike its neighbours: a sum of two 16-bit values needs 17
+  # bits and is scaled only by powers of two, so float32 carries the average
+  # with nothing rounded away.
+  samples = read_samples_from_wav_bytes(_make_wav_bytes([0.25, -0.75, 0.5, 0.5], 2))
+  assert samples.tolist() == [-0.25, 0.5]
+
+
+@pytest.mark.parametrize("frame_rate", [8000, 22050, 48000, 88200])
+@pytest.mark.parametrize(
+  "length", [1, 2, _RESAMPLE_CHUNK - 1, _RESAMPLE_CHUNK, 3 * _RESAMPLE_CHUNK + 7]
+)
+def test_resampling_a_block_at_a_time_matches_the_whole_track(frame_rate, length):
+  # Resampling a block at a time is what keeps interp's float64 working set off
+  # the length of the track. An error at a block's edge would be inaudible in a
+  # spot check, so compare against the unblocked arithmetic outright.
+  samples = np.random.default_rng(length).uniform(-1.0, 1.0, length)
+  samples = samples.astype(np.float32)
+  assert np.allclose(
+    _to_output_rate(samples, frame_rate),
+    _unblocked_resample(samples, frame_rate),
+    atol=1e-6,
+  )
 
 
 def test_read_rejects_a_missing_sample_rate():

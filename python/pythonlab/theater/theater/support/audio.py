@@ -28,15 +28,35 @@ def read_samples_from_wav_bytes(wav_bytes):
       raise ValueError(
         f"The sound is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
       )
-    frames = reader.readframes(num_frames)
-  raw = np.frombuffer(frames, dtype="<i2").astype(np.float64) / MAX_16_BIT_VALUE
+    # Passed straight in, so the frame bytes are released when it returns
+    # rather than sitting alongside the resample that follows.
+    mono = _decode_frames(reader.readframes(num_frames), num_channels)
+  return _to_output_rate(mono, frame_rate)
+
+
+def _decode_frames(frames, num_channels):
+  """Normalized mono float32 samples from 16-bit PCM frame bytes.
+
+  float32 the whole way: these land on a float32 timeline, and every float64
+  step costs twice the heap, which for a track near the length ceiling runs to
+  hundreds of megabytes on a machine that has none to spare. Scaling in place
+  keeps the temporaries out as well.
+
+  Averaging two channels is exact here. A sum of two 16-bit values needs 17
+  bits, and halving and scaling it are both divisions by a power of two, all of
+  which float32 holds without rounding.
+  """
+  raw = np.frombuffer(frames, dtype="<i2")
   if num_channels == 1:
-    mono = raw
+    mono = raw.astype(np.float32)
   elif num_channels == 2:
-    mono = (raw[0::2] + raw[1::2]) / 2.0
+    mono = raw[0::2].astype(np.float32)
+    mono += raw[1::2]
+    mono *= 0.5
   else:
     raise ValueError("Only mono or stereo WAV data is supported")
-  return _to_output_rate(mono, frame_rate)
+  mono /= MAX_16_BIT_VALUE
+  return mono
 
 
 def read_samples_from_file(filename):
@@ -145,6 +165,13 @@ class AudioWriter:
     self._samples.resize(capacity, refcheck=False)
 
 
+# How much of the track to resample at a time. numpy's interp works in float64
+# whatever it is handed, so a whole track at once would build the positions, the
+# indices and the result at eight bytes a sample; a block at a time keeps that
+# off the length of the track.
+_RESAMPLE_CHUNK = SAMPLE_RATE
+
+
 def _to_output_rate(samples, source_rate):
   """Linearly resample to SAMPLE_RATE, preserving the sound's duration.
 
@@ -154,8 +181,19 @@ def _to_output_rate(samples, source_rate):
   if source_rate == SAMPLE_RATE or len(samples) == 0:
     return samples
   new_length = int(len(samples) * SAMPLE_RATE / source_rate)
-  positions = np.arange(new_length) * source_rate / SAMPLE_RATE
-  return np.interp(positions, np.arange(len(samples)), samples)
+  step = source_rate / SAMPLE_RATE
+  resampled = np.empty(new_length, dtype=np.float32)
+  for start in range(0, new_length, _RESAMPLE_CHUNK):
+    stop = min(start + _RESAMPLE_CHUNK, new_length)
+    positions = np.arange(start, stop) * step
+    # The input this block reads from, plus the one sample interpolation looks
+    # ahead to. Positions are absolute, so the indices handed to interp are too.
+    first = int(positions[0])
+    last = min(int(positions[-1]) + 2, len(samples))
+    resampled[start:stop] = np.interp(
+      positions, np.arange(first, last), samples[first:last]
+    )
+  return resampled
 
 
 def _to_int16(samples):
