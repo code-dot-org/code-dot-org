@@ -195,6 +195,7 @@ import {
 import {
   DEFINE_TWEEN,
   inTweenBody,
+  PLAY_TWEEN_HERE,
   tweenStepCode,
   tweenOptions,
   tweenOptionsExtension,
@@ -6890,6 +6891,76 @@ registerValueShadows(DEFINE_TWEEN, [
 ]);
 
 /**
+ * `play a tween on ⟨…⟩` — a tween with no name, written where it is used.
+ *
+ * The named pair — `define tween` and `play tween` — is what a movement several
+ * things share wants: describe it once, play it wherever. Most tweens are not
+ * that. A door that slides open once, a title that fades on the way to the
+ * menu: putting each in a definition somewhere else, to name it and then name
+ * it again, is ceremony for a thing used in one place.
+ *
+ * WHAT IS GIVEN UP IS THE END. `a tween finishes` carries the tween's name, so
+ * a handler waiting for one of these cannot tell it from any other unnamed
+ * tween. Anything that needs to hear about its own ending should be defined and
+ * named; that is the trade, and it is the reason both blocks exist rather than
+ * one.
+ */
+const worldPlayTweenHere = defineBlock({
+  type: PLAY_TWEEN_HERE,
+  message0: 'play a tween on %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  message1: 'over %1 seconds, %2',
+  args1: [
+    {type: 'input_value', name: 'SECONDS', check: 'Number'},
+    {
+      type: 'field_dropdown',
+      name: 'CURVE',
+      options: [
+        ['steadily', 'linear'],
+        ['starting slowly', 'ease-in'],
+        ['ending slowly', 'ease-out'],
+        ['slow at both ends', 'ease-in-out'],
+      ],
+    },
+  ],
+  message2: 'move %1',
+  args2: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorInputExtension, valueShadowExtension],
+  style: 'behavior_blocks',
+  tooltip:
+    'Move some properties over time, described right here. Use `define ' +
+    'tween` instead when several things play the same movement, or when ' +
+    'something has to hear that it finished.',
+  generator: {
+    javascript(block, generator) {
+      const seconds =
+        generator.valueToCode(block, 'SECONDS', Order.NONE) || '0';
+      const destinations = generator.statementToCode(block, 'DO') || '';
+      const plan =
+        `{id: "an unnamed tween", duration: ${seconds}, ` +
+        `curve: ${str(String(block.getFieldValue('CURVE') ?? 'linear'))}, ` +
+        `steps: [\n${destinations}]}`;
+      return forEachActor(
+        actorTarget(block, generator),
+        who =>
+          // Bound as `actor` around the destinations, exactly as a named
+          // tween's definition is — so `this actor` inside the mouth means the
+          // actor being tweened in both blocks, and not the enclosing handler's
+          // in one of them and the played one in the other.
+          `${who}.startTween(` +
+          `WorldLab.beginTween(((actor) => (${plan}))(${who}), ${who}), ` +
+          `WorldLab.tweenDisplaced)`,
+      );
+    },
+  },
+});
+registerValueShadows(PLAY_TWEEN_HERE, [
+  {name: 'SECONDS', shadow: {type: 'math_number', fields: {NUM: 1}}},
+]);
+
+/**
  * `play tween ⟨…⟩ on ⟨…⟩` — start one running.
  *
  * The definition says what the movement IS; this says when and to whom. It
@@ -6988,6 +7059,7 @@ export const DOMAIN_BLOCKS = [
   worldUseTrait,
   worldDefineTween,
   worldPlayTween,
+  worldPlayTweenHere,
   worldAddTrait,
   worldAddCameraTrait,
   worldRemoveTrait,
@@ -7270,6 +7342,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // rather than where it is.
       'world_define_tween',
       'world_play_tween',
+      // …and the same movement written where it is used, for the one that is
+      // not shared and has nobody waiting to hear it end.
+      'world_play_tween_here',
       // How a camera rule reaches the camera every world already has. Listed
       // HERE, beside the camera blocks, because that is where somebody wiring
       // one up is looking — the actor pair stays with the runtime blocks.

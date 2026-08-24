@@ -382,3 +382,131 @@ describe('a tween of two properties at once', () => {
     expect(actor.tweens()).toHaveLength(0);
   });
 });
+
+// A tween with no name, written where it is used.
+//
+// Most tweens are not shared: a door that slides open once, a title that fades
+// on the way to the menu. Putting each in a definition somewhere else — to name
+// it and then name it again — is ceremony for a thing used in one place.
+//
+// What is given up is the end. `a tween finishes` carries the tween's name, so
+// nothing can wait for one of these in particular. That is the trade, and the
+// reason both blocks exist.
+const inlineWorld = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_world',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'My World'},
+        next: {
+          block: {
+            type: 'world_add_actor',
+            fields: {ACTOR: 'actors/player'},
+            inputs: {
+              DO: {
+                block: {
+                  type: 'world_play_tween_here',
+                  fields: {CURVE: 'linear'},
+                  inputs: {
+                    ACTOR: {block: {type: 'world_this_actor'}},
+                    SECONDS: {block: {type: 'math_number', fields: {NUM: 1}}},
+                    DO: {
+                      block: {
+                        // `this actor` HERE means the actor being tweened, as
+                        // it does inside a definition — the two blocks must not
+                        // disagree about whose property this is.
+                        type: 'world_set_Appearance_OpacityProperty',
+                        inputs: {
+                          ACTOR: {block: {type: 'world_this_actor'}},
+                          VALUE: {
+                            block: {type: 'math_number', fields: {NUM: 0}},
+                          },
+                        },
+                        next: {
+                          block: {
+                            type: 'world_set_position',
+                            inputs: {
+                              ACTOR: {block: {type: 'world_this_actor'}},
+                              X: {
+                                block: {
+                                  type: 'math_number',
+                                  fields: {NUM: 40},
+                                },
+                              },
+                              Y: {
+                                block: {type: 'math_number', fields: {NUM: 0}},
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    ],
+  },
+});
+
+const inline = () =>
+  projectFiles({
+    files: {
+      p: {
+        id: 'p',
+        name: 'player.actor',
+        language: 'actor',
+        contents: PLAYER,
+        folderId: 'actors',
+      },
+      w: {
+        id: 'w',
+        name: 'main.world',
+        language: 'world',
+        contents: inlineWorld,
+        folderId: 'worlds',
+      },
+    },
+    folders: {
+      actors: {id: 'actors', name: 'actors', parentId: '0'},
+      worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
+    },
+    openFiles: [],
+  } as never);
+
+describe('a tween with no name', () => {
+  it('needs no definition anywhere', async () => {
+    // The whole point: one block, no second place to look.
+    await expect(compileProject(inline())).resolves.toBeDefined();
+  });
+
+  it('moves what its mouth names', async () => {
+    const {world: built} = await compileProject(inline());
+    const actor = [...built.actors][0];
+
+    built.tick(0.5);
+
+    expect(actor.get(OpacityProperty)).toBeCloseTo(0.5, 6);
+    expect(actor.get(PositionProperty).x).toBeCloseTo(20, 6);
+  });
+
+  it('reads `this actor` as the actor being tweened', async () => {
+    // The inconsistency this had to avoid: generated inline, `this actor`
+    // would otherwise mean the enclosing handler's actor, while inside a
+    // definition it means the played one. The same block would then say two
+    // different things depending on which tween block it sat in.
+    const {world: built} = await compileProject(inline());
+    const actor = [...built.actors][0];
+
+    built.tick(1);
+
+    expect(actor.get(OpacityProperty)).toBe(0);
+    expect(actor.get(PositionProperty).x).toBe(40);
+    expect(actor.tweens()).toHaveLength(0);
+  });
+});

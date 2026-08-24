@@ -31,6 +31,15 @@ const workspaceOf = (field?: Blockly.Field): Blockly.Workspace | undefined => {
 /** The `world_define_tween` block type — a definition root. */
 export const DEFINE_TWEEN = 'world_define_tween';
 
+/**
+ * The block that plays a tween with no name, described where it is used.
+ *
+ * Its mouth holds the same rows a definition's does, so the setter generators
+ * have to recognise BOTH: what makes a `set` block a destination is being
+ * inside a tween, and there are two blocks that are one.
+ */
+export const PLAY_TWEEN_HERE = 'world_play_tween_here';
+
 /** Every tween defined in this workspace, in the order the blocks are in. */
 export const tweensIn = (
   workspace: Blockly.Workspace | undefined,
@@ -84,7 +93,7 @@ export const tweenOptionsExtension = liveDropdown(
 );
 
 /**
- * Whether this block sits inside a `define tween`'s mouth.
+ * Whether this block sits inside a tween's mouth — either kind.
  *
  * `getSurroundParent`, because the mouth is a statement input: a block merely
  * chained BELOW the definition is beside it, not in it. Same walk and the same
@@ -100,7 +109,7 @@ export const inTweenBody = (block: Blockly.Block): boolean => {
     parent;
     parent = parent.getSurroundParent?.() ?? null
   ) {
-    if (parent.type === DEFINE_TWEEN) {
+    if (parent.type === DEFINE_TWEEN || parent.type === PLAY_TWEEN_HERE) {
       return true;
     }
     if (parent.type.startsWith('world_on_')) {
