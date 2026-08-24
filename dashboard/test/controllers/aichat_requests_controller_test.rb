@@ -116,7 +116,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'start_chat_completion returns an error for a US only model when US only models are blocked' do
     sign_in(@authorized_teacher1)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns(SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS)
     us_only_params = @valid_params_chat_completion.merge(
       modelParameters: @default_model_customizations.merge('selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH])
     )
@@ -131,7 +131,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'start_chat_completion allows a model available outside the US when US only models are blocked' do
     sign_in(@authorized_teacher1)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns(SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS)
     # @valid_params_chat_completion uses gpt-4o-mini.
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :success

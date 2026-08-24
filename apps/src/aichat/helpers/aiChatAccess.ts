@@ -5,16 +5,7 @@ import {
 import {
   AiChatAccessLevels,
   AiChatToolsDependency,
-  AiChatUsOnlyModelIds,
 } from '@cdo/generated-scripts/sharedConstants';
-
-/**
- * Returns true if the model is unavailable outside the US. Pair with
- * currentUser.usOnlyAichatModelsDisabled, which says whether this user should
- * have such models blocked.
- */
-export const isUsOnlyModelId = (modelId: string): boolean =>
-  (AiChatUsOnlyModelIds as readonly string[]).includes(modelId);
 
 // A list of app names for which AI Chat tools (tutor or chat in ai chat lab) are considered essential to the app experience.
 // but can still be disabled by teachers through the access controls in the teacher dashboard (see ai_chat_access_level)

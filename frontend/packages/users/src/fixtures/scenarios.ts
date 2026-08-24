@@ -66,7 +66,7 @@ const baseCurrentUser: CurrentUserResponseSignedIn = {
   has_seen_homepage_welcome: true,
   has_dismissed_personalization_alert: false,
   ai_chat_access_level: 0,
-  us_only_aichat_models_disabled: false,
+  blocked_aichat_model_ids: [],
   ai_rubrics_disabled: false,
   ai_differentiation_enabled: true,
   has_seen_ai_assessments_announcement: true,
