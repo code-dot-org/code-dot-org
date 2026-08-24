@@ -1,7 +1,18 @@
 import type {StageElement} from './project';
 
-const STAGE_SIZE = 400;
+export const STAGE_SIZE = 400;
 export const DEFAULT_SPRITE_SIZE = 76;
+
+/**
+ * Keep an element fully on the stage. `extent` is the element's size along the
+ * axis being clamped, so a wide element stops further left than a narrow one.
+ */
+export function clampToStage(value: number, extent = DEFAULT_SPRITE_SIZE) {
+  return Math.max(
+    0,
+    Math.min(STAGE_SIZE - Math.min(extent, STAGE_SIZE), value)
+  );
+}
 
 export interface RuntimeState {
   elements: StageElement[];
@@ -98,13 +109,15 @@ export function moveWithArrowKeys(
 
       return {
         ...element,
-        x: clampCoordinate(element.x + horizontalDirection * movement.speed),
-        y: clampCoordinate(element.y + verticalDirection * movement.speed),
+        x: clampToStage(
+          element.x + horizontalDirection * movement.speed,
+          element.width ?? DEFAULT_SPRITE_SIZE
+        ),
+        y: clampToStage(
+          element.y + verticalDirection * movement.speed,
+          element.height ?? DEFAULT_SPRITE_SIZE
+        ),
       };
     }),
   };
-}
-
-function clampCoordinate(value: number) {
-  return Math.max(0, Math.min(STAGE_SIZE - 40, value));
 }

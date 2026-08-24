@@ -4,14 +4,15 @@ import {
 } from './buildlabBlockly';
 import type {StageElement, StageScreen} from './project';
 import {
+  clampToStage,
   DEFAULT_SPRITE_SIZE,
   moveWithArrowKeys,
   spritesAreTouching,
+  STAGE_SIZE,
   type ArrowDirection,
   type RuntimeState,
 } from './runtime';
 
-const STAGE_SIZE = 400;
 const GRID_SIZE = 5;
 
 export interface BuildLabEngineOptions {
@@ -202,8 +203,8 @@ export default class BuildLabEngine {
         element.id === elementId
           ? {
               ...element,
-              x: snapCoordinate(Number(x)),
-              y: snapCoordinate(Number(y)),
+              x: snapCoordinate(Number(x), element.width),
+              y: snapCoordinate(Number(y), element.height),
             }
           : element
       ),
@@ -258,10 +259,12 @@ export default class BuildLabEngine {
           ? {
               ...element,
               x: snapCoordinate(
-                element.x + (Number.isFinite(deltaX) ? deltaX : 0)
+                element.x + (Number.isFinite(deltaX) ? deltaX : 0),
+                element.width
               ),
               y: snapCoordinate(
-                element.y + (Number.isFinite(deltaY) ? deltaY : 0)
+                element.y + (Number.isFinite(deltaY) ? deltaY : 0),
+                element.height
               ),
             }
           : element
@@ -438,8 +441,7 @@ function cloneRuntimeState(state: RuntimeState): RuntimeState {
   };
 }
 
-function snapCoordinate(value: number) {
+function snapCoordinate(value: number, extent = DEFAULT_SPRITE_SIZE) {
   const safeValue = Number.isFinite(value) ? value : STAGE_SIZE / 2;
-  const snapped = Math.round(safeValue / GRID_SIZE) * GRID_SIZE;
-  return Math.max(0, Math.min(STAGE_SIZE - 40, snapped));
+  return clampToStage(Math.round(safeValue / GRID_SIZE) * GRID_SIZE, extent);
 }

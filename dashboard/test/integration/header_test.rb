@@ -64,7 +64,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
             'Python Lab'        => 'https://test-studio.code.org/projects/pythonlab/new',
             'Web Lab (new)'     => 'https://test-studio.code.org/projects/weblab2/new',
             'Mix & Move with AI' => '//test.code.org/mix-move-ai',
-            'Build Lab'         => 'https://test-studio.code.org/projects/build-lab/new',
+            'Build Lab'         => 'https://test-studio.code.org/projects/buildlab/new',
             /View all projects/ => 'https://test-studio.code.org/projects'
           }.each do |text, href|
             must_select 'a[href=?]', href, text

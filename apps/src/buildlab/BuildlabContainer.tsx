@@ -72,12 +72,9 @@ const BuildlabContainer: React.FunctionComponent<LabProps> = ({
   );
   const handleProjectChange = useCallback(
     (nextProject: BuildLabProject) => {
-      updateSources(
-        {source: serializeBuildLabProject(nextProject)},
-        // Keep editor changes durable while this lab is still using the Lab2
-        // shell. Ordinary Lab2 saves are throttled for 30 seconds.
-        true
-      );
+      // Saves ride Lab2's 30-second interval. ProjectContainer force-saves any
+      // pending change on beforeunload, so nothing is lost by not forcing here.
+      updateSources({source: serializeBuildLabProject(nextProject)});
     },
     [updateSources]
   );

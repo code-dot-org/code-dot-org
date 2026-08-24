@@ -386,8 +386,8 @@ class ProjectsControllerTest < ActionController::TestCase
     assert @response.headers['Location'].ends_with? '/edit'
   end
 
-  test '/projects/build-lab/new creates a channel and redirects to edit' do
-    get :create_new, params: {key: 'build-lab'}
+  test '/projects/buildlab/new creates a channel and redirects to edit' do
+    get :create_new, params: {key: 'buildlab'}
     assert_response :redirect
     assert @response.headers['Location'].ends_with? '/edit'
   end

@@ -54,7 +54,13 @@ import {
   type TextAlignment,
   serializeBuildLabProject,
 } from './project';
-import type {ArrowDirection, KeyboardMovement, RuntimeState} from './runtime';
+import {
+  clampToStage,
+  STAGE_SIZE,
+  type ArrowDirection,
+  type KeyboardMovement,
+  type RuntimeState,
+} from './runtime';
 
 import styles from './buildlab-view.module.scss';
 
@@ -70,7 +76,6 @@ const EMPTY_PROVIDED_MODELS: ProvidedMlModel[] = [];
 type DataSection = 'tables' | 'keyValues';
 type ElementOrder = 'back' | 'backward' | 'forward' | 'front';
 
-const STAGE_SIZE = 400;
 const GRID_SIZE = 5;
 const NEW_ELEMENT_DROP_OFFSETS: Record<ElementKind, {x: number; y: number}> = {
   button: {x: 60, y: 22},
@@ -289,9 +294,8 @@ const DEFAULT_ELEMENT_PROPERTIES = {
   },
 } as const;
 
-function snapCoordinate(value: number) {
-  const snapped = Math.round(value / GRID_SIZE) * GRID_SIZE;
-  return Math.max(0, Math.min(STAGE_SIZE - 40, snapped));
+function snapCoordinate(value: number, extent?: number) {
+  return clampToStage(Math.round(value / GRID_SIZE) * GRID_SIZE, extent);
 }
 
 function defaultScreenId(screens: StageScreen[], fallback = 'screen1') {
@@ -304,15 +308,18 @@ function stagePosition(
   container: HTMLElement,
   clientX: number,
   clientY: number,
-  offset = {x: 0, y: 0}
+  offset = {x: 0, y: 0},
+  size?: {width?: number; height?: number}
 ) {
   const rect = container.getBoundingClientRect();
   return {
     x: snapCoordinate(
-      ((clientX - rect.left) / rect.width) * STAGE_SIZE - offset.x
+      ((clientX - rect.left) / rect.width) * STAGE_SIZE - offset.x,
+      size?.width
     ),
     y: snapCoordinate(
-      ((clientY - rect.top) / rect.height) * STAGE_SIZE - offset.y
+      ((clientY - rect.top) / rect.height) * STAGE_SIZE - offset.y,
+      size?.height
     ),
   };
 }
@@ -506,7 +513,7 @@ export default function BuildlabView({
   }, [initialProjectSerialized, onProjectChange, project, readOnly]);
 
   const shareUrl = channelId
-    ? `${window.location.origin}/projects/build-lab/${channelId}/view`
+    ? `${window.location.origin}/projects/buildlab/${channelId}/view`
     : undefined;
 
   const handleShare = async () => {
@@ -1574,23 +1581,7 @@ export default function BuildlabView({
     };
   };
 
-  const handleStageElementDragEnd = (
-    elementId: string,
-    clientX: number,
-    clientY: number
-  ) => {
-    const stageContent = stageContentRef.current;
-    const rect = stageContent?.getBoundingClientRect();
-    const droppedInsideStage =
-      rect &&
-      clientX >= rect.left &&
-      clientX <= rect.right &&
-      clientY >= rect.top &&
-      clientY <= rect.bottom;
-
-    if (!droppedInsideStage) {
-      deleteElement(elementId);
-    }
+  const handleStageElementDragEnd = () => {
     draggedElementOffset.current = {x: 0, y: 0};
   };
 
@@ -1608,13 +1599,20 @@ export default function BuildlabView({
     );
 
     if (movedElementId) {
+      const movedElement = elements.find(
+        element => element.id === movedElementId
+      );
       updateElement(
         movedElementId,
         stagePosition(
           event.currentTarget,
           event.clientX,
           event.clientY,
-          draggedElementOffset.current
+          draggedElementOffset.current,
+          movedElement && {
+            width: movedElement.width,
+            height: movedElement.height,
+          }
         )
       );
       setSelectedElementId(movedElementId);
@@ -1636,7 +1634,8 @@ export default function BuildlabView({
           event.currentTarget,
           event.clientX,
           event.clientY,
-          NEW_ELEMENT_DROP_OFFSETS[newElementKind]
+          NEW_ELEMENT_DROP_OFFSETS[newElementKind],
+          DEFAULT_ELEMENT_PROPERTIES[newElementKind]
         )
       );
     }
@@ -1709,7 +1708,7 @@ export default function BuildlabView({
         <Tabs
           defaultSelectedTabValue={activeTab}
           hidePanels
-          name="build-lab-tabs"
+          name="buildlab-tabs"
           onChange={value => setActiveTab(value as Tab)}
           tabs={TABS}
           type="secondary"
@@ -2001,7 +2000,10 @@ export default function BuildlabView({
                           name="element-x"
                           onChange={event =>
                             updateElement(selectedElement.id, {
-                              x: snapCoordinate(Number(event.target.value)),
+                              x: snapCoordinate(
+                                Number(event.target.value),
+                                selectedElement.width
+                              ),
                             })
                           }
                           value={selectedElement.x}
@@ -2012,7 +2014,10 @@ export default function BuildlabView({
                           name="element-y"
                           onChange={event =>
                             updateElement(selectedElement.id, {
-                              y: snapCoordinate(Number(event.target.value)),
+                              y: snapCoordinate(
+                                Number(event.target.value),
+                                selectedElement.height
+                              ),
                             })
                           }
                           value={selectedElement.y}
@@ -3587,7 +3592,7 @@ function StageElementView({
   designMode: boolean;
   element: StageElement;
   isRunning: boolean;
-  onDragEnd: (elementId: string, clientX: number, clientY: number) => void;
+  onDragEnd: () => void;
   onDragStart: (elementId: string, clientX: number, clientY: number) => void;
   onValueChange: (elementId: string, value: string) => void;
   onActivate: (elementId: string) => void;
@@ -3623,8 +3628,7 @@ function StageElementView({
     draggable: designMode,
     id: `buildlab-element-${element.id}`,
     onClick: () => (isRunning ? onActivate(element.id) : onSelect(element.id)),
-    onDragEnd: (event: DragEvent<HTMLElement>) =>
-      onDragEnd(element.id, event.clientX, event.clientY),
+    onDragEnd: () => onDragEnd(),
     onDragStart: (event: DragEvent<HTMLElement>) => {
       event.dataTransfer.effectAllowed = 'move';
       event.dataTransfer.setData('application/buildlab-element-id', element.id);
@@ -3662,6 +3666,13 @@ function StageElementView({
   }
 
   if (element.kind === 'dropdown') {
+    const options = element.options ?? ['Option 1', 'Option 2'];
+    // Block code can set a value the options no longer offer.
+    const value =
+      element.inputValue && options.includes(element.inputValue)
+        ? element.inputValue
+        : options[0] ?? '';
+
     return (
       <select
         {...sharedProps}
@@ -3669,9 +3680,9 @@ function StageElementView({
         className={`${sharedProps.className} ${styles.stageDropdown}`}
         disabled={!isRunning}
         onChange={event => onValueChange(element.id, event.target.value)}
-        value={element.inputValue ?? element.options?.[0] ?? ''}
+        value={value}
       >
-        {(element.options ?? ['Option 1', 'Option 2']).map(option => (
+        {options.map(option => (
           <option key={option} value={option}>
             {option}
           </option>

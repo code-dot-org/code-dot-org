@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import type * as BlocklyCore from 'blockly/core';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
@@ -695,6 +696,8 @@ export default function BlocklyWorkspace({
     touchTargetOptions,
     modelOptions,
   };
+  // Optional: this view is not guaranteed to sit under a ThemeProvider.
+  const {theme} = useTheme(true);
   const setupBlockly = useCallback(() => {
     setupBuildLabBlocklyEnvironment();
   }, []);
@@ -766,7 +769,7 @@ export default function BlocklyWorkspace({
       blocklyDivId: BLOCKLY_DIV_ID,
       enabled: true,
       toolboxDefinition: BUILD_LAB_TOOLBOX,
-      theme: 'Light',
+      theme: theme === 'Dark' ? 'Dark' : 'Light',
       setupBlockly,
       blocklyOptions,
       loadWorkspace: loadBuildLabWorkspace,

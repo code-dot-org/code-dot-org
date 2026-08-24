@@ -59,7 +59,12 @@ export default function MlModelManager({
   const [selectedModelId, setSelectedModelId] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isImporting, setIsImporting] = useState(false);
-  const [error, setError] = useState('');
+  const [importError, setImportError] = useState('');
+  // Each source loads independently, so one failing must not mask the other.
+  const [loadErrors, setLoadErrors] = useState<
+    Partial<Record<ModelSource, string>>
+  >({});
+  const error = importError || loadErrors[modelSource] || '';
 
   useEffect(() => {
     if (!isOpen) {
@@ -71,7 +76,8 @@ export default function MlModelManager({
     setLevelModels([]);
     setModelSource('my');
     setSelectedModelId('');
-    setError('');
+    setImportError('');
+    setLoadErrors({});
     setIsLoading(true);
 
     const myModelsPromise = fetch('/api/v1/ml_models/names').then(
@@ -124,13 +130,16 @@ export default function MlModelManager({
           initialModels.find(model => !importedModelIds.includes(model.id))
             ?.id ?? ''
         );
+        const nextLoadErrors: Partial<Record<ModelSource, string>> = {};
         if (myModelsResult.status === 'rejected') {
-          setError(
-            'Unable to load your trained models. Sign in to Studio and try again.'
-          );
-        } else if (providedModelsResult.status === 'rejected') {
-          setError('Unable to load the models provided for this level.');
+          nextLoadErrors.my =
+            'Unable to load your trained models. Sign in to Studio and try again.';
         }
+        if (providedModelsResult.status === 'rejected') {
+          nextLoadErrors.provided =
+            'Unable to load the models provided for this level.';
+        }
+        setLoadErrors(nextLoadErrors);
         setIsLoading(false);
       }
     );
@@ -178,12 +187,12 @@ export default function MlModelManager({
     }
 
     setIsImporting(true);
-    setError('');
+    setImportError('');
     try {
       await onImport(selectedModel);
       onClose();
     } catch {
-      setError('This model could not be imported. Please try again.');
+      setImportError('This model could not be imported. Please try again.');
     } finally {
       setIsImporting(false);
     }

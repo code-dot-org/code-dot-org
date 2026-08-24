@@ -53,7 +53,7 @@ class CreateHeader
     },
     buildlab: {
       image: "header-all-projects-icon.png",
-      url: CDO.studio_url("projects/build-lab/new")
+      url: CDO.studio_url("projects/buildlab/new")
     },
     javalab: {
       image: "java-lab-icon.png"

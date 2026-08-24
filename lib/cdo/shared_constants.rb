@@ -143,7 +143,7 @@ module SharedConstants
 
   UNPUBLISHABLE_PROJECT_TYPES = %w(
     algebra_game
-    build-lab
+    buildlab
     calc
     eval
     minecraft_codebuilder
