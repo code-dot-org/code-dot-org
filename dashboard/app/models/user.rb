@@ -165,6 +165,7 @@ class User < ApplicationRecord
   include CredentialStrippable
   include Facilitator
   include TermsOfService
+  include LogTokenable
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
