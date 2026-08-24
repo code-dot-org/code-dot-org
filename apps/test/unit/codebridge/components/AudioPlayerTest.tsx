@@ -118,6 +118,59 @@ describe('AudioPlayer', () => {
     expect(screen.getByText('0:05 / 1:15')).toBeInTheDocument();
   });
 
+  it('reports a load failure and disables the play button', () => {
+    const {container} = renderPlayer({
+      src: 'https://example.com/missing.wav',
+      fileName: 'missing.wav',
+    });
+
+    fireEvent.error(getAudioElement(container));
+
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      'This file could not be played.'
+    );
+    expect(
+      screen.getByRole('button', {name: 'Play missing.wav'})
+    ).toBeDisabled();
+  });
+
+  it('reports a playback failure when play() rejects', async () => {
+    play.mockRejectedValue(new DOMException('no decoder', 'NotSupportedError'));
+    renderPlayer({src: 'https://example.com/bark.wav', fileName: 'bark.wav'});
+
+    await userEvent.click(screen.getByRole('button', {name: 'Play bark.wav'}));
+
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      'This file could not be played.'
+    );
+  });
+
+  it('ignores the AbortError from pausing a pending play', async () => {
+    play.mockRejectedValue(new DOMException('interrupted', 'AbortError'));
+    renderPlayer({src: 'https://example.com/bark.wav', fileName: 'bark.wav'});
+
+    await userEvent.click(screen.getByRole('button', {name: 'Play bark.wav'}));
+
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+  });
+
+  it('clears the error when switching to another audio file', () => {
+    const {container, rerender} = renderPlayer({
+      src: 'https://example.com/missing.wav',
+      fileName: 'missing.wav',
+    });
+    fireEvent.error(getAudioElement(container));
+
+    rerender(
+      <ThemeProvider theme={noRippleTheme}>
+        <AudioPlayer src="https://example.com/meow.wav" fileName="meow.wav" />
+      </ThemeProvider>
+    );
+
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Play meow.wav'})).toBeEnabled();
+  });
+
   it('stops the previous file when switching to another audio file', async () => {
     const {rerender} = renderPlayer({
       src: 'https://example.com/bark.wav',

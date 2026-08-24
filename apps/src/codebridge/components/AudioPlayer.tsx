@@ -34,6 +34,7 @@ export const AudioPlayer = ({src, fileName}: AudioPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(NaN);
+  const [hasError, setHasError] = useState(false);
 
   // Switching to another audio file reuses this component instance, so clear
   // the previous file's playback state.
@@ -41,6 +42,7 @@ export const AudioPlayer = ({src, fileName}: AudioPlayerProps) => {
     audioRef.current?.pause();
     setCurrentTime(0);
     setDuration(NaN);
+    setHasError(false);
   }, [src]);
 
   const togglePlayback = useCallback(() => {
@@ -49,9 +51,16 @@ export const AudioPlayer = ({src, fileName}: AudioPlayerProps) => {
       return;
     }
     if (audio.paused) {
-      audio
-        .play()
-        .catch(error => console.error('Audio playback failed', error));
+      audio.play().catch(error => {
+        // Pausing while play() is still pending rejects with AbortError. That
+        // happens whenever the user switches files mid-playback, and is not a
+        // failure worth reporting.
+        if (error.name === 'AbortError') {
+          return;
+        }
+        console.error('Audio playback failed', error);
+        setHasError(true);
+      });
     } else {
       audio.pause();
     }
@@ -70,6 +79,7 @@ export const AudioPlayer = ({src, fileName}: AudioPlayerProps) => {
         onEnded={() => setIsPlaying(false)}
         onTimeUpdate={event => setCurrentTime(event.currentTarget.currentTime)}
         onLoadedMetadata={event => setDuration(event.currentTarget.duration)}
+        onError={() => setHasError(true)}
       />
       <MuiIconButton
         variant="contained"
@@ -78,6 +88,7 @@ export const AudioPlayer = ({src, fileName}: AudioPlayerProps) => {
         onClick={togglePlayback}
         aria-label={isPlaying ? `Pause ${fileName}` : `Play ${fileName}`}
         type="button"
+        disabled={hasError}
       >
         <FontAwesomeV6Icon
           iconStyle="solid"
@@ -86,9 +97,19 @@ export const AudioPlayer = ({src, fileName}: AudioPlayerProps) => {
       </MuiIconButton>
       <div className={moduleStyles.details}>
         <MuiTypography variant="body3">{fileName}</MuiTypography>
-        <MuiTypography variant="body4" className={moduleStyles.elapsedTime}>
-          {formatTime(currentTime)} / {formatTime(duration)}
-        </MuiTypography>
+        {hasError ? (
+          <MuiTypography
+            variant="body4"
+            className={moduleStyles.errorMessage}
+            role="alert"
+          >
+            This file could not be played.
+          </MuiTypography>
+        ) : (
+          <MuiTypography variant="body4" className={moduleStyles.elapsedTime}>
+            {formatTime(currentTime)} / {formatTime(duration)}
+          </MuiTypography>
+        )}
       </div>
     </div>
   );
