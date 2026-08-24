@@ -17,6 +17,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('lesson-deep-dive-enabled', true).returns(true)
     DCDO.stubs(:get).with('spritelab-lab2-ask-ai-enabled', true).returns(true)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
+    DCDO.stubs(:get).with('ai_gateway_enforces_blocked_models', anything).returns(false)
     stub_environment_key_enabled(false)
     @params = {
       aichatContext: {
@@ -28,9 +29,21 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     }
   end
 
-  test 'refuses to mint a token when the user cannot use US only models' do
+  # Captures the payload handed to JWT.encode so tests can assert on claims
+  # without configuring a signing key, which only exists outside test.
+  def stub_jwt_encode
+    payload = {}
+    JWT.stubs(:encode).with do |claims, _key, _algorithm|
+      payload.replace(claims)
+      true
+    end.returns('fake.jwt.token')
+    OpenSSL::PKey::RSA.stubs(:new).returns(nil)
+    payload
+  end
+
+  test 'refuses to mint a token for a blocked user while the gateway does not enforce the block' do
     sign_in(@authorized_teacher)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns(SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS)
 
     post :get_access_token, params: @params, as: :json
 
@@ -40,17 +53,31 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     assert_equal @authorized_teacher.user_type, body['user_type']
   end
 
-  test 'mints a token when the user can use US only models' do
+  test 'mints a token for a blocked user once the gateway enforces the block, stamping the blocked models' do
     sign_in(@authorized_teacher)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
-    # The signing key is only configured outside the test environment.
-    OpenSSL::PKey::RSA.stubs(:new).returns(OpenSSL::PKey::RSA.generate(2048))
-    JWT.stubs(:encode).returns('fake.jwt.token')
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns(SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS)
+    DCDO.stubs(:get).with('ai_gateway_enforces_blocked_models', anything).returns(true)
+    payload = stub_jwt_encode
 
     post :get_access_token, params: @params, as: :json
 
     assert_response :success
     assert_equal 'fake.jwt.token', JSON.parse(response.body)['token']
+    assert_equal SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS, payload[:blocked_model_ids]
+  end
+
+  test 'mints a token with no blocked_model_ids claim when nothing is blocked' do
+    sign_in(@authorized_teacher)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns([])
+    payload = stub_jwt_encode
+
+    post :get_access_token, params: @params, as: :json
+
+    assert_response :success
+    assert_equal 'fake.jwt.token', JSON.parse(response.body)['token']
+    # Absent and empty both mean "unrestricted" to the gateway, so we omit the
+    # claim rather than stamping [] on every token.
+    refute payload.key?(:blocked_model_ids)
   end
 
   test 'lesson deep dive mints a token only when AI chat access is enabled' do
@@ -63,7 +90,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
       },
     }
     sign_in(@student)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns([])
     # The signing key is only configured outside the test environment.
     OpenSSL::PKey::RSA.stubs(:new).returns(OpenSSL::PKey::RSA.generate(2048))
     JWT.stubs(:encode).returns('fake.jwt.token')
@@ -90,7 +117,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
         channelId: 'test',
       },
     }
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns([])
     # The signing key is only configured outside the test environment.
     OpenSSL::PKey::RSA.stubs(:new).returns(OpenSSL::PKey::RSA.generate(2048))
     JWT.stubs(:encode).returns('fake.jwt.token')
@@ -214,7 +241,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     CDO.stubs(:ai_gateway_jwt_auth_key).raises(RuntimeError, 'secret not found')
     Observability::Errors.expects(:report).with(instance_of(RuntimeError), has_entry(:context, has_entry(:signing_key_name, 'environment_key'))).once
     sign_in(@authorized_teacher)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns([])
     JWT.expects(:encode).never
 
     post :get_access_token, params: @params, as: :json
@@ -237,7 +264,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
   # payload can be asserted without a signing key.
   private def mint_and_capture_claims(user: @authorized_teacher)
     sign_in(user)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns([])
     # The signing key is only configured outside the test environment. Generated
     # once and reused: these tests call this helper in a loop, and JWT.encode is
     # stubbed below, so the key is never actually used to sign anything.

@@ -74,7 +74,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         sharing_disabled: current_user.sharing_disabled,
         is_levelbuilder: current_user.levelbuilder?,
         ai_chat_access_level: current_user.ai_chat_access_level,
-        us_only_aichat_models_disabled: current_user.us_only_aichat_models_disabled?,
+        blocked_aichat_model_ids: current_user.blocked_aichat_model_ids,
       }
     else
       render json: {

@@ -2461,11 +2461,11 @@ class UnitTest < ActiveSupport::TestCase
     # The user can reach US only models, so nothing is blocked. The method also
     # returns before querying the unit's levels, but stubbing Unit.where to
     # prove that breaks unrelated teardown, so only the result is asserted.
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns([])
     refute essential_us_only.requires_inaccessible_ai_models?(teacher)
 
-    User.any_instance.unstub(:us_only_aichat_models_disabled?)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    User.any_instance.unstub(:blocked_aichat_model_ids)
+    User.any_instance.stubs(:blocked_aichat_model_ids).returns(SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS)
     assert essential_us_only.requires_inaccessible_ai_models?(teacher)
     # Reachable models, so the unit is completable.
     refute essential_reachable.requires_inaccessible_ai_models?(teacher)
