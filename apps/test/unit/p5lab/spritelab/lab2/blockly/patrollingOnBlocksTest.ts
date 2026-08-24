@@ -5,32 +5,51 @@ import patrollingOnBlocks from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefi
 // hasSupportAt needs resting contact AND the probe inside a block, and
 // getProp('scale') is the sprite's on-screen size in pixels while
 // getProp('width') is its costume's own unscaled width.
-function patrol({size, costumeWidth, blockCols, startCol, cell = 40, row = 8}) {
-  const centerOf = col => cell / 2 + cell * col;
+interface PatrolCase {
+  // The sprite's on-screen size in pixels, as getProp('scale') reports it.
+  size: number;
+  // Its costume's own unscaled width, as getProp('width') reports it.
+  costumeWidth: number;
+  // Columns holding a block, all on the same row.
+  blockCols: number[];
+  startCol: number;
+  cell?: number;
+  row?: number;
+}
+
+function patrol({
+  size,
+  costumeWidth,
+  blockCols,
+  startCol,
+  cell = 40,
+  row = 8,
+}: PatrolCase) {
+  const centerOf = (col: number) => cell / 2 + cell * col;
   const top = cell * (row + 1);
   const blocks = blockCols.map(col => ({
     left: centerOf(col) - cell / 2,
     right: centerOf(col) + cell / 2,
   }));
   const sprite = {x: centerOf(startCol)};
-  const props = {};
+  const props: {[key: string]: number} = {};
   const commands = {
-    getProp: (id, prop) => {
+    getProp: (id: unknown, prop: string) => {
       if (prop === 'x') return sprite.x;
       if (prop === 'scale') return size;
       if (prop === 'width') return costumeWidth;
       return props[prop];
     },
-    setProp: (id, prop, value) => {
+    setProp: (id: unknown, prop: string, value: number) => {
       if (prop === 'x') sprite.x = value;
       else props[prop] = value;
     },
-    changePropBy: (id, prop, delta) => {
+    changePropBy: (id: unknown, prop: string, delta: number) => {
       if (prop === 'x') sprite.x += delta;
     },
     // Resting on the blocks throughout.
     isDirectlyAbove: () => true,
-    hasSupportAt: (id, offset) =>
+    hasSupportAt: (id: unknown, offset: number) =>
       blocks.some(
         b => sprite.x + offset >= b.left && sprite.x + offset <= b.right
       ),
@@ -49,7 +68,7 @@ function patrol({size, costumeWidth, blockCols, startCol, cell = 40, row = 8}) {
     commands.isDirectlyAbove,
     commands.hasSupportAt
   );
-  const seen = [];
+  const seen: number[] = [];
   for (let frame = 0; frame < 600; frame++) {
     behavior.func({id: 1});
     seen.push(sprite.x);

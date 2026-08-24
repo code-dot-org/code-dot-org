@@ -399,11 +399,8 @@ $tab-segment-height: $tab-item-height - 2px;
 
   // Markdown output brings document-level margins; keep it compact inside
   // the guide, and keep links readable on the dark panel.
-  // The size and line height are repeated on the elements themselves, not
-  // just inherited: dashboard's scaffolds.scss sets `p, ol, ul, td` to
-  // 13px/18px, and an element-level rule beats anything this container
-  // inherits down. Guide text is read while working, so it gets a little
-  // more room than the app's default body copy.
+  // Size and line height sit on the elements, not just the container:
+  // dashboard's scaffolds.scss styles `p, ol, ul, td` directly.
   p,
   ul,
   ol {

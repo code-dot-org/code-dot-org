@@ -44,7 +44,6 @@ export function nextGuideStepIndex(
     if (
       !after ||
       (after.worldBlocks !== undefined && counts.blocks < after.worldBlocks) ||
-      (after.worldSprite && counts.sprites === 0) ||
       (after.worldSprites !== undefined &&
         counts.sprites < after.worldSprites) ||
       (after.images !== undefined && imageCount < after.images) ||

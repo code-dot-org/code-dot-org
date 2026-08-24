@@ -38,9 +38,8 @@ const STORY_SCENE_SPRITE_SIZE = 300;
 // Coordinates stay 400-based.
 const CANVAS_DENSITY_FACTOR = 2;
 
-// How long a restart quiets further restarts (see the restartScene command).
-// Comfortably longer than a restart takes to land, so the player sees the
-// scene run again before another collision can end it.
+// How long a restart quiets further restarts: long enough to see the scene
+// run again before another collision can end it.
 const RESTART_QUIET_MS = 1000;
 
 // Markers in a scene's compiled program that make it a platformer: the
@@ -233,15 +232,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Defer a tick: jumping tears down the interpreter this command runs in.
       setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
     };
-    // Runs the current scene from the top, through the jump gate so the view's
-    // cover and fade come along with it.
-    //
-    // The gate alone only ignores triggers while a restart is in flight; a
-    // condition that is still true when the new run lands — a guard placed on
-    // the player's own start cell, say — would restart again on the very next
-    // frame, and full-screen fades at frame rate are both unplayable and a
-    // photosensitivity hazard. So a restart also quiets later ones briefly,
-    // long enough for the player to move off whatever restarted the scene.
+    // Through the jump gate, for its cover and fade. The quiet window is
+    // what keeps a condition that still holds on the next frame from
+    // restarting at frame rate.
     library.commands.restartScene = () => {
       const now = Date.now();
       if (now - this.lastRestartAt_ < RESTART_QUIET_MS) {
@@ -572,9 +565,8 @@ export default class SpriteLab2Engine extends SpriteLab {
         engine.cameraZoomTarget_
       );
       const zoom = engine.cameraZoom_;
-      // p5.play's own mouse translation ignores zoom; the click events read
-      // these during runEvents. Framed from where the camera sat last frame,
-      // which is what p5.play's own hook does too.
+      // p5.play's own mouse translation ignores zoom. From last frame's
+      // camera, as p5.play's own hook does.
       const mouse = worldPoint({x: p5.mouseX, y: p5.mouseY}, zoom, {
         x: camera.position.x,
         y: camera.position.y,
@@ -583,12 +575,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       camera.mouseY = mouse.y;
       this.runBehaviors();
       this.runEvents();
-      // Resolve the platform physics BEFORE framing the shot. p5 has already
-      // integrated velocity by now, so a player mid-fall is a few pixels
-      // inside the platform it is about to land on; framing that position and
-      // then painting the corrected one puts the whole scene out of place for
-      // a single frame. It reads as a flicker on landing, and the error is
-      // multiplied by the zoom.
+      // Resolve before framing the shot: mid-fall the player is still inside
+      // the platform it is about to land on, and framing that position paints
+      // the scene a few pixels out for one frame.
       engine.resolvePlatformPhysics_();
       engine.physicsResolvedThisFrame_ = true;
       const player = this.getSpriteArray({group: 'players'})[0];
@@ -660,8 +649,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     p5.__slab2ResolvesBeforePaint = true;
     const paint = p5.drawSprites.bind(p5);
     p5.drawSprites = (...args) => {
-      // The zoomed draw loop resolves earlier, so it can frame the shot on
-      // where sprites actually end up; every other loop resolves here.
+      // The zoomed loop resolves earlier, to frame the shot on where sprites
+      // end up.
       if (!this.physicsResolvedThisFrame_) {
         this.resolvePlatformPhysics_();
       }

@@ -81,7 +81,6 @@ import {
   resizeWorld,
   sceneGridSize,
   World,
-  WORLD_MULTIPLE,
   WorldCell,
 } from '../world';
 
@@ -215,10 +214,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     levelProperties.showWorldTab,
     worldTabParamEnabled,
   ]);
-  const worldTab = {
-    enabled: tabs.includes('World'),
-    large: !!levelProperties.showLargeWorld,
-  };
+  const worldTabEnabled = tabs.includes('World');
   // Playfield size for a world this level creates. An existing world keeps
   // the size its grid already holds unless it can grow into this one without
   // dropping a placement (see resizeWorld) — the project's world is shared
@@ -253,10 +249,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setImagesMounted(true);
     }
   }, [activeTab]);
-  // Same for the World tab. Its grid is a few hundred nodes, and inserting
-  // them costs far more than rendering them: the consent script's autoblocker
-  // walks every added node, which turned a switch into ~450ms of third-party
-  // work. Mounting once pays that once.
+  // Same for the World tab: inserting its grid costs far more than rendering
+  // it, because the consent script's autoblocker walks every added node.
   const [worldMounted, setWorldMounted] = useState(false);
   useEffect(() => {
     if (activeTab === 'World') {
@@ -1087,22 +1081,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           s.id === activeSceneId
             ? {
                 ...s,
-                // Paint onto the resized world, so a world that grew into
-                // this level's playfield size keeps that size once saved.
-                world: paintWorldCell(
-                  worldFor(s),
-                  row,
-                  col,
-                  cell,
-                  seedSceneSize
-                ),
+                // Painting the resized world is what persists its size.
+                world: paintWorldCell(worldFor(s), row, col, cell),
               }
             : s
         ),
       }));
       scheduleRun();
     },
-    [updateSources, activeSceneId, scheduleRun, worldFor, seedSceneSize]
+    [updateSources, activeSceneId, scheduleRun, worldFor]
   );
 
   // Rename an image and cascade through every reference — blocks in all
@@ -1396,7 +1383,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           </div>
         )}
 
-        {worldTab.enabled && worldMounted && (
+        {worldTabEnabled && worldMounted && (
           <div
             className={moduleStyles.codeTabWrapper}
             style={{
@@ -1406,11 +1393,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           >
             <WorldTab
               world={activeWorld}
-              displaySize={
-                worldTab.large
-                  ? activeSceneSize * WORLD_MULTIPLE
-                  : activeSceneSize
-              }
               sceneSize={activeSceneSize}
               onPaintCell={handlePaintWorldCell}
               selected={worldPaletteSelection}

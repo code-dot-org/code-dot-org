@@ -29,7 +29,7 @@ describe('nextGuideStepIndex', () => {
   const steps: GuideStep[] = [
     {text: 'place blocks'},
     {text: 'place your character', after: {worldBlocks: 3}},
-    {text: 'now add a sprite', after: {worldBlocks: 3, worldSprite: true}},
+    {text: 'now add a sprite', after: {worldBlocks: 3, worldSprites: 1}},
     {text: 'press Run', after: {tab: 'Code'}},
   ];
   const none = {blocks: 0, sprites: 0};

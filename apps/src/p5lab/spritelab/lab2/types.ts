@@ -82,14 +82,11 @@ export interface GuideStep {
   after?: {
     /** At least this many block-kind cells placed in the World. */
     worldBlocks?: number;
-    /** At least one sprite-kind cell placed in the World. */
-    worldSprite?: boolean;
     /** At least this many sprite-kind cells placed in the World. */
     worldSprites?: number;
     /**
-     * At least this many images in the project. A count, not a name: the
-     * project carries every image made on the levels before this one, so a
-     * level asking for one more counts what it should already have plus one.
+     * At least this many images in the project — a count, because the project
+     * carries every image from the levels before this one.
      */
     images?: number;
     /** This tab is active. */
@@ -104,9 +101,6 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // World-tab experiment: show the tab on this level (equivalent to the
   // world-tab=true URL parameter).
   showWorldTab?: boolean;
-  // World-tab experiment: the tab edits the whole world, not just the
-  // scene-sized corner.
-  showLargeWorld?: boolean;
   // Cells per side of the playfield for a world this level creates. An
   // existing world keeps the size stored in its own grid; see resizeWorld.
   worldGridSize?: number;

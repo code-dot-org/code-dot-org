@@ -9,8 +9,8 @@ import {
   isStaticCategoryInfo,
   makeCategory,
 } from '@cdo/apps/blockly/utils/toolbox';
+import {DEFAULT_SCENE_GRID_SIZE} from '@cdo/apps/p5lab/spritelab/lab2/world';
 
-import {DEFAULT_SCENE_GRID_SIZE} from '../../world';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';

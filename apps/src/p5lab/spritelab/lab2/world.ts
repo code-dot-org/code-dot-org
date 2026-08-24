@@ -98,10 +98,9 @@ export function paintWorldCell(
   world: World | undefined,
   row: number,
   col: number,
-  cell: WorldCell | null,
-  sceneSize: number = DEFAULT_SCENE_GRID_SIZE
+  cell: WorldCell | null
 ): World {
-  const grid = (world?.grid ?? createEmptyWorld(sceneSize).grid).map(cells => [
+  const grid = (world?.grid ?? createEmptyWorld().grid).map(cells => [
     ...cells,
   ]);
   if (grid[row] && col < grid[row].length) {

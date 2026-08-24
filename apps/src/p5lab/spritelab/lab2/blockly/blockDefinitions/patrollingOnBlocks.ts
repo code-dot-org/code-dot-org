@@ -26,11 +26,9 @@ const helperCode = [
   '  return {',
   '    func: function (spriteId) {',
   '      var speed = 2;',
-  // Half the sprite's on-screen size, so the gap probe sits at its leading
-  // edge and it turns when that edge reaches the playspace — whatever the
-  // playfield's cell size is. Read 'scale', which in this API is the size in
-  // pixels; 'width' is the costume's own unscaled width (~1000 for a
-  // generated image), which sends the probe off the canvas.
+  // Half the sprite's on-screen size: the gap probe sits at its leading edge,
+  // whatever the playfield's cell size is. 'scale' is that size in pixels;
+  // 'width' is the costume's own unscaled width.
   "      var size = getProp(spriteId, 'scale');",
   '      var half = size > 0 ? size / 2 : 20;',
   '      var look = half;',
