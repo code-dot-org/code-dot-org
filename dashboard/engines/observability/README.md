@@ -26,6 +26,18 @@ Only activates when `CDO.enable_sentry` is true **and** the process is a web ser
 
 Main Dashboard code should capture errors via `Observability::Errors.capture_exception` and `Observability::Errors.capture_message`, not by referencing `Sentry` directly.
 
+### User identification
+
+Events carry an opaque log token rather than a raw user id. `Observability::Sentry.set_user_token` takes a token and nothing else — **never pass it a user id.** The caller gets the token from `User::LogToken` in Dashboard, which stays outside this engine deliberately: it is a database-backed model shared by every destination that would otherwise log a user id, and keeping it out of here keeps this engine's standalone test bundle free of a Rails dependency.
+
+Per-user grouping still works, because a token is stable for a given user within a school year. It rotates each July, so events are correlatable within a school year and not across them. A token is also specific to the `sentry` destination — the same user's token at another destination is an unrelated value, so data from the two cannot be joined.
+
+A log token is reversible through an audited admin path in Dashboard, which is where the table lives. Do not add a reversal path here.
+
+A nil token leaves the user context untouched, so a failed lookup degrades to anonymous events rather than falling back to the id.
+
+This is not the only way an identifier can reach Sentry. Anything placed in `context`, `extra`, tags, or an OpenTelemetry span attribute is exported as-is, and there is currently no `before_send` scrubber on either the Ruby or JavaScript side.
+
 ## Testing
 
 Tests live in `test/` and mirror the `lib/` structure. Run them from the engine root:
