@@ -21,6 +21,7 @@ const FILE_TYPE_ICON_MAP = {
   png: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
   jpeg: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
   webp: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
+  wav: {iconName: 'file-music', iconStyle: 'solid' as const, isBrand: false},
 } as const;
 
 export function shouldShowFile(file?: ProjectFile) {
