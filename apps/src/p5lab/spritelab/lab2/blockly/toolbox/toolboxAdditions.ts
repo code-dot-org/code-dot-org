@@ -67,6 +67,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'spritelab2_makePlatformPlayer',
       'spritelab2_setAsPlatformPlayer',
       'spritelab2_setPlatformGravity',
+      'spritelab2_setCameraZoom',
       'spritelab2_makeSpriteAtGrid',
       'gamelab_spriteClicked',
       'gamelab_checkTouching',

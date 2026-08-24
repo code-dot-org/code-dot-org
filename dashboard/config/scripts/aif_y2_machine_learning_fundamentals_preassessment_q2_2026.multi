@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q2-2026'
+
+wrong '0'
+wrong '0.5'
+wrong '1'
+right '2'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following is not a valid probability value?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Handling Uncertainty
+MARKDOWN

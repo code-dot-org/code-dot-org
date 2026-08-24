@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-21T20:49:57.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Ride Share",
+    "long_instructions": "Now that you’ve built a prediction model, you’d like to use it in a program that lets users say how far they want to travel and get an estimated cost.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Prompt the user to type in how many miles they want to travel, then save that integer in a variable.\r\n2. Use the variable to calculate a predicted cost for the user’s ride.\r\n3. Print a message letting the user know the distance and predicted cost.\r\n\r\n**💻 Coding Tip**\r\n\r\nIf you’re asking the user for input and you want Python to treat that input as a number, you’ll usually want to convert the input to an `int` first. You can use code like this to convert the input:\r\n\r\n```python\r\nint(input(\"Type in a number: \"))\r\n```",
+    "bubble_choice_description": "Use a prediction model to predict the cost of a ride share.",
+    "thumbnail_url": "https://images.code.org/591bcb309f97a58bd8f3d9a0c950ebdb-inspection.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def predict_cost(miles):\n    return 4 + 2 * miles\n\n# TODO 1: Prompt the user for a number of miles, save the result in a variable\n\n# TODO 2: Calculate a predicted cost to travel their number of miles\n\n# TODO 3: Print a message letting the user know the distance and predicted cost",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp+tl5ZleePaUf1\nzL0NZ4SIXMXQ7Kp+flYAdsC0iQf+TJ37a/YEZ16K0nauLg0IrmWa7N0RVz2i\nL/gqXxTg27ofchAPLDprAMVOaZ5iIOF7siLDV3GUYg3vm1uB+cWSxBhbD5g6\nRMrVbRta+UbjzljCtz2zRXTNV+3a2+dXFQkBEaWCbJrg3fgHa6HY6SLLo8W0\nQJ4J5agN/NggMMrdI/k6p1tv9yboJjA1K53uYeQSs8Hl3HS42kKd7NmR5+Zd\n8/C+75TETDy1vMOSURCTr3NFiIRybW7daCZ2cPFQ0kPAqpqIB3xhORVOyQns\n8llQIJUkEhVCpas1/9EMi5pbzP3DcdpAW/48p7so66+HURiQM+161PJ+Tn2I\nXO2dWHa60C/ZEMBPPdsjKOJaX/ZKpbKk\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 20:50:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:50:13 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

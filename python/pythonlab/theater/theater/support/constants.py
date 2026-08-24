@@ -9,8 +9,8 @@ CHANNELS = 1  # output is mono
 MAX_16_BIT_VALUE = 32768
 
 # Bundled instrument notes are stored at half the output rate and 8 bits per
-# sample, which is what keeps the theater wheel small enough to load on every
-# Python Lab page.
+# sample, which is what keeps the theater wheel small enough to load on slower
+# networks.
 INSTRUMENT_SAMPLE_RATE = 22050
 
 # Note range bundled for every instrument, as MIDI note numbers (C3-C6).

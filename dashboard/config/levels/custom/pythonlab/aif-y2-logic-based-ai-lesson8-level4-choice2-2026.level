@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T17:32:25.000Z",
   "level_num": "custom",
@@ -43,8 +42,10 @@
       "openFiles": [
         "0"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqbf0PyOA3L/PPu\nvqcaPK8/pWNKvQf4XS0kHHndVjwY8j3dYKzdCtB22XQ9WCScxQiFR+Khlmlz\ny2Bn8NmLL4gfQhPXRQisdHrulWWDlXcOiyXa4qjjkQAoWwdI5LTAkY0UbEGE\nDVv/eb2MHCLCjKV2kS7ywrckNBBKeOZu4hhCw1fvxmhq7i52+LKxEoZQftDc\n+cXC5KpfnRTFN0JtbNa8MMyEpFnxbZDZ8hTNaleNLYFrljWy2wWQTXETHmZl\n62lNhvyoq1SgeqBKTQnS+j1xWDhyc8HZ6NIG7DCDX84Xlb0R6uhRG8oPgaaS\ns48CKo/j5ahyA1hzQ+SXwmKod0MqzYotvrC2BVjBPCe3n11KwjuokFzbKOun\ndfCiCq39N3NyLfl9TN5QqSg5779NPTyq2voy9kWvtiRqRjXxgeLtgXwB41rd\n7X+4Kp0ifGlXjlfMN739XirHhkOTMh1P81em3hcuySGUV665S1skE8MLTTKz\nyB31L8EqEdWZJdf0QHCnK56LZe8gfnh2CDH8fbZoF+5fTAgo5zM4q6Abn/B7\nIw==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 17:34:19 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:35:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:38:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 17:34:19 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:35:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:38:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:23:46 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

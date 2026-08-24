@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-14 00:34:30 UTC",
+    "serialized_at": "2026-08-19 18:04:21 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -42,6 +42,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "foundations-of-ai-programming-js"
       }
     }
@@ -253,6 +265,21 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "foundations-of-ai-programming-js"
       }
     }
@@ -787,6 +814,18 @@
         "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be",
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "91eef43f-1865-4def-9895-81b0242de566",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "91eef43f-1865-4def-9895-81b0242de566",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "foundations-of-ai-programming-js"
       }
     }
@@ -3863,6 +3902,17 @@
         "activity_section.key": "19a7f598-a3ce-48a9-939d-d61b8d9f1260",
         "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be"
       }
+    },
+    {
+      "key": "335ce4b3-d8b9-4a9c-ba67-3a1020dec5d8",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "335ce4b3-d8b9-4a9c-ba67-3a1020dec5d8",
+        "lesson_activity.key": "91eef43f-1865-4def-9895-81b0242de566"
+      }
     }
   ],
   "script_levels": [
@@ -5031,6 +5081,28 @@
       "level_keys": [
         "foundations-of-ai-programming-js-lesson12-level11_2026"
       ]
+    },
+    {
+      "chapter": 54,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_v2_programming_js_2026"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "335ce4b3-d8b9-4a9c-ba67-3a1020dec5d8"
+      },
+      "level_keys": [
+        "student-eou-survey_-programming_v2_programming_js_2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5668,6 +5740,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "foundations-of-ai-programming-js",
         "activity_section.key": "77cddd97-5dc9-4aae-9619-a8cb98f6acb3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-programming_v2_programming_js_2026",
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_v2_programming_js_2026"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "335ce4b3-d8b9-4a9c-ba67-3a1020dec5d8"
       }
     }
   ],

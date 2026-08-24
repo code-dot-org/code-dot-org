@@ -123,3 +123,7 @@ localDev:
     hostPaths:
       home: # ~ on  your local dev box, set automatically by skaffold
       skaffoldStorage: # code-dot-org/skaffoldStorage on your local dev box, set automatically by skaffold
+
+scheduling:
+  nodeSelector: {}
+  tolerations: []

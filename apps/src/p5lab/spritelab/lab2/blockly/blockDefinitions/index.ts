@@ -12,6 +12,7 @@ import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
+import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
@@ -32,6 +33,7 @@ const labBlockDefinitions: {
   makePlatformBlocks,
   setPlatformGravity,
   setAsPlatformPlayer,
+  setCameraZoom,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,

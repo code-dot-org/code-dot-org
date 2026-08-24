@@ -178,6 +178,58 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json.length).must_equal 1
       end
     end
+
+    context 'with a user_id' do
+      let(:section) {create(:section)}
+
+      before do
+        create(:follower, section:, student_user: student)
+        create(:follower, section:, student_user: other_student)
+      end
+
+      it "lists every one of the student's final submissions for a challenge, without collapsing" do
+        first = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 2.days.ago)
+        second = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 1.day.ago)
+        create(:challenge_response, challenge:, user: student, is_final: false)
+        create(:challenge_response, user: student, is_final: true) # different challenge
+        create(:challenge_response, challenge:, user: other_student, is_final: true)
+        sign_in student
+
+        get :index, params: {user_id: student.id, challenge_id: challenge.id, sort: 'oldest'}
+
+        assert_response :success
+        _(response_json.map {|r| r['id']}).must_equal [first.id, second.id]
+      end
+
+      it "is allowed for the student's teacher, without the student's feedback" do
+        create(:challenge_response, challenge:, user: student, is_final: true, student_feedback: 'Private')
+        sign_in section.teacher
+
+        get :index, params: {user_id: student.id}
+
+        assert_response :success
+        _(response_json.length).must_equal 1
+        _(response_json.first).wont_include 'student_feedback'
+      end
+
+      it 'is allowed for a section peer' do
+        create(:challenge_response, challenge:, user: student, is_final: true)
+        sign_in other_student
+
+        get :index, params: {user_id: student.id}
+
+        assert_response :success
+        _(response_json.length).must_equal 1
+      end
+
+      it 'is forbidden for a user who shares no section with the student' do
+        sign_in create(:student)
+
+        get :index, params: {user_id: student.id}
+
+        assert_response :forbidden
+      end
+    end
   end
 
   describe 'GET #unit_counts' do
@@ -312,21 +364,31 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json['assets'].first['download_url']).must_equal 'https://s3.example/download'
       end
 
-      it 'includes their feedback and status but not the scored evaluation' do
+      it 'includes their feedback and status but not the scored evaluation or rubric' do
         challenge_response.update!(
           evaluation_result: {'level' => 2},
           student_feedback: 'Nice work!',
-          evaluation_status: :success
+          evaluation_status: :success,
+          evaluated_at: Time.zone.parse('2026-08-10 12:00')
         )
 
         get :show, params: {id: challenge_response.id}
 
         assert_response :success
+        _(response_json['viewer_role']).must_equal 'owner'
         _(response_json['student_feedback']).must_equal 'Nice work!'
         _(response_json['evaluation_status']).must_equal 'success'
-        %w[evaluation_result evaluated_at].each do |field|
+        _(response_json['evaluated_at']).wont_be_nil
+        %w[evaluation_result rubric].each do |field|
           _(response_json).wont_include field
         end
+      end
+
+      it 'includes the challenge question' do
+        get :show, params: {id: challenge_response.id}
+
+        assert_response :success
+        _(response_json['question']).must_equal challenge.question
       end
     end
 
@@ -336,15 +398,23 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         sign_in teacher
       end
 
-      it 'returns the response including the evaluation fields' do
-        challenge_response.update!(evaluation_result: {'level' => 2}, evaluation_status: :success)
+      it 'returns the response including the evaluation, feedback, and rubric' do
+        challenge_response.update!(
+          challenge: create(:challenge, :with_rubric),
+          evaluation_result: {'level' => 2},
+          student_feedback: 'Nice work!',
+          evaluation_status: :success
+        )
 
         get :show, params: {id: challenge_response.id}
 
         assert_response :success
         _(response_json['id']).must_equal challenge_response.id
+        _(response_json['viewer_role']).must_equal 'teacher'
         _(response_json['evaluation_result']).must_equal({'level' => 2})
         _(response_json['evaluation_status']).must_equal 'success'
+        _(response_json['student_feedback']).must_equal 'Nice work!'
+        _(response_json['rubric'].map {|entry| entry['level']}).must_equal [0, 1, 2, 3]
       end
     end
 
@@ -365,13 +435,23 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         sign_in other_student
       end
 
-      it 'can read a final response' do
-        challenge_response.update!(is_final: true)
+      it 'can read a final response, but sees no feedback or evaluation' do
+        challenge_response.update!(
+          is_final: true,
+          evaluation_result: {'level' => 2},
+          student_feedback: 'Private',
+          evaluation_status: :success
+        )
 
         get :show, params: {id: challenge_response.id}
 
         assert_response :success
         _(response_json['id']).must_equal challenge_response.id
+        _(response_json['viewer_role']).must_equal 'peer'
+        _(response_json['question']).must_equal challenge.question
+        %w[student_feedback evaluation_result evaluated_at rubric].each do |field|
+          _(response_json).wont_include field
+        end
       end
 
       it 'cannot read a non-final response' do

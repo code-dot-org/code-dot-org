@@ -1139,9 +1139,9 @@ class User < ApplicationRecord
         over_21?
       end
     else # downgrading to student
-      # Teachers with sections cannot downgrade because our validations require sections
-      # to be taught by teachers.
-      sections_instructed.empty?
+      # Downgrade destroys sections owned by the teacher. Disallow downgrading
+      # unless the teacher only has demo sections.
+      sections_instructed.where(demo_type: nil).empty?
     end
   end
 

@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-08-12T21:22:13.000Z",
   "level_num": "custom",
@@ -49,7 +50,6 @@
     "bubble_choice_description": "The owner needs an AI chatbot agent to help their Skate Shop customers. Build and test it for them.",
     "thumbnail_url": "https://images.code.org/931c0d8e13c09b324f82d8e9644905af-sneaker.jpg"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-12T21:22:13.607+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-add-context-a-2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-add-context-a-2026\"},{\"changed_at\":\"2026-08-12 21:22:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 21:35:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 21:46:40 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 21:51:28 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 23:04:08 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-12T21:22:13.607+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-add-context-a-2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-add-context-a-2026\"},{\"changed_at\":\"2026-08-12 21:22:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 21:35:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 21:46:40 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 21:51:28 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 23:04:08 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 21:23:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q3-2026'
+
+right 'A module must be imported before it can be used'
+wrong 'A module can only be used once in a Python program'
+wrong "Functions defined in a module can only be called from the module's file"
+wrong 'Any modules used by a file must be listed at the end of the file'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following is true about using modules in Python?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Handling Uncertainty
+MARKDOWN

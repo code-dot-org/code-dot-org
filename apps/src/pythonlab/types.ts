@@ -15,6 +15,11 @@ export interface PyodideMessage {
   // Only on 'theater_media' messages: the rendered gif as raw bytes. Structured
   // clone gives it a plain ArrayBuffer, which is what Blob accepts.
   gif?: Uint8Array<ArrayBuffer>;
+  // Only on 'theater_media' messages, and only when the program made a sound:
+  // the rendered audio track as raw WAV bytes.
+  wav?: Uint8Array<ArrayBuffer>;
+  // Only on 'theater_media' messages: how long the gif runs, in milliseconds.
+  gifDurationMs?: number;
 }
 
 export type MessageType =

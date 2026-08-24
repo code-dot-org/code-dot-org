@@ -55,6 +55,16 @@ def render(actions):
   return gif_bytes, _render_audio(actions)
 
 
+def gif_duration_ms(actions):
+  """How long the gif rendered from these actions runs, in milliseconds.
+
+  The host has no other way to know: an <img> reports nothing about the
+  animation it is playing, and the theater's gifs carry no loop extension, so
+  they run through their frames once and hold the last one.
+  """
+  return sum(_frame_durations(actions))
+
+
 def _pause_milliseconds(seconds):
   """A pause in whole milliseconds, rounded to a centisecond.
 

@@ -386,6 +386,7 @@ class RegistrationsController < Devise::RegistrationsController
   def set_user_type
     return head(:bad_request) if params[:user].nil?
     return head(:bad_request) if params[:user][:user_type].nil?
+    return head(:bad_request) unless current_user.can_change_own_user_type?
 
     previous_user_type = current_user.user_type
 

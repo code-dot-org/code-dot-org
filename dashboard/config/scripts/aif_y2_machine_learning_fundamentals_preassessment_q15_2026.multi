@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q15-2026'
+
+wrong 'The model makes accurate predictions most of the time'
+right 'A person can understand why the model made a particular prediction'
+wrong 'The model can be translated into different languages'
+wrong 'The model can process many different types of data, like images and text'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What does it mean for a machine learning model to be interpretable?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Building Models Ethically
+MARKDOWN

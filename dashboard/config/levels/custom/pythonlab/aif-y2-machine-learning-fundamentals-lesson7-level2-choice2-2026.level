@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-21T21:29:18.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Body Weight",
+    "long_instructions": "You’re a health researcher exploring a dataset used to predict body weight based on total calories consumed daily. You want to make sure that your dataset is representative of people with different calorie consumption patterns.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Print the calories consumed for anyone who consumes fewer than 2000 calories per day.\r\n2. Print the calories consumed for anyone who consumes at least 2000 but less than 3000 calories per day.\r\n3. Print the calories consumed for anyone who consumes at least 3000 calories per day.\r\n4. Decide whether you think the dataset is representative or not. You’ll answer questions about this dataset in the next level.\r\n\r\n\r\n**💻 Coding Tip**\r\n\r\nYou can use an `if` statement inside of a `for` loop to decide whether a piece of code should run for a particular item in the list.\r\n\r\nTo check for multiple conditions in an if statement, use `and` or `or`.\r\n\r\n```python\r\nif condition1 and condition2:\r\n  # This code will only run if both condition1 and condition2 are true\r\n```",
+    "bubble_choice_description": "Work with a dataset used to predict body weight based on calorie consumption.",
+    "thumbnail_url": "https://images.code.org/c54bf6ee944d5a8bd42e4eed9f2487ae-diet.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "calorie_totals = [2589, 2467, 2882, 3256, 2964, 2707, 3011, 2648]\n\nprint(\"Here are the calorie totals less than 2000:\")\n# TODO 1: Print all calorie totals in the dataset that are less than 2000\n\nprint(\"Here are the calorie totals between 2000 and 3000:\")\n# TODO 2: Print all calorie totals in the dataset that are at least 2000 but less than 3000\n\nprint(\"Here are the calorie totals at least 3000:\")\n# TODO 3: Print all calorie totals in the dataset that are at least 3000",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrm+8sXkA/bJsxr\nIGHpsTVpuE/hHvPwT8WfkWkcW2pHJLr/A8nG110/XtbIx23iI9D4elXnU1NC\nfiXyqcv60eUWy7awGy/32GxZk7RF6ZrFnLqGgXX2xSzqlFTrM2BtSOlZsyGf\nX/RWfFcAtpIZRI2ADBPBUgM4i999A0kxNBDlLnLrhKkFG2ebw9xQYuXrt5sR\nZjVFTk9KIhLchxH7pGiv7zM59eF5XGxzY4hcsvmWS535N+XguoR94diqD5lE\nZwVsZb+CA90eR3eNG8bmVq4A/kLvLcikqjBgP2OUmALppJm5Ws1CBisU19pI\nmc7G/8FHqtu8yL/9IomGzdW3JXyq4soflVnqoks3SGedmSKTLioSYOFUHzG4\nhVFzmv8sok+OhFb39V+4gYXbkxdhh2pgTTiP+1h9a95i4jcAQwlVbi9xVNne\nFCRjoVQ971vovwKBfbPwrmj8pneb+nWqRiFZlkI1nQ6kNeGagrGpa3nZ0sIX\n+rb8RA7lPrmwDF6OcLqQ3vdopd0M+b3LrM9AadRBfxunXtJJYdfUPRDynIc2\nyg5SPj4btbLuZNdltWvBmOH2MP6CHncaoFs1+SYOc90fvtDZcn4RyFzu11I1\nN3S/gpEwl4kEF3QtlIYVIo+9F044dNan9IgfavvArO+/TMnOip2PsKFkqAs4\nN5orYZq8aa9ru6J60+Rt+PthnZTj+UzqGs4NYfBI0ObBOXPQp3mz\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 21:29:24 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:29:35 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>
