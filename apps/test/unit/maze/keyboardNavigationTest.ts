@@ -741,9 +741,8 @@ describe('MazeKeyboardNavigation interaction', () => {
   });
 });
 
-// maze_locale.js ships only with legacy maze levels, so the module falls back
-// to English when it is absent (every test above) and must use the translation
-// when it is present.
+// maze_locale.js ships only with legacy maze levels. The module falls back to
+// English when it is absent (every test above) and translates when it is not.
 describe('maze translations', () => {
   afterEach(() => {
     jest.dontMock('@cdo/apps/maze/locale');

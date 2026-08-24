@@ -18,10 +18,8 @@ const SPRITES: SpriteMap = {
 };
 
 describe('describeAsset', () => {
-  // The sweep below proves every sprite resolves to something. These pin the
-  // wording for the shapes of name that are easy to get wrong: a direction
-  // prefix and tile number to strip, a CamelCase family, and a whole family
-  // of "brick-*" art that all reads as one word.
+  // The sweep below proves every sprite resolves. These pin the wording for
+  // the name shapes that are easy to get wrong.
   it.each([
     [0, 'Street.'],
     [12, 'Donut truck.'],
@@ -55,10 +53,9 @@ describe('describeAsset', () => {
     expect(describeAsset(undefined, 0)).toBeNull();
   });
 
-  // Swept over the shipped sprite sheet, not a fixture: a family with no
-  // matching token returns null, and the cell then reads as bare ground with
-  // nothing to show that its scenery went unnamed. The painter avatar and the
-  // paint can are described elsewhere and are meant to be null.
+  // Swept over the shipped sheet, not a fixture: a family with no token returns
+  // null and the cell silently reads as bare ground. The painter avatar and
+  // paint can are described elsewhere.
   it('names every sprite in the shipped sprite sheet', () => {
     const describedElsewhere = /painter|paintcan/i;
     const sprites = realSprites as unknown as SpriteMap;
