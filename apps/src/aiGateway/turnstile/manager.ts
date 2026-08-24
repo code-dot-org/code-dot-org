@@ -9,14 +9,12 @@ import {
 } from './constants';
 import {debuggerWillPauseInAnonymousScope} from './debuggerProbe';
 import {loadTurnstileScript} from './loadScript';
-import {TurnstileDevToolsError} from './types';
-
-/**
- * Where the delivered token came from: 'pre-fetch' when a challenge started in
- * the background after the previous delivery had already produced it,
- * 'on-demand' when the caller had to wait for a challenge started for it.
- */
-type TokenAcquisitionMode = 'pre-fetch' | 'on-demand';
+import {recordTurnstileOutcome} from './outcome';
+import {
+  TokenAcquisitionMode,
+  TurnstileChallengeError,
+  TurnstileDevToolsError,
+} from './types';
 
 interface TokenAcquisition {
   mode: TokenAcquisitionMode;
@@ -198,7 +196,7 @@ export class TurnstileManager {
     }
 
     console.log(`${LOG} Pre-fetch miss — enqueueing fresh challenge`);
-    const result = this.runSerializedChallenge();
+    const result = this.runSerializedChallenge('on-demand');
     result.then(
       () => this.schedulePrefetch(),
       () => {}
@@ -212,7 +210,7 @@ export class TurnstileManager {
       return;
     }
     console.log(`${LOG} Scheduling pre-fetch challenge`);
-    const p = this.runSerializedChallenge();
+    const p = this.runSerializedChallenge('pre-fetch');
     this.nextTokenPromise = p;
     p.then(
       token => {
@@ -236,18 +234,44 @@ export class TurnstileManager {
     );
   }
 
-  private runSerializedChallenge(): Promise<string> {
+  private runSerializedChallenge(mode: TokenAcquisitionMode): Promise<string> {
     console.log(`${LOG} Challenge enqueued on chain`);
+
+    // Timed from release rather than from enqueue so the duration is comparable
+    // to CHALLENGE_TIMEOUT_MS and excludes time spent waiting behind the chain.
+    const startChallenge = () => {
+      const start = performance.now();
+      return loadTurnstileScript()
+        .then(() => this.runChallenge())
+        .then(
+          token => {
+            recordTurnstileOutcome({
+              mode,
+              durationMs: performance.now() - start,
+            });
+            return token;
+          },
+          error => {
+            recordTurnstileOutcome({
+              mode,
+              durationMs: performance.now() - start,
+              error,
+            });
+            throw error;
+          }
+        );
+    };
+
     const result = this.chain.then(
       () => {
         console.log(`${LOG} Challenge starting (chain released)`);
-        return loadTurnstileScript().then(() => this.runChallenge());
+        return startChallenge();
       },
       () => {
         console.log(
           `${LOG} Challenge starting after previous chain error (chain released)`
         );
-        return loadTurnstileScript().then(() => this.runChallenge());
+        return startChallenge();
       }
     );
     // Absorb so the chain always advances for subsequent callers.
@@ -280,7 +304,11 @@ export class TurnstileManager {
         } catch (err) {
           console.error(`${LOG} remove(${this.widgetId}) threw:`, err);
           this.widgetId = null;
-          throw err;
+          throw new TurnstileChallengeError(
+            'remove_failed',
+            'Turnstile failed to remove the previous widget',
+            {cause: err}
+          );
         }
         this.widgetId = null;
 
@@ -323,7 +351,12 @@ export class TurnstileManager {
             }
             this.widgetId = null;
           }
-          reject(new Error('Turnstile challenge timed out'));
+          reject(
+            new TurnstileChallengeError(
+              'timeout',
+              'Turnstile challenge timed out'
+            )
+          );
         });
       }, CHALLENGE_TIMEOUT_MS);
 
@@ -358,7 +391,11 @@ export class TurnstileManager {
       } catch (err) {
         console.error(`${LOG} render() threw:`, err);
         clearTimeout(timeout);
-        throw err;
+        throw new TurnstileChallengeError(
+          'render_threw',
+          'Turnstile render() threw',
+          {cause: err}
+        );
       }
 
       renderTime = performance.now();
@@ -371,7 +408,12 @@ export class TurnstileManager {
         console.error(`${LOG} render() returned falsy widgetId — rejecting`);
         settle(() => {
           clearTimeout(timeout);
-          reject(new Error('Turnstile failed to render widget'));
+          reject(
+            new TurnstileChallengeError(
+              'render_failed',
+              'Turnstile failed to render widget'
+            )
+          );
         });
       } else {
         this.widgetId = widgetId;

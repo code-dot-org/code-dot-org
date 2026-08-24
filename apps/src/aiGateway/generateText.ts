@@ -12,7 +12,11 @@ import {
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
+import {
+  fetchTurnstileTokenIfEnabled,
+  turnstileErrorTags,
+  turnstileHeaders,
+} from './turnstile';
 
 export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
 
@@ -146,7 +150,8 @@ const generateTextThroughGateway = async <
         await reportGatewayError(
           error,
           'generateTextThroughGateway',
-          modelString
+          modelString,
+          turnstileErrorTags(error)
         );
       }
       throw error;

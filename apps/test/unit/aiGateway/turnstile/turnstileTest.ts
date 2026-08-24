@@ -2,6 +2,8 @@ jest.mock('@code-dot-org/core/plugins/observability', () => ({
   startSpan: jest.fn((_options: unknown, callback: () => unknown) =>
     callback()
   ),
+  metrics: {count: jest.fn(), distribution: jest.fn(), gauge: jest.fn()},
+  logger: {error: jest.fn(), warn: jest.fn(), info: jest.fn()},
 }));
 
 import * as Observability from '@code-dot-org/core/plugins/observability';
@@ -75,7 +77,7 @@ type TurnstileManagerPrivates = {
     mode: 'pre-fetch' | 'on-demand';
     token: Promise<string>;
   };
-  runSerializedChallenge: () => Promise<string>;
+  runSerializedChallenge: (mode: 'pre-fetch' | 'on-demand') => Promise<string>;
 };
 
 describe('TurnstileManager stale pre-fetch', () => {
@@ -126,6 +128,41 @@ describe('TurnstileManager stale pre-fetch', () => {
     // runSerializedChallenge called once for the scheduled pre-fetch, not to
     // replace the valid token.
     expect(freshChallenge).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('TurnstileManager challenge acquisition mode', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('labels a challenge started for a waiting caller as on-demand', () => {
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    const challenge = jest.fn().mockResolvedValue('token');
+    jest.spyOn(m, 'runSerializedChallenge').mockImplementation(challenge);
+
+    m.startTokenAcquisition();
+
+    expect(challenge).toHaveBeenCalledWith('on-demand');
+  });
+
+  it('labels the speculative follow-up challenge as pre-fetch', async () => {
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    const challenge = jest.fn().mockResolvedValue('token');
+    jest.spyOn(m, 'runSerializedChallenge').mockImplementation(challenge);
+
+    const {token} = m.startTokenAcquisition();
+    await token;
+
+    expect(challenge).toHaveBeenNthCalledWith(1, 'on-demand');
+    expect(challenge).toHaveBeenNthCalledWith(2, 'pre-fetch');
   });
 });
 
