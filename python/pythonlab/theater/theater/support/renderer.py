@@ -5,7 +5,7 @@ import struct
 from PIL import Image as PILImage
 from PIL import ImageDraw
 
-from .actions import UNSPECIFIED, SceneActionType
+from .actions import SceneActionType
 from .audio import AudioWriter
 from .constants import (
   MAX_AUDIO_SECONDS,
@@ -179,7 +179,7 @@ def _draw_image(canvas, action):
   # resize and paste reject floats, so round here rather than in every caller.
   x = int(round(action.x))
   y = int(round(action.y))
-  if action.size != UNSPECIFIED:
+  if action.size is not None:
     width = int(round(action.size))
     height = int(round(source.height * (width / source.width)))
   else:

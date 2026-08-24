@@ -383,6 +383,37 @@ def test_draw_image_accepts_float_geometry():
   assert len(gif_bytes) > 0
 
 
+@pytest.mark.parametrize("size", [-1, 0, 0.4, -100, float("nan")])
+def test_unusable_draw_image_size_raises_at_the_call(size):
+  # -1 was the "not specified" sentinel, so it fell through to the width and
+  # height branch, where they were sentinels too; every one of these ended up
+  # floored to a 1x1 image and drawn without a word.
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_image(Image(10, 10), 0, 0, size=size)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+@pytest.mark.parametrize("width,height", [(-1, 10), (10, -1), (0, 0), (0.4, 0.4)])
+def test_unusable_draw_image_extent_raises_at_the_call(width, height):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_image(Image(10, 10), 0, 0, width=width, height=height)
+  assert scene.get_actions() == []
+
+
+def test_draw_image_records_one_dimension_and_leaves_the_other_unset():
+  # The renderer picks its branch on which one is None, so a size and an
+  # extent must never both be recorded.
+  scene = Scene()
+  scene.draw_image(Image(10, 10), 0, 0, size=50)
+  scene.draw_image(Image(10, 10), 0, 0, width=20, height=30)
+  by_size, by_extent = scene.get_actions()
+  assert (by_size.size, by_size.width, by_size.height) == (50, None, None)
+  assert (by_extent.size, by_extent.width, by_extent.height) == (None, 20, 30)
+
+
 def test_draw_image_lands_at_rounded_position():
   image = Image(10, 10)
   image.clear(theater.Color("red"))

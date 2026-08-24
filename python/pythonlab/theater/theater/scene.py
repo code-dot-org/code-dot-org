@@ -1,6 +1,5 @@
 from .instrument import Instrument, as_instrument
 from .support import actions
-from .support.actions import UNSPECIFIED
 from .support.audio import as_samples, read_samples_from_file
 from .support.color import Color, as_color
 from .support.constants import (
@@ -19,6 +18,7 @@ _DEFAULT_FONT_STYLE = FontStyle.NORMAL
 _DEFAULT_TEXT_HEIGHT = 20
 _DEFAULT_STROKE_WIDTH = 1.0
 _MIN_POLYGON_SIDES = 3
+_MIN_DRAW_SIZE = 1
 
 
 def _validate_duration(method_name, seconds):
@@ -35,6 +35,19 @@ def _validate_duration(method_name, seconds):
     raise ValueError(
       f"{method_name} needs between {MIN_PAUSE_SECONDS} and "
       f"{MAX_PAUSE_SECONDS} seconds, got {seconds}"
+    )
+
+
+def _validate_draw_size(name, value):
+  """Bound one dimension draw_image() will scale to.
+
+  Raise here rather than at render time so the traceback points at the
+  student's own call. Anything under a pixel was floored to a 1x1 image and
+  drawn without a word; written as a comparison a nan fails, so it goes too.
+  """
+  if not value >= _MIN_DRAW_SIZE:
+    raise ValueError(
+      f"draw_image needs a {name} of at least {_MIN_DRAW_SIZE}, got {value}"
     )
 
 
@@ -108,12 +121,15 @@ class Scene:
     """
     image_copy = Image(image)
     if size is not None:
+      _validate_draw_size("size", size)
       self._actions.append(
-        actions.DrawImage(image_copy, x, y, size, UNSPECIFIED, UNSPECIFIED, rotation)
+        actions.DrawImage(image_copy, x, y, size, None, None, rotation)
       )
     elif width is not None and height is not None:
+      _validate_draw_size("width", width)
+      _validate_draw_size("height", height)
       self._actions.append(
-        actions.DrawImage(image_copy, x, y, UNSPECIFIED, width, height, rotation)
+        actions.DrawImage(image_copy, x, y, None, width, height, rotation)
       )
     else:
       raise ValueError("draw_image needs either size, or both width and height")
