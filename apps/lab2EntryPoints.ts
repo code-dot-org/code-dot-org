@@ -10,6 +10,7 @@
 import {AIChatEntryPoint} from '@cdo/apps/aichatLab/entrypoint';
 import {AilabEntryPoint} from '@cdo/apps/ailab/lab2/entrypoint';
 import {BubbleChoiceEntryPoint} from '@cdo/apps/bubbleChoice/entrypoint';
+import {BuildlabEntryPoint} from '@cdo/apps/buildlab/entrypoint';
 import {DanceEntryPoint} from '@cdo/apps/dance/lab2/entrypoint';
 import {JavalabEntryPoint} from '@cdo/apps/javalab/lab2/entrypoint';
 import type {Lab2EntryPoint} from '@cdo/apps/lab2/types';
@@ -24,6 +25,7 @@ import {Weblab2EntryPoint} from '@cdo/apps/weblab2/entrypoint';
 export const lab2EntryPoints = {
   aichat: AIChatEntryPoint,
   ailab: AilabEntryPoint,
+  buildlab: BuildlabEntryPoint,
   bubble_choice: BubbleChoiceEntryPoint,
   dance: DanceEntryPoint,
   javalab: JavalabEntryPoint,

@@ -297,6 +297,52 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       true;
   }
 
+  // Blockly 13 can move a block into a detached SVG root while it is being
+  // dragged. RenderedConnection.findHighlightSvg assumes every root has
+  // getElementById(), which is not true for SVG elements and document
+  // fragments. Preserve Blockly's lookup when available and fall back to a
+  // root-local query so drag preview cleanup does not throw.
+  const renderedConnection = blocklyWrapper.blockly_.RenderedConnection;
+  if (renderedConnection) {
+    const renderedConnectionPrototype =
+      renderedConnection.prototype as unknown as {
+        findHighlightSvg: (
+          this: BlocklyCore.RenderedConnection
+        ) => SVGElement | null;
+      };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (!(renderedConnectionPrototype.findHighlightSvg as any).__cdoPatched) {
+      const originalFindHighlightSvg =
+        renderedConnectionPrototype.findHighlightSvg;
+      renderedConnectionPrototype.findHighlightSvg = function () {
+        try {
+          return originalFindHighlightSvg.call(this);
+        } catch (error) {
+          if (
+            !(error instanceof TypeError) ||
+            !String(error).includes('getElementById is not a function')
+          ) {
+            throw error;
+          }
+
+          const sourceSvgRoot = this.getSourceBlock().getSvgRoot();
+          const rootNode = sourceSvgRoot.getRootNode() as unknown as {
+            querySelectorAll?: (selector: string) => NodeListOf<Element>;
+          };
+          const matchingElement = rootNode.querySelectorAll
+            ? Array.from(rootNode.querySelectorAll('[id]')).find(
+                element => element.getAttribute('id') === this.id
+              )
+            : sourceSvgRoot.ownerDocument?.getElementById(this.id);
+
+          return (matchingElement as SVGElement | undefined) ?? null;
+        }
+      };
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (renderedConnectionPrototype.findHighlightSvg as any).__cdoPatched = true;
+    }
+  }
+
   // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   blocklyWrapper.Trashcan = CdoTrashcan as any;

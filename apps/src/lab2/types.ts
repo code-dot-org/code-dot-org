@@ -340,6 +340,9 @@ export interface LevelProperties {
   hideVersionHistory?: boolean;
   parentLevelName?: string;
   requireEditToContinue?: boolean;
+  // Optional model supplied by Levelbuilder for labs that expose ML tools.
+  aiModelId?: string;
+  aiModelName?: string;
 }
 
 export type LevelPropertiesMap = {[levelId: string]: LevelProperties};

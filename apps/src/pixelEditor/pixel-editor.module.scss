@@ -16,6 +16,32 @@ $border-subtle: chrome.$border-subtle;
   @include chrome.theme;
 }
 
+.inlineEditor {
+  @include chrome.theme;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--dialog-border-subtle);
+  border-radius: 6px;
+  background-color: var(--dialog-panel-bg);
+  color: var(--dialog-panel-text);
+}
+
+.inlineEditor .body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.inlineEditor .canvasArea {
+  flex: 1;
+  min-width: 0;
+}
+
 // One high-contrast keyboard focus ring for everything in the dark modal;
 // UA defaults are hard to see against the panel background.
 .dialogHost .modal :focus-visible {
@@ -194,9 +220,7 @@ $border-subtle: chrome.$border-subtle;
   position: absolute;
   box-sizing: border-box;
   border: 2px solid #fff;
-  box-shadow:
-    0 0 0 1px rgb(0 0 0 / 80%),
-    inset 0 0 0 1px rgb(0 0 0 / 80%);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 80%), inset 0 0 0 1px rgb(0 0 0 / 80%);
   pointer-events: none;
 }
 
@@ -294,8 +318,7 @@ $border-subtle: chrome.$border-subtle;
 
 // A small checkerboard stands in for "no color" on transparent swatches.
 .swatchTransparent {
-  background:
-    repeating-conic-gradient(
+  background: repeating-conic-gradient(
       rgb(160 166 178) 0% 25%,
       rgb(255 255 255) 0% 50%
     )
@@ -368,9 +391,7 @@ $border-subtle: chrome.$border-subtle;
   height: 12px;
   border: 2px solid #fff;
   border-radius: 50%;
-  box-shadow:
-    0 0 0 1px rgb(0 0 0 / 70%),
-    inset 0 0 0 1px rgb(0 0 0 / 70%);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 70%), inset 0 0 0 1px rgb(0 0 0 / 70%);
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
