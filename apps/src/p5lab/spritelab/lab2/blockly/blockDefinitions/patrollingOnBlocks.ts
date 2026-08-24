@@ -26,7 +26,14 @@ const helperCode = [
   '  return {',
   '    func: function (spriteId) {',
   '      var speed = 2;',
-  '      var look = 25;',
+  // Half the sprite's on-screen width: the gap probe sits at its leading
+  // edge and it turns when that edge reaches the playspace, whatever the
+  // playfield's cell size is.
+  "      var half = getProp(spriteId, 'width') / 2;",
+  '      if (!(half > 0)) {',
+  '        half = 20;',
+  '      }',
+  '      var look = half;',
   "      if (getProp(spriteId, 'patrolOBDir') == undefined) {",
   "        setProp(spriteId, 'patrolOBDir', 1);",
   '      }',
@@ -56,10 +63,10 @@ const helperCode = [
   '        }',
   '      }',
   "      var x = getProp(spriteId, 'x');",
-  '      if (x <= 25 && dir < 0) {',
+  '      if (x <= half && dir < 0) {',
   "        setProp(spriteId, 'patrolOBDir', 1);",
   '      }',
-  '      if (x >= 375 && dir > 0) {',
+  '      if (x >= 400 - half && dir > 0) {',
   "        setProp(spriteId, 'patrolOBDir', -1);",
   '      }',
   "      setProp(spriteId, 'patrolOBExpX', x);",

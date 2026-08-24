@@ -6,7 +6,7 @@ import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 // Cells per side of the playfield, for a world being created now. The stored
 // world is WORLD_MULTIPLE times this per side, authored ahead of a
 // scrollable playfield; only the top-left scene-sized corner runs today.
-export const DEFAULT_SCENE_GRID_SIZE = 11;
+export const DEFAULT_SCENE_GRID_SIZE = 10;
 export const WORLD_MULTIPLE = 3;
 
 export interface WorldCell {

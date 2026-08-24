@@ -38,6 +38,11 @@ const STORY_SCENE_SPRITE_SIZE = 300;
 // Coordinates stay 400-based.
 const CANVAS_DENSITY_FACTOR = 2;
 
+// How long a restart quiets further restarts (see the restartScene command).
+// Comfortably longer than a restart takes to land, so the player sees the
+// scene run again before another collision can end it.
+const RESTART_QUIET_MS = 1000;
+
 // Markers in a scene's compiled program that make it a platformer: the
 // platform composites and player setup from the toolbox, or the world
 // prelude's wall spawns.
@@ -101,6 +106,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToScene = null;
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
+    // When the last restart fired, for the quiet window above.
+    this.lastRestartAt_ = 0;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -181,6 +188,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // platform draw loop below); a fresh run starts back at 1.
     this.cameraZoom_ = 1;
     this.cameraZoomTarget_ = 1;
+    // Not reset per run: a restart re-runs the program, and zeroing this here
+    // would let the next frame restart again immediately.
+    this.lastRestartAt_ = this.lastRestartAt_ || 0;
     library.commands.setCameraZoom = value => {
       this.cameraZoomTarget_ = clampZoom(Number(value));
     };
@@ -221,13 +231,24 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Defer a tick: jumping tears down the interpreter this command runs in.
       setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
     };
-    // Runs the current scene from the top. Shares the jump gate, so a
-    // per-frame trigger ("while touching") restarts once rather than every
-    // frame, and the view's cover and fade come along with it.
+    // Runs the current scene from the top, through the jump gate so the view's
+    // cover and fade come along with it.
+    //
+    // The gate alone only ignores triggers while a restart is in flight; a
+    // condition that is still true when the new run lands — a guard placed on
+    // the player's own start cell, say — would restart again on the very next
+    // frame, and full-screen fades at frame rate are both unplayable and a
+    // photosensitivity hazard. So a restart also quiets later ones briefly,
+    // long enough for the player to move off whatever restarted the scene.
     library.commands.restartScene = () => {
+      const now = Date.now();
+      if (now - this.lastRestartAt_ < RESTART_QUIET_MS) {
+        return;
+      }
       if (!this.onRestartScene || !this.beginSceneJump_()) {
         return;
       }
+      this.lastRestartAt_ = now;
       setTimeout(() => this.onRestartScene && this.onRestartScene(), 0);
     };
     library.commands.goToExternalScene = sceneKey => {

@@ -7,6 +7,7 @@ import {
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 
 import {ToolboxInfo} from './types';
 
@@ -17,6 +18,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_makePlatformBlocks',
     'spritelab2_makeSpriteAtGrid',
     'spritelab2_setAsPlatformPlayer',
+    THE_PLAYER_BLOCK_TYPE,
   ],
   Behaviors: [
     'spritelab2_movingLeft',

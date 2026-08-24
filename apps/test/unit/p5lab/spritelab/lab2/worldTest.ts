@@ -51,13 +51,13 @@ describe('world', () => {
   });
 
   it("sizes cells from the world's own playfield, not a fixed constant", () => {
-    const world = createEmptyWorld(10);
+    const world = createEmptyWorld(20);
     world.grid[0][0] = {image: 'ice', kind: 'block'};
-    expect(cellSize(10)).toBe(40);
+    expect(cellSize(20)).toBe(20);
     expect(compileWorldPrelude(world)).toBe(
       [
-        'setDefaultSpriteSize(40);',
-        'makeNewGroupSprite("ice", \'walls\', {x: 20, y: 20});',
+        'setDefaultSpriteSize(20);',
+        'makeNewGroupSprite("ice", \'walls\', {x: 10, y: 10});',
         '',
       ].join('\n')
     );

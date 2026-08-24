@@ -64,7 +64,7 @@
           "inputs": {
             "SPRITE1": {
               "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
+                "type": "spritelab2_thePlayer"
               }
             },
             "SPRITE2": {

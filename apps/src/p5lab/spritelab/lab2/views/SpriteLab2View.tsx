@@ -253,6 +253,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setImagesMounted(true);
     }
   }, [activeTab]);
+  // Same for the World tab. Its grid is a few hundred nodes, and inserting
+  // them costs far more than rendering them: the consent script's autoblocker
+  // walks every added node, which turned a switch into ~450ms of third-party
+  // work. Mounting once pays that once.
+  const [worldMounted, setWorldMounted] = useState(false);
+  useEffect(() => {
+    if (activeTab === 'World') {
+      setWorldMounted(true);
+    }
+  }, [activeTab]);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const isRunning = useAppSelector(state => state.runState.isRunning);
@@ -1386,8 +1396,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           </div>
         )}
 
-        {worldTab.enabled && activeTab === 'World' && (
-          <div className={moduleStyles.codeTabWrapper}>
+        {worldTab.enabled && worldMounted && (
+          <div
+            className={moduleStyles.codeTabWrapper}
+            style={{
+              clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
+              pointerEvents: activeTab === 'World' ? 'auto' : 'none',
+            }}
+          >
             <WorldTab
               world={activeWorld}
               displaySize={

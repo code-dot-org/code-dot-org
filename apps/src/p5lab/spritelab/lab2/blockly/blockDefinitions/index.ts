@@ -15,6 +15,7 @@ import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
+import thePlayer from './thePlayer';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
 // block whose runtime half is interpreted code exports it as helperCode.
@@ -36,6 +37,7 @@ const labBlockDefinitions: {
   setPlatformGravity,
   setAsPlatformPlayer,
   setCameraZoom,
+  thePlayer,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,

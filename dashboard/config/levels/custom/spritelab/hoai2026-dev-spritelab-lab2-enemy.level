@@ -60,36 +60,6 @@
       "contents": [
         {
           "kind": "category",
-          "name": "Behaviors",
-          "contents": [
-            {
-              "kind": "block",
-              "type": "gamelab_addBehaviorSimple",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "BEHAVIOR": {
-                  "shadow": {
-                    "type": "spritelab2_patrollingOnBlocks"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_patrollingOnBlocks"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_patrollingLeftRight"
-            }
-          ]
-        },
-        {
-          "kind": "category",
           "name": "Platform",
           "contents": [
             {
@@ -98,7 +68,7 @@
               "inputs": {
                 "SPRITE1": {
                   "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
+                    "type": "spritelab2_thePlayer"
                   }
                 },
                 "SPRITE2": {
@@ -125,6 +95,32 @@
                   }
                 }
               }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Behaviors",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_addBehaviorSimple",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "BEHAVIOR": {
+                  "shadow": {
+                    "type": "spritelab2_patrollingOnBlocks"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_patrollingOnBlocks"
             }
           ]
         }

@@ -14,6 +14,7 @@ import {DEFAULT_SCENE_GRID_SIZE} from '../../world';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 
 import {
   BlockInfo,
@@ -78,6 +79,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
       'spritelab2_setAsPlatformPlayer',
+      THE_PLAYER_BLOCK_TYPE,
       'spritelab2_setPlatformGravity',
       'spritelab2_setCameraZoom',
       RESTART_SCENE_BLOCK_TYPE,

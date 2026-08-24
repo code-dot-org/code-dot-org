@@ -390,23 +390,34 @@ $tab-segment-height: $tab-item-height - 2px;
 .guideBody {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: 14px;
+  gap: 8px;
+  font-size: 15px;
 }
 
 .guideInstructions {
-  line-height: 1.45;
+  line-height: 1.6;
 
   // Markdown output brings document-level margins; keep it compact inside
   // the guide, and keep links readable on the dark panel.
+  // The size and line height are repeated on the elements themselves, not
+  // just inherited: dashboard's scaffolds.scss sets `p, ol, ul, td` to
+  // 13px/18px, and an element-level rule beats anything this container
+  // inherits down. Guide text is read while working, so it gets a little
+  // more room than the app's default body copy.
   p,
   ul,
   ol {
-    margin: 0 0 6px;
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.6;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  li + li {
+    margin-top: 4px;
   }
 
   // A leading heading sits flush with the panel's own padding; one that
