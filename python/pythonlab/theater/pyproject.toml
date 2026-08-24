@@ -1,6 +1,6 @@
 [project]
 name = "theater"
-version = "0.3.0"
+version = "0.5.0"
 requires-python = '>=3.12'
 # pillow and numpy are provided by the Pyodide worker at runtime (loadPackages),
 # so they are intentionally not declared as install dependencies here.
