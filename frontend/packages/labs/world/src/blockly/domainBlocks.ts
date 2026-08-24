@@ -155,9 +155,7 @@ import {ownPropertyDeclarationFor, type OwnMeta} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {
   propertyByKey,
-  tweenablePropertyOptions,
   propertyOptions,
-  setBuiltinTweenables,
   setKnownProperties,
   writablePropertyOptions,
   type PropertyKind,
@@ -196,6 +194,8 @@ import {
 } from './traitOptions';
 import {
   DEFINE_TWEEN,
+  inTweenBody,
+  tweenStepCode,
   tweenOptions,
   tweenOptionsExtension,
   tweensIn,
@@ -227,14 +227,6 @@ const spriteFieldOptions = (): Array<[string, string]> => [
 ];
 
 /** Point a `SPRITE` dropdown at the live list (the project's images + import). */
-// The tweenable properties change as rules come and go, so the dropdown asks
-// again at block-init rather than keeping what it was minted with.
-const tweenablePropertyOptionsExtension = liveDropdown(
-  'world_tweenable_property_options',
-  'PROP',
-  tweenablePropertyOptions,
-);
-
 const spriteOptionsExtension = liveDropdown(
   'world_sprite_options',
   'SPRITE',
@@ -834,10 +826,16 @@ const worldSetPosition = defineBlock({
       const target = actorTarget(block, generator, Order.MEMBER);
       const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
       const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
+      const to = `new WorldLab.Vector(${x}, ${y})`;
+      // A destination inside a tween, as every other setter is — position is
+      // the one people tween most, and leaving the bespoke block out would
+      // have been the one gap nobody could explain.
+      if (inTweenBody(block)) {
+        return tweenStepCode('WorldLab.PositionProperty', to);
+      }
       return forEachActor(
         target,
-        actor =>
-          `${actor}.set(WorldLab.PositionProperty, new WorldLab.Vector(${x}, ${y}))`,
+        actor => `${actor}.set(WorldLab.PositionProperty, ${to})`,
       );
     },
   },
@@ -1835,6 +1833,13 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
           return '';
         }
         const value = typedValueCode(asTypedValue(property), block, generator);
+        // INSIDE A TWEEN this is a destination, not a write. The same block
+        // says "put it here" and "end up here" depending on where it sits,
+        // which is the whole of what makes a tween's vocabulary the same
+        // vocabulary as everything else's (`blockly/tweens`).
+        if (subjectScoped && inTweenBody(block)) {
+          return tweenStepCode(refCode(property.ref, generator), value);
+        }
         const set = (subject: string) =>
           `${subject}.set(${refCode(property.ref, generator)}, ${value})`;
         return subjectScoped
@@ -2173,6 +2178,9 @@ const generalPropertyBlocks = (kind: PropertyKind) => {
             generator.valueToCode(block, 'VALUE', Order.NONE) || 'null';
           if (!known) {
             return '';
+          }
+          if (inTweenBody(block)) {
+            return tweenStepCode(refCode(known.property.ref, generator), value);
           }
           // Over the actor value, which may hold several: `set ⟨…⟩ of ⟨any
           // ⟨Coin⟩⟩` broadcasts, exactly as the per-property setter does.
@@ -6823,13 +6831,8 @@ const worldDefineTween = defineBlock({
   type: DEFINE_TWEEN,
   message0: 'define tween %1',
   args0: [{type: 'field_input', name: 'NAME', text: 'fade out'}],
-  message1: 'move %1 to %2',
+  message1: 'over %1 seconds, %2',
   args1: [
-    {type: 'field_dropdown', name: 'PROP', options: tweenablePropertyOptions},
-    {type: 'input_value', name: 'TO'},
-  ],
-  message2: 'over %1 seconds, %2',
-  args2: [
     {type: 'input_value', name: 'SECONDS', check: 'Number'},
     {
       type: 'field_dropdown',
@@ -6842,37 +6845,49 @@ const worldDefineTween = defineBlock({
       ],
     },
   ],
+  message2: 'move %1',
+  args2: [{type: 'input_statement', name: 'DO'}],
   // A ROOT, with no connections — the shape `define drawing` has and for the
   // same two reasons. It declares something rather than doing something, so
   // there is no moment for it to happen AT; and a top-level block that has a
   // previous connection is disabled as an orphan by `DisableOrphansPlugin`,
   // along with everything below it.
-  extensions: [tweenablePropertyOptionsExtension],
+  extensions: [valueShadowExtension],
   style: 'setup_blocks',
   tooltip:
-    'Describe a movement of one property over time. Nothing happens until ' +
+    'Describe a movement over time. Put ordinary `set` blocks inside it — ' +
+    'each one is a destination rather than a write. Nothing happens until ' +
     'something plays it.',
   generator: {
     javascript(block, generator) {
-      const known = propertyByKey(String(block.getFieldValue('PROP') ?? ''));
-      if (!known || !refResolves(known.property.ref)) {
-        // A property the project can no longer name. Nothing to move.
-        return '';
-      }
       const name = String(block.getFieldValue('NAME') ?? 'tween');
-      const to = generator.valueToCode(block, 'TO', Order.NONE) || '0';
       const seconds =
         generator.valueToCode(block, 'SECONDS', Order.NONE) || '0';
+      // A FUNCTION OF THE ACTOR, not a record.
+      //
+      // This is what lets an ordinary `set` block live inside: the body can
+      // then say `this actor`, read another property off it, or compute a
+      // destination from where it is now — none of which a `const` evaluated
+      // once at module scope could do. `play tween` calls it with whoever the
+      // tween is played on.
+      const destinations = generator.statementToCode(block, 'DO') || '';
       return (
-        `const ${tweenVar(name, block.id)} = {` +
-        `id: ${str(name)}, ` +
-        `property: ${refCode(known.property.ref, generator)}, ` +
-        `to: ${to}, duration: ${seconds}, ` +
-        `curve: ${str(String(block.getFieldValue('CURVE') ?? 'linear'))}};\n`
+        `const ${tweenVar(name, block.id)} = (actor) => ({` +
+        `id: ${str(name)}, duration: ${seconds}, ` +
+        `curve: ${str(String(block.getFieldValue('CURVE') ?? 'linear'))}, ` +
+        `steps: [\n${destinations}]});\n`
       );
     },
   },
 });
+
+// A second, not nothing. An empty socket generates `0`, and a tween of no
+// length lands on its destinations the frame it starts — which looks exactly
+// like a tween that did not run, and is the first thing anybody dragging this
+// block out would see.
+registerValueShadows(DEFINE_TWEEN, [
+  {name: 'SECONDS', shadow: {type: 'math_number', fields: {NUM: 1}}},
+]);
 
 /**
  * `play tween ⟨…⟩ on ⟨…⟩` — start one running.
@@ -6913,13 +6928,17 @@ const worldPlayTween = defineBlock({
         return '';
       }
       const held = tweenVar(defined.name, defined.blockId);
-      // `from` is read HERE, not in the definition: the movement starts from
-      // wherever the property has got to by now.
+      // CALLED with the actor, because the definition is a function of one —
+      // that is what lets a `set` block inside it say `this actor`.
+      //
+      // `from` is read HERE, not in the definition: a destination is a fact
+      // about where to go, and where you started is a fact about the moment
+      // you set off.
       return forEachActor(
         actorTarget(block, generator),
         who =>
-          `${who}.startTween({...${held}, from: ${who}.get(${held}.property), ` +
-          `elapsed: 0}, WorldLab.tweenDisplaced)`,
+          `${who}.startTween(WorldLab.beginTween(${held}(${who}), ${who}), ` +
+          `WorldLab.tweenDisplaced)`,
       );
     },
   },
@@ -7808,28 +7827,6 @@ export function buildDomainPalette(
   // Set here because this is the one place that has both lists at once, and it
   // runs whenever either changes — a rule imported, an actor's `define
   // property` renamed.
-  // The foundation's tweenable properties, which the general get/set blocks
-  // deliberately leave out — `set position` and `set sprite` have blocks of
-  // their own. A tween is the case where that does not hold: fading a thing
-  // out is the first tween anybody writes.
-  setBuiltinTweenables(
-    AUTHORING_RULES.flatMap(rule =>
-      rule.properties
-        .filter(
-          property =>
-            property.scope === 'actor' &&
-            !property.readonly &&
-            (property.type === 'number' ||
-              property.type === 'vector' ||
-              property.type === 'point'),
-        )
-        .map(property => ({
-          key: memberKey(property.ref),
-          label: `${rule.name} \u25b8 ${property.name ?? property.ref.exportName}`,
-          property,
-        })),
-    ),
-  );
   setKnownProperties(
     [
       ...projectRules.flatMap(rule =>

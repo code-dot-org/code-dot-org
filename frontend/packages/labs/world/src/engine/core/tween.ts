@@ -33,13 +33,35 @@ export type Tweenable = number | Vector;
  * "from wherever you are now", and a definition that fixed the start would
  * snap before it moved.
  */
+/** One property a tween moves, and the two ends it moves between. */
+export interface TweenStep {
+  readonly property: Property<Tweenable>;
+  /**
+   * Captured when the tween STARTS, not when it is defined: "fade out" means
+   * from however visible you are now, and a definition that fixed the start
+   * would snap before it moved.
+   */
+  readonly from: Tweenable;
+  readonly to: Tweenable;
+}
+
+/**
+ * One tween in flight on one actor.
+ *
+ * SEVERAL PROPERTIES, one clock. Moving and fading together is the ordinary
+ * case — a character entering a scene does both — and a tween per property
+ * would raise a `finishes` for each, so a handler waiting for "the entrance is
+ * over" would fire twice and be right neither time.
+ *
+ * One duration and one curve for all of them. Phaser allows a timing per
+ * property; two different timings here is two tweens, which reads better than
+ * a block with a duration on every row.
+ */
 export interface TweenRun {
   /** Names the definition, for the finished event and for replacing itself. */
   readonly id: string;
-  readonly property: Property<Tweenable>;
-  readonly from: Tweenable;
-  readonly to: Tweenable;
-  /** Seconds. Zero is legal and lands on `to` immediately. */
+  readonly steps: readonly TweenStep[];
+  /** Seconds. Zero is legal and lands on every `to` immediately. */
   readonly duration: number;
   readonly curve: Curve;
   /** Seconds so far. */
@@ -99,8 +121,53 @@ export const advanceTween = (
 ): boolean => {
   run.elapsed += delta;
   const t = run.duration > 0 ? clamp01(run.elapsed / run.duration) : 1;
-  actor.set(run.property, tweenValue(run.from, run.to, CURVES[run.curve](t)));
+  const eased = CURVES[run.curve](t);
+  for (const step of run.steps) {
+    actor.set(step.property, tweenValue(step.from, step.to, eased));
+  }
   return t >= 1;
+};
+
+/** A tween as its definition describes it: destinations, with no start yet. */
+export interface TweenPlan {
+  readonly id: string;
+  readonly duration: number;
+  readonly curve: Curve;
+  readonly steps: ReadonlyArray<{property: Property<Tweenable>; to: Tweenable}>;
+}
+
+/**
+ * Turn a plan into a run by reading where each property is NOW.
+ *
+ * The one thing a definition cannot know. It is called at the moment of
+ * playing, which is what makes "fade out" mean "from however visible you are"
+ * rather than from whatever you were when the file loaded.
+ *
+ * A destination whose value has no path between two of its kind is dropped and
+ * said out loud: a sprite name or a colour has no midpoint, and easing to one
+ * over half a second would either do nothing or snap at the end. Dropping the
+ * row rather than the tween keeps the rest of it working.
+ */
+export const beginTween = (plan: TweenPlan, actor: Actor): TweenRun => {
+  const steps: TweenStep[] = [];
+  for (const step of plan.steps) {
+    const from = actor.get(step.property);
+    if (!isTweenable(from) || !isTweenable(step.to)) {
+      console.warn(
+        `The tween "${plan.id}" cannot move "${step.property.name ?? step.property.id}": ` +
+          'there is no half way between two of those. That row is ignored.',
+      );
+      continue;
+    }
+    steps.push({property: step.property, from, to: step.to});
+  }
+  return {
+    id: plan.id,
+    duration: plan.duration,
+    curve: plan.curve,
+    steps,
+    elapsed: 0,
+  };
 };
 
 /**
@@ -108,8 +175,7 @@ export const advanceTween = (
  *
  * The engine has no console and no opinion about where a warning belongs, so
  * `Actor.startTween` only reports; this is the report a WORLD makes, and it
- * goes where every other message from a running game goes — the lab's console
- * panel, by way of the sandbox's `console`.
+ * goes where every other message from a running game goes.
  *
  * Worth saying at all because the alternative is silence: fading a thing out
  * while fading it in is a real mistake, and honouring the newer one looks
@@ -118,6 +184,6 @@ export const advanceTween = (
 export const tweenDisplaced = (displaced: TweenRun): void => {
   console.warn(
     `The tween "${displaced.id}" was stopped: something else started ` +
-      `moving the same property. The newest one wins.`,
+      `moving a property it was moving. The newest one wins.`,
   );
 };

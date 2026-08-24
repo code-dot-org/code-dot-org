@@ -242,27 +242,33 @@ export class Actor {
   }
 
   /**
-   * Start a tween, replacing any already moving the same property.
+   * Start a tween, replacing any already moving a property it moves.
    *
    * LAST WRITE WINS, decided at the START rather than per frame. Two tweens
-   * left running on one property would both write it every tick and the
+   * left running over one property would both write it every tick and the
    * winner would be whichever the list happened to reach second — a race
    * decided by insertion order, which is no rule at all. Replacing means the
    * newest instruction is the one in force, which is what "last write wins"
    * is for.
    *
+   * WHOLE RUNS, on any overlap at all. A tween moves a SET of properties, so
+   * two of them can half-collide — one fading, one moving-and-fading. Splitting
+   * the older run and keeping the half that does not clash is not behaviour
+   * anybody could predict; "two tweens cannot fight over a property, so the
+   * newer replaces the older" is one sentence.
+   *
    * It is still worth saying out loud. Fading a thing out while fading it in
-   * is a real mistake, and silently honouring one of them looks like the
-   * other one never ran. `onReplace` is how the caller reports it — the engine
-   * has no console of its own and no opinion about where a warning belongs.
+   * is a real mistake, and silently honouring one of them looks like the other
+   * one never ran. `onReplace` is how the caller reports it — the engine has no
+   * console of its own and no opinion about where a warning belongs.
    */
   startTween(run: TweenRun, onReplace?: (displaced: TweenRun) => void): this {
-    const at = this.runningTweens.findIndex(
-      held => held.property.id === run.property.id,
-    );
-    if (at >= 0) {
-      onReplace?.(this.runningTweens[at]);
-      this.runningTweens.splice(at, 1);
+    const moving = new Set(run.steps.map(step => step.property.id));
+    for (const held of [...this.runningTweens]) {
+      if (held.steps.some(step => moving.has(step.property.id))) {
+        onReplace?.(held);
+        this.runningTweens.splice(this.runningTweens.indexOf(held), 1);
+      }
     }
     this.runningTweens.push(run);
     return this;

@@ -8,7 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {OpacityProperty} from '../engine';
+import {OpacityProperty, PositionProperty} from '../engine';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
@@ -36,14 +36,21 @@ const world = (seconds = 1) =>
           id: 'fadeDef',
           x: 20,
           y: 300,
-          fields: {
-            NAME: 'fade out',
-            PROP: 'Appearance_OpacityProperty',
-            CURVE: 'linear',
-          },
+          fields: {NAME: 'fade out', CURVE: 'linear'},
           inputs: {
-            TO: {block: {type: 'math_number', fields: {NUM: 0}}},
             SECONDS: {block: {type: 'math_number', fields: {NUM: seconds}}},
+            // AN ORDINARY SETTER, inside the mouth. The same block that writes
+            // a property elsewhere names a destination here, which is what
+            // keeps a tween's vocabulary exactly the vocabulary of properties.
+            DO: {
+              block: {
+                type: 'world_set_Appearance_OpacityProperty',
+                inputs: {
+                  ACTOR: {block: {type: 'world_this_actor'}},
+                  VALUE: {block: {type: 'math_number', fields: {NUM: 0}}},
+                },
+              },
+            },
           },
         },
         {
@@ -105,14 +112,18 @@ const broadcastWorld = JSON.stringify({
         id: 'fadeDef',
         x: 20,
         y: 300,
-        fields: {
-          NAME: 'fade out',
-          PROP: 'Appearance_OpacityProperty',
-          CURVE: 'linear',
-        },
+        fields: {NAME: 'fade out', CURVE: 'linear'},
         inputs: {
-          TO: {block: {type: 'math_number', fields: {NUM: 0}}},
           SECONDS: {block: {type: 'math_number', fields: {NUM: 1}}},
+          DO: {
+            block: {
+              type: 'world_set_Appearance_OpacityProperty',
+              inputs: {
+                ACTOR: {block: {type: 'world_this_actor'}},
+                VALUE: {block: {type: 'math_number', fields: {NUM: 0}}},
+              },
+            },
+          },
         },
       },
       {
@@ -243,5 +254,131 @@ describe('a tween defined in a file and played', () => {
     built.tick(1);
 
     expect(actor.get(OpacityProperty)).toBeCloseTo(0.5, 6);
+  });
+});
+
+// TWO properties in one tween, which is what the mouth is for.
+//
+// A character entering a scene moves and fades at once. Before the mouth this
+// was two tweens with two names and two `finishes` events, and a handler
+// waiting for "the entrance is over" had to guess which one to listen to.
+const enterWorld = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_define_tween',
+        id: 'enterDef',
+        x: 20,
+        y: 300,
+        fields: {NAME: 'enter', CURVE: 'linear'},
+        inputs: {
+          SECONDS: {block: {type: 'math_number', fields: {NUM: 1}}},
+          DO: {
+            block: {
+              type: 'world_set_Appearance_OpacityProperty',
+              inputs: {
+                ACTOR: {block: {type: 'world_this_actor'}},
+                VALUE: {block: {type: 'math_number', fields: {NUM: 1}}},
+              },
+              // Chained, so the mouth holds two rows — which is the entire
+              // point of it being a mouth rather than one dropdown.
+              next: {
+                block: {
+                  type: 'world_set_position',
+                  inputs: {
+                    ACTOR: {block: {type: 'world_this_actor'}},
+                    X: {block: {type: 'math_number', fields: {NUM: 100}}},
+                    Y: {block: {type: 'math_number', fields: {NUM: 0}}},
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      {
+        type: 'world_world',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'My World'},
+        next: {
+          block: {
+            type: 'world_add_actor',
+            fields: {ACTOR: 'actors/player'},
+            inputs: {
+              DO: {
+                block: {
+                  type: 'world_set_Appearance_OpacityProperty',
+                  inputs: {
+                    ACTOR: {block: {type: 'world_this_actor'}},
+                    VALUE: {block: {type: 'math_number', fields: {NUM: 0}}},
+                  },
+                  next: {
+                    block: {
+                      type: 'world_play_tween',
+                      fields: {TWEEN: 'enterDef'},
+                      inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    ],
+  },
+});
+
+const entering = () =>
+  projectFiles({
+    files: {
+      p: {
+        id: 'p',
+        name: 'player.actor',
+        language: 'actor',
+        contents: PLAYER,
+        folderId: 'actors',
+      },
+      w: {
+        id: 'w',
+        name: 'main.world',
+        language: 'world',
+        contents: enterWorld,
+        folderId: 'worlds',
+      },
+    },
+    folders: {
+      actors: {id: 'actors', name: 'actors', parentId: '0'},
+      worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
+    },
+    openFiles: [],
+  } as never);
+
+describe('a tween of two properties at once', () => {
+  it('moves and fades on one clock', async () => {
+    const {world: built} = await compileProject(entering());
+    const actor = [...built.actors][0];
+
+    // Set to invisible as it was placed, so the fade has somewhere to come
+    // from — a destination is a fact about where to go, and `from` is read
+    // when the tween is played.
+    expect(actor.get(OpacityProperty)).toBe(0);
+
+    built.tick(0.5);
+
+    expect(actor.get(OpacityProperty)).toBeCloseTo(0.5, 6);
+    expect(actor.get(PositionProperty).x).toBeCloseTo(50, 6);
+  });
+
+  it('is one tween, so it lands once', async () => {
+    const {world: built} = await compileProject(entering());
+    const actor = [...built.actors][0];
+
+    built.tick(1);
+
+    expect(actor.get(OpacityProperty)).toBe(1);
+    expect(actor.get(PositionProperty).x).toBe(100);
+    expect(actor.tweens()).toHaveLength(0);
   });
 });

@@ -15,16 +15,22 @@ import {
   isTweenable,
   tweenValue,
   type TweenRun,
+  type TweenStep,
 } from '../core/tween';
 import {ActorBuilder, PositionProperty, Vector, WorldBuilder} from '../index';
 import {OpacityProperty, AppearanceTrait} from '../rules/animation';
 import {TweenFinishedEvent} from '../rules/spatial';
 
-const run = (over: Partial<TweenRun> = {}): TweenRun => ({
-  id: 'fade out',
-  property: OpacityProperty as TweenRun['property'],
+const step = (over: Partial<TweenStep> = {}): TweenStep => ({
+  property: OpacityProperty as TweenStep['property'],
   from: 1,
   to: 0,
+  ...over,
+});
+
+const run = (over: Partial<TweenRun> = {}): TweenRun => ({
+  id: 'fade out',
+  steps: [step()],
   duration: 1,
   curve: 'linear',
   elapsed: 0,
@@ -134,7 +140,11 @@ describe('the curves', () => {
   it('differ in the middle, which is the whole point of having them', () => {
     const at = (curve: TweenRun['curve']) => {
       const {actor} = world();
-      advanceTween(run({curve, from: 0, to: 1, duration: 1}), actor, 0.25);
+      advanceTween(
+        run({curve, steps: [step({from: 0, to: 1})], duration: 1}),
+        actor,
+        0.25,
+      );
       return actor.get(OpacityProperty);
     };
 
@@ -152,7 +162,7 @@ describe('two tweens on one property', () => {
     const first = run({id: 'fade out'});
 
     actor.startTween(first);
-    actor.startTween(run({id: 'fade in', from: 0, to: 1}));
+    actor.startTween(run({id: 'fade in', steps: [step({from: 0, to: 1})]}));
 
     expect(actor.tweens().map(held => held.id)).toEqual(['fade in']);
   });
@@ -178,9 +188,13 @@ describe('two tweens on one property', () => {
     actor.startTween(
       run({
         id: 'slide',
-        property: PositionProperty as TweenRun['property'],
-        from: new Vector(0, 0),
-        to: new Vector(10, 0),
+        steps: [
+          step({
+            property: PositionProperty as TweenStep['property'],
+            from: new Vector(0, 0),
+            to: new Vector(10, 0),
+          }),
+        ],
       }),
     );
 
@@ -212,12 +226,87 @@ describe('a tween running in a world', () => {
     // to chain two: fade out, then move, then fade in.
     const {world: built, actor} = world();
     actor.on(TweenFinishedEvent, () => {
-      actor.startTween(run({id: 'fade in', from: 0, to: 1, duration: 1}));
+      actor.startTween(
+        run({id: 'fade in', steps: [step({from: 0, to: 1})], duration: 1}),
+      );
     });
 
     actor.startTween(run({duration: 0.1}));
 
     expect(() => built.tick(0.2)).not.toThrow();
     expect(actor.tweens().map(held => held.id)).toEqual(['fade in']);
+  });
+});
+
+// Several properties on one clock.
+//
+// Moving and fading together is the ordinary case — a character entering a
+// scene does both — and a tween per property would raise a `finishes` for each,
+// so a handler waiting for "the entrance is over" would fire twice and be right
+// neither time.
+describe('a tween of several properties', () => {
+  const both = () =>
+    run({
+      id: 'enter',
+      duration: 1,
+      steps: [
+        step({from: 0, to: 1}),
+        step({
+          property: PositionProperty as TweenStep['property'],
+          from: new Vector(0, 0),
+          to: new Vector(100, 0),
+        }),
+      ],
+    });
+
+  it('moves all of them together', () => {
+    const {actor} = world();
+
+    advanceTween(both(), actor, 0.5);
+
+    expect(actor.get(OpacityProperty)).toBeCloseTo(0.5, 6);
+    expect(actor.get(PositionProperty).x).toBeCloseTo(50, 6);
+  });
+
+  it('finishes once, when the whole thing lands', () => {
+    const {actor} = world();
+    const held = both();
+
+    expect(advanceTween(held, actor, 0.5)).toBe(false);
+    expect(advanceTween(held, actor, 0.5)).toBe(true);
+  });
+
+  it('is displaced whole by anything that touches one of its properties', () => {
+    // Splitting the older run and keeping the half that does not clash is not
+    // behaviour anybody could predict. "Two tweens cannot fight over a
+    // property, so the newer replaces the older" is one sentence.
+    const {actor} = world();
+    const displaced: string[] = [];
+
+    actor.startTween(both());
+    actor.startTween(run({id: 'fade in'}), gone => displaced.push(gone.id));
+
+    expect(displaced).toEqual(['enter']);
+    expect(actor.tweens().map(held => held.id)).toEqual(['fade in']);
+  });
+
+  it('leaves a run it shares nothing with alone', () => {
+    const {actor} = world();
+
+    actor.startTween(run({id: 'fade out'}));
+    actor.startTween(
+      run({
+        id: 'slide',
+        steps: [
+          step({
+            property: PositionProperty as TweenStep['property'],
+            from: new Vector(0, 0),
+            to: new Vector(10, 0),
+          }),
+        ],
+      }),
+    );
+
+    expect(actor.tweens()).toHaveLength(2);
   });
 });

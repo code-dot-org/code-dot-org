@@ -94,10 +94,13 @@ export {parseAnimationFile, type AnimationFile} from './core/animationFile';
 export {rgb, rgba, toHex, type Rgb, type Rgba} from './core/color';
 export {
   advanceTween,
+  beginTween,
   isTweenable,
   tweenDisplaced,
   tweenValue,
   type Curve,
   type Tweenable,
+  type TweenPlan,
   type TweenRun,
+  type TweenStep,
 } from './core/tween';

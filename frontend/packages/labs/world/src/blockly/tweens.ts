@@ -82,3 +82,45 @@ export const tweenOptionsExtension = liveDropdown(
   'TWEEN',
   tweenOptions,
 );
+
+/**
+ * Whether this block sits inside a `define tween`'s mouth.
+ *
+ * `getSurroundParent`, because the mouth is a statement input: a block merely
+ * chained BELOW the definition is beside it, not in it. Same walk and the same
+ * reasoning as `inCameraBody`.
+ *
+ * A handler ends it, for the reason a camera body's walk stops at one: inside a
+ * handler the subject is rebound and the block is about a moment rather than
+ * about a destination.
+ */
+export const inTweenBody = (block: Blockly.Block): boolean => {
+  for (
+    let parent = block.getSurroundParent?.() ?? null;
+    parent;
+    parent = parent.getSurroundParent?.() ?? null
+  ) {
+    if (parent.type === DEFINE_TWEEN) {
+      return true;
+    }
+    if (parent.type.startsWith('world_on_')) {
+      return false;
+    }
+  }
+  return false;
+};
+
+/**
+ * One row of a tween's mouth, as generated code.
+ *
+ * An ordinary `set` block generates a WRITE; inside a tween the same block
+ * names a DESTINATION instead. Reusing the blocks rather than inventing a
+ * `move ⟨property⟩ to ⟨value⟩` is what keeps the tween's vocabulary exactly
+ * the vocabulary of properties — every rule's, every actor's own, and the
+ * foundation's — with nothing to keep in step.
+ *
+ * `from` is not here. It is read when the tween is PLAYED, because a
+ * destination is a fact about where to go and not about where you were.
+ */
+export const tweenStepCode = (property: string, to: string): string =>
+  `{property: ${property}, to: ${to}},\n`;

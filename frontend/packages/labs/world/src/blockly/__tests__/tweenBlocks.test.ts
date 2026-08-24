@@ -7,9 +7,11 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {buildDomainPalette} from '../domainBlocks';
-import {tweenablePropertyOptions} from '../propertyOptions';
-import {tweenOptions, tweensIn, tweenVar} from '../tweens';
+// Imported for its side effect: the shadows are registered as the module
+// loads, so a test that never loads it sees an empty registry.
+import '../domainBlocks';
+import {DEFINE_TWEEN, tweenOptions, tweensIn, tweenVar} from '../tweens';
+import {shadowsFor} from '../valueShadow';
 
 /** A workspace stand-in: the top blocks a file holds. */
 const workspace = (
@@ -94,32 +96,19 @@ describe('the variable a definition becomes', () => {
   });
 });
 
-// Which properties a tween may move.
-describe('the properties offered to move', () => {
-  it('includes the foundation, which the general blocks leave out', () => {
-    // Fading a thing out is the first tween anybody writes, and "you may ease
-    // any property except the four worth easing" is not a rule anybody would
-    // choose. `set position` and `set sprite` have blocks of their own, which
-    // is why the general get/set pair omits them and this does not.
-    buildDomainPalette([], {allRuleModules: true});
-
-    expect(tweenablePropertyOptions().map(([, key]) => key)).toEqual(
-      expect.arrayContaining([
-        'Appearance_OpacityProperty',
-        'Space_PositionProperty',
-        'Space_ScaleProperty',
-        'Space_RotationProperty',
-      ]),
+// What a freshly dragged-out `define tween` already says.
+describe('the seconds a new tween starts with', () => {
+  it('is one, and not an empty socket', () => {
+    // An empty socket generates `0`, and a tween of no length lands on its
+    // destinations the frame it starts — indistinguishable from a tween that
+    // did not run, and the first thing anybody dragging the block out sees.
+    const seconds = shadowsFor(DEFINE_TWEEN)?.find(
+      entry => entry.name === 'SECONDS',
     );
-  });
 
-  it('leaves out what has no midpoint', () => {
-    // A sprite name, a colour, a boolean: there is no half way between two of
-    // them worth guessing at (`engine/core/tween`).
-    buildDomainPalette([], {allRuleModules: true});
-    const offered = tweenablePropertyOptions().map(([, key]) => key);
-
-    expect(offered).not.toContain('Appearance_SpriteProperty');
-    expect(offered).not.toContain('Appearance_AnimationProperty');
+    expect(seconds?.shadow).toEqual({
+      type: 'math_number',
+      fields: {NUM: 1},
+    });
   });
 });
