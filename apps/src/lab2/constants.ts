@@ -32,7 +32,7 @@ export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
 ];
 
 // Project types whose content is share-filtered for profanity/PII on the
-// server. Must stay in sync with FILTERED_PROJECT_TYPES inp
+// server. Must stay in sync with FILTERED_PROJECT_TYPES in
 // lib/cdo/share_filtering.rb (for the lab2 project types listed there).
 export const PROJECT_TYPES_WITH_SHARE_FILTERING: ProjectType[] = ['sketchlab'];
 
