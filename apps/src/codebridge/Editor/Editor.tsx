@@ -14,6 +14,7 @@ import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
 
+import {AudioPlayer} from '@cdo/apps/codebridge/components/AudioPlayer';
 import {CodebridgeEmptyState} from '@cdo/apps/codebridge/components/CodebridgeEmptyState';
 import emptyFilesPlaceholderImage from '@cdo/apps/codebridge/images/empty-files-placeholder.svg';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -26,7 +27,11 @@ import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {htmlLinter} from '@cdo/apps/weblab2/htmlLinter';
 
-import {editableFileType, viewableImageFileType} from '../utils';
+import {
+  editableFileType,
+  viewableAudioFileType,
+  viewableImageFileType,
+} from '../utils';
 
 import {getAddToAiTutorField} from './addToAiTutorField';
 
@@ -197,6 +202,10 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   if (activeFile?.url && viewableImageFileType(activeFileExt)) {
     // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
     return <img src={activeFile.url} alt={activeFile.name} tabIndex={0} />;
+  }
+
+  if (activeFile?.url && viewableAudioFileType(activeFileExt)) {
+    return <AudioPlayer src={activeFile.url} fileName={activeFile.name} />;
   }
 
   if (activeFile && !editableFileType(activeFileExt, editableFileTypes)) {

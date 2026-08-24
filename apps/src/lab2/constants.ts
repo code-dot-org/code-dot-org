@@ -67,3 +67,7 @@ export const INITIAL_VERSION_ID = 'initial-version';
 export const SUPPORTED_IMAGE_EXTENSIONS = SafeAndSupportedImageTypes.flatMap(
   mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
 );
+
+// Audio formats a project file can be played back as. Kept narrow on purpose:
+// every browser we support decodes WAV without a codec negotiation.
+export const SUPPORTED_AUDIO_EXTENSIONS = ['wav'];

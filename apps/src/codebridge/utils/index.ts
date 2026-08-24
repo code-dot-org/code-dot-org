@@ -25,4 +25,5 @@ export * from './validateBackpackFileName';
 export * from './validateFileName';
 export * from './validateFolderMove';
 export * from './validateFolderName';
+export * from './viewableAudioFileType';
 export * from './viewableImageFileType';
