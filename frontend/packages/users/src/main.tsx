@@ -14,6 +14,8 @@ import {createRoot} from 'react-dom/client';
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {QueryClientProvider} from '@code-dot-org/core/api';
+import {analyticsPlugin} from '@code-dot-org/core/plugins/analytics';
+import {consentPlugin} from '@code-dot-org/core/plugins/consent';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
 import {injectFontAwesome} from '@code-dot-org/fonts';
@@ -28,7 +30,17 @@ import {
 } from './fixtures';
 import UsersSettingsPage from './UsersSettingsPage';
 
-initializeCore({plugins: [localizationPlugin, observabilityPlugin]});
+initializeCore({
+  // This host renders no app-config meta, so analytics resolves to provider
+  // 'none'. consentPlugin settles immediately without OneTrust on the page,
+  // which lets the development console adapter boot.
+  plugins: [
+    localizationPlugin,
+    observabilityPlugin,
+    consentPlugin,
+    analyticsPlugin,
+  ],
+});
 // FontAwesome icon webfont — dev host only (Studio injects it); without it DSCO
 // controls render as blank boxes.
 injectFontAwesome();
