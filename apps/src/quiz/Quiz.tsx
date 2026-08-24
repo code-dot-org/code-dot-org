@@ -3,12 +3,13 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
+import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {getAppOptionsBuildingQuizQuestions} from '@cdo/apps/lab2/projects/utils';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import QuizBuilder, {QuizQuestionData} from './builder/QuizBuilder';
 import QuizConfigurationForm, {
@@ -97,10 +98,12 @@ const formatRemainingTime = (totalSeconds: number) => {
 };
 
 const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
+  const dispatch = useAppDispatch();
   const {
     id: levelId,
     name,
     scriptId,
+    appName,
     quizQuestions,
     title: initialTitle,
     introText: initialIntroText,
@@ -171,6 +174,13 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const isViewingAsStudent = !!viewAsUserId;
+  // Only meaningful in viewAs mode - distinguishes "haven't checked yet"
+  // from "checked, this student has no attempt" so the latter can show a
+  // plain message instead of an empty, seemingly-interactive quiz.
+  const [viewedStudentHasNoAttempt, setViewedStudentHasNoAttempt] =
+    useState(false);
   const hasResourcePanelTabs = isBuilderMode;
   const isResourcePanelExpanded =
     hasResourcePanelTabs && !isResourcePanelCollapsed;
@@ -241,12 +251,22 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     if (isBuilderView || !scriptId) {
       return;
     }
+    setViewedStudentHasNoAttempt(false);
+    const userIdParam = viewAsUserId ? `&userId=${viewAsUserId}` : '';
     // Check-only - never creates an attempt as a side effect of loading
     // the page (see beginAttempt above for why that matters).
-    HttpClient.get(`/quiz_attempts?levelId=${levelId}&scriptId=${scriptId}`)
+    HttpClient.get(
+      `/quiz_attempts?levelId=${levelId}&scriptId=${scriptId}${userIdParam}`
+    )
       .then(response => response.json())
       .then(data => {
         if (!data) {
+          // Viewing another student's work: never create an attempt on
+          // their behalf, just note they haven't taken it yet.
+          if (isViewingAsStudent) {
+            setViewedStudentHasNoAttempt(true);
+            return;
+          }
           // No attempt yet: show the intro screen first if there's
           // anything for it to show, otherwise start immediately - same
           // as this quiz behaved before the intro screen existed.
@@ -268,10 +288,19 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
           setCanRetake(!!data.canRetake);
         } else {
           // only start a countdown for an attempt that isn't already done.
+          // Not meaningful in viewAs mode - see the countdown effect below.
           setExpiresAt(data.expiresAt || null);
         }
       });
-  }, [isBuilderView, levelId, scriptId, needsIntroScreen, beginAttempt]);
+  }, [
+    isBuilderView,
+    levelId,
+    scriptId,
+    needsIntroScreen,
+    beginAttempt,
+    viewAsUserId,
+    isViewingAsStudent,
+  ]);
 
   const setResponse = (questionId: number, value: QuestionResponseValue) =>
     setResponses(prev => ({...prev, [questionId]: value}));
@@ -344,6 +373,14 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
       });
       setResponses(responsesFromQuestionResults(data.questionResults));
       setCanRetake(!!data.canRetake);
+      // Marks this level "submitted" (not a score) in the section progress
+      // grid - the same generic lab2 report SubmitButton.tsx sends for any
+      // submittable level. Only meaningful inside a script, same as the
+      // attempt itself (see beginAttempt/the mount effect above) - outside
+      // one there's no lesson for the report to attach to.
+      if (scriptId) {
+        dispatch(sendSubmitReport({appType: appName, submitted: true}));
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -362,7 +399,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
   // after expiry regardless) - this is what makes that happen without the
   // student needing to click Submit themselves.
   useEffect(() => {
-    if (!expiresAt || result) {
+    if (!expiresAt || result || isViewingAsStudent) {
       setRemainingSeconds(null);
       return;
     }
@@ -382,7 +419,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
     tick();
     const interval = setInterval(tick, 1000);
     return () => clearInterval(interval);
-  }, [expiresAt, result]);
+  }, [expiresAt, result, isViewingAsStudent]);
 
   return (
     <div id="quiz-lab" className={styles.quiz} ref={containerRef}>
@@ -475,6 +512,15 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
               timeLimitMinutes={timeLimitMinutes}
               onBegin={beginAttempt}
             />
+          ) : isViewingAsStudent && viewedStudentHasNoAttempt ? (
+            <div className={styles.card}>
+              <div className={styles.cardHeader}>
+                <Typography variant="h2">{title || name}</Typography>
+              </div>
+              <Typography variant="body2">
+                This student hasn&apos;t attempted this quiz yet.
+              </Typography>
+            </div>
           ) : (
             <div className={styles.card}>
               <div className={styles.cardHeader}>
@@ -482,6 +528,11 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                 {!scriptId && (
                   <Typography variant="body3">
                     Preview outside a script has no attempt tracking.
+                  </Typography>
+                )}
+                {isViewingAsStudent && (
+                  <Typography variant="body3">
+                    Viewing this student&apos;s work. Read-only.
                   </Typography>
                 )}
                 {remainingSeconds !== null && (
@@ -498,7 +549,7 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                     index={multipleChoiceQuestions.indexOf(question)}
                     total={multipleChoiceQuestions.length}
                     selectedChoiceId={responses[question.id]}
-                    disabled={!!result}
+                    disabled={!!result || isViewingAsStudent}
                     result={questionResultsById.get(question.id)}
                     onSelectChoice={choiceId =>
                       setResponse(question.id, choiceId)
@@ -506,57 +557,64 @@ const Quiz: React.FunctionComponent<LabProps> = ({levelProperties}) => {
                   />
                 ))}
               </ol>
-              <div className={styles.cardFooter}>
-                {!result && pageNumbers.length > 1 && (
-                  <MuiButton
-                    variant="outlined"
-                    color="secondary"
-                    size="medium"
-                    type="button"
-                    disabled={currentPageIndex === 0 || isSubmitting}
-                    onClick={() => setCurrentPageIndex(prev => prev - 1)}
-                  >
-                    Previous
-                  </MuiButton>
-                )}
-                {!result && !isLastPage ? (
-                  <MuiButton
-                    variant="contained"
-                    color="primary"
-                    size="medium"
-                    type="button"
-                    // Next is a local pagination action with no dependency
-                    // on an attempt existing - only require one when
-                    // running inside a script, where an attempt actually
-                    // gets created at all.
-                    disabled={(!!scriptId && !attemptId) || isSubmitting}
-                    onClick={() => setCurrentPageIndex(prev => prev + 1)}
-                  >
-                    Next
-                  </MuiButton>
-                ) : (
-                  <MuiButton
-                    variant="contained"
-                    color="primary"
-                    size="medium"
-                    type="button"
-                    loading={isSubmitting}
-                    disabled={
-                      !attemptId || (!!result && !canRetake) || isSubmitting
-                    }
-                    onClick={() =>
-                      result && canRetake ? retakeQuiz() : submitQuiz()
-                    }
-                  >
-                    {result && canRetake ? 'Retake Quiz' : 'Submit Quiz'}
-                  </MuiButton>
-                )}
-                {result && (
-                  <Typography variant="h5">
-                    Final score: {result.score} / {result.maxScore}
-                  </Typography>
-                )}
-              </div>
+              {!isViewingAsStudent && (
+                <div className={styles.cardFooter}>
+                  {!result && pageNumbers.length > 1 && (
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      size="medium"
+                      type="button"
+                      disabled={currentPageIndex === 0 || isSubmitting}
+                      onClick={() => setCurrentPageIndex(prev => prev - 1)}
+                    >
+                      Previous
+                    </MuiButton>
+                  )}
+                  {!result && !isLastPage ? (
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      size="medium"
+                      type="button"
+                      // Next is a local pagination action with no dependency
+                      // on an attempt existing - only require one when
+                      // running inside a script, where an attempt actually
+                      // gets created at all.
+                      disabled={(!!scriptId && !attemptId) || isSubmitting}
+                      onClick={() => setCurrentPageIndex(prev => prev + 1)}
+                    >
+                      Next
+                    </MuiButton>
+                  ) : (
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      size="medium"
+                      type="button"
+                      loading={isSubmitting}
+                      disabled={
+                        !attemptId || (!!result && !canRetake) || isSubmitting
+                      }
+                      onClick={() =>
+                        result && canRetake ? retakeQuiz() : submitQuiz()
+                      }
+                    >
+                      {result && canRetake ? 'Retake Quiz' : 'Submit Quiz'}
+                    </MuiButton>
+                  )}
+                  {result && (
+                    <Typography variant="h5">
+                      Final score: {result.score} / {result.maxScore}
+                    </Typography>
+                  )}
+                </div>
+              )}
+              {isViewingAsStudent && result && (
+                <Typography variant="h5">
+                  Final score: {result.score} / {result.maxScore}
+                </Typography>
+              )}
             </div>
           )}
         </div>

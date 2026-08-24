@@ -1,7 +1,7 @@
 class QuizAttemptsController < ApplicationController
   before_action :authenticate_user!
 
-  # GET /quiz_attempts?levelId=&scriptId=
+  # GET /quiz_attempts?levelId=&scriptId=&userId=
   #
   # Read-only check for an existing attempt - unlike #create, this never
   # creates one. Quiz.tsx needs this to decide whether to show the intro
@@ -10,8 +10,15 @@ class QuizAttemptsController < ApplicationController
   # page - that timestamp should reflect clicking "Begin Quiz", not
   # whenever the intro screen happened to render.
   def index
-    attempt = latest_attempt(params[:levelId], params[:scriptId])
+    viewed_user = current_user
+    if params[:userId].present?
+      viewed_user = User.find(params[:userId])
+      return head :forbidden unless viewed_user.student_of?(current_user) || viewed_user.id == current_user.id
+    end
+    attempt = latest_attempt(params[:levelId], params[:scriptId], viewed_user)
     render json: attempt && quiz_attempt_json(attempt)
+  rescue ActiveRecord::RecordNotFound
+    render json: nil
   end
 
   # Starts, resumes, or retakes this user's attempt at a quiz level within a
@@ -85,8 +92,8 @@ class QuizAttemptsController < ApplicationController
     render status: :bad_request, json: {error: exception.message}
   end
 
-  private def latest_attempt(level_id, script_id)
-    QuizAttempt.where(user: current_user, level_id: level_id, script_id: script_id).
+  private def latest_attempt(level_id, script_id, user = current_user)
+    QuizAttempt.where(user: user, level_id: level_id, script_id: script_id).
       order(attempt_number: :desc).first
   end
 
