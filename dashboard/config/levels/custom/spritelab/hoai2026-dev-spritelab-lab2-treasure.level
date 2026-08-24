@@ -48,7 +48,7 @@
         }
       },
       {
-        "text": "**When they touch it, say something!** Use **when [player] touches [jewel]**, and put a **say** block inside it. Then press **Play** and go get the treasure.",
+        "text": "**When they touch it, say something!** Add **when [ ] touches [ ]**, picking your character and your jewel from the dropdowns, and put a **say** block inside it. Then press **Play** and go get the treasure.",
         "after": {
           "tab": "Code"
         }
@@ -63,8 +63,8 @@
           "type": "gamelab_checkTouching",
           "inputs": {
             "SPRITE1": {
-              "block": {
-                "type": "spritelab2_thePlayer"
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
               }
             },
             "SPRITE2": {
