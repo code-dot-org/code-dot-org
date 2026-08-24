@@ -11,7 +11,7 @@ const definition: BlockJson = {
   style: BlockStyles.DEFAULT,
   tooltip:
     'Start this scene over: everything returns to where it began, after a ' +
-    'quick fade from black. Good for losing a life.',
+    'quick fade from black.',
 };
 
 const generator: GeneratorFunction = () => 'restartScene();\n';
