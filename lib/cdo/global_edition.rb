@@ -329,6 +329,17 @@ module Cdo
       "#{path_prefix(region, locale)}#{path}"
     end
 
+    # Returns the path without the Global Edition prefix.
+    #
+    # @param path [String] The URL path to remove the Global Edition prefix from.
+    # @return [String] The URL path without the Global Edition prefix.
+    #
+    # @example
+    #   unprefixed_path("/in/hi/home") => "/home"
+    def self.unprefixed_path(path)
+      match_path(path).try(:[], :main_path) || path
+    end
+
     def self.region_change_url(url, region = nil)
       uri = URI.parse(url)
 

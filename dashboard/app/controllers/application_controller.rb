@@ -387,7 +387,7 @@ class ApplicationController < ActionController::Base
     # URLs we should not redirect. Global Edition prefixes generated paths with
     # the active region, even when the incoming API request is unprefixed.
     # Compare the underlying paths so both forms match.
-    request_path = Cdo::GlobalEdition.match_path(request.path).try(:[], :main_path) || request.path
+    request_path = Cdo::GlobalEdition.unprefixed_path(request.path)
     return if Set[
       # Allow retrieval of current user data for event reporting
       api_v1_users_current_path,
@@ -408,8 +408,8 @@ class ApplicationController < ActionController::Base
       student_register_path,
       reset_session_path,
     ].any? do |path|
-      path = Cdo::GlobalEdition.match_path(path).try(:[], :main_path) || path
-      request_path.include?(path)
+      path = Cdo::GlobalEdition.unprefixed_path(path)
+      request_path.start_with?(path)
     end
 
     redirect_to lockout_path
