@@ -35,7 +35,8 @@ export function nextGuideStepIndex(
   steps: GuideStep[] | undefined,
   index: number,
   counts: WorldCounts,
-  activeTab: Tab
+  activeTab: Tab,
+  imageCount: number
 ): number {
   let result = index;
   for (;;) {
@@ -44,6 +45,9 @@ export function nextGuideStepIndex(
       !after ||
       (after.worldBlocks !== undefined && counts.blocks < after.worldBlocks) ||
       (after.worldSprite && counts.sprites === 0) ||
+      (after.worldSprites !== undefined &&
+        counts.sprites < after.worldSprites) ||
+      (after.images !== undefined && imageCount < after.images) ||
       (after.tab !== undefined && after.tab !== activeTab)
     ) {
       return result;
@@ -61,13 +65,16 @@ export function useGuideSteps(
   steps: GuideStep[] | undefined,
   grid: (WorldCell | null)[][] | undefined,
   activeTab: Tab,
+  imageCount: number,
   fallback: string | undefined
 ): string | undefined {
   const counts = useMemo(() => countWorldCells(grid), [grid]);
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    setIndex(current => nextGuideStepIndex(steps, current, counts, activeTab));
-  }, [steps, counts, activeTab]);
+    setIndex(current =>
+      nextGuideStepIndex(steps, current, counts, activeTab, imageCount)
+    );
+  }, [steps, counts, activeTab, imageCount]);
   if (!steps?.length) {
     return fallback;
   }

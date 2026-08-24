@@ -54,6 +54,10 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_restartScene"
+            },
+            {
+              "kind": "block",
               "type": "gamelab_spriteClicked",
               "inputs": {
                 "SPRITE": {
@@ -215,7 +219,13 @@
                   }
                 }
               }
-            },
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Behaviors",
+          "contents": [
             {
               "kind": "block",
               "type": "gamelab_addBehaviorSimple",
@@ -227,10 +237,29 @@
                 },
                 "BEHAVIOR": {
                   "shadow": {
-                    "type": "spritelab2_movingLeft"
+                    "type": "spritelab2_patrollingOnBlocks"
                   }
                 }
               }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_removeAllBehaviors",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_patrollingOnBlocks"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_patrollingLeftRight"
             },
             {
               "kind": "block",
@@ -238,7 +267,7 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_patrollingLeftRight"
+              "type": "spritelab2_movingWithArrowKeys"
             }
           ]
         },

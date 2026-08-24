@@ -369,6 +369,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
   const activeWorld = worldFor(activeScene);
   const activeSceneSize = sceneGridSize(activeWorld);
+  // Images in the project, for guide steps waiting on one being made.
+  const imageCount = useAppSelector(
+    state => state.animationList.orderedKeys.length
+  );
 
   // Keep activeSceneId pointing at a real scene: locked to the pin once the
   // ensure effect lands it, otherwise reset to the first scene when the
@@ -395,8 +399,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const guideInstructions = useGuideSteps(
     levelProperties.guideSteps,
-    activeScene?.world?.grid,
+    activeWorld.grid,
     activeTab,
+    imageCount,
     levelProperties.longInstructions
   );
 

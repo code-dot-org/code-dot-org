@@ -84,6 +84,14 @@ export interface GuideStep {
     worldBlocks?: number;
     /** At least one sprite-kind cell placed in the World. */
     worldSprite?: boolean;
+    /** At least this many sprite-kind cells placed in the World. */
+    worldSprites?: number;
+    /**
+     * At least this many images in the project. A count, not a name: the
+     * project carries every image made on the levels before this one, so a
+     * level asking for one more counts what it should already have plus one.
+     */
+    images?: number;
     /** This tab is active. */
     tab?: Tab;
   };

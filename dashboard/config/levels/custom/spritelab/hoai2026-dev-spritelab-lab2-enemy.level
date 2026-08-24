@@ -1,0 +1,135 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-24T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "Images",
+      "World",
+      "Code",
+      "Play"
+    ],
+    "locked_image_type": "sprite",
+    "pinned_scene_id": "platform-scene",
+    "pinned_scene_name": "Platformer",
+    "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Make trouble.** Describe a character who guards your platforms - something your player should stay away from."
+      },
+      {
+        "text": "**Give it a post.** In the **World** tab, place your guard on top of a platform. It will walk back and forth along it.",
+        "after": {
+          "images": 5
+        }
+      },
+      {
+        "text": "**Teach it to patrol.** Over in the **Code** tab, use **sprite [guard] begins [patrolling left and right on blocks]**.",
+        "after": {
+          "worldSprites": 3
+        }
+      },
+      {
+        "text": "**Make it cost something.** Add **when [player] touches [guard]** with a **restart scene** block inside - your player goes back to the start. Press **Play** and try to get past it.",
+        "after": {
+          "tab": "Code"
+        }
+      }
+    ],
+    "long_instructions": "# Add a guard\nMake a second character, place it on a platform, and have it patrol back and forth. If your player touches it, the scene restarts.",
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "Behaviors",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_addBehaviorSimple",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "BEHAVIOR": {
+                  "shadow": {
+                    "type": "spritelab2_patrollingOnBlocks"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_patrollingOnBlocks"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_patrollingLeftRight"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Platform",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_checkTouching",
+              "inputs": {
+                "SPRITE1": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "SPRITE2": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_restartScene"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSay",
+              "fields": {
+                "SPEECH": "Ouch!"
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>
