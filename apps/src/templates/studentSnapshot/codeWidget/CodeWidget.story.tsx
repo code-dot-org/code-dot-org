@@ -126,3 +126,16 @@ export const MultipleFiles: Story = {
     gridHeight: 2,
   },
 };
+
+export const WithInstructions: Story = {
+  args: {
+    codeData: SAMPLE_STUDENT_CODE_2,
+    widgetName: 'Code Widget',
+    gridWidth: 2,
+    gridHeight: 2,
+    levelInfo: {
+      instructions:
+        '## Instructions\n\nCreate three variables below, one of each data type, then use at least one operation to compute total calories.',
+    },
+  },
+};

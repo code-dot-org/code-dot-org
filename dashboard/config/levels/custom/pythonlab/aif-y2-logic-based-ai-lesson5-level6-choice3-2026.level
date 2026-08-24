@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T02:48:58.000Z",
   "level_num": "custom",
@@ -11,7 +12,7 @@
     "bubble_choice_description": "Build a program that shows users a weather forecast.",
     "thumbnail_url": "https://images.code.org/d4b6ffbe47ceabda92e997d9085a41c9-weather.png",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -35,9 +36,16 @@
       "openFiles": [
         "0"
       ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMonwzvz4mXq2G9t\nPtogLrUNq7+D6tecxSLav1u95yp0r/0R1Nzc/zleF5b8+6vXSMmJA3HA1Esf\nS2X6/ZT7GVTM1kb/R1YiqgrKyOk4x0MhO6CguzRcGHwa54qEylefafE5TGKu\nEPc8YkeujF5fWVmpm0iM2sPI2xcv+lXY2r5kwO55SXDOJcFFlzXXIOoddhFe\nvdSb4qCQxKpZ8NDuBd/QYeQY8S6qFC6kG4vb1wlXqEDpDp1vtpLlhn4f4pL/\nzaf5BzQfBrwXYbpBqbJFgpFQ11cWhVLCd11KywWeDmIMvAmxZx+IgqfQxT68\nSYITp5fI2XsTNEdWtVV0BAVZ9wjPWXrQI2zHJ7qpFDJ38k1pw8PHKK0h+1s5\nNiRVkST14C3x65Ur6LDvJBbKkxFXoNY5aGP7qbX4HewUTlUE8+r5PF+UXO3u\nbmDBNrMnfALAp4J83O9gh9GFTg/ThXF0l2DG4oXcgP1F11bUV8XYdnFUzOOf\nvL5VMeKf4iBzabPtPvB7kekU+xuNTBR2wXd2QgtRxfjSvqshuI4ymvDZyQ+I\nObI3sTLmE3H+8uAgo4n8u3Q=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:49:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:49:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:59:32 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:40:29 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

@@ -6,14 +6,18 @@ import {type Mock, vi} from 'vitest';
 
 import Video from '../Video';
 
-type ReactPlayerProps = typeof defaultProps;
+// react-player passes the poster through its `config` prop, not a
+// top-level prop. Surface it here as an attribute for tests to read.
+type ReactPlayerProps = typeof defaultProps & {
+  config?: {html?: {attributes?: {poster?: string}}};
+};
 
 ReactPlayer.canPlay = vi.fn();
 
 vi.mock('react-player', () => ({
   __esModule: true,
-  default: ({light, src, playIcon, onError}: ReactPlayerProps) => (
-    <div>
+  default: ({light, src, playIcon, onError, config}: ReactPlayerProps) => (
+    <div data-poster={config?.html?.attributes?.poster}>
       {src?.endsWith('.mp4') ? 'Fallback ' : 'YouTube '} Player
       {light}
       {playIcon}
@@ -203,6 +207,50 @@ describe('Video Component', () => {
       }),
     );
     expect(screen.getByText('Cookie Settings')).toBeInTheDocument();
+  });
+
+  // maxres does not exist for every video, so the facade starts on a poster
+  // that is certain to load and upgrades only after maxres loads. jsdom does
+  // not load images, so these pin the starting poster.
+  it('starts the facade on the hqdefault poster', () => {
+    render(<Video {...defaultProps} />);
+
+    expect(
+      screen.getByAltText(`Play video ${defaultProps.videoTitle}`),
+    ).toHaveAttribute(
+      'src',
+      `//i.ytimg.com/vi/${defaultProps.youTubeId}/hqdefault.jpg`,
+    );
+  });
+
+  it('starts the facade on posterThumbnailFallback when one is given', () => {
+    const poster = '/c/video_thumbnails/some-key.jpg';
+    render(<Video {...defaultProps} posterThumbnailFallback={poster} />);
+
+    expect(
+      screen.getByAltText(`Play video ${defaultProps.videoTitle}`),
+    ).toHaveAttribute('src', poster);
+  });
+
+  it('gives the native player the same poster after YouTube fails', () => {
+    const poster = '/c/video_thumbnails/some-key.jpg';
+    (ReactPlayer.canPlay as Mock).mockReturnValue(true);
+    render(<Video {...defaultProps} posterThumbnailFallback={poster} />);
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Play video ${defaultProps.videoTitle}`,
+      }),
+    );
+
+    act(() => {
+      screen.getByText('Trigger Error').click();
+    });
+
+    expect(screen.getByText('Fallback Player')).toHaveAttribute(
+      'data-poster',
+      poster,
+    );
   });
 
   it('renders no JSON-LD script by default', () => {

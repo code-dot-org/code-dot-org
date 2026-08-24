@@ -220,13 +220,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: tabs.includes('World'),
     large: worldTabParams.large || !!levelProperties.showLargeWorld,
   };
-  // A world painted while the tab was enabled must not keep spawning
-  // sprites once the tab (URL param or level property) is gone — there
-  // would be no UI left to remove them.
-  const compileWorldIfEnabled = useCallback(
-    (world?: World) => (worldTab.enabled ? compileWorldPrelude(world) : ''),
-    [worldTab.enabled]
-  );
   // A level naming its tabs opens on the list's first entry (display order is
   // fixed, so authored order is free to carry the start tab).
   useEffect(() => {
@@ -450,7 +443,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
     if (savedExternalKeys.length === 0) {
       setAnimationsSeeded(true);
-      fetchSectionScenes(levelProperties.id)
+      fetchSectionScenes(levelProperties.id, scriptId)
         .then(refs => {
           if (!cancelled) {
             dispatch(setExternalScenes(toExternalSceneOptions(refs)));
@@ -465,7 +458,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             setTimeout(() => reject(new Error('timeout')), 5000)
           );
           const refs = await Promise.race([
-            fetchSectionScenes(levelProperties.id),
+            fetchSectionScenes(levelProperties.id, scriptId),
             timeout,
           ]);
           options = toExternalSceneOptions(refs);
@@ -490,7 +483,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     // Re-seeds only when the level changes (seedAnimationList is stable,
     // initialSources is a ref-captured constant).
-  }, [levelProperties.id, dispatch, initialSources, seedAnimationList]);
+  }, [
+    levelProperties.id,
+    scriptId,
+    dispatch,
+    initialSources,
+    seedAnimationList,
+  ]);
 
   // What's on stage right now — updated by every run, including scene jumps —
   // so "Restart scene" (and the reseed watcher below) can re-run it.
@@ -668,9 +667,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     dispatch(setIsRunning(true));
     engine.runProgram(
-      compileWorldIfEnabled(activeWorldRef.current) + (getCode() ?? '')
+      compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
     );
-  }, [dispatch, getCode, compileWorldIfEnabled]);
+  }, [dispatch, getCode]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -694,7 +693,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       currentExternalProjectRef.current = null;
       engine.preloadAnimationsOverride = null;
       currentPlayingRef.current = {kind: 'local', scene};
-      const prelude = compileWorldIfEnabled(scene.world);
+      const prelude = compileWorldPrelude(scene.world);
       let code = '';
       try {
         const live = scene.id === activeSceneId ? getCode() : null;
@@ -709,7 +708,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       engine.runProgram(prelude + code);
     },
-    [dispatch, activeSceneId, getCode, compileWorldIfEnabled]
+    [dispatch, activeSceneId, getCode]
   );
 
   const runScene = useCallback(
@@ -792,7 +791,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       currentExternalProjectRef.current = project;
       currentPlayingRef.current = {kind: 'external', project, sceneId};
-      const prelude = compileWorldIfEnabled(scene.world);
+      const prelude = compileWorldPrelude(scene.world);
       let code = '';
       try {
         code = compileExternalScene(scene, project);
@@ -814,7 +813,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       engine.runProgram(prelude + code);
     },
-    [dispatch, compileExternalScene, compileWorldIfEnabled]
+    [dispatch, compileExternalScene]
   );
 
   // Fetch the classmate's project fresh (their scenes may have changed);
@@ -829,7 +828,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setExternalLoading(true);
       let project: ExternalProject | undefined;
       try {
-        project = await fetchExternalProject(parsed.channel);
+        project = await fetchExternalProject(
+          parsed.channel,
+          levelProperties.id,
+          scriptId
+        );
         externalProjectsRef.current.set(parsed.channel, project);
       } catch (e) {
         project = externalProjectsRef.current.get(parsed.channel);
@@ -844,14 +847,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       runExternalProjectScene(project, parsed.sceneId);
     },
-    [runExternalProjectScene]
+    [runExternalProjectScene, levelProperties.id, scriptId]
   );
 
   // The external dropdown re-fetches the section list on every open, so
   // scenes classmates add while this lab is open show up.
   useEffect(() => {
     setExternalSceneRefreshHandler(async () => {
-      const refs = await fetchSectionScenes(levelProperties.id);
+      const refs = await fetchSectionScenes(levelProperties.id, scriptId);
       const options = toExternalSceneOptions(refs);
       const known = new Set(options.map(o => o.key));
       collectSavedExternalKeys(scenes).forEach(key => {
@@ -862,7 +865,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setExternalScenes(options));
     });
     return () => setExternalSceneRefreshHandler(null);
-  }, [levelProperties.id, dispatch, scenes]);
+  }, [levelProperties.id, scriptId, dispatch, scenes]);
 
   // Scene jumps should only navigate while playing. In preview (Code tab) a
   // goToScene block would otherwise pull the preview off the scene being edited.
@@ -947,6 +950,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return;
       }
       if (scenes.some(s => s.id === sceneId)) {
+        // Follow the jump in the editor too: leaving Play lands on the
+        // scene that was just playing.
+        setActiveSceneId(sceneId);
         runScene(sceneId);
         return;
       }

@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q12-2026'
+
+right 'The consequences of each type of mistake that a model might make'
+wrong 'Whether the model is a regression or classification model'
+wrong 'Whether the model has a small or large amount of training data'
+wrong 'The number of features for each data point used to train the model'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What factor might affect whether recall or precision is a more important metric to use when evaluating a machine learning model?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Testing Classifiers
+MARKDOWN

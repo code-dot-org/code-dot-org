@@ -3,7 +3,7 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
-import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
+import {fetchThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';

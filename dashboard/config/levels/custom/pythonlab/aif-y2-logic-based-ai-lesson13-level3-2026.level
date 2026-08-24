@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T03:17:00.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "long_instructions": "You are building a conversational AI program based on a decision tree.\r\n\r\n**Do This**\r\n\r\n1. Translate your decision tree into a conversational AI Python program.\r\n2. Use conditional statements so that your program can branch in different directions.\r\n\r\n**💻 Coding Tip**\r\n\r\nYou can use the provided ask function to prompt the user with a yes/no question and ask them for an answer.\r\n\r\n```python\r\nif ask(\"Do you like sports?\"):\r\n    # Do something\r\nelse:\r\n    # Do something else\r\n\r\n```",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -32,9 +33,16 @@
       "openFiles": [
         "0"
       ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 03:17:05 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 03:17:05 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:29:06 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:47:16 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>
