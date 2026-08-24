@@ -123,6 +123,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
+    // Set when the zoomed draw loop has already resolved this frame.
+    this.physicsResolvedThisFrame_ = false;
   }
 
   /**
@@ -570,6 +572,25 @@ export default class SpriteLab2Engine extends SpriteLab {
         engine.cameraZoomTarget_
       );
       const zoom = engine.cameraZoom_;
+      // p5.play's own mouse translation ignores zoom; the click events read
+      // these during runEvents. Framed from where the camera sat last frame,
+      // which is what p5.play's own hook does too.
+      const mouse = worldPoint({x: p5.mouseX, y: p5.mouseY}, zoom, {
+        x: camera.position.x,
+        y: camera.position.y,
+      });
+      camera.mouseX = mouse.x;
+      camera.mouseY = mouse.y;
+      this.runBehaviors();
+      this.runEvents();
+      // Resolve the platform physics BEFORE framing the shot. p5 has already
+      // integrated velocity by now, so a player mid-fall is a few pixels
+      // inside the platform it is about to land on; framing that position and
+      // then painting the corrected one puts the whole scene out of place for
+      // a single frame. It reads as a flicker on landing, and the error is
+      // multiplied by the zoom.
+      engine.resolvePlatformPhysics_();
+      engine.physicsResolvedThisFrame_ = true;
       const player = this.getSpriteArray({group: 'players'})[0];
       const focus = cameraFocus(zoom, player ? player.position : null);
       camera.off();
@@ -578,13 +599,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       camera.position.x = focus.x;
       camera.position.y = focus.y;
       camera.on();
-      // p5.play's own mouse translation ignores zoom; the click events read
-      // these during runEvents.
-      const mouse = worldPoint({x: p5.mouseX, y: p5.mouseY}, zoom, focus);
-      camera.mouseX = mouse.x;
-      camera.mouseY = mouse.y;
-      this.runBehaviors();
-      this.runEvents();
       p5.drawSprites();
       this.drawSpeechBubbles();
       camera.off();
@@ -646,7 +660,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     p5.__slab2ResolvesBeforePaint = true;
     const paint = p5.drawSprites.bind(p5);
     p5.drawSprites = (...args) => {
-      this.resolvePlatformPhysics_();
+      // The zoomed draw loop resolves earlier, so it can frame the shot on
+      // where sprites actually end up; every other loop resolves here.
+      if (!this.physicsResolvedThisFrame_) {
+        this.resolvePlatformPhysics_();
+      }
+      this.physicsResolvedThisFrame_ = false;
       return paint(...args);
     };
   }

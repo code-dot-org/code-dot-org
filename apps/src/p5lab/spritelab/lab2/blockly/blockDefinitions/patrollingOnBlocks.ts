@@ -26,13 +26,13 @@ const helperCode = [
   '  return {',
   '    func: function (spriteId) {',
   '      var speed = 2;',
-  // Half the sprite's on-screen width: the gap probe sits at its leading
-  // edge and it turns when that edge reaches the playspace, whatever the
-  // playfield's cell size is.
-  "      var half = getProp(spriteId, 'width') / 2;",
-  '      if (!(half > 0)) {',
-  '        half = 20;',
-  '      }',
+  // Half the sprite's on-screen size, so the gap probe sits at its leading
+  // edge and it turns when that edge reaches the playspace — whatever the
+  // playfield's cell size is. Read 'scale', which in this API is the size in
+  // pixels; 'width' is the costume's own unscaled width (~1000 for a
+  // generated image), which sends the probe off the canvas.
+  "      var size = getProp(spriteId, 'scale');",
+  '      var half = size > 0 ? size / 2 : 20;',
   '      var look = half;',
   "      if (getProp(spriteId, 'patrolOBDir') == undefined) {",
   "        setProp(spriteId, 'patrolOBDir', 1);",

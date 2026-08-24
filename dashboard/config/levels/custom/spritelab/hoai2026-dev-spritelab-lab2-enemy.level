@@ -112,7 +112,7 @@
                   }
                 },
                 "BEHAVIOR": {
-                  "shadow": {
+                  "block": {
                     "type": "spritelab2_patrollingOnBlocks"
                   }
                 }
