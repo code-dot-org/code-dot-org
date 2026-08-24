@@ -10,8 +10,10 @@ import {
   makeCategory,
 } from '@cdo/apps/blockly/utils/toolbox';
 
+import {DEFAULT_SCENE_GRID_SIZE} from '../../world';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
+import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 
 import {
   BlockInfo,
@@ -21,8 +23,9 @@ import {
 } from './types';
 
 // Sensible toolbox defaults for the platformer composites: the player marked
-// mid-air above a full bottom-row floor.
-const PLATFORMER_GRID_SIZE = 8;
+// mid-air above a full bottom-row floor. Same size as the grid fields, so a
+// dragged-out block shows the playfield's own lattice.
+const PLATFORMER_GRID_SIZE = DEFAULT_SCENE_GRID_SIZE;
 function platformerGrid(mark: (row: number, col: number) => 0 | 1): string {
   return JSON.stringify(
     Array.from({length: PLATFORMER_GRID_SIZE}, (_, row) =>
@@ -32,10 +35,15 @@ function platformerGrid(mark: (row: number, col: number) => 0 | 1): string {
 }
 
 // [block type, default GRID field] for the two composites, player first.
+// Marks are placed relative to the grid's size so they keep their meaning at
+// any playfield size: the player three rows above the floor, the floor along
+// the bottom.
 const PLATFORMER_COMPOSITES: [string, string][] = [
   [
     'spritelab2_makePlatformPlayer',
-    platformerGrid((row, col) => (row === 4 && col === 3 ? 1 : 0)),
+    platformerGrid((row, col) =>
+      row === PLATFORMER_GRID_SIZE - 4 && col === 3 ? 1 : 0
+    ),
   ],
   [
     'spritelab2_makePlatformBlocks',
@@ -49,7 +57,11 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
   ...PLATFORMER_COMPOSITES,
   [
     'spritelab2_makeSpriteAtGrid',
-    platformerGrid((row, col) => (row === 4 && col === 5 ? 1 : 0)),
+    platformerGrid((row, col) =>
+      row === PLATFORMER_GRID_SIZE - 4 && col === PLATFORMER_GRID_SIZE - 3
+        ? 1
+        : 0
+    ),
   ],
 ]);
 
@@ -68,6 +80,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'spritelab2_setAsPlatformPlayer',
       'spritelab2_setPlatformGravity',
       'spritelab2_setCameraZoom',
+      RESTART_SCENE_BLOCK_TYPE,
       'spritelab2_makeSpriteAtGrid',
       'gamelab_spriteClicked',
       'gamelab_checkTouching',
@@ -118,16 +131,17 @@ function presentIn(category: StaticCategoryInfo): Set<string | undefined> {
   return new Set(category.contents.filter(isBlockInfo).map(b => b.type));
 }
 
-// Add any missing (registered) predefined behavior blocks to the
-// "Behaviors" category.
+// Fill an EMPTY authored "Behaviors" category with the predefined behavior
+// blocks. A level that lists its own behaviors is used as written, the same
+// contract the injected categories follow — a level teaching one behavior
+// must not have the whole set appear beside it.
 function ensurePredefinedBehaviors(def: ToolboxInfo): void {
   const behaviors = findCategory(def.contents, 'Behaviors');
-  if (!behaviors) {
+  if (!behaviors || presentIn(behaviors).size > 0) {
     return;
   }
-  const present = presentIn(behaviors);
   PREDEFINED_BEHAVIOR_BLOCKS.forEach(type => {
-    if (!present.has(type) && Blockly.Blocks[type]) {
+    if (Blockly.Blocks[type]) {
       behaviors.contents.push({kind: 'block', type});
     }
   });

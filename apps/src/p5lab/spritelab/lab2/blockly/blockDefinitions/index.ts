@@ -11,6 +11,7 @@ import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
+import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
@@ -24,6 +25,7 @@ const labBlockDefinitions: {
 }[] = [
   goToScene,
   goToExternalScene,
+  restartScene,
   movingLeft,
   movingWithArrowKeys,
   patrollingLeftRight,

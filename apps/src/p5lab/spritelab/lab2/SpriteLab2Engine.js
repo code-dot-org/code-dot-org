@@ -23,7 +23,7 @@ import {
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
 } from './platformPhysics';
-import {CELL_SIZE} from './world';
+import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
 
@@ -100,6 +100,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // re-runs).
     this.onGoToScene = null;
     this.onGoToExternalScene = null;
+    this.onRestartScene = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -159,8 +160,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.usesPlatformPhysics_) {
       // Sized per SCENE, not per level: one project holds both a platformer
       // scene (one-cell sprites) and a story scene (large characters).
+      // One cell at the default playfield size. A scene with a world
+      // overrides this from the prelude with its own cell size, and the
+      // grid blocks size their sprites from their own bitmaps.
       library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
-        ? CELL_SIZE
+        ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
       // Landings carry sub-pixel float noise; footing checks must not
       // compare contact exactly.
@@ -216,6 +220,15 @@ export default class SpriteLab2Engine extends SpriteLab {
       const id = String(sceneId);
       // Defer a tick: jumping tears down the interpreter this command runs in.
       setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
+    };
+    // Runs the current scene from the top. Shares the jump gate, so a
+    // per-frame trigger ("while touching") restarts once rather than every
+    // frame, and the view's cover and fade come along with it.
+    library.commands.restartScene = () => {
+      if (!this.onRestartScene || !this.beginSceneJump_()) {
+        return;
+      }
+      setTimeout(() => this.onRestartScene && this.onRestartScene(), 0);
     };
     library.commands.goToExternalScene = sceneKey => {
       if (!this.onGoToExternalScene || !this.beginSceneJump_()) {

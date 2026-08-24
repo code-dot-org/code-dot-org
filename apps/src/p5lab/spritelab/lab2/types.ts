@@ -97,8 +97,11 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // world-tab=true URL parameter).
   showWorldTab?: boolean;
   // World-tab experiment: the tab edits the whole world, not just the
-  // scene-sized corner (equivalent to the world=large URL parameter).
+  // scene-sized corner.
   showLargeWorld?: boolean;
+  // Cells per side of the playfield for a world this level creates. An
+  // existing world keeps the size stored in its own grid; see resizeWorld.
+  worldGridSize?: number;
   // The tabs this level shows, in the order that names the starting tab
   // (the first entry). Absent or empty means the default set.
   visibleTabs?: Tab[];
