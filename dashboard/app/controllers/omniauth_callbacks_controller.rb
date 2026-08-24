@@ -26,9 +26,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/classlink/callback
   def classlink
-    return connect_provider if should_connect_provider?
-
     apply_classlink_v2_authentication_id(auth_hash)
+
+    return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
     if user
@@ -158,7 +158,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       hashed_email: hashed_email || '',
       credential_type: provider,
       authentication_id: auth_hash.uid,
-      version: provider == AuthenticationOption::CLEVER ? AuthenticationOption::Clever::VERSION[:v3] : nil,
+      version:
+        case provider
+        when AuthenticationOption::CLEVER
+          AuthenticationOption::Clever::VERSION[:v3]
+        when AuthenticationOption::CLASSLINK
+          # The uid was rewritten to the v2 format before this flow ran, unless
+          # its components were invalid — version_for stamps what the id
+          # actually is, so a legacy-format fallback isn't mislabeled as v2.
+          Services::Classlink::V2AuthOptionBuilder.version_for(auth_hash.uid)
+        end,
       data: new_data
     )
 
@@ -486,6 +495,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Runs before User.from_omniauth, which treats a failed lookup as a brand-new
   # signup — so an existing v1 user must be migrated (or left on their v1 uid)
   # before that lookup happens, or they would get a duplicate account.
+  #
+  # Also runs before connect_provider (Manage Linked Accounts -> Connect), for
+  # the same reason in a different costume: connect_provider looks up the
+  # credential's current holder by auth_hash.uid, and a v1-format lookup cannot
+  # see an account that holds only a v2 record — such as any signup created
+  # after this format shipped. Missing the holder would skip the takeover and
+  # already-in-use checks and let a second account link the same credential.
+  # With the uid swapped here, the connect flow finds holders, runs its checks,
+  # and creates new auth options all in v2 terms.
   private def apply_classlink_v2_authentication_id(auth)
     return if auth.nil?
     classlink_v2_id = Services::Classlink::V2AuthOptionBuilder.build_authentication_id(

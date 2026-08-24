@@ -26,7 +26,8 @@ No user-visible change. Establishes the identifier every later PR depends on, an
 login-time migration of the ~14,392 existing ClassLink users the moment it deploys.
 
 Rollback is non-lossy for users who still hold a v1 record, and **not** for users who sign up
-after this deploys — their v2 record is their only auth option. See the design's Rollback note.
+or connect ClassLink from Manage Linked Accounts after this deploys — their v2 record is their
+only auth option. See the design's Rollback note.
 
 ### 1. Phase 1 — ID Migration: Versioned Auth Options and Callback Updates
 
@@ -42,6 +43,7 @@ after this deploys — their v2 record is their only auth option. See the design
 - [x] 1.7 Add dual-match login logic: try lookup by v2-format `authentication_id` first, fall back to legacy `UserId` lookup
 - [x] 1.8 When a user is found via the legacy fallback, create their v2 auth option via the builder (login-time migration; v1 record untouched)
 - [x] 1.9 Write unit tests for the updated callback and dual-match logic (v2 login, v1 fallback + v2 creation, both-records login creates nothing)
+- [x] 1.9a Extend the v2 handling to `connect_provider` (Manage Linked Accounts → Connect): run the uid rewrite before the connect branch so the holder lookup, takeover checks, and new-auth-option creation all operate on v2 ids, and stamp `version` via `version_for` so a legacy-format fallback isn't mislabeled v2. Without this the v1-format holder lookup misses v2-only accounts (any post-deploy signup) and a second account could link the same credential. Tests: fresh connect creates a v2 option, invalid components fall back to v1 with nil version, connecting a credential the current user holds as v1 migrates it and no-ops, a v2-only holder with activity is refused
 - [ ] 1.10 Deploy Phase 1 to production
 
 ## PR 2 — One-time bulk migration script
