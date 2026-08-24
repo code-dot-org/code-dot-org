@@ -63,7 +63,7 @@
           "type": "gamelab_checkTouching",
           "inputs": {
             "SPRITE1": {
-              "shadow": {
+              "block": {
                 "type": "spritelab2_thePlayer"
               }
             },

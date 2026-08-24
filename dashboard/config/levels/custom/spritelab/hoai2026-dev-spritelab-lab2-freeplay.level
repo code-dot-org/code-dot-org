@@ -46,6 +46,22 @@
             },
             {
               "kind": "block",
+              "type": "gamelab_addBehaviorSimple",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "BEHAVIOR": {
+                  "block": {
+                    "type": "spritelab2_patrollingOnBlocks"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
               "type": "spritelab2_setPlatformGravity"
             },
             {
@@ -85,32 +101,6 @@
                   }
                 }
               }
-            }
-          ]
-        },
-        {
-          "kind": "category",
-          "name": "Behaviors",
-          "contents": [
-            {
-              "kind": "block",
-              "type": "gamelab_addBehaviorSimple",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "BEHAVIOR": {
-                  "block": {
-                    "type": "spritelab2_patrollingOnBlocks"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_patrollingOnBlocks"
             }
           ]
         },

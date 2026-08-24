@@ -56,73 +56,57 @@
     ],
     "long_instructions": "# Add someone else\nMake a second character and place it on a platform, walking back and forth. Then decide what happens when your player meets them: a friendly hello, or back to the start.",
     "toolbox_definition": {
-      "kind": "categoryToolbox",
+      "kind": "flyoutToolbox",
       "contents": [
         {
-          "kind": "category",
-          "name": "Platform",
-          "contents": [
-            {
-              "kind": "block",
-              "type": "gamelab_checkTouching",
-              "inputs": {
-                "SPRITE1": {
-                  "shadow": {
-                    "type": "spritelab2_thePlayer"
-                  }
-                },
-                "SPRITE2": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
+          "kind": "block",
+          "type": "gamelab_addBehaviorSimple",
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
               }
             },
-            {
-              "kind": "block",
-              "type": "gamelab_spriteSay",
-              "fields": {
-                "SPEECH": "Hello!"
-              },
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
+            "BEHAVIOR": {
+              "block": {
+                "type": "spritelab2_patrollingOnBlocks"
               }
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_restartScene"
             }
-          ]
+          }
         },
         {
-          "kind": "category",
-          "name": "Behaviors",
-          "contents": [
-            {
-              "kind": "block",
-              "type": "gamelab_addBehaviorSimple",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "BEHAVIOR": {
-                  "block": {
-                    "type": "spritelab2_patrollingOnBlocks"
-                  }
-                }
+          "kind": "block",
+          "type": "gamelab_checkTouching",
+          "inputs": {
+            "SPRITE1": {
+              "block": {
+                "type": "spritelab2_thePlayer"
               }
             },
-            {
-              "kind": "block",
-              "type": "spritelab2_patrollingOnBlocks"
+            "SPRITE2": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
             }
-          ]
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Hello!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_restartScene"
         }
       ]
     }
