@@ -23,6 +23,9 @@ import {
 // Also gates the access token server-side (User::AiAccessible).
 export const THEATER_DESCRIPTIONS_DCDO_KEY = 'theater-ai-descriptions-enabled';
 
+// The fastest model, with thinking off, so the answer comes back quickly.
+const DESCRIPTION_MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH_LITE;
+
 export const MAX_CODE_CHARACTERS = 20000;
 export const MAX_RUN_CHARACTERS = 8000;
 
@@ -73,7 +76,7 @@ export function canRequestTheaterDescription(): boolean {
   const appName = lab.levelProperties?.appName;
   return (
     !!appName &&
-    !currentUser.usOnlyAichatModelsDisabled &&
+    !currentUser.blockedAichatModelIds.includes(DESCRIPTION_MODEL_ID) &&
     areAiChatToolsEnabled({
       appName,
       aiChatAccessLevel: currentUser.aiChatAccessLevel,
@@ -147,8 +150,7 @@ async function generateDescription(prompt: string): Promise<string> {
   const currentLevelId = state.progress.currentLevelId;
   const {text} = await generateText(
     {
-      // The fastest model, with thinking off, so the answer comes back quickly.
-      model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_LITE),
+      model: getModel(DESCRIPTION_MODEL_ID),
       system: SYSTEM_PROMPT,
       prompt,
       temperature: 0.2,
