@@ -29,9 +29,9 @@ def _validate_duration(method_name, seconds):
   student's own call. Notes share the pause range: play_note_and_pause() hands
   the same value to both, and the ceiling is what a gif frame delay can hold.
   """
-  # A range rather than two comparisons, which is what turns away a nan: every
-  # comparison against one is false, so a nan cleared both bounds and reached
-  # the frame delay, where rounding it to an integer raised from the renderer.
+  # Checking a range turns away a nan: every comparison against one is false,
+  # so a nan can clear individual checks and reach the frame delay, where rounding 
+  # it to an integer raised from the renderer.
   if not MIN_PAUSE_SECONDS <= seconds <= MAX_PAUSE_SECONDS:
     raise ValueError(
       f"{method_name} needs between {MIN_PAUSE_SECONDS} and "
@@ -41,10 +41,6 @@ def _validate_duration(method_name, seconds):
 
 def _validate_draw_size(name, value):
   """Bound one dimension draw_image() will scale to.
-
-  Raise here rather than at render time so the traceback points at the
-  student's own call. Anything under a pixel was floored to a 1x1 image and
-  drawn without a word; written as a comparison a nan fails, so it goes too.
   """
   if not value >= _MIN_DRAW_SIZE:
     raise ValueError(
