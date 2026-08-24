@@ -270,8 +270,6 @@ def _draw_regular_polygon(draw, action):
 
 def _draw_shape(draw, action):
   points = action.points
-  if len(points) % 2 != 0 or len(points) < 4:
-    raise ValueError("A shape needs an even number of coordinates, at least 4")
   pairs = [(points[i], points[i + 1]) for i in range(0, len(points), 2)]
   if action.close:
     if action.stroke_color is None and action.fill_color is None:

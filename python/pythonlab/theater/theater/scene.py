@@ -19,6 +19,7 @@ _DEFAULT_TEXT_HEIGHT = 20
 _DEFAULT_STROKE_WIDTH = 1.0
 _MIN_POLYGON_SIDES = 3
 _MIN_DRAW_SIZE = 1
+_MIN_SHAPE_POINTS = 2
 
 
 def _validate_duration(method_name, seconds):
@@ -48,6 +49,26 @@ def _validate_draw_size(name, value):
   if not value >= _MIN_DRAW_SIZE:
     raise ValueError(
       f"draw_image needs a {name} of at least {_MIN_DRAW_SIZE}, got {value}"
+    )
+
+
+def _validate_shape_points(points):
+  """Check a shape's coordinates at the call rather than at render time.
+
+  Coordinates are one flat run -- x1, y1, x2, y2 and so on -- which reads
+  easily as a list of points instead, so that mistake gets its own answer
+  rather than a complaint about how many numbers arrived.
+  """
+  if points and hasattr(points[0], "__len__"):
+    raise ValueError(
+      "draw_shape needs one flat list of coordinates, x1, y1, x2, y2 and so "
+      "on, rather than a list of points"
+    )
+  if len(points) < 2 * _MIN_SHAPE_POINTS or len(points) % 2 != 0:
+    raise ValueError(
+      f"draw_shape needs an even number of coordinates, at least "
+      f"{2 * _MIN_SHAPE_POINTS} of them for {_MIN_SHAPE_POINTS} points, "
+      f"got {len(points)}"
     )
 
 
@@ -169,9 +190,11 @@ class Scene:
     )
 
   def draw_shape(self, points, close):
+    points = list(points)
+    _validate_shape_points(points)
     self._actions.append(
       actions.DrawShape(
-        list(points), close, self._stroke_color, self._fill_color, self._stroke_width
+        points, close, self._stroke_color, self._fill_color, self._stroke_width
       )
     )
 
