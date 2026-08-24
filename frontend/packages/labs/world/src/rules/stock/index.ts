@@ -20,6 +20,7 @@ import {cameraEaseRule} from './cameraEase';
 import {cameraFollowRule} from './cameraFollow';
 import {collectRule} from './collect';
 import {collisionsRule} from './collisions';
+import {conversationRule} from './conversation';
 import {dragRule} from './drag';
 import {driveRule} from './drive';
 import {expiresRule} from './expires';
@@ -176,6 +177,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Gives an actor words, a size, a color and an anchor — the state a drawn word is drawn from. It runs nothing: what an actor does with its words is its own “define drawing”, which is why the stock Label and Button are ordinary actors.',
     provides: ['Shows Text'],
     contents: writingRule,
+  },
+  {
+    id: 'conversation',
+    name: 'Conversation',
+    ability: 'Has a Conversation',
+    description:
+      'Keeps a place in a script and moves through it. It raises an event each time it moves, so the project decides what each line is — a portrait, a sound, a question — and `go to line` is how a choice sends the talk somewhere else.',
+    provides: ['Has a Conversation'],
+    contents: conversationRule,
   },
   {
     id: 'reveals',

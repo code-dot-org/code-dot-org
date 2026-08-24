@@ -39,6 +39,7 @@ const RULES = [
   'attachment',
   'writing',
   'reveals',
+  'conversation',
   'progress',
   'camera',
   'cameraFollow',
