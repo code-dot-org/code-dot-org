@@ -13,24 +13,30 @@ def read_samples_from_wav_bytes(wav_bytes):
   SAMPLE_RATE, since the timeline the samples land on carries no rate of its
   own.
   """
-  with wave.open(io.BytesIO(wav_bytes), "rb") as reader:
-    num_channels = reader.getnchannels()
-    sample_width = reader.getsampwidth()
-    frame_rate = reader.getframerate()
-    num_frames = reader.getnframes()
-    if sample_width != 2:
-      raise ValueError("Only 16-bit PCM WAV data is supported")
-    if frame_rate <= 0:
-      raise ValueError("WAV data declares no sample rate")
-    # Check the header's length before reading, so an outsized file costs
-    # nothing; the timeline it would land on is bounded by the same ceiling.
-    if num_frames / frame_rate > MAX_AUDIO_SECONDS:
-      raise ValueError(
-        f"The sound is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
-      )
-    # Passed straight in, so the frame bytes are released when it returns
-    # rather than sitting alongside the resample that follows.
-    mono = _decode_frames(reader.readframes(num_frames), num_channels)
+  try:
+    with wave.open(io.BytesIO(wav_bytes), "rb") as reader:
+      num_channels = reader.getnchannels()
+      sample_width = reader.getsampwidth()
+      frame_rate = reader.getframerate()
+      num_frames = reader.getnframes()
+      if sample_width != 2:
+        raise ValueError("Only 16-bit PCM WAV data is supported")
+      if frame_rate <= 0:
+        raise ValueError("WAV data declares no sample rate")
+      # Check the header's length before reading, so an outsized file costs
+      # nothing; the timeline it would land on is bounded by the same ceiling.
+      if num_frames / frame_rate > MAX_AUDIO_SECONDS:
+        raise ValueError(
+          f"The sound is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
+        )
+      # Passed straight in, so the frame bytes are released when it returns
+      # rather than sitting alongside the resample that follows.
+      mono = _decode_frames(reader.readframes(num_frames), num_channels)
+  except (wave.Error, EOFError) as error:
+    # The wave module's own wording is about RIFF ids and chunks, and neither
+    # of its exceptions is one a student's except ValueError would catch. An
+    # empty file reaches the end of the stream looking for the first chunk.
+    raise ValueError("This is not a WAV sound file, or it is damaged") from error
   return _to_output_rate(mono, frame_rate)
 
 
@@ -46,15 +52,20 @@ def _decode_frames(frames, num_channels):
   bits, and halving and scaling it are both divisions by a power of two, all of
   which float32 holds without rounding.
   """
-  raw = np.frombuffer(frames, dtype="<i2")
+  if num_channels not in (1, 2):
+    raise ValueError("Only mono or stereo WAV data is supported")
+  # Whole samples, then whole frames. Data running short of what the header
+  # promised is common enough that the wave module allows it and other players
+  # play what is there; numpy would otherwise refuse the buffer's size, or fail
+  # to line up two channels of different lengths.
+  raw = np.frombuffer(frames, dtype="<i2", count=len(frames) // 2)
+  raw = raw[: len(raw) - len(raw) % num_channels]
   if num_channels == 1:
     mono = raw.astype(np.float32)
-  elif num_channels == 2:
+  else:
     mono = raw[0::2].astype(np.float32)
     mono += raw[1::2]
     mono *= 0.5
-  else:
-    raise ValueError("Only mono or stereo WAV data is supported")
   mono /= MAX_16_BIT_VALUE
   return mono
 

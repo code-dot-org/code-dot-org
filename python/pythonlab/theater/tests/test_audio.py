@@ -96,6 +96,42 @@ def test_resampling_a_block_at_a_time_matches_the_whole_track(frame_rate, length
   )
 
 
+@pytest.mark.parametrize(
+  "wav_bytes", [b"", b"hello world", b"RIFF" + b"\x00" * 40]
+)
+def test_read_rejects_data_that_is_not_a_wav_file(wav_bytes):
+  # The wave module raises wave.Error, or EOFError for an empty file. Neither
+  # is what a student's "except ValueError" catches, and both talk about RIFF
+  # ids and chunks.
+  with pytest.raises(ValueError):
+    read_samples_from_wav_bytes(wav_bytes)
+
+
+@pytest.mark.parametrize(
+  "channels,dropped,expected",
+  [(1, 1, 7), (1, 2, 7), (1, 3, 6), (2, 1, 3), (2, 2, 3), (2, 3, 3)],
+)
+def test_read_plays_what_a_short_file_actually_holds(channels, dropped, expected):
+  # A header promising more frames than the data chunk carries is common, and
+  # other players play what is there. numpy used to refuse the buffer's size,
+  # or fail to line up two channels of unequal length.
+  wav = _make_wav_bytes([0.25, -0.25] * 4, channels)
+  samples = read_samples_from_wav_bytes(wav[:-dropped])
+  assert len(samples) == expected
+  # What survives is the head of the sound, unshifted.
+  whole = read_samples_from_wav_bytes(wav)
+  assert np.allclose(samples, whole[:expected], atol=1e-4)
+
+
+def test_read_rejects_more_than_two_channels():
+  wav = bytearray(_make_wav_bytes([0.5] * 12, 2))
+  # Channel count sits at bytes 22:24 of the header the wave module emits.
+  assert wav[22:24] == struct.pack("<H", 2)
+  wav[22:24] = struct.pack("<H", 4)
+  with pytest.raises(ValueError):
+    read_samples_from_wav_bytes(bytes(wav))
+
+
 def test_read_rejects_a_missing_sample_rate():
   # The wave module refuses to write a zero rate, so patch the field directly.
   # Sample rate sits at bytes 24:28 of the canonical header it emits.
