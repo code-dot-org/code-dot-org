@@ -15,7 +15,10 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import {AssetSource} from '@cdo/apps/aichat/types/assets';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {
+  START_SOURCES,
+  SUPPORTED_AUDIO_EXTENSIONS,
+} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -126,7 +129,11 @@ export const useFileRowOptions = (
           }),
       },
       {
-        condition: !!enableUserAddedSelectionContext && !aiTutorDisabled,
+        // The AI Tutor cannot read audio, so audio files are not offered as context.
+        condition:
+          !!enableUserAddedSelectionContext &&
+          !aiTutorDisabled &&
+          !SUPPORTED_AUDIO_EXTENSIONS.includes(getFileExtension(file.name)),
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
