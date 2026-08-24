@@ -9,11 +9,15 @@ from theater import Image, Instrument, Scene
 from theater.support.audio import read_samples_from_wav_bytes
 from theater.support.constants import (
   MAX_AUDIO_SECONDS,
+  MAX_DRAW_IMAGE_SIZE,
   MAX_FRAMES,
   MAX_NOTE,
   MAX_PAUSE_SECONDS,
+  MAX_TEXT_HEIGHT,
+  MAX_TEXT_PIXELS,
   MIN_NOTE,
   MIN_PAUSE_SECONDS,
+  MIN_TEXT_HEIGHT,
   SAMPLE_RATE,
   THEATER_HEIGHT,
   THEATER_WIDTH,
@@ -396,6 +400,52 @@ def test_draw_shape_accepts_the_flat_form():
   assert _render_gif(scene.get_actions())
 
 
+@pytest.mark.parametrize(
+  "height", [0, -1, -20, MAX_TEXT_HEIGHT + 1, 12000, float("nan"), float("inf")]
+)
+def test_out_of_range_text_height_raises_at_the_call(height):
+  # Pillow builds a bitmap as tall as the text: a height of 12000 costs 163 MB
+  # for one letter, and 20000 reaches Pillow's own decompression-bomb guard,
+  # whose message is no help to a student. Zero and below Pillow simply refuses.
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.set_text_height(height)
+  # The height was not kept, so a later draw_text still renders.
+  scene.draw_text("hi", 10, 20)
+  scene.pause(0.1)
+  assert _render_gif(scene.get_actions())
+
+
+@pytest.mark.parametrize("height", [MIN_TEXT_HEIGHT, 20, MAX_TEXT_HEIGHT])
+def test_text_height_accepts_the_whole_documented_range(height):
+  scene = Scene()
+  scene.set_text_height(height)
+  scene.draw_text("A", 0, THEATER_HEIGHT)
+  scene.pause(0.1)
+  assert _render_gif(scene.get_actions())
+
+
+def test_text_too_long_for_its_height_raises_at_the_call():
+  # Length costs what height costs, since the whole string is drawn into one
+  # bitmap before any of it is clipped to the stage.
+  scene = Scene()
+  scene.set_text_height(400)
+  characters = MAX_TEXT_PIXELS // (400 * 400) + 1
+  with pytest.raises(ValueError):
+    scene.draw_text("A" * characters, 0, 0)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+def test_a_paragraph_at_a_readable_height_is_allowed():
+  # The extent ceiling must not stand in the way of ordinary text.
+  scene = Scene()
+  scene.set_text_height(20)
+  scene.draw_text("The quick brown fox. " * 100, 0, 200)
+  scene.pause(0.1)
+  assert _render_gif(scene.get_actions())
+
+
 @pytest.mark.parametrize("sides", [0, 1, 2, -3])
 def test_too_few_polygon_sides_raises_at_the_draw_call(sides):
   scene = Scene()
@@ -455,6 +505,39 @@ def test_draw_image_records_one_dimension_and_leaves_the_other_unset():
   by_size, by_extent = scene.get_actions()
   assert (by_size.size, by_size.width, by_size.height) == (50, None, None)
   assert (by_extent.size, by_extent.width, by_extent.height) == (None, 20, 30)
+
+
+@pytest.mark.parametrize(
+  "geometry",
+  [
+    {"size": MAX_DRAW_IMAGE_SIZE + 1},
+    {"width": MAX_DRAW_IMAGE_SIZE + 1, "height": 10},
+    {"width": 10, "height": MAX_DRAW_IMAGE_SIZE + 1},
+  ],
+)
+def test_oversized_draw_image_raises_at_the_call(geometry):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_image(Image(10, 10), 0, 0, **geometry)
+  assert scene.get_actions() == []
+
+
+def test_oversized_scaled_height_raises_at_the_call():
+  # size only sets the width; a tall image's height is scaled past the ceiling.
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_image(Image(1, 10), 0, 0, size=MAX_DRAW_IMAGE_SIZE)
+  assert scene.get_actions() == []
+
+
+def test_draw_image_accepts_the_largest_allowed_size():
+  scene = Scene()
+  scene.draw_image(Image(10, 10), 0, 0, size=MAX_DRAW_IMAGE_SIZE)
+  scene.draw_image(
+    Image(10, 10), 0, 0, width=MAX_DRAW_IMAGE_SIZE, height=MAX_DRAW_IMAGE_SIZE
+  )
+  scene.draw_image(Image(1, 10), 0, 0, size=MAX_DRAW_IMAGE_SIZE / 10)
+  assert len(scene.get_actions()) == 3
 
 
 def test_draw_image_lands_at_rounded_position():
