@@ -28,6 +28,8 @@ export interface VideoProps {
   className?: string;
   /** Whether YouTube is allowed by cookie policy */
   isYouTubeCookieAllowed?: boolean;
+  /** Poster to use if YouTube's own poster image fails to load */
+  posterThumbnailFallback?: string;
 }
 
 export interface CDOVideoPlayer {

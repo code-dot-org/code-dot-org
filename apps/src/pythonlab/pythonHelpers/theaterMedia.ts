@@ -6,7 +6,8 @@ import {TheaterSignalType} from '@cdo/apps/miniApps/theater/constants';
 // them to the theater mini app.
 export function handleTheaterMedia(
   gif: Uint8Array<ArrayBuffer>,
-  wav?: Uint8Array<ArrayBuffer>
+  wav?: Uint8Array<ArrayBuffer>,
+  gifDurationMs?: number
 ) {
   const theater = CodebridgeRegistry.getInstance().getTheater();
   if (!theater) {
@@ -14,9 +15,11 @@ export function handleTheaterMedia(
   }
 
   const gifUrl = URL.createObjectURL(new Blob([gif], {type: 'image/gif'}));
+  // The gif's length comes from the theater package, which knows the frame
+  // delays it rendered; an <img> reports nothing about the animation it plays.
   theater.handleSignal({
     value: TheaterSignalType.VISUAL_URL,
-    detail: {url: gifUrl},
+    detail: {url: gifUrl, durationMs: gifDurationMs},
   });
   // The mini app reveals the stage only after two load events, one visual and
   // one audio. A program that made no sound has no audio to wait on, so

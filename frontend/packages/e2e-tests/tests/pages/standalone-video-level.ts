@@ -21,11 +21,21 @@ export class StandaloneVideoLevel extends LessonLevelPage {
   /** Continue button: fires the milestone POST, then navigates on click. */
   readonly continueButton: Locator;
 
+  readonly videoIframeSelector = '#video';
+
+  /**
+   * Cross-origin youtube-nocookie.com player. Keep it out of accessibility
+   * baselines: the server sends no title attribute, then the YouTube script
+   * adds one, so axe frame-title fails or passes by timing alone.
+   */
+  readonly videoIframe: Locator;
+
   constructor(page: Page) {
     super(page);
     this.continueButton = page
       .locator(this.rootSelector)
       .getByRole('button', {name: 'Continue'});
+    this.videoIframe = page.locator(this.videoIframeSelector);
   }
 
   /** Navigate to a standalone-video level and wait for the widget to render. */
