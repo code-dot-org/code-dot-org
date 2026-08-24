@@ -11,7 +11,6 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
-import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {SVG_ID} from '@cdo/apps/maze/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
@@ -65,7 +64,7 @@ export async function handleRunClick(
       setProjectThumbnail();
     }
     if (isTheaterLevel()) {
-      stopTheaterIfNoOutput();
+      resetTheaterIfNoOutput();
     }
   }
 }
@@ -162,16 +161,14 @@ export async function runAllTests(
   }
 }
 
-// A theater run leaves the run button showing stop while the gif plays, since
-// its length is unknown. A program that ended without producing any media --
-// most often because it threw -- has nothing to play, so put the button back.
-// Safe to check here because the sandbox delivers theater media before it
-// reports the run complete.
-function stopTheaterIfNoOutput() {
+// A run that ended without producing any media -- most often because it threw --
+// would otherwise leave the previous run's stage standing. Safe to check at this
+// point because the sandbox delivers theater media before it reports the run
+// complete.
+function resetTheaterIfNoOutput() {
   const theater = CodebridgeRegistry.getInstance().getTheater();
   if (!theater?.hasOutput()) {
     theater?.reset();
-    getStore().dispatch(setIsRunning(false));
   }
 }
 
@@ -203,10 +200,7 @@ function handleRunEndedUnexpectedly(
   } else {
     consoleManager?.writeConsoleMessage('');
     if (isTheaterLevel()) {
-      // A theater run normally leaves the run button showing stop, since a gif's
-      // length is unknown. Nothing played here, so put the button back.
       CodebridgeRegistry.getInstance().getTheater()?.reset();
-      getStore().dispatch(setIsRunning(false));
     }
   }
 }

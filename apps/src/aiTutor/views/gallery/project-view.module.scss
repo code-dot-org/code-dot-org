@@ -1,0 +1,431 @@
+// Styles for the Tutor+ project page: the side panel (AssessmentPanel),
+// the work area (ProjectStage), the details footer (ProjectDetailsCard),
+// and the page frame with its top bar (ProjectView).
+
+// --- Side panel (AI assessment / feedback) ---
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 360px;
+  border-right: 1px solid var(--border-neutral-primary);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 8px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+
+.panelContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.panelSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionLabelRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionLabel {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+  color: var(--text-info-primary-fixed);
+}
+
+// "Shown to / Not shown to" visibility tag on the teacher's panel sections.
+.visibilityTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  padding: 0 6px;
+  background-color: var(--background-neutral-tertiary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-sm);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+  color: var(--text-neutral-secondary);
+}
+
+// --- Feedback chat card ---
+
+.chatCard {
+  overflow: hidden;
+  border-radius: var(--shape-md);
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background-color: var(--background-info-strong);
+}
+
+.chatAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--background-neutral-white-fixed);
+  border-radius: var(--shape-round);
+
+  img {
+    width: 30px;
+    height: 20px;
+  }
+}
+
+.chatMeta {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-neutral-white-fixed);
+}
+
+.chatAuthor {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.chatTimestamp {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.chatBody {
+  padding: 16px;
+  background-color: var(--background-neutral-secondary);
+  font-size: 12px;
+  line-height: 18px;
+
+  p {
+    margin: 0;
+  }
+}
+
+// --- Rubric (teacher only) ---
+
+.rubricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid transparent;
+  border-radius: var(--shape-md);
+  font-size: 12px;
+  line-height: 18px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.rubricItemAssigned {
+  border-color: var(--border-accent-pink-primary);
+}
+
+.rubricLevelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 20px;
+}
+
+.rubricLevel {
+  font-weight: 600;
+}
+
+.assignedTag {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 6px;
+  background-color: var(--background-accent-pink-light);
+  border: 1px solid var(--border-accent-pink-mid);
+  border-radius: var(--shape-sm);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+  color: var(--text-accent-pink-secondary);
+}
+
+// --- Work area (media stage) ---
+
+.projectRow {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+
+.mediaColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.mediaArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 0;
+  padding: 24px;
+}
+
+.whiteboardImage {
+  max-width: 854px;
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: var(--shape-md);
+}
+
+.storyVideo {
+  height: 100%;
+  max-height: 556px;
+  max-width: 100%;
+  border-radius: var(--shape-md);
+}
+
+.audioBar {
+  padding: 0 16px 16px;
+
+  audio {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Side panel with the typed explanation on whiteboard + text projects.
+.explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  width: 260px;
+  padding: 16px;
+  border-left: 1px solid var(--border-neutral-primary);
+  overflow-y: auto;
+}
+
+.explanationCard {
+  padding: 12px;
+  background-color: var(--background-neutral-secondary);
+  border-radius: var(--shape-md);
+  font-size: 12px;
+  line-height: 18px;
+  white-space: pre-wrap;
+
+  p {
+    margin: 0;
+  }
+}
+
+// --- Project details footer ---
+
+.detailsWrapper {
+  padding: 16px;
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+.detailsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+  background-color: var(--background-neutral-secondary);
+  border-radius: var(--shape-md);
+}
+
+.detailsMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailsMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.unitLabel {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-info-primary-fixed);
+}
+
+.tags {
+  display: flex;
+  gap: 4px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 6px;
+  border: 1px solid;
+  border-radius: var(--shape-sm);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.tagWarning {
+  background-color: var(--background-warning-light);
+  border-color: var(--border-warning-mid);
+  color: var(--text-warning-secondary);
+}
+
+.tagInfo {
+  background-color: var(--background-info-light);
+  border-color: var(--border-info-mid);
+  color: var(--text-info-secondary);
+}
+
+.tagSuccess {
+  background-color: var(--background-success-light);
+  border-color: var(--border-success-mid);
+  color: var(--text-success-secondary);
+}
+
+.tagOrange {
+  background-color: var(--background-accent-orange-light);
+  border-color: var(--border-accent-orange-mid);
+  color: var(--text-accent-orange-secondary);
+}
+
+.studentName {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-brand-secondary);
+}
+
+.projectPrompt {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-primary);
+}
+
+// --- Page frame ---
+
+.projectView {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  color: var(--text-neutral-primary);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 40px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.topBarSide {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 180px;
+
+  &:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.contentRow {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+// --- Version / project navigation ---
+
+.versionControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.versionLabel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+
+.projectCount {
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+// --- Loading / error ---
+
+.statusText {
+  padding: 24px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-primary);
+}

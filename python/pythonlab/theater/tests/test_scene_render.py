@@ -22,6 +22,7 @@ from theater.support.renderer import (
   AudioTooLongError,
   PauseTooLongError,
   TooManyFramesError,
+  gif_duration_ms,
   render,
 )
 
@@ -391,3 +392,21 @@ def test_play_scenes_renders_and_returns_bytes():
   gif_bytes, wav_bytes = theater.play_scenes(scene)
   assert len(gif_bytes) > 0
   assert wav_bytes is None
+
+
+def test_gif_duration_is_the_sum_of_the_pauses():
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+  scene.pause(0.5)
+  scene.draw_rectangle(20, 20, 10, 10)
+  scene.pause(0.125)
+
+  # 0.125 rounds to a centisecond, the finest delay a gif frame can express.
+  assert gif_duration_ms(scene.get_actions()) == 620
+
+
+def test_gif_duration_is_zero_without_a_pause():
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+
+  assert gif_duration_ms(scene.get_actions()) == 0

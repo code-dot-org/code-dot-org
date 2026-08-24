@@ -229,7 +229,10 @@ class StudentSnapshotsController < ApplicationController
 
     if level
       student_code_data = get_student_code(params[:student_id], level, params[:unit_id])
-      render json: {studentCode: student_code_data[:student_code]}
+      render json: {
+        studentCode: student_code_data[:student_code],
+        instructions: level.get_localized_property('long_instructions') || level.long_instructions
+      }
     else
       render json: {studentCode: nil}
     end
@@ -259,7 +262,8 @@ class StudentSnapshotsController < ApplicationController
     render json: {
       id: level.id,
       name: level.name,
-      exemplarSources: level.exemplar_sources
+      exemplarSources: level.exemplar_sources,
+      instructions: level.get_localized_property('long_instructions') || level.long_instructions
     }
   end
 

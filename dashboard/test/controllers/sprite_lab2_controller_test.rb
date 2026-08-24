@@ -142,6 +142,29 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "does not list the caller's own project" do
+    stub_scenes channel_for(@student_storage_id, @script.id)
+
+    sign_in @student
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_empty JSON.parse(response.body)['scenes']
+  end
+
+  # Only the listing skips your own project; a block already pointing at your
+  # own channel still runs.
+  test "external_scenes serves the caller's own channel" do
+    channel = channel_for(@student_storage_id, @script.id)
+    stub_scenes channel
+
+    sign_in @student
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_equal 1, JSON.parse(response.body)['scenes'].length
+  end
+
   test 'excludes someone who shares no section' do
     stranger = create(:student)
     stub_scenes channel_for(create_storage_id_for_user(stranger.id), @script.id)

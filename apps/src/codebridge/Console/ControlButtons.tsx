@@ -73,6 +73,24 @@ const ControlButtons: React.FunctionComponent = () => {
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
 
+  const clearIsRunningWhenOutputEnds = useCallback(async () => {
+    // The neighborhood clears it itself when its animation finishes.
+    if (miniApp === MiniApps.Neighborhood) {
+      return;
+    }
+    if (miniApp === MiniApps.Theater) {
+      if (appName === 'javalab') {
+        // Java Lab leaves the run button in 'stop' state.
+        return;
+      }
+      // Ensure the audio/visual playback has finished before clearing the run state.
+      await CodebridgeRegistry.getInstance()
+        .getTheater()
+        ?.waitUntilPlaybackDone();
+    }
+    dispatch(setIsRunning(false));
+  }, [appName, dispatch, miniApp]);
+
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
@@ -81,15 +99,9 @@ const ControlButtons: React.FunctionComponent = () => {
         scriptId: scriptId,
         interaction: UserLevelInteractions.click_run,
       });
-      onRun(/*runTests*/ false, dispatch, source).finally(() => {
-        // Theater and neighborhood output keeps playing after the run promise resolves, so we
-        // don't clear isRunning here for them. The neighborhood clears it
-        // itself when its animation finishes; the theater stays running until
-        // the user presses stop (its gif/audio length is unknown).
-        if (miniApp !== MiniApps.Neighborhood && miniApp !== MiniApps.Theater) {
-          dispatch(setIsRunning(false));
-        }
-      });
+      onRun(/*runTests*/ false, dispatch, source).finally(
+        clearIsRunningWhenOutputEnds
+      );
       dispatch(setHasRun(true));
       logLevelActivity();
     } else {

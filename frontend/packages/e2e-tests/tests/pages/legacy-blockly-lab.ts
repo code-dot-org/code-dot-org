@@ -49,6 +49,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
+  /** Project-header autosave time (ProjectUpdatedAt.jsx). Mask it: its datetime changes on each load. */
+  readonly projectUpdatedAt: Locator;
+
   /** Congratulations overlay shown on puzzle completion. */
   readonly congratsMessage: Locator;
 
@@ -100,6 +103,19 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.functionEditorContainer = page.locator(
       '[class*="modalFunctionEditorContainer"]',
     );
+    this.projectUpdatedAt = page.locator('.project_updated_at time');
+  }
+
+  /**
+   * Lab-framework overlay, from Redux instructions.overlayVisible
+   * (templates/Overlay.jsx). Use waitForReady() on a level that will not start
+   * until the overlay closes.
+   */
+  async closeInstructionsOverlayIfShown(): Promise<void> {
+    const overlay = this.page.locator('#overlay');
+    if (await overlay.isVisible()) {
+      await overlay.click();
+    }
   }
 
   /**
