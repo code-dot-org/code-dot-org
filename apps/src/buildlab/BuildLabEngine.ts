@@ -86,6 +86,7 @@ export default class BuildLabEngine {
     for (const handler of this.clickHandlers.get(elementId) ?? []) {
       handler();
     }
+    this.checkTouchEvents();
     return this.getState();
   }
 

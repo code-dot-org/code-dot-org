@@ -2,7 +2,6 @@ import type * as BlocklyCore from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
 import {Renderers} from '@cdo/apps/blockly/constants';
-import CdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 
 import {
   normalizeBuildlabFieldValue,
@@ -13,7 +12,6 @@ import {
 
 const cdoJavaScriptGenerator = () => Blockly.JavaScript;
 
-export const CDO_BLOCKLY_THEME = CdoTheme;
 export const CDO_RENDERER = Renderers.THRASOS;
 
 export const BUILD_LAB_BLOCK_DEFINITIONS = [

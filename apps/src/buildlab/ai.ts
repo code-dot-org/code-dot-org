@@ -1,4 +1,4 @@
-import {DashboardApiClient} from '@code-dot-org/core/api';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const FLOW_LAB_CLIENT_TYPE = 'flow-lab';
 const DEFAULT_MODEL_ID = 'gemini-2.5-flash';
@@ -18,7 +18,28 @@ interface ChatRequestResponse {
   response?: string;
 }
 
-type AiTransport = Pick<typeof DashboardApiClient.transport, 'request'>;
+interface AiRequest {
+  body?: unknown;
+  method: 'GET' | 'POST';
+  url: string;
+}
+
+interface AiTransport {
+  request<T>(request: AiRequest): Promise<T>;
+}
+
+const dashboardTransport: AiTransport = {
+  async request<T>({body, method, url}: AiRequest): Promise<T> {
+    const response =
+      method === 'POST'
+        ? await HttpClient.post(url, JSON.stringify(body), true, {
+            'Content-Type': 'application/json; charset=UTF-8',
+          })
+        : await HttpClient.get(url);
+
+    return (await response.json()) as T;
+  },
+};
 
 function wait(milliseconds: number) {
   return new Promise(resolve => window.setTimeout(resolve, milliseconds));
@@ -45,7 +66,7 @@ function statusMessage(status: number) {
 export async function generateBuildLabText(
   prompt: string,
   channelId?: string,
-  transport: AiTransport = DashboardApiClient.transport
+  transport: AiTransport = dashboardTransport
 ): Promise<string> {
   const normalizedPrompt = prompt.trim();
   if (!normalizedPrompt) {

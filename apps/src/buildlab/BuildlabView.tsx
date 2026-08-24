@@ -397,7 +397,9 @@ export default function BuildlabView({
   const [workspaceRatio, setWorkspaceRatio] = useState(DEFAULT_WORKSPACE_RATIO);
   const [isRunning, setIsRunning] = useState(false);
   const [runtimeElements, setRuntimeElements] = useState<StageElement[]>([]);
-  const [runtimeScreenId, setRuntimeScreenId] = useState('screen1');
+  const [runtimeScreenId, setRuntimeScreenId] = useState(() =>
+    defaultScreenId(initialEditorProject.screens)
+  );
   const [runtimeKeyboardMovements, setRuntimeKeyboardMovements] = useState<
     KeyboardMovement[]
   >([]);
@@ -413,7 +415,9 @@ export default function BuildlabView({
   const [mlModels, setMlModels] = useState<ImportedMlModel[]>(
     initialEditorProject.mlModels ?? []
   );
-  const [activeScreenId, setActiveScreenId] = useState('screen1');
+  const [activeScreenId, setActiveScreenId] = useState(() =>
+    defaultScreenId(initialEditorProject.screens)
+  );
   const [workspaceState, setWorkspaceState] = useState<BuildlabWorkspaceState>(
     initialEditorProject.workspaceState
   );
@@ -614,6 +618,12 @@ export default function BuildlabView({
     () => mlModels.map(model => [model.name, model.id]),
     [mlModels]
   );
+  // MlModelManager reloads its catalog when this changes, so it must not be
+  // rebuilt on every render.
+  const importedModelIds = useMemo(
+    () => mlModels.map(model => model.id),
+    [mlModels]
+  );
   const displayedScreenId = isRunning ? runtimeScreenId : activeScreenId;
   const displayedScreen =
     screens.find(screen => screen.id === displayedScreenId) ?? screens[0];
@@ -699,7 +709,10 @@ export default function BuildlabView({
       return;
     }
 
-    const count = elements.filter(element => element.kind === kind).length + 1;
+    let count = elements.filter(element => element.kind === kind).length + 1;
+    while (elements.some(element => element.id === `${kind}${count}`)) {
+      count += 1;
+    }
     const label =
       kind === 'button'
         ? 'New button'
@@ -1431,9 +1444,13 @@ export default function BuildlabView({
       nextScreens[activeScreenIndex] ??
       nextScreens[activeScreenIndex - 1] ??
       nextScreens[0];
-    const nextScreensWithDefault = nextScreens.map(screen =>
-      screen.id === nextScreen.id ? {...screen, isDefault: true} : screen
-    );
+    const deletedWasDefault = activeScreen.isDefault === true;
+    const nextScreensWithDefault = nextScreens.map(screen => ({
+      ...screen,
+      isDefault: deletedWasDefault
+        ? screen.id === nextScreen.id
+        : screen.isDefault === true,
+    }));
     const removedElementIds = elements
       .filter(element => element.screenId === activeScreen.id)
       .map(element => element.id);
@@ -3168,7 +3185,7 @@ export default function BuildlabView({
       </div>
       <MlModelManager
         importedModels={mlModels}
-        importedModelIds={mlModels.map(model => model.id)}
+        importedModelIds={importedModelIds}
         isOpen={isModelManagerOpen}
         onClose={() => setIsModelManagerOpen(false)}
         onImport={handleImportMlModel}

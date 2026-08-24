@@ -267,7 +267,7 @@ export default function MlModelManager({
                   : 'No additional trained models are available for your account.'}
               </Typography>
             )}
-            {!isLoading && !error && availableModels.length > 0 && (
+            {!isLoading && availableModels.length > 0 && (
               <>
                 <SimpleDropdown
                   items={availableModels.map(model => ({

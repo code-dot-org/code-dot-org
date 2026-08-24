@@ -1,5 +1,8 @@
 import type * as BlocklyCore from 'blockly/core';
-import React, {useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef} from 'react';
+
+import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import useBlocklyWorkspace from '@cdo/apps/lab2/views/useBlocklyWorkspace';
 
 import {
   normalizeBuildlabFieldValue,
@@ -7,7 +10,6 @@ import {
 } from './blocklyTypes';
 import {
   BUILD_LAB_TOOLBOX,
-  CDO_BLOCKLY_THEME,
   CDO_RENDERER,
   type BuildlabBlockState,
   type BuildlabWorkspaceState,
@@ -20,6 +22,8 @@ export type {
 } from './buildlabBlockly';
 
 import styles from './buildlab-view.module.scss';
+
+const BLOCKLY_DIV_ID = 'buildlab-blockly-div';
 
 interface Props {
   assetOptions: BuildlabDropdownOption[];
@@ -198,10 +202,14 @@ export function updateDesignEventInWorkspace(
   }
 
   const currentEventBlock = workspaceState.blocks.blocks[eventBlockIndex];
+  // Blocks the user attached below the action block are theirs, not ours.
+  const trailingBlocks = currentEventBlock.next?.block.next;
   const updatedEventBlock: BuildlabBlockState = {
     ...currentEventBlock,
     fields: {ELEMENT: event.elementId},
-    next: {block: createDesignEventActionBlock(event)},
+    next: {
+      block: {...createDesignEventActionBlock(event), next: trailingBlocks},
+    },
   };
 
   return {
@@ -640,16 +648,24 @@ function loadWorkspaceState(
     normalizeBuildlabWorkspaceState(workspaceState);
   workspace.clear();
   Blockly.serialization.workspaces.load(normalizedWorkspaceState, workspace);
-  updateWorkspaceDropdowns(
-    workspace,
-    elementOptions,
-    screenOptions,
-    assetOptions,
-    spriteOptions,
-    touchTargetOptions,
-    modelOptions
-  );
-  restoreDropdownValues(workspace, normalizedWorkspaceState);
+  // FieldDropdown.setOptions resets the selection, so these fixups fire
+  // BLOCK_CHANGE events after the load's own FINISHED_LOADING. Left enabled,
+  // they reach the change listener as a user edit and dirty the project.
+  Blockly.Events.disable();
+  try {
+    updateWorkspaceDropdowns(
+      workspace,
+      elementOptions,
+      screenOptions,
+      assetOptions,
+      spriteOptions,
+      touchTargetOptions,
+      modelOptions
+    );
+    restoreDropdownValues(workspace, normalizedWorkspaceState);
+  } finally {
+    Blockly.Events.enable();
+  }
 }
 
 export default function BlocklyWorkspace({
@@ -663,8 +679,6 @@ export default function BlocklyWorkspace({
   modelOptions,
   workspaceState,
 }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const initialWorkspaceStateRef = useRef(workspaceState);
   const dropdownOptionsRef = useRef({
     assetOptions,
     elementOptions,
@@ -673,9 +687,6 @@ export default function BlocklyWorkspace({
     touchTargetOptions,
     modelOptions,
   });
-  const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
-  const dragInProgressRef = useRef(false);
-  const onWorkspaceChangeRef = useRef(onWorkspaceChange);
   dropdownOptionsRef.current = {
     assetOptions,
     elementOptions,
@@ -684,22 +695,15 @@ export default function BlocklyWorkspace({
     touchTargetOptions,
     modelOptions,
   };
-  onWorkspaceChangeRef.current = onWorkspaceChange;
-
-  useEffect(() => {
-    if (!containerRef.current) {
-      return;
-    }
-
+  const setupBlockly = useCallback(() => {
     setupBuildLabBlocklyEnvironment();
-    containerRef.current.classList.add('notranslate');
-    const workspace = Blockly.inject(containerRef.current, {
+  }, []);
+
+  const blocklyOptions = useMemo(
+    () => ({
       readOnly,
       renderer: CDO_RENDERER,
-      toolbox: BUILD_LAB_TOOLBOX,
-      theme: CDO_BLOCKLY_THEME,
       grid: {spacing: 24, length: 3, colour: '#d4d8e1', snap: true},
-      trashcan: true,
       zoom: {
         controls: true,
         wheel: true,
@@ -707,21 +711,28 @@ export default function BlocklyWorkspace({
         maxScale: 2,
         minScale: 0.6,
       },
-    });
-    workspaceRef.current = workspace;
-    dragInProgressRef.current = false;
-    loadWorkspaceState(
-      workspace,
-      initialWorkspaceStateRef.current,
-      dropdownOptionsRef.current.elementOptions,
-      dropdownOptionsRef.current.screenOptions,
-      dropdownOptionsRef.current.assetOptions,
-      dropdownOptionsRef.current.spriteOptions,
-      dropdownOptionsRef.current.touchTargetOptions,
-      dropdownOptionsRef.current.modelOptions
-    );
+    }),
+    [readOnly]
+  );
 
-    const publishWorkspaceState = () => {
+  const loadBuildLabWorkspace = useCallback(
+    (workspace: BlocklyCore.WorkspaceSvg, source: WorkspaceSerialization) => {
+      loadWorkspaceState(
+        workspace,
+        source as BuildlabWorkspaceState,
+        dropdownOptionsRef.current.elementOptions,
+        dropdownOptionsRef.current.screenOptions,
+        dropdownOptionsRef.current.assetOptions,
+        dropdownOptionsRef.current.spriteOptions,
+        dropdownOptionsRef.current.touchTargetOptions,
+        dropdownOptionsRef.current.modelOptions
+      );
+    },
+    []
+  );
+
+  const updateBuildLabWorkspace = useCallback(
+    (workspace: BlocklyCore.WorkspaceSvg) => {
       Blockly.Events.disable();
       try {
         updateWorkspaceDropdowns(
@@ -736,129 +747,64 @@ export default function BlocklyWorkspace({
       } finally {
         Blockly.Events.enable();
       }
-      onWorkspaceChangeRef.current(
-        normalizeBuildlabWorkspaceState(
-          Blockly.serialization.workspaces.save(
-            workspace
-          ) as BuildlabWorkspaceState
-        )
-      );
-    };
+    },
+    []
+  );
 
-    const onChange = (event: BlocklyCore.Events.Abstract) => {
-      if (event.type === Blockly.Events.BLOCK_DRAG) {
-        const dragEvent = event as BlocklyCore.Events.BlockDrag;
-        const isDragStart = dragEvent.isStart === true;
-        dragInProgressRef.current = isDragStart;
-        if (!isDragStart) {
-          // Let Blockly remove its insertion marker before React receives the
-          // final workspace state and can trigger a render.
-          requestAnimationFrame(publishWorkspaceState);
-        }
-        return;
-      }
+  const serializeBuildLabWorkspace = useCallback(
+    (workspace: BlocklyCore.WorkspaceSvg) =>
+      normalizeBuildlabWorkspaceState(
+        Blockly.serialization.workspaces.save(
+          workspace
+        ) as BuildlabWorkspaceState
+      ),
+    []
+  );
 
-      if (
-        event.type !== Blockly.Events.BLOCK_CHANGE &&
-        event.type !== Blockly.Events.BLOCK_MOVE &&
-        event.type !== Blockly.Events.BLOCK_CREATE &&
-        event.type !== Blockly.Events.BLOCK_DELETE
-      ) {
-        return;
-      }
-
-      if (dragInProgressRef.current || workspace.isDragging()) {
-        return;
-      }
-
-      const blockId =
-        'blockId' in event && typeof event.blockId === 'string'
-          ? event.blockId
-          : undefined;
-      if (blockId && workspace.getBlockById(blockId)?.isInsertionMarker()) {
-        return;
-      }
-
-      publishWorkspaceState();
-    };
-    workspace.addChangeListener(onChange);
-
-    const observer = new ResizeObserver(() => Blockly.svgResize(workspace));
-    observer.observe(containerRef.current);
-    return () => {
-      observer.disconnect();
-      workspace.removeChangeListener(onChange);
-      dragInProgressRef.current = false;
-      workspace.dispose();
-      workspaceRef.current = null;
-    };
-  }, [readOnly]);
-
-  useEffect(() => {
-    const workspace = workspaceRef.current;
-    if (!workspace) {
-      return;
-    }
-
-    // Blockly owns insertion markers while a drag is in progress. Do not
-    // replace the workspace from React state until the drag has completed;
-    // doing so disposes a marker that the native dragger still references.
-    if (dragInProgressRef.current || workspace.isDragging()) {
-      return;
-    }
-
-    const currentState = Blockly.serialization.workspaces.save(
-      workspace
-    ) as BuildlabWorkspaceState;
-    if (JSON.stringify(currentState) === JSON.stringify(workspaceState)) {
-      return;
-    }
-
-    Blockly.Events.disable();
-    try {
-      loadWorkspaceState(
-        workspace,
-        workspaceState,
-        dropdownOptionsRef.current.elementOptions,
-        dropdownOptionsRef.current.screenOptions,
-        dropdownOptionsRef.current.assetOptions,
-        dropdownOptionsRef.current.spriteOptions,
-        dropdownOptionsRef.current.touchTargetOptions,
-        dropdownOptionsRef.current.modelOptions
-      );
-    } finally {
-      Blockly.Events.enable();
-    }
-  }, [workspaceState]);
-
-  useEffect(() => {
-    const workspace = workspaceRef.current;
-    if (!workspace) {
-      return;
-    }
-
-    Blockly.Events.disable();
-    try {
-      updateWorkspaceDropdowns(
-        workspace,
+  const {getCurrentBlocks, isDragging, loadCode, subscribeToChanges} =
+    useBlocklyWorkspace({
+      blocklyDivId: BLOCKLY_DIV_ID,
+      enabled: true,
+      toolboxDefinition: BUILD_LAB_TOOLBOX,
+      theme: 'Light',
+      setupBlockly,
+      blocklyOptions,
+      loadWorkspace: loadBuildLabWorkspace,
+      serializeWorkspace: serializeBuildLabWorkspace,
+      updateWorkspace: updateBuildLabWorkspace,
+      workspaceUpdateKey: JSON.stringify({
+        assetOptions,
         elementOptions,
         screenOptions,
-        assetOptions,
         spriteOptions,
         touchTargetOptions,
-        modelOptions
-      );
-    } finally {
-      Blockly.Events.enable();
-    }
-  }, [
-    assetOptions,
-    elementOptions,
-    modelOptions,
-    screenOptions,
-    spriteOptions,
-    touchTargetOptions,
-  ]);
+        modelOptions,
+      }),
+    });
 
-  return <div className={styles.blocklyWorkspace} ref={containerRef} />;
+  useEffect(
+    () =>
+      subscribeToChanges(source =>
+        onWorkspaceChange(source as BuildlabWorkspaceState)
+      ),
+    [onWorkspaceChange, subscribeToChanges]
+  );
+
+  useEffect(() => {
+    if (isDragging()) {
+      return;
+    }
+
+    const currentBlocks = getCurrentBlocks();
+    if (
+      JSON.stringify(currentBlocks) ===
+      JSON.stringify(workspaceState as WorkspaceSerialization)
+    ) {
+      return;
+    }
+
+    loadCode(workspaceState as WorkspaceSerialization);
+  }, [getCurrentBlocks, isDragging, loadCode, workspaceState]);
+
+  return <div className={styles.blocklyWorkspace} id={BLOCKLY_DIV_ID} />;
 }
