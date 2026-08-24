@@ -636,6 +636,25 @@ describe('MazeKeyboardNavigation interaction', () => {
     });
   });
 
+  // Neighborhood.prepareForNewMaze clears the svg when a level reloads, which
+  // takes the cursor with it and fires no blur to notice it.
+  it('recovers when the maze is rebuilt under an active cursor', () => {
+    press('Enter');
+    expect(focusableCursor()).not.toBeNull();
+    Array.from(svg.children).forEach(child => child.remove());
+
+    // Arrows must not drive a cursor that is no longer on screen.
+    press('ArrowRight');
+    expect(focusableCursor()).toBeNull();
+
+    // Enter starts a fresh one rather than being swallowed as already active.
+    press('Enter');
+    expect(focusableCursor()).not.toBeNull();
+    expect(focusableCursor()?.getAttribute('aria-label')).toBe(
+      'Open path. Character is here. Row 2, column 2.'
+    );
+  });
+
   it('removes the cursor on Escape', () => {
     press('Enter');
     expect(focusableCursor()).not.toBeNull();

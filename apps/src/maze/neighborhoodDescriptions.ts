@@ -3,10 +3,9 @@
 
 export type SpriteMap = Record<string, {name: string} | undefined>;
 
-// Sprite names are art ids, not words a student knows: a taxi spans six tiles
-// named "N-taxi-1".."N-taxi-6" and a house spans sixty. The first token found
-// in a name gives the noun. "sidewalk" beats "grass" because
-// "bottom-left-sidewalk-corner-grass" is a sidewalk.
+// Sprite names are art ids, not words: a taxi spans six tiles named
+// "N-taxi-1".."N-taxi-6" and a house spans sixty. The first token found in a
+// name gives the noun; "sidewalk" beats "grass" for the grass-edged corners.
 const ASSET_NAMES: [token: string, noun: string][] = [
   ['sidewalk', 'Sidewalk'],
   ['bench', 'Bench'],

@@ -13,8 +13,7 @@
 
 import maze from '@code-dot-org/maze';
 
-// The English source for every maze string, used as the fallback below. Read
-// relatively because @cdo/i18n is a type-only alias with no bundler mapping.
+// Relative because @cdo/i18n is a type-only alias with no bundler mapping.
 import mazeStrings from '../../i18n/maze/en_us.json';
 
 import * as mazeMsg from './locale';
@@ -23,17 +22,14 @@ import {describeNeighborhoodCell, SpriteMap} from './neighborhoodDescriptions';
 const {SquareType, Direction} = maze.tiles;
 const {HarvesterCell, PlanterCell} = maze.cells;
 
-// Naming a key that is not already in the strings file fails typecheck, so no
-// new keys can be added here.
+// Keys must already exist in the strings file; a new one fails typecheck.
 type MazeMessageKey = keyof typeof mazeStrings;
 
 type MessageParams = Record<string, string | number>;
 type MessageFn = (params?: MessageParams) => string;
 
-// Rails serves only the level's own <app>_locale.js, so a Painter level in
-// Python Lab has no compiled maze strings. Translated maze levels use their
-// translation; everyone else falls back to the English source with its
-// {placeholders} filled in.
+// Rails serves only the level's own <app>_locale.js, so a Painter level has no
+// compiled maze strings. Fall back to the English source, filling {placeholders}.
 function t(
   key: MazeMessageKey,
   params: MessageParams = {},
@@ -73,8 +69,7 @@ const MSG = {
   hive: (count: number) => t('mazeNavHive', {count}),
   hiveUnlimited: () => t('mazeNavHiveUnlimited'),
   cloud: () => t('mazeNavCloud'),
-  // The source string's plural syntax needs a formatter we only have at build
-  // time, so spell out the English. Only the collector subtype reaches it.
+  // Only the collector subtype reaches this.
   collectibles: (count: number) =>
     t(
       'mazeNavCollectibles',
@@ -153,8 +148,7 @@ interface MazeGlobal {
     // toolbox/startBlocks are the rendered block XML; we scan them to learn
     // whether turning is part of this level's controls.
     level?: {toolbox?: string; startBlocks?: string};
-    // Undefined until a pegman with this id exists; Painter has none until a
-    // program places one.
+    // Undefined until a pegman with this id exists.
     getPegmanX: (id?: string) => number | undefined;
     getPegmanY: (id?: string) => number | undefined;
     getPegmanD: (id?: string) => number | undefined;
@@ -353,7 +347,7 @@ function painterName(id: string): string {
 }
 
 // The "is here" clause, empty unless the cursor is on a pegman. Facing is named
-// only on levels that turn, where it tells the student something.
+// only on levels that turn.
 function describeCharacterHere(
   ctrl: MazeController,
   col: number,
@@ -438,7 +432,12 @@ export default class MazeKeyboardNavigation {
   private cursor: SVGRectElement | null = null;
   private cursorHalo: SVGRectElement | null = null;
   private cursorPos: CursorPos | null = null;
-  private active = false;
+
+  // Read from the DOM rather than tracked, so a level reload that clears the
+  // svg cannot leave us thinking a cursor is still up.
+  private get active(): boolean {
+    return this.cursor?.isConnected ?? false;
+  }
 
   constructor(svg: SVGSVGElement) {
     this.svg = svg;
@@ -522,8 +521,6 @@ export default class MazeKeyboardNavigation {
     this.cursor = createCursorRect(size, CURSOR_STROKE, CURSOR_WIDTH, true);
     this.svg.appendChild(this.cursorHalo);
     this.svg.appendChild(this.cursor);
-
-    this.active = true;
     this.placeCursor();
     this.cursor.focus();
   }
@@ -592,16 +589,14 @@ export default class MazeKeyboardNavigation {
     this.placeCursor();
   }
 
-  // Detach refs and flip active before .remove(). The blur fired by
-  // removing the focused cursor bubbles to focusout, which re-enters
-  // this method; without the early flip we'd double-remove a node
-  // mid-removal and the browser throws NotFoundError.
+  // Drop the refs before .remove(): removing the focused cursor fires a blur
+  // that re-enters here through focusout, and that second pass must find no
+  // cursor or it double-removes and throws NotFoundError.
   private exit(opts: {restoreFocus?: boolean} = {}): void {
     const {restoreFocus = true} = opts;
-    if (!this.active) return;
-    this.active = false;
     const cursor = this.cursor;
     const halo = this.cursorHalo;
+    if (!cursor) return;
     this.cursor = null;
     this.cursorHalo = null;
     this.cursorPos = null;
