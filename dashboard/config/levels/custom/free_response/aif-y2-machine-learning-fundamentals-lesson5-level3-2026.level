@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-08-21T21:01:24.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Another machine learning engineer has built a linear regression model to predict the price of a used book based on how long it’s been owned. They’ve implemented the linear regression model in Python like this:\r\n\r\n```python\r\ndef predict_cost(years):\r\n    return 20 - 3 * years\r\n```\r\n\r\nExplain in words how this prediction model works. What happens to the price as the book gets older?",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

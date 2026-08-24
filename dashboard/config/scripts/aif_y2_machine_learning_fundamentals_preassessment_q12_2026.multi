@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q12-2026'
+
+wrong "The model's precision for spoiled food"
+wrong "The model's accuracy"
+wrong "The model's efficiency"
+right "The model's recall for spoiled food"
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A grocery store builds a classifier that checks if food has become spoiled. Which metric is the most important to prioritize for customer safety?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Testing Classifiers
+MARKDOWN
