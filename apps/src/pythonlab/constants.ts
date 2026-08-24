@@ -81,4 +81,4 @@ export const PYTHONLAB_SUPPORTED_FILE_TYPES =
     SUPPORTED_IMAGE_EXTENSIONS.filter(
       extension => extension !== UNPLAYABLE_IMAGE_EXTENSION
     )
-  );
+  ).concat('wav');
