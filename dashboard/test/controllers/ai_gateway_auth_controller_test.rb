@@ -12,6 +12,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('block_aichat_lab_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
+    stub_turnstile_mode(AiGatewayAuthController::TURNSTILE_MODE_DEFAULT)
     @params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],
@@ -45,5 +46,62 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal 'fake.jwt.token', JSON.parse(response.body)['token']
+  end
+
+  test 'publishes the turnstile mode as both a claim and a response field' do
+    %w[disabled monitor enforce].each do |mode|
+      stub_turnstile_mode(mode)
+
+      claims = mint_and_capture_claims
+
+      # The browser reads the response field to decide whether to solve a
+      # challenge; the worker reads the claim to decide whether to require one.
+      # Both come from a single DCDO read, so they can never disagree.
+      assert_equal mode, claims[:turnstile_mode], "claim for #{mode}"
+      assert_equal mode, JSON.parse(response.body)['turnstileMode'], "response field for #{mode}"
+    end
+  end
+
+  test 'falls back to disabled for a turnstile mode DCDO cannot be trusted to hold' do
+    # DCDO stores arbitrary JSON. A YAML-loaded `off` arrives as false, and a
+    # typo arrives as an unrecognized string. Neither may reach the worker as a
+    # claim it has no branch for, and neither may turn enforcement on.
+    [false, true, nil, 'enfroce', 42, {'mode' => 'enforce'}].each do |stored|
+      stub_turnstile_mode(stored)
+
+      claims = mint_and_capture_claims
+
+      assert_equal 'disabled', claims[:turnstile_mode], "claim for #{stored.inspect}"
+      assert_equal 'disabled', JSON.parse(response.body)['turnstileMode'], "response field for #{stored.inspect}"
+    end
+  end
+
+  private def stub_turnstile_mode(value)
+    DCDO.stubs(:get).
+      with(AiGatewayAuthController::TURNSTILE_MODE_DCDO_KEY, AiGatewayAuthController::TURNSTILE_MODE_DEFAULT).
+      returns(value)
+  end
+
+  # Mints a token and returns the claims handed to JWT.encode, so the signed
+  # payload can be asserted without a signing key.
+  private def mint_and_capture_claims
+    sign_in(@authorized_teacher)
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    # The signing key is only configured outside the test environment. Generated
+    # once and reused: these tests call this helper in a loop, and JWT.encode is
+    # stubbed below, so the key is never actually used to sign anything.
+    @signing_key ||= OpenSSL::PKey::RSA.generate(2048)
+    OpenSSL::PKey::RSA.stubs(:new).returns(@signing_key)
+
+    captured = nil
+    JWT.stubs(:encode).with do |claims, _key, _algorithm|
+      captured = claims
+      true
+    end.returns('fake.jwt.token')
+
+    post :get_access_token, params: @params, as: :json
+
+    assert_response :success
+    captured
   end
 end

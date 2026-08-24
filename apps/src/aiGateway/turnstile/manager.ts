@@ -9,6 +9,7 @@ import {
 } from './constants';
 import {debuggerWillPauseInAnonymousScope} from './debuggerProbe';
 import {loadTurnstileScript} from './loadScript';
+import {type TurnstileMode} from './mode';
 import {recordTurnstileOutcome} from './outcome';
 import {
   TokenAcquisitionMode,
@@ -63,6 +64,12 @@ export class TurnstileManager {
 
   private nextTokenOutcomeMode: ChallengeOutcomeMode | null = null;
 
+  // Enforcement mode of the most recent caller. A pre-fetch is speculative for
+  // a request that has not happened yet, so it is attributed to the policy in
+  // force when it was scheduled. That is only wrong across a DCDO flip, and
+  // only for the one challenge already in flight when the flag changed.
+  private enforcement: TurnstileMode = 'monitor';
+
   private widgetId: string | null = null;
 
   // Created once in the constructor and appended directly to document.body,
@@ -88,9 +95,10 @@ export class TurnstileManager {
     return TurnstileManager.instance;
   }
 
-  async getTurnstileToken(): Promise<string> {
+  async getTurnstileToken(enforcement: TurnstileMode): Promise<string> {
     const start = performance.now();
-    console.log(`${LOG} getTurnstileToken() called`);
+    this.enforcement = enforcement;
+    console.log(`${LOG} getTurnstileToken() called (mode=${enforcement})`);
 
     if (await debuggerWillPauseInAnonymousScope()) {
       console.error(
@@ -166,7 +174,11 @@ export class TurnstileManager {
       {
         name: 'ai-gateway.turnstile',
         op: 'ai.turnstile',
-        attributes: {'turnstile.mode': mode, feature: 'ai-gateway'},
+        attributes: {
+          'turnstile.acquisition': mode,
+          'turnstile.mode': enforcement,
+          feature: 'ai-gateway',
+        },
       },
       awaitTokenDelivery
     );
@@ -255,6 +267,11 @@ export class TurnstileManager {
   ): Promise<string> {
     console.log(`${LOG} Challenge enqueued on chain`);
 
+    // Captured when the challenge is created rather than read at settle time,
+    // so a DCDO flip mid-challenge cannot relabel a challenge that ran under
+    // the previous policy.
+    const enforcement = this.enforcement;
+
     // Timed from chain release, not enqueue, to match CHALLENGE_TIMEOUT_MS.
     const startChallenge = () => {
       const start = performance.now();
@@ -263,14 +280,16 @@ export class TurnstileManager {
         .then(
           token => {
             recordTurnstileOutcome({
-              mode: outcomeMode.mode,
+              acquisition: outcomeMode.mode,
+              enforcement,
               durationMs: performance.now() - start,
             });
             return token;
           },
           error => {
             recordTurnstileOutcome({
-              mode: outcomeMode.mode,
+              acquisition: outcomeMode.mode,
+              enforcement,
               durationMs: performance.now() - start,
               error,
             });

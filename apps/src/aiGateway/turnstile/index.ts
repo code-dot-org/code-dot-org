@@ -5,7 +5,13 @@ export {
   TurnstileDevToolsError,
 } from './types';
 export {
-  fetchTurnstileTokenIfEnabled,
+  DEFAULT_TURNSTILE_MODE,
+  TURNSTILE_MODES,
+  parseTurnstileMode,
+  type TurnstileMode,
+} from './mode';
+export {
+  fetchTurnstileToken,
   isTurnstileDevToolsError,
   turnstileErrorTags,
   turnstileHeaders,

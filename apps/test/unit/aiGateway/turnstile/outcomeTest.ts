@@ -18,11 +18,13 @@ import {turnstileErrorTags} from '@cdo/apps/aiGateway/turnstile/util';
 const countMock = Observability.metrics.count as jest.Mock;
 const distributionMock = Observability.metrics.distribution as jest.Mock;
 const loggerErrorMock = Observability.logger.error as jest.Mock;
+const loggerWarnMock = Observability.logger.warn as jest.Mock;
 
 beforeEach(() => {
   countMock.mockClear();
   distributionMock.mockClear();
   loggerErrorMock.mockClear();
+  loggerWarnMock.mockClear();
 });
 
 describe('classifyTurnstileFailure', () => {
@@ -44,37 +46,62 @@ describe('classifyTurnstileFailure', () => {
 
 describe('recordTurnstileOutcome', () => {
   it('counts a success under result "ok" with no reason attribute', () => {
-    recordTurnstileOutcome({mode: 'on-demand', durationMs: 1234.6});
+    recordTurnstileOutcome({
+      acquisition: 'on-demand',
+      enforcement: 'enforce',
+      durationMs: 1234.6,
+    });
 
     expect(countMock).toHaveBeenCalledWith('ai-gateway.turnstile', 1, {
-      mode: 'on-demand',
+      acquisition: 'on-demand',
+      mode: 'enforce',
       result: 'ok',
     });
     expect(distributionMock).toHaveBeenCalledWith(
       'ai-gateway.turnstile.duration_ms',
       1235,
-      {mode: 'on-demand', result: 'ok'}
+      {acquisition: 'on-demand', mode: 'enforce', result: 'ok'}
     );
     expect(loggerErrorMock).not.toHaveBeenCalled();
+    expect(loggerWarnMock).not.toHaveBeenCalled();
   });
 
   it('counts a failure under result "error" carrying the reason', () => {
     recordTurnstileOutcome({
-      mode: 'pre-fetch',
+      acquisition: 'pre-fetch',
+      enforcement: 'enforce',
       durationMs: 30_000,
       error: new TurnstileChallengeError('timeout', 'timed out'),
     });
 
     expect(countMock).toHaveBeenCalledWith('ai-gateway.turnstile', 1, {
-      mode: 'pre-fetch',
+      acquisition: 'pre-fetch',
+      mode: 'enforce',
       result: 'error',
       reason: 'timeout',
     });
   });
 
+  // The enforcement mode is what separates a tolerated measurement from a
+  // broken request. Without it on the series, a failure count cannot be read.
+  it('carries the enforcement mode as a separate dimension from acquisition', () => {
+    recordTurnstileOutcome({
+      acquisition: 'pre-fetch',
+      enforcement: 'monitor',
+      durationMs: 10,
+    });
+
+    expect(countMock).toHaveBeenCalledWith(
+      'ai-gateway.turnstile',
+      1,
+      expect.objectContaining({acquisition: 'pre-fetch', mode: 'monitor'})
+    );
+  });
+
   it('logs failures at 100% with the attributes the metric cannot carry', () => {
     recordTurnstileOutcome({
-      mode: 'on-demand',
+      acquisition: 'on-demand',
+      enforcement: 'enforce',
       durationMs: 42,
       error: new TurnstileChallengeError('render_failed', 'no widget id'),
     });
@@ -83,7 +110,8 @@ describe('recordTurnstileOutcome', () => {
       'turnstile challenge failed',
       expect.objectContaining({
         feature: 'ai-gateway',
-        mode: 'on-demand',
+        acquisition: 'on-demand',
+        mode: 'enforce',
         reason: 'render_failed',
         durationMs: 42,
         errorMessage: 'no widget id',
@@ -91,9 +119,28 @@ describe('recordTurnstileOutcome', () => {
     );
   });
 
+  // Under monitor the request still succeeds without a token, so this is not
+  // an error. Logging it as one would fill the error stream during exactly the
+  // phase the rollout is measuring.
+  it('logs a monitor-mode failure at warn rather than error', () => {
+    recordTurnstileOutcome({
+      acquisition: 'on-demand',
+      enforcement: 'monitor',
+      durationMs: 42,
+      error: new TurnstileChallengeError('timeout', 'timed out'),
+    });
+
+    expect(loggerWarnMock).toHaveBeenCalledWith(
+      'turnstile challenge failed',
+      expect.objectContaining({mode: 'monitor', reason: 'timeout'})
+    );
+    expect(loggerErrorMock).not.toHaveBeenCalled();
+  });
+
   it('records the duration for failures so timeouts are visible in p95', () => {
     recordTurnstileOutcome({
-      mode: 'on-demand',
+      acquisition: 'on-demand',
+      enforcement: 'enforce',
       durationMs: 30_000,
       error: new TurnstileChallengeError('timeout', 'timed out'),
     });
@@ -101,7 +148,7 @@ describe('recordTurnstileOutcome', () => {
     expect(distributionMock).toHaveBeenCalledWith(
       'ai-gateway.turnstile.duration_ms',
       30_000,
-      {mode: 'on-demand', result: 'error'}
+      {acquisition: 'on-demand', mode: 'enforce', result: 'error'}
     );
   });
 });

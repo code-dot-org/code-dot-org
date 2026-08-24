@@ -11,10 +11,13 @@ import * as Observability from '@code-dot-org/core/plugins/observability';
 import {TOKEN_MAX_AGE_MS} from '@cdo/apps/aiGateway/turnstile/constants';
 import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
 import {
-  fetchTurnstileTokenIfEnabled,
+  parseTurnstileMode,
+  type TurnstileMode,
+} from '@cdo/apps/aiGateway/turnstile/mode';
+import {
+  fetchTurnstileToken,
   turnstileHeaders,
 } from '@cdo/apps/aiGateway/turnstile/util';
-import experiments from '@cdo/apps/util/experiments';
 
 const startSpanMock = Observability.startSpan as jest.Mock;
 
@@ -34,38 +37,70 @@ describe('turnstileHeaders', () => {
   });
 });
 
-describe('fetchTurnstileTokenIfEnabled', () => {
-  it('resolves null without calling getInstance when experiment is off', async () => {
-    jest
-      .spyOn(experiments, 'isEnabledAllowingQueryString')
-      .mockReturnValue(false);
+describe('parseTurnstileMode', () => {
+  it.each(['disabled', 'monitor', 'enforce'])('accepts %s', mode => {
+    expect(parseTurnstileMode(mode)).toBe(mode);
+  });
+
+  // The mode crosses a JSON boundary from a server that may predate the field,
+  // and DCDO behind it stores arbitrary JSON. Everything unrecognized has to
+  // land on 'disabled' rather than switching enforcement on or leaving the
+  // browser acting on a mode the worker does not share.
+  it.each([undefined, null, false, true, 'enfroce', 1, {mode: 'enforce'}])(
+    'falls back to disabled for %p',
+    value => {
+      expect(parseTurnstileMode(value)).toBe('disabled');
+    }
+  );
+});
+
+describe('fetchTurnstileToken', () => {
+  const stubManager = (getTurnstileToken: jest.Mock) => {
+    document.body.innerHTML = '';
+    return jest.spyOn(TurnstileManager, 'getInstance').mockReturnValue({
+      getTurnstileToken,
+    } as unknown as TurnstileManager);
+  };
+
+  it('resolves null without instantiating the manager when disabled', async () => {
     const getInstanceSpy = jest.spyOn(TurnstileManager, 'getInstance');
 
-    const result = await fetchTurnstileTokenIfEnabled();
+    const result = await fetchTurnstileToken('disabled');
 
     expect(result).toBeNull();
+    // The constructor appends a container to document.body, so a page that
+    // never enforces must not reach it at all.
     expect(getInstanceSpy).not.toHaveBeenCalled();
   });
 
-  it('calls getInstance when experiment is on', async () => {
-    jest
-      .spyOn(experiments, 'isEnabledAllowingQueryString')
-      .mockReturnValue(true);
+  const enforcingModes: TurnstileMode[] = ['monitor', 'enforce'];
 
-    // Provide a minimal DOM environment so the constructor can run.
-    document.body.innerHTML = '';
-    const mockToken = 'test-token';
-    const getTurnstileTokenMock = jest.fn().mockResolvedValue(mockToken);
-    const getInstanceSpy = jest
-      .spyOn(TurnstileManager, 'getInstance')
-      .mockReturnValue({
-        getTurnstileToken: getTurnstileTokenMock,
-      } as unknown as TurnstileManager);
+  it.each(enforcingModes)('returns the token in %s', async mode => {
+    const getInstanceSpy = stubManager(
+      jest.fn().mockResolvedValue('test-token')
+    );
 
-    const result = await fetchTurnstileTokenIfEnabled();
+    const result = await fetchTurnstileToken(mode);
 
     expect(getInstanceSpy).toHaveBeenCalled();
-    expect(result).toBe(mockToken);
+    expect(result).toBe('test-token');
+  });
+
+  it('resolves null when the challenge fails in monitor', async () => {
+    stubManager(jest.fn().mockRejectedValue(new Error('challenge failed')));
+
+    // Fails open: the worker tolerates a missing token in monitor, so failing
+    // the request here would inflict the breakage monitor exists to measure.
+    await expect(fetchTurnstileToken('monitor')).resolves.toBeNull();
+  });
+
+  it('rejects when the challenge fails in enforce', async () => {
+    const failure = new Error('challenge failed');
+    stubManager(jest.fn().mockRejectedValue(failure));
+
+    // Fails closed: the worker would reject the request anyway, so surfacing
+    // the real error beats a bare 401.
+    await expect(fetchTurnstileToken('enforce')).rejects.toBe(failure);
   });
 });
 
@@ -212,7 +247,7 @@ describe('TurnstileManager token acquisition span', () => {
   ) => {
     const manager = TurnstileManager.getInstance();
     prepare(manager as unknown as TurnstileManagerPrivates);
-    return manager.getTurnstileToken();
+    return manager.getTurnstileToken('enforce');
   };
 
   it('wraps an on-demand challenge in an ai-gateway.turnstile span', async () => {
@@ -225,7 +260,11 @@ describe('TurnstileManager token acquisition span', () => {
       {
         name: 'ai-gateway.turnstile',
         op: 'ai.turnstile',
-        attributes: {'turnstile.mode': 'on-demand', feature: 'ai-gateway'},
+        attributes: {
+          'turnstile.acquisition': 'on-demand',
+          'turnstile.mode': 'enforce',
+          feature: 'ai-gateway',
+        },
       },
       expect.any(Function)
     );
@@ -241,7 +280,11 @@ describe('TurnstileManager token acquisition span', () => {
     expect(token).toBe('prefetched-token');
     expect(startSpanMock).toHaveBeenCalledWith(
       expect.objectContaining({
-        attributes: {'turnstile.mode': 'pre-fetch', feature: 'ai-gateway'},
+        attributes: {
+          'turnstile.acquisition': 'pre-fetch',
+          'turnstile.mode': 'enforce',
+          feature: 'ai-gateway',
+        },
       }),
       expect.any(Function)
     );
