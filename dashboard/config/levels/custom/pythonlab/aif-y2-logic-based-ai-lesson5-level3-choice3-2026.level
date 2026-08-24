@@ -35,9 +35,10 @@
       "openFiles": [
         "0"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqVMTxCm3CDiKhu\n45eWWRgS/TGT3PN94vmaeP2w9pkzxPRXye0Vtm7FZluCzmwXnxS0RyqeiMUw\nvlCVfxLag0lGlQ2Y2Vu1PUYNgxQLbI/cxGce8ET/VVAEPCM/1AUBoCC27Us8\nb/+dHZMKTu+2n6e3XA/H+x8DMY6Cy1dYiTAbTiUS+G1+VvvuXSssjmsap/2y\ncQCjD9IDBuGzZwwmjZQLnJi7muC3ZRGpuDrW4XnY7OHZRdLGBdjxuGpXIdCT\nkes=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:36:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:36:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:48:54 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

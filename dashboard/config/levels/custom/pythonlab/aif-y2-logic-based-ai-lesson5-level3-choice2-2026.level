@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T02:31:54.000Z",
   "level_num": "custom",
@@ -43,8 +42,10 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoTVDRTkBEo7wQE\n3DDaVQjdGUh0yvWah6JgIZD0Qf9M9EJ8o11xjbjpr5vWuaTVL4ww6YPuA+6C\nhpwTTw/c8+Tf3PCes8ZTKyVXj27B2+jZU6DUemnEq7o5L7bB/GUyeJGyxZVE\nrzS3rqqpacgDvFXV3PIFHdLLbF8m0WmOEHkhPKMO3MnBT2lwY/kozZronpPH\n70QHHbWq5vr9iNgXh9IA1WXFMQM254ioC9eHadCTXaNz9CK5Qs+OEKRRwano\nf3M=\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:32:02 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 02:35:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:32:02 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 02:35:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:48:26 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>
