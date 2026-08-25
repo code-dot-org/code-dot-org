@@ -11,8 +11,10 @@ import {AnimationPoses} from '../../characterAnimations';
 import {
   ASSUMED_BLOCK,
   getImageModel,
-  IMAGE_PROVIDER_OPTIONS,
+  imageProviderOptions,
+  ImageSize,
   MODEL_OUTPUT_PX,
+  SINGLE_IMAGE_SIZE,
 } from './modelHelpers';
 import {cropToContent, removeBackground} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
@@ -121,6 +123,8 @@ export interface ImageRequest {
   temperature?: number;
   /** Reference images as data URIs, sent ahead of the text in this order. */
   references?: string[];
+  /** Output size; single images take SINGLE_IMAGE_SIZE. */
+  imageSize?: ImageSize;
 }
 
 /**
@@ -151,7 +155,9 @@ export async function requestImage(
     ...(request.temperature !== undefined && {
       temperature: request.temperature,
     }),
-    providerOptions: IMAGE_PROVIDER_OPTIONS,
+    providerOptions: imageProviderOptions(
+      request.imageSize || SINGLE_IMAGE_SIZE
+    ),
   });
 
   const images = files.filter(f => f.mediaType.startsWith('image/'));

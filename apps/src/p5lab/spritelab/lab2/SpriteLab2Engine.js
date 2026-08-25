@@ -622,7 +622,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     p5.__slab2ResolvesBeforePaint = true;
     const paint = p5.drawSprites.bind(p5);
     p5.drawSprites = (...args) => {
-      this.unscaleSheetSpriteSizes_();
       this.resolvePlatformPhysics_();
       this.updateCharacterAnimations_();
       return paint(...args);
@@ -638,7 +637,7 @@ export default class SpriteLab2Engine extends SpriteLab {
    * at scale 0.076 read `height` 50, and the resolver's body — 50 × 0.076 —
    * shrank to 4px, resting the sprite's centre on the platform, waist deep.
    * Stills never change frame and never hit this. Put the unscaled sizes
-   * back before anything measures them.
+   * back at the top of every frame, before anything measures them.
    */
   unscaleSheetSpriteSizes_() {
     if (!this.library) {
@@ -730,6 +729,11 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   onP5Draw() {
     this.wrapDrawSpritesOnce_();
+    // Before the behaviors and events run: p5.play's pre-draw update is
+    // where the sizes go wrong, and a patrol behavior probing its footing
+    // with a 4px-tall sprite reads "airborne" and never checks for the
+    // edge of its platform.
+    this.unscaleSheetSpriteSizes_();
     super.onP5Draw();
   }
 

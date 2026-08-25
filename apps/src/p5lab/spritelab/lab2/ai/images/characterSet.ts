@@ -30,6 +30,7 @@ import {
   styleClause,
 } from './imageGeneration';
 import {chooseKeyColor, KeyColor} from './keyColor';
+import {CHARACTER_SET_IMAGE_SIZE} from './modelHelpers';
 import {loadImageFromBlob, removeKeyColor} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
@@ -491,6 +492,7 @@ export async function generateCharacterSet(
       seed,
       temperature: options.temperature,
       references,
+      imageSize: CHARACTER_SET_IMAGE_SIZE,
     });
     raws.push(raw);
     const frame = await keyFrame(raw, options.style, key);

@@ -1,5 +1,8 @@
 import {generateText} from '@cdo/apps/aiGateway';
-import {generateImage} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {
+  generateImage,
+  requestImage,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 
 jest.mock('@cdo/apps/aiGateway', () => ({
   generateText: jest.fn(),
@@ -63,6 +66,14 @@ describe('generateImage', () => {
     expect(mockGenerateText.mock.calls[0][0].providerOptions).toEqual({
       google: {imageConfig: {aspectRatio: '1:1', imageSize: '1K'}},
     });
+  });
+
+  it('lets a request choose its output size', async () => {
+    await requestImage('a frame', {seed: 1, imageSize: '2K'});
+    expect(
+      mockGenerateText.mock.calls[0][0].providerOptions.google.imageConfig
+        .imageSize
+    ).toBe('2K');
   });
 
   it('omits temperature from the request unless given', async () => {
