@@ -21,15 +21,24 @@ interface FormatChatMessageOptions {
 /**
  * Converts a {@link ChatMessage} to an AI SDK-specific {@link ModelMessage}.
  * Handles downloading project/level assets, if any.
+ *
+ * Returns undefined when the message has nothing left to send -- an
+ * image-only message whose asset could not be read, say. The model rejects a
+ * message with no parts ("must include at least one parts field"), so such a
+ * message has to be left out of the request rather than sent empty.
  */
 export async function formatChatMessage(
   inputMessage: ChatMessage,
   buildAssetUrl: (asset: ChatAsset) => string,
   {dropUnreadableAssets = false}: FormatChatMessageOptions = {}
-): Promise<ModelMessage> {
-  const content: Array<TextPart | FilePart> = [
-    {type: 'text', text: inputMessage.chatMessageText},
-  ];
+): Promise<ModelMessage | undefined> {
+  const content: Array<TextPart | FilePart> = [];
+
+  // An image-only response has no text. An empty text part is not content, so
+  // do not add one: it would make an otherwise empty message look non-empty.
+  if (inputMessage.chatMessageText?.trim()) {
+    content.push({type: 'text', text: inputMessage.chatMessageText});
+  }
 
   for (const asset of inputMessage.assets || []) {
     try {
@@ -49,6 +58,10 @@ export async function formatChatMessage(
         });
     }
   }
+  if (content.length === 0) {
+    return undefined;
+  }
+
   const role = inputMessage.role === Role.USER ? 'user' : 'assistant';
   return {role, content};
 }
