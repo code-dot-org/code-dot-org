@@ -16,12 +16,11 @@ export function getImageModel() {
   return googleProvider(AiChatModelIds.GEMINI_3_1_FLASH_IMAGE);
 }
 
-// Character-set frames: Gemini 3 Pro Image ("Nano Banana Pro"), about twice
-// the price of Flash per picture, five character references, and the
-// stronger reasoning about a compound instruction — this character, in
-// that pose — that Flash kept failing at (it honoured either the plate or
-// the figure, not both). One constant to flip back.
-export const CHARACTER_SET_IMAGE_MODEL = AiChatModelIds.GEMINI_3_PRO_IMAGE;
+// Character-set frames: Flash, like single images. Gemini 3 Pro Image was
+// tried (2026-08-25) at twice the price: it copied the plate's arm pose into
+// the walk even harder and lost costume consistency (boots changed colour
+// mid-cycle). One constant to flip.
+export const CHARACTER_SET_IMAGE_MODEL = AiChatModelIds.GEMINI_3_1_FLASH_IMAGE;
 
 export function getCharacterSetImageModel() {
   return googleProvider(CHARACTER_SET_IMAGE_MODEL);

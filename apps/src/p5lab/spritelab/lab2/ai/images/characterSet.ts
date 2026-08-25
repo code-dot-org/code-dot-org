@@ -67,11 +67,12 @@ export interface FramePlan {
   /** Attach the figure for this pose (poseFigures.ts) as the last reference. */
   poseFigure: boolean;
   /**
-   * The design plate: the character drawn once, arms out in an animator's
-   * neutral, as the reference every frame is drawn from. Not a sheet frame.
-   * Every frame — the standing ones too — is drawn to a figure, so no pose
-   * in the plate can be copied by mistake: a plate with its arms at its
-   * sides kept them there through a whole walk.
+   * The design plate: the character drawn once, standing with arms at its
+   * sides, as the reference every frame is drawn from. Not a sheet frame.
+   * Whatever arm pose the plate has, the model tends to copy into the walk
+   * (arms held straight out when the plate held them out); hanging arms are
+   * the least conspicuous habit to inherit, and the legs followed the
+   * figures best from such a plate.
    */
   isBase: boolean;
 }
@@ -178,7 +179,7 @@ function keyClause(key: KeyColor): string {
 
 /**
  * The prompt for the design plate: the whole character, facing right, arms
- * out in an animator's neutral so no arm pose in it can be inherited.
+ * hanging at the sides.
  */
 export function basePrompt(
   prompt: string,
@@ -187,9 +188,9 @@ export function basePrompt(
 ): string {
   return (
     `${prompt}. Show the whole character standing, facing right: its face ` +
-    'and body point toward the right side of the image. Both arms are held ' +
-    'straight out to the sides at shoulder height, slightly bent, hands open ' +
-    'and empty. Feet near the bottom of the image, nothing cut off. ' +
+    'and body point toward the right side of the image. Arms hanging ' +
+    'relaxed at the sides, hands open and empty. Feet near the bottom of the ' +
+    'image, nothing cut off. ' +
     `${ONLY_THIS_CHARACTER} ${styleClause(style)} ${keyClause(key)}`
   );
 }
