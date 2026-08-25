@@ -58,54 +58,19 @@ class Services::Classlink::V2AuthOptionBuilderTest < ActiveSupport::TestCase
         _(original_auth.reload.attributes).must_equal original_attributes
       end
 
-      context 'with an integer tenant_id' do
-        let(:tenant_id) {2222}
-
-        it 'normalizes to the same id as the string form' do
-          _(result.authentication_id).must_equal "2222|#{sourced_id}"
-        end
-      end
-
       context 'with a pipe in sourced_id' do
         # SourcedId is an arbitrary SIS-supplied string; a pipe is legal.
+        # The component-validation matrix lives in AuthIdGeneratorTest; this
+        # case stays because it pins the id format an auth option carries.
         let(:sourced_id) {'week|end_T-0005'}
 
         it 'builds the auth option' do
           _(result.authentication_id).must_equal "#{tenant_id}|#{sourced_id}"
         end
-
-        it 'round-trips through parse_authentication_id' do
-          parsed = Services::Classlink::V2AuthOptionBuilder.parse_authentication_id(result.authentication_id)
-          _(parsed).must_equal [tenant_id, sourced_id]
-        end
       end
 
-      context 'with a blank sourced_id' do
+      context 'when the v2 id cannot be built' do
         let(:sourced_id) {''}
-
-        it 'returns nil' do
-          _(result).must_be_nil
-        end
-      end
-
-      context 'with a nil sourced_id' do
-        let(:sourced_id) {nil}
-
-        it 'returns nil' do
-          _(result).must_be_nil
-        end
-      end
-
-      context 'with a blank tenant_id' do
-        let(:tenant_id) {''}
-
-        it 'returns nil' do
-          _(result).must_be_nil
-        end
-      end
-
-      context 'with a pipe in tenant_id' do
-        let(:tenant_id) {'22|22'}
 
         it 'returns nil' do
           _(result).must_be_nil
@@ -139,25 +104,6 @@ class Services::Classlink::V2AuthOptionBuilderTest < ActiveSupport::TestCase
       it 'returns nil' do
         _(result).must_be_nil
       end
-    end
-  end
-
-  describe '.version_for' do
-    it 'returns v2 for a pipe-joined id' do
-      _(Services::Classlink::V2AuthOptionBuilder.version_for('2222|5678_T5678-0005')).
-        must_equal AuthenticationOption::Classlink::VERSION[:v2]
-    end
-
-    it 'returns nil for a legacy UserId' do
-      _(Services::Classlink::V2AuthOptionBuilder.version_for('59777133')).must_be_nil
-      _(Services::Classlink::V2AuthOptionBuilder.version_for(59_777_133)).must_be_nil
-    end
-  end
-
-  describe '.parse_authentication_id' do
-    it 'splits on the first pipe only' do
-      _(Services::Classlink::V2AuthOptionBuilder.parse_authentication_id('2222|a|b')).
-        must_equal ['2222', 'a|b']
     end
   end
 end

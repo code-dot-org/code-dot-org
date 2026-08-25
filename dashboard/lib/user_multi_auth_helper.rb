@@ -112,7 +112,7 @@ module UserMultiAuthHelper
             hashed_email: hashed_email || '',
             credential_type: provider,
             authentication_id: uid,
-            version: provider == AuthenticationOption::CLASSLINK ? Services::Classlink::V2AuthOptionBuilder.version_for(uid) : nil,
+            version: provider == AuthenticationOption::CLASSLINK ? AuthenticationOption::Classlink.version_for(uid) : nil,
             data: new_data
           )
         elsif hashed_email.present?

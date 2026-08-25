@@ -114,10 +114,31 @@ class AuthenticationOption < ApplicationRecord
     }.freeze
   end
 
+  # Facts about the ClassLink authentication_id formats. A v1 id is
+  # ClassLink's internal UserId; a v2 id is "<TenantId>|<SourcedId>", built by
+  # Services::Classlink::AuthIdGenerator.
   module Classlink
+    SEPARATOR = '|'.freeze
+
     VERSION = {
       v2: 'v2',
     }.freeze
+
+    # Splits a v2 authentication_id back into [tenant_id, sourced_id].
+    # The limit of 2 is load-bearing: SourcedId may itself contain a pipe.
+    # That's safe only because AuthIdGenerator refuses to build an id whose
+    # TenantId contains one — change that validation and this split breaks.
+    def self.parse(authentication_id)
+      authentication_id.to_s.split(SEPARATOR, 2)
+    end
+
+    # The version marker matching a ClassLink authentication_id: 'v2' for the
+    # "<TenantId>|<SourcedId>" format, nil for a legacy UserId. Creation sites
+    # that copy an id they didn't build (signup migration, silent takeover)
+    # use this so the version column always describes the id's actual format.
+    def self.version_for(authentication_id)
+      authentication_id.to_s.include?(SEPARATOR) ? VERSION[:v2] : nil
+    end
   end
 
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}

@@ -58,7 +58,7 @@ module Services
           ao.version =
             case provider
             when AuthenticationOption::CLEVER then AuthenticationOption::Clever::VERSION[:v3]
-            when AuthenticationOption::CLASSLINK then Services::Classlink::V2AuthOptionBuilder.version_for(user.uid)
+            when AuthenticationOption::CLASSLINK then AuthenticationOption::Classlink.version_for(user.uid)
             end
         elsif user.email.present? || user.hashed_email.present?
           ao.credential_type = AuthenticationOption::EMAIL

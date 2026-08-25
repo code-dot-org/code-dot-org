@@ -166,7 +166,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           # The uid was rewritten to the v2 format before this flow ran, unless
           # its components were invalid — version_for stamps what the id
           # actually is, so a legacy-format fallback isn't mislabeled as v2.
-          Services::Classlink::V2AuthOptionBuilder.version_for(auth_hash.uid)
+          AuthenticationOption::Classlink.version_for(auth_hash.uid)
         end,
       data: new_data
     )
@@ -488,25 +488,20 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth
   end
 
-  # Dual-match login for ClassLink: prefer the v2 "<TenantId>|<SourcedId>"
-  # authentication id, falling back to the legacy UserId. A user found only by
-  # the legacy id gets a v2 auth option created at login time (the v1 record is
-  # left untouched), after which the v2 lookup succeeds on every later login.
-  # Runs before User.from_omniauth, which treats a failed lookup as a brand-new
-  # signup — so an existing v1 user must be migrated (or left on their v1 uid)
-  # before that lookup happens, or they would get a duplicate account.
+  # Rewrites the ClassLink auth hash's uid from ClassLink's legacy UserId to
+  # the v2 "<TenantId>|<SourcedId>" format, migrating a legacy-only user by
+  # creating their v2 auth option along the way.
+  # Must run before anything looks up a user by uid — both login and
+  # connect_provider — so existing accounts are found under either id format
+  # rather than duplicated or missed. If the v2 id can't be built or the
+  # migration fails, the uid is left as-is and the legacy path still works.
   #
-  # Also runs before connect_provider (Manage Linked Accounts -> Connect), for
-  # the same reason in a different costume: connect_provider looks up the
-  # credential's current holder by auth_hash.uid, and a v1-format lookup cannot
-  # see an account that holds only a v2 record — such as any signup created
-  # after this format shipped. Missing the holder would skip the takeover and
-  # already-in-use checks and let a second account link the same credential.
-  # With the uid swapped here, the connect flow finds holders, runs its checks,
-  # and creates new auth options all in v2 terms.
+  # @param auth [OmniAuth::AuthHash] the ClassLink omniauth callback hash
+  # @return [void] on success, replaces request.env['omniauth.auth'] with a
+  #   copy whose uid is the v2 id
   private def apply_classlink_v2_authentication_id(auth)
     return if auth.nil?
-    classlink_v2_id = Services::Classlink::V2AuthOptionBuilder.build_authentication_id(
+    classlink_v2_id = Services::Classlink::AuthIdGenerator.call(
       tenant_id: auth.info&.district_id,
       sourced_id: auth.info&.external_id,
       classlink_user_id: auth.uid
@@ -544,7 +539,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # Swap a copy carrying the v2 uid into the request env rather than
     # mutating the given hash in place — everything downstream re-reads
-    # request.env['omniauth.auth'], and the caller's object may be shared.
+    # request.env['omniauth.auth'].
     request.env['omniauth.auth'] = auth.dup.tap {|a| a.uid = classlink_v2_id}
   end
 
