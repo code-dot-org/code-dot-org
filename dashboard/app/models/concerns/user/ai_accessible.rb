@@ -5,6 +5,21 @@ module User::AiAccessible
 
   TEACHER_PREVERIFICATION_PILOT = 'teacher-preverification'.freeze
 
+  # Country values that count as inside the US.
+  #
+  # The codes are the ones the school-information dropdown stores (see
+  # frontend/packages/core/src/constants/countries.ts). The names are for
+  # user_geos, which records country names rather than codes; territory
+  # spellings differ between sources, so the common ones are all listed.
+  US_COUNTRIES = [
+    'US', 'USA', 'United States',
+    'AS', 'American Samoa',
+    'GU', 'Guam',
+    'MP', 'Northern Mariana Islands',
+    'PR', 'Puerto Rico',
+    'VI', 'Virgin Islands, U.S.', 'U.S. Virgin Islands', 'United States Virgin Islands',
+  ].freeze
+
   # Chat apis trust the client to decide if it can access chat features
   # This allows us the flexibility to do things like experiment with new
   # lab types with low friction.
@@ -95,8 +110,9 @@ module User::AiAccessible
   # We use school_info and user_geos (set once at first sign-in) rather than per request
   # geolocation so the value stays stable and can be fixed by the teacher if it is wrong.
   private def non_us_teacher?(teacher)
-    return !teacher.school_info.usa? if teacher.school_info&.country.present?
-    geo_country = teacher.user_geos.first&.country
-    geo_country.present? && geo_country != 'United States'
+    school_country = teacher.school_info&.country.presence
+    return US_COUNTRIES.exclude?(school_country) if school_country
+    geo_country = teacher.user_geos.first&.country.presence
+    geo_country.present? && US_COUNTRIES.exclude?(geo_country)
   end
 end

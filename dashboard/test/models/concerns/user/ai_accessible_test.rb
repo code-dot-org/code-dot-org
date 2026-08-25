@@ -185,6 +185,22 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
   end
 
+  describe 'US_COUNTRIES' do
+    it 'covers every US territory the school-information dropdown offers' do
+      # These are the territory codes in the dropdown's country list, which is
+      # what school_info stores.
+      %w[AS GU MP PR VI].each do |code|
+        _(User::AiAccessible::US_COUNTRIES).must_include code
+      end
+    end
+
+    it 'covers the territory names, which is what user_geos stores' do
+      ['American Samoa', 'Guam', 'Northern Mariana Islands', 'Puerto Rico', 'Virgin Islands, U.S.'].each do |name|
+        _(User::AiAccessible::US_COUNTRIES).must_include name
+      end
+    end
+  end
+
   describe '#us_only_aichat_models_disabled?' do
     subject(:us_only_aichat_models_disabled?) {user.us_only_aichat_models_disabled?}
 
@@ -201,6 +217,24 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       it 'returns false' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_us))
+        _us_only_aichat_models_disabled?.must_equal false
+      end
+    end
+
+    context 'when a teacher is in a Guam school' do
+      it 'returns false, because US territories are not international' do
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:verified_instructor?).and_return(true)
+        allow(user).to receive(:school_info).and_return(SchoolInfo.new(country: 'GU'))
+        _us_only_aichat_models_disabled?.must_equal false
+      end
+    end
+
+    context 'when a teacher has no school_info but a Guam geolocation' do
+      it 'returns false' do
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:school_info).and_return(nil)
+        allow(user).to receive(:user_geos).and_return([build(:user_geo, country: 'Guam')])
         _us_only_aichat_models_disabled?.must_equal false
       end
     end
