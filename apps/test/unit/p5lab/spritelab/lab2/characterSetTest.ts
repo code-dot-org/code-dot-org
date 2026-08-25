@@ -62,8 +62,17 @@ describe('SpriteLab2 characterSet', () => {
 
   it('maps each pose to a contiguous range of sheet frames in plan order', () => {
     const poses = buildPoses(plan);
-    expect(poses['stand-right']).toEqual({start: 0, count: 2, frameDelay: 15});
-    expect(poses['walk-right']).toEqual({start: 2, count: 8, frameDelay: 3});
+    const [stand, walk] = CHARACTER_POSES;
+    expect(poses['stand-right']).toEqual({
+      start: 0,
+      count: stand.frameCount,
+      frameDelay: stand.frameDelay,
+    });
+    expect(poses['walk-right']).toEqual({
+      start: stand.frameCount,
+      count: walk.frameCount,
+      frameDelay: walk.frameDelay,
+    });
     const frames = sheetFrames(plan);
     const total = Object.values(poses).reduce((n, r) => n + r!.count, 0);
     expect(total).toBe(frames.length);
