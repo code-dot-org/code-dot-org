@@ -151,41 +151,11 @@ export function buildPoses(plan: FramePlan[]): AnimationPoses {
   return poses;
 }
 
-// What each frame shows, per pose, indexed by frame. Lengths match
-// CHARACTER_POSES (checked by the unit tests). The walk is the classic
-// eight-key side-view cycle — contact, down, passing, up, then the same
-// with the legs swapped. The words are a plain gloss on the figure, no
-// emphasis on any one limb: a run whose text shouted about the arms got
-// the arms and lost the legs.
-const WALK_HALF_CYCLE = (front: string, back: string) => [
-  `walking in side view, at the contact point of a long stride: the ${front} leg stretched far forward with its heel on the ground, the ${back} leg stretched far behind with only its toe down, the legs wide apart; the ${back} arm swung forward, the ${front} arm swung back`,
-  `walking in side view, just after contact: the ${front} foot flat on the ground taking the weight, the ${front} knee bent, the ${back} foot lifting off behind, the body at its lowest point of the stride; the ${back} arm forward, the ${front} arm back`,
-  `walking in side view, at the passing point: the ${front} leg planted straight under the body, the ${back} leg lifted and swinging forward past it with a bent knee, the feet close together; both arms passing the sides mid-swing`,
-  `walking in side view, just before the next contact: the ${front} leg straight and pushing off from the toe behind the body, the ${back} leg swinging forward and reaching out in front, the body at its highest point of the stride; the ${front} arm swung forward, the ${back} arm swung back`,
-];
-export const POSE_FRAME_DESCRIPTIONS: Record<CharacterPose, string[]> = {
-  stand: [
-    'standing still, relaxed, at rest, arms hanging loosely at the sides with the hands empty and apart',
-    'standing still in the same spot, mid-breath: the same pose with the chest and shoulders raised very slightly, as the second frame of an idle animation',
-  ],
-  // The character faces right, so its right side is nearer the viewer. Its
-  // own left and right, not ours: "near" and "far" are not words a model
-  // reads reliably.
-  walk: [
-    ...WALK_HALF_CYCLE(
-      "character's right (nearer the viewer)",
-      "character's left (farther from the viewer)"
-    ),
-    ...WALK_HALF_CYCLE(
-      "character's left (farther from the viewer)",
-      "character's right (nearer the viewer)"
-    ),
-  ],
-  jump: [
-    'jumping: rising through the air, arms up, legs bent and tucked',
-    'falling after a jump: arms out for balance, legs reaching down toward a landing',
-  ],
-};
+// The poses themselves are pictures (poseFigures.ts); the text names no
+// limb. Three runs whose text described the pose had the model honour the
+// words' emphasis and the plate's habits over the figure — arms hanging,
+// then arms shouting while the legs shuffled, then the plate's arms-out
+// pose in every walking frame. The figure alone is the pose.
 
 function facingClause(facing: CharacterFacing): string {
   return `The character faces ${facing}, exactly as in the provided images: its face and body point toward the ${facing} side of the image.`;
@@ -221,9 +191,8 @@ export function basePrompt(
 }
 
 /**
- * The prompt for one further frame, drawn from its reference images. The
- * references show the character's design; the text has to insist that the
- * pose is new, or the model hands the reference pose back.
+ * The prompt for one sheet frame, drawn from the plate and its figure. The
+ * text carries the character and the constraints; the pose is the figure's.
  */
 export function framePrompt(
   prompt: string,
@@ -236,16 +205,14 @@ export function framePrompt(
       ? 'The first provided image shows this character.'
       : `The first ${plan.references.length} provided images show this character.`;
   const figure = plan.poseFigure
-    ? ' The last provided image is a silhouette figure in the exact pose to draw. Match its whole body position — legs, feet, arms, torso, and how far apart the feet stand — as closely as the character allows; take the pose only from the figure, and only the appearance from the character image.'
+    ? ' The last provided image is a silhouette figure: draw the character in exactly that pose — the whole body, legs, feet, arms and torso, as the figure has them. The pose comes only from the figure; the character image shows only what the character looks like.'
     : '';
   return (
     `The character: ${prompt}. ${characterImages}${figure} Draw the same ` +
     'character — same design, colors, proportions, outfit and art style, the ' +
-    `same scale — in the figure's pose, which is: ${
-      POSE_FRAME_DESCRIPTIONS[plan.pose][plan.frame]
-    }. ${facingClause(plan.facing)} ${ONLY_THIS_CHARACTER} ${keyClause(
-      key
-    )} ${styleClause(style)}`
+    `same scale. ${facingClause(
+      plan.facing
+    )} ${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style)}`
   );
 }
 

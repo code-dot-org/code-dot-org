@@ -8,7 +8,6 @@ import {
   MAX_SHEET_PIXELS,
   placeFrame,
   planCharacterFrames,
-  POSE_FRAME_DESCRIPTIONS,
   sheetLayout,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
@@ -20,12 +19,6 @@ import {
 
 describe('SpriteLab2 characterSet', () => {
   const plan = planCharacterFrames();
-
-  it('describes exactly the frames the poses table asks for', () => {
-    CHARACTER_POSES.forEach(({pose, frameCount}) => {
-      expect(POSE_FRAME_DESCRIPTIONS[pose]).toHaveLength(frameCount);
-    });
-  });
 
   it('plans the design plate, then every frame of every pose for each generated facing', () => {
     const perFacing = CHARACTER_POSES.reduce((n, p) => n + p.frameCount, 0);
@@ -83,33 +76,25 @@ describe('SpriteLab2 characterSet', () => {
     });
   });
 
-  it('writes prompts that carry the character, the pose, the facing and the key color', () => {
+  it('writes prompts that carry the character, the facing and the key color, and leave the pose to the figure', () => {
     const key = KEY_COLORS.magenta;
     const base = basePrompt('a robot', 'smooth', key);
     expect(base).toContain('a robot');
     expect(base).toContain('right side of the image');
-    expect(base).toContain('shoulder height');
     expect(base).toContain('#FF00FF');
     expect(base).toContain('no shadow');
     expect(base).toContain('no other creatures');
-    const step = plan.find(p => p.pose === 'jump' && p.facing === 'right')!;
+    const step = plan.find(p => p.pose === 'walk' && p.frame === 3)!;
     const frame = framePrompt('a robot', step, 'pixel', KEY_COLORS.green);
     expect(frame).toContain('a robot');
     expect(frame).toContain('faces right');
     expect(frame).toContain('silhouette figure');
-    expect(frame).not.toMatch(/[A-Z]{4,}/);
-    expect(
-      framePrompt(
-        'a robot',
-        plan.find(p => p.pose === 'walk')!,
-        'smooth',
-        KEY_COLORS.green
-      )
-    ).toContain("character's right (nearer the viewer)");
-    expect(frame).toContain(POSE_FRAME_DESCRIPTIONS.jump[0]);
     expect(frame).toContain('pixel art');
     expect(frame).toContain('#00FF00');
     expect(frame).toContain('no other creatures');
+    // No limb-by-limb description: the figure is the pose.
+    expect(frame).not.toMatch(/stride|heel|knee|swing/);
+    expect(frame).not.toMatch(/[A-Z]{4,}/);
   });
 
   it('sizes the cell to the largest frame', () => {
