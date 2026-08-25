@@ -3,8 +3,9 @@
 // range per pose (characterAnimations.ts).
 //
 // The model is asked for ONE frame per request, with the base drawing
-// attached as a reference image so the character stays itself; the frames
-// are then keyed, cropped and laid into a grid here. Asking for a whole
+// attached as a reference image so the character stays itself, all on a
+// key colour we name (keyColor.ts); the frames are then keyed, cropped and
+// laid into a grid here. Asking for a whole
 // sheet in one request is not an option: the models do not hold an exact
 // frame grid.
 
@@ -23,13 +24,13 @@ import {findOpaqueBounds} from '../../imageTrim';
 import {
   bytesToDataURI,
   GeneratedImageResult,
-  keyOutSprite,
   RawImage,
+  rawImageToBlob,
   requestImage,
-  SPRITE_PROMPT_CLAUSE,
   styleClause,
 } from './imageGeneration';
-import {loadImageFromBlob} from './removeBackground';
+import {chooseKeyColor, KeyColor} from './keyColor';
+import {loadImageFromBlob, removeKeyColor} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One reference image for a frame: an earlier frame, possibly mirrored. */
@@ -144,13 +145,22 @@ function facingClause(facing: CharacterFacing): string {
   return `The character faces ${facing}, exactly as in the provided images: its face and body point toward the ${facing} side of the image.`;
 }
 
+/** The one flat colour every frame is drawn on, keyed out afterwards. */
+function keyClause(key: KeyColor): string {
+  return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, and no shadow under the character. Only the character on that flat ${key.name}.`;
+}
+
 /** The prompt for the base drawing: the character standing, facing right. */
-export function basePrompt(prompt: string, style: ImageStyle): string {
+export function basePrompt(
+  prompt: string,
+  style: ImageStyle,
+  key: KeyColor
+): string {
   return (
     `${prompt}. Show the whole character, ${POSE_FRAME_DESCRIPTIONS.stand[0]}. ` +
     'The character faces right: its face and body point toward the right ' +
     'side of the image. Feet near the bottom of the image, nothing cut off. ' +
-    `${styleClause(style)} ${SPRITE_PROMPT_CLAUSE}`
+    `${styleClause(style)} ${keyClause(key)}`
   );
 }
 
@@ -162,7 +172,8 @@ export function basePrompt(prompt: string, style: ImageStyle): string {
 export function framePrompt(
   prompt: string,
   plan: FramePlan,
-  style: ImageStyle
+  style: ImageStyle,
+  key: KeyColor
 ): string {
   const references =
     plan.references.length <= 1
@@ -173,10 +184,7 @@ export function framePrompt(
     'design, colors, proportions, outfit and art style, the same scale — in a ' +
     `NEW pose that clearly differs from the provided images: ${
       POSE_FRAME_DESCRIPTIONS[plan.pose][plan.frame]
-    }. ${facingClause(plan.facing)} Keep the same plain flat background ` +
-    `color, extending to all edges, with no scenery or ground. ${styleClause(
-      style
-    )}`
+    }. ${facingClause(plan.facing)} ${keyClause(key)} ${styleClause(style)}`
   );
 }
 
@@ -300,15 +308,29 @@ interface KeyedFrame {
   bounds: Bounds | null;
 }
 
-async function keyFrame(raw: RawImage, style: ImageStyle): Promise<KeyedFrame> {
-  const img = await loadImageFromBlob(await keyOutSprite(raw, style));
+// Content is what is at least half opaque: a faint fringe or a ghost of a
+// shadow under the feet must not set where the feet stand.
+const SOLID_ALPHA = 127;
+
+async function keyFrame(
+  raw: RawImage,
+  style: ImageStyle,
+  key: KeyColor
+): Promise<KeyedFrame> {
+  const blob = await removeKeyColor(rawImageToBlob(raw), key.rgb, {
+    soft: style === 'smooth',
+  });
+  const img = await loadImageFromBlob(blob);
   const canvas = document.createElement('canvas');
   canvas.width = img.width;
   canvas.height = img.height;
   const ctx = canvas.getContext('2d')!;
   ctx.drawImage(img, 0, 0);
   const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  return {canvas, bounds: findOpaqueBounds(data, canvas.width, canvas.height)};
+  return {
+    canvas,
+    bounds: findOpaqueBounds(data, canvas.width, canvas.height, SOLID_ALPHA),
+  };
 }
 
 /** The keyed frame cropped to its content, as a data URI for the preview. */
@@ -438,6 +460,7 @@ export async function generateCharacterSet(
   onProgress?: (progress: CharacterSetProgress) => void
 ): Promise<GeneratedImageResult> {
   const plan = planCharacterFrames();
+  const key = chooseKeyColor(prompt);
   // One seed for the whole set.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const raws: RawImage[] = [];
@@ -453,8 +476,8 @@ export async function generateCharacterSet(
     });
     const text =
       i === 0
-        ? basePrompt(prompt, options.style)
-        : framePrompt(prompt, step, options.style);
+        ? basePrompt(prompt, options.style, key)
+        : framePrompt(prompt, step, options.style, key);
     const references = await Promise.all(
       step.references.map(({index, mirrored}) => {
         const uri = bytesToDataURI(
@@ -470,7 +493,7 @@ export async function generateCharacterSet(
       references,
     });
     raws.push(raw);
-    const frame = await keyFrame(raw, options.style);
+    const frame = await keyFrame(raw, options.style, key);
     keyed.push(frame);
     preview = framePreview(frame) || preview;
   }

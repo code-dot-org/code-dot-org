@@ -1,4 +1,7 @@
-import {keyOutBackground} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/removeBackground';
+import {
+  keyOutBackground,
+  keyOutColor,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/removeBackground';
 
 // Build an RGBA buffer from [r,g,b] triples, all fully opaque to start.
 function rgba(pixels) {
@@ -98,5 +101,45 @@ describe('SpriteLab2 keyOutBackground', () => {
     expect(alpha(data, 0)).toBe(0);
     expect(alpha(data, 1)).toBe(255);
     expect(alpha(data, 2)).toBe(255); // not connected to corner -> kept
+  });
+});
+
+describe('SpriteLab2 keyOutColor', () => {
+  const MAGENTA = [255, 0, 255];
+
+  it('clears the key colour everywhere, enclosed gaps included', () => {
+    // red | magenta (enclosed by red on this row) | red
+    const data = rgba([
+      [255, 0, 0],
+      [250, 5, 250],
+      [255, 0, 0],
+    ]);
+    keyOutColor(data, 3, 1, MAGENTA);
+    expect(alpha(data, 0)).toBe(255);
+    expect(alpha(data, 1)).toBe(0);
+    expect(alpha(data, 2)).toBe(255);
+  });
+
+  it('takes the anti-aliased fringe next to cleared pixels, sharp or soft', () => {
+    // magenta | half magenta half red (fringe) | red
+    const fringe = [255, 0, 128];
+    const sharp = rgba([MAGENTA, fringe, [255, 0, 0]]);
+    keyOutColor(sharp, 3, 1, MAGENTA);
+    expect(alpha(sharp, 1)).toBe(0);
+    expect(alpha(sharp, 2)).toBe(255);
+    const soft = rgba([MAGENTA, fringe, [255, 0, 0]]);
+    keyOutColor(soft, 3, 1, MAGENTA, {soft: true});
+    expect(alpha(soft, 1)).toBeGreaterThan(0);
+    expect(alpha(soft, 1)).toBeLessThan(255);
+  });
+
+  it('leaves a fringe-coloured pixel alone when nothing keyed touches it', () => {
+    const data = rgba([
+      [255, 0, 0],
+      [255, 0, 128],
+      [255, 0, 0],
+    ]);
+    keyOutColor(data, 3, 1, MAGENTA);
+    expect(alpha(data, 1)).toBe(255);
   });
 });

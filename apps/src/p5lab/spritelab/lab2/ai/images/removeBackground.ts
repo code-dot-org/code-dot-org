@@ -142,6 +142,114 @@ export function keyOutBackground(
   }
 }
 
+// Per-channel distance from the key colour under which a pixel is
+// background outright, and the wider band in which an edge pixel — a blend
+// of key and character — is treated as background too. The key is a pure
+// primary the character never wears, so even a half-and-half blend sits far
+// closer to it than to anything on the character.
+const KEY_TOLERANCE = 72;
+const KEY_EDGE_TOLERANCE = 150;
+
+function keyDistance(
+  data: Uint8ClampedArray,
+  index: number,
+  key: [number, number, number]
+): number {
+  return Math.max(
+    Math.abs(data[index] - key[0]),
+    Math.abs(data[index + 1] - key[1]),
+    Math.abs(data[index + 2] - key[2])
+  );
+}
+
+/**
+ * Key out a KNOWN colour everywhere in RGBA data — enclosed gaps included,
+ * with no dependence on what the corners hold. Two passes: pixels near the
+ * key go transparent; then pixels touching a transparent one and within
+ * the wider edge band go too (sharp) or fade by their distance (soft), which
+ * takes the anti-aliased fringe with the background.
+ */
+export function keyOutColor(
+  data: Uint8ClampedArray,
+  width: number,
+  height: number,
+  key: [number, number, number],
+  options: MatteOptions = {}
+): void {
+  const total = width * height;
+  const cleared = new Uint8Array(total);
+  for (let p = 0; p < total; p++) {
+    if (data[p * 4 + 3] === 0) {
+      cleared[p] = 1;
+    } else if (keyDistance(data, p * 4, key) <= KEY_TOLERANCE) {
+      data[p * 4 + 3] = 0;
+      cleared[p] = 1;
+    }
+  }
+  const touchesCleared = (p: number) => {
+    const x = p % width;
+    const y = (p - x) / width;
+    for (let dy = -1; dy <= 1; dy++) {
+      for (let dx = -1; dx <= 1; dx++) {
+        const nx = x + dx;
+        const ny = y + dy;
+        if (nx >= 0 && ny >= 0 && nx < width && ny < height) {
+          if (cleared[ny * width + nx]) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  };
+  for (let p = 0; p < total; p++) {
+    if (cleared[p]) {
+      continue;
+    }
+    const distance = keyDistance(data, p * 4, key);
+    if (distance > KEY_EDGE_TOLERANCE || !touchesCleared(p)) {
+      continue;
+    }
+    if (options.soft) {
+      const alpha =
+        (distance - KEY_TOLERANCE) / (KEY_EDGE_TOLERANCE - KEY_TOLERANCE);
+      data[p * 4 + 3] = Math.round(data[p * 4 + 3] * Math.min(1, alpha));
+    } else {
+      data[p * 4 + 3] = 0;
+    }
+  }
+}
+
+/** Remove a known key colour from an image Blob and return a new PNG Blob. */
+export async function removeKeyColor(
+  blob: Blob,
+  key: [number, number, number],
+  options: MatteOptions = {}
+): Promise<Blob> {
+  const img = await loadImageFromBlob(blob);
+  const canvas = document.createElement('canvas');
+  canvas.width = img.width;
+  canvas.height = img.height;
+  const ctx = canvas.getContext('2d')!;
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  keyOutColor(imageData.data, imageData.width, imageData.height, key, options);
+  ctx.putImageData(imageData, 0, 0);
+  return canvasToBlob(canvas);
+}
+
+function canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
+  return new Promise<Blob>((resolve, reject) => {
+    canvas.toBlob(result => {
+      if (result) {
+        resolve(result);
+      } else {
+        reject(new Error('Failed to convert canvas to blob'));
+      }
+    }, 'image/png');
+  });
+}
+
 /**
  * Remove the background from an image Blob and return a new PNG Blob.
  *

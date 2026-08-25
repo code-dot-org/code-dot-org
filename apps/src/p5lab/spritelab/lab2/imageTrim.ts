@@ -17,7 +17,10 @@ const ALPHA_THRESHOLD = 32;
 export function findOpaqueBounds(
   data: Uint8ClampedArray,
   width: number,
-  height: number
+  height: number,
+  // Pixels more opaque than this count as content; the default keeps
+  // anything visible at all.
+  alphaThreshold: number = ALPHA_THRESHOLD
 ): {left: number; top: number; right: number; bottom: number} | null {
   let left = width;
   let top = height;
@@ -25,7 +28,7 @@ export function findOpaqueBounds(
   let bottom = -1;
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
-      if (data[(y * width + x) * 4 + 3] > ALPHA_THRESHOLD) {
+      if (data[(y * width + x) * 4 + 3] > alphaThreshold) {
         if (x < left) {
           left = x;
         }

@@ -10,6 +10,7 @@ import {
   POSE_FRAME_DESCRIPTIONS,
   sheetLayout,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
+import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
 import {
   CHARACTER_POSES,
   poseKey,
@@ -78,18 +79,20 @@ describe('SpriteLab2 characterSet', () => {
   });
 
   it('writes prompts that carry the character, the pose, the facing and the key color', () => {
-    const base = basePrompt('a robot', 'smooth');
+    const key = KEY_COLORS.magenta;
+    const base = basePrompt('a robot', 'smooth', key);
     expect(base).toContain('a robot');
     expect(base).toContain('faces right');
-    expect(base).toContain('single flat color');
+    expect(base).toContain('#FF00FF');
+    expect(base).toContain('no shadow');
     const step = plan.find(p => p.pose === 'jump' && p.facing === 'left')!;
-    const frame = framePrompt('a robot', step, 'pixel');
+    const frame = framePrompt('a robot', step, 'pixel', KEY_COLORS.green);
     expect(frame).toContain('a robot');
     expect(frame).toContain('faces left');
     expect(frame).toContain('NEW pose');
     expect(frame).toContain(POSE_FRAME_DESCRIPTIONS.jump[0]);
     expect(frame).toContain('pixel art');
-    expect(frame).toContain('same plain flat background color');
+    expect(frame).toContain('#00FF00');
   });
 
   it('sizes the cell to the largest frame', () => {
