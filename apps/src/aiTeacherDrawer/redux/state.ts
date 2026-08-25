@@ -32,4 +32,6 @@ export interface AiDiffChatState {
   // If the user is viewing the artifact save screen, this will contain the
   // message they want to create an artifact from. Undefined otherwise.
   pendingArtifactMessage?: ChatTextMessage;
+  // When set, the drawer will navigate to this tab on next open.
+  requestedNav: string | null;
 }
