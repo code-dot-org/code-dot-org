@@ -131,6 +131,10 @@ describe('SpriteLab2 keyOutColor', () => {
     keyOutColor(soft, 3, 1, MAGENTA, {soft: true});
     expect(alpha(soft, 1)).toBeGreaterThan(0);
     expect(alpha(soft, 1)).toBeLessThan(255);
+    // Despilled: the fringe pixel loses its magenta cast (blue drops) so it
+    // reads as the character's red, not a pink halo.
+    expect(soft[1 * 4 + 2]).toBeLessThan(60);
+    expect(soft[1 * 4]).toBe(255);
   });
 
   it('leaves a fringe-coloured pixel alone when nothing keyed touches it', () => {

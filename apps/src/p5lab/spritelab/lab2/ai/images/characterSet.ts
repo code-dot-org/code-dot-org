@@ -145,7 +145,7 @@ const WALK_HALF_CYCLE = (front: string, back: string) => [
 ];
 export const POSE_FRAME_DESCRIPTIONS: Record<CharacterPose, string[]> = {
   stand: [
-    'standing still, relaxed, at rest',
+    'standing still, relaxed, at rest, arms hanging loosely at the sides with the hands empty and apart',
     'standing still in the same spot, mid-breath: the same pose with the chest and shoulders raised very slightly, as the second frame of an idle animation',
   ],
   walk: [...WALK_HALF_CYCLE('near', 'far'), ...WALK_HALF_CYCLE('far', 'near')],

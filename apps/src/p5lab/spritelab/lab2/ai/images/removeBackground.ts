@@ -211,9 +211,21 @@ export function keyOutColor(
       continue;
     }
     if (options.soft) {
-      const alpha =
-        (distance - KEY_TOLERANCE) / (KEY_EDGE_TOLERANCE - KEY_TOLERANCE);
-      data[p * 4 + 3] = Math.round(data[p * 4 + 3] * Math.min(1, alpha));
+      const alpha = Math.min(
+        1,
+        (distance - KEY_TOLERANCE) / (KEY_EDGE_TOLERANCE - KEY_TOLERANCE)
+      );
+      // Despill: an edge pixel is the character's colour blended with the
+      // key by (1 - alpha); take the key's share back out, or the fringe
+      // keeps a tint of it and reads as a halo over any background.
+      for (let c = 0; c < 3; c++) {
+        const i = p * 4 + c;
+        data[i] = Math.max(
+          0,
+          Math.min(255, Math.round((data[i] - (1 - alpha) * key[c]) / alpha))
+        );
+      }
+      data[p * 4 + 3] = Math.round(data[p * 4 + 3] * alpha);
     } else {
       data[p * 4 + 3] = 0;
     }
