@@ -1,5 +1,8 @@
 import {
+  FAR_COLOR,
   figureKey,
+  NEAR_COLOR,
+  poseFigureLegend,
   poseFigureSvg,
   poseFigureSvgDataURI,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/poseFigures';
@@ -43,5 +46,15 @@ describe('SpriteLab2 poseFigures', () => {
     expect(decodeURIComponent(uri.split(',')[1])).toBe(
       poseFigureSvg('walk', 2)
     );
+  });
+
+  it('colours the two sides differently and names them for the facing', () => {
+    const svg = poseFigureSvg('walk', 0);
+    expect(svg).toContain(NEAR_COLOR);
+    expect(svg).toContain(FAR_COLOR);
+    expect(poseFigureLegend('right')).toContain(
+      "character's right side (nearer"
+    );
+    expect(poseFigureLegend('left')).toContain("character's left side (nearer");
   });
 });

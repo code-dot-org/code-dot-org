@@ -31,7 +31,7 @@ import {
 } from './imageGeneration';
 import {chooseKeyColor, KeyColor} from './keyColor';
 import {CHARACTER_SET_IMAGE_SIZE} from './modelHelpers';
-import {poseFigureDataURI} from './poseFigures';
+import {poseFigureDataURI, poseFigureLegend} from './poseFigures';
 import {loadImageFromBlob, removeKeyColor} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
@@ -205,7 +205,9 @@ export function framePrompt(
       ? 'The first provided image shows this character.'
       : `The first ${plan.references.length} provided images show this character.`;
   const figure = plan.poseFigure
-    ? ' The last provided image is a silhouette figure: draw the character in exactly that pose — the whole body, legs, feet, arms and torso, as the figure has them. The pose comes only from the figure; the character image shows only what the character looks like.'
+    ? ` The last provided image is a silhouette figure: draw the character in exactly that pose — the whole body, legs, feet, arms and torso, as the figure has them, each limb on the side the figure puts it. ${poseFigureLegend(
+        plan.facing
+      )} The pose comes only from the figure; the character image shows only what the character looks like.`
     : '';
   return (
     `The character: ${prompt}. ${characterImages}${figure} Draw the same ` +
