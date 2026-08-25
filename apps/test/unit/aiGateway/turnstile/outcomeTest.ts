@@ -12,8 +12,12 @@ import {
 import {
   TurnstileChallengeError,
   TurnstileDevToolsError,
+  type TurnstileFailureReason,
 } from '@cdo/apps/aiGateway/turnstile/types';
-import {turnstileErrorTags} from '@cdo/apps/aiGateway/turnstile/util';
+import {
+  turnstileErrorTags,
+  turnstileUserMessage,
+} from '@cdo/apps/aiGateway/turnstile/util';
 
 const countMock = Observability.metrics.count as jest.Mock;
 const distributionMock = Observability.metrics.distribution as jest.Mock;
@@ -171,5 +175,55 @@ describe('turnstileErrorTags', () => {
   it('returns undefined for errors that are not challenge failures', () => {
     expect(turnstileErrorTags(new Error('network'))).toBeUndefined();
     expect(turnstileErrorTags(new TurnstileDevToolsError())).toBeUndefined();
+  });
+});
+
+describe('turnstileUserMessage', () => {
+  // Grouped by what the reader can do, not by reason: a student cannot act
+  // differently on render_threw than on challenge_failed.
+  it.each<TurnstileFailureReason>(['script_load_failed', 'timeout'])(
+    'tells the reader something may be blocking the check for %s',
+    reason => {
+      const message = turnstileUserMessage(
+        new TurnstileChallengeError(reason, 'nope')
+      );
+
+      expect(message).toMatch(/blocking/i);
+      expect(message).toMatch(/reload/i);
+    }
+  );
+
+  it('names the browser as the problem when unsupported', () => {
+    const message = turnstileUserMessage(
+      new TurnstileChallengeError('unsupported', 'nope')
+    );
+
+    expect(message).toMatch(/browser/i);
+  });
+
+  it.each<TurnstileFailureReason>([
+    'challenge_failed',
+    'render_threw',
+    'render_failed',
+    'remove_failed',
+    'unknown',
+  ])('falls back to reload-and-retry for %s', reason => {
+    const message = turnstileUserMessage(
+      new TurnstileChallengeError(reason, 'nope')
+    );
+
+    expect(message).toMatch(/reload/i);
+    expect(message).not.toMatch(/browser/i);
+  });
+
+  it('returns undefined for errors that are not challenge failures', () => {
+    expect(turnstileUserMessage(new Error('network'))).toBeUndefined();
+    expect(turnstileUserMessage('not an error')).toBeUndefined();
+  });
+
+  // The DevTools case has its own targeted help text, and the caller checks
+  // this helper first -- so it must decline to claim that error.
+  it('leaves the DevTools error to its own handler', () => {
+    expect(turnstileUserMessage(new TurnstileDevToolsError())).toBeUndefined();
   });
 });

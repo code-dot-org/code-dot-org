@@ -15,4 +15,5 @@ export {
   isTurnstileDevToolsError,
   turnstileErrorTags,
   turnstileHeaders,
+  turnstileUserMessage,
 } from './util';
