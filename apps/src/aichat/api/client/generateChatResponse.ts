@@ -72,13 +72,27 @@ export async function generateChatResponse(
   // of the conversation usable. The message the user just sent does not: an
   // attachment we cannot read is worth failing on so they can retry.
   for (const message of storedMessages) {
-    messages.push(
-      await formatChatMessage(message, buildAssetUrl, {
-        dropUnreadableAssets: true,
-      })
+    const formattedMessage = await formatChatMessage(message, buildAssetUrl, {
+      dropUnreadableAssets: true,
+    });
+    // Left out when nothing survives -- an image-only message whose asset
+    // could not be read. The model rejects a message with no parts, so
+    // sending it empty would fail the request the drop was meant to save.
+    if (formattedMessage) {
+      messages.push(formattedMessage);
+    }
+  }
+
+  const formattedNewMessage = await formatChatMessage(
+    newMessage,
+    buildAssetUrl
+  );
+  if (!formattedNewMessage) {
+    throw new Error(
+      'Cannot send a chat message with neither text nor a readable attachment.'
     );
   }
-  messages.push(await formatChatMessage(newMessage, buildAssetUrl));
+  messages.push(formattedNewMessage);
 
   // Structured-output schema, when the caller (e.g. weblab2/pythonlab AI
   // Tutor) requested one via modelParameters.responseJsonSchema. jsonSchema()

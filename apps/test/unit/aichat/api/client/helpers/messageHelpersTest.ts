@@ -24,10 +24,13 @@ const asset: ChatAsset = {
 };
 
 // status OK makes this a CompletedChatMessage, which carries a request id.
-const message = (assets?: ChatAsset[]): ChatMessage => ({
+const message = (
+  assets?: ChatAsset[],
+  chatMessageText = 'make the sloth cuter'
+): ChatMessage => ({
   role: Role.USER,
   status: AiInteractionStatus.OK,
-  chatMessageText: 'make the sloth cuter',
+  chatMessageText,
   timestamp: 1,
   requestId: 1,
   assets,
@@ -97,7 +100,7 @@ describe('formatChatMessage', () => {
     });
 
     // Only the text part survives -- crucially, no file part with empty data.
-    expect(formatted.content).toEqual([
+    expect(formatted?.content).toEqual([
       {type: 'text', text: 'make the sloth cuter'},
     ]);
     expect(mockLogError).toHaveBeenCalledTimes(1);
@@ -114,7 +117,7 @@ describe('formatChatMessage', () => {
       {dropUnreadableAssets: true}
     );
 
-    expect(formatted.content).toEqual([
+    expect(formatted?.content).toEqual([
       {type: 'text', text: 'make the sloth cuter'},
     ]);
     expect(mockLogError).toHaveBeenCalledTimes(1);
@@ -129,14 +132,57 @@ describe('formatChatMessage', () => {
     expect(mockLogError).not.toHaveBeenCalled();
   });
 
+  it('returns undefined for an image-only message whose asset is unreadable', async () => {
+    mockFetch({ok: false, status: 404});
+
+    // Nothing survives: no text, and the only asset could not be read. The
+    // model rejects a message with no parts, so it has to be left out.
+    await expect(
+      formatChatMessage(message([asset], ''), buildAssetUrl, {
+        dropUnreadableAssets: true,
+      })
+    ).resolves.toBeUndefined();
+  });
+
+  it('omits the text part for an image-only message', async () => {
+    mockFetch({ok: true, status: 200, body: 'png-bytes'});
+
+    const formatted = await formatChatMessage(
+      message([asset], ''),
+      buildAssetUrl
+    );
+
+    // An empty text part is not content, and would make an otherwise empty
+    // message look non-empty.
+    expect(formatted?.content).toEqual([
+      expect.objectContaining({type: 'file', filename: asset.filename}),
+    ]);
+  });
+
+  it('treats whitespace-only text as no text', async () => {
+    mockFetch({ok: false, status: 404});
+
+    await expect(
+      formatChatMessage(message([asset], '   \n  '), buildAssetUrl, {
+        dropUnreadableAssets: true,
+      })
+    ).resolves.toBeUndefined();
+  });
+
+  it('returns undefined for a message with no text and no assets', async () => {
+    await expect(
+      formatChatMessage(message(undefined, ''), buildAssetUrl)
+    ).resolves.toBeUndefined();
+  });
+
   it('includes readable assets alongside the message text', async () => {
     mockFetch({ok: true, status: 200, body: 'png-bytes'});
 
     const formatted = await formatChatMessage(message([asset]), buildAssetUrl);
 
-    expect(formatted.role).toBe('user');
-    expect(formatted.content).toHaveLength(2);
-    expect(formatted.content[1]).toEqual(
+    expect(formatted?.role).toBe('user');
+    expect(formatted?.content).toHaveLength(2);
+    expect(formatted?.content[1]).toEqual(
       expect.objectContaining({type: 'file', filename: asset.filename})
     );
   });
