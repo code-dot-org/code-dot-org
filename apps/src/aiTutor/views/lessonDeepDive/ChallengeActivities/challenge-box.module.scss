@@ -2,10 +2,34 @@
   display: none;
 }
 
+// Wraps the top action bar over the sidebar + activity layout.
+.challengeArea {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+// Top action bar: black strip with a bottom rule, spanning the view.
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  background-color: #000;
+  border-bottom: 1px solid #5f6872;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
 .challengeLayout {
   display: flex;
   gap: 16px;
   align-items: stretch;
+  flex: 1;
+  min-height: 0;
 }
 
 // Left quarter: activity instructions from the Challenge model.
@@ -89,27 +113,43 @@
   justify-content: space-between;
 }
 
-.challengeToggle {
+// Bottom modality toggle: icon-over-label choices, the active one framed
+// in a purple pill.
+.modalityToggle {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  align-items: center;
+  gap: 20px;
   margin-top: 16px;
+}
 
-  button {
-    padding: 6px 16px;
-    background-color: transparent;
-    border: 1px solid #9657c7;
-    border-radius: 8px;
-    color: #9657c7;
-    font-size: 0.875rem;
-    font-weight: 600;
-    cursor: pointer;
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 8px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #e4e6e9;
+  cursor: pointer;
 
-    &.active {
-      background-color: #9657c7;
-      color: #fff;
-    }
+  &.choiceSelected {
+    border-color: #aca8ea;
+    background-color: rgba(228, 226, 248, 0.15);
   }
+}
+
+.choiceIcon {
+  font-size: 25px;
+}
+
+.choiceLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 20px;
 }
 
 .waitingDisplay {

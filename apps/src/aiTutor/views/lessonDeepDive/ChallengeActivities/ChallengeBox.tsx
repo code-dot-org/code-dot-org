@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {FC, useCallback, useEffect, useState} from 'react';
+import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -54,6 +54,15 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
   const [evaluationDatetime, setEvaluationDatetime] = useState<string | null>(
     null
   );
+
+  // "Submit for feedback" lives in the top bar, but the work being submitted
+  // (the drawing, or the recording) lives in the active modality component.
+  // The modality reports whether it can be submitted through
+  // onSubmittableChange, and registers its submit/reset handlers on these
+  // refs so the top bar can drive them.
+  const [canSubmit, setCanSubmit] = useState(false);
+  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const resetRef = useRef<(() => void) | null>(null);
 
   // Both challenge modalities report submission through this callback; the
   // confirmation dialog is shared here rather than duplicated per modality.
@@ -173,6 +182,32 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
   const switchTo = (type: string) => {
     setChallengeType(type);
     setSubmitted(false);
+    // The newly mounted modality re-reports its own submittability.
+    setCanSubmit(false);
+  };
+
+  // "Start over" clears the current attempt: the parent resets the shared
+  // submission/feedback state, and the active modality clears its own work
+  // (the drawing or the recording) through the registered reset handler.
+  const handleStartOver = () => {
+    resetRef.current?.();
+    setSubmitted(false);
+    setShowConfirmation(false);
+    setEvaluationStatus(EvaluationStatus.NONE);
+    setEvaluationText(null);
+    setEvaluationDatetime(null);
+    setExplanationType(null);
+    setHasRecording(false);
+    setIsRecording(false);
+    setTextExplanation('');
+    setCanSubmit(false);
+  };
+
+  // The gallery is a sibling Rails page one segment below the current tutor
+  // page: .../lessons/<n>/tutor -> .../lessons/<n>/tutor/gallery.
+  const handleViewGallery = () => {
+    const base = window.location.pathname.replace(/\/$/, '');
+    window.location.href = `${base}/gallery`;
   };
 
   const switchExplanationType = (type: string) => {
@@ -197,9 +232,62 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
   return (
     <div className={styles.topContainer}>
       <div
-        className={showConfirmation ? styles.hidden : styles.challengeLayout}
+        className={classNames(
+          styles.challengeArea,
+          showConfirmation && styles.hidden
+        )}
         data-theme="Dark"
       >
+        <div className={styles.topBar}>
+          {evaluationStatus === EvaluationStatus.SUCCESS ? (
+            // Review state: once the tutor's feedback is in, the actions turn
+            // to browsing the gallery rather than editing this attempt.
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconStyle="solid"
+                  iconName="gallery-thumbnails"
+                />
+              }
+              onClick={handleViewGallery}
+            >
+              View project gallery
+            </MuiButton>
+          ) : (
+            // Compose state: "Submit for feedback" only appears once there is
+            // something to submit; "Start over" is always available.
+            <>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="extraSmall"
+                startIcon={
+                  <FontAwesomeV6Icon
+                    iconStyle="solid"
+                    iconName="arrow-rotate-left"
+                  />
+                }
+                onClick={handleStartOver}
+              >
+                Start over
+              </MuiButton>
+              {canSubmit && (
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  size="extraSmall"
+                  onClick={() => submitRef.current?.()}
+                >
+                  Submit for feedback
+                </MuiButton>
+              )}
+            </>
+          )}
+        </div>
+        <div className={styles.challengeLayout}>
         <aside className={styles.sidebar}>
           {evaluationText ? (
             <div className={styles.feedbackContainer}>
@@ -347,6 +435,9 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
               textExplanation={textExplanation}
               setEvaluationStatus={setEvaluationStatus}
               setChallengeResponseId={setChallengeResponseId}
+              onSubmittableChange={setCanSubmit}
+              submitRef={submitRef}
+              resetRef={resetRef}
             />
           ) : (
             <VideoChallenge
@@ -356,32 +447,45 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
               lessonId={lessonId}
               setEvaluationStatus={setEvaluationStatus}
               setChallengeResponseId={setChallengeResponseId}
+              onSubmittableChange={setCanSubmit}
+              submitRef={submitRef}
+              resetRef={resetRef}
             />
           )}
-          <div className={styles.challengeToggle}>
+          <div className={styles.modalityToggle}>
             <button
               type="button"
-              className={
-                challengeType === ChallengeTypes.WHITEBOARD
-                  ? styles.active
-                  : undefined
-              }
-              onClick={() => switchTo(ChallengeTypes.WHITEBOARD)}
-            >
-              Whiteboard
-            </button>
-            <button
-              type="button"
-              className={
-                challengeType === ChallengeTypes.VIDEO
-                  ? styles.active
-                  : undefined
-              }
+              className={classNames(
+                styles.choice,
+                challengeType === ChallengeTypes.VIDEO && styles.choiceSelected
+              )}
               onClick={() => switchTo(ChallengeTypes.VIDEO)}
             >
-              Video
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="clapperboard-play"
+                className={styles.choiceIcon}
+              />
+              <span className={styles.choiceLabel}>Video Story</span>
+            </button>
+            <button
+              type="button"
+              className={classNames(
+                styles.choice,
+                challengeType === ChallengeTypes.WHITEBOARD &&
+                  styles.choiceSelected
+              )}
+              onClick={() => switchTo(ChallengeTypes.WHITEBOARD)}
+            >
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="chalkboard"
+                className={styles.choiceIcon}
+              />
+              <span className={styles.choiceLabel}>Whiteboard</span>
             </button>
           </div>
+        </div>
         </div>
       </div>
       {showConfirmation && (
