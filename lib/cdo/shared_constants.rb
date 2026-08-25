@@ -862,6 +862,7 @@ module SharedConstants
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
+    GEMINI_3_1_FLASH_IMAGE: "gemini-3.1-flash-image",
   }
 
   # Models served via the Google Gemini API. This is about routing — which
@@ -873,6 +874,7 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
+    AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
   ].freeze
 
   # Models only available to users in the US

@@ -152,7 +152,7 @@ export async function removeBackground(
   blob: Blob,
   options: MatteOptions = {}
 ): Promise<Blob> {
-  const img = await loadImage(blob);
+  const img = await loadImageFromBlob(blob);
   const canvas = document.createElement('canvas');
   canvas.width = img.width;
   canvas.height = img.height;
@@ -182,7 +182,7 @@ export async function removeBackground(
  * matter how much margin the model left.
  */
 export async function cropToContent(blob: Blob): Promise<Blob> {
-  const img = await loadImage(blob);
+  const img = await loadImageFromBlob(blob);
   const canvas = document.createElement('canvas');
   canvas.width = img.width;
   canvas.height = img.height;
@@ -233,7 +233,8 @@ export async function cropToContent(blob: Blob): Promise<Blob> {
   });
 }
 
-function loadImage(blob: Blob): Promise<HTMLImageElement> {
+/** Decode an image Blob into an element ready to draw. */
+export function loadImageFromBlob(blob: Blob): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => {

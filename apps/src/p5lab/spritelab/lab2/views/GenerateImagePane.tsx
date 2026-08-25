@@ -18,11 +18,13 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
+  bytesToDataURI,
   GeneratedImageResult,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
 import {ImageType} from '../ai/images/types';
+import {characterAnimationName} from '../characterAnimations';
 import {
   getTrimmedThumbnail,
   onTrimsUpdated,
@@ -42,15 +44,6 @@ function imageTypeFromCategories(categories?: string[]): ImageType {
     return 'block';
   }
   return 'sprite';
-}
-
-function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
-  let binary = '';
-  // Chunked: spreading a megabyte-scale array overflows the argument limit.
-  for (let i = 0; i < bytes.length; i += 32768) {
-    binary += String.fromCharCode(...bytes.subarray(i, i + 32768));
-  }
-  return `data:${mediaType};base64,${btoa(binary)}`;
 }
 
 interface GalleryCardProps {
@@ -325,6 +318,57 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [dialogTarget, targetProps, uploadImage, dispatch, deleteUnreferencedAsset]
   );
 
+  // Persist an accepted character set: one animation per member, named from
+  // the character's name, carrying its frame grid and role. Added last to
+  // first, since addAnimation puts each new image at the top of the list and
+  // the base — the one the dropdowns offer — belongs there.
+  const handleAcceptGeneratedSet = useCallback(
+    async (results: GeneratedImageResult[], newName: string) => {
+      let baseKey: string | null = null;
+      for (const result of [...results].reverse()) {
+        if (!result.character || !result.frames) {
+          continue;
+        }
+        let sourceUrl = bytesToDataURI(result.uint8Array, result.mediaType);
+        if (uploadImage) {
+          try {
+            sourceUrl = await uploadImage(
+              result.filename,
+              result.uint8Array,
+              result.mediaType
+            );
+          } catch {
+            // Keep the embedded data URI.
+          }
+        }
+        const name = characterAnimationName(newName, result.character);
+        const key = createUuid();
+        dispatch(
+          addAnimation(key, {
+            name,
+            sourceUrl,
+            ...result.frames,
+            categories: [],
+            generation: result.generation,
+            character: result.character,
+          }) as unknown as AnyAction
+        );
+        if (
+          isNameUnique(name, getStore().getState().animationList.propsByKey)
+        ) {
+          dispatch(setAnimationName(key, name) as unknown as AnyAction);
+        }
+        if (name === newName) {
+          baseKey = key;
+        }
+      }
+      if (baseKey) {
+        setDialogTarget(baseKey);
+      }
+    },
+    [uploadImage, dispatch]
+  );
+
   // Persist an edited (or first-painted) image: upload the PNG as a fresh
   // asset (new filename, so nothing caches the old pixels).
   const uploadEdited = useCallback(
@@ -453,6 +497,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onAcceptGenerated={handleAcceptGenerated}
+          onAcceptGeneratedSet={handleAcceptGeneratedSet}
         />
       )}
 

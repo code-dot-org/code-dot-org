@@ -9,6 +9,7 @@ import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimatio
 import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 
+import {isBaseRole} from '../characterAnimations';
 import {getTrimmedThumbnail} from '../imageTrim';
 import {setActiveTab} from '../redux/spriteLab2Redux';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
@@ -77,6 +78,11 @@ function animationOptions(kind: AnimationKind): [string, string][] {
   animationList.orderedKeys.forEach((key: string) => {
     const animation = animationList.propsByKey[key];
     if (kindOf(animation.categories || []) !== kind) {
+      return;
+    }
+    // A character set is offered once, as its base member; the engine
+    // swaps in the others as the sprite moves.
+    if (animation.character && !isBaseRole(animation.character)) {
       return;
     }
     const url =

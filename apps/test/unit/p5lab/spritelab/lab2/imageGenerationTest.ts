@@ -46,6 +46,25 @@ describe('generateImage', () => {
     expect(generation.editedPrevious).toBeUndefined();
   });
 
+  it('keeps the last image file: a thinking model sends its drafts first', async () => {
+    mockGenerateText.mockResolvedValue({
+      files: [
+        {mediaType: 'image/png', uint8Array: new Uint8Array([1])},
+        {mediaType: 'text/plain', uint8Array: new Uint8Array([2])},
+        {mediaType: 'image/png', uint8Array: new Uint8Array([3])},
+      ],
+    });
+    const result = await generateImage('a beach', OPTIONS);
+    expect(Array.from(result.uint8Array)).toEqual([3]);
+  });
+
+  it('asks for a 1K square through provider options', async () => {
+    await generateImage('a beach', OPTIONS);
+    expect(mockGenerateText.mock.calls[0][0].providerOptions).toEqual({
+      google: {imageConfig: {aspectRatio: '1:1', imageSize: '1K'}},
+    });
+  });
+
   it('omits temperature from the request unless given', async () => {
     await generateImage('a beach', OPTIONS);
     expect('temperature' in mockGenerateText.mock.calls[0][0]).toBe(false);

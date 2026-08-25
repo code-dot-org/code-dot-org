@@ -45,6 +45,11 @@ interface ImageDetailsDialogProps {
     result: GeneratedImageResult,
     newName?: string
   ) => Promise<void>;
+  /** Persist an accepted character set under this name (new images only). */
+  onAcceptGeneratedSet: (
+    results: GeneratedImageResult[],
+    newName: string
+  ) => Promise<void>;
 }
 
 /**
@@ -68,6 +73,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   getDataURI,
   isNameTaken,
   onAcceptGenerated,
+  onAcceptGeneratedSet,
 }) => {
   const isNew = animKey === null;
   const {theme} = useTheme();
@@ -210,6 +216,14 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               await onAcceptGenerated(result, newName);
               setView('details');
             }}
+            onAcceptSet={
+              isNew
+                ? async (results, newName) => {
+                    await onAcceptGeneratedSet(results, newName);
+                    setView('details');
+                  }
+                : undefined
+            }
             // A brand-new image has no summary to fall back to.
             onCancel={isNew ? onClose : () => setView('details')}
             onDelete={isNew ? undefined : onDelete}

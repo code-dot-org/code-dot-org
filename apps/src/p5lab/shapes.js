@@ -137,6 +137,7 @@ function getSerializedAnimationProps(animation) {
     'pixelGridSize',
     'recentColors',
     'generation',
+    'character',
   ]);
 }
 

@@ -16,6 +16,13 @@ import {
   stepZoom,
   worldPoint,
 } from './camera';
+import {
+  indexCharacterSets,
+  isMoving,
+  jumpFrame,
+  nextFacing,
+  pickCharacterAnimation,
+} from './characterAnimations';
 import {trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
@@ -441,7 +448,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     await this.p5Wrapper.preloadSpriteImages(
       await trimAnimationListImages(
         this.preloadAnimationsOverride || getStore().getState().animationList
-      )
+      ),
+      {multiFrame: true}
     );
     p5.allSprites.removeSprites();
     // removeSprites destroyed the edge sprites too; clear the handle so the
@@ -510,7 +518,8 @@ export default class SpriteLab2Engine extends SpriteLab {
   async preloadTrimmedSpriteImages_() {
     await this.whenAnimationsAreReady();
     return this.p5Wrapper.preloadSpriteImages(
-      await trimAnimationListImages(getStore().getState().animationList)
+      await trimAnimationListImages(getStore().getState().animationList),
+      {multiFrame: true}
     );
   }
 
@@ -613,8 +622,68 @@ export default class SpriteLab2Engine extends SpriteLab {
     const paint = p5.drawSprites.bind(p5);
     p5.drawSprites = (...args) => {
       this.resolvePlatformPhysics_();
+      this.updateCharacterAnimations_();
       return paint(...args);
     };
+  }
+
+  /**
+   * Character sets (characterAnimations.ts): once the physics has settled
+   * every sprite for this frame, a sprite wearing any member of a set shows
+   * the member for how it moved — walking when it moved sideways, jumping
+   * while a player is off its footing, standing otherwise — facing the way
+   * it last moved. Only players can be airborne: patrollers and props ride
+   * the stock resolver and would read as jumping at every seam.
+   */
+  updateCharacterAnimations_() {
+    const p5 = this.p5Wrapper.p5;
+    const library = this.library;
+    if (!p5 || !library) {
+      return;
+    }
+    const list =
+      this.preloadAnimationsOverride || getStore().getState().animationList;
+    if (this.characterIndexSource_ !== list) {
+      this.characterIndexSource_ = list;
+      this.characterIndex_ = indexCharacterSets(list);
+    }
+    if (!this.characterIndex_.size) {
+      return;
+    }
+    const walls = library.getSpriteArray({group: 'walls'});
+    const view = {width: p5.width, height: p5.height};
+    Object.values(library.nativeSpriteMap).forEach(sprite => {
+      const members = this.characterIndex_.get(sprite.getAnimationLabel());
+      if (!members) {
+        return;
+      }
+      const state =
+        sprite.characterState ||
+        (sprite.characterState = {x: sprite.position.x, facing: 'right'});
+      const dx = sprite.position.x - state.x;
+      state.x = sprite.position.x;
+      state.facing = nextFacing(state.facing, dx);
+      const airborne =
+        this.usesPlatformPhysics_ &&
+        sprite.group === 'players' &&
+        !isSupported(sprite, walls, view, this.platformGravity_);
+      const pick = pickCharacterAnimation(members, {
+        moving: isMoving(dx),
+        airborne,
+        facing: state.facing,
+      });
+      if (!pick) {
+        return;
+      }
+      if (pick.name !== sprite.getAnimationLabel()) {
+        library.commands.setAnimation.call(library, {id: sprite.id}, pick.name);
+      }
+      if (pick.pose === 'jump') {
+        sprite.animation.changeFrame(
+          jumpFrame(sprite.velocity.y, this.platformGravity_)
+        );
+      }
+    });
   }
 
   onP5Draw() {

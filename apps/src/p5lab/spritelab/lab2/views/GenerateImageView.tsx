@@ -1,3 +1,4 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
@@ -14,6 +15,10 @@ import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generatin
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
 
 import {
+  CharacterSetProgress,
+  generateCharacterSet,
+} from '../ai/images/characterSet';
+import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
@@ -25,6 +30,7 @@ import {
   ImageStyle,
   ImageType,
 } from '../ai/images/types';
+import {CHARACTER_BASE_NAME_MAX_LENGTH} from '../characterAnimations';
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
@@ -80,6 +86,14 @@ interface GenerateImageViewProps {
     result: GeneratedImageResult,
     name?: string
   ) => Promise<void> | void;
+  /**
+   * Persist an accepted character set (creating only): the base member
+   * first, then the rest.
+   */
+  onAcceptSet?: (
+    results: GeneratedImageResult[],
+    newName: string
+  ) => Promise<void>;
   /** Leave without generating: back to the summary, or out of the dialog
       for a brand-new image. */
   onCancel: () => void;
@@ -101,6 +115,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   create,
   lockedImageType,
   onAccept,
+  onAcceptSet,
   onCancel,
   onDelete,
 }) => {
@@ -118,6 +133,13 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
+  // A whole character — standing, walking, jumping, both ways — instead of
+  // one picture. New sprites only: a set is drawn from a fresh base.
+  const [characterSet, setCharacterSet] = useState(false);
+  const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
+  const canMakeSet =
+    !!create && !!onAcceptSet && imageType === 'sprite' && source === 'new';
+  const makingSet = canMakeSet && characterSet;
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
   const trimmedName = name.trim();
@@ -158,12 +180,26 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         }
         options.inputImageDataURI = dataURI;
       }
+      if (makingSet && onAcceptSet) {
+        const results = await generateCharacterSet(
+          prompt.trim(),
+          {style, temperature: options.temperature},
+          setProgress
+        );
+        await onAcceptSet(results, trimmedName);
+        return;
+      }
       const result = await generateImage(prompt.trim(), options);
       // Apply immediately; the caller flips back to the summary view.
       await onAccept(result, create ? trimmedName : undefined);
     } catch {
-      setError("Couldn't generate the image. Try again.");
+      setError(
+        makingSet
+          ? "Couldn't finish the character. Try again."
+          : "Couldn't generate the image. Try again."
+      );
       setMode('prompt');
+      setProgress(null);
     }
   }, [
     prompt,
@@ -176,6 +212,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     create,
     trimmedName,
     onAccept,
+    onAcceptSet,
+    makingSet,
   ]);
 
   const botImage =
@@ -216,7 +254,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 value={name}
                 errorMessage={nameError || undefined}
                 disabled={generating}
-                maxLength={IMAGE_NAME_MAX_LENGTH}
+                maxLength={
+                  makingSet
+                    ? CHARACTER_BASE_NAME_MAX_LENGTH
+                    : IMAGE_NAME_MAX_LENGTH
+                }
                 onChange={e => setName(sanitizeImageName(e.target.value))}
               />
             </div>
@@ -278,6 +320,26 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
               </fieldset>
             </div>
           </div>
+
+          {canMakeSet && (
+            <div className={moduleStyles.formRow}>
+              <Checkbox
+                name="character-set"
+                label="Make a character set: standing, walking and jumping, facing right and left (16 pictures; takes a few minutes)"
+                size="s"
+                checked={characterSet}
+                disabled={generating}
+                onChange={e => {
+                  setCharacterSet(e.target.checked);
+                  // The member names add a suffix; keep the whole set in
+                  // the name limit.
+                  if (e.target.checked) {
+                    setName(n => n.slice(0, CHARACTER_BASE_NAME_MAX_LENGTH));
+                  }
+                }}
+              />
+            </div>
+          )}
 
           <div className={moduleStyles.formRow}>
             <fieldset
@@ -358,6 +420,15 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           {error && (
             <div aria-live="polite" className={moduleStyles.generateError}>
               {error}
+            </div>
+          )}
+          {generating && progress && (
+            <div aria-live="polite" className={moduleStyles.generateProgress}>
+              {progress.done < progress.total
+                ? `Drawing ${progress.done + 1} of ${progress.total}: ${
+                    progress.label
+                  }…`
+                : 'Putting the frames together…'}
             </div>
           )}
         </div>
