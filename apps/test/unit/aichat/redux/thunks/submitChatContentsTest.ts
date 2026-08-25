@@ -1,12 +1,14 @@
 import {configureStore} from '@reduxjs/toolkit';
 
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
+import {logChatEvent} from '@cdo/apps/aichat/helpers/logChatEvent';
 import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
 import {sendAnalytics} from '@cdo/apps/aichat/redux/thunks/sendAnalytics';
 import {submitChatContents} from '@cdo/apps/aichat/redux/thunks/submitChatContents';
 import {CompletedChatMessage, ModelParameters} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {TestResults} from '@cdo/apps/constants';
 import {
   AiChatClientTypes,
   AiChatModelIds,
@@ -52,6 +54,7 @@ const mockPostAichatCompletionMessage =
   postAichatCompletionMessage as jest.MockedFunction<
     typeof postAichatCompletionMessage
   >;
+const mockLogChatEvent = logChatEvent as jest.Mock;
 const mockSendProgressReport = sendProgressReport as jest.Mock;
 const mockSendAnalytics = sendAnalytics as jest.Mock;
 
@@ -62,13 +65,19 @@ const modelParameters: ModelParameters = {
   systemPrompt: 'system prompt',
 };
 
+const SET_LEVEL = 'test/setCurrentLevelId';
+
 const makeStore = () =>
   configureStore({
     reducer: {
       aichat: aichatReducer,
       progress: (
-        state = {currentLevelId: '1', scriptId: 2, viewAsUserId: null}
-      ) => state,
+        state = {currentLevelId: '1', scriptId: 2, viewAsUserId: null},
+        action: {type: string; payload?: string}
+      ) =>
+        action.type === SET_LEVEL
+          ? {...state, currentLevelId: action.payload}
+          : state,
       lab: (state = {channel: {id: 'channel-id'}, levelProperties: {}}) =>
         state,
     },
@@ -166,6 +175,144 @@ describe('submitChatContents', () => {
           role: Role.ASSISTANT,
           status: Status.ERROR,
           chatMessageText: 'Error: service account missing',
+        }),
+      ])
+    );
+  });
+  describe('when the user changes levels while the request is in flight', () => {
+    // Simulates navigating to another level after the request goes out but
+    // before the model responds -- nothing cancels the thunk.
+    const respondAfterLevelChange = (
+      store: ReturnType<typeof makeStore>,
+      messages: CompletedChatMessage[]
+    ) =>
+      mockPostAichatCompletionMessage.mockImplementation(async () => {
+        store.dispatch({type: SET_LEVEL, payload: '2'});
+        return messages;
+      });
+
+    it('does not add the response to the chat window', async () => {
+      const store = makeStore();
+      respondAfterLevelChange(
+        store,
+        makeMessages({chatMessageText: 'a sloth', status: Status.OK})
+      );
+
+      await store.dispatch(
+        submitChatContents({
+          text: 'draw a sloth',
+          modelParameters,
+          clientType: AiChatClientTypes.AI_CHAT_LAB,
+        })
+      );
+
+      // The window belongs to level 2 now. Leaking level 1's response into it
+      // is what sent one level's history to the model on the next request.
+      expect(
+        store
+          .getState()
+          .aichat.chatEventsCurrent.filter(
+            event => 'role' in event && event.role === Role.ASSISTANT
+          )
+      ).toEqual([]);
+    });
+
+    it('records the messages against the level they were sent from', async () => {
+      const store = makeStore();
+      respondAfterLevelChange(
+        store,
+        makeMessages({chatMessageText: 'a sloth', status: Status.OK})
+      );
+
+      await store.dispatch(
+        submitChatContents({
+          text: 'draw a sloth',
+          modelParameters,
+          clientType: AiChatClientTypes.AI_CHAT_LAB,
+        })
+      );
+
+      expect(mockLogChatEvent).toHaveBeenCalledTimes(2);
+      for (const call of mockLogChatEvent.mock.calls) {
+        // Level 1, where the request was sent -- not level 2, where the user is.
+        expect(call[2]).toEqual(
+          expect.objectContaining({currentLevelId: 1, channelId: 'channel-id'})
+        );
+      }
+    });
+
+    it('does not report progress for the level the user moved to', async () => {
+      const store = makeStore();
+      respondAfterLevelChange(
+        store,
+        makeMessages({chatMessageText: 'a sloth', status: Status.OK})
+      );
+
+      await store.dispatch(
+        submitChatContents({
+          text: 'draw a sloth',
+          modelParameters,
+          clientType: AiChatClientTypes.AI_CHAT_LAB,
+        })
+      );
+
+      expect(mockSendProgressReport).not.toHaveBeenCalled();
+    });
+
+    it('records a failure against the originating level without notifying the new one', async () => {
+      const store = makeStore();
+      mockPostAichatCompletionMessage.mockImplementation(async () => {
+        store.dispatch({type: SET_LEVEL, payload: '2'});
+        throw new Error('model unavailable');
+      });
+
+      await store.dispatch(
+        submitChatContents({
+          text: 'draw a sloth',
+          modelParameters,
+          clientType: AiChatClientTypes.AI_CHAT_LAB,
+        })
+      );
+
+      expect(mockLogChatEvent).toHaveBeenCalledTimes(1);
+      expect(mockLogChatEvent.mock.calls[0][0]).toEqual(
+        expect.objectContaining({status: Status.ERROR})
+      );
+      expect(mockLogChatEvent.mock.calls[0][2]).toEqual(
+        expect.objectContaining({currentLevelId: 1})
+      );
+      // No error bubble in the level the user is looking at.
+      expect(
+        store
+          .getState()
+          .aichat.chatEventsCurrent.filter(event => 'notificationType' in event)
+      ).toEqual([]);
+    });
+  });
+
+  it('reports progress and shows the response when the level has not changed', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({chatMessageText: 'a sloth', status: Status.OK})
+    );
+    const store = makeStore();
+
+    await store.dispatch(
+      submitChatContents({
+        text: 'draw a sloth',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_CHAT_LAB,
+      })
+    );
+
+    expect(mockSendProgressReport).toHaveBeenCalledWith(
+      'aichat',
+      TestResults.LEVEL_STARTED
+    );
+    expect(store.getState().aichat.chatEventsCurrent).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          role: Role.ASSISTANT,
+          chatMessageText: 'a sloth',
         }),
       ])
     );

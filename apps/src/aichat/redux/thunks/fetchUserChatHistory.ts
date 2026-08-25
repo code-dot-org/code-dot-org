@@ -34,15 +34,30 @@ export const fetchUserChatHistory = createAsyncThunk(
     thunkAPI
   ) => {
     const state = thunkAPI.getState() as RootState;
+    // The level this history was requested for. Compare the raw id rather than
+    // the parsed one below: NaN (no current level) never equals itself.
+    const requestedLevelId = state.progress.currentLevelId;
     // Post teacher's student's user id to backend and retrieve student's chat history.
     try {
       const chatHistoryApiResponse = await getUserChatHistory(
         userId,
-        parseInt(state.progress.currentLevelId || ''),
+        parseInt(requestedLevelId || ''),
         state.progress.scriptId,
         channelId,
         lessonId
       );
+
+      // Responses arrive in whatever order the server answers in. A fetch for
+      // the level the user just left can land after the fetch for the level
+      // they are on now, and setOwnChatHistory replaces the whole window --
+      // which would seed the new level with the old level's messages, and send
+      // them to the model as history on the next request.
+      if (
+        (thunkAPI.getState() as RootState).progress.currentLevelId !==
+        requestedLevelId
+      ) {
+        return;
+      }
 
       if (isOwnHistory) {
         thunkAPI.dispatch(setOwnChatHistory(chatHistoryApiResponse));

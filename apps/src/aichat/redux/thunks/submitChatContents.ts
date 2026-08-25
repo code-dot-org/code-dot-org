@@ -93,6 +93,16 @@ export const submitChatContents = createAsyncThunk(
       lessonId,
     };
 
+    // The level this request belongs to. A model response can take tens of
+    // seconds and nothing cancels this thunk when the user navigates, so by
+    // the time it returns the chat window and the context manager may both
+    // belong to another level. Compare the raw id rather than the parsed one
+    // in aichatContext: NaN (no current level) never equals itself.
+    const submittedLevelId = state.progress.currentLevelId;
+    const hasLeftSubmittedLevel = () =>
+      (thunkAPI.getState() as RootState).progress.currentLevelId !==
+      submittedLevelId;
+
     // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
     let chatMessageText = text;
     let chatMessageDisplayText;
@@ -219,15 +229,30 @@ export const submitChatContents = createAsyncThunk(
         newUserMessage,
         dispatch,
         state.progress.viewAsUserId,
+        aichatContext,
+        hasLeftSubmittedLevel(),
         metricDimensions
       );
       return;
     }
 
+    const leftSubmittedLevel = hasLeftSubmittedLevel();
+    if (leftSubmittedLevel) {
+      // Lets us see how often this happens in production.
+      incrementCounter(
+        'Aichat.ChatCompletionAfterLevelChange',
+        metricDimensions
+      );
+    }
+
     // Send a report that the user has started the aichat level after successfully sending
     // a chat message and then receiving a response from the chatbot.
     // A teacher will view that the level is now in progress.
-    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
+    // Skipped if the user has moved on, since the report is for whichever
+    // level is current and would mark the wrong one started.
+    if (!leftSubmittedLevel) {
+      dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
+    }
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
         // jsonSchemaResponseCallback only applies to successful model
@@ -248,22 +273,33 @@ export const submitChatContents = createAsyncThunk(
             console.error('Failed to parse structured chat response', err);
           }
         }
-        dispatch(addChatEvent(message));
+        if (leftSubmittedLevel) {
+          // The chat window belongs to another level now. Record the response
+          // against the level it was requested on -- addChatEvent would both
+          // show it here and log it against the level now open.
+          logChatEvent(message, state.progress.viewAsUserId, aichatContext);
+        } else {
+          dispatch(addChatEvent(message));
+        }
       }
       if (message.role === Role.USER) {
-        dispatch(
-          updateChatMessageStatus({
-            updateId: newUserMessage.updateId,
-            status: message.status,
-          })
-        );
-        dispatch(
-          updateRequestId({
-            updateId: newUserMessage.updateId,
-            requestId: message.requestId,
-          })
-        );
-        logChatEvent(message, state.progress.viewAsUserId);
+        if (!leftSubmittedLevel) {
+          // These find the pending message by updateId in the current chat
+          // window, which no longer holds it after a level change.
+          dispatch(
+            updateChatMessageStatus({
+              updateId: newUserMessage.updateId,
+              status: message.status,
+            })
+          );
+          dispatch(
+            updateRequestId({
+              updateId: newUserMessage.updateId,
+              requestId: message.requestId,
+            })
+          );
+        }
+        logChatEvent(message, state.progress.viewAsUserId, aichatContext);
       }
     });
   }
@@ -274,6 +310,8 @@ async function handleChatCompletionError(
   newUserMessage: PendingChatMessage & {updateId: string},
   dispatch: AppDispatch,
   viewAsUserId: number | null,
+  aichatContext: AichatContext,
+  leftSubmittedLevel: boolean,
   dimensions: MetricDimension[] = []
 ) {
   // Skip log report for expected client-side conditions (403, DevTools block).
@@ -286,13 +324,26 @@ async function handleChatCompletionError(
       .logError('Error in aichat completion request', error as Error);
   }
 
+  logChatEvent(
+    {...newUserMessage, status: Status.ERROR},
+    viewAsUserId,
+    aichatContext
+  );
+
+  if (leftSubmittedLevel) {
+    // The failure belongs to the level the user has left. It is recorded
+    // there, above; putting a notification in the chat window they are
+    // looking at now would attribute it to the wrong level.
+    incrementCounter('Aichat.ChatCompletionErrorAfterLevelChange', dimensions);
+    return;
+  }
+
   dispatch(
     updateChatMessageStatus({
       updateId: newUserMessage.updateId,
       status: Status.ERROR,
     })
   );
-  logChatEvent({...newUserMessage, status: Status.ERROR}, viewAsUserId);
 
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.
