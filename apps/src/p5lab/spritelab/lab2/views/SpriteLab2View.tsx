@@ -47,6 +47,8 @@ import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
 import {useGuideSteps} from '../guideSteps';
 import {
+  removeImageReferences,
+  removeImageReferencesOnWorkspace,
   renameImageReferences,
   renameImageReferencesOnWorkspace,
 } from '../imageReferences';
@@ -1088,6 +1090,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch, updateSources, scheduleRun]
   );
 
+  // An image was deleted: every reference to it goes too — blocks in all
+  // scenes fall back to another image, World cells placing it are cleared,
+  // the live workspace follows — so the program never asks for a costume
+  // that no longer exists.
+  const handleDeleteImage = useCallback(
+    (name: string) => {
+      updateSources(prev => removeImageReferences(prev, name));
+      removeImageReferencesOnWorkspace(Blockly.getMainWorkspace(), name);
+      refreshAnimationDropdownThumbnails();
+      scheduleRun();
+    },
+    [updateSources, scheduleRun]
+  );
+
   // A user edit: the workspace already displays this content; persist it
   // and refresh the preview.
   const handleWorkspaceChange = useCallback(
@@ -1333,6 +1349,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <GenerateImagePane
                 uploadImage={uploadImage}
                 onRenameImage={handleRenameImage}
+                onDeleteImage={handleDeleteImage}
                 lockedImageType={levelProperties.lockedImageType}
               />
             </div>
