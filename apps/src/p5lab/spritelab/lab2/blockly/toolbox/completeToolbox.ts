@@ -6,6 +6,8 @@ import {
 
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
+import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 
 import {ToolboxInfo} from './types';
 
@@ -15,6 +17,8 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_makePlatformPlayer',
     'spritelab2_makePlatformBlocks',
     'spritelab2_makeSpriteAtGrid',
+    'spritelab2_setAsPlatformPlayer',
+    THE_PLAYER_BLOCK_TYPE,
   ],
   Behaviors: [
     'spritelab2_movingLeft',
@@ -22,7 +26,13 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_patrollingLeftRight',
     'spritelab2_patrollingOnBlocks',
   ],
-  'Game Design': [GO_TO_SCENE_BLOCK_TYPE, GO_TO_EXTERNAL_SCENE_BLOCK_TYPE],
+  'Game Design': [
+    GO_TO_SCENE_BLOCK_TYPE,
+    GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
+    RESTART_SCENE_BLOCK_TYPE,
+    'spritelab2_setPlatformGravity',
+    'spritelab2_setCameraZoom',
+  ],
 };
 
 // Blocks registered outside the DB block pool (Blockly core, blocksCommon,

@@ -99,18 +99,3 @@
     background: var(--background-neutral-tertiary);
   }
 }
-
-// Beyond the scene's top-left corner (world=large): authorable, not yet run.
-.worldCellOutside {
-  background: var(--background-neutral-secondary);
-
-  img {
-    opacity: 0.55;
-  }
-}
-
-.worldHint {
-  margin-top: 10px;
-  color: var(--text-neutral-secondary);
-  font-size: 13px;
-}
