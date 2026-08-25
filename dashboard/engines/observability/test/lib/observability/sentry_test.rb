@@ -14,6 +14,48 @@ describe Observability::Sentry do
     CDO.stubs(:unit_test).returns(false)
   end
 
+  describe '.setup_standalone' do
+    it 'returns without initializing when Sentry is disabled' do
+      Sentry.expects(:init).never
+
+      _(Observability::Sentry.setup_standalone).must_be_nil
+    end
+
+    describe 'when enabled' do
+      before do
+        CDO.stubs(:enable_sentry).returns(true)
+        CDO.stubs(:dashboard_sentry_dsn).returns('https://key@sentry.example.com/1')
+        CDO.stubs(:rack_env).returns(:production)
+      end
+
+      it 'does not initialize when dashboard_sentry_dsn is blank' do
+        CDO.stubs(:dashboard_sentry_dsn).returns(nil)
+        Sentry.expects(:init).never
+
+        Observability::Sentry.setup_standalone
+      end
+
+      it 'does not reinitialize an already-initialized client' do
+        Sentry.stubs(:initialized?).returns(true)
+        Sentry.expects(:init).never
+
+        Observability::Sentry.setup_standalone
+      end
+
+      it 'initializes a synchronous client tagged with the deployment environment' do
+        Sentry.stubs(:initialized?).returns(false)
+        mock_config = stub_everything('sentry_config')
+        mock_config.expects(:dsn=).with('https://key@sentry.example.com/1')
+        mock_config.expects(:send_default_pii=).with(false)
+        mock_config.expects(:environment=).with('production')
+        mock_config.expects(:background_worker_threads=).with(0)
+        Sentry.expects(:init).yields(mock_config)
+
+        Observability::Sentry.setup_standalone
+      end
+    end
+  end
+
   describe '.setup' do
     describe 'when CDO.enable_sentry is false' do
       it 'returns without initializing Sentry' do

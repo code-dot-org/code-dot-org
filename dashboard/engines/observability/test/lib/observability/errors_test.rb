@@ -71,6 +71,20 @@ describe Observability::Errors do
       _(Observability::Errors.report(exception)).must_be_nil
     end
 
+    describe 'when Sentry is enabled but the gem is not loaded' do
+      it 'attempts the standalone setup' do
+        Observability::Sentry.stubs(:enabled?).returns(true)
+        Observability::Sentry.expects(:setup_standalone)
+        hidden = Object.send(:remove_const, :Sentry)
+
+        begin
+          _(Observability::Errors.report(exception)).must_be_nil
+        ensure
+          Object.const_set(:Sentry, hidden)
+        end
+      end
+    end
+
     describe 'when Sentry is enabled' do
       before {Observability::Sentry.stubs(:enabled?).returns(true)}
 

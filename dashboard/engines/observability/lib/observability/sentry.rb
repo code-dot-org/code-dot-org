@@ -36,6 +36,28 @@ module Observability
       end
     end
 
+    # Initializes Sentry for processes the Rails engine never boots (root lib/,
+    # rake tasks, standalone scripts). Sends synchronously: a short-lived
+    # process has no reliable exit point to drain a background worker from.
+    def self.setup_standalone
+      return unless enabled?
+      # Not .blank? — ActiveSupport is not loaded in every standalone process.
+      return if CDO.dashboard_sentry_dsn.to_s.empty?
+
+      require 'sentry-ruby'
+      return if ::Sentry.initialized?
+
+      ::Sentry.init do |config|
+        config.dsn = CDO.dashboard_sentry_dsn
+        # Explicitly disable PII collection per privacy policy, as in setup.
+        config.send_default_pii = false
+        # There is no Rails.env here; tag events from the deployment config so
+        # production cron errors do not file under "development".
+        config.environment = CDO.rack_env.to_s
+        config.background_worker_threads = 0
+      end
+    end
+
     # Sets the user_id in the Sentry context. Intended to be called from a Warden after_fetch hook.
     def self.set_user_id(id)
       ::Sentry.set_user(id:)
