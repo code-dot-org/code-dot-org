@@ -57,8 +57,8 @@ const NECK_WIDTH = 30;
 
 // The four keys of one half of a side-view walk cycle for the front and
 // back leg; the second half swaps which leg is in front. Arm swings are
-// drawn larger than life: a first run kept the base drawing's clasped hands
-// through a walk whose figures swung only modestly.
+// drawn well past life size, elbows bent: two runs kept the arms hanging
+// while the legs followed the figure, so the arms have to shout.
 const WALK_HALF: Array<{
   front: Limb;
   back: Limb;
@@ -71,8 +71,8 @@ const WALK_HALF: Array<{
   {
     front: {upper: 28, lower: 28, foot: 0},
     back: {upper: -28, lower: -6, foot: 60},
-    frontArm: {upper: -38, lower: -34},
-    backArm: {upper: 38, lower: 70},
+    frontArm: {upper: -58, lower: -44},
+    backArm: {upper: 58, lower: 100},
     hipDrop: 4,
     lean: 4,
   },
@@ -80,8 +80,8 @@ const WALK_HALF: Array<{
   {
     front: {upper: 12, lower: -6, foot: 0},
     back: {upper: -24, lower: -42, foot: 70},
-    frontArm: {upper: -20, lower: -18},
-    backArm: {upper: 20, lower: 48},
+    frontArm: {upper: -36, lower: -28},
+    backArm: {upper: 36, lower: 74},
     hipDrop: 10,
     lean: 5,
   },
@@ -89,8 +89,8 @@ const WALK_HALF: Array<{
   {
     front: {upper: 0, lower: 0, foot: 0},
     back: {upper: 24, lower: -16, foot: 60},
-    frontArm: {upper: 4, lower: 10},
-    backArm: {upper: -4, lower: -10},
+    frontArm: {upper: 12, lower: 30},
+    backArm: {upper: -12, lower: -18},
     hipDrop: 2,
     lean: 3,
   },
@@ -98,8 +98,8 @@ const WALK_HALF: Array<{
   {
     front: {upper: -22, lower: -22, foot: 70},
     back: {upper: 32, lower: 8, foot: -10},
-    frontArm: {upper: 30, lower: 60},
-    backArm: {upper: -30, lower: -28},
+    frontArm: {upper: 48, lower: 90},
+    backArm: {upper: -48, lower: -40},
     hipDrop: -6,
     lean: 5,
   },

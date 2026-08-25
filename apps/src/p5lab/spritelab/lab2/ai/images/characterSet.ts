@@ -48,7 +48,7 @@ export interface FrameReference {
   mirrored: boolean;
 }
 
-/** One frame to ask for. */
+/** One picture to ask for: the design plate, or a frame of the sheet. */
 export interface FramePlan {
   pose: CharacterPose;
   facing: CharacterFacing;
@@ -60,30 +60,44 @@ export interface FramePlan {
    * cycle built frame-from-frame came back as near-identical drawings.
    */
   references: FrameReference[];
-  /**
-   * Attach the stick figure for this pose (poseFigures.ts) as the last
-   * reference. Every frame but the base, which sets the design and needs
-   * no pose beyond "standing".
-   */
+  /** Attach the figure for this pose (poseFigures.ts) as the last reference. */
   poseFigure: boolean;
+  /**
+   * The design plate: the character drawn once, arms out in an animator's
+   * neutral, as the reference every frame is drawn from. Not a sheet frame.
+   * Every frame — the standing ones too — is drawn to a figure, so no pose
+   * in the plate can be copied by mistake: a plate with its arms at its
+   * sides kept them there through a whole walk.
+   */
+  isBase: boolean;
 }
 
 /**
- * Every frame of a set in generation order — which is also its order in
- * the sheet: each generated facing's poses in turn (right first, so a
- * left-facing frame, when one is generated, can be drawn from its
- * right-facing twin). Index 0 is the base drawing: standing, facing right.
- * Each pose's frames are contiguous and in frame order.
+ * Every picture of a set in generation order: the design plate first, then
+ * each generated facing's poses in turn (right first, so a left-facing
+ * frame, when one is generated, can be drawn from its right-facing twin).
+ * The frames after the plate are the sheet, in order; each pose's frames
+ * are contiguous and in frame order.
  */
 export function planCharacterFrames(): FramePlan[] {
-  const plan: FramePlan[] = [];
+  const plan: FramePlan[] = [
+    {
+      pose: 'stand',
+      facing: 'right',
+      frame: 0,
+      references: [],
+      poseFigure: false,
+      isBase: true,
+    },
+  ];
   const indexOf = (
     pose: CharacterPose,
     facing: CharacterFacing,
     frame: number
   ) =>
     plan.findIndex(
-      p => p.pose === pose && p.facing === facing && p.frame === frame
+      p =>
+        !p.isBase && p.pose === pose && p.facing === facing && p.frame === frame
     );
   GENERATED_FACINGS.forEach(facing => {
     CHARACTER_POSES.forEach(({pose, frameCount}) => {
@@ -95,9 +109,7 @@ export function planCharacterFrames(): FramePlan[] {
           }
         };
         const flip = facing === 'left';
-        if (plan.length > 0) {
-          add(0, flip);
-        }
+        add(0, flip);
         if (flip) {
           add(indexOf(pose, 'right', frame), true);
         }
@@ -106,7 +118,8 @@ export function planCharacterFrames(): FramePlan[] {
           facing,
           frame,
           references,
-          poseFigure: plan.length > 0,
+          poseFigure: true,
+          isBase: false,
         });
       }
     });
@@ -114,13 +127,18 @@ export function planCharacterFrames(): FramePlan[] {
   return plan;
 }
 
-/** How many pictures a set costs; the dialog quotes it. */
+/** How many pictures a set costs, plate included; the dialog quotes it. */
 export const CHARACTER_SET_FRAME_COUNT = planCharacterFrames().length;
 
-/** The pose ranges of a sheet laid out in plan order. */
+/** The frames of the plan that make up the sheet, in sheet order. */
+export function sheetFrames(plan: FramePlan[]): FramePlan[] {
+  return plan.filter(step => !step.isBase);
+}
+
+/** The pose ranges of a sheet laid out in plan order (plate excluded). */
 export function buildPoses(plan: FramePlan[]): AnimationPoses {
   const poses: AnimationPoses = {};
-  plan.forEach((step, index) => {
+  sheetFrames(plan).forEach((step, index) => {
     const key = poseKey(step.pose, step.facing);
     const spec = CHARACTER_POSES.find(p => p.pose === step.pose)!;
     const range = poses[key];
@@ -139,10 +157,10 @@ export function buildPoses(plan: FramePlan[]): AnimationPoses {
 // with the legs swapped — spelled out limb by limb, because a looser
 // description came back as copies of the standing pose.
 const WALK_HALF_CYCLE = (front: string, back: string) => [
-  `walking in side view, at the contact point of a long stride: the ${front} leg stretched far forward with its heel on the ground, the ${back} leg stretched far behind with only its toe down, the legs wide apart; the ${back} arm swung forward and the ${front} arm swung back`,
-  `walking in side view, just after contact: the ${front} foot flat on the ground taking the weight, the ${front} knee bent, the ${back} foot lifting off behind, the body at its lowest point of the stride`,
-  `walking in side view, at the passing point: the ${front} leg planted straight under the body, the ${back} leg lifted and swinging forward past it with a bent knee, the feet close together`,
-  `walking in side view, just before the next contact: the ${front} leg straight and pushing off from the toe behind the body, the ${back} leg swinging forward and reaching out in front, the body at its highest point of the stride`,
+  `walking in side view, at the contact point of a long stride: the ${front} leg stretched far forward with its heel on the ground, the ${back} leg stretched far behind with only its toe down, the legs wide apart. The arm on the ${back} side swings far FORWARD, elbow bent, hand out in front of the hip; the arm on the ${front} side swings far BACK behind the body`,
+  `walking in side view, just after contact: the ${front} foot flat on the ground taking the weight, the ${front} knee bent, the ${back} foot lifting off behind, the body at its lowest point of the stride. The arm on the ${back} side is forward of the body, the arm on the ${front} side behind it, both swinging`,
+  `walking in side view, at the passing point: the ${front} leg planted straight under the body, the ${back} leg lifted and swinging forward past it with a bent knee, the feet close together. Both arms pass the sides of the body mid-swing, neither hanging still`,
+  `walking in side view, just before the next contact: the ${front} leg straight and pushing off from the toe behind the body, the ${back} leg swinging forward and reaching out in front, the body at its highest point of the stride. The arm on the ${front} side swings FORWARD, elbow bent; the arm on the ${back} side swings BACK`,
 ];
 export const POSE_FRAME_DESCRIPTIONS: Record<CharacterPose, string[]> = {
   stand: [
@@ -171,16 +189,20 @@ function keyClause(key: KeyColor): string {
   return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, and no shadow under the character. Only the character on that flat ${key.name}.`;
 }
 
-/** The prompt for the base drawing: the character standing, facing right. */
+/**
+ * The prompt for the design plate: the whole character, facing right, arms
+ * out in an animator's neutral so no arm pose in it can be inherited.
+ */
 export function basePrompt(
   prompt: string,
   style: ImageStyle,
   key: KeyColor
 ): string {
   return (
-    `${prompt}. Show the whole character, ${POSE_FRAME_DESCRIPTIONS.stand[0]}. ` +
-    'The character faces right: its face and body point toward the right ' +
-    'side of the image. Feet near the bottom of the image, nothing cut off. ' +
+    `${prompt}. Show the whole character standing, facing right: its face ` +
+    'and body point toward the right side of the image. Both arms are held ' +
+    'straight out to the sides at shoulder height, slightly bent, hands open ' +
+    'and empty. Feet near the bottom of the image, nothing cut off. ' +
     `${ONLY_THIS_CHARACTER} ${styleClause(style)} ${keyClause(key)}`
   );
 }
@@ -201,7 +223,7 @@ export function framePrompt(
       ? 'The first provided image shows this character.'
       : `The first ${plan.references.length} provided images show this character.`;
   const figure = plan.poseFigure
-    ? ' The last provided image is a stick figure showing the exact pose to draw: match its body position precisely — where each leg, foot, arm and the torso are, and how far apart the feet stand — while drawing the character with its own design, not the stick figure.'
+    ? ' The last provided image is a silhouette figure showing the exact pose to draw: match its body position precisely — where each leg, foot, arm and the torso are, and how far apart the feet stand — while drawing the character with its own design, not the figure. The ARMS take their position from the figure, not from the character image: the character image shows only what the character looks like, never how it stands.'
     : '';
   return (
     `The character: ${prompt}. ${characterImages}${figure} Draw the same ` +
@@ -467,6 +489,9 @@ const POSE_LABELS: Record<CharacterPose, string> = {
 };
 
 export function frameLabel(plan: FramePlan): string {
+  if (plan.isBase) {
+    return 'the character';
+  }
   const {frameCount} = CHARACTER_POSES.find(p => p.pose === plan.pose)!;
   return `${POSE_LABELS[plan.pose]} ${plan.facing}, frame ${
     plan.frame + 1
@@ -504,10 +529,9 @@ export async function generateCharacterSet(
       preview,
       previewPose,
     });
-    const text =
-      i === 0
-        ? basePrompt(prompt, options.style, key)
-        : framePrompt(prompt, step, options.style, key);
+    const text = step.isBase
+      ? basePrompt(prompt, options.style, key)
+      : framePrompt(prompt, step, options.style, key);
     const references = await Promise.all(
       step.references.map(({index, mirrored}) => {
         const uri = bytesToDataURI(
@@ -534,7 +558,9 @@ export async function generateCharacterSet(
     const shown = framePreview(frame);
     if (shown) {
       preview = shown;
-      previewPose = {pose: step.pose, facing: step.facing, frame: step.frame};
+      previewPose = step.isBase
+        ? undefined
+        : {pose: step.pose, facing: step.facing, frame: step.frame};
     }
   }
   onProgress?.({
@@ -545,15 +571,17 @@ export async function generateCharacterSet(
     previewPose,
   });
 
-  const cell = cellSize(keyed.map(frame => frame.bounds));
+  // The plate is a reference only; the sheet is the frames after it.
+  const frames = keyed.filter((_, i) => !plan[i].isBase);
+  const cell = cellSize(frames.map(frame => frame.bounds));
   let maxPixels = MAX_SHEET_PIXELS;
-  let layout = sheetLayout(keyed.length, cell, maxPixels);
-  let blob = await composeSheet(keyed, layout);
+  let layout = sheetLayout(frames.length, cell, maxPixels);
+  let blob = await composeSheet(frames, layout);
   // A very detailed sheet can still encode too large; re-lay it smaller.
   for (let attempt = 0; blob.size > MAX_SHEET_BYTES && attempt < 3; attempt++) {
     maxPixels *= 0.6;
-    layout = sheetLayout(keyed.length, cell, maxPixels);
-    blob = await composeSheet(keyed, layout);
+    layout = sheetLayout(frames.length, cell, maxPixels);
+    blob = await composeSheet(frames, layout);
   }
 
   const generation: ImageGenerationMetadata = {
@@ -572,7 +600,7 @@ export async function generateCharacterSet(
     generation,
     frames: {
       frameSize: layout.cell,
-      frameCount: keyed.length,
+      frameCount: frames.length,
       // Playback when nothing drives the frame (the engine does, by pose).
       frameDelay: CHARACTER_POSES[0].frameDelay,
       looping: true,

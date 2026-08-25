@@ -1,6 +1,7 @@
 import {
   basePrompt,
   buildPoses,
+  sheetFrames,
   cellSize,
   CHARACTER_SET_FRAME_COUNT,
   framePrompt,
@@ -26,22 +27,26 @@ describe('SpriteLab2 characterSet', () => {
     });
   });
 
-  it('plans every frame of every pose for each generated facing, the base first', () => {
+  it('plans the design plate, then every frame of every pose for each generated facing', () => {
     const perFacing = CHARACTER_POSES.reduce((n, p) => n + p.frameCount, 0);
-    expect(plan).toHaveLength(perFacing * GENERATED_FACINGS.length);
+    expect(plan).toHaveLength(1 + perFacing * GENERATED_FACINGS.length);
     expect(CHARACTER_SET_FRAME_COUNT).toBe(plan.length);
     expect(plan[0]).toMatchObject({
-      pose: 'stand',
-      facing: 'right',
-      frame: 0,
+      isBase: true,
       references: [],
       poseFigure: false,
     });
-    plan.slice(1).forEach(step => expect(step.poseFigure).toBe(true));
-    const keys = new Set(
-      plan.map(p => `${poseKey(p.pose, p.facing)}-${p.frame}`)
+    plan.slice(1).forEach(step => {
+      expect(step.isBase).toBe(false);
+      expect(step.poseFigure).toBe(true);
+    });
+    expect(sheetFrames(plan)).toHaveLength(
+      perFacing * GENERATED_FACINGS.length
     );
-    expect(keys.size).toBe(plan.length);
+    const keys = new Set(
+      sheetFrames(plan).map(p => `${poseKey(p.pose, p.facing)}-${p.frame}`)
+    );
+    expect(keys.size).toBe(sheetFrames(plan).length);
   });
 
   it('references only the base, and a mirrored twin when a left frame is generated', () => {
@@ -66,11 +71,12 @@ describe('SpriteLab2 characterSet', () => {
     const poses = buildPoses(plan);
     expect(poses['stand-right']).toEqual({start: 0, count: 2, frameDelay: 15});
     expect(poses['walk-right']).toEqual({start: 2, count: 8, frameDelay: 3});
+    const frames = sheetFrames(plan);
     const total = Object.values(poses).reduce((n, r) => n + r!.count, 0);
-    expect(total).toBe(plan.length);
+    expect(total).toBe(frames.length);
     Object.entries(poses).forEach(([key, range]) => {
       for (let f = 0; f < range!.count; f++) {
-        const step = plan[range!.start + f];
+        const step = frames[range!.start + f];
         expect(poseKey(step.pose, step.facing)).toBe(key);
         expect(step.frame).toBe(f);
       }
@@ -81,7 +87,8 @@ describe('SpriteLab2 characterSet', () => {
     const key = KEY_COLORS.magenta;
     const base = basePrompt('a robot', 'smooth', key);
     expect(base).toContain('a robot');
-    expect(base).toContain('faces right');
+    expect(base).toContain('right side of the image');
+    expect(base).toContain('shoulder height');
     expect(base).toContain('#FF00FF');
     expect(base).toContain('no shadow');
     expect(base).toContain('no other creatures');
@@ -89,7 +96,8 @@ describe('SpriteLab2 characterSet', () => {
     const frame = framePrompt('a robot', step, 'pixel', KEY_COLORS.green);
     expect(frame).toContain('a robot');
     expect(frame).toContain('faces right');
-    expect(frame).toContain('stick figure');
+    expect(frame).toContain('silhouette figure');
+    expect(frame).toContain('ARMS');
     expect(frame).toContain(POSE_FRAME_DESCRIPTIONS.jump[0]);
     expect(frame).toContain('pixel art');
     expect(frame).toContain('#00FF00');
