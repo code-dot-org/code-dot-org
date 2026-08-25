@@ -28,17 +28,33 @@ const mockGetUserChatHistory = getUserChatHistory as jest.MockedFunction<
 
 const SET_LEVEL = 'test/setCurrentLevelId';
 
+interface TestProgressState {
+  currentLevelId?: string;
+  scriptId: number;
+  viewAsUserId: number | null;
+}
+
+const INITIAL_PROGRESS: TestProgressState = {
+  currentLevelId: '1',
+  scriptId: 2,
+  viewAsUserId: null,
+};
+
+// Lets a test move to another level mid-request. configureStore contextually
+// types the reducer's state parameter, so it needs the annotation.
+const progressReducer = (
+  state: TestProgressState = INITIAL_PROGRESS,
+  action: {type: string; payload?: string}
+): TestProgressState =>
+  action.type === SET_LEVEL
+    ? {...state, currentLevelId: action.payload}
+    : state;
+
 const makeStore = () =>
   configureStore({
     reducer: {
       aichat: aichatReducer,
-      progress: (
-        state = {currentLevelId: '1', scriptId: 2, viewAsUserId: null},
-        action: {type: string; payload?: string}
-      ) =>
-        action.type === SET_LEVEL
-          ? {...state, currentLevelId: action.payload}
-          : state,
+      progress: progressReducer,
     },
   });
 
