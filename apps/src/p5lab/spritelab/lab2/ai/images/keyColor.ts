@@ -28,7 +28,7 @@ export const KEY_COLORS: Record<'magenta' | 'green', KeyColor> = {
 const MAGENTA_WORDS =
   /\b(pink|magenta|fuchsia|purple|violet|lavender|lilac|orchid|rose|mauve|plum|unicorn|flamingo|princess|fairy|axolotl|jellyfish|blossom|cherry)\b/gi;
 const GREEN_WORDS =
-  /\b(green|frog|toad|lizard|turtle|tortoise|dragon|dinosaur|dino|crocodile|alligator|snake|zombie|alien|goblin|orc|ogre|troll|cactus|leaf|leaves|grass|emerald|jade|lime|olive|mint|slime|creeper|plant|tree|broccoli|peas?|caterpillar|grasshopper|chameleon|iguana|gecko|hulk|shrek|elf|elves|pickle|kiwi|moss|swamp|forest)\b/gi;
+  /\b(green|frog|toad|lizard|turtle|tortoise|dragon|dinosaur|dino|crocodile|alligator|snake|zombie|alien|goblin|orc|ogre|troll|cactus|leaf|leaves|grass|emerald|jade|lime|olive|mint|slime|plant|tree|broccoli|peas?|caterpillar|grasshopper|chameleon|iguana|gecko|elf|elves|pickle|kiwi|moss|swamp|forest)\b/gi;
 
 /**
  * The key colour least likely to appear on the character the prompt
