@@ -166,21 +166,22 @@ function keySignature(
   return full - none;
 }
 
-// A pixel at or above this signature is background outright; one in the
-// band below it, next to a cleared pixel, is an edge blend of key and
-// character (or a darker patch of a textured background, reached from its
-// brighter neighbours) and goes too (sharp) or fades by its signature
-// (soft). The band's floor keeps a saturated purple or pink costume edge —
-// signature 60 for a robe at (120, 60, 180) — out of reach.
+// A pixel at or above this signature is background outright. Pixels in the
+// band below it that the background can reach — flooding out from the
+// outright pixels through the band — are background too: the darker
+// patches of a textured backdrop, and the anti-aliased edge where key and
+// character blend. The band's floor keeps a saturated purple costume out
+// of reach (a robe at (120, 60, 180) scores 60).
 const KEY_SIGNATURE = 150;
-const KEY_EDGE_SIGNATURE = 80;
+const KEY_EDGE_SIGNATURE = 65;
 
 /**
  * Key out a KNOWN colour everywhere in RGBA data — enclosed gaps included,
- * with no dependence on what the corners hold. Two passes: pixels that
- * carry the key's signature go transparent; then pixels touching a
- * transparent one and within the edge band go too (sharp) or fade by their
- * signature (soft), which takes the anti-aliased fringe with the background.
+ * with no dependence on what the corners hold. Pixels carrying the key's
+ * signature go transparent; the band below floods from them, so a shaded
+ * or textured backdrop dissolves completely; band pixels that touch the
+ * character are its edge and go too (sharp) or fade by their signature and
+ * lose the key's tint (soft); stray specks the flood missed are cleared.
  */
 export function keyOutColor(
   data: Uint8ClampedArray,
@@ -190,44 +191,59 @@ export function keyOutColor(
   options: MatteOptions = {}
 ): void {
   const total = width * height;
-  const cleared = new Uint8Array(total);
+  // 0 = character, 1 = cleared outright, 2 = band reached by the flood.
+  const kind = new Uint8Array(total);
+  const signature = new Uint8ClampedArray(total);
+  const queue: number[] = [];
   for (let p = 0; p < total; p++) {
     if (data[p * 4 + 3] === 0) {
-      cleared[p] = 1;
-    } else if (keySignature(data, p * 4, key) >= KEY_SIGNATURE) {
+      kind[p] = 1;
+      queue.push(p);
+      continue;
+    }
+    signature[p] = keySignature(data, p * 4, key);
+    if (signature[p] >= KEY_SIGNATURE) {
       data[p * 4 + 3] = 0;
-      cleared[p] = 1;
+      kind[p] = 1;
+      queue.push(p);
     }
   }
-  const touchesCleared = (p: number) => {
+  const neighbours = (p: number, visit: (q: number) => void) => {
     const x = p % width;
     const y = (p - x) / width;
     for (let dy = -1; dy <= 1; dy++) {
       for (let dx = -1; dx <= 1; dx++) {
         const nx = x + dx;
         const ny = y + dy;
-        if (nx >= 0 && ny >= 0 && nx < width && ny < height) {
-          if (cleared[ny * width + nx]) {
-            return true;
-          }
+        if ((dx || dy) && nx >= 0 && ny >= 0 && nx < width && ny < height) {
+          visit(ny * width + nx);
         }
       }
     }
-    return false;
   };
+  // Flood the band from the cleared pixels.
+  for (let head = 0; head < queue.length; head++) {
+    neighbours(queue[head], q => {
+      if (kind[q] === 0 && signature[q] >= KEY_EDGE_SIGNATURE) {
+        kind[q] = 2;
+        queue.push(q);
+      }
+    });
+  }
   for (let p = 0; p < total; p++) {
-    if (cleared[p]) {
+    if (kind[p] !== 2) {
       continue;
     }
-    const signature = keySignature(data, p * 4, key);
-    if (signature < KEY_EDGE_SIGNATURE || !touchesCleared(p)) {
-      continue;
-    }
-    if (options.soft) {
-      // The more of the key a pixel carries, the more of it goes.
+    let touchesCharacter = false;
+    neighbours(p, q => {
+      if (kind[q] === 0) {
+        touchesCharacter = true;
+      }
+    });
+    if (options.soft && touchesCharacter) {
       const alpha = Math.min(
         1,
-        (KEY_SIGNATURE - signature) / (KEY_SIGNATURE - KEY_EDGE_SIGNATURE)
+        (KEY_SIGNATURE - signature[p]) / (KEY_SIGNATURE - KEY_EDGE_SIGNATURE)
       );
       // Despill: an edge pixel is the character's colour blended with the
       // key by (1 - alpha); take the key's share back out, or the fringe
@@ -241,6 +257,23 @@ export function keyOutColor(
       }
       data[p * 4 + 3] = Math.round(data[p * 4 + 3] * alpha);
     } else {
+      data[p * 4 + 3] = 0;
+    }
+  }
+  // Specks: a lone pixel the background surrounds is background too.
+  for (let p = 0; p < total; p++) {
+    if (kind[p] !== 0 || data[p * 4 + 3] === 0) {
+      continue;
+    }
+    let clear = 0;
+    let all = 0;
+    neighbours(p, q => {
+      all++;
+      if (data[q * 4 + 3] === 0) {
+        clear++;
+      }
+    });
+    if (all === 8 && clear >= 7) {
       data[p * 4 + 3] = 0;
     }
   }
