@@ -756,13 +756,21 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
   end
 
+  # Needs a DSL level whose file on disk is encrypted, i.e. whose second line is
+  # `encrypted '...'`. Any such .external file will do; this one is current
+  # curriculum (web-development-2026) rather than a test fixture, because no
+  # test-only level is encrypted any more. If it is ever stored as plaintext,
+  # repoint this at another encrypted DSL level rather than deleting the test --
+  # it covers DSLDefined.decrypt_dsl_text_if_necessary returning the ciphertext
+  # untouched instead of raising, which is what keeps the level editor usable in
+  # an environment holding the wrong key.
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
-    level_path = "#{Rails.root}/config/scripts/test_external_markdown.external"
+    level_path = "#{Rails.root}/config/scripts/social_sleuth_2018_2019_pilot_2026.external"
     contents = File.read(level_path)
     data, _ = External.parse(contents, level_path)
     External.setup data
     CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
-    level = Level.find_by_name 'Test External Markdown'
+    level = Level.find_by_name 'Social Sleuth_2018_2019_pilot_2026'
     get :edit, params: {id: level.id}
 
     assert_equal level_path, assigns(:level).filename
