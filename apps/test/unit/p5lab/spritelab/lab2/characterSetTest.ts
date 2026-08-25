@@ -97,7 +97,15 @@ describe('SpriteLab2 characterSet', () => {
     expect(frame).toContain('a robot');
     expect(frame).toContain('faces right');
     expect(frame).toContain('silhouette figure');
-    expect(frame).toContain('ARMS');
+    expect(frame).not.toMatch(/[A-Z]{4,}/);
+    expect(
+      framePrompt(
+        'a robot',
+        plan.find(p => p.pose === 'walk')!,
+        'smooth',
+        KEY_COLORS.green
+      )
+    ).toContain("character's right (nearer the viewer)");
     expect(frame).toContain(POSE_FRAME_DESCRIPTIONS.jump[0]);
     expect(frame).toContain('pixel art');
     expect(frame).toContain('#00FF00');

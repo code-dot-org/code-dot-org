@@ -154,20 +154,33 @@ export function buildPoses(plan: FramePlan[]): AnimationPoses {
 // What each frame shows, per pose, indexed by frame. Lengths match
 // CHARACTER_POSES (checked by the unit tests). The walk is the classic
 // eight-key side-view cycle — contact, down, passing, up, then the same
-// with the legs swapped — spelled out limb by limb, because a looser
-// description came back as copies of the standing pose.
+// with the legs swapped. The words are a plain gloss on the figure, no
+// emphasis on any one limb: a run whose text shouted about the arms got
+// the arms and lost the legs.
 const WALK_HALF_CYCLE = (front: string, back: string) => [
-  `walking in side view, at the contact point of a long stride: the ${front} leg stretched far forward with its heel on the ground, the ${back} leg stretched far behind with only its toe down, the legs wide apart. The arm on the ${back} side swings far FORWARD, elbow bent, hand out in front of the hip; the arm on the ${front} side swings far BACK behind the body`,
-  `walking in side view, just after contact: the ${front} foot flat on the ground taking the weight, the ${front} knee bent, the ${back} foot lifting off behind, the body at its lowest point of the stride. The arm on the ${back} side is forward of the body, the arm on the ${front} side behind it, both swinging`,
-  `walking in side view, at the passing point: the ${front} leg planted straight under the body, the ${back} leg lifted and swinging forward past it with a bent knee, the feet close together. Both arms pass the sides of the body mid-swing, neither hanging still`,
-  `walking in side view, just before the next contact: the ${front} leg straight and pushing off from the toe behind the body, the ${back} leg swinging forward and reaching out in front, the body at its highest point of the stride. The arm on the ${front} side swings FORWARD, elbow bent; the arm on the ${back} side swings BACK`,
+  `walking in side view, at the contact point of a long stride: the ${front} leg stretched far forward with its heel on the ground, the ${back} leg stretched far behind with only its toe down, the legs wide apart; the ${back} arm swung forward, the ${front} arm swung back`,
+  `walking in side view, just after contact: the ${front} foot flat on the ground taking the weight, the ${front} knee bent, the ${back} foot lifting off behind, the body at its lowest point of the stride; the ${back} arm forward, the ${front} arm back`,
+  `walking in side view, at the passing point: the ${front} leg planted straight under the body, the ${back} leg lifted and swinging forward past it with a bent knee, the feet close together; both arms passing the sides mid-swing`,
+  `walking in side view, just before the next contact: the ${front} leg straight and pushing off from the toe behind the body, the ${back} leg swinging forward and reaching out in front, the body at its highest point of the stride; the ${front} arm swung forward, the ${back} arm swung back`,
 ];
 export const POSE_FRAME_DESCRIPTIONS: Record<CharacterPose, string[]> = {
   stand: [
     'standing still, relaxed, at rest, arms hanging loosely at the sides with the hands empty and apart',
     'standing still in the same spot, mid-breath: the same pose with the chest and shoulders raised very slightly, as the second frame of an idle animation',
   ],
-  walk: [...WALK_HALF_CYCLE('near', 'far'), ...WALK_HALF_CYCLE('far', 'near')],
+  // The character faces right, so its right side is nearer the viewer. Its
+  // own left and right, not ours: "near" and "far" are not words a model
+  // reads reliably.
+  walk: [
+    ...WALK_HALF_CYCLE(
+      "character's right (nearer the viewer)",
+      "character's left (farther from the viewer)"
+    ),
+    ...WALK_HALF_CYCLE(
+      "character's left (farther from the viewer)",
+      "character's right (nearer the viewer)"
+    ),
+  ],
   jump: [
     'jumping: rising through the air, arms up, legs bent and tucked',
     'falling after a jump: arms out for balance, legs reaching down toward a landing',
@@ -223,12 +236,12 @@ export function framePrompt(
       ? 'The first provided image shows this character.'
       : `The first ${plan.references.length} provided images show this character.`;
   const figure = plan.poseFigure
-    ? ' The last provided image is a silhouette figure showing the exact pose to draw: match its body position precisely — where each leg, foot, arm and the torso are, and how far apart the feet stand — while drawing the character with its own design, not the figure. The ARMS take their position from the figure, not from the character image: the character image shows only what the character looks like, never how it stands.'
+    ? ' The last provided image is a silhouette figure in the exact pose to draw. Match its whole body position — legs, feet, arms, torso, and how far apart the feet stand — as closely as the character allows; take the pose only from the figure, and only the appearance from the character image.'
     : '';
   return (
     `The character: ${prompt}. ${characterImages}${figure} Draw the same ` +
     'character — same design, colors, proportions, outfit and art style, the ' +
-    `same scale — in this pose: ${
+    `same scale — in the figure's pose, which is: ${
       POSE_FRAME_DESCRIPTIONS[plan.pose][plan.frame]
     }. ${facingClause(plan.facing)} ${ONLY_THIS_CHARACTER} ${keyClause(
       key
