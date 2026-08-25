@@ -462,15 +462,35 @@ function createWebpackConfig({
   const appsChunkNames = new Set(Object.keys(appsEntries));
 
   const NODE_MODULES_PATTERN = /[\\/]node_modules[\\/]/;
+
+  /**
+   * True when `module` comes from node_modules. Reads the same resource
+   * name that webpack tests when a cacheGroup `test` is a RegExp, so this
+   * function and a RegExp test select the same modules.
+   */
   const isNodeModulesModule = module => {
     const name = module.nameForCondition();
     return !!name && NODE_MODULES_PATTERN.test(name);
   };
 
-  // True when enough entry chunks share `module` that it belongs in the
-  // "code-studio-common(-deps)" chunks: either 2+ CODE_STUDIO_ENTRIES chunks
-  // contain it, or more chunks than appsEntries has members contain it, which
-  // guarantees at least one CODE_STUDIO_ENTRIES chunk is among them.
+  /**
+   * True when enough entry chunks share `module` that the module belongs
+   * in the "code-studio-common(-deps)" chunks. Either condition below is
+   * sufficient:
+   *
+   * 1. Two or more CODE_STUDIO_ENTRIES chunks contain the module. All
+   *    of those pages load the shared chunks, so the module downloads
+   *    once instead of once per page.
+   * 2. The number of chunks that contain the module is larger than the
+   *    number of appsEntries. By pigeonhole, at least one of those
+   *    chunks must then be a CODE_STUDIO_ENTRIES chunk. This arm pulls
+   *    in modules shared between lab pages and code-studio pages, and
+   *    it can never select a module that only lab pages need.
+   *
+   * Chunk membership is read from the chunk graph before any cache
+   * group extracts modules, so both cache groups below see the same
+   * counts.
+   */
   const isCodeStudioSharedModule = (module, {chunkGraph}) => {
     let codeStudioCount = 0;
     let totalCount = 0;
@@ -595,18 +615,22 @@ function createWebpackConfig({
                 },
               },
               // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
-              // "code-studio-common" chunk — except node_modules code, which
-              // goes into the sibling "code-studio-common-deps" chunk. They
-              // are two chunks because CloudFront does not compress files
-              // above 10MB, and one combined chunk crossed that line. Every
-              // page that loads one of these files must load both, or webpack
-              // entry points never execute.
+              // "code-studio-common" chunk. Modules from node_modules go
+              // into the sibling "code-studio-common-deps" chunk instead.
+              // We use two chunks because CloudFront does not compress
+              // files larger than 10MB, and the combined chunk grew past
+              // that limit. Each page must load both files together. An
+              // entry point waits until all of its sibling chunks are
+              // registered, so a missing file leaves the page's entry
+              // points idle with no error.
               //
-              // Each chunk name gets exactly one cache group, with disjoint
-              // tests. When two cache groups emit the same chunk name,
-              // SplitChunksPlugin builds overlapping module sets for them and
-              // fails with "Cache group conflicts with existing chunk" once
-              // another group empties an entry chunk.
+              // Each chunk name has exactly one cache group, and the two
+              // tests do not overlap. This structure is required. When two
+              // cache groups emit the same chunk name, SplitChunksPlugin
+              // builds overlapping module sets for them. The build then
+              // fails with "Cache group conflicts with existing chunk"
+              // after one group removes all of another group's modules
+              // from an entry chunk.
               //
               // With only the first arm of isCodeStudioSharedModule, we end
               // up with many duplicate modules between the "common" and
