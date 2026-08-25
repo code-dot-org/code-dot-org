@@ -68,6 +68,7 @@ describe('SpriteLab2 poseScore', () => {
 
   it('keeps the worst case inside the gateway rate limit', () => {
     expect(POSE_MATCH_THRESHOLD).toBeGreaterThan(0.5);
+    expect(MAX_FRAME_ATTEMPTS).toBeGreaterThanOrEqual(1);
     expect(1 + 12 * MAX_FRAME_ATTEMPTS).toBeLessThan(50);
   });
 });

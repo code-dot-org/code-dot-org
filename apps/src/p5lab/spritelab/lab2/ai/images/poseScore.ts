@@ -102,6 +102,11 @@ export function poseMatch(
 // A frame this close to its figure, in both bands, is taken; below it, the
 // frame is asked for again while attempts remain.
 export const POSE_MATCH_THRESHOLD = 0.7;
-// Pictures asked for per frame at most. Worst case a set is 1 + 12 × 3 = 37
-// pictures, under the gateway's 50 a minute; typical sets run 16–20.
-export const MAX_FRAME_ATTEMPTS = 3;
+// Pictures asked for per frame at most. One, for now: a run at three took
+// 30 pictures and bought nothing, because width in a band cannot tell the
+// far arm from the near one, or a real arm from a third — the model kept
+// offering the same wrong pose in different clothes. The score is still
+// computed and shown; retries return when there is a judge worth retrying
+// for. (At three, the worst case is 1 + 12 × 3 = 37 pictures, under the
+// gateway's 50 a minute.)
+export const MAX_FRAME_ATTEMPTS = 1;
