@@ -198,7 +198,6 @@ class RosterDialog extends React.Component {
 
   // Creates the section and redirects to the edit page
   handleRedirect = () => {
-    this.recordSectionSetupExitEvent(COMPLETED_EVENT);
     const classrooms = this.props.classrooms;
     const courseName =
       classrooms &&
@@ -229,7 +228,13 @@ class RosterDialog extends React.Component {
           `)
           );
         });
-    }).then(newSection => this.redirectToEditSectionPage(newSection.id));
+    }).then(newSection => {
+      // Recorded after the import so the event can carry the new section's id.
+      this.recordSectionSetupExitEvent(COMPLETED_EVENT, {
+        sectionId: newSection.id,
+      });
+      this.redirectToEditSectionPage(newSection.id);
+    });
   };
 
   cancel = () => {
@@ -242,11 +247,12 @@ class RosterDialog extends React.Component {
   };
 
   // valid event names: 'Section Setup Completed', 'Section Setup Cancelled'.
-  recordSectionSetupExitEvent = eventName => {
+  recordSectionSetupExitEvent = (eventName, metadata = {}) => {
     const {rosterProvider} = this.props;
 
     analyticsReporter.sendEvent(eventName, {
       oauthSource: rosterProvider,
+      ...metadata,
     });
   };
 
