@@ -35,21 +35,24 @@ export function recordTurnstileOutcome({
   const result = failed ? 'error' : 'ok';
   const reason = failed ? classifyTurnstileFailure(error) : undefined;
 
-  // `mode` carries the enforcement policy, matching the worker's
-  // turnstile.mode attribute, so a query means the same thing on both sides of
-  // the request. Without it a failure is ambiguous: under `monitor` the
-  // request still succeeds and the number is the measurement the rollout
-  // depends on, while under `enforce` the same failure is a broken request.
+  // Both axes are named for what they are. Neither is called `mode`: the
+  // acquisition mode and the enforcement mode are both legitimately "the
+  // turnstile mode", so the bare word cannot identify either one.
+  //
+  // Enforcement has to be on the series because without it a failure is
+  // ambiguous: under `monitor` the request still succeeds and the count is the
+  // measurement the rollout depends on, while under `enforce` the same failure
+  // is a broken request.
   Observability.metrics.count(OUTCOME_METRIC, 1, {
     acquisition,
-    mode: enforcement,
+    enforcement,
     result,
     ...(reason && {reason}),
   });
 
   Observability.metrics.distribution(DURATION_METRIC, Math.round(durationMs), {
     acquisition,
-    mode: enforcement,
+    enforcement,
     result,
   });
 
@@ -66,7 +69,7 @@ export function recordTurnstileOutcome({
     log('turnstile challenge failed', {
       feature: 'ai-gateway',
       acquisition,
-      mode: enforcement,
+      enforcement,
       reason,
       durationMs: Math.round(durationMs),
       errorName: error instanceof Error ? error.name : typeof error,

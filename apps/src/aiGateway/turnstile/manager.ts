@@ -176,7 +176,7 @@ export class TurnstileManager {
         op: 'ai.turnstile',
         attributes: {
           'turnstile.acquisition': mode,
-          'turnstile.mode': enforcement,
+          'turnstile.enforcement': enforcement,
           feature: 'ai-gateway',
         },
       },
@@ -365,6 +365,12 @@ export class TurnstileManager {
         );
       }
 
+      // Set by error-callback, read only if the deadline passes. Turnstile
+      // retries on its own, so an error here is not yet a verdict -- but if we
+      // do end up timing out, it tells us Cloudflare was actively failing
+      // rather than silent.
+      let lastErrorCode: string | undefined;
+
       const timeout = setTimeout(() => {
         if (settled) {
           console.log(
@@ -388,10 +394,15 @@ export class TurnstileManager {
             this.widgetId = null;
           }
           reject(
-            new TurnstileChallengeError(
-              'timeout',
-              'Turnstile challenge timed out'
-            )
+            lastErrorCode === undefined
+              ? new TurnstileChallengeError(
+                  'timeout',
+                  'Turnstile challenge timed out with no error reported'
+                )
+              : new TurnstileChallengeError(
+                  'challenge_failed',
+                  `Turnstile challenge failed; last error ${lastErrorCode}`
+                )
           );
         });
       }, CHALLENGE_TIMEOUT_MS);
@@ -421,6 +432,42 @@ export class TurnstileManager {
             settle(() => {
               clearTimeout(timeout);
               resolve(token);
+            });
+          },
+          // Records only. Turnstile retries automatically, so settling here
+          // would abandon a challenge that may still succeed.
+          'error-callback': (errorCode: string) => {
+            lastErrorCode = errorCode;
+            console.warn(
+              `${LOG} error-callback: ${errorCode} (retrying if enabled)`
+            );
+          },
+          // Terminal: retrying cannot make an unsupported browser supported,
+          // so fail now rather than stalling until the deadline.
+          'unsupported-callback': () => {
+            if (settled) {
+              return;
+            }
+            console.error(`${LOG} Browser is not supported by Turnstile`);
+            settle(() => {
+              clearTimeout(timeout);
+              if (this.widgetId) {
+                try {
+                  window.turnstile.remove(this.widgetId);
+                } catch (removeErr) {
+                  console.error(
+                    `${LOG} remove() in unsupported handler threw:`,
+                    removeErr
+                  );
+                }
+                this.widgetId = null;
+              }
+              reject(
+                new TurnstileChallengeError(
+                  'unsupported',
+                  'Browser is not supported by Turnstile'
+                )
+              );
             });
           },
         });

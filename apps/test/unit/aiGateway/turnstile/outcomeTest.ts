@@ -54,13 +54,13 @@ describe('recordTurnstileOutcome', () => {
 
     expect(countMock).toHaveBeenCalledWith('ai-gateway.turnstile', 1, {
       acquisition: 'on-demand',
-      mode: 'enforce',
+      enforcement: 'enforce',
       result: 'ok',
     });
     expect(distributionMock).toHaveBeenCalledWith(
       'ai-gateway.turnstile.duration_ms',
       1235,
-      {acquisition: 'on-demand', mode: 'enforce', result: 'ok'}
+      {acquisition: 'on-demand', enforcement: 'enforce', result: 'ok'}
     );
     expect(loggerErrorMock).not.toHaveBeenCalled();
     expect(loggerWarnMock).not.toHaveBeenCalled();
@@ -76,7 +76,7 @@ describe('recordTurnstileOutcome', () => {
 
     expect(countMock).toHaveBeenCalledWith('ai-gateway.turnstile', 1, {
       acquisition: 'pre-fetch',
-      mode: 'enforce',
+      enforcement: 'enforce',
       result: 'error',
       reason: 'timeout',
     });
@@ -94,7 +94,10 @@ describe('recordTurnstileOutcome', () => {
     expect(countMock).toHaveBeenCalledWith(
       'ai-gateway.turnstile',
       1,
-      expect.objectContaining({acquisition: 'pre-fetch', mode: 'monitor'})
+      expect.objectContaining({
+        acquisition: 'pre-fetch',
+        enforcement: 'monitor',
+      })
     );
   });
 
@@ -111,7 +114,7 @@ describe('recordTurnstileOutcome', () => {
       expect.objectContaining({
         feature: 'ai-gateway',
         acquisition: 'on-demand',
-        mode: 'enforce',
+        enforcement: 'enforce',
         reason: 'render_failed',
         durationMs: 42,
         errorMessage: 'no widget id',
@@ -132,7 +135,7 @@ describe('recordTurnstileOutcome', () => {
 
     expect(loggerWarnMock).toHaveBeenCalledWith(
       'turnstile challenge failed',
-      expect.objectContaining({mode: 'monitor', reason: 'timeout'})
+      expect.objectContaining({enforcement: 'monitor', reason: 'timeout'})
     );
     expect(loggerErrorMock).not.toHaveBeenCalled();
   });
@@ -148,7 +151,7 @@ describe('recordTurnstileOutcome', () => {
     expect(distributionMock).toHaveBeenCalledWith(
       'ai-gateway.turnstile.duration_ms',
       30_000,
-      {acquisition: 'on-demand', mode: 'enforce', result: 'error'}
+      {acquisition: 'on-demand', enforcement: 'enforce', result: 'error'}
     );
   });
 });

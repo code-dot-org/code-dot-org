@@ -8,7 +8,10 @@ jest.mock('@code-dot-org/core/plugins/observability', () => ({
 
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
-import {TOKEN_MAX_AGE_MS} from '@cdo/apps/aiGateway/turnstile/constants';
+import {
+  CHALLENGE_TIMEOUT_MS,
+  TOKEN_MAX_AGE_MS,
+} from '@cdo/apps/aiGateway/turnstile/constants';
 import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
 import {
   parseTurnstileMode,
@@ -116,6 +119,7 @@ type TurnstileManagerPrivates = {
   runSerializedChallenge: (outcomeMode: {
     mode: 'pre-fetch' | 'on-demand';
   }) => Promise<string>;
+  runChallenge: () => Promise<string>;
 };
 
 describe('TurnstileManager stale pre-fetch', () => {
@@ -262,7 +266,7 @@ describe('TurnstileManager token acquisition span', () => {
         op: 'ai.turnstile',
         attributes: {
           'turnstile.acquisition': 'on-demand',
-          'turnstile.mode': 'enforce',
+          'turnstile.enforcement': 'enforce',
           feature: 'ai-gateway',
         },
       },
@@ -282,7 +286,7 @@ describe('TurnstileManager token acquisition span', () => {
       expect.objectContaining({
         attributes: {
           'turnstile.acquisition': 'pre-fetch',
-          'turnstile.mode': 'enforce',
+          'turnstile.enforcement': 'enforce',
           feature: 'ai-gateway',
         },
       }),
@@ -325,5 +329,92 @@ describe('TurnstileManager.getInstance', () => {
     TurnstileManager.getInstance();
     TurnstileManager.getInstance();
     expect(document.querySelectorAll('#turnstile-container').length).toBe(1);
+  });
+});
+
+// Options handed to turnstile.render(), captured so the tests can drive the
+// callbacks the way Cloudflare would.
+type RenderOptions = {
+  sitekey: string;
+  callback: (token: string) => void;
+  'error-callback': (errorCode: string) => void;
+  'unsupported-callback': () => void;
+};
+
+describe('TurnstileManager challenge failure callbacks', () => {
+  let renderOptions: RenderOptions;
+  let removeMock: jest.Mock;
+
+  beforeEach(() => {
+    document.body.innerHTML = '';
+    jest.useFakeTimers();
+    removeMock = jest.fn();
+    (window as unknown as {turnstile: unknown}).turnstile = {
+      render: jest.fn((_container: HTMLElement, options: RenderOptions) => {
+        renderOptions = options;
+        return 'widget-1';
+      }),
+      remove: removeMock,
+      reset: jest.fn(),
+    };
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  const startChallenge = () =>
+    (
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates
+    ).runChallenge();
+
+  // Turnstile retries on its own (retry defaults to auto, retry-interval 8s),
+  // so settling on the first error would abandon a challenge that recovers.
+  it('does not settle on error-callback, letting an automatic retry win', async () => {
+    const challenge = startChallenge();
+
+    renderOptions['error-callback']('300030');
+    renderOptions.callback('token-after-retry');
+
+    await expect(challenge).resolves.toBe('token-after-retry');
+  });
+
+  it('reports challenge_failed when the deadline passes after an error', async () => {
+    const challenge = startChallenge();
+    const assertion = expect(challenge).rejects.toMatchObject({
+      reason: 'challenge_failed',
+    });
+
+    renderOptions['error-callback']('300030');
+    jest.advanceTimersByTime(CHALLENGE_TIMEOUT_MS);
+
+    await assertion;
+  });
+
+  // Distinguishing this from challenge_failed is the point: nothing responded
+  // at all means the widget is broken, not that Cloudflare turned us down.
+  it('reports timeout when nothing responded at all', async () => {
+    const challenge = startChallenge();
+    const assertion = expect(challenge).rejects.toMatchObject({
+      reason: 'timeout',
+    });
+
+    jest.advanceTimersByTime(CHALLENGE_TIMEOUT_MS);
+
+    await assertion;
+  });
+
+  // Retrying cannot make an unsupported browser supported, so this one is
+  // terminal -- and it must not wait out the full deadline to say so.
+  it('rejects immediately as unsupported without waiting for the deadline', async () => {
+    const challenge = startChallenge();
+    const assertion = expect(challenge).rejects.toMatchObject({
+      reason: 'unsupported',
+    });
+
+    renderOptions['unsupported-callback']();
+
+    expect(removeMock).toHaveBeenCalledWith('widget-1');
+    await assertion;
   });
 });
