@@ -3,7 +3,7 @@ import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {ImageGenerationMetadata, ImageType} from './ai/images/types';
-import {CharacterRole} from './characterAnimations';
+import {AnimationPoses} from './characterAnimations';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
 
@@ -33,8 +33,9 @@ export interface SerializedAnimationProps {
   recentColors?: RGBA[];
   // Present on AI-generated images.
   generation?: ImageGenerationMetadata;
-  // Present on the members of a character set (characterAnimations.ts).
-  character?: CharacterRole;
+  // Present on a character set: where each pose lives in the sheet
+  // (characterAnimations.ts).
+  poses?: AnimationPoses;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.

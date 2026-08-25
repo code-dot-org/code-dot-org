@@ -6,7 +6,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-import {CharacterRole} from '../../characterAnimations';
+import {AnimationPoses} from '../../characterAnimations';
 
 import {
   ASSUMED_BLOCK,
@@ -97,15 +97,17 @@ export interface GeneratedImageResult {
   pixelGridSize?: number;
   /** How this image was made, to record on its animation. */
   generation: ImageGenerationMetadata;
-  /** Set on a sprite sheet: its frame grid (a horizontal strip) and playback. */
+  /**
+   * Set on a sprite sheet: its frame grid (cells row by row, wrapping at the
+   * image width) and playback; `poses` names the ranges of a character set.
+   */
   frames?: {
     frameSize: {x: number; y: number};
     frameCount: number;
     frameDelay: number;
     looping: boolean;
+    poses?: AnimationPoses;
   };
-  /** Set on a member of a character set. */
-  character?: CharacterRole;
 }
 
 /** The model's own output for one request, before any processing. */

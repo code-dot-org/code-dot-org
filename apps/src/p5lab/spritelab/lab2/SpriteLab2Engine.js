@@ -17,11 +17,12 @@ import {
   worldPoint,
 } from './camera';
 import {
-  indexCharacterSets,
   isMoving,
   jumpFrame,
   nextFacing,
-  pickCharacterAnimation,
+  pickPose,
+  poseFrame,
+  posesByImageName,
 } from './characterAnimations';
 import {trimAnimationListImages} from './imageTrim';
 import {
@@ -654,11 +655,13 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   /**
    * Character sets (characterAnimations.ts): once the physics has settled
-   * every sprite for this frame, a sprite wearing any member of a set shows
-   * the member for how it moved — walking when it moved sideways, jumping
-   * while a player is off its footing, standing otherwise — facing the way
-   * it last moved. Only players can be airborne: patrollers and props ride
-   * the stock resolver and would read as jumping at every seam.
+   * every sprite for this frame, a sprite wearing a set's sheet shows the
+   * frame for how it moved — walking when it moved sideways, jumping while a
+   * player is off its footing, standing otherwise — facing the way it last
+   * moved. The sheet holds every pose, so this drives the frame index
+   * itself (p5.play would run the whole sheet end to end) and the sprite
+   * never changes costume. Only players can be airborne: patrollers and
+   * props ride the stock resolver and would read as jumping at every seam.
    */
   updateCharacterAnimations_() {
     const p5 = this.p5Wrapper.p5;
@@ -668,23 +671,29 @@ export default class SpriteLab2Engine extends SpriteLab {
     }
     const list =
       this.preloadAnimationsOverride || getStore().getState().animationList;
-    if (this.characterIndexSource_ !== list) {
-      this.characterIndexSource_ = list;
-      this.characterIndex_ = indexCharacterSets(list);
+    if (this.posesSource_ !== list) {
+      this.posesSource_ = list;
+      this.posesByName_ = posesByImageName(list);
     }
-    if (!this.characterIndex_.size) {
+    if (!this.posesByName_.size) {
       return;
     }
     const walls = library.getSpriteArray({group: 'walls'});
     const view = {width: p5.width, height: p5.height};
     Object.values(library.nativeSpriteMap).forEach(sprite => {
-      const members = this.characterIndex_.get(sprite.getAnimationLabel());
-      if (!members) {
+      const poses = this.posesByName_.get(sprite.getAnimationLabel());
+      const animation = sprite.animation;
+      if (!poses || !animation) {
         return;
       }
       const state =
         sprite.characterState ||
-        (sprite.characterState = {x: sprite.position.x, facing: 'right'});
+        (sprite.characterState = {
+          x: sprite.position.x,
+          facing: 'right',
+          key: null,
+          tick: 0,
+        });
       const dx = sprite.position.x - state.x;
       state.x = sprite.position.x;
       state.facing = nextFacing(state.facing, dx);
@@ -692,7 +701,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         this.usesPlatformPhysics_ &&
         sprite.group === 'players' &&
         !isSupported(sprite, walls, view, this.platformGravity_);
-      const pick = pickCharacterAnimation(members, {
+      const pick = pickPose(poses, {
         moving: isMoving(dx),
         airborne,
         facing: state.facing,
@@ -700,14 +709,22 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (!pick) {
         return;
       }
-      if (pick.name !== sprite.getAnimationLabel()) {
-        library.commands.setAnimation.call(library, {id: sprite.id}, pick.name);
+      if (pick.key !== state.key) {
+        state.key = pick.key;
+        state.tick = 0;
       }
-      if (pick.pose === 'jump') {
-        sprite.animation.changeFrame(
-          jumpFrame(sprite.velocity.y, this.platformGravity_)
-        );
-      }
+      // Ours to drive; p5.play must not advance it.
+      animation.stop();
+      const frame =
+        pick.pose === 'jump'
+          ? pick.range.start +
+            Math.min(
+              jumpFrame(sprite.velocity.y, this.platformGravity_),
+              pick.range.count - 1
+            )
+          : poseFrame(pick.range, state.tick);
+      animation.changeFrame(frame);
+      state.tick++;
     });
   }
 

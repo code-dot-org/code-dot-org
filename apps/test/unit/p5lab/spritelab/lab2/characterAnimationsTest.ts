@@ -1,69 +1,46 @@
 import {
-  CHARACTER_BASE_NAME_MAX_LENGTH,
+  AnimationPoses,
   CHARACTER_POSES,
-  characterAnimationName,
-  CharacterFacing,
-  CharacterPose,
-  indexCharacterSets,
-  isBaseRole,
   jumpFrame,
-  memberKey,
   nextFacing,
-  pickCharacterAnimation,
+  orderedPoseKeys,
+  pickPose,
+  poseFrame,
+  poseKey,
+  posesByImageName,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
-import {IMAGE_NAME_MAX_LENGTH} from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
 
-const fullSet = {
-  'stand-right': 'hero',
-  'stand-left': 'hero standing left',
-  'walk-right': 'hero walking right',
-  'walk-left': 'hero walking left',
-  'jump-right': 'hero jumping right',
-  'jump-left': 'hero jumping left',
+const fullSet: AnimationPoses = {
+  'stand-right': {start: 0, count: 2, frameDelay: 15},
+  'walk-right': {start: 2, count: 8, frameDelay: 3},
+  'jump-right': {start: 10, count: 2, frameDelay: 8},
+  'stand-left': {start: 12, count: 2, frameDelay: 15},
+  'walk-left': {start: 14, count: 8, frameDelay: 3},
+  'jump-left': {start: 22, count: 2, frameDelay: 8},
 };
 
 describe('SpriteLab2 characterAnimations', () => {
-  it('names the base after the character and the rest after their role', () => {
-    expect(
-      characterAnimationName('hero', {pose: 'stand', facing: 'right'})
-    ).toBe('hero');
-    expect(characterAnimationName('hero', {pose: 'walk', facing: 'left'})).toBe(
-      'hero walking left'
-    );
-    expect(isBaseRole({pose: 'stand', facing: 'right'})).toBe(true);
-    expect(isBaseRole({pose: 'stand', facing: 'left'})).toBe(false);
+  it('orders pose keys right-facing first, skipping poses a set lacks', () => {
+    expect(orderedPoseKeys(fullSet)).toEqual([
+      'stand-right',
+      'walk-right',
+      'jump-right',
+      'stand-left',
+      'walk-left',
+      'jump-left',
+    ]);
+    expect(orderedPoseKeys({'walk-left': fullSet['walk-left']})).toEqual([
+      'walk-left',
+    ]);
+    expect(CHARACTER_POSES.map(p => p.pose)).toEqual(['stand', 'walk', 'jump']);
   });
 
-  it('leaves every member name within the image name limit', () => {
-    const base = 'x'.repeat(CHARACTER_BASE_NAME_MAX_LENGTH);
-    CHARACTER_POSES.forEach(({pose}) => {
-      (['right', 'left'] as const).forEach(facing => {
-        expect(
-          characterAnimationName(base, {pose, facing}).length
-        ).toBeLessThanOrEqual(IMAGE_NAME_MAX_LENGTH);
-      });
+  it('indexes character sets by image name and skips plain images', () => {
+    const index = posesByImageName({
+      orderedKeys: ['a', 'b'],
+      propsByKey: {a: {name: 'hero', poses: fullSet}, b: {name: 'tree'}},
     });
-  });
-
-  it('indexes every member name to its whole set', () => {
-    const role = (id: string, pose: CharacterPose, facing: CharacterFacing) =>
-      ({id, pose, facing} as const);
-    const list = {
-      orderedKeys: ['a', 'b', 'c', 'd'],
-      propsByKey: {
-        a: {name: 'hero', character: role('h', 'stand', 'right')},
-        b: {name: 'hero walking right', character: role('h', 'walk', 'right')},
-        c: {name: 'tree'},
-        d: {name: 'cat', character: role('c', 'stand', 'right')},
-      },
-    };
-    const index = indexCharacterSets(list);
-    expect(index.get('hero')).toEqual({
-      'stand-right': 'hero',
-      'walk-right': 'hero walking right',
-    });
-    expect(index.get('hero walking right')).toBe(index.get('hero'));
-    expect(index.get('cat')).toEqual({'stand-right': 'cat'});
+    expect(index.get('hero')).toBe(fullSet);
     expect(index.has('tree')).toBe(false);
   });
 
@@ -72,41 +49,41 @@ describe('SpriteLab2 characterAnimations', () => {
       moving: boolean,
       airborne: boolean,
       facing: 'right' | 'left'
-    ) => pickCharacterAnimation(fullSet, {moving, airborne, facing});
-    expect(pick(false, false, 'right')).toEqual({name: 'hero', pose: 'stand'});
-    expect(pick(true, false, 'left')).toEqual({
-      name: 'hero walking left',
+    ) => pickPose(fullSet, {moving, airborne, facing});
+    expect(pick(false, false, 'right')).toMatchObject({key: 'stand-right'});
+    expect(pick(true, false, 'left')).toMatchObject({
+      key: 'walk-left',
       pose: 'walk',
+      range: fullSet['walk-left'],
     });
     // Off the ground beats moving.
-    expect(pick(true, true, 'right')).toEqual({
-      name: 'hero jumping right',
-      pose: 'jump',
-    });
+    expect(pick(true, true, 'right')).toMatchObject({key: 'jump-right'});
   });
 
   it('falls back to standing the same way before anything facing the other way', () => {
     const noLeftWalk = {...fullSet};
-    delete (noLeftWalk as Partial<typeof fullSet>)[memberKey('walk', 'left')];
+    delete noLeftWalk[poseKey('walk', 'left')];
     expect(
-      pickCharacterAnimation(noLeftWalk, {
-        moving: true,
-        airborne: false,
-        facing: 'left',
-      })
-    ).toEqual({name: 'hero standing left', pose: 'stand'});
+      pickPose(noLeftWalk, {moving: true, airborne: false, facing: 'left'})
+    ).toMatchObject({key: 'stand-left'});
     expect(
-      pickCharacterAnimation(
-        {'walk-right': 'only walk'},
+      pickPose(
+        {'walk-right': fullSet['walk-right']},
         {moving: true, airborne: false, facing: 'left'}
       )
-    ).toEqual({name: 'only walk', pose: 'walk'});
+    ).toMatchObject({key: 'walk-right'});
     expect(
-      pickCharacterAnimation(
-        {},
-        {moving: true, airborne: false, facing: 'left'}
-      )
+      pickPose({}, {moving: true, airborne: false, facing: 'left'})
     ).toBeUndefined();
+  });
+
+  it('steps through a pose range at its frame delay and wraps', () => {
+    const walk = fullSet['walk-right']!;
+    expect(poseFrame(walk, 0)).toBe(2);
+    expect(poseFrame(walk, 2)).toBe(2);
+    expect(poseFrame(walk, 3)).toBe(3);
+    expect(poseFrame(walk, 23)).toBe(9);
+    expect(poseFrame(walk, 24)).toBe(2);
   });
 
   it('turns with movement and keeps facing through float noise', () => {

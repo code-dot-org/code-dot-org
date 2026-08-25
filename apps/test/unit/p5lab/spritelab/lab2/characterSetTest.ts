@@ -1,15 +1,18 @@
 import {
   basePrompt,
+  buildPoses,
   cellSize,
   CHARACTER_SET_FRAME_COUNT,
-  frameOffset,
   framePrompt,
+  MAX_SHEET_PIXELS,
+  placeFrame,
   planCharacterFrames,
   POSE_FRAME_DESCRIPTIONS,
+  sheetLayout,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {
   CHARACTER_POSES,
-  memberKey,
+  poseKey,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
 describe('SpriteLab2 characterSet', () => {
@@ -32,7 +35,7 @@ describe('SpriteLab2 characterSet', () => {
       references: [],
     });
     const keys = new Set(
-      plan.map(p => `${memberKey(p.pose, p.facing)}-${p.frame}`)
+      plan.map(p => `${poseKey(p.pose, p.facing)}-${p.frame}`)
     );
     expect(keys.size).toBe(plan.length);
   });
@@ -52,17 +55,26 @@ describe('SpriteLab2 characterSet', () => {
     const walkRight2 = plan.findIndex(
       p => p.pose === 'walk' && p.facing === 'right' && p.frame === 2
     );
-    // Every reference a left-facing frame sees faces left.
     expect(plan[walkLeft2].references).toEqual([
       {index: 0, mirrored: true},
       {index: walkRight2, mirrored: true},
     ]);
     expect(plan[walkRight2].references).toEqual([{index: 0, mirrored: false}]);
-    plan
-      .filter(step => step.facing === 'right')
-      .forEach(step =>
-        step.references.forEach(ref => expect(ref.mirrored).toBe(false))
-      );
+  });
+
+  it('maps each pose to a contiguous range of sheet frames in plan order', () => {
+    const poses = buildPoses(plan);
+    expect(poses['stand-right']).toEqual({start: 0, count: 2, frameDelay: 15});
+    expect(poses['walk-right']).toEqual({start: 2, count: 8, frameDelay: 3});
+    const total = Object.values(poses).reduce((n, r) => n + r!.count, 0);
+    expect(total).toBe(plan.length);
+    Object.entries(poses).forEach(([key, range]) => {
+      for (let f = 0; f < range!.count; f++) {
+        const step = plan[range!.start + f];
+        expect(poseKey(step.pose, step.facing)).toBe(key);
+        expect(step.frame).toBe(f);
+      }
+    });
   });
 
   it('writes prompts that carry the character, the pose, the facing and the key color', () => {
@@ -80,26 +92,35 @@ describe('SpriteLab2 characterSet', () => {
     expect(frame).toContain('same plain flat background color');
   });
 
-  it('sizes the cell to the largest frame and stands each frame on the floor', () => {
-    const cell = cellSize([
-      {left: 10, top: 10, right: 29, bottom: 49}, // 20 x 40
-      {left: 0, top: 0, right: 29, bottom: 19}, // 30 x 20
-      null,
-    ]);
-    expect(cell).toEqual({x: 30, y: 40});
-    // The narrow tall frame, third in the strip: centered across, feet down.
+  it('sizes the cell to the largest frame', () => {
     expect(
-      frameOffset(cell, {left: 10, top: 10, right: 29, bottom: 49}, 2)
-    ).toEqual({
-      x: 2 * 30 + 5,
-      y: 0,
-    });
-    expect(
-      frameOffset(cell, {left: 0, top: 0, right: 29, bottom: 19}, 0)
-    ).toEqual({
-      x: 0,
-      y: 20,
-    });
+      cellSize([
+        {left: 10, top: 10, right: 29, bottom: 49}, // 20 x 40
+        {left: 0, top: 0, right: 29, bottom: 19}, // 30 x 20
+        null,
+      ])
+    ).toEqual({x: 30, y: 40});
     expect(cellSize([null])).toEqual({x: 1, y: 1});
+  });
+
+  it('lays a near-square grid and scales it down to the pixel budget', () => {
+    const small = sheetLayout(24, {x: 100, y: 100});
+    expect(small).toMatchObject({columns: 5, rows: 5, scale: 1});
+    expect(small.width).toBe(500);
+    expect(small.height).toBe(500);
+    // 24 model-sized frames: 5x5 cells of 884x964 is 21M pixels; scaled to fit.
+    const big = sheetLayout(24, {x: 884, y: 964});
+    expect(big.scale).toBeLessThan(1);
+    expect(big.width * big.height).toBeLessThanOrEqual(MAX_SHEET_PIXELS);
+    expect(big.cell.x / big.cell.y).toBeCloseTo(884 / 964, 1);
+    expect(big.width).toBe(big.columns * big.cell.x);
+  });
+
+  it('stands each frame on its cell floor, centered, in row-major cells', () => {
+    const layout = sheetLayout(6, {x: 30, y: 40});
+    expect(layout).toMatchObject({columns: 3, rows: 2});
+    // Fifth frame: second row, second column; content 20 x 30.
+    expect(placeFrame(layout, 4, 20, 30)).toEqual({x: 30 + 5, y: 40 + 10});
+    expect(placeFrame(layout, 0, 30, 40)).toEqual({x: 0, y: 0});
   });
 });

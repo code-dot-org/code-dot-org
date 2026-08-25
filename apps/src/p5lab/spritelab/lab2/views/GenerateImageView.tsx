@@ -31,9 +31,10 @@ import {
   ImageStyle,
   ImageType,
 } from '../ai/images/types';
-import {CHARACTER_BASE_NAME_MAX_LENGTH} from '../characterAnimations';
+import {AnimationPoses} from '../characterAnimations';
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
+import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
 import TemperatureBot from './TemperatureBot';
 
@@ -75,6 +76,12 @@ interface GenerateImageViewProps {
   };
   /** The image's current pixels, shown on the left while prompting. */
   thumb?: string;
+  /** An existing character set's sheet, shown playing instead of `thumb`. */
+  sheet?: {
+    src: string;
+    frameSize: {x: number; y: number};
+    poses: AnimationPoses;
+  };
   /** Set when creating a brand-new image. */
   create?: {
     /** Whether another image already uses this name. */
@@ -87,14 +94,6 @@ interface GenerateImageViewProps {
     result: GeneratedImageResult,
     name?: string
   ) => Promise<void> | void;
-  /**
-   * Persist an accepted character set (creating only): the base member
-   * first, then the rest.
-   */
-  onAcceptSet?: (
-    results: GeneratedImageResult[],
-    newName: string
-  ) => Promise<void>;
   /** Leave without generating: back to the summary, or out of the dialog
       for a brand-new image. */
   onCancel: () => void;
@@ -113,10 +112,10 @@ interface GenerateImageViewProps {
 const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
   thumb,
+  sheet,
   create,
   lockedImageType,
   onAccept,
-  onAcceptSet,
   onCancel,
   onDelete,
 }) => {
@@ -138,8 +137,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   // one picture. New sprites only: a set is drawn from a fresh base.
   const [characterSet, setCharacterSet] = useState(false);
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
-  const canMakeSet =
-    !!create && !!onAcceptSet && imageType === 'sprite' && source === 'new';
+  const canMakeSet = !!create && imageType === 'sprite' && source === 'new';
   const makingSet = canMakeSet && characterSet;
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
@@ -181,13 +179,13 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         }
         options.inputImageDataURI = dataURI;
       }
-      if (makingSet && onAcceptSet) {
-        const results = await generateCharacterSet(
+      if (makingSet) {
+        const result = await generateCharacterSet(
           prompt.trim(),
           {style, temperature: options.temperature},
           setProgress
         );
-        await onAcceptSet(results, trimmedName);
+        await onAccept(result, trimmedName);
         return;
       }
       const result = await generateImage(prompt.trim(), options);
@@ -213,7 +211,6 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     create,
     trimmedName,
     onAccept,
-    onAcceptSet,
     makingSet,
   ]);
 
@@ -237,10 +234,16 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         <div
           className={classNames(
             moduleStyles.imagePane,
-            thumb && moduleStyles.imagePaneChecker
+            (thumb || sheet || progress?.preview) &&
+              moduleStyles.imagePaneChecker
           )}
         >
-          {thumb ? (
+          {generating && progress?.preview ? (
+            // The latest frame of the set as it comes in.
+            <img src={progress.preview} alt="" />
+          ) : sheet ? (
+            <AnimatedSheetPreview {...sheet} />
+          ) : thumb ? (
             <img src={thumb} alt="" />
           ) : (
             <div className={moduleStyles.imagePlaceholder} aria-hidden />
@@ -255,11 +258,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 value={name}
                 errorMessage={nameError || undefined}
                 disabled={generating}
-                maxLength={
-                  makingSet
-                    ? CHARACTER_BASE_NAME_MAX_LENGTH
-                    : IMAGE_NAME_MAX_LENGTH
-                }
+                maxLength={IMAGE_NAME_MAX_LENGTH}
                 onChange={e => setName(sanitizeImageName(e.target.value))}
               />
             </div>
@@ -330,14 +329,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 size="s"
                 checked={characterSet}
                 disabled={generating}
-                onChange={e => {
-                  setCharacterSet(e.target.checked);
-                  // The member names add a suffix; keep the whole set in
-                  // the name limit.
-                  if (e.target.checked) {
-                    setName(n => n.slice(0, CHARACTER_BASE_NAME_MAX_LENGTH));
-                  }
-                }}
+                onChange={e => setCharacterSet(e.target.checked)}
               />
             </div>
           )}

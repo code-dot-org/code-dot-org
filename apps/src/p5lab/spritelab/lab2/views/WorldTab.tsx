@@ -3,7 +3,6 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {isBaseRole} from '../characterAnimations';
 import {getTrimmedThumbnail, onTrimsUpdated} from '../imageTrim';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 import {createEmptyWorld, SCENE_GRID_SIZE, World, WorldCell} from '../world';
@@ -60,8 +59,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       animationList.orderedKeys
         .map(key => animationList.propsByKey[key])
         .filter(props => !props.categories?.includes(BACKGROUNDS_CATEGORY))
-        // A character set is offered once, as its base member.
-        .filter(props => !props.character || isBaseRole(props.character))
         .map(props => ({
           image: props.name,
           kind: props.categories?.includes(BLOCKS_CATEGORY)

@@ -12,8 +12,10 @@ import {
   ImageGenerationMetadata,
   ImageType,
 } from '../ai/images/types';
+import {AnimationPoses} from '../characterAnimations';
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
+import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
 import GenerateImageView from './GenerateImageView';
 
@@ -25,6 +27,15 @@ interface ImageDetailsDialogProps {
   animKey: string | null;
   name?: string;
   thumb?: string;
+  /**
+   * Set for a character set: its sheet, shown playing. Sets are not
+   * painted (the editor would see one frame of many).
+   */
+  sheet?: {
+    src: string;
+    frameSize: {x: number; y: number};
+    poses: AnimationPoses;
+  };
   generation?: ImageGenerationMetadata;
   onClose: () => void;
   /** Open the paint editor on this image. */
@@ -45,11 +56,6 @@ interface ImageDetailsDialogProps {
     result: GeneratedImageResult,
     newName?: string
   ) => Promise<void>;
-  /** Persist an accepted character set under this name (new images only). */
-  onAcceptGeneratedSet: (
-    results: GeneratedImageResult[],
-    newName: string
-  ) => Promise<void>;
 }
 
 /**
@@ -63,6 +69,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   animKey,
   name,
   thumb,
+  sheet,
   generation,
   onClose,
   onPaint,
@@ -73,7 +80,6 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   getDataURI,
   isNameTaken,
   onAcceptGenerated,
-  onAcceptGeneratedSet,
 }) => {
   const isNew = animKey === null;
   const {theme} = useTheme();
@@ -210,20 +216,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   }
             }
             thumb={isNew ? undefined : thumb}
+            sheet={isNew ? undefined : sheet}
             create={isNew ? {isNameTaken} : undefined}
             lockedImageType={lockedImageType}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
               setView('details');
             }}
-            onAcceptSet={
-              isNew
-                ? async (results, newName) => {
-                    await onAcceptGeneratedSet(results, newName);
-                    setView('details');
-                  }
-                : undefined
-            }
             // A brand-new image has no summary to fall back to.
             onCancel={isNew ? onClose : () => setView('details')}
             onDelete={isNew ? undefined : onDelete}
@@ -231,25 +230,39 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         ) : (
           <>
             <div className={moduleStyles.body}>
-              <button
-                type="button"
-                className={classNames(
-                  moduleStyles.imagePane,
-                  moduleStyles.imageButton,
-                  thumb && moduleStyles.imagePaneChecker
-                )}
-                aria-label="Edit with paint tools"
-                onClick={onPaint}
-              >
-                {thumb ? (
-                  <img src={thumb} alt="" />
-                ) : (
-                  <div className={moduleStyles.imagePlaceholder} aria-hidden />
-                )}
-                <span className={moduleStyles.paintOverlay} aria-hidden>
-                  <FontAwesomeV6Icon iconName="pen" />
-                </span>
-              </button>
+              {sheet ? (
+                <div
+                  className={classNames(
+                    moduleStyles.imagePane,
+                    moduleStyles.imagePaneChecker
+                  )}
+                >
+                  <AnimatedSheetPreview {...sheet} />
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  className={classNames(
+                    moduleStyles.imagePane,
+                    moduleStyles.imageButton,
+                    thumb && moduleStyles.imagePaneChecker
+                  )}
+                  aria-label="Edit with paint tools"
+                  onClick={onPaint}
+                >
+                  {thumb ? (
+                    <img src={thumb} alt="" />
+                  ) : (
+                    <div
+                      className={moduleStyles.imagePlaceholder}
+                      aria-hidden
+                    />
+                  )}
+                  <span className={moduleStyles.paintOverlay} aria-hidden>
+                    <FontAwesomeV6Icon iconName="pen" />
+                  </span>
+                </button>
+              )}
               <div className={moduleStyles.detailsPane}>
                 {generation && (
                   <dl className={moduleStyles.metadata}>
@@ -259,7 +272,11 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                       {generation.prompt}
                     </dd>
                     <dt>Type</dt>
-                    <dd>{IMAGE_TYPE_LABELS[generation.imageType]}</dd>
+                    <dd>
+                      {sheet
+                        ? 'Sprite (animated)'
+                        : IMAGE_TYPE_LABELS[generation.imageType]}
+                    </dd>
                     <dt>Style</dt>
                     <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
                     {generation.temperature !== undefined && (

@@ -1,20 +1,22 @@
 // Character sets: the same character drawn standing, walking and jumping,
-// facing right and left, each pose delivered as a multi-frame sprite sheet.
+// facing right and left, delivered as ONE sprite sheet with a named frame
+// range per pose (characterAnimations.ts).
 //
 // The model is asked for ONE frame per request, with the base drawing
 // attached as a reference image so the character stays itself; the frames
-// are then keyed, cropped and laid into strips here. Asking for a whole
+// are then keyed, cropped and laid into a grid here. Asking for a whole
 // sheet in one request is not an option: the models do not hold an exact
 // frame grid.
 
 import {createUuid} from '@cdo/apps/utils';
 
 import {
+  AnimationPoses,
   CHARACTER_FACINGS,
   CHARACTER_POSES,
   CharacterFacing,
   CharacterPose,
-  CharacterRole,
+  poseKey,
 } from '../../characterAnimations';
 import {findOpaqueBounds} from '../../imageTrim';
 
@@ -58,9 +60,10 @@ export interface FramePlan {
 }
 
 /**
- * Every frame of a set in generation order — right-facing poses first, so
- * each left-facing frame can be drawn from its right-facing twin. Index 0
- * is the base drawing: standing, facing right.
+ * Every frame of a set in generation order — which is also its order in
+ * the sheet: right-facing poses first, so each left-facing frame can be
+ * drawn from its right-facing twin. Index 0 is the base drawing: standing,
+ * facing right. Each pose's frames are contiguous and in frame order.
  */
 export function planCharacterFrames(): FramePlan[] {
   const plan: FramePlan[] = [];
@@ -97,6 +100,22 @@ export function planCharacterFrames(): FramePlan[] {
 
 /** How many pictures a set costs; the dialog quotes it. */
 export const CHARACTER_SET_FRAME_COUNT = planCharacterFrames().length;
+
+/** The pose ranges of a sheet laid out in plan order. */
+export function buildPoses(plan: FramePlan[]): AnimationPoses {
+  const poses: AnimationPoses = {};
+  plan.forEach((step, index) => {
+    const key = poseKey(step.pose, step.facing);
+    const spec = CHARACTER_POSES.find(p => p.pose === step.pose)!;
+    const range = poses[key];
+    if (!range) {
+      poses[key] = {start: index, count: 1, frameDelay: spec.frameDelay};
+    } else {
+      range.count++;
+    }
+  });
+  return poses;
+}
 
 // What each frame shows, per pose, indexed by frame. Lengths match
 // CHARACTER_POSES (checked by the unit tests). The walk is the classic
@@ -163,12 +182,7 @@ export function framePrompt(
 
 /** A data URI of the image flipped left-for-right. */
 export async function mirrorDataURI(dataURI: string): Promise<string> {
-  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
-    const el = new Image();
-    el.onload = () => resolve(el);
-    el.onerror = reject;
-    el.src = dataURI;
-  });
+  const img = await loadDataURI(dataURI);
   const canvas = document.createElement('canvas');
   canvas.width = img.naturalWidth;
   canvas.height = img.naturalHeight;
@@ -179,6 +193,15 @@ export async function mirrorDataURI(dataURI: string): Promise<string> {
   return canvas.toDataURL('image/png');
 }
 
+function loadDataURI(dataURI: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const el = new Image();
+    el.onload = () => resolve(el);
+    el.onerror = reject;
+    el.src = dataURI;
+  });
+}
+
 export interface Bounds {
   left: number;
   top: number;
@@ -187,9 +210,10 @@ export interface Bounds {
 }
 
 /**
- * The cell every frame of a set is laid into: as wide and tall as the
- * largest frame, so switching poses never changes the sprite's size. A set
- * with nothing opaque gets a 1x1 cell rather than an empty sheet.
+ * The cell every frame of a set is laid into, before scaling: as wide and
+ * tall as the largest frame, so switching poses never changes the sprite's
+ * size. A set with nothing opaque gets a 1x1 cell rather than an empty
+ * sheet.
  */
 export function cellSize(frames: (Bounds | null)[]): {x: number; y: number} {
   let x = 1;
@@ -203,20 +227,71 @@ export function cellSize(frames: (Bounds | null)[]): {x: number; y: number} {
   return {x, y};
 }
 
+/** A sheet's grid: cells of one size, row by row, wrapping at `columns`. */
+export interface SheetLayout {
+  columns: number;
+  rows: number;
+  /** Content scale applied to every frame, 1 or less. */
+  scale: number;
+  /** The cell after scaling. */
+  cell: {x: number; y: number};
+  width: number;
+  height: number;
+}
+
+// The sheet's pixel budget. The asset store shrinks any upload of 5MB or
+// more to a quarter size, which silently breaks the frame grid, and a
+// painterly frame costs about a byte a pixel as PNG. Three million pixels
+// keeps a set of 24 frames near a 360px-tall cell: plenty for sprites drawn
+// at a tenth of that, even zoomed three times.
+export const MAX_SHEET_PIXELS = 3_000_000;
+// If a sheet still encodes larger than this, it is re-laid smaller.
+export const MAX_SHEET_BYTES = 4_000_000;
+
 /**
- * Where a frame's content goes on the strip: its cell, centered across and
- * standing on the cell's floor, so feet stay put from frame to frame.
+ * Lay `count` cells of `cell` into a near-square grid, scaled down as one
+ * so the sheet stays within `maxPixels`. Near-square, not a strip: a strip
+ * of 24 model-sized frames is wider than some canvases allow.
  */
-export function frameOffset(
+export function sheetLayout(
+  count: number,
   cell: {x: number; y: number},
-  bounds: Bounds,
-  index: number
-): {x: number; y: number} {
-  const width = bounds.right - bounds.left + 1;
-  const height = bounds.bottom - bounds.top + 1;
+  maxPixels: number = MAX_SHEET_PIXELS
+): SheetLayout {
+  const columns = Math.max(1, Math.ceil(Math.sqrt(count)));
+  const rows = Math.max(1, Math.ceil(count / columns));
+  const full = columns * rows * cell.x * cell.y;
+  const scale = Math.min(1, Math.sqrt(maxPixels / full));
+  const scaled = {
+    x: Math.max(1, Math.floor(cell.x * scale)),
+    y: Math.max(1, Math.floor(cell.y * scale)),
+  };
   return {
-    x: index * cell.x + Math.floor((cell.x - width) / 2),
-    y: cell.y - height,
+    columns,
+    rows,
+    scale,
+    cell: scaled,
+    width: columns * scaled.x,
+    height: rows * scaled.y,
+  };
+}
+
+/**
+ * Where a frame's (already scaled) content goes on the sheet: its cell,
+ * centered across and standing on the cell's floor, so feet stay put from
+ * frame to frame.
+ */
+export function placeFrame(
+  layout: SheetLayout,
+  index: number,
+  width: number,
+  height: number
+): {x: number; y: number} {
+  const column = index % layout.columns;
+  const row = Math.floor(index / layout.columns);
+  return {
+    x: column * layout.cell.x + Math.floor((layout.cell.x - width) / 2),
+    y: row * layout.cell.y + (layout.cell.y - height),
   };
 }
 
@@ -236,21 +311,49 @@ async function keyFrame(raw: RawImage, style: ImageStyle): Promise<KeyedFrame> {
   return {canvas, bounds: findOpaqueBounds(data, canvas.width, canvas.height)};
 }
 
-function composeStrip(
+/** The keyed frame cropped to its content, as a data URI for the preview. */
+function framePreview({canvas, bounds}: KeyedFrame): string | undefined {
+  if (!bounds) {
+    return undefined;
+  }
+  const width = bounds.right - bounds.left + 1;
+  const height = bounds.bottom - bounds.top + 1;
+  const crop = document.createElement('canvas');
+  crop.width = width;
+  crop.height = height;
+  crop
+    .getContext('2d')!
+    .drawImage(
+      canvas,
+      bounds.left,
+      bounds.top,
+      width,
+      height,
+      0,
+      0,
+      width,
+      height
+    );
+  return crop.toDataURL('image/png');
+}
+
+function composeSheet(
   frames: KeyedFrame[],
-  cell: {x: number; y: number}
+  layout: SheetLayout
 ): Promise<Blob> {
-  const strip = document.createElement('canvas');
-  strip.width = cell.x * frames.length;
-  strip.height = cell.y;
-  const ctx = strip.getContext('2d')!;
+  const sheet = document.createElement('canvas');
+  sheet.width = layout.width;
+  sheet.height = layout.height;
+  const ctx = sheet.getContext('2d')!;
   frames.forEach(({canvas, bounds}, index) => {
     if (!bounds) {
       return;
     }
     const width = bounds.right - bounds.left + 1;
     const height = bounds.bottom - bounds.top + 1;
-    const at = frameOffset(cell, bounds, index);
+    const scaledW = Math.max(1, Math.round(width * layout.scale));
+    const scaledH = Math.max(1, Math.round(height * layout.scale));
+    const at = placeFrame(layout, index, scaledW, scaledH);
     ctx.drawImage(
       canvas,
       bounds.left,
@@ -259,12 +362,12 @@ function composeStrip(
       height,
       at.x,
       at.y,
-      width,
-      height
+      scaledW,
+      scaledH
     );
   });
   return new Promise<Blob>((resolve, reject) => {
-    strip.toBlob(result => {
+    sheet.toBlob(result => {
       if (result) {
         resolve(result);
       } else {
@@ -303,6 +406,8 @@ export interface CharacterSetProgress {
   total: number;
   /** What is being drawn now, for the dialog to show. */
   label: string;
+  /** The last frame finished, keyed and cropped, for the dialog to show. */
+  preview?: string;
 }
 
 const POSE_LABELS: Record<CharacterPose, string> = {
@@ -319,27 +424,33 @@ export function frameLabel(plan: FramePlan): string {
 }
 
 /**
- * Generate a character set: one result per pose and facing, the base
- * (standing, right) first, each a horizontal-strip sprite sheet whose
- * frames share one cell size. Frames are requested one at a time, in plan
- * order, since each is drawn from ones before it.
+ * Generate a character set as one sprite-sheet result: every pose's frames
+ * in one grid, with `frames.poses` naming each range. Frames are requested
+ * one at a time, in plan order, since each is drawn from ones before it.
  *
  * Pixel style is keyed like a single sprite but not grid-normalized: each
  * frame would find its own grid and land at its own scale, and the frames
- * of one strip must agree.
+ * of one sheet must agree.
  */
 export async function generateCharacterSet(
   prompt: string,
   options: CharacterSetOptions,
   onProgress?: (progress: CharacterSetProgress) => void
-): Promise<GeneratedImageResult[]> {
+): Promise<GeneratedImageResult> {
   const plan = planCharacterFrames();
-  // One seed for the whole set; recorded on every member.
+  // One seed for the whole set.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const raws: RawImage[] = [];
+  const keyed: KeyedFrame[] = [];
+  let preview: string | undefined;
   for (let i = 0; i < plan.length; i++) {
     const step = plan[i];
-    onProgress?.({done: i, total: plan.length, label: frameLabel(step)});
+    onProgress?.({
+      done: i,
+      total: plan.length,
+      label: frameLabel(step),
+      preview,
+    });
     const text =
       i === 0
         ? basePrompt(prompt, options.style)
@@ -353,21 +464,34 @@ export async function generateCharacterSet(
         return mirrored ? mirrorDataURI(uri) : uri;
       })
     );
-    raws.push(
-      await requestFrameWithRetry(text, {
-        seed,
-        temperature: options.temperature,
-        references,
-      })
-    );
+    const raw = await requestFrameWithRetry(text, {
+      seed,
+      temperature: options.temperature,
+      references,
+    });
+    raws.push(raw);
+    const frame = await keyFrame(raw, options.style);
+    keyed.push(frame);
+    preview = framePreview(frame) || preview;
   }
-  onProgress?.({done: plan.length, total: plan.length, label: 'assembling'});
+  onProgress?.({
+    done: plan.length,
+    total: plan.length,
+    label: 'assembling',
+    preview,
+  });
 
-  const keyed = await Promise.all(
-    raws.map(raw => keyFrame(raw, options.style))
-  );
   const cell = cellSize(keyed.map(frame => frame.bounds));
-  const id = createUuid();
+  let maxPixels = MAX_SHEET_PIXELS;
+  let layout = sheetLayout(keyed.length, cell, maxPixels);
+  let blob = await composeSheet(keyed, layout);
+  // A very detailed sheet can still encode too large; re-lay it smaller.
+  for (let attempt = 0; blob.size > MAX_SHEET_BYTES && attempt < 3; attempt++) {
+    maxPixels *= 0.6;
+    layout = sheetLayout(keyed.length, cell, maxPixels);
+    blob = await composeSheet(keyed, layout);
+  }
+
   const generation: ImageGenerationMetadata = {
     prompt,
     imageType: 'sprite',
@@ -377,26 +501,18 @@ export async function generateCharacterSet(
       temperature: options.temperature,
     }),
   };
-
-  const results: GeneratedImageResult[] = [];
-  for (const facing of CHARACTER_FACINGS) {
-    for (const {pose, frameCount, frameDelay, looping} of CHARACTER_POSES) {
-      const frames = plan
-        .map((step, index) => ({step, index}))
-        .filter(({step}) => step.pose === pose && step.facing === facing)
-        .sort((a, b) => a.step.frame - b.step.frame)
-        .map(({index}) => keyed[index]);
-      const blob = await composeStrip(frames, cell);
-      const role: CharacterRole = {id, pose, facing};
-      results.push({
-        filename: `generated-${createUuid()}.png`,
-        uint8Array: new Uint8Array(await blob.arrayBuffer()),
-        mediaType: 'image/png',
-        generation,
-        frames: {frameSize: cell, frameCount, frameDelay, looping},
-        character: role,
-      });
-    }
-  }
-  return results;
+  return {
+    filename: `generated-${createUuid()}.png`,
+    uint8Array: new Uint8Array(await blob.arrayBuffer()),
+    mediaType: 'image/png',
+    generation,
+    frames: {
+      frameSize: layout.cell,
+      frameCount: keyed.length,
+      // Playback when nothing drives the frame (the engine does, by pose).
+      frameDelay: CHARACTER_POSES[0].frameDelay,
+      looping: true,
+      poses: buildPoses(plan),
+    },
+  };
 }
