@@ -742,7 +742,7 @@ describe('MazeKeyboardNavigation interaction', () => {
       press('Enter');
       expect(focusableCursor()).toBeNull();
       expect(liveRegionText()).toBe(
-        'The maze cannot be navigated while program is running.'
+        'The grid cannot be navigated while program is running.'
       );
     });
 

@@ -59,11 +59,12 @@ describe('describeAsset', () => {
 });
 
 describe('describeNeighborhoodCell', () => {
-  // assetId 159 is a house, so this also pins that paint hides the scenery.
-  it('leads with paint the student applied', () => {
-    expect(
-      describeNeighborhoodCell(SPRITES, {color: 'blue', assetId: 159})
-    ).toBe('Painted blue.');
+  // A painter can only paint the road it stands on, so 0 (street) is the asset
+  // a painted cell really carries.
+  it('reports paint instead of the road under it', () => {
+    expect(describeNeighborhoodCell(SPRITES, {color: 'blue', assetId: 0})).toBe(
+      'Painted blue.'
+    );
   });
 
   it('reports a bucket and its remaining paint', () => {

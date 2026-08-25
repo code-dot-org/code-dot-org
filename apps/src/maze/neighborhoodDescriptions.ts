@@ -41,7 +41,7 @@ export interface NeighborhoodCellState {
   assetId?: number;
 }
 
-// Paint is the student's own work and covers the scenery, so it comes first.
+// Paint only lands on the road, so naming the road under it would add noise.
 export function describeNeighborhoodCell(
   spriteMap: SpriteMap | undefined,
   {color, paintCount, assetId}: NeighborhoodCellState

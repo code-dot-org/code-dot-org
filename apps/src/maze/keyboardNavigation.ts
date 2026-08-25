@@ -30,7 +30,6 @@ type MessageFn = (params?: MessageParams) => string;
 function t(
   key: MazeMessageKey,
   params: MessageParams = {},
-  // Only for the one source string whose plural syntax this cannot expand.
   fallback: string = mazeStrings[key]
 ): string {
   const compiled = (mazeMsg as Record<string, MessageFn | undefined>)[key];
@@ -41,7 +40,7 @@ function t(
 
 // Also used for the grid's own label, so the two cannot drift apart.
 export const PROGRAM_RUNNING =
-  'The maze cannot be navigated while program is running.';
+  'The grid cannot be navigated while program is running.';
 
 // Painter's own lines have no key, so they are written out.
 const MSG = {
@@ -558,8 +557,8 @@ export default class MazeKeyboardNavigation {
     this.cursor.focus();
   }
 
-  // Focus lands here once, then the rect slides between cells. Painter's changed
-  // label goes unread, so it speaks; maze reads the label and would double it.
+  // Focus lands here once, then the rect slides between cells. Painter's label
+  // then goes unread, so it speaks; maze reads the label and would double it.
   private placeCursor({speak = true} = {}): void {
     const ctrl = getMazeController();
     if (!ctrl || !this.cursor || !this.cursorPos) return;
@@ -587,8 +586,8 @@ export default class MazeKeyboardNavigation {
       this.announce(isPainter ? MSG.edgeOfNeighborhood() : MSG.edge());
       return;
     }
-    // Painter keeps its scenery on wall tiles, and the cursor only reads, so it
-    // walks onto them. A student who cannot visit a wall cannot survey the grid.
+    // Painter keeps its scenery on wall tiles and the cursor only reads, so it
+    // walks onto them. A student who cannot enter a wall cannot survey the map.
     if (!isPainter && tileAt(ctrl, nx, ny) === SquareType.WALL) {
       this.announce(MSG.wall());
       return;
@@ -609,8 +608,8 @@ export default class MazeKeyboardNavigation {
       );
       return;
     }
-    // Step by index, not position: two painters can share a cell, and coordinates
-    // alone would stick on the first. Landing elsewhere restarts the cycle.
+    // Step by index, not position: two painters can share a cell, so matching
+    // on coordinates would stick on the first. Landing elsewhere restarts.
     const selected = spots[this.painterIndex];
     const onSelected = selected?.col === col && selected?.row === row;
     this.painterIndex = onSelected ? (this.painterIndex + 1) % spots.length : 0;
