@@ -234,8 +234,6 @@ steps:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly passed to the corresponding
       # config value in test.yml.erb.
-      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
-        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
@@ -330,8 +328,6 @@ steps:
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
-      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
-        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     commands:
@@ -370,6 +366,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 82e50b0b4fa996380cf9f79a8c9881e6b768471a94ac7ffbb45a45181a6b19d2
+hmac: 9ee193103461bb8af7b7d2b0b6eb9a4bb9a0c7079097b9b0ca4e8ea75f0bc543
 
 ...

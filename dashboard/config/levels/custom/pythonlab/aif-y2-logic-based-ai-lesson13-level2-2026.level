@@ -32,9 +32,10 @@
       "openFiles": [
         "0"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrHcApxkW2gh233\nERw4OAaI1JP3t93mXiDj4jFX0/yoamPFzomamxFi9pEqjy6SUTSBT5tpfCOe\nO27+aglKltQJNX75I6U/2eSyH1fnWPZZ3e34iDy1tun9f1k0FYN9AxMDomS+\nTvwRWqQI1gQmbbBwG9KThwCD8JIg3xkkqLujK+75p8OwONRvXjUU90zUxBxz\nwR8wFXt/twKkcvboOj1XWICJ/uGgfsweKH6+1ObqYGlFozAi2wVUsOseSkAs\nR6DWlg/yGUavDC6hPRZlrwC1UnhaDxOn2rdaIggXV6CnJFVkKbJQCOXaENLz\neowtGLX0DhiFc1ykocDhP/HhBBKCXEN13MdPIwKmBbfVdLkbsbSrjcwnf/hp\nOcbxVXdtcTpQUNOs+VAil2fJFWNT3SF6p1a5XZG+FUPOONqqLrdNCZzaaC/y\nvjat3DRTPHMjAjGvhRFbX0M5EFGXouGz2DmZVgkG1czKniAiU0PkaBnPP7Hq\nl4RjQ1Ria22RcuLQOZFC1DZBDHBm2EO3U6kGhte3fTqsf8czromKkI8eEd77\nHgrkL2zzEaEUJuuAtKLV7eIIiU1j3Ym2caB7zUAcOiv8mXDBZRgs7b6SmcGG\n8Qhd+me+AAWQQ+nVElNAd99SF3SjZQbrif56pae3EnRz7SE/uRzQkYTQzbwU\nAgY1FUGnGK6ntxPn4kH55AVI1FbzI7HBCnXLKRYoM00h1W2SRDp9DF4zW0ow\nf4qIFrCnCFspYDU33AuFyuWcPW7aOaJQ22ji0h/3qK9HJ9sATadIFLJU3KWp\nNLfoPT7HSHdwrgDeoIx9RHspaCvkNruoLSIa9xzcjDkEyc71Rm4X8iRE86iF\nFMJME0lQzAnlJmdsL5BnqQ==\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 03:15:59 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 03:15:59 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:28:49 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

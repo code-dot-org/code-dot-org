@@ -13,7 +13,7 @@ if rack_env?(:production, :adhoc) || CDO.test_system?
     )
   end
 
-  # Track total amount of data being read out of each cache cache, mostly to get
+  # Track total amount of data being read out of each cache, mostly to get
   # insight into what it would take to host the Rails cache on a networked server
   # (ie, redis). We can't do this with ActiveSupport instrumentation, because
   # none of the available events let us inspect the returned value itself.
@@ -40,6 +40,6 @@ if rack_env?(:production, :adhoc) || CDO.test_system?
   end
 
   Rails.application.config.before_configuration do
-    Rails.cache.class.prepend(Cdo::LogCacheBytesRead) unless Rails.cache.class <= Cdo::LogCacheBytesRead
+    ActiveSupport::Cache::Store.prepend(Cdo::LogCacheBytesRead) unless ActiveSupport::Cache::Store <= Cdo::LogCacheBytesRead
   end
 end

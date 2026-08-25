@@ -74,9 +74,13 @@ activeJobWorker:
     AWS_EC2_METADATA_DISABLED: "true"
     CDO_ACTIVE_JOB_BACKEND_N_WORKERS_TO_START: "1"
     CDO_ACTIVE_JOB_BACKEND_ROLLING_RESTART_IN_N_BATCHES: "1"
+    # Without this the preload aborts boot on an empty database.
+    SKIP_SCRIPT_PRELOAD: "1"
   resources:
     cpu: 1
-    memory: 2Gi
+    # Measured on a kind cluster: the daemon plateaus at 3.2Gi. At 2Gi it is
+    # OOMKilled about six seconds into boot, in a loop.
+    memory: 4Gi
     ephemeralStorage: 30Gi
 
 services:
@@ -119,3 +123,7 @@ localDev:
     hostPaths:
       home: # ~ on  your local dev box, set automatically by skaffold
       skaffoldStorage: # code-dot-org/skaffoldStorage on your local dev box, set automatically by skaffold
+
+scheduling:
+  nodeSelector: {}
+  tolerations: []

@@ -8,18 +8,27 @@ markdown <<MARKDOWN
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
 <p>📖 <b>Stylesheet</b> is the file that stores a page's CSS: every color, font, spacing, and layout rule, all in one place.</p>
 </div>
+<br>
+<p>Remember the <code>&lt;link&gt;</code> tag from a couple levels back, the one that connects an HTML file to its styling? A stylesheet is exactly what that tag is pointing to.</p>
+
+<p>Below, flip between the actual HTML and CSS files, then turn the stylesheet on and off to see it applied to a real page.</p>
 
 <br>
 
-<p>Remember the <code>&lt;link&gt;</code> tag from a couple levels back, the one that connects an HTML file to its styling? A stylesheet is exactly what that tag is pointing to. Every rule you've clicked through so far in this unit lives inside a file just like this one.</p>
+---
 
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://images.code.org/0b23a806a13218861539ef63b1af26e0-image-1785949866900.png" alt="A stylesheet is a file that controls how a web page looks, defining colors, fonts, spacing, and layout. The AI will create a style.css file to store this code. A preview shows the Dog Lover's Page heading and text before styling is applied, alongside a Unit Guide button." style="max-width: 750px; width: 100%; border-radius: 10px;">
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/explore-files-toggle.html" width="100%" height="900" style="border:none;" title="Explore the Files: toggle between HTML, CSS, and a live preview"></iframe>
 </div>
+
 
 <p>In Web Lab, this file is named <code>style.css</code> by default, sitting right alongside the HTML file it's styling.</p>
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;"><p>
 <strong>💡 Teacher tip:</strong> your students won't create or name this file themselves, AI generates style.css automatically the moment it builds a page. What matters is that they recognize it when they see it in Web Lab, and know that any color, font, or spacing change they ask for gets written here.</p>
 </div>
+
+
+
+
 MARKDOWN

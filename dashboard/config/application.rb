@@ -26,6 +26,11 @@ require 'cdo/pycall'
 # vite_ruby knows where to find the frontend code.
 ENV["VITE_RUBY_ROOT"] = vite_dir
 
+# Read the manifest from the directory we serve, dashboard/public/frontend-studio.
+# The local dist directory is stale on any machine that downloaded the package
+# instead of building it, and its tags then name assets that are not there.
+ENV["VITE_RUBY_PUBLIC_DIR"] = dashboard_dir('public') unless rack_env?(:development)
+
 # Our CI process runs a custom build step before assets:precompile, so we skip
 # Vite Ruby's automatic extension and install hooks to avoid redundant/conflicting builds.
 # These must be set before Bundler.require loads vite_ruby, which checks them at load time.
@@ -159,6 +164,8 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
+      legacy-prerequisites.css
+      legacy-styles.css
     )
 
     # Support including code from directories outside of the normal Rails directory

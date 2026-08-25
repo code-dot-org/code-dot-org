@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T03:05:37.000Z",
   "level_num": "custom",
@@ -41,8 +40,10 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoIXcAJHr7b3ZTa\nNR78evAJmDd0eXoMuU7COFQFXLThDUUdzCuDG7gJONiHt8RjHQvXrfLRkqQX\naCUV6L3YUayREEsL8IHvftW2/45QHzpA1hFMZnTN06kaMjMIvSpOGGeZ9n0a\nZ7Eg5pdYHKI8MZHVCfoEme8RZ5CNCQ7c9SdYqpWBrITwpcnyY7BNRyufve9A\nk2Gol4RrxoQAMFPwzOHmoyAYgHV9CoNncMTGbEwPxbqnlJ8bzYn0taLMHkHY\n7BYhYBjn1gmkv6N9lQ/W3Vmq0I/LBh5UBwXNoYDhu4m/UyHgUAHGRJxJ/f9M\nHUxcYbyq4oCTn9fMUh8G84IZ+eTNgrhrmMqDeqvejjgqDT4hXtCgfhfBRbLj\ntSzlsKIjYaM8nAfMvNFj+nYWQK2sXDvHmJBGpnIMMjzP8tpUeOQLKbHgpet+\nIkN57lMu73JVQMm/SEINeGe7KjEbrFlahQ0x8XncJsBibLdxlGhhKIJ4nVH0\nWJr7JE2Ww/fzl/KUAHisbYQ8Zticc6G/n4RyrC8gSBg19S7icJeHK8WocBUJ\nj2qMZWMZw+ketksfbHRzrVI=\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 03:05:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 03:06:47 +0000\",\"changed\":[\"teacher_markdown\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 03:08:11 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 03:05:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 03:06:47 +0000\",\"changed\":[\"teacher_markdown\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 03:08:11 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:25:32 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

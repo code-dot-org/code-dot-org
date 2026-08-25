@@ -1,6 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
-import type {PyodideInterface} from 'pyodide';
+import {version, type PyodideInterface} from 'pyodide';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
@@ -11,6 +11,7 @@ import {
 import {PyodideMessage, PyodidePathContent} from '../types';
 
 import {HIDDEN_FOLDERS} from './constants';
+import {ExternalFileContents} from './externalFileContents';
 import {TEARDOWN_CODE} from './patches';
 
 // Returns the cleanup code to be run after the user's code.
@@ -40,17 +41,26 @@ if "${filePath}" in sys.modules:
 
 // Write source to the Pyodide file system.
 // This enables python files to import from other files in the project.
+// externalFiles holds the bytes of any url-backed file,
+// whose contents are not carried in the source.
 export function writeSource(
   source: MultiFileSource,
   currentFolderId: string,
   currentPath: string,
-  pyodide: PyodideInterface
+  pyodide: PyodideInterface,
+  externalFiles: ExternalFileContents = {}
 ) {
   // Find all files in this folder and write them.
   Object.values(source.files)
     .filter(f => f.folderId === currentFolderId)
     .forEach(file => {
-      pyodide.FS.writeFile(`${currentPath}${file.name}`, file.contents);
+      const contents = file.url ? externalFiles[file.id] : file.contents;
+      // A url-backed file whose fetch failed has no bytes to write. Leave it
+      // out so python reports a missing file rather than an unreadable one.
+      if (contents === undefined) {
+        return;
+      }
+      pyodide.FS.writeFile(`${currentPath}${file.name}`, contents);
     });
   Object.values(source.folders)
     .filter(f => f.parentId === currentFolderId)
@@ -59,7 +69,7 @@ export function writeSource(
       const newPath = `${currentPath}${folder.name}`;
       createFolderIfNotExists(newPath, pyodide);
       // Recurse to write all children of the folder (files and folders).
-      writeSource(source, folder.id, newPath + '/', pyodide);
+      writeSource(source, folder.id, newPath + '/', pyodide, externalFiles);
     });
 }
 
@@ -108,12 +118,14 @@ function updateAndDeleteSourceWithContents(
   contents.forEach(content => {
     const fullPath = currentPath + content.name;
     if (pyodide.FS.isFile(content.mode)) {
+      const file = Object.values(source.files).find(
+        f => f.name === content.name && f.folderId === folderId
+      );
       // Only update the source with files that are not skipped.
-      // We still want to delete skipped files below.
-      if (!skippedFilenames.includes(content.name)) {
-        const file = Object.values(source.files).find(
-          f => f.name === content.name && f.folderId === folderId
-        );
+      // We still want to delete skipped files below. A url-backed file keeps
+      // its bytes in S3, not in the source, so reading it back as text would
+      // overwrite the project with garbage.
+      if (!skippedFilenames.includes(content.name) && !file?.url) {
         try {
           const newContents = pyodide.FS.readFile(fullPath, {
             encoding: 'utf8',
@@ -193,6 +205,14 @@ function updateAndDeleteSourceWithContents(
   });
 }
 
+// Wheels of ours that are fetched only for a program that imports them, keyed by
+// the module name a student writes. The rest of what we ship is loaded at startup
+// (see loadPackages in pyodideWebWorker); the theater wheel is 3 MB of instrument
+// samples and fonts, which is too much to charge every Python Lab page for.
+export const ON_DEMAND_PACKAGE_URLS: Record<string, string> = {
+  theater: `/blockly/js/pyodide/${version}/theater-0.4.0-py3-none-any.whl`,
+};
+
 export async function importPackagesFromFiles(
   source: MultiFileSource,
   pyodide: PyodideInterface
@@ -200,10 +220,38 @@ export async function importPackagesFromFiles(
   // Loading can throw erroneous console errors if a user has a package with the same name as one
   // in the pyodide list of packages that we have not put in our repo. We can ignore these,
   // any actual import errors will be caught by the runPythonAsync call.
+  const wheelUrls = new Set<string>();
   for (const file of Object.values(source.files)) {
     if (file.name.endsWith('.py')) {
       await pyodide.loadPackagesFromImports(file.contents);
+      for (const moduleName of findImportedModules(file.contents, pyodide)) {
+        const wheelUrl = ON_DEMAND_PACKAGE_URLS[moduleName];
+        if (wheelUrl) {
+          wheelUrls.add(wheelUrl);
+        }
+      }
     }
+  }
+  if (wheelUrls.size > 0) {
+    // Pyodide skips a package it already holds, so a rerun does not refetch.
+    await pyodide.loadPackage([...wheelUrls]);
+  }
+}
+
+// The top-level modules a file imports, read with the same helper Pyodide uses
+// for loadPackagesFromImports: an import written in a comment or a string does
+// not count, and a file that does not parse yields nothing.
+function findImportedModules(
+  contents: string,
+  pyodide: PyodideInterface
+): string[] {
+  const findImports = pyodide.pyimport('pyodide.code.find_imports');
+  const imports = findImports(contents);
+  try {
+    return imports.toJs();
+  } finally {
+    imports.destroy();
+    findImports.destroy();
   }
 }
 

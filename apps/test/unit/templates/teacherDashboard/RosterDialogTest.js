@@ -1,5 +1,6 @@
 import {Button as MuiButton} from '@mui/material';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import $ from 'jquery';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -136,6 +137,47 @@ describe('RosterDialog', () => {
           button => button.prop('id') === 'import-button-and-redirect'
         )
     ).to.have.lengthOf(1);
+  });
+
+  it('sends completed analytics event with the created section id after import succeeds', async () => {
+    const rosterDialog = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[fakeClassroom]}
+        loadError={null}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+      />
+    );
+    rosterDialog.instance().setState({selectedId: '2'});
+    rosterDialog.instance().redirectToEditSectionPage = jest.fn();
+
+    const getJSONStub = sinon.stub($, 'getJSON').callsFake(() => ({
+      done(cb) {
+        cb({id: 42});
+        return this;
+      },
+      fail() {
+        return this;
+      },
+    }));
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    await rosterDialog.instance().handleRedirect();
+
+    assert(analyticsSpy.calledOnce);
+    assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
+    assert.deepEqual(analyticsSpy.getCall(0).args[1], {
+      oauthSource: OAuthSectionTypes.google_classroom,
+      sectionId: 42,
+    });
+    expect(
+      rosterDialog.instance().redirectToEditSectionPage.mock.calls
+    ).to.deep.equal([[42]]);
+
+    analyticsSpy.restore();
+    getJSONStub.restore();
   });
 
   it('should dispatch handleImportFailure when the redirect ajax fails', async () => {

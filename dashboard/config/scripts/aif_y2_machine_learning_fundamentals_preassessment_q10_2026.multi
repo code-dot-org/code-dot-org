@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q10-2026'
+
+wrong 'A classifier uses features to predict a numerical value'
+wrong 'A classifier uses labels to predict a numerical value'
+wrong 'A classifier uses labels to predict a set of features'
+right 'A classifier uses features to predict a label'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following accurately describes the behavior of a classifier?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Building Classifiers
+MARKDOWN

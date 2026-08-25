@@ -128,6 +128,8 @@ const Harness: FC<{
 }) => {
   const [isRecording, setIsRecording] = useState(false);
   const [hasRecording, setHasRecording] = useState(false);
+  const [, setEvaluationStatus] = useState('');
+  const [, setChallengeResponseId] = useState(0);
   return (
     <WhiteboardChallenge
       challengeId={challengeId}
@@ -140,6 +142,8 @@ const Harness: FC<{
       explanationType={explanationType}
       lessonId={1}
       textExplanation={textExplanation}
+      setEvaluationStatus={setEvaluationStatus}
+      setChallengeResponseId={setChallengeResponseId}
     />
   );
 };

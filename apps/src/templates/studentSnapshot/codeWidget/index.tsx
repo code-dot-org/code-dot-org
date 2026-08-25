@@ -8,6 +8,7 @@ import {
 import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 
+import {CodeWidgetLevelInfo, INSTRUCTIONS_TAB_ID} from './types';
 import Workspace from './Workspace';
 
 import styles from './codeWidget.module.scss';
@@ -20,6 +21,8 @@ interface CodeWidgetProps {
   gridWidth?: number;
   gridHeight?: number;
   loading?: boolean;
+  levelInfo?: CodeWidgetLevelInfo;
+  emptyMessage?: string;
 }
 
 const CodeWidget = ({
@@ -28,6 +31,8 @@ const CodeWidget = ({
   gridWidth = 2,
   gridHeight = 2,
   loading,
+  levelInfo,
+  emptyMessage,
 }: CodeWidgetProps) => {
   const [theme, setTheme] = useState<'Light' | 'Dark'>('Light');
 
@@ -51,7 +56,7 @@ const CodeWidget = ({
       );
       setSelectedFileId(indexHtmlFile?.id ?? projectFiles[0].id);
     } else {
-      setSelectedFileId('');
+      setSelectedFileId(INSTRUCTIONS_TAB_ID);
     }
   }, [projectFiles]);
 
@@ -87,6 +92,8 @@ const CodeWidget = ({
           selectedFileId={selectedFileId}
           onFileSelect={setSelectedFileId}
           theme={theme}
+          levelInfo={levelInfo}
+          emptyMessage={emptyMessage}
         />
       </div>
     </WidgetTemplate>

@@ -955,11 +955,12 @@ wheels = [
 
 [[package]]
 name = "theater"
-version = "0.1.0"
+version = "0.4.0"
 source = { editable = "python/pythonlab/theater" }
 
 [package.dev-dependencies]
 dev = [
+    { name = "numpy" },
     { name = "pillow" },
     { name = "pytest" },
 ]
@@ -968,6 +969,7 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "numpy", specifier = ">=1.26" },
     { name = "pillow", specifier = ">=10" },
     { name = "pytest", specifier = ">=8" },
 ]

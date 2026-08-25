@@ -17,6 +17,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'applab',
   'weblab',
   'javalab',
+  'pythonlab',
 ];
 
 const MODERATION_SPAN_OP = 'image.moderate';

@@ -91,3 +91,26 @@ reports `strictly-necessary` only and `subscribe` never fires (deny until
 a CMP reports otherwise). Consumers are written once against the module
 and behave correctly with no CMP present (standalone dev, unit tests):
 optional categories read as not consented.
+
+## Settlement
+
+`categories` answers "what did the CMP say". A consumer that must not act
+before consent is known needs the other question — "has the CMP finished
+saying it" — which lives in `settled.ts`:
+
+```typescript
+import {
+  isConsentSettled,
+  whenConsentSettled,
+} from '@code-dot-org/core/plugins/consent';
+```
+
+Settled means the wait is over, not that anything was granted. The plugin
+settles the source when its OneTrust promise resolves (with or without a
+usable SDK), when that promise rejects, and synchronously when the page
+carries no CMP at all. A OneTrust promise that never resolves never settles,
+and consumers gated on it stay blocked — which is the intended outcome rather
+than a silent fallback to "assume no consent source".
+
+Because settlement is reported by the plugin, a consumer that gates on it
+only works when `consentPlugin` is registered, and registered before it.

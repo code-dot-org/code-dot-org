@@ -1,0 +1,50 @@
+name 'pl-aif-lesson-5-overview-JS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Lesson 5: JS Functions, Conditionals, and Loops</h1>
+
+<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 9-11</div>
+
+<p>This lesson prepares you to teach three curriculum lessons:</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 9:</b> Writing Reusable Functions</p>
+<a href="[LESSON 9 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 9</a>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 10:</b> Making Decisions with If/Else</p>
+<a href="[LESSON 10 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 10</a>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>Curriculum Lesson 11:</b> Loops and Counted Repetition</p>
+<a href="[LESSON 11 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 11</a>
+</div>
+
+<hr>
+
+<p><b>In this lesson, you'll:</b></p>
+<p style="margin: 0 0 6px 0;">• Step through defining and calling a function, panel by panel</p>
+<p style="margin: 0 0 6px 0;">• Compare named and anonymous functions, and see abstraction in action</p>
+<p style="margin: 0 0 6px 0;">• Trace a flowchart's decision diamond into a working if/else, live</p>
+<p style="margin: 0 0 6px 0;">• Run a real for loop and watch start, stop, and step control its output</p>
+<p style="margin: 0;">• Diagnose a genuine off-by-one bug using the Loop Debugging Checklist</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+<p><b>💡 Notice as you explore:</b> how a checklist can flag that something's wrong without actually diagnosing why, and that the debugging skill worth teaching is knowing the difference.</p>
+</div>
+
+<hr>
+
+<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 1</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 2</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 3</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 4</div>
+  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px;">Lesson 5</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 12px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 6</div>
+</div>
+MARKDOWN
