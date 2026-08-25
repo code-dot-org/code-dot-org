@@ -35,6 +35,22 @@ import {CELL_SIZE} from './world';
 
 const NOOP = () => {};
 
+// How long a run waits for the project's images before going ahead without
+// the stragglers (see whenAnimationsAreReadyOrGivenUp_).
+const IMAGE_LOAD_GRACE_MS = 10000;
+
+// The animation list restricted to images whose data has arrived.
+function loadedAnimations(list) {
+  const orderedKeys = (list.orderedKeys || []).filter(
+    key => list.propsByKey[key]?.dataURI
+  );
+  const propsByKey = {};
+  orderedKeys.forEach(key => {
+    propsByKey[key] = list.propsByKey[key];
+  });
+  return {orderedKeys, propsByKey};
+}
+
 // Default sprite size for non-platformer scenes on platform-pool levels;
 // platformer scenes use CELL_SIZE (one grid cell). A later World-tab UI may
 // let the user pick these per scene.
@@ -482,7 +498,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // entries are skipped and trims are cached, so re-runs are cheap.
     await this.p5Wrapper.preloadSpriteImages(
       await trimAnimationListImages(
-        this.preloadAnimationsOverride || getStore().getState().animationList
+        loadedAnimations(
+          this.preloadAnimationsOverride || getStore().getState().animationList
+        )
       ),
       {multiFrame: true}
     );
@@ -529,31 +547,50 @@ export default class SpriteLab2Engine extends SpriteLab {
   // preloadBackgrounds() wedges p5 forever on a failed loadImage (the preload
   // count never decrements).
   preloadLabAssets() {
-    // A single failed image never resolves whenAnimationsAreReady, and the
-    // wedge is invisible; surface what it's stuck on.
-    const watchdog = setTimeout(() => {
+    return this.preloadTrimmedSpriteImages_();
+  }
+
+  /**
+   * Wait for the project's images to load, but not forever: the store never
+   * marks an image whose fetch failed (an asset deleted since an older
+   * version was saved, say), and one such image used to wedge the whole lab
+   * with a blank playspace. After the grace period the run goes ahead with
+   * what has loaded; a sprite asking for an image that never arrived is
+   * skipped like any missing costume, and a later re-run picks up anything
+   * that finished loading meanwhile.
+   */
+  async whenAnimationsAreReadyOrGivenUp_() {
+    let timer;
+    const gaveUp = await Promise.race([
+      this.whenAnimationsAreReady().then(() => false),
+      new Promise(resolve => {
+        timer = setTimeout(() => resolve(true), IMAGE_LOAD_GRACE_MS);
+      }),
+    ]);
+    clearTimeout(timer);
+    if (gaveUp) {
       const list = getStore().getState().animationList;
       const pending = list.orderedKeys
         .filter(key => !list.propsByKey[key]?.loadedFromSource)
         .map(key => list.propsByKey[key]?.name || key);
-      if (pending.length) {
-        console.warn(
-          'SpriteLab2: still waiting on animation image loads after 8s:',
-          pending.join(', '),
-          '— check the Network tab for failing asset requests.'
-        );
-      }
-    }, 8000);
-    return this.preloadTrimmedSpriteImages_().finally(() =>
-      clearTimeout(watchdog)
-    );
+      console.warn(
+        `SpriteLab2: ${pending.join(', ')} did not load within ` +
+          `${IMAGE_LOAD_GRACE_MS / 1000}s; running without ` +
+          `${pending.length === 1 ? 'it' : 'them'}. Check the Network tab ` +
+          'for failing asset requests.'
+      );
+    }
   }
 
   // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
+  // Only images that have loaded are handed to p5: preloading an image with
+  // no data logs an error per image and adds nothing.
   async preloadTrimmedSpriteImages_() {
-    await this.whenAnimationsAreReady();
+    await this.whenAnimationsAreReadyOrGivenUp_();
     return this.p5Wrapper.preloadSpriteImages(
-      await trimAnimationListImages(getStore().getState().animationList),
+      await trimAnimationListImages(
+        loadedAnimations(getStore().getState().animationList)
+      ),
       {multiFrame: true}
     );
   }
