@@ -52,13 +52,15 @@ const useProductTour = ({
 
     tour.on('start', () => onStartRef.current && onStartRef.current());
 
-    // First displayed step counts as seen; complete/cancel miss hide and refresh.
+    // First displayed step counts as seen. Cancel doesn't fire for a level change
+    // or when the page is refreshed.
     tour.on('show', () => trySetLocalStorage(localStorageKey, 'yes'));
 
     tour.on('complete', () => {
       onCompleteRef.current && onCompleteRef.current();
     });
 
+    // Cancel is fired when user clicks on the "x" button or escape.
     tour.on('cancel', () => {
       const currentIndex = tour.currentStep
         ? tour.steps.indexOf(tour.currentStep)
