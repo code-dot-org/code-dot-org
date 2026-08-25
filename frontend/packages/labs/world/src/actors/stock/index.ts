@@ -17,7 +17,9 @@ import {GROUND_SPRITE, groundActor} from './ground';
 import {healthBarActor} from './healthBar';
 import {labelActor} from './label';
 import {PLAYER_ANIMATION, playerActor} from './player';
+import {PORTRAIT_SPRITE, portraitActor} from './portrait';
 import {progressBarActor} from './progressBar';
+import {speechBoxActor} from './speechBox';
 
 /** One entry in the library. */
 export interface StockActor {
@@ -97,6 +99,24 @@ export const STOCK_ACTORS: readonly StockActor[] = [
       'A label you can press. It raises “is clicked with” on itself, so a handler needs no hit test of its own.',
     requires: ['Writing', 'Mouse'],
     contents: buttonActor,
+  },
+  {
+    id: 'speechBox',
+    name: 'Speech Box',
+    description:
+      'A panel with room for a sentence — what a line of dialogue is read from. Give it the “Reveals Text” ability and it types itself out.',
+    requires: ['Writing'],
+    contents: speechBoxActor,
+  },
+  {
+    id: 'portrait',
+    name: 'Portrait',
+    description:
+      'The character whose turn it is to speak. It starts invisible and carries two movements of its own, “enters” and “leaves”, so a scene can bring somebody on and take them off again.',
+    // No rule at all: a picture and two tweens, and a tween is not a rule.
+    requires: [],
+    sprites: [PORTRAIT_SPRITE],
+    contents: portraitActor,
   },
   {
     id: 'coin',

@@ -215,3 +215,22 @@ export const drawText = (x: number, y: number) => ({
     ANCHOR: textOf('TextAnchorProperty'),
   },
 });
+
+/**
+ * `draw paragraph …`, with every part of it read off the actor.
+ *
+ * `drawText`'s counterpart for a block of words rather than one. The column is
+ * a number the caller gives, because it is a fact about the BOX and not about
+ * the words: a speech box is as wide as it is drawn, whatever is said in it.
+ */
+export const drawParagraph = (x: number, y: number, width: number) => ({
+  type: 'world_draw_paragraph',
+  inputs: {
+    TEXT: textOf('TextProperty'),
+    WIDTH: num(width),
+    X: num(x),
+    Y: num(y),
+    SIZE: textOf('TextSizeProperty'),
+    ANCHOR: textOf('TextAnchorProperty'),
+  },
+});

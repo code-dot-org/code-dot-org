@@ -96,6 +96,12 @@ describe('every stock actor', () => {
     // traits would have said it needed nothing but Attachment, and the file
     // would not have generated in a project without Health.
     const slug = (name: string) => name.replace(/[^A-Za-z0-9]/g, '');
+    // THE FOUNDATION IS NOT A DEPENDENCY. `Space` and `Appearance` are what
+    // every actor has without electing anything, so they are in play in every
+    // project and there is nothing to import — `stockRuleByName` does not know
+    // them, and a `requires` naming one would resolve to nothing. A Portrait
+    // setting its own opacity names Appearance and needs no rule at all.
+    const foundation = new Set(['Space', 'Appearance']);
     for (const actor of STOCK_ACTORS) {
       const elected = [...actor.contents.matchAll(/"TRAIT": "([^#]+)#/g)].map(
         match => slug(match[1]),
@@ -110,7 +116,10 @@ describe('every stock actor', () => {
         ),
       ]
         .map(match => match[1])
-        .filter(name => name.toLowerCase() !== mine.toLowerCase());
+        .filter(
+          name =>
+            name.toLowerCase() !== mine.toLowerCase() && !foundation.has(name),
+        );
       const named = [...new Set([...elected, ...read])].sort();
 
       expect(named).toEqual([...actor.requires].map(slug).sort());
