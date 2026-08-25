@@ -41,16 +41,17 @@ export interface CharacterPoseSpec {
  * picks the frame from the sprite's vertical speed (see jumpFrame) — so its
  * delay only paces the preview.
  *
- * The walk is a half cycle: the four keys of one stride — contact, down,
- * passing, up — repeated, so the same leg always leads. Ten live runs
- * showed the image model draws that half readily and the other half — the
- * near leg back, the near arm swung forward across the body — almost never,
- * so the second four frames only ever repeated the first. Four frames at
- * twice the delay walk at the same speed for half the pictures.
+ * The walk is the full eight-key cycle again, on trial. Ten smooth-style
+ * runs never once drew the near arm swung forward across the body, so the
+ * second half of the cycle only repeated the first and the walk was cut to
+ * four keys; pixel style then produced that arm in two runs running. The
+ * open question is whether it also swaps the leading leg in frames 5–8. If
+ * not, back to {frameCount: 4, frameDelay: 6} — the same walking speed for
+ * half the pictures.
  */
 export const CHARACTER_POSES: CharacterPoseSpec[] = [
   {pose: 'stand', frameCount: 2, frameDelay: 15},
-  {pose: 'walk', frameCount: 4, frameDelay: 6},
+  {pose: 'walk', frameCount: 8, frameDelay: 3},
   {pose: 'jump', frameCount: 2, frameDelay: 8},
 ];
 
