@@ -153,36 +153,25 @@ namespace :analytics_export do
     Rails.application.eager_load!
 
     env = args[:environment_type]
-    exported_tables = AnalyticsExportable.valid_exported_models.to_set(&:table_name)
+    status = Cdo::Aws::Redshift::ZeroEtl.export_status(
+      client: Cdo::Aws::Redshift::MaterializedViewManager.redshift_client,
+      environment_type: env,
+      table_names: AnalyticsExportable.exported_table_names
+    )
 
-    client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
-    rows_by_table = Cdo::Aws::Redshift::ZeroEtl.all_table_states(client: client, environment_type: env).
-      index_by {|row| row['table_name']}
-
-    by_state = Hash.new(0)
-    missing = []
-    unhealthy = []
-    exported_tables.sort.each do |table|
-      row = rows_by_table[table]
-      # No SVV row means Zero ETL isn't replicating this exported table at all (e.g. excluded as
-      # incompatible, or not yet discovered) — a gap worth surfacing distinctly from a bad state.
-      next missing << table if row.nil?
-
-      by_state[row['table_state']] += 1
-      unhealthy << row unless Cdo::Aws::Redshift::ZeroEtl::HEALTHY_TABLE_STATES.include?(row['table_state'])
+    puts "Zero ETL replication status — env=#{env}, #{status[:total]} exported table(s)"
+    unless status[:by_state].empty?
+      puts "By state: #{status[:by_state].sort.map {|state, count| "#{count} #{state}"}.join(', ')}"
     end
 
-    puts "Zero ETL replication status — env=#{env}, #{exported_tables.size} exported table(s)"
-    puts "By state: #{by_state.sort.map {|state, count| "#{count} #{state}"}.join(', ')}" unless by_state.empty?
-
-    unless unhealthy.empty?
-      puts "\nNot in a healthy state (#{unhealthy.length}):"
-      unhealthy.each {|row| puts "  #{row['schema_name']}.#{row['table_name']} #{row['table_state']} reason=#{row['reason']}"}
+    unless status[:unhealthy].empty?
+      puts "\nNot in a healthy state (#{status[:unhealthy].length}):"
+      status[:unhealthy].each {|row| puts "  #{row['schema_name']}.#{row['table_name']} #{row['table_state']} reason=#{row['reason']}"}
     end
 
-    unless missing.empty?
-      puts "\nNot replicating — no integration row (#{missing.length}):"
-      missing.sort.each {|table| puts "  #{table}"}
+    unless status[:missing].empty?
+      puts "\nNot replicating — no integration row (#{status[:missing].length}):"
+      status[:missing].each {|table_name| puts "  #{table_name}"}
     end
   end
 

@@ -278,6 +278,57 @@ class TestZeroEtl < Minitest::Test
     assert_equal 'users', result.first['table_name']
   end
 
+  def test_export_status_buckets_tables_by_state
+    client = mock('client')
+    client.stubs(:execute).returns(
+      [
+        {'schema_name' => 'dashboard_production', 'table_name' => 'users', 'table_state' => 'Synced'},
+        {'schema_name' => 'dashboard_production', 'table_name' => 'levels', 'table_state' => 'Synced'},
+        {'schema_name' => 'pegasus', 'table_name' => 'hoc_activity', 'table_state' => 'ResyncInitiated'},
+      ]
+    )
+
+    status = ZeroEtl.export_status(
+      client: client, environment_type: 'production', table_names: %w[users levels hoc_activity]
+    )
+    assert_equal 3, status[:total]
+    assert_equal({'Synced' => 2, 'ResyncInitiated' => 1}, status[:by_state])
+    assert_empty status[:unhealthy]
+    assert_empty status[:missing]
+  end
+
+  def test_export_status_separates_unhealthy_from_missing
+    client = mock('client')
+    client.stubs(:execute).returns(
+      [
+        {'schema_name' => 'dashboard_production', 'table_name' => 'users', 'table_state' => 'Synced'},
+        {'schema_name' => 'pegasus', 'table_name' => 'hoc_activity', 'table_state' => 'Failed', 'reason' => 'no primary key'},
+      ]
+    )
+
+    status = ZeroEtl.export_status(
+      client: client, environment_type: 'production', table_names: %w[users hoc_activity never_replicated]
+    )
+    assert_equal 3, status[:total]
+    assert_equal ['hoc_activity'], status[:unhealthy].map {|row| row['table_name']}.sort
+    assert_equal ['never_replicated'], status[:missing]
+  end
+
+  def test_export_status_ignores_replicated_tables_we_do_not_export
+    client = mock('client')
+    client.stubs(:execute).returns(
+      [
+        {'schema_name' => 'dashboard_production', 'table_name' => 'users', 'table_state' => 'Synced'},
+        {'schema_name' => 'pegasus', 'table_name' => 'schema_info', 'table_state' => 'Failed', 'reason' => 'no primary key'},
+      ]
+    )
+
+    status = ZeroEtl.export_status(client: client, environment_type: 'production', table_names: %w[users])
+    assert_equal 1, status[:total]
+    assert_empty status[:unhealthy]
+    assert_empty status[:missing]
+  end
+
   def test_apply_required_integration_settings_enables_all_required_flags_on_the_redshift_database
     client = mock('client')
     client.expects(:execute).with(

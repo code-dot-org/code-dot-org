@@ -160,6 +160,39 @@ module Cdo
           SQL
         end
 
+        # Replication status of the tables we intend to export, cross-referencing `all_table_states`
+        # against `table_names`. Reports a table with no integration row separately from one in a bad
+        # state: no row means Zero ETL is not replicating it at all (excluded as incompatible, or not
+        # yet discovered), which is a different problem from a table that is replicating badly.
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol, String]
+        # @param table_names [Array<String>] BARE table names, as the catalog reports them (see
+        #   `AnalyticsExportable.exported_table_names`).
+        # @return [Hash]
+        #   :total     [Integer] how many tables were checked.
+        #   :by_state  [Hash{String => Integer}] table count per SVV_INTEGRATION_TABLE_STATE state.
+        #   :unhealthy [Array<Hash>] SVV rows not in HEALTHY_TABLE_STATES.
+        #   :missing   [Array<String>] table names with no SVV row at all.
+        def self.export_status(client:, environment_type:, table_names:)
+          names = Array(table_names).sort
+          rows_by_table = all_table_states(client: client, environment_type: environment_type).
+            index_by {|row| row['table_name']}
+
+          by_state = Hash.new(0)
+          missing = []
+          unhealthy = []
+          names.each do |table_name|
+            row = rows_by_table[table_name]
+            next missing << table_name if row.nil?
+
+            by_state[row['table_state']] += 1
+            unhealthy << row unless HEALTHY_TABLE_STATES.include?(row['table_state'])
+          end
+
+          {total: names.length, by_state: by_state, unhealthy: unhealthy, missing: missing}
+        end
+
         # `ALTER DATABASE ... INTEGRATION SET` flags the Zero ETL target database MUST have enabled for
         # our data to replicate — not tunable knobs, but a fixed precondition of this pipeline:
         #   ACCEPTINVCHARS  — replace invalid VARCHAR characters with `?` rather than failing the row.
