@@ -52,8 +52,10 @@ const useProductTour = ({
 
     tour.on('start', () => onStartRef.current && onStartRef.current());
 
+    // First displayed step counts as seen; complete/cancel miss hide and refresh.
+    tour.on('show', () => trySetLocalStorage(localStorageKey, 'yes'));
+
     tour.on('complete', () => {
-      trySetLocalStorage(localStorageKey, 'yes');
       onCompleteRef.current && onCompleteRef.current();
     });
 
@@ -61,7 +63,6 @@ const useProductTour = ({
       const currentIndex = tour.currentStep
         ? tour.steps.indexOf(tour.currentStep)
         : 0;
-      trySetLocalStorage(localStorageKey, 'yes');
       onCancelRef.current && onCancelRef.current(currentIndex);
     });
     return tour;
