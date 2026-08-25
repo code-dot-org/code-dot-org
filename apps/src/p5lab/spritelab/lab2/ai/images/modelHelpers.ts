@@ -27,11 +27,13 @@ export function getCharacterSetImageModel() {
   return googleProvider(CHARACTER_SET_IMAGE_MODEL);
 }
 
-// How hard an image model thinks before drawing (its default is minimal).
-// Set frames think harder for the same reason they use Pro: reconciling two
-// references is a reasoning problem. Single images keep the default.
+// How hard an image model thinks before drawing. Vertex refuses the
+// parameter for the image models ("thinking_level is not supported by this
+// model", live, 2026-08-25), so it stays unset; the plumbing remains for a
+// model that does take it.
 export type ThinkingLevel = 'minimal' | 'low' | 'medium' | 'high';
-export const CHARACTER_SET_THINKING_LEVEL: ThinkingLevel = 'high';
+export const CHARACTER_SET_THINKING_LEVEL: ThinkingLevel | undefined =
+  undefined;
 
 // Output sizes the model offers. The gateway forwards provider options to
 // the model untouched, but its own copy of the Google SDK validates them
