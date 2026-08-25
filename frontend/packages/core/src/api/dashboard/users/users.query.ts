@@ -22,6 +22,7 @@ import type {
   UpdateParentEmailParams,
   UpdatePasswordParams,
   UpdateProfileParams,
+  UpdateSchoolInfoParams,
   UpdateUserTypeParams,
   UserSettings,
 } from './users.types';
@@ -403,6 +404,19 @@ export function useUpdateProfile(
 ) {
   return useSettingsMutation(
     params => api.users.updateProfile(params),
+    options,
+  );
+}
+
+export function useUpdateSchoolInfo(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, UpdateSchoolInfoParams>,
+    'mutationFn'
+  >,
+) {
+  return useSettingsMutation(
+    params => api.users.updateSchoolInfo(params),
     options,
   );
 }
