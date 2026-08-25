@@ -133,13 +133,16 @@ export const useFileUploader = ({
       }
 
       if (!isValidMimeType(file.type, validMimeTypes)) {
-        const extension = file.name.split('.').pop()?.toLowerCase() || '';
+        const fileType =
+          file.type.split('/').pop()?.toLowerCase() ||
+          file.name.split('.').pop()?.toLowerCase() ||
+          '';
         sendAnalyticsEvent(analyticsEvents.UPLOAD_UNACCEPTED_FILE, {
           fileName: file.name,
-          fileType: extension,
+          fileType,
         });
         errorCallback(
-          codebridgeI18n.invalidFileType({fileType: extension}),
+          codebridgeI18n.invalidFileType({fileType}),
           callbackArgs.current
         );
         return;
