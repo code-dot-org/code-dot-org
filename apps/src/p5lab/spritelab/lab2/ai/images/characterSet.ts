@@ -36,6 +36,15 @@ import {
   getCharacterSetImageModel,
 } from './modelHelpers';
 import {poseFigureDataURI} from './poseFigures';
+import {
+  isFigure,
+  isSolid,
+  MAX_FRAME_ATTEMPTS,
+  POSE_MATCH_THRESHOLD,
+  poseMatch,
+  silhouetteBands,
+  SilhouetteBands,
+} from './poseScore';
 import {loadImageFromBlob, removeKeyColor} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
@@ -339,6 +348,8 @@ export function placeFrame(
 interface KeyedFrame {
   canvas: HTMLCanvasElement;
   bounds: Bounds | null;
+  /** Silhouette widths, for scoring against the figure. */
+  bands: SilhouetteBands | null;
 }
 
 // Content is what is at least half opaque: a faint fringe or a ghost of a
@@ -363,7 +374,22 @@ async function keyFrame(
   return {
     canvas,
     bounds: findOpaqueBounds(data, canvas.width, canvas.height, SOLID_ALPHA),
+    bands: silhouetteBands(data, canvas.width, canvas.height, isSolid),
   };
+}
+
+/** The figure's own band widths, from its rendered PNG. */
+async function figureBands(
+  figureDataURI: string
+): Promise<SilhouetteBands | null> {
+  const img = await loadDataURI(figureDataURI);
+  const canvas = document.createElement('canvas');
+  canvas.width = img.naturalWidth;
+  canvas.height = img.naturalHeight;
+  const ctx = canvas.getContext('2d')!;
+  ctx.drawImage(img, 0, 0);
+  const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  return silhouetteBands(data, canvas.width, canvas.height, isFigure);
 }
 
 /** The keyed frame cropped to its content, as a data URI for the preview. */
@@ -465,6 +491,8 @@ export interface CharacterSetProgress {
   preview?: string;
   /** The pose that frame was drawn to, for showing its figure beside it. */
   previewPose?: {pose: CharacterPose; facing: CharacterFacing; frame: number};
+  /** How well the previewed frame matched its figure, 0–1, when scored. */
+  match?: number;
 }
 
 const POSE_LABELS: Record<CharacterPose, string> = {
@@ -486,7 +514,8 @@ export function frameLabel(plan: FramePlan): string {
 /**
  * Generate a character set as one sprite-sheet result: every pose's frames
  * in one grid, with `frames.poses` naming each range. Frames are requested
- * one at a time, in plan order, since each is drawn from ones before it.
+ * one at a time, in plan order, since each is drawn from ones before it,
+ * and a frame that misses its figure (poseScore.ts) is asked for again.
  *
  * Pixel style is keyed like a single sprite but not grid-normalized: each
  * frame would find its own grid and land at its own scale, and the frames
@@ -507,13 +536,6 @@ export async function generateCharacterSet(
   let previewPose: CharacterSetProgress['previewPose'];
   for (let i = 0; i < plan.length; i++) {
     const step = plan[i];
-    onProgress?.({
-      done: i,
-      total: plan.length,
-      label: frameLabel(step),
-      preview,
-      previewPose,
-    });
     const text = step.isBase
       ? basePrompt(prompt, options.style, key)
       : framePrompt(prompt, step, options.style, key);
@@ -526,23 +548,50 @@ export async function generateCharacterSet(
         return mirrored ? mirrorDataURI(uri) : uri;
       })
     );
+    let figure: SilhouetteBands | null = null;
     if (step.poseFigure) {
-      references.push(
-        await poseFigureDataURI(step.pose, step.frame, step.facing)
+      const figureURI = await poseFigureDataURI(
+        step.pose,
+        step.frame,
+        step.facing
       );
+      references.push(figureURI);
+      figure = await figureBands(figureURI);
     }
-    const raw = await requestFrameWithRetry(text, {
-      seed,
-      temperature: options.temperature,
-      references,
-      imageSize: CHARACTER_SET_IMAGE_SIZE,
-      model: getCharacterSetImageModel(),
-      thinkingLevel: CHARACTER_SET_THINKING_LEVEL,
-    });
-    raws.push(raw);
-    const frame = await keyFrame(raw, options.style, key);
-    keyed.push(frame);
-    const shown = framePreview(frame);
+    // Ask, score, and ask again while the frame misses its figure; keep the
+    // best. The plate has no figure and is taken as it comes.
+    let best: {raw: RawImage; frame: KeyedFrame; match: number} | null = null;
+    const attempts = figure ? MAX_FRAME_ATTEMPTS : 1;
+    for (let attempt = 0; attempt < attempts; attempt++) {
+      onProgress?.({
+        done: i,
+        total: plan.length,
+        label: frameLabel(step) + (attempt ? ` (try ${attempt + 1})` : ''),
+        preview,
+        previewPose,
+        match: best?.match,
+      });
+      const raw = await requestFrameWithRetry(text, {
+        seed: seed + attempt,
+        temperature: options.temperature,
+        references,
+        imageSize: CHARACTER_SET_IMAGE_SIZE,
+        model: getCharacterSetImageModel(),
+        thinkingLevel: CHARACTER_SET_THINKING_LEVEL,
+      });
+      const frame = await keyFrame(raw, options.style, key);
+      const match =
+        figure && frame.bands ? poseMatch(frame.bands, figure).score : 1;
+      if (!best || match > best.match) {
+        best = {raw, frame, match};
+      }
+      if (match >= POSE_MATCH_THRESHOLD) {
+        break;
+      }
+    }
+    raws.push(best!.raw);
+    keyed.push(best!.frame);
+    const shown = framePreview(best!.frame);
     if (shown) {
       preview = shown;
       previewPose = step.isBase
