@@ -68,9 +68,17 @@ export async function generateChatResponse(
     levelSystemPrompt
   );
 
-  for (const message of [...storedMessages, newMessage]) {
-    messages.push(await formatChatMessage(message, buildAssetUrl));
+  // Stored history tolerates an unreadable asset -- dropping it keeps the rest
+  // of the conversation usable. The message the user just sent does not: an
+  // attachment we cannot read is worth failing on so they can retry.
+  for (const message of storedMessages) {
+    messages.push(
+      await formatChatMessage(message, buildAssetUrl, {
+        dropUnreadableAssets: true,
+      })
+    );
   }
+  messages.push(await formatChatMessage(newMessage, buildAssetUrl));
 
   // Structured-output schema, when the caller (e.g. weblab2/pythonlab AI
   // Tutor) requested one via modelParameters.responseJsonSchema. jsonSchema()
