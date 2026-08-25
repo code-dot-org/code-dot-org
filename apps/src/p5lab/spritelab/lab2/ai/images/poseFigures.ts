@@ -1,0 +1,256 @@
+// Stick-figure pose references for character sets. The model takes a pose
+// from a picture far more reliably than from prose — walk cycles described
+// limb by limb came back as eight near-identical strides — so each frame
+// request carries a figure in the exact pose, drawn here from a handful of
+// joint angles. Code-drawn on purpose: every figure shares one scale, one
+// foot line and one set of proportions, and a pose is adjusted by changing
+// a number.
+
+import {CharacterFacing, CharacterPose} from '../../characterAnimations';
+
+export const POSE_FIGURE_SIZE = 512;
+
+// Angles are degrees from straight down; positive swings toward the front
+// (the facing side). Foot angles are from horizontal-forward; 90 points the
+// toe straight down. Lengths in pixels of the 512 canvas.
+interface Limb {
+  upper: number;
+  lower: number;
+  /** Legs only. */
+  foot?: number;
+}
+
+interface FigureKey {
+  /** The leg on the viewer's side, drawn dark; and the far leg, drawn pale. */
+  nearLeg: Limb;
+  farLeg: Limb;
+  /** The arm on the viewer's side and the far arm. */
+  nearArm: Limb;
+  farArm: Limb;
+  /** Hip rise (negative) or drop (positive) from the standing height. */
+  hipDrop: number;
+  /** Torso lean, degrees forward from vertical. */
+  lean: number;
+}
+
+const HIP_Y = 300;
+const THIGH = 95;
+const SHIN = 95;
+const TORSO = 105;
+const NECK = 14;
+const HEAD_RADIUS = 30;
+const UPPER_ARM = 68;
+const FOREARM = 62;
+const FOOT = 34;
+const STROKE = 16;
+
+// The four keys of one half of a side-view walk cycle for the front and
+// back leg; the second half swaps which leg is in front.
+const WALK_HALF: Array<{
+  front: Limb;
+  back: Limb;
+  frontArm: Limb;
+  backArm: Limb;
+  hipDrop: number;
+  lean: number;
+}> = [
+  // Contact: front heel down, legs wide, back toe down.
+  {
+    front: {upper: 28, lower: 28, foot: 0},
+    back: {upper: -28, lower: -6, foot: 60},
+    frontArm: {upper: -26, lower: -26},
+    backArm: {upper: 26, lower: 52},
+    hipDrop: 4,
+    lean: 4,
+  },
+  // Down: weight onto the bent front leg, back foot lifting.
+  {
+    front: {upper: 12, lower: -6, foot: 0},
+    back: {upper: -24, lower: -42, foot: 70},
+    frontArm: {upper: -12, lower: -12},
+    backArm: {upper: 12, lower: 32},
+    hipDrop: 10,
+    lean: 5,
+  },
+  // Passing: support leg straight under the body, the other lifted past it.
+  {
+    front: {upper: 0, lower: 0, foot: 0},
+    back: {upper: 24, lower: -16, foot: 60},
+    frontArm: {upper: 2, lower: 4},
+    backArm: {upper: -2, lower: -6},
+    hipDrop: 2,
+    lean: 3,
+  },
+  // Up: pushing off the toe behind, the other leg reaching forward.
+  {
+    front: {upper: -22, lower: -22, foot: 70},
+    back: {upper: 32, lower: 8, foot: -10},
+    frontArm: {upper: 20, lower: 42},
+    backArm: {upper: -20, lower: -20},
+    hipDrop: -6,
+    lean: 5,
+  },
+];
+
+function walkKey(frame: number): FigureKey {
+  const key = WALK_HALF[frame % WALK_HALF.length];
+  // First half: the near leg is the front leg. Second half: legs swapped.
+  const nearIsFront = frame < WALK_HALF.length;
+  return {
+    nearLeg: nearIsFront ? key.front : key.back,
+    farLeg: nearIsFront ? key.back : key.front,
+    nearArm: nearIsFront ? key.frontArm : key.backArm,
+    farArm: nearIsFront ? key.backArm : key.frontArm,
+    hipDrop: key.hipDrop,
+    lean: key.lean,
+  };
+}
+
+const STAND_KEYS: FigureKey[] = [
+  {
+    nearLeg: {upper: 6, lower: 6, foot: 0},
+    farLeg: {upper: -6, lower: -6, foot: 0},
+    nearArm: {upper: 4, lower: 6},
+    farArm: {upper: -4, lower: -6},
+    hipDrop: 0,
+    lean: 0,
+  },
+  // Mid-breath: the same stance, risen a little.
+  {
+    nearLeg: {upper: 6, lower: 6, foot: 0},
+    farLeg: {upper: -6, lower: -6, foot: 0},
+    nearArm: {upper: 4, lower: 6},
+    farArm: {upper: -4, lower: -6},
+    hipDrop: -3,
+    lean: -1,
+  },
+];
+
+const JUMP_KEYS: FigureKey[] = [
+  // Rising: knees tucked, arms up.
+  {
+    nearLeg: {upper: 46, lower: -44, foot: 80},
+    farLeg: {upper: 34, lower: -36, foot: 80},
+    nearArm: {upper: 158, lower: 170},
+    farArm: {upper: -158, lower: -170},
+    hipDrop: -42,
+    lean: 6,
+  },
+  // Falling: legs reaching down, arms out for balance.
+  {
+    nearLeg: {upper: 18, lower: 10, foot: 20},
+    farLeg: {upper: -12, lower: -20, foot: 60},
+    nearArm: {upper: 92, lower: 80},
+    farArm: {upper: -92, lower: -80},
+    hipDrop: -22,
+    lean: -4,
+  },
+];
+
+export function figureKey(pose: CharacterPose, frame: number): FigureKey {
+  switch (pose) {
+    case 'walk':
+      return walkKey(frame);
+    case 'jump':
+      return JUMP_KEYS[Math.min(frame, JUMP_KEYS.length - 1)];
+    default:
+      return STAND_KEYS[Math.min(frame, STAND_KEYS.length - 1)];
+  }
+}
+
+type Point = [number, number];
+
+function reach([x, y]: Point, degrees: number, length: number): Point {
+  const a = (degrees * Math.PI) / 180;
+  return [x + length * Math.sin(a), y + length * Math.cos(a)];
+}
+
+const fmt = (n: number) => n.toFixed(1);
+
+function polyline(points: Point[], color: string): string {
+  const d = points.map(([x, y]) => `${fmt(x)},${fmt(y)}`).join(' ');
+  return `<polyline points="${d}" fill="none" stroke="${color}" stroke-width="${STROKE}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+
+function leg(hip: Point, limb: Limb, color: string): string {
+  const knee = reach(hip, limb.upper, THIGH);
+  const ankle = reach(knee, limb.lower, SHIN);
+  // Foot angle is from horizontal-forward: convert to the from-down frame.
+  const toe = reach(ankle, 90 - (limb.foot ?? 0), FOOT);
+  return polyline([hip, knee, ankle, toe], color);
+}
+
+function arm(shoulder: Point, limb: Limb, color: string): string {
+  const elbow = reach(shoulder, limb.upper, UPPER_ARM);
+  const hand = reach(elbow, limb.lower, FOREARM);
+  return polyline([shoulder, elbow, hand], color);
+}
+
+/**
+ * The SVG for one pose frame, facing right by default: a dark near side, a
+ * pale far side, on white, feet on a common line. Left-facing figures are
+ * the mirror image.
+ */
+export function poseFigureSvg(
+  pose: CharacterPose,
+  frame: number,
+  facing: CharacterFacing = 'right'
+): string {
+  const key = figureKey(pose, frame);
+  const hip: Point = [POSE_FIGURE_SIZE / 2 - 10, HIP_Y + key.hipDrop];
+  const shoulder = reach(hip, 180 + key.lean, TORSO);
+  const neck = reach(shoulder, 180 + key.lean, NECK);
+  const head = reach(neck, 180 + key.lean, HEAD_RADIUS);
+  const NEAR = '#111111';
+  const FAR = '#8a8a8a';
+  const parts = [
+    leg(hip, key.farLeg, FAR),
+    arm(shoulder, key.farArm, FAR),
+    polyline([hip, shoulder], NEAR),
+    `<circle cx="${fmt(head[0])}" cy="${fmt(
+      head[1]
+    )}" r="${HEAD_RADIUS}" fill="${NEAR}"/>`,
+    polyline([shoulder, neck], NEAR),
+    leg(hip, key.nearLeg, NEAR),
+    arm(shoulder, key.nearArm, NEAR),
+  ].join('');
+  const flip =
+    facing === 'left'
+      ? ` transform="translate(${POSE_FIGURE_SIZE},0) scale(-1,1)"`
+      : '';
+  return (
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${POSE_FIGURE_SIZE}" height="${POSE_FIGURE_SIZE}" viewBox="0 0 ${POSE_FIGURE_SIZE} ${POSE_FIGURE_SIZE}">` +
+    `<rect width="${POSE_FIGURE_SIZE}" height="${POSE_FIGURE_SIZE}" fill="#ffffff"/>` +
+    `<g${flip}>${parts}</g></svg>`
+  );
+}
+
+const figureCache = new Map<string, Promise<string>>();
+
+/** The figure as a PNG data URI (the model takes raster images), cached. */
+export function poseFigureDataURI(
+  pose: CharacterPose,
+  frame: number,
+  facing: CharacterFacing
+): Promise<string> {
+  const cacheKey = `${pose}-${frame}-${facing}`;
+  let cached = figureCache.get(cacheKey);
+  if (!cached) {
+    cached = new Promise<string>((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = POSE_FIGURE_SIZE;
+        canvas.height = POSE_FIGURE_SIZE;
+        canvas.getContext('2d')!.drawImage(img, 0, 0);
+        resolve(canvas.toDataURL('image/png'));
+      };
+      img.onerror = reject;
+      img.src =
+        'data:image/svg+xml;charset=utf-8,' +
+        encodeURIComponent(poseFigureSvg(pose, frame, facing));
+    });
+    figureCache.set(cacheKey, cached);
+  }
+  return cached;
+}

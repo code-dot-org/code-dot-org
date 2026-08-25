@@ -31,6 +31,7 @@ import {
 } from './imageGeneration';
 import {chooseKeyColor, KeyColor} from './keyColor';
 import {CHARACTER_SET_IMAGE_SIZE} from './modelHelpers';
+import {poseFigureDataURI} from './poseFigures';
 import {loadImageFromBlob, removeKeyColor} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
@@ -59,6 +60,12 @@ export interface FramePlan {
    * cycle built frame-from-frame came back as near-identical drawings.
    */
   references: FrameReference[];
+  /**
+   * Attach the stick figure for this pose (poseFigures.ts) as the last
+   * reference. Every frame but the base, which sets the design and needs
+   * no pose beyond "standing".
+   */
+  poseFigure: boolean;
 }
 
 /**
@@ -93,7 +100,13 @@ export function planCharacterFrames(): FramePlan[] {
         if (flip) {
           add(indexOf(pose, 'right', frame), true);
         }
-        plan.push({pose, facing, frame, references});
+        plan.push({
+          pose,
+          facing,
+          frame,
+          references,
+          poseFigure: plan.length > 0,
+        });
       }
     });
   });
@@ -182,14 +195,17 @@ export function framePrompt(
   style: ImageStyle,
   key: KeyColor
 ): string {
-  const references =
+  const characterImages =
     plan.references.length <= 1
-      ? 'The provided image shows this character.'
-      : 'The provided images show this character.';
+      ? 'The first provided image shows this character.'
+      : `The first ${plan.references.length} provided images show this character.`;
+  const figure = plan.poseFigure
+    ? ' The last provided image is a stick figure showing the exact pose to draw: match its body position precisely — where each leg, foot, arm and the torso are, and how far apart the feet stand — while drawing the character with its own design, not the stick figure.'
+    : '';
   return (
-    `The character: ${prompt}. ${references} Draw the same character — same ` +
-    'design, colors, proportions, outfit and art style, the same scale — in a ' +
-    `NEW pose that clearly differs from the provided images: ${
+    `The character: ${prompt}. ${characterImages}${figure} Draw the same ` +
+    'character — same design, colors, proportions, outfit and art style, the ' +
+    `same scale — in this pose: ${
       POSE_FRAME_DESCRIPTIONS[plan.pose][plan.frame]
     }. ${facingClause(plan.facing)} ${ONLY_THIS_CHARACTER} ${keyClause(
       key
@@ -496,6 +512,11 @@ export async function generateCharacterSet(
         return mirrored ? mirrorDataURI(uri) : uri;
       })
     );
+    if (step.poseFigure) {
+      references.push(
+        await poseFigureDataURI(step.pose, step.frame, step.facing)
+      );
+    }
     const raw = await requestFrameWithRetry(text, {
       seed,
       temperature: options.temperature,

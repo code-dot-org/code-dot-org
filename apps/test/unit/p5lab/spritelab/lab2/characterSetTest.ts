@@ -34,7 +34,9 @@ describe('SpriteLab2 characterSet', () => {
       facing: 'right',
       frame: 0,
       references: [],
+      poseFigure: false,
     });
+    plan.slice(1).forEach(step => expect(step.poseFigure).toBe(true));
     const keys = new Set(
       plan.map(p => `${poseKey(p.pose, p.facing)}-${p.frame}`)
     );
@@ -90,7 +92,7 @@ describe('SpriteLab2 characterSet', () => {
     const frame = framePrompt('a robot', step, 'pixel', KEY_COLORS.green);
     expect(frame).toContain('a robot');
     expect(frame).toContain('faces left');
-    expect(frame).toContain('NEW pose');
+    expect(frame).toContain('stick figure');
     expect(frame).toContain(POSE_FRAME_DESCRIPTIONS.jump[0]);
     expect(frame).toContain('pixel art');
     expect(frame).toContain('#00FF00');
