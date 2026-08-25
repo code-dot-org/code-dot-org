@@ -5,11 +5,11 @@ export {
   TurnstileDevToolsError,
 } from './types';
 export {
-  DEFAULT_TURNSTILE_MODE,
-  TURNSTILE_MODES,
-  parseTurnstileMode,
-  type TurnstileMode,
-} from './mode';
+  DEFAULT_TURNSTILE_ENFORCEMENT_MODE,
+  TURNSTILE_ENFORCEMENT_MODES,
+  parseTurnstileEnforcementMode,
+  type TurnstileEnforcementMode,
+} from './enforcementMode';
 export {
   fetchTurnstileToken,
   isTurnstileDevToolsError,

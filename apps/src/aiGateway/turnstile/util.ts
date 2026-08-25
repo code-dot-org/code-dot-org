@@ -1,11 +1,11 @@
 import type {GatewayErrorCategory} from '../logHelper';
 
+import {type TurnstileEnforcementMode} from './enforcementMode';
 import {TurnstileManager} from './manager';
-import {type TurnstileMode} from './mode';
 import {isTurnstileChallengeError} from './types';
 
 /**
- * Obtains a Turnstile token for a request whose access token carried `mode`.
+ * Obtains a Turnstile token for a request whose access token carried `enforcementMode`.
  *
  * Failure handling differs by mode, and that difference matters: in `monitor`
  * the worker tolerates a missing token, so rejecting the user's request on a
@@ -17,16 +17,18 @@ import {isTurnstileChallengeError} from './types';
  * container to document.body -- so a page that never enforces pays nothing.
  */
 export async function fetchTurnstileToken(
-  mode: TurnstileMode
+  enforcementMode: TurnstileEnforcementMode
 ): Promise<string | null> {
-  switch (mode) {
+  switch (enforcementMode) {
     case 'disabled':
       return null;
     case 'enforce':
-      return TurnstileManager.getInstance().getTurnstileToken(mode);
+      return TurnstileManager.getInstance().getTurnstileToken(enforcementMode);
     case 'monitor':
       try {
-        return await TurnstileManager.getInstance().getTurnstileToken(mode);
+        return await TurnstileManager.getInstance().getTurnstileToken(
+          enforcementMode
+        );
       } catch {
         // Swallowed on purpose. recordTurnstileOutcome has already emitted the
         // metric and the log for this failure, so the only thing dropped here
@@ -36,7 +38,7 @@ export async function fetchTurnstileToken(
     default: {
       // Adding a mode without deciding its failure behavior is a compile error
       // rather than a silent fall-through to "send nothing".
-      const unreachable: never = mode;
+      const unreachable: never = enforcementMode;
       return unreachable;
     }
   }

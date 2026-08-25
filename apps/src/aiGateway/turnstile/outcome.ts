@@ -1,6 +1,6 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
-import {type TurnstileMode} from './mode';
+import {type TurnstileEnforcementMode} from './enforcementMode';
 import {
   isTurnstileChallengeError,
   type TokenAcquisitionMode,
@@ -18,16 +18,16 @@ export const classifyTurnstileFailure = (
 
 interface TurnstileOutcome {
   /** Whether a caller was waiting on this challenge. */
-  acquisition: TokenAcquisitionMode;
+  acquisitionMode: TokenAcquisitionMode;
   /** Enforcement policy in force when the challenge started. */
-  enforcement: TurnstileMode;
+  enforcementMode: TurnstileEnforcementMode;
   durationMs: number;
   error?: unknown;
 }
 
 export function recordTurnstileOutcome({
-  acquisition,
-  enforcement,
+  acquisitionMode,
+  enforcementMode,
   durationMs,
   error,
 }: TurnstileOutcome): void {
@@ -44,15 +44,15 @@ export function recordTurnstileOutcome({
   // measurement the rollout depends on, while under `enforce` the same failure
   // is a broken request.
   Observability.metrics.count(OUTCOME_METRIC, 1, {
-    acquisition,
-    enforcement,
+    acquisition_mode: acquisitionMode,
+    enforcement_mode: enforcementMode,
     result,
     ...(reason && {reason}),
   });
 
   Observability.metrics.distribution(DURATION_METRIC, Math.round(durationMs), {
-    acquisition,
-    enforcement,
+    acquisition_mode: acquisitionMode,
+    enforcement_mode: enforcementMode,
     result,
   });
 
@@ -62,14 +62,14 @@ export function recordTurnstileOutcome({
     // error level would fill the error stream during exactly the phase we are
     // deliberately measuring.
     const log =
-      enforcement === 'monitor'
+      enforcementMode === 'monitor'
         ? Observability.logger.warn
         : Observability.logger.error;
 
     log('turnstile challenge failed', {
       feature: 'ai-gateway',
-      acquisition,
-      enforcement,
+      acquisition_mode: acquisitionMode,
+      enforcement_mode: enforcementMode,
       reason,
       durationMs: Math.round(durationMs),
       errorName: error instanceof Error ? error.name : typeof error,

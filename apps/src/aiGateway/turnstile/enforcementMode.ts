@@ -1,7 +1,7 @@
 /**
  * Turnstile enforcement mode.
  *
- * The mode is resolved server-side from the `ai-gateway-turnstile-mode` DCDO
+ * The mode is resolved server-side from the `ai-gateway-turnstile-enforcement-mode` DCDO
  * flag once per access-token request, and arrives here on that request's
  * response. The same value is also embedded as a signed claim in the access
  * token itself, which is what the gateway worker enforces on -- so the decision
@@ -14,21 +14,29 @@
  *   enforce  - solve and send; a failure fails the request, since the worker
  *              would reject it anyway.
  */
-export const TURNSTILE_MODES = ['disabled', 'monitor', 'enforce'] as const;
+export const TURNSTILE_ENFORCEMENT_MODES = [
+  'disabled',
+  'monitor',
+  'enforce',
+] as const;
 
-export type TurnstileMode = (typeof TURNSTILE_MODES)[number];
+export type TurnstileEnforcementMode =
+  (typeof TURNSTILE_ENFORCEMENT_MODES)[number];
 
-export const DEFAULT_TURNSTILE_MODE: TurnstileMode = 'disabled';
+export const DEFAULT_TURNSTILE_ENFORCEMENT_MODE: TurnstileEnforcementMode =
+  'disabled';
 
-function isTurnstileMode(value: unknown): value is TurnstileMode {
+function isTurnstileEnforcementMode(
+  value: unknown
+): value is TurnstileEnforcementMode {
   return (
     typeof value === 'string' &&
-    (TURNSTILE_MODES as readonly string[]).includes(value)
+    (TURNSTILE_ENFORCEMENT_MODES as readonly string[]).includes(value)
   );
 }
 
 /**
- * Narrows an untrusted value to a TurnstileMode.
+ * Narrows an untrusted value to a TurnstileEnforcementMode.
  *
  * The mode crosses a JSON boundary, so anything can arrive: a server too old to
  * send the field, a boolean (DCDO stores arbitrary JSON, and a YAML-loaded
@@ -36,6 +44,10 @@ function isTurnstileMode(value: unknown): value is TurnstileMode {
  * `disabled`, so a bad value can never switch enforcement on or leave the
  * browser acting on a mode the worker does not share.
  */
-export function parseTurnstileMode(value: unknown): TurnstileMode {
-  return isTurnstileMode(value) ? value : DEFAULT_TURNSTILE_MODE;
+export function parseTurnstileEnforcementMode(
+  value: unknown
+): TurnstileEnforcementMode {
+  return isTurnstileEnforcementMode(value)
+    ? value
+    : DEFAULT_TURNSTILE_ENFORCEMENT_MODE;
 }

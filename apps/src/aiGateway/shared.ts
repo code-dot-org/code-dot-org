@@ -1,7 +1,10 @@
 import AichatContextManager from '../aichat/aichatContextManager';
 import HttpClient from '../util/HttpClient';
 
-import {parseTurnstileMode, type TurnstileMode} from './turnstile/mode';
+import {
+  parseTurnstileEnforcementMode,
+  type TurnstileEnforcementMode,
+} from './turnstile/enforcementMode';
 
 export const AI_GATEWAY_URL = `https://ai-gateway.code.org`;
 
@@ -13,7 +16,7 @@ export interface GatewayAccessToken {
    * also embedded as a claim in `token`, so the browser's decision and the
    * worker's enforcement always come from the same value.
    */
-  turnstileMode: TurnstileMode;
+  turnstileEnforcementMode: TurnstileEnforcementMode;
 }
 
 export async function fetchAccessToken(): Promise<GatewayAccessToken> {
@@ -27,16 +30,18 @@ export async function fetchAccessToken(): Promise<GatewayAccessToken> {
       'Content-Type': 'application/json; charset=UTF-8',
     }
   );
-  // turnstileMode is deliberately typed as unknown rather than asserted: it is
-  // absent from servers predating the flag, and parseTurnstileMode is what
+  // turnstileEnforcementMode is deliberately typed as unknown rather than asserted: it is
+  // absent from servers predating the flag, and parseTurnstileEnforcementMode is what
   // turns anything unexpected into a safe default.
   const value = (await response.json()) as {
     token: string;
-    turnstileMode?: unknown;
+    turnstileEnforcementMode?: unknown;
   };
   return {
     token: value.token,
-    turnstileMode: parseTurnstileMode(value.turnstileMode),
+    turnstileEnforcementMode: parseTurnstileEnforcementMode(
+      value.turnstileEnforcementMode
+    ),
   };
 }
 

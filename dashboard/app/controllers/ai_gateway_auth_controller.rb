@@ -19,9 +19,9 @@ class AiGatewayAuthController < ApplicationController
   #              one with 401.
   #
   # The worker has no access to DCDO, which is why the mode travels in the JWT.
-  TURNSTILE_MODE_DCDO_KEY = 'ai-gateway-turnstile-mode'.freeze
-  TURNSTILE_MODES = %w[disabled monitor enforce].freeze
-  TURNSTILE_MODE_DEFAULT = 'disabled'.freeze
+  TURNSTILE_ENFORCEMENT_MODE_DCDO_KEY = 'ai-gateway-turnstile-enforcement-mode'.freeze
+  TURNSTILE_ENFORCEMENT_MODES = %w[disabled monitor enforce].freeze
+  TURNSTILE_ENFORCEMENT_MODE_DEFAULT = 'disabled'.freeze
 
   rescue_from CanCan::AccessDenied do
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
@@ -47,7 +47,7 @@ class AiGatewayAuthController < ApplicationController
 
     # Resolve the Turnstile mode once. Both the claim and the response field
     # below come from this single value.
-    mode = turnstile_mode
+    enforcement_mode = turnstile_enforcement_mode
 
     token_id = SecureRandom.uuid
     hostname = CDO.dashboard_hostname
@@ -70,20 +70,20 @@ class AiGatewayAuthController < ApplicationController
         script_id: aichat_context[:scriptId],
         channel_id: aichat_context[:channelId],
         lesson_id: aichat_context[:lessonId],
-        turnstile_mode: mode,
+        turnstile_enforcement_mode: enforcement_mode,
       },
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),
       'RS256'
     )
-    render json: {token: token, turnstileMode: mode}
+    render json: {token: token, turnstileEnforcementMode: enforcement_mode}
   end
 
   # DCDO stores arbitrary JSON, so the value here may be any type. A YAML-loaded
   # `off` or `on` arrives as a boolean, and a typo arrives as an unrecognized
-  # string. Anything outside TURNSTILE_MODES degrades to the default rather than
+  # string. Anything outside TURNSTILE_ENFORCEMENT_MODES degrades to the default rather than
   # reaching the worker as a claim neither side knows how to interpret.
-  private def turnstile_mode
-    mode = DCDO.get(TURNSTILE_MODE_DCDO_KEY, TURNSTILE_MODE_DEFAULT)
-    TURNSTILE_MODES.include?(mode) ? mode : TURNSTILE_MODE_DEFAULT
+  private def turnstile_enforcement_mode
+    mode = DCDO.get(TURNSTILE_ENFORCEMENT_MODE_DCDO_KEY, TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
+    TURNSTILE_ENFORCEMENT_MODES.include?(mode) ? mode : TURNSTILE_ENFORCEMENT_MODE_DEFAULT
   end
 end

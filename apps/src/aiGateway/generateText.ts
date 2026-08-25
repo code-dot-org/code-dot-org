@@ -109,8 +109,10 @@ const generateTextThroughGateway = async <
       // Turnstile mode that decides whether a challenge is needed at all. The
       // manager pre-fetches a token after every delivery, so only the first
       // call of a session waits on a challenge here.
-      const {token, turnstileMode} = await fetchAccessToken();
-      const turnstileToken = await fetchTurnstileToken(turnstileMode);
+      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const turnstileToken = await fetchTurnstileToken(
+        turnstileEnforcementMode
+      );
 
       const headers = {
         'Content-Type': 'application/json',

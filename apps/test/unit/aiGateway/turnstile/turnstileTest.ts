@@ -12,11 +12,11 @@ import {
   CHALLENGE_TIMEOUT_MS,
   TOKEN_MAX_AGE_MS,
 } from '@cdo/apps/aiGateway/turnstile/constants';
-import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
 import {
-  parseTurnstileMode,
-  type TurnstileMode,
-} from '@cdo/apps/aiGateway/turnstile/mode';
+  parseTurnstileEnforcementMode,
+  type TurnstileEnforcementMode,
+} from '@cdo/apps/aiGateway/turnstile/enforcementMode';
+import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
 import {
   fetchTurnstileToken,
   turnstileHeaders,
@@ -40,9 +40,11 @@ describe('turnstileHeaders', () => {
   });
 });
 
-describe('parseTurnstileMode', () => {
-  it.each(['disabled', 'monitor', 'enforce'])('accepts %s', mode => {
-    expect(parseTurnstileMode(mode)).toBe(mode);
+describe('parseTurnstileEnforcementMode', () => {
+  it.each(['disabled', 'monitor', 'enforce'])('accepts %s', enforcementMode => {
+    expect(parseTurnstileEnforcementMode(enforcementMode)).toBe(
+      enforcementMode
+    );
   });
 
   // The mode crosses a JSON boundary from a server that may predate the field,
@@ -52,7 +54,7 @@ describe('parseTurnstileMode', () => {
   it.each([undefined, null, false, true, 'enfroce', 1, {mode: 'enforce'}])(
     'falls back to disabled for %p',
     value => {
-      expect(parseTurnstileMode(value)).toBe('disabled');
+      expect(parseTurnstileEnforcementMode(value)).toBe('disabled');
     }
   );
 });
@@ -76,14 +78,14 @@ describe('fetchTurnstileToken', () => {
     expect(getInstanceSpy).not.toHaveBeenCalled();
   });
 
-  const enforcingModes: TurnstileMode[] = ['monitor', 'enforce'];
+  const enforcingModes: TurnstileEnforcementMode[] = ['monitor', 'enforce'];
 
-  it.each(enforcingModes)('returns the token in %s', async mode => {
+  it.each(enforcingModes)('returns the token in %s', async enforcementMode => {
     const getInstanceSpy = stubManager(
       jest.fn().mockResolvedValue('test-token')
     );
 
-    const result = await fetchTurnstileToken(mode);
+    const result = await fetchTurnstileToken(enforcementMode);
 
     expect(getInstanceSpy).toHaveBeenCalled();
     expect(result).toBe('test-token');
@@ -112,12 +114,12 @@ type TurnstileManagerPrivates = {
   nextTokenPromise: Promise<string> | null;
   nextTokenResolvedAt: number | null;
   startTokenAcquisition: () => {
-    mode: 'pre-fetch' | 'on-demand';
+    acquisitionMode: 'pre-fetch' | 'on-demand';
     token: Promise<string>;
   };
-  nextTokenOutcomeMode: {mode: 'pre-fetch' | 'on-demand'} | null;
+  nextTokenOutcomeMode: {acquisitionMode: 'pre-fetch' | 'on-demand'} | null;
   runSerializedChallenge: (outcomeMode: {
-    mode: 'pre-fetch' | 'on-demand';
+    acquisitionMode: 'pre-fetch' | 'on-demand';
   }) => Promise<string>;
   runChallenge: () => Promise<string>;
 };
@@ -144,10 +146,10 @@ describe('TurnstileManager stale pre-fetch', () => {
     m.nextTokenPromise = Promise.resolve('stale-token');
     m.nextTokenResolvedAt = Date.now() - TOKEN_MAX_AGE_MS - 1000;
 
-    const {mode, token} = m.startTokenAcquisition();
+    const {acquisitionMode, token} = m.startTokenAcquisition();
 
     expect(await token).toBe(freshToken);
-    expect(mode).toBe('on-demand');
+    expect(acquisitionMode).toBe('on-demand');
     // call #1: fresh challenge replacing stale token; call #2: schedulePrefetch after delivery
     expect(freshChallenge).toHaveBeenCalledTimes(2);
   });
@@ -163,10 +165,10 @@ describe('TurnstileManager stale pre-fetch', () => {
     m.nextTokenPromise = Promise.resolve(validToken);
     m.nextTokenResolvedAt = Date.now() - 60_000; // 1 minute old — well within limit
 
-    const {mode, token} = m.startTokenAcquisition();
+    const {acquisitionMode, token} = m.startTokenAcquisition();
 
     expect(await token).toBe(validToken);
-    expect(mode).toBe('pre-fetch');
+    expect(acquisitionMode).toBe('pre-fetch');
     // runSerializedChallenge called once for the scheduled pre-fetch, not to
     // replace the valid token.
     expect(freshChallenge).toHaveBeenCalledTimes(1);
@@ -191,7 +193,7 @@ describe('TurnstileManager challenge acquisition mode', () => {
 
     m.startTokenAcquisition();
 
-    expect(challenge).toHaveBeenCalledWith({mode: 'on-demand'});
+    expect(challenge).toHaveBeenCalledWith({acquisitionMode: 'on-demand'});
   });
 
   it('labels the speculative follow-up challenge as pre-fetch', async () => {
@@ -203,8 +205,12 @@ describe('TurnstileManager challenge acquisition mode', () => {
     const {token} = m.startTokenAcquisition();
     await token;
 
-    expect(challenge).toHaveBeenNthCalledWith(1, {mode: 'on-demand'});
-    expect(challenge).toHaveBeenNthCalledWith(2, {mode: 'pre-fetch'});
+    expect(challenge).toHaveBeenNthCalledWith(1, {
+      acquisitionMode: 'on-demand',
+    });
+    expect(challenge).toHaveBeenNthCalledWith(2, {
+      acquisitionMode: 'pre-fetch',
+    });
   });
 
   it('promotes a still-running pre-fetch to on-demand when a caller adopts it', () => {
@@ -214,14 +220,16 @@ describe('TurnstileManager challenge acquisition mode', () => {
       .spyOn(m, 'runSerializedChallenge')
       .mockResolvedValue('replacement-token');
 
-    const outcomeMode: {mode: 'pre-fetch' | 'on-demand'} = {mode: 'pre-fetch'};
+    const outcomeMode: {acquisitionMode: 'pre-fetch' | 'on-demand'} = {
+      acquisitionMode: 'pre-fetch',
+    };
     m.nextTokenPromise = new Promise(() => {}); // never settles
     m.nextTokenResolvedAt = null;
     m.nextTokenOutcomeMode = outcomeMode;
 
     m.startTokenAcquisition();
 
-    expect(outcomeMode.mode).toBe('on-demand');
+    expect(outcomeMode.acquisitionMode).toBe('on-demand');
   });
 
   it('leaves an already-resolved pre-fetch labelled pre-fetch', () => {
@@ -229,14 +237,16 @@ describe('TurnstileManager challenge acquisition mode', () => {
       TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
     jest.spyOn(m, 'runSerializedChallenge').mockResolvedValue('ignored');
 
-    const outcomeMode: {mode: 'pre-fetch' | 'on-demand'} = {mode: 'pre-fetch'};
+    const outcomeMode: {acquisitionMode: 'pre-fetch' | 'on-demand'} = {
+      acquisitionMode: 'pre-fetch',
+    };
     m.nextTokenPromise = Promise.resolve('prefetched-token');
     m.nextTokenResolvedAt = Date.now();
     m.nextTokenOutcomeMode = outcomeMode;
 
     m.startTokenAcquisition();
 
-    expect(outcomeMode.mode).toBe('pre-fetch');
+    expect(outcomeMode.acquisitionMode).toBe('pre-fetch');
   });
 });
 
@@ -265,8 +275,8 @@ describe('TurnstileManager token acquisition span', () => {
         name: 'ai-gateway.turnstile',
         op: 'ai.turnstile',
         attributes: {
-          'turnstile.acquisition': 'on-demand',
-          'turnstile.enforcement': 'enforce',
+          'turnstile.acquisition_mode': 'on-demand',
+          'turnstile.enforcement_mode': 'enforce',
           feature: 'ai-gateway',
         },
       },
@@ -285,8 +295,8 @@ describe('TurnstileManager token acquisition span', () => {
     expect(startSpanMock).toHaveBeenCalledWith(
       expect.objectContaining({
         attributes: {
-          'turnstile.acquisition': 'pre-fetch',
-          'turnstile.enforcement': 'enforce',
+          'turnstile.acquisition_mode': 'pre-fetch',
+          'turnstile.enforcement_mode': 'enforce',
           feature: 'ai-gateway',
         },
       }),

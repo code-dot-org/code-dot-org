@@ -8,8 +8,8 @@ import {
   TURNSTILE_SITE_KEY,
 } from './constants';
 import {debuggerWillPauseInAnonymousScope} from './debuggerProbe';
+import {type TurnstileEnforcementMode} from './enforcementMode';
 import {loadTurnstileScript} from './loadScript';
-import {type TurnstileMode} from './mode';
 import {recordTurnstileOutcome} from './outcome';
 import {
   TokenAcquisitionMode,
@@ -18,13 +18,13 @@ import {
 } from './types';
 
 interface TokenAcquisition {
-  mode: TokenAcquisitionMode;
+  acquisitionMode: TokenAcquisitionMode;
   token: Promise<string>;
 }
 
 // Mutable so a caller adopting a pre-fetch can relabel it before it settles.
 interface ChallengeOutcomeMode {
-  mode: TokenAcquisitionMode;
+  acquisitionMode: TokenAcquisitionMode;
 }
 
 /**
@@ -68,7 +68,7 @@ export class TurnstileManager {
   // a request that has not happened yet, so it is attributed to the policy in
   // force when it was scheduled. That is only wrong across a DCDO flip, and
   // only for the one challenge already in flight when the flag changed.
-  private enforcement: TurnstileMode = 'monitor';
+  private enforcementMode: TurnstileEnforcementMode = 'monitor';
 
   private widgetId: string | null = null;
 
@@ -95,10 +95,14 @@ export class TurnstileManager {
     return TurnstileManager.instance;
   }
 
-  async getTurnstileToken(enforcement: TurnstileMode): Promise<string> {
+  async getTurnstileToken(
+    enforcementMode: TurnstileEnforcementMode
+  ): Promise<string> {
     const start = performance.now();
-    this.enforcement = enforcement;
-    console.log(`${LOG} getTurnstileToken() called (mode=${enforcement})`);
+    this.enforcementMode = enforcementMode;
+    console.log(
+      `${LOG} getTurnstileToken() called (enforcementMode=${enforcementMode})`
+    );
 
     if (await debuggerWillPauseInAnonymousScope()) {
       console.error(
@@ -148,7 +152,7 @@ export class TurnstileManager {
 
     // The mode is decided synchronously, before the challenge is awaited, so it
     // can be attached to the span at creation.
-    const {mode, token: pendingToken} = this.startTokenAcquisition();
+    const {acquisitionMode, token: pendingToken} = this.startTokenAcquisition();
 
     const awaitTokenDelivery = async (): Promise<string> => {
       try {
@@ -175,8 +179,8 @@ export class TurnstileManager {
         name: 'ai-gateway.turnstile',
         op: 'ai.turnstile',
         attributes: {
-          'turnstile.acquisition': mode,
-          'turnstile.enforcement': enforcement,
+          'turnstile.acquisition_mode': acquisitionMode,
+          'turnstile.enforcement_mode': enforcementMode,
           feature: 'ai-gateway',
         },
       },
@@ -210,23 +214,23 @@ export class TurnstileManager {
         const p = this.nextTokenPromise;
         // This caller now awaits it, so a failure here is user-visible.
         if (age === null && this.nextTokenOutcomeMode) {
-          this.nextTokenOutcomeMode.mode = 'on-demand';
+          this.nextTokenOutcomeMode.acquisitionMode = 'on-demand';
         }
         this.nextTokenPromise = null;
         this.nextTokenResolvedAt = null;
         this.nextTokenOutcomeMode = null;
         this.schedulePrefetch();
-        return {mode: 'pre-fetch', token: p};
+        return {acquisitionMode: 'pre-fetch', token: p};
       }
     }
 
     console.log(`${LOG} Pre-fetch miss — enqueueing fresh challenge`);
-    const result = this.runSerializedChallenge({mode: 'on-demand'});
+    const result = this.runSerializedChallenge({acquisitionMode: 'on-demand'});
     result.then(
       () => this.schedulePrefetch(),
       () => {}
     );
-    return {mode: 'on-demand', token: result};
+    return {acquisitionMode: 'on-demand', token: result};
   }
 
   private schedulePrefetch(): void {
@@ -235,7 +239,7 @@ export class TurnstileManager {
       return;
     }
     console.log(`${LOG} Scheduling pre-fetch challenge`);
-    const outcomeMode: ChallengeOutcomeMode = {mode: 'pre-fetch'};
+    const outcomeMode: ChallengeOutcomeMode = {acquisitionMode: 'pre-fetch'};
     const p = this.runSerializedChallenge(outcomeMode);
     this.nextTokenPromise = p;
     this.nextTokenOutcomeMode = outcomeMode;
@@ -270,7 +274,7 @@ export class TurnstileManager {
     // Captured when the challenge is created rather than read at settle time,
     // so a DCDO flip mid-challenge cannot relabel a challenge that ran under
     // the previous policy.
-    const enforcement = this.enforcement;
+    const enforcementMode = this.enforcementMode;
 
     // Timed from chain release, not enqueue, to match CHALLENGE_TIMEOUT_MS.
     const startChallenge = () => {
@@ -280,16 +284,16 @@ export class TurnstileManager {
         .then(
           token => {
             recordTurnstileOutcome({
-              acquisition: outcomeMode.mode,
-              enforcement,
+              acquisitionMode: outcomeMode.acquisitionMode,
+              enforcementMode,
               durationMs: performance.now() - start,
             });
             return token;
           },
           error => {
             recordTurnstileOutcome({
-              acquisition: outcomeMode.mode,
-              enforcement,
+              acquisitionMode: outcomeMode.acquisitionMode,
+              enforcementMode,
               durationMs: performance.now() - start,
               error,
             });

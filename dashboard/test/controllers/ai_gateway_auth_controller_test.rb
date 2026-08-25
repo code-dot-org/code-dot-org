@@ -12,7 +12,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('block_aichat_lab_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
-    stub_turnstile_mode(AiGatewayAuthController::TURNSTILE_MODE_DEFAULT)
+    stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
     @params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],
@@ -50,15 +50,15 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
   test 'publishes the turnstile mode as both a claim and a response field' do
     %w[disabled monitor enforce].each do |mode|
-      stub_turnstile_mode(mode)
+      stub_turnstile_enforcement_mode(mode)
 
       claims = mint_and_capture_claims
 
       # The browser reads the response field to decide whether to solve a
       # challenge; the worker reads the claim to decide whether to require one.
       # Both come from a single DCDO read, so they can never disagree.
-      assert_equal mode, claims[:turnstile_mode], "claim for #{mode}"
-      assert_equal mode, JSON.parse(response.body)['turnstileMode'], "response field for #{mode}"
+      assert_equal mode, claims[:turnstile_enforcement_mode], "claim for #{mode}"
+      assert_equal mode, JSON.parse(response.body)['turnstileEnforcementMode'], "response field for #{mode}"
     end
   end
 
@@ -67,18 +67,18 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     # typo arrives as an unrecognized string. Neither may reach the worker as a
     # claim it has no branch for, and neither may turn enforcement on.
     [false, true, nil, 'enfroce', 42, {'mode' => 'enforce'}].each do |stored|
-      stub_turnstile_mode(stored)
+      stub_turnstile_enforcement_mode(stored)
 
       claims = mint_and_capture_claims
 
-      assert_equal 'disabled', claims[:turnstile_mode], "claim for #{stored.inspect}"
-      assert_equal 'disabled', JSON.parse(response.body)['turnstileMode'], "response field for #{stored.inspect}"
+      assert_equal 'disabled', claims[:turnstile_enforcement_mode], "claim for #{stored.inspect}"
+      assert_equal 'disabled', JSON.parse(response.body)['turnstileEnforcementMode'], "response field for #{stored.inspect}"
     end
   end
 
-  private def stub_turnstile_mode(value)
+  private def stub_turnstile_enforcement_mode(value)
     DCDO.stubs(:get).
-      with(AiGatewayAuthController::TURNSTILE_MODE_DCDO_KEY, AiGatewayAuthController::TURNSTILE_MODE_DEFAULT).
+      with(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DCDO_KEY, AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT).
       returns(value)
   end
 

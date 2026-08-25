@@ -38,8 +38,10 @@ async function transcribeThroughGateway(
     try {
       // Serialized, not parallel: the access token response carries the
       // Turnstile mode that decides whether a challenge is needed at all.
-      const {token, turnstileMode} = await fetchAccessToken();
-      const turnstileToken = await fetchTurnstileToken(turnstileMode);
+      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const turnstileToken = await fetchTurnstileToken(
+        turnstileEnforcementMode
+      );
 
       const formData = new FormData();
       formData.append('token', token);
