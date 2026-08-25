@@ -37,7 +37,7 @@
         "text": "**Nice!** Now switch to the **Code** tab to bring your platformer to life.",
         "after": {
           "worldBlocks": 7,
-          "worldSprite": true
+          "worldSprites": 1
         }
       },
       {
