@@ -1,10 +1,13 @@
-// Stick-figure pose references for character sets. The model takes a pose
+// Silhouette pose references for character sets. The model takes a pose
 // from a picture far more reliably than from prose — walk cycles described
 // limb by limb came back as eight near-identical strides — so each frame
 // request carries a figure in the exact pose, drawn here from a handful of
 // joint angles. Code-drawn on purpose: every figure shares one scale, one
 // foot line and one set of proportions, and a pose is adjusted by changing
-// a number.
+// a number. Filled forms rather than stick lines: a first run followed the
+// big shapes (arms thrown up in a jump) and under-read the thin ones (an
+// arm swing), and reports on these models say a solid mannequin is read
+// better than a wire figure.
 
 import {CharacterFacing, CharacterPose} from '../../characterAnimations';
 
@@ -38,11 +41,19 @@ const THIGH = 95;
 const SHIN = 95;
 const TORSO = 105;
 const NECK = 14;
-const HEAD_RADIUS = 30;
+const HEAD_RADIUS = 38;
 const UPPER_ARM = 68;
 const FOREARM = 62;
-const FOOT = 34;
-const STROKE = 16;
+const FOOT = 40;
+// Limb thicknesses: a solid body, thick at the hip and shoulder, thinner
+// toward hands and feet.
+const THIGH_WIDTH = 46;
+const SHIN_WIDTH = 34;
+const UPPER_ARM_WIDTH = 32;
+const FOREARM_WIDTH = 24;
+const FOOT_WIDTH = 26;
+const TORSO_WIDTH = 92;
+const NECK_WIDTH = 30;
 
 // The four keys of one half of a side-view walk cycle for the front and
 // back leg; the second half swaps which leg is in front. Arm swings are
@@ -169,9 +180,18 @@ function reach([x, y]: Point, degrees: number, length: number): Point {
 
 const fmt = (n: number) => n.toFixed(1);
 
-function polyline(points: Point[], color: string): string {
+function polyline(points: Point[], color: string, width: number): string {
   const d = points.map(([x, y]) => `${fmt(x)},${fmt(y)}`).join(' ');
-  return `<polyline points="${d}" fill="none" stroke="${color}" stroke-width="${STROKE}" stroke-linecap="round" stroke-linejoin="round"/>`;
+  return `<polyline points="${d}" fill="none" stroke="${color}" stroke-width="${width}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+
+// A limb as segments of decreasing thickness; the round caps overlap at the
+// joints and hide the seams.
+function segments(points: Point[], widths: number[], color: string): string {
+  return points
+    .slice(1)
+    .map((point, i) => polyline([points[i], point], color, widths[i]))
+    .join('');
 }
 
 function leg(hip: Point, limb: Limb, color: string): string {
@@ -179,18 +199,26 @@ function leg(hip: Point, limb: Limb, color: string): string {
   const ankle = reach(knee, limb.lower, SHIN);
   // Foot angle is from horizontal-forward: convert to the from-down frame.
   const toe = reach(ankle, 90 - (limb.foot ?? 0), FOOT);
-  return polyline([hip, knee, ankle, toe], color);
+  return segments(
+    [hip, knee, ankle, toe],
+    [THIGH_WIDTH, SHIN_WIDTH, FOOT_WIDTH],
+    color
+  );
 }
 
 function arm(shoulder: Point, limb: Limb, color: string): string {
   const elbow = reach(shoulder, limb.upper, UPPER_ARM);
   const hand = reach(elbow, limb.lower, FOREARM);
-  return polyline([shoulder, elbow, hand], color);
+  return segments(
+    [shoulder, elbow, hand],
+    [UPPER_ARM_WIDTH, FOREARM_WIDTH],
+    color
+  );
 }
 
 /**
- * The SVG for one pose frame, facing right by default: a dark near side, a
- * pale far side, on white, feet on a common line. Left-facing figures are
+ * The SVG for one pose frame, facing right by default: a solid dark near
+ * side, a pale far side, on white, feet on a common line. Left-facing figures are
  * the mirror image.
  */
 export function poseFigureSvg(
@@ -208,11 +236,11 @@ export function poseFigureSvg(
   const parts = [
     leg(hip, key.farLeg, FAR),
     arm(shoulder, key.farArm, FAR),
-    polyline([hip, shoulder], NEAR),
+    polyline([hip, shoulder], NEAR, TORSO_WIDTH),
     `<circle cx="${fmt(head[0])}" cy="${fmt(
       head[1]
     )}" r="${HEAD_RADIUS}" fill="${NEAR}"/>`,
-    polyline([shoulder, neck], NEAR),
+    polyline([shoulder, neck], NEAR, NECK_WIDTH),
     leg(hip, key.nearLeg, NEAR),
     arm(shoulder, key.nearArm, NEAR),
   ].join('');
