@@ -15,6 +15,7 @@ import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generatin
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
 
 import {
+  CHARACTER_SET_FRAME_COUNT,
   CharacterSetProgress,
   generateCharacterSet,
 } from '../ai/images/characterSet';
@@ -325,7 +326,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             <div className={moduleStyles.formRow}>
               <Checkbox
                 name="character-set"
-                label="Make a character set: standing, walking and jumping, facing right and left (16 pictures; takes a few minutes)"
+                label={`Make a character set: standing, walking and jumping, facing right and left (${CHARACTER_SET_FRAME_COUNT} pictures; takes a few minutes)`}
                 size="s"
                 checked={characterSet}
                 disabled={generating}

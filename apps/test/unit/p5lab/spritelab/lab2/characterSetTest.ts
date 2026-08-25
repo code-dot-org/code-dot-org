@@ -1,6 +1,7 @@
 import {
   basePrompt,
   cellSize,
+  CHARACTER_SET_FRAME_COUNT,
   frameOffset,
   framePrompt,
   planCharacterFrames,
@@ -23,6 +24,7 @@ describe('SpriteLab2 characterSet', () => {
   it('plans every frame of every pose both ways, the base first', () => {
     const perFacing = CHARACTER_POSES.reduce((n, p) => n + p.frameCount, 0);
     expect(plan).toHaveLength(perFacing * 2);
+    expect(CHARACTER_SET_FRAME_COUNT).toBe(plan.length);
     expect(plan[0]).toMatchObject({
       pose: 'stand',
       facing: 'right',
@@ -35,12 +37,14 @@ describe('SpriteLab2 characterSet', () => {
     expect(keys.size).toBe(plan.length);
   });
 
-  it('references only earlier frames: the base, the right-facing twin, the frame before', () => {
+  it('references only the base and, facing left, the mirrored right-facing twin', () => {
     plan.forEach((step, index) => {
-      step.references.forEach(ref => expect(ref).toBeLessThan(index));
+      step.references.forEach(ref => expect(ref.index).toBeLessThan(index));
       if (index > 0) {
-        expect(step.references[0]).toBe(0);
+        expect(step.references[0].index).toBe(0);
       }
+      // Never the frame before: it anchors the pose.
+      expect(step.references.length).toBeLessThanOrEqual(2);
     });
     const walkLeft2 = plan.findIndex(
       p => p.pose === 'walk' && p.facing === 'left' && p.frame === 2
@@ -48,12 +52,17 @@ describe('SpriteLab2 characterSet', () => {
     const walkRight2 = plan.findIndex(
       p => p.pose === 'walk' && p.facing === 'right' && p.frame === 2
     );
-    const walkLeft1 = plan.findIndex(
-      p => p.pose === 'walk' && p.facing === 'left' && p.frame === 1
-    );
-    expect(plan[walkLeft2].references).toEqual([0, walkRight2, walkLeft1]);
-    // At most the model's four character references.
-    plan.forEach(step => expect(step.references.length).toBeLessThanOrEqual(4));
+    // Every reference a left-facing frame sees faces left.
+    expect(plan[walkLeft2].references).toEqual([
+      {index: 0, mirrored: true},
+      {index: walkRight2, mirrored: true},
+    ]);
+    expect(plan[walkRight2].references).toEqual([{index: 0, mirrored: false}]);
+    plan
+      .filter(step => step.facing === 'right')
+      .forEach(step =>
+        step.references.forEach(ref => expect(ref.mirrored).toBe(false))
+      );
   });
 
   it('writes prompts that carry the character, the pose, the facing and the key color', () => {
@@ -65,6 +74,7 @@ describe('SpriteLab2 characterSet', () => {
     const frame = framePrompt('a robot', step, 'pixel');
     expect(frame).toContain('a robot');
     expect(frame).toContain('faces left');
+    expect(frame).toContain('NEW pose');
     expect(frame).toContain(POSE_FRAME_DESCRIPTIONS.jump[0]);
     expect(frame).toContain('pixel art');
     expect(frame).toContain('same plain flat background color');

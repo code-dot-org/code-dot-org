@@ -24,7 +24,7 @@ import {
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
 import {ImageType} from '../ai/images/types';
-import {characterAnimationName} from '../characterAnimations';
+import {characterAnimationName, isBaseRole} from '../characterAnimations';
 import {
   getTrimmedThumbnail,
   onTrimsUpdated,
@@ -96,12 +96,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   const dispatch = useAppDispatch();
 
   // The project's images live in the animation list (AI-generated images are
-  // bridged in there); this view is also how you manage them.
+  // bridged in there); this view is also how you manage them. A character
+  // set shows as one card, its base member; the other members ride along.
   const images = useAppSelector(state =>
-    state.animationList.orderedKeys.map(key => ({
-      key,
-      props: state.animationList.propsByKey[key],
-    }))
+    state.animationList.orderedKeys
+      .map(key => ({
+        key,
+        props: state.animationList.propsByKey[key],
+      }))
+      .filter(({props}) => !props.character || isBaseRole(props.character))
   );
 
   // Gallery thumbnails prefer the border-trimmed image (backgrounds aren't
