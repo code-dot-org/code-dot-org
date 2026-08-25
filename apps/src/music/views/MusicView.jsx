@@ -197,16 +197,11 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
-    // A development hot update remounts this class component, and the project
-    // may have been edited and saved since the page loaded; loading
-    // initialSources here would put the old sources back and save them.
-    const currentSources = (
-      this.props.projectManager ||
-      Lab2Registry.getInstance().getProjectManager()
-    )?.getCurrentSources();
+    // A development hot update remounts this class component; seed from the
+    // project's current sources, not the page's.
     this.onLevelLoad(
       this.props.levelProperties.levelData,
-      currentSources || this.props.initialSources
+      this.projectManager()?.getCurrentSources() || this.props.initialSources
     );
     this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
 
@@ -875,6 +870,9 @@ class UnconnectedMusicView extends React.Component {
     });
   };
 
+  projectManager = () =>
+    this.props.projectManager || Lab2Registry.getInstance().getProjectManager();
+
   saveCode = (forceSave = false) => {
     // Can't save if this is a read-only workspace.
     if (this.props.isReadOnlyWorkspace) {
@@ -902,10 +900,7 @@ class UnconnectedMusicView extends React.Component {
     }
     sourcesToSave.labConfig.music.blockMode = this.props.blockMode;
 
-    (
-      this.props.projectManager ||
-      Lab2Registry.getInstance().getProjectManager()
-    )?.save(sourcesToSave, forceSave);
+    this.projectManager()?.save(sourcesToSave, forceSave);
 
     // If we are AI generating, then save metadata for Dance Party.
     if (
