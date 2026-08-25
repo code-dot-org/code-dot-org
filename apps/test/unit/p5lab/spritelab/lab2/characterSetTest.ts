@@ -93,11 +93,13 @@ describe('SpriteLab2 characterSet', () => {
     expect(base).toContain('#FF00FF');
     expect(base).toContain('no shadow');
     expect(base).toContain('no other creatures');
+    expect(base).toContain('must contain no pure magenta');
     const step = plan.find(p => p.pose === 'walk' && p.frame === 3)!;
     const frame = framePrompt('a robot', step, 'pixel', KEY_COLORS.green);
     expect(frame).toContain('a robot');
     expect(frame).toContain('faces right');
     expect(frame).toContain('silhouette figure');
+    expect(frame).toContain('Take nothing else from the figure');
     expect(frame).toContain('pixel art');
     expect(frame).toContain('#00FF00');
     expect(frame).toContain('no other creatures');

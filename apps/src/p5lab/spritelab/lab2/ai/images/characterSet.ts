@@ -183,7 +183,7 @@ const ONLY_THIS_CHARACTER =
 
 /** The one flat colour every frame is drawn on, keyed out afterwards. */
 function keyClause(key: KeyColor): string {
-  return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, and no shadow under the character. Only the character on that flat ${key.name}.`;
+  return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, and no shadow under the character. Only the character on that flat ${key.name}. The character itself must contain no ${key.name} or anything close to it anywhere — not on clothes, hat, hair, skin or accessories; choose other colors for those.`;
 }
 
 /**
@@ -219,7 +219,7 @@ export function framePrompt(
       ? 'The first provided image shows this character.'
       : `The first ${plan.references.length} provided images show this character.`;
   const figure = plan.poseFigure
-    ? ' The last provided image is a silhouette figure: draw the character in exactly that pose — the whole body, legs, feet, arms and torso, as the figure has them. The pose comes only from the figure; the character image shows only what the character looks like.'
+    ? ' The last provided image is a silhouette figure: draw the character in exactly that pose — the whole body, legs, feet, arms and torso, as the figure has them. Take nothing else from the figure: none of its colors, outlines, edges or shapes appear on the character. The pose comes only from the figure; the character image shows only what the character looks like.'
     : '';
   return (
     `The character: ${prompt}. ${characterImages}${figure} Draw the same ` +
