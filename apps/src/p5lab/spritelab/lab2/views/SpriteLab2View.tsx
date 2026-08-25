@@ -454,7 +454,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Seed the animation list BEFORE the workspace injects: dropdown fields
   // validate saved values against the store at block-load time — hence the
   // animationsSeeded gate on useBlocklyWorkspace, not just dispatch ordering.
+  //
+  // Once per level, and only once: initialSources is what the page loaded,
+  // and this effect can run again without its dependencies changing —
+  // React Fast Refresh re-runs effects on a hot update. Re-seeding from the
+  // load-time list would revert every image made since, and the persist
+  // effect below would then save that reverted list over the project. It
+  // did: a four-hour dev session lost five generated characters that way.
+  const seededLevelRef = useRef<number | null>(null);
   useEffect(() => {
+    if (seededLevelRef.current === levelProperties.id) {
+      return;
+    }
+    seededLevelRef.current = levelProperties.id;
     let cancelled = false;
     seedAnimationList(initialSources.animations);
     // Workspace injection only waits on the section-scenes fetch when saved
