@@ -206,12 +206,22 @@ function leg(hip: Point, limb: Limb, color: string): string {
   );
 }
 
-function arm(shoulder: Point, limb: Limb, color: string): string {
+// The near arm crosses the torso on every swing and would vanish into it,
+// same colour on same colour; a white halo this much wider, drawn first,
+// keeps its edge.
+const ARM_HALO = 12;
+
+function arm(
+  shoulder: Point,
+  limb: Limb,
+  color: string,
+  extraWidth = 0
+): string {
   const elbow = reach(shoulder, limb.upper, UPPER_ARM);
   const hand = reach(elbow, limb.lower, FOREARM);
   return segments(
     [shoulder, elbow, hand],
-    [UPPER_ARM_WIDTH, FOREARM_WIDTH],
+    [UPPER_ARM_WIDTH + extraWidth, FOREARM_WIDTH + extraWidth],
     color
   );
 }
@@ -233,6 +243,7 @@ export function poseFigureSvg(
   const head = reach(neck, 180 + key.lean, HEAD_RADIUS);
   const NEAR = '#111111';
   const FAR = '#8a8a8a';
+  const BACKGROUND = '#ffffff';
   const parts = [
     leg(hip, key.farLeg, FAR),
     arm(shoulder, key.farArm, FAR),
@@ -242,6 +253,7 @@ export function poseFigureSvg(
     )}" r="${HEAD_RADIUS}" fill="${NEAR}"/>`,
     polyline([shoulder, neck], NEAR, NECK_WIDTH),
     leg(hip, key.nearLeg, NEAR),
+    arm(shoulder, key.nearArm, BACKGROUND, ARM_HALO),
     arm(shoulder, key.nearArm, NEAR),
   ].join('');
   const flip =
@@ -250,7 +262,7 @@ export function poseFigureSvg(
       : '';
   return (
     `<svg xmlns="http://www.w3.org/2000/svg" width="${POSE_FIGURE_SIZE}" height="${POSE_FIGURE_SIZE}" viewBox="0 0 ${POSE_FIGURE_SIZE} ${POSE_FIGURE_SIZE}">` +
-    `<rect width="${POSE_FIGURE_SIZE}" height="${POSE_FIGURE_SIZE}" fill="#ffffff"/>` +
+    `<rect width="${POSE_FIGURE_SIZE}" height="${POSE_FIGURE_SIZE}" fill="${BACKGROUND}"/>` +
     `<g${flip}>${parts}</g></svg>`
   );
 }

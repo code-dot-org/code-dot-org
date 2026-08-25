@@ -12,8 +12,10 @@ describe('SpriteLab2 poseFigures', () => {
       for (let frame = 0; frame < frameCount; frame++) {
         const svg = poseFigureSvg(pose, frame);
         expect(svg.startsWith('<svg')).toBe(true);
-        // Torso and neck, two legs of three segments, two arms of two.
-        expect(svg.match(/<polyline/g)).toHaveLength(2 + 2 * 3 + 2 * 2);
+        // Torso and neck, two legs of three segments, two arms of two, and the
+
+        // near arm's halo.
+        expect(svg.match(/<polyline/g)).toHaveLength(2 + 2 * 3 + 3 * 2);
         expect(svg.match(/<circle/g)).toHaveLength(1);
         seen.add(svg);
       }
