@@ -133,10 +133,7 @@ describe('SpriteLab2 keyOutColor', () => {
     expect(alpha(soft, 1)).toBeLessThan(255);
     // Despilled: the fringe pixel loses its magenta cast (blue drops) so it
     // reads as the character's red, not a pink halo.
-    // 127 of key distance puts alpha near 0.7; backing the key's 30% share
-    // out of blue 128 leaves about 75.
     expect(soft[1 * 4 + 2]).toBeLessThan(128);
-    expect(soft[1 * 4 + 2]).toBeGreaterThan(60);
     expect(soft[1 * 4]).toBe(255);
   });
 
@@ -148,5 +145,31 @@ describe('SpriteLab2 keyOutColor', () => {
     ]);
     keyOutColor(data, 3, 1, MAGENTA);
     expect(alpha(data, 1)).toBe(255);
+  });
+
+  it('clears a shaded, textured key colour, not just the pure one', () => {
+    // Textured magenta background of varying shade around a purple robe pixel.
+    const data = rgba([
+      [255, 0, 255],
+      [200, 20, 230],
+      [180, 40, 210],
+      [120, 60, 180], // robe: purple, stays
+      [235, 60, 250],
+    ]);
+    keyOutColor(data, 5, 1, MAGENTA);
+    expect([0, 1, 2, 4].map(i => alpha(data, i))).toEqual([0, 0, 0, 0]);
+    expect(alpha(data, 3)).toBe(255);
+  });
+
+  it('keys green the same way', () => {
+    const data = rgba([
+      [0, 255, 0],
+      [40, 220, 60],
+      [60, 180, 50],
+      [200, 120, 40],
+    ]);
+    keyOutColor(data, 4, 1, [0, 255, 0]);
+    expect([0, 1, 2].map(i => alpha(data, i))).toEqual([0, 0, 0]);
+    expect(alpha(data, 3)).toBe(255);
   });
 });

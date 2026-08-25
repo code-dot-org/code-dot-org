@@ -142,32 +142,45 @@ export function keyOutBackground(
   }
 }
 
-// Per-channel distance from the key colour under which a pixel is
-// background outright, and the wider band in which an edge pixel — a blend
-// of key and character — is treated as background too. The key is a pure
-// primary the character never wears, so even a half-and-half blend sits far
-// closer to it than to anything on the character.
-const KEY_TOLERANCE = 72;
-const KEY_EDGE_TOLERANCE = 150;
-
-function keyDistance(
+// How much a pixel is the key colour, 0–255: the least of the channels the
+// key has full minus the most of the channels it has none of. Pure magenta
+// scores 255, and so does a shaded, textured or noisy magenta as long as
+// red and blue stay well above green — which is the point: a background the
+// model paints with texture instead of flat colour still keys out, where a
+// fixed distance from pure magenta left clouds of it behind. Nothing a
+// character wears scores high: a purple robe at (120, 60, 180) scores 60.
+function keySignature(
   data: Uint8ClampedArray,
   index: number,
   key: [number, number, number]
 ): number {
-  return Math.max(
-    Math.abs(data[index] - key[0]),
-    Math.abs(data[index + 1] - key[1]),
-    Math.abs(data[index + 2] - key[2])
-  );
+  let full = 255;
+  let none = 0;
+  for (let c = 0; c < 3; c++) {
+    if (key[c] >= 128) {
+      full = Math.min(full, data[index + c]);
+    } else {
+      none = Math.max(none, data[index + c]);
+    }
+  }
+  return full - none;
 }
+
+// A pixel at or above this signature is background outright; one in the
+// band below it, next to a cleared pixel, is an edge blend of key and
+// character (or a darker patch of a textured background, reached from its
+// brighter neighbours) and goes too (sharp) or fades by its signature
+// (soft). The band's floor keeps a saturated purple or pink costume edge —
+// signature 60 for a robe at (120, 60, 180) — out of reach.
+const KEY_SIGNATURE = 150;
+const KEY_EDGE_SIGNATURE = 80;
 
 /**
  * Key out a KNOWN colour everywhere in RGBA data — enclosed gaps included,
- * with no dependence on what the corners hold. Two passes: pixels near the
- * key go transparent; then pixels touching a transparent one and within
- * the wider edge band go too (sharp) or fade by their distance (soft), which
- * takes the anti-aliased fringe with the background.
+ * with no dependence on what the corners hold. Two passes: pixels that
+ * carry the key's signature go transparent; then pixels touching a
+ * transparent one and within the edge band go too (sharp) or fade by their
+ * signature (soft), which takes the anti-aliased fringe with the background.
  */
 export function keyOutColor(
   data: Uint8ClampedArray,
@@ -181,7 +194,7 @@ export function keyOutColor(
   for (let p = 0; p < total; p++) {
     if (data[p * 4 + 3] === 0) {
       cleared[p] = 1;
-    } else if (keyDistance(data, p * 4, key) <= KEY_TOLERANCE) {
+    } else if (keySignature(data, p * 4, key) >= KEY_SIGNATURE) {
       data[p * 4 + 3] = 0;
       cleared[p] = 1;
     }
@@ -206,14 +219,15 @@ export function keyOutColor(
     if (cleared[p]) {
       continue;
     }
-    const distance = keyDistance(data, p * 4, key);
-    if (distance > KEY_EDGE_TOLERANCE || !touchesCleared(p)) {
+    const signature = keySignature(data, p * 4, key);
+    if (signature < KEY_EDGE_SIGNATURE || !touchesCleared(p)) {
       continue;
     }
     if (options.soft) {
+      // The more of the key a pixel carries, the more of it goes.
       const alpha = Math.min(
         1,
-        (distance - KEY_TOLERANCE) / (KEY_EDGE_TOLERANCE - KEY_TOLERANCE)
+        (KEY_SIGNATURE - signature) / (KEY_SIGNATURE - KEY_EDGE_SIGNATURE)
       );
       // Despill: an edge pixel is the character's colour blended with the
       // key by (1 - alpha); take the key's share back out, or the fringe
