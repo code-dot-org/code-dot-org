@@ -594,35 +594,41 @@ function createWebpackConfig({
                   return Object.keys(appsEntries).includes(chunk.name);
                 },
               },
-              // The next two cache groups pull modules shared across
-              // CODE_STUDIO_ENTRIES into two sibling chunks: first-party code
-              // into "code-studio-common", node_modules code into
-              // "code-studio-common-deps". They are two chunks rather than one
-              // because CloudFront does not compress files above 10MB, and
-              // the combined chunk crossed that line. Every page that loads
-              // one of these files must load both, or webpack entry points
-              // never execute.
+              // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
+              // "code-studio-common" chunk — except node_modules code, which
+              // goes into the sibling "code-studio-common-deps" chunk. They
+              // are two chunks because CloudFront does not compress files
+              // above 10MB, and one combined chunk crossed that line. Every
+              // page that loads one of these files must load both, or webpack
+              // entry points never execute.
               //
-              // A module qualifies (isCodeStudioSharedModule) when 2+
-              // CODE_STUDIO_ENTRIES chunks contain it, or when more chunks
-              // contain it than appsEntries has members, which guarantees at
-              // least one CODE_STUDIO_ENTRIES chunk is among them. The second
-              // arm exists to eliminate duplication between "common" and
-              // these chunks; it never moves a module needed only by
-              // appsEntries, so pages which load common.js but few
-              // code-studio modules do not grow.
+              // Each chunk name gets exactly one cache group, with disjoint
+              // tests. When two cache groups emit the same chunk name,
+              // SplitChunksPlugin builds overlapping module sets for them and
+              // fails with "Cache group conflicts with existing chunk" once
+              // another group empties an entry chunk.
               //
-              // The name/test structure is deliberate: when two cache groups
-              // emit the same chunk name, SplitChunksPlugin builds overlapping
-              // module sets for them, and once another group empties an entry
-              // chunk it re-queues the remainder and fails with "Cache group
-              // conflicts with existing chunk". One cache group per chunk
-              // name, with disjoint tests, avoids that path.
+              // With only the first arm of isCodeStudioSharedModule, we end
+              // up with many duplicate modules between the "common" and
+              // "code-studio-common" chunks. The second arm eliminates some
+              // of this duplication by pulling more modules from "common"
+              // into "code-studio-common".
               //
-              // In the future, we want to move toward asynchronous imports,
-              // which allow webpack to manage bundle splitting and sharing
-              // behind the scenes. Once we adopt this approach, the need for
-              // predefined cacheGroups will go away.
+              // Its chunk-count threshold provides a guarantee that we don't
+              // unnecessarily move things into "code-studio-common" which are
+              // needed only by appsEntries. This avoids increasing the download
+              // size for code studio pages which include code-studio-common.js
+              // but not common.js.
+              //
+              // There is no converse guarantee that this strategy will eliminate
+              // all duplication between "common" and "code-studio-common".
+              // However, at the time of this writing, bundle analysis indicates
+              // that is currently effective in eliminating any duplication.
+              //
+              // In the future, we want to move toward asynchronous imports, which
+              // allow webpack to manage bundle splitting and sharing behind the
+              // scenes. Once we adopt this approach, the need for predefined
+              // cacheGroups will go away.
               //
               // For more information see: https://webpack.js.org/guides/code-splitting/
               'code-studio-common': {
