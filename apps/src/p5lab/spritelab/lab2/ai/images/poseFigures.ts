@@ -227,6 +227,25 @@ export function poseFigureSvg(
   );
 }
 
+const svgUriCache = new Map<string, string>();
+
+/** The figure as an SVG data URI, for showing in the page (an img src). */
+export function poseFigureSvgDataURI(
+  pose: CharacterPose,
+  frame: number,
+  facing: CharacterFacing
+): string {
+  const cacheKey = `${pose}-${frame}-${facing}`;
+  let uri = svgUriCache.get(cacheKey);
+  if (!uri) {
+    uri =
+      'data:image/svg+xml;charset=utf-8,' +
+      encodeURIComponent(poseFigureSvg(pose, frame, facing));
+    svgUriCache.set(cacheKey, uri);
+  }
+  return uri;
+}
+
 const figureCache = new Map<string, Promise<string>>();
 
 /** The figure as a PNG data URI (the model takes raster images), cached. */
@@ -248,9 +267,7 @@ export function poseFigureDataURI(
         resolve(canvas.toDataURL('image/png'));
       };
       img.onerror = reject;
-      img.src =
-        'data:image/svg+xml;charset=utf-8,' +
-        encodeURIComponent(poseFigureSvg(pose, frame, facing));
+      img.src = poseFigureSvgDataURI(pose, frame, facing);
     });
     figureCache.set(cacheKey, cached);
   }

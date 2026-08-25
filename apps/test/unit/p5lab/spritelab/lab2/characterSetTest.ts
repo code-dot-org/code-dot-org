@@ -13,6 +13,7 @@ import {
 import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
 import {
   CHARACTER_POSES,
+  GENERATED_FACINGS,
   poseKey,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
@@ -25,9 +26,9 @@ describe('SpriteLab2 characterSet', () => {
     });
   });
 
-  it('plans every frame of every pose both ways, the base first', () => {
+  it('plans every frame of every pose for each generated facing, the base first', () => {
     const perFacing = CHARACTER_POSES.reduce((n, p) => n + p.frameCount, 0);
-    expect(plan).toHaveLength(perFacing * 2);
+    expect(plan).toHaveLength(perFacing * GENERATED_FACINGS.length);
     expect(CHARACTER_SET_FRAME_COUNT).toBe(plan.length);
     expect(plan[0]).toMatchObject({
       pose: 'stand',
@@ -43,7 +44,7 @@ describe('SpriteLab2 characterSet', () => {
     expect(keys.size).toBe(plan.length);
   });
 
-  it('references only the base and, facing left, the mirrored right-facing twin', () => {
+  it('references only the base, and a mirrored twin when a left frame is generated', () => {
     plan.forEach((step, index) => {
       step.references.forEach(ref => expect(ref.index).toBeLessThan(index));
       if (index > 0) {
@@ -51,18 +52,14 @@ describe('SpriteLab2 characterSet', () => {
       }
       // Never the frame before: it anchors the pose.
       expect(step.references.length).toBeLessThanOrEqual(2);
+      if (step.facing === 'right') {
+        expect(step.references.map(r => r.mirrored)).toEqual(
+          index > 0 ? [false] : []
+        );
+      } else {
+        expect(step.references.every(r => r.mirrored)).toBe(true);
+      }
     });
-    const walkLeft2 = plan.findIndex(
-      p => p.pose === 'walk' && p.facing === 'left' && p.frame === 2
-    );
-    const walkRight2 = plan.findIndex(
-      p => p.pose === 'walk' && p.facing === 'right' && p.frame === 2
-    );
-    expect(plan[walkLeft2].references).toEqual([
-      {index: 0, mirrored: true},
-      {index: walkRight2, mirrored: true},
-    ]);
-    expect(plan[walkRight2].references).toEqual([{index: 0, mirrored: false}]);
   });
 
   it('maps each pose to a contiguous range of sheet frames in plan order', () => {
@@ -88,10 +85,10 @@ describe('SpriteLab2 characterSet', () => {
     expect(base).toContain('#FF00FF');
     expect(base).toContain('no shadow');
     expect(base).toContain('no other creatures');
-    const step = plan.find(p => p.pose === 'jump' && p.facing === 'left')!;
+    const step = plan.find(p => p.pose === 'jump' && p.facing === 'right')!;
     const frame = framePrompt('a robot', step, 'pixel', KEY_COLORS.green);
     expect(frame).toContain('a robot');
-    expect(frame).toContain('faces left');
+    expect(frame).toContain('faces right');
     expect(frame).toContain('stick figure');
     expect(frame).toContain(POSE_FRAME_DESCRIPTIONS.jump[0]);
     expect(frame).toContain('pixel art');

@@ -1,6 +1,13 @@
 import React, {useEffect, useRef} from 'react';
 
-import {AnimationPoses, orderedPoseKeys} from '../characterAnimations';
+import {poseFigureSvgDataURI} from '../ai/images/poseFigures';
+import {
+  AnimationPoses,
+  orderedPoseKeys,
+  poseForFrame,
+} from '../characterAnimations';
+
+import moduleStyles from './image-details-dialog.module.scss';
 
 // How many times each pose plays before the preview moves to the next.
 const LOOPS_PER_POSE = 3;
@@ -25,6 +32,9 @@ const AnimatedSheetPreview: React.FunctionComponent<
   AnimatedSheetPreviewProps
 > = ({src, frameSize, poses, className}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // The figure the current frame was drawn to, in the corner; updated
+  // straight on the element (thirty times a second is no place for state).
+  const insetRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -59,6 +69,14 @@ const AnimatedSheetPreview: React.FunctionComponent<
       const frame = sequence[tick % sequence.length];
       if (frame !== lastFrame) {
         lastFrame = frame;
+        const at = poseForFrame(poses, frame);
+        if (insetRef.current && at) {
+          insetRef.current.src = poseFigureSvgDataURI(
+            at.pose,
+            at.frame,
+            at.facing
+          );
+        }
         const columns = Math.max(1, Math.floor(img.naturalWidth / frameSize.x));
         const sx = (frame % columns) * frameSize.x;
         const sy = Math.floor(frame / columns) * frameSize.y;
@@ -85,13 +103,20 @@ const AnimatedSheetPreview: React.FunctionComponent<
   }, [src, frameSize.x, frameSize.y, poses]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className={className}
-      width={frameSize.x}
-      height={frameSize.y}
-      aria-label="Animation preview"
-    />
+    <>
+      <canvas
+        ref={canvasRef}
+        className={className}
+        width={frameSize.x}
+        height={frameSize.y}
+        aria-label="Animation preview"
+      />
+      <img
+        ref={insetRef}
+        className={moduleStyles.poseInset}
+        alt="Pose reference"
+      />
+    </>
   );
 };
 

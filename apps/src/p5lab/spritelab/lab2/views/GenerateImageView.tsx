@@ -24,6 +24,7 @@ import {
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
+import {poseFigureSvgDataURI} from '../ai/images/poseFigures';
 import {
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
@@ -243,8 +244,22 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           )}
         >
           {generating && progress?.preview ? (
-            // The latest frame of the set as it comes in.
-            <img src={progress.preview} alt="" />
+            // The latest frame of the set as it comes in, with the figure it
+            // was drawn to in the corner.
+            <>
+              <img src={progress.preview} alt="" />
+              {progress.previewPose && (
+                <img
+                  className={moduleStyles.poseInset}
+                  src={poseFigureSvgDataURI(
+                    progress.previewPose.pose,
+                    progress.previewPose.frame,
+                    progress.previewPose.facing
+                  )}
+                  alt="Pose reference"
+                />
+              )}
+            </>
           ) : sheet ? (
             <AnimatedSheetPreview {...sheet} />
           ) : thumb ? (

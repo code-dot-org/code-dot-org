@@ -746,6 +746,9 @@ export default class SpriteLab2Engine extends SpriteLab {
         state.key = pick.key;
         state.tick = 0;
       }
+      // Frames drawn facing the other way are shown mirrored; a set drawn
+      // facing right only turns left this way.
+      sprite.mirrorX(pick.facing === state.facing ? 1 : -1);
       // Ours to drive; p5.play must not advance it.
       animation.stop();
       const frame =

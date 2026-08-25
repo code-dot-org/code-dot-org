@@ -5,6 +5,7 @@ import {
   nextFacing,
   orderedPoseKeys,
   pickPose,
+  poseForFrame,
   poseFrame,
   poseKey,
   posesByImageName,
@@ -54,6 +55,7 @@ describe('SpriteLab2 characterAnimations', () => {
     expect(pick(true, false, 'left')).toMatchObject({
       key: 'walk-left',
       pose: 'walk',
+      facing: 'left',
       range: fullSet['walk-left'],
     });
     // Off the ground beats moving.
@@ -71,7 +73,7 @@ describe('SpriteLab2 characterAnimations', () => {
         {'walk-right': fullSet['walk-right']},
         {moving: true, airborne: false, facing: 'left'}
       )
-    ).toMatchObject({key: 'walk-right'});
+    ).toMatchObject({key: 'walk-right', facing: 'right'});
     expect(
       pickPose({}, {moving: true, airborne: false, facing: 'left'})
     ).toBeUndefined();
@@ -99,5 +101,24 @@ describe('SpriteLab2 characterAnimations', () => {
     // Gravity pointing up: rising is moving down.
     expect(jumpFrame(5, -0.75)).toBe(0);
     expect(jumpFrame(-3, -0.75)).toBe(1);
+  });
+
+  it('finds which pose a sheet frame belongs to', () => {
+    expect(poseForFrame(fullSet, 0)).toEqual({
+      pose: 'stand',
+      facing: 'right',
+      frame: 0,
+    });
+    expect(poseForFrame(fullSet, 5)).toEqual({
+      pose: 'walk',
+      facing: 'right',
+      frame: 3,
+    });
+    expect(poseForFrame(fullSet, 23)).toEqual({
+      pose: 'jump',
+      facing: 'left',
+      frame: 1,
+    });
+    expect(poseForFrame(fullSet, 24)).toBeUndefined();
   });
 });

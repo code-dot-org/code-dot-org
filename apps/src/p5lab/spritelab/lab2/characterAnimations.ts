@@ -50,6 +50,15 @@ export const CHARACTER_POSES: CharacterPoseSpec[] = [
 /** Right first: the left-facing frames are drawn from the right-facing ones. */
 export const CHARACTER_FACINGS: CharacterFacing[] = ['right', 'left'];
 
+/**
+ * The facings a set is generated for. Right only for now: left is the
+ * right-facing frame mirrored at runtime (pickPose's fallback plus the
+ * engine's mirrorX), which halves the pictures a set costs. Drawn left
+ * frames — a staff staying in the same hand — are a matter of adding 'left'
+ * back here.
+ */
+export const GENERATED_FACINGS: CharacterFacing[] = ['right'];
+
 /** Every pose key in canonical order, right-facing first. */
 export function orderedPoseKeys(poses: AnimationPoses): PoseKey[] {
   const keys: PoseKey[] = [];
@@ -94,6 +103,8 @@ export interface CharacterMotion {
 export interface PickedPose {
   key: PoseKey;
   pose: CharacterPose;
+  /** The facing the frames were drawn in; mirror when it isn't the motion's. */
+  facing: CharacterFacing;
   range: PoseRange;
 }
 
@@ -101,6 +112,8 @@ export interface PickedPose {
  * The pose to show for a motion. A pose the set lacks falls back to
  * standing the same way before anything facing the other way: a
  * wrong-facing walk reads as moonwalking, a standing pose merely as stiff.
+ * A set drawn facing right only (GENERATED_FACINGS) always lands on the
+ * other facing for a left-moving sprite; the caller mirrors it.
  */
 export function pickPose(
   poses: AnimationPoses,
@@ -118,8 +131,33 @@ export function pickPose(
       const key = poseKey(pose, facing);
       const range = poses[key];
       if (range) {
-        return {key, pose, range};
+        return {key, pose, facing, range};
       }
+    }
+  }
+  return undefined;
+}
+
+export interface FramePose {
+  pose: CharacterPose;
+  facing: CharacterFacing;
+  /** Position within the pose's range. */
+  frame: number;
+}
+
+/** Which pose (and which of its frames) a sheet frame belongs to. */
+export function poseForFrame(
+  poses: AnimationPoses,
+  sheetFrame: number
+): FramePose | undefined {
+  for (const [key, range] of Object.entries(poses)) {
+    if (
+      range &&
+      sheetFrame >= range.start &&
+      sheetFrame < range.start + range.count
+    ) {
+      const [pose, facing] = key.split('-') as [CharacterPose, CharacterFacing];
+      return {pose, facing, frame: sheetFrame - range.start};
     }
   }
   return undefined;

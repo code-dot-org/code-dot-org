@@ -1,6 +1,7 @@
 import {
   figureKey,
   poseFigureSvg,
+  poseFigureSvgDataURI,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/poseFigures';
 import {CHARACTER_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
@@ -32,5 +33,13 @@ describe('SpriteLab2 poseFigures', () => {
   it('mirrors a left-facing figure', () => {
     expect(poseFigureSvg('walk', 0, 'left')).toContain('scale(-1,1)');
     expect(poseFigureSvg('walk', 0, 'right')).not.toContain('scale(-1,1)');
+  });
+
+  it('offers the figure as an SVG data URI', () => {
+    const uri = poseFigureSvgDataURI('walk', 2, 'right');
+    expect(uri.startsWith('data:image/svg+xml;charset=utf-8,')).toBe(true);
+    expect(decodeURIComponent(uri.split(',')[1])).toBe(
+      poseFigureSvg('walk', 2)
+    );
   });
 });

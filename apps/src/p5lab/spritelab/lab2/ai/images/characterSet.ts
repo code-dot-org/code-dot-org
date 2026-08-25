@@ -13,10 +13,10 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {
   AnimationPoses,
-  CHARACTER_FACINGS,
   CHARACTER_POSES,
   CharacterFacing,
   CharacterPose,
+  GENERATED_FACINGS,
   poseKey,
 } from '../../characterAnimations';
 import {findOpaqueBounds} from '../../imageTrim';
@@ -70,9 +70,10 @@ export interface FramePlan {
 
 /**
  * Every frame of a set in generation order — which is also its order in
- * the sheet: right-facing poses first, so each left-facing frame can be
- * drawn from its right-facing twin. Index 0 is the base drawing: standing,
- * facing right. Each pose's frames are contiguous and in frame order.
+ * the sheet: each generated facing's poses in turn (right first, so a
+ * left-facing frame, when one is generated, can be drawn from its
+ * right-facing twin). Index 0 is the base drawing: standing, facing right.
+ * Each pose's frames are contiguous and in frame order.
  */
 export function planCharacterFrames(): FramePlan[] {
   const plan: FramePlan[] = [];
@@ -84,7 +85,7 @@ export function planCharacterFrames(): FramePlan[] {
     plan.findIndex(
       p => p.pose === pose && p.facing === facing && p.frame === frame
     );
-  CHARACTER_FACINGS.forEach(facing => {
+  GENERATED_FACINGS.forEach(facing => {
     CHARACTER_POSES.forEach(({pose, frameCount}) => {
       for (let frame = 0; frame < frameCount; frame++) {
         const references: FrameReference[] = [];
@@ -455,6 +456,8 @@ export interface CharacterSetProgress {
   label: string;
   /** The last frame finished, keyed and cropped, for the dialog to show. */
   preview?: string;
+  /** The pose that frame was drawn to, for showing its figure beside it. */
+  previewPose?: {pose: CharacterPose; facing: CharacterFacing; frame: number};
 }
 
 const POSE_LABELS: Record<CharacterPose, string> = {
@@ -526,13 +529,18 @@ export async function generateCharacterSet(
     raws.push(raw);
     const frame = await keyFrame(raw, options.style, key);
     keyed.push(frame);
-    preview = framePreview(frame) || preview;
+    const shown = framePreview(frame);
+    if (shown) {
+      preview = shown;
+      previewPose = {pose: step.pose, facing: step.facing, frame: step.frame};
+    }
   }
   onProgress?.({
     done: plan.length,
     total: plan.length,
     label: 'assembling',
     preview,
+    previewPose,
   });
 
   const cell = cellSize(keyed.map(frame => frame.bounds));
