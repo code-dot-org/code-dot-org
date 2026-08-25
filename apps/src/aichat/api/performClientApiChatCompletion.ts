@@ -60,7 +60,8 @@ export async function performClientApiChatCompletion(
       storedMessages,
       modelParameters,
       buildAssetUrl,
-      levelSystemPrompt
+      levelSystemPrompt,
+      aichatContext.channelId
     );
 
   metricsReporter.reportLoadTime(

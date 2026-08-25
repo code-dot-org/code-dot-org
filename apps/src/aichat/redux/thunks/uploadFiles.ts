@@ -34,6 +34,8 @@ export const uploadFiles = createAppAsyncThunk<
   {
     files: File[];
     buildAssetUrl: (asset: ChatAsset) => string;
+    /** Project the uploads are written to, recorded on each asset. */
+    channelId?: string;
     /** Callback invoked when an upload finishes. If provided, the in-chat alert UI will be hidden for non-successful uploads. */
     onUploadFinished?: (status: UploadStatus) => void;
     /** Callback invoked after each successful asset upload with the asset and its resolved URL. */
@@ -42,7 +44,7 @@ export const uploadFiles = createAppAsyncThunk<
 >(
   'aichat/uploadFiles',
   async (
-    {files, buildAssetUrl, onUploadFinished, onAssetUploaded},
+    {files, buildAssetUrl, channelId, onUploadFinished, onAssetUploaded},
     {dispatch, getState}
   ) => {
     const notifyUploadFinished = (key: string, status: UploadStatus) => {
@@ -71,7 +73,12 @@ export const uploadFiles = createAppAsyncThunk<
         const bucketKey = `${createUuid()}${ext}`;
         return [
           `${validFilename}-${Date.now()}`,
-          {filename: validFilename, source: AssetSource.PROJECT, bucketKey},
+          {
+            filename: validFilename,
+            source: AssetSource.PROJECT,
+            bucketKey,
+            channelId,
+          },
           file,
         ];
       });

@@ -16,6 +16,8 @@ import {AssetSource, ChatAsset} from '../../types';
 export interface UploadButtonProps {
   isDisabled: boolean;
   levelName: string;
+  /** Project uploads are written to, recorded on each asset. */
+  channelId?: string;
   buildAssetUrl: (asset: ChatAsset) => string;
   acceptedFileTypes: string[];
   hasStarterAssets?: boolean;
@@ -26,6 +28,7 @@ export interface UploadButtonProps {
 const UploadButton: React.FC<UploadButtonProps> = ({
   isDisabled,
   levelName,
+  channelId,
   buildAssetUrl,
   acceptedFileTypes,
   hasStarterAssets = false,
@@ -45,7 +48,12 @@ const UploadButton: React.FC<UploadButtonProps> = ({
       return;
     }
     dispatch(
-      uploadFiles({files: Array.from(files), buildAssetUrl, onAssetUploaded})
+      uploadFiles({
+        files: Array.from(files),
+        buildAssetUrl,
+        channelId,
+        onAssetUploaded,
+      })
     );
   };
 
@@ -57,6 +65,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
           asset: {
             filename: asset.filename,
             source: AssetSource.LEVEL,
+            levelName,
           },
           loaded: true,
         })

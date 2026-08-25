@@ -179,6 +179,27 @@ describe('uploadFiles', () => {
     });
   });
 
+  describe('channelId', () => {
+    it('records the project an upload was written to on the asset', async () => {
+      const onAssetUploaded = jest.fn();
+      const file = makeFile('photo.png');
+
+      await uploadFiles({
+        files: [file],
+        buildAssetUrl,
+        channelId: 'upload-channel',
+        onAssetUploaded,
+      })(dispatch, makeGetState(), undefined);
+
+      // Lets the asset resolve against its own project later, rather than
+      // whichever project happens to be open when the message is replayed.
+      expect(onAssetUploaded).toHaveBeenCalledWith(
+        expect.objectContaining({channelId: 'upload-channel'}),
+        expect.any(String)
+      );
+    });
+  });
+
   describe('bucketKey', () => {
     it('builds the upload URL from bucketKey rather than filename', async () => {
       const onAssetUploaded = jest.fn();
