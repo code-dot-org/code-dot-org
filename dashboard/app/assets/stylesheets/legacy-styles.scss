@@ -2,9 +2,6 @@
  * Sprockets-managed styles that we have yet to either remove or migrate into
  * apps. Loaded after the styles provided by apps.
  *
- * Application assets
- *= require_directory ./lti
- *
  * Shared
  *= require fonts/barlow-semi-condensed
  *= require fonts/geist
