@@ -27,6 +27,22 @@ export function sanitizeImageName(raw: string): string {
     .slice(0, IMAGE_NAME_MAX_LENGTH);
 }
 
+// A picker field's saved value is its XML element, `<field name="X">"cat"
+// </field>`, once the scene has been through a workspace; a value written
+// straight to JSON is the bare quoted name. Compare and rewrite the text
+// inside, whichever form it is in.
+const FIELD_ELEMENT = /^(<field\b[^>]*>)([\s\S]*)(<\/field>)$/;
+
+function fieldValueText(value: string): string {
+  const match = FIELD_ELEMENT.exec(value);
+  return match ? match[2] : value;
+}
+
+function withFieldValueText(value: string, text: string): string {
+  const match = FIELD_ELEMENT.exec(value);
+  return match ? `${match[1]}${text}${match[3]}` : text;
+}
+
 function renameInBlock(
   block: JsonBlockConfig,
   oldQuoted: string,
@@ -37,8 +53,8 @@ function renameInBlock(
       // The quoted form identifies image references; plain text fields are
       // unquoted. TEXT is skipped anyway in case a student typed a quoted
       // name verbatim.
-      if (name !== 'TEXT' && value === oldQuoted) {
-        block.fields[name] = newQuoted;
+      if (name !== 'TEXT' && fieldValueText(value) === oldQuoted) {
+        block.fields[name] = withFieldValueText(value, newQuoted);
       }
     }
   }
@@ -122,6 +138,90 @@ export function renameImageReferencesOnWorkspace(
           field.getValue() === oldQuoted
         ) {
           field.setValue(newQuoted);
+        }
+      });
+    });
+  });
+}
+
+function removeInBlock(block: JsonBlockConfig, quoted: string): void {
+  if (block.fields) {
+    for (const [name, value] of Object.entries(block.fields)) {
+      if (name !== 'TEXT' && fieldValueText(value) === quoted) {
+        // With no stored value the picker loads its first option, so the
+        // block visibly points at another image rather than a ghost.
+        delete block.fields[name];
+      }
+    }
+  }
+  Object.values(block.inputs || {}).forEach(input => {
+    if (input.block) {
+      removeInBlock(input.block, quoted);
+    }
+    if (input.shadow) {
+      removeInBlock(input.shadow, quoted);
+    }
+  });
+  if (block.next?.block) {
+    removeInBlock(block.next.block, quoted);
+  }
+  if (block.next?.shadow) {
+    removeInBlock(block.next.shadow, quoted);
+  }
+}
+
+/**
+ * Drop every reference to a deleted image across the project's sources:
+ * picker fields in every scene's blocks (and the top-level mirror of scene
+ * 1) fall back to their first option, and World-tab cells placing the image
+ * are cleared. Pure — returns a new sources object. A reference left behind
+ * would spawn a costume the engine cannot find.
+ */
+export function removeImageReferences(sources: Sources, name: string): Sources {
+  const out: Sources = JSON.parse(JSON.stringify(sources));
+  const quoted = quote(name);
+  const blocksOf = (source: WorkspaceSerialization | undefined) =>
+    (source as {blocks?: {blocks?: JsonBlockConfig[]}})?.blocks?.blocks || [];
+  blocksOf(out.source as WorkspaceSerialization).forEach(block =>
+    removeInBlock(block, quoted)
+  );
+  (out.scenes || []).forEach(scene => {
+    blocksOf(scene.source).forEach(block => removeInBlock(block, quoted));
+    (scene.world?.grid || []).forEach(row =>
+      row.forEach((cell, i) => {
+        if (cell && cell.image === name) {
+          row[i] = null;
+        }
+      })
+    );
+  });
+  return out;
+}
+
+/**
+ * Point the live workspace's picker fields away from a deleted image, to
+ * their first remaining option, so the visible blocks match the cleaned
+ * serialization without a reload.
+ */
+export function removeImageReferencesOnWorkspace(
+  workspace: Workspace | null,
+  name: string
+): void {
+  if (!workspace) {
+    return;
+  }
+  const quoted = quote(name);
+  workspace.getAllBlocks().forEach(block => {
+    block.inputList.forEach(input => {
+      input.fieldRow.forEach(field => {
+        if (
+          field instanceof CdoFieldAnimationDropdown &&
+          field.getValue() === quoted
+        ) {
+          const first = field.getOptions(false)[0];
+          if (first && first[1] !== quoted) {
+            field.setValue(first[1]);
+          }
         }
       });
     });

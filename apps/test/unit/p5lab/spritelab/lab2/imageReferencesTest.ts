@@ -1,6 +1,7 @@
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
   IMAGE_NAME_MAX_LENGTH,
+  removeImageReferences,
   renameImageReferences,
   sanitizeImageName,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
@@ -107,5 +108,110 @@ describe('sanitizeImageName', () => {
     expect(sanitizeImageName('x'.repeat(99))).toHaveLength(
       IMAGE_NAME_MAX_LENGTH
     );
+  });
+});
+
+describe('SpriteLab2 removeImageReferences', () => {
+  const sources = {
+    source: {blocks: {blocks: []}},
+    scenes: [
+      {
+        id: 's1',
+        name: 'Story',
+        source: {
+          blocks: {
+            blocks: [
+              {
+                type: 'gamelab_makeNewSpriteAnon',
+                fields: {ANIMATION_NAME: '"wizard"'},
+                next: {
+                  block: {
+                    type: 'gamelab_spriteSay',
+                    fields: {SPEECH: 'wizard'},
+                    inputs: {
+                      SPRITE: {
+                        shadow: {
+                          type: 'gamelab_allSpritesWithAnimation',
+                          fields: {ANIMATION: '"wizard"'},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              {
+                type: 'gamelab_setBackgroundImageAs',
+                fields: {IMAGE: '"forest"'},
+              },
+            ],
+          },
+        },
+        world: {
+          grid: [
+            [
+              {image: 'wizard', kind: 'sprite'},
+              {image: 'stone', kind: 'block'},
+            ],
+            [null, {image: 'wizard', kind: 'sprite'}],
+          ],
+        },
+      },
+    ],
+  } as unknown as Parameters<typeof removeImageReferences>[0];
+
+  it('drops picker fields naming the image and clears its World cells, leaving the rest', () => {
+    const out = removeImageReferences(sources, 'wizard');
+    type Loose = {
+      fields?: Record<string, string>;
+      next?: {block: Loose};
+      inputs?: Record<string, {shadow?: Loose; block?: Loose}>;
+    };
+    const blocks = (
+      out.scenes![0].source as unknown as {blocks: {blocks: Loose[]}}
+    ).blocks.blocks;
+    expect(blocks[0].fields).toEqual({});
+    expect(blocks[0].next!.block.fields).toEqual({SPEECH: 'wizard'});
+    expect(blocks[0].next!.block.inputs!.SPRITE.shadow!.fields).toEqual({});
+    expect(blocks[1].fields).toEqual({IMAGE: '"forest"'});
+    expect(out.scenes![0].world!.grid).toEqual([
+      [null, {image: 'stone', kind: 'block'}],
+      [null, null],
+    ]);
+    // Pure: the input is untouched.
+    expect(sources.scenes![0].world!.grid[0][0]).toEqual({
+      image: 'wizard',
+      kind: 'sprite',
+    });
+  });
+
+  it('reads and rewrites the XML-wrapped form a workspace saves', () => {
+    const wrapped = '<field name="ANIMATION_NAME">"wizard"</field>';
+    const src = {
+      source: {blocks: {blocks: []}},
+      scenes: [
+        {
+          id: 's1',
+          name: 'Story',
+          source: {
+            blocks: {
+              blocks: [
+                {type: 'a', fields: {ANIMATION_NAME: wrapped}},
+                {type: 'b', fields: {ANIMATION_NAME: wrapped}},
+              ],
+            },
+          },
+        },
+      ],
+    } as unknown as Parameters<typeof removeImageReferences>[0];
+    type Loose = {fields?: Record<string, string>};
+    const blocksOf = (out: typeof src) =>
+      (out.scenes![0].source as unknown as {blocks: {blocks: Loose[]}}).blocks
+        .blocks;
+    expect(blocksOf(removeImageReferences(src, 'wizard'))[0].fields).toEqual(
+      {}
+    );
+    expect(
+      blocksOf(renameImageReferences(src, 'wizard', 'mage'))[1].fields
+    ).toEqual({ANIMATION_NAME: '<field name="ANIMATION_NAME">"mage"</field>'});
   });
 });

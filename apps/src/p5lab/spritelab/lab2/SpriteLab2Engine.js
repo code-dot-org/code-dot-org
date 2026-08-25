@@ -224,6 +224,40 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
+    // A costume the project no longer has — a reference that outlived its
+    // image in an old save, or an external scene's — must not halt the
+    // program: p5.play throws from setAnimation on an unknown name and the
+    // interpreter stops there. Skip the sprite (or the costume change) and
+    // say so once.
+    const knownCostume = name =>
+      !!(library.p5._predefinedSpriteAnimations || {})[name];
+    const missing = new Set();
+    const warnMissing = name => {
+      if (!missing.has(name)) {
+        missing.add(name);
+        console.warn(
+          `SpriteLab2: no image named ${JSON.stringify(
+            name
+          )} in this project; the block asking for it does nothing.`
+        );
+      }
+    };
+    const addSprite = library.addSprite.bind(library);
+    library.addSprite = opts => {
+      if (opts && opts.animation && !knownCostume(opts.animation)) {
+        warnMissing(opts.animation);
+        return null;
+      }
+      return addSprite(opts);
+    };
+    const setAnimation = library.commands.setAnimation;
+    library.commands.setAnimation = function (spriteArg, animation) {
+      if (!knownCostume(animation)) {
+        warnMissing(animation);
+        return;
+      }
+      return setAnimation.call(this, spriteArg, animation);
+    };
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
