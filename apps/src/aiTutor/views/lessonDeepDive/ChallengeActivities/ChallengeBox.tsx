@@ -288,204 +288,211 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
           )}
         </div>
         <div className={styles.challengeLayout}>
-        <aside className={styles.sidebar}>
-          {evaluationText ? (
-            <div className={styles.feedbackContainer}>
-              <Typography variant="overline3" className={styles.feedbackLabel}>
-                Feedback
-              </Typography>
-              <div className={styles.feedbackWidget}>
-                <div className={styles.feedbackHeader}>
-                  <div className={styles.feedbackIconBG}>
-                    <FontAwesomeV6Icon
-                      iconStyle="solid"
-                      iconName="sparkle"
-                      title="Audio"
-                    />
+          <aside className={styles.sidebar}>
+            {evaluationText ? (
+              <div className={styles.feedbackContainer}>
+                <Typography
+                  variant="overline3"
+                  className={styles.feedbackLabel}
+                >
+                  Feedback
+                </Typography>
+                <div className={styles.feedbackWidget}>
+                  <div className={styles.feedbackHeader}>
+                    <div className={styles.feedbackIconBG}>
+                      <FontAwesomeV6Icon
+                        iconStyle="solid"
+                        iconName="sparkle"
+                        title="Audio"
+                      />
+                    </div>
+                    <div className={styles.feedbackHeaderContent}>
+                      <Typography variant="body3">Tutor</Typography>
+                      <Typography variant="body4">
+                        {evaluationDatetime}
+                      </Typography>
+                    </div>
                   </div>
-                  <div className={styles.feedbackHeaderContent}>
-                    <Typography variant="body3">Tutor</Typography>
-                    <Typography variant="body4">
-                      {evaluationDatetime}
+                  <div className={styles.feedbackText}>
+                    <Typography
+                      variant="body3"
+                      className={styles.sidebarHeading}
+                    >
+                      {evaluationText}
                     </Typography>
                   </div>
                 </div>
-                <div className={styles.feedbackText}>
-                  <Typography variant="body3" className={styles.sidebarHeading}>
-                    {evaluationText}
-                  </Typography>
+              </div>
+            ) : (
+              <div className={styles.sidebarContent}>
+                <div>
+                  <h3 className={styles.sidebarHeading}>Instructions</h3>
+                  {renderInstructions()}
                 </div>
-              </div>
-            </div>
-          ) : (
-            <div className={styles.sidebarContent}>
-              <div>
-                <h3 className={styles.sidebarHeading}>Instructions</h3>
-                {renderInstructions()}
-              </div>
-              {challenge && challengeType === ChallengeTypes.WHITEBOARD && (
-                <div className={styles.whiteboardButtonContainer}>
-                  <div className={styles.explanationContainer}>
-                    <MuiButton
-                      className={classNames([
-                        styles.explanationButton,
-                        explanationType === ExplanationTypes.AUDIO
-                          ? styles.Selected
-                          : null,
-                      ])}
-                      size="medium"
-                      color="tertiary"
-                      startIcon={
-                        <FontAwesomeV6Icon
-                          iconStyle="solid"
-                          iconName="microphone"
-                          title="Audio"
-                        />
-                      }
-                      variant={
-                        explanationType === ExplanationTypes.AUDIO
-                          ? 'outlined'
-                          : 'contained'
-                      }
-                      disabled={submitted}
-                      onClick={() =>
-                        switchExplanationType(ExplanationTypes.AUDIO)
-                      }
-                    >
-                      Audio
-                    </MuiButton>
+                {challenge && challengeType === ChallengeTypes.WHITEBOARD && (
+                  <div className={styles.whiteboardButtonContainer}>
+                    <div className={styles.explanationContainer}>
+                      <MuiButton
+                        className={classNames([
+                          styles.explanationButton,
+                          explanationType === ExplanationTypes.AUDIO
+                            ? styles.Selected
+                            : null,
+                        ])}
+                        size="medium"
+                        color="tertiary"
+                        startIcon={
+                          <FontAwesomeV6Icon
+                            iconStyle="solid"
+                            iconName="microphone"
+                            title="Audio"
+                          />
+                        }
+                        variant={
+                          explanationType === ExplanationTypes.AUDIO
+                            ? 'outlined'
+                            : 'contained'
+                        }
+                        disabled={submitted}
+                        onClick={() =>
+                          switchExplanationType(ExplanationTypes.AUDIO)
+                        }
+                      >
+                        Audio
+                      </MuiButton>
 
-                    <MuiButton
-                      className={classNames([
-                        styles.explanationButton,
-                        explanationType === ExplanationTypes.TEXT
-                          ? styles.Selected
-                          : null,
-                      ])}
-                      size="medium"
-                      color="tertiary"
-                      startIcon={
-                        <FontAwesomeV6Icon
-                          iconStyle="solid"
-                          iconName="pencil"
-                          title="Text"
-                        />
-                      }
-                      variant={
-                        explanationType === ExplanationTypes.TEXT
-                          ? 'outlined'
-                          : 'contained'
-                      }
-                      disabled={submitted}
-                      onClick={() =>
-                        switchExplanationType(ExplanationTypes.TEXT)
-                      }
-                    >
-                      Text
-                    </MuiButton>
+                      <MuiButton
+                        className={classNames([
+                          styles.explanationButton,
+                          explanationType === ExplanationTypes.TEXT
+                            ? styles.Selected
+                            : null,
+                        ])}
+                        size="medium"
+                        color="tertiary"
+                        startIcon={
+                          <FontAwesomeV6Icon
+                            iconStyle="solid"
+                            iconName="pencil"
+                            title="Text"
+                          />
+                        }
+                        variant={
+                          explanationType === ExplanationTypes.TEXT
+                            ? 'outlined'
+                            : 'contained'
+                        }
+                        disabled={submitted}
+                        onClick={() =>
+                          switchExplanationType(ExplanationTypes.TEXT)
+                        }
+                      >
+                        Text
+                      </MuiButton>
+                    </div>
+                    {explanationType === ExplanationTypes.AUDIO && (
+                      <MuiButton
+                        size="medium"
+                        color={isRecording ? 'error' : 'secondary'}
+                        startIcon={
+                          <FontAwesomeV6Icon
+                            iconStyle="solid"
+                            iconName={isRecording ? 'square' : 'circle'}
+                            title={isRecording ? 'Stop' : 'Record'}
+                          />
+                        }
+                        variant="contained"
+                        disabled={submitted}
+                        onClick={() => setIsRecording(!isRecording)}
+                      >
+                        {isRecording
+                          ? 'Stop Recording'
+                          : hasRecording
+                          ? 'Record Again'
+                          : 'Start Recording'}
+                      </MuiButton>
+                    )}
+                    {explanationType === ExplanationTypes.TEXT && (
+                      <textarea
+                        id="challenge-explanation"
+                        className={styles.textArea}
+                        placeholder="Write a paragraph explaining your work"
+                        onChange={e => setTextExplanation(e.target.value)}
+                        disabled={submitted}
+                      />
+                    )}
                   </div>
-                  {explanationType === ExplanationTypes.AUDIO && (
-                    <MuiButton
-                      size="medium"
-                      color={isRecording ? 'error' : 'secondary'}
-                      startIcon={
-                        <FontAwesomeV6Icon
-                          iconStyle="solid"
-                          iconName={isRecording ? 'square' : 'circle'}
-                          title={isRecording ? 'Stop' : 'Record'}
-                        />
-                      }
-                      variant="contained"
-                      disabled={submitted}
-                      onClick={() => setIsRecording(!isRecording)}
-                    >
-                      {isRecording
-                        ? 'Stop Recording'
-                        : hasRecording
-                        ? 'Record Again'
-                        : 'Start Recording'}
-                    </MuiButton>
-                  )}
-                  {explanationType === ExplanationTypes.TEXT && (
-                    <textarea
-                      id="challenge-explanation"
-                      className={styles.textArea}
-                      placeholder="Write a paragraph explaining your work"
-                      onChange={e => setTextExplanation(e.target.value)}
-                      disabled={submitted}
-                    />
-                  )}
-                </div>
-              )}
+                )}
+              </div>
+            )}
+          </aside>
+          <div className={styles.activityColumn}>
+            {challengeType === ChallengeTypes.WHITEBOARD ? (
+              <WhiteboardChallenge
+                challengeId={challenge?.id ?? null}
+                submitted={submitted}
+                submitCallback={handleSubmittedChange}
+                isRecording={isRecording}
+                setIsRecording={setIsRecording}
+                hasRecording={hasRecording}
+                setHasRecording={setHasRecording}
+                explanationType={explanationType}
+                lessonId={lessonId}
+                textExplanation={textExplanation}
+                setEvaluationStatus={setEvaluationStatus}
+                setChallengeResponseId={setChallengeResponseId}
+                onSubmittableChange={setCanSubmit}
+                submitRef={submitRef}
+                resetRef={resetRef}
+              />
+            ) : (
+              <VideoChallenge
+                submitted={submitted}
+                submitCallback={handleSubmittedChange}
+                challenge={challenge}
+                lessonId={lessonId}
+                setEvaluationStatus={setEvaluationStatus}
+                setChallengeResponseId={setChallengeResponseId}
+                onSubmittableChange={setCanSubmit}
+                submitRef={submitRef}
+                resetRef={resetRef}
+              />
+            )}
+            <div className={styles.modalityToggle}>
+              <button
+                type="button"
+                className={classNames(
+                  styles.choice,
+                  challengeType === ChallengeTypes.VIDEO &&
+                    styles.choiceSelected
+                )}
+                onClick={() => switchTo(ChallengeTypes.VIDEO)}
+              >
+                <FontAwesomeV6Icon
+                  iconStyle="solid"
+                  iconName="clapperboard-play"
+                  className={styles.choiceIcon}
+                />
+                <span className={styles.choiceLabel}>Video Story</span>
+              </button>
+              <button
+                type="button"
+                className={classNames(
+                  styles.choice,
+                  challengeType === ChallengeTypes.WHITEBOARD &&
+                    styles.choiceSelected
+                )}
+                onClick={() => switchTo(ChallengeTypes.WHITEBOARD)}
+              >
+                <FontAwesomeV6Icon
+                  iconStyle="solid"
+                  iconName="chalkboard"
+                  className={styles.choiceIcon}
+                />
+                <span className={styles.choiceLabel}>Whiteboard</span>
+              </button>
             </div>
-          )}
-        </aside>
-        <div className={styles.activityColumn}>
-          {challengeType === ChallengeTypes.WHITEBOARD ? (
-            <WhiteboardChallenge
-              challengeId={challenge?.id ?? null}
-              submitted={submitted}
-              submitCallback={handleSubmittedChange}
-              isRecording={isRecording}
-              setIsRecording={setIsRecording}
-              hasRecording={hasRecording}
-              setHasRecording={setHasRecording}
-              explanationType={explanationType}
-              lessonId={lessonId}
-              textExplanation={textExplanation}
-              setEvaluationStatus={setEvaluationStatus}
-              setChallengeResponseId={setChallengeResponseId}
-              onSubmittableChange={setCanSubmit}
-              submitRef={submitRef}
-              resetRef={resetRef}
-            />
-          ) : (
-            <VideoChallenge
-              submitted={submitted}
-              submitCallback={handleSubmittedChange}
-              challenge={challenge}
-              lessonId={lessonId}
-              setEvaluationStatus={setEvaluationStatus}
-              setChallengeResponseId={setChallengeResponseId}
-              onSubmittableChange={setCanSubmit}
-              submitRef={submitRef}
-              resetRef={resetRef}
-            />
-          )}
-          <div className={styles.modalityToggle}>
-            <button
-              type="button"
-              className={classNames(
-                styles.choice,
-                challengeType === ChallengeTypes.VIDEO && styles.choiceSelected
-              )}
-              onClick={() => switchTo(ChallengeTypes.VIDEO)}
-            >
-              <FontAwesomeV6Icon
-                iconStyle="solid"
-                iconName="clapperboard-play"
-                className={styles.choiceIcon}
-              />
-              <span className={styles.choiceLabel}>Video Story</span>
-            </button>
-            <button
-              type="button"
-              className={classNames(
-                styles.choice,
-                challengeType === ChallengeTypes.WHITEBOARD &&
-                  styles.choiceSelected
-              )}
-              onClick={() => switchTo(ChallengeTypes.WHITEBOARD)}
-            >
-              <FontAwesomeV6Icon
-                iconStyle="solid"
-                iconName="chalkboard"
-                className={styles.choiceIcon}
-              />
-              <span className={styles.choiceLabel}>Whiteboard</span>
-            </button>
           </div>
-        </div>
         </div>
       </div>
       {showConfirmation && (

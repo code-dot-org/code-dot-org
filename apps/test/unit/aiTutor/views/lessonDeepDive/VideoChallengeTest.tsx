@@ -147,9 +147,7 @@ describe('VideoChallenge', () => {
   });
 
   it('disables submit until a video is recorded', () => {
-    render(
-      <VideoHarness submitCallback={jest.fn()} />
-    );
+    render(<VideoHarness submitCallback={jest.fn()} />);
 
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
 
@@ -158,9 +156,7 @@ describe('VideoChallenge', () => {
   });
 
   it('disables submit while recording is in progress', () => {
-    render(
-      <VideoHarness submitCallback={jest.fn()} />
-    );
+    render(<VideoHarness submitCallback={jest.fn()} />);
 
     fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
@@ -174,9 +170,7 @@ describe('VideoChallenge', () => {
     put.mockResolvedValue({});
     const submitCallback = jest.fn();
 
-    render(
-      <VideoHarness submitCallback={submitCallback} />
-    );
+    render(<VideoHarness submitCallback={submitCallback} />);
 
     recordVideo();
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
@@ -220,9 +214,7 @@ describe('VideoChallenge', () => {
     );
     put.mockResolvedValue({});
 
-    render(
-      <VideoHarness submitCallback={jest.fn()} />
-    );
+    render(<VideoHarness submitCallback={jest.fn()} />);
 
     recordVideo();
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
@@ -244,9 +236,7 @@ describe('VideoChallenge', () => {
     post.mockRejectedValue(new Error('Network error'));
     const submitCallback = jest.fn();
 
-    render(
-      <VideoHarness submitCallback={submitCallback} />
-    );
+    render(<VideoHarness submitCallback={submitCallback} />);
 
     recordVideo();
     // act() lets the async submit settle and the submittability report
