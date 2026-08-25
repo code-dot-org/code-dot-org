@@ -7,15 +7,31 @@ const googleProvider = createGoogleGenerativeAI({
   apiKey: '',
 });
 
-// Gemini 3.1 Flash Image ("Nano Banana 2"). Its predecessor,
-// gemini-2.5-flash-image, is deprecated by Google. This one takes up to four
-// character reference images per request, which is what keeps a character
-// set (ai/images/characterSet.ts) looking like one character. It also
-// thinks before drawing and returns its interim drafts as images ahead of
-// the final one — see requestImage for how the final is picked.
+// Gemini 3.1 Flash Image ("Nano Banana 2") for single images. Its
+// predecessor, gemini-2.5-flash-image, is deprecated by Google. It takes up
+// to four character reference images per request and thinks before drawing,
+// returning its interim drafts as images ahead of the final one — see
+// requestImage for how the final is picked.
 export function getImageModel() {
   return googleProvider(AiChatModelIds.GEMINI_3_1_FLASH_IMAGE);
 }
+
+// Character-set frames: Gemini 3 Pro Image ("Nano Banana Pro"), about twice
+// the price of Flash per picture, five character references, and the
+// stronger reasoning about a compound instruction — this character, in
+// that pose — that Flash kept failing at (it honoured either the plate or
+// the figure, not both). One constant to flip back.
+export const CHARACTER_SET_IMAGE_MODEL = AiChatModelIds.GEMINI_3_PRO_IMAGE;
+
+export function getCharacterSetImageModel() {
+  return googleProvider(CHARACTER_SET_IMAGE_MODEL);
+}
+
+// How hard an image model thinks before drawing (its default is minimal).
+// Set frames think harder for the same reason they use Pro: reconciling two
+// references is a reasoning problem. Single images keep the default.
+export type ThinkingLevel = 'minimal' | 'low' | 'medium' | 'high';
+export const CHARACTER_SET_THINKING_LEVEL: ThinkingLevel = 'high';
 
 // Output sizes the model offers. The gateway forwards provider options to
 // the model untouched, but its own copy of the Google SDK validates them
@@ -33,9 +49,20 @@ export const SINGLE_IMAGE_SIZE: ImageSize = '1K';
 // it. One constant to flip.
 export const CHARACTER_SET_IMAGE_SIZE: ImageSize = '1K';
 
-/** Provider options for one image request: a square at the given size. */
-export function imageProviderOptions(imageSize: ImageSize) {
-  return {google: {imageConfig: {aspectRatio: '1:1', imageSize}}};
+/**
+ * Provider options for one image request: a square at the given size, and
+ * optionally a thinking level (omitted = the model's default).
+ */
+export function imageProviderOptions(
+  imageSize: ImageSize,
+  thinkingLevel?: ThinkingLevel
+) {
+  return {
+    google: {
+      imageConfig: {aspectRatio: '1:1', imageSize},
+      ...(thinkingLevel && {thinkingConfig: {thinkingLevel}}),
+    },
+  };
 }
 
 // Image-model output policy, kept beside the model id so a model swap forces

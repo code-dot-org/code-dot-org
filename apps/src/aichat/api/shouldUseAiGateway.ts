@@ -15,6 +15,7 @@ const isGeminiModelId = (modelId: string): boolean =>
 const IMAGE_MODEL_IDS: readonly string[] = [
   AiChatModelIds.GEMINI_2_5_FLASH_IMAGE,
   AiChatModelIds.GEMINI_3_1_FLASH_IMAGE,
+  AiChatModelIds.GEMINI_3_PRO_IMAGE,
 ];
 
 export default function shouldUseAiGateway(modelId: ModelId) {

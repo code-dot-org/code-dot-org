@@ -15,6 +15,7 @@ import {
   ImageSize,
   MODEL_OUTPUT_PX,
   SINGLE_IMAGE_SIZE,
+  ThinkingLevel,
 } from './modelHelpers';
 import {cropToContent, removeBackground} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
@@ -125,6 +126,10 @@ export interface ImageRequest {
   references?: string[];
   /** Output size; single images take SINGLE_IMAGE_SIZE. */
   imageSize?: ImageSize;
+  /** The model to ask; single images take getImageModel(). */
+  model?: ReturnType<typeof getImageModel>;
+  /** How hard the model thinks first; omitted = its default. */
+  thinkingLevel?: ThinkingLevel;
 }
 
 /**
@@ -139,7 +144,7 @@ export async function requestImage(
 ): Promise<RawImage> {
   const references = request.references || [];
   const {files} = await generateText({
-    model: getImageModel(),
+    model: request.model || getImageModel(),
     messages: [
       {
         role: 'user',
@@ -156,7 +161,8 @@ export async function requestImage(
       temperature: request.temperature,
     }),
     providerOptions: imageProviderOptions(
-      request.imageSize || SINGLE_IMAGE_SIZE
+      request.imageSize || SINGLE_IMAGE_SIZE,
+      request.thinkingLevel
     ),
   });
 
