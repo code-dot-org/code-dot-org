@@ -2,9 +2,8 @@
 
 export type SpriteMap = Record<string, {name: string} | undefined>;
 
-// Sprite names are art ids, not words: a taxi spans six tiles named
-// "N-taxi-1".."N-taxi-6" and a house spans sixty. The first token found in a
-// name gives the noun; "sidewalk" beats "grass" for the grass-edged corners.
+// Sprite names are art ids, not words: a taxi spans six tiles, a house sixty.
+// The first token found gives the noun; "sidewalk" beats "grass" on corners.
 const ASSET_NAMES: [token: string, noun: string][] = [
   ['sidewalk', 'Sidewalk'],
   ['bench', 'Bench'],
@@ -21,8 +20,7 @@ const ASSET_NAMES: [token: string, noun: string][] = [
   ['bluehouse', 'Blue house'],
 ];
 
-// Names the scenery on a tile. Null for art described elsewhere: the painter
-// avatar, and the paint can that comes from a cell's paint count.
+// Names the scenery. Null for the painter avatar and the paint can.
 export function describeAsset(
   spriteMap: SpriteMap | undefined,
   assetId: number | undefined
@@ -43,8 +41,7 @@ export interface NeighborhoodCellState {
   assetId?: number;
 }
 
-// Paint comes first: it is the student's own work and it covers the scenery
-// underneath, so scenery is only named on a bare cell.
+// Paint is the student's own work and covers the scenery, so it comes first.
 export function describeNeighborhoodCell(
   spriteMap: SpriteMap | undefined,
   {color, paintCount, assetId}: NeighborhoodCellState

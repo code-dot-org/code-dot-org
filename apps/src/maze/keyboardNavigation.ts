@@ -1,15 +1,12 @@
 // Keyboard navigation for the maze. The svg is the only tab stop. Enter puts a
-// cursor on the character's cell, arrows walk it, P jumps back to the
-// character, Escape removes it. Edges always block; walls block too, except in
-// Painter, where the walls hold the scenery worth reading.
+// cursor on the character's cell; arrows walk it, P jumps to the character,
+// Escape removes it. Walls block, except in Painter where they hold scenery.
 //
-// The svg is the interactive host rather than a wrapping div so it stays the
-// direct child of #visualization, which is what common.scss and
-// responsive-visualization.scss scale. A wrapper shifts the scale anchor.
+// The svg is the host rather than a wrapping div so it stays #visualization's
+// direct child, which is what common.scss scales. A wrapper moves the anchor.
 //
 // Nothing here mutates maze state. Cells come from window.Maze.controller,
-// published by loadMaze.js on maze levels and by the Neighborhood mini app in
-// Lab2. Without it the svg is just inert focus.
+// set by loadMaze.js on maze levels and by the Neighborhood mini app in Lab2.
 
 import maze from '@code-dot-org/maze';
 
@@ -28,8 +25,8 @@ type MazeMessageKey = keyof typeof mazeStrings;
 type MessageParams = Record<string, string | number>;
 type MessageFn = (params?: MessageParams) => string;
 
-// Rails serves only the level's own <app>_locale.js, so a Painter level has no
-// compiled maze strings. Fall back to the English source and fill it in.
+// Rails serves only the level's own <app>_locale.js, so a Painter level has
+// no maze strings. Fall back to the English source.
 function t(
   key: MazeMessageKey,
   params: MessageParams = {},
@@ -42,7 +39,7 @@ function t(
     : fallback.replace(/\{(\w+)\}/g, (_, name) => String(params[name]));
 }
 
-// The Painter-only lines have no key in the strings file, so they are literal.
+// Painter's own lines have no key, so they are written out.
 const MSG = {
   goal: () => t('mazeNavGoal'),
   obstacle: () => t('mazeNavObstacle'),
@@ -51,6 +48,7 @@ const MSG = {
   wall: () => t('mazeNavWall'),
   edge: () => t('mazeNavEdge'),
   exited: () => t('mazeNavExited'),
+  running: () => 'The maze cannot be navigated while program is running.',
   edgeOfNeighborhood: () => 'Edge of the neighborhood.',
   noPainter: () => 'No painter on the grid yet. Press Run to place one.',
   noCharacter: () => 'Character is not on the grid.',
@@ -155,6 +153,9 @@ interface MazeGlobal {
     // Neighborhood runs one pegman per Painter object; see painterIds.
     pegmanController?: {getAllPegmanIds?: () => string[]};
   };
+  // Published by labs that repaint the grid as a program plays. Absent on maze
+  // levels, where the cursor is never held back.
+  isRunning?: () => boolean;
 }
 
 type MazeController = NonNullable<MazeGlobal['controller']>;
@@ -190,8 +191,16 @@ interface CursorPos {
   row: number;
 }
 
+function mazeGlobal(): MazeGlobal | undefined {
+  return (window as unknown as {Maze?: MazeGlobal}).Maze;
+}
+
 function getMazeController(): MazeController | undefined {
-  return (window as unknown as {Maze?: MazeGlobal}).Maze?.controller;
+  return mazeGlobal()?.controller;
+}
+
+function programIsRunning(): boolean {
+  return mazeGlobal()?.isRunning?.() ?? false;
 }
 
 function tileAt(
@@ -314,19 +323,18 @@ export function describeObject(
   return null;
 }
 
-// @code-dot-org/maze keys its lone pegman under this id and does not export it.
+// The maze package keys its lone pegman under this id and does not export it.
 const DEFAULT_PEGMAN_ID = 'default';
 
-// A pegman is on the grid when its icon is not hidden. The maze package never
-// removes one: Painter hides the default on run and the painters on reset.
+// A pegman is on the grid when its icon is not hidden; the package never
+// removes one. Painter hides the default on run and the painters on reset.
 function isPegmanVisible(id: string): boolean {
   const suffix = id === DEFAULT_PEGMAN_ID ? '' : `-${id}`;
   const icon = document.getElementById(`pegman${suffix}`);
   return icon !== null && icon.getAttribute('visibility') !== 'hidden';
 }
 
-// Which pegmen to report. Maze has exactly one. Painter has one per Painter
-// object and none at all until a program runs.
+// Maze has one pegman; Painter has one per Painter object, none before a run.
 function painterIds(ctrl: MazeController): string[] {
   if (!ctrl.subtype.isNeighborhood?.()) {
     return [DEFAULT_PEGMAN_ID];
@@ -349,8 +357,8 @@ function painterSpots(ctrl: MazeController): CursorPos[] {
     .filter((spot): spot is CursorPos => spot !== null);
 }
 
-// Painter names its pegmen "painter-1", "painter-2"; say that as "Painter 1".
-// Java Lab ids may differ, so unknown ones are read as they come.
+// Painter names its pegmen "painter-1", "painter-2"; say "Painter 1". Java Lab
+// ids may differ, so unknown ones are read as they come.
 function painterName(id: string): string {
   if (id === DEFAULT_PEGMAN_ID) {
     return 'Painter';
@@ -359,8 +367,7 @@ function painterName(id: string): string {
   return numbered ? `Painter ${numbered[1]}` : id;
 }
 
-// The "is here" clause, empty unless the cursor is on a pegman. Facing is named
-// only on levels that turn.
+// Empty unless the cursor is on a pegman. Facing is named only on turn levels.
 function describeCharacterHere(
   ctrl: MazeController,
   col: number,
@@ -448,8 +455,7 @@ export default class MazeKeyboardNavigation {
   // Which painter P last jumped to; see jumpToCharacter.
   private painterIndex = 0;
 
-  // Read from the DOM rather than tracked, so a level reload that clears the
-  // svg cannot leave us thinking a cursor is still up.
+  // Derived from the DOM so a cleared svg cannot leave a stale flag.
   private get active(): boolean {
     return this.cursor?.isConnected ?? false;
   }
@@ -493,8 +499,19 @@ export default class MazeKeyboardNavigation {
     if (!this.active) {
       if (e.key === 'Enter' && e.target === this.svg) {
         consume();
-        this.enter();
+        // Say why rather than ignore the key.
+        if (programIsRunning()) {
+          this.announce(MSG.running());
+        } else {
+          this.enter();
+        }
       }
+      return;
+    }
+    // A program is repainting the grid, so stand down rather than read it
+    // mid-change. The key is left alone; it belongs to the page now.
+    if (programIsRunning()) {
+      this.exit();
       return;
     }
     if (e.key === 'Escape') {
@@ -526,8 +543,7 @@ export default class MazeKeyboardNavigation {
   private enter(): void {
     const ctrl = getMazeController();
     if (!ctrl) return;
-    // Painter levels have no start square and no painter until a program runs,
-    // so fall back to the top-left cell.
+    // Painter has no start square and no painter until a program runs.
     this.cursorPos = painterSpots(ctrl)[0] ?? {col: 0, row: 0};
     this.painterIndex = 0;
 
@@ -544,9 +560,8 @@ export default class MazeKeyboardNavigation {
     this.cursor.focus();
   }
 
-  // Focus lands on this rect once and then it slides between cells. Painter's
-  // changed aria-label went unread, so there the live region speaks. Maze
-  // already reads the label; announcing would say every cell twice.
+  // Focus lands here once, then the rect slides between cells. Painter's changed
+  // label goes unread, so it speaks; maze reads the label and would double it.
   private placeCursor({speak = true} = {}): void {
     const ctrl = getMazeController();
     if (!ctrl || !this.cursor || !this.cursorPos) return;
@@ -574,9 +589,8 @@ export default class MazeKeyboardNavigation {
       this.announce(isPainter ? MSG.edgeOfNeighborhood() : MSG.edge());
       return;
     }
-    // Painter keeps its scenery on wall tiles — grass, houses, the cone that
-    // ends a level — so the read-only cursor walks onto them. A student who
-    // cannot visit a wall cannot survey the neighborhood.
+    // Painter keeps its scenery on wall tiles, and the cursor only reads, so it
+    // walks onto them. A student who cannot visit a wall cannot survey the grid.
     if (!isPainter && tileAt(ctrl, nx, ny) === SquareType.WALL) {
       this.announce(MSG.wall());
       return;
@@ -597,8 +611,8 @@ export default class MazeKeyboardNavigation {
       );
       return;
     }
-    // Step by index, not position: two painters can share a cell and matching
-    // on coordinates would stick on the first. Landing anywhere else restarts.
+    // Step by index, not position: two painters can share a cell, and coordinates
+    // alone would stick on the first. Landing elsewhere restarts the cycle.
     const selected = spots[this.painterIndex];
     const onSelected = selected?.col === col && selected?.row === row;
     this.painterIndex = onSelected ? (this.painterIndex + 1) % spots.length : 0;
@@ -606,9 +620,8 @@ export default class MazeKeyboardNavigation {
     this.placeCursor();
   }
 
-  // Drop the refs before .remove(): removing the focused cursor fires a blur
-  // that re-enters here through focusout, and that second pass must find no
-  // cursor or it double-removes and throws NotFoundError.
+  // Drop the refs before .remove(): the blur re-enters here through focusout,
+  // and that pass must find no cursor or it double-removes and throws.
   private exit(opts: {restoreFocus?: boolean} = {}): void {
     const {restoreFocus = true} = opts;
     const cursor = this.cursor;

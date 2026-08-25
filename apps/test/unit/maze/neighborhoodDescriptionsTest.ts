@@ -18,8 +18,7 @@ const SPRITES: SpriteMap = {
 };
 
 describe('describeAsset', () => {
-  // The sweep below proves every sprite resolves. These pin the wording for
-  // the name shapes that are easy to get wrong.
+  // The sweep below proves every sprite resolves; these pin the wording.
   it.each([
     [0, 'Street.'],
     [12, 'Donut truck.'],
@@ -34,27 +33,20 @@ describe('describeAsset', () => {
     expect(describeAsset(SPRITES, 279)).toBe('Sidewalk.');
   });
 
-  it('returns null for the painter avatar', () => {
-    expect(describeAsset(SPRITES, 287)).toBeNull();
+  // The avatar is covered by the character clause, the can by the paint count.
+  it('returns null for art named elsewhere', () => {
+    expect(describeAsset(SPRITES, 287)).toBeNull(); // painter avatar
+    expect(describeAsset(SPRITES, 303)).toBeNull(); // paint can
   });
 
-  // Buckets are drawn from a cell's paint count, not its art id, so the
-  // paint can sprite has nothing to say on its own.
-  it('returns null for the paint can sprite', () => {
-    expect(describeAsset(SPRITES, 303)).toBeNull();
-  });
-
-  it('returns null for an unknown asset id', () => {
+  it('returns null when there is no name to match', () => {
     expect(describeAsset(SPRITES, 9999)).toBeNull();
-  });
-
-  it('returns null with no asset id or no sprite map', () => {
     expect(describeAsset(SPRITES, undefined)).toBeNull();
     expect(describeAsset(undefined, 0)).toBeNull();
   });
 
-  // Swept over the shipped sheet, not a fixture: a family with no token reads
-  // as bare ground with nothing to flag it. Painter and paint can are elsewhere.
+  // Swept over the shipped sheet: a family with no token reads as bare ground
+  // with nothing to flag it. Painter and paint can are named elsewhere.
   it('names every sprite in the shipped sprite sheet', () => {
     const describedElsewhere = /painter|paintcan/i;
     const sprites = realSprites as unknown as SpriteMap;

@@ -20,8 +20,7 @@ describe('maze Visualization', () => {
     expect(svg.prop('tabIndex')).toBe(0);
   });
 
-  // The label is the only place the keys are announced, so it has to name all
-  // of them. Painter passes its own wording through navHint.
+  // The label is the only place the keys are announced.
   it('names every key in the default nav hint', () => {
     const label = shallow(<Visualization useProtectedDiv={false} />)
       .find('svg#svgMaze')

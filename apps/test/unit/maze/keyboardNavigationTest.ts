@@ -48,8 +48,7 @@ function makeController(
   } as Controller;
 }
 
-// The maze package draws each pegman as an element and hides it rather than
-// removing it, so visibility is how the cursor tells a placed painter apart.
+// The package hides pegmen rather than removing them.
 function renderPegman(id = 'default', visibility = 'visible') {
   const el = document.createElement('div');
   el.id = id === 'default' ? 'pegman' : `pegman-${id}`;
@@ -395,8 +394,7 @@ describe('maze keyboard navigation reporting', () => {
     });
   });
 
-  // neighborhoodDescriptionsTest covers the wording. These only check that the
-  // neighborhood branch is wired up and that a nameless cell still reads.
+  // neighborhoodDescriptionsTest covers the wording; these check the wiring.
   describe('describeObject - neighborhood (painter)', () => {
     afterEach(clearPegmen);
 
@@ -443,8 +441,7 @@ describe('maze keyboard navigation reporting', () => {
   });
 
   describe('describeCharacterHere - neighborhood painters', () => {
-    // Painter keeps a hidden "default" pegman and adds painter-1, painter-2,
-    // ... once a program runs.
+    // Painter adds painter-1, painter-2, ... once a program runs.
     afterEach(clearPegmen);
 
     const painterCtrl = (
@@ -465,7 +462,7 @@ describe('maze keyboard navigation reporting', () => {
       } as unknown as Controller;
     };
 
-    it('ignores the hidden default pegman once a painter exists', () => {
+    it('reports the visible painter, not the hidden default', () => {
       const ctrl = painterCtrl(
         {
           default: {x: 0, y: 0, d: Direction.NORTH},
@@ -479,7 +476,7 @@ describe('maze keyboard navigation reporting', () => {
       );
     });
 
-    it('falls back to the default pegman before a program runs', () => {
+    it('names the default pegman before any painter exists', () => {
       const ctrl = painterCtrl({default: {x: 2, y: 2, d: Direction.SOUTH}});
       expect(describeCell(ctrl, 2, 2)).toBe(
         'Open path. Painter is here, facing south. Row 3, column 3.'
@@ -498,8 +495,7 @@ describe('maze keyboard navigation reporting', () => {
       );
     });
 
-    // Neighborhood.reset() hides painters rather than removing them, so a
-    // hidden one must not be reported at its pre-reset position.
+    // A reset hides painters, so a hidden one must not be reported.
     it('ignores painters a reset has hidden', () => {
       const ctrl = painterCtrl({'painter-1': {x: 3, y: 4, d: Direction.EAST}}, [
         'painter-1',
@@ -582,8 +578,7 @@ describe('MazeKeyboardNavigation interaction', () => {
     );
   });
 
-  // Maze reads the cursor's aria-label, so announcing the cell as well would
-  // say it twice. Painter's label went unread, so there the live region talks.
+  // Maze reads the label, so announcing here too would say it twice.
   it('leaves cell descriptions out of the live region on a maze level', () => {
     press('Enter');
     expect(liveRegionText()).toBeFalsy();
@@ -713,8 +708,7 @@ describe('MazeKeyboardNavigation interaction', () => {
     });
   });
 
-  // Neighborhood.prepareForNewMaze clears the svg when a level reloads, which
-  // takes the cursor with it and fires no blur to notice it.
+  // A level reload clears the svg and takes the cursor with it, firing no blur.
   it('recovers when the maze is rebuilt under an active cursor', () => {
     press('Enter');
     expect(focusableCursor()).not.toBeNull();
@@ -730,6 +724,40 @@ describe('MazeKeyboardNavigation interaction', () => {
     expect(focusableCursor()?.getAttribute('aria-label')).toBe(
       'Open path. Character is here. Row 2, column 2.'
     );
+  });
+
+  // The grid moves as a program plays. Maze publishes no isRunning.
+  describe('while a program is running', () => {
+    const setRunning = (running: boolean) => {
+      (window as unknown as {Maze: {isRunning: () => boolean}}).Maze.isRunning =
+        () => running;
+    };
+
+    it('refuses to enter, and says why', () => {
+      setRunning(true);
+      press('Enter');
+      expect(focusableCursor()).toBeNull();
+      expect(liveRegionText()).toBe(
+        'The maze cannot be navigated while program is running.'
+      );
+    });
+
+    it('stands down when a run starts under an active cursor', () => {
+      press('Enter');
+      expect(focusableCursor()).not.toBeNull();
+      setRunning(true);
+      press('ArrowRight');
+      expect(focusableCursor()).toBeNull();
+    });
+
+    it('lets the student back in once the run finishes', () => {
+      setRunning(true);
+      press('Enter');
+      expect(focusableCursor()).toBeNull();
+      setRunning(false);
+      press('Enter');
+      expect(focusableCursor()).not.toBeNull();
+    });
   });
 
   it('removes the cursor on Escape', () => {
@@ -768,8 +796,7 @@ describe('MazeKeyboardNavigation interaction', () => {
     expect(document.activeElement).toBe(svg);
   });
 
-  // Painter keeps its scenery on wall tiles, so unlike every other subtype the
-  // cursor has to be able to walk onto them.
+  // Painter keeps its scenery on wall tiles, so the cursor must reach them.
   describe('neighborhood walls are walkable', () => {
     const neighborhoodController = (tiles: Record<string, number>) =>
       makeController({
@@ -797,8 +824,7 @@ describe('MazeKeyboardNavigation interaction', () => {
       );
     });
 
-    // The other half of the gate above: moves have to reach the live region,
-    // and entry must not, or the first cell is read twice.
+    // Moves must reach the live region; entry must not, or it is read twice.
     it('announces moves but not the cell it entered on', () => {
       renderPegman();
       (window as unknown as {Maze: {controller: Controller}}).Maze.controller =
@@ -824,8 +850,7 @@ describe('MazeKeyboardNavigation interaction', () => {
   });
 });
 
-// maze_locale.js ships only with legacy maze levels. The module falls back to
-// English when it is absent (every test above) and translates when it is not.
+// maze_locale.js ships only with maze levels; English is the fallback.
 describe('maze translations', () => {
   afterEach(() => {
     jest.dontMock('@cdo/apps/maze/locale');
