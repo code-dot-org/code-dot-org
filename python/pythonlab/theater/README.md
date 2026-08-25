@@ -22,7 +22,7 @@ The package exports seven names: `Scene`, `play_scenes`, `Color`, `Image`,
 the renderer, the audio timeline, the action records — is machinery those seven
 are built from, not something student code calls.
 
-## Basic code structure
+## Basic architecture
 
 A `Scene` method call records an action, but draws nothing. `play_scenes()`
 replays the recorded actions to produce two things:
@@ -68,7 +68,7 @@ not change a shape already recorded.
 | fill color | black |
 | stroke width | 1 |
 
-## Top Level Methods
+## API
 
 ### `play_scenes(*scenes)`
 
@@ -87,17 +87,17 @@ scene does not apply to the second, which starts back at the defaults.
 
 ## Image
 
-Three ways to make one:
+There are three supported ways to make an `Image`:
 
 ```python
 Image('cat.png')     # load a file from the Python Lab file system
-Image(other_image)   # an independent copy
+Image(other_image)   # copy an existing Image
 Image(200, 100)      # a blank white image, 200 wide and 100 tall
 ```
 
 A loaded image larger than 400x400 is scaled down to fit, keeping its shape.
 
-| Method | |
+| Methods | |
 | --- | --- |
 | `get_width() -> int`, `get_height() -> int` | Size in pixels. |
 | `get_pixel(x, y) -> Pixel` | One pixel; `pixel.get_color()` gives its `Color`. |
@@ -105,6 +105,7 @@ A loaded image larger than 400x400 is scaled down to fit, keeping its shape.
 | `clear(color)` | Fill the whole image with one color. |
 
 ## Scene Methods
+The bulk of the actions the user will take are in a `Scene`.
 
 ### Timing
 
@@ -120,7 +121,7 @@ rounded to a hundredth of a second, which is the finest delay a gif frame can
 express.
 
 A scene with no pause at all is a single still picture. Whatever is drawn after
-the last pause becomes a closing frame that the animation holds at the end.
+the last pause becomes a closing frame.
 
 Pauses are also the clock the soundtrack runs on. Sound recorded between two
 pauses starts where those pauses put it, so picture and sound stay together.
@@ -197,7 +198,7 @@ A newline in `text` starts a new line below the first, which keeps the baseline
 it was given — so the extra lines fall below `y`, they do not push the first one
 up.
 
-### #`set_text_color(color)`, `set_text_height(height)`
+#### `set_text_color(color)`, `set_text_height(height)`
 
 `height` is in pixels, between 1 and 1600. The default is 20.
 
@@ -270,7 +271,7 @@ clock. Sounds that overlap are added together; the sum is clipped rather than
 allowed past full volume. The samples are copied when recorded, so changing the
 list afterwards does not change what plays.
 
-## Colors
+## Color
 
 Anywhere a color is taken, both a `Color` and a string work:
 
