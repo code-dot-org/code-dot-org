@@ -131,7 +131,11 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     }
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
-        video: true,
+        video: {
+          aspectRatio: {ideal: 9 / 16},
+          width: {ideal: 720},
+          height: {ideal: 1280},
+        },
         audio: true,
       });
       streamRef.current = stream;
@@ -243,8 +247,10 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
   if (recordingState === 'recorded' && recordedUrl) {
     return (
       <div className={styles.container}>
-        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-        <video className={styles.video} src={recordedUrl} controls />
+        <div className={styles.previewWrapper}>
+          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+          <video className={styles.video} src={recordedUrl} controls />
+        </div>
         {!disabled && (
           <button
             type="button"

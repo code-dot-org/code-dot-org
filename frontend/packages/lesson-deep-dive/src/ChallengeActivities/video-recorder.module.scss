@@ -13,12 +13,15 @@
   overflow: hidden;
   background-color: #000;
   line-height: 0;
+  aspect-ratio: 9 / 16;
 }
 
 .video {
   width: 100%;
+  height: 100%;
   border-radius: 8px;
   display: block;
+  object-fit: cover;
 }
 
 .countdownRing {
