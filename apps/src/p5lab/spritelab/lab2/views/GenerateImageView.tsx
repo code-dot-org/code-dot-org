@@ -54,6 +54,10 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
+// Where the slider goes when a character set is asked for: two dozen frames
+// must agree with one, so less wildness. Level 3 is a temperature of 0.6,
+// the closest slider stop to 0.5 and the setting a good live run used.
+const CHARACTER_SET_TEMPERATURE_LEVEL = 3;
 
 // Prompt hints, one per type, so the example suits what is being made.
 const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
@@ -329,7 +333,12 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 size="s"
                 checked={characterSet}
                 disabled={generating}
-                onChange={e => setCharacterSet(e.target.checked)}
+                onChange={e => {
+                  setCharacterSet(e.target.checked);
+                  if (e.target.checked) {
+                    setTemperatureLevel(CHARACTER_SET_TEMPERATURE_LEVEL);
+                  }
+                }}
               />
             </div>
           )}

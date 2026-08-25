@@ -85,6 +85,7 @@ describe('SpriteLab2 characterSet', () => {
     expect(base).toContain('faces right');
     expect(base).toContain('#FF00FF');
     expect(base).toContain('no shadow');
+    expect(base).toContain('no other creatures');
     const step = plan.find(p => p.pose === 'jump' && p.facing === 'left')!;
     const frame = framePrompt('a robot', step, 'pixel', KEY_COLORS.green);
     expect(frame).toContain('a robot');
@@ -93,6 +94,7 @@ describe('SpriteLab2 characterSet', () => {
     expect(frame).toContain(POSE_FRAME_DESCRIPTIONS.jump[0]);
     expect(frame).toContain('pixel art');
     expect(frame).toContain('#00FF00');
+    expect(frame).toContain('no other creatures');
   });
 
   it('sizes the cell to the largest frame', () => {

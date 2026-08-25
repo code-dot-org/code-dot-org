@@ -146,6 +146,12 @@ function facingClause(facing: CharacterFacing): string {
   return `The character faces ${facing}, exactly as in the provided images: its face and body point toward the ${facing} side of the image.`;
 }
 
+// Each frame is drawn on its own, so a companion or prop the model adds to
+// one frame has no reason to recur in the next: a cat came and went across
+// a witch's walk. Say so in every frame's prompt.
+const ONLY_THIS_CHARACTER =
+  'Only this one character, alone: no other creatures, people, pets, objects or companions, and nothing added that is not part of the character itself.';
+
 /** The one flat colour every frame is drawn on, keyed out afterwards. */
 function keyClause(key: KeyColor): string {
   return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, and no shadow under the character. Only the character on that flat ${key.name}.`;
@@ -161,7 +167,7 @@ export function basePrompt(
     `${prompt}. Show the whole character, ${POSE_FRAME_DESCRIPTIONS.stand[0]}. ` +
     'The character faces right: its face and body point toward the right ' +
     'side of the image. Feet near the bottom of the image, nothing cut off. ' +
-    `${styleClause(style)} ${keyClause(key)}`
+    `${ONLY_THIS_CHARACTER} ${styleClause(style)} ${keyClause(key)}`
   );
 }
 
@@ -185,7 +191,9 @@ export function framePrompt(
     'design, colors, proportions, outfit and art style, the same scale — in a ' +
     `NEW pose that clearly differs from the provided images: ${
       POSE_FRAME_DESCRIPTIONS[plan.pose][plan.frame]
-    }. ${facingClause(plan.facing)} ${keyClause(key)} ${styleClause(style)}`
+    }. ${facingClause(plan.facing)} ${ONLY_THIS_CHARACTER} ${keyClause(
+      key
+    )} ${styleClause(style)}`
   );
 }
 
