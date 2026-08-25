@@ -6,21 +6,3 @@ anonymous 'false'
 page
 text 'csp_unit_assessment_overview_2021'
 level 'csp-u1-exam1-bits-bytes-and-representation_2021'
-level 'csp-u1-exam1-same-binary-sequence_2021'
-level 'csp-u1-exam1-analog-v-digital_2021'
-level 'csp-u1-exam1-overflow-error_2021'
-level 'csp-u1-exam1-represent-numbers_2021'
-
-page
-level 'csp-u1-exam1-convert-binary_2021'
-level 'csp-u1-exam1-convert-decimal_2021'
-level 'csp-u1-exam1-binary-numeric-value_2021'
-level 'csp-u1-exam1-binary-equivalent_2021'
-level 'csp-u1-exam1-lossless-compression_2021'
-
-page
-level 'csp-u1-exam1-compress-image_2021'
-level 'csp-u1-exam1-intellectual-property_2021'
-level 'csp-u1-exam1-legal-consquences_2021'
-level 'csp-u1-exam1-compression-choice_2021'
-level 'csp-u1-exam1-photo-owner_2021'
