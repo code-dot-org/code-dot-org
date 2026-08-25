@@ -133,7 +133,10 @@ describe('SpriteLab2 keyOutColor', () => {
     expect(alpha(soft, 1)).toBeLessThan(255);
     // Despilled: the fringe pixel loses its magenta cast (blue drops) so it
     // reads as the character's red, not a pink halo.
-    expect(soft[1 * 4 + 2]).toBeLessThan(60);
+    // 127 of key distance puts alpha near 0.7; backing the key's 30% share
+    // out of blue 128 leaves about 75.
+    expect(soft[1 * 4 + 2]).toBeLessThan(128);
+    expect(soft[1 * 4 + 2]).toBeGreaterThan(60);
     expect(soft[1 * 4]).toBe(255);
   });
 
