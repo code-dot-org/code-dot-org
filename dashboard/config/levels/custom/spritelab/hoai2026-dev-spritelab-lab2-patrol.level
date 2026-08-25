@@ -1,0 +1,115 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-24T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "Images",
+      "World",
+      "Code",
+      "Play"
+    ],
+    "locked_image_type": "sprite",
+    "pinned_scene_id": "platform-scene",
+    "pinned_scene_name": "Platformer",
+    "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Make another character**, whoever or whatever you like."
+      },
+      {
+        "text": "**Give them a platform.** In the **World** tab, place them on top of some blocks. They will walk back and forth along them.",
+        "after": {
+          "images": 5
+        }
+      },
+      {
+        "text": "**Set them walking.** In the **Code** tab, use **sprite [them] begins [patrolling left and right on blocks]**.",
+        "after": {
+          "worldSprites": 3
+        }
+      },
+      {
+        "text": "**Now your choice.** Add **when [ ] touches [ ]** and pick your player and your new character from the dropdowns. Then decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start. Press **Play** and go and meet them.",
+        "after": {
+          "tab": "Code"
+        }
+      }
+    ],
+    "long_instructions": "# Add someone else\nMake a second character and place it on a platform, walking back and forth. Then decide what happens when your player meets them: a friendly hello, or back to the start.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_addBehaviorSimple",
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "BEHAVIOR": {
+              "block": {
+                "type": "spritelab2_patrollingOnBlocks"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_checkTouching",
+          "inputs": {
+            "SPRITE1": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "SPRITE2": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Hello!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_restartScene"
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

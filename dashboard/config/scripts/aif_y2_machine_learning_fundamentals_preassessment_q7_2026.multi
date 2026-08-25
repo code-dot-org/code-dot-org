@@ -1,0 +1,21 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q7-2026'
+
+wrong 'The model will output 5 or 8 depending on the value of x'
+wrong '5 and 8 are both pieces of training data for the model'
+wrong "The model's line touches 8 training data points but misses 5 points"
+right "8 is the slope of the model's line and 5 is the y-intercept"
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+The function below implements a linear regression model. Which of the following statements is accurate?
+
+```
+def predict(x):
+    return 5 + 8 * x
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Building Regression Models
+MARKDOWN

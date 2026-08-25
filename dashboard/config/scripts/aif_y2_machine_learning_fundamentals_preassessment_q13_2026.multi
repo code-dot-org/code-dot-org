@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q13-2026'
+
+wrong 'Because they double-check their work by running in many stages'
+wrong 'Because they improve accuracy by combining predictions from other models'
+right 'Because they can work with data that might be in different forms'
+wrong 'Because they can be updated more easily as new data arrives'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Why are multimodal machine learning models useful?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Sensing the World
+MARKDOWN

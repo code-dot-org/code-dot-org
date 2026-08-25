@@ -5,7 +5,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {
   setChatIsOpen,
   fetchThreadMessages,
-} from '@cdo/apps/aiDifferentiation/redux';
+} from '@cdo/apps/aiTeacherDrawer/redux';
 import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';

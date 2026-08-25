@@ -76,10 +76,11 @@ import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
+  DEFAULT_SCENE_GRID_SIZE,
   paintWorldCell,
-  SCENE_GRID_SIZE,
+  resizeWorld,
+  sceneGridSize,
   World,
-  WORLD_GRID_SIZE,
   WorldCell,
 } from '../world';
 
@@ -112,15 +113,12 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
-// World-tab experiment flags: ?world-tab=true shows the tab (levels can also
-// opt in via showWorldTab); &world=large widens the editor from the scene
-// grid to the whole world.
-function getWorldTabParams() {
-  const params = new URLSearchParams(window.location.search);
-  return {
-    enabled: params.get('world-tab') === 'true',
-    large: params.get('world') === 'large',
-  };
+// World-tab experiment flag: ?world-tab=true shows the tab (levels can also
+// opt in via showWorldTab).
+function getWorldTabEnabledParam() {
+  return (
+    new URLSearchParams(window.location.search).get('world-tab') === 'true'
+  );
 }
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
@@ -196,7 +194,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
-  const worldTabParams = useMemo(getWorldTabParams, []);
+  const worldTabParamEnabled = useMemo(getWorldTabEnabledParam, []);
   // A level can name its exact tab set; unknown names are dropped, and a list
   // naming none falls back to the defaults. Listing 'World' turns the world
   // tab on, as the URL flag and showWorldTab still do.
@@ -208,24 +206,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (requested?.length) {
       return requested;
     }
-    return worldTabParams.enabled || levelProperties.showWorldTab
+    return worldTabParamEnabled || levelProperties.showWorldTab
       ? WORLD_TABS
       : ENABLED_TABS;
   }, [
     levelProperties.visibleTabs,
     levelProperties.showWorldTab,
-    worldTabParams.enabled,
+    worldTabParamEnabled,
   ]);
-  const worldTab = {
-    enabled: tabs.includes('World'),
-    large: worldTabParams.large || !!levelProperties.showLargeWorld,
-  };
-  // A world painted while the tab was enabled must not keep spawning
-  // sprites once the tab (URL param or level property) is gone — there
-  // would be no UI left to remove them.
-  const compileWorldIfEnabled = useCallback(
-    (world?: World) => (worldTab.enabled ? compileWorldPrelude(world) : ''),
-    [worldTab.enabled]
+  const worldTabEnabled = tabs.includes('World');
+  // Playfield size for a world this level creates. An existing world keeps
+  // the size its grid already holds unless it can grow into this one without
+  // dropping a placement (see resizeWorld) — the project's world is shared
+  // across the levels that open its channel, so the data decides.
+  const seedSceneSize =
+    levelProperties.worldGridSize || DEFAULT_SCENE_GRID_SIZE;
+  const worldFor = useCallback(
+    (scene?: Scene) => resizeWorld(scene?.world, seedSceneSize),
+    [seedSceneSize]
   );
   // A level naming its tabs opens on the list's first entry (display order is
   // fixed, so authored order is free to carry the start tab).
@@ -249,6 +247,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     if (activeTab === 'Images') {
       setImagesMounted(true);
+    }
+  }, [activeTab]);
+  // Same for the World tab: inserting its grid costs far more than rendering
+  // it, because the consent script's autoblocker walks every added node.
+  const [worldMounted, setWorldMounted] = useState(false);
+  useEffect(() => {
+    if (activeTab === 'World') {
+      setWorldMounted(true);
     }
   }, [activeTab]);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
@@ -365,6 +371,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => pinnedSceneId ?? scenes[0].id
   );
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
+  const activeWorld = worldFor(activeScene);
+  const activeSceneSize = sceneGridSize(activeWorld);
+  // Images in the project, for guide steps waiting on one being made.
+  const imageCount = useAppSelector(
+    state => state.animationList.orderedKeys.length
+  );
 
   // Keep activeSceneId pointing at a real scene: locked to the pin once the
   // ensure effect lands it, otherwise reset to the first scene when the
@@ -389,12 +401,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
-  const guideInstructions = useGuideSteps(
-    levelProperties.guideSteps,
-    activeScene?.world?.grid,
+  const guideInstructions = useGuideSteps({
+    steps: levelProperties.guideSteps,
+    grid: activeWorld.grid,
     activeTab,
-    levelProperties.longInstructions
-  );
+    images: imageCount,
+    fallback: levelProperties.longInstructions,
+  });
 
   // The World palette selection lives here so it survives leaving the tab
   // (WorldTab unmounts when hidden).
@@ -450,7 +463,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
     if (savedExternalKeys.length === 0) {
       setAnimationsSeeded(true);
-      fetchSectionScenes(levelProperties.id)
+      fetchSectionScenes(levelProperties.id, scriptId)
         .then(refs => {
           if (!cancelled) {
             dispatch(setExternalScenes(toExternalSceneOptions(refs)));
@@ -465,7 +478,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             setTimeout(() => reject(new Error('timeout')), 5000)
           );
           const refs = await Promise.race([
-            fetchSectionScenes(levelProperties.id),
+            fetchSectionScenes(levelProperties.id, scriptId),
             timeout,
           ]);
           options = toExternalSceneOptions(refs);
@@ -490,7 +503,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     // Re-seeds only when the level changes (seedAnimationList is stable,
     // initialSources is a ref-captured constant).
-  }, [levelProperties.id, dispatch, initialSources, seedAnimationList]);
+  }, [
+    levelProperties.id,
+    scriptId,
+    dispatch,
+    initialSources,
+    seedAnimationList,
+  ]);
 
   // What's on stage right now — updated by every run, including scene jumps —
   // so "Restart scene" (and the reseed watcher below) can re-run it.
@@ -657,8 +676,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // so world edits don't churn their identities.
   const activeWorldRef = useRef<World | undefined>(undefined);
   useEffect(() => {
-    activeWorldRef.current = activeScene?.world;
-  }, [activeScene]);
+    activeWorldRef.current = worldFor(activeScene);
+  }, [activeScene, worldFor]);
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
@@ -668,9 +687,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     dispatch(setIsRunning(true));
     engine.runProgram(
-      compileWorldIfEnabled(activeWorldRef.current) + (getCode() ?? '')
+      compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
     );
-  }, [dispatch, getCode, compileWorldIfEnabled]);
+  }, [dispatch, getCode]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -694,7 +713,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       currentExternalProjectRef.current = null;
       engine.preloadAnimationsOverride = null;
       currentPlayingRef.current = {kind: 'local', scene};
-      const prelude = compileWorldIfEnabled(scene.world);
+      const prelude = compileWorldPrelude(worldFor(scene));
       let code = '';
       try {
         const live = scene.id === activeSceneId ? getCode() : null;
@@ -709,7 +728,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       engine.runProgram(prelude + code);
     },
-    [dispatch, activeSceneId, getCode, compileWorldIfEnabled]
+    [dispatch, activeSceneId, getCode, worldFor]
   );
 
   const runScene = useCallback(
@@ -792,7 +811,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       currentExternalProjectRef.current = project;
       currentPlayingRef.current = {kind: 'external', project, sceneId};
-      const prelude = compileWorldIfEnabled(scene.world);
+      // An external scene runs at the playfield size ITS project authored —
+      // reshaping it to this level's size would resize every cell under a
+      // layout built for the other one.
+      const prelude = compileWorldPrelude(scene.world);
       let code = '';
       try {
         code = compileExternalScene(scene, project);
@@ -814,7 +836,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       engine.runProgram(prelude + code);
     },
-    [dispatch, compileExternalScene, compileWorldIfEnabled]
+    [dispatch, compileExternalScene]
   );
 
   // Fetch the classmate's project fresh (their scenes may have changed);
@@ -829,7 +851,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setExternalLoading(true);
       let project: ExternalProject | undefined;
       try {
-        project = await fetchExternalProject(parsed.channel);
+        project = await fetchExternalProject(
+          parsed.channel,
+          levelProperties.id,
+          scriptId
+        );
         externalProjectsRef.current.set(parsed.channel, project);
       } catch (e) {
         project = externalProjectsRef.current.get(parsed.channel);
@@ -844,14 +870,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       runExternalProjectScene(project, parsed.sceneId);
     },
-    [runExternalProjectScene]
+    [runExternalProjectScene, levelProperties.id, scriptId]
   );
 
   // The external dropdown re-fetches the section list on every open, so
   // scenes classmates add while this lab is open show up.
   useEffect(() => {
     setExternalSceneRefreshHandler(async () => {
-      const refs = await fetchSectionScenes(levelProperties.id);
+      const refs = await fetchSectionScenes(levelProperties.id, scriptId);
       const options = toExternalSceneOptions(refs);
       const known = new Set(options.map(o => o.key));
       collectSavedExternalKeys(scenes).forEach(key => {
@@ -862,7 +888,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setExternalScenes(options));
     });
     return () => setExternalSceneRefreshHandler(null);
-  }, [levelProperties.id, dispatch, scenes]);
+  }, [levelProperties.id, scriptId, dispatch, scenes]);
 
   // Scene jumps should only navigate while playing. In preview (Code tab) a
   // goToScene block would otherwise pull the preview off the scene being edited.
@@ -947,6 +973,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return;
       }
       if (scenes.some(s => s.id === sceneId)) {
+        // Follow the jump in the editor too: leaving Play lands on the
+        // scene that was just playing.
+        setActiveSceneId(sceneId);
         runScene(sceneId);
         return;
       }
@@ -964,6 +993,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return;
       }
       runExternalScene(key);
+    };
+    // By ref: the restart handler is declared below this effect, and it is
+    // also what the Play tab's button calls.
+    engine.onRestartScene = () => {
+      if (!isPlayingRef.current) {
+        engine.cancelSceneJump();
+        return;
+      }
+      restartSceneRef.current?.();
     };
     // Cover on jump start, fade on landing — but not while previewing, where
     // the jump is cancelled (above) and the cover would just flash.
@@ -1041,13 +1079,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ...prev,
         scenes: getScenes(prev).map(s =>
           s.id === activeSceneId
-            ? {...s, world: paintWorldCell(s.world, row, col, cell)}
+            ? {
+                ...s,
+                // Painting the resized world is what persists its size.
+                world: paintWorldCell(worldFor(s), row, col, cell),
+              }
             : s
         ),
       }));
       scheduleRun();
     },
-    [updateSources, activeSceneId, scheduleRun]
+    [updateSources, activeSceneId, scheduleRun, worldFor]
   );
 
   // Rename an image and cascade through every reference — blocks in all
@@ -1200,6 +1242,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [runScene, defaultPlaySceneId, runExternalProjectScene]);
   restartSceneRef.current = handleRestartScene;
 
+  // A restart from a block rides the scene-jump cover and fades when the new
+  // run lands. A button press has no jump to land, so it asks for the same
+  // fade itself — restarting should look the same however it was asked for.
+  const handleRestartClick = useCallback(
+    (event: React.MouseEvent<HTMLElement>, restart: () => void) => {
+      handOffRestartFocus(event);
+      setFadeTrigger(trigger => trigger + 1);
+      restart();
+    },
+    [handOffRestartFocus]
+  );
+
   // Clicking the live preview opens Play on the scene being previewed.
   // Previewing the first scene IS the beginning; keep the quiet default state.
   const handlePreviewClick = useCallback(() => {
@@ -1274,10 +1328,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 <button
                   type="button"
                   className={moduleStyles.startOver}
-                  onClick={event => {
-                    handOffRestartFocus(event);
-                    handleRestartGame();
-                  }}
+                  onClick={event =>
+                    handleRestartClick(event, handleRestartGame)
+                  }
                 >
                   Restart game
                 </button>
@@ -1285,10 +1338,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={event => {
-                  handOffRestartFocus(event);
-                  handleRestartScene();
-                }}
+                onClick={event => handleRestartClick(event, handleRestartScene)}
               >
                 Restart scene
               </button>
@@ -1333,11 +1383,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           </div>
         )}
 
-        {worldTab.enabled && activeTab === 'World' && (
-          <div className={moduleStyles.codeTabWrapper}>
+        {worldTabEnabled && worldMounted && (
+          <div
+            className={moduleStyles.codeTabWrapper}
+            style={{
+              clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
+              pointerEvents: activeTab === 'World' ? 'auto' : 'none',
+            }}
+          >
             <WorldTab
-              world={activeScene?.world}
-              displaySize={worldTab.large ? WORLD_GRID_SIZE : SCENE_GRID_SIZE}
+              world={activeWorld}
+              sceneSize={activeSceneSize}
               onPaintCell={handlePaintWorldCell}
               selected={worldPaletteSelection}
               onSelect={setWorldPaletteSelection}
