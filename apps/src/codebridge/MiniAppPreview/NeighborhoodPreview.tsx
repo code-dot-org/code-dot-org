@@ -38,6 +38,7 @@ const NeighborhoodPreview: React.FunctionComponent<
     return findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID)?.contents;
   });
   const dispatch = useAppDispatch();
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isVertical = config.activeLayout === 'vertical';
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -145,6 +146,7 @@ const NeighborhoodPreview: React.FunctionComponent<
       <NeighborhoodVisualization
         useProtectedDiv={false}
         backgroundClassName={moduleStyles.neighborhoodBackground}
+        isRunning={isRunning}
       />
     </div>
   );
