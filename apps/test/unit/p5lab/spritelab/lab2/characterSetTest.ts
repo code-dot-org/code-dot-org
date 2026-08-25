@@ -106,6 +106,26 @@ describe('SpriteLab2 characterSet', () => {
     // No limb-by-limb description: the figure is the pose.
     expect(frame).not.toMatch(/stride|heel|knee|swing/);
     expect(frame).not.toMatch(/[A-Z]{4,}/);
+    // The text names the frame in animation's own words.
+    expect(frame).toContain(
+      'frame 4 of 8 of a side-view walk cycle sprite sheet, the up pose'
+    );
+    const contact = framePrompt(
+      'a robot',
+      plan.find(p => p.pose === 'walk' && p.frame === 4)!,
+      'smooth',
+      key
+    );
+    expect(contact).toContain('frame 5 of 8');
+    expect(contact).toContain('the contact pose');
+    expect(
+      framePrompt(
+        'a robot',
+        plan.find(p => p.pose === 'jump' && p.frame === 1)!,
+        'smooth',
+        key
+      )
+    ).toContain('the falling frame of a jump');
   });
 
   it('sizes the cell to the largest frame', () => {

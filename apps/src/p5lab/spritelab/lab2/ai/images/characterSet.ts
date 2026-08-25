@@ -171,6 +171,31 @@ export function buildPoses(plan: FramePlan[]): AnimationPoses {
 // then arms shouting while the legs shuffled, then the plate's arms-out
 // pose in every walking frame. The figure alone is the pose.
 
+// The four keys of a side-view walk cycle, by their names in animation —
+// the vocabulary that walk-cycle sprite sheets are labelled with wherever
+// they appear, which is the one kind of pose text that might carry signal
+// for a pixel sprite. Names only; no limbs.
+const WALK_KEY_NAMES = ['contact', 'down', 'passing', 'up'];
+
+/** One animator's label for the frame: what it is, not how to draw it. */
+export function frameKeyLabel(plan: FramePlan): string {
+  const {frameCount} = CHARACTER_POSES.find(p => p.pose === plan.pose)!;
+  switch (plan.pose) {
+    case 'walk':
+      return `frame ${
+        plan.frame + 1
+      } of ${frameCount} of a side-view walk cycle sprite sheet, the ${
+        WALK_KEY_NAMES[plan.frame % WALK_KEY_NAMES.length]
+      } pose`;
+    case 'jump':
+      return plan.frame === 0
+        ? 'the rising frame of a jump'
+        : 'the falling frame of a jump';
+    default:
+      return `frame ${plan.frame + 1} of ${frameCount} of an idle animation`;
+  }
+}
+
 function facingClause(facing: CharacterFacing): string {
   return `The character faces ${facing}, exactly as in the provided images: its face and body point toward the ${facing} side of the image.`;
 }
@@ -222,11 +247,11 @@ export function framePrompt(
     ? ' The last provided image is a silhouette figure: draw the character in exactly that pose — the whole body, legs, feet, arms and torso, as the figure has them. Take nothing else from the figure: none of its colors, outlines, edges or shapes appear on the character. The pose comes only from the figure; the character image shows only what the character looks like.'
     : '';
   return (
-    `The character: ${prompt}. ${characterImages}${figure} Draw the same ` +
-    'character — same design, colors, proportions, outfit and art style, the ' +
-    `same scale. ${facingClause(
-      plan.facing
-    )} ${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style)}`
+    `The character: ${prompt}. ${characterImages}${figure} This is ` +
+    `${frameKeyLabel(plan)}. Draw the same character — same design, colors, ` +
+    'proportions, outfit and art style, the same scale. ' +
+    `${facingClause(plan.facing)} ${ONLY_THIS_CHARACTER} ${keyClause(key)} ` +
+    `${styleClause(style)}`
   );
 }
 
