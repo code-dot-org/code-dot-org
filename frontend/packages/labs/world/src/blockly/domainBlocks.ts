@@ -6356,6 +6356,62 @@ const worldDrawText = defineBlock({
     },
   },
 });
+/**
+ * `draw paragraph …` — several lines of it, broken to fit a column.
+ *
+ * A block of its own rather than a sixth socket on `draw text`. What differs
+ * is not a setting, it is the kind of thing being drawn: a score is a word and
+ * a line of dialogue is a paragraph, and the block that draws a score should
+ * not grow a socket for the one that does not.
+ *
+ * WHERE THE BREAKS FALL IS THE DRIVER'S. This says how wide; the half holding
+ * the font works out what fits, because the engine has no canvas to measure
+ * with (`engine/core/drawing`).
+ */
+const worldDrawParagraph = defineBlock({
+  type: 'world_draw_paragraph',
+  message0:
+    'draw paragraph %1 in a column %2 wide at x %3 y %4 size %5 anchored %6',
+  args0: [
+    {type: 'input_value', name: 'TEXT'},
+    numberArg('WIDTH'),
+    numberArg('X'),
+    numberArg('Y'),
+    numberArg('SIZE'),
+    {type: 'input_value', name: 'ANCHOR', check: 'String'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Draw several lines of text, broken between words to fit a column. A ' +
+    'word wider than the column stays whole and overhangs — this lab has no ' +
+    'dictionary to hyphenate with.',
+  generator: {
+    javascript(block, generator) {
+      const text = generator.valueToCode(block, 'TEXT', Order.NONE) || "''";
+      const width = generator.valueToCode(block, 'WIDTH', Order.NONE) || '0';
+      const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
+      const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
+      const size = generator.valueToCode(block, 'SIZE', Order.NONE) || '12';
+      const anchor =
+        generator.valueToCode(block, 'ANCHOR', Order.NONE) || str('centre');
+      // `String(…)` for the reason `draw text` gives: the socket takes any
+      // value and the commonest thing drawn is a number.
+      return `pen.text(String(${text}), ${x}, ${y}, ${size}, ${anchor}, ${width});\n`;
+    },
+  },
+});
+registerValueShadows('world_draw_paragraph', [
+  {name: 'TEXT', shadow: {type: 'text', fields: {TEXT: 'hello'}}},
+  {name: 'WIDTH', shadow: {type: 'math_number', fields: {NUM: 120}}},
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'SIZE', shadow: {type: 'math_number', fields: {NUM: 12}}},
+]);
+
 registerValueShadows('world_draw_text', [
   {name: 'TEXT', shadow: {type: 'text', fields: {TEXT: 'hello'}}},
   {name: 'X', shadow: {type: 'math_number', fields: {NUM: 16}}},
@@ -7164,6 +7220,7 @@ export const DOMAIN_BLOCKS = [
   worldDrawCircle,
   worldDrawLine,
   worldDrawText,
+  worldDrawParagraph,
   worldTextAnchor,
   worldDrawImage,
   worldRuleStepTick,
@@ -7301,6 +7358,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_draw_circle',
       'world_draw_line',
       'world_draw_text',
+      // …and several lines of it, broken to fit a column.
+      'world_draw_paragraph',
       'world_text_anchor',
       'world_draw_image',
     ],

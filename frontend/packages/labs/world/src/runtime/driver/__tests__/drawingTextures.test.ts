@@ -40,12 +40,15 @@ function recordingContext() {
     strokeRect: function (...a: number[]) {
       calls.push(`strokeRect(${a}):${this.strokeStyle}`);
     },
-    fillText: function (text: string) {
+    fillText: function (text: string, _x: number, y: number) {
       calls.push(
-        `fillText(${text}):${this.fillStyle}:${this.font}:${this.textAlign}/${this.textBaseline}`,
+        `fillText(${text})@${y}:${this.fillStyle}:${this.font}:${this.textAlign}/${this.textBaseline}`,
       );
     },
     strokeText: (text: string) => calls.push(`strokeText(${text})`),
+    // Six pixels a character, which is close enough to a real font to make the
+    // break points predictable and exact enough to assert on.
+    measureText: (text: string) => ({width: text.length * 6}),
     drawImage: (...a: unknown[]) => calls.push(`drawImage(${a.length - 1})`),
   };
   return context as unknown as CanvasRenderingContext2D & {calls: string[]};
@@ -239,3 +242,73 @@ describe('the texture cache', () => {
 // `rasterize` is exercised through the running game, and everything above tests
 // the two halves that have logic in them.
 vi.mock('phaser', () => ({default: {}}));
+
+// Text broken to fit a column.
+//
+// Canvas draws one line and ignores newlines, so a dialogue box was not a
+// thing this lab could draw at all. The engine says how WIDE, and this half —
+// the one holding the font — decides where the words fall, because the engine
+// has no canvas to measure with.
+describe('a paragraph', () => {
+  const drawn = (calls: string[]) =>
+    calls
+      .filter(call => call.startsWith('fillText('))
+      .map(call => call.slice('fillText('.length, call.indexOf(')@')));
+
+  const paragraph = (text: string, wrapWidth?: number): DrawCommand[] => [
+    {
+      op: 'text',
+      text,
+      x: 0,
+      y: 0,
+      size: 10,
+      anchor: 'top left',
+      fill: '#fff',
+      strokeWidth: 1,
+      ...(wrapWidth === undefined ? {} : {wrapWidth}),
+    },
+  ];
+
+  it('is one line when no column is given', () => {
+    // What every drawing did before this existed, and what a score wants.
+    expect(drawn(paint(paragraph('one two three four')))).toEqual([
+      'one two three four',
+    ]);
+  });
+
+  it('breaks between words to fit the column', () => {
+    // 60px at six pixels a character is ten characters a line.
+    expect(drawn(paint(paragraph('one two three four', 60)))).toEqual([
+      'one two',
+      'three four',
+    ]);
+  });
+
+  it('never breaks inside a word', () => {
+    // A break mid-word is a typo the reader has to un-see. A word too wide for
+    // the column stays whole and overhangs — the least surprising of the wrong
+    // answers, since this lab has no dictionary to hyphenate with.
+    expect(drawn(paint(paragraph('extraordinarily wide', 30)))).toEqual([
+      'extraordinarily',
+      'wide',
+    ]);
+  });
+
+  it('honours a newline the author typed', () => {
+    // So a two-line name plate does not depend on the column being narrow.
+    expect(drawn(paint(paragraph('Ada\nLovelace', 600)))).toEqual([
+      'Ada',
+      'Lovelace',
+    ]);
+  });
+
+  it('puts each line under the last', () => {
+    const ys = paint(paragraph('one two three four', 60))
+      .filter(call => call.startsWith('fillText('))
+      .map(call =>
+        Number(call.slice(call.indexOf(')@') + 2, call.indexOf(':'))),
+      );
+
+    expect(ys[1]).toBeGreaterThan(ys[0]);
+  });
+});

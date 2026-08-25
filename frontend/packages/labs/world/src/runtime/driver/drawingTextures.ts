@@ -32,6 +32,45 @@ const KEY_PREFIX = 'drawing:';
  */
 const FONT_STACK = '"Trebuchet MS", "Segoe UI", system-ui, sans-serif';
 
+/** How far apart the lines of a wrapped block sit, as a multiple of the size. */
+const LINE_SPACING = 1.25;
+
+/**
+ * `text` broken into lines that fit `width`, or one line when there is none.
+ *
+ * Words, never letters: a break inside a word is a typo the reader has to
+ * un-see. A single word wider than the column stays on its own line and
+ * overhangs, which is the least surprising of the wrong answers — the
+ * alternative is hyphenating, and this lab has no dictionary.
+ *
+ * A newline the author typed is honoured as a break, so a two-line name plate
+ * does not depend on the column being narrow enough.
+ */
+const wrapped = (
+  context: CanvasRenderingContext2D,
+  text: string,
+  width: number | undefined,
+): string[] => {
+  if (width === undefined || width <= 0) {
+    return [text];
+  }
+  const lines: string[] = [];
+  for (const paragraph of text.split('\n')) {
+    let line = '';
+    for (const word of paragraph.split(' ')) {
+      const candidate = line ? `${line} ${word}` : word;
+      if (line && context.measureText(candidate).width > width) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = candidate;
+      }
+    }
+    lines.push(line);
+  }
+  return lines;
+};
+
 /** How an anchor maps onto the two things a canvas calls the same idea. */
 const ALIGNMENT: Record<
   TextAnchor,
@@ -128,14 +167,29 @@ function draw(
       context.font = `${command.size}px ${FONT_STACK}`;
       context.textAlign = align;
       context.textBaseline = baseline;
-      // Outline first so a stroked letter is read over its own edge rather
-      // than under it, which is what an outlined font looks like everywhere.
-      if (command.stroke !== undefined) {
-        context.strokeText(command.text, command.x, command.y);
-      }
-      if (command.fill !== undefined) {
-        context.fillText(command.text, command.x, command.y);
-      }
+      // WHERE THE LINES BREAK IS DECIDED HERE, because this is the half
+      // holding the measuring tape: the engine has no canvas and so no way to
+      // ask how wide a word is. It says how wide the column may be; this works
+      // out what fits (specs/DRAWING.md).
+      const lines = wrapped(context, command.text, command.wrapWidth);
+      // Under one another from the point given, which is what "one line under
+      // another" means for every anchor: a box anchored at its top grows down,
+      // and one anchored in the middle is centred as a block.
+      const step = command.size * LINE_SPACING;
+      const first =
+        command.y -
+        (baseline === 'middle' ? ((lines.length - 1) * step) / 2 : 0);
+      lines.forEach((line, at) => {
+        const y = first + at * step;
+        // Outline first so a stroked letter is read over its own edge rather
+        // than under it, which is what an outlined font looks like everywhere.
+        if (command.stroke !== undefined) {
+          context.strokeText(line, command.x, y);
+        }
+        if (command.fill !== undefined) {
+          context.fillText(line, command.x, y);
+        }
+      });
       return;
     }
   }

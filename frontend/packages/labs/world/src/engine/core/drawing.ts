@@ -73,6 +73,17 @@ export type DrawCommand =
       y: number;
       size: number;
       anchor: TextAnchor;
+      /**
+       * Break the words to fit this many pixels, drawing one line under
+       * another. Absent means one line however long it is, which is what
+       * every drawing did before and what a score or a name wants.
+       *
+       * A WIDTH AND NOT THE BREAKS THEMSELVES. Where a line ends depends on
+       * the font, and the engine has no font — it has no canvas to ask. So it
+       * says how wide, and the driver, which is holding the measuring tape,
+       * decides where the words fall (specs/DRAWING.md).
+       */
+      wrapWidth?: number;
     } & Paint)
   | {
       op: 'image';
@@ -105,6 +116,7 @@ export interface Pen {
     y: number,
     size: number,
     anchor: TextAnchor,
+    wrapWidth?: number,
   ): void;
   image(sprite: string, x: number, y: number, cell?: Cell): void;
 }
@@ -211,8 +223,22 @@ export class CommandPen implements Pen {
     y: number,
     size: number,
     anchor: TextAnchor,
+    wrapWidth?: number,
   ): void {
-    this.commands.push({op: 'text', text, x, y, size, anchor, ...this.paint()});
+    this.commands.push({
+      op: 'text',
+      text,
+      x,
+      y,
+      size,
+      anchor,
+      // Absent rather than zero when there is no wrapping, because the command
+      // list is a drawing's IDENTITY (`drawingKey`): a key carrying `0` for
+      // every unwrapped line would differ from every drawing made before this
+      // existed, and re-rasterize the lot.
+      ...(wrapWidth !== undefined && wrapWidth > 0 ? {wrapWidth} : {}),
+      ...this.paint(),
+    });
   }
 
   image(sprite: string, x: number, y: number, cell?: Cell): void {
