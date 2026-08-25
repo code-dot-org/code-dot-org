@@ -241,6 +241,8 @@ export function poseFigureSvg(
   const shoulder = reach(hip, 180 + key.lean, TORSO);
   const neck = reach(shoulder, 180 + key.lean, NECK);
   const head = reach(neck, 180 + key.lean, HEAD_RADIUS);
+  const NEAR = '#111111';
+  const FAR = '#8a8a8a';
   const BACKGROUND = '#ffffff';
   const parts = [
     leg(hip, key.farLeg, FAR),
@@ -263,25 +265,6 @@ export function poseFigureSvg(
     `<rect width="${POSE_FIGURE_SIZE}" height="${POSE_FIGURE_SIZE}" fill="${BACKGROUND}"/>` +
     `<g${flip}>${parts}</g></svg>`
   );
-}
-
-// Which side of the body a limb belongs to, as the model is told to read
-// it (poseFigureLegend). Near and far were shading — dark over pale — and
-// the model ignored it, drawing the same leg forward and the same arm back
-// in every frame; two plainly different colours give the sides names.
-export const NEAR_COLOR = '#111111';
-export const FAR_COLOR = '#1e6fd9';
-const NEAR = NEAR_COLOR;
-const FAR = FAR_COLOR;
-
-/**
- * The one sentence a frame prompt says about the figure's colours. A legend
- * for the picture, not a description of the pose.
- */
-export function poseFigureLegend(facing: CharacterFacing): string {
-  const near = facing === 'right' ? 'right' : 'left';
-  const far = facing === 'right' ? 'left' : 'right';
-  return `In the figure, black limbs are the character's ${near} side (nearer the viewer) and blue limbs are the character's ${far} side (farther from the viewer).`;
 }
 
 const svgUriCache = new Map<string, string>();

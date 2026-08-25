@@ -89,7 +89,6 @@ describe('SpriteLab2 characterSet', () => {
     expect(frame).toContain('a robot');
     expect(frame).toContain('faces right');
     expect(frame).toContain('silhouette figure');
-    expect(frame).toContain("black limbs are the character's right side");
     expect(frame).toContain('pixel art');
     expect(frame).toContain('#00FF00');
     expect(frame).toContain('no other creatures');
