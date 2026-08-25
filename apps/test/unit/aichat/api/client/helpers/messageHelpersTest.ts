@@ -23,11 +23,13 @@ const asset: ChatAsset = {
   source: AssetSource.PROJECT,
 };
 
+// status OK makes this a CompletedChatMessage, which carries a request id.
 const message = (assets?: ChatAsset[]): ChatMessage => ({
   role: Role.USER,
   status: AiInteractionStatus.OK,
   chatMessageText: 'make the sloth cuter',
   timestamp: 1,
+  requestId: 1,
   assets,
 });
 
