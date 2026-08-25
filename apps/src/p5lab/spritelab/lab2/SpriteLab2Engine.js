@@ -16,7 +16,7 @@ import {
   stepZoom,
   worldPoint,
 } from './camera';
-import {trimAnimationListImages} from './imageTrim';
+import {loadedAnimations, trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
   isSupported,
@@ -28,20 +28,8 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 const NOOP = () => {};
 
 // How long a run waits for the project's images before going ahead without
-// the stragglers (see whenAnimationsAreReadyOrGivenUp_).
+// the stragglers.
 const IMAGE_LOAD_GRACE_MS = 10000;
-
-// The animation list restricted to images whose data has arrived.
-function loadedAnimations(list) {
-  const orderedKeys = (list.orderedKeys || []).filter(
-    key => list.propsByKey[key]?.dataURI
-  );
-  const propsByKey = {};
-  orderedKeys.forEach(key => {
-    propsByKey[key] = list.propsByKey[key];
-  });
-  return {orderedKeys, propsByKey};
-}
 
 // Default sprite size for non-platformer scenes on platform-pool levels;
 // platformer scenes use CELL_SIZE (one grid cell). A later World-tab UI may
@@ -240,11 +228,8 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
-    // A costume the project no longer has — a reference that outlived its
-    // image in an old save, or an external scene's — must not halt the
-    // program: p5.play throws from setAnimation on an unknown name and the
-    // interpreter stops there. Skip the sprite (or the costume change) and
-    // say so once.
+    // p5.play throws on an unknown costume name and the interpreter stops
+    // there; skip the block instead and say so once.
     const knownCostume = name =>
       !!(library.p5._predefinedSpriteAnimations || {})[name];
     const missing = new Set();
@@ -571,13 +556,9 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /**
-   * Wait for the project's images to load, but not forever: the store never
-   * marks an image whose fetch failed (an asset deleted since an older
-   * version was saved, say), and one such image used to wedge the whole lab
-   * with a blank playspace. After the grace period the run goes ahead with
-   * what has loaded; a sprite asking for an image that never arrived is
-   * skipped like any missing costume, and a later re-run picks up anything
-   * that finished loading meanwhile.
+   * Wait for the project's images, but not forever: the store never marks an
+   * image whose fetch failed, so after the grace period the run goes ahead
+   * with what has loaded.
    */
   async whenAnimationsAreReadyOrGivenUp_() {
     let timer;
@@ -602,9 +583,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     }
   }
 
-  // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
-  // Only images that have loaded are handed to p5: preloading an image with
-  // no data logs an error per image and adds nothing.
+  // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts);
+  // an image with no data would only make p5 log an error.
   async preloadTrimmedSpriteImages_() {
     await this.whenAnimationsAreReadyOrGivenUp_();
     return this.p5Wrapper.preloadSpriteImages(

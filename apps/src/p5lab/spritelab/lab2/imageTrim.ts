@@ -116,6 +116,20 @@ function trimTransparentBorder(source: string): Promise<string> {
   return cached;
 }
 
+/** The animation list restricted to images whose data has arrived. */
+export function loadedAnimations(
+  list: RuntimeAnimationList
+): RuntimeAnimationList {
+  const orderedKeys = (list.orderedKeys || []).filter(
+    key => list.propsByKey[key]?.dataURI
+  );
+  const propsByKey: RuntimeAnimationList['propsByKey'] = {};
+  orderedKeys.forEach(key => {
+    propsByKey[key] = list.propsByKey[key];
+  });
+  return {orderedKeys, propsByKey};
+}
+
 /**
  * Return a copy of a serialized animation list whose costume dataURIs are
  * border-trimmed. Backgrounds are left alone (they should fill the canvas).

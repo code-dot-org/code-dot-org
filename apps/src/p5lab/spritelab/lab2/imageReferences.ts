@@ -48,13 +48,35 @@ function withFieldValueText(value: string, text: string): string {
   return match ? `${match[1]}${text}${match[3]}` : text;
 }
 
+// Visit a block and every block nested in its inputs, shadows and next chain.
+function forEachBlock(
+  block: JsonBlockConfig,
+  visit: (block: JsonBlockConfig) => void
+): void {
+  visit(block);
+  Object.values(block.inputs || {}).forEach(input => {
+    if (input.block) {
+      forEachBlock(input.block, visit);
+    }
+    if (input.shadow) {
+      forEachBlock(input.shadow, visit);
+    }
+  });
+  if (block.next?.block) {
+    forEachBlock(block.next.block, visit);
+  }
+  if (block.next?.shadow) {
+    forEachBlock(block.next.shadow, visit);
+  }
+}
+
 function renameInBlock(
   block: JsonBlockConfig,
   oldQuoted: string,
   newQuoted: string
 ): void {
-  if (block.fields) {
-    for (const [name, value] of Object.entries(block.fields)) {
+  forEachBlock(block, ({fields}) => {
+    for (const [name, value] of Object.entries(fields || {})) {
       // The quoted form identifies image references; plain text fields are
       // unquoted. TEXT is skipped anyway in case a student typed a quoted
       // name verbatim.
@@ -63,24 +85,10 @@ function renameInBlock(
         typeof value === 'string' &&
         fieldValueText(value) === oldQuoted
       ) {
-        block.fields[name] = withFieldValueText(value, newQuoted);
+        fields![name] = withFieldValueText(value, newQuoted);
       }
     }
-  }
-  Object.values(block.inputs || {}).forEach(input => {
-    if (input.block) {
-      renameInBlock(input.block, oldQuoted, newQuoted);
-    }
-    if (input.shadow) {
-      renameInBlock(input.shadow, oldQuoted, newQuoted);
-    }
   });
-  if (block.next?.block) {
-    renameInBlock(block.next.block, oldQuoted, newQuoted);
-  }
-  if (block.next?.shadow) {
-    renameInBlock(block.next.shadow, oldQuoted, newQuoted);
-  }
 }
 
 function renameInWorkspace(
@@ -154,29 +162,15 @@ export function renameImageReferencesOnWorkspace(
 }
 
 function removeInBlock(block: JsonBlockConfig, quoted: string): void {
-  if (block.fields) {
-    for (const [name, value] of Object.entries(block.fields)) {
+  forEachBlock(block, ({fields}) => {
+    for (const [name, value] of Object.entries(fields || {})) {
       if (name !== 'TEXT' && fieldValueText(value) === quoted) {
         // With no stored value the picker loads its first option, so the
         // block visibly points at another image rather than a ghost.
-        delete block.fields[name];
+        delete fields![name];
       }
     }
-  }
-  Object.values(block.inputs || {}).forEach(input => {
-    if (input.block) {
-      removeInBlock(input.block, quoted);
-    }
-    if (input.shadow) {
-      removeInBlock(input.shadow, quoted);
-    }
   });
-  if (block.next?.block) {
-    removeInBlock(block.next.block, quoted);
-  }
-  if (block.next?.shadow) {
-    removeInBlock(block.next.shadow, quoted);
-  }
 }
 
 /**

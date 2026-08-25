@@ -454,13 +454,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Seed the animation list BEFORE the workspace injects: dropdown fields
   // validate saved values against the store at block-load time — hence the
   // animationsSeeded gate on useBlocklyWorkspace, not just dispatch ordering.
-  //
-  // Once per level, and only once: initialSources is what the page loaded,
-  // and this effect can run again without its dependencies changing —
-  // React Fast Refresh re-runs effects on a hot update. Re-seeding from the
-  // load-time list would revert every image made since, and the persist
-  // effect below would then save that reverted list over the project. It
-  // did: a four-hour dev session lost five generated characters that way.
+  // Once per level: React Fast Refresh re-runs this effect, and re-seeding
+  // from the load-time list would revert every image made since.
   const seededLevelRef = useRef<number | null>(null);
   useEffect(() => {
     if (seededLevelRef.current === levelProperties.id) {
@@ -1138,10 +1133,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch, updateSources, scheduleRun]
   );
 
-  // An image was deleted: every reference to it goes too — blocks in all
-  // scenes fall back to another image, World cells placing it are cleared,
-  // the live workspace follows — so the program never asks for a costume
-  // that no longer exists.
   const handleDeleteImage = useCallback(
     (name: string) => {
       updateSources(prev => removeImageReferences(prev, name));
