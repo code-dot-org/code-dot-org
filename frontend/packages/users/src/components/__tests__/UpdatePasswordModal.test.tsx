@@ -40,7 +40,7 @@ describe('UpdatePasswordModal', () => {
   it('submits current and new passwords, then toasts and closes', async () => {
     let body: unknown;
     mockServer.use(
-      http.patch('*/dashboardapi/users', async ({request}) => {
+      http.patch('*/users', async ({request}) => {
         body = await request.json();
         return HttpResponse.json({});
       }),
@@ -65,7 +65,7 @@ describe('UpdatePasswordModal', () => {
 
   it('keeps the dialog open and shows a too-short-password 422 on the password field', async () => {
     mockServer.use(
-      http.patch('*/dashboardapi/users', () =>
+      http.patch('*/users', () =>
         HttpResponse.json(SHORT_PASSWORD, {status: 422}),
       ),
     );
@@ -84,7 +84,7 @@ describe('UpdatePasswordModal', () => {
 
   it('shows a wrong-password 422 on the current-password field', async () => {
     mockServer.use(
-      http.patch('*/dashboardapi/users', () =>
+      http.patch('*/users', () =>
         HttpResponse.json(WRONG_PASSWORD, {status: 422}),
       ),
     );
@@ -102,10 +102,7 @@ describe('UpdatePasswordModal', () => {
 
   it('shows the generic message and keeps the dialog open on a 500', async () => {
     mockServer.use(
-      http.patch(
-        '*/dashboardapi/users',
-        () => new HttpResponse(null, {status: 500}),
-      ),
+      http.patch('*/users', () => new HttpResponse(null, {status: 500})),
     );
     const {onClose} = renderModal();
 

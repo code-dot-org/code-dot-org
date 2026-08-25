@@ -41,7 +41,7 @@ describe('CreatePasswordModal', () => {
   it('submits the new password without current_password, then toasts and closes', async () => {
     let body: Record<string, unknown> = {};
     mockServer.use(
-      http.patch('*/dashboardapi/users', async ({request}) => {
+      http.patch('*/users', async ({request}) => {
         body = (await request.json()) as Record<string, unknown>;
         return HttpResponse.json({});
       }),
@@ -67,7 +67,7 @@ describe('CreatePasswordModal', () => {
 
   it('keeps the dialog open and shows a too-short-password 422 on the password field', async () => {
     mockServer.use(
-      http.patch('*/dashboardapi/users', () =>
+      http.patch('*/users', () =>
         HttpResponse.json(SHORT_PASSWORD, {status: 422}),
       ),
     );
@@ -85,10 +85,7 @@ describe('CreatePasswordModal', () => {
 
   it('shows the generic message and keeps the dialog open on a 500', async () => {
     mockServer.use(
-      http.patch(
-        '*/dashboardapi/users',
-        () => new HttpResponse(null, {status: 500}),
-      ),
+      http.patch('*/users', () => new HttpResponse(null, {status: 500})),
     );
     const {onClose} = renderModal();
 

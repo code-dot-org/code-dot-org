@@ -72,13 +72,13 @@ describe('createUsersApi.getSettings', () => {
 });
 
 describe('createUsersApi mutations target the right routes', () => {
-  it('updateProfile PATCHes /dashboardapi/users with only the given fields', async () => {
+  it('updateProfile PATCHes /users with only the given fields', async () => {
     const {api, request} = fakeTransport();
     await api.updateProfile({givenName: 'Grace', usState: 'WA'});
     expect(request).toHaveBeenCalledWith(
       expect.objectContaining({
         method: 'PATCH',
-        url: '/dashboardapi/users',
+        url: '/users',
         body: {user: {given_name: 'Grace', us_state: 'WA'}},
       }),
     );
@@ -90,7 +90,7 @@ describe('createUsersApi mutations target the right routes', () => {
     expect(request).toHaveBeenCalledWith(
       expect.objectContaining({
         method: 'PATCH',
-        url: '/dashboardapi/users',
+        url: '/users',
         body: {user: {gender_student_input: 'Example gender'}},
       }),
     );
