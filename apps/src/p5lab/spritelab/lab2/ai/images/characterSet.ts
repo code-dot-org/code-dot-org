@@ -494,6 +494,7 @@ export async function generateCharacterSet(
   const raws: RawImage[] = [];
   const keyed: KeyedFrame[] = [];
   let preview: string | undefined;
+  let previewPose: CharacterSetProgress['previewPose'];
   for (let i = 0; i < plan.length; i++) {
     const step = plan[i];
     onProgress?.({
@@ -501,6 +502,7 @@ export async function generateCharacterSet(
       total: plan.length,
       label: frameLabel(step),
       preview,
+      previewPose,
     });
     const text =
       i === 0
