@@ -39,6 +39,10 @@ function t(
     : fallback.replace(/\{(\w+)\}/g, (_, name) => String(params[name]));
 }
 
+// Also used for the grid's own label, so the two cannot drift apart.
+export const PROGRAM_RUNNING =
+  'The maze cannot be navigated while program is running.';
+
 // Painter's own lines have no key, so they are written out.
 const MSG = {
   goal: () => t('mazeNavGoal'),
@@ -48,7 +52,7 @@ const MSG = {
   wall: () => t('mazeNavWall'),
   edge: () => t('mazeNavEdge'),
   exited: () => t('mazeNavExited'),
-  running: () => 'The maze cannot be navigated while program is running.',
+  running: () => PROGRAM_RUNNING,
   edgeOfNeighborhood: () => 'Edge of the neighborhood.',
   noPainter: () => 'No painter on the grid yet. Press Run to place one.',
   noCharacter: () => 'Character is not on the grid.',
@@ -153,9 +157,6 @@ interface MazeGlobal {
     // Neighborhood runs one pegman per Painter object; see painterIds.
     pegmanController?: {getAllPegmanIds?: () => string[]};
   };
-  // Published by labs that repaint the grid as a program plays. Absent on maze
-  // levels, where the cursor is never held back.
-  isRunning?: () => boolean;
 }
 
 type MazeController = NonNullable<MazeGlobal['controller']>;
@@ -191,16 +192,8 @@ interface CursorPos {
   row: number;
 }
 
-function mazeGlobal(): MazeGlobal | undefined {
-  return (window as unknown as {Maze?: MazeGlobal}).Maze;
-}
-
 function getMazeController(): MazeController | undefined {
-  return mazeGlobal()?.controller;
-}
-
-function programIsRunning(): boolean {
-  return mazeGlobal()?.isRunning?.() ?? false;
+  return (window as unknown as {Maze?: MazeGlobal}).Maze?.controller;
 }
 
 function tileAt(
@@ -460,6 +453,11 @@ export default class MazeKeyboardNavigation {
     return this.cursor?.isConnected ?? false;
   }
 
+  // Set by labs that repaint the grid while a program runs; see Visualization.
+  private get busy(): boolean {
+    return this.svg.getAttribute('aria-disabled') === 'true';
+  }
+
   constructor(svg: SVGSVGElement) {
     this.svg = svg;
     // The live region is an HTML element and can't live inside the svg
@@ -500,7 +498,7 @@ export default class MazeKeyboardNavigation {
       if (e.key === 'Enter' && e.target === this.svg) {
         consume();
         // Say why rather than ignore the key.
-        if (programIsRunning()) {
+        if (this.busy) {
           this.announce(MSG.running());
         } else {
           this.enter();
@@ -510,7 +508,7 @@ export default class MazeKeyboardNavigation {
     }
     // A program is repainting the grid, so stand down rather than read it
     // mid-change. The key is left alone; it belongs to the page now.
-    if (programIsRunning()) {
+    if (this.busy) {
       this.exit();
       return;
     }

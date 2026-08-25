@@ -726,11 +726,15 @@ describe('MazeKeyboardNavigation interaction', () => {
     );
   });
 
-  // The grid moves as a program plays. Maze publishes no isRunning.
+  // The grid moves as a program plays. Maze never sets aria-disabled.
   describe('while a program is running', () => {
+    // Visualization sets this from the lab's run state.
     const setRunning = (running: boolean) => {
-      (window as unknown as {Maze: {isRunning: () => boolean}}).Maze.isRunning =
-        () => running;
+      if (running) {
+        svg.setAttribute('aria-disabled', 'true');
+      } else {
+        svg.removeAttribute('aria-disabled');
+      }
     };
 
     it('refuses to enter, and says why', () => {
