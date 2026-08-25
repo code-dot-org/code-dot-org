@@ -170,6 +170,29 @@ describe('ProjectManager', () => {
     projectManager.destroy();
   });
 
+  it('reports the pending sources as current, else the last saved ones', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+    // Nothing saved yet: the loaded sources are current.
+    expect(projectManager.getCurrentSources()).to.deep.equal(FAKE_SOURCE);
+
+    await projectManager.save(UPDATED_SOURCE);
+    expect(projectManager.getCurrentSources()).to.deep.equal(UPDATED_SOURCE);
+
+    // The second save waits for the next interval; it is current all the same.
+    await projectManager.save(UPDATED_SOURCE_2);
+    expect(projectManager.getCurrentSources()).to.deep.equal(UPDATED_SOURCE_2);
+
+    projectManager.destroy();
+  });
+
   it('always triggers a save on force save', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager({

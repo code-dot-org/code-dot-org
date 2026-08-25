@@ -197,9 +197,16 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
+    // A development hot update remounts this class component, and the project
+    // may have been edited and saved since the page loaded; loading
+    // initialSources here would put the old sources back and save them.
+    const currentSources = (
+      this.props.projectManager ||
+      Lab2Registry.getInstance().getProjectManager()
+    )?.getCurrentSources();
     this.onLevelLoad(
       this.props.levelProperties.levelData,
-      this.props.initialSources
+      currentSources || this.props.initialSources
     );
     this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
 
