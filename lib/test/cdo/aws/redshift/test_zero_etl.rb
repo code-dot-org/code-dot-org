@@ -6,16 +6,16 @@ class TestZeroEtl < Minitest::Test
 
   def setup
     # resync_tables / table_states validate names via ActiveRecord (`data_source_exists?`), which has
-    # no connection in this bare lib test. Stub the seam to "table exists" by default; the rejection
-    # tests override it to false.
+    # no connection in this bare lib test. Stub the seam so every name resolves to the dashboard
+    # database by default; the Pegasus and rejection tests override it.
     ZeroEtl.stubs(:table_exists?).returns(true)
   end
 
-  def test_target_database_appends_the_suffix
-    assert_equal 'test_learningplatform_mysql_zeroetl', ZeroEtl.target_database('test')
+  def test_redshift_database_appends_the_suffix
+    assert_equal 'test_learningplatform_mysql_zeroetl', ZeroEtl.redshift_database('test')
   end
 
-  def test_resync_tables_qualifies_a_single_table_with_the_source_schema
+  def test_resync_tables_qualifies_a_single_table_with_the_redshift_schema
     client = mock('client')
     client.expects(:execute_async).with(
       'ALTER DATABASE test_learningplatform_mysql_zeroetl INTEGRATION REFRESH TABLE dashboard_test.users;'
@@ -92,12 +92,95 @@ class TestZeroEtl < Minitest::Test
     assert_empty result[:states]
   end
 
-  def test_source_schema_builds_the_source_schema_for_the_environment
-    assert_equal 'dashboard_test', ZeroEtl.source_schema('test')
+  def test_redshift_schema_for_the_environment
+    assert_equal 'dashboard_test', ZeroEtl.redshift_schema('test')
   end
 
-  def test_source_schema_rejects_an_unknown_environment_type
-    assert_raises(ArgumentError) {ZeroEtl.source_schema("test'; DROP DATABASE x; --")}
+  def test_redshift_schema_names_pegasus_per_environment
+    assert_equal 'pegasus', ZeroEtl.redshift_schema('production', mysql_database: :pegasus)
+    assert_equal 'pegasus_test', ZeroEtl.redshift_schema('test', mysql_database: :pegasus)
+  end
+
+  def test_redshift_schema_rejects_an_unknown_mysql_database
+    error = assert_raises(ArgumentError) {ZeroEtl.redshift_schema('production', mysql_database: :bogus)}
+    assert_includes error.message, 'bogus'
+  end
+
+  def test_parse_qualified_table_name_defaults_to_dashboard
+    assert_equal [:dashboard, 'users'], ZeroEtl.parse_qualified_table_name('users')
+  end
+
+  def test_parse_qualified_table_name_reads_the_database_qualifier
+    assert_equal [:pegasus, 'hoc_activity'], ZeroEtl.parse_qualified_table_name('pegasus.hoc_activity')
+  end
+
+  def test_parse_qualified_table_name_tolerates_an_empty_name
+    # Degrades to an empty table name, which validation rejects by name, rather than looking like an
+    # unknown database.
+    assert_equal [:dashboard, ''], ZeroEtl.parse_qualified_table_name('')
+  end
+
+  def test_parse_qualified_table_name_rejects_an_unknown_qualifier
+    error = assert_raises(ArgumentError) {ZeroEtl.parse_qualified_table_name('bogus.hoc_activity')}
+    assert_includes error.message, 'bogus'
+  end
+
+  def test_resync_tables_qualifies_a_pegasus_table_with_the_pegasus_schema
+    client = mock('client')
+    client.expects(:execute_async).with(
+      'ALTER DATABASE production_learningplatform_mysql_zeroetl INTEGRATION REFRESH TABLE pegasus.hoc_activity;'
+    ).returns('stmt-pegasus')
+
+    assert_equal 'stmt-pegasus', ZeroEtl.resync_tables(
+      client: client, environment_type: 'production', table_names: 'pegasus.hoc_activity'
+    )
+  end
+
+  def test_resync_tables_uses_the_pegasus_test_schema_on_test
+    client = mock('client')
+    client.expects(:execute_async).with(
+      'ALTER DATABASE test_learningplatform_mysql_zeroetl INTEGRATION REFRESH TABLE pegasus_test.hoc_activity;'
+    ).returns('stmt-pegasus-test')
+
+    ZeroEtl.resync_tables(client: client, environment_type: 'test', table_names: 'pegasus.hoc_activity')
+  end
+
+  def test_resync_tables_mixes_databases_in_one_request
+    client = mock('client')
+    client.expects(:execute_async).with(
+      'ALTER DATABASE production_learningplatform_mysql_zeroetl INTEGRATION REFRESH TABLE ' \
+        'dashboard_production.users, pegasus.hoc_activity;'
+    ).returns('stmt-mixed')
+
+    ZeroEtl.resync_tables(
+      client: client, environment_type: 'production', table_names: ['users', 'pegasus.hoc_activity']
+    )
+  end
+
+  def test_resync_tables_validates_a_pegasus_table_against_the_pegasus_database
+    # Absent from dashboard but present in pegasus: validation must consult the qualified database,
+    # not the Rails connection's own.
+    ZeroEtl.stubs(:table_exists?).returns(false)
+    ZeroEtl.stubs(:table_exists?).with("#{CDO.pegasus_db_name}.hoc_activity").returns(true)
+
+    client = mock('client')
+    client.expects(:execute_async).returns('stmt-1')
+    ZeroEtl.resync_tables(client: client, environment_type: 'production', table_names: 'pegasus.hoc_activity')
+  end
+
+  def test_resync_tables_rejects_a_table_missing_from_the_qualified_database
+    ZeroEtl.stubs(:table_exists?).returns(false)
+    client = mock('client')
+    client.expects(:execute_async).never
+
+    error = assert_raises(ArgumentError) do
+      ZeroEtl.resync_tables(client: client, environment_type: 'production', table_names: 'pegasus.users')
+    end
+    assert_includes error.message, 'pegasus.users'
+  end
+
+  def test_redshift_schema_rejects_an_unknown_environment_type
+    assert_raises(ArgumentError) {ZeroEtl.redshift_schema("test'; DROP DATABASE x; --")}
   end
 
   def test_resync_tables_rejects_a_table_that_is_not_in_the_schema
@@ -119,18 +202,18 @@ class TestZeroEtl < Minitest::Test
     end
   end
 
-  def test_target_database_accepts_a_symbol_environment_type
-    assert_equal 'production_learningplatform_mysql_zeroetl', ZeroEtl.target_database(:production)
+  def test_redshift_database_accepts_a_symbol_environment_type
+    assert_equal 'production_learningplatform_mysql_zeroetl', ZeroEtl.redshift_database(:production)
   end
 
-  def test_target_database_rejects_an_unknown_environment_type
-    error = assert_raises(ArgumentError) {ZeroEtl.target_database('bogus')}
+  def test_redshift_database_rejects_an_unknown_environment_type
+    error = assert_raises(ArgumentError) {ZeroEtl.redshift_database('bogus')}
     assert_includes error.message, 'bogus'
   end
 
-  def test_target_database_rejects_a_sql_injection_attempt
+  def test_redshift_database_rejects_a_sql_injection_attempt
     injection = "test'; DROP TABLE users; --"
-    assert_raises(ArgumentError) {ZeroEtl.target_database(injection)}
+    assert_raises(ArgumentError) {ZeroEtl.redshift_database(injection)}
   end
 
   def test_integration_errors_rejects_an_unknown_environment_type
@@ -195,7 +278,7 @@ class TestZeroEtl < Minitest::Test
     assert_equal 'users', result.first['table_name']
   end
 
-  def test_apply_required_integration_settings_enables_all_required_flags_on_the_target_database
+  def test_apply_required_integration_settings_enables_all_required_flags_on_the_redshift_database
     client = mock('client')
     client.expects(:execute).with(
       'ALTER DATABASE production_learningplatform_mysql_zeroetl INTEGRATION SET ' \

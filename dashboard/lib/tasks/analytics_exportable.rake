@@ -1,7 +1,7 @@
 # Rake tasks that drive the end-to-end "MySQL transactional data → Zero ETL → Redshift materialized view" pipeline:
 #  analytics_export:zero_etl_data_filter[environment_type]                    # Print a table filter expression specifying which MySQL tables should be exported to Redshift via Zero ETL.
 #  analytics_export:update_zero_etl_filter[integration_arn,environment_type]  # Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`.
-#  analytics_export:resync_zero_etl_table[table_names,environment_type]       # Resync one or more (space-separated) tables that failed to replicate via Zero ETL.
+#  analytics_export:resync_zero_etl_table[table_names,environment_type]       # Resync one or more (space-separated, optionally `database.`-qualified) tables that failed to replicate via Zero ETL.
 #  analytics_export:zero_etl_export_status[environment_type]                  # Report the Zero ETL replication status of every table we export to analytics.
 #  analytics_export:configure_zero_etl_target_database[environment_type]      # Apply the required Zero ETL ingestion settings (ACCEPTINVCHARS, TRUNCATECOLUMNS) to the target database.
 #  analytics_export:generate_materialized_view_templates                      # Regenerate the Materialized View SQL ERB templates from the current Models (no Redshift connection).
@@ -102,6 +102,7 @@ namespace :analytics_export do
 
   # bundle exec rake 'analytics_export:resync_zero_etl_table[table_name,production]'
   # bundle exec rake 'analytics_export:resync_zero_etl_table[table_one table_two,production]'
+  # bundle exec rake 'analytics_export:resync_zero_etl_table[pegasus.hoc_activity,production]'
   desc "Resync one or more (space-separated) tables that failed to replicate via Zero ETL, e.g. after fixing a missing primary key."
   task :resync_zero_etl_table, [:table_names, :environment_type] => :environment do |_t, args|
     if args[:table_names].blank? || args[:environment_type].blank?
@@ -112,7 +113,9 @@ namespace :analytics_export do
     require 'cdo/aws/redshift/materialized_view_manager'
 
     environment_type = args[:environment_type]
-    table_names = args[:table_names].split(/\s+/)
+    # Each table may be qualified with the MySQL database holding it (`pegasus.hoc_activity`);
+    # unqualified names are assumed to be in the dashboard database.
+    table_names = args[:table_names].split
 
     result = Cdo::Aws::Redshift::ZeroEtl.resync_and_report(
       client: Cdo::Aws::Redshift::MaterializedViewManager.redshift_client,
