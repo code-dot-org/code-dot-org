@@ -33,7 +33,12 @@ export function sanitizeImageName(raw: string): string {
 // inside, whichever form it is in.
 const FIELD_ELEMENT = /^(<field\b[^>]*>)([\s\S]*)(<\/field>)$/;
 
-function fieldValueText(value: string): string {
+// Fields also hold numbers and variable descriptors; only strings can name
+// an image.
+function fieldValueText(value: unknown): unknown {
+  if (typeof value !== 'string') {
+    return value;
+  }
   const match = FIELD_ELEMENT.exec(value);
   return match ? match[2] : value;
 }
@@ -53,7 +58,11 @@ function renameInBlock(
       // The quoted form identifies image references; plain text fields are
       // unquoted. TEXT is skipped anyway in case a student typed a quoted
       // name verbatim.
-      if (name !== 'TEXT' && fieldValueText(value) === oldQuoted) {
+      if (
+        name !== 'TEXT' &&
+        typeof value === 'string' &&
+        fieldValueText(value) === oldQuoted
+      ) {
         block.fields[name] = withFieldValueText(value, newQuoted);
       }
     }
