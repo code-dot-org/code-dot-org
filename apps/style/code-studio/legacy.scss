@@ -1,41 +1,15 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
+/**
+ * Legacy styles imported from Dashboard's application.scss
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- * Gem assets
- *= require jquery-ui
- *
- * Vendor assets
- *= require jquery.qtip.min
- *
- * Application assets
- *= require_self
- *= require_directory .
- *= require_directory ./lti
- *
- * Shared
- *= require fonts/barlow-semi-condensed
- *= require fonts/geist
- *= require fonts/noto-sans
- *= require fonts/space-grotesk
- *= require user-menu
- *= require buttons
- *= require course-blocks
- *= require warning-banner
+ * Avoid adding new application-wide styles here, if possible; it's generally
+ * better to create a new file per style scope.
  */
-
 @import "color";
 @import "font";
 @import "mixins";
 @import "style-constants";
 @import "brand-selectors";
-@import "NpsSurveyBlock";
+@import "./legacy/NpsSurveyBlock";
 
 // Bootstrap Variables
 $font-family-base: $main-font;
@@ -52,8 +26,8 @@ $select-user-type-button-text-color-hover: #000;
 $select-user-type-button-background-color-selected: #0093a4;
 $select-user-type-button-text-color-selected: #fff;
 
-@import "bootstrap";
-@import "bootstrap/v2-to-v3";
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+@import './legacy/bootstrap-v2-to-v3';
 
 // Reassert brand colors on the compound states Bootstrap's button-variant mixin
 // hardcodes.  That mixin nests its :active and disabled rules one level deep,
@@ -1646,7 +1620,7 @@ input.header_input {
 
   .loading {
     margin: 20px;
-    background: image-url("spinner-big.gif") no-repeat center center;
+    background: url("/blockly/media/code_studio/spinner-big.gif") no-repeat center center;
   }
 }
 
@@ -1681,7 +1655,7 @@ input.header_input {
 .oceans-blue {
   #codeApp {
     .loading {
-      background: image-url("spinner-big-oceans-blue.gif") no-repeat center center;
+      background: url("/blockly/media/code_studio/spinner-big-oceans-blue.gif") no-repeat center center;
     }
 
     .slow_load {
@@ -1696,7 +1670,7 @@ input.header_input {
 
   .loading {
     height: 520px;
-    background: image-url("spinner-big.gif") no-repeat center center;
+    background: url("/blockly/media/code_studio/spinner-big.gif") no-repeat center center;
   }
 
   .slow_load {
@@ -1870,7 +1844,7 @@ body.iframe_embed_app_and_code {
   position: absolute;
   cursor: pointer;
   z-index: 10;
-  background: image-url("x_button.png") no-repeat center center;
+  background: url("/blockly/media/code_studio/x_button.png") no-repeat center center;
   background-size: 100% auto;
 
   top: $corner-offset;
@@ -1945,7 +1919,7 @@ body.iframe_embed_app_and_code {
   position: absolute;
   cursor: pointer;
   z-index: 1;
-  background: image-url("open_button.png") no-repeat center center;
+  background: url("/blockly/media/code_studio/open_button.png") no-repeat center center;
   background-size: 100% auto;
 
   top: $corner-offset;
@@ -3193,7 +3167,7 @@ a.download-video {
 
 .curriculum-reference #iframe-loading.loading {
   height: 200px;
-  background: image-url("spinner-big.gif") no-repeat center center;
+  background: url("/blockly/media/code_studio/spinner-big.gif") no-repeat center center;
 }
 
 .external, .free-response, .curriculum-reference {

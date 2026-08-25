@@ -16,6 +16,7 @@ from .constants import (
   THEATER_WIDTH,
 )
 from .fonts import load_font
+from .image import fit_to_width
 from .instrument_samples import load_note_samples
 
 
@@ -180,8 +181,7 @@ def _draw_image(canvas, action):
   x = int(round(action.x))
   y = int(round(action.y))
   if action.size != UNSPECIFIED:
-    width = int(round(action.size))
-    height = int(round(source.height * (width / source.width)))
+    width, height = fit_to_width(source.width, source.height, action.size)
   else:
     width = int(round(action.width))
     height = int(round(action.height))

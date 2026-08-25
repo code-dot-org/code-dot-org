@@ -4,7 +4,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-import {createEmptyWorld, SCENE_GRID_SIZE, World, WorldCell} from '../world';
+import {createEmptyWorld, World, WorldCell} from '../world';
 
 import {PREVIEW_CLEARANCE} from './Playspace';
 
@@ -23,10 +23,9 @@ interface PaletteItem extends WorldCell {
 
 interface WorldTabProps {
   world?: World;
-  // Visible extent (cells per side): the scene grid by default, the whole
-  // world with the world=large parameter. Storage is always the full world,
-  // so placements keep their coordinates across the two views.
-  displaySize: number;
+  // Cells per side of the playfield. Storage is larger, so placements keep
+  // their coordinates if it ever grows.
+  sceneSize: number;
   // Cell-level so the owner can apply it atomically against saved sources.
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
   // Palette selection, owned by the view so it survives tab switches (this
@@ -42,7 +41,7 @@ interface WorldTabProps {
  */
 const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   world,
-  displaySize,
+  sceneSize,
   onPaintCell,
   selected,
   onSelect,
@@ -108,7 +107,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  const cellPixels = gridPixels / displaySize;
+  const cellPixels = gridPixels / sceneSize;
   return (
     <div
       className={moduleStyles.worldTab}
@@ -152,15 +151,13 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         <div
           className={moduleStyles.worldGrid}
           style={{
-            gridTemplateColumns: `repeat(${displaySize}, ${cellPixels}px)`,
+            gridTemplateColumns: `repeat(${sceneSize}, ${cellPixels}px)`,
           }}
         >
-          {Array.from({length: displaySize}, (_, row) =>
-            Array.from({length: displaySize}, (_, col) => {
+          {Array.from({length: sceneSize}, (_, row) =>
+            Array.from({length: sceneSize}, (_, col) => {
               const cell = grid[row]?.[col];
               const thumb = cell && thumbsByImage.get(cell.image);
-              const outsideScene =
-                row >= SCENE_GRID_SIZE || col >= SCENE_GRID_SIZE;
               return (
                 <button
                   key={`${row}-${col}`}
@@ -168,10 +165,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                   aria-label={
                     cell ? `${cell.image} at ${row},${col}` : `${row},${col}`
                   }
-                  className={classNames(
-                    moduleStyles.worldCell,
-                    outsideScene && moduleStyles.worldCellOutside
-                  )}
+                  className={moduleStyles.worldCell}
                   style={{height: cellPixels}}
                   // Touch implicitly captures the pointer on the pressed cell,
                   // which would keep drag painting's enter events from the
@@ -199,12 +193,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           )}
         </div>
       </div>
-      {displaySize > SCENE_GRID_SIZE && (
-        <p className={moduleStyles.worldHint}>
-          The scene runs the brighter top-left {SCENE_GRID_SIZE}x
-          {SCENE_GRID_SIZE} corner.
-        </p>
-      )}
     </div>
   );
 };

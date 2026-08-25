@@ -28,22 +28,31 @@ export function countWorldCells(grid?: (WorldCell | null)[][]): WorldCounts {
   return {blocks, sprites};
 }
 
+/** What the step conditions are measured against. */
+export interface GuideProgress {
+  counts: WorldCounts;
+  activeTab: Tab;
+  images: number;
+}
+
 // The step the guide should show: advance from `index` while the next step's
 // `after` holds, every clause of it passing. Never retreats, and a step
 // without `after` is never reached automatically.
 export function nextGuideStepIndex(
   steps: GuideStep[] | undefined,
   index: number,
-  counts: WorldCounts,
-  activeTab: Tab
+  progress: GuideProgress
 ): number {
+  const {counts, activeTab, images} = progress;
   let result = index;
   for (;;) {
     const after = steps?.[result + 1]?.after;
     if (
       !after ||
       (after.worldBlocks !== undefined && counts.blocks < after.worldBlocks) ||
-      (after.worldSprite && counts.sprites === 0) ||
+      (after.worldSprites !== undefined &&
+        counts.sprites < after.worldSprites) ||
+      (after.images !== undefined && images < after.images) ||
       (after.tab !== undefined && after.tab !== activeTab)
     ) {
       return result;
@@ -57,17 +66,26 @@ export function nextGuideStepIndex(
  * level's plain instructions when it declares no steps. The position only ever
  * moves forward, so undoing work doesn't pull the instructions back.
  */
-export function useGuideSteps(
-  steps: GuideStep[] | undefined,
-  grid: (WorldCell | null)[][] | undefined,
-  activeTab: Tab,
-  fallback: string | undefined
-): string | undefined {
+export function useGuideSteps({
+  steps,
+  grid,
+  activeTab,
+  images,
+  fallback,
+}: {
+  steps: GuideStep[] | undefined;
+  grid: (WorldCell | null)[][] | undefined;
+  activeTab: Tab;
+  images: number;
+  fallback: string | undefined;
+}): string | undefined {
   const counts = useMemo(() => countWorldCells(grid), [grid]);
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    setIndex(current => nextGuideStepIndex(steps, current, counts, activeTab));
-  }, [steps, counts, activeTab]);
+    setIndex(current =>
+      nextGuideStepIndex(steps, current, {counts, activeTab, images})
+    );
+  }, [steps, counts, activeTab, images]);
   if (!steps?.length) {
     return fallback;
   }

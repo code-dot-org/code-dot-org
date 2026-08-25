@@ -11,9 +11,11 @@ import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
+import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
+import thePlayer from './thePlayer';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
 // block whose runtime half is interpreted code exports it as helperCode.
@@ -24,6 +26,7 @@ const labBlockDefinitions: {
 }[] = [
   goToScene,
   goToExternalScene,
+  restartScene,
   movingLeft,
   movingWithArrowKeys,
   patrollingLeftRight,
@@ -34,6 +37,7 @@ const labBlockDefinitions: {
   setPlatformGravity,
   setAsPlatformPlayer,
   setCameraZoom,
+  thePlayer,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,
