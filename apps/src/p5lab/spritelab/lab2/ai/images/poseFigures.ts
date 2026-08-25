@@ -56,7 +56,8 @@ const TORSO_WIDTH = 92;
 const NECK_WIDTH = 30;
 
 // The four keys of one half of a side-view walk cycle for the front and
-// back leg; the second half swaps which leg is in front. Arm swings are
+// back leg; a second half, were one generated, swaps which leg is in front
+// (walkKey handles frames past the fourth that way). Arm swings are
 // drawn well past life size, elbows bent: two runs kept the arms hanging
 // while the legs followed the figure, so the arms have to shout.
 const WALK_HALF: Array<{

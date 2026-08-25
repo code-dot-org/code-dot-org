@@ -40,10 +40,17 @@ export interface CharacterPoseSpec {
  * table. Jump frames are not played on a clock in the game — the engine
  * picks the frame from the sprite's vertical speed (see jumpFrame) — so its
  * delay only paces the preview.
+ *
+ * The walk is a half cycle: the four keys of one stride — contact, down,
+ * passing, up — repeated, so the same leg always leads. Ten live runs
+ * showed the image model draws that half readily and the other half — the
+ * near leg back, the near arm swung forward across the body — almost never,
+ * so the second four frames only ever repeated the first. Four frames at
+ * twice the delay walk at the same speed for half the pictures.
  */
 export const CHARACTER_POSES: CharacterPoseSpec[] = [
   {pose: 'stand', frameCount: 2, frameDelay: 15},
-  {pose: 'walk', frameCount: 8, frameDelay: 3},
+  {pose: 'walk', frameCount: 4, frameDelay: 6},
   {pose: 'jump', frameCount: 2, frameDelay: 8},
 ];
 
