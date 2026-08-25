@@ -237,9 +237,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (!missing.has(name)) {
         missing.add(name);
         console.warn(
-          `SpriteLab2: no image named ${JSON.stringify(
-            name
-          )} in this project; the block asking for it does nothing.`
+          name
+            ? `SpriteLab2: no image named ${JSON.stringify(
+                name
+              )} in this project; the block asking for it does nothing.`
+            : 'SpriteLab2: a block has no image chosen; it does nothing.'
         );
       }
     };
