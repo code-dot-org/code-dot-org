@@ -326,8 +326,6 @@ steps:
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
-      PROPERTIES_ENCRYPTION_KEY:
-        from_secret: PROPERTIES_ENCRYPTION_KEY
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
@@ -364,6 +362,6 @@ trigger:
 
 ---
 kind: signature
-hmac: d3509c90f6fe3fcb4ccc7ba8d845c667d14bdcfa499c38649bd9d99fd317f737
+hmac: b7c4aa7434ba8933cc99f6a2a3d4c5c403941f36c21d23b6896444aa3b507ed5
 
 ...
