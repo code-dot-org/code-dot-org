@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import isExemptFromAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/aiChatToolsAlertExemptions';
 import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
@@ -237,9 +238,8 @@ class CourseOverview extends Component {
           aiChatToolsDependency={aiChatToolsDependency}
         />
         {viewAsTeacher &&
-          aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-            <RequiresAiChatToolsAlert />
-          )}
+          aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
+          !isExemptFromAiChatToolsAlert(name) && <RequiresAiChatToolsAlert />}
         <SafeMarkdown
           className={styles.description}
           openExternalLinksInNewTab={true}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import isExemptFromAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/aiChatToolsAlertExemptions';
 import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -222,7 +223,8 @@ class UnitOverview extends React.Component {
               aiChatToolsDependency={aiChatToolsDependency}
             />
             {viewAs === ViewType.Instructor &&
-              aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+              aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
+              !isExemptFromAiChatToolsAlert(courseName, scriptName) && (
                 <RequiresAiChatToolsAlert />
               )}
           </UnitOverviewHeader>
