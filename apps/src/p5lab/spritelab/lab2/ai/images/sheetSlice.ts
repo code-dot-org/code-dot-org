@@ -21,6 +21,11 @@ interface Span {
 // frame (between a hand and the body, say), not between frames.
 const MIN_GAP_FRACTION = 0.12;
 
+// A line (row or column of pixels) counts as a gap when its solid pixels are
+// below this fraction of the busiest line's: a hat brim grazing the feet of
+// the row above is a few pixels, not a frame.
+const GAP_FRACTION_OF_PEAK = 0.1;
+
 // Runs of `on` indexes, bridging gaps shorter than minGap.
 function runs(on: boolean[], minGap: number): Span[] {
   const result: Span[] = [];
@@ -42,25 +47,30 @@ function runs(on: boolean[], minGap: number): Span[] {
   return result;
 }
 
+// Lines with enough solid pixels to be part of a frame: more than a small
+// fraction of the busiest line's count.
+function busy(counts: number[]): boolean[] {
+  const peak = Math.max(0, ...counts);
+  const floor = peak * GAP_FRACTION_OF_PEAK;
+  return counts.map(count => count > floor);
+}
+
 function solidRows(
   data: Uint8ClampedArray,
   width: number,
   height: number,
-  alphaThreshold: number,
-  x0: number,
-  x1: number
+  alphaThreshold: number
 ): boolean[] {
-  const on = new Array<boolean>(height).fill(false);
+  const counts = new Array<number>(height).fill(0);
   for (let y = 0; y < height; y++) {
     const row = y * width * 4;
-    for (let x = x0; x < x1; x++) {
+    for (let x = 0; x < width; x++) {
       if (data[row + x * 4 + 3] > alphaThreshold) {
-        on[y] = true;
-        break;
+        counts[y]++;
       }
     }
   }
-  return on;
+  return busy(counts);
 }
 
 function solidColumns(
@@ -70,16 +80,16 @@ function solidColumns(
   y0: number,
   y1: number
 ): boolean[] {
-  const on = new Array<boolean>(width).fill(false);
+  const counts = new Array<number>(width).fill(0);
   for (let y = y0; y < y1; y++) {
     const row = y * width * 4;
     for (let x = 0; x < width; x++) {
-      if (!on[x] && data[row + x * 4 + 3] > alphaThreshold) {
-        on[x] = true;
+      if (data[row + x * 4 + 3] > alphaThreshold) {
+        counts[x]++;
       }
     }
   }
-  return on;
+  return busy(counts);
 }
 
 /**
@@ -97,10 +107,7 @@ export function frameBoxes(
   alphaThreshold: number
 ): FrameBox[] {
   const rowGap = Math.max(1, Math.floor(height * MIN_GAP_FRACTION * 0.5));
-  const bands = runs(
-    solidRows(data, width, height, alphaThreshold, 0, width),
-    rowGap
-  );
+  const bands = runs(solidRows(data, width, height, alphaThreshold), rowGap);
   const perRow = Math.max(1, Math.round(expected / Math.max(1, bands.length)));
   const colGap = Math.max(1, Math.floor((width / perRow) * MIN_GAP_FRACTION));
   const boxes: FrameBox[] = [];

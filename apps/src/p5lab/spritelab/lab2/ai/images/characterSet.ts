@@ -158,6 +158,9 @@ export const SHEET_POSES: CharacterPose[] = ['walk'];
 /** A row of frames needs the room; single frames stay at the set size. */
 export const SHEET_IMAGE_SIZE: ImageSize = '2K';
 
+// SHEET_ASPECT_RATIO as a number, for the widened reference.
+export const SHEET_ASPECT = 16 / 9;
+
 /** Whether a plan entry's pose is drawn as one row picture. */
 export function isSheetPose(plan: FramePlan): boolean {
   return !plan.isBase && SHEET_POSES.includes(plan.pose);
@@ -303,7 +306,7 @@ export function sheetPrompt(
       ? 'one complete side-view walk cycle: the legs stride and the arms swing opposite to the legs, so the frames read as smooth continuous walking when played in order and the last frame leads back into the first'
       : `one complete ${POSE_LABELS[plan.pose]} animation`;
   return (
-    `The character: ${prompt}. The provided image shows this character. ` +
+    `The character: ${prompt}. The provided image shows this character at the left of a wide ${key.name} canvas; the output has the same wide shape. ` +
     `Draw a sprite sheet of exactly ${frameCount} frames of this character in a single horizontal row, left to right, evenly spaced, with clear ${key.name} gaps between the frames and no frame touching another. The image is wide: one row only, never a second row, each frame as tall as the image allows. ` +
     `The ${frameCount} frames are ${motion}. In every frame draw the same character — same design, colors, proportions, outfit and art style, the same scale, feet on the same baseline. ` +
     `${facingClause(
@@ -312,6 +315,27 @@ export function sheetPrompt(
       key
     )} ${styleClause(style)}`
   );
+}
+
+/**
+ * The image set on a wider canvas of the key colour, at the left. The model
+ * tends to give an edit the proportions of its reference, so a row picture
+ * is asked for with a reference already the shape of a row.
+ */
+export async function widenDataURI(
+  dataURI: string,
+  aspect: number,
+  fill: string
+): Promise<string> {
+  const img = await loadDataURI(dataURI);
+  const canvas = document.createElement('canvas');
+  canvas.height = img.naturalHeight;
+  canvas.width = Math.round(img.naturalHeight * aspect);
+  const ctx = canvas.getContext('2d')!;
+  ctx.fillStyle = fill;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(img, 0, 0);
+  return canvas.toDataURL('image/png');
 }
 
 /** A data URI of the image flipped left-for-right. */
@@ -471,6 +495,8 @@ async function sliceSheet(
 ): Promise<KeyedFrame[]> {
   const whole = await keyFrame(raw, style, key);
   const {width, height} = whole.canvas;
+  // Development aid while the row picture is new: what came back.
+  console.debug(`SpriteLab2 row picture ${width}x${height}`);
   const {data} = whole.canvas
     .getContext('2d')!
     .getImageData(0, 0, width, height);
@@ -704,14 +730,14 @@ export async function generateCharacterSet(
         previewPose,
       });
       const plateURI = bytesToDataURI(raws[0].uint8Array, raws[0].mediaType);
+      const facingPlate =
+        step.facing === 'left' ? await mirrorDataURI(plateURI) : plateURI;
       const raw = await requestFrameWithRetry(
         sheetPrompt(prompt, step, frameCount, options.style, key),
         {
           seed,
           temperature: options.temperature,
-          references: [
-            step.facing === 'left' ? await mirrorDataURI(plateURI) : plateURI,
-          ],
+          references: [await widenDataURI(facingPlate, SHEET_ASPECT, key.hex)],
           imageSize: SHEET_IMAGE_SIZE,
           aspectRatio: SHEET_ASPECT_RATIO,
           model: getCharacterSetImageModel(),

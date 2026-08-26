@@ -68,6 +68,25 @@ describe('sheet slicing', () => {
     });
   });
 
+  it('separates rows whose brims graze the feet above them', () => {
+    // Two rows of two; the lower row's 2px-wide "brim" reaches into the gap.
+    const data = image(100, 100, [
+      [5, 20, 5, 45],
+      [55, 70, 5, 45],
+      [5, 20, 55, 95],
+      [55, 70, 55, 95],
+      [12, 14, 45, 55],
+    ]);
+    expect(
+      frameBoxes(data, 100, 100, 4, 127).map(b => [b.left, b.top])
+    ).toEqual([
+      [5, 5],
+      [55, 5],
+      [5, 55],
+      [55, 55],
+    ]);
+  });
+
   it('falls back to an even grid, keeping the rows it found', () => {
     // Two rows found, but only three frames in them: cut 2 x 4 evenly.
     const data = image(100, 100, [
