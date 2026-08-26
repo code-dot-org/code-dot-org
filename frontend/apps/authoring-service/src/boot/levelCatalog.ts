@@ -317,6 +317,15 @@ type RuntimeProjection = Pick<
   'runtime' | 'labKey' | 'data'
 >;
 
+/** Karel skins with an authored maze-lab block set; see projectRuntime. */
+const SUPPORTED_KAREL_SKINS = new Set([
+  'bee',
+  'farmer',
+  'harvester',
+  'collector',
+  'planter',
+]);
+
 /** Per-level projection of the runtime table in the Author Mode spec doc. */
 function projectRuntime(
   levelType: string,
@@ -329,16 +338,15 @@ function projectRuntime(
       return {runtime: 'labhost', labKey: 'music'};
     case 'Maze':
       return {runtime: 'labhost', labKey: 'maze'};
-    // Karel-family (Bee/Farmer/Harvester/Collector) levels dispatch to the
-    // same maze-lab engine as Maze, on `skin`. Only Bee's action blocks
-    // (maze_nectar, maze_honey, bee_ifFlower, bee_ifElseFlower, ...) have
-    // been authored in maze-lab's blocks.ts so far — Farmer/Harvester/
-    // Collector's (maze_dig, collector_collect, ...) have not, so mounting
-    // one of those still throws "Invalid block definition" in the toolbox
-    // flyout. Left unsupported (an honest card) for those skins; flip the
-    // remaining skins back to labhost/maze once their blocks exist.
+    // Karel-family (Bee/Farmer/Harvester/Collector/Planter) levels dispatch
+    // to the same maze-lab engine as Maze, on `skin`. Each of these five
+    // skins' action blocks (maze_nectar, maze_dig, harvester_corn,
+    // collector_collect, planter_plant, ...) is now authored in maze-lab's
+    // blocks.ts; any other Karel skin still throws "Invalid block
+    // definition" in the toolbox flyout, so it's left unsupported (an
+    // honest card).
     case 'Karel':
-      return properties.skin === 'bee'
+      return SUPPORTED_KAREL_SKINS.has(properties.skin as string)
         ? {runtime: 'labhost', labKey: 'maze'}
         : opaque(levelType, properties);
     // A video level with no key has nothing to play; report it as unsupported

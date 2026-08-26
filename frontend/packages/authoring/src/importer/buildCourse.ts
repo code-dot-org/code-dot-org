@@ -158,21 +158,27 @@ function buildExperience(
       (parsed.properties.name as string | undefined);
     const title = titleHint ?? fallbackTitle;
 
-    // Karel (Bee/Farmer/Harvester/Collector) shares maze-lab's engine with
-    // Maze, dispatching on `skin`. Only the Bee subtype's action blocks
-    // (maze_nectar, maze_honey, bee_ifFlower, bee_ifElseFlower, ...) have
-    // been authored in blocks.ts so far — Farmer/Harvester/Collector's
-    // (maze_dig, collector_collect, ...) have not, so those skins still fall
-    // through to dataFromParsedXml's opaque case below. See levelCatalog.ts's
-    // projectRuntime for the fuller note; flip the remaining skins back once
-    // their blocks exist.
-    const isBeeKarel =
-      parsed.levelType === 'Karel' && parsed.properties.skin === 'bee';
+    // Karel (Bee/Farmer/Harvester/Collector/Planter) shares maze-lab's
+    // engine with Maze, dispatching on `skin`. Each of these five skins'
+    // action blocks (maze_nectar, maze_dig, harvester_corn,
+    // collector_collect, planter_plant, ...) is now authored in blocks.ts;
+    // any other Karel skin still falls through to dataFromParsedXml's opaque
+    // case below. See levelCatalog.ts's projectRuntime for the fuller note.
+    const SUPPORTED_KAREL_SKINS = new Set([
+      'bee',
+      'farmer',
+      'harvester',
+      'collector',
+      'planter',
+    ]);
+    const isSupportedKarel =
+      parsed.levelType === 'Karel' &&
+      SUPPORTED_KAREL_SKINS.has(parsed.properties.skin as string);
     if (
       parsed.levelType === 'Fish' ||
       parsed.levelType === 'Music' ||
       parsed.levelType === 'Maze' ||
-      isBeeKarel
+      isSupportedKarel
     ) {
       const numericId = ctx.nextNumericId();
       ctx.levelProperties[String(numericId)] =

@@ -101,8 +101,16 @@ export interface SkinData {
 
   // Dirt
   dirt?: string;
+  // Farmer
+  fillSound?: string;
+  digSound?: string;
   // Harvester
   sprout?: string;
+  corn?: string;
+  pumpkin?: string;
+  lettuce?: string;
+  // Planter
+  soil?: string;
   // Bee
   cloud?: string;
   cloudAnimation?: string;
@@ -137,6 +145,8 @@ export interface Skin
     | 'harvestSound'
     | 'nectarSound'
     | 'honeySound'
+    | 'fillSound'
+    | 'digSound'
   > {
   id: string;
   assetUrl: (path: string) => string;
@@ -212,6 +222,9 @@ export interface Skin
 
   // Harvester Sounds
   harvestSound?: [string, string];
+  // Farmer Sounds
+  fillSound?: [string, string];
+  digSound?: [string, string];
   // Bee Sounds
   beeSound?: boolean;
   nectarSound?: [string, string];

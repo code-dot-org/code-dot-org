@@ -31,6 +31,77 @@ const defaultSkins: SkinsData = {
     pegmanHeight: 50,
     pegmanWidth: 50,
   },
+  collector: {
+    wallPegmanAnimation: 'wall_avatar.png',
+    movePegmanAnimation: 'move_avatar.png',
+    movePegmanAnimationSpeedScale: 1,
+    movePegmanAnimationFrameNumber: 8,
+    pegmanHeight: 50,
+    pegmanWidth: 50,
+
+    goal: 'gem.png',
+    collectBlock: 'gem_cropped.png',
+    corners: 'corners.png',
+
+    collectSounds: ['get_gem_2.mp3', 'get_gem_4.mp3', 'get_gem_6.mp3'],
+
+    look: '#000',
+    transparentTileEnding: true,
+    nonDisappearingPegmanHittingObstacle: true,
+    background: 'background.png',
+    danceOnLoad: true,
+  },
+  farmer: {
+    obstacleIdle: 'obstacle.png',
+
+    dirt: 'dirt.png',
+    fillSound: 'fill.mp3',
+    digSound: 'dig.mp3',
+
+    look: '#000',
+    transparentTileEnding: true,
+    nonDisappearingPegmanHittingObstacle: true,
+    background: 'background' + Math.floor(Math.random() * 4) + '.png',
+    pegmanYOffset: -8,
+    danceOnLoad: true,
+  },
+  harvester: {
+    obstacleIdle: 'obstacle.png',
+
+    corn: 'corn.png',
+    pumpkin: 'pumpkin.png',
+    sprout: 'sprout.png',
+    lettuce: 'lettuce.png',
+
+    harvestSound: 'dig.mp3',
+
+    look: '#000',
+    transparentTileEnding: true,
+    nonDisappearingPegmanHittingObstacle: true,
+    background: 'background' + Math.floor(Math.random() * 4) + '.png',
+    pegmanYOffset: -8,
+    danceOnLoad: true,
+  },
+  // Planter reuses Harvester's config, overriding sprout with soil (a
+  // sprout planted in soil becomes a Harvester crop in later levels).
+  planter: {
+    obstacleIdle: 'obstacle.png',
+
+    corn: 'corn.png',
+    pumpkin: 'pumpkin.png',
+    lettuce: 'lettuce.png',
+    sprout: 'sprout.png',
+    soil: 'soil.png',
+
+    harvestSound: 'dig.mp3',
+
+    look: '#000',
+    transparentTileEnding: true,
+    nonDisappearingPegmanHittingObstacle: true,
+    background: 'background' + Math.floor(Math.random() * 4) + '.png',
+    pegmanYOffset: -8,
+    danceOnLoad: true,
+  },
   pvz: {
     goalIdle: 'goalIdle.gif',
     obstacleIdle: 'obstacleIdle.gif',

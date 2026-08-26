@@ -4,6 +4,9 @@ import type {BlockDefinition} from '@code-dot-org/blockly';
 import {BaseBlocks} from '@code-dot-org/blockly';
 
 import beeBlocks from './beeBlocks';
+import collectorBlocks from './collectorBlocks';
+import harvesterBlocks from './harvesterBlocks';
+import planterBlocks from './planterBlocks';
 import type {Skin} from './skin';
 
 /**
@@ -89,6 +92,137 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
       simple(block) {
         const dir = block.getFieldValue('DIR');
         return `${dir}();\n`;
+      },
+    },
+  },
+  compassMoveBlock('maze_moveNorth', 'move N', 'moveNorth'),
+  compassMoveBlock('maze_moveSouth', 'move S', 'moveSouth'),
+  compassMoveBlock('maze_moveEast', 'move E', 'moveEast'),
+  compassMoveBlock('maze_moveWest', 'move W', 'moveWest'),
+  {
+    // Put a unit of dirt down on the current tile (Farmer).
+    type: 'maze_fill',
+    helpUrl: 'http://code.google.com/p/blockly/wiki/PutDown',
+    tooltip: 'place 1 unit of dirt',
+    style: 'default',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'fill 1',
+    generator: {
+      javascript(block) {
+        return `Maze.fill('block_id_${block.id}');\n`;
+      },
+      simple() {
+        return `fill();\n`;
+      },
+    },
+  },
+  {
+    // Remove a unit of dirt from the current tile (Farmer).
+    type: 'maze_dig',
+    helpUrl: 'http://code.google.com/p/blockly/wiki/PickUp',
+    tooltip: 'remove 1 unit of dirt',
+    style: 'default',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'remove 1',
+    generator: {
+      javascript(block) {
+        return `Maze.dig('block_id_${block.id}');\n`;
+      },
+      simple() {
+        return `dig();\n`;
+      },
+    },
+  },
+  {
+    // If there is a pile/hole/path ahead, then do some actions (Farmer).
+    type: 'karel_if',
+    style: 'logic_blocks',
+    helpUrl: '',
+    tooltip: 'If the specified condition is true, then do some actions.',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'if %1',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'DIR',
+        options: [
+          ['there is a pile', 'pilePresent'],
+          ['there is a hole', 'holePresent'],
+          ['path ahead', 'isPathForward'],
+        ],
+      },
+    ],
+    message1: 'do %1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'DO',
+      },
+    ],
+    generator: {
+      javascript(block, generator) {
+        const argument = `Maze.${block.getFieldValue('DIR')}('block_id_${block.id}')`;
+        const branch = generator.statementToCode(block, 'DO');
+        return `if (${argument}) {\n${branch}}\n`;
+      },
+      simple(block, generator) {
+        const argument = `${block.getFieldValue('DIR')}()`;
+        const branch = generator.statementToCode(block, 'DO');
+        return `if (${argument}) {\n${branch}}\n`;
+      },
+    },
+  },
+  {
+    // If/else there is a pile/hole/path ahead (Farmer).
+    type: 'karel_ifElse',
+    style: 'logic_blocks',
+    helpUrl: '',
+    tooltip:
+      'If the specified condition is true, then do the first block of ' +
+      'actions. Otherwise, do the second block of actions.',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'if %1',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'DIR',
+        options: [
+          ['there is a pile', 'pilePresent'],
+          ['there is a hole', 'holePresent'],
+          ['path ahead', 'isPathForward'],
+        ],
+      },
+    ],
+    message1: 'do %1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'DO',
+      },
+    ],
+    message2: 'else %1',
+    args2: [
+      {
+        type: 'input_statement',
+        name: 'ELSE',
+      },
+    ],
+    generator: {
+      javascript(block, generator) {
+        const argument = `Maze.${block.getFieldValue('DIR')}('block_id_${block.id}')`;
+        const branch0 = generator.statementToCode(block, 'DO');
+        const branch1 = generator.statementToCode(block, 'ELSE');
+        return `if (${argument}) {\n${branch0}} else {\n${branch1}}\n`;
+      },
+      simple(block, generator) {
+        const argument = `${block.getFieldValue('DIR')}()`;
+        const branch0 = generator.statementToCode(block, 'DO');
+        const branch1 = generator.statementToCode(block, 'ELSE');
+        return `if (${argument}) {\n${branch0}} else {\n${branch1}}\n`;
       },
     },
   },
@@ -369,6 +503,37 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     },
   },
   ...beeBlocks,
+  ...harvesterBlocks,
+  ...collectorBlocks,
+  ...planterBlocks,
 ];
+
+/**
+ * A single block that moves in a fixed compass direction (as opposed to
+ * relative to Pegman's current facing, like maze_moveForward/maze_move).
+ */
+function compassMoveBlock(
+  type: string,
+  message0: string,
+  func: string,
+): BlockDefinition {
+  return {
+    type,
+    helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
+    tooltip: `Move me ${message0.slice(5)}.`,
+    style: 'default',
+    previousStatement: true,
+    nextStatement: true,
+    message0,
+    generator: {
+      javascript(block) {
+        return `Maze.${func}('block_id_${block.id}');\n`;
+      },
+      simple() {
+        return `${func}();\n`;
+      },
+    },
+  };
+}
 
 export default blocks;

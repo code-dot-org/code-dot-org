@@ -71,11 +71,11 @@ describe.skipIf(!repoRoot)('LevelCatalog', () => {
   });
 
   // Maze and Karel share one directory and one game engine, dispatching on
-  // `skin`. Only Bee's block set was authored (see levelCatalog.ts's
-  // projectRuntime) — Farmer/Harvester/Collector's toolbox flyout still
-  // throws at mount. Pins the three-way split so a future block-set
-  // completion for another skin is a deliberate, visible change here rather
-  // than an accidental revert.
+  // `skin`. Bee/Farmer/Harvester/Collector/Planter block sets are all
+  // authored (see levelCatalog.ts's projectRuntime) — any other Karel skin's
+  // toolbox flyout still throws at mount. Pins the runtime split per skin so
+  // a future block-set change (a new skin, or one going unsupported) is a
+  // deliberate, visible change here rather than an accidental revert.
   describe('Maze/Karel runtime split', () => {
     const parsingCatalog = LevelCatalog.scan(
       repoRoot as string,
@@ -107,9 +107,49 @@ describe.skipIf(!repoRoot)('LevelCatalog', () => {
       expect(level?.labKey).toBe('maze');
     });
 
-    it('resolves a Karel (Farmer) level to unsupported', () => {
+    it('resolves a Karel (Farmer) level to labhost/maze', () => {
       const level = parsingCatalog.resolveLevel(
-        '20hr_farmer_stage9_1',
+        'courseD_farmer_while1_2024',
+        context,
+      );
+      expect(level?.levelType).toBe('Karel');
+      expect(level?.runtime).toBe('labhost');
+      expect(level?.labKey).toBe('maze');
+    });
+
+    it('resolves a Karel (Harvester) level to labhost/maze', () => {
+      const level = parsingCatalog.resolveLevel(
+        'courseD_harvester_nested_loops_challenge1_2024',
+        context,
+      );
+      expect(level?.levelType).toBe('Karel');
+      expect(level?.runtime).toBe('labhost');
+      expect(level?.labKey).toBe('maze');
+    });
+
+    it('resolves a Karel (Collector) level to labhost/maze', () => {
+      const level = parsingCatalog.resolveLevel(
+        'courseD_collector_debugging1a_2024',
+        context,
+      );
+      expect(level?.levelType).toBe('Karel');
+      expect(level?.runtime).toBe('labhost');
+      expect(level?.labKey).toBe('maze');
+    });
+
+    it('resolves a Karel (Planter) level to labhost/maze', () => {
+      const level = parsingCatalog.resolveLevel('Planter Test', context);
+      expect(level?.levelType).toBe('Karel');
+      expect(level?.runtime).toBe('labhost');
+      expect(level?.labKey).toBe('maze');
+    });
+
+    // farmer_night is a Farmer reskin with its own asset set, not one of
+    // the five skins with an authored block set (see SUPPORTED_KAREL_SKINS
+    // in levelCatalog.ts); left unsupported until it gets its own pass.
+    it('resolves an unrecognized Karel skin to unsupported', () => {
+      const level = parsingCatalog.resolveLevel(
+        '20hr_farmer_stage9_10',
         context,
       );
       expect(level?.levelType).toBe('Karel');

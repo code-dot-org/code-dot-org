@@ -1,6 +1,10 @@
 import type {ExecutionInfo} from '@code-dot-org/lab-classic/interpreter';
 import Bee from './Bee';
+import type Cell from './Cell';
+import Collector from './Collector';
+import Harvester from './Harvester';
 import type MazeController from './MazeController';
+import Planter from './Planter';
 import Validator from './Validator';
 import type WordSearch from './WordSearch';
 
@@ -227,6 +231,251 @@ export function turnRight(this: APIGlobals, id: string) {
 export function notFinished(this: APIGlobals): boolean {
   return !!API_FUNCTION.bind(this)(() => {
     return ~checkSuccess.bind(this)();
+  });
+}
+
+/**
+ * Move to an absolute compass direction (as opposed to relative to Pegman's
+ * current facing), turning through stage front (south) first when possible.
+ */
+function moveAbsoluteDirection(
+  this: APIGlobals,
+  direction: number,
+  id: string,
+) {
+  const {TurnDirection} = this.tiles;
+
+  const currentDirection = this.controller.getPegmanD() || 0;
+  const isTurnAround =
+    Math.abs(currentDirection - direction) ===
+    this.tiles.MoveDirection.BACKWARD;
+  const isRight =
+    direction ===
+    this.tiles.constrainDirection4(currentDirection + TurnDirection.RIGHT);
+  const isLeft =
+    direction ===
+    this.tiles.constrainDirection4(currentDirection + TurnDirection.LEFT);
+
+  this.executionInfo.collectActions();
+  if (isTurnAround) {
+    const shouldTurnCWToPreferStageFront = currentDirection - direction < 0;
+    const relativeTurnDirection = shouldTurnCWToPreferStageFront
+      ? TurnDirection.RIGHT
+      : TurnDirection.LEFT;
+    turn.bind(this)(relativeTurnDirection, id);
+    turn.bind(this)(relativeTurnDirection, id);
+  } else if (isRight) {
+    turn.bind(this)(TurnDirection.RIGHT, id);
+  } else if (isLeft) {
+    turn.bind(this)(TurnDirection.LEFT, id);
+  }
+  move.bind(this)(this.tiles.MoveDirection.FORWARD, id);
+  this.executionInfo.stopCollecting();
+}
+
+/**
+ * Moves the character to face and step north, regardless of current facing.
+ */
+export function moveNorth(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    moveAbsoluteDirection.bind(this)(this.tiles.Direction.NORTH, id);
+  });
+}
+
+export function moveSouth(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    moveAbsoluteDirection.bind(this)(this.tiles.Direction.SOUTH, id);
+  });
+}
+
+export function moveEast(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    moveAbsoluteDirection.bind(this)(this.tiles.Direction.EAST, id);
+  });
+}
+
+export function moveWest(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    moveAbsoluteDirection.bind(this)(this.tiles.Direction.WEST, id);
+  });
+}
+
+/**
+ * Farmer/Collector-shared dirt-pile predicates and actions. Farmer's
+ * fill/dig raise or lower the dirt value at the current tile by one;
+ * Collector's blocks reuse pilePresent to check for a collectible.
+ */
+function pileValue(this: APIGlobals): number {
+  const col = this.controller.getPegmanX() || 0;
+  const row = this.controller.getPegmanY() || 0;
+  return this.controller.map?.getValue(row, col) || 0;
+}
+
+export function pilePresent(this: APIGlobals): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    const col = this.controller.getPegmanX() || 0;
+    const row = this.controller.getPegmanY() || 0;
+    return (
+      !!this.controller.map?.isDirt(row, col) && pileValue.bind(this)() > 0
+    );
+  });
+}
+
+export function holePresent(this: APIGlobals): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    const col = this.controller.getPegmanX() || 0;
+    const row = this.controller.getPegmanY() || 0;
+    return (
+      !!this.controller.map?.isDirt(row, col) && pileValue.bind(this)() < 0
+    );
+  });
+}
+
+export function fill(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('putdown', id);
+    const col = this.controller.getPegmanX() || 0;
+    const row = this.controller.getPegmanY() || 0;
+    this.controller.map?.setValue(row, col, pileValue.bind(this)() + 1);
+  });
+}
+
+export function dig(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('pickup', id);
+    const col = this.controller.getPegmanX() || 0;
+    const row = this.controller.getPegmanY() || 0;
+    this.controller.map?.setValue(row, col, pileValue.bind(this)() - 1);
+  });
+}
+
+/**
+ * Harvester-specific API functions. Loaded regardless of subtype, but are
+ * no-ops unless the current subtype is Harvester.
+ */
+function getHarvester(this: APIGlobals): Harvester | undefined {
+  return this.controller.subtype instanceof Harvester
+    ? this.controller.subtype
+    : undefined;
+}
+
+export function getCorn(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    if (getHarvester.bind(this)()?.tryGetCorn()) {
+      this.executionInfo.queueAction('get_corn', id);
+    }
+  });
+}
+
+export function getPumpkin(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    if (getHarvester.bind(this)()?.tryGetPumpkin()) {
+      this.executionInfo.queueAction('get_pumpkin', id);
+    }
+  });
+}
+
+export function getLettuce(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    if (getHarvester.bind(this)()?.tryGetLettuce()) {
+      this.executionInfo.queueAction('get_lettuce', id);
+    }
+  });
+}
+
+export function atCorn(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('at_corn', id);
+    return !!getHarvester.bind(this)()?.atCorn();
+  });
+}
+
+export function atPumpkin(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('at_pumpkin', id);
+    return !!getHarvester.bind(this)()?.atPumpkin();
+  });
+}
+
+export function atLettuce(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('at_lettuce', id);
+    return !!getHarvester.bind(this)()?.atLettuce();
+  });
+}
+
+export function hasCorn(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('has_corn', id);
+    return !!getHarvester.bind(this)()?.hasCorn();
+  });
+}
+
+export function hasPumpkin(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('has_pumpkin', id);
+    return !!getHarvester.bind(this)()?.hasPumpkin();
+  });
+}
+
+export function hasLettuce(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('has_lettuce', id);
+    return !!getHarvester.bind(this)()?.hasLettuce();
+  });
+}
+
+/**
+ * Collector-specific API functions. Loaded regardless of subtype, but are
+ * no-ops unless the current subtype is Collector.
+ */
+function getCollector(this: APIGlobals): Collector<Cell> | undefined {
+  return this.controller.subtype instanceof Collector
+    ? this.controller.subtype
+    : undefined;
+}
+
+export function collect(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    const col = this.controller.getPegmanX() || 0;
+    const row = this.controller.getPegmanY() || 0;
+    if (getCollector.bind(this)()?.tryCollect(row, col)) {
+      this.executionInfo.queueAction('pickup', id);
+    } else {
+      this.executionInfo.queueAction('fail_pickup', id);
+    }
+  });
+}
+
+/**
+ * Planter-specific API functions. Loaded regardless of subtype, but are
+ * no-ops unless the current subtype is Planter.
+ */
+function getPlanter(this: APIGlobals): Planter | undefined {
+  return this.controller.subtype instanceof Planter
+    ? this.controller.subtype
+    : undefined;
+}
+
+export function plant(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    if (getPlanter.bind(this)()?.tryPlant()) {
+      this.executionInfo.queueAction('plant', id);
+    }
+  });
+}
+
+export function atSoil(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('at_soil', id);
+    return !!getPlanter.bind(this)()?.atSoil();
+  });
+}
+
+export function atSprout(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    this.executionInfo.queueAction('at_sprout', id);
+    return !!getPlanter.bind(this)()?.atSprout();
   });
 }
 
