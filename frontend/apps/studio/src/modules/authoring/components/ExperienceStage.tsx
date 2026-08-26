@@ -8,6 +8,12 @@ import type {
 } from '@code-dot-org/authoring';
 import {LabHost, Loading} from '@code-dot-org/lab';
 import {Markdown} from '@code-dot-org/markdown';
+// oceans-lab ships its shell/guide-overlay CSS as a separate stylesheet
+// (package.json `exports["./styles.css"]`) rather than bundling it into the
+// JS entrypoint; nothing in studio pulled it in, so the lab rendered with the
+// guide overlay unpositioned and stacked in normal flow instead of absolutely
+// placed on the canvas.
+import '@code-dot-org/oceans-lab/styles.css';
 
 import {getLabEntrypoint} from '@/modules/labs/router/getLabEntrypoint';
 
@@ -60,9 +66,7 @@ export default function ExperienceStage({
       return (
         <WidgetExperienceView
           experience={experience}
-          onEvent={data =>
-            onStageEvent?.({experienceId: experience.id, data})
-          }
+          onEvent={data => onStageEvent?.({experienceId: experience.id, data})}
         />
       );
   }
@@ -108,9 +112,7 @@ function ExistingLevelStage({
       <div className={styles.contentCard}>
         <GenericLevel
           data={experience.data}
-          onAnswer={data =>
-            onStageEvent?.({experienceId: experience.id, data})
-          }
+          onAnswer={data => onStageEvent?.({experienceId: experience.id, data})}
         />
       </div>
     );

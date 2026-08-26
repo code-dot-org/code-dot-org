@@ -95,23 +95,34 @@ ${options.bodyHtml}
 </html>`;
 }
 
-// Marker the shim installs on window; also the giveaway that a document
-// already speaks the MCP Apps protocol and doesn't need chrome injected.
-const SHIM_MARKER = 'window.McpApp';
+// The shim's DEFINITION, not a mere reference: agent-authored widgets often
+// guard on `if (window.McpApp)` without the shim being present, and treating
+// any mention as "already chromed" once skipped both the shim AND the CSP —
+// leaving a widget with no network lockdown. Detect what actually matters,
+// and detect the two pieces independently.
+const SHIM_DEFINITION_MARKER = 'window.McpApp = {';
+const CSP_MARKER = 'http-equiv="Content-Security-Policy"';
 
 /**
  * Patches the MCP Apps CSP and postMessage shim into an already-complete
  * HTML document — the case where an authoring agent wrote the whole page
  * itself rather than handing buildWidgetDocument its pieces. A dumb string
  * transform on purpose: this has to run in the Node authoring service too,
- * where there is no DOM to parse with.
+ * where there is no DOM to parse with. CSP and shim are checked separately,
+ * so a document carrying one still gets the other.
  */
 export function injectWidgetChrome(html: string): string {
-  if (html.includes(SHIM_MARKER)) {
+  const parts: string[] = [];
+  if (!html.includes(CSP_MARKER)) {
+    parts.push(cspMetaTag());
+  }
+  if (!html.includes(SHIM_DEFINITION_MARKER)) {
+    parts.push(`<script>${WIDGET_APP_SHIM_JS}</script>`);
+  }
+  if (parts.length === 0) {
     return html;
   }
-
-  const injection = `${cspMetaTag()}\n<script>${WIDGET_APP_SHIM_JS}</script>`;
+  const injection = parts.join('\n');
 
   const headOpen = html.match(/<head[^>]*>/i);
   if (headOpen) {

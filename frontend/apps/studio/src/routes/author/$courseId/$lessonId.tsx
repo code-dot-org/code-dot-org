@@ -7,9 +7,10 @@ import {
   registerAuthoringMswBridge,
   useAuthoringState,
 } from '@/modules/authoring';
-import styles from '@/modules/authoring/components/authoring.module.scss';
 import LessonPlayer from '@/modules/authoring/components/LessonPlayer';
 import LabProviders from '@/modules/labs/LabProviders';
+
+import styles from '@/modules/authoring/components/authoring.module.scss';
 
 export const Route = createFileRoute('/author/$courseId/$lessonId')({
   // The player is full-height; keep the footer out like the lab route does.

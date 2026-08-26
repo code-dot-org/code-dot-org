@@ -23,7 +23,7 @@ import {
   type ResolveLevel,
 } from './authoring/model.js';
 import {importCourseIfMissing} from './boot/importCourse.js';
-import {LevelCatalog} from './boot/levelCatalog.js';
+import {LevelCatalog, repairLevelProperties} from './boot/levelCatalog.js';
 import {FRONTEND_ROOT, resolveRepoRoot} from './boot/paths.js';
 import {buildChangeSet} from './publish/buildChangeSet.js';
 import {AuthoringState} from './state/AuthoringState.js';
@@ -72,6 +72,15 @@ if (repoRoot) {
   } catch (error) {
     console.error(`[authoring-service] course import failed: ${String(error)}`);
   }
+}
+
+// One-time repair for LevelProperties a previous run of the buggy lazy
+// catalog path persisted without `appName` — see repairLevelProperties.
+const levelPropertiesFix = repairLevelProperties(
+  state.getSnapshot().levelProperties,
+);
+if (Object.keys(levelPropertiesFix).length > 0) {
+  state.registerLevelProperties(levelPropertiesFix);
 }
 
 // Single construction point for the runners. AUTHORING_AGENT=echo keeps the

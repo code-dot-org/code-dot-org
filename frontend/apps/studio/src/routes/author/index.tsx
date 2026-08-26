@@ -3,14 +3,15 @@ import {createFileRoute, Link} from '@tanstack/react-router';
 
 import {Loading} from '@code-dot-org/lab';
 
-import AuthorSidebar from '@/modules/authoring/components/AuthorSidebar';
-import styles from '@/modules/authoring/components/authoring.module.scss';
 import {
   registerAuthoringMswBridge,
   useAuthoringState,
   useCanAuthor,
 } from '@/modules/authoring';
+import AuthorSidebar from '@/modules/authoring/components/AuthorSidebar';
 import LabProviders from '@/modules/labs/LabProviders';
+
+import styles from '@/modules/authoring/components/authoring.module.scss';
 
 export const Route = createFileRoute('/author/')({
   loader: () => registerAuthoringMswBridge(),

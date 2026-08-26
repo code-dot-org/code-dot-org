@@ -52,7 +52,7 @@ export default function WidgetExperienceView({
         toolResult={{structuredContent: {input: toolInput}}}
         onModelContextUpdate={update => onEvent?.(update)}
         minHeight={240}
-        maxHeight={720}
+        maxHeight={1400}
       />
     </div>
   );
@@ -67,3 +67,4 @@ function hashSource(source: string): number {
   }
   return hash;
 }
+

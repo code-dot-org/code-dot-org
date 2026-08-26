@@ -1,5 +1,7 @@
 import {describe, expect, it} from 'vitest';
 
+import {injectWidgetChrome} from '@code-dot-org/widget-runtime/chrome';
+
 import type {
   CourseModel,
   CurriculumChange,
@@ -64,12 +66,12 @@ const course: CourseModel = {
           ],
         },
         {
-          id: 'draft:lesson-1',
+          id: 'draft-lesson-1',
           displayName: 'Balance the data',
           origin: 'draft',
           experiences: [
             {
-              id: 'draft:experience-1',
+              id: 'draft-experience-1',
               origin: 'draft',
               kind: 'widget',
               widgetId: 'sorter',
@@ -78,7 +80,7 @@ const course: CourseModel = {
           ],
         },
         {
-          id: 'draft:lesson-2',
+          id: 'draft-lesson-2',
           displayName: 'Outline only',
           origin: 'draft',
           experiences: [],
@@ -88,9 +90,16 @@ const course: CourseModel = {
   ],
 };
 
+const draftCourse: CourseModel = {
+  id: 'draft-course-1',
+  displayName: 'A brand new course',
+  origin: 'draft',
+  units: [],
+};
+
 const snapshot: CurriculumSnapshot = {
   version: 4,
-  courses: [course],
+  courses: [course, draftCourse],
   widgets: [widget],
   levelProperties: {},
 };
@@ -103,7 +112,7 @@ const changes: CurriculumChange[] = [
     op: 'createLesson',
     unitId: 'k5-ai-data-2024',
     lesson: {
-      id: 'draft:lesson-1',
+      id: 'draft-lesson-1',
       displayName: 'Balance the data',
       origin: 'draft',
     },
@@ -114,6 +123,17 @@ const changes: CurriculumChange[] = [
     actor: 'agent',
     op: 'createWidget',
     descriptor: widget,
+  },
+  {
+    seq: 3,
+    at: '2026-08-25T00:00:02.000Z',
+    actor: 'agent',
+    op: 'createCourse',
+    course: {
+      id: 'draft-course-1',
+      displayName: 'A brand new course',
+      origin: 'draft',
+    },
   },
 ];
 
@@ -131,7 +151,7 @@ function build() {
 
 describe('buildChangeSet', () => {
   it('reports the courses the change log touched', () => {
-    expect(build().courseIds).toEqual(['k5-ai-data-2024']);
+    expect(build().courseIds).toEqual(['k5-ai-data-2024', 'draft-course-1']);
   });
 
   it('carries the full change log', () => {
@@ -140,22 +160,23 @@ describe('buildChangeSet', () => {
 
   it('collects draft objects as new', () => {
     const {newObjects} = build();
+    expect(newObjects.courses.map(c => c.id)).toEqual(['draft-course-1']);
     expect(newObjects.units).toEqual([]);
     expect(newObjects.lessons.map(lesson => lesson.id)).toEqual([
-      'draft:lesson-1',
-      'draft:lesson-2',
+      'draft-lesson-1',
+      'draft-lesson-2',
     ]);
     expect(newObjects.experiences.map(exp => exp.id)).toEqual([
-      'draft:experience-1',
+      'draft-experience-1',
     ]);
   });
 
-  it('validates widget source against the offline default', () => {
+  it('publishes the served, chrome-injected source, not the raw agent output', () => {
     expect(build().widgets).toEqual([
       {
         id: 'sorter',
         descriptor: widget,
-        source: SOURCE,
+        source: injectWidgetChrome(SOURCE),
         validation: {hasHtml: true, networkPolicy: 'none', cspPresent: true},
       },
     ]);
@@ -192,7 +213,7 @@ describe('buildChangeSet', () => {
 
     expect(realized.experiences).toEqual([
       {
-        experienceId: 'draft:experience-1',
+        experienceId: 'draft-experience-1',
         kind: 'widget',
         deterministic: true,
         flags: [],
@@ -200,7 +221,7 @@ describe('buildChangeSet', () => {
     ]);
 
     expect(outline).toMatchObject({
-      lessonId: 'draft:lesson-2',
+      lessonId: 'draft-lesson-2',
       contentPresent: false,
       deterministicNextStep: false,
     });

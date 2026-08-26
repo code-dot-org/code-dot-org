@@ -1,3 +1,5 @@
+import {injectWidgetChrome} from '@code-dot-org/widget-runtime/chrome';
+
 import type {
   AdaptivePolicy,
   CourseModel,
@@ -40,6 +42,7 @@ export interface LevelbuilderChangeSet {
   courseIds: string[];
   changes: CurriculumChange[];
   newObjects: {
+    courses: CourseModel[];
     units: Unit[];
     lessons: Lesson[];
     experiences: Experience[];
@@ -56,7 +59,10 @@ export interface BuildChangeSetInput {
   generatedAt?: Date;
 }
 
-const DRAFT_PREFIX = 'draft:';
+// Real draft ids are `draft-course-<uuid>`, `draft-lesson-<uuid>`,
+// `draft-exp-<uuid>`, etc. (see ClaudeAgentRunner's draftId helper) — not the
+// `draft:` colon form the domain-model doc comments describe.
+const DRAFT_PREFIX = 'draft-';
 
 /**
  * Projects the session into the artifact a future Rails write adapter would
@@ -169,11 +175,15 @@ function touchedCourseIds(
 function collectDrafts(
   courses: CourseModel[],
 ): LevelbuilderChangeSet['newObjects'] {
+  const newCourses: CourseModel[] = [];
   const units: Unit[] = [];
   const lessons: Lesson[] = [];
   const experiences: Experience[] = [];
 
   for (const course of courses) {
+    if (course.id.startsWith(DRAFT_PREFIX)) {
+      newCourses.push(course);
+    }
     for (const unit of course.units) {
       if (unit.id.startsWith(DRAFT_PREFIX)) {
         units.push(unit);
@@ -191,13 +201,18 @@ function collectDrafts(
     }
   }
 
-  return {units, lessons, experiences};
+  return {courses: newCourses, units, lessons, experiences};
 }
 
 function publishWidget(
   descriptor: WidgetDescriptor,
-  source: string | undefined,
+  rawSource: string | undefined,
 ): PublishedWidget {
+  // The stored source is raw agent output; the CSP and McpApp shim are only
+  // injected at serve time (see GET /api/widgets/:id). Validate — and publish
+  // — what a learner's iframe actually receives, not what the agent wrote.
+  const source =
+    rawSource === undefined ? undefined : injectWidgetChrome(rawSource);
   return {
     id: descriptor.id,
     descriptor,

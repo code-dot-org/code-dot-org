@@ -207,7 +207,12 @@ export const SourcesProvider = <
       _channel?: Channel,
       initialSources?: ProjectSources,
     ) => {
-      updateSources(initialSources as ProjectSources<U>);
+      // A no-project level (unit-mounted, usesProjects: false) completes its
+      // load with no sources; keep the initial/default sources rather than
+      // handing `undefined` to `transform`, which dereferences `.source`.
+      if (initialSources) {
+        updateSources(initialSources as ProjectSources<U>);
+      }
     },
     [updateSources],
   );

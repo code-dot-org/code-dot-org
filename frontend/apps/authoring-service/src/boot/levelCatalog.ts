@@ -136,18 +136,133 @@ export class LevelCatalog {
     };
 
     context.registerLevelProperties({
-      [String(levelNumericId)]: {
-        ...properties,
-        id: levelNumericId,
-        level_id: levelNumericId,
-        name: levelKey,
-        type: levelType,
-      },
+      [String(levelNumericId)]: buildLevelProperties(
+        levelType,
+        levelNumericId,
+        levelKey,
+        properties,
+      ),
     });
 
     this.resolved.set(levelKey, experience);
     return experience;
   }
+}
+
+/**
+ * LevelProperties wire shape for a lazily-attached level. Fish and Music
+ * reach the real LabHost, whose client-side zod schema requires
+ * `appName: z.enum(ProjectTypes)` — so those two types get the full shape
+ * the importer builds at course-import time, not a raw properties passthrough.
+ *
+ * Mirrors buildFishLevelProperties/buildMusicLevelProperties in
+ * frontend/packages/authoring/src/importer/buildCourse.ts, the source of
+ * truth for this shape. Not imported from there because that package doesn't
+ * export those two helpers (only the whole-course `buildCourse`); duplicated
+ * here rather than changing authoring's public API for this fix.
+ */
+function buildLevelProperties(
+  levelType: string,
+  id: number,
+  levelKey: string,
+  properties: Record<string, unknown>,
+): Record<string, unknown> {
+  switch (levelType) {
+    case 'Fish':
+      return buildFishLevelProperties(id, levelKey, properties);
+    case 'Music':
+      return buildMusicLevelProperties(id, levelKey, properties);
+    default:
+      return {
+        ...properties,
+        id,
+        level_id: id,
+        name: levelKey,
+        type: levelType,
+      };
+  }
+}
+
+function buildFishLevelProperties(
+  id: number,
+  levelKey: string,
+  properties: Record<string, unknown>,
+): Record<string, unknown> {
+  return {
+    id,
+    appName: 'fish',
+    type: 'Oceans',
+    name: levelKey,
+    appMode: properties.mode,
+    isProjectLevel: false,
+    usesProjects: false,
+    hideShareAndRemix: true,
+    offerBrowserTts: false,
+    showExemplarLink: false,
+    parentLevelLink: null,
+    exemplarSources: null,
+  };
+}
+
+function buildMusicLevelProperties(
+  id: number,
+  levelKey: string,
+  properties: Record<string, unknown>,
+): Record<string, unknown> {
+  return {
+    id,
+    appName: 'music',
+    type: 'Music',
+    name: levelKey,
+    isProjectLevel: false,
+    usesProjects: false,
+    encrypted: false,
+    levelData: properties.level_data ?? null,
+    hideShareAndRemix: true,
+    instructionsImportant: false,
+    offerBrowserTts: false,
+    useSecondaryFinishButton: false,
+    preloadAssetList: false,
+    containedLevelNames: [],
+    helpVideos: [],
+    useRestrictedSongs: true,
+    baseAssetUrl: '/blockly/',
+    isAssessment: false,
+    enableBlocklyKeyboardNavigation: false,
+    showExemplarLink: false,
+    parentLevelLink: null,
+    exemplarSources: null,
+    sharedBlocks: [],
+  };
+}
+
+/**
+ * Repairs LevelProperties persisted by the old lazy-catalog path, which
+ * registered raw XML properties instead of the wire shape above — Music
+ * entries in particular lack `appName`, which fails the client's zod
+ * validation. Idempotent: entries that already carry `appName` pass through
+ * untouched, so this is safe to run on every boot against the on-disk
+ * session snapshot. `properties.level_data` survives the original
+ * registration (see the `default` branch above), so `buildMusicLevelProperties`
+ * can rebuild the full shape directly from the stale persisted entry.
+ */
+export function repairLevelProperties(
+  levelProperties: Record<string, Record<string, unknown>>,
+): Record<string, Record<string, unknown>> {
+  const repaired: Record<string, Record<string, unknown>> = {};
+  for (const [numericId, entry] of Object.entries(levelProperties)) {
+    if (typeof entry.appName === 'string') {
+      continue;
+    }
+    const id = Number(numericId);
+    const levelKey = typeof entry.name === 'string' ? entry.name : numericId;
+    if (entry.type === 'Music') {
+      repaired[numericId] = buildMusicLevelProperties(id, levelKey, entry);
+    } else if (entry.type === 'Fish' || entry.type === 'Oceans') {
+      repaired[numericId] = buildFishLevelProperties(id, levelKey, entry);
+    }
+  }
+  return repaired;
 }
 
 type RuntimeProjection = Pick<

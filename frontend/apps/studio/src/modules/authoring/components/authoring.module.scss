@@ -98,6 +98,13 @@
   display: flex;
   flex-direction: column;
 
+  // Real labs (e.g. oceans-lab) size their own shell against the nearest
+  // inline-size container via cqi units, falling back to the viewport width
+  // when no ancestor establishes containment. In the author layout's narrow
+  // middle column that fallback overflowed the lab past its actual space, so
+  // establish containment here to give it the real available width.
+  container-type: inline-size;
+
   > * {
     flex: 1;
   }
