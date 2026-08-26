@@ -62,6 +62,7 @@ export interface SkinData {
   look?: string;
   goalIdle?: string;
   obstacleIdle?: string;
+  obstacleAnimation?: string;
   goalAnimation?: string;
   maze_forever?: string;
   largerObstacleAnimationTiles?: string;

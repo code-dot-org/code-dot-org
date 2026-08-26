@@ -70,11 +70,12 @@ describe.skipIf(!repoRoot)('LevelCatalog', () => {
     ).toBeUndefined();
   });
 
-  // Maze and Karel share one directory and one game engine, but only Maze's
-  // block set was authored on the source branch — a Karel level's toolbox
-  // flyout throws at mount (see levelCatalog.ts's projectRuntime). Pins the
-  // split so a future block-set completion is a deliberate, visible change
-  // here rather than an accidental revert.
+  // Maze and Karel share one directory and one game engine, dispatching on
+  // `skin`. Only Bee's block set was authored (see levelCatalog.ts's
+  // projectRuntime) — Farmer/Harvester/Collector's toolbox flyout still
+  // throws at mount. Pins the three-way split so a future block-set
+  // completion for another skin is a deliberate, visible change here rather
+  // than an accidental revert.
   describe('Maze/Karel runtime split', () => {
     const parsingCatalog = LevelCatalog.scan(
       repoRoot as string,
@@ -96,9 +97,19 @@ describe.skipIf(!repoRoot)('LevelCatalog', () => {
       expect(level?.labKey).toBe('maze');
     });
 
-    it('resolves a Karel (Bee) level to unsupported', () => {
+    it('resolves a Karel (Bee) level to labhost/maze', () => {
       const level = parsingCatalog.resolveLevel(
         'courseD_bee_conditionals2_2024',
+        context,
+      );
+      expect(level?.levelType).toBe('Karel');
+      expect(level?.runtime).toBe('labhost');
+      expect(level?.labKey).toBe('maze');
+    });
+
+    it('resolves a Karel (Farmer) level to unsupported', () => {
+      const level = parsingCatalog.resolveLevel(
+        '20hr_farmer_stage9_1',
         context,
       );
       expect(level?.levelType).toBe('Karel');

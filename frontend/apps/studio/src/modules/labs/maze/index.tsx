@@ -43,15 +43,24 @@ function parseJsonOr<T>(value: unknown): T | undefined {
  * DashboardApiClient's fetch path applies; the /author host bypasses that
  * fetch entirely (LevelPropertiesProvider does no zod parsing), so this
  * adapter does the conversion itself with the same browser DOMParser.
+ *
+ * Many Karel-family .level files (courseD_bee_conditionals2_2024, for one)
+ * have no `<start_blocks>` element at all — in production, Rails fills that
+ * gap by handing the client a "when run" hat by default. The importer reads
+ * the .level file directly and skips Rails, so `startBlocksXml` is simply
+ * absent here; leave `startBlocks` undefined in that case so MazeLab's own
+ * `DefaultStartBlocks` fallback (a lone "when run" block) applies, rather
+ * than handing it a parsed-but-empty block list that fallback can't see
+ * through.
  */
 function toMazeLevelProperties(properties: LevelProperties): LevelProperties {
   const parser = new DOMParser();
+  const startBlocksXml = properties.startBlocksXml as string | undefined;
   return {
     ...properties,
-    startBlocks: convertBlocklyXmlToJson(
-      parser,
-      (properties.startBlocksXml as string | undefined) ?? EMPTY_BLOCKS_XML,
-    ),
+    startBlocks: startBlocksXml
+      ? convertBlocklyXmlToJson(parser, startBlocksXml)
+      : undefined,
     toolboxBlocks: convertBlocklyXmlToToolbox(
       parser,
       (properties.toolboxBlocksXml as string | undefined) ?? EMPTY_BLOCKS_XML,

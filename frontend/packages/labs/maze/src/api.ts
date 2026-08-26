@@ -1,4 +1,5 @@
 import type {ExecutionInfo} from '@code-dot-org/lab-classic/interpreter';
+import Bee from './Bee';
 import type MazeController from './MazeController';
 import Validator from './Validator';
 import type WordSearch from './WordSearch';
@@ -227,4 +228,84 @@ export function notFinished(this: APIGlobals): boolean {
   return !!API_FUNCTION.bind(this)(() => {
     return ~checkSuccess.bind(this)();
   });
+}
+
+/**
+ * Bee-specific API functions. These are loaded regardless of subtype, but
+ * are no-ops unless the current subtype is Bee.
+ */
+function getBee(this: APIGlobals): Bee | undefined {
+  return this.controller.subtype instanceof Bee
+    ? this.controller.subtype
+    : undefined;
+}
+
+export function getNectar(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    if (getBee.bind(this)()?.tryGetNectar()) {
+      this.executionInfo.queueAction('nectar', id);
+    }
+  });
+}
+
+export function makeHoney(this: APIGlobals, id: string) {
+  API_FUNCTION.bind(this)(() => {
+    if (getBee.bind(this)()?.tryMakeHoney()) {
+      this.executionInfo.queueAction('honey', id);
+    }
+  });
+}
+
+export function atFlower(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    const col = this.controller.getPegmanX() || 0;
+    const row = this.controller.getPegmanY() || 0;
+    this.executionInfo.queueAction('at_flower', id);
+    return !!getBee.bind(this)()?.isFlower(row, col, true);
+  });
+}
+
+export function atHoneycomb(this: APIGlobals, id: string): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    const col = this.controller.getPegmanX() || 0;
+    const row = this.controller.getPegmanY() || 0;
+    this.executionInfo.queueAction('at_honeycomb', id);
+    return !!getBee.bind(this)()?.isHive(row, col, true);
+  });
+}
+
+export function nectarRemaining(this: APIGlobals, id: string): number {
+  return (
+    API_FUNCTION.bind(this)(() => {
+      this.executionInfo.queueAction('nectar_remaining', id);
+      return getBee.bind(this)()?.nectarRemaining(true) || 0;
+    }) || 0
+  );
+}
+
+export function honeyAvailable(this: APIGlobals, id: string): number {
+  return (
+    API_FUNCTION.bind(this)(() => {
+      this.executionInfo.queueAction('honey_available', id);
+      return getBee.bind(this)()?.honeyAvailable() || 0;
+    }) || 0
+  );
+}
+
+export function nectarCollected(this: APIGlobals, id: string): number {
+  return (
+    API_FUNCTION.bind(this)(() => {
+      this.executionInfo.queueAction('nectar_collected', id);
+      return getBee.bind(this)()?.getNectarCount() || 0;
+    }) || 0
+  );
+}
+
+export function honeyCreated(this: APIGlobals, id: string): number {
+  return (
+    API_FUNCTION.bind(this)(() => {
+      this.executionInfo.queueAction('honey_created', id);
+      return getBee.bind(this)()?.getHoneyCount() || 0;
+    }) || 0
+  );
 }

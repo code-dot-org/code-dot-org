@@ -3,6 +3,7 @@ import * as En from 'blockly/msg/en';
 import type {BlockDefinition} from '@code-dot-org/blockly';
 import {BaseBlocks} from '@code-dot-org/blockly';
 
+import beeBlocks from './beeBlocks';
 import type {Skin} from './skin';
 
 /**
@@ -367,6 +368,7 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
       },
     },
   },
+  ...beeBlocks,
 ];
 
 export default blocks;
