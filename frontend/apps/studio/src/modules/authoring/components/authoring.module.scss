@@ -278,6 +278,21 @@
   gap: 10px;
 }
 
+.sidebarEarlierToggle {
+  width: 100%;
+  padding: 6px 16px;
+  border: none;
+  border-bottom: 1px solid var(--borders-neutral-light, #d5d8dc);
+  background: var(--background-neutral-secondary, #f3f4f5);
+  color: var(--text-neutral-secondary, #6f747c);
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-neutral-primary, #292f36);
+  }
+}
+
 .chatBubbleAuthor,
 .chatBubbleAgent,
 .chatBubbleStatus {
@@ -650,6 +665,7 @@
 
 .courseCard {
   @extend %authoring-card;
+  position: relative;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -660,4 +676,31 @@
   &:hover {
     border-color: var(--borders-brand-purple-primary, #4d24a8);
   }
+}
+
+.courseCardRemove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0;
+}
+
+.courseCard:hover .courseCardRemove,
+.courseCard:focus-within .courseCardRemove,
+.courseCardRemove[aria-expanded='true'] {
+  opacity: 1;
+}
+
+.courseRemoveConfirm {
+  padding: 16px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.courseRemoveConfirmActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
 }

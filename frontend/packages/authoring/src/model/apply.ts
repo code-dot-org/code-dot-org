@@ -154,6 +154,20 @@ export function applyChange(
       return {...state, courses: [...state.courses, course]};
     }
 
+    // Widgets a removed course's experiences referenced are left in the
+    // store: harmless orphans (no experience points at them any more), and
+    // keeping them means an undo/re-attach later would find real content
+    // rather than a dangling id.
+    case 'removeCourse': {
+      if (!state.courses.some(c => c.id === change.courseId)) {
+        throw new Error(`Course not found: ${change.courseId}`);
+      }
+      return {
+        ...state,
+        courses: state.courses.filter(c => c.id !== change.courseId),
+      };
+    }
+
     case 'createUnit': {
       const unit: Unit = {...change.unit, lessons: []};
       return replaceCourse(state, change.courseId, course => ({

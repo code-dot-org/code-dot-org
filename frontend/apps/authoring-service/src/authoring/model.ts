@@ -154,6 +154,7 @@ export interface ContentPatch {
 /** The mutation payload before the store stamps `seq`/`at`/`actor`. */
 export type CurriculumChangeBody =
   | {op: 'createCourse'; course: CourseStub}
+  | {op: 'removeCourse'; courseId: string}
   | {op: 'createUnit'; courseId: string; unit: UnitStub; position?: number}
   | {op: 'createLesson'; unitId: string; lesson: LessonStub; position?: number}
   | {op: 'updateUnit'; unitId: string; patch: Partial<UnitStub>}
@@ -190,6 +191,7 @@ export type CurriculumChangeOp = CurriculumChangeBody['op'];
 
 export const CURRICULUM_CHANGE_OPS: readonly CurriculumChangeOp[] = [
   'createCourse',
+  'removeCourse',
   'createUnit',
   'createLesson',
   'updateUnit',

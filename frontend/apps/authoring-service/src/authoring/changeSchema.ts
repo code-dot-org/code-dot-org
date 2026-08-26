@@ -175,6 +175,7 @@ const WidgetDescriptorSchema = z.object({
 
 export const CurriculumChangeBodySchema = z.discriminatedUnion('op', [
   z.object({op: z.literal('createCourse'), course: CourseStubSchema}),
+  z.object({op: z.literal('removeCourse'), courseId: z.string().min(1)}),
   z.object({
     op: z.literal('createUnit'),
     courseId: z.string().min(1),

@@ -173,7 +173,7 @@ export default function LessonPlayer({
             scope={scope}
             scopeLabel={
               insertPosition !== undefined
-                ? `${lesson.displayName} · insert at ${insertPosition + 1}`
+                ? `${lesson.displayName} · ${describeInsertPosition(experiences, insertPosition)}`
                 : (active?.title ?? lesson.displayName)
             }
             quickActions={
@@ -285,6 +285,27 @@ export default function LessonPlayer({
       </div>
     </div>
   );
+}
+
+// "insert at 3" reads as an array index; an author thinks in terms of what's
+// next to the slot, not its position number.
+function describeInsertPosition(
+  experiences: {id: string; title?: string}[],
+  position: number,
+): string {
+  const titleOf = (e?: {id: string; title?: string}) => e?.title ?? e?.id;
+  const before = experiences[position - 1];
+  const after = experiences[position];
+  if (!before && !after) {
+    return 'at the start of the lesson';
+  }
+  if (!before) {
+    return `at the start of the lesson, before "${titleOf(after)}"`;
+  }
+  if (!after) {
+    return `at the end of the lesson, after "${titleOf(before)}"`;
+  }
+  return `between "${titleOf(before)}" and "${titleOf(after)}"`;
 }
 
 function EmptyLesson({lesson, showPlan}: {lesson: Lesson; showPlan: boolean}) {

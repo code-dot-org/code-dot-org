@@ -51,7 +51,9 @@ export default function AuthorSidebar({
   // scrolled to the newest message.
   const nearBottomRef = useRef(true);
 
-  const items = mergeLogAndFeed(log ?? [], feed);
+  const {inScope, outOfScope} = mergeLogAndFeed(log ?? [], feed, scope);
+  const [showEarlier, setShowEarlier] = useState(false);
+  const items = showEarlier ? [...outOfScope, ...inScope] : inScope;
 
   useEffect(() => {
     const el = logRef.current;
@@ -96,6 +98,20 @@ export default function AuthorSidebar({
         </Typography>
         <Tags tagsList={[{label: scopeLabel}]} size="s" />
       </div>
+      {outOfScope.length > 0 && (
+        <button
+          type="button"
+          className={styles.sidebarEarlierToggle}
+          aria-expanded={showEarlier}
+          onClick={() => setShowEarlier(v => !v)}
+        >
+          <Typography variant="body4" component="span">
+            {showEarlier
+              ? 'Hide earlier activity in other courses'
+              : `Show ${outOfScope.length} earlier ${outOfScope.length === 1 ? 'message' : 'messages'} from other courses/lessons`}
+          </Typography>
+        </button>
+      )}
       <div
         className={styles.sidebarLog}
         ref={logRef}
@@ -148,18 +164,50 @@ type SidebarEntry =
   | {key: string; type: 'message'; message: ChatMessage}
   | {key: string; type: 'status'; text: string};
 
+// A fresh author opening any screen used to see the WHOLE session transcript
+// — every course, every lesson, including courses since removed from the
+// catalog — which reads as broken rather than as history. At the catalog
+// screen there is no current course to match against, so nothing is in
+// scope there either (the empty-state hint takes over; full history is
+// still one click away via "earlier activity"). Within a course, a message
+// is in scope when its own courseId matches; narrow further to the current
+// lesson once one is selected, but keep course-wide messages (no lessonId —
+// e.g. "outline this course") visible at any lesson under it.
+function isInScope(
+  messageScope: AuthoringScope | undefined,
+  currentScope: AuthoringScope,
+): boolean {
+  if (!currentScope.courseId || messageScope?.courseId !== currentScope.courseId) {
+    return false;
+  }
+  if (!currentScope.lessonId || !messageScope.lessonId) {
+    return true;
+  }
+  return messageScope.lessonId === currentScope.lessonId;
+}
+
 // The chat log is the durable record; agent-status events are ephemeral
 // progress. Only statuses from turns still in flight trail the log, so
 // finished turns don't replay their tool chatter under the final message.
+// Out-of-scope entries are returned separately rather than dropped — the
+// author can still open them via "earlier activity in other courses".
 function mergeLogAndFeed(
   log: ChatMessage[],
   feed: AuthoringServerEvent[],
-): SidebarEntry[] {
-  const entries: SidebarEntry[] = log.map(message => ({
-    key: `m:${message.id}`,
-    type: 'message',
-    message,
-  }));
+  currentScope: AuthoringScope,
+): {inScope: SidebarEntry[]; outOfScope: SidebarEntry[]} {
+  const inScope: SidebarEntry[] = [];
+  const outOfScope: SidebarEntry[] = [];
+  for (const message of log) {
+    const entry: SidebarEntry = {
+      key: `m:${message.id}`,
+      type: 'message',
+      message,
+    };
+    (isInScope(message.scope, currentScope) ? inScope : outOfScope).push(
+      entry,
+    );
+  }
   const finishedTurns = new Set(
     feed
       .filter(
@@ -169,19 +217,21 @@ function mergeLogAndFeed(
       )
       .map(event => (event.type === 'agent-status' ? event.turnId : '')),
   );
+  // Live status chatter is always for the turn just sent from THIS screen —
+  // always in scope, never worth hiding behind the earlier-activity toggle.
   feed.forEach((event, i) => {
     if (event.type !== 'agent-status' || finishedTurns.has(event.turnId)) {
       return;
     }
     if (event.status === 'tool' || event.status === 'text') {
-      entries.push({
+      inScope.push({
         key: `s:${i}:${event.turnId}`,
         type: 'status',
         text: event.detail ?? event.status,
       });
     }
   });
-  return entries;
+  return {inScope, outOfScope};
 }
 
 function SidebarItem({item}: {item: SidebarEntry}) {

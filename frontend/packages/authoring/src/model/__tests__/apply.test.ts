@@ -87,6 +87,60 @@ describe('applyChange', () => {
     expect(lesson.experiences.map(e => e.id)).toEqual(['exp-2']);
   });
 
+  it('removes a course', () => {
+    const state = frozenBaseState();
+    const next = applyChange(state, {
+      seq: 1,
+      at: 'now',
+      actor: 'author',
+      op: 'removeCourse',
+      courseId: 'course-1',
+    });
+    expect(next.courses).toEqual([]);
+  });
+
+  it('removing a course leaves other courses and all widgets untouched', () => {
+    const state = deepFreeze({
+      courses: [...baseState().courses, {...baseState().courses[0], id: 'course-2'}],
+      widgets: [
+        {
+          id: 'widget-1',
+          toolName: 'thing',
+          title: 'Thing',
+          description: 'a widget',
+          inputSchema: {},
+          resourceUri: 'ui://widgets/widget-1.html',
+          visibility: ['model' as const, 'app' as const],
+          network: 'none' as const,
+        },
+      ],
+    });
+    const next = applyChange(state, {
+      seq: 1,
+      at: 'now',
+      actor: 'author',
+      op: 'removeCourse',
+      courseId: 'course-1',
+    });
+    expect(next.courses.map(c => c.id)).toEqual(['course-2']);
+    // A removed course's widgets are orphaned in the store, not deleted —
+    // the op only ever touches `courses`.
+    expect(next.widgets).toEqual(state.widgets);
+  });
+
+  it('throws a clear error for an unknown course id on removeCourse', () => {
+    const state = frozenBaseState();
+    expect(() =>
+      applyChange(state, {
+        seq: 1,
+        at: 'now',
+        actor: 'author',
+        op: 'removeCourse',
+        courseId: 'no-such-course',
+      }),
+    ).toThrow(/no-such-course/);
+  });
+
   it('moves an experience within the same lesson', () => {
     const state = frozenBaseState();
     const next = applyChange(state, {

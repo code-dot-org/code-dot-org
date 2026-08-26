@@ -36,6 +36,7 @@ export type CurriculumChange = {
   actor: 'agent' | 'author';
 } & (
   | {op: 'createCourse'; course: CourseStub}
+  | {op: 'removeCourse'; courseId: string}
   | {op: 'createUnit'; courseId: string; unit: UnitStub; position?: number}
   | {op: 'createLesson'; unitId: string; lesson: LessonStub; position?: number}
   | {op: 'updateUnit'; unitId: string; patch: Partial<UnitStub>}

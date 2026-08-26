@@ -7,6 +7,7 @@ import {Loading} from '@code-dot-org/lab/host';
 import {useAuthoringState, useCanAuthor} from '@/modules/authoring';
 import AuthorRouteError from '@/modules/authoring/components/AuthorRouteError';
 import AuthorSidebar from '@/modules/authoring/components/AuthorSidebar';
+import RemoveCourseButton from '@/modules/authoring/components/RemoveCourseButton';
 
 import styles from '@/modules/authoring/components/authoring.module.scss';
 
@@ -49,6 +50,12 @@ function CourseList() {
               params={{courseId: course.id}}
               className={styles.courseCard}
             >
+              {canAuthor && (
+                <RemoveCourseButton
+                  courseId={course.id}
+                  courseName={course.displayName}
+                />
+              )}
               <Tags
                 tagsList={[
                   {
