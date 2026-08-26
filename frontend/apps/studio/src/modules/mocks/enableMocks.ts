@@ -32,10 +32,20 @@ export async function enableMocks(): Promise<void> {
   // Scoped to this one path — not all of `/authoring-api/*` — because a
   // broader passthrough also caught the SSE `/authoring-api/events`
   // connection and other in-flight requests stalled behind it.
-  const {bypass} = await import('msw');
+  //
+  // `passthrough()`, not `fetch(bypass(request))`: bypass() only strips the
+  // mock intent from the request, so the responder still has to fetch() it
+  // itself — a second, independent request issued from inside the service
+  // worker. That fetch intermittently threw "TypeError: Failed to fetch"
+  // (reproduced consistently on generated Maze levels and Music Lab levels),
+  // hanging the lab on "Loading…" or its error boundary. passthrough()
+  // instead returns a sentinel Response that tells MSW's interceptor to let
+  // the *original* request continue to the network unmodified — no second
+  // fetch, so nothing to fail.
+  const {passthrough} = await import('msw');
   registerMockFixture({
     path: '*/authoring-api/levels/*/level_properties',
-    respond: ({request}) => fetch(bypass(request)),
+    respond: () => passthrough(),
   });
 
   // vite-plugin-rails sets Vite's `base` from `config/vite.json`
