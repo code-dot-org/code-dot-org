@@ -101,6 +101,34 @@ describe('sheet slicing', () => {
     ]);
   });
 
+  it('splits only the columns whose rows touch', () => {
+    // Two rows of four; in columns 2 and 3 a brim joins the rows.
+    const boxes: [number, number, number, number][] = [];
+    for (let c = 0; c < 4; c++) {
+      const left = 2 + c * 25;
+      boxes.push([left, left + 20, 5, 45], [left, left + 20, 55, 95]);
+      if (c === 1 || c === 2) {
+        boxes.push([left + 9, left + 10, 45, 55]);
+      }
+    }
+    const data = image(100, 100, boxes);
+    const found = frameBoxes(data, 100, 100, 8, 127);
+    expect(found).toHaveLength(8);
+    expect(found.every(b => b.bottom - b.top <= 50)).toBe(true);
+    expect(
+      found.map(b => ((b.top + b.bottom) / 2 < 50 ? 'top' : 'bottom'))
+    ).toEqual([
+      'top',
+      'top',
+      'top',
+      'top',
+      'bottom',
+      'bottom',
+      'bottom',
+      'bottom',
+    ]);
+  });
+
   it('falls back to a single-row grid for a wide picture it cannot read', () => {
     const data = image(200, 40, [[5, 195, 2, 38]]);
     expect(frameBoxes(data, 200, 40, 8, 127)).toEqual(evenGrid(200, 40, 1, 8));
