@@ -304,33 +304,37 @@ export const getNextLevel = state => {
     return;
   }
 
-  let currentLevelNumber = currentLevel.levelNumber;
+  const parentLevel = currentLevel.parentLevelId
+    ? getParentLevel(state)
+    : undefined;
 
-  // Sublevel navigation
-  if (currentLevel.parentLevelId) {
-    const parentLevel = getParentLevel(state);
-
-    if (
-      currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_LEVEL
-    ) {
-      // If navigationType is NEXT_LEVEL, go to the next level after the parent.
-      // So, we just consider the 'current' level the current parent
-      currentLevelNumber = parentLevel.levelNumber;
-    } else {
-      // Otherwise, default to navigating directly to the parent level.
-      return parentLevel;
-    }
-  }
-
-  const currentLevelIndex = levels.findIndex(
-    level => level.levelNumber === currentLevelNumber
+  // For navigation purposes, use the index of the parent level if this is bubble choice sublevel, or the current level.
+  const navigationLevelIndex = levels.findIndex(
+    level =>
+      level.levelNumber ===
+      (parentLevel ? parentLevel.levelNumber : currentLevel.levelNumber)
   );
 
-  if (currentLevelIndex === levels.length - 1) {
-    return;
+  const isLastLevel = navigationLevelIndex === levels.length - 1;
+  const nextLevel = isLastLevel ? undefined : levels[navigationLevelIndex + 1];
+
+  if (
+    !parentLevel ||
+    currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_LEVEL
+  ) {
+    return nextLevel;
   }
 
-  return levels[currentLevelIndex + 1];
+  if (
+    currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_SUBLEVEL
+  ) {
+    const nextSublevel = nextLevel?.sublevels?.find(
+      sl => sl.levelNumber === currentLevel.levelNumber
+    );
+    return nextSublevel || nextLevel;
+  }
+
+  return parentLevel;
 };
 
 /**
