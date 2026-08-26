@@ -64,6 +64,7 @@ const fakeChallenge: Challenge = {
   question: 'Draw a flowchart of the algorithm.',
   default_modality: 'whiteboard',
   whiteboard_starter_image_alt_text: null,
+  whiteboard_starter_image_url: null,
 };
 
 const createdResponse = {

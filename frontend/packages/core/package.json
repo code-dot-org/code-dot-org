@@ -38,6 +38,11 @@
       "import": "./dist/api/mocks/server.mjs",
       "require": "./dist/api/mocks/server.cjs"
     },
+    "./constants": {
+      "types": "./dist/constants/index.d.ts",
+      "import": "./dist/constants/index.mjs",
+      "require": "./dist/constants/index.cjs"
+    },
     "./plugins/localization": {
       "types": "./dist/plugins/localization/index.d.ts",
       "import": "./dist/plugins/localization/index.mjs",
@@ -57,6 +62,14 @@
       "types": "./dist/redux/index.d.ts",
       "import": "./dist/redux/index.mjs",
       "require": "./dist/redux/index.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*/index.d.ts",
+        "dist/*.d.ts"
+      ]
     }
   },
   "scripts": {
