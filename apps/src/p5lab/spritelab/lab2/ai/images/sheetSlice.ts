@@ -19,11 +19,14 @@ const FRAGMENT_FRACTION = 0.05;
 // Fragments join the nearest frame within this fraction of the image height.
 const JOIN_GAP_FRACTION = 0.08;
 
-// A blob this much taller or wider than a typical single frame is two frames
-// touching (a hat against the boots above, a hand against the neighbour) and
-// is cut at its sparsest interior line. "Typical" is the median of the
-// smaller half of the blobs, since the touching pairs are the large ones.
-const OVERSIZED_FRACTION = 1.5;
+// How far from an exact multiple of the frame shape a blob may be and still
+// count as that many frames: 2.4 frames wide is two frames touching, not
+// three.
+const PIECE_ROUNDING = 0.5;
+
+// A cut between touching frames is looked for this far either side of where
+// an even division would put it, as a fraction of a piece.
+const CUT_SEARCH_FRACTION = 0.25;
 
 const boxWidth = (box: FrameBox) => box.right - box.left;
 const boxHeight = (box: FrameBox) => box.bottom - box.top;
@@ -31,34 +34,28 @@ const boxArea = (box: FrameBox) => boxWidth(box) * boxHeight(box);
 
 /**
  * The boxes of `expected` frames in a keyed sheet image, row by row and left
- * to right. When the frames cannot be told apart the image is cut into an
- * even grid: a single row when it is wide, else as square a grid as fits.
+ * to right. `frameAspect` is the shape of one frame of this character (width
+ * over height, from its plate): a blob twice that wide holds two frames
+ * touching, one twice that tall two frames stacked, and each is cut apart at
+ * its sparsest lines. When the frames still cannot be told apart the image is
+ * cut into an even grid: a single row when it is wide, else as square a grid
+ * as fits.
  */
 export function frameBoxes(
   data: Uint8ClampedArray,
   width: number,
   height: number,
   expected: number,
-  alphaThreshold: number
+  alphaThreshold: number,
+  frameAspect: number
 ): FrameBox[] {
   let boxes = joinFragments(
     components(data, width, height, alphaThreshold),
     height
   );
-  boxes = splitOversized(boxes, data, width, alphaThreshold);
-  // Every blob a touching pair looks like a set of ordinary frames, only half
-  // as many as expected: cut each one, the long way.
-  if (boxes.length && boxes.length * 2 === expected) {
-    boxes = boxes.flatMap(box =>
-      cutAtSparsest(
-        box,
-        boxHeight(box) >= boxWidth(box),
-        data,
-        width,
-        alphaThreshold
-      )
-    );
-  }
+  boxes = boxes.flatMap(box =>
+    splitByShape(box, frameAspect, data, width, alphaThreshold)
+  );
   if (boxes.length < expected) {
     return fallbackGrid(width, height, expected);
   }
@@ -151,88 +148,99 @@ function joinFragments(boxes: FrameBox[], height: number): FrameBox[] {
   return frames;
 }
 
-// Blobs well over a typical frame's height or width are touching frames;
-// each is cut at the sparsest interior line across the long way, and the
-// pieces are checked again.
-function splitOversized(
-  boxes: FrameBox[],
+// A blob holding several frames of the given shape, side by side or stacked,
+// cut into them at the sparsest line near each even division.
+function splitByShape(
+  box: FrameBox,
+  frameAspect: number,
   data: Uint8ClampedArray,
   width: number,
   alphaThreshold: number
 ): FrameBox[] {
-  let result = boxes;
-  for (let pass = 0; pass < 4; pass++) {
-    const unitHeight = typical(result.map(boxHeight));
-    const unitWidth = typical(result.map(boxWidth));
-    let changed = false;
-    result = result.flatMap(box => {
-      const tall = boxHeight(box) > unitHeight * OVERSIZED_FRACTION;
-      const wide = boxWidth(box) > unitWidth * OVERSIZED_FRACTION;
-      if (!tall && !wide) {
-        return [box];
-      }
-      changed = true;
-      return cutAtSparsest(box, tall, data, width, alphaThreshold);
-    });
-    if (!changed) {
-      break;
-    }
+  const aspect = boxWidth(box) / boxHeight(box);
+  const across = Math.floor(aspect / frameAspect + PIECE_ROUNDING);
+  const down = Math.floor(frameAspect / aspect + PIECE_ROUNDING);
+  if (across > 1) {
+    return cutInto(box, across, false, data, width, alphaThreshold);
   }
-  return result;
+  if (down > 1) {
+    return cutInto(box, down, true, data, width, alphaThreshold);
+  }
+  return [box];
 }
 
-// The median of the smaller half of the values.
-function typical(values: number[]): number {
-  const sorted = [...values].sort((a, b) => a - b);
-  const half = sorted.slice(0, Math.max(1, Math.ceil(sorted.length / 2)));
-  return half[Math.floor(half.length / 2)];
-}
-
-// A box cut in two at the line, across (when `across`) or down, with the
-// fewest solid pixels in its middle half.
-function cutAtSparsest(
+// A box cut into `pieces` along one axis (across the height when `across`,
+// else across the width), each cut at the line with the fewest solid pixels
+// near where an even division would fall.
+function cutInto(
   box: FrameBox,
+  pieces: number,
   across: boolean,
   data: Uint8ClampedArray,
   width: number,
   alphaThreshold: number
 ): FrameBox[] {
   const length = across ? boxHeight(box) : boxWidth(box);
-  const from = Math.floor(length / 4);
-  const to = length - from;
-  let cut = from;
-  let fewest = Infinity;
-  for (let k = from; k < to; k++) {
-    let count = 0;
-    if (across) {
-      const y = box.top + k;
-      for (let x = box.left; x < box.right; x++) {
-        if (data[(y * width + x) * 4 + 3] > alphaThreshold) {
-          count++;
-        }
+  const piece = length / pieces;
+  const search = Math.max(1, Math.floor(piece * CUT_SEARCH_FRACTION));
+  const cuts: number[] = [];
+  for (let n = 1; n < pieces; n++) {
+    const guess = Math.round(n * piece);
+    let cut = guess;
+    let fewest = Infinity;
+    for (let k = guess - search; k <= guess + search; k++) {
+      if (k <= (cuts[cuts.length - 1] ?? 0) || k >= length) {
+        continue;
       }
-    } else {
-      const x = box.left + k;
-      for (let y = box.top; y < box.bottom; y++) {
-        if (data[(y * width + x) * 4 + 3] > alphaThreshold) {
-          count++;
-        }
+      const count = solidOnLine(box, k, across, data, width, alphaThreshold);
+      // Ties go to the line nearest the even division.
+      if (
+        count < fewest ||
+        (count === fewest && Math.abs(k - guess) < Math.abs(cut - guess))
+      ) {
+        fewest = count;
+        cut = k;
       }
     }
-    if (count < fewest) {
-      fewest = count;
-      cut = k;
+    cuts.push(cut);
+  }
+  const edges = [0, ...cuts, length];
+  return edges
+    .slice(1)
+    .map((end, i) =>
+      across
+        ? {...box, top: box.top + edges[i], bottom: box.top + end}
+        : {...box, left: box.left + edges[i], right: box.left + end}
+    );
+}
+
+// Solid pixels on the k-th line of the box, a row when `across`, else a
+// column.
+function solidOnLine(
+  box: FrameBox,
+  k: number,
+  across: boolean,
+  data: Uint8ClampedArray,
+  width: number,
+  alphaThreshold: number
+): number {
+  let count = 0;
+  if (across) {
+    const y = box.top + k;
+    for (let x = box.left; x < box.right; x++) {
+      if (data[(y * width + x) * 4 + 3] > alphaThreshold) {
+        count++;
+      }
+    }
+  } else {
+    const x = box.left + k;
+    for (let y = box.top; y < box.bottom; y++) {
+      if (data[(y * width + x) * 4 + 3] > alphaThreshold) {
+        count++;
+      }
     }
   }
-  return across
-    ? [
-        {...box, bottom: box.top + cut},
-        {...box, top: box.top + cut},
-      ]
-    : [
-        {...box, right: box.left + cut},
-        {...box, left: box.left + cut},
-      ];
+  return count;
 }
 
 // The gap between two boxes, zero when they overlap.

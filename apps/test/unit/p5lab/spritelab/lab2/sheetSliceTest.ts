@@ -20,33 +20,36 @@ function image(
   return data;
 }
 
+// A character about half as wide as it is tall, like the plate.
+const ASPECT = 0.5;
+
 const corners = (boxes: {left: number; top: number}[]) =>
   boxes.map(b => [b.left, b.top]);
 
 describe('sheet slicing', () => {
   it('finds a row of frames as blobs, tight to their pixels', () => {
-    const data = image(100, 20, [
-      [5, 20, 2, 18],
-      [30, 45, 3, 17],
-      [55, 70, 2, 18],
-      [80, 95, 2, 18],
+    const data = image(100, 40, [
+      [5, 20, 2, 38],
+      [30, 45, 4, 36],
+      [55, 70, 2, 38],
+      [80, 95, 2, 38],
     ]);
-    expect(frameBoxes(data, 100, 20, 4, 127)).toEqual([
-      {left: 5, right: 20, top: 2, bottom: 18},
-      {left: 30, right: 45, top: 3, bottom: 17},
-      {left: 55, right: 70, top: 2, bottom: 18},
-      {left: 80, right: 95, top: 2, bottom: 18},
+    expect(frameBoxes(data, 100, 40, 4, 127, ASPECT)).toEqual([
+      {left: 5, right: 20, top: 2, bottom: 38},
+      {left: 30, right: 45, top: 4, bottom: 36},
+      {left: 55, right: 70, top: 2, bottom: 38},
+      {left: 80, right: 95, top: 2, bottom: 38},
     ]);
   });
 
   it('reads a grid row by row when the model stacked the frames', () => {
     const data = image(100, 100, [
-      [55, 70, 5, 45],
-      [5, 20, 55, 95],
-      [5, 20, 5, 45],
-      [55, 70, 55, 95],
+      [55, 75, 5, 45],
+      [5, 25, 55, 95],
+      [5, 25, 5, 45],
+      [55, 75, 55, 95],
     ]);
-    expect(corners(frameBoxes(data, 100, 100, 4, 127))).toEqual([
+    expect(corners(frameBoxes(data, 100, 100, 4, 127, ASPECT))).toEqual([
       [5, 5],
       [55, 5],
       [5, 55],
@@ -61,7 +64,7 @@ describe('sheet slicing', () => {
       [22, 25, 20, 24], // hand, off to the side
       [55, 70, 8, 38],
     ]);
-    const found = frameBoxes(data, 100, 40, 2, 127);
+    const found = frameBoxes(data, 100, 40, 2, 127, ASPECT);
     expect(found).toHaveLength(2);
     expect(found[0]).toEqual({left: 5, right: 25, top: 2, bottom: 38});
   });
@@ -77,31 +80,42 @@ describe('sheet slicing', () => {
       );
     }
     const data = image(200, 40, boxes);
-    const found = frameBoxes(data, 200, 40, 4, 127);
+    const found = frameBoxes(data, 200, 40, 4, 127, ASPECT);
     expect(found).toHaveLength(4);
     expect(found.every(b => b.top === 2 && b.bottom === 38)).toBe(true);
   });
 
-  it('splits two rows whose frames touch, at the sparsest line', () => {
+  it('cuts a row of frames that touch side by side, one frame wide each', () => {
+    // Six figures 20 wide and 40 tall with no gap between them: one blob
+    // 120 wide, which for a frame half as wide as tall is six frames.
+    const data = image(140, 50, [[10, 130, 5, 45]]);
+    const found = frameBoxes(data, 140, 50, 6, 127, ASPECT);
+    expect(found).toHaveLength(6);
+    expect(found.map(b => b.left)).toEqual([10, 30, 50, 70, 90, 110]);
+    expect(found.every(b => b.top === 5 && b.bottom === 45)).toBe(true);
+  });
+
+  it('cuts two rows whose frames touch, at the sparsest line', () => {
     // A brim one pixel wide joins each lower frame to the one above it; the
-    // cut falls just below the upper frame, and the brim stays with its hat.
+    // cut falls at the brim, which stays with its hat.
     const data = image(100, 100, [
-      [2, 42, 5, 45],
-      [52, 92, 5, 45],
-      [2, 42, 55, 95],
-      [52, 92, 55, 95],
-      [20, 21, 45, 55],
-      [70, 71, 45, 55],
+      [2, 22, 5, 45],
+      [52, 72, 5, 45],
+      [2, 22, 55, 95],
+      [52, 72, 55, 95],
+      [12, 13, 45, 55],
+      [62, 63, 45, 55],
     ]);
-    expect(frameBoxes(data, 100, 100, 4, 127)).toEqual([
-      {left: 2, right: 42, top: 5, bottom: 45},
-      {left: 52, right: 92, top: 5, bottom: 45},
-      {left: 2, right: 42, top: 45, bottom: 95},
-      {left: 52, right: 92, top: 45, bottom: 95},
+    const found = frameBoxes(data, 100, 100, 4, 127, ASPECT);
+    expect(corners(found)).toEqual([
+      [2, 5],
+      [52, 5],
+      [2, 45],
+      [52, 45],
     ]);
   });
 
-  it('splits only the columns whose rows touch', () => {
+  it('cuts only the columns whose rows touch', () => {
     // Two rows of four; in columns 2 and 3 a brim joins the rows.
     const boxes: [number, number, number, number][] = [];
     for (let c = 0; c < 4; c++) {
@@ -112,7 +126,7 @@ describe('sheet slicing', () => {
       }
     }
     const data = image(100, 100, boxes);
-    const found = frameBoxes(data, 100, 100, 8, 127);
+    const found = frameBoxes(data, 100, 100, 8, 127, ASPECT);
     expect(found).toHaveLength(8);
     expect(found.every(b => b.bottom - b.top <= 50)).toBe(true);
     expect(
@@ -133,24 +147,20 @@ describe('sheet slicing', () => {
     // Twelve frames in a row where eight were asked for.
     const boxes: [number, number, number, number][] = [];
     for (let i = 0; i < 12; i++) {
-      boxes.push([2 + i * 25, 22 + i * 25, 2, 38]);
+      boxes.push([2 + i * 25, 22 + i * 25, 2, 42]);
     }
-    const data = image(300, 40, boxes);
-    const found = frameBoxes(data, 300, 40, 8, 127);
+    const data = image(300, 44, boxes);
+    const found = frameBoxes(data, 300, 44, 8, 127, ASPECT);
     expect(found).toHaveLength(8);
     expect(found.map(b => (b.left - 2) / 25)).toEqual([
       0, 1, 3, 4, 6, 7, 9, 10,
     ]);
   });
 
-  it('falls back to a single-row grid for a wide picture it cannot read', () => {
-    const data = image(200, 40, [[5, 195, 2, 38]]);
-    expect(frameBoxes(data, 200, 40, 8, 127)).toEqual(evenGrid(200, 40, 1, 8));
-  });
-
   it('falls back to the squarest grid for a square picture it cannot read', () => {
-    const data = image(100, 100, [[5, 95, 5, 95]]);
-    expect(frameBoxes(data, 100, 100, 8, 127)).toEqual(
+    // One blob two frames wide where eight were asked for.
+    const data = image(100, 100, [[5, 45, 5, 45]]);
+    expect(frameBoxes(data, 100, 100, 8, 127, ASPECT)).toEqual(
       evenGrid(100, 100, 2, 4)
     );
   });

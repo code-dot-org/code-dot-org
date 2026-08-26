@@ -161,7 +161,7 @@ export const SHEET_IMAGE_SIZE: ImageSize = '2K';
 // While the row picture is new, keep what the model returned beside the set
 // (the pane adds it as an ordinary image named <set>-row) so a bad cut can be
 // read against its source. One constant to drop.
-export const KEEP_ROW_PICTURES = false;
+export const KEEP_ROW_PICTURES = true;
 
 // SHEET_ASPECT_RATIO as a number, for the widened reference.
 export const SHEET_ASPECT = 16 / 9;
@@ -495,6 +495,7 @@ async function keyFrame(
 async function sliceSheet(
   raw: RawImage,
   frameCount: number,
+  frameAspect: number,
   style: ImageStyle,
   key: KeyColor
 ): Promise<KeyedFrame[]> {
@@ -503,7 +504,14 @@ async function sliceSheet(
   const {data} = whole.canvas
     .getContext('2d')!
     .getImageData(0, 0, width, height);
-  const boxes = frameBoxes(data, width, height, frameCount, SOLID_ALPHA);
+  const boxes = frameBoxes(
+    data,
+    width,
+    height,
+    frameCount,
+    SOLID_ALPHA,
+    frameAspect
+  );
   // Development aid while the row picture is new: what came back, how cut.
   console.debug(
     `SpriteLab2 row picture ${width}x${height}`,
@@ -757,7 +765,19 @@ export async function generateCharacterSet(
       rawSheets.push(raw);
       const plateHeight =
         keyed[0].bounds && keyed[0].bounds.bottom - keyed[0].bounds.top + 1;
-      const sliced = await sliceSheet(raw, frameCount, options.style, key);
+      // The plate says what one frame of this character is shaped like.
+      const plateBounds = keyed[0].bounds;
+      const frameAspect = plateBounds
+        ? (plateBounds.right - plateBounds.left + 1) /
+          (plateBounds.bottom - plateBounds.top + 1)
+        : 0.5;
+      const sliced = await sliceSheet(
+        raw,
+        frameCount,
+        frameAspect,
+        options.style,
+        key
+      );
       const tallest = Math.max(
         ...sliced.map(f => (f.bounds ? f.bounds.bottom - f.bounds.top + 1 : 0))
       );
