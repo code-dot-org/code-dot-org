@@ -29,19 +29,27 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
   end
 
   describe '.storage_id_cursor' do
-    it 'returns nil by default outside production' do
+    it 'returns nil when no geo data has been recorded' do
       _(described_class.storage_id_cursor).must_be_nil
     end
 
-    context 'when cursor was cached' do
-      let(:storage_id_cursor) {rand(1..1000)}
+    context 'when geo data has been recorded' do
+      let!(:project_storage_geos) {create_list(:project_storage_geo, 2)}
 
-      before do
-        shared_cache.write(described_class::STORAGE_ID_CURSOR_CACHE_KEY, storage_id_cursor)
+      it 'returns the highest storage ID with recorded geo data' do
+        _(described_class.storage_id_cursor).must_equal project_storage_geos.last.storage_id
       end
 
-      it 'returns cached cursor' do
-        _(described_class.storage_id_cursor).must_equal storage_id_cursor
+      context 'when cursor was cached' do
+        let(:storage_id_cursor) {project_storage_geos.first.storage_id}
+
+        before do
+          shared_cache.write(described_class::STORAGE_ID_CURSOR_CACHE_KEY, storage_id_cursor)
+        end
+
+        it 'returns cached cursor' do
+          _(described_class.storage_id_cursor).must_equal storage_id_cursor
+        end
       end
     end
   end
@@ -135,10 +143,10 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
           _(log_data['processed_count']).must_equal 0
           _(log_data['first_storage_id']).must_be_nil
           _(log_data['last_storage_id']).must_be_nil
-          _(log_data['storage_id_cursor']).must_equal described_class::DEFAULT_STORAGE_ID_CURSOR.to_i
+          _(log_data['storage_id_cursor']).must_equal 0
         end
 
-        assert_queries 1, capture_filters: [/perform/] do
+        assert_queries 2, capture_filters: [/perform/] do
           _perform_now.must_equal error
         end
       end
@@ -171,7 +179,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
           _(log_data['processed_count']).must_equal 0
           _(log_data['first_storage_id']).must_be_nil
           _(log_data['last_storage_id']).must_be_nil
-          _(log_data['storage_id_cursor']).must_equal described_class::DEFAULT_STORAGE_ID_CURSOR.to_i
+          _(log_data['storage_id_cursor']).must_equal 0
         end
 
         _perform_now.must_be_instance_of Timeout::Error
@@ -241,7 +249,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       end
     end
 
-    shared_examples_for 'does not backfill geo records' do
+    shared_examples_for 'does not backfill geo records' do |expected_storage_id_cursor: nil|
       it 'does not backfill geo records' do
         CDO.log.expects(:info).once.with do |log_json|
           log_data = JSON.parse(log_json)
@@ -255,19 +263,10 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
           _(log_data['processed_count']).must_equal 0
           _(log_data['first_storage_id']).must_be_nil
           _(log_data['last_storage_id']).must_be_nil
-          expected_storage_id_cursor =
-            job_args[:limit] == 0 ? described_class::DEFAULT_STORAGE_ID_CURSOR.to_i : project_storages.last.id
-          _(log_data['storage_id_cursor']).must_equal expected_storage_id_cursor
+          _(log_data['storage_id_cursor']).must_equal(expected_storage_id_cursor || project_storages.last.id)
         end
 
         _ {perform_job}.wont_differ -> {ProjectStorage::Geo.count}
-
-        storage_id_cursor = shared_cache.read(described_class::STORAGE_ID_CURSOR_CACHE_KEY)
-        if job_args[:limit] == 0
-          _(storage_id_cursor).must_be_nil
-        else
-          _(storage_id_cursor).must_equal project_storages.last.id
-        end
       end
     end
 
@@ -371,7 +370,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
     context 'when limit is less then number of relevant storages' do
       let(:job_args) {{limit: 0}}
 
-      it_behaves_like 'does not backfill geo records'
+      it_behaves_like 'does not backfill geo records', expected_storage_id_cursor: 0
     end
 
     context 'when storage is not anonymous' do
