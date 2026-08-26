@@ -1,0 +1,10 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.node22.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["src"]
+}

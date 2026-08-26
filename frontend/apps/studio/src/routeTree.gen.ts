@@ -10,7 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthorIndexRouteImport } from './routes/author/index'
 import { Route as UsersEditRouteImport } from './routes/users/edit'
+import { Route as AuthorCourseIdIndexRouteImport } from './routes/author/$courseId/index'
+import { Route as AuthorCourseIdLessonIdRouteImport } from './routes/author/$courseId/$lessonId'
 import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 import { Route as CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRouteImport } from './routes/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
 
@@ -19,9 +22,24 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthorIndexRoute = AuthorIndexRouteImport.update({
+  id: '/author/',
+  path: '/author/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UsersEditRoute = UsersEditRouteImport.update({
   id: '/users/edit',
   path: '/users/edit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorCourseIdIndexRoute = AuthorCourseIdIndexRouteImport.update({
+  id: '/author/$courseId/',
+  path: '/author/$courseId/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorCourseIdLessonIdRoute = AuthorCourseIdLessonIdRouteImport.update({
+  id: '/author/$courseId/$lessonId',
+  path: '/author/$courseId/$lessonId',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsLabTypeChannelIdEditRoute =
@@ -42,12 +60,18 @@ const CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPosition
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/users/edit': typeof UsersEditRoute
+  '/author': typeof AuthorIndexRoute
+  '/author/$courseId/$lessonId': typeof AuthorCourseIdLessonIdRoute
+  '/author/$courseId': typeof AuthorCourseIdIndexRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/users/edit': typeof UsersEditRoute
+  '/author': typeof AuthorIndexRoute
+  '/author/$courseId/$lessonId': typeof AuthorCourseIdLessonIdRoute
+  '/author/$courseId': typeof AuthorCourseIdIndexRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -55,6 +79,9 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/users/edit': typeof UsersEditRoute
+  '/author/': typeof AuthorIndexRoute
+  '/author/$courseId/$lessonId': typeof AuthorCourseIdLessonIdRoute
+  '/author/$courseId/': typeof AuthorCourseIdIndexRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -63,18 +90,27 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/users/edit'
+    | '/author'
+    | '/author/$courseId/$lessonId'
+    | '/author/$courseId'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/users/edit'
+    | '/author'
+    | '/author/$courseId/$lessonId'
+    | '/author/$courseId'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   id:
     | '__root__'
     | '/'
     | '/users/edit'
+    | '/author/'
+    | '/author/$courseId/$lessonId'
+    | '/author/$courseId/'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   fileRoutesById: FileRoutesById
@@ -82,6 +118,9 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   UsersEditRoute: typeof UsersEditRoute
+  AuthorIndexRoute: typeof AuthorIndexRoute
+  AuthorCourseIdLessonIdRoute: typeof AuthorCourseIdLessonIdRoute
+  AuthorCourseIdIndexRoute: typeof AuthorCourseIdIndexRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute: typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -95,11 +134,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/author/': {
+      id: '/author/'
+      path: '/author'
+      fullPath: '/author'
+      preLoaderRoute: typeof AuthorIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/users/edit': {
       id: '/users/edit'
       path: '/users/edit'
       fullPath: '/users/edit'
       preLoaderRoute: typeof UsersEditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/author/$courseId/': {
+      id: '/author/$courseId/'
+      path: '/author/$courseId'
+      fullPath: '/author/$courseId'
+      preLoaderRoute: typeof AuthorCourseIdIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/author/$courseId/$lessonId': {
+      id: '/author/$courseId/$lessonId'
+      path: '/author/$courseId/$lessonId'
+      fullPath: '/author/$courseId/$lessonId'
+      preLoaderRoute: typeof AuthorCourseIdLessonIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/$labType/$channelId/edit': {
@@ -122,6 +182,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   UsersEditRoute: UsersEditRoute,
+  AuthorIndexRoute: AuthorIndexRoute,
+  AuthorCourseIdLessonIdRoute: AuthorCourseIdLessonIdRoute,
+  AuthorCourseIdIndexRoute: AuthorCourseIdIndexRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute:
     CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute,

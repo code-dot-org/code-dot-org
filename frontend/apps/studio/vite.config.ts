@@ -24,6 +24,14 @@ export default defineConfig(({mode}) => {
         // Allow serving files from the workspace root for monorepo setups
         allow: [searchForWorkspaceRoot(process.cwd())],
       },
+      proxy: {
+        // Author Mode prototype: the local authoring service (drafts, embedded
+        // agent, SSE). Same-origin via proxy so no CORS and SSE stays simple.
+        '/authoring-api': {
+          target: 'http://localhost:3737',
+          rewrite: p => p.replace(/^\/authoring-api/, '/api'),
+        },
+      },
     },
     resolve: {
       // Force single copies of packages that must be singletons in a monorepo.

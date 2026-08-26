@@ -50,3 +50,6 @@ yarn-error.log*
 *storybook.log
 
 storybook-static
+
+# Author Mode prototype draft sessions
+.authoring/

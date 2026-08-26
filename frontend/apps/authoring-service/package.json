@@ -1,0 +1,49 @@
+{
+  "name": "@code-dot-org/authoring-service",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": [
+    "authoring",
+    "prototype",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/apps/authoring-service/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/apps/authoring-service"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "start": "tsx src/server.ts",
+    "test": "vitest --run --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.246",
+    "@code-dot-org/authoring": "workspace:*",
+    "@code-dot-org/widget-runtime": "workspace:*",
+    "@hono/node-server": "^1.14.0",
+    "hono": "^4.7.0",
+    "tsx": "catalog:",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

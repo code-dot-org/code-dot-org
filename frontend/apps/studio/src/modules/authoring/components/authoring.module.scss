@@ -1,0 +1,663 @@
+/* Author Mode layout. One component tree: the .playerLayout grid gains or
+ * loses the rail/sidebar columns with author affordances toggled; the stage
+ * column is the learner experience either way. */
+
+// The route's Box ancestor (routes/__root.tsx) only sets min-height, so an
+// auto-height container grows to fit content instead of capping it — that's
+// why the AI sidebar's chat log used to flow the whole page. This frame
+// reclaims a real height locally (same 50px site-header offset root uses) so
+// playerLayout's flex:1/min-height:0 chain below actually caps growth.
+.playerFrame {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.playerLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+}
+
+.playerLayoutAuthor {
+  grid-template-columns: 240px minmax(0, 1fr) 380px;
+}
+
+.lessonHeaderBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--borders-neutral-light, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+  flex-wrap: wrap;
+}
+
+.lessonHeaderTitles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.lessonHeaderSpacer {
+  flex: 1;
+}
+
+.progressDots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+// The visual dot stays compact (14px); the button itself grows to a 24x24
+// hit area with the dot centered on an ::before, so touch/click targets meet
+// the minimum size without the outline dots looking bigger.
+.progressDot {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--borders-neutral-primary, #6f747c);
+    background: transparent;
+  }
+
+  &:hover::before {
+    border-color: var(--borders-brand-purple-primary, #4d24a8);
+  }
+}
+
+.progressDotActive::before {
+  background: var(--background-brand-purple-primary, #4d24a8);
+  border-color: var(--background-brand-purple-primary, #4d24a8);
+}
+
+.progressDotDone::before {
+  background: var(--background-success-primary, #12752a);
+  border-color: var(--background-success-primary, #12752a);
+}
+
+.stageColumn {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--background-neutral-secondary, #f3f4f5);
+}
+
+.stageScroll {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+// Shared shape for the card-like blocks scattered through this stylesheet
+// (content card, widget stage, unsupported card, bubble choice item, unit
+// card, course card). Per-class deviations (dashed border, extra layout,
+// hover state) stay local to the class that needs them.
+%authoring-card {
+  background: var(--background-neutral-primary, #fff);
+  border: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-radius: 8px;
+}
+
+.contentCard {
+  @extend %authoring-card;
+  width: 100%;
+  max-width: 880px;
+  padding: 24px 32px;
+}
+
+.labStage {
+  width: 100%;
+  align-self: stretch;
+  flex: 1;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+
+  // Real labs (e.g. oceans-lab) size their own shell against the nearest
+  // inline-size container via cqi units, falling back to the viewport width
+  // when no ancestor establishes containment. In the author layout's narrow
+  // middle column that fallback overflowed the lab past its actual space, so
+  // establish containment here to give it the real available width.
+  container-type: inline-size;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.widgetStage {
+  @extend %authoring-card;
+  width: 100%;
+  max-width: 880px;
+  overflow: hidden;
+}
+
+.stageNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--borders-neutral-light, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+}
+
+/* Outline rail (author affordance) */
+
+.rail {
+  border-right: 1px solid var(--borders-neutral-light, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+  overflow-y: auto;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.railItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+
+  &:hover {
+    background: var(--background-neutral-secondary, #f3f4f5);
+  }
+}
+
+.railItemButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.railItemActive {
+  border-color: var(--borders-brand-purple-primary, #4d24a8);
+  background: var(--background-brand-purple-light, #ece6f6);
+}
+
+.railItemLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.railItemKind {
+  flex-shrink: 0;
+}
+
+.railItemActions {
+  display: none;
+  gap: 2px;
+}
+
+.railItem:hover .railItemActions,
+.railItem:focus-within .railItemActions,
+.railItemActive .railItemActions {
+  display: inline-flex;
+}
+
+.railInsert {
+  display: flex;
+  justify-content: center;
+  padding: 1px 0;
+
+  button {
+    border: none;
+    background: transparent;
+    color: var(--text-neutral-secondary, #6f747c);
+    border-radius: 4px;
+    padding: 0 8px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  &:hover button,
+  button:focus-visible {
+    opacity: 1;
+    background: var(--background-brand-purple-light, #ece6f6);
+    color: var(--text-brand-purple-primary, #4d24a8);
+  }
+}
+
+/* AI author sidebar */
+
+.sidebar {
+  border-left: 1px solid var(--borders-neutral-light, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.sidebarHeader {
+  padding: 12px 16px 8px;
+  border-bottom: 1px solid var(--borders-neutral-light, #d5d8dc);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebarLog {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chatBubbleAuthor,
+.chatBubbleAgent,
+.chatBubbleStatus {
+  border-radius: 8px;
+  padding: 8px 12px;
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.chatBubbleAuthor {
+  align-self: flex-end;
+  background: var(--background-brand-purple-light, #ece6f6);
+}
+
+.chatBubbleAgent {
+  align-self: flex-start;
+  background: var(--background-neutral-secondary, #f3f4f5);
+}
+
+.chatBubbleStatus {
+  align-self: stretch;
+  border-left: 3px solid var(--borders-neutral-primary, #6f747c);
+  background: transparent;
+  padding: 2px 12px;
+  color: var(--text-neutral-secondary, #6f747c);
+  font-style: italic;
+}
+
+.sidebarComposer {
+  border-top: 1px solid var(--borders-neutral-light, #d5d8dc);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.composerRow {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+
+  textarea {
+    flex: 1;
+    resize: vertical;
+    min-height: 56px;
+    max-height: 200px;
+    border: 1px solid var(--borders-neutral-primary, #6f747c);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font: inherit;
+  }
+}
+
+/* Manual (non-AI) authoring: insertion-point menu, content composer, level
+   search — the direct-manipulation counterpart to the chat-driven flow. */
+
+.contentComposer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 320px;
+  max-width: 90vw;
+  padding: 12px;
+
+  input,
+  textarea {
+    border: 1px solid var(--borders-neutral-primary, #6f747c);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font: inherit;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+}
+
+.composerActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.levelSearch {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 320px;
+  max-width: 90vw;
+  padding: 12px;
+
+  input {
+    border: 1px solid var(--borders-neutral-primary, #6f747c);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font: inherit;
+  }
+}
+
+.levelSearchResults {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.levelSearchResult {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-radius: 6px;
+  background: var(--background-neutral-primary, #fff);
+  padding: 8px 10px;
+  cursor: pointer;
+  font: inherit;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--borders-brand-purple-primary, #4d24a8);
+    background: var(--background-brand-purple-light, #ece6f6);
+  }
+}
+
+.inlineError {
+  color: var(--text-error-primary, #d3281c);
+}
+
+.contentEditBar {
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Generic level renderers */
+
+.videoFrameWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.videoFrame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 6px;
+}
+
+.videoPlaceholder {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed var(--borders-neutral-primary, #6f747c);
+  border-radius: 8px;
+}
+
+.unsupportedCard {
+  @extend %authoring-card;
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px;
+  // Deviation: dashed warning border instead of the shared solid one.
+  border: 1px dashed var(--borders-neutral-primary, #6f747c);
+}
+
+.bubbleChoiceList {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.bubbleChoiceItem {
+  @extend %authoring-card;
+  padding: 12px;
+}
+
+.answerOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-radius: 8px;
+  background: var(--background-neutral-primary, #fff);
+  padding: 12px 16px;
+  cursor: pointer;
+  font: inherit;
+
+  &:hover {
+    border-color: var(--borders-brand-purple-primary, #4d24a8);
+  }
+
+  // Match questions can carry an authored image (e.g. a training-data
+  // sample); cap its height so one tall photo doesn't blow out the row.
+  img {
+    max-height: 120px;
+    object-fit: contain;
+  }
+}
+
+.answerOptionSelected {
+  border-color: var(--borders-brand-purple-primary, #4d24a8);
+  background: var(--background-brand-purple-light, #ece6f6);
+}
+
+.answerOptionCorrect {
+  border-color: var(--borders-success-primary, #12752a);
+  background: var(--background-success-light, #e6f4e9);
+}
+
+.answerOptionWrong {
+  border-color: var(--borders-error-primary, #d3281c);
+}
+
+.answerList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.checkRow {
+  margin-top: 12px;
+}
+
+/* Standard visually-hidden pattern: removed from view but read by screen
+ * readers, for correctness signaled visually by color alone. */
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
+/* Tutor dock (learner-facing, both modes) */
+
+.tutorDock {
+  width: 100%;
+  max-width: 880px;
+  margin-top: 16px;
+  border: 1px solid var(--borders-brand-purple-primary, #4d24a8);
+  border-radius: 8px;
+  background: var(--background-neutral-primary, #fff);
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorLog {
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tutorComposer {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  padding: 0 12px 12px;
+
+  textarea {
+    flex: 1;
+    resize: vertical;
+    min-height: 44px;
+    max-height: 160px;
+    border: 1px solid var(--borders-neutral-primary, #6f747c);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font: inherit;
+  }
+}
+
+/* Course overview */
+
+.coursePage {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.courseLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  // Same fix as .playerFrame: this is the route's sole child under the Box
+  // ancestor that only sets min-height, so flex:1 alone has nothing bounded
+  // to grow against — an explicit height is what actually caps it.
+  height: calc(100vh - 50px);
+  min-height: 0;
+}
+
+.courseLayoutAuthor {
+  grid-template-columns: minmax(0, 1fr) 380px;
+}
+
+.courseScroll {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.unitCard {
+  @extend %authoring-card;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lessonRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    border-color: var(--borders-brand-purple-primary, #4d24a8);
+    background: var(--background-brand-purple-light, #ece6f6);
+  }
+}
+
+.lessonRowMain {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.courseCardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.courseCard {
+  @extend %authoring-card;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    border-color: var(--borders-brand-purple-primary, #4d24a8);
+  }
+}
