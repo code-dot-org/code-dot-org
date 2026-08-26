@@ -10,12 +10,13 @@ import {AnimationPoses} from '../../characterAnimations';
 
 import {
   ASSUMED_BLOCK,
-  getImageModel,
-  imageProviderOptions,
+  ImageAspectRatio,
   ImageSize,
   MODEL_OUTPUT_PX,
   SINGLE_IMAGE_SIZE,
   ThinkingLevel,
+  getImageModel,
+  imageProviderOptions,
 } from './modelHelpers';
 import {cropToContent, removeBackground} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
@@ -130,6 +131,8 @@ export interface ImageRequest {
   model?: ReturnType<typeof getImageModel>;
   /** How hard the model thinks first; omitted = its default. */
   thinkingLevel?: ThinkingLevel;
+  /** Output shape; square unless asked. */
+  aspectRatio?: ImageAspectRatio;
 }
 
 /**
@@ -162,7 +165,8 @@ export async function requestImage(
     }),
     providerOptions: imageProviderOptions(
       request.imageSize || SINGLE_IMAGE_SIZE,
-      request.thinkingLevel
+      request.thinkingLevel,
+      request.aspectRatio
     ),
   });
 

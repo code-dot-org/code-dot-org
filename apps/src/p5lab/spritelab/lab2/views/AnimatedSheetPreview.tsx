@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 
+import {SHEET_POSES} from '../ai/images/characterSet';
 import {poseFigureSvgDataURI} from '../ai/images/poseFigures';
 import {
   AnimationPoses,
@@ -71,11 +72,16 @@ const AnimatedSheetPreview: React.FunctionComponent<
         lastFrame = frame;
         const at = poseForFrame(poses, frame);
         if (insetRef.current && at) {
-          insetRef.current.src = poseFigureSvgDataURI(
-            at.pose,
-            at.frame,
-            at.facing
-          );
+          // A pose drawn as one row had no figure; show none beside it.
+          const figure = !SHEET_POSES.includes(at.pose);
+          insetRef.current.hidden = !figure;
+          if (figure) {
+            insetRef.current.src = poseFigureSvgDataURI(
+              at.pose,
+              at.frame,
+              at.facing
+            );
+          }
         }
         const columns = Math.max(1, Math.floor(img.naturalWidth / frameSize.x));
         const sx = (frame % columns) * frameSize.x;

@@ -34,6 +34,7 @@ import {
   CHARACTER_SET_IMAGE_SIZE,
   CHARACTER_SET_THINKING_LEVEL,
   ImageSize,
+  SHEET_ASPECT_RATIO,
   getCharacterSetImageModel,
 } from './modelHelpers';
 import {poseFigureDataURI} from './poseFigures';
@@ -47,7 +48,7 @@ import {
   SilhouetteBands,
 } from './poseScore';
 import {loadImageFromBlob, removeKeyColor} from './removeBackground';
-import {columnSpans} from './sheetSlice';
+import {frameBoxes} from './sheetSlice';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One reference image for a frame: an earlier frame, possibly mirrored. */
@@ -303,7 +304,7 @@ export function sheetPrompt(
       : `one complete ${POSE_LABELS[plan.pose]} animation`;
   return (
     `The character: ${prompt}. The provided image shows this character. ` +
-    `Draw a sprite sheet of exactly ${frameCount} frames of this character in a single horizontal row, left to right, evenly spaced, with clear ${key.name} gaps between the frames and no frame touching another. ` +
+    `Draw a sprite sheet of exactly ${frameCount} frames of this character in a single horizontal row, left to right, evenly spaced, with clear ${key.name} gaps between the frames and no frame touching another. The image is wide: one row only, never a second row, each frame as tall as the image allows. ` +
     `The ${frameCount} frames are ${motion}. In every frame draw the same character — same design, colors, proportions, outfit and art style, the same scale, feet on the same baseline. ` +
     `${facingClause(
       plan.facing
@@ -473,27 +474,32 @@ async function sliceSheet(
   const {data} = whole.canvas
     .getContext('2d')!
     .getImageData(0, 0, width, height);
-  return columnSpans(data, width, height, frameCount, SOLID_ALPHA).map(span => {
+  return frameBoxes(data, width, height, frameCount, SOLID_ALPHA).map(box => {
     const canvas = document.createElement('canvas');
-    canvas.width = span.right - span.left;
-    canvas.height = height;
+    canvas.width = box.right - box.left;
+    canvas.height = box.bottom - box.top;
     const ctx = canvas.getContext('2d')!;
     ctx.drawImage(
       whole.canvas,
-      span.left,
+      box.left,
+      box.top,
+      canvas.width,
+      canvas.height,
+      0,
       0,
       canvas.width,
-      height,
-      0,
-      0,
-      canvas.width,
-      height
+      canvas.height
     );
-    const frameData = ctx.getImageData(0, 0, canvas.width, height).data;
+    const frameData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
     return {
       canvas,
-      bounds: findOpaqueBounds(frameData, canvas.width, height, SOLID_ALPHA),
-      bands: silhouetteBands(frameData, canvas.width, height, isSolid),
+      bounds: findOpaqueBounds(
+        frameData,
+        canvas.width,
+        canvas.height,
+        SOLID_ALPHA
+      ),
+      bands: silhouetteBands(frameData, canvas.width, canvas.height, isSolid),
     };
   });
 }
@@ -707,6 +713,7 @@ export async function generateCharacterSet(
             step.facing === 'left' ? await mirrorDataURI(plateURI) : plateURI,
           ],
           imageSize: SHEET_IMAGE_SIZE,
+          aspectRatio: SHEET_ASPECT_RATIO,
           model: getCharacterSetImageModel(),
           thinkingLevel: CHARACTER_SET_THINKING_LEVEL,
         }
@@ -736,14 +743,11 @@ export async function generateCharacterSet(
         raws.push(raw);
         keyed.push(frame);
       });
+      // No figure to show beside a row's frame: the pose was the model's.
       const shown = framePreview(frames[frames.length - 1]);
       if (shown) {
         preview = shown;
-        previewPose = {
-          pose: step.pose,
-          facing: step.facing,
-          frame: frameCount - 1,
-        };
+        previewPose = undefined;
       }
       i += frameCount - 1;
       continue;
