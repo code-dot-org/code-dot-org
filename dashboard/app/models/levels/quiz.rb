@@ -45,9 +45,9 @@ class Quiz < Level
   validate :reveal_answer_explanation_requires_show_correctness
   validate :max_attempts_requires_allow_multiple_attempts
 
-  has_many :quiz_level_questions, foreign_key: :level_id, dependent: :destroy, inverse_of: :level
+  has_many :quiz_level_questions, foreign_key: :level_id, inverse_of: :level
   has_many :quiz_questions, through: :quiz_level_questions
-  has_many :quiz_attempts, foreign_key: :level_id, dependent: :destroy, inverse_of: :level
+  has_many :quiz_attempts, foreign_key: :level_id, inverse_of: :level
 
   def self.create_from_level_builder(params, level_params)
     create!(
