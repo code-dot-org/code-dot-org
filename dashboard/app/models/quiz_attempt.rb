@@ -24,7 +24,7 @@
 class QuizAttempt < ApplicationRecord
   belongs_to :user
   belongs_to :level
-  belongs_to :unit, class_name: 'Unit'
+  belongs_to :unit
 
   has_many :quiz_question_responses, dependent: :destroy
 
