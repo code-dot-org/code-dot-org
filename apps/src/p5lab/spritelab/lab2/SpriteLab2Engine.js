@@ -23,10 +23,13 @@ import {
   pickPose,
   poseFrame,
   posesByImageName,
+  teeterFrame,
+  teeterTicks,
 } from './characterAnimations';
 import {trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
+  isAtEdge,
   isSupported,
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
@@ -772,7 +775,9 @@ export default class SpriteLab2Engine extends SpriteLab {
    * player is off its footing, standing otherwise — facing the way it last
    * moved. The sheet holds every pose, so this drives the frame index
    * itself (p5.play would run the whole sheet end to end) and the sprite
-   * never changes costume. Only players can be airborne: patrollers and
+   * never changes costume. A player that stops with its toes over a drop
+   * holds back from the edge: the jump frames once through, then standing;
+   * moving again re-arms it. Only players can be airborne: patrollers and
    * props ride the stock resolver and would read as jumping at every seam.
    */
   updateCharacterAnimations_() {
@@ -805,17 +810,36 @@ export default class SpriteLab2Engine extends SpriteLab {
           facing: 'right',
           key: null,
           tick: 0,
+          moving: false,
+          teetering: false,
         });
       const dx = sprite.position.x - state.x;
       state.x = sprite.position.x;
       state.facing = nextFacing(state.facing, dx);
+      const moving = isMoving(dx);
+      const player = this.usesPlatformPhysics_ && sprite.group === 'players';
       const airborne =
-        this.usesPlatformPhysics_ &&
-        sprite.group === 'players' &&
-        !isSupported(sprite, walls, view, this.platformGravity_);
+        player && !isSupported(sprite, walls, view, this.platformGravity_);
+      if (moving || airborne) {
+        state.teetering = false;
+      } else if (
+        state.moving &&
+        player &&
+        isAtEdge(
+          sprite,
+          walls,
+          view,
+          state.facing === 'right' ? 1 : -1,
+          this.platformGravity_
+        )
+      ) {
+        state.teetering = true;
+      }
+      state.moving = moving;
       const pick = pickPose(poses, {
-        moving: isMoving(dx),
+        moving,
         airborne,
+        teetering: state.teetering,
         facing: state.facing,
       });
       if (!pick) {
@@ -830,14 +854,24 @@ export default class SpriteLab2Engine extends SpriteLab {
       sprite.mirrorX(pick.facing === state.facing ? 1 : -1);
       // Ours to drive; p5.play must not advance it.
       animation.stop();
-      const frame =
-        pick.pose === 'jump'
-          ? pick.range.start +
-            Math.min(
-              jumpFrame(sprite.velocity.y, this.platformGravity_),
-              pick.range.count - 1
-            )
-          : poseFrame(pick.range, state.tick);
+      let frame;
+      if (pick.pose === 'jump' && airborne) {
+        frame =
+          pick.range.start +
+          Math.min(
+            jumpFrame(sprite.velocity.y, this.platformGravity_),
+            pick.range.count - 1
+          );
+      } else if (pick.pose === 'jump') {
+        frame = teeterFrame(pick.range, state.tick);
+        if (state.tick + 1 >= teeterTicks(pick.range)) {
+          state.teetering = false;
+        }
+      } else {
+        frame = poseFrame(pick.range, state.tick);
+        // A set without jump frames has nothing to hold back with.
+        state.teetering = false;
+      }
       animation.changeFrame(frame);
       state.tick++;
     });

@@ -114,6 +114,8 @@ export function posesByImageName(
 export interface CharacterMotion {
   moving: boolean;
   airborne: boolean;
+  /** Stopped with its toes over an edge: holds back in the jump frames. */
+  teetering?: boolean;
   facing: CharacterFacing;
 }
 
@@ -140,6 +142,8 @@ export function pickPose(
     ? 'jump'
     : motion.moving
     ? 'walk'
+    : motion.teetering
+    ? 'jump'
     : 'stand';
   const facings: CharacterFacing[] =
     motion.facing === 'right' ? ['right', 'left'] : ['left', 'right'];
@@ -183,6 +187,22 @@ export function poseForFrame(
 /** The sheet frame to show `tick` draw cycles into a looping pose. */
 export function poseFrame(range: PoseRange, tick: number): number {
   return range.start + (Math.floor(tick / range.frameDelay) % range.count);
+}
+
+/**
+ * The frame of a pose played once through and held on its last frame: a
+ * player that stops with its toes over an edge shows the jump frames this
+ * way, holding back, for teeterTicks and then stands.
+ */
+export function teeterFrame(range: PoseRange, tick: number): number {
+  return (
+    range.start + Math.min(Math.floor(tick / range.frameDelay), range.count - 1)
+  );
+}
+
+/** How long a hold at an edge lasts: the pose once through at its delay. */
+export function teeterTicks(range: PoseRange): number {
+  return range.frameDelay * range.count;
 }
 
 // Horizontal movement below this, per frame, counts as standing still: the

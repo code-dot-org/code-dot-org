@@ -290,23 +290,78 @@ export function isSupported(
   gravity: number = PLATFORM_GRAVITY
 ): boolean {
   if (gravity < 0) {
-    const flipped: PhysicsSprite = {
-      ...sprite,
-      position: {x: sprite.position.x, y: view.height - sprite.position.y},
-      velocity: {x: sprite.velocity.x, y: -sprite.velocity.y},
-    };
-    return isSupported(flipped, flipWallsY(walls, view), view, -gravity);
+    return isSupported(
+      flippedSprite(sprite, view),
+      flipWallsY(walls, view),
+      view,
+      -gravity
+    );
   }
   const {halfW, halfH, drop} = playerBody(sprite);
   const feet = sprite.position.y + drop + halfH;
   if (feet >= view.height - CONTACT_EPSILON) {
     return true;
   }
-  return walls.some(wall => {
-    const top = wall.position.y - wallHalf(wall);
-    return (
-      Math.abs(feet - top) <= CONTACT_EPSILON &&
+  return wallsAtFeet(walls, feet).some(
+    wall =>
       Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalf(wall)
+  );
+}
+
+/**
+ * Whether a player rests on a wall with its toes past the wall's edge on
+ * the side it faces (`direction` 1 for right, -1 for left): the body's
+ * leading edge over the drop, nothing at foot level under it. The floor has
+ * no edge. The character animation shows a player that stops here holding
+ * back from the edge.
+ */
+export function isAtEdge(
+  sprite: PhysicsSprite,
+  walls: PhysicsBox[],
+  view: View,
+  direction: 1 | -1,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  if (gravity < 0) {
+    return isAtEdge(
+      flippedSprite(sprite, view),
+      flipWallsY(walls, view),
+      view,
+      direction,
+      -gravity
     );
-  });
+  }
+  const {halfW, halfH, drop} = playerBody(sprite);
+  const feet = sprite.position.y + drop + halfH;
+  if (feet >= view.height - CONTACT_EPSILON) {
+    return false;
+  }
+  const atFeet = wallsAtFeet(walls, feet);
+  const supported = atFeet.some(
+    wall =>
+      Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalf(wall)
+  );
+  const toe = sprite.position.x + direction * halfW;
+  return (
+    supported &&
+    !atFeet.some(wall => Math.abs(toe - wall.position.x) <= wallHalf(wall))
+  );
+}
+
+// The walls whose top is at foot level, within contact tolerance.
+function wallsAtFeet(walls: PhysicsBox[], feet: number): PhysicsBox[] {
+  return walls.filter(
+    wall =>
+      Math.abs(feet - (wall.position.y - wallHalf(wall))) <= CONTACT_EPSILON
+  );
+}
+
+// The sprite as it stands in a view flipped top for bottom, for reading
+// upward gravity with the downward-gravity code.
+function flippedSprite(sprite: PhysicsSprite, view: View): PhysicsSprite {
+  return {
+    ...sprite,
+    position: {x: sprite.position.x, y: view.height - sprite.position.y},
+    velocity: {x: sprite.velocity.x, y: -sprite.velocity.y},
+  };
 }
