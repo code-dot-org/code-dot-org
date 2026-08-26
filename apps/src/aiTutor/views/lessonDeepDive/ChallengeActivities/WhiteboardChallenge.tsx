@@ -237,7 +237,7 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   });
 
   return (
-    <div>
+    <div className={styles.whiteboardChallenge}>
       <div className={styles.whiteboardPane}>
         <ReactFlowCanvas
           key={resetKey}

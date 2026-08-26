@@ -238,28 +238,143 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
         )}
         data-theme="Dark"
       >
-        <div className={styles.topBar}>
-          {evaluationStatus === EvaluationStatus.SUCCESS ? (
-            // Review state: once the tutor's feedback is in, the actions turn
-            // to browsing the gallery rather than editing this attempt.
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              size="extraSmall"
-              startIcon={
-                <FontAwesomeV6Icon
-                  iconStyle="solid"
-                  iconName="gallery-thumbnails"
-                />
-              }
-              onClick={handleViewGallery}
-            >
-              View project gallery
-            </MuiButton>
+        <aside className={styles.sidebar}>
+          {evaluationText ? (
+            <div className={styles.feedbackContainer}>
+              <Typography variant="overline3" className={styles.feedbackLabel}>
+                Feedback
+              </Typography>
+              <div className={styles.feedbackWidget}>
+                <div className={styles.feedbackHeader}>
+                  <div className={styles.feedbackIconBG}>
+                    <FontAwesomeV6Icon
+                      iconStyle="solid"
+                      iconName="sparkle"
+                      title="Audio"
+                    />
+                  </div>
+                  <div className={styles.feedbackHeaderContent}>
+                    <Typography variant="body3">Tutor</Typography>
+                    <Typography variant="body4">
+                      {evaluationDatetime}
+                    </Typography>
+                  </div>
+                </div>
+                <div className={styles.feedbackText}>
+                  <Typography variant="body3" className={styles.sidebarHeading}>
+                    {evaluationText}
+                  </Typography>
+                </div>
+              </div>
+            </div>
           ) : (
-            // Compose state: "Submit for feedback" only appears once there is
-            // something to submit; "Start over" is always available.
-            <>
+            <div className={styles.sidebarContent}>
+              <div>
+                <h3 className={styles.sidebarHeading}>Instructions</h3>
+                {renderInstructions()}
+              </div>
+              {challenge && challengeType === ChallengeTypes.WHITEBOARD && (
+                <div className={styles.whiteboardButtonContainer}>
+                  <div className={styles.explanationContainer}>
+                    <MuiButton
+                      className={classNames([
+                        styles.explanationButton,
+                        explanationType === ExplanationTypes.AUDIO
+                          ? styles.Selected
+                          : null,
+                      ])}
+                      size="medium"
+                      color="tertiary"
+                      startIcon={
+                        <FontAwesomeV6Icon
+                          iconStyle="solid"
+                          iconName="microphone"
+                          title="Audio"
+                        />
+                      }
+                      variant={
+                        explanationType === ExplanationTypes.AUDIO
+                          ? 'outlined'
+                          : 'contained'
+                      }
+                      disabled={submitted}
+                      onClick={() =>
+                        switchExplanationType(ExplanationTypes.AUDIO)
+                      }
+                    >
+                      Audio
+                    </MuiButton>
+
+                    <MuiButton
+                      className={classNames([
+                        styles.explanationButton,
+                        explanationType === ExplanationTypes.TEXT
+                          ? styles.Selected
+                          : null,
+                      ])}
+                      size="medium"
+                      color="tertiary"
+                      startIcon={
+                        <FontAwesomeV6Icon
+                          iconStyle="solid"
+                          iconName="pencil"
+                          title="Text"
+                        />
+                      }
+                      variant={
+                        explanationType === ExplanationTypes.TEXT
+                          ? 'outlined'
+                          : 'contained'
+                      }
+                      disabled={submitted}
+                      onClick={() =>
+                        switchExplanationType(ExplanationTypes.TEXT)
+                      }
+                    >
+                      Text
+                    </MuiButton>
+                  </div>
+                  {explanationType === ExplanationTypes.AUDIO && (
+                    <MuiButton
+                      size="medium"
+                      color={isRecording ? 'error' : 'secondary'}
+                      startIcon={
+                        <FontAwesomeV6Icon
+                          iconStyle="solid"
+                          iconName={isRecording ? 'square' : 'circle'}
+                          title={isRecording ? 'Stop' : 'Record'}
+                        />
+                      }
+                      variant="contained"
+                      disabled={submitted}
+                      onClick={() => setIsRecording(!isRecording)}
+                    >
+                      {isRecording
+                        ? 'Stop Recording'
+                        : hasRecording
+                        ? 'Record Again'
+                        : 'Start Recording'}
+                    </MuiButton>
+                  )}
+                  {explanationType === ExplanationTypes.TEXT && (
+                    <textarea
+                      id="challenge-explanation"
+                      className={styles.textArea}
+                      placeholder="Write a paragraph explaining your work"
+                      onChange={e => setTextExplanation(e.target.value)}
+                      disabled={submitted}
+                    />
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+        </aside>
+        <div className={styles.mainColumn}>
+          <div className={styles.topBar}>
+            {evaluationStatus === EvaluationStatus.SUCCESS ? (
+              // Review state: once the tutor's feedback is in, the actions
+              // turn to browsing the gallery rather than editing this attempt.
               <MuiButton
                 variant="outlined"
                 color="secondary"
@@ -267,165 +382,45 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
                 startIcon={
                   <FontAwesomeV6Icon
                     iconStyle="solid"
-                    iconName="arrow-rotate-left"
+                    iconName="gallery-thumbnails"
                   />
                 }
-                onClick={handleStartOver}
+                onClick={handleViewGallery}
               >
-                Start over
+                View project gallery
               </MuiButton>
-              {canSubmit && (
+            ) : (
+              // Compose state: "Submit for feedback" stays visible but is
+              // disabled until the active modality reports there is something
+              // to submit; "Start over" is always available.
+              <>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="extraSmall"
+                  startIcon={
+                    <FontAwesomeV6Icon
+                      iconStyle="solid"
+                      iconName="arrow-rotate-left"
+                    />
+                  }
+                  onClick={handleStartOver}
+                >
+                  Start over
+                </MuiButton>
                 <MuiButton
                   variant="contained"
                   color="primary"
                   size="extraSmall"
+                  className={styles.submitButton}
+                  disabled={!canSubmit}
                   onClick={() => submitRef.current?.()}
                 >
                   Submit for feedback
                 </MuiButton>
-              )}
-            </>
-          )}
-        </div>
-        <div className={styles.challengeLayout}>
-          <aside className={styles.sidebar}>
-            {evaluationText ? (
-              <div className={styles.feedbackContainer}>
-                <Typography
-                  variant="overline3"
-                  className={styles.feedbackLabel}
-                >
-                  Feedback
-                </Typography>
-                <div className={styles.feedbackWidget}>
-                  <div className={styles.feedbackHeader}>
-                    <div className={styles.feedbackIconBG}>
-                      <FontAwesomeV6Icon
-                        iconStyle="solid"
-                        iconName="sparkle"
-                        title="Audio"
-                      />
-                    </div>
-                    <div className={styles.feedbackHeaderContent}>
-                      <Typography variant="body3">Tutor</Typography>
-                      <Typography variant="body4">
-                        {evaluationDatetime}
-                      </Typography>
-                    </div>
-                  </div>
-                  <div className={styles.feedbackText}>
-                    <Typography
-                      variant="body3"
-                      className={styles.sidebarHeading}
-                    >
-                      {evaluationText}
-                    </Typography>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className={styles.sidebarContent}>
-                <div>
-                  <h3 className={styles.sidebarHeading}>Instructions</h3>
-                  {renderInstructions()}
-                </div>
-                {challenge && challengeType === ChallengeTypes.WHITEBOARD && (
-                  <div className={styles.whiteboardButtonContainer}>
-                    <div className={styles.explanationContainer}>
-                      <MuiButton
-                        className={classNames([
-                          styles.explanationButton,
-                          explanationType === ExplanationTypes.AUDIO
-                            ? styles.Selected
-                            : null,
-                        ])}
-                        size="medium"
-                        color="tertiary"
-                        startIcon={
-                          <FontAwesomeV6Icon
-                            iconStyle="solid"
-                            iconName="microphone"
-                            title="Audio"
-                          />
-                        }
-                        variant={
-                          explanationType === ExplanationTypes.AUDIO
-                            ? 'outlined'
-                            : 'contained'
-                        }
-                        disabled={submitted}
-                        onClick={() =>
-                          switchExplanationType(ExplanationTypes.AUDIO)
-                        }
-                      >
-                        Audio
-                      </MuiButton>
-
-                      <MuiButton
-                        className={classNames([
-                          styles.explanationButton,
-                          explanationType === ExplanationTypes.TEXT
-                            ? styles.Selected
-                            : null,
-                        ])}
-                        size="medium"
-                        color="tertiary"
-                        startIcon={
-                          <FontAwesomeV6Icon
-                            iconStyle="solid"
-                            iconName="pencil"
-                            title="Text"
-                          />
-                        }
-                        variant={
-                          explanationType === ExplanationTypes.TEXT
-                            ? 'outlined'
-                            : 'contained'
-                        }
-                        disabled={submitted}
-                        onClick={() =>
-                          switchExplanationType(ExplanationTypes.TEXT)
-                        }
-                      >
-                        Text
-                      </MuiButton>
-                    </div>
-                    {explanationType === ExplanationTypes.AUDIO && (
-                      <MuiButton
-                        size="medium"
-                        color={isRecording ? 'error' : 'secondary'}
-                        startIcon={
-                          <FontAwesomeV6Icon
-                            iconStyle="solid"
-                            iconName={isRecording ? 'square' : 'circle'}
-                            title={isRecording ? 'Stop' : 'Record'}
-                          />
-                        }
-                        variant="contained"
-                        disabled={submitted}
-                        onClick={() => setIsRecording(!isRecording)}
-                      >
-                        {isRecording
-                          ? 'Stop Recording'
-                          : hasRecording
-                          ? 'Record Again'
-                          : 'Start Recording'}
-                      </MuiButton>
-                    )}
-                    {explanationType === ExplanationTypes.TEXT && (
-                      <textarea
-                        id="challenge-explanation"
-                        className={styles.textArea}
-                        placeholder="Write a paragraph explaining your work"
-                        onChange={e => setTextExplanation(e.target.value)}
-                        disabled={submitted}
-                      />
-                    )}
-                  </div>
-                )}
-              </div>
+              </>
             )}
-          </aside>
+          </div>
           <div className={styles.activityColumn}>
             {challengeType === ChallengeTypes.WHITEBOARD ? (
               <WhiteboardChallenge

@@ -1,10 +1,17 @@
-// Excalidraw sizes itself to its parent, so the pane needs an
-// explicit height.
+// Fills the activity column between the top bar and the modality toggle.
+.whiteboardChallenge {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+// The canvas grows to fill the wrapper. ReactFlow/Excalidraw size themselves
+// to this parent, which flexbox resolves to a definite height.
 .whiteboardPane {
   position: relative;
-  height: 55vh;
-  min-height: 360px;
-  border-radius: 8px;
+  flex: 1;
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -19,5 +26,5 @@
   margin: 12px 0 0;
   text-align: center;
   font-size: 0.875rem;
-  color: #f28b82;
+  color: var(--text-error-primary-fixed);
 }

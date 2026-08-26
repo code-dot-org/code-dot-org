@@ -2,37 +2,55 @@
   display: none;
 }
 
-// Wraps the top action bar over the sidebar + activity layout.
+// Row: the full-height sidebar on the left, the whiteboard column (with its
+// own top bar) on the right.
 .challengeArea {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1;
   min-width: 0;
 }
 
-// Top action bar: black strip with a bottom rule, spanning the view.
+// Right column: the top action bar stacked over the active challenge pane.
+.mainColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  min-width: 0;
+  min-height: 0;
+}
+
+// Top action bar: black strip with a bottom rule, spanning the whiteboard
+// column only (not the sidebar).
 .topBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 8px 16px;
-  margin-bottom: 16px;
-  background-color: #000;
-  border-bottom: 1px solid #5f6872;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  padding: 8px;
+  background-color: var(--background-neutral-true-base);
+  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
-.challengeLayout {
-  display: flex;
-  gap: 16px;
-  align-items: stretch;
-  flex: 1;
-  min-height: 0;
+// "Submit for feedback": a flat white pill with dark text; muted gray when
+// disabled. Overrides the MUI contained-button palette to match the Figma.
+.submitButton {
+  background-color: var(--background-neutral-white-fixed) !important;
+  color: var(--text-neutral-black-fixed) !important;
+  box-shadow: none !important;
+
+  &:hover {
+    background-color: var(--neutral-gray-10) !important;
+    box-shadow: none !important;
+  }
+
+  &:disabled {
+    background-color: var(--background-disabled-neutral) !important;
+    color: var(--text-disabled-neutral-inverse) !important;
+  }
 }
 
-// Left quarter: activity instructions from the Challenge model.
+// Left column: full-height activity instructions from the Challenge model.
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -40,7 +58,7 @@
   min-width: 0;
   padding: 16px;
   background-color: var(--background-neutral-primary);
-  border-radius: 8px;
+  border-right: 1px solid var(--borders-neutral-primary);
   gap: 20px;
 }
 
@@ -103,14 +121,26 @@
   background-color: var(--background-neutral-primary);
 }
 
-// Right three quarters: the active challenge pane with the
-// modality toggle underneath it.
+// The active challenge pane with the modality toggle underneath it. Fills
+// the whiteboard column below the top bar.
 .activityColumn {
-  flex: 3;
+  flex: 1;
   min-width: 0;
+  min-height: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+// WhiteboardChallenge wraps its content in the component-library ThemeProvider,
+// which renders an unstyled <div data-theme> between this column and the
+// canvas. It must carry the flex chain through so the whiteboard can grow to
+// fill the height rather than collapsing.
+.activityColumn > [data-theme] {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: 1;
+  min-height: 0;
 }
 
 // Bottom modality toggle: icon-over-label choices, the active one framed
@@ -120,7 +150,8 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-top: 16px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
 }
 
 .choice {
@@ -133,12 +164,12 @@
   border: 2px solid transparent;
   border-radius: 12px;
   background-color: transparent;
-  color: #e4e6e9;
+  color: var(--text-neutral-tertiary);
   cursor: pointer;
 
   &.choiceSelected {
-    border-color: #aca8ea;
-    background-color: rgb(228 226 248 / 15%);
+    border-color: var(--brand-purple-20);
+    background-color: color-mix(in srgb, var(--brand-purple-5) 15%, transparent);
   }
 }
 
@@ -168,11 +199,13 @@
     top: 0;
 }
 
+// Fills the deep-dive content region so the flex chain below resolves to a
+// definite height (letting the whiteboard grow instead of collapsing).
 .topContainer {
   display: flex;
   align-items: stretch;
-  height: stretch;
-  margin-bottom: 20px;
+  height: 100%;
+  min-height: 0;
 }
 
 .feedbackLabel {
@@ -213,7 +246,11 @@ padding: 4px 4px 3px 3px;
 justify-content: center;
 align-items: center;
 border-radius: 999px;
-background: linear-gradient(228deg, #34BD43 13.75%, #0099F3 85.74%);
+background: linear-gradient(
+      228deg,
+      var(--sentiment-success-50) 13.75%,
+      var(--sentiment-information-50) 85.74%
+    );
 i {
       font-size: 20px;
       color: var(--text-neutral-white-fixed);

@@ -347,18 +347,18 @@ describe('ChallengeBox', () => {
     expect(screen.getByRole('button', {name: 'Audio'})).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Text'})).toBeInTheDocument();
 
-    // Compose state: "Start over" is always present, but "Submit for feedback"
-    // only appears once there is something drawn to submit.
+    // Compose state: "Start over" is always present, and "Submit for feedback"
+    // stays visible but is disabled until there is something drawn to submit.
     expect(
       screen.getByRole('button', {name: 'Start over'})
     ).toBeInTheDocument();
     expect(
-      screen.queryByRole('button', {name: 'Submit for feedback'})
-    ).not.toBeInTheDocument();
+      screen.getByRole('button', {name: 'Submit for feedback'})
+    ).toBeDisabled();
     fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
     expect(
       screen.getByRole('button', {name: 'Submit for feedback'})
-    ).toBeInTheDocument();
+    ).toBeEnabled();
   });
 
   it('shows a textarea that can be typed in when the Text button is clicked', async () => {
