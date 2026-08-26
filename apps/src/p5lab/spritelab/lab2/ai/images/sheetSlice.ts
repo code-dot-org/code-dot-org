@@ -59,13 +59,16 @@ export function frameBoxes(
       )
     );
   }
-  while (boxes.length > expected) {
-    boxes = mergeClosest(boxes);
-  }
-  if (boxes.length !== expected) {
+  if (boxes.length < expected) {
     return fallbackGrid(width, height, expected);
   }
-  return rowMajor(boxes);
+  // More frames than asked for: the model drew a longer cycle. Take frames
+  // spread evenly through it, in reading order, so the cycle stays whole.
+  const ordered = rowMajor(boxes);
+  return Array.from(
+    {length: expected},
+    (_, i) => ordered[Math.floor((i * ordered.length) / expected)]
+  );
 }
 
 /** Bounding boxes of the 4-connected blobs of solid pixels. */
@@ -237,25 +240,6 @@ function boxDistance(a: FrameBox, b: FrameBox): number {
   const dx = Math.max(0, b.left - a.right, a.left - b.right);
   const dy = Math.max(0, b.top - a.bottom, a.top - b.bottom);
   return Math.hypot(dx, dy);
-}
-
-// Too many blobs: the two whose boxes are nearest become one.
-function mergeClosest(boxes: FrameBox[]): FrameBox[] {
-  let a = 0;
-  let b = 1;
-  let best = Infinity;
-  for (let i = 0; i < boxes.length; i++) {
-    for (let j = i + 1; j < boxes.length; j++) {
-      const distance = boxDistance(boxes[i], boxes[j]);
-      if (distance < best) {
-        best = distance;
-        a = i;
-        b = j;
-      }
-    }
-  }
-  const merged = union(boxes[a], boxes[b]);
-  return boxes.filter((_, i) => i !== a && i !== b).concat(merged);
 }
 
 // Rows are frames whose vertical centres lie within half a frame of each

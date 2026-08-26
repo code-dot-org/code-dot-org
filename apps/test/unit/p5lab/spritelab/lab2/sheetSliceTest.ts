@@ -129,6 +129,20 @@ describe('sheet slicing', () => {
     ]);
   });
 
+  it('takes frames spread through a longer cycle than asked for', () => {
+    // Twelve frames in a row where eight were asked for.
+    const boxes: [number, number, number, number][] = [];
+    for (let i = 0; i < 12; i++) {
+      boxes.push([2 + i * 25, 22 + i * 25, 2, 38]);
+    }
+    const data = image(300, 40, boxes);
+    const found = frameBoxes(data, 300, 40, 8, 127);
+    expect(found).toHaveLength(8);
+    expect(found.map(b => (b.left - 2) / 25)).toEqual([
+      0, 1, 3, 4, 6, 7, 9, 10,
+    ]);
+  });
+
   it('falls back to a single-row grid for a wide picture it cannot read', () => {
     const data = image(200, 40, [[5, 195, 2, 38]]);
     expect(frameBoxes(data, 200, 40, 8, 127)).toEqual(evenGrid(200, 40, 1, 8));
