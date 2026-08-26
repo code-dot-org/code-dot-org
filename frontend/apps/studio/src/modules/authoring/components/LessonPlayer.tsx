@@ -169,6 +169,30 @@ export default function LessonPlayer({
         }
       >
         {authorMode && (
+          <AuthorSidebar
+            scope={scope}
+            scopeLabel={
+              insertPosition !== undefined
+                ? `${lesson.displayName} · insert at ${insertPosition + 1}`
+                : (active?.title ?? lesson.displayName)
+            }
+            quickActions={
+              experiences.length === 0 ? (
+                <Button
+                  size="small"
+                  variant="contained"
+                  onClick={() =>
+                    void authoringApi.sendChat(scope, 'Build this lesson.')
+                  }
+                >
+                  Build this lesson
+                </Button>
+              ) : undefined
+            }
+          />
+        )}
+
+        {authorMode && (
           <OutlineRail
             lessonId={lesson.id}
             experiences={experiences}
@@ -258,30 +282,6 @@ export default function LessonPlayer({
             </Button>
           </div>
         </div>
-
-        {authorMode && (
-          <AuthorSidebar
-            scope={scope}
-            scopeLabel={
-              insertPosition !== undefined
-                ? `${lesson.displayName} · insert at ${insertPosition + 1}`
-                : (active?.title ?? lesson.displayName)
-            }
-            quickActions={
-              experiences.length === 0 ? (
-                <Button
-                  size="small"
-                  variant="contained"
-                  onClick={() =>
-                    void authoringApi.sendChat(scope, 'Build this lesson.')
-                  }
-                >
-                  Build this lesson
-                </Button>
-              ) : undefined
-            }
-          />
-        )}
       </div>
     </div>
   );

@@ -23,7 +23,7 @@
 }
 
 .playerLayoutAuthor {
-  grid-template-columns: 240px minmax(0, 1fr) 380px;
+  grid-template-columns: 440px 240px minmax(0, 1fr);
 }
 
 .lessonHeaderBar {
@@ -254,7 +254,7 @@
 /* AI author sidebar */
 
 .sidebar {
-  border-left: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-right: 1px solid var(--borders-neutral-light, #d5d8dc);
   background: var(--background-neutral-primary, #fff);
   display: flex;
   flex-direction: column;
@@ -603,7 +603,7 @@
 }
 
 .courseLayoutAuthor {
-  grid-template-columns: minmax(0, 1fr) 380px;
+  grid-template-columns: 440px minmax(0, 1fr);
 }
 
 .courseScroll {
