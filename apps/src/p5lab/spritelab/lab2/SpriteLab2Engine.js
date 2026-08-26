@@ -582,6 +582,29 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return predictWith(model, inputs || {});
     };
+    // A sprite stays addressable by the image it was made with after set
+    // image changes its picture: "the dog" is still the dog when it looks sad.
+    const addSprite = library.addSprite.bind(library);
+    library.addSprite = opts => {
+      const id = addSprite(opts);
+      const sprite = library.nativeSpriteMap[id];
+      if (sprite && opts && opts.animation) {
+        sprite.madeAs = opts.animation;
+      }
+      return id;
+    };
+    const getSpriteArray = library.getSpriteArray.bind(library);
+    library.getSpriteArray = spriteArg => {
+      const found = getSpriteArray(spriteArg);
+      const costume = spriteArg && spriteArg.costume;
+      if (!costume || costume === 'all') {
+        return found;
+      }
+      const madeAs = Object.values(library.nativeSpriteMap).filter(
+        sprite => sprite.madeAs === costume && !found.includes(sprite)
+      );
+      return madeAs.length ? found.concat(madeAs) : found;
+    };
     library.commands.setImage = (spriteArg, name) => {
       const label = this.imageNamed_(library, name);
       if (!label) {
