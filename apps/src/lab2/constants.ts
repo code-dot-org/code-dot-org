@@ -72,3 +72,7 @@ export const IMAGE_MIME_TO_EXTENSIONS: Record<string, readonly string[]> = {
 export const SUPPORTED_IMAGE_EXTENSIONS = SafeAndSupportedImageTypes.flatMap(
   mime => IMAGE_MIME_TO_EXTENSIONS[mime] ?? []
 );
+
+// Audio formats a project file can be played back as. Kept narrow on purpose;
+// wav is widely supported across browsers.
+export const SUPPORTED_AUDIO_EXTENSIONS = ['wav'];

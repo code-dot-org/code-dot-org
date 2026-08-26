@@ -140,4 +140,23 @@ describe('useFileRowOptions', () => {
 
     expect(visibleLabels).not.toContain(codebridgeI18n.addToAiTutorContext());
   });
+
+  it('hides add to AI tutor chat for audio files', () => {
+    const audioFile = {
+      id: '2',
+      name: 'beep.WAV',
+      contents: '',
+      folderId: '0',
+      url: '/v3/assets/channel/beep.wav',
+    };
+    mockState.lab2Project.projectSources.source.files[audioFile.id] = audioFile;
+
+    const {result} = renderHook(() => useFileRowOptions(audioFile, false));
+
+    const visibleLabels = result.current
+      .filter(option => option.condition)
+      .map(option => option.labelText);
+
+    expect(visibleLabels).not.toContain(codebridgeI18n.addToAiTutorContext());
+  });
 });
