@@ -158,6 +158,11 @@ export const SHEET_POSES: CharacterPose[] = ['walk'];
 /** A row of frames needs the room; single frames stay at the set size. */
 export const SHEET_IMAGE_SIZE: ImageSize = '2K';
 
+// While the row picture is new, keep what the model returned beside the set
+// (the pane adds it as an ordinary image named <set>-row) so a bad cut can be
+// read against its source. One constant to drop.
+export const KEEP_ROW_PICTURES = true;
+
 // SHEET_ASPECT_RATIO as a number, for the widened reference.
 export const SHEET_ASPECT = 16 / 9;
 
@@ -495,12 +500,16 @@ async function sliceSheet(
 ): Promise<KeyedFrame[]> {
   const whole = await keyFrame(raw, style, key);
   const {width, height} = whole.canvas;
-  // Development aid while the row picture is new: what came back.
-  console.debug(`SpriteLab2 row picture ${width}x${height}`);
   const {data} = whole.canvas
     .getContext('2d')!
     .getImageData(0, 0, width, height);
-  return frameBoxes(data, width, height, frameCount, SOLID_ALPHA).map(box => {
+  const boxes = frameBoxes(data, width, height, frameCount, SOLID_ALPHA);
+  // Development aid while the row picture is new: what came back, how cut.
+  console.debug(
+    `SpriteLab2 row picture ${width}x${height}`,
+    boxes.map(b => `${b.left},${b.top}-${b.right},${b.bottom}`).join(' ')
+  );
+  return boxes.map(box => {
     const canvas = document.createElement('canvas');
     canvas.width = box.right - box.left;
     canvas.height = box.bottom - box.top;
@@ -713,6 +722,7 @@ export async function generateCharacterSet(
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const raws: RawImage[] = [];
   const keyed: KeyedFrame[] = [];
+  const rawSheets: RawImage[] = [];
   let preview: string | undefined;
   let previewPose: CharacterSetProgress['previewPose'];
   for (let i = 0; i < plan.length; i++) {
@@ -744,6 +754,7 @@ export async function generateCharacterSet(
           thinkingLevel: CHARACTER_SET_THINKING_LEVEL,
         }
       );
+      rawSheets.push(raw);
       const plateHeight =
         keyed[0].bounds && keyed[0].bounds.bottom - keyed[0].bounds.top + 1;
       const sliced = await sliceSheet(raw, frameCount, options.style, key);
@@ -876,6 +887,7 @@ export async function generateCharacterSet(
     uint8Array: new Uint8Array(await blob.arrayBuffer()),
     mediaType: 'image/png',
     generation,
+    ...(KEEP_ROW_PICTURES && rawSheets.length && {rawSheets}),
     frames: {
       frameSize: layout.cell,
       frameCount: frames.length,

@@ -102,6 +102,12 @@ export interface GeneratedImageResult {
   /** How this image was made, to record on its animation. */
   generation: ImageGenerationMetadata;
   /**
+   * The row pictures a character set was cut from, as the model returned
+   * them, while the row picture is new: kept beside the set so a bad cut can
+   * be traced to what came back.
+   */
+  rawSheets?: RawImage[];
+  /**
    * Set on a sprite sheet: its frame grid (cells row by row, wrapping at the
    * image width) and playback; `poses` names the ranges of a character set.
    */
