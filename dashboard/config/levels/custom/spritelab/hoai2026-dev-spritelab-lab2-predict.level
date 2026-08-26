@@ -1,0 +1,181 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-26T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "Images",
+      "Code",
+      "Play"
+    ],
+    "locked_image_type": "sprite",
+    "pinned_scene_id": "dog-scene",
+    "pinned_scene_name": "Dog",
+    "ai_model_id": "qst6grZsAiLb",
+    "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Make a dog with three moods.** Make three dog images and name them **happy**, **sad** and **confused** - those are the words the model uses. Then make **food**, a **bone**, a **toy**, and a **mat** to put them on."
+      },
+      {
+        "text": "**Now let the model decide.** Head to the **Code** tab.",
+        "after": {
+          "images": 12
+        }
+      },
+      {
+        "text": "**Set the scene, then ask the model.** Add a background and make your dog, mat, food, bone and toy. Give the food, bone and toy the **draggable** behavior. Then add **when a sprite is dropped**, and inside it **set [dog] image to (predict with dogmood)** - pick the food, bone and toy against the mat. Press **Play** and drag things onto the mat.",
+        "after": {
+          "tab": "Code"
+        }
+      }
+    ],
+    "long_instructions": "# Ask the model\nMake a dog, some things to put near it, and a mat. Each time you drop something, the model decides how the dog feels.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_makeNewSpriteAnon",
+          "inputs": {
+            "LOCATION": {
+              "block": {
+                "type": "gamelab_location_picker",
+                "fields": {
+                  "LOCATION": "{\"x\":200,\"y\":200}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_addBehaviorSimple",
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "BEHAVIOR": {
+              "shadow": {
+                "type": "gamelab_draggable"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_whenSpriteDropped"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setImageTo",
+          "inputs": {
+            "IMAGE": {
+              "block": {
+                "type": "spritelab2_predict",
+                "extraState": {
+                  "model": {
+                    "id": "qst6grZsAiLb",
+                    "name": "dogmood",
+                    "features": [
+                      {
+                        "id": "food",
+                        "yesNo": true
+                      },
+                      {
+                        "id": "bone",
+                        "yesNo": true
+                      },
+                      {
+                        "id": "toy",
+                        "yesNo": true
+                      }
+                    ]
+                  }
+                },
+                "inputs": {
+                  "FEATURE_food": {
+                    "block": {
+                      "type": "gamelab_isTouchingSprite",
+                      "inputs": {
+                        "SPRITE": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation"
+                          }
+                        },
+                        "TARGET": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "FEATURE_bone": {
+                    "block": {
+                      "type": "gamelab_isTouchingSprite",
+                      "inputs": {
+                        "SPRITE": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation"
+                          }
+                        },
+                        "TARGET": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "FEATURE_toy": {
+                    "block": {
+                      "type": "gamelab_isTouchingSprite",
+                      "inputs": {
+                        "SPRITE": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation"
+                          }
+                        },
+                        "TARGET": {
+                          "shadow": {
+                            "type": "gamelab_allSpritesWithAnimation"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

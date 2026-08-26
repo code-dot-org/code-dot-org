@@ -366,6 +366,54 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "hoai2026-dev-panels-ai"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-panels-ai"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      },
+      "level_keys": [
+        "hoai2026-dev-panels-ai"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hoai2026-dev-spritelab-lab2-predict"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-spritelab-lab2-predict"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      },
+      "level_keys": [
+        "hoai2026-dev-spritelab-lab2-predict"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "hoai2026-dev-panels-freeplay"
         ]
       },
@@ -384,9 +432,9 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
-      "activity_section_position": 14,
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -546,6 +594,30 @@
         "level.key": "hoai2026-dev-spritelab-lab2-treasure",
         "script_level.level_keys": [
           "hoai2026-dev-spritelab-lab2-treasure"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-panels-ai",
+        "script_level.level_keys": [
+          "hoai2026-dev-panels-ai"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-spritelab-lab2-predict",
+        "script_level.level_keys": [
+          "hoai2026-dev-spritelab-lab2-predict"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

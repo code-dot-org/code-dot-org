@@ -42,6 +42,7 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
+import {loadAiModel, setLevelAiModelId} from '../aiModel';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
@@ -306,6 +307,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [channelId, levelProperties.name]);
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
+
+  // Fetch the level's model before the workspace injects, so predict blocks
+  // that arrive without a saved shape can take the model's.
+  useEffect(() => {
+    const modelId = levelProperties.aiModelId;
+    setLevelAiModelId(modelId);
+    if (modelId) {
+      loadAiModel(modelId).catch(() => undefined);
+    }
+  }, [levelProperties.aiModelId]);
   const [engineReady, setEngineReady] = useState(false);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
   // Jump transition: the cover blanks the playspace while the target loads;

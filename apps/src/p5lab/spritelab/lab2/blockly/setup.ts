@@ -1,7 +1,11 @@
 import * as BlocklyCore from 'blockly/core';
 
 import * as blockUtils from '@cdo/apps/block_utils';
-import {BlockDefinition, CustomInputTypes} from '@cdo/apps/blockly/types';
+import {
+  BlockDefinition,
+  CustomInputTypes,
+  ExtendedBlock,
+} from '@cdo/apps/blockly/types';
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 
@@ -11,6 +15,7 @@ import {
   GO_TO_SCENE_BLOCK_TYPE,
   SceneDropdown,
 } from './blockDefinitions/goToScene';
+import {EVENT_HAT_EXTENSION} from './blockDefinitions/whenSpriteDropped';
 import {
   ExternalSceneDropdown,
   FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
@@ -28,6 +33,7 @@ import {
   FIELD_BLOCK_IMAGE_TYPE,
   FIELD_COSTUME_TYPE,
 } from './imagePickerFields';
+import {PREDICT_MUTATOR, predictMutator} from './predictMutator';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -67,6 +73,14 @@ function installLabBlocks(): void {
   Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
   Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
   Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
+  BlocklyCore.Extensions.registerMutator(PREDICT_MUTATOR, predictMutator);
+  // An event hat generates the blocks below it as its handler body.
+  BlocklyCore.Extensions.register(
+    EVENT_HAT_EXTENSION,
+    function (this: ExtendedBlock) {
+      this.skipNextBlockGeneration = true;
+    }
+  );
   for (const {definition, generator} of labBlockDefinitions) {
     Blockly.Blocks[definition.type] = {
       init: function (this: BlocklyCore.Block) {

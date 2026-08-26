@@ -8,6 +8,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
+import {getAiModel, loadAiModel, predictWith} from './aiModel';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
   backgroundFrame,
@@ -195,6 +196,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.setCameraZoom = value => {
       this.cameraZoomTarget_ = clampZoom(Number(value));
     };
+    this.installAiModelCommands_(library);
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
@@ -315,6 +317,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // The zGameDev name is only the level's opt-in to platformer physics,
     // which is engine-owned (platformPhysics.ts); no library loads for it.
     this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
+    this.aiModelId_ = levelProperties.aiModelId;
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
@@ -530,9 +533,84 @@ export default class SpriteLab2Engine extends SpriteLab {
         );
       }
     }, 8000);
-    return this.preloadTrimmedSpriteImages_().finally(() =>
-      clearTimeout(watchdog)
-    );
+    return Promise.all([
+      this.preloadAiModel_(),
+      this.preloadTrimmedSpriteImages_(),
+    ]).finally(() => clearTimeout(watchdog));
+  }
+
+  // The level's model, fetched alongside the images so the predict block is
+  // synchronous by the time a run can reach it.
+  preloadAiModel_() {
+    if (!this.aiModelId_) {
+      return Promise.resolve();
+    }
+    return loadAiModel(this.aiModelId_).catch(error => {
+      console.warn(
+        `SpriteLab2: model ${this.aiModelId_} did not load; predict returns nothing.`,
+        error
+      );
+    });
+  }
+
+  /**
+   * The predict block asks a loaded model; set image names an image by value;
+   * the drop event fires once when a dragged sprite is let go. The draggable
+   * behavior clears its own dragging flag on mouse-up during runBehaviors, so
+   * the frame's dragging sprites are noted before then (see onP5Draw).
+   */
+  installAiModelCommands_(library) {
+    const warned = new Set();
+    const warnOnce = message => {
+      if (!warned.has(message)) {
+        warned.add(message);
+        console.warn(`SpriteLab2: ${message}`);
+      }
+    };
+    library.commands.predictWith = (modelId, inputs) => {
+      const model = getAiModel(modelId);
+      if (!model) {
+        warnOnce(`model ${modelId} is not loaded; predict returns nothing.`);
+        return '';
+      }
+      return predictWith(model, inputs || {});
+    };
+    library.commands.setImage = (spriteArg, name) => {
+      const label = this.imageNamed_(library, name);
+      if (!label) {
+        warnOnce(
+          `no image named ${JSON.stringify(
+            name
+          )} in this project; set image does nothing.`
+        );
+        return;
+      }
+      library.commands.setAnimation.call(library, spriteArg, label);
+    };
+    library.commands.whenSpriteDropped = callback => {
+      library.addEvent('whendrop', {}, callback);
+    };
+    const dispatch = library.getCallbackArgListForEvent.bind(library);
+    library.getCallbackArgListForEvent = inputEvent =>
+      inputEvent.type === 'whendrop'
+        ? this.whenDropEvent_()
+        : dispatch(inputEvent);
+  }
+
+  // The loaded image whose name matches, exactly or ignoring case.
+  imageNamed_(library, name) {
+    const labels = Object.keys(library.p5._predefinedSpriteAnimations || {});
+    if (labels.includes(name)) {
+      return name;
+    }
+    const lower = String(name).toLowerCase();
+    return labels.find(label => label.toLowerCase() === lower);
+  }
+
+  whenDropEvent_() {
+    return this.draggingBeforeFrame_ && this.p5Wrapper.p5.mouseWentUp()
+      ? [{}]
+      : [];
   }
 
   // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
@@ -661,6 +739,9 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   onP5Draw() {
     this.wrapDrawSpritesOnce_();
+    this.draggingBeforeFrame_ = Object.values(
+      this.library?.nativeSpriteMap || {}
+    ).some(sprite => sprite.dragging);
     super.onP5Draw();
   }
 
