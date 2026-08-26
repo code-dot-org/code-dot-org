@@ -188,16 +188,27 @@ class BeeCell extends Cell {
 
   /**
    * @see Cell.parseFromOldValues
+   *
+   * A level with no initial_dirt map at all (e.g. a generated Maze puzzle
+   * using the bee skin only for its avatar) has no per-cell dirt value to
+   * read here — mirror Cell.parseFromOldValues's own `undefined` guard
+   * rather than forcing a coercion. This also matches the legacy
+   * @code-dot-org/maze behavior: it never .toString()s initialDirtCell
+   * before parseInt, so an absent value became NaN, not a thrown error.
    */
   static parseFromOldValues(
     mapCell: string | number,
-    initialDirtCell: string | number,
+    initialDirtCell: string | number | undefined,
   ): BeeCell {
     mapCell = mapCell.toString();
-    initialDirtCell = parseInt(initialDirtCell.toString());
+    initialDirtCell =
+      initialDirtCell === undefined
+        ? undefined
+        : parseInt(initialDirtCell.toString());
     let tileType, featureType, value, cloudType, flowerColor;
 
     if (
+      initialDirtCell !== undefined &&
       !isNaN(initialDirtCell) &&
       mapCell.match(/[1|R|P|FC]/) &&
       initialDirtCell !== 0

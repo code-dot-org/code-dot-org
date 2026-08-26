@@ -264,4 +264,21 @@ describe('buildMazeLevelWireProperties', () => {
       buildSolutionBlocksXml(definition.solution),
     );
   });
+
+  // Pins the data-contract half of a real regression: a generated level
+  // never carries initial_dirt (there's no such field in
+  // MazeLevelDefinition, and none is synthesized here), so any bee-skinned
+  // generated level reaches the client with initialDirtCell === undefined
+  // for every cell. packages/labs/maze/src/BeeCell.ts's parseFromOldValues
+  // used to call .toString() on that unconditionally and crash the lab on
+  // mount; it now guards for undefined the same way Cell.parseFromOldValues
+  // already did. This package can't import maze-lab (browser-only
+  // React/Blockly), so the regression is pinned at this end of the
+  // contract: the wire shape must never claim dirt data it doesn't have.
+  it('never includes initial_dirt, even for a bee-skinned level (see BeeCell.parseFromOldValues)', () => {
+    const beeSkinned = baseDefinition({skin: 'bees'});
+    const props = buildMazeLevelWireProperties(42, 'draft:abc123', beeSkinned);
+    expect(props).not.toHaveProperty('initial_dirt');
+    expect(props).not.toHaveProperty('initialDirt');
+  });
 });
