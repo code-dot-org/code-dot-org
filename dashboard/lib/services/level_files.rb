@@ -49,6 +49,12 @@ module Services
         level = Level.eager_load(levels_child_levels: :child_level).find_by_name(name) || Level.new(name: name)
         level.md5 = md5
         level = Services::LevelFiles.load_custom_level_xml(level_data, level)
+        # A level whose properties could not be decrypted is an empty stub, not
+        # the level on disk. Recording the file's md5 against it would make the
+        # check above short-circuit on every later seed, so the stub would
+        # survive even once a key is available. Leave md5 unset so the next
+        # seed reloads the file.
+        level.md5 = nil if level.encryption_key_missing?
         level
       end
     rescue Exception => exception

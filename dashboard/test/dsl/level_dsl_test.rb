@@ -181,6 +181,25 @@ class LevelDslTest < ActiveSupport::TestCase
     assert new_level.encrypted
   end
 
+  test 'parsing an encrypted level without a key reports the missing key' do
+    dsl_text = <<~DSL
+      name 'test external 4'
+      markdown 'regular old markdown'
+    DSL
+    encrypted_dsl_text = External.new(name: 'test external 4').encrypted_dsl_text(dsl_text)
+
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    data, _ = External.parse(encrypted_dsl_text, 'test_external_4.external', 'test external 4')
+
+    # The level cannot be seeded, but the parse must say so: seed.rake records
+    # the file's md5 only for a level it managed to read, since an md5 stored
+    # against this stub would make every later seed skip the file, leaving the
+    # level empty even once a key is available.
+    assert_nil data[:properties][:markdown]
+    assert_equal '1', data[:properties]['encrypted']
+    assert data[:encryption_key_missing]
+  end
+
   test 'editor_experiment set on new markdown level' do
     old_dsl_text = <<~DSL
       name 'new_partner_markdown'

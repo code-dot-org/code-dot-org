@@ -365,7 +365,11 @@ namespace :seed do
         # Skip any files which have not been updated since last seed. To force a
         # a level to be reseeded, clear its md5 field in the database.
         unless md5 == level_md5s_by_name[data[:name]]
-          dsl_class.setup(data, md5)
+          # A level whose properties could not be decrypted seeds as an empty
+          # stub. Recording the file's md5 against it would make the check
+          # above skip the file on every later seed, so the stub would survive
+          # even once a key is available; leave md5 unset instead.
+          dsl_class.setup(data, data[:encryption_key_missing] ? nil : md5)
         end
       rescue Exception
         puts "Error parsing #{filename}"

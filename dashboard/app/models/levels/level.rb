@@ -291,8 +291,23 @@ class Level < ApplicationRecord
     rescue Encryption::KeyMissingError
       raise if rack_env?(:production)
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
+      # `encrypted` is itself one of the properties inside the blob we just
+      # failed to read, so put it back by hand. Without it the level object
+      # looks unencrypted and LevelLoader.import_levels, which skips encrypted
+      # levels by asking `encrypted?`, seeds the stub instead. Use '1', the
+      # same value LevelDSL#encrypted writes on this path.
+      (hash['properties'] ||= {})['encrypted'] = '1'
+      @encryption_key_missing = true
     end
     hash
+  end
+
+  # True when load_level_xml could not decrypt this level's properties, so the
+  # object holds an empty stub rather than the level as it exists on disk. The
+  # seed path uses this to avoid recording the file's md5 against the stub; see
+  # Services::LevelFiles.load_custom_level.
+  def encryption_key_missing?
+    !!@encryption_key_missing
   end
 
   def should_allow_pairing?(current_script_id)

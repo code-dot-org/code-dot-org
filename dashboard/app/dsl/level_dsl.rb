@@ -13,6 +13,7 @@ class LevelDSL < BaseDSL
       instance_eval(Encryption.decrypt_object(text))
     rescue OpenSSL::Cipher::CipherError, Encryption::KeyMissingError
       puts "warning: unable to decrypt level #{@name}, skipping"
+      @encryption_key_missing = true
       return
     end
   end
@@ -22,7 +23,11 @@ class LevelDSL < BaseDSL
   end
 
   def parse_output
-    {name: @name, properties: @hash}
+    output = {name: @name, properties: @hash}
+    # Report an undecryptable level to the seed path, which must not record the
+    # file's md5 against the stub this parse produced; see parse_dsl_files.
+    output[:encryption_key_missing] = true if @encryption_key_missing
+    output
   end
 
   # Serialize all fields specified in the i18n_fields method into a hash.
