@@ -59,9 +59,10 @@ class QuizQuestion < ApplicationRecord
       return nil
     end
 
-    # id must be non-blank, not just a String
-    unless choices.all? {|c| c.is_a?(Hash) && c['id'].is_a?(String) && c['id'].present? && c['text'].is_a?(String)}
-      errors.add(:question, 'each choice must have a non-blank "id" and a string "text"')
+    # id and text must both be non-blank, not just Strings - a blank text
+    # would render as an answer choice with no visible label.
+    unless choices.all? {|c| c.is_a?(Hash) && c['id'].is_a?(String) && c['id'].present? && c['text'].is_a?(String) && c['text'].present?}
+      errors.add(:question, 'each choice must have a non-blank "id" and "text"')
       return nil
     end
 

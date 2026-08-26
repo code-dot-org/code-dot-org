@@ -88,4 +88,18 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     )
     refute question.valid?
   end
+
+  test "requires choice text to be non-blank" do
+    # An empty-string text would otherwise pass the string-type check and
+    # render as an answer choice with no visible label.
+    question = build(
+      :multiple_choice_question,
+      question: {
+        stem: 'What is 2 + 2?',
+        choices: [{id: 'a', text: ''}, {id: 'b', text: '4'}],
+        correct_choice_id: 'b'
+      }
+    )
+    refute question.valid?
+  end
 end
