@@ -1,19 +1,23 @@
 import React, {useEffect, useRef} from 'react';
 
-import {SHEET_POSES} from '../ai/images/characterSet';
-import {poseFigureSvgDataURI} from '../ai/images/poseFigures';
 import {
   AnimationPoses,
+  CharacterPose,
   orderedPoseKeys,
+  PoseRange,
   poseForFrame,
 } from '../characterAnimations';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
-// How many times each pose plays before the preview moves to the next.
-const LOOPS_PER_POSE = 3;
 // The sketch's frame rate, which pose frameDelays are counted in.
 const TICKS_PER_SECOND = 30;
+
+const POSE_TITLES: Record<CharacterPose, string> = {
+  stand: 'Idle',
+  walk: 'Walk',
+  jump: 'Jump',
+};
 
 interface AnimatedSheetPreviewProps {
   /** The sheet image (data URI or URL). */
@@ -24,18 +28,43 @@ interface AnimatedSheetPreviewProps {
 }
 
 /**
- * Plays a character set's sheet: every pose in turn, each LOOPS_PER_POSE
- * times at its own frame delay, then round again. Frames are cut from the
- * sheet the way the engine cuts them — cells row by row, wrapping at the
- * image width.
+ * Plays a character set's sheet: each pose in its own pane, side by side and
+ * looping at its own frame delay, so the whole set is visible at once.
+ * Frames are cut from the sheet the way the engine cuts them — cells row by
+ * row, wrapping at the image width.
  */
 const AnimatedSheetPreview: React.FunctionComponent<
   AnimatedSheetPreviewProps
 > = ({src, frameSize, poses, className}) => {
+  const keys = orderedPoseKeys(poses);
+  return (
+    <div className={moduleStyles.posePreviews}>
+      {keys.map(key => {
+        const at = poseForFrame(poses, poses[key]!.start);
+        return (
+          <figure key={key} className={moduleStyles.posePreview}>
+            <PoseLoop
+              src={src}
+              frameSize={frameSize}
+              range={poses[key]!}
+              className={className}
+            />
+            <figcaption>{at ? POSE_TITLES[at.pose] : key}</figcaption>
+          </figure>
+        );
+      })}
+    </div>
+  );
+};
+
+/** One pose of the sheet, looping. */
+const PoseLoop: React.FunctionComponent<{
+  src: string;
+  frameSize: {x: number; y: number};
+  range: PoseRange;
+  className?: string;
+}> = ({src, frameSize, range, className}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // The figure the current frame was drawn to, in the corner; updated
-  // straight on the element (thirty times a second is no place for state).
-  const insetRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -43,46 +72,20 @@ const AnimatedSheetPreview: React.FunctionComponent<
     if (!canvas || !ctx) {
       return;
     }
-    // The show: (pose, frame) per tick, laid end to end.
-    const sequence: number[] = [];
-    orderedPoseKeys(poses).forEach(key => {
-      const range = poses[key]!;
-      for (let loop = 0; loop < LOOPS_PER_POSE; loop++) {
-        for (let f = 0; f < range.count; f++) {
-          for (let d = 0; d < range.frameDelay; d++) {
-            sequence.push(range.start + f);
-          }
-        }
-      }
-    });
-    if (!sequence.length) {
-      return;
-    }
     const img = new Image();
     let raf = 0;
     let started = 0;
     let lastFrame = -1;
+    const ticksPerFrame = Math.max(1, range.frameDelay);
     const draw = (now: number) => {
       if (!started) {
         started = now;
       }
       const tick = Math.floor(((now - started) / 1000) * TICKS_PER_SECOND);
-      const frame = sequence[tick % sequence.length];
+      const frame =
+        range.start + (Math.floor(tick / ticksPerFrame) % range.count);
       if (frame !== lastFrame) {
         lastFrame = frame;
-        const at = poseForFrame(poses, frame);
-        if (insetRef.current && at) {
-          // A pose drawn as one row had no figure; show none beside it.
-          const figure = !SHEET_POSES.includes(at.pose);
-          insetRef.current.hidden = !figure;
-          if (figure) {
-            insetRef.current.src = poseFigureSvgDataURI(
-              at.pose,
-              at.frame,
-              at.facing
-            );
-          }
-        }
         const columns = Math.max(1, Math.floor(img.naturalWidth / frameSize.x));
         const sx = (frame % columns) * frameSize.x;
         const sy = Math.floor(frame / columns) * frameSize.y;
@@ -106,23 +109,16 @@ const AnimatedSheetPreview: React.FunctionComponent<
     };
     img.src = src;
     return () => cancelAnimationFrame(raf);
-  }, [src, frameSize.x, frameSize.y, poses]);
+  }, [src, frameSize.x, frameSize.y, range]);
 
   return (
-    <>
-      <canvas
-        ref={canvasRef}
-        className={className}
-        width={frameSize.x}
-        height={frameSize.y}
-        aria-label="Animation preview"
-      />
-      <img
-        ref={insetRef}
-        className={moduleStyles.poseInset}
-        alt="Pose reference"
-      />
-    </>
+    <canvas
+      ref={canvasRef}
+      className={className}
+      width={frameSize.x}
+      height={frameSize.y}
+      aria-label="Animation preview"
+    />
   );
 };
 
