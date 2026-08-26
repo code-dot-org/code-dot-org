@@ -1,7 +1,3 @@
-# Generates the v2 ClassLink authentication_id, "<TenantId>|<SourcedId>" — the
-# identifier the One Roster rostering API keys on. The format's passive facts
-# (separator, parsing, version marker) live in AuthenticationOption::Classlink;
-# this service performs the one validated act of building an id.
 module Services
   module Classlink
     class AuthIdGenerator < Services::Base
