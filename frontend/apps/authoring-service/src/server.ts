@@ -30,9 +30,9 @@ import {
   type ChatScope,
 } from './store/SessionStore.js';
 
-const PORT = 3737;
+const PORT = Number(process.env.PORT) || 3737;
 const SESSION_ID = 'default';
-const STUDIO_ORIGIN = 'http://localhost:3036';
+const STUDIO_ORIGIN = process.env.STUDIO_ORIGIN || 'http://localhost:3036';
 const HEARTBEAT_MS = 25_000;
 
 const bridge = await loadAuthoringBridge();

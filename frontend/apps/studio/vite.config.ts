@@ -28,7 +28,7 @@ export default defineConfig(({mode}) => {
         // Author Mode prototype: the local authoring service (drafts, embedded
         // agent, SSE). Same-origin via proxy so no CORS and SSE stays simple.
         '/authoring-api': {
-          target: 'http://localhost:3737',
+          target: process.env.AUTHORING_API_TARGET || 'http://localhost:3737',
           rewrite: p => p.replace(/^\/authoring-api/, '/api'),
         },
       },
