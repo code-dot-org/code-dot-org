@@ -33,6 +33,7 @@ import {chooseKeyColor, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
   CHARACTER_SET_THINKING_LEVEL,
+  ImageSize,
   getCharacterSetImageModel,
 } from './modelHelpers';
 import {poseFigureDataURI} from './poseFigures';
@@ -46,6 +47,7 @@ import {
   SilhouetteBands,
 } from './poseScore';
 import {loadImageFromBlob, removeKeyColor} from './removeBackground';
+import {columnSpans} from './sheetSlice';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One reference image for a frame: an earlier frame, possibly mirrored. */
@@ -141,8 +143,35 @@ export function planCharacterFrames(): FramePlan[] {
   return plan;
 }
 
-/** How many pictures a set costs, plate included; the dialog quotes it. */
+/** Every picture of the plan: the plate and each sheet frame. */
 export const CHARACTER_SET_FRAME_COUNT = planCharacterFrames().length;
+
+/**
+ * Poses whose frames are asked for as one picture: a row of frames in a
+ * single image, which the model keeps coherent because it draws them side
+ * by side, where frames asked for one at a time each rolled their own arm
+ * swing. Cut apart afterwards (sheetSlice.ts).
+ */
+export const SHEET_POSES: CharacterPose[] = ['walk'];
+
+/** A row of frames needs the room; single frames stay at the set size. */
+export const SHEET_IMAGE_SIZE: ImageSize = '2K';
+
+/** Whether a plan entry's pose is drawn as one row picture. */
+export function isSheetPose(plan: FramePlan): boolean {
+  return !plan.isBase && SHEET_POSES.includes(plan.pose);
+}
+
+/** How many pictures a set costs — one per sheet pose, one per other frame. */
+export const CHARACTER_SET_PICTURE_COUNT = planCharacterFrames().filter(
+  (step, i, plan) =>
+    !isSheetPose(step) ||
+    !plan
+      .slice(0, i)
+      .some(
+        p => isSheetPose(p) && p.pose === step.pose && p.facing === step.facing
+      )
+).length;
 
 /** The frames of the plan that make up the sheet, in sheet order. */
 export function sheetFrames(plan: FramePlan[]): FramePlan[] {
@@ -252,6 +281,35 @@ export function framePrompt(
     'proportions, outfit and art style, the same scale. ' +
     `${facingClause(plan.facing)} ${ONLY_THIS_CHARACTER} ${keyClause(key)} ` +
     `${styleClause(style)}`
+  );
+}
+
+/**
+ * The prompt for a pose's whole row of frames in one picture, drawn from the
+ * plate. The motion is described as a cycle, not posed frame by frame: the
+ * model's own sense of a walk carries the frames, and it keeps them coherent
+ * because it draws them together.
+ */
+export function sheetPrompt(
+  prompt: string,
+  plan: FramePlan,
+  frameCount: number,
+  style: ImageStyle,
+  key: KeyColor
+): string {
+  const motion =
+    plan.pose === 'walk'
+      ? 'one complete side-view walk cycle: the legs stride and the arms swing opposite to the legs, so the frames read as smooth continuous walking when played in order and the last frame leads back into the first'
+      : `one complete ${POSE_LABELS[plan.pose]} animation`;
+  return (
+    `The character: ${prompt}. The provided image shows this character. ` +
+    `Draw a sprite sheet of exactly ${frameCount} frames of this character in a single horizontal row, left to right, evenly spaced, with clear ${key.name} gaps between the frames and no frame touching another. ` +
+    `The ${frameCount} frames are ${motion}. In every frame draw the same character — same design, colors, proportions, outfit and art style, the same scale, feet on the same baseline. ` +
+    `${facingClause(
+      plan.facing
+    )} ${ONLY_THIS_CHARACTER} No frame numbers, labels, borders or grid lines. ${keyClause(
+      key
+    )} ${styleClause(style)}`
   );
 }
 
@@ -401,6 +459,43 @@ async function keyFrame(
     bounds: findOpaqueBounds(data, canvas.width, canvas.height, SOLID_ALPHA),
     bands: silhouetteBands(data, canvas.width, canvas.height, isSolid),
   };
+}
+
+/** A keyed row picture cut into its frames, left to right. */
+async function sliceSheet(
+  raw: RawImage,
+  frameCount: number,
+  style: ImageStyle,
+  key: KeyColor
+): Promise<KeyedFrame[]> {
+  const whole = await keyFrame(raw, style, key);
+  const {width, height} = whole.canvas;
+  const {data} = whole.canvas
+    .getContext('2d')!
+    .getImageData(0, 0, width, height);
+  return columnSpans(data, width, height, frameCount, SOLID_ALPHA).map(span => {
+    const canvas = document.createElement('canvas');
+    canvas.width = span.right - span.left;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d')!;
+    ctx.drawImage(
+      whole.canvas,
+      span.left,
+      0,
+      canvas.width,
+      height,
+      0,
+      0,
+      canvas.width,
+      height
+    );
+    const frameData = ctx.getImageData(0, 0, canvas.width, height).data;
+    return {
+      canvas,
+      bounds: findOpaqueBounds(frameData, canvas.width, height, SOLID_ALPHA),
+      bands: silhouetteBands(frameData, canvas.width, height, isSolid),
+    };
+  });
 }
 
 /** The figure's own band widths, from its rendered PNG. */
@@ -561,6 +656,49 @@ export async function generateCharacterSet(
   let previewPose: CharacterSetProgress['previewPose'];
   for (let i = 0; i < plan.length; i++) {
     const step = plan[i];
+    if (isSheetPose(step)) {
+      // One picture for the whole pose; its frames are the next plan entries.
+      const {frameCount} = CHARACTER_POSES.find(p => p.pose === step.pose)!;
+      onProgress?.({
+        done: i,
+        total: plan.length,
+        label: `${POSE_LABELS[step.pose]} ${
+          step.facing
+        }, all ${frameCount} frames`,
+        preview,
+        previewPose,
+      });
+      const plateURI = bytesToDataURI(raws[0].uint8Array, raws[0].mediaType);
+      const raw = await requestFrameWithRetry(
+        sheetPrompt(prompt, step, frameCount, options.style, key),
+        {
+          seed,
+          temperature: options.temperature,
+          references: [
+            step.facing === 'left' ? await mirrorDataURI(plateURI) : plateURI,
+          ],
+          imageSize: SHEET_IMAGE_SIZE,
+          model: getCharacterSetImageModel(),
+          thinkingLevel: CHARACTER_SET_THINKING_LEVEL,
+        }
+      );
+      const frames = await sliceSheet(raw, frameCount, options.style, key);
+      frames.forEach(frame => {
+        raws.push(raw);
+        keyed.push(frame);
+      });
+      const shown = framePreview(frames[frames.length - 1]);
+      if (shown) {
+        preview = shown;
+        previewPose = {
+          pose: step.pose,
+          facing: step.facing,
+          frame: frameCount - 1,
+        };
+      }
+      i += frameCount - 1;
+      continue;
+    }
     const text = step.isBase
       ? basePrompt(prompt, options.style, key)
       : framePrompt(prompt, step, options.style, key);
