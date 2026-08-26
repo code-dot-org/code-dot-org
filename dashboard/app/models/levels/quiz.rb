@@ -25,6 +25,9 @@
 #  index_levels_on_type       (type)
 #
 class Quiz < Level
+  # intro_text is shown once, on the pre-attempt 'start quiz' screen before timer/attempt begins.
+  # This is distinct from instructions which stays available in the persistent Instructions panel
+  # throughout the attempt.
   serialized_attrs %w(
     time_limit_minutes
     show_correctness
