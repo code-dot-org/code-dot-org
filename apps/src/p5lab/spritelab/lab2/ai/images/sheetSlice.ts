@@ -23,8 +23,16 @@ const MIN_GAP_FRACTION = 0.12;
 
 // A line (row or column of pixels) counts as a gap when its solid pixels are
 // below this fraction of the busiest line's: a hat brim grazing the feet of
-// the row above is a few pixels, not a frame.
-const GAP_FRACTION_OF_PEAK = 0.1;
+// the row above is a few pixels, not a frame — but a character's ankles, thin
+// as they are, are not a gap either.
+const GAP_FRACTION_OF_PEAK = 0.02;
+
+// A picture at least this much wider than tall holds a single row; only a
+// squarer one is searched for stacked rows.
+const SINGLE_ROW_ASPECT = 1.5;
+
+// Between stacked rows the gap is a real band of key colour, not a thin line.
+const MIN_ROW_GAP_FRACTION = 0.05;
 
 // Runs of `on` indexes, bridging gaps shorter than minGap.
 function runs(on: boolean[], minGap: number): Span[] {
@@ -106,8 +114,11 @@ export function frameBoxes(
   expected: number,
   alphaThreshold: number
 ): FrameBox[] {
-  const rowGap = Math.max(1, Math.floor(height * MIN_GAP_FRACTION * 0.5));
-  const bands = runs(solidRows(data, width, height, alphaThreshold), rowGap);
+  const rowGap = Math.max(1, Math.floor(height * MIN_ROW_GAP_FRACTION));
+  const bands =
+    width >= height * SINGLE_ROW_ASPECT
+      ? [{start: 0, end: height}]
+      : runs(solidRows(data, width, height, alphaThreshold), rowGap);
   const perRow = Math.max(1, Math.round(expected / Math.max(1, bands.length)));
   const colGap = Math.max(1, Math.floor((width / perRow) * MIN_GAP_FRACTION));
   const boxes: FrameBox[] = [];
