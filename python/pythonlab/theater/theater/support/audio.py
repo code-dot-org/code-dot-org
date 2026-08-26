@@ -7,7 +7,21 @@ import numpy as np
 from .constants import CHANNELS, MAX_16_BIT_VALUE, MAX_AUDIO_SECONDS, SAMPLE_RATE
 
 
-_ONLY_16_BIT_PCM = "Only 16-bit PCM WAV data is supported"
+_ONLY_INTEGER_PCM = "Only integer PCM WAV data is supported (8, 16, 24, or 32-bit)"
+
+# Silence and full scale for each width we decode. 8-bit WAV data is unsigned
+# with 128 as silence; 9 bits and up are signed two's complement.
+_PCM_SCALE = {
+  1: (128.0, 128.0),
+  2: (0.0, MAX_16_BIT_VALUE),
+  3: (0.0, 2 ** 23),
+  4: (0.0, 2 ** 31),
+}
+
+# numpy offers no 3-byte integer, so 24-bit is absent here and widened by hand.
+_PCM_DTYPES = {1: np.uint8, 2: "<i2", 4: "<i4"}
+
+_WIDTH_24_BIT = 3
 
 # Codecs a fmt chunk can name that the wave module reads: uncompressed PCM, and
 # the extensible header whose subformat GUID is PCM.
@@ -33,8 +47,8 @@ def read_samples_from_wav_bytes(wav_bytes):
       sample_width = reader.getsampwidth()
       frame_rate = reader.getframerate()
       num_frames = reader.getnframes()
-      if sample_width != 2:
-        raise ValueError(_ONLY_16_BIT_PCM)
+      if sample_width not in _PCM_SCALE:
+        raise ValueError(_ONLY_INTEGER_PCM)
       if num_channels not in (1, 2):
         raise ValueError("Only mono or stereo WAV data is supported")
       if frame_rate <= 0:
@@ -47,12 +61,14 @@ def read_samples_from_wav_bytes(wav_bytes):
         )
       # Passed straight in, so the frame bytes are released when it returns
       # rather than sitting alongside the resample that follows.
-      mono = _decode_frames(reader.readframes(num_frames), num_channels)
+      mono = _decode_frames(
+        reader.readframes(num_frames), num_channels, sample_width
+      )
   except (wave.Error, EOFError) as error:
     # The wave module's own wording is about RIFF ids and chunks, and neither
     # of its exceptions is one a student's except ValueError would catch.
     if _declares_unsupported_codec(wav_bytes):
-      raise ValueError(_ONLY_16_BIT_PCM) from error
+      raise ValueError(_ONLY_INTEGER_PCM) from error
     # An empty file reaches the end of the stream looking for the first chunk.
     raise ValueError("This is not a WAV sound file, or it is damaged") from error
   return _to_output_rate(mono, frame_rate)
@@ -92,28 +108,67 @@ def _declares_unsupported_codec(wav_bytes):
   return format_tag != _WAVE_FORMAT_PCM
 
 
-def _decode_frames(frames, num_channels):
-  """Normalized mono float32 samples from 16-bit PCM frame bytes.
+def _decode_frames(frames, num_channels, sample_width):
+  """Normalized mono float32 samples from integer PCM frame bytes.
 
   Mono or stereo only; the caller rejects anything else from the header, before
   the frames these come from are read.
   """
-  # First read whole samples (2 bytes each), cutting off any trailing incomplete sample.
-  # Then split into frames according to the number of channels, potentially dropping incomplete
-  # frames (a frame is one sample per channel).
-  # Data running short of what the header promised is common enough that the
-  # wave module allows it and other players play what is there; numpy would 
-  # otherwise refuse the buffer's size, or fail to line up two channels of different lengths.
-  raw = np.frombuffer(frames, dtype="<i2", count=len(frames) // 2)
-  raw = raw[: len(raw) - len(raw) % num_channels]
-  if num_channels == 1:
-    mono = raw.astype(np.float32)
+  # Count whole samples, then whole frames, dropping a partial one of either. A
+  # frame is one sample per channel. Data running short of what the header
+  # promised is common enough that the wave module allows it and other players
+  # play what is there; numpy would otherwise refuse the buffer's size, or fail
+  # to line up two channels of different lengths.
+  num_samples = len(frames) // sample_width
+  num_samples -= num_samples % num_channels
+  if sample_width == _WIDTH_24_BIT:
+    mono = _decode_24_bit_frames(frames, num_samples, num_channels)
   else:
-    mono = raw[0::2].astype(np.float32)
-    mono += raw[1::2]
-    mono *= 0.5
-  mono /= MAX_16_BIT_VALUE
+    raw = np.frombuffer(frames, dtype=_PCM_DTYPES[sample_width], count=num_samples)
+    if num_channels == 1:
+      mono = raw.astype(np.float32)
+    else:
+      mono = raw[0::2].astype(np.float32)
+      # Added straight from the integer view: numpy converts it in buffered
+      # pieces rather than as a second copy of the track.
+      mono += raw[1::2]
+      mono *= 0.5
+  # Averaging is linear, so an unsigned format's offset survives it and can be
+  # removed here, from half as many samples.
+  zero_point, full_scale = _PCM_SCALE[sample_width]
+  if zero_point:
+    mono -= zero_point
+  mono /= full_scale
   return mono
+
+
+def _decode_24_bit_frames(frames, num_samples, num_channels):
+  """Mono float32 from 24-bit samples, still at the format's integer scale."""
+  triples = np.frombuffer(frames, dtype=np.uint8, count=num_samples * 3)
+  triples = triples.reshape(-1, 3)
+  mono = _widen_24_bit(triples[0::num_channels])
+  if num_channels == 2:
+    mono += _widen_24_bit(triples[1::2])
+    mono *= 0.5
+  return mono
+
+
+def _widen_24_bit(triples):
+  """One channel's 24-bit samples as float32, from its rows of three bytes.
+
+  numpy has no 3-byte integer dtype, so each sample is rebuilt from its bytes,
+  accumulating in the float32 array that is returned rather than in a
+  full-width integer copy of the track.
+  """
+  # An integer cast wraps rather than clamps, so reading the top byte as int8 is
+  # what carries the sign; the two below it are unsigned place values under it.
+  # No step exceeds 2**24, which float32 still counts exactly.
+  samples = triples[:, 2].astype(np.int8).astype(np.float32)
+  samples *= 256.0
+  samples += triples[:, 1]
+  samples *= 256.0
+  samples += triples[:, 0]
+  return samples
 
 
 def read_samples_from_file(filename):

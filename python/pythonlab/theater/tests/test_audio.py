@@ -109,14 +109,16 @@ _PCM_SUBFORMAT = (
 )
 
 
-def _make_wav_bytes_with_codec(format_tag, subformat=b"", leading_chunk=b""):
+def _make_wav_bytes_with_codec(
+  format_tag, subformat=b"", leading_chunk=b"", bits_per_sample=16
+):
   """A WAV whose fmt chunk names the given codec, built by hand.
 
   The wave module writes PCM only, and its reader rejects an unsupported codec
   before any of it can be patched in place.
   """
   fmt_body = struct.pack(
-    "<HHIIHH", format_tag, 1, SAMPLE_RATE, SAMPLE_RATE * 2, 2, 16
+    "<HHIIHH", format_tag, 1, SAMPLE_RATE, SAMPLE_RATE * 2, 2, bits_per_sample
   )
   if subformat:
     fmt_body += struct.pack("<HHI", 22, 16, 0) + subformat
@@ -136,7 +138,7 @@ def test_read_names_the_codec_rather_than_calling_the_file_damaged(format_tag):
   # sends them after a problem they don't have.
   subformat = _IEEE_FLOAT_SUBFORMAT if format_tag == 0xFFFE else b""
   wav = _make_wav_bytes_with_codec(format_tag, subformat)
-  with pytest.raises(ValueError, match="16-bit PCM"):
+  with pytest.raises(ValueError, match="integer PCM"):
     read_samples_from_wav_bytes(wav)
 
 
@@ -150,7 +152,7 @@ def test_read_finds_the_codec_behind_a_leading_chunk():
   # fmt is conventionally first, but writers pad with JUNK to align the data.
   junk = b"JUNK" + struct.pack("<I", 8) + b"\x00" * 8
   wav = _make_wav_bytes_with_codec(0x0003, leading_chunk=junk)
-  with pytest.raises(ValueError, match="16-bit PCM"):
+  with pytest.raises(ValueError, match="integer PCM"):
     read_samples_from_wav_bytes(wav)
 
 
@@ -159,6 +161,118 @@ def test_read_still_calls_a_truncated_header_damaged():
   wav = _make_wav_bytes_with_codec(0x0003)
   with pytest.raises(ValueError, match="not a WAV sound file"):
     read_samples_from_wav_bytes(wav[:24])
+
+
+def _encode_pcm(values, sample_width):
+  """Integer sample values as little-endian bytes of the given width."""
+  values = np.asarray(values, dtype="<i8")
+  if sample_width == 1:
+    # 8-bit is the one unsigned width, so its values arrive offset by 128.
+    return values.astype(np.uint8).tobytes()
+  if sample_width == 3:
+    # Keep the low three bytes of each little-endian word.
+    return values.astype("<i4").view(np.uint8).reshape(-1, 4)[:, :3].tobytes()
+  return values.astype(f"<i{sample_width}").tobytes()
+
+
+def _make_wav_bytes_from_ints(values, channels, sample_width):
+  buffer = io.BytesIO()
+  with wave.open(buffer, "wb") as writer:
+    writer.setnchannels(channels)
+    writer.setsampwidth(sample_width)
+    writer.setframerate(SAMPLE_RATE)
+    writer.writeframes(_encode_pcm(values, sample_width))
+  return buffer.getvalue()
+
+
+def _full_scale(sample_width):
+  return 2 ** (8 * sample_width - 1)
+
+
+def _tolerance(sample_width):
+  """A depth's own step, or float32's resolution once the depth outruns it."""
+  return max(1 / _full_scale(sample_width), 1e-6)
+
+
+def _make_wav_bytes_at_width(samples, channels, sample_width):
+  """A WAV holding the given levels at the given depth."""
+  values = np.round(np.asarray(samples) * _full_scale(sample_width))
+  if sample_width == 1:
+    values += 128
+  return _make_wav_bytes_from_ints(values, channels, sample_width)
+
+
+_LEVELS = [0.0, 0.5, -0.5, 0.25, -0.75, 0.75]
+
+
+@pytest.mark.parametrize("sample_width", [1, 2, 3, 4])
+def test_read_accepts_every_integer_pcm_width(sample_width):
+  wav = _make_wav_bytes_at_width(_LEVELS, 1, sample_width)
+  samples = read_samples_from_wav_bytes(wav)
+  assert np.allclose(samples, _LEVELS, atol=_tolerance(sample_width))
+
+
+@pytest.mark.parametrize("sample_width", [1, 2, 3, 4])
+def test_read_averages_stereo_at_every_width(sample_width):
+  # Interleaved L/R: (0.2,0.6) and (0.4,-0.4) average to 0.4 and 0.0.
+  wav = _make_wav_bytes_at_width([0.2, 0.6, 0.4, -0.4], 2, sample_width)
+  samples = read_samples_from_wav_bytes(wav)
+  assert np.allclose(samples, [0.4, 0.0], atol=_tolerance(sample_width))
+
+
+def test_read_treats_8_bit_data_as_unsigned():
+  # 8-bit WAV is the odd one out: offset binary, where 128 is silence. Read as
+  # signed it would come out inverted and shifted a half scale.
+  wav = _make_wav_bytes_from_ints([0, 128, 255], 1, 1)
+  assert read_samples_from_wav_bytes(wav).tolist() == [-1.0, 0.0, 127 / 128]
+
+
+@pytest.mark.parametrize("sample_width", [1, 2, 3, 4])
+def test_read_maps_the_extremes_of_each_width(sample_width):
+  full_scale = _full_scale(sample_width)
+  # 8-bit counts up from zero; the signed widths count from negative full scale.
+  lowest, highest = (0, 255) if sample_width == 1 else (-full_scale, full_scale - 1)
+  zero_point = 128 if sample_width == 1 else 0
+  wav = _make_wav_bytes_from_ints([lowest, highest], 1, sample_width)
+  samples = read_samples_from_wav_bytes(wav)
+  assert samples[0] == -1.0
+  # One step short of full scale -- except at 32 bits, where float32 has no room
+  # for that step and it rounds to exactly 1.0, which the timeline clips to
+  # anyway.
+  assert samples[1] == np.float32((highest - zero_point) / full_scale)
+  assert samples[1] <= 1.0
+
+
+def test_read_widens_24_bit_samples_exactly():
+  # float32 counts integers exactly to 2**24, and every step of the byte
+  # assembly stays under that, so 24-bit input should not be approximate at
+  # all: it either lands on the sample or the assembly is wrong.
+  values = [0, 1, -1, 1234567, -1234567, 8388607, -8388608]
+  wav = _make_wav_bytes_from_ints(values, 1, 3)
+  samples = read_samples_from_wav_bytes(wav)
+  expected = (np.asarray(values, dtype=np.float64) / 2 ** 23).astype(np.float32)
+  assert samples.tolist() == expected.tolist()
+
+
+@pytest.mark.parametrize("sample_width", [1, 2, 3, 4])
+@pytest.mark.parametrize("channels", [1, 2])
+def test_read_plays_what_a_short_file_holds_at_every_width(sample_width, channels):
+  # A file cut mid-sample or mid-frame still plays what is there. The trailing
+  # partial has to be dropped per width, not per 2-byte sample.
+  wav = _make_wav_bytes_at_width([0.25, -0.25] * 4, channels, sample_width)
+  whole = read_samples_from_wav_bytes(wav)
+  for dropped in range(1, 2 * sample_width * channels):
+    samples = read_samples_from_wav_bytes(wav[:-dropped])
+    assert len(samples) <= len(whole)
+    assert np.allclose(samples, whole[: len(samples)], atol=1e-6)
+
+
+def test_read_rejects_a_width_it_cannot_decode():
+  # 40-bit PCM: the wave module reports 5 bytes a sample and reads it happily,
+  # so nothing but our own check turns it away.
+  wav = _make_wav_bytes_with_codec(0x0001, bits_per_sample=40)
+  with pytest.raises(ValueError, match="integer PCM"):
+    read_samples_from_wav_bytes(wav)
 
 
 @pytest.mark.parametrize(
