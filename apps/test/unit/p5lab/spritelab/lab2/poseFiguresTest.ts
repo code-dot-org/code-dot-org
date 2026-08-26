@@ -1,3 +1,4 @@
+import {SHEET_POSES} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {
   figureKey,
   poseFigureSvg,
@@ -6,9 +7,14 @@ import {
 import {CHARACTER_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
 describe('SpriteLab2 poseFigures', () => {
-  it('draws a distinct figure for every frame of every pose', () => {
+  it('draws a distinct figure for every frame drawn from a figure', () => {
+    // A pose drawn as one row picture takes no figures; its walk figures
+    // repeat after eight frames and are only shown, never sent.
+    const figurePoses = CHARACTER_POSES.filter(
+      p => !SHEET_POSES.includes(p.pose)
+    );
     const seen = new Set<string>();
-    CHARACTER_POSES.forEach(({pose, frameCount}) => {
+    figurePoses.forEach(({pose, frameCount}) => {
       for (let frame = 0; frame < frameCount; frame++) {
         const svg = poseFigureSvg(pose, frame);
         expect(svg.startsWith('<svg')).toBe(true);
@@ -20,7 +26,7 @@ describe('SpriteLab2 poseFigures', () => {
         seen.add(svg);
       }
     });
-    const total = CHARACTER_POSES.reduce((n, p) => n + p.frameCount, 0);
+    const total = figurePoses.reduce((n, p) => n + p.frameCount, 0);
     expect(seen.size).toBe(total);
   });
 
