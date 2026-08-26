@@ -1,0 +1,388 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-08-25T21:29:58.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 39
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 38
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 37
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 36
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 46
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 225
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 226
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 99
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 103
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 233
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 234
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 107
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 111
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "enable_micro_bit": "false",
+    "mini_app": "neighborhood",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## **Do This:**\r\n\r\n1. **Trace it:** Predict where the painter will be after the three `turn_left()` commands. Finish the comment on line 8 with your prediction.\r\n2. **Tinker:** Change the first group of `turn_left()` commands (lines 7-9) from 3 down to 1. Run it. What's different? Change it back when done.\r\n3. **Comment it:** Finish the comment on line 14, explaining what the `move()` commands below it do.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Set up painter commands\nfrom neighborhood import *\n\n# The painter starts top left corner, facing the food truck\nmove()\nmove()\nturn_left()\nturn_left()\nturn_left()\n# At this point, the painter will be ...\nmove()\nmove()\nturn_left()\n# The group of move() statement below ...\nmove()\nmove()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n1ZNnGB93UeuFZgrNJItf\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-25T21:29:58.109+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson19-predict_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson19-predict_27_28\"},{\"changed_at\":\"2026-08-25 21:32:24 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"ai_tutor_prompt_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-25 21:35:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 02:15:43 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 02:17:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 02:22:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 02:23:43 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 02:24:05 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 02:26:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 02:50:35 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

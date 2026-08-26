@@ -24,6 +24,7 @@ const definition: BlockJson = {
   previousStatement: null,
   nextStatement: null,
   style: BlockStyles.SPRITE,
+  tooltip: 'Zoom in a little, and then the world scrolls as the player moves.',
 };
 
 const generator: GeneratorFunction = block =>

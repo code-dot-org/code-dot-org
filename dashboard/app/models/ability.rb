@@ -339,7 +339,7 @@ class Ability
       can :create, UserPracticeProblemAttempt
       can [:index, :update, :show], UserPracticeProblemAttempt, user_id: user.id
       can [:index, :show], PracticeProblem
-      can [:index, :show], Challenge
+      can [:index, :show, :starter_image], Challenge
 
       # Students create and read their own challenge responses; teachers read
       # their students' responses; section peers read each other's final

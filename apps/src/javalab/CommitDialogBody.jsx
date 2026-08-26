@@ -81,5 +81,9 @@ const styles = {
     width: '98%',
     height: 75,
     resize: 'none',
+    // BaseDialog's card is hardcoded white and ignores the page theme, so the
+    // textarea must not follow a dark color scheme either
+    colorScheme: 'light',
+    color: color.default_text,
   },
 };
