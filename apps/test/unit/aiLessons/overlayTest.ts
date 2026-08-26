@@ -127,3 +127,39 @@ describe('applyOverlay', () => {
     expect(generatedStep.validation).toBe('tutor');
   });
 });
+
+describe('applyOverlay nextOverrides', () => {
+  it('rewrites a step next pointer to splice in an arc', () => {
+    const merged = applyOverlay(lesson, {
+      steps: [
+        {
+          id: 'arc-intro',
+          kind: 'panels',
+          title: 'Your path',
+          panels: [{caption: 'made for you'}],
+          next: 'after',
+          generated: true,
+        } as LessonPlan['steps'][number],
+      ],
+      pathExtensions: {},
+      rounds: {},
+      nextOverrides: {hub: 'arc-intro', ghost: 'arc-intro'},
+    });
+    // The boundary now routes into the arc; the arc rejoins authored
+    // content.  An override on an unknown step is simply unused.
+    expect(merged.steps.find(s => s.id === 'hub')?.next).toBe('arc-intro');
+    expect(merged.steps.find(s => s.id === 'arc-intro')?.next).toBe('after');
+  });
+
+  it('ignores overrides with dangling targets', () => {
+    const merged = applyOverlay(lesson, {
+      steps: [],
+      pathExtensions: {},
+      rounds: {},
+      nextOverrides: {hub: 'nowhere', fixit: 'end'},
+    });
+    // Dangling target: authored next survives.  'end' is always valid.
+    expect(merged.steps.find(s => s.id === 'hub')?.next).toBe('after');
+    expect(merged.steps.find(s => s.id === 'fixit')?.next).toBe('end');
+  });
+});

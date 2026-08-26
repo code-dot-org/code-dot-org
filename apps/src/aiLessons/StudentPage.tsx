@@ -25,6 +25,7 @@ import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/Us
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {loadLesson} from './api';
+import {generateLessonArc} from './arcGenerator';
 import {judgeBranchCondition} from './branchJudge';
 import BuildPartnerPanel from './BuildPartnerPanel';
 import ChecklistPanel from './ChecklistPanel';
@@ -77,6 +78,7 @@ import {
   hubOwning,
   LessonPlan,
   pathStepsFor,
+  resolveAdaptivity,
   SkillPath,
   stepShowsChecklist,
 } from './types';
@@ -162,6 +164,25 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // freshest overlay without joining callback dependencies.
   const overlayRef = useRef<LessonOverlay>(EMPTY_OVERLAY);
   overlayRef.current = overlay;
+  // The adaptivity dial: ?adaptivity=static|augment|full, clamped to
+  // what the author allows.  `static` disables the mastery machinery
+  // entirely — no evaluation, no generation, a classic lesson.
+  const adaptivityMode = useMemo(
+    () =>
+      resolveAdaptivity(
+        authoredLesson,
+        new URLSearchParams(window.location.search).get('adaptivity')
+      ),
+    [authoredLesson]
+  );
+  // True while the arc generator is designing the personalized lesson
+  // arc — the main area shows the generation screen instead of a step.
+  const [generatingArc, setGeneratingArc] = useState(false);
+  // Whether an arc has been generated (its splice override exists).
+  const arcPresent = Boolean(
+    authoredLesson.arcSpec &&
+      overlay.nextOverrides?.[authoredLesson.arcSpec.generateAfter]
+  );
   // Position is a step id plus the ordered path of visited ids (ending
   // with the current step).  The array index is derived — it's what the
   // tutor prompt and progress events still speak.
@@ -463,6 +484,40 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     [lesson.id]
   );
 
+  // Run the arc generator and splice the result into this student's
+  // overlay.  Returns the arc's entry step id, or undefined on failure
+  // (callers fall through to the authored span).  REPLACES the whole
+  // overlay — regeneration deliberately discards prior arc content and
+  // any remediation attached to it.
+  const runArcGeneration = useCallback(async (): Promise<
+    string | undefined
+  > => {
+    const spec = authoredLesson.arcSpec;
+    if (!authoredLesson.id || !spec) return undefined;
+    setGeneratingArc(true);
+    try {
+      const arcSteps = await generateLessonArc({
+        lesson: authoredLesson,
+        inputs: inputsRef.current,
+      });
+      if (arcSteps.length === 0) return undefined;
+      const updated: LessonOverlay = {
+        steps: arcSteps,
+        pathExtensions: {},
+        rounds: {},
+        nextOverrides: {[spec.generateAfter]: arcSteps[0].id},
+      };
+      await saveOverlay(authoredLesson.id, updated);
+      setOverlay(updated);
+      return arcSteps[0].id;
+    } catch (e) {
+      console.warn('Arc generation failed', e);
+      return undefined;
+    } finally {
+      setGeneratingArc(false);
+    }
+  }, [authoredLesson]);
+
   // Enter a hub path: jump to its first incomplete step (or replay from
   // the top when it's already done).  Navigation, not completion —
   // nothing is recorded until steps complete.
@@ -507,6 +562,30 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         completedRef.current = [...completedRef.current, step.id];
         setCompletedStepIds(completedRef.current);
       }
+
+      // The generation boundary: in full adaptivity, completing
+      // arcSpec.generateAfter with no arc yet designs one now (the
+      // generation screen shows meanwhile) and navigates into it.
+      // Failure falls through to normal resolution — the authored span
+      // is the fallback, not a special case.
+      const spec = authoredLesson.arcSpec;
+      if (
+        adaptivityMode === 'full' &&
+        spec &&
+        step.id === spec.generateAfter &&
+        !overlayRef.current.nextOverrides?.[spec.generateAfter]
+      ) {
+        const entryId = await runArcGeneration();
+        if (entryId) {
+          persistProgressEvent('checkpoint-completed', currentIndex, liveWork, {
+            path: [...path, entryId],
+            currentStepId: entryId,
+          });
+          navigateTo({kind: 'goto', stepId: entryId});
+          return;
+        }
+      }
+
       setResolving(true);
       let decision: NavDecision;
       try {
@@ -570,6 +649,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         ? progressRef.current?.mastery?.[owner.path.id]
         : undefined;
       if (
+        adaptivityMode !== 'static' &&
         owner &&
         lesson.id &&
         !priorVerdict?.mastered &&
@@ -605,6 +685,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                 if (newSteps.length > 0) {
                   const current = overlayRef.current;
                   const updated: LessonOverlay = {
+                    ...current,
                     steps: [...current.steps, ...newSteps],
                     pathExtensions: {
                       ...current.pathExtensions,
@@ -647,10 +728,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     },
     [
       lesson,
+      authoredLesson.arcSpec,
       step,
       path,
       currentIndex,
       liveWork,
+      adaptivityMode,
+      runArcGeneration,
       persistProgressEvent,
       navigateTo,
     ]
@@ -818,6 +902,29 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
             >
               →
             </button>
+            {adaptivityMode === 'full' && arcPresent && (
+              <button
+                type="button"
+                className={styles.demoNavArrow}
+                onClick={async () => {
+                  // Demo affordance: throw away this student's arc (and
+                  // any remediation on it) and design a fresh one.
+                  if (!window.confirm('Regenerate this personalized path?')) {
+                    return;
+                  }
+                  const entryId = await runArcGeneration();
+                  if (entryId) {
+                    navigateTo({kind: 'goto', stepId: entryId});
+                    persistPosition(entryId);
+                  }
+                }}
+                disabled={generatingArc}
+                aria-label="Regenerate the personalized path"
+                title="Demo: regenerate the personalized arc from the same diagnostics"
+              >
+                ⟳
+              </button>
+            )}
           </div>
           {owningHub && (
             <button
@@ -998,7 +1105,20 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       </aside>
 
       <main className={styles.labArea}>
-        {step.kind === 'hub' ? (
+        {generatingArc ? (
+          <div className={styles.arcGenerating}>
+            <div className={styles.arcGeneratingTitle}>
+              Designing your learning path…
+            </div>
+            <p>Building a plan around what you showed us, aimed at:</p>
+            <ul>
+              {(authoredLesson.arcSpec?.standards || []).map(s => (
+                <li key={s.id}>{s.text}</li>
+              ))}
+            </ul>
+            <p className={styles.muted}>This can take a minute.</p>
+          </div>
+        ) : step.kind === 'hub' ? (
           <SkillHub
             key={`${lesson.id || 'unsaved'}-${step.id}`}
             lesson={lesson}

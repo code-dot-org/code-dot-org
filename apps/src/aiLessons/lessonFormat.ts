@@ -34,6 +34,8 @@ interface RawLessonPlan {
   steps?: unknown[];
   checkpoints?: LegacyCheckpoint[];
   checklist?: LessonPlan['checklist'];
+  arcSpec?: LessonPlan['arcSpec'];
+  adaptivity?: LessonPlan['adaptivity'];
   authorInputs?: {prompt?: string};
   builtin?: boolean;
 }
@@ -160,6 +162,8 @@ export function normalizeLessonPlan(raw: unknown): LessonPlan {
     objective: plan.objective || '',
     steps,
     checklist: plan.checklist,
+    arcSpec: plan.arcSpec,
+    adaptivity: plan.adaptivity,
     authorInputs: {prompt: plan.authorInputs?.prompt || ''},
     builtin: plan.builtin,
   };

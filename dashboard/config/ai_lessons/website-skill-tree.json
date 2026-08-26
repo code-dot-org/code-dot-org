@@ -107,7 +107,122 @@
           "caption": "Pretty good — but probably not exactly what you pictured. Getting precise takes real skills."
         },
         {
-          "caption": "Up next: a skill map. Three paths — prompting, debugging, JavaScript. You choose what to work on and in what order."
+          "caption": "Let's take a quick check of what you already know — then you'll get your own skill map."
+        }
+      ]
+    },
+    {
+      "id": "assessment",
+      "kind": "questions",
+      "title": "What do you already know?",
+      "role": "checkIn",
+      "description": "A short diagnostic of the student's web vocabulary and prompt thinking. Graded first attempts and the free response are the strongest signal the lesson has about where to meet this student — in full adaptivity, the rest of the lesson is generated from them. Reassure the student there's no penalty for guessing.",
+      "questions": [
+        {
+          "id": "a-footer",
+          "type": "multipleChoice",
+          "validation": "key",
+          "prompt": "Where do you usually find the footer on a website?",
+          "options": [
+            {
+              "id": "top",
+              "label": "At the very top"
+            },
+            {
+              "id": "bottom",
+              "label": "At the very bottom",
+              "correct": true
+            },
+            {
+              "id": "side",
+              "label": "Along the left side"
+            },
+            {
+              "id": "popup",
+              "label": "In a popup window"
+            }
+          ]
+        },
+        {
+          "id": "a-header",
+          "type": "multipleChoice",
+          "validation": "key",
+          "prompt": "What does a website header usually contain?",
+          "options": [
+            {
+              "id": "name-nav",
+              "label": "The site name and main navigation",
+              "correct": true
+            },
+            {
+              "id": "legal",
+              "label": "Copyright and legal fine print"
+            },
+            {
+              "id": "comments",
+              "label": "The comments section"
+            },
+            {
+              "id": "everything",
+              "label": "The full text of every page"
+            }
+          ]
+        },
+        {
+          "id": "a-css",
+          "type": "multipleChoice",
+          "validation": "key",
+          "prompt": "Which language decides how a page LOOKS — colors, fonts, spacing?",
+          "options": [
+            {
+              "id": "html",
+              "label": "HTML"
+            },
+            {
+              "id": "css",
+              "label": "CSS",
+              "correct": true
+            },
+            {
+              "id": "js",
+              "label": "JavaScript"
+            },
+            {
+              "id": "sql",
+              "label": "SQL"
+            }
+          ]
+        },
+        {
+          "id": "a-js",
+          "type": "multipleChoice",
+          "validation": "key",
+          "prompt": "Which language makes a page REACT — respond to clicks and typing?",
+          "options": [
+            {
+              "id": "html",
+              "label": "HTML"
+            },
+            {
+              "id": "css",
+              "label": "CSS"
+            },
+            {
+              "id": "js",
+              "label": "JavaScript",
+              "correct": true
+            },
+            {
+              "id": "ftp",
+              "label": "FTP"
+            }
+          ]
+        },
+        {
+          "id": "a-prompting",
+          "type": "freeResponse",
+          "prompt": "Imagine asking an AI to build a page for your idea. What would you say to get exactly what you want?",
+          "placeholder": "Write it like you would actually type it."
         }
       ]
     },
@@ -344,5 +459,30 @@
       "next": "end",
       "description": "Free finishing time. The student rounds out their site with everything they've learned. Celebrate what they built and how: skills chosen and practiced on their own terms, then applied."
     }
-  ]
+  ],
+  "adaptivity": {
+    "default": "augment",
+    "max": "full"
+  },
+  "arcSpec": {
+    "standards": [
+      {
+        "id": "engage-ai-3",
+        "text": "Engage with AI 3: Evaluate whether AI outputs should be accepted, revised or rejected."
+      },
+      {
+        "id": "manage-ai-4",
+        "text": "Manage AI 4: Monitor and evaluate AI use throughout a problem-solving process."
+      }
+    ],
+    "exampleProjects": [
+      "a fan site for a team, artist, or game",
+      "a page for a small business or club",
+      "a portfolio for their own art or writing",
+      "a site for a cause they care about"
+    ],
+    "guidance": "Web Lab 2 only. At most 2 hubs with 2-3 paths each; every path serves exactly one standard from the list. Sandbox skill practice before project application; end with the student applying skills to their own project idea. Meet the student where the diagnostics place them: strong assessment scores earn harder, more open-ended exercises; weak ones earn scaffolded fundamentals.",
+    "generateAfter": "assessment",
+    "rejoinAt": "finalize"
+  }
 }

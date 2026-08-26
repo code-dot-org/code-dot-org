@@ -1406,3 +1406,52 @@ textarea {
   font-weight: 600;
   cursor: help;
 }
+
+// Full-adaptivity arc generation screen: shown in the main area while
+// the generator designs the student's personalized path.
+.arcGenerating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-secondary);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--text-neutral-secondary);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 560px;
+  }
+}
+
+.arcGeneratingTitle {
+  font-size: 22px;
+  font-weight: 700;
+  animation: arc-generating-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes arc-generating-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arcGeneratingTitle {
+    animation: none;
+  }
+}

@@ -301,7 +301,26 @@ class AiLessonsController < ApplicationController
       user_label = user ? (user.name.presence || user.username.presence || "Student ##{user_id}") : "Student ##{user_id}"
 
       checklist_total = lesson['checklist']&.length || 0
-      extensions = path_extensions(lesson_id, user_id)
+      overlay = read_overlay_json(lesson_id, user_id)
+      extensions = overlay['pathExtensions'] || {}
+      # Hubs come from the authored lesson AND this student's overlay —
+      # a fully generated arc's hubs live only in the latter.
+      hub_steps = ((lesson['steps'] || []) + (overlay['steps'] || [])).
+        select {|s| s.is_a?(Hash) && s['kind'] == 'hub'}
+      # A generated arc splices past the authored span between the arc
+      # spec's markers.  Those bypassed hubs are this student's fallback,
+      # not their lesson — hide them so the teacher sees only paths the
+      # student can actually reach.
+      spec = lesson['arcSpec']
+      if spec && (overlay['nextOverrides'] || {}).key?(spec['generateAfter'])
+        ids = (lesson['steps'] || []).map {|s| s['id']}
+        from = ids.index(spec['generateAfter'])
+        to = (spec['rejoinAt'] && ids.index(spec['rejoinAt'])) || ids.length
+        if from
+          bypassed = ids[(from + 1)...to] || []
+          hub_steps = hub_steps.reject {|h| bypassed.include?(h['id'])}
+        end
+      end
 
       [{
         'user_id' => user_id,
@@ -325,10 +344,11 @@ class AiLessonsController < ApplicationController
         'completed_step_ids' => parsed['completedStepIds'] || [],
         # Per-path mastery verdicts, keyed by path id.
         'mastery' => parsed['mastery'] || {},
-        'hubs' => (lesson['steps'] || []).select {|s| s['kind'] == 'hub'}.map do |hub|
+        'hubs' => hub_steps.map do |hub|
           {
             'id' => hub['id'],
             'title' => hub['title'],
+            'generated' => hub['generated'] ? true : false,
             'paths' => (hub['paths'] || []).map do |p|
               added = extensions[p['id']] || []
               {
@@ -418,12 +438,12 @@ class AiLessonsController < ApplicationController
     File.join(storage_dir, 'overlays', id, "#{user_id}.json")
   end
 
-  # The (lesson, user) overlay's per-path step extensions, or {} when no
-  # overlay exists or it doesn't parse.
-  private def path_extensions(lesson_id, user_id)
+  # The (lesson, user) overlay, or {} when none exists or it doesn't
+  # parse.
+  private def read_overlay_json(lesson_id, user_id)
     path = overlay_path(lesson_id, user_id)
     return {} unless File.exist?(path)
-    JSON.parse(File.read(path))['pathExtensions'] || {}
+    JSON.parse(File.read(path)) || {}
   rescue ArgumentError, JSON::ParserError
     {}
   end

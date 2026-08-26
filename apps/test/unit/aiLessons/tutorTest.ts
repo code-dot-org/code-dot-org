@@ -299,3 +299,28 @@ describe('skill-hub mastery framing', () => {
     expect(args.system).toContain('never as failure or punishment');
   });
 });
+
+describe('generated arc-step framing', () => {
+  beforeEach(() =>
+    mockGenerate.mockReset().mockResolvedValue({
+      output: {message: 'hi', action: 'stay'},
+    })
+  );
+
+  it('frames arc content as made-for-you, not remediation', async () => {
+    const arcLesson: LessonPlan = {
+      ...lesson,
+      steps: [
+        {...projectStep, id: 'arc-practice', generated: true} as Step,
+        sandboxStep,
+      ],
+    };
+    // No mastery verdict: this is personalized-arc content, and the
+    // remediation framing (which implies a failed judgment) must not
+    // appear.
+    await generateTutorReply(ctx({lesson: arcLesson, currentIndex: 0}), []);
+    const args = mockGenerate.mock.calls[0][1];
+    expect(args.system).toContain('GENERATED for this student from their');
+    expect(args.system).not.toContain('without\n  yet demonstrating');
+  });
+});

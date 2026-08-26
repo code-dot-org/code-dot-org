@@ -2,7 +2,12 @@ import fs from 'fs';
 import path from 'path';
 
 import {normalizeLessonPlan} from '@cdo/apps/aiLessons/lessonFormat';
-import {LabStep, QuestionsStep} from '@cdo/apps/aiLessons/types';
+import {
+  LabStep,
+  LessonPlan,
+  QuestionsStep,
+  resolveAdaptivity,
+} from '@cdo/apps/aiLessons/types';
 
 const FIXTURES_DIR = path.resolve(
   __dirname,
@@ -107,6 +112,20 @@ describe('normalizeLessonPlan', () => {
         const ids = new Set(plan.steps.map(s => s.id));
         expect(ids.size).toBe(plan.steps.length);
 
+        // An arc spec's markers must name real steps, and its standards
+        // list (what generated paths reference) must be non-empty.
+        if (plan.arcSpec) {
+          expect(ids.has(plan.arcSpec.generateAfter)).toBe(true);
+          if (plan.arcSpec.rejoinAt) {
+            expect(ids.has(plan.arcSpec.rejoinAt)).toBe(true);
+          }
+          expect(plan.arcSpec.standards.length).toBeGreaterThan(0);
+          plan.arcSpec.standards.forEach(s => {
+            expect(s.id).toBeTruthy();
+            expect(s.text).toBeTruthy();
+          });
+        }
+
         // A step may belong to at most one hub path — hub ownership is
         // how the resolver knows where a completed step returns to.
         const owners = new Map<string, string>();
@@ -148,5 +167,43 @@ describe('normalizeLessonPlan', () => {
         });
       });
     });
+  });
+});
+
+describe('adaptivity', () => {
+  const dialled = (adaptivity?: LessonPlan['adaptivity']): LessonPlan =>
+    normalizeLessonPlan({title: 'T', steps: [], adaptivity});
+
+  it('defaults to augment and clamps to the authored max', () => {
+    expect(resolveAdaptivity(dialled(undefined))).toBe('augment');
+    expect(resolveAdaptivity(dialled(undefined), 'full')).toBe('augment');
+    expect(resolveAdaptivity(dialled({default: 'augment', max: 'full'}))).toBe(
+      'augment'
+    );
+    expect(
+      resolveAdaptivity(dialled({default: 'augment', max: 'full'}), 'full')
+    ).toBe('full');
+    expect(
+      resolveAdaptivity(dialled({default: 'full', max: 'full'}), 'static')
+    ).toBe('static');
+    // Nonsense requests fall back to the authored default.
+    expect(
+      resolveAdaptivity(dialled({default: 'augment', max: 'full'}), 'chaos')
+    ).toBe('augment');
+  });
+
+  it('carries arcSpec and adaptivity through normalization', () => {
+    const plan = normalizeLessonPlan({
+      title: 'T',
+      steps: [],
+      adaptivity: {default: 'static'},
+      arcSpec: {
+        standards: [{id: 's1', text: 'Standard one'}],
+        generateAfter: 'assessment',
+      },
+    });
+    expect(plan.adaptivity).toEqual({default: 'static'});
+    expect(plan.arcSpec?.standards[0].id).toBe('s1');
+    expect(plan.arcSpec?.generateAfter).toBe('assessment');
   });
 });

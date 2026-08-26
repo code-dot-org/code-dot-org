@@ -33,8 +33,17 @@ class AiGatewayAuthController < ApplicationController
 
     # Set a little in the past to account for time drift
     issued_at_time = (Time.now - 5.seconds).to_i
-    # expire token in 1 minute
-    expiration_time = (Time.now + 1.minute).to_i
+    # Expire in 1 minute — enough for every chat-shaped call.  Hackathon
+    # AI Lessons runs long Gemini Pro generations (a full personalized
+    # lesson arc can exceed a minute), so that client type alone gets a
+    # longer window.
+    ttl =
+      if aichat_context[:clientType] == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_LESSONS_HACKATHON]
+        5.minutes
+      else
+        1.minute
+      end
+    expiration_time = (Time.now + ttl).to_i
 
     token = JWT.encode(
       {

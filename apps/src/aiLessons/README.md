@@ -156,6 +156,38 @@ Cross-cutting fields:
   steps where the AI generates something aspirational to react to.
 - Lesson-level `checklist` — project rubric the tutor reports against.
 
+### Adaptivity: one lesson, a slider of experiences
+
+A lesson JSON can back three run modes, resolved per student as
+`min(authored adaptivity.max, ?adaptivity= override ?? authored
+default)` (`resolveAdaptivity` in `types.ts`; absent field =
+augment/augment, so old lessons never change):
+
+- **static** — the authored steps verbatim.  No mastery machinery at
+  all: no evaluation, no generation, no AI beyond the tutor itself.
+- **augment** — the default.  Authored progression as written; the
+  mastery agent may extend hub paths with remediation.
+- **full** — completing `arcSpec.generateAfter` triggers the **arc
+  generator** (`arcGenerator.ts`, Gemini Pro): one call designs the
+  rest of the lesson for this student — hubs, paths, exercises — from
+  the `arcSpec` curriculum contract (standards by id, example
+  projects, prose guidance) and the student's diagnostics.  The
+  authored span between `generateAfter` and `rejoinAt` is handed to
+  the model as its exemplar and quality bar, and stays untouched as
+  the fallback: generation failure means the authored lesson simply
+  plays.  The arc lands in the overlay (spliced in via a
+  `nextOverrides` rewrite of the boundary step), so it's reload-safe,
+  reset-wipeable, teacher-visible, and every downstream system —
+  rings, navigation, tutor, mastery evaluation, remediation inside
+  the generated hubs — runs on it without knowing it was generated.
+  A ⟳ header affordance (demo) regenerates the arc from the same
+  diagnostics.
+
+Generated arcs are treated as hostile until coerced: ids sanitized
+and `arc-` namespaced, references remapped, standards restricted to
+the contract list, dangling path steps and empty hubs dropped, and
+routing forced to terminate at `rejoinAt`/'end'.
+
 ### Navigation
 
 Where to go after a step completes is decided by a **navigation

@@ -251,6 +251,56 @@ export interface ChecklistItem {
   label: string;
 }
 
+// How much of the lesson may be dynamically generated.
+//   static:  the authored steps verbatim — no mastery machinery at all.
+//   augment: authored progression plays as written; the mastery agent
+//            may extend hub paths with remediation (the default).
+//   full:    completing arcSpec.generateAfter replaces the authored
+//            span with a generated arc (authored span = the fallback);
+//            remediation stays active inside generated hubs.
+export type AdaptivityMode = 'static' | 'augment' | 'full';
+
+const ADAPTIVITY_ORDER: AdaptivityMode[] = ['static', 'augment', 'full'];
+
+export interface ArcStandard {
+  // Short id generated content references (e.g. "engage-ai-3").
+  id: string;
+  // The official standard text, verbatim.
+  text: string;
+}
+
+// The curriculum contract for generated content: what any generated
+// arc must serve.  Authored by a curriculum expert; the generator may
+// not invent standards outside this list.
+export interface ArcSpec {
+  standards: ArcStandard[];
+  // Seed ideas for personalizing project work.
+  exampleProjects?: string[];
+  // Prose constraints ("Web Lab 2 only; at most 2 hubs; …").
+  guidance?: string;
+  // Full mode: the generated arc replaces the authored steps between
+  // these two markers.  generateAfter is the boundary step; rejoinAt is
+  // authored content that survives every mode — the arc routes into it.
+  generateAfter: string;
+  rejoinAt?: string;
+}
+
+// The requested mode, clamped to what the author allows.  Absent
+// `adaptivity` means today's behavior everywhere: augment, no higher.
+export function resolveAdaptivity(
+  lesson: LessonPlan,
+  requested?: string | null
+): AdaptivityMode {
+  const authoredDefault = lesson.adaptivity?.default ?? 'augment';
+  const max = lesson.adaptivity?.max ?? authoredDefault;
+  const wanted = ADAPTIVITY_ORDER.includes(requested as AdaptivityMode)
+    ? (requested as AdaptivityMode)
+    : authoredDefault;
+  return ADAPTIVITY_ORDER.indexOf(wanted) <= ADAPTIVITY_ORDER.indexOf(max)
+    ? wanted
+    : max;
+}
+
 export interface LessonPlan {
   // 2 = step-based format.  Absent means a v1 (checkpoints) JSON, which
   // normalizeLessonPlan() migrates on load.
@@ -262,6 +312,12 @@ export interface LessonPlan {
   // Project checklist shown during project steps; the tutor reports
   // per-item progress.  Optional; runtime support lands in a later phase.
   checklist?: ChecklistItem[];
+  // The curriculum contract for generated content; required for `full`
+  // adaptivity, also grounds remediation framing.
+  arcSpec?: ArcSpec;
+  // The adaptivity slider: what students get by default, and how far a
+  // runtime override may push it.  Absent: augment / augment.
+  adaptivity?: {default?: AdaptivityMode; max?: AdaptivityMode};
   authorInputs: {
     // The free-text prompt the author originally typed.  Kept so the
     // author can tweak the prompt and regenerate later.

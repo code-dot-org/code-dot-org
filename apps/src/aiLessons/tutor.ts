@@ -151,20 +151,31 @@ function currentStepDetails(
     `  Title: ${step.title}`,
     `  Surface: ${surfaceFor(step)}`,
   ];
-  // Agent-generated practice steps: the tutor must frame them as
-  // growth, and knows exactly why they exist.
+  // Agent-generated steps: the tutor must frame them as made-for-you,
+  // and knows exactly why they exist.  Two flavors: remediation (a
+  // failed mastery verdict prescribed it) and personalized-arc content
+  // (designed from the diagnostics — nobody failed anything).
   if (step.generated) {
     const owner = hubOwning(lesson, step.id);
     const verdict = owner ? mastery?.[owner.path.id] : undefined;
-    lines.push(
-      `  This step was GENERATED for this student as targeted practice: they
+    if (verdict && !verdict.mastered) {
+      lines.push(
+        `  This step was GENERATED for this student as targeted practice: they
   completed the ${owner ? `"${owner.path.title}"` : 'skill'} path without
   yet demonstrating its objective${
-    verdict?.gaps?.length ? ` (gaps: ${verdict.gaps.join('; ')})` : ''
+    verdict.gaps?.length ? ` (gaps: ${verdict.gaps.join('; ')})` : ''
   }.  Frame it as a chance to level up — a new challenge because they're
   close — never as failure or punishment.  Do not mention judging,
   evaluation, or that an AI decided this.`
-    );
+      );
+    } else {
+      lines.push(
+        `  This step is part of a path GENERATED for this student from their
+  diagnostic answers — designed around their interests and level.  Treat
+  it exactly like an authored step; if it comes up, it was "made for
+  you", never "an AI judged you".`
+      );
+    }
   }
   if (step.kind !== 'panels' && step.description) {
     lines.push(`  Description (what the student should do — turn this into your own
