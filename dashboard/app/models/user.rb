@@ -1553,11 +1553,21 @@ class User < ApplicationRecord
 
     user_storage_id = storage_id_for_user_id(user_id)
 
-    UserScript.where(user_id: user_id, script_id: script_id).destroy_all
-    UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
-    ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
+    paranoid_destroy_all_with_retry(UserScript.where(user_id: user_id, script_id: script_id))
+    paranoid_destroy_all_with_retry(UserLevel.where(user_id: user_id, script_id: script_id))
+    paranoid_destroy_all_with_retry(ChannelToken.where(storage_id: user_storage_id, script_id: script_id)) unless user_storage_id.nil?
     TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
     CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
+  end
+
+  # If two records collide on a unique index that includes deleted_at
+  # force the second one to a distinct deleted_at so it still gets deleted.
+  def self.paranoid_destroy_all_with_retry(relation)
+    relation.find_each do |record|
+      record.destroy
+    rescue ActiveRecord::RecordNotUnique
+      record.update_column(:deleted_at, Time.current + (rand(1..999).to_f / 1000))
+    end
   end
 
   def self.find_or_create_facilitator(params, invited_by_user)
@@ -2151,4 +2161,5 @@ class User < ApplicationRecord
       errors.add(:us_state, :invalid)
     end
   end
+  private_class_method :paranoid_destroy_all_with_retry
 end
