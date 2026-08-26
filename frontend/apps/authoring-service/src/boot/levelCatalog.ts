@@ -3,6 +3,7 @@ import path from 'node:path';
 
 import type {
   ExistingLevelExperience,
+  ParsedLevel,
   ParseLevelXml,
 } from '../authoring/model.js';
 
@@ -18,10 +19,14 @@ export interface LevelCatalogContext {
 }
 
 /** Level directory under `dashboard/config/levels/custom` -> Levelbuilder type. */
+// `maze` holds both Maze and Karel-family (Bee/Farmer/Harvester/Collector)
+// levels; the coarse label here is only the pre-parse browse hint — the
+// actual per-level type is re-derived from the XML root tag in resolveLevel.
 const SCANNED_DIRECTORIES: Record<string, string> = {
   fish: 'Fish',
   music: 'Music',
   standalone_video: 'StandaloneVideo',
+  maze: 'Maze',
 };
 
 /**
@@ -111,11 +116,10 @@ export class LevelCatalog {
       return undefined;
     }
 
-    let properties: Record<string, unknown>;
+    let parsed: ParsedLevel;
     let levelType: string;
     try {
-      const parsed = this.parseLevelXml(fs.readFileSync(file, 'utf8'));
-      properties = parsed.properties ?? {};
+      parsed = this.parseLevelXml(fs.readFileSync(file, 'utf8'));
       levelType = parsed.levelType;
     } catch (error) {
       console.warn(
@@ -132,7 +136,7 @@ export class LevelCatalog {
       levelKey,
       levelType,
       levelNumericId,
-      ...projectRuntime(levelType, properties),
+      ...projectRuntime(levelType, parsed.properties ?? {}),
     };
 
     context.registerLevelProperties({
@@ -140,7 +144,7 @@ export class LevelCatalog {
         levelType,
         levelNumericId,
         levelKey,
-        properties,
+        parsed,
       ),
     });
 
@@ -165,13 +169,17 @@ function buildLevelProperties(
   levelType: string,
   id: number,
   levelKey: string,
-  properties: Record<string, unknown>,
+  parsed: ParsedLevel,
 ): Record<string, unknown> {
+  const properties = parsed.properties ?? {};
   switch (levelType) {
     case 'Fish':
       return buildFishLevelProperties(id, levelKey, properties);
     case 'Music':
       return buildMusicLevelProperties(id, levelKey, properties);
+    case 'Maze':
+    case 'Karel':
+      return buildMazeLevelProperties(id, levelKey, levelType, parsed);
     default:
       return {
         ...properties,
@@ -237,6 +245,45 @@ function buildMusicLevelProperties(
 }
 
 /**
+ * LevelProperties for a Maze/Karel-family level. Mirrors
+ * buildMazeLevelProperties in
+ * frontend/packages/authoring/src/importer/buildCourse.ts — see that
+ * function's comment for why blocks stay raw XML here (converted client-side
+ * by the maze-lab studio adapter, which has a browser DOMParser).
+ */
+function buildMazeLevelProperties(
+  id: number,
+  levelKey: string,
+  levelType: string,
+  parsed: ParsedLevel,
+): Record<string, unknown> {
+  const properties = parsed.properties ?? {};
+  return {
+    ...properties,
+    id,
+    appName: 'maze',
+    type: levelType,
+    name: levelKey,
+    isProjectLevel: false,
+    usesProjects: false,
+    hideShareAndRemix: true,
+    offerBrowserTts: false,
+    showExemplarLink: false,
+    parentLevelLink: null,
+    exemplarSources: null,
+    longInstructions: properties.long_instructions,
+    shortInstructions: properties.short_instructions,
+    skin: properties.skin,
+    ideal: properties.ideal,
+    startDirection: properties.start_direction,
+    startBlocksXml: parsed.startBlocksXml,
+    toolboxBlocksXml: parsed.toolboxBlocksXml,
+    solutionBlocksXml: parsed.solutionBlocksXml,
+    recommendedBlocksXml: parsed.recommendedBlocksXml,
+  };
+}
+
+/**
  * Repairs LevelProperties persisted by the old lazy-catalog path, which
  * registered raw XML properties instead of the wire shape above — Music
  * entries in particular lack `appName`, which fails the client's zod
@@ -280,6 +327,9 @@ function projectRuntime(
       return {runtime: 'labhost', labKey: 'oceans'};
     case 'Music':
       return {runtime: 'labhost', labKey: 'music'};
+    case 'Maze':
+    case 'Karel':
+      return {runtime: 'labhost', labKey: 'maze'};
     // A video level with no key has nothing to play; report it as unsupported
     // rather than as a video card that renders empty.
     case 'StandaloneVideo':

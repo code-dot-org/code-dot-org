@@ -8,11 +8,31 @@ export interface ParsedLevelXml {
   levelType: string;
   properties: Record<string, unknown>;
   blocks?: string;
+  // The `<xml>...</xml>` payload of each named child of <blocks>, verbatim —
+  // Blockly-family levels (Maze, Karel/Bee/Farmer/Harvester/Collector) carry
+  // their block state as legacy Blockly XML here, not in <config> JSON.
+  startBlocksXml?: string;
+  toolboxBlocksXml?: string;
+  solutionBlocksXml?: string;
+  recommendedBlocksXml?: string;
 }
 
 const ROOT_TAG_PATTERN = /^\s*<([A-Za-z][\w-]*)>/;
 const CONFIG_PATTERN = /<config>\s*<!\[CDATA\[([\s\S]*?)\]\]>\s*<\/config>/;
 const BLOCKS_PATTERN = /<blocks(?:\s[^>]*)?(?:\/>|>[\s\S]*?<\/blocks>)/;
+
+function namedBlocksPattern(tagName: string): RegExp {
+  return new RegExp(
+    `<${tagName}>\\s*(<xml[\\s\\S]*?<\\/xml>|<xml[^>]*\\/>)\\s*<\\/${tagName}>`,
+  );
+}
+
+function extractInnerXml(blocksXml: string | undefined, tagName: string) {
+  if (!blocksXml) {
+    return undefined;
+  }
+  return blocksXml.match(namedBlocksPattern(tagName))?.[1];
+}
 
 export function parseLevelXml(xml: string): ParsedLevelXml {
   const rootTagMatch = xml.match(ROOT_TAG_PATTERN);
@@ -32,10 +52,15 @@ export function parseLevelXml(xml: string): ParsedLevelXml {
   };
 
   const blocksMatch = xml.match(BLOCKS_PATTERN);
+  const blocks = blocksMatch?.[0];
 
   return {
     levelType,
     properties: config.properties ?? {},
-    blocks: blocksMatch?.[0],
+    blocks,
+    startBlocksXml: extractInnerXml(blocks, 'start_blocks'),
+    toolboxBlocksXml: extractInnerXml(blocks, 'toolbox_blocks'),
+    solutionBlocksXml: extractInnerXml(blocks, 'solution_blocks'),
+    recommendedBlocksXml: extractInnerXml(blocks, 'recommended_blocks'),
   };
 }

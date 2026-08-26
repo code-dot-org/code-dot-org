@@ -158,12 +158,19 @@ function buildExperience(
       (parsed.properties.name as string | undefined);
     const title = titleHint ?? fallbackTitle;
 
-    if (parsed.levelType === 'Fish' || parsed.levelType === 'Music') {
+    if (
+      parsed.levelType === 'Fish' ||
+      parsed.levelType === 'Music' ||
+      parsed.levelType === 'Maze' ||
+      parsed.levelType === 'Karel'
+    ) {
       const numericId = ctx.nextNumericId();
       ctx.levelProperties[String(numericId)] =
         parsed.levelType === 'Fish'
           ? buildFishLevelProperties(numericId, levelKey, parsed.properties)
-          : buildMusicLevelProperties(numericId, levelKey, parsed.properties);
+          : parsed.levelType === 'Music'
+            ? buildMusicLevelProperties(numericId, levelKey, parsed.properties)
+            : buildMazeLevelProperties(numericId, levelKey, parsed);
       return {
         id,
         origin: 'levelbuilder',
@@ -172,7 +179,12 @@ function buildExperience(
         levelKey,
         levelType: parsed.levelType,
         runtime: 'labhost',
-        labKey: parsed.levelType === 'Fish' ? 'oceans' : 'music',
+        labKey:
+          parsed.levelType === 'Fish'
+            ? 'oceans'
+            : parsed.levelType === 'Music'
+              ? 'music'
+              : 'maze',
         levelNumericId: numericId,
       };
     }
@@ -387,6 +399,48 @@ function buildMusicLevelProperties(
     parentLevelLink: null,
     exemplarSources: null,
     sharedBlocks: [],
+  };
+}
+
+/**
+ * LevelProperties for a Maze/Karel-family level (Maze, Bee, Farmer, Harvester,
+ * Collector — one game engine dispatching on `skin`). Blocks are legacy
+ * Blockly XML in the .level file (`startBlocksXml`/`toolboxBlocksXml`/
+ * `solutionBlocksXml`/`recommendedBlocksXml`, extracted by `parseLevelXml`),
+ * carried through raw — the maze-lab studio adapter converts them to the
+ * modern JSON block-state Blockly needs at mount time (Blockly's XML->JSON
+ * converter needs a browser `DOMParser`; the importer runs in Node). Raw
+ * properties are spread first so game-specific config the engine reads
+ * directly (`flower_type`, `start_direction`, …) survives untouched.
+ */
+function buildMazeLevelProperties(
+  id: number,
+  levelKey: string,
+  parsed: ParsedLevelXml,
+): Record<string, unknown> {
+  const properties = parsed.properties;
+  return {
+    ...properties,
+    id,
+    appName: 'maze',
+    type: parsed.levelType,
+    name: levelKey,
+    isProjectLevel: false,
+    usesProjects: false,
+    hideShareAndRemix: true,
+    offerBrowserTts: false,
+    showExemplarLink: false,
+    parentLevelLink: null,
+    exemplarSources: null,
+    longInstructions: properties.long_instructions,
+    shortInstructions: properties.short_instructions,
+    skin: properties.skin,
+    ideal: properties.ideal,
+    startDirection: properties.start_direction,
+    startBlocksXml: parsed.startBlocksXml,
+    toolboxBlocksXml: parsed.toolboxBlocksXml,
+    solutionBlocksXml: parsed.solutionBlocksXml,
+    recommendedBlocksXml: parsed.recommendedBlocksXml,
   };
 }
 

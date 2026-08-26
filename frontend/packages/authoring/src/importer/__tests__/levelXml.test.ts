@@ -44,6 +44,37 @@ const MUSIC_LEVEL_SELF_CLOSING_BLOCKS = `<Music>
   <blocks/>
 </Music>`;
 
+// Excerpt of dashboard/config/levels/custom/maze/20hr_farmer_stage9_1.level
+const KAREL_LEVEL = `<Karel>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "farmer"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward"/>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_dig"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>`;
+
 describe('parseLevelXml', () => {
   it('extracts the root tag as levelType and the config properties', () => {
     const parsed = parseLevelXml(FISH_LEVEL);
@@ -68,6 +99,22 @@ describe('parseLevelXml', () => {
   it('leaves blocks undefined when there is no <blocks> sibling', () => {
     const parsed = parseLevelXml(FISH_LEVEL);
     expect(parsed.blocks).toBeUndefined();
+  });
+
+  it('extracts start/toolbox/solution blocks from a Karel-family level', () => {
+    const parsed = parseLevelXml(KAREL_LEVEL);
+    expect(parsed.levelType).toBe('Karel');
+    expect(parsed.startBlocksXml).toContain('when_run');
+    expect(parsed.toolboxBlocksXml).toContain('maze_dig');
+    expect(parsed.solutionBlocksXml).toContain('maze_moveForward');
+    expect(parsed.recommendedBlocksXml).toBeUndefined();
+  });
+
+  it('leaves the named blocks fields undefined when there is no <blocks> sibling', () => {
+    const parsed = parseLevelXml(FISH_LEVEL);
+    expect(parsed.startBlocksXml).toBeUndefined();
+    expect(parsed.toolboxBlocksXml).toBeUndefined();
+    expect(parsed.solutionBlocksXml).toBeUndefined();
   });
 
   it('throws when there is no <config> CDATA block', () => {

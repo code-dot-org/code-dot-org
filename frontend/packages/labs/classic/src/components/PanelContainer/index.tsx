@@ -95,3 +95,8 @@ const PanelContainer = forwardRef<HTMLDivElement, PanelContainerProps>(
 );
 
 export default PanelContainer;
+
+export {
+  default as PanelContainerHeader,
+  type PanelContainerHeaderProps,
+} from './PanelContainerHeader';

@@ -18,7 +18,7 @@ describe.skipIf(!repoRoot)('LevelCatalog', () => {
   const catalog = LevelCatalog.scan(repoRoot as string);
 
   it('indexes every .level file in the scanned directories', () => {
-    const onDisk = ['fish', 'music', 'standalone_video'].reduce(
+    const onDisk = ['fish', 'music', 'standalone_video', 'maze'].reduce(
       (total, dir) =>
         total +
         fs
@@ -52,7 +52,9 @@ describe.skipIf(!repoRoot)('LevelCatalog', () => {
 
   it('tags each scanned directory with its Levelbuilder type', () => {
     const types = new Set(catalog.searchLevels('', 5000).map(e => e.levelType));
-    expect(types).toEqual(new Set(['Fish', 'Music', 'StandaloneVideo']));
+    expect(types).toEqual(
+      new Set(['Fish', 'Music', 'StandaloneVideo', 'Maze']),
+    );
   });
 
   it('cannot resolve a level without the authoring parser', () => {

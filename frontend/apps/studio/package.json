@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@code-dot-org/authoring": "workspace:*",
+    "@code-dot-org/blockly": "workspace:*",
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/core": "workspace:*",
@@ -28,6 +29,7 @@
     "@code-dot-org/lab-classic": "workspace:*",
     "@code-dot-org/lesson-deep-dive": "workspace:*",
     "@code-dot-org/markdown": "workspace:*",
+    "@code-dot-org/maze-lab": "workspace:*",
     "@code-dot-org/music-lab": "workspace:*",
     "@code-dot-org/oceans-lab": "workspace:*",
     "@code-dot-org/users": "workspace:*",

@@ -53,7 +53,7 @@ export interface ExistingLevelExperience extends ExperienceBase {
   levelKey: string; // real level name, e.g. 'Oceans_FishVTrash_2024'
   levelType: string; // 'Fish' | 'Music' | 'Multi' | 'Match' | 'External' | 'StandaloneVideo' | 'LevelGroup' | 'BubbleChoice' | 'GamelabJr' | ...
   runtime: 'labhost' | 'generic' | 'unsupported';
-  labKey?: 'oceans' | 'music'; // LAB_REGISTRY key when runtime is labhost
+  labKey?: 'oceans' | 'music' | 'maze'; // LAB_REGISTRY key when runtime is labhost
   levelNumericId?: number; // synthetic id for the LevelProperties wire shape
   data?: GenericLevelData; // structured payload for generic renderers
 }

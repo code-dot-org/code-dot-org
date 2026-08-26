@@ -61,7 +61,7 @@ export interface ExistingLevelExperience extends ExperienceBase {
   levelKey: string;
   levelType: string;
   runtime: 'labhost' | 'generic' | 'unsupported';
-  labKey?: 'oceans' | 'music';
+  labKey?: 'oceans' | 'music' | 'maze';
   levelNumericId?: number;
   data?: GenericLevelData;
 }
@@ -231,6 +231,10 @@ export type ApplyChange = (
 export interface ParsedLevel {
   levelType: string;
   properties: Record<string, unknown>;
+  startBlocksXml?: string;
+  toolboxBlocksXml?: string;
+  solutionBlocksXml?: string;
+  recommendedBlocksXml?: string;
   [key: string]: unknown;
 }
 
