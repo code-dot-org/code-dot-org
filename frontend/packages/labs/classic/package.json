@@ -1,0 +1,155 @@
+{
+  "name": "@code-dot-org/lab-classic",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": [
+    "lab",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/base/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/labs/base"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./dialogs": {
+      "types": "./dist/dialogs/index.d.ts",
+      "import": "./dist/dialogs/index.mjs",
+      "require": "./dist/dialogs/index.cjs"
+    },
+    "./contexts": {
+      "types": "./dist/contexts/index.d.ts",
+      "import": "./dist/contexts/index.mjs",
+      "require": "./dist/contexts/index.cjs"
+    },
+    "./instructions": {
+      "types": "./dist/instructions/index.d.ts",
+      "import": "./dist/instructions/index.mjs",
+      "require": "./dist/instructions/index.cjs"
+    },
+    "./interpreter": {
+      "types": "./dist/interpreter/index.d.ts",
+      "import": "./dist/interpreter/index.mjs",
+      "require": "./dist/interpreter/index.cjs"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.cjs"
+    },
+    "./resourcePanel": {
+      "types": "./dist/resourcePanel/index.d.ts",
+      "import": "./dist/resourcePanel/index.mjs",
+      "require": "./dist/resourcePanel/index.cjs"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.cjs"
+    },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.cjs"
+    },
+    "./redux/labSlice": {
+      "types": "./dist/redux/labSlice.d.ts"
+    },
+    "./redux/labViewSlice": {
+      "types": "./dist/redux/labViewSlice.d.ts"
+    },
+    "./redux/labSystemSlice": {
+      "types": "./dist/redux/labSystemSlice.d.ts"
+    },
+    "./redux/labProjectSlice": {
+      "types": "./dist/redux/labProjectSlice.d.ts"
+    },
+    "./redux/predictLevelSlice": {
+      "types": "./dist/redux/predictLevelSlice.d.ts"
+    },
+    "./styles/variables.scss": "./src/components/layout/variables.scss"
+  },
+  "files": [
+    "dist",
+    "src/components/layout/variables.scss"
+  ],
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "dev": "vite --config vite.demo.config.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint src/**/*.scss",
+    "stylelint:fix": "yarn run stylelint --fix",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@code-dot-org/audio": "workspace:*",
+    "@code-dot-org/blockly": "workspace:*",
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/js-interpreter": "^1.3.13",
+    "@code-dot-org/markdown": "workspace:*",
+    "@code-dot-org/progress": "workspace:*",
+    "@code-dot-org/teacher-dashboard": "workspace:*",
+    "@code-dot-org/users-classic": "workspace:*",
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@reduxjs/toolkit": "catalog:",
+    "focus-trap-react": "^11.0.4",
+    "intro.js-react": "^1.0.0",
+    "lodash": "^4.17.21",
+    "qrcode.react": "^4.2.0",
+    "query-string": "^9.2.2",
+    "react-focus-lock": "^2.13.6",
+    "react-redux": "catalog:",
+    "react-string-replace": "^1.1.1"
+  },
+  "devDependencies": {
+    "@code-dot-org/changelogs": "workspace:*",
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@eslint/js": "catalog:",
+    "@types/lodash": "^4",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "classnames": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "stylelint": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  }
+}

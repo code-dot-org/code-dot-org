@@ -1,84 +1,65 @@
-import {useEffect, useState} from 'react';
+import {registerLevelKindSchema, useApiClient} from '@code-dot-org/core/api';
+import {darkTheme} from '@code-dot-org/blockly/themes';
+import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan';
+import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
+import ThrasosRenderer from '@code-dot-org/blockly/renderers/thrasos';
+import type {BlocklyLabProps} from '@code-dot-org/lab-classic';
+import {BlocklyLab} from '@code-dot-org/lab-classic';
+import {useMemo} from 'react';
 
-import {CodeStudioConfig} from '@code-dot-org/core';
-import {
-  registerLevelKindSchema,
-  DashboardApiClient,
-} from '@code-dot-org/core/api';
-import type {
-  LevelPropertiesMap,
-  UserThemeSettings,
-} from '@code-dot-org/core/api';
-import * as Observability from '@code-dot-org/core/plugins/observability';
-
+import {createMusicApiClient, MusicApiClientProvider} from './api';
+import blocks from './blockly/blocks/simple2';
+import MusicLab from './components/MusicLab';
+import {PlayerProvider} from './contexts/PlayerContext';
 import {LevelKindSchema} from './schema';
 
-// Register the {...levelData} properties for the LevelProperties API validation
+import styles from './app.module.scss';
+
+// Register the music level kind so music-specific properties (notably
+// `levelData`) survive level-properties validation; the base parse drops
+// unknown keys otherwise.
 registerLevelKindSchema('music', LevelKindSchema);
 
-function App() {
-  const [count, setCount] = useState(0);
-  const [levelProperties, setLevelProperties] = useState<
-    LevelPropertiesMap | undefined
-  >();
-  const [theme, setTheme] = useState<UserThemeSettings | null | undefined>();
+const plugins = [ToolboxTrashcanPlugin, ScrollOptionsPlugin];
 
-  useEffect(() => {
-    Observability.logger.info('Music Lab mounted', {
-      environment: CodeStudioConfig.environment,
-      source: 'music-lab',
-    });
-    Observability.metrics.count('music_lab.app_mounted', 1, {
-      environment: CodeStudioConfig.environment,
-      source: 'music-lab',
-    });
-
-    // Right now, presume a level id. This is one that will match any mock
-    // fixture we provide, if using the mock service worker (VITE_API_MODE=msw)
-    DashboardApiClient.levels
-      .getLevelProperties({levelId: 46446})
-      .then(res => setLevelProperties(res));
-    DashboardApiClient.preferences
-      .getThemeSettings({errorCallback: () => ({})})
-      .then(res => setTheme(res));
-  }, []);
-
-  const reportObservabilityClick = () => {
-    Observability.logger.info('Music Lab observability test button clicked', {
-      clickCount: count + 1,
-      environment: CodeStudioConfig.environment,
-      source: 'music-lab',
-    });
-    Observability.metrics.count('music_lab.observability_button_clicked', 1, {
-      clickCount: count + 1,
-      environment: CodeStudioConfig.environment,
-      source: 'music-lab',
-    });
-    setCount(currentCount => currentCount + 1);
-  };
+const App = ({
+  ...props
+}: Omit<BlocklyLabProps, 'defaultSources' | 'blocklyProps'>) => {
+  const api = useApiClient();
+  const musicApi = useMemo(
+    () => (api ? createMusicApiClient(api) : undefined),
+    [api],
+  );
 
   return (
     <>
-      <h1>Music Lab</h1>
-      <div className="card">
-        <button onClick={reportObservabilityClick}>count is {count}</button>
+      {/* The generic styles to base the lab styles upon */}
+      <div className={styles.app}>
+        {/* The BlocklyLab wraps the sources and other lab reduxes */}
+        <BlocklyLab
+          {...props}
+          defaultSources={{source: {}}}
+          standaloneProjectType="music"
+          blocklyProps={{
+            theme: darkTheme,
+            renderer: ThrasosRenderer,
+            blocks,
+            plugins,
+          }}
+        >
+          {musicApi && (
+            <MusicApiClientProvider client={musicApi}>
+              {/* Wraps the music player instance and all callbacks/methods for playback */}
+              <PlayerProvider api={musicApi}>
+                {/* The lab interfaces themselves */}
+                <MusicLab />
+              </PlayerProvider>
+            </MusicApiClientProvider>
+          )}
+        </BlocklyLab>
       </div>
-      <p>Dashboard: {CodeStudioConfig.dashboardApiUrl}</p>
-      <p>
-        <strong>Level Properties</strong>
-      </p>
-      <pre style={{height: 400, overflow: 'auto'}}>
-        {levelProperties && JSON.stringify(levelProperties, null, 2)}
-      </pre>
-
-      <p>
-        <strong>Theme</strong>
-      </p>
-      <pre style={{height: 400, overflow: 'auto'}}>
-        {theme && JSON.stringify(theme, null, 2)}
-      </pre>
     </>
   );
-}
+};
 
 export default App;

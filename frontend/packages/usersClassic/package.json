@@ -1,0 +1,54 @@
+{
+  "name": "@code-dot-org/users-classic",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Minimal identity/roles shim for the ported fat-lab closure (music). Staging's real @code-dot-org/users is a different package (the account-settings page) that does not carry the redux-based CourseRoles/currentUserSlice API the ported labs/base, progress, and teacher-dashboard packages expect — this package supplies just enough of that surface for the closure to build and mount, not a real identity/session implementation.",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/usersClassic/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/usersClassic"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./redux": {
+      "types": "./dist/redux.d.ts",
+      "import": "./dist/redux.mjs",
+      "require": "./dist/redux.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test": "vitest --run --passWithNoTests",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "@reduxjs/toolkit": "catalog:"
+  },
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
+  }
+}
