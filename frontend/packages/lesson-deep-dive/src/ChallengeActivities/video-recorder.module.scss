@@ -3,8 +3,9 @@
   flex-direction: column;
   gap: 12px;
   width: 100%;
-  max-width: 600px;
+  min-height: 0;
   padding: 16px 0;
+  align-items: center;
 }
 
 .previewWrapper {
@@ -13,7 +14,7 @@
   overflow: hidden;
   background-color: #000;
   line-height: 0;
-  aspect-ratio: 9 / 16;
+  width: max-content;
 }
 
 .video {
@@ -22,6 +23,7 @@
   border-radius: 8px;
   display: block;
   object-fit: cover;
+  aspect-ratio: 9 / 16;
 }
 
 .countdownRing {
@@ -51,7 +53,6 @@
 }
 
 .recordButton {
-  align-self: flex-start;
   padding: 10px 20px;
   background-color: #2e7d32;
   color: #fff;
@@ -68,7 +69,6 @@
 }
 
 .stopButton {
-  align-self: flex-start;
   padding: 10px 20px;
   background-color: #c62828;
   color: #fff;
@@ -85,7 +85,6 @@
 }
 
 .reRecordButton {
-  align-self: flex-start;
   padding: 8px 16px;
   background-color: transparent;
   color: var(--text-neutral-primary);
