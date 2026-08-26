@@ -344,7 +344,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             <div className={moduleStyles.formRow}>
               <Checkbox
                 name="character-set"
-                label={`Make a character set: standing, walking and jumping, facing right and left (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a few minutes)`}
+                label={`Make a character set: standing, walking and jumping (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a few minutes)`}
                 size="s"
                 checked={characterSet}
                 disabled={generating}
