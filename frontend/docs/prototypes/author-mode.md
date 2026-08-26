@@ -155,6 +155,7 @@ simple level types the prototype renders without their Rails renderers:
 | --- | --- | --- |
 | Fish (Oceans) | labhost | real `@code-dot-org/oceans-lab` via `<Lab>`, `appName: 'fish'` |
 | Music | labhost | domain model says labhost, but staging has no `music` lab entrypoint registered — falls to `UnsupportedLevel` |
+| Maze | labhost | real `@code-dot-org/maze-lab` via `<Lab>`, `appName: 'maze'` — both imported and AI-authored (`create_level`) levels; Karel-family skins (Bee/Farmer/Harvester/Collector) stay unsupported (see "AI level authoring: Maze puzzles" below) |
 | External | generic | markdown renderer |
 | Multi | generic | multiple-choice renderer |
 | Match | generic | matching renderer |
@@ -250,7 +251,7 @@ exists, lab assets local; video embeds are flagged as external.
   (create_course, create_unit, create_lesson, update_lesson, update_content,
   insert_experience, move_experience, remove_experience, attach_existing_level
   — with a search over the imported level catalog — create_widget,
-  update_widget_metadata, set_adaptive_policy);
+  update_widget_metadata, create_level, update_level, set_adaptive_policy);
 - file tools (Read/Write/Edit) confined by a permission callback to the
   session's `widgets/` directory for widget source;
 - no Bash, no access to Studio/labs/platform code.
@@ -264,6 +265,58 @@ each op lands.
 Draft state is file-backed under `frontend/.authoring/sessions/<id>/`
 (gitignored): `curriculum.json`, `changes.jsonl`, `chat.jsonl`, `widgets/`.
 Survives browser refresh and service restart.
+
+## AI level authoring: Maze puzzles
+
+`create_level`/`update_level` let the agent build a new Maze-type level
+directly, rather than only attaching an existing one. The agent describes a
+puzzle as a plain-JSON grid (`0`=wall, `1`=open, `2`=start, `3`=finish,
+`4`=obstacle, `5`=combined start/finish — the same encoding
+`Subtype.initStartFinish`/`tiles.SquareType` use) plus a typed block program
+(`moveForward` / `turnLeft` / `turnRight` / `repeat`) — never hand-written
+Blockly XML. Restricted to those four block kinds because that is what the
+plain "birds" skin's toolbox can safely offer: `maze_if`/`maze_ifElse`/
+`maze_untilBlockedOrNotClear`'s `isPathForward`/`isPathLeft`/`isPathRight`
+predicates are wired into `blocks.ts`'s code generator but never implemented
+in `packages/labs/maze/src/api.ts` on this ported branch — the same class of
+gap that left Karel unsupported — so including them would let a level mount
+a toolbox block that throws the instant a learner runs it.
+
+**The solvability gate.** Before a `create_level`/`update_level` call is
+accepted, `apps/authoring-service/src/levels/mazeLevel.ts` proves the
+declared solution actually reaches the goal: a pure TypeScript simulation of
+`move`/`turn`/`isPath`/`checkSuccess` (`packages/labs/maze/src/{api,
+Validator,Subtype}.ts`), plus a BFS reachability check independent of the
+given solution, a toolbox-coverage check (the solution may only use block
+kinds the level's own toolbox lists), and a block-count budget
+(`idealBlockCount` + a small tolerance). The ported engine itself
+(`Maze.ts`/`MazeController.reset()`) is unconditionally bound to a Blockly
+`Workspace` and an `SVGSVGElement` (`document`/`window.setTimeout`
+throughout) — not headlessly drivable without a full jsdom+Blockly rig — so
+simulation, not the real engine, is what runs the gate; the two were verified
+to agree by hand-tracing real `.level` files under
+`dashboard/config/levels/custom/maze/`. A rejection returns as a normal
+correctable MCP tool error naming the specific problem (wall hit at a
+row/col, block type missing from the toolbox, budget exceeded, or an
+unreachable goal) — nothing is created or changed until the gate passes.
+
+On success the level's LevelProperties are registered under a synthetic
+numeric id in the exact wire shape `buildMazeLevelProperties` builds for a
+real imported Maze level (`maze` grid JSON, `skin`, `startDirection`,
+`startBlocksXml`/`toolboxBlocksXml`/`solutionBlocksXml` — the same legacy
+Blockly XML dialect real `.level` files use, generated server-side), so a
+draft level mounts through the exact same `<Lab>` path an imported Fish/Music
+level does — no studio changes. The typed definition (grid, block program,
+toolbox, instructions) is also written to
+`frontend/.authoring/sessions/<id>/levels/<levelId>/level.json`, mirroring
+`widgets/<id>/meta.json`, so `update_level` can read-merge-reverify-write it.
+
+Production write path (not implemented here): a real Rails adapter would
+serialize the same grid/block-program fields into a `PATCH /levels/:id`
+call with `level[<property>]` form fields — the shape
+`apps/src/levelbuilder/lesson-generator/levelApi.ts`'s `updateLevelProperty`
+already uses, against `Level.permitted_params`'s `serialized_attrs`
+allow-list.
 
 ## Author Mode UX
 
