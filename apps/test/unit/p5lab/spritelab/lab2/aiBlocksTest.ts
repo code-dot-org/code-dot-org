@@ -6,6 +6,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields', () => ({
 }));
 
 import distanceBetween from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/distanceBetween';
+import makeSpriteWithBehavior from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/makeSpriteWithBehavior';
 import predict from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/predict';
 import setImageTo from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/setImageTo';
 import whenSpriteDropped from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/whenSpriteDropped';
@@ -82,6 +83,16 @@ describe('SpriteLab2 AI model blocks', () => {
       fakeGenerator()
     ) as [string, number];
     expect(code).toBe('distanceBetween({costume: "dog"}, {costume: "food"})');
+  });
+
+  it('make sprite with behavior passes costume, location and behavior', () => {
+    const code = makeSpriteWithBehavior.generator(
+      fakeBlock({ANIMATION_NAME: '"food"'}),
+      fakeGenerator({LOCATION: '({"x":100,"y":100})', BEHAVIOR: 'draggable()'})
+    );
+    expect(code).toBe(
+      'makeSpriteWithBehavior({costume: "food"}, ({"x":100,"y":100}), draggable());\n'
+    );
   });
 
   it('when dropped with nothing below it registers an empty handler', () => {

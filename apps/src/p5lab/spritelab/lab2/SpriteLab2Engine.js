@@ -36,6 +36,10 @@ const STORY_SCENE_SPRITE_SIZE = 300;
 // Granularity of the distance reporter, in playfield units.
 const DISTANCE_STEP = 10;
 
+// Props made by the make-sprite-with-behavior block, relative to the scene's
+// default sprite size: things a character reacts to, not characters.
+const PROP_SPRITE_FRACTION = 0.25;
+
 // Extra canvas density beyond the device pixel ratio: the canvas is 400
 // logical px and the Playspace transform-scales it to ~900 CSS px on the
 // Play tab, so stock density paints ~2x2 blocks per canvas pixel.
@@ -592,6 +596,21 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     library.commands.whenSpriteDropped = callback => {
       library.addEvent('whendrop', {}, callback);
+    };
+    library.commands.makeSpriteWithBehavior = (
+      spriteArg,
+      location,
+      behavior
+    ) => {
+      const id = library.addSprite({
+        animation: spriteArg && spriteArg.costume,
+        location,
+        scale: library.defaultSpriteSize * PROP_SPRITE_FRACTION,
+      });
+      if (behavior) {
+        library.addBehavior(library.nativeSpriteMap[id], behavior);
+      }
+      return id;
     };
     // Centre-to-centre, rounded to tens so a model's table stays legible; a
     // sprite that isn't there counts as the far side of the playfield.

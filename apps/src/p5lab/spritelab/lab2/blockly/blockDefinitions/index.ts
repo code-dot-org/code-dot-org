@@ -8,6 +8,7 @@ import goToScene from './goToScene';
 import makePlatformBlocks from './makePlatformBlocks';
 import makePlatformPlayer from './makePlatformPlayer';
 import makeSpriteAtGrid from './makeSpriteAtGrid';
+import makeSpriteWithBehavior from './makeSpriteWithBehavior';
 import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
@@ -46,6 +47,7 @@ const labBlockDefinitions: {
   setImageTo,
   whenSpriteDropped,
   distanceBetween,
+  makeSpriteWithBehavior,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,

@@ -42,7 +42,7 @@
         }
       },
       {
-        "text": "**Set the scene, then ask the model.** Add a background and make your dog, food, bone and toy. Give the food, bone and toy the **draggable** behavior. Then add **when a sprite is dropped**, and inside it **set [dog] image to (predict with dogmood3)** - each slot is the distance from your dog to one thing. Press **Play** and drag things toward the dog.",
+        "text": "**Set the scene, then ask the model.** Add a background and make your dog. Make the food, bone and toy with **make new sprite at ... with behavior being draggable**, so you can move them. Then add **when a sprite is dropped**, and inside it **set [dog] image to (predict with dogmood3)** - each slot is the distance from your dog to one thing. Press **Play** and drag things toward the dog.",
         "after": {
           "tab": "Code"
         }
@@ -72,11 +72,14 @@
         },
         {
           "kind": "block",
-          "type": "gamelab_addBehaviorSimple",
+          "type": "spritelab2_makeSpriteWithBehavior",
           "inputs": {
-            "SPRITE": {
+            "LOCATION": {
               "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
+                "type": "gamelab_location_picker",
+                "fields": {
+                  "LOCATION": "{\"x\":100,\"y\":300}"
+                }
               }
             },
             "BEHAVIOR": {
