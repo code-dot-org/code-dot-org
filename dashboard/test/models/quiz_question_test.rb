@@ -6,12 +6,12 @@ class QuizQuestionTest < ActiveSupport::TestCase
     assert_equal 'QuizQuestion', QuizQuestion.find(question.id).type
   end
 
-  test "requires question_key, question_name, and question" do
-    question = build(:quiz_question, question_key: nil, question_name: nil, question: nil)
+  test "requires key, name, and content" do
+    question = build(:quiz_question, key: nil, name: nil, content: nil)
     refute question.valid?
-    assert_includes question.errors.attribute_names, :question_key
-    assert_includes question.errors.attribute_names, :question_name
-    assert_includes question.errors.attribute_names, :question
+    assert_includes question.errors.attribute_names, :key
+    assert_includes question.errors.attribute_names, :name
+    assert_includes question.errors.attribute_names, :content
   end
 
   test "a question need not be tagged with any Standard" do

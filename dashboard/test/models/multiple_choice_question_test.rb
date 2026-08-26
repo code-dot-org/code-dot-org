@@ -28,7 +28,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
   test "requires a non-blank stem" do
     question = build(
       :multiple_choice_question,
-      question: {
+      content: {
         stem: '',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
         correct_choice_id: 'b'
@@ -40,7 +40,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
   test "requires at least 2 choices" do
     question = build(
       :multiple_choice_question,
-      question: {
+      content: {
         stem: 'What is 2 + 2?',
         choices: [{id: 'a', text: '4'}],
         correct_choice_id: 'a'
@@ -52,7 +52,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
   test "requires choice ids to be unique" do
     question = build(
       :multiple_choice_question,
-      question: {
+      content: {
         stem: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'a', text: '4'}],
         correct_choice_id: 'a'
@@ -64,7 +64,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
   test "correct_choice_id must reference an existing choice" do
     question = build(
       :multiple_choice_question,
-      question: {
+      content: {
         stem: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
         correct_choice_id: 'not_a_real_id'
@@ -80,7 +80,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     # be graded as correct.
     question = build(
       :multiple_choice_question,
-      question: {
+      content: {
         stem: 'What is 2 + 2?',
         choices: [{id: '', text: '3'}, {id: 'b', text: '4'}],
         correct_choice_id: 'b'
@@ -94,7 +94,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     # render as an answer choice with no visible label.
     question = build(
       :multiple_choice_question,
-      question: {
+      content: {
         stem: 'What is 2 + 2?',
         choices: [{id: 'a', text: ''}, {id: 'b', text: '4'}],
         correct_choice_id: 'b'

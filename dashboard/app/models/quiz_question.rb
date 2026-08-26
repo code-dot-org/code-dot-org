@@ -29,9 +29,9 @@ class QuizQuestion < ApplicationRecord
   has_many :quiz_level_questions, dependent: :destroy
   has_many :levels, through: :quiz_level_questions
 
-  validates :question_key, presence: true
-  validates :question_name, presence: true
-  validates :question, presence: true
+  validates :key, presence: true
+  validates :name, presence: true
+  validates :content, presence: true
 
   # preview/stable/sunsetting units
   def used_in_published_unit?
@@ -50,25 +50,25 @@ class QuizQuestion < ApplicationRecord
     false
   end
 
-  # Shared by subtypes whose `question` includes a "choices" array. Returns
-  # the set of choice ids, or nil (after recording an error on `question`) if
+  # Shared by subtypes whose `content` includes a "choices" array. Returns
+  # the set of choice ids, or nil (after recording an error on `content`) if
   # the shape is invalid.
   protected def validate_choices(choices)
     unless choices.is_a?(Array) && choices.length >= 2
-      errors.add(:question, 'must have at least 2 "choices"')
+      errors.add(:content, 'must have at least 2 "choices"')
       return nil
     end
 
     # id and text must both be non-blank, not just Strings - a blank text
     # would render as an answer choice with no visible label.
     unless choices.all? {|c| c.is_a?(Hash) && c['id'].is_a?(String) && c['id'].present? && c['text'].is_a?(String) && c['text'].present?}
-      errors.add(:question, 'each choice must have a non-blank "id" and "text"')
+      errors.add(:content, 'each choice must have a non-blank "id" and "text"')
       return nil
     end
 
     choice_ids = choices.map {|c| c['id']}
     unless choice_ids.uniq.length == choice_ids.length
-      errors.add(:question, '"choices" ids must be unique')
+      errors.add(:content, '"choices" ids must be unique')
       return nil
     end
 

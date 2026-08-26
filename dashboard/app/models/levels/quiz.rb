@@ -77,9 +77,9 @@ class Quiz < Level
       {
         id: question.id,
         type: question.type,
-        questionName: question.question_name,
-        stem: question.question['stem'],
-        choices: question.question['choices'],
+        questionName: question.name,
+        stem: question.content['stem'],
+        choices: question.content['choices'],
         page: quiz_level_question.page,
       }
     end

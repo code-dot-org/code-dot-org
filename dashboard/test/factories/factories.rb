@@ -2493,15 +2493,15 @@ FactoryBot.define do
   end
 
   factory :quiz_question do
-    sequence(:question_key) {SecureRandom.uuid}
-    sequence(:question_name) {|n| "Question #{n}"}
-    question {{stem: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Question #{n}"}
+    content {{stem: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
   end
 
   factory :multiple_choice_question, class: MultipleChoiceQuestion do
-    sequence(:question_key) {SecureRandom.uuid}
-    sequence(:question_name) {|n| "Multiple choice question #{n}"}
-    question do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Multiple choice question #{n}"}
+    content do
       {
         stem: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}, {id: 'c', text: '5'}],

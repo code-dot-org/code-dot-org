@@ -21,7 +21,7 @@
 class MultipleChoiceQuestion < QuizQuestion
   # Exactly one correct answer chosen from a list of choices.
   #
-  # `question` shape:
+  # `content` shape:
   #   {
   #     "stem" => "What is 2 + 2?",
   #     "choices" => [{"id" => "a", "text" => "3"}, {"id" => "b", "text" => "4"}, ...],
@@ -39,16 +39,16 @@ class MultipleChoiceQuestion < QuizQuestion
   # response_data shape: {"selectedChoiceId" => "b"}
   def grade(response_data)
     selected = response_data.is_a?(Hash) ? response_data['selectedChoiceId'] : nil
-    correct = selected.present? && selected == question['correct_choice_id']
+    correct = selected.present? && selected == content['correct_choice_id']
     {score: correct ? 1 : 0, max_score: 1}
   end
 
   private def validate_question_shape
-    return if question.blank?
-    q = question.deep_stringify_keys
+    return if content.blank?
+    q = content.deep_stringify_keys
 
     unless q['stem'].is_a?(String) && q['stem'].present?
-      errors.add(:question, 'must have a non-blank "stem"')
+      errors.add(:content, 'must have a non-blank "stem"')
       return
     end
 
@@ -57,7 +57,7 @@ class MultipleChoiceQuestion < QuizQuestion
 
     correct_choice_id = q['correct_choice_id']
     unless correct_choice_id.is_a?(String) && choice_ids.include?(correct_choice_id)
-      errors.add(:question, '"correct_choice_id" must reference one of the "choices"')
+      errors.add(:content, '"correct_choice_id" must reference one of the "choices"')
     end
   end
 end

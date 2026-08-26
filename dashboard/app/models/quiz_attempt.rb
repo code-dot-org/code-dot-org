@@ -79,7 +79,7 @@ class QuizAttempt < ApplicationRecord
         selected_choice_id: response.response_data['selectedChoiceId'],
         correct: (level.show_correctness? && graded) ? response.score == response.max_score : nil,
         explanation: reveal_answer ? response.quiz_question.explanation : nil,
-        correct_choice_id: reveal_answer ? response.quiz_question.question['correct_choice_id'] : nil
+        correct_choice_id: reveal_answer ? response.quiz_question.content['correct_choice_id'] : nil
       }
     end
   end
