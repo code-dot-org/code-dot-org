@@ -111,11 +111,11 @@ function CourseOverview() {
   }
   return (
     <div className={`${styles.courseLayout} ${styles.courseLayoutAuthor}`}>
-      {content}
       <AuthorSidebar
         scope={{courseId: course.id}}
         scopeLabel={course.displayName}
       />
+      {content}
     </div>
   );
 }

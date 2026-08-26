@@ -100,8 +100,8 @@ function CourseList() {
   }
   return (
     <div className={`${styles.courseLayout} ${styles.courseLayoutAuthor}`}>
-      {content}
       <AuthorSidebar scope={{}} scopeLabel="All curriculum" />
+      {content}
     </div>
   );
 }
