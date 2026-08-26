@@ -378,6 +378,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               uploadFiles({
                 files,
                 buildAssetUrl,
+                channelId,
                 onUploadFinished,
                 onAssetUploaded,
               })
@@ -385,7 +386,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
           }
         },
       }),
-      [canUploadAssets, dispatch, buildAssetUrl, onAssetUploaded]
+      [canUploadAssets, dispatch, buildAssetUrl, channelId, onAssetUploaded]
     );
 
     return (
@@ -432,6 +433,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               multimodalAvailable={canUploadAssets}
               jsonSchemaResponseCallback={jsonSchemaResponseCallback}
               levelName={levelName}
+              channelId={channelId}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}
               onAssetUploaded={onAssetUploaded}

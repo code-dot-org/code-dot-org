@@ -63,16 +63,21 @@ export async function assetToFilePart(
 
 /**
  * Converts a model generated file to a ChatAsset by uploading the file's contents to the user's project.
+ *
+ * channelId records which project the file was written to, so the asset stays
+ * resolvable when its message is replayed with a different project open.
  */
 export async function generatedFileToAsset(
   file: GeneratedFile,
   buildAssetUrl: (asset: ChatAsset) => string,
-  accepts: readonly string[]
+  accepts: readonly string[],
+  channelId?: string
 ): Promise<ChatAsset> {
   const {filename, fileBuffer} = prepareGeneratedFile(file, accepts);
   const asset: ChatAsset = {
     filename,
     source: AssetSource.PROJECT,
+    channelId,
   };
   const assetUrl = buildAssetUrl(asset);
 

@@ -44,6 +44,7 @@ interface UserChatMessageEditorProps {
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
   levelName?: UploadButtonProps['levelName'];
+  channelId?: UploadButtonProps['channelId'];
   buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
   hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
   onAssetUploaded?: UploadButtonProps['onAssetUploaded'];
@@ -66,6 +67,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   currentLevelId,
   lessonId,
   levelName,
+  channelId,
   hasStarterAssets,
   buildAssetUrl,
   uploadDisabled,
@@ -183,11 +185,12 @@ const UserChatMessageEditor: React.FunctionComponent<
         .filter(({type}) => acceptedFileTypes.includes(type))
         .map(item => item.getAsFile())
         .filter(item => item !== null);
-      dispatch(uploadFiles({files, buildAssetUrl, onAssetUploaded}));
+      dispatch(uploadFiles({files, buildAssetUrl, channelId, onAssetUploaded}));
     },
     [
       canUploadFiles,
       buildAssetUrl,
+      channelId,
       dispatch,
       acceptedFileTypes,
       onAssetUploaded,
@@ -228,6 +231,7 @@ const UserChatMessageEditor: React.FunctionComponent<
             <UploadButton
               isDisabled={!!uploadDisabled || disabled}
               levelName={levelName}
+              channelId={channelId}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
               acceptedFileTypes={acceptedFileTypes}

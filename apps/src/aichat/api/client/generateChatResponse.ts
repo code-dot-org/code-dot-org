@@ -46,7 +46,8 @@ export async function generateChatResponse(
   storedMessages: CompletedChatMessage[],
   modelParameters: ModelParameters,
   buildAssetUrl: (asset: ChatAsset) => string,
-  levelSystemPrompt?: string
+  levelSystemPrompt?: string,
+  channelId?: string
 ) {
   // Check input for safety.
   const userInputSafe = await isTextSafe(
@@ -128,7 +129,8 @@ export async function generateChatResponse(
       asset = await generatedFileToAsset(
         file,
         buildAssetUrl,
-        SafeAndSupportedImageTypes // Currently only image files are supported.
+        SafeAndSupportedImageTypes, // Currently only image files are supported.
+        channelId
       );
     } catch (error) {
       // Log and skip files with unsupported or unrecognized media types so the

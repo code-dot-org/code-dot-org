@@ -17,26 +17,35 @@ export const getShortName = (studentName: string): string => {
 
 /**
  * Generates a URL for the given asset.
+ *
+ * An asset that records its own project or level resolves against that, and
+ * the channelId and levelName arguments are only the fallback for assets
+ * stored before those fields existed. Without this an asset resolves against
+ * whatever project happens to be open, which is not the project it was
+ * written to whenever its message is replayed or rendered elsewhere.
  */
 export function getAssetUrl(
   asset: ChatAsset,
   channelId?: string,
   levelName?: string
 ) {
-  if (asset.source === 'project' && channelId) {
-    return `/v3/assets/${channelId}/${encodeURIComponent(
+  const assetChannelId = asset.channelId ?? channelId;
+  const assetLevelName = asset.levelName ?? levelName;
+
+  if (asset.source === 'project' && assetChannelId) {
+    return `/v3/assets/${assetChannelId}/${encodeURIComponent(
       asset.bucketKey ?? asset.filename
     )}`;
   }
 
-  if (asset.source === 'level' && levelName) {
-    return `/level_starter_assets/${levelName}/${encodeURIComponent(
+  if (asset.source === 'level' && assetLevelName) {
+    return `/level_starter_assets/${assetLevelName}/${encodeURIComponent(
       asset.filename
     )}`;
   }
 
-  if (asset.source === 'level_uuid' && levelName) {
-    return `/level_starter_assets/${levelName}/uuid/${encodeURIComponent(
+  if (asset.source === 'level_uuid' && assetLevelName) {
+    return `/level_starter_assets/${assetLevelName}/uuid/${encodeURIComponent(
       asset.filename
     )}`;
   }
