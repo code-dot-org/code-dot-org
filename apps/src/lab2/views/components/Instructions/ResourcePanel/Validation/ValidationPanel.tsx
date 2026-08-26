@@ -1,6 +1,8 @@
 import React from 'react';
 
 import ValidationButton from '@cdo/apps/lab2/views/components/Instructions/ValidationButton';
+import {getTranslatedResult} from '@cdo/apps/lab2/views/components/Instructions/validationHelpers';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   resourcePanelValidationTableElementId,
@@ -24,20 +26,27 @@ const ValidationPanel: React.FC<ValidationSettings> = ({
   isValidating,
   isValidateDisabled,
 }) => {
+  const validationResults = useAppSelector(
+    state => state.lab.validationState.validationResults
+  );
+
+  const results = validationResults ?? [];
+  // Tests read PENDING while a run is in flight, so wait for the last one.
+  const hasFinished =
+    results.length > 0 && results.every(result => result.result !== 'PENDING');
+  const spokenResults = hasFinished
+    ? results
+        .map(result => `${result.message}: ${getTranslatedResult(result)}`)
+        .join('. ')
+    : '';
+
   return (
     <div className={validationStyles.validationPanel}>
       <div className={validationStyles.validationBubble}>
-        {/* On the wrapper, not the table: a live region must exist before the
-            content it announces, and the table is empty until there are
-            results. */}
-        <div
-          id={resourcePanelValidationTableElementId}
-          aria-live="polite"
-          aria-atomic="true"
-        >
+        <div id={resourcePanelValidationTableElementId}>
           <ValidationTable />
         </div>
-        {/* Swapping to "Stop validation" announces the run. */}
+        {/* The button swaps to "Stop validation", which announces the run. */}
         <div id={resourcePanelValidateButtonElementId} role="status">
           <ValidationButton
             onValidate={onValidate}
@@ -46,6 +55,10 @@ const ValidationPanel: React.FC<ValidationSettings> = ({
             isValidateDisabled={isValidateDisabled}
           />
         </div>
+      </div>
+      {/* Speaks the outcome; the table is there to be navigated. */}
+      <div role="status" className={validationStyles.srOnly}>
+        {spokenResults}
       </div>
     </div>
   );

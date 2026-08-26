@@ -86,7 +86,7 @@ export default class ConsoleManager {
   }
 
   // xterm ships .live-region as assertive, so writes interrupt the screen
-  // reader. Not its parent, which also holds the browsable row list.
+  // reader. Its parent also holds the browsable row list.
   // Writing focuses the terminal for programs asking for input. Validation
   // never asks, so it should leave focus alone.
   public setFocusOnWrite(focusOnWrite: boolean) {

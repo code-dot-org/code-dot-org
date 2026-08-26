@@ -63,7 +63,8 @@ describe('ValidationPanel', () => {
     </Provider>
   );
 
-  const liveRegion = () => screen.getByRole('status');
+  const buttonAnnouncer = () =>
+    screen.getByRole('button').closest('[role="status"]');
   const resultsTable = () =>
     screen.getByRole('table', {name: 'Validation Results'});
 
@@ -76,12 +77,12 @@ describe('ValidationPanel', () => {
   it('announces a run starting by swapping the button', async () => {
     setResults();
     const {rerender} = render(panel(false));
-    expect(liveRegion()).toHaveTextContent('Validate');
+    expect(buttonAnnouncer()).toHaveTextContent('Validate');
 
     rerender(panel(true));
 
     await waitFor(() =>
-      expect(liveRegion()).toHaveTextContent('Stop validation')
+      expect(buttonAnnouncer()).toHaveTextContent('Stop validation')
     );
   });
 
@@ -100,14 +101,20 @@ describe('ValidationPanel', () => {
     expect(screen.getByRole('button')).toHaveFocus();
   });
 
-  it('reads the rows out as they land', () => {
+  it('reads the results out once a run finishes', () => {
     setResults([SKIPPED]);
     render(panel());
 
-    const announced = resultsTable().closest('[aria-live="polite"]');
-    expect(announced).not.toBeNull();
-    expect(announced).toHaveTextContent('Painter should end at (3, 3)');
-    expect(announced).toHaveTextContent('Skip');
+    expect(
+      screen.getByText('Painter should end at (3, 3): Skip')
+    ).toBeInTheDocument();
+  });
+
+  it('says nothing while a test is still pending', () => {
+    setResults([PENDING]);
+    render(panel(true));
+
+    expect(screen.queryByText(/Painter should end at \(3, 3\):/)).toBeNull();
   });
 
   it('names the results table for assistive tech', () => {
