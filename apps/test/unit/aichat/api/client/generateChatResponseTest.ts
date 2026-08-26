@@ -93,12 +93,12 @@ describe('generateChatResponse', () => {
       output: undefined,
     } as unknown as Awaited<ReturnType<typeof generateText>>);
     // The asset lives in another project, as it does after a level change.
-    global.fetch = jest.fn().mockResolvedValue({
+    jest.spyOn(global, 'fetch').mockResolvedValue({
       ok: false,
       status: 404,
       headers: new Map(),
       arrayBuffer: async () => new ArrayBuffer(0),
-    }) as unknown as typeof global.fetch;
+    } as unknown as Response);
   });
 
   afterEach(() => {
