@@ -88,18 +88,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    justify-content: flex-end;
+    gap: 8px;
     flex: 1 1 0;
     min-width: 0;
     height: 100%;
     margin: 0;
 
+    // Figures stand on one baseline above their captions.
     canvas {
-      flex: 1 1 auto;
+      flex: 0 1 auto;
       min-height: 0;
       width: auto;
       max-width: 100%;
+      max-height: calc(100% - 24px);
       object-fit: contain;
+      object-position: bottom;
     }
 
     figcaption {
