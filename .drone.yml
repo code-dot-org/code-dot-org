@@ -316,7 +316,7 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
+      - git clone --branch $DRONE_SOURCE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the fully-built project and resulting database, but don't
@@ -340,7 +340,7 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-staging-ci-build-PR-74906.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -357,11 +357,12 @@ trigger:
   branch:
     - "staging"
     - "staging-next"
+    - "encryption-unit-test-coverage"
   event:
-    - push
+    - pull_request
 
 ---
 kind: signature
-hmac: b7c4aa7434ba8933cc99f6a2a3d4c5c403941f36c21d23b6896444aa3b507ed5
+hmac: 6cd46bc130f7853f24a436cbeebcd58c861909dbe1427bbfbee6674b2b9bd171
 
 ...
