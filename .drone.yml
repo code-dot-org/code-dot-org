@@ -234,8 +234,6 @@ steps:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly passed to the corresponding
       # config value in test.yml.erb.
-      PROPERTIES_ENCRYPTION_KEY:
-        from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
@@ -366,6 +364,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 9ee193103461bb8af7b7d2b0b6eb9a4bb9a0c7079097b9b0ca4e8ea75f0bc543
+hmac: d3509c90f6fe3fcb4ccc7ba8d845c667d14bdcfa499c38649bd9d99fd317f737
 
 ...
