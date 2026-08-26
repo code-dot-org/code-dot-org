@@ -1,13 +1,15 @@
-import {Button, Typography} from '@mui/material';
+import {Button, IconButton, Typography} from '@mui/material';
 import {Link} from '@tanstack/react-router';
 import {useMemo, useRef, useState} from 'react';
 
 import type {CourseModel, Lesson, Unit} from '@code-dot-org/authoring';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {authoringApi} from '../api';
 import {useCanAuthor} from '../authorGate';
 
 import AuthorSidebar from './AuthorSidebar';
+import ContentComposer from './ContentComposer';
 import ExperienceStage, {type StageEvent} from './ExperienceStage';
 import OutlineRail from './OutlineRail';
 import TutorDock, {type TutorDockHandle} from './TutorDock';
@@ -27,7 +29,11 @@ interface LessonPlayerProps {
  * the deterministic learner path (previous/next through the authored
  * sequence). The optional tutor rides the same stage.
  */
-export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) {
+export default function LessonPlayer({
+  course,
+  unit,
+  lesson,
+}: LessonPlayerProps) {
   const canAuthor = useCanAuthor();
   const [studentView, setStudentView] = useState(false);
   const [tutorOn, setTutorOn] = useState(false);
@@ -38,6 +44,9 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
     string | undefined
   >(() => lesson.experiences[0]?.id);
   const [insertPosition, setInsertPosition] = useState<number | undefined>();
+  const [editingContentId, setEditingContentId] = useState<
+    string | undefined
+  >();
   const [inputOverrides, setInputOverrides] = useState<
     Record<string, Record<string, unknown>>
   >({});
@@ -76,6 +85,7 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
     const experience = experiences[index];
     setActiveExperienceId(experience?.id);
     setInsertPosition(undefined);
+    setEditingContentId(undefined);
     if (tutorOn && experience) {
       void tutorRef.current?.push({
         kind: 'experience_shown',
@@ -99,14 +109,14 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
   };
 
   return (
-    <>
+    <div className={styles.playerFrame}>
       <div className={styles.lessonHeaderBar}>
         <Link
           to="/author/$courseId"
           params={{courseId: course.id}}
           aria-label="Back to course"
         >
-          ←
+          <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
         </Link>
         <div className={styles.lessonHeaderTitles}>
           <Typography variant="body4">
@@ -170,16 +180,49 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
 
         <div className={styles.stageColumn}>
           <div className={styles.stageScroll}>
+            {active && authorMode && active.kind === 'content' && (
+              <div className={styles.contentEditBar}>
+                {editingContentId === active.id ? undefined : (
+                  <IconButton
+                    size="small"
+                    aria-label="Edit content"
+                    onClick={() => setEditingContentId(active.id)}
+                  >
+                    <FontAwesomeV6Icon
+                      iconName="pen-to-square"
+                      iconStyle="solid"
+                    />
+                  </IconButton>
+                )}
+              </div>
+            )}
             {active ? (
-              <ExperienceStage
-                key={active.id}
-                experience={
-                  active.kind === 'widget' && inputOverrides[active.id]
-                    ? {...active, defaultInput: inputOverrides[active.id]}
-                    : active
-                }
-                onStageEvent={onStageEvent}
-              />
+              active.kind === 'content' && editingContentId === active.id ? (
+                <ContentComposer
+                  submitLabel="Save"
+                  initialTitle={active.title}
+                  initialMarkdown={active.markdown}
+                  onCancel={() => setEditingContentId(undefined)}
+                  onSubmit={async ({title, markdown}) => {
+                    await authoringApi.applyChange({
+                      op: 'updateContent',
+                      experienceId: active.id,
+                      patch: {title, markdown},
+                    });
+                    setEditingContentId(undefined);
+                  }}
+                />
+              ) : (
+                <ExperienceStage
+                  key={active.id}
+                  experience={
+                    active.kind === 'widget' && inputOverrides[active.id]
+                      ? {...active, defaultInput: inputOverrides[active.id]}
+                      : active
+                  }
+                  onStageEvent={onStageEvent}
+                />
+              )
             ) : (
               <EmptyLesson lesson={lesson} showPlan={authorMode} />
             )}
@@ -240,7 +283,7 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
           />
         )}
       </div>
-    </>
+    </div>
   );
 }
 

@@ -97,7 +97,7 @@ export default function MultiLevel({
           );
         })}
       </div>
-      <div style={{marginTop: 12}}>
+      <div className={styles.checkRow}>
         <Button
           variant="contained"
           size="small"

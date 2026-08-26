@@ -74,11 +74,29 @@ export const WIDGET_APP_SHIM_JS = String.raw`
     }
   });
 
+  // Reports only on change: the poll below calls this on a timer for the
+  // life of the view, so a dedupe keeps that from spamming the host with an
+  // identical message every tick.
+  let lastReportedWidth = -1;
+  let lastReportedHeight = -1;
   function reportSize() {
-    notify('ui/notifications/size-changed', {
-      width: document.documentElement.scrollWidth,
-      height: document.body.scrollHeight,
-    });
+    const width = document.documentElement.scrollWidth;
+    const height = document.body.scrollHeight;
+    if (width === lastReportedWidth && height === lastReportedHeight) {
+      return;
+    }
+    lastReportedWidth = width;
+    lastReportedHeight = height;
+    notify('ui/notifications/size-changed', {width, height});
+  }
+
+  // A self-rescheduling setTimeout, not setInterval: observed, a sandboxed
+  // srcdoc iframe (sandbox="allow-scripts", no allow-same-origin) can throttle
+  // setInterval to a single tick — each setTimeout call is a fresh
+  // registration, which keeps firing where the recurring timer stalls.
+  function pollSize() {
+    reportSize();
+    setTimeout(pollSize, 200);
   }
 
   window.McpApp = {
@@ -93,10 +111,18 @@ export const WIDGET_APP_SHIM_JS = String.raw`
         appCapabilities: appCapabilities || {},
       });
       notify('ui/notifications/initialized', {});
+      // ResizeObserver's callback delivery shares the rendering-lifecycle
+      // gate requestAnimationFrame uses, and a sandboxed srcdoc iframe
+      // (sandbox="allow-scripts", no allow-same-origin) can sit outside that
+      // gate entirely — observed: rAF callbacks never fire there, so neither
+      // does ResizeObserver, and tool-input-driven content growth never gets
+      // reported. pollSize's setTimeout chain, proven to keep firing in that
+      // same iframe, is the mechanism that actually delivers size changes;
+      // ResizeObserver stays on as a same-tick fast path where it does fire.
       if (window.ResizeObserver) {
         new ResizeObserver(reportSize).observe(document.body);
       }
-      setTimeout(reportSize, 0);
+      pollSize();
       return (result && result.hostContext) || {};
     },
 

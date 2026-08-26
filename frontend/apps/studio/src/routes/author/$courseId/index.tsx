@@ -1,6 +1,8 @@
 import {Typography} from '@mui/material';
 import {createFileRoute, Link} from '@tanstack/react-router';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tags from '@code-dot-org/component-library/tags';
 import {Loading} from '@code-dot-org/lab';
 
 import {
@@ -51,7 +53,10 @@ function CourseOverview() {
       <div className={styles.coursePage}>
         <div>
           <Link to="/author">
-            <Typography variant="body4">← All curriculum</Typography>
+            <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />{' '}
+            <Typography variant="body4" component="span">
+              All curriculum
+            </Typography>
           </Link>
           <Typography variant="h4" component="h1">
             {course.displayName}
@@ -91,9 +96,7 @@ function CourseOverview() {
                   </Typography>
                 </span>
                 {lesson.experiences.length === 0 && (
-                  <span className={styles.originBadge}>
-                    <Typography variant="body4">outline</Typography>
-                  </span>
+                  <Tags tagsList={[{label: 'outline'}]} size="s" />
                 )}
               </Link>
             ))}

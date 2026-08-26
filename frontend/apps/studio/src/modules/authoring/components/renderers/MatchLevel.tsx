@@ -68,7 +68,7 @@ export default function MatchLevel({
           }
           return (
             <div key={i} className={classes.join(' ')}>
-              <Typography variant="body1">{pair.question}</Typography>
+              <Markdown>{pair.question}</Markdown>
               <select
                 aria-label={pair.question}
                 value={selections[i] ?? ''}
@@ -92,7 +92,7 @@ export default function MatchLevel({
           );
         })}
       </div>
-      <div style={{marginTop: 12}}>
+      <div className={styles.checkRow}>
         <Button
           variant="contained"
           size="small"

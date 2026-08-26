@@ -1,6 +1,7 @@
 import {Typography} from '@mui/material';
 import {createFileRoute, Link} from '@tanstack/react-router';
 
+import Tags from '@code-dot-org/component-library/tags';
 import {Loading} from '@code-dot-org/lab';
 
 import {
@@ -41,8 +42,8 @@ function CourseList() {
       <div className={styles.coursePage}>
         <Typography variant="h4">Curriculum</Typography>
         <Typography variant="body1">
-          The authoring service isn’t reachable. Start it with
-          `yarn workspace @code-dot-org/authoring-service dev`.
+          The authoring service isn’t reachable. Start it with `yarn workspace
+          @code-dot-org/authoring-service dev`.
         </Typography>
       </div>
     );
@@ -62,13 +63,17 @@ function CourseList() {
               params={{courseId: course.id}}
               className={styles.courseCard}
             >
-              <span className={styles.originBadge}>
-                <Typography variant="body4">
-                  {course.origin === 'levelbuilder'
-                    ? 'Levelbuilder import'
-                    : 'Draft'}
-                </Typography>
-              </span>
+              <Tags
+                tagsList={[
+                  {
+                    label:
+                      course.origin === 'levelbuilder'
+                        ? 'Levelbuilder import'
+                        : 'Draft',
+                  },
+                ]}
+                size="s"
+              />
               <Typography variant="h6" component="h2">
                 {course.displayName}
               </Typography>

@@ -2,8 +2,11 @@ import {IconButton, Typography} from '@mui/material';
 import {useState} from 'react';
 
 import type {Experience} from '@code-dot-org/authoring';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {authoringApi} from '../api';
+import {authoringApi, type CurriculumChangeInput} from '../api';
+
+import InsertPoint from './InsertPoint';
 
 import styles from './authoring.module.scss';
 
@@ -16,10 +19,10 @@ interface OutlineRailProps {
   onAskAiAt: (position: number) => void;
 }
 
-const KIND_GLYPHS: Record<string, string> = {
-  content: '📄',
-  existingLevel: '🧩',
-  widget: '✨',
+const KIND_ICONS: Record<string, string> = {
+  content: 'file-lines',
+  existingLevel: 'cube',
+  widget: 'puzzle-piece',
 };
 
 /**
@@ -37,7 +40,7 @@ export default function OutlineRail({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const change = async (changeBody: Record<string, unknown>) => {
+  const change = async (changeBody: CurriculumChangeInput) => {
     if (busy) {
       return;
     }
@@ -60,7 +63,7 @@ export default function OutlineRail({
 
   return (
     <nav className={styles.rail} aria-label="Lesson outline">
-      <InsertPoint position={0} onAskAiAt={onAskAiAt} />
+      <InsertPoint lessonId={lessonId} position={0} onAskAiAt={onAskAiAt} />
       {experiences.map((experience, index) => (
         <div key={experience.id}>
           {/* The row label is the activating control; action buttons are
@@ -79,7 +82,10 @@ export default function OutlineRail({
               onClick={() => onSelect(index)}
             >
               <span className={styles.railItemKind} aria-hidden>
-                {KIND_GLYPHS[experience.kind] ?? '•'}
+                <FontAwesomeV6Icon
+                  iconName={KIND_ICONS[experience.kind] ?? 'circle'}
+                  iconStyle="regular"
+                />
               </span>
               <span className={styles.railItemLabel}>
                 <Typography variant="body2" component="span">
@@ -94,7 +100,7 @@ export default function OutlineRail({
                 disabled={index === 0 || busy}
                 onClick={() => void move(experience.id, index - 1)}
               >
-                ↑
+                <FontAwesomeV6Icon iconName="arrow-up" iconStyle="solid" />
               </IconButton>
               <IconButton
                 size="small"
@@ -102,7 +108,7 @@ export default function OutlineRail({
                 disabled={index === experiences.length - 1 || busy}
                 onClick={() => void move(experience.id, index + 1)}
               >
-                ↓
+                <FontAwesomeV6Icon iconName="arrow-down" iconStyle="solid" />
               </IconButton>
               <IconButton
                 size="small"
@@ -110,11 +116,15 @@ export default function OutlineRail({
                 disabled={busy}
                 onClick={() => void remove(experience.id)}
               >
-                ✕
+                <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
               </IconButton>
             </span>
           </div>
-          <InsertPoint position={index + 1} onAskAiAt={onAskAiAt} />
+          <InsertPoint
+            lessonId={lessonId}
+            position={index + 1}
+            onAskAiAt={onAskAiAt}
+          />
         </div>
       ))}
       {error && (
@@ -123,25 +133,5 @@ export default function OutlineRail({
         </Typography>
       )}
     </nav>
-  );
-}
-
-function InsertPoint({
-  position,
-  onAskAiAt,
-}: {
-  position: number;
-  onAskAiAt: (position: number) => void;
-}) {
-  return (
-    <div className={styles.railInsert}>
-      <button
-        type="button"
-        aria-label={`Add an activity at position ${position + 1}`}
-        onClick={() => onAskAiAt(position)}
-      >
-        + add here
-      </button>
-    </div>
   );
 }

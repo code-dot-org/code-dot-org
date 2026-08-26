@@ -1,10 +1,5 @@
 import {Button, Typography} from '@mui/material';
-import {
-  forwardRef,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from 'react';
+import {forwardRef, useImperativeHandle, useRef, useState} from 'react';
 
 import {authoringApi, type TutorAction, type TutorEvent} from '../api';
 
@@ -111,11 +106,16 @@ const TutorDock = forwardRef<TutorDockHandle, TutorDockProps>(
 
     return (
       <section className={styles.tutorDock} aria-label="AI tutor">
-        <div className={styles.tutorLog}>
+        <div
+          className={styles.tutorLog}
+          role="log"
+          aria-live="polite"
+          aria-relevant="additions"
+        >
           {log.length === 0 && (
             <Typography variant="body2">
-              Hi! I’m your AI tutor. Work through the activity and I’ll jump
-              in, or ask me anything.
+              Hi! I’m your AI tutor. Work through the activity and I’ll jump in,
+              or ask me anything.
             </Typography>
           )}
           {log.map(entry => (

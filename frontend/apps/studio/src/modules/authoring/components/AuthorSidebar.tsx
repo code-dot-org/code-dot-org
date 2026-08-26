@@ -7,11 +7,17 @@ import {
   type ReactNode,
 } from 'react';
 
+import Tags from '@code-dot-org/component-library/tags';
+
 import {authoringApi, type AuthoringScope, type ChatMessage} from '../api';
 import {activityFeedStore, type AuthoringServerEvent} from '../events';
 import {useChatLog} from '../hooks';
 
 import styles from './authoring.module.scss';
+
+// Treat the reader as "at the bottom" within this slack so a fresh message
+// landing exactly flush doesn't read as scrolled-away.
+const NEAR_BOTTOM_PX = 48;
 
 interface AuthorSidebarProps {
   scope: AuthoringScope;
@@ -40,13 +46,31 @@ export default function AuthorSidebar({
   const [draft, setDraft] = useState('');
   const [sending, setSending] = useState(false);
   const logRef = useRef<HTMLDivElement>(null);
+  // Whether the reader was at/near the bottom before this update — set on
+  // scroll, read after a new entry lands. Defaults true so the log opens
+  // scrolled to the newest message.
+  const nearBottomRef = useRef(true);
 
   const items = mergeLogAndFeed(log ?? [], feed);
 
   useEffect(() => {
-    // Keep the newest activity in view as it streams in.
-    logRef.current?.scrollTo({top: logRef.current.scrollHeight});
+    const el = logRef.current;
+    // Keep the newest activity in view as it streams in, but only if the
+    // author was already reading near the bottom — don't yank them away
+    // from history they scrolled up to read.
+    if (el && nearBottomRef.current) {
+      el.scrollTo({top: el.scrollHeight});
+    }
   }, [items.length]);
+
+  const onLogScroll = () => {
+    const el = logRef.current;
+    if (!el) {
+      return;
+    }
+    nearBottomRef.current =
+      el.scrollHeight - el.scrollTop - el.clientHeight <= NEAR_BOTTOM_PX;
+  };
 
   const send = async () => {
     const message = draft.trim();
@@ -70,11 +94,16 @@ export default function AuthorSidebar({
         <Typography variant="h6" component="h2">
           AI Author
         </Typography>
-        <span className={styles.scopeChip}>
-          <Typography variant="body4">{scopeLabel}</Typography>
-        </span>
+        <Tags tagsList={[{label: scopeLabel}]} size="s" />
       </div>
-      <div className={styles.sidebarLog} ref={logRef}>
+      <div
+        className={styles.sidebarLog}
+        ref={logRef}
+        role="log"
+        aria-live="polite"
+        aria-relevant="additions"
+        onScroll={onLogScroll}
+      >
         {items.map(item => (
           <SidebarItem key={item.key} item={item} />
         ))}

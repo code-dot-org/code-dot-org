@@ -63,11 +63,23 @@ const state: AuthoringState = new AuthoringState({
   resolveLevel,
 });
 
+// AUTHORING_IMPORT_COURSES: comma-separated course names to seed the session
+// with (default: the single course importCourseIfMissing ships with).
+const importCourseNames = (process.env.AUTHORING_IMPORT_COURSES ?? '')
+  .split(',')
+  .map(name => name.trim())
+  .filter(Boolean);
 if (repoRoot) {
-  try {
-    await importCourseIfMissing(state, bridge, repoRoot);
-  } catch (error) {
-    console.error(`[authoring-service] course import failed: ${String(error)}`);
+  for (const courseName of importCourseNames.length
+    ? importCourseNames
+    : [undefined]) {
+    try {
+      await importCourseIfMissing(state, bridge, repoRoot, courseName);
+    } catch (error) {
+      console.error(
+        `[authoring-service] course import failed: ${String(error)}`,
+      );
+    }
   }
 }
 

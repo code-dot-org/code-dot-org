@@ -48,8 +48,32 @@ export type TutorEvent = {
 
 export type TutorAction =
   | {type: 'hint'; text: string}
-  | {type: 'select_experience'; experienceId: string; input?: Record<string, unknown>}
+  | {
+      type: 'select_experience';
+      experienceId: string;
+      input?: Record<string, unknown>;
+    }
   | {type: 'none'; text?: string};
+
+// Plain Omit doesn't distribute over a discriminated union — keyof CurriculumChange
+// collapses to only the keys every op shares, dropping op-specific fields like
+// lessonId. Distribute manually so each member keeps its own fields.
+type DistributiveOmit<T, K extends keyof T> = T extends unknown
+  ? Omit<T, K>
+  : never;
+
+/** What a client sends to POST /api/changes — the server assigns seq/at/actor. */
+export type CurriculumChangeInput = DistributiveOmit<
+  CurriculumChange,
+  'seq' | 'at' | 'actor'
+>;
+
+// Mirrors the server's own draftId('exp') convention (ClaudeAgentRunner), so
+// author-typed and agent-generated content experiences are indistinguishable
+// in the change log.
+export function draftExperienceId(): string {
+  return `draft-exp-${crypto.randomUUID().slice(0, 8)}`;
+}
 
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE}${path}`);
@@ -86,7 +110,7 @@ export const authoringApi = {
   tutorTurn: (lessonId: string, transcript: TutorEvent[]) =>
     post<TutorAction>('/tutor', {lessonId, transcript}),
   publish: () => post<Record<string, unknown>>('/publish', {}),
-  applyChange: (change: unknown) =>
+  applyChange: (change: CurriculumChangeInput) =>
     post<{version: number}>('/changes', {change}),
 };
 
