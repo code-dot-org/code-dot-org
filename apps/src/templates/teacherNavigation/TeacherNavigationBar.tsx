@@ -228,6 +228,8 @@ const TeacherNavigationBar: React.FC<{
             selectedSection.assignedAiChatToolsDependency,
           sectionAiChatAccessLevel: selectedSection.aiChatAccessLevel,
           teacherAiChatAccessLevel,
+          courseVersionName: selectedSection.courseVersionName,
+          unitName: selectedSection.unitName,
         })
       );
     },
