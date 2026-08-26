@@ -44,7 +44,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
     quiz = create(:quiz)
     unit = create(:unit, :in_single_unit_course)
     create(:script_level, script: unit, levels: [quiz])
-    create(:quiz_level_question, level: quiz, quiz_question: question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
 
     refute question.used_in_published_unit?
   end
@@ -55,7 +55,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
     unit = create(:unit)
     create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:script_level, script: unit, levels: [quiz])
-    create(:quiz_level_question, level: quiz, quiz_question: question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
 
     assert question.used_in_published_unit?
   end
@@ -66,7 +66,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
     unit = create(:unit)
     create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
     create(:script_level, script: unit, levels: [quiz])
-    create(:quiz_level_question, level: quiz, quiz_question: question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
 
     assert question.used_in_published_unit?
   end

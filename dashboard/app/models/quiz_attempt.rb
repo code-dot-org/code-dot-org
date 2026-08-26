@@ -68,7 +68,7 @@ class QuizAttempt < ApplicationRecord
 
     # Only questions on this quiz count - mirrors the same filter used when
     # totaling score/max_score on finalize.
-    in_quiz_question_ids = QuizLevelQuestion.where(level_id: level_id).select(:quiz_question_id)
+    in_quiz_question_ids = QuizQuestionPlacement.where(level_id: level_id).select(:quiz_question_id)
     quiz_question_responses.where(quiz_question_id: in_quiz_question_ids).includes(:quiz_question).map do |response|
       reveal_answer = level.show_correctness? && level.reveal_answer_explanation?
       # Pending/manual/ungraded responses have no score yet - report nil rather than false,

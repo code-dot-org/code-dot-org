@@ -2515,7 +2515,7 @@ FactoryBot.define do
     standard
   end
 
-  factory :quiz_level_question do
+  factory :quiz_question_placement do
     level factory: :quiz
     quiz_question
     page {1}

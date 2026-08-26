@@ -26,8 +26,8 @@ class QuizQuestion < ApplicationRecord
   has_many :quiz_question_standards, dependent: :destroy
   has_many :standards, through: :quiz_question_standards
 
-  has_many :quiz_level_questions, dependent: :destroy
-  has_many :levels, through: :quiz_level_questions
+  has_many :placements, class_name: 'QuizQuestionPlacement', dependent: :destroy
+  has_many :levels, through: :placements
 
   validates :key, presence: true
   validates :name, presence: true

@@ -26,7 +26,6 @@
 #
 class Quiz < Level
   serialized_attrs %w(
-    title
     time_limit_minutes
     show_correctness
     reveal_answer_explanation
@@ -45,9 +44,9 @@ class Quiz < Level
   validate :reveal_answer_explanation_requires_show_correctness
   validate :max_attempts_requires_allow_multiple_attempts
 
-  has_many :quiz_level_questions, foreign_key: :level_id, inverse_of: :level
-  has_many :quiz_questions, through: :quiz_level_questions
-  has_many :quiz_attempts, foreign_key: :level_id, inverse_of: :level
+  has_many :placements, -> {order(:page, :position)}, class_name: 'QuizQuestionPlacement', foreign_key: :level_id, inverse_of: :level
+  has_many :questions, through: :placements, source: :quiz_question
+  has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -69,18 +68,18 @@ class Quiz < Level
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties_camelized = super
     properties_camelized[:scriptId] = script&.id
-    # Iterates quiz_level_questions rather than quiz_questions directly so
-    # each question's page is available alongside it. Ordering matches
-    # QuizLevelQuestion's own default_scope (page, then position).
-    properties_camelized[:quizQuestions] = quiz_level_questions.includes(:quiz_question).map do |quiz_level_question|
-      question = quiz_level_question.quiz_question
+    # Iterates placements rather than questions directly so each question's
+    # page is available alongside it. Ordering matches
+    # QuizQuestionPlacement's own default_scope (page, then position).
+    properties_camelized[:quizQuestions] = placements.includes(:quiz_question).map do |placement|
+      question = placement.quiz_question
       {
         id: question.id,
         type: question.type,
         questionName: question.name,
         stem: question.content['stem'],
         choices: question.content['choices'],
-        page: quiz_level_question.page,
+        page: placement.page,
       }
     end
     properties_camelized

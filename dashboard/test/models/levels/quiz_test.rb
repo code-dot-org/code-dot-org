@@ -33,12 +33,12 @@ class QuizTest < ActiveSupport::TestCase
     assert quiz.valid?
   end
 
-  test "quiz_questions come from quiz_level_questions" do
+  test "questions come from placements" do
     quiz = create(:quiz)
     question = create(:quiz_question)
-    create(:quiz_level_question, level: quiz, quiz_question: question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
 
-    assert_equal [question], quiz.quiz_questions
+    assert_equal [question], quiz.questions
   end
 
   test "max_attempts may be blank regardless of allow_multiple_attempts" do

@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: quiz_level_questions
+# Table name: quiz_question_placements
 #
 #  id               :bigint           not null, primary key
 #  level_id         :integer          not null
@@ -12,11 +12,11 @@
 #
 # Indexes
 #
-#  index_quiz_level_questions_on_level_and_question  (level_id,quiz_question_id) UNIQUE
-#  index_quiz_level_questions_on_level_id            (level_id)
-#  index_quiz_level_questions_on_quiz_question_id    (quiz_question_id)
+#  index_quiz_question_placements_on_level_and_question  (level_id,quiz_question_id) UNIQUE
+#  index_quiz_question_placements_on_level_id             (level_id)
+#  index_quiz_question_placements_on_quiz_question_id     (quiz_question_id)
 #
-class QuizLevelQuestion < ApplicationRecord
+class QuizQuestionPlacement < ApplicationRecord
   belongs_to :level
   belongs_to :quiz_question
 
