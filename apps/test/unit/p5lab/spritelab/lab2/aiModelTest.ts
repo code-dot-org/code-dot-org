@@ -8,7 +8,7 @@ import {
   featureValue,
   isYesNoFeature,
   modelShape,
-  predictWith,
+  predictLabel,
 } from '@cdo/apps/p5lab/spritelab/lab2/aiModel';
 
 const dogMood: AiModel = {
@@ -69,7 +69,7 @@ describe('SpriteLab2 aiModel', () => {
 
   it('asks the trainer with test data keyed by feature id', () => {
     predictMock.mockReturnValue('happy');
-    const result = predictWith(dogMood, {food: true, bone: false, toy: true});
+    const result = predictLabel(dogMood, {food: true, bone: false, toy: true});
     expect(result).toBe('happy');
     expect(predictMock).toHaveBeenCalledTimes(1);
     const params = predictMock.mock.calls[0][0];
@@ -79,7 +79,7 @@ describe('SpriteLab2 aiModel', () => {
 
   it('treats a missing input as no for a yes/no feature', () => {
     predictMock.mockReturnValue('sad');
-    predictWith(dogMood, {food: true});
+    predictLabel(dogMood, {food: true});
     const params = predictMock.mock.calls[0][0];
     expect(params.testData.bone).toBe('no');
     expect(params.testData.toy).toBe('no');

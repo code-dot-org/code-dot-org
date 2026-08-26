@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##Now for some AI\nSo far your code has decided everything. Next, a model will decide something for you.\n\nA model learns from examples. This one has seen a few dogs and what was near them, and it learned how each dog felt. You'll make a dog and three things to put near it, and ask the model how your dog feels.",
+        "text": "##Now for some AI\nSo far your code has decided everything. Next, a model will decide something for you.\n\nA model learns from examples. This one was given examples of what was near a dog and how the dog felt, and it learned from them. You'll make a dog and three things to put near it, and ask the model how your dog feels.",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-ai-eb1d6d65-7396-45ad-82bc-13e9c0038fba"
       }

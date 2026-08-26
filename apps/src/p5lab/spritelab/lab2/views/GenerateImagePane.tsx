@@ -249,24 +249,19 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [targetProps]
   );
 
-  // Images a new one of the same kind can start from.
+  // Images a new one can start from; the dialog offers those of its type.
   const startFrom = useMemo(
     () => ({
-      images: images
-        .filter(
-          ({props}) =>
-            imageTypeFromCategories(props.categories) ===
-            (lockedImageType || 'sprite')
-        )
-        .map(({key, props}) => ({
-          key,
-          name: props.name,
-          style: props.generation?.style,
-        })),
+      images: images.map(({key, props}) => ({
+        key,
+        name: props.name,
+        type: imageTypeFromCategories(props.categories),
+        style: props.generation?.style,
+      })),
       getDataURI: (key: string) =>
         imageDataURI(getStore().getState().animationList.propsByKey[key]),
     }),
-    [images, lockedImageType]
+    [images]
   );
 
   // Persist an accepted generation: upload, then create the animation (new

@@ -8,10 +8,7 @@ import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 export const MAKE_SPRITE_WITH_BEHAVIOR_BLOCK_TYPE =
   'spritelab2_makeSpriteWithBehavior';
 
-/**
- * A small sprite that starts with a behavior — the props a story scene's
- * character interacts with, made in one block.
- */
+/** A small sprite that starts with a behavior: a prop a character reacts to. */
 const definition: BlockJson = {
   type: MAKE_SPRITE_WITH_BEHAVIOR_BLOCK_TYPE,
   message0: 'make new %1 sprite at %2 with behavior %3',

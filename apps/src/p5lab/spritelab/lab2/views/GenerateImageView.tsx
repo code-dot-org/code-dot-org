@@ -4,7 +4,7 @@ import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
@@ -60,7 +60,7 @@ type RandomnessSource = 'new' | 'seed' | 'previous';
 
 /** Existing images a new one can start from; the prompt then modifies one. */
 export interface StartFromImages {
-  images: {key: string; name: string; style?: ImageStyle}[];
+  images: {key: string; name: string; type: ImageType; style?: ImageStyle}[];
   getDataURI: (key: string) => Promise<string | null>;
 }
 
@@ -127,6 +127,17 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [source, setSource] = useState<RandomnessSource>('new');
   // Key of the existing image a new one starts from; empty for a fresh roll.
   const [startFromKey, setStartFromKey] = useState('');
+  const startFromImages = useMemo(
+    () =>
+      create?.startFrom.images.filter(image => image.type === imageType) || [],
+    [create, imageType]
+  );
+  // A change of type drops a start-from image of the old type.
+  useEffect(() => {
+    if (startFromKey && !startFromImages.some(i => i.key === startFromKey)) {
+      setStartFromKey('');
+    }
+  }, [startFromImages, startFromKey]);
   const [error, setError] = useState<string | null>(null);
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
@@ -304,20 +315,20 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 labelText="Start from"
                 size="s"
                 className={moduleStyles.wide}
-                disabled={generating || create.startFrom.images.length === 0}
+                disabled={generating || startFromImages.length === 0}
                 selectedValue={startFromKey}
                 onChange={e => {
                   const key = e.target.value;
                   setStartFromKey(key);
                   // The new image keeps the look of the one it starts from.
-                  const from = create.startFrom.images.find(i => i.key === key);
+                  const from = startFromImages.find(i => i.key === key);
                   if (from?.style) {
                     setStyle(from.style);
                   }
                 }}
                 items={[
                   {value: '', text: 'A new image'},
-                  ...create.startFrom.images.map(image => ({
+                  ...startFromImages.map(image => ({
                     value: image.key,
                     text: image.name,
                   })),

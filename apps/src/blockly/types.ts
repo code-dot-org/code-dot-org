@@ -466,7 +466,6 @@ interface FieldLabel extends FieldJson {
 interface InputValue extends FieldJson {
   type: 'input_value';
   check?: string | string[] | null;
-  align?: 'LEFT' | 'CENTRE' | 'RIGHT';
 }
 
 interface FieldJson {

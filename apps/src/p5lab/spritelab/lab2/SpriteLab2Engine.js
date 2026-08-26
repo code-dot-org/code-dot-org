@@ -8,7 +8,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
-import {getAiModel, loadAiModel, predictWith} from './aiModel';
+import {getAiModel, loadAiModel, predictLabel} from './aiModel';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
   backgroundFrame,
@@ -204,6 +204,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.cameraZoomTarget_ = clampZoom(Number(value));
     };
     this.installAiModelCommands_(library);
+    this.installSpriteIdentity_(library);
+    this.installSceneCommands_(library);
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
@@ -560,12 +562,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
-  /**
-   * The predict block asks a loaded model; set image names an image by value;
-   * the drop event fires once when a dragged sprite is let go. The draggable
-   * behavior clears its own dragging flag on mouse-up during runBehaviors, so
-   * the frame's dragging sprites are noted before then (see onP5Draw).
-   */
+  // The predict block asks a loaded model; set image names an image by value.
   installAiModelCommands_(library) {
     const warned = new Set();
     const warnOnce = message => {
@@ -580,10 +577,25 @@ export default class SpriteLab2Engine extends SpriteLab {
         warnOnce(`model ${modelId} is not loaded; predict returns nothing.`);
         return '';
       }
-      return predictWith(model, inputs || {});
+      return predictLabel(model, inputs || {});
     };
-    // A sprite stays addressable by the image it was made with after set
-    // image changes its picture: "the dog" is still the dog when it looks sad.
+    library.commands.setImage = (spriteArg, name) => {
+      const label = this.imageNamed_(library, name);
+      if (!label) {
+        warnOnce(
+          `no image named ${JSON.stringify(
+            name
+          )} in this project; set image does nothing.`
+        );
+        return;
+      }
+      library.commands.setAnimation.call(library, spriteArg, label);
+    };
+  }
+
+  // A sprite stays addressable by the image it was made with after set image
+  // changes its picture: "the dog" is still the dog when it looks sad.
+  installSpriteIdentity_(library) {
     const addSprite = library.addSprite.bind(library);
     library.addSprite = opts => {
       const id = addSprite(opts);
@@ -605,20 +617,31 @@ export default class SpriteLab2Engine extends SpriteLab {
       );
       return madeAs.length ? found.concat(madeAs) : found;
     };
-    library.commands.setImage = (spriteArg, name) => {
-      const label = this.imageNamed_(library, name);
-      if (!label) {
-        warnOnce(
-          `no image named ${JSON.stringify(
-            name
-          )} in this project; set image does nothing.`
-        );
-        return;
-      }
-      library.commands.setAnimation.call(library, spriteArg, label);
-    };
+  }
+
+  // The drop event, the distance reporter and the small prop sprite.
+  installSceneCommands_(library) {
     library.commands.whenSpriteDropped = callback => {
       library.addEvent('whendrop', {}, callback);
+    };
+    const dispatch = library.getCallbackArgListForEvent.bind(library);
+    library.getCallbackArgListForEvent = inputEvent =>
+      inputEvent.type === 'whendrop'
+        ? this.whenDropEvent_()
+        : dispatch(inputEvent);
+    // Centre-to-centre, rounded to tens so a model's table stays legible; a
+    // sprite that isn't there counts as the far side of the playfield.
+    library.commands.distanceBetween = (fromArg, toArg) => {
+      const from = library.getSpriteArray(fromArg)[0];
+      const to = library.getSpriteArray(toArg)[0];
+      if (!from || !to) {
+        return APP_WIDTH;
+      }
+      const distance = Math.hypot(
+        from.position.x - to.position.x,
+        from.position.y - to.position.y
+      );
+      return Math.round(distance / DISTANCE_STEP) * DISTANCE_STEP;
     };
     library.commands.makeSpriteWithBehavior = (
       spriteArg,
@@ -635,25 +658,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       return id;
     };
-    // Centre-to-centre, rounded to tens so a model's table stays legible; a
-    // sprite that isn't there counts as the far side of the playfield.
-    library.commands.distanceBetween = (fromArg, toArg) => {
-      const from = library.getSpriteArray(fromArg)[0];
-      const to = library.getSpriteArray(toArg)[0];
-      if (!from || !to) {
-        return APP_WIDTH;
-      }
-      const distance = Math.hypot(
-        from.position.x - to.position.x,
-        from.position.y - to.position.y
-      );
-      return Math.round(distance / DISTANCE_STEP) * DISTANCE_STEP;
-    };
-    const dispatch = library.getCallbackArgListForEvent.bind(library);
-    library.getCallbackArgListForEvent = inputEvent =>
-      inputEvent.type === 'whendrop'
-        ? this.whenDropEvent_()
-        : dispatch(inputEvent);
   }
 
   // The loaded image whose name matches, exactly or ignoring case.
@@ -798,6 +802,8 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   onP5Draw() {
     this.wrapDrawSpritesOnce_();
+    // The draggable behavior clears its dragging flag on mouse-up during
+    // runBehaviors, before events run; note this frame's dragged sprites first.
     this.draggingBeforeFrame_ = Object.values(
       this.library?.nativeSpriteMap || {}
     ).some(sprite => sprite.dragging);

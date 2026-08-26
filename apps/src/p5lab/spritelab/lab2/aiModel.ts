@@ -82,8 +82,11 @@ export function setLevelAiModelId(id: string | undefined): void {
 }
 
 export function levelAiModelShape(): AiModelShape | undefined {
-  const model = levelModelId && models.get(levelModelId);
-  return model && levelModelId ? modelShape(levelModelId, model) : undefined;
+  if (!levelModelId) {
+    return undefined;
+  }
+  const model = models.get(levelModelId);
+  return model && modelShape(levelModelId, model);
 }
 
 /** A slot's value in the model's own vocabulary. */
@@ -112,7 +115,7 @@ function matchValue(feature: AiModelFeature, text: string): string {
 }
 
 /** The model's label for these inputs, keyed by feature id. */
-export function predictWith(
+export function predictLabel(
   model: AiModel,
   inputs: Record<string, unknown>
 ): string {

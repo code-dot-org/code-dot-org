@@ -12,10 +12,7 @@ import {
 
 export const PREDICT_BLOCK_TYPE = 'spritelab2_predict';
 
-/**
- * Ask an AI Lab model for its label. The mutator adds one input per feature
- * from the model's shape, so the block reads as the model's own question.
- */
+/** Ask an AI Lab model for its label; the mutator adds one input per feature. */
 const definition: BlockJson = {
   type: PREDICT_BLOCK_TYPE,
   message0: 'predict with %1',
