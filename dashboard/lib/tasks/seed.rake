@@ -81,7 +81,6 @@ namespace :seed do
     alltheplcthings
     alltheselfpacedplthings
     allthethings
-    allthettsthings
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -254,7 +253,6 @@ namespace :seed do
       allthethingscourse
       allthelessonplans
       alltheselfpacedplthings
-      allthettsthings
       original-allthelessonplans-course
       original-allthethings-course
       original-alltheselfpacedplthings-course
