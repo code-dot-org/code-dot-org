@@ -18,6 +18,7 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
 describe('SpriteLab2 characterSet', () => {
+  const walkFrames = CHARACTER_POSES.find(p => p.pose === 'walk')!.frameCount;
   const plan = planCharacterFrames();
 
   it('plans the design plate, then every frame of every pose for each generated facing', () => {
@@ -108,7 +109,7 @@ describe('SpriteLab2 characterSet', () => {
     expect(frame).not.toMatch(/[A-Z]{4,}/);
     // The text names the frame in animation's own words.
     expect(frame).toContain(
-      'frame 4 of 8 of a side-view walk cycle sprite sheet, the up pose'
+      `frame 4 of ${walkFrames} of a side-view walk cycle sprite sheet, the up pose`
     );
     const contact = framePrompt(
       'a robot',
@@ -116,7 +117,7 @@ describe('SpriteLab2 characterSet', () => {
       'smooth',
       key
     );
-    expect(contact).toContain('frame 5 of 8');
+    expect(contact).toContain(`frame 5 of ${walkFrames}`);
     expect(contact).toContain('the contact pose');
     expect(
       framePrompt(
