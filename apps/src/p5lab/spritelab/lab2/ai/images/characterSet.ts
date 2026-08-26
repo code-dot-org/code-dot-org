@@ -161,7 +161,7 @@ export const SHEET_IMAGE_SIZE: ImageSize = '2K';
 // While the row picture is new, keep what the model returned beside the set
 // (the pane adds it as an ordinary image named <set>-row) so a bad cut can be
 // read against its source. One constant to drop.
-export const KEEP_ROW_PICTURES = true;
+export const KEEP_ROW_PICTURES = false;
 
 // SHEET_ASPECT_RATIO as a number, for the widened reference.
 export const SHEET_ASPECT = 16 / 9;
