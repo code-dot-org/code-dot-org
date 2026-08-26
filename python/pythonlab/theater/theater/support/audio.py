@@ -35,6 +35,8 @@ def read_samples_from_wav_bytes(wav_bytes):
       num_frames = reader.getnframes()
       if sample_width != 2:
         raise ValueError(_ONLY_16_BIT_PCM)
+      if num_channels not in (1, 2):
+        raise ValueError("Only mono or stereo WAV data is supported")
       if frame_rate <= 0:
         raise ValueError("WAV data declares no sample rate")
       # Check the header's length before reading, so an outsized file costs
@@ -92,9 +94,10 @@ def _declares_unsupported_codec(wav_bytes):
 
 def _decode_frames(frames, num_channels):
   """Normalized mono float32 samples from 16-bit PCM frame bytes.
+
+  Mono or stereo only; the caller rejects anything else from the header, before
+  the frames these come from are read.
   """
-  if num_channels not in (1, 2):
-    raise ValueError("Only mono or stereo WAV data is supported")
   # First read whole samples (2 bytes each), cutting off any trailing incomplete sample.
   # Then split into frames according to the number of channels, potentially dropping incomplete
   # frames (a frame is one sample per channel).

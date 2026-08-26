@@ -174,13 +174,33 @@ def test_read_plays_what_a_short_file_actually_holds(channels, dropped, expected
   assert np.allclose(samples, whole[:expected], atol=1e-4)
 
 
-def test_read_rejects_more_than_two_channels():
-  wav = bytearray(_make_wav_bytes([0.5] * 12, 2))
+def _with_channel_count(wav_bytes, num_channels):
+  """Patch the header's channel count, which the wave module won't write."""
+  wav = bytearray(wav_bytes)
   # Channel count sits at bytes 22:24 of the header the wave module emits.
   assert wav[22:24] == struct.pack("<H", 2)
-  wav[22:24] = struct.pack("<H", 4)
-  with pytest.raises(ValueError):
-    read_samples_from_wav_bytes(bytes(wav))
+  wav[22:24] = struct.pack("<H", num_channels)
+  return bytes(wav)
+
+
+def test_read_rejects_more_than_two_channels():
+  wav = _with_channel_count(_make_wav_bytes([0.5] * 12, 2), 4)
+  with pytest.raises(ValueError, match="mono or stereo"):
+    read_samples_from_wav_bytes(wav)
+
+
+def test_read_rejects_more_than_two_channels_before_reading_frames(monkeypatch):
+  # The frame bytes are what we are refusing to allocate: the duration ceiling
+  # bounds frames per second, not channels, so a 300-second file at the ceiling
+  # holds 106 MB across 4 channels and more as the count climbs. In the Pyodide
+  # worker that reads as a crash rather than as this message.
+  def refuse_to_read(self, num_frames):
+    raise AssertionError("frames were read before the channel count was checked")
+
+  monkeypatch.setattr(wave.Wave_read, "readframes", refuse_to_read)
+  wav = _with_channel_count(_make_wav_bytes([0.5] * 12, 2), 4)
+  with pytest.raises(ValueError, match="mono or stereo"):
+    read_samples_from_wav_bytes(wav)
 
 
 def test_read_rejects_a_missing_sample_rate():
