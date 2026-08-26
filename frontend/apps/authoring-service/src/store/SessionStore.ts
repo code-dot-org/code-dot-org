@@ -1,12 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import {WIDGET_ID_PATTERN} from '../authoring/model.js';
+import {LEVEL_ID_PATTERN, WIDGET_ID_PATTERN} from '../authoring/model.js';
 import type {
   CourseModel,
   CurriculumChange,
   WidgetDescriptor,
 } from '../authoring/model.js';
+import type {MazeLevelDefinition} from '../levels/mazeLevel.js';
 
 export type ChatRole = 'author' | 'agent' | 'status';
 
@@ -159,6 +160,41 @@ export class SessionStore {
     fs.writeFileSync(
       path.join(dir, 'meta.json'),
       `${JSON.stringify(descriptor, null, 2)}\n`,
+    );
+  }
+
+  get levelsDir(): string {
+    return path.join(this.root, 'levels');
+  }
+
+  levelDir(levelId: string): string {
+    this.assertValidLevelId(levelId);
+    return path.join(this.levelsDir, levelId);
+  }
+
+  // Same reasoning as assertValidWidgetId: levelId flows into path.join for
+  // every level file operation below.
+  private assertValidLevelId(levelId: string): void {
+    if (!LEVEL_ID_PATTERN.test(levelId)) {
+      throw new Error(`invalid level id: ${levelId}`);
+    }
+  }
+
+  readLevelDefinition(levelId: string): MazeLevelDefinition | undefined {
+    const raw = readFileIfPresent(
+      path.join(this.levelDir(levelId), 'level.json'),
+    );
+    return raw === undefined
+      ? undefined
+      : (JSON.parse(raw) as MazeLevelDefinition);
+  }
+
+  writeLevelDefinition(levelId: string, definition: MazeLevelDefinition): void {
+    const dir = this.levelDir(levelId);
+    fs.mkdirSync(dir, {recursive: true});
+    fs.writeFileSync(
+      path.join(dir, 'level.json'),
+      `${JSON.stringify(definition, null, 2)}\n`,
     );
   }
 

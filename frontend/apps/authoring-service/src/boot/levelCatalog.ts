@@ -250,7 +250,7 @@ function buildMusicLevelProperties(
  * function's comment for why blocks stay raw XML here (converted client-side
  * by the maze-lab studio adapter, which has a browser DOMParser).
  */
-function buildMazeLevelProperties(
+export function buildMazeLevelProperties(
   id: number,
   levelKey: string,
   levelType: string,

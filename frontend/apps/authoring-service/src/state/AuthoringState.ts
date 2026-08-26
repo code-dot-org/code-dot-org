@@ -155,6 +155,21 @@ export class AuthoringState {
     return this.snapshot.levelProperties[numericId];
   }
 
+  /**
+   * registerLevelProperties alone (used by createLevel and by attach's
+   * lazy-catalog resolution) writes the snapshot without bumping version or
+   * emitting — the caller that also runs a CurriculumChange (createLevel's
+   * subsequent insertExperience) absorbs it into that change's own bump.
+   * updateLevel has no accompanying CurriculumChange (the experience node
+   * itself doesn't change, only the level's own definition), so it calls
+   * this afterward to notify SSE subscribers explicitly.
+   */
+  notifyLevelPropertiesChanged(): void {
+    this.snapshot = {...this.snapshot, version: this.snapshot.version + 1};
+    this.store.writeSnapshot(this.snapshot);
+    this.emit({type: 'state', version: this.snapshot.version});
+  }
+
   /** Synthetic ids are assigned above the imported range; see the spec doc. */
   nextLevelNumericId(): number {
     const ids = Object.keys(this.snapshot.levelProperties)

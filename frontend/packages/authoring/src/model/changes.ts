@@ -1,4 +1,10 @@
-import type {CourseModel, Experience, Lesson, Unit} from './types';
+import type {
+  CourseModel,
+  Experience,
+  ExistingLevelExperience,
+  Lesson,
+  Unit,
+} from './types';
 import type {WidgetDescriptor} from './widget';
 
 // Creatable subsets: a stub is the parent object minus its children array —
@@ -23,6 +29,14 @@ export interface ContentPatch {
   title?: string;
   markdown?: string;
 }
+
+// A gate-verified AI-authored level is already a fully-resolved
+// ExistingLevelExperience by the time it reaches the change log (the
+// service registers its LevelProperties and assigns levelNumericId before
+// building this) — distinct from insertExperience so a production write
+// adapter can special-case "this needs a real new Level row" versus
+// "attach what already exists".
+export type LevelPatch = Partial<Pick<ExistingLevelExperience, 'title'>>;
 
 /**
  * Every mutation — agent tool call or direct author manipulation — appends
@@ -68,4 +82,11 @@ export type CurriculumChange = {
       widgetId: string;
       patch: Partial<WidgetDescriptor>;
     }
+  | {
+      op: 'createLevel';
+      lessonId: string;
+      level: ExistingLevelExperience;
+      position: number;
+    }
+  | {op: 'updateLevel'; experienceId: string; patch: LevelPatch}
 );

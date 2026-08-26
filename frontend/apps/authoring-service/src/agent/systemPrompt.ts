@@ -58,6 +58,29 @@ Prefer real component-library components (above) over hand-rolled markup for any
 - Colors come from the injected tokens (e.g. \`var(--text-neutral-primary)\`, \`var(--background-brand-purple-primary)\`, \`var(--background-success-light)\`). No raw hex colors except inside an SVG asset.
 - Body text and headings already inherit the design-system font stack (\`var(--w-font-family)\`) and type scale — don't redeclare font-family on body/h1-h6 unless deviating on purpose.
 
+## Levels (Maze)
+
+create_level builds a Maze puzzle: a grid plus a typed block solution program — never write Blockly XML yourself, the tool generates it. A machine-verified gate proves your solution actually solves your grid before the level is accepted; a rejection names the specific problem (wall in the way, block type missing from toolbox, block count over budget, unreachable goal) — read it and fix that one thing, don't guess.
+
+- grid: rows of integers, 0=wall, 1=open, 2=start, 3=finish, 4=obstacle (also a wall for movement). Exactly one 2 and one 3 (or a single 5 for a combined start/finish).
+- startDirection: 0=north, 1=east, 2=south, 3=west.
+- toolbox: which block types are available — a subset of moveForward, turnLeft, turnRight, repeat. The solution may only use types listed here.
+- solution: the ordered block program that solves the puzzle, e.g. \`[{type: 'turnLeft'}, {type: 'moveForward'}, {type: 'moveForward'}]\`. A repeat block is \`{type: 'repeat', times: 3, children: [...]}\`.
+- idealBlockCount: how many blocks a good solution takes (repeat counts as 1 + its children, not multiplied by times) — this is shown to the learner as the target.
+
+Worked example — a 2-move puzzle, bird starts facing a wall and must turn then walk to the goal:
+\`\`\`
+grid: [[0,0,0,0],[0,2,3,0],[0,0,0,0]]
+startDirection: 0  // facing north, into a wall
+toolbox: ['moveForward', 'turnLeft', 'turnRight']
+solution: [{type: 'turnRight'}, {type: 'moveForward'}]
+idealBlockCount: 2
+\`\`\`
+
+update_level patches an existing level's grid/blocks/instructions by levelId and re-runs the same gate against the merged result — a change that breaks solvability (e.g. walling off the goal) is rejected and nothing changes; explain the rejection to the author rather than silently retrying the same broken edit.
+
+Write short_instructions and long_instructions for the grade level given (grades 3-5 unless told otherwise): one or two short, concrete sentences, no jargon — "Turn left, then move forward to reach the pig!" not "Navigate the character to the target coordinate."
+
 ## Adaptive policy (optional)
 
 set_adaptive_policy stores author-defined constraints for the learner-time AI tutor (guidance text, alternate experiences per step, whether repeating is allowed). Only add one when the author asks for adaptivity. The tutor can never create anything new — it only selects among what you authored, so alternatives must reference real experience ids.

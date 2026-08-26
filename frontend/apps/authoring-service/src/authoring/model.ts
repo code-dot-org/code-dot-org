@@ -127,6 +127,11 @@ export interface AdaptivePolicy {
 export const WIDGET_ID_MAX_LENGTH = 64;
 export const WIDGET_ID_PATTERN = /^[a-z0-9][a-z0-9-]{0,63}$/;
 
+// Same shape and same reasoning as WIDGET_ID_PATTERN, for a draft level's
+// directory under the session's levels/ store (SessionStore.levelDir).
+export const LEVEL_ID_MAX_LENGTH = 64;
+export const LEVEL_ID_PATTERN = /^[a-z0-9][a-z0-9-]{0,63}$/;
+
 export interface WidgetDescriptor {
   id: string;
   toolName: string;
@@ -150,6 +155,8 @@ export interface ContentPatch {
   title?: string;
   markdown?: string;
 }
+
+export type LevelPatch = Partial<Pick<ExistingLevelExperience, 'title'>>;
 
 /** The mutation payload before the store stamps `seq`/`at`/`actor`. */
 export type CurriculumChangeBody =
@@ -185,7 +192,14 @@ export type CurriculumChangeBody =
       op: 'updateWidgetMetadata';
       widgetId: string;
       patch: Partial<WidgetDescriptor>;
-    };
+    }
+  | {
+      op: 'createLevel';
+      lessonId: string;
+      level: ExistingLevelExperience;
+      position: number;
+    }
+  | {op: 'updateLevel'; experienceId: string; patch: LevelPatch};
 
 export type CurriculumChangeOp = CurriculumChangeBody['op'];
 
@@ -203,6 +217,8 @@ export const CURRICULUM_CHANGE_OPS: readonly CurriculumChangeOp[] = [
   'attachExistingLevel',
   'createWidget',
   'updateWidgetMetadata',
+  'createLevel',
+  'updateLevel',
 ];
 
 export type CurriculumChange = {

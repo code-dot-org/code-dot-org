@@ -101,7 +101,10 @@ describe('applyChange', () => {
 
   it('removing a course leaves other courses and all widgets untouched', () => {
     const state = deepFreeze({
-      courses: [...baseState().courses, {...baseState().courses[0], id: 'course-2'}],
+      courses: [
+        ...baseState().courses,
+        {...baseState().courses[0], id: 'course-2'},
+      ],
       widgets: [
         {
           id: 'widget-1',
@@ -262,6 +265,69 @@ describe('applyChange', () => {
       levelType: 'unknown',
       properties: {},
     });
+  });
+
+  it('creates a gate-verified draft level at a position', () => {
+    const state = frozenBaseState();
+    const level: ExistingLevelExperience = {
+      id: 'draft-level-1',
+      origin: 'draft',
+      title: 'Loop to the goal',
+      kind: 'existingLevel',
+      levelKey: 'draft-level-1',
+      levelType: 'Maze',
+      runtime: 'labhost',
+      labKey: 'maze',
+      levelNumericId: 9000002,
+    };
+    const next = applyChange(state, {
+      seq: 1,
+      at: 'now',
+      actor: 'agent',
+      op: 'createLevel',
+      lessonId: 'lesson-2',
+      level,
+      position: 0,
+    });
+    const lesson = next.courses[0].units[0].lessons[1];
+    expect(lesson.experiences).toEqual([level]);
+  });
+
+  it('updates a draft level title without touching its identity', () => {
+    const state = frozenBaseState();
+    const level: ExistingLevelExperience = {
+      id: 'draft-level-1',
+      origin: 'draft',
+      title: 'Loop to the goal',
+      kind: 'existingLevel',
+      levelKey: 'draft-level-1',
+      levelType: 'Maze',
+      runtime: 'labhost',
+      labKey: 'maze',
+      levelNumericId: 9000002,
+    };
+    const withLevel = applyChange(state, {
+      seq: 1,
+      at: 'now',
+      actor: 'agent',
+      op: 'createLevel',
+      lessonId: 'lesson-2',
+      level,
+      position: 0,
+    });
+    const next = applyChange(deepFreeze(withLevel), {
+      seq: 2,
+      at: 'now',
+      actor: 'agent',
+      op: 'updateLevel',
+      experienceId: 'draft-level-1',
+      patch: {title: 'Loop to the goal (revised)'},
+    });
+    const experience = next.courses[0].units[0].lessons[1]
+      .experiences[0] as ExistingLevelExperience;
+    expect(experience.title).toBe('Loop to the goal (revised)');
+    expect(experience.levelNumericId).toBe(9000002);
+    expect(experience.levelKey).toBe('draft-level-1');
   });
 
   it('throws a clear error for an unknown lesson id', () => {

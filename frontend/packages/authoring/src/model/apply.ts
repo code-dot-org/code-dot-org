@@ -297,5 +297,25 @@ export function applyChange(
       widgets[index] = {...widgets[index], ...change.patch};
       return {...state, widgets};
     }
+
+    case 'createLevel':
+      return replaceLesson(state, change.lessonId, lesson => ({
+        ...lesson,
+        experiences: insertAt(
+          lesson.experiences,
+          change.position,
+          change.level,
+        ),
+      }));
+
+    case 'updateLevel': {
+      const lessonId = findLessonIdForExperience(state, change.experienceId);
+      return replaceLesson(state, lessonId, lesson => ({
+        ...lesson,
+        experiences: lesson.experiences.map(e =>
+          e.id === change.experienceId ? {...e, ...change.patch} : e,
+        ),
+      }));
+    }
   }
 }

@@ -136,7 +136,7 @@ const ExistingLevelExperienceSchema = z.object({
   levelKey: z.string().min(1),
   levelType: z.string(),
   runtime: z.enum(['labhost', 'generic', 'unsupported']),
-  labKey: z.enum(['oceans', 'music']).optional(),
+  labKey: z.enum(['oceans', 'music', 'maze']).optional(),
   levelNumericId: z.number().optional(),
   data: GenericLevelDataSchema.optional(),
 });
@@ -159,6 +159,10 @@ const ExperienceSchema = z.discriminatedUnion('kind', [
 const ContentPatchSchema = z.object({
   title: z.string().optional(),
   markdown: z.string().optional(),
+});
+
+const LevelPatchSchema = z.object({
+  title: z.string().optional(),
 });
 
 const WidgetDescriptorSchema = z.object({
@@ -235,5 +239,16 @@ export const CurriculumChangeBodySchema = z.discriminatedUnion('op', [
     op: z.literal('updateWidgetMetadata'),
     widgetId: z.string().regex(WIDGET_ID_PATTERN),
     patch: WidgetDescriptorSchema.partial(),
+  }),
+  z.object({
+    op: z.literal('createLevel'),
+    lessonId: z.string().min(1),
+    level: ExistingLevelExperienceSchema,
+    position: z.number().int(),
+  }),
+  z.object({
+    op: z.literal('updateLevel'),
+    experienceId: z.string().min(1),
+    patch: LevelPatchSchema,
   }),
 ]);

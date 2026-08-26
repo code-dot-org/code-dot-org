@@ -13,6 +13,12 @@ import {z} from 'zod';
 
 import type {Experience, Lesson, WidgetDescriptor} from '../authoring/model.js';
 import type {LevelCatalog} from '../boot/levelCatalog.js';
+import {
+  buildMazeLevelWireProperties,
+  MazeLevelDefinitionPatchSchema,
+  MazeLevelDefinitionSchema,
+  verifyMazeLevelSolvable,
+} from '../levels/mazeLevel.js';
 import type {AuthoringState} from '../state/AuthoringState.js';
 import type {SessionStore} from '../store/SessionStore.js';
 import {rebuildWidgetSource} from '../widgets/buildWidget.js';
@@ -348,6 +354,8 @@ const CURRICULUM_TOOL_NAMES = [
   'search_existing_levels',
   'attach_existing_level',
   'create_widget',
+  'create_level',
+  'update_level',
   'set_adaptive_policy',
 ];
 
@@ -636,6 +644,92 @@ function buildCurriculumServer(
         },
       ),
       tool(
+        'create_level',
+        'Create a Maze puzzle level: a grid plus a typed block solution program (never hand-written Blockly XML). Rejected with a specific, correctable reason unless the solution actually solves the grid, uses only toolbox block types, and stays within the block-count budget. On success, inserts it into the lesson and returns levelId.',
+        {
+          lessonId: z.string(),
+          position: z.number().int(),
+          title: z.string(),
+          definition: MazeLevelDefinitionSchema,
+        },
+        async ({lessonId, position, title, definition}) => {
+          const gate = verifyMazeLevelSolvable(definition);
+          if (!gate.ok) {
+            return fail(`level not created — ${gate.reason}`);
+          }
+          const levelId = draftId('level');
+          const levelKey = `draft:${levelId}`;
+          const numericId = state.nextLevelNumericId();
+          store.writeLevelDefinition(levelId, definition);
+          state.registerLevelProperties({
+            [String(numericId)]: buildMazeLevelWireProperties(
+              numericId,
+              levelKey,
+              definition,
+            ),
+          });
+          const experienceId = draftId('exp');
+          apply({
+            op: 'createLevel',
+            lessonId,
+            position,
+            level: {
+              id: experienceId,
+              kind: 'existingLevel',
+              origin: 'draft',
+              title,
+              levelKey,
+              levelType: 'Maze',
+              runtime: 'labhost',
+              labKey: 'maze',
+              levelNumericId: numericId,
+            },
+          });
+          return ok({levelId, experienceId, levelNumericId: numericId});
+        },
+      ),
+      tool(
+        'update_level',
+        'Patch a level created by create_level (grid, blocks, instructions, title, ...). Re-runs the solvability gate against the merged definition before applying — a change that breaks solvability (e.g. walling off the goal) is rejected with the specific reason and nothing changes.',
+        {
+          levelId: z.string(),
+          title: z.string().optional(),
+          patch: MazeLevelDefinitionPatchSchema,
+        },
+        async ({levelId, title, patch}) => {
+          const existing = store.readLevelDefinition(levelId);
+          if (!existing) {
+            return fail(
+              `no level ${levelId} (create it with create_level first)`,
+            );
+          }
+          const next = {...existing, ...patch};
+          const gate = verifyMazeLevelSolvable(next);
+          if (!gate.ok) {
+            return fail(`level not updated — ${gate.reason}`);
+          }
+          const found = findLevel(state, `draft:${levelId}`);
+          if (!found) {
+            return fail(`level ${levelId} is not attached to any lesson`);
+          }
+          const {experienceId, levelNumericId} = found;
+          store.writeLevelDefinition(levelId, next);
+          state.registerLevelProperties({
+            [String(levelNumericId)]: buildMazeLevelWireProperties(
+              levelNumericId,
+              `draft:${levelId}`,
+              next,
+            ),
+          });
+          if (title !== undefined) {
+            apply({op: 'updateLevel', experienceId, patch: {title}});
+          } else {
+            state.notifyLevelPropertiesChanged();
+          }
+          return ok({levelId, levelNumericId});
+        },
+      ),
+      tool(
         'set_adaptive_policy',
         'Set author-defined constraints for the optional learner-time tutor on a lesson.',
         {
@@ -702,6 +796,31 @@ function outline(state: AuthoringState) {
       })),
     })),
   }));
+}
+
+function findLevel(
+  state: AuthoringState,
+  levelKey: string,
+): {experienceId: string; levelNumericId: number} | undefined {
+  for (const course of state.getSnapshot().courses) {
+    for (const unit of course.units) {
+      for (const lesson of unit.lessons) {
+        for (const experience of lesson.experiences) {
+          if (
+            experience.kind === 'existingLevel' &&
+            experience.levelKey === levelKey &&
+            experience.levelNumericId !== undefined
+          ) {
+            return {
+              experienceId: experience.id,
+              levelNumericId: experience.levelNumericId,
+            };
+          }
+        }
+      }
+    }
+  }
+  return undefined;
 }
 
 function findLesson(state: AuthoringState, lessonId: string) {
