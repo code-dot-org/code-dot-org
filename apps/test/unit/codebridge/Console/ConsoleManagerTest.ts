@@ -367,6 +367,7 @@ describe('ConsoleManager', () => {
     terminal.focus.mockClear();
     consoleManager.setFocusOnWrite(false);
     consoleManager.writeConsoleMessage('during a validation run');
+    consoleManager.writePartialLine('a prompt with no newline');
 
     expect(terminal.focus).not.toHaveBeenCalled();
   });

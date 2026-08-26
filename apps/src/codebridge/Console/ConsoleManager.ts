@@ -181,7 +181,7 @@ export default class ConsoleManager {
     this.lastLineIsPartial = false;
     this.writeToTerminal(this.drawnTerminalLines());
     this.terminal.scrollToBottom();
-    this.terminal.focus();
+    this.focusTerminal();
     this.executeTerminalLinesListeners();
   }
 
@@ -202,7 +202,7 @@ export default class ConsoleManager {
     this.lastLineIsPartial = true;
     this.writeToTerminal(message);
     this.terminal.scrollToBottom();
-    this.terminal.focus();
+    this.focusTerminal();
   }
 
   public echoInput(data: string) {
@@ -266,12 +266,19 @@ export default class ConsoleManager {
     );
   }
 
-  private appendTerminalLine(line: string, focusTerminal = true) {
+  private appendTerminalLine(line: string, shouldFocus = true) {
     this.updateTerminalLines(line);
     this.lastLineIsPartial = false;
     this.writeToTerminal(`${line}\r\n`);
     this.terminal.scrollToBottom();
-    if (focusTerminal && this.focusOnWrite) {
+    if (shouldFocus) {
+      this.focusTerminal();
+    }
+  }
+
+  // Every write focuses through here, so setFocusOnWrite governs all of them.
+  private focusTerminal() {
+    if (this.focusOnWrite) {
       this.terminal.focus();
     }
   }
