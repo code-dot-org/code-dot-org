@@ -2061,7 +2061,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
   create_table "quiz_attempts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
-    t.integer "script_id", null: false
+    t.integer "unit_id", null: false
     t.integer "attempt_number", null: false
     t.datetime "started_at", null: false
     t.datetime "submitted_at"
@@ -2070,21 +2070,21 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["level_id"], name: "index_quiz_attempts_on_level_id"
-    t.index ["script_id"], name: "index_quiz_attempts_on_script_id"
-    t.index ["user_id", "level_id", "script_id", "attempt_number"], name: "index_quiz_attempts_on_user_level_script_attempt", unique: true
+    t.index ["unit_id"], name: "index_quiz_attempts_on_unit_id"
+    t.index ["user_id", "level_id", "unit_id", "attempt_number"], name: "index_quiz_attempts_on_user_level_unit_attempt", unique: true
     t.index ["user_id"], name: "index_quiz_attempts_on_user_id"
   end
 
-  create_table "quiz_level_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "quiz_question_placements", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "level_id", null: false
     t.bigint "quiz_question_id", null: false
     t.integer "page", default: 1, null: false
     t.integer "position", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["level_id", "quiz_question_id"], name: "index_quiz_level_questions_on_level_and_question", unique: true
-    t.index ["level_id"], name: "index_quiz_level_questions_on_level_id"
-    t.index ["quiz_question_id"], name: "index_quiz_level_questions_on_quiz_question_id"
+    t.index ["level_id", "quiz_question_id"], name: "index_quiz_question_placements_on_level_and_question", unique: true
+    t.index ["level_id"], name: "index_quiz_question_placements_on_level_id"
+    t.index ["quiz_question_id"], name: "index_quiz_question_placements_on_quiz_question_id"
   end
 
   create_table "quiz_question_responses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
@@ -2094,7 +2094,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
     t.integer "max_score"
     t.integer "score"
     t.string "grading_status", null: false
-    t.boolean "rubric_score"
     t.integer "time_spent_seconds"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -2115,16 +2114,16 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
 
   create_table "quiz_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "type", null: false
-    t.string "question_key", limit: 36, null: false
+    t.string "key", limit: 36, null: false
     t.bigint "parent_id"
-    t.string "question_name", null: false
-    t.json "question", null: false
+    t.string "name", null: false
+    t.json "content", null: false
     t.text "explanation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_quiz_questions_on_key"
+    t.index ["name"], name: "index_quiz_questions_on_name", type: :fulltext
     t.index ["parent_id"], name: "index_quiz_questions_on_parent_id"
-    t.index ["question_key"], name: "index_quiz_questions_on_question_key"
-    t.index ["question_name"], name: "index_quiz_questions_on_question_name", type: :fulltext
   end
 
   create_table "reference_guides", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -3087,10 +3086,10 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
   add_foreign_key "project_storage_geos", "user_project_storage_ids", column: "storage_id"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "quiz_attempts", "levels"
-  add_foreign_key "quiz_attempts", "scripts"
+  add_foreign_key "quiz_attempts", "scripts", column: "unit_id"
   add_foreign_key "quiz_attempts", "users"
-  add_foreign_key "quiz_level_questions", "levels"
-  add_foreign_key "quiz_level_questions", "quiz_questions"
+  add_foreign_key "quiz_question_placements", "levels"
+  add_foreign_key "quiz_question_placements", "quiz_questions"
   add_foreign_key "quiz_question_responses", "quiz_attempts"
   add_foreign_key "quiz_question_responses", "quiz_questions"
   add_foreign_key "quiz_question_standards", "quiz_questions"
