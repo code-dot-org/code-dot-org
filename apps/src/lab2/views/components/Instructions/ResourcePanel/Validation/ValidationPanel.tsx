@@ -27,10 +27,18 @@ const ValidationPanel: React.FC<ValidationSettings> = ({
   return (
     <div className={validationStyles.validationPanel}>
       <div className={validationStyles.validationBubble}>
-        <div id={resourcePanelValidationTableElementId}>
+        {/* On the wrapper, not the table: a live region must exist before the
+            content it announces, and the table is empty until there are
+            results. */}
+        <div
+          id={resourcePanelValidationTableElementId}
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <ValidationTable />
         </div>
-        <div id={resourcePanelValidateButtonElementId}>
+        {/* Swapping to "Stop validation" announces the run. */}
+        <div id={resourcePanelValidateButtonElementId} role="status">
           <ValidationButton
             onValidate={onValidate}
             onStopValidation={onStopValidation}

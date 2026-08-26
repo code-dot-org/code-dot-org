@@ -44,6 +44,7 @@ export default class ConsoleManager {
   // so this manager owns writing it.
   private codeEnvironmentError: string | null;
   private terminalLinesListeners: ((lines: string[]) => void)[] = [];
+  private focusOnWrite: boolean;
   private queuedWrites: string[];
   private queuedBytes: number;
   private awaitingWrite: boolean;
@@ -57,6 +58,7 @@ export default class ConsoleManager {
     this.inputBuffer = '';
     this.lastLineIsPartial = false;
     this.codeEnvironmentError = null;
+    this.focusOnWrite = true;
     this.queuedWrites = [];
     this.queuedBytes = 0;
     this.awaitingWrite = false;
@@ -81,6 +83,20 @@ export default class ConsoleManager {
 
   public setTerminalFitAddon(terminalFitAddon: FitAddon) {
     this.terminalFitAddon = terminalFitAddon;
+  }
+
+  // xterm ships .live-region as assertive, so writes interrupt the screen
+  // reader. Not its parent, which also holds the browsable row list.
+  // Writing focuses the terminal for programs asking for input. Validation
+  // never asks, so it should leave focus alone.
+  public setFocusOnWrite(focusOnWrite: boolean) {
+    this.focusOnWrite = focusOnWrite;
+  }
+
+  public setPoliteScreenReaderAnnouncements() {
+    this.terminal.element
+      ?.querySelector('.xterm-accessibility .live-region')
+      ?.setAttribute('aria-live', 'polite');
   }
 
   public clearTerminalLines() {
@@ -255,7 +271,7 @@ export default class ConsoleManager {
     this.lastLineIsPartial = false;
     this.writeToTerminal(`${line}\r\n`);
     this.terminal.scrollToBottom();
-    if (focusTerminal) {
+    if (focusTerminal && this.focusOnWrite) {
       this.terminal.focus();
     }
   }

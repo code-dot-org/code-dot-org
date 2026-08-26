@@ -46,8 +46,15 @@ const Console: React.FunctionComponent = () => {
     state => state.lab2System.codeEnvironmentError
   );
   const {signInState} = useAppSelector(state => state.currentUser);
+  const isValidating = useAppSelector(state => state.lab2System.isValidating);
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
+
+  // Re-runs when the console is re-created, which rebuilds its live region.
+  useEffect(() => {
+    consoleManager?.setPoliteScreenReaderAnnouncements();
+    consoleManager?.setFocusOnWrite(!isValidating);
+  }, [consoleManager, isValidating]);
 
   const clearOutput = useCallback((sendAnalytics: boolean) => {
     CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();

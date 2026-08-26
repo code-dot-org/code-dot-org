@@ -70,6 +70,25 @@ const stalledTerminal = () => {
   };
 };
 
+// What xterm builds for screen readers once the terminal is opened.
+const openedTerminal = () => {
+  const element = document.createElement('div');
+  const container = document.createElement('div');
+  container.className = 'xterm-accessibility';
+  const liveRegion = document.createElement('div');
+  liveRegion.className = 'live-region';
+  liveRegion.setAttribute('aria-live', 'assertive');
+  container.appendChild(liveRegion);
+  element.appendChild(container);
+  return {
+    liveRegion,
+    consoleManager: new ConsoleManager(
+      {element} as unknown as Terminal,
+      new FitAddon()
+    ),
+  };
+};
+
 const occurrences = (text: string, search: string) =>
   text.split(search).length - 1;
 
@@ -328,5 +347,35 @@ describe('ConsoleManager', () => {
 
     expect(consoleManager.getTerminalLines()).toEqual(['program output']);
     expect(await displayedText(consoleManager)).toContain('program output');
+  });
+
+  it('makes console announcements polite', () => {
+    const {liveRegion, consoleManager} = openedTerminal();
+
+    consoleManager.setPoliteScreenReaderAnnouncements();
+
+    expect(liveRegion.getAttribute('aria-live')).toBe('polite');
+  });
+
+  // The button keeps focus for the whole run.
+  it('stops writes from pulling focus when asked', () => {
+    const {terminal, consoleManager, acknowledgeWrites} = stalledTerminal();
+    consoleManager.writeConsoleMessage('before');
+    acknowledgeWrites();
+    expect(terminal.focus).toHaveBeenCalled();
+
+    terminal.focus.mockClear();
+    consoleManager.setFocusOnWrite(false);
+    consoleManager.writeConsoleMessage('during a validation run');
+
+    expect(terminal.focus).not.toHaveBeenCalled();
+  });
+
+  it('does nothing when the terminal has not been opened yet', () => {
+    const consoleManager = newConsoleManager();
+
+    expect(() =>
+      consoleManager.setPoliteScreenReaderAnnouncements()
+    ).not.toThrow();
   });
 });
