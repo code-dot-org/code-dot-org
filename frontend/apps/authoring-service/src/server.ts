@@ -29,6 +29,7 @@ import {
   SessionStore,
   type ChatScope,
 } from './store/SessionStore.js';
+import {rebuildWidgetSource} from './widgets/buildWidget.js';
 
 const PORT = Number(process.env.PORT) || 3737;
 const SESSION_ID = 'default';
@@ -103,10 +104,30 @@ const tutorRunner: TutorRunner = useEcho
   : new ClaudeTutorRunner();
 
 // The agent edits widget source as normal files (Write/Edit); watch the tree
-// so those edits become live-reload events without a dedicated tool call.
-watchWidgetSources(store.widgetsDir, widgetId =>
-  state.notifyWidgetSourceChanged(widgetId),
+// so those edits become live-reload events without a dedicated tool call. A
+// built widget's src/ edits go through rebuildAndNotify (esbuild, then
+// notify only on success); a legacy widget's direct widget.html edit still
+// just notifies.
+watchWidgetSources(
+  store.widgetsDir,
+  widgetId => state.notifyWidgetSourceChanged(widgetId),
+  widgetId => void rebuildAndNotify(widgetId),
 );
+
+async function rebuildAndNotify(widgetId: string): Promise<void> {
+  const title = state.findWidget(widgetId)?.title ?? widgetId;
+  const result = await rebuildWidgetSource(store, widgetId, title);
+  if (!result) {
+    return; // no src/ — not a built widget, nothing to do
+  }
+  if (result.ok) {
+    state.notifyWidgetSourceChanged(widgetId);
+  } else {
+    console.error(
+      `[authoring-service] widget ${widgetId} build failed:\n${result.errorText}`,
+    );
+  }
+}
 
 const app = new Hono();
 
@@ -292,29 +313,44 @@ function errorMessage(error: unknown): string {
 }
 
 /**
- * Watch `widgets/<id>/widget.html` for edits, debounced per widget: editors
- * and the agent's Write both produce bursts of fs events for one save.
+ * Watch each widget's source for edits, debounced per widget (editors and
+ * the agent's Write both produce bursts of fs events for one save), and
+ * dispatch by kind: a legacy widget's `widget.html` (direct edit — just
+ * notify) versus a built widget's `src/**` (esbuild rebuild first, notify
+ * only if it lands — see rebuildAndNotify above).
  */
 function watchWidgetSources(
   widgetsDir: string,
-  onChange: (widgetId: string) => void,
+  onLegacyChange: (widgetId: string) => void,
+  onSourceChange: (widgetId: string) => void,
 ): void {
   const pending = new Map<string, NodeJS.Timeout>();
   try {
     fs.watch(widgetsDir, {recursive: true}, (_event, filename) => {
-      if (!filename || path.basename(filename) !== 'widget.html') {
+      if (!filename) {
         return;
       }
-      const widgetId = path.dirname(filename);
-      if (widgetId === '.' || widgetId.includes(path.sep)) {
+      const parts = filename.split(path.sep);
+      const widgetId = parts[0];
+      if (!widgetId || widgetId === '.') {
         return;
       }
-      clearTimeout(pending.get(widgetId));
+      const rest = parts.slice(1);
+      const isLegacyEdit = rest.length === 1 && rest[0] === 'widget.html';
+      const isSourceEdit = rest.length > 1 && rest[0] === 'src';
+      if (!isLegacyEdit && !isSourceEdit) {
+        return;
+      }
+      // Keyed by kind too: a rebuild-in-flight for src/ must not be
+      // cancelled by an unrelated widget.html write (build output) landing
+      // moments later on the same widget.
+      const debounceKey = `${widgetId}:${isSourceEdit ? 'src' : 'html'}`;
+      clearTimeout(pending.get(debounceKey));
       pending.set(
-        widgetId,
+        debounceKey,
         setTimeout(() => {
-          pending.delete(widgetId);
-          onChange(widgetId);
+          pending.delete(debounceKey);
+          (isSourceEdit ? onSourceChange : onLegacyChange)(widgetId);
         }, 150),
       );
     });

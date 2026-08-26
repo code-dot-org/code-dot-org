@@ -2,7 +2,9 @@ import {
   createSdkMcpServer,
   query,
   tool,
+  type HookInput,
   type SDKMessage,
+  type SyncHookJSONOutput,
 } from '@anthropic-ai/claude-agent-sdk';
 import {randomUUID} from 'node:crypto';
 import fs from 'node:fs';
@@ -13,12 +15,25 @@ import type {Experience, Lesson, WidgetDescriptor} from '../authoring/model.js';
 import type {LevelCatalog} from '../boot/levelCatalog.js';
 import type {AuthoringState} from '../state/AuthoringState.js';
 import type {SessionStore} from '../store/SessionStore.js';
+import {rebuildWidgetSource} from '../widgets/buildWidget.js';
 
 import type {AgentRunner, AgentTurnInput} from './AgentRunner.js';
 import {AUTHORING_SYSTEM_PROMPT, describeScope} from './systemPrompt.js';
 
 const MODEL = 'sonnet';
 const MAX_TURNS = 40;
+
+// create_widget seeds this so the freshly created src/ builds even before
+// the agent's own Write lands (the watcher, and this turn's own
+// handleWidgetBuildHook, can both run a build against it first).
+const SEED_WIDGET_TSX = `import {createRoot} from 'react-dom/client';
+
+function App() {
+  return <div>New widget — replace this with the real component.</div>;
+}
+
+createRoot(document.getElementById('root')!).render(<App />);
+`;
 
 interface ClaudeAgentRunnerOptions {
   store: SessionStore;
@@ -69,6 +84,26 @@ export class ClaudeAgentRunner implements AgentRunner {
         ],
         canUseTool: async (toolName, toolInput) =>
           guardFileTool(toolName, toolInput, this.store),
+        // A Write/Edit under widgets/<id>/src/ rebuilds synchronously —
+        // the SDK awaits this hook's result before the turn proceeds — so
+        // an esbuild failure reaches the agent as tool feedback in the SAME
+        // turn (decision:'block' + reason, fed back to Claude per the SDK's
+        // PostToolUse contract) instead of needing a separate Read of
+        // build-errors.txt. That file is still written (see
+        // rebuildWidgetSource) as a durable, inspectable artifact and named
+        // in the system prompt as a fallback if a hook round ever doesn't
+        // fire in time.
+        hooks: {
+          PostToolUse: [
+            {
+              matcher: 'Write|Edit',
+              hooks: [
+                async hookInput =>
+                  handleWidgetBuildHook(hookInput, this.store, state),
+              ],
+            },
+          ],
+        },
         settingSources: [],
         maxTurns: MAX_TURNS,
         ...(this.readAgentSessionId()
@@ -143,6 +178,78 @@ export class ClaudeAgentRunner implements AgentRunner {
   private writeAgentSessionId(sessionId: string): void {
     fs.writeFileSync(this.sessionIdFile, `${JSON.stringify({sessionId})}\n`);
   }
+}
+
+/**
+ * After a Write/Edit under widgets/<id>/src/, rebuild that widget before the
+ * turn continues. A failing build returns decision:'block' — the SDK feeds
+ * `reason` back to Claude as this tool call's result and, with
+ * continue:true, lets the turn carry on — so the agent sees the exact
+ * esbuild error immediately and can fix it in the same turn. A file outside
+ * any widget's src/ (curriculum ops, a legacy widget.html) is a no-op.
+ */
+async function handleWidgetBuildHook(
+  input: HookInput,
+  store: SessionStore,
+  state: AuthoringState,
+): Promise<SyncHookJSONOutput> {
+  if (
+    input.hook_event_name !== 'PostToolUse' ||
+    (input.tool_name !== 'Write' && input.tool_name !== 'Edit')
+  ) {
+    return {};
+  }
+  const filePath = (input.tool_input as {file_path?: unknown} | undefined)
+    ?.file_path;
+  const widgetId =
+    typeof filePath === 'string'
+      ? widgetIdFromSourcePath(filePath, store)
+      : undefined;
+  if (!widgetId) {
+    return {};
+  }
+
+  const title = state.findWidget(widgetId)?.title ?? widgetId;
+  const result = await rebuildWidgetSource(store, widgetId, title);
+  if (!result) {
+    return {}; // no src/ yet — canUseTool would have already blocked this
+  }
+  if (result.ok) {
+    state.notifyWidgetSourceChanged(widgetId);
+    return {};
+  }
+  return {
+    decision: 'block',
+    reason:
+      `Widget ${widgetId} failed to build:\n\n${result.errorText}\n\n` +
+      'Fix the error and write again. Learners still see the last working ' +
+      `build — nothing changed for them. The same error is also saved at ` +
+      `widgets/${widgetId}/build-errors.txt.`,
+    continue: true,
+  };
+}
+
+/**
+ * Resolves a Write/Edit's file_path to a widget id, but only when the path
+ * is inside that widget's src/ tree — the one thing handleWidgetBuildHook
+ * needs to know before it is worth an esbuild run. canUseTool has already
+ * confined the path to store.widgetsDir by the time this runs, so this
+ * checks shape, not containment.
+ */
+function widgetIdFromSourcePath(
+  filePath: string,
+  store: SessionStore,
+): string | undefined {
+  const resolved = path.resolve(store.root, filePath);
+  const relative = path.relative(store.widgetsDir, resolved);
+  if (relative.startsWith('..') || path.isAbsolute(relative)) {
+    return undefined;
+  }
+  const [widgetId, srcSegment, ...rest] = relative.split(path.sep);
+  if (!widgetId || srcSegment !== 'src' || rest.length === 0) {
+    return undefined;
+  }
+  return widgetId;
 }
 
 /** File tools are confined to the session; writes to widget source only. */
@@ -469,7 +576,7 @@ function buildCurriculumServer(
       ),
       tool(
         'create_widget',
-        'Create an interactive widget experience: registers the descriptor and inserts it into the lesson. Then WRITE the self-contained HTML document at the returned sourcePath.',
+        'Create an interactive widget experience: registers the descriptor and inserts it into the lesson. Then WRITE the TSX component at the returned sourcePath — it builds automatically (esbuild) into the served document; do not write HTML directly.',
         {
           lessonId: z.string(),
           position: z.number().int(),
@@ -515,12 +622,16 @@ function buildCurriculumServer(
               ...(args.defaultInput ? {defaultInput: args.defaultInput} : {}),
             },
           });
-          // Seed an empty source so the store dir exists for the Write.
-          store.writeWidgetSource(widgetId, '');
+          // Seed a minimal-but-valid entry so the dir exists for the Write
+          // and an unmodified seed still builds (the watcher/hook can run
+          // before the agent's own Write lands).
+          const srcDir = path.join(store.widgetDir(widgetId), 'src');
+          fs.mkdirSync(srcDir, {recursive: true});
+          fs.writeFileSync(path.join(srcDir, 'index.tsx'), SEED_WIDGET_TSX);
           return ok({
             widgetId,
             experienceId,
-            sourcePath: `widgets/${widgetId}/widget.html`,
+            sourcePath: `widgets/${widgetId}/src/index.tsx`,
           });
         },
       ),

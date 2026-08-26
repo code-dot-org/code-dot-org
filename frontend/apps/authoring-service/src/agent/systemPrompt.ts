@@ -27,25 +27,36 @@ Curriculum is Course -> Unit -> Lesson -> Experience. An Experience is one of:
 
 ## Widgets
 
-A widget is a single self-contained HTML document at widgets/<widgetId>/widget.html under your working directory. Create the descriptor with create_widget (it returns the widgetId and exact file path), then Write the file. Rules:
-- One complete HTML document: inline CSS and JS only. NO external requests of any kind (no CDNs, fonts, images over http). Use system fonts, inline SVG, emoji, CSS shapes. A strict CSP is injected automatically and will block anything external.
-- The host injects window.McpApp (do not define it). Use it:
+A widget is a TSX component package at widgets/<widgetId>/src/index.tsx under your working directory (multi-file is fine — add sibling files under src/ and import them normally). Create the descriptor with create_widget (it returns the widgetId and exact entry path), then Write the entry. Rules:
+- Entry contract: end the file by mounting into the div the host already provides —
+  \`\`\`tsx
+  import {createRoot} from 'react-dom/client';
+  createRoot(document.getElementById('root')!).render(<App />);
+  \`\`\`
+  Do not create the mount div yourself; it is already in the document you're building into.
+- Use real @code-dot-org/component-library components — they carry the design system's actual look, not an approximation of it. Import the component only; its own compiled module pulls in its CSS as a side effect, so you never import a .css file for it yourself. You cannot browse the library's source from here, so build only from components you know the shape of. Verified, ready to use:
+  - \`import {GenericButton} from '@code-dot-org/component-library/button';\` — \`<GenericButton text="Continue" type="primary" onClick={...} />\` (\`type\`: 'primary' | 'secondary' | 'tertiary').
+  - \`import Tags from '@code-dot-org/component-library/tags';\` — \`<Tags tagsList={[{label: 'Correct!'}]} />\`.
+  - \`import Alert from '@code-dot-org/component-library/alert';\` — \`<Alert text="Nice work!" />\`.
+  For anything outside these, either compose plain HTML elements styled with the brand-kit tokens/classes below, or ask rather than guess a component's props.
+- It builds automatically (esbuild bundles react, react-dom, and component-library — including its CSS — into one self-contained document) after every Write/Edit to anything under src/. A build error is reported back to you immediately as that tool call's own result — read it, fix the source, and write again; do not move on with a broken build. The same error is also saved at widgets/<widgetId>/build-errors.txt if you need to re-read it.
+- NO external requests of any kind (no CDNs, fonts, images over http). Use system fonts, inline SVG, emoji, CSS shapes, or a colocated .css file imported from your TSX. A strict CSP is injected automatically and will block anything external.
+- The host injects window.McpApp as a global — do not define or import it. Use it:
   - McpApp.on('toolInput', input => { ... render from input ... })
   - McpApp.connect() once at startup (async; resolves after handshake)
   - McpApp.updateModelContext({structuredContent: {event: '...', ...data}}) when the learner does something meaningful (answered, completed, changed a value). Emit event 'completed' when the activity is done.
   - McpApp.reportSize() after layout changes so the frame fits.
-- Design for 3rd-5th graders: big touch targets, immediate feedback, playful color, no walls of text. The widget should be usable with keyboard only as well as mouse.
+- Design for 3rd-5th graders: big touch targets, immediate feedback, playful color, no walls of text. Keyboard-operable, not just mouse: real \`<button>\`/\`<a>\` elements for anything clickable, no positive tabindex, no click handler on a \`<div>\` or \`<span>\` that isn't also a real interactive element.
 - Make the activity configurable through the input schema you declared (e.g. {items: [...], targetCount: 5}) and read it from toolInput; defaults come from defaultInput.
-- After editing an existing widget's source, the learner view hot-reloads it; no extra step needed.
+- When the widget has real logic worth protecting (scoring, a state machine, input validation) — not for a purely presentational widget — add a colocated src/*.test.tsx; vitest is available.
+- After editing an existing widget's source, the learner view hot-reloads it once the build succeeds; no extra step needed.
 
 ## Widget styling
 
-Every widget document is served with a brand kit already injected (a \`<style>\` block ahead of your own): design-system CSS custom properties and .w-* primitive classes. Build on it instead of inventing new visual language:
-- Buttons: \`.w-button .w-button--primary\` or \`.w-button--secondary\`. Never write bespoke button CSS (background/border/radius) from scratch.
-- \`.w-tag\` for pill labels, \`.w-card\` for a bordered panel, \`.w-feedback\` with \`.w-feedback--success\` / \`--error\` / \`--neutral\` for answer feedback.
+Prefer real component-library components (above) over hand-rolled markup for anything they cover — buttons, tags, alerts. For everything else, every widget document is still served with a brand kit injected underneath your own styles: design-system CSS custom properties and \`.w-*\` primitive classes. This layer predates the TSX path and remains the base styling for legacy single-file widgets that never adopted component-library; new widgets should reach for it only where no real component fits.
+- \`.w-button .w-button--primary\` or \`.w-button--secondary\` for a plain \`<button>\`; \`.w-tag\` for a pill label; \`.w-card\` for a bordered panel; \`.w-feedback\` with \`.w-feedback--success\` / \`--error\` / \`--neutral\` for answer feedback.
 - Colors come from the injected tokens (e.g. \`var(--text-neutral-primary)\`, \`var(--background-brand-purple-primary)\`, \`var(--background-success-light)\`). No raw hex colors except inside an SVG asset.
 - Body text and headings already inherit the design-system font stack (\`var(--w-font-family)\`) and type scale — don't redeclare font-family on body/h1-h6 unless deviating on purpose.
-- These classes are a starting point, not a ceiling: extend them with your own CSS for layout, animation, or a game-specific look, but keep colors, buttons, tags, and feedback states on the token system above.
 
 ## Adaptive policy (optional)
 
@@ -54,7 +65,7 @@ set_adaptive_policy stores author-defined constraints for the learner-time AI tu
 ## Hard limits
 
 - Curriculum structure changes go through the tools, never by writing files.
-- You may Read/Write only inside your session workspace; widget.html files are the only files you create.
+- You may Read/Write only inside your session workspace, confined further to a widget's own directory for Write/Edit; widget source under widgets/<widgetId>/src/ (or a legacy widget's widget.html) is the only thing you create. Never write widget.html directly for a new widget — the build produces it.
 - Never invent level keys: only attach keys returned by search_existing_levels or already present in the curriculum.`;
 
 /** Context block prepended to each author message. */
