@@ -6,7 +6,11 @@ import {
   firstCharacters,
   frameTime,
   moduleFor,
+  n,
+  no,
   not,
+  note,
+  param,
   textLength,
   thisActor,
   times,
@@ -46,9 +50,16 @@ const reveals = rule.trait('Reveals Text');
 reveals.uses(ShowsText);
 
 /**
- * The line to reveal. The author sets this; `text` is the answer.
+ * The line being revealed. READ-ONLY: `say` is how a new one arrives.
+ *
+ * It was settable, and that was a bug the first scene found. The counter is
+ * this rule's, so only this rule can put it back to nothing — and a plain
+ * `set` cannot, having no way to say "and start again". A second line shorter
+ * than the first was therefore never written at all: the counter was already
+ * past its end, so the step that writes `text` saw nothing left to do and the
+ * box went on showing the line before.
  */
-const whole = reveals.string('the whole line', '');
+const whole = reveals.string('the whole line', '', {readonly: true});
 /** Letters a second. Twenty is about reading pace. */
 const speed = reveals.number('letters a second', 20);
 /**
@@ -64,6 +75,32 @@ export const RevealsText = rule.traitRef('Reveals Text');
 export const finished = reveals.event(['finishes revealing']);
 
 /**
+ * `⟨…⟩ say ⟨words⟩` — a new line, from the beginning.
+ *
+ * One action rather than two writes, because the two must not be able to
+ * disagree: a line set without the counter reset is a line that never appears,
+ * and a counter reset without a line is the last one typed out again.
+ */
+reveals.block({
+  // `returns` is not optional. Without it the block is not minted at all —
+  // silently, so the rule looks right, generates, and offers nothing. Both
+  // actions here were missing for exactly that reason until a scene tried to
+  // call one.
+  returns: 'none',
+  // `string`, and not `text`: an unrecognised type falls back to Number
+  // without complaint, so the socket refused the words it was handed and the
+  // error arrived at the far end as a connection check.
+  say: ['say', param('words', 'string')],
+  body: ({words}) => [
+    whole.set(thisActor(), words.get()),
+    shown.set(thisActor(), n(0)),
+    done.set(thisActor(), no()),
+    note('Nothing shown yet, which is what the first frame draws.'),
+    text.set(thisActor(), firstCharacters(words.get(), n(0))),
+  ],
+});
+
+/**
  * `make ⟨…⟩ show all of it` — the impatient click, and the skip button.
  *
  * Every game with a typewriter needs it, and a project writing it by hand
@@ -71,6 +108,7 @@ export const finished = reveals.event(['finishes revealing']);
  * the count.
  */
 reveals.block({
+  returns: 'none',
   say: ['show all of it'],
   body: () => [shown.set(thisActor(), textLength(whole.of(thisActor())))],
 });

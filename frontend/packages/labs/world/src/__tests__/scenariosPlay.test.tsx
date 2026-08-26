@@ -45,7 +45,12 @@ describe.each(WORLD_SCENARIO_TAGS)('the %s scenario', tag => {
 
     expect(placed).toBe(tag === 'empty' ? 0 : placed);
     if (tag !== 'empty') {
-      expect(placed).toBeGreaterThan(3);
+      // More than three is what a GAME places — a board, a player, the things
+      // it is about. A novel places two, a portrait and a box, and everything
+      // that happens after that is somebody talking. So the floor is one: the
+      // failure worth catching is a world that built EMPTY, and two is not
+      // that.
+      expect(placed).toBeGreaterThan(tag === 'novel' ? 1 : 3);
     }
   });
 

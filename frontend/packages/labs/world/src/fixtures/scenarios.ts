@@ -33,6 +33,7 @@ import {FLAPPY_SPEC} from './flappy';
 import {FLAPPY_SINGLE_SPEC} from './flappySingle';
 import {METEORS_SPEC} from './meteors';
 import {METEORS_SINGLE_SPEC} from './meteorsSingle';
+import {NOVEL} from './novel';
 import {PLATFORMER_SINGLE_SPEC} from './platformerSingle';
 import {SOKOBAN} from './sokoban';
 import {TAPPER_PROJECT} from './tapper';
@@ -58,6 +59,7 @@ export const WORLD_SCENARIO_TAGS = [
   'flappy-single',
   'tapper',
   'sokoban',
+  'novel',
   'empty',
 ] as const;
 
@@ -314,6 +316,25 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- `crosshair.actor` follows the pointer with `each frame`, which is work ' +
       'a KIND of actor does without a rule to do it in — open it and change ' +
       'which moment of the frame it runs in',
+  },
+  novel: {
+    name: 'Visual Novel',
+    description:
+      'A conversation with a portrait and a choice. The only scenario here ' +
+      'with no game in it — what happens is what somebody says next.',
+    source: NOVEL.source,
+    instructions:
+      '## A conversation\n\nRead it, and answer her.\n\n' +
+      '- Space moves on. At the question, the LEFT and RIGHT arrows answer ' +
+      'it — that is `send to line`, and it is the whole of branching\n' +
+      '- Open `main.world` and look at `moves to a line`: one branch per ' +
+      'line, and each line is BLOCKS, so line one brings the portrait on and ' +
+      'the last one takes her away\n' +
+      '- The box types itself out because it has two abilities that know ' +
+      'nothing about each other: `Has a Conversation` keeps the place and ' +
+      '`Reveals Text` writes the letters. The box just draws its `text`\n' +
+      '- Notice what the branches cost: the space bar needs a guard, because ' +
+      'the line after the yes-answer is the no-answer',
   },
   sokoban: {
     name: 'Sokoban',
