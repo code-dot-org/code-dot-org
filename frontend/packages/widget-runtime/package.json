@@ -1,0 +1,70 @@
+{
+  "name": "@code-dot-org/widget-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": [
+    "platform",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/widget-runtime/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/widget-runtime"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./chrome": {
+      "types": "./dist/chrome.d.ts",
+      "import": "./dist/chrome.mjs",
+      "require": "./dist/chrome.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test": "vitest --run",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "devDependencies": {
+    "@code-dot-org/authoring": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "eslint": "catalog:",
+    "jsdom": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:",
+    "zod": "catalog:"
+  },
+  "peerDependencies": {
+    "@code-dot-org/authoring": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "zod": "^4.0.0"
+  }
+}

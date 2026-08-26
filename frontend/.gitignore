@@ -40,6 +40,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Author Mode prototype draft sessions
+.authoring/
+
 # Misc
 .DS_Store
 *.pem

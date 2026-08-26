@@ -70,6 +70,20 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      // mobilenet's bare `@tensorflow/tfjs-core`/`-converter` imports would
+      // otherwise resolve to the hoisted 2.x copies (pulled in by other labs),
+      // bundling a second tfjs engine: kernels then register on one engine
+      // while ops run on the other and every kernel call throws. Pin both to
+      // the 1.x copies nested under the `@tensorflow/tfjs` meta package this
+      // lab actually uses, so exactly one engine is bundled.
+      '@tensorflow/tfjs-core': path.resolve(
+        __dirname,
+        '../../../node_modules/@tensorflow/tfjs/node_modules/@tensorflow/tfjs-core',
+      ),
+      '@tensorflow/tfjs-converter': path.resolve(
+        __dirname,
+        '../../../node_modules/@tensorflow/tfjs/node_modules/@tensorflow/tfjs-converter',
+      ),
     },
   },
   server: {

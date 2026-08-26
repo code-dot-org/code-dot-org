@@ -1,0 +1,521 @@
+/* Author Mode layout. One component tree: the .playerLayout grid gains or
+ * loses the rail/sidebar columns with author affordances toggled; the stage
+ * column is the learner experience either way. */
+
+.playerLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+}
+
+.playerLayoutAuthor {
+  grid-template-columns: 240px minmax(0, 1fr) 380px;
+}
+
+.lessonHeaderBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+  flex-wrap: wrap;
+}
+
+.lessonHeaderTitles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.lessonHeaderSpacer {
+  flex: 1;
+}
+
+.progressDots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.progressDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--border-neutral-primary, #6f747c);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--border-primary, #4d24a8);
+  }
+}
+
+.progressDotActive {
+  background: var(--background-primary, #4d24a8);
+  border-color: var(--background-primary, #4d24a8);
+}
+
+.progressDotDone {
+  background: var(--background-success, #12752a);
+  border-color: var(--background-success, #12752a);
+}
+
+.stageColumn {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--background-neutral-secondary, #f3f4f5);
+}
+
+.stageScroll {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+.contentCard {
+  width: 100%;
+  max-width: 880px;
+  background: var(--background-neutral-primary, #fff);
+  border: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  border-radius: 8px;
+  padding: 24px 32px;
+}
+
+.labStage {
+  width: 100%;
+  align-self: stretch;
+  flex: 1;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.widgetStage {
+  width: 100%;
+  max-width: 880px;
+  background: var(--background-neutral-primary, #fff);
+  border: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.stageNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+}
+
+/* Outline rail (author affordance) */
+
+.rail {
+  border-right: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+  overflow-y: auto;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.railItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--background-neutral-secondary, #f3f4f5);
+  }
+}
+
+.railItemActive {
+  border-color: var(--border-primary, #4d24a8);
+  background: var(--background-utility-primary-light, #ece6f6);
+}
+
+.railItemLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.railItemKind {
+  flex-shrink: 0;
+}
+
+.railItemActions {
+  display: none;
+  gap: 2px;
+}
+
+.railItem:hover .railItemActions,
+.railItemActive .railItemActions {
+  display: inline-flex;
+}
+
+.railInsert {
+  display: flex;
+  justify-content: center;
+  padding: 1px 0;
+
+  button {
+    border: none;
+    background: transparent;
+    color: var(--text-neutral-secondary, #6f747c);
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 4px;
+    padding: 0 8px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  &:hover button,
+  button:focus-visible {
+    opacity: 1;
+    background: var(--background-utility-primary-light, #ece6f6);
+    color: var(--text-primary, #4d24a8);
+  }
+}
+
+/* AI author sidebar */
+
+.sidebar {
+  border-left: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.sidebarHeader {
+  padding: 12px 16px 8px;
+  border-bottom: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebarLog {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chatBubbleAuthor,
+.chatBubbleAgent,
+.chatBubbleStatus {
+  border-radius: 8px;
+  padding: 8px 12px;
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.chatBubbleAuthor {
+  align-self: flex-end;
+  background: var(--background-utility-primary-light, #ece6f6);
+}
+
+.chatBubbleAgent {
+  align-self: flex-start;
+  background: var(--background-neutral-secondary, #f3f4f5);
+}
+
+.chatBubbleStatus {
+  align-self: stretch;
+  border-left: 3px solid var(--border-neutral-primary, #6f747c);
+  background: transparent;
+  padding: 2px 12px;
+  color: var(--text-neutral-secondary, #6f747c);
+  font-style: italic;
+}
+
+.sidebarComposer {
+  border-top: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.composerRow {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+
+  textarea {
+    flex: 1;
+    resize: vertical;
+    min-height: 56px;
+    max-height: 200px;
+    border: 1px solid var(--border-neutral-primary, #6f747c);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font: inherit;
+  }
+}
+
+.scopeChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  border-radius: 999px;
+  padding: 2px 10px;
+  background: var(--background-neutral-secondary, #f3f4f5);
+  width: fit-content;
+}
+
+/* Generic level renderers */
+
+.videoFrameWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.videoFrame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 6px;
+}
+
+.videoPlaceholder {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed var(--border-neutral-primary, #6f747c);
+  border-radius: 8px;
+}
+
+.unsupportedCard {
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px;
+  border: 1px dashed var(--border-neutral-primary, #6f747c);
+  border-radius: 8px;
+  background: var(--background-neutral-primary, #fff);
+}
+
+.bubbleChoiceList {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.bubbleChoiceItem {
+  border: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.answerOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  border-radius: 8px;
+  background: var(--background-neutral-primary, #fff);
+  padding: 12px 16px;
+  cursor: pointer;
+  font: inherit;
+
+  &:hover {
+    border-color: var(--border-primary, #4d24a8);
+  }
+}
+
+.answerOptionSelected {
+  border-color: var(--border-primary, #4d24a8);
+  background: var(--background-utility-primary-light, #ece6f6);
+}
+
+.answerOptionCorrect {
+  border-color: var(--border-success, #12752a);
+  background: var(--background-utility-success-light, #e6f4e9);
+}
+
+.answerOptionWrong {
+  border-color: var(--border-danger, #d3281c);
+}
+
+.answerList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* Tutor dock (learner-facing, both modes) */
+
+.tutorDock {
+  width: 100%;
+  max-width: 880px;
+  margin-top: 16px;
+  border: 1px solid var(--border-primary, #4d24a8);
+  border-radius: 8px;
+  background: var(--background-neutral-primary, #fff);
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorLog {
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tutorComposer {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  padding: 0 12px 12px;
+
+  textarea {
+    flex: 1;
+    resize: vertical;
+    min-height: 44px;
+    max-height: 160px;
+    border: 1px solid var(--border-neutral-primary, #6f747c);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font: inherit;
+  }
+}
+
+/* Course overview */
+
+.coursePage {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.courseLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
+}
+
+.courseLayoutAuthor {
+  grid-template-columns: minmax(0, 1fr) 380px;
+}
+
+.courseScroll {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.unitCard {
+  border: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  border-radius: 8px;
+  background: var(--background-neutral-primary, #fff);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lessonRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    border-color: var(--border-primary, #4d24a8);
+    background: var(--background-utility-primary-light, #ece6f6);
+  }
+}
+
+.lessonRowMain {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.courseCardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.courseCard {
+  border: 1px solid var(--border-neutral-secondary, #d5d8dc);
+  border-radius: 8px;
+  background: var(--background-neutral-primary, #fff);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    border-color: var(--border-primary, #4d24a8);
+  }
+}
+
+.originBadge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 1px 8px;
+  background: var(--background-neutral-secondary, #f3f4f5);
+  width: fit-content;
+}
