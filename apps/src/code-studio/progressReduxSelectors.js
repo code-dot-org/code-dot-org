@@ -282,9 +282,8 @@ export const getParentLevel = state => {
 /**
  * Get a reference to the next level in the progression, if it exists.
  *
- * Bubble choice levels return the parent level in the case where the navigation
- * type is not 'NEXT_LEVEL', since that is where the progression would take them
- * when they press 'continue' in that case.
+ * Bubble choice navigation is determined by the navigationType of the current level.
+ * If no navigationType is specified, we default to the parent level.
  *
  * Returns undefined if not currently in a script level or currently
  * on the last level.
@@ -310,9 +309,7 @@ export const getNextLevel = state => {
 
   // For navigation purposes, use the index of the parent level if this is bubble choice sublevel, or the current level.
   const navigationLevelIndex = levels.findIndex(
-    level =>
-      level.levelNumber ===
-      (parentLevel ? parentLevel.levelNumber : currentLevel.levelNumber)
+    level => level.id === (parentLevel ? parentLevel.id : currentLevel.id)
   );
 
   const isLastLevel = navigationLevelIndex === levels.length - 1;
@@ -328,9 +325,10 @@ export const getNextLevel = state => {
   if (
     currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_SUBLEVEL
   ) {
-    const nextSublevel = nextLevel?.sublevels?.find(
-      sl => sl.levelNumber === currentLevel.levelNumber
+    const sublevelIndex = parentLevel.sublevels.findIndex(
+      sl => sl.id === currentLevel.id
     );
+    const nextSublevel = nextLevel?.sublevels?.[sublevelIndex];
     return nextSublevel || nextLevel;
   }
 

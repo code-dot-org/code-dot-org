@@ -127,10 +127,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       }
       nextLevelNumber = nextLevelParent.levelNumber;
     }
-
-    // Determine if the next level is not the same as the current level so
-    // as to craft the 'Continue to Level X' button text
-    // Otherise we're going to the parent perhaps, so we just say 'Continue'
     return commonI18n.continueToLevel({level: nextLevelNumber});
   });
 
