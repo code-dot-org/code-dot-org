@@ -46,18 +46,35 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_setPlatformGravity"
+              "type": "spritelab2_thePlayer"
             },
             {
               "kind": "block",
-              "type": "gamelab_spriteClicked",
+              "type": "gamelab_addBehaviorSimple",
               "inputs": {
                 "SPRITE": {
                   "shadow": {
                     "type": "gamelab_allSpritesWithAnimation"
                   }
+                },
+                "BEHAVIOR": {
+                  "block": {
+                    "type": "spritelab2_patrollingOnBlocks"
+                  }
                 }
               }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setPlatformGravity"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setCameraZoom"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_restartScene"
             },
             {
               "kind": "block",
@@ -71,20 +88,6 @@
                 "SPRITE2": {
                   "shadow": {
                     "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_atTime",
-              "inputs": {
-                "N": {
-                  "shadow": {
-                    "type": "math_number",
-                    "fields": {
-                      "NUM": 3
-                    }
                   }
                 }
               }
@@ -211,30 +214,6 @@
                   }
                 }
               }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_addBehaviorSimple",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "BEHAVIOR": {
-                  "shadow": {
-                    "type": "spritelab2_movingLeft"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_movingLeft"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_patrollingLeftRight"
             }
           ]
         },

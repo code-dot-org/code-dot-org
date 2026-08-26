@@ -7,17 +7,17 @@ markdown <<MARKDOWN
 
 You already know a strong prompt needs a Task, Context, Tone/Format, and Details. 
 
-Professional developers add three more habits on top of that they: 
+Professional developers add three more habits on top of that. They: 
 - state their goals clearly
 - define the constraints up front
 - think through edge cases
 
-Below are three of those habits, each with two real prompts side by side. Click through both and see what separates a prompt that gets a usable first draft from one that leaves too much to guesswork.
+Below is one real prompt built from all three habits. Click each highlighted part to see the job it's doing.
 
 --- 
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/prompt-like-a-developer.html" width="100%" height="820" style="border:none;" title="Explore the Parts of a Web Page: an interactive planets site"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/prompt-like-a-developer-v2.html" width="100%" height="820" style="border:none;" title="Explore the Parts of a Web Page: an interactive planets site"></iframe>
 </div>
 
 ---

@@ -857,13 +857,28 @@ module SharedConstants
   AI_CHAT_MODEL_IDS = {
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
     CHATGPT: "gpt-4o-mini",
-    LEARNLM: "learnlm-2.0-flash-experimental",
     GEMINI_2_0_FLASH: "gemini-2.0-flash",
     GEMINI_2_5_FLASH: "gemini-2.5-flash",
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
+
+  # Models served via the Google Gemini API. This is about routing — which
+  # provider a model is requested from (see modelHelpers, shouldUseAiGateway) —
+  # not about who may use it.
+  AI_CHAT_GEMINI_MODEL_IDS = [
+    AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
+  ].freeze
+
+  # Models only available to users in the US
+  # (see User::AiAccessible#can_use_aichat_model?). Kept separate from the list
+  # above, which is about which provider serves a model.
+  AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_GEMINI_MODEL_IDS
 
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",

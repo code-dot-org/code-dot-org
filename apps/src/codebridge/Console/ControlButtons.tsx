@@ -73,6 +73,24 @@ const ControlButtons: React.FunctionComponent = () => {
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
 
+  const clearIsRunningWhenOutputEnds = useCallback(async () => {
+    // The neighborhood clears it itself when its animation finishes.
+    if (miniApp === MiniApps.Neighborhood) {
+      return;
+    }
+    if (miniApp === MiniApps.Theater) {
+      if (appName === 'javalab') {
+        // Java Lab leaves the run button in 'stop' state.
+        return;
+      }
+      // Ensure the audio/visual playback has finished before clearing the run state.
+      await CodebridgeRegistry.getInstance()
+        .getTheater()
+        ?.waitUntilPlaybackDone();
+    }
+    dispatch(setIsRunning(false));
+  }, [appName, dispatch, miniApp]);
+
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
@@ -81,15 +99,9 @@ const ControlButtons: React.FunctionComponent = () => {
         scriptId: scriptId,
         interaction: UserLevelInteractions.click_run,
       });
-      onRun(/*runTests*/ false, dispatch, source).finally(() => {
-        // Theater and neighborhood output keeps playing after the run promise resolves, so we
-        // don't clear isRunning here for them. The neighborhood clears it
-        // itself when its animation finishes; the theater stays running until
-        // the user presses stop (its gif/audio length is unknown).
-        if (miniApp !== MiniApps.Neighborhood && miniApp !== MiniApps.Theater) {
-          dispatch(setIsRunning(false));
-        }
-      });
+      onRun(/*runTests*/ false, dispatch, source).finally(
+        clearIsRunningWhenOutputEnds
+      );
       dispatch(setHasRun(true));
       logLevelActivity();
     } else {
@@ -115,17 +127,19 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  // Returns null if the code action buttons (run, and in the future, test) should be enabled,
-  // otherwise returns the help tip text explaining why they are disabled.
-  // We disable the run button if the environment failed to set up or is still loading
+  // Returns null if the code action buttons (run, and in the future, test)
+  // should not have a tooltip, otherwise returns any tooltip text.
+  // We show a tooltip and disable the run button if the environment is still loading
   // OR if this is a predict level, we are not in start mode,
   // and the user has not yet written a prediction.
+  // A failed environment gets no tooltip: the workspace shows an alert for it instead,
+  // and the button gets disabled below.
   const getDisabledCodeActionsTooltip = () => {
-    let tooltip = null;
     if (codeEnvironmentError) {
-      tooltip =
-        'We could not set up your environment. See the console for details.';
-    } else if (awaitingPredictSubmit) {
+      return null;
+    }
+    let tooltip = null;
+    if (awaitingPredictSubmit) {
       tooltip = codebridgeI18n.predictRunDisabledTooltip();
     } else if (!hasLoadedEnvironment) {
       tooltip = codebridgeI18n.loadingEnvironmentTooltip();
@@ -136,10 +150,9 @@ const ControlButtons: React.FunctionComponent = () => {
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
-  const disabledCodeActionsIcon =
-    !hasLoadedEnvironment && !codeEnvironmentError
-      ? 'fa-spinner fa-spin fa-solid'
-      : 'fa-circle-question fa-regular';
+  const disableCodeActions =
+    !!codeEnvironmentError || !!disabledCodeActionsTooltip;
+  const isEnvironmentLoading = !hasLoadedEnvironment && !codeEnvironmentError;
 
   return (
     <div className={moduleStyles.controlButtons}>
@@ -157,8 +170,6 @@ const ControlButtons: React.FunctionComponent = () => {
         </MuiButton>
       ) : (
         <WithConditionalTooltip
-          iconName={disabledCodeActionsIcon}
-          iconClassName={moduleStyles.disabledInfoIcon}
           showTooltip={!!disabledCodeActionsTooltip}
           tooltipProps={{
             direction: 'onRight',
@@ -171,7 +182,9 @@ const ControlButtons: React.FunctionComponent = () => {
             variant="contained"
             color="primary"
             size="extraSmall"
-            disabled={!!disabledCodeActionsTooltip}
+            disabled={disableCodeActions}
+            loading={isEnvironmentLoading}
+            loadingPosition="start"
             className={moduleStyles.controlButton}
             id="uitest-codebridge-run"
             onClick={handleRun}

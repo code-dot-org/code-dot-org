@@ -41,6 +41,7 @@ class User::SettingsSerializer
       dependent_students_count: dependent_students_count,
       age_options: age_options,
       us_state_options: us_state_options,
+      **educator_profile,
     }
   end
 
@@ -68,5 +69,39 @@ class User::SettingsSerializer
 
   private def us_state_options
     User.us_state_dropdown_options.map {|code, name| {value: code, text: name}}
+  end
+
+  # Teacher-only: for students these keys are absent from the payload, not null.
+  private def educator_profile
+    return {} unless user.teacher?
+
+    {
+      educator_role: user.educator_role,
+      educator_role_options: educator_role_options,
+      school_info: school_info,
+    }
+  end
+
+  # From the canonical Rails source; :label becomes :text to match the other
+  # option lists above.
+  private def educator_role_options
+    SharedConstants::EDUCATOR_ROLES.map do |role|
+      {value: role[:value], text: role[:label], category: role[:category]}
+    end
+  end
+
+  # Deliberately narrower than the query: user_school_info_id is an internal id
+  # the client has no use for. school_id is opaque, so it is always a String.
+  private def school_info
+    school = Queries::SchoolInfo.current_school(user)
+    return nil unless school
+
+    {
+      school_name: school[:school_name],
+      school_type: school[:school_type],
+      school_id: school[:school_id]&.to_s,
+      school_zip: school[:school_zip],
+      country: school[:country],
+    }
   end
 end

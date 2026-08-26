@@ -174,6 +174,137 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
       end
     end
+
+    context 'when an otherwise-verified teacher is in a non-US school' do
+      it 'returns ENABLED (location no longer affects the access level)' do
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:verified_instructor?).and_return(true)
+        allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
+        _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      end
+    end
+  end
+
+  describe '#us_only_aichat_models_disabled?' do
+    subject(:us_only_aichat_models_disabled?) {user.us_only_aichat_models_disabled?}
+
+    context 'when a teacher is in a non-US school' do
+      it 'returns true even for a verified teacher' do
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:verified_instructor?).and_return(true)
+        allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
+        _us_only_aichat_models_disabled?.must_equal true
+      end
+    end
+
+    context 'when a teacher is in a US school' do
+      it 'returns false' do
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:school_info).and_return(build(:school_info_us))
+        _us_only_aichat_models_disabled?.must_equal false
+      end
+    end
+
+    context 'when a teacher has no school_info but a non-US geolocation' do
+      it 'returns true' do
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:school_info).and_return(nil)
+        allow(user).to receive(:user_geos).and_return([build(:user_geo, :sydney)])
+        _us_only_aichat_models_disabled?.must_equal true
+      end
+    end
+
+    context 'when a teacher has neither school_info nor geolocation' do
+      it 'returns false (location cannot be confirmed, so we do not block)' do
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:school_info).and_return(nil)
+        allow(user).to receive(:user_geos).and_return([])
+        _us_only_aichat_models_disabled?.must_equal false
+      end
+    end
+
+    context 'when a teacher has legacy countryless school_info and a US geolocation' do
+      it 'falls back to geolocation rather than treating the missing country as non-US' do
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:school_info).and_return(build(:school_info_without_country))
+        allow(user).to receive(:user_geos).and_return([build(:user_geo, :seattle)])
+        _us_only_aichat_models_disabled?.must_equal false
+      end
+    end
+
+    context 'when all of a student\'s teachers are non-US' do
+      it 'returns true' do
+        non_us_teacher = create(:teacher)
+        allow(non_us_teacher).to receive(:school_info).and_return(build(:school_info_non_us))
+        allow(user).to receive(:teachers).and_return([non_us_teacher])
+        _us_only_aichat_models_disabled?.must_equal true
+      end
+    end
+
+    context 'when a student has a mix of US and non-US teachers' do
+      it 'returns false' do
+        non_us_teacher = create(:teacher)
+        allow(non_us_teacher).to receive(:school_info).and_return(build(:school_info_non_us))
+        us_teacher = qualified_teacher
+        allow(us_teacher).to receive(:school_info).and_return(build(:school_info_us))
+        allow(user).to receive(:teachers).and_return([non_us_teacher, us_teacher])
+        _us_only_aichat_models_disabled?.must_equal false
+      end
+    end
+
+    context 'when international usage is allowed via DCDO' do
+      it 'returns false for a non-US teacher' do
+        allow(DCDO).to receive(:get).with("allow_international_usage_all_models", false).and_return(true)
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
+        _us_only_aichat_models_disabled?.must_equal false
+      end
+    end
+
+    context 'when the user is a levelbuilder' do
+      it 'returns false regardless of location' do
+        allow(user).to receive(:levelbuilder?).and_return(true)
+        allow(user).to receive(:teacher?).and_return(true)
+        allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
+        _us_only_aichat_models_disabled?.must_equal false
+      end
+    end
+  end
+
+  describe '#can_use_aichat_model?' do
+    let(:us_only_model) {SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}
+    let(:image_model) {SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE]}
+    let(:mistral_model) {SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL]}
+    let(:openai_model) {SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}
+
+    context 'when US only models are blocked' do
+      before do
+        allow(user).to receive(:us_only_aichat_models_disabled?).and_return(true)
+      end
+
+      it 'blocks every US only model, including image generation' do
+        SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS.each do |model_id|
+          _(user.can_use_aichat_model?(model_id)).must_equal false
+        end
+        _(user.can_use_aichat_model?(image_model)).must_equal false
+      end
+
+      it 'allows models that are available outside the US' do
+        _(user.can_use_aichat_model?(openai_model)).must_equal true
+        _(user.can_use_aichat_model?(mistral_model)).must_equal true
+      end
+    end
+
+    context 'when US only models are not blocked' do
+      before do
+        allow(user).to receive(:us_only_aichat_models_disabled?).and_return(false)
+      end
+
+      it 'allows all models' do
+        _(user.can_use_aichat_model?(us_only_model)).must_equal true
+        _(user.can_use_aichat_model?(openai_model)).must_equal true
+      end
+    end
   end
 
   describe '#can_access_aichat_chat_completion?' do
