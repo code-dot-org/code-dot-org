@@ -8,6 +8,7 @@
 
 import {beforeEach, describe, expect, it} from 'vitest';
 
+import {STOCK_ACTORS} from '../../actors/stock';
 import {buttonActor} from '../../actors/stock/button';
 import {labelActor} from '../../actors/stock/label';
 import {projectActorIcons} from '../actorIconMeta';
@@ -177,6 +178,44 @@ describe('the stock interface actors', () => {
       }),
     )) {
       expect(actorIconImage(icon)).toBeDefined();
+    }
+  });
+});
+
+// No two kinds may wear the same symbol.
+//
+// At 24 pixels with no name beside it, the symbol is the ONLY thing telling one
+// kind from another in a dropdown — which is the whole reason these exist. The
+// Speech Box wore `text`, a Label's symbol, until a scene put both in one
+// project and they became the same smudge twice.
+describe('the symbols the stock actors elect', () => {
+  it('are not shared between two of them', () => {
+    const worn = STOCK_ACTORS.map(actor => ({
+      id: actor.id,
+      icon: /"ICON": "([^"]+)"/.exec(actor.contents)?.[1],
+    })).filter(entry => entry.icon !== undefined);
+    const seen = new Map<string, string>();
+    const clashes: string[] = [];
+
+    for (const {id, icon} of worn) {
+      const already = seen.get(icon!);
+      if (already) {
+        clashes.push(`${already} and ${id} both show as "${icon}"`);
+      }
+      seen.set(icon!, id);
+    }
+
+    expect(clashes).toEqual([]);
+  });
+
+  it('are symbols the palette can draw', () => {
+    // An elected name nothing draws leaves the dropdown with no picture and no
+    // fallback, which is the one thing worse than a shared symbol.
+    for (const actor of STOCK_ACTORS) {
+      const icon = /"ICON": "([^"]+)"/.exec(actor.contents)?.[1];
+      if (icon !== undefined) {
+        expect(actorIconImage(icon)).toBeDefined();
+      }
     }
   });
 });

@@ -17,8 +17,10 @@
 // matches how a picture already appears in the map editor's palette.
 
 import barsProgress from '@fortawesome/fontawesome-free/svgs/solid/bars-progress.svg?raw';
+import comment from '@fortawesome/fontawesome-free/svgs/solid/comment.svg?raw';
 import font from '@fortawesome/fontawesome-free/svgs/solid/font.svg?raw';
 import handPointer from '@fortawesome/fontawesome-free/svgs/solid/hand-pointer.svg?raw';
+import heartPulse from '@fortawesome/fontawesome-free/svgs/solid/heart-pulse.svg?raw';
 import iCursor from '@fortawesome/fontawesome-free/svgs/solid/i-cursor.svg?raw';
 import windowMaximize from '@fortawesome/fontawesome-free/svgs/solid/window-maximize.svg?raw';
 
@@ -60,8 +62,17 @@ const tile = (source: string): string => {
  */
 export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   text: tile(font),
+  // A speech bubble, which is what a box of dialogue IS. It was `text`, the
+  // same symbol a Label wears — and at 24 pixels with no name beside it, two
+  // kinds sharing a symbol is two kinds nobody can tell apart, which is the
+  // whole reason these exist.
+  speech: tile(comment),
   button: tile(handPointer),
   bar: tile(barsProgress),
+  // A Health Bar is not a Progress Bar wearing the same face. One is filled by
+  // whatever the project decides; the other reads a subject's health and is
+  // told nothing. Sharing `bar` made them one smudge in a dropdown.
+  health: tile(heartPulse),
   panel: tile(windowMaximize),
   input: tile(iCursor),
 };

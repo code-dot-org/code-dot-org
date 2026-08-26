@@ -44,7 +44,7 @@ export const speechBoxActor = actorFile(
   'Speech Box',
   [
     useTrait('Writing#ShowsTextTrait'),
-    showAs('text'),
+    showAs('speech'),
     // Anchored at the top left, because a box fills downward as it is read. A
     // centred one would jump about as each line arrived.
     setText('TextAnchorProperty', words('top left')),
