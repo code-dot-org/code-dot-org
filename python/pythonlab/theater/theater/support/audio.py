@@ -7,6 +7,19 @@ import numpy as np
 from .constants import CHANNELS, MAX_16_BIT_VALUE, MAX_AUDIO_SECONDS, SAMPLE_RATE
 
 
+_ONLY_16_BIT_PCM = "Only 16-bit PCM WAV data is supported"
+
+# Codecs a fmt chunk can name that the wave module reads: uncompressed PCM, and
+# the extensible header whose subformat GUID is PCM.
+_WAVE_FORMAT_PCM = 0x0001
+_WAVE_FORMAT_EXTENSIBLE = 0xFFFE
+_SUBFORMAT_PCM = b"\x01\x00\x00\x00\x00\x00\x10\x00\x80\x00\x00\xaa\x00\x38\x9b\x71"
+
+# Fields of a PCM fmt chunk, and where the extensible one keeps its subformat.
+_MIN_FMT_CHUNK_SIZE = 16
+_SUBFORMAT_RANGE = slice(24, 40)
+
+
 def read_samples_from_wav_bytes(wav_bytes):
   """Read a WAV file into normalized mono float samples in [-1.0, 1.0].
 
@@ -21,7 +34,7 @@ def read_samples_from_wav_bytes(wav_bytes):
       frame_rate = reader.getframerate()
       num_frames = reader.getnframes()
       if sample_width != 2:
-        raise ValueError("Only 16-bit PCM WAV data is supported")
+        raise ValueError(_ONLY_16_BIT_PCM)
       if frame_rate <= 0:
         raise ValueError("WAV data declares no sample rate")
       # Check the header's length before reading, so an outsized file costs
@@ -35,10 +48,46 @@ def read_samples_from_wav_bytes(wav_bytes):
       mono = _decode_frames(reader.readframes(num_frames), num_channels)
   except (wave.Error, EOFError) as error:
     # The wave module's own wording is about RIFF ids and chunks, and neither
-    # of its exceptions is one a student's except ValueError would catch. An
-    # empty file reaches the end of the stream looking for the first chunk.
+    # of its exceptions is one a student's except ValueError would catch.
+    if _declares_unsupported_codec(wav_bytes):
+      raise ValueError(_ONLY_16_BIT_PCM) from error
+    # An empty file reaches the end of the stream looking for the first chunk.
     raise ValueError("This is not a WAV sound file, or it is damaged") from error
   return _to_output_rate(mono, frame_rate)
+
+
+def _find_fmt_chunk(wav_bytes):
+  """The body of the RIFF fmt chunk, or None if there is no readable one."""
+  if wav_bytes[0:4] != b"RIFF" or wav_bytes[8:12] != b"WAVE":
+    return None
+  # Chunks follow the 12-byte RIFF header, each with an 8-byte id and length.
+  # fmt is conventionally first, but a LIST or JUNK chunk may precede it.
+  offset = 12
+  while offset + 8 <= len(wav_bytes):
+    size = int.from_bytes(wav_bytes[offset + 4:offset + 8], "little")
+    if wav_bytes[offset:offset + 4] == b"fmt ":
+      return wav_bytes[offset + 8:offset + 8 + size]
+    # Chunks are padded to an even length, and the pad byte is not in the size.
+    offset += 8 + size + size % 2
+  return None
+
+
+def _declares_unsupported_codec(wav_bytes):
+  """Whether the header names a codec other than PCM.
+
+  The wave module raises the same exception for "a WAV whose codec I don't
+  read" and "not a WAV at all", so read the codec out of the header ourselves
+  rather than tell a student an intact file is damaged.
+  """
+  fmt_chunk = _find_fmt_chunk(wav_bytes)
+  # Short of the PCM fields, nothing in there is a codec to report; that file
+  # is damaged.
+  if fmt_chunk is None or len(fmt_chunk) < _MIN_FMT_CHUNK_SIZE:
+    return False
+  format_tag = int.from_bytes(fmt_chunk[0:2], "little")
+  if format_tag == _WAVE_FORMAT_EXTENSIBLE:
+    return fmt_chunk[_SUBFORMAT_RANGE] != _SUBFORMAT_PCM
+  return format_tag != _WAVE_FORMAT_PCM
 
 
 def _decode_frames(frames, num_channels):

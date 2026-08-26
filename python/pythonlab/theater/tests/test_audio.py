@@ -95,8 +95,70 @@ def test_resampling_a_block_at_a_time_matches_the_whole_track(frame_rate, length
   "wav_bytes", [b"", b"hello world", b"RIFF" + b"\x00" * 40]
 )
 def test_read_rejects_data_that_is_not_a_wav_file(wav_bytes):
-  with pytest.raises(ValueError):
+  with pytest.raises(ValueError, match="not a WAV sound file"):
     read_samples_from_wav_bytes(wav_bytes)
+
+
+# The GUID a WAVE_FORMAT_EXTENSIBLE header carries for 32-bit float samples.
+_IEEE_FLOAT_SUBFORMAT = (
+  b"\x03\x00\x00\x00\x00\x00\x10\x00\x80\x00\x00\xaa\x00\x38\x9b\x71"
+)
+
+_PCM_SUBFORMAT = (
+  b"\x01\x00\x00\x00\x00\x00\x10\x00\x80\x00\x00\xaa\x00\x38\x9b\x71"
+)
+
+
+def _make_wav_bytes_with_codec(format_tag, subformat=b"", leading_chunk=b""):
+  """A WAV whose fmt chunk names the given codec, built by hand.
+
+  The wave module writes PCM only, and its reader rejects an unsupported codec
+  before any of it can be patched in place.
+  """
+  fmt_body = struct.pack(
+    "<HHIIHH", format_tag, 1, SAMPLE_RATE, SAMPLE_RATE * 2, 2, 16
+  )
+  if subformat:
+    fmt_body += struct.pack("<HHI", 22, 16, 0) + subformat
+  chunks = (
+    leading_chunk
+    + b"fmt " + struct.pack("<I", len(fmt_body)) + fmt_body
+    + b"data" + struct.pack("<I", 4) + b"\x00\x00\x01\x00"
+  )
+  return b"RIFF" + struct.pack("<I", 4 + len(chunks)) + b"WAVE" + chunks
+
+
+# Codec tags the wave module refuses outright: 32-bit float, mu-law, ADPCM, and
+# an extensible header whose subformat is float.
+@pytest.mark.parametrize("format_tag", [0x0003, 0x0007, 0x0011, 0xFFFE])
+def test_read_names_the_codec_rather_than_calling_the_file_damaged(format_tag):
+  # These files are intact, so telling a student to go find an undamaged copy
+  # sends them after a problem they don't have.
+  subformat = _IEEE_FLOAT_SUBFORMAT if format_tag == 0xFFFE else b""
+  wav = _make_wav_bytes_with_codec(format_tag, subformat)
+  with pytest.raises(ValueError, match="16-bit PCM"):
+    read_samples_from_wav_bytes(wav)
+
+
+def test_read_accepts_an_extensible_header_carrying_pcm():
+  # Same codec, written the long way; nothing here is unsupported.
+  wav = _make_wav_bytes_with_codec(0xFFFE, _PCM_SUBFORMAT)
+  assert np.allclose(read_samples_from_wav_bytes(wav), [0.0, 1 / 32768], atol=1e-4)
+
+
+def test_read_finds_the_codec_behind_a_leading_chunk():
+  # fmt is conventionally first, but writers pad with JUNK to align the data.
+  junk = b"JUNK" + struct.pack("<I", 8) + b"\x00" * 8
+  wav = _make_wav_bytes_with_codec(0x0003, leading_chunk=junk)
+  with pytest.raises(ValueError, match="16-bit PCM"):
+    read_samples_from_wav_bytes(wav)
+
+
+def test_read_still_calls_a_truncated_header_damaged():
+  # Cut inside the fmt chunk, so there is no codec in there to report.
+  wav = _make_wav_bytes_with_codec(0x0003)
+  with pytest.raises(ValueError, match="not a WAV sound file"):
+    read_samples_from_wav_bytes(wav[:24])
 
 
 @pytest.mark.parametrize(
