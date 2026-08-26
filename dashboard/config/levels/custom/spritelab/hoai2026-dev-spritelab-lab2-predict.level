@@ -29,7 +29,7 @@
     "locked_image_type": "sprite",
     "pinned_scene_id": "dog-scene",
     "pinned_scene_name": "Dog",
-    "ai_model_id": "HMm8MLejpxYN",
+    "ai_model_id": "EMwXz1LsGUvr",
     "guide_mode": "instructions",
     "guide_steps": [
       {
@@ -42,7 +42,7 @@
         }
       },
       {
-        "text": "**Set the scene, then ask the model.** Add a background and make your dog. Make the food, bone and toy with **make new sprite at ... with behavior being draggable**, so you can move them. Then add **when a sprite is dropped**, and inside it **set [dog] image to (predict with dogmood4)** - each slot is the distance from your dog to one thing. Press **Play** and drag things toward the dog.",
+        "text": "**Set the scene, then ask the model.** Add a background and make your dog. Make the food, bone and toy with **make new sprite at ... with behavior being draggable**, so you can move them. Then add **when a sprite is dropped**, and inside it **set [dog] image to (predict with dogmood5)** - each slot is the distance from your dog to one thing. Press **Play** and drag things toward the dog.",
         "after": {
           "tab": "Code"
         }
@@ -102,8 +102,8 @@
                 "type": "spritelab2_predict",
                 "extraState": {
                   "model": {
-                    "id": "HMm8MLejpxYN",
-                    "name": "dogmood4",
+                    "id": "EMwXz1LsGUvr",
+                    "name": "dogmood5",
                     "features": [
                       {
                         "id": "food",
