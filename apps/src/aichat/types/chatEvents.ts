@@ -63,6 +63,8 @@ export interface CompletedChatMessage extends BaseChatMessage {
    * before calling jsonSchemaResponseCallback.
    */
   structuredOutput?: unknown;
+  /** Set when the model announced an image it never produced, and the redraw also came back empty. */
+  imageGenerationFailed?: boolean;
   /**
    * Can be any status besides 'unknown', which is reserved only for pending messages.
    * Note that 'error' here means that the chat message call was returned by the server, but the server returned an error

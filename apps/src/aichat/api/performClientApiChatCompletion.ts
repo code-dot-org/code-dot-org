@@ -54,7 +54,7 @@ export async function performClientApiChatCompletion(
   ];
   metricsReporter.incrementCounter(`${metricPrefix}.Start`, metricDimensions);
 
-  const {response, structuredOutput, assets, status} =
+  const {response, structuredOutput, assets, imageGenerationFailed, status} =
     await clientApi.generateChatResponse(
       newMessage,
       storedMessages,
@@ -96,6 +96,7 @@ export async function performClientApiChatCompletion(
     role: Role.ASSISTANT,
     timestamp: Date.now(),
     assets,
+    imageGenerationFailed,
   };
 
   if (

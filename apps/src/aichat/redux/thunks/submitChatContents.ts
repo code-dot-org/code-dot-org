@@ -249,6 +249,16 @@ export const submitChatContents = createAsyncThunk(
           }
         }
         dispatch(addChatEvent(message));
+        if (message.imageGenerationFailed) {
+          dispatch(
+            addChatEvent({
+              removeId: getNewRemoveId(),
+              text: "The image didn't come through. Ask for it again, or try describing the picture a different way.",
+              notificationType: 'error',
+              timestamp: Date.now(),
+            })
+          );
+        }
       }
       if (message.role === Role.USER) {
         dispatch(
