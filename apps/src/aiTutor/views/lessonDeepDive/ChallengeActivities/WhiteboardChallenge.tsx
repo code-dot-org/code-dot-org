@@ -9,10 +9,12 @@ import React, {FC, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {getClientApi} from '@cdo/apps/aichat/api/client';
+import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import ReactFlowCanvas from '@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {ExplanationTypes} from '../types';
@@ -26,6 +28,62 @@ import styles from './whiteboard-challenge.module.scss';
 const DEFAULT_SOURCES: ReactFlowSketchLabSources = {
   source: {nodes: [], edges: []},
 };
+
+// Cap the longer side of the starter image node so a large teacher-provided
+// image lands at a workable size; fitView then frames it.
+const STARTER_IMAGE_MAX_DIMENSION_PX = 600;
+
+function blobToDataUrl(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(blob);
+  });
+}
+
+function measureImage(src: string): Promise<{width: number; height: number}> {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () =>
+      resolve({width: image.naturalWidth, height: image.naturalHeight});
+    image.onerror = () => reject(new Error('Could not load starter image.'));
+    image.src = src;
+  });
+}
+
+// Loads the starter image and returns a locked image node to seed the canvas
+// with, or null if it can't be fetched. The image is inlined as a data URL so
+// the submission snapshot (html-to-image) captures it without a cross-origin
+// taint; the node is locked so the student draws over the prompt rather than
+// moving or deleting it.
+async function buildStarterImageNode(
+  url: string,
+  altText: string | null
+): Promise<SketchlabReactFlowNode | null> {
+  const response = await fetch(url, {credentials: 'same-origin'});
+  if (!response.ok) {
+    return null;
+  }
+  const dataUrl = await blobToDataUrl(await response.blob());
+  const {width, height} = await measureImage(dataUrl);
+  const scale = Math.min(
+    1,
+    STARTER_IMAGE_MAX_DIMENSION_PX / Math.max(width, height)
+  );
+  return {
+    id: createUuid(),
+    type: 'image',
+    position: {x: 0, y: 0},
+    width: Math.round(width * scale),
+    height: Math.round(height * scale),
+    data: {
+      src: dataUrl,
+      altText: altText ?? 'Starter image',
+      locked: true,
+    },
+  };
+}
 
 // The subset of ChallengeResponse#summarize(assets_for_upload: true) we
 // consume: the asset id to PUT the whiteboard image bytes to.
@@ -57,6 +115,10 @@ const ForceDarkTheme: FC = () => {
 interface WhiteboardChallengeProps {
   // Null while ChallengeBox is still fetching the challenge.
   challengeId: number | null;
+  // Same-origin path to the challenge's starter image, or null when it has
+  // none. When set, the canvas mounts with the image as a locked node.
+  starterImageUrl: string | null;
+  starterImageAltText: string | null;
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
   isRecording: boolean;
@@ -74,6 +136,8 @@ interface WhiteboardChallengeProps {
 // capture on submit) runs inside the ReactFlowProvider.
 const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   challengeId,
+  starterImageUrl,
+  starterImageAltText,
   submitted,
   submitCallback,
   isRecording,
@@ -91,6 +155,13 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   // until it is captured as an image on submit.
   const [sources, setSources] =
     useState<ReactFlowSketchLabSources>(DEFAULT_SOURCES);
+  // Nodes the canvas mounts with. null means "still resolving the starter
+  // image" — the canvas reads initialNodes only at mount, so it must not
+  // render until this settles. Resolves synchronously to [] when there is no
+  // starter image, so the common case never shows the loading state.
+  const [initialNodes, setInitialNodes] = useState<
+    SketchlabReactFlowNode[] | null
+  >(starterImageUrl ? null : []);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
@@ -115,6 +186,30 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
       lessonId,
     });
   }, [clientType, lessonId]);
+
+  useEffect(() => {
+    if (!starterImageUrl) {
+      setInitialNodes([]);
+      return;
+    }
+    let cancelled = false;
+    setInitialNodes(null);
+    buildStarterImageNode(starterImageUrl, starterImageAltText)
+      .then(node => {
+        if (!cancelled) {
+          setInitialNodes(node ? [node] : []);
+        }
+      })
+      .catch(() => {
+        // A missing or unreadable starter image just leaves a blank canvas.
+        if (!cancelled) {
+          setInitialNodes([]);
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [starterImageUrl, starterImageAltText]);
 
   const transcribeAudio = async (timedOut = false) => {
     if (!recordedUrl) return null;
@@ -204,14 +299,19 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   return (
     <div>
       <div className={styles.whiteboardPane}>
-        <ReactFlowCanvas
-          updateSources={setSources}
-          initialNodes={[]}
-          initialEdges={[]}
-          initialViewport={undefined}
-          colorMode="dark"
-          readOnly={submitted}
-        />
+        {initialNodes === null ? (
+          <div className={styles.starterLoading}>Loading starter image…</div>
+        ) : (
+          <ReactFlowCanvas
+            updateSources={setSources}
+            initialNodes={initialNodes}
+            initialEdges={[]}
+            initialViewport={undefined}
+            colorMode="dark"
+            readOnly={submitted}
+            allowImageUpload={false}
+          />
+        )}
         {explanationType === ExplanationTypes.AUDIO && (
           <div className={styles.audioContainer}>
             <AudioRecorder
