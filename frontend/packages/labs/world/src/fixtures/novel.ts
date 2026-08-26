@@ -81,7 +81,13 @@ const say = (words: string) => ({
   },
 });
 
-/** A fade, written where it is used — the portrait's own are out of scope here. */
+/**
+ * A fade, written where it is used.
+ *
+ * The Portrait ships none of its own, and this is why: a definition is
+ * reachable only from the file it sits in, and WHEN a character comes on is
+ * the scene's decision. So the fade lives on the line that causes it.
+ */
 const fade = (who: object, to: number, seconds: number) => ({
   type: 'world_play_tween_here',
   fields: {CURVE: 'ending slowly'},

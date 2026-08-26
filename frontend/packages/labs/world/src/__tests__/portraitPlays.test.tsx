@@ -1,13 +1,15 @@
-// A Portrait entering, end to end.
+// A Portrait, end to end.
 //
-// A picture alone would not earn a place on the shelf — `set sprite` is one row
-// — but a portrait that cannot come on or go off is not what anybody means by
-// one, and entering is the fiddly part. So it ships its own tweens, which makes
-// it the plainest example of what a DEFINITION is for: described once in the
-// actor's own file, played by name from any handler.
+// A picture and a default of invisible. It starts that way on purpose: a
+// portrait standing there before anybody has spoken makes its own entrance
+// impossible to see, and that default is the whole of what this actor knows
+// that a bare `set sprite` does not.
 //
-// It starts invisible on purpose. A portrait standing there before anybody has
-// spoken makes its own entrance impossible to see.
+// It defines no tweens. It shipped `enters` and `leaves` until the scene that
+// wanted them could not name them — a definition is reachable only from its
+// own file — and the test that covered them had to build the handler itself to
+// have anything to play, which is what testing an unreachable thing looks
+// like. The mechanism is covered where it is real: `tweenPlays.test.tsx`.
 
 import {describe, expect, it} from 'vitest';
 
@@ -19,9 +21,7 @@ import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
 
-const me = () => ({block: {type: 'world_this_actor'}});
-
-/** A world that places a Portrait and plays its own `enters` on it. */
+/** A world that places a Portrait, and nothing else. */
 const WORLD = JSON.stringify({
   blocks: {
     blocks: [
@@ -82,80 +82,13 @@ describe('a Portrait', () => {
     expect(actor.get(OpacityProperty)).toBe(0);
   });
 
-  it('carries `enters` and `leaves` as definitions of its own', () => {
-    const portrait = stockActorById('portrait')!;
-
-    expect(portrait.contents).toContain('world_define_tween');
-    expect(portrait.contents).toContain('enters');
-    expect(portrait.contents).toContain('leaves');
-  });
-
-  it('fades in when its own tween is played', async () => {
-    // The claim everything else rests on: a definition in an ACTOR's file,
-    // played on that actor, actually runs. It has to be played from inside
-    // that file, which is the whole point of the scoping — the definition is
-    // a `const` in its own module and nothing outside can name it.
-    //
-    // From an `each frame`, because the foundation raises no "this actor was
-    // added" event to hang it on. Playing it every frame restarts it every
-    // frame, which is not what a project would write — but one tick in, the
-    // portrait has begun to appear, and that is the fact under test.
-    const source = importStockActor(
-      WORLD_SCENARIOS.empty.source,
-      stockActorById('portrait')!,
-    ).source;
-    const file = Object.values(source.files).find(
-      one => one.name === 'portrait.actor',
-    )!;
-    const held = JSON.parse(file.contents) as {
-      blocks: {blocks: Array<Record<string, unknown>>};
-    };
-    const definition = held.blocks.blocks.find(
-      block =>
-        block.type === 'world_define_tween' &&
-        (block.fields as {NAME?: string} | undefined)?.NAME === 'enters',
-    )!;
-    held.blocks.blocks.push({
-      type: 'world_trait_step',
-      x: 20,
-      y: 700,
-      fields: {PHASE: 'react', NAME: 'appear'},
-      inputs: {
-        DO: {
-          block: {
-            type: 'world_play_tween',
-            fields: {TWEEN: definition.id},
-            inputs: {ACTOR: me()},
-          },
-        },
-      },
-    });
-
-    // …and a world to place it in, since the empty scenario places nothing.
-    const worldFile = Object.values(source.files).find(
-      one => one.name === 'main.world',
-    )!;
-    const {world} = await compileProject(
-      projectFiles({
-        ...source,
-        files: {
-          ...source.files,
-          [file.id]: {...file, contents: JSON.stringify(held)},
-          [worldFile.id]: {...worldFile, contents: WORLD},
-        },
-      }),
+  it('defines no tween, because nothing outside this file could play one', () => {
+    // Recorded as a test because `enters` is the obvious thing to add here and
+    // reads as an improvement. A `play tween` names a definition in its OWN
+    // workspace, so one written here is reachable only from a handler here —
+    // and when the character comes on is the scene's call, not the portrait's.
+    expect(stockActorById('portrait')!.contents).not.toContain(
+      'world_define_tween',
     );
-    const actor = [...world.actors][0];
-
-    expect(actor.get(OpacityProperty)).toBe(0);
-
-    // TWO frames, not one, and the reason is the phase order. Tweens advance
-    // in `adjust`; this step runs in `react`, which is after it. So the first
-    // frame starts the tween and the second is the first that moves it — which
-    // is exactly what a handler starting a tween late in a frame gets.
-    world.tick(1 / 60);
-    world.tick(1 / 60);
-
-    expect(actor.get(OpacityProperty)).toBeGreaterThan(0);
   });
 });
