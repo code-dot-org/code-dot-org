@@ -6,6 +6,15 @@
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :require_edit_to_continue, description: "Require student to edit code before continuing"}
 
   .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ai_tutor_optional, description: "AI Tutor is optional on this level"}
+    %p
+      Check this when the curriculum does not ask students to use AI Tutor on
+      this level. The tutor is still available, but a course containing only
+      such Web Lab 2 levels no longer reports that it requires AI chat tools
+      to complete, and students whose section allows AI chat tools only where
+      they are essential will not be able to use the tutor here.
+
+  .field
     = f.label :initial_view_mode, 'Initial View Mode'
     = f.select :initial_view_mode, options_for_select(@level.class.view_modes, @level.initial_view_mode)
     %p Allows setting the initial view mode when the level is loaded, which can be:

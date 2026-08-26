@@ -46,6 +46,15 @@ class LevelTest < ActiveSupport::TestCase
     refute_includes result, level_nil
   end
 
+  test 'with_ai_tutor_available returns Weblab2 levels' do
+    weblab2_level = Level.create(name: 'weblab2', type: 'Weblab2')
+    weblab2_optional_level = Level.create(name: 'weblab2_optional', type: 'Weblab2', properties: {'ai_tutor_optional' => 'true'})
+
+    result = Level.with_ai_tutor_available
+    assert_includes result, weblab2_level
+    assert_includes result, weblab2_optional_level
+  end
+
   test 'with_essential_ai_chat_tools returns levels with type Aichat or Weblab2' do
     aichat_level = Level.create(name: 'aichat', type: 'Aichat')
     weblab2_level = Level.create(name: 'weblab2', type: 'Weblab2')
@@ -55,6 +64,28 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes result, aichat_level
     assert_includes result, weblab2_level
     refute_includes result, maze_level
+  end
+
+  test 'with_essential_ai_chat_tools excludes Weblab2 levels whose AI Tutor is optional' do
+    optional_str_true = Level.create(name: 'weblab2_optional_str_true', type: 'Weblab2', properties: {'ai_tutor_optional' => 'true'})
+    optional_true = Level.create(name: 'weblab2_optional_true', type: 'Weblab2', properties: {'ai_tutor_optional' => true})
+    optional_false = Level.create(name: 'weblab2_optional_false', type: 'Weblab2', properties: {'ai_tutor_optional' => 'false'})
+    optional_unset = Level.create(name: 'weblab2_optional_unset', type: 'Weblab2', properties: {})
+    # The property is only meaningful for Web Lab 2 levels.
+    aichat_optional = Level.create(name: 'aichat_optional', type: 'Aichat', properties: {'ai_tutor_optional' => 'true'})
+
+    result = Level.with_essential_ai_chat_tools
+    refute_includes result, optional_str_true
+    refute_includes result, optional_true
+    assert_includes result, optional_false
+    assert_includes result, optional_unset
+    assert_includes result, aichat_optional
+  end
+
+  test 'with_any_ai_chat_tools returns Weblab2 levels whose AI Tutor is optional' do
+    optional_level = Level.create(name: 'weblab2_optional', type: 'Weblab2', properties: {'ai_tutor_optional' => 'true'})
+
+    assert_includes Level.with_any_ai_chat_tools, optional_level
   end
 
   test 'with_any_ai_chat_tools returns levels with type Aichat, Weblab2, or ai_tutor_available true' do

@@ -45,6 +45,7 @@ class Weblab2 < Level
     ai_tutor_prompt_settings
     widget2
     require_edit_to_continue
+    ai_tutor_optional
   )
 
   after_initialize do

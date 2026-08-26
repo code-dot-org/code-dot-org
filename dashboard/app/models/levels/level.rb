@@ -62,14 +62,24 @@ class Level < ApplicationRecord
   has_many :hint_view_requests
   has_many :rubrics, dependent: :destroy
 
+  # scope for levels that offer AI Tutor to students. Web Lab 2 always builds an
+  # AI Tutor panel into the lab; other level types opt in per level.
   scope :with_ai_tutor_available, (lambda do
-    where("levels.properties->>'$.ai_tutor_available' = 'true'").or(
+    where(type: 'Weblab2').or(
+      where("levels.properties->>'$.ai_tutor_available' = 'true'")
+    ).or(
       where("JSON_LENGTH(JSON_EXTRACT(levels.properties, '$.ai_tutor_prompt_settings.answerTypes')) > 0")
     )
   end)
 
   # scope for levels that require ai chat tools to reasonably function.
-  scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
+  # A Web Lab 2 level ships with AI Tutor, so it requires AI chat tools unless a
+  # levelbuilder has marked the tutor optional; see Weblab2#ai_tutor_optional.
+  scope :with_essential_ai_chat_tools, (lambda do
+    where(type: 'Aichat').or(
+      where(type: 'Weblab2').where("COALESCE(levels.properties->>'$.ai_tutor_optional', 'false') != 'true'")
+    )
+  end)
 
   scope :with_any_ai_chat_tools, -> {with_essential_ai_chat_tools.or(with_ai_tutor_available)}
 
