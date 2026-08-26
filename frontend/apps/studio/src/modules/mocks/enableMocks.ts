@@ -23,6 +23,21 @@ export async function enableMocks(): Promise<void> {
     respond: {is_signed_in: false},
   });
 
+  // `*/levels/:levelId/level_properties` (registered by
+  // `core/api/mocks/levels.handlers.ts` for the dashboard API) wildcard-
+  // matches the authoring service's `/authoring-api/levels/:id/level_properties`
+  // too, since MSW's leading `*` matches any prefix. Without this passthrough,
+  // Author Mode's own level-properties fetch silently gets the dashboard
+  // mock's default empty map instead of the authoring service's real data.
+  // Scoped to this one path — not all of `/authoring-api/*` — because a
+  // broader passthrough also caught the SSE `/authoring-api/events`
+  // connection and other in-flight requests stalled behind it.
+  const {bypass} = await import('msw');
+  registerMockFixture({
+    path: '*/authoring-api/levels/*/level_properties',
+    respond: ({request}) => fetch(bypass(request)),
+  });
+
   // vite-plugin-rails sets Vite's `base` from `config/vite.json`
   // (e.g. `/frontend-studio/`), so `public/mockServiceWorker.js` is served at
   // `${BASE_URL}mockServiceWorker.js` rather than the root.
