@@ -77,7 +77,6 @@ namespace :seed do
   SPECIAL_UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     allthehiddenthings
-    allthelessonplans
     alltheplcthings
     alltheselfpacedplthings
     allthethings
@@ -251,9 +250,7 @@ namespace :seed do
     # seed those courses that are needed for UI tests
     %w(
       allthethingscourse
-      allthelessonplans
       alltheselfpacedplthings
-      original-allthelessonplans-course
       original-allthethings-course
       original-alltheselfpacedplthings-course
     ).each do |course_name|

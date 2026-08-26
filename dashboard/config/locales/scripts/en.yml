@@ -25042,6 +25042,26 @@ en:
           description_short: ''
           description: Teacher overview of the unit.
           student_description: Student overview of the unit.
+        ui-test-lesson-plans:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lesson Group 1
+              big_questions: |-
+                * Who?
+                * What?
+                * Where?
+              description: Lesson group 1 description
+            lessonGroup-3:
+              display_name: Lesson Group 2
+            lessonGroup-4:
+              display_name: UI/Eyes Test Content
+          name: ui-test-lesson-plans
+          title: UI Test Lesson Plans
+          description_audience: ''
+          description_short: ''
+          description: Teacher overview of the unit.
+          student_description: Student overview of the unit.
         joi-playground:
           lessons:
             lesson-1:
