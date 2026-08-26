@@ -64,17 +64,11 @@ def _unblocked_resample(samples, source_rate):
 
 
 def test_read_returns_float32():
-  # These land on a float32 timeline. A float64 decode doubled the heap at
-  # every step, which for a track near the length ceiling ran to hundreds of
-  # megabytes on a machine with none to spare.
   samples = read_samples_from_wav_bytes(_make_wav_bytes([0.25, -0.25], 1))
   assert samples.dtype == np.float32
 
 
 def test_stereo_averaging_is_exact():
-  # Not allclose, unlike its neighbours: a sum of two 16-bit values needs 17
-  # bits and is scaled only by powers of two, so float32 carries the average
-  # with nothing rounded away.
   samples = read_samples_from_wav_bytes(_make_wav_bytes([0.25, -0.75, 0.5, 0.5], 2))
   assert samples.tolist() == [-0.25, 0.5]
 
@@ -100,9 +94,6 @@ def test_resampling_a_block_at_a_time_matches_the_whole_track(frame_rate, length
   "wav_bytes", [b"", b"hello world", b"RIFF" + b"\x00" * 40]
 )
 def test_read_rejects_data_that_is_not_a_wav_file(wav_bytes):
-  # The wave module raises wave.Error, or EOFError for an empty file. Neither
-  # is what a student's "except ValueError" catches, and both talk about RIFF
-  # ids and chunks.
   with pytest.raises(ValueError):
     read_samples_from_wav_bytes(wav_bytes)
 
@@ -112,9 +103,6 @@ def test_read_rejects_data_that_is_not_a_wav_file(wav_bytes):
   [(1, 1, 7), (1, 2, 7), (1, 3, 6), (2, 1, 3), (2, 2, 3), (2, 3, 3)],
 )
 def test_read_plays_what_a_short_file_actually_holds(channels, dropped, expected):
-  # A header promising more frames than the data chunk carries is common, and
-  # other players play what is there. numpy used to refuse the buffer's size,
-  # or fail to line up two channels of unequal length.
   wav = _make_wav_bytes([0.25, -0.25] * 4, channels)
   samples = read_samples_from_wav_bytes(wav[:-dropped])
   assert len(samples) == expected

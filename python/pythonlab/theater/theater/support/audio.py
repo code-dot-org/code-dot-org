@@ -42,22 +42,15 @@ def read_samples_from_wav_bytes(wav_bytes):
 
 def _decode_frames(frames, num_channels):
   """Normalized mono float32 samples from 16-bit PCM frame bytes.
-
-  float32 the whole way: these land on a float32 timeline, and every float64
-  step costs twice the heap, which for a track near the length ceiling runs to
-  hundreds of megabytes on a machine that has none to spare. Scaling in place
-  keeps the temporaries out as well.
-
-  Averaging two channels is exact here. A sum of two 16-bit values needs 17
-  bits, and halving and scaling it are both divisions by a power of two, all of
-  which float32 holds without rounding.
   """
   if num_channels not in (1, 2):
     raise ValueError("Only mono or stereo WAV data is supported")
-  # Whole samples, then whole frames. Data running short of what the header
-  # promised is common enough that the wave module allows it and other players
-  # play what is there; numpy would otherwise refuse the buffer's size, or fail
-  # to line up two channels of different lengths.
+  # First read whole samples (2 bytes each), cutting off any trailing incomplete sample.
+  # Then split into frames according to the number of channels, potentially dropping incomplete
+  # frames (a frame is one sample per channel).
+  # Data running short of what the header promised is common enough that the
+  # wave module allows it and other players play what is there; numpy would 
+  # otherwise refuse the buffer's size, or fail to line up two channels of different lengths.
   raw = np.frombuffer(frames, dtype="<i2", count=len(frames) // 2)
   raw = raw[: len(raw) - len(raw) % num_channels]
   if num_channels == 1:
@@ -176,10 +169,7 @@ class AudioWriter:
     self._samples.resize(capacity, refcheck=False)
 
 
-# How much of the track to resample at a time. numpy's interp works in float64
-# whatever it is handed, so a whole track at once would build the positions, the
-# indices and the result at eight bytes a sample; a block at a time keeps that
-# off the length of the track.
+# How much of the track to resample at a time.
 _RESAMPLE_CHUNK = SAMPLE_RATE
 
 
