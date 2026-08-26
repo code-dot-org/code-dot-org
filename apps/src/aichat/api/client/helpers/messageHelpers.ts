@@ -34,8 +34,7 @@ export async function formatChatMessage(
 ): Promise<ModelMessage | undefined> {
   const content: Array<TextPart | FilePart> = [];
 
-  // An image-only response has no text. An empty text part is not content, so
-  // do not add one: it would make an otherwise empty message look non-empty.
+  // Only add a text part if there is non-empty text.
   if (inputMessage.chatMessageText?.trim()) {
     content.push({type: 'text', text: inputMessage.chatMessageText});
   }
@@ -47,9 +46,8 @@ export async function formatChatMessage(
       if (!dropUnreadableAssets) {
         throw error;
       }
-      // Log and continue so the rest of the conversation still reaches the
-      // model. buildAssetUrl can also throw here, when neither a channel nor
-      // a level name is available to resolve the asset against.
+      // If a broken asset gets stuck in chat history, it poisons all future messages in the conversation.
+      // Skipping the unreadable asset to allows the chat session to continue.
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logError('Skipping unreadable chat history asset', error as Error, {

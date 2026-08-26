@@ -37,10 +37,6 @@ function convertMediaTypeToExtension(
 
 /**
  * Raised when an asset referenced by a chat message cannot be read back.
- *
- * The common cause is an asset that lives in a different project than the one
- * currently open: asset URLs are rebuilt from the current channel on every
- * replay, so an asset recorded against another project resolves to a 404.
  */
 export class AssetFetchError extends Error {
   constructor(
