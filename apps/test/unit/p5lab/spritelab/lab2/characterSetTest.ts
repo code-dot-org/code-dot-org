@@ -8,6 +8,7 @@ import {
   MAX_SHEET_PIXELS,
   placeFrame,
   planCharacterFrames,
+  resizeSheetPose,
   sheetLayout,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
@@ -83,6 +84,26 @@ describe('SpriteLab2 characterSet', () => {
         expect(poseKey(step.pose, step.facing)).toBe(key);
         expect(step.frame).toBe(f);
       }
+    });
+  });
+
+  it('resizes a sheet pose to the frames the model drew, keeping its cycle time', () => {
+    const [stand, walk] = CHARACTER_POSES;
+    const eight = resizeSheetPose(plan, plan.find(p => p.pose === 'walk')!, 8);
+    const poses = (steps: typeof plan) =>
+      steps.map(s => (s.isBase ? 'plate' : s.pose));
+    expect(eight).toHaveLength(plan.length - walk.frameCount + 8);
+    expect(poses(eight).indexOf('walk')).toBe(poses(plan).indexOf('walk'));
+    expect(poses(eight).filter(p => p !== 'walk')).toEqual(
+      poses(plan).filter(p => p !== 'walk')
+    );
+    expect(eight.filter(p => p.pose === 'walk').map(p => p.frame)).toEqual([
+      0, 1, 2, 3, 4, 5, 6, 7,
+    ]);
+    expect(buildPoses(eight)['walk-right']).toEqual({
+      start: stand.frameCount,
+      count: 8,
+      frameDelay: (walk.frameCount * walk.frameDelay) / 8,
     });
   });
 

@@ -143,23 +143,39 @@ describe('sheet slicing', () => {
     ]);
   });
 
-  it('takes frames spread through a longer cycle than asked for', () => {
-    // Twelve frames in a row where eight were asked for.
+  // A row of `count` frames 20 wide and 40 tall, 25 apart.
+  function rowOf(count: number) {
     const boxes: [number, number, number, number][] = [];
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < count; i++) {
       boxes.push([2 + i * 25, 22 + i * 25, 2, 42]);
     }
-    const data = image(300, 44, boxes);
-    const found = frameBoxes(data, 300, 44, 8, 127, ASPECT);
-    expect(found).toHaveLength(8);
-    expect(found.map(b => (b.left - 2) / 25)).toEqual([
-      0, 1, 3, 4, 6, 7, 9, 10,
+    return {data: image(count * 25, 44, boxes), width: count * 25};
+  }
+  const column = (b: {left: number}) => (b.left - 2) / 25;
+
+  it('keeps every frame of a longer cycle than asked for', () => {
+    const {data, width} = rowOf(12);
+    const found = frameBoxes(data, width, 44, 8, 127, ASPECT);
+    expect(found.map(column)).toEqual([...Array(12).keys()]);
+  });
+
+  it('keeps a shorter cycle than asked for', () => {
+    const {data, width} = rowOf(6);
+    expect(frameBoxes(data, width, 44, 8, 127, ASPECT).map(column)).toEqual([
+      0, 1, 2, 3, 4, 5,
     ]);
   });
 
-  it('falls back to the squarest grid for a square picture it cannot read', () => {
-    // One blob two frames wide where eight were asked for.
-    const data = image(100, 100, [[5, 45, 5, 45]]);
+  it('thins a run far longer than asked for to frames spread through it', () => {
+    const {data, width} = rowOf(20);
+    expect(frameBoxes(data, width, 44, 8, 127, ASPECT).map(column)).toEqual([
+      0, 2, 5, 7, 10, 12, 15, 17,
+    ]);
+  });
+
+  it('falls back to the squarest grid for a picture it cannot read', () => {
+    // One blob of frame shape where eight were asked for.
+    const data = image(100, 100, [[5, 25, 5, 45]]);
     expect(frameBoxes(data, 100, 100, 8, 127, ASPECT)).toEqual(
       evenGrid(100, 100, 2, 4)
     );

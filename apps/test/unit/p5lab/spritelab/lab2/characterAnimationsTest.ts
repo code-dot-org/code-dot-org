@@ -7,6 +7,7 @@ import {
   pickPose,
   poseForFrame,
   poseFrame,
+  poseFrameDelay,
   poseKey,
   posesByImageName,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
@@ -101,6 +102,14 @@ describe('SpriteLab2 characterAnimations', () => {
     // Gravity pointing up: rising is moving down.
     expect(jumpFrame(5, -0.75)).toBe(0);
     expect(jumpFrame(-3, -0.75)).toBe(1);
+  });
+
+  it('paces a pose so any frame count keeps its cycle time', () => {
+    const walk = CHARACTER_POSES.find(p => p.pose === 'walk')!;
+    const cycle = walk.frameCount * walk.frameDelay;
+    expect(poseFrameDelay('walk', walk.frameCount)).toBe(walk.frameDelay);
+    expect(poseFrameDelay('walk', cycle / 3)).toBe(3);
+    expect(poseFrameDelay('walk', cycle * 4)).toBe(1);
   });
 
   it('finds which pose a sheet frame belongs to', () => {

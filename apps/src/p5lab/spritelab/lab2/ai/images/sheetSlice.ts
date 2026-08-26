@@ -28,18 +28,23 @@ const PIECE_ROUNDING = 0.5;
 // an even division would put it, as a fraction of a piece.
 const CUT_SEARCH_FRACTION = 0.25;
 
+// A cycle up to this many times longer than asked for is kept whole; a
+// longer one is thinned to the asked-for count.
+const KEPT_CYCLE_FACTOR = 2;
+
 const boxWidth = (box: FrameBox) => box.right - box.left;
 const boxHeight = (box: FrameBox) => box.bottom - box.top;
 const boxArea = (box: FrameBox) => boxWidth(box) * boxHeight(box);
 
 /**
- * The boxes of `expected` frames in a keyed sheet image, row by row and left
- * to right. `frameAspect` is the shape of one frame of this character (width
- * over height, from its plate): a blob twice that wide holds two frames
- * touching, one twice that tall two frames stacked, and each is cut apart at
- * its sparsest lines. When the frames still cannot be told apart the image is
- * cut into an even grid: a single row when it is wide, else as square a grid
- * as fits.
+ * The boxes of the frames in a keyed sheet image, row by row and left to
+ * right: as many as the model drew, which need not be `expected`, the count
+ * asked for. `frameAspect` is the shape of one frame of this character
+ * (width over height, from its plate): a blob twice that wide holds two
+ * frames touching, one twice that tall two frames stacked, and each is cut
+ * apart at its sparsest lines. When fewer than two frames can be told apart
+ * the image is cut into an even grid of `expected`: a single row when it is
+ * wide, else as square a grid as fits.
  */
 export function frameBoxes(
   data: Uint8ClampedArray,
@@ -56,12 +61,17 @@ export function frameBoxes(
   boxes = boxes.flatMap(box =>
     splitByShape(box, frameAspect, data, width, alphaThreshold)
   );
-  if (boxes.length < expected) {
+  if (boxes.length < 2) {
     return fallbackGrid(width, height, expected);
   }
-  // More frames than asked for: the model drew a longer cycle. Take frames
-  // spread evenly through it, in reading order, so the cycle stays whole.
+  // The model draws the cycle it likes — twelve frames when asked for eight,
+  // six when asked for six — and every frame it drew is a frame of the pose,
+  // so all are kept. Only a run far longer than asked for is thinned to the
+  // frames spread evenly through it, in case it was not one cycle.
   const ordered = rowMajor(boxes);
+  if (ordered.length <= expected * KEPT_CYCLE_FACTOR) {
+    return ordered;
+  }
   return Array.from(
     {length: expected},
     (_, i) => ordered[Math.floor((i * ordered.length) / expected)]

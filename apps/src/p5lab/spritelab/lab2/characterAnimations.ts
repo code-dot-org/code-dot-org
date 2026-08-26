@@ -35,23 +35,34 @@ export interface CharacterPoseSpec {
 }
 
 /**
- * The poses a set holds and how each plays. The generator asks for exactly
- * these frames and the engine plays them at these rates; both read the one
- * table. Jump frames are not played on a clock in the game — the engine
+ * The poses a set holds and how each plays. The generator asks for these
+ * frames and the engine plays a set's frames at the rates stored with it;
+ * both read the one table. Jump frames are not played on a clock in the game — the engine
  * picks the frame from the sprite's vertical speed (see jumpFrame) — so its
  * delay only paces the preview.
  *
- * The walk is the eight-key cycle, on trial in pixel style. Smooth-style
- * runs only ever repeated the first half; pixel style has produced the
- * second half's poses on a good roll (and standing frames on a bad one).
- * The half cycle is {frameCount: 4, frameDelay: 6} — the same walking speed
- * for half the pictures — if the roll proves too unreliable.
+ * The walk is drawn as one row picture and the model decides how many
+ * frames the row holds: asked for eight it has drawn twelve, asked for four
+ * or six it has drawn that many. Every frame it draws is kept, so the walk's
+ * frameCount is the count asked for, and frameCount × frameDelay the cycle
+ * time a set keeps whatever count it got (see poseFrameDelay): twelve frames
+ * at two ticks and eight at three are the same walk.
  */
 export const CHARACTER_POSES: CharacterPoseSpec[] = [
   {pose: 'stand', frameCount: 2, frameDelay: 20},
   {pose: 'walk', frameCount: 12, frameDelay: 2},
   {pose: 'jump', frameCount: 2, frameDelay: 8},
 ];
+
+/**
+ * The delay that gives a pose of `count` frames the cycle time of its spec:
+ * a walk that came back as twelve frames plays each for two ticks, one that
+ * came back as eight for three.
+ */
+export function poseFrameDelay(pose: CharacterPose, count: number): number {
+  const spec = CHARACTER_POSES.find(p => p.pose === pose)!;
+  return Math.max(1, Math.round((spec.frameCount * spec.frameDelay) / count));
+}
 
 /** Right first: the left-facing frames are drawn from the right-facing ones. */
 export const CHARACTER_FACINGS: CharacterFacing[] = ['right', 'left'];

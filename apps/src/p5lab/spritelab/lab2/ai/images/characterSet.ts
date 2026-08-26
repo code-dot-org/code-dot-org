@@ -17,6 +17,7 @@ import {
   CharacterFacing,
   CharacterPose,
   GENERATED_FACINGS,
+  poseFrameDelay,
   poseKey,
 } from '../../characterAnimations';
 import {findOpaqueBounds} from '../../imageTrim';
@@ -187,20 +188,49 @@ export function sheetFrames(plan: FramePlan[]): FramePlan[] {
   return plan.filter(step => !step.isBase);
 }
 
-/** The pose ranges of a sheet laid out in plan order (plate excluded). */
+/**
+ * The pose ranges of a sheet laid out in plan order (plate excluded). Each
+ * pose plays at the delay that keeps its cycle time for however many frames
+ * it has.
+ */
 export function buildPoses(plan: FramePlan[]): AnimationPoses {
   const poses: AnimationPoses = {};
   sheetFrames(plan).forEach((step, index) => {
     const key = poseKey(step.pose, step.facing);
-    const spec = CHARACTER_POSES.find(p => p.pose === step.pose)!;
     const range = poses[key];
-    if (!range) {
-      poses[key] = {start: index, count: 1, frameDelay: spec.frameDelay};
-    } else {
+    if (range) {
       range.count++;
+      range.frameDelay = poseFrameDelay(step.pose, range.count);
+    } else {
+      poses[key] = {
+        start: index,
+        count: 1,
+        frameDelay: poseFrameDelay(step.pose, 1),
+      };
     }
   });
   return poses;
+}
+
+/**
+ * The plan with the frames of `step`'s pose and facing replaced by `count`
+ * of them. A row picture holds as many frames as the model drew, and the
+ * plan is made to match before those frames join the set.
+ */
+export function resizeSheetPose(
+  plan: FramePlan[],
+  step: FramePlan,
+  count: number
+): FramePlan[] {
+  const same = (p: FramePlan) =>
+    !p.isBase && p.pose === step.pose && p.facing === step.facing;
+  const start = plan.findIndex(same);
+  const frames = Array.from({length: count}, (_, frame) => ({...step, frame}));
+  return [
+    ...plan.slice(0, start),
+    ...frames,
+    ...plan.slice(start).filter(p => !same(p)),
+  ];
 }
 
 // The poses themselves are pictures (poseFigures.ts); the text names no
@@ -724,7 +754,7 @@ export async function generateCharacterSet(
   options: CharacterSetOptions,
   onProgress?: (progress: CharacterSetProgress) => void
 ): Promise<GeneratedImageResult> {
-  const plan = planCharacterFrames();
+  let plan = planCharacterFrames();
   const key = chooseKeyColor(prompt);
   // One seed for the whole set.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
@@ -796,6 +826,9 @@ export async function generateCharacterSet(
               )
             )
           : sliced;
+      // The row holds the frames the model drew, not necessarily the count
+      // asked for; the plan follows the row.
+      plan = resizeSheetPose(plan, step, frames.length);
       frames.forEach(frame => {
         raws.push(raw);
         keyed.push(frame);
@@ -806,7 +839,7 @@ export async function generateCharacterSet(
         preview = shown;
         previewPose = undefined;
       }
-      i += frameCount - 1;
+      i += frames.length - 1;
       continue;
     }
     const text = step.isBase
