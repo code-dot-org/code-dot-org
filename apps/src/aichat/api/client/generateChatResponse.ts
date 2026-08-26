@@ -68,16 +68,12 @@ export async function generateChatResponse(
     levelSystemPrompt
   );
 
-  // Stored history tolerates an unreadable asset -- dropping it keeps the rest
-  // of the conversation usable. The message the user just sent does not: an
-  // attachment we cannot read is worth failing on so they can retry.
+  // we're specifically dropping unreadable assets in just storedMessages to make sure corrupted chat history
+  // doesn't poison the rest of the conversation, but issues with the new message still surface.
   for (const message of storedMessages) {
     const formattedMessage = await formatChatMessage(message, buildAssetUrl, {
       dropUnreadableAssets: true,
     });
-    // Left out when nothing survives -- an image-only message whose asset
-    // could not be read. The model rejects a message with no parts, so
-    // sending it empty would fail the request the drop was meant to save.
     if (formattedMessage) {
       messages.push(formattedMessage);
     }
@@ -88,9 +84,7 @@ export async function generateChatResponse(
     buildAssetUrl
   );
   if (!formattedNewMessage) {
-    throw new Error(
-      'Cannot send a chat message with neither text nor a readable attachment.'
-    );
+    throw new Error('Cannot send an undefined chat message.');
   }
   messages.push(formattedNewMessage);
 
