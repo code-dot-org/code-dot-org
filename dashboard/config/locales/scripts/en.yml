@@ -28782,6 +28782,8 @@ en:
           description: |-
             This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
 
+            > **Choose Python or JavaScript, not both.** This unit and Foundations of AI Programming (JavaScript) cover the same core concepts and similar standards in two different languages. They exist so you can pick the language that best fits your students or pathway — teach one or the other, not both.
+
             ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
             - Define and explain the purpose of algorithms and their applications.
             - Design algorithms using sequence, selection, and iteration.
