@@ -371,8 +371,6 @@ def test_pauses_after_the_last_sound_do_not_count():
 
 @pytest.mark.parametrize("points", [[], [0], [0, 0], [0, 0, 10], [0, 0, 10, 10, 20]])
 def test_unusable_shape_points_raise_at_the_call(points):
-  # This used to raise from the drawing pass, so a scene carried the mistake
-  # all the way to play_scenes before saying anything.
   scene = Scene()
   with pytest.raises(ValueError):
     scene.draw_shape(points, True)
@@ -478,9 +476,6 @@ def test_draw_image_accepts_float_geometry():
 
 @pytest.mark.parametrize("size", [-1, 0, 0.4, -100, float("nan")])
 def test_unusable_draw_image_size_raises_at_the_call(size):
-  # -1 was the "not specified" sentinel, so it fell through to the width and
-  # height branch, where they were sentinels too; every one of these ended up
-  # floored to a 1x1 image and drawn without a word.
   scene = Scene()
   with pytest.raises(ValueError):
     scene.draw_image(Image(10, 10), 0, 0, size=size)
