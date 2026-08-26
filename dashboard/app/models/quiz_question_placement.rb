@@ -13,8 +13,8 @@
 # Indexes
 #
 #  index_quiz_question_placements_on_level_and_question  (level_id,quiz_question_id) UNIQUE
-#  index_quiz_question_placements_on_level_id             (level_id)
-#  index_quiz_question_placements_on_quiz_question_id     (quiz_question_id)
+#  index_quiz_question_placements_on_level_id            (level_id)
+#  index_quiz_question_placements_on_quiz_question_id    (quiz_question_id)
 #
 class QuizQuestionPlacement < ApplicationRecord
   belongs_to :level
