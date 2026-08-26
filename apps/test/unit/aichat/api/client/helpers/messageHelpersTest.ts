@@ -40,12 +40,12 @@ const buildAssetUrl = (a: ChatAsset) => `/v3/assets/channel-id/${a.filename}`;
 
 // Stands in for the browser fetch that assetToFilePart uses.
 const mockFetch = (init: {ok: boolean; status: number; body?: string}) => {
-  global.fetch = jest.fn().mockResolvedValue({
+  jest.spyOn(global, 'fetch').mockResolvedValue({
     ok: init.ok,
     status: init.status,
     headers: new Map([['content-type', 'image/png']]),
     arrayBuffer: async () => new TextEncoder().encode(init.body ?? '').buffer,
-  }) as unknown as typeof global.fetch;
+  } as unknown as Response);
 };
 
 describe('assetToFilePart', () => {
