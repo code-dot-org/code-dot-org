@@ -1,10 +1,12 @@
 import {describe, expect, it} from 'vitest';
 
+import {WIDGET_BRAND_CSS} from '../brandKit';
 import {buildWidgetDocument, injectWidgetChrome} from '../widgetChrome';
 
 const CSP = 'http-equiv="Content-Security-Policy"';
 const SHIM_DEFINITION = 'window.McpApp = {';
 const OUR_POLICY = "default-src 'none'";
+const BRAND_MARKER = '--background-brand-purple-primary';
 
 describe('injectWidgetChrome', () => {
   it('injects CSP and shim into a document that merely REFERENCES McpApp', () => {
@@ -116,5 +118,52 @@ describe('injectWidgetChrome', () => {
     expect(twice).toBe(once);
     expect(once.match(/Content-Security-Policy/g)).toHaveLength(1);
     expect(once.match(/window\.McpApp = \{/g)).toHaveLength(1);
+  });
+});
+
+describe('brand kit injection', () => {
+  it('buildWidgetDocument includes the brand style block ahead of the widget CSS', () => {
+    const out = buildWidgetDocument({
+      title: 'w',
+      bodyHtml: '<p>hi</p>',
+      css: '.custom { color: red; }',
+      js: '',
+    });
+    expect(out).toContain(BRAND_MARKER);
+    expect(out.indexOf(WIDGET_BRAND_CSS)).toBeGreaterThanOrEqual(0);
+    // Brand style comes before the widget's own <style>, so a matching
+    // selector in the widget's CSS still wins the cascade.
+    expect(out.indexOf(BRAND_MARKER)).toBeLessThan(out.indexOf('.custom'));
+  });
+
+  it("a widget's own rule for a shared selector still overrides the brand kit", () => {
+    const widgetCss = '.w-button--primary { background-color: #123456; }';
+    const out = buildWidgetDocument({
+      title: 'w',
+      bodyHtml: '<button class="w-button w-button--primary">Go</button>',
+      css: widgetCss,
+      js: '',
+    });
+    // The brand kit defines .w-button--primary too (first occurrence); the
+    // widget's override must come later in source order to win the cascade.
+    expect(out.indexOf('.w-button--primary')).toBeGreaterThanOrEqual(0);
+    expect(out.indexOf(widgetCss)).toBeGreaterThan(
+      out.indexOf('.w-button--primary'),
+    );
+  });
+
+  it('injectWidgetChrome adds the brand style block to a bare fragment', () => {
+    const out = injectWidgetChrome('<p>fragment</p>');
+    expect(out).toContain(BRAND_MARKER);
+    expect(out.indexOf(BRAND_MARKER)).toBeLessThan(out.indexOf('fragment'));
+  });
+
+  it('injectWidgetChrome brand style survives repeated passes without duplicating', () => {
+    const once = injectWidgetChrome('<p>fragment</p>');
+    const twice = injectWidgetChrome(once);
+    expect(twice).toBe(once);
+    // One injected chrome head means one copy of the brand style block, no
+    // matter how many passes ran.
+    expect(twice.match(/data-cdo-widget-chrome/g)).toHaveLength(1);
   });
 });
