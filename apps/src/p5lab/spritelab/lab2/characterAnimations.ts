@@ -48,7 +48,7 @@ export interface CharacterPoseSpec {
  * for half the pictures — if the roll proves too unreliable.
  */
 export const CHARACTER_POSES: CharacterPoseSpec[] = [
-  {pose: 'stand', frameCount: 2, frameDelay: 15},
+  {pose: 'stand', frameCount: 2, frameDelay: 20},
   {pose: 'walk', frameCount: 12, frameDelay: 2},
   {pose: 'jump', frameCount: 2, frameDelay: 8},
 ];
