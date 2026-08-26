@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-08-25T21:12:57.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Turn Your Flowchart into Pseudocode\r\n\r\nAdd your **for loop** flowchart from your Backpack to the AI chat with a prompt to turn your flowchart into pseudocode that represents a loop. \r\n\r\nDouble check the AI output, making sure there are clear start, stop, and step values. ",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a friendly chatbot designed to turn a visual while loop or for loop flowchart into pseudocode. Use the following for loop pseudocode as a style template:\n\nSTART workout\n  SET pushups TO 0\n  SET goal TO 10\n\n  WHILE pushups IS LESS THAN goal\n    DO a push up\n    INCREASE pushups BY 1\n  END WHILE\n\nFINISH workout",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_aif-6b-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-25T21:12:57.972+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson11-level3_2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson11-level3_2026\"}]"
+}]]></config>
+</Aichat>
