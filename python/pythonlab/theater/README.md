@@ -231,18 +231,18 @@ long" costs.
 ```python
 from theater import Font, FontStyle
 scene.set_text_style(Font.SERIF, FontStyle.BOLD_ITALIC)
+scene.set_text_style('serif', 'bold_italic')  # the same, given as names
 ```
 
 `Font` is `MONO`, `SANS` (the default), or `SERIF`. `FontStyle` is `NORMAL` (the
-default), `BOLD`, `ITALIC`, or `BOLD_ITALIC`.
+default), `BOLD`, `ITALIC`, or `BOLD_ITALIC`. Either argument takes the enum
+value or its name, case-insensitive, as colors and instruments do.
+
+The method will throw if given a name that is on neither list.
 
 The three families are Liberation Mono, Sans, and Serif, bundled with the
 package. No other font is available, and the stage draws only the characters
 those faces carry.
-
-These two arguments must be the enum values; unlike the color and instrument
-arguments elsewhere, the equivalent strings do not work. The method will throw on
-anything else, but from `play_scenes()` rather than at the call.
 
 ### Images
 
@@ -255,8 +255,8 @@ at `(x, y)`. The size must be given one of two ways:
 - `width=` and `height=` together stretch it to exactly that size.
 
 The method will throw if given neither form, if either dimension is less than 1
-or greater than 4000 pixels — including a height that `size=` works out to — or if `image` is a
-filename that cannot be loaded.
+or greater than 4000 pixels — including a height that `size=` works out to — or
+if `image` is a filename that cannot be loaded.
 
 `rotation` is in degrees, clockwise, about `(x, y)`.
 
@@ -353,7 +353,7 @@ Lab runs in.
 | text height | 1 - 1600 px | |
 | one `draw_text()` call | 32 Mi pixels | Roughly `len(text) * height^2`. Long text costs what tall text costs, because the whole string is drawn before any of it is clipped to the stage. |
 | image size | 16 Mi pixels | 4096x4096. Applies to loaded and blank images alike. |
-| `draw_image()` width or height | 1-4000 px | Only the ceiling is checked; a dimension of zero or less draws one pixel instead of throwing. |
+| `draw_image()` width or height | 1-4000 px | |
 | one sound | 300 s | |
 
 ### Checked by `play_scenes()`
