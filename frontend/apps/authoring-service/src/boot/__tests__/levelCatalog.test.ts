@@ -2,6 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {describe, expect, it} from 'vitest';
 
+import {parseLevelXml} from '@code-dot-org/authoring';
+
+import type {ParseLevelXml} from '../../authoring/model.js';
 import {LevelCatalog} from '../levelCatalog.js';
 import {resolveRepoRoot} from '../paths.js';
 
@@ -65,5 +68,42 @@ describe.skipIf(!repoRoot)('LevelCatalog', () => {
         registerLevelProperties: () => {},
       }),
     ).toBeUndefined();
+  });
+
+  // Maze and Karel share one directory and one game engine, but only Maze's
+  // block set was authored on the source branch — a Karel level's toolbox
+  // flyout throws at mount (see levelCatalog.ts's projectRuntime). Pins the
+  // split so a future block-set completion is a deliberate, visible change
+  // here rather than an accidental revert.
+  describe('Maze/Karel runtime split', () => {
+    const parsingCatalog = LevelCatalog.scan(
+      repoRoot as string,
+      parseLevelXml as ParseLevelXml,
+    );
+    let nextId = 1;
+    const context = {
+      nextLevelNumericId: () => nextId++,
+      registerLevelProperties: () => {},
+    };
+
+    it('resolves a Maze level to labhost/maze', () => {
+      const level = parsingCatalog.resolveLevel(
+        'courseD_maze_ramp1_2024',
+        context,
+      );
+      expect(level?.levelType).toBe('Maze');
+      expect(level?.runtime).toBe('labhost');
+      expect(level?.labKey).toBe('maze');
+    });
+
+    it('resolves a Karel (Bee) level to unsupported', () => {
+      const level = parsingCatalog.resolveLevel(
+        'courseD_bee_conditionals2_2024',
+        context,
+      );
+      expect(level?.levelType).toBe('Karel');
+      expect(level?.runtime).toBe('unsupported');
+      expect(level?.labKey).toBeUndefined();
+    });
   });
 });

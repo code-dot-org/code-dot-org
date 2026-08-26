@@ -178,7 +178,6 @@ function buildLevelProperties(
     case 'Music':
       return buildMusicLevelProperties(id, levelKey, properties);
     case 'Maze':
-    case 'Karel':
       return buildMazeLevelProperties(id, levelKey, levelType, parsed);
     default:
       return {
@@ -328,8 +327,15 @@ function projectRuntime(
     case 'Music':
       return {runtime: 'labhost', labKey: 'music'};
     case 'Maze':
-    case 'Karel':
       return {runtime: 'labhost', labKey: 'maze'};
+    // Karel-family (Bee/Farmer/Harvester/Collector) levels dispatch to the
+    // same maze-lab engine as Maze, but their skin-specific action blocks
+    // (maze_dig, maze_nectar, maze_honey, bee_ifFlower, collector_collect,
+    // ...) were never authored in maze-lab's blocks.ts on the source branch
+    // — every Karel-tagged .level file needs at least one of them, so the
+    // toolbox flyout throws "Invalid block definition" the instant a Karel
+    // level mounts. Left unsupported (an honest card) rather than shipping a
+    // runtime crash; flip this back to labhost/maze once those blocks exist.
     // A video level with no key has nothing to play; report it as unsupported
     // rather than as a video card that renders empty.
     case 'StandaloneVideo':

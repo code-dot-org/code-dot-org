@@ -158,11 +158,17 @@ function buildExperience(
       (parsed.properties.name as string | undefined);
     const title = titleHint ?? fallbackTitle;
 
+    // Karel (Bee/Farmer/Harvester/Collector) is deliberately excluded here —
+    // it falls through to dataFromParsedXml's opaque case below. It shares
+    // maze-lab's engine with Maze, but its skin-specific action blocks
+    // (maze_dig, maze_nectar, bee_ifFlower, collector_collect, ...) were
+    // never authored in blocks.ts on the source branch, so mounting one
+    // crashes the toolbox flyout. See levelCatalog.ts's projectRuntime for
+    // the fuller note; flip this back once those blocks exist.
     if (
       parsed.levelType === 'Fish' ||
       parsed.levelType === 'Music' ||
-      parsed.levelType === 'Maze' ||
-      parsed.levelType === 'Karel'
+      parsed.levelType === 'Maze'
     ) {
       const numericId = ctx.nextNumericId();
       ctx.levelProperties[String(numericId)] =
