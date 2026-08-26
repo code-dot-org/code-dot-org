@@ -8,6 +8,8 @@ import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 import {tutorKeyProxy} from '@code-dot-org/aitutor/dev';
 
+import {bundleEngine} from './scripts/bundleEngine.mjs';
+
 /**
  * Rename emitted CSS-module assets from `*.module.css` to plain `*.css` (and
  * lib-inject-css's injected `import` follows the rename). This matters when
@@ -92,6 +94,44 @@ export default defineConfig(({command, mode}) => {
       // the isDemo branch on purpose — that one is the BUILT demo, and this
       // plugin is `apply: 'serve'`, so it is already inert in every build.
       tutorKeyProxy(),
+      // Re-bundle the engine when `src/engine` changes.
+      //
+      // The sandbox does not import `src/engine`; it loads
+      // `public/vendor/world-lab.mjs`, so an edit there hot-reloads the app and
+      // leaves the running GAME on the version the server started with. The
+      // symptom is a change that plainly did not take effect — text that will
+      // not wrap because the pen in the sandbox still ignores the argument the
+      // block is passing it.
+      //
+      // Inside the root, unlike the aliased sibling packages above, so Vite's
+      // watcher does see it (see AGENTS.md on what does not).
+      ...(command === 'serve'
+        ? [
+            {
+              name: 'world-rebundle-engine',
+              apply: 'serve' as const,
+              configureServer(server: {
+                watcher: {
+                  on(event: string, run: (path: string) => void): void;
+                };
+              }) {
+                const engine = path.resolve(__dirname, 'src/engine');
+                const rebuild = (changed: string) => {
+                  if (!changed.startsWith(engine)) {
+                    return;
+                  }
+                  void bundleEngine(__dirname).then(
+                    () => console.log('world: re-bundled the engine'),
+                    (error: unknown) =>
+                      console.error('world: engine bundle failed', error),
+                  );
+                };
+                server.watcher.on('change', rebuild);
+                server.watcher.on('add', rebuild);
+              },
+            },
+          ]
+        : []),
       ...(isDemo
         ? [react()]
         : [

@@ -14,7 +14,6 @@
 //
 // Run: node scripts/setup-world-assets.mjs   (wired as `yarn setup:world`)
 
-import * as esbuild from 'esbuild';
 import {
   existsSync,
   mkdirSync,
@@ -29,6 +28,7 @@ import {createRequire} from 'node:module';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+import {bundleEngine} from './bundleEngine.mjs';
 import {backgroundFileName, backgroundUrls} from './stockBackgroundNames.mjs';
 import {soundEntries, soundFileName} from './stockSoundNames.mjs';
 
@@ -64,15 +64,9 @@ for (const {from, to} of copies) {
 }
 
 // Bundle the engine to a single self-contained ESM module. Rebuilt every run —
-// it is our own source and cheap to bundle.
-await esbuild.build({
-  entryPoints: [join(pkgRoot, 'src', 'engine', 'index.ts')],
-  bundle: true,
-  format: 'esm',
-  platform: 'browser',
-  outfile: join(vendorDir, 'world-lab.mjs'),
-  logLevel: 'silent',
-});
+// it is our own source and cheap to bundle. Shared with the dev server's
+// watcher (`bundleEngine`), so the two cannot disagree about how it is built.
+await bundleEngine(pkgRoot);
 console.log('world assets: bundled world-lab.mjs');
 
 // The stock backdrops.
