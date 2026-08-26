@@ -101,8 +101,11 @@
     #dictionary {
       height: 100%;
     }
-    /* Two IDs outrank the global #again-button / #continue-button fills in
-       application.scss; fills match LegacyButton's cancel / primary types. */
+    /* These buttons are plain <button> elements picking up the global #ok-button,
+       #again-button and #continue-button fills from application.scss. This style
+       block only loads on text compression levels, and each selector outranks the
+       one-ID globals on specificity rather than load order. Fills match
+       LegacyButton's primary / cancel types. */
     #enter-your-own #again-button {
       background-color: var(--background-neutral-primary);
       border: 2px solid var(--borders-neutral-strong);
@@ -111,6 +114,11 @@
     #enter-your-own #continue-button {
       background-color: var(--background-brand-purple-primary);
       border: 1px solid var(--background-brand-purple-primary);
+      color: var(--text-neutral-white-fixed);
+    }
+    .markdown-instructions-container #ok-button {
+      background-color: var(--background-brand-purple-primary);
+      border-color: var(--background-brand-purple-primary);
       color: var(--text-neutral-white-fixed);
     }
   </style>
