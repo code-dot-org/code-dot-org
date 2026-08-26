@@ -38,6 +38,15 @@ A widget is a single self-contained HTML document at widgets/<widgetId>/widget.h
 - Make the activity configurable through the input schema you declared (e.g. {items: [...], targetCount: 5}) and read it from toolInput; defaults come from defaultInput.
 - After editing an existing widget's source, the learner view hot-reloads it; no extra step needed.
 
+## Widget styling
+
+Every widget document is served with a brand kit already injected (a \`<style>\` block ahead of your own): design-system CSS custom properties and .w-* primitive classes. Build on it instead of inventing new visual language:
+- Buttons: \`.w-button .w-button--primary\` or \`.w-button--secondary\`. Never write bespoke button CSS (background/border/radius) from scratch.
+- \`.w-tag\` for pill labels, \`.w-card\` for a bordered panel, \`.w-feedback\` with \`.w-feedback--success\` / \`--error\` / \`--neutral\` for answer feedback.
+- Colors come from the injected tokens (e.g. \`var(--text-neutral-primary)\`, \`var(--background-brand-purple-primary)\`, \`var(--background-success-light)\`). No raw hex colors except inside an SVG asset.
+- Body text and headings already inherit the design-system font stack (\`var(--w-font-family)\`) and type scale — don't redeclare font-family on body/h1-h6 unless deviating on purpose.
+- These classes are a starting point, not a ceiling: extend them with your own CSS for layout, animation, or a game-specific look, but keep colors, buttons, tags, and feedback states on the token system above.
+
 ## Adaptive policy (optional)
 
 set_adaptive_policy stores author-defined constraints for the learner-time AI tutor (guidance text, alternate experiences per step, whether repeating is allowed). Only add one when the author asks for adaptivity. The tutor can never create anything new — it only selects among what you authored, so alternatives must reference real experience ids.

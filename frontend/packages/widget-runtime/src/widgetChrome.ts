@@ -1,10 +1,13 @@
 import {WIDGET_APP_SHIM_JS} from './appShim';
+import {WIDGET_BRAND_CSS} from './brandKit';
 
 // Widgets must be self-contained documents: the host renders them in a
 // sandboxed iframe with a CSP that blocks all network fetches, so styles and
 // scripts are inlined and fonts fall back to the system stack. The shared
-// styles below approximate the design system's look (Figtree metrics via
-// system-ui, neutral grays, teal accent) without loading brand assets.
+// styles below are widget-specific chrome (the provider-branding header,
+// the .primary button legacy widgets still use) layered on top of
+// WIDGET_BRAND_CSS, which carries the actual design-system tokens and .w-*
+// primitives — see brandKit.ts.
 const WIDGET_BASE_CSS = `
   * { box-sizing: border-box; }
   body {
@@ -84,6 +87,7 @@ export function buildWidgetDocument(options: {
 <meta charset="utf-8">
 ${cspMetaTag(options.allowEval)}
 <title>${options.title}</title>
+<style>${WIDGET_BRAND_CSS}</style>
 <style>${WIDGET_BASE_CSS}</style>
 <style>${options.css}</style>
 </head>
@@ -149,7 +153,10 @@ export function injectWidgetChrome(html: string): string {
     .replace(CHROME_HEAD_BLOCK, '')
     .replace(WIDGET_CSP_META_TAG, '');
 
-  const parts: string[] = [cspMetaTag()];
+  // Reinjected unconditionally, same as the CSP: CHROME_HEAD_BLOCK already
+  // stripped any copy we added on a prior pass, so this stays idempotent
+  // without needing a "does the widget already have it" check.
+  const parts: string[] = [cspMetaTag(), `<style>${WIDGET_BRAND_CSS}</style>`];
   if (!stripped.includes(SHIM_DEFINITION_MARKER)) {
     parts.push(`<script>${WIDGET_APP_SHIM_JS}</script>`);
   }
