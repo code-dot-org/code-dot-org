@@ -29,26 +29,26 @@
     "locked_image_type": "sprite",
     "pinned_scene_id": "dog-scene",
     "pinned_scene_name": "Dog",
-    "ai_model_id": "qst6grZsAiLb",
+    "ai_model_id": "0NhaAxZ7XfLx",
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Make a dog with three moods.** Make three dog images and name them **happy**, **sad** and **confused** - those are the words the model uses. Then make **food**, a **bone**, a **toy**, and a **mat** to put them on."
+        "text": "**Make a dog with three moods.** Make a dog image and name it **happy**. Then make **sad** and **confused** - in the new-image dialog, choose *happy* under **Start from** so it stays the same dog, and say what changes, like \"the same dog, looking sad\". Then make **food**, a **bone** and a **toy**."
       },
       {
         "text": "**Now let the model decide.** Head to the **Code** tab.",
         "after": {
-          "images": 12
+          "images": 11
         }
       },
       {
-        "text": "**Set the scene, then ask the model.** Add a background and make your dog, mat, food, bone and toy. Give the food, bone and toy the **draggable** behavior. Then add **when a sprite is dropped**, and inside it **set [dog] image to (predict with dogmood)** - pick the food, bone and toy against the mat. Press **Play** and drag things onto the mat.",
+        "text": "**Set the scene, then ask the model.** Add a background and make your dog, food, bone and toy. Give the food, bone and toy the **draggable** behavior. Then add **when a sprite is dropped**, and inside it **set [dog] image to (predict with dogmood3)** - each slot is the distance from your dog to one thing. Press **Play** and drag things toward the dog.",
         "after": {
           "tab": "Code"
         }
       }
     ],
-    "long_instructions": "# Ask the model\nMake a dog, some things to put near it, and a mat. Each time you drop something, the model decides how the dog feels.",
+    "long_instructions": "# Ask the model\nMake a dog and some things to bring near it. Each time you drop something, the model decides how the dog feels from how close everything is.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -99,20 +99,20 @@
                 "type": "spritelab2_predict",
                 "extraState": {
                   "model": {
-                    "id": "qst6grZsAiLb",
-                    "name": "dogmood",
+                    "id": "0NhaAxZ7XfLx",
+                    "name": "dogmood3",
                     "features": [
                       {
                         "id": "food",
-                        "yesNo": true
+                        "yesNo": false
                       },
                       {
                         "id": "bone",
-                        "yesNo": true
+                        "yesNo": false
                       },
                       {
                         "id": "toy",
-                        "yesNo": true
+                        "yesNo": false
                       }
                     ]
                   }
@@ -120,53 +120,17 @@
                 "inputs": {
                   "FEATURE_food": {
                     "block": {
-                      "type": "gamelab_isTouchingSprite",
-                      "inputs": {
-                        "SPRITE": {
-                          "shadow": {
-                            "type": "gamelab_allSpritesWithAnimation"
-                          }
-                        },
-                        "TARGET": {
-                          "shadow": {
-                            "type": "gamelab_allSpritesWithAnimation"
-                          }
-                        }
-                      }
+                      "type": "spritelab2_distanceBetween"
                     }
                   },
                   "FEATURE_bone": {
                     "block": {
-                      "type": "gamelab_isTouchingSprite",
-                      "inputs": {
-                        "SPRITE": {
-                          "shadow": {
-                            "type": "gamelab_allSpritesWithAnimation"
-                          }
-                        },
-                        "TARGET": {
-                          "shadow": {
-                            "type": "gamelab_allSpritesWithAnimation"
-                          }
-                        }
-                      }
+                      "type": "spritelab2_distanceBetween"
                     }
                   },
                   "FEATURE_toy": {
                     "block": {
-                      "type": "gamelab_isTouchingSprite",
-                      "inputs": {
-                        "SPRITE": {
-                          "shadow": {
-                            "type": "gamelab_allSpritesWithAnimation"
-                          }
-                        },
-                        "TARGET": {
-                          "shadow": {
-                            "type": "gamelab_allSpritesWithAnimation"
-                          }
-                        }
-                      }
+                      "type": "spritelab2_distanceBetween"
                     }
                   }
                 }

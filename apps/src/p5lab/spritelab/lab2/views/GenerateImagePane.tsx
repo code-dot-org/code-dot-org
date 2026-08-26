@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {AnyAction} from 'redux';
 
 import {dataURIToSourceSize} from '@cdo/apps/imageUtils';
@@ -33,6 +33,32 @@ import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 import ImageDetailsDialog from './ImageDetailsDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
+
+async function imageDataURI(props?: {
+  dataURI?: string;
+  sourceUrl?: string;
+}): Promise<string | null> {
+  if (!props) {
+    return null;
+  }
+  if (props.dataURI) {
+    return props.dataURI;
+  }
+  if (!props.sourceUrl) {
+    return null;
+  }
+  try {
+    const blob = await (await HttpClient.get(props.sourceUrl)).blob();
+    return await new Promise<string>((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+  } catch {
+    return null;
+  }
+}
 
 function imageTypeFromCategories(categories?: string[]): ImageType {
   if (categories?.includes(BACKGROUNDS_CATEGORY)) {
@@ -216,30 +242,32 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     []
   );
 
-  // Current pixels as a data URI (generation's "use previous image" sends
-  // them in a JSON request body).
-  const getTargetDataURI = useCallback(async (): Promise<string | null> => {
-    if (!targetProps) {
-      return null;
-    }
-    if (targetProps.dataURI) {
-      return targetProps.dataURI;
-    }
-    if (!targetProps.sourceUrl) {
-      return null;
-    }
-    try {
-      const blob = await (await HttpClient.get(targetProps.sourceUrl)).blob();
-      return await new Promise<string>((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => resolve(reader.result as string);
-        reader.onerror = reject;
-        reader.readAsDataURL(blob);
-      });
-    } catch {
-      return null;
-    }
-  }, [targetProps]);
+  // Current pixels as a data URI (generation sends them in a JSON request
+  // body when a new image starts from an existing one).
+  const getTargetDataURI = useCallback(
+    () => imageDataURI(targetProps),
+    [targetProps]
+  );
+
+  // Images a new one of the same kind can start from.
+  const startFrom = useMemo(
+    () => ({
+      images: images
+        .filter(
+          ({props}) =>
+            imageTypeFromCategories(props.categories) ===
+            (lockedImageType || 'sprite')
+        )
+        .map(({key, props}) => ({
+          key,
+          name: props.name,
+          style: props.generation?.style,
+        })),
+      getDataURI: (key: string) =>
+        imageDataURI(getStore().getState().animationList.propsByKey[key]),
+    }),
+    [images, lockedImageType]
+  );
 
   // Persist an accepted generation: upload, then create the animation (new
   // image) or repoint the existing one, with the generation metadata.
@@ -452,6 +480,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           lockedImageType={lockedImageType}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
+          startFrom={startFrom}
           onAcceptGenerated={handleAcceptGenerated}
         />
       )}

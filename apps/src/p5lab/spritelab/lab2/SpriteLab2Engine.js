@@ -33,6 +33,9 @@ const NOOP = () => {};
 // let the user pick these per scene.
 const STORY_SCENE_SPRITE_SIZE = 300;
 
+// Granularity of the distance reporter, in playfield units.
+const DISTANCE_STEP = 10;
+
 // Extra canvas density beyond the device pixel ratio: the canvas is 400
 // logical px and the Playspace transform-scales it to ~900 CSS px on the
 // Play tab, so stock density paints ~2x2 blocks per canvas pixel.
@@ -589,6 +592,20 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     library.commands.whenSpriteDropped = callback => {
       library.addEvent('whendrop', {}, callback);
+    };
+    // Centre-to-centre, rounded to tens so a model's table stays legible; a
+    // sprite that isn't there counts as the far side of the playfield.
+    library.commands.distanceBetween = (fromArg, toArg) => {
+      const from = library.getSpriteArray(fromArg)[0];
+      const to = library.getSpriteArray(toArg)[0];
+      if (!from || !to) {
+        return APP_WIDTH;
+      }
+      const distance = Math.hypot(
+        from.position.x - to.position.x,
+        from.position.y - to.position.y
+      );
+      return Math.round(distance / DISTANCE_STEP) * DISTANCE_STEP;
     };
     const dispatch = library.getCallbackArgListForEvent.bind(library);
     library.getCallbackArgListForEvent = inputEvent =>

@@ -2,6 +2,7 @@ import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import distanceBetween from './distanceBetween';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
 import makePlatformBlocks from './makePlatformBlocks';
@@ -44,6 +45,7 @@ const labBlockDefinitions: {
   predict,
   setImageTo,
   whenSpriteDropped,
+  distanceBetween,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,

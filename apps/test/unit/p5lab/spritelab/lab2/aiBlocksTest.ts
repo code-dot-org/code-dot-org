@@ -5,6 +5,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields', () => ({
   FIELD_BLOCK_IMAGE_TYPE: 'field_spritelab2_block_image',
 }));
 
+import distanceBetween from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/distanceBetween';
 import predict from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/predict';
 import setImageTo from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/setImageTo';
 import whenSpriteDropped from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/whenSpriteDropped';
@@ -73,6 +74,14 @@ describe('SpriteLab2 AI model blocks', () => {
       fakeGenerator()
     );
     expect(code).toBe('whenSpriteDropped(function () {\n  say();\n});\n');
+  });
+
+  it('distance names both sprites by costume', () => {
+    const [code] = distanceBetween.generator(
+      fakeBlock({FROM: '"dog"', TO: '"food"'}),
+      fakeGenerator()
+    ) as [string, number];
+    expect(code).toBe('distanceBetween({costume: "dog"}, {costume: "food"})');
   });
 
   it('when dropped with nothing below it registers an empty handler', () => {
