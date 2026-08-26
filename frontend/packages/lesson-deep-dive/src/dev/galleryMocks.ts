@@ -101,7 +101,12 @@ export function registerGalleryMocks(): void {
       },
     },
 
-    // GET /challenge_responses/:id — the project page detail.
+    // GET /challenge_responses/:id — the project page detail. Rails omits
+    // student_feedback/evaluated_at/evaluation_result/rubric entirely for
+    // roles that don't get them (summarize()'s include_feedback/
+    // include_evaluation are conditional hash keys, not nulled fields), so
+    // the mock does too — a client that distinguishes absent from null
+    // should see the same thing against either backend.
     {
       path: '*/challenge_responses/:id',
       respond: ({params}) => {
@@ -115,13 +120,14 @@ export function registerGalleryMocks(): void {
           ...toListResponse(response),
           viewer_role: role,
           question: challenge.question,
-          student_feedback:
-            role === 'peer'
-              ? null
-              : (response.evaluation?.student_feedback ?? null),
-          evaluated_at: role === 'peer' ? null : response.evaluatedAt,
-          evaluation_result: role === 'teacher' ? response.evaluation : null,
-          rubric: role === 'teacher' ? challenge.rubric : [],
+          ...(role !== 'peer' && {
+            student_feedback: response.evaluation?.student_feedback ?? null,
+            evaluated_at: response.evaluatedAt,
+          }),
+          ...(role === 'teacher' && {
+            evaluation_result: response.evaluation,
+            rubric: challenge.rubric,
+          }),
         };
       },
     },
