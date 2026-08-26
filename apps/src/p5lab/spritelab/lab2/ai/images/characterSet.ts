@@ -498,6 +498,35 @@ async function sliceSheet(
   });
 }
 
+/**
+ * A frame redrawn so its content stands `height` tall. Frames cut from one
+ * row picture are a fraction of the size of frames drawn alone; scaled to the
+ * plate's height they share the sheet at one scale.
+ */
+function scaledToHeight(
+  frame: KeyedFrame,
+  height: number,
+  style: ImageStyle
+): KeyedFrame {
+  const own = frame.bounds && frame.bounds.bottom - frame.bounds.top + 1;
+  if (!own || own === height) {
+    return frame;
+  }
+  const factor = height / own;
+  const canvas = document.createElement('canvas');
+  canvas.width = Math.max(1, Math.round(frame.canvas.width * factor));
+  canvas.height = Math.max(1, Math.round(frame.canvas.height * factor));
+  const ctx = canvas.getContext('2d')!;
+  ctx.imageSmoothingEnabled = style === 'smooth';
+  ctx.drawImage(frame.canvas, 0, 0, canvas.width, canvas.height);
+  const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  return {
+    canvas,
+    bounds: findOpaqueBounds(data, canvas.width, canvas.height, SOLID_ALPHA),
+    bands: silhouetteBands(data, canvas.width, canvas.height, isSolid),
+  };
+}
+
 /** The figure's own band widths, from its rendered PNG. */
 async function figureBands(
   figureDataURI: string
@@ -682,7 +711,27 @@ export async function generateCharacterSet(
           thinkingLevel: CHARACTER_SET_THINKING_LEVEL,
         }
       );
-      const frames = await sliceSheet(raw, frameCount, options.style, key);
+      const plateHeight =
+        keyed[0].bounds && keyed[0].bounds.bottom - keyed[0].bounds.top + 1;
+      const sliced = await sliceSheet(raw, frameCount, options.style, key);
+      const tallest = Math.max(
+        ...sliced.map(f => (f.bounds ? f.bounds.bottom - f.bounds.top + 1 : 0))
+      );
+      // One scale for the whole row, so the frames keep their own bounce.
+      const frames =
+        plateHeight && tallest
+          ? sliced.map(f =>
+              scaledToHeight(
+                f,
+                Math.round(
+                  ((f.bounds ? f.bounds.bottom - f.bounds.top + 1 : tallest) *
+                    plateHeight) /
+                    tallest
+                ),
+                options.style
+              )
+            )
+          : sliced;
       frames.forEach(frame => {
         raws.push(raw);
         keyed.push(frame);
