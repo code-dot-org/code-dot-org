@@ -118,6 +118,42 @@ reading `script[data-lessondeepdivedata]`. Rebuilding it from
 `LessonsController#tutor` in `rails runner` is easy to get subtly wrong —
 `unitLabel` comes from the unit-group context, not the lesson.
 
+### Teacher gallery
+
+`gallery.html` is a second dev entry, alongside the student flow at
+`index.html`. It renders the Tutor+ project gallery — the teacher-facing
+view of submitted challenge work — out of
+`apps/src/aiTutor/views/gallery/ChallengeGallery`, the same way `main.tsx`
+renders the student flow. Both modes work the same way as above:
+
+```bash
+yarn dev                        # http://localhost-studio.code.org:5173/gallery.html
+VITE_API_MODE=msw yarn dev      # http://localhost:5173/gallery.html
+```
+
+`?viewerRole=teacher|owner|peer` (default `teacher`) picks the project
+page's layout when msw mode serves `GET /challenge_responses/:id`: teacher
+gets the AI assessment panel, owner gets just their feedback, peer gets
+neither. In dashboard mode this is decided server-side from who is signed
+in, not by the query string.
+
+Dashboard mode has one prerequisite beyond the student flow's: sign in as a
+**teacher** whose section has students with final challenge submissions.
+`src/dev/galleryFixtures.ts`'s `TUTOR_GALLERY_DATA` is invented, not
+harvested, and its unit and section ids almost certainly do not match the
+signed-in teacher's real ones — `GET /challenge_responses?section_id=`
+authorizes against `Section.find(params[:section_id])`, so a mismatched id
+403s. Regenerate it by loading `/s/:script/lessons/:position/tutor/gallery`
+as that teacher and reading `script[data-tutorgallerydata]`, the same
+harvest doctrine as `lessonDeepDiveData` above.
+
+`evaluation_result` only exists on a response once the async AI evaluation
+job has run (`EvaluateChallengeResponseJob`), which nothing in the dev shell
+or a fresh dashboard seed triggers on its own. The msw teacher fixture is
+the reliable way to see the scored AI Assessment panel; hitting it in
+dashboard mode means finding or waiting on a response the job has already
+evaluated.
+
 ### Styling, and what it is not
 
 The shell uses the same foundation as every other package dev host: MUI's
