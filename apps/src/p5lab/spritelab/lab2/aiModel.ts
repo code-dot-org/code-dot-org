@@ -57,6 +57,11 @@ export function getAiModel(id: string): AiModel | undefined {
   return models.get(id);
 }
 
+/** The level's model, if the level names one and it has loaded. */
+export function getLevelAiModel(): AiModel | undefined {
+  return levelModelId ? models.get(levelModelId) : undefined;
+}
+
 /** Fetch a model once; later calls share the result. */
 export function loadAiModel(id: string): Promise<AiModel> {
   const loaded = models.get(id);

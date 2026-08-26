@@ -42,14 +42,15 @@ interface PredictState {
   model?: AiModelShape;
 }
 
-// A block saved without a shape (dragged in from a toolbox entry that names
-// none) takes the level's model.
+// The level's model wins when it has loaded: a block saved against an earlier
+// model follows the level, and a block saved without a shape gets one. The
+// saved shape covers the time before the model arrives.
 export const predictMutator = {
   saveExtraState(this: PredictBlock): PredictState | null {
     return this.modelShape ? {model: this.modelShape} : null;
   },
   loadExtraState(this: PredictBlock, state: PredictState | null): void {
-    this.modelShape = state?.model || levelAiModelShape();
+    this.modelShape = levelAiModelShape() || state?.model;
     updatePredictShape(this);
   },
 };

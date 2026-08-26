@@ -8,7 +8,12 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
-import {getAiModel, loadAiModel, predictLabel} from './aiModel';
+import {
+  getAiModel,
+  getLevelAiModel,
+  loadAiModel,
+  predictLabel,
+} from './aiModel';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
   backgroundFrame,
@@ -571,8 +576,10 @@ export default class SpriteLab2Engine extends SpriteLab {
         console.warn(`SpriteLab2: ${message}`);
       }
     };
+    // A block saved against a model the level no longer names asks the
+    // level's model instead.
     library.commands.predictWith = (modelId, inputs) => {
-      const model = getAiModel(modelId);
+      const model = getAiModel(modelId) || getLevelAiModel();
       if (!model) {
         warnOnce(`model ${modelId} is not loaded; predict returns nothing.`);
         return '';
