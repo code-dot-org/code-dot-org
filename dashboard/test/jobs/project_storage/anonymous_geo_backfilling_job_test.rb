@@ -7,15 +7,9 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
 
   subject(:described_instance) {described_class.new}
 
-  let(:shared_cache) {ActiveSupport::Cache::MemoryStore.new}
-  let(:progress_bar) {stub_everything}
-
   before do
     CDO.log.stubs(:info)
-    CDO.stubs(:shared_cache).returns(shared_cache)
-
-    progress_bar.stubs(:progress).returns(0)
-    ProgressBar.stubs(:create).returns(progress_bar)
+    CDO.shared_cache.clear
   end
 
   describe '.storage_id_cursor=' do
@@ -23,7 +17,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
 
     it 'stores storage ID cursor in shared cache' do
       _ {described_class.storage_id_cursor = storage_id_cursor}.must_change(
-        -> {shared_cache.read(described_class::STORAGE_ID_CURSOR_CACHE_KEY)}, from: nil, to: storage_id_cursor
+        -> {CDO.shared_cache.read(described_class::STORAGE_ID_CURSOR_CACHE_KEY)}, from: nil, to: storage_id_cursor
       )
     end
   end
@@ -44,7 +38,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
         let(:storage_id_cursor) {project_storage_geos.first.storage_id}
 
         before do
-          shared_cache.write(described_class::STORAGE_ID_CURSOR_CACHE_KEY, storage_id_cursor)
+          CDO.shared_cache.write(described_class::STORAGE_ID_CURSOR_CACHE_KEY, storage_id_cursor)
         end
 
         it 'returns cached cursor' do
@@ -161,6 +155,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       end
 
       before do
+        described_class.storage_id_cursor = 0
         described_instance.stubs(:missing_project_storage_geos).with {sleep(max_run_time * 2) && true}
       end
 
@@ -277,7 +272,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
 
       it 'does not write geo records or advance cache' do
         _ {perform_job}.wont_change -> {ProjectStorage::Geo.count}
-        _(shared_cache.read(described_class::STORAGE_ID_CURSOR_CACHE_KEY)).must_be_nil
+        _(CDO.shared_cache.read(described_class::STORAGE_ID_CURSOR_CACHE_KEY)).must_be_nil
       end
     end
 
@@ -305,7 +300,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
 
         _(project_storages.first.reload.geo).must_be_nil
         _(project_storages.last.reload.geo).wont_be_nil
-        _(shared_cache.read(described_class::STORAGE_ID_CURSOR_CACHE_KEY)).
+        _(CDO.shared_cache.read(described_class::STORAGE_ID_CURSOR_CACHE_KEY)).
           must_equal project_storages.last.id
       end
     end
@@ -329,7 +324,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
 
         _(queries.first).must_match(/`id` >= #{project_storages.first.id}.*`id` <= #{project_storages.first.id}/)
         _(project_storages.last.reload.geo).wont_be_nil
-        _(shared_cache.read(described_class::STORAGE_ID_CURSOR_CACHE_KEY)).
+        _(CDO.shared_cache.read(described_class::STORAGE_ID_CURSOR_CACHE_KEY)).
           must_equal project_storages.last.id
       end
     end
