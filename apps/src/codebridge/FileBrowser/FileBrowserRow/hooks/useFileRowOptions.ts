@@ -17,7 +17,7 @@ import {AssetSource} from '@cdo/apps/aichat/types/assets';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
   START_SOURCES,
-  SUPPORTED_IMAGE_EXTENSIONS,
+  SUPPORTED_AUDIO_EXTENSIONS,
 } from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
@@ -37,19 +37,17 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  */
 const handleFileDownload = async (file: ProjectFile) => {
   try {
-    if (
-      SUPPORTED_IMAGE_EXTENSIONS.includes(getFileExtension(file.name)) &&
-      file.url
-    ) {
-      // File is an image and has a url, so download from browser
-      const image = await fetch(file.url);
-      if (!image.ok) {
+    if (file.url) {
+      // Non-text files (images, audio) hold no contents; fetch the real bytes.
+      const response = await fetch(file.url);
+      if (!response.ok) {
         console.error(
-          `Failed to fetch image: ${image.status} ${image.statusText}`
+          `Failed to fetch file: ${response.status} ${response.statusText}`
         );
-        alert('Image retrieval failed. Please try again.');
+        alert('File retrieval failed. Please try again.');
+        return;
       }
-      const blob = await image.blob();
+      const blob = await response.blob();
       fileDownload(blob, file.name);
     } else {
       fileDownload(file.contents, file.name);
@@ -131,7 +129,11 @@ export const useFileRowOptions = (
           }),
       },
       {
-        condition: !!enableUserAddedSelectionContext && !aiTutorDisabled,
+        // The AI Tutor cannot read audio, so audio files are not offered as context.
+        condition:
+          !!enableUserAddedSelectionContext &&
+          !aiTutorDisabled &&
+          !SUPPORTED_AUDIO_EXTENSIONS.includes(getFileExtension(file.name)),
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {

@@ -5,14 +5,18 @@ import useHideTourOnTourChange from '@cdo/apps/lab2/hooks/useHideTourOnTourChang
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import {
   getAppOptionsEditingExemplar,
-  getAppOptionsViewingExemplar,
   getIsStartMode,
 } from '@cdo/apps/lab2/projects/utils';
+import {isPermanentlyReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
 
 jest.mock('@cdo/apps/sharedComponents/productTour/useProductTour');
 jest.mock('@cdo/apps/lab2/hooks/useHideTourOnTourChange');
 jest.mock('@cdo/apps/lab2/projects/utils');
+jest.mock('@cdo/apps/lab2/redux/lab2ReduxSelectors');
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  useAppSelector: (selector: (state: unknown) => unknown) => selector({}),
+}));
 
 const mockUseProductTour = useProductTour as jest.MockedFunction<
   typeof useProductTour
@@ -24,13 +28,13 @@ const mockUseHideTourOnTourChange =
 const mockGetIsStartMode = getIsStartMode as jest.MockedFunction<
   typeof getIsStartMode
 >;
-const mockGetAppOptionsViewingExemplar =
-  getAppOptionsViewingExemplar as jest.MockedFunction<
-    typeof getAppOptionsViewingExemplar
-  >;
 const mockGetAppOptionsEditingExemplar =
   getAppOptionsEditingExemplar as jest.MockedFunction<
     typeof getAppOptionsEditingExemplar
+  >;
+const mockIsPermanentlyReadOnlyWorkspace =
+  isPermanentlyReadOnlyWorkspace as jest.MockedFunction<
+    typeof isPermanentlyReadOnlyWorkspace
   >;
 
 const mockTour = {
@@ -49,8 +53,8 @@ describe('useLab2ProductTour', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     mockGetIsStartMode.mockReturnValue(false);
-    mockGetAppOptionsViewingExemplar.mockReturnValue(undefined);
     mockGetAppOptionsEditingExemplar.mockReturnValue(undefined);
+    mockIsPermanentlyReadOnlyWorkspace.mockReturnValue(false);
     mockUseProductTour.mockReturnValue({tour: mockTour});
     mockUseHideTourOnTourChange.mockReturnValue(undefined);
   });
@@ -77,8 +81,8 @@ describe('useLab2ProductTour', () => {
     );
   });
 
-  it('hides tour when viewing exemplar', () => {
-    mockGetAppOptionsViewingExemplar.mockReturnValue(true);
+  it('hides tour when the workspace is permanently read-only', () => {
+    mockIsPermanentlyReadOnlyWorkspace.mockReturnValue(true);
     renderHook(() => useLab2ProductTour(defaultProps));
     expect(mockUseProductTour).toHaveBeenCalledWith(
       expect.objectContaining({tourAvailable: false})
