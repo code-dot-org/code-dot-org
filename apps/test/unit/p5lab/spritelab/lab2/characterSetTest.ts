@@ -111,14 +111,18 @@ describe('SpriteLab2 characterSet', () => {
     expect(frame).toContain(
       `frame 4 of ${walkFrames} of a side-view walk cycle sprite sheet, the up pose`
     );
-    const contact = framePrompt(
+    // The last walk frame, whatever the cycle length; key names repeat
+    // every four frames.
+    const last = framePrompt(
       'a robot',
-      plan.find(p => p.pose === 'walk' && p.frame === 4)!,
+      plan.find(p => p.pose === 'walk' && p.frame === walkFrames - 1)!,
       'smooth',
       key
     );
-    expect(contact).toContain(`frame 5 of ${walkFrames}`);
-    expect(contact).toContain('the contact pose');
+    expect(last).toContain(`frame ${walkFrames} of ${walkFrames}`);
+    expect(last).toContain(
+      `the ${['contact', 'down', 'passing', 'up'][(walkFrames - 1) % 4]} pose`
+    );
     expect(
       framePrompt(
         'a robot',
