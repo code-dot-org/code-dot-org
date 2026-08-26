@@ -18,6 +18,7 @@ import {AudioPlayer} from '@cdo/apps/codebridge/components/AudioPlayer';
 import {CodebridgeEmptyState} from '@cdo/apps/codebridge/components/CodebridgeEmptyState';
 import emptyFilesPlaceholderImage from '@cdo/apps/codebridge/images/empty-files-placeholder.svg';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {SUPPORTED_AUDIO_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -27,11 +28,7 @@ import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {htmlLinter} from '@cdo/apps/weblab2/htmlLinter';
 
-import {
-  editableFileType,
-  viewableAudioFileType,
-  viewableImageFileType,
-} from '../utils';
+import {editableFileType, viewableImageFileType} from '../utils';
 
 import {getAddToAiTutorField} from './addToAiTutorField';
 
@@ -204,7 +201,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     return <img src={activeFile.url} alt={activeFile.name} tabIndex={0} />;
   }
 
-  if (activeFile?.url && viewableAudioFileType(activeFileExt)) {
+  if (activeFile?.url && SUPPORTED_AUDIO_EXTENSIONS.includes(activeFileExt)) {
     return <AudioPlayer src={activeFile.url} fileName={activeFile.name} />;
   }
 
