@@ -47,7 +47,7 @@ export async function formatChatMessage(
         throw error;
       }
       // If a broken asset gets stuck in chat history, it poisons all future messages in the conversation.
-      // Skipping the unreadable asset to allows the chat session to continue.
+      // Skipping unreadable assets allows the chat session to continue.
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logError('Skipping unreadable chat history asset', error as Error, {
