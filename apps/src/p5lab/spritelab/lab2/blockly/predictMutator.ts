@@ -1,8 +1,9 @@
-import {Block} from 'blockly/core';
+import {Block, Workspace} from 'blockly/core';
 
 import {AiModelShape, levelAiModelShape} from '../aiModel';
 
 export const PREDICT_MUTATOR = 'spritelab2_predict_mutator';
+export const PREDICT_BLOCK_TYPE = 'spritelab2_predict';
 export const MODEL_NAME_FIELD = 'MODEL_NAME';
 const FEATURE_INPUT_PREFIX = 'FEATURE_';
 
@@ -36,6 +37,21 @@ export function updatePredictShape(block: PredictBlock): void {
         .appendField(`${feature.id}:`);
     }
   });
+}
+
+/** Point every predict block on the workspace at the level's model. */
+export function refreshPredictBlocks(workspace: Workspace | null): void {
+  const shape = levelAiModelShape();
+  if (!workspace || !shape) {
+    return;
+  }
+  workspace
+    .getAllBlocks()
+    .filter((block): block is PredictBlock => block.type === PREDICT_BLOCK_TYPE)
+    .forEach(block => {
+      block.modelShape = shape;
+      updatePredictShape(block);
+    });
 }
 
 interface PredictState {

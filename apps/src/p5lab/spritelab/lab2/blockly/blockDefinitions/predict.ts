@@ -6,11 +6,10 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 import {
   featureInputName,
   MODEL_NAME_FIELD,
+  PREDICT_BLOCK_TYPE,
   PREDICT_MUTATOR,
   PredictBlock,
 } from '../predictMutator';
-
-export const PREDICT_BLOCK_TYPE = 'spritelab2_predict';
 
 /** Ask an AI Lab model for its label; the mutator adds one input per feature. */
 const definition: BlockJson = {
