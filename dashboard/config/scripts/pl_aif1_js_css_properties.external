@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h2>Reading a CSS Rule</h2>
+<h1>Reading a CSS Rule</h1>
 
 <p>You don't need to memorize what every CSS property does. You just need to recognize the shape of a rule: every single one breaks down into the same three pieces.</p>
 
