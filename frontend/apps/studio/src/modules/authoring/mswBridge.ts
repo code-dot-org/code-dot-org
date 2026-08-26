@@ -10,15 +10,27 @@
 
 export const SYNTHETIC_LEVEL_ID_FLOOR = 9_000_000;
 
-let registered = false;
+// The three /author routes each call this from their loader, so calls can
+// overlap; cache the in-flight promise so they share one registration
+// instead of racing, and clear it on failure so a later call can retry
+// rather than latching a broken "registered" flag forever.
+let registrationPromise: Promise<void> | undefined;
 
 /** Register the global MSW routes once. No-op outside MSW mode. */
-export async function registerAuthoringMswBridge(): Promise<void> {
-  if (registered || import.meta.env.VITE_API_MODE !== 'msw') {
-    return;
+export function registerAuthoringMswBridge(): Promise<void> {
+  if (import.meta.env.VITE_API_MODE !== 'msw') {
+    return Promise.resolve();
   }
-  registered = true;
+  if (!registrationPromise) {
+    registrationPromise = registerRoutes().catch(error => {
+      registrationPromise = undefined;
+      throw error;
+    });
+  }
+  return registrationPromise;
+}
 
+async function registerRoutes(): Promise<void> {
   const {registerMockFixture} = await import('@code-dot-org/core/api/mocks');
   // A fetch issued inside an MSW resolver is itself intercepted, which
   // deadlocks the resolver; bypass() marks it to go straight to the network

@@ -1,4 +1,5 @@
 import {Typography} from '@mui/material';
+import {useMemo} from 'react';
 
 import type {WidgetExperience} from '@code-dot-org/authoring';
 import {Loading} from '@code-dot-org/lab';
@@ -28,6 +29,19 @@ export default function WidgetExperienceView({
 }: WidgetExperienceViewProps) {
   const {data, isLoading, error} = useWidget(experience.widgetId);
 
+  // toolInput/toolResult must keep a stable identity across unrelated parent
+  // re-renders (e.g. SSE state invalidation during generation): WidgetFrame
+  // re-delivers ui/notifications/tool-input on every identity change, which
+  // resets the student's in-progress widget. Key the memo on a serialization
+  // of the effective input so identity only changes when the value does.
+  const effectiveInput = inputOverride ?? experience.defaultInput ?? {};
+  const inputKey = JSON.stringify(effectiveInput);
+  const toolInput = useMemo(() => effectiveInput, [inputKey]);
+  const toolResult = useMemo(
+    () => ({structuredContent: {input: effectiveInput}}),
+    [inputKey],
+  );
+
   if (isLoading) {
     return <Loading isLoading />;
   }
@@ -38,8 +52,11 @@ export default function WidgetExperienceView({
       </Typography>
     );
   }
-
-  const toolInput = inputOverride ?? experience.defaultInput ?? {};
+  if (!data.descriptor) {
+    // Server can return html before the descriptor is ready; treat it as
+    // still loading rather than crashing on data.descriptor.title.
+    return <Loading isLoading />;
+  }
 
   return (
     <div className={styles.widgetStage}>
@@ -49,7 +66,7 @@ export default function WidgetExperienceView({
         html={data.html}
         toolName={data.descriptor.title}
         toolInput={toolInput}
-        toolResult={{structuredContent: {input: toolInput}}}
+        toolResult={toolResult}
         onModelContextUpdate={update => onEvent?.(update)}
         minHeight={240}
         maxHeight={1400}

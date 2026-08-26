@@ -118,6 +118,15 @@ export interface AdaptivePolicy {
   allowRepeat?: boolean;
 }
 
+// widgetId addresses a directory under the session's widgets/ store
+// (SessionStore.widgetDir); anything outside this shape risks path
+// traversal (`../../etc/passwd`) once joined onto a filesystem path. The
+// length bound keeps an over-long id from passing validation only to blow up
+// as ENAMETOOLONG at mkdir time — after the change was already committed to
+// state, which left the store publishing-broken for the session.
+export const WIDGET_ID_MAX_LENGTH = 64;
+export const WIDGET_ID_PATTERN = /^[a-z0-9][a-z0-9-]{0,63}$/;
+
 export interface WidgetDescriptor {
   id: string;
   toolName: string;

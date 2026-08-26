@@ -7,6 +7,7 @@ import {
   registerAuthoringMswBridge,
   useAuthoringState,
 } from '@/modules/authoring';
+import AuthorRouteError from '@/modules/authoring/components/AuthorRouteError';
 import LessonPlayer from '@/modules/authoring/components/LessonPlayer';
 import LabProviders from '@/modules/labs/LabProviders';
 
@@ -17,6 +18,7 @@ export const Route = createFileRoute('/author/$courseId/$lessonId')({
   staticData: {hideFooter: true},
   loader: () => registerAuthoringMswBridge(),
   component: RouteComponent,
+  errorComponent: AuthorRouteError,
 });
 
 function RouteComponent() {

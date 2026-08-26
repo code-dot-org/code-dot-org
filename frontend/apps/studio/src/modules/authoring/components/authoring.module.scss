@@ -143,18 +143,29 @@
 .railItem {
   display: flex;
   align-items: center;
-  gap: 8px;
   width: 100%;
-  text-align: left;
   border: 1px solid transparent;
   border-radius: 6px;
   background: transparent;
-  padding: 8px;
-  cursor: pointer;
 
   &:hover {
     background: var(--background-neutral-secondary, #f3f4f5);
   }
+}
+
+.railItemButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
 }
 
 .railItemActive {
@@ -180,6 +191,7 @@
 }
 
 .railItem:hover .railItemActions,
+.railItem:focus-within .railItemActions,
 .railItemActive .railItemActions {
   display: inline-flex;
 }
@@ -393,6 +405,20 @@
   flex-direction: column;
   gap: 8px;
   margin-top: 16px;
+}
+
+/* Standard visually-hidden pattern: removed from view but read by screen
+ * readers, for correctness signaled visually by color alone. */
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
 }
 
 /* Tutor dock (learner-facing, both modes) */

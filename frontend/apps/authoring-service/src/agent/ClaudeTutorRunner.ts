@@ -1,4 +1,5 @@
 import {query} from '@anthropic-ai/claude-agent-sdk';
+import {z} from 'zod';
 
 import type {Lesson} from '../authoring/model.js';
 
@@ -104,6 +105,48 @@ function parseAction(text: string): Record<string, unknown> | undefined {
   }
 }
 
+const TEXT_MAX_LENGTH = 500;
+
+// `text` may arrive as anything the model put in the JSON blob; keep it only
+// if it is actually a string, and cap its length so a runaway completion
+// can't push an unbounded string into the learner UI.
+const CappedText = z
+  .unknown()
+  .optional()
+  .transform(value =>
+    typeof value === 'string' ? value.slice(0, TEXT_MAX_LENGTH) : undefined,
+  );
+
+// `input` configures a widget experience; only a plain object is a sane
+// config bag. `typeof x === 'object'` alone also passes for arrays and for
+// `null`, so both are rejected explicitly rather than forwarded as-is.
+const PlainObjectInput = z
+  .unknown()
+  .optional()
+  .transform(value =>
+    value !== null && typeof value === 'object' && !Array.isArray(value)
+      ? (value as Record<string, unknown>)
+      : undefined,
+  );
+
+const CoercedExperienceId = z
+  .unknown()
+  .transform(value => (value == null ? '' : String(value)));
+
+// The three action shapes from TUTOR_SYSTEM_PROMPT. Anything else — wrong
+// `action` value, `action` missing entirely — fails to parse and degrades to
+// `{type: 'none'}` below, same as an action this validation doesn't trust.
+const RawTutorActionSchema = z.discriminatedUnion('action', [
+  z.object({action: z.literal('hint'), text: CappedText}),
+  z.object({
+    action: z.literal('select_experience'),
+    experienceId: CoercedExperienceId,
+    input: PlainObjectInput,
+    text: CappedText,
+  }),
+  z.object({action: z.literal('none'), text: CappedText}),
+]);
+
 // The model's choice is validated against the authored world; anything outside
 // it degrades to a hint/none rather than being trusted.
 function validateAction(
@@ -113,22 +156,24 @@ function validateAction(
   if (!raw) {
     return {type: 'none'};
   }
-  const text = typeof raw.text === 'string' ? raw.text : undefined;
-  if (raw.action === 'hint' && text) {
-    return {type: 'hint', text};
+  const parsed = RawTutorActionSchema.safeParse(raw);
+  if (!parsed.success) {
+    return {type: 'none'};
   }
-  if (raw.action === 'select_experience') {
-    const experienceId = String(raw.experienceId ?? '');
-    if (lesson.experiences.some(e => e.id === experienceId)) {
+  const action = parsed.data;
+
+  if (action.action === 'hint') {
+    return action.text ? {type: 'hint', text: action.text} : {type: 'none'};
+  }
+  if (action.action === 'select_experience') {
+    if (lesson.experiences.some(e => e.id === action.experienceId)) {
       return {
         type: 'select_experience',
-        experienceId,
-        ...(raw.input && typeof raw.input === 'object'
-          ? {input: raw.input as Record<string, unknown>}
-          : {}),
+        experienceId: action.experienceId,
+        ...(action.input ? {input: action.input} : {}),
       };
     }
-    return text ? {type: 'hint', text} : {type: 'none'};
+    return action.text ? {type: 'hint', text: action.text} : {type: 'none'};
   }
-  return {type: 'none', ...(text ? {text} : {})};
+  return {type: 'none', ...(action.text ? {text: action.text} : {})};
 }

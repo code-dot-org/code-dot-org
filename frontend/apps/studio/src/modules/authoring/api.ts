@@ -34,7 +34,8 @@ export interface ChatMessage {
 }
 
 export interface WidgetResponse {
-  descriptor: WidgetDescriptor;
+  // The server can return html before the descriptor is ready.
+  descriptor?: WidgetDescriptor;
   html: string;
 }
 

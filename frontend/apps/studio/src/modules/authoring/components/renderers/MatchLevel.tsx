@@ -83,6 +83,11 @@ export default function MatchLevel({
                   </option>
                 ))}
               </select>
+              {graded && (
+                <span className={styles.visuallyHidden}>
+                  {graded[i] ? 'Correct' : 'Incorrect'}
+                </span>
+              )}
             </div>
           );
         })}
@@ -98,7 +103,7 @@ export default function MatchLevel({
         </Button>
       </div>
       {graded && (
-        <Typography variant="body2">
+        <Typography variant="body2" role="status" aria-live="polite">
           {graded.filter(Boolean).length}/{data.pairs.length} correct
         </Typography>
       )}

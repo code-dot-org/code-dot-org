@@ -62,12 +62,14 @@ export default function LevelGroupLevel({
           Back
         </Button>
         <Typography variant="body2">
-          Page {pageIndex + 1} of {data.pages.length}
+          {data.pages.length === 0
+            ? 'No pages'
+            : `Page ${pageIndex + 1} of ${data.pages.length}`}
         </Typography>
         <Button
           variant="contained"
           size="small"
-          disabled={pageIndex === data.pages.length - 1}
+          disabled={pageIndex >= data.pages.length - 1}
           onClick={() => setPageIndex(i => i + 1)}
         >
           Next

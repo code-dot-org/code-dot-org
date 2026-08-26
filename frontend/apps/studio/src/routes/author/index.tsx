@@ -8,6 +8,7 @@ import {
   useAuthoringState,
   useCanAuthor,
 } from '@/modules/authoring';
+import AuthorRouteError from '@/modules/authoring/components/AuthorRouteError';
 import AuthorSidebar from '@/modules/authoring/components/AuthorSidebar';
 import LabProviders from '@/modules/labs/LabProviders';
 
@@ -16,6 +17,7 @@ import styles from '@/modules/authoring/components/authoring.module.scss';
 export const Route = createFileRoute('/author/')({
   loader: () => registerAuthoringMswBridge(),
   component: RouteComponent,
+  errorComponent: AuthorRouteError,
 });
 
 function RouteComponent() {

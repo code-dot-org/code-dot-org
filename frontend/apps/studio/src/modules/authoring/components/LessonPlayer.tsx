@@ -31,7 +31,12 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
   const canAuthor = useCanAuthor();
   const [studentView, setStudentView] = useState(false);
   const [tutorOn, setTutorOn] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  // Tracked by id, not position: `experiences` is a server-owned array that
+  // reorders/shrinks under the player (author drag/remove, agent edits). An
+  // index would silently point at a different experience after a reorder.
+  const [activeExperienceId, setActiveExperienceId] = useState<
+    string | undefined
+  >(() => lesson.experiences[0]?.id);
   const [insertPosition, setInsertPosition] = useState<number | undefined>();
   const [inputOverrides, setInputOverrides] = useState<
     Record<string, Record<string, unknown>>
@@ -40,7 +45,11 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
 
   const authorMode = canAuthor && !studentView;
   const experiences = lesson.experiences;
-  const active = experiences[Math.min(activeIndex, experiences.length - 1)];
+  const activeIndex = useMemo(() => {
+    const index = experiences.findIndex(e => e.id === activeExperienceId);
+    return index >= 0 ? index : 0;
+  }, [experiences, activeExperienceId]);
+  const active = experiences[activeIndex];
 
   const scope = useMemo(
     () => ({
@@ -64,16 +73,14 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
   };
 
   const selectIndex = (index: number) => {
-    setActiveIndex(index);
+    const experience = experiences[index];
+    setActiveExperienceId(experience?.id);
     setInsertPosition(undefined);
-    if (tutorOn) {
-      const experience = experiences[index];
-      if (experience) {
-        void tutorRef.current?.push({
-          kind: 'experience_shown',
-          experienceId: experience.id,
-        });
-      }
+    if (tutorOn && experience) {
+      void tutorRef.current?.push({
+        kind: 'experience_shown',
+        experienceId: experience.id,
+      });
     }
   };
 
@@ -81,14 +88,14 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
     experienceId: string,
     input?: Record<string, unknown>,
   ) => {
-    const index = experiences.findIndex(e => e.id === experienceId);
-    if (index < 0) {
+    const experience = experiences.find(e => e.id === experienceId);
+    if (!experience) {
       return; // tutor named something outside the authored world: ignore
     }
     if (input) {
       setInputOverrides(prev => ({...prev, [experienceId]: input}));
     }
-    setActiveIndex(index);
+    setActiveExperienceId(experienceId);
   };
 
   return (
@@ -109,13 +116,12 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
             {lesson.displayName}
           </Typography>
         </div>
-        <div className={styles.progressDots} role="tablist" aria-label="Lesson progress">
+        <nav className={styles.progressDots} aria-label="Lesson progress">
           {experiences.map((experience, index) => (
             <button
               key={experience.id}
               type="button"
-              role="tab"
-              aria-selected={index === activeIndex}
+              aria-current={index === activeIndex ? 'step' : undefined}
               aria-label={experience.title ?? `Activity ${index + 1}`}
               className={
                 index === activeIndex
@@ -125,7 +131,7 @@ export default function LessonPlayer({course, unit, lesson}: LessonPlayerProps) 
               onClick={() => selectIndex(index)}
             />
           ))}
-        </div>
+        </nav>
         <div className={styles.lessonHeaderSpacer} />
         <Button
           size="small"

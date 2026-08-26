@@ -4,8 +4,8 @@ import {
   tool,
   type SDKMessage,
 } from '@anthropic-ai/claude-agent-sdk';
-import fs from 'node:fs';
 import {randomUUID} from 'node:crypto';
+import fs from 'node:fs';
 import path from 'node:path';
 import {z} from 'zod';
 
@@ -165,7 +165,9 @@ function guardFileTool(
   }
 
   const READ_TOOLS = new Set(['Read', 'Glob', 'Grep']);
-  const WRITE_TOOLS = new Set(['Write', 'Edit', 'MultiEdit']);
+  // This SDK's file tools are Read/Write/Edit/Glob/Grep; there is no
+  // MultiEdit here, so guarding against it was dead code.
+  const WRITE_TOOLS = new Set(['Write', 'Edit']);
   if (!READ_TOOLS.has(toolName) && !WRITE_TOOLS.has(toolName)) {
     return {behavior: 'deny', message: `${toolName} is not available here.`};
   }
@@ -182,7 +184,51 @@ function guardFileTool(
       message: `${toolName} is confined to ${boundary}.`,
     };
   }
+  if (!isWithinRealBoundary(resolved, boundary)) {
+    return {
+      behavior: 'deny',
+      message: `${toolName} is confined to ${boundary}.`,
+    };
+  }
   return {behavior: 'allow', updatedInput: toolInput};
+}
+
+/**
+ * path.resolve above is purely lexical: a symlink placed inside the boundary
+ * (or as the boundary itself) can point anywhere on disk, and the lexical
+ * check alone would wave that through. Resolve symlinks and re-test
+ * containment against the boundary's own real path. The target of a Write
+ * may not exist yet, so symlinks are resolved on the nearest ancestor
+ * directory that does exist, and the removed suffix is reattached lexically.
+ */
+function isWithinRealBoundary(resolved: string, boundary: string): boolean {
+  try {
+    const ancestor = nearestExistingAncestor(resolved);
+    const realAncestor = fs.realpathSync.native(ancestor);
+    const realBoundary = fs.realpathSync.native(boundary);
+    const realResolved = path.join(realAncestor, resolved.slice(ancestor.length));
+    return (
+      realResolved === realBoundary ||
+      realResolved.startsWith(`${realBoundary}${path.sep}`)
+    );
+  } catch {
+    // Symlink resolution failed for a reason other than a missing target
+    // (permissions, a race) — fail closed rather than trust the lexical
+    // check alone.
+    return false;
+  }
+}
+
+function nearestExistingAncestor(target: string): string {
+  let candidate = target;
+  while (!fs.existsSync(candidate)) {
+    const parent = path.dirname(candidate);
+    if (parent === candidate) {
+      return candidate;
+    }
+    candidate = parent;
+  }
+  return candidate;
 }
 
 const CURRICULUM_TOOL_NAMES = [

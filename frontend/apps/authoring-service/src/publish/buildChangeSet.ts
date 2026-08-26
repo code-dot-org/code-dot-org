@@ -17,7 +17,7 @@ export interface PublishedWidget {
   source?: string;
   validation: {
     hasHtml: boolean;
-    networkPolicy: 'none';
+    networkPolicy: 'none' | 'unknown';
     cspPresent: boolean;
   };
 }
@@ -82,7 +82,9 @@ export function buildChangeSet(
     changes,
     newObjects: collectDrafts(snapshot.courses),
     widgets: snapshot.widgets.map(descriptor =>
-      publishWidget(descriptor, readWidgetSource(descriptor.id)),
+      // One widget whose source can't be read must not fail the whole
+      // publish; treat it as source-absent and let its validation flags say so.
+      publishWidget(descriptor, safeReadWidgetSource(readWidgetSource, descriptor.id)),
     ),
     offline: eachLesson(snapshot.courses).map(({lesson}) =>
       offlineReport(lesson),
@@ -204,6 +206,25 @@ function collectDrafts(
   return {courses: newCourses, units, lessons, experiences};
 }
 
+// injectWidgetChrome always strips any widget-supplied CSP and applies this
+// exact policy (see widgetChrome.ts); checking for it specifically — rather
+// than any mention of "Content-Security-Policy" — can't be fooled by a
+// widget that puts the phrase in a comment without a real policy applying.
+const OUR_DEFAULT_SRC_NONE = "default-src 'none'";
+
+// A read that throws (a bad id that slipped into state, a permissions error)
+// degrades to source-absent rather than failing the whole publish.
+function safeReadWidgetSource(
+  readWidgetSource: (id: string) => string | undefined,
+  id: string,
+): string | undefined {
+  try {
+    return readWidgetSource(id);
+  } catch {
+    return undefined;
+  }
+}
+
 function publishWidget(
   descriptor: WidgetDescriptor,
   rawSource: string | undefined,
@@ -213,14 +234,15 @@ function publishWidget(
   // — what a learner's iframe actually receives, not what the agent wrote.
   const source =
     rawSource === undefined ? undefined : injectWidgetChrome(rawSource);
+  const cspPresent = Boolean(source?.includes(OUR_DEFAULT_SRC_NONE));
   return {
     id: descriptor.id,
     descriptor,
     ...(source === undefined ? {} : {source}),
     validation: {
       hasHtml: Boolean(source && source.trim().length > 0),
-      networkPolicy: 'none',
-      cspPresent: Boolean(source?.includes('Content-Security-Policy')),
+      networkPolicy: cspPresent ? 'none' : 'unknown',
+      cspPresent,
     },
   };
 }

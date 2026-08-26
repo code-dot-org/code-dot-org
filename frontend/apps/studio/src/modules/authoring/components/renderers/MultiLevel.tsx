@@ -87,6 +87,12 @@ export default function MultiLevel({
               onClick={() => toggleSelect(i)}
             >
               {answer.text}
+              {graded && answer.correct && (
+                <span className={styles.visuallyHidden}> (Correct)</span>
+              )}
+              {graded && !answer.correct && isSelected && (
+                <span className={styles.visuallyHidden}> (Incorrect)</span>
+              )}
             </button>
           );
         })}
@@ -102,7 +108,7 @@ export default function MultiLevel({
         </Button>
       </div>
       {graded && (
-        <Typography variant="body2">
+        <Typography variant="body2" role="status" aria-live="polite">
           {correct
             ? 'Correct!'
             : data.allowMultipleAttempts

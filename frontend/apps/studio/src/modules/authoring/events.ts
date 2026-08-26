@@ -21,6 +21,15 @@ type Listener = (event: AuthoringServerEvent) => void;
 let source: EventSource | undefined;
 const listeners = new Set<Listener>();
 
+// Curriculum version last observed over the wire (from a 'state' event), so a
+// 'hello' on reconnect can tell whether the service moved on without us.
+let lastSeenVersion: number | undefined;
+
+/** Last curriculum version observed over the wire. */
+export function getLastSeenVersion(): number | undefined {
+  return lastSeenVersion;
+}
+
 // Recent activity feed for the sidebar, kept outside React so events arriving
 // while no feed component is mounted aren't lost. Bounded to stay small.
 const FEED_LIMIT = 200;
@@ -29,6 +38,9 @@ let feedVersion = 0;
 const feedSubscribers = new Set<() => void>();
 
 function dispatch(event: AuthoringServerEvent): void {
+  if (event.type === 'state') {
+    lastSeenVersion = event.version;
+  }
   if (event.type === 'chat' || event.type === 'agent-status') {
     feed = [...feed.slice(-(FEED_LIMIT - 1)), event];
     feedVersion += 1;

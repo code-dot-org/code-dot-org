@@ -43,6 +43,10 @@ const TutorDock = forwardRef<TutorDockHandle, TutorDockProps>(
     const [busy, setBusy] = useState(false);
     const transcriptRef = useRef<TutorEvent[]>([]);
     const nextId = useRef(0);
+    // Monotonic turn stamp: a rapid widget event can fire while a previous
+    // /tutor POST is still in flight. Only the response for the latest turn
+    // is allowed to act, so a slow stale response can't clobber a fresh one.
+    const turnRef = useRef(0);
 
     const append = (from: TutorLogEntry['from'], text: string) =>
       setLog(prev => [...prev, {id: nextId.current++, from, text}]);
@@ -60,17 +64,40 @@ const TutorDock = forwardRef<TutorDockHandle, TutorDockProps>(
 
     const sendEvent = async (event: TutorEvent) => {
       transcriptRef.current = [...transcriptRef.current, event];
+      const turnId = ++turnRef.current;
       setBusy(true);
       try {
-        act(await authoringApi.tutorTurn(lessonId, transcriptRef.current));
+        const action = await authoringApi.tutorTurn(
+          lessonId,
+          transcriptRef.current,
+        );
+        if (turnRef.current !== turnId) {
+          return; // a newer turn superseded this response
+        }
+        act(action);
       } catch {
-        append('tutor', 'The tutor is unavailable right now.');
+        if (turnRef.current === turnId) {
+          append('tutor', 'The tutor is unavailable right now.');
+        }
       } finally {
-        setBusy(false);
+        if (turnRef.current === turnId) {
+          setBusy(false);
+        }
       }
     };
 
-    useImperativeHandle(ref, () => ({push: sendEvent}));
+    // The imperative push path (widget/stage events) has no user-facing
+    // "wait" affordance the way the composer's busy-disabled Send does, so it
+    // drops an event that arrives while a turn is already in flight rather
+    // than firing an overlapping POST /tutor.
+    const pushEvent = async (event: TutorEvent) => {
+      if (busy) {
+        return;
+      }
+      await sendEvent(event);
+    };
+
+    useImperativeHandle(ref, () => ({push: pushEvent}));
 
     const sendMessage = async () => {
       const text = draft.trim();

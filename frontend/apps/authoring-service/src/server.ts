@@ -1,5 +1,5 @@
 import {serve} from '@hono/node-server';
-import {Hono} from 'hono';
+import {Hono, type Context, type Next} from 'hono';
 import {cors} from 'hono/cors';
 import {streamSSE} from 'hono/streaming';
 import {randomUUID} from 'node:crypto';
@@ -17,11 +17,8 @@ import {
   type TutorRunner,
 } from './agent/TutorRunner.js';
 import {loadAuthoringBridge} from './authoring/bridge.js';
-import {
-  CURRICULUM_CHANGE_OPS,
-  type CurriculumChangeBody,
-  type ResolveLevel,
-} from './authoring/model.js';
+import {CurriculumChangeBodySchema} from './authoring/changeSchema.js';
+import type {ResolveLevel} from './authoring/model.js';
 import {importCourseIfMissing} from './boot/importCourse.js';
 import {LevelCatalog, repairLevelProperties} from './boot/levelCatalog.js';
 import {FRONTEND_ROOT, resolveRepoRoot} from './boot/paths.js';
@@ -103,6 +100,16 @@ const app = new Hono();
 
 app.use('/api/*', cors({origin: STUDIO_ORIGIN, credentials: false}));
 
+// Loopback bind (see serve() below) keeps this off the network; this header
+// check is the agreed CSRF mitigation on top of that for a page that isn't
+// Studio driving a mutation against localhost. Sec-Fetch-Site is sent by all
+// current browsers; its absence (older browsers, non-browser clients) is not
+// treated as suspicious — only an explicit 'cross-site' is rejected.
+app.use('/api/chat', rejectCrossSite);
+app.use('/api/changes', rejectCrossSite);
+app.use('/api/tutor', rejectCrossSite);
+app.use('/api/publish', rejectCrossSite);
+
 app.get('/api/state', c =>
   c.json({
     version: state.version,
@@ -128,7 +135,15 @@ app.get('/api/levels/search', c => {
 app.get('/api/widgets/:id', c => {
   const id = c.req.param('id');
   const descriptor = state.findWidget(id);
-  const html = state.readWidgetSource(id);
+  // An id that fails SessionStore's format check (e.g. a path-traversal
+  // attempt) throws rather than resolving outside widgetsDir; treat it the
+  // same as "not found" instead of surfacing a 500.
+  let html: string | undefined;
+  try {
+    html = state.readWidgetSource(id);
+  } catch {
+    html = undefined;
+  }
   if (!descriptor && html === undefined) {
     return c.json({error: `unknown widget ${id}`}, 404);
   }
@@ -142,24 +157,43 @@ app.get('/api/widgets/:id', c => {
 
 app.get('/api/events', c =>
   streamSSE(c, async stream => {
-    await stream.writeSSE({
-      data: JSON.stringify({type: 'hello', version: state.version}),
-    });
-
-    const unsubscribe = state.subscribe(event => {
-      void stream.writeSSE({data: JSON.stringify(event)});
-    });
-    const heartbeat = setInterval(() => {
-      void stream.write(': ping\n\n');
-    }, HEARTBEAT_MS);
-
-    await new Promise<void>(resolve => {
+    // Registered before any await: an immediate client disconnect (during
+    // the first writeSSE below) must still reach this listener, or the
+    // subscriber and heartbeat set up afterward would leak forever — the
+    // abort event only ever fires once, at the moment the client goes away.
+    // A holder object, not two `let`s: onAbort's callback closes over it
+    // before either resource exists.
+    const resources: {
+      unsubscribe?: () => void;
+      heartbeat?: ReturnType<typeof setInterval>;
+    } = {};
+    const aborted = new Promise<void>(resolve => {
       stream.onAbort(() => {
-        unsubscribe();
-        clearInterval(heartbeat);
+        resources.unsubscribe?.();
+        if (resources.heartbeat !== undefined) {
+          clearInterval(resources.heartbeat);
+        }
         resolve();
       });
     });
+
+    await stream.writeSSE({
+      data: JSON.stringify({type: 'hello', version: state.version}),
+    });
+    if (stream.aborted) {
+      // onAbort already ran and cleaned up (nothing was created yet); do
+      // not create a subscriber/heartbeat that will never be cleaned up.
+      return;
+    }
+
+    resources.unsubscribe = state.subscribe(event => {
+      void stream.writeSSE({data: JSON.stringify(event)});
+    });
+    resources.heartbeat = setInterval(() => {
+      void stream.write(': ping\n\n');
+    }, HEARTBEAT_MS);
+
+    await aborted;
   }),
 );
 
@@ -187,13 +221,20 @@ app.post('/api/chat', async c => {
 app.get('/api/chat/log', c => c.json({messages: state.getChatLog()}));
 
 app.post('/api/changes', async c => {
-  const body = (await c.req.json()) as {change?: CurriculumChangeBody};
-  const change = body.change;
-  if (!change || !isKnownOp(change.op)) {
-    return c.json({error: `unknown change op ${String(change?.op)}`}, 400);
+  let body: unknown;
+  try {
+    body = await c.req.json();
+  } catch {
+    return c.json({error: 'malformed JSON body'}, 400);
+  }
+  const parsed = CurriculumChangeBodySchema.safeParse(
+    (body as {change?: unknown} | undefined)?.change,
+  );
+  if (!parsed.success) {
+    return c.json({error: parsed.error.message}, 400);
   }
   try {
-    state.applyCurriculumChange(change, 'author');
+    state.applyCurriculumChange(parsed.data, 'author');
   } catch (error) {
     return c.json({error: errorMessage(error)}, 400);
   }
@@ -227,8 +268,11 @@ app.post('/api/publish', c => {
   return c.json(changeSet);
 });
 
-function isKnownOp(op: unknown): op is CurriculumChangeBody['op'] {
-  return CURRICULUM_CHANGE_OPS.includes(op as CurriculumChangeBody['op']);
+async function rejectCrossSite(c: Context, next: Next) {
+  if (c.req.header('Sec-Fetch-Site') === 'cross-site') {
+    return c.json({error: 'cross-site request rejected'}, 403);
+  }
+  await next();
 }
 
 function errorMessage(error: unknown): string {
@@ -269,7 +313,7 @@ function watchWidgetSources(
   }
 }
 
-serve({fetch: app.fetch, port: PORT}, info => {
+serve({fetch: app.fetch, port: PORT, hostname: '127.0.0.1'}, info => {
   console.log(
     `[authoring-service] session ${SESSION_ID} at ${store.root}\n` +
       `[authoring-service] ${catalog.size} attachable level(s) indexed\n` +

@@ -35,14 +35,18 @@ export default function OutlineRail({
   onAskAiAt,
 }: OutlineRailProps) {
   const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const change = async (changeBody: Record<string, unknown>) => {
     if (busy) {
       return;
     }
     setBusy(true);
+    setError(null);
     try {
       await authoringApi.applyChange(changeBody);
+    } catch {
+      setError('That change failed to apply.');
     } finally {
       setBusy(false);
     }
@@ -59,39 +63,36 @@ export default function OutlineRail({
       <InsertPoint position={0} onAskAiAt={onAskAiAt} />
       {experiences.map((experience, index) => (
         <div key={experience.id}>
+          {/* The row label is the activating control; action buttons are
+              siblings, not nested inside it, so a child button's keydown
+              can't bubble up and hijack the row's own Enter/Space handling. */}
           <div
             className={
               index === activeIndex
                 ? `${styles.railItem} ${styles.railItemActive}`
                 : styles.railItem
             }
-            role="button"
-            tabIndex={0}
-            onClick={() => onSelect(index)}
-            onKeyDown={e => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                onSelect(index);
-              }
-            }}
           >
-            <span className={styles.railItemKind} aria-hidden>
-              {KIND_GLYPHS[experience.kind] ?? '•'}
-            </span>
-            <span className={styles.railItemLabel}>
-              <Typography variant="body2" component="span">
-                {experience.title ?? experience.id}
-              </Typography>
-            </span>
+            <button
+              type="button"
+              className={styles.railItemButton}
+              onClick={() => onSelect(index)}
+            >
+              <span className={styles.railItemKind} aria-hidden>
+                {KIND_GLYPHS[experience.kind] ?? '•'}
+              </span>
+              <span className={styles.railItemLabel}>
+                <Typography variant="body2" component="span">
+                  {experience.title ?? experience.id}
+                </Typography>
+              </span>
+            </button>
             <span className={styles.railItemActions}>
               <IconButton
                 size="small"
                 aria-label="Move up"
                 disabled={index === 0 || busy}
-                onClick={e => {
-                  e.stopPropagation();
-                  void move(experience.id, index - 1);
-                }}
+                onClick={() => void move(experience.id, index - 1)}
               >
                 ↑
               </IconButton>
@@ -99,10 +100,7 @@ export default function OutlineRail({
                 size="small"
                 aria-label="Move down"
                 disabled={index === experiences.length - 1 || busy}
-                onClick={e => {
-                  e.stopPropagation();
-                  void move(experience.id, index + 1);
-                }}
+                onClick={() => void move(experience.id, index + 1)}
               >
                 ↓
               </IconButton>
@@ -110,10 +108,7 @@ export default function OutlineRail({
                 size="small"
                 aria-label="Remove"
                 disabled={busy}
-                onClick={e => {
-                  e.stopPropagation();
-                  void remove(experience.id);
-                }}
+                onClick={() => void remove(experience.id)}
               >
                 ✕
               </IconButton>
@@ -122,6 +117,11 @@ export default function OutlineRail({
           <InsertPoint position={index + 1} onAskAiAt={onAskAiAt} />
         </div>
       ))}
+      {error && (
+        <Typography variant="body4" role="status">
+          {error}
+        </Typography>
+      )}
     </nav>
   );
 }

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import {WIDGET_ID_PATTERN} from '../authoring/model.js';
 import type {
   CourseModel,
   CurriculumChange,
@@ -82,7 +83,19 @@ export class SessionStore {
     if (raw === undefined) {
       return undefined;
     }
-    const parsed = JSON.parse(raw) as Partial<CurriculumSnapshot>;
+    let parsed: Partial<CurriculumSnapshot>;
+    try {
+      parsed = JSON.parse(raw) as Partial<CurriculumSnapshot>;
+    } catch (error) {
+      // A torn write (crash mid-fsync, disk full) must not brick every
+      // future start; fall back to an empty snapshot the same way a missing
+      // file does.
+      console.error(
+        `[authoring-service] ${this.curriculumFile} is not valid JSON, ` +
+          `starting from an empty snapshot: ${String(error)}`,
+      );
+      return undefined;
+    }
     return {
       version: parsed.version ?? 0,
       courses: parsed.courses ?? [],
@@ -114,7 +127,18 @@ export class SessionStore {
   }
 
   widgetDir(widgetId: string): string {
+    this.assertValidWidgetId(widgetId);
     return path.join(this.widgetsDir, widgetId);
+  }
+
+  // widgetId flows into path.join for every widget file operation below; an
+  // id like `../../../etc/passwd` would otherwise escape widgetsDir for both
+  // reads and writes. All four widget file methods route through widgetDir,
+  // so this one check covers them.
+  private assertValidWidgetId(widgetId: string): void {
+    if (!WIDGET_ID_PATTERN.test(widgetId)) {
+      throw new Error(`invalid widget id: ${widgetId}`);
+    }
   }
 
   readWidgetSource(widgetId: string): string | undefined {
@@ -163,10 +187,22 @@ function readJsonLines<T>(file: string): T[] {
   if (!raw) {
     return [];
   }
-  return raw
-    .split('\n')
-    .filter(line => line.trim().length > 0)
-    .map(line => JSON.parse(line) as T);
+  const lines: T[] = [];
+  for (const line of raw.split('\n')) {
+    if (line.trim().length === 0) {
+      continue;
+    }
+    try {
+      lines.push(JSON.parse(line) as T);
+    } catch (error) {
+      // One torn line (crash mid-append) must not brick every future start;
+      // quarantine it and keep the well-formed lines around it.
+      console.error(
+        `[authoring-service] skipping malformed line in ${file}: ${String(error)}`,
+      );
+    }
+  }
+  return lines;
 }
 
 function appendJsonLine(file: string, value: unknown): void {
