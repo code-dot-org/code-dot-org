@@ -97,7 +97,7 @@ describe('sheet slicing', () => {
 
   it('cuts two rows whose frames touch, at the sparsest line', () => {
     // A brim one pixel wide joins each lower frame to the one above it; the
-    // cut falls at the brim, which stays with its hat.
+    // brim's lines tie for sparsest, so the cut falls at the even division.
     const data = image(100, 100, [
       [2, 22, 5, 45],
       [52, 72, 5, 45],
@@ -110,8 +110,8 @@ describe('sheet slicing', () => {
     expect(corners(found)).toEqual([
       [2, 5],
       [52, 5],
-      [2, 45],
-      [52, 45],
+      [2, 50],
+      [52, 50],
     ]);
   });
 
