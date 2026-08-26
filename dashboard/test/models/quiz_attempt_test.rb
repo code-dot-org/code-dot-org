@@ -8,14 +8,14 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_includes attempt.errors.attribute_names, :started_at
   end
 
-  test "a user cannot have two rows for the same level/script/attempt_number" do
+  test "a user cannot have two rows for the same level/unit/attempt_number" do
     quiz = create(:quiz)
     user = create(:user)
-    script = create(:script)
-    create(:quiz_attempt, user: user, level: quiz, script: script, attempt_number: 1)
+    unit = create(:unit)
+    create(:quiz_attempt, user: user, level: quiz, unit: unit, attempt_number: 1)
 
     assert_raises(ActiveRecord::RecordNotUnique) do
-      QuizAttempt.create!(user: user, level: quiz, script: script, attempt_number: 1, started_at: Time.now)
+      QuizAttempt.create!(user: user, level: quiz, unit: unit, attempt_number: 1, started_at: Time.now)
     end
   end
 

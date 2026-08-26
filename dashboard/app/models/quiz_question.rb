@@ -2,21 +2,21 @@
 #
 # Table name: quiz_questions
 #
-#  id            :bigint           not null, primary key
-#  type          :string(255)      not null
-#  question_key  :string(36)       not null
-#  parent_id     :bigint
-#  question_name :string(255)      not null
-#  question      :json             not null
-#  explanation   :text(65535)
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
+#  id          :bigint           not null, primary key
+#  type        :string(255)      not null
+#  key         :string(36)       not null
+#  parent_id   :bigint
+#  name        :string(255)      not null
+#  content     :json             not null
+#  explanation :text(65535)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 # Indexes
 #
-#  index_quiz_questions_on_parent_id      (parent_id)
-#  index_quiz_questions_on_question_key   (question_key)
-#  index_quiz_questions_on_question_name  (question_name)
+#  index_quiz_questions_on_key        (key)
+#  index_quiz_questions_on_name       (name)
+#  index_quiz_questions_on_parent_id  (parent_id)
 #
 class QuizQuestion < ApplicationRecord
   after_initialize {self.type ||= self.class.sti_name}
@@ -33,12 +33,12 @@ class QuizQuestion < ApplicationRecord
   validates :question_name, presence: true
   validates :question, presence: true
 
-  # preview/stable/sunsetting scripts
+  # preview/stable/sunsetting units
   def used_in_published_unit?
     levels.any? do |quiz|
       quiz.script_levels.any? do |sl|
-        script = sl.script
-        script && (script.launched? || script.get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+        unit = sl.script
+        unit && (unit.launched? || unit.get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
       end
     end
   end

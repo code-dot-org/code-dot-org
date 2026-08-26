@@ -2525,7 +2525,7 @@ FactoryBot.define do
   factory :quiz_attempt do
     user
     level factory: :quiz
-    script
+    unit
     attempt_number {1}
     started_at {Time.now}
   end

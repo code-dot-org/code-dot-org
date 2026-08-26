@@ -9,7 +9,6 @@
 #  max_score          :integer
 #  score              :integer
 #  grading_status     :string(255)      not null
-#  rubric_score       :boolean
 #  time_spent_seconds :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null

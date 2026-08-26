@@ -42,8 +42,8 @@ class QuizQuestionTest < ActiveSupport::TestCase
   test "not used_in_published_unit? when the quiz's unit is still in_development" do
     question = create(:quiz_question)
     quiz = create(:quiz)
-    script = create(:script, :in_single_unit_course)
-    create(:script_level, script: script, levels: [quiz])
+    unit = create(:unit, :in_single_unit_course)
+    create(:script_level, script: unit, levels: [quiz])
     create(:quiz_level_question, level: quiz, quiz_question: question)
 
     refute question.used_in_published_unit?
@@ -52,9 +52,9 @@ class QuizQuestionTest < ActiveSupport::TestCase
   test "used_in_published_unit? when the quiz's unit is stable" do
     question = create(:quiz_question)
     quiz = create(:quiz)
-    script = create(:script)
-    create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script_level, script: script, levels: [quiz])
+    unit = create(:unit)
+    create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:script_level, script: unit, levels: [quiz])
     create(:quiz_level_question, level: quiz, quiz_question: question)
 
     assert question.used_in_published_unit?
@@ -63,9 +63,9 @@ class QuizQuestionTest < ActiveSupport::TestCase
   test "used_in_published_unit? when the quiz's unit is sunsetting" do
     question = create(:quiz_question)
     quiz = create(:quiz)
-    script = create(:script)
-    create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
-    create(:script_level, script: script, levels: [quiz])
+    unit = create(:unit)
+    create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+    create(:script_level, script: unit, levels: [quiz])
     create(:quiz_level_question, level: quiz, quiz_question: question)
 
     assert question.used_in_published_unit?
