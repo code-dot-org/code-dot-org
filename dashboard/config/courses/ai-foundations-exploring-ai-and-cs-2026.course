@@ -6,7 +6,19 @@
     "the-fabric-of-the-internet-and-ai-2026",
     "ai-powered-threats-and-defenses-2026",
     "insights-from-data-and-ai-2026",
-    "foundations-of-ai-programming-2026"
+    "foundations-of-ai-programming-2026",
+    "foundations-of-ai-programming-javascript-2026",
+    "ai-history-2026"
+  ],
+  "unit_prefixes": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6A",
+    "6B",
+    "7"
   ],
   "original_script_names": [
     "problem-solving-with-ai-2026",
@@ -14,7 +26,9 @@
     "the-fabric-of-the-internet-and-ai-2026",
     "ai-powered-threats-and-defenses-2026",
     "insights-from-data-and-ai-2026",
-    "foundations-of-ai-programming-2026"
+    "foundations-of-ai-programming-2026",
+    "foundations-of-ai-programming-javascript-2026",
+    "ai-history-2026"
   ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
@@ -23,7 +37,7 @@
   "properties": {
     "family_name": "ai-foundations-exploring-ai-and-cs",
     "has_verified_resources": true,
-    "numbered_units": "auto",
+    "numbered_units": "custom",
     "version_year": "2026"
   },
   "resources": [

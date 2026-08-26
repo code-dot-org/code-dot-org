@@ -1,0 +1,11 @@
+name 'foundations-of-ai-programming-js-lesson4-level2_aif-6b-2026'
+display_name 'Accessibility Audit'
+description 'Explore one of these websites and identify accessibility issues that make the site harder to see, use, or understand. '
+
+sublevels
+level 'foundations-of-ai-programming-js-lesson4-level2a_aif-6b-2026'
+level 'foundations-of-ai-programming-js-lesson4-level2b_aif-6b-2026'
+level 'foundations-of-ai-programming-js-lesson4-level2c_aif-6b-2026'
+
+uses_lab2
+navigation_type 'next_level'

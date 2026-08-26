@@ -6,6 +6,7 @@ import numpy as np
 import pytest
 
 from theater.support.audio import (
+  _MAX_SAMPLES,
   _MIN_CAPACITY,
   as_samples,
   AudioWriter,
@@ -91,6 +92,63 @@ def test_as_samples_copies_what_it_is_given():
   samples = as_samples(original)
   original[0] = -1.0
   assert samples[0] == 0.5
+
+
+def test_as_samples_rejects_a_sequence_past_the_length_ceiling():
+  with pytest.raises(ValueError):
+    as_samples(np.zeros(_MAX_SAMPLES + 1))
+
+
+def test_as_samples_allows_a_sequence_at_the_length_ceiling():
+  assert len(as_samples(np.zeros(_MAX_SAMPLES))) == _MAX_SAMPLES
+
+
+def test_as_samples_rejects_an_endless_iterator():
+  # Drawing on this without a bound exhausts the heap rather than raising, and
+  # in the browser that takes the interpreter down with it. Counting what the
+  # iterator was asked for proves the ceiling stopped it.
+  drawn = 0
+
+  def forever():
+    nonlocal drawn
+    while True:
+      drawn += 1
+      yield 0.5
+
+  with pytest.raises(ValueError):
+    as_samples(forever())
+  assert drawn == _MAX_SAMPLES + 1
+
+
+@pytest.mark.parametrize(
+  "sound",
+  [
+    [[0.5, 0.25], [0.125, 0.0625]],
+    ([0.5], [0.25]),
+    np.zeros((2, 4), dtype=np.float32),
+    np.zeros((2, 2, 2), dtype=np.float32),
+  ],
+)
+def test_as_samples_rejects_a_nested_sequence(sound):
+  # The timeline these blend onto is one-dimensional, and numpy's own complaint
+  # about it -- a broadcast error naming shapes -- tells a student nothing.
+  with pytest.raises(ValueError):
+    as_samples(sound)
+
+
+def test_as_samples_rejects_nesting_before_it_measures_length():
+  # The outer length clears the ceiling, the total does not. Nesting has to be
+  # caught on its own, or the copy the length check permits is unbounded.
+  rows = 100
+  sound = [[0.0] * (_MAX_SAMPLES // rows)] * rows
+  assert len(sound) < _MAX_SAMPLES
+  with pytest.raises(ValueError):
+    as_samples(sound)
+
+
+def test_as_samples_accepts_an_empty_sequence():
+  # There is no first element to probe for nesting here.
+  assert len(as_samples([])) == 0
 
 
 def test_truncate_shortens_but_never_extends():
