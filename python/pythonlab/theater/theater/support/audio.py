@@ -23,6 +23,15 @@ _PCM_DTYPES = {1: np.uint8, 2: "<i2", 4: "<i4"}
 
 _WIDTH_24_BIT = 3
 
+# The highest source rate a file may carry for its whole permitted length.
+_MAX_SOURCE_RATE = 48000
+
+# The most frame bytes we will read into memory: a full-length stereo file at
+# that rate and the widest depth above.
+_MAX_FRAME_BYTES = MAX_AUDIO_SECONDS * _MAX_SOURCE_RATE * 2 * max(_PCM_SCALE)
+
+_TOO_LARGE = "The sound file is too large; try a lower sample rate or bit depth"
+
 # Codecs a fmt chunk can name that the wave module reads: uncompressed PCM, and
 # the extensible header whose subformat GUID is PCM.
 _WAVE_FORMAT_PCM = 0x0001
@@ -59,6 +68,11 @@ def read_samples_from_wav_bytes(wav_bytes):
         raise ValueError(
           f"The sound is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
         )
+      # What readframes is about to hand back: the header's own count of frame
+      # bytes, but never more than the file holds.
+      frame_bytes = min(num_frames * num_channels * sample_width, len(wav_bytes))
+      if frame_bytes > _MAX_FRAME_BYTES:
+        raise ValueError(_TOO_LARGE)
       # Passed straight in, so the frame bytes are released when it returns
       # rather than sitting alongside the resample that follows.
       mono = _decode_frames(
@@ -143,31 +157,28 @@ def _decode_frames(frames, num_channels, sample_width):
 
 
 def _decode_24_bit_frames(frames, num_samples, num_channels):
-  """Mono float32 from 24-bit samples, still at the format's integer scale."""
+  """Mono float32 from 24-bit samples, still at the format's integer scale.
+
+  numpy has no 3-byte integer dtype, so each sample is rebuilt from its bytes.
+  Averaging is linear, so both channels' bytes are summed into one accumulator
+  as it is built, then halved at the end.
+  """
   triples = np.frombuffer(frames, dtype=np.uint8, count=num_samples * 3)
   triples = triples.reshape(-1, 3)
-  mono = _widen_24_bit(triples[0::num_channels])
-  if num_channels == 2:
-    mono += _widen_24_bit(triples[1::2])
-    mono *= 0.5
-  return mono
-
-
-def _widen_24_bit(triples):
-  """One channel's 24-bit samples as float32, from its rows of three bytes.
-
-  numpy has no 3-byte integer dtype, so each sample is rebuilt from its bytes,
-  accumulating in the float32 array that is returned rather than in a
-  full-width integer copy of the track.
-  """
+  channels = [triples[channel::num_channels] for channel in range(num_channels)]
   # An integer cast wraps rather than clamps, so reading the top byte as int8 is
   # what carries the sign; the two below it are unsigned place values under it.
-  # No step exceeds 2**24, which float32 still counts exactly.
-  samples = triples[:, 2].astype(np.int8).astype(np.float32)
-  samples *= 256.0
-  samples += triples[:, 1]
-  samples *= 256.0
-  samples += triples[:, 0]
+  # Even two channels summed stay under 2**24, which float32 counts exactly, so
+  # nothing here is approximate.
+  samples = channels[0][:, 2].astype(np.int8).astype(np.float32)
+  for channel in channels[1:]:
+    samples += channel[:, 2].astype(np.int8)
+  for place in (1, 0):
+    samples *= 256.0
+    for channel in channels:
+      samples += channel[:, place]
+  if num_channels > 1:
+    samples /= num_channels
   return samples
 
 

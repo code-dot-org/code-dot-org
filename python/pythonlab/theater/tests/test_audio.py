@@ -5,6 +5,7 @@ import wave
 import numpy as np
 import pytest
 
+from theater.support import audio
 from theater.support.audio import (
   _MAX_SAMPLES,
   _MIN_CAPACITY,
@@ -254,6 +255,23 @@ def test_read_widens_24_bit_samples_exactly():
   assert samples.tolist() == expected.tolist()
 
 
+@pytest.mark.parametrize("channels", [1, 2])
+def test_read_averages_24_bit_stereo_exactly(channels):
+  # Both channels are summed into one accumulator as it is assembled, place
+  # value by place value, rather than widened separately. Every step stays under
+  # 2**24, so the result has to match exact integer arithmetic bit for bit -- a
+  # reordering that overflowed float32's exact range would show up here.
+  values = np.random.default_rng(7).integers(-2 ** 23, 2 ** 23, size=600 * channels)
+  wav = _make_wav_bytes_from_ints(values, channels, 3)
+  samples = read_samples_from_wav_bytes(wav)
+  if channels == 1:
+    expected = [np.float32(value / 2 ** 23) for value in values]
+  else:
+    expected = [np.float32(((int(left) + int(right)) / 2) / 2 ** 23)
+                for left, right in zip(values[0::2], values[1::2])]
+  assert samples.tolist() == [float(value) for value in expected]
+
+
 @pytest.mark.parametrize("sample_width", [1, 2, 3, 4])
 @pytest.mark.parametrize("channels", [1, 2])
 def test_read_plays_what_a_short_file_holds_at_every_width(sample_width, channels):
@@ -306,8 +324,7 @@ def test_read_rejects_more_than_two_channels():
 def test_read_rejects_more_than_two_channels_before_reading_frames(monkeypatch):
   # The frame bytes are what we are refusing to allocate: the duration ceiling
   # bounds frames per second, not channels, so a 300-second file at the ceiling
-  # holds 106 MB across 4 channels and more as the count climbs. In the Pyodide
-  # worker that reads as a crash rather than as this message.
+  # costs a copy of 106 MB across 4 channels, and more as the count climbs.
   def refuse_to_read(self, num_frames):
     raise AssertionError("frames were read before the channel count was checked")
 
@@ -336,6 +353,68 @@ def test_read_rejects_a_sound_past_the_length_ceiling():
   )
   with pytest.raises(ValueError):
     read_samples_from_wav_bytes(long_wav)
+
+
+def _make_wav_bytes_declaring(
+  frames_promised, frame_rate, channels, sample_width, frames_present=16
+):
+  """A header promising far more audio than the file carries.
+
+  The wave module takes its frame count from the declared data chunk size, so
+  the promise is made there; only frames_present frames are really present.
+  """
+  data = b"\x01" * (frames_present * channels * sample_width)
+  fmt = struct.pack(
+    "<HHIIHH", 1, channels, frame_rate, frame_rate * channels * sample_width,
+    channels * sample_width, sample_width * 8
+  )
+  chunks = (
+    b"fmt " + struct.pack("<I", len(fmt)) + fmt
+    + b"data" + struct.pack("<I", frames_promised * channels * sample_width) + data
+  )
+  return b"RIFF" + struct.pack("<I", 4 + len(chunks)) + b"WAVE" + chunks
+
+
+def test_read_refuses_a_file_past_the_frame_byte_ceiling(monkeypatch):
+  # The duration ceiling bounds frames per second, not bytes: a header may
+  # declare any rate, so 300 seconds of it can be an arbitrary number of bytes.
+  # Patched down to keep the test from having to hold the real ceiling in memory.
+  monkeypatch.setattr(audio, "_MAX_FRAME_BYTES", 8)
+  wav = _make_wav_bytes_at_width([0.5] * 12, 2, 2)
+  with pytest.raises(ValueError, match="too large"):
+    read_samples_from_wav_bytes(wav)
+
+
+def test_read_weighs_the_ceiling_before_reading_frames(monkeypatch):
+  def refuse_to_read(self, num_frames):
+    raise AssertionError("frames were read before the size was checked")
+
+  monkeypatch.setattr(audio, "_MAX_FRAME_BYTES", 8)
+  monkeypatch.setattr(wave.Wave_read, "readframes", refuse_to_read)
+  wav = _make_wav_bytes_at_width([0.5] * 12, 2, 2)
+  with pytest.raises(ValueError, match="too large"):
+    read_samples_from_wav_bytes(wav)
+
+
+def test_read_measures_the_file_rather_than_the_header_s_promise():
+  # A header promising 300 seconds of 96 kHz stereo 32-bit -- 230 MB, over the
+  # ceiling -- attached to 8 bytes of audio. Refusing on the promise would turn
+  # away a file that decodes fine, and would contradict playing what a short
+  # file holds.
+  wav = _make_wav_bytes_declaring(300 * 96000, 96000, 2, 4)
+  assert 300 * 96000 * 2 * 4 > audio._MAX_FRAME_BYTES
+  # How many samples the resampler makes of them is its own business; that any
+  # came back is the point.
+  assert len(read_samples_from_wav_bytes(wav)) > 0
+
+
+def test_read_allows_a_full_length_file_at_the_highest_ordinary_rate():
+  # 48 kHz stereo 32-bit for the full duration is exactly the ceiling, so the
+  # documented length limit is reachable at every rate students record at.
+  frames = MAX_AUDIO_SECONDS * 48000
+  assert frames * 2 * 4 == audio._MAX_FRAME_BYTES
+  wav = _make_wav_bytes_declaring(frames, 48000, 2, 4)
+  assert len(read_samples_from_wav_bytes(wav)) > 0
 
 
 @pytest.mark.parametrize(
