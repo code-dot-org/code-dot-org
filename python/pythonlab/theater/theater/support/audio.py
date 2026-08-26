@@ -118,7 +118,13 @@ def _declares_unsupported_codec(wav_bytes):
     return False
   format_tag = int.from_bytes(fmt_chunk[0:2], "little")
   if format_tag == _WAVE_FORMAT_EXTENSIBLE:
-    return fmt_chunk[_SUBFORMAT_RANGE] != _SUBFORMAT_PCM
+    # An extensible header names no codec on its own -- the subformat GUID below
+    # it does -- so a body that stops short of a whole GUID has declared nothing
+    # yet, and is damaged rather than unsupported.
+    subformat = fmt_chunk[_SUBFORMAT_RANGE]
+    if len(subformat) < len(_SUBFORMAT_PCM):
+      return False
+    return subformat != _SUBFORMAT_PCM
   return format_tag != _WAVE_FORMAT_PCM
 
 

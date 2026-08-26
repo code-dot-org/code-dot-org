@@ -142,6 +142,20 @@ def test_read_names_the_codec_rather_than_calling_the_file_damaged(format_tag):
   with pytest.raises(ValueError, match="integer PCM"):
     read_samples_from_wav_bytes(wav)
 
+@pytest.mark.parametrize("guid_length", [0, 1, 8, 15, 16])
+def test_read_needs_a_whole_guid_before_it_names_a_codec(guid_length):
+  # An extensible header's 0xFFFE names no codec by itself; the GUID under it
+  # does. A body cut before that GUID is complete has declared nothing yet, so
+  # it is damaged -- telling a student to re-export would send them after a
+  # problem they don't have. With all 16 bytes there, the codec is real.
+  wav = _make_wav_bytes_with_codec(0xFFFE, _IEEE_FLOAT_SUBFORMAT[:guid_length])
+  complete = guid_length == len(_IEEE_FLOAT_SUBFORMAT)
+  with pytest.raises(
+    ValueError, match="integer PCM" if complete else "not a WAV sound file"
+  ):
+    read_samples_from_wav_bytes(wav)
+
+
 
 def test_read_accepts_an_extensible_header_carrying_pcm():
   # Same codec, written the long way; nothing here is unsupported.
