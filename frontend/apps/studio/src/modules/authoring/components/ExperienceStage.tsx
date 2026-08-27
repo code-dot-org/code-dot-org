@@ -56,21 +56,23 @@ interface ExperienceStageProps {
   experience: Experience;
   /** Learner interactions bubbling up (widget events, answers). */
   onStageEvent?: (event: StageEvent) => void;
-  /** Shows the hover-to-preview affordance on existingLevel experiences.
+  /** Shows the click-to-edit affordance on existingLevel experiences.
    * Everything else this component renders is identical in both modes. */
   authorMode?: boolean;
   /** Advance to the next experience — a lab's terminal "Continue" calls this. */
   onContinue?: () => void;
   /** Which section of this experience's stage the properties panel is
-   * currently showing (hover preview or pinned) — drives the selected
-   * outline, not the panel's open/closed state itself. */
+   * currently pinned open on — drives the selected outline, not the
+   * panel's open/closed state itself. Hover only highlights (CSS); it
+   * never sets this. */
   selectedSection?: PanelSection;
-  /** Hovering a section previews it in the panel after a short intent
-   * delay; LessonPlayer owns the delay/pin/dirty state machine. */
-  onSectionHoverEnter?: (section: PanelSection) => void;
-  onSectionHoverLeave?: () => void;
-  /** Pins the panel open on that section. */
+  /** Opens (pins) the panel on that section. */
   onSectionClick?: (section: PanelSection) => void;
+  /** Map-painting selection — see LessonPlayer's `selectedPaintToolId`
+   * state comment for why this crosses through here rather than living in
+   * PropertiesPanel or the mounted lab directly. Maze-family only. */
+  selectedPaintToolId?: string;
+  onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
 }
 
 /**
@@ -85,9 +87,9 @@ export default function ExperienceStage({
   authorMode = false,
   onContinue,
   selectedSection,
-  onSectionHoverEnter,
-  onSectionHoverLeave,
   onSectionClick,
+  selectedPaintToolId,
+  onMapDraftChange,
 }: ExperienceStageProps) {
   switch (experience.kind) {
     case 'content':
@@ -104,9 +106,9 @@ export default function ExperienceStage({
           authorMode={authorMode}
           onContinue={onContinue}
           selectedSection={selectedSection}
-          onSectionHoverEnter={onSectionHoverEnter}
-          onSectionHoverLeave={onSectionHoverLeave}
           onSectionClick={onSectionClick}
+          selectedPaintToolId={selectedPaintToolId}
+          onMapDraftChange={onMapDraftChange}
         />
       );
     case 'widget':
@@ -125,18 +127,18 @@ function ExistingLevelStage({
   authorMode,
   onContinue,
   selectedSection,
-  onSectionHoverEnter,
-  onSectionHoverLeave,
   onSectionClick,
+  selectedPaintToolId,
+  onMapDraftChange,
 }: {
   experience: ExistingLevelExperience;
   onStageEvent?: (event: StageEvent) => void;
   authorMode: boolean;
   onContinue?: () => void;
   selectedSection?: PanelSection;
-  onSectionHoverEnter?: (section: PanelSection) => void;
-  onSectionHoverLeave?: () => void;
   onSectionClick?: (section: PanelSection) => void;
+  selectedPaintToolId?: string;
+  onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
 }) {
   if (experience.runtime === 'labhost') {
     if (!experience.levelNumericId) {
@@ -159,9 +161,9 @@ function ExistingLevelStage({
         onContinue={onContinue}
         onStageEvent={onStageEvent}
         selectedSection={selectedSection}
-        onSectionHoverEnter={onSectionHoverEnter}
-        onSectionHoverLeave={onSectionHoverLeave}
         onSectionClick={onSectionClick}
+        selectedPaintToolId={selectedPaintToolId}
+        onMapDraftChange={onMapDraftChange}
       />
     );
   }
@@ -206,9 +208,9 @@ function LabHostStage({
   onContinue,
   onStageEvent,
   selectedSection,
-  onSectionHoverEnter,
-  onSectionHoverLeave,
   onSectionClick,
+  selectedPaintToolId,
+  onMapDraftChange,
 }: {
   experienceId: string;
   levelNumericId: number;
@@ -218,9 +220,9 @@ function LabHostStage({
   onContinue?: () => void;
   onStageEvent?: (event: StageEvent) => void;
   selectedSection?: PanelSection;
-  onSectionHoverEnter?: (section: PanelSection) => void;
-  onSectionHoverLeave?: () => void;
   onSectionClick?: (section: PanelSection) => void;
+  selectedPaintToolId?: string;
+  onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
 }) {
   const {data: properties, isLoading} = useLevelProperties(levelNumericId);
   const [levelResult, setLevelResult] = useState<LevelResultDetail | null>(
@@ -283,16 +285,28 @@ function LabHostStage({
     );
   }
 
-  // maze-lab always renders longInstructions itself (the character-avatar
-  // bubble above the play area). music-lab does too, whenever
+  // music-lab renders longInstructions itself whenever
   // levelProperties.longInstructions is set — normally as an auto-opened
   // "Instructions" tab in its ResourcePanel sidebar, or (when the level's
   // level_data sets guideMode: 'instructions') as the GuideInstructions
   // overlay instead, with the ResourcePanel tab suppressed
   // (lab-classic/resourcePanel/components/ResourcePanel.tsx, sidebarOnly).
-  // Either way it's already on screen — showing the host block on top would
-  // put the same text on the page twice.
-  const selfDisplayedByLab = appName === 'maze' || appName === 'music';
+  // It's already on screen — showing the host block on top would put the
+  // same text on the page twice, so LevelInstructions itself renders a
+  // "shown in the lab below" note there instead of the real text.
+  //
+  // maze-lab ALSO renders longInstructions itself (the character-avatar
+  // bubble above the play area), but unlike music its bubble is a plain,
+  // always-mounted React component (Instructions/index.tsx — not part of
+  // the ported Blockly/Maze engine's DOM that initEngine tears down and
+  // rebuilds), so it's cheap to make THAT the click/hover target instead of
+  // duplicating it as a host-side placeholder block. The host skips
+  // <LevelInstructions> entirely for maze and hands the selection state
+  // into the lab via `editing` below; music keeps the placeholder-note
+  // approach for now (see docs/prototypes/author-mode-properties-panel.md
+  // for the leftover).
+  const selfDisplayedByLab = appName === 'music';
+  const hostRendersInstructions = appName !== 'maze';
 
   // Maze-family only (grid + block-solution levels) — checks the served
   // solution against the served grid/toolbox the same way create_level's
@@ -303,28 +317,33 @@ function LabHostStage({
   // (startDirection) so far — same scope as showCheckLevel.
   const levelSelectable = showCheckLevel;
 
+  // Threaded into every lab entrypoint (harmless for the three that ignore
+  // it); maze-lab uses it to make its own instructions bubble the
+  // hover/click target for the panel's 'instructions' section, and (while
+  // the 'level' section is pinned) to offer the map painter on the stage.
+  const editing = {
+    authorMode,
+    instructionsSelected: selectedSection === 'instructions',
+    onInstructionsClick: () => onSectionClick?.('instructions'),
+    mapEditingActive: levelSelectable && selectedSection === 'level',
+    selectedPaintToolId,
+    onMapDraftChange: onMapDraftChange ?? (() => {}),
+  };
+
   return (
     <>
-      <LevelInstructions
-        shortInstructions={levelProps?.shortInstructions}
-        longInstructions={levelProps?.longInstructions}
-        selfDisplayedByLab={selfDisplayedByLab}
-        authorMode={authorMode}
-        selected={selectedSection === 'instructions'}
-        onHoverEnter={() => onSectionHoverEnter?.('instructions')}
-        onHoverLeave={onSectionHoverLeave}
-        onClick={() => onSectionClick?.('instructions')}
-      />
+      {hostRendersInstructions && (
+        <LevelInstructions
+          shortInstructions={levelProps?.shortInstructions}
+          longInstructions={levelProps?.longInstructions}
+          selfDisplayedByLab={selfDisplayedByLab}
+          authorMode={authorMode}
+          selected={selectedSection === 'instructions'}
+          onClick={() => onSectionClick?.('instructions')}
+        />
+      )}
       {(showCheckLevel || levelSelectable) && (
-        <div
-          className={styles.levelCheckBar}
-          onPointerEnter={
-            levelSelectable
-              ? () => onSectionHoverEnter?.('level')
-              : undefined
-          }
-          onPointerLeave={levelSelectable ? onSectionHoverLeave : undefined}
-        >
+        <div className={styles.levelCheckBar}>
           {levelSelectable && (
             <Button
               size="small"
@@ -356,18 +375,16 @@ function LabHostStage({
       <div
         className={classNames(
           styles.labStage,
+          levelSelectable && styles.labStageEditable,
           levelSelectable && selectedSection === 'level' && styles.labStageSelected,
         )}
-        onPointerEnter={
-          levelSelectable ? () => onSectionHoverEnter?.('level') : undefined
-        }
-        onPointerLeave={levelSelectable ? onSectionHoverLeave : undefined}
       >
         <Suspense fallback={<Loading />}>
           <Lab levelId={levelNumericId} levelPropertiesMap={properties}>
             <LabEntrypoint
               onContinue={onContinue}
               onLevelResult={handleLevelResult}
+              editing={editing}
             />
           </Lab>
         </Suspense>
@@ -389,7 +406,7 @@ function LabHostStage({
  * (the solution uses a block type the simulator doesn't model) — labeled
  * plainly rather than presented as if they were equally strong evidence.
  */
-function LevelCheckCard({
+export function LevelCheckCard({
   result,
   onDismiss,
 }: {

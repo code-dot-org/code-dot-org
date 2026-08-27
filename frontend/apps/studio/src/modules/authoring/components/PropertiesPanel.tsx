@@ -5,10 +5,12 @@ import {useEffect, useState} from 'react';
 import type {ExistingLevelExperience} from '@code-dot-org/authoring';
 import {useEscapeKeyHandler} from '@code-dot-org/component-library/common/hooks';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {getPaintTools} from '@code-dot-org/maze-lab';
 
 import {authoringApi, useLevelProperties} from '@/modules/authoring';
+import type {LevelCheckResponse} from '@/modules/authoring';
 
-import type {PanelSection} from './ExperienceStage';
+import {LevelCheckCard, type PanelSection} from './ExperienceStage';
 
 import styles from './authoring.module.scss';
 
@@ -34,17 +36,22 @@ interface PropertiesPanelProps {
   section: PanelSection;
   experience: ExistingLevelExperience;
   onClose: () => void;
-  /** Reports whether the panel has an unsaved edit — LessonPlayer's hover
-   * state machine pins the panel open (never swaps or closes it on hover)
-   * while this is true, the same way a click-pin does. */
+  /** Reports whether the panel has an unsaved edit — LessonPlayer refuses to
+   * switch the panel to a different section while this is true, so an
+   * in-progress edit is never discarded by a stray click elsewhere. */
   onDirtyChange: (dirty: boolean) => void;
-  onPointerEnter?: () => void;
-  onPointerLeave?: () => void;
+  /** Map-painting selection — lives in LessonPlayer (see its state
+   * comment); the 'level' section's palette reads/sets it. */
+  selectedPaintToolId?: string;
+  onSelectPaintTool: (id: string | undefined) => void;
+  /** The freshly painted wire-format patch, whenever the stage overlay
+   * reports one — folded into this panel's own Save draft. */
+  mapDraftPatch?: {serialized_maze: string; maze: string};
 }
 
 /**
  * Right-side properties panel — the one editing surface for the lesson
- * stage's hover-to-preview sections (see docs/prototypes/
+ * stage's click-to-edit sections (see docs/prototypes/
  * author-mode-properties-panel.md §5). Pass A's slice: two sections,
  * `instructions` (any existingLevel, reusing the pencil-affordance's former
  * form logic) and `level` (maze-family only, proving `overrideLevelDefinition`
@@ -56,8 +63,9 @@ export default function PropertiesPanel({
   experience,
   onClose,
   onDirtyChange,
-  onPointerEnter,
-  onPointerLeave,
+  selectedPaintToolId,
+  onSelectPaintTool,
+  mapDraftPatch,
 }: PropertiesPanelProps) {
   const levelNumericId = experience.levelNumericId;
   const {data: properties} = useLevelProperties(levelNumericId ?? -1);
@@ -70,11 +78,7 @@ export default function PropertiesPanel({
   useEscapeKeyHandler(onClose);
 
   return (
-    <div
-      className={styles.propertiesPanel}
-      onPointerEnter={onPointerEnter}
-      onPointerLeave={onPointerLeave}
-    >
+    <div className={styles.propertiesPanel}>
       <div className={styles.propertiesPanelHeader}>
         <Typography variant="h6" component="h2">
           {section === 'instructions' ? 'Instructions' : 'Level'}
@@ -99,9 +103,13 @@ export default function PropertiesPanel({
         <LevelFields
           experienceId={experience.id}
           levelNumericId={levelNumericId}
+          skin={levelProps?.skin as string | undefined}
           startDirection={levelProps?.startDirection as string | undefined}
           onClose={onClose}
           onDirtyChange={onDirtyChange}
+          selectedPaintToolId={selectedPaintToolId}
+          onSelectPaintTool={onSelectPaintTool}
+          mapDraftPatch={mapDraftPatch}
         />
       )}
     </div>
@@ -202,46 +210,95 @@ function InstructionsFields({
   );
 }
 
+/** Accumulated edits for the 'level' section — startDirection (Pass A) and
+ * the map fields (Pass B). Every key optional: Save only ever sends what
+ * the author actually touched. */
+interface LevelDraftPatch {
+  startDirection?: string;
+  serialized_maze?: string;
+  maze?: string;
+}
+
 function LevelFields({
   experienceId,
   levelNumericId,
+  skin,
   startDirection,
   onClose,
   onDirtyChange,
+  selectedPaintToolId,
+  onSelectPaintTool,
+  mapDraftPatch,
 }: {
   experienceId: string;
   levelNumericId: number;
+  skin?: string;
   startDirection?: string;
   onClose: () => void;
   onDirtyChange: (dirty: boolean) => void;
+  selectedPaintToolId?: string;
+  onSelectPaintTool: (id: string | undefined) => void;
+  mapDraftPatch?: {serialized_maze: string; maze: string};
 }) {
   const queryClient = useQueryClient();
-  // undefined = no pending edit; the select shows the served value.
-  const [draft, setDraft] = useState<string | undefined>(undefined);
+  // {} = no pending edit; each field falls back to the served value.
+  const [draft, setDraft] = useState<LevelDraftPatch>({});
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const currentValue = draft ?? startDirection ?? '1';
+  const [checkResult, setCheckResult] = useState<LevelCheckResponse | null>(
+    null,
+  );
+  const currentValue = draft.startDirection ?? startDirection ?? '1';
+  const dirty = Object.keys(draft).length > 0;
+  const paintTools = skin ? getPaintTools(skin) : [];
+  const showMapPainter = paintTools.length > 0;
 
   useEffect(() => {
-    onDirtyChange(draft !== undefined);
-  }, [draft, onDirtyChange]);
+    onDirtyChange(dirty);
+  }, [dirty, onDirtyChange]);
+
+  // Every stage paint reports a fresh {serialized_maze, maze} patch here —
+  // fold it into the Save draft the same way a startDirection edit does.
+  useEffect(() => {
+    if (mapDraftPatch) {
+      setDraft(prev => ({...prev, ...mapDraftPatch}));
+    }
+  }, [mapDraftPatch]);
 
   const submit = async () => {
-    if (busy || draft === undefined) {
+    if (busy || !dirty) {
       return;
     }
     setBusy(true);
     setError(null);
+    setCheckResult(null);
     try {
       await authoringApi.applyChange({
         op: 'overrideLevelDefinition',
         experienceId,
-        patch: {startDirection: draft},
+        patch: draft,
       });
       await queryClient.invalidateQueries({
         queryKey: ['authoring', 'levelProperties', levelNumericId],
       });
-      onClose();
+      setDraft({});
+      // A painted map that breaks solvability should tell the author
+      // immediately, not silently — but a failed check is still a
+      // successful Save (§1.10: Save is never gated on verification), so
+      // this runs after the invalidate/reset above regardless of outcome.
+      try {
+        setCheckResult(await authoringApi.checkLevel(levelNumericId));
+      } catch (checkError) {
+        setCheckResult({
+          ok: false,
+          mode: 'palette',
+          reasons: [
+            checkError instanceof Error
+              ? checkError.message
+              : 'check failed',
+          ],
+        });
+      }
     } catch {
       setError('That change failed to apply.');
     } finally {
@@ -261,7 +318,9 @@ function LevelFields({
       <select
         id="properties-panel-start-direction"
         value={currentValue}
-        onChange={e => setDraft(e.target.value)}
+        onChange={e =>
+          setDraft(prev => ({...prev, startDirection: e.target.value}))
+        }
       >
         {START_DIRECTION_OPTIONS.map(option => (
           <option key={option.value} value={option.value}>
@@ -269,10 +328,43 @@ function LevelFields({
           </option>
         ))}
       </select>
+      {showMapPainter && (
+        <div className={styles.paintPalette}>
+          <Typography variant="body4" component="span">
+            Paint the map — click a tile below, then a cell on the stage.
+          </Typography>
+          <div className={styles.paintPaletteTools}>
+            {paintTools.map(tool => (
+              <Button
+                key={tool.id}
+                type="button"
+                size="small"
+                variant={
+                  selectedPaintToolId === tool.id ? 'contained' : 'outlined'
+                }
+                aria-pressed={selectedPaintToolId === tool.id}
+                onClick={() =>
+                  onSelectPaintTool(
+                    selectedPaintToolId === tool.id ? undefined : tool.id,
+                  )
+                }
+              >
+                {tool.label}
+              </Button>
+            ))}
+          </div>
+        </div>
+      )}
       {error && (
         <Typography variant="body4" role="status" className={styles.inlineError}>
           {error}
         </Typography>
+      )}
+      {checkResult && (
+        <LevelCheckCard
+          result={checkResult}
+          onDismiss={() => setCheckResult(null)}
+        />
       )}
       <div className={styles.composerActions}>
         <Button variant="outlined" size="small" onClick={onClose} disabled={busy}>
@@ -282,7 +374,7 @@ function LevelFields({
           type="submit"
           variant="contained"
           size="small"
-          disabled={busy || draft === undefined}
+          disabled={busy || !dirty}
         >
           Save
         </Button>

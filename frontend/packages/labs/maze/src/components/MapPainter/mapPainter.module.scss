@@ -1,0 +1,19 @@
+.grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+}
+
+.cell {
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--borders-brand-purple-primary, #4d24a8);
+    background: rgb(77 36 168 / 15%);
+  }
+}

@@ -14,29 +14,29 @@ const LONG_TEXT_THRESHOLD = 220;
 interface LevelInstructionsProps {
   shortInstructions?: string;
   longInstructions?: string;
-  /** The mounted lab (maze-lab or music-lab) already renders these
-   * instructions itself whenever they're set — skip the readonly preview
-   * here so the author/learner doesn't see the text twice, but keep the
-   * hover-to-preview affordance (the properties panel is where it's edited). */
+  /** music-lab already renders these instructions itself whenever they're
+   * set — skip the readonly preview here so the learner doesn't see the
+   * text twice. (maze-lab does too, but ExperienceStage skips mounting
+   * this component at all for maze — see its `hostRendersInstructions` —
+   * so this flag is effectively music-only now.) */
   selfDisplayedByLab: boolean;
   authorMode: boolean;
   /** Properties-panel selection state — see ExperienceStage's PanelSection. */
   selected?: boolean;
-  /** Hovering the block previews it in the panel (after LessonPlayer's
-   * intent delay); the pencil button pins it open immediately — also the
-   * keyboard-reachable equivalent, since hover has none. */
-  onHoverEnter?: () => void;
-  onHoverLeave?: () => void;
+  /** Opens (pins) the panel on this section. Hover only highlights the card
+   * (CSS, discoverability only) — the pencil button is the click target,
+   * also the keyboard-reachable equivalent. */
   onClick?: () => void;
 }
 
 /**
- * Learner-facing instructions for an existingLevel experience. Mounted above
- * the lab in ExperienceStage — the single host for both audiences, matching
- * that component's "what the author sees is what the learner gets" contract.
+ * Learner-facing instructions for an existingLevel experience that doesn't
+ * self-display them (see `selfDisplayedByLab`) — mounted above the lab in
+ * ExperienceStage, the single host for both audiences, matching that
+ * component's "what the author sees is what the learner gets" contract.
  * Editing lives in the properties panel (LessonPlayer/PropertiesPanel), not
  * here — this component only renders the readonly preview, plus (in author
- * mode) the hover/click targets that open it.
+ * mode) the hover highlight and click target that open it.
  */
 export default function LevelInstructions({
   shortInstructions,
@@ -44,8 +44,6 @@ export default function LevelInstructions({
   selfDisplayedByLab,
   authorMode,
   selected,
-  onHoverEnter,
-  onHoverLeave,
   onClick,
 }: LevelInstructionsProps) {
   const [expanded, setExpanded] = useState(false);
@@ -74,10 +72,9 @@ export default function LevelInstructions({
     <div
       className={classNames(
         styles.levelInstructions,
+        styles.levelInstructionsEditable,
         selected && styles.levelInstructionsSelected,
       )}
-      onPointerEnter={onHoverEnter}
-      onPointerLeave={onHoverLeave}
     >
       <div className={styles.levelInstructionsEditBar}>
         <IconButton

@@ -40,6 +40,36 @@ export interface MazeEnvironment extends Environment {
 
 export type AuthoredHint = z.infer<typeof AuthoredHintSchema>;
 
+/**
+ * Author-mode section selection, threaded in from the host (studio's
+ * ExperienceStage — see its `editing` object and
+ * `LabEditingProps`/`getLabEntrypointByAppName.ts`). Declared independently
+ * here rather than imported: this package can't depend on apps/studio, and
+ * the two types only need to stay structurally compatible, the same way
+ * `MazeDoneEventDetail` and the host's `LevelResultDetail` already do for
+ * `onLevelResult`.
+ */
+export interface MazeLabEditingProps {
+  authorMode: boolean;
+  /** True while the properties panel is pinned open on the 'instructions'
+   * section — drives the selected outline on the instructions bubble. */
+  instructionsSelected: boolean;
+  /** Opens (pins) the panel on the 'instructions' section. */
+  onInstructionsClick: () => void;
+  /** True while the properties panel is pinned open on the 'level' section
+   * — offers the map painter on the stage. The tool palette itself lives
+   * in the panel (see editing.ts's getPaintTools, exported from App.tsx);
+   * this is only "is the surface open", not a tool selection. */
+  mapEditingActive: boolean;
+  /** The palette entry id (from getPaintTools) the panel currently has
+   * selected — undefined means no tool, so a stage click is a no-op. */
+  selectedPaintToolId?: string;
+  /** Fires after every paint with the freshly updated wire-format patch —
+   * the panel accumulates these into its Save draft. Never called except
+   * as a direct result of a stage click. */
+  onMapDraftChange: (patch: {serialized_maze: string; maze: string}) => void;
+}
+
 export type {MazeData};
 
 /**

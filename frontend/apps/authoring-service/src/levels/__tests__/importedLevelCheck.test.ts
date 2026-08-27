@@ -175,6 +175,59 @@ describe('checkImportedMazeLevel', () => {
     expect(result).toEqual({ok: true, mode: 'simulated', reasons: []});
   });
 
+  // Pins the §1.2 trap the map-editing Pass B patch must avoid: extractGrid
+  // tries `maze` FIRST. The editor writes both `serialized_maze` (rich) and
+  // `maze` (its tileType projection) together, always in agreement — this
+  // is what "in agreement" looks like when Check reads the level.
+  it('checks the same grid whether maze or serialized_maze wins, when both are present and agree', () => {
+    const grid = [
+      [0, 0, 0, 0],
+      [0, 2, 1, 0],
+      [0, 1, 3, 0],
+      [0, 0, 0, 0],
+    ];
+    const result = checkImportedMazeLevel(
+      input({
+        maze: JSON.stringify(grid),
+        serialized_maze: JSON.stringify(
+          grid.map(row => row.map(tileType => ({tileType}))),
+        ),
+      }),
+    );
+    expect(result).toEqual({ok: true, mode: 'simulated', reasons: []});
+  });
+
+  // The trap itself, made concrete: a `maze` that's gone stale relative to
+  // `serialized_maze` (e.g. a caller that wrote only one of the two keys)
+  // is checked against the STALE grid, not the fresh one — extractGrid
+  // tries `maze` first and never falls through when it parses. This is
+  // exactly why serializeMapDraft always emits both keys in agreement.
+  it('prefers the (possibly stale) maze field when both are present and disagree', () => {
+    const staleMaze = [
+      [0, 0, 0, 0],
+      [0, 2, 1, 0],
+      [0, 1, 3, 0],
+      [0, 0, 0, 0],
+    ];
+    const freshSerializedMaze = [
+      [0, 0, 0, 0],
+      [0, 0, 2, 0], // start moved one column right of what `maze` still says
+      [0, 1, 3, 0],
+      [0, 0, 0, 0],
+    ];
+    const result = checkImportedMazeLevel(
+      input({
+        maze: JSON.stringify(staleMaze),
+        serialized_maze: JSON.stringify(
+          freshSerializedMaze.map(row => row.map(tileType => ({tileType}))),
+        ),
+      }),
+    );
+    // Simulated against the STALE grid — still solvable there too, so this
+    // only demonstrates precedence, not a failure.
+    expect(result).toEqual({ok: true, mode: 'simulated', reasons: []});
+  });
+
   it('passes (palette-only, with a note) when the level has no grid to simulate against', () => {
     const result = checkImportedMazeLevel(
       input({maze: undefined, serialized_maze: undefined}),

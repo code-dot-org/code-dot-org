@@ -12,9 +12,19 @@ import skins, {skinFor} from './skins';
 import MazeLab from './components/MazeLab';
 
 import {LevelKindSchema} from './schema';
-import type {MazeDoneEventDetail, MazeLevelProperties} from './types';
+import type {
+  MazeDoneEventDetail,
+  MazeLabEditingProps,
+  MazeLevelProperties,
+} from './types';
 
 import styles from './app.module.scss';
+
+// The package's build entry is App.tsx alone (vite.config's `lib.entry`) —
+// a named export not reachable from here never makes it into dist/App.d.ts,
+// so the host's map-painting palette UI (studio's PropertiesPanel) needs
+// these re-exported here, not just from editing.ts.
+export {getPaintTools, type PaintTool} from './editing';
 
 registerLevelKindSchema('maze', LevelKindSchema);
 
@@ -23,6 +33,7 @@ registerLevelKindSchema('maze', LevelKindSchema);
 // music-lab's App, which takes the same host-driven shape.
 function App({
   onLevelResult,
+  editing,
   ...props
 }: Omit<
   BlocklyLabProps<MazeLevelProperties>,
@@ -30,6 +41,8 @@ function App({
 > & {
   /** Fires when a run finishes — surfaces the pass/fail verdict to the host. */
   onLevelResult?: (detail: MazeDoneEventDetail) => void;
+  /** Author-mode section selection — see MazeLabEditingProps. */
+  editing?: MazeLabEditingProps;
 }) {
   return (
     <>
@@ -64,7 +77,7 @@ function App({
             ],
           }}
         >
-          <MazeLab onLevelResult={onLevelResult} />
+          <MazeLab onLevelResult={onLevelResult} editing={editing} />
         </BlocklyLab>
       </div>
     </>

@@ -15,6 +15,13 @@ import ShowCodeDialog from '../ShowCodeDialog';
 import Visualization from '../Visualization';
 import type {BlocklySerialization} from '@code-dot-org/blockly';
 import * as api from '../../api';
+import {
+  getPaintTools,
+  mapDraftFromLevelProperties,
+  paintCell,
+  serializeMapDraft,
+  type MapDraft,
+} from '../../editing';
 import Maze from '../../Maze';
 import Validator from '../../Validator';
 import {
@@ -28,11 +35,13 @@ import {useLevelProperties} from '@code-dot-org/lab-classic/contexts';
 import blocks from '../../blocks';
 import skins, {skinFor} from '../../skins';
 import Instructions from '../Instructions';
+import MapPainter from '../MapPainter';
 
 import type {
   MazeLevelProperties,
   MazeEnvironment,
   MazeDoneEventDetail,
+  MazeLabEditingProps,
 } from '../../types';
 
 import moduleStyles from './mazeLab.module.scss';
@@ -75,9 +84,12 @@ const countBlocks = (workspace: Blockly.Workspace, uncounted: string[]) =>
 interface MazeLabProps {
   /** Fires when a run finishes — surfaces the pass/fail verdict to the host. */
   onLevelResult?: (detail: MazeDoneEventDetail) => void;
+  /** Author-mode section selection — see MazeLabEditingProps. Undefined
+   * outside the authoring host. */
+  editing?: MazeLabEditingProps;
 }
 
-const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
+const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
   const levelProperties = useLevelProperties<MazeLevelProperties>();
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
   const mazeRef = useRef<Maze | null>(null);
@@ -170,6 +182,60 @@ const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
     [levelProperties, setToolboxHeaderWidth],
   );
 
+  // Map-painting draft (Author Mode Pass B) — local to the mounted lab so
+  // the SVG re-renders on every paint, before Save. Reset from the served
+  // levelProperties whenever map editing opens or closes (both directions:
+  // closing without saving must discard an in-progress paint the same way
+  // navigating away would), never while it stays continuously open — a
+  // post-Save refetch lands the same data the author already painted, so
+  // there's nothing to reconcile.
+  const [mapDraft, setMapDraft] = useState<MapDraft | undefined>(undefined);
+  const mapEditingActiveRef = useRef(editing?.mapEditingActive);
+  useEffect(() => {
+    if (mapEditingActiveRef.current === editing?.mapEditingActive) {
+      return;
+    }
+    mapEditingActiveRef.current = editing?.mapEditingActive;
+    setMapDraft(
+      editing?.mapEditingActive
+        ? mapDraftFromLevelProperties(
+            levelProperties?.map,
+            levelProperties?.serializedMaze,
+            skin.id,
+          )
+        : undefined,
+    );
+    // levelProperties/skin intentionally excluded: this effect's job is
+    // reacting to the active/inactive EDGE, not to every served-data
+    // change while active (see comment above) — including them would
+    // re-derive (and discard in-progress paints) on every refetch.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [editing?.mapEditingActive]);
+
+  const handlePaintCell = useCallback(
+    (row: number, col: number) => {
+      const toolId = editing?.selectedPaintToolId;
+      if (!toolId) {
+        return;
+      }
+      const tool = getPaintTools(skin.id).find(t => t.id === toolId);
+      const baseDraft =
+        mapDraft ??
+        mapDraftFromLevelProperties(
+          levelProperties?.map,
+          levelProperties?.serializedMaze,
+          skin.id,
+        );
+      if (!tool || !baseDraft) {
+        return;
+      }
+      const nextDraft = paintCell(baseDraft, row, col, tool);
+      setMapDraft(nextDraft);
+      editing?.onMapDraftChange(serializeMapDraft(nextDraft));
+    },
+    [editing, mapDraft, levelProperties, skin],
+  );
+
   // Extracted from onInject so a levelProperties change that only
   // engine-construction reads (e.g. startDirection — Subtype's constructor
   // reads it once, there's no live prop path) can force a rebuild after
@@ -180,9 +246,20 @@ const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
   const initEngine = useCallback(
     (workspace: Blockly.WorkspaceSvg, environment: MazeEnvironment) => {
       mazeRef.current?.uninitialize();
+      // A painted-but-unsaved map takes effect immediately: overlay the
+      // draft onto the served levelProperties fields Maze actually reads
+      // (map/serializedMaze — see MazeController.loadLevel_'s fallback
+      // order, mirrored by mapDraftFromLevelProperties).
+      const engineLevelProperties = mapDraft
+        ? {
+            ...levelProperties,
+            map: mapDraft.map(row => row.map(cell => cell.tileType)),
+            serializedMaze: mapDraft,
+          }
+        : levelProperties;
       mazeRef.current = new Maze(
         workspace,
-        levelProperties,
+        engineLevelProperties,
         environment,
         skin,
         {...api},
@@ -216,6 +293,7 @@ const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
       skin,
       setToolboxHeaderWidth,
       levelProperties,
+      mapDraft,
       onReset,
       setRunning,
       setStepping,
@@ -241,12 +319,15 @@ const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
 
   // Author-mode Save invalidates the levelProperties query, which refetches
   // and hands MazeLab a new levelProperties object — re-run engine
-  // construction so the edit is visibly applied without a page reload. Skips
-  // the mount itself (onInject already handled that).
-  const startDirectionMountRef = useRef(true);
+  // construction so the edit is visibly applied without a page reload. Also
+  // fires on every map paint (mapDraft changes on every click, ahead of
+  // Save — see the map-draft effect above): that's what makes painting
+  // redraw the SVG immediately. Skips the mount itself (onInject already
+  // handled that).
+  const definitionMountRef = useRef(true);
   useEffect(() => {
-    if (startDirectionMountRef.current) {
-      startDirectionMountRef.current = false;
+    if (definitionMountRef.current) {
+      definitionMountRef.current = false;
       return;
     }
     if (workspaceRef.current && environmentRef.current) {
@@ -256,7 +337,7 @@ const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
     // useLevelProperties) but can be undefined before the host resolves the
     // current level — optional-chain the read so this effect's dependency
     // array never throws during that window.
-  }, [levelProperties?.startDirection]);
+  }, [levelProperties?.startDirection, mapDraft]);
 
   const skinBlocks = blocks(skinFor(skins, levelProperties?.skin || 'birds'));
 
@@ -285,7 +366,38 @@ const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
           id="vis-panel"
           headerContent={<div>Instructions</div>}
         >
-          <Panel className={moduleStyles.visUnderBox}>
+          <Panel
+            className={classNames(
+              moduleStyles.visUnderBox,
+              editing?.authorMode && moduleStyles.visUnderBoxEditable,
+              editing?.instructionsSelected &&
+                moduleStyles.visUnderBoxSelected,
+            )}
+          >
+            {editing?.authorMode && (
+              <WithTooltip
+                tooltipProps={{
+                  text: 'Edit instructions',
+                  tooltipId: 'instructions-edit-tooltip',
+                  size: 'xs',
+                  direction: 'onTop',
+                }}
+              >
+                <Button
+                  className={moduleStyles.instructionsEditButton}
+                  size="xs"
+                  type="secondary"
+                  color="gray"
+                  onClick={editing.onInstructionsClick}
+                  ariaLabel="Select instructions"
+                  isIconOnly={true}
+                  icon={{
+                    iconName: 'pen-to-square',
+                    iconStyle: 'solid',
+                  }}
+                />
+              </WithTooltip>
+            )}
             <Instructions
               skin={skin}
               longInstructions={levelProperties.longInstructions || ''}
@@ -306,6 +418,20 @@ const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
               onReset={onReset}
               onStep={onStep}
               onFinish={() => {}}
+              overlay={
+                editing?.mapEditingActive && mapDraft ? (
+                  <MapPainter
+                    rows={mapDraft.length}
+                    cols={mapDraft[0]?.length ?? 0}
+                    selectedToolLabel={
+                      getPaintTools(skin.id).find(
+                        t => t.id === editing.selectedPaintToolId,
+                      )?.label
+                    }
+                    onPaintCell={handlePaintCell}
+                  />
+                ) : undefined
+              }
             />
           </Panel>
         </PanelContainer>

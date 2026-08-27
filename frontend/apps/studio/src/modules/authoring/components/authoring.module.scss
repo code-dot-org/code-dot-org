@@ -60,6 +60,21 @@
   }
 }
 
+/* Map-painting palette (properties panel's 'level' section) — the tool
+   picker lives here; painting itself happens on the stage. */
+
+.paintPalette {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.paintPaletteTools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
 .lessonHeaderBar {
   display: flex;
   align-items: center;
@@ -191,6 +206,18 @@
 // the page (progress dots, outline rail).
 .labStageSelected {
   outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+  outline-offset: -2px;
+}
+
+// Hover is discoverability only — it highlights, it never opens the panel
+// (product decision, 8/27). Dashed, so "this is editable" (hover) reads
+// distinctly from "this is open" (.labStageSelected's solid outline);
+// :not(.labStageSelected) keeps the solid outline winning once the section
+// is pinned, since both classes can be on the element at once and a
+// pseudo-class selector otherwise outranks a plain one regardless of
+// source order.
+.labStageEditable:hover:not(.labStageSelected) {
+  outline: 2px dashed var(--borders-brand-purple-primary, #4d24a8);
   outline-offset: -2px;
 }
 
@@ -595,6 +622,13 @@
 
 .levelInstructionsSelected {
   outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+  outline-offset: -2px;
+}
+
+// Same reasoning as .labStageEditable:hover — hover highlights, click (the
+// pencil button) opens.
+.levelInstructionsEditable:hover:not(.levelInstructionsSelected) {
+  outline: 2px dashed var(--borders-brand-purple-primary, #4d24a8);
   outline-offset: -2px;
 }
 

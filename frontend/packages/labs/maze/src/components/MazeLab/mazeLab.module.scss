@@ -60,6 +60,30 @@
 
     .vis-under-box {
       flex: 1 1 auto;
+      position: relative;
+    }
+
+    // Author-mode click-to-edit affordance on the instructions bubble
+    // (the properties panel's 'instructions' section — see MazeLab's
+    // `editing` prop). Hover only highlights (discoverability); the
+    // pen-to-square button is the click target. Dashed vs. the selected
+    // outline's solid, same convention as the host's own
+    // .labStageEditable/.levelInstructionsEditable.
+    .vis-under-box-editable:hover:not(.vis-under-box-selected) {
+      outline: 2px dashed var(--borders-brand-purple-primary, #4d24a8);
+      outline-offset: -2px;
+    }
+
+    .vis-under-box-selected {
+      outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+      outline-offset: -2px;
+    }
+
+    .instructions-edit-button {
+      position: absolute;
+      top: 0.25rem;
+      right: 0.25rem;
+      z-index: 1;
     }
   }
 

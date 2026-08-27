@@ -83,7 +83,10 @@ function toMazeLevelProperties(properties: LevelProperties): LevelProperties {
  * {levelId, levelPropertiesMap} shape, same as modules/labs/music/index.tsx,
  * plus the XML->JSON block conversion above.
  */
-export default function MazeContainer({onLevelResult}: LabEntrypointProps) {
+export default function MazeContainer({
+  onLevelResult,
+  editing,
+}: LabEntrypointProps) {
   const properties = useLevelProperties();
   if (!properties) {
     return null;
@@ -98,6 +101,7 @@ export default function MazeContainer({onLevelResult}: LabEntrypointProps) {
           {[levelId]: toMazeLevelProperties(properties)} as LevelPropertiesMap
         }
         onLevelResult={onLevelResult}
+        editing={editing}
       />
     </LabProviders>
   );
