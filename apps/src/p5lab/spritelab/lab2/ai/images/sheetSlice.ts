@@ -32,6 +32,15 @@ const CUT_SEARCH_FRACTION = 0.25;
 // longer one is thinned to the asked-for count.
 const KEPT_CYCLE_FACTOR = 2;
 
+// With at least this fraction of the asked-for frames found as separate
+// blobs (and at least three), the row itself says how wide a frame is: the
+// median blob. A frame's width depends on the pose — a thin figure
+// mid-stride is nearly twice as wide as it is standing — so the plate's
+// shape, which is a standing shape, would cut every stride in two. With
+// fewer blobs (frames touching along the row) the plate is all there is.
+const MEDIAN_MIN_FRACTION = 0.5;
+const MEDIAN_MIN_BLOBS = 3;
+
 const boxWidth = (box: FrameBox) => box.right - box.left;
 const boxHeight = (box: FrameBox) => box.bottom - box.top;
 const boxArea = (box: FrameBox) => boxWidth(box) * boxHeight(box);
@@ -54,12 +63,13 @@ export function frameBoxes(
   alphaThreshold: number,
   frameAspect: number
 ): FrameBox[] {
-  let boxes = joinFragments(
+  const joined = joinFragments(
     components(data, width, height, alphaThreshold),
     height
   );
-  boxes = boxes.flatMap(box =>
-    splitByShape(box, frameAspect, data, width, alphaThreshold)
+  const unitWidth = medianFrameWidth(joined, expected);
+  const boxes = joined.flatMap(box =>
+    splitByShape(box, frameAspect, unitWidth, data, width, alphaThreshold)
   );
   if (boxes.length < 2) {
     return fallbackGrid(width, height, expected);
@@ -158,17 +168,39 @@ function joinFragments(boxes: FrameBox[], height: number): FrameBox[] {
   return frames;
 }
 
-// A blob holding several frames of the given shape, side by side or stacked,
-// cut into them at the sparsest line near each even division.
+// The width of one frame as the row shows it, when enough frames stand
+// apart to say; else undefined.
+function medianFrameWidth(
+  boxes: FrameBox[],
+  expected: number
+): number | undefined {
+  if (
+    boxes.length < MEDIAN_MIN_BLOBS ||
+    boxes.length < expected * MEDIAN_MIN_FRACTION
+  ) {
+    return undefined;
+  }
+  const widths = boxes.map(boxWidth).sort((a, b) => a - b);
+  // The lower median: touching pairs are wider than a frame, never narrower.
+  return widths[Math.floor((widths.length - 1) / 2)];
+}
+
+// A blob holding several frames, side by side or stacked, cut into them at
+// the sparsest line near each even division. Side by side, a frame is
+// `unitWidth` wide when the row says so, else the plate's shape says how
+// many frames a blob's shape holds; stacked, the plate's shape always does.
 function splitByShape(
   box: FrameBox,
   frameAspect: number,
+  unitWidth: number | undefined,
   data: Uint8ClampedArray,
   width: number,
   alphaThreshold: number
 ): FrameBox[] {
   const aspect = boxWidth(box) / boxHeight(box);
-  const across = Math.floor(aspect / frameAspect + PIECE_ROUNDING);
+  const across = unitWidth
+    ? Math.floor(boxWidth(box) / unitWidth + PIECE_ROUNDING)
+    : Math.floor(aspect / frameAspect + PIECE_ROUNDING);
   const down = Math.floor(frameAspect / aspect + PIECE_ROUNDING);
   if (across > 1) {
     return cutInto(box, across, false, data, width, alphaThreshold);

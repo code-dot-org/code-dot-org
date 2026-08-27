@@ -25,6 +25,7 @@ const ASPECT = 0.5;
 
 const corners = (boxes: {left: number; top: number}[]) =>
   boxes.map(b => [b.left, b.top]);
+const boxWidth = (b: {left: number; right: number}) => b.right - b.left;
 
 describe('sheet slicing', () => {
   it('finds a row of frames as blobs, tight to their pixels', () => {
@@ -93,6 +94,31 @@ describe('sheet slicing', () => {
     expect(found).toHaveLength(6);
     expect(found.map(b => b.left)).toEqual([10, 30, 50, 70, 90, 110]);
     expect(found.every(b => b.top === 5 && b.bottom === 45)).toBe(true);
+  });
+
+  it('leaves striding frames whole when they are wider than the plate', () => {
+    // A thin figure: standing, 12 wide and 40 tall; mid-stride 22 wide.
+    const boxes: [number, number, number, number][] = [];
+    for (let i = 0; i < 12; i++) {
+      boxes.push([2 + i * 30, 24 + i * 30, 2, 42]);
+    }
+    const data = image(360, 44, boxes);
+    const found = frameBoxes(data, 360, 44, 12, 127, 0.3);
+    expect(found).toHaveLength(12);
+    expect(found.every(b => boxWidth(b) === 22)).toBe(true);
+  });
+
+  it('cuts a touching pair by the width of the frames around it', () => {
+    // Five thin striding frames 22 wide, the third and fourth touching.
+    const data = image(200, 44, [
+      [2, 24, 2, 42],
+      [32, 54, 2, 42],
+      [62, 106, 2, 42],
+      [122, 144, 2, 42],
+      [152, 174, 2, 42],
+    ]);
+    const found = frameBoxes(data, 200, 44, 6, 127, 0.3);
+    expect(found.map(b => b.left)).toEqual([2, 32, 62, 84, 122, 152]);
   });
 
   it('cuts two rows whose frames touch, at the sparsest line', () => {
