@@ -33,7 +33,9 @@
       box-sizing: content-box;
 
       &::before {
-        display: inline-block;
+        // Block, not inline-block: as an inline-block the box sat on the
+        // wrapper's baseline and painted 3-4px below its own height.
+        display: block;
 
         // The per-size width/height below are the box's outer size, border
         // included. Declare the box model rather than inheriting whatever
@@ -159,15 +161,15 @@
   gap: 8px;
   input[type='checkbox'] {
     & + i {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       margin-top: 2px;
 
       &::before {
         font-size: 14px;
-        width: 24px;
-        height: 24px;
-        line-height: 24px;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
       }
     }
   }
