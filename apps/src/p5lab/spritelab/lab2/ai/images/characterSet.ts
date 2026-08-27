@@ -37,6 +37,7 @@ import {
   ImageSize,
   SHEET_ASPECT_RATIO,
   getCharacterSetImageModel,
+  getSheetImageModel,
 } from './modelHelpers';
 import {poseFigureDataURI} from './poseFigures';
 import {
@@ -788,7 +789,7 @@ export async function generateCharacterSet(
           references: [await widenDataURI(facingPlate, SHEET_ASPECT, key.hex)],
           imageSize: SHEET_IMAGE_SIZE,
           aspectRatio: SHEET_ASPECT_RATIO,
-          model: getCharacterSetImageModel(),
+          model: getSheetImageModel(),
           thinkingLevel: CHARACTER_SET_THINKING_LEVEL,
         }
       );

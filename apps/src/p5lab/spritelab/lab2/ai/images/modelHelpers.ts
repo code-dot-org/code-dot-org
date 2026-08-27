@@ -26,6 +26,17 @@ export function getCharacterSetImageModel() {
   return googleProvider(CHARACTER_SET_IMAGE_MODEL);
 }
 
+// The walk's row picture: one request per set, so Pro costs one Pro image
+// where the per-frame trial cost twelve. On trial (2026-08-27) for what a
+// single picture of the whole cycle can't suffer from — drift between
+// frames — and what Pro is better at: following the layout and the count.
+// Flash for the row is the Flash-only set of the runs before.
+export const SHEET_IMAGE_MODEL = AiChatModelIds.GEMINI_3_PRO_IMAGE;
+
+export function getSheetImageModel() {
+  return googleProvider(SHEET_IMAGE_MODEL);
+}
+
 // How hard an image model thinks before drawing. Vertex refuses the
 // parameter for the image models ("thinking_level is not supported by this
 // model", live, 2026-08-25), so it stays unset; the plumbing remains for a
