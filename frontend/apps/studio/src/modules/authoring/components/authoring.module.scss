@@ -26,6 +26,40 @@
   grid-template-columns: 440px 240px minmax(0, 1fr);
 }
 
+// Fourth column, only while a stage section is selected — see
+// docs/prototypes/author-mode-properties-panel.md §5.1.
+.playerLayoutPanelOpen {
+  grid-template-columns: 440px 240px minmax(0, 1fr) 340px;
+}
+
+.propertiesPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+  overflow: auto;
+  padding: 16px;
+  border-left: 1px solid var(--borders-neutral-light, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+}
+
+.propertiesPanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.propertiesPanelForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+}
+
 .lessonHeaderBar {
   display: flex;
   align-items: center;
@@ -150,6 +184,14 @@
   > * {
     flex: 1;
   }
+}
+
+// Click-to-select affordance (properties panel) — a visible but subtle
+// outline, distinct from the active-experience highlighting elsewhere on
+// the page (progress dots, outline rail).
+.labStageSelected {
+  outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+  outline-offset: -2px;
 }
 
 /* Author-mode "Check level" affordance (maze-family existingLevel only) */
@@ -549,6 +591,11 @@
 .levelInstructionsEditBar {
   display: flex;
   justify-content: flex-end;
+}
+
+.levelInstructionsSelected {
+  outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+  outline-offset: -2px;
 }
 
 .levelInstructionsCollapsed {

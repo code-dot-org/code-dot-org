@@ -1,6 +1,6 @@
 import {Button, IconButton, Typography} from '@mui/material';
 import {Link} from '@tanstack/react-router';
-import {useMemo, useRef, useState} from 'react';
+import {useEffect, useMemo, useRef, useState} from 'react';
 
 import type {
   CourseModel,
@@ -16,8 +16,12 @@ import {useCompletion, type CompletionStatus} from '../completion';
 
 import AuthorSidebar from './AuthorSidebar';
 import ContentComposer from './ContentComposer';
-import ExperienceStage, {type StageEvent} from './ExperienceStage';
+import ExperienceStage, {
+  type PanelSection,
+  type StageEvent,
+} from './ExperienceStage';
 import OutlineRail from './OutlineRail';
+import PropertiesPanel from './PropertiesPanel';
 import TutorDock, {type TutorDockHandle} from './TutorDock';
 
 import styles from './authoring.module.scss';
@@ -32,6 +36,10 @@ interface LessonPlayerProps {
 // to stick while they click around the whole curriculum, not just one
 // lesson. A fresh tab always starts in author mode.
 const STUDENT_VIEW_KEY = 'authoring-student-view';
+
+// Properties-panel hover-intent tuning — see the panel state machine below.
+const HOVER_INTENT_MS = 200;
+const HOVER_CLOSE_GRACE_MS = 250;
 
 function readStudentViewFlag(): boolean {
   try {
@@ -100,6 +108,26 @@ export default function LessonPlayer({
   const [editingContentId, setEditingContentId] = useState<
     string | undefined
   >();
+  // Properties-panel selection — see ExperienceStage's PanelSection.
+  // Discovery is hover-driven (Mailchimp/Wix-style: hovering an editable
+  // section previews it in the panel); a click "pins" the panel open
+  // regardless of pointer position, and an in-progress edit pins it too —
+  // neither a pinned nor a dirty panel is ever swapped or closed by hover.
+  // Scoped to the active experience; switching experiences (selectIndex)
+  // clears all three, rather than risk the panel showing a stale
+  // experience's fields.
+  const [panelSection, setPanelSection] = useState<PanelSection | undefined>();
+  const [panelPinned, setPanelPinned] = useState(false);
+  const [panelDirty, setPanelDirty] = useState(false);
+  const hoverOpenTimerRef = useRef<ReturnType<typeof setTimeout>>();
+  const hoverCloseTimerRef = useRef<ReturnType<typeof setTimeout>>();
+  useEffect(
+    () => () => {
+      clearTimeout(hoverOpenTimerRef.current);
+      clearTimeout(hoverCloseTimerRef.current);
+    },
+    [],
+  );
   const [inputOverrides, setInputOverrides] = useState<
     Record<string, Record<string, unknown>>
   >({});
@@ -116,6 +144,8 @@ export default function LessonPlayer({
     return index >= 0 ? index : 0;
   }, [experiences, activeExperienceId]);
   const active = experiences[activeIndex];
+  const showPropertiesPanel =
+    authorMode && !!panelSection && active?.kind === 'existingLevel';
   const nextLesson = useMemo(() => {
     const lessonIndex = unit.lessons.findIndex(l => l.id === lesson.id);
     return lessonIndex >= 0 ? unit.lessons[lessonIndex + 1] : undefined;
@@ -165,6 +195,10 @@ export default function LessonPlayer({
     setLessonComplete(false);
     setInsertPosition(undefined);
     setEditingContentId(undefined);
+    clearHoverTimers();
+    setPanelSection(undefined);
+    setPanelPinned(false);
+    setPanelDirty(false);
     if (tutorOn && experience) {
       void tutorRef.current?.push({
         kind: 'experience_shown',
@@ -183,6 +217,78 @@ export default function LessonPlayer({
     }
     markLeaving();
     setLessonComplete(true);
+  };
+
+  const clearHoverTimers = () => {
+    clearTimeout(hoverOpenTimerRef.current);
+    clearTimeout(hoverCloseTimerRef.current);
+  };
+
+  // Hovering a section (or the panel itself, so the pointer can travel
+  // between them) previews it after a short intent delay — long enough that
+  // sweeping the mouse across the lesson stage doesn't flicker panels open,
+  // short enough to read as "hover to edit". Never swaps away from a pinned
+  // or dirty panel: an in-progress edit must survive a stray mouse move.
+  const handleSectionHoverEnter = (section: PanelSection) => {
+    if (panelPinned || panelDirty) {
+      return;
+    }
+    clearHoverTimers();
+    if (panelSection === section) {
+      return;
+    }
+    hoverOpenTimerRef.current = setTimeout(() => {
+      setPanelSection(section);
+    }, HOVER_INTENT_MS);
+  };
+
+  const handleHoverLeave = () => {
+    if (panelPinned || panelDirty) {
+      return;
+    }
+    clearHoverTimers();
+    // Grace period, not an immediate close: the pointer has to cross real
+    // screen space to get from the section to the panel (a fourth grid
+    // column) or back, and an instant close would make that trip
+    // impossible.
+    hoverCloseTimerRef.current = setTimeout(() => {
+      setPanelSection(undefined);
+    }, HOVER_CLOSE_GRACE_MS);
+  };
+
+  const handlePanelHoverEnter = () => {
+    if (panelPinned || panelDirty) {
+      return;
+    }
+    clearHoverTimers();
+  };
+
+  // Clicking a section pins the panel open regardless of pointer position,
+  // or — clicking the section that's already pinned open — unpins and
+  // closes it (the same toggle-off gesture the old click-only design had).
+  // Clicking a DIFFERENT section than the one currently dirty is a
+  // deliberate navigation, not a stray mouse move — it discards that
+  // unsaved edit rather than trapping the author on it; panelDirty always
+  // resets here so the newly-selected section's own dirty tracking starts
+  // clean.
+  const handleSectionClick = (section: PanelSection) => {
+    clearHoverTimers();
+    if (panelPinned && panelSection === section) {
+      setPanelPinned(false);
+      setPanelDirty(false);
+      setPanelSection(undefined);
+      return;
+    }
+    setPanelDirty(false);
+    setPanelSection(section);
+    setPanelPinned(true);
+  };
+
+  const handlePanelClose = () => {
+    clearHoverTimers();
+    setPanelPinned(false);
+    setPanelDirty(false);
+    setPanelSection(undefined);
   };
 
   const onTutorSelect = (
@@ -279,7 +385,9 @@ export default function LessonPlayer({
       <div
         className={
           authorMode
-            ? `${styles.playerLayout} ${styles.playerLayoutAuthor}`
+            ? `${styles.playerLayout} ${styles.playerLayoutAuthor}${
+                showPropertiesPanel ? ` ${styles.playerLayoutPanelOpen}` : ''
+              }`
             : styles.playerLayout
         }
       >
@@ -373,6 +481,10 @@ export default function LessonPlayer({
                       onStageEvent={onStageEvent}
                       authorMode={authorMode}
                       onContinue={goToNext}
+                      selectedSection={panelSection}
+                      onSectionHoverEnter={handleSectionHoverEnter}
+                      onSectionHoverLeave={handleHoverLeave}
+                      onSectionClick={handleSectionClick}
                     />
                   )
                 ) : (
@@ -420,6 +532,20 @@ export default function LessonPlayer({
             </Button>
           </div>
         </div>
+
+        {showPropertiesPanel &&
+          panelSection &&
+          active?.kind === 'existingLevel' && (
+            <PropertiesPanel
+              key={`${active.id}-${panelSection}`}
+              section={panelSection}
+              experience={active}
+              onClose={handlePanelClose}
+              onDirtyChange={setPanelDirty}
+              onPointerEnter={handlePanelHoverEnter}
+              onPointerLeave={handleHoverLeave}
+            />
+          )}
       </div>
     </div>
   );

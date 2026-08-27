@@ -5,9 +5,11 @@ import type {
   CourseModel,
   CurriculumChange,
   CurriculumChangeBody,
+  LevelDefinitionPatch,
   ResolveLevel,
   WidgetDescriptor,
 } from '../authoring/model.js';
+import type {MazeLevelDefinition} from '../levels/mazeLevel.js';
 import type {
   ChatMessage,
   ChatRole,
@@ -111,6 +113,14 @@ export class AuthoringState {
         change.patch,
       );
     }
+    if (change.op === 'overrideLevelDefinition') {
+      change.previous = capturePreviousDefinition(
+        this.snapshot.courses,
+        this.snapshot.levelProperties,
+        change.experienceId,
+        change.patch,
+      );
+    }
 
     const next = this.applyChange(
       {courses: this.snapshot.courses, widgets: this.snapshot.widgets},
@@ -131,7 +141,14 @@ export class AuthoringState {
             change.experienceId,
             change.patch,
           )
-        : this.snapshot.levelProperties;
+        : change.op === 'overrideLevelDefinition'
+          ? mergeDefinitionOverride(
+              this.snapshot.levelProperties,
+              next.courses,
+              change.experienceId,
+              change.patch,
+            )
+          : this.snapshot.levelProperties;
 
     this.snapshot = {
       ...this.snapshot,
@@ -143,6 +160,19 @@ export class AuthoringState {
     this.store.writeSnapshot(this.snapshot);
     this.store.appendChange(change);
     this.changes = [...this.changes, change];
+
+    // A draft level also has an on-disk MazeLevelDefinition that
+    // update_level rebuilds the whole served entry from — flag it so that
+    // tool refuses rather than silently clobbering this edit. Imported
+    // (lb:) levels have no such file; findExistingLevelExperience/levelKey
+    // check below is what tells the two apart.
+    if (change.op === 'overrideLevelDefinition') {
+      markDraftLevelVisuallyEdited(
+        this.store,
+        next.courses,
+        change.experienceId,
+      );
+    }
 
     // Descriptors also live as files so the agent can read them as code.
     const descriptor = descriptorFor(change, this.snapshot.widgets);
@@ -312,6 +342,83 @@ function mergeInstructionsOverride(
     ...levelProperties,
     [numericId]: {...levelProperties[numericId], ...patch},
   };
+}
+
+// Same reasoning as capturePreviousInstructions, but a definition field that
+// was never on the served entry must come back as `null` (an explicit
+// "delete this key" signal), not `''` — an empty string is a corrupt
+// serialized_maze/maze, and text-field semantics don't apply here.
+function capturePreviousDefinition(
+  courses: CourseModel[],
+  levelProperties: Record<string, Record<string, unknown>>,
+  experienceId: string,
+  patch: LevelDefinitionPatch,
+): LevelDefinitionPatch | undefined {
+  const experience = findExistingLevelExperience(courses, experienceId);
+  if (experience?.levelNumericId === undefined) {
+    return undefined;
+  }
+  const current = levelProperties[String(experience.levelNumericId)];
+  const previous: LevelDefinitionPatch = {};
+  for (const key of Object.keys(patch) as (keyof LevelDefinitionPatch)[]) {
+    const value = current?.[key];
+    previous[key] = typeof value === 'string' ? value : null;
+  }
+  return previous;
+}
+
+// Unlike mergeInstructionsOverride, a `null` patch value deletes the key
+// from the served entry rather than being written through — see
+// LevelDefinitionPatch's doc comment (model.ts) for why a revert needs that.
+function mergeDefinitionOverride(
+  levelProperties: Record<string, Record<string, unknown>>,
+  courses: CourseModel[],
+  experienceId: string,
+  patch: LevelDefinitionPatch,
+): Record<string, Record<string, unknown>> {
+  const experience = findExistingLevelExperience(courses, experienceId);
+  if (experience?.levelNumericId === undefined) {
+    return levelProperties;
+  }
+  const numericId = String(experience.levelNumericId);
+  const merged = {...levelProperties[numericId]};
+  for (const [key, value] of Object.entries(patch)) {
+    if (value === null) {
+      delete merged[key];
+    } else if (value !== undefined) {
+      merged[key] = value;
+    }
+  }
+  return {...levelProperties, [numericId]: merged};
+}
+
+// The one asymmetry between imported and draft levels (see
+// docs/prototypes/author-mode-level-editor.md §1.5): a draft Maze level also
+// has an on-disk MazeLevelDefinition that update_level rebuilds the served
+// entry from wholesale. Flag it so that tool refuses once a visual edit has
+// made the definition stale, rather than silently clobbering the edit on the
+// agent's next pass. No-ops for an imported (lb:) level or a draft level
+// with no stored definition (not a Maze level, or never went through
+// create_level).
+function markDraftLevelVisuallyEdited(
+  store: SessionStore,
+  courses: CourseModel[],
+  experienceId: string,
+): void {
+  const experience = findExistingLevelExperience(courses, experienceId);
+  const levelKey = experience?.levelKey;
+  if (!levelKey?.startsWith('draft:')) {
+    return;
+  }
+  const levelId = levelKey.slice('draft:'.length);
+  const existing = store.readLevelDefinition(levelId);
+  if (!existing || existing.visuallyEdited) {
+    return;
+  }
+  store.writeLevelDefinition(levelId, {
+    ...existing,
+    visuallyEdited: true,
+  } satisfies MazeLevelDefinition);
 }
 
 function descriptorFor(

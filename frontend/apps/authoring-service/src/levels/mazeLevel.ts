@@ -162,6 +162,13 @@ export const MazeLevelDefinitionSchema = z.object({
   idealBlockCount: z.number().int().min(1).max(50),
   toolbox: z.array(z.enum(MAZE_BLOCK_TYPES)).min(1),
   solution: z.array(MazeBlockNodeSchema).min(1),
+  // Set by AuthoringState when overrideLevelDefinition (the visual level
+  // editor) touches a draft level. update_level refuses to write a draft
+  // level once this is set — see ClaudeAgentRunner.ts's update_level: a
+  // visually edited grid/block set no longer round-trips to this typed
+  // definition, so rebuilding the wire entry from it would silently discard
+  // the edit.
+  visuallyEdited: z.boolean().optional(),
 });
 export type MazeLevelDefinition = z.infer<typeof MazeLevelDefinitionSchema>;
 

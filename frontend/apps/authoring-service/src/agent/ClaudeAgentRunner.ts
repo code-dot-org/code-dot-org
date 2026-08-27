@@ -703,6 +703,11 @@ function buildCurriculumServer(
               `no level ${levelId} (create it with create_level first)`,
             );
           }
+          if (existing.visuallyEdited) {
+            return fail(
+              `level ${levelId} was edited in the level editor; its grid and blocks no longer round-trip to a typed definition. Edit it there, or ask the author to re-create it.`,
+            );
+          }
           const next = {...existing, ...patch};
           const gate = verifyMazeLevelSolvable(next);
           if (!gate.ok) {

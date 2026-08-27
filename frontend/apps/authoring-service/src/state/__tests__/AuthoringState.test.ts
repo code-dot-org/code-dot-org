@@ -6,6 +6,7 @@ import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 import {applyChange} from '@code-dot-org/authoring';
 
 import type {CourseModel} from '../../authoring/model.js';
+import type {MazeLevelDefinition} from '../../levels/mazeLevel.js';
 import {EMPTY_SNAPSHOT, SessionStore} from '../../store/SessionStore.js';
 import {AuthoringState} from '../AuthoringState.js';
 
@@ -214,5 +215,200 @@ describe('AuthoringState overrideLevelInstructions previous capture', () => {
     expect(change).toMatchObject({
       previous: {shortInstructions: 'Original short instructions.'},
     });
+  });
+});
+
+function draftMazeDefinition(): MazeLevelDefinition {
+  return {
+    grid: [
+      [0, 0, 0, 0],
+      [0, 2, 1, 0],
+      [0, 1, 3, 0],
+      [0, 0, 0, 0],
+    ],
+    startDirection: 1,
+    skin: 'birds',
+    shortInstructions: 'Move to the goal.',
+    idealBlockCount: 2,
+    toolbox: ['moveForward', 'turnLeft', 'turnRight'],
+    solution: [{type: 'moveForward'}],
+  };
+}
+
+function stateWithDraftLevel(root: string): AuthoringState {
+  const level = {
+    id: 'draft-exp-1',
+    origin: 'draft' as const,
+    kind: 'existingLevel' as const,
+    levelKey: 'draft:level-1',
+    levelType: 'Maze',
+    runtime: 'labhost' as const,
+    labKey: 'maze' as const,
+    levelNumericId: 9000001,
+  };
+  const course: CourseModel = {
+    id: 'course-1',
+    displayName: 'Course One',
+    origin: 'draft',
+    units: [
+      {
+        id: 'unit-1',
+        displayName: 'Unit One',
+        origin: 'draft',
+        lessons: [
+          {
+            id: 'lesson-1',
+            displayName: 'Lesson One',
+            origin: 'draft',
+            experiences: [level],
+          },
+        ],
+      },
+    ],
+  };
+  const store = new SessionStore(root);
+  store.writeLevelDefinition('level-1', draftMazeDefinition());
+  return new AuthoringState({
+    store,
+    applyChange,
+    snapshot: {
+      ...EMPTY_SNAPSHOT,
+      courses: [course],
+      levelProperties: {
+        '9000001': {id: 9000001, appName: 'maze', startDirection: '1'},
+      },
+    },
+    changes: [],
+  });
+}
+
+describe('AuthoringState overrideLevelDefinition', () => {
+  it('folds the override onto the served levelProperties entry', () => {
+    const state = stateWithLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {startDirection: '2'},
+      },
+      'author',
+    );
+
+    const properties = state.getLevelProperties('7');
+    expect(properties?.startDirection).toBe('2');
+    expect(properties?.appName).toBe('maze');
+  });
+
+  it('records the override on the experience in the change log and outline', () => {
+    const state = stateWithLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {startDirection: '3'},
+      },
+      'author',
+    );
+
+    expect(state.getChanges()).toHaveLength(1);
+    expect(state.getChanges()[0]).toMatchObject({
+      op: 'overrideLevelDefinition',
+      experienceId: 'lb:some_maze_level',
+      actor: 'author',
+    });
+
+    const experience = state.getSnapshot().courses[0].units[0].lessons[0]
+      .experiences[0] as {definitionOverride?: unknown};
+    expect(experience.definitionOverride).toEqual({startDirection: '3'});
+  });
+});
+
+describe('AuthoringState overrideLevelDefinition previous capture', () => {
+  it('captures the served value as `previous`', () => {
+    const state = stateWithLevel();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {startDirection: '2'},
+      },
+      'author',
+    );
+    // stateWithLevel's fixture never set startDirection, so the served
+    // entry never had it — captured previous must be `null` (an explicit
+    // delete-this-key signal), not `''`, so a revert removes the key rather
+    // than writing a corrupt empty value.
+    expect(change).toMatchObject({previous: {startDirection: null}});
+  });
+
+  it('captures the prior override as `previous` on a second override', () => {
+    const state = stateWithLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {startDirection: '1'},
+      },
+      'author',
+    );
+    const second = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {startDirection: '2'},
+      },
+      'author',
+    );
+    expect(second).toMatchObject({previous: {startDirection: '1'}});
+  });
+
+  it('ignores a client-supplied `previous` and recomputes it authoritatively', () => {
+    const state = stateWithLevel();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {startDirection: '2'},
+        previous: {startDirection: 'attacker-supplied lie'},
+      },
+      'author',
+    );
+    expect(change).toMatchObject({previous: {startDirection: null}});
+  });
+});
+
+describe('AuthoringState overrideLevelDefinition draft-level guard', () => {
+  it('flags a draft level as visuallyEdited on the stored definition', () => {
+    const state = stateWithDraftLevel(root);
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'draft-exp-1',
+        patch: {startDirection: '2'},
+      },
+      'author',
+    );
+    const store = new SessionStore(root);
+    const definition = store.readLevelDefinition('level-1');
+    expect(definition?.visuallyEdited).toBe(true);
+    // Not clobbered — the rest of the stored definition survives.
+    expect(definition?.idealBlockCount).toBe(2);
+  });
+
+  it('leaves an imported level untouched (no on-disk definition to flag)', () => {
+    const state = stateWithLevel();
+    // stateWithLevel's fixture is lb:some_maze_level — no draft level.json
+    // exists for it, so markDraftLevelVisuallyEdited must no-op rather than
+    // throw.
+    expect(() =>
+      state.applyCurriculumChange(
+        {
+          op: 'overrideLevelDefinition',
+          experienceId: 'lb:some_maze_level',
+          patch: {startDirection: '2'},
+        },
+        'author',
+      ),
+    ).not.toThrow();
   });
 });

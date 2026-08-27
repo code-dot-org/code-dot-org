@@ -139,6 +139,20 @@ const InstructionsPatchSchema = z.object({
   longInstructions: z.string().optional(),
 });
 
+// `null` means "delete this key on merge" — see LevelDefinitionPatch
+// (model.ts) for why: capturePreviousDefinition (AuthoringState.ts) records
+// null for a field the level never had, and a revert must be able to remove
+// that field again rather than write back `''`.
+const LevelDefinitionPatchSchema = z.object({
+  serialized_maze: z.string().nullable().optional(),
+  maze: z.string().nullable().optional(),
+  startBlocksXml: z.string().nullable().optional(),
+  toolboxBlocksXml: z.string().nullable().optional(),
+  solutionBlocksXml: z.string().nullable().optional(),
+  startDirection: z.string().nullable().optional(),
+  ideal: z.string().nullable().optional(),
+});
+
 const ExistingLevelExperienceSchema = z.object({
   ...experienceBase,
   kind: z.literal('existingLevel'),
@@ -265,5 +279,10 @@ export const CurriculumChangeBodySchema = z.discriminatedUnion('op', [
     op: z.literal('overrideLevelInstructions'),
     experienceId: z.string().min(1),
     patch: InstructionsPatchSchema,
+  }),
+  z.object({
+    op: z.literal('overrideLevelDefinition'),
+    experienceId: z.string().min(1),
+    patch: LevelDefinitionPatchSchema,
   }),
 ]);

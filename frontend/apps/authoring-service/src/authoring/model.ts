@@ -65,11 +65,22 @@ export interface ExistingLevelExperience extends ExperienceBase {
   levelNumericId?: number;
   data?: GenericLevelData;
   instructionsOverride?: InstructionsPatch;
+  definitionOverride?: LevelDefinitionPatch;
 }
 
 export interface InstructionsPatch {
   shortInstructions?: string;
   longInstructions?: string;
+}
+
+export interface LevelDefinitionPatch {
+  serialized_maze?: string | null;
+  maze?: string | null;
+  startBlocksXml?: string | null;
+  toolboxBlocksXml?: string | null;
+  solutionBlocksXml?: string | null;
+  startDirection?: string | null;
+  ideal?: string | null;
 }
 
 export interface WidgetExperience extends ExperienceBase {
@@ -216,6 +227,12 @@ export type CurriculumChangeBody =
       // exact prior text (imported original or an earlier override alike)
       // without replaying the whole log.
       previous?: InstructionsPatch;
+    }
+  | {
+      op: 'overrideLevelDefinition';
+      experienceId: string;
+      patch: LevelDefinitionPatch;
+      previous?: LevelDefinitionPatch;
     };
 
 export type CurriculumChangeOp = CurriculumChangeBody['op'];
@@ -237,6 +254,7 @@ export const CURRICULUM_CHANGE_OPS: readonly CurriculumChangeOp[] = [
   'createLevel',
   'updateLevel',
   'overrideLevelInstructions',
+  'overrideLevelDefinition',
 ];
 
 export type CurriculumChange = {

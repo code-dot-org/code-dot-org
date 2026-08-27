@@ -132,6 +132,8 @@ function targetId(change: CurriculumChange): string | undefined {
       return change.experienceId;
     case 'overrideLevelInstructions':
       return change.experienceId;
+    case 'overrideLevelDefinition':
+      return change.experienceId;
     default:
       return undefined;
   }
@@ -263,5 +265,7 @@ export function summarizeChange(
       return `Updated level “${findExperienceName(courses, change.experienceId)}”`;
     case 'overrideLevelInstructions':
       return `Edited instructions for “${findExperienceName(courses, change.experienceId)}”`;
+    case 'overrideLevelDefinition':
+      return `Edited level “${findExperienceName(courses, change.experienceId)}”`;
   }
 }

@@ -150,6 +150,8 @@ function changeTargets(change: CurriculumChange): string[] {
       return [change.experienceId];
     case 'overrideLevelInstructions':
       return [change.experienceId];
+    case 'overrideLevelDefinition':
+      return [change.experienceId];
     case 'attachExistingLevel':
       return [change.lessonId];
     default:

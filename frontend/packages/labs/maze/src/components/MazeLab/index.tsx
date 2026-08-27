@@ -170,7 +170,14 @@ const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
     [levelProperties, setToolboxHeaderWidth],
   );
 
-  const onInject = useCallback(
+  // Extracted from onInject so a levelProperties change that only
+  // engine-construction reads (e.g. startDirection — Subtype's constructor
+  // reads it once, there's no live prop path) can force a rebuild after
+  // Save, via the effect below. BlocklyWorkspace only calls onInject once
+  // per workspace lifetime (see its AgentEvent.Injected listener), so
+  // without this a saved definition change would never reach the engine
+  // until a full page reload.
+  const initEngine = useCallback(
     (workspace: Blockly.WorkspaceSvg, environment: MazeEnvironment) => {
       mazeRef.current?.uninitialize();
       mazeRef.current = new Maze(
@@ -214,6 +221,42 @@ const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
       setStepping,
     ],
   );
+
+  // Stable refs so the re-init effect below can call the latest initEngine
+  // against the workspace/environment onInject captured, without listing
+  // either as a dependency (same pattern as onLevelResultRef above).
+  const initEngineRef = useRef(initEngine);
+  useEffect(() => {
+    initEngineRef.current = initEngine;
+  }, [initEngine]);
+  const environmentRef = useRef<MazeEnvironment | null>(null);
+
+  const onInject = useCallback(
+    (workspace: Blockly.WorkspaceSvg, environment: MazeEnvironment) => {
+      environmentRef.current = environment;
+      initEngine(workspace, environment);
+    },
+    [initEngine],
+  );
+
+  // Author-mode Save invalidates the levelProperties query, which refetches
+  // and hands MazeLab a new levelProperties object — re-run engine
+  // construction so the edit is visibly applied without a page reload. Skips
+  // the mount itself (onInject already handled that).
+  const startDirectionMountRef = useRef(true);
+  useEffect(() => {
+    if (startDirectionMountRef.current) {
+      startDirectionMountRef.current = false;
+      return;
+    }
+    if (workspaceRef.current && environmentRef.current) {
+      initEngineRef.current(workspaceRef.current, environmentRef.current);
+    }
+    // levelProperties itself is unsafely typed as always-defined (see
+    // useLevelProperties) but can be undefined before the host resolves the
+    // current level — optional-chain the read so this effect's dependency
+    // array never throws during that window.
+  }, [levelProperties?.startDirection]);
 
   const skinBlocks = blocks(skinFor(skins, levelProperties?.skin || 'birds'));
 

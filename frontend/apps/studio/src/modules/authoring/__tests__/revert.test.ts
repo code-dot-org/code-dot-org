@@ -86,6 +86,46 @@ describe('buildRevertChangeBody', () => {
     expect(buildRevertChangeBody(change)).toBeUndefined();
   });
 
+  it('reverts overrideLevelDefinition by re-applying the captured previous value', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'overrideLevelDefinition',
+      experienceId: 'lb:some_maze_level',
+      patch: {startDirection: '2'},
+      previous: {startDirection: '1'},
+    };
+    expect(buildRevertChangeBody(change)).toEqual({
+      op: 'overrideLevelDefinition',
+      experienceId: 'lb:some_maze_level',
+      patch: {startDirection: '1'},
+    });
+  });
+
+  it('reverts by deleting a key the level never had (`previous` carries null)', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'overrideLevelDefinition',
+      experienceId: 'lb:some_maze_level',
+      patch: {startDirection: '2'},
+      previous: {startDirection: null},
+    };
+    expect(buildRevertChangeBody(change)).toEqual({
+      op: 'overrideLevelDefinition',
+      experienceId: 'lb:some_maze_level',
+      patch: {startDirection: null},
+    });
+  });
+
+  it('does not offer a revert for overrideLevelDefinition with no captured previous', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'overrideLevelDefinition',
+      experienceId: 'lb:some_maze_level',
+      patch: {startDirection: '2'},
+    };
+    expect(buildRevertChangeBody(change)).toBeUndefined();
+  });
+
   it.each([
     'createCourse',
     'removeCourse',

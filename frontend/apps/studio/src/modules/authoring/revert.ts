@@ -13,9 +13,9 @@ import type {CurriculumChangeInput} from './api';
  * attachExistingLevel the resulting experience id is `lb:<levelKey>`
  * (apply.ts's resolveLevel and its unresolved fallback both mint it that
  * way, deterministically, so no id needs recovering from the tree).
- * overrideLevelInstructions restores whatever `previous` the server
- * captured at apply time (see AuthoringState.applyCurriculumChange) — no
- * log replay needed.
+ * overrideLevelInstructions/overrideLevelDefinition each restore whatever
+ * `previous` the server captured at apply time (see
+ * AuthoringState.applyCurriculumChange) — no log replay needed.
  *
  * Excluded, and why: createCourse/createUnit/createLesson may have gained
  * content since (removing the container would silently drop it too);
@@ -52,6 +52,14 @@ export function buildRevertChangeBody(
       return change.previous
         ? {
             op: 'overrideLevelInstructions',
+            experienceId: change.experienceId,
+            patch: change.previous,
+          }
+        : undefined;
+    case 'overrideLevelDefinition':
+      return change.previous
+        ? {
+            op: 'overrideLevelDefinition',
             experienceId: change.experienceId,
             patch: change.previous,
           }

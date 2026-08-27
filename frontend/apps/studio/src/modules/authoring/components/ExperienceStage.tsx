@@ -1,4 +1,5 @@
 import {Button, Typography} from '@mui/material';
+import classNames from 'classnames';
 import {Suspense, useCallback, useState} from 'react';
 
 import type {
@@ -43,15 +44,33 @@ export interface StageEvent {
   data: unknown;
 }
 
+/**
+ * The two sections LessonPlayer's properties panel currently supports (see
+ * docs/prototypes/author-mode-properties-panel.md §5.2 for the full design;
+ * this is its first slice). Scoped to the active experience — only one is
+ * ever on screen, so the section alone disambiguates.
+ */
+export type PanelSection = 'instructions' | 'level';
+
 interface ExperienceStageProps {
   experience: Experience;
   /** Learner interactions bubbling up (widget events, answers). */
   onStageEvent?: (event: StageEvent) => void;
-  /** Shows the "Edit instructions" affordance on existingLevel experiences.
+  /** Shows the hover-to-preview affordance on existingLevel experiences.
    * Everything else this component renders is identical in both modes. */
   authorMode?: boolean;
   /** Advance to the next experience — a lab's terminal "Continue" calls this. */
   onContinue?: () => void;
+  /** Which section of this experience's stage the properties panel is
+   * currently showing (hover preview or pinned) — drives the selected
+   * outline, not the panel's open/closed state itself. */
+  selectedSection?: PanelSection;
+  /** Hovering a section previews it in the panel after a short intent
+   * delay; LessonPlayer owns the delay/pin/dirty state machine. */
+  onSectionHoverEnter?: (section: PanelSection) => void;
+  onSectionHoverLeave?: () => void;
+  /** Pins the panel open on that section. */
+  onSectionClick?: (section: PanelSection) => void;
 }
 
 /**
@@ -65,6 +84,10 @@ export default function ExperienceStage({
   onStageEvent,
   authorMode = false,
   onContinue,
+  selectedSection,
+  onSectionHoverEnter,
+  onSectionHoverLeave,
+  onSectionClick,
 }: ExperienceStageProps) {
   switch (experience.kind) {
     case 'content':
@@ -80,6 +103,10 @@ export default function ExperienceStage({
           onStageEvent={onStageEvent}
           authorMode={authorMode}
           onContinue={onContinue}
+          selectedSection={selectedSection}
+          onSectionHoverEnter={onSectionHoverEnter}
+          onSectionHoverLeave={onSectionHoverLeave}
+          onSectionClick={onSectionClick}
         />
       );
     case 'widget':
@@ -97,11 +124,19 @@ function ExistingLevelStage({
   onStageEvent,
   authorMode,
   onContinue,
+  selectedSection,
+  onSectionHoverEnter,
+  onSectionHoverLeave,
+  onSectionClick,
 }: {
   experience: ExistingLevelExperience;
   onStageEvent?: (event: StageEvent) => void;
   authorMode: boolean;
   onContinue?: () => void;
+  selectedSection?: PanelSection;
+  onSectionHoverEnter?: (section: PanelSection) => void;
+  onSectionHoverLeave?: () => void;
+  onSectionClick?: (section: PanelSection) => void;
 }) {
   if (experience.runtime === 'labhost') {
     if (!experience.levelNumericId) {
@@ -123,6 +158,10 @@ function ExistingLevelStage({
         authorMode={authorMode}
         onContinue={onContinue}
         onStageEvent={onStageEvent}
+        selectedSection={selectedSection}
+        onSectionHoverEnter={onSectionHoverEnter}
+        onSectionHoverLeave={onSectionHoverLeave}
+        onSectionClick={onSectionClick}
       />
     );
   }
@@ -166,6 +205,10 @@ function LabHostStage({
   authorMode,
   onContinue,
   onStageEvent,
+  selectedSection,
+  onSectionHoverEnter,
+  onSectionHoverLeave,
+  onSectionClick,
 }: {
   experienceId: string;
   levelNumericId: number;
@@ -174,6 +217,10 @@ function LabHostStage({
   authorMode: boolean;
   onContinue?: () => void;
   onStageEvent?: (event: StageEvent) => void;
+  selectedSection?: PanelSection;
+  onSectionHoverEnter?: (section: PanelSection) => void;
+  onSectionHoverLeave?: () => void;
+  onSectionClick?: (section: PanelSection) => void;
 }) {
   const {data: properties, isLoading} = useLevelProperties(levelNumericId);
   const [levelResult, setLevelResult] = useState<LevelResultDetail | null>(
@@ -252,28 +299,52 @@ function LabHostStage({
   // gate does. Author mode only: it's an authoring lint, not something a
   // learner needs to see.
   const showCheckLevel = authorMode && appName === 'maze';
+  // The properties panel's "level" section only has a maze field
+  // (startDirection) so far — same scope as showCheckLevel.
+  const levelSelectable = showCheckLevel;
 
   return (
     <>
       <LevelInstructions
-        experienceId={experienceId}
-        levelNumericId={levelNumericId}
-        appName={appName}
         shortInstructions={levelProps?.shortInstructions}
         longInstructions={levelProps?.longInstructions}
         selfDisplayedByLab={selfDisplayedByLab}
         authorMode={authorMode}
+        selected={selectedSection === 'instructions'}
+        onHoverEnter={() => onSectionHoverEnter?.('instructions')}
+        onHoverLeave={onSectionHoverLeave}
+        onClick={() => onSectionClick?.('instructions')}
       />
-      {showCheckLevel && (
-        <div className={styles.levelCheckBar}>
-          <Button
-            size="small"
-            variant="outlined"
-            onClick={handleCheckLevel}
-            disabled={checking}
-          >
-            {checking ? 'Checking…' : 'Check level'}
-          </Button>
+      {(showCheckLevel || levelSelectable) && (
+        <div
+          className={styles.levelCheckBar}
+          onPointerEnter={
+            levelSelectable
+              ? () => onSectionHoverEnter?.('level')
+              : undefined
+          }
+          onPointerLeave={levelSelectable ? onSectionHoverLeave : undefined}
+        >
+          {levelSelectable && (
+            <Button
+              size="small"
+              variant={selectedSection === 'level' ? 'contained' : 'outlined'}
+              aria-pressed={selectedSection === 'level'}
+              onClick={() => onSectionClick?.('level')}
+            >
+              Level
+            </Button>
+          )}
+          {showCheckLevel && (
+            <Button
+              size="small"
+              variant="outlined"
+              onClick={handleCheckLevel}
+              disabled={checking}
+            >
+              {checking ? 'Checking…' : 'Check level'}
+            </Button>
+          )}
         </div>
       )}
       {showCheckLevel && checkResult && (
@@ -282,7 +353,16 @@ function LabHostStage({
           onDismiss={() => setCheckResult(null)}
         />
       )}
-      <div className={styles.labStage}>
+      <div
+        className={classNames(
+          styles.labStage,
+          levelSelectable && selectedSection === 'level' && styles.labStageSelected,
+        )}
+        onPointerEnter={
+          levelSelectable ? () => onSectionHoverEnter?.('level') : undefined
+        }
+        onPointerLeave={levelSelectable ? onSectionHoverLeave : undefined}
+      >
         <Suspense fallback={<Loading />}>
           <Lab levelId={levelNumericId} levelPropertiesMap={properties}>
             <LabEntrypoint

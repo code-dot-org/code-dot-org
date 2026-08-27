@@ -333,5 +333,21 @@ export function applyChange(
         }),
       }));
     }
+
+    case 'overrideLevelDefinition': {
+      const lessonId = findLessonIdForExperience(state, change.experienceId);
+      return replaceLesson(state, lessonId, lesson => ({
+        ...lesson,
+        experiences: lesson.experiences.map(e => {
+          if (e.id !== change.experienceId || e.kind !== 'existingLevel') {
+            return e;
+          }
+          return {
+            ...e,
+            definitionOverride: {...e.definitionOverride, ...change.patch},
+          };
+        }),
+      }));
+    }
   }
 }

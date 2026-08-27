@@ -62,11 +62,33 @@ export interface ExistingLevelExperience extends ExperienceBase {
   // entry for levelNumericId, so a mounted lab sees it exactly like it would
   // see the original short_instructions/long_instructions.
   instructionsOverride?: InstructionsPatch;
+  // Same idea as instructionsOverride, for the visual level editor (grid,
+  // blocks, start direction, ...) — see LevelDefinitionPatch.
+  definitionOverride?: LevelDefinitionPatch;
 }
 
 export interface InstructionsPatch {
   shortInstructions?: string;
   longInstructions?: string;
+}
+
+// Patch onto a maze-family level's served LevelProperties entry, keyed
+// exactly like that wire record (mixed snake_case/camelCase — see
+// docs/prototypes/author-mode-level-editor.md §1.3) rather than
+// MazeLevelDefinition: the visual editor's output (arbitrary Blockly
+// workspaces, any Cell subclass field) is strictly richer than that typed
+// shape can express. `null` means "delete this key" — the server captures
+// `previous` from whatever the served entry held before the patch, and a
+// field the level never had must round-trip back to absent, not `''`, on
+// revert.
+export interface LevelDefinitionPatch {
+  serialized_maze?: string | null;
+  maze?: string | null;
+  startBlocksXml?: string | null;
+  toolboxBlocksXml?: string | null;
+  solutionBlocksXml?: string | null;
+  startDirection?: string | null;
+  ideal?: string | null;
 }
 
 /** Agent-created executable learner content, sandboxed. */

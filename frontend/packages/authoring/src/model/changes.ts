@@ -3,6 +3,7 @@ import type {
   Experience,
   ExistingLevelExperience,
   InstructionsPatch,
+  LevelDefinitionPatch,
   Lesson,
   Unit,
 } from './types';
@@ -106,5 +107,14 @@ export type CurriculumChange = {
       // exact prior text (imported original or an earlier override alike)
       // without replaying the whole log.
       previous?: InstructionsPatch;
+    }
+  // Same shape and capture discipline as overrideLevelInstructions, for the
+  // visual level editor. Applies uniformly to an imported (lb:) or draft
+  // existingLevel experience — see LevelDefinitionPatch.
+  | {
+      op: 'overrideLevelDefinition';
+      experienceId: string;
+      patch: LevelDefinitionPatch;
+      previous?: LevelDefinitionPatch;
     }
 );
