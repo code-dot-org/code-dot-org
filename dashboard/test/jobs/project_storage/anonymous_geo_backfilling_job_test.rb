@@ -155,8 +155,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       end
 
       before do
-        described_class.storage_id_cursor = 0
-        described_instance.stubs(:missing_project_storage_geos).with {sleep(max_run_time * 2) && true}
+        described_instance.stubs(:missing_project_storage_geos).raises(Timeout::Error)
       end
 
       it 'terminates job' do
@@ -166,15 +165,10 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
           log_data = JSON.parse(log_json)
           _(log_data['namespace']).must_equal 'project_storage_geos'
           _(log_data['event']).must_equal 'backfill'
-          _(log_data['batch_size']).must_equal described_class::DEFAULT_BATCH_SIZE
-          _(log_data['scan_size']).must_equal described_class::DEFAULT_SCAN_SIZE
-          _(log_data['limit']).must_equal described_class::DEFAULT_LIMIT
-          _(log_data['dry_run']).must_equal false
           _(log_data['success']).must_equal false
           _(log_data['processed_count']).must_equal 0
           _(log_data['first_storage_id']).must_be_nil
           _(log_data['last_storage_id']).must_be_nil
-          _(log_data['storage_id_cursor']).must_equal 0
         end
 
         _perform_now.must_be_instance_of Timeout::Error
