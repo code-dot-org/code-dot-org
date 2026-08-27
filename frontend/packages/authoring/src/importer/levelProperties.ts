@@ -15,6 +15,19 @@ export interface LevelPropertiesBlocksSource {
   recommendedBlocksXml?: string;
 }
 
+// offer_browser_tts is a Rails serialized_attrs property, so it round-trips
+// through .level XML/JSON as the string "true"/"false", not a boolean (see
+// Level#summarize_for_lab2_properties, the production analogue). Production
+// also falls back to script.tts when the level itself doesn't set it — that
+// script-level signal isn't available at either call site here, so an
+// absent property stays false rather than guessing a script's TTS setting.
+function offerBrowserTtsFrom(properties: Record<string, unknown>): boolean {
+  return (
+    properties.offer_browser_tts === true ||
+    properties.offer_browser_tts === 'true'
+  );
+}
+
 export function buildFishLevelProperties(
   id: number,
   levelKey: string,
@@ -34,7 +47,7 @@ export function buildFishLevelProperties(
     isProjectLevel: false,
     usesProjects: false,
     hideShareAndRemix: true,
-    offerBrowserTts: false,
+    offerBrowserTts: offerBrowserTtsFrom(properties),
     showExemplarLink: false,
     parentLevelLink: null,
     exemplarSources: null,
@@ -69,7 +82,7 @@ export function buildMusicLevelProperties(
     longInstructions: properties.long_instructions,
     shortInstructions: properties.short_instructions,
     instructionsImportant: false,
-    offerBrowserTts: false,
+    offerBrowserTts: offerBrowserTtsFrom(properties),
     useSecondaryFinishButton: false,
     preloadAssetList: false,
     containedLevelNames: [],
@@ -118,7 +131,7 @@ export function buildMazeLevelProperties(
     isProjectLevel: false,
     usesProjects: false,
     hideShareAndRemix: true,
-    offerBrowserTts: false,
+    offerBrowserTts: offerBrowserTtsFrom(properties),
     showExemplarLink: false,
     parentLevelLink: null,
     exemplarSources: null,

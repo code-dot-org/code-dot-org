@@ -65,6 +65,16 @@ describe('buildFishLevelProperties', () => {
     expect(properties.guides).toBe('K5');
     expect(properties.appMode).toBe('creaturesvtrash');
   });
+
+  it('defaults offerBrowserTts to false when the level does not set it', () => {
+    const parsed = parseLevelXml(CREATURES_VS_TRASH_LEVEL);
+    const properties = buildFishLevelProperties(
+      1,
+      'level-key',
+      parsed.properties,
+    );
+    expect(properties.offerBrowserTts).toBe(false);
+  });
 });
 
 describe('buildMusicLevelProperties', () => {
@@ -80,5 +90,15 @@ describe('buildMusicLevelProperties', () => {
     expect((properties.validations as {key: string}[])[0].key).toBe(
       'music-coding-intro-loop-beat_bf0ed4a4-3139-4a89-b2c9-860c44654230',
     );
+  });
+
+  it('coerces the stringly-typed offer_browser_tts property to a real boolean', () => {
+    const parsed = parseLevelXml(MUSIC_LEVEL_WITH_VALIDATIONS);
+    const properties = buildMusicLevelProperties(
+      1,
+      'level-key',
+      parsed.properties,
+    );
+    expect(properties.offerBrowserTts).toBe(true);
   });
 });
