@@ -30,20 +30,31 @@ export interface LabEditingProps {
   authorMode: boolean;
   instructionsSelected: boolean;
   onInstructionsClick: () => void;
-  /** True while the properties panel is pinned on the 'level' section —
+  /** True while the properties panel is pinned on the 'visualization'
+   * section (the FINAL IA REVISION's four-component decomposition) —
    * offers map painting on the stage (maze only; other entrypoints ignore
    * it). The tool palette lives in the panel, not here — see
-   * PropertiesPanel's LevelFields. */
-  mapEditingActive: boolean;
+   * PropertiesPanel's VisualizationFields. */
+  visualizationSelected: boolean;
+  onVisualizationClick: () => void;
   /** The panel's currently selected paint-tool id. */
   selectedPaintToolId?: string;
   /** Fires after a stage paint with the freshly updated wire-format patch
    * — the panel folds it into its Save draft. */
   onMapDraftChange: (patch: {serialized_maze: string; maze: string}) => void;
+  /** True while the properties panel is pinned on the 'toolbox' section
+   * (maze only; other entrypoints ignore it). */
+  toolboxSelected: boolean;
+  onToolboxClick: () => void;
   /** The panel's toolbox-tray draft, live — supersedes the served toolbox
    * on maze so a chip add/remove is visible in the real flyout before Save
    * (maze only; other entrypoints ignore it). */
   toolboxOverride?: Toolbox;
+  /** True while the properties panel is pinned on the 'workspace' section
+   * (maze only; other entrypoints ignore it). Distinct from
+   * `workspaceMode` below — see MazeLabEditingProps. */
+  workspaceSelected: boolean;
+  onWorkspaceClick: () => void;
   /** Which program the shared workspace currently represents — "Student
    * start" or "My solution" (maze only; see MazeLabEditingProps for the
    * full doc comment on why a mode replaces the earlier single boolean). */

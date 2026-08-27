@@ -57,6 +57,20 @@
   .vis-area {
     overflow: hidden;
     width: 40rem;
+    // `.blocklyArea` (its flex sibling in `#work-area`) has no width rule of
+    // its own here — it inherits flex:1 from PanelContainer's shared base
+    // class and happily claims all available space. Because `overflow:
+    // hidden` makes this item's flexbox "automatic minimum size" 0 (per
+    // spec), a narrow stage column shrinks it all the way to 0 rather than
+    // splitting the deficit — collapsing the instructions bubble AND the
+    // play area, and with them every click target this file defines,
+    // entirely out of the hit-testable layout (found while diagnosing the
+    // instructions-click regression: a 1280px-wide stage column, the
+    // default in-repo test viewport, was enough to trigger it). A concrete
+    // floor keeps it visible and clickable at the cost of squeezing the
+    // Blockly side further on very narrow windows — an explicit trade,
+    // not a full responsive redesign.
+    min-width: 20rem;
 
     .vis-under-box {
       flex: 1 1 auto;
@@ -85,6 +99,26 @@
       right: 0.25rem;
       z-index: 1;
     }
+
+    // WithTooltip wraps its child in its own `position: relative` div
+    // (component-library/tooltip's TooltipOverlay). That div then becomes
+    // the containing block .instructions-edit-button's `position: absolute`
+    // resolves against, instead of .vis-under-box above. Because the
+    // wrapper's only child IS that absolutely positioned button, the
+    // wrapper has no in-flow content and collapses to zero width — pinning
+    // the button at ITS (wrong) left edge rather than vis-under-box's
+    // actual top-right corner, which on a narrow stage column lands the
+    // button outside vis-under-box entirely, over whatever renders behind
+    // it (the left rail). Passed as WithTooltip's `tooltipOverlayClassName`
+    // to neutralize the wrapper's position so the button's containing-block
+    // search continues up to .vis-under-box, where it was always meant to
+    // land — a real click now lands on the button, not on the rail
+    // (regression from Pass B, masked because that pass's live verification
+    // used a direct .click() call, which fires on a JS element reference
+    // and never tests an actual cursor position).
+    .edit-button-anchor {
+      position: static;
+    }
   }
 
   .blockly-workspace {
@@ -94,8 +128,25 @@
 
 .vis-box {
   flex: 0 0 auto;
+  position: relative;
 
   .visualization {
     width: 100%;
   }
+}
+
+// Selection outline for the visualization/toolbox/workspace regions — same
+// dashed-hover/solid-selected convention as .vis-under-box above, applied
+// to each region's non-intrusive header/label area rather than the whole
+// region: a full-region overlay would eat clicks Blockly's flyout/canvas
+// (toolbox, workspace) or the map painter (visualization) need for their
+// own gestures. See MazeLab's `editing` prop.
+.region-editable:hover:not(.region-selected) {
+  outline: 2px dashed var(--borders-brand-purple-primary, #4d24a8);
+  outline-offset: -2px;
+}
+
+.region-selected {
+  outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+  outline-offset: -2px;
 }

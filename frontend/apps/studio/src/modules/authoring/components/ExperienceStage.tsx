@@ -45,15 +45,23 @@ export interface StageEvent {
 }
 
 /**
- * The one section LessonPlayer's right properties panel supports (see
- * docs/prototypes/author-mode-properties-panel.md §5.2). Level-wide settings
- * used to be a second section here ('level') but moved to the left rail
- * (LevelRail.tsx, product decision 8/27) — level settings are page settings,
- * not a stage click-target. Kept as a one-member union rather than a bare
- * boolean so the selection plumbing (selectedSection/onSectionClick) needs
- * no further changes if a second right-panel section returns.
+ * The stage's four click-selectable logical components (product owner's
+ * FINAL IA REVISION, 8/27, superseding the single-section 'instructions'
+ * design in docs/prototypes/author-mode-properties-panel.md §5.2): a maze
+ * level on stage decomposes into an instructions bubble, the
+ * animation/visualization (grid + character), the block toolbox, and the
+ * blocks workspace — each hover-highlightable and click-selectable, each
+ * editing ITS OWN fields in the right panel. Level-WIDE settings (title,
+ * target block count, solution status, Check level) stay page settings in
+ * the left rail (LevelRail.tsx) — not a stage click-target. Music/oceans/
+ * generic experiences only ever use 'instructions'; the other three are
+ * maze-family only (see ExperienceStage's `levelEditable`).
  */
-export type PanelSection = 'instructions';
+export type PanelSection =
+  | 'instructions'
+  | 'visualization'
+  | 'toolbox'
+  | 'workspace';
 
 interface ExperienceStageProps {
   experience: Experience;
@@ -360,18 +368,23 @@ function LabHostStage({
   const levelEditable = authorMode && appName === 'maze';
 
   // Threaded into every lab entrypoint (harmless for the three that ignore
-  // it); maze-lab uses it to make its own instructions bubble the
-  // hover/click target for the panel's 'instructions' section, and (while
-  // levelEditable) to offer the map painter, toolbox tray, and student-start
-  // capture on the stage.
+  // it); maze-lab uses it to make its own instructions bubble, play area,
+  // Blocks header, and Workspace header the hover/click targets for the
+  // panel's four sections, and (while levelEditable) to offer the map
+  // painter, toolbox tray, and student-start capture on the stage.
   const editing = {
     authorMode,
     instructionsSelected: selectedSection === 'instructions',
     onInstructionsClick: () => onSectionClick?.('instructions'),
-    mapEditingActive: levelEditable,
+    visualizationSelected: levelEditable && selectedSection === 'visualization',
+    onVisualizationClick: () => onSectionClick?.('visualization'),
     selectedPaintToolId,
     onMapDraftChange: onMapDraftChange ?? (() => {}),
+    toolboxSelected: levelEditable && selectedSection === 'toolbox',
+    onToolboxClick: () => onSectionClick?.('toolbox'),
     toolboxOverride,
+    workspaceSelected: levelEditable && selectedSection === 'workspace',
+    onWorkspaceClick: () => onSectionClick?.('workspace'),
     workspaceMode: levelEditable ? workspaceMode : undefined,
     workspaceOverride,
     onWorkspaceChange: onWorkspaceChange ?? (() => {}),

@@ -18,7 +18,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {authoringApi} from '../api';
 import {useCanAuthor} from '../authorGate';
 import {useCompletion, type CompletionStatus} from '../completion';
-import {useAuthoringState} from '../hooks';
+import {useAuthoringState, useLevelProperties} from '../hooks';
+import {useLevelDraft} from '../levelDraft';
 
 import AuthoringTopBar from './AuthoringTopBar';
 import AuthorSidebar from './AuthorSidebar';
@@ -169,9 +170,6 @@ export default function LessonPlayer({
   const [solutionOffer, setSolutionOffer] = useState<
     {solutionBlocksXml: string; blocksUsed: number} | undefined
   >();
-  // Mirrors `panelDirty` for the left rail: navigating away (selectIndex)
-  // while a level edit is in progress would silently discard it.
-  const [levelRailDirty, setLevelRailDirty] = useState(false);
   const [inputOverrides, setInputOverrides] = useState<
     Record<string, Record<string, unknown>>
   >({});
@@ -188,6 +186,56 @@ export default function LessonPlayer({
     return index >= 0 ? index : 0;
   }, [experiences, activeExperienceId]);
   const active = experiences[activeIndex];
+  const activeLevelNumericId =
+    active?.kind === 'existingLevel' ? active.levelNumericId : undefined;
+  const {data: activeLevelPropertiesMap} = useLevelProperties(
+    activeLevelNumericId ?? -1,
+  );
+  const activeLevelProps =
+    activeLevelNumericId !== undefined
+      ? activeLevelPropertiesMap?.[String(activeLevelNumericId)]
+      : undefined;
+  // The shared draft behind the FINAL IA REVISION's three maze-editing
+  // panel sections (visualization/toolbox/workspace) and the left rail's
+  // level-metadata Level tab — see levelDraft.ts's doc comment for why one
+  // hook backs all four. Called unconditionally (rules of hooks); harmless
+  // when the active experience isn't a maze-family level, since nothing
+  // downstream renders its fields in that case.
+  const levelDraft = useLevelDraft({
+    experienceId: active?.id,
+    levelNumericId: activeLevelNumericId,
+    levelPropertiesLoaded: activeLevelPropertiesMap !== undefined,
+    skin: activeLevelProps?.skin as string | undefined,
+    startDirection: activeLevelProps?.startDirection as string | undefined,
+    toolboxBlocksXml: activeLevelProps?.toolboxBlocksXml as string | undefined,
+    startBlocksXml: activeLevelProps?.startBlocksXml as string | undefined,
+    solutionBlocksXml: activeLevelProps?.solutionBlocksXml as
+      | string
+      | undefined,
+    ideal: activeLevelProps?.ideal as string | undefined,
+    solutionVerified: activeLevelProps?.solutionVerified === 'true',
+    mapDraftPatch,
+    workspaceMode,
+    onWorkspaceModeChange: setWorkspaceMode,
+    onWorkspaceOverrideChange: setWorkspaceOverrideXml,
+    workspaceCaptureXml,
+    solutionOffer,
+    onDismissSolutionOffer: () => setSolutionOffer(undefined),
+    onToolboxDraftChange: setToolboxDraftXml,
+    onDiscardStageState: () => {
+      setSelectedPaintToolId(undefined);
+      setMapDraftPatch(undefined);
+      setToolboxDraftXml(undefined);
+      setWorkspaceMode(undefined);
+      setWorkspaceOverrideXml(undefined);
+      setWorkspaceCaptureXml(undefined);
+      setSolutionOffer(undefined);
+    },
+  });
+  // Dirty for either the right panel (whichever section is open) or the
+  // shared level draft the left rail's Save/Discard also act on — either
+  // one gates navigation (selectIndex) and shows in the top bar.
+  const levelRailDirty = levelDraft.dirty;
   const showPropertiesPanel =
     authorMode && !!panelSection && active?.kind === 'existingLevel';
   // The tray reports XML (the Save-patch shape); the stage's flyout wants
@@ -274,7 +322,6 @@ export default function LessonPlayer({
     setWorkspaceOverrideXml(undefined);
     setWorkspaceCaptureXml(undefined);
     setSolutionOffer(undefined);
-    setLevelRailDirty(false);
     if (tutorOn && experience) {
       void tutorRef.current?.push({
         kind: 'experience_shown',
@@ -318,19 +365,6 @@ export default function LessonPlayer({
   const handlePanelClose = () => {
     setPanelDirty(false);
     setPanelSection(undefined);
-  };
-
-  // LevelRail's Discard button — resets every lifted level-editing state,
-  // mirroring handlePanelClose for the right panel.
-  const handleLevelRailDiscard = () => {
-    setLevelRailDirty(false);
-    setSelectedPaintToolId(undefined);
-    setMapDraftPatch(undefined);
-    setToolboxDraftXml(undefined);
-    setWorkspaceMode(undefined);
-    setWorkspaceOverrideXml(undefined);
-    setWorkspaceCaptureXml(undefined);
-    setSolutionOffer(undefined);
   };
 
   const onTutorSelect = (
@@ -473,18 +507,7 @@ export default function LessonPlayer({
             onSelect={selectIndex}
             onAskAiAt={setInsertPosition}
             active={active}
-            selectedPaintToolId={selectedPaintToolId}
-            onSelectPaintTool={setSelectedPaintToolId}
-            mapDraftPatch={mapDraftPatch}
-            onToolboxDraftChange={setToolboxDraftXml}
-            workspaceMode={workspaceMode}
-            onWorkspaceModeChange={setWorkspaceMode}
-            onWorkspaceOverrideChange={setWorkspaceOverrideXml}
-            workspaceCaptureXml={workspaceCaptureXml}
-            solutionOffer={solutionOffer}
-            onDismissSolutionOffer={() => setSolutionOffer(undefined)}
-            onDirtyChange={setLevelRailDirty}
-            onDiscard={handleLevelRailDiscard}
+            levelDraft={levelDraft}
           />
         )}
 
@@ -607,8 +630,15 @@ export default function LessonPlayer({
             <PropertiesPanel
               key={`${active.id}-${panelSection}`}
               experience={active}
+              section={panelSection}
               onClose={handlePanelClose}
               onDirtyChange={setPanelDirty}
+              levelDraft={levelDraft}
+              selectedPaintToolId={selectedPaintToolId}
+              onSelectPaintTool={setSelectedPaintToolId}
+              workspaceMode={workspaceMode}
+              solutionOffer={solutionOffer}
+              onDismissSolutionOffer={() => setSolutionOffer(undefined)}
             />
           )}
       </div>

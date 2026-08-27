@@ -60,11 +60,15 @@ export interface MazeLabEditingProps {
   instructionsSelected: boolean;
   /** Opens (pins) the panel on the 'instructions' section. */
   onInstructionsClick: () => void;
-  /** True while the properties panel is pinned open on the 'level' section
-   * — offers the map painter on the stage. The tool palette itself lives
-   * in the panel (see editing.ts's getPaintTools, exported from App.tsx);
+  /** True while the properties panel is pinned open on the 'visualization'
+   * section (the FINAL IA REVISION's four-component decomposition — grid +
+   * character) — drives the selected outline on the play-area region AND
+   * offers the map painter on the stage; the tool palette itself lives in
+   * the panel (see editing.ts's getPaintTools, exported from App.tsx), so
    * this is only "is the surface open", not a tool selection. */
-  mapEditingActive: boolean;
+  visualizationSelected: boolean;
+  /** Opens (pins) the panel on the 'visualization' section. */
+  onVisualizationClick: () => void;
   /** The palette entry id (from getPaintTools) the panel currently has
    * selected — undefined means no tool, so a stage click is a no-op. */
   selectedPaintToolId?: string;
@@ -72,11 +76,23 @@ export interface MazeLabEditingProps {
    * the panel accumulates these into its Save draft. Never called except
    * as a direct result of a stage click. */
   onMapDraftChange: (patch: {serialized_maze: string; maze: string}) => void;
+  /** True while the properties panel is pinned open on the 'toolbox'
+   * section — drives the selected outline on the Blocks header. */
+  toolboxSelected: boolean;
+  /** Opens (pins) the panel on the 'toolbox' section. */
+  onToolboxClick: () => void;
   /** The tray's live toolbox, whenever the panel's toolbox tray has an
    * in-progress edit — supersedes levelProperties.toolboxBlocks so the real
    * flyout reflects a chip add/remove immediately, before Save. undefined
    * outside toolbox-tray editing (the served toolbox applies as normal). */
   toolboxOverride?: Toolbox;
+  /** True while the properties panel is pinned open on the 'workspace'
+   * section — drives the selected outline on the Workspace header. Distinct
+   * from `workspaceMode` below: this is "is the panel showing the
+   * workspace's controls", that is "which program the canvas holds". */
+  workspaceSelected: boolean;
+  /** Opens (pins) the panel on the 'workspace' section. */
+  onWorkspaceClick: () => void;
   /**
    * Which program the shared workspace currently represents, or undefined
    * outside workspace editing entirely (Author Mode Pass D — before this,

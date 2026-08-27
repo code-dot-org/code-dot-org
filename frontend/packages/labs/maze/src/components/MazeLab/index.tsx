@@ -219,19 +219,19 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
   // post-Save refetch lands the same data the author already painted, so
   // there's nothing to reconcile.
   const [mapDraft, setMapDraft] = useState<MapDraft | undefined>(undefined);
-  // Starts undefined, not editing?.mapEditingActive: author mode now offers
-  // map editing on mount for any maze level (no more "Level" click-target to
-  // open first, see LevelRail.tsx), so mapEditingActive can already be true
-  // on the very first render. Seeding the ref from that same true would make
-  // the effect below see no change and skip initializing mapDraft.
+  // Starts undefined, not editing?.visualizationSelected: switching to the
+  // 'visualization' panel section can already be true on the very first
+  // render (e.g. the panel restores a prior selection). Seeding the ref from
+  // that same true would make the effect below see no change and skip
+  // initializing mapDraft.
   const mapEditingActiveRef = useRef<boolean | undefined>(undefined);
   useEffect(() => {
-    if (mapEditingActiveRef.current === editing?.mapEditingActive) {
+    if (mapEditingActiveRef.current === editing?.visualizationSelected) {
       return;
     }
-    mapEditingActiveRef.current = editing?.mapEditingActive;
+    mapEditingActiveRef.current = editing?.visualizationSelected;
     setMapDraft(
-      editing?.mapEditingActive
+      editing?.visualizationSelected
         ? mapDraftFromLevelProperties(
             levelProperties?.map,
             levelProperties?.serializedMaze,
@@ -244,7 +244,7 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
     // change while active (see comment above) — including them would
     // re-derive (and discard in-progress paints) on every refetch.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [editing?.mapEditingActive]);
+  }, [editing?.visualizationSelected]);
 
   const handlePaintCell = useCallback(
     (row: number, col: number) => {
@@ -426,6 +426,7 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
           >
             {editing?.authorMode && (
               <WithTooltip
+                tooltipOverlayClassName={moduleStyles.editButtonAnchor}
                 tooltipProps={{
                   text: 'Edit instructions',
                   tooltipId: 'instructions-edit-tooltip',
@@ -454,8 +455,42 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
               authoredHints={levelProperties.authoredHints}
             />
           </Panel>
-          <PanelContainerHeader>Play Area</PanelContainerHeader>
-          <Panel className={moduleStyles.visBox}>
+          <PanelContainerHeader
+            rightHeaderContent={
+              editing?.authorMode && (
+                <WithTooltip
+                  tooltipProps={{
+                    text: 'Edit visualization',
+                    tooltipId: 'visualization-edit-tooltip',
+                    size: 'xs',
+                    direction: 'onTop',
+                  }}
+                >
+                  <Button
+                    size="xs"
+                    type="secondary"
+                    color="gray"
+                    onClick={editing.onVisualizationClick}
+                    ariaLabel="Select visualization"
+                    isIconOnly={true}
+                    icon={{
+                      iconName: 'pen-to-square',
+                      iconStyle: 'solid',
+                    }}
+                  />
+                </WithTooltip>
+              )
+            }
+          >
+            Play Area
+          </PanelContainerHeader>
+          <Panel
+            className={classNames(
+              moduleStyles.visBox,
+              editing?.authorMode && moduleStyles.regionEditable,
+              editing?.visualizationSelected && moduleStyles.regionSelected,
+            )}
+          >
             <Visualization
               className={moduleStyles.visualization}
               ref={svgRef}
@@ -469,7 +504,7 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
               onStep={onStep}
               onFinish={() => {}}
               overlay={
-                editing?.mapEditingActive && mapDraft ? (
+                editing?.visualizationSelected && mapDraft ? (
                   <MapPainter
                     rows={mapDraft.length}
                     cols={mapDraft[0]?.length ?? 0}
@@ -491,6 +526,29 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
             id="workspace-panel"
             rightHeaderContent={
               <div className={moduleStyles.buttons}>
+                {editing?.authorMode && (
+                  <WithTooltip
+                    tooltipProps={{
+                      text: 'Edit workspace',
+                      tooltipId: 'workspace-edit-tooltip',
+                      size: 'xs',
+                      direction: 'onTop',
+                    }}
+                  >
+                    <Button
+                      size="xs"
+                      type="secondary"
+                      color="gray"
+                      onClick={editing.onWorkspaceClick}
+                      ariaLabel="Select workspace"
+                      isIconOnly={true}
+                      icon={{
+                        iconName: 'pen-to-square',
+                        iconStyle: 'solid',
+                      }}
+                    />
+                  </WithTooltip>
+                )}
                 <WithTooltip
                   tooltipProps={{
                     text: 'Settings',
@@ -549,7 +607,13 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
             }
             leftHeaderContent={
               <>
-                <div ref={toolboxHeaderRef}>
+                <div
+                  ref={toolboxHeaderRef}
+                  className={classNames(
+                    editing?.authorMode && moduleStyles.regionEditable,
+                    editing?.toolboxSelected && moduleStyles.regionSelected,
+                  )}
+                >
                   <PanelContainerHeader>Blocks</PanelContainerHeader>
                 </div>
                 <div className={moduleStyles.blockCount}>
@@ -560,10 +624,37 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
                   <span ref={blockCountRef}>0</span>
                   <span>{levelProperties.ideal}</span> Blocks
                 </div>
+                {editing?.authorMode && (
+                  <WithTooltip
+                    tooltipProps={{
+                      text: 'Edit toolbox',
+                      tooltipId: 'toolbox-edit-tooltip',
+                      size: 'xs',
+                      direction: 'onTop',
+                    }}
+                  >
+                    <Button
+                      size="xs"
+                      type="secondary"
+                      color="gray"
+                      onClick={editing.onToolboxClick}
+                      ariaLabel="Select toolbox"
+                      isIconOnly={true}
+                      icon={{
+                        iconName: 'pen-to-square',
+                        iconStyle: 'solid',
+                      }}
+                    />
+                  </WithTooltip>
+                )}
               </>
             }
             headerContent={<WorkspaceHeader />}
-            headerClassName={moduleStyles.headerWithBorder}
+            headerClassName={classNames(
+              moduleStyles.headerWithBorder,
+              editing?.authorMode && moduleStyles.regionEditable,
+              editing?.workspaceSelected && moduleStyles.regionSelected,
+            )}
           >
             <Panel>
               <BlocklyWorkspace

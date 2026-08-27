@@ -198,6 +198,17 @@
   gap: 4px;
 }
 
+.levelRailTitleField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+
+  input[type='text'] {
+    width: 100%;
+  }
+}
+
 /* Solution status/offer (LevelRail, Author Mode Pass D). */
 
 .solutionStatus {
