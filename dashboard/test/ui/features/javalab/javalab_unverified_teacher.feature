@@ -8,4 +8,4 @@ Feature: Javalab Unverified Teacher
     And I wait for the lab page to fully load
     And I dismiss the teacher panel
     When I press "runButton"
-    Then I wait until element ".javalab-console" contains text "you need to become"
+    Then I wait until element ".javalab-console" contains text "To run your code in Java Lab, you need to become"

@@ -583,8 +583,6 @@ class Ability
       # These checks control access to Javabuilder.
       # Only verified instructors, and students assigned to a CSA section with a
       # verified instructor, can generate a Javabuilder session token to run Java code.
-      # Unverified teachers previously got limited access to a separate "demo" javabuilder
-      # stack; that option is off, so they are denied here and Java Lab tells them to get verified.
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.

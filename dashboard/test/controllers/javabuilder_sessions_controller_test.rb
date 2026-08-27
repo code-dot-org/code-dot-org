@@ -312,7 +312,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     assert_equal levelbuilder.id.to_s, teachers_string
   end
 
-  test 'teacher account has correct verified_teachers parameter (supports javalab eval mode)' do
+  test 'verified teacher account has correct verified_teachers parameter' do
     teacher = create(:authorized_teacher)
     sign_in(teacher)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
