@@ -5,6 +5,7 @@
 // console / engine-error reports are handed to the supplied callbacks (the
 // Console/Debugger box wires these in milestone 5).
 
+import type {CheckResult, CheckRun} from '../checks';
 import {
   ASSET_BASE_PARAM,
   FromPreviewMessage,
@@ -90,6 +91,14 @@ export class WorldPreviewManager {
         });
         this.pending.delete(data.id);
         break;
+      case FromPreviewMessage.CHECK_RESULT:
+        this.pending.get(data.id)?.resolve({
+          samples: data.samples,
+          console: data.console,
+          ...(data.error ? {error: data.error} : {}),
+        });
+        this.pending.delete(data.id);
+        break;
       case FromPreviewMessage.CONSOLE:
         this.opts.onConsole?.(data.level, data.args);
         break;
@@ -148,6 +157,33 @@ export class WorldPreviewManager {
     });
     this.iframe.contentWindow?.postMessage(
       {type: ToPreviewMessage.THUMBNAILS, id, moduleUrl, placements},
+      this.sandboxOrigin,
+    );
+    return result;
+  }
+
+  /**
+   * Play a check's script against a fresh world and hand back what the probes
+   * saw (../checks).
+   *
+   * Independent of `load`, exactly as `thumbnails` is: the game the learner is
+   * looking at goes on running, and the check gets a world of its own.
+   */
+  async check(
+    moduleUrl: string,
+    run: CheckRun,
+    assets?: Record<string, string>,
+  ): Promise<CheckResult> {
+    await this.ready;
+    const id = crypto.randomUUID();
+    const result = new Promise<CheckResult>((resolve, reject) => {
+      this.pending.set(id, {
+        resolve: value => resolve(value as CheckResult),
+        reject,
+      });
+    });
+    this.iframe.contentWindow?.postMessage(
+      {type: ToPreviewMessage.CHECK, id, moduleUrl, run, assets},
       this.sandboxOrigin,
     );
     return result;

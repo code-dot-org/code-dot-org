@@ -11,6 +11,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 // in `./lessons`, so that the map does not drag a megabyte of rule workspaces
 // behind it.
 import type {WorldScenario} from '../fixtures/scenarios';
+import type {CheckResult, CheckRun} from '../runtime/checks';
 
 import type {Axial} from './hex';
 
@@ -120,6 +121,20 @@ export interface Check {
    * `shape` check being chosen because it was easy.
    */
   falsePass: string;
+  /**
+   * How to measure it: the script to play and the probes to sample
+   * (`runtime/checks`). Absent until somebody writes it, which is most of them
+   * — `says` is the design, and this is the design carried out.
+   */
+  run?: CheckRun;
+  /**
+   * Whether the samples pass.
+   *
+   * In the LAB, not in the sandbox, and that is the split the whole protocol is
+   * shaped around: the side that runs somebody else's code reports numbers, and
+   * the side that holds the catalogue decides what they mean.
+   */
+  passes?: (result: CheckResult) => boolean;
 }
 
 export interface Tile {

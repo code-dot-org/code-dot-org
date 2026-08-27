@@ -482,8 +482,56 @@ anything depends on it.
    `story/choice` grant them now, and the layout test asserts the coverage in
    both directions so the next gap fails the suite instead of sitting there.
 
-7. **Real completion** — the checks (PROGRESSION.md), and then the studio-level
-   transport and the dashboard work under it.
+7. **Real completion.** The assertion channel is **done**; the checks are
+   started, and the studio-level transport is not.
+
+   **The channel** (`runtime/checks.ts`, `runtime/playCheck.ts`, and a `CHECK` /
+   `CHECK_RESULT` pair on the sandbox protocol). A check travels as DATA: the
+   lab sends a script of inputs and a set of probes, the sandbox builds a fresh
+   world, plays the script on a fixed clock, samples the probes and sends the
+   numbers back. **The sandbox makes no judgement** — whether the numbers pass
+   is decided in the lab, where the catalogue is, which keeps the side that runs
+   somebody else's code as small as it can be and means a wrong check can be
+   corrected without rebuilding anything down there.
+
+   Fresh, through `WorldBuilder.instantiate()` rather than `getWorld()`: the
+   latter memoizes, so a check would otherwise be handed the world the learner
+   has been playing, with their own keypresses in its history.
+
+   Five probes — an actor count, the positions of a kind, how many actors draw
+   anything, which sprites are on screen, a world property — and every one of
+   them is something an existing play-test already asks. A check that needs a
+   sixth is a check to think about again before it is a probe to add: the
+   vocabulary is what keeps the untrusted side small enough to trust.
+
+   **The runner is shared with the tests**, and that is the point of it being
+   its own module. A check tested against a different runner from the one that
+   judges a learner is a check nobody has tested.
+
+   **Three lessons have real checks so far** (`origin/first-world`,
+   `input/arrows`, `motion/gravity`), and two are tested in both directions:
+   they refuse the starter the lesson ships with AND accept a project where the
+   lesson has been done, which no amount of refusing proves on its own. Gravity
+   also has a third case — the Hero elected and the Ground not, so it falls
+   forever — because "falls" and "lands" are two claims and one sample at the
+   end cannot tell them apart.
+
+   Writing that test found **a bug in the lesson**: the Hero was placed at x 160
+   and the floor at 192, and two 32-pixel sprites at those positions overlap by
+   nothing, so it fell past the corner. The lesson had shipped, been played in a
+   browser, and looked right.
+
+   **"Check my work" is offered only for the lesson the lab actually has open**
+   — the dialog reads the loaded channel — because a check measures the open
+   project, and the button on any other tile would measure whatever was on
+   screen and complete the wrong lesson. Marking a tile done by hand stays
+   beside it: a check is evidence, not a gate, and a learner who has plainly
+   done the lesson should not be argued with by a probe.
+
+   Still to do: checks for the other three authored lessons, the trace kind (the
+   channel carries the project's console output and no check reads it yet), and
+   the studio-level transport — which is blocked outside this package entirely,
+   on there being no `World < Level` model in `dashboard/app/models/levels/`.
 
 ## Open questions
 

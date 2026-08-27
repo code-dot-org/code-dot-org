@@ -9,6 +9,8 @@ import {render, screen, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {beforeEach, describe, expect, it} from 'vitest';
 
+import {RootStateProvider} from '@code-dot-org/core/redux';
+
 import {tile} from '../index';
 import {useProgression} from '../progressionContext';
 import {ProgressionProvider} from '../ProgressionProvider';
@@ -29,11 +31,21 @@ const Opener = ({focus}: {focus?: TileId}) => {
   );
 };
 
+/**
+ * The providers the dialog needs around it.
+ *
+ * The redux store because the dialog asks which lesson the lab has loaded
+ * (`state.lab.channel`), which is what decides whether "Check my work" is
+ * offered — a check measures the open project, so it may only be offered for
+ * the tile that project belongs to.
+ */
 const lab = (props: {focus?: TileId; done?: TileId[]} = {}) =>
   render(
-    <ProgressionProvider initiallyCompleted={props.done ?? []}>
-      <Opener focus={props.focus} />
-    </ProgressionProvider>,
+    <RootStateProvider>
+      <ProgressionProvider initiallyCompleted={props.done ?? []}>
+        <Opener focus={props.focus} />
+      </ProgressionProvider>
+    </RootStateProvider>,
   );
 
 const dialog = () => screen.getByRole('dialog');

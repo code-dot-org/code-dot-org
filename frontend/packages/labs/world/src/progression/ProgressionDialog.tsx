@@ -14,8 +14,10 @@ import {useCallback, useEffect, useState} from 'react';
 
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {useAppSelector} from '@code-dot-org/lab/redux';
 
 import {TILES} from './catalogue';
+import {lessonChannel} from './lessonRoute';
 import {useProgression} from './progressionContext';
 import styles from './progressionDialog.module.css';
 import {ProgressionList} from './ProgressionList';
@@ -43,6 +45,12 @@ export const ProgressionDialog = ({
     initialSelection,
   );
   const [view, setView] = useState<View>('map');
+  // WHICH LESSON IS ACTUALLY OPEN. A check measures the project the lab has
+  // loaded, so it may only be offered for the tile that project belongs to —
+  // otherwise "Check my work" on any tile would measure whatever happened to be
+  // on screen and complete the wrong lesson.
+  const channel = useAppSelector(state => state.lab.channel?.id);
+  const current = TILES.find(t => lessonChannel(t.id) === channel)?.id;
   // What was announced last, for the polite live region below. A completion is
   // an event a keyboard or screen-reader user has no other way to notice: the
   // tile it opened is somewhere else on the map.
@@ -131,6 +139,7 @@ export const ProgressionDialog = ({
               tile={tile}
               state={stateOf(tile.id)}
               stateOf={stateOf}
+              isOpenLesson={tile.id === current}
               onGoTo={setSelected}
               onComplete={onComplete}
             />
@@ -144,7 +153,17 @@ export const ProgressionDialog = ({
 
         {/* Polite, and outside the panes, so moving around the map never
             interrupts a reader — only a completion speaks. */}
-        <p aria-live="polite" className={styles.announcement}>
+        <p
+          // `role="status"` rather than a bare `aria-live`: the role IS polite,
+          // and it is what makes the label legal — axe rejects `aria-label` on
+          // a `<p>` with no role, which is how this was found.
+          role="status"
+          // Named, because there are two live regions in this dialog — the
+          // other is the visible verdict on a check — and a reader arriving at
+          // one should be told which.
+          aria-label="Progression updates"
+          className={styles.announcement}
+        >
           {announcement}
         </p>
       </div>

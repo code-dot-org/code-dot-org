@@ -19,6 +19,7 @@ import {levelPropertiesFor} from './lessons';
 import styles from './progressionDialog.module.css';
 import {region} from './regions';
 import type {Tile, TileId, TileState, Unlock} from './types';
+import {useCheck} from './useCheck';
 
 import {TILES_BY_ID} from './index';
 
@@ -28,8 +29,16 @@ export interface TileDetailProps {
   stateOf: (id: TileId) => TileState;
   /** Jump the map to another tile — used by the prerequisite list. */
   onGoTo: (id: TileId) => void;
-  /** Milestone 4 replaces this with a check that watches the running game. */
+  /** Mark it done by hand — the fallback for a lesson with no check written. */
   onComplete: (id: TileId) => void;
+  /**
+   * Whether the project the lab has loaded IS this lesson.
+   *
+   * A check measures the open project, so it can only be offered here — "Check
+   * my work" on some other tile would measure whatever is on screen and
+   * complete the wrong lesson.
+   */
+  isOpenLesson?: boolean;
 }
 
 export const TileDetail = ({
@@ -38,9 +47,12 @@ export const TileDetail = ({
   stateOf,
   onGoTo,
   onComplete,
+  isOpenLesson = false,
 }: TileDetailProps) => {
   const properties = levelPropertiesFor(tile.id);
   const instructions = properties?.longInstructions ?? previewMarkdown(tile);
+  const checker = useCheck();
+  const checkable = isOpenLesson && checker.canCheck(tile.id);
 
   return (
     <div className={styles.detail}>
@@ -109,6 +121,20 @@ export const TileDetail = ({
             {state === 'done' ? 'Do it again' : 'Start'}
           </a>
         )}
+        {/* The real thing, when this lesson is the one open and somebody has
+            written its script (../runtime/checks). Marking it done by hand
+            stays beside it: a check is evidence, not a gate, and a learner who
+            has plainly done the lesson should not be argued with by a probe. */}
+        {checkable && (
+          <button
+            type="button"
+            className={styles.primary}
+            disabled={checker.state.status === 'running'}
+            onClick={() => void checker.run(tile.id)}
+          >
+            {checker.state.status === 'running' ? 'Checking…' : 'Check my work'}
+          </button>
+        )}
         <button
           type="button"
           className={styles.secondary}
@@ -123,6 +149,17 @@ export const TileDetail = ({
           </p>
         )}
       </div>
+      {/* Said out loud, because a check's result is the whole reason somebody
+          pressed the button and the button itself does not change. */}
+      <p role="status" aria-label="Check result" className={styles.verdict}>
+        {checker.state.status === 'passed' && 'That works. Lesson done.'}
+        {checker.state.status === 'failed' &&
+          `Not yet: the check looked for — ${tile.check.says}${
+            checker.state.because
+              ? ` The world said: ${checker.state.because}`
+              : ''
+          }`}
+      </p>
     </div>
   );
 };

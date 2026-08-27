@@ -15,6 +15,7 @@ import type {
   WorldSnapshot,
 } from 'world-lab';
 
+import type {CheckResult} from '../checks';
 import {drawingThumbnail, frameThumbnail} from '../driver/frameThumbnail';
 import {PhaserBinding} from '../driver/PhaserBinding';
 import {reconcile} from '../driver/reconcile';
@@ -24,12 +25,14 @@ import {
   PARENT_ORIGIN_PARAM,
   ToPreviewMessage,
   type ActorSchema,
+  type CheckMessage,
   type LoadMessage,
   type PlacementRequest,
   type PropertySchema,
   type ReloadMode,
   type ToPreview,
 } from '../messages';
+import {playCheck} from '../playCheck';
 
 // Properties the engine models but the editor defers: applied by the engine yet
 // not by the Phaser driver, so a field would be inert. Empty now that the driver
@@ -196,6 +199,8 @@ export async function start(): Promise<void> {
       void load(data);
     } else if (data?.type === ToPreviewMessage.THUMBNAILS) {
       void sendThumbnails(data.id, data.moduleUrl, data.placements);
+    } else if (data?.type === ToPreviewMessage.CHECK) {
+      void runCheck(data);
     } else if (data?.type === ToPreviewMessage.STOP) {
       binding?.stop();
       binding = null;
@@ -215,6 +220,62 @@ export async function start(): Promise<void> {
       }
     }
   });
+
+  /**
+   * Play a check's script against a FRESH world and report what the probes saw.
+   *
+   * Fresh, through `instantiate()` rather than `getWorld()`: the latter
+   * memoizes, so a check would otherwise be handed the world the learner has
+   * been playing, with their own keypresses already in its history and its
+   * actors wherever they left them.
+   *
+   * NO JUDGEMENT HERE. The probes report numbers and the lab decides what they
+   * mean (../checks) — which keeps this side, the side that runs somebody
+   * else's code, as small as it can be.
+   */
+  async function runCheck({id, moduleUrl, assets, run}: CheckMessage) {
+    const said: string[] = [];
+    let result: CheckResult = {samples: {}, console: []};
+
+    // The project's own `console.log` is evidence — several checks watch for a
+    // word (specs/PROGRESSION.md) — and it must not also reach the lab's
+    // console panel, where it would read as output from the game the learner is
+    // looking at.
+    const realLog = console.log;
+    console.log = (...args: unknown[]) => {
+      said.push(args.map(String).join(' '));
+    };
+    try {
+      lastAssets = assets ?? lastAssets;
+      const mod: {default?: WorldBuilder} = await import(
+        /* @vite-ignore */ moduleUrl
+      );
+      const builder = mod.default;
+      if (!builder || typeof builder.instantiate !== 'function') {
+        throw new Error('entry module does not build a world');
+      }
+      // FRESH, through `instantiate()` rather than `getWorld()`: the latter
+      // memoizes, so a check would otherwise be handed the world the learner
+      // has been playing, with their own keypresses already in its history and
+      // its actors wherever they left them.
+      result = playCheck(builder.instantiate(), run);
+    } catch (thrown) {
+      result = {
+        samples: {},
+        console: [],
+        error: thrown instanceof Error ? thrown.message : String(thrown),
+      };
+    } finally {
+      console.log = realLog;
+    }
+
+    post({
+      type: FromPreviewMessage.CHECK_RESULT,
+      id,
+      ...result,
+      console: said,
+    });
+  }
 
   /**
    * Render each actor a thumbnail-manifest module lists to a data URL. Builds a

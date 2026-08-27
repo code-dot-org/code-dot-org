@@ -192,6 +192,15 @@
   opacity: 0.55;
 }
 
+.verdict {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.verdict:empty {
+  margin: 0;
+}
+
 .empty {
   padding: 20px 18px;
   font-size: 14px;

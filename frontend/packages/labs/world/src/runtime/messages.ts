@@ -8,6 +8,8 @@
 // ── URL params (set on an iframe `src`, never postMessage'd) ─────────────────
 
 /** The lab's origin, forwarded so the sandbox knows whom to trust. */
+import type {CheckResult, CheckRun} from './checks';
+
 export const PARENT_ORIGIN_PARAM = 'parentOrigin';
 /** Origin-relative base for the self-hosted esbuild-wasm / Phaser assets. */
 export const ASSET_BASE_PARAM = 'assetBase';
@@ -91,6 +93,8 @@ export type FromCompile =
 // ── Lab → preview surface ────────────────────────────────────────────────────
 
 export const ToPreviewMessage = {
+  /** Play a check's script against a fresh world and report the samples. */
+  CHECK: 'check',
   LOAD: 'load',
   STOP: 'stop',
   COLORS: 'colors',
@@ -153,7 +157,25 @@ export interface PlacementRequest {
   properties: Record<string, Record<string, unknown>>;
 }
 
+/**
+ * Run a check (../checks).
+ *
+ * A FRESH world, built from the same module the game is running but through
+ * `instantiate()` rather than `getWorld()` — the latter memoizes, so a check
+ * asking for a world would otherwise be handed the one mid-play, with the
+ * learner's own keypresses already in its history.
+ */
+export interface CheckMessage {
+  type: typeof ToPreviewMessage.CHECK;
+  id: string;
+  moduleUrl: string;
+  /** The uploaded images, as `load` sends them — a world may draw them. */
+  assets?: Record<string, string>;
+  run: CheckRun;
+}
+
 export type ToPreview =
+  | CheckMessage
   | LoadMessage
   | StopMessage
   | ColorsMessage
@@ -162,6 +184,7 @@ export type ToPreview =
 // ── Preview surface → lab ────────────────────────────────────────────────────
 
 export const FromPreviewMessage = {
+  CHECK_RESULT: 'check_result',
   READY: 'preview_ready',
   BUILT: 'built',
   CONSOLE: 'console',
@@ -281,7 +304,14 @@ export interface ThumbnailsReadyMessage {
   placements: Record<string, string>;
 }
 
+/** The samples a check produced, for the lab to judge. */
+export interface CheckResultMessage extends CheckResult {
+  type: typeof FromPreviewMessage.CHECK_RESULT;
+  id: string;
+}
+
 export type FromPreview =
+  | CheckResultMessage
   | PreviewReadyMessage
   | BuiltMessage
   | ConsoleMessage

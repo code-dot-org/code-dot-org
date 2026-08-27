@@ -4,12 +4,24 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {describe, expect, it, vi} from 'vitest';
 
+import {RootStateProvider} from '@code-dot-org/core/redux';
+
 import {LessonLink} from '../LessonLink';
 import {ProgressionProvider} from '../ProgressionProvider';
 
+/**
+ * The providers the dialog needs around it.
+ *
+ * The redux store because the dialog asks which lesson the lab has loaded
+ * (`state.lab.channel`), which is what decides whether "Check my work" is
+ * offered — a check measures the open project, so it may only be offered for
+ * the tile that project belongs to.
+ */
 const inLab = (node: React.ReactNode) =>
   render(
-    <ProgressionProvider initiallyCompleted={[]}>{node}</ProgressionProvider>,
+    <RootStateProvider>
+      <ProgressionProvider initiallyCompleted={[]}>{node}</ProgressionProvider>
+    </RootStateProvider>,
   );
 
 describe('a lesson link', () => {
@@ -54,7 +66,9 @@ describe('a lesson link', () => {
   // that threw there would have made the dialogs untestable in isolation.
   it('draws nothing outside the lab', () => {
     const {container} = render(
-      <LessonLink unlock={{kind: 'rule', id: 'gravity'}} />,
+      <RootStateProvider>
+        <LessonLink unlock={{kind: 'rule', id: 'gravity'}} />
+      </RootStateProvider>,
     );
     expect(container).toBeEmptyDOMElement();
   });

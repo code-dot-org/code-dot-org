@@ -16,6 +16,8 @@ import userEvent from '@testing-library/user-event';
 import {describe, expect, it} from 'vitest';
 import {axe} from 'vitest-axe';
 
+import {RootStateProvider} from '@code-dot-org/core/redux';
+
 import {TILES} from '../catalogue';
 import {tile} from '../index';
 import {useProgression} from '../progressionContext';
@@ -33,9 +35,11 @@ const Opener = ({focus}: {focus?: TileId}) => {
 
 const open = async (focus?: TileId, done: TileId[] = []) => {
   render(
-    <ProgressionProvider initiallyCompleted={done}>
-      <Opener focus={focus} />
-    </ProgressionProvider>,
+    <RootStateProvider>
+      <ProgressionProvider initiallyCompleted={done}>
+        <Opener focus={focus} />
+      </ProgressionProvider>
+    </RootStateProvider>,
   );
   await userEvent.click(screen.getByRole('button', {name: 'open'}));
 };
@@ -51,21 +55,27 @@ const audit = () =>
   axe(document.body, {rules: {'color-contrast': {enabled: false}}});
 
 describe('the progression dialog', () => {
-  it('has no axe violations showing the map', async () => {
+  // Longer than the default: axe walks the whole dialog, which is sixty-seven
+  // options and a reading pane, and does it in jsdom.
+  it('has no axe violations showing the map', {timeout: 20_000}, async () => {
     await open('motion/gravity', ['origin/first-world']);
     expect(await audit()).toHaveNoViolations();
   });
 
-  it('has no axe violations showing the list', async () => {
+  it('has no axe violations showing the list', {timeout: 20_000}, async () => {
     await open('motion/gravity', ['origin/first-world']);
     await show('List');
     expect(await audit()).toHaveNoViolations();
   });
 
-  it('has no axe violations before a tile is chosen', async () => {
-    await open();
-    expect(await audit()).toHaveNoViolations();
-  });
+  it(
+    'has no axe violations before a tile is chosen',
+    {timeout: 20_000},
+    async () => {
+      await open();
+      expect(await audit()).toHaveNoViolations();
+    },
+  );
 });
 
 describe('the list', () => {
@@ -130,9 +140,9 @@ describe('finishing a lesson', () => {
       within(detail).getByRole('button', {name: 'Mark as done'}),
     );
 
-    const live = document.querySelector('[aria-live="polite"]');
-    expect(live?.textContent).toContain('First light marked as done');
-    expect(live?.textContent).toContain('now ready to start');
+    const live = screen.getByRole('status', {name: 'Progression updates'});
+    expect(live.textContent).toContain('First light marked as done');
+    expect(live.textContent).toContain('now ready to start');
   });
 
   it('says nothing when nothing opened', async () => {
@@ -146,8 +156,8 @@ describe('finishing a lesson', () => {
       within(detail).getByRole('button', {name: 'Mark as done'}),
     );
 
-    const live = document.querySelector('[aria-live="polite"]');
-    expect(live?.textContent).toContain('A key is an event marked as done');
-    expect(live?.textContent).not.toContain('ready to start');
+    const live = screen.getByRole('status', {name: 'Progression updates'});
+    expect(live.textContent).toContain('A key is an event marked as done');
+    expect(live.textContent).not.toContain('ready to start');
   });
 });

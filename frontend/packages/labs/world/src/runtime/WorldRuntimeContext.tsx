@@ -33,6 +33,7 @@ import {
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
 import {ENTRY_FILE} from '../constants';
 
+import type {CheckResult, CheckRun} from './checks';
 import {collapseConsole, type ConsoleLine} from './consoleCollapse';
 import {createGeneratedFileCache} from './generatedFiles';
 import {projectImageSizes} from './imageSize';
@@ -88,6 +89,15 @@ interface WorldRuntimeValue {
     worldPath: string,
     placements?: readonly PlacementRequest[],
   ) => Promise<ActorInfo>;
+  /**
+   * Run a check against the project as it stands (./checks).
+   *
+   * Compiles the project fresh and plays the script in a world of its own, so
+   * the game the learner is looking at is untouched. Returns what the probes
+   * saw; whether that passes is the caller's to decide, which is the split the
+   * check protocol exists to keep.
+   */
+  runCheck: (run: CheckRun) => Promise<CheckResult>;
   /**
    * The project as JAVASCRIPT — every Blockly file replaced by what it
    * generates, every other file as it is.
@@ -503,6 +513,44 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     return pair.preview.thumbnails(moduleUrl, placements);
   };
 
+  /**
+   * Compile the project and play a check's script against it.
+   *
+   * Its own compile rather than the running game's module, and deliberately:
+   * the check has to measure the project as it is NOW, and the running module
+   * may be several edits behind if the learner has not run it since.
+   */
+  const runCheck = async (run: CheckRun): Promise<CheckResult> => {
+    const pair = managers.current;
+    if (!pair) {
+      return {samples: {}, console: [], error: 'no sandbox'};
+    }
+    let files: Record<string, string>;
+    try {
+      const source = sourcesRef.current.source;
+      refreshProjectDropdowns(
+        projectFiles(source),
+        projectImagePaths(source),
+        sizesRef.current,
+        projectSoundPaths(source),
+      );
+      files = generateBlocklyFiles(projectFiles(source));
+    } catch (thrown) {
+      // A project that does not generate has failed its check, and saying so
+      // is more use than a thrown promise nobody is catching.
+      return {
+        samples: {},
+        console: [],
+        error: thrown instanceof Error ? thrown.message : String(thrown),
+      };
+    }
+    const [moduleUrl, assets] = await Promise.all([
+      pair.compile.compile(files, ENTRY_FILE),
+      projectAssets(sourcesRef.current.source),
+    ]);
+    return pair.preview.check(moduleUrl, run, assets);
+  };
+
   const value: WorldRuntimeValue = {
     isConfigured: Boolean(sandboxUrl),
     previewIframe,
@@ -513,6 +561,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     restart,
     setPreviewColors: (background, border) =>
       void managers.current?.preview.setColors(background, border),
+    runCheck,
     getActorInfo,
     generatedProject: generateBlocklyFiles,
     generateFile: (contents: string, path: string) => {
@@ -541,6 +590,17 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       {children}
     </WorldRuntimeContext.Provider>
   );
+}
+
+/**
+ * The runtime if there is one, and nothing if there is not.
+ *
+ * For components that render both inside the lab and outside it — the
+ * progression modal, which has tests of its own that mount it alone, and which
+ * offers to run a check only when there is something to run it in.
+ */
+export function useMaybeWorldRuntime(): WorldRuntimeValue | undefined {
+  return useContext(WorldRuntimeContext) ?? undefined;
 }
 
 export function useWorldRuntime(): WorldRuntimeValue {

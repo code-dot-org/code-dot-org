@@ -79,6 +79,14 @@ export const TILES: readonly Tile[] = [
       says: 'The built world holds two actors, and both draw a sprite.',
       falsePass:
         'Copying the given actor and never moving it — which is most of the lesson done, so it is an acceptable one.',
+      run: {
+        probes: {actors: {kind: 'actorCount'}, drawn: {kind: 'drawnCount'}},
+        // A tenth of a second rather than nothing: a world places its actors
+        // when it is built, and the first tick is what settles them.
+        trace: [{seconds: 0.1}],
+      },
+      passes: ({samples}) =>
+        last(samples.actors) >= 2 && last(samples.drawn) >= 2,
     },
   },
 
@@ -97,6 +105,24 @@ export const TILES: readonly Tile[] = [
       says: 'With right held for a second the actor’s x rises; with down held, its y.',
       falsePass:
         'Moving the actor with a per-frame `set position` instead of the trait — caught by also asserting the workspace has no `each frame`.',
+      run: {
+        probes: {hero: {kind: 'positions', of: 'Hero'}},
+        trace: [
+          {hold: ['ArrowRight'], seconds: 1},
+          {hold: ['ArrowDown'], seconds: 1},
+        ],
+      },
+      // Both axes, and each measured over its own stretch of the script: a
+      // trait that moves across and one that moves down are separate elections,
+      // and the lesson asks for both.
+      passes: ({samples}) => {
+        const [start, afterRight, afterDown] = samples.hero as Point[][];
+        return (
+          start?.[0] !== undefined &&
+          afterRight[0].x > start[0].x + 20 &&
+          afterDown[0].y > afterRight[0].y + 20
+        );
+      },
     },
   },
   {
@@ -183,6 +209,22 @@ export const TILES: readonly Tile[] = [
       says: 'The actor’s y rises and then holds at the ground, and "stops falling" fires once.',
       falsePass:
         'Ground placed so the actor starts on it and never falls. The trace starts the actor in the air.',
+      run: {
+        probes: {hero: {kind: 'positions', of: 'Hero'}},
+        // Three samples: where it starts, where it is mid-fall, and where it
+        // has come to rest. Falling and LANDING are two different claims, and
+        // one sample at the end cannot tell them apart from never having moved.
+        trace: [{seconds: 0.4}, {seconds: 1.6}],
+      },
+      passes: ({samples}) => {
+        const [start, falling, landed] = samples.hero as Point[][];
+        if (!start?.[0]) {
+          return false;
+        }
+        const fell = falling[0].y > start[0].y + 10;
+        const stopped = Math.abs(landed[0].y - falling[0].y) < 200;
+        return fell && stopped && landed[0].y > start[0].y;
+      },
     },
   },
   {
@@ -1328,3 +1370,15 @@ export const TILES: readonly Tile[] = [
     },
   },
 ];
+
+/** A point, as a `positions` probe reports one. */
+interface Point {
+  x: number;
+  y: number;
+}
+
+/** The last sample a probe took — where the world ended up. */
+const last = (samples: unknown[] | undefined): number =>
+  typeof samples?.[samples.length - 1] === 'number'
+    ? (samples[samples.length - 1] as number)
+    : -1;

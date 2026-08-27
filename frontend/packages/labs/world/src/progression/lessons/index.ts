@@ -189,7 +189,10 @@ const gravity: WorldScenario = {
       name: 'My World',
       tiles: SCREEN,
       rows: [
-        addActor('hero', [placeAt(160, 40)]),
+        // Directly above the ground, and that is not decoration: at x 160 and
+        // 192 the two 32-pixel sprites overlap by nothing at all, and the Hero
+        // falls past the corner of the floor. The lesson's check found it.
+        addActor('hero', [placeAt(192, 40)]),
         addActor('ground', [placeAt(192, 260)]),
       ],
     }),
