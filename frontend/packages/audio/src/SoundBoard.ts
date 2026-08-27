@@ -61,6 +61,19 @@ class SoundBoard {
   }
 
   /**
+   * Closes the underlying AudioContext, releasing its resources. Call this
+   * when the SoundBoard itself is being torn down; the instance is unusable
+   * afterward.
+   */
+  close() {
+    if (this.audioContext && this.audioContext.state !== 'closed') {
+      // AudioContext#close() returns a promise; nothing to await here since
+      // the caller is tearing down synchronously.
+      this.audioContext.close().catch(() => {});
+    }
+  }
+
+  /**
    * Plays the given registered sound.
    */
   play(id: string, options?: PlaybackOptions) {

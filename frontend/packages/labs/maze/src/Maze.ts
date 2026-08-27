@@ -168,6 +168,10 @@ class Maze extends EventTarget {
     this.controller?.reset(false);
     this.controller?.destroy?.();
     this.soundBoard.stopAllAudio();
+    // Each re-init constructs a fresh SoundBoard (and thus a fresh
+    // AudioContext, see constructor above); close it here or every map
+    // repaint leaks one.
+    this.soundBoard.close();
 
     // Remove contents from svg
     this.svg.innerHTML = '';
