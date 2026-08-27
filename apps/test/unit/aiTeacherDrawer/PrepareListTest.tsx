@@ -14,7 +14,7 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: jest.fn(),
 }));
 
-jest.mock('@cdo/apps/aiDifferentiation/redux', () => ({
+jest.mock('@cdo/apps/aiTeacherDrawer/redux', () => ({
   fetchThreadMessages: jest.fn(args => ({type: 'fetchThreadMessages', args})),
 }));
 

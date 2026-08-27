@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q6-2026'
+
+wrong "Linear regression makes predictions about a line's slope and intercept"
+wrong 'Linear regression uses training data values that all fall on the same line'
+wrong 'Linear regression converts each piece of training data into a line'
+right 'Linear regression uses a straight line to make predictions'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following accurately describes linear regression?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Building Regression Models
+MARKDOWN

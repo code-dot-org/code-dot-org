@@ -335,6 +335,29 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       end
     end
 
+    context 'when ID range contains fewer records than batch size' do
+      let(:scan_size) {project_storages.second.id - project_storages.first.id + 1}
+      let(:job_args) {{scan_size:}}
+      let(:project_storages_total) {3}
+      let(:projects_per_storage) {1}
+
+      let!(:existing_geo) {create(:project_storage_geo, project_storage: project_storages.second)}
+
+      before do
+        described_class.storage_id_cursor = project_storages.first.id.pred
+      end
+
+      it 'continues scanning after the end of the partially filled range' do
+        queries = capture_queries(capture_filters: [/missing_project_storage_geos/]) {perform_job}
+        storage_queries = queries.grep(/FROM `user_project_storage_ids`/)
+
+        _(storage_queries.length).must_equal 2
+        _(storage_queries.first).must_match /`id` >= #{project_storages.first.id}.*`id` <= #{project_storages.second.id}/
+        _(storage_queries.second).must_match /`id` >= #{project_storages.second.id.next}.*`id` <= #{project_storages.last.id}/
+        _(ProjectStorage::Geo.where(project_storage: project_storages.values_at(0, 2)).count).must_equal 2
+      end
+    end
+
     context 'when result contains fewer records than requested batch size' do
       let(:job_args) {{limit: 2}}
 

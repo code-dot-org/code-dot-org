@@ -9,6 +9,13 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
+import {
+  backgroundFrame,
+  cameraFocus,
+  clampZoom,
+  stepZoom,
+  worldPoint,
+} from './camera';
 import {trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
@@ -16,7 +23,7 @@ import {
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
 } from './platformPhysics';
-import {CELL_SIZE} from './world';
+import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
 
@@ -30,6 +37,10 @@ const STORY_SCENE_SPRITE_SIZE = 300;
 // Play tab, so stock density paints ~2x2 blocks per canvas pixel.
 // Coordinates stay 400-based.
 const CANVAS_DENSITY_FACTOR = 2;
+
+// How long a restart quiets further restarts: long enough to see the scene
+// run again before another collision can end it.
+const RESTART_QUIET_MS = 1000;
 
 // Markers in a scene's compiled program that make it a platformer: the
 // platform composites and player setup from the toolbox, or the world
@@ -93,6 +104,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // re-runs).
     this.onGoToScene = null;
     this.onGoToExternalScene = null;
+    this.onRestartScene = null;
+    // When the last restart fired, for the quiet window above.
+    this.lastRestartAt_ = 0;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -108,6 +122,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
+    // Set when the zoomed draw loop has already resolved this frame.
+    this.physicsResolvedThisFrame_ = false;
   }
 
   /**
@@ -120,26 +136,43 @@ export default class SpriteLab2Engine extends SpriteLab {
     const library = super.createLibrary(args);
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
     // classic's ~400px library art: resize once to the canvas's physical
-    // resolution instead of CoreLibrary's logical 400.
-    library.drawBackground = function () {
+    // resolution instead of CoreLibrary's logical 400. A frame (from the
+    // zoomed platform draw loop) draws into that rectangle instead, straight
+    // from the stored resolution — a zoomed-in view needs the extra pixels a
+    // one-time downsize would destroy.
+    library.drawBackground = function (frame) {
       if (typeof this.background === 'string') {
         this.p5.background(this.background);
       } else {
         this.p5.background('white');
       }
-      if (typeof this.background === 'object') {
-        const size = APP_WIDTH * (this.p5._pixelDensity || 1);
-        if (this.background.width !== size || this.background.height !== size) {
-          this.background.resize(size, size);
-        }
-        this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
+      if (typeof this.background !== 'object') {
+        return;
       }
+      if (frame) {
+        this.p5.image(
+          this.background,
+          frame.x,
+          frame.y,
+          frame.size,
+          frame.size
+        );
+        return;
+      }
+      const size = APP_WIDTH * (this.p5._pixelDensity || 1);
+      if (this.background.width !== size || this.background.height !== size) {
+        this.background.resize(size, size);
+      }
+      this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
     };
     if (this.usesPlatformPhysics_) {
       // Sized per SCENE, not per level: one project holds both a platformer
       // scene (one-cell sprites) and a story scene (large characters).
+      // One cell at the default playfield size. A scene with a world
+      // overrides this from the prelude with its own cell size, and the
+      // grid blocks size their sprites from their own bitmaps.
       library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
-        ? CELL_SIZE
+        ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
       // Landings carry sub-pixel float noise; footing checks must not
       // compare contact exactly.
@@ -152,6 +185,19 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
     };
+    // The view eases toward the target zoom a frame at a time (see the
+    // platform draw loop below); a fresh run starts back at 1.
+    this.cameraZoom_ = 1;
+    this.cameraZoomTarget_ = 1;
+    // Not reset per run: a restart re-runs the program, and zeroing this here
+    // would let the next frame restart again immediately.
+    this.lastRestartAt_ = this.lastRestartAt_ || 0;
+    library.commands.setCameraZoom = value => {
+      this.cameraZoomTarget_ = clampZoom(Number(value));
+    };
+    if (this.usesPlatformPhysics_) {
+      this.installZoomedDrawLoop_(library);
+    }
     // Move existing sprites (e.g. world-placed ones) into the players
     // group; the per-frame resolver picks them up from there.
     library.commands.setPlatformPlayer = spriteArg => {
@@ -185,6 +231,20 @@ export default class SpriteLab2Engine extends SpriteLab {
       const id = String(sceneId);
       // Defer a tick: jumping tears down the interpreter this command runs in.
       setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
+    };
+    // Through the jump gate, for its cover and fade. The quiet window is
+    // what keeps a condition that still holds on the next frame from
+    // restarting at frame rate.
+    library.commands.restartScene = () => {
+      const now = Date.now();
+      if (now - this.lastRestartAt_ < RESTART_QUIET_MS) {
+        return;
+      }
+      if (!this.onRestartScene || !this.beginSceneJump_()) {
+        return;
+      }
+      this.lastRestartAt_ = now;
+      setTimeout(() => this.onRestartScene && this.onRestartScene(), 0);
     };
     library.commands.goToExternalScene = sceneKey => {
       if (!this.onGoToExternalScene || !this.beginSceneJump_()) {
@@ -483,6 +543,65 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
   }
 
+  /**
+   * CoreLibrary's draw loop with the set-zoom camera folded in (platform
+   * levels only; the stock loop runs elsewhere). Zoom is render-only: sprites
+   * keep world coordinates and the physics keeps the canvas-sized world.
+   *
+   * p5.play activates its camera around the whole draw cycle (identity until
+   * a set-zoom block runs). The pre-draw hook pushed last frame's transform,
+   * so the loop re-pushes with this frame's values, splitting the frame into
+   * a screen-space background pass (its own harder zoom and half-rate pan —
+   * the parallax), a camera pass for world content (sprites and their speech
+   * bubbles), and a screen-space HUD pass (variable bubbles, effects, title).
+   */
+  installZoomedDrawLoop_(library) {
+    const engine = this;
+    library.commands.executeDrawLoopAndCallbacks = function () {
+      const p5 = this.p5;
+      const camera = p5.camera;
+      engine.cameraZoom_ = stepZoom(
+        engine.cameraZoom_,
+        engine.cameraZoomTarget_
+      );
+      const zoom = engine.cameraZoom_;
+      // p5.play's own mouse translation ignores zoom. From last frame's
+      // camera, as p5.play's own hook does.
+      const mouse = worldPoint({x: p5.mouseX, y: p5.mouseY}, zoom, {
+        x: camera.position.x,
+        y: camera.position.y,
+      });
+      camera.mouseX = mouse.x;
+      camera.mouseY = mouse.y;
+      this.runBehaviors();
+      this.runEvents();
+      // Resolve before framing the shot: mid-fall the player is still inside
+      // the platform it is about to land on, and framing that position paints
+      // the scene a few pixels out for one frame.
+      engine.resolvePlatformPhysics_();
+      engine.physicsResolvedThisFrame_ = true;
+      const player = this.getSpriteArray({group: 'players'})[0];
+      const focus = cameraFocus(zoom, player ? player.position : null);
+      camera.off();
+      this.drawBackground(backgroundFrame(zoom, focus));
+      camera.zoom = zoom;
+      camera.position.x = focus.x;
+      camera.position.y = focus.y;
+      camera.on();
+      p5.drawSprites();
+      this.drawSpeechBubbles();
+      camera.off();
+      this.drawVariableBubbles();
+      if (!this.isPreviewFrame()) {
+        this.foregroundEffects.forEach(effect => effect.func());
+      }
+      if (this.screenText.title || this.screenText.subtitle) {
+        this.commands.drawTitle.apply(this);
+      }
+      this.commands.drawStoryLabText.apply(this);
+    };
+  }
+
   // Platformer physics for players (see platformPhysics.ts for the rules),
   // run immediately before every paint — after p5's pre-phase velocity
   // integration and after this frame's behaviors/events have moved
@@ -530,7 +649,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     p5.__slab2ResolvesBeforePaint = true;
     const paint = p5.drawSprites.bind(p5);
     p5.drawSprites = (...args) => {
-      this.resolvePlatformPhysics_();
+      // The zoomed loop resolves earlier, to frame the shot on where sprites
+      // end up.
+      if (!this.physicsResolvedThisFrame_) {
+        this.resolvePlatformPhysics_();
+      }
+      this.physicsResolvedThisFrame_ = false;
       return paint(...args);
     };
   }

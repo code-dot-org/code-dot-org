@@ -293,4 +293,64 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
 )
     assert trusted.valid?
   end
+
+  test 'find_by_exact_credential returns the option matching byte-for-byte' do
+    option = create(:authentication_option,
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: '2222|Abc-01'
+    )
+
+    assert_equal option, AuthenticationOption.find_by_exact_credential(
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: '2222|Abc-01'
+    )
+  end
+
+  test 'find_by_exact_credential treats a case-variant id as no match and reports it' do
+    create(:authentication_option,
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: '2222|Abc-01'
+    )
+
+    # The collation-backed lookup would match this id; the byte-exact confirm must not.
+    Observability::Errors.expects(:capture_message).once
+    assert_nil AuthenticationOption.find_by_exact_credential(
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: '2222|ABC-01'
+    )
+  end
+
+  test 'find_by_exact_credential resolves coexisting case-variant ids to their own records' do
+    # The uniqueness validation compares BINARY and the unique index does not
+    # constrain active rows (deleted_at is NULL), so case-variant ids can
+    # legitimately coexist; each lookup must find its own row.
+    lower = create(:authentication_option,
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: '2222|abc-01'
+    )
+    upper = create(:authentication_option,
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: '2222|ABC-01'
+    )
+
+    assert_equal lower, AuthenticationOption.find_by_exact_credential(
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: '2222|abc-01'
+    )
+    assert_equal upper, AuthenticationOption.find_by_exact_credential(
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: '2222|ABC-01'
+    )
+  end
+
+  test 'find_by_exact_credential returns nil for a blank id' do
+    assert_nil AuthenticationOption.find_by_exact_credential(
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: nil
+    )
+    assert_nil AuthenticationOption.find_by_exact_credential(
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: ''
+    )
+  end
 end

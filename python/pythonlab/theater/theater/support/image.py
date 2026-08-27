@@ -67,9 +67,22 @@ class Image:
     return self._pil
 
 
+def fit_to_width(source_width, source_height, width):
+  """Scale (source_width, source_height) to the given width, in whole pixels.
+
+  The call-time size check and the renderer's resize must agree on the height a
+  size= draw yields, so both derive it here.
+  """
+  width = int(round(width))
+  if source_width == 0:
+    # No aspect ratio to preserve, and nothing to divide by.
+    return width, 0
+  return width, int(round(source_height * (width / source_width)))
+
+
 def _check_dimensions(width, height):
-  if width < 0 or height < 0:
-    raise ValueError("An image's width and height cannot be negative")
+  if width < 1 or height < 1:
+    raise ValueError("An image's width and height must be at least 1")
   if width * height > MAX_IMAGE_PIXELS:
     raise ValueError(
       f"The image is too large; the limit is {MAX_IMAGE_PIXELS} pixels"

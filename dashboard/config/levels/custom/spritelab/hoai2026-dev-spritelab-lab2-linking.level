@@ -43,7 +43,10 @@
         },
         {
           "kind": "block",
-          "type": "spritelab2_goToScene"
+          "type": "spritelab2_goToScene",
+          "fields": {
+            "SCENE": "platform-scene"
+          }
         }
       ]
     }

@@ -1,14 +1,15 @@
 Feature: After completing the Hour of Code, the player is directed to a congratulations page
 
+# api/hour routes hit a stub implementation of contentful for ui-test-
+# tutorials, so that they can run in CI without contentful access tokens.
+# See dashboard/engines/hoc_legacy/lib/hoc_legacy/tutorials.rb
+
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
-  # api/hour routes hit a stub implementation of contentful for ui-test-
-  # tutorials, so that they can run in CI without contentful access tokens.
-  # See dashboard/engines/hoc_legacy/lib/hoc_legacy/tutorials.rb
   Scenario: Completing UI Test Artist HoC should go to certificate page and generate a certificate
     Given I am on "http://studio.code.org/api/hour/begin/ui-test-artist"
-    And I am on "http://studio.code.org/courses/ui-test-artist/units/1/lessons/1/levels/10?noautoplay=true"
+    And I am on "http://studio.code.org/courses/ui-test-artist/units/1/lessons/1/levels/3?noautoplay=true"
     And I wait for the lab page to fully load
     And I click selector "#runButton"
     And I click selector "button:contains(Finish)" once I see it
@@ -66,10 +67,9 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
     And I close my eyes
 
   @eyes
-  @contentful_key
   Scenario: oceans course certificates
     When I open my eyes to test "oceans certificates"
-    And I am on "http://studio.code.org/api/hour/finish/oceans"
+    And I am on "http://studio.code.org/api/hour/finish/ui-test-oceans"
     And I wait until current URL contains "/congrats"
     And I wait to see element with ID "uitest-certificate"
     And element "#uitest-certificate" is visible

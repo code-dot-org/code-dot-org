@@ -146,7 +146,9 @@ class LessonsController < ApplicationController
     @tutor_gallery_data = {
       currentUnitId: script.id,
       units: units.map.with_index(1) do |unit, position|
-        {id: unit.id, name: unit.localized_title, position: position}
+        # link lets the project page build lesson URLs within the unit,
+        # e.g. the "Respond again" button's path back to the challenge.
+        {id: unit.id, name: unit.localized_title, position: position, link: unit.link}
       end,
       sections: sections.map {|section| {id: section.id, name: section.name}},
     }

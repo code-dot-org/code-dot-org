@@ -24,17 +24,19 @@ Website and web app get used interchangeably a lot, and it is worth drawing the 
 
 <hr style="border:none; border-top:1px solid #E4E2F8; margin:24px 0;">
 
-<h2 >Key Components You'll See in Student Code</h2>
+<h2>Key Components You'll See in Student Code</h2>
 
-Every web app your students build this unit rests on the same three technologies, plus one new collaborator. 
+<p>Every web app your students build this unit rests on the same three technologies, plus one new collaborator.</p>
 
-- **HTML** gives a page its structure, the way framing gives a house its shape.
-- **CSS** handles the style: colors, fonts, and layout, the finishes that make the house look like something.
-- **JavaScript** adds interactivity and logic, the doors that open and the lights that turn on.
--  **AI** now sits alongside all three as a creative assistant, suggesting, refining, and debugging code while your students stay in the driver's seat on every decision.
-
-<img src="https://images.code.org/68518643264a7b4d79b23a8bbf5b7720-image-1785853424364.png" alt="HTML is the structure of a webpage, like the frame of a house. CSS is the style and design, how the house looks. JavaScript is the interactivity and logic, like doors opening or lights turning on. AI is a creative assistant that helps suggest, refine, and debug code while students stay in control of decisions." width="100%" style="display:block; max-width:750px; margin:16px auto; border-radius:10px;">
-
+<div style="display: flex; align-items: center; gap: 24px; margin: 20px 0;">
+  <img src="https://images.code.org/8d807df6feff88160d926c1fc7409642-image-1787241342909.png" alt="HTML is the structure of a webpage, like the frame of a house." style="width: 35%; max-width: 220px; border-radius: 10px; flex-shrink: 0;">
+  <div style="flex: 1;">
+    <p style="margin: 0 0 10px 0;">• <b>HTML</b> gives a page its structure, the way framing gives a house its shape.</p>
+    <p style="margin: 0 0 10px 0;">• <b>CSS</b> handles the style: colors, fonts, and layout, the finishes that make the house look like something.</p>
+    <p style="margin: 0 0 10px 0;">• <b>JavaScript</b> adds interactivity and logic, the doors that open and the lights that turn on.</p>
+    <p style="margin: 0;">• <b>AI</b> now sits alongside all three as a creative assistant, suggesting, refining, and debugging code while your students stay in the driver's seat on every decision.</p>
+  </div>
+</div>
 
 
 MARKDOWN

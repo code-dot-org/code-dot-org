@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q1-2026'
+
+wrong 'They memorize training data and look up results in their memory later'
+wrong 'They generate training data based on programmed instructions'
+wrong 'They decide which piece of training data to use for each new input'
+right 'They find patterns in training data that can help make predictions'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following is true about how machine learning models work?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: What is Machine Learning?
+MARKDOWN

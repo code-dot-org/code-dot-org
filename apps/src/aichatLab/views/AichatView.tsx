@@ -3,7 +3,6 @@
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import {extensions as mimeToExtensions} from 'mime-types';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
@@ -13,7 +12,7 @@ import {
   sendAnalytics,
 } from '@cdo/apps/aichat/redux';
 import {ModelParameters} from '@cdo/apps/aichat/types';
-import {getAllowedFileTypes} from '@cdo/apps/aichat/utils';
+import {getAllowedFileExtensions} from '@cdo/apps/aichat/utils';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import ChatWorkspace, {
   ChatWorkspaceHandle,
@@ -299,6 +298,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const disabledState = useAiChatDisabledState({
     appName: levelProperties.appName,
+    clientType: AiChatClientTypes.AI_CHAT_LAB,
+    selectedModelId: modelParameters.selectedModelId,
     isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
     hasSubmittedPredictResponse,
   });
@@ -359,11 +360,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
       supportedFileTypes: levelAichatSettings?.multimodalEnabled
-        ? getAllowedFileTypes(modelParameters.selectedModelId).flatMap(
-            // mimeToExtensions returns all known extensions for a MIME type, e.g. ['jpg', 'jpeg', 'jpe'] for image/jpeg.
-            // Exclude 'jpe' since it's rarely used.
-            mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
-          )
+        ? getAllowedFileExtensions(modelParameters.selectedModelId)
         : [],
     };
   }, [modelParameters.selectedModelId, levelAichatSettings?.multimodalEnabled]);

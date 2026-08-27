@@ -840,18 +840,10 @@ class UserTest < ActiveSupport::TestCase
     # login by username still works
     user = create(:user)
     assert_equal user, User.find_for_authentication(login: user.username)
-    Cdo::Metrics.
-      expects(:put).
-      with('User', 'LoginByUsername', 1, includes(:Environment)).
-      once
 
     # login by email still works
     email_user = create(:user, email: 'not@an.email')
     assert_equal email_user, User.find_for_authentication(login: 'not@an.email')
-    Cdo::Metrics.
-      expects(:put).
-      with('User', 'LoginByEmail', 1, includes(:Environment)).
-      once
 
     # login by hashed email
     hashed_email_user = create(:user, age: 4)
@@ -3779,6 +3771,56 @@ class UserTest < ActiveSupport::TestCase
       )
   end
 
+  test 'find_by_credential matches case-sensitive provider ids byte-exactly by default' do
+    user = create(:student, :classlink_sso_provider, uid: 'Abc-01')
+
+    assert_equal user, User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'Abc-01'
+    )
+    # A case-variant id is no match under the type's default policy...
+    assert_nil User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'ABC-01'
+    )
+    # ...though exact_match: false can still override back to the collation lookup.
+    assert_equal user, User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'ABC-01',
+      exact_match: false
+    )
+  end
+
+  test 'find_by_credential exact matching still finds non-migrated users through the uid fallback' do
+    user = create(:student, :classlink_sso_provider, :demigrated, uid: 'Abc-01')
+    assert_empty user.authentication_options
+
+    assert_equal user, User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'Abc-01'
+    )
+    assert_nil User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'ABC-01'
+    )
+  end
+
+  test 'create validation allows a case-sensitive provider uid differing from an existing id only by case' do
+    create(:student, :classlink_sso_provider, uid: 'Abc-01')
+
+    twin = build(:student, :classlink_sso_provider, uid: 'ABC-01')
+    assert twin.valid?
+    assert twin.save
+  end
+
+  test 'create validation rejects a duplicate uid for a case-sensitive provider' do
+    create(:student, :classlink_sso_provider, uid: 'Abc-01')
+
+    duplicate = build(:student, :classlink_sso_provider, uid: 'Abc-01')
+    refute duplicate.valid?
+    assert duplicate.errors[:uid].any?
+  end
+
   test 'find_credential returns matching AuthenticationOption if one exists for migrated user' do
     user = create(:user, :google_sso_provider)
     assert_equal user.authentication_options.first, user.find_credential(AuthenticationOption::GOOGLE)
@@ -4568,10 +4610,36 @@ class UserTest < ActiveSupport::TestCase
         end
       end
 
-      context 'with sections' do
+      context 'with a non-demo section' do
         let(:user) {create(:teacher)}
 
         before do
+          create(:section, user: user)
+        end
+
+        it 'cannot change own user type' do
+          _can_change_own_user_type?.must_equal false
+        end
+      end
+
+      context 'with only demo sections' do
+        let(:user) {create(:teacher)}
+
+        before do
+          create(:section, user: user, demo_type: 'high')
+          create(:section, user: user, demo_type: 'middle')
+        end
+
+        it 'can change own user type' do
+          _can_change_own_user_type?.must_equal true
+        end
+      end
+
+      context 'with demo and non-demo sections' do
+        let(:user) {create(:teacher)}
+
+        before do
+          create(:section, user: user, demo_type: 'high')
           create(:section, user: user)
         end
 

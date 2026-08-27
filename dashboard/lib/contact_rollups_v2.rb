@@ -11,6 +11,39 @@ class ContactRollupsV2
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  # The db_endpoint_* settings are bare hostnames; port, credentials, and
+  # database name live in their own settings and must be composed into a
+  # mysql2:// URI before Sequel can connect. Every environment defines these
+  # (test/development point them at localhost).
+  REPORTING_DB_URI = Cdo::Sequel.mysql2_uri(
+    host: CDO.db_endpoint_proxy_reporting,
+    port: CDO.db_endpoint_proxy_reporting_port,
+    username: CDO.db_credential_reader['username'],
+    password: CDO.db_credential_reader['password'],
+    database: CDO.dashboard_db_name
+  )
+
+  # Reporting database connection pool. Use this to execute the pipeline's
+  # large SELECT statements instead of loading the writer, which otherwise
+  # carries the entire nightly job.
+  DASHBOARD_REPORTING_DB = Cdo::Sequel.database_connection_pool(
+    REPORTING_DB_URI,
+    REPORTING_DB_URI,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
+
+  # DCDO flag that routes the pipeline's SELECT queries to the reporting
+  # endpoint. Defaults to false: reads stay on the writer, the long-standing
+  # behavior. Can be flipped in production without a deploy.
+  USE_REPORTING_DCDO_KEY = 'contact_rollups_use_reporting'.freeze
+
+  # Aurora replica lag stays below ~50ms even while this job runs its
+  # largest INSERTs (see PR #74613 for the CloudWatch evidence). Every table
+  # a reporting-pool SELECT reads is fully written before the read starts,
+  # so sleeping a comfortable multiple of the observed lag before reading
+  # guarantees replicas have seen those writes.
+  SAFE_AURORA_REPLICA_LAG_SEC = 5
+
   # Execute a SQL query in a transaction in the dashboard database.
   # Does not return query results.
   # The query uses a Sequel or ActiveRecord connection depends on the current Rails environment.
@@ -49,20 +82,38 @@ class ContactRollupsV2
     # why we have to use ActiveRecord connection in a test environment.
     if Rails.env.test?
       ActiveRecord::Base.connection.exec_query(query)
-    else
+    elsif use_reporting_db_for_selects?
+      # The tables this query reads were fully written before this point;
+      # give replicas a comfortable margin to catch up before reading.
+      sleep SAFE_AURORA_REPLICA_LAG_SEC
       # Sequel::Database#[] method returns a Sequel::Dataset, which fetch records only when needed.
+      DASHBOARD_REPORTING_DB[query]
+    else
       DASHBOARD_DB_WRITER[query]
     end
   end
 
+  def self.use_reporting_db_for_selects?
+    DCDO.get(USE_REPORTING_DCDO_KEY, false)
+  end
+
   # Set all database configurations the pipeline will need
   def self.set_db_variables
+    # In the test environment every pipeline query runs on the ActiveRecord
+    # connection (see retrieve_query_results), so there is no Sequel
+    # connection to configure — and CI cannot serve one (its Sequel URIs
+    # point at hosts the test container cannot reach).
+    return if Rails.env.test?
+
     # Set group_concat_max_len to 65535 (same as VARCHAR max length).
     # Its default value is 1024, too short for the amount of data we need to concat.
     # @see:
     #   ContactRollupsProcessed.get_data_aggregation_query
     #   https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len
     DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
+    # The aggregation query that relies on group_concat_max_len runs on the
+    # reporting connection when the contact_rollups_use_reader flag is enabled.
+    DASHBOARD_REPORTING_DB.run('SET SESSION group_concat_max_len = 65535')
   end
 
   attr_accessor :limit
