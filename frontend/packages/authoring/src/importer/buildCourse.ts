@@ -51,9 +51,39 @@ interface BuildContext {
   levelProperties: Record<string, Record<string, unknown>>;
   nextNumericId: () => number;
   lookupYoutubeCode: (videoKey: string) => string | undefined;
+  /** e.g. "coding-with-music" — every level key in this script tends to
+   * repeat it (`coding-with-music-play-sound`), so strip it before
+   * humanizing rather than let every outline row start with the same
+   * noise word. */
+  scriptName: string;
 }
 
 const FIRST_SYNTHETIC_LEVEL_ID = 9000000;
+
+const YEAR_TOKEN = /^(19|20)\d{2}$/;
+
+// Levels with no display_name of their own (most Maze/Music levels) fall
+// back to this. `progression` (e.g. "Skill Building") used to fill that gap,
+// but it's a shared category label repeated across a whole lesson, not a
+// per-level name — every level in a unit's practice block reads the same,
+// which is what an outline row needs to avoid. levelKey is per-level and
+// always present, so humanizing it (year tokens dropped as pure version
+// noise) gives a distinguishing label instead.
+function humanizeLevelKey(levelKey: string, scriptName: string): string {
+  const scriptPrefix = `${scriptName}-`;
+  const trimmed = levelKey.toLowerCase().startsWith(scriptPrefix.toLowerCase())
+    ? levelKey.slice(scriptPrefix.length)
+    : levelKey;
+  const spaced = trimmed
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+    .replace(/[_-]+/g, ' ');
+  const words = spaced.split(' ').filter(word => word && !YEAR_TOKEN.test(word));
+  if (words.length === 0) {
+    return levelKey;
+  }
+  const sentence = words.join(' ').toLowerCase();
+  return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+}
 
 export function buildCourse(inputs: BuildCourseInputs): BuildCourseResult {
   const courseRaw = JSON.parse(inputs.courseJson) as RawCourse;
@@ -73,6 +103,7 @@ export function buildCourse(inputs: BuildCourseInputs): BuildCourseResult {
     levelProperties,
     nextNumericId: () => ++numericId,
     lookupYoutubeCode: videoKey => videoIndex.get(videoKey),
+    scriptName: parsedScript.script.name,
   };
 
   const scriptLevelsByLesson = new Map<string, ParsedScriptLevel[]>();
@@ -91,9 +122,7 @@ export function buildCourse(inputs: BuildCourseInputs): BuildCourseResult {
       const experiences: Experience[] = [];
       for (const scriptLevel of scriptLevels) {
         for (const levelKey of scriptLevel.levelKeys) {
-          experiences.push(
-            buildExperience(levelKey, scriptLevel.progression, ctx),
-          );
+          experiences.push(buildExperience(levelKey, ctx));
         }
       }
       return {
@@ -132,11 +161,7 @@ export function buildCourse(inputs: BuildCourseInputs): BuildCourseResult {
   return {course, levelProperties, warnings};
 }
 
-function buildExperience(
-  levelKey: string,
-  titleHint: string | undefined,
-  ctx: BuildContext,
-): Experience {
+function buildExperience(levelKey: string, ctx: BuildContext): Experience {
   const id = `lb:${levelKey}`;
   const source = ctx.levelSources.get(levelKey);
 
@@ -147,7 +172,7 @@ function buildExperience(
     return {
       id,
       origin: 'levelbuilder',
-      title: titleHint,
+      title: humanizeLevelKey(levelKey, ctx.scriptName),
       kind: 'existingLevel',
       levelKey,
       levelType: 'unknown',
@@ -158,10 +183,10 @@ function buildExperience(
 
   if (source.kind === 'xml') {
     const parsed = parseLevelXml(source.content);
-    const fallbackTitle =
+    const title =
       (parsed.properties.display_name as string | undefined) ??
-      (parsed.properties.name as string | undefined);
-    const title = titleHint ?? fallbackTitle;
+      (parsed.properties.name as string | undefined) ??
+      humanizeLevelKey(levelKey, ctx.scriptName);
 
     // Karel (Bee/Farmer/Harvester/Collector/Planter) shares maze-lab's
     // engine with Maze, dispatching on `skin`. Each of these five skins'
@@ -233,7 +258,7 @@ function buildExperience(
   return {
     id,
     origin: 'levelbuilder',
-    title: titleHint ?? parsed.displayName,
+    title: parsed.displayName ?? humanizeLevelKey(levelKey, ctx.scriptName),
     kind: 'existingLevel',
     levelKey,
     levelType: dslLevelType(parsed),
@@ -309,9 +334,14 @@ function dataFromParsedDsl(
       return {
         type: 'bubbleChoice',
         displayName: parsed.displayName,
+        // Sublevels are real levels (in this catalog: StandaloneVideo or
+        // Music), not inert menu text — resolve each one's own data the same
+        // way a level group's pages do, so the choice can actually be played
+        // rather than just named.
         choices: parsed.levelKeys.map(levelKey => ({
           levelKey,
           displayName: peekDisplayName(levelKey, ctx),
+          data: buildGenericData(levelKey, ctx),
         })),
       };
     case 'levelGroup':
@@ -332,10 +362,14 @@ function dataFromParsedDsl(
 
 // Resolves one referenced level key to GenericLevelData without assigning a
 // synthetic numeric id or recording LevelProperties — used for sub-levels
-// inlined into a level group's pages, which carry no runtime info of their
-// own. A labhost (Fish/Music) sub-level loses its labhost identity here and
-// falls back to an honest opaque card; that combination doesn't occur in
-// the imported curriculum today.
+// inlined into a level group's pages or a bubble choice's options, which
+// carry no runtime info of their own. A labhost (Fish/Music) sub-level loses
+// its labhost identity here and falls back to an honest opaque card — it
+// would need its own numeric id and a mounted Lab to actually run, which
+// this projection doesn't build. That combination does occur (e.g.
+// coding-with-music's "Inspire & Try" bubble choice, whose sublevels are
+// Music levels); the renderer is expected to show it as unsupported rather
+// than broken.
 function buildGenericData(
   levelKey: string,
   ctx: BuildContext,

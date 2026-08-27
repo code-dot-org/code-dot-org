@@ -240,11 +240,22 @@
 }
 
 .railItemLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   flex: 1;
+  min-width: 0;
+}
+
+.railItemLabelText {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.railItemType {
+  flex-shrink: 0;
 }
 
 .railItemKind {
@@ -640,6 +651,13 @@
   flex-direction: column;
   gap: 8px;
   margin-top: 16px;
+}
+
+.matchAnswerChoices {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
 }
 
 .checkRow {

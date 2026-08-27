@@ -15,9 +15,18 @@ import styles from './authoring.module.scss';
 // "expand" toggle rather than pushing the mounted lab further down the page.
 const LONG_TEXT_THRESHOLD = 220;
 
+// shortInstructions is a CSF/Blockly-era field (StudioApp, p5lab) — lab2
+// labs never read it. music-lab only displays longInstructions, so editing
+// shortInstructions on a music level has no visible effect; hide the field
+// there rather than let authors write text nothing shows.
+const SHORT_INSTRUCTIONS_RELEVANT_BY_APP_NAME: Record<string, boolean> = {
+  music: false,
+};
+
 interface LevelInstructionsProps {
   experienceId: string;
   levelNumericId: number;
+  appName?: string;
   shortInstructions?: string;
   longInstructions?: string;
   /** The mounted lab (maze-lab or music-lab) already renders these
@@ -38,6 +47,7 @@ interface LevelInstructionsProps {
 export default function LevelInstructions({
   experienceId,
   levelNumericId,
+  appName,
   shortInstructions,
   longInstructions,
   selfDisplayedByLab,
@@ -46,6 +56,8 @@ export default function LevelInstructions({
   const [editing, setEditing] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const queryClient = useQueryClient();
+  const showShortInstructionsField =
+    SHORT_INSTRUCTIONS_RELEVANT_BY_APP_NAME[appName ?? ''] ?? true;
   const text = longInstructions?.trim()
     ? longInstructions
     : shortInstructions?.trim()
@@ -73,6 +85,7 @@ export default function LevelInstructions({
         <LevelInstructionsEditor
           initialShortInstructions={shortInstructions ?? ''}
           initialLongInstructions={longInstructions ?? ''}
+          showShortInstructionsField={showShortInstructionsField}
           onCancel={() => setEditing(false)}
           onSubmit={async patch => {
             await authoringApi.applyChange({
@@ -160,11 +173,13 @@ interface InstructionsFormPatch {
 function LevelInstructionsEditor({
   initialShortInstructions,
   initialLongInstructions,
+  showShortInstructionsField,
   onCancel,
   onSubmit,
 }: {
   initialShortInstructions: string;
   initialLongInstructions: string;
+  showShortInstructionsField: boolean;
   onCancel: () => void;
   onSubmit: (patch: InstructionsFormPatch) => Promise<void>;
 }) {
@@ -202,12 +217,14 @@ function LevelInstructionsEditor({
         void submit();
       }}
     >
-      <textarea
-        aria-label="Short instructions"
-        placeholder="Short instructions (optional)"
-        value={shortInstructions}
-        onChange={e => setShortInstructions(e.target.value)}
-      />
+      {showShortInstructionsField && (
+        <textarea
+          aria-label="Short instructions"
+          placeholder="Short instructions (optional)"
+          value={shortInstructions}
+          onChange={e => setShortInstructions(e.target.value)}
+        />
+      )}
       <textarea
         aria-label="Instructions (markdown)"
         placeholder="Instructions shown to the learner…"

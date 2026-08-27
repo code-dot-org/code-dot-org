@@ -124,6 +124,6 @@ export type GenericLevelData =
   | {
       type: 'bubbleChoice';
       displayName?: string;
-      choices: {levelKey: string; displayName?: string}[];
+      choices: {levelKey: string; displayName?: string; data: GenericLevelData}[];
     }
   | {type: 'opaque'; levelType: string; properties?: Record<string, unknown>};

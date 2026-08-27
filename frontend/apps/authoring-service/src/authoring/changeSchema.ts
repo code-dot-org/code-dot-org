@@ -119,7 +119,11 @@ const GenericLevelDataSchema: z.ZodType<GenericLevelData> = z.lazy(() =>
       type: z.literal('bubbleChoice'),
       displayName: z.string().optional(),
       choices: z.array(
-        z.object({levelKey: z.string(), displayName: z.string().optional()}),
+        z.object({
+          levelKey: z.string(),
+          displayName: z.string().optional(),
+          data: GenericLevelDataSchema,
+        }),
       ),
     }),
     z.object({

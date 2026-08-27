@@ -15,6 +15,7 @@ export {
   useWidget,
 } from './hooks';
 export {useCanAuthor} from './authorGate';
+export {experienceTypeLabel} from './experienceType';
 export {
   activityFeedStore,
   subscribeToAuthoringEvents,

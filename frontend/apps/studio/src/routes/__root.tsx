@@ -91,10 +91,16 @@ function RootContent() {
         {renderRouteArea(auth, onRetry)}
       </Box>
       {!hideFooter && <StudioFooter />}
-      <TanStackRouterDevtools />
+      {showRouterDevtools && <TanStackRouterDevtools />}
     </>
   );
 }
+
+// @tanstack/react-router-devtools no-ops itself once NODE_ENV !== 'development',
+// but that never fires under `vite dev` — every local route (including author
+// mode) got the devtools panel unconditionally. Opt in explicitly instead of
+// showing it by default.
+const showRouterDevtools = import.meta.env.VITE_SHOW_ROUTER_DEVTOOLS === '1';
 
 // Floor the responsive layout at 360px (the modern-phone minimum; code.org's
 // official requirement is 1024px desktop/Chromebook). Below 360px the page

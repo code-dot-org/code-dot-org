@@ -2,6 +2,7 @@ import {Button, Typography} from '@mui/material';
 import {useMemo, useState} from 'react';
 
 import type {GenericLevelData} from '@code-dot-org/authoring';
+import RadioButton from '@code-dot-org/component-library/radioButton';
 import {Markdown} from '@code-dot-org/markdown';
 
 import styles from '../authoring.module.scss';
@@ -18,9 +19,13 @@ function shuffled<T>(items: T[]): T[] {
 }
 
 /**
- * Matching projection: one native <select> per prompt, options drawn from
- * the shuffled answer pool. No drag-and-drop — a select is the simplest
- * control that stays keyboard- and screen-reader-usable.
+ * Matching projection: one radio group per prompt, options drawn from the
+ * shuffled answer pool. Used to be a native <select>, but an <option> can
+ * only show its text content — markdown in an answer (an image, `code`,
+ * **bold**) came through as literal source. A radio group keeps the
+ * keyboard/screen-reader affordances of a select while letting each choice
+ * render through Markdown. No drag-and-drop — out of scope for this
+ * projection.
  */
 export default function MatchLevel({
   data,
@@ -69,20 +74,25 @@ export default function MatchLevel({
           return (
             <div key={i} className={classes.join(' ')}>
               <Markdown>{pair.question}</Markdown>
-              <select
+              <div
+                role="radiogroup"
                 aria-label={pair.question}
-                value={selections[i] ?? ''}
-                onChange={e => handleSelect(i, e.target.value)}
+                className={styles.matchAnswerChoices}
               >
-                <option value="" disabled>
-                  Choose an answer
-                </option>
                 {answerPool.map(answer => (
-                  <option key={answer} value={answer}>
-                    {answer}
-                  </option>
+                  <RadioButton
+                    key={answer}
+                    name={`match-${i}`}
+                    value={answer}
+                    checked={selections[i] === answer}
+                    onChange={() => handleSelect(i, answer)}
+                    ariaLabel={answer}
+                    className={styles.answerOption}
+                  >
+                    <Markdown>{answer}</Markdown>
+                  </RadioButton>
                 ))}
-              </select>
+              </div>
               {graded && (
                 <span className={styles.visuallyHidden}>
                   {graded[i] ? 'Correct' : 'Incorrect'}

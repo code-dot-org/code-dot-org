@@ -258,6 +258,7 @@ function LabHostStage({
       <LevelInstructions
         experienceId={experienceId}
         levelNumericId={levelNumericId}
+        appName={appName}
         shortInstructions={levelProps?.shortInstructions}
         longInstructions={levelProps?.longInstructions}
         selfDisplayedByLab={selfDisplayedByLab}

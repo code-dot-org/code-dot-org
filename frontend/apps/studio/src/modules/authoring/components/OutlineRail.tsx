@@ -3,8 +3,10 @@ import {useState} from 'react';
 
 import type {Experience} from '@code-dot-org/authoring';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tags from '@code-dot-org/component-library/tags';
 
 import {authoringApi, type CurriculumChangeInput} from '../api';
+import {experienceTypeLabel} from '../experienceType';
 
 import InsertPoint from './InsertPoint';
 
@@ -88,9 +90,18 @@ export default function OutlineRail({
                 />
               </span>
               <span className={styles.railItemLabel}>
-                <Typography variant="body2" component="span">
+                <Typography
+                  variant="body2"
+                  component="span"
+                  className={styles.railItemLabelText}
+                >
                   {experience.title ?? experience.id}
                 </Typography>
+                <Tags
+                  tagsList={[{label: experienceTypeLabel(experience)}]}
+                  size="s"
+                  className={styles.railItemType}
+                />
               </span>
             </button>
             <span className={styles.railItemActions}>

@@ -6,6 +6,21 @@
   right: 0;
   top: 0;
 
+  // Layout (packages/labs/classic) defaults its background to
+  // --neutral-gray-99, a near-black primitive (#121212) meant for labs with
+  // a dark console chrome (App Lab, Music Lab). Maze's visualization and
+  // instructions bubble don't cover the full Layout box, so that default
+  // showed through as a black band around them. Override it back to the
+  // page's normal light surface. CSS Modules scope `.layout` to Layout's own
+  // module, so `&.layout` here would name an unrelated, never-applied local
+  // class rather than match Layout's actual (differently-hashed) class on
+  // the same element — self-compounding `.lab-maze` instead doubles this
+  // rule's specificity over Layout's plain single-class selector without
+  // depending on stylesheet load order.
+  &#{&} {
+    background-color: var(--background-neutral-primary, #fff);
+  }
+
   .buttons {
     display: flex;
     flex-direction: row;
