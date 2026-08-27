@@ -2850,6 +2850,7 @@ __metadata:
     vite-plugin-externalize-deps: "catalog:"
     vite-plugin-lib-inject-css: "npm:^2.2.2"
     vitest: "catalog:"
+    vitest-axe: "npm:^0.1.0"
     zod: "catalog:"
   peerDependencies:
     "@emotion/react": ^11.0.0

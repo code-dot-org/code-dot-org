@@ -3,6 +3,10 @@
    furniture. */
 
 .dialog {
+  /* The design system's dialog paints its own surface and leaves the text
+     colour alone, so in the dark theme the content inherits the page's black
+     and lands on a dark panel at 1.55:1. Axe found it; this is the fix. */
+  color: var(--text-neutral-primary);
   display: flex;
   width: min(1200px, 92vw);
   height: min(800px, 88vh);
@@ -24,11 +28,30 @@
 
 .header {
   display: flex;
-  align-items: baseline;
-  padding: 14px 56px 10px 20px; /* room for the dialog's own close button */
-  border-bottom: 1px solid #e2e2e8;
+  align-items: center;
+  padding: 12px 56px 10px 20px; /* room for the dialog's own close button */
+  border-bottom: 1px solid var(--borders-neutral-primary);
   gap: 14px;
+  flex-wrap: wrap;
   grid-area: header;
+}
+
+.views {
+  margin-inline-start: auto;
+}
+
+/* Off screen, not hidden: a live region with `display: none` is announced by
+   nothing at all. */
+.announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .heading {
@@ -38,9 +61,10 @@
 }
 
 .count {
+  max-width: 46ch;
   margin: 0;
   font-size: 13px;
-  opacity: 0.65;
+  opacity: 0.75;
 }
 
 .mapPane {
@@ -52,7 +76,7 @@
 
 .detailPane {
   min-height: 0;
-  border-left: 1px solid #e2e2e8;
+  border-left: 1px solid var(--borders-neutral-primary);
   grid-area: detail;
   overflow-y: auto;
 }
@@ -102,18 +126,26 @@
   margin: 10px 0 0;
   padding: 8px 10px;
   border-radius: 6px;
-  background: rgb(0 0 0 / 5%);
+  background: color-mix(in srgb, currentcolor 7%, transparent);
   font-size: 13px;
   opacity: 0.8;
 }
 
+/* A control, so it gets a control's target: 24×24 is the WCAG 2.2 floor and
+   an underlined word on its own is under it. */
 .link {
-  padding: 0;
+  min-height: 24px;
+  padding: 2px 0;
   border: 0;
   background: none;
   color: inherit;
   cursor: pointer;
   font: inherit;
+  text-align: start;
+
+  /* Underlined and in the body colour rather than a link blue: the underline is
+     the non-colour signal (WCAG 1.4.1), and body-on-body is the one pair that
+     cannot fail contrast in either theme. */
   text-decoration: underline;
 }
 
@@ -127,7 +159,7 @@
 
 .secondary {
   padding: 7px 12px;
-  border: 1px solid #c2c2cc;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 6px;
   background: none;
   color: inherit;
@@ -136,8 +168,8 @@
 }
 
 .secondary:disabled {
-  color: #77777f;
   cursor: default;
+  opacity: 0.55;
 }
 
 .primary {
@@ -153,10 +185,11 @@
 }
 
 .primary:disabled {
-  border-color: #c2c2cc;
-  background: #e6e6ec;
-  color: #77777f;
+  border-color: var(--borders-neutral-primary);
+  background: none;
+  color: inherit;
   cursor: default;
+  opacity: 0.55;
 }
 
 .empty {
@@ -165,27 +198,29 @@
   opacity: 0.7;
 }
 
-@media (prefers-color-scheme: dark) {
-  .header,
+/* Reflow (WCAG 1.4.10). At 400% zoom, or on a narrow window, a 360px reading
+   column beside a map is two columns too many: the panes stack, and the map
+   keeps a fixed slice of the height so the words below it are reachable by
+   scrolling in one direction. */
+@media (max-width: 900px), (max-height: 560px) {
+  .layout {
+    grid-template-areas:
+      'header'
+      'map'
+      'detail';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(180px, 40%) 1fr;
+  }
+
   .detailPane {
-    border-color: #34343e;
+    border-top: 1px solid var(--borders-neutral-primary);
+    border-left: 0;
   }
+}
 
-  .pending {
-    background: rgb(255 255 255 / 8%);
-  }
-
-  .primary:disabled {
-    border-color: #45454f;
-    background: #2a2a33;
-    color: #85858e;
-  }
-
+@media (prefers-reduced-motion: reduce) {
+  .primary,
   .secondary {
-    border-color: #45454f;
-  }
-
-  .secondary:disabled {
-    color: #85858e;
+    transition: none;
   }
 }

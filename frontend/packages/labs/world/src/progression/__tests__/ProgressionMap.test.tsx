@@ -18,18 +18,32 @@ const done = (...ids: TileId[]) => new Set(ids);
 const tile = (id: TileId) => TILES.find(t => t.id === id)!;
 
 describe('the map', () => {
-  it('draws every tile in the catalogue', () => {
+  // A listbox of options, not sixty-seven buttons: picking a tile SELECTS it,
+  // and `aria-selected` says so where `aria-pressed` would have claimed a
+  // toggle. The three buttons are the zoom and fit controls.
+  it('draws every tile in the catalogue, as one listbox', () => {
     render(<ProgressionMap completed={done()} />);
-    expect(screen.getAllByRole('button')).toHaveLength(TILES.length + 3);
+    expect(
+      screen.getByRole('listbox', {name: 'Progression map'}),
+    ).toBeInTheDocument();
+    expect(screen.getAllByRole('option')).toHaveLength(TILES.length);
+    expect(screen.getAllByRole('button')).toHaveLength(3);
+  });
+
+  it('marks the chosen tile as the selected option', () => {
+    render(<ProgressionMap completed={done()} selected="origin/first-world" />);
+    expect(
+      screen.getByRole('option', {name: /^First light\./, selected: true}),
+    ).toBeInTheDocument();
   });
 
   it('says a tile’s state in words, not only in colour', async () => {
     render(<ProgressionMap completed={done('origin/first-world')} />);
     expect(
-      screen.getByRole('button', {name: /First light\. Origin\. Done\./}),
+      screen.getByRole('option', {name: /First light\. Origin\. Done\./}),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {
+      screen.getByRole('option', {
         name: /Make it go\. Input\. Ready to start\./,
       }),
     ).toBeInTheDocument();
@@ -38,7 +52,7 @@ describe('the map', () => {
   it('says what a locked tile is waiting for', () => {
     render(<ProgressionMap completed={done()} />);
     expect(
-      screen.getByRole('button', {
+      screen.getByRole('option', {
         name: /Up\. Platformer\. Locked — needs A key is an event and Down\./,
       }),
     ).toBeInTheDocument();
@@ -47,7 +61,7 @@ describe('the map', () => {
   it('tells the caller which tile was chosen', async () => {
     const onSelect = vi.fn();
     render(<ProgressionMap completed={done()} onSelect={onSelect} />);
-    await userEvent.click(screen.getByRole('button', {name: /^First light\./}));
+    await userEvent.click(screen.getByRole('option', {name: /^First light\./}));
     expect(onSelect).toHaveBeenCalledWith('origin/first-world');
   });
 
@@ -68,7 +82,7 @@ describe('the map', () => {
         onSelect={onSelect}
       />,
     );
-    const origin = screen.getByRole('button', {name: /^First light\./});
+    const origin = screen.getByRole('option', {name: /^First light\./});
     origin.focus();
     await userEvent.keyboard('{ArrowRight}');
     // East of Origin is Motion's first tile — the only cell in that direction.
@@ -119,7 +133,7 @@ describe('panning', () => {
       <ProgressionMap completed={done()} onSelect={onSelect} />,
     );
     const svg = container.querySelector('svg')!;
-    const tile = screen.getByRole('button', {name: /^First light\./});
+    const tile = screen.getByRole('option', {name: /^First light\./});
 
     fireEvent(svg, pointer('pointerdown', {clientX: 100, clientY: 100}));
     fireEvent(svg, pointer('pointermove', {clientX: 180, clientY: 160}));

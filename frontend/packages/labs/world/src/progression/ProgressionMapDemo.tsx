@@ -154,8 +154,4 @@ export const PROGRESSION_DEMO_CSS = `
 .progression-demo-side ul { margin: 0; padding-left: 18px; }
 .progression-demo-meta { opacity: 0.65; }
 .progression-demo-task { font-style: italic; }
-@media (prefers-color-scheme: dark) {
-  .progression-demo-page { background: #131317; color: #e6e6ec; }
-  .progression-demo-header, .progression-demo-side { border-color: #34343e; }
-}
 `;

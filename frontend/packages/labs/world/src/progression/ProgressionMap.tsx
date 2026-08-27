@@ -10,13 +10,13 @@
 // region's fill sit under every tile of that region without any z-index games,
 // and what lets an edge bar sit on top of the two tiles it joins.
 //
-// WHAT IS NOT HERE YET (specs/PROGRESSION_UI.md, milestone 5): the list view,
-// which is the other first-class way to read this and the only way to read it
-// with a screen reader. The keyboard model IS here — a roving tabindex and
-// nearest-tile-in-direction on the arrows — because building a mouse-only map
-// first and retrofitting keys later produces a map shaped around the mouse.
+// It is a LISTBOX of options, with a roving tabindex and arrows that move to
+// the nearest tile in a direction. What it is not is the only way to read the
+// catalogue: `./ProgressionList` says the same thing in headings and lists, and
+// is not a fallback — an SVG is the wrong medium for "which lessons teach me
+// about text", and no medium at all for a screen reader.
 
-import {useCallback, useMemo, useRef, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {TILES} from './catalogue';
 import {
@@ -28,6 +28,7 @@ import {
   wrapTitle,
   type Point,
 } from './mapGeometry';
+import {regionColours, SURFACES} from './palette';
 import styles from './progressionMap.module.css';
 import {REGIONS, regionHue} from './regions';
 import type {Tile, TileId, TileState} from './types';
@@ -89,6 +90,7 @@ export const ProgressionMap = ({
       return {
         ...region,
         hue: regionHue(region.id),
+        colours: regionVariables(regionHue(region.id)),
         cells,
         outline: boundaryPath(cells, SIZE),
         // Where the region's name goes: OUTSIDE the region, on the line
@@ -166,6 +168,68 @@ export const ProgressionMap = ({
     setPan({x: 0, y: 0});
   }, []);
 
+  /** How many user units a screen pixel is worth right now. */
+  const perPixel = useCallback(
+    () => 1 / (svg.current?.getScreenCTM?.()?.a || 1),
+    [],
+  );
+
+  /**
+   * Pan until a tile is inside the visible box, if it is not already.
+   *
+   * Two criteria and one convenience rest on this. **Focus Not Obscured**
+   * (WCAG 2.4.11): arrowing to a tile that is off the edge of a zoomed map puts
+   * focus somewhere nobody can see. **Dragging Movements** (2.5.7): dragging is
+   * the only way to pan, so there has to be a way to reach any tile without it
+   * — picking a tile in the list is that way, and this is what makes picking it
+   * bring the map along.
+   *
+   * Measured in screen pixels and converted back, rather than reasoned about in
+   * viewBox coordinates: `preserveAspectRatio` decides how the box maps onto
+   * the element, and the two rectangles already know the answer.
+   */
+  const bringIntoView = useCallback(
+    (id: TileId) => {
+      const element = svg.current?.querySelector<SVGGElement>(
+        `[data-tile="${cssEscape(id)}"]`,
+      );
+      const frame = svg.current?.getBoundingClientRect();
+      if (!element || !frame || !frame.width) {
+        return;
+      }
+      const rect = element.getBoundingClientRect();
+      const margin = 12;
+      const dx =
+        rect.left < frame.left + margin
+          ? frame.left + margin - rect.left
+          : rect.right > frame.right - margin
+            ? frame.right - margin - rect.right
+            : 0;
+      const dy =
+        rect.top < frame.top + margin
+          ? frame.top + margin - rect.top
+          : rect.bottom > frame.bottom - margin
+            ? frame.bottom - margin - rect.bottom
+            : 0;
+      if (!dx && !dy) {
+        return;
+      }
+      const scale = perPixel();
+      setPan(previous => ({
+        x: previous.x + dx * scale,
+        y: previous.y + dy * scale,
+      }));
+    },
+    [perPixel],
+  );
+
+  // Whatever the detail pane is showing, the map is looking at.
+  useEffect(() => {
+    if (selected) {
+      bringIntoView(selected);
+    }
+  }, [selected, bringIntoView]);
+
   // Zoom about the pointer, so the thing under the cursor stays under it. The
   // alternative — zooming about the centre — walks whatever you were looking at
   // off the edge of the screen, which is the behaviour every map gets wrong.
@@ -219,7 +283,11 @@ export const ProgressionMap = ({
       setDragging(true);
       event.currentTarget.setPointerCapture?.(event.pointerId);
     }
-    setPan({x: from.pan.x + dx, y: from.pan.y + dy});
+    // The pan is applied INSIDE the viewBox, so it is in user units and the
+    // pointer's travel is in pixels. Without the conversion the map moves by
+    // the wrong amount and does not keep up with the hand dragging it.
+    const scale = perPixel();
+    setPan({x: from.pan.x + dx * scale, y: from.pan.y + dy * scale});
   };
 
   const onPointerUp = () => {
@@ -240,6 +308,7 @@ export const ProgressionMap = ({
         svg.current
           ?.querySelector<SVGGElement>(`[data-tile="${cssEscape(next.id)}"]`)
           ?.focus();
+        bringIntoView(next.id);
       }
       return;
     }
@@ -254,8 +323,14 @@ export const ProgressionMap = ({
       <svg
         ref={svg}
         className={`${styles.map} ${dragging ? styles.dragging : ''}`}
+        style={SURFACE_VARIABLES}
         viewBox={`${box.x} ${box.y} ${box.width} ${box.height}`}
-        role="group"
+        // A LISTBOX, not sixty-seven buttons. What a tile does when you pick it
+        // is get selected — the detail pane follows — and `aria-selected` says
+        // that where `aria-pressed` would have claimed a toggle. It also comes
+        // with the keyboard model already built here: one tab stop, arrows to
+        // move within it (WAI-ARIA listbox, roving tabindex variant).
+        role="listbox"
         aria-label="Progression map"
         onWheel={onWheel}
         onPointerDown={onPointerDown}
@@ -267,12 +342,9 @@ export const ProgressionMap = ({
             transform is applied outside the viewBox's own scale — hence the
             second group rather than a mutated viewBox. */}
         <g transform={`translate(${pan.x} ${pan.y}) scale(${zoom})`}>
-          <g>
+          <g aria-hidden="true">
             {regions.map(region => (
-              <g
-                key={region.id}
-                style={{'--hue': `${region.hue}`} as React.CSSProperties}
-              >
+              <g key={region.id} style={region.colours}>
                 {region.cells.map(cell => (
                   <polygon
                     key={cell.join(',')}
@@ -291,7 +363,7 @@ export const ProgressionMap = ({
                 key={tile.id}
                 tile={tile}
                 state={state(tile.id)}
-                hue={regionHue(tile.region)}
+                colours={regionVariables(regionHue(tile.region))}
                 selected={tile.id === selected}
                 focusable={tile.id === focused}
                 onSelect={() => choose(tile.id)}
@@ -304,7 +376,7 @@ export const ProgressionMap = ({
               shows is the sliver in the gap between two tiles — four or five
               pixels, carrying a whole relation. Over, it reads as the staple
               it is. */}
-          <g>
+          <g aria-hidden="true">
             {tiles.flatMap(tile =>
               tile.requires.map(need => {
                 const from = TILES_BY_ID.get(need);
@@ -313,34 +385,47 @@ export const ProgressionMap = ({
                   return null;
                 }
                 const met = completed.has(need);
+                // A halo of the page colour under the bar, and the bar over
+                // it. A bar lies across whatever the two tiles are filled with
+                // — a finished tile, a locked one, the wash between them — and
+                // cannot be asked to contrast with all of them at once. The
+                // halo gives it one background it can.
+                const line = {
+                  strokeWidth: SIZE * 0.14,
+                  x1: bar[0].x,
+                  y1: bar[0].y,
+                  x2: bar[1].x,
+                  y2: bar[1].y,
+                };
                 return (
-                  <line
+                  <g
                     key={`${need}->${tile.id}`}
-                    className={`${styles.edge} ${met ? '' : styles.edgeUnmet}`}
-                    style={
-                      {
-                        '--hue': `${regionHue(tile.region)}`,
-                      } as React.CSSProperties
-                    }
-                    strokeWidth={SIZE * 0.14}
-                    x1={bar[0].x}
-                    y1={bar[0].y}
-                    x2={bar[1].x}
-                    y2={bar[1].y}
-                  />
+                    className={styles.region}
+                    style={regionVariables(regionHue(tile.region))}
+                  >
+                    <line
+                      {...line}
+                      className={styles.edgeHalo}
+                      strokeWidth={SIZE * 0.22}
+                    />
+                    <line
+                      {...line}
+                      className={`${styles.edge} ${met ? '' : styles.edgeUnmet}`}
+                    />
+                  </g>
                 );
               }),
             )}
           </g>
 
-          <g>
+          <g aria-hidden="true">
             {regions
               .filter(region => region.kind !== 'origin' && !region.scattered)
               .map(region => (
                 <text
                   key={region.id}
-                  className={styles.regionName}
-                  style={{'--hue': `${region.hue}`} as React.CSSProperties}
+                  className={`${styles.regionName} ${styles.region}`}
+                  style={region.colours}
                   x={region.label.x}
                   y={region.label.y}
                   textAnchor={region.label.anchor}
@@ -379,7 +464,8 @@ export const ProgressionMap = ({
 interface TileShapeProps {
   tile: Tile;
   state: TileState;
-  hue: number;
+  /** Its region's four colours, both themes, as custom properties. */
+  colours: React.CSSProperties;
   selected: boolean;
   focusable: boolean;
   onSelect: () => void;
@@ -389,7 +475,7 @@ interface TileShapeProps {
 const TileShape = ({
   tile,
   state,
-  hue,
+  colours,
   selected,
   focusable,
   onSelect,
@@ -407,13 +493,13 @@ const TileShape = ({
 
   return (
     <g
-      className={`${styles.tile} ${styles[state]}`}
-      style={{'--hue': `${hue}`} as React.CSSProperties}
+      className={`${styles.tile} ${styles[state]} ${styles.region}`}
+      style={colours}
       data-tile={tile.id}
-      role="button"
+      role="option"
       tabIndex={focusable ? 0 : -1}
       aria-label={accessibleName(tile, state)}
-      aria-pressed={selected}
+      aria-selected={selected}
       onClick={onSelect}
       onKeyDown={onKeyDown}
     >
@@ -502,6 +588,55 @@ const accessibleName = (tile: Tile, state: TileState): string => {
     .join(' and ');
   return `${tile.title}. ${region}. Locked — needs ${missing}.`;
 };
+
+/**
+ * A region's four colours, for both themes, as custom properties. The
+ * stylesheet aliases one set or the other; nothing here knows which.
+ */
+const regionVariables = (hue: number): React.CSSProperties => {
+  const light = regionColours(hue, 'light');
+  const dark = regionColours(hue, 'dark');
+  return {
+    '--field-light': light.field,
+    '--tone-light': light.tone,
+    '--line-light': light.line,
+    '--name-light': light.name,
+    '--field-dark': dark.field,
+    '--tone-dark': dark.tone,
+    '--line-dark': dark.line,
+    '--name-dark': dark.name,
+  } as React.CSSProperties;
+};
+
+/**
+ * Everything that is not a region's own colour, on the map's root.
+ *
+ * BOTH themes, chosen in the stylesheet on `[data-theme]` — the same signal the
+ * design system's own tokens are scoped by. Choosing in React instead looked
+ * simpler and was wrong twice over: the OS preference is not the lab's theme,
+ * and even the lab's own `useTheme` context can disagree with the `data-theme`
+ * attribute the dialog's surface is painted from. Reading the same attribute
+ * the tokens read is the only arrangement in which the map and the panel it
+ * sits in cannot end up in different themes.
+ */
+const SURFACE_VARIABLES = {
+  '--page-light': SURFACES.light.page,
+  '--surface-light': SURFACES.light.surface,
+  '--ink-light': SURFACES.light.ink,
+  '--shut-fill-light': SURFACES.light.shutFill,
+  '--shut-ink-light': SURFACES.light.shutInk,
+  '--shut-line-light': SURFACES.light.shutLine,
+  '--ring-light': SURFACES.light.ring,
+  '--focus-light': SURFACES.light.focus,
+  '--page-dark': SURFACES.dark.page,
+  '--surface-dark': SURFACES.dark.surface,
+  '--ink-dark': SURFACES.dark.ink,
+  '--shut-fill-dark': SURFACES.dark.shutFill,
+  '--shut-ink-dark': SURFACES.dark.shutInk,
+  '--shut-line-dark': SURFACES.dark.shutLine,
+  '--ring-dark': SURFACES.dark.ring,
+  '--focus-dark': SURFACES.dark.focus,
+} as React.CSSProperties;
 
 /** Screen directions the arrow keys mean, as unit vectors. */
 const ARROWS: Record<string, Point | undefined> = {

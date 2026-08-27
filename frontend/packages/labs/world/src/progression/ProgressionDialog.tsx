@@ -13,10 +13,12 @@
 import {useCallback, useEffect, useState} from 'react';
 
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 
 import {TILES} from './catalogue';
 import {useProgression} from './progressionContext';
 import styles from './progressionDialog.module.css';
+import {ProgressionList} from './ProgressionList';
 import {ProgressionMap} from './ProgressionMap';
 import {TileDetail} from './TileDetail';
 import type {TileId} from './types';
@@ -30,6 +32,9 @@ export interface ProgressionDialogProps {
   initialSelection?: TileId;
 }
 
+/** How the catalogue is being read. Both are first class; see ./ProgressionList. */
+type View = 'map' | 'list';
+
 export const ProgressionDialog = ({
   initialSelection,
 }: ProgressionDialogProps) => {
@@ -37,11 +42,34 @@ export const ProgressionDialog = ({
   const [selected, setSelected] = useState<TileId | undefined>(
     initialSelection,
   );
+  const [view, setView] = useState<View>('map');
+  // What was announced last, for the polite live region below. A completion is
+  // an event a keyboard or screen-reader user has no other way to notice: the
+  // tile it opened is somewhere else on the map.
+  const [announcement, setAnnouncement] = useState('');
 
   useTreeParam(selected);
 
   const tile = selected ? TILES_BY_ID.get(selected) : undefined;
   const doneCount = TILES.filter(t => completed.has(t.id)).length;
+
+  const onComplete = (id: TileId) => {
+    complete(id);
+    const opened = TILES.filter(
+      candidate =>
+        !completed.has(candidate.id) &&
+        candidate.requires.includes(id) &&
+        candidate.requires.every(need => need === id || completed.has(need)),
+    );
+    setAnnouncement(
+      `${TILES_BY_ID.get(id)?.title ?? id} marked as done.` +
+        (opened.length
+          ? ` ${opened.map(next => next.title).join(' and ')} ${
+              opened.length === 1 ? 'is' : 'are'
+            } now ready to start.`
+          : ''),
+    );
+  };
 
   return (
     <CustomDialog
@@ -52,36 +80,73 @@ export const ProgressionDialog = ({
     >
       <div className={styles.layout}>
         <header className={styles.header}>
-          <h1 className={styles.heading}>Progression</h1>
-          <p className={styles.count}>
-            {doneCount} of {TILES.length} done
+          {/* An h2, not an h1: this opens over a page that already has one. */}
+          <h2 className={styles.heading}>Progression</h2>
+          <p className={styles.count} id="dsco-dialog-description">
+            {doneCount} of {TILES.length} lessons done. Pick one to read what it
+            teaches and what finishing it unlocks.
           </p>
+          <div className={styles.views}>
+            <SegmentedButtons
+              size="xs"
+              selectedButtonValue={view}
+              onChange={(value: string) => setView(value as View)}
+              buttons={[
+                {
+                  value: 'map',
+                  label: 'Map',
+                  ariaLabel: 'Show the lessons as a map',
+                  iconLeft: {iconName: 'diagram-project', iconStyle: 'solid'},
+                },
+                {
+                  value: 'list',
+                  label: 'List',
+                  ariaLabel: 'Show the lessons as a list',
+                  iconLeft: {iconName: 'list', iconStyle: 'solid'},
+                },
+              ]}
+            />
+          </div>
         </header>
 
         <div className={styles.mapPane}>
-          <ProgressionMap
-            completed={completed}
-            selected={selected}
-            onSelect={setSelected}
-          />
+          {view === 'map' ? (
+            <ProgressionMap
+              completed={completed}
+              selected={selected}
+              onSelect={setSelected}
+            />
+          ) : (
+            <ProgressionList
+              stateOf={stateOf}
+              selected={selected}
+              onSelect={setSelected}
+            />
+          )}
         </div>
 
-        <aside className={styles.detailPane}>
+        <aside className={styles.detailPane} aria-label="Lesson">
           {tile ? (
             <TileDetail
               tile={tile}
               state={stateOf(tile.id)}
               stateOf={stateOf}
               onGoTo={setSelected}
-              onComplete={complete}
+              onComplete={onComplete}
             />
           ) : (
             <p className={styles.empty}>
-              Pick a tile to read what it teaches and what finishing it gives
+              Pick a lesson to read what it teaches and what finishing it gives
               you.
             </p>
           )}
         </aside>
+
+        {/* Polite, and outside the panes, so moving around the map never
+            interrupts a reader — only a completion speaks. */}
+        <p aria-live="polite" className={styles.announcement}>
+          {announcement}
+        </p>
       </div>
     </CustomDialog>
   );

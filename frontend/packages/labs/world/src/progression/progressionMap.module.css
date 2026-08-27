@@ -1,18 +1,62 @@
-/* The map. Colour here is a function of one number per region: every element
-   that belongs to a region carries `--hue` (see ProgressionMap), and everything
-   else is derived from it, so fourteen regions cost fourteen numbers rather
-   than fourteen palettes.
-
-   Dark mode follows the lab's other CSS modules: a `prefers-color-scheme`
-   block that redefines only what has to change. */
+/* The map.
+ *
+ * NO COLOUR LITERALS. Every colour comes in as a custom property set by
+ * `ProgressionMap` from `./palette`, which solves each one for a target
+ * LUMINANCE so the contrast ratios hold at every region hue rather than only at
+ * the one they were eyeballed against. `__tests__/palette.test.ts` measures all
+ * of them; a literal written here would be a colour that test cannot see.
+ *
+ * LIGHT AND DARK ARE CHOSEN ON `[data-theme]`, which is the attribute the
+ * design system's own tokens are scoped by — so the map and the dialog it sits
+ * in cannot end up in different themes. Two earlier answers could: keying off
+ * `prefers-color-scheme` painted dark colours on a white dialog whenever the OS
+ * and the lab disagreed, and reading the React theme context put a light map
+ * inside a dark panel whenever the context and the attribute did.
+ *
+ * Everything below reads the unsuffixed name and never knows which theme it is.
+ */
 
 .map {
+  --page: var(--page-light);
+  --surface: var(--surface-light);
+  --ink: var(--ink-light);
+  --shut-fill: var(--shut-fill-light);
+  --shut-ink: var(--shut-ink-light);
+  --shut-line: var(--shut-line-light);
+  --ring: var(--ring-light);
+  --focus: var(--focus-light);
+
   display: block;
   width: 100%;
   height: 100%;
-  background: #fbfbfc;
+  background: var(--page);
   touch-action: none; /* the map handles its own drag */
   user-select: none;
+}
+
+.region {
+  --field: var(--field-light);
+  --tone: var(--tone-light);
+  --line: var(--line-light);
+  --name: var(--name-light);
+}
+
+:global([data-theme='Dark']) .map {
+  --page: var(--page-dark);
+  --surface: var(--surface-dark);
+  --ink: var(--ink-dark);
+  --shut-fill: var(--shut-fill-dark);
+  --shut-ink: var(--shut-ink-dark);
+  --shut-line: var(--shut-line-dark);
+  --ring: var(--ring-dark);
+  --focus: var(--focus-dark);
+}
+
+:global([data-theme='Dark']) .region {
+  --field: var(--field-dark);
+  --tone: var(--tone-dark);
+  --line: var(--line-dark);
+  --name: var(--name-dark);
 }
 
 .dragging {
@@ -24,23 +68,22 @@
 /* Drawn at full cell size, so neighbouring cells' fills meet and the region
    reads as one field with tiles sitting on it. */
 .regionFill {
-  fill: hsl(var(--hue) 58% 91%);
+  fill: var(--field);
 }
 
 .regionOutline {
   fill: none;
-  stroke: hsl(var(--hue) 45% 52%);
+  stroke: var(--line);
   stroke-width: 2;
   stroke-linecap: round;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .regionName {
-  fill: hsl(var(--hue) 48% 34%);
+  fill: var(--name);
   dominant-baseline: middle;
   font-weight: 700;
   letter-spacing: 0.14em;
-  opacity: 0.9;
   text-transform: uppercase;
 }
 
@@ -48,14 +91,23 @@
 
 /* Coloured by the region the edge leads INTO, not out of: the two edges into a
    genre's gate then both wear the genre's colour, which is what makes them read
-   as the ways in rather than as two unrelated marks. */
+   as the ways in rather than as two unrelated marks.
+ *
+ * Drawn over a halo of the page colour (see the component), because a bar lies
+ * across whatever the two tiles are filled with and cannot be asked to contrast
+ * with all of them at once. */
+.edgeHalo {
+  stroke: var(--page);
+  stroke-linecap: round;
+}
+
 .edge {
-  stroke: hsl(var(--hue) 45% 45%);
+  stroke: var(--line);
   stroke-linecap: round;
 }
 
 .edgeUnmet {
-  stroke: #9a9aa4;
+  stroke: var(--shut-line);
   stroke-dasharray: 3 4;
 }
 
@@ -77,18 +129,18 @@
 }
 
 .done .tileShape {
-  fill: hsl(var(--hue) 52% 62%);
-  stroke: hsl(var(--hue) 48% 44%);
+  fill: var(--tone);
+  stroke: var(--line);
 }
 
 .open .tileShape {
-  fill: #fff;
-  stroke: hsl(var(--hue) 48% 50%);
+  fill: var(--surface);
+  stroke: var(--line);
 }
 
 .shut .tileShape {
-  fill: #ececf0;
-  stroke: #bcbcc6;
+  fill: var(--shut-fill);
+  stroke: var(--shut-line);
   stroke-dasharray: 4 3;
 }
 
@@ -97,41 +149,33 @@
 }
 
 .label {
-  fill: #26262c;
+  fill: var(--ink);
   font-weight: 600;
   pointer-events: none;
   text-anchor: middle;
 }
 
-.done .label {
-  fill: #fff;
-}
-
 .shut .label {
-  fill: #77777f;
+  fill: var(--shut-ink);
 }
 
 .glyph {
   fill: none;
   pointer-events: none;
-  stroke: #26262c;
+  stroke: var(--ink);
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.done .glyph {
-  stroke: #fff;
-}
-
 .shut .glyph {
-  stroke: #85858e;
+  stroke: var(--shut-ink);
 }
 
 /* The selection ring sits outside the tile rather than on it, so it does not
    argue with the state stroke it would otherwise replace. */
 .ring {
   fill: none;
-  stroke: #1b1b20;
+  stroke: var(--ring);
   stroke-width: 2.5;
 }
 
@@ -141,7 +185,7 @@
 .focusRing {
   display: none;
   fill: none;
-  stroke: #2c6ef2;
+  stroke: var(--focus);
   stroke-dasharray: 6 4;
   stroke-width: 3;
 }
@@ -162,12 +206,13 @@
 }
 
 .controls button {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #c9c9d2;
+  /* 24×24 is the WCAG 2.2 floor for a pointer target; 32 leaves room to miss. */
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--shut-line);
   border-radius: 6px;
-  background: #fff;
-  color: #26262c;
+  background: var(--surface);
+  color: var(--ink);
   cursor: pointer;
   font:
     600 13px/1 system-ui,
@@ -175,7 +220,12 @@
 }
 
 .controls button:hover {
-  background: #f0f0f4;
+  border-color: var(--ink);
+}
+
+.controls button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
 }
 
 .frame {
@@ -185,73 +235,8 @@
   height: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  .map {
-    background: #131317;
-  }
-
-  .regionFill {
-    fill: hsl(var(--hue) 32% 19%);
-  }
-
-  .regionOutline {
-    stroke: hsl(var(--hue) 40% 58%);
-  }
-
-  .regionName {
-    fill: hsl(var(--hue) 40% 72%);
-  }
-
-  .edge {
-    stroke: hsl(var(--hue) 40% 60%);
-  }
-
-  .edgeUnmet {
-    stroke: #5b5b66;
-  }
-
-  .done .tileShape {
-    fill: hsl(var(--hue) 42% 46%);
-    stroke: hsl(var(--hue) 45% 66%);
-  }
-
-  .open .tileShape {
-    fill: #22222a;
-    stroke: hsl(var(--hue) 42% 58%);
-  }
-
-  .shut .tileShape {
-    fill: #1c1c22;
-    stroke: #45454f;
-  }
-
-  .label {
-    fill: #e6e6ec;
-  }
-
-  .shut .label {
-    fill: #7d7d88;
-  }
-
-  .glyph {
-    stroke: #e6e6ec;
-  }
-
-  .shut .glyph {
-    stroke: #7d7d88;
-  }
-
-  .ring {
-    stroke: #f2f2f6;
-  }
-
-  .controls button {
-    border-color: #45454f;
-    background: #22222a;
-    color: #e6e6ec;
-  }
-
-  .controls button:hover {
-    background: #2e2e38;
+@media (prefers-reduced-motion: reduce) {
+  .tileShape {
+    transition: none;
   }
 }

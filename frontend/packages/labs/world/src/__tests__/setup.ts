@@ -6,6 +6,13 @@
 // is written to be inert for tests that do not need it.
 
 import '@testing-library/jest-dom/vitest';
+import {expect} from 'vitest';
+import * as axeMatchers from 'vitest-axe/matchers';
+
+// `toHaveNoViolations`, for the accessibility tests (src/progression). Global
+// because vitest applies one setup to the run; inert for every test that does
+// not call it.
+expect.extend(axeMatchers);
 
 /**
  * jsdom shims for React Flow.

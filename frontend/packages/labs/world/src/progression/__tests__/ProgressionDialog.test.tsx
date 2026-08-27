@@ -86,7 +86,7 @@ describe('the opener', () => {
   it('opens on nothing when the tile is not one it has', async () => {
     lab({focus: 'nowhere/at-all'});
     await userEvent.click(screen.getByRole('button', {name: 'open'}));
-    expect(within(detail()).getByText(/Pick a tile/)).toBeInTheDocument();
+    expect(within(detail()).getByText(/Pick a lesson/)).toBeInTheDocument();
   });
 });
 
@@ -180,11 +180,15 @@ describe('the detail pane', () => {
 
   it('completes an open tile, and the header counts it', async () => {
     await openOn('origin/first-world');
-    expect(within(dialog()).getByText('0 of 67 done')).toBeInTheDocument();
+    expect(
+      within(dialog()).getByText(/^0 of 67 lessons done/),
+    ).toBeInTheDocument();
     await userEvent.click(
       within(detail()).getByRole('button', {name: 'Mark as done'}),
     );
-    expect(within(dialog()).getByText('1 of 67 done')).toBeInTheDocument();
+    expect(
+      within(dialog()).getByText(/^1 of 67 lessons done/),
+    ).toBeInTheDocument();
   });
 
   it('opens what completing a tile unlocked', async () => {
@@ -194,7 +198,7 @@ describe('the detail pane', () => {
     );
     // Motion's first tile was shut a moment ago and is now ready.
     expect(
-      screen.getByRole('button', {
+      screen.getByRole('option', {
         name: /Speed is not a place\. Motion\. Ready to start\./,
       }),
     ).toBeInTheDocument();

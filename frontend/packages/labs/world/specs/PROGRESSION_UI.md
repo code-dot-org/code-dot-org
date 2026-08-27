@@ -399,9 +399,55 @@ anything depends on it.
    opening the map replaced the whole lab with the harness. The harness is
    `?map` now.
 
-5. **The list view, the keyboard model, the a11y pass.** Not last because it is
-   least — last because it is the pass that wants the real thing to be shaped
-   already, and it is a gate on shipping rather than a nice-to-have.
+5. ~~**The list view, the keyboard model, the a11y pass.**~~ **Done** —
+   `ProgressionList.tsx`, `palette.ts`, and the two audits that hold them:
+   `__tests__/palette.test.ts` (122 contrast assertions, every region hue, both
+   themes) and `__tests__/accessibility.test.tsx` (axe over the whole dialog in
+   both views). Axe also runs in a real browser, where contrast can actually be
+   computed, and the keyboard self-test from the org checklist was walked there:
+   Enter opens, focus lands on the view toggle, two Tabs reach the map's single
+   tab stop, the arrows move between tiles announcing each one in full, the
+   detail follows, Escape closes and focus returns to the trigger.
+
+   **The colour system had a real defect, and it was invisible by construction.**
+   Every role was one fixed HSL lightness reused at all fourteen hues — and HSL
+   lightness is not luminance, so `hsl(90 52% 62%)` and `hsl(245 52% 62%)` are
+   the same "lightness" and differ fourfold in brightness. White on a finished
+   tile ran from **1.79:1 to 4.6:1** against a floor of 4.5, and eight of ten
+   measured pairs failed. Colours are now asked for by target LUMINANCE and the
+   lightness found by bisection, so the ratios hold at every hue by construction
+   rather than by inspection.
+
+   **Which theme a colour is for is decided on `[data-theme]`**, the attribute
+   the design system's own tokens are scoped by. Two earlier answers could put
+   the map in a different theme from the panel around it: `prefers-color-scheme`
+   painted dark colours on a white dialog whenever the OS and the lab disagreed,
+   and the React theme context put a light map inside a dark dialog whenever the
+   context and the attribute did. Axe caught the first as a 1.83:1 link; a
+   screenshot caught the second. Related: the design system's dialog paints its
+   surface and leaves `color` alone, so the content inherited the page's black
+   onto a dark panel — the dialog now sets `--text-neutral-primary` itself.
+
+   **The map is a listbox, not sixty-seven buttons.** Picking a tile SELECTS it,
+   so `aria-selected` is the truth `aria-pressed` would have misstated, and the
+   role brings the keyboard model that was already built. Everything else in the
+   SVG — fills, outlines, names, edges — is `aria-hidden`, so the listbox holds
+   only options.
+
+   **Selecting a tile brings it into view**, which is two criteria rather than a
+   nicety: Focus Not Obscured (2.4.11), because arrowing to a tile off the edge
+   of a zoomed map puts focus where nobody can see it, and Dragging Movements
+   (2.5.7), because dragging was the only way to pan and picking a lesson in the
+   list is now a single-pointer way to reach any of them. Panning also converts
+   pointer pixels to user units now; it had been moving by the wrong amount.
+
+   **Known limit, and it is the lab's rather than this feature's.** At a 380px
+   viewport the document scrolls horizontally — but it already does with the
+   dialog shut: the lab's own workspace header and its Code/Preview/Split
+   buttons are 782px wide at that width. The dialog itself reflows to a single
+   column and audits clean. Reflow (1.4.10) for World Lab as a whole is
+   somebody's milestone and is not this one.
+
 6. **The back-links** from the rule import dialog, the actor shelf, the toolbox
    category headers, and the `use trait` eye.
 7. **Real completion** — the checks (PROGRESSION.md), and then the studio-level
