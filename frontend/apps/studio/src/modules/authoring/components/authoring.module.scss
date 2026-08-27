@@ -367,6 +367,31 @@
   font-style: italic;
 }
 
+.workingIndicator {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 12px;
+  color: var(--text-neutral-secondary, #6f747c);
+}
+
+@keyframes authoringWorkingPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.workingIndicatorText {
+  font-style: italic;
+  animation: authoringWorkingPulse 1.6s ease-in-out infinite;
+}
+
 .sidebarComposer {
   border-top: 1px solid var(--borders-neutral-light, #d5d8dc);
   padding: 12px 16px;

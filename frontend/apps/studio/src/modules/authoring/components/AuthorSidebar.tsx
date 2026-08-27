@@ -1,4 +1,4 @@
-import {Button, Typography} from '@mui/material';
+import {Button, CircularProgress, Typography} from '@mui/material';
 import {
   useEffect,
   useRef,
@@ -9,6 +9,8 @@ import {
 
 import Tags from '@code-dot-org/component-library/tags';
 
+import {describeAgentTool} from '../agentActivityLabel';
+import {computeFinishedTurns, findActiveTurn} from '../agentTurnStatus';
 import {authoringApi, type AuthoringScope, type ChatMessage} from '../api';
 import {activityFeedStore, type AuthoringServerEvent} from '../events';
 import {useChatLog} from '../hooks';
@@ -54,6 +56,7 @@ export default function AuthorSidebar({
   const {inScope, outOfScope} = mergeLogAndFeed(log ?? [], feed, scope);
   const [showEarlier, setShowEarlier] = useState(false);
   const items = showEarlier ? [...outOfScope, ...inScope] : inScope;
+  const busy = sending || findActiveTurn(feed) !== undefined;
 
   useEffect(() => {
     const el = logRef.current;
@@ -63,7 +66,7 @@ export default function AuthorSidebar({
     if (el && nearBottomRef.current) {
       el.scrollTo({top: el.scrollHeight});
     }
-  }, [items.length]);
+  }, [items.length, busy]);
 
   const onLogScroll = () => {
     const el = logRef.current;
@@ -123,12 +126,24 @@ export default function AuthorSidebar({
         {items.map(item => (
           <SidebarItem key={item.key} item={item} />
         ))}
-        {items.length === 0 && (
+        {items.length === 0 && !busy && (
           <Typography variant="body2">
             Describe what learners should experience — “add a quick check for
             understanding here”, “make this more hands-on”, “use the Oceans
             activity where students train a model”.
           </Typography>
+        )}
+        {busy && (
+          <div className={styles.workingIndicator} role="status">
+            <CircularProgress size={14} thickness={5} />
+            <Typography
+              variant="body4"
+              component="span"
+              className={styles.workingIndicatorText}
+            >
+              Working…
+            </Typography>
+          </div>
         )}
       </div>
       <div className={styles.sidebarComposer}>
@@ -138,6 +153,7 @@ export default function AuthorSidebar({
             aria-label="Message the AI author"
             value={draft}
             placeholder={`Ask about this ${scopeLabelKind(scope)}…`}
+            disabled={busy}
             onChange={e => setDraft(e.target.value)}
             onKeyDown={e => {
               if (e.key === 'Enter' && !e.shiftKey) {
@@ -149,10 +165,10 @@ export default function AuthorSidebar({
           <Button
             variant="contained"
             size="small"
-            disabled={sending || !draft.trim()}
+            disabled={busy || !draft.trim()}
             onClick={() => void send()}
           >
-            Send
+            {busy ? 'Working…' : 'Send'}
           </Button>
         </div>
       </div>
@@ -208,22 +224,20 @@ function mergeLogAndFeed(
       entry,
     );
   }
-  const finishedTurns = new Set(
-    feed
-      .filter(
-        event =>
-          event.type === 'agent-status' &&
-          (event.status === 'done' || event.status === 'error'),
-      )
-      .map(event => (event.type === 'agent-status' ? event.turnId : '')),
-  );
+  const finishedTurns = computeFinishedTurns(feed);
   // Live status chatter is always for the turn just sent from THIS screen —
   // always in scope, never worth hiding behind the earlier-activity toggle.
   feed.forEach((event, i) => {
     if (event.type !== 'agent-status' || finishedTurns.has(event.turnId)) {
       return;
     }
-    if (event.status === 'tool' || event.status === 'text') {
+    if (event.status === 'tool') {
+      inScope.push({
+        key: `s:${i}:${event.turnId}`,
+        type: 'status',
+        text: describeAgentTool(event.detail ?? event.status),
+      });
+    } else if (event.status === 'text') {
       inScope.push({
         key: `s:${i}:${event.turnId}`,
         type: 'status',
