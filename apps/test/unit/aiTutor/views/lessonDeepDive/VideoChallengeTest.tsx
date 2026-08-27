@@ -86,6 +86,7 @@ const fakeChallenge = {
   question: 'Explain your solution.',
   default_modality: 'video' as const,
   whiteboard_starter_image_alt_text: null,
+  whiteboard_starter_image_url: null,
 };
 
 // Helper: simulate the full record → stop sequence.
