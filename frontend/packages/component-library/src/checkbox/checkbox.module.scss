@@ -33,20 +33,15 @@
       box-sizing: content-box;
 
       &::before {
-        // Centre the check/dash glyph on the box itself. line-height
-        // centres the line box instead, which sits below the border, and
-        // left the glyph 1-2.5px low. Flex also keeps this out of the
-        // wrapper's inline formatting context, where an inline-block would
-        // sit on the baseline and paint 3-4px past its own height.
+        // Centres the glyph on the box: line-height would centre it on the
+        // line box, which starts inside the border. Being a block also keeps
+        // it off the wrapper's baseline, where it painted past its own height.
         display: flex;
         align-items: center;
         justify-content: center;
 
-        // The per-size width/height below are the box's outer size, border
-        // included. Declare the box model rather than inheriting whatever
-        // reset the host page happens to ship: dashboard's Bootstrap 3 sets
-        // border-box on *:before, Storybook sets nothing, and the two render
-        // the box 4px apart.
+        // width/height below are the outer box, border included; declared
+        // so the host page's reset does not get to decide it.
         box-sizing: border-box;
         content: ' ';
         text-align: center;
@@ -161,7 +156,9 @@
   }
 }
 
-// Sizes
+// Sizes. margin-top is (label line-height - box height) / 2 so the box
+// centres on the label's first line; flex-start keeps a wrapping label
+// aligned to that line rather than to its block centre.
 .label-l {
   gap: 8px;
   input[type='checkbox'] {
@@ -169,7 +166,6 @@
       width: 22px;
       height: 22px;
 
-      // (label line-height - box) / 2 — see .label comment
       margin-top: calc((var(--font-size-body-lg) * 1.4 - 22px) / 2);
 
       &::before {
