@@ -9,6 +9,7 @@ import {useAuthoringState, useCanAuthor} from '@/modules/authoring';
 import {authoringApi, draftLessonId, draftUnitId} from '@/modules/authoring/api';
 import AuthorRouteError from '@/modules/authoring/components/AuthorRouteError';
 import AuthorSidebar from '@/modules/authoring/components/AuthorSidebar';
+import ChangeHistory from '@/modules/authoring/components/ChangeHistory';
 import CreateEntityButton from '@/modules/authoring/components/CreateEntityButton';
 
 import styles from '@/modules/authoring/components/authoring.module.scss';
@@ -39,18 +40,29 @@ function CourseOverview() {
   const content = (
     <div className={styles.courseScroll}>
       <div className={styles.coursePage}>
-        <div>
-          <Link to="/author">
-            <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />{' '}
-            <Typography variant="body4" component="span">
-              All curriculum
+        <div className={styles.coursePageHeader}>
+          <div>
+            <Link to="/author">
+              <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />{' '}
+              <Typography variant="body4" component="span">
+                All curriculum
+              </Typography>
+            </Link>
+            <Typography variant="h4" component="h1">
+              {course.displayName}
             </Typography>
-          </Link>
-          <Typography variant="h4" component="h1">
-            {course.displayName}
-          </Typography>
-          {course.gradeLevels && (
-            <Typography variant="body2">Grades {course.gradeLevels}</Typography>
+            {course.gradeLevels && (
+              <Typography variant="body2">
+                Grades {course.gradeLevels}
+              </Typography>
+            )}
+          </div>
+          {canAuthor && data && (
+            <ChangeHistory
+              courseId={course.id}
+              courses={data.courses}
+              changes={data.changes}
+            />
           )}
         </div>
         {course.units.map(unit => (

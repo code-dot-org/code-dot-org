@@ -97,9 +97,19 @@ const draftCourse: CourseModel = {
   units: [],
 };
 
+// Not every minting scheme uses the `draft-` prefix (see create_level, which
+// mints the level's own id separately from its `draft-exp-` experience id) —
+// this id proves newness is read from the change log, not string-matched.
+const customIdCourse: CourseModel = {
+  id: 'custom-course-2',
+  displayName: 'Course with a non-draft- id',
+  origin: 'draft',
+  units: [],
+};
+
 const snapshot: CurriculumSnapshot = {
   version: 4,
-  courses: [course, draftCourse],
+  courses: [course, draftCourse, customIdCourse],
   widgets: [widget],
   levelProperties: {},
 };
@@ -125,6 +135,18 @@ const changes: CurriculumChange[] = [
     descriptor: widget,
   },
   {
+    seq: 6,
+    at: '2026-08-25T00:00:05.000Z',
+    actor: 'author',
+    op: 'createLesson',
+    unitId: 'k5-ai-data-2024',
+    lesson: {
+      id: 'draft-lesson-2',
+      displayName: 'Outline only',
+      origin: 'draft',
+    },
+  },
+  {
     seq: 3,
     at: '2026-08-25T00:00:02.000Z',
     actor: 'agent',
@@ -132,6 +154,32 @@ const changes: CurriculumChange[] = [
     course: {
       id: 'draft-course-1',
       displayName: 'A brand new course',
+      origin: 'draft',
+    },
+  },
+  {
+    seq: 4,
+    at: '2026-08-25T00:00:03.000Z',
+    actor: 'agent',
+    op: 'insertExperience',
+    lessonId: 'draft-lesson-1',
+    position: 0,
+    experience: {
+      id: 'draft-experience-1',
+      origin: 'draft',
+      kind: 'widget',
+      widgetId: 'sorter',
+      toolName: 'present_sorter',
+    },
+  },
+  {
+    seq: 5,
+    at: '2026-08-25T00:00:04.000Z',
+    actor: 'agent',
+    op: 'createCourse',
+    course: {
+      id: 'custom-course-2',
+      displayName: 'Course with a non-draft- id',
       origin: 'draft',
     },
   },
@@ -151,16 +199,23 @@ function build() {
 
 describe('buildChangeSet', () => {
   it('reports the courses the change log touched', () => {
-    expect(build().courseIds).toEqual(['k5-ai-data-2024', 'draft-course-1']);
+    expect(build().courseIds).toEqual([
+      'k5-ai-data-2024',
+      'draft-course-1',
+      'custom-course-2',
+    ]);
   });
 
   it('carries the full change log', () => {
     expect(build().changes).toEqual(changes);
   });
 
-  it('collects draft objects as new', () => {
+  it('collects objects the change log created as new, regardless of id prefix', () => {
     const {newObjects} = build();
-    expect(newObjects.courses.map(c => c.id)).toEqual(['draft-course-1']);
+    expect(newObjects.courses.map(c => c.id)).toEqual([
+      'draft-course-1',
+      'custom-course-2',
+    ]);
     expect(newObjects.units).toEqual([]);
     expect(newObjects.lessons.map(lesson => lesson.id)).toEqual([
       'draft-lesson-1',
@@ -169,6 +224,30 @@ describe('buildChangeSet', () => {
     expect(newObjects.experiences.map(exp => exp.id)).toEqual([
       'draft-experience-1',
     ]);
+  });
+
+  // Regression: the collector used to string-match the `draft-` prefix,
+  // which create_level's own level id (minted separately from its
+  // `draft-exp-` experience id — see ClaudeAgentRunner) would have missed
+  // had it ever used a different scheme. Newness is now read from which
+  // change created the id, not from the id's shape.
+  it('collects a newly created object whose id does not start with draft-', () => {
+    expect(build().newObjects.courses.map(c => c.id)).toContain(
+      'custom-course-2',
+    );
+  });
+
+  it('excludes an object that merely appears in the tree without a matching create* change', () => {
+    // `lb:k5-ai-data-2024:what-is-data` and its levelbuilder-imported
+    // experiences are present in the snapshot but were never created by a
+    // change in this session's log.
+    const {newObjects} = build();
+    expect(newObjects.lessons.map(l => l.id)).not.toContain(
+      'lb:k5-ai-data-2024:what-is-data',
+    );
+    expect(newObjects.experiences.map(e => e.id)).not.toContain(
+      'lb:Oceans_FishVTrash_2024',
+    );
   });
 
   it('publishes the served, chrome-injected source, not the raw agent output', () => {

@@ -128,3 +128,91 @@ describe('AuthoringState overrideLevelInstructions', () => {
     expect(state.version).toBe(versionBefore + 1);
   });
 });
+
+describe('AuthoringState overrideLevelInstructions previous capture', () => {
+  it('captures the imported original as `previous` on the first override', () => {
+    const state = stateWithLevel();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelInstructions',
+        experienceId: 'lb:some_maze_level',
+        patch: {shortInstructions: 'Reworded for 2nd grade.'},
+      },
+      'author',
+    );
+    expect(change).toMatchObject({
+      previous: {shortInstructions: 'Original short instructions.'},
+    });
+  });
+
+  it('captures the prior override as `previous` on a second override of the same field', () => {
+    const state = stateWithLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelInstructions',
+        experienceId: 'lb:some_maze_level',
+        patch: {shortInstructions: 'First rewrite.'},
+      },
+      'author',
+    );
+    const second = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelInstructions',
+        experienceId: 'lb:some_maze_level',
+        patch: {shortInstructions: 'Second rewrite.'},
+      },
+      'author',
+    );
+    expect(second).toMatchObject({
+      previous: {shortInstructions: 'First rewrite.'},
+    });
+  });
+
+  it('captures an empty string, not undefined, for a field that never had a value', () => {
+    const state = stateWithLevel();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelInstructions',
+        experienceId: 'lb:some_maze_level',
+        patch: {longInstructions: 'Turn left, then walk to the goal.'},
+      },
+      'author',
+    );
+    expect(change).toMatchObject({previous: {longInstructions: ''}});
+  });
+
+  it('only captures the fields the patch itself touches', () => {
+    const state = stateWithLevel();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelInstructions',
+        experienceId: 'lb:some_maze_level',
+        patch: {shortInstructions: 'Reworded.'},
+      },
+      'author',
+    );
+    expect(
+      (change as {previous?: {longInstructions?: string}}).previous,
+    ).not.toHaveProperty('longInstructions');
+  });
+
+  it('ignores a client-supplied `previous` and recomputes it authoritatively', () => {
+    const state = stateWithLevel();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelInstructions',
+        experienceId: 'lb:some_maze_level',
+        patch: {shortInstructions: 'Reworded.'},
+        // Simulates a spoofed request body reaching applyCurriculumChange
+        // directly — CurriculumChangeBodySchema would strip this in the real
+        // POST /api/changes path, but the type itself allows it (it's the
+        // same field the server stamps authoritatively below).
+        previous: {shortInstructions: 'Attacker-supplied lie.'},
+      },
+      'author',
+    );
+    expect(change).toMatchObject({
+      previous: {shortInstructions: 'Original short instructions.'},
+    });
+  });
+});

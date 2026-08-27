@@ -24,6 +24,7 @@ export interface AuthoringStateResponse {
   version: number;
   courses: CourseModel[];
   widgets: WidgetDescriptor[];
+  changes: CurriculumChange[];
 }
 
 export interface ChatMessage {

@@ -98,6 +98,20 @@ export class AuthoringState {
       actor,
     };
 
+    // Capture before the merge below overwrites it — this is the one place
+    // that still has the pre-patch value, whether it's the imported original
+    // or an earlier override. A client-supplied `previous` (there shouldn't
+    // be one; CurriculumChangeBodySchema doesn't accept the field) is
+    // discarded in favor of this authoritative capture either way.
+    if (change.op === 'overrideLevelInstructions') {
+      change.previous = capturePreviousInstructions(
+        this.snapshot.courses,
+        this.snapshot.levelProperties,
+        change.experienceId,
+        change.patch,
+      );
+    }
+
     const next = this.applyChange(
       {courses: this.snapshot.courses, widgets: this.snapshot.widgets},
       change,
@@ -253,6 +267,34 @@ function findExistingLevelExperience(
     }
   }
   return undefined;
+}
+
+// Reads straight from the served levelProperties rather than
+// experience.instructionsOverride: the latter only holds the override
+// delta, which is empty (undefined) for a field an author has never
+// touched, while levelProperties always carries the value currently on
+// display — imported original or a prior override alike — for every field.
+function capturePreviousInstructions(
+  courses: CourseModel[],
+  levelProperties: Record<string, Record<string, unknown>>,
+  experienceId: string,
+  patch: {shortInstructions?: string; longInstructions?: string},
+): {shortInstructions?: string; longInstructions?: string} | undefined {
+  const experience = findExistingLevelExperience(courses, experienceId);
+  if (experience?.levelNumericId === undefined) {
+    return undefined;
+  }
+  const current = levelProperties[String(experience.levelNumericId)];
+  const previous: {shortInstructions?: string; longInstructions?: string} = {};
+  if ('shortInstructions' in patch) {
+    const value = current?.shortInstructions;
+    previous.shortInstructions = typeof value === 'string' ? value : '';
+  }
+  if ('longInstructions' in patch) {
+    const value = current?.longInstructions;
+    previous.longInstructions = typeof value === 'string' ? value : '';
+  }
+  return previous;
 }
 
 function mergeInstructionsOverride(

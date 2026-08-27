@@ -148,6 +148,7 @@ app.get('/api/state', c =>
     version: state.version,
     courses: state.getSnapshot().courses,
     widgets: state.getSnapshot().widgets,
+    changes: state.getChanges(),
   }),
 );
 

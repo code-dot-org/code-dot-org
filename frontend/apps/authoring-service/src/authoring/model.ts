@@ -210,6 +210,12 @@ export type CurriculumChangeBody =
       op: 'overrideLevelInstructions';
       experienceId: string;
       patch: InstructionsPatch;
+      // Captured by AuthoringState.applyCurriculumChange at apply time, from
+      // whatever the served levelProperties held for each patched field just
+      // before the merge — never client-supplied. Lets a revert restore the
+      // exact prior text (imported original or an earlier override alike)
+      // without replaying the whole log.
+      previous?: InstructionsPatch;
     };
 
 export type CurriculumChangeOp = CurriculumChangeBody['op'];

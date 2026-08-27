@@ -59,11 +59,6 @@ export interface BuildChangeSetInput {
   generatedAt?: Date;
 }
 
-// Real draft ids are `draft-course-<uuid>`, `draft-lesson-<uuid>`,
-// `draft-exp-<uuid>`, etc. (see ClaudeAgentRunner's draftId helper) — not the
-// `draft:` colon form the domain-model doc comments describe.
-const DRAFT_PREFIX = 'draft-';
-
 /**
  * Projects the session into the artifact a future Rails write adapter would
  * consume: the full change log plus everything a reviewer needs to judge it —
@@ -80,7 +75,7 @@ export function buildChangeSet(
     generatedAt,
     courseIds: touchedCourseIds(snapshot.courses, changes),
     changes,
-    newObjects: collectDrafts(snapshot.courses),
+    newObjects: collectNewObjects(snapshot.courses, changes),
     widgets: snapshot.widgets.map(descriptor =>
       // One widget whose source can't be read must not fail the whole
       // publish; treat it as source-absent and let its validation flags say so.
@@ -179,28 +174,75 @@ function touchedCourseIds(
   return [...touched];
 }
 
-function collectDrafts(
+/** Every id a create* change minted this session, by category — regardless
+ * of what prefix (if any) the id happens to carry. */
+function newIds(changes: CurriculumChange[]): {
+  courses: Set<string>;
+  units: Set<string>;
+  lessons: Set<string>;
+  experiences: Set<string>;
+} {
+  const courses = new Set<string>();
+  const units = new Set<string>();
+  const lessons = new Set<string>();
+  const experiences = new Set<string>();
+  for (const change of changes) {
+    switch (change.op) {
+      case 'createCourse':
+        courses.add(change.course.id);
+        break;
+      case 'createUnit':
+        units.add(change.unit.id);
+        break;
+      case 'createLesson':
+        lessons.add(change.lesson.id);
+        break;
+      case 'insertExperience':
+        experiences.add(change.experience.id);
+        break;
+      case 'createLevel':
+        experiences.add(change.level.id);
+        break;
+      default:
+        break;
+    }
+  }
+  return {courses, units, lessons, experiences};
+}
+
+/**
+ * Walks the current tree (so a lesson created this session but since
+ * retitled still comes back with its latest displayName) and keeps only the
+ * ids the change log says this session actually minted — an id-prefix
+ * convention (`draft-`) is just one possible minting scheme among several
+ * (see ClaudeAgentRunner's create_level, which mints the level's own id
+ * with a `draft-` prefix but not every object a future write adapter might
+ * introduce is guaranteed to), so newness is derived from the log itself.
+ */
+function collectNewObjects(
   courses: CourseModel[],
+  changes: CurriculumChange[],
 ): LevelbuilderChangeSet['newObjects'] {
+  const ids = newIds(changes);
   const newCourses: CourseModel[] = [];
   const units: Unit[] = [];
   const lessons: Lesson[] = [];
   const experiences: Experience[] = [];
 
   for (const course of courses) {
-    if (course.id.startsWith(DRAFT_PREFIX)) {
+    if (ids.courses.has(course.id)) {
       newCourses.push(course);
     }
     for (const unit of course.units) {
-      if (unit.id.startsWith(DRAFT_PREFIX)) {
+      if (ids.units.has(unit.id)) {
         units.push(unit);
       }
       for (const lesson of unit.lessons) {
-        if (lesson.id.startsWith(DRAFT_PREFIX)) {
+        if (ids.lessons.has(lesson.id)) {
           lessons.push(lesson);
         }
         for (const experience of lesson.experiences) {
-          if (experience.id.startsWith(DRAFT_PREFIX)) {
+          if (ids.experiences.has(experience.id)) {
             experiences.push(experience);
           }
         }

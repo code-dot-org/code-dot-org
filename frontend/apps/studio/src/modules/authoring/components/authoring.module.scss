@@ -808,6 +808,50 @@
   gap: 12px;
 }
 
+.changeHistory {
+  padding: 16px;
+  width: 420px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.changeHistoryList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.changeHistoryRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-radius: 6px;
+}
+
+.changeHistoryRowMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.changeHistoryMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-neutral-secondary, #444);
+}
+
 .courseRemoveConfirmActions {
   display: flex;
   justify-content: flex-end;
