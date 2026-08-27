@@ -1,0 +1,321 @@
+// Styles for the Tutor+ project gallery: the page layout (ChallengeGallery),
+// the filter rail (GallerySidebar), the project cards (ProjectCard), and the
+// emoji reaction chips (ReactionChips).
+
+// --- Page layout ---
+
+.page {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 50px);
+  background-color: var(--background-neutral-primary);
+  font-family: var(--font-family-main);
+  color: var(--text-neutral-primary);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 20px 40px 40px;
+}
+
+.pageHeader {
+  margin-bottom: 24px;
+}
+
+.pageOverline {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: var(--text-brand-primary-fixed);
+}
+
+.pageTitle {
+  margin: 4px 0 0;
+  font-family: var(--font-family-heading);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 52px;
+  color: var(--text-neutral-primary);
+}
+
+.projectGroup {
+  margin-bottom: 40px;
+}
+
+.groupHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.groupTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: var(--text-neutral-primary);
+}
+
+.groupCount {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-quaternary);
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 16px;
+}
+
+.whiteboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 16px;
+}
+
+.statusText {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-neutral-primary);
+}
+
+// --- Sidebar (filter rail) ---
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 16px;
+  width: 260px;
+  padding: 20px 0;
+  background-color: var(--background-neutral-secondary);
+  border-right: 1px solid var(--border-neutral-primary);
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 12px;
+}
+
+// Overline labels above each sidebar group.
+.panelLabel {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: var(--text-neutral-quaternary);
+}
+
+.dropdown {
+  width: 100%;
+
+  select {
+    width: 100%;
+  }
+}
+
+.unitNav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.unitHeading {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 16px;
+}
+
+.unitList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.unitButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 4px 16px 4px 32px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: start;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+
+  &.selected {
+    background-color: var(--background-selected-primary);
+    color: var(--text-selected-primary);
+  }
+}
+
+.unitName {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.unitCount {
+  font-weight: 600;
+}
+
+// --- Project cards ---
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-md);
+}
+
+// Video projects are portrait cards; whiteboard projects landscape.
+.videoCard .media {
+  height: 260px;
+}
+
+.whiteboardCard .media {
+  height: 179px;
+}
+
+.media {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--background-neutral-tertiary);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 20px;
+}
+
+.unitLabel {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-brand-primary-fixed);
+}
+
+.tags {
+  display: flex;
+  gap: 4px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 6px;
+  border: 1px solid;
+  border-radius: var(--shape-sm);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.tagBrand {
+  background-color: var(--background-brand-light);
+  border-color: var(--border-brand-mid);
+  color: var(--text-brand-secondary);
+}
+
+.tagPink {
+  background-color: var(--background-accent-pink-light);
+  border-color: var(--border-accent-pink-mid);
+  color: var(--text-accent-pink-secondary);
+}
+
+.tagGreen {
+  background-color: var(--background-success-light);
+  border-color: var(--border-success-mid);
+  color: var(--text-success-secondary);
+}
+
+.tagOrange {
+  background-color: var(--background-accent-orange-light);
+  border-color: var(--border-accent-orange-mid);
+  color: var(--text-accent-orange-secondary);
+}
+
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-brand-secondary);
+}
+
+.nameLink {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+// --- Reaction chips ---
+
+.reactions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding-top: 4px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  padding: 2px 10px;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-round);
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-neutral-primary);
+}
+
+.count {
+  font-weight: 400;
+}

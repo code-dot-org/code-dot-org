@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q10-2026'
+
+right 'The training data needs both features and labels'
+wrong 'The training data needs features, but not labels'
+wrong 'The training data needs labels, but not features'
+wrong 'The training data does not need either features or labels'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+When training a classifier, which of the following is true?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Building Classifiers
+MARKDOWN

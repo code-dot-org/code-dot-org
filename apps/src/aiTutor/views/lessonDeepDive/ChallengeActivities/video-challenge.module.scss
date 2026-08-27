@@ -24,3 +24,9 @@
 .optionsRowsWrap {
   flex-wrap: wrap;
 }
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}

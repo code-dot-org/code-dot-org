@@ -60,6 +60,20 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       refute_redirect_to lockout_path
     end
 
+    context 'when a Global Edition region is active' do
+      before do
+        cookies[:ge_region] = 'cn'
+        cookies[:language_] = 'zh-CN'
+      end
+
+      it 'allows an unprefixed request to the policy consent API' do
+        post '/policy_compliance/child_account_consent', as: :json
+
+        # Missing parent_email proves the request reached the consent controller.
+        must_respond_with :bad_request
+      end
+    end
+
     it 'allows student change account information' do
       patch users_set_student_information_path
       refute_redirect_to lockout_path
@@ -178,13 +192,13 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
     it 'does nothing when brand router is disabled' do
       DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
-      get root_path, params: {brand: 'codeai'}
+      get root_path, params: {brand: 'codeai-audit'}
       assert_nil cookies[cookie_key]
     end
 
     it 'sets brand cookie from URL param' do
-      get root_path, params: {brand: 'codeai'}
-      assert_equal 'codeai', response.cookies[cookie_key]
+      get root_path, params: {brand: 'codeai-audit'}
+      assert_equal 'codeai-audit', response.cookies[cookie_key]
     end
 
     it 'ignores unknown brand codes' do
@@ -193,7 +207,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
 
     it 'clears brand cookie on brand-reset' do
-      cookies[cookie_key] = 'codeai'
+      cookies[cookie_key] = 'codeai-audit'
       get root_path, params: {'brand-reset' => '1'}
       assert_nil response.cookies[cookie_key]
     end

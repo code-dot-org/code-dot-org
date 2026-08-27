@@ -1,36 +1,37 @@
 import classNames from 'classnames';
-import React, {useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-import {
-  createEmptyWorld,
-  SCENE_GRID_SIZE,
-  SpriteLab2World,
-  WorldCell,
-} from '../world';
+import {createEmptyWorld, World, WorldCell} from '../world';
 
 import {PREVIEW_CLEARANCE} from './Playspace';
 
 import moduleStyles from './world-tab.module.scss';
 
-// The editor draws the grid at a fixed overall size; cells shrink as the
-// visible extent grows.
+// The editor draws the grid at this overall size when there's room; cells
+// shrink as the visible extent grows.
 const GRID_PIXELS = 528;
+// Short windows shrink the grid to fit, down to this; below it the tab
+// scrolls instead (cells get too small to paint).
+const MIN_GRID_PIXELS = 320;
 
 interface PaletteItem extends WorldCell {
   thumb?: string;
 }
 
 interface WorldTabProps {
-  world?: SpriteLab2World;
-  // Visible extent (cells per side): the scene grid by default, the whole
-  // world with the world=large parameter. Storage is always the full world,
-  // so placements keep their coordinates across the two views.
-  displaySize: number;
+  world?: World;
+  // Cells per side of the playfield. Storage is larger, so placements keep
+  // their coordinates if it ever grows.
+  sceneSize: number;
   // Cell-level so the owner can apply it atomically against saved sources.
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
+  // Palette selection, owned by the view so it survives tab switches (this
+  // component unmounts when the tab is hidden).
+  selected: WorldCell | 'erase' | null;
+  onSelect: (selection: WorldCell | 'erase') => void;
 }
 
 /**
@@ -40,8 +41,10 @@ interface WorldTabProps {
  */
 const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   world,
-  displaySize,
+  sceneSize,
   onPaintCell,
+  selected,
+  onSelect,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   const palette: PaletteItem[] = useMemo(
@@ -62,8 +65,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     () => new Map(palette.map(item => [item.image, item.thumb])),
     [palette]
   );
-
-  const [selected, setSelected] = useState<PaletteItem | 'erase' | null>(null);
 
   const grid = world?.grid ?? createEmptyWorld().grid;
   const paintCell = (row: number, col: number, erase: boolean) => {
@@ -88,7 +89,25 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     paintCell(row, col, strokeErase.current);
   };
 
-  const cellPixels = GRID_PIXELS / displaySize;
+  // Shrink the grid to the vertical room left after the palette (see
+  // worldGridArea): full size when it fits, floored so cells stay paintable.
+  const gridAreaRef = useRef<HTMLDivElement | null>(null);
+  const [gridPixels, setGridPixels] = useState(GRID_PIXELS);
+  useEffect(() => {
+    const area = gridAreaRef.current;
+    if (!area) {
+      return;
+    }
+    const observer = new ResizeObserver(() => {
+      setGridPixels(
+        Math.max(MIN_GRID_PIXELS, Math.min(GRID_PIXELS, area.clientHeight))
+      );
+    });
+    observer.observe(area);
+    return () => observer.disconnect();
+  }, []);
+
+  const cellPixels = gridPixels / sceneSize;
   return (
     <div
       className={moduleStyles.worldTab}
@@ -106,7 +125,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                 selected?.image === item.image &&
                 moduleStyles.worldPaletteSelected
             )}
-            onClick={() => setSelected(item)}
+            onClick={() => onSelect({image: item.image, kind: item.kind})}
           >
             {item.thumb && <img src={item.thumb} alt={item.image} />}
           </button>
@@ -118,7 +137,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             moduleStyles.worldPaletteErase,
             selected === 'erase' && moduleStyles.worldPaletteSelected
           )}
-          onClick={() => setSelected('erase')}
+          onClick={() => onSelect('erase')}
         >
           Erase
         </button>
@@ -128,61 +147,52 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           </span>
         )}
       </div>
-      <div
-        className={moduleStyles.worldGrid}
-        style={{
-          gridTemplateColumns: `repeat(${displaySize}, ${cellPixels}px)`,
-        }}
-      >
-        {Array.from({length: displaySize}, (_, row) =>
-          Array.from({length: displaySize}, (_, col) => {
-            const cell = grid[row]?.[col];
-            const thumb = cell && thumbsByImage.get(cell.image);
-            const outsideScene =
-              row >= SCENE_GRID_SIZE || col >= SCENE_GRID_SIZE;
-            return (
-              <button
-                key={`${row}-${col}`}
-                type="button"
-                aria-label={
-                  cell ? `${cell.image} at ${row},${col}` : `${row},${col}`
-                }
-                className={classNames(
-                  moduleStyles.worldCell,
-                  outsideScene && moduleStyles.worldCellOutside
-                )}
-                style={{height: cellPixels}}
-                // Touch implicitly captures the pointer on the pressed cell,
-                // which would keep drag painting's enter events from the
-                // neighbors — release it.
-                onPointerDown={e => {
-                  e.currentTarget.releasePointerCapture?.(e.pointerId);
-                  startStroke(row, col);
-                }}
-                onPointerEnter={e => {
-                  if (e.buttons & 1) {
-                    paintCell(row, col, strokeErase.current);
+      <div ref={gridAreaRef} className={moduleStyles.worldGridArea}>
+        <div
+          className={moduleStyles.worldGrid}
+          style={{
+            gridTemplateColumns: `repeat(${sceneSize}, ${cellPixels}px)`,
+          }}
+        >
+          {Array.from({length: sceneSize}, (_, row) =>
+            Array.from({length: sceneSize}, (_, col) => {
+              const cell = grid[row]?.[col];
+              const thumb = cell && thumbsByImage.get(cell.image);
+              return (
+                <button
+                  key={`${row}-${col}`}
+                  type="button"
+                  aria-label={
+                    cell ? `${cell.image} at ${row},${col}` : `${row},${col}`
                   }
-                }}
-                // Pointer presses painted above; this is keyboard activation.
-                onClick={e => {
-                  if (e.detail === 0) {
+                  className={moduleStyles.worldCell}
+                  style={{height: cellPixels}}
+                  // Touch implicitly captures the pointer on the pressed cell,
+                  // which would keep drag painting's enter events from the
+                  // neighbors — release it.
+                  onPointerDown={e => {
+                    e.currentTarget.releasePointerCapture?.(e.pointerId);
                     startStroke(row, col);
-                  }
-                }}
-              >
-                {thumb && <img src={thumb} alt="" />}
-              </button>
-            );
-          })
-        )}
+                  }}
+                  onPointerEnter={e => {
+                    if (e.buttons & 1) {
+                      paintCell(row, col, strokeErase.current);
+                    }
+                  }}
+                  // Pointer presses painted above; this is keyboard activation.
+                  onClick={e => {
+                    if (e.detail === 0) {
+                      startStroke(row, col);
+                    }
+                  }}
+                >
+                  {thumb && <img src={thumb} alt="" />}
+                </button>
+              );
+            })
+          )}
+        </div>
       </div>
-      {displaySize > SCENE_GRID_SIZE && (
-        <p className={moduleStyles.worldHint}>
-          The scene runs the brighter top-left {SCENE_GRID_SIZE}x
-          {SCENE_GRID_SIZE} corner.
-        </p>
-      )}
     </div>
   );
 };

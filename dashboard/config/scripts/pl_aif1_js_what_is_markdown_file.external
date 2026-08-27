@@ -19,7 +19,7 @@ markdown <<MARKDOWN
 
 ## Evidence of Thinking
 
-<p>Before AI could generate a working page in seconds, watching a student write code was itself evidence they understood what they were building. Now that AI does the writing, that evidence has to live somewhere else. This file is where it lives. A vague or empty prompt.md is a much stronger signal of a gap in understanding than a messy first draft of code ever was.</p>
+<p>Before AI could generate a working page in seconds, watching a student write code was itself evidence they understood what they were building. Now that AI does the writing, that evidence has to live somewhere else. This file is where it lives. A vague or empty <code>prompt.md</code>is a much stronger signal of a gap in understanding than a messy first draft of code ever was.</p>
 
 Here's what that reasoning might look like once it's filled in:
 
@@ -32,7 +32,7 @@ Here's what that reasoning might look like once it's filled in:
 <p>Notice that none of this is code. It's reasoning, about audience, about limits, about what could go wrong, written in plain language before a single line of HTML or CSS exists.</p>
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;"><p>
-<strong>💡 Teacher tip:</strong> when you're checking student work, read the markdown file as closely as the finished page, maybe closer. A strong page built from a one-word prompt.md still points to a gap. A thoughtful prompt.md paired with a rough page is often the stronger sign of learning.</p>
+<strong>💡 Teacher tip:</strong> when you're checking student work, read the markdown file as closely as the finished page, maybe closer. A strong page built from a one-word <code>prompt.md</code> still points to a gap. A thoughtful prompt.md paired with a rough page is often the stronger sign of learning.</p><p><i>Remind students not to us AI for this part. No need for perfection, just evidence of thinking.</i></p>
 </div>
 
 ## Next up

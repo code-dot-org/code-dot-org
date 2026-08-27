@@ -3,15 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Reading a CSS Rule
+<h1>Reading a CSS Rule</h1>
 
-You don't need to memorize what every CSS property does. You just need to recognize the shape of a rule: every single one breaks down into the same three pieces.
+<p>You don't need to memorize what every CSS property does. You just need to recognize the shape of a rule: every single one breaks down into the same three pieces.</p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; margin: 20px 0;">
 
   <div style="padding-right: 16px;">
     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-      <span style="width: 12px; height: 12px; border-radius: 3px; background-color: #1F1976; display: inline-block;"></span>
+      <span style="width: 12px; height: 12px; border-radius: 3px; background-color: #34bd43; display: inline-block;"></span>
       <span style="font-weight: 700; color: #1F1976; font-size: 15px;">Selector</span>
     </div>
     <p>Which HTML element to style, like <code>body</code> or <code>h1</code>.</p>
@@ -19,7 +19,7 @@ You don't need to memorize what every CSS property does. You just need to recogn
 
   <div style="padding: 0 16px; border-left: 1px solid #E4E2F8;">
     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-      <span style="width: 12px; height: 12px; border-radius: 3px; background-color: #4C42CF; display: inline-block;"></span>
+      <span style="width: 12px; height: 12px; border-radius: 3px; background-color: #e62378; display: inline-block;"></span>
       <span style="font-weight: 700; color: #1F1976; font-size: 15px;">Property</span>
     </div>
     <p>What you want to change, like <code>color</code> or <code>margin</code>.</p>
@@ -27,7 +27,7 @@ You don't need to memorize what every CSS property does. You just need to recogn
 
   <div style="padding-left: 16px; border-left: 1px solid #E4E2F8;">
     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-      <span style="width: 12px; height: 12px; border-radius: 3px; background-color: #ACA8EA; display: inline-block;"></span>
+      <span style="width: 12px; height: 12px; border-radius: 3px; background-color: #0099f3; display: inline-block;"></span>
       <span style="font-weight: 700; color: #1F1976; font-size: 15px;">Value</span>
     </div>
     <p>How that property changes, like <code>blue</code> or <code>20px</code>.</p>
@@ -38,7 +38,9 @@ You don't need to memorize what every CSS property does. You just need to recogn
 ---
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/see-css-rule-in-action.html" width="100%" height="820" style="border:none;" title="Explore the Parts of a Web Page: an interactive planets site"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/see-css-rule-in-action.html" width="100%" height="620" style="border:none;" title="See a CSS Rule in Action: click to explore selector, property, and value"></iframe>
 </div>
+
+---
 
 MARKDOWN

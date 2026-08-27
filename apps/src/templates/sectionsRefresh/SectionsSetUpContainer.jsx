@@ -158,7 +158,9 @@ export default function SectionsSetUpContainer({
     [advancedSettingsOpen]
   );
 
-  const recordSectionSetupEvent = section => {
+  // createdSectionId comes from the API response: for a new section, the
+  // local form state has no id until the server assigns one.
+  const recordSectionSetupEvent = (section, createdSectionId) => {
     const initialSection = initialSectionRef.current;
     /*
     We do not currently store version year on the section, and the version dropdown
@@ -167,6 +169,7 @@ export default function SectionsSetUpContainer({
     */
     if (isNewSection) {
       analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_COMPLETED, {
+        sectionId: createdSectionId ?? null,
         sectionUnitId: section.course?.unitId,
         sectionCurriculumLocalizedName: section.course?.displayName,
         sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
@@ -273,7 +276,7 @@ export default function SectionsSetUpContainer({
         return response.json();
       })
       .then(data => {
-        recordSectionSetupEvent(section);
+        recordSectionSetupEvent(section, data.id);
         coteachersToAdd.forEach(() => {
           analyticsReporter.sendEvent(
             EVENTS.COTEACHER_INVITE_SENT,

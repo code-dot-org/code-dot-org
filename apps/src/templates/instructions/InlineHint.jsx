@@ -1,16 +1,13 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 
 import EmbeddedWorkspace from '../EmbeddedWorkspace';
-import SafeMarkdown from '../SafeMarkdown';
 import {videoDataShape} from '../types';
 import VideoThumbnail from '../VideoThumbnail';
 
 import ChatBubble from './ChatBubble';
-import {convertXmlToBlockly} from './utils';
+import MarkdownInstructions from './MarkdownInstructions';
 
 class InlineHint extends React.Component {
   static propTypes = {
@@ -29,12 +26,6 @@ class InlineHint extends React.Component {
     skinId: PropTypes.string,
   };
 
-  componentDidMount() {
-    if (this.props.isBlockly) {
-      convertXmlToBlockly(ReactDOM.findDOMNode(this), this.props.isRtl);
-    }
-  }
-
   render() {
     return (
       <ChatBubble
@@ -46,7 +37,11 @@ class InlineHint extends React.Component {
         isMinecraft={this.props.isMinecraft}
         skinId={this.props.skinId}
       >
-        <SafeMarkdown markdown={this.props.markdown} />
+        <MarkdownInstructions
+          inTopPane
+          isBlockly
+          markdown={this.props.markdown}
+        />
         {this.props.block && (
           <EmbeddedWorkspace
             block={this.props.block}
@@ -59,11 +54,11 @@ class InlineHint extends React.Component {
   }
 }
 
-export const StatelessInlineHint = Radium(InlineHint);
+export const StatelessInlineHint = InlineHint;
 export default connect(state => ({
   isBlockly: state.pageConstants.isBlockly,
   isMinecraft: state.pageConstants.isMinecraft,
   skinId: state.pageConstants.skinId,
   textToSpeechEnabled:
     state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
-}))(Radium(InlineHint));
+}))(InlineHint);

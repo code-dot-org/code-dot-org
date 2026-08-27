@@ -23,49 +23,46 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
 // - "Stop Recording" fires the same sequence as the real onstop handlers:
 //   setRecordedUrl, setRecordedAudioUrl, onRecordingChange(true),
 //   onIsRecordingChange(false)
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoRecorder',
-  () => {
-    const React = require('react');
-    return {
-      __esModule: true,
-      default: (props: {
-        onRecordingChange: (hasRecording: boolean) => void;
-        onIsRecordingChange?: (isRecording: boolean) => void;
-        setRecordedUrl: (url: string | null) => void;
-        setRecordedAudioUrl: (url: string | null) => void;
-        disabled?: boolean;
-      }) =>
+jest.mock('@code-dot-org/lesson-deep-dive', () => {
+  const React = require('react');
+  return {
+    ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+    VideoRecorder: (props: {
+      onRecordingChange: (hasRecording: boolean) => void;
+      onIsRecordingChange?: (isRecording: boolean) => void;
+      setRecordedUrl: (url: string | null) => void;
+      setRecordedAudioUrl: (url: string | null) => void;
+      disabled?: boolean;
+    }) =>
+      React.createElement(
+        'div',
+        null,
         React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'button',
-            {
-              type: 'button',
-              disabled: props.disabled,
-              onClick: () => props.onIsRecordingChange?.(true),
-            },
-            'Start Recording'
-          ),
-          React.createElement(
-            'button',
-            {
-              type: 'button',
-              disabled: props.disabled,
-              onClick: () => {
-                props.setRecordedUrl('blob:fake-recording');
-                props.setRecordedAudioUrl('blob:fake-audio-recording');
-                props.onRecordingChange(true);
-                props.onIsRecordingChange?.(false);
-              },
-            },
-            'Stop Recording'
-          )
+          'button',
+          {
+            type: 'button',
+            disabled: props.disabled,
+            onClick: () => props.onIsRecordingChange?.(true),
+          },
+          'Start Recording'
         ),
-    };
-  }
-);
+        React.createElement(
+          'button',
+          {
+            type: 'button',
+            disabled: props.disabled,
+            onClick: () => {
+              props.setRecordedUrl('blob:fake-recording');
+              props.setRecordedAudioUrl('blob:fake-audio-recording');
+              props.onRecordingChange(true);
+              props.onIsRecordingChange?.(false);
+            },
+          },
+          'Stop Recording'
+        )
+      ),
+  };
+});
 
 const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;
@@ -89,6 +86,7 @@ const fakeChallenge = {
   question: 'Explain your solution.',
   default_modality: 'video' as const,
   whiteboard_starter_image_alt_text: null,
+  whiteboard_starter_image_url: null,
 };
 
 // Helper: simulate the full record → stop sequence.
@@ -122,6 +120,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={jest.fn()}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 
@@ -138,6 +138,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={jest.fn()}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 
@@ -159,6 +161,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={submitCallback}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 
@@ -210,6 +214,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={jest.fn()}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 
@@ -237,6 +243,8 @@ describe('VideoChallenge', () => {
         submitted={false}
         submitCallback={submitCallback}
         lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
       />
     );
 

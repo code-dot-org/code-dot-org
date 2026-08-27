@@ -11,26 +11,15 @@ markdown <<MARKDOWN
 <p>📖 <b>Interactivity</b> is the ability of a software application or website to respond to user input.</p>
 </div>
 
-<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
-<summary style="cursor: pointer; font-weight: bold; color: #1F1976;">⚡ Interactive Elements in Web Apps</summary>
-<div style="margin-top: 12px;">
-<p>Interactive elements come in many forms:</p>
-<ul>
-<li><b>Buttons</b> that trigger actions</li>
-<li><b>Menus</b> that expand or collapse</li>
-<li><b>Search bars</b> that respond as you type</li>
-<li><b>Icons</b> that change color or shape when hovered over</li>
-</ul>
-<p>These small moments of feedback and response are what make a web app feel alive and user-friendly.</p>
-</div>
-</details>
-
+<br>
 <p>Below, try spotting interactivity yourself. Hover or click around the mock site and see what you find.</p>
 
 ---
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/spot-the-interactivity.html" width="100%" height="820" style="border:none;" title="Explore the Parts of a Web Page: an interactive planets site"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/spot-the-interactivity.html" width="100%" height="820" style="border:none;" title="Explore the Parts of a Web Page: look for places to interact on a ecommerce simulated site"></iframe>
 </div>
+
+---
 
 MARKDOWN

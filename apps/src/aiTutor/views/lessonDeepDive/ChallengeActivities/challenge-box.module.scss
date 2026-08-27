@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .challengeLayout {
   display: flex;
   gap: 16px;
@@ -6,11 +10,21 @@
 
 // Left quarter: activity instructions from the Challenge model.
 .sidebar {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-width: 0;
   padding: 16px;
-  background-color: rgb(255 255 255 / 4%);
+  background-color: var(--background-neutral-primary);
   border-radius: 8px;
+  gap: 20px;
+}
+
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: stretch;
 }
 
 .sidebarHeading {
@@ -27,13 +41,53 @@
   color: var(--text-neutral-primary);
 }
 
+.explanationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 4px;
+}
+
+.explanationButton :global(.MuiButton-icon) {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.explanationButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
+  background-color: var(--background-neutral-secondary) !important;
+
+  &.Selected {
+    border-color: var(--borders-brand-purple-strong);
+  }
+}
+
+.whiteboardButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.textArea {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-neutral-primary);
+}
+
 // Right three quarters: the active challenge pane with the
 // modality toggle underneath it.
 .activityColumn {
   flex: 3;
   min-width: 0;
+  min-height: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .challengeToggle {
@@ -57,4 +111,87 @@
       color: #fff;
     }
   }
+}
+
+.waitingDisplay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    background-color: var(--background-neutral-primary);
+    width: stretch;
+    height: stretch;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.topContainer {
+  display: flex;
+  align-items: stretch;
+  height: stretch;
+  margin-bottom: 20px;
+}
+
+.feedbackLabel {
+  color: var(--text-brand-purple-primary-fixed) !important;
+}
+
+.feedbackContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feedbackWidget {
+  display: flex;
+  padding: 8px 0 16px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 12px;
+  background: var(--background-neutral-secondary);
+}
+
+.feedbackHeader {
+  display: flex;
+  flex-direction: row;
+  padding: 0 16px 8px;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  border-bottom: var(--borders-neutral-primary) solid 2px;
+}
+
+.feedbackIconBG {
+  display: flex;
+width: 32px;
+height: 32px;
+padding: 4px 4px 3px 3px;
+justify-content: center;
+align-items: center;
+border-radius: 999px;
+background: linear-gradient(228deg, #34BD43 13.75%, #0099F3 85.74%);
+i {
+      font-size: 20px;
+      color: var(--text-neutral-white-fixed);
+    }
+}
+
+.feedbackHeaderContent{
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+}
+
+.feedbackText {
+  display: flex;
+padding: 0 16px;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;
 }

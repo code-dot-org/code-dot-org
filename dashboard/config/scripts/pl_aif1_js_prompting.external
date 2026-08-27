@@ -5,19 +5,41 @@ description 'description here'
 markdown <<MARKDOWN
 <h1>The Four-Part Prompt Framework</h1>
 
-AI pays attention to four things in a prompt:
-- The Task (what to build)
-- The Context (who it's for or what it's about)
-- The Tone/Format (the style or feel)
-- The Details (specific content to include).
+<p>AI pays attention to four things in a prompt:</p>
 
-A strong prompt hits all four. A generic-looking result is almost always missing one of them, not a sign the AI misunderstood or isn't capable.
+<p style="margin: 0 0 8px 0;">• The <b>Task</b> (what to build)</p>
+<p style="margin: 0 0 8px 0;">• The <b>Context</b> (who it's for or what it's about)</p>
+<p style="margin: 0 0 8px 0;">• The <b>Tone/Format</b> (the style or feel)</p>
+<p style="margin: 0;">• The <b>Details</b> (specific content to include)</p>
 
-That reframe matters for how you coach students through the AI Design Challenges. When a page comes back bland, the fix usually isn't "try again," it's figuring out which of the four pieces to add.
+<div style="display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 100px; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center;">
+    <div style="font-size: 30px; margin-bottom: 6px;">📋</div>
+    <p style="font-weight: bold; color: #1F1976; margin: 0; font-size: 13px;">Task</p>
+  </div>
+  <div style="flex: 1; min-width: 100px; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center;">
+    <div style="font-size: 30px; margin-bottom: 6px;">🎯</div>
+    <p style="font-weight: bold; color: #1F1976; margin: 0; font-size: 13px;">Context</p>
+  </div>
+  <div style="flex: 1; min-width: 100px; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center;">
+    <div style="font-size: 30px; margin-bottom: 6px;">🎨</div>
+    <p style="font-weight: bold; color: #1F1976; margin: 0; font-size: 13px;">Tone/Format</p>
+  </div>
+  <div style="flex: 1; min-width: 100px; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center;">
+    <div style="font-size: 30px; margin-bottom: 6px;">🔍</div>
+    <p style="font-weight: bold; color: #1F1976; margin: 0; font-size: 13px;">Details</p>
+  </div>
+</div>
+
+<p>A strong prompt hits all four. A generic-looking result is almost always missing one of them, not a sign the AI misunderstood or isn't capable.</p>
+
+<p>That reframe matters for how you coach students through the AI Design Challenges. When a page comes back bland, the fix usually isn't "try again," it's figuring out which of the four pieces to add.</p>
 
 ---
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
 <iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/diagnose-the-prompt.html" width="100%" height="1000" style="border:none;" title="Diagnose the Prompt: identify the missing framework piece"></iframe>
 </div>
+
+---
 MARKDOWN

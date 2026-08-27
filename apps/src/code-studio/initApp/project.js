@@ -23,6 +23,7 @@ import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
   refreshInRestrictedShareMode,
+  refreshExceedsAbuseThreshold,
   refreshHasPrivacyProfanityViolation,
   refreshTeacherHasConfirmedUploadWarning,
 } from '../projectRedux';
@@ -344,6 +345,7 @@ var projects = (module.exports = {
         // (after unflag) is kept.
         if (data && typeof data.abuse_score === 'number') {
           currentAbuseScore = data.abuse_score;
+          getStore().dispatch(refreshExceedsAbuseThreshold());
         }
         resolve();
         if (err) {
@@ -489,7 +491,8 @@ var projects = (module.exports = {
    * profanity, policy violations, abuse rating level, or if sharing is disabled.
    */
   showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled() {
-    if (appOptions.scriptId) {
+    // Set for all script-backed levels.
+    if (appOptions.serverScriptId) {
       // Never want to hide when in the context of a script, as this will always
       // either be me or my teacher viewing my last submission
       return true;

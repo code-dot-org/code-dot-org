@@ -20,24 +20,21 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   GeneratedImageResult,
   UploadImageFunction,
-} from '../ai/items/itemGeneration';
-import {MODEL_OUTPUT_PX} from '../ai/items/modelHelpers';
+} from '../ai/images/imageGeneration';
+import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
+import {ImageType} from '../ai/images/types';
 import {
   getTrimmedThumbnail,
   onTrimsUpdated,
   trimAnimationListImages,
 } from '../imageTrim';
-import {
-  BACKGROUNDS_CATEGORY,
-  BLOCKS_CATEGORY,
-  SpriteLab2ItemType,
-} from '../types';
+import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import ImageDetailsDialog from './ImageDetailsDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
-function itemTypeFromCategories(categories?: string[]): SpriteLab2ItemType {
+function imageTypeFromCategories(categories?: string[]): ImageType {
   if (categories?.includes(BACKGROUNDS_CATEGORY)) {
     return 'background';
   }
@@ -86,15 +83,23 @@ const GalleryCard = React.memo<GalleryCardProps>(
 );
 GalleryCard.displayName = 'GalleryCard';
 
+interface GenerateImagePaneProps {
+  uploadImage?: UploadImageFunction;
+  /** Rename an image and every reference to it; error message or null. */
+  onRenameImage: (oldName: string, newName: string) => string | null;
+  /** Level-imposed type for new images. */
+  lockedImageType?: ImageType;
+}
+
 /**
  * The Images tab: the project's image gallery. Clicking an image (or the
  * new-image card) opens the image dialog; painting happens from there.
  */
-const GenerateImagePane: React.FunctionComponent<{
-  uploadImage?: UploadImageFunction;
-  /** Rename an image and every reference to it; error message or null. */
-  onRenameImage: (oldName: string, newName: string) => string | null;
-}> = ({uploadImage, onRenameImage}) => {
+const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
+  uploadImage,
+  onRenameImage,
+  lockedImageType,
+}) => {
   const dispatch = useAppDispatch();
 
   // The project's images live in the animation list (AI-generated images are
@@ -268,9 +273,9 @@ const GenerateImagePane: React.FunctionComponent<{
             frameDelay: 2,
             looping: true,
             categories:
-              result.generation.itemType === 'background'
+              result.generation.imageType === 'background'
                 ? [BACKGROUNDS_CATEGORY]
-                : result.generation.itemType === 'block'
+                : result.generation.imageType === 'block'
                 ? [BLOCKS_CATEGORY]
                 : [],
             pixelGridSize: result.pixelGridSize,
@@ -443,7 +448,8 @@ const GenerateImagePane: React.FunctionComponent<{
           onPaint={() => setPainting('loading')}
           onRename={handleRename}
           onDelete={handleDelete}
-          itemType={itemTypeFromCategories(targetProps?.categories)}
+          imageType={imageTypeFromCategories(targetProps?.categories)}
+          lockedImageType={lockedImageType}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onAcceptGenerated={handleAcceptGenerated}

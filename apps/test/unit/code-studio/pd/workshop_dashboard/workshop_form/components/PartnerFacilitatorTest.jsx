@@ -84,6 +84,18 @@ describe('PartnerFacilitator', () => {
   });
 
   describe('Facilitators', () => {
+    it('fetches course facilitators for the course', async () => {
+      const nonByoConfig = WorkshopCourseConfigs.find(
+        c => c.label !== byoCourseName
+      );
+      render(<PartnerFacilitatorWithState config={nonByoConfig} />);
+      expect(mockedUseFetch).toHaveBeenCalledWith(
+        `/api/v1/pd/course_facilitators?course=${encodeURIComponent(
+          nonByoConfig.label
+        )}`
+      );
+    });
+
     it('fetches all course facilitators for byo workshop course', async () => {
       render(<PartnerFacilitatorWithState />);
       expect(mockedUseFetch).toHaveBeenCalledWith(

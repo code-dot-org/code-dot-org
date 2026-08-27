@@ -1,10 +1,29 @@
 // Excalidraw sizes itself to its parent, so the pane needs an
 // explicit height.
 .whiteboardPane {
+  position: relative;
   height: 55vh;
   min-height: 360px;
   border-radius: 8px;
   overflow: hidden;
+}
+
+// Fills the pane while the starter image loads, so the canvas mounts once with
+// the starter node already in place (initialNodes is read only at mount).
+.starterLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #9aa0a6;
+  font-size: 0.875rem;
+}
+
+.audioContainer {
+  position: absolute;
+  bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .submitError {

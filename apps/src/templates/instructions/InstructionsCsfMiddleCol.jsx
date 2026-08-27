@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import color from '../../util/color';
 import SafeMarkdown from '../SafeMarkdown';
 
 import ChatBubble from './ChatBubble';
@@ -17,8 +16,6 @@ import Instructions from './Instructions';
 import {scrollTo, shouldDisplayChatTips} from './utils';
 
 var instructions = require('../../redux/instructions');
-const VERY_LIGHT_BLUE_COLOR = '#f0ffff';
-const VERY_LIGHT_YELLOW_COLOR = '#fffff0';
 
 class InstructionsCsfMiddleCol extends React.Component {
   static propTypes = {
@@ -191,8 +188,8 @@ class InstructionsCsfMiddleCol extends React.Component {
           this.props.hints.map(hint => (
             <InlineHint
               key={hint.hintId}
-              borderColor={color.light_info_500}
-              backgroundColor={VERY_LIGHT_BLUE_COLOR}
+              borderColor="var(--borders-info-primary)"
+              backgroundColor="var(--borders-info-light)"
               markdown={hint.markdown}
               ttsUrl={hint.ttsUrl}
               ttsMessage={hint.ttsMessage}
@@ -212,10 +209,10 @@ class InstructionsCsfMiddleCol extends React.Component {
             key={this.props.feedback.message}
             borderColor={
               this.props.isMinecraft
-                ? color.white
-                : color.product_caution_default
+                ? 'var(--borders-neutral-white-fixed)'
+                : 'var(--borders-warning-primary)'
             }
-            backgroundColor={VERY_LIGHT_YELLOW_COLOR}
+            backgroundColor="var(--background-warning-light)"
             message={this.props.feedback.message}
             isMinecraft={this.props.isMinecraft}
             skinId={this.props.skinId}
@@ -224,8 +221,8 @@ class InstructionsCsfMiddleCol extends React.Component {
         )}
         {this.props.shouldDisplayHintPrompt() && (
           <HintPrompt
-            borderColor={color.light_info_500}
-            backgroundColor={VERY_LIGHT_BLUE_COLOR}
+            borderColor="var(--borders-info-primary)"
+            backgroundColor="var(--borders-info-light)"
             onConfirm={this.showHint}
             onDismiss={this.props.dismissHintPrompt}
             isMinecraft={this.props.isMinecraft}

@@ -25,6 +25,11 @@ body-two `Typography`), and the localization wrappers (`data-isolate` on
 paragraphs, `data-lz-url`/`data-localize` on links). Everything else is opt-in
 via `extensions`.
 
+Because that type scale and those wrappers ride on the paragraph, a list item
+that has none gets one: a tight list (`- one`, no blank line between items) and
+a raw HTML `<li>` both hold their text directly, so
+`rehypeListItemParagraphs` wraps it, leaving them equivalent to a loose item.
+
 ## The pipeline
 
 ```
@@ -33,6 +38,7 @@ remark-gfm              GFM syntax
 <extension remark plugins>             ← new markdown SYNTAX
 remark-rehype           mdast          → hast        (allowDangerousHtml)
 rehype-raw              reparse raw HTML in the source
+rehypeListItemParagraphs  give every <li> a paragraph
 <extension rehype plugins>             ← transform the HTML TREE
 rehypeLocalize          translate block text         ← when localization is active
 rehype-sanitize         enforce the allowlist        ← SECURITY BOUNDARY
@@ -180,7 +186,7 @@ const exts = [
 | `details`              | object  | `::: details [summary] … :::` → `<details>`/`<summary>` disclosure              | Legacy syntax with flexible spacing; summary and body are markdown. Raw `<details>` HTML also works without it.                                               |
 | `inlineStyles`         | object  | permits `style` + `className` on any element                                    | The sanitizer does not inspect style _contents_; inline styles are an authoring smell. Ported verbatim from legacy.                                           |
 | `clickableText`        | factory | `[label](#clickable=id)` → button calling `onActivate(id)` on click/Enter/Space | Without `onActivate`, renders plain bold.                                                                                                                     |
-| `expandableImages`     | factory | `![alt expandable](url)` → image calling `onExpand(url, alt)` on click          | Without `onExpand`, renders an inline, non-interactive image.                                                                                                 |
+| `expandableImages`     | factory | `![alt expandable](url)` → image calling `onExpand(url, alt)` on click          | Without `onExpand`, renders an inline, non-interactive image. `className` styles every generated element.                                                     |
 | `visualCodeBlock`      | object  | `` `text`(#rrggbb) `` → inline code with that background color                  | Color is validated hex, applied by the component (not sanitized CSS). Plain inline code is unaffected.                                                        |
 | `vocabularyDefinition` | factory | `[v term]` → term with its definition in a native title tooltip                 | Resolves via an injected synchronous `lookup` (point it at fetched data); unknown terms fall back to plain text. Replaces Dashboard's server-side resolution. |
 | `externalLinks`        | factory | opens links in a new tab (`target="_blank"` + `rel="noopener noreferrer"`)      | Defaults to all links (legacy `openExternalLinksInNewTab`); pass `isExternal` to scope.                                                                       |

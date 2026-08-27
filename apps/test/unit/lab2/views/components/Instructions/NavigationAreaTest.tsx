@@ -89,12 +89,15 @@ const mockGetCurrentLevel: jest.Mock = jest.fn(() => ({
 }));
 const mockGetParentLevel: jest.Mock = jest.fn(() => undefined);
 const mockGetLessonCount: jest.Mock = jest.fn(() => 1);
+const mockLevelById: jest.Mock = jest.fn(() => undefined);
 
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
   getNextLevel: (state: unknown) => mockGetNextLevel(state),
   getCurrentLevel: (state: unknown) => mockGetCurrentLevel(state),
   getParentLevel: (state: unknown) => mockGetParentLevel(state),
   getLessonCount: (state: unknown) => mockGetLessonCount(state),
+  levelById: (state: unknown, lessonId: unknown, levelId: unknown) =>
+    mockLevelById(state, lessonId, levelId),
 }));
 
 // Mock queryParams — no URL overrides in the default test environment.
@@ -119,7 +122,10 @@ describe('NavigationArea', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({lab, lab2Project, predictLevel});
+    // The component reads state.progress.currentLessonId directly (the
+    // selectors themselves are mocked), so register a stub progress slice.
+    const progress = (state = {currentLessonId: 1}) => state;
+    registerReducers({lab, lab2Project, predictLevel, progress});
     store = getStore();
     mockGetNextLevel.mockReturnValue({id: 2, levelNumber: 2});
     mockGetCurrentLevel.mockReturnValue({
@@ -129,6 +135,7 @@ describe('NavigationArea', () => {
     });
     mockGetParentLevel.mockReturnValue(undefined);
     mockGetLessonCount.mockReturnValue(1);
+    mockLevelById.mockReturnValue(undefined);
     mockQueryParams.mockReturnValue(null);
   });
 
@@ -521,12 +528,8 @@ describe('NavigationArea', () => {
       ).toBeInTheDocument();
     });
 
-    it('renders "Continue" when next level has the same number (sublevel to parent)', () => {
-      mockGetCurrentLevel.mockReturnValue({
-        id: '1',
-        levelNumber: 2,
-        status: undefined,
-      });
+    it('renders "Continue" when the next level is the parent level (sublevel to parent)', () => {
+      mockGetParentLevel.mockReturnValue({id: 2, levelNumber: 2});
       mockGetNextLevel.mockReturnValue({id: 2, levelNumber: 2});
       renderDefault();
       expect(
@@ -541,14 +544,66 @@ describe('NavigationArea', () => {
       ).toBeInTheDocument();
     });
 
-    it('uses parent level number when getParentLevel returns a level', () => {
-      mockGetParentLevel.mockReturnValue({levelNumber: 3});
-      mockGetNextLevel.mockReturnValue({id: 2, levelNumber: 5});
+    it('renders the next level number when on a sublevel and the next level is not the parent', () => {
+      mockGetParentLevel.mockReturnValue({id: 3, levelNumber: 3});
+      mockGetNextLevel.mockReturnValue({id: 4, levelNumber: 5});
       renderDefault();
-      // parent levelNumber=3, next levelNumber=5: different → 'Continue to Level 5'
       expect(
         screen.getByRole('button', {name: 'Continue to Level 5'})
       ).toBeInTheDocument();
+    });
+
+    it("renders the parent's level number when the next level is a sublevel", () => {
+      // Next level is a sublevel; its levelNumber is a position within its
+      // parent bubble choice level, so the parent's number is shown instead.
+      mockGetNextLevel.mockReturnValue({
+        id: 5,
+        levelNumber: 2,
+        parentLevelId: 9,
+      });
+      mockLevelById.mockReturnValue({id: 9, levelNumber: 4});
+      renderDefault();
+      expect(
+        screen.getByRole('button', {name: 'Continue to Level 4'})
+      ).toBeInTheDocument();
+      // The parent is looked up by the sublevel's parentLevelId.
+      expect(mockLevelById).toHaveBeenCalledWith(expect.anything(), 1, 9);
+    });
+
+    it('renders plain "Continue" when the next level is a sublevel whose parent is not found', () => {
+      mockGetNextLevel.mockReturnValue({
+        id: 5,
+        levelNumber: 2,
+        parentLevelId: 9,
+      });
+      mockLevelById.mockReturnValue(undefined);
+      renderDefault();
+      expect(
+        screen.getByRole('button', {name: 'Continue'})
+      ).toBeInTheDocument();
+    });
+
+    it('renders "Finish" on the last level of a single-lesson unit', () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      mockGetLessonCount.mockReturnValue(1);
+      renderDefault();
+      expect(screen.getByRole('button', {name: 'Finish'})).toBeInTheDocument();
+    });
+
+    it('renders "Finish Lesson" on the last level of a multi-lesson unit', () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      mockGetLessonCount.mockReturnValue(3);
+      renderDefault();
+      expect(
+        screen.getByRole('button', {name: 'Finish Lesson'})
+      ).toBeInTheDocument();
+    });
+
+    it('renders "Finish" when textVariant="simple" and there is no next level', () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      mockGetLessonCount.mockReturnValue(3);
+      renderDefault({textVariant: 'simple'});
+      expect(screen.getByRole('button', {name: 'Finish'})).toBeInTheDocument();
     });
   });
 });

@@ -1,24 +1,28 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {EvaluationStatus} from '../types';
+
 /**
  * Kicks off asynchronous AI evaluation of a submitted challenge response.
  *
- * Fire-and-forget: the result is stored server-side — rubric scores for
- * teacher review, constructive feedback for the student's gallery (future
- * work) — and nothing displays at submit time, so a failure here must not
- * block the submission flow. The server can also re-request evaluation
- * later, so a lost request is recoverable.
+ * A failure here must not block the submission
+ * flow. The server can re-request evaluation later, so a lost request
+ * is recoverable.
  */
 export const requestEvaluation = async (
   challengeResponseId: number
-): Promise<void> => {
+): Promise<string> => {
   try {
-    await HttpClient.post(
+    const response = await HttpClient.post(
       `/challenge_responses/${challengeResponseId}/evaluate`,
       '',
       true // useAuthenticityToken
     );
+    return (await response.ok)
+      ? EvaluationStatus.PENDING
+      : EvaluationStatus.ERROR;
   } catch (error) {
     console.error('Failed to request challenge response evaluation', error);
+    return EvaluationStatus.ERROR;
   }
 };
