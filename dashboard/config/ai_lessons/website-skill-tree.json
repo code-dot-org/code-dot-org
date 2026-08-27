@@ -13,23 +13,8 @@
       "kind": "questions",
       "title": "A few questions first",
       "role": "checkIn",
-      "description": "Diagnostic inputs that tune the lesson: workspace preference, experience with HTML/CSS and JavaScript, and what the student wants to make. That last answer drives the AI showcase and every build in this lesson.",
+      "description": "Diagnostic inputs that tune the lesson: experience with HTML/CSS and JavaScript, and what the student wants to make. That last answer drives the AI showcase and every build in this lesson.",
       "questions": [
-        {
-          "id": "work-style",
-          "type": "multipleChoice",
-          "prompt": "How do you like to work?",
-          "options": [
-            {
-              "id": "dark",
-              "label": "Dark mode"
-            },
-            {
-              "id": "light",
-              "label": "Light mode"
-            }
-          ]
-        },
         {
           "id": "html-css-experience",
           "type": "scale",

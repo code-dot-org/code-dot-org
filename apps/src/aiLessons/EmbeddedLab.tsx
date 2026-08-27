@@ -12,7 +12,6 @@
 // isReadOnlyWorkspace() returns true and Music Lab renders without its
 // toolbox.
 
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React, {Suspense, useEffect, useMemo, useRef, useState} from 'react';
 
 import {onLevelChange, setChannel} from '@cdo/apps/lab2/lab2Redux';
@@ -39,35 +38,9 @@ import {LabStep, LessonPlan, PanelsStep, ProjectLabType, Step} from './types';
 
 import styles from './aiLessons.module.scss';
 
-// First (preferred) theme for each lab type, mirroring `themes[0]` in
-// lab2EntryPoints.ts.  Hardcoded here so we don't have to import the whole
-// entrypoints map just to read a string.
-// Per-lab theme overrides for the embedded surface. Labs not listed
-// here keep whatever theme the surrounding /ai_lessons page is in
-// (set by forceTheme on mount; see pageInit.ts).
-const LAB_DEFAULT_THEME: Partial<Record<string, 'Light' | 'Dark'>> = {
-  music: 'Dark',
-  panels: 'Dark',
-  weblab2: 'Dark',
-};
-
-// Apply the per-lab theme override (if any) to the design-system
-// theme context, the document <body> background-* class, and the
-// data-theme attribute. Called both from useLabSetup (the Lab2-mounted
-// path) and from PanelsCheckpointLab (which bypasses useLabSetup).
-function applyLabTheme(
-  appName: string,
-  setTheme: (t: 'Light' | 'Dark') => void
-) {
-  const theme = LAB_DEFAULT_THEME[appName];
-  if (!theme) return;
-  setTheme(theme);
-  const lower = theme.toLowerCase();
-  const opposite = lower === 'light' ? 'dark' : 'light';
-  document.body.classList.remove(`background-${opposite}`);
-  document.body.classList.add(`background-${lower}`);
-  document.documentElement.setAttribute('data-theme', theme);
-}
+// Labs used to force their preferred theme (music/panels/weblab2 → Dark)
+// per-mount here.  That moved to the demo settings panel: labs now follow
+// whatever theme the presenter picked (see demoSettings.ts).
 
 interface EmbeddedLabProps {
   step: Step;
@@ -180,13 +153,6 @@ const PanelsCheckpointLab: React.FC<{
   lessonId: string;
   onLabComplete?: () => void;
 }> = ({step, lessonId, onLabComplete}) => {
-  // Panels skips useLabSetup (no Lab2 view to mount), so apply the
-  // theme override here on each (lessonId, step) change.
-  const {setTheme} = useTheme();
-  useEffect(() => {
-    applyLabTheme('panels', setTheme);
-  }, [lessonId, step.id, setTheme]);
-
   // Always render the real PanelsView.  If the step has no usable slide
   // captions, fall back to a single panel built from the title so the
   // student still gets the same Continue affordance.
@@ -228,7 +194,6 @@ function useLabSetup(
   initialSources?: ProjectSources
 ): ProjectManager | undefined {
   const dispatch = useAppDispatch();
-  const {setTheme} = useTheme();
   const [manager, setManager] = useState<ProjectManager>();
 
   useEffect(() => {
@@ -268,8 +233,6 @@ function useLabSetup(
     }
     setManager(asPM);
 
-    applyLabTheme(appName, setTheme);
-
     return () => {
       // Force-flush any pending save before leaving this lab type.
       m.destroy();
@@ -283,7 +246,6 @@ function useLabSetup(
     appName,
     levelProperties,
     initialSources,
-    setTheme,
   ]);
 
   return manager;

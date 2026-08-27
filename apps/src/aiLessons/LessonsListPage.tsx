@@ -9,29 +9,26 @@ import React, {useEffect, useState} from 'react';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {deleteLesson, resetLessonProgress} from './api';
+import {ADAPTIVITY_INFO} from './demoSettings';
 import {Link} from './router';
-import {ADAPTIVITY_ORDER, AdaptivityMode, LessonIndexEntry} from './types';
+import {ADAPTIVITY_ORDER, LessonIndexEntry} from './types';
 
 import styles from './aiLessons.module.scss';
 
-// Demo-facing copy for the adaptivity dial.  Mirrors resolveAdaptivity's
-// semantics: absent adaptivity means augment as both default and max.
-const ADAPTIVITY_INFO: {
-  [mode in AdaptivityMode]: {label: string; blurb: string};
+// Edit/Delete are hidden until the authoring editor and generator catch
+// up with the modern lesson format (questions, hubs, arcSpec) — editing
+// a modern lesson through the stale editor would mangle it.
+const SHOW_AUTHORING_ACTIONS = false;
+
+const STATUS_BADGES: {
+  [status in NonNullable<LessonIndexEntry['status']>]: {
+    label: string;
+    className: string;
+  };
 } = {
-  static: {
-    label: 'Static',
-    blurb: 'Authored steps only — no AI adaptation.',
-  },
-  augment: {
-    label: 'Adaptive practice',
-    blurb:
-      'AI adds targeted practice steps for skills a student has not mastered yet.',
-  },
-  full: {
-    label: 'Fully adaptive',
-    blurb: 'AI generates a personalized lesson arc after the diagnostic.',
-  },
+  not_started: {label: 'Not started', className: 'statusNotStarted'},
+  in_progress: {label: 'In progress', className: 'statusInProgress'},
+  completed: {label: 'Completed', className: 'statusCompleted'},
 };
 
 const AdaptivityPills: React.FunctionComponent<{lesson: LessonIndexEntry}> = ({
@@ -162,9 +159,20 @@ const LessonsListPage: React.FunctionComponent = () => {
         <ul className={styles.lessonList}>
           {lessons.map(l => (
             <li key={l.id} className={styles.lessonRow}>
-              <Link href={`/ai_lessons/${l.id}`}>
-                <strong>{l.title || '(untitled)'}</strong>
-              </Link>
+              <div className={styles.lessonTitleLine}>
+                <Link href={`/ai_lessons/${l.id}`}>
+                  <strong>{l.title || '(untitled)'}</strong>
+                </Link>
+                {l.status && (
+                  <span
+                    className={`${styles.statusBadge} ${
+                      styles[STATUS_BADGES[l.status].className]
+                    }`}
+                  >
+                    {STATUS_BADGES[l.status].label}
+                  </span>
+                )}
+              </div>
               <div className={styles.muted}>{l.objective}</div>
               {l.standards && l.standards.length > 0 && (
                 <div className={styles.lessonStandards}>
@@ -201,18 +209,20 @@ const LessonsListPage: React.FunctionComponent = () => {
                 >
                   Open as student
                 </MuiButton>
-                <MuiButton
-                  component={Link}
-                  href={`/ai_lessons/${l.id}/edit`}
-                  variant="outlined"
-                  color="primary"
-                  size="small"
-                  startIcon={
-                    <FontAwesomeV6Icon iconName="pencil" iconStyle="solid" />
-                  }
-                >
-                  Edit
-                </MuiButton>
+                {SHOW_AUTHORING_ACTIONS && (
+                  <MuiButton
+                    component={Link}
+                    href={`/ai_lessons/${l.id}/edit`}
+                    variant="outlined"
+                    color="primary"
+                    size="small"
+                    startIcon={
+                      <FontAwesomeV6Icon iconName="pencil" iconStyle="solid" />
+                    }
+                  >
+                    Edit
+                  </MuiButton>
+                )}
                 <MuiButton
                   type="button"
                   variant="outlined"
@@ -231,20 +241,25 @@ const LessonsListPage: React.FunctionComponent = () => {
                 >
                   {resettingId === l.id ? 'Resetting…' : 'Reset progress'}
                 </MuiButton>
-                <MuiButton
-                  type="button"
-                  variant="outlined"
-                  color="error"
-                  size="small"
-                  startIcon={
-                    <FontAwesomeV6Icon iconName="trash-can" iconStyle="solid" />
-                  }
-                  onClick={() => handleDelete(l)}
-                  disabled={deletingId === l.id}
-                  aria-label={`Delete ${l.title || 'lesson'}`}
-                >
-                  {deletingId === l.id ? 'Deleting…' : 'Delete'}
-                </MuiButton>
+                {SHOW_AUTHORING_ACTIONS && (
+                  <MuiButton
+                    type="button"
+                    variant="outlined"
+                    color="error"
+                    size="small"
+                    startIcon={
+                      <FontAwesomeV6Icon
+                        iconName="trash-can"
+                        iconStyle="solid"
+                      />
+                    }
+                    onClick={() => handleDelete(l)}
+                    disabled={deletingId === l.id}
+                    aria-label={`Delete ${l.title || 'lesson'}`}
+                  >
+                    {deletingId === l.id ? 'Deleting…' : 'Delete'}
+                  </MuiButton>
+                )}
               </div>
             </li>
           ))}

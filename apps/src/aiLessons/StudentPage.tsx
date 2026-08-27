@@ -24,11 +24,12 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {loadLesson} from './api';
+import {loadLesson, resetLessonProgress} from './api';
 import {generateLessonArc} from './arcGenerator';
 import {judgeBranchCondition} from './branchJudge';
 import BuildPartnerPanel from './BuildPartnerPanel';
 import ChecklistPanel from './ChecklistPanel';
+import DemoSettingsDialog from './DemoSettingsDialog';
 import EmbeddedLab from './EmbeddedLab';
 import {
   evaluatePathMastery,
@@ -250,6 +251,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // Lets us show "Evaluating…" instead of the general "Tutor is thinking…".
   const [evaluating, setEvaluating] = useState(false);
   const [error, setError] = useState<string | undefined>();
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const transcriptRef = useRef<HTMLDivElement>(null);
   const pageRef = useRef<HTMLDivElement>(null);
   const [pageHeight, setPageHeight] = useState<string>('100vh');
@@ -393,6 +395,14 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     setHistory([]);
     setOpening(undefined);
     setError(undefined);
+    // Static steps (questions, panels) carry their own authored content;
+    // an AI opening there is pure latency and cost. Show nothing — the
+    // tutor still responds if the student starts a chat.
+    const kind = lessonRef.current.steps[currentIndex]?.kind;
+    if (kind === 'questions' || kind === 'panels') {
+      setBusy(false);
+      return;
+    }
     setBusy(true);
     (async () => {
       try {
@@ -460,15 +470,32 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     setPendingAdvance(null);
   }, [currentStepId]);
 
-  // Apply a resolver decision to the UI.
-  const navigateTo = useCallback((decision: NavDecision) => {
-    if (decision.kind === 'end') {
-      setPhase('celebrate');
-      return;
+  // End of the lesson: celebrate, and persist the durable completed
+  // marker (the lesson list's status badge reads it — step counts can't
+  // stand in for it because generated steps change the denominator).
+  const finishLesson = useCallback(() => {
+    setPhase('celebrate');
+    if (lessonRef.current.id) {
+      saveSnapshotExtras(lessonRef.current.id, progressRef.current, {
+        completed: true,
+      }).then(saved => {
+        if (saved) progressRef.current = saved;
+      });
     }
-    setCurrentStepId(decision.stepId);
-    setPath(p => [...p, decision.stepId]);
   }, []);
+
+  // Apply a resolver decision to the UI.
+  const navigateTo = useCallback(
+    (decision: NavDecision) => {
+      if (decision.kind === 'end') {
+        finishLesson();
+        return;
+      }
+      setCurrentStepId(decision.stepId);
+      setPath(p => [...p, decision.stepId]);
+    },
+    [finishLesson]
+  );
 
   // Persist a non-completing navigation (entering a path, returning to
   // the hub) so a reload resumes there rather than at the last event.
@@ -857,51 +884,20 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     >
       <aside className={styles.tutorPanel}>
         <header className={styles.tutorHeader}>
-          <div className={styles.lessonTitle}>{lesson.title}</div>
+          <div className={styles.lessonTitleRow}>
+            <div className={styles.lessonTitle}>{lesson.title}</div>
+            <button
+              type="button"
+              className={styles.demoNavArrow}
+              onClick={() => setSettingsOpen(true)}
+              aria-label="Open controls"
+              title="Controls"
+            >
+              <FontAwesomeV6Icon iconName="gear" iconStyle="solid" />
+            </button>
+          </div>
           <div className={styles.checkpointMeta}>
-            <button
-              type="button"
-              className={styles.demoNavArrow}
-              onClick={() => {
-                // Demo affordance: retrace the path when there is one,
-                // else fall back to the previous array position.
-                if (path.length > 1) {
-                  const previous = path[path.length - 2];
-                  setPath(p => p.slice(0, -1));
-                  setCurrentStepId(previous);
-                } else if (currentIndex > 0) {
-                  setCurrentStepId(lesson.steps[currentIndex - 1].id);
-                }
-              }}
-              disabled={currentIndex === 0 && path.length <= 1}
-              aria-label="Go to previous step"
-              title="Demo: jump back one step"
-            >
-              ←
-            </button>
-            <span>
-              Step {currentIndex + 1} of {lesson.steps.length} · {step.title}
-            </span>
-            <button
-              type="button"
-              className={styles.demoNavArrow}
-              onClick={() => {
-                // Demo affordance: array order on purpose (ignores
-                // branch targets), so a presenter can page through every
-                // step without getting caught in a hub loop.
-                if (currentIndex < lesson.steps.length - 1) {
-                  const next = lesson.steps[currentIndex + 1].id;
-                  setCurrentStepId(next);
-                  setPath(p => [...p, next]);
-                } else {
-                  setPhase('celebrate');
-                }
-              }}
-              aria-label="Skip to next step"
-              title="Demo: skip the tutor check and jump to the next step in authored order"
-            >
-              →
-            </button>
+            <span>{step.title}</span>
             {adaptivityMode === 'full' && arcPresent && (
               <button
                 type="button"
@@ -1103,6 +1099,79 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           </div>
         )}
       </aside>
+
+      {settingsOpen && (
+        <DemoSettingsDialog
+          onClose={() => setSettingsOpen(false)}
+          stepControl={{
+            steps: lesson.steps.map(s => ({id: s.id, title: s.title})),
+            currentIndex,
+            canPrev: !(currentIndex === 0 && path.length <= 1),
+            // Retrace the path when there is one, else fall back to the
+            // previous array position.
+            onPrev: () => {
+              if (path.length > 1) {
+                const previous = path[path.length - 2];
+                setPath(p => p.slice(0, -1));
+                setCurrentStepId(previous);
+              } else if (currentIndex > 0) {
+                setCurrentStepId(lesson.steps[currentIndex - 1].id);
+              }
+            },
+            // Array order on purpose (ignores branch targets), so a
+            // presenter can page through every step without getting
+            // caught in a hub loop.
+            onNext: () => {
+              if (currentIndex < lesson.steps.length - 1) {
+                const next = lesson.steps[currentIndex + 1].id;
+                setCurrentStepId(next);
+                setPath(p => [...p, next]);
+              } else {
+                finishLesson();
+              }
+            },
+            onGoTo: stepId => {
+              setCurrentStepId(stepId);
+              setPath(p => [...p, stepId]);
+            },
+          }}
+          adaptivityControl={{
+            current: adaptivityMode,
+            max:
+              authoredLesson.adaptivity?.max ??
+              authoredLesson.adaptivity?.default ??
+              'augment',
+            // A mode switch is a restart in different clothes: same
+            // wipe, then reload at the new ?adaptivity= URL.
+            onSwitch: async mode => {
+              if (!lesson.id) return;
+              try {
+                await resetLessonProgress(lesson.id);
+              } catch (e) {
+                setError(`Could not reset: ${(e as Error).message}`);
+                return;
+              }
+              const url = new URL(window.location.href);
+              url.searchParams.set('adaptivity', mode);
+              window.location.href = url.toString();
+            },
+          }}
+          onRestart={async () => {
+            // Server-side wipe (progress, inputs, sources, overlays for
+            // this lesson), then a hard reload: StudentPage keeps too
+            // much in refs to restart cleanly in place, and the reload
+            // preserves the URL (including ?adaptivity=).
+            if (!lesson.id) return;
+            try {
+              await resetLessonProgress(lesson.id);
+            } catch (e) {
+              setError(`Could not reset: ${(e as Error).message}`);
+              return;
+            }
+            window.location.reload();
+          }}
+        />
+      )}
 
       <main className={styles.labArea}>
         {generatingArc ? (

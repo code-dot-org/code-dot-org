@@ -14,12 +14,33 @@
 // chosen option is tinted by verdict.  Everything honours
 // prefers-reduced-motion via the stylesheet.
 
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {AnswerRecord, StudentInputs} from './studentInputs';
 import {Question, QuestionsStep} from './types';
 
 import styles from './aiLessons.module.scss';
+
+// The advance button under every question, MUI-themed so its colors come
+// from semantic tokens rather than hand-rolled CSS.
+const SubmitButton: React.FunctionComponent<{
+  disabled?: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}> = ({disabled, onClick, children}) => (
+  <MuiButton
+    type="button"
+    variant="contained"
+    color="primary"
+    size="large"
+    className={styles.pillButton}
+    disabled={disabled}
+    onClick={onClick}
+  >
+    {children}
+  </MuiButton>
+);
 
 const CORRECT_ADVANCE_DELAY_MS = 700;
 // Must cover the question-exit animation duration in aiLessons.module.scss.
@@ -302,13 +323,7 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
     return (
       <div className={styles.questionFlow}>
         <h2>{step.title}</h2>
-        <button
-          type="button"
-          className={styles.questionSubmit}
-          onClick={() => onComplete()}
-        >
-          Continue →
-        </button>
+        <SubmitButton onClick={() => onComplete()}>Continue →</SubmitButton>
       </div>
     );
   }
@@ -369,16 +384,14 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
               );
             })}
           </div>
-          <button
-            type="button"
-            className={styles.questionSubmit}
+          <SubmitButton
             disabled={selectedIds.length === 0 || locked}
             onClick={() =>
               submit({answer: labelsOf(selectedIds), optionIds: selectedIds})
             }
           >
             {isLast ? 'Finish →' : 'Next →'}
-          </button>
+          </SubmitButton>
         </>
       );
     }
@@ -409,9 +422,7 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
             </button>
           ))}
         </div>
-        <button
-          type="button"
-          className={styles.questionSubmit}
+        <SubmitButton
           disabled={selectedIds.length === 0 || locked}
           onClick={() => {
             const chosen = (question.options || []).find(
@@ -421,7 +432,7 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
           }}
         >
           {isLast ? 'Finish →' : 'Next →'}
-        </button>
+        </SubmitButton>
       </>
     );
   };
@@ -448,14 +459,12 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
           </span>
         </div>
         <div className={styles.questionScaleValue}>{value}</div>
-        <button
-          type="button"
-          className={styles.questionSubmit}
+        <SubmitButton
           disabled={locked}
           onClick={() => submit({answer: String(value), value})}
         >
           {isLast ? 'Finish →' : 'Next →'}
-        </button>
+        </SubmitButton>
       </>
     );
   };
@@ -469,14 +478,12 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
         rows={4}
         onChange={e => setFreeText(e.target.value)}
       />
-      <button
-        type="button"
-        className={styles.questionSubmit}
+      <SubmitButton
         disabled={freeText.trim() === '' || locked}
         onClick={() => submit({answer: freeText.trim()})}
       >
         {isLast ? 'Finish →' : 'Next →'}
-      </button>
+      </SubmitButton>
     </>
   );
 

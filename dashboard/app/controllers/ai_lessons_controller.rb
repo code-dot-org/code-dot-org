@@ -382,6 +382,7 @@ class AiLessonsController < ApplicationController
           'standards' => lesson_standards(parsed),
           'adaptivity' => parsed['adaptivity'],
           'order' => parsed['order'].is_a?(Numeric) ? parsed['order'] : nil,
+          'status' => lesson_status(id),
         }
       rescue JSON::ParserError
         next
@@ -392,6 +393,22 @@ class AiLessonsController < ApplicationController
     entries.values.sort_by.with_index do |e, i|
       [e['order'] || Float::INFINITY, i]
     end
+  end
+
+  # The current user's status for a lesson, for the list view badge.
+  # Completion is the snapshot's explicit `completed` flag — deliberately
+  # not inferred from step counts, which generated steps invalidate.
+  # "In progress" is any saved progress or recorded answer.
+  private def lesson_status(id)
+    return 'not_started' unless current_user
+    snapshot_path = progress_path(id, current_user.id)
+    if File.exist?(snapshot_path)
+      snapshot = JSON.parse(File.read(snapshot_path))
+      return snapshot['completed'] ? 'completed' : 'in_progress'
+    end
+    File.exist?(inputs_path(id, current_user.id)) ? 'in_progress' : 'not_started'
+  rescue JSON::ParserError, ArgumentError
+    'not_started'
   end
 
   # Standards a lesson covers, for the list view.  Two sources: hub-path

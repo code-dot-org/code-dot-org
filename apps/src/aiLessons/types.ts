@@ -340,6 +340,10 @@ export interface LessonIndexEntry {
   standards?: {id: string | null; text: string}[];
   // The lesson's authored adaptivity dial, verbatim (see LessonPlan).
   adaptivity?: {default?: AdaptivityMode; max?: AdaptivityMode};
+  // The current user's status, from their progress snapshot.  Completion
+  // is the snapshot's explicit `completed` flag, never a step count —
+  // generated steps make counts meaningless.
+  status?: 'not_started' | 'in_progress' | 'completed';
 }
 
 export function isLabStep(step: Step): step is LabStep {

@@ -61,6 +61,10 @@ export interface ProgressSnapshot {
   // is the set skill-tree hubs count: a path's ring segments light per
   // completed step.
   completedStepIds?: string[];
+  // Set once the student reaches the end of the lesson.  The durable
+  // "lesson finished" marker — step counts can't stand in for it because
+  // generated steps change the denominator.
+  completed?: boolean;
   // Latest tutor verdict per lesson-checklist item id.
   checklist?: {[itemId: string]: boolean};
   // Rubric-scored observations of HOW the student worked, keyed by the
@@ -267,7 +271,7 @@ export async function saveSnapshotExtras(
   extras: Partial<
     Pick<
       ProgressSnapshot,
-      'observations' | 'checklist' | 'currentStepId' | 'mastery'
+      'observations' | 'checklist' | 'currentStepId' | 'mastery' | 'completed'
     >
   >
 ): Promise<ProgressSnapshot | undefined> {
