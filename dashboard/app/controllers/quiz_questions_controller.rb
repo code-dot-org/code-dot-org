@@ -81,23 +81,28 @@ class QuizQuestionsController < ApplicationController
   #
   # Creates a MultipleChoiceQuestion and attaches it to this Quiz level.
   # TODO: Implement other question types.
+  #
+  # All three writes (question, standards, placement) share one transaction.
   def create
-    question = MultipleChoiceQuestion.create!(
-      key: SecureRandom.uuid,
-      name: quiz_question_params[:questionName],
-      content: {
-        stem: quiz_question_params[:stem],
-        choices: (quiz_question_params[:choices] || []).map(&:to_h),
-        correct_choice_id: quiz_question_params[:correctChoiceId],
-      },
-      explanation: quiz_question_params[:explanation]
-    )
-    question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
-    next_position = (@level.placements.maximum(:position) || 0) + 1
-    QuizQuestionPlacement.create!(
-      level: @level, quiz_question: question,
-      page: quiz_question_params[:page].presence || 1, position: next_position
-    )
+    question = ActiveRecord::Base.transaction do
+      question = MultipleChoiceQuestion.create!(
+        key: SecureRandom.uuid,
+        name: quiz_question_params[:questionName],
+        content: {
+          stem: quiz_question_params[:stem],
+          choices: (quiz_question_params[:choices] || []).map(&:to_h),
+          correct_choice_id: quiz_question_params[:correctChoiceId],
+        },
+        explanation: quiz_question_params[:explanation]
+      )
+      question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
+      next_position = (@level.placements.maximum(:position) || 0) + 1
+      QuizQuestionPlacement.create!(
+        level: @level, quiz_question: question,
+        page: quiz_question_params[:page].presence || 1, position: next_position
+      )
+      question
+    end
 
     render status: :created, json: quiz_question_json(question)
   rescue StandardError => exception

@@ -179,6 +179,22 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert JSON.parse(response.body)['error'].present?
   end
 
+  test "create rolls back the question entirely when standard assignment fails" do
+    assert_no_difference 'QuizQuestion.count' do
+      post :create, params: {
+        level_id: @quiz.id,
+        questionName: 'Orphan risk',
+        stem: 'What is 2 + 2?',
+        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
+        correctChoiceId: 'b',
+        standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
+      }
+    end
+
+    assert_response :bad_request
+    refute QuizQuestion.exists?(name: 'Orphan risk')
+  end
+
   # --- update: in-place vs. fork ---
 
   test "update edits the question in place when it's not used in a published unit" do
