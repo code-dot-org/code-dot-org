@@ -79,16 +79,8 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def upload_project_files_and_render(session_id, project_files, encoded_payload)
-    if can?(:use_unrestricted_javabuilder, :javabuilder_session)
-      javabuilder_url = CDO.javabuilder_url
-      javabuilder_upload_url = CDO.javabuilder_upload_url
-    else
-      if !current_user.last_verified_captcha_at || (Time.now.utc - 24.hours) > current_user.last_verified_captcha_at
-        return render(status: :forbidden, json: {captcha_required: true})
-      end
-      javabuilder_url = CDO.javabuilder_demo_url
-      javabuilder_upload_url = CDO.javabuilder_demo_upload_url
-    end
+    javabuilder_url = CDO.javabuilder_url
+    javabuilder_upload_url = CDO.javabuilder_upload_url
 
     response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload, javabuilder_upload_url)
     if response
