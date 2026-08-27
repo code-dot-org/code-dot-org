@@ -52,16 +52,19 @@ const useProductTour = ({
 
     tour.on('start', () => onStartRef.current && onStartRef.current());
 
+    // First displayed step counts as seen. Cancel doesn't fire for a level change
+    // or when the page is refreshed.
+    tour.on('show', () => trySetLocalStorage(localStorageKey, 'yes'));
+
     tour.on('complete', () => {
-      trySetLocalStorage(localStorageKey, 'yes');
       onCompleteRef.current && onCompleteRef.current();
     });
 
+    // Cancel is fired when user clicks on the "x" button or escape.
     tour.on('cancel', () => {
       const currentIndex = tour.currentStep
         ? tour.steps.indexOf(tour.currentStep)
         : 0;
-      trySetLocalStorage(localStorageKey, 'yes');
       onCancelRef.current && onCancelRef.current(currentIndex);
     });
     return tour;
