@@ -25,7 +25,12 @@ export function buildFishLevelProperties(
     appName: 'fish',
     type: 'Oceans',
     name: levelKey,
+    // The studio adapter (modules/labs/oceans/index.tsx) reads `mode` and
+    // `guides` off level properties, not `appMode` — appMode is kept
+    // alongside for whatever else expects it (see loadCourse.test.ts).
     appMode: properties.mode,
+    mode: properties.mode,
+    guides: properties.guides,
     isProjectLevel: false,
     usesProjects: false,
     hideShareAndRemix: true,
