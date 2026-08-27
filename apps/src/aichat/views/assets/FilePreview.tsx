@@ -1,8 +1,7 @@
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography} from '@mui/material';
+import {Typography, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -103,16 +102,7 @@ const FilePreview: React.FC<{
             animationType={'spin'}
           />
         ) : (
-          <WithTooltip
-            tooltipProps={{
-              tooltipId: 'close-button',
-              direction: 'onTop',
-              size: 'xs',
-              text: 'Remove',
-              className: styles.closeTooltip,
-            }}
-            tooltipOverlayClassName={styles.closeTooltipOverlay}
-          >
+          <Tooltip title="Remove" placement="top">
             <button
               className={classNames(
                 styles.topRightIcon,
@@ -120,10 +110,11 @@ const FilePreview: React.FC<{
               )}
               type="button"
               onClick={onRemove}
+              aria-label="Remove"
             >
               <FontAwesomeV6Icon iconName={'circle-xmark'} />
             </button>
-          </WithTooltip>
+          </Tooltip>
         )
       ) : null}
       {type === 'image' ? (

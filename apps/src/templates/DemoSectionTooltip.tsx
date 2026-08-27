@@ -1,4 +1,4 @@
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {Tooltip} from '@mui/material';
 import React from 'react';
 
 import styles from './DemoSectionTooltip.module.scss';
@@ -18,7 +18,7 @@ interface DemoSectionTooltipProps {
 }
 
 // Wraps a control that is disabled for demo sections so hovering explains
-// why. The span anchor receives the hover/focus events WithTooltip attaches,
+// why. The span anchor receives the hover/focus events Tooltip attaches,
 // because disabled buttons do not fire them.
 const DemoSectionTooltip: React.FC<DemoSectionTooltipProps> = ({
   isDemoSection = false,
@@ -27,16 +27,9 @@ const DemoSectionTooltip: React.FC<DemoSectionTooltipProps> = ({
   children,
 }) =>
   isDemoSection ? (
-    <WithTooltip
-      tooltipProps={{
-        tooltipId,
-        direction: 'onTop',
-        size: 's',
-        text,
-      }}
-    >
+    <Tooltip id={tooltipId} title={text} placement="top">
       <span className={styles.anchor}>{children}</span>
-    </WithTooltip>
+    </Tooltip>
   ) : (
     <>{children}</>
   );

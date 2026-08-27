@@ -1,6 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography} from '@mui/material';
+import {Typography, Tooltip} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
@@ -39,19 +38,14 @@ export default function AiConfidenceBox({aiConfidence}) {
         <Typography variant="label3" className={style.labelThree}>
           {aiConfidenceText}
         </Typography>
-        <WithTooltip
-          tooltipProps={{
-            text: i18n.aiConfidenceTooltip(),
-            tooltipId: 'info-tip',
-          }}
-        >
-          <span>
+        <Tooltip title={i18n.aiConfidenceTooltip()} placement="top">
+          <span aria-label={i18n.aiConfidenceTooltip()}>
             <FontAwesomeV6Icon
               iconName="circle-info"
               className={style.infoTipIcon}
             />
           </span>
-        </WithTooltip>
+        </Tooltip>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {Tooltip, TooltipProps} from '@mui/material';
 import classnames from 'classnames';
 import React from 'react';
 
@@ -12,6 +12,17 @@ interface ProjectTemplateWorkspaceIconV2Props {
   tooltipPlace?: ComponentPlacementDirection;
   className?: string;
 }
+
+// Map the DSCO ComponentPlacementDirection enum to the MUI Tooltip placement API.
+const PLACEMENT_MAP: Record<
+  ComponentPlacementDirection,
+  TooltipProps['placement']
+> = {
+  onTop: 'top',
+  onRight: 'right',
+  onBottom: 'bottom',
+  onLeft: 'left',
+};
 
 /**
  * Modernized version of ProjectTemplateWorkspaceIcon, which uses DSCO for the Tooltip
@@ -26,13 +37,9 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
   ProjectTemplateWorkspaceIconV2Props
 > = ({tooltipPlace, className}) => {
   return (
-    <WithTooltip
-      tooltipProps={{
-        text: commonI18n.workspaceProjectTemplateLevel(),
-        direction: tooltipPlace || 'onBottom',
-        tooltipId: 'project-template-workspace-icon-tooltip',
-        size: 'xs',
-      }}
+    <Tooltip
+      title={commonI18n.workspaceProjectTemplateLevel()}
+      placement={PLACEMENT_MAP[tooltipPlace || 'onBottom']}
     >
       {/* Wrap the icon in a button so that the tooltip is tabbable. */}
       <button
@@ -46,7 +53,7 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
           className={styles.icon}
         />
       </button>
-    </WithTooltip>
+    </Tooltip>
   );
 };
 

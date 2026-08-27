@@ -1,3 +1,4 @@
+import {Tooltip} from '@mui/material';
 import {
   FunctionComponent,
   MouseEvent,
@@ -11,7 +12,6 @@ import {
 
 import CloseButton from '@/closeButton/CloseButton';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {WithTooltip} from '@/tooltip';
 
 import moduleStyles from './tags.module.scss';
 
@@ -76,15 +76,9 @@ const Tag: FunctionComponent<TagProps> = props => {
   const tooltipWrapper = useCallback(
     (children: ReactNode) =>
       tooltipContent && tooltipId ? (
-        <WithTooltip
-          tooltipProps={{
-            direction: 'onTop',
-            text: tooltipContent,
-            tooltipId: tooltipId,
-          }}
-        >
+        <Tooltip id={tooltipId} title={tooltipContent} placement="top">
           {children}
-        </WithTooltip>
+        </Tooltip>
       ) : (
         children
       ),

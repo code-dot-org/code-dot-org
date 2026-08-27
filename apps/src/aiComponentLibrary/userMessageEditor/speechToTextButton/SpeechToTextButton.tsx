@@ -1,8 +1,7 @@
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useRef, useState} from 'react';
 
@@ -106,19 +105,13 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
     <div className={styles.row}>
       {errorMessage && (
         <div className={styles.iconContainer}>
-          <WithTooltip
-            tooltipProps={{
-              size: 'xs',
-              tooltipId: 'error-tooltip',
-              text: errorMessage,
-              direction: 'onLeft',
-            }}
-          >
+          <Tooltip title={errorMessage} placement="left">
             <FontAwesomeV6Icon
               className={styles.error}
               iconName="exclamation-circle"
+              aria-label={errorMessage}
             />
-          </WithTooltip>
+          </Tooltip>
         </div>
       )}
       {isRecording && !isTranscribing && (
@@ -131,17 +124,13 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
       )}
       <div className={styles.buttonContainer}>
         {isRecording && <div className={styles.ping} />}
-        <WithTooltip
-          tooltipProps={{
-            size: 'xs',
-            tooltipId: 'error-tooltip',
-            text: !canRecord
+        <Tooltip
+          title={
+            !canRecord
               ? 'Audio recording is not supported on your device.'
-              : undefined,
-            direction: 'onLeft',
-            className: classNames(canRecord && styles.hide),
-          }}
-          tooltipOverlayClassName={styles.flexContainer}
+              : undefined
+          }
+          placement="left"
         >
           <div className={styles.flexContainer}>
             <MuiIconButton
@@ -155,7 +144,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
               <FontAwesomeV6Icon {...iconProps} />
             </MuiIconButton>
           </div>
-        </WithTooltip>
+        </Tooltip>
       </div>
     </div>
   );

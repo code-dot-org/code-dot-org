@@ -1,8 +1,7 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
@@ -253,14 +252,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
             size="s"
           />
         ) : (
-          <WithTooltip
-            tooltipProps={{
-              text: addButtonTooltipText,
-              tooltipId: `${fileName}-add-button-tooltip`,
-              direction: 'onTop',
-              size: 'xs',
-            }}
-          >
+          <Tooltip title={addButtonTooltipText} placement="top">
             <div>
               <MuiIconButton
                 variant="outlined"
@@ -268,12 +260,13 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
                 size="extraSmall"
                 onClick={() => handleAdd(isSecondaryBackpack)}
                 type="button"
+                aria-label={addButtonTooltipText}
                 disabled={addButtonDisabled}
               >
                 <FontAwesomeV6Icon iconName="plus" />
               </MuiIconButton>
             </div>
-          </WithTooltip>
+          </Tooltip>
         )}
         <ActionDropdown
           name={`backpack-options-${fileName}`}

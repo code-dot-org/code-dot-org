@@ -162,7 +162,9 @@ describe('Design System - Tabs', () => {
 
     await user.hover(tab1);
 
-    tooltip = screen.getByText('Tooltip for tab1');
+    // MUI opens the tooltip after a short enter delay + transition, so wait
+    // for it rather than reading synchronously.
+    tooltip = await screen.findByText('Tooltip for tab1');
 
     expect(tooltip).toBeInTheDocument();
   });

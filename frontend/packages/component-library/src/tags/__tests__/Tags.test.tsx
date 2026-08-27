@@ -49,7 +49,7 @@ describe('Design System - Tags Component', () => {
     // Tab to tag1 and check tooltip appears
     await user.tab();
     expect(
-      screen.getByText('This is the content of tag1 tooltip'),
+      await screen.findByText('This is the content of tag1 tooltip'),
     ).toBeInTheDocument();
 
     // Tab to tooltip then second tag and ensure it appears and first disappears
@@ -57,7 +57,7 @@ describe('Design System - Tags Component', () => {
     await user.tab();
 
     expect(
-      screen.getByText('This is the content of tag2 tooltip'),
+      await screen.findByText('This is the content of tag2 tooltip'),
     ).toBeInTheDocument();
     await waitFor(
       () =>
@@ -78,7 +78,7 @@ describe('Design System - Tags Component', () => {
     // Hover over tag1 and check tooltip appears
     await user.hover(tag1);
     expect(
-      screen.getByText('This is the content of tag1 tooltip'),
+      await screen.findByText('This is the content of tag1 tooltip'),
     ).toBeInTheDocument();
 
     // Verify that it doesn't disappear when you hover on the tooltip itself
@@ -98,7 +98,7 @@ describe('Design System - Tags Component', () => {
       {timeout: 1000}, // 1-second wait to account for fadeout
     );
     expect(
-      screen.getByText('This is the content of tag2 tooltip'),
+      await screen.findByText('This is the content of tag2 tooltip'),
     ).toBeInTheDocument();
 
     // Unhover "+1" tag and verify tooltip disappears
