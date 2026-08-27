@@ -2394,7 +2394,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   # Bandaid: 'csd2-2026' is in
-  # SharedConstants::UNITS_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS. This test goes
+  # Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS. This test goes
   # away with the exemption.
   test 'with_essential_ai_chat_tools excludes an exempt unit' do
     unit = create(:script, name: 'csd2-2026')
