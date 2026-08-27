@@ -27,6 +27,7 @@ class MultipleAssignButton extends React.Component {
     isAssigningCourseOnly: PropTypes.bool,
     isSingleUnitCourse: PropTypes.bool,
     participantAudience: PropTypes.string,
+    exemptFromAiChatToolsAlerts: PropTypes.bool,
     aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
       .isRequired,
     // Redux
@@ -65,6 +66,7 @@ class MultipleAssignButton extends React.Component {
       isAssigningCourseOnly,
       reassignConfirm,
       aiChatToolsDependency,
+      exemptFromAiChatToolsAlerts,
     } = this.props;
 
     return (
@@ -93,6 +95,7 @@ class MultipleAssignButton extends React.Component {
             isSingleUnitCourse={isSingleUnitCourse}
             participantAudience={participantAudience}
             aiChatToolsDependency={aiChatToolsDependency}
+            exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
           />
         )}
       </div>

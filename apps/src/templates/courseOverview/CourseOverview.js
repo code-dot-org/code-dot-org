@@ -150,6 +150,7 @@ class CourseOverview extends Component {
     } = this.props;
 
     const viewAsTeacher = viewAs === ViewType.Instructor;
+    const exemptFromAiChatToolsAlerts = isExemptFromAiChatToolsAlert(name);
 
     const showNotification =
       viewAsTeacher &&
@@ -236,10 +237,11 @@ class CourseOverview extends Component {
           title={title}
           participantAudience={participantAudience}
           aiChatToolsDependency={aiChatToolsDependency}
+          exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
         />
         {viewAsTeacher &&
           aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
-          !isExemptFromAiChatToolsAlert(name) && <RequiresAiChatToolsAlert />}
+          !exemptFromAiChatToolsAlerts && <RequiresAiChatToolsAlert />}
         <SafeMarkdown
           className={styles.description}
           openExternalLinksInNewTab={true}

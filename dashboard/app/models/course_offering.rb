@@ -337,6 +337,7 @@ class CourseOffering < ApplicationRecord
       course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)},
       ai_teaching_assistant_available: ai_teaching_assistant_available,
       ai_chat_tools_dependency: ai_chat_tools_dependency,
+      exempt_from_ai_chat_tools_alerts: exempt_from_ai_chat_tools_alerts?,
     }
   end
 

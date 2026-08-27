@@ -30,6 +30,7 @@ interface CourseOverviewActionRowProps {
   title: string;
   participantAudience: string;
   aiChatToolsDependency: AiChatToolsDependencyValue;
+  exemptFromAiChatToolsAlerts: boolean;
 }
 
 const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
@@ -45,6 +46,7 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
   title,
   participantAudience,
   aiChatToolsDependency,
+  exemptFromAiChatToolsAlerts,
 }) => {
   const [confirmationMessageOpen, setConfirmationMessageOpen] =
     React.useState(false);
@@ -101,6 +103,7 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
             isSingleUnitCourse={false}
             participantAudience={participantAudience}
             aiChatToolsDependency={aiChatToolsDependency}
+            exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
           />
         </div>
       )}

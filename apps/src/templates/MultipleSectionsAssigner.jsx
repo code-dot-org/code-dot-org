@@ -26,6 +26,7 @@ const MultipleSectionsAssigner = ({
   courseOfferingId,
   courseVersionId,
   aiChatToolsDependency,
+  exemptFromAiChatToolsAlerts,
   scriptId,
   reassignConfirm = () => {},
   isAssigningCourseOnly,
@@ -247,9 +248,10 @@ const MultipleSectionsAssigner = ({
           >
             {i18n.selectAll()}
           </MuiButton>
-          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-            <AssigningEssentialAiChatToolsAlert />
-          )}
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
+            !exemptFromAiChatToolsAlerts && (
+              <AssigningEssentialAiChatToolsAlert />
+            )}
           {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
             <AssigningAvailableAiChatToolsAlert />
           )}
@@ -272,6 +274,7 @@ MultipleSectionsAssigner.propTypes = {
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
   sectionDirections: PropTypes.string,
+  exemptFromAiChatToolsAlerts: PropTypes.bool,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
   // Redux

@@ -248,6 +248,7 @@ const CustomizableCurriculumCatalogCard = ({
         <MultipleSectionsAssigner
           assignmentName={courseDisplayNameWithLatestYear}
           aiChatToolsDependency={aiChatToolsDependency}
+          exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
