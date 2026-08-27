@@ -6,8 +6,10 @@ import Tags from '@code-dot-org/component-library/tags';
 import {Loading} from '@code-dot-org/lab/host';
 
 import {useAuthoringState, useCanAuthor} from '@/modules/authoring';
+import {authoringApi, draftLessonId, draftUnitId} from '@/modules/authoring/api';
 import AuthorRouteError from '@/modules/authoring/components/AuthorRouteError';
 import AuthorSidebar from '@/modules/authoring/components/AuthorSidebar';
+import CreateEntityButton from '@/modules/authoring/components/CreateEntityButton';
 
 import styles from '@/modules/authoring/components/authoring.module.scss';
 
@@ -53,9 +55,28 @@ function CourseOverview() {
         </div>
         {course.units.map(unit => (
           <section key={unit.id} className={styles.unitCard}>
-            <Typography variant="h6" component="h2">
-              {unit.displayName}
-            </Typography>
+            <div className={styles.unitCardHeader}>
+              <Typography variant="h6" component="h2">
+                {unit.displayName}
+              </Typography>
+              {canAuthor && (
+                <CreateEntityButton
+                  buttonLabel="New lesson"
+                  fieldLabel="Lesson title"
+                  onCreate={async displayName => {
+                    await authoringApi.applyChange({
+                      op: 'createLesson',
+                      unitId: unit.id,
+                      lesson: {
+                        id: draftLessonId(),
+                        displayName,
+                        origin: 'draft',
+                      },
+                    });
+                  }}
+                />
+              )}
+            </div>
             {unit.overview && (
               <Typography variant="body2">{unit.overview}</Typography>
             )}
@@ -88,6 +109,19 @@ function CourseOverview() {
             ))}
           </section>
         ))}
+        {canAuthor && (
+          <CreateEntityButton
+            buttonLabel="New unit"
+            fieldLabel="Unit title"
+            onCreate={async displayName => {
+              await authoringApi.applyChange({
+                op: 'createUnit',
+                courseId: course.id,
+                unit: {id: draftUnitId(), displayName, origin: 'draft'},
+              });
+            }}
+          />
+        )}
       </div>
     </div>
   );

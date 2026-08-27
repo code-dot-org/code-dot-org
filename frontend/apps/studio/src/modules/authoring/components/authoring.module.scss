@@ -721,6 +721,20 @@
   min-height: 0;
 }
 
+.coursePageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.unitCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .unitCard {
   @extend %authoring-card;
   padding: 16px 20px;

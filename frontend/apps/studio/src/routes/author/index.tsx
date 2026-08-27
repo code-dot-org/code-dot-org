@@ -5,8 +5,10 @@ import Tags from '@code-dot-org/component-library/tags';
 import {Loading} from '@code-dot-org/lab/host';
 
 import {useAuthoringState, useCanAuthor} from '@/modules/authoring';
+import {authoringApi, draftCourseId} from '@/modules/authoring/api';
 import AuthorRouteError from '@/modules/authoring/components/AuthorRouteError';
 import AuthorSidebar from '@/modules/authoring/components/AuthorSidebar';
+import CreateEntityButton from '@/modules/authoring/components/CreateEntityButton';
 import RemoveCourseButton from '@/modules/authoring/components/RemoveCourseButton';
 
 import styles from '@/modules/authoring/components/authoring.module.scss';
@@ -39,9 +41,23 @@ function CourseList() {
   const content = (
     <div className={styles.courseScroll}>
       <div className={styles.coursePage}>
-        <Typography variant="h4" component="h1">
-          Curriculum
-        </Typography>
+        <div className={styles.coursePageHeader}>
+          <Typography variant="h4" component="h1">
+            Curriculum
+          </Typography>
+          {canAuthor && (
+            <CreateEntityButton
+              buttonLabel="New course"
+              fieldLabel="Course title"
+              onCreate={async displayName => {
+                await authoringApi.applyChange({
+                  op: 'createCourse',
+                  course: {id: draftCourseId(), displayName, origin: 'draft'},
+                });
+              }}
+            />
+          )}
+        </div>
         <div className={styles.courseCardGrid}>
           {data.courses.map(course => (
             <Link

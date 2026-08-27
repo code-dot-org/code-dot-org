@@ -82,11 +82,27 @@ export type CurriculumChangeInput = DistributiveOmit<
   'seq' | 'at' | 'actor'
 >;
 
-// Mirrors the server's own draftId('exp') convention (ClaudeAgentRunner), so
-// author-typed and agent-generated content experiences are indistinguishable
-// in the change log.
+// Mirrors the server's own draftId(prefix) convention (ClaudeAgentRunner), so
+// author-typed and agent-generated courses/units/lessons/experiences are
+// indistinguishable in the change log.
+function draftId(prefix: string): string {
+  return `draft-${prefix}-${crypto.randomUUID().slice(0, 8)}`;
+}
+
 export function draftExperienceId(): string {
-  return `draft-exp-${crypto.randomUUID().slice(0, 8)}`;
+  return draftId('exp');
+}
+
+export function draftCourseId(): string {
+  return draftId('course');
+}
+
+export function draftUnitId(): string {
+  return draftId('unit');
+}
+
+export function draftLessonId(): string {
+  return draftId('lesson');
 }
 
 async function get<T>(path: string): Promise<T> {
