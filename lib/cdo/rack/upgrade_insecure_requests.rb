@@ -40,7 +40,7 @@ module Rack
         # http://www.w3.org/TR/upgrade-insecure-requests/#reporting-upgrades
 
         policies = []
-        if true
+        if ssl?(env)
           # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
           policies += [
             "default-src 'self' https:",
