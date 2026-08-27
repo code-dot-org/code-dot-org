@@ -43,15 +43,14 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     # TEMPORARY debug output - remove once the drone-only flakiness here is
-    # diagnosed. Prints enough to see whether @question/other_question are
-    # even in the returned set, and how much ambient MultipleChoiceQuestion
-    # data exists at the time this runs.
-    unless body.any? {|q| q['id'] == @question.id}
-      warn "DEBUG index-attached: MultipleChoiceQuestion.count=#{MultipleChoiceQuestion.count}"
-      warn "DEBUG index-attached: @question.id=#{@question.id}, other_question.id=#{other_question.id}"
-      warn "DEBUG index-attached: returned ids=#{body.map {|q| q['id']}.inspect}"
-      warn "DEBUG index-attached: most recent 15 MultipleChoiceQuestion (id, created_at)=#{MultipleChoiceQuestion.order(created_at: :desc).limit(15).pluck(:id, :created_at).inspect}"
-    end
+    # diagnosed. Unconditional this time (not just on failure) - the prior
+    # conditional version implied body contained a duplicate for
+    # @question.id (present per .any?, but missing/wrong once collapsed
+    # into a hash by id), which needs seeing raw, not re-inferring.
+    warn "DEBUG index-attached: @question.id=#{@question.id}, other_question.id=#{other_question.id}"
+    warn "DEBUG index-attached: returned ids=#{body.map {|q| q['id']}.inspect}"
+    warn "DEBUG index-attached: duplicate ids in response=#{body.map {|q| q['id']}.tally.select {|_, c| c > 1}.inspect}"
+    warn "DEBUG index-attached: full entries for @question.id=#{body.select {|q| q['id'] == @question.id}.inspect}"
     attached_flags = body.index_by {|q| q['id']}.transform_values {|q| q['attached']}
     assert_equal true, attached_flags[@question.id]
     assert_equal false, attached_flags[other_question.id]
@@ -72,12 +71,12 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     by_id = body.index_by {|q| q['id']}
     # TEMPORARY debug output - remove once the drone-only flakiness here is
-    # diagnosed.
-    unless by_id[shared_and_published.id] && by_id[@question.id]
-      warn "DEBUG index-bulk: MultipleChoiceQuestion.count=#{MultipleChoiceQuestion.count}"
-      warn "DEBUG index-bulk: shared_and_published.id=#{shared_and_published.id}, @question.id=#{@question.id}"
-      warn "DEBUG index-bulk: returned ids=#{body.map {|q| q['id']}.inspect}"
-    end
+    # diagnosed. Unconditional this time - see the sibling test's comment.
+    warn "DEBUG index-bulk: shared_and_published.id=#{shared_and_published.id}, @question.id=#{@question.id}"
+    warn "DEBUG index-bulk: returned ids=#{body.map {|q| q['id']}.inspect}"
+    warn "DEBUG index-bulk: duplicate ids in response=#{body.map {|q| q['id']}.tally.select {|_, c| c > 1}.inspect}"
+    warn "DEBUG index-bulk: full entries for shared_and_published.id=#{body.select {|q| q['id'] == shared_and_published.id}.inspect}"
+    warn "DEBUG index-bulk: full entries for @question.id=#{body.select {|q| q['id'] == @question.id}.inspect}"
     assert_equal true, by_id[shared_and_published.id]['attachedToOtherQuizzes']
     assert_equal true, by_id[shared_and_published.id]['usedInPublishedUnit']
     assert_equal false, by_id[@question.id]['attachedToOtherQuizzes']
