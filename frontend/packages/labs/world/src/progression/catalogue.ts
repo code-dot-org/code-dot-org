@@ -310,9 +310,29 @@ export const TILES: readonly Tile[] = [
     unlocks: [{kind: 'block', type: 'world_do_Physics_ApplyForceAction'}],
     check: {
       kind: 'outcome',
-      says: 'Velocity after the shove is within tolerance of the expected value, and the actor keeps moving after it.',
+      says: 'Nothing moves before the press; after it the Ball moves, and goes on moving once the key is let go.',
       falsePass:
-        'Setting the velocity directly rather than applying a force — the same outcome from a different idea. Ask for two shoves and check they add.',
+        'Setting the velocity directly rather than applying a force — the same outcome from a different idea, and this check cannot tell them apart. What it does catch is moving the Ball BY PLACE, which stops the moment the key does.',
+      run: {
+        probes: {ball: {kind: 'positions', of: 'Ball'}},
+        trace: [
+          {seconds: 0.3},
+          {hold: [' '], seconds: 0.1},
+          {hold: [], seconds: 0.6},
+        ],
+      },
+      passes: ({samples}) => {
+        const [start, before, pressed, after] = samples.ball as Point[][];
+        if (!start?.[0]) {
+          return false;
+        }
+        const still = Math.abs(before[0].x - start[0].x) < 2;
+        const shoved = pressed[0].x > before[0].x;
+        // The half that matters: it is still going after the key is up. A
+        // handler that moved it by place would have stopped dead.
+        const coasting = after[0].x > pressed[0].x + 20;
+        return still && shoved && coasting;
+      },
     },
   },
   {
@@ -330,9 +350,21 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The crossing takes two seconds, give or take a fifth, on the scripted clock.',
+      says: 'After two seconds the Ball has crossed the world — 384 pixels, give or take a tile.',
       falsePass:
-        'Guessing a number that happens to fit the demo screen. Run it again on a map of a different width.',
+        'Guessing a number that happens to fit this screen. It is the right answer FOR this screen, which is what the lesson asked for; a second world of another width would tell arithmetic from luck, and this check does not have one.',
+      run: {
+        probes: {ball: {kind: 'positions', of: 'Ball'}},
+        trace: [{seconds: 2}],
+      },
+      passes: ({samples}) => {
+        const [start, arrived] = samples.ball as Point[][];
+        if (!start?.[0]) {
+          return false;
+        }
+        const travelled = arrived[0].x - start[0].x;
+        return travelled > 344 && travelled < 424;
+      },
     },
   },
   {
@@ -346,9 +378,35 @@ export const TILES: readonly Tile[] = [
     unlocks: [{kind: 'rule', id: 'drag'}],
     check: {
       kind: 'outcome',
-      says: 'After the shove stops, speed decays below a tenth of its peak within the scripted window.',
+      says: 'The Ball travels a long way in the first half second and barely moves in the last one.',
       falsePass:
-        'Zeroing the velocity in a handler. Assert the decay is gradual by sampling it twice.',
+        'Zeroing the velocity outright, which also stops it. The middle sample is what asks for a DECAY: something that stopped dead would already be still there.',
+      run: {
+        probes: {ball: {kind: 'positions', of: 'Ball'}},
+        // Three stretches of the SAME length, which is the whole of why this
+        // check works: distance over half a second is comparable with distance
+        // over another half second, and distance over 1.5 seconds is not. The
+        // first version measured 0.5, 0.5 and 1.5 and a decaying ball covered
+        // MORE ground in the last one — while slowing down the entire time.
+        trace: [{seconds: 0.5}, {seconds: 0.5}, {seconds: 0.5}],
+      },
+      passes: ({samples}) => {
+        const [start, early, middle, late] = samples.ball as Point[][];
+        if (!start?.[0]) {
+          return false;
+        }
+        const first = Math.abs(early[0].x - start[0].x);
+        const second = Math.abs(middle[0].x - early[0].x);
+        const last = Math.abs(late[0].x - middle[0].x);
+        // Slowing, and still slowing. The middle stretch is what a thing that
+        // stopped dead fails: it would already be still by then.
+        return (
+          first > 20 &&
+          second < first * 0.9 &&
+          second > 1 &&
+          last < first * 0.65
+        );
+      },
     },
   },
   {

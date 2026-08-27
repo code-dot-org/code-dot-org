@@ -366,6 +366,27 @@ describe('every lesson that has a check', () => {
   });
 });
 
+/**
+ * Replace the body of the first handler root in an actor file.
+ *
+ * By walking the JSON rather than replacing a string: `actorFile` writes
+ * pretty-printed JSON, so a compact `JSON.stringify` of the block being
+ * replaced matches nothing at all — and silently, leaving the test to assert
+ * against a project it never changed.
+ */
+const rebody = (contents: string, body: Row): string => {
+  const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+  // Not the `define actor` root, which also has a `next` — its rows.
+  const handler = workspace.blocks.blocks.find(
+    block => block.type !== 'world_actor' && block.next?.block,
+  );
+  if (!handler) {
+    throw new Error('no handler to give a body to');
+  }
+  handler.next = {block: body};
+  return JSON.stringify(workspace);
+};
+
 /** A handler root to drop beside a `define actor`, with a `print` inside it. */
 const saying = (contents: string, hat: Row): string => {
   const workspace = JSON.parse(contents) as {
@@ -472,6 +493,103 @@ describe('the two-hands lesson’s check', () => {
       ),
     );
     const {passes, result} = await check('input/two-hands', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the shove lesson’s check', () => {
+  const lesson = LESSONS['motion/force'];
+
+  it('refuses a Ball that only says bang', async () => {
+    const {passes} = await check('motion/force', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that is shoved and coasts', async () => {
+    const solved = editing(lesson.source, 'ball.actor', contents =>
+      // `VALUE`, not `FORCE`: a single-parameter action names its socket by
+      // position rather than by the parameter's own name, and the block reads
+      // "apply force ⟨VALUE⟩ on ⟨ACTOR⟩". Guessed twice and dumped once — the
+      // palette prints the answer (AGENTS.md), and guessing costs more than
+      // reading it.
+      rebody(contents, {
+        type: 'world_do_Physics_ApplyForceAction',
+        inputs: {
+          ACTOR: {block: {type: 'world_this_actor'}},
+          VALUE: {
+            block: {type: 'world_vector', fields: {VECTOR: {x: 3, y: 0}}},
+          },
+        },
+      }),
+    );
+    const {passes, result} = await check('motion/force', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The lesson's own distinction: a force leaves a speed behind, and a place
+  // does not. Moving the Ball by place passes "it moved" and fails "it is still
+  // moving", which is the half the check is really about.
+  it('refuses a Ball moved by place, which stops the moment you let go', async () => {
+    const byPlace = editing(lesson.source, 'ball.actor', contents =>
+      rebody(contents, {
+        type: 'world_set_position',
+        inputs: {
+          ACTOR: {block: {type: 'world_this_actor'}},
+          X: {shadow: {type: 'math_number', fields: {NUM: 200}}},
+          Y: {shadow: {type: 'math_number', fields: {NUM: 144}}},
+        },
+      }),
+    );
+    const {passes} = await check('motion/force', byPlace);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the units lesson’s check', () => {
+  const lesson = LESSONS['motion/units'];
+
+  it('refuses a Ball that is gone before you see it', async () => {
+    const {passes} = await check('motion/units', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the speed that crosses the world in two seconds', async () => {
+    // 384 pixels in two seconds is 192 pixels a second, and a unit is a
+    // hundred pixels: 1.92.
+    const solved = editing(lesson.source, 'main.world', contents =>
+      contents.replace('"x": 60', '"x": 1.92'),
+    );
+    const {passes, result} = await check('motion/units', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses an answer that is out by a factor of a hundred', async () => {
+    // The mistake the lesson exists to prevent: pixels per second, written
+    // into a field that is counting units.
+    const inPixels = editing(lesson.source, 'main.world', contents =>
+      contents.replace('"x": 60', '"x": 192'),
+    );
+    const {passes} = await check('motion/units', inPixels);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the drag lesson’s check', () => {
+  const lesson = LESSONS['motion/drag'];
+
+  it('refuses a Ball that drifts forever', async () => {
+    const {passes} = await check('motion/drag', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that coasts to a stop', async () => {
+    const solved = editing(lesson.source, 'ball.actor', contents =>
+      electing(contents, 'Drag#SlowsDownTrait'),
+    );
+    const {passes, result} = await check('motion/drag', solved);
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
   });

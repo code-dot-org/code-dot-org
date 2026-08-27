@@ -412,6 +412,155 @@ the way it is pointing.
 `.trim(),
 };
 
+// ── motion/force ─────────────────────────────────────────────────────────────
+
+/** `set velocity of ⟨this actor⟩ to ⟨x, y⟩`, for a world's `add actor` body. */
+const setVelocity = (x: number, y: number) => ({
+  type: 'world_set_Physics_VelocityProperty',
+  inputs: {
+    ACTOR: {block: {type: 'world_this_actor'}},
+    VALUE: {block: {type: 'world_vector', fields: {VECTOR: {x, y}}}},
+  },
+});
+
+/** `when ⟨this actor⟩ hears ⟨key⟩ pressed`, as a root beside a `define actor`. */
+const onPressed = (key: string, body: object, y = 260) => ({
+  type: 'world_on_Input_PressesEvent',
+  fields: {FILTER0: key},
+  x: 20,
+  y,
+  inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+  next: {block: body},
+});
+
+const force: WorldScenario = {
+  name: 'A shove',
+  description:
+    'A ball that says "bang" and does not move, and the block that changes that.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [addActor('ball', [placeAt(64, 144)])],
+    }),
+    actors: {
+      ball: actorFile(
+        'Ball',
+        [
+          useTrait('Physics#CanMoveTrait'),
+          useTrait('Input#TakesKeyboardInputTrait'),
+          setSprite('ball.png'),
+        ],
+        {
+          handlers: [
+            onPressed('space', {
+              type: 'world_log',
+              fields: {TEXT: 'bang'},
+            }),
+          ],
+        },
+      ),
+    },
+    sprites: ['ball'],
+    rules: ['motion', 'input'],
+  }),
+  instructions: `
+## A shove
+
+Press space. The Ball says **bang** in the console and does not move an inch.
+
+A force does not put a thing somewhere. It changes the thing's SPEED, and the
+speed is what puts it somewhere — two steps, and the second one keeps happening
+after you have let go.
+
+### What you do
+
+1. In \`actors/ball.actor\`, swap the **print** for **apply force**, and give it
+   a shove to the right.
+2. Press space once. It moves, and it goes on moving: nothing is stopping it.
+3. Press space again while it is still going, and watch the shove ADD to the
+   speed it already had rather than replacing it.
+`.trim(),
+};
+
+// ── motion/units ─────────────────────────────────────────────────────────────
+
+const units: WorldScenario = {
+  name: 'Units per second',
+  description:
+    'A ball travelling far too fast, and the arithmetic that fixes it.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [addActor('ball', [placeAt(16, 144), setVelocity(60, 0)])],
+    }),
+    actors: {
+      ball: actorFile('Ball', [
+        useTrait('Physics#CanMoveTrait'),
+        setSprite('ball.png'),
+      ]),
+    },
+    sprites: ['ball'],
+    rules: ['motion'],
+  }),
+  instructions: `
+## Units per second
+
+The Ball is gone before you can see it. Its speed says **60**, and 60 is an
+enormous number here.
+
+A speed is in **units per second**, and one unit is **100 pixels**. So 60 means
+six thousand pixels every second, and this world is only 384 across.
+
+The world is 12 tiles by 9, and a tile is 32 pixels: **384 across**.
+
+### What you do
+
+1. Work out the speed that crosses 384 pixels in **two seconds**, in units.
+2. Put it in the \`set speed\` block in \`worlds/main.world\`.
+3. Run it and count. If it arrives early, the number is too big.
+`.trim(),
+};
+
+// ── motion/drag ──────────────────────────────────────────────────────────────
+
+const drag: WorldScenario = {
+  name: 'Coasting to a stop',
+  description:
+    'A ball that drifts forever, and the one trait that makes it a car.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [addActor('ball', [placeAt(24, 144), setVelocity(2.5, 0)])],
+    }),
+    actors: {
+      ball: actorFile('Ball', [
+        useTrait('Physics#CanMoveTrait'),
+        setSprite('ball.png'),
+      ]),
+    },
+    sprites: ['ball'],
+    rules: ['motion', 'drag', 'wrap'],
+  }),
+  instructions: `
+## Coasting to a stop
+
+The Ball is pushed once at the start and never slows down. It wraps round the
+edges and keeps going, at exactly the speed it began with, forever.
+
+That is what having a speed MEANS — nothing takes it away unless something is
+written to. In space that is correct. On a road it is not.
+
+### What you do
+
+1. Give the Ball **use trait ⟨Slows Down⟩**.
+2. Run it. It coasts to a halt instead of going round for ever.
+3. Find the trait's own numbers and make it slippery, then make it sticky.
+`.trim(),
+};
+
 /** Every lesson written so far, by the tile it belongs to. */
 export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'origin/first-world': firstWorld,
@@ -421,6 +570,9 @@ export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'input/two-hands': twoHands,
   'motion/speed': speed,
   'motion/gravity': gravity,
+  'motion/force': force,
+  'motion/units': units,
+  'motion/drag': drag,
   'look/sprite': sprite,
   'place/position': position,
 };
