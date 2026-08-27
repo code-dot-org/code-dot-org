@@ -157,16 +157,20 @@ export const fetchAndSaveFile = async ({
   }
   let fileContent = '';
   let url: string | undefined = undefined;
-  if (response?.headers.get('Content-Type')?.startsWith('image/')) {
+  const contentType = response.headers.get('Content-Type') || '';
+  const isImage = contentType.startsWith('image/');
+  const isAudio = contentType.startsWith('audio/');
+  // Images and audio have no text contents; they are uploaded to the channel's
+  // assets and the project file refers to them by url.
+  if (isImage || isAudio) {
     const fileType = selectedFileName.split('.').pop();
     const blob = await response.blob();
     const uuid = createUuid();
     const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
 
-    // Moderate image if file is from a secondary backpack.
-    if (isSecondaryBackpack && fileType) {
+    // Moderate image if file is from a secondary backpack. Audio is not moderated.
+    if (isImage && isSecondaryBackpack && fileType) {
       // Convert blob to File object for moderation
-      const contentType = response.headers.get('Content-Type') || 'image/*';
       const file = new File([blob], selectedFileName, {type: contentType});
       const appName = Lab2Registry.getInstance().getAppName();
 
@@ -177,7 +181,7 @@ export const fetchAndSaveFile = async ({
       if (moderationStatus === 'flagged') {
         // Callback function so if user accepts flagged image, we can save the image to the project.
         const saveBackpackImageFileToProjectFunction = async () => {
-          const uploadedUrl = await handleSaveImageToChannelAssets(
+          const uploadedUrl = await handleSaveBlobToChannelAssets(
             uploadUrl,
             blob,
             errorMessage,
@@ -211,7 +215,7 @@ export const fetchAndSaveFile = async ({
     }
 
     // Proceed without moderation because image was already moderated when uploaded to project (for primary backpack files).
-    const uploadedUrl = await handleSaveImageToChannelAssets(
+    const uploadedUrl = await handleSaveBlobToChannelAssets(
       uploadUrl,
       blob,
       errorMessage,
@@ -240,9 +244,9 @@ export const fetchAndSaveFile = async ({
   );
 };
 
-// Handle image file content as a blob, and upload as an asset.
+// Upload binary file content (image or audio) as a channel asset.
 // Return the url for the new file contents.
-const handleSaveImageToChannelAssets = async (
+const handleSaveBlobToChannelAssets = async (
   uploadUrl: string,
   blob: Blob,
   errorMessage: string,
@@ -255,7 +259,7 @@ const handleSaveImageToChannelAssets = async (
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError(
-        'Backpack could not upload image file to assets channel',
+        'Backpack could not upload binary file to assets channel',
         error as Error
       );
     addAlert('danger', errorMessage);
