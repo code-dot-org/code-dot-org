@@ -12,8 +12,6 @@ class SessionCookieScopeMigrationTest < ActionDispatch::IntegrationTest
   BOGUS = 'I_AM_NOT_A_VALID_SESSION_ID'.freeze
 
   # A raw Cookie header carrying the given values under the session cookie name.
-  # The single-valued integration cookie jar can't hold two same-name cookies,
-  # so we forge the header; rack-test lets a caller-supplied HTTP_COOKIE win.
   def cookie_header_with_sessions(*values)
     {'HTTP_COOKIE' => values.map {|value| "#{KEY}=#{value}"}.join('; ')}
   end
@@ -29,10 +27,9 @@ class SessionCookieScopeMigrationTest < ActionDispatch::IntegrationTest
       'kept the valid (last) session id rather than the bogus (first) one'
   end
 
-  # Guards against a "read whichever cookie is valid" implementation, which would
-  # also satisfy the test above. Here the valid cookie is FIRST and the bogus one
-  # is LAST, so keep-last must read the bogus one and mint a fresh session.
-  test 'reads the last cookie even when it is the bogus one' do
+  # Ensure the last (newest) cookie wins. The test above would also pass for an implementation
+  # that reads the FIRST cookie and falls back to the second only when the first is invalid.
+  test 'reads the last cookie even when the earlier one is the valid session' do
     get '/'
     valid_session_id = session.id.to_s
 

@@ -37,15 +37,16 @@ describe Rack::SessionCookieScopeMigration do
   end
 
   describe 'a single session cookie' do
-    it 'is left untouched' do
-      env = process("#{COOKIE}=solo")
-      _(env['HTTP_COOKIE']).must_equal "#{COOKIE}=solo"
+    it 'leaves the header untouched, preserving cookie order' do
+      env = process("a=1; #{COOKIE}=solo; b=2")
+      _(env['HTTP_COOKIE']).must_equal "a=1; #{COOKIE}=solo; b=2"
       _(cookie_seen_downstream(env)).must_equal 'solo'
     end
   end
 
-  describe 'no cookies' do
-    it 'passes through' do
+  # Ensure a cookieless request does not raise NoMethodError on nil.split.
+  describe 'a request with no cookies' do
+    it 'does not raise' do
       env = process(nil)
       _(env['HTTP_COOKIE']).must_be_nil
     end
