@@ -59,6 +59,27 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal 'check_for_understanding', @quiz.purpose
   end
 
+  test "update only touches fields present in the request, leaving the rest alone" do
+    @quiz.update!(display_name: 'Original name', purpose: 'exam', custom_intro_text: 'Original intro')
+
+    put :update, params: {level_id: @quiz.id, purpose: 'practice'}, as: :json
+
+    assert_response :success
+    @quiz.reload
+    assert_equal 'practice', @quiz.purpose
+    assert_equal 'Original name', @quiz.display_name
+    assert_equal 'Original intro', @quiz.custom_intro_text
+  end
+
+  test "update clears a field given an explicit null, as opposed to omitting it" do
+    @quiz.update!(custom_intro_text: 'Original intro')
+
+    put :update, params: {level_id: @quiz.id, customIntroText: nil}, as: :json
+
+    assert_response :success
+    assert_nil @quiz.reload.custom_intro_text
+  end
+
   test "update returns bad_request when a time limit is set without show_intro_screen" do
     put :update, params: {level_id: @quiz.id, timeLimitMinutes: 20, showIntroScreen: false}, as: :json
 
@@ -75,7 +96,7 @@ class QuizzesControllerTest < ActionController::TestCase
   test "update coerces an ambiguous boolean-ish value like the string '0' to real false, not truthy" do
     # This is the exact scenario Dave flagged in review: a stored value like
     # "0" reads back truthy via show_correctness?, because JSONValue checks
-    # integral? before boolean?. cast_boolean must stop that string from
+    # integral? before boolean?. CAST_BOOLEAN must stop that string from
     # ever being written in the first place - see QuizzesController#update.
     put :update, params: {level_id: @quiz.id, showCorrectness: '0'}
 

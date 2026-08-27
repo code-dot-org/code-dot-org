@@ -6,41 +6,48 @@ class QuizzesController < ApplicationController
   before_action {authorize! :manage, @level}
   before_action {head :not_found unless @level.is_a?(Quiz)}
 
-  # PUT /levels/:level_id/quiz_configuration
+  # PUT/PATCH /levels/:level_id/quiz_configuration
+  #
+  # Partial update - a key missing from the request leaves that field
+  # untouched, rather than clearing it. This matters because the route
+  # accepts PATCH as well as PUT, and because the frontend's config tabs
+  # each only ever send the fields for their own tab. An explicit null
+  # still clears a field.
   def update
-    @level.update!(
-      display_name: quiz_configuration_params[:displayName],
-      custom_intro_text: quiz_configuration_params[:customIntroText],
-      # serialized_attrs getters don't coerce - cast here at the one write path
-      # rather than trust the client sent a real Integer.
-      time_limit_minutes: quiz_configuration_params[:timeLimitMinutes].presence&.to_i,
-      # JSONValue's boolean coercion (behind show_correctness?/
-      # reveal_answer_explanation?) checks integral? before boolean?, so
-      # always write a real true/false/nil here to avoid ambiguity.
-      show_correctness: cast_boolean(quiz_configuration_params[:showCorrectness]),
-      reveal_answer_explanation: cast_boolean(quiz_configuration_params[:revealAnswerExplanation]),
-      show_intro_screen: cast_boolean(quiz_configuration_params[:showIntroScreen]),
-      purpose: quiz_configuration_params[:purpose],
-      allow_multiple_attempts: cast_boolean(quiz_configuration_params[:allowMultipleAttempts])
-    )
+    @level.update!(present_configuration_updates)
     render json: quiz_configuration_json(@level)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
   end
 
-  # nil stays nil (param not sent), everything else becomes a real true/false -
-  # ActiveModel::Type::Boolean already treats "false"/"0"/0/false as false
-  # and anything else present as true, so this is a strict improvement over
-  # storing whatever the client sent verbatim.
-  private def cast_boolean(value)
-    ActiveModel::Type::Boolean.new.cast(value)
+  # (wire param => [model attribute, caster]). caster defaults to a plain
+  # passthrough - only fields needing a real cast (booleans, and
+  # time_limit_minutes - see the serialized_attrs comment) override it.
+  CAST_BOOLEAN = ->(v) {ActiveModel::Type::Boolean.new.cast(v)}
+  CONFIGURATION_FIELDS = {
+    displayName: [:display_name, :itself.to_proc],
+    customIntroText: [:custom_intro_text, :itself.to_proc],
+    timeLimitMinutes: [:time_limit_minutes, ->(v) {v.presence&.to_i}],
+    showCorrectness: [:show_correctness, CAST_BOOLEAN],
+    revealAnswerExplanation: [:reveal_answer_explanation, CAST_BOOLEAN],
+    showIntroScreen: [:show_intro_screen, CAST_BOOLEAN],
+    purpose: [:purpose, :itself.to_proc],
+    allowMultipleAttempts: [:allow_multiple_attempts, CAST_BOOLEAN],
+  }.freeze
+
+  # Only includes a key if its wire param was actually present in the
+  # request (quiz_configuration_params.key? stays true for an explicit
+  # null, so that still clears the field - it's an absent key, not a null
+  # value, that's meant to leave a field alone).
+  private def present_configuration_updates
+    CONFIGURATION_FIELDS.each_with_object({}) do |(wire_key, (attr, caster)), updates|
+      next unless quiz_configuration_params.key?(wire_key)
+      updates[attr] = caster.call(quiz_configuration_params[wire_key])
+    end
   end
 
   private def quiz_configuration_params
-    params.permit(
-      :displayName, :customIntroText, :timeLimitMinutes, :showCorrectness,
-      :revealAnswerExplanation, :showIntroScreen, :purpose, :allowMultipleAttempts
-    )
+    params.permit(*CONFIGURATION_FIELDS.keys)
   end
 
   private def quiz_configuration_json(quiz)
