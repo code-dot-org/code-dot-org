@@ -90,10 +90,10 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
   end
 
   test 'use_reporting_db_for_selects? follows the DCDO flag' do
-    DCDO.stubs(:get).with(ContactRollupsV2::USE_READER_DCDO_KEY, false).returns(false)
+    DCDO.stubs(:get).with(ContactRollupsV2::USE_REPORTING_DCDO_KEY, false).returns(false)
     refute ContactRollupsV2.use_reporting_db_for_selects?
 
-    DCDO.stubs(:get).with(ContactRollupsV2::USE_READER_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(ContactRollupsV2::USE_REPORTING_DCDO_KEY, false).returns(true)
     assert ContactRollupsV2.use_reporting_db_for_selects?
   end
 

@@ -41,7 +41,7 @@ class ContactRollupsV2
   # DCDO flag that routes the pipeline's SELECT queries to the reporting
   # endpoint. Defaults to false: reads stay on the writer, the long-standing
   # behavior. Can be flipped in production without a deploy.
-  USE_READER_DCDO_KEY = 'contact_rollups_use_reader'.freeze
+  USE_REPORTING_DCDO_KEY = 'contact_rollups_use_reporting'.freeze
 
   # Aurora replica lag stays below ~50ms even while this job runs its
   # largest INSERTs (see PR #74613 for the CloudWatch evidence). Every table
@@ -97,7 +97,7 @@ class ContactRollupsV2
   end
 
   def self.use_reporting_db_for_selects?
-    DCDO.get(USE_READER_DCDO_KEY, false)
+    DCDO.get(USE_REPORTING_DCDO_KEY, false)
   end
 
   # Set all database configurations the pipeline will need
