@@ -27,3 +27,8 @@
   text-align: start;
   text-transform: none;
 }
+
+/* The way back to the lesson that granted this actor, under the chosen row. */
+.lesson {
+  margin-inline-start: 8px;
+}

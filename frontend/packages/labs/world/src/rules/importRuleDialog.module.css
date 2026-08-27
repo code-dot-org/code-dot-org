@@ -73,3 +73,9 @@
     animation: none;
   }
 }
+
+/* The way back to the lesson that granted this rule, under the chosen row.
+   Indented to sit under the row's words rather than under its edge. */
+.lesson {
+  margin-inline-start: 8px;
+}

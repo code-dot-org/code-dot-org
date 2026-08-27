@@ -746,7 +746,14 @@ export const TILES: readonly Tile[] = [
       'A start, a route, an end — and the state that says which you are in.',
     task: 'Put it together: a map, a camera, hazards, coins, and somewhere to be trying to get to.',
     requires: ['platformer/pickups', 'platformer/hazards'],
-    unlocks: [{kind: 'template', id: 'platformer'}],
+    unlocks: [
+      {kind: 'template', id: 'platformer'},
+      // The stock Player: gravity, walking, jumping and the space bar, already
+      // assembled. It belongs to the capstone rather than to `jump`, because
+      // what it saves is the assembly, and the assembly is what the four tiles
+      // before this one were for.
+      {kind: 'actor', id: 'player'},
+    ],
     check: {
       kind: 'outcome',
       says: 'A scripted run reaches the goal and enters the win state; a run into a spike does not.',
@@ -997,7 +1004,11 @@ export const TILES: readonly Tile[] = [
     teaches: 'Branching, and a variable that remembers which way you went.',
     task: 'Ask something. Send the talk somewhere else, and have it remembered two scenes later.',
     requires: ['story/script'],
-    unlocks: [{kind: 'block', type: 'world_do_Conversation_SendToLineAction'}],
+    unlocks: [
+      {kind: 'block', type: 'world_do_Conversation_SendToLineAction'},
+      // Something to click an answer with.
+      {kind: 'actor', id: 'button'},
+    ],
     check: {
       kind: 'outcome',
       says: 'Two scripted runs, differing only in the answer, reach two different endings.',

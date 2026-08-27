@@ -29,6 +29,8 @@ import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
+import {LessonLink} from '../progression/LessonLink';
+
 import {demoFrames, demoUrl, DEMO_SIZE} from './demos';
 import styles from './importRuleDialog.module.css';
 import {stockRequirements} from './importStockRule';
@@ -164,6 +166,17 @@ export const ImportRuleDialog = ({
                   </Typography>
                 )}
               </Button>
+              {/* Outside the Button, not inside it: a button within a button is
+                  not a thing HTML has. It appears on the chosen row only, with
+                  the rest of the detail, because "what is this for" is a
+                  question about the row you have landed on. */}
+              {chosen?.id === rule.id && (
+                <LessonLink
+                  className={styles.lesson}
+                  unlock={{kind: 'rule', id: rule.id}}
+                  onNavigate={onCancel}
+                />
+              )}
             </li>
           ))}
         </ul>

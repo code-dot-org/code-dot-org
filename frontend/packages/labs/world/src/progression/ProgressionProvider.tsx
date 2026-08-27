@@ -15,12 +15,13 @@
 
 import {useEffect, useMemo, useState, type PropsWithChildren} from 'react';
 
+import {setLessonOpener} from './lessonSeam';
 import {ProgressionContext, type Progression} from './progressionContext';
 import {ProgressionDialog} from './ProgressionDialog';
 import {loadProgress, saveProgress} from './progressStore';
 import type {TileId} from './types';
 
-import {TILES_BY_ID, tileState} from './index';
+import {grantedBy, TILES_BY_ID, tileState} from './index';
 
 export interface ProgressionProviderProps {
   /**
@@ -58,9 +59,18 @@ export const ProgressionProvider = ({
         setCompleted(previous =>
           previous.has(id) ? previous : new Set([...previous, id]),
         ),
+      grantedBy: unlock => grantedBy(unlock)?.id,
     }),
     [completed, open],
   );
+
+  // …and the same door for callers that cannot use a hook: a Blockly field, a
+  // toolbox button (./lessonSeam). Cleared on unmount, so nothing holds a
+  // closure over a provider that is gone.
+  useEffect(() => {
+    setLessonOpener(id => setOpen({focus: id}));
+    return () => setLessonOpener(null);
+  }, []);
 
   return (
     <ProgressionContext.Provider value={value}>

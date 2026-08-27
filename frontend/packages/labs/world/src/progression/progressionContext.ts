@@ -7,7 +7,7 @@
 
 import {createContext, useContext} from 'react';
 
-import type {TileId, TileState} from './types';
+import type {TileId, TileState, UnlockTarget} from './types';
 
 export interface Progression {
   /** What this learner has finished. */
@@ -21,11 +21,23 @@ export interface Progression {
   isOpen: boolean;
   /** Mark a tile done. Milestone 4 gives this a check to be called from. */
   complete: (id: TileId) => void;
+  /** The tile that taught a thing, for the link back to it (./LessonLink). */
+  grantedBy: (unlock: UnlockTarget) => TileId | undefined;
 }
 
 export const ProgressionContext = createContext<Progression | undefined>(
   undefined,
 );
+
+/**
+ * The progression if there is one, and nothing if there is not.
+ *
+ * For components that may render outside the lab — an import dialog opened in
+ * its own test, the headless generator's world — where "there are no lessons
+ * here" is a normal answer and not a bug.
+ */
+export const useMaybeProgression = (): Progression | undefined =>
+  useContext(ProgressionContext);
 
 /**
  * The progression, or an error.

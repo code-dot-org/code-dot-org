@@ -85,6 +85,7 @@ import {setEditingRule} from './editingRule';
 import {setEffectImportHandler} from './effectImport';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
+import {registerLessonButtons} from './lessonFlyoutButton';
 import {redrawLiveDropdowns} from './moduleOptions';
 import {
   OPENABLE_EXTENSIONS,
@@ -1278,6 +1279,11 @@ export const BlocklyFileEditor = ({
           // changes.
           key={isReadOnly ? 'read-only' : 'editable'}
           className={styles.workspace}
+          // What the "How this works" button at the top of a rule's drawer
+          // does (blockly/lessonFlyoutButton). Registered at injection, so a
+          // toolbox rebuilt for any of the several reasons it is rebuilt still
+          // finds its callbacks.
+          onInject={registerLessonButtons}
           startBlocks={startBlocks}
           toolbox={toolbox}
           options={options}

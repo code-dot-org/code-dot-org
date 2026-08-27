@@ -448,8 +448,40 @@ anything depends on it.
    column and audits clean. Reflow (1.4.10) for World Lab as a whole is
    somebody's milestone and is not this one.
 
-6. **The back-links** from the rule import dialog, the actor shelf, the toolbox
-   category headers, and the `use trait` eye.
+6. ~~**The back-links.**~~ **Done**, all four sites — `LessonLink.tsx` for the
+   two import dialogs, `blockly/extensions/lessonButton.ts` for the block, and
+   `blockly/lessonFlyoutButton.ts` for the toolbox drawer. Every one of them
+   names the LESSON rather than saying "learn more": somebody deciding whether
+   to spend twenty minutes is deciding about that lesson, and the title is the
+   only thing on the control that says which.
+
+   Two mechanisms, because there are two kinds of caller. React code uses
+   `LessonLink`, which asks the context and draws nothing outside it — the
+   import dialogs have tests that render them alone, and a link that threw there
+   would have made them untestable. Blockly cannot use a hook, so it goes
+   through `progression/lessonSeam.ts`, the shape this package already uses for
+   the same problem (`openModule`, `ruleImport`, `effectImport`): the lab
+   registers a handler while it is mounted and clears it on unmount.
+
+   **`lessonFor` answers "nothing" when nothing is mounted, whatever the
+   catalogue says.** A caller asking it is deciding whether to draw an
+   affordance, and an affordance that opens nothing is worse than none — so the
+   headless generator and every test that renders a dialog alone get no button
+   without having to ask a second question first.
+
+   The block button resolves by NAME rather than by file: a tile granted the
+   stock rule `gravity`, and the project's copy is called whatever the learner
+   called the file. It sits on `use rule`, `use trait` and `add actor` — three
+   of the eight blocks the eye is on. The other five name an actor kind in
+   passing (`is a ⟨Coin⟩`), which is not where anybody asks what it was for.
+
+   Asking the other direction — not "does this unlock exist" but "does
+   everything the library ships have a lesson" — found two gaps: the stock
+   Player and Button actors were granted by no tile, so they could only be met
+   by accident and the link back from them led nowhere. `platformer/level` and
+   `story/choice` grant them now, and the layout test asserts the coverage in
+   both directions so the next gap fails the suite instead of sitting there.
+
 7. **Real completion** — the checks (PROGRESSION.md), and then the studio-level
    transport and the dashboard work under it.
 

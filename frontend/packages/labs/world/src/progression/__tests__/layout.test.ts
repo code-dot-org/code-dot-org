@@ -13,7 +13,7 @@ import {STOCK_ACTORS} from '../../actors/stock';
 import {STOCK_RULES} from '../../rules/stock';
 import {TILES} from '../catalogue';
 import {adjacent, ring} from '../hex';
-import {TILES_BY_ID, tileState, unlockKey} from '../index';
+import {GRANTED_BY, TILES_BY_ID, tileState, unlockKey} from '../index';
 import {FOUNDATIONS, GENRES, REGIONS, region} from '../regions';
 import type {Tile} from '../types';
 
@@ -215,6 +215,24 @@ describe('what a tile unlocks', () => {
         }
       }
     }
+  });
+
+  // The other direction, and the one that found two gaps: not "does this
+  // unlock exist" but "is there a lesson for everything the library ships".
+  // Something on the shelf that no tile grants is something a learner can only
+  // meet by accident, and the reverse link from it leads nowhere.
+  it('covers every stock rule', () => {
+    const missing = STOCK_RULES.filter(
+      rule => !GRANTED_BY.has(unlockKey({kind: 'rule', id: rule.id})),
+    ).map(rule => rule.id);
+    expect(missing).toEqual([]);
+  });
+
+  it('covers every stock actor', () => {
+    const missing = STOCK_ACTORS.filter(
+      actor => !GRANTED_BY.has(unlockKey({kind: 'actor', id: actor.id})),
+    ).map(actor => actor.id);
+    expect(missing).toEqual([]);
   });
 
   it('gives every tile something to give', () => {

@@ -14,6 +14,8 @@ import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
+import {LessonLink} from '../progression/LessonLink';
+
 import styles from './importActorDialog.module.css';
 import {
   actorAnimations,
@@ -99,6 +101,14 @@ export const ImportActorDialog = ({
                   </Typography>
                 )}
               </Button>
+              {/* Outside the Button — see the same note in ImportRuleDialog. */}
+              {chosen?.id === actor.id && (
+                <LessonLink
+                  className={styles.lesson}
+                  unlock={{kind: 'actor', id: actor.id}}
+                  onNavigate={onCancel}
+                />
+              )}
             </li>
           ))}
         </ul>
