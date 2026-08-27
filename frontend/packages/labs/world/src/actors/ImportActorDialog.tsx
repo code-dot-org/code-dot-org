@@ -15,6 +15,7 @@ import {useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
 import {LessonLink} from '../progression/LessonLink';
+import {useMaybeProgression} from '../progression/progressionContext';
 
 import styles from './importActorDialog.module.css';
 import {
@@ -49,6 +50,11 @@ export const ImportActorDialog = ({
   onCancel,
 }: ImportActorDialogProps) => {
   const [chosen, setChosen] = useState<StockActor | null>(null);
+  // See the same lines in ImportRuleDialog: shown either way, locked until the
+  // lesson that grants it is done.
+  const progression = useMaybeProgression();
+  const held = (actor: StockActor) =>
+    progression?.holds({kind: 'actor', id: actor.id}) ?? true;
 
   return (
     <Dialog
@@ -61,8 +67,8 @@ export const ImportActorDialog = ({
       closeLabel="Close"
       primaryButtonProps={{
         children: 'Import',
-        disabled: chosen === null,
-        onClick: () => chosen && onImport(chosen),
+        disabled: chosen === null || !held(chosen),
+        onClick: () => chosen && held(chosen) && onImport(chosen),
       }}
       secondaryButtonProps={{children: 'Cancel', onClick: onCancel}}
       customContent={
@@ -71,6 +77,7 @@ export const ImportActorDialog = ({
             <li key={actor.id}>
               <Button
                 className={styles.actor}
+                disabled={!held(actor)}
                 variant={chosen?.id === actor.id ? 'contained' : 'outlined'}
                 color="secondary"
                 size="small"
@@ -102,10 +109,11 @@ export const ImportActorDialog = ({
                 )}
               </Button>
               {/* Outside the Button — see the same note in ImportRuleDialog. */}
-              {chosen?.id === actor.id && (
+              {(chosen?.id === actor.id || !held(actor)) && (
                 <LessonLink
                   className={styles.lesson}
                   unlock={{kind: 'actor', id: actor.id}}
+                  locked={!held(actor)}
                   onNavigate={onCancel}
                 />
               )}

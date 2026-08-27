@@ -30,6 +30,7 @@ import {useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
 import {LessonLink} from '../progression/LessonLink';
+import {useMaybeProgression} from '../progression/progressionContext';
 
 import {demoFrames, demoUrl, DEMO_SIZE} from './demos';
 import styles from './importRuleDialog.module.css';
@@ -52,6 +53,13 @@ export const ImportRuleDialog = ({
   // it needs with it, so the row a learner lands on first is rarely the one
   // they meant once they have read what else comes along.
   const [chosen, setChosen] = useState<StockRule | null>(null);
+  // What this learner has unlocked, when the level gates the library at all
+  // (progression/shelf). Every row is SHOWN either way: a locked row that says
+  // which lesson grants it is a reason to go and do that lesson, and a row that
+  // has been taken away teaches nothing.
+  const progression = useMaybeProgression();
+  const held = (rule: StockRule) =>
+    progression?.holds({kind: 'rule', id: rule.id}) ?? true;
 
   return (
     <Dialog
@@ -65,8 +73,8 @@ export const ImportRuleDialog = ({
       closeLabel="Close"
       primaryButtonProps={{
         children: 'Import',
-        disabled: chosen === null,
-        onClick: () => chosen && onImport(chosen),
+        disabled: chosen === null || !held(chosen),
+        onClick: () => chosen && held(chosen) && onImport(chosen),
       }}
       secondaryButtonProps={{
         children: 'Cancel',
@@ -85,6 +93,7 @@ export const ImportRuleDialog = ({
             >
               <Button
                 className={styles.effect}
+                disabled={!held(rule)}
                 // The design system's own colors, so a row reads as the same
                 // kind of thing as every other button on the site — and its
                 // selected state is the one the system already has a look for.
@@ -170,10 +179,11 @@ export const ImportRuleDialog = ({
                   not a thing HTML has. It appears on the chosen row only, with
                   the rest of the detail, because "what is this for" is a
                   question about the row you have landed on. */}
-              {chosen?.id === rule.id && (
+              {(chosen?.id === rule.id || !held(rule)) && (
                 <LessonLink
                   className={styles.lesson}
                   unlock={{kind: 'rule', id: rule.id}}
+                  locked={!held(rule)}
                   onNavigate={onCancel}
                 />
               )}

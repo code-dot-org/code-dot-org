@@ -49,3 +49,16 @@ export function hiddenToolboxCategories(
 ): readonly string[] {
   return properties?.levelData?.hiddenToolboxCategories ?? [];
 }
+
+/**
+ * Whether the stock libraries offer only what this learner has unlocked.
+ *
+ * Off unless a level says otherwise. The unlock is only real if a New Project
+ * cannot simply take everything (specs/PROGRESSION.md) — and it is only fair if
+ * saying no to that is one setting away, which is what this is.
+ */
+export function gatesShelf(
+  properties: WorldLevelProperties | undefined,
+): boolean {
+  return properties?.levelData?.gateShelf === true;
+}

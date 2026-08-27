@@ -26,6 +26,13 @@ export const WorldLevelDataSchema = z.object({
   // still renders and still generates code; they are only unreachable from the
   // toolbox.
   hiddenToolboxCategories: z.array(z.string()).optional(),
+  // Whether the stock libraries are limited to what the learner has UNLOCKED
+  // (progression/shelf). Default OFF, and deliberately: gating is a teaching
+  // device, and a lab that quietly started refusing rules to everybody who had
+  // never opened the progression would be a worse lab for every teacher and
+  // every experienced maker. A level — or, when there is one, an account — says
+  // yes to it. See specs/PROGRESSION.md, "Free play".
+  gateShelf: z.boolean().optional(),
 });
 
 /**

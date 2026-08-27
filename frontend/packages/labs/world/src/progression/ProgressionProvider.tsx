@@ -15,13 +15,18 @@
 
 import {useEffect, useMemo, useState, type PropsWithChildren} from 'react';
 
+import {useMaybeLevelProperties} from '@code-dot-org/lab/contexts';
+
+import {gatesShelf, type WorldLevelProperties} from '../levelData';
+
 import {setLessonOpener} from './lessonSeam';
 import {ProgressionContext, type Progression} from './progressionContext';
 import {ProgressionDialog} from './ProgressionDialog';
 import {loadProgress, saveProgress} from './progressStore';
+import {holds, shelfKeys} from './shelf';
 import type {TileId} from './types';
 
-import {grantedBy, TILES_BY_ID, tileState} from './index';
+import {grantedBy, GRANTED_BY, TILES_BY_ID, tileState} from './index';
 
 export interface ProgressionProviderProps {
   /**
@@ -39,6 +44,11 @@ export const ProgressionProvider = ({
     initiallyCompleted ? new Set(initiallyCompleted) : loadProgress(),
   );
   const [open, setOpen] = useState<{focus?: TileId} | undefined>();
+  // Whether this level gates the libraries. `useMaybeLevelProperties` because
+  // the provider is mounted in tests and stories with no level at all, where
+  // "not gated" is the right answer rather than a crash.
+  const level = useMaybeLevelProperties() as WorldLevelProperties | undefined;
+  const gated = gatesShelf(level);
 
   // Written on every change rather than on close: a learner who finishes a tile
   // and then closes the tab has finished it (./progressStore).
@@ -60,8 +70,12 @@ export const ProgressionProvider = ({
           previous.has(id) ? previous : new Set([...previous, id]),
         ),
       grantedBy: unlock => grantedBy(unlock)?.id,
+      gated,
+      holds: unlock =>
+        !gated ||
+        holds(shelfKeys(completed), new Set(GRANTED_BY.keys()), unlock),
     }),
-    [completed, open],
+    [completed, open, gated],
   );
 
   // …and the same door for callers that cannot use a hook: a Blockly field, a

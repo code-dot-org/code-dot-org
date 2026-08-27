@@ -23,6 +23,17 @@ export interface Progression {
   complete: (id: TileId) => void;
   /** The tile that taught a thing, for the link back to it (./LessonLink). */
   grantedBy: (unlock: UnlockTarget) => TileId | undefined;
+  /**
+   * Whether the stock libraries are limited to what has been unlocked
+   * (./shelf). Off unless the level says otherwise.
+   */
+  gated: boolean;
+  /**
+   * Whether the shelf holds a thing — which is only a question worth asking
+   * when `gated`. Answers true for everything otherwise, so a caller can ask
+   * unconditionally and get the ungated lab's behaviour for free.
+   */
+  holds: (unlock: UnlockTarget) => boolean;
 }
 
 export const ProgressionContext = createContext<Progression | undefined>(

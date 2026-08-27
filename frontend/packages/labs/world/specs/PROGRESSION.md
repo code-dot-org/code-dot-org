@@ -609,10 +609,35 @@ idea works.
 2. **The map, read-only.** The page, the SVG, the region outlines, the list
    view, the keyboard model — with every tile shown as open. Proves the picture
    reads before anything depends on it.
-3. **The shelf and New Project.** Allowlist gating, locked-but-visible rows,
-   lesson back-links. Proves the reward is real. At this point the tree works
-   with tiles completed by a button that says "I did it", which is enough to
-   run a class and get the only feedback that matters.
+3. ~~**The shelf and New Project.**~~ **Half done** — `progression/shelf.ts`,
+   and the two import libraries. A learner cannot take Gravity into their own
+   game until they have done the Gravity lesson.
+
+   **What it governs is what a project may TAKE, not what a project HAS.** A
+   lesson's own starting project is free to contain anything — an edge means
+   readiness, not possession — and a rule already in a project keeps its toolbox
+   category whether or not the learner earned it. Gating the libraries is the
+   whole of it, and it is the whole of it because that is the one place somebody
+   reaches for a mechanic nobody has taught them.
+
+   **A locked row is shown, not removed**, with the lesson that grants it named
+   beside it: "Unlocked by: Down". A row that has been taken away teaches
+   nothing; a row that says what would unlock it is a reason to go and do that
+   lesson.
+
+   **It is off unless a level asks for it** (`levelData.gateShelf`). That is not
+   timidity — a lab that quietly started refusing rules to every teacher and
+   every experienced maker who had never opened the progression would be a worse
+   lab, and [Free play](#free-play) says the escape has to exist before the
+   gate does. **What the DEFAULT should be, and whether it belongs to the
+   account or the course, is a decision this milestone deliberately does not
+   make.**
+
+   Still to do: New Project itself. A new project is the starter platformer
+   today, not an empty world, so building one from the shelf means deciding what
+   an ungranted starter looks like — which is the same decision as above wearing
+   different clothes.
+
 4. **Shape checks.** The weakest evidence, and it needs no sandbox work at all
    — the workspace is already in the lab. Ten tiles, chosen from the Making rim
    and the authoring lessons where shape is the right answer anyway.

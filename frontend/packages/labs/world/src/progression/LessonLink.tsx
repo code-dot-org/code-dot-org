@@ -29,12 +29,22 @@ export interface LessonLinkProps {
    * manage. So a caller passes its own `onClose` here and the map replaces it.
    */
   onNavigate?: () => void;
+  /**
+   * Whether the thing this is beside is LOCKED — not yet unlocked, in a lab
+   * that gates the libraries (./shelf).
+   *
+   * It changes the sentence rather than the destination. A locked row is not
+   * an apology; it is a reason to go and do a lesson, and the only useful
+   * thing to say beside it is which one.
+   */
+  locked?: boolean;
   className?: string;
 }
 
 export const LessonLink = ({
   unlock,
   onNavigate,
+  locked = false,
   className,
 }: LessonLinkProps) => {
   const progression = useMaybeProgression();
@@ -59,7 +69,7 @@ export const LessonLink = ({
         progression.openTree(tile);
       }}
     >
-      How this works: {title}
+      {locked ? `Unlocked by: ${title}` : `How this works: ${title}`}
     </Button>
   );
 };
