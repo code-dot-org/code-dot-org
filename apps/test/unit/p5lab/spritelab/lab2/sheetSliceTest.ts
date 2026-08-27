@@ -1,6 +1,7 @@
 import {
   evenGrid,
   frameBoxes,
+  groupRows,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/sheetSlice';
 
 // RGBA data for a w x h image with solid boxes at the given [left, right, top, bottom).
@@ -197,6 +198,17 @@ describe('sheet slicing', () => {
     expect(frameBoxes(data, width, 44, 8, 127, ASPECT).map(column)).toEqual([
       0, 2, 5, 7, 10, 12, 15, 17,
     ]);
+  });
+
+  it('groups frames into rows by their vertical centres', () => {
+    const rows = groupRows([
+      {left: 55, right: 75, top: 5, bottom: 45},
+      {left: 5, right: 25, top: 55, bottom: 95},
+      {left: 5, right: 25, top: 8, bottom: 42},
+      {left: 55, right: 75, top: 60, bottom: 90},
+    ]);
+    expect(rows.map(row => row.length)).toEqual([2, 2]);
+    expect(rows[0].every(b => b.bottom <= 45)).toBe(true);
   });
 
   it('falls back to the squarest grid for a picture it cannot read', () => {

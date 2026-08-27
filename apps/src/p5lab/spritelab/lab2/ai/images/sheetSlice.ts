@@ -292,9 +292,18 @@ function boxDistance(a: FrameBox, b: FrameBox): number {
   return Math.hypot(dx, dy);
 }
 
-// Rows are frames whose vertical centres lie within half a frame of each
-// other; rows top to bottom, frames left to right within a row.
+// Rows top to bottom, frames left to right within a row.
 function rowMajor(boxes: FrameBox[]): FrameBox[] {
+  return groupRows(boxes).flatMap(row => row.sort((a, b) => a.left - b.left));
+}
+
+/**
+ * The frames grouped into rows, top to bottom: frames whose vertical
+ * centres lie within half a frame of each other. A model that draws two
+ * rows may draw them at two sizes, so a row is the unit the frames are
+ * scaled by.
+ */
+export function groupRows(boxes: FrameBox[]): FrameBox[][] {
   const centre = (box: FrameBox) => (box.top + box.bottom) / 2;
   const sorted = [...boxes].sort((a, b) => centre(a) - centre(b));
   const rows: FrameBox[][] = [];
@@ -310,7 +319,7 @@ function rowMajor(boxes: FrameBox[]): FrameBox[] {
     }
     rows.push([box]);
   });
-  return rows.flatMap(row => row.sort((a, b) => a.left - b.left));
+  return rows;
 }
 
 function fallbackGrid(

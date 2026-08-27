@@ -50,7 +50,7 @@ import {
   SilhouetteBands,
 } from './poseScore';
 import {loadImageFromBlob, removeKeyColor} from './removeBackground';
-import {frameBoxes} from './sheetSlice';
+import {frameBoxes, groupRows} from './sheetSlice';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One reference image for a frame: an earlier frame, possibly mirrored. */
@@ -524,14 +524,18 @@ async function keyFrame(
   };
 }
 
-/** A keyed row picture cut into its frames, left to right. */
+/**
+ * A keyed row picture cut into its frames: rows top to bottom, frames left
+ * to right within each. Rows are kept apart because the model may draw them
+ * at different sizes.
+ */
 async function sliceSheet(
   raw: RawImage,
   frameCount: number,
   frameAspect: number,
   style: ImageStyle,
   key: KeyColor
-): Promise<KeyedFrame[]> {
+): Promise<KeyedFrame[][]> {
   const whole = await keyFrame(raw, style, key);
   const {width, height} = whole.canvas;
   const {data} = whole.canvas
@@ -550,13 +554,23 @@ async function sliceSheet(
     `SpriteLab2 row picture ${width}x${height}`,
     boxes.map(b => `${b.left},${b.top}-${b.right},${b.bottom}`).join(' ')
   );
-  return boxes.map(box => {
+  return groupRows(boxes).map(row =>
+    row.map(box => cutFrame(whole.canvas, box, style))
+  );
+}
+
+function cutFrame(
+  sheet: HTMLCanvasElement,
+  box: FrameBox,
+  style: ImageStyle
+): KeyedFrame {
+  {
     const canvas = document.createElement('canvas');
     canvas.width = box.right - box.left;
     canvas.height = box.bottom - box.top;
     const ctx = canvas.getContext('2d')!;
     ctx.drawImage(
-      whole.canvas,
+      sheet,
       box.left,
       box.top,
       canvas.width,
@@ -577,7 +591,7 @@ async function sliceSheet(
       ),
       bands: silhouetteBands(frameData, canvas.width, canvas.height, isSolid),
     };
-  });
+  }
 }
 
 /**
@@ -819,24 +833,24 @@ export async function generateCharacterSet(
         options.style,
         key
       );
-      const tallest = Math.max(
-        ...sliced.map(f => (f.bounds ? f.bounds.bottom - f.bounds.top + 1 : 0))
-      );
-      // One scale for the whole row, so the frames keep their own bounce.
-      const frames =
-        plateHeight && tallest
-          ? sliced.map(f =>
+      // One scale per row, so the frames keep their own bounce within a
+      // row, and a row the model drew smaller comes up to the plate's size.
+      const contentHeight = (f: KeyedFrame) =>
+        f.bounds ? f.bounds.bottom - f.bounds.top + 1 : 0;
+      const frames = sliced.flatMap(row => {
+        const tallest = Math.max(...row.map(contentHeight));
+        return plateHeight && tallest
+          ? row.map(f =>
               scaledToHeight(
                 f,
                 Math.round(
-                  ((f.bounds ? f.bounds.bottom - f.bounds.top + 1 : tallest) *
-                    plateHeight) /
-                    tallest
+                  ((contentHeight(f) || tallest) * plateHeight) / tallest
                 ),
                 options.style
               )
             )
-          : sliced;
+          : row;
+      });
       // The row holds the frames the model drew, not necessarily the count
       // asked for; the plan follows the row.
       plan = resizeSheetPose(plan, step, frames.length);
