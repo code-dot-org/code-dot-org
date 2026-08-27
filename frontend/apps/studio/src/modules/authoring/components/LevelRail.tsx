@@ -14,6 +14,11 @@ import {
 import {authoringApi, useLevelProperties} from '@/modules/authoring';
 import type {LevelCheckResponse} from '@/modules/authoring';
 
+import {
+  resolveWorkspaceOverrideXml,
+  type WorkspaceMode,
+} from '../workspaceMode';
+
 import {LevelCheckCard} from './ExperienceStage';
 import OutlineRail from './OutlineRail';
 
@@ -30,12 +35,22 @@ interface LevelRailProps {
   onSelectPaintTool: (id: string | undefined) => void;
   mapDraftPatch?: {serialized_maze: string; maze: string};
   onToolboxDraftChange: (xml: string) => void;
-  startBlocksEditingActive: boolean;
-  onToggleStartBlocksEditing: (active: boolean) => void;
-  startBlocksDraftXml?: string;
+  /** "Student start | My solution" — see MazeLabEditingProps.workspaceMode. */
+  workspaceMode: WorkspaceMode | undefined;
+  onWorkspaceModeChange: (mode: WorkspaceMode | undefined) => void;
+  /** Pushes the freshly resolved program down to the stage on a mode
+   * switch — see LessonPlayer's `workspaceOverrideXml` state comment. */
+  onWorkspaceOverrideChange: (xml: string | undefined) => void;
+  /** Every workspace mutation while a mode is active, reported up from the
+   * stage (LessonPlayer's `workspaceCaptureXml`). */
+  workspaceCaptureXml?: string;
+  /** A passing run recorded in 'mySolution' mode — the "save as solution?"
+   * offer. undefined when there's nothing to offer. */
+  solutionOffer?: {solutionBlocksXml: string; blocksUsed: number};
+  onDismissSolutionOffer: () => void;
   onDirtyChange: (dirty: boolean) => void;
-  /** Discards every in-progress edit (draft, tray, paint tool, start-blocks
-   * capture) without saving — the rail's equivalent of the former right
+  /** Discards every in-progress edit (draft, tray, paint tool, workspace
+   * mode) without saving — the rail's equivalent of the former right
    * panel's Cancel, now that there is no panel to close. */
   onDiscard: () => void;
 }
@@ -65,9 +80,12 @@ export default function LevelRail({
   onSelectPaintTool,
   mapDraftPatch,
   onToolboxDraftChange,
-  startBlocksEditingActive,
-  onToggleStartBlocksEditing,
-  startBlocksDraftXml,
+  workspaceMode,
+  onWorkspaceModeChange,
+  onWorkspaceOverrideChange,
+  workspaceCaptureXml,
+  solutionOffer,
+  onDismissSolutionOffer,
   onDirtyChange,
   onDiscard,
 }: LevelRailProps) {
@@ -154,14 +172,23 @@ export default function LevelRail({
               toolboxBlocksXml={
                 levelProps?.toolboxBlocksXml as string | undefined
               }
+              startBlocksXml={levelProps?.startBlocksXml as string | undefined}
+              solutionBlocksXml={
+                levelProps?.solutionBlocksXml as string | undefined
+              }
+              ideal={levelProps?.ideal as string | undefined}
+              solutionVerified={levelProps?.solutionVerified === 'true'}
               onDirtyChange={onDirtyChange}
               selectedPaintToolId={selectedPaintToolId}
               onSelectPaintTool={onSelectPaintTool}
               mapDraftPatch={mapDraftPatch}
               onToolboxDraftChange={onToolboxDraftChange}
-              startBlocksEditingActive={startBlocksEditingActive}
-              onToggleStartBlocksEditing={onToggleStartBlocksEditing}
-              startBlocksDraftXml={startBlocksDraftXml}
+              workspaceMode={workspaceMode}
+              onWorkspaceModeChange={onWorkspaceModeChange}
+              onWorkspaceOverrideChange={onWorkspaceOverrideChange}
+              workspaceCaptureXml={workspaceCaptureXml}
+              solutionOffer={solutionOffer}
+              onDismissSolutionOffer={onDismissSolutionOffer}
               onDiscard={onDiscard}
             />
           </div>
@@ -180,15 +207,22 @@ const START_DIRECTION_OPTIONS = [
 ] as const;
 
 /** Accumulated edits for the level rail — startDirection and the map fields
- * (both carried over from the right panel's former 'level' section), plus
- * the toolbox tray and student-start XML this pass adds. Every key
- * optional: Save only ever sends what the author actually touched. */
+ * (both carried over from the right panel's former 'level' section), the
+ * toolbox tray and student-start XML Pass C adds, and the solution
+ * fields Pass D adds. Every key optional: Save only ever sends what the
+ * author actually touched. */
 interface LevelDraftPatch {
   startDirection?: string;
   serialized_maze?: string;
   maze?: string;
   toolboxBlocksXml?: string;
   startBlocksXml?: string;
+  solutionBlocksXml?: string;
+  ideal?: string;
+  // 'true' only — set exclusively by accepting a passing-run offer; see
+  // LevelDefinitionPatch's doc comment (authoring package) for why the
+  // client never sends 'false' itself.
+  solutionVerified?: string;
 }
 
 function LevelSettings({
@@ -197,14 +231,21 @@ function LevelSettings({
   skin,
   startDirection,
   toolboxBlocksXml,
+  startBlocksXml,
+  solutionBlocksXml,
+  ideal,
+  solutionVerified,
   onDirtyChange,
   selectedPaintToolId,
   onSelectPaintTool,
   mapDraftPatch,
   onToolboxDraftChange,
-  startBlocksEditingActive,
-  onToggleStartBlocksEditing,
-  startBlocksDraftXml,
+  workspaceMode,
+  onWorkspaceModeChange,
+  onWorkspaceOverrideChange,
+  workspaceCaptureXml,
+  solutionOffer,
+  onDismissSolutionOffer,
   onDiscard,
 }: {
   experience: ExistingLevelExperience;
@@ -212,14 +253,21 @@ function LevelSettings({
   skin?: string;
   startDirection?: string;
   toolboxBlocksXml?: string;
+  startBlocksXml?: string;
+  solutionBlocksXml?: string;
+  ideal?: string;
+  solutionVerified: boolean;
   onDirtyChange: (dirty: boolean) => void;
   selectedPaintToolId?: string;
   onSelectPaintTool: (id: string | undefined) => void;
   mapDraftPatch?: {serialized_maze: string; maze: string};
   onToolboxDraftChange: (xml: string) => void;
-  startBlocksEditingActive: boolean;
-  onToggleStartBlocksEditing: (active: boolean) => void;
-  startBlocksDraftXml?: string;
+  workspaceMode: WorkspaceMode | undefined;
+  onWorkspaceModeChange: (mode: WorkspaceMode | undefined) => void;
+  onWorkspaceOverrideChange: (xml: string | undefined) => void;
+  workspaceCaptureXml?: string;
+  solutionOffer?: {solutionBlocksXml: string; blocksUsed: number};
+  onDismissSolutionOffer: () => void;
   onDiscard: () => void;
 }) {
   const queryClient = useQueryClient();
@@ -233,12 +281,29 @@ function LevelSettings({
   const [tray, setTray] = useState<ToolboxTrayEntry[]>(() =>
     trayFromToolboxXml(toolboxBlocksXml ?? '<xml></xml>', skin ?? 'birds'),
   );
+  // The author's in-progress solution attempt this session, not yet
+  // accepted into the Save draft — separate from draft.solutionBlocksXml
+  // (see resolveWorkspaceOverrideXml's doc comment for why). Resets with
+  // the rest of this component's state whenever the active experience
+  // changes (LevelRail mounts LevelSettings with key={active.id}).
+  const [solutionAttemptXml, setSolutionAttemptXml] = useState<
+    string | undefined
+  >();
   const currentValue = draft.startDirection ?? startDirection ?? '1';
   const dirty = Object.keys(draft).length > 0;
   const paintTools = skin ? getPaintTools(skin) : [];
   const palette = skin ? getToolboxPalette(skin) : [];
   const trayIds = new Set(tray.map(t => t.id));
   const availableBlocks = palette.filter(entry => !trayIds.has(entry.id));
+  const effectiveSolutionXml = draft.solutionBlocksXml ?? solutionBlocksXml;
+  const effectiveIdeal = draft.ideal ?? ideal;
+  // 'true' set by accepting the current offer; otherwise whatever the
+  // server last held. Never inferred as true from stale served state after
+  // this draft has touched the environment — mergeDefinitionOverride's
+  // staleness rule already degraded the SERVED value itself the moment
+  // that happened, so trusting `solutionVerified` here (not re-deriving it
+  // client-side) is the simplest honest reading of "is it still proven".
+  const effectiveVerified = draft.solutionVerified === 'true' || solutionVerified;
 
   useEffect(() => {
     onDirtyChange(dirty);
@@ -252,13 +317,54 @@ function LevelSettings({
     }
   }, [mapDraftPatch]);
 
-  // Every workspace mutation while Student-start editing is on reports a
-  // fresh capture here — same fold-into-draft shape as map painting.
+  // Every workspace mutation while a mode is active reports a fresh
+  // capture here. Student-start's capture IS the Save draft (whatever's on
+  // the canvas at Save time becomes startBlocksXml); my-solution's capture
+  // is only a session-scratch attempt — the sole way solutionBlocksXml
+  // enters the draft is accepting a passing-run offer (see
+  // acceptSolutionOffer below), never a bare capture of an unproven canvas.
   useEffect(() => {
-    if (startBlocksDraftXml !== undefined) {
-      setDraft(prev => ({...prev, startBlocksXml: startBlocksDraftXml}));
+    if (workspaceCaptureXml === undefined) {
+      return;
     }
-  }, [startBlocksDraftXml]);
+    if (workspaceMode === 'studentStart') {
+      setDraft(prev => ({...prev, startBlocksXml: workspaceCaptureXml}));
+    } else if (workspaceMode === 'mySolution') {
+      setSolutionAttemptXml(workspaceCaptureXml);
+    }
+  }, [workspaceCaptureXml, workspaceMode]);
+
+  // Switches the shared workspace between "Student start" and "My
+  // solution" — clicking the already-active mode turns editing off
+  // without touching the loaded program (see MazeLab's startBlocks
+  // comment for why turning off must never itself trigger a reload).
+  const switchWorkspaceMode = (nextMode: WorkspaceMode) => {
+    const targetMode = workspaceMode === nextMode ? undefined : nextMode;
+    onWorkspaceModeChange(targetMode);
+    if (targetMode) {
+      onWorkspaceOverrideChange(
+        resolveWorkspaceOverrideXml(
+          targetMode,
+          {mySolution: solutionAttemptXml},
+          {studentStart: draft.startBlocksXml, mySolution: draft.solutionBlocksXml},
+          {studentStart: startBlocksXml, mySolution: solutionBlocksXml},
+        ),
+      );
+    }
+  };
+
+  const acceptSolutionOffer = () => {
+    if (!solutionOffer) {
+      return;
+    }
+    setDraft(prev => ({
+      ...prev,
+      solutionBlocksXml: solutionOffer.solutionBlocksXml,
+      ideal: String(solutionOffer.blocksUsed),
+      solutionVerified: 'true',
+    }));
+    onDismissSolutionOffer();
+  };
 
   const addChip = (entry: ToolboxTrayEntry) => {
     const nextTray = [...tray, entry];
@@ -440,18 +546,81 @@ function LevelSettings({
       </div>
 
       <div className={styles.paintPalette}>
-        <Button
-          type="button"
-          size="small"
-          variant={startBlocksEditingActive ? 'contained' : 'outlined'}
-          aria-pressed={startBlocksEditingActive}
-          onClick={() => onToggleStartBlocksEditing(!startBlocksEditingActive)}
-        >
-          {startBlocksEditingActive
-            ? 'Editing student start blocks — arrange on the stage'
-            : 'Edit student start blocks'}
-        </Button>
+        <Typography variant="body4" component="span">
+          Workspace — arrange blocks on the stage below.
+        </Typography>
+        <div className={styles.paintPaletteTools}>
+          <Button
+            type="button"
+            size="small"
+            variant={workspaceMode === 'studentStart' ? 'contained' : 'outlined'}
+            aria-pressed={workspaceMode === 'studentStart'}
+            onClick={() => switchWorkspaceMode('studentStart')}
+          >
+            Student start
+          </Button>
+          <Button
+            type="button"
+            size="small"
+            variant={workspaceMode === 'mySolution' ? 'contained' : 'outlined'}
+            aria-pressed={workspaceMode === 'mySolution'}
+            onClick={() => switchWorkspaceMode('mySolution')}
+          >
+            My solution
+          </Button>
+        </div>
       </div>
+
+      <div className={styles.solutionStatus}>
+        <Typography variant="body4" component="span">
+          {effectiveSolutionXml
+            ? effectiveVerified
+              ? `Solution: verified by author run (${effectiveIdeal ?? '?'} blocks)`
+              : 'Solution: saved, not verified since the last change'
+            : 'No verified solution'}
+        </Typography>
+        {effectiveSolutionXml && (
+          <label htmlFor="level-rail-ideal">
+            Target block count
+            <input
+              id="level-rail-ideal"
+              type="number"
+              min={0}
+              value={effectiveIdeal ?? ''}
+              onChange={e =>
+                setDraft(prev => ({...prev, ideal: e.target.value}))
+              }
+            />
+          </label>
+        )}
+      </div>
+
+      {solutionOffer && (
+        <div className={styles.solutionOfferCard}>
+          <Typography variant="body4" component="span">
+            Your run passed — save as the level's solution? (
+            {solutionOffer.blocksUsed} blocks)
+          </Typography>
+          <div className={styles.composerActions}>
+            <Button
+              type="button"
+              size="small"
+              variant="outlined"
+              onClick={onDismissSolutionOffer}
+            >
+              Not now
+            </Button>
+            <Button
+              type="button"
+              size="small"
+              variant="contained"
+              onClick={acceptSolutionOffer}
+            >
+              Save as solution
+            </Button>
+          </div>
+        </div>
+      )}
 
       {error && (
         <Typography variant="body4" role="status" className={styles.inlineError}>
@@ -488,6 +657,7 @@ function LevelSettings({
                   skin ?? 'birds',
                 ),
               );
+              setSolutionAttemptXml(undefined);
               onDiscard();
             }}
           >

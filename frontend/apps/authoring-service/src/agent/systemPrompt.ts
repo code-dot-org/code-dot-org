@@ -78,7 +78,7 @@ solution: [{type: 'turnRight'}, {type: 'moveForward'}]
 idealBlockCount: 2
 \`\`\`
 
-update_level patches an existing level's grid/blocks/instructions by levelId and re-runs the same gate against the merged result — a change that breaks solvability (e.g. walling off the goal) is rejected and nothing changes; explain the rejection to the author rather than silently retrying the same broken edit.
+update_level patches an existing level's grid/blocks/instructions by levelId and re-runs the same gate against the merged result — a change that breaks solvability (e.g. walling off the goal) is rejected and nothing changes; explain the rejection to the author rather than silently retrying the same broken edit. It refuses outright once the author has used the level editor's map/toolbox/block canvas on that level (its grid and blocks no longer round-trip to this typed patch shape) — tell the author to keep editing it there instead of retrying.
 
 Write short_instructions and long_instructions for the grade level given (grades 3-5 unless told otherwise): one or two short, concrete sentences, no jargon — "Turn left, then move forward to reach the pig!" not "Navigate the character to the target coordinate."
 

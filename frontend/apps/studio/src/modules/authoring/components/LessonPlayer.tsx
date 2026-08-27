@@ -8,8 +8,11 @@ import type {
   Lesson,
   Unit,
 } from '@code-dot-org/authoring';
-import type {Toolbox} from '@code-dot-org/blockly';
-import {convertBlocklyXmlToToolbox} from '@code-dot-org/blockly/xml';
+import type {BlocklySerialization, Toolbox} from '@code-dot-org/blockly';
+import {
+  convertBlocklyXmlToJson,
+  convertBlocklyXmlToToolbox,
+} from '@code-dot-org/blockly/xml';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {authoringApi} from '../api';
@@ -135,13 +138,28 @@ export default function LessonPlayer({
   // packages/blockly/src/toolbox/index.ts's buildToolbox for why the JSON
   // shape, not the XML string, is what a live workspace prop swap wants.
   const [toolboxDraftXml, setToolboxDraftXml] = useState<string | undefined>();
-  // Student-start editing: LevelRail's toggle drives whether the stage
-  // workspace is reporting captures; `startBlocksDraftXml` is the freshest
-  // capture, reported the other direction (stage -> here -> LevelRail).
-  const [startBlocksEditingActive, setStartBlocksEditingActive] =
-    useState(false);
-  const [startBlocksDraftXml, setStartBlocksDraftXml] = useState<
+  // Workspace mode (Author Mode Pass D — "Student start | My solution"):
+  // LevelRail's mode buttons drive `workspaceMode`, which mode is
+  // reporting captures, and (on a switch) `workspaceOverrideXml`, the
+  // fresh program LevelRail wants the stage to load — see
+  // resolveWorkspaceOverrideXml (workspaceMode.ts) for the precedence it
+  // computes that from. `workspaceCaptureXml` carries every subsequent
+  // mutation back the other direction (stage -> here -> LevelRail), same
+  // shape as the map/toolbox capture props above. `solutionOffer` is the
+  // "save as solution?" prompt, set by a passing run recorded while
+  // workspaceMode is 'mySolution' (MazeLab's onSolutionRun, threaded
+  // through ExperienceStage).
+  const [workspaceMode, setWorkspaceMode] = useState<
+    'studentStart' | 'mySolution' | undefined
+  >();
+  const [workspaceOverrideXml, setWorkspaceOverrideXml] = useState<
     string | undefined
+  >();
+  const [workspaceCaptureXml, setWorkspaceCaptureXml] = useState<
+    string | undefined
+  >();
+  const [solutionOffer, setSolutionOffer] = useState<
+    {solutionBlocksXml: string; blocksUsed: number} | undefined
   >();
   // Mirrors `panelDirty` for the left rail: navigating away (selectIndex)
   // while a level edit is in progress would silently discard it.
@@ -173,6 +191,16 @@ export default function LessonPlayer({
         ? undefined
         : convertBlocklyXmlToToolbox(new DOMParser(), toolboxDraftXml),
     [toolboxDraftXml],
+  );
+  // Mirrors toolboxOverride's XML->JSON conversion, for whichever program
+  // LevelRail wants loaded on a workspace-mode switch (see
+  // workspaceOverrideXml's state comment).
+  const workspaceOverride: BlocklySerialization | undefined = useMemo(
+    () =>
+      workspaceOverrideXml === undefined
+        ? undefined
+        : convertBlocklyXmlToJson(new DOMParser(), workspaceOverrideXml),
+    [workspaceOverrideXml],
   );
   const nextLesson = useMemo(() => {
     const lessonIndex = unit.lessons.findIndex(l => l.id === lesson.id);
@@ -234,8 +262,10 @@ export default function LessonPlayer({
     setSelectedPaintToolId(undefined);
     setMapDraftPatch(undefined);
     setToolboxDraftXml(undefined);
-    setStartBlocksEditingActive(false);
-    setStartBlocksDraftXml(undefined);
+    setWorkspaceMode(undefined);
+    setWorkspaceOverrideXml(undefined);
+    setWorkspaceCaptureXml(undefined);
+    setSolutionOffer(undefined);
     setLevelRailDirty(false);
     if (tutorOn && experience) {
       void tutorRef.current?.push({
@@ -289,8 +319,10 @@ export default function LessonPlayer({
     setSelectedPaintToolId(undefined);
     setMapDraftPatch(undefined);
     setToolboxDraftXml(undefined);
-    setStartBlocksEditingActive(false);
-    setStartBlocksDraftXml(undefined);
+    setWorkspaceMode(undefined);
+    setWorkspaceOverrideXml(undefined);
+    setWorkspaceCaptureXml(undefined);
+    setSolutionOffer(undefined);
   };
 
   const onTutorSelect = (
@@ -429,9 +461,12 @@ export default function LessonPlayer({
             onSelectPaintTool={setSelectedPaintToolId}
             mapDraftPatch={mapDraftPatch}
             onToolboxDraftChange={setToolboxDraftXml}
-            startBlocksEditingActive={startBlocksEditingActive}
-            onToggleStartBlocksEditing={setStartBlocksEditingActive}
-            startBlocksDraftXml={startBlocksDraftXml}
+            workspaceMode={workspaceMode}
+            onWorkspaceModeChange={setWorkspaceMode}
+            onWorkspaceOverrideChange={setWorkspaceOverrideXml}
+            workspaceCaptureXml={workspaceCaptureXml}
+            solutionOffer={solutionOffer}
+            onDismissSolutionOffer={() => setSolutionOffer(undefined)}
             onDirtyChange={setLevelRailDirty}
             onDiscard={handleLevelRailDiscard}
           />
@@ -498,8 +533,10 @@ export default function LessonPlayer({
                       selectedPaintToolId={selectedPaintToolId}
                       onMapDraftChange={setMapDraftPatch}
                       toolboxOverride={toolboxOverride}
-                      startBlocksEditingActive={startBlocksEditingActive}
-                      onStartBlocksChange={setStartBlocksDraftXml}
+                      workspaceMode={workspaceMode}
+                      workspaceOverride={workspaceOverride}
+                      onWorkspaceChange={setWorkspaceCaptureXml}
+                      onSolutionRun={setSolutionOffer}
                     />
                   )
                 ) : (

@@ -114,6 +114,12 @@ export class AuthoringState {
       );
     }
     if (change.op === 'overrideLevelDefinition') {
+      change.patch = withSolutionStalenessRule(
+        this.snapshot.courses,
+        this.snapshot.levelProperties,
+        change.experienceId,
+        change.patch,
+      );
       change.previous = capturePreviousDefinition(
         this.snapshot.courses,
         this.snapshot.levelProperties,
@@ -342,6 +348,48 @@ function mergeInstructionsOverride(
     ...levelProperties,
     [numericId]: {...levelProperties[numericId], ...patch},
   };
+}
+
+// A stored solution (Author Mode Pass D) is proof against one specific
+// grid/toolbox/start-direction combination — proof captured against the
+// old one says nothing about the new one. Any patch that touches one of
+// those fields, on a level that already has a stored solution, and doesn't
+// itself carry a fresh `solutionVerified` (the client sets that only when
+// the just-run program is what's being saved — see LevelRail's
+// solution-offer accept) degrades the merged flag to 'false' here, before
+// `previous` is captured, so a later revert restores whatever verification
+// state actually held before this save. `ideal` and `startBlocksXml` are
+// deliberately excluded: the former is display-only, the latter is the
+// LEARNER's starting arrangement, not an input to the author's own
+// solution. Gated on an existing stored solution so an ordinary edit on a
+// level that never had one (e.g. Pass A's plain startDirection change)
+// doesn't grow a spurious solutionVerified: 'false' key.
+const SOLUTION_STALENESS_TRIGGERS: (keyof LevelDefinitionPatch)[] = [
+  'serialized_maze',
+  'maze',
+  'toolboxBlocksXml',
+  'startDirection',
+];
+
+function withSolutionStalenessRule(
+  courses: CourseModel[],
+  levelProperties: Record<string, Record<string, unknown>>,
+  experienceId: string,
+  patch: LevelDefinitionPatch,
+): LevelDefinitionPatch {
+  const touchesEnvironment = SOLUTION_STALENESS_TRIGGERS.some(
+    key => key in patch,
+  );
+  if (!touchesEnvironment || 'solutionVerified' in patch) {
+    return patch;
+  }
+  const experience = findExistingLevelExperience(courses, experienceId);
+  const current =
+    experience?.levelNumericId === undefined
+      ? undefined
+      : levelProperties[String(experience.levelNumericId)];
+  const hasStoredSolution = typeof current?.solutionBlocksXml === 'string';
+  return hasStoredSolution ? {...patch, solutionVerified: 'false'} : patch;
 }
 
 // Same reasoning as capturePreviousInstructions, but a definition field that

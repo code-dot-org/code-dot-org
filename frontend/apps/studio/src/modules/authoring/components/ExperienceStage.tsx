@@ -6,7 +6,7 @@ import type {
   ExistingLevelExperience,
   GenericLevelData,
 } from '@code-dot-org/authoring';
-import type {Toolbox} from '@code-dot-org/blockly';
+import type {BlocklySerialization, Toolbox} from '@code-dot-org/blockly';
 import Alert from '@code-dot-org/component-library/alert';
 import {Lab, Loading} from '@code-dot-org/lab/host';
 import {Markdown} from '@code-dot-org/markdown';
@@ -79,9 +79,20 @@ interface ExperienceStageProps {
   /** The left rail's toolbox-tray draft, live — see LessonPlayer's
    * `toolboxDraftXml` state comment. Maze-family only. */
   toolboxOverride?: Toolbox;
-  /** True while LevelRail's Student-start toggle is on. Maze-family only. */
-  startBlocksEditingActive?: boolean;
-  onStartBlocksChange?: (startBlocksXml: string) => void;
+  /** LevelRail's "Student start | My solution" mode selector — see
+   * MazeLabEditingProps.workspaceMode (Author Mode Pass D). Maze-family
+   * only, undefined outside editing. */
+  workspaceMode?: 'studentStart' | 'mySolution';
+  /** Fresh JSON to (re)load on a mode switch — see LessonPlayer's
+   * `workspaceOverrideXml` state comment. Maze-family only. */
+  workspaceOverride?: BlocklySerialization;
+  onWorkspaceChange?: (xml: string) => void;
+  /** Fires on a passing run recorded while workspaceMode is 'mySolution' —
+   * see LessonPlayer's `solutionOffer` state comment. Maze-family only. */
+  onSolutionRun?: (detail: {
+    solutionBlocksXml: string;
+    blocksUsed: number;
+  }) => void;
 }
 
 /**
@@ -100,8 +111,10 @@ export default function ExperienceStage({
   selectedPaintToolId,
   onMapDraftChange,
   toolboxOverride,
-  startBlocksEditingActive,
-  onStartBlocksChange,
+  workspaceMode,
+  workspaceOverride,
+  onWorkspaceChange,
+  onSolutionRun,
 }: ExperienceStageProps) {
   switch (experience.kind) {
     case 'content':
@@ -122,8 +135,10 @@ export default function ExperienceStage({
           selectedPaintToolId={selectedPaintToolId}
           onMapDraftChange={onMapDraftChange}
           toolboxOverride={toolboxOverride}
-          startBlocksEditingActive={startBlocksEditingActive}
-          onStartBlocksChange={onStartBlocksChange}
+          workspaceMode={workspaceMode}
+          workspaceOverride={workspaceOverride}
+          onWorkspaceChange={onWorkspaceChange}
+          onSolutionRun={onSolutionRun}
         />
       );
     case 'widget':
@@ -146,8 +161,10 @@ function ExistingLevelStage({
   selectedPaintToolId,
   onMapDraftChange,
   toolboxOverride,
-  startBlocksEditingActive,
-  onStartBlocksChange,
+  workspaceMode,
+  workspaceOverride,
+  onWorkspaceChange,
+  onSolutionRun,
 }: {
   experience: ExistingLevelExperience;
   onStageEvent?: (event: StageEvent) => void;
@@ -158,8 +175,13 @@ function ExistingLevelStage({
   selectedPaintToolId?: string;
   onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
   toolboxOverride?: Toolbox;
-  startBlocksEditingActive?: boolean;
-  onStartBlocksChange?: (startBlocksXml: string) => void;
+  workspaceMode?: 'studentStart' | 'mySolution';
+  workspaceOverride?: BlocklySerialization;
+  onWorkspaceChange?: (xml: string) => void;
+  onSolutionRun?: (detail: {
+    solutionBlocksXml: string;
+    blocksUsed: number;
+  }) => void;
 }) {
   if (experience.runtime === 'labhost') {
     if (!experience.levelNumericId) {
@@ -186,8 +208,10 @@ function ExistingLevelStage({
         selectedPaintToolId={selectedPaintToolId}
         onMapDraftChange={onMapDraftChange}
         toolboxOverride={toolboxOverride}
-        startBlocksEditingActive={startBlocksEditingActive}
-        onStartBlocksChange={onStartBlocksChange}
+        workspaceMode={workspaceMode}
+        workspaceOverride={workspaceOverride}
+        onWorkspaceChange={onWorkspaceChange}
+        onSolutionRun={onSolutionRun}
       />
     );
   }
@@ -236,8 +260,10 @@ function LabHostStage({
   selectedPaintToolId,
   onMapDraftChange,
   toolboxOverride,
-  startBlocksEditingActive,
-  onStartBlocksChange,
+  workspaceMode,
+  workspaceOverride,
+  onWorkspaceChange,
+  onSolutionRun,
 }: {
   experienceId: string;
   levelNumericId: number;
@@ -251,8 +277,13 @@ function LabHostStage({
   selectedPaintToolId?: string;
   onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
   toolboxOverride?: Toolbox;
-  startBlocksEditingActive?: boolean;
-  onStartBlocksChange?: (startBlocksXml: string) => void;
+  workspaceMode?: 'studentStart' | 'mySolution';
+  workspaceOverride?: BlocklySerialization;
+  onWorkspaceChange?: (xml: string) => void;
+  onSolutionRun?: (detail: {
+    solutionBlocksXml: string;
+    blocksUsed: number;
+  }) => void;
 }) {
   const {data: properties, isLoading} = useLevelProperties(levelNumericId);
   const [levelResult, setLevelResult] = useState<LevelResultDetail | null>(
@@ -341,8 +372,10 @@ function LabHostStage({
     selectedPaintToolId,
     onMapDraftChange: onMapDraftChange ?? (() => {}),
     toolboxOverride,
-    startBlocksEditingActive: levelEditable && !!startBlocksEditingActive,
-    onStartBlocksChange: onStartBlocksChange ?? (() => {}),
+    workspaceMode: levelEditable ? workspaceMode : undefined,
+    workspaceOverride,
+    onWorkspaceChange: onWorkspaceChange ?? (() => {}),
+    onSolutionRun: onSolutionRun ?? (() => {}),
   };
 
   return (

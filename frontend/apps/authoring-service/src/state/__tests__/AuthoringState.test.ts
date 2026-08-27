@@ -377,6 +377,80 @@ describe('AuthoringState overrideLevelDefinition previous capture', () => {
   });
 });
 
+describe('AuthoringState overrideLevelDefinition solution staleness', () => {
+  it('degrades solutionVerified to false when a map edit carries no fresh proof', () => {
+    const state = stateWithLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {solutionBlocksXml: '<xml/>', solutionVerified: 'true'},
+      },
+      'author',
+    );
+    const change = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {serialized_maze: '[[]]', maze: '[[]]'},
+      },
+      'author',
+    );
+
+    expect(state.getLevelProperties('7')?.solutionVerified).toBe('false');
+    // The forced 'false' is part of the applied patch (not just the merge
+    // result) — the change log itself shows the map edit invalidated the
+    // solution, and `previous` records the prior 'true' so a revert of this
+    // change restores it.
+    expect(change).toMatchObject({
+      patch: {solutionVerified: 'false'},
+      previous: {solutionVerified: 'true'},
+    });
+  });
+
+  it('does not touch solutionVerified when the patch does not touch the environment', () => {
+    const state = stateWithLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {solutionBlocksXml: '<xml/>', solutionVerified: 'true'},
+      },
+      'author',
+    );
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {ideal: '5'},
+      },
+      'author',
+    );
+
+    expect(state.getLevelProperties('7')?.solutionVerified).toBe('true');
+  });
+
+  it('honors an explicit solutionVerified in the same patch as an environment change', () => {
+    const state = stateWithLevel();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {
+          serialized_maze: '[[]]',
+          maze: '[[]]',
+          solutionBlocksXml: '<xml/>',
+          solutionVerified: 'true',
+        },
+      },
+      'author',
+    );
+
+    expect(state.getLevelProperties('7')?.solutionVerified).toBe('true');
+    expect(change).toMatchObject({patch: {solutionVerified: 'true'}});
+  });
+});
+
 describe('AuthoringState overrideLevelDefinition draft-level guard', () => {
   it('flags a draft level as visuallyEdited on the stored definition', () => {
     const state = stateWithDraftLevel(root);

@@ -198,6 +198,35 @@
   gap: 4px;
 }
 
+/* Solution status/offer (LevelRail, Author Mode Pass D). */
+
+.solutionStatus {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  input[type='number'] {
+    width: 64px;
+  }
+}
+
+.solutionOfferCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-radius: 4px;
+  background: var(--background-neutral-secondary, #f3f4f5);
+  padding: 8px;
+}
+
 .lessonHeaderBar {
   display: flex;
   align-items: center;

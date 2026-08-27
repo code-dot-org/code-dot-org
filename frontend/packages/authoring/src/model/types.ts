@@ -89,6 +89,16 @@ export interface LevelDefinitionPatch {
   solutionBlocksXml?: string | null;
   startDirection?: string | null;
   ideal?: string | null;
+  // 'true' when solutionBlocksXml was captured from a passing run of the
+  // exact grid/toolbox/start direction this patch also carries (Author
+  // Mode Pass D) — the author-run proof LevelRail's solution status reads.
+  // Never client-set to 'false': AuthoringState's mergeDefinitionOverride
+  // forces it false server-side whenever a patch touches the environment
+  // (serialized_maze/maze/toolboxBlocksXml/startDirection) without also
+  // supplying a fresh solutionVerified — the "cheap sound rule" that keeps
+  // a stale solution from reading as proven after the puzzle changed
+  // underneath it.
+  solutionVerified?: string | null;
 }
 
 /** Agent-created executable learner content, sandboxed. */

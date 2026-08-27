@@ -1,6 +1,10 @@
 import {z} from 'zod';
 
-import type {Environment, Toolbox} from '@code-dot-org/blockly';
+import type {
+  BlocklySerialization,
+  Environment,
+  Toolbox,
+} from '@code-dot-org/blockly';
 import type {LevelProperties} from '@code-dot-org/core/api';
 
 import type {MazeData} from './MazeController';
@@ -73,12 +77,40 @@ export interface MazeLabEditingProps {
    * flyout reflects a chip add/remove immediately, before Save. undefined
    * outside toolbox-tray editing (the served toolbox applies as normal). */
   toolboxOverride?: Toolbox;
-  /** True while the properties panel is in "Student start" editing mode —
-   * the workspace IS the editing surface (drag/place blocks directly); every
-   * mutation while this is true reports the freshly captured legacy XML via
-   * onStartBlocksChange, mirroring onMapDraftChange's per-paint reporting. */
-  startBlocksEditingActive: boolean;
-  onStartBlocksChange: (startBlocksXml: string) => void;
+  /**
+   * Which program the shared workspace currently represents, or undefined
+   * outside workspace editing entirely (Author Mode Pass D — before this,
+   * the panel only ever edited the student's starting blocks; now the
+   * SAME canvas edits either that or the author's own solution, one at a
+   * time, never both — see workspaceOverride below for how a mode switch
+   * swaps the canvas without losing either draft).
+   */
+  workspaceMode?: 'studentStart' | 'mySolution';
+  /** Fresh JSON to load into the workspace whenever workspaceMode changes —
+   * a new object identity is what makes BlocklyWorkspace's startBlocks
+   * effect actually reload (see packages/blockly's BlocklyWorkspace).
+   * undefined means "no content for this mode yet", so MazeLab's own
+   * when_run-hat default applies, same as an absent
+   * levelProperties.startBlocks. The host (LevelRail) computes this from
+   * whichever mode's draft/served XML is current — MazeLab never guesses
+   * at draft precedence itself. */
+  workspaceOverride?: BlocklySerialization;
+  /** Fires on every workspace mutation while workspaceMode is set — the
+   * host decides, based on which mode is active, whether that's this
+   * session's Save draft (student start: whatever's on the canvas at Save
+   * time IS startBlocksXml) or just an in-session scratch capture (my
+   * solution: only a passing run's output is ever proposed as
+   * solutionBlocksXml — see onSolutionRun). */
+  onWorkspaceChange: (xml: string) => void;
+  /** Fires once per passing run recorded while workspaceMode is
+   * 'mySolution' — the author-run proof LevelRail's "save as solution?"
+   * offer is built from. Never fires on a failing run or outside that
+   * mode; a run in 'studentStart' mode (or no editing mode at all) is
+   * ordinary play, not a solution capture. */
+  onSolutionRun: (detail: {
+    solutionBlocksXml: string;
+    blocksUsed: number;
+  }) => void;
 }
 
 export type {MazeData};

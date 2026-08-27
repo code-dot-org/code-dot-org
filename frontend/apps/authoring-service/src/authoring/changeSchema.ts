@@ -151,6 +151,7 @@ const LevelDefinitionPatchSchema = z.object({
   solutionBlocksXml: z.string().nullable().optional(),
   startDirection: z.string().nullable().optional(),
   ideal: z.string().nullable().optional(),
+  solutionVerified: z.string().nullable().optional(),
 });
 
 const ExistingLevelExperienceSchema = z.object({

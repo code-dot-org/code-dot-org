@@ -1,7 +1,7 @@
 import {lazy} from 'react';
 import type {ComponentType, LazyExoticComponent} from 'react';
 
-import type {Toolbox} from '@code-dot-org/blockly';
+import type {BlocklySerialization, Toolbox} from '@code-dot-org/blockly';
 
 /**
  * A lab run's pass/fail verdict, reported via `LabEntrypointProps.onLevelResult`.
@@ -44,13 +44,22 @@ export interface LabEditingProps {
    * on maze so a chip add/remove is visible in the real flyout before Save
    * (maze only; other entrypoints ignore it). */
   toolboxOverride?: Toolbox;
-  /** True while the panel is in "Student start" editing mode — the
-   * workspace itself becomes the editing surface (maze only). */
-  startBlocksEditingActive: boolean;
-  /** Fires on every workspace mutation while startBlocksEditingActive,
-   * carrying the freshly captured legacy XML — the panel folds it into its
-   * Save draft, mirroring onMapDraftChange. */
-  onStartBlocksChange: (startBlocksXml: string) => void;
+  /** Which program the shared workspace currently represents — "Student
+   * start" or "My solution" (maze only; see MazeLabEditingProps for the
+   * full doc comment on why a mode replaces the earlier single boolean). */
+  workspaceMode?: 'studentStart' | 'mySolution';
+  /** Fresh JSON to load on a mode switch — see MazeLabEditingProps. */
+  workspaceOverride?: BlocklySerialization;
+  /** Fires on every workspace mutation while workspaceMode is set, carrying
+   * the freshly captured legacy XML — the panel decides what to do with it
+   * based on which mode is active, mirroring onMapDraftChange. */
+  onWorkspaceChange: (xml: string) => void;
+  /** Fires once per passing run recorded while workspaceMode is
+   * 'mySolution' — the author-run solvability proof. */
+  onSolutionRun: (detail: {
+    solutionBlocksXml: string;
+    blocksUsed: number;
+  }) => void;
 }
 
 /** Props the course route passes to a lab entrypoint. */

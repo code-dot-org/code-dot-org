@@ -81,6 +81,7 @@ export interface LevelDefinitionPatch {
   solutionBlocksXml?: string | null;
   startDirection?: string | null;
   ideal?: string | null;
+  solutionVerified?: string | null;
 }
 
 export interface WidgetExperience extends ExperienceBase {

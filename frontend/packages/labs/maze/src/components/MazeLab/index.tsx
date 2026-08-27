@@ -38,11 +38,12 @@ import skins, {skinFor} from '../../skins';
 import Instructions from '../Instructions';
 import MapPainter from '../MapPainter';
 
-import type {
-  MazeLevelProperties,
-  MazeEnvironment,
-  MazeDoneEventDetail,
-  MazeLabEditingProps,
+import {
+  ResultType,
+  type MazeLevelProperties,
+  type MazeEnvironment,
+  type MazeDoneEventDetail,
+  type MazeLabEditingProps,
 } from '../../types';
 
 import moduleStyles from './mazeLab.module.scss';
@@ -107,6 +108,16 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
     onLevelResultRef.current = onLevelResult;
   }, [onLevelResult]);
 
+  // Same stable-ref pattern, for the 'done' listener's solution-capture
+  // check (Pass D) — `editing` is a fresh object every render (built inline
+  // by the host), so it can't be an initEngine dependency without forcing a
+  // full engine re-init on every render; dereferencing a ref at event time
+  // avoids that while still seeing the current mode.
+  const editingRef = useRef(editing);
+  useEffect(() => {
+    editingRef.current = editing;
+  }, [editing]);
+
   const [running, setRunning] = useState<boolean>(false);
   const [stepping, setStepping] = useState<boolean>(false);
   const [settingsOpen, setSettingsOpen] = useState<boolean>(false);
@@ -160,14 +171,19 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
           environment.usedBlockCount = blockCount.current;
         }
 
-        // Author-mode "Student start" editing (Pass C): every workspace
-        // mutation is a fresh capture of the canvas as it stands, mirroring
-        // handlePaintCell's per-click reporting below. Fires on every
-        // Blockly event, not just block moves/creates — same granularity
-        // countBlocks above already accepts; a re-report of unchanged XML on
-        // a UI-only event (selection, scroll) is harmless.
-        if (editing?.startBlocksEditingActive) {
-          editing.onStartBlocksChange(
+        // Author-mode workspace editing (Pass C's "Student start", widened
+        // in Pass D to "My solution" too): every mutation is a fresh capture
+        // of the canvas as it stands, mirroring handlePaintCell's per-click
+        // reporting below. Fires on every Blockly event, not just block
+        // moves/creates — same granularity countBlocks above already
+        // accepts; a re-report of unchanged XML on a UI-only event
+        // (selection, scroll) is harmless. Which mode is active is the
+        // host's business (LevelRail folds a 'studentStart' capture straight
+        // into its Save draft, but only stages a 'mySolution' one as a
+        // scratch attempt — see onSolutionRun for what actually becomes
+        // solutionBlocksXml).
+        if (editing?.workspaceMode) {
+          editing.onWorkspaceChange(
             workspaceToXmlString(workspaceRef.current),
           );
         }
@@ -299,9 +315,25 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
       mazeRef.current.addEventListener('stepped', () => setRunning(false));
       mazeRef.current.addEventListener('done', event => {
         setRunning(false);
-        onLevelResultRef.current?.(
-          (event as CustomEvent<MazeDoneEventDetail>).detail,
-        );
+        const detail = (event as CustomEvent<MazeDoneEventDetail>).detail;
+        onLevelResultRef.current?.(detail);
+
+        // Author-run solution capture (Pass D): a passing run recorded
+        // while editing the author's own solution IS the level's
+        // solvability proof — see the plan's product decision (the author's
+        // own passing run is canonical, Save is never gated on it). Report
+        // it up regardless of whether the author accepts the resulting
+        // "save as solution?" offer; declining is a no-op on the host side.
+        if (
+          editingRef.current?.workspaceMode === 'mySolution' &&
+          detail.result === ResultType.SUCCESS &&
+          workspaceRef.current
+        ) {
+          editingRef.current.onSolutionRun({
+            solutionBlocksXml: workspaceToXmlString(workspaceRef.current),
+            blocksUsed: detail.blocksUsed ?? blockCount.current,
+          });
+        }
       });
 
       // Get the initial width of the flyout / toolbox
@@ -541,7 +573,18 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
                   trashcan: false,
                 }}
                 blocks={skinBlocks}
-                startBlocks={levelProperties.startBlocks || DefaultStartBlocks}
+                startBlocks={
+                  // workspaceOverride, once the host has ever set it this
+                  // session (either mode entered at least once), stays the
+                  // loaded program even after workspaceMode goes back to
+                  // undefined ("stop editing") — switching editing off must
+                  // never itself trigger a reload, or it would silently
+                  // snap the canvas back to the served student blocks and
+                  // orphan whatever's on screen from the draft LevelRail is
+                  // about to Save. See MazeLabEditingProps.workspaceOverride.
+                  editing?.workspaceOverride ??
+                  (levelProperties.startBlocks || DefaultStartBlocks)
+                }
                 toolbox={editing?.toolboxOverride ?? levelProperties.toolboxBlocks}
                 onInject={onInject}
                 onChange={onChange}
