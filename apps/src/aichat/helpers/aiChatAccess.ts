@@ -2,6 +2,7 @@ import {
   AiChatAccessLevel,
   AiChatToolsDependencyValue,
 } from '@cdo/apps/aichat/types/accessControls';
+import isExemptFromAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/aiChatToolsAlertExemptions';
 import {
   AiChatAccessLevels,
   AiChatToolsDependency,
@@ -72,16 +73,28 @@ export const areAiChatToolsEnabled = ({
  * This is when a course requires essential AI tools but they are inaccessible
  * either because the section's access level is DISABLED or because the
  * teacher's own access level is DISABLED (unverified teacher).
+ *
+ * courseVersionName and unitName name what the section is assigned, so a course
+ * that reports the dependency wrongly can be exempted; see
+ * aiChatToolsAlertExemptions.
  */
 export const shouldShowAiChatEssentialAlert = ({
   assignedAiChatToolsDependency,
   sectionAiChatAccessLevel,
   teacherAiChatAccessLevel,
+  courseVersionName,
+  unitName,
 }: {
   assignedAiChatToolsDependency: AiChatToolsDependencyValue | undefined;
   sectionAiChatAccessLevel: AiChatAccessLevel;
   teacherAiChatAccessLevel: AiChatAccessLevel;
+  courseVersionName?: string | null;
+  unitName?: string | null;
 }): boolean => {
+  if (isExemptFromAiChatToolsAlert(courseVersionName, unitName)) {
+    return false;
+  }
+
   return (
     assignedAiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
     (sectionAiChatAccessLevel === AiChatAccessLevels.DISABLED ||
