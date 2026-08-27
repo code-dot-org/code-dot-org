@@ -88,8 +88,10 @@ class QuizQuestionsController < ApplicationController
   # TODO: Implement other question types.
   #
   # All three writes (question, standards, placement) share one transaction.
+  # requires_new: true - without this, nesting inside an open transaction (e.g., a test's)
+  # just joins it, so a rescued exception here wouldn't actually roll back.
   def create
-    question = ActiveRecord::Base.transaction do
+    question = ActiveRecord::Base.transaction(requires_new: true) do
       question = MultipleChoiceQuestion.create!(
         key: SecureRandom.uuid,
         name: quiz_question_params[:questionName],
@@ -134,7 +136,7 @@ class QuizQuestionsController < ApplicationController
     should_fork = question.used_in_published_unit? || quiz_question_params[:editMode] == 'fork'
     target = should_fork ? MultipleChoiceQuestion.new(key: SecureRandom.uuid, parent: question) : question
 
-    ActiveRecord::Base.transaction do
+    ActiveRecord::Base.transaction(requires_new: true) do
       target.update!(
         name: quiz_question_params[:questionName],
         content: {
@@ -208,7 +210,7 @@ class QuizQuestionsController < ApplicationController
     question = placement.quiz_question
 
     destroyed = false
-    ActiveRecord::Base.transaction do
+    ActiveRecord::Base.transaction(requires_new: true) do
       placement.destroy!
       still_referenced = question.levels.exists? || question.quiz_question_responses.exists? || question.forks.exists?
       unless still_referenced

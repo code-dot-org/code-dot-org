@@ -66,13 +66,6 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal false, by_id[@question.id]['usedInPublishedUnit']
   end
 
-  # Regression test for a Copilot review finding: quiz_question_json used
-  # to run several queries (standards, attachedToOtherQuizzes,
-  # usedInPublishedUnit's levels->script_levels->script chain, page) PER
-  # question, so index's query count scaled with the page size. Asserts
-  # the fix by comparing two page sizes - a real N+1 would make the larger
-  # page issue more queries; the bulk-precomputed version issues the same
-  # count either way.
   test "index's query count does not scale with the number of questions returned" do
     unit = create(:unit, :in_single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     other_quiz = create(:quiz)
@@ -145,17 +138,6 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_includes results, {'type' => 'course', 'id' => course.id, 'name' => course.name}
   end
 
-  # % and _ are SQL LIKE wildcards, so an unescaped query character can
-  # match things it never asked for.
-  # Unit/UnitGroup names can only contain lowercase letters, digits, and
-  # dashes - never a literal % or _ - so a query containing either should
-  # never match anything for a *correct* implementation. This is why a
-  # query built around "%" is the cleanest reproduction: unescaped,
-  # "%zzzalgo%rithm%" (query "zzzalgo%rithm") means "anything, then
-  # zzzalgo, then anything, then rithm, then anything" - broad enough to
-  # wrongly match a name that merely has those two substrings, in order,
-  # anywhere in it - not the literal (nonexistent) substring
-  # "zzzalgo%rithm".
   test "course_unit_search escapes % and _ so they match literally, not as wildcards" do
     create(:unit, name: 'zzzalgorithms-and-rhythms')
 
