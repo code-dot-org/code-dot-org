@@ -1566,7 +1566,7 @@ class User < ApplicationRecord
     relation.find_each do |record|
       record.destroy
     rescue ActiveRecord::RecordNotUnique
-      record.update_column(:deleted_at, Time.current + (rand(1..999).to_f / 1000))
+      record.update_column(:deleted_at, Time.current + rand(1..99).seconds)
     end
   end
 
@@ -2161,5 +2161,4 @@ class User < ApplicationRecord
       errors.add(:us_state, :invalid)
     end
   end
-  private_class_method :paranoid_destroy_all_with_retry
 end
