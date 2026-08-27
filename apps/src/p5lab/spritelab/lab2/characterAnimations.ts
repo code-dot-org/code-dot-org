@@ -50,7 +50,7 @@ export interface CharacterPoseSpec {
  */
 export const CHARACTER_POSES: CharacterPoseSpec[] = [
   {pose: 'stand', frameCount: 2, frameDelay: 20},
-  {pose: 'walk', frameCount: 6, frameDelay: 4},
+  {pose: 'walk', frameCount: 8, frameDelay: 3},
   {pose: 'jump', frameCount: 2, frameDelay: 8},
 ];
 

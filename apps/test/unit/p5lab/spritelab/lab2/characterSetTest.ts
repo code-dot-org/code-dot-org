@@ -10,6 +10,7 @@ import {
   planCharacterFrames,
   resizeSheetPose,
   sheetLayout,
+  sheetPrompt,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
 import {
@@ -152,6 +153,26 @@ describe('SpriteLab2 characterSet', () => {
         key
       )
     ).toContain('the falling frame of a jump');
+  });
+
+  it('asks for a row of frames drawn to a row of figures, in order', () => {
+    const step = plan.find(p => p.pose === 'walk')!;
+    const text = sheetPrompt(
+      'a robot',
+      step,
+      walkFrames,
+      'pixel',
+      KEY_COLORS.magenta
+    );
+    expect(text).toContain(`exactly ${walkFrames} frames`);
+    expect(text).toContain(
+      'second provided image is a silhouette sprite sheet'
+    );
+    expect(text).toContain('in that order, one frame per figure');
+    expect(text).toContain('single horizontal row');
+    expect(text).toContain('pure magenta');
+    // The motion is a cycle, not limbs: no frame is posed in words.
+    expect(text).not.toMatch(/heel|knee|frame 1 /);
   });
 
   it('sizes the cell to the largest frame', () => {

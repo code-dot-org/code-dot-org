@@ -287,6 +287,64 @@ export function poseFigureSvgDataURI(
   return uri;
 }
 
+// A row of figures stands this many times the cell width tall: a figure's
+// body is about half its square wide, so at this scale the strides fill the
+// cells without touching their neighbours.
+const ROW_FIGURE_SCALE = 1.9;
+const ROW_HEIGHT = 1080;
+
+/**
+ * Every frame of a pose as one row of figures on white, feet on one line,
+ * in a canvas of the given width-over-height — the shape the row picture
+ * is asked for in — as a PNG data URI. The reference for a whole pose
+ * drawn as one picture: the poses and their order, which prose has not
+ * carried (a short row came back as one stride replayed).
+ */
+export function poseFigureRowDataURI(
+  pose: CharacterPose,
+  frameCount: number,
+  facing: CharacterFacing,
+  aspect: number
+): Promise<string> {
+  const canvas = document.createElement('canvas');
+  canvas.height = ROW_HEIGHT;
+  canvas.width = Math.round(ROW_HEIGHT * aspect);
+  const ctx = canvas.getContext('2d')!;
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  const cell = canvas.width / frameCount;
+  const size = Math.min(canvas.height, cell * ROW_FIGURE_SCALE);
+  const frames = Array.from({length: frameCount}, (_, frame) =>
+    loadFigure(pose, frame, facing)
+  );
+  return Promise.all(frames).then(images => {
+    images.forEach((img, frame) => {
+      // Centred in its cell, feet on the canvas floor.
+      ctx.drawImage(
+        img,
+        Math.round(cell * frame + (cell - size) / 2),
+        canvas.height - size,
+        size,
+        size
+      );
+    });
+    return canvas.toDataURL('image/png');
+  });
+}
+
+function loadFigure(
+  pose: CharacterPose,
+  frame: number,
+  facing: CharacterFacing
+): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = poseFigureSvgDataURI(pose, frame, facing);
+  });
+}
+
 const figureCache = new Map<string, Promise<string>>();
 
 /** The figure as a PNG data URI (the model takes raster images), cached. */

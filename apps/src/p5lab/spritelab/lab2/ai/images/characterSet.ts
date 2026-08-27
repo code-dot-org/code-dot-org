@@ -39,7 +39,7 @@ import {
   getCharacterSetImageModel,
   getSheetImageModel,
 } from './modelHelpers';
-import {poseFigureDataURI} from './poseFigures';
+import {poseFigureDataURI, poseFigureRowDataURI} from './poseFigures';
 import {
   isFigure,
   isSolid,
@@ -326,9 +326,10 @@ export function framePrompt(
 
 /**
  * The prompt for a pose's whole row of frames in one picture, drawn from the
- * plate. The motion is described as a cycle, not posed frame by frame: the
- * model's own sense of a walk carries the frames, and it keeps them coherent
- * because it draws them together.
+ * plate and a row of silhouette figures. The model keeps a row's frames
+ * coherent because it draws them together; left to its own sense of a walk
+ * it drew one stride replayed (a short row) or every stride in no order (a
+ * long one), so the figures say which poses, and in what order.
  */
 export function sheetPrompt(
   prompt: string,
@@ -342,7 +343,8 @@ export function sheetPrompt(
       ? 'one complete side-view walk cycle: the legs stride and the arms swing opposite to the legs, so the frames read as smooth continuous walking when played in order and the last frame leads back into the first'
       : `one complete ${POSE_LABELS[plan.pose]} animation`;
   return (
-    `The character: ${prompt}. The provided image shows this character at the left of a wide ${key.name} canvas; the output has the same wide shape. ` +
+    `The character: ${prompt}. The first provided image shows this character at the left of a wide ${key.name} canvas; the output has the same wide shape. ` +
+    `The second provided image is a silhouette sprite sheet of the same ${frameCount} frames on white: draw the character in exactly those poses, in that order, one frame per figure — the whole body, legs, feet, arms and torso, as each figure has them. Take nothing else from the figures: none of their colors, outlines, edges or shapes appear on the character. ` +
     `Draw a sprite sheet of exactly ${frameCount} frames of this character in a single horizontal row, left to right, evenly spaced, with clear ${key.name} gaps between the frames and no frame touching another. The image is wide: one row only, never a second row, each frame as tall as the image allows. ` +
     `The ${frameCount} frames are ${motion}. In every frame draw the same character — same design, colors, proportions, outfit and art style, the same scale, feet on the same baseline. ` +
     `${facingClause(
@@ -786,7 +788,15 @@ export async function generateCharacterSet(
         {
           seed,
           temperature: options.temperature,
-          references: [await widenDataURI(facingPlate, SHEET_ASPECT, key.hex)],
+          references: [
+            await widenDataURI(facingPlate, SHEET_ASPECT, key.hex),
+            await poseFigureRowDataURI(
+              step.pose,
+              frameCount,
+              step.facing,
+              SHEET_ASPECT
+            ),
+          ],
           imageSize: SHEET_IMAGE_SIZE,
           aspectRatio: SHEET_ASPECT_RATIO,
           model: getSheetImageModel(),
