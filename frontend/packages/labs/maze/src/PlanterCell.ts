@@ -79,6 +79,25 @@ class PlanterCell extends Cell {
   static deserialize(serialized: PlanterCellSerialization): PlanterCell {
     return new PlanterCell(serialized.tileType, serialized.featureType);
   }
+
+  /**
+   * @see Cell.parseFromOldValues
+   *
+   * Same reasoning as HarvesterCell.parseFromOldValues: Planter's legacy
+   * int grid never encoded a soil/sprout feature per cell (the original
+   * @code-dot-org/maze planterCell.js had no override either), so recovery
+   * here is tileType only — featureType falls back to the constructor's own
+   * NONE default. The point of this override is the return TYPE, so a
+   * legacy-format Planter level's cells come back as PlanterCells (with
+   * featureType()/isSoil()/isSprout()) rather than plain Cells that crash
+   * the plant/harvest action blocks.
+   */
+  static parseFromOldValues(
+    mapCell: string | number,
+    _initialDirtCell: string | number | undefined,
+  ): PlanterCell {
+    return new PlanterCell(parseInt(mapCell.toString()));
+  }
 }
 
 export default PlanterCell;

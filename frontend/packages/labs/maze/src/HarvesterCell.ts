@@ -156,6 +156,28 @@ class HarvesterCell extends Cell {
       serialized.startsHidden,
     );
   }
+
+  /**
+   * @see Cell.parseFromOldValues
+   *
+   * Unlike Bee's legacy grid strings (which encode a flower/hive letter
+   * per cell — see BeeCell.parseFromOldValues), Harvester's legacy int
+   * grid never encoded crop features at all: the original
+   * @code-dot-org/maze harvesterCell.js had no parseFromOldValues override
+   * either, so recovery here is tileType only, same as Cell's own
+   * implementation. What this override buys is the return TYPE — Cell's
+   * parseFromOldValues hardcodes `new Cell(...)`, so without this a
+   * legacy-format Harvester level's cells come back as plain Cells, and
+   * every Harvester action block (getCorn/plantCorn/getPumpkin/...) that
+   * expects a HarvesterCell (possibleFeatures_, featureType()) crashes on
+   * mount.
+   */
+  static parseFromOldValues(
+    mapCell: string | number,
+    _initialDirtCell: string | number | undefined,
+  ): HarvesterCell {
+    return new HarvesterCell(parseInt(mapCell.toString()));
+  }
 }
 
 export default HarvesterCell;
