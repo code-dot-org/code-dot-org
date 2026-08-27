@@ -594,3 +594,203 @@ describe('the drag lesson’s check', () => {
     expect(passes).toBe(true);
   });
 });
+
+describe('the tween lesson’s check', () => {
+  const lesson = LESSONS['motion/tween'];
+
+  it('refuses a Door that stays shut', async () => {
+    const {passes} = await check('motion/tween', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a Door that travels', async () => {
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      // Chain the tween onto the end of the world's rows.
+      let row = workspace.blocks.blocks[0].next?.block;
+      while (row?.next?.block) {
+        row = row.next.block;
+      }
+      row!.next = {
+        block: {
+          type: 'world_play_tween_here',
+          fields: {CURVE: 'linear'},
+          inputs: {
+            ACTOR: {
+              block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/door'}},
+            },
+            SECONDS: {shadow: {type: 'math_number', fields: {NUM: 1}}},
+            DO: {
+              block: {
+                type: 'world_set_position',
+                inputs: {
+                  ACTOR: {block: {type: 'world_this_actor'}},
+                  X: {shadow: {type: 'math_number', fields: {NUM: 320}}},
+                  Y: {shadow: {type: 'math_number', fields: {NUM: 144}}},
+                },
+              },
+            },
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('motion/tween', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The lesson's own distinction, and the reason the check samples early: a
+  // `set position` puts the Door there in one frame, which is a jump and not
+  // an opening.
+  it('refuses a Door that is simply put in the other place', async () => {
+    const jumped = editing(lesson.source, 'main.world', contents =>
+      contents.replace('"NUM": 96', '"NUM": 320'),
+    );
+    const {passes} = await check('motion/tween', jumped);
+    expect(passes).toBe(false);
+  });
+});
+
+/** Put an `each frame` handler on an actor, with a body. */
+const eachFrame = (contents: string, body: Row, name = 'decide'): string => {
+  const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+  workspace.blocks.blocks.push({
+    type: 'world_trait_step',
+    x: 20,
+    y: 320,
+    fields: {PHASE: 'decide', NAME: name},
+    inputs: {DO: {block: body}},
+  } as Row);
+  return JSON.stringify(workspace);
+};
+
+/** `set speed of ⟨this actor⟩ to nothing`. */
+const HALT: Row = {
+  type: 'world_set_Physics_VelocityProperty',
+  inputs: {
+    ACTOR: {block: {type: 'world_this_actor'}},
+    VALUE: {block: {type: 'world_vector', fields: {VECTOR: {x: 0, y: 0}}}},
+  },
+};
+
+/** `get position ⟨x|y⟩ of ⟨this actor⟩`, as a socket's contents. */
+const myAxis = (component: 'x' | 'y') => ({
+  block: {
+    type: 'world_get_Space_PositionProperty',
+    fields: {COMPONENT: component},
+    inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+  },
+});
+
+/** `⟨a⟩ > ⟨n⟩`. */
+const past = (component: 'x' | 'y', n: number) => ({
+  block: {
+    type: 'logic_compare',
+    fields: {OP: 'GT'},
+    inputs: {
+      A: myAxis(component),
+      B: {shadow: {type: 'math_number', fields: {NUM: n}}},
+    },
+  },
+});
+
+describe('the if lesson’s check', () => {
+  const lesson = LESSONS['logic/if'];
+
+  it('refuses a Ball that rolls out of the world', async () => {
+    const {passes} = await check('logic/if', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that stops at the middle', async () => {
+    const solved = editing(lesson.source, 'ball.actor', contents =>
+      eachFrame(contents, {
+        type: 'controls_if',
+        inputs: {IF0: past('x', 192), DO0: {block: HALT}},
+      }),
+    );
+    const {passes, result} = await check('logic/if', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The false pass, written down and then tested: stopping unconditionally
+  // stops it where it started, which is not the middle of anything.
+  it('refuses one that never starts', async () => {
+    const halted = editing(lesson.source, 'ball.actor', contents =>
+      eachFrame(contents, HALT),
+    );
+    const {passes} = await check('logic/if', halted);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the collision lesson’s check', () => {
+  const lesson = LESSONS['logic/collision'];
+
+  it('refuses a Ball that rolls through the Wall', async () => {
+    const {passes} = await check('logic/collision', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one stopped by a Wall that says it is solid', async () => {
+    const solved = editing(lesson.source, 'wall.actor', contents =>
+      electing(contents, 'Solid Bodies#SolidTrait'),
+    );
+    const {passes, result} = await check('logic/collision', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the and-or lesson’s check', () => {
+  const lesson = LESSONS['logic/and-or'];
+
+  it('refuses one condition, which stops both Balls', async () => {
+    const {passes} = await check('logic/and-or', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts two conditions joined by and', async () => {
+    const solved = editing(lesson.source, 'ball.actor', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const handler = workspace.blocks.blocks.find(
+        block => block.type === 'world_trait_step',
+      )!;
+      const branch = handler.inputs!.DO!.block!;
+      branch.inputs!.IF0 = {
+        block: {
+          type: 'logic_operation',
+          fields: {OP: 'AND'},
+          inputs: {A: past('x', 192), B: past('y', 144)},
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('logic/and-or', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The mistake the lesson is about: `or` is true for both Balls, so both stop
+  // and the high one never leaves.
+  it('refuses two conditions joined by or', async () => {
+    const wrong = editing(lesson.source, 'ball.actor', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const handler = workspace.blocks.blocks.find(
+        block => block.type === 'world_trait_step',
+      )!;
+      handler.inputs!.DO!.block!.inputs!.IF0 = {
+        block: {
+          type: 'logic_operation',
+          fields: {OP: 'OR'},
+          inputs: {A: past('x', 192), B: past('y', 144)},
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes} = await check('logic/and-or', wrong);
+    expect(passes).toBe(false);
+  });
+});

@@ -424,9 +424,24 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The actor is at the tween’s end position when the tween reports it has finished.',
+      says: 'The Door is still where it was put after a tenth of a second, and somewhere else a second later.',
       falsePass:
-        'A tween that moves nothing, ending where it began. Require the end to differ from the start.',
+        'Setting the Door’s position outright, which also moves it — and is exactly what the lesson replaces. The early sample is what tells a journey from a jump: a `set position` has already finished by then.',
+      run: {
+        probes: {door: {kind: 'positions', of: 'Door'}},
+        trace: [{seconds: 0.1}, {seconds: 1.2}],
+      },
+      passes: ({samples}) => {
+        const [start, early, arrived] = samples.door as Point[][];
+        if (!start?.[0]) {
+          return false;
+        }
+        // Barely moved yet, and well on its way afterwards. A tween is a
+        // journey, and a journey is the thing that has a middle.
+        const jumped = Math.abs(early[0].x - start[0].x) > 60;
+        const travelled = Math.abs(arrived[0].x - start[0].x) > 150;
+        return !jumped && travelled;
+      },
     },
   },
 
@@ -447,9 +462,20 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'Two scripted runs, one either side of the middle, end differently.',
+      says: 'The Ball travels to the middle of the world and stops there.',
       falsePass:
-        'Changing colour unconditionally. The run that stays on the left must not change.',
+        'Setting the speed to nothing unconditionally, which stops it — at the left-hand edge, where it started. Both halves are asserted: it got to the middle, and it did not go past.',
+      run: {
+        probes: {ball: {kind: 'positions', of: 'Ball'}},
+        trace: [{seconds: 3}],
+      },
+      passes: ({samples}) => {
+        const [start, ended] = samples.ball as Point[][];
+        if (!start?.[0]) {
+          return false;
+        }
+        return ended[0].x > 180 && ended[0].x < 240;
+      },
     },
   },
   {
@@ -466,9 +492,22 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The player stops at the wall, and the spike’s handler runs on contact and not before.',
+      says: 'The Ball stops short of the Wall instead of passing through it.',
       falsePass:
-        'A handler that runs every frame regardless. Assert it has not run while the player is still walking.',
+        'Stopping the Ball with an `if` on its position, which also stops it there. Nothing in this check tells that from a collision — what it does catch is the Ball sailing straight through, which is the state the lesson starts in.',
+      run: {
+        probes: {ball: {kind: 'positions', of: 'Ball'}},
+        trace: [{seconds: 3}],
+      },
+      passes: ({samples}) => {
+        const [start, ended] = samples.ball as Point[][];
+        if (!start?.[0]) {
+          return false;
+        }
+        // The Wall is at 288 and both are 32 wide, so a Ball resting against it
+        // sits near 256. Well short of the far edge either way.
+        return ended[0].x > 200 && ended[0].x < 280;
+      },
     },
   },
   {
@@ -504,9 +543,28 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The door opens with both switches down and stays shut with either one alone.',
+      says: 'The low Ball stops in the middle and the high one carries on out of the world.',
       falsePass:
-        '`or` in place of `and`, which passes the first half. Both single-switch runs are the check.',
+        '`or` in place of `and`, which stops BOTH — and passes any check that only looks at the low one. Looking at both is the whole of this one.',
+      run: {
+        probes: {balls: {kind: 'positions', of: 'Ball'}},
+        trace: [{seconds: 3}],
+      },
+      passes: ({samples}) => {
+        const balls = lastList<Point>(samples.balls);
+        if (balls.length !== 2) {
+          return false;
+        }
+        const low = balls.find(at => at.y > 144);
+        const high = balls.find(at => at.y <= 144);
+        return (
+          low !== undefined &&
+          high !== undefined &&
+          low.x > 180 &&
+          low.x < 240 &&
+          high.x > 400
+        );
+      },
     },
   },
 

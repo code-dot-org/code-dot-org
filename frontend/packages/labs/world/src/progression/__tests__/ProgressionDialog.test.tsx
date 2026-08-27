@@ -108,18 +108,22 @@ describe('the detail pane', () => {
     await userEvent.click(screen.getByRole('button', {name: 'open'}));
   };
 
+  // A tile whose lesson NOBODY HAS WRITTEN, which is what these two are about.
+  // They named `logic/if` until somebody wrote that one — so if this starts
+  // failing, the fix is to pick another unwritten tile, not to change the
+  // assertion.
   it('renders the lesson through the instructions renderer', async () => {
-    await openOn('logic/if');
+    await openOn('logic/kinds');
     const pane = detail();
     // Rendered markdown, not a string: `**What you do.**` has become bold.
     expect(within(pane).getByText('What you do.').tagName).toBe('STRONG');
     expect(
-      within(pane).getByText(/past the middle of the screen/),
+      within(pane).getByText(/treats a coin and a spike differently/),
     ).toBeInTheDocument();
   });
 
   it('says when a lesson is designed but not written', async () => {
-    await openOn('logic/if');
+    await openOn('logic/kinds');
     expect(within(detail()).getByText(/not written yet/)).toBeInTheDocument();
   });
 

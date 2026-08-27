@@ -561,6 +561,238 @@ written to. In space that is correct. On a road it is not.
 `.trim(),
 };
 
+// ── motion/tween ─────────────────────────────────────────────────────────────
+
+const tween: WorldScenario = {
+  name: 'A described movement',
+  description:
+    'A door that does not open, and the difference between a place and a journey.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [
+        addActor('door', [placeAt(96, 144)]),
+        addActor('post', [placeAt(320, 144)]),
+      ],
+    }),
+    actors: {
+      door: actorFile('Door', [setSprite('box.png')]),
+      post: actorFile('Post', [setSprite('ground.png')]),
+    },
+    sprites: ['box', 'ground'],
+  }),
+  instructions: `
+## A described movement
+
+The Door sits where it was put. Setting its position again would put it
+somewhere else — instantly, in one frame, which is not what opening looks like.
+
+A **tween** is a movement described: where it should end up, how long it should
+take, and how it should ease in or out along the way. Nothing about it happens
+until something plays it.
+
+### What you do
+
+1. In \`worlds/main.world\`, add **play a tween on ⟨any Door⟩ over 1 second**.
+2. Inside its **move** slot, put **set position of ⟨this actor⟩** and give it
+   the Post's place. Run it: the Door travels there.
+3. Change the curve from **steadily** to **slow at both ends** and watch the
+   difference.
+4. Now do it the other way. **define tween** at the top of the file describes
+   the same journey once, under a name; **play tween** plays it on anything.
+   A movement several things share belongs in a definition; a movement one
+   thing does belongs where it happens.
+`.trim(),
+};
+
+// ── logic/if ─────────────────────────────────────────────────────────────────
+
+/** `get position ⟨x|y⟩ of ⟨this actor⟩`. */
+const myPosition = (component: 'x' | 'y') => ({
+  block: {
+    type: 'world_get_Space_PositionProperty',
+    fields: {COMPONENT: component},
+    inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+  },
+});
+
+const conditional: WorldScenario = {
+  name: 'Asking a question',
+  description:
+    'A ball that leaves the world, and the block that lets it decide not to.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [addActor('ball', [placeAt(24, 144), setVelocity(1.6, 0)])],
+    }),
+    actors: {
+      ball: actorFile('Ball', [
+        useTrait('Physics#CanMoveTrait'),
+        setSprite('ball.png'),
+      ]),
+    },
+    sprites: ['ball'],
+    rules: ['motion'],
+  }),
+  instructions: `
+## Asking a question
+
+The Ball rolls right and keeps going, out of the world and away. It has no way
+to notice where it is, because nothing has asked.
+
+An **if** is a question with two answers, and a program that does one thing or
+the other. The question here is "am I past the middle?" — the middle of a world
+12 tiles across is 192.
+
+### What you do
+
+1. Give the Ball an **each frame** handler.
+2. Inside it, put an **if**, and ask whether **⟨get position x of this actor⟩**
+   is greater than **192**.
+3. When it is, **set its speed to 0**. The Ball rolls to the middle and waits
+   there.
+`.trim(),
+};
+
+// ── logic/collision ──────────────────────────────────────────────────────────
+
+const collision: WorldScenario = {
+  name: 'Touching is a question',
+  description:
+    'A ball that rolls straight through a wall, and the trait that stops it.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [
+        addActor('ball', [placeAt(24, 144), setVelocity(1.6, 0)]),
+        addActor('wall', [placeAt(288, 144)]),
+      ],
+    }),
+    actors: {
+      ball: actorFile('Ball', [
+        useTrait('Physics#CanMoveTrait'),
+        useTrait('Collisions#CanCollideTrait'),
+        setSprite('ball.png'),
+      ]),
+      wall: actorFile('Wall', [setSprite('ground.png')]),
+    },
+    sprites: ['ball', 'ground'],
+    rules: ['motion', 'collisions', 'solid'],
+  }),
+  instructions: `
+## Touching is a question
+
+The Ball rolls through the Wall as though it were not there. It is not there, as
+far as the Ball is concerned: the Ball knows it can collide, and the Wall has
+not said it is anything to collide WITH.
+
+Touching is a question the world works out for you, once a tick, for everything
+that said it wanted to be asked. What to DO about it is a separate matter, and
+"stop" is one of the answers a rule already has.
+
+### What you do
+
+1. Give the Wall **use trait ⟨Solid⟩**. Run it: the Ball stops dead against it.
+2. Add a **when ⟨Ball⟩ starts touching** handler and print something, so you can
+   see the moment rather than only its consequence.
+3. Take the Ball's **⟨Can Collide⟩** off and watch it sail through again. Both
+   sides have to agree before there is a collision at all.
+`.trim(),
+};
+
+// ── logic/and-or ─────────────────────────────────────────────────────────────
+
+const andOr: WorldScenario = {
+  name: 'Two questions at once',
+  description:
+    'Two balls, one condition, and the difference between AND and OR.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [
+        addActor('ball', [placeAt(24, 60), setVelocity(1.6, 0)]),
+        addActor('ball', [placeAt(24, 220), setVelocity(1.6, 0)]),
+      ],
+    }),
+    actors: {
+      ball: actorFile(
+        'Ball',
+        [useTrait('Physics#CanMoveTrait'), setSprite('ball.png')],
+        {
+          handlers: [
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'decide', NAME: 'stop in the middle'},
+              inputs: {
+                DO: {
+                  block: {
+                    type: 'controls_if',
+                    inputs: {
+                      IF0: {
+                        block: {
+                          type: 'logic_compare',
+                          fields: {OP: 'GT'},
+                          inputs: {
+                            A: myPosition('x'),
+                            B: {
+                              shadow: {type: 'math_number', fields: {NUM: 192}},
+                            },
+                          },
+                        },
+                      },
+                      DO0: {
+                        block: {
+                          type: 'world_set_Physics_VelocityProperty',
+                          inputs: {
+                            ACTOR: {block: {type: 'world_this_actor'}},
+                            VALUE: {
+                              block: {
+                                type: 'world_vector',
+                                fields: {VECTOR: {x: 0, y: 0}},
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        },
+      ),
+    },
+    sprites: ['ball'],
+    rules: ['motion'],
+  }),
+  instructions: `
+## Two questions at once
+
+Two Balls, one high and one low, and one rule between them: stop past the
+middle. Both stop, because the only thing being asked is how far across they
+are.
+
+Say you want only the LOW one to stop — past the middle **and** below the
+halfway line. That is two questions, and the answer is yes only when both are.
+
+The world is 288 pixels down, so halfway down is 144.
+
+### What you do
+
+1. Open \`actors/ball.actor\` and find the **if**.
+2. Wrap its question in an **and**, and add a second question: is
+   **⟨get position y of this actor⟩** greater than **144**?
+3. Run it. The low Ball stops in the middle; the high one carries on and leaves.
+4. Change the **and** to an **or** and watch both stop again — which is the
+   thing to be able to tell apart.
+`.trim(),
+};
+
 /** Every lesson written so far, by the tile it belongs to. */
 export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'origin/first-world': firstWorld,
@@ -573,6 +805,10 @@ export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'motion/force': force,
   'motion/units': units,
   'motion/drag': drag,
+  'motion/tween': tween,
+  'logic/if': conditional,
+  'logic/collision': collision,
+  'logic/and-or': andOr,
   'look/sprite': sprite,
   'place/position': position,
 };
