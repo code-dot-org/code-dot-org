@@ -26,12 +26,11 @@ export function getCharacterSetImageModel() {
   return googleProvider(CHARACTER_SET_IMAGE_MODEL);
 }
 
-// The walk's row picture: one request per set, so Pro costs one Pro image
-// where the per-frame trial cost twelve. On trial (2026-08-27) for what a
-// single picture of the whole cycle can't suffer from — drift between
-// frames — and what Pro is better at: following the layout and the count.
-// Flash for the row is the Flash-only set of the runs before.
-export const SHEET_IMAGE_MODEL = AiChatModelIds.GEMINI_3_PRO_IMAGE;
+// The walk's row picture. Gemini 3 Pro Image was tried here too
+// (2026-08-27; one request per set, so one Pro image): it drew sixteen
+// frames for twelve asked, with a floor shadow under some boots that keyed
+// as solid, and the walk played worse than Flash's. Flash it stays.
+export const SHEET_IMAGE_MODEL = AiChatModelIds.GEMINI_3_1_FLASH_IMAGE;
 
 export function getSheetImageModel() {
   return googleProvider(SHEET_IMAGE_MODEL);
