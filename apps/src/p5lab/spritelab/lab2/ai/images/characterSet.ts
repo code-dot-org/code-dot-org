@@ -50,7 +50,7 @@ import {
   SilhouetteBands,
 } from './poseScore';
 import {loadImageFromBlob, removeKeyColor} from './removeBackground';
-import {frameBoxes, groupRows} from './sheetSlice';
+import {FrameBox, frameBoxes, groupRows} from './sheetSlice';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One reference image for a frame: an earlier frame, possibly mirrored. */
