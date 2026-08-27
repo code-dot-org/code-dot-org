@@ -60,7 +60,8 @@ function makeSectionsState(
     // here rather than relying on the component to drop them.
     sectionOrder: sections
       .filter(
-        s => !(s.hidden ?? false) && (s.participantType ?? 'student') === 'student'
+        s =>
+          !(s.hidden ?? false) && (s.participantType ?? 'student') === 'student'
       )
       .map(s => s.id),
     sections: Object.fromEntries(
