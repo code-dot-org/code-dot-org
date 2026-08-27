@@ -6,6 +6,12 @@ class QuizQuestionsController < ApplicationController
   before_action {authorize! :manage, @level}
   before_action :require_quiz_level, except: [:course_unit_search]
 
+  # Placeholder default for quiz_question_json's precomputed-value keyword
+  # args, distinguishing "not given, compute it for this one question"
+  # from a real value that happens to be false/nil (e.g. an unattached
+  # question's page, or a question not used anywhere else).
+  UNSET = Object.new.freeze
+
   # GET /levels/:level_id/quiz_questions?search=&sort=&standardFrameworkShortcode=&standardShortcode=&courseOrUnitType=&courseOrUnitId=
   #
   # Question bank browsing: matches by name, marks each attached: true/false
@@ -16,10 +22,29 @@ class QuizQuestionsController < ApplicationController
   def index
     standard = find_standard(params[:standardFrameworkShortcode], params[:standardShortcode])
     course_or_unit = find_course_or_unit(params[:courseOrUnitType], params[:courseOrUnitId])
-    questions = QuizQuestionAutocomplete.get_search_matches(params[:search], params[:limit], params[:sort], standard&.id, course_or_unit)
-    attached_ids = @level.questions.pluck(:id)
+    questions = QuizQuestionAutocomplete.get_search_matches(params[:search], params[:limit], params[:sort], standard&.id, course_or_unit).
+      includes(standards: [:framework, {category: :parent_category}])
+    attached_ids = @level.questions.pluck(:id).to_set
 
-    render json: questions.map {|question| quiz_question_json(question).merge(attached: attached_ids.include?(question.id))}
+    # Precomputed once for the whole page, rather than per row.
+    question_ids = questions.map(&:id)
+    # reorder(nil) drops QuizQuestionPlacement's own default_scope order
+    # (page, position) - MySQL rejects DISTINCT combined with an ORDER BY
+    # on columns outside the SELECT list, and page/position are irrelevant
+    # to a plain distinct id list anyway.
+    other_quiz_ids = QuizQuestionPlacement.where(quiz_question_id: question_ids).where.not(level_id: @level.id).
+      reorder(nil).distinct.pluck(:quiz_question_id).to_set
+    published_usage = QuizQuestion.published_unit_usage(question_ids)
+    pages_by_question_id = @level.placements.where(quiz_question_id: question_ids).pluck(:quiz_question_id, :page).to_h
+
+    render json: questions.map do |question|
+      quiz_question_json(
+        question,
+        attached_to_other_quizzes: other_quiz_ids.include?(question.id),
+        used_in_published_unit: published_usage.fetch(question.id, false),
+        page: pages_by_question_id[question.id]
+      ).merge(attached: attached_ids.include?(question.id))
+    end
   rescue ActiveRecord::RecordNotFound
     render json: []
   end
@@ -226,8 +251,12 @@ class QuizQuestionsController < ApplicationController
     end
   end
 
-  # Shared by create/show/update.
-  private def quiz_question_json(question)
+  # Shared by create/show/update/attach/index. The three keyword args let
+  # index pass in values it already computed for the whole page in bulk
+  # (see there) instead of this running a fresh query per question -
+  # create/show/update/attach only ever serialize one question, so the
+  # per-question query each falls back to here is fine.
+  private def quiz_question_json(question, attached_to_other_quizzes: UNSET, used_in_published_unit: UNSET, page: UNSET)
     {
       id: question.id,
       type: question.type,
@@ -237,11 +266,11 @@ class QuizQuestionsController < ApplicationController
       correctChoiceId: question.content['correct_choice_id'],
       explanation: question.explanation,
       standards: question.standards.map(&:summarize_for_lesson_edit),
-      attachedToOtherQuizzes: question.levels.where.not(id: @level.id).exists?,
-      usedInPublishedUnit: question.used_in_published_unit?,
+      attachedToOtherQuizzes: attached_to_other_quizzes.equal?(UNSET) ? question.levels.where.not(id: @level.id).exists? : attached_to_other_quizzes,
+      usedInPublishedUnit: used_in_published_unit.equal?(UNSET) ? question.used_in_published_unit? : used_in_published_unit,
       # nil for a bank question not (yet) attached to @level - page only
       # means something in the context of a specific quiz's own placement.
-      page: @level.placements.find_by(quiz_question_id: question.id)&.page,
+      page: page.equal?(UNSET) ? @level.placements.find_by(quiz_question_id: question.id)&.page : page,
     }
   end
 end

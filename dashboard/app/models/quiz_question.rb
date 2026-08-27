@@ -35,12 +35,30 @@ class QuizQuestion < ApplicationRecord
 
   # preview/stable/sunsetting units
   def used_in_published_unit?
-    levels.any? do |quiz|
-      quiz.script_levels.any? do |sl|
+    self.class.published_unit_usage([id]).fetch(id, false)
+  end
+
+  # Bulk form of #used_in_published_unit? - avoids an N+1 (levels, then
+  # script_levels, then script, per question) when serializing many
+  # questions at once, e.g. QuizQuestionsController#index. Returns
+  # {question_id => bool}; a question_id with no placements, or none in a
+  # published unit, maps to false.
+  def self.published_unit_usage(question_ids)
+    return {} if question_ids.blank?
+
+    placements = QuizQuestionPlacement.where(quiz_question_id: question_ids).
+      includes(level: {script_levels: {script: :unit_group_units}})
+
+    usage = question_ids.index_with {false}
+    placements.each do |placement|
+      next if usage[placement.quiz_question_id]
+      published = placement.level.script_levels.any? do |sl|
         unit = sl.script
         unit && (unit.launched? || unit.get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
       end
+      usage[placement.quiz_question_id] = true if published
     end
+    usage
   end
 
   # Overridden by subtypes that can grade themselves server-side

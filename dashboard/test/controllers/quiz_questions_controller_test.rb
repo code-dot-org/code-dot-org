@@ -47,6 +47,67 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal false, attached_flags[other_question.id]
   end
 
+  test "index reports attachedToOtherQuizzes and usedInPublishedUnit correctly, computed in bulk" do
+    other_quiz = create(:quiz)
+    unit = create(:unit, :in_single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:script_level, script: unit, levels: [other_quiz])
+
+    shared_and_published = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: shared_and_published, page: 1, position: 2)
+    create(:quiz_question_placement, level: other_quiz, quiz_question: shared_and_published, page: 1, position: 1)
+
+    get :index, params: {level_id: @quiz.id, limit: 10}
+
+    assert_response :success
+    by_id = JSON.parse(response.body).index_by {|q| q['id']}
+    assert_equal true, by_id[shared_and_published.id]['attachedToOtherQuizzes']
+    assert_equal true, by_id[shared_and_published.id]['usedInPublishedUnit']
+    assert_equal false, by_id[@question.id]['attachedToOtherQuizzes']
+    assert_equal false, by_id[@question.id]['usedInPublishedUnit']
+  end
+
+  # Regression test for a Copilot review finding: quiz_question_json used
+  # to run several queries (standards, attachedToOtherQuizzes,
+  # usedInPublishedUnit's levels->script_levels->script chain, page) PER
+  # question, so index's query count scaled with the page size. Asserts
+  # the fix by comparing two page sizes - a real N+1 would make the larger
+  # page issue more queries; the bulk-precomputed version issues the same
+  # count either way.
+  test "index's query count does not scale with the number of questions returned" do
+    unit = create(:unit, :in_single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    other_quiz = create(:quiz)
+    create(:script_level, script: unit, levels: [other_quiz])
+    standard = create(:standard)
+
+    build_questions = lambda do |count|
+      count.times do
+        q = create(:multiple_choice_question)
+        create(:quiz_question_placement, level: @quiz, quiz_question: q, page: 1, position: q.id)
+        q.standards << standard
+        create(:quiz_question_placement, level: other_quiz, quiz_question: q, page: 1, position: q.id)
+      end
+    end
+
+    count_queries = lambda do
+      count = 0
+      subscriber = ActiveSupport::Notifications.subscribe('sql.active_record') do |*, payload|
+        count += 1 unless payload[:name].to_s.match?(/SCHEMA|TRANSACTION/)
+      end
+      get :index, params: {level_id: @quiz.id, limit: 30}
+      assert_response :success
+      ActiveSupport::Notifications.unsubscribe(subscriber)
+      count
+    end
+
+    build_questions.call(2)
+    small_page_queries = count_queries.call
+
+    build_questions.call(8)
+    large_page_queries = count_queries.call
+
+    assert_equal small_page_queries, large_page_queries
+  end
+
   test "index narrows by standard when both standardFrameworkShortcode and standardShortcode are given" do
     standard = create(:standard)
     tagged = create(:multiple_choice_question)
