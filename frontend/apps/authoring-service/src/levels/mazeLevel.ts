@@ -22,11 +22,47 @@ import {buildMazeLevelProperties} from '../boot/levelCatalog.js';
  * plain arithmetic over `MazeController` getters/setters and `MazeMap`
  * lookups — no DOM anywhere in that call graph. `simulate` below is a
  * byte-for-byte port of that logic (verified by direct reading of
- * packages/labs/maze/src/{api,Validator,Subtype,tiles}.ts), restricted to
- * what the plain "birds" skin's toolbox exposes: forward movement, left/right
- * turns, and counted repeats. Skin-specific blocks (Bee's nectar, Farmer's
- * planting, ...) are out of scope — those skins are unsupported on this
- * branch anyway (see levelCatalog.ts's projectRuntime).
+ * packages/labs/maze/src/{api,Validator,Subtype,tiles}.ts), covering plain
+ * movement (forward, left/right turns, counted repeats) plus a subset of the
+ * Karel-family skins' action blocks.
+ *
+ * Win condition, all skins alike: `Validator.succeeded()` only ever checks
+ * Pegman's position against `subtype.finish` — every Karel skin
+ * (Bee/Farmer/Harvester/Collector/Planter) shares the single `Validator`
+ * class, none overrides it. So a generated level's grid must carry an
+ * explicit finish tile (as today), and any skin-specific action block
+ * (fill/dig/nectar/honey/collect) is provably a simulation no-op for
+ * *reaching the finish*: read packages/labs/maze/src/api.ts — none of them
+ * moves Pegman, turns Pegman, or calls `executionInfo.terminateWithValue`.
+ * That's what makes it sound to add them to the palette without modeling
+ * dirt/nectar/gem state at all.
+ *
+ * Karel skins actually enabled here — moveForward/turnLeft/turnRight/repeat
+ * plus:
+ *   - farmer:    fill, dig            (maze_fill, maze_dig)
+ *   - bee:       getNectar, makeHoney (maze_nectar, maze_honey)
+ *   - collector: collect              (collector_collect)
+ *
+ * Harvester (getCorn/getPumpkin/getLettuce) and Planter (plant) are
+ * deliberately NOT enabled: those actions call `HarvesterCell`/
+ * `PlanterCell`-specific methods (`featureType()`) on whatever cell the map
+ * loader built, but `Cell.parseFromOldValues` — the loader
+ * `buildMazeLevelWireProperties`'s plain `number[][]` `maze` grid takes,
+ * since this module never emits the richer `serialized_maze` format — is
+ * hardcoded to `new Cell(...)`, not `new this(...)`, for any subtype whose
+ * Cell subclass doesn't override that static method itself.  HarvesterCell
+ * and PlanterCell don't (BeeCell does — see the regression test on
+ * `buildMazeLevelWireProperties` pinning exactly this class of bug for Bee).
+ * Enabling those two blocks would crash the lab the moment the generated
+ * solution runs them, not just fail an "unsolvable" check — worse than the
+ * gate's promise, so they stay out of the palette until that shared-package
+ * gap is fixed.
+ *
+ * `checkImportedMazeLevel` (importedLevelCheck.ts) reuses `simulateMazeProgram`
+ * below to gate real, human-authored levels the same way — see that file for
+ * the palette-only fallback when a real level's blocks (conditionals,
+ * compass moves, Bee/Harvester/Planter predicates, ...) go beyond what this
+ * module simulates.
  */
 
 // tiles.ts's SquareType/Direction enums, copied rather than imported: pulling
@@ -54,8 +90,24 @@ export const MAZE_BLOCK_TYPES = [
   'turnLeft',
   'turnRight',
   'repeat',
+  // Karel-family action blocks — see the module header for which skin each
+  // requires and why Harvester/Planter aren't here.
+  'fill',
+  'dig',
+  'getNectar',
+  'makeHoney',
+  'collect',
 ] as const;
 export type MazeBlockType = (typeof MAZE_BLOCK_TYPES)[number];
+
+/** Skin-action block types, each valid only when `definition.skin` matches. */
+const SKIN_ACTION_BLOCKS: Partial<Record<MazeBlockType, string>> = {
+  fill: 'farmer',
+  dig: 'farmer',
+  getNectar: 'bee',
+  makeHoney: 'bee',
+  collect: 'collector',
+};
 
 export interface MazeMoveNode {
   type: 'moveForward';
@@ -68,13 +120,28 @@ export interface MazeRepeatNode {
   times: number;
   children: MazeBlockNode[];
 }
-export type MazeBlockNode = MazeMoveNode | MazeTurnNode | MazeRepeatNode;
+/** A skin action block — fires an animation/state change that never moves,
+ * turns, or terminates Pegman (see the module header); simulated as a
+ * position-preserving no-op. */
+export interface MazeActionNode {
+  type: 'fill' | 'dig' | 'getNectar' | 'makeHoney' | 'collect';
+}
+export type MazeBlockNode =
+  | MazeMoveNode
+  | MazeTurnNode
+  | MazeRepeatNode
+  | MazeActionNode;
 
 const MazeBlockNodeSchema: z.ZodType<MazeBlockNode> = z.lazy(() =>
   z.discriminatedUnion('type', [
     z.object({type: z.literal('moveForward')}),
     z.object({type: z.literal('turnLeft')}),
     z.object({type: z.literal('turnRight')}),
+    z.object({type: z.literal('fill')}),
+    z.object({type: z.literal('dig')}),
+    z.object({type: z.literal('getNectar')}),
+    z.object({type: z.literal('makeHoney')}),
+    z.object({type: z.literal('collect')}),
     z.object({
       type: z.literal('repeat'),
       times: z.number().int().min(1).max(MAX_REPEAT_TIMES),
@@ -125,6 +192,15 @@ function directionDelta(d: number): {dx: number; dy: number} {
 
 function tileAt(grid: number[][], x: number, y: number): number | undefined {
   return grid[y]?.[x];
+}
+
+// Mirrors api.ts's isPath(): a wall AND an obstacle both block movement.
+function isBlockingTile(tile: number | undefined): boolean {
+  return (
+    tile === undefined ||
+    tile === SquareType.WALL ||
+    tile === SquareType.OBSTACLE
+  );
 }
 
 interface GridInfo {
@@ -192,8 +268,7 @@ function isReachable(
       const ny = y + dy;
       const key = `${nx},${ny}`;
       if (visited.has(key)) continue;
-      const tile = tileAt(grid, nx, ny);
-      if (tile === undefined || tile === SquareType.WALL) continue;
+      if (isBlockingTile(tileAt(grid, nx, ny))) continue;
       visited.add(key);
       queue.push({x: nx, y: ny});
     }
@@ -248,7 +323,7 @@ function simulateMoveForward(
   if (state.terminated) return;
   const {dx, dy} = directionDelta(state.d);
   const targetTile = tileAt(grid, state.x + dx, state.y + dy);
-  if (targetTile === SquareType.WALL || targetTile === undefined) {
+  if (isBlockingTile(targetTile)) {
     state.terminated = true;
     state.wallHitAt = {x: state.x, y: state.y, direction: state.d};
     return;
@@ -289,6 +364,15 @@ function runProgram(
           runProgram(grid, finish, node.children, state);
         }
         break;
+      case 'fill':
+      case 'dig':
+      case 'getNectar':
+      case 'makeHoney':
+      case 'collect':
+        // Skin action blocks: verified against api.ts to never move Pegman,
+        // turn Pegman, or terminate execution — a sound no-op for the
+        // reach-the-finish win condition (see the module header).
+        break;
     }
   }
 }
@@ -301,21 +385,25 @@ const DIRECTION_NAME: Record<number, string> = {
 };
 
 /**
- * The solvability gate: proves `definition.solution` actually solves
- * `definition.grid` before a level is accepted, plus the surrounding
- * authoring constraints (toolbox coverage, block-count budget). Every
- * rejection names the specific, correctable problem.
+ * The core simulation: proves `program` actually solves `grid` from
+ * `startDirection`, independent of any authoring-time budget (toolbox
+ * coverage, block-count, ...). Shared by `verifyMazeLevelSolvable` (AI
+ * authoring, which adds those budget checks on top) and
+ * `checkImportedMazeLevel` (importedLevelCheck.ts, gating a real,
+ * human-authored level, which has no such budget).
  */
-export function verifyMazeLevelSolvable(
-  definition: MazeLevelDefinition,
+export function simulateMazeProgram(
+  grid: number[][],
+  startDirection: number,
+  program: MazeBlockNode[],
 ): GateResult {
-  const gridInfo = inspectGrid(definition.grid);
+  const gridInfo = inspectGrid(grid);
   if (typeof gridInfo === 'string') {
     return {ok: false, reason: gridInfo};
   }
   const {start, finish} = gridInfo;
 
-  if (!isReachable(definition.grid, start, finish)) {
+  if (!isReachable(grid, start, finish)) {
     return {
       ok: false,
       reason:
@@ -323,6 +411,67 @@ export function verifyMazeLevelSolvable(
         `sequence of moves can solve it. Check for walls (0) blocking every ` +
         `path from the start (2, at row ${start.y} col ${start.x}) to the ` +
         `finish (3, at row ${finish.y} col ${finish.x}).`,
+    };
+  }
+
+  const state: SimState = {
+    x: start.x,
+    y: start.y,
+    d: startDirection,
+    terminated: false,
+    succeeded: false,
+  };
+  runProgram(grid, finish, program, state);
+  if (!state.terminated) {
+    // Mirrors Maze.execute()'s final fallback: a program that runs to
+    // completion without terminating (e.g. it ends on a turn while already
+    // standing on the goal) still gets one last success check.
+    state.succeeded = state.x === finish.x && state.y === finish.y;
+  }
+
+  if (!state.succeeded) {
+    if (state.wallHitAt) {
+      return {
+        ok: false,
+        reason:
+          `running the solution program: the character hits a wall at row ` +
+          `${state.wallHitAt.y} col ${state.wallHitAt.x} while facing ` +
+          `${DIRECTION_NAME[state.wallHitAt.direction]} and stops there — it ` +
+          `never reaches the goal at row ${finish.y} col ${finish.x}.`,
+      };
+    }
+    return {
+      ok: false,
+      reason:
+        `running the solution program lands the character at row ${state.y} ` +
+        `col ${state.x} facing ${DIRECTION_NAME[state.d]}; the goal is at ` +
+        `row ${finish.y} col ${finish.x}. It never reaches the goal.`,
+    };
+  }
+
+  return {ok: true};
+}
+
+/**
+ * The solvability gate: proves `definition.solution` actually solves
+ * `definition.grid` before a level is accepted, plus the surrounding
+ * authoring constraints (skin/block compatibility, toolbox coverage,
+ * block-count budget). Every rejection names the specific, correctable
+ * problem.
+ */
+export function verifyMazeLevelSolvable(
+  definition: MazeLevelDefinition,
+): GateResult {
+  const skinMismatch = definition.toolbox.find(
+    type => SKIN_ACTION_BLOCKS[type] && SKIN_ACTION_BLOCKS[type] !== definition.skin,
+  );
+  if (skinMismatch) {
+    return {
+      ok: false,
+      reason:
+        `toolbox block type "${skinMismatch}" is only valid on skin ` +
+        `"${SKIN_ACTION_BLOCKS[skinMismatch]}" levels; this level's skin is ` +
+        `"${definition.skin}".`,
     };
   }
 
@@ -361,42 +510,11 @@ export function verifyMazeLevelSolvable(
     };
   }
 
-  const state: SimState = {
-    x: start.x,
-    y: start.y,
-    d: definition.startDirection,
-    terminated: false,
-    succeeded: false,
-  };
-  runProgram(definition.grid, finish, definition.solution, state);
-  if (!state.terminated) {
-    // Mirrors Maze.execute()'s final fallback: a program that runs to
-    // completion without terminating (e.g. it ends on a turn while already
-    // standing on the goal) still gets one last success check.
-    state.succeeded = state.x === finish.x && state.y === finish.y;
-  }
-
-  if (!state.succeeded) {
-    if (state.wallHitAt) {
-      return {
-        ok: false,
-        reason:
-          `running the solution program: the character hits a wall at row ` +
-          `${state.wallHitAt.y} col ${state.wallHitAt.x} while facing ` +
-          `${DIRECTION_NAME[state.wallHitAt.direction]} and stops there — it ` +
-          `never reaches the goal at row ${finish.y} col ${finish.x}.`,
-      };
-    }
-    return {
-      ok: false,
-      reason:
-        `running the solution program lands the character at row ${state.y} ` +
-        `col ${state.x} facing ${DIRECTION_NAME[state.d]}; the goal is at ` +
-        `row ${finish.y} col ${finish.x}. It never reaches the goal.`,
-    };
-  }
-
-  return {ok: true};
+  return simulateMazeProgram(
+    definition.grid,
+    definition.startDirection,
+    definition.solution,
+  );
 }
 
 // --- Legacy Blockly XML serialization -------------------------------------
@@ -415,6 +533,16 @@ function blockXml(node: MazeBlockNode, next?: string): string {
       return `<block type="maze_turn"><title name="DIR">turnLeft</title>${nextXml}</block>`;
     case 'turnRight':
       return `<block type="maze_turn"><title name="DIR">turnRight</title>${nextXml}</block>`;
+    case 'fill':
+      return `<block type="maze_fill">${nextXml}</block>`;
+    case 'dig':
+      return `<block type="maze_dig">${nextXml}</block>`;
+    case 'getNectar':
+      return `<block type="maze_nectar">${nextXml}</block>`;
+    case 'makeHoney':
+      return `<block type="maze_honey">${nextXml}</block>`;
+    case 'collect':
+      return `<block type="collector_collect">${nextXml}</block>`;
     case 'repeat': {
       const body = chainXml(node.children);
       const statement = body ? `<statement name="DO">${body}</statement>` : '';
@@ -448,6 +576,11 @@ const TOOLBOX_BLOCK_XML: Record<MazeBlockType, string> = {
     '<block type="maze_turn"><title name="DIR">turnRight</title></block>',
   repeat:
     '<block type="controls_repeat_dropdown"><title name="TIMES" config="1-20">3</title></block>',
+  fill: '<block type="maze_fill"/>',
+  dig: '<block type="maze_dig"/>',
+  getNectar: '<block type="maze_nectar"/>',
+  makeHoney: '<block type="maze_honey"/>',
+  collect: '<block type="collector_collect"/>',
 };
 
 export function buildToolboxBlocksXml(toolbox: MazeBlockType[]): string {

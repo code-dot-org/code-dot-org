@@ -16,7 +16,8 @@ import {Markdown} from '@code-dot-org/markdown';
 // placed on the canvas.
 import '@code-dot-org/oceans-lab/styles.css';
 
-import {useLevelProperties} from '@/modules/authoring';
+import {authoringApi, useLevelProperties} from '@/modules/authoring';
+import type {LevelCheckResponse} from '@/modules/authoring';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 import type {LevelResultDetail} from '@/modules/labs/router/getLabEntrypointByAppName';
 
@@ -178,6 +179,25 @@ function LabHostStage({
   const [levelResult, setLevelResult] = useState<LevelResultDetail | null>(
     null,
   );
+  const [checkResult, setCheckResult] = useState<LevelCheckResponse | null>(
+    null,
+  );
+  const [checking, setChecking] = useState(false);
+
+  const handleCheckLevel = useCallback(async () => {
+    setChecking(true);
+    try {
+      setCheckResult(await authoringApi.checkLevel(levelNumericId));
+    } catch (error) {
+      setCheckResult({
+        ok: false,
+        mode: 'palette',
+        reasons: [error instanceof Error ? error.message : 'check failed'],
+      });
+    } finally {
+      setChecking(false);
+    }
+  }, [levelNumericId]);
 
   const handleLevelResult = useCallback(
     (detail: LevelResultDetail) => {
@@ -227,6 +247,12 @@ function LabHostStage({
   // put the same text on the page twice.
   const selfDisplayedByLab = appName === 'maze' || appName === 'music';
 
+  // Maze-family only (grid + block-solution levels) — checks the served
+  // solution against the served grid/toolbox the same way create_level's
+  // gate does. Author mode only: it's an authoring lint, not something a
+  // learner needs to see.
+  const showCheckLevel = authorMode && appName === 'maze';
+
   return (
     <>
       <LevelInstructions
@@ -237,6 +263,24 @@ function LabHostStage({
         selfDisplayedByLab={selfDisplayedByLab}
         authorMode={authorMode}
       />
+      {showCheckLevel && (
+        <div className={styles.levelCheckBar}>
+          <Button
+            size="small"
+            variant="outlined"
+            onClick={handleCheckLevel}
+            disabled={checking}
+          >
+            {checking ? 'Checking…' : 'Check level'}
+          </Button>
+        </div>
+      )}
+      {showCheckLevel && checkResult && (
+        <LevelCheckCard
+          result={checkResult}
+          onDismiss={() => setCheckResult(null)}
+        />
+      )}
       <div className={styles.labStage}>
         <Suspense fallback={<Loading />}>
           <Lab levelId={levelNumericId} levelPropertiesMap={properties}>
@@ -255,6 +299,52 @@ function LabHostStage({
         />
       )}
     </>
+  );
+}
+
+/**
+ * "Check level" result, inline below the button (not an overlay). `mode`
+ * distinguishes a full grid+program simulation from a palette-only check
+ * (the solution uses a block type the simulator doesn't model) — labeled
+ * plainly rather than presented as if they were equally strong evidence.
+ */
+function LevelCheckCard({
+  result,
+  onDismiss,
+}: {
+  result: LevelCheckResponse;
+  onDismiss: () => void;
+}) {
+  const reasonText = result.reasons.join(' ');
+  const headline =
+    result.mode === 'simulated'
+      ? result.ok
+        ? 'Solved in simulation.'
+        : `Not solvable — ${reasonText}`
+      : result.ok
+        ? 'Palette check passed.'
+        : `Palette check failed — ${reasonText}`;
+
+  return (
+    <div className={styles.levelResultCard}>
+      <Alert
+        type={result.ok ? 'success' : 'danger'}
+        isImmediateImportance={false}
+        onClose={onDismiss}
+        closeLabel="Dismiss check result"
+        text={
+          <>
+            {headline}
+            {result.note && (
+              <>
+                <br />
+                {result.note}
+              </>
+            )}
+          </>
+        }
+      />
+    </div>
   );
 }
 

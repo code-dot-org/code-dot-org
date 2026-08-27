@@ -152,6 +152,16 @@
   }
 }
 
+/* Author-mode "Check level" affordance (maze-family existingLevel only) */
+
+.levelCheckBar {
+  width: 100%;
+  max-width: 880px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Lab run feedback (success/failure card below the lab stage) */
 
 .levelResultCard {

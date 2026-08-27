@@ -645,7 +645,7 @@ function buildCurriculumServer(
       ),
       tool(
         'create_level',
-        'Create a Maze puzzle level: a grid plus a typed block solution program (never hand-written Blockly XML). Rejected with a specific, correctable reason unless the solution actually solves the grid, uses only toolbox block types, and stays within the block-count budget. On success, inserts it into the lesson and returns levelId.',
+        "Create a Maze puzzle level: a grid plus a typed block solution program (never hand-written Blockly XML). Rejected with a specific, correctable reason unless the solution actually solves the grid, uses only toolbox block types valid for the level's skin, and stays within the block-count budget. skin defaults to 'birds' (plain Maze); 'farmer'/'bee'/'collector' additionally unlock fill+dig / getNectar+makeHoney / collect in the toolbox — flavor blocks that play an animation but never affect whether the goal is reached. On success, inserts it into the lesson and returns levelId.",
         {
           lessonId: z.string(),
           position: z.number().int(),

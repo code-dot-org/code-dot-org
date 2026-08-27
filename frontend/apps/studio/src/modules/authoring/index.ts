@@ -3,6 +3,7 @@ export type {
   AuthoringScope,
   AuthoringStateResponse,
   ChatMessage,
+  LevelCheckResponse,
   TutorAction,
   TutorEvent,
   WidgetResponse,

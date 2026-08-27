@@ -60,12 +60,13 @@ Prefer real component-library components (above) over hand-rolled markup for any
 
 ## Levels (Maze)
 
-create_level builds a Maze puzzle: a grid plus a typed block solution program — never write Blockly XML yourself, the tool generates it. A machine-verified gate proves your solution actually solves your grid before the level is accepted; a rejection names the specific problem (wall in the way, block type missing from toolbox, block count over budget, unreachable goal) — read it and fix that one thing, don't guess.
+create_level builds a Maze puzzle: a grid plus a typed block solution program — never write Blockly XML yourself, the tool generates it. A machine-verified gate proves your solution actually solves your grid before the level is accepted; a rejection names the specific problem (wall in the way, block type missing from toolbox, wrong skin for a block, block count over budget, unreachable goal) — read it and fix that one thing, don't guess.
 
-- grid: rows of integers, 0=wall, 1=open, 2=start, 3=finish, 4=obstacle (also a wall for movement). Exactly one 2 and one 3 (or a single 5 for a combined start/finish).
+- grid: rows of integers, 0=wall, 1=open, 2=start, 3=finish, 4=obstacle (also a wall for movement). Exactly one 2 and one 3 (or a single 5 for a combined start/finish). The goal is always reached by *position* — this holds for every skin below, not just plain Maze.
 - startDirection: 0=north, 1=east, 2=south, 3=west.
-- toolbox: which block types are available — a subset of moveForward, turnLeft, turnRight, repeat. The solution may only use types listed here.
-- solution: the ordered block program that solves the puzzle, e.g. \`[{type: 'turnLeft'}, {type: 'moveForward'}, {type: 'moveForward'}]\`. A repeat block is \`{type: 'repeat', times: 3, children: [...]}\`.
+- skin: 'birds' (default, plain Maze) or a Karel-family skin — 'farmer', 'bee', 'collector' — that unlocks extra toolbox/solution block types below. Other skin strings are accepted for cosmetic use (avatar only) but get none of the extra blocks.
+- toolbox: which block types are available — the solution may only use types listed here. Always available: moveForward, turnLeft, turnRight, repeat. Skin-gated (only on a matching skin — the gate rejects a mismatch): fill/dig (skin: 'farmer'), getNectar/makeHoney (skin: 'bee'), collect (skin: 'collector'). These skin blocks are flavor: they play their animation but never move Pegman, turn Pegman, or affect whether the puzzle is solved, so use them for narrative color (e.g. a bee gathering nectar en route to the hive), not as the actual objective.
+- solution: the ordered block program that solves the puzzle, e.g. \`[{type: 'turnLeft'}, {type: 'moveForward'}, {type: 'moveForward'}]\`. A repeat block is \`{type: 'repeat', times: 3, children: [...]}\`. A skin block is a single-field node, e.g. \`{type: 'fill'}\`.
 - idealBlockCount: how many blocks a good solution takes (repeat counts as 1 + its children, not multiplied by times) — this is shown to the learner as the target.
 
 Worked example — a 2-move puzzle, bird starts facing a wall and must turn then walk to the goal:

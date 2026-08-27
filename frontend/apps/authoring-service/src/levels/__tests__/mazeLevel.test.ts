@@ -205,6 +205,125 @@ describe('verifyMazeLevelSolvable', () => {
     });
     expect(verifyMazeLevelSolvable(workedExample)).toEqual({ok: true});
   });
+
+  it('treats an obstacle tile as blocking, same as a wall (regression)', () => {
+    // Obstacle (4) tiles block movement exactly like walls (0) — see
+    // packages/labs/maze/src/api.ts's isPath. An obstacle directly between
+    // start and finish, with no way around it, must be reported the same
+    // way a wall would be: unreachable.
+    const obstacleBlocksOnlyPath = baseDefinition({
+      grid: [
+        [0, 0, 0, 0, 0],
+        [0, 2, 4, 3, 0],
+        [0, 0, 0, 0, 0],
+      ],
+      startDirection: 1, // east
+      toolbox: ['moveForward'],
+      solution: [{type: 'moveForward'}, {type: 'moveForward'}],
+      idealBlockCount: 2,
+    });
+    expect(verifyMazeLevelSolvable(obstacleBlocksOnlyPath)).toMatchObject({
+      ok: false,
+      reason: expect.stringMatching(/not reachable/),
+    });
+  });
+
+  it('stops a solution at an obstacle tile even when the goal is reachable another way', () => {
+    // Here the obstacle isn't the only path (isReachable's BFS finds finish
+    // via the row below), so this exercises simulateMoveForward's own
+    // obstacle check, not just the pre-check BFS.
+    const obstacleInChosenPath = baseDefinition({
+      grid: [
+        [0, 0, 0, 0, 0],
+        [0, 2, 4, 3, 0],
+        [0, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0],
+      ],
+      startDirection: 1, // east
+      toolbox: ['moveForward'],
+      solution: [{type: 'moveForward'}, {type: 'moveForward'}],
+      idealBlockCount: 2,
+    });
+    expect(verifyMazeLevelSolvable(obstacleInChosenPath)).toMatchObject({
+      ok: false,
+      reason: expect.stringMatching(/hits a wall/),
+    });
+  });
+
+  describe('Karel-family skin action blocks', () => {
+    it('accepts a farmer-skin solution using fill/dig (simulated as no-ops)', () => {
+      const farmer = baseDefinition({
+        skin: 'farmer',
+        toolbox: ['moveForward', 'turnRight', 'fill', 'dig'],
+        solution: [
+          {type: 'fill'},
+          {type: 'moveForward'},
+          {type: 'dig'},
+          {type: 'turnRight'},
+          {type: 'moveForward'},
+        ],
+        idealBlockCount: 5,
+      });
+      expect(verifyMazeLevelSolvable(farmer)).toEqual({ok: true});
+    });
+
+    it('accepts a bee-skin solution using getNectar/makeHoney (simulated as no-ops)', () => {
+      const bee = baseDefinition({
+        skin: 'bee',
+        toolbox: ['moveForward', 'turnRight', 'getNectar', 'makeHoney'],
+        solution: [
+          {type: 'getNectar'},
+          {type: 'moveForward'},
+          {type: 'makeHoney'},
+          {type: 'turnRight'},
+          {type: 'moveForward'},
+        ],
+        idealBlockCount: 5,
+      });
+      expect(verifyMazeLevelSolvable(bee)).toEqual({ok: true});
+    });
+
+    it('accepts a collector-skin solution using collect (simulated as a no-op)', () => {
+      const collector = baseDefinition({
+        skin: 'collector',
+        toolbox: ['moveForward', 'turnRight', 'collect'],
+        solution: [
+          {type: 'collect'},
+          {type: 'moveForward'},
+          {type: 'turnRight'},
+          {type: 'moveForward'},
+        ],
+        idealBlockCount: 4,
+      });
+      expect(verifyMazeLevelSolvable(collector)).toEqual({ok: true});
+    });
+
+    it('rejects a toolbox offering a skin action block on the wrong skin', () => {
+      const wrongSkin = baseDefinition({
+        skin: 'birds',
+        toolbox: ['moveForward', 'turnRight', 'fill'],
+      });
+      expect(verifyMazeLevelSolvable(wrongSkin)).toMatchObject({
+        ok: false,
+        reason: expect.stringMatching(
+          /"fill" is only valid on skin "farmer"/,
+        ),
+      });
+    });
+
+    it('rejects a solution using getNectar when the toolbox/skin is farmer, not bee', () => {
+      const mismatched = baseDefinition({
+        skin: 'farmer',
+        toolbox: ['moveForward', 'getNectar'],
+      });
+      expect(verifyMazeLevelSolvable(mismatched)).toMatchObject({
+        ok: false,
+        reason: expect.stringMatching(
+          /"getNectar" is only valid on skin "bee"/,
+        ),
+      });
+    });
+  });
 });
 
 describe('XML serialization', () => {
@@ -241,6 +360,34 @@ describe('XML serialization', () => {
     expect(xml).toContain(
       '<statement name="DO"><block type="maze_moveForward">',
     );
+  });
+
+  it('serializes each Karel-family skin action block to its real block type', () => {
+    const toolboxXml = buildToolboxBlocksXml([
+      'fill',
+      'dig',
+      'getNectar',
+      'makeHoney',
+      'collect',
+    ]);
+    expect(toolboxXml).toContain('<block type="maze_fill"/>');
+    expect(toolboxXml).toContain('<block type="maze_dig"/>');
+    expect(toolboxXml).toContain('<block type="maze_nectar"/>');
+    expect(toolboxXml).toContain('<block type="maze_honey"/>');
+    expect(toolboxXml).toContain('<block type="collector_collect"/>');
+
+    const solutionXml = buildSolutionBlocksXml([
+      {type: 'fill'},
+      {type: 'dig'},
+      {type: 'getNectar'},
+      {type: 'makeHoney'},
+      {type: 'collect'},
+    ]);
+    expect(solutionXml).toContain('<block type="maze_fill"><next>');
+    expect(solutionXml).toContain('<block type="maze_dig"><next>');
+    expect(solutionXml).toContain('<block type="maze_nectar"><next>');
+    expect(solutionXml).toContain('<block type="maze_honey"><next>');
+    expect(solutionXml).toContain('<block type="collector_collect">');
   });
 });
 

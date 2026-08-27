@@ -22,6 +22,7 @@ import type {ResolveLevel} from './authoring/model.js';
 import {importCourseIfMissing} from './boot/importCourse.js';
 import {LevelCatalog, repairLevelProperties} from './boot/levelCatalog.js';
 import {FRONTEND_ROOT, resolveRepoRoot} from './boot/paths.js';
+import {checkImportedMazeLevel} from './levels/importedLevelCheck.js';
 import {buildChangeSet} from './publish/buildChangeSet.js';
 import {AuthoringState} from './state/AuthoringState.js';
 import {
@@ -142,6 +143,7 @@ app.use('/api/chat', rejectCrossSite);
 app.use('/api/changes', rejectCrossSite);
 app.use('/api/tutor', rejectCrossSite);
 app.use('/api/publish', rejectCrossSite);
+app.use('/api/levels/:numericId/check', rejectCrossSite);
 
 app.get('/api/state', c =>
   c.json({
@@ -159,6 +161,19 @@ app.get('/api/levels/:numericId/level_properties', c => {
     return c.json({error: `unknown level id ${numericId}`}, 404);
   }
   return c.json({[numericId]: properties});
+});
+
+// Author-mode "Check level" affordance on maze-family existingLevel
+// experiences: an authoring-time lint, not a play-time gate. Reuses the same
+// levelProperties the lab itself mounts from, so the check sees exactly what
+// the learner would.
+app.post('/api/levels/:numericId/check', c => {
+  const numericId = c.req.param('numericId');
+  const properties = state.getLevelProperties(numericId);
+  if (!properties) {
+    return c.json({error: `unknown level id ${numericId}`}, 404);
+  }
+  return c.json(checkImportedMazeLevel({properties}));
 });
 
 app.get('/api/levels/search', c => {

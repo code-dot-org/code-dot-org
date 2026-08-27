@@ -54,6 +54,15 @@ export interface WidgetResponse {
   html: string;
 }
 
+/** Result of the maze-family "Check level" authoring lint — see
+ * authoring-service's importedLevelCheck.ts for what each field means. */
+export interface LevelCheckResponse {
+  ok: boolean;
+  mode: 'simulated' | 'palette';
+  reasons: string[];
+  note?: string;
+}
+
 export type TutorEvent = {
   kind: 'widget_event' | 'learner_message' | 'experience_shown';
   experienceId?: string;
@@ -140,6 +149,8 @@ export const authoringApi = {
     ).then(r => r.levels),
   fetchLevelProperties: (numericId: number) =>
     get<LevelPropertiesMap>(`/levels/${numericId}/level_properties`),
+  checkLevel: (numericId: number) =>
+    post<LevelCheckResponse>(`/levels/${numericId}/check`, {}),
   tutorTurn: (lessonId: string, transcript: TutorEvent[]) =>
     post<TutorAction>('/tutor', {lessonId, transcript}),
   publish: () => post<Record<string, unknown>>('/publish', {}),
