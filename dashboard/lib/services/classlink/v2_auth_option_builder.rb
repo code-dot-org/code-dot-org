@@ -23,14 +23,19 @@ module Services
         )
         return nil unless classlink_v2_id
 
-        classlink_auth_option = AuthenticationOption.find_by(
+        # Byte-exact lookups throughout: ClassLink ids are case-sensitive and
+        # the column collation is not (see CASE_SENSITIVE_CREDENTIAL_TYPES).
+        # The exactness matters most for the idempotency check below — under
+        # the collation, a v2 id differing from this user's only by case would
+        # block their v2 option from ever being built.
+        classlink_auth_option = AuthenticationOption.find_by_exact_credential(
           credential_type: AuthenticationOption::CLASSLINK,
           authentication_id: classlink_v1_id
         )
 
         return nil unless classlink_auth_option
 
-        v2_already_exists = AuthenticationOption.exists?(
+        v2_already_exists = AuthenticationOption.find_by_exact_credential(
           credential_type: AuthenticationOption::CLASSLINK,
           authentication_id: classlink_v2_id
         )

@@ -105,5 +105,29 @@ class Services::Classlink::V2AuthOptionBuilderTest < ActiveSupport::TestCase
         _(result).must_be_nil
       end
     end
+
+    context 'when a v2 auth option exists whose id differs only by case' do
+      let(:user) {create(:student, :with_classlink_authentication_option)}
+      let(:original_auth) do
+        user.authentication_options.find_by(credential_type: AuthenticationOption::CLASSLINK)
+      end
+      let(:classlink_v1_id) {original_auth.authentication_id}
+      let(:sourced_id) {'5678_t5678-0005'}
+
+      before do
+        create(
+          :authentication_option,
+          credential_type: AuthenticationOption::CLASSLINK,
+          authentication_id: "#{tenant_id}|#{sourced_id.upcase}"
+        )
+      end
+
+      # The idempotency check must compare byte-exactly: ids are case-sensitive
+      # and the column collation is not, so a case-twin's record must not block
+      # this user's v2 option from being built.
+      it 'still builds the auth option' do
+        _(result.authentication_id).must_equal "#{tenant_id}|#{sourced_id}"
+      end
+    end
   end
 end
