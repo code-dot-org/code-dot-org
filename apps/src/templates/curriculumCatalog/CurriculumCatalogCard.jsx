@@ -67,7 +67,6 @@ const CurriculumCatalogCard = ({
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
   aiChatToolsDependency,
-  exemptFromAiChatToolsAlerts,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -118,7 +117,6 @@ const CurriculumCatalogCard = ({
     recommendedSimilarCurriculum={recommendedSimilarCurriculum}
     recommendedStretchCurriculum={recommendedStretchCurriculum}
     aiChatToolsDependency={aiChatToolsDependency}
-    exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
     {...props}
   />
 );
@@ -163,7 +161,6 @@ CurriculumCatalogCard.propTypes = {
   recommendedStretchCurriculum: PropTypes.object,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
-  exemptFromAiChatToolsAlerts: PropTypes.bool,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -203,7 +200,6 @@ const CustomizableCurriculumCatalogCard = ({
   recommendedStretchCurriculum,
   wide,
   aiChatToolsDependency,
-  exemptFromAiChatToolsAlerts,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -248,7 +244,6 @@ const CustomizableCurriculumCatalogCard = ({
         <MultipleSectionsAssigner
           assignmentName={courseDisplayNameWithLatestYear}
           aiChatToolsDependency={aiChatToolsDependency}
-          exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
@@ -436,7 +431,6 @@ const CustomizableCurriculumCatalogCard = ({
           subjectsAndTopics={subjectsAndTopics}
           deviceCompatibility={deviceCompatibility}
           aiChatToolsDependency={aiChatToolsDependency}
-          exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
           description={description}
           professionalLearningProgram={professionalLearningProgram}
           video={video}
@@ -469,7 +463,6 @@ CustomizableCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
-  exemptFromAiChatToolsAlerts: PropTypes.bool,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
   isEnglish: PropTypes.bool,

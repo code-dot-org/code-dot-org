@@ -874,17 +874,6 @@ class Section < ApplicationRecord
     SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 
-  # Bandaid: whether the course or unit assigned to this section is one whose
-  # reported AI chat tools dependency is wrong, and so is left out of the alerts
-  # that tell teachers the course requires AI chat tools. The dependency this
-  # section reports is unaffected; only the alerts consult the list. See
-  # SharedConstants::AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES.
-  def assigned_curriculum_exempt_from_ai_chat_tools_alerts?
-    [unit_group&.name, script&.name].compact.any? do |name|
-      SharedConstants::AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES.include?(name)
-    end
-  end
-
   # A section can be assigned a course (aka unit_group) without being assigned a script,
   # so we check both here.
   def assigned_csa?

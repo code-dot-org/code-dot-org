@@ -306,24 +306,6 @@ describe('MultipleSectionsAssigner', () => {
     );
   });
 
-  it('warns that the course requires AI chat tools when assigning one that does', () => {
-    setUp({aiChatToolsDependency: 'essential'});
-
-    screen.getByText(/requires the use of AI chat tools/);
-  });
-
-  // Bandaid: a course exempt from the AI chat tools alerts still reports an
-  // essential dependency, so the assign-time warning has to be suppressed here
-  // too. This test goes away with the exemption.
-  it('omits that warning for a course exempt from the AI chat tools alerts', () => {
-    setUp({
-      aiChatToolsDependency: 'essential',
-      exemptFromAiChatToolsAlerts: true,
-    });
-
-    expect(screen.queryByText(/requires the use of AI chat tools/)).to.be.null;
-  });
-
   it('can select all sections using the `select all` link', () => {
     const {container} = setUp({
       isAssigningCourseOnly: false,

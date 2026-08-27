@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import isExemptFromAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/aiChatToolsAlertExemptions';
 import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -168,11 +167,6 @@ class UnitOverview extends React.Component {
     const displayRedirectDialog =
       redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
 
-    const exemptFromAiChatToolsAlerts = isExemptFromAiChatToolsAlert(
-      courseName,
-      scriptName
-    );
-
     const isHiddenUnit =
       !!selectedSectionId &&
       !!scriptId &&
@@ -226,11 +220,11 @@ class UnitOverview extends React.Component {
               teacherResources={teacherResources}
               isMigrated={isMigrated}
               aiChatToolsDependency={aiChatToolsDependency}
-              exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
             />
             {viewAs === ViewType.Instructor &&
-              aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
-              !exemptFromAiChatToolsAlerts && <RequiresAiChatToolsAlert />}
+              aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+                <RequiresAiChatToolsAlert />
+              )}
           </UnitOverviewHeader>
           {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}
           {showCalendar && viewAs === ViewType.Instructor && (

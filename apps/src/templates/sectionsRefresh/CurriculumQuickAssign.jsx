@@ -404,10 +404,9 @@ export default function CurriculumQuickAssign({
               isNewSection={isNewSection}
             />
           )}
-          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
-            !selectedCourseOffering?.exempt_from_ai_chat_tools_alerts && (
-              <AssigningEssentialAiChatToolsAlert />
-            )}
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <AssigningEssentialAiChatToolsAlert />
+          )}
           {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
             <AssigningAvailableAiChatToolsAlert />
           )}

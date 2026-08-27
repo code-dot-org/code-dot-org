@@ -152,7 +152,17 @@ class Unit < ApplicationRecord
 
   scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_any_ai_chat_tools)}
 
-  scope :with_essential_ai_chat_tools, -> {joins(:levels).merge(Level.with_essential_ai_chat_tools)}
+  # Excludes the units listed in
+  # SharedConstants::UNITS_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS, which is how a
+  # unit built in Web Lab 2 whose curriculum does not ask for AI Tutor stops
+  # reporting that it requires AI chat tools. An empty list is a no-op. Every
+  # caller reaches this through Unit#requires_ai_chat_tools? or
+  # UnitGroup#requires_ai_chat_tools?, so the exemption reaches the course, unit,
+  # and section dependencies together.
+  scope :with_essential_ai_chat_tools, (lambda do
+    joins(:levels).merge(Level.with_essential_ai_chat_tools).
+      where.not(scripts: {name: SharedConstants::UNITS_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS})
+  end)
 
   attr_accessor :skip_name_format_validation
 

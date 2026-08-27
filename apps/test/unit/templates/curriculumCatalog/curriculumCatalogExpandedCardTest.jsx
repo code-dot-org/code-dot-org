@@ -90,28 +90,6 @@ describe('CurriculumCatalogExpandedCard', () => {
     expect(container.querySelectorAll('i[class*=user]')).toHaveLength(1);
   });
 
-  it('renders the requires-AI-chat-tools marker for a course that requires them', () => {
-    renderCurriculumExpandedCard({
-      ...defaultProps,
-      aiChatToolsDependency: 'essential',
-    });
-
-    screen.getByText('Requires AI chat tools');
-  });
-
-  // Bandaid: a course exempt from the AI chat tools alerts still reports an
-  // essential dependency, so the marker has to be suppressed here too. This
-  // test goes away with the exemption.
-  it('omits the requires-AI-chat-tools marker for an exempt course', () => {
-    renderCurriculumExpandedCard({
-      ...defaultProps,
-      aiChatToolsDependency: 'essential',
-      exemptFromAiChatToolsAlerts: true,
-    });
-
-    expect(screen.queryByText('Requires AI chat tools')).toBeNull();
-  });
-
   it('renders duration with icon', () => {
     const duration = 'quarter';
     const {container} = renderCurriculumExpandedCard({

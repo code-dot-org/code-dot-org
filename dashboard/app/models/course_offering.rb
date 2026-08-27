@@ -337,7 +337,6 @@ class CourseOffering < ApplicationRecord
       course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)},
       ai_teaching_assistant_available: ai_teaching_assistant_available,
       ai_chat_tools_dependency: ai_chat_tools_dependency,
-      exempt_from_ai_chat_tools_alerts: exempt_from_ai_chat_tools_alerts?,
     }
   end
 
@@ -388,15 +387,6 @@ class CourseOffering < ApplicationRecord
     # Returns the AI chat tools dependency for this course offering, which is determined by latest course version.
     unit_group = latest_published_version&.content_root
     unit_group&.ai_chat_tools_dependency
-  end
-
-  # Bandaid: whether the version whose dependency this offering reports is one
-  # whose reported dependency is wrong, and so is left out of the alerts and
-  # markers that say a course requires AI chat tools. The dependency itself is
-  # unaffected. See
-  # SharedConstants::AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES.
-  def exempt_from_ai_chat_tools_alerts?
-    SharedConstants::AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES.include?(latest_published_version&.content_root&.name)
   end
 
   def summarize_for_edit
@@ -450,7 +440,6 @@ class CourseOffering < ApplicationRecord
       available_resources: get_available_resources(locale_code),
       facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog),
       ai_chat_tools_dependency: ai_chat_tools_dependency,
-      exempt_from_ai_chat_tools_alerts: exempt_from_ai_chat_tools_alerts?,
     }
   end
 

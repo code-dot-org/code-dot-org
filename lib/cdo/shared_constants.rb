@@ -923,19 +923,25 @@ module SharedConstants
     NONE: 'none',
   }.freeze
 
-  # Bandaid. Unit group and unit names whose reported AI chat tools dependency
-  # is wrong, and which are therefore left out of the alerts that tell teachers
-  # a course requires AI chat tools to complete.
+  # Bandaid. Units that do not count as requiring AI chat tools, even though
+  # Level.with_essential_ai_chat_tools says every Weblab2 level does.
   #
-  # Level.with_essential_ai_chat_tools counts every Weblab2 level as requiring
-  # AI chat tools, so a course is reported ESSENTIAL as soon as one of its units
-  # is built in Web Lab 2 -- true of CS Discoveries 2026 Unit 2, whose
-  # curriculum never asks students to use AI Tutor.
+  # Web Lab 2 builds an AI Tutor panel into the lab, so a unit built in Web Lab 2
+  # is reported as requiring AI chat tools, and so is any course containing it.
+  # That is right for AI Foundations and wrong for CS Discoveries 2026, whose
+  # Unit 2 was rebuilt in Web Lab 2 but whose curriculum never asks students to
+  # use the tutor: teachers were being told the course cannot be completed
+  # without AI chat tools.
   #
-  # Only the alerts consult this list; what students and teachers may actually
-  # do with AI chat tools is unchanged. Emptying the list restores the alerts.
-  AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES = %w(
-    csd-2026
+  # A unit named here reports AVAILABLE rather than ESSENTIAL, which quiets the
+  # alerts that state the stronger claim. It does not change what students and
+  # teachers may do -- level-by-level access is decided by
+  # Level.with_essential_ai_chat_tools, which this does not touch -- nor whether
+  # assigning the course turns AI chat tools on, which follows has_ai_chat_tools?.
+  #
+  # Emptying the list restores the previous reporting. The real fix, which lets a
+  # Web Lab 2 level say whether its tutor is essential, makes the list unnecessary.
+  UNITS_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS = %w(
     csd2-2026
   ).freeze
 

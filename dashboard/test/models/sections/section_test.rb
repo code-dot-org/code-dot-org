@@ -1947,30 +1947,16 @@ class SectionTest < ActiveSupport::TestCase
     assert entry.dig('coming_up', 'completed_unit')
   end
 
-  # Bandaid: 'csd-2026' and 'csd2-2026' are in
-  # SharedConstants::AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES. These tests go
-  # away with the exemption.
-  test 'assigned_curriculum_exempt_from_ai_chat_tools_alerts? is true for an exempt course' do
-    unit_group = create(:unit_group, name: 'csd-2026')
-    section = create(:section, teacher: @teacher, course_id: unit_group.id)
-
-    assert section.assigned_curriculum_exempt_from_ai_chat_tools_alerts?
-  end
-
-  test 'assigned_curriculum_exempt_from_ai_chat_tools_alerts? is true for an exempt unit assigned on its own' do
+  # Bandaid: a section assigned an exempt unit reports AVAILABLE, which is what
+  # quiets the AI settings warning, its nav icon, and the teacher homepage alert.
+  # This test goes away with the exemption.
+  test 'assigned_ai_chat_tools_dependency is available, not essential, for an exempt unit' do
     unit = create(:script, name: 'csd2-2026')
+    lesson = create(:lesson, :with_lesson_group, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
     section = create(:section, teacher: @teacher, script: unit)
 
-    assert section.assigned_curriculum_exempt_from_ai_chat_tools_alerts?
-  end
-
-  test 'assigned_curriculum_exempt_from_ai_chat_tools_alerts? is false for other curriculum' do
-    unit_group = create(:unit_group)
-    unit = create(:script)
-
-    refute create(:section, teacher: @teacher, course_id: unit_group.id).assigned_curriculum_exempt_from_ai_chat_tools_alerts?
-    refute create(:section, teacher: @teacher, script: unit).assigned_curriculum_exempt_from_ai_chat_tools_alerts?
-    refute create(:section, teacher: @teacher).assigned_curriculum_exempt_from_ai_chat_tools_alerts?
+    assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], section.assigned_ai_chat_tools_dependency
   end
 
   private def build_suggested_lesson_section

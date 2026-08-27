@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import isExemptFromAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/aiChatToolsAlertExemptions';
 import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
@@ -150,7 +149,6 @@ class CourseOverview extends Component {
     } = this.props;
 
     const viewAsTeacher = viewAs === ViewType.Instructor;
-    const exemptFromAiChatToolsAlerts = isExemptFromAiChatToolsAlert(name);
 
     const showNotification =
       viewAsTeacher &&
@@ -237,11 +235,11 @@ class CourseOverview extends Component {
           title={title}
           participantAudience={participantAudience}
           aiChatToolsDependency={aiChatToolsDependency}
-          exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
         />
         {viewAsTeacher &&
-          aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
-          !exemptFromAiChatToolsAlerts && <RequiresAiChatToolsAlert />}
+          aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <RequiresAiChatToolsAlert />
+          )}
         <SafeMarkdown
           className={styles.description}
           openExternalLinksInNewTab={true}

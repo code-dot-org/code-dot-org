@@ -77,8 +77,6 @@ const AiChatAccessControls: React.FC = () => {
     assignedAiChatToolsDependency: section.assignedAiChatToolsDependency,
     sectionAiChatAccessLevel: section.aiChatAccessLevel,
     teacherAiChatAccessLevel,
-    courseVersionName: section.courseVersionName,
-    unitName: section.unitName,
   });
 
   const dispatch = useAppDispatch();
