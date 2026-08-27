@@ -8946,12 +8946,1066 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "music-lab-functions-explore-evaluative_v2_2025-v2_2026",
+      "s3_config_dir": null,
+      "seeding_key": {
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "level_name": "music-lab-functions-practice-evaluative2_v2_2025-v2_2026",
+      "s3_config_dir": null,
+      "seeding_key": {
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "level_name": "music-lab-loops-explore-practice-a_v2_2025-v2_2026",
+      "s3_config_dir": null,
+      "seeding_key": {
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "level_name": "test-music-lab-loops-practice-summative_v2_2025-v2_2026",
+      "s3_config_dir": null,
+      "seeding_key": {
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "level_name": "test-music-lab-mini-project-gif-submit_2025-v2_2026",
+      "s3_config_dir": null,
+      "seeding_key": {
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "level_name": "test-music-lab-mini-project-walk-4_v2_2025-v2_2026",
+      "s3_config_dir": null,
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "level_name": "music-lab-genre-project_v2_2025-v2_2026",
+      "s3_config_dir": null,
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "level_name": "test-music-lab-sequence-explore-evaluative_v2_2025-v2_2026",
+      "s3_config_dir": null,
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "level_name": "test-music-lab-sequencing-practice-evaluative_v2_2025-v2_2026",
+      "s3_config_dir": null,
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "03bcafa8-bfef-4c56-85ce-2b8856c8b22a",
+      "position": 2,
+      "learning_goal": "Creativity and Originality",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "03bcafa8-bfef-4c56-85ce-2b8856c8b22a",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "12ff7de3-2191-4414-ac76-10997dd461d9",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "12ff7de3-2191-4414-ac76-10997dd461d9",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "1fe55b94-e8d5-418a-a895-0335165550d5",
+      "position": 3,
+      "learning_goal": "Planning & Alignment",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "1fe55b94-e8d5-418a-a895-0335165550d5",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "20e52343-59ec-479c-ae2e-93c29d530a02",
+      "position": 1,
+      "learning_goal": "Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "20e52343-59ec-479c-ae2e-93c29d530a02",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "4b2fc986-00a0-4221-be52-65309d8720b2",
+      "position": 4,
+      "learning_goal": "Planning & Alignment",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "4b2fc986-00a0-4221-be52-65309d8720b2",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "4da4d894-d291-48fa-a918-c791dd559314",
+      "position": 2,
+      "learning_goal": "Creativity and Originality",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "4da4d894-d291-48fa-a918-c791dd559314",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "5251c8d0-1a9a-44ca-b143-fc9ce9bf2740",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "5251c8d0-1a9a-44ca-b143-fc9ce9bf2740",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "56e6df3f-c8bd-4329-bd3b-8eb359b60c31",
+      "position": 1,
+      "learning_goal": "Sequencing",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "56e6df3f-c8bd-4329-bd3b-8eb359b60c31",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "73f18f80-8457-4402-bc6b-01a437ee1601",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "73f18f80-8457-4402-bc6b-01a437ee1601",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "b1319a2a-b3ff-41dd-b8ee-8854d1cb1134",
+      "position": 3,
+      "learning_goal": "Planning & Alignment",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "b1319a2a-b3ff-41dd-b8ee-8854d1cb1134",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "b83cbddb-f47c-4e4f-aa4f-22bca073ab4a",
+      "position": 1,
+      "learning_goal": "Sequencing",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "b83cbddb-f47c-4e4f-aa4f-22bca073ab4a",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "c8756e91-e46e-4d24-8780-5c8d8aa1d235",
+      "position": 3,
+      "learning_goal": "Creativity and Originality",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "c8756e91-e46e-4d24-8780-5c8d8aa1d235",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "da0ee0d3-b504-4fb2-9e77-e2e0404b49dc",
+      "position": 1,
+      "learning_goal": "Sequencing",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "da0ee0d3-b504-4fb2-9e77-e2e0404b49dc",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "e45ba690-a3da-416a-94d6-af9297e127f4",
+      "position": 1,
+      "learning_goal": "Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e45ba690-a3da-416a-94d6-af9297e127f4",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "e91f4e00-72e4-4d00-9ac7-ddb3e764c93e",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e91f4e00-72e4-4d00-9ac7-ddb3e764c93e",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "key": "f99ebcc5-bf83-4b5b-a52b-14fe2f2bfbc0",
+      "position": 2,
+      "learning_goal": "Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "f99ebcc5-bf83-4b5b-a52b-14fe2f2bfbc0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "The project has not started.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "03bcafa8-bfef-4c56-85ce-2b8856c8b22a",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Shows limited creativity, relying on limited sound use and limited experimentation to find interesting combinations or tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "03bcafa8-bfef-4c56-85ce-2b8856c8b22a",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Demonstrates some creative thinking by combining musical elements in a thoughtful or experimental way, though the structure of the song may still feel unoriginal or expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "03bcafa8-bfef-4c56-85ce-2b8856c8b22a",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Demonstrates innovative and unique approaches, effectively blending musical elements and song structure in unexpected ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "03bcafa8-bfef-4c56-85ce-2b8856c8b22a",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The song doesn't use any loops",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "12ff7de3-2191-4414-ac76-10997dd461d9",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song uses loops, but does not match the original song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "12ff7de3-2191-4414-ac76-10997dd461d9",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song uses loops and matches the original song, but the song can be completed with less blocks",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "12ff7de3-2191-4414-ac76-10997dd461d9",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song uses one loop per track and matches the original song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "12ff7de3-2191-4414-ac76-10997dd461d9",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The planning guide is blank or the final product does not match the project task at all",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "1fe55b94-e8d5-418a-a895-0335165550d5",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The final product does not align well with the task goal OR The planning steps are incomplete.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "1fe55b94-e8d5-418a-a895-0335165550d5",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Most planning and reflection steps are completed, and the final product mostly aligns with the defined goal, though a few elements may lack clear alignment.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "1fe55b94-e8d5-418a-a895-0335165550d5",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All planning and reflection steps are complete and documented. The final product clearly meets the defined goal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "1fe55b94-e8d5-418a-a895-0335165550d5",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no functions",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "20e52343-59ec-479c-ae2e-93c29d530a02",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song does not contain 3 functions or functions are not used exclusively under when run",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "20e52343-59ec-479c-ae2e-93c29d530a02",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song contains at least 3 functions that separate the song into individual intro, verse, and chorus parts. The functions themselves may be simplistic or the tracks chosen appear disparate or random.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "20e52343-59ec-479c-ae2e-93c29d530a02",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song contains at least 3 functions that separate the song into individual intro, verse, and chorus parts. Each function layers several tracks that have been intentionally chosen to compliment the vocals in creative ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "20e52343-59ec-479c-ae2e-93c29d530a02",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The planning guide is blank or the final product does not match the project task at all",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4b2fc986-00a0-4221-be52-65309d8720b2",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The final product does not align well with the task goal OR The planning steps are incomplete.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4b2fc986-00a0-4221-be52-65309d8720b2",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Most planning and reflection steps are completed, and the final product mostly aligns with the defined goal, though a few elements may lack clear alignment.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4b2fc986-00a0-4221-be52-65309d8720b2",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All planning and reflection steps are complete and documented. The final product clearly meets the defined goal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4b2fc986-00a0-4221-be52-65309d8720b2",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project has not started.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4da4d894-d291-48fa-a918-c791dd559314",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Shows limited creativity, relying on limited sound use and limited experimentation to find interesting combinations or tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4da4d894-d291-48fa-a918-c791dd559314",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Demonstrates some creative thinking by combining musical elements in a thoughtful or experimental way, though the structure of the song may still feel unoriginal or expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4da4d894-d291-48fa-a918-c791dd559314",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Demonstrates innovative and unique approaches, effectively blending musical elements and song structure in unexpected ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4da4d894-d291-48fa-a918-c791dd559314",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use loops, but the implementation may be very basic or not implemented properly. For example, play sequential blocks with duplicate tracks are still used when a repeat block could be used instead",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "5251c8d0-1a9a-44ca-b143-fc9ce9bf2740",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Loops are used to make code more efficient by repeating tracks of different lengths.  For example: using loops to play beat and bass backing tracks together, where each track has a different length\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "5251c8d0-1a9a-44ca-b143-fc9ce9bf2740",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Loops are used strategically in combination with sequencing blocks, such as repeating tracks underneath vocals in sequence -- AND -- At least 1 nested loop is used in the song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "5251c8d0-1a9a-44ca-b143-fc9ce9bf2740",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Loops are used strategically with sequencing blocks and rests to create offset, layered tracks -- AND -- At least 1 nested loop is used in the song. For example: a song where multiple repeated tracks start and stop at different times.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "5251c8d0-1a9a-44ca-b143-fc9ce9bf2740",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use sequencing blocks, but the implementation may be very basic or not implemented properly. For example, all tracks play sequentially one after the other.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "56e6df3f-c8bd-4329-bd3b-8eb359b60c31",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Sequencing blocks are used multiple times to play several tracks together. Tracks with different lengths are played together. For example: playing a 2-measure beat twice so it aligns with a 4-measure vocal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "56e6df3f-c8bd-4329-bd3b-8eb359b60c31",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Sequencing blocks are used multiple times to play several tracks together. Tracks with different lengths are played together -- AND -- Rests are used strategically to offset when tracks start. For example: delaying the start of a 1-measure effect until the end of a vocal lyric.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "56e6df3f-c8bd-4329-bd3b-8eb359b60c31",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Sequencing blocks are used multiple times to play several tracks together. Tracks with different lengths are played together -- AND -- Rests are used strategically to offset when tracks start -- AND -- Multiple effects are used to change how tracks sound. For example: lowering the volume on background beats and then resetting the volume and applying a delay to a vocal\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "56e6df3f-c8bd-4329-bd3b-8eb359b60c31",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The song does not contain loops or does not contain rests.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "73f18f80-8457-4402-bc6b-01a437ee1601",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song does not use at least 4 tracks or the majority of the tracks start and stop at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "73f18f80-8457-4402-bc6b-01a437ee1601",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song contains at least 4 different tracks that are looped and layered together, but some tracks stop and start at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "73f18f80-8457-4402-bc6b-01a437ee1601",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song contains at least 4 different tracks that are looped and layered together to create a complex song. All tracks stop and start at different times on the timeline.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "73f18f80-8457-4402-bc6b-01a437ee1601",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The planning guide is blank or the final product does not match the project task at all",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "b1319a2a-b3ff-41dd-b8ee-8854d1cb1134",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The final product does not align well with the task goal OR The planning steps are incomplete.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "b1319a2a-b3ff-41dd-b8ee-8854d1cb1134",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Most planning and reflection steps are completed, and the final product mostly aligns with the defined goal, though a few elements may lack clear alignment.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "b1319a2a-b3ff-41dd-b8ee-8854d1cb1134",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All planning and reflection steps are complete and documented. The final product clearly meets the defined goal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "b1319a2a-b3ff-41dd-b8ee-8854d1cb1134",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no play together blocks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "b83cbddb-f47c-4e4f-aa4f-22bca073ab4a",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song does not have three play together blocks, but does have one or two.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "b83cbddb-f47c-4e4f-aa4f-22bca073ab4a",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song has three play together blocks, but they do not contain bass, lead, and vocal tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "b83cbddb-f47c-4e4f-aa4f-22bca073ab4a",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song has three play together blocks. Each play together block has at least 3 play blocks with bass, lead, and vocals.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "b83cbddb-f47c-4e4f-aa4f-22bca073ab4a",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project has not started.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "c8756e91-e46e-4d24-8780-5c8d8aa1d235",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Shows limited creativity, relying on limited sound use and limited experimentation to find interesting combinations or tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "c8756e91-e46e-4d24-8780-5c8d8aa1d235",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Demonstrates some creative thinking by combining musical elements in a thoughtful or experimental way, though the structure of the song may still feel unoriginal or expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "c8756e91-e46e-4d24-8780-5c8d8aa1d235",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Demonstrates innovative and unique approaches, effectively blending musical elements and song structure in unexpected ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "c8756e91-e46e-4d24-8780-5c8d8aa1d235",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The song does not have enough tracks or all of them start at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "da0ee0d3-b504-4fb2-9e77-e2e0404b49dc",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song contains at least 4 tracks but several of them start at the same time",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "da0ee0d3-b504-4fb2-9e77-e2e0404b49dc",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song contains at least 4 different tracks that start and stop at different times, but the song does not create a \"build\" effect based on how the tracks are sequenced.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "da0ee0d3-b504-4fb2-9e77-e2e0404b49dc",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song contains at least 4 different tracks that are layered together to create a complex song that \"builds\". New tracks are introduced at different start times and all tracks end at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "da0ee0d3-b504-4fb2-9e77-e2e0404b49dc",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The song does not use any functions",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e45ba690-a3da-416a-94d6-af9297e127f4",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song contains one or two functions, but not all three.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e45ba690-a3da-416a-94d6-af9297e127f4",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song uses three functions, but not all of the blocks have been moved into the functions. The code under \"when run\" contains both function calls and other blocks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e45ba690-a3da-416a-94d6-af9297e127f4",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song uses three functions and the code under \"when run\" contains only function calls.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e45ba690-a3da-416a-94d6-af9297e127f4",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use loops, but the implementation may be very basic or not implemented properly. For example, play sequential blocks with duplicate tracks are still used when a repeat block could be used instead",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e91f4e00-72e4-4d00-9ac7-ddb3e764c93e",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Loops are used to make code more efficient by repeating tracks of different lengths.  For example: using loops to play beat and bass backing tracks together, where each track has a different length\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e91f4e00-72e4-4d00-9ac7-ddb3e764c93e",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Loops are used strategically in combination with sequencing blocks, such as repeating tracks underneath vocals in sequence -- AND -- At least 1 nested loop is used in the song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e91f4e00-72e4-4d00-9ac7-ddb3e764c93e",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Loops are used strategically with sequencing blocks and rests to create offset, layered tracks -- AND -- At least 1 nested loop is used in the song. For example: a song where multiple repeated tracks start and stop at different times.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e91f4e00-72e4-4d00-9ac7-ddb3e764c93e",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use functions, but the implementation may be very basic or not implemented properly. For example: using functions for small chunks of code without a clear purpose, or functions have unclear and misleading names\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "f99ebcc5-bf83-4b5b-a52b-14fe2f2bfbc0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Functions are used to make code more efficient by replacing large chunks of code with a single function call. For example: using a function for the \"verse\" or \"chorus\" of a song\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "f99ebcc5-bf83-4b5b-a52b-14fe2f2bfbc0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Functions are used strategically in combination with each other, where smaller functions are called inside larger functions -- AND -- The majority of the \"when run\" code are function calls. For example: making a function for the vocals and making a function for the instruments and calling them together in a “choir” function.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "f99ebcc5-bf83-4b5b-a52b-14fe2f2bfbc0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Functions are used strategically in combination with each other, where smaller functions are called inside larger functions -- AND -- At least one function is called in multiple places in the song -- AND -- The majority of the \"when run\" code are function calls. For example: creating a function for \"backingBeats\" and then using this function in both the \"verse\" and \"chorus\" functions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "f99ebcc5-bf83-4b5b-a52b-14fe2f2bfbc0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3a-2026"
+      }
+    }
   ]
 }
