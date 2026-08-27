@@ -469,6 +469,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
+  exemptFromAiChatToolsAlerts: PropTypes.bool,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
   isEnglish: PropTypes.bool,
