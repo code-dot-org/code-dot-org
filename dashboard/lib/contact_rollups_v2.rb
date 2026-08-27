@@ -11,12 +11,24 @@ class ContactRollupsV2
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  # The db_endpoint_* settings are bare hostnames; port, credentials, and
+  # database name live in their own settings and must be composed into a
+  # mysql2:// URI before Sequel can connect. Every environment defines these
+  # (test/development point them at localhost).
+  REPORTING_DB_URI = Cdo::Sequel.mysql2_uri(
+    host: CDO.db_endpoint_proxy_reporting,
+    port: CDO.db_endpoint_proxy_reporting_port,
+    username: CDO.db_credential_reader['username'],
+    password: CDO.db_credential_reader['password'],
+    database: CDO.dashboard_db_name
+  )
+
   # Reporting database connection pool. Use this to execute the pipeline's
   # large SELECT statements instead of loading the writer, which otherwise
   # carries the entire nightly job.
   DASHBOARD_REPORTING_DB = Cdo::Sequel.database_connection_pool(
-    CDO.db_endpoint_proxy_reporting,
-    CDO.db_endpoint_proxy_reporting,
+    REPORTING_DB_URI,
+    REPORTING_DB_URI,
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
