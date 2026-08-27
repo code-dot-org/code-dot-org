@@ -6,7 +6,7 @@ class CreateAnonymousLevelProgresses < ActiveRecord::Migration[7.0]
       t.belongs_to :script, type: :integer, null: false, index: false
       t.belongs_to :level, type: :integer, null: false, index: false
       t.belongs_to :unit_group, type: :integer, index: false
-      t.belongs_to :level_source, index: false
+      t.belongs_to :level_source, index: false, unsigned: true
 
       t.integer :attempts, null: false, default: 0
       t.integer :best_result
