@@ -121,26 +121,30 @@ class QuizQuestionsController < ApplicationController
   # forces a fork. Forking never touches the original row or any other
   # quiz's placement of it - it only repoints this quiz's own
   # QuizQuestionPlacement at a brand new question carrying the edited content.
+  #
+  # All three writes (target, standards, placement) share one transaction.
   def update
     question = @level.questions.find(params[:id])
     placement = @level.placements.find_by!(quiz_question_id: question.id)
     should_fork = question.used_in_published_unit? || quiz_question_params[:editMode] == 'fork'
     target = should_fork ? MultipleChoiceQuestion.new(key: SecureRandom.uuid, parent: question) : question
 
-    target.update!(
-      name: quiz_question_params[:questionName],
-      content: {
-        stem: quiz_question_params[:stem],
-        choices: (quiz_question_params[:choices] || []).map(&:to_h),
-        correct_choice_id: quiz_question_params[:correctChoiceId],
-      },
-      explanation: quiz_question_params[:explanation]
-    )
-    target.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
+    ActiveRecord::Base.transaction do
+      target.update!(
+        name: quiz_question_params[:questionName],
+        content: {
+          stem: quiz_question_params[:stem],
+          choices: (quiz_question_params[:choices] || []).map(&:to_h),
+          correct_choice_id: quiz_question_params[:correctChoiceId],
+        },
+        explanation: quiz_question_params[:explanation]
+      )
+      target.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
 
-    placement.quiz_question = target if should_fork
-    placement.page = quiz_question_params[:page] if quiz_question_params[:page].present?
-    placement.save!
+      placement.quiz_question = target if should_fork
+      placement.page = quiz_question_params[:page] if quiz_question_params[:page].present?
+      placement.save!
+    end
 
     render json: quiz_question_json(target)
   rescue StandardError => exception

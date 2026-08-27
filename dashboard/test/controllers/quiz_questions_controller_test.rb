@@ -252,6 +252,24 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     refute_equal @question.id, JSON.parse(response.body)['id']
   end
 
+  test "update rolls back the forked question entirely when standard assignment fails" do
+    unit = create(:unit)
+    create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:script_level, script: unit, levels: [@quiz])
+
+    assert_no_difference 'QuizQuestion.count' do
+      put :update, params: {
+        level_id: @quiz.id, id: @question.id,
+        questionName: 'Forked name', stem: 'Forked stem',
+        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
+        standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
+      }
+    end
+
+    assert_response :bad_request
+    assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
+  end
+
   # --- attach / detach / destroy: three different removal semantics ---
 
   test "attach is idempotent - attaching an already-attached question does not duplicate the placement" do
