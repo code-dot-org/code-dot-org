@@ -1940,12 +1940,12 @@ class User < ApplicationRecord
   #   should always be one of the valid credential types from AuthenticationOption
   # @param [String] id A user id associated with the particular provider.
   # @param [Boolean] exact_match When true, a stored id must match the given id
-  #   byte-for-byte. The default lookup compares under the column collation
-  #   (utf8mb3_unicode_ci), which ignores case; pass true for providers whose
-  #   ids are case-sensitive strings, so an id differing only in case is not
-  #   treated as a hit.
+  #   byte-for-byte; otherwise the lookup compares under the column collation
+  #   (utf8mb3_unicode_ci), which ignores case. Defaults by provider type via
+  #   AuthenticationOption::CASE_SENSITIVE_CREDENTIAL_TYPES, so callers only
+  #   pass it to override the type's policy.
   # @returns [User|nil]
-  def self.find_by_credential(type:, id:, exact_match: false)
+  def self.find_by_credential(type:, id:, exact_match: AuthenticationOption::CASE_SENSITIVE_CREDENTIAL_TYPES.include?(type.to_s))
     if exact_match
       option = AuthenticationOption.find_by_exact_credential(
         credential_type: type,

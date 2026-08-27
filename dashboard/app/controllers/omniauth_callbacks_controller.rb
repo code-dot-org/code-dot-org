@@ -111,10 +111,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return redirect_to edit_user_registration_path
     end
 
-    existing_credential_holder = User.find_by_credential \
-      type: provider,
-      id: auth_hash.uid,
-      exact_match: provider == AuthenticationOption::CLASSLINK
+    existing_credential_holder = User.find_by_credential type: provider, id: auth_hash.uid
 
     # Credential is already held by the current user
     # Notify of no-op.
@@ -329,10 +326,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def find_user_by_credential
     return nil unless auth_hash
 
-    User.find_by_credential \
-      type: auth_hash.provider,
-      id: auth_hash.uid,
-      exact_match: auth_hash.provider.to_s == AuthenticationOption::CLASSLINK
+    User.find_by_credential(type: auth_hash.provider, id: auth_hash.uid)
   end
 
   # Temporary method to find existing Clever users by their legacy_id field. This

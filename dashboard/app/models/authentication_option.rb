@@ -100,6 +100,14 @@ class AuthenticationOption < ApplicationRecord
     MICROSOFT
   ].freeze
 
+  # Providers whose external ids are case-sensitive strings. Lookups for these
+  # types confirm matches byte-for-byte (see User.find_by_credential and
+  # find_by_exact_credential below) instead of trusting the authentication_id
+  # column's case-insensitive collation.
+  CASE_SENSITIVE_CREDENTIAL_TYPES = [
+    CLASSLINK,
+  ].freeze
+
   module Clever
     VERSION = {
       v3: 'v3',
