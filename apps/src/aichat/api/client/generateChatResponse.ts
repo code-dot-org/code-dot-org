@@ -20,7 +20,6 @@ import {
 import {generatedFileToAsset} from './helpers/fileHelpers';
 import {
   announcedImageIsMissing,
-  isImageModel,
   redrawAnnouncedImage,
 } from './helpers/imageHelpers';
 import {
@@ -126,28 +125,16 @@ export async function generateChatResponse(
   let imageGenerationFailed = false;
 
   if (announcedImageIsMissing(modelParameters, files, text)) {
-    console.log('🎨: announced an image but sent none, redrawing.');
-    console.log('🎨: announcement ended with', JSON.stringify(text.slice(-40)));
     generatedFiles = await redrawAnnouncedImage(
       modelParameters,
       text,
       newMessage.chatMessageText
     );
     imageGenerationFailed = generatedFiles.length === 0;
-    console.log(
-      imageGenerationFailed
-        ? '🎨: redraw returned no image'
-        : `🎨: redraw returned ${generatedFiles.length} image(s)`
-    );
     Observability.metrics.count('ai-chat.image_redraw', 1, {
       result: imageGenerationFailed ? 'failed' : 'recovered',
       model: modelParameters.selectedModelId,
     });
-  } else if (isImageModel(modelParameters) && files.length === 0) {
-    console.log('🎨: no image sent, and no announcement detected.');
-    console.log('🎨: response ended with', JSON.stringify(text.slice(-40)));
-  } else if (isImageModel(modelParameters)) {
-    console.log(`🎨: model sent ${files.length} image(s), no redraw needed`);
   }
 
   // Upload generated assets, if any.

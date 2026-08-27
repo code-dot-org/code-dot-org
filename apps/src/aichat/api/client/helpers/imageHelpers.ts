@@ -8,13 +8,13 @@ import {getModel} from './modelHelpers';
 
 const IMAGE_MODEL_IDS: string[] = [AiChatModelIds.GEMINI_2_5_FLASH_IMAGE];
 
-export function isImageModel(modelParameters: ModelParameters): boolean {
+function isImageModel(modelParameters: ModelParameters): boolean {
   return IMAGE_MODEL_IDS.includes(modelParameters.selectedModelId);
 }
 
 /**
  * A missing image announces itself. The model writes the text that would have
- * introduced the image and stops mid-thought, so the reply ends in whitespace;
+ * introduced the image and reply ends in whitespace;
  * turns that are legitimately text-only end on sentence punctuation.
  */
 export function announcedImageIsMissing(
