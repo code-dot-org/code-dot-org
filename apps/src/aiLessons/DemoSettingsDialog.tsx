@@ -6,6 +6,7 @@ import {useTheme, Theme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React from 'react';
 
@@ -73,8 +74,7 @@ const DemoSettingsDialog: React.FunctionComponent<{
     >
       <h2 className={styles.demoSettingsTitle}>Controls</h2>
       <p id="dsco-dialog-description" className={styles.muted}>
-        Presenter controls for trying lesson-flow variants. These apply to this
-        browser only — nothing here changes the lesson or student data.
+        Presenter controls for trying lesson-flow variants.
       </p>
       <div className={styles.demoSettingsSection}>
         <strong>Theme</strong>
@@ -100,21 +100,34 @@ const DemoSettingsDialog: React.FunctionComponent<{
       {stepControl && (
         <div className={styles.demoSettingsSection}>
           <strong>Go to step</strong>
+          <p className={styles.demoSettingsNote}>
+            In adaptive modes, steps are added dynamically; completing every
+            step listed here is not required to finish the lesson.
+          </p>
           <div className={styles.demoSettingsStepRow}>
-            <MuiIconButton
-              size="small"
-              color="primary"
-              className={styles.stepArrow}
-              disabled={!stepControl.canPrev}
-              aria-label="Previous step"
-              title="Demo: jump back one step"
-              onClick={() => {
-                stepControl.onPrev();
-                onClose();
+            <WithTooltip
+              tooltipProps={{
+                text: 'Jump back one step',
+                tooltipId: 'tt-step-prev',
+                size: 'xs',
+                direction: 'onTop',
               }}
             >
-              <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
-            </MuiIconButton>
+              <MuiIconButton
+                size="small"
+                color="primary"
+                className={styles.stepArrow}
+                disabled={!stepControl.canPrev}
+                aria-label="Previous step"
+                aria-describedby="tt-step-prev"
+                onClick={() => {
+                  stepControl.onPrev();
+                  onClose();
+                }}
+              >
+                <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
+              </MuiIconButton>
+            </WithTooltip>
             <span className={styles.demoSettingsStepLabel}>
               <SimpleDropdown
                 name="demo-goto-step"
@@ -135,19 +148,28 @@ const DemoSettingsDialog: React.FunctionComponent<{
                 }}
               />
             </span>
-            <MuiIconButton
-              size="small"
-              color="primary"
-              className={styles.stepArrow}
-              aria-label="Next step"
-              title="Demo: skips the tutor check; authored order, so no hub loops"
-              onClick={() => {
-                stepControl.onNext();
-                onClose();
+            <WithTooltip
+              tooltipProps={{
+                text: 'Skips the tutor check; authored order, so no hub loops',
+                tooltipId: 'tt-step-next',
+                size: 'xs',
+                direction: 'onTop',
               }}
             >
-              <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
-            </MuiIconButton>
+              <MuiIconButton
+                size="small"
+                color="primary"
+                className={styles.stepArrow}
+                aria-label="Next step"
+                aria-describedby="tt-step-next"
+                onClick={() => {
+                  stepControl.onNext();
+                  onClose();
+                }}
+              >
+                <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
+              </MuiIconButton>
+            </WithTooltip>
           </div>
         </div>
       )}
@@ -161,50 +183,71 @@ const DemoSettingsDialog: React.FunctionComponent<{
                 ADAPTIVITY_ORDER.indexOf(mode) >
                 ADAPTIVITY_ORDER.indexOf(adaptivityControl.max);
               const isCurrent = mode === adaptivityControl.current;
+              const tooltipId = `tt-dialog-adaptivity-${mode}`;
               if (beyondMax) {
                 return (
-                  <span
+                  <WithTooltip
                     key={mode}
-                    className={styles.adaptivityPillDisabled}
-                    title={`${info.blurb} Not enabled for this lesson.`}
+                    tooltipProps={{
+                      text: `${info.blurb} Not enabled for this lesson.`,
+                      tooltipId,
+                      size: 'xs',
+                      direction: 'onTop',
+                    }}
                   >
-                    {info.label}
-                  </span>
+                    <span
+                      className={styles.adaptivityPillDisabled}
+                      aria-describedby={tooltipId}
+                    >
+                      {info.label}
+                    </span>
+                  </WithTooltip>
                 );
               }
               return (
-                <button
+                <WithTooltip
                   key={mode}
-                  type="button"
-                  className={
-                    isCurrent
-                      ? styles.adaptivityPillDefault
-                      : styles.adaptivityPill
-                  }
-                  aria-pressed={isCurrent}
-                  disabled={restarting}
-                  title={info.blurb}
-                  onClick={async () => {
-                    if (isCurrent) return;
-                    if (
-                      !window.confirm(
-                        `Switch to "${info.label}"? This clears saved progress and code for this lesson and restarts it from step 1.`
-                      )
-                    ) {
-                      return;
-                    }
-                    setRestarting(true);
-                    await adaptivityControl.onSwitch(mode);
-                    // Only reached when the switch failed (success
-                    // reloads the page): re-arm the buttons.
-                    setRestarting(false);
+                  tooltipProps={{
+                    text: info.blurb,
+                    tooltipId,
+                    size: 'xs',
+                    direction: 'onTop',
                   }}
                 >
-                  {info.label}
-                  {isCurrent && (
-                    <span className={styles.adaptivityDefaultTag}>current</span>
-                  )}
-                </button>
+                  <button
+                    type="button"
+                    className={
+                      isCurrent
+                        ? styles.adaptivityPillDefault
+                        : styles.adaptivityPill
+                    }
+                    aria-pressed={isCurrent}
+                    aria-describedby={tooltipId}
+                    disabled={restarting}
+                    onClick={async () => {
+                      if (isCurrent) return;
+                      if (
+                        !window.confirm(
+                          `Switch to "${info.label}"? This clears saved progress and code for this lesson and restarts it from step 1.`
+                        )
+                      ) {
+                        return;
+                      }
+                      setRestarting(true);
+                      await adaptivityControl.onSwitch(mode);
+                      // Only reached when the switch failed (success
+                      // reloads the page): re-arm the buttons.
+                      setRestarting(false);
+                    }}
+                  >
+                    {info.label}
+                    {isCurrent && (
+                      <span className={styles.adaptivityDefaultTag}>
+                        current
+                      </span>
+                    )}
+                  </button>
+                </WithTooltip>
               );
             })}
           </div>
@@ -217,33 +260,45 @@ const DemoSettingsDialog: React.FunctionComponent<{
         <div className={styles.demoSettingsSection}>
           <strong>Replay</strong>
           <div className={styles.demoSettingsRow}>
-            <MuiButton
-              type="button"
-              size="small"
-              color="secondary"
-              variant="outlined"
-              disabled={restarting}
-              startIcon={
-                <FontAwesomeV6Icon iconName="arrows-rotate" iconStyle="solid" />
-              }
-              title="Wipes saved code + progress for this lesson and starts over"
-              onClick={async () => {
-                if (
-                  !window.confirm(
-                    'Clear all saved progress and code for this lesson and restart from step 1?'
-                  )
-                ) {
-                  return;
-                }
-                setRestarting(true);
-                await onRestart();
-                // Only reached when the restart failed (success reloads
-                // the page): re-arm the button.
-                setRestarting(false);
+            <WithTooltip
+              tooltipProps={{
+                text: 'Wipes saved code + progress for this lesson and starts over',
+                tooltipId: 'tt-restart-lesson',
+                size: 'xs',
+                direction: 'onTop',
               }}
             >
-              {restarting ? 'Restarting…' : 'Clear progress and restart'}
-            </MuiButton>
+              <MuiButton
+                type="button"
+                size="small"
+                color="secondary"
+                variant="outlined"
+                disabled={restarting}
+                aria-describedby="tt-restart-lesson"
+                startIcon={
+                  <FontAwesomeV6Icon
+                    iconName="arrows-rotate"
+                    iconStyle="solid"
+                  />
+                }
+                onClick={async () => {
+                  if (
+                    !window.confirm(
+                      'Clear all saved progress and code for this lesson and restart from step 1?'
+                    )
+                  ) {
+                    return;
+                  }
+                  setRestarting(true);
+                  await onRestart();
+                  // Only reached when the restart failed (success
+                  // reloads the page): re-arm the button.
+                  setRestarting(false);
+                }}
+              >
+                {restarting ? 'Restarting…' : 'Clear progress and restart'}
+              </MuiButton>
+            </WithTooltip>
           </div>
         </div>
       )}

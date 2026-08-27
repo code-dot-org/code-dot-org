@@ -3,6 +3,7 @@
 // shell).
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
@@ -44,31 +45,52 @@ const AdaptivityPills: React.FunctionComponent<{lesson: LessonIndexEntry}> = ({
         {ADAPTIVITY_ORDER.map((mode, i) => {
           const info = ADAPTIVITY_INFO[mode];
           const isDefault = mode === authoredDefault;
+          const tooltipId = `tt-adaptivity-${lesson.id}-${mode}`;
           if (i > maxIndex) {
             return (
-              <span
+              <WithTooltip
                 key={mode}
-                className={styles.adaptivityPillDisabled}
-                title={`${info.blurb} Not enabled for this lesson.`}
+                tooltipProps={{
+                  text: `${info.blurb} Not enabled for this lesson.`,
+                  tooltipId,
+                  size: 'xs',
+                  direction: 'onTop',
+                }}
               >
-                {info.label}
-              </span>
+                <span
+                  className={styles.adaptivityPillDisabled}
+                  aria-describedby={tooltipId}
+                >
+                  {info.label}
+                </span>
+              </WithTooltip>
             );
           }
           return (
-            <Link
+            <WithTooltip
               key={mode}
-              className={
-                isDefault ? styles.adaptivityPillDefault : styles.adaptivityPill
-              }
-              href={`/ai_lessons/${lesson.id}?adaptivity=${mode}`}
-              title={`${info.blurb} Click to open the lesson in this mode.`}
+              tooltipProps={{
+                text: `${info.blurb} Click to open the lesson in this mode.`,
+                tooltipId,
+                size: 'xs',
+                direction: 'onTop',
+              }}
             >
-              {info.label}
-              {isDefault && (
-                <span className={styles.adaptivityDefaultTag}>default</span>
-              )}
-            </Link>
+              <Link
+                className={
+                  isDefault
+                    ? styles.adaptivityPillDefault
+                    : styles.adaptivityPill
+                }
+                href={`/ai_lessons/${lesson.id}?adaptivity=${mode}`}
+                aria-describedby={tooltipId}
+              >
+                {info.label}
+                {isDefault && (
+                  <span className={styles.adaptivityDefaultTag}>default</span>
+                )}
+              </Link>
+            </WithTooltip>
           );
         })}
       </div>
@@ -142,9 +164,11 @@ const LessonsListPage: React.FunctionComponent = () => {
           single seamless experience guided by AI Tutor.
         </p>
         <div className={styles.actions}>
-          <Link className={styles.primaryButton} href="/ai_lessons/new">
-            + New lesson
-          </Link>
+          {SHOW_AUTHORING_ACTIONS && (
+            <Link className={styles.primaryButton} href="/ai_lessons/new">
+              + New lesson
+            </Link>
+          )}
           <Link className={styles.secondaryButton} href="/ai_lessons/progress">
             View student progress
           </Link>
@@ -223,24 +247,33 @@ const LessonsListPage: React.FunctionComponent = () => {
                     Edit
                   </MuiButton>
                 )}
-                <MuiButton
-                  type="button"
-                  variant="outlined"
-                  color="secondary"
-                  size="small"
-                  startIcon={
-                    <FontAwesomeV6Icon
-                      iconName="arrows-rotate"
-                      iconStyle="solid"
-                    />
-                  }
-                  onClick={() => handleReset(l)}
-                  disabled={resettingId === l.id}
-                  aria-label={`Reset progress for ${l.title || 'lesson'}`}
-                  title="Wipe saved code + progress for this lesson (demo)"
+                <WithTooltip
+                  tooltipProps={{
+                    text: 'Wipe saved code + progress for this lesson (demo)',
+                    tooltipId: `tt-reset-${l.id}`,
+                    size: 'xs',
+                    direction: 'onTop',
+                  }}
                 >
-                  {resettingId === l.id ? 'Resetting…' : 'Reset progress'}
-                </MuiButton>
+                  <MuiButton
+                    type="button"
+                    variant="outlined"
+                    color="secondary"
+                    size="small"
+                    startIcon={
+                      <FontAwesomeV6Icon
+                        iconName="arrows-rotate"
+                        iconStyle="solid"
+                      />
+                    }
+                    onClick={() => handleReset(l)}
+                    disabled={resettingId === l.id}
+                    aria-label={`Reset progress for ${l.title || 'lesson'}`}
+                    aria-describedby={`tt-reset-${l.id}`}
+                  >
+                    {resettingId === l.id ? 'Resetting…' : 'Reset progress'}
+                  </MuiButton>
+                </WithTooltip>
                 {SHOW_AUTHORING_ACTIONS && (
                   <MuiButton
                     type="button"

@@ -1,5 +1,6 @@
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
   typography;
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
 
 $tooltip-background-color: var(--background-neutral-primary-inverse);
 $tail-offset: 4px;
@@ -52,7 +53,11 @@ $tooltip-tail-offset: calc(100% - 1px);
   position: absolute;
   inset: 0 auto auto 0;
   will-change: transform; // improves rendering performance
-  z-index: 10;
+  // WithTooltip portals the tooltip to document.body, so it must layer
+  // against modals ($zindex-modal-backdrop: 1040), not its local
+  // stacking context.  The scale in variables.scss puts tooltips above
+  // modals for exactly this reason.
+  z-index: variables.$zindex-tooltip;
   display: flex;
   align-items: center;
   justify-content: center;

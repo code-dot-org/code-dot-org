@@ -672,6 +672,13 @@ textarea {
   gap: 8px;
 }
 
+.demoSettingsNote {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-neutral-tertiary);
+}
+
 .demoSettingsFooter {
   margin-top: 20px;
   padding-top: 14px;
@@ -1635,15 +1642,10 @@ textarea {
   color: var(--text-neutral-primary);
   background: var(--background-neutral-secondary);
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: var(--text-neutral-secondary);
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  // The standards block reuses the lesson-list styling; centered check
+  // rows read badly, so keep it left-aligned within the centered screen.
+  .lessonStandards {
+    text-align: left;
     max-width: 560px;
   }
 }

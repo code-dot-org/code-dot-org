@@ -16,6 +16,7 @@
 // correctly.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -886,43 +887,66 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         <header className={styles.tutorHeader}>
           <div className={styles.lessonTitleRow}>
             <div className={styles.lessonTitle}>{lesson.title}</div>
-            <button
-              type="button"
-              className={styles.demoNavArrow}
-              onClick={() => setSettingsOpen(true)}
-              aria-label="Open controls"
-              title="Controls"
+            <WithTooltip
+              tooltipProps={{
+                text: 'Controls',
+                tooltipId: 'tt-controls-gear',
+                size: 'xs',
+                direction: 'onBottom',
+              }}
             >
-              <FontAwesomeV6Icon iconName="gear" iconStyle="solid" />
-            </button>
-          </div>
-          <div className={styles.checkpointMeta}>
-            <span>{step.title}</span>
-            {adaptivityMode === 'full' && arcPresent && (
               <button
                 type="button"
                 className={styles.demoNavArrow}
-                onClick={async () => {
-                  // Demo affordance: throw away this student's arc (and
-                  // any remediation on it) and design a fresh one.
-                  if (!window.confirm('Regenerate this personalized path?')) {
-                    return;
-                  }
-                  const entryId = await runArcGeneration();
-                  if (entryId) {
-                    navigateTo({kind: 'goto', stepId: entryId});
-                    persistPosition(entryId);
-                  }
-                }}
-                disabled={generatingArc}
-                aria-label="Regenerate the personalized path"
-                title="Demo: regenerate the personalized arc from the same diagnostics"
+                onClick={() => setSettingsOpen(true)}
+                aria-label="Open controls"
+                aria-describedby="tt-controls-gear"
               >
-                ⟳
+                <FontAwesomeV6Icon iconName="gear" iconStyle="solid" />
               </button>
+            </WithTooltip>
+          </div>
+          <div className={styles.checkpointMeta}>
+            <span>
+              {generatingArc ? 'Designing your learning path…' : step.title}
+            </span>
+            {adaptivityMode === 'full' && arcPresent && (
+              <WithTooltip
+                tooltipProps={{
+                  text: 'Regenerate the personalized arc from the same diagnostics',
+                  tooltipId: 'tt-regenerate-arc',
+                  size: 'xs',
+                  direction: 'onBottom',
+                }}
+              >
+                <button
+                  type="button"
+                  className={styles.demoNavArrow}
+                  onClick={async () => {
+                    // Demo affordance: throw away this student's arc
+                    // (and any remediation on it) and design a fresh one.
+                    if (!window.confirm('Regenerate this personalized path?')) {
+                      return;
+                    }
+                    const entryId = await runArcGeneration();
+                    if (entryId) {
+                      navigateTo({kind: 'goto', stepId: entryId});
+                      persistPosition(entryId);
+                    }
+                  }}
+                  disabled={generatingArc}
+                  aria-label="Regenerate the personalized path"
+                  aria-describedby="tt-regenerate-arc"
+                >
+                  <FontAwesomeV6Icon
+                    iconName="arrows-rotate"
+                    iconStyle="solid"
+                  />
+                </button>
+              </WithTooltip>
             )}
           </div>
-          {owningHub && (
+          {!generatingArc && owningHub && (
             <button
               type="button"
               className={styles.backToHub}
@@ -954,7 +978,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
             it stays visible as the rest of the conversation grows.
             Rendered as instructional content (not a chat bubble) so the
             student reads it as the brief for this checkpoint. */}
-        {opening && (
+        {!generatingArc && opening && (
           <div className={styles.pinnedOpening}>
             <div className={styles.pinnedOpeningWelcome}>
               <SafeMarkdown
@@ -978,30 +1002,44 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           </div>
         )}
 
-        <div className={styles.transcript} ref={transcriptRef}>
-          {history.slice(1).map((m, i) => (
-            <ChatMessage
-              key={i + 1}
-              text={m.role === 'tutor' ? preserveLineBreaks(m.text) : m.text}
-              role={m.role === 'tutor' ? Role.ASSISTANT : Role.USER}
-            />
-          ))}
-          {busy && (
-            <div className={styles.thinking}>
-              {evaluating ? 'Evaluating…' : 'Tutor is thinking…'}
+        {/* While the arc generator runs, everything below the header
+            belongs to the step the student just left — hide it and let
+            the main-area generation screen carry the moment. */}
+        {generatingArc && (
+          <div className={styles.transcript}>
+            <div className={styles.muted}>
+              The tutor will meet you at your first new step…
             </div>
-          )}
-          {error && <div className={styles.error}>{error}</div>}
-        </div>
+          </div>
+        )}
 
-        {stepShowsChecklist(lesson, step) && (
+        {!generatingArc && (
+          <div className={styles.transcript} ref={transcriptRef}>
+            {history.slice(1).map((m, i) => (
+              <ChatMessage
+                key={i + 1}
+                text={m.role === 'tutor' ? preserveLineBreaks(m.text) : m.text}
+                role={m.role === 'tutor' ? Role.ASSISTANT : Role.USER}
+              />
+            ))}
+            {busy && (
+              <div className={styles.thinking}>
+                {evaluating ? 'Evaluating…' : 'Tutor is thinking…'}
+              </div>
+            )}
+            {error && <div className={styles.error}>{error}</div>}
+          </div>
+        )}
+
+        {!generatingArc && stepShowsChecklist(lesson, step) && (
           <ChecklistPanel
             items={lesson.checklist || []}
             state={checklistState}
           />
         )}
 
-        {step.kind === 'lab' &&
+        {!generatingArc &&
+          step.kind === 'lab' &&
           step.aiPrompting &&
           step.aiPrompting !== 'off' && (
             <BuildPartnerPanel
@@ -1017,7 +1055,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
             />
           )}
 
-        {step.kind === 'lab' && (
+        {!generatingArc && step.kind === 'lab' && (
           <div className={styles.composer}>
             <UserMessageEditor
               userMessage={draft}
@@ -1180,11 +1218,30 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
               Designing your learning path…
             </div>
             <p>Building a plan around what you showed us, aimed at:</p>
-            <ul>
-              {(authoredLesson.arcSpec?.standards || []).map(s => (
-                <li key={s.id}>{s.text}</li>
-              ))}
-            </ul>
+            <div className={styles.lessonStandards}>
+              <strong>Standards</strong>
+              <ul>
+                {(authoredLesson.arcSpec?.standards || []).map(s => {
+                  // arcSpec standard text uses the same "ID: text" shape
+                  // the lesson list splits server-side.
+                  const colon = s.text.indexOf(':');
+                  const id = colon > 0 ? s.text.slice(0, colon) : undefined;
+                  const rest =
+                    colon > 0 ? s.text.slice(colon + 1).trim() : s.text;
+                  return (
+                    <li key={s.id}>
+                      <span className={styles.standardCheck} aria-hidden>
+                        ✓
+                      </span>
+                      <span>
+                        {id && <strong>{id}: </strong>}
+                        {rest}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
             <p className={styles.muted}>This can take a minute.</p>
           </div>
         ) : step.kind === 'hub' ? (
