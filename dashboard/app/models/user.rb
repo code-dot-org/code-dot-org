@@ -1939,8 +1939,25 @@ class User < ApplicationRecord
   # @param [String] type A credential type / provider type.  In the future this
   #   should always be one of the valid credential types from AuthenticationOption
   # @param [String] id A user id associated with the particular provider.
+  # @param [Boolean] exact_match When true, a stored id must match the given id
+  #   byte-for-byte. The default lookup compares under the column collation
+  #   (utf8mb3_unicode_ci), which ignores case; pass true for providers whose
+  #   ids are case-sensitive strings, so an id differing only in case is not
+  #   treated as a hit.
   # @returns [User|nil]
-  def self.find_by_credential(type:, id:)
+  def self.find_by_credential(type:, id:, exact_match: false)
+    if exact_match
+      option = AuthenticationOption.find_by_exact_credential(
+        credential_type: type,
+        authentication_id: id
+      )
+      return option.user if option
+      # The legacy users.uid column has the same collation; apply the same
+      # byte-exact confirm rather than skipping the fallback — non-migrated
+      # users still live there.
+      return User.where(provider: type, uid: id).detect {|user| user.uid == id.to_s}
+    end
+
     authentication_option = AuthenticationOption.find_by(
       credential_type: type,
       authentication_id: id

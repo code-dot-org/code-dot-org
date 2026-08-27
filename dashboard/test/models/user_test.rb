@@ -3771,6 +3771,48 @@ class UserTest < ActiveSupport::TestCase
       )
   end
 
+  test 'find_by_credential with exact_match locates a user by byte-exact id' do
+    user = create(:student, :classlink_sso_provider, uid: 'Abc-01')
+
+    assert_equal user, User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'Abc-01',
+      exact_match: true
+    )
+  end
+
+  test 'find_by_credential with exact_match treats a case-variant id as no match' do
+    user = create(:student, :classlink_sso_provider, uid: 'Abc-01')
+
+    # The default lookup compares under the column collation, which ignores case.
+    assert_equal user, User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'ABC-01'
+    )
+    # The byte-exact lookup does not.
+    assert_nil User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'ABC-01',
+      exact_match: true
+    )
+  end
+
+  test 'find_by_credential with exact_match still finds non-migrated users through the uid fallback' do
+    user = create(:student, :classlink_sso_provider, :demigrated, uid: 'Abc-01')
+    assert_empty user.authentication_options
+
+    assert_equal user, User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'Abc-01',
+      exact_match: true
+    )
+    assert_nil User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'ABC-01',
+      exact_match: true
+    )
+  end
+
   test 'find_credential returns matching AuthenticationOption if one exists for migrated user' do
     user = create(:user, :google_sso_provider)
     assert_equal user.authentication_options.first, user.find_credential(AuthenticationOption::GOOGLE)
