@@ -82,6 +82,12 @@ export function buildMusicLevelProperties(
     parentLevelLink: null,
     exemplarSources: null,
     sharedBlocks: [],
+    // ProgressManager (apps/src/lab2/progress/ProgressContainer.tsx) reads
+    // both off levelProperties together to drive the Check/Continue gate and
+    // the exemplar-validation message; dropping either leaves music-lab
+    // levels un-gated even though the .level file authored a check.
+    validations: properties.validations,
+    exemplarSettings: properties.exemplar_settings,
   };
 }
 
