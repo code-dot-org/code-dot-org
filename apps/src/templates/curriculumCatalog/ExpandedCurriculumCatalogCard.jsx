@@ -32,6 +32,7 @@ const ExpandedCurriculumCatalogCard = ({
   subjectsAndTopics,
   deviceCompatibility,
   aiChatToolsDependency,
+  exemptFromAiChatToolsAlerts,
   description,
   professionalLearningProgram,
   video,
@@ -269,18 +270,19 @@ const ExpandedCurriculumCatalogCard = ({
                       </div>
                     )
                 )}
-                {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-                  <div className={style.iconWithDescription}>
-                    <FontAwesomeV6Icon
-                      iconName="ai-bot-solid"
-                      iconFamily="kit"
-                      className={style.aiBotIcon}
-                    />
-                    <Typography variant="body2" gutterBottom>
-                      Requires AI chat tools
-                    </Typography>
-                  </div>
-                )}
+                {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
+                  !exemptFromAiChatToolsAlerts && (
+                    <div className={style.iconWithDescription}>
+                      <FontAwesomeV6Icon
+                        iconName="ai-bot-solid"
+                        iconFamily="kit"
+                        className={style.aiBotIcon}
+                      />
+                      <Typography variant="body2" gutterBottom>
+                        Requires AI chat tools
+                      </Typography>
+                    </div>
+                  )}
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
@@ -389,6 +391,7 @@ ExpandedCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
+  exemptFromAiChatToolsAlerts: PropTypes.bool,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
   description: PropTypes.string.isRequired,

@@ -67,6 +67,7 @@ const CurriculumCatalogCard = ({
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
   aiChatToolsDependency,
+  exemptFromAiChatToolsAlerts,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -117,6 +118,7 @@ const CurriculumCatalogCard = ({
     recommendedSimilarCurriculum={recommendedSimilarCurriculum}
     recommendedStretchCurriculum={recommendedStretchCurriculum}
     aiChatToolsDependency={aiChatToolsDependency}
+    exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
     {...props}
   />
 );
@@ -161,6 +163,7 @@ CurriculumCatalogCard.propTypes = {
   recommendedStretchCurriculum: PropTypes.object,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
+  exemptFromAiChatToolsAlerts: PropTypes.bool,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -200,6 +203,7 @@ const CustomizableCurriculumCatalogCard = ({
   recommendedStretchCurriculum,
   wide,
   aiChatToolsDependency,
+  exemptFromAiChatToolsAlerts,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -431,6 +435,7 @@ const CustomizableCurriculumCatalogCard = ({
           subjectsAndTopics={subjectsAndTopics}
           deviceCompatibility={deviceCompatibility}
           aiChatToolsDependency={aiChatToolsDependency}
+          exemptFromAiChatToolsAlerts={exemptFromAiChatToolsAlerts}
           description={description}
           professionalLearningProgram={professionalLearningProgram}
           video={video}

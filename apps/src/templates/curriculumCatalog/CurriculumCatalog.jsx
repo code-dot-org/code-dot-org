@@ -214,6 +214,7 @@ const CurriculumCatalog = ({
                 school_subject,
                 cs_topic,
                 ai_chat_tools_dependency,
+                exempt_from_ai_chat_tools_alerts,
                 course_version_path,
                 course_version_id,
                 course_id,
@@ -242,6 +243,7 @@ const CurriculumCatalog = ({
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
                   aiChatToolsDependency={ai_chat_tools_dependency}
+                  exemptFromAiChatToolsAlerts={exempt_from_ai_chat_tools_alerts}
                   isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
